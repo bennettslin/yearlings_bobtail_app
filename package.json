@@ -1,0 +1,24 @@
+{
+  "name": "yearlings_bobtail_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bennettslin/yearlings_bobtail_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bennettslin/yearlings_bobtail_app/issues"
+  },
+  "homepage": "https://github.com/bennettslin/yearlings_bobtail_app",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3"
+  }
+}
