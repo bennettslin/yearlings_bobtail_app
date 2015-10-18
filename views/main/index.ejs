@@ -3,17 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Yearlings Bobtail</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+
+    <!-- FIXME: Do not transpile client-side in production. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
 </head>
 <body>
+
     <div id="container"></div>
-    <script type="text/jsx" src="js/test.jsx"></script>
-    <script type="text">
 
+    <script type="text/jsx" src="js/wrapper.jsx"></script>
+    <script type="text/jsx">
 
+        // FIXME: move this to server side?
+        var config = {
+            pageStartingIndices: [0, 9],
+            songs: [
+                {title: 'Didi'},
+                {title: 'Willy the Cocoa'},
+                {title: 'Dear Saskia'},
+                {title: 'Odin'},
+                {title: 'Ash Wednesday'},
+                {title: 'Pchelka\'s Starry Journey'},
+                {title: 'M'},
+                {title: 'Good Night, Sita'},
+                {title: 'Grasshoppers Lie Heavy'},
+                {title: 'Constellations!'},
+                {title: 'Look Back in Anger'},
+                {title: 'Garryowen'},
+                {title: 'On a Golden Cord'},
+                {title: 'Kyon?'},
+                {title: 'Uncanny Valley'},
+                {title: 'Cremated'},
+                {title: 'Vegan Proclamation'},
+                {title: 'My 100,000th Dream'}
+            ]
+        };
+
+        ReactDOM.render(
+            <App {...config} />,
+            document.getElementById('container')
+        );
 
     </script>
+
 </body>
 </html>

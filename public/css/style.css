@@ -1,0 +1,65 @@
+/* assume 96 pixels per inch */
+body {
+  margin: 0;
+}
+body .app {
+  border: 5px dotted red;
+  margin: 0 auto;
+  height: 2016px;
+  max-width: 1248px;
+}
+body .app .title-bar {
+  border: 5px dotted yellow;
+  height: 192px;
+  text-align: center;
+}
+body .app ul.top-nav {
+  border: 5px dotted orange;
+  padding: 0;
+  margin: 0 auto;
+  height: 192px;
+  width: 80%;
+  list-style-type: none;
+}
+body .app ul.top-nav li {
+  display: inline-block;
+  height: 100%;
+  box-sizing: border-box;
+}
+body .app ul.top-nav li.audio-player {
+  border: 5px dotted green;
+  width: 60%;
+}
+body .app ul.top-nav li.bennett-avatar {
+  border: 5px dotted blue;
+  width: 30%;
+}
+body .app ul.top-nav li.legend {
+  border: 5px dotted violet;
+  width: 10%;
+}
+body .app .page {
+  border: 5px dotted purple;
+  height: 1584px;
+  box-sizing: border-box;
+}
+body .app .page ul.song-path {
+  list-style-type: none;
+}
+body .app .page ul.song-path li[class^="song-point"] {
+  height: 40px;
+  width: 200px;
+}
+body .app .page ul.song-path li[class^="song-point"] button {
+  height: 100%;
+  width: 100%;
+}
+body .app .page .page-change-button button {
+  height: 40px;
+  width: 200px;
+}
+body .app .footer {
+  border: 5px dotted gray;
+  height: 48px;
+  text-align: center;
+}
