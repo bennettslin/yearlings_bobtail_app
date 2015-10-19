@@ -94,24 +94,28 @@ var BennettAvatar = React.createClass({
 var TopNav = React.createClass({
     render: function() {
         return (
-            <ul className="top-nav">
-                <NarrativeBar
-                    playedSongPageIndex={this.props.playedSongPageIndex}
-                    playedSongIndex={this.props.playedSongIndex}
-                    playedSongTitle={this.props.playedSongTitle}
-                    playedSongNarrative={this.props.playedSongNarrative}
-                />
-                <AnnotationLegend />
-                <AudioPlayer
-                    playedSongIndex={this.props.playedSongIndex}
-                    playedSongTitle={this.props.playedSongTitle}
-                    songsLength={this.props.songsLength}
-                    _changeSong={this.props._changeSong}
-                />
-                <BennettAvatar
-                    playedSongPersonal={this.props.playedSongPersonal}
-                />
-            </ul>
+            <div className="top-nav">
+                <ul className="movable-nav">
+                    <NarrativeBar
+                        playedSongPageIndex={this.props.playedSongPageIndex}
+                        playedSongIndex={this.props.playedSongIndex}
+                        playedSongTitle={this.props.playedSongTitle}
+                        playedSongNarrative={this.props.playedSongNarrative}
+                    />
+                    <AnnotationLegend />
+                </ul>
+                <ul className="fixed-nav">
+                    <AudioPlayer
+                        playedSongIndex={this.props.playedSongIndex}
+                        playedSongTitle={this.props.playedSongTitle}
+                        songsLength={this.props.songsLength}
+                        _changeSong={this.props._changeSong}
+                    />
+                    <BennettAvatar
+                        playedSongPersonal={this.props.playedSongPersonal}
+                    />
+                </ul>
+            </div>
         );
     }
 });

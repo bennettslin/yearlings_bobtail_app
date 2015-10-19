@@ -12,6 +12,20 @@ var SongPoint = React.createClass({
     }
 });
 
+var LyricsColumn = React.createClass({
+    render: function() {
+        var playedSongIndex = this.props.playedSongIndex,
+            columnIndex = this.props.columnIndex;
+
+        return (
+            <div className={'lyrics-song-' + playedSongIndex + ' lyrics-column-' + columnIndex}>
+                <h1>{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
+                <span>{this.props.playedSongLyric}</span>
+            </div>
+        );
+    }
+});
+
 var BookPage = React.createClass({
     render: function() {
 
@@ -40,7 +54,26 @@ var BookPage = React.createClass({
                         _changeSong={this.props._changeSong}
                     />
                 );
-            }.bind(this));
+            }.bind(this)),
+            lyricsColumns;
+
+            if (this.props.playedSongLyrics) {
+                lyricsColumns = (
+                    <div>
+                        {this.props.playedSongLyrics.map(function(playedSongLyric, columnIndex) {
+                            return (
+                                <LyricsColumn
+                                    key={columnIndex}
+                                    playedSongIndex={this.props.playedSongIndex}
+                                    playedSongTitle={this.props.playedSongTitle}
+                                    playedSongLyric={playedSongLyric}
+                                    columnIndex={columnIndex}
+                                />
+                            );
+                        }.bind(this))}
+                    </div>
+                );
+            }
 
         return (
             <div className="book-page">
@@ -48,6 +81,7 @@ var BookPage = React.createClass({
                 <ul className="song-path">
                     {songPoints}
                 </ul>
+                {lyricsColumns}
                 {pageButtons[1]}
             </div>
         );

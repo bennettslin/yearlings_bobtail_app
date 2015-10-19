@@ -4,7 +4,7 @@
 @background-colour: @black;
 
 @wrapper-height: 2016px;
-@top-nav-height: 192px;
+@top-nav-height: 384px;
 @footer-height: 48px;
 @page-height: @wrapper-height - @top-nav-height - @footer-height;
 
@@ -19,43 +19,58 @@ body {
         height: @wrapper-height;
         max-width: 1248px;
 
-        ul.top-nav {
+        div.top-nav {
             border: 5px dotted orange;
-            padding: 0;
             margin: 0 auto;
             height: @top-nav-height;
             width: 90%;
-            list-style-type: none;
 
-            li {
-                display: inline-block;
-                padding: 2%;
-                height: 100%;
-                vertical-align: top;
-                box-sizing: border-box;
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0 auto;
 
-                &.narrative-bar {
-                    border: 5px dotted yellow;
-                    width: 30%;
+                // FIXME: Make this a mixin.
+                &.movable-nav {
+                    height: 50%;
+                    width: 60%
                 }
 
-                &.annotation-legend {
-                    border: 5px dotted violet;
-                    width: 10%;
+                &.fixed-nav {
+                    height: 50%;
+                    width: 80%;
                 }
 
-                &.audio-player {
-                    border: 5px dotted green;
-                    width: 35%;
+                li {
+                    display: inline-block;
+                    padding: 2%;
+                    height: 100%;
+                    vertical-align: top;
+                    box-sizing: border-box;
 
-                    ul.playback-buttons {
-                        list-style-type: none;
+                    &.narrative-bar {
+                        border: 5px dotted yellow;
+                        width: 80%;
                     }
-                }
 
-                &.bennett-avatar {
-                    border: 5px dotted blue;
-                    width: 25%;
+                    &.annotation-legend {
+                        border: 5px dotted violet;
+                        width: 20%;
+                    }
+
+                    &.audio-player {
+                        border: 5px dotted green;
+                        width: 60%;
+
+                        ul.playback-buttons {
+                            list-style-type: none;
+                        }
+                    }
+
+                    &.bennett-avatar {
+                        border: 5px dotted blue;
+                        width: 40%;
+                    }
                 }
             }
         }
@@ -77,6 +92,11 @@ body {
                         width: 100%;
                     }
                 }
+            }
+
+            div[class^="lyrics-song"] {
+                border: 5px dotted brown;
+                width: 30%;
             }
 
             .page-change-button {

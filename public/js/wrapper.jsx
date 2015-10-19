@@ -9,6 +9,11 @@ var App = React.createClass({
     render: function() {
         var viewedPageStartingIndex = this.props.pageStartingIndices[this.state.viewedPageIndex],
             pageSongs,
+            playedSongIndex = this.state.playedSongIndex,
+            playedSongTitle = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].title : null,
+            playedSongNarrative = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].narrative : null,
+            playedSongPersonal = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].personal : this.props.personal,
+            playedSongLyrics = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].lyrics : null,
             playedSongPageIndex = -1,
             footer;
 
@@ -36,10 +41,10 @@ var App = React.createClass({
         return (
             <div className="app">
                 <TopNav
-                    playedSongIndex={this.state.playedSongIndex}
-                    playedSongTitle={this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].title : null}
-                    playedSongNarrative={this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].narrative : null}
-                    playedSongPersonal={this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].personal : this.props.personal}
+                    playedSongIndex={playedSongIndex}
+                    playedSongTitle={playedSongTitle}
+                    playedSongNarrative={playedSongNarrative}
+                    playedSongPersonal={playedSongPersonal}
                     playedSongPageIndex={playedSongPageIndex}
                     songsLength={this.props.songs.length}
                     _changeSong={this._changeSong}
@@ -49,6 +54,9 @@ var App = React.createClass({
                     songs={pageSongs}
                     viewedPageStartingIndex={viewedPageStartingIndex}
                     viewedPageIndex={this.state.viewedPageIndex}
+                    playedSongIndex={playedSongIndex}
+                    playedSongTitle={playedSongTitle}
+                    playedSongLyrics={playedSongLyrics}
                     _changePage={this._changePage}
                     _changeSong={this._changeSong}
                 />

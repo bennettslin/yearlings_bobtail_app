@@ -8,43 +8,54 @@ body .app {
   height: 2016px;
   max-width: 1248px;
 }
-body .app ul.top-nav {
+body .app div.top-nav {
   border: 5px dotted orange;
+  margin: 0 auto;
+  height: 384px;
+  width: 90%;
+}
+body .app div.top-nav ul {
+  list-style-type: none;
   padding: 0;
   margin: 0 auto;
-  height: 192px;
-  width: 90%;
-  list-style-type: none;
 }
-body .app ul.top-nav li {
+body .app div.top-nav ul.movable-nav {
+  height: 50%;
+  width: 60%;
+}
+body .app div.top-nav ul.fixed-nav {
+  height: 50%;
+  width: 80%;
+}
+body .app div.top-nav ul li {
   display: inline-block;
   padding: 2%;
   height: 100%;
   vertical-align: top;
   box-sizing: border-box;
 }
-body .app ul.top-nav li.narrative-bar {
+body .app div.top-nav ul li.narrative-bar {
   border: 5px dotted yellow;
-  width: 30%;
+  width: 80%;
 }
-body .app ul.top-nav li.annotation-legend {
+body .app div.top-nav ul li.annotation-legend {
   border: 5px dotted violet;
-  width: 10%;
+  width: 20%;
 }
-body .app ul.top-nav li.audio-player {
+body .app div.top-nav ul li.audio-player {
   border: 5px dotted green;
-  width: 35%;
+  width: 60%;
 }
-body .app ul.top-nav li.audio-player ul.playback-buttons {
+body .app div.top-nav ul li.audio-player ul.playback-buttons {
   list-style-type: none;
 }
-body .app ul.top-nav li.bennett-avatar {
+body .app div.top-nav ul li.bennett-avatar {
   border: 5px dotted blue;
-  width: 25%;
+  width: 40%;
 }
 body .app .book-page {
   border: 5px dotted purple;
-  height: 1776px;
+  height: 1584px;
   box-sizing: border-box;
 }
 body .app .book-page ul.song-path {
@@ -57,6 +68,10 @@ body .app .book-page ul.song-path li[class^="song-point"] {
 body .app .book-page ul.song-path li[class^="song-point"] button {
   height: 100%;
   width: 100%;
+}
+body .app .book-page div[class^="lyrics-song"] {
+  border: 5px dotted brown;
+  width: 30%;
 }
 body .app .book-page .page-change-button button {
   height: 40px;

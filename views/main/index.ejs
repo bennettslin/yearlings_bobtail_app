@@ -18,7 +18,6 @@
 
     <script type="text/jsx" src="js/top-nav.jsx"></script>
     <script type="text/jsx" src="js/book-page.jsx"></script>
-    <script type="text/jsx" src="js/lyrics-column.jsx"></script>
     <script type="text/jsx" src="js/wrapper.jsx"></script>
     <script type="text/jsx">
 
@@ -33,7 +32,7 @@
                     narrative: 'narrative1',
                     personal: 'personal1',
                     lyrics: [
-                        'lyrics column a'
+                        'lyrics column a1'
                     ]
                 },
                 {
@@ -41,7 +40,7 @@
                     narrative: 'narrative2',
                     personal: 'personal2',
                     lyrics: [
-                        'lyrics column a'
+                        'lyrics column a2'
                     ]
                 },
                 {
@@ -49,7 +48,7 @@
                     narrative: 'narrative3',
                     personal: 'personal3',
                     lyrics: [
-                        'lyrics column a'
+                        'lyrics column a3'
                     ]
                 },
                 {
@@ -57,8 +56,8 @@
                     narrative: 'narrative',
                     personal: 'personal',
                     lyrics: [
-                        'lyrics column a',
-                        'lyrics column b'
+                        'lyrics column a4',
+                        'lyrics column b4'
                     ]
                 },
                 {
@@ -178,12 +177,18 @@
             ]
         };
 
-        ReactDOM.render(
+        var wrapper = ReactDOM.render(
             <App {...config} />,
             document.getElementById('container')
         );
 
+        // FIXME: Dev purposes only
+        window.onscroll = function() {
+            console.log('New window Y position: ' + window.pageYOffset);
+        }
+        window.onresize = function() {
+            console.log('New window size: ' + window.innerWidth + ', ' + window.innerHeight);
+        }
     </script>
-
 </body>
 </html>
