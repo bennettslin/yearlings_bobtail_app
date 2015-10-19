@@ -3,11 +3,7 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
 
-    var config = {
-
-    };
-
-    res.render('main/index', config);
+    res.render('main/index');
 });
 
 module.exports = router;

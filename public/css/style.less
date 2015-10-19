@@ -4,10 +4,9 @@
 @background-colour: @black;
 
 @wrapper-height: 2016px;
-@title-bar-height: 192px;
 @top-nav-height: 192px;
 @footer-height: 48px;
-@page-height: @wrapper-height - @title-bar-height - @top-nav-height - @footer-height;
+@page-height: @wrapper-height - @top-nav-height - @footer-height;
 
 body {
     margin: 0;
@@ -20,43 +19,48 @@ body {
         height: @wrapper-height;
         max-width: 1248px;
 
-        .title-bar {
-            border: 5px dotted yellow;
-            height: @title-bar-height;
-            text-align: center;
-        }
-
         ul.top-nav {
             border: 5px dotted orange;
             padding: 0;
             margin: 0 auto;
             height: @top-nav-height;
-            width: 80%;
+            width: 90%;
             list-style-type: none;
 
             li {
                 display: inline-block;
+                padding: 2%;
                 height: 100%;
+                vertical-align: top;
                 box-sizing: border-box;
+
+                &.narrative-bar {
+                    border: 5px dotted yellow;
+                    width: 30%;
+                }
+
+                &.annotation-legend {
+                    border: 5px dotted violet;
+                    width: 10%;
+                }
 
                 &.audio-player {
                     border: 5px dotted green;
-                    width: 60%;
+                    width: 35%;
+
+                    ul.playback-buttons {
+                        list-style-type: none;
+                    }
                 }
 
                 &.bennett-avatar {
                     border: 5px dotted blue;
-                    width: 30%;
-                }
-
-                &.legend {
-                    border: 5px dotted violet;
-                    width: 10%;
+                    width: 25%;
                 }
             }
         }
 
-        .page {
+        .book-page {
             border: 5px dotted purple;
             height: @page-height;
             box-sizing: border-box;

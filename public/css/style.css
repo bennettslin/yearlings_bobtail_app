@@ -8,53 +8,57 @@ body .app {
   height: 2016px;
   max-width: 1248px;
 }
-body .app .title-bar {
-  border: 5px dotted yellow;
-  height: 192px;
-  text-align: center;
-}
 body .app ul.top-nav {
   border: 5px dotted orange;
   padding: 0;
   margin: 0 auto;
   height: 192px;
-  width: 80%;
+  width: 90%;
   list-style-type: none;
 }
 body .app ul.top-nav li {
   display: inline-block;
+  padding: 2%;
   height: 100%;
+  vertical-align: top;
   box-sizing: border-box;
 }
-body .app ul.top-nav li.audio-player {
-  border: 5px dotted green;
-  width: 60%;
-}
-body .app ul.top-nav li.bennett-avatar {
-  border: 5px dotted blue;
+body .app ul.top-nav li.narrative-bar {
+  border: 5px dotted yellow;
   width: 30%;
 }
-body .app ul.top-nav li.legend {
+body .app ul.top-nav li.annotation-legend {
   border: 5px dotted violet;
   width: 10%;
 }
-body .app .page {
-  border: 5px dotted purple;
-  height: 1584px;
-  box-sizing: border-box;
+body .app ul.top-nav li.audio-player {
+  border: 5px dotted green;
+  width: 35%;
 }
-body .app .page ul.song-path {
+body .app ul.top-nav li.audio-player ul.playback-buttons {
   list-style-type: none;
 }
-body .app .page ul.song-path li[class^="song-point"] {
+body .app ul.top-nav li.bennett-avatar {
+  border: 5px dotted blue;
+  width: 25%;
+}
+body .app .book-page {
+  border: 5px dotted purple;
+  height: 1776px;
+  box-sizing: border-box;
+}
+body .app .book-page ul.song-path {
+  list-style-type: none;
+}
+body .app .book-page ul.song-path li[class^="song-point"] {
   height: 40px;
   width: 200px;
 }
-body .app .page ul.song-path li[class^="song-point"] button {
+body .app .book-page ul.song-path li[class^="song-point"] button {
   height: 100%;
   width: 100%;
 }
-body .app .page .page-change-button button {
+body .app .book-page .page-change-button button {
   height: 40px;
   width: 200px;
 }
