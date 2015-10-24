@@ -3,13 +3,13 @@ body {
   margin: 0;
 }
 body .app {
-  border: 5px dotted red;
+  background-color: red;
   margin: 0 auto;
   height: 2016px;
   max-width: 1248px;
 }
 body .app div.top-nav {
-  border: 5px dotted orange;
+  background-color: orange;
   margin: 0 auto;
   height: 384px;
   width: 90%;
@@ -19,12 +19,25 @@ body .app div.top-nav ul {
   padding: 0;
   margin: 0 auto;
 }
-body .app div.top-nav ul.movable-nav {
-  height: 50%;
+body .app div.top-nav ul.scrolling-nav {
+  height: 192px;
   width: 60%;
 }
-body .app div.top-nav ul.fixed-nav {
-  height: 50%;
+body .app div.top-nav ul.sticky-nav {
+  position: absolute;
+  top: 192px;
+  left: 0;
+  margin: 0 auto;
+  height: 192px;
+  width: 100%;
+}
+body .app div.top-nav ul.sticky-nav.stuck {
+  position: fixed;
+  top: 0;
+}
+body .app div.top-nav ul.sticky-nav .moving-width {
+  margin: 0 auto;
+  height: 100%;
   width: 80%;
 }
 body .app div.top-nav ul li {
@@ -34,32 +47,34 @@ body .app div.top-nav ul li {
   vertical-align: top;
   box-sizing: border-box;
 }
-body .app div.top-nav ul li.narrative-bar {
-  border: 5px dotted yellow;
+body .app div.top-nav ul li.title-bar {
+  background-color: yellow;
   width: 80%;
 }
 body .app div.top-nav ul li.annotation-legend {
-  border: 5px dotted violet;
+  background-color: violet;
   width: 20%;
 }
 body .app div.top-nav ul li.audio-player {
-  border: 5px dotted green;
+  background-color: green;
   width: 60%;
 }
 body .app div.top-nav ul li.audio-player ul.playback-buttons {
   list-style-type: none;
 }
 body .app div.top-nav ul li.bennett-avatar {
-  border: 5px dotted blue;
+  background-color: blue;
   width: 40%;
 }
 body .app .book-page {
-  border: 5px dotted purple;
+  background-color: purple;
   height: 1584px;
   box-sizing: border-box;
 }
 body .app .book-page ul.song-path {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 body .app .book-page ul.song-path li[class^="song-point"] {
   height: 40px;
@@ -70,7 +85,7 @@ body .app .book-page ul.song-path li[class^="song-point"] button {
   width: 100%;
 }
 body .app .book-page div[class^="lyrics-song"] {
-  border: 5px dotted brown;
+  background-color: brown;
   width: 30%;
 }
 body .app .book-page .page-change-button button {
@@ -78,7 +93,7 @@ body .app .book-page .page-change-button button {
   width: 200px;
 }
 body .app .footer {
-  border: 5px dotted gray;
+  background-color: gray;
   height: 48px;
   text-align: center;
 }

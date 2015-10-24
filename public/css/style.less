@@ -4,6 +4,8 @@
 @background-colour: @black;
 
 @wrapper-height: 2016px;
+@wrapper-max-width: 1248px;
+
 @top-nav-height: 384px;
 @footer-height: 48px;
 @page-height: @wrapper-height - @top-nav-height - @footer-height;
@@ -14,31 +16,49 @@ body {
     // background-image: url('../images/mary.jpg');
 
     .app {
-        border: 5px dotted red;
+        // border: 5px dotted red;
+        background-color: red;
         margin: 0 auto;
         height: @wrapper-height;
-        max-width: 1248px;
+        max-width: @wrapper-max-width;
 
         div.top-nav {
-            border: 5px dotted orange;
+            // border: 5px dotted orange;
+            background-color: orange;
             margin: 0 auto;
             height: @top-nav-height;
             width: 90%;
 
             ul {
+                @scrolling-nav-height: @top-nav-height * 0.5;
                 list-style-type: none;
                 padding: 0;
                 margin: 0 auto;
 
-                // FIXME: Make this a mixin.
-                &.movable-nav {
-                    height: 50%;
+                &.scrolling-nav {
+                    height: @scrolling-nav-height;
                     width: 60%
                 }
 
-                &.fixed-nav {
-                    height: 50%;
-                    width: 80%;
+                &.sticky-nav {
+                    position: absolute;
+                    top: @scrolling-nav-height;
+                    left: 0;
+                    margin: 0 auto;
+                    height: @top-nav-height * 0.5;
+                    width: 100%;
+
+                    &.stuck {
+                        position: fixed;
+                        top: 0;
+                    }
+
+                    .moving-width {
+                        margin: 0 auto;
+                        height: 100%;
+                        width: 80%;
+                        // transition: width 0.15s ease-out, top 0.15s ease-out;
+                    }
                 }
 
                 li {
@@ -48,18 +68,21 @@ body {
                     vertical-align: top;
                     box-sizing: border-box;
 
-                    &.narrative-bar {
-                        border: 5px dotted yellow;
+                    &.title-bar {
+                        // border: 5px dotted yellow;
+                        background-color: yellow;
                         width: 80%;
                     }
 
                     &.annotation-legend {
-                        border: 5px dotted violet;
+                        // border: 5px dotted violet;
+                        background-color: violet;
                         width: 20%;
                     }
 
                     &.audio-player {
-                        border: 5px dotted green;
+                        // border: 5px dotted green;
+                        background-color: green;
                         width: 60%;
 
                         ul.playback-buttons {
@@ -68,7 +91,8 @@ body {
                     }
 
                     &.bennett-avatar {
-                        border: 5px dotted blue;
+                        // border: 5px dotted blue;
+                        background-color: blue;
                         width: 40%;
                     }
                 }
@@ -76,12 +100,15 @@ body {
         }
 
         .book-page {
-            border: 5px dotted purple;
+            // border: 5px dotted purple;
+            background-color: purple;
             height: @page-height;
             box-sizing: border-box;
 
             ul.song-path {
                 list-style-type: none;
+                padding: 0;
+                margin: 0;
 
                 li[class^="song-point"] {
                     height: 40px;
@@ -95,7 +122,8 @@ body {
             }
 
             div[class^="lyrics-song"] {
-                border: 5px dotted brown;
+                // border: 5px dotted brown;
+                background-color: brown;
                 width: 30%;
             }
 
@@ -108,7 +136,8 @@ body {
         }
 
         .footer {
-            border: 5px dotted gray;
+            // border: 5px dotted gray;
+            background-color: gray;
             height: @footer-height;
             text-align: center;
         }

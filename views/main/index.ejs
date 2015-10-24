@@ -6,43 +6,45 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Temporarily don't do CDNs
-
+    <!--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
-    -->
-
-    <!-- FIXME: Do not transpile client-side in production. -->
-
-    <!-- Temporarily don't do CDNs
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
     -->
+
+    <script src="temp/react.js"></script>
+    <script src="temp/react-dom.js"></script>
+    <!-- FIXME: Do not transpile client-side in production. -->
+    <script src="temp/JSXTransformer.js"></script>
 
 </head>
 <body>
 
     <div id="container"></div>
 
-    <!-- Temporarily don't render JSX
     <script type="text/jsx" src="js/top-nav.jsx"></script>
     <script type="text/jsx" src="js/book-page.jsx"></script>
     <script type="text/jsx" src="js/wrapper.jsx"></script>
     <script type="text/jsx">
-    -->
-    <script>
 
         var config = <%- JSON.stringify(config) %>;
 
-        // Temporarily comment out
-        // var wrapper = ReactDOM.render(
-        //     <App {...config} />,
-        //     document.getElementById('container')
-        // );
+        var wrapper = ReactDOM.render(
+            <App {...config} />,
+            document.getElementById('container')
+        );
 
-        // FIXME: Dev purposes only
         window.onscroll = function() {
             console.log('New window Y position: ' + window.pageYOffset);
+
+            var stickyNav = document.getElementsByClassName('sticky-nav')[0];
+            if (window.pageYOffset > 384 / 2) {
+                stickyNav.classList.add('stuck');
+            } else {
+                stickyNav.classList.remove('stuck');
+            }
         }
+
         window.onresize = function() {
             console.log('New window size: ' + window.innerWidth + ', ' + window.innerHeight);
         }

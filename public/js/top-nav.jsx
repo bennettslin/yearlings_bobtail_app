@@ -1,4 +1,4 @@
-var NarrativeBar = React.createClass({
+var TitleBar = React.createClass({
     render: function() {
         var content;
         if (this.props.playedSongNarrative) {
@@ -20,7 +20,7 @@ var NarrativeBar = React.createClass({
         }
 
         return (
-            <li className="narrative-bar">
+            <li className="title-bar">
                 {content}
             </li>
         );
@@ -95,8 +95,8 @@ var TopNav = React.createClass({
     render: function() {
         return (
             <div className="top-nav">
-                <ul className="movable-nav">
-                    <NarrativeBar
+                <ul className="scrolling-nav">
+                    <TitleBar
                         playedSongPageIndex={this.props.playedSongPageIndex}
                         playedSongIndex={this.props.playedSongIndex}
                         playedSongTitle={this.props.playedSongTitle}
@@ -104,16 +104,18 @@ var TopNav = React.createClass({
                     />
                     <AnnotationLegend />
                 </ul>
-                <ul className="fixed-nav">
-                    <AudioPlayer
-                        playedSongIndex={this.props.playedSongIndex}
-                        playedSongTitle={this.props.playedSongTitle}
-                        songsLength={this.props.songsLength}
-                        _changeSong={this.props._changeSong}
-                    />
-                    <BennettAvatar
-                        playedSongPersonal={this.props.playedSongPersonal}
-                    />
+                <ul className="sticky-nav">
+                    <div className="moving-width">
+                        <AudioPlayer
+                            playedSongIndex={this.props.playedSongIndex}
+                            playedSongTitle={this.props.playedSongTitle}
+                            songsLength={this.props.songsLength}
+                            _changeSong={this.props._changeSong}
+                        />
+                        <BennettAvatar
+                            playedSongPersonal={this.props.playedSongPersonal}
+                        />
+                    </div>
                 </ul>
             </div>
         );
