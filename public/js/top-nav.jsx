@@ -1,27 +1,11 @@
 var TitleBar = React.createClass({
     render: function() {
-        var content;
-        if (this.props.playedSongNarrative) {
-            content = (
-                <div className={'narrative-' + this.props.playedSongIndex}>
-                    <h1>Book {this.props.playedSongPageIndex + 1}</h1>
-                    <h2>{this.props.playedSongIndex + 1 + ''}. {this.props.playedSongTitle}</h2>
-                    <span>{this.props.playedSongNarrative}</span>
-                </div>
-            );
-        } else {
-            content = (
-                <div className="album-title">
-                    <h1>Bobtail Yearlings</h1>
-                    <span>presents</span>
-                    <h2>Yearlings Bobtail</h2>
-                </div>
-            );
-        }
 
         return (
             <li className="title-bar">
-                {content}
+                <h1>Bobtail Yearlings</h1>
+                <span>presents</span>
+                <h2>Yearlings Bobtail</h2>
             </li>
         );
     }
@@ -81,13 +65,68 @@ var AudioPlayer = React.createClass({
     }
 });
 
-var BennettAvatar = React.createClass({
+var SynopsisBar = React.createClass({
+    getInitialState: function() {
+        return {
+            showPersonal: false
+        }
+    },
+
     render: function() {
+        var showStyle = {
+                display: 'block'
+            },
+            hideStyle = {
+                display: 'none'
+            },
+            narrative = (
+                <div
+                    className={'narrative-' + this.props.playedSongIndex}
+                    style={this.state.showPersonal ? hideStyle : showStyle}
+                >
+                    <span>{this.props.playedSongNarrative}</span>
+                </div>
+            ),
+            personal = (
+                <div
+                    className={'personal-' + this.props.playedSongIndex}
+                    style={this.state.showPersonal ? showStyle : hideStyle}
+                >
+                    <span>{this.props.playedSongPersonal}</span>
+                </div>
+            ),
+            speechBubble = (
+                <button
+                    className="speech-bubble"
+                    onMouseEnter={this._handleSpeechBubbleHover.bind(null, true)}
+                    onMouseLeave={this._handleSpeechBubbleHover.bind(null, false)}
+                >
+                    &hellip;
+                </button>
+            );
+
+
         return (
-            <li className="bennett-avatar">
-                {this.props.playedSongPersonal}
+            <li className="synopsis-bar">
+                <ul>
+                    <li>
+                        <h1>Book {this.props.playedSongPageIndex + 1}</h1>
+                        <h2>{this.props.playedSongIndex + 1 + ''}. {this.props.playedSongTitle}</h2>
+                        {narrative}
+                        {personal}
+                    </li>
+                    <li>
+                        {speechBubble}
+                    </li>
+                </ul>
             </li>
         );
+    },
+
+    _handleSpeechBubbleHover: function(hover) {
+        this.setState({
+            showPersonal: hover
+        });
     }
 });
 
@@ -96,12 +135,7 @@ var TopNav = React.createClass({
         return (
             <div className="top-nav">
                 <ul className="scrolling-nav">
-                    <TitleBar
-                        playedSongPageIndex={this.props.playedSongPageIndex}
-                        playedSongIndex={this.props.playedSongIndex}
-                        playedSongTitle={this.props.playedSongTitle}
-                        playedSongNarrative={this.props.playedSongNarrative}
-                    />
+                    <TitleBar />
                     <AnnotationLegend />
                 </ul>
                 <ul className="sticky-nav">
@@ -112,7 +146,11 @@ var TopNav = React.createClass({
                             songsLength={this.props.songsLength}
                             _changeSong={this.props._changeSong}
                         />
-                        <BennettAvatar
+                        <SynopsisBar
+                            playedSongPageIndex={this.props.playedSongPageIndex}
+                            playedSongIndex={this.props.playedSongIndex}
+                            playedSongTitle={this.props.playedSongTitle}
+                            playedSongNarrative={this.props.playedSongNarrative}
                             playedSongPersonal={this.props.playedSongPersonal}
                         />
                     </div>

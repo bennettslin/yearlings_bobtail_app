@@ -12,25 +12,11 @@ var SongPoint = React.createClass({
     }
 });
 
-var LyricsColumn = React.createClass({
-    render: function() {
-        var playedSongIndex = this.props.playedSongIndex,
-            columnIndex = this.props.columnIndex;
-
-        return (
-            <div className={'lyrics-song-' + playedSongIndex + ' lyrics-column-' + columnIndex}>
-                <h1>{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
-                <span>{this.props.playedSongLyric}</span>
-            </div>
-        );
-    }
-});
-
-var BookPage = React.createClass({
+var Page = React.createClass({
     render: function() {
 
         // FIXME: To be modular, this should not know page number
-        var pageButtonLabels = this.props.viewedPageIndex === 0 ?
+        var pageButtonLabels = this.props.pageIndex === 0 ?
                 ['skip to Book II', 'continue to Book II'] :
                 ['back to Book I', 'return to Book I'],
 
@@ -45,7 +31,7 @@ var BookPage = React.createClass({
             }.bind(this)),
 
             songPoints = this.props.songs.map(function(song, index) {
-                var songIndex = this.props.viewedPageStartingIndex + index;
+                var songIndex = this.props.startingIndex + index;
                 return (
                     <SongPoint
                         key={songIndex}
@@ -55,33 +41,22 @@ var BookPage = React.createClass({
                     />
                 );
             }.bind(this)),
-            lyricsColumns;
+            visibilityClass;
 
-            if (this.props.playedSongLyrics) {
-                lyricsColumns = (
-                    <div>
-                        {this.props.playedSongLyrics.map(function(playedSongLyric, columnIndex) {
-                            return (
-                                <LyricsColumn
-                                    key={columnIndex}
-                                    playedSongIndex={this.props.playedSongIndex}
-                                    playedSongTitle={this.props.playedSongTitle}
-                                    playedSongLyric={playedSongLyric}
-                                    columnIndex={columnIndex}
-                                />
-                            );
-                        }.bind(this))}
-                    </div>
-                );
-            }
+        if (this.props.pageIndex < this.props.viewedPageIndex) {
+            visibilityClass = "hidden previous";
+        } else if (this.props.pageIndex > this.props.viewedPageIndex) {
+            visibilityClass = "hidden next";
+        } else {
+            visibilityClass = "viewed"
+        }
 
         return (
-            <div className="book-page">
+            <div className={'book-page-' + this.props.pageIndex + ' ' + visibilityClass}>
                 {pageButtons[0]}
                 <ul className="song-path">
                     {songPoints}
                 </ul>
-                {lyricsColumns}
                 {pageButtons[1]}
             </div>
         );

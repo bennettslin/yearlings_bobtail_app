@@ -7,11 +7,9 @@ var App = React.createClass({
     },
 
     render: function() {
-        var viewedPageStartingIndex = this.props.pageStartingIndices[this.state.viewedPageIndex],
-            pageSongs,
-            playedSongIndex = this.state.playedSongIndex,
+        var playedSongIndex = this.state.playedSongIndex,
             playedSongTitle = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].title : null,
-            playedSongNarrative = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].narrative : null,
+            playedSongNarrative = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].narrative : this.props.narrative,
             playedSongPersonal = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].personal : this.props.personal,
             playedSongLyrics = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].lyrics : null,
             playedSongPageIndex = -1,
@@ -22,14 +20,6 @@ var App = React.createClass({
             playedSongPageIndex = this.props.pageStartingIndices.reduce(function(currentStartingIndex, startingIndex, index) {
                 return this.state.playedSongIndex >= startingIndex ? index : currentStartingIndex;
             }.bind(this), 0);
-        }
-
-        // select the songs to be shown on this page
-        if (this.state.viewedPageIndex === this.props.pageStartingIndices.length - 1) {
-            pageSongs = this.props.songs.slice(viewedPageStartingIndex);
-        } else {
-            var nextPageStartingIndex = this.props.pageStartingIndices[this.state.viewedPageIndex + 1];
-            pageSongs = this.props.songs.slice(viewedPageStartingIndex, nextPageStartingIndex);
         }
 
         footer = (
@@ -49,11 +39,10 @@ var App = React.createClass({
                     songsLength={this.props.songs.length}
                     _changeSong={this._changeSong}
                 />
-                <BookPage
-                    key={this.state.viewedPageIndex}
-                    songs={pageSongs}
-                    viewedPageStartingIndex={viewedPageStartingIndex}
+                <Book
                     viewedPageIndex={this.state.viewedPageIndex}
+                    pageStartingIndices={this.props.pageStartingIndices}
+                    songs={this.props.songs}
                     playedSongIndex={playedSongIndex}
                     playedSongTitle={playedSongTitle}
                     playedSongLyrics={playedSongLyrics}

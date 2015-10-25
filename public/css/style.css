@@ -25,6 +25,7 @@ body .app div.top-nav ul.scrolling-nav {
 }
 body .app div.top-nav ul.sticky-nav {
   position: absolute;
+  z-index: 2;
   top: 192px;
   left: 0;
   margin: 0 auto;
@@ -62,33 +63,53 @@ body .app div.top-nav ul li.audio-player {
 body .app div.top-nav ul li.audio-player ul.playback-buttons {
   list-style-type: none;
 }
-body .app div.top-nav ul li.bennett-avatar {
+body .app div.top-nav ul li.synopsis-bar {
   background-color: blue;
   width: 40%;
 }
-body .app .book-page {
-  background-color: purple;
+body .app .book {
+  position: relative;
   height: 1584px;
-  box-sizing: border-box;
+  overflow: hidden;
 }
-body .app .book-page ul.song-path {
+body .app .book [class^="book-page"] {
+  background-color: purple;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  transition: left 0.25s ease-in-out;
+}
+body .app .book [class^="book-page"].book-page-1 {
+  background-color: violet;
+}
+body .app .book [class^="book-page"].hidden.previous {
+  left: -100%;
+}
+body .app .book [class^="book-page"].hidden.next {
+  left: 100%;
+}
+body .app .book [class^="book-page"].viewed {
+  left: 0;
+}
+body .app .book [class^="book-page"] ul.song-path {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-body .app .book-page ul.song-path li[class^="song-point"] {
+body .app .book [class^="book-page"] ul.song-path li[class^="song-point"] {
   height: 40px;
   width: 200px;
 }
-body .app .book-page ul.song-path li[class^="song-point"] button {
+body .app .book [class^="book-page"] ul.song-path li[class^="song-point"] button {
   height: 100%;
   width: 100%;
 }
-body .app .book-page div[class^="lyrics-song"] {
+body .app .book [class^="book-page"] div[class^="lyrics-song"] {
   background-color: brown;
   width: 30%;
 }
-body .app .book-page .page-change-button button {
+body .app .book [class^="book-page"] .page-change-button button {
   height: 40px;
   width: 200px;
 }

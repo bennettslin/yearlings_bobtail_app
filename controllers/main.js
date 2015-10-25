@@ -5,6 +5,7 @@ router.get('/', function(req, res) {
 
     var config = {
         title: 'Yearling\'s Bobtail',
+        narrative: 'narrative yb',
         personal: 'personal yb',
         pageStartingIndices: [0, 9],
         songs: [

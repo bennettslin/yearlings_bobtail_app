@@ -10,20 +10,21 @@
 @footer-height: 48px;
 @page-height: @wrapper-height - @top-nav-height - @footer-height;
 
+@page-z-index: 1;
+@nav-z-index: @page-z-index + 1;
+
 body {
     margin: 0;
     // background-color: @background-colour;
     // background-image: url('../images/mary.jpg');
 
     .app {
-        // border: 5px dotted red;
         background-color: red;
         margin: 0 auto;
         height: @wrapper-height;
         max-width: @wrapper-max-width;
 
         div.top-nav {
-            // border: 5px dotted orange;
             background-color: orange;
             margin: 0 auto;
             height: @top-nav-height;
@@ -42,6 +43,7 @@ body {
 
                 &.sticky-nav {
                     position: absolute;
+                    z-index: @nav-z-index;
                     top: @scrolling-nav-height;
                     left: 0;
                     margin: 0 auto;
@@ -69,19 +71,16 @@ body {
                     box-sizing: border-box;
 
                     &.title-bar {
-                        // border: 5px dotted yellow;
                         background-color: yellow;
                         width: 80%;
                     }
 
                     &.annotation-legend {
-                        // border: 5px dotted violet;
                         background-color: violet;
                         width: 20%;
                     }
 
                     &.audio-player {
-                        // border: 5px dotted green;
                         background-color: green;
                         width: 60%;
 
@@ -90,8 +89,7 @@ body {
                         }
                     }
 
-                    &.bennett-avatar {
-                        // border: 5px dotted blue;
+                    &.synopsis-bar {
                         background-color: blue;
                         width: 40%;
                     }
@@ -99,44 +97,68 @@ body {
             }
         }
 
-        .book-page {
-            // border: 5px dotted purple;
-            background-color: purple;
+        .book {
+            position: relative;
             height: @page-height;
-            box-sizing: border-box;
+            overflow: hidden;
 
-            ul.song-path {
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
+            [class^="book-page"] {
+                background-color: purple;
+                position: absolute;
+                z-index: @page-z-index;
+                height: 100%;
+                width: 100%;
+                transition: left 0.25s ease-in-out;
 
-                li[class^="song-point"] {
-                    height: 40px;
-                    width: 200px;
+                &.book-page-1 {
+                    background-color: violet;
+                }
 
-                    button {
-                        height: 100%;
-                        width: 100%;
+                &.hidden {
+                    &.previous {
+                        left: -100%;
+                    }
+
+                    &.next {
+                        left: 100%;
                     }
                 }
-            }
 
-            div[class^="lyrics-song"] {
-                // border: 5px dotted brown;
-                background-color: brown;
-                width: 30%;
-            }
+                &.viewed {
+                    left: 0;
+                }
 
-            .page-change-button {
-                button {
-                    height: 40px;
-                    width: 200px;
+                ul.song-path {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li[class^="song-point"] {
+                        height: 40px;
+                        width: 200px;
+
+                        button {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                div[class^="lyrics-song"] {
+                    background-color: brown;
+                    width: 30%;
+                }
+
+                .page-change-button {
+                    button {
+                        height: 40px;
+                        width: 200px;
+                    }
                 }
             }
         }
 
         .footer {
-            // border: 5px dotted gray;
             background-color: gray;
             height: @footer-height;
             text-align: center;
