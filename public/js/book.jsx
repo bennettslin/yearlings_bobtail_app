@@ -19,14 +19,14 @@ var Book = React.createClass({
         if (this.props.playedSongLyrics) {
             lyricsColumns = (
                 <div>
-                    {this.props.playedSongLyrics.map(function(playedSongLyric, columnIndex) {
+                    {Object.keys(this.props.playedSongLyrics).map(function(key) {
                         return (
                             <LyricsColumn
-                                key={columnIndex}
+                                key={key}
                                 playedSongIndex={this.props.playedSongIndex}
                                 playedSongTitle={this.props.playedSongTitle}
-                                playedSongLyric={playedSongLyric}
-                                columnIndex={columnIndex}
+                                playedSongLyric={this.props.playedSongLyrics[key]}
+                                columnIndex={key}
                             />
                         );
                     }.bind(this))}

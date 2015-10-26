@@ -72,6 +72,18 @@ body .app .book {
   height: 1584px;
   overflow: hidden;
 }
+body .app .book div[class^="lyrics-song"] {
+  background-color: brown;
+  position: absolute;
+  z-index: 3;
+  width: 30%;
+}
+body .app .book div[class^="lyrics-song"][class$="left"] {
+  left: 0;
+}
+body .app .book div[class^="lyrics-song"][class$="right"] {
+  right: 0;
+}
 body .app .book [class^="book-page"] {
   background-color: purple;
   position: absolute;
@@ -98,6 +110,7 @@ body .app .book [class^="book-page"] ul.song-path {
   margin: 0;
 }
 body .app .book [class^="book-page"] ul.song-path li[class^="song-point"] {
+  margin: 0 auto;
   height: 40px;
   width: 200px;
 }
@@ -105,13 +118,12 @@ body .app .book [class^="book-page"] ul.song-path li[class^="song-point"] button
   height: 100%;
   width: 100%;
 }
-body .app .book [class^="book-page"] div[class^="lyrics-song"] {
-  background-color: brown;
-  width: 30%;
+body .app .book [class^="book-page"] .page-change-button {
+  text-align: center;
 }
 body .app .book [class^="book-page"] .page-change-button button {
   height: 40px;
-  width: 200px;
+  width: 300px;
 }
 body .app .footer {
   background-color: gray;
