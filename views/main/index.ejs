@@ -33,14 +33,23 @@
             document.getElementById('container')
         );
 
+        var stickyNav = document.getElementsByClassName('sticky-nav')[0],
+            lyricsColumnWrapper = document.getElementsByClassName('sticky-lyrics-wrapper')[0];
+
         window.onscroll = function() {
+            // FIXNE: move this over to its own js file.
             console.log('New window Y position: ' + window.pageYOffset);
 
-            var stickyNav = document.getElementsByClassName('sticky-nav')[0];
-            if (window.pageYOffset > 384 / 2) {
+            if (stickyNav && window.pageYOffset > 384 / 2) {
                 stickyNav.classList.add('stuck');
             } else {
                 stickyNav.classList.remove('stuck');
+            }
+
+            if (lyricsColumnWrapper && window.pageYOffset > 384) {
+                lyricsColumnWrapper.classList.add('stuck');
+            } else {
+                lyricsColumnWrapper.classList.remove('stuck');
             }
         }
 

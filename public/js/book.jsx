@@ -14,12 +14,10 @@ var LyricsColumn = React.createClass({
 
 var Book = React.createClass({
     render: function() {
-        var lyricsColumns;
-
-        if (this.props.playedSongLyrics) {
-            lyricsColumns = (
-                <div>
-                    {Object.keys(this.props.playedSongLyrics).map(function(key) {
+        var lyricsColumns = (
+            <div className="sticky-lyrics-wrapper">
+                <div className="moving-width">
+                    {this.props.playedSongLyrics ? Object.keys(this.props.playedSongLyrics).map(function(key) {
                         return (
                             <LyricsColumn
                                 key={key}
@@ -29,10 +27,10 @@ var Book = React.createClass({
                                 columnIndex={key}
                             />
                         );
-                    }.bind(this))}
+                    }.bind(this)) : null}
                 </div>
-            );
-        }
+            </div>
+        );
 
         return (
             <div className="book">

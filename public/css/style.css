@@ -8,62 +8,62 @@ body .app {
   height: 2016px;
   max-width: 1248px;
 }
-body .app div.top-nav {
+body .app .top-nav {
   background-color: orange;
   margin: 0 auto;
   height: 384px;
   width: 90%;
 }
-body .app div.top-nav ul {
+body .app .top-nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0 auto;
 }
-body .app div.top-nav ul.scrolling-nav {
+body .app .top-nav ul.scrolling-nav {
   height: 192px;
   width: 60%;
 }
-body .app div.top-nav ul.sticky-nav {
+body .app .top-nav ul.sticky-nav {
+  background-color: tomato;
   position: absolute;
   z-index: 2;
   top: 192px;
   left: 0;
-  margin: 0 auto;
   height: 192px;
   width: 100%;
 }
-body .app div.top-nav ul.sticky-nav.stuck {
+body .app .top-nav ul.sticky-nav.stuck {
   position: fixed;
   top: 0;
 }
-body .app div.top-nav ul.sticky-nav .moving-width {
+body .app .top-nav ul.sticky-nav .moving-width {
   margin: 0 auto;
   height: 100%;
   width: 80%;
 }
-body .app div.top-nav ul li {
+body .app .top-nav ul li {
   display: inline-block;
   padding: 2%;
   height: 100%;
   vertical-align: top;
   box-sizing: border-box;
 }
-body .app div.top-nav ul li.title-bar {
+body .app .top-nav ul li.title-bar {
   background-color: yellow;
   width: 80%;
 }
-body .app div.top-nav ul li.annotation-legend {
+body .app .top-nav ul li.annotation-legend {
   background-color: violet;
   width: 20%;
 }
-body .app div.top-nav ul li.audio-player {
+body .app .top-nav ul li.audio-player {
   background-color: green;
   width: 60%;
 }
-body .app div.top-nav ul li.audio-player ul.playback-buttons {
+body .app .top-nav ul li.audio-player ul.playback-buttons {
   list-style-type: none;
 }
-body .app div.top-nav ul li.synopsis-bar {
+body .app .top-nav ul li.synopsis-bar {
   background-color: blue;
   width: 40%;
 }
@@ -72,16 +72,34 @@ body .app .book {
   height: 1584px;
   overflow: hidden;
 }
-body .app .book div[class^="lyrics-song"] {
+body .app .book .sticky-lyrics-wrapper {
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  height: 1584px;
+  width: 100%;
+}
+body .app .book .sticky-lyrics-wrapper.stuck {
+  position: fixed;
+  top: 0;
+}
+body .app .book .sticky-lyrics-wrapper .moving-width {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+body .app .book .sticky-lyrics-wrapper .moving-width div[class^="lyrics-song"] {
   background-color: brown;
   position: absolute;
-  z-index: 3;
   width: 30%;
+  z-index: 3;
 }
-body .app .book div[class^="lyrics-song"][class$="left"] {
+body .app .book .sticky-lyrics-wrapper .moving-width div[class^="lyrics-song"][class$="left"] {
   left: 0;
 }
-body .app .book div[class^="lyrics-song"][class$="right"] {
+body .app .book .sticky-lyrics-wrapper .moving-width div[class^="lyrics-song"][class$="right"] {
   right: 0;
 }
 body .app .book [class^="book-page"] {

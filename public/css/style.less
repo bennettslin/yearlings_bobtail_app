@@ -7,6 +7,9 @@
 @wrapper-max-width: 1248px;
 
 @top-nav-height: 384px;
+@scrolling-nav-height: @top-nav-height * 0.5;
+@sticky-nav-height: @top-nav-height - @scrolling-nav-height;
+
 @footer-height: 48px;
 @page-height: @wrapper-height - @top-nav-height - @footer-height;
 
@@ -16,8 +19,6 @@
 
 body {
     margin: 0;
-    // background-color: @background-colour;
-    // background-image: url('../images/mary.jpg');
 
     .app {
         background-color: red;
@@ -25,29 +26,29 @@ body {
         height: @wrapper-height;
         max-width: @wrapper-max-width;
 
-        div.top-nav {
+        .top-nav {
             background-color: orange;
             margin: 0 auto;
             height: @top-nav-height;
             width: 90%;
 
             ul {
-                @scrolling-nav-height: @top-nav-height * 0.5;
                 list-style-type: none;
                 padding: 0;
                 margin: 0 auto;
 
                 &.scrolling-nav {
                     height: @scrolling-nav-height;
-                    width: 60%
+                    width: 60%;
                 }
 
+                // FIXME: make sticky things more DRY
                 &.sticky-nav {
+                    background-color: tomato;
                     position: absolute;
                     z-index: @nav-z-index;
                     top: @scrolling-nav-height;
                     left: 0;
-                    margin: 0 auto;
                     height: @top-nav-height * 0.5;
                     width: 100%;
 
@@ -103,18 +104,39 @@ body {
             height: @page-height;
             overflow: hidden;
 
-            div[class^="lyrics-song"] {
-                background-color: brown;
+            .sticky-lyrics-wrapper {
+                background-color: pink;
                 position: absolute;
-                z-index: @lyrics-z-index;
-                width: 30%;
+                top: 0;
+                left: 0;
+                margin: 0 auto;
+                height: @page-height;
+                width: 100%;
 
-                &[class$="left"] {
-                    left: 0;
+                &.stuck {
+                    position: fixed;
+                    top: 0;
                 }
 
-                &[class$="right"] {
-                    right: 0;
+                .moving-width {
+                    margin: 0 auto;
+                    height: 100%;
+                    width: 100%;
+
+                    div[class^="lyrics-song"] {
+                        background-color: brown;
+                        position: absolute;
+                        width: 30%;
+                        z-index: @lyrics-z-index;
+
+                        &[class$="left"] {
+                            left: 0;
+                        }
+
+                        &[class$="right"] {
+                            right: 0;
+                        }
+                    }
                 }
             }
 
