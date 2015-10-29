@@ -6,16 +6,20 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- FIXME: Not currently working -->
+    <script async data-main="libs/fallback-main.js" src="libs/fallback.min.js" type="text/javascript"></script>
+
+    <!-- FIXME: Use fallbackJS, and use minified versions -->
     <!--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
     -->
 
-    <script src="temp/react.js"></script>
-    <script src="temp/react-dom.js"></script>
+    <script src="libs/react.js"></script>
+    <script src="libs/react-dom.js"></script>
     <!-- FIXME: Do not transpile client-side in production. -->
-    <script src="temp/JSXTransformer.js"></script>
+    <script src="libs/JSXTransformer.js"></script>
 
 </head>
 <body>
@@ -34,7 +38,7 @@
         );
 
         var stickyNav = document.getElementsByClassName('sticky-nav')[0],
-            lyricsColumnWrapper = document.getElementsByClassName('sticky-lyrics-wrapper')[0];
+            lyricsColumnWrapper = document.getElementsByClassName('sticky-lyrics')[0];
 
         window.onscroll = function() {
             // FIXNE: move this over to its own js file.

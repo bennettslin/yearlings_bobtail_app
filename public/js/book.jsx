@@ -15,19 +15,21 @@ var LyricsColumn = React.createClass({
 var Book = React.createClass({
     render: function() {
         var lyricsColumns = (
-            <div className="sticky-lyrics-wrapper">
-                <div className="moving-width">
-                    {this.props.playedSongLyrics ? Object.keys(this.props.playedSongLyrics).map(function(key) {
-                        return (
-                            <LyricsColumn
-                                key={key}
-                                playedSongIndex={this.props.playedSongIndex}
-                                playedSongTitle={this.props.playedSongTitle}
-                                playedSongLyric={this.props.playedSongLyrics[key]}
-                                columnIndex={key}
-                            />
-                        );
-                    }.bind(this)) : null}
+            <div className="sticky-lyrics app-width">
+                <div className="wrapper-width">
+                    <div className="true-width">
+                        {this.props.playedSongLyrics ? Object.keys(this.props.playedSongLyrics).map(function(key) {
+                            return (
+                                <LyricsColumn
+                                    key={key}
+                                    playedSongIndex={this.props.playedSongIndex}
+                                    playedSongTitle={this.props.playedSongTitle}
+                                    playedSongLyric={this.props.playedSongLyrics[key]}
+                                    columnIndex={key}
+                                />
+                            );
+                        }.bind(this)) : null}
+                    </div>
                 </div>
             </div>
         );

@@ -17,6 +17,33 @@
 @nav-z-index: @page-z-index + 1;
 @lyrics-z-index: @nav-z-index + 1;
 
+.sticky-mixin {
+    position: absolute;
+    left: 0;
+
+    &.stuck {
+        position: fixed;
+        z-index: @nav-z-index;
+        top: 0;
+    }
+
+    &.app-width {
+        width: 100%;
+
+        .wrapper-width {
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+            max-width: @wrapper-max-width;
+
+            .true-width {
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
 body {
     margin: 0;
 
@@ -27,8 +54,13 @@ body {
         max-width: @wrapper-max-width;
 
         .top-nav {
+            // FIXME: this relative position is the cause of the sticky problem.
+            // without it, it works fine. unfortunately, book needs relative.
+            // so try keeping position relative in top nav as well, so that
+            // any solution will apply to both.
+            position: relative;
             background-color: orange;
-            margin: 0 auto;
+            margin: 0;
             height: @top-nav-height;
             width: 90%;
 
@@ -42,26 +74,18 @@ body {
                     width: 60%;
                 }
 
-                // FIXME: make sticky things more DRY
                 &.sticky-nav {
+                    .sticky-mixin;
                     background-color: tomato;
-                    position: absolute;
-                    z-index: @nav-z-index;
                     top: @scrolling-nav-height;
-                    left: 0;
                     height: @top-nav-height * 0.5;
-                    width: 100%;
 
-                    &.stuck {
-                        position: fixed;
-                        top: 0;
-                    }
+                    .wrapper-width {
 
-                    .moving-width {
-                        margin: 0 auto;
-                        height: 100%;
-                        width: 80%;
-                        // transition: width 0.15s ease-out, top 0.15s ease-out;
+                        .true-width {
+                            width: 80%;
+                            // transition: width 0.15s ease-out, top 0.15s ease-out;
+                        }
                     }
                 }
 
@@ -92,7 +116,7 @@ body {
                     }
 
                     &.synopsis-bar {
-                        background-color: blue;
+                        background-color: turquoise;
                         width: 40%;
                     }
                 }
@@ -104,37 +128,30 @@ body {
             height: @page-height;
             overflow: hidden;
 
-            .sticky-lyrics-wrapper {
-                background-color: pink;
-                position: absolute;
+            .sticky-lyrics {
+                .sticky-mixin;
+                background-color: rgba(200, 100, 0, 0.3);
                 top: 0;
-                left: 0;
-                margin: 0 auto;
                 height: @page-height;
-                width: 100%;
 
-                &.stuck {
-                    position: fixed;
-                    top: 0;
-                }
+                .wrapper-width {
 
-                .moving-width {
-                    margin: 0 auto;
-                    height: 100%;
-                    width: 100%;
+                    .true-width {
+                        width: 100%;
 
-                    div[class^="lyrics-song"] {
-                        background-color: brown;
-                        position: absolute;
-                        width: 30%;
-                        z-index: @lyrics-z-index;
+                        div[class^="lyrics-song"] {
+                            background-color: brown;
+                            position: absolute;
+                            width: 30%;
+                            z-index: @lyrics-z-index;
 
-                        &[class$="left"] {
-                            left: 0;
-                        }
+                            &[class$="left"] {
+                                left: 0;
+                            }
 
-                        &[class$="right"] {
-                            right: 0;
+                            &[class$="right"] {
+                                right: 0;
+                            }
                         }
                     }
                 }

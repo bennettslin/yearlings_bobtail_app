@@ -138,21 +138,23 @@ var TopNav = React.createClass({
                     <TitleBar />
                     <AnnotationLegend />
                 </ul>
-                <ul className="sticky-nav">
-                    <div className="moving-width">
-                        <AudioPlayer
-                            playedSongIndex={this.props.playedSongIndex}
-                            playedSongTitle={this.props.playedSongTitle}
-                            songsLength={this.props.songsLength}
-                            _changeSong={this.props._changeSong}
-                        />
-                        <SynopsisBar
-                            playedSongPageIndex={this.props.playedSongPageIndex}
-                            playedSongIndex={this.props.playedSongIndex}
-                            playedSongTitle={this.props.playedSongTitle}
-                            playedSongNarrative={this.props.playedSongNarrative}
-                            playedSongPersonal={this.props.playedSongPersonal}
-                        />
+                <ul className="sticky-nav app-width">
+                    <div className="wrapper-width">
+                        <div className="true-width">
+                            <AudioPlayer
+                                playedSongIndex={this.props.playedSongIndex}
+                                playedSongTitle={this.props.playedSongTitle}
+                                songsLength={this.props.songsLength}
+                                _changeSong={this.props._changeSong}
+                            />
+                            <SynopsisBar
+                                playedSongPageIndex={this.props.playedSongPageIndex}
+                                playedSongIndex={this.props.playedSongIndex}
+                                playedSongTitle={this.props.playedSongTitle}
+                                playedSongNarrative={this.props.playedSongNarrative}
+                                playedSongPersonal={this.props.playedSongPersonal}
+                            />
+                        </div>
                     </div>
                 </ul>
             </div>
