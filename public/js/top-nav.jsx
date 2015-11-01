@@ -139,7 +139,7 @@ var TopNav = React.createClass({
                     <AnnotationLegend />
                 </ul>
                 <ul className="sticky-nav">
-                    <div className="wrapper-width">
+                    <div className="wrapper-width" data-nav-width={this.props.widthName}>
                         <AudioPlayer
                             playedSongIndex={this.props.playedSongIndex}
                             playedSongTitle={this.props.playedSongTitle}

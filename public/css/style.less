@@ -3,9 +3,10 @@
 @black: #000;
 @background-colour: @black;
 
-@wrapper-height: 2016px;
-@wrapper-max-width: 1248px;
+@wrapper-max-width: 1200px; // was 1248
+@lyrics-column-width: 27%;
 
+@wrapper-height: 2016px;
 @top-nav-height: 384px;
 @scrolling-nav-height: @top-nav-height * 0.5;
 @sticky-nav-height: @top-nav-height - @scrolling-nav-height;
@@ -64,11 +65,31 @@ body {
                 &.sticky-nav {
                     .sticky-mixin;
                     background-color: tomato;
+
                     top: @scrolling-nav-height;
                     height: @top-nav-height * 0.5;
 
                     .wrapper-width {
                         width: 80%;
+                        transition: width 0.2s ease, margin 0.2s ease;
+                    }
+
+                    &.stuck {
+                        .wrapper-width {
+                            &[data-nav-width^="left"] {
+                                margin-left: 0;
+                                width: 100% - @lyrics-column-width;
+                            }
+
+                            &[data-nav-width^="right"] {
+                                margin-right: 0;
+                                width: 100% - @lyrics-column-width;
+                            }
+
+                            &[data-nav-width^="centre"] {
+                                width: 100% - (@lyrics-column-width * 2);
+                            }
+                        }
                     }
                 }
 
@@ -120,7 +141,7 @@ body {
                     div[class^="lyrics-song"] {
                         background-color: brown;
                         position: absolute;
-                        width: 30%;
+                        width: @lyrics-column-width;
                         z-index: @lyrics-z-index;
 
                         &[class$="left"] {

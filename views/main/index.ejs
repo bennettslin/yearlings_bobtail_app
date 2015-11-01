@@ -27,9 +27,9 @@
     <script type="text/jsx" src="js/top-nav.jsx"></script>
     <script type="text/jsx" src="js/page.jsx"></script>
     <script type="text/jsx" src="js/book.jsx"></script>
-    <script type="text/jsx" src="js/wrapper.jsx"></script>
-    <script type="text/jsx">
+    <script type="text/jsx" src="js/app.jsx"></script>
 
+    <script type="text/jsx">
         var config = <%- JSON.stringify(config) %>;
 
         var wrapper = ReactDOM.render(
@@ -41,19 +41,22 @@
             lyricsColumnWrapper = document.getElementsByClassName('sticky-lyrics')[0];
 
         window.onscroll = function() {
-            // FIXNE: move this over to its own js file.
             console.log('New window Y position: ' + window.pageYOffset);
 
-            if (stickyNav && window.pageYOffset > 384 / 2) {
-                stickyNav.classList.add('stuck');
-            } else {
-                stickyNav.classList.remove('stuck');
+            if (stickyNav) {
+                if (window.pageYOffset > 384 / 2) {
+                    stickyNav.classList.add('stuck');
+                } else {
+                    stickyNav.classList.remove('stuck');
+                }
             }
 
-            if (lyricsColumnWrapper && window.pageYOffset > 384) {
-                lyricsColumnWrapper.classList.add('stuck');
-            } else {
-                lyricsColumnWrapper.classList.remove('stuck');
+            if (lyricsColumnWrapper) {
+                if (window.pageYOffset > 384) {
+                    lyricsColumnWrapper.classList.add('stuck');
+                } else {
+                    lyricsColumnWrapper.classList.remove('stuck');
+                }
             }
         }
 
@@ -61,5 +64,7 @@
             console.log('New window size: ' + window.innerWidth + ', ' + window.innerHeight);
         }
     </script>
+
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
