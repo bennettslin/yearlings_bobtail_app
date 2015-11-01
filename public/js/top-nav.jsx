@@ -138,23 +138,21 @@ var TopNav = React.createClass({
                     <TitleBar />
                     <AnnotationLegend />
                 </ul>
-                <ul className="sticky-nav app-width">
+                <ul className="sticky-nav">
                     <div className="wrapper-width">
-                        <div className="true-width">
-                            <AudioPlayer
-                                playedSongIndex={this.props.playedSongIndex}
-                                playedSongTitle={this.props.playedSongTitle}
-                                songsLength={this.props.songsLength}
-                                _changeSong={this.props._changeSong}
-                            />
-                            <SynopsisBar
-                                playedSongPageIndex={this.props.playedSongPageIndex}
-                                playedSongIndex={this.props.playedSongIndex}
-                                playedSongTitle={this.props.playedSongTitle}
-                                playedSongNarrative={this.props.playedSongNarrative}
-                                playedSongPersonal={this.props.playedSongPersonal}
-                            />
-                        </div>
+                        <AudioPlayer
+                            playedSongIndex={this.props.playedSongIndex}
+                            playedSongTitle={this.props.playedSongTitle}
+                            songsLength={this.props.songsLength}
+                            _changeSong={this.props._changeSong}
+                        />
+                        <SynopsisBar
+                            playedSongPageIndex={this.props.playedSongPageIndex}
+                            playedSongIndex={this.props.playedSongIndex}
+                            playedSongTitle={this.props.playedSongTitle}
+                            playedSongNarrative={this.props.playedSongNarrative}
+                            playedSongPersonal={this.props.playedSongPersonal}
+                        />
                     </div>
                 </ul>
             </div>

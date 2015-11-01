@@ -19,28 +19,19 @@
 
 .sticky-mixin {
     position: absolute;
-    left: 0;
+    width: 100%;
 
     &.stuck {
         position: fixed;
-        z-index: @nav-z-index;
         top: 0;
+        left: inherit;
+        max-width: @wrapper-max-width;
+        z-index: @nav-z-index;
     }
 
-    &.app-width {
-        width: 100%;
-
-        .wrapper-width {
-            margin: 0 auto;
-            height: 100%;
-            width: 100%;
-            max-width: @wrapper-max-width;
-
-            .true-width {
-                height: 100%;
-                margin: 0 auto;
-            }
-        }
+    .wrapper-width {
+        height: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -54,15 +45,11 @@ body {
         max-width: @wrapper-max-width;
 
         .top-nav {
-            // FIXME: this relative position is the cause of the sticky problem.
-            // without it, it works fine. unfortunately, book needs relative.
-            // so try keeping position relative in top nav as well, so that
-            // any solution will apply to both.
-            position: relative;
             background-color: orange;
-            margin: 0;
+            position: relative;
+            margin: 0 auto;
             height: @top-nav-height;
-            width: 90%;
+            width: 100%;
 
             ul {
                 list-style-type: none;
@@ -81,11 +68,7 @@ body {
                     height: @top-nav-height * 0.5;
 
                     .wrapper-width {
-
-                        .true-width {
-                            width: 80%;
-                            // transition: width 0.15s ease-out, top 0.15s ease-out;
-                        }
+                        width: 80%;
                     }
                 }
 
@@ -130,28 +113,22 @@ body {
 
             .sticky-lyrics {
                 .sticky-mixin;
-                background-color: rgba(200, 100, 0, 0.3);
-                top: 0;
-                height: @page-height;
 
                 .wrapper-width {
+                    width: 100%;
 
-                    .true-width {
-                        width: 100%;
+                    div[class^="lyrics-song"] {
+                        background-color: brown;
+                        position: absolute;
+                        width: 30%;
+                        z-index: @lyrics-z-index;
 
-                        div[class^="lyrics-song"] {
-                            background-color: brown;
-                            position: absolute;
-                            width: 30%;
-                            z-index: @lyrics-z-index;
+                        &[class$="left"] {
+                            left: 0;
+                        }
 
-                            &[class$="left"] {
-                                left: 0;
-                            }
-
-                            &[class$="right"] {
-                                right: 0;
-                            }
+                        &[class$="right"] {
+                            right: 0;
                         }
                     }
                 }
