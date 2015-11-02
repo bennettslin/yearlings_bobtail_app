@@ -13,29 +13,23 @@
     <!--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"></script>
     -->
 
     <script src="libs/react.js"></script>
     <script src="libs/react-dom.js"></script>
-    <!-- FIXME: Do not transpile client-side in production. -->
-    <script src="libs/JSXTransformer.js"></script>
 
 </head>
 <body>
     <div id="container"></div>
-    <script type="text/jsx" src="js/top-nav.jsx"></script>
-    <script type="text/jsx" src="js/page.jsx"></script>
-    <script type="text/jsx" src="js/book.jsx"></script>
-    <script type="text/jsx" src="js/app.jsx"></script>
+    <script type="text/javascript" src="js/top-nav.js"></script>
+    <script type="text/javascript" src="js/page.js"></script>
+    <script type="text/javascript" src="js/book.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
-    <script type="text/jsx">
+    <script type="text/javascript">
         var album = <%- JSON.stringify(album) %>;
 
-        var wrapper = ReactDOM.render(
-            <App {...album} />,
-            document.getElementById('container')
-        );
+        var wrapper = ReactDOM.render(React.createElement(App, album), document.getElementById('container'));
 
         var stickyNav = document.getElementsByClassName('sticky-nav')[0],
             lyricsColumnWrapper = document.getElementsByClassName('sticky-lyrics')[0];
@@ -64,7 +58,5 @@
             console.log('New window size: ' + window.innerWidth + ', ' + window.innerHeight);
         }
     </script>
-
-    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

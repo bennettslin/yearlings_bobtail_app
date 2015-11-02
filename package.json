@@ -26,6 +26,7 @@
     "soundcloud-audio": "^0.1.6"
   },
   "devDependencies": {
+    "babel-preset-react": "^6.0.15",
     "grunt": "^0.4.5",
     "grunt-concurrent": "^2.0.4",
     "grunt-contrib-jshint": "^0.11.3",

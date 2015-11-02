@@ -3,3 +3,4 @@ node_modules
 .rebooted
 
 public/css/style.css
+public/js/**/*.js

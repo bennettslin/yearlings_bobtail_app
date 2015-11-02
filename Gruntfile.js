@@ -4,7 +4,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
         concurrent: {
             dev: [
-                'jshint',
+                'babel',
+                // 'jshint',
                 'less',
                 'nodemon',
                 'watch'
@@ -13,9 +14,25 @@ module.exports = function(grunt) {
                 logConcurrentOutput: true
             }
         },
-        jshint: {
-          files: ['Gruntfile.js', 'controllers/**/*.js', 'public/js/**/*.js'],
+        babel: {
+            options: {
+                presets: ['react']
+            },
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'jsx',
+                        src: ['**/*.jsx'],
+                        dest: 'public/js',
+                        ext: '.js'
+                    }
+                ]
+            }
         },
+        // jshint: {
+        //   files: ['Gruntfile.js', 'controllers/**/*.js', 'public/js/**/*.js'],
+        // },
         less: {
             dev: {
                 options: {
