@@ -4,8 +4,6 @@ module.exports = function(grunt) {
     grunt.initConfig({
         concurrent: {
             dev: [
-                'babel',
-                // 'jshint',
                 'less',
                 'nodemon',
                 'watch'
@@ -14,24 +12,27 @@ module.exports = function(grunt) {
                 logConcurrentOutput: true
             }
         },
+        concat: {
+            dist: {
+                src: ['jsx/**/*.jsx', 'js/**/*.js'],
+                dest: 'public/jsx/components.jsx'
+            },
+        },
         babel: {
             options: {
                 presets: ['react']
             },
             dist: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'jsx',
-                        src: ['**/*.jsx'],
-                        dest: 'public/js',
-                        ext: '.js'
-                    }
-                ]
+                src: 'public/jsx/components.jsx',
+                dest: 'public/js/components.js'
             }
         },
-        // jshint: {
-        //   files: ['Gruntfile.js', 'controllers/**/*.js', 'public/js/**/*.js'],
+        // uglify: {
+        //     my_target: {
+        //         files: {
+        //             'public/js/components-min.js' : 'public/js/components.js'
+        //         }
+        //     }
         // },
         less: {
             dev: {
@@ -57,9 +58,14 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            styles: {
+            script: {
+                files: ['jsx/**/*.jsx'],
+                tasks: ['concat', 'babel']
+            },
+
+            style: {
                 files: ['less/**/*.less'],
-                tasks: ['less'],
+                tasks: 'less',
                 options: {
                     nospawn: true
                 }
@@ -68,6 +74,6 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', [
-        'concurrent'
+        'concat', 'babel', 'less', 'concurrent'
     ]);
 };

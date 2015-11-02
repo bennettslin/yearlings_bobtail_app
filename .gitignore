@@ -1,6 +1,5 @@
 node_modules
+public/css/*.css
+public/js/*.js
+public/jsx/*.jsx
 .env
-.rebooted
-
-public/css/style.css
-public/js/**/*.js
