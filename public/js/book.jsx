@@ -13,8 +13,6 @@ var LyricsColumn = React.createClass({
 });
 
 var Book = React.createClass({
-
-
     render: function() {
         var lyricsKeys = this.props.playedSongLyrics ?
                 Object.keys(this.props.playedSongLyrics) : [],

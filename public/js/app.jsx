@@ -79,11 +79,11 @@ var App = React.createClass({
         }
     },
 
-    /**
-     * lyrics columns status:
-     * 0: none, 1: left, 2: right, 3: both
-     */
     _adjustTopNavWidth: function(lyricsColumnsStatus) {
+        /**
+         * lyrics columns status:
+         * 0: none, 1: left, 2: right, 3: both
+         */
         var widthName;
         switch (lyricsColumnsStatus) {
             case 1:
