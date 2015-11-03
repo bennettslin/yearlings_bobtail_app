@@ -18,22 +18,16 @@ module.exports = function(grunt) {
                 dest: 'public/jsx/components.jsx'
             },
         },
-        // babel: {
-        //     options: {
-        //         presets: ['react']
-        //     },
-        //     dist: {
-        //         src: 'public/jsx/components.jsx',
-        //         dest: 'public/js/components.js'
-        //     }
-        // },
-        // uglify: {
-        //     my_target: {
-        //         files: {
-        //             'public/js/components-min.js' : 'public/js/components.js'
-        //         }
-        //     }
-        // },
+        babel: {
+            options: {
+                sourceMap: true,
+                presets: ['react']
+            },
+            dist: {
+                src: 'public/jsx/components.jsx',
+                dest: 'public/js/components.js'
+            }
+        },
         less: {
             dev: {
                 options: {
@@ -62,7 +56,7 @@ module.exports = function(grunt) {
                 files: ['jsx/**/*.jsx'],
                 tasks: [
                     'concat',
-                    // 'babel'
+                    'babel'
                 ]
             },
 
@@ -78,7 +72,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'concat',
-        // 'babel',
+        'babel',
         'less',
         'concurrent'
     ]);
