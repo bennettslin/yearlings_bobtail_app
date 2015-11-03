@@ -10,6 +10,7 @@
 @top-nav-height: 384px;
 @scrolling-nav-height: @top-nav-height * 0.5;
 @sticky-nav-height: @top-nav-height - @scrolling-nav-height;
+@sticky-nav-wrapper-width: 80%;
 
 @footer-height: 48px;
 @page-height: @wrapper-height - @top-nav-height - @footer-height;
@@ -67,27 +68,34 @@ body {
                     background-color: tomato;
 
                     top: @scrolling-nav-height;
-                    height: @top-nav-height * 0.5;
+                    height: @sticky-nav-height;
 
                     .wrapper-width {
-                        width: 80%;
+                        @sticky-nav-wrapper-margin: (100% - @sticky-nav-wrapper-width) * 0.5;
+                        width: @sticky-nav-wrapper-width;
+                        margin-left: @sticky-nav-wrapper-margin;
+                        margin-right: @sticky-nav-wrapper-margin;
                         transition: width 0.2s ease, margin 0.2s ease;
                     }
 
                     &.stuck {
                         .wrapper-width {
                             &[data-nav-width^="left"] {
-                                margin-left: 0;
                                 width: 100% - @lyrics-column-width;
+                                margin-left: 0;
+                                margin-right: @lyrics-column-width;
                             }
 
                             &[data-nav-width^="right"] {
-                                margin-right: 0;
                                 width: 100% - @lyrics-column-width;
+                                margin-left: @lyrics-column-width;
+                                margin-right: 0;
                             }
 
                             &[data-nav-width^="centre"] {
                                 width: 100% - (@lyrics-column-width * 2);
+                                margin-left: @lyrics-column-width;
+                                margin-right: @lyrics-column-width;
                             }
                         }
                     }
