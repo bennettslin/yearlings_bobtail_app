@@ -1,5 +1,5 @@
 node_modules
 public/css/*.*
 public/js/*.*
-public/jsx/*.*
+src
 .env

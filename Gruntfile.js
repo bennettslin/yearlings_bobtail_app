@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: ['jsx/**/*.jsx', 'js/**/*.js'],
-                dest: 'public/jsx/components.jsx'
+                dest: 'src/components.jsx'
             },
         },
         babel: {
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
                 presets: ['react']
             },
             dist: {
-                src: 'public/jsx/components.jsx',
+                src: 'src/components.jsx',
                 dest: 'public/js/components.js'
             }
         },
