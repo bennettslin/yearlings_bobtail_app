@@ -1,3 +1,9 @@
+// FIXME: Uncomment or delete.
+
+// var isNode = (typeof module !== 'undefined') && module.exports,
+//     React = isNode ? require('react') : window.React,
+//     ReactDOM = isNode ? require('react') : window.ReactDOM;
+
 var App = React.createClass({
     getInitialState: function() {
         return {
@@ -59,7 +65,7 @@ var App = React.createClass({
     _changePage: function() {
         var viewedPageIndex = (this.state.viewedPageIndex + 1) % this.props.pageStartingIndices.length;
         this.setState({
-            viewedPageIndex
+            viewedPageIndex: viewedPageIndex
         });
     },
 
@@ -74,7 +80,7 @@ var App = React.createClass({
             this._adjustTopNavWidth(lyricsColumnsStatus);
 
             this.setState({
-                playedSongIndex
+                playedSongIndex: playedSongIndex
             });
         }
     },

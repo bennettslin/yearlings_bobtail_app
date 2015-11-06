@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/bennettslin/yearlings_bobtail_app",
   "dependencies": {
+    "babel": "^6.0.15",
+    "babel-core": "^6.1.2",
     "body-parser": "^1.14.1",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
