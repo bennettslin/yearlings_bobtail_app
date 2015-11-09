@@ -14,16 +14,15 @@ var LyricsColumn = React.createClass({
                                 return (
                                     <div className={'stanza-' + stanzaIndex} key={stanzaIndex}>
                                         {stanza.map(function(verse, verseIndex) {
-                                            console.log(verse);
                                             return (
                                                 <div className={'verse-' + verseIndex} key={verseIndex}>
-                                                    {verse}
+                                                    {this._italicise(verse)}
                                                 </div>
                                             )
-                                        })}
+                                        }.bind(this))}
                                     </div>
                                 )
-                            })}
+                            }.bind(this))}
                         </div>
                     </div>
                 );
@@ -39,6 +38,19 @@ var LyricsColumn = React.createClass({
                 {lyricsTextArea}
             </div>
         );
+    },
+
+    _italicise: function(verse) {
+        /**
+         * this method assumes that each verse line that's italicised
+         * will begin and end with <em> tags
+         */
+        if (verse.indexOf('<em>') !== -1) {
+            verse = verse.replace('<em>', '').replace('</em>', '');
+            return <span><em>{verse}</em></span>
+        } else {
+            return <span>{verse}</span>
+        }
     }
 });
 

@@ -21,7 +21,7 @@ exports.details = {
                         'Didi, couldn\'t you find another sister to be near?'
                     ],
                     [
-                        'Cause I get sick of hearing, "Zeizei, let Didi play with you..."',
+                        'Cause I get sick of hearing, "Zeizei, let Didi play with you…"',
                         'And I tire of saying, "My Didi wants to come too."'
                     ],
                     [
@@ -33,12 +33,12 @@ exports.details = {
                     [
                         'Didi, you\'ve been in the bath all this time.',
                         'Didi, come out, you can\'t soak there all night.',
-                        '<i>Don\'t little raisin fingers need to dry?</i>'
+                        '<em>Don\'t little raisin fingers need to dry?</em>'
                     ],
                     [
                         'Didi, someday you will be a hero',
                         'in the movies, fighting those',
-                        'crooked thieves with your sheriff\'s badge and gun...',
+                        'crooked thieves with your sheriff\'s badge and gun…',
                         'Didi, one day you will be a picture',
                         'taped to all the girls\' mirrors.',
                         'They\'ll say, who now could have ever figured',
@@ -71,14 +71,14 @@ exports.details = {
                         'Hydrants burst as early worms work this dying coyote\'s jaw.',
                         'Swill pop poured from wayside bottle,',
                         'his pinhead in its shadow eclipsed in full.',
-                        '<i>Chilled cola\'s free with salvage sold...</i>',
+                        '<em>Chilled cola\'s free with salvage sold…</em>',
                         'licking lips he ends his stroll.'
                     ],
                     [
                         'Oh, has Willy the Cocoa come',
                         'for our tins and our jars this week?',
                         'Saluting Mummy doing some haircutting to the sun',
-                        'when suddenly baby shrieks...'
+                        'when suddenly baby shrieks…'
                     ],
                     [
                         'As gap-toothed coma parts his forehead,',
@@ -95,15 +95,15 @@ exports.details = {
                         'Papa storms in roaring, Boy, are you proud?',
                         'You\'d learn him good, when smarts he could\'ve took',
                         'all went instead to this clever head of yours.',
-                        'So to baby--to your brother--you\'ll say sorry for the world!'
+                        'So to baby—to your brother—you\'ll say sorry for the world!'
                     ],
                     [
                         'Killcrop dashing kicks up puddle,',
                         'soused loafers shouting \'tard payment is due.',
-                        'Hit this witch with switch, whispers wind, to fix his switcheroo...',
+                        'Hit this witch with switch, whispers wind, to fix his switcheroo…',
                         'Milksop cornered into scuffle,',
                         'a sack-spilled glass swung sounds the past-noon toll.',
-                        '<i>Shelled skull has freed unsalvaged soul...</i>',
+                        '<em>Shelled skull has freed unsalvaged soul…</em>',
                         'dripping Willy\'s stalkless bulb.'
                     ],
                     [
@@ -115,7 +115,7 @@ exports.details = {
                     [
                         'But how marbleless, some reckoned,',
                         'being ever stuck in imp-runt age of mind!',
-                        'Are you sick? I am seven, he\'d reply...',
+                        'Are you sick? I am seven, he\'d reply…',
                         'And do we speak in winded whimpers',
                         'or squelch shreds of a summer gone,',
                         'ever conscious of days past forever wrong?'
@@ -125,13 +125,13 @@ exports.details = {
                         'for a cub not yet Webelos!',
                         'Son, seventy years and you\'ll be glad',
                         'to finally rest those creaking bones!',
-                        'Life\'s like this quilt: patchy, then it fills...',
+                        'Life\'s like this quilt: patchy, then it fills…',
                         'In time with needle done, you\'ll write this book of yours.',
                         'Then to Willy, in the cover could say sorry for the world!'
                     ],
                     [
                         'Bobtail\'s cover could say sorry for the world!',
-                        'Oh, Bobtail\'s cover could say sorry...!'
+                        'Oh, Bobtail\'s cover could say sorry…!'
                     ]
                 ]
             }
@@ -148,28 +148,28 @@ exports.details = {
                     [
                         'It\'s nearing autumn here with record highs.',
                         'Is it searing in Boston? Hope this letter finds',
-                        'your first semester fine while I\'m out of town...',
+                        'your first semester fine while I\'m out of town…',
                         'You\'d love Taiwan, surrounded by walls of mountains,',
                         'their peaks sealed and shielded by foggy clouds.',
                         'Beneath this ceiling yields the scene a reeling feel',
                         'of some giant\'s house.'
                     ],
                     [
-                        'So... before I left, you said',
+                        'So… before I left, you said',
                         'I should keep your kid name, with everything it meant.',
-                        'But then in your embrace, I felt you prepped to shed...'
+                        'But then in your embrace, I felt you prepped to shed…'
                     ],
                     [
-                        'And I\'d reflect inside withering amber eyes--',
-                        'your pupil\'s pupal fly, a pet petrified--',
+                        'And I\'d reflect inside withering amber eyes—',
+                        'your pupil\'s pupal fly, a pet petrified—',
                         'with you raving over how he\'s getting you',
-                        'staying kosher. Though, you know, I would have too...'
+                        'staying kosher. Though, you know, I would have too…'
                     ],
                     [
                         'And I sniffled daily when you skipped a grade.',
                         'One bus seat up you moved, letting rippled braids',
                         'caress, sun-streaked and loose, a wet-cheeked papoose',
-                        'sadly weaned from you...'
+                        'sadly weaned from you…'
                     ],
                     [
                         'Whom I knew I\'d lose the day,',
@@ -177,13 +177,13 @@ exports.details = {
                         'untied this "tetherboy", soothing in your lecture voice.',
                         'Oh but Sasha, if anarchy reigns,',
                         'then no one lives when narcing to the aides,',
-                        'who shrug when thus annoyed, yawning, "Boys will beat boys..."'
+                        'who shrug when thus annoyed, yawning, "Boys will beat boys…"'
                     ],
                     [
-                        'Well Sasha... okay, you saw the cuts.',
+                        'Well Sasha… okay, you saw the cuts.',
                         'But though my jaw was stuck, so now I talk Canuck,',
                         'there\'s been plenty days I\'ve really been through worse.',
-                        'Anyway, I\'m feeling healed. Still, hugging hurts...'
+                        'Anyway, I\'m feeling healed. Still, hugging hurts…'
                     ],
                     [
                         'And Sasha, I know you\'ll have them all,',
@@ -209,7 +209,7 @@ exports.details = {
                         'Lights off, from your hiding place of retreat emerged.',
                         'This fridge\'s gallery in web\'s wake was strewn,',
                         'silent poll of colours overused. ',
-                        'This latest piece you drew with crayons least whittled...'
+                        'This latest piece you drew with crayons least whittled…'
                     ],
                     [
                         'The house settled in sheets, you swing the iron screen.',
@@ -222,15 +222,15 @@ exports.details = {
                         'Raccoons rummage round some rubbish bags,',
                         'till a rickshaw hiccoughs from grating cracks.',
                         'You seek the dunes once deemed a haven',
-                        'that was safe for a heathen...'
+                        'that was safe for a heathen…'
                     ],
                     [
                         'And if flutters with the fairest',
                         'were just sins simply dreamt,',
                         'could some bottled butterfly dream your whims instead?',
-                        'What\'s more, if all you live for still die at the end--',
+                        'What\'s more, if all you live for still die at the end—',
                         'like Odin\'s ashes back from the Society,',
-                        'which filled a chasm dug up underneath--',
+                        'which filled a chasm dug up underneath—',
                         'can that which kills a cat spare his home if spread?'
                     ],
                     [
@@ -250,8 +250,8 @@ exports.details = {
                     [
                         'Should you hide, or could you fight,',
                         'when your day to die has come?',
-                        '&hellip;',
-                        '&hellip;',
+                        '…',
+                        '…',
                         'But in time, wouldn\'t you find life is simply much too long?'
                     ],
                     [
@@ -263,18 +263,18 @@ exports.details = {
                         'then returns them as a buffer zone.',
                         'The sudsy ocean shapes its padded bed,',
                         'which hitherto snubbed and spurned a wreck,',
-                        'while mermaids smile past a guileless garden gnome...'
+                        'while mermaids smile past a guileless garden gnome…'
                     ]
                 ],
                 right: [
                     [
-                        '&hellip;'
+                        '…'
                     ],
                     [
                         'By lot, once more trifling tref must reseed the earth.',
                         'Indifferent galaxies instead stay unmoved;',
                         'sigh and pull the covers over you.',
-                        'In safest sleep, you ruminate on these riddles...'
+                        'In safest sleep, you ruminate on these riddles…'
                     ],
                     [
                         'But how dreadful indeed, do sweet dream\'s ichors seem!',
@@ -294,8 +294,8 @@ exports.details = {
                         'weren\'t just myths between friends,',
                         'would the rondel of her eye be stored in this neck?',
                         'But cored gifts fall to discord till lives acquiesce,',
-                        'by opened latches that come undone by undine--',
-                        'which spilled a basket among other things--',
+                        'by opened latches that come undone by undine—',
+                        'which spilled a basket among other things—',
                         'a casket tilted back where its hopeless rests.'
                     ],
                     [
@@ -313,11 +313,11 @@ exports.details = {
                         'amidst dustbunnies frozen.'
                     ],
                     [
-                        '&hellip;',
-                        '&hellip;',
+                        '…',
+                        '…',
                         'Can a holed up hostage',
                         'pray for soulless solace and just play dumb?',
-                        '&hellip;'
+                        '…'
                     ],
                     [
                         'Yet your defeat of tortoise, forced lead unthwarted,',
@@ -328,7 +328,7 @@ exports.details = {
                         'can reach urchins smashed from undertows.',
                         'But suddenly Odin\'s day is at its end;',
                         'his litter to dust and earth was swept,',
-                        'while Thursday\'s child has a mile less far to go...'
+                        'while Thursday\'s child has a mile less far to go…'
                     ]
                 ]
             }
@@ -344,7 +344,7 @@ exports.details = {
                         'where it commenced: in my bookless room,',
                         'Ulysses\' tomb, surely buried she\'d be!',
                         'First we laid Tourette\'s, next regrets,',
-                        'the last day she rose up and left, hers the sole assent...',
+                        'the last day she rose up and left, hers the sole assent…',
                         'But saving herself strictly for marriage, or really from me?'
                     ],
                     [
@@ -364,7 +364,7 @@ exports.details = {
                     [
                         'And as I pace, stranded here outside her Shelta,',
                         'in famous raincoat unknown to roam,',
-                        'my girl in glasses went clear--my Tekakwitha--',
+                        'my girl in glasses went clear—my Tekakwitha—',
                         'for I lack the wit to spare a safe Algonquin abode.'
                     ],
                     [
@@ -373,7 +373,7 @@ exports.details = {
                         '"So you\'d cheat your way into heaven," she might protest.',
                         'Well no, I know it\'s wrong, but I did burn my palms,',
                         'I guess that butt was still fresh.',
-                        'Et Catherine vaut bien une messe...'
+                        'Et Catherine vaut bien une messe…'
                     ],
                     [
                         'On this sad day to mourn',
@@ -399,7 +399,7 @@ exports.details = {
             lyrics: {
                 left: [
                     [
-                        '<i>But F., that man is the worst nuisance on the beach.</i>'
+                        '<em>But F., that man is the worst nuisance on the beach.</em>'
                     ],
                     [
                         'Mother, woken from her nap,',
@@ -415,7 +415,7 @@ exports.details = {
                         'We didn\'t hear a peep throughout the entire weekend!"'
                     ],
                     [
-                        '<i>Poor Sam Peabody!</i>'
+                        '<em>Poor Sam Peabody!</em>'
                     ],
                     [
                         'Oh brother, when all you know is bleat,',
@@ -423,7 +423,7 @@ exports.details = {
                         'threatening never to release you till you learn to kick it back.',
                         'Feigning sick, I chanced to read',
                         'these words in a comic to me speaking:',
-                        '"Are you tired of being the weakling?"...',
+                        '"Are you tired of being the weakling?"…',
                         'I clipped and mailed the ad.'
                     ],
                     [
@@ -436,7 +436,7 @@ exports.details = {
                         '"Are you a Beyonder sent down to be Earth-fostered;',
                         'do you often feel like a wanderer lost?"',
                         'But waiting for Goddard, our two impatient paupers,',
-                        'Gogo and his Didi, sauntered off...',
+                        'Gogo and his Didi, sauntered off…',
                         'Till in hunger they were led into Huntsville and fed,',
                         'dragged to sled by hunter\'s belt and launched!'
                     ],
@@ -451,7 +451,7 @@ exports.details = {
                         'Beyonders pine for a love no mortals give,',
                         'one they\'ll find only once we build the mothership.',
                         'Your monthly tithe shall fund good tidings soon to come.',
-                        'But till then, here\'s how you\'re to live..."'
+                        'But till then, here\'s how you\'re to live…"'
                     ],
                     [
                         'So thus we learned to act the dunce',
@@ -477,7 +477,7 @@ exports.details = {
                         'nothing too rich for glorious cosmonauts!'
                     ],
                     [
-                        'I\'m sorry I bailed, Xiao Xiang, mush on...',
+                        'I\'m sorry I bailed, Xiao Xiang, mush on…',
                         'I couldn\'t ditch my wails, I needed the pod.',
                         '"Kids say you\'re hopped on drugs, son.',
                         'With Mum we\'ll need a word."',
@@ -493,7 +493,7 @@ exports.details = {
             lyrics: {
                 right: [
                     [
-                        '<i>Maravijaya...</i>'
+                        '<em>Maravijaya…</em>'
                     ],
                     [
                         'I was a lad bent on learning the talents',
@@ -557,7 +557,7 @@ exports.details = {
                         'Sometimes if it\'s all to work friends have to lie.',
                         'And sometimes situations seem the worst,',
                         'but in a year, they\'re never bad.',
-                        'Five more, she\'ll dig up Bobtail\'s words--I\'m not sad!'
+                        'Five more, she\'ll dig up Bobtail\'s words—I\'m not sad!'
                     ]
                 ]
             }
@@ -581,7 +581,7 @@ exports.details = {
             lyrics: {
                 left: [
                     [
-                        '<i>L.A. to the Bay, pompous autumn waits.</i>'
+                        '<em>L.A. to the Bay, pompous autumn waits.</em>'
                     ],
                     [
                         'Uprooted, then en route,',
@@ -599,15 +599,15 @@ exports.details = {
                         'schwa stickers attached to your sci-fi paperback.'
                     ],
                     [
-                        'First date nosebleed spurs tales of bare-knuckle defeats...',
+                        'First date nosebleed spurs tales of bare-knuckle defeats…',
                         'Snowflakes in time come to see off the year.',
                         'You cried for one to sit; it kissed your ear.',
                         'Her show played in mimes, but you pleaded to hear.',
-                        'Then just like the drift, she disappeared...'
+                        'Then just like the drift, she disappeared…'
                     ],
                     [
-                        '<i>With no sister ship slain by his side,',
-                        'and so off her list, sunken Tirpitz lies.</i>',
+                        '<em>With no sister ship slain by his side,</em>',
+                        '<em>and so off her list, sunken Tirpitz lies.</em>',
                         'Alone his first gig, stagefright ignites.',
                         'But no convert\'s missed, once assured his tithe.'
                     ],
@@ -625,10 +625,10 @@ exports.details = {
                         'as your heartbeats, her steps, race to first.',
                         'And she deftly thrusts through the shield of your sneer:',
                         '"Hey, you know you\'re my password?"',
-                        'I am? "Well, you\'re backward..."'
+                        'I am? "Well, you\'re backward…"'
                     ],
                     [
-                        'She locks your arm. Key turned, returned to your guard...',
+                        'She locks your arm. Key turned, returned to your guard…',
                         'In her gingerbread prison, here now you submit.',
                         'Though never full, you\'re fed; so you hit the switch.',
                         'On your bed\'s rumpled linens, a lidless Vaseline sits.',
@@ -650,13 +650,13 @@ exports.details = {
                         'and you marvel, glimmer of her cheek unveiled.'
                     ],
                     [
-                        'She loves you...'
+                        'She loves you…'
                     ],
                     [
-                        '...and now you\'re left with no defences. Well, who\'d have guessed this?  You stand unsure. She lures with a tease, "Oh sweetie, you\'re right: you wear your hard-on in a sleeve." So how\'s that compromise?'
+                        '…and now you\'re left with no defences. Well, who\'d have guessed this?  You stand unsure. She lures with a tease, "Oh sweetie, you\'re right: you wear your hard-on in a sleeve." So how\'s that compromise?'
                     ],
                     [
-                        'And dude, you love her. When your paws were thrashed sparring with the tide, from your Grace Darling\'s beacon light fell an oar. Let pure lose to pure...'
+                        'And dude, you love her. When your paws were thrashed sparring with the tide, from your Grace Darling\'s beacon light fell an oar. Let pure lose to pure…'
                     ],
                     [
                         'You stroke her temples. She gushes as she guides,',
@@ -673,8 +673,8 @@ exports.details = {
                 left: [
                     [
                         'reverends, paused stiff in tandem.',
-                        'Heavin\' some, Ana whispures a low sigh, bein\'&hellip;',
-                        'of de exempt, exit us the Viking den...',
+                        'Heavin\' some, Ana whispures a low sigh, bein\'…',
+                        'of de exempt, exit us the Viking den…',
                         'Walkyriens: to Walhall o\' mead-Tussin!',
                         'Quouffs uppraissed, this boundless Kalevalley ends.',
                         'We ride as Finnugreec tongue Lapps are highmen.'
@@ -683,21 +683,21 @@ exports.details = {
                         'Makeyars mygrate, from among ol\' psealed off drains.',
                         'Then down the steppes we charged,',
                         'Drinkhis Khan, once Toomujin, has slain the teeto-Tartars!',
-                        'Tomer-layin\' the seed, Howie led the feat of avatars...'
+                        'Tomer-layin\' the seed, Howie led the feat of avatars…'
                     ],
                     [
                         'Indus-trail sewerce, questurns Indo Hairapins:',
                         'Forsi ahuro or Sensegreat devas\'dayshone?',
-                        'To soma up, our-youn\' invedas unsolft quarry rest...',
+                        'To soma up, our-youn\' invedas unsolft quarry rest…',
                         'Ourevian battles spent, a\'duct Uighuress.',
-                        'Are Melee tapirs the dusc-horse yet...?',
+                        'Are Melee tapirs the dusc-horse yet…?',
                         'From the Khlmair city Ingcar Wet, to war: scimitary of\'fence!'
                     ],
                     [
-                        'Pour sod, fourfeit tundr\'s Siburial plains...',
-                        'Upridge o\' lawn trod on by forc\'d nations sank...',
+                        'Pour sod, fourfeit tundr\'s Siburial plains…',
+                        'Upridge o\' lawn trod on by forc\'d nations sank…',
                         'But past a cross Bearing Straight,',
-                        'herows--ourauras left--to Audamn\'s grave.'
+                        'herows—ourauras left—to Audamn\'s grave.'
                     ],
                     [
                         'And now without a chart,',
@@ -713,10 +713,10 @@ exports.details = {
                         'How old are these mummeries I have left to mine?'
                     ],
                     [
-                        'Pullar switch, in-som\'umiak skims through channels snow blitz\'d...',
+                        'Pullar switch, in-som\'umiak skims through channels snow blitz\'d…',
                         'Then pounds arrhythmetic heart,',
                         'Enguished buzzereds come unsated find Rumspring is parched.',
-                        'In mouth Deseret, black Letter-Day Sensed ahead... "Rejoyce!" bellow the'
+                        'In mouth Deseret, black Letter-Day Sensed ahead… "Rejoyce!" bellow the'
                     ]
                 ]
             }
@@ -732,7 +732,7 @@ exports.details = {
                         'dragging aglets held by the bastard\'s boot,',
                         'as the Van Nuys belles lunched soundless through the noon.',
                         'Now your sapling cut says you\'ve past ring one,',
-                        'yet--if adding up--then for more you\'d vie.',
+                        'yet—if adding up—then for more you\'d vie.',
                         'From the valley of death you rode, so on spite you thrive.'
                     ],
                     [
@@ -759,13 +759,13 @@ exports.details = {
                         'reading His obit not a bang, just a murmuring.',
                         'Now each new concession sees this peasant',
                         'discontented all the more,',
-                        'with his ignorance lessened of his plight before...'
+                        'with his ignorance lessened of his plight before…'
                     ],
                     [
                         'Beyonders prevail, the letters preached,',
                         'and thus secure, must turn the cheek.',
                         'You waved your pledge to this godly good,',
-                        'only to crack, sprawled where they stood...'
+                        'only to crack, sprawled where they stood…'
                     ],
                     [
                         'Though, if you\'re right to want what\'s yours,',
@@ -777,12 +777,12 @@ exports.details = {
                         'Red and friends, lagging by the back door,',
                         'lift you on angel stares.',
                         'Drunk, you\'d claim you\'ve never loved,',
-                        'but it\'s too late to unscrew a Bud...'
+                        'but it\'s too late to unscrew a Bud…'
                     ],
                     [
                         'Yes, you were wrong to make demands on life,',
                         '\'cause when you beg it never comes.',
-                        'And we all find this out on our own time...',
+                        'And we all find this out on our own time…',
                         'Look back in anger to have won.'
                     ]
                 ]
@@ -806,7 +806,7 @@ exports.details = {
                         'Drunk pissed punks tryst, bustin\' cars with fists,',
                         'the littlest fuss will incite your rage.',
                         'In you come, piss drunk, smug in smegma crust,',
-                        'since hummers aren\'t love, or so she\'s claimed...',
+                        'since hummers aren\'t love, or so she\'s claimed…',
                         'Well see, Garryowen, now no one,',
                         'buys your grief as the boy unchosen.'
                     ],
@@ -839,7 +839,7 @@ exports.details = {
                     [
                         'Toora-loora-li, Garryowen, who owes no one,',
                         'becomes someone\'s last-ditch alibi.',
-                        'You\'re a purer lie...'
+                        'You\'re a purer lie…'
                     ]
                 ]
             }
@@ -854,12 +854,12 @@ exports.details = {
                         'On a golden cord, once worn, now shorn,',
                         'safely kept with bread and pocket lint.',
                         'Not of its own accord, but broken for what its promise meant.',
-                        'And so she said, "Now it\'s yours again...',
+                        'And so she said, "Now it\'s yours again…',
                         'And how you look tonight!',
                         'So polite, yet resigned, with wounds dressed and feelings put away.',
-                        'Full of patient replies... But how can I trust a word you say?',
+                        'Full of patient replies… But how can I trust a word you say?',
                         'So spill away.. and please, dear, you have no more secrets saved.',
-                        'I\'m sorry, but I went through your mail today..."'
+                        'I\'m sorry, but I went through your mail today…"'
                     ],
                     [
                         'Immerse the moulted form in holy foggy night,',
@@ -876,7 +876,7 @@ exports.details = {
                     [
                         'But a precious gift as a shedded chain,',
                         'has lain to rust, one more cruel memento.',
-                        'Then if life were real, not just drunken play...',
+                        'Then if life were real, not just drunken play…',
                         'But what do I know?'
                     ],
                     [
@@ -887,8 +887,8 @@ exports.details = {
                         'But should it matter since you loved her once,',
                         'when you really thought the world that simple?',
                         'And who\'s to judge how much you cared because',
-                        'the gesture then was just a little more worth working for?...',
-                        'Now the jester teeters towards...'
+                        'the gesture then was just a little more worth working for?…',
+                        'Now the jester teeters towards…'
                     ],
                     [
                         'the taunting, streetswept dawn.',
@@ -919,15 +919,15 @@ exports.details = {
                 ],
                 right: [
                     [
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;'
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…'
                     ],
                     [
                         'Returned a golden cord, this sole belonging signed.',
@@ -936,35 +936,35 @@ exports.details = {
                         'for the well-behaved on the wing.'
                     ],
                     [
-                        'As I soak in spirits amidst wanted ads--',
-                        'my desperate ailments tied in this shambler\'s dusk--',
+                        'As I soak in spirits amidst wanted ads—',
+                        'my desperate ailments tied in this shambler\'s dusk—',
                         'still hardened against her fawning, misty glance,',
                         'past this avenue Möbius.'
                     ],
                     [
                         'But the present slips past a debt unpaid,',
                         'that slays you once before you\'ll let it go.',
-                        'And if night were peeled off the front of day...',
+                        'And if night were peeled off the front of day…',
                         'But what do I know?'
                     ],
                     [
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…',
                         'Mush! Mush!'
                     ],
                     [
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;'
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…'
                     ],
                     [
                         'Once navels locked upon the wilted grass,',
@@ -996,11 +996,11 @@ exports.details = {
                     [
                         'So you fled to her nest on this stork,',
                         'history shed, having never grown your horns.',
-                        'A present sent to her of a newborn...',
+                        'A present sent to her of a newborn…',
                         'So baby, tell me then, when you take in her breasts,',
                         'are you suckling to be fed?',
                         'Is it just her womb you bed?',
-                        'Well, have some more...'
+                        'Well, have some more…'
                     ],
                     [
                         'And how you always burned, for the slight;',
@@ -1008,14 +1008,14 @@ exports.details = {
                         'You\'d nurse your bruises: why, the nerve of me, to lie',
                         'in reserve while I had to learn to find',
                         'all the points you had! Then you\'d resent',
-                        'plunders past that forced my defence...',
+                        'plunders past that forced my defence…',
                         'But dear, let\'s make a pact: if you\'re single then,',
-                        'I get you back? And...'
+                        'I get you back? And…'
                     ],
                     [
-                        'I\'ll be stronger--not a bother, more modest, I promise--',
+                        'I\'ll be stronger—not a bother, more modest, I promise—',
                         'to parent my knight-errant as the sole keeper of his sheep herd.',
-                        'And when sobered by the time-lapse to spring forward on a fallback...'
+                        'And when sobered by the time-lapse to spring forward on a fallback…'
                     ],
                     [
                         'my ticklish piglet, you\'ll bounce back to me, giggly, having fully gorged yourself.',
@@ -1027,14 +1027,14 @@ exports.details = {
                         'But other nights you\'d lap my wound clean',
                         'to leave me as before, with only instinct to adore.',
                         'Besides, a you-shaped pussing sore',
-                        'bleeds just once, then never more...',
+                        'bleeds just once, then never more…',
                         'So are we agreed, honeybee? Come for me? At thirty-three?'
                     ],
                     [
                         'You say you woke one crystal morning, to find all those thoughts had gone away:',
                         'your fear of death, your fear of never dying, and sadness for what it was.',
                         'You just knew Bobtail\'s your priority, so for Bobtail I\'ll gladly wait.',
-                        'And darling, don\'t you worry, these were only practise cuts...'
+                        'And darling, don\'t you worry, these were only practise cuts…'
                     ]
                 ]
             }
@@ -1048,50 +1048,50 @@ exports.details = {
                     [
                         'Beta, come wax prophetic with me.',
                         'Rest your rump, boy, by your old giving tree.',
-                        'Stumped, I ponder the forespoken monster at the end of this book of yours...',
+                        'Stumped, I ponder the forespoken monster at the end of this book of yours…',
                         'And you, for a future, sold your whole fortune',
                         'to live neutered, blissfully and orphaned.',
-                        'Upon purchase of a queen\'s ship, earth right now your tourist store...'
+                        'Upon purchase of a queen\'s ship, earth right now your tourist store…'
                     ],
                     [
                         'But distracted by your brother\'s tantrums,',
                         'we couldn\'t imagine your mail order cult,',
                         'till they called, suspecting you of huffing,',
-                        'then we caught you stuffing twenties in an envelope...',
+                        'then we caught you stuffing twenties in an envelope…',
                         'So do you believe your "hamartia" now?'
                     ],
                     [
                         'Oh, bastard ingrate! Some nights you wake,',
                         'climb and survey the houses you\'ve betrayed.',
-                        'Scattered your beans over suburbia...'
+                        'Scattered your beans over suburbia…'
                     ],
                     [
                         'Mowed down by the tides, and inundated under in unfair fights,',
                         'you made a bunker that shuts airtight to seal out their floods.',
                         'But then, my little prince, safe on your tiny planet where none else fit,',
-                        'you finally granted their nutshells are rigged, and healed round your grudge...'
+                        'you finally granted their nutshells are rigged, and healed round your grudge…'
                     ],
                     [
                         'Now suddenly dressed to play, you drowned your stutter,',
                         'smugly prepped to haze the new latecomers.',
-                        'This scheming crackpot vowed to clean the jackpot out this time around...'
+                        'This scheming crackpot vowed to clean the jackpot out this time around…'
                     ],
                     [
                         'But have you heard, my beloved Rama king, the testifiers\' lore?',
                         'A nation paused to watch you fail your Sita on repeat for evermore!',
-                        'Did you find a rival in the goddess you once sought as prize--',
+                        'Did you find a rival in the goddess you once sought as prize—',
                         'your idol who riled you when you saw that you two were tied? '
                     ],
                     [
                         'With bride you bridled in this perfect duel match,',
                         'and so one night you chalked the sidewalks slurring Valmiki\'s chant.',
-                        'When wakened from the siren, you found spelled out in dead ants: ____...'
+                        'When wakened from the siren, you found spelled out in dead ants: ____…'
                     ],
                     [
                         'No well worn sari could sway you from a fairer marathon!',
-                        'Your dulling gold now gone...',
+                        'Your dulling gold now gone…',
                         'Stubborn harpies can\'t draw this contest to be one!',
-                        '...traded in for the trophy blondes.'
+                        '…traded in for the trophy blondes.'
                     ],
                     [
                         'Through tatters of sky, their sun tinkles light',
@@ -1109,10 +1109,10 @@ exports.details = {
                         'shouldn\'t you first be sure you\'ve finally become someone?'
                     ],
                     [
-                        'Rama, Rama, Rama...'
+                        'Rama, Rama, Rama…'
                     ],
                     [
-                        '...Maranatha! '
+                        '…Maranatha! '
                     ]
                 ]
             }
@@ -1124,7 +1124,7 @@ exports.details = {
             lyrics: {
                 left: [
                     [
-                        'Or another...'
+                        'Or another…'
                     ],
                     [
                         'Atavist stuck feet first,',
@@ -1146,10 +1146,10 @@ exports.details = {
                     ],
                     [
                         'Needle done will not retract,',
-                        'it hums a typo fragile ex passed through ash...',
+                        'it hums a typo fragile ex passed through ash…',
                         'With his vinyl, exit Miriam to cash his stash.',
                         'Undeluded, she\'ll bask in selfish cut-off jeans,',
-                        'and in her pool, hears not a worrisome "Bless her, Godspeed..." '
+                        'and in her pool, hears not a worrisome "Bless her, Godspeed…" '
                     ],
                     [
                         'The key turned and she floors it,',
@@ -1163,7 +1163,7 @@ exports.details = {
                 ],
                 right: [
                     [
-                        '&hellip;'
+                        '…'
                     ],
                     [
                         'At a vista, key turned',
@@ -1184,11 +1184,11 @@ exports.details = {
                         'which she swore when scarcely twenty-one.'
                     ],
                     [
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;',
-                        '&hellip;'
+                        '…',
+                        '…',
+                        '…',
+                        '…',
+                        '…'
                     ],
                     [
                         'The seat hurt when he lowered it,',
@@ -1209,10 +1209,10 @@ exports.details = {
             lyrics: {
                 left: [
                     [
-                        '<i>"If you\'re just starting out, you need to decide right now:',
-                        'either you stick with quality vinyl, or you buy only the bargain bin LPs;',
-                        'you can\'t have both. Because a scratched record will chip a good needle...',
-                        'and a chipped needle will scratch a good record..."</i>'
+                        '<em>"If you\'re just starting out, you need to decide right now:</em>',
+                        '<em>either you stick with quality vinyl, or you buy only the bargain bin LPs;</em>',
+                        '<em>you can\'t have both. Because a scratched record will chip a good needle…</em>',
+                        '<em>and a chipped needle will scratch a good record…"</em>'
                     ],
                     [
                         'So shall we, Odin, lightly tread',
@@ -1220,16 +1220,16 @@ exports.details = {
                         'to a soiled girl fouled on the false rib from our chest?',
                         'We baulked at our lives born unfair,',
                         'set to rock this pout from horse to chair,',
-                        'as a tempered hammer cooled by striking the smouldering air...',
+                        'as a tempered hammer cooled by striking the smouldering air…',
                         'Well, first pets always bear the worst,',
                         'mere primers on how not to hurt,',
-                        'and now I know why the battered kitten purrs...'
+                        'and now I know why the battered kitten purrs…'
                     ],
                     [
-                        '<i> "No, I\'ll smile because I believe in the big crunch,',
-                        'and meanwhile, the universe is a cyanided box...',
-                        'Because if we can\'t ever be known to be dead,',
-                        'we just might always be alive to God..."</i>'
+                        '<em> "No, I\'ll smile because I believe in the big crunch,</em>',
+                        '<em>and meanwhile, the universe is a cyanided box…</em>',
+                        '<em>Because if we can\'t ever be known to be dead,</em>',
+                        '<em>we just might always be alive to God…"</em>'
                     ],
                     [
                         'Torn straps unsalvaged sows have chewed,',
@@ -1237,23 +1237,23 @@ exports.details = {
                         'its bristles scrape discharge encrusted on leather boots.',
                         'Through an alley strewn with burger shrouds,',
                         'a lone rallied youth strikes himself from his cloud,',
-                        'reversing his stomach and his swastikas inside out...',
-                        'Well, if first cuts are the worst ones bled...',
+                        'reversing his stomach and his swastikas inside out…',
+                        'Well, if first cuts are the worst ones bled…',
                         'then none by us now, to any flesh!',
-                        'This shipwrecked world is large enough for us to make amends...',
-                        'and to be good again...'
+                        'This shipwrecked world is large enough for us to make amends…',
+                        'and to be good again…'
                     ],
                     [
                         '"So all your leads have left and now you\'re sad, too?',
-                        'Someday you\'ll breathe again; for one, you have to...',
+                        'Someday you\'ll breathe again; for one, you have to…',
                         'I don\'t know how where once I cowered I now could fly.',
                         'I still love you for the airholes, dear; and now, good night."'
                     ],
                     [
-                        'The stardust marks us, Odin, sparks zip through our heads...',
+                        'The stardust marks us, Odin, sparks zip through our heads…',
                         'And can we start as children? Would we want to then?',
-                        'The diapered white dwarf, gurgling, curls up for his sleep...',
-                        'Our ashed heads bow from chivalry to our Siva\'s feet...'
+                        'The diapered white dwarf, gurgling, curls up for his sleep…',
+                        'Our ashed heads bow from chivalry to our Siva\'s feet…'
                     ]
                 ]
             }
@@ -1297,7 +1297,7 @@ exports.details = {
                         'she says now it\'s dark and getting late,',
                         'but we\'ll always have today.',
                         'Why does my last thought in this world belong to Sita?',
-                        'Now the light spills warm and bright... gently fills these eyes...'
+                        'Now the light spills warm and bright… gently fills these eyes…'
                     ],
                     [
                         'She\'ll always come to take me, Sita! Sita!',
