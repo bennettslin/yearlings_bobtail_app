@@ -7,22 +7,36 @@ var LyricsColumn = React.createClass({
 
             if (this.props.shown) {
                 lyricsTextArea = (
-                    <div className="lyrics-text-area">
+                    <div className={'lyrics-text-area'}>
                         <h1>{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
-                        <span>{this.props.playedSongLyric}</span>
+                        <div className={'foldable-area ' + (this.props.isFolded ? 'folded' : 'unfolded')}>
+                            {this.props.playedSongLyric}
+                        </div>
                     </div>
                 );
             }
 
         return (
             <div className={'lyrics-song-' + playedSongIndex + ' lyrics-column-' + columnIndex + ' ' + shownClassName}>
+                <button className="toggle-fold-button"
+                    onClick={this.props._toggleFold}
+                >
+                    fold
+                </button>
                 {lyricsTextArea}
+                }
             </div>
         );
     }
 });
 
 var Book = React.createClass({
+    getInitialState: function() {
+        return {
+            lyricsAreFolded: false
+        };
+    },
+
     render: function() {
         var lyricsColumnsArray = ['left', 'right'],
             lyricsColumnsKeys = this.props.playedSongLyrics ? Object.keys(this.props.playedSongLyrics) : [],
@@ -35,10 +49,12 @@ var Book = React.createClass({
                                 <LyricsColumn
                                     key={key}
                                     shown={shown}
+                                    isFolded={this.state.lyricsAreFolded}
                                     playedSongIndex={this.props.playedSongIndex}
                                     playedSongTitle={this.props.playedSongTitle}
                                     playedSongLyric={this.props.playedSongLyrics ? this.props.playedSongLyrics[key] : null}
                                     columnIndex={key}
+                                    _toggleFold={this._toggleLyricsFold}
                                 />
                             );
                         }.bind(this))}
@@ -76,5 +92,11 @@ var Book = React.createClass({
                 }.bind(this))}
             </div>
         );
+    },
+
+    _toggleLyricsFold: function() {
+        this.setState({
+            lyricsAreFolded: !this.state.lyricsAreFolded
+        });
     }
 });
