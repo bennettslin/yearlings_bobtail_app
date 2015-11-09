@@ -1,12 +1,22 @@
 var LyricsColumn = React.createClass({
     render: function() {
         var playedSongIndex = this.props.playedSongIndex,
-            columnIndex = this.props.columnIndex;
+            columnIndex = this.props.columnIndex,
+            shownClassName = this.props.shown ? 'shown' : 'unshown',
+            lyricsMain;
+
+            if (this.props.shown) {
+                lyricsMain = (
+                    <div>
+                        <h1>{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
+                        <span>{this.props.playedSongLyric}</span>
+                    </div>
+                );
+            }
 
         return (
-            <div className={'lyrics-song-' + playedSongIndex + ' lyrics-column-' + columnIndex}>
-                <h1>{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
-                <span>{this.props.playedSongLyric}</span>
+            <div className={'lyrics-song-' + playedSongIndex + ' lyrics-column-' + columnIndex + ' ' + shownClassName}>
+                {lyricsMain}
             </div>
         );
     }
@@ -14,18 +24,20 @@ var LyricsColumn = React.createClass({
 
 var Book = React.createClass({
     render: function() {
-        var lyricsKeys = this.props.playedSongLyrics ?
-                Object.keys(this.props.playedSongLyrics) : [],
+        var lyricsColumnsArray = ['left', 'right'],
+            lyricsColumnsKeys = this.props.playedSongLyrics ? Object.keys(this.props.playedSongLyrics) : [],
             lyricsColumns = (
                 <div className="sticky-lyrics">
                     <div className="wrapper-width">
-                        {lyricsKeys.map(function(key) {
+                        {lyricsColumnsArray.map(function(key) {
+                            var shown = lyricsColumnsKeys.indexOf(key) !== -1;
                             return (
                                 <LyricsColumn
                                     key={key}
+                                    shown={shown}
                                     playedSongIndex={this.props.playedSongIndex}
                                     playedSongTitle={this.props.playedSongTitle}
-                                    playedSongLyric={this.props.playedSongLyrics[key]}
+                                    playedSongLyric={this.props.playedSongLyrics ? this.props.playedSongLyrics[key] : null}
                                     columnIndex={key}
                                 />
                             );
