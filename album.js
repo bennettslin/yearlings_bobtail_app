@@ -250,8 +250,8 @@ exports.details = {
                     [
                         'Should you hide, or could you fight,',
                         'when your day to die has come?',
-                        '',
-                        '',
+                        '&hellip;',
+                        '&hellip;',
                         'But in time, wouldn\'t you find life is simply much too long?'
                     ],
                     [
@@ -268,7 +268,7 @@ exports.details = {
                 ],
                 right: [
                     [
-                        ''
+                        '&hellip;'
                     ],
                     [
                         'By lot, once more trifling tref must reseed the earth.',
@@ -313,11 +313,11 @@ exports.details = {
                         'amidst dustbunnies frozen.'
                     ],
                     [
-                        '',
-                        '',
+                        '&hellip;',
+                        '&hellip;',
                         'Can a holed up hostage',
                         'pray for soulless solace and just play dumb?',
-                        ''
+                        '&hellip;'
                     ],
                     [
                         'Yet your defeat of tortoise, forced lead unthwarted,',
@@ -673,7 +673,7 @@ exports.details = {
                 left: [
                     [
                         'reverends, paused stiff in tandem.',
-                        'Heavin\' some, Ana whispures a low sigh, bein\'',
+                        'Heavin\' some, Ana whispures a low sigh, bein\'&hellip;',
                         'of de exempt, exit us the Viking den...',
                         'Walkyriens: to Walhall o\' mead-Tussin!',
                         'Quouffs uppraissed, this boundless Kalevalley ends.',
@@ -919,15 +919,15 @@ exports.details = {
                 ],
                 right: [
                     [
-                        '',
-                        '',
-                        '',
-                        '',
-                        '',
-                        '',
-                        '',
-                        '',
-                        ''
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;'
                     ],
                     [
                         'Returned a golden cord, this sole belonging signed.',
@@ -948,23 +948,23 @@ exports.details = {
                         'But what do I know?'
                     ],
                     [
-                        '',
-                        '',
-                        '',
-                        '',
-                        '',
-                        '',
-                        '',
-                        '',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
                         'Mush! Mush!'
                     ],
                     [
-                        '',
-                        '',
-                        '',
-                        '',
-                        '',
-                        ''
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;'
                     ],
                     [
                         'Once navels locked upon the wilted grass,',
@@ -1163,7 +1163,7 @@ exports.details = {
                 ],
                 right: [
                     [
-                        ''
+                        '&hellip;'
                     ],
                     [
                         'At a vista, key turned',
@@ -1184,11 +1184,11 @@ exports.details = {
                         'which she swore when scarcely twenty-one.'
                     ],
                     [
-                        '',
-                        '',
-                        '',
-                        '',
-                        ''
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;',
+                        '&hellip;'
                     ],
                     [
                         'The seat hurt when he lowered it,',

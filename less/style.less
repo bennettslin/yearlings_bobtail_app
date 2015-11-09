@@ -19,6 +19,8 @@
 @nav-z-index: @page-z-index + 1;
 @lyrics-z-index: @nav-z-index + 1;
 
+@lyrics-font-size: 0.85em;
+
 .sticky-mixin {
     position: absolute;
     width: 100%;
@@ -178,21 +180,35 @@ body {
                             right: 10px;
                         }
 
-                        .lyrics-text-area {
+                        .lyrics-body {
 
-                            .foldable-area {
-                                transition: max-height 0.15s ease;
+                            .lyrics-header {
+                                font-size: 1.5em;
+                            }
 
-                                &.folded {
-                                    max-height: 0;
+                            .lyrics-text {
+                                font-size: @lyrics-font-size;
+
+                                &.foldable-area {
+                                    transition: max-height 0.15s ease;
+
+                                    &.folded {
+                                        max-height: 0;
+                                    }
+
+                                    &.unfolded {
+                                        /**
+                                         * Not happy about using vh here,
+                                         * but animation needs it.
+                                         */
+                                        max-height: 100vh;
+                                    }
                                 }
 
-                                &.unfolded {
-                                    /**
-                                     * Not happy about using vh here,
-                                     * but animation needs it.
-                                     */
-                                    max-height: 100vh;
+                                [class^="stanza"] {
+                                    &:not(:last-child) {
+                                        margin-bottom: @lyrics-font-size;
+                                    }
                                 }
                             }
                         }

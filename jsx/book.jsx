@@ -7,10 +7,23 @@ var LyricsColumn = React.createClass({
 
             if (this.props.shown) {
                 lyricsTextArea = (
-                    <div className={'lyrics-text-area'}>
-                        <h1>{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
-                        <div className={'foldable-area ' + (this.props.isFolded ? 'folded' : 'unfolded')}>
-                            {this.props.playedSongLyric}
+                    <div className={'lyrics-body'}>
+                        <h1 className="lyrics-header">{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
+                        <div className={'lyrics-text foldable-area ' + (this.props.isFolded ? 'folded' : 'unfolded')}>
+                            {this.props.playedSongLyric.map(function(stanza, stanzaIndex) {
+                                return (
+                                    <div className={'stanza-' + stanzaIndex} key={stanzaIndex}>
+                                        {stanza.map(function(verse, verseIndex) {
+                                            console.log(verse);
+                                            return (
+                                                <div className={'verse-' + verseIndex} key={verseIndex}>
+                                                    {verse}
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
                 );
@@ -24,7 +37,6 @@ var LyricsColumn = React.createClass({
                     fold
                 </button>
                 {lyricsTextArea}
-                }
             </div>
         );
     }
