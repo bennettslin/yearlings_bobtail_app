@@ -168,6 +168,12 @@ body {
                                 right: -@lyrics-column-width;
                             }
                         }
+
+                        .lyrics-text-area {
+                            // FIXME: vh is buggy in iOS7 and some IE
+                            max-height: 100vh;
+                            overflow: auto;
+                        }
                     }
                 }
             }

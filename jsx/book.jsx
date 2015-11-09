@@ -3,11 +3,11 @@ var LyricsColumn = React.createClass({
         var playedSongIndex = this.props.playedSongIndex,
             columnIndex = this.props.columnIndex,
             shownClassName = this.props.shown ? 'shown' : 'unshown',
-            lyricsMain;
+            lyricsTextArea;
 
             if (this.props.shown) {
-                lyricsMain = (
-                    <div>
+                lyricsTextArea = (
+                    <div className="lyrics-text-area">
                         <h1>{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
                         <span>{this.props.playedSongLyric}</span>
                     </div>
@@ -16,7 +16,7 @@ var LyricsColumn = React.createClass({
 
         return (
             <div className={'lyrics-song-' + playedSongIndex + ' lyrics-column-' + columnIndex + ' ' + shownClassName}>
-                {lyricsMain}
+                {lyricsTextArea}
             </div>
         );
     }
