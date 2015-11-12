@@ -34,6 +34,7 @@
         }
     }
 
+    // FIXME: Make this more efficient?
     leftLyricsColumn.addEventListener('wheel', function(e) {
         console.log("Left column scrolling to: " + leftLyricsColumn.scrollTop);
         rightLyricsColumn.scrollTop = leftLyricsColumn.scrollTop;

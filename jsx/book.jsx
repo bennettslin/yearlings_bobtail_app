@@ -1,4 +1,27 @@
+// var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+// var ReactTransitionGroup = React.addons.TransitionGroup;
+
 var LyricsColumn = React.createClass({
+
+    // componentWillAppear: function(callback) {
+    //     console.log("hi");
+    // },
+    // componentDidAppear: function() {
+    //     console.log("hi2");
+    // },
+    // componentWillEnter: function(callback) {
+    //     console.log("hi3");
+    // },
+    // componentDidEnter: function() {
+    //     console.log("hi4");
+    // },
+    // componentWillLeave: function(callback) {
+    //     console.log("hi5");
+    // },
+    // componentDidLeave: function() {
+    //     console.log("hi6");
+    // },
+
     render: function() {
         var playedSongIndex = this.props.playedSongIndex,
             columnIndex = this.props.columnIndex,
@@ -6,6 +29,7 @@ var LyricsColumn = React.createClass({
             expandedClassName = this.props.isExpanded ? ' expanded' : '',
             columnClassName = 'lyrics-song-' + playedSongIndex +
                 ' lyrics-column-' + columnIndex + shownClassName + expandedClassName,
+            // columnKeyName = 'lyrics-column-' + playedSongIndex + '-' + columnIndex,
             toggleFoldButton,
             lyricsTextArea;
 
@@ -27,9 +51,9 @@ var LyricsColumn = React.createClass({
                 );
 
                 lyricsTextArea = (
-                    <div className={'lyrics-body'} onScroll={this.props._handleScroll}>
+                    <div className={'lyrics-text'} onScroll={this.props._handleScroll}>
                         <h1 className="lyrics-header">{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
-                        <div className={'lyrics-text foldable-area ' + (this.props.isFolded ? 'folded' : 'unfolded')}>
+                        <div className={'lyrics-verses foldable-area ' + (this.props.isFolded ? 'folded' : 'unfolded')}>
                             {this.props.playedSongLyric.map(function(stanza, stanzaIndex) {
                                 return (
                                     <div className={'stanza-' + stanzaIndex} key={stanzaIndex}>
@@ -50,7 +74,9 @@ var LyricsColumn = React.createClass({
             }
 
         return (
-            <div className={columnClassName}>
+            <div
+                className={columnClassName}
+            >
                 {toggleFoldButton}
                 {lyricsTextArea}
             </div>

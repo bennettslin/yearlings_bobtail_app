@@ -6,7 +6,7 @@
 
         div[class^="lyrics-song"] {
             @lyrics-header-size: 1.5em;
-            @lyrics-text-size: 0.85em;
+            @lyrics-verse-size: 0.85em;
 
             .expand-columns-button-mixin {
                 position: absolute;
@@ -55,13 +55,13 @@
                 right: 10px;
             }
 
-            .lyrics-body {
+            .lyrics-text {
                 .lyrics-header {
                     font-size: @lyrics-header-size;
                 }
 
-                .lyrics-text {
-                    font-size: @lyrics-text-size;
+                .lyrics-verses {
+                    font-size: @lyrics-verse-size;
 
                     &.foldable-area {
                         transition: max-height 0.15s ease;
@@ -81,7 +81,7 @@
 
                     [class^="stanza"] {
                         &:not(:last-child) {
-                            margin-bottom: @lyrics-text-size;
+                            margin-bottom: @lyrics-verse-size;
                         }
                     }
                 }
@@ -93,7 +93,7 @@
              */
             &.expanded {
                 @expanded-lyrics-header-size: @lyrics-header-size * 1.5;
-                @expanded-lyrics-text-size: @lyrics-text-size * 1.5;
+                @expanded-lyrics-verse-size: @lyrics-verse-size * 1.5;
                 @expanded-lyrics-column-width: @lyrics-column-width * 1.8;
 
                 width: @expanded-lyrics-column-width;
@@ -110,17 +110,17 @@
                     }
                 }
 
-                .lyrics-body {
+                .lyrics-text {
                     .lyrics-header {
                         font-size: @expanded-lyrics-header-size;
                     }
 
-                    .lyrics-text {
-                        font-size: @expanded-lyrics-text-size;
+                    .lyrics-verses {
+                        font-size: @expanded-lyrics-verse-size;
 
                         [class^="stanza"] {
                             &:not(:last-child) {
-                                margin-bottom: @expanded-lyrics-text-size;
+                                margin-bottom: @expanded-lyrics-verse-size;
                             }
                         }
                     }
@@ -128,4 +128,24 @@
             }
         }
     }
+}
+
+.example-enter {
+    opacity: 0.01;
+    transition: opacity 1.5s ease-in;
+    -webkit-transition: opacity 1.5s ease-in;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+}
+
+.example-leave {
+    opacity: 1;
+    transition: opacity 1.5s ease-in;
+    -webkit-transition: opacity 1.5s ease-in;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0.01;
 }
