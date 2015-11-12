@@ -2,10 +2,30 @@ var LyricsColumn = React.createClass({
     render: function() {
         var playedSongIndex = this.props.playedSongIndex,
             columnIndex = this.props.columnIndex,
-            shownClassName = this.props.shown ? 'shown' : 'unshown',
+            shownClassName = this.props.isShown ? '' : ' unshown',
+            expandedClassName = this.props.isExpanded ? ' expanded' : '',
+            columnClassName = 'lyrics-song-' + playedSongIndex +
+                ' lyrics-column-' + columnIndex + shownClassName + expandedClassName,
+            toggleFoldButton,
             lyricsTextArea;
 
-            if (this.props.shown) {
+            if (this.props.isShown) {
+                var expandColumnsButton = (
+                        <button className="expand-columns-button"
+                            onClick={this.props._expandColumns}
+                        >
+                            expand
+                        </button>
+                    );
+
+                toggleFoldButton = (
+                    <button className="toggle-fold-button"
+                        onClick={this.props._toggleFold}
+                    >
+                        fold
+                    </button>
+                );
+
                 lyricsTextArea = (
                     <div className={'lyrics-body'}>
                         <h1 className="lyrics-header">{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
@@ -24,17 +44,14 @@ var LyricsColumn = React.createClass({
                                 )
                             }.bind(this))}
                         </div>
+                        {expandColumnsButton}
                     </div>
                 );
             }
 
         return (
-            <div className={'lyrics-song-' + playedSongIndex + ' lyrics-column-' + columnIndex + ' ' + shownClassName}>
-                <button className="toggle-fold-button"
-                    onClick={this.props._toggleFold}
-                >
-                    fold
-                </button>
+            <div className={columnClassName}>
+                {toggleFoldButton}
                 {lyricsTextArea}
             </div>
         );
@@ -57,7 +74,8 @@ var LyricsColumn = React.createClass({
 var Book = React.createClass({
     getInitialState: function() {
         return {
-            lyricsAreFolded: false
+            lyricsAreFolded: false,
+            lyricsAreExpanded: false
         };
     },
 
@@ -68,17 +86,19 @@ var Book = React.createClass({
                 <div className="sticky-lyrics">
                     <div className="wrapper-width">
                         {lyricsColumnsArray.map(function(key) {
-                            var shown = lyricsColumnsKeys.indexOf(key) !== -1;
+                            var isShown = lyricsColumnsKeys.indexOf(key) !== -1;
                             return (
                                 <LyricsColumn
                                     key={key}
-                                    shown={shown}
+                                    isShown={isShown}
                                     isFolded={this.state.lyricsAreFolded}
+                                    isExpanded={this.state.lyricsAreExpanded}
                                     playedSongIndex={this.props.playedSongIndex}
                                     playedSongTitle={this.props.playedSongTitle}
                                     playedSongLyric={this.props.playedSongLyrics ? this.props.playedSongLyrics[key] : null}
                                     columnIndex={key}
                                     _toggleFold={this._toggleLyricsFold}
+                                    _expandColumns={this._expandLyricsColumns}
                                 />
                             );
                         }.bind(this))}
@@ -121,6 +141,12 @@ var Book = React.createClass({
     _toggleLyricsFold: function() {
         this.setState({
             lyricsAreFolded: !this.state.lyricsAreFolded
+        });
+    },
+
+    _expandLyricsColumns: function() {
+        this.setState({
+            lyricsAreExpanded: !this.state.lyricsAreExpanded
         });
     }
 });

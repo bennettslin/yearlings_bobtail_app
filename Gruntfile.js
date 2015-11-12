@@ -13,8 +13,14 @@ module.exports = function(grunt) {
             }
         },
         concat: {
-            dist: {
-                src: ['jsx/**/*.jsx', 'js/**/*.js'],
+            // begin with variables and mixins
+            css: {
+                src: ['less/variables/*.less', 'less/*.less'],
+                dest: 'src/style.less'
+            },
+            // end with DOM-related scripts
+            js: {
+                src: ['jsx/*.jsx', 'jsx/js/*.js'],
                 dest: 'src/components.jsx'
             },
         },
@@ -36,7 +42,7 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    'public/css/style.css': 'less/style.less'
+                    'public/css/style.css': 'src/style.less'
                 }
             }
         },
@@ -62,7 +68,10 @@ module.exports = function(grunt) {
 
             style: {
                 files: ['less/**/*.less'],
-                tasks: 'less',
+                tasks: [
+                    'concat',
+                    'less'
+                ],
                 options: {
                     nospawn: true
                 }

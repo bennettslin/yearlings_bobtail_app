@@ -1,0 +1,131 @@
+.sticky-lyrics {
+    .sticky-mixin;
+
+    .wrapper-width {
+        width: 100%;
+
+        div[class^="lyrics-song"] {
+            @lyrics-header-size: 1.5em;
+            @lyrics-text-size: 0.85em;
+
+            .expand-columns-button-mixin {
+                position: absolute;
+                top: 40px;
+            }
+
+            background-color: brown;
+            position: absolute;
+            width: @lyrics-column-width;
+
+            z-index: @lyrics-z-index;
+            // FIXME: vh is buggy in iOS7 and some IE
+            max-height: 100vh;
+            overflow: auto;
+            transition: width 0.2s ease, left 0.1s ease, right 0.1s ease;
+
+            &.lyrics-column-left {
+                left: 0;
+
+                &.unshown {
+                    left: -@lyrics-column-width;
+                }
+
+                .expand-columns-button {
+                    .expand-columns-button-mixin;
+                    right: 0;
+                }
+            }
+
+            &.lyrics-column-right {
+                right: 0;
+
+                &.unshown {
+                    right: -@lyrics-column-width;
+                }
+
+                .expand-columns-button {
+                    .expand-columns-button-mixin;
+                    left: 0;
+                }
+            }
+
+            .toggle-fold-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            .lyrics-body {
+                .lyrics-header {
+                    font-size: @lyrics-header-size;
+                }
+
+                .lyrics-text {
+                    font-size: @lyrics-text-size;
+
+                    &.foldable-area {
+                        transition: max-height 0.15s ease;
+
+                        &.folded {
+                            max-height: 0;
+                        }
+
+                        &.unfolded {
+                            /**
+                             * Not happy about using vh here,
+                             * but animation needs it.
+                             */
+                            max-height: 100vh;
+                        }
+                    }
+
+                    [class^="stanza"] {
+                        &:not(:last-child) {
+                            margin-bottom: @lyrics-text-size;
+                        }
+                    }
+                }
+            }
+
+            /**
+             * Setting values for expanded lyrics columns.
+             * FIXME: Is there a more efficient way to do this?
+             */
+            &.expanded {
+                @expanded-lyrics-header-size: @lyrics-header-size * 1.5;
+                @expanded-lyrics-text-size: @lyrics-text-size * 1.5;
+                @expanded-lyrics-column-width: @lyrics-column-width * 1.8;
+
+                width: @expanded-lyrics-column-width;
+
+                &.lyrics-column-left {
+                    &.unshown {
+                        left: -@expanded-lyrics-column-width;
+                    }
+                }
+
+                &.lyrics-column-right {
+                    &.unshown {
+                        right: -@expanded-lyrics-column-width;
+                    }
+                }
+
+                .lyrics-body {
+                    .lyrics-header {
+                        font-size: @expanded-lyrics-header-size;
+                    }
+
+                    .lyrics-text {
+                        font-size: @expanded-lyrics-text-size;
+
+                        [class^="stanza"] {
+                            &:not(:last-child) {
+                                margin-bottom: @expanded-lyrics-text-size;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

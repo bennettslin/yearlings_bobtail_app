@@ -1,0 +1,42 @@
+/* assume 96 pixels per inch */
+
+/* colours */
+@black: #000;
+@background-colour: @black;
+
+/* widths */
+@wrapper-max-width: 1200px; // was 1248
+@lyrics-column-width: 27%;
+@sticky-nav-wrapper-width: 80%;
+
+/* heights */
+@wrapper-height: 2016px;
+@top-nav-height: 384px;
+@scrolling-nav-height: @top-nav-height * 0.5;
+@sticky-nav-height: @top-nav-height - @scrolling-nav-height;
+@footer-height: 48px;
+@page-height: @wrapper-height - @top-nav-height - @footer-height;
+
+/* z-indices */
+@page-z-index: 1;
+@nav-z-index: @page-z-index + 1;
+@lyrics-z-index: @nav-z-index + 1;
+
+/* mixins */
+.sticky-mixin {
+    position: absolute;
+    width: 100%;
+
+    &.stuck {
+        position: fixed;
+        top: 0;
+        left: inherit;
+        max-width: @wrapper-max-width;
+        z-index: @nav-z-index;
+    }
+
+    .wrapper-width {
+        height: 100%;
+        margin: 0 auto;
+    }
+}
