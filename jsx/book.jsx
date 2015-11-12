@@ -27,7 +27,7 @@ var LyricsColumn = React.createClass({
                 );
 
                 lyricsTextArea = (
-                    <div className={'lyrics-body'}>
+                    <div className={'lyrics-body'} onScroll={this.props._handleScroll}>
                         <h1 className="lyrics-header">{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
                         <div className={'lyrics-text foldable-area ' + (this.props.isFolded ? 'folded' : 'unfolded')}>
                             {this.props.playedSongLyric.map(function(stanza, stanzaIndex) {
@@ -99,6 +99,7 @@ var Book = React.createClass({
                                     columnIndex={key}
                                     _toggleFold={this._toggleLyricsFold}
                                     _expandColumns={this._expandLyricsColumns}
+                                    _handleScroll={this._handleLyricsScroll}
                                 />
                             );
                         }.bind(this))}
@@ -148,5 +149,9 @@ var Book = React.createClass({
         this.setState({
             lyricsAreExpanded: !this.state.lyricsAreExpanded
         });
+    },
+
+    _handleLyricsScroll: function(index) {
+        console.log("scrolled");
     }
 });
