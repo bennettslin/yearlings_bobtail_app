@@ -5,22 +5,111 @@
     height: @top-nav-height;
     width: 100%;
 
-    ul {
-        list-style-type: none;
-        padding: 0;
+    >ul {
         margin: 0 auto;
 
         &.scrolling-nav {
             height: @scrolling-nav-height;
-            width: 60%;
+            width: 70%;
+            transition: width 0.2s ease;
+
+            &.unshown {
+                width: 0%;
+            }
+        }
+
+        >li, >.wrapper-width > li {
+            height: 100%;
+            vertical-align: top;
+            box-sizing: border-box;
+            transition: width 0.2s ease;
+
+            &.title-bar {
+                background-color: yellow;
+                width: 67%;
+
+                &.unshown {
+                    width: 0;
+                }
+
+                .band-logo {
+                    background-color: tomato;
+                    float: left;
+                    width: 25%;
+                    height: 100%;
+                }
+
+                .cover-title {
+                    float: left;
+                    width: 75%;
+                }
+            }
+
+            &.annotation-legend {
+                background-color: violet;
+                width: 33%;
+                z-index: @nav-z-index + 2;
+
+                &.unshown {
+                    width: 0;
+                }
+
+                ul[class^="symbol"] {
+                    @symbol-height: 50px;
+                    height: @symbol-height;
+                    width: @symbol-height * 5;
+
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+
+                    li {
+                        &.icon {
+                            background-color: black;
+                            height: 100%;
+                            width: @symbol-height;
+                            border-radius: @symbol-height * 0.5;
+                        }
+
+                        &.text {
+                            background-color: beige;
+                            position: relative;
+                            height: 100%;
+                            width: @symbol-height * 4;
+                            z-index: @nav-z-index + 1;
+                            overflow: hidden;
+
+                            &.unshown {
+                                width: 0;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.audio-player {
+                background-color: green;
+                width: 60%;
+
+                ul.playback-buttons {
+                    list-style-type: none;
+                }
+            }
+
+            &.synopsis-bar {
+                background-color: turquoise;
+                width: 40%;
+            }
         }
 
         &.sticky-nav {
             .sticky-mixin;
-            background-color: tomato;
+            background-color: transparent;
 
             top: @scrolling-nav-height;
             height: @sticky-nav-height;
+            transition: height 0.2s ease;
 
             .wrapper-width {
                 @sticky-nav-wrapper-margin: (100% - @sticky-nav-wrapper-width) * 0.5;
@@ -30,7 +119,17 @@
                 transition: width 0.2s ease, margin-left 0.2s ease, margin-right 0.2s ease;
             }
 
+            li {
+                &.title-bar {
+                    .band-logo {
+                        width: 100%;
+                    }
+                }
+            }
+
             &.stuck {
+                height: @sticky-nav-height * 0.7;
+
                 .wrapper-width {
                     &[data-nav-width^="left"] {
                         width: 100% - @lyrics-column-width;
@@ -50,38 +149,26 @@
                         margin-right: @lyrics-column-width;
                     }
                 }
-            }
-        }
 
-        li {
-            display: inline-block;
-            padding: 2%;
-            height: 100%;
-            vertical-align: top;
-            box-sizing: border-box;
+                li {
 
-            &.title-bar {
-                background-color: yellow;
-                width: 80%;
-            }
+                    &.title-bar {
+                        width: 15%;
+                    }
 
-            &.annotation-legend {
-                background-color: violet;
-                width: 20%;
-            }
+                    &.annotation-legend {
+                        width: 15%;
+                    }
 
-            &.audio-player {
-                background-color: green;
-                width: 60%;
+                    &.audio-player {
+                        width: 45%;
+                    }
 
-                ul.playback-buttons {
-                    list-style-type: none;
+                    &.synopsis-bar {
+                        width: 25%;
+                    }
                 }
-            }
 
-            &.synopsis-bar {
-                background-color: turquoise;
-                width: 40%;
             }
         }
     }

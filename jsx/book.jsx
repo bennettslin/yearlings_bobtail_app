@@ -28,7 +28,8 @@ var LyricsColumn = React.createClass({
             shownClassName = this.props.isShown ? '' : ' unshown',
             expandedClassName = this.props.isExpanded ? ' expanded' : '',
             columnClassName = 'lyrics-song-' + playedSongIndex +
-                ' lyrics-column-' + columnIndex + shownClassName + expandedClassName,
+                ' lyrics-column-' + columnIndex +
+                shownClassName + expandedClassName,
             // columnKeyName = 'lyrics-column-' + playedSongIndex + '-' + columnIndex,
             toggleFoldButton,
             lyricsTextArea;
@@ -51,7 +52,7 @@ var LyricsColumn = React.createClass({
                 );
 
                 lyricsTextArea = (
-                    <div className={'lyrics-text'} onScroll={this.props._handleScroll}>
+                    <div className={'lyrics-text'}>
                         <h1 className="lyrics-header">{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
                         <div className={'lyrics-verses foldable-area ' + (this.props.isFolded ? 'folded' : 'unfolded')}>
                             {this.props.playedSongLyric.map(function(stanza, stanzaIndex) {
@@ -109,7 +110,7 @@ var Book = React.createClass({
         var lyricsColumnsArray = ['left', 'right'],
             lyricsColumnsKeys = this.props.playedSongLyrics ? Object.keys(this.props.playedSongLyrics) : [],
             lyricsColumns = (
-                <div className="sticky-lyrics">
+                <div className={'sticky-lyrics' + (this.props.lyricsColumnsAreStuck ? ' stuck' : '')}>
                     <div className="wrapper-width">
                         {lyricsColumnsArray.map(function(key) {
                             var isShown = lyricsColumnsKeys.indexOf(key) !== -1;
@@ -125,7 +126,6 @@ var Book = React.createClass({
                                     columnIndex={key}
                                     _toggleFold={this._toggleLyricsFold}
                                     _expandColumns={this._expandLyricsColumns}
-                                    _handleScroll={this._handleLyricsScroll}
                                 />
                             );
                         }.bind(this))}
@@ -175,9 +175,5 @@ var Book = React.createClass({
         this.setState({
             lyricsAreExpanded: !this.state.lyricsAreExpanded
         });
-    },
-
-    _handleLyricsScroll: function(index) {
-        console.log("scrolled");
     }
 });

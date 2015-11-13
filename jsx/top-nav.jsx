@@ -1,23 +1,93 @@
 var TitleBar = React.createClass({
+    getDefaultProps: function() {
+        return {
+            isShown: true,
+            isInScrolling: true
+        };
+    },
+
     render: function() {
+        var coverTitle;
+        if (this.props.isInScrolling) {
+            coverTitle = (
+                <div className="cover-title">
+                    <h1>Bobtail Yearlings</h1>
+                    <span>presents</span>
+                    <h2>Yearlings Bobtail</h2>
+                </div>
+            );
+        }
 
         return (
-            <li className="title-bar">
-                <h1>Bobtail Yearlings</h1>
-                <span>presents</span>
-                <h2>Yearlings Bobtail</h2>
+            <li className={'title-bar' + (this.props.isShown ? '' : ' unshown')}>
+                <div className="band-logo">
+                    Band logo
+                </div>
+                {coverTitle}
             </li>
         );
     }
 });
 
+var symbolDetails = [
+        {
+            icon: 'symbol 1',
+            text: 'explanation of symbol 1'
+        },
+        {
+            icon: 'symbol 2',
+            text: 'explanation of symbol 2'
+        },
+        {
+            icon: 'symbol 3',
+            text: 'explanation of symbol 3'
+        },
+    ];
 var AnnotationLegend = React.createClass({
+    getDefaultProps: function() {
+        return {
+            isShown: true,
+            isInScrolling: true
+        };
+    },
+
+    getInitialState: function() {
+        return {
+            isHoverShown: symbolDetails.map(function(symbol) {
+                return false;
+            })
+        };
+    },
+
     render: function() {
+
+        // FIXME: Eventually icon image will replace placeholder.
         return (
-            <li className="annotation-legend">
-                Annotation Legend
+            <li className={'annotation-legend' + (this.props.isShown ? '' : ' unshown')}>
+                {symbolDetails.map(function(symbol, index) {
+                    return (
+                        <ul className={'symbol-' + index} key={'symbol-' + index}>
+                            <li className="icon"
+                                onMouseEnter={this.props.isInScrolling ? null : this._handleIconHover.bind(null, index, true)}
+                                onMouseLeave={this.props.isInScrolling ? null : this._handleIconHover.bind(null, index, false)}
+                            >
+                            </li>
+                            <li className={'text' + (this.props.isInScrolling || this.state.isHoverShown[index] ? '' : ' unshown')}>
+                                {symbol.text}
+                            </li>
+                        </ul>
+                    );
+                }.bind(this))}
             </li>
         );
+    },
+
+    _handleIconHover: function(index, indexIsHoverShown) {
+        var isHoverShown = this.state.isHoverShown;
+        isHoverShown[index] = indexIsHoverShown;
+        this.setState({
+            isHoverShown: isHoverShown
+        });
     }
 });
 
@@ -132,27 +202,42 @@ var SynopsisBar = React.createClass({
 
 var TopNav = React.createClass({
     render: function() {
+        var audioPlayer = (
+                <AudioPlayer
+                    playedSongIndex={this.props.playedSongIndex}
+                    playedSongTitle={this.props.playedSongTitle}
+                    songsLength={this.props.songsLength}
+                    _changeSong={this.props._changeSong}
+                />
+            ),
+            synopsisBar = (
+                <SynopsisBar
+                    playedSongPageIndex={this.props.playedSongPageIndex}
+                    playedSongIndex={this.props.playedSongIndex}
+                    playedSongTitle={this.props.playedSongTitle}
+                    playedSongNarrative={this.props.playedSongNarrative}
+                    playedSongPersonal={this.props.playedSongPersonal}
+                />
+            );
+
         return (
             <div className="top-nav">
-                <ul className="scrolling-nav">
+                <ul className={'scrolling-nav' + (this.props.isStuck ? ' unshown' : '')}>
                     <TitleBar />
-                    <AnnotationLegend />
+                    <AnnotationLegend isStuck={false} />
                 </ul>
-                <ul className="sticky-nav">
+                <ul className={'sticky-nav' + (this.props.isStuck ? ' stuck' : '')}>
                     <div className="wrapper-width" data-nav-width={this.props.widthName}>
-                        <AudioPlayer
-                            playedSongIndex={this.props.playedSongIndex}
-                            playedSongTitle={this.props.playedSongTitle}
-                            songsLength={this.props.songsLength}
-                            _changeSong={this.props._changeSong}
+                        <TitleBar
+                            isShown={this.props.isStuck}
+                            isInScrolling={false}
                         />
-                        <SynopsisBar
-                            playedSongPageIndex={this.props.playedSongPageIndex}
-                            playedSongIndex={this.props.playedSongIndex}
-                            playedSongTitle={this.props.playedSongTitle}
-                            playedSongNarrative={this.props.playedSongNarrative}
-                            playedSongPersonal={this.props.playedSongPersonal}
+                        {audioPlayer}
+                        <AnnotationLegend
+                            isShown={this.props.isStuck}
+                            isInScrolling={false}
                         />
+                        {synopsisBar}
                     </div>
                 </ul>
             </div>

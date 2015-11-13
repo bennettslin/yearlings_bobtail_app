@@ -9,7 +9,21 @@ var App = React.createClass({
         return {
             viewedPageIndex: 0,
             playedSongIndex: -1,
-            topNavWidthName: 'full'
+            topNavWidthName: 'full',
+            topNavIsStuck: false,
+            lyricsColumnsAreStuck: false
+        }
+    },
+
+    componentDidMount: function() {
+        if (window) {
+            window.addEventListener('scroll', this._handleWindowScroll);
+        }
+    },
+
+    componentWillUnmount: function() {
+        if (window) {
+            window.removeEventListener('scroll', this._handleWindowScroll);
         }
     },
 
@@ -38,6 +52,7 @@ var App = React.createClass({
         return (
             <div className="app">
                 <TopNav
+                    isStuck={this.state.topNavIsStuck}
                     playedSongIndex={playedSongIndex}
                     playedSongTitle={playedSongTitle}
                     playedSongNarrative={playedSongNarrative}
@@ -48,6 +63,7 @@ var App = React.createClass({
                     _changeSong={this._changeSong}
                 />
                 <Book
+                    lyricsColumnsAreStuck={this.state.lyricsColumnsAreStuck}
                     viewedPageIndex={this.state.viewedPageIndex}
                     pageStartingIndices={this.props.pageStartingIndices}
                     songs={this.props.songs}
@@ -108,6 +124,16 @@ var App = React.createClass({
 
         this.setState({
             topNavWidthName: widthName
+        });
+    },
+
+    _handleWindowScroll: function() {
+        var topNavIsStuck = window.pageYOffset > 384 / 2,
+            lyricsColumnsAreStuck = window.pageYOffset > 384;
+
+        this.setState({
+            topNavIsStuck: topNavIsStuck,
+            lyricsColumnsAreStuck: lyricsColumnsAreStuck
         });
     }
 });
