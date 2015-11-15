@@ -88,6 +88,7 @@ var TopNav = React.createClass({
                     ref="synopsis"
                     popupsAlwaysShown={this.props.isStuck ? 'none' : 'one'}
                     playedSongSpeechBubble={this.props.playedSongSpeechBubble}
+                    _enableHoverability={this._enableHoverability.bind(null, 'synopsis')}
                     _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, 'synopsis')}
                 />
             );
@@ -112,6 +113,7 @@ var TopNav = React.createClass({
                             ref="legend"
                             isShown={this.props.isStuck}
                             popupsAlwaysShown={'none'}
+                            _enableHoverability={this._enableHoverability.bind(null, 'legend')}
                             _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, 'legend')}
                         />
                         {synopsisBar}
@@ -126,6 +128,14 @@ var TopNav = React.createClass({
             if (currentRef !== ref) {
                 this.refs[currentRef].resetUserInteractionWithPopups();
             }
+        }.bind(this));
+    },
+
+    _enableHoverability: function(ref, hoverable) {
+        // If a popup is clicked on, then no other popup can be hoverable.
+
+        Object.keys(this.refs).forEach(function(currentRef) {
+            this.refs[currentRef].enableHoverability(hoverable);
         }.bind(this));
     }
 });

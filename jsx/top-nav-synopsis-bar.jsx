@@ -15,6 +15,7 @@ var SynopsisBar = React.createClass({
         // call if nav bar is getting stuck
         if (this.props.popupsAlwaysShown !== 'none' && newProps.popupsAlwaysShown === 'none') {
             this.resetUserInteractionWithPopups();
+            this.enableHoverability(true);
         }
     },
 
@@ -22,7 +23,7 @@ var SynopsisBar = React.createClass({
         var speechBubbles = (
                 <ul className="speech-bubbles">
                     {speechBubbleNames.map(function(bubbleName, index) {
-                        return this._getPopup('bubble', index, this.props.playedSongSpeechBubble[speechBubbleNames[index]], speechBubbleNames);
+                        return this._getPopup('bubble', index, this.props.playedSongSpeechBubble[speechBubbleNames[index]], bubbleName);
                     }.bind(this))}
                 </ul>
             );

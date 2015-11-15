@@ -8,8 +8,15 @@ var PopupMixin = {
         });
     },
 
+    enableHoverability: function(hoverable) {
+        this.setState({
+            hoverable: hoverable
+        });
+    },
+
     _addToStateForPopup: function(state) {
         state.clickedOn = false;
+        state.hoverable = true;
         state.hoveredOn = false;
         state.touched = false;
         return state;
@@ -24,25 +31,34 @@ var PopupMixin = {
 
     _handlePopupClick: function(index) {
         if (this.state.clickedOn && this.state.shownPopupIndex !== index) {
+            console.log(this.state.clickedOn, this.state.shownPopupIndex, index);
             this.setState({
                 shownPopupIndex: index
             });
+
         } else {
+
+            if (this.props._enableHoverability) {
+                this.props._enableHoverability(this.state.clickedOn);
+            }
+
+            if (this.props._resetAllOtherPopups) {
+                this.props._resetAllOtherPopups();
+            }
+
             this.setState({
                 clickedOn: !this.state.clickedOn,
                 shownPopupIndex: index
             });
 
-            if (this.props._resetAllOtherPopups) {
-                this.props._resetAllOtherPopups();
-            }
         }
+
 
         this._handleTouch(false);
     },
 
     _handlePopupHover: function(index) {
-        if (!this.state.touched) {
+        if (this.state.hoverable && !this.state.touched) {
             if (typeof index === 'number') {
                 this.setState({
                     hoveredOn: true,

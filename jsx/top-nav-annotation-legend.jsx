@@ -34,6 +34,7 @@ var AnnotationLegend = React.createClass({
         // call if nav bar is getting unstuck
         if (this.props.isShown && !newProps.isShown) {
             this.resetUserInteractionWithPopups();
+            this.enableHoverability(true);
         }
     },
 
