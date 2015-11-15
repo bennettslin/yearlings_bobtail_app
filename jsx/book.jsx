@@ -106,6 +106,29 @@ var Book = React.createClass({
         };
     },
 
+    componentDidMount: function() {
+        /**
+         * Keep event handlers for synchronising lyrics columns in DOM,
+         * because React's virtual DOM is too slow for this purpose.
+         */
+        leftLyricsColumn = document.getElementsByClassName('lyrics-column-left')[0];
+        rightLyricsColumn = document.getElementsByClassName('lyrics-column-right')[0];
+
+        if (leftLyricsColumn && rightLyricsColumn) {
+            leftLyricsColumn.addEventListener('wheel', this._synchroniseLyricsColumns.bind(null, leftLyricsColumn, rightLyricsColumn));
+
+            rightLyricsColumn.addEventListener('wheel', this._synchroniseLyricsColumns.bind(null, rightLyricsColumn, leftLyricsColumn));
+        }
+    },
+
+    componentWillUnmount: function() {
+        if (leftLyricsColumn && rightLyricsColumn) {
+            leftLyricsColumn.removeEventListener('wheel', this._synchroniseLyricsColumns.bind(null, leftLyricsColumn, rightLyricsColumn));
+
+            rightLyricsColumn.removeEventListener('wheel', this._synchroniseLyricsColumns.bind(null, rightLyricsColumn, leftLyricsColumn));
+        }
+    },
+
     render: function() {
         var lyricsColumnsArray = ['left', 'right'],
             lyricsColumnsKeys = this.props.playedSongLyrics ? Object.keys(this.props.playedSongLyrics) : [],
@@ -175,5 +198,9 @@ var Book = React.createClass({
         this.setState({
             lyricsAreExpanded: !this.state.lyricsAreExpanded
         });
+    },
+
+    _synchroniseLyricsColumns: function(sourceColumn, followerColumn) {
+        followerColumn.scrollTop = sourceColumn.scrollTop;
     }
 });

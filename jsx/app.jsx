@@ -4,26 +4,40 @@
 //     React = isNode ? require('react') : window.React,
 //     ReactDOM = isNode ? require('react') : window.ReactDOM;
 
+var leftLyricsColumn,
+    rightLyricsColumn;
+
 var App = React.createClass({
+    getDefaultProps: function() {
+        return {
+            windowWidth: 320,
+            windowHeight: 480
+        };
+    },
+
     getInitialState: function() {
         return {
+            windowWidth: this.props.windowWidth,
+            windowHeight: this.props.windowHeight,
             viewedPageIndex: 0,
             playedSongIndex: -1,
             topNavWidthName: 'full',
             topNavIsStuck: false,
             lyricsColumnsAreStuck: false
-        }
+        };
     },
 
     componentDidMount: function() {
         if (window) {
             window.addEventListener('scroll', this._handleWindowScroll);
+            window.addEventListener('resize', this._handleWindowResize);
         }
     },
 
     componentWillUnmount: function() {
         if (window) {
             window.removeEventListener('scroll', this._handleWindowScroll);
+            window.removeEventListener('resize', this._handleWindowResize);
         }
     },
 
@@ -132,6 +146,14 @@ var App = React.createClass({
         this.setState({
             topNavIsStuck: topNavIsStuck,
             lyricsColumnsAreStuck: lyricsColumnsAreStuck
+        });
+    },
+
+    _handleWindowResize: function(e) {
+        console.log('New window width: ' + window.innerWidth + ', height: ' + window.innerHeight);
+
+        this.setState({
+            windowWidth: window.innerWidth
         });
     }
 });
