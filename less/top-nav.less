@@ -54,37 +54,50 @@
                     width: 0;
                 }
 
-                ul[class^="symbol"] {
+                ul.symbols {
                     @symbol-height: 50px;
-                    height: @symbol-height;
                     width: @symbol-height * 5;
 
                     &:not(:last-child) {
                         margin-bottom: 5px;
                     }
 
-                    li {
-                        &.icon {
-                            background-color: black;
+                    >li[class^="symbol"] {
+                        display: block;
+                        width: @symbol-height;
+                        height: @symbol-height;
+                        overflow: hidden;
+
+                        ul {
                             height: 100%;
-                            width: @symbol-height;
-                            border-radius: @symbol-height * 0.5;
+
+                            >li {
+                                &.icon {
+                                    background-color: black;
+                                    height: 100%;
+                                    width: @symbol-height;
+                                    border-radius: @symbol-height * 0.5;
+                                }
+
+                                &.text {
+                                    background-color: beige;
+                                    position: relative;
+                                    height: 100%;
+                                    width: @symbol-height * 4;
+                                    vertical-align: top;
+                                    z-index: @nav-z-index + 1;
+                                }
+                            }
                         }
 
-                        &.text {
-                            background-color: beige;
-                            position: relative;
-                            height: 100%;
-                            width: @symbol-height * 4;
-                            z-index: @nav-z-index + 1;
-                            overflow: hidden;
+                        &.expanded {
+                            width: @symbol-height * 5;
 
-                            &.unshown {
-                                width: 0;
+                            &.engraved {
+                                border: 2px solid green;
                             }
                         }
                     }
-
                 }
             }
 
@@ -93,13 +106,57 @@
                 width: 60%;
 
                 ul.playback-buttons {
-                    list-style-type: none;
+
                 }
             }
 
             &.synopsis-bar {
                 background-color: turquoise;
                 width: 40%;
+
+                ul.speech-bubbles {
+                    @speech-bubble-height: 25px;
+                    @speech-bubble-expanded-width: 250px;
+
+                    position: relative;
+                    height: 100%;
+                    width: 70%;
+                    float: left;
+
+                    li[class^="bubble"] {
+                        background-color: white;
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        height: @speech-bubble-height;
+                        cursor: pointer;
+                        border-radius: 3px;
+
+                        &:first-child {
+                            top: 0;
+                        }
+
+                        &:last-child {
+                            bottom: 0;
+                        }
+
+                        &.expanded {
+                            height: 100% - @speech-bubble-height;
+                            width: @speech-bubble-expanded-width;
+
+                            &.engraved {
+                                border: 2px solid green;
+                            }
+                        }
+                    }
+                }
+
+                .avatar {
+                    background-color: gray;
+                    height: 100%;
+                    width: 30%;
+                    float: left;
+                }
             }
         }
 
@@ -123,6 +180,12 @@
                 &.title-bar {
                     .band-logo {
                         width: 100%;
+                    }
+                }
+
+                &.annotation-legend {
+                    .icon {
+                        cursor: pointer;
                     }
                 }
             }

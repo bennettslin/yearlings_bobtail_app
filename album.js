@@ -1,13 +1,17 @@
 exports.details = {
     title: 'Yearling\'s Bobtail',
-    narrative: 'narrative yb',
-    personal: 'personal yb',
+    speechBubble: {
+        narrative: 'narrative yb',
+        personal: 'personal yb'
+    },
     pageStartingIndices: [0, 9],
     songs: [
         {
             title: 'Didi',
-            narrative: 'narrative1',
-            personal: 'personal1',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 right: [
                     [
@@ -61,8 +65,10 @@ exports.details = {
         },
         {
             title: 'Willy the Cocoa',
-            narrative: 'narrative2',
-            personal: 'personal2',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 left: [
                     [
@@ -138,8 +144,10 @@ exports.details = {
         },
         {
             title: 'Dear Saskia',
-            narrative: 'narrative3',
-            personal: 'personal3',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 right: [
                     [
@@ -198,8 +206,10 @@ exports.details = {
         },
         {
             title: 'Odin',
-            narrative: 'narrative4',
-            personal: 'personal4',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 left: [
                     [
@@ -335,8 +345,10 @@ exports.details = {
         },
         {
             title: 'Ash Wednesday',
-            narrative: 'narrative5',
-            personal: 'personal5',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 left: [
                     [
@@ -394,8 +406,10 @@ exports.details = {
         },
         {
             title: 'Pchelka\'s Starry Journey',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 left: [
                     [
@@ -488,8 +502,10 @@ exports.details = {
         },
         {
             title: 'M',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 right: [
                     [
@@ -564,8 +580,10 @@ exports.details = {
         },
         {
             title: 'Good Night, Sita',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 right: [
                     [
@@ -576,8 +594,10 @@ exports.details = {
         },
         {
             title: 'Grasshoppers Lie Heavy',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 left: [
                     [
@@ -667,8 +687,10 @@ exports.details = {
         },
         {
             title: 'Constellations!',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 left: [
                     [
@@ -723,8 +745,10 @@ exports.details = {
         },
         {
             title: 'Look Back in Anger',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 right: [
                     [
@@ -790,8 +814,10 @@ exports.details = {
         },
         {
             title: 'Garryowen',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 left: [
                     [
@@ -846,8 +872,10 @@ exports.details = {
         },
         {
             title: 'On a Golden Cord',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 left: [
                     [
@@ -989,8 +1017,10 @@ exports.details = {
         },
         {
             title: 'Kyon?',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 right: [
                     [
@@ -1041,8 +1071,10 @@ exports.details = {
         },
         {
             title: 'Uncanny Valley Boy',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 right: [
                     [
@@ -1119,8 +1151,10 @@ exports.details = {
         },
         {
             title: 'Cremated',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 left: [
                     [
@@ -1204,8 +1238,10 @@ exports.details = {
         },
         {
             title: 'Vegan Proclamation',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 left: [
                     [
@@ -1260,8 +1296,10 @@ exports.details = {
         },
         {
             title: 'My 100,000th Dream',
-            narrative: 'narrative',
-            personal: 'personal',
+            speechBubble: {
+                narrative: 'narrative 1',
+                personal: 'personal 1'
+            },
             lyrics: {
                 right: [
                     [

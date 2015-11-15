@@ -29,68 +29,6 @@ var TitleBar = React.createClass({
     }
 });
 
-var symbolDetails = [
-        {
-            icon: 'symbol 1',
-            text: 'explanation of symbol 1'
-        },
-        {
-            icon: 'symbol 2',
-            text: 'explanation of symbol 2'
-        },
-        {
-            icon: 'symbol 3',
-            text: 'explanation of symbol 3'
-        },
-    ];
-var AnnotationLegend = React.createClass({
-    getDefaultProps: function() {
-        return {
-            isShown: true,
-            isInScrolling: true
-        };
-    },
-
-    getInitialState: function() {
-        return {
-            isHoverShown: symbolDetails.map(function(symbol) {
-                return false;
-            })
-        };
-    },
-
-    render: function() {
-
-        // FIXME: Eventually icon image will replace placeholder.
-        return (
-            <li className={'annotation-legend' + (this.props.isShown ? '' : ' unshown')}>
-                {symbolDetails.map(function(symbol, index) {
-                    return (
-                        <ul className={'symbol-' + index} key={'symbol-' + index}>
-                            <li className="icon"
-                                onMouseEnter={this.props.isInScrolling ? null : this._handleIconHover.bind(null, index, true)}
-                                onMouseLeave={this.props.isInScrolling ? null : this._handleIconHover.bind(null, index, false)}
-                            >
-                            </li>
-                            <li className={'text' + (this.props.isInScrolling || this.state.isHoverShown[index] ? '' : ' unshown')}>
-                                {symbol.text}
-                            </li>
-                        </ul>
-                    );
-                }.bind(this))}
-            </li>
-        );
-    },
-
-    _handleIconHover: function(index, indexIsHoverShown) {
-        var isHoverShown = this.state.isHoverShown;
-        isHoverShown[index] = indexIsHoverShown;
-        this.setState({
-            isHoverShown: isHoverShown
-        });
-    }
-});
-
 var AudioPlayer = React.createClass({
     render: function() {
 
@@ -135,71 +73,6 @@ var AudioPlayer = React.createClass({
     }
 });
 
-var SynopsisBar = React.createClass({
-    getInitialState: function() {
-        return {
-            showPersonal: false
-        }
-    },
-
-    render: function() {
-        var showStyle = {
-                display: 'block'
-            },
-            hideStyle = {
-                display: 'none'
-            },
-            narrative = (
-                <div
-                    className={'narrative-' + this.props.playedSongIndex}
-                    style={this.state.showPersonal ? hideStyle : showStyle}
-                >
-                    <span>{this.props.playedSongNarrative}</span>
-                </div>
-            ),
-            personal = (
-                <div
-                    className={'personal-' + this.props.playedSongIndex}
-                    style={this.state.showPersonal ? showStyle : hideStyle}
-                >
-                    <span>{this.props.playedSongPersonal}</span>
-                </div>
-            ),
-            speechBubble = (
-                <button
-                    className="speech-bubble"
-                    onMouseEnter={this._handleSpeechBubbleHover.bind(null, true)}
-                    onMouseLeave={this._handleSpeechBubbleHover.bind(null, false)}
-                >
-                    &hellip;
-                </button>
-            );
-
-
-        return (
-            <li className="synopsis-bar">
-                <ul>
-                    <li>
-                        <h1>Book {this.props.playedSongPageIndex + 1}</h1>
-                        <h2>{this.props.playedSongIndex + 1 + ''}. {this.props.playedSongTitle}</h2>
-                        {narrative}
-                        {personal}
-                    </li>
-                    <li>
-                        {speechBubble}
-                    </li>
-                </ul>
-            </li>
-        );
-    },
-
-    _handleSpeechBubbleHover: function(hover) {
-        this.setState({
-            showPersonal: hover
-        });
-    }
-});
-
 var TopNav = React.createClass({
     render: function() {
         var audioPlayer = (
@@ -212,11 +85,10 @@ var TopNav = React.createClass({
             ),
             synopsisBar = (
                 <SynopsisBar
-                    playedSongPageIndex={this.props.playedSongPageIndex}
-                    playedSongIndex={this.props.playedSongIndex}
-                    playedSongTitle={this.props.playedSongTitle}
-                    playedSongNarrative={this.props.playedSongNarrative}
-                    playedSongPersonal={this.props.playedSongPersonal}
+                    ref="synopsis"
+                    popupsAlwaysShown={this.props.isStuck ? 'none' : 'one'}
+                    playedSongSpeechBubble={this.props.playedSongSpeechBubble}
+                    _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, 'synopsis')}
                 />
             );
 
@@ -224,7 +96,10 @@ var TopNav = React.createClass({
             <div className="top-nav">
                 <ul className={'scrolling-nav' + (this.props.isStuck ? ' unshown' : '')}>
                     <TitleBar />
-                    <AnnotationLegend isStuck={false} />
+                    <AnnotationLegend
+                        isStuck={false}
+                        popupsAlwaysShown={'all'}
+                    />
                 </ul>
                 <ul className={'sticky-nav' + (this.props.isStuck ? ' stuck' : '')}>
                     <div className="wrapper-width" data-nav-width={this.props.widthName}>
@@ -234,13 +109,23 @@ var TopNav = React.createClass({
                         />
                         {audioPlayer}
                         <AnnotationLegend
+                            ref="legend"
                             isShown={this.props.isStuck}
-                            isInScrolling={false}
+                            popupsAlwaysShown={'none'}
+                            _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, 'legend')}
                         />
                         {synopsisBar}
                     </div>
                 </ul>
             </div>
         );
+    },
+
+    _resetAllOtherPopups: function(ref) {
+        Object.keys(this.refs).forEach(function(currentRef) {
+            if (currentRef !== ref) {
+                this.refs[currentRef].resetUserInteractionWithPopups();
+            }
+        }.bind(this));
     }
 });

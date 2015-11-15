@@ -30,8 +30,7 @@ var App = React.createClass({
     render: function() {
         var playedSongIndex = this.state.playedSongIndex,
             playedSongTitle = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].title : null,
-            playedSongNarrative = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].narrative : this.props.narrative,
-            playedSongPersonal = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].personal : this.props.personal,
+            playedSongSpeechBubble = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].speechBubble : this.props.speechBubble,
             playedSongLyrics = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].lyrics : null,
             playedSongPageIndex = -1,
             footer;
@@ -55,8 +54,7 @@ var App = React.createClass({
                     isStuck={this.state.topNavIsStuck}
                     playedSongIndex={playedSongIndex}
                     playedSongTitle={playedSongTitle}
-                    playedSongNarrative={playedSongNarrative}
-                    playedSongPersonal={playedSongPersonal}
+                    playedSongSpeechBubble={playedSongSpeechBubble}
                     playedSongPageIndex={playedSongPageIndex}
                     songsLength={this.props.songs.length}
                     widthName={this.state.topNavWidthName}
