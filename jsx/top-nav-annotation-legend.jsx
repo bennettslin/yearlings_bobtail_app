@@ -1,3 +1,4 @@
+// FIXME: Get this from config object
 var symbolDetails = [
         {
             icon: 'symbol 1',
@@ -40,23 +41,24 @@ var AnnotationLegend = React.createClass({
 
     render: function() {
         var symbols = (
-            <ul className="symbols">
-                {symbolDetails.map(function(symbol, index) {
-                    var content = (
-                            <ul>
-                                <li className="icon"></li>
-                                <li className="text">{symbol.text}</li>
-                            </ul>
-                        );
+                <ul className="symbols">
+                    {symbolDetails.map(function(symbol, index) {
+                        var content = (
+                                <ul>
+                                    <li className="icon"></li>
+                                    <li className="text">{symbol.text}</li>
+                                </ul>
+                            );
 
-                    return this._getPopup('symbol', index, content);
-                }.bind(this))}
-            </ul>
-        );
+                        return this._getPopup('symbol', index, content);
+                    }.bind(this))}
+                </ul>
+            ),
+            className = 'annotation-legend' + (this.props.isShown ? '' : ' unshown') + (this.props.popupsAlwaysShown === 'all' ? '' : ' pointer');
 
         // FIXME: Eventually icon image will replace placeholder.
         return (
-            <li className={'annotation-legend' + (this.props.isShown ? '' : ' unshown')}>
+            <li className={className}>
                 {symbols}
             </li>
         );

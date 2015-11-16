@@ -4,18 +4,60 @@
 @black: #000;
 @background-colour: @black;
 
-/* widths */
-@wrapper-max-width: 1200px; // was 1248
-@lyrics-column-width: 27%;
-@sticky-nav-wrapper-width: 80%;
+/**
+ * media query variables
+ *
+ * make sure that these variables are consistent with App component
+ */
+@tablets: ~"all and (min-width:421px) and (max-width:1200px)";
+@desktops: ~"all and (min-width:1201px)";
 
-/* heights */
-@wrapper-height: 2016px;
-@top-nav-height: 384px;
-@scrolling-nav-height: @top-nav-height * 0.5;
-@sticky-nav-height: @top-nav-height - @scrolling-nav-height;
-@footer-height: 48px;
-@page-height: @wrapper-height - @top-nav-height - @footer-height;
+/* WIDTHS */
+
+    /* universal widths */
+    @wrapper-max-width: 1600px;
+    @lyrics-column-width: 27%;
+
+    /* mobile widths */
+    @mobile-title-bar-width: 100%;
+    @mobile-synopsis-bar-width: 100%;
+    @mobile-audio-player-width: 100%;
+    @mobile-annotation-legend-width: 100%;
+    @mobile-sticky-nav-wrapper-width: 100%;
+
+    /* desktop widths */
+    @title-bar-width: 67%;
+    @synopsis-bar-width: 100% - @title-bar-width;
+    @audio-player-width: 60%;
+    @annotation-legend-width: 100% - @audio-player-width;
+    @sticky-nav-wrapper-width: 80%;
+
+/* HEIGHTS */
+
+    /* universal heights */
+    @footer-height: 48px;
+
+    /* mobile heights */
+    @mobile-title-bar-height: 192px;
+    @mobile-synopsis-bar-height: 192px;
+    @mobile-audio-player-height: 192px;
+    @mobile-annotation-legend-height: 192px;
+    @mobile-top-nav-height: @mobile-title-bar-height + @mobile-synopsis-bar-height + @mobile-audio-player-height + @mobile-annotation-legend-height;
+    @mobile-scrolling-nav-height: @mobile-top-nav-height - @mobile-audio-player-height;
+    @mobile-sticky-nav-height: @mobile-audio-player-height;
+    @mobile-page-height: 2000px;
+    @mobile-wrapper-height: @mobile-top-nav-height + @mobile-page-height + @footer-height;
+
+    /* desktop heights */
+    @title-bar-height: 192px;
+    @synopsis-bar-height: 192px;
+    @audio-player-height: 192px;
+    @annotation-legend-height: 192px;
+    @top-nav-height: 384px;
+    @scrolling-nav-height: @top-nav-height * 0.5;
+    @sticky-nav-height: @top-nav-height - @scrolling-nav-height;
+    @page-height: 2000px;
+    @wrapper-height: @top-nav-height + @page-height + @footer-height;
 
 /* z-indices */
 @page-z-index: 1;

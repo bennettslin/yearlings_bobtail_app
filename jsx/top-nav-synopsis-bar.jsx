@@ -2,6 +2,12 @@ var speechBubbleNames = ['narrative', 'personal'];
 var SynopsisBar = React.createClass({
     mixins: [PopupMixin],
 
+    getDefaultProps: function() {
+        return {
+            isShown: true
+        };
+    },
+
     getInitialState: function() {
         var state = {
             shownPopupIndex: 0
@@ -13,7 +19,7 @@ var SynopsisBar = React.createClass({
 
     componentWillReceiveProps: function(newProps) {
         // call if nav bar is getting stuck
-        if (this.props.popupsAlwaysShown !== 'none' && newProps.popupsAlwaysShown === 'none') {
+        if (this.props.isShown && !newProps.isShown) {
             this.resetUserInteractionWithPopups();
             this.enableHoverability(true);
         }
@@ -26,13 +32,14 @@ var SynopsisBar = React.createClass({
                         return this._getPopup('bubble', index, this.props.playedSongSpeechBubble[speechBubbleNames[index]], bubbleName);
                     }.bind(this))}
                 </ul>
-            );
+            ),
+            className = 'synopsis-bar' + (this.props.isShown ? '' : ' unshown');
 
         return (
-            <li className="synopsis-bar">
-                {speechBubbles}
+            <li className={className}>
                 <div className="avatar">
                 </div>
+                {speechBubbles}
             </li>
         );
     }

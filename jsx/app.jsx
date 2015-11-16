@@ -19,6 +19,7 @@ var App = React.createClass({
         return {
             windowWidth: this.props.windowWidth,
             windowHeight: this.props.windowHeight,
+            device: this._getDeviceFromWidth(this.props.windowWidth),
             viewedPageIndex: 0,
             playedSongIndex: -1,
             topNavWidthName: 'full',
@@ -71,6 +72,7 @@ var App = React.createClass({
                     playedSongSpeechBubble={playedSongSpeechBubble}
                     playedSongPageIndex={playedSongPageIndex}
                     songsLength={this.props.songs.length}
+                    device={this.state.device}
                     widthName={this.state.topNavWidthName}
                     _changeSong={this._changeSong}
                 />
@@ -113,6 +115,17 @@ var App = React.createClass({
         }
     },
 
+    _getDeviceFromWidth: function(width) {
+        // TODO: make sure that these values are consistent with stylesheet
+        if (width <= 420) {
+            return 'mobile';
+        } else if (width <= 1200) {
+            return 'tablet';
+        } else {
+            return 'desktop';
+        }
+    },
+
     _adjustTopNavWidth: function(lyricsColumnsStatus) {
         /**
          * lyrics columns status:
@@ -140,8 +153,25 @@ var App = React.createClass({
     },
 
     _handleWindowScroll: function() {
-        var topNavIsStuck = window.pageYOffset > 384 / 2,
-            lyricsColumnsAreStuck = window.pageYOffset > 384;
+        // TODO: make sure that these values are consistent with stylesheet
+        var stuckTopNavHeight,
+            stuckLyricsColumnsHeight = window.pageYOffset > 384,
+            topNavIsStuck,
+            lyricsColumnsAreStuck;
+
+        if (this.state.device === 'mobile') {
+            // @mobile-scrolling-nav-height
+            stuckTopNavHeight = 192 + 192 + 192;
+
+            // @mobile-top-nav-height:
+            stuckLyricsColumnsHeight = 192 + 192 + 192 + 192;
+        } else {
+            stuckTopNavHeight = 384 / 2;
+            stuckLyricsColumnsHeight = 384;
+        }
+
+        topNavIsStuck = window.pageYOffset > stuckTopNavHeight,
+        lyricsColumnsAreStuck = window.pageYOffset > stuckLyricsColumnsHeight;
 
         this.setState({
             topNavIsStuck: topNavIsStuck,
@@ -150,10 +180,9 @@ var App = React.createClass({
     },
 
     _handleWindowResize: function(e) {
-        console.log('New window width: ' + window.innerWidth + ', height: ' + window.innerHeight);
-
         this.setState({
-            windowWidth: window.innerWidth
+            windowWidth: window.innerWidth,
+            device: this._getDeviceFromWidth(window.innerWidth)
         });
     }
 });

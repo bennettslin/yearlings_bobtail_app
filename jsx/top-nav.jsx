@@ -7,7 +7,17 @@ var TitleBar = React.createClass({
     },
 
     render: function() {
-        var coverTitle;
+        var bandLogo,
+            coverTitle;
+
+        if (this.props.device !== 'mobile') {
+            bandLogo = (
+                <div className="band-logo">
+                    Band logo
+                </div>
+            );
+        }
+
         if (this.props.isInScrolling) {
             coverTitle = (
                 <div className="cover-title">
@@ -20,9 +30,7 @@ var TitleBar = React.createClass({
 
         return (
             <li className={'title-bar' + (this.props.isShown ? '' : ' unshown')}>
-                <div className="band-logo">
-                    Band logo
-                </div>
+                {bandLogo}
                 {coverTitle}
             </li>
         );
@@ -75,48 +83,92 @@ var AudioPlayer = React.createClass({
 
 var TopNav = React.createClass({
     render: function() {
-        var audioPlayer = (
-                <AudioPlayer
-                    playedSongIndex={this.props.playedSongIndex}
-                    playedSongTitle={this.props.playedSongTitle}
-                    songsLength={this.props.songsLength}
-                    _changeSong={this.props._changeSong}
-                />
-            ),
-            synopsisBar = (
-                <SynopsisBar
-                    ref="synopsis"
-                    popupsAlwaysShown={this.props.isStuck ? 'none' : 'one'}
-                    playedSongSpeechBubble={this.props.playedSongSpeechBubble}
-                    _enableHoverability={this._enableHoverability.bind(null, 'synopsis')}
-                    _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, 'synopsis')}
+        var scrollingTitleBar,
+            stickyTitleBar,
+            scrollingSynopsisBar,
+            stickySynopsisBar,
+            scrollingAnnotationLegend,
+            stickyAnnotationLegend,
+            audioPlayer;
+
+        scrollingTitleBar = (
+            <TitleBar
+                device={this.props.device}
+            />
+        );
+
+        if (this.props.device !== 'mobile') {
+            stickyTitleBar = (
+                <TitleBar
+                    device={this.props.device}
+                    isShown={this.props.isStuck}
+                    isInScrolling={false}
                 />
             );
+        }
+
+        scrollingSynopsisBar = (
+            <SynopsisBar
+                isShown={!this.props.isStuck}
+                popupsAlwaysShown={'one'}
+                playedSongSpeechBubble={this.props.playedSongSpeechBubble}
+                _enableHoverability={this._enableHoverability.bind(null, 'synopsis')}
+                _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, 'synopsis')}
+            />
+        );
+        stickySynopsisBar = (
+            <SynopsisBar
+                ref="synopsis"
+                isShown={this.props.isStuck}
+                popupsAlwaysShown={'none'}
+                playedSongSpeechBubble={this.props.playedSongSpeechBubble}
+                _enableHoverability={this._enableHoverability.bind(null, 'synopsis')}
+                _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, 'synopsis')}
+            />
+        );
+
+        if (this.props.device === 'mobile') {
+            scrollingAnnotationLegend = (
+                <AnnotationLegend
+                    isShown={!this.props.isStuck}
+                    isStuck={this.props.isStuck}
+                    popupsAlwaysShown={'all'}
+                />
+            );
+        }
+
+        stickyAnnotationLegend = (
+            <AnnotationLegend
+                ref="legend"
+                isShown={this.props.device === 'mobile' ? this.props.isStuck : true}
+                isStuck={this.props.isStuck}
+                popupsAlwaysShown={this.props.isStuck ? 'none' : 'all'}
+                _enableHoverability={this.props.isStuck ? this._enableHoverability.bind(null, 'legend') : null}
+                _resetAllOtherPopups={this.props.isStuck ? this._resetAllOtherPopups.bind(null, 'legend') : null}
+            />
+        );
+        audioPlayer = (
+            <AudioPlayer
+                playedSongIndex={this.props.playedSongIndex}
+                playedSongTitle={this.props.playedSongTitle}
+                songsLength={this.props.songsLength}
+                _changeSong={this.props._changeSong}
+            />
+        );
 
         return (
             <div className="top-nav">
                 <ul className={'scrolling-nav' + (this.props.isStuck ? ' unshown' : '')}>
-                    <TitleBar />
-                    <AnnotationLegend
-                        isStuck={false}
-                        popupsAlwaysShown={'all'}
-                    />
+                    {scrollingTitleBar}
+                    {scrollingSynopsisBar}
+                    {scrollingAnnotationLegend}
                 </ul>
                 <ul className={'sticky-nav' + (this.props.isStuck ? ' stuck' : '')}>
                     <div className="wrapper-width" data-nav-width={this.props.widthName}>
-                        <TitleBar
-                            isShown={this.props.isStuck}
-                            isInScrolling={false}
-                        />
+                        {stickyTitleBar}
+                        {stickySynopsisBar}
                         {audioPlayer}
-                        <AnnotationLegend
-                            ref="legend"
-                            isShown={this.props.isStuck}
-                            popupsAlwaysShown={'none'}
-                            _enableHoverability={this._enableHoverability.bind(null, 'legend')}
-                            _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, 'legend')}
-                        />
-                        {synopsisBar}
+                        {stickyAnnotationLegend}
                     </div>
                 </ul>
             </div>

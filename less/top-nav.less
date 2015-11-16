@@ -2,16 +2,35 @@
     background-color: orange;
     position: relative;
     margin: 0 auto;
-    height: @top-nav-height;
+    height: @mobile-top-nav-height;
+
+    @media @tablets {
+        height: @top-nav-height;
+    }
+
+    @media @desktops {
+        height: @top-nav-height;
+    }
+
     width: 100%;
 
     >ul {
         margin: 0 auto;
 
         &.scrolling-nav {
-            height: @scrolling-nav-height;
-            width: 70%;
+            height: @mobile-scrolling-nav-height;
+            width: 100%;
             transition: width 0.2s ease;
+
+            @media @tablets {
+                height: @scrolling-nav-height;
+                width: 70%;
+            }
+
+            @media @desktops {
+                height: @scrolling-nav-height;
+                width: 70%;
+            }
 
             &.unshown {
                 width: 0%;
@@ -19,14 +38,25 @@
         }
 
         >li, >.wrapper-width > li {
-            height: 100%;
+
             vertical-align: top;
             box-sizing: border-box;
             transition: width 0.2s ease;
 
             &.title-bar {
                 background-color: yellow;
-                width: 67%;
+                height: @mobile-title-bar-height;
+                width: @mobile-title-bar-width;
+
+                @media @tablets {
+                    height: @title-bar-height;
+                    width: @title-bar-width;
+                }
+
+                @media @desktops {
+                    height: @title-bar-height;
+                    width: @title-bar-width;
+                }
 
                 &.unshown {
                     width: 0;
@@ -41,14 +71,125 @@
 
                 .cover-title {
                     float: left;
-                    width: 75%;
+                    width: 100%;
+                }
+
+                @media @tablets {
+                    background-color: #8f0;
+                    .cover-title {
+                        width: 70%;
+                    }
+                }
+
+                @media @desktops {
+                    background-color: #f80;
+                    .cover-title {
+                        width: 70%;
+                    }
+                }
+            }
+
+
+            &.synopsis-bar {
+                background-color: turquoise;
+                height: @mobile-synopsis-bar-height;
+                width: @mobile-synopsis-bar-width;
+                overflow: hidden;
+
+                @media @tablets {
+                    height: @synopsis-bar-height;
+                    width: @synopsis-bar-width;
+                }
+
+                @media @desktops {
+                    height: @synopsis-bar-height;
+                    width: @synopsis-bar-width;
+                }
+
+                &.unshown {
+                    width: 0;
+                }
+
+                .avatar {
+                    background-color: gray;
+                    height: 100%;
+                    width: 30%;
+                    float: left;
+                }
+
+                ul.speech-bubbles {
+                    @speech-bubble-height: 25px;
+                    @speech-bubble-expanded-width: 250px;
+
+                    position: relative;
+                    height: 100%;
+                    width: 70%;
+                    float: left;
+
+                    li[class^="bubble"] {
+                        background-color: white;
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        height: @speech-bubble-height;
+                        cursor: pointer;
+                        border-radius: 3px;
+
+                        &:first-child {
+                            top: 0;
+                        }
+
+                        &:last-child {
+                            bottom: 0;
+                        }
+
+                        &.expanded {
+                            height: 100% - @speech-bubble-height;
+                            width: @speech-bubble-expanded-width;
+
+                            &.engraved {
+                                border: 2px solid green;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.audio-player {
+                background-color: green;
+                height: @mobile-audio-player-height;
+                width: @mobile-audio-player-width;
+
+                @media @tablets {
+                    height: @audio-player-height;
+                    width: @audio-player-width;
+                }
+
+                @media @desktops {
+                    height: @audio-player-height;
+                    width: @audio-player-width;
+                }
+
+                ul.playback-buttons {
+
                 }
             }
 
             &.annotation-legend {
                 background-color: violet;
-                width: 33%;
+                height: @mobile-annotation-legend-height;
+                width: @mobile-annotation-legend-width;
                 z-index: @nav-z-index + 2;
+
+                @media @tablets {
+                    height: @annotation-legend-height;
+                    width: @annotation-legend-width;
+                }
+
+                @media @desktops {
+                    height: @annotation-legend-height;
+                    width: @annotation-legend-width;
+                }
 
                 &.unshown {
                     width: 0;
@@ -72,6 +213,9 @@
                             height: 100%;
 
                             >li {
+                                position: relative;
+                                z-index: @nav-z-index + 1;
+
                                 &.icon {
                                     background-color: black;
                                     height: 100%;
@@ -81,11 +225,9 @@
 
                                 &.text {
                                     background-color: beige;
-                                    position: relative;
                                     height: 100%;
                                     width: @symbol-height * 4;
                                     vertical-align: top;
-                                    z-index: @nav-z-index + 1;
                                 }
                             }
                         }
@@ -100,80 +242,42 @@
                     }
                 }
             }
-
-            &.audio-player {
-                background-color: green;
-                width: 60%;
-
-                ul.playback-buttons {
-
-                }
-            }
-
-            &.synopsis-bar {
-                background-color: turquoise;
-                width: 40%;
-
-                ul.speech-bubbles {
-                    @speech-bubble-height: 25px;
-                    @speech-bubble-expanded-width: 250px;
-
-                    position: relative;
-                    height: 100%;
-                    width: 70%;
-                    float: left;
-
-                    li[class^="bubble"] {
-                        background-color: white;
-                        display: block;
-                        position: absolute;
-                        right: 0;
-                        height: @speech-bubble-height;
-                        cursor: pointer;
-                        border-radius: 3px;
-
-                        &:first-child {
-                            top: 0;
-                        }
-
-                        &:last-child {
-                            bottom: 0;
-                        }
-
-                        &.expanded {
-                            height: 100% - @speech-bubble-height;
-                            width: @speech-bubble-expanded-width;
-
-                            &.engraved {
-                                border: 2px solid green;
-                            }
-                        }
-                    }
-                }
-
-                .avatar {
-                    background-color: gray;
-                    height: 100%;
-                    width: 30%;
-                    float: left;
-                }
-            }
         }
 
         &.sticky-nav {
             .sticky-mixin;
             background-color: transparent;
-
-            top: @scrolling-nav-height;
-            height: @sticky-nav-height;
+            top: @mobile-scrolling-nav-height;
+            height: @mobile-sticky-nav-height;
             transition: height 0.2s ease;
 
             .wrapper-width {
-                @sticky-nav-wrapper-margin: (100% - @sticky-nav-wrapper-width) * 0.5;
-                width: @sticky-nav-wrapper-width;
-                margin-left: @sticky-nav-wrapper-margin;
-                margin-right: @sticky-nav-wrapper-margin;
+                width: @mobile-sticky-nav-wrapper-width;
                 transition: width 0.2s ease, margin-left 0.2s ease, margin-right 0.2s ease;
+            }
+
+            @media @tablets {
+                top: @scrolling-nav-height;
+                height: @sticky-nav-height;
+
+                .wrapper-width {
+                    @sticky-nav-wrapper-margin: (100% - @sticky-nav-wrapper-width) * 0.5;
+                    width: @sticky-nav-wrapper-width;
+                    margin-left: @sticky-nav-wrapper-margin;
+                    margin-right: @sticky-nav-wrapper-margin;
+                }
+            }
+
+            @media @desktops {
+                top: @scrolling-nav-height;
+                height: @sticky-nav-height;
+
+                .wrapper-width {
+                    @sticky-nav-wrapper-margin: (100% - @sticky-nav-wrapper-width) * 0.5;
+                    width: @sticky-nav-wrapper-width;
+                    margin-left: @sticky-nav-wrapper-margin;
+                    margin-right: @sticky-nav-wrapper-margin;
+                }
             }
 
             li {
@@ -184,7 +288,7 @@
                 }
 
                 &.annotation-legend {
-                    .icon {
+                    &.pointer {
                         cursor: pointer;
                     }
                 }
@@ -214,21 +318,52 @@
                 }
 
                 li {
-
-                    &.title-bar {
-                        width: 15%;
-                    }
-
-                    &.annotation-legend {
-                        width: 15%;
+                    &.synopsis-bar {
+                        width: 25%;
                     }
 
                     &.audio-player {
-                        width: 45%;
+                        width: 50%;
                     }
 
-                    &.synopsis-bar {
+                    &.annotation-legend {
                         width: 25%;
+                    }
+
+                    @media @tablets {
+                        &.title-bar {
+                            width: 15%;
+                        }
+
+                        &.synopsis-bar {
+                            width: 25%;
+                        }
+
+                        &.audio-player {
+                            width: 45%;
+                        }
+
+                        &.annotation-legend {
+                            width: 15%;
+                        }
+                    }
+
+                    @media @desktops {
+                        &.title-bar {
+                            width: 15%;
+                        }
+
+                        &.synopsis-bar {
+                            width: 25%;
+                        }
+
+                        &.audio-player {
+                            width: 45%;
+                        }
+
+                        &.annotation-legend {
+                            width: 15%;
+                        }
                     }
                 }
 

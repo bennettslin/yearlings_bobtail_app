@@ -5,8 +5,17 @@ body {
 .app {
     background-color: red;
     margin: 0 auto;
-    height: @wrapper-height;
+    height: @mobile-wrapper-height;
     max-width: @wrapper-max-width;
+    overflow: hidden;
+
+    @media @tablets {
+        height: @wrapper-height;
+    }
+
+    @media @desktops {
+        height: @wrapper-height;
+    }
 }
 
 .footer {
