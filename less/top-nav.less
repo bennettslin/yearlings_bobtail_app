@@ -93,7 +93,6 @@
                 background-color: turquoise;
                 height: @mobile-synopsis-bar-height;
                 width: @mobile-synopsis-bar-width;
-                // overflow: hidden;
 
                 @media @tablets {
                     height: @synopsis-bar-height;
@@ -107,6 +106,12 @@
 
                 &.unshown {
                     width: 0;
+
+                    ul.speech-bubbles {
+                        li[class^="bubble"] {
+                            width: 0;
+                        }
+                    }
                 }
 
                 .avatar {
@@ -121,10 +126,9 @@
                     @speech-bubble-expanded-width: 250px;
 
                     position: relative;
+                    float: left;
                     height: 100%;
                     width: 70%;
-                    float: left;
-                    // overflow:hidden;
 
                     li[class^="bubble"] {
                         background-color: white;
@@ -134,6 +138,7 @@
                         height: @speech-bubble-height;
                         cursor: pointer;
                         border-radius: 3px;
+                        overflow: hidden;
 
                         &:first-child {
                             top: 0;
@@ -146,7 +151,6 @@
                         &.expanded {
                             height: 100% - @speech-bubble-height;
                             width: @speech-bubble-expanded-width;
-                            // overflow: visible;
 
                             &.engraved {
                                 border: 2px solid green;
