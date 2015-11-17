@@ -40,8 +40,10 @@ var AnnotationLegend = React.createClass({
     },
 
     render: function() {
-        var symbols = (
-                <ul className="symbols">
+        var symbolsClassName = 'symbols' +
+            (this.props.orientation ? ' ' + this.props.orientation : ''),
+            symbols = (
+                <ul className={symbolsClassName}>
                     {symbolDetails.map(function(symbol, index) {
                         var content = (
                                 <ul>
@@ -54,9 +56,10 @@ var AnnotationLegend = React.createClass({
                     }.bind(this))}
                 </ul>
             ),
-            className = 'annotation-legend' + (this.props.isShown ? '' : ' unshown') + (this.props.popupsAlwaysShown === 'all' ? '' : ' pointer');
+            className = 'annotation-legend' +
+                (this.props.isShown ? '' : ' unshown') +
+                (this.props.popupsAlwaysShown === 'all' ? '' : ' pointer');
 
-        // FIXME: Eventually icon image will replace placeholder.
         return (
             <li className={className}>
                 {symbols}

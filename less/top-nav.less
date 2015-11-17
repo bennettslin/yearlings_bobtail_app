@@ -93,7 +93,7 @@
                 background-color: turquoise;
                 height: @mobile-synopsis-bar-height;
                 width: @mobile-synopsis-bar-width;
-                overflow: hidden;
+                // overflow: hidden;
 
                 @media @tablets {
                     height: @synopsis-bar-height;
@@ -124,6 +124,7 @@
                     height: 100%;
                     width: 70%;
                     float: left;
+                    // overflow:hidden;
 
                     li[class^="bubble"] {
                         background-color: white;
@@ -145,6 +146,7 @@
                         &.expanded {
                             height: 100% - @speech-bubble-height;
                             width: @speech-bubble-expanded-width;
+                            // overflow: visible;
 
                             &.engraved {
                                 border: 2px solid green;
@@ -176,6 +178,7 @@
 
             &.annotation-legend {
                 background-color: violet;
+                position: relative;
                 height: @mobile-annotation-legend-height;
                 width: @mobile-annotation-legend-width;
                 z-index: @nav-z-index + 2;
@@ -197,10 +200,7 @@
                 ul.symbols {
                     @symbol-height: 50px;
                     width: @symbol-height * 5;
-
-                    &:not(:last-child) {
-                        margin-bottom: 5px;
-                    }
+                    position: absolute;
 
                     >li[class^="symbol"] {
                         display: block;
@@ -236,6 +236,32 @@
 
                             &.engraved {
                                 border: 2px solid green;
+                            }
+                        }
+                    }
+
+                    &:not(.right-align) {
+                        left: 0;
+                    }
+
+                    &.right-align {
+                        right: 0;
+
+                        >li[class^="symbol"] {
+                            float: right;
+                            clear: both;
+
+                            ul {
+
+                                >li {
+                                    &.icon {
+                                        float: right;
+                                    }
+
+                                    &.text {
+                                        float: right;
+                                    }
+                                }
                             }
                         }
                     }
