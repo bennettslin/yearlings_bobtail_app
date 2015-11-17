@@ -42,5 +42,11 @@ var SynopsisBar = React.createClass({
                 {speechBubbles}
             </li>
         );
+    },
+
+    updateShownPopupIndex: function(index) {
+        this.setState({
+            shownPopupIndex: index
+        });
     }
 });

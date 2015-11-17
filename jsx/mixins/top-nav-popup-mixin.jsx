@@ -51,9 +51,9 @@ var PopupMixin = {
                     clickedOn: !this.state.clickedOn,
                     shownPopupIndex: index
                 });
-
             }
 
+            this.props._updateShownPopupIndex(index);
             this._handleTouch(false);
         }
     },

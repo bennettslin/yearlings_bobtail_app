@@ -82,14 +82,29 @@ var AudioPlayer = React.createClass({
 });
 
 var TopNav = React.createClass({
+
     render: function() {
         var scrollingTitleBar,
             stickyTitleBar,
-            scrollingSynopsisBar,
-            stickySynopsisBar,
+            audioPlayer,
+
+            _getSynopsisBar = function(ref, isShown, popupsAlwaysShown) {
+                return (
+                    <SynopsisBar
+                        ref={ref}
+                        isShown={isShown}
+                        popupsAlwaysShown={popupsAlwaysShown}
+                        playedSongSpeechBubble={this.props.playedSongSpeechBubble}
+                        _enableHoverability={this._enableHoverability.bind(null, ref)}
+                        _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, ref)}
+                        _updateShownPopupIndex={this._updateShownPopupIndex}
+                    />
+                );
+            }.bind(this),
+            scrollingSynopsisBar = _getSynopsisBar('scrolling-synopsis', !this.props.isStuck, 'one'),
+            stickySynopsisBar = _getSynopsisBar('sticky-synopsis', this.props.isStuck, 'none'),
             scrollingAnnotationLegend,
-            stickyAnnotationLegend,
-            audioPlayer;
+            stickyAnnotationLegend;
 
         scrollingTitleBar = (
             <TitleBar
@@ -107,29 +122,10 @@ var TopNav = React.createClass({
             );
         }
 
-        scrollingSynopsisBar = (
-            <SynopsisBar
-                isShown={!this.props.isStuck}
-                popupsAlwaysShown={'one'}
-                playedSongSpeechBubble={this.props.playedSongSpeechBubble}
-                _enableHoverability={this._enableHoverability.bind(null, 'synopsis')}
-                _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, 'synopsis')}
-            />
-        );
-        stickySynopsisBar = (
-            <SynopsisBar
-                ref="synopsis"
-                isShown={this.props.isStuck}
-                popupsAlwaysShown={'none'}
-                playedSongSpeechBubble={this.props.playedSongSpeechBubble}
-                _enableHoverability={this._enableHoverability.bind(null, 'synopsis')}
-                _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, 'synopsis')}
-            />
-        );
-
         if (this.props.device === 'mobile') {
             scrollingAnnotationLegend = (
                 <AnnotationLegend
+                    ref="scrolling-legend"
                     isShown={!this.props.isStuck}
                     isStuck={this.props.isStuck}
                     popupsAlwaysShown={'all'}
@@ -139,7 +135,7 @@ var TopNav = React.createClass({
 
         stickyAnnotationLegend = (
             <AnnotationLegend
-                ref="legend"
+                ref="sticky-legend"
                 isShown={this.props.device === 'mobile' ? this.props.isStuck : true}
                 isStuck={this.props.isStuck}
                 popupsAlwaysShown={this.props.isStuck ? 'none' : 'all'}
@@ -177,7 +173,8 @@ var TopNav = React.createClass({
 
     _resetAllOtherPopups: function(ref) {
         Object.keys(this.refs).forEach(function(currentRef) {
-            if (currentRef !== ref) {
+            // Only reset other popups that are in sticky nav.
+            if (currentRef !== ref && currentRef.indexOf('sticky') > -1) {
                 this.refs[currentRef].resetUserInteractionWithPopups();
             }
         }.bind(this));
@@ -185,9 +182,22 @@ var TopNav = React.createClass({
 
     _enableHoverability: function(ref, hoverable) {
         // If a popup is clicked on, then no other popup can be hoverable.
-
         Object.keys(this.refs).forEach(function(currentRef) {
             this.refs[currentRef].enableHoverability(hoverable);
+        }.bind(this));
+    },
+
+    _updateShownPopupIndex: function(index) {
+        Object.keys(this.refs).forEach(function(currentRef) {
+            /**
+             * Update shown popup index of synopsis bars. For example,
+             * if user selects personal speech bubble in sticky nav,
+             * this change will also be reflected in scrolling nav.
+             * As it is, this only gets called by clicks, not hovers.
+             */
+            if (currentRef.indexOf('synopsis') > -1) {
+                this.refs[currentRef].updateShownPopupIndex(index);
+            }
         }.bind(this));
     }
 });
