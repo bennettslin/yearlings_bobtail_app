@@ -35,27 +35,33 @@
 /* HEIGHTS */
 
     /* universal heights */
+    @now-playing-bar-height: 50px;
     @footer-height: 48px;
 
     /* mobile heights */
-    @mobile-title-bar-height: 192px;
-    @mobile-synopsis-bar-height: 192px;
-    @mobile-audio-player-height: 192px;
-    @mobile-annotation-legend-height: 192px;
-    @mobile-top-nav-height: @mobile-title-bar-height + @mobile-synopsis-bar-height + @mobile-audio-player-height + @mobile-annotation-legend-height;
-    @mobile-scrolling-nav-height: @mobile-top-nav-height - @mobile-audio-player-height;
-    @mobile-sticky-nav-height: @mobile-audio-player-height;
+    @mobile-base-height: 192px;
+    @mobile-title-bar-height: @mobile-base-height;
+    @mobile-synopsis-bar-height: @mobile-base-height;
+    @mobile-audio-player-height: @mobile-base-height;
+    @mobile-annotation-legend-height: @mobile-base-height;
+
+    @mobile-scrolling-nav-height: @mobile-title-bar-height + @mobile-synopsis-bar-height + @mobile-annotation-legend-height;
+    @mobile-sticky-nav-height: @now-playing-bar-height + @mobile-audio-player-height;
+    @mobile-top-nav-height: @mobile-scrolling-nav-height + @mobile-sticky-nav-height;
+
     @mobile-page-height: 2000px;
     @mobile-wrapper-height: @mobile-top-nav-height + @mobile-page-height + @footer-height;
 
     /* desktop heights */
-    @title-bar-height: 192px;
-    @synopsis-bar-height: 192px;
-    @audio-player-height: 192px;
-    @annotation-legend-height: 192px;
-    @top-nav-height: 384px;
-    @scrolling-nav-height: @top-nav-height * 0.5;
-    @sticky-nav-height: @top-nav-height - @scrolling-nav-height;
+    @base-height: 192px;
+    @title-bar-height: @base-height;
+    @synopsis-bar-height: @base-height;
+    @audio-player-height: @base-height;
+    @annotation-legend-height: @base-height;
+
+    @scrolling-nav-height: @base-height;
+    @sticky-nav-height: @now-playing-bar-height + @base-height;
+    @top-nav-height: @scrolling-nav-height + @sticky-nav-height;
     @page-height: 2000px;
     @wrapper-height: @top-nav-height + @page-height + @footer-height;
 

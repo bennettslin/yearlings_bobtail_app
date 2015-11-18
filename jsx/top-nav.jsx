@@ -1,3 +1,13 @@
+var NowPlayingBar = React.createClass({
+    render: function() {
+        return (
+            <div className="now-playing-bar">
+                {this.props.playedSongIndex + 1 + ''}. {this.props.playedSongTitle}
+            </div>
+        );
+    }
+});
+
 var TopNav = React.createClass({
     render: function() {
         var scrollingTitleBar = (
@@ -5,7 +15,6 @@ var TopNav = React.createClass({
                     device={this.props.device}
                 />
             ),
-
             stickyTitleBar = this.props.device !== 'mobile' ? (
                 <TitleBar
                     device={this.props.device}
@@ -14,10 +23,16 @@ var TopNav = React.createClass({
                 />
             ) : null,
 
+            nowPlayingBar = (
+                <NowPlayingBar
+                    playedSongIndex={this.props.playedSongIndex}
+                    playedSongTitle={this.props.playedSongTitle}
+                />
+            ),
+
             audioPlayer = (
                 <AudioPlayer
                     playedSongIndex={this.props.playedSongIndex}
-                    playedSongTitle={this.props.playedSongTitle}
                     songsLength={this.props.songsLength}
                     _changeSong={this.props._changeSong}
                 />
@@ -38,6 +53,7 @@ var TopNav = React.createClass({
             }.bind(this),
             scrollingSynopsisBar = _getSynopsisBar('scrolling-synopsis', !this.props.isStuck, 'one'),
             stickySynopsisBar = _getSynopsisBar('sticky-synopsis', this.props.isStuck, 'none'),
+
             scrollingAnnotationLegend = this.props.device === 'mobile' ? (
                 <AnnotationLegend
                     ref="scrolling-legend"
@@ -46,7 +62,6 @@ var TopNav = React.createClass({
                     popupsAlwaysShown={'all'}
                 />
             ) : null,
-
             stickyAnnotationLegend = (
                 <AnnotationLegend
                     ref="sticky-legend"
@@ -68,6 +83,7 @@ var TopNav = React.createClass({
                 </ul>
                 <ul className={'sticky-nav' + (this.props.isStuck ? ' stuck' : '')}>
                     <div className="wrapper-width" data-nav-width={this.props.widthName}>
+                        {nowPlayingBar}
                         {stickyTitleBar}
                         {stickySynopsisBar}
                         {audioPlayer}
