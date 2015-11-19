@@ -44,7 +44,7 @@ var TopNav = React.createClass({
                         ref={ref}
                         isShown={isShown}
                         popupsAlwaysShown={popupsAlwaysShown}
-                        playedSongSpeechBubble={this.props.playedSongSpeechBubble}
+                        playedSongSpeechBubbles={this.props.playedSongSpeechBubbles}
                         _enableHoverability={this._enableHoverability.bind(null, ref)}
                         _resetAllOtherPopups={this._resetAllOtherPopups.bind(null, ref)}
                         _updateShownPopupIndex={this._updateShownPopupIndex}
@@ -54,12 +54,14 @@ var TopNav = React.createClass({
             scrollingSynopsisBar = _getSynopsisBar('scrolling-synopsis', !this.props.isStuck, 'one'),
             stickySynopsisBar = _getSynopsisBar('sticky-synopsis', this.props.isStuck, 'none'),
 
+            // TODO: Make this more DRY.
             scrollingAnnotationLegend = this.props.device === 'mobile' ? (
                 <AnnotationLegend
                     ref="scrolling-legend"
                     isShown={!this.props.isStuck}
                     isStuck={this.props.isStuck}
                     popupsAlwaysShown={'all'}
+                    legendSymbols={this.props.legendSymbols}
                 />
             ) : null,
             stickyAnnotationLegend = (
@@ -69,6 +71,7 @@ var TopNav = React.createClass({
                     isShown={this.props.device === 'mobile' ? this.props.isStuck : true}
                     isStuck={this.props.isStuck}
                     popupsAlwaysShown={this.props.isStuck ? 'none' : 'all'}
+                    legendSymbols={this.props.legendSymbols}
                     _enableHoverability={this.props.isStuck ? this._enableHoverability.bind(null, 'sticky-legend') : null}
                     _resetAllOtherPopups={this.props.isStuck ? this._resetAllOtherPopups.bind(null, 'sticky-legend') : null}
                 />

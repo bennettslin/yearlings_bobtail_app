@@ -29,7 +29,7 @@ var SynopsisBar = React.createClass({
         var speechBubbles = (
                 <ul className="speech-bubbles">
                     {speechBubbleNames.map(function(bubbleName, index) {
-                        return this._getPopup('bubble', index, this.props.playedSongSpeechBubble[speechBubbleNames[index]], bubbleName);
+                        return this._getPopup('bubble', index, this.props.playedSongSpeechBubbles[speechBubbleNames[index]], bubbleName);
                     }.bind(this))}
                 </ul>
             ),

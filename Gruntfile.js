@@ -26,6 +26,7 @@ module.exports = function(grunt) {
         },
         babel: {
             options: {
+                compact: false,
                 sourceMap: true,
                 presets: ['react']
             },

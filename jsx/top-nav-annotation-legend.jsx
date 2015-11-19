@@ -1,18 +1,5 @@
 // FIXME: Get this from config object
-var symbolDetails = [
-        {
-            icon: 'symbol 1',
-            text: 'explanation of symbol 1'
-        },
-        {
-            icon: 'symbol 2',
-            text: 'explanation of symbol 2'
-        },
-        {
-            icon: 'symbol 3',
-            text: 'explanation of symbol 3'
-        },
-    ];
+
 var AnnotationLegend = React.createClass({
     mixins: [PopupMixin],
 
@@ -44,11 +31,11 @@ var AnnotationLegend = React.createClass({
             (this.props.orientation ? ' ' + this.props.orientation : ''),
             symbols = (
                 <ul className={symbolsClassName}>
-                    {symbolDetails.map(function(symbol, index) {
+                    {this.props.legendSymbols.map(function(symbol, index) {
                         var content = (
                                 <ul>
                                     <li className="icon"></li>
-                                    <li className="text">{symbol.text}</li>
+                                    <li className="description">{symbol.description}</li>
                                 </ul>
                             );
 

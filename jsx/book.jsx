@@ -58,10 +58,10 @@ var LyricsColumn = React.createClass({
                             {this.props.playedSongLyric.map(function(stanza, stanzaIndex) {
                                 return (
                                     <div className={'stanza-' + stanzaIndex} key={stanzaIndex}>
-                                        {stanza.map(function(verse, verseIndex) {
+                                        {stanza.map(function(lyric, verseIndex) {
                                             return (
                                                 <div className={'verse-' + verseIndex} key={verseIndex}>
-                                                    {this._italicise(verse)}
+                                                    {this._parseLyric(lyric)}
                                                 </div>
                                             )
                                         }.bind(this))}
@@ -84,7 +84,13 @@ var LyricsColumn = React.createClass({
         );
     },
 
-    _italicise: function(verse) {
+    _parseLyric: function(lyric) {
+        var annotation = lyric.annotation;
+
+        return this._getVerseMarkup(lyric.verse);
+    },
+
+    _getVerseMarkup: function(verse) {
         /**
          * this method assumes that each verse line that's italicised
          * will begin and end with <em> tags

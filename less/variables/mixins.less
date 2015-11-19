@@ -71,6 +71,7 @@
     @wrapper-height: @top-nav-height + @page-height + @footer-height;
 
 /* Z-INDICES */
+
     @page-z-index: 1;
     @nav-z-index: @page-z-index + 1;
     @lyrics-z-index: @nav-z-index + 1;
@@ -93,5 +94,15 @@
     .wrapper-width {
         height: 100%;
         margin: 0 auto;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: inline-block;
     }
 }
