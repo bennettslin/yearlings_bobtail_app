@@ -1,7 +1,7 @@
 var AudioPlayer = React.createClass({
     getInitialState: function() {
         return {
-            playingStatus: 'stopped'
+            playingStatus: 'paused'
         };
     },
 
@@ -11,7 +11,7 @@ var AudioPlayer = React.createClass({
                 <li>
                     <button
                         onClick={this._changePlayingStatus.bind(null, 'home')}
-                        disabled={this.state.playingStatus === 'stopped'}
+                        disabled={this.props.playedSongIndex === -1}
                     >
                         Home
                     </button>
@@ -61,7 +61,7 @@ var AudioPlayer = React.createClass({
         var playingStatus;
 
         if (buttonName === 'home') {
-            playingStatus === 'stopped';
+            playingStatus === 'paused';
             this.props._changeSong(-1);
 
         } else if (buttonName === 'play') {

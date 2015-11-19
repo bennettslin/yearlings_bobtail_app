@@ -21,7 +21,7 @@
             // FIXME: vh is buggy in iOS7 and some IE
             max-height: 100vh;
             overflow: auto;
-            transition: width 0.2s ease, left 0.1s ease, right 0.1s ease;
+            .transition(~"width 0.2s ease, left 0.1s ease, right 0.1s ease");
 
             &.lyrics-column-left {
                 left: 0;
@@ -64,7 +64,7 @@
                     font-size: @lyrics-verse-size;
 
                     &.foldable-area {
-                        transition: max-height 0.15s ease;
+                        .transition(max-height 0.15s ease);
 
                         &.folded {
                             max-height: 0;
@@ -132,8 +132,7 @@
 
 .example-enter {
     opacity: 0.01;
-    transition: opacity 1.5s ease-in;
-    -webkit-transition: opacity 1.5s ease-in;
+    .transition(opacity 1.5s ease-in);
 }
 
 .example-enter.example-enter-active {
@@ -142,8 +141,7 @@
 
 .example-leave {
     opacity: 1;
-    transition: opacity 1.5s ease-in;
-    -webkit-transition: opacity 1.5s ease-in;
+    .transition(opacity 1.5s ease-in);
 }
 
 .example-leave.example-leave-active {

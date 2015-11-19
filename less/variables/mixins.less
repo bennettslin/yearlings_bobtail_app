@@ -47,6 +47,9 @@
 
     @mobile-scrolling-nav-height: @mobile-title-bar-height + @mobile-synopsis-bar-height + @mobile-annotation-legend-height;
     @mobile-sticky-nav-height: @now-playing-bar-height + @mobile-audio-player-height;
+
+    // FIXME: Might not need? Keeping for now, since it's used to get wrapper height;
+    // Same deal for other devices
     @mobile-top-nav-height: @mobile-scrolling-nav-height + @mobile-sticky-nav-height;
 
     @mobile-page-height: 2000px;
@@ -61,7 +64,9 @@
 
     @scrolling-nav-height: @base-height;
     @sticky-nav-height: @now-playing-bar-height + @base-height;
+
     @top-nav-height: @scrolling-nav-height + @sticky-nav-height;
+
     @page-height: 2000px;
     @wrapper-height: @top-nav-height + @page-height + @footer-height;
 
@@ -69,6 +74,7 @@
 @page-z-index: 1;
 @nav-z-index: @page-z-index + 1;
 @lyrics-z-index: @nav-z-index + 1;
+@popup-z-index: @lyrics-z-index + 1;
 
 /* mixins */
 .sticky-mixin {

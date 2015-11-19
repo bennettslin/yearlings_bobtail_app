@@ -22,31 +22,11 @@
     >ul {
         margin: 0 auto;
 
-        &.scrolling-nav {
-            height: @mobile-scrolling-nav-height;
-            width: 100%;
-            transition: width 0.2s ease;
-
-            @media @tablets {
-                height: @scrolling-nav-height;
-                width: 70%;
-            }
-
-            @media @desktops {
-                height: @scrolling-nav-height;
-                width: 70%;
-            }
-
-            &.unshown {
-                width: 0%;
-            }
-        }
-
         >li, >.wrapper-width > li {
 
             vertical-align: top;
             box-sizing: border-box;
-            transition: width 0.2s ease;
+            .transition(~"width 0.2s ease, height 0.2s ease");
 
             &.title-bar {
                 background-color: yellow;
@@ -190,7 +170,6 @@
                 position: relative;
                 height: @mobile-annotation-legend-height;
                 width: @mobile-annotation-legend-width;
-                z-index: @nav-z-index + 2;
 
                 @media @tablets {
                     height: @annotation-legend-height;
@@ -276,6 +255,30 @@
                     }
                 }
             }
+
+            .popup.expanded {
+                z-index: @popup-z-index;
+            }
+        }
+
+        &.scrolling-nav {
+            height: @mobile-scrolling-nav-height;
+            width: 100%;
+            .transition(width 0.2s ease);
+
+            @media @tablets {
+                height: @scrolling-nav-height;
+                width: 70%;
+            }
+
+            @media @desktops {
+                height: @scrolling-nav-height;
+                width: 70%;
+            }
+
+            &.unshown {
+                width: 0%;
+            }
         }
 
         &.sticky-nav {
@@ -283,7 +286,7 @@
             background-color: transparent;
             top: @mobile-scrolling-nav-height;
             height: @mobile-sticky-nav-height;
-            transition: height 0.2s ease;
+            .transition(height 0.2s ease);
 
             .wrapper-width {
                 width: @mobile-sticky-nav-wrapper-width;
@@ -329,7 +332,6 @@
             }
 
             &.stuck {
-                height: @sticky-nav-height * 0.7;
 
                 .wrapper-width {
                     &[data-nav-width^="left"] {
@@ -352,6 +354,9 @@
                 }
 
                 li {
+                    // FIXME: Hard-coded value for now;
+                    height: 100px;
+
                     &.synopsis-bar {
                         width: 25%;
                     }
@@ -370,7 +375,7 @@
                         }
 
                         &.synopsis-bar {
-                            width: 25%;
+                            width: 40%;
                         }
 
                         &.audio-player {

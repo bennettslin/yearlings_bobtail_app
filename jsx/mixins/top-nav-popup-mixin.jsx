@@ -10,7 +10,7 @@ var PopupMixin = {
 
     enableHoverability: function(hoverable) {
         this.setState({
-            hoverable: hoverable
+            hoverable: this.props.popupsAlwaysShown === 'one' ? true : hoverable
         });
     },
 
@@ -32,15 +32,17 @@ var PopupMixin = {
     _handlePopupClick: function(index) {
         if (this.props.popupsAlwaysShown !== 'all') {
             if (this.state.clickedOn && this.state.shownPopupIndex !== index) {
-                console.log(this.state.clickedOn, this.state.shownPopupIndex, index);
                 this.setState({
                     shownPopupIndex: index
                 });
 
             } else {
 
+                // Clicking synopsis bar in scrolling nav still allows hover.
+                var newClickedOn = !this.state.clickedOn;
+
                 if (this.props._enableHoverability) {
-                    this.props._enableHoverability(this.state.clickedOn);
+                    this.props._enableHoverability(!newClickedOn);
                 }
 
                 if (this.props._resetAllOtherPopups) {
@@ -48,12 +50,14 @@ var PopupMixin = {
                 }
 
                 this.setState({
-                    clickedOn: !this.state.clickedOn,
+                    clickedOn: newClickedOn,
                     shownPopupIndex: index
                 });
             }
 
-            this.props._updateShownPopupIndex(index);
+            if (this.props._updateShownPopupIndex) {
+                this.props._updateShownPopupIndex(index);
+            }
             this._handleTouch(false);
         }
     },
@@ -92,8 +96,9 @@ var PopupMixin = {
 
     _getPopup: function(baseClassName, index, shownContent, unshownContent) {
         var isShown = this._showPopup(index),
-            className = baseClassName + '-' + index + (isShown ? ' expanded' : '') +
-                    ((isShown && (this.props.popupsAlwaysShown !== 'none' || this.state.clickedOn)) ? ' engraved' : '');
+            className = baseClassName + '-' + index +
+                ' popup' + (isShown ? ' expanded' : '') +
+                ((isShown && (this.props.popupsAlwaysShown !== 'none' || this.state.clickedOn)) ? ' engraved' : '');
         return (
             <li
                 className={className}
