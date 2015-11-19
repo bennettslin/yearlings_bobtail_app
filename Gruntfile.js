@@ -27,12 +27,25 @@ module.exports = function(grunt) {
         babel: {
             options: {
                 compact: false,
-                sourceMap: true,
+                sourceMap: false,
                 presets: ['react']
             },
             dist: {
                 src: 'src/components.jsx',
-                dest: 'public/js/components.js'
+                dest: 'src/components.js'
+            }
+        },
+        uglify: {
+            options: {
+
+            },
+            my_target: {
+                files: [
+                    {
+                        src: 'src/components.js',
+                        dest: 'public/js/components.js'
+                    }
+                ]
             }
         },
         less: {
@@ -63,7 +76,8 @@ module.exports = function(grunt) {
                 files: ['jsx/**/*.jsx', 'jsx/**/*.js'],
                 tasks: [
                     'concat',
-                    'babel'
+                    'babel',
+                    'uglify'
                 ]
             },
 
@@ -83,6 +97,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'concat',
         'babel',
+        'uglify',
         'less',
         'concurrent'
     ]);
