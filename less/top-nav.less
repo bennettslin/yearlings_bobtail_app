@@ -161,7 +161,10 @@
                 }
 
                 ul.playback-buttons {
-
+                    li {
+                        position: relative;
+                        z-index: @audio-button-z-index;
+                    }
                 }
             }
 
@@ -200,8 +203,6 @@
                             height: 100%;
 
                             >li {
-                                position: relative;
-                                z-index: @nav-z-index + 1;
 
                                 &.icon {
                                     background-color: black;
@@ -256,9 +257,14 @@
                 }
             }
 
-            .popup.expanded {
-                z-index: @popup-z-index;
+            .popup {
+                position: relative;
+
+                &.expanded {
+                    z-index: @expanded-popup-z-index;
+                }
             }
+
         }
 
         &.scrolling-nav {

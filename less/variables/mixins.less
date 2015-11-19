@@ -70,11 +70,12 @@
     @page-height: 2000px;
     @wrapper-height: @top-nav-height + @page-height + @footer-height;
 
-/* z-indices */
-@page-z-index: 1;
-@nav-z-index: @page-z-index + 1;
-@lyrics-z-index: @nav-z-index + 1;
-@popup-z-index: @lyrics-z-index + 1;
+/* Z-INDICES */
+    @page-z-index: 1;
+    @nav-z-index: @page-z-index + 1;
+    @lyrics-z-index: @nav-z-index + 1;
+    @audio-button-z-index: @lyrics-z-index + 1;
+    @expanded-popup-z-index: @audio-button-z-index + 1;
 
 /* mixins */
 .sticky-mixin {
