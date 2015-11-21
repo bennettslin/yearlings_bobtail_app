@@ -101,5 +101,9 @@ var LyricsColumn = React.createClass({
         } else {
             return <span>{verse}</span>
         }
+    },
+
+    _getNestedVerseMarkup: function(verse, markup) {
+
     }
 });
