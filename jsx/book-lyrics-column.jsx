@@ -86,24 +86,65 @@ var LyricsColumn = React.createClass({
 
     _parseLyric: function(lyric) {
         var annotation = lyric.annotation;
-
-        return this._getVerseMarkup(lyric.verse);
+        return this._getMappedVerseElement(lyric.verse);
     },
 
-    _getVerseMarkup: function(verse) {
-        /**
-         * this method assumes that each verse line that's italicised
-         * will begin and end with <em> tags
-         */
-        if (verse.indexOf('<em>') !== -1) {
-            verse = verse.replace('<em>', '').replace('</em>', '');
-            return <span><em>{verse}</em></span>
-        } else {
-            return <span>{verse}</span>
+    /**
+     * Returns either a single element or a mapped element wrapped in a span tag
+     */
+    _getMappedVerseElement: function(verse, index, nestedIndex) {
+        index = index || 0;
+        nestedIndex = nestedIndex || 0;
+
+        if (Array.isArray(verse)) {
+            return (
+                <span key={nestedIndex + '-' + index}>
+                    {verse.map(function(verseElement, index) {
+                        return this._getMappedVerseElement(verseElement, index, nestedIndex + 1);
+                    }.bind(this))}
+                </span>
+            );
+
+        } else if (typeof verse === 'string' || typeof verse === 'object') {
+            return this._getTaggedVerseElement(verse, index, nestedIndex);
         }
     },
 
-    _getNestedVerseMarkup: function(verse, markup) {
+    /**
+     * Returns a single element wrapped in a span, italic, or anchor tag
+     */
+    _getTaggedVerseElement: function(verse, index, nestedIndex) {
+        if (typeof verse === 'string') {
+            return <span key={nestedIndex + '-' + index}>{verse}</span>;
 
+        } else if (typeof verse === 'object') {
+            if (verse.italic) {
+                return <em key={nestedIndex + '-' + index}>{this._getMappedVerseElement(verse.italic, index, nestedIndex)}</em>;
+
+            } else if (verse.anchor) {
+                return (
+                    <a
+                        key={nestedIndex + '-' + index}
+                        onClick={this.props._handleAnnotationSelect.bind(null, '#' + verse.annotationKey)}
+                    >
+                        {this._getMappedVerseElement(verse.anchor, index, nestedIndex)}
+                    </a>
+                );
+
+            }
+        }
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+

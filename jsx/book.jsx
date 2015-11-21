@@ -49,6 +49,7 @@ var Book = React.createClass({
                                     columnIndex={key}
                                     _toggleFold={this._toggleLyricsFold}
                                     _expandColumns={this._expandLyricsColumns}
+                                    _handleAnnotationSelect={this._handleAnnotationSelect}
                                 />
                             );
                         }.bind(this))}
@@ -102,5 +103,10 @@ var Book = React.createClass({
 
     _synchroniseLyricsColumns: function(sourceColumn, followerColumn) {
         followerColumn.scrollTop = sourceColumn.scrollTop;
+    },
+
+    _handleAnnotationSelect: function(annotationKey) {
+        // FIXME: Obviously, this should be implemented.
+        console.log("annotation key is", annotationKey);
     }
 });
