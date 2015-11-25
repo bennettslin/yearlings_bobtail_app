@@ -27,18 +27,21 @@ var Page = React.createClass({
                     />
                 );
             }.bind(this)),
-            visibilityClass;
+            visibilityClass,
+
+            // FIXME: Does this help at all?
+            scrollingDisabledClass = this.props.scrollingDisabled ? ' no-scroll' : '';
 
         if (this.props.pageIndex < this.props.viewedPageIndex) {
-            visibilityClass = "hidden previous";
+            visibilityClass = 'hidden previous';
         } else if (this.props.pageIndex > this.props.viewedPageIndex) {
-            visibilityClass = "hidden next";
+            visibilityClass = 'hidden next';
         } else {
-            visibilityClass = "viewed"
+            visibilityClass = 'viewed'
         }
 
         return (
-            <div className={'book-page-' + this.props.pageIndex + ' ' + visibilityClass}>
+            <div className={'book-page-' + this.props.pageIndex + ' ' + visibilityClass + scrollingDisabledClass}>
                 {pageButtons[0]}
                 <ul className="song-path">
                     {songPoints}

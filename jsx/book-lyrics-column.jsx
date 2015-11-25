@@ -139,16 +139,3 @@ var LyricsColumn = React.createClass({
         }
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-

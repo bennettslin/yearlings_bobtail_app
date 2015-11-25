@@ -2,7 +2,8 @@ var Book = React.createClass({
     getInitialState: function() {
         return {
             lyricsAreFolded: this.props.device === 'mobile',
-            lyricsAreExpanded: false
+            lyricsAreExpanded: false,
+            pageScrollingDisabled: false
         };
     },
 
@@ -14,10 +15,10 @@ var Book = React.createClass({
         leftLyricsColumn = document.getElementsByClassName('lyrics-column-left')[0];
         rightLyricsColumn = document.getElementsByClassName('lyrics-column-right')[0];
 
+        // FIXME: These event listeners aren't needed if lyrics columns are doublespeaker...
         if (leftLyricsColumn && rightLyricsColumn) {
-            leftLyricsColumn.addEventListener('wheel', this._synchroniseLyricsColumns.bind(null, leftLyricsColumn, rightLyricsColumn));
-
-            rightLyricsColumn.addEventListener('wheel', this._synchroniseLyricsColumns.bind(null, rightLyricsColumn, leftLyricsColumn));
+            leftLyricsColumn.addEventListener('wheel', this._synchroniseLyricsColumns.bind(this, leftLyricsColumn, rightLyricsColumn), true);
+            rightLyricsColumn.addEventListener('wheel', this._synchroniseLyricsColumns.bind(this, rightLyricsColumn, leftLyricsColumn), true);
         }
     },
 
@@ -35,9 +36,8 @@ var Book = React.createClass({
 
     componentWillUnmount: function() {
         if (leftLyricsColumn && rightLyricsColumn) {
-            leftLyricsColumn.removeEventListener('wheel', this._synchroniseLyricsColumns.bind(null, leftLyricsColumn, rightLyricsColumn));
-
-            rightLyricsColumn.removeEventListener('wheel', this._synchroniseLyricsColumns.bind(null, rightLyricsColumn, leftLyricsColumn));
+            leftLyricsColumn.removeEventListener('wheel', this._synchroniseLyricsColumns.bind(this, leftLyricsColumn, rightLyricsColumn));
+            rightLyricsColumn.removeEventListener('wheel', this._synchroniseLyricsColumns.bind(this, rightLyricsColumn, leftLyricsColumn));
         }
     },
 
@@ -64,6 +64,7 @@ var Book = React.createClass({
                                     device={this.props.device}
                                     _toggleFold={this._toggleLyricsFold}
                                     _expandColumns={this._expandLyricsColumns}
+                                    _disablePageScroll={this._disablePageScroll}
                                     _handleAnnotationSelect={this._handleAnnotationSelect}
                                 />
                             );
@@ -73,7 +74,7 @@ var Book = React.createClass({
             );
 
         return (
-            <div className="book">
+            <div className={'book' + (this.state.pageScrollingDisabled ? ' no-scroll' : '')}>
                 {lyricsColumns}
                 {this.props.pageStartingIndices.map(function(startingIndex, index) {
                     var pageSongs;
@@ -95,6 +96,7 @@ var Book = React.createClass({
                             playedSongIndex={this.props.playedSongIndex}
                             playedSongTitle={this.props.playedSongTitle}
                             playedSongLyrics={this.props.playedSongLyrics}
+                            scrollingDisabled={this.state.pageScrollingDisabled}
                             _changePage={this.props._changePage}
                             _changeSong={this.props._changeSong}
                         />
@@ -105,6 +107,11 @@ var Book = React.createClass({
     },
 
     _toggleLyricsFold: function() {
+        // Page should not scroll when lyrics are unfolded on phone.
+        if (this.props.device === 'mobile') {
+            this._disablePageScroll(!this.state.pageScrollingDisabled);
+        }
+
         this.setState({
             lyricsAreFolded: !this.state.lyricsAreFolded
         });
@@ -118,6 +125,13 @@ var Book = React.createClass({
 
     _synchroniseLyricsColumns: function(sourceColumn, followerColumn) {
         followerColumn.scrollTop = sourceColumn.scrollTop;
+    },
+
+    _disablePageScroll: function(scrollingDisabled) {
+        console.log("disabling page scroll", scrollingDisabled);
+        this.setState({
+            pageScrollingDisabled: scrollingDisabled
+        });
     },
 
     _handleAnnotationSelect: function(annotationKey) {
