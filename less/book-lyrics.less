@@ -7,6 +7,14 @@
         div[class^="lyrics-song"] {
             @lyrics-header-size: 1.5em;
             @lyrics-verse-size: 0.85em;
+            @phone-folded-column-width: 50px;
+
+            // FIXME: Is this value needed? It isn't presently used other than
+            // to position folded right doublespeaker column from bottom.
+            @phone-folded-column-height: 60px;
+
+            @phone-column-height: calc(100vh ~"-" @phone-stuck-nav-height);
+            @phone-doublespeaker-column-height: calc(50vh ~"-" @phone-stuck-nav-height * 0.5);
 
             .expand-columns-button-mixin {
                 position: absolute;
@@ -15,19 +23,47 @@
 
             background-color: brown;
             position: absolute;
-            width: @lyrics-column-width;
+            width: @phone-lyrics-column-width;
+
+            @media @tablets {
+                width: 27%;
+            }
+
+            @media @desktops {
+                width: 27%;
+            }
 
             z-index: @lyrics-z-index;
-            // FIXME: vh is buggy in iOS7 and some IE
-            max-height: 100vh;
+
+            max-height: @phone-column-height;
+
+            @media @phones {
+                &.doublespeaker {
+                    max-height: @phone-doublespeaker-column-height;
+                }
+            }
+
             overflow: auto;
-            .transition(~"width 0.2s ease, left 0.1s ease, right 0.1s ease");
+
+            .transition(~"width 0.2s ease, top 0.1s ease, left 0.1s ease, right 0.1s ease");
 
             &.lyrics-column-left {
                 left: 0;
 
+                @media @tablets {
+                    left: 0;
+                }
+
+                @media @desktops {
+                    left: 0;
+                }
+
                 &.unshown {
-                    left: -@lyrics-column-width;
+                    left: -@phone-lyrics-column-width;
+                }
+
+                .toggle-fold-button {
+                    right: 10px;
                 }
 
                 .expand-columns-button {
@@ -39,8 +75,27 @@
             &.lyrics-column-right {
                 right: 0;
 
+
+                @media @tablets {
+                    right: 0;
+                }
+
+                @media @desktops {
+                    right: 0;
+                }
+
+                @media @phones {
+                    &.doublespeaker {
+                        top: @phone-doublespeaker-column-height;
+                    }
+                }
+
                 &.unshown {
-                    right: -@lyrics-column-width;
+                    right: -@phone-lyrics-column-width;
+                }
+
+                .toggle-fold-button {
+                    left: 10px;
                 }
 
                 .expand-columns-button {
@@ -52,7 +107,6 @@
             .toggle-fold-button {
                 position: absolute;
                 top: 10px;
-                right: 10px;
             }
 
             .lyrics-text {
@@ -65,18 +119,7 @@
 
                     &.foldable-area {
                         .transition(max-height 0.15s ease);
-
-                        &.folded {
-                            max-height: 0;
-                        }
-
-                        &.unfolded {
-                            /**
-                             * Not happy about using vh here,
-                             * but animation needs it.
-                             */
-                            max-height: 100vh;
-                        }
+                        max-height: 100vh;
                     }
 
                     [class^="stanza"] {
@@ -94,20 +137,27 @@
             &.expanded {
                 @expanded-lyrics-header-size: @lyrics-header-size * 1.5;
                 @expanded-lyrics-verse-size: @lyrics-verse-size * 1.5;
-                @expanded-lyrics-column-width: @lyrics-column-width * 1.8;
 
-                width: @expanded-lyrics-column-width;
+                @media @tablets {
+                    @expanded-lyrics-column-width: @lyrics-column-width * 1.8;
 
-                &.lyrics-column-left {
-                    &.unshown {
-                        left: -@expanded-lyrics-column-width;
+                    width: @expanded-lyrics-column-width;
+
+                    &.lyrics-column-left {
+                        &.unshown {
+                            left: -@expanded-lyrics-column-width;
+                        }
+                    }
+
+                    &.lyrics-column-right {
+                        &.unshown {
+                            right: -@expanded-lyrics-column-width;
+                        }
                     }
                 }
 
-                &.lyrics-column-right {
-                    &.unshown {
-                        right: -@expanded-lyrics-column-width;
-                    }
+                @media @desktops {
+
                 }
 
                 .lyrics-text {
@@ -126,6 +176,43 @@
                     }
                 }
             }
+
+            &.folded {
+                overflow-y: hidden;
+
+                @media @phones {
+
+                    &.lyrics-column-left {
+                        left: calc(@phone-folded-column-width ~"-" @phone-lyrics-column-width);
+                    }
+
+                    &.lyrics-column-right {
+                        right: calc(@phone-folded-column-width ~"-" @phone-lyrics-column-width);
+
+                        &.doublespeaker {
+                            top: calc(100vh ~"-" @phone-stuck-nav-height ~"-" @phone-folded-column-height);
+                        }
+                    }
+                }
+
+                .lyrics-text {
+
+                    .lyrics-verses {
+
+                        &.foldable-area {
+                            max-height: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.stuck {
+        top: @phone-stuck-nav-height;
+
+        @media @desktops {
+            top: 0;
         }
     }
 }

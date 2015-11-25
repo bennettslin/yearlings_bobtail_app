@@ -9,6 +9,7 @@
  *
  * make sure that these variables are consistent with App component
  */
+@phones: ~"all and (max-width:420px)";
 @tablets: ~"all and (min-width:421px) and (max-width:1200px)";
 @desktops: ~"all and (min-width:1201px)";
 
@@ -16,14 +17,15 @@
 
     /* universal widths */
     @wrapper-max-width: 1600px;
-    @lyrics-column-width: 27%;
 
-    /* mobile widths */
-    @mobile-title-bar-width: 100%;
-    @mobile-synopsis-bar-width: 100%;
-    @mobile-audio-player-width: 100%;
-    @mobile-annotation-legend-width: 100%;
-    @mobile-sticky-nav-wrapper-width: 100%;
+    /* phone widths */
+    @phone-title-bar-width: 100%;
+    @phone-synopsis-bar-width: 100%;
+    @phone-audio-player-width: 100%;
+    @phone-annotation-legend-width: 100%;
+    @phone-sticky-nav-wrapper-width: 100%;
+
+    @phone-lyrics-column-width: 100%;
 
     /* desktop widths */
     @title-bar-width: 67%;
@@ -31,29 +33,31 @@
     @audio-player-width: 60%;
     @annotation-legend-width: 100% - @audio-player-width;
     @sticky-nav-wrapper-width: 80%;
+    @lyrics-column-width: 27%;
 
 /* HEIGHTS */
 
     /* universal heights */
-    @now-playing-bar-height: 50px;
+    @now-playing-bar-height: 48px;
     @footer-height: 48px;
 
-    /* mobile heights */
-    @mobile-base-height: 192px;
-    @mobile-title-bar-height: @mobile-base-height;
-    @mobile-synopsis-bar-height: @mobile-base-height;
-    @mobile-audio-player-height: @mobile-base-height;
-    @mobile-annotation-legend-height: @mobile-base-height;
+    /* phone heights */
+    // @phone-base-height: 192px;
+    @phone-title-bar-height: 152px;
+    @phone-synopsis-bar-height: 180px;
+    @phone-audio-player-height: 100px;
+    @phone-annotation-legend-height: 160px;
 
-    @mobile-scrolling-nav-height: @mobile-title-bar-height + @mobile-synopsis-bar-height + @mobile-annotation-legend-height;
-    @mobile-sticky-nav-height: @now-playing-bar-height + @mobile-audio-player-height;
+    @phone-scrolling-nav-height: @phone-title-bar-height + @phone-synopsis-bar-height + @phone-annotation-legend-height;
+    @phone-sticky-nav-height: @now-playing-bar-height + @phone-audio-player-height;
+    @phone-stuck-nav-height: @now-playing-bar-height + @phone-audio-player-height;
 
     // FIXME: Might not need? Keeping for now, since it's used to get wrapper height;
     // Same deal for other devices
-    @mobile-top-nav-height: @mobile-scrolling-nav-height + @mobile-sticky-nav-height;
+    @phone-top-nav-height: @phone-scrolling-nav-height + @phone-sticky-nav-height;
 
-    @mobile-page-height: 2000px;
-    @mobile-wrapper-height: @mobile-top-nav-height + @mobile-page-height + @footer-height;
+    @phone-page-height: 2000px;
+    @phone-wrapper-height: @phone-top-nav-height + @phone-page-height + @footer-height;
 
     /* desktop heights */
     @base-height: 192px;
@@ -85,7 +89,6 @@
 
     &.stuck {
         position: fixed;
-        top: 0;
         left: inherit;
         max-width: @wrapper-max-width;
         z-index: @nav-z-index;

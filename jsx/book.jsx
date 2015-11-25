@@ -1,7 +1,7 @@
 var Book = React.createClass({
     getInitialState: function() {
         return {
-            lyricsAreFolded: false,
+            lyricsAreFolded: this.props.device === 'mobile',
             lyricsAreExpanded: false
         };
     },
@@ -21,6 +21,18 @@ var Book = React.createClass({
         }
     },
 
+    componentWillReceiveProps: function(nextProps) {
+        /**
+         * Lyrics columns are initially folded by default on mobile,
+         * but initially unfolded on larger screens.
+         */
+        if (this.props.device !== nextProps.device) {
+            this.setState({
+                lyricsAreFolded: nextProps.device === 'mobile'
+            });
+        }
+    },
+
     componentWillUnmount: function() {
         if (leftLyricsColumn && rightLyricsColumn) {
             leftLyricsColumn.removeEventListener('wheel', this._synchroniseLyricsColumns.bind(null, leftLyricsColumn, rightLyricsColumn));
@@ -35,18 +47,21 @@ var Book = React.createClass({
             lyricsColumns = (
                 <div className={'sticky-lyrics' + (this.props.lyricsColumnsAreStuck ? ' stuck' : '')}>
                     <div className="wrapper-width">
-                        {lyricsColumnsArray.map(function(key) {
-                            var isShown = lyricsColumnsKeys.indexOf(key) !== -1;
+                        {lyricsColumnsArray.map(function(key, index) {
+                            var isShown = lyricsColumnsKeys.indexOf(key) !== -1,
+                                isDoublespeaker = isShown && lyricsColumnsKeys.indexOf(lyricsColumnsArray[(index + 1) % 2]) !== -1;
                             return (
                                 <LyricsColumn
                                     key={key}
                                     isShown={isShown}
+                                    isDoublespeaker={isDoublespeaker}
                                     isFolded={this.state.lyricsAreFolded}
                                     isExpanded={this.state.lyricsAreExpanded}
                                     playedSongIndex={this.props.playedSongIndex}
                                     playedSongTitle={this.props.playedSongTitle}
                                     playedSongLyric={this.props.playedSongLyrics ? this.props.playedSongLyrics[key] : null}
                                     columnIndex={key}
+                                    device={this.props.device}
                                     _toggleFold={this._toggleLyricsFold}
                                     _expandColumns={this._expandLyricsColumns}
                                     _handleAnnotationSelect={this._handleAnnotationSelect}

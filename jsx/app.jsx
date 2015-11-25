@@ -85,6 +85,7 @@ var App = React.createClass({
                     playedSongIndex={playedSongIndex}
                     playedSongTitle={playedSongTitle}
                     playedSongLyrics={playedSongLyrics}
+                    device={this.state.device}
                     _changePage={this._changePage}
                     _changeSong={this._changeSong}
                 />
@@ -156,16 +157,17 @@ var App = React.createClass({
     _handleWindowScroll: function() {
         // TODO: make sure that these values are consistent with stylesheet
         var stuckTopNavHeight,
-            stuckLyricsColumnsHeight = window.pageYOffset > 384,
+            stuckLyricsColumnsHeight,
             topNavIsStuck,
             lyricsColumnsAreStuck;
 
         if (this.state.device === 'mobile') {
-            // @mobile-scrolling-nav-height
-            stuckTopNavHeight = 192 + 192 + 192;
+            /**
+             * both are equal to @mobile-scrolling-nav-height
+             */
+            stuckTopNavHeight = 152 + 180 + 160;
+            stuckLyricsColumnsHeight = stuckTopNavHeight;
 
-            // @mobile-top-nav-height:
-            stuckLyricsColumnsHeight = 192 + 192 + 192 + 192;
         } else {
             stuckTopNavHeight = 384 / 2;
             stuckLyricsColumnsHeight = 384;

@@ -2,7 +2,7 @@
     background-color: orange;
     position: relative;
     margin: 0 auto;
-    height: @mobile-top-nav-height;
+    height: @phone-top-nav-height;
     width: 100%;
 
     @media @tablets {
@@ -30,8 +30,8 @@
 
             &.title-bar {
                 background-color: yellow;
-                height: @mobile-title-bar-height;
-                width: @mobile-title-bar-width;
+                height: @phone-title-bar-height;
+                width: @phone-title-bar-width;
 
                 @media @tablets {
                     height: @title-bar-height;
@@ -76,8 +76,8 @@
 
             &.synopsis-bar {
                 background-color: turquoise;
-                height: @mobile-synopsis-bar-height;
-                width: @mobile-synopsis-bar-width;
+                height: @phone-synopsis-bar-height;
+                width: @phone-synopsis-bar-width;
 
                 @media @tablets {
                     height: @synopsis-bar-height;
@@ -147,8 +147,8 @@
 
             &.audio-player {
                 background-color: green;
-                height: @mobile-audio-player-height;
-                width: @mobile-audio-player-width;
+                height: @phone-audio-player-height;
+                width: @phone-audio-player-width;
 
                 @media @tablets {
                     height: @audio-player-height;
@@ -161,8 +161,12 @@
                 }
 
                 ul.playback-buttons {
+                    @playback-button-length: 50px;
+
                     li {
                         position: relative;
+                        height: @playback-button-length;
+                        width: @playback-button-length;
                         z-index: @audio-button-z-index;
                     }
                 }
@@ -171,8 +175,8 @@
             &.annotation-legend {
                 background-color: violet;
                 position: relative;
-                height: @mobile-annotation-legend-height;
-                width: @mobile-annotation-legend-width;
+                height: @phone-annotation-legend-height;
+                width: @phone-annotation-legend-width;
 
                 @media @tablets {
                     height: @annotation-legend-height;
@@ -268,7 +272,7 @@
         }
 
         &.scrolling-nav {
-            height: @mobile-scrolling-nav-height;
+            height: @phone-scrolling-nav-height;
             width: 100%;
             .transition(width 0.2s ease);
 
@@ -290,12 +294,12 @@
         &.sticky-nav {
             .sticky-mixin;
             background-color: transparent;
-            top: @mobile-scrolling-nav-height;
-            height: @mobile-sticky-nav-height;
+            top: @phone-scrolling-nav-height;
+            height: @phone-sticky-nav-height;
             .transition(height 0.2s ease);
 
             .wrapper-width {
-                width: @mobile-sticky-nav-wrapper-width;
+                width: @phone-sticky-nav-wrapper-width;
                 transition: width 0.2s ease, margin-left 0.2s ease, margin-right 0.2s ease;
             }
 
@@ -338,24 +342,28 @@
             }
 
             &.stuck {
+                top: 0;
+                height: @phone-stuck-nav-height;
 
-                .wrapper-width {
-                    &[data-nav-width^="left"] {
-                        width: 100% - @lyrics-column-width;
-                        margin-left: 0;
-                        margin-right: @lyrics-column-width;
-                    }
+                @media @desktops {
+                    .wrapper-width {
+                        &[data-nav-width^="left"] {
+                            width: 100% - @lyrics-column-width;
+                            margin-left: 0;
+                            margin-right: @lyrics-column-width;
+                        }
 
-                    &[data-nav-width^="right"] {
-                        width: 100% - @lyrics-column-width;
-                        margin-left: @lyrics-column-width;
-                        margin-right: 0;
-                    }
+                        &[data-nav-width^="right"] {
+                            width: 100% - @lyrics-column-width;
+                            margin-left: @lyrics-column-width;
+                            margin-right: 0;
+                        }
 
-                    &[data-nav-width^="centre"] {
-                        width: 100% - (@lyrics-column-width * 2);
-                        margin-left: @lyrics-column-width;
-                        margin-right: @lyrics-column-width;
+                        &[data-nav-width^="centre"] {
+                            width: 100% - (@lyrics-column-width * 2);
+                            margin-left: @lyrics-column-width;
+                            margin-right: @lyrics-column-width;
+                        }
                     }
                 }
 

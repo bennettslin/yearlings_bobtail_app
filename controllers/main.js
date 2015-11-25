@@ -6,7 +6,7 @@ var express = require('express');
 // var React = require('react');
 // var ReactDOMServer = require('react-dom/server');
 
-var album = require('../test-album.js');
+var album = require('../album.js');
 // var components = require('../public/js/components.js');
 
 // var SoundPlayerComponents = require('react-soundplayer/components');

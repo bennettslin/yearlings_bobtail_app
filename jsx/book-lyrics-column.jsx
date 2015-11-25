@@ -26,35 +26,39 @@ var LyricsColumn = React.createClass({
         var playedSongIndex = this.props.playedSongIndex,
             columnIndex = this.props.columnIndex,
             shownClassName = this.props.isShown ? '' : ' unshown',
+            doublespeakerClassName = this.props.isDoublespeaker ? ' doublespeaker' : '',
             expandedClassName = this.props.isExpanded ? ' expanded' : '',
+            foldedClassName = this.props.isFolded ? ' folded' : '',
             columnClassName = 'lyrics-song-' + playedSongIndex +
                 ' lyrics-column-' + columnIndex +
-                shownClassName + expandedClassName,
+                shownClassName + doublespeakerClassName +
+                expandedClassName + foldedClassName,
             // columnKeyName = 'lyrics-column-' + playedSongIndex + '-' + columnIndex,
+            expandColumnsButton,
             toggleFoldButton,
             lyricsTextArea;
 
             if (this.props.isShown) {
-                var expandColumnsButton = (
-                        <button className="expand-columns-button"
-                            onClick={this.props._expandColumns}
-                        >
-                            expand
-                        </button>
-                    );
+                expandColumnsButton = (
+                    <button className="expand-columns-button"
+                        onClick={this.props._expandColumns}
+                    >
+                        {this.props.isExpanded ? 'collapse' : 'expand'}
+                    </button>
+                );
 
                 toggleFoldButton = (
                     <button className="toggle-fold-button"
                         onClick={this.props._toggleFold}
                     >
-                        fold
+                        {this.props.isFolded ? 'unfold' : 'fold'}
                     </button>
                 );
 
                 lyricsTextArea = (
                     <div className={'lyrics-text'}>
                         <h1 className="lyrics-header">{playedSongIndex + 1}. {this.props.playedSongTitle}</h1>
-                        <div className={'lyrics-verses foldable-area ' + (this.props.isFolded ? 'folded' : 'unfolded')}>
+                        <div className={'lyrics-verses foldable-area'}>
                             {this.props.playedSongLyric.map(function(stanza, stanzaIndex) {
                                 return (
                                     <div className={'stanza-' + stanzaIndex} key={stanzaIndex}>
@@ -69,7 +73,6 @@ var LyricsColumn = React.createClass({
                                 )
                             }.bind(this))}
                         </div>
-                        {expandColumnsButton}
                     </div>
                 );
             }
@@ -78,6 +81,7 @@ var LyricsColumn = React.createClass({
             <div
                 className={columnClassName}
             >
+                {expandColumnsButton}
                 {toggleFoldButton}
                 {lyricsTextArea}
             </div>
