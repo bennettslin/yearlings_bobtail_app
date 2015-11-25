@@ -126,6 +126,12 @@
                         &:not(:last-child) {
                             margin-bottom: @lyrics-verse-size;
                         }
+
+                        [class^="verse"] {
+                            @hanging-indent-width: 1.5em;
+                            padding-left: @hanging-indent-width;
+                            text-indent:-@hanging-indent-width;
+                        }
                     }
                 }
             }
