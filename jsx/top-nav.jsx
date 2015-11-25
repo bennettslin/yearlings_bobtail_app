@@ -15,7 +15,7 @@ var TopNav = React.createClass({
                     device={this.props.device}
                 />
             ),
-            stickyTitleBar = this.props.device !== 'mobile' ? (
+            stickyTitleBar = this.props.device !== 'phone' ? (
                 <TitleBar
                     device={this.props.device}
                     isShown={this.props.isStuck}
@@ -55,7 +55,7 @@ var TopNav = React.createClass({
             stickySynopsisBar = _getSynopsisBar('sticky-synopsis', this.props.isStuck, 'none'),
 
             // TODO: Make this more DRY.
-            scrollingAnnotationLegend = this.props.device === 'mobile' ? (
+            scrollingAnnotationLegend = this.props.device === 'phone' ? (
                 <AnnotationLegend
                     ref="scrolling-legend"
                     isShown={!this.props.isStuck}
@@ -68,7 +68,7 @@ var TopNav = React.createClass({
                 <AnnotationLegend
                     ref="sticky-legend"
                     orientation={this.props.isStuck ? 'right-align' : null}
-                    isShown={this.props.device === 'mobile' ? this.props.isStuck : true}
+                    isShown={this.props.device === 'phone' ? this.props.isStuck : true}
                     isStuck={this.props.isStuck}
                     popupsAlwaysShown={this.props.isStuck ? 'none' : 'all'}
                     legendSymbols={this.props.legendSymbols}

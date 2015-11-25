@@ -7,7 +7,7 @@ var TitleBar = React.createClass({
     },
 
     render: function() {
-        var bandLogo = this.props.device !== 'mobile' ? (
+        var bandLogo = this.props.device !== 'phone' ? (
                 <div className="band-logo">
                     Band logo
                 </div>

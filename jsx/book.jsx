@@ -1,7 +1,7 @@
 var Book = React.createClass({
     getInitialState: function() {
         return {
-            lyricsAreFolded: this.props.device === 'mobile',
+            lyricsAreFolded: this.props.device === 'phone',
             lyricsAreExpanded: false,
             pageScrollingDisabled: false
         };
@@ -24,12 +24,12 @@ var Book = React.createClass({
 
     componentWillReceiveProps: function(nextProps) {
         /**
-         * Lyrics columns are initially folded by default on mobile,
+         * Lyrics columns are initially folded by default on phone,
          * but initially unfolded on larger screens.
          */
         if (this.props.device !== nextProps.device) {
             this.setState({
-                lyricsAreFolded: nextProps.device === 'mobile'
+                lyricsAreFolded: nextProps.device === 'phone'
             });
         }
     },
@@ -108,7 +108,7 @@ var Book = React.createClass({
 
     _toggleLyricsFold: function() {
         // Page should not scroll when lyrics are unfolded on phone.
-        if (this.props.device === 'mobile') {
+        if (this.props.device === 'phone') {
             this._disablePageScroll(!this.state.pageScrollingDisabled);
         }
 

@@ -120,7 +120,7 @@ var App = React.createClass({
     _getDeviceFromWidth: function(width) {
         // TODO: make sure that these values are consistent with stylesheet
         if (width <= 420) {
-            return 'mobile';
+            return 'phone';
         } else if (width <= 1200) {
             return 'tablet';
         } else {
@@ -161,9 +161,9 @@ var App = React.createClass({
             topNavIsStuck,
             lyricsColumnsAreStuck;
 
-        if (this.state.device === 'mobile') {
+        if (this.state.device === 'phone') {
             /**
-             * both are equal to @mobile-scrolling-nav-height
+             * both are equal to @phone-scrolling-nav-height
              */
             stuckTopNavHeight = 152 + 180 + 160;
             stuckLyricsColumnsHeight = stuckTopNavHeight;
