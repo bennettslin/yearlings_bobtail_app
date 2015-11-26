@@ -13,9 +13,9 @@ module.exports = function(grunt) {
             }
         },
         concat: {
-            // begin with variables and mixins
+            // begin with global files
             css: {
-                src: ['less/variables/*.less', 'less/*.less'],
+                src: ['less/global/*.less', 'less/*.less'],
                 dest: 'src/style.less'
             },
             // end with DOM-related scripts
