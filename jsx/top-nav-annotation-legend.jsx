@@ -1,5 +1,3 @@
-// FIXME: Get this from config object
-
 var AnnotationLegend = React.createClass({
     mixins: [PopupMixin],
 
@@ -33,24 +31,25 @@ var AnnotationLegend = React.createClass({
                 <ul className={symbolsClassName}>
                     {this.props.legendSymbols.map(function(symbol, index) {
                         var content = (
-                                <ul>
-                                    <li className="icon"></li>
-                                    <li className="description">{symbol.description}</li>
-                                </ul>
+                                <div className="symbol">
+                                    <div className="icon"></div>
+                                    <div className="description">{symbol.description}</div>
+                                </div>
                             );
 
                         return this._getPopup('symbol', index, content);
                     }.bind(this))}
                 </ul>
             ),
-            className = 'annotation-legend' +
+            className = 'nav-component annotation-legend' +
+                (this.props.isStuck ? ' stuck' : '') +
                 (this.props.isShown ? '' : ' unshown') +
                 (this.props.popupsAlwaysShown === 'all' ? '' : ' pointer');
 
         return (
-            <li className={className}>
+            <div className={className}>
                 {symbols}
-            </li>
+            </div>
         );
     }
 });

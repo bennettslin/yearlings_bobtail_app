@@ -46,14 +46,14 @@ var AudioPlayer = React.createClass({
             );
 
         return (
-            <li className="audio-player">
+            <div className="nav-component audio-player">
                 <ul className="playback-buttons">
                     {stopButton}
                     {previousButton}
                     {playButton}
                     {nextButton}
                 </ul>
-            </li>
+            </div>
         );
     },
 

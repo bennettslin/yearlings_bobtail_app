@@ -33,14 +33,14 @@ var SynopsisBar = React.createClass({
                     }.bind(this))}
                 </ul>
             ),
-            className = 'synopsis-bar' + (this.props.isShown ? '' : ' unshown');
+            className = 'nav-component synopsis-bar' + (this.props.isShown ? '' : ' unshown');
 
         return (
-            <li className={className}>
+            <div className={className}>
                 <div className="avatar">
                 </div>
                 {speechBubbles}
-            </li>
+            </div>
         );
     },
 

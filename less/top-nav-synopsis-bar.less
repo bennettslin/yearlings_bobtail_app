@@ -1,0 +1,88 @@
+.scrolling-nav {
+    .synopsis-bar {
+        height: @phone-synopsis-bar-height;
+        width: @phone-synopsis-bar-width;
+    }
+}
+
+.sticky-nav {
+    .synopsis-bar {
+        height: @phone-stuck-component-height;
+    }
+
+    &.stuck {
+        .synopsis-bar {
+            width: 25%;
+        }
+    }
+}
+
+.synopsis-bar {
+    background-color: turquoise;
+
+    @media @tablets {
+        height: @synopsis-bar-height;
+        width: @synopsis-bar-width;
+    }
+
+    @media @desktops {
+        height: @synopsis-bar-height;
+        width: @synopsis-bar-width;
+    }
+
+    &.unshown {
+        width: 0;
+        // height: 0;
+
+        ul.speech-bubbles {
+            li[class^="bubble"] {
+                width: 0;
+            }
+        }
+    }
+
+    .avatar {
+        background-color: gray;
+        height: 100%;
+        width: 30%;
+        float: left;
+    }
+
+    ul.speech-bubbles {
+        @speech-bubble-height: 25px;
+        @speech-bubble-expanded-width: 250px;
+
+        position: relative;
+        float: left;
+        height: 100%;
+        width: 70%;
+
+        li[class^="bubble"] {
+            background-color: white;
+            display: block;
+            position: absolute;
+            left: 0;
+            height: @speech-bubble-height;
+            cursor: pointer;
+            border-radius: 3px;
+            overflow: hidden;
+
+            &:first-child {
+                top: 0;
+            }
+
+            &:last-child {
+                bottom: 0;
+            }
+
+            &.expanded {
+                height: 100% - @speech-bubble-height;
+                width: @speech-bubble-expanded-width;
+
+                &.engraved {
+                    border: 2px solid green;
+                }
+            }
+        }
+    }
+}

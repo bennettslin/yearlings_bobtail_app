@@ -21,10 +21,10 @@ var TitleBar = React.createClass({
             ) : null;
 
         return (
-            <li className={'title-bar' + (this.props.isShown ? '' : ' unshown')}>
+            <div className={'nav-component title-bar' + (this.props.isShown ? '' : ' unshown')}>
                 {bandLogo}
                 {coverTitle}
-            </li>
+            </div>
         );
     }
 });

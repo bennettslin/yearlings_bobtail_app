@@ -1,0 +1,55 @@
+.sticky-nav {
+    .title-bar {
+        .band-logo {
+            width: 100%;
+        }
+    }
+}
+
+.title-bar {
+    background-color: yellow;
+    height: @phone-title-bar-height;
+    width: @phone-title-bar-width;
+
+    @media @tablets {
+        height: @title-bar-height;
+        width: @title-bar-width;
+    }
+
+    @media @desktops {
+        height: @title-bar-height;
+        width: @title-bar-width;
+    }
+
+    &.unshown {
+        width: 0;
+    }
+
+    .band-logo {
+        background-color: tomato;
+        float: left;
+        width: 25%;
+        height: 100%;
+    }
+
+    .cover-title {
+        float: left;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    @media @tablets {
+        background-color: #8f0;
+        .cover-title {
+            width: 70%;
+        }
+    }
+
+    @media @desktops {
+        background-color: #f80;
+        .cover-title {
+            width: 70%;
+        }
+    }
+}

@@ -58,8 +58,8 @@ var TopNav = React.createClass({
             scrollingAnnotationLegend = this.props.device === 'phone' ? (
                 <AnnotationLegend
                     ref="scrolling-legend"
-                    isShown={!this.props.isStuck}
-                    isStuck={this.props.isStuck}
+                    isShown={this.props.device === 'phone' ? true : !this.props.isStuck}
+                    isStuck={false}
                     popupsAlwaysShown={'all'}
                     legendSymbols={this.props.legendSymbols}
                 />
@@ -67,10 +67,10 @@ var TopNav = React.createClass({
             stickyAnnotationLegend = (
                 <AnnotationLegend
                     ref="sticky-legend"
-                    orientation={this.props.isStuck ? 'right-align' : null}
+                    orientation={this.props.isStuck || this.props.device === 'phone' ? 'right-align' : null}
                     isShown={this.props.device === 'phone' ? this.props.isStuck : true}
-                    isStuck={this.props.isStuck}
-                    popupsAlwaysShown={this.props.isStuck ? 'none' : 'all'}
+                    isStuck={this.props.isStuck || this.props.device === 'phone'}
+                    popupsAlwaysShown={this.props.isStuck || this.props.device === 'phone' ? 'none' : 'all'}
                     legendSymbols={this.props.legendSymbols}
                     _enableHoverability={this.props.isStuck ? this._enableHoverability.bind(null, 'sticky-legend') : null}
                     _resetAllOtherPopups={this.props.isStuck ? this._resetAllOtherPopups.bind(null, 'sticky-legend') : null}
@@ -79,12 +79,12 @@ var TopNav = React.createClass({
 
         return (
             <div className="top-nav">
-                <ul className={'scrolling-nav' + (this.props.isStuck ? ' unshown' : '')}>
+                <div className={'scrolling-nav' + (this.props.isStuck ? ' unshown' : '')}>
                     {scrollingTitleBar}
                     {scrollingSynopsisBar}
                     {scrollingAnnotationLegend}
-                </ul>
-                <ul className={'sticky-nav' + (this.props.isStuck ? ' stuck' : '')}>
+                </div>
+                <div className={'sticky-nav' + (this.props.isStuck ? ' stuck' : '')}>
                     <div className="wrapper-width" data-nav-width={this.props.widthName}>
                         {nowPlayingBar}
                         {stickyTitleBar}
@@ -92,7 +92,7 @@ var TopNav = React.createClass({
                         {audioPlayer}
                         {stickyAnnotationLegend}
                     </div>
-                </ul>
+                </div>
             </div>
         );
     },
