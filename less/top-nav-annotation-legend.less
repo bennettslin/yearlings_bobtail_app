@@ -22,7 +22,7 @@
 @stuck-symbols-margin-width: 10px;
 @stuck-symbol-icon-width: @stuck-symbol-icon-height;
 @stuck-symbol-description-width: 240px;
-@stuck-symbol-margin-width: 2px;
+@stuck-symbol-margin-width: 5px;
 @stuck-symbol-width: @stuck-symbol-icon-width + @stuck-symbol-margin-width + @stuck-symbol-description-width;
 
 .scrolling-nav {
@@ -161,6 +161,7 @@
                 &.expanded {
                     width: @stuck-symbol-width;
                     right: @stuck-symbol-width - @stuck-symbol-icon-width;
+                    overflow: visible;
                 }
 
                 .symbol {
@@ -175,6 +176,7 @@
                         left: @stuck-symbol-icon-width + @stuck-symbol-margin-width;
                         background-color: rgba(20, 20, 200, 0.4);
                         width: @stuck-symbol-description-width;
+                        height: @symbol-icon-height;
                     }
                 }
             }
