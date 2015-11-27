@@ -4,6 +4,7 @@
 @symbols-margin-height: 5px;
 @symbols-height: @phone-annotation-legend-height - (@symbols-margin-height * 2);
 @symbol-icon-height: @symbols-height * 0.25;
+@symbol-description-height: @symbol-icon-height;
 @symbol-margin-height: (@symbols-height - (@symbol-icon-height * 3)) * 0.25;
 
 /* default widths */
@@ -154,12 +155,27 @@
                     margin-top: @stuck-symbols-margin-height + @stuck-symbol-margin-height;
                 }
 
+                &:nth-child(2) {
+                    .symbol .description {
+                        top: (@stuck-symbol-icon-height - @symbol-description-height) * 0.5;
+                    }
+                }
+
                 &:last-child {
                     margin-bottom: @stuck-symbols-margin-height + @stuck-symbol-margin-height;
+
+                    .symbol .description {
+                        top: @stuck-symbol-icon-height - @symbol-description-height;
+                    }
                 }
 
                 &.expanded {
                     width: @stuck-symbol-width;
+
+                    /**
+                     * This works to ensure that symbol is aligned properly
+                     * against right when expanded. I just don't know WHY...
+                     */
                     right: @stuck-symbol-width - @stuck-symbol-icon-width;
                     overflow: visible;
                 }
@@ -176,7 +192,7 @@
                         left: @stuck-symbol-icon-width + @stuck-symbol-margin-width;
                         background-color: rgba(20, 20, 200, 0.4);
                         width: @stuck-symbol-description-width;
-                        height: @symbol-icon-height;
+                        height: @symbol-description-height;
                     }
                 }
             }
