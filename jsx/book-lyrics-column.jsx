@@ -129,7 +129,7 @@ var LyricsColumn = React.createClass({
                 return (
                     <a
                         key={nestedIndex + '-' + index}
-                        onClick={this.props._handleAnnotationSelect.bind(null, '#' + verse.annotationKey)}
+                        onClick={this.props._handleAnnotationSelect.bind(null, verse.annotationKey)}
                     >
                         {this._getMappedVerseElement(verse.anchor, index, nestedIndex)}
                     </a>

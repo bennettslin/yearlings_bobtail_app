@@ -9,39 +9,37 @@ var AudioPlayer = React.createClass({
 
         var stopButton = (
                 <li>
-                    <button
+                    <div className={'button' + (this.props.playedSongIndex === -1 ? ' disabled' : '')}
                         onClick={this._changePlayingStatus.bind(null, 'home')}
-                        disabled={this.props.playedSongIndex === -1}
                     >
                         Home
-                    </button>
+                    </div>
                 </li>
             ),
             previousButton = (
                 <li>
-                    <button
+                    <div className={'button' + (this.props.playedSongIndex <= 0 ? ' disabled' : '')}
                         onClick={this.props._changeSong.bind(null, this.props.playedSongIndex - 1)}
-                        disabled={this.props.playedSongIndex <= 0}
                     >
                         Previous
-                    </button>
+                    </div>
                 </li>
             ),
             playButton = (
                 <li>
-                    <button onClick={this._changePlayingStatus.bind(null, 'play')}>
+                    <div className={'button'}
+                        onClick={this._changePlayingStatus.bind(null, 'play')}>
                         {this.state.playingStatus === 'playing' ? 'Pause' : 'Play'}
-                    </button>
+                    </div>
                 </li>
             ),
             nextButton = (
                 <li>
-                    <button
+                    <div className={'button' + (this.props.playedSongIndex >= this.props.songsLength - 1 ? ' disabled' : '')}
                         onClick={this.props._changeSong.bind(null, this.props.playedSongIndex + 1)}
-                        disabled={this.props.playedSongIndex >= this.props.songsLength - 1}
                     >
                         Next
-                    </button>
+                    </div>
                 </li>
             );
 

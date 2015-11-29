@@ -29,3 +29,14 @@ ul {
         display: inline-block;
     }
 }
+
+.button {
+
+    &.disabled {
+        opacity: 0.5;
+    }
+
+    &:not(.disabled) {
+        cursor: pointer;
+    }
+}

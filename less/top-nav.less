@@ -14,8 +14,10 @@
     }
 
     .scrolling-nav {
+        margin: 0 auto;
         height: @phone-scrolling-nav-height;
         width: 100%;
+        text-align: center;
         .transition(width 1s ease);
 
         @media @tablets {
@@ -30,6 +32,10 @@
 
         &.unshown {
             width: 0%;
+        }
+
+        .nav-component {
+            overflow: hidden;
         }
     }
 
@@ -160,7 +166,7 @@
         display: inline-block;
         vertical-align: top;
         box-sizing: border-box;
-        .transition(~"width 1s ease, height 1s ease");
+        .transition(~"width 1s ease");
 
         .popup {
             position: relative;

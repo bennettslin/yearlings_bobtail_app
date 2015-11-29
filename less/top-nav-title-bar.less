@@ -28,7 +28,7 @@
     .band-logo {
         background-color: tomato;
         float: left;
-        width: 25%;
+        width: 0%;
         height: 100%;
     }
 
@@ -39,8 +39,19 @@
         text-align: center;
     }
 
-    @media @tablets {
+    @media @minis {
         background-color: #8f0;
+        .band-logo {
+            width: 30%;
+        }
+
+        .cover-title {
+            width: 70%;
+        }
+    }
+
+    @media @tablets {
+        background-color: #0f8;
         .cover-title {
             width: 70%;
         }

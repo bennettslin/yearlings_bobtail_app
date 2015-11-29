@@ -46,6 +46,8 @@ var App = React.createClass({
         var playedSongIndex = this.state.playedSongIndex,
             playedSongTitle = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].title : null,
             playedSongSpeechBubbles = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].speechBubbles : this.props.speechBubbles,
+
+            // FIXME: Let book component get this from its songs prop
             playedSongLyrics = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].lyrics : null,
             playedSongPageIndex = -1,
             footer;
@@ -121,6 +123,8 @@ var App = React.createClass({
         // TODO: make sure that these values are consistent with stylesheet
         if (width <= 420) {
             return 'phone';
+        } else if (width <= 700) {
+            return 'mini';
         } else if (width <= 1200) {
             return 'tablet';
         } else {
@@ -165,7 +169,7 @@ var App = React.createClass({
             /**
              * both are equal to @phone-scrolling-nav-height
              */
-            stuckTopNavHeight = 152 + 180 + 160;
+            stuckTopNavHeight = 152 + 144 + 160;
             stuckLyricsColumnsHeight = stuckTopNavHeight;
 
         } else {
