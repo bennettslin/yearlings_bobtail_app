@@ -13,7 +13,7 @@ exports.song = {
         right: [
             [
                 {
-                    time: 0,
+                    time: 17,
                     verse: [
                         {
                             anchor: 'Didi',
@@ -23,127 +23,127 @@ exports.song = {
                     ]
                 },
                 {
-                    time: 0,
+                    time: 22,
                     verse: 'wondering to himself, who would tie his shoes?'
                 },
                 {
-                    time: 0,
+                    time: 28,
                     verse: 'And he left alone because he'
                 },
                 {
-                    time: 0,
+                    time: 34,
                     verse: 'had to finish up all his orange juice.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 40,
                     verse: 'Didi, you\'ve been following, I didn\'t want you here.'
                 },
                 {
-                    time: 0,
+                    time: 46,
                     verse: 'Didi, couldn\'t you find another sister to be near?'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 52,
                     verse: 'Cause I get sick of hearing, "Zeizei, let Didi play with you…"'
                 },
                 {
-                    time: 0,
+                    time: 57,
                     verse: 'And I tire of saying, "My Didi wants to come too."'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 63,
                     verse: 'Didi made an "accident" in class,'
                 },
                 {
-                    time: 0,
+                    time: 68,
                     verse: 'so the nurse sent him home, snickered the recess crowd.'
                 },
                 {
-                    time: 0,
+                    time: 74,
                     verse: 'They saw him crying beside a Safeway paper bag,'
                 },
                 {
-                    time: 0,
+                    time: 80,
                     verse: 'decked in overalls from the lost and found.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 85,
                     verse: 'Didi, you\'ve been in the bath all this time.'
                 },
                 {
-                    time: 0,
+                    time: 91,
                     verse: 'Didi, come out, you can\'t soak there all night.'
                 },
                 {
-                    time: 0,
+                    time: 97,
                     verse: '<em>Don\'t little raisin fingers need to dry?</em>'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 100,
                     verse: 'Didi, someday you will be a hero'
                 },
                 {
-                    time: 0,
+                    time: 103,
                     verse: 'in the movies, fighting those'
                 },
                 {
-                    time: 0,
+                    time: 106,
                     verse: 'crooked thieves with your sheriff\'s badge and gun…'
                 },
                 {
-                    time: 0,
+                    time: 112,
                     verse: 'Didi, one day you will be a picture'
                 },
                 {
-                    time: 0,
+                    time: 115,
                     verse: 'taped to all the girls\' mirrors.'
                 },
                 {
-                    time: 0,
+                    time: 117,
                     verse: 'They\'ll say, who now could have ever figured'
                 },
                 {
-                    time: 0,
+                    time: 120,
                     verse: 'you\'d finally become someone?'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 129,
                     verse: 'Didi dear, I\'m sorry that I yelled at you that way.'
                 },
                 {
-                    time: 0,
+                    time: 135,
                     verse: 'Didi dear, I know today just wasn\'t your day.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 141,
                     verse: 'And now I think all I want is my Didi well by tomorrow,'
                 },
                 {
-                    time: 0,
+                    time: 146,
                     verse: 'and there are things I hope my Didi will never know.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 152,
                     verse: 'Yes, and now I think all I want is my Didi well by tomorrow,'
                 },
                 {
-                    time: 0,
+                    time: 158,
                     verse: 'and there are things I hope Didi will never have to know.'
                 }
             ]
