@@ -16,5 +16,24 @@ visuals = [
                 description: 'Bennett is at home in bathtub. Sister is kneeling and leaning over the bathtub wall, comforting him. Grandparents are at kitchen table, eating.'
             }
         ]
+    },
+
+    {
+        title: 'Ash Wednesday',
+        backgroundVisual: '',
+        foregroundVisuals: [
+            {
+                time: 0,
+                description: ''
+            },
+            {
+                time: 0,
+                description: ''
+            },
+            {
+                time: 0,
+                description: ''
+            }
+        ]
     }
 ];
