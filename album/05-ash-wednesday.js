@@ -2,7 +2,7 @@ exports.song = {
     title: 'Ash Wednesday',
     speechBubbles: {
         /**
-         In college, I dated a nice Catholic girl named Catherine, who didn't think much of my intelligence and broke up with me right before Ash Wednesday, the first day of Lent. So I decided to ash my own forehead and bump into her, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen.
+         In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday, the first day of Lent. So I decided to ash my own forehead and bump into her, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did begin to read steadily, and I probably have Catherine to thank for that.
          */
         narrative: 'Ash Wednesday narrative description',
         personal: 'personal 1',
@@ -108,13 +108,15 @@ exports.song = {
                 {
                     time: 76,
                     /**
-                     "Her shelter," but also, Shelta is the secret language of the Irish Travellers, an itinerant community the vast majority of whom are Roman Catholic.
+                     "Her shelter," but also, Shelta is the secret language of the Irish Travellers, an itinerant community that is predominantly Roman Catholic.
                      */
                     verse: 'And as I pace, stranded here outside her Shelta,'
                 },
                 {
                     time: 80,
-
+                    /**
+                     Catherine got me into Leonard Cohen, whose novel Beautiful Losers is mirrored in
+                     */
                     verse: 'in famous raincoat unknown to roam,'
                 },
                 {
