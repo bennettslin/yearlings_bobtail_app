@@ -85,10 +85,16 @@ exports.song = {
                 },
                 {
                     time: 50,
+                    /**
+                     Or else, "My, Walt Whitman." I imagine Catherine extending her compliment while literally putting down the James Joyce novel that she's reading.
+                     */
                     verse: '"My, what wit, man," putting down her Joyce,'
                 },
                 {
                     time: 54,
+                    /**
+                     But of course, she's also figuratively putting down
+                     */
                     verse: 'with "Joyce" oblivious to the trump she just played.'
                 },
                 {
@@ -108,23 +114,29 @@ exports.song = {
                 {
                     time: 76,
                     /**
-                     "Her shelter," but also, Shelta is the secret language of the Irish Travellers, an itinerant community that is predominantly Roman Catholic.
+                     "Her shelter," but also Shelta, which is the secret language of the Irish Travellers, an itinerant community that is predominantly Roman Catholic.
                      */
                     verse: 'And as I pace, stranded here outside her Shelta,'
                 },
                 {
                     time: 80,
                     /**
-                     Catherine got me into Leonard Cohen, whose novel Beautiful Losers is mirrored in
+                     Catherine and I would lie in bed listening to Leonard Cohen, so his Beautiful Losers was the first book I picked up after deciding to win her back through reading. Its theme of betrayal by a friend is echoed in his song "Famous Blue Raincoat." Raincoats are also a slang term for condoms, which are famously "unknown to Rome."
                      */
                     verse: 'in famous raincoat unknown to roam,'
                 },
                 {
                     time: 84,
+                    /**
+                     Dorothy Parker, whom Catherine admired, made a famous quip about girls who wear glasses. Kateri Tekakwitha, the Catholic Church's first Native American saint, figures prominently in Beautiful Losers, while Cohen speaks of "going clear" in "Famous Blue Raincoat." I always assumed that "going clear" was a reference to the legend that Tekakwitha's smallpox scars instantly vanished upon her death. In Catherine's case, I'm saying she went clear of me...
+                     */
                     verse: 'my girl in glasses went clear—my Tekakwitha—'
                 },
                 {
                     time: 8,
+                    /**
+                     Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.
+                     */
                     verse: 'for I lack the wit to spare a safe Algonquin abode.'
                 }
             ],
