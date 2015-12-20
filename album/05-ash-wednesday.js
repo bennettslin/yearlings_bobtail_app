@@ -2,7 +2,7 @@ exports.song = {
     title: 'Ash Wednesday',
     speechBubbles: {
         /**
-         In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday, the first day of Lent. So I decided to ash my own forehead and bump into her, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did begin to read steadily, and I probably have Catherine to thank for that.
+         In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday, the first day of Lent. So I decided to ash my own forehead and bump into her, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a steady reader, and I probably have Catherine to thank for that.
          */
         narrative: 'Ash Wednesday narrative description',
         personal: 'personal 1',
@@ -17,21 +17,21 @@ exports.song = {
                 {
                     time: 0,
                     /**
-                     Walt Whitman's O Captain! My Captain! a reference to my dying chances with Catherine.
+                     Walt Whitman wrote his elegy O Captain! My Captain! after hearing of Abraham Lincoln's assassination. I don't remember why I chose to reference it. I was probably saying "Oh Catherine" to myself a lot right after the breakup.
                      */
                     verse: 'O Catherine! My Catherine! our futile trip is done'
                 },
                 {
                     time: 6,
                     /**
-                     Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I said. In hindsight, that was probably the beginning of the end.
+                     Glancing around my room after one of our first dates, Catherine remarked that she didn't see any books. "I don't read," I said. In hindsight, that was probably the beginning of the end.
                      */
                     verse: 'where it commenced: in my bookless room,'
                 },
                 {
                     time: 10,
                     /**
-                     A reference to the popular "Who's buried in Grant's tomb" trick question, of course, but also to the masterpiece novel of James Joyce, whom she greatly admired.
+                     A reference to the popular "Who's buried in Grant's tomb" schoolyard question, of course, but also to the epic masterpiece written by James Joyce, whom Catherine admired.
                      */
                     verse: 'Ulysses\' tomb, surely buried she\'d be!'
                 },
@@ -45,10 +45,7 @@ exports.song = {
                 {
                     time: 18,
                     /**
-                     Jesus also rose on the third day.
-                     */
-                    /**
-                     Also, "hers the sole ascent."
+                     Jesus then rose on the third day. Also, "hers the sole ascent."
                      */
                     verse: 'the last day she rose up and left, hers the sole assent…'
                 },
@@ -67,6 +64,9 @@ exports.song = {
                 },
                 {
                     time: 34,
+                    /**
+                     Catherine didn't think much of my songwriting skills at the time. In all honesty, at that time I wasn't very good.
+                     */
                     verse: 'I purge, with a dirge she\'d deride,'
                 },
                 {
@@ -75,6 +75,9 @@ exports.song = {
                 },
                 {
                     time: 42,
+                    /**
+                     (personal observation here)
+                     */
                     verse: 'a soul to share in her eternal life.'
                 }
             ],
@@ -86,14 +89,14 @@ exports.song = {
                 {
                     time: 50,
                     /**
-                     Or else, "My, Walt Whitman." I imagine Catherine extending her compliment while literally putting down the James Joyce novel that she's reading.
+                     Or else, "My, Walt Whitman." Catherine literally puts down the James Joyce novel that she's reading to compliment my attempt at writing a clever lyric.
                      */
                     verse: '"My, what wit, man," putting down her Joyce,'
                 },
                 {
                     time: 54,
                     /**
-                     But of course, she's also figuratively putting down
+                     But of course her compliment is insincere, since referencing a poet typically studied by middle schoolers is hardly a signifier of cultured taste. And so she's also figuratively putting me down, for my budding hope to be the James Joyce of lyricists.
                      */
                     verse: 'with "Joyce" oblivious to the trump she just played.'
                 },
@@ -103,6 +106,9 @@ exports.song = {
                 },
                 {
                     time: 65,
+                    /**
+                     (personal observation here)
+                     */
                     verse: 'brimming over with smart boys, fit just one art boy'
                 },
                 {
@@ -128,7 +134,7 @@ exports.song = {
                 {
                     time: 84,
                     /**
-                     Dorothy Parker, whom Catherine admired, made a famous quip about girls who wear glasses. Kateri Tekakwitha, the Catholic Church's first Native American saint, figures prominently in Beautiful Losers, while Cohen speaks of "going clear" in "Famous Blue Raincoat." I always assumed that "going clear" was a reference to the legend that Tekakwitha's smallpox scars instantly vanished upon her death. In Catherine's case, I'm saying she went clear of me...
+                     Dorothy Parker, whom Catherine admired, made a famous quip about girls who wear glasses. Kateri Tekakwitha, the Catholic Church's first Native American saint, figures prominently in Beautiful Losers, while Cohen speaks of "going clear" in "Famous Blue Raincoat." I always assumed that "going clear" was a reference to the legend that Tekakwitha's smallpox scars miraculously vanished upon her death. In Catherine's case, of course, she went clear of me...
                      */
                     verse: 'my girl in glasses went clear—my Tekakwitha—'
                 },
@@ -143,10 +149,16 @@ exports.song = {
             [
                 {
                     time: 95,
+                    /**
+                     On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. Since I had ashed myself, the cross was slanted.
+                     */
                     verse: 'Well yes, I faked this "X", I should confess,'
                 },
                 {
                     time: 99,
+                    /**
+                     I got the ash from an outdoor ashtray.
+                     */
                     verse: 'using some old used cigarette.'
                 },
                 {
@@ -155,6 +167,9 @@ exports.song = {
                 },
                 {
                     time: 111,
+                    /**
+                     The ash used to mark parishioners' foreheads comes from palm branches blessed on the previous year's Palm Sunday.
+                     */
                     verse: 'Well no, I know it\'s wrong, but I did burn my palms,'
                 },
                 {
@@ -163,6 +178,9 @@ exports.song = {
                 },
                 {
                     time: 119,
+                    /**
+                     Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly needs.
+                     */
                     verse: 'Et Catherine vaut bien une messe…'
                 }
             ],
@@ -181,10 +199,16 @@ exports.song = {
                 },
                 {
                     time: 130,
+                    /**
+                     (personal observation here)
+                     */
                     verse: 'mistaken for Catholic with some smeared ash;'
                 },
                 {
                     time: 136,
+                    /**
+                     (personal observation here)
+                     */
                     verse: 'to wear it like a tragic mask.'
                 }
             ],
