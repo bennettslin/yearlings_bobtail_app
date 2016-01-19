@@ -19,7 +19,7 @@ exports.song = {
                             anchor: 'Didi',
                             annotationKey: 'didi_translation'
                         },
-                        ' left the house this morning'
+                        'Didi left the house this morning'
                     ]
                 },
                 {
