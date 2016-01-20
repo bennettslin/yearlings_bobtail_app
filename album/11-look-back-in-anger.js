@@ -8,179 +8,179 @@ exports.song = {
         right: [
             [
                 {
-                    time: 0,
+                    time: 10,
                     verse: 'Scrambled past this hell, where flagboy last fell,'
                 },
                 {
-                    time: 0,
+                    time: 13,
                     verse: 'dragging aglets held by the bastard\'s boot,'
                 },
                 {
-                    time: 0,
+                    time: 16,
                     verse: 'as the Van Nuys belles lunched soundless through the noon.'
                 },
                 {
-                    time: 0,
+                    time: 22,
                     verse: 'Now your sapling cut says you\'ve past ring one,'
                 },
                 {
-                    time: 0,
+                    time: 25,
                     verse: 'yet—if adding up—then for more you\'d vie.'
                 },
                 {
-                    time: 0,
+                    time: 28,
                     verse: 'From the valley of death you rode, so on spite you thrive.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 33,
                     verse: 'Feeble feeder fish allowed to grow;'
                 },
                 {
-                    time: 0,
+                    time: 36,
                     verse: 'these spluttered fits found fit for show.'
                 },
                 {
-                    time: 0,
+                    time: 39,
                     verse: 'You wished a cancer nibbled off,'
                 },
                 {
-                    time: 0,
+                    time: 42,
                     verse: 'and laid down on the public trough.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 45,
                     verse: 'She braves the crowd filled first from sides.'
                 },
                 {
-                    time: 0,
+                    time: 48,
                     verse: 'She might complete your jigsawed life.'
                 },
                 {
-                    time: 0,
+                    time: 51,
                     verse: 'With hair of maraschino red,'
                 },
                 {
-                    time: 0,
+                    time: 54,
                     verse: '"Great show," she later said.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 56,
                     verse: 'Well there are ways to make a treat of life,'
                 },
                 {
-                    time: 0,
+                    time: 63,
                     verse: 'and you were fine when you had none.'
                 },
                 {
-                    time: 0,
+                    time: 69,
                     verse: 'But knowing now what you\'d missed out on, you find,'
                 },
                 {
-                    time: 0,
+                    time: 75,
                     verse: 'you look back in anger that it\'s done.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 81,
                     verse: 'When religious kids mocked, each hypocrite\'s taunts'
                 },
                 {
-                    time: 0,
+                    time: 84,
                     verse: 'would just acquit God of further need;'
                 },
                 {
-                    time: 0,
+                    time: 87,
                     verse: 'reading His obit not a bang, just a murmuring.'
                 },
                 {
-                    time: 0,
-                    verse: 'Now each new concession sees this peasant'
+                    time: 91,
+                    verse: 'Now each new concession sees this'
                 },
                 {
-                    time: 0,
-                    verse: 'discontented all the more,'
+                    time: 94,
+                    verse: 'peasant discontented all the more,'
                 },
                 {
-                    time: 0,
+                    time: 97,
                     verse: 'with his ignorance lessened of his plight before…'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 103,
                     verse: 'Beyonders prevail, the letters preached,'
                 },
                 {
-                    time: 0,
+                    time: 106,
                     verse: 'and thus secure, must turn the cheek.'
                 },
                 {
-                    time: 0,
+                    time: 109,
                     verse: 'You waved your pledge to this godly good,'
                 },
                 {
-                    time: 0,
+                    time: 112,
                     verse: 'only to crack, sprawled where they stood…'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 115,
                     verse: 'Though, if you\'re right to want what\'s yours,'
                 },
                 {
-                    time: 0,
+                    time: 118,
                     verse: 'weren\'t they right to take what\'s theirs?'
                 },
                 {
-                    time: 0,
+                    time: 121,
                     verse: 'So if you\'re weeping for poor squirrels,'
                 },
                 {
-                    time: 0,
+                    time: 124,
                     verse: 'also weep for poor, poor bears.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 127,
                     verse: 'Red and friends, lagging by the back door,'
                 },
                 {
-                    time: 0,
+                    time: 130,
                     verse: 'lift you on angel stares.'
                 },
                 {
-                    time: 0,
+                    time: 133,
                     verse: 'Drunk, you\'d claim you\'ve never loved,'
                 },
                 {
-                    time: 0,
+                    time: 136,
                     verse: 'but it\'s too late to unscrew a Bud…'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 139,
                     verse: 'Yes, you were wrong to make demands on life,'
                 },
                 {
-                    time: 0,
+                    time: 145,
                     verse: '\'cause when you beg it never comes.'
                 },
                 {
-                    time: 0,
+                    time: 151,
                     verse: 'And we all find this out on our own time…'
                 },
                 {
-                    time: 0,
+                    time: 157,
                     verse: 'Look back in anger to have won.'
                 }
             ]
