@@ -224,7 +224,7 @@ exports.song = {
             ],
             [
                 {
-                    time: 0196,
+                    time: 196,
                     verse: '…and now you\'re left with no defences. Well, who\'d have guessed this?  You stand unsure. She lures with a tease, "Oh sweetie, you\'re right: you wear your hard-on in a sleeve." So how\'s that compromise?'
                 }
             ],
