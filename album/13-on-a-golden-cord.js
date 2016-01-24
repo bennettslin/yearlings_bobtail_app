@@ -132,7 +132,9 @@ exports.song = {
                 {
                     time: 96,
                     verse: 'just learned he\'s pecked to death his precious other.'
-                },
+                }
+            ],
+            [
                 {
                     time: 98,
                     verse: 'But should it matter since you loved her once,'
