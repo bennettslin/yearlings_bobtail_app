@@ -8,216 +8,232 @@ exports.song = {
         right: [
             [
                 {
-                    time: 0,
+                    time: 33,
                     verse: '<em>Maravijaya…</em>'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 35,
                     verse: 'I was a lad bent on learning the talents'
                 },
                 {
-                    time: 0,
+                    time: 40,
                     verse: 'that all clever girls need to see.'
                 },
                 {
-                    time: 0,
+                    time: 44,
                     verse: 'Bit my sadness with patience,'
                 },
                 {
-                    time: 0,
+                    time: 47,
                     verse: 'with practise each day, then'
                 },
                 {
-                    time: 0,
+                    time: 50,
                     verse: 'in five years I\'d be one to keep.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 54,
                     verse: 'This moron marooned, a method mapped in my cocoon'
                 },
                 {
-                    time: 0,
+                    time: 59,
                     verse: 'to mould me into a mystery mensch.'
                 },
                 {
-                    time: 0,
+                    time: 64,
                     verse: 'No minutiae left unmastered,'
                 },
                 {
-                    time: 0,
+                    time: 67,
                     verse: 'music cred with mindful manners merge.'
                 },
                 {
-                    time: 0,
+                    time: 69,
                     verse: 'Once I metamorphose, certain I\'d impress.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 75,
                     verse: 'Year five, and now the one who dug me up'
                 },
                 {
-                    time: 0,
+                    time: 77,
                     verse: 'spent her wishes on a friend,'
                 },
                 {
-                    time: 0,
-                    verse: 'while forever I\'ll hold in peace these words unsaid.'
+                    time: 80,
+                    verse: 'while forever I\'ll hold in peace'
                 },
                 {
-                    time: 0,
+                    time: 82,
+                    verse: 'these words unsaid.'
+                },
+                {
+                    time: 84,
                     verse: 'Hopes wrapped in marinaded confections but'
                 },
                 {
-                    time: 0,
+                    time: 87,
                     verse: 'before tomorrow never sent.'
                 },
                 {
-                    time: 0,
-                    verse: 'Signed off "Love: Me" is how my life and letters end.'
-                }
+                    time: 89,
+                    verse: 'Signed off "Love: Me" is how'
+                },
+                {
+                    time: 91,
+                    verse: 'my life and letters end.'
+                },
             ],
             [
                 {
-                    time: 0,
+                    time: 94,
                     verse: 'Morphined, I\'ll probably die pushing forty, exiled'
                 },
                 {
-                    time: 0,
+                    time: 99,
                     verse: 'to a sand castle built by low tide;'
                 },
                 {
-                    time: 0,
+                    time: 103,
                     verse: 'far too old to be martyred,'
                 },
                 {
-                    time: 0,
+                    time: 106,
                     verse: 'too young to grow smarter,'
                 },
                 {
-                    time: 0,
+                    time: 109,
                     verse: 'a mariner\'s child who hanged from this tie.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 114,
                     verse: 'Panoramic prints pending my soon-to-be Moonie wedding,'
                 },
                 {
-                    time: 0,
+                    time: 118,
                     verse: 'fools once expecting their "Made in America" signs.'
                 },
                 {
-                    time: 0,
+                    time: 123,
                     verse: 'In a time capsule sealed'
                 },
                 {
-                    time: 0,
+                    time: 125,
                     verse: 'with pages of defeated spiels'
                 },
                 {
-                    time: 0,
+                    time: 128,
                     verse: 'lies that marionette in this heap of twisted twine.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 133,
                     verse: 'All I know is that whoever finds me'
                 },
                 {
-                    time: 0,
+                    time: 136,
                     verse: 'keeps me solely for a pet.'
                 },
                 {
-                    time: 0,
+                    time: 138,
                     verse: 'With her "I do", my life in marriage'
                 },
                 {
-                    time: 0,
+                    time: 140,
                     verse: 'is choked down my no-hope chest.'
                 },
                 {
-                    time: 0,
+                    time: 143,
                     verse: 'Her lispy kiss unlucky for this chimney sweep,'
                 },
                 {
-                    time: 0,
+                    time: 146,
                     verse: 'indentures dumbed as a boy.'
                 },
                 {
-                    time: 0,
+                    time: 148,
                     verse: 'Whispered "adieu", I bade them to fare well,'
                 },
                 {
-                    time: 0,
+                    time: 150,
                     verse: 'then turned to hug the void.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 153,
                     verse: 'But then I saw the world\'s a naked baby,'
                 },
                 {
-                    time: 0,
+                    time: 156,
                     verse: 'cradled safely in my lap.'
                 },
                 {
-                    time: 0,
+                    time: 158,
                     verse: 'It dropped a poop, but somehow I knew'
                 },
                 {
-                    time: 0,
+                    time: 160,
                     verse: 'to have a merry ol\' laugh.'
                 },
                 {
-                    time: 0,
+                    time: 163,
                     verse: 'And now I wonder if the answer might be'
                 },
                 {
-                    time: 0,
+                    time: 166,
                     verse: 'to know: the rule for a girl'
                 },
                 {
-                    time: 0,
+                    time: 168,
                     verse: 'is that the boy who\'s to love her baby'
                 },
                 {
-                    time: 0,
+                    time: 170,
                     verse: 'should first love the world.'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 173,
                     verse: 'Moral is: it\'s up to me to be alert;'
                 },
                 {
-                    time: 0,
+                    time: 176,
                     verse: 'nothing comes a pure surprise.'
                 },
                 {
-                    time: 0,
-                    verse: 'Sometimes if it\'s all to work friends have to lie.'
+                    time: 178,
+                    verse: 'Sometimes if it\'s all to work'
                 },
                 {
-                    time: 0,
+                    time: 180,
+                    verse: 'friends have to lie.'
+                },
+                {
+                    time: 183,
                     verse: 'And sometimes situations seem the worst,'
                 },
                 {
-                    time: 0,
+                    time: 185,
                     verse: 'but in a year, they\'re never bad.'
                 },
                 {
-                    time: 0,
-                    verse: 'Five more, she\'ll dig up Bobtail\'s words—I\'m not sad!'
+                    time: 188,
+                    verse: 'Five more, she\'ll dig up Bobtail\'s words—'
+                },
+                {
+                    time: 190,
+                    verse: 'I\'m not sad!'
                 }
             ]
         ]
