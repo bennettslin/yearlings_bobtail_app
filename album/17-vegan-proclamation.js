@@ -1,3 +1,5 @@
+// FIXME: Make Sasha quotes just single paragraph. Then separate out verses.
+
 exports.song = {
     title: 'Vegan Proclamation',
     speechBubbles: {
@@ -7,21 +9,34 @@ exports.song = {
     lyrics: {
         left: [
             [
+                // TODO: This whole section is italicised.
                 {
                     time: 0,
-                    verse: '<em>"If you\'re just starting out, you need to decide right now:</em>'
+                    verse: '"If you\'re just starting out,'
+                },
+                {
+                    time: 1,
+                    verse: 'you need to decide right now:'
                 },
                 {
                     time: 3,
-                    verse: '<em>either you stick with quality vinyl, or you buy only the bargain bin LPs;</em>'
+                    verse: 'Either you stick with quality vinyl,'
+                },
+                {
+                    time: 5,
+                    verse: 'or you buy only the bargain bin LPs.'
                 },
                 {
                     time: 8,
-                    verse: '<em>you can\'t have both. Because a scratched record will chip a good needle…</em>'
+                    verse: 'You can\'t have both.'
+                },
+                {
+                    time: 9,
+                    verse: 'Because a scratched record will chip a good needle…'
                 },
                 {
                     time: 12,
-                    verse: '<em>and a chipped needle will scratch a good record…"</em>'
+                    verse: 'and a chipped needle will scratch a good record…"'
                 }
             ],
             [
@@ -63,6 +78,7 @@ exports.song = {
                 }
             ],
             [
+                // TODO: This whole section is italicised.
                 {
                     time: 60,
                     verse: '<em> "No, I\'ll smile because I believe in the big crunch,</em>'
