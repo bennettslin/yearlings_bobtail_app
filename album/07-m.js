@@ -9,7 +9,7 @@ exports.song = {
             [
                 {
                     time: 33,
-                    verse: '<em>Maravijaya…</em>'
+                    verse: 'Maravijaya…'
                 }
             ],
             [

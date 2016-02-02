@@ -9,34 +9,13 @@ exports.song = {
     lyrics: {
         left: [
             [
-                // TODO: This whole section is italicised.
                 {
                     time: 0,
-                    verse: '"If you\'re just starting out,'
-                },
-                {
-                    time: 1,
-                    verse: 'you need to decide right now:'
-                },
-                {
-                    time: 3,
-                    verse: 'Either you stick with quality vinyl,'
-                },
-                {
-                    time: 5,
-                    verse: 'or you buy only the bargain bin LPs.'
-                },
-                {
-                    time: 8,
-                    verse: 'You can\'t have both.'
-                },
-                {
-                    time: 9,
-                    verse: 'Because a scratched record will chip a good needle…'
-                },
-                {
-                    time: 12,
-                    verse: 'and a chipped needle will scratch a good record…"'
+                    verse: [
+                        {
+                            italic: '"If you\'re just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You can\'t have both. Because a scratched record will chip a good needle… and a chipped needle will scratch a good record…"'
+                        }
+                    ]
                 }
             ],
             [
@@ -81,20 +60,12 @@ exports.song = {
                 // TODO: This whole section is italicised.
                 {
                     time: 60,
-                    verse: '<em> "No, I\'ll smile because I believe in the big crunch,</em>'
+                    verse: [
+                        {
+                            italic: '"No, I\'ll smile because I believe in the big crunch. And meanwhile, the universe is a cyanided box. Because if we can\'t ever be known to be dead, we just might always be alive… to God…'
+                        }
+                    ]
                 },
-                {
-                    time: 64,
-                    verse: '<em>and meanwhile, the universe is a cyanided box…</em>'
-                },
-                {
-                    time: 68,
-                    verse: '<em>Because if we can\'t ever be known to be dead,</em>'
-                },
-                {
-                    time: 71,
-                    verse: '<em>we just might always be alive to God…"</em>'
-                }
             ],
             [
                 {
