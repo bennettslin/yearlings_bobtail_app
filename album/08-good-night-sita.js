@@ -9,297 +9,279 @@ exports.song = {
             [
                 {
                     time: 0,
-                    verse: '"Good night"'
+                    verse: '"Good night," she says'
                 }
             ],
             [
                 {
-                    time: 0,
-                    verse: 'she says or should I should you refuse'
+                    time: 3,
+                    verse: 'or should I should you refuse'
                 },
                 {
-                    time: 0,
+                    time: 5,
                     verse: 'by a gutter gurgling then we\'ll choose'
                 },
                 {
-                    time: 0,
+                    time: 7,
                     verse: 'either never live yet live on or to'
                 },
                 {
-                    time: 0,
+                    time: 9,
                     verse: 'love first without once knowing love'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 11,
                     verse: 'when cesspit dead ends for further speech'
                 },
                 {
-                    time: 0,
+                    time: 12,
                     verse: 'are these stuttered sentences we speak'
                 },
                 {
-                    time: 0,
+                    time: 14,
                     verse: 'for this kid wearing no decoder ring'
                 },
                 {
-                    time: 0,
+                    time: 16,
                     verse: 'Dutch courage wimped out to going Dutch'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 18,
                     verse: 'but even no sponge'
                 },
                 {
-                    time: 0,
+                    time: 20,
                     verse: 'nor a barnacle minds'
                 },
                 {
-                    time: 0,
+                    time: 22,
                     verse: 'swept in unchartable tides'
                 },
                 {
-                    time: 0,
+                    time: 24,
                     verse: 'they just always know to pry'
                 },
                 {
-                    time: 0,
+                    time: 26,
                     verse: 'for the innermost matryoshka\'s'
                 },
                 {
-                    time: 0,
+                    time: 28,
                     verse: 'heart of gold inside'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 29,
                     verse: 'till then crack up another doll'
                 },
                 {
-                    time: 0,
+                    time: 32,
                     verse: 'to find the chrysalis unchristened to all'
                 },
                 {
-                    time: 0,
+                    time: 36,
                     verse: 'who\'d buy this aping jaw fixed to his skull'
                 },
                 {
-                    time: 0,
+                    time: 40,
                     verse: 'swaggering down these barren exhibit halls'
                 }
             ],
             [
                 {
-                    time: 0,
-                    verse: 'till then crack up another doll'
-                },
-                {
-                    time: 0,
-                    verse: 'to find the chrysalis unchristened to all'
-                },
-                {
-                    time: 0,
-                    verse: 'who\'d buy this aping jaw fixed to his skull'
-                },
-                {
-                    time: 0,
-                    verse: 'swaggering down these barren exhibit halls'
-                }
-            ],
-            [
-                {
-                    time: 0,
+                    time: 45,
                     verse: 'but totems so revered'
                 },
                 {
-                    time: 0,
+                    time: 47,
                     verse: 'when defined by ambrosia beers'
                 },
                 {
-                    time: 0,
+                    time: 48,
                     verse: 'in time are seen with a focus grown clear'
                 },
                 {
-                    time: 0,
+                    time: 50,
                     verse: 'and slowly the story erodes'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 52,
                     verse: 'pidgin palaver exchanged'
                 },
                 {
-                    time: 0,
+                    time: 54,
                     verse: 'can only transfer good faith'
                 },
                 {
-                    time: 0,
+                    time: 56,
                     verse: 'hyped up like some disastrous play'
                 },
                 {
-                    time: 0,
+                    time: 58,
                     verse: 'that starts with a lone ringing phone'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 60,
                     verse: 'but even so'
                 },
                 {
-                    time: 0,
+                    time: 62,
                     verse: 'just that it ever rang at all'
                 },
                 {
-                    time: 0,
+                    time: 64,
                     verse: 'for if the tactic is to stall'
                 },
                 {
-                    time: 0,
+                    time: 66,
                     verse: 'you\'re just ecstatic she called'
                 },
                 {
-                    time: 0,
-                    verse: 'what this understudy sought'
+                    time: 68,
+                    verse: 'what this understudy sought from his number'
                 },
                 {
-                    time: 0,
-                    verse: 'from his number strutting on the wall'
+                    time: 70,
+                    verse: 'strutting on the wall'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 71,
                     verse: 'we whine when first we got shunned'
                 },
                 {
-                    time: 0,
+                    time: 73,
                     verse: 'then wise up and learn to shotgun'
                 },
                 {
-                    time: 0,
+                    time: 75,
                     verse: 'last show\'s set still propped up'
                 },
                 {
-                    time: 0,
+                    time: 77,
                     verse: 'so we\'ll breeze through our parts'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 79,
                     verse: 'though each kind new ultimatum'
                 },
                 {
-                    time: 0,
+                    time: 81,
                     verse: 'to his tribe left old and jaded'
                 },
                 {
-                    time: 0,
+                    time: 83,
                     verse: 'the boy brave who cultivated'
                 },
                 {
-                    time: 0,
+                    time: 84,
                     verse: 'brave rejection into art'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 86,
                     verse: 'but died unfinished alas'
                 },
                 {
-                    time: 0,
+                    time: 88,
                     verse: 'hotlines get busy just as'
                 },
                 {
-                    time: 0,
+                    time: 90,
                     verse: 'thoughts slide to slitting wrists that'
                 },
                 {
-                    time: 0,
+                    time: 92,
                     verse: 'hint of sampler cologne'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 94,
                     verse: 'and a lass sniffing out these rote charms'
                 },
                 {
-                    time: 0,
+                    time: 96,
                     verse: 'always rides in single go-karts'
                 },
                 {
-                    time: 0,
+                    time: 98,
                     verse: 'as we wind an endless flowchart'
                 },
                 {
-                    time: 0,
+                    time: 99,
                     verse: 'with every given answer a no'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 101,
                     verse: 'and her veggie wishbone\'s'
                 },
                 {
-                    time: 0,
+                    time: 103,
                     verse: 'short end in these clutching fingers of steel'
                 },
                 {
-                    time: 0,
+                    time: 105,
                     verse: 'too untrusting to ever unpeel'
                 },
                 {
-                    time: 0,
+                    time: 107,
                     verse: 'from a dummy steering wheel'
                 },
                 {
-                    time: 0,
+                    time: 109,
                     verse: 'settled for hugging only curbs'
                 },
                 {
-                    time: 0,
+                    time: 111,
                     verse: 'and having only tires squeal'
                 }
             ],
             [
                 {
-                    time: 0,
+                    time: 113,
                     verse: 'when boys who mope'
                 },
                 {
-                    time: 0,
+                    time: 114,
                     verse: 'know the beauty of simply limping away blind'
                 },
                 {
-                    time: 0,
+                    time: 116,
                     verse: 'as the chirping crosswalks guide'
                 },
                 {
-                    time: 0,
+                    time: 118,
                     verse: 'where willows softly conspire'
                 },
                 {
-                    time: 0,
+                    time: 120,
                     verse: 'when boys who cope'
                 },
                 {
-                    time: 0,
-                    verse: 'only risk invites denied I sigh'
+                    time: 121,
+                    verse: 'only risk invites denied'
                 }
             ],
             [
                 {
-                    time: 0,
-                    verse: '"Good night."'
+                    time: 123,
+                    verse: 'I sigh, "Good night."'
                 }
             ]
         ]
