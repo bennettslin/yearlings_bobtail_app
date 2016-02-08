@@ -119,7 +119,13 @@ var LyricsColumn = React.createClass({
      */
     _getTaggedVerseElement: function(verse, index, nestedIndex) {
         if (typeof verse === 'string') {
-            return <span key={nestedIndex + '-' + index}>{verse}</span>;
+            return (
+                <span key={nestedIndex + '-' + index}>
+                    {/* Begin subsequent segments of each line with a space. */}
+                    {index > 0 ? ' ' : ''}
+                    {verse}
+                </span>
+            );
 
         } else if (typeof verse === 'object') {
             if (verse.italic) {

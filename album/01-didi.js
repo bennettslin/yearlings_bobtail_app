@@ -2,7 +2,7 @@ exports.song = {
     title: 'Didi',
     speechBubbles: {
         narrative: 'narrative 1',
-        personal: 'personal 1'
+        backstory: 'personal 1'
     },
     annotations: {
         didi_translation: {
@@ -14,13 +14,7 @@ exports.song = {
             [
                 {
                     time: 17,
-                    verse: [
-                        {
-                            anchor: 'Didi',
-                            annotationKey: 'didi_translation'
-                        },
-                        'Didi left the house this morning'
-                    ]
+                    verse: 'Didi left the house this morning'
                 },
                 {
                     time: 22,

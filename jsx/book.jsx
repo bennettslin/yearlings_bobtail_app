@@ -136,6 +136,6 @@ var Book = React.createClass({
 
     _handleAnnotationSelect: function(annotationKey) {
         // FIXME: Obviously, this should be implemented.
-        console.log("annotation key is", annotationKey, this.props.songs[this.props.playedSongIndex].annotations[annotationKey].description);
+        console.log(annotationKey + ':\n' + this.props.songs[this.props.playedSongIndex].annotations[annotationKey].description);
     }
 });

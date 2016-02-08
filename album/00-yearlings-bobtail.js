@@ -2,7 +2,7 @@ exports.album = {
     title: 'Yearling\'s Bobtail',
     speechBubbles: {
         narrative: 'narrative yb',
-        personal: 'personal yb'
+        backstory: 'personal yb'
     },
     legendSymbols: [
         {

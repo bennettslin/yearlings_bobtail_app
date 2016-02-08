@@ -1,4 +1,4 @@
-var speechBubbleNames = ['narrative', 'personal'];
+var speechBubbleNames = ['narrative', 'backstory'];
 var SynopsisBar = React.createClass({
     mixins: [PopupMixin],
 

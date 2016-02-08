@@ -6,7 +6,7 @@
 
         div[class^="lyrics-song"] {
             @lyrics-header-size: 1.5em;
-            @lyrics-verse-size: 0.85em;
+            @lyrics-verse-size: 1em;
             @phone-folded-column-width: 50px;
 
             // FIXME: Is this value needed? It isn't presently used other than
@@ -21,7 +21,7 @@
                 top: 40px;
             }
 
-            background-color: brown;
+            background-color: #eaa;
             position: absolute;
             width: @phone-lyrics-column-width;
 
@@ -115,6 +115,7 @@
                 }
 
                 .lyrics-verses {
+                    font-family: PTSansNarrow;
                     font-size: @lyrics-verse-size;
 
                     &.foldable-area {
@@ -135,7 +136,21 @@
                     }
 
                     a {
+                        .transition(color 0.05s ease);
+                        .no-select;
                         cursor: pointer;
+
+                        // TODO: Arbitrary styling for now. bennettl
+                        font-weight: bold;
+                        color: #844;
+
+                        &:hover {
+                            color: #b77;
+                        }
+
+                        &:active {
+                            color: #d99;
+                        }
                     }
                 }
             }

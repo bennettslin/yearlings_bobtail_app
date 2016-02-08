@@ -2,7 +2,9 @@ exports.song = {
     title: 'Constellations!',
     speechBubbles: {
         narrative: 'narrative 1',
-        personal: 'personal 1'
+        backstory: [
+            'After finishing James Joyce\'s <em>Ulysses</em>, I set out to read <em>Finnegan\'s Wake</em>, and while I only got through the first hundred pages or so,',
+        ]
     },
     lyrics: {
         left: [

@@ -117,7 +117,7 @@ var TopNav = React.createClass({
         Object.keys(this.refs).forEach(function(currentRef) {
             /**
              * Update shown popup index of synopsis bars. For example,
-             * if user selects personal speech bubble in sticky nav,
+             * if user selects backstory speech bubble in sticky nav,
              * this change will also be reflected in scrolling nav.
              * As it is, this only gets called by clicks, not hovers.
              */

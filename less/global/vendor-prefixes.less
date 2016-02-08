@@ -1,7 +1,16 @@
 .transition(@value;...) {
-  -webkit-transition: @value;
-     -moz-transition: @value;
-      -ms-transition: @value;
-       -o-transition: @value;
-          transition: @value;
+    -webkit-transition: @value;
+       -moz-transition: @value;
+        -ms-transition: @value;
+         -o-transition: @value;
+            transition: @value;
+}
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Chrome/Safari/Opera */
+       -khtml-user-select: none; /* Konqueror */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* IE/Edge */
+              user-select: none;
 }

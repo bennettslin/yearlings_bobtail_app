@@ -2,7 +2,7 @@ exports.song = {
     title: 'Look Back in Anger',
     speechBubbles: {
         narrative: 'narrative 1',
-        personal: 'personal 1'
+        backstory: 'personal 1'
     },
     lyrics: {
         right: [
