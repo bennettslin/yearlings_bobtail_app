@@ -13,8 +13,7 @@ exports.song = {
             description: 'Glancing around after making out in my room one night, Catherine remarked that she didn\'t see any books. "I don\'t read," I said. In hindsight, that was probably the beginning of the end.'
         },
         ulysses_tomb: {
-            // TODO: Add note about how it was Catherine who inspired me to make the Ulysses of rock albums.
-            description: 'A reference to the classic "Who\'s buried in Grant\'s tomb" schoolyard riddle, of course, but also to the masterpiece novel written by James Joyce, whom Catherine admired.',
+            description: 'A reference to the classic "Who\'s buried in Grant\'s tomb" schoolyard riddle, of course, but also to James Joyce\'s masterpiece novel. It was Catherine\'s admiration for Joyce that motivated me to create "the <em>Ulysses</em> of rock albums."',
             reference: 'https://en.wikipedia.org/wiki/Grant%27s_Tomb'
         },
         laid_tourettes: {
@@ -44,7 +43,7 @@ exports.song = {
             description: '… But of course her compliment is insincere, since referencing a poet typically studied by middle schoolers is hardly a signifier of cultured taste. And so she\'s also figuratively putting me down, for my naive hope to become the James Joyce of lyricists.'
         },
         outside_her_shelta: {
-            description: '"Outside her shelter," but also Shelta, the secret language of the Irish Travellers, an itinerant community that is predominantly Roman Catholic.',
+            description: '"Outside her shelter," but also Shelta, the secret language of the Irish Travellers, who are predominantly Roman Catholic.',
             reference: 'https://en.wikipedia.org/wiki/Shelta'
         },
         famous_raincoat: {
@@ -52,8 +51,7 @@ exports.song = {
             reference: 'https://en.wikipedia.org/wiki/Famous_Blue_Raincoat'
         },
         unknown_to_roam: {
-            // TODO: Also mention that the Irish Travellers roam.
-            description: 'Also, raincoats are a slang term for condoms, which are famously "unknown to Rome."'
+            description: 'The Irish Travellers are an itinerant community known to roam. Also, raincoats are a slang term for condoms, which are famously "unknown to Rome."'
         },
         girl_in_glasses: {
             description: 'The critic Dorothy Parker, whose wit Catherine admired, made a famous quip about girls who wear glasses.',
@@ -79,6 +77,9 @@ exports.song = {
         },
         catherine_vaut_bien: {
             description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly needs.'
+        },
+        safe_algonquin_abode: {
+            description: 'Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare, while Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.'
         }
 
     },
@@ -270,10 +271,13 @@ exports.song = {
                 },
                 {
                     time: 8,
-                    /**
-                     Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.
-                     */
-                    verse: 'for I lack the wit to spare a safe Algonquin abode.'
+                    verse: [
+                        'for I lack the wit to spare a',
+                        {
+                            anchor: 'safe Algonquin abode.',
+                            annotationKey: 'safe_algonquin_abode'
+                        }
+                    ]
                 }
             ],
             [
