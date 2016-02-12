@@ -65,21 +65,26 @@ exports.song = {
             description: 'The story of Kateri Tekakwitha, the Catholic Church\'s first Native American saint, figures prominently in <em>Beautiful Losers</em>. I always assumed that "going clear" was a reference to the legend that Tekakwitha\'s smallpox scars miraculously vanished upon her death.',
             reference: 'https://en.wikipedia.org/wiki/Kateri_Tekakwitha'
         },
+        safe_algonquin_abode: {
+            description: 'Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare, while Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.'
+        },
         faked_this_x: {
-            // TODO: story is out of order
             description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. Since I had ashed myself, the cross was slanted.'
         },
         used_cigarette: {
             description: 'I got the ash from an outdoor ashtray.'
         },
         burn_my_palms: {
-            description: 'The ash used to mark parishioners\' foreheads comes from palm branches blessed on the previous year\'s Palm Sunday.'
+            description: 'The ash used comes from burning the palm branches that were blessed on the previous year\'s Palm Sunday.'
         },
         catherine_vaut_bien: {
             description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly needs.'
         },
-        safe_algonquin_abode: {
-            description: 'Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare, while Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.'
+        tragic_mask: {
+            description: ''
+        },
+        spreading_mole: {
+            description: ''
         }
 
     },
@@ -175,9 +180,6 @@ exports.song = {
                 },
                 {
                     time: 42,
-                    /**
-                     (personal observation here)
-                     */
                     verse: 'a soul to share in her eternal life.'
                 }
             ],
@@ -215,9 +217,6 @@ exports.song = {
                 },
                 {
                     time: 65,
-                    /**
-                     (personal observation here)
-                     */
                     verse: 'brimming over with smart boys, fit just one art boy'
                 },
                 {
@@ -350,17 +349,17 @@ exports.song = {
                 },
                 {
                     time: 130,
-                    /**
-                     (personal observation here)
-                     */
                     verse: 'mistaken for Catholic with some smeared ash;'
                 },
                 {
                     time: 136,
-                    /**
-                     (personal observation here)
-                     */
-                    verse: 'to wear it like a tragic mask.'
+                    verse: [
+                        'to wear it like a',
+                        {
+                            anchor: 'tragic mask.',
+                            annotationKey: 'tragic_mask'
+                        }
+                    ]
                 }
             ],
             [
@@ -370,7 +369,14 @@ exports.song = {
                 },
                 {
                     time: 140,
-                    verse: 'in spreading mole my sickness borne'
+                    verse: [
+                        'in',
+                        {
+                            anchor: 'spreading mole',
+                            annotationKey: 'spreading_mole'
+                        },
+                        'my sickness borne'
+                    ]
                 },
                 {
                     time: 143,
