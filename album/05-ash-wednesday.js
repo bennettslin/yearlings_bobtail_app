@@ -10,15 +10,14 @@ exports.song = {
             reference: 'https://en.wikipedia.org/wiki/O_Captain!_My_Captain!'
         },
         bookless_room: {
-            description: 'Glancing around after making out in my room one night, Catherine remarked that she didn\'t see any books. "I don\'t read," I said. In hindsight, that was probably the beginning of the end.'
+            description: 'Glancing around after we made out in my room one night, Catherine remarked that she didn\'t see any books. "I don\'t read," I said. In hindsight, that was probably the beginning of the end.'
         },
         ulysses_tomb: {
             description: 'A reference to the classic "Who\'s buried in Grant\'s tomb" schoolyard riddle, of course, but also to James Joyce\'s masterpiece novel. It was Catherine\'s admiration for Joyce that motivated me to create "the <em>Ulysses</em> of rock albums."',
             reference: 'https://en.wikipedia.org/wiki/Grant%27s_Tomb'
         },
         laid_tourettes: {
-            // TODO: Expand more on how Tourette's makes you say things on impulse.
-            description: 'Things were said that shouldn\'t have been said when we broke up. Also, Jesus was "laid to rest" on the first day…',
+            description: 'Things were impulsively said that shouldn\'t have been said when we broke up. Also, Jesus was "laid to rest" on the first day…',
             reference: 'https://en.wikipedia.org/wiki/Tourette_syndrome'
         },
         last_day_she_rose: {
@@ -69,22 +68,26 @@ exports.song = {
             description: 'Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare, while Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.'
         },
         faked_this_x: {
-            description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. Since I had ashed myself, the cross was slanted.'
+            description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. Since I had ashed myself, the cross was slanted.',
+            reference: 'https://en.wikipedia.org/wiki/Ash_Wednesday'
         },
         used_cigarette: {
             description: 'I got the ash from an outdoor ashtray.'
         },
         burn_my_palms: {
-            description: 'The ash used comes from burning the palm branches that were blessed on the previous year\'s Palm Sunday.'
+            description: 'The ash used comes from burning the palm branches that were blessed on the previous year\'s Palm Sunday.',
+            reference: 'https://en.wikipedia.org/wiki/Palm_Sunday'
         },
         catherine_vaut_bien: {
-            description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly needs.'
+            description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly needs.',
+            reference: 'https://en.wikipedia.org/wiki/Henry_IV_of_France'
         },
         tragic_mask: {
-            description: ''
+            description: '',
+            reference: 'https://en.wikipedia.org/wiki/Greek_tragedy'
         },
         spreading_mole: {
-            description: ''
+            description: 'By the end of the day, the ash was pretty smudged.'
         }
 
     },
