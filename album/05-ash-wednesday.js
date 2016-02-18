@@ -82,11 +82,22 @@ exports.song = {
             description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly needs.',
             reference: 'https://en.wikipedia.org/wiki/Henry_IV_of_France'
         },
+        cursed_to_be_born: {
+            /**
+             * TODO: In high school, I used to argue that it didn't make sense
+             * for nonbelievers to be born at all, since it meant trading the
+             * certainty of going to heaven for the likelihood of going to hell.
+             */
+            description: 'TODO'
+        },
         tragic_mask: {
-            description: '',
-            reference: 'https://en.wikipedia.org/wiki/Greek_tragedy'
+            /**
+             * TODO: I was quite depressed about the breakup, but I remember feeling pretty giddy that day. I was in the constant habit of doing things just to write songs about them afterwards, which made it hard even for myself to tell how much it was all an act.
+             */
+            description: 'TODO'
         },
         spreading_mole: {
+            // TODO: Mention cancer?
             description: 'By the end of the day, the ash was pretty smudged.'
         }
 
@@ -344,7 +355,13 @@ exports.song = {
                 },
                 {
                     time: 125,
-                    verse: 'us wretched souls cursed to be born,'
+                    verse: [
+                        'us wretched souls',
+                        {
+                            anchor: 'cursed to be born,',
+                            annotationKey: 'cursed_to_be_born'
+                        }
+                    ]
                 },
                 {
                     time: 128,
