@@ -17,6 +17,7 @@ exports.song = {
             reference: 'https://en.wikipedia.org/wiki/Grant%27s_Tomb'
         },
         laid_tourettes: {
+            // TODO: Explain Tourette's more clearly?
             description: 'Things were impulsively said that shouldn\'t have been said when we broke up. Also, Jesus was "laid to rest" on the first day…',
             reference: 'https://en.wikipedia.org/wiki/Tourette_syndrome'
         },
@@ -30,7 +31,7 @@ exports.song = {
             description: 'We never had sex, given that she was extremely devout.'
         },
         dirge_shed_deride: {
-            description: 'Catherine didn\'t think much of my songwriting skills at the time. In all honesty, at that time I wasn\'t very good.'
+            description: 'Catherine didn\'t think much of my songwriting skills at the time. In all honesty, at that time they weren\'t very good.'
         },
         my_what_wit_man: {
             description: 'Or else spoken drolly, "My, Walt Whitman."'
@@ -68,6 +69,7 @@ exports.song = {
             description: 'Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare, while Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.'
         },
         faked_this_x: {
+            // TODO: Mention "faked the sex"?
             description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. Since I had ashed myself, the cross was slanted.',
             reference: 'https://en.wikipedia.org/wiki/Ash_Wednesday'
         },
@@ -83,18 +85,10 @@ exports.song = {
             reference: 'https://en.wikipedia.org/wiki/Henry_IV_of_France'
         },
         cursed_to_be_born: {
-            /**
-             * TODO: In high school, I used to argue that it didn't make sense
-             * for nonbelievers to be born at all, since it meant trading the
-             * certainty of going to heaven for the likelihood of going to hell.
-             */
-            description: 'TODO'
+            description: 'I argued with Catherine that it didn\'t make sense for unbelievers to be born at all, since it meant trading the certainty of going to heaven for the likelihood of going to hell. It wasn\'t the most cogent argument, but that\'s as far as my views on religion had progressed at the time.'
         },
         tragic_mask: {
-            /**
-             * TODO: I was quite depressed about the breakup, but I remember feeling pretty giddy that day. I was in the constant habit of doing things just to write songs about them afterwards, which made it hard even for myself to tell how much it was all an act.
-             */
-            description: 'TODO'
+            description: 'In those days, I would do anything just to write a song about it afterwards, so I could never tell how much it was all an act. It wasn\'t an easy habit to let go, since it made depression that much more bearable, and at times even comical.'
         },
         spreading_mole: {
             // TODO: Mention cancer?
