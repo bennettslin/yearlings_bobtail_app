@@ -1,9 +1,10 @@
 exports.song = {
     title: 'Constellations!',
     speechBubbles: {
-        narrative: 'narrative 1',
+        narrative: 'One summer night, my friends Ana, Howie, Tomer, and I drank Robitussin and explored the steam tunnels under UCLA pretending to be Mongols and Vikings. ',
         backstory: [
-            'After finishing James Joyce\'s <em>Ulysses</em>, I set out to read <em>Finnegan\'s Wake</em>, and while I only got through the first hundred pages or so,',
+            // TODO: Mention Police's Ghost in the Machine,
+            'After finishing James Joyce\'s <em>Ulysses</em>, I set out to read <em>Finnegan\'s Wake</em>, and while I only got through the first forty pages or so, ',
         ]
     },
     lyrics: {
