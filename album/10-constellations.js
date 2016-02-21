@@ -165,7 +165,7 @@ exports.song = {
             [
                 {
                     /**
-                     * comment
+                     * Moment of clarity.
                      */
                     time: 109,
                     verse: 'And now without a chart,'
@@ -181,44 +181,74 @@ exports.song = {
             ],
             [
                 {
+                    /**
+                     * Clarity is shortlived, as back in car. Driving back to Howie's place. Closing eyes. Mining earth's memories, mastodon hunrws, mist of dawn, saber toothed tiger, Sita wanting me to be sober, and how I was holding her captive
+                     */
                     time: 124,
                     verse: 'The mistodawn, ha\'nt\'d by sobre-trooth tiedgirl cries,'
                 },
                 {
+                    /**
+                     * sunk in tarpit, lies. Torpid lies
+                     */
                     time: 128,
                     verse: 'sunk in tarpid lies.'
                 },
                 {
+                    /**
+                     * Holocene, hollow scene, brother and sister, taught him right, totem rite, familial guilt
+                     */
                     time: 131,
                     verse: 'In Hollowscene broughtour ancister toughtim rite,'
                 },
                 {
+                    /**
+                     * Loki and Freyja, lowkey and fried.
+                     */
                     time: 135,
                     verse: 'he sees Lowkey and Freyed!'
                 },
                 {
+                    /**
+                     * No worse and none the better, Norse and Nunavutter, Viking encounters with First Nations, leave as the red sun arrives, Leif Erikson, son of Eric the Red
+                     */
                     time: 139,
                     verse: 'Noworse and Nunavatter collide, Leif as the Red\'s son arrives.'
                 },
                 {
+                    /**
+                     * Memories and mummeries.
+                     */
                     time: 147,
                     verse: 'How old are these mummeries I have left to mine?'
                 }
             ],
             [
                 {
+                    /**
+                     * Pull switch on television. Polar switch. Insomniac, in some umiak.
+                     */
                     time: 154,
                     verse: 'Pullar switch, in-som\'umiak skims through channels snow blitz\'d…'
                 },
                 {
+                    /**
+                     * Counting irregular heartbeats.
+                     */
                     time: 161,
                     verse: 'Then pounds arrhythmetic heart,'
                 },
                 {
+                    /**
+                     * English buzzards, Rumspringa, rum spring.
+                     */
                     time: 165,
                     verse: 'Enguished buzzereds come unsated find Rumspring is parched.'
                 },
                 {
+                    /**
+                     * Deseret language of Mormons, black Latter Day saints, Rejoice, wrapped around like Finnegans Wake.
+                     */
                     time: 169,
                     verse: 'In mouth Deseret, black Letter-Day Sensed ahead… "Rejoyce!" bellow the'
                 }
