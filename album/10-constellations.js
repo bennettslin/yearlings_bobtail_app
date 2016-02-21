@@ -1,16 +1,8 @@
 exports.song = {
     title: 'Constellations!',
     speechBubbles: {
-        /**
-         * Mention being back visiting LA.
-         */
-        narrative: 'One summer night, my friends Ana, Howie, Tomer, and I drank Robitussin and explored the steam tunnels under UCLA pretending to be Mongols and Vikings invading the globe. ',
-        backstory: [
-            /**
-             * Finnegans Wake density of information, similar to Robitussin effect. Police's Ghost in the Machine
-             */
-            'After finishing James Joyce\'s <em>Ulysses</em>, I set out to read <em>Finnegan\'s Wake</em>, and while I only got through the first forty pages or so, ',
-        ]
+        narrative: 'One night back in Los Angeles, some friends and I explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, my friends were probably just humouring me. I wound up doing a lot of Robitussin that summer, and by the end of it, I was pretty insane. I eventually regained my grip on reality, but the world always seemed kind of different after that.',
+        backstory: 'While reading <em>Finnegans Wake</em>, I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, where time seems to stand still, and everything feels at once epic and unreal. The Police\'s <em>Ghost in the Machine</em> was also my soundtrack of choice on Robitussin, so I borrowed its style and atmosphere for this song.'
     },
     lyrics: {
         left: [

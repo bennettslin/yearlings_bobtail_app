@@ -2,7 +2,7 @@ exports.song = {
     title: 'Ash Wednesday',
     speechBubbles: {
         narrative: 'In college, I dated a nice Catholic girl named Catherine, who didn\'t think much of my lack of reading habit and broke up with me right before Ash Wednesday, the first day of Lent. So I decided to ash my own forehead and bump into her, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn\'t happen, but I did grow into a steady reader, and I probably have Catherine to thank for that.',
-        backstory: 'For a song about two people who couldn\'t be more different, I juxtaposed two genres that couldn\'t be more different, Arabic maqam and Renaissance polyphony. The Arabic quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter tone flat. The shrieking whistles, which remind me of subway trains braking in a tunnel, were made by overblowing into recorders.'
+        backstory: 'For a song about two people who couldn\'t be more different, I juxtaposed Arabic maqam and Renaissance polyphony. The Arabic quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter tone flat. The shrieking whistles, which remind me of subway trains braking in a tunnel, were made by overblowing into recorders.'
     },
     annotations: {
         o_captain_my_captain: {
