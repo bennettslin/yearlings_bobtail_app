@@ -1,7 +1,7 @@
 exports.song = {
     title: 'Constellations!',
     speechBubbles: {
-        narrative: 'One night back in Los Angeles, my friends Ana, Howie, Tomer, and I explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Mongols and Vikings and other waves of historical migration. In hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer, and by the end of it, I was pretty insane. I eventually regained my grip on reality, but the world always seemed rather different after that.',
+        narrative: 'I did a lot of Robitussin one college summer, and towards the end, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different after that. A few years later, my friends Ana, Howie, Tomer, and I explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Mongols and Vikings and other waves of historical migration. In hindsight, they were probably just humouring me.',
         backstory: 'While reading <em>Finnegans Wake</em>, I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police\'s <em>Ghost in the Machine</em> was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere for this song.'
     },
     annotations: {
@@ -12,9 +12,10 @@ exports.song = {
             description: 'Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we slowly make our way through the UCLA campus.'
         },
         heavin_some_ana: {
+            // TODO: Elaborate on Ana heaving and whispering?
             description: 'The first time you down a whole bottle of Robitussin, you may feel like retching.'
         },
-        whispures_a_low_sign_bein: {
+        whispures_a_low_sigh_bein: {
             description: '"Heaven\'s manna was pure psilocybin." At the time, I was intrigued by the role of psychedelic drugs in human history that I had understandably never been taught. One theory is that manna from heaven, based on its description in the Bible, was a psilocybin mushroom.',
             reference: 'https://en.wikipedia.org/wiki/Manna'
         },
@@ -25,7 +26,7 @@ exports.song = {
             description: 'The Book of Exodus recounts how the Israelites discovered manna during their trek out of Egypt.'
         },
         viking_den: {
-            description: 'I was the seasoned Robitussin user in the group. The others assumed its effects would be weaker than those of prescribed painkillers such as Vicodin. That night proved them very wrong.'
+            description: 'The Vikings were Norse seafarers who expanded outwards from Scandinavia beginning in the 8th century. Also, my friends, having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as Vicodin. The night will prove them wrong.'
         },
         walkyriens: {
             description: 'Backtrack to earlier that night. We buy the Robitussin from a Walgreens pharmacy. Also, the Valkyries in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.'
@@ -34,7 +35,7 @@ exports.song = {
             description: 'The Valkyries would bring the dead heroes to Valhalla, a majestic hall ruled by the god Odin. Also, the Walgreens aisles are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed…'
         },
         mead_tussin: {
-            description: 'Mead was the drink of the Norse gods, and we go with Wal-Tussin as our medicine of choice.'
+            description: 'Mead was the drink of the Norse gods, and we go with Wal-Tussin as our "medicine" of choice.'
         },
         quouffs_uppraissed: {
             description: 'Having appraised our quaffs, we now upraise them. And whatever coughs we might have, they will definitely be suppressed.'
@@ -44,36 +45,39 @@ exports.song = {
             description: 'The Kalevala is the national epic poem of Finland. Also, as a teenager I hated growing up in the San Fernando Valley of Southern California, and the days before I could leave seemed to drag on forever.'
         },
         finnugreec_tongue: {
-            description: 'The Finnish language belongs in the Finno-Ugric family. Also, the licorice taste of Robitussin lingering in our mouths is reminiscent of the spice fenugreek.',
+            description: 'The Finnish language belongs in the Finno-Ugric family. Also, the licorice taste of Robitussin, which lingers in our mouths, is reminiscent of the spice fenugreek.',
             reference: 'https://en.wikipedia.org/wiki/Finno-Ugric_languages'
         },
         lapps_are_highmen: {
             description: 'The Lapps are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally high, as the Robitussin "laps our hymen," since my friends are trying it for the first time.'
         },
         makeyars_mygrate: {
-            description: 'Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the hidden entrances to the steam tunnels, which they have explored before. Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.'
+            description: 'Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.'
         },
         mong_ol: {
-            // TODO: Elaborate on Mongols
-            description: 'Magyars and Mongols share common genetic origins.'
+            description: 'The Magyars share genetic origins with the Mongols, a Central Asian people.'
         },
         psealed_off_drains: {
-            // TODO: Need to spell out sealed off drains?
-            description: 'In those days, Robitussin would also contain pseudoephedrine, a decongestant, as an active ingredient. Because of its use in the manufacture of methamphetamine, however, this is no longer the case.'
+            description: 'In those days, Robitussin would typically include pseudoephedrine, a decongestant, as another active ingredient. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.'
         },
         down_the_steppes: {
             description: 'In the 13th century, the Mongols swept down from the Central Asian steppes and began their conquests.'
         },
-        drinkhis_khan: {
+        drinkhis_khan_once_toomujin: {
+            description: 'Genghis Khan, who was born Temujin, founded the Mongol empire.'
+        },
+        slain_the_teeto_tatars: {
+            description: 'Genghis Khan was able to unite the Mongols by defeating the Tatars, a rival tribe. Also, "teeter-totters" and "teetotalers." I was wavering on taking Robitussin earlier that night, having sworn never again, but once the "drink is gone" and I\'ve had "too much in," the familiar sensation kicks in, and it feels awesome.'
+        },
+        tomer_layin_the_seed: {
+            description: 'Tamerlane, a descendant of Genghis Khan, continued the Turko-Mongol expansion southward. Also, as Tomer drops crumbs in jest to leave a trail, I observe that it\'s like he\'s planting seeds that will sprout into nations.'
+        },
+        howie_led_the_feat: {
             description: ''
         },
-        once_toomujin: {
+        avatars: {
             description: ''
-        },
-        slain_the_teeto_tartars: {
-            description: ''
-        },
-
+        }
 
     },
     lyrics: {
@@ -101,14 +105,11 @@ exports.song = {
                         },
                         {
                             anchor: 'whispures a low sigh, bein\'…',
-                            annotationKey: 'whispures_a_low_sign_bein'
+                            annotationKey: 'whispures_a_low_sigh_bein'
                         }
                     ]
                 },
                 {
-                    /**
-                     * DXM, Exodus, Vicodin
-                     */
                     time: 11,
                     verse: [
                         'of',
@@ -207,23 +208,16 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Genghis Khan once Temujin, drink is gone, too much in, teeter-totter, teetotaler, Genghis Khan defeated the Tatars to unite the Mongols.
-                     */
                     time: 45,
                     verse: [
                         {
-                            anchor: 'Drinkhis Khan,',
-                            annotationKey: 'drinkhis_khan'
-                        },
-                        {
-                            anchor: 'once Toomujin,',
-                            annotationKey: 'once_toomujin'
+                            anchor: 'Drinkhis Khan, once Toomujin,',
+                            annotationKey: 'drinkhis_khan_once_toomujin'
                         },
                         'has',
                         {
-                            anchor: 'slain the teeto-Tartars!',
-                            annotationKey: 'slain_the_teeto_tartars'
+                            anchor: 'slain the teeto-Tatars!',
+                            annotationKey: 'slain_the_teeto_tatars'
                         }
                     ]
                 },
@@ -371,7 +365,7 @@ exports.song = {
                 },
                 {
                     /**
-                     * No worse and none the better, Norse and Nunavutter, Viking encounters with First Nations, leave as the red sun arrives, Leif Erikson, son of Eric the Red
+                     * No worse and none the better, Norse and Nunavutter, Viking encounters with First Nations, leave as the red sun arrives, Leif Erikson, son of Eric the Red, we see the vvikings again
                      */
                     time: 139,
                     verse: 'Noworse and Nunavatter collide, Leif as the Red\'s son arrives.'
