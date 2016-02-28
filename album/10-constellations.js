@@ -1,7 +1,7 @@
 exports.song = {
     title: 'Constellations!',
     speechBubbles: {
-        narrative: 'I did a lot of Robitussin one college summer, and towards the end, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different after that. A few years later, my friends Ana, Howie, Tomer, and I explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Mongols and Vikings and other waves of historical migration. In hindsight, they were probably just humouring me.',
+        narrative: 'I did a lot of Robitussin one college summer, and towards the end, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different after that. A few years later, my friends Ana, Howie, Tomer, and I explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me.',
         backstory: 'While reading <em>Finnegans Wake</em>, I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police\'s <em>Ghost in the Machine</em> was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere for this song.'
     },
     annotations: {
@@ -12,8 +12,7 @@ exports.song = {
             description: 'Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we slowly make our way through the UCLA campus.'
         },
         heavin_some_ana: {
-            // TODO: Elaborate on Ana heaving and whispering?
-            description: 'The first time you down a whole bottle of Robitussin, you may feel like retching.'
+            description: '"Heaving some, Ana whispers a low sigh." When you first down a whole bottle of Robitussin, you may feel like retching. Within a moment, though, it feels like your lungs collapse and shrivel away, and you\'re peacefully breathing through gills underwater.'
         },
         whispures_a_low_sigh_bein: {
             description: '"Heaven\'s manna was pure psilocybin." At the time, I was intrigued by the role of psychedelic drugs in human history that I had understandably never been taught. One theory is that manna from heaven, based on its description in the Bible, was a psilocybin mushroom.',
@@ -55,30 +54,47 @@ exports.song = {
             description: 'Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.'
         },
         mong_ol: {
-            description: 'The Magyars share genetic origins with the Mongols, a Central Asian people.'
+            description: 'The Magyars share genetic origins with the Mongols, another East Asian nomadic people.'
         },
         psealed_off_drains: {
             description: 'In those days, Robitussin would typically include pseudoephedrine, a decongestant, as another active ingredient. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.'
         },
         down_the_steppes: {
-            description: 'In the 13th century, the Mongols swept down from the Central Asian steppes and began their conquests.'
+            description: 'In the 13th century, the Mongols swept down from the East Asian steppes and began their conquests.'
         },
         drinkhis_khan_once_toomujin: {
-            description: 'Genghis Khan, who was born Temujin, founded the Mongol empire.'
+            description: 'Genghis Khan, who was born Temujin, founded the Mongol Empire.'
         },
         slain_the_teeto_tatars: {
             description: 'Genghis Khan was able to unite the Mongols by defeating the Tatars, a rival tribe. Also, "teeter-totters" and "teetotalers." I was wavering on taking Robitussin earlier that night, having sworn never again, but once the "drink is gone" and I\'ve had "too much in," the familiar sensation kicks in, and it feels awesome.'
         },
         tomer_layin_the_seed: {
-            description: 'Tamerlane, a descendant of Genghis Khan, continued the Turko-Mongol expansion southward. Also, as Tomer drops crumbs in jest to leave a trail, I observe that it\'s like he\'s planting seeds that will sprout into nations.'
+            description: '"Tamerlane the seed." Tamerlane, a descendant of Genghis Khan, continued the Turko-Mongol expansion into Central Asia. Also, as Tomer drops crumbs in jest to leave a trail, I observe that it\'s like he\'s planting seeds that will sprout into nations.'
         },
-        howie_led_the_feat: {
+        howie_led_the_feat_of_avatars: {
+            description: 'Howie is walking as if his feet are made of lead. Also, "how he led the feat of avatars." The Mughals, descendants of Tamerlane, conquered the Hindu populations of the Indian subcontinent. In Hinduism, an avatar is a deity\'s earthbound incarnation, and some avatars are speculated to be historical figures whose exploits predate written tradition.'
+        },
+        indus_trail_sewerce: {
+            description: 'As we wind through industrial sewers pretending to be Mughal invaders, I explain to my friends the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."'
+        },
+        questurns_indo_hairapins: {
+            description: 'Our "quest turns into hairpins," as I continue to blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.'
+        },
+        forsi_ahuro: {
             description: ''
         },
-        avatars: {
+        sensegreat_devas_dayshone: {
+            description: ''
+        },
+        to_soma_up: {
+            description: ''
+        },
+        our_youn_invedas: {
+            description: ''
+        },
+        unsolft_quarry_rest: {
             description: ''
         }
-
     },
     lyrics: {
         left: [
@@ -232,13 +248,8 @@ exports.song = {
                             annotationKey: 'tomer_layin_the_seed'
                         },
                         {
-                            anchor: 'Howie led the feat',
-                            annotationKey: 'howie_led_the_feat'
-                        },
-                        'of',
-                        {
-                            anchor: 'avatars…',
-                            annotationKey: 'avatars'
+                            anchor: 'Howie led the feat of avatars…',
+                            annotationKey: 'howie_led_the_feat_of_avatars'
                         }
                     ]
                 }
@@ -249,21 +260,53 @@ exports.song = {
                      * Indus trail source, industrial sewers, quest turns into hairpins, questions Indo-Harappan
                      */
                     time: 56,
-                    verse: 'Indus-trail sewerce, questurns Indo Hairapins:'
+                    verse: [
+                        {
+                            anchor: 'Indus-trail sewerce,',
+                            annotationKey: 'indus_trail_sewerce'
+                        },
+                        {
+                            anchor: 'questurns Indo Hairapins:',
+                            annotationKey: 'questurns_indo_hairapins'
+                        }
+                    ]
                 },
                 {
                     /**
                      * Farsi ahura, Sanskrit deva's day shone, foresee a hero or sense great devastation
                      */
                     time: 60,
-                    verse: 'Forsi ahuro or Sensegreat devas\'dayshone?'
+                    verse: [
+                        {
+                            anchor: 'Forsi ahuro',
+                            annotationKey: 'forsi_ahuro'
+                        },
+                        'or',
+                        {
+                            anchor: 'Sensegreat devas\'dayshone?',
+                            annotationKey: 'sensegreat_devas_dayshone'
+                        }
+                    ]
                 },
                 {
                     /**
                      * to sum up, soma, Aryan in Vedas, our young invaders, unsolved query rest, on soft quarry rest
                      */
                     time: 64,
-                    verse: 'To soma up, our-youn\' invedas unsolft quarry rest…'
+                    verse: [
+                        {
+                            anchor: 'To soma up,',
+                            annotationKey: 'to_soma_up'
+                        },
+                        {
+                            anchor: 'our-youn\' invedas',
+                            annotationKey: 'our_youn_invedas'
+                        },
+                        {
+                            anchor: 'unsolft quarry rest…',
+                            annotationKey: 'unsolft_quarry_rest'
+                        }
+                    ]
                 },
                 {
                     /**
