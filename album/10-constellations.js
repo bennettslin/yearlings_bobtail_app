@@ -78,7 +78,7 @@ exports.song = {
             description: 'As we wind through industrial sewers pretending to be Mughal invaders, I explain to my friends the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."'
         },
         questurns_indo_hairapins: {
-            description: 'Our "quest turns into hairpins," as I continue to blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.'
+            description: 'Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.'
         },
         forsi_ahuro: {
             description: ''
@@ -87,14 +87,34 @@ exports.song = {
             description: ''
         },
         to_soma_up: {
-            description: ''
+            description: 'In the Vedas, <i>soma</i> is a ritual drink prepared from an unidentified botanical substance believed by some scholars to have held psychedelic properties. In the Avesta, it is referred to as <i>haoma.</i>',
+            reference: 'https://en.wikipedia.org/wiki/Botanical_identity_of_soma%E2%80%93haoma'
         },
         our_youn_invedas: {
-            description: ''
+            description: 'Although the Aryans spoken of in the Vedas and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," this "unsolved query" must be put to rest, before my friends lose their minds.'
         },
         unsolft_quarry_rest: {
-            description: ''
-        }
+            description: '"Our young invaders on soft quarry rest." We come to a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches.'
+        },
+        ourevian_battles_spent: {
+            description: '"Arabian battles spent." With the rise of Islam, the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and the Evian bottles that we had each brought into the steam tunnels were now empty.'
+        },
+        a_duct_uighuress: {
+            description: '"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.'
+        },
+        are_melee_tapirs: {
+            description: '"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to its prehistoric ancestor <i>Eohippus</i>, or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many historical peoples had believed to have been reached.'
+        },
+        the_dusc_horse_yet: {
+            description: '"Our melee tapers the discourse yet." Wielding scavenged scrap materials like swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.'
+        },
+        khlmair_city_ingcar_wet: {
+            description: 'Angkor Wat, or "Temple City," is a 12th-century Hindu temple built by the Khmer Empire in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie\'s dad had bought in bulk.'
+        },
+        scimitary_of_fence: {
+            description: 'Having rested and reenergised, the plan of attack now is to visit the gravesite of our friend Adam. And so we renew our "scimitar offence" as we drive through the "cemetery fence."'
+        },
+
     },
     lyrics: {
         left: [
@@ -238,9 +258,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Tamerlane the seed of Genghis Khan, Tomer laying the seed (or breadcrumbs), lead the feet, avatar is reincarnation of deity
-                     */
                     time: 49,
                     verse: [
                         {
@@ -256,9 +273,6 @@ exports.song = {
             ],
             [
                 {
-                    /**
-                     * Indus trail source, industrial sewers, quest turns into hairpins, questions Indo-Harappan
-                     */
                     time: 56,
                     verse: [
                         {
@@ -289,9 +303,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * to sum up, soma, Aryan in Vedas, our young invaders, unsolved query rest, on soft quarry rest
-                     */
                     time: 64,
                     verse: [
                         {
@@ -309,25 +320,48 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Arabian battles spent, our Evian bottles spent, a duct we egress, abduct Uighuress
-                     */
                     time: 70,
-                    verse: 'Ourevian battles spent, a\'duct Uighuress.'
+                    verse: [
+                        {
+                            anchor: 'Ourevian battles spent,',
+                            annotationKey: 'ourevian_battles_spent'
+                        },
+                        {
+                            anchor: 'a\'duct Uighuress.',
+                            annotationKey: 'a_duct_uighuress'
+                        }
+                    ]
                 },
                 {
-                    /**
-                     * Our melee tapers the discourse, are Malay tapirs the dusk horse? (Mention the Eohippus dawn horse, new flora for explorers)
-                     */
                     time: 75,
-                    verse: 'Are Melee tapirs the dusc-horse yet…?'
+                    verse: [
+                        {
+                            anchor: 'Are Melee tapirs',
+                            annotationKey: 'are_melee_tapirs'
+                        },
+                        {
+                            anchor: 'the dusc-horse yet…?',
+                            annotationKey: 'the_dusc_horse_yet'
+                        },
+                    ]
                 },
                 {
                     /**
                      * Khmer city Angkor Wat, calm air sitting in car wet, drenched from Evian bottles in car, climbed the cemetery fence, scimitar offense
                      */
                     time: 79,
-                    verse: 'From the Khlmair city Ingcar Wet, to war: scimitary of\'fence!'
+                    verse: [
+                        'From the',
+                        {
+                            anchor: 'Khlmair city Ingcar Wet,',
+                            annotationKey: 'khlmair_city_ingcar_wet'
+                        },
+                        'to war:',
+                        {
+                            anchor: 'scimitary of\'fence!',
+                            annotationKey: 'scimitary_of_fence'
+                        }
+                    ]
                 }
             ],
             [
@@ -336,7 +370,9 @@ exports.song = {
                      * Poor sod, four feet under, forfeit Siberian plains
                      */
                     time: 86,
-                    verse: 'Pour sod, fourfeit tundr\'s Siburial plains…'
+                    verse: [
+                        'Pour sod, fourfeit tundr\'s Siburial plains…'
+                    ]
                 },
                 {
                     /**
