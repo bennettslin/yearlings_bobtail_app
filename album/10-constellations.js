@@ -103,10 +103,10 @@ exports.song = {
             description: '"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.'
         },
         are_melee_tapirs: {
-            description: '"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to its prehistoric ancestor <i>Eohippus</i>, or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many historical peoples had believed to have been reached.'
+            description: '"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to its prehistoric ancestor <i>Eohippus</i>, or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many historical peoples believed they had reached.'
         },
         the_dusc_horse_yet: {
-            description: '"Our melee tapers the discourse yet." Wielding scavenged scrap materials like swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.'
+            description: '"Our melee tapers the discourse yet." Wielding scavenged scrap materials as if they were swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.'
         },
         khlmair_city_ingcar_wet: {
             description: 'Angkor Wat, or "Temple City," is a 12th-century Hindu temple built by the Khmer Empire in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie\'s dad had bought in bulk.'
@@ -124,7 +124,7 @@ exports.song = {
             description: 'We park the car and head up "a ridge of lawn."'
         },
         forcd_nations_sank: {
-            description: '"A bridge of land trod on by First Nations sank." Native Americans, known to Canada as the First Nations, were forced to leave their Asian homelands due to further scarcity of resources. According to the Beringia theory, they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.'
+            description: '"A bridge of land trod on by First Nations sank." Native Americans, known in Canada as the First Nations, were forced to leave their Asian homelands due to growing scarcity of resources. According to the Beringia theory, they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.'
         },
         past_a_cross_bearing_straight: {
             description: 'We "passed a cross, bearing straight," just as those before us had "passed across the Bering Strait."'
@@ -133,7 +133,7 @@ exports.song = {
             description: 'A separate but not exclusive theory is that some migrations occurred by boat. These travellers, of course, would have rowed with the aurora borealis to their left. Also, wishing to be respectful, we\'ve left our "hero\'s auras" behind in the car.'
         },
         audamns_grave: {
-            description: 'We reach Adam\'s grave, just as the First Nations perish their fear of the permanent autumn encroaching the homelands they have abandoned.'
+            description: 'We reach Adam\'s grave, just as the First Nations, having discovered more bountiful lands, perish their fears of a permanent autumn.'
         },
         ill_sail_this_sea: {
             description: 'Standing next to Adam\'s headstone under the predawn sky, I\'m suddenly overcome with a profound sense of clarity and purpose, and I renew my determination to finish <i>Yearling\'s Bobtail</i> guided solely by my artistic instincts.'
@@ -142,7 +142,7 @@ exports.song = {
             description: 'Back in the car, this newfound clarity proves to be short-lived. In its late stages, Robitussin continues to offer vivid hallucinations once you close your eyes, which is what I\'m doing on the way back to Howie\'s place, as the "mist of dawn" breaks.'
         },
         hantd_by_sober_trooth_tiedgirl: {
-            description: 'As I indulge in mental visions of a "mastodon hunted by sabre-toothed tigers," I am haunted by the sober truth of keeping Sita captive in a codependent relationship that I wish to leave.'
+            description: 'As I indulge in mental visions of a "mastodon hunted by sabre-toothed tigers," I\'m haunted by the sober truth that I continue to keep Sita captive in a codependent relationship that I\'m eager to leave.'
         },
         sunk_in_tarpid_lies: {
             description: 'Tar pits occurs when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."'
@@ -151,8 +151,7 @@ exports.song = {
             description: 'The Holocene is the current geological epoch that began with the first human settlements.'
         },
         broughtour_ancister_toughtim_rite: {
-            // TODO
-            description: 'We humans brought the totems and rites of our ancestors with us into the civilisations we created.'
+            description: 'We humans brought the totems and rites of our ancestors into the modern civilisations we created. Meanwhile, as I detachedly observe my drugged-out self, conscious of the high expectations placed on me and my sister, and our shared responsibility for our autistic brother, I sarcastically note in the third person that "brother and sister taught him right."'
         }
 
     },
@@ -498,9 +497,6 @@ exports.song = {
                     }
                 },
                 {
-                    /**
-                     * Holocene, hollow scene, brother and sister, taught him right, totem rite, familial guilt
-                     */
                     time: 131,
                     verse: [
                         'In',
@@ -519,7 +515,13 @@ exports.song = {
                      * Loki and Freyja, lowkey and fried.
                      */
                     time: 135,
-                    verse: 'he sees Lowkey and Freyed!'
+                    verse: [
+                        'he sees',
+                        {
+                            anchor: 'Lowkey and Freyed!',
+                            annotationKey: 'lowkey_and_freyed'
+                        }
+                    ]
                 },
                 {
                     /**
