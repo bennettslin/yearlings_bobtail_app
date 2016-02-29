@@ -528,14 +528,32 @@ exports.song = {
                      * No worse and none the better, Norse and Nunavutter, Viking encounters with First Nations, leave as the red sun arrives, Leif Erikson, son of Eric the Red, we see the vvikings again
                      */
                     time: 139,
-                    verse: 'Noworse and Nunavatter collide, Leif as the Red\'s son arrives.'
+                    verse: [
+                        {
+                            anchor: 'Noworse and Nunavatter',
+                            annotationKey: 'noworse_and_nunavatter'
+                        },
+                        'collide,',
+                        {
+                            anchor: 'Leif as the Red\'s son',
+                            annotationKey: 'leif_as_the_reds_son'
+                        },
+                        'arrives.'
+                    ]
                 },
                 {
                     /**
                      * Memories and mummeries.
                      */
                     time: 147,
-                    verse: 'How old are these mummeries I have left to mine?'
+                    verse: [
+                        'How old are',
+                        {
+                            anchor: 'these mummeries',
+                            annotationKey: 'these_mummeries'
+                        },
+                        'I have left to mine?'
+                    ]
                 }
             ],
             [
@@ -544,28 +562,65 @@ exports.song = {
                      * Pull switch on television. Polar switch. Insomniac, in some umiak.
                      */
                     time: 154,
-                    verse: 'Pullar switch, in-som\'umiak skims through channels snow blitz\'d…'
+                    verse: [
+                        'Pullar switch,',
+                        {
+                            anchor: 'in-som\'umiak skims through channels',
+                            annotationKey: 'in_somumiak_skims_through_channels'
+                        },
+                        'snow blitz\'d…'
+                    ]
                 },
                 {
                     /**
                      * Counting irregular heartbeats.
                      */
                     time: 161,
-                    verse: 'Then pounds arrhythmetic heart,'
+                    verse: [
+                        'Then pounds',
+                        {
+                            anchor: 'arrhythmetic heart,',
+                            annotationKey: 'arrhythmetic_heart'
+                        }
+                    ]
                 },
                 {
                     /**
                      * English buzzards, Rumspringa, rum spring.
                      */
                     time: 165,
-                    verse: 'Enguished buzzereds come unsated find Rumspring is parched.'
+                    verse: [
+                        {
+                            anchor: 'Enguished buzzereds',
+                            annotationKey: 'enguished_buzzereds'
+                        },
+                        'come unsated find',
+                        {
+                            anchor: 'Rumspring',
+                            annotationKey: 'rumspring'
+                        },
+                        'is parched.'
+                    ]
                 },
                 {
                     /**
                      * Deseret language of Mormons, black Latter Day saints, Rejoice, wrapped around like Finnegans Wake.
                      */
                     time: 169,
-                    verse: 'In mouth Deseret, black Letter-Day Sensed ahead… "Rejoyce!" bellow the'
+                    verse: [
+                        {
+                            anchor: 'In mouth Deseret,',
+                            annotationKey: 'in_mouth_deseret'
+                        },
+                        {
+                            anchor: 'black Letter-Day Sensed ahead…',
+                            annotationKey: 'black_letter_day_sensed_ahead'
+                        },
+                        {
+                            anchor: '"Rejoyce!" bellow the',
+                            annotationKey: 'rejoyce_bellow_the'
+                        }
+                    ]
                 }
             ]
         ]
