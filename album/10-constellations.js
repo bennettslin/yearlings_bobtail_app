@@ -6,13 +6,13 @@ exports.song = {
     },
     annotations: {
         reverends: {
-            description: '<em>Finnegans Wake</em> opens with the line "riverrun, past Eve and Adam\'s." I treated Robitussin as a semireligious experience, which typically opened with The Police\'s "Secret Journey," with its line, "You will be a holy man."'
+            description: '<em>Finnegans Wake</em> opens with the line "riverrun, past Eve and Adam\'s." At my request, Howie had played The Police\'s "Secret Journey" in the car, and its line, "You will be a holy man," serves to remind me that I\'ve always treated Robitussin as a semireligious experience, and that this night will be no different.'
         },
         paused_stiff_in_tandem: {
             description: 'Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we slowly make our way through the UCLA campus.'
         },
         heavin_some_ana: {
-            description: '"Heaving some, Ana whispers a low sigh." When you first down a whole bottle of Robitussin, you may feel like retching. Within a moment, though, it feels like your lungs collapse and shrivel away, and you\'re peacefully breathing through gills underwater.'
+            description: '"Heaving some, Ana whispers a low sigh." When you first down a whole bottle of Robitussin, you may feel like retching. Within a moment, though, it feels like your lungs have shrivelled away, and you\'re peacefully breathing through gills underwater.'
         },
         whispures_a_low_sigh_bein: {
             description: '"Heaven\'s manna was pure psilocybin." At the time, I was intrigued by the role of psychedelic drugs in human history that I had understandably never been taught. One theory is that manna from heaven, based on its description in the Bible, was a psilocybin mushroom.',
@@ -78,7 +78,7 @@ exports.song = {
             description: 'As we wind through industrial sewers pretending to be Mughal invaders, I explain to my friends the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."'
         },
         questurns_indo_hairapins: {
-            description: 'Our "quest turns into hairpins," as I continue to blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.'
+            description: 'Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.'
         },
         forsi_ahuro: {
             description: 'In Farsi, the Iranian language, <i>ahura</i> is the word for an Avestan deity. In the Vedic texts of ancient India, <i>asura</i> refers to a demon. This suggests that a rift occurred amongst the Indo-Iranian people based on religious differences, and because the Vedas precede the Avesta, it\'s likely that the apostates left the Indian subcontinent and moved westward to the Iranian basin, rather than the reverse.'
@@ -87,14 +87,74 @@ exports.song = {
             description: 'Moreover, in Sanskrit, the ancient Indian language, <i>deva</i> is the word for a Vedic deity, while <i>daeva</i> in the Avesta refers to a demon. '
         },
         to_soma_up: {
-            description: ''
+            description: 'In the Vedas, <i>soma</i> is a ritual drink prepared from an unidentified botanical substance believed by some scholars to have held psychedelic properties. In the Avesta, it is referred to as <i>haoma.</i>',
+            reference: 'https://en.wikipedia.org/wiki/Botanical_identity_of_soma%E2%80%93haoma'
         },
         our_youn_invedas: {
-            description: ''
+            description: 'Although the Aryans spoken of in the Vedas and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," this "unsolved query" must be put to rest, before my friends lose their minds.'
         },
         unsolft_quarry_rest: {
-            description: ''
+            description: '"Our young invaders on soft quarry rest." We come to a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches.'
+        },
+        ourevian_battles_spent: {
+            description: '"Arabian battles spent." With the rise of Islam, the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and the Evian bottles that we had each brought into the steam tunnels were now empty.'
+        },
+        aduct_uighuress: {
+            description: '"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.'
+        },
+        are_melee_tapirs: {
+            description: '"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to its prehistoric ancestor <i>Eohippus</i>, or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many historical peoples had believed to have been reached.'
+        },
+        the_dusc_horse_yet: {
+            description: '"Our melee tapers the discourse yet." Wielding scavenged scrap materials like swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.'
+        },
+        khlmair_city_ingcar_wet: {
+            description: 'Angkor Wat, or "Temple City," is a 12th-century Hindu temple built by the Khmer Empire in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie\'s dad had bought in bulk.'
+        },
+        scimitary_offence: {
+            description: 'Having rested and reenergised, the plan of attack now is to visit the grave of our friend Adam. So we renew our "scimitar offence" and drive through the "cemetery fence."'
+        },
+        pour_sod_fourfeit_tundrs: {
+            description: 'We bemoan the "poor sod" who had sod poured on him from "four feet under."'
+        },
+        siburial_plains: {
+            description: 'The Americas were first settled by northeast Asian populations who gladly forfeited the "tundra\'s Siberian plains," which otherwise would have served as their burial grounds.'
+        },
+        upridge_o_lawn: {
+            description: 'We park the car and head up "a ridge of lawn."'
+        },
+        forcd_nations_sank: {
+            description: '"A bridge of land trod on by First Nations sank." Native Americans, known to Canada as the First Nations, were forced to leave their Asian homelands due to further scarcity of resources. According to the Beringia theory, they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.'
+        },
+        past_a_cross_bearing_straight: {
+            description: 'We "passed a cross, bearing straight," just as those before us had "passed across the Bering Strait."'
+        },
+        herows_ourauras_left: {
+            description: 'A separate but not exclusive theory is that some migrations occurred by boat. These travellers, of course, would have rowed with the aurora borealis to their left. Also, wishing to be respectful, we\'ve left our "hero\'s auras" behind in the car.'
+        },
+        audamns_grave: {
+            description: 'We reach Adam\'s grave, just as the First Nations perish their fear of the permanent autumn encroaching the homelands they have abandoned.'
+        },
+        ill_sail_this_sea: {
+            description: 'Standing next to Adam\'s headstone under the predawn sky, I\'m suddenly overcome with a profound sense of clarity and purpose, and I renew my determination to finish <i>Yearling\'s Bobtail</i> guided solely by my artistic instincts.'
+        },
+        mistodawn: {
+            description: 'Back in the car, this newfound clarity proves to be short-lived. In its late stages, Robitussin continues to offer vivid hallucinations once you close your eyes, which is what I\'m doing on the way back to Howie\'s place, as the "mist of dawn" breaks.'
+        },
+        hantd_by_sober_trooth_tiedgirl: {
+            description: 'As I indulge in mental visions of a "mastodon hunted by sabre-toothed tigers," I am haunted by the sober truth of keeping Sita captive in a codependent relationship that I wish to leave.'
+        },
+        sunk_in_tarpid_lies: {
+            description: 'Tar pits occurs when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."'
+        },
+        hollowscene: {
+            description: 'The Holocene is the current geological epoch that began with the first human settlements.'
+        },
+        broughtour_ancister_toughtim_rite: {
+            // TODO
+            description: 'We humans brought the totems and rites of our ancestors with us into the civilisations we created.'
         }
+
     },
     lyrics: {
         left: [
@@ -238,9 +298,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Tamerlane the seed of Genghis Khan, Tomer laying the seed (or breadcrumbs), lead the feet, avatar is reincarnation of deity
-                     */
                     time: 49,
                     verse: [
                         {
@@ -256,9 +313,6 @@ exports.song = {
             ],
             [
                 {
-                    /**
-                     * Indus trail source, industrial sewers, quest turns into hairpins, questions Indo-Harappan
-                     */
                     time: 56,
                     verse: [
                         {
@@ -289,9 +343,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * to sum up, soma, Aryan in Vedas, our young invaders, unsolved query rest, on soft quarry rest
-                     */
                     time: 64,
                     verse: [
                         {
@@ -309,62 +360,102 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Arabian battles spent, our Evian bottles spent, a duct we egress, abduct Uighuress
-                     */
                     time: 70,
-                    verse: 'Ourevian battles spent, a\'duct Uighuress.'
+                    verse: [
+                        {
+                            anchor: 'Ourevian battles spent,',
+                            annotationKey: 'ourevian_battles_spent'
+                        },
+                        {
+                            anchor: 'a\'duct Uighuress.',
+                            annotationKey: 'aduct_uighuress'
+                        }
+                    ]
                 },
                 {
-                    /**
-                     * Our melee tapers the discourse, are Malay tapirs the dusk horse? (Mention the Eohippus dawn horse, new flora for explorers)
-                     */
                     time: 75,
-                    verse: 'Are Melee tapirs the dusc-horse yet…?'
+                    verse: [
+                        {
+                            anchor: 'Are Melee tapirs',
+                            annotationKey: 'are_melee_tapirs'
+                        },
+                        {
+                            anchor: 'the dusc-horse yet…?',
+                            annotationKey: 'the_dusc_horse_yet'
+                        },
+                    ]
                 },
                 {
-                    /**
-                     * Khmer city Angkor Wat, calm air sitting in car wet, drenched from Evian bottles in car, climbed the cemetery fence, scimitar offense
-                     */
                     time: 79,
-                    verse: 'From the Khlmair city Ingcar Wet, to war: scimitary of\'fence!'
+                    verse: [
+                        'From the',
+                        {
+                            anchor: 'Khlmair city Ingcar Wet,',
+                            annotationKey: 'khlmair_city_ingcar_wet'
+                        },
+                        'to war:',
+                        {
+                            anchor: 'scimitary of\'fence!',
+                            annotationKey: 'scimitary_offence'
+                        }
+                    ]
                 }
             ],
             [
                 {
-                    /**
-                     * Poor sod, four feet under, forfeit Siberian plains
-                     */
                     time: 86,
-                    verse: 'Pour sod, fourfeit tundr\'s Siburial plains…'
+                    verse: [
+                        {
+                            anchor: 'Pour sod, fourfeit tundr\'s',
+                            annotationKey: 'pour_sod_fourfeit_tundrs'
+                        },
+                        {
+                            anchor: 'Siburial plains…',
+                            annotationKey: 'siburial_plains'
+                        }
+                    ]
                 },
                 {
-                    /**
-                     * Up ridge of lawn, a bridge of land, First Nations
-                     */
                     time: 94,
-                    verse: 'Upridge o\' lawn trod on by forc\'d nations sank…'
+                    verse: [
+                        {
+                            anchor: 'Upridge o\' lawn',
+                            annotationKey: 'upridge_o_lawn'
+                        },
+                        'trod on by',
+                        {
+                            anchor: 'forc\'d nations sank…',
+                            annotationKey: 'forcd_nations_sank'
+                        }
+                    ]
                 },
                 {
-                    /**
-                     * Across Bering Strait
-                     */
                     time: 101,
-                    verse: 'But past a cross Bearing Straight,'
+                    verse: [
+                        'But',
+                        {
+                            anchor: 'past a cross Bearing Straight,',
+                            annotationKey: 'past_a_cross_bearing_straight'
+                        }
+                    ]
                 },
                 {
-                    /**
-                     * He rows. (First Nations came in canoes?) Aurora borealis to the left. Our auras left. Adam's grave.
-                     */
                     time: 103,
-                    verse: 'herows—ourauras left—to Audamn\'s grave.'
+                    verse: [
+                        {
+                            anchor: 'herows—ourauras left—',
+                            annotationKey: 'herows_ourauras_left'
+                        },
+                        'to',
+                        {
+                            anchor: 'Audamn\'s grave.',
+                            annotationKey: 'audamns_grave'
+                        }
+                    ]
                 }
             ],
             [
                 {
-                    /**
-                     * Moment of clarity.
-                     */
                     time: 109,
                     verse: 'And now without a chart,'
                 },
@@ -374,30 +465,54 @@ exports.song = {
                 },
                 {
                     time: 116,
-                    verse: 'I\'ll sail this sea, there is only me and my northern star!'
+                    verse: [
+                        {
+                            anchor: 'I\'ll sail this sea,',
+                            annotationKey: 'ill_sail_this_sea'
+                        },
+                        'there is only me and my northern star!'
+                    ]
                 }
             ],
             [
                 {
-                    /**
-                     * Clarity is shortlived, as back in car. Driving back to Howie's place. Closing eyes. Mining earth's memories, mastodon hunrws, mist of dawn, saber toothed tiger, Sita wanting me to be sober, and how I was holding her captive
-                     */
                     time: 124,
-                    verse: 'The mistodawn, ha\'nt\'d by sobre-trooth tiedgirl cries,'
+                    verse: [
+                        'The',
+                        {
+                            anchor: 'mistodawn,',
+                            annotationKey: 'mistodawn'
+                        },
+                        {
+                            anchor: 'ha\'nt\'d by sobre-trooth tiedgirl',
+                            annotationKey: 'hantd_by_sober_trooth_tiedgirl'
+                        },
+                        'cries,'
+                    ]
                 },
                 {
-                    /**
-                     * sunk in tarpit, lies. Torpid lies
-                     */
                     time: 128,
-                    verse: 'sunk in tarpid lies.'
+                    verse: {
+                        anchor: 'sunk in tarpid lies.',
+                        annotationKey: 'sunk_in_tarpid_lies'
+                    }
                 },
                 {
                     /**
                      * Holocene, hollow scene, brother and sister, taught him right, totem rite, familial guilt
                      */
                     time: 131,
-                    verse: 'In Hollowscene broughtour ancister toughtim rite,'
+                    verse: [
+                        'In',
+                        {
+                            anchor: 'Hollowscene',
+                            annotationKey: 'hollowscene'
+                        },
+                        {
+                            anchor: 'broughtour ancister toughtim rite,',
+                            annotationKey: 'broughtour_ancister_toughtim_rite'
+                        }
+                    ]
                 },
                 {
                     /**
