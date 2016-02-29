@@ -54,7 +54,7 @@ exports.song = {
             description: 'Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.'
         },
         mong_ol: {
-            description: 'The Magyars share genetic origins with the Mongols, another East Asian nomadic people.'
+            description: 'The Magyars share genetic origins with the Mongols, an East Asian nomadic people.'
         },
         psealed_off_drains: {
             description: 'In those days, Robitussin would typically include pseudoephedrine, a decongestant, as another active ingredient. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.'
@@ -81,10 +81,10 @@ exports.song = {
             description: 'Our "quest turns into hairpins," as I continue to blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.'
         },
         forsi_ahuro: {
-            description: ''
+            description: 'In Farsi, the Iranian language, <i>ahura</i> is the word for an Avestan deity. In the Vedic texts of ancient India, <i>asura</i> refers to a demon. This suggests that a rift occurred amongst the Indo-Iranian people based on religious differences, and because the Vedas precede the Avesta, it\'s likely that the apostates left the Indian subcontinent and moved westward to the Iranian basin, rather than the reverse.'
         },
         sensegreat_devas_dayshone: {
-            description: ''
+            description: 'Moreover, in Sanskrit, the ancient Indian language, <i>deva</i> is the word for a Vedic deity, while <i>daeva</i> in the Avesta refers to a demon. '
         },
         to_soma_up: {
             description: ''
