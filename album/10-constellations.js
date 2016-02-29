@@ -6,13 +6,13 @@ exports.song = {
     },
     annotations: {
         reverends: {
-            description: '<em>Finnegans Wake</em> opens with the line "riverrun, past Eve and Adam\'s." I treated Robitussin as a semireligious experience, which typically opened with The Police\'s "Secret Journey," with its line, "You will be a holy man."'
+            description: '<em>Finnegans Wake</em> opens with the line "riverrun, past Eve and Adam\'s." At my request, Howie had played The Police\'s "Secret Journey" in the car, and its line, "You will be a holy man," serves to remind me that I\'ve always treated Robitussin as a semireligious experience, and that this night will be no different.'
         },
         paused_stiff_in_tandem: {
             description: 'Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we slowly make our way through the UCLA campus.'
         },
         heavin_some_ana: {
-            description: '"Heaving some, Ana whispers a low sigh." When you first down a whole bottle of Robitussin, you may feel like retching. Within a moment, though, it feels like your lungs collapse and shrivel away, and you\'re peacefully breathing through gills underwater.'
+            description: '"Heaving some, Ana whispers a low sigh." When you first down a whole bottle of Robitussin, you may feel like retching. Within a moment, though, it feels like your lungs have shrivelled away, and you\'re peacefully breathing through gills underwater.'
         },
         whispures_a_low_sigh_bein: {
             description: '"Heaven\'s manna was pure psilocybin." At the time, I was intrigued by the role of psychedelic drugs in human history that I had understandably never been taught. One theory is that manna from heaven, based on its description in the Bible, was a psilocybin mushroom.',
@@ -137,6 +137,22 @@ exports.song = {
         },
         ill_sail_this_sea: {
             description: 'Standing next to Adam\'s headstone under the predawn sky, I\'m suddenly overcome with a profound sense of clarity and purpose, and I renew my determination to finish <i>Yearling\'s Bobtail</i> guided solely by my artistic instincts.'
+        },
+        mistodawn: {
+            description: 'Back in the car, this newfound clarity proves to be short-lived. In its late stages, Robitussin continues to offer vivid hallucinations once you close your eyes, which is what I\'m doing on the way back to Howie\'s place, as the "mist of dawn" breaks.'
+        },
+        hantd_by_sober_trooth_tiedgirl: {
+            description: 'As I indulge in mental visions of a "mastodon hunted by sabre-toothed tigers," I am haunted by the sober truth of keeping Sita captive in a codependent relationship that I wish to leave.'
+        },
+        sunk_in_tarpid_lies: {
+            description: 'Tar pits occurs when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."'
+        },
+        hollowscene: {
+            description: 'The Holocene is the current geological epoch that began with the first human settlements.'
+        },
+        broughtour_ancister_toughtim_rite: {
+            // TODO
+            description: 'We humans brought the totems and rites of our ancestors with us into the civilisations we created.'
         }
 
     },
@@ -414,9 +430,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Across Bering Strait
-                     */
                     time: 101,
                     verse: [
                         'But',
@@ -427,9 +440,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * He rows. (First Nations came in canoes?) Aurora borealis to the left. Our auras left. Adam's grave.
-                     */
                     time: 103,
                     verse: [
                         {
@@ -446,9 +456,6 @@ exports.song = {
             ],
             [
                 {
-                    /**
-                     * Moment of clarity.
-                     */
                     time: 109,
                     verse: 'And now without a chart,'
                 },
@@ -469,25 +476,43 @@ exports.song = {
             ],
             [
                 {
-                    /**
-                     * Clarity is shortlived, as back in car. Driving back to Howie's place. Closing eyes. Mining earth's memories, mastodon hunrws, mist of dawn, saber toothed tiger, Sita wanting me to be sober, and how I was holding her captive
-                     */
                     time: 124,
-                    verse: 'The mistodawn, ha\'nt\'d by sobre-trooth tiedgirl cries,'
+                    verse: [
+                        'The',
+                        {
+                            anchor: 'mistodawn,',
+                            annotationKey: 'mistodawn'
+                        },
+                        {
+                            anchor: 'ha\'nt\'d by sobre-trooth tiedgirl',
+                            annotationKey: 'hantd_by_sober_trooth_tiedgirl'
+                        },
+                        'cries,'
+                    ]
                 },
                 {
-                    /**
-                     * sunk in tarpit, lies. Torpid lies
-                     */
                     time: 128,
-                    verse: 'sunk in tarpid lies.'
+                    verse: {
+                        anchor: 'sunk in tarpid lies.',
+                        annotationKey: 'sunk_in_tarpid_lies'
+                    }
                 },
                 {
                     /**
                      * Holocene, hollow scene, brother and sister, taught him right, totem rite, familial guilt
                      */
                     time: 131,
-                    verse: 'In Hollowscene broughtour ancister toughtim rite,'
+                    verse: [
+                        'In',
+                        {
+                            anchor: 'Hollowscene',
+                            annotationKey: 'hollowscene'
+                        },
+                        {
+                            anchor: 'broughtour ancister toughtim rite,',
+                            annotationKey: 'broughtour_ancister_toughtim_rite'
+                        }
+                    ]
                 },
                 {
                     /**
