@@ -99,7 +99,7 @@ exports.song = {
         ourevian_battles_spent: {
             description: '"Arabian battles spent." With the rise of Islam, the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and the Evian bottles that we had each brought into the steam tunnels were now empty.'
         },
-        a_duct_uighuress: {
+        aduct_uighuress: {
             description: '"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.'
         },
         are_melee_tapirs: {
@@ -111,9 +111,33 @@ exports.song = {
         khlmair_city_ingcar_wet: {
             description: 'Angkor Wat, or "Temple City," is a 12th-century Hindu temple built by the Khmer Empire in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie\'s dad had bought in bulk.'
         },
-        scimitary_of_fence: {
-            description: 'Having rested and reenergised, the plan of attack now is to visit the gravesite of our friend Adam. And so we renew our "scimitar offence" as we drive through the "cemetery fence."'
+        scimitary_offence: {
+            description: 'Having rested and reenergised, the plan of attack now is to visit the grave of our friend Adam. So we renew our "scimitar offence" and drive through the "cemetery fence."'
         },
+        pour_sod_fourfeit_tundrs: {
+            description: 'We bemoan the "poor sod" who had sod poured on him from "four feet under."'
+        },
+        siburial_plains: {
+            description: 'The Americas were first settled by northeast Asian populations who gladly forfeited the "tundra\'s Siberian plains," which otherwise would have served as their burial grounds.'
+        },
+        upridge_o_lawn: {
+            description: 'We park the car and head up "a ridge of lawn."'
+        },
+        forcd_nations_sank: {
+            description: '"A bridge of land trod on by First Nations sank." Native Americans, known to Canada as the First Nations, were forced to leave their Asian homelands due to further scarcity of resources. According to the Beringia theory, they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.'
+        },
+        past_a_cross_bearing_straight: {
+            description: 'We "passed a cross, bearing straight," just as those before us had "passed across the Bering Strait."'
+        },
+        herows_ourauras_left: {
+            description: 'A separate but not exclusive theory is that some migrations occurred by boat. These travellers, of course, would have rowed with the aurora borealis to their left. Also, wishing to be respectful, we\'ve left our "hero\'s auras" behind in the car.'
+        },
+        audamns_grave: {
+            description: 'We reach Adam\'s grave, just as the First Nations perish their fear of the permanent autumn encroaching the homelands they have abandoned.'
+        },
+        ill_sail_this_sea: {
+            description: 'Standing next to Adam\'s headstone under the predawn sky, I\'m suddenly overcome with a profound sense of clarity and purpose, and I renew my determination to finish <i>Yearling\'s Bobtail</i> guided solely by my artistic instincts.'
+        }
 
     },
     lyrics: {
@@ -328,7 +352,7 @@ exports.song = {
                         },
                         {
                             anchor: 'a\'duct Uighuress.',
-                            annotationKey: 'a_duct_uighuress'
+                            annotationKey: 'aduct_uighuress'
                         }
                     ]
                 },
@@ -346,9 +370,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Khmer city Angkor Wat, calm air sitting in car wet, drenched from Evian bottles in car, climbed the cemetery fence, scimitar offense
-                     */
                     time: 79,
                     verse: [
                         'From the',
@@ -359,41 +380,68 @@ exports.song = {
                         'to war:',
                         {
                             anchor: 'scimitary of\'fence!',
-                            annotationKey: 'scimitary_of_fence'
+                            annotationKey: 'scimitary_offence'
                         }
                     ]
                 }
             ],
             [
                 {
-                    /**
-                     * Poor sod, four feet under, forfeit Siberian plains
-                     */
                     time: 86,
                     verse: [
-                        'Pour sod, fourfeit tundr\'s Siburial plains…'
+                        {
+                            anchor: 'Pour sod, fourfeit tundr\'s',
+                            annotationKey: 'pour_sod_fourfeit_tundrs'
+                        },
+                        {
+                            anchor: 'Siburial plains…',
+                            annotationKey: 'siburial_plains'
+                        }
                     ]
                 },
                 {
-                    /**
-                     * Up ridge of lawn, a bridge of land, First Nations
-                     */
                     time: 94,
-                    verse: 'Upridge o\' lawn trod on by forc\'d nations sank…'
+                    verse: [
+                        {
+                            anchor: 'Upridge o\' lawn',
+                            annotationKey: 'upridge_o_lawn'
+                        },
+                        'trod on by',
+                        {
+                            anchor: 'forc\'d nations sank…',
+                            annotationKey: 'forcd_nations_sank'
+                        }
+                    ]
                 },
                 {
                     /**
                      * Across Bering Strait
                      */
                     time: 101,
-                    verse: 'But past a cross Bearing Straight,'
+                    verse: [
+                        'But',
+                        {
+                            anchor: 'past a cross Bearing Straight,',
+                            annotationKey: 'past_a_cross_bearing_straight'
+                        }
+                    ]
                 },
                 {
                     /**
                      * He rows. (First Nations came in canoes?) Aurora borealis to the left. Our auras left. Adam's grave.
                      */
                     time: 103,
-                    verse: 'herows—ourauras left—to Audamn\'s grave.'
+                    verse: [
+                        {
+                            anchor: 'herows—ourauras left—',
+                            annotationKey: 'herows_ourauras_left'
+                        },
+                        'to',
+                        {
+                            anchor: 'Audamn\'s grave.',
+                            annotationKey: 'audamns_grave'
+                        }
+                    ]
                 }
             ],
             [
@@ -410,7 +458,13 @@ exports.song = {
                 },
                 {
                     time: 116,
-                    verse: 'I\'ll sail this sea, there is only me and my northern star!'
+                    verse: [
+                        {
+                            anchor: 'I\'ll sail this sea,',
+                            annotationKey: 'ill_sail_this_sea'
+                        },
+                        'there is only me and my northern star!'
+                    ]
                 }
             ],
             [
