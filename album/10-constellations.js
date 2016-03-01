@@ -124,16 +124,16 @@ exports.song = {
             description: 'We park the car and head up "a ridge of lawn."'
         },
         forcd_nations_sank: {
-            description: '"A bridge of land trod on by First Nations sank." Native Americans, known in Canada as the First Nations, were forced to leave their Asian homelands due to growing scarcity of resources. According to the Beringia theory, they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.'
+            description: '"A bridge of land trod on by First Nations sank." Indigenous Americans, known in Canada as the First Nations, were forced to leave their Asian homelands due to growing scarcity of resources. According to the Beringia theory, they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.'
         },
         past_a_cross_bearing_straight: {
             description: 'We "passed a cross, bearing straight," just as those before us had "passed across the Bering Strait."'
         },
         herows_ourauras_left: {
-            description: 'A separate but not exclusive theory is that some migrations occurred by boat. These travellers, of course, would have rowed with the aurora borealis to their left. Also, wishing to be respectful, we\'ve left our "hero\'s auras" behind in the car.'
+            description: 'Other indigenous populations, such as the Inuit inhabitants of the Arctic regions, may have undertaken their migrations by boat. These seafarers, of course, would have rowed with the aurora borealis to their left. Also, wishing to be respectful, we\'ve left our "hero\'s auras" behind in the car.'
         },
         audamns_grave: {
-            description: 'We reach Adam\'s grave, just as the First Nations, having discovered more bountiful lands, perish their fears of a permanent autumn.'
+            description: 'We reach Adam\'s grave, just as the indigenous Americans, having discovered more bountiful lands, perish their fears of a permanent autumn.'
         },
         ill_sail_this_sea: {
             description: 'Standing next to Adam\'s headstone under the predawn sky, I\'m suddenly overcome with a profound sense of clarity and purpose, and I renew my determination to finish <i>Yearling\'s Bobtail</i> guided solely by my artistic instincts.'
@@ -142,7 +142,7 @@ exports.song = {
             description: 'Back in the car, this newfound clarity proves to be short-lived. In its late stages, Robitussin continues to offer vivid hallucinations once you close your eyes, which is what I\'m doing on the way back to Howie\'s place, as the "mist of dawn" breaks.'
         },
         hantd_by_sober_trooth_tiedgirl: {
-            description: 'As I indulge in mental visions of a "mastodon hunted by sabre-toothed tigers," I\'m haunted by the sober truth that I continue to keep Sita captive in a codependent relationship that I\'m eager to leave.'
+            description: 'As I indulge in visions of myself as a "mastodon hunted by sabre-toothed tigers," I\'m haunted by the sober truth that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.'
         },
         sunk_in_tarpid_lies: {
             description: 'Tar pits occurs when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."'
@@ -151,9 +151,47 @@ exports.song = {
             description: 'The Holocene is the current geological epoch that began with the first human settlements.'
         },
         broughtour_ancister_toughtim_rite: {
-            description: 'We humans brought the totems and rites of our ancestors into the modern civilisations we created. Meanwhile, as I detachedly observe my drugged-out self, conscious of the high expectations placed on me and my sister, and our shared responsibility for our autistic brother, I sarcastically note in the third person that "brother and sister taught him right."'
+            // TODO: Hunted mastodon. Guilt.
+            description: 'We humans brought the totems and rites of our ancestors into the modern societies we created. Meanwhile, as I detachedly observe my drugged-out self, conscious of the expectations placed on me and my sister to care for our autistic brother, I sarcastically note in the third person that "brother and sister taught him right."'
+        },
+        lowkey_and_freyed: {
+            // TODO: Connect to brother and sister.
+            description: '"He sees low-key and fried," but also, "he sees Loki and Freyja," who are Norse deities.'
+        },
+        noworse_and_nunavutter: {
+            // TODO: No new lands left to escape to.
+            description: '"Norse and Nunavutter collide." Nunavut is the northernmost territory of Canada, inhabited primarily by the Inuit, while the Norse, with whom we kicked off our Robitussin trip, make their reappearance. The world is suddenly much smaller, and with no new lands left to explore, both in the world and in our lives, we end the night as we had begun it, "no worse and none the better."'
+        },
+        leif_as_the_reds_son: {
+            description: 'The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The entrance of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day is just beginning for many, we "leave as the red sun arrives."'
+        },
+        these_mummeries: {
+            description: ''
+        },
+        pullar_switch: {
+            description: ''
+        },
+        in_somumiak_skims_through_channels: {
+            description: ''
+        },
+        arrhythmetic_heart: {
+            description: ''
+        },
+        enguished_buzzereds: {
+            description: ''
+        },
+        rumspring: {
+            description: ''
+        },
+        in_mouth_deseret: {
+            description: ''
+        },
+        black_letter_day_sensed_ahead: {
+            description: ''
+        },
+        rejoyce_bellow_the: {
+            description: ''
         }
-
     },
     lyrics: {
         left: [
@@ -530,8 +568,8 @@ exports.song = {
                     time: 139,
                     verse: [
                         {
-                            anchor: 'Noworse and Nunavatter',
-                            annotationKey: 'noworse_and_nunavatter'
+                            anchor: 'Noworse and Nunavutter',
+                            annotationKey: 'noworse_and_nunavutter'
                         },
                         'collide,',
                         {
@@ -563,7 +601,10 @@ exports.song = {
                      */
                     time: 154,
                     verse: [
-                        'Pullar switch,',
+                        {
+                            anchor: 'Pullar switch,',
+                            annotationKey: 'pullar_switch'
+                        },
                         {
                             anchor: 'in-som\'umiak skims through channels',
                             annotationKey: 'in_somumiak_skims_through_channels'
