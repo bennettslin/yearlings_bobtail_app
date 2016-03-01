@@ -1,6 +1,7 @@
 exports.song = {
     title: 'Constellations!',
     speechBubbles: {
+        // TODO: Revisit this narrative.
         narrative: 'I did a lot of Robitussin one college summer, and towards the end, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different after that. A few years later, my friends Ana, Howie, Tomer, and I explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me.',
         backstory: 'While reading <em>Finnegans Wake</em>, I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police\'s <em>Ghost in the Machine</em> was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere for this song.'
     },
@@ -103,16 +104,16 @@ exports.song = {
             description: '"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.'
         },
         are_melee_tapirs: {
-            description: '"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to its prehistoric ancestor <i>Eohippus</i>, or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many historical peoples believed they had reached.'
+            description: '"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to its prehistoric ancestor <i>Eohippus</i>, or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many throughout history had believed to have been reached.'
         },
         the_dusc_horse_yet: {
-            description: '"Our melee tapers the discourse yet." Wielding scavenged scrap materials as if they were swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.'
+            description: '"Our melee tapers the discourse yet." Wielding scavenged materials as if they are swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.'
         },
         khlmair_city_ingcar_wet: {
             description: 'Angkor Wat, or "Temple City," is a 12th-century Hindu temple built by the Khmer Empire in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie\'s dad had bought in bulk.'
         },
         scimitary_offence: {
-            description: 'Having rested and reenergised, the plan of attack now is to visit the grave of our friend Adam. So we renew our "scimitar offence" and drive through the "cemetery fence."'
+            description: 'The next plan of attack is to visit the grave of our friend Adam. And so, rested and reenergised, we renew our "scimitar offence" and drive through the "cemetery fence."'
         },
         pour_sod_fourfeit_tundrs: {
             description: 'We bemoan the "poor sod" who had sod poured on him from "four feet under."'
@@ -133,13 +134,13 @@ exports.song = {
             description: 'Other indigenous populations, such as the Inuit inhabitants of the Arctic regions, may have undertaken their migrations by boat. These seafarers, of course, would have rowed with the aurora borealis to their left. Also, wishing to be respectful, we\'ve left our "hero\'s auras" behind in the car.'
         },
         audamns_grave: {
-            description: 'We reach Adam\'s grave, just as the indigenous Americans, having discovered more bountiful lands, perish their fears of a permanent autumn.'
+            description: 'We reach Adam\'s grave, just as the indigenous Americans, having discovered more bountiful lands, perish their fears of an encroaching autumn.'
         },
         ill_sail_this_sea: {
-            description: 'Standing next to Adam\'s headstone under the predawn sky, I\'m suddenly overcome with a profound sense of clarity and purpose, and I renew my determination to finish <i>Yearling\'s Bobtail</i> guided solely by my artistic instincts.'
+            description: 'Standing next to Adam\'s headstone under the predawn sky, I\'m overcome with a profound sense of clarity and purpose, and I renew my determination to finish <i>Yearling\'s Bobtail</i> guided solely by my artistic instincts.'
         },
         mistodawn: {
-            description: 'Back in the car, this newfound clarity proves to be short-lived. In its late stages, Robitussin continues to offer vivid hallucinations once you close your eyes, which is what I\'m doing on the way back to Howie\'s place, as the "mist of dawn" breaks.'
+            description: 'Back in the car, my newfound clarity proves short-lived. In its late stages, Robitussin continues to offer vivid hallucinations once you close your eyes, which is what I\'m doing on the way back to Howie\'s place, as the "mist of dawn" breaks.'
         },
         hantd_by_sober_trooth_tiedgirl: {
             description: 'As I indulge in visions of a "mastodon hunted by sabre-toothed tigers," I\'m haunted by the sober truth that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.'
@@ -151,17 +152,16 @@ exports.song = {
             description: 'The Holocene is the current geological epoch that began with the first human settlements.'
         },
         broughtour_ancister_toughtim_rite: {
-            description: 'In my mind\'s epic narrative, the mastodon becomes a revered spirit animal, as we have "brought our ancestral totems and rites" to our new homelands. But then, in an out-of-body experience, I suddenly face the degraded reality of my drugged-out self. Conscious of the expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."'
+            description: 'In my mind\'s epic narrative, the mastodon becomes a spirit animal, as we have "brought our ancestral totems and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into full view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."'
         },
         lowkey_and_freyed: {
-            description: '"He sees low-key and fried," but also, in his brother and sister, "he sees Loki and Freyja." The former is a Norse trickster god, while the latter is a stately goddess on equal footing with Odin.'
+            description: '"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.'
         },
         noworse_and_nunavutter: {
-            // TODO: No new lands left to escape to.
-            description: '"Norse and Nunavutter collide." Nunavut is the northernmost territory of Canada, inhabited primarily by the Inuit, while the Norse, who kicked off our little Robitussin trip, make their reappearance. The world is suddenly much smaller, and with no new lands left to explore, both in the world and in our lives, we end the night as we had begun it, "no worse and none the better."'
+            description: '"Norse and Nunavutter collide." Nunavut is the northernmost territory of Canada, inhabited primarily by the Inuit. The Norse, who kicked off our Robitussin trip, make their reappearance. There are no new lands to explore, nowhere left to escape, both in the world and in our mundane lives. And so we end the night as we had begun it, "no worse and none the better."'
         },
         leif_as_the_reds_son: {
-            description: 'The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day is just beginning for many, we "leave as the red sun arrives."'
+            description: 'The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."'
         },
         these_mummeries: {
             description: ''
