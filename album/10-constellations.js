@@ -1,8 +1,7 @@
 exports.song = {
     title: 'Constellations!',
     speechBubbles: {
-        // TODO: Revisit this narrative.
-        narrative: 'I did a lot of Robitussin one college summer, and towards the end, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different after that. A few years later, my friends Ana, Howie, Tomer, and I explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me.',
+        narrative: 'I did so much Robitussin one summer that I pretty much went insane. I eventually regained my grip on reality, but the world always seemed different after that. This song is about one night when my friends Ana, Howie, Tomer, and I explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me.',
         backstory: 'While reading <em>Finnegans Wake</em>, I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police\'s <em>Ghost in the Machine</em> was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere for this song.'
     },
     annotations: {
@@ -158,8 +157,8 @@ exports.song = {
             description: '"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.'
         },
         noworse_and_nunavutter: {
-            // TODO: Could be better
-            description: '"Norse and Nunavutter collide." Nunavut is the northernmost territory of Canada, inhabited primarily by the Inuit. The Norse, who kicked off our Robitussin trip, make their reappearance. There are no new lands to explore, nowhere left to escape, both in the world and in our mundane lives. And so we end the night as we had begun it, "no worse and none the better."'
+            // TODO: Make more clear that Nunavut was the furthest out of reach.
+            description: '"Norse and Nunavutter collide." Nunavut is the northernmost territory of Canada, primarily inhabited by the Inuit. The Norse, who had kicked off our Robitussin journey, now make a reappearance to signal its end. There are no new lands left to uncover; even our imaginations must repeat themselves. And so, as our mundane, everyday lives seep back into the picture, we end the night as we had begun it, "no worse and none the better."'
         },
         leif_as_the_reds_son: {
             description: 'The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."'
