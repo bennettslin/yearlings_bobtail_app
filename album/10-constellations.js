@@ -167,13 +167,14 @@ exports.song = {
             description: ''
         },
         pullar_switch: {
-            description: ''
+            description: 'Geomagnetic reversal occurs when the Earth\'s magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses.Also, crashed on a couch in Howie\'s attic, I pull the switch on a black-and-white television to turn it on.',
+            reference: 'https://en.wikipedia.org/wiki/Geomagnetic_reversal'
         },
         in_somumiak_skims_through_channels: {
-            description: ''
+            description: 'An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing that cataclysm is afoot, our brave tribe flees to safety "in some umiak," as they "skim through channels" wreaked by a "snowy blitz." Meanwhile, as an "insomniac" unable to sleep, I "skim through channels" that are "snow-blitzed" due to the television\'s poor reception.'
         },
         arrhythmetic_heart: {
-            description: ''
+            description: 'Arrhythmia, or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, in the hopes that my pulse is becoming more stable with each passing minute.'
         },
         enguished_buzzereds: {
             description: ''
@@ -594,9 +595,6 @@ exports.song = {
             ],
             [
                 {
-                    /**
-                     * Pull switch on television. Polar switch. Insomniac, in some umiak.
-                     */
                     time: 154,
                     verse: [
                         {
