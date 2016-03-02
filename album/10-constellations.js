@@ -152,12 +152,13 @@ exports.song = {
             description: 'The Holocene is the current geological epoch that began with the first human settlements.'
         },
         broughtour_ancister_toughtim_rite: {
-            description: 'In my mind\'s epic narrative, the mastodon becomes a spirit animal, as we have "brought our ancestral totems and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into full view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."'
+            description: 'In my mind\'s epic narrative, the mastodon becomes a spirit animal, as we have "brought our ancestral totems and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."'
         },
         lowkey_and_freyed: {
             description: '"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.'
         },
         noworse_and_nunavutter: {
+            // TODO: Could be better
             description: '"Norse and Nunavutter collide." Nunavut is the northernmost territory of Canada, inhabited primarily by the Inuit. The Norse, who kicked off our Robitussin trip, make their reappearance. There are no new lands to explore, nowhere left to escape, both in the world and in our mundane lives. And so we end the night as we had begun it, "no worse and none the better."'
         },
         leif_as_the_reds_son: {
@@ -174,7 +175,7 @@ exports.song = {
             description: 'An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing that cataclysm is afoot, our brave tribe flees to safety "in some umiak," as they "skim through channels" wreaked by a "snowy blitz." Meanwhile, as an "insomniac" unable to sleep, I "skim through channels" that are "snow-blitzed" due to the television\'s poor reception.'
         },
         arrhythmetic_heart: {
-            description: 'Arrhythmia, or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, in the hopes that my pulse is becoming more stable with each passing minute.'
+            description: 'Arrhythmia, or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.'
         },
         enguished_buzzereds: {
             description: ''
