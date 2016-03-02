@@ -167,7 +167,9 @@ exports.song = {
             description: ''
         },
         pullar_switch: {
-            description: ''
+            // TODO: Cataclysms
+            description: 'Geomagnetic reversal occurs when the Earth\'s magnetic poles are switched. Meanwhile, crashed on a couch in Howie\'s attic, I pull the switch on a black-and-white television to turn it on.'
+            reference: 'https://en.wikipedia.org/wiki/Geomagnetic_reversal'
         },
         in_somumiak_skims_through_channels: {
             description: ''
