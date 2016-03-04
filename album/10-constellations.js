@@ -158,7 +158,7 @@ exports.song = {
         },
         noworse_and_nunavutter: {
             // TODO: Make more clear that Nunavut was the furthest out of reach.
-            description: '"Norse and Nunavutter collide." Nunavut is the northernmost territory of Canada, primarily inhabited by the Inuit. The Norse, who had kicked off our Robitussin journey, now make a reappearance to signal its end. There are no new lands left to uncover; even our imaginations must repeat themselves. And so, as our mundane, everyday lives seep back into the picture, we end the night as we had begun it, "no worse and none the better."'
+            description: '"Norse and Nunavutter collide." Nunavut is the northernmost territory of Canada, primarily inhabited by the Inuit. With the reappearance of the Norse, who had kicked off our Robitussin journey, even our unbounded imaginations are starting to repeating itself. There are no new lands left to uncover; even our imaginations must repeat themselves. And so, as our mundane, everyday lives seep back into the picture, we end the night as we had begun it, "no worse and none the better."'
         },
         leif_as_the_reds_son: {
             description: 'The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."'
