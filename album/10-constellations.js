@@ -1,11 +1,12 @@
 exports.song = {
     title: 'Constellations!',
     speechBubbles: {
-        narrative: 'I did so much Robitussin one summer that I pretty much went insane. I eventually regained my grip on reality, but the world always seemed different after that. This song is about one night when my friends Ana, Howie, Tomer, and I explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me.',
+        narrative: 'One night, my friends Ana, Howie, Tomer, and I got high on Robitussin and explored the steam tunnels under UCLA. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer, and by the end of it, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different afterwards.',
         backstory: 'While reading <em>Finnegans Wake</em>, I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police\'s <em>Ghost in the Machine</em> was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere for this song.'
     },
     annotations: {
         reverends: {
+            // TODO: Revisit and be more descriptive
             description: '<em>Finnegans Wake</em> opens with the line "riverrun, past Eve and Adam\'s." At my request, Howie had played The Police\'s "Secret Journey" in the car, and its line, "You will be a holy man," serves to remind me that I\'ve always treated Robitussin as a semireligious experience, and that this night will be no different.'
         },
         paused_stiff_in_tandem: {
@@ -19,6 +20,7 @@ exports.song = {
             reference: 'https://en.wikipedia.org/wiki/Manna'
         },
         de_exempt: {
+            // TODO: Exempt Israelites
             description: 'DXM is the standard abbreviation for dextromethorphan, the active ingredient in Robitussin.'
         },
         exit_us: {
@@ -66,7 +68,7 @@ exports.song = {
             description: 'Genghis Khan, who was born Temujin, founded the Mongol Empire.'
         },
         slain_the_teeto_tatars: {
-            description: 'Genghis Khan was able to unite the Mongols by defeating the Tatars, a rival tribe. Also, "teeter-totters" and "teetotalers." I was wavering on taking Robitussin earlier that night, having sworn never again, but once the "drink is gone" and I\'ve had "too much in," the familiar sensation kicks in, and it feels awesome.'
+            description: 'Genghis Khan was able to unite the Mongols by defeating the Tatars, a rival tribe. Also, "teeter-totters" and "teetotalers." Having just taken Robitussin a couple nights ago, I was wavering on taking it again so soon, as Robitussin really destroys you, both mentally and physically. But once the "drink is gone" and I\'ve had "too much in," the familiar sensation kicks in, and it feels awesome.'
         },
         tomer_layin_the_seed: {
             description: '"Tamerlane the seed." Tamerlane, a descendant of Genghis Khan, continued the Turko-Mongol expansion into Central Asia. Also, as Tomer drops crumbs in jest to leave a trail, I observe that it\'s like he\'s planting seeds that will sprout into nations.'
@@ -151,14 +153,13 @@ exports.song = {
             description: 'The Holocene is the current geological epoch that began with the first human settlements.'
         },
         broughtour_ancister_toughtim_rite: {
-            description: 'In my mind\'s epic narrative, the mastodon becomes a spirit animal, as we have "brought our ancestral totems and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."'
+            description: 'In the epic narrative playing out in my mind, the mastodon becomes a spirit animal, as we have "brought our ancestral totems and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."'
         },
         lowkey_and_freyed: {
             description: '"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.'
         },
         noworse_and_nunavutter: {
-            // TODO: Make more clear that Nunavut was the furthest out of reach.
-            description: '"Norse and Nunavutter collide." Nunavut is the northernmost territory of Canada, primarily inhabited by the Inuit. With the reappearance of the Norse, who had kicked off our Robitussin journey, even our unbounded imaginations are starting to repeating itself. There are no new lands left to uncover; even our imaginations must repeat themselves. And so, as our mundane, everyday lives seep back into the picture, we end the night as we had begun it, "no worse and none the better."'
+            description: '"Norse and Nunavutter collide." We have now travelled as far as Nunavut, the northernmost territory of Canada inhabited primarily by the Inuit. And yet, with the reappearance of the Norse, we realise that our bounds are not so limitless, as even our imaginations have started to repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so we end the night as we had begun it, "no worse and none the better."'
         },
         leif_as_the_reds_son: {
             description: 'The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."'
@@ -171,16 +172,16 @@ exports.song = {
             reference: 'https://en.wikipedia.org/wiki/Geomagnetic_reversal'
         },
         in_somumiak_skims_through_channels: {
-            description: 'An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing that cataclysm is afoot, our brave tribe flees to safety "in some umiak," as they "skim through channels" wreaked by a "snowy blitz." Meanwhile, as an "insomniac" unable to sleep, I "skim through channels" that are "snow-blitzed" due to the television\'s poor reception.'
+            description: 'An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing that disaster is afoot, our brave tribe flees to safety "in some umiak," as they "skim through channels" wreaked by a "snowy blitz." Meanwhile, being an "insomniac," I "skim through channels" that are "snow-blitzed" due to the television\'s poor reception.'
         },
         arrhythmetic_heart: {
             description: 'Arrhythmia, or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.'
         },
         enguished_buzzereds: {
-            description: ''
+            description: 'Howie had opted for the largest bottle of Robitussin, thinking that the smaller one I had recommended wouldn\'t be enough. I can now hear him downstairs, in anguish over still being highly buzzed, as he keeps returning to the kitchen to get more water. Meanwhile, the English have now arrived to despoil the New World, with the white ruffs around their necks resembling those of buzzards.'
         },
         rumspring: {
-            description: ''
+            description: 'In the Amish community, Rumspringa is a period of adolescence during which youths are permitted to engage in rebellious behaviour, such that any later decision to remain in the community is not rooted in ignorance of the outside world. It means "running around," but somehow I thought it referred to a literal spring of rum, one that was '
         },
         in_mouth_deseret: {
             description: ''
