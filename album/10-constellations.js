@@ -1,3 +1,7 @@
+/**
+ * TODO: References, decide on where to put quotations marks. Balance between
+ * not being clear and being too obvious.
+ */
 exports.song = {
     title: 'Constellations!',
     speechBubbles: {
