@@ -6,17 +6,16 @@ exports.song = {
     },
     annotations: {
         reverends: {
-            // TODO: Revisit and be more descriptive
-            description: '<em>Finnegans Wake</em> opens with the line "riverrun, past Eve and Adam\'s." At my request, Howie had played The Police\'s "Secret Journey" in the car, and its line, "You will be a holy man," serves to remind me that I\'ve always treated Robitussin as a semireligious experience, and that this night will be no different.'
+            description: '<em>Finnegans Wake</em> opens with the line "riverrun, past Eve and Adam\'s." Robitussin can be a mystical experience, so we try to maintain a reverential air as we slowly make our way through the UCLA campus.'
         },
         paused_stiff_in_tandem: {
-            description: 'Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we slowly make our way through the UCLA campus.'
+            description: 'Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.'
         },
         heavin_some_ana: {
             description: '"Heaving some, Ana whispers a low sigh." When you first down a whole bottle of Robitussin, you may feel like retching. Within a moment, though, it feels like your lungs have shrivelled away, and you\'re peacefully breathing through gills underwater.'
         },
         whispures_a_low_sigh_bein: {
-            description: '"Heaven\'s manna was pure psilocybin." At the time, I was intrigued by the role of psychedelic drugs in human history that I had understandably never been taught. One theory is that manna from heaven, based on its description in the Bible, was a psilocybin mushroom.',
+            description: '"Heaven\'s manna was pure psilocybin." At the time, I was intrigued by the role played by psychedelic drugs throughout history that had never been taught to me in school. One theory is that manna from heaven, based on its description in the Bible, was a psilocybin mushroom.',
             reference: 'https://en.wikipedia.org/wiki/Manna'
         },
         de_exempt: {
@@ -71,13 +70,13 @@ exports.song = {
             description: 'Genghis Khan was able to unite the Mongols by defeating the Tatars, a rival tribe. Also, "teeter-totters" and "teetotalers." Having just taken Robitussin a couple nights ago, I was wavering on taking it again so soon, as Robitussin really destroys you, both mentally and physically. But once the "drink is gone" and I\'ve had "too much in," the familiar sensation kicks in, and it feels awesome.'
         },
         tomer_layin_the_seed: {
-            description: '"Tamerlane the seed." Tamerlane, a descendant of Genghis Khan, continued the Turko-Mongol expansion into Central Asia. Also, as Tomer drops crumbs in jest to leave a trail, I observe that it\'s like he\'s planting seeds that will sprout into nations.'
+            description: '"Tamerlane the seed." Tamerlane, a descendant of Genghis Khan, continued the Turko-Mongol expansion into Central Asia. Also, as Tomer jokingly drops crumbs as if to leave a trail, I observe that it\'s like he\'s planting seeds that will sprout into nations.'
         },
         howie_led_the_feat_of_avatars: {
             description: 'Howie is walking as if his feet are made of lead. Also, "how he led the feat of avatars." The Mughals, descendants of Tamerlane, conquered the Hindu populations of the Indian subcontinent. In Hinduism, an avatar is a deity\'s earthbound incarnation, and some avatars are speculated to be historical figures whose exploits predate written tradition.'
         },
         indus_trail_sewerce: {
-            description: 'As we wind through industrial sewers pretending to be Mughal invaders, I explain to my friends the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."'
+            description: 'As we wind through "industrial sewers" pretending to be Mughal invaders, I explain to my friends the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."'
         },
         questurns_indo_hairapins: {
             description: 'Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.'
@@ -105,10 +104,10 @@ exports.song = {
             description: '"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.'
         },
         are_melee_tapirs: {
-            description: '"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to its prehistoric ancestor <i>Eohippus</i>, or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many throughout history had believed to have been reached.'
+            description: '"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to the horse\'s prehistoric ancestor <i>Eohippus</i>, or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many throughout history had believed to have been reached.'
         },
         the_dusc_horse_yet: {
-            description: '"Our melee tapers the discourse yet." Wielding scavenged materials as if they are swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.'
+            description: '"Our melee tapers the discourse." Wielding scavenged materials as if they are swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.'
         },
         khlmair_city_ingcar_wet: {
             description: 'Angkor Wat, or "Temple City," is a 12th-century Hindu temple built by the Khmer Empire in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie\'s dad had bought in bulk.'
@@ -120,7 +119,7 @@ exports.song = {
             description: 'We bemoan the "poor sod" who had sod poured on him from "four feet under."'
         },
         siburial_plains: {
-            description: 'The Americas were first settled by northeast Asian populations who gladly forfeited the "tundra\'s Siberian plains," which otherwise would have served as their burial grounds.'
+            description: 'The Americas were first settled by northeast Asian populations who gladly forfeited the "tundra\'s Siberian plains," which otherwise would have served as their "burial" grounds.'
         },
         upridge_o_lawn: {
             description: 'We park the car and head up "a ridge of lawn."'
@@ -168,26 +167,27 @@ exports.song = {
             description: ''
         },
         pullar_switch: {
-            description: 'Geomagnetic reversal occurs when the Earth\'s magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses.Also, crashed on a couch in Howie\'s attic, I pull the switch on a black-and-white television to turn it on.',
+            description: 'Geomagnetic reversal occurs when the Earth\'s magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses. Also, crashed on a couch in Howie\'s attic, I pull the switch on a black-and-white television to turn it on.',
             reference: 'https://en.wikipedia.org/wiki/Geomagnetic_reversal'
         },
         in_somumiak_skims_through_channels: {
-            description: 'An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing that disaster is afoot, our brave tribe flees to safety "in some umiak," as they "skim through channels" wreaked by a "snowy blitz." Meanwhile, being an "insomniac," I "skim through channels" that are "snow-blitzed" due to the television\'s poor reception.'
+            description: 'An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing disaster afoot, our brave tribe flees to safety "in some umiak," "skimming through channels" wreaked by a "snowy blitz." Meanwhile, being an "insomniac," I "skim through channels" that are "snow-blitzed" due to the television\'s poor reception.'
         },
         arrhythmetic_heart: {
             description: 'Arrhythmia, or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.'
         },
         enguished_buzzereds: {
-            description: 'Howie had opted for the largest bottle of Robitussin, thinking that the smaller one I had recommended wouldn\'t be enough. I can now hear him downstairs, in anguish over still being highly buzzed, as he keeps returning to the kitchen to get more water. Meanwhile, the English have now arrived to despoil the New World, with the white ruffs around their necks resembling those of buzzards.'
+            description: 'Howie had opted for the large bottle of Robitussin, thinking that the small one I had recommended wouldn\'t be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he keeps going back to the kitchen to get more water. Meanwhile, the English have now arrived to despoil the New World, with the white ruffs around their necks resembling those of "buzzards."'
         },
         rumspring: {
-            description: 'In the Amish community, Rumspringa is a period of adolescence during which youths are permitted to engage in rebellious behaviour, such that any later decision to remain in the community is not rooted in ignorance of the outside world. It means "running around," but somehow I thought it referred to a literal spring of rum, one that was '
+            description: 'Rumspringa is a period of adolescence during which the Amish are allowed to openly rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. It means "running around" in Pennsylvania Dutch, but I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.'
         },
         in_mouth_deseret: {
-            description: ''
+            description: 'My mouth is dry like a "desert." Also, Deseret was an alphabet developed by the early Mormons, also known as Latter-Day Saints.',
+            reference: 'https://en.wikipedia.org/wiki/Deseret_alphabet'
         },
         black_letter_day_sensed_ahead: {
-            description: ''
+            description: 'Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." The Mormons did not allow blacks to attain priesthood until 1978.'
         },
         rejoyce_bellow_the: {
             description: ''
