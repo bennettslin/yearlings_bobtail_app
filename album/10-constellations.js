@@ -35,13 +35,13 @@ exports.song = {
             description: 'Backtrack to earlier that night. We buy the Robitussin from a Walgreens pharmacy. Also, the Valkyries in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.'
         },
         walhall_o: {
-            description: 'The Valkyries would bring the dead heroes to Valhalla, a majestic hall ruled by the god Odin. Also, the Walgreens aisles are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed…'
+            description: 'The Valkyries would bring the dead heroes to Valhalla, a majestic hall ruled by the god Odin. Also, the Walgreens aisles are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… So, "Wal-halls," if you will.'
         },
         mead_tussin: {
             description: 'Mead was the drink of the Norse gods, and we go with Wal-Tussin as our "medicine" of choice.'
         },
         quouffs_uppraissed: {
-            description: 'Having appraised our quaffs, we now upraise them. And whatever coughs we might have, they will definitely be suppressed.'
+            description: 'Having appraised our quaffs, we now upraise them. And whatever coughs we might have, they are definitely suppressed.'
         },
         boundless_kalevalley_ends: {
             description: 'The Kalevala is the national epic poem of Finland. Also, the San Fernando Valley, which I hated as a teenager, is <em>the</em> "Cali valley." The days before I could leave were painfully endless. With the magic of Robitussin, however, escape is now instantaneous.'
@@ -185,14 +185,14 @@ exports.song = {
             description: 'Rumspringa is a period of adolescence during which the Amish are allowed to openly rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. It means "running around" in Pennsylvania Dutch, but I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.'
         },
         in_mouth_deseret: {
-            description: 'My mouth is dry like a "desert." Also, Deseret was an alphabet developed by the early Mormons, also known as Latter-Day Saints.',
+            description: 'My mouth is dry like a "desert." Also, Deseret is an alphabet developed by the early Mormons, also known as Latter-Day Saints.',
             reference: 'https://en.wikipedia.org/wiki/Deseret_alphabet'
         },
         black_letter_day_sensed_ahead: {
             description: 'Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." The Mormons did not allow blacks to attain priesthood until 1978.'
         },
         rejoyce_bellow_the: {
-            description: '"\'Rejoyce!\' bellow the reverends." Joyce wrote the last line of <em>Finnegans Wake</em> to wrap back onto the first, so I indulged in the same conceit. As I\'m stuck watching public access televangelists, I observe that every religion\'s sense of adventure eventually degrades into orthodoxy and routine, much as it does for us as individuals. But in the meantime, we\'re just halfway through summer, and more nights of Robitussin await…'
+            description: '"\'Rejoyce!\' bellow the reverends." Joyce wrote the last line of <em>Finnegans Wake</em> to wrap back onto the first, so I indulged in the same conceit. As I\'m stuck watching public access televangelists, I observe that every religion\'s early spirit eventually degrades into orthodoxy and routine, much as it does for us as individuals. But in the meantime, we\'re just halfway through summer, and more nights of Robitussin await…'
         }
     },
     lyrics: {
