@@ -1,3 +1,7 @@
+/**
+ * TODO: References, decide on where to put quotations marks. Balance between
+ * not being clear and being too obvious.
+ */
 exports.song = {
     title: 'Constellations!',
     speechBubbles: {
@@ -164,7 +168,7 @@ exports.song = {
             description: 'The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."'
         },
         these_mummeries: {
-            description: ''
+            description: 'A mummer is a masked mime, while a mummy is a preserved corpse. All of time has collapsed into a singularity, as my memories blur into those of the world history that I keenly dig through. Everyone is at once dead and not dead, as am I. Or is this all a staged performance that I\'ve chosen to act in?'
         },
         pullar_switch: {
             description: 'Geomagnetic reversal occurs when the Earth\'s magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses. Also, crashed on a couch in Howie\'s attic, I pull the switch on a black-and-white television to turn it on.',
@@ -190,7 +194,7 @@ exports.song = {
             description: 'Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." The Mormons did not allow blacks to attain priesthood until 1978.'
         },
         rejoyce_bellow_the: {
-            description: ''
+            description: '"\'Rejoyce!\' bellow the reverends." Joyce wrote the last line of <em>Finnegans Wake</em> to wrap back onto the first, so I indulged in the same conceit. As I\'m stuck watching public access televangelists, I observe that every religion\'s sense of adventure eventually degrades into orthodoxy and routine, much as it does for us as individuals. But in the meantime, we\'re just halfway through summer, and more nights of Robitussin await…'
         }
     },
     lyrics: {
