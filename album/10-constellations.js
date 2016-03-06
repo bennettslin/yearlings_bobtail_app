@@ -5,12 +5,12 @@
 exports.song = {
     title: 'Constellations!',
     speechBubbles: {
-        narrative: 'One night, my friends Ana, Howie, Tomer, and I got high on Robitussin and explored the steam tunnels under UCLA. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer, and by the end of it, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different afterwards.',
+        narrative: 'One night back in Los Angeles, my friends Ana, Howie, Tomer, and I got high on Robitussin and explored the steam tunnels under UCLA. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer, and by the end of it, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different afterwards.',
         backstory: 'While reading <em>Finnegans Wake</em>, I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police\'s <em>Ghost in the Machine</em> was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere for this song.'
     },
     annotations: {
         reverends: {
-            description: '<em>Finnegans Wake</em> opens with the line "riverrun, past Eve and Adam\'s." Robitussin can be a mystical experience, so we try to maintain a reverential air as we slowly make our way through the UCLA campus.'
+            description: '<em>Finnegans Wake</em> opens with the line "riverrun, past Eve and Adam\'s," so I figured I would start there as well. Robitussin can be a mystical experience, so we try to maintain a reverential air as we slowly make our way through the UCLA campus.'
         },
         paused_stiff_in_tandem: {
             description: 'Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.'
@@ -23,8 +23,7 @@ exports.song = {
             reference: 'https://en.wikipedia.org/wiki/Manna'
         },
         de_exempt: {
-            // TODO: Exempt Israelites
-            description: 'DXM is the standard abbreviation for dextromethorphan, the active ingredient in Robitussin.'
+            description: 'The Israelites, "being of the exempt," were spared the plagues that God visited upon Egypt, just as we are now immune to flu symptoms. DXM is the standard abbreviation for dextromethorphan, the cough suppressant found in Robitussin.'
         },
         exit_us: {
             description: 'The Book of Exodus recounts how the Israelites discovered manna during their trek out of Egypt.'
@@ -45,8 +44,7 @@ exports.song = {
             description: 'Having appraised our quaffs, we now upraise them. And whatever coughs we might have, they will definitely be suppressed.'
         },
         boundless_kalevalley_ends: {
-            // TODO: Revisit about leaving Valley metaphorically. Through drugs.
-            description: 'The Kalevala is the national epic poem of Finland. Also, as a teenager I hated growing up in the San Fernando Valley of Southern California, and the days before I could leave seemed to drag on forever.'
+            description: 'The Kalevala is the national epic poem of Finland. Also, the San Fernando Valley, which I hated as a teenager, is <em>the</em> "Cali valley." The days before I could leave were painfully endless. With the magic of Robitussin, however, escape is now instantaneous.'
         },
         finnugreec_tongue: {
             description: 'The Finnish language belongs in the Finno-Ugric family. Also, the licorice taste of Robitussin, which lingers in our mouths, is reminiscent of the spice fenugreek.',
@@ -62,7 +60,7 @@ exports.song = {
             description: 'The Magyars share genetic origins with the Mongols, an East Asian nomadic people.'
         },
         psealed_off_drains: {
-            description: 'In those days, Robitussin would typically include pseudoephedrine, a decongestant, as another active ingredient. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.'
+            description: 'In those days, the Robitussin I took would contain pseudoephedrine, a decongestant. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.'
         },
         down_the_steppes: {
             description: 'In the 13th century, the Mongols swept down from the East Asian steppes and began their conquests.'
