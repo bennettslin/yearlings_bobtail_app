@@ -293,7 +293,7 @@ exports.song = {
                     verse: [
                         'Well yes, I',
                         {
-                            anchor: 'faked this "X",',
+                            anchor: 'faked this "X,"',
                             annotationKey: 'faked_this_x'
                         },
                         'I should confess,'

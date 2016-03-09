@@ -1,0 +1,131 @@
+body {
+    background-color: #999;
+}
+
+.dev-app {
+    @dev-column-padding: 15px;
+
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+    font-family: PTSansNarrow;
+    font-size: 1.1em;
+
+    h1 {
+        font-size: 1.75em;
+    }
+
+    .dev-column {
+        padding: 0 @dev-column-padding @dev-column-padding;
+        box-sizing: border-box;
+
+        &.no-padding {
+            padding: 0;
+        }
+    }
+
+    .songs-column {
+        @songs-column-width: 235px;
+
+        width: @songs-column-width;
+        min-width: @songs-column-width;
+        background-color: #fef;
+
+        .dev-song-points {
+            font-size: 1.2em;
+
+            .dev-song-point {
+                padding: 5px;
+                border-radius: 5px;
+            }
+
+            .played {
+                background-color: #fbb;
+            }
+        }
+    }
+
+    .notes-column {
+        @notes-column-width: 280px;
+
+        display: flex;
+        flex-direction: column;
+        width: @notes-column-width;
+        min-width: @notes-column-width;
+        background-color: #fee;
+
+        .notes-row {
+            padding: 0px @dev-column-padding @dev-column-padding;
+            box-sizing: border-box;
+        }
+
+        .annotation-row {
+            background-color: #eff;
+        }
+    }
+
+    .lyrics-column {
+        display: flex;
+        background-color: #ffe;
+
+        .dev-lyrics-columns {
+            display: flex;
+        }
+
+        .dev-lyrics-column {
+            min-width: 360px;
+            max-width: 450px;
+
+            &.left {
+                padding-right: @dev-column-padding * 0.5;
+            }
+
+            &.right {
+                padding-left: @dev-column-padding * 0.5;
+            }
+        }
+
+        .lyrics-text {
+            @lyrics-header-size: 1.5em;
+            @lyrics-verse-size: 1em;
+
+            .lyrics-header {
+                font-size: @lyrics-header-size;
+            }
+
+            .lyrics-verses {
+                font-size: @lyrics-verse-size;
+
+                [class^="stanza"] {
+                    &:not(:last-child) {
+                        margin-bottom: @lyrics-verse-size;
+                    }
+
+                    [class^="verse"] {
+                        @hanging-indent-width: 1.5em;
+                        padding-left: @hanging-indent-width;
+                        text-indent:-@hanging-indent-width;
+                    }
+                }
+            }
+        }
+    }
+
+    a {
+        .transition(color 0.05s ease);
+        .no-select;
+        cursor: pointer;
+
+        font-weight: bold;
+        color: #844;
+
+        &:hover {
+            color: #b77;
+        }
+
+        &:active {
+            color: #d99;
+        }
+    }
+}

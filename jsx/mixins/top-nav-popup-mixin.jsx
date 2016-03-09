@@ -94,11 +94,13 @@ var PopupMixin = {
         }
     },
 
-    _getPopup: function(baseClassName, index, shownContent, unshownContent) {
+    _getPopup: function(baseClassName, index, shownContentObject, unshownContentObject) {
         var isShown = this._showPopup(index),
             className = baseClassName + '-' + index +
                 ' popup' + (isShown ? ' expanded' : '') +
-                ((isShown && (this.props.popupsAlwaysShown !== 'none' || this.state.clickedOn)) ? ' engraved' : '');
+                ((isShown && (this.props.popupsAlwaysShown !== 'none' || this.state.clickedOn)) ? ' engraved' : ''),
+            shownContentMappedTextElement = TextFormatter.getMappedTextElement(shownContentObject),
+            unshownContentMappedTextElement = TextFormatter.getMappedTextElement(unshownContentObject);
         return (
             <li
                 className={className}
@@ -108,7 +110,7 @@ var PopupMixin = {
                 onMouseLeave={this._handlePopupHover.bind(null, false)}
                 onTouchStart={this._handleTouch.bind(null, true)}
             >
-                {isShown || !unshownContent ? shownContent : unshownContent}
+                {isShown || !unshownContentObject ? shownContentMappedTextElement : unshownContentMappedTextElement}
             </li>
         );
     }

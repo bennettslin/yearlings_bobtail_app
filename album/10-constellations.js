@@ -6,7 +6,17 @@ exports.song = {
     title: 'Constellations!',
     speechBubbles: {
         narrative: 'One night back in Los Angeles, my friends Ana, Howie, Tomer, and I got high on Robitussin and explored the steam tunnels under UCLA. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer, and by the end of it, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different afterwards.',
-        backstory: 'While reading <em>Finnegans Wake</em>, I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still and everything feels at once epic and unreal. The Police\'s <em>Ghost in the Machine</em> was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere.'
+        backstory: [
+            'While reading',
+            {
+                italic: 'Finnegans Wake,'
+            },
+            'I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still and everything feels at once epic and unreal. The Police\'s',
+            {
+                italic: 'Ghost in the Machine'
+            },
+            'was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere.'
+        ]
     },
     annotations: {
         reverends: {
@@ -29,7 +39,7 @@ exports.song = {
             description: 'The Book of Exodus recounts how the Israelites discovered manna during their trek out of Egypt.'
         },
         viking_den: {
-            description: 'The Vikings were Norse seafarers who expanded outwards from Scandinavia beginning in the 8th century. Also, my friends, having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as Vicodin. The night will prove them wrong.'
+            description: 'The Vikings were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Also, my friends, having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as Vicodin. The night will prove them wrong.'
         },
         walkyriens: {
             description: 'Backtrack to earlier that night. We buy the Robitussin from a Walgreens pharmacy. Also, the Valkyries in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.'
@@ -44,7 +54,13 @@ exports.song = {
             description: 'Having appraised our quaffs, we now upraise them. And whatever coughs we might have, they are definitely suppressed.'
         },
         boundless_kalevalley_ends: {
-            description: 'The Kalevala is the national epic poem of Finland. Also, the San Fernando Valley, which I hated as a teenager, is <em>the</em> "Cali valley." The days before I could leave were painfully endless. With the magic of Robitussin, however, escape is now instantaneous.'
+            description: [
+                'The Kalevala is the national epic poem of Finland. Also, the San Fernando Valley, which I hated as a teenager, is',
+                {
+                    emphasis: 'the'
+                },
+                '"Cali valley." The days before I could leave were painfully endless. With the magic of Robitussin, however, escape is now instantaneous.'
+            ]
         },
         finnugreec_tongue: {
             description: 'The Finnish language belongs in the Finno-Ugric family. Also, the licorice taste of Robitussin, which lingers in our mouths, is reminiscent of the spice fenugreek.',
@@ -365,9 +381,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Farsi ahura, Sanskrit deva's day shone, foresee a hero or sense great devastation
-                     */
                     time: 60,
                     verse: [
                         {
@@ -551,9 +564,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Loki and Freyja, lowkey and fried.
-                     */
                     time: 135,
                     verse: [
                         'he sees',
@@ -564,9 +574,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * No worse and none the better, Norse and Nunavutter, Viking encounters with First Nations, leave as the red sun arrives, Leif Erikson, son of Eric the Red, we see the vvikings again
-                     */
                     time: 139,
                     verse: [
                         {
@@ -582,9 +589,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Memories and mummeries.
-                     */
                     time: 147,
                     verse: [
                         'How old are',
@@ -612,9 +616,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Counting irregular heartbeats.
-                     */
                     time: 161,
                     verse: [
                         'Then pounds',
@@ -625,9 +626,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * English buzzards, Rumspringa, rum spring.
-                     */
                     time: 165,
                     verse: [
                         {
@@ -643,9 +641,6 @@ exports.song = {
                     ]
                 },
                 {
-                    /**
-                     * Deseret language of Mormons, black Latter Day saints, Rejoice, wrapped around like Finnegans Wake.
-                     */
                     time: 169,
                     verse: [
                         {

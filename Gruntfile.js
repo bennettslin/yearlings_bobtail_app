@@ -15,12 +15,12 @@ module.exports = function(grunt) {
         concat: {
             // begin with global files
             css: {
-                src: ['less/global/*.less', 'less/*.less'],
+                src: ['less/global/*.less', 'less/dev/*.less', 'less/*.less'],
                 dest: 'src/style.less'
             },
             // end with DOM-related scripts
             js: {
-                src: ['jsx/mixins/*.jsx', 'jsx/*.jsx', 'jsx/js/*.js'],
+                src: ['jsx/mixins/*.jsx', 'jsx/dev/*.jsx', 'jsx/*.jsx', 'jsx/js/*.js'],
                 dest: 'src/components.jsx'
             },
         },

@@ -1,26 +1,4 @@
-// var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
-// var ReactTransitionGroup = React.addons.TransitionGroup;
-
 var LyricsColumn = React.createClass({
-
-    // componentWillAppear: function(callback) {
-    //     console.log("hi");
-    // },
-    // componentDidAppear: function() {
-    //     console.log("hi2");
-    // },
-    // componentWillEnter: function(callback) {
-    //     console.log("hi3");
-    // },
-    // componentDidEnter: function() {
-    //     console.log("hi4");
-    // },
-    // componentWillLeave: function(callback) {
-    //     console.log("hi5");
-    // },
-    // componentDidLeave: function() {
-    //     console.log("hi6");
-    // },
 
     render: function() {
         var playedSongIndex = this.props.playedSongIndex,
@@ -33,7 +11,6 @@ var LyricsColumn = React.createClass({
                 ' lyrics-column-' + columnIndex +
                 shownClassName + doublespeakerClassName +
                 expandedClassName + foldedClassName,
-            // columnKeyName = 'lyrics-column-' + playedSongIndex + '-' + columnIndex,
             expandColumnsButton,
             toggleFoldButton,
             lyricsTextArea;
@@ -90,58 +67,6 @@ var LyricsColumn = React.createClass({
 
     _parseLyric: function(lyric) {
         var annotation = lyric.annotation;
-        return this._getMappedVerseElement(lyric.verse);
-    },
-
-    /**
-     * Returns either a single element or a mapped element wrapped in a span tag
-     */
-    _getMappedVerseElement: function(verse, index, nestedIndex) {
-        index = index || 0;
-        nestedIndex = nestedIndex || 0;
-
-        if (Array.isArray(verse)) {
-            return (
-                <span key={nestedIndex + '-' + index}>
-                    {verse.map(function(verseElement, index) {
-                        return this._getMappedVerseElement(verseElement, index, nestedIndex + 1);
-                    }.bind(this))}
-                </span>
-            );
-
-        } else if (typeof verse === 'string' || typeof verse === 'object') {
-            return this._getTaggedVerseElement(verse, index, nestedIndex);
-        }
-    },
-
-    /**
-     * Returns a single element wrapped in a span, italic, or anchor tag
-     */
-    _getTaggedVerseElement: function(verse, index, nestedIndex) {
-        if (typeof verse === 'string') {
-            return (
-                <span key={nestedIndex + '-' + index}>
-                    {/* Begin subsequent segments of each line with a space. */}
-                    {index > 0 ? ' ' : ''}
-                    {verse}
-                </span>
-            );
-
-        } else if (typeof verse === 'object') {
-            if (verse.italic) {
-                return <em key={nestedIndex + '-' + index}>{this._getMappedVerseElement(verse.italic, index, nestedIndex)}</em>;
-
-            } else if (verse.anchor) {
-                return (
-                    <a
-                        key={nestedIndex + '-' + index}
-                        onClick={this.props._handleAnnotationSelect.bind(null, verse.annotationKey)}
-                    >
-                        {this._getMappedVerseElement(verse.anchor, index, nestedIndex)}
-                    </a>
-                );
-
-            }
-        }
+        return TextFormatter.getMappedTextElement(lyric.verse, this.props._handleAnnotationSelect);
     }
 });

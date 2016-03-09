@@ -5,4 +5,4 @@ var config = album,
 config.windowHeight = window.innerHeight;
 config.windowWidth = window.innerWidth;
 
-wrapper = ReactDOM.render(React.createElement(App, config), document.getElementById('container'));
+wrapper = ReactDOM.render(React.createElement(DevApp, config), document.getElementById('container'));
