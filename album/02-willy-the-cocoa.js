@@ -1,13 +1,16 @@
 exports.song = {
     title: 'Willy the Cocoa',
     speechBubbles: {
-        narrative: 'narrative 1',
-        backstory: 'personal 1'
+        narrative: 'Willy was an autistic man who wandered our neighbourhood collecting recyclables for his living. Kids called him "The Cocoa," referring to both his Coke bottles and his seeming a bit "cuckoo." One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with autism at around this time, and in light of Willy\'s murder, I would lie awake in fear of what lay in store for him.',
+        backstory: 'In folklore, a changeling is a troll who was secretly left in place of a stolen human child. Such legends were told to explain developmental disabilities in children. For this song, I wanted the sound of woodland trolls in midnight revelry after a successful heist. I figured it was akin to the swamp rock of Creedence Clearwater Revival at an amped-up tempo, with concertinas and mandolins thrown in to boot.'
     },
     lyrics: {
         left: [
             [
                 {
+                    /**
+                     * Talk about the Valley, hot
+                     */
                     time: 11,
                     verse: 'Hilltops gnashing dig out potholes,'
                 },
