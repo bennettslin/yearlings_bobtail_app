@@ -20,7 +20,12 @@ exports.song = {
     },
     annotations: {
         reverends: {
-            description: '<em>Finnegans Wake</em> opens with the line "riverrun, past Eve and Adam\'s," so I figured I would start there as well. Robitussin can be a mystical experience, so we try to maintain a reverential air as we slowly make our way through the UCLA campus.'
+            description: [
+                {
+                    italic: 'Finnegans Wake'
+                },
+                'opens with the line "riverrun, past Eve and Adam\'s," so I figured I would start there as well. Robitussin can be a mystical experience, so we try to maintain a reverential air as we slowly make our way through the UCLA campus.'
+            ]
         },
         paused_stiff_in_tandem: {
             description: 'Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.'
@@ -208,7 +213,13 @@ exports.song = {
             description: 'Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." The Mormons did not allow blacks to attain priesthood until 1978.'
         },
         rejoyce_bellow_the: {
-            description: '"\'Rejoyce!\' bellow the reverends." Joyce wrote the last line of <em>Finnegans Wake</em> to wrap back onto the first, so I indulged in the same conceit. As I\'m stuck watching public access televangelists, I observe that every religion\'s early spirit eventually degrades into orthodoxy and routine, much as it does for us as individuals. But in the meantime, we\'re just halfway through summer, and more nights of Robitussin await…'
+            description: [
+                '"\'Rejoyce!\' bellow the reverends." Joyce wrote the last line of',
+                {
+                    italic: 'Finnegans Wake'
+                },
+                'to wrap back onto the first, so I indulged in the same conceit. As I\'m stuck watching public access televangelists, I observe that every religion\'s early spirit eventually degrades into orthodoxy and routine, much as it does for us as individuals. But in the meantime, we\'re just halfway through summer, and more nights of Robitussin await…'
+            ]
         }
     },
     lyrics: {

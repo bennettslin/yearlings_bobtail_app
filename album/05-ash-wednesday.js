@@ -13,7 +13,13 @@ exports.song = {
             description: 'Glancing around after we made out in my room one night, Catherine remarked that she didn\'t see any books. "I don\'t read," I said. In hindsight, that was probably the beginning of the end.'
         },
         ulysses_tomb: {
-            description: 'A reference to the classic "Who\'s buried in Grant\'s tomb" schoolyard riddle, of course, but also to James Joyce\'s masterpiece novel. It was Catherine\'s admiration for Joyce that motivated me to create "the <em>Ulysses</em> of rock albums."',
+            description: [
+                'A reference to the classic "Who\'s buried in Grant\'s tomb" schoolyard riddle, of course, but also to James Joyce\'s masterpiece novel. It was Catherine\'s admiration for Joyce that motivated me to create "the',
+                {
+                    italic: 'Ulysses'
+                },
+                'of rock albums."'
+            ],
             reference: 'https://en.wikipedia.org/wiki/Grant%27s_Tomb'
         },
         laid_tourettes: {
@@ -58,11 +64,23 @@ exports.song = {
             reference: 'https://en.wikipedia.org/wiki/Dorothy_Parker'
         },
         went_clear: {
-            description: 'Having decided to win Catherine back by reading more books, I began with those we\'d discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen\'s earlier novel <em>Beautiful Losers</em>, particularly in its line, "Did you ever go clear?"',
+            description: [
+                'Having decided to win Catherine back by reading more books, I began with those we\'d discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen\'s earlier novel',
+                {
+                    italic: 'Beautiful Losers,'
+                },
+                'particularly in its line, "Did you ever go clear?"'
+            ],
             reference: 'https://en.wikipedia.org/wiki/Beautiful_Losers'
         },
         my_tekakwitha: {
-            description: 'The story of Kateri Tekakwitha, the Catholic Church\'s first Native American saint, figures prominently in <em>Beautiful Losers</em>. I always assumed that "going clear" was a reference to the legend that Tekakwitha\'s smallpox scars miraculously vanished upon her death.',
+            description: [
+                'The story of Kateri Tekakwitha, the Catholic Church\'s first Native American saint, figures prominently in',
+                {
+                    italic: 'Beautiful Losers,'
+                },
+                'I always assumed that "going clear" was a reference to the legend that Tekakwitha\'s smallpox scars miraculously vanished upon her death.'
+            ],
             reference: 'https://en.wikipedia.org/wiki/Kateri_Tekakwitha'
         },
         safe_algonquin_abode: {

@@ -32,7 +32,11 @@ exports.song = {
                 },
                 {
                     time: 30,
-                    verse: '<em>Chilled cola\'s free with salvage sold…</em>'
+                    verse: [
+                        {
+                            italic: 'Chilled cola\'s free with salvage sold…'
+                        }
+                    ]
                 },
                 {
                     time: 32,
@@ -136,7 +140,11 @@ exports.song = {
                 },
                 {
                     time: 126,
-                    verse: '<em>Shelled skull has freed unsalvaged soul…</em>'
+                    verse: [
+                        {
+                            italic: 'Shelled skull has freed unsalvaged soul…'
+                        }
+                    ]
                 },
                 {
                     time: 128,
