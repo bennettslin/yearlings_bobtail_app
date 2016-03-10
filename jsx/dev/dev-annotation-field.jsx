@@ -8,7 +8,7 @@ var DevAnnotationField = React.createClass({
 
     render: function() {
         return (
-            <div className="dev-annotation">
+            <div className="dev-annotation-field">
                 <h2>annotation</h2>
                 {this.props.annotationSpan}
             </div>

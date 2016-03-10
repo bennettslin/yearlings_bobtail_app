@@ -22,7 +22,7 @@ var DevSpeechBubblesField = React.createClass({
             }.bind(this));
 
         return (
-            <div className="dev-speech-bubbles">
+            <div className="dev-speech-bubbles-field">
                 {speechBubbles}
             </div>
         );

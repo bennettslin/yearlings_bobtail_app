@@ -22,5 +22,5 @@ exports.album = {
         }
     ],
     pageStartingIndices: [0, 9],
-    songs: []
+    songs: [],
 };

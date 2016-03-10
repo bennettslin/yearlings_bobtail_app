@@ -2,6 +2,7 @@ var DevApp = React.createClass({
 
     getDefaultProps: function() {
         return {
+            title: 'Yearling\'s Bobtail',
             songs: [],
             speechBubbles: []
         };
@@ -45,8 +46,8 @@ var DevApp = React.createClass({
         return (
             <div className="dev-app">
                 <div className="dev-app-column songs-column">
-                    <h1>{'Yearling\'s Bobtail'}</h1>
-                    <DevSongButtonsField
+                    <h1>{this.props.title}</h1>
+                    <DevSongsField
                         songs={this.props.songs}
                         playedSongIndex={playedSongIndex}
                         handleSongChange={this.handleSongChange}
@@ -63,6 +64,9 @@ var DevApp = React.createClass({
                     <div className="notes-row speech-bubbles-row">
                         <DevSpeechBubblesField
                             playedSongSpeechBubbles={playedSongSpeechBubbles}
+                        />
+                        <DevProgressField
+                            tasks={this.props.songs.tasks}
                         />
                     </div>
                 </div>

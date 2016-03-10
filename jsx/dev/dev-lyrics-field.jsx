@@ -29,7 +29,7 @@ var DevLyricsField = React.createClass({
             }.bind(this));
 
         return (
-            <div className="dev-lyrics">
+            <div className="dev-lyrics-field">
                 <h2>lyrics</h2>
                 <div className="dev-lyrics-columns">
                     {lyricsColumns}

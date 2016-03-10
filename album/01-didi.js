@@ -1,5 +1,22 @@
 exports.song = {
     title: 'Didi',
+    tasks: [
+        {
+            taskName: ' test task 1',
+            workedHours: 4,
+            neededHours: 8
+        },
+        {
+            taskName: 'test task 2',
+            workedHours: 5,
+            neededHours: 7
+        },
+        {
+            taskName: 'test task 3',
+            workedHours: 2,
+            neededHours: 8
+        },
+    ],
     speechBubbles: {
         narrative: 'narrative 1',
         backstory: 'personal 1'
