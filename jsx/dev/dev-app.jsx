@@ -10,68 +10,67 @@ var DevApp = React.createClass({
     getInitialState: function() {
         return {
             playedSongIndex: -1,
-            annotationMappedTextElement: null
+            annotationSpan: null
         };
     },
 
-    _changeSong: function(playedSongIndex) {
-        if (playedSongIndex >= -1 && playedSongIndex < this.props.songs.length) {
+    handleSongChange: function(newPlayedSongIndex) {
+        if (newPlayedSongIndex >= 0 && newPlayedSongIndex < this.props.songs.length) {
             this.setState({
-                playedSongIndex: playedSongIndex,
-                annotationMappedTextElement: null
+                playedSongIndex: newPlayedSongIndex,
+                annotationSpan: null
             });
         }
     },
 
-    _handleAnnotationSelect: function(annotationKey) {
-        var annotationContentObject = this.props.songs[this.state.playedSongIndex].annotations[annotationKey].description,
-            annotationMappedTextElement = TextFormatter.getMappedTextElement(annotationContentObject);
+    handleAnnotationSelect: function(annotationKey) {
+        var annotationObject = this.props.songs[this.state.playedSongIndex].annotations[annotationKey].description,
+            annotationSpan = TextFormatter.getFormattedSpan(annotationObject);
 
         this.setState({
-            annotationMappedTextElement: annotationMappedTextElement
+            annotationSpan: annotationSpan
         });
     },
 
     render: function() {
         var playedSongIndex = this.state.playedSongIndex,
-            playedSongTitle = this.state.playedSongIndex >= 0 ?
-                this.props.songs[this.state.playedSongIndex].title : null,
-            playedSongSpeechBubbles = this.state.playedSongIndex >= 0 ?
-                this.props.songs[this.state.playedSongIndex].speechBubbles :
+            playedSongTitle = playedSongIndex >= 0 ?
+                this.props.songs[playedSongIndex].title : null,
+            playedSongSpeechBubbles = playedSongIndex >= 0 ?
+                this.props.songs[playedSongIndex].speechBubbles :
                 this.props.speechBubbles,
-            playedSongLyrics = this.state.playedSongIndex >= 0 ?
-                this.props.songs[this.state.playedSongIndex].lyrics : null;
+            playedSongLyrics = playedSongIndex >= 0 ?
+                this.props.songs[playedSongIndex].lyrics : null;
 
         return (
             <div className="dev-app">
-                <div className="dev-column songs-column">
+                <div className="dev-app-column songs-column">
                     <h1>{'Yearling\'s Bobtail'}</h1>
-                    <DevSongList
+                    <DevSongButtonsField
                         songs={this.props.songs}
                         playedSongIndex={playedSongIndex}
-                        _changeSong={this._changeSong}
+                        handleSongChange={this.handleSongChange}
                     />
                 </div>
-                <div className="dev-column notes-column no-padding">
-                    {this.state.annotationMappedTextElement ?
+                <div className="dev-app-column notes-column">
+                    {this.state.annotationSpan ?
                         <div className="notes-row annotation-row">
-                            <h2>annotation</h2>
-                            <DevAnnotation
-                                annotationMappedTextElement={this.state.annotationMappedTextElement}
+                            <DevAnnotationField
+                                annotationSpan={this.state.annotationSpan}
                             />
                         </div> : null
                     }
                     <div className="notes-row speech-bubbles-row">
-                        <DevSpeech
+                        <DevSpeechBubblesField
                             playedSongSpeechBubbles={playedSongSpeechBubbles}
                         />
                     </div>
                 </div>
                 {playedSongIndex > -1 ?
-                     <div className="dev-column lyrics-column">
-                        <DevLyrics
+                     <div className="dev-app-column lyrics-column">
+                        <DevLyricsField
                             playedSongLyrics={playedSongLyrics}
-                            _handleAnnotationSelect={this._handleAnnotationSelect}
+                            handleAnnotationSelect={this.handleAnnotationSelect}
                         />
                     </div> : null
                 }

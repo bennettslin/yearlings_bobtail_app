@@ -99,8 +99,8 @@ var PopupMixin = {
             className = baseClassName + '-' + index +
                 ' popup' + (isShown ? ' expanded' : '') +
                 ((isShown && (this.props.popupsAlwaysShown !== 'none' || this.state.clickedOn)) ? ' engraved' : ''),
-            shownContentMappedTextElement = TextFormatter.getMappedTextElement(shownContentObject),
-            unshownContentMappedTextElement = TextFormatter.getMappedTextElement(unshownContentObject);
+            shownContentMappedTextElement = TextFormatter.getFormattedSpan(shownContentObject),
+            unshownContentMappedTextElement = TextFormatter.getFormattedSpan(unshownContentObject);
         return (
             <li
                 className={className}

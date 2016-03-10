@@ -67,6 +67,6 @@ var LyricsColumn = React.createClass({
 
     _parseLyric: function(lyric) {
         var annotation = lyric.annotation;
-        return TextFormatter.getMappedTextElement(lyric.verse, this.props._handleAnnotationSelect);
+        return TextFormatter.getFormattedSpanContainer(lyric.verse, this.props._handleAnnotationSelect);
     }
 });

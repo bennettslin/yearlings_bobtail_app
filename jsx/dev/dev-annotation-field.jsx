@@ -1,15 +1,16 @@
-var DevAnnotation = React.createClass({
+var DevAnnotationField = React.createClass({
 
     getDefaultProps: function() {
         return {
-            annotationMappedTextElement: <div></div>
+            annotationSpan: null
         };
     },
 
     render: function() {
         return (
             <div className="dev-annotation">
-                {this.props.annotationMappedTextElement}
+                <h2>annotation</h2>
+                {this.props.annotationSpan}
             </div>
         );
     }

@@ -1,9 +1,9 @@
 var TextFormatter = {
 
     /**
-     * Returns either a single element or a mapped element wrapped in a span tag
+     * Returns a single span element containing nested text elements.
      */
-    getMappedTextElement: function(text, clickHandler, index, nestedIndex) {
+    getFormattedSpan: function(text, clickHandler, index, nestedIndex) {
         index = index || 0;
         nestedIndex = nestedIndex || 0;
 
@@ -11,20 +11,20 @@ var TextFormatter = {
             return (
                 <span key={nestedIndex + '-' + index}>
                     {text.map(function(textElement, index) {
-                        return this.getMappedTextElement(textElement, clickHandler, index, nestedIndex + 1);
+                        return this.getFormattedSpan(textElement, clickHandler, index, nestedIndex + 1);
                     }.bind(this))}
                 </span>
             );
 
         } else if (typeof text === 'string' || typeof text === 'object') {
-            return this._getTaggedTextElement(text, clickHandler, index, nestedIndex);
+            return this._getTaggedTextContent(text, clickHandler, index, nestedIndex);
         }
     },
 
     /**
-     * Returns a single element wrapped in a span, italic, or anchor tag
+     * Returns a single element wrapped in a span, italic, or anchor tag.
      */
-    _getTaggedTextElement: function(text, clickHandler, index, nestedIndex) {
+    _getTaggedTextContent: function(text, clickHandler, index, nestedIndex) {
         if (typeof text === 'string') {
             return (
                 <span key={nestedIndex + '-' + index}>
@@ -36,10 +36,10 @@ var TextFormatter = {
 
         } else if (typeof text === 'object') {
             if (text.italic) {
-                return <i key={nestedIndex + '-' + index}>{this.getMappedTextElement(text.italic, clickHandler, index, nestedIndex)}</i>;
+                return <i key={nestedIndex + '-' + index}>{this.getFormattedSpan(text.italic, clickHandler, index, nestedIndex)}</i>;
 
             } else if (text.emphasis) {
-                return <em key={nestedIndex + '-' + index}>{this.getMappedTextElement(text.emphasis, clickHandler, index, nestedIndex)}</em>;
+                return <em key={nestedIndex + '-' + index}>{this.getFormattedSpan(text.emphasis, clickHandler, index, nestedIndex)}</em>;
 
             } else if (text.anchor) {
                 return (
@@ -47,7 +47,7 @@ var TextFormatter = {
                         key={nestedIndex + '-' + index}
                         onClick={clickHandler.bind(null, text.annotationKey)}
                     >
-                        {this.getMappedTextElement(text.anchor, clickHandler, index, nestedIndex)}
+                        {this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)}
                     </a>
                 );
 
