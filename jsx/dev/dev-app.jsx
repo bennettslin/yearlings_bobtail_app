@@ -10,13 +10,17 @@ var DevApp = React.createClass({
 
     getInitialState: function() {
         return {
-            playedSongIndex: -1,
+            playedSongIndex: parseInt(window.sessionStorage.playedSongIndex) || -1,
             annotationSpan: null
         };
     },
 
     handleSongChange: function(newPlayedSongIndex) {
         if (newPlayedSongIndex >= 0 && newPlayedSongIndex < this.props.songs.length) {
+
+            // Store song index in session.
+            window.sessionStorage.playedSongIndex = newPlayedSongIndex;
+
             this.setState({
                 playedSongIndex: newPlayedSongIndex,
                 annotationSpan: null
