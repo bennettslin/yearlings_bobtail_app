@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             },
             // end with DOM-related scripts
             js: {
-                src: ['jsx/mixins/*.jsx', 'jsx/dev/*.jsx', 'jsx/*.jsx', 'jsx/js/*.js'],
+                src: ['jsx/helpers/*.*', 'jsx/dev/*.jsx', 'jsx/*.jsx', 'jsx/js/*.js'],
                 dest: 'src/components.jsx'
             },
         },

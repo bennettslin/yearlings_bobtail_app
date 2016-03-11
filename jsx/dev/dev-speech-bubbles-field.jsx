@@ -19,10 +19,10 @@ var DevSpeechBubblesField = React.createClass({
                         {TextFormatter.getFormattedSpan(this.props.playedSongSpeechBubbles[SPEECH_BUBBLE_NAMES[index]])}
                     </div>
                 );
-            }.bind(this));
+            }, this);
 
         return (
-            <div className="dev-speech-bubbles">
+            <div className="dev-speech-bubbles-field">
                 {speechBubbles}
             </div>
         );

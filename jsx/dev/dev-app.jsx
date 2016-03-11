@@ -2,6 +2,7 @@ var DevApp = React.createClass({
 
     getDefaultProps: function() {
         return {
+            title: 'Yearling\'s Bobtail',
             songs: [],
             speechBubbles: []
         };
@@ -39,14 +40,16 @@ var DevApp = React.createClass({
             playedSongSpeechBubbles = playedSongIndex >= 0 ?
                 this.props.songs[playedSongIndex].speechBubbles :
                 this.props.speechBubbles,
+            playedSongTasks = playedSongIndex >= 0 ?
+                this.props.songs[playedSongIndex].tasks : null,
             playedSongLyrics = playedSongIndex >= 0 ?
                 this.props.songs[playedSongIndex].lyrics : null;
 
         return (
             <div className="dev-app">
                 <div className="dev-app-column songs-column">
-                    <h1>{'Yearling\'s Bobtail'}</h1>
-                    <DevSongButtonsField
+                    <h1>{this.props.title}</h1>
+                    <DevSongsField
                         songs={this.props.songs}
                         playedSongIndex={playedSongIndex}
                         handleSongChange={this.handleSongChange}
@@ -64,6 +67,11 @@ var DevApp = React.createClass({
                         <DevSpeechBubblesField
                             playedSongSpeechBubbles={playedSongSpeechBubbles}
                         />
+                        {playedSongTasks ?
+                            <DevProgressField
+                                tasks={playedSongTasks}
+                            /> : null
+                        }
                     </div>
                 </div>
                 {playedSongIndex > -1 ?

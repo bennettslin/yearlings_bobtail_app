@@ -50,9 +50,7 @@ var TextFormatter = {
                         {this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)}
                     </a>
                 );
-
             }
         }
     }
-
-}
+};
