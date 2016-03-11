@@ -23,6 +23,20 @@ body {
     .dev-app-column {
         padding: 0 @dev-column-padding @dev-column-padding;
         box-sizing: border-box;
+
+        .total-progress-bar {
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+
+            .filled-progress-bar {
+                position: absolute;
+                width: 0%;
+                height: 100%;
+            }
+        }
     }
 
     .songs-column {
@@ -49,28 +63,20 @@ body {
             overflow: hidden;
             margin: @row-margin;
 
-            .dev-song-total-progress-bar {
-                position: absolute;
-                width: 0%;
-                height: 100%;
-                border-radius: 5px;
-                background-color: #fbb;
-                overflow: hidden;
+            .total-progress-bar {
+                background-color: #fcf;
 
-                .dev-song-filled-progress-bar {
-                    position: absolute;
-                    width: 0%;
-                    height: 100%;
-                    background-color: #d99;
+                .filled-progress-bar {
+                    background-color: #dad;
                 }
             }
 
             &.played {
-                .dev-song-total-progress-bar {
-                    background-color: #bfb;
+                .total-progress-bar {
+                    background-color: #cfc;
 
-                    .dev-song-filled-progress-bar {
-                        background-color: #9d9;
+                    .filled-progress-bar {
+                        background-color: #ada;
                     }
                 }
 
@@ -124,6 +130,67 @@ body {
 
         .annotation-row {
             background-color: #eff;
+        }
+
+        .dev-progress-field {
+            @row-padding: 5px;
+            @row-margin: @row-padding * 0.5;
+            @cell-padding: @row-padding;
+            @name-column-width: 195px;
+            @progress-column-width: @notes-column-width  @name-column-width - (@row-padding * 2) - (@row-margin * 2) - (@cell-padding * 4);
+
+            .dev-task-row {
+                position: relative;
+                box-sizing: border-box;
+                overflow: hidden;
+                margin: @row-margin;
+
+                .total-progress-bar {
+                    background-color: #fcc;
+
+                    .filled-progress-bar {
+                        background-color: #daa;
+                    }
+                }
+
+                // Header is first child.
+                &:not(:nth-child(2)) {
+                    margin-top: @row-padding;
+                }
+            }
+
+
+            [class$="subrow"] {
+                box-sizing: border-box;
+                // padding: 0 @row-padding;
+                position: relative;
+
+                .name {
+                    box-sizing: border-box;
+                    position: relative;
+                    padding: @cell-padding;
+                    display: inline-block;
+                    width: @name-column-width;
+                }
+
+                .progress {
+                    box-sizing: border-box;
+                    position: relative;
+                    padding: @cell-padding;
+                    display: inline-block;
+                    width: @progress-column-width;
+                    text-align: right;
+                }
+
+                &[class^="dev-subtask"] {
+                    margin-top: @row-margin;
+                    padding-left: 20px;
+
+                    .name {
+                        box-sizing: border-box;
+                    }
+                }
+            }
         }
     }
 

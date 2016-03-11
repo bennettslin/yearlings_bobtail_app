@@ -7,6 +7,23 @@ exports.song = {
             neededHours: 8
         },
         {
+            taskName: 'test task with subtasks 1',
+            subtasks: [
+                {
+                    taskName: 'test subtask 1',
+                    workedHours: 3,
+                    neededHours: 4
+                },
+                {
+                    taskName: 'test subtask 2',
+                    workedHours: 2,
+                    neededHours: 5
+                }
+            ],
+            workedHours: 0,
+            neededHours: 4
+        },
+        {
             taskName: 'test task 2',
             workedHours: 5,
             neededHours: 7
@@ -16,6 +33,23 @@ exports.song = {
             workedHours: 2,
             neededHours: 8
         },
+        {
+            taskName: 'test task with subtasks 2',
+            subtasks: [
+                {
+                    taskName: 'test subtask 1',
+                    workedHours: 3,
+                    neededHours: 4
+                },
+                {
+                    taskName: 'test subtask 2',
+                    workedHours: 2,
+                    neededHours: 5
+                }
+            ],
+            workedHours: 1,
+            neededHours: 3
+        }
     ],
     speechBubbles: {
         narrative: 'narrative 1',

@@ -31,10 +31,10 @@ var DevLyricsColumn = React.createClass({
                                             {this._parseLyric(lyric)}
                                         </div>
                                     )
-                                }.bind(this))}
+                                }, this)}
                             </div>
                         )
-                    }.bind(this))}
+                    }, this)}
                 </div>
             );
 

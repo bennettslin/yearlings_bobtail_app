@@ -26,7 +26,7 @@ var DevLyricsField = React.createClass({
                         handleAnnotationSelect={this.props.handleAnnotationSelect}
                     />
                 );
-            }.bind(this));
+            }, this);
 
         return (
             <div className="dev-lyrics-field">

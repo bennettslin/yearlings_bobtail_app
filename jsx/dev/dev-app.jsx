@@ -40,6 +40,8 @@ var DevApp = React.createClass({
             playedSongSpeechBubbles = playedSongIndex >= 0 ?
                 this.props.songs[playedSongIndex].speechBubbles :
                 this.props.speechBubbles,
+            playedSongTasks = playedSongIndex >= 0 ?
+                this.props.songs[playedSongIndex].tasks : null,
             playedSongLyrics = playedSongIndex >= 0 ?
                 this.props.songs[playedSongIndex].lyrics : null;
 
@@ -65,9 +67,11 @@ var DevApp = React.createClass({
                         <DevSpeechBubblesField
                             playedSongSpeechBubbles={playedSongSpeechBubbles}
                         />
-                        <DevProgressField
-                            tasks={this.props.songs.tasks}
-                        />
+                        {playedSongTasks ?
+                            <DevProgressField
+                                tasks={playedSongTasks}
+                            /> : null
+                        }
                     </div>
                 </div>
                 {playedSongIndex > -1 ?
