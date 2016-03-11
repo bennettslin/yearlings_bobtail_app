@@ -12,38 +12,34 @@ var DevProgressField = React.createClass({
         this._maxTotalNeededHours = ProgressManager.getMaxTotalNeededHoursFromTasks(this.props.tasks);
     },
 
-    _getTaskSubrow: function(task, taskIndex) {
+    componentWillUpdate: function(nextProps) {
+        this._maxTotalNeededHours = ProgressManager.getMaxTotalNeededHoursFromTasks(nextProps.tasks);
+    },
+
+    _getProgressBar: function(task) {
         return (
-            <div key={taskIndex} className="dev-task-subrow">
-                <DevProgressBar
-                    sumTask={task}
-                    maxTotalNeededHours={this._maxTotalNeededHours}
-                />
-                <span className="name">
-                    {task.taskName}
-                </span>
-                {task.neededHours ?
-                    <span className="progress">
-                        {task.workedHours}/{task.neededHours}
-                    </span> : null
-                }
-            </div>
+            <DevProgressBar
+                sumTask={task}
+                maxTotalNeededHours={this._maxTotalNeededHours}
+            />
         );
     },
 
-    _getSubtaskSubrow: function(subtask, subtaskIndex) {
+    _getTaskSubrow: function(task, taskIndex, isSubtask) {
+        var className = isSubtask ? 'dev-subtask-subrow' : 'dev-task-subrow';
         return (
-            <div key={subtaskIndex} className="dev-subtask-subrow">
-                <DevProgressBar
-                    sumTask={subtask}
-                    maxTotalNeededHours={this._maxTotalNeededHours}
-                />
-                <span className="name">
-                    {subtask.taskName}
-                </span>
-                <span className="progress">
-                    {subtask.workedHours}/{subtask.neededHours}
-                </span>
+            <div key={taskIndex} className={className}>
+                {this._getProgressBar(task)}
+                <div className="dev-task-text-wrapper">
+                    <span className="text-cell name">
+                        {task.taskName}
+                    </span>
+                    {task.neededHours ?
+                        <span className="text-cell progress">
+                            {task.workedHours}/{task.neededHours}
+                        </span> : null
+                    }
+                </div>
             </div>
         );
     },
@@ -51,7 +47,7 @@ var DevProgressField = React.createClass({
     _getSubtaskRow: function(subtasks) {
         if (subtasks) {
             var subtaskSubrows = subtasks.map(function(subtask, subtaskIndex) {
-                    return this._getSubtaskSubrow(subtask, subtaskIndex);
+                    return this._getTaskSubrow(subtask, subtaskIndex, true);
                 }, this);
 
             return (
@@ -69,7 +65,7 @@ var DevProgressField = React.createClass({
         var tasks = this.props.tasks,
             sumTask = ProgressManager.calculateSumTask(tasks);
             taskRows = tasks.map(function(task, taskIndex) {
-                var taskSubrow = this._getTaskSubrow(task, taskIndex),
+                var taskSubrow = this._getTaskSubrow(task, taskIndex, false),
                     subtaskRow = this._getSubtaskRow(task.subtasks);
 
                 return (
@@ -79,26 +75,27 @@ var DevProgressField = React.createClass({
                     </div>
                 );
             }, this),
-            sumTask = ProgressManager.calculateSumTask(tasks);
-
-        // Add sum of progress in footer.
-        taskRows.push(
-            <div key="footer" className="dev-task-row">
-                <div className="dev-task-subrow">
-                    <span className="name"></span>
-                    {sumTask.neededHours ?
-                        <h3 className="progress">
-                            {sumTask.workedHours}/{sumTask.neededHours}
-                        </h3> : null
-                    }
+            sumTask = ProgressManager.calculateSumTask(tasks),
+            taskFooter = (
+                <div key="footer" className="dev-task-row">
+                    <div className="dev-task-subrow">
+                        <div className="dev-task-text-wrapper">
+                            <span className="task-placeholder"></span>
+                            {sumTask.neededHours ?
+                                <h3 className="text-cell progress">
+                                    {sumTask.workedHours}/{sumTask.neededHours}
+                                </h3> : null
+                            }
+                        </div>
+                    </div>
                 </div>
-            </div>
-        );
+            );
 
         return (
             <div className="dev-progress-field">
                 <h2>progress</h2>
                 {taskRows}
+                {taskFooter}
             </div>
         );
     }

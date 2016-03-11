@@ -16,6 +16,9 @@ var DevSongsField = React.createClass({
 
     render: function() {
         var songs = this.props.songs,
+            songsHeader = (
+                <DevSongRow key="header" isHeader={true} />
+            ),
             songRows = songs.map(function(song, songIndex) {
                 var isSelected = this.props.playedSongIndex === songIndex,
                     sumTask = ProgressManager.calculateSumTask(song.tasks);
@@ -32,31 +35,16 @@ var DevSongsField = React.createClass({
                     />
                 );
             }, this),
-            sumAllTasks = ProgressManager.calculateSumAllTasks(songs);
-
-        // Add headers.
-        songRows.unshift(
-            <div key="header" className="dev-song-row">
-                <div className="dev-song-container">
-                    <h3 className="dev-song-button-header">Song</h3>
-                    <h3 className="dev-song-progress-header">Progress</h3>
-                </div>
-            </div>
-        );
-
-        // Add sum of progress in footer.
-        songRows.push(
-            <div key="footer" className="dev-song-row">
-                <div className="dev-song-container">
-                    <div className="dev-song-button-footer"></div>
-                    <h3 className="dev-song-progress-footer">{sumAllTasks.workedHours}/{sumAllTasks.neededHours}</h3>
-                </div>
-            </div>
-        );
+            sumAllTasks = ProgressManager.calculateSumAllTasks(songs),
+            songsFooter = (
+                <DevSongRow key="footer" isFooter={true} sumTask={sumAllTasks} />
+            );
 
         return (
             <div className="dev-songs-field">
+                {songsHeader}
                 {songRows}
+                {songsFooter}
             </div>
         );
     }

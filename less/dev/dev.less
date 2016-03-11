@@ -4,6 +4,9 @@ body {
 
 .dev-app {
     @dev-column-padding: 15px;
+    @text-wrapper-height-margin: 4px;
+    @text-wrapper-width-margin: 12px;
+    @row-height-margin: 2px;
 
     display: flex;
     justify-content: center;
@@ -20,6 +23,7 @@ body {
         margin-top: 0;
     }
 
+    // Universal styling rules.
     .dev-app-column {
         padding: 0 @dev-column-padding @dev-column-padding;
         box-sizing: border-box;
@@ -37,14 +41,21 @@ body {
                 height: 100%;
             }
         }
+
+        [class$="text-wrapper"] {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin: @text-wrapper-height-margin @text-wrapper-width-margin;
+
+            .text-cell {
+                display: inline-block;
+            }
+        }
     }
 
     .songs-column {
-        @row-padding: 5px;
-        @row-margin: @row-padding * 0.5;
-        @button-column-width: 195px;
-        @progress-column-width: 100px;
-        @songs-field-width: @button-column-width + @progress-column-width + (@row-padding * 2) + (@row-margin * 2);
+        @button-column-width: 196px;
 
         background-color: #fef;
         font-size: 1.2em;
@@ -53,15 +64,10 @@ body {
             margin-bottom: 0;
         }
 
-        .dev-songs-field {
-            min-width: @songs-field-width;
-        }
-
         .dev-song-row {
             position: relative;
-            box-sizing: border-box;
             overflow: hidden;
-            margin: @row-margin;
+            margin: @row-height-margin 0;
 
             .total-progress-bar {
                 background-color: #fcf;
@@ -93,22 +99,16 @@ body {
                 }
             }
 
-            .dev-song-container {
-                position: relative;
-                margin: @row-padding;
-            }
+            .dev-song-text-wrapper {
 
-            // Includes header.
-            [class^="dev-song-button"] {
-                display: inline-block;
-                width: @button-column-width;
-            }
+                // Include header and footer.
+                [class*="button"] {
+                    width: @button-column-width;
+                }
 
-            // Includes header.
-            [class^="dev-song-progress"] {
-                display: inline-block;
-                width: @progress-column-width;
-                text-align: right;
+                .progress {
+                    text-align: right;
+                }
             }
         }
     }
@@ -133,17 +133,25 @@ body {
         }
 
         .dev-progress-field {
-            @row-padding: 5px;
-            @row-margin: @row-padding * 0.5;
-            @cell-padding: @row-padding;
-            @name-column-width: 195px;
-            @progress-column-width: @notes-column-width  @name-column-width - (@row-padding * 2) - (@row-margin * 2) - (@cell-padding * 4);
 
             .dev-task-row {
+                // Header is first child.
+                &:not(:nth-child(2)) {
+                    margin-top: @row-height-margin;
+                }
+
+                font-size: 1.05em;
+            }
+
+            .dev-subtask-row {
+                padding-left: 25px;
+                font-size: 0.9em;
+            }
+
+            [class$="subrow"] {
                 position: relative;
-                box-sizing: border-box;
                 overflow: hidden;
-                margin: @row-margin;
+                margin: @row-height-margin;
 
                 .total-progress-bar {
                     background-color: #fcc;
@@ -153,41 +161,9 @@ body {
                     }
                 }
 
-                // Header is first child.
-                &:not(:nth-child(2)) {
-                    margin-top: @row-padding;
-                }
-            }
-
-
-            [class$="subrow"] {
-                box-sizing: border-box;
-                // padding: 0 @row-padding;
-                position: relative;
-
-                .name {
-                    box-sizing: border-box;
-                    position: relative;
-                    padding: @cell-padding;
-                    display: inline-block;
-                    width: @name-column-width;
-                }
-
-                .progress {
-                    box-sizing: border-box;
-                    position: relative;
-                    padding: @cell-padding;
-                    display: inline-block;
-                    width: @progress-column-width;
-                    text-align: right;
-                }
-
-                &[class^="dev-subtask"] {
-                    margin-top: @row-margin;
-                    padding-left: 20px;
-
-                    .name {
-                        box-sizing: border-box;
+                .dev-task-text-wrapper {
+                    .progress {
+                        text-align: right;
                     }
                 }
             }
