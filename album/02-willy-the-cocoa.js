@@ -9,7 +9,7 @@ exports.song = {
             [
                 {
                     /**
-                     * Talk about the Valley, hot
+                     * Talk about the San Fernando Valley being hot, mirage makes mountaintops turn upside down.
                      */
                     time: 11,
                     verse: 'Hilltops gnashing dig out potholes,'
@@ -23,6 +23,9 @@ exports.song = {
                     verse: 'Hydrants burst as early worms work this dying coyote\'s jaw.'
                 },
                 {
+                    /**
+                     * Willy collects recyclables.
+                     */
                     time: 23,
                     verse: 'Swill pop poured from wayside bottle,'
                 },
@@ -39,6 +42,9 @@ exports.song = {
                     ]
                 },
                 {
+                    /**
+                     * He ends as troll.
+                     */
                     time: 32,
                     verse: 'licking lips he ends his stroll.'
                 }
@@ -53,6 +59,7 @@ exports.song = {
                     verse: 'for our tins and our jars this week?'
                 },
                 {
+
                     time: 41,
                     verse: 'Saluting Mummy doing some haircutting to the sun'
                 },
