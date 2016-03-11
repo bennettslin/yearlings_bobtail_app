@@ -9,10 +9,35 @@ var DevApp = React.createClass({
     },
 
     getInitialState: function() {
+        var playedSongIndex = window.sessionStorage.playedSongIndex ?
+                parseInt(window.sessionStorage.playedSongIndex) : -1;
         return {
-            playedSongIndex: parseInt(window.sessionStorage.playedSongIndex) || -1,
+            playedSongIndex: playedSongIndex,
             annotationSpan: null
         };
+    },
+
+    componentDidMount: function() {
+        document.body.addEventListener('click', this._handleBodyClick);
+    },
+
+    componentWillUnmount: function() {
+        document.body.removeEventListener('click', this._handleBodyClick);
+    },
+
+    _handleBodyClick: function(e) {
+        var annotation = document.getElementById('annotation');
+
+        /**
+         * Close annotation if anywhere outside annotation is clicked, with the
+         * exception of another annotation link.
+         */
+        if (annotation && annotation !== e.target && !annotation.contains(e.target) && !GlobalManager.hasParentWithTagName(e.target, 'a')) {
+
+            this.setState({
+                annotationSpan: null
+            });
+        }
     },
 
     handleSongChange: function(newPlayedSongIndex) {
@@ -47,7 +72,8 @@ var DevApp = React.createClass({
             playedSongTasks = playedSongIndex >= 0 ?
                 this.props.songs[playedSongIndex].tasks : null,
             playedSongLyrics = playedSongIndex >= 0 ?
-                this.props.songs[playedSongIndex].lyrics : null;
+                this.props.songs[playedSongIndex].lyrics : null,
+            annotationIsShown = !!this.state.annotationSpan;
 
         return (
             <div className="dev-app">
@@ -60,13 +86,19 @@ var DevApp = React.createClass({
                     />
                 </div>
                 <div className="dev-app-column notes-column">
-                    {this.state.annotationSpan ?
-                        <div className="notes-row annotation-row">
+                    <ReactCSSTransitionGroup
+                        transitionName="annotation-animation"
+                        transitionEnterTimeout={100}
+                        transitionLeaveTimeout={100}
+                    >
+                    {annotationIsShown ?
+                        <div key="annotation" id="annotation" className="notes-row annotation-row">
                             <DevAnnotationField
                                 annotationSpan={this.state.annotationSpan}
                             />
                         </div> : null
                     }
+                    </ReactCSSTransitionGroup>
                     <div className="notes-row speech-bubbles-row">
                         <DevSpeechBubblesField
                             playedSongSpeechBubbles={playedSongSpeechBubbles}

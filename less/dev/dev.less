@@ -25,6 +25,7 @@ body {
 
     // Universal styling rules.
     .dev-app-column {
+        position: relative;
         padding: 0 @dev-column-padding @dev-column-padding;
         box-sizing: border-box;
 
@@ -129,6 +130,16 @@ body {
         }
 
         .annotation-row {
+            .animation-mixin;
+            @overflow-margin-width: 5px;
+            position: absolute;
+            top: 45px;
+            left: -@overflow-margin-width;
+            width: @notes-column-width + (@overflow-margin-width * 2);
+            box-shadow: -2px 2px 8px 8px rgba(100, 100, 120, 0.2);
+            border-radius: 5px;
+            z-index: 1;
+            margin: auto 0;
             background-color: #eff;
         }
 
@@ -228,6 +239,28 @@ body {
 
         &:active {
             color: #eaa;
+        }
+    }
+
+}
+
+// Global animation rules.
+.animation-mixin(@property: opacity, @shown-value: 1, @hidden-value: 0, @duration: 0.1s, @timing: ease) {
+    transition: @property @duration @timing;
+
+    &[class*="animation-enter"] {
+        @{property}: @hidden-value;
+
+        &[class*="animation-enter-active"] {
+            @{property}: @shown-value;
+        }
+    }
+
+    &[class*="animation-leave"] {
+        @{property}: @shown-value;
+
+        &[class*="animation-leave-active"] {
+            @{property}: @hidden-value;
         }
     }
 }
