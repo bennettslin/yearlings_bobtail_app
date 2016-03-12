@@ -110,7 +110,7 @@ var DevApp = React.createClass({
                         }
                     </div>
                 </div>
-                {playedSongIndex > -1 ?
+                {playedSongIndex >= 0 ?
                      <div className="dev-app-column lyrics-column">
                         <DevLyricsField
                             playedSongLyrics={playedSongLyrics}

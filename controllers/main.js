@@ -30,8 +30,6 @@ config.album.songs.push(require('../album/18-my-100000th-dream.js').song);
 // var SoundPlayerComponents = require('react-soundplayer/components');
 // var SoundPlayerAddons = require('react-soundplayer/addons');
 
-// var my100000thDream = require('../18_')
-
 var router = express.Router();
 
 router.get('/', function(req, res) {
