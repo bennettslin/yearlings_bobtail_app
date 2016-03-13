@@ -5,14 +5,6 @@ const ProgressManager = require('../helpers/progress-manager.js');
 
 export default class DevSongsField extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            maxTotalNeededHours: 0
-        };
-    }
-
     componentWillMount() {
         const maxTotalNeededHours = ProgressManager.getMaxTotalNeededHoursFromSongs(this.props.songs);
 
