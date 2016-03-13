@@ -1,0 +1,58 @@
+import React from 'react';
+import SongRow from './song-row.jsx';
+
+const ProgressHelpers = require('../helpers/progress-helpers.js');
+const defaultProps = {
+    songs: [],
+    playedSongIndex: -1,
+    handleSongChange() {}
+};
+
+class SongsField extends React.Component {
+
+    componentWillMount() {
+        const maxTotalNeededHours = ProgressHelpers.getMaxTotalNeededHoursFromSongs(this.props.songs);
+
+        this.setState({
+            maxTotalNeededHours
+        });
+    }
+
+    render() {
+        var songs = this.props.songs,
+            songsHeader = (
+                <SongRow key="header" isHeader={true} />
+            ),
+            songRows = songs.map(function(song, songIndex) {
+                var isSelected = this.props.playedSongIndex === songIndex,
+                    sumTask = ProgressHelpers.calculateSumTask(song.tasks);
+
+                return (
+                    <SongRow
+                        key={songIndex}
+                        songIndex={songIndex}
+                        songTitle={song.title}
+                        sumTask={sumTask}
+                        maxTotalNeededHours={this.state.maxTotalNeededHours}
+                        isSelected={isSelected}
+                        handleSongChange={this.props.handleSongChange}
+                    />
+                );
+            }, this),
+            sumAllTasks = ProgressHelpers.calculateSumAllTasks(songs),
+            songsFooter = (
+                <SongRow key="footer" isFooter={true} sumTask={sumAllTasks} />
+            );
+
+        return (
+            <div className="songs-field">
+                {songsHeader}
+                {songRows}
+                {songsFooter}
+            </div>
+        );
+    }
+}
+
+SongsField.defaultProps = defaultProps;
+export default SongsField;
