@@ -1,9 +1,15 @@
 import React from 'react';
-import DevAnnotationField from './dev-annotation-field.jsx';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
+
 import DevLyricsField from './dev-lyrics-field.jsx';
 import DevProgressField from './dev-progress-field.jsx';
 import DevSongsField from './dev-songs-field.jsx';
-import DevSpeechBubblesField from './dev-speech-bubbles-field.jsx';
+
+import { DevFormattedAnnotationField } from './dev-text-formatter.jsx';
+import { DevFormattedSpeechBubblesField } from './dev-text-formatter.jsx';
+import { DevFormattedLyricsColumn } from './dev-text-formatter.jsx';
+
+const GlobalManager = require('../helpers/global-manager.js');
 
 export default class DevApp extends React.Component {
 
@@ -13,19 +19,15 @@ export default class DevApp extends React.Component {
         const playedSongIndex = window.sessionStorage.playedSongIndex ?
                 parseInt(window.sessionStorage.playedSongIndex) : -1;
 
+        this.handleSongChange = this.handleSongChange.bind(this);
+        this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
+        this._handleBodyClick = this._handleBodyClick.bind(this);
+
         this.state = {
             playedSongIndex,
-            annotationSpan: null
+            annotationObject: null
         };
     }
-
-    // getDefaultProps() {
-    //     return {
-    //         title: 'Yearling\'s Bobtail',
-    //         songs: [],
-    //         speechBubbles: []
-    //     };
-    // };
 
     componentDidMount() {
         document.body.addEventListener('click', this._handleBodyClick);
@@ -45,7 +47,7 @@ export default class DevApp extends React.Component {
         if (annotation && annotation !== e.target && !annotation.contains(e.target) && !GlobalManager.hasParentWithTagName(e.target, 'a')) {
 
             this.setState({
-                annotationSpan: null
+                annotationObject: null
             });
         }
     }
@@ -58,17 +60,16 @@ export default class DevApp extends React.Component {
 
             this.setState({
                 playedSongIndex: newPlayedSongIndex,
-                annotationSpan: null
+                annotationObject: null
             });
         }
     }
 
     handleAnnotationSelect(annotationKey) {
-        var annotationObject = this.props.songs[this.state.playedSongIndex].annotations[annotationKey].description,
-            annotationSpan = TextFormatter.getFormattedSpan(annotationObject);
+        var annotationObject = this.props.songs[this.state.playedSongIndex].annotations[annotationKey].description;
 
         this.setState({
-            annotationSpan: annotationSpan
+            annotationObject: annotationObject
         });
     }
 
@@ -83,20 +84,7 @@ export default class DevApp extends React.Component {
                 this.props.songs[playedSongIndex].tasks : null,
             playedSongLyrics = playedSongIndex >= 0 ?
                 this.props.songs[playedSongIndex].lyrics : null,
-            annotationIsShown = !!this.state.annotationSpan;
-
-        return (
-            <div className="dev-app">
-                <div className="dev-app-column songs-column">
-                    <h1>{this.props.title}</h1>
-                    <DevSongsField
-                        songs={this.props.songs}
-                        playedSongIndex={playedSongIndex}
-                        handleSongChange={this.handleSongChange}
-                    />
-                </div>
-            </div>
-        );
+            annotationIsShown = !!this.state.annotationObject;
 
         return (
             <div className="dev-app">
@@ -109,21 +97,21 @@ export default class DevApp extends React.Component {
                     />
                 </div>
                 <div className="dev-app-column notes-column">
-                    {/* <ReactCSSTransitionGroup
-                                            transitionName="annotation-animation"
-                                            transitionEnterTimeout={100}
-                                            transitionLeaveTimeout={100}
-                                        > */}
-                    {annotationIsShown ?
-                        <div key="annotation" id="annotation" className="notes-row annotation-row">
-                            <DevAnnotationField
-                                annotationSpan={this.state.annotationSpan}
-                            />
-                        </div> : null
-                    }
-                    {/* </ReactCSSTransitionGroup> */}
+                    <CSSTransitionGroup
+                        transitionName="annotation-animation"
+                        transitionEnterTimeout={100}
+                        transitionLeaveTimeout={100}
+                    >
+                        {annotationIsShown ?
+                            <div key="annotation" id="annotation" className="notes-row annotation-row">
+                                <DevFormattedAnnotationField
+                                    annotationObject={this.state.annotationObject}
+                                />
+                            </div> : null
+                        }
+                    </CSSTransitionGroup>
                     <div className="notes-row speech-bubbles-row">
-                        <DevSpeechBubblesField
+                        <DevFormattedSpeechBubblesField
                             playedSongSpeechBubbles={playedSongSpeechBubbles}
                         />
                         {playedSongTasks ?
@@ -144,4 +132,10 @@ export default class DevApp extends React.Component {
             </div>
         );
     }
+}
+
+DevApp.defaultProps = {
+    title: 'Yearling\'s Bobtail',
+    songs: [],
+    speechBubbles: []
 }

@@ -1,4 +1,5 @@
 module.exports = {
+
     getMaxTotalNeededHoursFromSongs: function(songs) {
         return songs.reduce(function(maxTotalNeededHours, song) {
             var totalNeededHours = this.calculateSumTask(song.tasks).neededHours;

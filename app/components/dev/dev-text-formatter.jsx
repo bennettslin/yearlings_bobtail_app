@@ -1,9 +1,14 @@
-class TextFormatter {
+import React from 'react';
+import DevLyricsColumn from './dev-lyrics-column.jsx';
+import DevAnnotationField from './dev-annotation-field.jsx';
+import DevSpeechBubblesField from './dev-speech-bubbles-field.jsx';
+
+const TextFormatter = {
 
     /**
      * Returns a single span element containing nested text elements.
      */
-    getFormattedSpan(text, clickHandler, index, nestedIndex) {
+    getFormattedSpan: function(text, clickHandler, index, nestedIndex) {
         index = index || 0;
         nestedIndex = nestedIndex || 0;
 
@@ -19,12 +24,12 @@ class TextFormatter {
         } else if (typeof text === 'string' || typeof text === 'object') {
             return this._getTaggedTextContent(text, clickHandler, index, nestedIndex);
         }
-    }
+    },
 
     /**
      * Returns a single element wrapped in a span, italic, or anchor tag.
      */
-    _getTaggedTextContent(text, clickHandler, index, nestedIndex) {
+    _getTaggedTextContent: function(text, clickHandler, index, nestedIndex) {
         if (typeof text === 'string') {
             return (
                 <span key={nestedIndex + '-' + index}>
@@ -52,5 +57,23 @@ class TextFormatter {
                 );
             }
         }
+    }
+}
+
+export class DevFormattedLyricsColumn extends React.Component {
+    render() {
+        return <DevLyricsColumn TextFormatter={TextFormatter} {...this.props} />;
+    }
+}
+
+export class DevFormattedAnnotationField extends React.Component {
+    render() {
+        return <DevAnnotationField TextFormatter={TextFormatter} {...this.props} />;
+    }
+}
+
+export class DevFormattedSpeechBubblesField extends React.Component {
+    render() {
+        return <DevSpeechBubblesField TextFormatter={TextFormatter} {...this.props} />;
     }
 }

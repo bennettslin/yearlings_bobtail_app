@@ -1,23 +1,11 @@
 import React from 'react';
+import DevFormattedLyricsColumn from './dev-text-formatter.jsx';
 
 export default class DevLyricsColumn extends React.Component {
 
-    // getDefaultProps() {
-    //     return {
-    //         columnIndex: 'left',
-    //         columnTitle: '',
-    //         playedSongLyrics: [],
-    //         handleAnnotationSelect() {}
-    //     };
-    // };
-
-    constructor(props) {
-        super(props);
-    }
-
     _parseLyric(lyric) {
         var annotation = lyric.annotation;
-        return TextFormatter.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
+        return this.props.TextFormatter.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
     }
 
     render() {
@@ -51,4 +39,11 @@ export default class DevLyricsColumn extends React.Component {
             </div>
         );
     }
+}
+
+DevLyricsColumn.defaultProps = {
+    columnIndex: 'left',
+    columnTitle: '',
+    playedSongLyrics: [],
+    handleAnnotationSelect() {}
 }

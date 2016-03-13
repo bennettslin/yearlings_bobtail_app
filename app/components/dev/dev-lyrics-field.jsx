@@ -1,31 +1,19 @@
 import React from 'react';
-import DevLyricsColumn from './dev-lyrics-column.jsx';
+import { DevFormattedLyricsColumn } from './dev-text-formatter.jsx';
 
 var LYRICS_COLUMN_NAMES = ['left', 'right'];
 
 export default class DevLyricsField extends React.Component {
 
-    // getDefaultProps() {
-    //     return {
-    //         playedSongLyrics: '',
-    //         handleAnnotationSelect() {}
-    //     };
-    // };
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-
         var lyricsColumnKeys = Object.keys(this.props.playedSongLyrics),
             filteredLyricsColumnKeys = LYRICS_COLUMN_NAMES.filter(function(key) {
                 return lyricsColumnKeys.indexOf(key) !== -1;
             }),
-            isDoublespeaker = this.props.playedSongLyrics.left && this.props.playedSongLyrics.right;
+            isDoublespeaker = this.props.playedSongLyrics.left && this.props.playedSongLyrics.right,
             lyricsColumns = filteredLyricsColumnKeys.map(function(key, index) {
                 return (
-                    <DevLyricsColumn
+                    <DevFormattedLyricsColumn
                         key={key}
                         columnIndex={key}
                         columnTitle={isDoublespeaker ? key + ' speaker' : null}
@@ -44,4 +32,9 @@ export default class DevLyricsField extends React.Component {
             </div>
         );
     }
+}
+
+DevLyricsField.defaultProps = {
+    playedSongLyrics: '',
+    handleAnnotationSelect() {}
 }

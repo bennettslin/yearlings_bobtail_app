@@ -1,13 +1,9 @@
 import React from 'react';
 import DevProgressBar from './dev-progress-bar.jsx';
 
-export default class DevProgressField extends React.Component {
+const ProgressManager = require('../helpers/progress-manager.js');
 
-    // getDefaultProps() {
-    //     return {
-    //         tasks: []
-    //     };
-    // };
+export default class DevProgressField extends React.Component {
 
     constructor(props) {
         super(props);
@@ -80,7 +76,6 @@ export default class DevProgressField extends React.Component {
 
     render() {
         var tasks = this.props.tasks,
-            sumTask = ProgressManager.calculateSumTask(tasks);
             taskRows = tasks.map(function(task, taskIndex) {
                 var taskSubrow = this._getTaskSubrow(task, taskIndex, false),
                     subtaskRow = this._getSubtaskRow(task.subtasks);
@@ -116,4 +111,8 @@ export default class DevProgressField extends React.Component {
             </div>
         );
     }
+}
+
+DevProgressField = {
+    tasks: []
 }

@@ -3,26 +3,6 @@ import DevProgressBar from './dev-progress-bar.jsx';
 
 export default class DevSongRow extends React.Component {
 
-    // getDefaultProps() {
-    //     return {
-    //         songIndex: -1,
-    //         songTitle: '',
-    //         sumTask: {
-    //             workedHours: 0,
-    //             neededHours: 0
-    //         },
-    //         maxTotalNeededHours: 0,
-    //         isHeader: false,
-    //         isFooter: false,
-    //         isSelected: false,
-    //         handleSongChange() {}
-    //     };
-    // };
-
-    constructor(props) {
-        super(props);
-    }
-
     _getSongContent(sumTask) {
         return (
             <div className="dev-song-text-wrapper">
@@ -82,4 +62,18 @@ export default class DevSongRow extends React.Component {
             </div>
         );
     }
+}
+
+DevSongRow.defaultProps = {
+    songIndex: -1,
+    songTitle: '',
+    sumTask: {
+        workedHours: 0,
+        neededHours: 0
+    },
+    maxTotalNeededHours: 0,
+    isHeader: false,
+    isFooter: false,
+    isSelected: false,
+    handleSongChange() {}
 }

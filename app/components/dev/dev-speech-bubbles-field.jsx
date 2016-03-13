@@ -4,16 +4,6 @@ var SPEECH_BUBBLE_NAMES = ['narrative', 'backstory'];
 
 export default class DevSpeechBubblesField extends React.Component {
 
-    // getDefaultProps() {
-    //     return {
-    //         playedSongSpeechBubbles: {}
-    //     };
-    // }
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         var speechBubbles = SPEECH_BUBBLE_NAMES.map(function(bubbleName, index) {
                 return (
@@ -22,7 +12,7 @@ export default class DevSpeechBubblesField extends React.Component {
                         className={'speech-bubble ' + bubbleName}
                     >
                         <h2>{bubbleName}</h2>
-                        {TextFormatter.getFormattedSpan(this.props.playedSongSpeechBubbles[SPEECH_BUBBLE_NAMES[index]])}
+                        {this.props.TextFormatter.getFormattedSpan(this.props.playedSongSpeechBubbles[SPEECH_BUBBLE_NAMES[index]])}
                     </div>
                 );
             }, this);
@@ -33,4 +23,8 @@ export default class DevSpeechBubblesField extends React.Component {
             </div>
         );
     }
+}
+
+DevSpeechBubblesField.defaultProps = {
+    playedSongSpeechBubbles: {}
 }

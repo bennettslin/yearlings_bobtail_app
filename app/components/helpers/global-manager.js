@@ -1,8 +1,6 @@
-// const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+module.exports = {
 
-class GlobalManager {
-
-    hasParentWithTagName(child, parentTagName) {
+    hasParentWithTagName: function(child, parentTagName) {
          var node = child.parentNode;
 
          while (node !== null) {

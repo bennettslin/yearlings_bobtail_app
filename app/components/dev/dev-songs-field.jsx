@@ -5,14 +5,6 @@ const ProgressManager = require('../helpers/progress-manager.js');
 
 export default class DevSongsField extends React.Component {
 
-    // getDefaultProps() {
-    //     return {
-    //         songs: [],
-    //         playedSongIndex: -1,
-    //         handleSongChange() {}
-    //     };
-    // }
-
     constructor(props) {
         super(props);
 
@@ -63,4 +55,10 @@ export default class DevSongsField extends React.Component {
             </div>
         );
     }
+}
+
+DevSongsField = {
+    songs: [],
+    playedSongIndex: -1,
+    handleSongChange() {}
 }

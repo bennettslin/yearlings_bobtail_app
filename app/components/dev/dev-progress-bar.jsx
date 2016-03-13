@@ -2,20 +2,6 @@ import React from 'react';
 
 export default class DevProgressBar extends React.Component {
 
-    // getDefaultProps() {
-    //     return {
-    //         sumTask: {
-    //             workedHours: 0,
-    //             neededHours: 0
-    //         },
-    //         maxTotalNeededHours: 0
-    //     };
-    // };
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         var sumTask = this.props.sumTask,
             filledStyle,
@@ -35,4 +21,12 @@ export default class DevProgressBar extends React.Component {
             </div>
         );
     }
+}
+
+DevProgressBar.defaultProps = {
+    sumTask: {
+        workedHours: 0,
+        neededHours: 0
+    },
+    maxTotalNeededHours: 0
 }
