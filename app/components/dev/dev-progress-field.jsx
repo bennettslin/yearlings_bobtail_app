@@ -74,19 +74,23 @@ export default class DevProgressField extends React.Component {
         }
     }
 
+    _getTaskRows(tasks) {
+        return tasks.map(function(task, taskIndex) {
+            var taskSubrow = this._getTaskSubrow(task, taskIndex, false),
+                subtaskRow = this._getSubtaskRow(task.subtasks);
+
+            return (
+                <div key={taskIndex} className="dev-task-row">
+                    {taskSubrow}
+                    {subtaskRow}
+                </div>
+            );
+        }, this);
+    }
+
     render() {
         var tasks = this.props.tasks,
-            taskRows = tasks.map(function(task, taskIndex) {
-                var taskSubrow = this._getTaskSubrow(task, taskIndex, false),
-                    subtaskRow = this._getSubtaskRow(task.subtasks);
-
-                return (
-                    <div key={taskIndex} className="dev-task-row">
-                        {taskSubrow}
-                        {subtaskRow}
-                    </div>
-                );
-            }, this),
+            taskRows = this._getTaskRows(tasks),
             sumTask = ProgressManager.calculateSumTask(tasks),
             taskFooter = (
                 <div key="footer" className="dev-task-row">
