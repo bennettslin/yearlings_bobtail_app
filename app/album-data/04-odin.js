@@ -1,0 +1,397 @@
+module.exports = {
+    title: 'Odin',
+    speechBubbles: {
+        narrative: 'narrative 1',
+        backstory: 'personal 1'
+    },
+    lyrics: {
+        left: [
+            [
+                {
+                    time: 0,
+                    verse: 'Mr. Odin died today.'
+                }
+            ],
+            [
+                {
+                    time: 8,
+                    verse: 'Lights off, from your hiding place of retreat emerged.'
+                },
+                {
+                    time: 14,
+                    verse: 'This fridge\'s gallery in web\'s wake was strewn,'
+                },
+                {
+                    time: 17,
+                    verse: 'silent poll of colours overused. '
+                },
+                {
+                    time: 20,
+                    verse: 'This latest piece you drew with crayons least whittled…'
+                }
+            ],
+            [
+                {
+                    time: 26,
+                    verse: 'The house settled in sheets, you swing the iron screen.'
+                },
+                {
+                    time: 32,
+                    verse: 'By the alabaster balustrade,'
+                },
+                {
+                    time: 35,
+                    verse: 'baby steps inch towards crevice rays.'
+                }
+            ],
+            [
+                {
+                    time: 38,
+                    verse: 'Then down stygian stairs,'
+                },
+                {
+                    time: 40,
+                    verse: 'through sickle-lit oriental streets.'
+                },
+                {
+                    time: 44,
+                    verse: 'Raccoons rummage round some rubbish bags,'
+                },
+                {
+                    time: 47,
+                    verse: 'till a rickshaw hiccoughs from grating cracks.'
+                },
+                {
+                    time: 50,
+                    verse: 'You seek the dunes once deemed a haven'
+                },
+                {
+                    time: 53,
+                    verse: 'that was safe for a heathen…'
+                }
+            ],
+            [
+                {
+                    time: 59,
+                    verse: 'And if flutters with the fairest'
+                },
+                {
+                    time: 63,
+                    verse: 'were just sins simply dreamt,'
+                },
+                {
+                    time: 67,
+                    verse: 'could some bottled butterfly dream your whims instead?'
+                },
+                {
+                    time: 73,
+                    verse: 'What\'s more, if all you live for still die at the end—'
+                },
+                {
+                    time: 79,
+                    verse: 'like Odin\'s ashes back from the Society,'
+                },
+                {
+                    time: 84,
+                    verse: 'which filled a chasm dug up underneath—'
+                },
+                {
+                    time: 87,
+                    verse: 'can that which kills a cat spare his home if spread?'
+                }
+            ],
+            [
+                {
+                    time: 93,
+                    verse: 'You researched a gleam'
+                },
+                {
+                    time: 95,
+                    verse: 'to be a guard\'s whistle at your feet,'
+                },
+                {
+                    time: 99,
+                    verse: 'and brought your raft behind the yellow-taped grills'
+                },
+                {
+                    time: 102,
+                    verse: 'to stand onshore keen to drift if shark swarms withheld.'
+                }
+            ],
+            [
+                {
+                    time: 105,
+                    verse: 'Buoy bobs through sea serpents,'
+                },
+                {
+                    time: 107,
+                    verse: 'shivering for shivs unsheathed.'
+                },
+                {
+                    time: 111,
+                    verse: 'As roller coasters of waves comfort sighs,'
+                },
+                {
+                    time: 114,
+                    verse: 'you frame silhouettes of torn rides'
+                },
+                {
+                    time: 117,
+                    verse: 'in your dim, lingering gaze,'
+                },
+                {
+                    time: 120,
+                    verse: 'a victim of erosion.'
+                }
+            ],
+            [
+                {
+                    time: 129,
+                    verse: 'Should you hide, or could you fight,'
+                },
+                {
+                    time: 132,
+                    verse: 'when your day to die has come?'
+                },
+                {
+                    time: 135,
+                    verse: '…'
+                },
+                {
+                    time: 137,
+                    verse: '…'
+                },
+                {
+                    time: 141,
+                    verse: 'But in time, wouldn\'t you find life is simply much too long?'
+                }
+            ],
+            [
+                {
+                    time: 147,
+                    verse: 'But for a foetus force-fed, born preaborted,'
+                },
+                {
+                    time: 150,
+                    verse: 'your ouija board said, "Son, just hum along."'
+                }
+            ],
+            [
+                {
+                    time: 166,
+                    verse: 'Though, no slave parts these seas,'
+                },
+                {
+                    time: 168,
+                    verse: 'then returns them as a buffer zone.'
+                },
+                {
+                    time: 173,
+                    verse: 'The sudsy ocean shapes its padded bed,'
+                },
+                {
+                    time: 177,
+                    verse: 'which hitherto snubbed and spurned a wreck,'
+                },
+                {
+                    time: 180,
+                    verse: 'while mermaids smile past a guileless garden gnome…'
+                }
+            ]
+        ],
+        right: [
+            [
+                {
+                    time: 0,
+                    verse: '…'
+                }
+            ],
+            [
+                {
+                    time: 8,
+                    verse: 'By lot, once more trifling tref must reseed the earth.'
+                },
+                {
+                    time: 14,
+                    verse: 'Indifferent galaxies instead stay unmoved;'
+                },
+                {
+                    time: 17,
+                    verse: 'sigh and pull the covers over you.'
+                },
+                {
+                    time: 20,
+                    verse: 'In safest sleep, you ruminate on these riddles…'
+                }
+            ],
+            [
+                {
+                    time: 26,
+                    verse: 'But how dreadful indeed, do sweet dream\'s ichors seem!'
+                },
+                {
+                    time: 32,
+                    verse: 'Like a salamander shall await'
+                },
+                {
+                    time: 35,
+                    verse: 'trading breath\'s bliss for present bane.'
+                }
+            ],
+            [
+                {
+                    time: 38,
+                    verse: 'And how stingy and scarce'
+                },
+                {
+                    time: 40,
+                    verse: 'proves shibboleth for these gentle means!'
+                },
+                {
+                    time: 44,
+                    verse: 'As you plummet down from couplets past;'
+                },
+                {
+                    time: 47,
+                    verse: 'still, but missed bat mitzvahs come racing back.'
+                },
+                {
+                    time: 50,
+                    verse: 'To dreams of whom does each one cave in'
+                },
+                {
+                    time: 53,
+                    verse: 'as a slave for the seasons?'
+                }
+            ],
+            [
+                {
+                    time: 59,
+                    verse: 'And if summer trips to Paris'
+                },
+                {
+                    time: 63,
+                    verse: 'weren\'t just myths between friends,'
+                },
+                {
+                    time: 67,
+                    verse: 'would the rondel of her eye be stored in this neck?'
+                },
+                {
+                    time: 73,
+                    verse: 'But cored gifts fall to discord till lives acquiesce,'
+                },
+                {
+                    time: 79,
+                    verse: 'by opened latches that come undone by undine—'
+                },
+                {
+                    time: 84,
+                    verse: 'which spilled a basket among other things—'
+                },
+                {
+                    time: 87,
+                    verse: 'a casket tilted back where its hopeless rests.'
+                }
+            ],
+            [
+                {
+                    time: 93,
+                    verse: 'Your seizures of spleen,'
+                },
+                {
+                    time: 95,
+                    verse: 'you see the jarred sibyl had foreseen'
+                },
+                {
+                    time: 99,
+                    verse: 'as not for wrapping by a cellophane sylph,'
+                },
+                {
+                    time: 102,
+                    verse: 'who cannot warm he who didn\'t impart warmth himself.'
+                }
+            ],
+            [
+                {
+                    time: 105,
+                    verse: 'Coin toss to be hers from'
+                },
+                {
+                    time: 107,
+                    verse: 'shivaree towards shivah seat'
+                },
+                {
+                    time: 111,
+                    verse: 'has pulled your floater away from your sight.'
+                },
+                {
+                    time: 114,
+                    verse: 'You chase till dew sheds from your eyes'
+                },
+                {
+                    time: 117,
+                    verse: 'with your beleaguered remains,'
+                },
+                {
+                    time: 120,
+                    verse: 'amidst dustbunnies frozen.'
+                }
+            ],
+            [
+                {
+                    time: 129,
+                    verse: '…'
+                },
+                {
+                    time: 132,
+                    verse: '…'
+                },
+                {
+                    time: 135,
+                    verse: 'Can a holed up hostage'
+                },
+                {
+                    time: 137,
+                    verse: 'pray for soulless solace and just play dumb?'
+                },
+                {
+                    time: 141,
+                    verse: '…'
+                }
+            ],
+            [
+                {
+                    time: 147,
+                    verse: 'Yet your defeat of tortoise, forced lead unthwarted,'
+                },
+                {
+                    time: 150,
+                    verse: 'sworn feat aforesaid, doesn\'t come anon.'
+                }
+            ],
+            [
+                {
+                    time: 166,
+                    verse: 'Though, no grey starling\'s beak'
+                },
+                {
+                    time: 168,
+                    verse: 'can reach urchins smashed from undertows.'
+                },
+                {
+                    time: 173,
+                    verse: 'But suddenly Odin\'s day is at its end;'
+                },
+                {
+                    time: 177,
+                    verse: 'his litter to dust and earth was swept,'
+                },
+                {
+                    time: 180,
+                    verse: 'while Thursday\'s child has a mile less far to go…'
+                }
+            ]
+        ]
+    }
+};
