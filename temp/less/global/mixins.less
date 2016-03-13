@@ -1,0 +1,42 @@
+/* mixins */
+.sticky-mixin {
+    position: absolute;
+    width: 100%;
+
+    &.stuck {
+        position: fixed;
+        left: inherit;
+        max-width: @wrapper-max-width;
+        z-index: @nav-z-index;
+    }
+
+    .wrapper-width {
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
+a {
+    color: blue;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+.button {
+
+    &.disabled {
+        opacity: 0.5;
+    }
+
+    &:not(.disabled) {
+        cursor: pointer;
+    }
+}

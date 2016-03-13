@@ -33,6 +33,10 @@ const common = {
     module: {
         loaders: [
             {
+                test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
+                loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+            },
+            {
                 // http://survivejs.com/webpack/loading-less-or-sass/
                 test: /\.less$/,
                 loader: 'style!css!less',

@@ -1,0 +1,218 @@
+/* CONSTANTS */
+
+/* default heights */
+@symbols-margin-height: 5px;
+@symbols-height: @phone-annotation-legend-height - (@symbols-margin-height * 2);
+@symbol-icon-height: @symbols-height * 0.25;
+@symbol-description-height: @symbol-icon-height;
+@symbol-margin-height: (@symbols-height - (@symbol-icon-height * 3)) * 0.25;
+
+/* default widths */
+@symbol-icon-width: @symbol-icon-height;
+@symbol-description-width: 240px;
+@symbol-margin-width: 5px;
+@symbol-width: @symbol-icon-width + @symbol-margin-width + @symbol-description-width;
+
+/* stuck heights */
+@stuck-symbols-margin-height: 2px;
+@stuck-symbols-height: @phone-stuck-component-height - (@stuck-symbols-margin-height * 2);
+@stuck-symbol-icon-height: @stuck-symbols-height * 0.25;
+@stuck-symbol-margin-height: (@stuck-symbols-height - (@stuck-symbol-icon-height * 3)) * 0.25;
+
+/* stuck widths */
+@stuck-symbols-margin-width: 10px;
+@stuck-symbol-icon-width: @stuck-symbol-icon-height;
+@stuck-symbol-description-width: 240px;
+@stuck-symbol-margin-width: 5px;
+@stuck-symbol-width: @stuck-symbol-icon-width + @stuck-symbol-margin-width + @stuck-symbol-description-width;
+
+.scrolling-nav {
+    .annotation-legend {
+        height: @phone-annotation-legend-height;
+        width: @phone-annotation-legend-width;
+    }
+}
+
+.sticky-nav {
+    .annotation-legend {
+        position: absolute;
+        right: 0;
+        height: @phone-stuck-component-height;
+    }
+
+    &.stuck {
+        .annotation-legend {
+            width: @stuck-symbol-icon-width + (@stuck-symbols-margin-width * 2) + (@stuck-symbol-margin-width * 2);
+        }
+    }
+}
+
+/* default properties */
+.annotation-legend {
+    background-color: violet;
+    position: relative;
+
+    &.pointer {
+        ul.symbols {
+            >li[class^="symbol"] {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.unshown {
+        width: 0;
+        // height: 0;
+    }
+
+    ul.symbols {
+        width: @symbol-width;
+        margin: @symbols-margin-height auto;
+
+        >li[class^="symbol"] {
+            display: block;
+            position: relative;
+            height: @symbol-icon-height;
+            width: 100%;
+            margin: @symbol-margin-height 0;
+            overflow: hidden;
+
+            &:first-child {
+                margin-top: @symbols-margin-height + @symbol-margin-height;
+            }
+
+            &:last-child {
+                margin-bottom: @symbols-margin-height + @symbol-margin-height;
+            }
+
+            &.expanded {
+                width: @symbol-width;
+
+                &.engraved {
+                    box-shadow: inset 0 0 5px green;
+                }
+            }
+
+            .symbol {
+                position: relative;
+                height: 100%;
+                width: 100%;
+
+                .icon, .description {
+                    position: absolute;
+
+                    &.icon {
+                        left: 0;
+                        background-color: black;
+                        height: 100%;
+                        width: @symbol-icon-width;
+                        border-radius: @symbol-icon-height * 0.5;
+                    }
+
+                    &.description {
+                        left: @symbol-icon-width + @symbol-margin-width;
+                        background-color: beige;
+                        height: 100%;
+                        width: @symbol-description-width;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+
+        &.right-align {
+
+            >li[class^="symbol"] {
+
+                .symbol {
+
+                    .icon {
+                        left: auto;
+                        right: 0;
+                    }
+
+                    .description {
+                        left: auto;
+                        right: @symbol-icon-width + @symbol-margin-width;
+                    }
+                }
+            }
+        }
+    }
+
+    /* stuck properties */
+    &.stuck {
+
+        ul.symbols {
+            margin: @stuck-symbols-margin-height @stuck-symbols-margin-width;
+
+            >li[class^="symbol"] {
+                width: @stuck-symbol-icon-width;
+                height: @stuck-symbol-icon-height;
+                margin: @stuck-symbol-margin-height @stuck-symbol-margin-width;
+
+                &:first-child {
+                    margin-top: @stuck-symbols-margin-height + @stuck-symbol-margin-height;
+                }
+
+                &:nth-child(2) {
+                    .symbol .description {
+                        top: (@stuck-symbol-icon-height - @symbol-description-height) * 0.5;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: @stuck-symbols-margin-height + @stuck-symbol-margin-height;
+
+                    .symbol .description {
+                        top: @stuck-symbol-icon-height - @symbol-description-height;
+                    }
+                }
+
+                &.expanded {
+                    width: @stuck-symbol-width;
+
+                    /**
+                     * This works to ensure that symbol is aligned properly
+                     * against right when expanded. I just don't know WHY...
+                     */
+                    right: @stuck-symbol-width - @stuck-symbol-icon-width;
+                    overflow: visible;
+                }
+
+                .symbol {
+
+                    .icon {
+                        background-color: beige;
+                        width: @stuck-symbol-icon-width;
+                        border-radius: @stuck-symbol-icon-height * 0.5;
+                    }
+
+                    .description {
+                        left: @stuck-symbol-icon-width + @stuck-symbol-margin-width;
+                        background-color: rgba(20, 20, 200, 0.4);
+                        width: @stuck-symbol-description-width;
+                        height: @symbol-description-height;
+                    }
+                }
+            }
+
+            &.right-align {
+                >li[class^="symbol"] {
+
+                    .symbol {
+
+                        .icon {
+                            left: auto;
+                        }
+
+                        .description {
+                            left: auto;
+                            right: @stuck-symbol-icon-width + @stuck-symbol-margin-width;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

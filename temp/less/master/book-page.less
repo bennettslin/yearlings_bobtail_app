@@ -1,0 +1,58 @@
+[class^="book-page"] {
+    background-color: purple;
+    position: absolute;
+    z-index: @page-z-index;
+    height: 100%;
+    width: 100%;
+    .transition(left 0.25s ease-in-out);
+
+    &.book-page-1 {
+        background-color: violet;
+    }
+
+    &.hidden {
+        &.previous {
+            left: -100%;
+        }
+
+        &.next {
+            left: 100%;
+        }
+    }
+
+    // FIXME: Is this useful for preventing page scroll underneath lyrics columns?
+    &.no-scroll {
+        overflow: hidden;
+    }
+
+    &.viewed {
+        left: 0;
+    }
+
+    ul.song-path {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li[class^="song-point"] {
+            display: block;
+            margin: 0 auto;
+            height: 40px;
+            width: 200px;
+
+            button {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .page-change-button {
+        text-align: center;
+
+        button {
+            height: 40px;
+            width: 300px;
+        }
+    }
+}

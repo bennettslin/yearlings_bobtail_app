@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+.app {
+    background-color: red;
+    margin: 0 auto;
+    height: @phone-wrapper-height;
+    max-width: @wrapper-max-width;
+    overflow: hidden;
+
+    @media @tablets {
+        height: @wrapper-height;
+    }
+
+    @media @desktops {
+        height: @wrapper-height;
+    }
+}
+
+.footer {
+    background-color: gray;
+    height: @footer-height;
+    text-align: center;
+}
