@@ -1,7 +1,7 @@
 import React from 'react';
-import DevLyricsColumn from './dev-lyrics-column.jsx';
-import DevAnnotationField from './dev-annotation-field.jsx';
-import DevSpeechBubblesField from './dev-speech-bubbles-field.jsx';
+import LyricsColumn from './lyrics-column.jsx';
+import AnnotationField from './annotation-field.jsx';
+import SpeechBubblesField from './speech-bubbles-field.jsx';
 
 const TextFormatter = {
 
@@ -60,20 +60,20 @@ const TextFormatter = {
     }
 }
 
-export class DevFormattedLyricsColumn extends React.Component {
+export class FormattedLyricsColumn extends React.Component {
     render() {
-        return <DevLyricsColumn TextFormatter={TextFormatter} {...this.props} />;
+        return <LyricsColumn {...this.props} TextFormatter={TextFormatter} />;
     }
 }
 
-export class DevFormattedAnnotationField extends React.Component {
+export class FormattedAnnotationField extends React.Component {
     render() {
-        return <DevAnnotationField TextFormatter={TextFormatter} {...this.props} />;
+        return <AnnotationField {...this.props} TextFormatter={TextFormatter} />;
     }
 }
 
-export class DevFormattedSpeechBubblesField extends React.Component {
+export class FormattedSpeechBubblesField extends React.Component {
     render() {
-        return <DevSpeechBubblesField TextFormatter={TextFormatter} {...this.props} />;
+        return <SpeechBubblesField {...this.props} TextFormatter={TextFormatter} />;
     }
 }

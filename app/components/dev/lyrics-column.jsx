@@ -1,7 +1,14 @@
 import React from 'react';
-import DevFormattedLyricsColumn from './dev-text-formatter.jsx';
+import FormattedLyricsColumn from './text-formatter.jsx';
 
-export default class DevLyricsColumn extends React.Component {
+const defaultProps = {
+    columnIndex: 'left',
+    columnTitle: '',
+    playedSongLyrics: [],
+    handleAnnotationSelect() {}
+};
+
+class LyricsColumn extends React.Component {
 
     _parseLyric(lyric) {
         var annotation = lyric.annotation;
@@ -13,7 +20,7 @@ export default class DevLyricsColumn extends React.Component {
             columnTitleHeader = this.props.columnTitle ? <h3>{this.props.columnTitle}</h3> : null,
             doublespeakerClassName = this.props.columnTitle ? ' doublespeaker' : '',
             alignRightClassName = this.props.columnTitle === 'right speaker' ? ' align-right' : '',
-            columnClassName = 'dev-lyrics-column ' + columnIndex + doublespeakerClassName + alignRightClassName,
+            columnClassName = 'lyrics-column ' + columnIndex + doublespeakerClassName + alignRightClassName,
             lyricsTextArea = (
                 <div className={'lyrics-text'}>
                     {this.props.playedSongLyrics.map(function(stanza, stanzaIndex) {
@@ -41,9 +48,5 @@ export default class DevLyricsColumn extends React.Component {
     }
 }
 
-DevLyricsColumn.defaultProps = {
-    columnIndex: 'left',
-    columnTitle: '',
-    playedSongLyrics: [],
-    handleAnnotationSelect() {}
-}
+LyricsColumn.defaultProps = defaultProps;
+export default LyricsColumn;

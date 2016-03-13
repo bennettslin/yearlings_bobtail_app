@@ -1,12 +1,16 @@
 import React from 'react';
 
-export default class DevAnnotationField extends React.Component {
+const defaultProps = {
+    annotationObject: {}
+}
+
+class AnnotationField extends React.Component {
 
     render() {
         var annotationSpan = this.props.TextFormatter.getFormattedSpan(this.props.annotationObject);
 
         return (
-            <div className="dev-annotation-field">
+            <div className="annotation-field">
                 <h2>annotation</h2>
                 {annotationSpan}
             </div>
@@ -14,6 +18,5 @@ export default class DevAnnotationField extends React.Component {
     }
 }
 
-DevAnnotationField.defaultProps = {
-    annotationSpan: null
-}
+AnnotationField.defaultProps = defaultProps;
+export default AnnotationField;

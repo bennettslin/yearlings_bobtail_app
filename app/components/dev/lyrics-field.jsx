@@ -1,9 +1,13 @@
 import React from 'react';
-import { DevFormattedLyricsColumn } from './dev-text-formatter.jsx';
+import { FormattedLyricsColumn } from './text-formatter.jsx';
 
-var LYRICS_COLUMN_NAMES = ['left', 'right'];
+const LYRICS_COLUMN_NAMES = ['left', 'right'];
+const defaultProps = {
+    playedSongLyrics: '',
+    handleAnnotationSelect() {}
+};
 
-export default class DevLyricsField extends React.Component {
+class LyricsField extends React.Component {
 
     render() {
         var lyricsColumnKeys = Object.keys(this.props.playedSongLyrics),
@@ -13,7 +17,7 @@ export default class DevLyricsField extends React.Component {
             isDoublespeaker = this.props.playedSongLyrics.left && this.props.playedSongLyrics.right,
             lyricsColumns = filteredLyricsColumnKeys.map(function(key, index) {
                 return (
-                    <DevFormattedLyricsColumn
+                    <FormattedLyricsColumn
                         key={key}
                         columnIndex={key}
                         columnTitle={isDoublespeaker ? key + ' speaker' : null}
@@ -24,9 +28,9 @@ export default class DevLyricsField extends React.Component {
             }, this);
 
         return (
-            <div className="dev-lyrics-field">
+            <div className="lyrics-field">
                 <h2>lyrics</h2>
-                <div className="dev-lyrics-columns">
+                <div className="lyrics-columns">
                     {lyricsColumns}
                 </div>
             </div>
@@ -34,7 +38,5 @@ export default class DevLyricsField extends React.Component {
     }
 }
 
-DevLyricsField.defaultProps = {
-    playedSongLyrics: '',
-    handleAnnotationSelect() {}
-}
+LyricsField.defaultProps = defaultProps;
+export default LyricsField;

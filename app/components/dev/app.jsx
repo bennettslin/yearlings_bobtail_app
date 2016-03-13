@@ -1,17 +1,22 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
-import DevLyricsField from './dev-lyrics-field.jsx';
-import DevProgressField from './dev-progress-field.jsx';
-import DevSongsField from './dev-songs-field.jsx';
+import LyricsField from './lyrics-field.jsx';
+import ProgressField from './progress-field.jsx';
+import SongsField from './songs-field.jsx';
 
-import { DevFormattedAnnotationField } from './dev-text-formatter.jsx';
-import { DevFormattedSpeechBubblesField } from './dev-text-formatter.jsx';
-import { DevFormattedLyricsColumn } from './dev-text-formatter.jsx';
+import { FormattedAnnotationField,
+         FormattedSpeechBubblesField,
+         FormattedLyricsColumn } from './text-formatter.jsx';
 
-const GlobalManager = require('../helpers/global-manager.js');
+const GlobalHelpers = require('../helpers/global-helpers.js');
+const defaultProps = {
+    title: 'Yearling\'s Bobtail',
+    songs: [],
+    speechBubbles: []
+};
 
-export default class DevApp extends React.Component {
+class App extends React.Component {
 
     constructor(props) {
         super(props);
@@ -44,7 +49,7 @@ export default class DevApp extends React.Component {
          * Close annotation if anywhere outside annotation is clicked, with the
          * exception of another annotation link.
          */
-        if (annotation && annotation !== e.target && !annotation.contains(e.target) && !GlobalManager.hasParentWithTagName(e.target, 'a')) {
+        if (annotation && annotation !== e.target && !annotation.contains(e.target) && !GlobalHelpers.hasParentWithTagName(e.target, 'a')) {
 
             this.setState({
                 annotationObject: null
@@ -87,16 +92,16 @@ export default class DevApp extends React.Component {
             annotationIsShown = !!this.state.annotationObject;
 
         return (
-            <div className="dev-app">
-                <div className="dev-app-column songs-column">
+            <div className="app">
+                <div className="app-column songs-column">
                     <h1>{this.props.title}</h1>
-                    <DevSongsField
+                    <SongsField
                         songs={this.props.songs}
                         playedSongIndex={playedSongIndex}
                         handleSongChange={this.handleSongChange}
                     />
                 </div>
-                <div className="dev-app-column notes-column">
+                <div className="app-column notes-column">
                     <CSSTransitionGroup
                         transitionName="annotation-animation"
                         transitionEnterTimeout={100}
@@ -104,26 +109,26 @@ export default class DevApp extends React.Component {
                     >
                         {annotationIsShown ?
                             <div key="annotation" id="annotation" className="notes-row annotation-row">
-                                <DevFormattedAnnotationField
+                                <FormattedAnnotationField
                                     annotationObject={this.state.annotationObject}
                                 />
                             </div> : null
                         }
                     </CSSTransitionGroup>
                     <div className="notes-row speech-bubbles-row">
-                        <DevFormattedSpeechBubblesField
+                        <FormattedSpeechBubblesField
                             playedSongSpeechBubbles={playedSongSpeechBubbles}
                         />
                         {playedSongTasks ?
-                            <DevProgressField
+                            <ProgressField
                                 tasks={playedSongTasks}
                             /> : null
                         }
                     </div>
                 </div>
                 {playedSongIndex >= 0 ?
-                     <div className="dev-app-column lyrics-column">
-                        <DevLyricsField
+                     <div className="app-column lyrics-column">
+                        <LyricsField
                             playedSongLyrics={playedSongLyrics}
                             handleAnnotationSelect={this.handleAnnotationSelect}
                         />
@@ -134,8 +139,5 @@ export default class DevApp extends React.Component {
     }
 }
 
-DevApp.defaultProps = {
-    title: 'Yearling\'s Bobtail',
-    songs: [],
-    speechBubbles: []
-}
+App.defaultProps = defaultProps;
+export default App;

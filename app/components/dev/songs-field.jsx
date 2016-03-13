@@ -1,12 +1,17 @@
 import React from 'react';
-import DevSongRow from './dev-song-row.jsx';
+import SongRow from './song-row.jsx';
 
-const ProgressManager = require('../helpers/progress-manager.js');
+const ProgressHelpers = require('../helpers/progress-helpers.js');
+const defaultProps = {
+    songs: [],
+    playedSongIndex: -1,
+    handleSongChange() {}
+};
 
-export default class DevSongsField extends React.Component {
+class SongsField extends React.Component {
 
     componentWillMount() {
-        const maxTotalNeededHours = ProgressManager.getMaxTotalNeededHoursFromSongs(this.props.songs);
+        const maxTotalNeededHours = ProgressHelpers.getMaxTotalNeededHoursFromSongs(this.props.songs);
 
         this.setState({
             maxTotalNeededHours
@@ -16,14 +21,14 @@ export default class DevSongsField extends React.Component {
     render() {
         var songs = this.props.songs,
             songsHeader = (
-                <DevSongRow key="header" isHeader={true} />
+                <SongRow key="header" isHeader={true} />
             ),
             songRows = songs.map(function(song, songIndex) {
                 var isSelected = this.props.playedSongIndex === songIndex,
-                    sumTask = ProgressManager.calculateSumTask(song.tasks);
+                    sumTask = ProgressHelpers.calculateSumTask(song.tasks);
 
                 return (
-                    <DevSongRow
+                    <SongRow
                         key={songIndex}
                         songIndex={songIndex}
                         songTitle={song.title}
@@ -34,13 +39,13 @@ export default class DevSongsField extends React.Component {
                     />
                 );
             }, this),
-            sumAllTasks = ProgressManager.calculateSumAllTasks(songs),
+            sumAllTasks = ProgressHelpers.calculateSumAllTasks(songs),
             songsFooter = (
-                <DevSongRow key="footer" isFooter={true} sumTask={sumAllTasks} />
+                <SongRow key="footer" isFooter={true} sumTask={sumAllTasks} />
             );
 
         return (
-            <div className="dev-songs-field">
+            <div className="songs-field">
                 {songsHeader}
                 {songRows}
                 {songsFooter}
@@ -49,8 +54,5 @@ export default class DevSongsField extends React.Component {
     }
 }
 
-DevSongsField = {
-    songs: [],
-    playedSongIndex: -1,
-    handleSongChange() {}
-}
+SongsField.defaultProps = defaultProps;
+export default SongsField;

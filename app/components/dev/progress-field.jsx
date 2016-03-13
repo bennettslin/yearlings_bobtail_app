@@ -1,12 +1,16 @@
 import React from 'react';
-import DevProgressBar from './dev-progress-bar.jsx';
+import ProgressBar from './progress-bar.jsx';
 
-const ProgressManager = require('../helpers/progress-manager.js');
+const GlobalHelpers = require('../helpers/global-helpers.js');
+const ProgressHelpers = require('../helpers/progress-helpers.js');
+const defaultProps = {
+    tasks: []
+};
 
-export default class DevProgressField extends React.Component {
+class ProgressField extends React.Component {
 
     componentWillMount() {
-        const maxTotalNeededHours = ProgressManager.getMaxTotalNeededHoursFromTasks(this.props.tasks);
+        const maxTotalNeededHours = ProgressHelpers.getMaxTotalNeededHoursFromTasks(this.props.tasks);
 
         this.setState({
             maxTotalNeededHours
@@ -14,16 +18,18 @@ export default class DevProgressField extends React.Component {
     }
 
     componentWillUpdate(nextProps) {
-        const maxTotalNeededHours = ProgressManager.getMaxTotalNeededHoursFromTasks(nextProps.tasks);
+        if (!GlobalHelpers.areObjectsEqual(this.props.tasks, nextProps.tasks)) {
+            const maxTotalNeededHours = ProgressHelpers.getMaxTotalNeededHoursFromTasks(nextProps.tasks);
 
-        this.setState({
-            maxTotalNeededHours
-        });
+            this.setState({
+                maxTotalNeededHours
+            });
+        }
     }
 
     _getProgressBar(task) {
         return (
-            <DevProgressBar
+            <ProgressBar
                 sumTask={task}
                 maxTotalNeededHours={this.state.maxTotalNeededHours}
             />
@@ -31,11 +37,11 @@ export default class DevProgressField extends React.Component {
     }
 
     _getTaskSubrow(task, taskIndex, isSubtask) {
-        var className = isSubtask ? 'dev-subtask-subrow' : 'dev-task-subrow';
+        var className = isSubtask ? 'subtask-subrow' : 'task-subrow';
         return (
             <div key={taskIndex} className={className}>
                 {this._getProgressBar(task)}
-                <div className="dev-task-text-wrapper">
+                <div className="task-text-wrapper">
                     <span className="text-cell name">
                         {task.taskName}
                     </span>
@@ -56,7 +62,7 @@ export default class DevProgressField extends React.Component {
                 }, this);
 
             return (
-                <div className="dev-subtask-row">
+                <div className="subtask-row">
                     {subtaskSubrows}
                 </div>
             );
@@ -72,7 +78,7 @@ export default class DevProgressField extends React.Component {
                 subtaskRow = this._getSubtaskRow(task.subtasks);
 
             return (
-                <div key={taskIndex} className="dev-task-row">
+                <div key={taskIndex} className="task-row">
                     {taskSubrow}
                     {subtaskRow}
                 </div>
@@ -83,11 +89,11 @@ export default class DevProgressField extends React.Component {
     render() {
         var tasks = this.props.tasks,
             taskRows = this._getTaskRows(tasks),
-            sumTask = ProgressManager.calculateSumTask(tasks),
+            sumTask = ProgressHelpers.calculateSumTask(tasks),
             taskFooter = (
-                <div key="footer" className="dev-task-row">
-                    <div className="dev-task-subrow">
-                        <div className="dev-task-text-wrapper">
+                <div key="footer" className="task-row">
+                    <div className="task-subrow">
+                        <div className="task-text-wrapper">
                             <span className="task-placeholder"></span>
                             {sumTask.neededHours ?
                                 <h3 className="text-cell progress">
@@ -100,7 +106,7 @@ export default class DevProgressField extends React.Component {
             );
 
         return (
-            <div className="dev-progress-field">
+            <div className="progress-field">
                 <h2>progress</h2>
                 {taskRows}
                 {taskFooter}
@@ -109,6 +115,5 @@ export default class DevProgressField extends React.Component {
     }
 }
 
-DevProgressField = {
-    tasks: []
-}
+ProgressField.defaultProps = defaultProps;
+export default ProgressField;

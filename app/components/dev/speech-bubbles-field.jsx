@@ -1,8 +1,11 @@
 import React from 'react';
 
-var SPEECH_BUBBLE_NAMES = ['narrative', 'backstory'];
+const SPEECH_BUBBLE_NAMES = ['narrative', 'backstory'];
+const defaultProps = {
+    playedSongSpeechBubbles: {}
+};
 
-export default class DevSpeechBubblesField extends React.Component {
+class SpeechBubblesField extends React.Component {
 
     render() {
         var speechBubbles = SPEECH_BUBBLE_NAMES.map(function(bubbleName, index) {
@@ -18,13 +21,12 @@ export default class DevSpeechBubblesField extends React.Component {
             }, this);
 
         return (
-            <div className="dev-speech-bubbles-field">
+            <div className="speech-bubbles-field">
                 {speechBubbles}
             </div>
         );
     }
 }
 
-DevSpeechBubblesField.defaultProps = {
-    playedSongSpeechBubbles: {}
-}
+SpeechBubblesField.defaultProps = defaultProps;
+export default SpeechBubblesField;
