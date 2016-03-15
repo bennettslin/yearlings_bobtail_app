@@ -22,7 +22,15 @@ module.exports = {
         backstory: 'In folklore of the past, changelings were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, I wanted to capture a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of Creedence Clearwater Revival, with mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.'
     },
     annotations: {
-
+        valley_somersaults: {
+            description: 'I grew up in the San Fernando Valley of Southern California, where wide boulevards stretch endlessly along a gridiron plan, and jagged mountains block the horizon on all sides. In the highway mirages caused by the year-round sweltering heat, the reflections of these mountains naturally point inwards.'
+        },
+        hydrants_burst: {
+            description: 'The sight of kids splashing around a burst fire hydrant wasn\'t really a Los Angeles thing, but it did happen once or twice in my neighbourhood.'
+        },
+        dying_coyotes_jaw: {
+            description: ''
+        }
     },
     lyrics: {
         left: [
@@ -32,18 +40,29 @@ module.exports = {
                     verse: 'Hilltops gnashing dig out potholes,'
                 },
                 {
-                    /**
-                     * I grew up in the San Fernando Valley of Southern California, where jagged mountains block the horizon on all sides, and suburban boulevards laid out in a grid plan run straightway for miles. In the year-round sweltering heat, the
-                     */
                     time: 14,
-                    verse: 'the valley somersaults in tarred pavement mirage.'
+                    verse: [
+                        'the',
+                        {
+                            anchor: 'valley somersaults',
+                            annotationKey: 'valley_somersaults'
+                        },
+                        'in tarred pavement mirage.',
+                    ]
                 },
                 {
-                    /**
-                     * Valley teeth.
-                     */
                     time: 17,
-                    verse: 'Hydrants burst as early worms work this dying coyote\'s jaw.'
+                    verse: [
+                        {
+                            anchor: 'Hydrants burst',
+                            annotationKey: 'hydrants_burst'
+                        },
+                        'as early worms work this',
+                        {
+                            anchor: 'dying coyote\'s jaw.',
+                            annotationKey: 'dying_coyotes_jaw'
+                        }
+                    ]
                 },
                 {
                     /**
