@@ -23,13 +23,14 @@ module.exports = {
     },
     annotations: {
         valley_somersaults: {
-            description: 'I grew up in the San Fernando Valley of Southern California, where wide boulevards stretch endlessly along a gridiron plan, and jagged mountains block the horizon on all sides. In the highway mirages caused by the year-round sweltering heat, the reflections of these mountains naturally point inwards.'
+            description: 'I grew up in the San Fernando Valley of Southern California, where wide boulevards stretch endlessly along a gridiron plan, and jagged mountains block the horizon on all sides. In the mirages caused by the year-round sweltering heat, the reflections of these mountains naturally point inwards.'
         },
         hydrants_burst: {
-            description: 'The sight of kids splashing around a burst fire hydrant wasn\'t really a Los Angeles thing, but it did happen once or twice in my neighbourhood.'
+            description: 'The sight of kids splashing around a burst fire hydrant wasn\'t really a Los Angeles thing, but it happened once or twice in my neighbourhood.'
         },
         dying_coyotes_jaw: {
-            description: ''
+            // TODO: Specifically mention people being like worms?
+            description: 'Occasionally, a coyote would wander down from the surrounding hillsides and get hit by traffic. Of course, the Valley is also like one big lower jaw.'
         }
     },
     lyrics: {
