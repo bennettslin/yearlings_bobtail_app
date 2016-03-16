@@ -31,6 +31,24 @@ module.exports = {
         dying_coyotes_jaw: {
             // TODO: Specifically mention people being like worms?
             description: 'Occasionally, a coyote would wander down from the surrounding hillsides and get hit by traffic. Of course, the Valley is also like one big lower jaw.'
+        },
+        wayside_bottle: {
+            description: 'Willy begins his daily rounds by filling a shopping cart with soda cans and bottles randomly littered on the street.'
+        },
+        pinhead_in_its_shadow: {
+            description: 'Willy has microcephaly, a medical condition in which the brain fails to develop properly, resulting in a head that is abnormally small in size. He peers through an empty soda bottle, the top of which is tapered like the outline of his skull.'
+        },
+        chilled_colas_free: {
+            description: 'At the recycling center where Willy drops off his recyclables, a complimentary drink is part of his reimbursement.'
+        },
+        he_ends_his_stroll: {
+            description: 'Or else, "he ends as troll." In most legends, the changeling is a witting participant in the deceit, and takes pains to hide their true identity.'
+        },
+        our_tins_and_our_jars: {
+            description: ''
+        },
+        haircutting_to_the_sun: {
+            description: ''
         }
     },
     lyrics: {
@@ -70,17 +88,36 @@ module.exports = {
                      * Willy collects recyclables.
                      */
                     time: 23,
-                    verse: 'Swill pop poured from wayside bottle,'
+                    verse: [
+                        'Swill pop poured from',
+                        {
+                            anchor: 'wayside bottle,',
+                            annotationKey: 'wayside_bottle'
+                        }
+                    ]
                 },
                 {
                     time: 26,
-                    verse: 'his pinhead in its shadow eclipsed in full.'
+                    verse: [
+                        'his',
+                        {
+                            anchor: 'pinhead in its shadow',
+                            annotationKey: 'pinhead_in_its_shadow'
+                        },
+                        'eclipsed in full.'
+                    ]
                 },
                 {
                     time: 30,
                     verse: [
                         {
-                            italic: 'Chilled cola\'s free with salvage sold…'
+                            italic: [
+                                {
+                                    anchor: 'Chilled cola\'s free',
+                                    annotationKey: 'chilled_colas_free'
+                                },
+                                'with salvage sold…'
+                            ]
                         }
                     ]
                 },
@@ -89,7 +126,13 @@ module.exports = {
                      * He ends as troll.
                      */
                     time: 32,
-                    verse: 'licking lips he ends his stroll.'
+                    verse: [
+                        'licking lips',
+                        {
+                            anchor: 'he ends his stroll.',
+                            annotationKey: 'he_ends_his_stroll'
+                        }
+                    ]
                 }
             ],
             [
@@ -99,14 +142,27 @@ module.exports = {
                 },
                 {
                     time: 38,
-                    verse: 'for our tins and our jars this week?'
+                    verse: [
+                        'for',
+                        {
+                            anchor: 'our tins and our jars',
+                            annotationKey: 'our_tins_and_our_jars'
+                        },
+                        'this week?'
+                    ]
                 },
                 {
                     /**
                      * haircutting to the son.
                      */
                     time: 41,
-                    verse: 'Saluting Mummy doing some haircutting to the sun'
+                    verse: [
+                        'Saluting Mummy doing some',
+                        {
+                            anchor: 'haircutting to the sun',
+                            annotationKey: 'haircutting_to_the_sun'
+                        }
+                    ]
                 },
                 {
                     time: 45,
