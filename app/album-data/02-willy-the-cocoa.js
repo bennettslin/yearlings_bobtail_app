@@ -42,13 +42,16 @@ module.exports = {
             description: 'At the recycling center where Willy drops off his recyclables, a complimentary drink is part of his reimbursement.'
         },
         he_ends_his_stroll: {
-            description: 'Or else, "he ends as troll." In most legends, the changeling is a witting participant in the deceit, and takes pains to hide their true identity.'
+            description: 'Or else, "he ends as troll." In most legends, the changeling wittingly participates in the deceit, and takes pains to hide its true identity.'
         },
         our_tins_and_our_jars: {
-            description: ''
+            description: 'Sometimes '
         },
         haircutting_to_the_sun: {
-            description: ''
+            description: 'Our mother is cutting my brother\'s hair on the front lawn.'
+        },
+        suddenly_baby_shrieks: {
+            description: 'My brother was '
         }
     },
     lyrics: {
@@ -166,7 +169,13 @@ module.exports = {
                 },
                 {
                     time: 45,
-                    verse: 'when suddenly baby shrieks…'
+                    verse: [
+                        'when',
+                        {
+                            anchor: 'suddenly baby shrieks…',
+                            annotationKey: 'suddenly_baby_shrieks'
+                        }
+                    ]
                 }
             ],
             [
