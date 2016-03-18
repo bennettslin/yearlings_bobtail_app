@@ -66,7 +66,7 @@ module.exports = {
             description: 'After all, Willy might be a changeling himself, as evinced by his own unkempt facial hair.'
         },
         longest_cowlick: {
-            description: 'Being acquainted with my family over the years, Willy understands why my mother allows my brother\'s hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such signs of slow development in older children were inexplicable and thus gave rise to changeling legends.'
+            description: 'Being acquainted with my family over the years, Willy understands why my mother allows my brother\'s hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such signs of slow development in older children were inexplicable and thus gave rise to belief in changelings.'
         }
     },
     lyrics: {
