@@ -30,10 +30,10 @@ module.exports = {
         },
         dying_coyotes_jaw: {
             // TODO: Specifically mention people being like worms?
-            description: 'Occasionally, a coyote would wander down from the surrounding hillsides and get hit by traffic. Of course, the Valley is also like one big lower jaw.'
+            description: 'Occasionally, a coyote would wander down from the surrounding hillsides and get hit by traffic. Of course, the Valley is also like one big lower jaw, and .'
         },
         wayside_bottle: {
-            description: 'Willy begins his daily rounds by filling a shopping cart with soda cans and bottles randomly littered on the street.'
+            description: 'Willy begins his daily rounds by filling up a shopping cart with recyclables found in garbage bins or littered along the sidewalks.'
         },
         pinhead_in_its_shadow: {
             description: 'Willy has microcephaly, a medical condition in which the brain fails to develop properly, resulting in a head that is abnormally small in size. He peers through an empty soda bottle, the top of which is tapered like the outline of his skull.'
@@ -42,16 +42,32 @@ module.exports = {
             description: 'At the recycling center where Willy drops off his recyclables, a complimentary drink is part of his reimbursement.'
         },
         he_ends_his_stroll: {
-            description: 'Or else, "he ends as troll." In most legends, the changeling wittingly participates in the deceit, and takes pains to hide its true identity.'
+            description: 'Or else, "he ends as troll." In most legends, changelings wittingly participate in the deceit, and actively take pains to hide their true identity.'
         },
         our_tins_and_our_jars: {
-            description: 'Sometimes '
+            description: 'Some families help Willy by leaving out their discarded recyclables for him to gather in bulk.'
         },
         haircutting_to_the_sun: {
-            description: 'Our mother is cutting my brother\'s hair on the front lawn.'
+            description: 'Our mother is cutting my brother\'s hair on the front lawn, since the cleanup afterwards will be easier.'
         },
         suddenly_baby_shrieks: {
-            description: 'My brother was '
+            description: 'As a child, my younger brother was typically calm and quiet in demeanour. When made to do things he didn\'t enjoy or didn\'t understand, however, he was prone to frenzied outbursts, which were scary given how likely he was to injure himself.'
+        },
+        gap_toothed_coma: {
+            description: 'Or "gap-toothed comb."'
+        },
+        pair_of_seizures: {
+            description: 'Or "pair of scissors."'
+        },
+        see_your_kid_with_whiskers: {
+            description: 'Willy jokingly observes that given my brother\'s distaste for haircuts, he will likely sport an unshaven look in his adult years. But also, in many legends, the changeling is not a child of any sort, but is in fact a fully grown troll who is perhaps even centuries old. So Willy may also be implying that he recognises a fellow changeling whose actual age is belied by a childlike appearance.'
+        },
+        creepers_on_his_cheek: {
+            description: 'After all, Willy may be a changeling himself, as evinced by his own unkempt facial hair.'
+        },
+        longest_cowlick: {
+            // Still TODO.
+            description: 'Or "longest colic."'
         }
     },
     lyrics: {
@@ -155,9 +171,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * haircutting to the son.
-                     */
                     time: 41,
                     verse: [
                         'Saluting Mummy doing some',
@@ -180,40 +193,61 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * gap toothed comb
-                     */
                     time: 47,
-                    verse: 'As gap-toothed coma parts his forehead,'
+                    verse: [
+                        'As',
+                        {
+                            anchor: 'gap-toothed coma',
+                            annotationKey: 'gap_toothed_coma'
+                        },
+                        'parts his forehead,'
+                    ]
                 },
                 {
-                    /**
-                     * pair of scissors
-                     */
                     time: 50,
-                    verse: 'launching pair of seizures to the patch.'
+                    verse: [
+                        'launching',
+                        {
+                            anchor: 'pair of seizures',
+                            annotationKey: 'pair_of_seizures'
+                        },
+                        'to the patch.'
+                    ]
                 },
                 {
                     time: 53,
                     verse: 'Willy ducks behind the porch steps and laughs.'
                 },
                 {
-                    /**
-                     * figuratively, but also literally.
-                     */
                     time: 59,
-                    verse: 'Oh ma\'am, I see your kid with whiskers,'
+                    verse: [
+                        'Oh ma\'am, I',
+                        {
+                            anchor: 'see your kid with whiskers,',
+                            annotationKey: 'see_your_kid_with_whiskers'
+                        }
+                    ]
                 },
                 {
                     time: 62,
-                    verse: 'he croaks, stroking creepers on his cheek,'
+                    verse: [
+                        'he croaks, stroking',
+                        {
+                            anchor: 'creepers on his cheek,',
+                            annotationKey: 'creepers_on_his_cheek'
+                        }
+                    ]
                 },
                 {
-                    /**
-                     * colic
-                     */
                     time: 65,
-                    verse: 'And three years howling is the longest cowlick yet I\'ve seen!'
+                    verse: [
+                        'And three years howling is the',
+                        {
+                            anchor: 'longest cowlick',
+                            annotationKey: 'longest_cowlick'
+                        },
+                        'yet I\'ve seen!'
+                    ]
                 }
             ],
             [
