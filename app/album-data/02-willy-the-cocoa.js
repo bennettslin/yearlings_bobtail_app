@@ -60,14 +60,13 @@ module.exports = {
             description: 'Or "pair of scissors."'
         },
         see_your_kid_with_whiskers: {
-            description: 'Willy jokingly observes that given my brother\'s distaste for haircuts, he will likely sport an unshaven look in his adult years. But also, in many legends, the changeling is not a child of any sort, but is in fact a fully grown troll who is perhaps even centuries old. So Willy may also be implying that he recognises a fellow changeling whose actual age is belied by a childlike appearance.'
+            description: 'Willy jokingly remarks that given my brother\'s distaste for haircuts, he will likely sport an unshaven look in his adult years. But also, in many legends, the changeling is not a child of any sort, but is in fact a fully grown troll who is perhaps even centuries old. So Willy may also be implying that my brother is a changeling whose actual age is belied by a childlike appearance.'
         },
         creepers_on_his_cheek: {
-            description: 'After all, Willy may be a changeling himself, as evinced by his own unkempt facial hair.'
+            description: 'After all, Willy might be a changeling himself, as evinced by his own unkempt facial hair.'
         },
         longest_cowlick: {
-            // Still TODO.
-            description: 'Or "longest colic."'
+            description: 'Being acquainted with my family over the years, Willy understands why my mother allows my brother\'s hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such signs of slow development in older children were inexplicable and thus gave rise to changeling legends.'
         }
     },
     lyrics: {
