@@ -60,13 +60,28 @@ module.exports = {
             description: 'Or "pair of scissors."'
         },
         see_your_kid_with_whiskers: {
-            description: 'Willy jokingly remarks that given my brother\'s distaste for haircuts, he will likely sport an unshaven look in his adult years. But also, in many legends, the changeling is not a child of any sort, but is in fact a fully grown troll who is perhaps even centuries old. So Willy may also be implying that my brother is a changeling whose actual age is belied by a childlike appearance.'
+            description: 'Willy jokingly remarks that given my brother\'s distaste for haircuts, he will likely sport an unshaven look as an adult. But in many legends, the changeling is not a child of any sort, but in fact a fully grown troll who is perhaps centuries old. So Willy might also be implying that my brother is a changeling whose actual age is belied by a childlike appearance.'
         },
         creepers_on_his_cheek: {
-            description: 'After all, Willy might be a changeling himself, as evinced by his own unkempt facial hair.'
+            description: 'After all, Willy is quite possibly a fellow changeling, as evinced by his own unkempt facial hair.'
         },
         longest_cowlick: {
-            description: 'Being acquainted with my family over the years, Willy understands why my mother allows my brother\'s hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such signs of slow development in older children were inexplicable and thus gave rise to belief in changelings.'
+            description: 'Being acquainted with my family over the years, Willy understands why my mother allows my brother\'s hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicably slow development in older children gave rise to belief in changelings.'
+        },
+        prying_xray_specd: {
+            description: ''
+        },
+        pages_clawed: {
+            description: ''
+        },
+        kick_slams: {
+            description: ''
+        },
+        bearded_baby: {
+            description: ''
+        },
+        muffling_baffled_sobs: {
+            description: ''
         }
     },
     lyrics: {
@@ -255,18 +270,46 @@ module.exports = {
                      * comic book
                      */
                     time: 71,
-                    verse: 'Prying X-ray spec\'d, enraged at pages clawed,'
+                    verse: [
+                        {
+                            anchor: 'Prying X-ray spec\'d,',
+                            annotationKey: 'prying_xray_specd'
+                        },
+                        'enraged at',
+                        {
+                            anchor: 'pages clawed,',
+                            annotationKey: 'pages_clawed'
+                        }
+                    ]
                 },
                 {
                     /**
                      * changelings were actually old
                      */
                     time: 74,
-                    verse: 'a kick slams the bearded baby to the ground'
+                    verse: [
+                        'a',
+                        {
+                            anchor: 'kick slams',
+                            annotationKey: 'kick_slams'
+                        },
+                        'the',
+                        {
+                            anchor: 'bearded baby',
+                            annotationKey: 'bearded_baby'
+                        },
+                        'to the ground'
+                    ]
                 },
                 {
                     time: 77,
-                    verse: 'with his tummy clenched, muffling baffled sobs.'
+                    verse: [
+                        'with his tummy clenched,',
+                        {
+                            anchor: 'muffling baffled sobs.',
+                            annotationKey: 'muffling_baffled_sobs'
+                        }
+                    ]
                 },
                 {
                     time: 80,
