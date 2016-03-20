@@ -23,7 +23,7 @@ module.exports = {
     },
     annotations: {
         valley_somersaults: {
-            description: 'I grew up in the San Fernando Valley of Southern California, where wide boulevards stretch endlessly along a gridiron plan, and jagged mountains block the horizon on all sides. In the mirages caused by the year-round sweltering heat, the reflections of these mountains naturally point inwards.'
+            description: 'I grew up in the San Fernando Valley of Southern California, where wide boulevards stretch endlessly along a grid plan, and jagged mountains block the horizon on all sides. In the mirages caused by the year-round sweltering heat, the reflections of these mountains naturally point inwards.'
         },
         hydrants_burst: {
             description: 'The sight of kids splashing around a burst fire hydrant wasn\'t really a Los Angeles thing, but it happened once or twice in my neighbourhood.'
@@ -42,7 +42,7 @@ module.exports = {
             description: 'At the recycling center where Willy drops off his recyclables, a complimentary drink is part of his reimbursement.'
         },
         he_ends_his_stroll: {
-            description: 'Or else, "he ends as troll." In most legends, changelings wittingly participate in the deceit, and actively take pains to hide their true identity.'
+            description: 'Or else, "he ends as troll." In most legends, changelings wittingly participate in the deceit, and actively take pains to hide their true form.'
         },
         our_tins_and_our_jars: {
             description: 'Some families help Willy by leaving out their discarded recyclables for him to gather in bulk.'
@@ -51,7 +51,7 @@ module.exports = {
             description: 'Our mother is cutting my brother\'s hair on the front lawn, since the cleanup afterwards will be easier.'
         },
         suddenly_baby_shrieks: {
-            description: 'As a child, my younger brother was typically calm and quiet in demeanour. When made to do things he didn\'t enjoy or didn\'t understand, however, he was prone to frenzied outbursts, which were scary given how likely he was to injure himself.'
+            description: 'As a child, my younger brother was typically calm and quiet in demeanour. However, when made to do things he didn\'t enjoy or didn\'t understand, such as sitting through a haircut, he was prone to frenzied outbursts, which were sometimes scary given how likely he was to injure himself.'
         },
         gap_toothed_coma: {
             description: 'Or "gap-toothed comb."'
@@ -60,27 +60,36 @@ module.exports = {
             description: 'Or "pair of scissors."'
         },
         see_your_kid_with_whiskers: {
-            description: 'Willy jokingly remarks that given my brother\'s distaste for haircuts, he will likely sport an unshaven look as an adult. But in many legends, the changeling is not a child of any sort, but in fact a fully grown troll who is perhaps centuries old. So Willy might also be implying that my brother is a changeling whose actual age is belied by a childlike appearance.'
+            description: 'Willy jokingly remarks that given my brother\'s distaste for haircuts, he will likely sport an unshaven look as an adult. But in many legends, the changeling is not a child of any sort, but in fact a fully grown troll who is perhaps centuries old. So Willy might also be implying that he is immune to the enchantment that disguises my brother\'s true form in a childlike appearance.'
         },
         creepers_on_his_cheek: {
-            description: 'After all, Willy is quite possibly a fellow changeling, as evinced by his own unkempt facial hair.'
+            description: 'After all, Willy is quite possibly a changeling himself, as evinced by his own unkempt facial hair.'
         },
         longest_cowlick: {
-            description: 'Being acquainted with my family over the years, Willy understands why my mother allows my brother\'s hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicably slow development in older children gave rise to belief in changelings.'
+            description: 'Being acquainted with my family over the years, Willy understands why my mother allows my brother\'s hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicable lack of development in older children gave rise to a belief in changelings.'
         },
-        prying_xray_specd: {
-            description: ''
+        xray_specd: {
+            description: 'Back then, the back pages of a comic book were usually filled with ads for novelty items. As a kid, I once sent away for a pair of "X-ray specs," glasses that purportedly allow one to see through objects. They didn\'t work.'
         },
         pages_clawed: {
-            description: ''
+            description: 'My brother used to cut letters of the alphabet out of paper, an activity that my parents encouraged as it was creative and kept him occupied. Unfortunately, my comic books sometimes made their way into his scrap pile of old magazines by accident.'
         },
         kick_slams: {
-            description: ''
+            description: 'There were times I was so angry at my brother that I laid down some serious hurt. He never fought back.'
         },
         bearded_baby: {
-            description: ''
+            description: 'A changeling out of disguise might literally have a beard. Of course, I was also always frustrated with having to engage my brother at a level far below his actual age.'
         },
-        muffling_baffled_sobs: {
+        baffled_sobs: {
+            description: 'The hardest thing about having hurt my brother is that I could never really apologise, since he could never truly comprehend that I was sorry. I suppose that for him, it just became another part of what life was.'
+        },
+        smarts_he_couldve_took: {
+            description: 'I spent a long time wondering why my brother was born with autism and I was not, when our circumstances weren\'t much different. It didn\'t seem far-fetched to suppose that cognitive abilities are a fixed supply in the womb, and that I had selfishly taken my brother\'s share.'
+        },
+        killcrop: {
+            description: 'In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward and reflects the tragic reality of past times, when children unable to work for their keep could lead to a family\'s ruin.'
+        },
+        soused_loafers: {
             description: ''
         }
     },
@@ -271,9 +280,10 @@ module.exports = {
                      */
                     time: 71,
                     verse: [
+                        'Prying',
                         {
-                            anchor: 'Prying X-ray spec\'d,',
-                            annotationKey: 'prying_xray_specd'
+                            anchor: 'X-ray spec\'d,',
+                            annotationKey: 'xray_specd'
                         },
                         'enraged at',
                         {
@@ -304,10 +314,10 @@ module.exports = {
                 {
                     time: 77,
                     verse: [
-                        'with his tummy clenched,',
+                        'with his tummy clenched, muffling',
                         {
-                            anchor: 'muffling baffled sobs.',
-                            annotationKey: 'muffling_baffled_sobs'
+                            anchor: 'baffled sobs.',
+                            annotationKey: 'baffled_sobs'
                         }
                     ]
                 },
@@ -317,12 +327,15 @@ module.exports = {
                 },
                 {
                     time: 83,
-                    verse: 'You\'d learn him good, when smarts he could\'ve took'
+                    verse: [
+                        'You\'d learn him good, when',
+                        {
+                            anchor: 'smarts he could\'ve took',
+                            annotationKey: 'smarts_he_couldve_took'
+                        }
+                    ]
                 },
                 {
-                    /**
-                     * the idea that I took what should have gone to my brother.
-                     */
                     time: 86,
                     verse: 'all went instead to this clever head of yours.'
                 },
@@ -337,14 +350,26 @@ module.exports = {
                      * Killcrop was an insatiable child
                      */
                     time: 106,
-                    verse: 'Killcrop dashing kicks up puddle,'
+                    verse: [
+                        {
+                            anchor: 'Killcrop',
+                            annotationKey: 'killcrop'
+                        },
+                        'dashing kicks up puddle,'
+                    ]
                 },
                 {
                     /**
                      * set shoes, drunk thugs.
                      */
                     time: 110,
-                    verse: 'soused loafers shouting \'tard payment is due.'
+                    verse: [
+                        {
+                            anchor: 'soused loafers',
+                            annotationKey: 'soused_loafers'
+                        },
+                        'shouting \'tard payment is due.'
+                    ]
                 },
                 {
                     /**
