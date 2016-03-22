@@ -119,18 +119,21 @@ module.exports = {
             description: 'Having recently kicked my brother in anger over a shredded comic book, I\'m now indifferent to the latest release from my monthly subscription.'
         },
         how_marbleless: {
-            description: 'Or, "how marvellous." Sometimes friends of my parents, in a poor attempt to empathise, would marvel at how nice it must be for my brother to go through life with a permanent lack of understanding.'
+            description: 'Or, "how marvellous." Sometimes friends of my parents, in a poor attempt to empathise, would marvel at how blissful it must be for my brother to go through life with a permanent lack of understanding.'
         },
         imprunt_age_of_mind: {
-            description: '"Imprinting" is a period during which an infant acquires certain behaviour, such as emotional attachment. My mother sometimes blamed herself for having failed to imprint my brother correctly. An "imp-runt" is also literally the weakest child in a litter of goblins, and thus a prime choice to be replaced with a human.'
+            description: '"Imprinting" is a period during which a child acquires certain behaviour, such as emotional attachment. Each time my mother learned a new concept related to early childhood development, she would blame herself for not having known it soon enough to help my brother. An "imp-runt" is also literally the weakest child in a litter of goblins, and thus a prime choice to be replaced with a human.'
         },
         i_am_seven: {
-            description: ''
+            description: 'My brother learned to answer the question "how old are you?" when he was six. After he turned seven, he still insisted on answering "six." We finally got him to accept the new correct answer of "seven," but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. Here, I imagine him as a grownup, testily correcting a stranger who has the nerve to ask if he is "six."'
         },
         heavy_fears: {
             description: ''
         },
         not_yet_webelos: {
+            description: 'The oldest Cub Scouts in a pack, those in the fourth or fifth grade, belong to the Webelos den. While I was taught that it stands for "We\'ll Be Loyal Scouts," it was originally "Woof, Bear, Lion, Scout." My mother might also be saying that I am not yet "way below."'
+        },
+        book_of_yours: {
             description: ''
         }
     },
@@ -588,7 +591,14 @@ module.exports = {
                      * My mother thought I would do great things. Bobtail would be my magnum opus, the book I meant to write.
                      */
                     time: 183,
-                    verse: 'In time with needle done, you\'ll write this book of yours.'
+                    verse: [
+                        // TODO: Related to Cremated reference
+                        'In time with needle done, you\'ll write this',
+                        {
+                            anchor: 'book of yours.',
+                            annotationKey: 'book_of_yours'
+                        }
+                    ]
                 },
                 {
                     time: 185,
