@@ -128,13 +128,13 @@ module.exports = {
             description: 'My brother learned to answer the question "how old are you?" when he was six. After he turned seven, he still insisted on answering "six." We finally got him to accept the new correct answer of "seven," but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. Here, I imagine him as a grownup, testily correcting a stranger who has the nerve to ask if he is "six."'
         },
         heavy_fears: {
-            description: ''
+            description: 'One night I woke up screaming, in fear of my mortality. My mother rushed to my bedside and told me not to worry, since I wasn\'t going to die for quite a while. She then assured me that when my time finally does come, I would have long made sense of death, and be at peace with it.'
         },
         not_yet_webelos: {
             description: 'The oldest Cub Scouts in a pack, those in the fourth or fifth grade, belong to the Webelos den. While I was taught that it stands for "We\'ll Be Loyal Scouts," it was originally "Woof, Bear, Lion, Scout." My mother might also be saying that I am not yet "way below."'
         },
         book_of_yours: {
-            description: ''
+            description: 'Whatever I expressed interest in doing, my mother always insisted I would do great things in that field. Bobtail was the catch-all title for '
         }
     },
     lyrics: {
@@ -572,9 +572,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * I wouldn't die for a very long time.
-                     */
                     time: 173,
                     verse: 'Son, seventy years and you\'ll be glad'
                 },
