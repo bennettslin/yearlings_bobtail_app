@@ -122,19 +122,26 @@ module.exports = {
             description: 'Or, "how marvellous." Sometimes friends of my parents, in a poor attempt to empathise, would marvel at how blissful it must be for my brother to go through life with a permanent lack of understanding.'
         },
         imprunt_age_of_mind: {
-            description: '"Imprinting" is a period during which a child acquires certain behaviour, such as emotional attachment. Each time my mother learned a new concept related to early childhood development, she would blame herself for not having known it soon enough to help my brother. An "imp-runt" is also literally the weakest child in a litter of goblins, and thus a prime choice to be replaced with a human.'
+            description: '"Imprinting" is a period during which a child acquires certain behaviour, such as emotional attachment. Each time my mother learned a new concept related to child development, she would blame herself for not having known it soon enough to help my brother. An "imp-runt" is also literally the weakest child in a litter of goblins, and thus a prime choice to be replaced with a human.'
         },
         i_am_seven: {
-            description: 'My brother learned to answer the question "how old are you?" when he was six. After he turned seven, he still insisted on answering "six." We finally got him to accept the new correct answer of "seven," but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. Here, I imagine him as a grownup, testily correcting a stranger who has the nerve to ask if he is "six."'
+            description: 'My brother learned to answer the question "how old are you?" when he was six. But even after turning seven, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer, but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. Here, I imagine him as a grownup, testily correcting a stranger who has the nerve to ask if he is "six."'
         },
         heavy_fears: {
-            description: 'One night I woke up screaming, in fear of my mortality. My mother rushed to my bedside and told me not to worry, since I wasn\'t going to die for quite a while. She then assured me that when my time finally does come, I would have long made sense of death, and be at peace with it.'
+            // TODO: Spread this one out? Include "seventy years."
+            description: 'One night I woke up screaming, in fear of my mortality. My mother rushed to my bedside and told me not to worry, since I wasn\'t going to die for quite a while. She then assured me that when my time does come, I will have long made sense of death, and be at peace with it.'
         },
         not_yet_webelos: {
-            description: 'The oldest Cub Scouts in a pack, those in the fourth or fifth grade, belong to the Webelos den. While I was taught that it stands for "We\'ll Be Loyal Scouts," it was originally "Woof, Bear, Lion, Scout." My mother might also be saying that I am not yet "way below."'
+            description: 'The oldest Cub Scouts in a pack, those in the fourth or fifth grade, belong to the Webelos den. We were taught that it stands for "We\'ll Be Loyal Scouts," but it was originally "Wolf, Bear, Lion, Scout." My mother might also be saying that I am not yet "way below."'
         },
         book_of_yours: {
-            description: 'Whatever I expressed interest in doing, my mother always insisted I would do great things in that field. Bobtail was the catch-all title for '
+            description: [
+                'My mother always insisted that I was destined to do great things, even as I bounced from one interest to the next as a kid.',
+                {
+                    italic: 'Bobtail'
+                },
+                ' thus became my catch-all title for the epic masterpiece that I would one day create, whatever it was. At the time, we assumed it would be a comic book of sorts.'
+            ]
         }
     },
     lyrics: {
@@ -584,9 +591,6 @@ module.exports = {
                     verse: 'Life\'s like this quilt: patchy, then it fills…'
                 },
                 {
-                    /**
-                     * My mother thought I would do great things. Bobtail would be my magnum opus, the book I meant to write.
-                     */
                     time: 183,
                     verse: [
                         // TODO: Related to Cremated reference
@@ -604,6 +608,7 @@ module.exports = {
             ],
             [
                 {
+                    // TODO: italicise Bobtail
                     time: 191,
                     verse: 'Bobtail\'s cover could say sorry for the world!'
                 },
