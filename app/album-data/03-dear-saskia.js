@@ -1,29 +1,5 @@
 module.exports = {
     title: 'Dear Saskia',
-    tasks: [
-        {
-            taskName: 'test task with subtasks 1',
-            subtasks: [
-                {
-                    taskName: 'test subtask 1',
-                    workedHours: 3,
-                    neededHours: 4
-                },
-                {
-                    taskName: 'test subtask 2',
-                    workedHours: 2,
-                    neededHours: 5
-                },
-                {
-                    taskName: 'test subtask 3',
-                    workedHours: 1,
-                    neededHours: 8
-                }
-            ],
-            workedHours: 0,
-            neededHours: 0
-        }
-    ],
     speechBubbles: {
         narrative: 'narrative 1',
         backstory: 'personal 1'

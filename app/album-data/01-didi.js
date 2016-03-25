@@ -1,59 +1,17 @@
 module.exports = {
     title: 'Didi',
-    tasks: [
-        {
-            taskName: ' test task 1',
-            workedHours: 4,
-            neededHours: 8
-        },
-        {
-            taskName: 'test task with subtasks 1',
-            subtasks: [
-                {
-                    taskName: 'test subtask 1',
-                    workedHours: 3,
-                    neededHours: 4
-                },
-                {
-                    taskName: 'test subtask 2',
-                    workedHours: 2,
-                    neededHours: 5
-                }
-            ],
-            workedHours: 0,
-            neededHours: 4
-        },
-        {
-            taskName: 'test task 2',
-            workedHours: 5,
-            neededHours: 7
-        },
-        {
-            taskName: 'test task 3',
-            workedHours: 2,
-            neededHours: 8
-        },
-        {
-            taskName: 'test task with subtasks 2',
-            subtasks: [
-                {
-                    taskName: 'test subtask 1',
-                    workedHours: 3,
-                    neededHours: 4
-                },
-                {
-                    taskName: 'test subtask 2',
-                    workedHours: 2,
-                    neededHours: 5
-                }
-            ],
-            workedHours: 1,
-            neededHours: 3
-        }
-    ],
     speechBubbles: {
-        narrative: 'narrative 1',
-        backstory: 'personal 1'
+        narrative: 'As a child, I tagged along with my older sister everywhere she went.',
+        /**
+         * Beach Boys Pet Sounds, James Joyce Portrait of the Artist as a Young Man
+         */
+        backstory: [
+            'James Joyce\'s first novel',
+            {
+                italic: 'A Portrait of the Artist as a Young Man'
+            },
+            'begins simple vocabulary of a child, so '
+        ]
     },
     annotations: {
         didi_translation: {
@@ -193,5 +151,56 @@ module.exports = {
                 }
             ]
         ]
-    }
+    },
+    tasks: [
+        {
+            taskName: ' test task 1',
+            workedHours: 4,
+            neededHours: 8
+        },
+        {
+            taskName: 'test task with subtasks 1',
+            subtasks: [
+                {
+                    taskName: 'test subtask 1',
+                    workedHours: 3,
+                    neededHours: 4
+                },
+                {
+                    taskName: 'test subtask 2',
+                    workedHours: 2,
+                    neededHours: 5
+                }
+            ],
+            workedHours: 0,
+            neededHours: 4
+        },
+        {
+            taskName: 'test task 2',
+            workedHours: 5,
+            neededHours: 7
+        },
+        {
+            taskName: 'test task 3',
+            workedHours: 2,
+            neededHours: 8
+        },
+        {
+            taskName: 'test task with subtasks 2',
+            subtasks: [
+                {
+                    taskName: 'test subtask 1',
+                    workedHours: 3,
+                    neededHours: 4
+                },
+                {
+                    taskName: 'test subtask 2',
+                    workedHours: 2,
+                    neededHours: 5
+                }
+            ],
+            workedHours: 1,
+            neededHours: 3
+        }
+    ]
 };
