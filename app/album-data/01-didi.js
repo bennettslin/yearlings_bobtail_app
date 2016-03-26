@@ -7,11 +7,12 @@ module.exports = {
             {
                 italic: 'A Portrait of the Artist as a Young Man'
             },
-            'opens with the simple language of a child, so I did the same for this first song of the album. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to The Beach Boys\'',
+            'begins in the simple prose of a child, so I did the same for this first song. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to The Beach Boys\'',
             {
                 italic: 'Pet Sounds.'
             },
-            'Beyond just paying homage, I was hoping to plant a gentle reminder that the greatest rock albums were never performed live in their own time, precisely because they were pointing the way for what had yet be achieved onstage. At the time, indie rock was congealing in its belief that recordings are simply the calling card for live performances, the true lifeblood of music. I was fearfulMy fears, of course, proved quite founded.',
+            // TODO: Too moralistic?
+            'Beyond paying homage, I was planting a reminder that Brian Wilson\'s masterpiece was never performed live in its own time precisely because it was paving the way for what had yet to be achievable onstage. And far from being discredited as a hobby project, it now tops every list of rock\'s greatest albums. But my worries proved well-founded, as the lack of resources needed for my live shows to match the recordings meant that my album was dead on arrival to the indie rock scene.',
             ''
         ]
     },
