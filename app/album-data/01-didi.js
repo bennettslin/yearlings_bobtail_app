@@ -2,15 +2,17 @@ module.exports = {
     title: 'Didi',
     speechBubbles: {
         narrative: 'As a child, I tagged along with my older sister everywhere she went.',
-        /**
-         * Beach Boys Pet Sounds, James Joyce Portrait of the Artist as a Young Man
-         */
         backstory: [
-            'James Joyce\'s first novel',
+            'James Joyce\'s novel',
             {
                 italic: 'A Portrait of the Artist as a Young Man'
             },
-            'begins simple vocabulary of a child, so '
+            'opens with the simple language of a child, so I did the same for this first song of the album. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to The Beach Boys\'',
+            {
+                italic: 'Pet Sounds.'
+            },
+            'Beyond just paying homage, I was hoping to plant a gentle reminder that the greatest rock albums were never performed live in their own time, precisely because they were pointing the way for what had yet be achieved onstage. At the time, indie rock was congealing in its belief that recordings are simply the calling card for live performances, the true lifeblood of music. I was fearfulMy fears, of course, proved quite founded.',
+            ''
         ]
     },
     annotations: {
@@ -50,6 +52,9 @@ module.exports = {
             ],
             [
                 {
+                    /**
+                     * Zeizei
+                     */
                     time: 52,
                     verse: 'Cause I get sick of hearing, "Zeizei, let Didi play with you…"'
                 },
