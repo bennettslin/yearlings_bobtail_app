@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Willy the Cocoa',
     speechBubbles: {
-        narrative: 'Willy was an autistic man who wandered our neighbourhood collecting recyclables for his living. Kids called him "The Cocoa," referring to both his Coke bottles and his seeming a bit "cuckoo." One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy\'s murder, I would lie awake in fear of what lay in store for him.',
+        narrative: 'Willy was an autistic man who wandered our neighbourhood collecting recyclables for his living. Kids called him "The Cocoa," referring to both his Coke bottles and his seeming a bit "cuckoo." One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy\'s murder, I would lie awake in fear of what lay in store for my brother.',
         backstory: 'In folklore of the past, changelings were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, I wanted to capture a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of Creedence Clearwater Revival, with mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.'
     },
     annotations: {
@@ -54,7 +54,7 @@ module.exports = {
             description: 'Back then, the back pages of a comic book were usually filled with ads for novelty items. As a kid, I once sent away for a pair of "X-ray specs," glasses that purportedly allow one to see through objects. They didn\'t work.'
         },
         pages_clawed: {
-            description: 'My brother used to cut letters of the alphabet out of paper, an activity that my parents encouraged as it was creative and kept him occupied. Unfortunately, my comic books sometimes made their way into his scrap pile of old magazines by accident.'
+            description: 'My brother used to cut letters of the alphabet out of paper, an activity that my parents encouraged since it was creative and kept him occupied. Unfortunately, my comic books sometimes made their way by accident into his scrap pile of old magazines.'
         },
         kick_slams: {
             description: 'There were times I was so angry at my brother that I laid down some serious hurt. He never fought back.'
@@ -93,7 +93,7 @@ module.exports = {
             description: 'My father liked to build furniture in the garage, and I would help my mother spread the leftover sawdust in our backyard garden. Also, it was the "saddest month" when Willy was killed.'
         },
         mulch_soften_asphodel: {
-            description: 'The asphodel is a popular garden plant, as well as an immortal flower of the underworld in Greek mythology. Since we are made of the same physical matter as the mulch we are using to soften the soil, I remark that Willy\'s body must have also "softened the asphalt" beneath which it lay.'
+            description: 'The asphodel is a popular garden plant, as well as an immortal flower of the underworld in Greek mythology. Since we are made of the same physical matter as the mulch we use to soften the soil, I remark that Willy\'s body must have also "softened the asphalt" beneath which it lay.'
         },
         baby_bluebonnets: {
             description: 'The bluebonnet is another garden flower, and a bonnet is what my mother tucks my brother\'s head in to protect him from the sun. But in light of Willy\'s murder, I wonder how well-protected his head is against other things.'
@@ -123,7 +123,7 @@ module.exports = {
                 {
                     italic: 'Bobtail'
                 },
-                ' thus became my catch-all title for the epic masterpiece that I would one day create, whatever it was. At the time, we assumed it would be a comic book of sorts.'
+                'was the catch-all title for my epic masterpiece that I would one day create, whatever it was. At the time, we assumed it would be a comic book of sorts.'
             ]
         }
     },
@@ -187,7 +187,7 @@ module.exports = {
                     time: 30,
                     verse: [
                         {
-                            italic: [
+                            emphasis: [
                                 {
                                     anchor: 'Chilled cola\'s free',
                                     annotationKey: 'chilled_colas_free'
@@ -426,7 +426,7 @@ module.exports = {
                     time: 126,
                     verse: [
                         {
-                            italic: [
+                            emphasis: [
                                 'Shelled skull has freed',
                                 {
                                     anchor: 'unsalvaged soul…',

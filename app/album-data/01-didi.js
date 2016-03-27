@@ -1,24 +1,72 @@
 module.exports = {
     title: 'Didi',
     speechBubbles: {
-        narrative: 'As a child, I tagged along with my older sister everywhere she went.',
+        narrative: 'As a child, I depended on my older sister to do most everything for me, from opening juice cartons to zipping my jacket. One day when she wasn\'t around to help, I pooped in my pants and had to be sent home from school.',
         backstory: [
             'James Joyce\'s novel',
             {
                 italic: 'A Portrait of the Artist as a Young Man'
             },
-            'begins in the simple prose of a child, so I did the same for this first song. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to The Beach Boys\'',
+            'begins in the simple prose of a child, so I did the same for the first song of this album, which is sung from my sister\'s perspective. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to The Beach Boys\'',
             {
                 italic: 'Pet Sounds.'
-            },
-            // TODO: Too moralistic?
-            'Beyond paying homage, I was planting a reminder that Brian Wilson\'s masterpiece was never performed live in its own time precisely because it was paving the way for what had yet to be achievable onstage. And far from being discredited as a hobby project, it now tops every list of rock\'s greatest albums. But my worries proved well-founded, as the lack of resources needed for my live shows to match the recordings meant that my album was dead on arrival to the indie rock scene.',
-            ''
+            }
         ]
     },
     annotations: {
-        didi_translation: {
-            description: 'hi'
+        didi: {
+            description: [
+                'In Mandarin Chinese,',
+                {
+                    italic: 'didi'
+                },
+                'means "little brother." While my family is from Taiwan, the Chinese took over in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.'
+            ]
+        },
+        didnt_want_you_here: {
+            description: 'My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I remember the panic I felt when that happened.'
+        },
+        zeizei: {
+            description: [
+                'In Chinese,',
+                {
+                    italic: 'zeizei'
+                },
+                'means "big sister."'
+            ]
+        },
+        accident_in_class: {
+            // TODO
+            description: ''
+        },
+        safeway_paper_bag: {
+            description: 'Since my pants were soiled, I was given a grocery bag to carry them in. Safeway is a supermarket chain that I\'ve since learned is only located in the western and central United States.'
+        },
+        in_the_bath: {
+            // TODO
+            description: 'I don\'t remember'
+        },
+        be_a_hero: {
+            // TODO
+            description: 'As a child, my mother prided herself on being a rebel who loved country music and Western films. My sister and I '
+        },
+        girls_mirrors: {
+            // TODO
+            description: 'My sister would cut pictures of pop stars out of teenybopper magazines and tape them to her mirror. I remember thinking how great it would be'
+        },
+        never_have_to_know: {
+            // TODO Mention ideology.
+            description: [
+                'By paying homage to',
+                {
+                    italic: 'Pet Sounds,'
+                },
+                'I had hoped to plant a gentle reminder that Brian Wilson\'s masterpiece was never performed live in its own time precisely because it was paving the way for what had yet to be achievable onstage. And far from being dismissed as a hobby project, it now tops every list of rock\'s greatest albums. I was worried about indie rock\'s congealing belief that recordings merely serve to showcase live shows, because as an unknown, I could only excel at the former while deferring the latter. My fears proved well-founded when',
+                {
+                    italic: 'Yearling\'s Bobtail'
+                },
+                'was dead upon arrival. This Didi did indeed have to know some things, and fast.'
+            ]
         }
     },
     lyrics: {
@@ -26,7 +74,13 @@ module.exports = {
             [
                 {
                     time: 17,
-                    verse: 'Didi left the house this morning'
+                    verse: [
+                        {
+                            anchor: 'Didi',
+                            annotationKey: 'didi'
+                        },
+                        'left the house this morning'
+                    ]
                 },
                 {
                     time: 22,
@@ -44,7 +98,13 @@ module.exports = {
             [
                 {
                     time: 40,
-                    verse: 'Didi, you\'ve been following, I didn\'t want you here.'
+                    verse: [
+                        'Didi, you\'ve been following, I',
+                        {
+                            anchor: 'didn\'t want you here.',
+                            annotationKey: 'didnt_want_you_here'
+                        }
+                    ]
                 },
                 {
                     time: 46,
@@ -57,7 +117,14 @@ module.exports = {
                      * Zeizei
                      */
                     time: 52,
-                    verse: 'Cause I get sick of hearing, "Zeizei, let Didi play with you…"'
+                    verse: [
+                        'Cause I get sick of hearing,',
+                        {
+                            anchor: '"Zeizei,',
+                            annotationKey: 'zeizei'
+                        },
+                        'let Didi play with you…"'
+                    ]
                 },
                 {
                     time: 57,
@@ -67,7 +134,13 @@ module.exports = {
             [
                 {
                     time: 63,
-                    verse: 'Didi made an "accident" in class,'
+                    verse: [
+                        'Didi made an',
+                        {
+                            anchor: '"accident" in class,',
+                            annotationKey: 'accident_in_class'
+                        }
+                    ]
                 },
                 {
                     time: 68,
@@ -75,7 +148,13 @@ module.exports = {
                 },
                 {
                     time: 74,
-                    verse: 'They saw him crying beside a Safeway paper bag,'
+                    verse: [
+                        'They saw him crying beside a',
+                        {
+                            anchor: 'Safeway paper bag,',
+                            annotationKey: 'safeway_paper_bag'
+                        }
+                    ]
                 },
                 {
                     time: 80,
@@ -85,7 +164,14 @@ module.exports = {
             [
                 {
                     time: 85,
-                    verse: 'Didi, you\'ve been in the bath all this time.'
+                    verse: [
+                        'Didi, you\'ve been',
+                        {
+                            anchor: 'in the bath',
+                            annotationKey: 'in_the_bath'
+                        },
+                        'all this time.'
+                    ]
                 },
                 {
                     time: 91,
@@ -93,13 +179,23 @@ module.exports = {
                 },
                 {
                     time: 97,
-                    verse: '<em>Don\'t little raisin fingers need to dry?</em>'
+                    verse: [
+                        {
+                            emphasis: 'Don\'t little raisin fingers need to dry?'
+                        }
+                    ]
                 }
             ],
             [
                 {
                     time: 100,
-                    verse: 'Didi, someday you will be a hero'
+                    verse: [
+                        'Didi, someday you will',
+                        {
+                            anchor: 'be a hero',
+                            annotationKey: 'be_a_hero'
+                        }
+                    ]
                 },
                 {
                     time: 103,
@@ -115,7 +211,13 @@ module.exports = {
                 },
                 {
                     time: 115,
-                    verse: 'taped to all the girls\' mirrors.'
+                    verse: [
+                        'taped to all the',
+                        {
+                            anchor: 'girls\' mirrors.',
+                            annotationKey: 'girls_mirrors'
+                        }
+                    ]
                 },
                 {
                     time: 117,
@@ -153,7 +255,13 @@ module.exports = {
                 },
                 {
                     time: 158,
-                    verse: 'and there are things I hope Didi will never have to know.'
+                    verse: [
+                        'and there are things I hope Didi will',
+                        {
+                            anchor: 'never have to know.',
+                            annotationKey: 'never_have_to_know'
+                        }
+                    ]
                 }
             ]
         ]
