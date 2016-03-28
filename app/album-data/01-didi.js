@@ -36,18 +36,22 @@ module.exports = {
             ]
         },
         accident_in_class: {
-            // TODO
-            description: 'I don\'t remember'
+            // TODO talk about Sherman Oaks elementary
+            description: 'I don\'t remember how or why '
         },
         safeway_paper_bag: {
-            description: 'Since my pants were soiled, I was given a grocery bag to keep them in. Safeway is a supermarket chain that I\'ve since learned is only located in the western and central United States.'
+            description: 'Since my pants were soiled, the nurse gave me a shopping bag to carry them in. Safeway is a supermarket chain that I\'ve since learned is only located in the western and central United States.'
+        },
+        decked_in_overalls: {
+            // TODO: These details unnecessary?
+            description: 'I hadn\'t worn overalls before, and found them large and uncomfortable.'
         },
         in_the_bath: {
-            // TODO
-            description: 'I remember it took a long time to bathe because I didn\'t really understand how '
+            // TODO: These details unnecessary?
+            description: 'It took a while to bathe because the water kept getting muddy fast, so I would have to drain it and start over.'
         },
         sheriffs_badge_and_gun: {
-            description: 'After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things labelled American, though no one knew exactly what that meant. My mother\'s tastes were thus a random jumble, which my sister and I then absorbed as we grew up listening to her country records and watching old Westerns.'
+            description: 'After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things labelled American, though no one knew exactly what that entailed. My mother\'s tastes were thus a random jumble, which my sister and I then absorbed as we grew up listening to her country records and watching old Westerns.'
         },
         girls_mirrors: {
             description: 'My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.'
@@ -155,7 +159,13 @@ module.exports = {
                 },
                 {
                     time: 80,
-                    verse: 'decked in overalls from the lost and found.'
+                    verse: [
+                        {
+                            anchor: 'decked in overalls',
+                            annotationKey: 'decked_in_overalls'
+                        },
+                        'from the lost and found.'
+                    ]
                 }
             ],
             [
