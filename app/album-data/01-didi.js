@@ -1,13 +1,13 @@
 module.exports = {
     title: 'Didi',
     speechBubbles: {
-        narrative: 'As a child, I depended on my older sister to do most everything for me, from opening juice cartons to zipping my jacket. One day when she wasn\'t around to help, I pooped in my pants and had to be sent home from school.',
+        narrative: 'As a child, I depended on my older sister to do most everything for me, like zipping my jacket. One day when she wasn\'t around to help, I pooped in my pants and had to be sent home from school.',
         backstory: [
             'James Joyce\'s novel',
             {
                 italic: 'A Portrait of the Artist as a Young Man'
             },
-            'begins in the simple prose of a child, so I did the same for the first song of this album, which is sung from my sister\'s perspective. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to The Beach Boys\'',
+            'begins in the simple prose of a child, so I did the same for this first song of the album, which is sung from my sister\'s perspective. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to The Beach Boys\'',
             {
                 italic: 'Pet Sounds.'
             }
@@ -24,7 +24,7 @@ module.exports = {
             ]
         },
         didnt_want_you_here: {
-            description: 'My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I remember the panic I felt when that happened.'
+            description: 'My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I remember the panic I felt when this happened.'
         },
         zeizei: {
             description: [
@@ -37,35 +37,32 @@ module.exports = {
         },
         accident_in_class: {
             // TODO
-            description: ''
+            description: 'I don\'t remember'
         },
         safeway_paper_bag: {
-            description: 'Since my pants were soiled, I was given a grocery bag to carry them in. Safeway is a supermarket chain that I\'ve since learned is only located in the western and central United States.'
+            description: 'Since my pants were soiled, I was given a grocery bag to keep them in. Safeway is a supermarket chain that I\'ve since learned is only located in the western and central United States.'
         },
         in_the_bath: {
             // TODO
-            description: 'I don\'t remember'
+            description: 'I remember it took a long time to bathe because I didn\'t really understand how '
         },
-        be_a_hero: {
-            // TODO
-            description: 'As a child, my mother prided herself on being a rebel who loved country music and Western films. My sister and I '
+        sheriffs_badge_and_gun: {
+            description: 'After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things labelled American, though no one knew exactly what that meant. My mother\'s tastes were thus a random jumble, which my sister and I then absorbed as we grew up listening to her country records and watching old Westerns.'
         },
         girls_mirrors: {
-            // TODO
-            description: 'My sister would cut pictures of pop stars out of teenybopper magazines and tape them to her mirror. I remember thinking how great it would be'
+            description: 'My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.'
         },
         never_have_to_know: {
-            // TODO Mention ideology.
             description: [
                 'By paying homage to',
                 {
                     italic: 'Pet Sounds,'
                 },
-                'I had hoped to plant a gentle reminder that Brian Wilson\'s masterpiece was never performed live in its own time precisely because it was paving the way for what had yet to be achievable onstage. And far from being dismissed as a hobby project, it now tops every list of rock\'s greatest albums. I was worried about indie rock\'s congealing belief that recordings merely serve to showcase live shows, because as an unknown, I could only excel at the former while deferring the latter. My fears proved well-founded when',
+                'I had hoped to plant a gentle reminder that Brian Wilson\'s masterpiece was never performed live in its own time precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops many lists of rock\'s greatest albums. I was worried about indie rock\'s congealing belief that recordings merely serve to showcase live shows, because as an unknown, I could only strive to excel at the former while deferring the latter. But',
                 {
                     italic: 'Yearling\'s Bobtail'
                 },
-                'was dead upon arrival. This Didi did indeed have to know some things, and fast.'
+                'was indeed dead upon arrival, proving my fears well-founded. So this Didi did have to know some things after all.'
             ]
         }
     },
@@ -189,13 +186,7 @@ module.exports = {
             [
                 {
                     time: 100,
-                    verse: [
-                        'Didi, someday you will',
-                        {
-                            anchor: 'be a hero',
-                            annotationKey: 'be_a_hero'
-                        }
-                    ]
+                    verse: 'Didi, someday you will be a hero'
                 },
                 {
                     time: 103,
@@ -203,7 +194,13 @@ module.exports = {
                 },
                 {
                     time: 106,
-                    verse: 'crooked thieves with your sheriff\'s badge and gun…'
+                    verse: [
+                        'crooked thieves with your',
+                        {
+                            anchor: 'sheriff\'s badge and gun…',
+                            annotationKey: 'sheriffs_badge_and_gun'
+                        }
+                    ]
                 },
                 {
                     time: 112,
