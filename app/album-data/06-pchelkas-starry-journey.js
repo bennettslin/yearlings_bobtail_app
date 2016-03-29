@@ -9,7 +9,9 @@ module.exports = {
             [
                 {
                     time: 0,
-                    verse: '<em>But F., that man is the worst nuisance on the beach.</em>'
+                    verse: {
+                        emphasis: 'But F., that man is the worst nuisance on the beach.'
+                    }
                 }
             ],
             [
@@ -23,8 +25,14 @@ module.exports = {
                 },
                 {
                     time: 15,
-                    verse: '"Why\'d you hit your baby brother, when he so looks up to you!'
+                    verse: '"Why\'d you hit your baby brother,'
                 },
+                {
+                    time: 17,
+                    verse: 'when he so looks up to you!'
+                }
+            ],
+            [
                 {
                     time: 19,
                     verse: 'Don\'t you remember days past,'
@@ -55,7 +63,9 @@ module.exports = {
             [
                 {
                     time: 34,
-                    verse: '<em>Poor Sam Peabody!</em>'
+                    verse: {
+                        emphasis: 'Poor Sam Peabody!'
+                    }
                 }
             ],
             [
@@ -69,8 +79,14 @@ module.exports = {
                 },
                 {
                     time: 42,
-                    verse: 'threatening never to release you till you learn to kick it back.'
+                    verse: 'threatening never to release you'
                 },
+                {
+                    time: 44,
+                    verse: 'till you learn to kick it back.'
+                }
+            ],
+            [
                 {
                     time: 46,
                     verse: 'Feigning sick, I chanced to read'
@@ -183,8 +199,14 @@ module.exports = {
                 },
                 {
                     time: 138,
-                    verse: 'twin friars cast here in pollens from a star\'s placenta sac.'
+                    verse: 'twin friars cast here in pollens'
                 },
+                {
+                    time: 140,
+                    verse: 'from a star\'s placenta sac.'
+                }
+            ],
+            [
                 {
                     time: 141,
                     verse: 'Braced for an earth stay unloved,'

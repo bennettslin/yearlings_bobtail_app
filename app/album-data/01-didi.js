@@ -155,11 +155,9 @@ module.exports = {
                 },
                 {
                     time: 97,
-                    verse: [
-                        {
-                            emphasis: 'Don\'t little raisin fingers need to dry?'
-                        }
-                    ]
+                    verse: {
+                        emphasis: 'Don\'t little raisin fingers need to dry?'
+                    }
                 }
             ],
             [
