@@ -2,7 +2,7 @@ module.exports = {
     title: 'Willy the Cocoa',
     speechBubbles: {
         narrative: 'Willy was an autistic man who wandered our neighbourhood collecting recyclables for his living. Kids called him "The Cocoa," referring to both his Coke bottles and his seeming a bit "cuckoo." One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy\'s murder, I would lie awake in fear of what lay in store for my brother.',
-        backstory: 'In folklore of the past, changelings were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, I wanted to capture a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of Creedence Clearwater Revival, with mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.'
+        backstory: 'In folklore of the past, changelings were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, I wanted to capture a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of Creedence Clearwater Revival, with muted mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.'
     },
     annotations: {
         valley_somersaults: {
@@ -111,11 +111,13 @@ module.exports = {
             description: 'My brother learned to answer the question "how old are you?" when he was six. But even after turning seven, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer, but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. Here, I imagine him as a grownup, testily correcting a stranger who has the nerve to ask if he is "six."'
         },
         heavy_fears: {
-            // TODO: Spread this one out? Include "seventy years."
-            description: 'One night I woke up screaming, in fear of my mortality. My mother rushed to my bedside and told me not to worry, since I wasn\'t going to die for quite a while. She then assured me that when my time does come, I will have long made sense of death, and be at peace with it.'
+            description: 'One night when I woke up screaming in fear of my mortality, my mother rushed to my bedside to comfort me.'
         },
         not_yet_webelos: {
             description: 'The oldest Cub Scouts in a pack, those in the fourth or fifth grade, belong to the Webelos den. We were taught that it stands for "We\'ll Be Loyal Scouts," but it was originally "Wolf, Bear, Lion, Scout." My mother might also be saying that I am not yet "way below."'
+        },
+        seventy_years: {
+            description: 'My mother told me not to worry, since I wasn\'t going to die for quite a while. She then assured me that when my time does come, I will have long made sense of death, and be at peace with it.'
         },
         book_of_yours: {
             description: [
@@ -563,7 +565,14 @@ module.exports = {
                 },
                 {
                     time: 173,
-                    verse: 'Son, seventy years and you\'ll be glad'
+                    verse: [
+                        'Son,',
+                        {
+                            anchor: 'seventy years',
+                            annotationKey: 'seventy_years'
+                        },
+                        'and you\'ll be glad'
+                    ]
                 },
                 {
                     time: 177,

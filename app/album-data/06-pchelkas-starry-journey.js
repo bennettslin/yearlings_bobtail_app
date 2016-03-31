@@ -1,13 +1,25 @@
+/**
+ * FIXME: Should Pchelka's Starry Journey be before Ash Wednesday?
+ */
 module.exports = {
     title: 'Pchelka\'s Starry Journey',
     speechBubbles: {
-        narrative: 'narrative 1',
+        /**
+         * mail order cult
+         */
+        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived that promised spiritual answers. With each payment I sent, these answers were slowly revealed: I belonged to an ancient race of extraterrestrials, and my mission was to withdraw from society. As my brother had already figured out the latter',
+        /**
+         * Russian space dogs, balalaikas, throatsinging
+         */
         backstory: 'personal 1'
     },
     lyrics: {
         left: [
             [
                 {
+                    /**
+                     * Beautiful Losers, comic book.
+                     */
                     time: 0,
                     verse: {
                         emphasis: 'But F., that man is the worst nuisance on the beach.'
@@ -52,6 +64,9 @@ module.exports = {
             ],
             [
                 {
+                    /**
+                     * captain bed
+                     */
                     time: 27,
                     verse: 'You stowed away beneath your captain bed.'
                 },
@@ -62,6 +77,9 @@ module.exports = {
             ],
             [
                 {
+                    /**
+                     * white-throated sparrow
+                     */
                     time: 34,
                     verse: {
                         emphasis: 'Poor Sam Peabody!'
@@ -70,6 +88,9 @@ module.exports = {
             ],
             [
                 {
+                    /**
+                     * bullying
+                     */
                     time: 38,
                     verse: 'Oh brother, when all you know is bleat,'
                 },
@@ -88,10 +109,16 @@ module.exports = {
             ],
             [
                 {
+                    /**
+                     * bullying
+                     */
                     time: 46,
                     verse: 'Feigning sick, I chanced to read'
                 },
                 {
+                    /**
+                     * back of comic book
+                     */
                     time: 48,
                     verse: 'these words in a comic to me speaking:'
                 },
@@ -106,6 +133,9 @@ module.exports = {
             ],
             [
                 {
+                    /**
+                     * Started getting a lot of junk mail.
+                     */
                     time: 54,
                     verse: 'Soon send away offers were piling up high,'
                 },
@@ -114,6 +144,9 @@ module.exports = {
                     verse: 'and then one day one came and made me cry and cry.'
                 },
                 {
+                    /**
+                     * Chinese red pouches
+                     */
                     time: 61,
                     verse: 'Red pouches unspent for years, at once counted and sent,'
                 },
@@ -124,6 +157,9 @@ module.exports = {
             ],
             [
                 {
+                    /**
+                     * Special Human Being research lab
+                     */
                     time: 68,
                     verse: '"Are you a Beyonder sent down to be Earth-fostered;'
                 },
@@ -132,18 +168,30 @@ module.exports = {
                     verse: 'do you often feel like a wanderer lost?"'
                 },
                 {
+                    /**
+                     * Waiting for Godot, Goddard rocket
+                     */
                     time: 76,
                     verse: 'But waiting for Goddard, our two impatient paupers,'
                 },
                 {
+                    /**
+                     * Gogo and Didi characters, also older brother and younger brother
+                     */
                     time: 79,
                     verse: 'Gogo and his Didi, sauntered off…'
                 },
                 {
+                    /**
+                     * space camp
+                     */
                     time: 83,
                     verse: 'Till in hunger they were led into Huntsville and fed,'
                 },
                 {
+                    /**
+                     * Orion's belt,
+                     */
                     time: 86,
                     verse: 'dragged to sled by hunter\'s belt and launched!'
                 }
@@ -162,6 +210,9 @@ module.exports = {
                     verse: 'We\'ve received your fee, and per the tests,'
                 },
                 {
+                    /**
+                     * Being special
+                     */
                     time: 101,
                     verse: 'you are indeed a seed from that nebular nest.'
                 },
@@ -198,6 +249,9 @@ module.exports = {
                     verse: 'as spies among the carnal fallen,'
                 },
                 {
+                    /**
+                     * Castor and Pollux
+                     */
                     time: 138,
                     verse: 'twin friars cast here in pollens'
                 },
@@ -220,30 +274,48 @@ module.exports = {
                     verse: 'Mirthful, the merciless would hurt you,'
                 },
                 {
+                    /**
+                     * mob
+                     */
                     time: 147,
                     verse: 'as omerta turned their backs.'
                 }
             ],
             [
                 {
+                    /**
+                     * Prepared to live life like this.
+                     */
                     time: 149,
                     verse: 'Stung by venomous vipers, our muted youths lapsed;'
                 },
                 {
+                    /**
+                     * The less I said, the more I could withstand.
+                     */
                     time: 153,
                     verse: 'we knew the shortest cyphers are the toughest ones to crack.'
                 },
                 {
+                    /**
+                     * Achilles hell
+                     */
                     time: 156,
                     verse: 'But every hero has a heel, we\'d realise, blind before the squad.'
                 },
                 {
+                    /**
+                     * Sabotage
+                     */
                     time: 160,
                     verse: 'The only spies who get to feel love first unearth their own plots!'
                 }
             ],
             [
                 {
+                    /**
+                     * Betrayed my brother
+                     */
                     time: 164,
                     verse: 'Mushing onward, Mushka\'s dragged by collar'
                 },
@@ -256,6 +328,9 @@ module.exports = {
                     verse: 'Choked, he\'s soon a goner, no one heard his hollers;'
                 },
                 {
+                    /**
+                     * Iditerod, animal rights
+                     */
                     time: 175,
                     verse: 'this pack honours only the idiot\'s rod.'
                 },
@@ -270,18 +345,30 @@ module.exports = {
             ],
             [
                 {
+                    /**
+                     * Little Fly, Mushka
+                     */
                     time: 186,
                     verse: 'I\'m sorry I bailed, Xiao Xiang, mush on…'
                 },
                 {
+                    /**
+                     * Whale pod
+                     */
                     time: 189,
                     verse: 'I couldn\'t ditch my wails, I needed the pod.'
                 },
                 {
+                    /**
+                     * Called into principal's office.
+                     */
                     time: 193,
                     verse: '"Kids say you\'re hopped on drugs, son, with Mum we\'ll need a word."'
                 },
                 {
+                    /**
+                     * Got out of it because the letters started to take on Christian undertones.
+                     */
                     time: 200,
                     verse: 'Mushka, per their bargain, I can\'t ever return.'
                 }

@@ -39,7 +39,7 @@ module.exports = {
             description: 'Since my pants were soiled, the nurse gave me a shopping bag to carry them in. Safeway is a supermarket chain located in the western and central United States.'
         },
         sheriffs_badge_and_gun: {
-            description: 'After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what that label entailed. My mother\'s tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.'
+            description: 'After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what the label entailed. My mother\'s tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.'
         },
         girls_mirrors: {
             description: 'My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.'
@@ -122,6 +122,7 @@ module.exports = {
             ],
             [
                 {
+                    // TODO: Say more?
                     time: 63,
                     verse: 'Didi made an "accident" in class,'
                 },
@@ -146,6 +147,7 @@ module.exports = {
             ],
             [
                 {
+                    // TODO: Say more?
                     time: 85,
                     verse: 'Didi, you\'ve been in the bath all this time.'
                 },
