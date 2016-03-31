@@ -7,7 +7,7 @@ module.exports = {
         /**
          * mail order cult
          */
-        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived that promised spiritual answers. With each payment I sent, these answers were slowly revealed: I belonged to an ancient race of extraterrestrials, and my mission was to withdraw from society. As my brother had already figured out the latter',
+        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each payment I sent, these answers were slowly revealed: I belonged to an ancient race of extraterrestrial beings, and my mission was to shut myself off from society. I did so by following my brother\'s example, and felt an intense psychic bond with him as a result. Only years later did I realise that I was in a mail order cult.',
         /**
          * Russian space dogs, balalaikas, throatsinging
          */
