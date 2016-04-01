@@ -7,11 +7,8 @@ module.exports = {
         /**
          * mail order cult
          */
-        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each payment I sent, these answers were slowly revealed: I belonged to an ancient race of extraterrestrial beings, and my mission was to shut myself off from society. I did so by following my brother\'s example, and felt an intense psychic bond with him as a result. Only years later did I realise that I was in a mail order cult.',
-        /**
-         * Russian space dogs, balalaikas, throatsinging
-         */
-        backstory: 'personal 1'
+        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to an ancient race of extraterrestrials, with a mission to shut myself from the world. I did so by adopting my brother\'s composure, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail order cult. It took a long while to recover.',
+        backstory: 'Pchelka and Mushka were dogs sent into orbit under the Soviet space program. They were killed upon reentry. In keeping with the Russian theme, I used furiously plucked mandolins to evoke the balalaika. Since Tuva is a Russian republic, I also threw in some Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother is singing along with me in spirit.'
     },
     lyrics: {
         left: [
