@@ -10,6 +10,11 @@ module.exports = {
         narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to an ancient race of extraterrestrials, with a mission to shut myself from the world. I did so by adopting my brother\'s composure, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail order cult. It took a long while to recover.',
         backstory: 'Pchelka and Mushka were dogs sent into orbit under the Soviet space program. They were killed upon reentry. In keeping with the Russian theme, I used furiously plucked mandolins to evoke the balalaika. Since Tuva is a Russian republic, I also threw in some Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother is singing along with me in spirit.'
     },
+    annotations: {
+        worst_nuisance_on_the_beach: {
+            description: ''
+        }
+    },
     lyrics: {
         left: [
             [
@@ -19,7 +24,13 @@ module.exports = {
                      */
                     time: 0,
                     verse: {
-                        emphasis: 'But F., that man is the worst nuisance on the beach.'
+                        emphasis: [
+                            'But F., that man is the',
+                            {
+                                anchor: 'worst nuisance on the beach.',
+                                annotationKey: 'worst_nuisance_on_the_beach'
+                            }
+                        ]
                     }
                 }
             ],
