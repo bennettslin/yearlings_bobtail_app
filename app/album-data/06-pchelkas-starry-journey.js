@@ -4,24 +4,48 @@
 module.exports = {
     title: 'Pchelka\'s Starry Journey',
     speechBubbles: {
-        /**
-         * mail order cult
-         */
         narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to an ancient race of extraterrestrials, with a mission to shut myself from the world. I did so by adopting my brother\'s composure, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail order cult. It took me a long while to recover.',
         backstory: 'Pchelka and Mushka were dogs sent into orbit under the Soviet space program. They were killed upon reentry. In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother is singing along with me in spirit.'
     },
     annotations: {
         worst_nuisance_on_the_beach: {
             description: [
-                'While the experience of being in a mail order cult was painful, there is a comic absurdity to it as well, which this line captures beautifully. In a humourous passage from Leonard Cohen\'s otherwise tragic',
+                'While being in a mail order cult was a painful experience, there is a comic absurdity to it as well, which this line captures beautifully. In a humourous passage from Leonard Cohen\'s otherwise tragic',
                 {
                     italic: 'Beautiful Losers,'
                 },
-                'the character F. tires of getting bullied at the beach. He thus enrolls in the Charles Axis bodybuilding course advertised in a comic book, only to discover that Charles Axis is the one who bullies him.'
+                'the character F. tires of getting bullied at the beach. He signs up for the Charles Axis bodybuilding course advertised in a comic book, only to discover that Charles Axis is the one who bullies him.'
             ]
+        },
+        hit_your_baby_brother: {
+            description: 'The times that I hit my brother were actually rare. They just stick out in my memory.'
+        },
+        buy_a_fortress: {
+            description: 'Our cousin was well off and would receive new toys on a regular basis, one of which was a lifesize wooden castle. Since my birthday is in November, I always had the option of asking for a more expensive toy, which would then serve as my Christmas gift as well. So I was dismayed to learn that some toys were too expensive to count even for two gifts.'
+        },
+        beneath_your_captain_bed: {
+            description: 'I slept in a captain bed that rested atop a dresser on one side, with the other side placed flush against the wall. By removing the bottom drawer, I could crawl into the space underneath with my brother and stay hidden.'
+        },
+        didnt_hear_a_peep: {
+            description: 'My brother would play alongside me for hours without once speaking or interacting. It was a strange closeness we shared.'
         },
         poor_sam_peabody: {
             description: 'When my family visited Canada one late summer, the white-throated sparrow was in breeding season, and we heard its song everywhere. I found the sound so haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.'
+        },
+        your_cape: {
+            description: ''
+        },
+        learn_to_kick_it_back: {
+            description: ''
+        },
+        feigning_sick: {
+            description: 'As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press me on it.'
+        },
+        tired_of_being_the_weakling: {
+            description: 'In a well-known advertisement found in comic books at the time, a weakling learns to build up his muscles by sending away for Charles Atlas\'s free bodybuilding book, which allows him to take revenge on a bully.'
+        },
+        send_away_offers: {
+            description: 'At some point I began to get inundated with junk mail.'
         }
     },
     lyrics: {
@@ -51,7 +75,13 @@ module.exports = {
                 },
                 {
                     time: 15,
-                    verse: '"Why\'d you hit your baby brother,'
+                    verse: [
+                        '"Why\'d you',
+                        {
+                            anchor: 'hit your baby brother,',
+                            annotationKey: 'hit_your_baby_brother'
+                        }
+                    ]
                 },
                 {
                     time: 17,
@@ -65,7 +95,13 @@ module.exports = {
                 },
                 {
                     time: 21,
-                    verse: 'when you wanted to buy a fortress'
+                    verse: [
+                        'when you wanted to',
+                        {
+                            anchor: 'buy a fortress',
+                            annotationKey: 'buy_a_fortress'
+                        }
+                    ]
                 },
                 {
                     time: 23,
@@ -82,11 +118,24 @@ module.exports = {
                      * captain bed
                      */
                     time: 27,
-                    verse: 'You stowed away beneath your captain bed.'
+                    verse: [
+                        'You stowed away',
+                        {
+                            anchor: 'beneath your captain bed.',
+                            annotationKey: 'beneath_your_captain_bed'
+                        }
+                    ]
                 },
                 {
                     time: 30,
-                    verse: 'We didn\'t hear a peep throughout the entire weekend!"'
+                    verse: [
+                        'We',
+                        {
+                            anchor: 'didn\'t hear a peep',
+                            annotationKey: 'didnt_hear_a_peep'
+                        },
+                        'throughout the entire weekend!"'
+                    ]
                 }
             ],
             [
@@ -113,7 +162,14 @@ module.exports = {
                 },
                 {
                     time: 40,
-                    verse: 'they\'ll catch you by your cape and beat you,'
+                    verse: [
+                        'they\'ll catch you by',
+                        {
+                            anchor: 'your cape',
+                            annotationKey: 'your_cape'
+                        },
+                        'and beat you,'
+                    ]
                 },
                 {
                     time: 42,
@@ -121,7 +177,13 @@ module.exports = {
                 },
                 {
                     time: 44,
-                    verse: 'till you learn to kick it back.'
+                    verse: [
+                        'till you',
+                        {
+                            anchor: 'learn to kick it back.',
+                            annotationKey: 'learn_to_kick_it_back'
+                        }
+                    ]
                 }
             ],
             [
@@ -130,7 +192,13 @@ module.exports = {
                      * bullying
                      */
                     time: 46,
-                    verse: 'Feigning sick, I chanced to read'
+                    verse: [
+                        {
+                            anchor: 'Feigning sick,',
+                            annotationKey: 'feigning_sick'
+                        },
+                        'I chanced to read'
+                    ]
                 },
                 {
                     /**
@@ -141,7 +209,13 @@ module.exports = {
                 },
                 {
                     time: 50,
-                    verse: '"Are you tired of being the weakling?"…'
+                    verse: [
+                        '"Are you',
+                        {
+                            anchor: 'tired of being the weakling?"…',
+                            annotationKey: 'tired_of_being_the_weakling'
+                        }
+                    ]
                 },
                 {
                     time: 52,
@@ -154,7 +228,14 @@ module.exports = {
                      * Started getting a lot of junk mail.
                      */
                     time: 54,
-                    verse: 'Soon send away offers were piling up high,'
+                    verse: [
+                        'Soon',
+                        {
+                            anchor: 'send away offers',
+                            annotationKey: 'send_away_offers'
+                        },
+                        'were piling up high,'
+                    ]
                 },
                 {
                     time: 57,
