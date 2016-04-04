@@ -33,19 +33,26 @@ module.exports = {
             description: 'When my family visited Canada one late summer, the white-throated sparrow was in breeding season, and we heard its song everywhere. I found the sound so haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.'
         },
         your_cape: {
-            description: ''
+            description: 'I was well-liked in elementary school for being physically small and eager to make drawings for anyone who asked. But these traits that had once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.'
         },
         learn_to_kick_it_back: {
-            description: ''
+            description: 'In middle school, the most well-liked kids were the ones who were least concerned about being liked. This ran counter to my instinct for throwing myself whole-heartedly into the things I wished to attain.'
         },
         feigning_sick: {
-            description: 'As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press me on it.'
+            description: 'As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press too deeply on it.'
         },
         tired_of_being_the_weakling: {
-            description: 'In a well-known advertisement found in comic books at the time, a weakling learns to build up his muscles by sending away for Charles Atlas\'s free bodybuilding book, which allows him to take revenge on a bully.'
+            description: 'In a well-known advertisement found in comic books at the time, a skinny guy builds up his muscles by sending away for Charles Atlas\'s free bodybuilding guide, which then allows him to take revenge on a bully.'
         },
         send_away_offers: {
-            description: 'At some point I began to get inundated with junk mail.'
+            description: 'Since I had few friends, I took pleasure in sending away for free samples and making small purchases through mail order. As a result, I got flooded with junk mail advertising even more such offers.'
+        },
+        red_pouches_unspent: {
+            description: 'In East Asian cultures, elders give monetary gifts to children sealed in red envelopes. It is usually implied that the money is to be saved, not spent.',
+            reference: 'https://en.wikipedia.org/wiki/Red_envelope'
+        },
+        are_you_a_beyonder: {
+            description: ''
         }
     },
     lyrics: {
@@ -114,9 +121,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * captain bed
-                     */
                     time: 27,
                     verse: [
                         'You stowed away',
@@ -140,9 +144,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * white-throated sparrow
-                     */
                     time: 34,
                     verse: {
                         emphasis: {
@@ -154,9 +155,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * bullying
-                     */
                     time: 38,
                     verse: 'Oh brother, when all you know is bleat,'
                 },
@@ -188,9 +186,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * bullying
-                     */
                     time: 46,
                     verse: [
                         {
@@ -201,9 +196,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * back of comic book
-                     */
                     time: 48,
                     verse: 'these words in a comic to me speaking:'
                 },
@@ -224,14 +216,11 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Started getting a lot of junk mail.
-                     */
                     time: 54,
                     verse: [
                         'Soon',
                         {
-                            anchor: 'send away offers',
+                            anchor: 'send-away offers',
                             annotationKey: 'send_away_offers'
                         },
                         'were piling up high,'
@@ -246,7 +235,13 @@ module.exports = {
                      * Chinese red pouches
                      */
                     time: 61,
-                    verse: 'Red pouches unspent for years, at once counted and sent,'
+                    verse: [
+                        {
+                            anchor: 'Red pouches unspent',
+                            annotationKey: 'red_pouches_unspent'
+                        },
+                        'for years, at once counted and sent,'
+                    ]
                 },
                 {
                     time: 64,
@@ -259,7 +254,13 @@ module.exports = {
                      * Special Human Being research lab
                      */
                     time: 68,
-                    verse: '"Are you a Beyonder sent down to be Earth-fostered;'
+                    verse: [
+                        {
+                            anchor: '"Are you a Beyonder',
+                            annotationKey: 'are_you_a_beyonder'
+                        },
+                        'sent down to be Earth-fostered;'
+                    ]
                 },
                 {
                     time: 71,
