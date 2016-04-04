@@ -42,13 +42,13 @@ module.exports = {
             description: 'As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press too deeply on it.'
         },
         tired_of_being_the_weakling: {
-            description: 'In a well-known advertisement found in comic books at the time, a skinny guy builds up his muscles by sending away for Charles Atlas\'s free bodybuilding guide, which then allows him to take revenge on a bully.'
+            description: 'In a well-known advertisement seen in comic books at the time, a skinny guy builds up his muscles by sending away for Charles Atlas\'s free bodybuilding guide, which then allows him to take revenge on a bully.'
         },
         send_away_offers: {
             description: 'Since I had few friends, I took pleasure in sending away for free samples and making small purchases through mail order. As a result, I got flooded with junk mail advertising even more such offers.'
         },
         red_pouches_unspent: {
-            description: 'In East Asian cultures, elders give monetary gifts to children sealed in red envelopes. It is usually implied that the money is to be saved, not spent.',
+            description: 'In East Asian cultures, elders give monetary gifts to children sealed in red envelopes. It is often implied that the money is to be saved, not spent.',
             reference: 'https://en.wikipedia.org/wiki/Red_envelope'
         },
         are_you_a_beyonder: {
