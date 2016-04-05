@@ -4,7 +4,7 @@
 module.exports = {
     title: 'Pchelka\'s Starry Journey',
     speechBubbles: {
-        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to an ancient race of extraterrestrials, with a mission to shut myself from the world. I did so by adopting my brother\'s composure, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail order cult. It took me a long while to recover.',
+        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to an ancient race of extraterrestrials, with a mission to shut myself from the world. I did so by adopting my brother\'s composure, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail-order cult. It took me a long while to recover.',
         backstory: 'Pchelka and Mushka were dogs sent into orbit under the Soviet space program. They were killed upon reentry. In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother is singing along with me in spirit.'
     },
     annotations: {
@@ -33,10 +33,10 @@ module.exports = {
             description: 'When my family visited Canada one late summer, the white-throated sparrow was in breeding season, and we heard its song everywhere. I found the sound so haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.'
         },
         your_cape: {
-            description: 'I was well-liked in elementary school for being physically small and eager to make drawings for anyone who asked. But these traits that had once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.'
+            description: 'I was well-liked in elementary school for being physically small and ever eager to draw cartoon figures for anyone who asked. But these very traits that had once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.'
         },
         learn_to_kick_it_back: {
-            description: 'In middle school, the most well-liked kids were the ones who were least concerned about being liked. This ran counter to my instinct for throwing myself whole-heartedly into the things I wished to attain.'
+            description: 'In middle school, the most well-liked kids were the ones who were least concerned about being liked. This ran counter to my instinct for throwing myself whole-heartedly into anything worth having.'
         },
         feigning_sick: {
             description: 'As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press too deeply on it.'
@@ -45,14 +45,48 @@ module.exports = {
             description: 'In a well-known advertisement seen in comic books at the time, a skinny guy builds up his muscles by sending away for Charles Atlas\'s free bodybuilding guide, which then allows him to take revenge on a bully.'
         },
         send_away_offers: {
-            description: 'Since I had few friends, I took pleasure in sending away for free samples and making small purchases through mail order. As a result, I got flooded with junk mail advertising even more such offers.'
+            description: 'Since I had few friends, I would amuse myself by sending away for free samples and making small purchases through mail order. As a result, I got flooded with junk mail advertising even more such offers. It was during this time that I received the letter from RI Research, Special Human Being Laboratory.'
         },
         red_pouches_unspent: {
-            description: 'In East Asian cultures, elders give monetary gifts to children sealed in red envelopes. It is often implied that the money is to be saved, not spent.',
+            description: 'In East Asian cultures, adult relatives give monetary gifts to children sealed in red envelopes. My parents insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.',
             reference: 'https://en.wikipedia.org/wiki/Red_envelope'
         },
         are_you_a_beyonder: {
+            // TODO
             description: ''
+        },
+        waiting_for_goddard: {
+            description: [
+                'Robert Goddard ushered in the Space Age by inventing the liquid-fueled rocket. Also, a reference to the play',
+                {
+                    italic: 'Waiting for Godot'
+                },
+                'by Samuel Beckett, which explores existential themes. Despite the urge, I could never berate myself afterwards for being so gullible. Middle school was unbearable and felt endless, and I needed answers right then. I couldn\'t wait for a more promising age to arrive on its own.'
+            ]
+        },
+        gogo_and_his_didi: {
+            description: [
+                'In Mandarin Chinese,',
+                {
+                    italic: 'Gogo'
+                },
+                'means "big brother," and',
+                {
+                    italic: 'Didi'
+                },
+                'of course means "little brother." Didi and Gogo are also the respective pet names of Vladimir and Estragon, the two characters who are still waiting for Godot by the end of Beckett\'s play.',
+            ]
+        },
+        in_hunger_they_were_led: {
+            // TODO
+            description: 'Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes Laika, the first dog in orbit, whose death was intentional as her spacecraft was not designed to return.'
+        },
+        huntsville: {
+            // TODO
+            description: ''
+        },
+        hunters_belt: {
+            description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified in the night sky by three stars representing his belt.'
         }
     },
     lyrics: {
@@ -271,28 +305,60 @@ module.exports = {
                      * Waiting for Godot, Goddard rocket
                      */
                     time: 76,
-                    verse: 'But waiting for Goddard, our two impatient paupers,'
+                    verse: [
+                        'But',
+                        {
+                            anchor: 'waiting for Goddard,',
+                            annotationKey: 'waiting_for_goddard'
+                        },
+                        'our two impatient paupers,'
+                    ]
                 },
                 {
                     /**
                      * Gogo and Didi characters, also older brother and younger brother
                      */
                     time: 79,
-                    verse: 'Gogo and his Didi, sauntered off…'
+                    verse: [
+                        {
+                            anchor: 'Gogo and his Didi,',
+                            annotationKey: 'gogo_and_his_didi'
+                        },
+                        'sauntered off…'
+                    ]
                 },
                 {
                     /**
                      * space camp
                      */
                     time: 83,
-                    verse: 'Till in hunger they were led into Huntsville and fed,'
+                    verse: [
+                        'Till',
+                        {
+                            anchor: 'in hunger they were led',
+                            annotationKey: 'in_hunger_they_were_led'
+                        },
+                        'into',
+                        {
+                            anchor: 'Huntsville',
+                            annotationKey: 'huntsville'
+                        },
+                        'and fed,'
+                    ]
                 },
                 {
                     /**
                      * Orion's belt,
                      */
                     time: 86,
-                    verse: 'dragged to sled by hunter\'s belt and launched!'
+                    verse: [
+                        'dragged to sled by',
+                        {
+                            anchor: 'hunter\'s belt',
+                            annotationKey: 'hunters_belt'
+                        },
+                        'and launched!'
+                    ]
                 }
             ],
             [

@@ -28,11 +28,10 @@ module.exports = {
         },
         zeizei: {
             description: [
-                'In Mandarin Chinese,',
                 {
-                    italic: 'zeizei'
+                    italic: 'Zeizei'
                 },
-                'means "big sister."'
+                'means "big sister" in Mandarin Chinese.'
             ]
         },
         safeway_paper_bag: {
