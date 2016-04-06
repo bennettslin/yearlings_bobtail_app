@@ -53,15 +53,20 @@ module.exports = {
         },
         are_you_a_beyonder: {
             // TODO
-            description: ''
+
+            /**
+             * feeling different
+             */
+
+            description: 'The letter touched all the right nerves. '
         },
         waiting_for_goddard: {
             description: [
-                'Robert Goddard ushered in the Space Age by inventing the liquid-fueled rocket. Also, a reference to the play',
+                'Robert Goddard ushered in the Space Age by inventing the liquid-fueled rocket. Unfortunately in my case, I couldn\'t wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then. Also,',
                 {
                     italic: 'Waiting for Godot'
                 },
-                'by Samuel Beckett, which explores existential themes. Despite the urge, I could never berate myself afterwards for being so gullible. Middle school was unbearable and felt endless, and I needed answers right then. I couldn\'t wait for a more promising age to arrive on its own.'
+                'is a play by Samuel Beckett that explores existential themes.'
             ]
         },
         gogo_and_his_didi: {
@@ -70,23 +75,47 @@ module.exports = {
                 {
                     italic: 'Gogo'
                 },
-                'means "big brother," and',
+                'means "big brother." And, of course,',
                 {
                     italic: 'Didi'
                 },
-                'of course means "little brother." Didi and Gogo are also the respective pet names of Vladimir and Estragon, the two characters who are still waiting for Godot by the end of Beckett\'s play.',
+                'means "little brother." Didi and Gogo are also the respective pet names of Vladimir and Estragon, the two characters who are still waiting for Godot by the end of Beckett\'s play.',
             ]
         },
         in_hunger_they_were_led: {
-            // TODO
-            description: 'Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes Laika, the first dog in orbit, whose death was intentional as her spacecraft was not designed to return.'
+            description: 'Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes Laika, the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I liked the analogy of helplessly being thrust from one desperate circumstance to another.'
         },
         huntsville: {
-            // TODO
-            description: ''
+            description: 'Huntsville, Alabama is where the largest NASA center is located.'
         },
         hunters_belt: {
             description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified in the night sky by three stars representing his belt.'
+        },
+        act_the_dunce: {
+            description: 'By refusing to acknowledge or respond to other students, I was effectively behaving as if I were autistic like my brother.'
+        },
+        cast_here_in_pollens: {
+            description: 'In Greek mythology, Castor and Pollux were twin brothers fathered by Zeus. Castor was mortal, however, so Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with all its spiritual answers.'
+        },
+        murdered_for_their_virtue: {
+            description: 'Like all ordeals, mine became more bearable once I could tie it to a greater purpose.'
+        },
+        omerta: {
+            description: 'Omerta is the Mafia\'s code of honour that praises silence and refusal to cooperate with authorities. Of course, I wasn\'t the first kid ever to observe similarities between school life and prison culture.'
+        },
+        muted_youths_lapsed: {
+            description: 'While I only spent a year actively feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It\'s not that I lacked the will to correct their perceptions. I was as baffled as anyone about what had just happened, and there were no guide books for how to proceed from there.'
+        },
+        shortest_cyphers: {
+            description: 'The more lengthy a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer entry points others were presented with to get under my skin.'
+        },
+        every_hero_has_a_heel: {
+            // TODO
+            description: 'The Greek hero Achilles was invulnerable everywhere on his body except for his heel. '
+        },
+        unearth_their_own_plots: {
+            // TODO
+            description: 'This can mean in the figurative sense of revealing one\'s secret plans, but also in the literal sense of digging one\'s own grave, presumably before being executed by firing squad.'
         }
     },
     lyrics: {
@@ -265,9 +294,6 @@ module.exports = {
                     verse: 'and then one day one came and made me cry and cry.'
                 },
                 {
-                    /**
-                     * Chinese red pouches
-                     */
                     time: 61,
                     verse: [
                         {
@@ -301,9 +327,6 @@ module.exports = {
                     verse: 'do you often feel like a wanderer lost?"'
                 },
                 {
-                    /**
-                     * Waiting for Godot, Goddard rocket
-                     */
                     time: 76,
                     verse: [
                         'But',
@@ -315,9 +338,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Gogo and Didi characters, also older brother and younger brother
-                     */
                     time: 79,
                     verse: [
                         {
@@ -328,9 +348,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * space camp
-                     */
                     time: 83,
                     verse: [
                         'Till',
@@ -347,9 +364,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Orion's belt,
-                     */
                     time: 86,
                     verse: [
                         'dragged to sled by',
@@ -407,7 +421,13 @@ module.exports = {
             [
                 {
                     time: 134,
-                    verse: 'So thus we learned to act the dunce'
+                    verse: [
+                        'So thus we learned to',
+                        {
+                            anchor: 'act the dunce',
+                            annotationKey: 'act_the_dunce'
+                        }
+                    ]
                 },
                 {
                     time: 136,
@@ -418,7 +438,13 @@ module.exports = {
                      * Castor and Pollux
                      */
                     time: 138,
-                    verse: 'twin friars cast here in pollens'
+                    verse: [
+                        'twin friars',
+                        {
+                            anchor: 'cast here in pollens',
+                            annotationKey: 'cast_here_in_pollens'
+                        }
+                    ]
                 },
                 {
                     time: 140,
@@ -432,7 +458,13 @@ module.exports = {
                 },
                 {
                     time: 143,
-                    verse: 'twits daily murdered for their virtue.'
+                    verse: [
+                        'twits daily',
+                        {
+                            anchor: 'murdered for their virtue.',
+                            annotationKey: 'murdered_for_their_virtue'
+                        }
+                    ]
                 },
                 {
                     time: 145,
@@ -443,7 +475,14 @@ module.exports = {
                      * mob
                      */
                     time: 147,
-                    verse: 'as omerta turned their backs.'
+                    verse: [
+                        'as',
+                        {
+                            anchor: 'omerta',
+                            annotationKey: 'omerta'
+                        },
+                        'turned their backs.'
+                    ]
                 }
             ],
             [
@@ -452,28 +491,53 @@ module.exports = {
                      * Prepared to live life like this.
                      */
                     time: 149,
-                    verse: 'Stung by venomous vipers, our muted youths lapsed;'
+                    verse: [
+                        'Stung by venomous vipers, our',
+                        {
+                            anchor: 'muted youths lapsed;',
+                            annotationKey: 'muted_youths_lapsed'
+                        }
+                    ]
                 },
                 {
                     /**
                      * The less I said, the more I could withstand.
                      */
                     time: 153,
-                    verse: 'we knew the shortest cyphers are the toughest ones to crack.'
+                    verse: [
+                        'we knew the',
+                        {
+                            anchor: 'shortest cyphers',
+                            annotationKey: 'shortest_cyphers'
+                        },
+                        'are the toughest ones to crack.'
+                    ]
                 },
                 {
                     /**
                      * Achilles hell
                      */
                     time: 156,
-                    verse: 'But every hero has a heel, we\'d realise, blind before the squad.'
+                    verse: [
+                        'But',
+                        {
+                            anchor: 'every hero has a heel,',
+                            annotationKey: 'every_hero_has_a_heel'
+                        },
+                        'we\'d realise, blind before the squad.'
+                    ]
                 },
                 {
                     /**
-                     * Sabotage
+                     * Sabotage firing squad
                      */
                     time: 160,
-                    verse: 'The only spies who get to feel love first unearth their own plots!'
+                    verse: [
+                        'The only spies who get to feel love first',
+                        {
+                            anchor: 'unearth their own plots!',
+                            annotationKey: 'unearth_their_own_plots'}
+                    ]
                 }
             ],
             [
