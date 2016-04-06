@@ -92,7 +92,7 @@ module.exports = {
             description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified in the night sky by three stars representing his belt.'
         },
         act_the_dunce: {
-            description: 'By refusing to acknowledge or respond to other students, I was effectively behaving as if I were autistic like my brother.'
+            description: 'By refusing to acknowledge or respond to other students, I was essentially behaving as if I were autistic like my brother.'
         },
         cast_here_in_pollens: {
             description: 'In Greek mythology, Castor and Pollux were twin brothers fathered by Zeus. Castor was mortal, however, so Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with all its spiritual answers.'
@@ -107,14 +107,13 @@ module.exports = {
             description: 'While I only spent a year actively feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It\'s not that I lacked the will to correct their perceptions. I was as baffled as anyone about what had just happened, and there were no guide books for how to proceed from there.'
         },
         shortest_cyphers: {
-            description: 'The more lengthy a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer entry points others were presented with to get under my skin.'
+            description: 'The more lengthy a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer entry points others were given to get under my skin.'
         },
         every_hero_has_a_heel: {
             description: 'The Greek hero Achilles was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved the friendship and approval of others.'
         },
         unearth_their_own_plots: {
-            // TODO
-            description: 'This can mean in the figurative sense of revealing one\'s secret plans, but also in the literal sense of digging one\'s own grave, presumably before being executed by firing squad.'
+            description: 'Figuratively, to reveal one\'s secret plans, but also literally, to dig one\'s own grave. A spy succeeds by staying hidden; recognition and appreciation can only come after facing the firing squad. Similarly, at some point I tried to open up, thus sabotaging my past efforts to be unresponsive, but this only exposed me to greater scrutiny, as I was now forced to explain myself.'
         }
     },
     lyrics: {
@@ -318,12 +317,12 @@ module.exports = {
                             anchor: '"Are you a Beyonder',
                             annotationKey: 'are_you_a_beyonder'
                         },
-                        'sent down to be Earth-fostered;'
+                        'sent down to be Earth-fostered?'
                     ]
                 },
                 {
                     time: 71,
-                    verse: 'do you often feel like a wanderer lost?"'
+                    verse: 'Do you often feel like a wanderer lost?"'
                 },
                 {
                     time: 76,
@@ -493,7 +492,7 @@ module.exports = {
                     verse: [
                         'Stung by venomous vipers, our',
                         {
-                            anchor: 'muted youths lapsed;',
+                            anchor: 'muted youths lapsed.',
                             annotationKey: 'muted_youths_lapsed'
                         }
                     ]
@@ -504,7 +503,7 @@ module.exports = {
                      */
                     time: 153,
                     verse: [
-                        'we knew the',
+                        'We knew the',
                         {
                             anchor: 'shortest cyphers',
                             annotationKey: 'shortest_cyphers'
@@ -553,7 +552,7 @@ module.exports = {
                 },
                 {
                     time: 171,
-                    verse: 'Choked, he\'s soon a goner, no one heard his hollers;'
+                    verse: 'Choked, he\'s soon a goner, no one heard his hollers,'
                 },
                 {
                     /**
