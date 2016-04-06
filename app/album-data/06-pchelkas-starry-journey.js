@@ -110,8 +110,7 @@ module.exports = {
             description: 'The more lengthy a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer entry points others were presented with to get under my skin.'
         },
         every_hero_has_a_heel: {
-            // TODO
-            description: 'The Greek hero Achilles was invulnerable everywhere on his body except for his heel. '
+            description: 'The Greek hero Achilles was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved the friendship and approval of others.'
         },
         unearth_their_own_plots: {
             // TODO
