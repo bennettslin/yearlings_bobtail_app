@@ -89,6 +89,7 @@ module.exports = {
             description: 'Huntsville, Alabama is where the largest NASA center is located.'
         },
         hunters_belt: {
+            // TODO Note that belt is also a whip
             description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified in the night sky by three stars representing his belt.'
         },
         act_the_dunce: {
@@ -114,6 +115,35 @@ module.exports = {
         },
         unearth_their_own_plots: {
             description: 'Figuratively, to reveal one\'s secret plans, but also literally, to dig one\'s own grave. A spy succeeds by staying hidden; recognition and appreciation can only come after facing the firing squad. Similarly, at some point I tried to open up, thus sabotaging my past efforts to be unresponsive, but this only exposed me to greater scrutiny, as I was now forced to explain myself.'
+        },
+        mushing_onward: {
+            description: [
+                'Upon their arrival in the New World, the French learned the practise of dog sledding from the natives. They commanded their dog teams to move by shouting',
+                {
+                    italic: '"marche,"'
+                },
+                'meaning "go." After the territory was ceded to the British, this term continued in English as "mush."'
+                ],
+            reference: 'https://en.wikipedia.org/wiki/Mushing'
+        },
+        mushkas: {
+            description: 'Pchelka and Mushka were a pair of dogs who spent a day in orbit aboard Sputnik 6. There was an error upon reentry, however, so to prevent the spacecraft from landing in hostile territory, the Soviets caused it to self-destruct, killing all aboard. In this analogy, my brother is Mushka, which of course makes me Pchelka.'
+        },
+        his_slaughter: {
+            description: 'I wrote this song during the peak of my activism within the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.'
+        },
+        undying_dawn: {
+            description: 'During summer in the Arctic, the sun remains visible for the full 24 hours of each day.'
+        },
+        no_one_heard_his_hollers: {
+            // TODO
+            description: ''
+        },
+        idiots_rod: {
+            description: 'The Iditarod is an annual sled dog race held in Alaska. The rod, of course, is the whip used for obedience by some mushers.'
+        },
+        pentobarbitone_syringe: {
+            description: 'A pentobarbitone injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected in advance.'
         }
     },
     lyrics: {
@@ -387,9 +417,6 @@ module.exports = {
                     verse: 'We\'ve received your fee, and per the tests,'
                 },
                 {
-                    /**
-                     * Being special
-                     */
                     time: 101,
                     verse: 'you are indeed a seed from that nebular nest.'
                 },
@@ -432,9 +459,6 @@ module.exports = {
                     verse: 'as spies among the carnal fallen,'
                 },
                 {
-                    /**
-                     * Castor and Pollux
-                     */
                     time: 138,
                     verse: [
                         'twin friars',
@@ -469,9 +493,6 @@ module.exports = {
                     verse: 'Mirthful, the merciless would hurt you,'
                 },
                 {
-                    /**
-                     * mob
-                     */
                     time: 147,
                     verse: [
                         'as',
@@ -485,9 +506,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Prepared to live life like this.
-                     */
                     time: 149,
                     verse: [
                         'Stung by venomous vipers, our',
@@ -498,9 +516,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * The less I said, the more I could withstand.
-                     */
                     time: 153,
                     verse: [
                         'We knew the',
@@ -512,9 +527,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Achilles hell
-                     */
                     time: 156,
                     verse: [
                         'But',
@@ -526,15 +538,13 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Sabotage firing squad
-                     */
                     time: 160,
                     verse: [
                         'The only spies who get to feel love first',
                         {
                             anchor: 'unearth their own plots!',
-                            annotationKey: 'unearth_their_own_plots'}
+                            annotationKey: 'unearth_their_own_plots'
+                        }
                     ]
                 }
             ],
@@ -544,26 +554,65 @@ module.exports = {
                      * Betrayed my brother
                      */
                     time: 164,
-                    verse: 'Mushing onward, Mushka\'s dragged by collar'
+                    verse: [
+                        {
+                            anchor: 'Mushing onward,',
+                            annotationKey: 'mushing_onward'
+                        },
+                        {
+                            anchor: 'Mushka\'s',
+                            annotationKey: 'mushkas'
+                        },
+                        'dragged by collar'
+                    ]
                 },
                 {
                     time: 167,
-                    verse: 'to his slaughter under undying dawn.'
+                    verse: [
+                        'to',
+                        {
+                            anchor: 'his slaughter',
+                            annotationKey: 'his_slaughter'
+                        },
+                        'under',
+                        {
+                            anchor: 'undying dawn.',
+                            annotationKey: 'undying_dawn'
+                        }
+                    ]
                 },
                 {
                     time: 171,
-                    verse: 'Choked, he\'s soon a goner, no one heard his hollers,'
+                    verse: [
+                        'Choked, he\'s soon a goner,',
+                        {
+                            anchor: 'no one heard his hollers,',
+                            annotationKey: 'no_one_heard_his_hollers'
+                        }
+                    ]
                 },
                 {
                     /**
                      * Iditerod, animal rights
                      */
                     time: 175,
-                    verse: 'this pack honours only the idiot\'s rod.'
+                    verse: [
+                        'this pack honours only the',
+                        {
+                            anchor: 'idiot\'s rod.',
+                            annotationKey: 'idiots_rod'
+                        }
+                    ]
                 },
                 {
                     time: 178,
-                    verse: 'Next cabins come equipped with pentobarbitone syringe,'
+                    verse: [
+                        'Next cabins come equipped with',
+                        {
+                            anchor: 'pentobarbitone syringe,',
+                            annotationKey: 'pentobarbitone_syringe'
+                        }
+                    ]
                 },
                 {
                     time: 182,
@@ -580,7 +629,7 @@ module.exports = {
                 },
                 {
                     /**
-                     * Whale pod
+                     * Whale pod, escape pod
                      */
                     time: 189,
                     verse: 'I couldn\'t ditch my wails, I needed the pod.'

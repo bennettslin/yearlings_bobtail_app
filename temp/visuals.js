@@ -100,15 +100,7 @@ var visuals = [
         foregroundVisuals: [
             {
                 time: 0,
-                description: ''
-            },
-            {
-                time: 0,
-                description: ''
-            },
-            {
-                time: 0,
-                description: ''
+                description: 'One image of a dog team pulling a rocket.'
             }
         ]
     },
