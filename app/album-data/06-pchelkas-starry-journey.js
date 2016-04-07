@@ -83,14 +83,13 @@ module.exports = {
             ]
         },
         in_hunger_they_were_led: {
-            description: 'Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes Laika, the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I liked the analogy of helplessly being thrust from one desperate circumstance to another.'
+            description: 'Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes Laika, the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I liked the analogy of being thrust helplessly from one desperate circumstance to another.'
         },
         huntsville: {
             description: 'Huntsville, Alabama is where the largest NASA center is located.'
         },
         hunters_belt: {
-            // TODO Note that belt is also a whip
-            description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified in the night sky by three stars representing his belt.'
+            description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward dogs.'
         },
         act_the_dunce: {
             description: 'By refusing to acknowledge or respond to other students, I was essentially behaving as if I were autistic like my brother.'
@@ -111,7 +110,7 @@ module.exports = {
             description: 'The more lengthy a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer entry points others were given to get under my skin.'
         },
         every_hero_has_a_heel: {
-            description: 'The Greek hero Achilles was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved the friendship and approval of others.'
+            description: 'The Greek hero Achilles was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved acceptance from others.'
         },
         unearth_their_own_plots: {
             description: 'Figuratively, to reveal one\'s secret plans, but also literally, to dig one\'s own grave. A spy succeeds by staying hidden; recognition and appreciation can only come after facing the firing squad. Similarly, at some point I tried to open up, thus sabotaging my past efforts to be unresponsive, but this only exposed me to greater scrutiny, as I was now forced to explain myself.'
@@ -136,11 +135,10 @@ module.exports = {
             description: 'During summer in the Arctic, the sun remains visible for the full 24 hours of each day.'
         },
         no_one_heard_his_hollers: {
-            // TODO
-            description: ''
+            description: 'I often wondered whether my brother was screaming on the inside, as I was during this time. If so, then he certainly wasn\'t being heard.'
         },
         idiots_rod: {
-            description: 'The Iditarod is an annual sled dog race held in Alaska. The rod, of course, is the whip used for obedience by some mushers.'
+            description: 'The Iditarod is an annual sled dog race held in Alaska. The rod refers to the whip used by some mushers to keep the pack disciplined.'
         },
         pentobarbitone_syringe: {
             description: 'A pentobarbitone injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected in advance.'
