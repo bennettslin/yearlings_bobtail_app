@@ -89,7 +89,13 @@ class App extends React.Component {
                 this.props.songs[playedSongIndex].tasks : null,
             playedSongLyrics = playedSongIndex >= 0 ?
                 this.props.songs[playedSongIndex].lyrics : null,
-            annotationIsShown = !!this.state.annotationObject;
+            annotationIsShown = !!this.state.annotationObject,
+
+            // The transition group is wrapped in a span element.
+            transitionGroupStyle = {
+                position: 'fixed',
+                zIndex: 1
+            };
 
         return (
             <div className="app">
@@ -103,17 +109,18 @@ class App extends React.Component {
                 </div>
                 <div className="app-column notes-column">
                     <CSSTransitionGroup
+                        style={transitionGroupStyle}
                         transitionName="annotation-animation"
                         transitionEnterTimeout={100}
                         transitionLeaveTimeout={100}
                     >
-                        {annotationIsShown ?
-                            <div key="annotation" id="annotation" className="notes-row annotation-row">
-                                <FormattedAnnotationField
-                                    annotationObject={this.state.annotationObject}
-                                />
-                            </div> : null
-                        }
+                    {annotationIsShown ?
+                        <div key="annotation" id="annotation" className="notes-row annotation-row">
+                            <FormattedAnnotationField
+                                annotationObject={this.state.annotationObject}
+                            />
+                        </div> : null
+                    }
                     </CSSTransitionGroup>
                     <div className="notes-row speech-bubbles-row">
                         <FormattedSpeechBubblesField
