@@ -89,7 +89,7 @@ module.exports = {
             description: 'Huntsville, Alabama is where the largest NASA center is located.'
         },
         hunters_belt: {
-            description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward dogs.'
+            description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward animals.'
         },
         act_the_dunce: {
             description: 'By refusing to acknowledge or respond to other students, I was essentially behaving as if I were autistic like my brother.'
@@ -107,7 +107,7 @@ module.exports = {
             description: 'While I only spent a year actively feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It\'s not that I lacked the will to correct their perceptions. I was as baffled as anyone about what had just happened, and there were no guide books for how to proceed from there.'
         },
         shortest_cyphers: {
-            description: 'The more lengthy a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer entry points others were given to get under my skin.'
+            description: 'The lengthier a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer entrances others were given to get under my skin.'
         },
         every_hero_has_a_heel: {
             description: 'The Greek hero Achilles was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved acceptance from others.'
@@ -142,6 +142,23 @@ module.exports = {
         },
         pentobarbitone_syringe: {
             description: 'A pentobarbitone injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected in advance.'
+        },
+        sorry_i_bailed: {
+            // TODO
+            description: ''
+        },
+        xiao_xiang: {
+            description: 'Mushka means "little fly" in Russian, and by a happy coincidence, my brother\'s Mandarin name, Xiao Xiang, literally means "little fly." (Though the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee."'
+        },
+        needed_the_pod: {
+            description: 'A group of whales is called a pod. Because I wanted to belong to a social group, I couldn\'t "ditch my whales," and thus I sought out a metaphorical escape pod.'
+        },
+        hopped_on_drugs: {
+            description: 'Eventually a classmate suspected me of being on drugs, and I was sent to the principal\'s office. When my mother came to pick me up, she proceeded to chew out the principal for even suspecting that I was capable of such a thing. Since I was generally more responsive around authority figures, he had to agree that the charge didn\'t make sense, and dropped it.'
+        },
+        cant_ever_return: {
+            // TODO
+            description: 'By this point, I had grown disillusioned with RI Research anyway, as their later letters inexplicably started to take on Christian overtones. It\'s not that I was opposed to Christian ideas. They just '
         }
     },
     lyrics: {
@@ -548,9 +565,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Betrayed my brother
-                     */
                     time: 164,
                     verse: [
                         {
@@ -590,9 +604,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Iditerod, animal rights
-                     */
                     time: 175,
                     verse: [
                         'this pack honours only the',
@@ -623,28 +634,58 @@ module.exports = {
                      * Little Fly, Mushka
                      */
                     time: 186,
-                    verse: 'I\'m sorry I bailed, Xiao Xiang, mush on…'
+                    verse: [
+                        'I\'m',
+                        {
+                            anchor: 'sorry I bailed,',
+                            annotationKey: 'sorry_i_bailed'
+                        },
+                        {
+                            anchor: 'Xiao Xiang,',
+                            annotationKey: 'xiao_xiang'
+                        },
+                        'mush on…'
+                    ]
                 },
                 {
                     /**
                      * Whale pod, escape pod
                      */
                     time: 189,
-                    verse: 'I couldn\'t ditch my wails, I needed the pod.'
+                    verse: [
+                        'I couldn\'t ditch my wails, I',
+                        {
+                            anchor: 'needed the pod.',
+                            annotationKey: 'needed_the_pod'
+                        }
+                    ]
                 },
                 {
                     /**
                      * Called into principal's office.
                      */
                     time: 193,
-                    verse: '"Kids say you\'re hopped on drugs, son, with Mum we\'ll need a word."'
+                    verse: [
+                        '"Kids say you\'re',
+                        {
+                            anchor: 'hopped on drugs,',
+                            annotationKey: 'hopped_on_drugs'
+                        },
+                        'son, with Mum we\'ll need a word."'
+                    ]
                 },
                 {
                     /**
-                     * Got out of it because the letters started to take on Christian undertones.
+                     * Got out of it because the letters started to take on Christian overtones.
                      */
                     time: 200,
-                    verse: 'Mushka, per their bargain, I can\'t ever return.'
+                    verse: [
+                        'Mushka, per their bargain, I',
+                        {
+                            anchor: 'can\'t ever return.',
+                            annotationKey: 'cant_ever_return'
+                        }
+                    ]
                 }
             ]
         ]
