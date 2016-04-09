@@ -52,13 +52,7 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Red_envelope'
         },
         are_you_a_beyonder: {
-            // TODO
-
-            /**
-             * feeling different
-             */
-
-            description: 'The letter touched all the right nerves. '
+            description: 'Touching all the right nerves, the letter addressed my yearning to belong, and spoke to my frustration that this desired end should so elude me. It then shared its hopeful news. RI Research had discovered a special class of human beings known as Beyonders, and was searching far and wide. They believed I might be one of them, and after searching far and wide, they had found me.'
         },
         waiting_for_goddard: {
             description: [
@@ -144,8 +138,7 @@ module.exports = {
             description: 'A pentobarbitone injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected in advance.'
         },
         sorry_i_bailed: {
-            // TODO
-            description: ''
+            description: 'By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn\'t a tourist in the land of autism. He couldn\'t choose to come and go as he pleased.'
         },
         xiao_xiang: {
             description: 'Mushka means "little fly" in Russian, and by a happy coincidence, my brother\'s Mandarin name, Xiao Xiang, literally means "little fly." (Though the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee."'
@@ -630,9 +623,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Little Fly, Mushka
-                     */
                     time: 186,
                     verse: [
                         'I\'m',
@@ -648,9 +638,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Whale pod, escape pod
-                     */
                     time: 189,
                     verse: [
                         'I couldn\'t ditch my wails, I',
@@ -661,9 +648,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Called into principal's office.
-                     */
                     time: 193,
                     verse: [
                         '"Kids say you\'re',
@@ -675,9 +659,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Got out of it because the letters started to take on Christian overtones.
-                     */
                     time: 200,
                     verse: [
                         'Mushka, per their bargain, I',
