@@ -4,7 +4,7 @@
 module.exports = {
     title: 'Pchelka\'s Starry Journey',
     speechBubbles: {
-        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to an ancient race of extraterrestrials, with a mission to shut myself from the world. I did so by adopting my brother\'s composure, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail-order cult. It took me a long while to recover.',
+        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to a race of interstellar beings, with a mission to shut myself from the world. I did so by adopting my brother\'s composure, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail-order cult. It took me a long while to recover.',
         backstory: 'Pchelka and Mushka were dogs sent into orbit under the Soviet space program. They were killed upon reentry. In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother is singing along with me in spirit.'
     },
     annotations: {
@@ -52,7 +52,12 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Red_envelope'
         },
         are_you_a_beyonder: {
-            description: 'Touching all the right nerves, the letter addressed my yearning to belong, and spoke to my frustration that this desired end should so elude me. It then shared its hopeful news. RI Research had discovered a special class of human beings known as Beyonders, and was searching far and wide. They believed I might be one of them, and after searching far and wide, they had found me.'
+            // TODO rephrase and redo?
+            description: 'Hitting all the right nerves, the letter addressed my yearning to belong, and spoke to my frustration that what I desired should so elude me. It then shared its hopeful news: RI Research believed that I might belong to a special class of human beings known as Beyonders. After searching for so long, they had found me.'
+        },
+        earth_fostered: {
+            // TODO: origins of Beyonders
+            description: ''
         },
         waiting_for_goddard: {
             description: [
@@ -85,7 +90,20 @@ module.exports = {
         hunters_belt: {
             description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward animals.'
         },
+        roots_unknown_to_them: {
+            // TODO Star people.
+            description: ''
+        },
+        indeed_a_seed: {
+            // TODO: I cried. I didn't want to be a Beyonder.
+            description: ''
+        },
+        how_youre_to_live: {
+            // TODO: Behave autistic
+            description: ''
+        },
         act_the_dunce: {
+            // TODO: Unintelligent
             description: 'By refusing to acknowledge or respond to other students, I was essentially behaving as if I were autistic like my brother.'
         },
         cast_here_in_pollens: {
@@ -345,16 +363,17 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Special Human Being research lab
-                     */
                     time: 68,
                     verse: [
                         {
                             anchor: '"Are you a Beyonder',
                             annotationKey: 'are_you_a_beyonder'
                         },
-                        'sent down to be Earth-fostered?'
+                        'sent down to be',
+                        {
+                            anchor: 'Earth-fostered?',
+                            annotationKey: 'earth_fostered'
+                        }
                     ]
                 },
                 {
@@ -417,7 +436,13 @@ module.exports = {
                 },
                 {
                     time: 93,
-                    verse: 'Beyonders bleed the most, their roots unknown to them.'
+                    verse: [
+                        'Beyonders bleed the most, their',
+                        {
+                            anchor: 'roots unknown to them.',
+                            annotationKey: 'roots_unknown_to_them'
+                        }
+                    ]
                 },
                 {
                     time: 98,
@@ -425,7 +450,14 @@ module.exports = {
                 },
                 {
                     time: 101,
-                    verse: 'you are indeed a seed from that nebular nest.'
+                    verse: [
+                        'you are',
+                        {
+                            anchor: 'indeed a seed',
+                            annotationKey: 'indeed_a_seed'
+                        },
+                        'from that nebular nest.'
+                    ]
                 },
                 {
                     time: 105,
@@ -447,7 +479,13 @@ module.exports = {
                 },
                 {
                     time: 123,
-                    verse: 'But till then, here\'s how you\'re to live…"'
+                    verse: [
+                        'But till then, here\'s',
+                        {
+                            anchor: 'how you\'re to live…"',
+                            annotationKey: 'how_youre_to_live'
+                        }
+                    ]
                 }
             ],
             [
