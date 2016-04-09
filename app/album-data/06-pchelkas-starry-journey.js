@@ -148,7 +148,7 @@ module.exports = {
             description: ''
         },
         xiao_xiang: {
-            description: 'Mushka means "little fly" in Russian, and by a happy coincidence, my brother\'s Mandarin name, Xiao Xiang, literally means "little fly." (Though the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee."'
+            description: 'Mushka means "little fly" in Russian, and by coincidence, my brother\'s Mandarin name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee."'
         },
         needed_the_pod: {
             description: 'A group of whales is called a pod. Because I wanted to belong to a social group, I couldn\'t "ditch my whales," and thus I sought out a metaphorical escape pod.'
@@ -157,8 +157,7 @@ module.exports = {
             description: 'Eventually a classmate suspected me of being on drugs, and I was sent to the principal\'s office. When my mother came to pick me up, she proceeded to chew out the principal for even suspecting that I was capable of such a thing. Since I was generally more responsive around authority figures, he had to agree that the charge didn\'t make sense, and dropped it.'
         },
         cant_ever_return: {
-            // TODO
-            description: 'By this point, I had grown disillusioned with RI Research anyway, as their later letters inexplicably started to take on Christian overtones. It\'s not that I was opposed to Christian ideas. They just '
+            description: 'By this point, I was already disillusioned with RI Research anyway, as their letters inexplicably began to take on Christian overtones. It\'s not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins and interplanetary realms.'
         }
     },
     lyrics: {
