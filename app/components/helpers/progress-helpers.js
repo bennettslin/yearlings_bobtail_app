@@ -69,18 +69,37 @@ module.exports = {
         }
     },
 
-    getRemainingTimeFromHours: function(hours) {
+    _getRemainingTimeFromHours: function(hours) {
         /**
          * Assume 3 hours per weekday, and 15 hours per weekend.
          * So each week is 30 hours, so on average each day is
-         * 4.2 hours.
+         * 4.3 hours.
          */
-        var weeks = Math.floor(hours / 30),
-            days = Math.ceil((hours % 30) / (30 / 7));
+        var HOURS_IN_DAY = 30 / 7,
+            DAYS_IN_WEEK = 7,
+            DAYS_IN_MONTH = 365 / 12,
+            totalDays = hours / HOURS_IN_DAY,
+            totalMonths = Math.floor(totalDays / DAYS_IN_MONTH),
+            remainingWeeks = Math.floor((totalDays - (totalMonths * DAYS_IN_MONTH)) / DAYS_IN_WEEK),
+            remainingDays = Math.ceil(totalDays - (totalMonths * DAYS_IN_MONTH) - (remainingWeeks * DAYS_IN_WEEK));
 
         return {
-            weeks: weeks,
-            days: days
+            months: totalMonths,
+            weeks: remainingWeeks,
+            days: remainingDays
         };
+    },
+
+    getRemainingTimeStringFromHours: function(hours) {
+        var remainingTimeObject = this._getRemainingTimeFromHours(hours),
+            months = remainingTimeObject.months,
+            weeks = remainingTimeObject.weeks,
+            days = remainingTimeObject.days;
+
+        return (months ? months + 'm' : '') +
+               (months && weeks ? ', ' : '') +
+               (weeks ? weeks + 'w' : '') +
+               ((months || weeks) && days ? ', ' : '') +
+               (days ? days + 'd' : '');
     }
 }

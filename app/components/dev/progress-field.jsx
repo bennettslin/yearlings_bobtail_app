@@ -93,7 +93,7 @@ class ProgressField extends React.Component {
             workedHours = sumTask.workedHours,
             neededHours = sumTask.neededHours,
             remainingHours = neededHours - workedHours,
-            remainingTime = ProgressHelpers.getRemainingTimeFromHours(remainingHours),
+            remainingTimeString = ProgressHelpers.getRemainingTimeStringFromHours(remainingHours),
             taskFooter;
 
         taskFooter = (
@@ -103,7 +103,7 @@ class ProgressField extends React.Component {
                         {sumTask.neededHours ?
                             <h3 className="text-cell progress">
                                 <div>{neededHours} - {workedHours} = {remainingHours}h</div>
-                                <div>{remainingTime.weeks}w, {remainingTime.days}d</div>
+                                <div>{remainingTimeString}</div>
                             </h3> : null
                         }
                     </div>
