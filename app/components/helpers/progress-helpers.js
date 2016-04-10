@@ -67,5 +67,20 @@ module.exports = {
                 neededHours: task1.neededHours + task2.neededHours
             };
         }
+    },
+
+    getRemainingTimeFromHours: function(hours) {
+        /**
+         * Assume 3 hours per weekday, and 15 hours per weekend.
+         * So each week is 30 hours, so on average each day is
+         * 4.2 hours.
+         */
+        var weeks = Math.floor(hours / 30),
+            days = Math.ceil((hours % 30) / (30 / 7));
+
+        return {
+            weeks: weeks,
+            days: days
+        };
     }
 }

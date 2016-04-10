@@ -670,5 +670,12 @@ module.exports = {
                 }
             ]
         ]
-    }
+    },
+    tasks: [
+        {
+            taskName: 'annotations',
+            workedHours: 40,
+            neededHours: 40
+        }
+    ]
 };

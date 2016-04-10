@@ -424,5 +424,12 @@ module.exports = {
                 }
             ]
         ]
-    }
+    },
+    tasks: [
+        {
+            taskName: 'annotations',
+            workedHours: 37,
+            neededHours: 40
+        }
+    ]
 };

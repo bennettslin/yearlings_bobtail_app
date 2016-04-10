@@ -1,6 +1,8 @@
 import React from 'react';
 import ProgressBar from './progress-bar.jsx';
 
+const ProgressHelpers = require('../helpers/progress-helpers.js');
+
 const defaultProps = {
     songIndex: -1,
     songTitle: '',
@@ -24,7 +26,7 @@ class SongRow extends React.Component {
                     {this.props.songIndex + 1}. {this.props.songTitle}
                 </a>
                 <span className="text-cell progress">
-                    {sumTask.workedHours}/{sumTask.neededHours}
+                    {sumTask.workedHours}/{sumTask.neededHours}h
                 </span>
             </div>
         );
@@ -40,10 +42,18 @@ class SongRow extends React.Component {
     }
 
     _getFooterContent(sumTask) {
+        var workedHours = sumTask.workedHours,
+            neededHours = sumTask.neededHours,
+            remainingHours = neededHours - workedHours,
+            remainingTime = ProgressHelpers.getRemainingTimeFromHours(remainingHours);
+
         return (
-            <div className="song-text-wrapper">
-                <span className="button-placeholder"></span>
-                <h3 className="text-cell progress">{sumTask.workedHours}/{sumTask.neededHours}</h3>
+            <div className="song-text-wrapper footer">
+                <h3 className="text-cell progress">
+                    <div>{neededHours} - {workedHours} = {remainingHours}h</div>
+                    <div>{remainingTime.weeks}w, {remainingTime.days}d</div>
+                </h3>
+
             </div>
         );
     }

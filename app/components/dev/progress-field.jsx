@@ -47,7 +47,7 @@ class ProgressField extends React.Component {
                     </span>
                     {task.neededHours ?
                         <span className="text-cell progress">
-                            {task.workedHours}/{task.neededHours}
+                            {task.workedHours}/{task.neededHours}h
                         </span> : null
                     }
                 </div>
@@ -90,20 +90,26 @@ class ProgressField extends React.Component {
         var tasks = this.props.tasks,
             taskRows = this._getTaskRows(tasks),
             sumTask = ProgressHelpers.calculateSumTask(tasks),
-            taskFooter = (
-                <div key="footer" className="task-row">
-                    <div className="task-subrow">
-                        <div className="task-text-wrapper">
-                            <span className="task-placeholder"></span>
-                            {sumTask.neededHours ?
-                                <h3 className="text-cell progress">
-                                    {sumTask.workedHours}/{sumTask.neededHours}
-                                </h3> : null
-                            }
-                        </div>
+            workedHours = sumTask.workedHours,
+            neededHours = sumTask.neededHours,
+            remainingHours = neededHours - workedHours,
+            remainingTime = ProgressHelpers.getRemainingTimeFromHours(remainingHours),
+            taskFooter;
+
+        taskFooter = (
+            <div key="footer" className="task-row">
+                <div className="task-subrow">
+                    <div className="task-text-wrapper footer">
+                        {sumTask.neededHours ?
+                            <h3 className="text-cell progress">
+                                <div>{neededHours} - {workedHours} = {remainingHours}h</div>
+                                <div>{remainingTime.weeks}w, {remainingTime.days}d</div>
+                            </h3> : null
+                        }
                     </div>
                 </div>
-            );
+            </div>
+        );
 
         return (
             <div className="progress-field">
