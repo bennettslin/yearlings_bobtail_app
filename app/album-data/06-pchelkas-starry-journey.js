@@ -117,7 +117,7 @@ module.exports = {
             description: 'While I only spent a year actively feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It\'s not that I lacked the will to correct their perceptions. I was as baffled as anyone about what had just happened, and there were no guide books for how to proceed from there.'
         },
         shortest_cyphers: {
-            description: 'The lengthier a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer entrances others were given to get under my skin.'
+            description: 'The lengthier a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer openings others were given to get under my skin.'
         },
         every_hero_has_a_heel: {
             description: 'The Greek hero Achilles was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved acceptance from others.'

@@ -24,13 +24,20 @@ class App extends React.Component {
         const playedSongIndex = window.sessionStorage.playedSongIndex ?
                 parseInt(window.sessionStorage.playedSongIndex) : -1;
 
+        /**
+         * FIXME: Ideally, this should store the key in the window session, not
+         * the entire annotation object.
+         */
+        const annotationObject = window.sessionStorage.annotationObject ?
+                JSON.parse(window.sessionStorage.annotationObject) : null;
+
         this.handleSongChange = this.handleSongChange.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
         this._handleBodyClick = this._handleBodyClick.bind(this);
 
         this.state = {
             playedSongIndex,
-            annotationObject: null
+            annotationObject
         };
     }
 
@@ -51,6 +58,8 @@ class App extends React.Component {
          */
         if (annotation && annotation !== e.target && !annotation.contains(e.target) && !GlobalHelpers.hasParentWithTagName(e.target, 'a')) {
 
+            window.sessionStorage.annotationObject = null;
+
             this.setState({
                 annotationObject: null
             });
@@ -62,6 +71,7 @@ class App extends React.Component {
 
             // Store song index in session.
             window.sessionStorage.playedSongIndex = newPlayedSongIndex;
+            window.sessionStorage.annotationObject = null;
 
             this.setState({
                 playedSongIndex: newPlayedSongIndex,
@@ -72,6 +82,8 @@ class App extends React.Component {
 
     handleAnnotationSelect(annotationKey) {
         var annotationObject = this.props.songs[this.state.playedSongIndex].annotations[annotationKey].description;
+
+        window.sessionStorage.annotationObject = JSON.stringify(annotationObject);
 
         this.setState({
             annotationObject: annotationObject
