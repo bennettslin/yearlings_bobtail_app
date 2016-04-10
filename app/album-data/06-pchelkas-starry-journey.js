@@ -95,6 +95,9 @@ module.exports = {
         too_much_at_once: {
             description: 'I sobbed when I got the letter confirming that I was a Beyonder. While I was relieved to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.'
         },
+        mothership: {
+            description: 'To present the appearance of a legitimate institute, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included a spacecraft that would allow us to make contact with our extraplanetary kin.'
+        },
         how_youre_to_live: {
             description: 'The letters cautioned me to keep myself separate from society. I realised that my brother had been doing this all along, and thus modelled my own behaviour after his.'
         },
@@ -163,7 +166,7 @@ module.exports = {
             description: 'Eventually a classmate suspected me of being on drugs, and I was sent to the principal\'s office. When my mother came to pick me up, she proceeded to chew out the principal for even suspecting that I was capable of such a thing. Since I was generally more responsive around authority figures, he had to agree that the charge didn\'t make sense, and dropped it.'
         },
         cant_ever_return: {
-            description: 'By this point, I was already disillusioned with RI Research anyway, as their letters inexplicably began to take on Christian overtones. It\'s not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins and interplanetary realms.'
+            description: 'By this point, I was already disillusioned with RI Research anyway, as their letters inexplicably began to take on Christian overtones. It\'s not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.'
         }
     },
     lyrics: {
@@ -468,7 +471,13 @@ module.exports = {
                 },
                 {
                     time: 116,
-                    verse: 'one they\'ll find only once we build the mothership.'
+                    verse: [
+                        'one they\'ll find only once we build the',
+                        {
+                            anchor: 'mothership.',
+                            annotationKey: 'mothership'
+                        }
+                    ]
                 },
                 {
                     time: 119,
