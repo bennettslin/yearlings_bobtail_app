@@ -52,12 +52,10 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Red_envelope'
         },
         are_you_a_beyonder: {
-            // TODO rephrase and redo?
-            description: 'Hitting all the right nerves, the letter addressed my yearning to belong, and spoke to my frustration that what I desired should so elude me. It then shared its hopeful news: RI Research believed that I might belong to a special class of human beings known as Beyonders. After searching for so long, they had found me.'
+            description: 'According to RI Research, Beyonders are an ancient race of beings born from the stars, who were scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet are beset by a nagging disquiet that they do not truly belong.'
         },
-        earth_fostered: {
-            // TODO: origins of Beyonders
-            description: ''
+        wanderer_lost: {
+            description: 'Hitting all the right nerves, the letter from RI Research addressed my yearning to belong, and spoke to my frustration that such ends should so elude me. It then shared its hopeful news: They believed that I might be a Beyonder, and after searching for so long, they had found me.'
         },
         waiting_for_goddard: {
             description: [
@@ -91,20 +89,17 @@ module.exports = {
             description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward animals.'
         },
         roots_unknown_to_them: {
-            // TODO Star people.
-            description: ''
+            description: 'I didn\'t know this at the time, but the notion of "star people" was a New Age belief popular in the 1970s. Like Beyonders, star people arrived on Earth with no recollection of their true origin. Undoubtedly, the letters from RI Research drew much of their material from this body of thought.',
+            reference: 'https://en.wikipedia.org/wiki/Star_people_(New_Age_belief)'
         },
-        indeed_a_seed: {
-            // TODO: I cried. I didn't want to be a Beyonder.
-            description: ''
+        too_much_at_once: {
+            description: 'I sobbed when I got the letter confirming that I was a Beyonder. While I was relieved to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.'
         },
         how_youre_to_live: {
-            // TODO: Behave autistic
-            description: ''
+            description: 'The letters cautioned me to keep myself separate from society. I realised that my brother had been doing this all along, and thus modelled my own behaviour after his.'
         },
         act_the_dunce: {
-            // TODO: Unintelligent
-            description: 'By refusing to acknowledge or respond to other students, I was essentially behaving as if I were autistic like my brother.'
+            description: 'By adopting my brother\'s composure in refusing to acknowledge or respond to other students, I came across as dimwitted.'
         },
         cast_here_in_pollens: {
             description: 'In Greek mythology, Castor and Pollux were twin brothers fathered by Zeus. Castor was mortal, however, so Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with all its spiritual answers.'
@@ -369,16 +364,18 @@ module.exports = {
                             anchor: '"Are you a Beyonder',
                             annotationKey: 'are_you_a_beyonder'
                         },
-                        'sent down to be',
-                        {
-                            anchor: 'Earth-fostered?',
-                            annotationKey: 'earth_fostered'
-                        }
+                        'sent down to be Earth-fostered?'
                     ]
                 },
                 {
                     time: 71,
-                    verse: 'Do you often feel like a wanderer lost?"'
+                    verse: [
+                        'Do you often feel like a',
+                        {
+                            anchor: 'wanderer lost?"',
+                            annotationKey: 'wanderer_lost'
+                        }
+                    ]
                 },
                 {
                     time: 76,
@@ -450,18 +447,18 @@ module.exports = {
                 },
                 {
                     time: 101,
-                    verse: [
-                        'you are',
-                        {
-                            anchor: 'indeed a seed',
-                            annotationKey: 'indeed_a_seed'
-                        },
-                        'from that nebular nest.'
-                    ]
+                    verse: 'you are indeed a seed from that nebular nest.'
                 },
                 {
                     time: 105,
-                    verse: 'Is this too much at once? We\'re trusting mum\'s to be the word.'
+                    verse: [
+                        'Is this',
+                        {
+                            anchor: 'too much at once?',
+                            annotationKey: 'too_much_at_once'
+                        },
+                        'We\'re trusting mum\'s to be the word.'
+                    ]
                 }
             ],
             [
