@@ -5,7 +5,7 @@ const defaultProps = {
     playedSongSpeechBubbles: {}
 };
 
-class SpeechBubblesField extends React.Component {
+class SpeechBubblesSection extends React.Component {
 
     render() {
         var speechBubbles = SPEECH_BUBBLE_NAMES.map(function(bubbleName, index) {
@@ -21,12 +21,12 @@ class SpeechBubblesField extends React.Component {
             }, this);
 
         return (
-            <div className="speech-bubbles-field">
+            <div className="speech-bubbles-section">
                 {speechBubbles}
             </div>
         );
     }
 }
 
-SpeechBubblesField.defaultProps = defaultProps;
-export default SpeechBubblesField;
+SpeechBubblesSection.defaultProps = defaultProps;
+export default SpeechBubblesSection;

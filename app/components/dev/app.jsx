@@ -2,11 +2,10 @@ import React from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import LyricsField from './lyrics-field.jsx';
-import ProgressField from './progress-field.jsx';
+import NotesField from './notes-field.jsx';
 import SongsField from './songs-field.jsx';
 
-import { FormattedAnnotationField,
-         FormattedSpeechBubblesField,
+import { FormattedAnnotationPopup,
          FormattedLyricsColumn } from './text-formatter.jsx';
 
 const GlobalHelpers = require('../helpers/global-helpers.js');
@@ -127,23 +126,17 @@ class App extends React.Component {
                         transitionLeaveTimeout={100}
                     >
                     {annotationIsShown ?
-                        <div key="annotation" id="annotation" className="notes-row annotation-row">
-                            <FormattedAnnotationField
+                        <div key="annotation" id="annotation" className="notes-field annotation-section">
+                            <FormattedAnnotationPopup
                                 annotationObject={this.state.annotationObject}
                             />
                         </div> : null
                     }
                     </CSSTransitionGroup>
-                    <div className="notes-row speech-bubbles-row">
-                        <FormattedSpeechBubblesField
-                            playedSongSpeechBubbles={playedSongSpeechBubbles}
-                        />
-                        {playedSongTasks ?
-                            <ProgressField
-                                tasks={playedSongTasks}
-                            /> : null
-                        }
-                    </div>
+                    <NotesField
+                        playedSongSpeechBubbles={playedSongSpeechBubbles}
+                        playedSongTasks={playedSongTasks}
+                    />
                 </div>
                 {playedSongIndex >= 0 ?
                      <div className="app-column lyrics-column">

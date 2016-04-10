@@ -7,7 +7,7 @@ const defaultProps = {
     tasks: []
 };
 
-class ProgressField extends React.Component {
+class ProgressSection extends React.Component {
 
     componentWillMount() {
         const maxTotalNeededHours = ProgressHelpers.getMaxTotalNeededHoursFromTasks(this.props.tasks);
@@ -112,7 +112,7 @@ class ProgressField extends React.Component {
         );
 
         return (
-            <div className="progress-field">
+            <div className="progress-section">
                 <h2>progress</h2>
                 {taskRows}
                 {taskFooter}
@@ -121,5 +121,5 @@ class ProgressField extends React.Component {
     }
 }
 
-ProgressField.defaultProps = defaultProps;
-export default ProgressField;
+ProgressSection.defaultProps = defaultProps;
+export default ProgressSection;

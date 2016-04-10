@@ -1,7 +1,7 @@
 import React from 'react';
 import LyricsColumn from './lyrics-column.jsx';
-import AnnotationField from './annotation-field.jsx';
-import SpeechBubblesField from './speech-bubbles-field.jsx';
+import AnnotationPopup from './annotation-popup.jsx';
+import SpeechBubblesSection from './speech-bubbles-section.jsx';
 
 const TextFormatter = {
 
@@ -66,14 +66,14 @@ export class FormattedLyricsColumn extends React.Component {
     }
 }
 
-export class FormattedAnnotationField extends React.Component {
+export class FormattedAnnotationPopup extends React.Component {
     render() {
-        return <AnnotationField {...this.props} TextFormatter={TextFormatter} />;
+        return <AnnotationPopup {...this.props} TextFormatter={TextFormatter} />;
     }
 }
 
-export class FormattedSpeechBubblesField extends React.Component {
+export class FormattedSpeechBubblesSection extends React.Component {
     render() {
-        return <SpeechBubblesField {...this.props} TextFormatter={TextFormatter} />;
+        return <SpeechBubblesSection {...this.props} TextFormatter={TextFormatter} />;
     }
 }
