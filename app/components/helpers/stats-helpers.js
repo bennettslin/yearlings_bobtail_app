@@ -1,5 +1,9 @@
 module.exports = {
 
+    getAnnotationsCount: function(annotationsObject) {
+        return Object.keys(annotationsObject).length;
+    },
+
     getTotalWordsInAnnotations: function(annotationsObject) {
         var objectKeys = Object.keys(annotationsObject);
 

@@ -440,7 +440,7 @@ module.exports = {
                     neededHours: 3
                 }
             ],
-            workedHours: 37,
+            workedHours: 31,
             neededHours: 40
         }
     ]

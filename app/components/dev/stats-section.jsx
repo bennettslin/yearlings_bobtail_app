@@ -7,13 +7,13 @@ const defaultProps = {
 
 class StatsSection extends React.Component {
 
-    _getWordCountRow(typeName, typeCount) {
+    _getCountRow(typeName, typeCount) {
         return (
-            <div className="word-count-text-wrapper">
-                <span className="text-cell type-name">
+            <div className="count-text-wrapper">
+                <span className="text-cell name">
                     {typeName}
                 </span>
-                <span className="text-cell word-count">
+                <span className="text-cell count">
                     {typeCount}
                 </span>
             </div>
@@ -21,14 +21,20 @@ class StatsSection extends React.Component {
     }
 
     render() {
-        var annotationsCount = StatsHelpers.getTotalWordsInAnnotations(this.props.annotations),
-            annotationsWordCountRow = this._getWordCountRow('annotations word count', annotationsCount);
+        var annotationsCount = StatsHelpers.getAnnotationsCount(this.props.annotations),
+            annotationsCountRow = this._getCountRow('annotations count', annotationsCount),
+            annotationsWordCount = StatsHelpers.getTotalWordsInAnnotations(this.props.annotations),
+            annotationsWordCountRow = this._getCountRow('annotations word count', annotationsWordCount),
+            countPerAnnotation = Math.ceil(annotationsWordCount / annotationsCount),
+            countPerAnnotationRow = this._getCountRow('words per annotations', countPerAnnotation);
 
         return (
             <div className="stats-section">
                 <h2>stats</h2>
                 <div className="stats-row">
+                {annotationsCountRow}
                 {annotationsWordCountRow}
+                {countPerAnnotationRow}
                 </div>
             </div>
         );
