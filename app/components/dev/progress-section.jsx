@@ -86,27 +86,36 @@ class ProgressSection extends React.Component {
         }, this);
     }
 
+    // FIXME: This method is duplicated in song row component.
+    _getProgressFooterContent(sumTask, fontSize) {
+        var workedHours = sumTask.workedHours,
+            neededHours = sumTask.neededHours,
+            remainingHours = neededHours - workedHours,
+            remainingTimeString = ProgressHelpers.getRemainingTimeStringFromHours(remainingHours);
+
+        return (
+            <div className="task-text-wrapper footer">
+                {neededHours ?
+                    <div className={'text-cell progress font-size-' + fontSize}>
+                        <div>{neededHours} - {workedHours} = {remainingHours}h</div>
+                        <div>{remainingTimeString}</div>
+                    </div> : null
+                }
+            </div>
+        );
+    }
+
     render() {
         var tasks = this.props.tasks,
             taskRows = this._getTaskRows(tasks),
             sumTask = ProgressHelpers.calculateSumTask(tasks),
-            workedHours = sumTask.workedHours,
-            neededHours = sumTask.neededHours,
-            remainingHours = neededHours - workedHours,
-            remainingTimeString = ProgressHelpers.getRemainingTimeStringFromHours(remainingHours),
+            progressFooterContent = this._getProgressFooterContent(sumTask, 2),
             taskFooter;
 
         taskFooter = (
             <div key="footer" className="task-row">
                 <div className="task-subrow">
-                    <div className="task-text-wrapper footer">
-                        {sumTask.neededHours ?
-                            <h3 className="text-cell progress">
-                                <div>{neededHours} - {workedHours} = {remainingHours}h</div>
-                                <div>{remainingTimeString}</div>
-                            </h3> : null
-                        }
-                    </div>
+                    {progressFooterContent}
                 </div>
             </div>
         );

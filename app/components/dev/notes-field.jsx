@@ -1,9 +1,11 @@
 import React from 'react';
 
 import ProgressSection from './progress-section.jsx';
+import StatsSection from './stats-section.jsx';
 import { FormattedSpeechBubblesSection } from './text-formatter.jsx';
 
 const defaultProps = {
+    playedSongAnnotations: {},
     playedSongSpeechBubbles: {},
     playedSongTasks: {}
 };
@@ -23,6 +25,9 @@ class NotesField extends React.Component {
                         tasks={props.playedSongTasks}
                     /> : null
                 }
+                <StatsSection
+                    annotations={props.playedSongAnnotations}
+                />
             </div>
         );
     }

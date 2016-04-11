@@ -9,6 +9,7 @@ import { FormattedAnnotationPopup,
          FormattedLyricsColumn } from './text-formatter.jsx';
 
 const GlobalHelpers = require('../helpers/global-helpers.js');
+
 const defaultProps = {
     title: 'Yearling\'s Bobtail',
     songs: [],
@@ -102,6 +103,8 @@ class App extends React.Component {
                 props.songs[playedSongIndex].tasks : null,
             playedSongLyrics = playedSongIndex >= 0 ?
                 props.songs[playedSongIndex].lyrics : null,
+            playedSongAnnotations = playedSongIndex >= 0 ?
+                props.songs[playedSongIndex].annotations : null,
             annotationIsShown = !!state.annotationObject,
 
             // The transition group is wrapped in a span element.
@@ -136,6 +139,7 @@ class App extends React.Component {
                     }
                     </CSSTransitionGroup>
                     <NotesField
+                        playedSongAnnotations={playedSongAnnotations}
                         playedSongSpeechBubbles={playedSongSpeechBubbles}
                         playedSongTasks={playedSongTasks}
                     />

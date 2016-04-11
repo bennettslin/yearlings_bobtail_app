@@ -11,20 +11,15 @@ body {
     @text-wrapper-width-margin: 12px;
     @row-height-margin: 2px;
 
+    @primary-row-font-size: 1.05em;
+    @secondary-row-font-size: 0.9em;
+
     display: flex;
     justify-content: center;
     height: 100%;
     min-height: 100vh;
     font-family: PTSansNarrow;
     font-size: 1.1em;
-
-    h1 {
-        font-size: 1.6em;
-    }
-
-    h3 {
-        margin-top: 0;
-    }
 
     // Universal styling rules.
     .app-column {
@@ -109,14 +104,6 @@ body {
                 [class*="button"] {
                     width: @button-column-width;
                 }
-
-                .progress {
-                    text-align: right;
-                }
-
-                &.footer {
-                    text-align: right;
-                }
             }
         }
     }
@@ -158,12 +145,12 @@ body {
                     margin-top: @row-height-margin;
                 }
 
-                font-size: 1.05em;
+                font-size: @primary-row-font-size;
             }
 
             .subtask-row {
                 padding-left: 25px;
-                font-size: 0.9em;
+                font-size: @secondary-row-font-size;
             }
 
             [class$="subrow"] {
@@ -180,14 +167,17 @@ body {
                 }
 
                 .task-text-wrapper {
-                    .progress {
-                        text-align: right;
-                    }
 
                     &.footer {
                         text-align: right;
                     }
                 }
+            }
+        }
+
+        .stats-section {
+            .stats-row {
+                font-size: @primary-row-font-size;
             }
         }
     }
@@ -236,6 +226,14 @@ body {
         }
     }
 
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
     a {
         .transition(color 0.05s ease);
         .no-select;
@@ -253,6 +251,17 @@ body {
         }
     }
 
+    .progress {
+        text-align: right;
+
+        &.font-size-1 {
+            font-size: 1.4em;
+        }
+
+        &.font-size-2 {
+            font-size: 1.25em;
+        }
+    }
 }
 
 // Global animation rules.

@@ -41,19 +41,21 @@ class SongRow extends React.Component {
         );
     }
 
-    _getFooterContent(sumTask) {
+    // FIXME: This method is duplicated in progress section component.
+    _getProgressFooterContent(sumTask, fontSize) {
         var workedHours = sumTask.workedHours,
             neededHours = sumTask.neededHours,
             remainingHours = neededHours - workedHours,
             remainingTimeString = ProgressHelpers.getRemainingTimeStringFromHours(remainingHours);
 
         return (
-            <div className="song-text-wrapper footer">
-                <h3 className="text-cell progress">
-                    <div>{neededHours} - {workedHours} = {remainingHours}h</div>
-                    <div>{remainingTimeString}</div>
-                </h3>
-
+            <div className="task-text-wrapper footer">
+                {neededHours ?
+                    <div className={'text-cell progress font-size-' + fontSize}>
+                        <div>{neededHours} - {workedHours} = {remainingHours}h</div>
+                        <div>{remainingTimeString}</div>
+                    </div> : null
+                }
             </div>
         );
     }
@@ -73,7 +75,7 @@ class SongRow extends React.Component {
             wrappedTextContent = this._getHeaderContent();
 
         } else if (this.props.isFooter) {
-            wrappedTextContent = this._getFooterContent(sumTask);
+            wrappedTextContent = this._getProgressFooterContent(sumTask, 1);
 
         } else {
             wrappedTextContent = this._getSongContent(sumTask);
