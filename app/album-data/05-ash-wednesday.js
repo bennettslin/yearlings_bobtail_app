@@ -442,6 +442,18 @@ module.exports = {
             ],
             workedHours: 31,
             neededHours: 40
+        },
+        {
+            taskName: 'illustrations',
+            subtasks: [
+                {
+                    taskName: 'concept',
+                    workedHours: 0,
+                    neededHours: 3
+                }
+            ],
+            workedHours: 0,
+            neededHours: 0
         }
     ]
 };

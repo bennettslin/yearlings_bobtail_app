@@ -35,7 +35,7 @@ module.exports = {
 
         // It's a string.
         } else {
-            return annotation.length;
+            return annotation.split(' ').length;
         }
     }
 }
