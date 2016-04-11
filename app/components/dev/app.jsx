@@ -90,17 +90,19 @@ class App extends React.Component {
     }
 
     render() {
-        var playedSongIndex = this.state.playedSongIndex,
+        var props = this.props,
+            state = this.state,
+            playedSongIndex = state.playedSongIndex,
             playedSongTitle = playedSongIndex >= 0 ?
-                this.props.songs[playedSongIndex].title : null,
+                props.songs[playedSongIndex].title : null,
             playedSongSpeechBubbles = playedSongIndex >= 0 ?
-                this.props.songs[playedSongIndex].speechBubbles :
-                this.props.speechBubbles,
+                props.songs[playedSongIndex].speechBubbles :
+                props.speechBubbles,
             playedSongTasks = playedSongIndex >= 0 ?
-                this.props.songs[playedSongIndex].tasks : null,
+                props.songs[playedSongIndex].tasks : null,
             playedSongLyrics = playedSongIndex >= 0 ?
-                this.props.songs[playedSongIndex].lyrics : null,
-            annotationIsShown = !!this.state.annotationObject,
+                props.songs[playedSongIndex].lyrics : null,
+            annotationIsShown = !!state.annotationObject,
 
             // The transition group is wrapped in a span element.
             transitionGroupStyle = {
@@ -111,9 +113,9 @@ class App extends React.Component {
         return (
             <div className="app">
                 <div className="app-column songs-column">
-                    <h1>{this.props.title}</h1>
+                    <h1>{props.title}</h1>
                     <SongsField
-                        songs={this.props.songs}
+                        songs={props.songs}
                         playedSongIndex={playedSongIndex}
                         handleSongChange={this.handleSongChange}
                     />
@@ -128,7 +130,7 @@ class App extends React.Component {
                     {annotationIsShown ?
                         <div key="annotation" id="annotation" className="notes-field annotation-section">
                             <FormattedAnnotationPopup
-                                annotationObject={this.state.annotationObject}
+                                annotationObject={state.annotationObject}
                             />
                         </div> : null
                     }
