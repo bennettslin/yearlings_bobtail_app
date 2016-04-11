@@ -24,16 +24,14 @@ class StatsSection extends React.Component {
         var annotationsCount = StatsHelpers.getAnnotationsCount(this.props.annotations),
             annotationsCountRow = this._getCountRow('annotations count', annotationsCount),
             annotationsWordCount = StatsHelpers.getTotalWordsInAnnotations(this.props.annotations),
-            annotationsWordCountRow = this._getCountRow('annotations word count', annotationsWordCount),
             countPerAnnotation = Math.ceil(annotationsWordCount / annotationsCount),
-            countPerAnnotationRow = this._getCountRow('words per annotations', countPerAnnotation);
+            countPerAnnotationRow = this._getCountRow('words per annotation', countPerAnnotation);
 
         return (
             <div className="stats-section">
                 <h2>stats</h2>
                 <div className="stats-row">
                 {annotationsCountRow}
-                {annotationsWordCountRow}
                 {countPerAnnotationRow}
                 </div>
             </div>
