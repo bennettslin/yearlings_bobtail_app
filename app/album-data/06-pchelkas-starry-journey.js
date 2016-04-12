@@ -36,7 +36,7 @@ module.exports = {
             description: 'I was well-liked in elementary school for being physically small and ever eager to draw cartoon figures for anyone who asked. But these very traits that had once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.'
         },
         learn_to_kick_it_back: {
-            description: 'In middle school, the most well-liked kids were the ones who were least concerned about being liked. This ran counter to my instinct for throwing myself whole-heartedly into anything worth having.'
+            description: 'In middle school, the most well-liked kids were the ones who were least concerned about being liked. This ran counter to my instinct for throwing myself whole-heartedly into anything worth doing.'
         },
         feigning_sick: {
             description: 'As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press too deeply on it.'
