@@ -1,18 +1,26 @@
 module.exports = {
 
     getAnnotationsCount: function(annotationsObject) {
-        return Object.keys(annotationsObject).length;
+        if (annotationsObject) {
+            return Object.keys(annotationsObject).length;
+        } else {
+            return 0;
+        }
     },
 
     getTotalWordsInAnnotations: function(annotationsObject) {
-        var objectKeys = Object.keys(annotationsObject);
+        if (annotationsObject) {
+            var objectKeys = Object.keys(annotationsObject);
 
-        return objectKeys.reduce(function(wordCount, objectKey) {
-            var annotation = annotationsObject[objectKey].description;
+            return objectKeys.reduce(function(wordCount, objectKey) {
+                var annotation = annotationsObject[objectKey].description;
 
-            return wordCount + this._getTotalWordsInAnnotation(annotation);
+                return wordCount + this._getTotalWordsInAnnotation(annotation);
 
-        }.bind(this), 0);
+            }.bind(this), 0);
+        } else {
+            return 0;
+        }
     },
 
     _getTotalWordsInAnnotation: function(annotation) {
