@@ -1,7 +1,8 @@
 module.exports = {
     title: 'Dear Saskia',
     speechBubbles: {
-        narrative: 'narrative 1',
+        narrative: 'Sasha was a childhood friend, as well as my first crush. She was strongly devoted to her Jewish identity, which fascinated me since I felt no cultural or religious loyalties of my own. It also made me aware of a painful catch-22: Those with faith and roots to share along with themselves are unlikely to do so with those who don\'t share their faith and roots. Sasha moved after the first year of middle school, just as I began to . ',
+        // Passive aggressiveness, Paul McCartney
         backstory: 'personal 1'
     },
     lyrics: {

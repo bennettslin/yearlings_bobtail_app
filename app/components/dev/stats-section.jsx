@@ -24,7 +24,7 @@ class StatsSection extends React.Component {
         var annotationsCount = StatsHelpers.getAnnotationsCount(this.props.annotations),
             annotationsCountRow = this._getCountRow('annotations count', annotationsCount),
             annotationsWordCount = StatsHelpers.getTotalWordsInAnnotations(this.props.annotations),
-            countPerAnnotation = Math.ceil(annotationsWordCount / annotationsCount),
+            countPerAnnotation = annotationsCount ? Math.ceil(annotationsWordCount / annotationsCount) : '--',
             countPerAnnotationRow = this._getCountRow('words per annotation', countPerAnnotation);
 
         return (
