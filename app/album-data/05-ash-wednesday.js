@@ -2,7 +2,7 @@ module.exports = {
     title: 'Ash Wednesday',
     speechBubbles: {
         narrative: 'In college, I dated a nice Catholic girl named Catherine, who didn\'t think much of my lack of reading habit and broke up with me right before Ash Wednesday, the first day of Lent. So I decided to ash my own forehead and bump into her, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn\'t happen, but I did grow into a steady reader, and I probably have Catherine to thank for that.',
-        backstory: 'For a song about two people who couldn\'t be more different, I juxtaposed Arabic maqam and Renaissance polyphony. The Arabic quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter tone flat. The shrieking whistles, which remind me of trains braking in a subway tunnel, were made by overblowing into recorders.'
+        backstory: 'For a song about two people who couldn\'t be more different, I juxtaposed Arabic maqam and Renaissance polyphony. The quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter step flat. The shrieking whistles, which remind me of trains braking in a subway tunnel, were made by overblowing into recorders.'
     },
     annotations: {
         o_captain_my_captain: {
@@ -103,14 +103,14 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Henry_IV_of_France'
         },
         cursed_to_be_born: {
+            // Cult made me cynical about religious views.
             description: 'I argued with Catherine that it didn\'t make sense for unbelievers to be born at all, since it meant trading the certainty of going to heaven for the likelihood of going to hell. It wasn\'t the most cogent argument, but that\'s as far as my views on religion had progressed at the time.'
         },
         tragic_mask: {
             description: 'In those days, I would do anything just to write a song about it afterwards, so I could never tell how much it was all an act. It wasn\'t an easy habit to let go, since it made depression that much more bearable, and at times even comical.'
         },
         spreading_mole: {
-            // TODO: Mention cancer?
-            description: 'By the end of the day, the ash was pretty smudged.'
+            description: 'By the end of the day, the ash was pretty smudged. Also, a spreading mole is a sign of skin cancer.'
         }
 
     },

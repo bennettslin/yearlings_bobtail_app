@@ -1,9 +1,8 @@
 module.exports = {
     title: 'Dear Saskia',
     speechBubbles: {
-        narrative: 'Sasha was a childhood friend, as well as my first crush. She was strongly devoted to her Jewish identity, which fascinated me since I felt no cultural or religious loyalties of my own. It also made me aware of a painful catch-22: Those with faith and roots to share along with themselves are unlikely to do so with those who don\'t share their faith and roots. Sasha moved after the first year of middle school, just as I began to . ',
-        // Passive aggressiveness, Paul McCartney
-        backstory: 'personal 1'
+        narrative: 'Sasha was a childhood friend, as well as my first crush. The meaning she drew from her Jewish identity fascinated me, as I felt no such cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing can come from longing to share in someone\'s strong faith and roots, since faith and roots stay strong precisely by not being shared. Sasha moved away during the first year of middle school, just as I began having to face bullies. That summer, I wrote her a letter on a family trip to Taiwan.',
+        backstory: 'This was the first melody and chord progression that I wrote. I would study my Beatles records, trying to be as good as John Lennon and Paul McCartney. In the end I overthought it and it suffered and so I put it away, but I brought it back out after realising that it was perfet for what this song is meant to capture. I tried to reflect the passive-aggressive tone in the lyrics, and matched it in the orchestration with scratched violin.'
     },
     lyrics: {
         right: [
@@ -180,7 +179,7 @@ module.exports = {
                     neededHours: 3
                 }
             ],
-            workedHours: 0,
+            workedHours: 3,
             neededHours: 40
         },
         {

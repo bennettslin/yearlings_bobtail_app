@@ -4,7 +4,7 @@
 module.exports = {
     title: 'Pchelka\'s Starry Journey',
     speechBubbles: {
-        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to a race of interstellar beings, with a mission to shut myself from the world. I did so by adopting my brother\'s unresponsive composure, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail-order cult. It took me a long while to recover.',
+        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to a race of interstellar beings, with a mission to shut myself from the world. I did so by adopting my brother\'s unresponsive manner, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail-order cult. It took me a long while to recover.',
         backstory: 'Pchelka and Mushka were dogs sent into orbit under the Soviet space program. They were killed upon reentry. In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother is singing along with me in spirit.'
     },
     annotations: {
@@ -72,11 +72,15 @@ module.exports = {
                 {
                     italic: 'Gogo'
                 },
-                'means "big brother." And, of course,',
+                'means "big brother." And of course,',
                 {
                     italic: 'Didi'
                 },
-                'means "little brother." Didi and Gogo are also the respective pet names of Vladimir and Estragon, the two characters who are still waiting for Godot by the end of Beckett\'s play.',
+                'this time refers to',
+                {
+                    emphasis: 'my'
+                },
+                'little brother. Didi and Gogo are also the respective pet names of Vladimir and Estragon, the two characters who are still waiting for Godot by the end of Beckett\'s play.',
             ]
         },
         in_hunger_they_were_led: {
