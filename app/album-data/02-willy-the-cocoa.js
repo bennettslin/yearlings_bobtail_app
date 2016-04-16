@@ -84,7 +84,7 @@ module.exports = {
             description: 'Immediately past noon, the ring of a town bell is heard exactly once.'
         },
         unsalvaged_soul: {
-            description: 'Given that abuse of an underdeveloped child often led to its death, religious doctrine in the past typically gave assurance that such children were devoid of souls. But I came to a different conclusion. If my brother and I were so alike in physical matter, despite being so different in mental presence, then it made more sense to believe that no one has a soul.'
+            description: 'Given that abuse of an underdeveloped child often led to its death, religious doctrine in the past typically gave assurance that such children were devoid of souls. But I came to a different conclusion. If my brother and I were so alike in physical makeup, despite being so different in mental presence, then it made more sense to believe that no one has a soul.'
         },
         willys_stalkless_bulb: {
             description: 'This incident happened to Willy, of course, but the lyrics haven\'t mentioned his name until now, since it easily could have been my brother. A "stalkless bulb" can refer to a brain severed from its spine, as well as to a dormant plant ready to be set in the ground.'

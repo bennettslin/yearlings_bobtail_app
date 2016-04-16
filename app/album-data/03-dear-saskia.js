@@ -1,8 +1,8 @@
 module.exports = {
     title: 'Dear Saskia',
     speechBubbles: {
-        narrative: 'Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, as I felt no such cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing can come from longing to share in someone\'s strong faith and roots, since faith and roots stay strong precisely by not being shared. Sasha moved away during the first year of middle school, just as I began having to face bullies. That summer, I wrote her a letter on a family trip to Taiwan.',
-        backstory: 'As a kid, I marvelled at the Beatles for writing melodies and chords that were so seamlessly intertwined. This song was my studied attempt to blend the best of John Lennon\'s style with Paul McCartney\'s. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I brought it back after realising that its overwrought nature was exactly what my letter to Sasha called for. Texturally, I tried to match the passive-aggressive tone of the lyrics with screeching woodwinds and scratched bows on violins.'
+        narrative: 'Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, as I felt no cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing can come from longing to share in someone\'s strong faith and roots, since faith and roots stay strong precisely by not being shared. Sasha moved away in middle school, just as I began having to deal with bullies. That summer, I wrote her a letter on a family trip to Taiwan.',
+        backstory: 'As a kid, I marvelled at the Beatles for weaving melodies and chords so seamlessly. This overzealous attempt to match their form and style was one of the first songs I wrote. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for, and brought it back. In texture, I tried to match the passive-aggressive tone of the lyrics with woodwind screeches and bows scratched on violins.'
     },
     lyrics: {
         right: [
@@ -14,6 +14,9 @@ module.exports = {
             ],
             [
                 {
+                    /**
+                     * Starting a letter. Talk about the weather.
+                     */
                     time: 7,
                     verse: 'It\'s nearing autumn here with record highs.'
                 },
@@ -22,10 +25,16 @@ module.exports = {
                     verse: 'Is it searing in Boston? Hope this letter finds'
                 },
                 {
+                    /**
+                     * Taiwan for a summer. By the time she got back
+                     */
                     time: 13,
                     verse: 'your first semester fine while I\'m out of town…'
                 },
                 {
+                    /**
+                     * Constantly thinking of Sasha in Taiwan.
+                     */
                     time: 18,
                     verse: 'You\'d love Taiwan, surrounded by walls of mountains,'
                 },
@@ -38,6 +47,9 @@ module.exports = {
                     verse: 'Beneath this ceiling yields the scene a reeling feel'
                 },
                 {
+                    /**
+                     * The thing that was most vivid memory of Taiwan.
+                     */
                     time: 30,
                     verse: 'of some giant\'s house.'
                 }
@@ -48,10 +60,16 @@ module.exports = {
                     verse: 'So… before I left, you said'
                 },
                 {
+                    /**
+                     * Saskia wanted to go by her birth name. I asked if I should start calling her by her birth name. liked having a record of who she knew in the past.
+                     */
                     time: 37,
                     verse: 'I should keep your kid name, with everything it meant.'
                 },
                 {
+                    /**
+                     * But belonging to the old guard of friends is no consolation when someone
+                     */
                     time: 41,
                     verse: 'But then in your embrace, I felt you prepped to shed…'
                 }
