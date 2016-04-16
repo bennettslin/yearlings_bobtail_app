@@ -4,6 +4,20 @@ module.exports = {
         narrative: 'Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, as I felt no cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing can come from longing to share in someone\'s strong faith and roots, since faith and roots stay strong precisely by not being shared. Sasha moved away in middle school, just as I began having to deal with bullies. That summer, I wrote her a letter on a family trip to Taiwan.',
         backstory: 'As a kid, I marvelled at the Beatles for weaving melodies and chords so seamlessly. This overzealous attempt to match their form and style was one of the first songs I wrote. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for, and brought it back. In texture, I tried to match the passive-aggressive tone of the lyrics with woodwind screeches and bows scratched on violins.'
     },
+    annotations: {
+        record_highs: {
+            description: 'It\'s hard to start a letter. But one can always talk about the weather.'
+        },
+        first_semester: {
+            description: 'My family spent the entire summer in Taiwan. By the time we were to get back to the States, Sasha would have already moved to Boston and begun the new school year.'
+        },
+        youd_love_taiwan: {
+            description: 'This was the first trip to Taiwan that I remember. As we went sightseeing with my extended family and were exposed to their unique customs, I would add to my mental list of all the things I could share with Sasha one day. I think this might get at why I\'ve never felt strongly about being Taiwanese. Unless or until one\'s culture can be shared with someone else, there doesn\'t seem to be any real point.'
+        },
+        giants_house: {
+            description: 'My most vivid memory by far is of standing in the middle of a '
+        }
+    },
     lyrics: {
         right: [
             [
@@ -18,7 +32,13 @@ module.exports = {
                      * Starting a letter. Talk about the weather.
                      */
                     time: 7,
-                    verse: 'It\'s nearing autumn here with record highs.'
+                    verse: [
+                        'It\'s nearing autumn here with',
+                        {
+                            anchor: 'record highs.',
+                            annotationKey: 'record_highs'
+                        }
+                    ]
                 },
                 {
                     time: 10,
@@ -29,14 +49,27 @@ module.exports = {
                      * Taiwan for a summer. By the time she got back
                      */
                     time: 13,
-                    verse: 'your first semester fine while I\'m out of town…'
+                    verse: [
+                        'your',
+                        {
+                            anchor: 'first semester',
+                            annotationKey: 'first_semester'
+                        },
+                        'fine while I\'m out of town…'
+                    ]
                 },
                 {
                     /**
                      * Constantly thinking of Sasha in Taiwan.
                      */
                     time: 18,
-                    verse: 'You\'d love Taiwan, surrounded by walls of mountains,'
+                    verse: [
+                        {
+                            anchor: 'You\'d love Taiwan,',
+                            annotationKey: 'youd_love_taiwan'
+                        },
+                        'surrounded by walls of mountains,'
+                    ]
                 },
                 {
                     time: 22,
@@ -51,7 +84,13 @@ module.exports = {
                      * The thing that was most vivid memory of Taiwan.
                      */
                     time: 30,
-                    verse: 'of some giant\'s house.'
+                    verse: [
+                        'of some',
+                        {
+                            anchor: 'giant\'s house.',
+                            annotationKey: 'giants_house'
+                        }
+                    ]
                 }
             ],
             [
