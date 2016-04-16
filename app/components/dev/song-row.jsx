@@ -4,7 +4,7 @@ import ProgressBar from './progress-bar.jsx';
 const ProgressHelpers = require('../helpers/progress-helpers.js');
 
 const defaultProps = {
-    songIndex: -1,
+    songIndex: 0,
     songTitle: '',
     sumTask: {
         workedHours: 0,
@@ -22,8 +22,8 @@ class SongRow extends React.Component {
     _getSongContent(sumTask) {
         return (
             <div className="song-text-wrapper">
-                <a className="text-cell button" onClick={this.props.handleSongChange.bind(null, this.props.songIndex)}>
-                    {this.props.songIndex + 1}. {this.props.songTitle}
+                <a className="text-cell button" onClick={this.props.handleSongChange.bind(null, this.props.songIndex, true)}>
+                    {this.props.songIndex}. {this.props.songTitle}
                 </a>
                 <span className="text-cell progress">
                     {sumTask.workedHours}/{sumTask.neededHours}h

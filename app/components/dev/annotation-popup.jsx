@@ -1,13 +1,13 @@
 import React from 'react';
 
 const defaultProps = {
-    annotationObject: {}
+    annotationDescription: {}
 }
 
 class AnnotationPopup extends React.Component {
 
     render() {
-        var annotationSpan = this.props.TextFormatter.getFormattedSpan(this.props.annotationObject);
+        var annotationSpan = this.props.TextFormatter.getFormattedSpan(this.props.annotationDescription);
 
         return (
             <div className="annotation-popup">

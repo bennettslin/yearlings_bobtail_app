@@ -4,7 +4,7 @@ import SongRow from './song-row.jsx';
 const ProgressHelpers = require('../helpers/progress-helpers.js');
 const defaultProps = {
     songs: [],
-    playedSongIndex: -1,
+    playedSongIndex: 0,
     handleSongChange() {}
 };
 
@@ -23,8 +23,9 @@ class SongsField extends React.Component {
             songsHeader = (
                 <SongRow key="header" isHeader={true} />
             ),
-            songRows = songs.map(function(song, songIndex) {
-                var isSelected = this.props.playedSongIndex === songIndex,
+            songRows = songs.map(function(song, index) {
+                var songIndex = index + 1,
+                    isSelected = this.props.playedSongIndex === songIndex,
                     sumTask = ProgressHelpers.calculateSumTask(song.tasks);
 
                 return (
