@@ -6,16 +6,22 @@ module.exports = {
     },
     annotations: {
         record_highs: {
-            description: 'It\'s hard to start a letter. But one can always talk about the weather.'
+            description: 'It\'s always hard to begin writing a letter. But one can always talk about the weather.'
         },
         first_semester: {
             description: 'My family spent the entire summer in Taiwan. By the time we were to get back to the States, Sasha would have already moved to Boston and begun the new school year.'
         },
         youd_love_taiwan: {
-            description: 'This was the first trip to Taiwan that I remember. As we went sightseeing with my extended family and were exposed to their unique customs, I would add to my mental list of all the things I could share with Sasha one day. I think this might get at why I\'ve never felt strongly about being Taiwanese. Unless or until one\'s culture can be shared with someone else, there doesn\'t seem to be any real point.'
+            description: 'This was the first trip to Taiwan that I remember. As we went sightseeing with my extended family and were exposed to their unique customs, I would add to my mental list of all the things I could share with Sasha one day. I think this might get at why I\'ve never felt strongly about being Taiwanese. Until one\'s culture can be shared with someone else, there doesn\'t seem to be any real point.'
         },
         giants_house: {
-            description: 'My most vivid memory by far is of standing in the middle of a '
+            description: 'My most vivid memory is of standing in the middle of a lush valley. The ground was completely level, the surrounding mountains were almost vertical, and a translucent blanket of clouds covered the sky, dipping below the mountain peaks. I felt like a tiny guest in a giant\'s house.'
+        },
+        keep_your_kid_name: {
+            description: 'Sasha\'s given name was actually Saskia, but because this was difficult for small children to pronounce, her friends had always called her Sasha. Once in Boston, however, she had decided that she would start going by Saskia. I asked her if I should call her Saskia as well. She said no, that it would be nice to always be reminded of which friends knew her first.'
+        },
+        prepped_to_shed: {
+            description: 'Of course, it\'s no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. Hugging Sasha for the last time felt like clinging onto the outer shell of someone ready to moult and fly away. She was also literally prepping, in that she was to begin enrollment at a preparatory school in Boston.'
         }
     },
     lyrics: {
@@ -28,9 +34,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Starting a letter. Talk about the weather.
-                     */
                     time: 7,
                     verse: [
                         'It\'s nearing autumn here with',
@@ -45,9 +48,6 @@ module.exports = {
                     verse: 'Is it searing in Boston? Hope this letter finds'
                 },
                 {
-                    /**
-                     * Taiwan for a summer. By the time she got back
-                     */
                     time: 13,
                     verse: [
                         'your',
@@ -59,9 +59,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Constantly thinking of Sasha in Taiwan.
-                     */
                     time: 18,
                     verse: [
                         {
@@ -80,9 +77,6 @@ module.exports = {
                     verse: 'Beneath this ceiling yields the scene a reeling feel'
                 },
                 {
-                    /**
-                     * The thing that was most vivid memory of Taiwan.
-                     */
                     time: 30,
                     verse: [
                         'of some',
@@ -99,18 +93,25 @@ module.exports = {
                     verse: 'So… before I left, you said'
                 },
                 {
-                    /**
-                     * Saskia wanted to go by her birth name. I asked if I should start calling her by her birth name. liked having a record of who she knew in the past.
-                     */
                     time: 37,
-                    verse: 'I should keep your kid name, with everything it meant.'
+                    verse: [
+                        'I should',
+                        {
+                            anchor: 'keep your kid name,',
+                            annotationKey: 'keep_your_kid_name'
+                        },
+                        'with everything it meant.'
+                    ]
                 },
                 {
-                    /**
-                     * But belonging to the old guard of friends is no consolation when someone
-                     */
                     time: 41,
-                    verse: 'But then in your embrace, I felt you prepped to shed…'
+                    verse: [
+                        'But then in your embrace, I felt you',
+                        {
+                            anchor: 'prepped to shed…',
+                            annotationKey: 'prepped_to_shed'
+                        }
+                    ]
                 }
             ],
             [
@@ -236,7 +237,7 @@ module.exports = {
                     neededHours: 3
                 }
             ],
-            workedHours: 3,
+            workedHours: 6,
             neededHours: 40
         },
         {
