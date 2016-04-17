@@ -2,7 +2,7 @@ module.exports = {
     title: 'Dear Saskia',
     speechBubbles: {
         narrative: 'Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, as I felt no cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing can come from longing to share in someone\'s strong faith and roots, since faith and roots stay strong precisely by not being shared. Sasha moved away in middle school, just as I began having to deal with bullies. That summer, I wrote her a letter on a family trip to Taiwan.',
-        backstory: 'As a kid, I marvelled at the Beatles for weaving melodies and chords so seamlessly. This song, one of the first that I wrote, was an overzealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for. Texturally, I tried to match the passive-aggressive tone of the lyrics with woodwind screeches and bows scratched on violins.'
+        backstory: 'As a kid, I marvelled at the Beatles for weaving melodies and chords so seamlessly. This song, one of the first I ever wrote, was an overzealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for. Texturally, I tried to match the passive-aggressive tone of the lyrics with woodwind screeches and bows scratched on violins.'
     },
     annotations: {
         record_highs: {
@@ -18,10 +18,22 @@ module.exports = {
             description: 'My most vivid memory is of standing in the middle of a lush valley. The ground was completely level, the surrounding mountains were almost vertical, and a translucent blanket of clouds covered the sky, dipping below the mountain peaks. I felt like a tiny guest in a giant\'s house.'
         },
         keep_your_kid_name: {
-            description: 'Sasha\'s given name was actually Saskia, but because this was difficult for small children to pronounce, her friends had always called her Sasha. Once in Boston, however, she had decided that she would start going by Saskia. I asked her if I should call her Saskia as well. She said no, that it would be nice to always be reminded of which friends knew her first.'
+            description: 'Sasha\'s given name was actually Saskia, but because this was difficult for small children to pronounce, her friends had always called her Sasha. Once in Boston, however, she decided that she would go by Saskia. I asked her if I should start calling her Saskia as well. She said no, that it would be nice to always be reminded of which friends knew her first.'
         },
         prepped_to_shed: {
             description: 'Of course, it\'s no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. Hugging Sasha for the last time felt like clinging onto the outer shell of someone ready to moult and fly away. She was also literally prepping, in that she was to begin enrollment at a preparatory school in Boston.'
+        },
+        amber_eyes: {
+            description: 'Sasha\'s eyes were of an amber colour. Also, amber is fossilised tree resin that sometimes preserves the remains of trapped insects from epochs past.'
+        },
+        your_pupils_pupal_fly: {
+            description: 'While I reflect on my feelings for Sasha, petrified at the thought of losing her, I\'m also literally reflected in her eyes, seeing myself as a petrified larva that never had a chance to moult.'
+        },
+        hes_getting_you: {
+            description: 'Everyone I had known Sasha to crush on was Jewish, and these crushes in turn motivated her to be a better Jew. I was frustrated that anyone who could be part of this positive feedback loop had the winning advantage in "getting her."'
+        },
+        i_would_have_too: {
+            description: 'It seemed obvious to me that if Sasha were to want me, then certainly I would convert to Judaism.'
         }
     },
     lyrics: {
@@ -117,19 +129,43 @@ module.exports = {
             [
                 {
                     time: 48,
-                    verse: 'And I\'d reflect inside withering amber eyes—'
+                    verse: [
+                        'And I\'d reflect inside withering',
+                        {
+                            anchor: 'amber eyes—',
+                            annotationKey: 'amber_eyes'
+                        }
+                    ]
                 },
                 {
                     time: 52,
-                    verse: 'your pupil\'s pupal fly, a pet petrified—'
+                    verse: [
+                        {
+                            anchor: 'your pupil\'s pupal fly,',
+                            annotationKey: 'your_pupils_pupal_fly'
+                        },
+                        'a pet petrified—'
+                    ]
                 },
                 {
                     time: 56,
-                    verse: 'with you raving over how he\'s getting you'
+                    verse: [
+                        'with you raving over how',
+                        {
+                            anchor: 'he\'s getting you',
+                            annotationKey: 'hes_getting_you'
+                        }
+                    ]
                 },
                 {
                     time: 64,
-                    verse: 'staying kosher. Though, you know, I would have too…'
+                    verse: [
+                        'staying kosher. Though, you know,',
+                        {
+                            anchor: 'I would have too…',
+                            annotationKey: 'i_would_have_too'
+                        }
+                    ]
                 }
             ],
             [
