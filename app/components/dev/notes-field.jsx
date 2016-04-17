@@ -17,6 +17,9 @@ class NotesField extends React.Component {
 
         return (
             <div className="notes-field">
+                <StatsSection
+                    annotations={props.playedSongAnnotations}
+                />
                 <FormattedSpeechBubblesSection
                     playedSongSpeechBubbles={props.playedSongSpeechBubbles}
                 />
@@ -25,9 +28,6 @@ class NotesField extends React.Component {
                         tasks={props.playedSongTasks}
                     /> : null
                 }
-                <StatsSection
-                    annotations={props.playedSongAnnotations}
-                />
             </div>
         );
     }

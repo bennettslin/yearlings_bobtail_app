@@ -21,23 +21,19 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
-        const playedSongIndex = window.sessionStorage.playedSongIndex ?
-                parseInt(window.sessionStorage.playedSongIndex) : -1;
-
-        /**
-         * FIXME: Ideally, this should store the key in the window session, not
-         * the entire annotation object.
-         */
-        const annotationObject = window.sessionStorage.annotationObject ?
-                JSON.parse(window.sessionStorage.annotationObject) : null;
-
         this.handleSongChange = this.handleSongChange.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
         this._handleBodyClick = this._handleBodyClick.bind(this);
 
+        // Retrieve stored song index, if there is one. Song indices start at 1.
+        this.handleSongChange(window.sessionStorage.playedSongIndex);
+
+        // Retrieve stored annotation key, if there is one.
+        this.handleAnnotationSelect(window.sessionStorage.annotationKey);
+
         this.state = {
-            playedSongIndex,
-            annotationObject
+            playedSongIndex: parseInt(window.sessionStorage.playedSongIndex) || 0,
+            annotationKey: window.sessionStorage.annotationKey
         };
     }
 
@@ -58,54 +54,58 @@ class App extends React.Component {
          */
         if (annotation && annotation !== e.target && !annotation.contains(e.target) && !GlobalHelpers.hasParentWithTagName(e.target, 'a')) {
 
-            window.sessionStorage.annotationObject = null;
-
-            this.setState({
-                annotationObject: null
-            });
+            this.handleAnnotationSelect(null, true);
         }
     }
 
-    handleSongChange(newPlayedSongIndex) {
-        if (newPlayedSongIndex >= 0 && newPlayedSongIndex < this.props.songs.length) {
+    handleSongChange(playedSongIndex, setState) {
+
+        if (typeof playedSongIndex === 'string') {
+            playedSongIndex = parseInt(playedSongIndex) || 0;
+        }
+
+        if (playedSongIndex >= 0 && playedSongIndex < this.props.songs.length) {
 
             // Store song index in session.
-            window.sessionStorage.playedSongIndex = newPlayedSongIndex;
-            window.sessionStorage.annotationObject = null;
+            window.sessionStorage.playedSongIndex = playedSongIndex;
 
-            this.setState({
-                playedSongIndex: newPlayedSongIndex,
-                annotationObject: null
-            });
+            if (setState) {
+                /**
+                 * If setting the song index, then also reset the stored
+                 * annotation key.
+                 */
+                this.handleAnnotationSelect(null, true);
+
+                this.setState({
+                    playedSongIndex: playedSongIndex
+                });
+            }
         }
     }
 
-    handleAnnotationSelect(annotationKey) {
-        var annotationObject = this.props.songs[this.state.playedSongIndex].annotations[annotationKey].description;
+    handleAnnotationSelect(annotationKey, setState) {
+        window.sessionStorage.annotationKey = annotationKey ? annotationKey : '';
 
-        window.sessionStorage.annotationObject = JSON.stringify(annotationObject);
-
-        this.setState({
-            annotationObject: annotationObject
-        });
+        if (setState) {
+            this.setState({
+                annotationKey: annotationKey
+            });
+        }
     }
 
     render() {
         var props = this.props,
             state = this.state,
             playedSongIndex = state.playedSongIndex,
-            playedSongTitle = playedSongIndex >= 0 ?
-                props.songs[playedSongIndex].title : null,
-            playedSongSpeechBubbles = playedSongIndex >= 0 ?
-                props.songs[playedSongIndex].speechBubbles :
-                props.speechBubbles,
-            playedSongTasks = playedSongIndex >= 0 ?
-                props.songs[playedSongIndex].tasks : null,
-            playedSongLyrics = playedSongIndex >= 0 ?
-                props.songs[playedSongIndex].lyrics : null,
-            playedSongAnnotations = playedSongIndex >= 0 ?
-                props.songs[playedSongIndex].annotations : null,
-            annotationIsShown = !!state.annotationObject,
+            playedSong = playedSongIndex ? props.songs[playedSongIndex - 1] : null,
+            playedSongTitle = playedSongIndex ? playedSong.title : null,
+            playedSongSpeechBubbles = playedSongIndex ?
+                playedSong.speechBubbles : props.speechBubbles,
+            playedSongTasks = playedSongIndex ? playedSong.tasks : null,
+            playedSongLyrics = playedSongIndex ? playedSong.lyrics : null,
+            playedSongAnnotations = playedSongIndex ? playedSong.annotations : null,
+            annotationDescription = (playedSongIndex && !!state.annotationKey) ?
+                playedSong.annotations[state.annotationKey].description : null,
 
             // The transition group is wrapped in a span element.
             transitionGroupStyle = {
@@ -130,10 +130,10 @@ class App extends React.Component {
                         transitionEnterTimeout={100}
                         transitionLeaveTimeout={100}
                     >
-                    {annotationIsShown ?
+                    {!!state.annotationKey ?
                         <div key="annotation" id="annotation" className="notes-field annotation-section">
                             <FormattedAnnotationPopup
-                                annotationObject={state.annotationObject}
+                                annotationDescription={annotationDescription}
                             />
                         </div> : null
                     }
@@ -144,7 +144,7 @@ class App extends React.Component {
                         playedSongTasks={playedSongTasks}
                     />
                 </div>
-                {playedSongIndex >= 0 ?
+                {playedSongIndex ?
                      <div className="app-column lyrics-column">
                         <LyricsField
                             playedSongLyrics={playedSongLyrics}
