@@ -12,7 +12,7 @@ module.exports = {
             description: 'My family spent the entire summer in Taiwan. By the time we were to get back to the States, Sasha would have already moved to Boston and begun the new school year.'
         },
         youd_love_taiwan: {
-            description: 'This was the first trip to Taiwan that I remember. As we went sightseeing with my extended family and were exposed to their unique customs, I would add to my mental list of all the things I could share with Sasha one day. I think this might get at why I\'ve never felt strongly about being Taiwanese. Until one\'s culture can be shared with someone else, there doesn\'t seem to be any real point.'
+            description: 'As we toured the countryside with our Taiwanese cousins, I would add to my mental list of all the things I could share with Sasha one day. I think this might get at why I\'ve never felt strongly about being Taiwanese. Until one\'s culture can be shared with someone else, there doesn\'t seem to be any real point.'
         },
         giants_house: {
             description: 'My most vivid memory is of standing in the middle of a lush valley. The ground was completely level, the surrounding mountains were almost vertical, and a translucent blanket of clouds covered the sky, dipping below the mountain peaks. I felt like a tiny guest in a giant\'s house.'
@@ -34,6 +34,12 @@ module.exports = {
         },
         i_would_have_too: {
             description: 'It seemed obvious to me that if Sasha were to want me, then certainly I would convert to Judaism.'
+        },
+        skipped_a_grade: {
+            description: 'I panicked when Sasha was allowed to skip the third grade, as this opened new vistas for her that necessarily excluded me. With middle school now underway, I was reminded of this panic as Sasha navigated with such seeming ease the social landscape that I found so treacherous.'
+        },
+        wet_cheeked_papoose: {
+            description: 'Over time, Sasha and I sat together less and less frequently on the schoolbus. One afternoon, as her hair blew in my face from the seat ahead of mine, I realised that we were no longer peers. I felt like a papoose, or a Native American child, strapped to a basket on his mother\'s back, in dread of the day he would have to start walking on his own.'
         }
     },
     lyrics: {
@@ -171,7 +177,13 @@ module.exports = {
             [
                 {
                     time: 73,
-                    verse: 'And I sniffled daily when you skipped a grade.'
+                    verse: [
+                        'And I sniffled daily when you',
+                        {
+                            anchor: 'skipped a grade.',
+                            annotationKey: 'skipped_a_grade'
+                        }
+                    ]
                 },
                 {
                     time: 77,
@@ -179,7 +191,13 @@ module.exports = {
                 },
                 {
                     time: 80,
-                    verse: 'caress, sun-streaked and loose, a wet-cheeked papoose'
+                    verse: [
+                        'caress, sun-streaked and loose, a',
+                        {
+                            anchor: 'wet-cheeked papoose',
+                            annotationKey: 'wet_cheeked_papoose'
+                        }
+                    ]
                 },
                 {
                     time: 84,
@@ -273,7 +291,7 @@ module.exports = {
                     neededHours: 3
                 }
             ],
-            workedHours: 6,
+            workedHours: 13,
             neededHours: 40
         },
         {
