@@ -42,13 +42,13 @@ module.exports = {
             description: 'Over time, Sasha and I sat together less and less frequently on the schoolbus. One afternoon, as her hair blew in my face from the seat ahead of mine, I realised that we were no longer peers. I felt like a papoose, or a Native American child, strapped to a basket on his mother\'s back, in anguish over having to start walking on his own.'
         },
         tetherboy: {
-            description: 'In one incident, a bully intentionally punched the tetherball while I hadn\'t yet cleared the court, getting me tangled in its rope and knocking my head against the pole. It is also assumed by some that a child kept on a tether by overprotective parents will later struggle to fend for themselves.'
+            description: 'In one incident, a bully intentionally punched the tetherball while I hadn\'t yet cleared the court, getting me tangled in its rope and knocking my head against the pole. It is also assumed by some that children kept on a tether by overprotective parents will later fail to fend for themselves.'
         },
         anarchy_reigns: {
             description: 'It was weird to be taught in history class that anarchy devolves into tyranny, and then to walk onto the quad and witness this very principle in action.'
         },
         narcing_to_the_aides: {
-            description: 'To narc is to be a snitch, named after narcotics officers who gather intelligence on drug dealers by going undercover as high school students. It caught me off guard that the school aides typically declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.'
+            description: 'To narc is to be a snitch, much like the narcotics officers who gather intelligence on drug dealers by going undercover as high school students. It caught me off guard that the school aides typically declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.'
         },
         jaw_was_stuck: {
             description: 'In another incident, a bully came up from behind and put me in a chokehold while I waited for the schoolbus. This left me with a dislocated jaw that still troubles me from time to time.'
@@ -64,7 +64,7 @@ module.exports = {
             description: 'To avoid confrontation, an opossum will faint and remain comatose, creating the impression of being dead. Similarly, I didn\'t see any way out of the next few years except to periodically exit my body at will and hope for the best.'
         },
         haemophile: {
-            description: 'Haemophilia is a disease in which the blood cannot clot properly, leading to continuous bleeding.'
+            description: 'Haemophilia is a disease in which blood cannot clot properly, leading to continuous bleeding.'
         },
         rat_turds_choked: {
             description: 'I wasn\'t sure how to end a song about a stage in my life .'
@@ -374,7 +374,7 @@ module.exports = {
                 }
             ],
             workedHours: 21,
-            neededHours: 21
+            neededHours: 24
         },
         {
             taskName: 'illustrations',
