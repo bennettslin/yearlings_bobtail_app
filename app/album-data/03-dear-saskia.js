@@ -36,7 +36,7 @@ module.exports = {
             description: 'It seemed obvious to me that if Sasha were to want me, then certainly I would convert to Judaism.'
         },
         skipped_a_grade: {
-            description: 'I panicked when Sasha was allowed to skip the third grade, as this opened new vistas for her that necessarily excluded me. With middle school now underway, I was reminded of this panic as Sasha navigated with such seeming ease the social landscape that I found so treacherous.'
+            description: 'I panicked when Sasha was allowed to skip the third grade, as this opened new vistas for her that necessarily excluded me. With middle school now underway, I was reminded of this panic as Sasha navigated with seeming ease the same social landscape that I found so treacherous.'
         },
         wet_cheeked_papoose: {
             description: 'Over time, Sasha and I sat together less and less frequently on the schoolbus. One afternoon, as her hair blew in my face from the seat ahead of mine, I realised that we were no longer peers. I felt like a papoose, or a Native American child, strapped to a basket on his mother\'s back, in anguish over having to start walking on his own.'
@@ -45,17 +45,29 @@ module.exports = {
             description: 'In one incident, a bully intentionally punched the tetherball while I hadn\'t yet cleared the court, getting me tangled in its rope and knocking my head against the pole. It is also assumed by some that a child kept on a tether by overprotective parents will later struggle to fend for themselves.'
         },
         anarchy_reigns: {
-            description: 'It was weird to be taught in history class that anarchy devolves into tyranny, and then to walk out onto the quad and witness this principle in action.'
+            description: 'It was weird to be taught in history class that anarchy devolves into tyranny, and then to walk onto the quad and witness this very principle in action.'
         },
         narcing_to_the_aides: {
-            description: 'To narc is to be a snitch, named after narcotics officers who chase after drug dealers by going undercover as high school students. It caught me off guard that the school aides typically declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.'
+            description: 'To narc is to be a snitch, named after narcotics officers who gather intelligence on drug dealers by going undercover as high school students. It caught me off guard that the school aides typically declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.'
         },
         jaw_was_stuck: {
             description: 'In another incident, a bully came up from behind and put me in a chokehold while I waited for the schoolbus. This left me with a dislocated jaw that still troubles me from time to time.'
         },
         talk_canuck: {
-            description: 'The slang term Canuck refers to a Canadian. After the chokehold incident, I would clench my jaw to prevent it from locking whenever I spoke. This developed into a peculiar habit of pronunciation, such as saying the word "about" as "a boat," which some to this day mistake for a Canadian accent.',
+            description: 'The slang term Canuck refers to a Canadian. After the chokehold incident, I would clench my jaw to prevent it from locking whenever I spoke. This developed into a peculiar habit of pronunciation that some to this day mistake for a Canadian accent.',
             reference: 'https://en.wikipedia.org/wiki/Canadian_raising'
+        },
+        hugging_hurts: {
+            description: 'In both a literal and figurative sense, of course.'
+        },
+        playing_possum: {
+            description: 'To avoid confrontation, an opossum will faint and remain comatose, creating the impression of being dead. Similarly, I didn\'t see any way out of the next few years except to periodically exit my body at will and hope for the best.'
+        },
+        haemophile: {
+            description: 'Haemophilia is a disease in which the blood cannot clot properly, leading to continuous bleeding.'
+        },
+        rat_turds_choked: {
+            description: 'I wasn\'t sure how to end a song about a stage in my life .'
         }
     },
     lyrics: {
@@ -291,7 +303,13 @@ module.exports = {
                 },
                 {
                     time: 134,
-                    verse: 'Anyway, I\'m feeling healed. Still, hugging hurts…'
+                    verse: [
+                        'Anyway, I\'m feeling healed. Still,',
+                        {
+                            anchor: 'hugging hurts…',
+                            annotationKey: 'hugging_hurts'
+                        }
+                    ]
                 }
             ],
             [
@@ -301,11 +319,23 @@ module.exports = {
                 },
                 {
                     time: 147,
-                    verse: 'while if I last the fall playing possum'
+                    verse: [
+                        'while if I last the fall',
+                        {
+                            anchor: 'playing possum',
+                            annotationKey: 'playing_possum'
+                        }
+                    ]
                 },
                 {
                     time: 151,
-                    verse: 'is a toss-up. But where some haemophile'
+                    verse: [
+                        'is a toss-up. But where some',
+                        {
+                            anchor: 'haemophile',
+                            annotationKey: 'haemophile'
+                        }
+                    ]
                 },
                 {
                     time: 154,
@@ -317,7 +347,13 @@ module.exports = {
                 },
                 {
                     time: 162,
-                    verse: 'on rat turds choked.'
+                    verse: [
+                        'on',
+                        {
+                            anchor: 'rat turds choked.',
+                            annotationKey: 'rat_turds_choked'
+                        }
+                    ]
                 }
             ]
         ]
@@ -337,8 +373,8 @@ module.exports = {
                     neededHours: 3
                 }
             ],
-            workedHours: 13,
-            neededHours: 40
+            workedHours: 21,
+            neededHours: 21
         },
         {
             taskName: 'illustrations',
