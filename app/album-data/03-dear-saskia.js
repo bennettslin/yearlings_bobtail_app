@@ -2,7 +2,7 @@ module.exports = {
     title: 'Dear Saskia',
     speechBubbles: {
         narrative: 'Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, as I felt no cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing can come from longing to share in someone\'s strong faith and roots, since faith and roots stay strong precisely by not being shared. Sasha moved away in middle school, just as I began having to deal with bullies. That summer, I wrote her a letter on a family trip to Taiwan.',
-        backstory: 'As a kid, I marvelled at the Beatles for weaving melodies and chords so seamlessly. This song, one of the first I ever wrote, was an overzealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for. Texturally, I tried to match the passive-aggressive tone of the lyrics with woodwind screeches and bows scratched on violins.'
+        backstory: 'As a kid, I marvelled at the Beatles for weaving melodies and chords so seamlessly. This song, one of the first that I wrote, was an overzealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for. Texturally, I tried to match the passive-aggressive tone of the lyrics with woodwind screeches and bows scratched on violins.'
     },
     annotations: {
         record_highs: {
@@ -39,7 +39,23 @@ module.exports = {
             description: 'I panicked when Sasha was allowed to skip the third grade, as this opened new vistas for her that necessarily excluded me. With middle school now underway, I was reminded of this panic as Sasha navigated with such seeming ease the social landscape that I found so treacherous.'
         },
         wet_cheeked_papoose: {
-            description: 'Over time, Sasha and I sat together less and less frequently on the schoolbus. One afternoon, as her hair blew in my face from the seat ahead of mine, I realised that we were no longer peers. I felt like a papoose, or a Native American child, strapped to a basket on his mother\'s back, in dread of the day he would have to start walking on his own.'
+            description: 'Over time, Sasha and I sat together less and less frequently on the schoolbus. One afternoon, as her hair blew in my face from the seat ahead of mine, I realised that we were no longer peers. I felt like a papoose, or a Native American child, strapped to a basket on his mother\'s back, in anguish over having to start walking on his own.'
+        },
+        tetherboy: {
+            description: 'In one incident, a bully intentionally punched the tetherball while I hadn\'t yet cleared the court, getting me tangled in its rope and knocking my head against the pole. It is also assumed by some that a child kept on a tether by overprotective parents will later struggle to fend for themselves.'
+        },
+        anarchy_reigns: {
+            description: 'It was weird to be taught in history class that anarchy devolves into tyranny, and then to walk out onto the quad and witness this principle in action.'
+        },
+        narcing_to_the_aides: {
+            description: 'To narc is to be a snitch, named after narcotics officers who chase after drug dealers by going undercover as high school students. It caught me off guard that the school aides typically declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.'
+        },
+        jaw_was_stuck: {
+            description: 'In another incident, a bully came up from behind and put me in a chokehold while I waited for the schoolbus. This left me with a dislocated jaw that still troubles me from time to time.'
+        },
+        talk_canuck: {
+            description: 'The slang term Canuck refers to a Canadian. After the chokehold incident, I would clench my jaw to prevent it from locking whenever I spoke. This developed into a peculiar habit of pronunciation, such as saying the word "about" as "a boat," which some to this day mistake for a Canadian accent.',
+            reference: 'https://en.wikipedia.org/wiki/Canadian_raising'
         }
     },
     lyrics: {
@@ -215,15 +231,34 @@ module.exports = {
                 },
                 {
                     time: 95,
-                    verse: 'untied this "tetherboy," soothing in your lecture voice.'
+                    verse: [
+                        'untied this',
+                        {
+                            anchor: '"tetherboy,"',
+                            annotationKey: 'tetherboy'
+                        },
+                        'soothing in your lecture voice.'
+                    ]
                 },
                 {
                     time: 103,
-                    verse: 'Oh but Sasha, if anarchy reigns,'
+                    verse: [
+                        'Oh but Sasha, if',
+                        {
+                            anchor: 'anarchy reigns,',
+                            annotationKey: 'anarchy_reigns'
+                        }
+                    ]
                 },
                 {
                     time: 107,
-                    verse: 'then no one lives when narcing to the aides,'
+                    verse: [
+                        'then no one lives when',
+                        {
+                            anchor: 'narcing to the aides,',
+                            annotationKey: 'narcing_to_the_aides'
+                        }
+                    ]
                 },
                 {
                     time: 110,
@@ -237,7 +272,18 @@ module.exports = {
                 },
                 {
                     time: 122,
-                    verse: 'But though my jaw was stuck, so now I talk Canuck,'
+                    verse: [
+                        'But though my',
+                        {
+                            anchor: 'jaw was stuck,',
+                            annotationKey: 'jaw_was_stuck'
+                        },
+                        'so now I',
+                        {
+                            anchor: 'talk Canuck,',
+                            annotationKey: 'talk_canuck'
+                        }
+                    ]
                 },
                 {
                     time: 126,
