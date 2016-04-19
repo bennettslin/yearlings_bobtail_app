@@ -30,7 +30,7 @@ module.exports = {
             description: '… Jesus then rose on the third day.'
         },
         sole_assent: {
-            description: 'Hers was also to be the "sole ascent."'
+            description: 'Catherine wanted to break up, I didn\'t. But hers was also to be the "sole ascent."'
         },
         dirge_shed_deride: {
             description: 'A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone might listen to music differently. But Catherine mostly appreciated music for its lyrics, and as such, she wasn\'t impressed by my songwriting skills.'
@@ -50,7 +50,7 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Famous_Blue_Raincoat'
         },
         unknown_to_roam: {
-            description: 'As an itinerant community, the Irish Travellers are certainly known to roam. Also, raincoats are a slang term for condoms, which are infamously "unknown to Rome" due to the Catholic Church\'s stance against birth control. Our makeout sessions never got to the point where one would be necessary, though I always held out hope.'
+            description: 'As an itinerant community, the Irish Travellers are certainly known to roam. Also, raincoats are a slang term for condoms, which are infamously "unknown to Rome" due to the Catholic Church\'s opposition to birth control. Our makeout sessions never got to the point where one would be necessary, though I always held out hope.'
         },
         girl_in_glasses: {
             description: 'The critic Dorothy Parker, whose wit Catherine admired, famously quipped that "men seldom make passes at girls who wear glasses."',
@@ -80,7 +80,7 @@ module.exports = {
             description: 'Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.'
         },
         faked_this_x: {
-            description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. Since I had ashed myself, the cross was slanted. Also, since Catherine had vowed to remain a virgin until marriage, I would "fake the sex" for myself by masturbating alone.',
+            description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. Since I had ashed myself, the cross was slanted like the letter "X." Also, since Catherine had vowed to remain a virgin until marriage, I would "fake the sex" for myself by masturbating alone.',
             reference: 'https://en.wikipedia.org/wiki/Ash_Wednesday'
         },
         used_cigarette: {
@@ -91,13 +91,11 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Palm_Sunday'
         },
         catherine_vaut_bien: {
-            // TODO: Mention my desire to convert.
-            description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly needs.',
+            description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that were to convince Catherine to stay.',
             reference: 'https://en.wikipedia.org/wiki/Henry_IV_of_France'
         },
         cursed_to_be_born: {
-            // TODO: Review, Cult made me cynical about religious views.
-            description: 'I argued with Catherine that it didn\'t make sense for unbelievers to be born at all, since it meant trading the certainty of going to heaven for the likelihood of going to hell. It wasn\'t the most cogent argument, but that\'s as far as my views on religion had progressed at the time.'
+            description: 'One juvenile argument against the Catholic Church\'s pro-life stance is that it makes no sense for unbelievers to be born at all, since it means trading the certainty of going to heaven for the likelihood of going to hell.'
         },
         tragic_mask: {
             // TODO: Review, be more clear about the idea of drama

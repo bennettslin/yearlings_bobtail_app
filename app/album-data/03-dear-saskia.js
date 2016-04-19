@@ -33,7 +33,7 @@ module.exports = {
             description: 'Everyone I had known Sasha to crush on was Jewish, and these crushes in turn motivated her to be a better Jew. I was frustrated that anyone who could be part of this positive feedback loop had the winning advantage in "getting her."'
         },
         i_would_have_too: {
-            description: 'It seemed obvious to me that if Sasha were to want me, then certainly I would convert to Judaism.'
+            description: 'It seemed obvious to me that if Sasha were to want me, then I would certainly convert to Judaism.'
         },
         skipped_a_grade: {
             description: 'I panicked when Sasha was allowed to skip the third grade, as this opened new vistas for her that necessarily excluded me. With middle school now underway, I was reminded of this panic as Sasha navigated with seeming ease the same social landscape that I found so treacherous.'
