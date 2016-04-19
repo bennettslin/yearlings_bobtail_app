@@ -23,7 +23,7 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Grant%27s_Tomb'
         },
         laid_tourettes: {
-            description: 'Like those with Tourette syndrome who suffer from uncontrollable tics, we said things on impulse during the breakup. Also, Jesus was "laid to rest" on the first day…',
+            description: 'Like those with Tourette syndrome who suffer from uncontrollable tics, we said and did things on impulse during the breakup. Also, Jesus was "laid to rest" on the first day…',
             reference: 'https://en.wikipedia.org/wiki/Tourette_syndrome'
         },
         last_day_she_rose: {
@@ -33,26 +33,24 @@ module.exports = {
             description: 'Hers was also to be the "sole ascent."'
         },
         dirge_shed_deride: {
-            description: 'A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music differently. But Catherine mostly appreciated music for its lyrics, and as such, she wasn\'t impressed by my songwriting skills.'
+            description: 'A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone might listen to music differently. But Catherine mostly appreciated music for its lyrics, and as such, she wasn\'t impressed by my songwriting skills.'
         },
         pressed_for_an_opinion: {
-            description: 'After committing to become a better lyricist, I would ask Catherine for her honest critique. And so here, she literally puts down the James Joyce novel that she\'s reading to compliment my attempt at writing a clever verse.'
+            description: 'After committing to become a better lyricist, I would ask Catherine for her honest critique. In this imagined scenario that\'s perfectly telling of our actual relationship, she puts down the James Joyce novel that she\'s reading to compliment my attempt at writing a clever verse.'
         },
         with_joyce_oblivious: {
-            // TODO: Replace "cultured taste" to imply more accomplished instead
-            description: 'Her compliment is insincere, however, as she amuses herself by observing drolly, "My, Walt Whitman." After all, referencing a poet typically studied by middle schoolers is hardly a signifier of cultured taste. And so she\'s also figuratively putting me down, for my naive hope of becoming the James Joyce of lyricists.'
+            description: 'Her compliment is insincere, however, as she secretly amuses herself by drolly observing, "My, Walt Whitman." After all, referencing a poet typically studied by middle schoolers is hardly a signifier of expressive ability. And so she\'s also figuratively putting me down, for my naive hope of becoming the James Joyce of lyricists.'
         },
         outside_her_shelta: {
-            description: '"The Irish Travellers, who are predominantly Roman Catholic, speak a cryptic language called Shelta that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."',
+            description: '"The Irish Travellers, a predominantly Roman Catholic ethnic group, speak a cryptic language known as Shelta that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."',
             reference: 'https://en.wikipedia.org/wiki/Shelta'
         },
         famous_raincoat: {
-            // TODO: Tell how Catherine introduced me to Leonard Cohen.
-            description: 'Catherine and I would lie in bed listening to Leonard Cohen. We had an interesting conversation once about his song "Famous Blue Raincoat."',
+            description: 'Catherine introduced me to the music of Leonard Cohen, as we would lie in bed listening to his records. It was her impassioned reading of his song "Famous Blue Raincoat" that finally helped me to understand the heights that great lyrics can reach.',
             reference: 'https://en.wikipedia.org/wiki/Famous_Blue_Raincoat'
         },
         unknown_to_roam: {
-            description: 'The Irish Travellers are an itinerant community known to roam. Also, raincoats are a slang term for condoms, which are infamously "unknown to Rome" due to the Catholic Church\'s strict opposition to birth control.'
+            description: 'As an itinerant community, the Irish Travellers are certainly known to roam. Also, raincoats are a slang term for condoms, which are infamously "unknown to Rome" due to the Catholic Church\'s stance against birth control. Our makeout sessions never got to the point where one would be necessary, though I always held out hope.'
         },
         girl_in_glasses: {
             description: 'The critic Dorothy Parker, whose wit Catherine admired, famously quipped that "men seldom make passes at girls who wear glasses."',
@@ -82,8 +80,7 @@ module.exports = {
             description: 'Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.'
         },
         faked_this_x: {
-            // TODO: Mention "faked the sex"?
-            description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. Since I had ashed myself, the cross was slanted.',
+            description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. Since I had ashed myself, the cross was slanted. Also, since Catherine had vowed to remain a virgin until marriage, I would "fake the sex" for myself by masturbating alone.',
             reference: 'https://en.wikipedia.org/wiki/Ash_Wednesday'
         },
         used_cigarette: {
@@ -94,14 +91,16 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Palm_Sunday'
         },
         catherine_vaut_bien: {
+            // TODO: Mention my desire to convert.
             description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly needs.',
             reference: 'https://en.wikipedia.org/wiki/Henry_IV_of_France'
         },
         cursed_to_be_born: {
-            // Cult made me cynical about religious views.
+            // TODO: Review, Cult made me cynical about religious views.
             description: 'I argued with Catherine that it didn\'t make sense for unbelievers to be born at all, since it meant trading the certainty of going to heaven for the likelihood of going to hell. It wasn\'t the most cogent argument, but that\'s as far as my views on religion had progressed at the time.'
         },
         tragic_mask: {
+            // TODO: Review, be more clear about the idea of drama
             description: 'In those days, I would do anything just to write a song about it afterwards, so I could never tell how much it was all an act. It wasn\'t an easy habit to let go, since it made depression that much more bearable, and at times even comical.'
         },
         spreading_mole: {
