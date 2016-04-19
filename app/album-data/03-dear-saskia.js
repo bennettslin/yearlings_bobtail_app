@@ -67,7 +67,7 @@ module.exports = {
             description: 'Haemophilia is a disease in which blood cannot clot properly, leading to continuous bleeding.'
         },
         rat_turds_choked: {
-            description: 'I wasn\'t sure how to end a song about a stage in my life .'
+            description: 'I wasn\'t sure how to end a song about a traumatic stage of my life that mostly seems comical in retrospect. I decided I was happier to err on the side of comedy.'
         }
     },
     lyrics: {
