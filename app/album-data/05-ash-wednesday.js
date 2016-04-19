@@ -6,7 +6,7 @@ module.exports = {
     },
     annotations: {
         o_captain_my_captain: {
-            description: 'Walt Whitman wrote his elegy O Captain! My Captain! after hearing of Abraham Lincoln\'s assassination. I don\'t remember why I chose to reference it. I was probably saying "Oh Catherine" to myself a lot right after the breakup.',
+            description: 'Walt Whitman wrote his elegy O Captain! My Captain! after hearing of Abraham Lincoln\'s assassination. I don\'t remember why I chose to reference it. I was probably whimpering "Oh Catherine" to myself a lot right after the breakup.',
             reference: 'https://en.wikipedia.org/wiki/O_Captain!_My_Captain!'
         },
         bookless_room: {
@@ -23,8 +23,7 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Grant%27s_Tomb'
         },
         laid_tourettes: {
-            // TODO: Explain Tourette's more clearly?
-            description: 'Things were impulsively said that shouldn\'t have been said when we broke up. Also, Jesus was "laid to rest" on the first day…',
+            description: 'Like those with Tourette syndrome who suffer from uncontrollable tics, we said and did things on impulse during the breakup that were better left unsaid. Also, Jesus was "laid to rest" on the first day…',
             reference: 'https://en.wikipedia.org/wiki/Tourette_syndrome'
         },
         last_day_she_rose: {
@@ -32,9 +31,6 @@ module.exports = {
         },
         sole_assent: {
             description: 'Hers was also to be the "sole ascent."'
-        },
-        saving_herself_for_marriage: {
-            description: 'We never had sex, given that she was extremely devout.'
         },
         dirge_shed_deride: {
             description: 'Catherine didn\'t think much of my songwriting skills at the time. In all honesty, at that time they weren\'t very good.'
@@ -49,7 +45,7 @@ module.exports = {
             description: '… But of course her compliment is insincere, since referencing a poet typically studied by middle schoolers is hardly a signifier of cultured taste. And so she\'s also figuratively putting me down, for my naive hope to become the James Joyce of lyricists.'
         },
         outside_her_shelta: {
-            description: '"Outside her shelter," but also Shelta, the secret language of the Irish Travellers, who are predominantly Roman Catholic.',
+            description: '"The Irish Travellers, who are predominantly Roman Catholic, speak a cryptic language called Shelta that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was left stranded "outside her shelter."',
             reference: 'https://en.wikipedia.org/wiki/Shelta'
         },
         famous_raincoat: {
@@ -57,10 +53,10 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Famous_Blue_Raincoat'
         },
         unknown_to_roam: {
-            description: 'The Irish Travellers are an itinerant community known to roam. Also, raincoats are a slang term for condoms, which are famously "unknown to Rome."'
+            description: 'The Irish Travellers are an itinerant community known to roam. Also, raincoats are a slang term for condoms, which are infamously "unknown to Rome" due to the Catholic Church\'s strict opposition to birth control.'
         },
         girl_in_glasses: {
-            description: 'The critic Dorothy Parker, whose wit Catherine admired, made a famous quip about girls who wear glasses.',
+            description: 'The critic Dorothy Parker, whose wit Catherine admired, famously quipped that "men seldom make passes at girls who wear glasses."',
             reference: 'https://en.wikipedia.org/wiki/Dorothy_Parker'
         },
         went_clear: {
@@ -175,14 +171,7 @@ module.exports = {
                 },
                 {
                     time: 23,
-                    verse: [
-                        'But',
-                        {
-                            anchor: 'saving herself strictly for marriage,',
-                            annotationKey: 'saving_herself_for_marriage'
-                        },
-                        'or really from me?'
-                    ]
+                    verse: 'But saving herself strictly for marriage, or really from me?'
                 }
             ],
             [

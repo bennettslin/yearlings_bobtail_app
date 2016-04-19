@@ -67,6 +67,7 @@ module.exports = {
             description: 'Haemophilia is a disease in which blood cannot clot properly, leading to continuous bleeding.'
         },
         rat_turds_choked: {
+            // TODO: Mention that Sasha and I dated after the album was made?
             description: 'I wasn\'t sure how to end a song about a traumatic stage of my life that mostly seems comical in retrospect. I decided I was happier to err on the side of comedy.'
         }
     },
@@ -373,7 +374,7 @@ module.exports = {
                     neededHours: 3
                 }
             ],
-            workedHours: 21,
+            workedHours: 24,
             neededHours: 24
         },
         {
