@@ -6,7 +6,7 @@ module.exports = {
     },
     annotations: {
         o_captain_my_captain: {
-            description: 'Walt Whitman wrote his elegy O Captain! My Captain! after hearing of Abraham Lincoln\'s assassination. I don\'t remember why I chose to reference it. I was probably whimpering "Oh Catherine" to myself a lot right after the breakup.',
+            description: 'Walt Whitman wrote his elegy "O Captain! My Captain!" after hearing of Abraham Lincoln\'s assassination. I don\'t remember why I chose to reference it. I was probably whimpering "Oh Catherine" under my breath a lot right after the breakup.',
             reference: 'https://en.wikipedia.org/wiki/O_Captain!_My_Captain!'
         },
         bookless_room: {
@@ -23,7 +23,7 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Grant%27s_Tomb'
         },
         laid_tourettes: {
-            description: 'Like those with Tourette syndrome who suffer from uncontrollable tics, we said and did things on impulse during the breakup that were better left unsaid. Also, Jesus was "laid to rest" on the first day…',
+            description: 'Like those with Tourette syndrome who suffer from uncontrollable tics, we said things on impulse during the breakup that were better left unsaid in hindsight. Also, Jesus was "laid to rest" on the first day…',
             reference: 'https://en.wikipedia.org/wiki/Tourette_syndrome'
         },
         last_day_she_rose: {
@@ -33,13 +33,13 @@ module.exports = {
             description: 'Hers was also to be the "sole ascent."'
         },
         dirge_shed_deride: {
-            description: 'Catherine didn\'t think much of my songwriting skills at the time. In all honesty, at that time they weren\'t very good.'
+            description: 'Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music differently. But Catherine mostly appreciated music for its lyrics, and as such, she wasn\'t impressed by my songwriting skills.'
         },
         my_what_wit_man: {
             description: 'Or else spoken drolly, "My, Walt Whitman."'
         },
         putting_down_her_joyce: {
-            description: 'Catherine literally puts down the James Joyce novel that she\'s reading to compliment my attempt at writing a clever lyric…'
+            description: 'After committing to become a better lyricist, I would ask Catherine to critique my . And so here, she literally puts down the James Joyce novel that she\'s reading to compliment my attempt at writing a clever lyric.'
         },
         with_joyce_oblivious: {
             description: '… But of course her compliment is insincere, since referencing a poet typically studied by middle schoolers is hardly a signifier of cultured taste. And so she\'s also figuratively putting me down, for my naive hope to become the James Joyce of lyricists.'
