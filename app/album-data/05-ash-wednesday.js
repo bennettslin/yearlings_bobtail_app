@@ -23,7 +23,7 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Grant%27s_Tomb'
         },
         laid_tourettes: {
-            description: 'Like those with Tourette syndrome who suffer from uncontrollable tics, we said things on impulse during the breakup that were better left unsaid in hindsight. Also, Jesus was "laid to rest" on the first day…',
+            description: 'Like those with Tourette syndrome who suffer from uncontrollable tics, we said things on impulse during the breakup. Also, Jesus was "laid to rest" on the first day…',
             reference: 'https://en.wikipedia.org/wiki/Tourette_syndrome'
         },
         last_day_she_rose: {
@@ -33,22 +33,21 @@ module.exports = {
             description: 'Hers was also to be the "sole ascent."'
         },
         dirge_shed_deride: {
-            description: 'Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music differently. But Catherine mostly appreciated music for its lyrics, and as such, she wasn\'t impressed by my songwriting skills.'
+            description: 'A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music differently. But Catherine mostly appreciated music for its lyrics, and as such, she wasn\'t impressed by my songwriting skills.'
         },
-        my_what_wit_man: {
-            description: 'Or else spoken drolly, "My, Walt Whitman."'
-        },
-        putting_down_her_joyce: {
-            description: 'After committing to become a better lyricist, I would ask Catherine to critique my . And so here, she literally puts down the James Joyce novel that she\'s reading to compliment my attempt at writing a clever lyric.'
+        pressed_for_an_opinion: {
+            description: 'After committing to become a better lyricist, I would ask Catherine for her honest critique. And so here, she literally puts down the James Joyce novel that she\'s reading to compliment my attempt at writing a clever verse.'
         },
         with_joyce_oblivious: {
-            description: '… But of course her compliment is insincere, since referencing a poet typically studied by middle schoolers is hardly a signifier of cultured taste. And so she\'s also figuratively putting me down, for my naive hope to become the James Joyce of lyricists.'
+            // TODO: Replace "cultured taste" to imply more accomplished instead
+            description: 'Her compliment is insincere, however, as she amuses herself by observing drolly, "My, Walt Whitman." After all, referencing a poet typically studied by middle schoolers is hardly a signifier of cultured taste. And so she\'s also figuratively putting me down, for my naive hope of becoming the James Joyce of lyricists.'
         },
         outside_her_shelta: {
-            description: '"The Irish Travellers, who are predominantly Roman Catholic, speak a cryptic language called Shelta that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was left stranded "outside her shelter."',
+            description: '"The Irish Travellers, who are predominantly Roman Catholic, speak a cryptic language called Shelta that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."',
             reference: 'https://en.wikipedia.org/wiki/Shelta'
         },
         famous_raincoat: {
+            // TODO: Tell how Catherine introduced me to Leonard Cohen.
             description: 'Catherine and I would lie in bed listening to Leonard Cohen. We had an interesting conversation once about his song "Famous Blue Raincoat."',
             reference: 'https://en.wikipedia.org/wiki/Famous_Blue_Raincoat'
         },
@@ -80,7 +79,7 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Kateri_Tekakwitha'
         },
         safe_algonquin_abode: {
-            description: 'Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare, while Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.'
+            description: 'Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.'
         },
         faked_this_x: {
             // TODO: Mention "faked the sex"?
@@ -201,20 +200,18 @@ module.exports = {
             [
                 {
                     time: 46,
-                    verse: 'Oh Catherine, pressed for an opinion, sighed,'
+                    verse: [
+                        'Oh Catherine,',
+                        {
+                            anchor: 'pressed for an opinion,',
+                            annotationKey: 'pressed_for_an_opinion'
+                        },
+                        'sighed,'
+                    ]
                 },
                 {
                     time: 50,
-                    verse: [
-                        {
-                            anchor: '"My, what wit, man,"',
-                            annotationKey: 'my_what_wit_man'
-                        },
-                        {
-                            anchor: 'putting down her Joyce,',
-                            annotationKey: 'putting_down_her_joyce'
-                        }
-                    ]
+                    verse: '"My, what wit, man," putting down her Joyce,'
                 },
                 {
                     time: 54,
@@ -231,6 +228,7 @@ module.exports = {
                     verse: 'Couldn\'t heaven, her heaven,'
                 },
                 {
+                    // TODO: Comment?
                     time: 65,
                     verse: 'brimming over with smart boys, fit just one art boy'
                 },
