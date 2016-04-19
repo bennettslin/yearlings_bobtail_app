@@ -30,7 +30,7 @@ module.exports = {
             description: '… Jesus then rose on the third day.'
         },
         sole_assent: {
-            description: 'Catherine wanted to break up, I didn\'t. But hers was also to be the "sole ascent."'
+            description: 'Catherine wanted to break up; I didn\'t. But hers was also to be the "sole ascent."'
         },
         dirge_shed_deride: {
             description: 'A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone might listen to music differently. But Catherine mostly appreciated music for its lyrics, and as such, she wasn\'t impressed by my songwriting skills.'
