@@ -1,6 +1,6 @@
 import React from 'react';
+import StatsHelper from '../helpers/stats-helper.js';
 
-const StatsHelpers = require('../helpers/stats-helpers.js');
 const defaultProps = {
     annotations: {}
 };
@@ -21,9 +21,9 @@ class StatsSection extends React.Component {
     }
 
     render() {
-        var annotationsCount = StatsHelpers.getAnnotationsCount(this.props.annotations),
+        var annotationsCount = StatsHelper.getAnnotationsCount(this.props.annotations),
             annotationsCountRow = this._getCountRow('annotations count', annotationsCount),
-            annotationsWordCount = StatsHelpers.getTotalWordsInAnnotations(this.props.annotations),
+            annotationsWordCount = StatsHelper.getTotalWordsInAnnotations(this.props.annotations),
             countPerAnnotation = annotationsCount ? Math.ceil(annotationsWordCount / annotationsCount) : '--',
             countPerAnnotationRow = this._getCountRow('words per annotation', countPerAnnotation);
 

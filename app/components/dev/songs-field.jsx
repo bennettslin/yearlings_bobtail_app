@@ -1,7 +1,7 @@
 import React from 'react';
 import SongRow from './song-row.jsx';
+import ProgressHelper from '../helpers/progress-helper.js';
 
-const ProgressHelpers = require('../helpers/progress-helpers.js');
 const defaultProps = {
     songs: [],
     playedSongIndex: 0,
@@ -11,7 +11,7 @@ const defaultProps = {
 class SongsField extends React.Component {
 
     componentWillMount() {
-        const maxTotalNeededHours = ProgressHelpers.getMaxTotalNeededHoursFromSongs(this.props.songs);
+        const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(this.props.songs);
 
         this.setState({
             maxTotalNeededHours
@@ -26,7 +26,7 @@ class SongsField extends React.Component {
             songRows = songs.map(function(song, index) {
                 var songIndex = index + 1,
                     isSelected = this.props.playedSongIndex === songIndex,
-                    sumTask = ProgressHelpers.calculateSumTask(song.tasks);
+                    sumTask = ProgressHelper.calculateSumTask(song.tasks);
 
                 return (
                     <SongRow
@@ -40,7 +40,7 @@ class SongsField extends React.Component {
                     />
                 );
             }, this),
-            sumAllTasks = ProgressHelpers.calculateSumAllTasks(songs),
+            sumAllTasks = ProgressHelper.calculateSumAllTasks(songs),
             songsFooter = (
                 <SongRow key="footer" isFooter={true} sumTask={sumAllTasks} />
             );

@@ -1,14 +1,11 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
-
 import LyricsField from './lyrics-field.jsx';
 import NotesField from './notes-field.jsx';
 import SongsField from './songs-field.jsx';
-
 import { FormattedAnnotationPopup,
          FormattedLyricsColumn } from './text-formatter.jsx';
-
-const GlobalHelpers = require('../helpers/global-helpers.js');
+import GlobalHelper from '../helpers/global-helper.js';
 
 const defaultProps = {
     title: 'Yearling\'s Bobtail',
@@ -21,9 +18,9 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
+        this._handleBodyClick = this._handleBodyClick.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
-        this._handleBodyClick = this._handleBodyClick.bind(this);
 
         // Retrieve stored song index, if there is one. Song indices start at 1.
         this.handleSongChange(window.sessionStorage.playedSongIndex);
@@ -37,22 +34,14 @@ class App extends React.Component {
         };
     }
 
-    componentDidMount() {
-        document.body.addEventListener('click', this._handleBodyClick);
-    }
-
-    componentWillUnmount() {
-        document.body.removeEventListener('click', this._handleBodyClick);
-    }
-
     _handleBodyClick(e) {
-        var annotation = document.getElementById('annotation');
+        var annotation = this.refs.annotation;
 
         /**
          * Close annotation if anywhere outside annotation is clicked, with the
          * exception of another annotation link.
          */
-        if (annotation && annotation !== e.target && !annotation.contains(e.target) && !GlobalHelpers.hasParentWithTagName(e.target, 'a')) {
+        if (annotation && annotation !== e.target && !annotation.contains(e.target) && !GlobalHelper.hasParentWithTagName(e.target, 'a')) {
 
             this.handleAnnotationSelect(null, true);
         }
@@ -77,7 +66,7 @@ class App extends React.Component {
                 this.handleAnnotationSelect(null, true);
 
                 this.setState({
-                    playedSongIndex: playedSongIndex
+                    playedSongIndex
                 });
             }
         }
@@ -88,7 +77,7 @@ class App extends React.Component {
 
         if (setState) {
             this.setState({
-                annotationKey: annotationKey
+                annotationKey
             });
         }
     }
@@ -97,12 +86,13 @@ class App extends React.Component {
         var props = this.props,
             state = this.state,
             playedSongIndex = state.playedSongIndex,
-            playedSong = playedSongIndex ? props.songs[playedSongIndex - 1] : {},
+            playedSong = playedSongIndex ?
+                props.songs[playedSongIndex - 1] : {},
             annotationDescription = (playedSongIndex && !!state.annotationKey) ?
                 playedSong.annotations[state.annotationKey].description : null;
 
         return (
-            <div className="app">
+            <div ref="app" className="app" onClick={this._handleBodyClick}>
                 <div className="app-field-container songs">
                     <h1>{props.title}</h1>
                     <SongsField
@@ -118,7 +108,7 @@ class App extends React.Component {
                         transitionLeaveTimeout={100}
                     >
                     {!!state.annotationKey ?
-                        <div key="annotation" id="annotation" className="notes-field annotation-section">
+                        <div key="annotation" ref="annotation" className="notes-field annotation-section">
                             <FormattedAnnotationPopup
                                 annotationDescription={annotationDescription}
                             />

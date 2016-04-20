@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ProgressSection from './progress-section.jsx';
 import StatsSection from './stats-section.jsx';
 import { FormattedSpeechBubblesSection } from './text-formatter.jsx';

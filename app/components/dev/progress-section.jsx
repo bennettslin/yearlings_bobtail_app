@@ -1,8 +1,8 @@
 import React from 'react';
 import ProgressBar from './progress-bar.jsx';
+import GlobalHelper from '../helpers/global-helper.js';
+import ProgressHelper from '../helpers/progress-helper.js';
 
-const GlobalHelpers = require('../helpers/global-helpers.js');
-const ProgressHelpers = require('../helpers/progress-helpers.js');
 const defaultProps = {
     tasks: []
 };
@@ -10,7 +10,7 @@ const defaultProps = {
 class ProgressSection extends React.Component {
 
     componentWillMount() {
-        const maxTotalNeededHours = ProgressHelpers.getMaxTotalNeededHoursFromTasks(this.props.tasks);
+        const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromTasks(this.props.tasks);
 
         this.setState({
             maxTotalNeededHours
@@ -18,8 +18,8 @@ class ProgressSection extends React.Component {
     }
 
     componentWillUpdate(nextProps) {
-        if (!GlobalHelpers.areObjectsEqual(this.props.tasks, nextProps.tasks)) {
-            const maxTotalNeededHours = ProgressHelpers.getMaxTotalNeededHoursFromTasks(nextProps.tasks);
+        if (!GlobalHelper.areObjectsEqual(this.props.tasks, nextProps.tasks)) {
+            const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromTasks(nextProps.tasks);
 
             this.setState({
                 maxTotalNeededHours
@@ -91,7 +91,7 @@ class ProgressSection extends React.Component {
         var workedHours = sumTask.workedHours,
             neededHours = sumTask.neededHours,
             remainingHours = neededHours - workedHours,
-            remainingTimeString = ProgressHelpers.getRemainingTimeStringFromHours(remainingHours);
+            remainingTimeString = ProgressHelper.getRemainingTimeStringFromHours(remainingHours);
 
         return (
             <div className="task-text-wrapper footer">
@@ -108,7 +108,7 @@ class ProgressSection extends React.Component {
     render() {
         var tasks = this.props.tasks,
             taskRows = this._getTaskRows(tasks),
-            sumTask = ProgressHelpers.calculateSumTask(tasks),
+            sumTask = ProgressHelper.calculateSumTask(tasks),
             progressFooterContent = this._getProgressFooterContent(sumTask, 2),
             taskFooter;
 

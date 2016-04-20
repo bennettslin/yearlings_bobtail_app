@@ -1,7 +1,6 @@
 import React from 'react';
 import ProgressBar from './progress-bar.jsx';
-
-const ProgressHelpers = require('../helpers/progress-helpers.js');
+import ProgressHelper from '../helpers/progress-helper.js';
 
 const defaultProps = {
     songIndex: 0,
@@ -46,7 +45,7 @@ class SongRow extends React.Component {
         var workedHours = sumTask.workedHours,
             neededHours = sumTask.neededHours,
             remainingHours = neededHours - workedHours,
-            remainingTimeString = ProgressHelpers.getRemainingTimeStringFromHours(remainingHours);
+            remainingTimeString = ProgressHelper.getRemainingTimeStringFromHours(remainingHours);
 
         return (
             <div className="task-text-wrapper footer">
