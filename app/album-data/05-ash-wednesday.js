@@ -41,8 +41,12 @@ module.exports = {
         with_joyce_oblivious: {
             description: 'Her compliment is insincere, however, as she secretly amuses herself by drolly observing, "My, Walt Whitman." After all, referencing a poet typically studied by middle schoolers is hardly a signifier of expressive ability. And so she\'s also figuratively putting me down, for my naive hope of becoming the James Joyce of lyricists.'
         },
+        poised_with_brains: {
+            // TODO
+            description: ''
+        },
         outside_her_shelta: {
-            description: '"The Irish Travellers, a predominantly Roman Catholic ethnic group, speak a cryptic language known as Shelta that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."',
+            description: 'The Irish Travellers, a predominantly Catholic ethnic group, speak a cryptic language known as Shelta that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."',
             reference: 'https://en.wikipedia.org/wiki/Shelta'
         },
         famous_raincoat: {
@@ -91,7 +95,7 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Palm_Sunday'
         },
         catherine_vaut_bien: {
-            description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that were to convince Catherine to stay.',
+            description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that could convince Catherine to stay.',
             reference: 'https://en.wikipedia.org/wiki/Henry_IV_of_France'
         },
         cursed_to_be_born: {
@@ -102,7 +106,12 @@ module.exports = {
             description: 'In those days, I would do anything just to write a song about it afterwards, so I could never tell how much it was all an act. It wasn\'t an easy habit to let go, since it made depression that much more bearable, and at times even comical.'
         },
         spreading_mole: {
+            // TODO: Knowing that I was sick.
             description: 'By the end of the day, the ash was pretty smudged. Also, a spreading mole is a sign of skin cancer.'
+        },
+        whered_you_attend_mass: {
+            // TODO
+            description: ''
         }
 
     },
@@ -225,13 +234,18 @@ module.exports = {
                     verse: 'Couldn\'t heaven, her heaven,'
                 },
                 {
-                    // TODO: Comment?
                     time: 65,
                     verse: 'brimming over with smart boys, fit just one art boy'
                 },
                 {
                     time: 69,
-                    verse: 'who tried but failed to win her heart poised with brains?'
+                    verse: [
+                        'who tried but failed to win her heart',
+                        {
+                            anchor: 'poised with brains?',
+                            annotationKey: 'poised_with_brains'
+                        }
+                    ]
                 }
             ],
             [
@@ -403,9 +417,14 @@ module.exports = {
                     verse: 'And maybe if Catherine sees, she\'ll ask,'
                 },
                 {
-                    // TODO: Final comment?
                     time: 151,
-                    verse: '"So where\'d you attend Mass?"'
+                    verse: [
+                        '"So',
+                        {
+                            anchor: 'where\'d you attend Mass?"',
+                            annotationKey: 'whered_you_attend_mass'
+                        }
+                    ]
                 }
             ]
         ]

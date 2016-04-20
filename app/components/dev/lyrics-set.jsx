@@ -1,14 +1,13 @@
 import React from 'react';
-import FormattedLyricsColumn from './text-formatter.jsx';
 
 const defaultProps = {
-    columnIndex: 'left',
-    columnTitle: '',
+    setIndex: 'left',
+    setTitle: '',
     playedSongLyrics: [],
     handleAnnotationSelect() {}
 };
 
-class LyricsColumn extends React.Component {
+class LyricsSet extends React.Component {
 
     _parseLyric(lyric) {
         var annotation = lyric.annotation;
@@ -16,11 +15,11 @@ class LyricsColumn extends React.Component {
     }
 
     render() {
-        var columnIndex = this.props.columnIndex,
-            columnTitleHeader = this.props.columnTitle ? <h3>{this.props.columnTitle}</h3> : null,
-            doublespeakerClassName = this.props.columnTitle ? ' doublespeaker' : '',
-            alignRightClassName = this.props.columnTitle === 'right speaker' ? ' align-right' : '',
-            columnClassName = 'lyrics-column ' + columnIndex + doublespeakerClassName + alignRightClassName,
+        var setIndex = this.props.setIndex,
+            setTitleHeader = this.props.setTitle ? <h3>{this.props.setTitle}</h3> : null,
+            doublespeakerClassName = this.props.setTitle ? ' doublespeaker' : '',
+            alignRightClassName = this.props.setTitle === 'right speaker' ? ' align-right' : '',
+            setClassName = 'lyrics-column ' + setIndex + doublespeakerClassName + alignRightClassName,
             lyricsTextArea = (
                 <div className={'lyrics-text'}>
                     {this.props.playedSongLyrics.map(function(stanza, stanzaIndex) {
@@ -40,13 +39,13 @@ class LyricsColumn extends React.Component {
             );
 
         return (
-            <div className={columnClassName}>
-                {columnTitleHeader}
+            <div className={setClassName}>
+                {setTitleHeader}
                 {lyricsTextArea}
             </div>
         );
     }
 }
 
-LyricsColumn.defaultProps = defaultProps;
-export default LyricsColumn;
+LyricsSet.defaultProps = defaultProps;
+export default LyricsSet;

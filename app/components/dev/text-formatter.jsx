@@ -1,5 +1,5 @@
 import React from 'react';
-import LyricsColumn from './lyrics-column.jsx';
+import LyricsSet from './lyrics-set.jsx';
 import AnnotationPopup from './annotation-popup.jsx';
 import SpeechBubblesSection from './speech-bubbles-section.jsx';
 
@@ -60,9 +60,9 @@ const TextFormatter = {
     }
 }
 
-export class FormattedLyricsColumn extends React.Component {
+export class FormattedLyricsSet extends React.Component {
     render() {
-        return <LyricsColumn {...this.props} TextFormatter={TextFormatter} />;
+        return <LyricsSet {...this.props} TextFormatter={TextFormatter} />;
     }
 }
 
