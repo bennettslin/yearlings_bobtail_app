@@ -22,7 +22,7 @@ body {
     font-size: 1.1em;
 
     // Universal styling rules.
-    .app-column {
+    .app-field-container {
         position: relative;
         padding: 0 @column-padding @column-padding;
         box-sizing: border-box;
@@ -51,177 +51,177 @@ body {
                 display: inline-block;
             }
         }
-    }
 
-    .songs-column {
-        @button-column-width: 196px;
+        &.songs {
+            @button-column-width: 196px;
 
-        background-color: #fef;
-        font-size: 1.2em;
+            background-color: #fef;
+            font-size: 1.2em;
 
-        h3 {
-            margin-bottom: 0;
-        }
-
-        .song-row {
-            position: relative;
-            overflow: hidden;
-            margin: @row-height-margin 0;
-
-            .total-progress-bar {
-                background-color: #fcf;
-
-                .filled-progress-bar {
-                    background-color: #dad;
-                }
+            h3 {
+                margin-bottom: 0;
             }
 
-            &.played {
-                .total-progress-bar {
-                    background-color: #cfc;
-
-                    .filled-progress-bar {
-                        background-color: #ada;
-                    }
-                }
-
-                a {
-                    color: #484;
-
-                    &:hover {
-                        color: #7b7;
-                    }
-
-                    &:active {
-                        color: #aea;
-                    }
-                }
-            }
-
-            .song-text-wrapper {
-
-                // Include header and footer.
-                [class*="button"] {
-                    width: @button-column-width;
-                }
-            }
-        }
-    }
-
-    .notes-column {
-        @notes-column-width: 320px;
-
-        display: flex;
-        flex-direction: column;
-        width: @notes-column-width;
-        min-width: @notes-column-width;
-        padding: 0;
-        background-color: #fee;
-
-        .notes-field {
-            padding: 0px @column-padding @column-padding;
-            box-sizing: border-box;
-        }
-
-        .annotation-section {
-            .animation-mixin;
-            @overflow-margin-width: 5px;
-            position: absolute;
-            top: 45px;
-            left: -@overflow-margin-width;
-            width: @notes-column-width + (@overflow-margin-width * 2);
-            box-shadow: -2px 2px 8px 8px rgba(100, 100, 120, 0.2);
-            border-radius: 5px;
-            z-index: 1;
-            margin: auto 0;
-            background-color: #eff;
-        }
-
-        .progress-section {
-
-            .task-row {
-                // Header is first child.
-                &:not(:nth-child(2)) {
-                    margin-top: @row-height-margin;
-                }
-
-                font-size: @primary-row-font-size;
-            }
-
-            .subtask-row {
-                padding-left: 25px;
-                font-size: @secondary-row-font-size;
-            }
-
-            [class$="subrow"] {
+            .song-row {
                 position: relative;
                 overflow: hidden;
-                margin: @row-height-margin;
+                margin: @row-height-margin 0;
 
                 .total-progress-bar {
-                    background-color: #fcc;
+                    background-color: #fcf;
 
                     .filled-progress-bar {
-                        background-color: #daa;
+                        background-color: #dad;
                     }
                 }
 
-                .task-text-wrapper {
+                &.played {
+                    .total-progress-bar {
+                        background-color: #cfc;
 
-                    &.footer {
-                        text-align: right;
+                        .filled-progress-bar {
+                            background-color: #ada;
+                        }
+                    }
+
+                    a {
+                        color: #484;
+
+                        &:hover {
+                            color: #7b7;
+                        }
+
+                        &:active {
+                            color: #aea;
+                        }
+                    }
+                }
+
+                .song-text-wrapper {
+
+                    // Include header and footer.
+                    [class*="button"] {
+                        width: @button-column-width;
                     }
                 }
             }
         }
 
-        .stats-section {
-            .stats-row {
-                font-size: @primary-row-font-size;
-            }
-        }
-    }
+        &.notes {
+            @notes-column-width: 320px;
 
-    .lyrics-column {
-        display: flex;
-        background-color: #ffe;
-
-        .lyrics-columns {
             display: flex;
-        }
+            flex-direction: column;
+            width: @notes-column-width;
+            min-width: @notes-column-width;
+            padding: 0;
+            background-color: #fee;
 
-        .lyrics-column {
-            .transition(width 0.2s ease);
+            .notes-field {
+                padding: 0px @column-padding @column-padding;
+                box-sizing: border-box;
+            }
 
-            &.doublespeaker {
-                &.left {
-                    padding-right: @column-padding * 0.5;
+            .annotation-section {
+                .animation-mixin;
+                @overflow-margin-width: 5px;
+                position: absolute;
+                top: 45px;
+                left: -@overflow-margin-width;
+                width: @notes-column-width + (@overflow-margin-width * 2);
+                box-shadow: -2px 2px 8px 8px rgba(100, 100, 120, 0.2);
+                border-radius: 5px;
+                z-index: 1;
+                margin: auto 0;
+                background-color: #eff;
+            }
+
+            .progress-section {
+
+                .task-row {
+                    // Header is first child.
+                    &:not(:nth-child(2)) {
+                        margin-top: @row-height-margin;
+                    }
+
+                    font-size: @primary-row-font-size;
                 }
 
-                &.right {
-                    padding-left: @column-padding * 0.5;
+                .subtask-row {
+                    padding-left: 25px;
+                    font-size: @secondary-row-font-size;
+                }
+
+                [class$="subrow"] {
+                    position: relative;
+                    overflow: hidden;
+                    margin: @row-height-margin;
+
+                    .total-progress-bar {
+                        background-color: #fcc;
+
+                        .filled-progress-bar {
+                            background-color: #daa;
+                        }
+                    }
+
+                    .task-text-wrapper {
+
+                        &.footer {
+                            text-align: right;
+                        }
+                    }
                 }
             }
 
-            &.align-right {
-                // Keep left-aligned for now.
-                // text-align: right;
+            .stats-section {
+                .stats-row {
+                    font-size: @primary-row-font-size;
+                }
             }
         }
 
-        .lyrics-text {
-            @lyrics-verse-size: 1em;
-            font-size: @lyrics-verse-size;
+        &.lyrics {
+            display: flex;
+            background-color: #ffe;
 
-            [class^="stanza"] {
-                &:not(:last-child) {
-                    margin-bottom: @lyrics-verse-size;
+            .lyrics-sections-container {
+                display: flex;
+            }
+
+            .lyrics-section {
+                .transition(width 0.2s ease);
+
+                &.doublespeaker {
+                    &.left {
+                        padding-right: @column-padding * 0.5;
+                    }
+
+                    &.right {
+                        padding-left: @column-padding * 0.5;
+                    }
                 }
 
-                [class^="verse"] {
-                    @hanging-indent-width: 1.5em;
-                    padding-left: @hanging-indent-width;
-                    text-indent:-@hanging-indent-width;
+                &.align-right {
+                    // Keep left-aligned for now.
+                    // text-align: right;
+                }
+            }
+
+            .lyrics-text {
+                @lyrics-verse-size: 1em;
+                font-size: @lyrics-verse-size;
+
+                [class^="stanza"] {
+                    &:not(:last-child) {
+                        margin-bottom: @lyrics-verse-size;
+                    }
+
+                    [class^="verse"] {
+                        @hanging-indent-width: 1.5em;
+                        padding-left: @hanging-indent-width;
+                        text-indent:-@hanging-indent-width;
+                    }
                 }
             }
         }

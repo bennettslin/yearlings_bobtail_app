@@ -1,13 +1,13 @@
 import React from 'react';
 
 const defaultProps = {
-    setIndex: 'left',
-    setTitle: '',
+    sectionIndex: 'left',
+    sectionTitle: '',
     playedSongLyrics: [],
     handleAnnotationSelect() {}
 };
 
-class LyricsSet extends React.Component {
+class LyricsSection extends React.Component {
 
     _parseLyric(lyric) {
         var annotation = lyric.annotation;
@@ -15,11 +15,11 @@ class LyricsSet extends React.Component {
     }
 
     render() {
-        var setIndex = this.props.setIndex,
-            setTitleHeader = this.props.setTitle ? <h3>{this.props.setTitle}</h3> : null,
-            doublespeakerClassName = this.props.setTitle ? ' doublespeaker' : '',
-            alignRightClassName = this.props.setTitle === 'right speaker' ? ' align-right' : '',
-            setClassName = 'lyrics-column ' + setIndex + doublespeakerClassName + alignRightClassName,
+        var sectionIndex = this.props.sectionIndex,
+            sectionTitleHeader = this.props.sectionTitle ? <h3>{this.props.sectionTitle}</h3> : null,
+            doublespeakerClassName = this.props.sectionTitle ? ' doublespeaker' : '',
+            alignRightClassName = this.props.sectionTitle === 'right speaker' ? ' align-right' : '',
+            sectionClassName = 'lyrics-section ' + sectionIndex + doublespeakerClassName + alignRightClassName,
             lyricsTextArea = (
                 <div className={'lyrics-text'}>
                     {this.props.playedSongLyrics.map(function(stanza, stanzaIndex) {
@@ -39,13 +39,13 @@ class LyricsSet extends React.Component {
             );
 
         return (
-            <div className={setClassName}>
-                {setTitleHeader}
+            <div className={sectionClassName}>
+                {sectionTitleHeader}
                 {lyricsTextArea}
             </div>
         );
     }
 }
 
-LyricsSet.defaultProps = defaultProps;
-export default LyricsSet;
+LyricsSection.defaultProps = defaultProps;
+export default LyricsSection;

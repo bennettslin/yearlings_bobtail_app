@@ -97,25 +97,13 @@ class App extends React.Component {
         var props = this.props,
             state = this.state,
             playedSongIndex = state.playedSongIndex,
-            playedSong = playedSongIndex ? props.songs[playedSongIndex - 1] : null,
-            playedSongTitle = playedSongIndex ? playedSong.title : null,
-            playedSongSpeechBubbles = playedSongIndex ?
-                playedSong.speechBubbles : props.speechBubbles,
-            playedSongTasks = playedSongIndex ? playedSong.tasks : null,
-            playedSongLyrics = playedSongIndex ? playedSong.lyrics : null,
-            playedSongAnnotations = playedSongIndex ? playedSong.annotations : null,
+            playedSong = playedSongIndex ? props.songs[playedSongIndex - 1] : {},
             annotationDescription = (playedSongIndex && !!state.annotationKey) ?
-                playedSong.annotations[state.annotationKey].description : null,
-
-            // The transition group is wrapped in a span element.
-            transitionGroupStyle = {
-                position: 'fixed',
-                zIndex: 1
-            };
+                playedSong.annotations[state.annotationKey].description : null;
 
         return (
             <div className="app">
-                <div className="app-column songs-column">
+                <div className="app-field-container songs">
                     <h1>{props.title}</h1>
                     <SongsField
                         songs={props.songs}
@@ -123,9 +111,8 @@ class App extends React.Component {
                         handleSongChange={this.handleSongChange}
                     />
                 </div>
-                <div className="app-column notes-column">
+                <div className="app-field-container notes">
                     <CSSTransitionGroup
-                        style={transitionGroupStyle}
                         transitionName="annotation-animation"
                         transitionEnterTimeout={100}
                         transitionLeaveTimeout={100}
@@ -139,15 +126,15 @@ class App extends React.Component {
                     }
                     </CSSTransitionGroup>
                     <NotesField
-                        playedSongAnnotations={playedSongAnnotations}
-                        playedSongSpeechBubbles={playedSongSpeechBubbles}
-                        playedSongTasks={playedSongTasks}
+                        playedSongAnnotations={playedSong.annotations}
+                        playedSongSpeechBubbles={playedSong.speechBubbles || props.speechBubbles}
+                        playedSongTasks={playedSong.tasks || null}
                     />
                 </div>
                 {playedSongIndex ?
-                     <div className="app-column lyrics-column">
+                     <div className="app-field-container lyrics">
                         <LyricsField
-                            playedSongLyrics={playedSongLyrics}
+                            playedSongLyrics={playedSong.lyrics}
                             handleAnnotationSelect={this.handleAnnotationSelect}
                         />
                     </div> : null
