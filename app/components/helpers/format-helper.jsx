@@ -12,9 +12,9 @@ module.exports = {
         if (Array.isArray(text)) {
             return (
                 <span key={nestedIndex + '-' + index}>
-                    {text.map(function(textElement, index) {
+                    {text.map((textElement, index) => {
                         return this.getFormattedSpan(textElement, clickHandler, index, nestedIndex + 1);
-                    }.bind(this))}
+                    })}
                 </span>
             );
 

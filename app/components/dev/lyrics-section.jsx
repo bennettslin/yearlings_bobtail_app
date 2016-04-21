@@ -13,17 +13,17 @@ class LyricsSection extends React.Component {
     _getStanza(stanza, stanzaIndex) {
         return (
             <div className={'stanza-' + stanzaIndex} key={stanzaIndex}>
-                {stanza.map(function(lyric, verseIndex) {
-                    return this._getVerse(lyric, verseIndex);
-                }, this)}
+                {stanza.map((verse, verseIndex) => {
+                    return this._getVerse(verse, verseIndex);
+                })}
             </div>
         );
     }
 
-    _getVerse(lyric, verseIndex) {
+    _getVerse(verse, verseIndex) {
         return (
             <div className={'verse-' + verseIndex} key={verseIndex}>
-                {this._getParsedLyric(lyric)}
+                {this._getParsedLyric(verse)}
             </div>
         );
     }
@@ -42,9 +42,9 @@ class LyricsSection extends React.Component {
             sectionClassName = 'lyrics-section ' + sectionIndex + doublespeakerClassName + alignRightClassName,
             lyricsTextArea = (
                 <div className={'lyrics-text'}>
-                    {props.selectedSongLyrics.map(function(stanza, stanzaIndex) {
+                    {props.selectedSongLyrics.map((stanza, stanzaIndex) => {
                         return this._getStanza(stanza, stanzaIndex);
-                    }, this)}
+                    })}
                 </div>
             );
 

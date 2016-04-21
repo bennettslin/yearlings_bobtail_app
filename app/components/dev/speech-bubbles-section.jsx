@@ -9,7 +9,7 @@ const defaultProps = {
 class SpeechBubblesSection extends React.Component {
 
     render() {
-        const speechBubbles = SPEECH_BUBBLE_NAMES.map(function(bubbleName, index) {
+        const speechBubbles = SPEECH_BUBBLE_NAMES.map((bubbleName, index) => {
                 return (
                     <div
                         key={index}
@@ -19,7 +19,7 @@ class SpeechBubblesSection extends React.Component {
                         {FormatHelper.getFormattedSpan(this.props.selectedSongSpeechBubbles[SPEECH_BUBBLE_NAMES[index]])}
                     </div>
                 );
-            }, this);
+            });
 
         return (
             <div className="speech-bubbles-section">

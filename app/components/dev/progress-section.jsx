@@ -57,9 +57,9 @@ class ProgressSection extends React.Component {
 
     _getSubtaskRow(subtasks) {
         if (subtasks) {
-            const subtaskSubrows = subtasks.map(function(subtask, subtaskIndex) {
+            const subtaskSubrows = subtasks.map((subtask, subtaskIndex) => {
                     return this._getTaskSubrow(subtask, subtaskIndex, true);
-                }, this);
+                });
 
             return (
                 <div className="subtask-row">
@@ -73,7 +73,7 @@ class ProgressSection extends React.Component {
     }
 
     _getTaskRows(tasks) {
-        return tasks.map(function(task, taskIndex) {
+        return tasks.map((task, taskIndex) => {
             const taskSubrow = this._getTaskSubrow(task, taskIndex, false),
                 subtaskRow = this._getSubtaskRow(task.subtasks);
 
@@ -83,7 +83,7 @@ class ProgressSection extends React.Component {
                     {subtaskRow}
                 </div>
             );
-        }, this);
+        });
     }
 
     render() {

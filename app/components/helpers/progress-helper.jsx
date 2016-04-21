@@ -29,14 +29,14 @@ module.exports = {
      ***********/
 
     getMaxTotalNeededHoursFromSongs: function(songs = []) {
-        return songs.reduce(function(maxTotalNeededHours, song) {
+        return songs.reduce((maxTotalNeededHours, song) => {
             const totalNeededHours = this.calculateSumTask(song.tasks).neededHours;
             return Math.max(totalNeededHours, maxTotalNeededHours);
-        }.bind(this), 0);
+        }, 0);
     },
 
     getMaxTotalNeededHoursFromTasks: function(tasks = []) {
-        return tasks.reduce(function(maxTotalNeededHours, task) {
+        return tasks.reduce((maxTotalNeededHours, task) => {
             let maxFromTask = task.neededHours;
 
             if (task.subtasks) {
@@ -45,7 +45,7 @@ module.exports = {
             }
 
             return Math.max(maxTotalNeededHours, maxFromTask);
-        }.bind(this), 0);
+        }, 0);
     },
 
     calculateSumTask: function(tasks = []) {
@@ -58,7 +58,7 @@ module.exports = {
             return sumTask;
 
         } else {
-            return tasks.reduce(function(sumTask, task) {
+            return tasks.reduce((sumTask, task) => {
 
                 // Calculate sum of subtasks, if there are any.
                 if (task.subtasks) {
@@ -67,7 +67,7 @@ module.exports = {
                 }
 
                 return this._addTwoTasks(sumTask, task);
-            }.bind(this), sumTask);
+            }, sumTask);
         }
     },
 
@@ -77,9 +77,9 @@ module.exports = {
                 neededHours: 0
             };
 
-        return songs.reduce(function(sumAllTasks, song) {
+        return songs.reduce((sumAllTasks, song) => {
             return this._addTwoTasks(sumAllTasks, this.calculateSumTask(song.tasks));
-        }.bind(this), sumAllTasks);
+        }, sumAllTasks);
     },
 
     _addTwoTasks: function(task1 = {}, task2 = {}) {

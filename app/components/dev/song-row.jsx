@@ -41,21 +41,22 @@ class SongRow extends React.Component {
     }
 
     render() {
-        const sumTask = this.props.sumTask,
-            className = 'song-row' + (this.props.isSelected ? ' played' : ''),
-            progressBar = (!this.props.isHeader && !this.props.isFooter ?
+        const props = this.props,
+            sumTask = props.sumTask,
+            className = 'song-row' + (props.isSelected ? ' played' : ''),
+            progressBar = (!props.isHeader && !props.isFooter ?
                 <ProgressBar
                     sumTask={sumTask}
-                    maxTotalNeededHours={this.props.maxTotalNeededHours}
+                    maxTotalNeededHours={props.maxTotalNeededHours}
                 /> : null
             );
 
         let wrappedTextContent;
 
-        if (this.props.isHeader) {
+        if (props.isHeader) {
             wrappedTextContent = this._getHeaderContent();
 
-        } else if (this.props.isFooter) {
+        } else if (props.isFooter) {
             wrappedTextContent = ProgressHelper.getProgressFooterContent(sumTask, 1);
 
         } else {

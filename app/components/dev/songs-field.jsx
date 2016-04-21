@@ -23,7 +23,7 @@ class SongsField extends React.Component {
             songsHeader = (
                 <SongRow key="header" isHeader={true} />
             ),
-            songRows = songs.map(function(song, index) {
+            songRows = songs.map((song, index) => {
                 const songIndex = index + 1,
                     isSelected = this.props.selectedSongIndex === songIndex,
                     sumTask = ProgressHelper.calculateSumTask(song.tasks);
@@ -39,7 +39,7 @@ class SongsField extends React.Component {
                         handleSongChange={this.props.handleSongChange}
                     />
                 );
-            }, this),
+            }),
             sumAllTasks = ProgressHelper.calculateSumAllTasks(songs),
             songsFooter = (
                 <SongRow key="footer" isFooter={true} sumTask={sumAllTasks} />
