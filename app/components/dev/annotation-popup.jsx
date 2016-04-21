@@ -8,7 +8,7 @@ const defaultProps = {
 class AnnotationPopup extends React.Component {
 
     render() {
-        var annotationSpan = FormatHelper.getFormattedSpan(this.props.annotationDescription);
+        const annotationSpan = FormatHelper.getFormattedSpan(this.props.annotationDescription);
 
         return (
             <div className="annotation-popup">

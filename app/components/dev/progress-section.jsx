@@ -37,7 +37,7 @@ class ProgressSection extends React.Component {
     }
 
     _getTaskSubrow(task, taskIndex, isSubtask) {
-        var className = isSubtask ? 'subtask-subrow' : 'task-subrow';
+        const className = isSubtask ? 'subtask-subrow' : 'task-subrow';
         return (
             <div key={taskIndex} className={className}>
                 {this._getProgressBar(task)}
@@ -57,7 +57,7 @@ class ProgressSection extends React.Component {
 
     _getSubtaskRow(subtasks) {
         if (subtasks) {
-            var subtaskSubrows = subtasks.map(function(subtask, subtaskIndex) {
+            const subtaskSubrows = subtasks.map(function(subtask, subtaskIndex) {
                     return this._getTaskSubrow(subtask, subtaskIndex, true);
                 }, this);
 
@@ -74,7 +74,7 @@ class ProgressSection extends React.Component {
 
     _getTaskRows(tasks) {
         return tasks.map(function(task, taskIndex) {
-            var taskSubrow = this._getTaskSubrow(task, taskIndex, false),
+            const taskSubrow = this._getTaskSubrow(task, taskIndex, false),
                 subtaskRow = this._getSubtaskRow(task.subtasks);
 
             return (
@@ -87,19 +87,17 @@ class ProgressSection extends React.Component {
     }
 
     render() {
-        var tasks = this.props.tasks,
+        const tasks = this.props.tasks,
             taskRows = this._getTaskRows(tasks),
             sumTask = ProgressHelper.calculateSumTask(tasks),
             progressFooterContent = ProgressHelper.getProgressFooterContent(sumTask, 2),
-            taskFooter;
-
-        taskFooter = (
-            <div key="footer" className="task-row">
-                <div className="task-subrow">
-                    {progressFooterContent}
+            taskFooter = (
+                <div key="footer" className="task-row">
+                    <div className="task-subrow">
+                        {progressFooterContent}
+                    </div>
                 </div>
-            </div>
-        );
+            );
 
         return (
             <div className="progress-section">

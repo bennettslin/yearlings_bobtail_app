@@ -68,7 +68,7 @@ module.exports = {
         },
         rat_turds_choked: {
             // TODO: Mention that Sasha and I dated after the album was made?
-            description: 'I wasn\'t sure how to end a song about a traumatic stage of my life that mostly seems comical in retrospect. I decided I was happier to err on the side of comedy.'
+            description: 'I wasn\'t sure how to end a song about a traumatic stage of my life that mostly seems comical in retrospect. I decided I was happier to err on the side of humour.'
         }
     },
     lyrics: {

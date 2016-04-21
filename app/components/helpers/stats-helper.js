@@ -1,29 +1,21 @@
 module.exports = {
 
-    getAnnotationsCount: function(annotationsObject) {
-        if (annotationsObject) {
-            return Object.keys(annotationsObject).length;
-        } else {
-            return 0;
-        }
+    getAnnotationsCount: function(annotationsObject = {}) {
+        return Object.keys(annotationsObject).length;
     },
 
-    getTotalWordsInAnnotations: function(annotationsObject) {
-        if (annotationsObject) {
-            var objectKeys = Object.keys(annotationsObject);
+    getTotalWordsInAnnotations: function(annotationsObject = {}) {
+        const objectKeys = Object.keys(annotationsObject);
 
-            return objectKeys.reduce(function(wordCount, objectKey) {
-                var annotation = annotationsObject[objectKey].description;
+        return objectKeys.reduce(function(wordCount, objectKey) {
+            const annotation = annotationsObject[objectKey].description;
 
-                return wordCount + this._getTotalWordsInAnnotation(annotation);
+            return wordCount + this._getTotalWordsInAnnotation(annotation);
 
-            }.bind(this), 0);
-        } else {
-            return 0;
-        }
+        }.bind(this), 0);
     },
 
-    _getTotalWordsInAnnotation: function(annotation) {
+    _getTotalWordsInAnnotation: function(annotation = '') {
         if (annotation instanceof Array) {
             return annotation.reduce(function(wordCount, annotationValue) {
                 return wordCount + this._getTotalWordsInAnnotation(annotationValue);
@@ -31,7 +23,7 @@ module.exports = {
 
         } else if (typeof annotation === 'object') {
             // There will only ever be one of these keys.
-            var possibleKeys = ['italic', 'emphasis', 'anchor'];
+            const possibleKeys = ['italic', 'emphasis', 'anchor'];
 
             return possibleKeys.reduce(function(wordCount, possibleKey) {
                 if (annotation[possibleKey]) {

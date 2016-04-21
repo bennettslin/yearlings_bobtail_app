@@ -4,9 +4,9 @@ import SpeechBubblesSection from './speech-bubbles-section.jsx';
 import StatsSection from './stats-section.jsx';
 
 const defaultProps = {
-    playedSongAnnotations: {},
-    playedSongSpeechBubbles: {},
-    playedSongTasks: {}
+    selectedSongAnnotations: {},
+    selectedSongSpeechBubbles: {},
+    selectedSongTasks: {}
 };
 
 class NotesField extends React.Component {
@@ -17,14 +17,14 @@ class NotesField extends React.Component {
         return (
             <div className="notes-field">
                 <StatsSection
-                    annotations={props.playedSongAnnotations}
+                    annotations={props.selectedSongAnnotations}
                 />
                 <SpeechBubblesSection
-                    playedSongSpeechBubbles={props.playedSongSpeechBubbles}
+                    selectedSongSpeechBubbles={props.selectedSongSpeechBubbles}
                 />
-                {props.playedSongTasks ?
+                {props.selectedSongTasks ?
                     <ProgressSection
-                        tasks={props.playedSongTasks}
+                        tasks={props.selectedSongTasks}
                     /> : null
                 }
             </div>

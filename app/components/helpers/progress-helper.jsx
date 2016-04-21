@@ -6,8 +6,8 @@ module.exports = {
      * MARKUP *
      **********/
 
-    getProgressFooterContent: function(sumTask, fontSize) {
-        var workedHours = sumTask.workedHours,
+    getProgressFooterContent: function(sumTask = 0, fontSize = 1) {
+        const workedHours = sumTask.workedHours,
             neededHours = sumTask.neededHours,
             remainingHours = neededHours - workedHours,
             remainingTimeString = this.getRemainingTimeStringFromHours(remainingHours);
@@ -28,19 +28,19 @@ module.exports = {
      * UTILITY *
      ***********/
 
-    getMaxTotalNeededHoursFromSongs: function(songs) {
+    getMaxTotalNeededHoursFromSongs: function(songs = []) {
         return songs.reduce(function(maxTotalNeededHours, song) {
-            var totalNeededHours = this.calculateSumTask(song.tasks).neededHours;
+            const totalNeededHours = this.calculateSumTask(song.tasks).neededHours;
             return Math.max(totalNeededHours, maxTotalNeededHours);
         }.bind(this), 0);
     },
 
-    getMaxTotalNeededHoursFromTasks: function(tasks) {
+    getMaxTotalNeededHoursFromTasks: function(tasks = []) {
         return tasks.reduce(function(maxTotalNeededHours, task) {
-            var maxFromTask = task.neededHours;
+            let maxFromTask = task.neededHours;
 
             if (task.subtasks) {
-                var maxFromSubtasks = this.getMaxTotalNeededHoursFromTasks(task.subtasks);
+                const maxFromSubtasks = this.getMaxTotalNeededHoursFromTasks(task.subtasks);
                 maxFromTask = Math.max(maxFromSubtasks, maxFromTask);
             }
 
@@ -48,13 +48,13 @@ module.exports = {
         }.bind(this), 0);
     },
 
-    calculateSumTask: function(tasks) {
-        var sumTask = {
+    calculateSumTask: function(tasks = []) {
+        const sumTask = {
                 workedHours: 0,
                 neededHours: 0
             };
 
-        if (!tasks) {
+        if (tasks.length === 0) {
             return sumTask;
 
         } else {
@@ -62,7 +62,7 @@ module.exports = {
 
                 // Calculate sum of subtasks, if there are any.
                 if (task.subtasks) {
-                    var sumSubtask = this.calculateSumTask(task.subtasks);
+                    const sumSubtask = this.calculateSumTask(task.subtasks);
                     task = this._addTwoTasks(sumSubtask, task);
                 }
 
@@ -71,8 +71,8 @@ module.exports = {
         }
     },
 
-    calculateSumAllTasks: function(songs) {
-        var sumAllTasks = {
+    calculateSumAllTasks: function(songs = []) {
+        const sumAllTasks = {
                 workedHours: 0,
                 neededHours: 0
             };
@@ -82,28 +82,22 @@ module.exports = {
         }.bind(this), sumAllTasks);
     },
 
-    _addTwoTasks: function(task1, task2) {
-        if (!task1) {
-            return task2;
-
-        } else if (!task2) {
-            return task1;
-
-        } else {
-            return {
-                workedHours: task1.workedHours + task2.workedHours,
-                neededHours: task1.neededHours + task2.neededHours
-            };
-        }
+    _addTwoTasks: function(task1 = {}, task2 = {}) {
+        return {
+            workedHours: (task1.workedHours || 0) +
+                (task2.workedHours || 0),
+            neededHours: (task1.neededHours || 0) +
+                (task2.neededHours || 0)
+        };
     },
 
-    _getRemainingTimeFromHours: function(hours) {
+    _getRemainingTimeFromHours: function(hours = 0) {
         /**
          * Assume 3 hours per weekday, and 15 hours per weekend.
          * So each week is 30 hours, so on average each day is
          * 4.3 hours.
          */
-        var HOURS_IN_DAY = 30 / 7,
+        const HOURS_IN_DAY = 30 / 7,
             DAYS_IN_WEEK = 7,
             DAYS_IN_MONTH = 365 / 12,
             totalDays = hours / HOURS_IN_DAY,
@@ -118,8 +112,8 @@ module.exports = {
         };
     },
 
-    getRemainingTimeStringFromHours: function(hours) {
-        var remainingTimeObject = this._getRemainingTimeFromHours(hours),
+    getRemainingTimeStringFromHours: function(hours = 0) {
+        const remainingTimeObject = this._getRemainingTimeFromHours(hours),
             months = remainingTimeObject.months,
             weeks = remainingTimeObject.weeks,
             days = remainingTimeObject.days;

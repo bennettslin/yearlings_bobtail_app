@@ -4,6 +4,7 @@ import AnnotationPopup from './annotation-popup.jsx';
 import LyricsField from './lyrics-field.jsx';
 import NotesField from './notes-field.jsx';
 import SongsField from './songs-field.jsx';
+import SongPlayerSection from './song-player-section.jsx';
 import GlobalHelper from '../helpers/global-helper.js';
 
 const defaultProps = {
@@ -21,20 +22,22 @@ class App extends React.Component {
         this.handleSongChange = this.handleSongChange.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
 
-        // Retrieve stored song index, if there is one. Song indices start at 1.
-        this.handleSongChange(window.sessionStorage.playedSongIndex);
+        // Retrieve stored song indices, if any. Song indices start at 1.
+        this.handleSongChange(window.sessionStorage.playedSongIndex, 'played');
+        this.handleSongChange(window.sessionStorage.selectedSongIndex, 'selected');
 
         // Retrieve stored annotation key, if there is one.
         this.handleAnnotationSelect(window.sessionStorage.annotationKey);
 
         this.state = {
             playedSongIndex: parseInt(window.sessionStorage.playedSongIndex) || 0,
+            selectedSongIndex: parseInt(window.sessionStorage.selectedSongIndex) || 0,
             annotationKey: window.sessionStorage.annotationKey
         };
     }
 
     _handleBodyClick(e) {
-        var annotation = this.refs.annotation;
+        const annotation = this.refs.annotation;
 
         /**
          * Close annotation if anywhere outside annotation is clicked, with the
@@ -49,27 +52,33 @@ class App extends React.Component {
         }
     }
 
-    handleSongChange(playedSongIndex, setState) {
+    handleSongChange(songIndex = 0, actionType = 'selected', setState = false) {
 
-        if (typeof playedSongIndex === 'string') {
-            playedSongIndex = parseInt(playedSongIndex) || 0;
+        if (typeof songIndex === 'string') {
+            songIndex = parseInt(songIndex) || 0;
         }
 
-        if (playedSongIndex >= 0 && playedSongIndex < this.props.songs.length) {
+        if (songIndex >= 0 && songIndex < this.props.songs.length) {
 
             // Store song index in session.
-            window.sessionStorage.playedSongIndex = playedSongIndex;
+            window.sessionStorage[actionType + 'SongIndex'] = songIndex;
 
             if (setState) {
                 /**
-                 * If setting the song index, then also reset the stored
-                 * annotation key.
+                 * Also reset the stored annotation key if setting the selected
+                 * song index.
                  */
-                this.handleAnnotationSelect(null, true);
+                if (actionType === 'selected') {
+                    this.handleAnnotationSelect(null, true);
+                    this.setState({
+                        selectedSongIndex: songIndex
+                    });
 
-                this.setState({
-                    playedSongIndex
-                });
+                } else if (actionType === 'played') {
+                    this.setState({
+                        playedSongIndex: songIndex
+                    });
+                }
             }
         }
     }
@@ -85,26 +94,33 @@ class App extends React.Component {
     }
 
     render() {
-        var props = this.props,
+        const props = this.props,
             state = this.state,
             playedSongIndex = state.playedSongIndex,
-            playedSong = playedSongIndex ?
-                props.songs[playedSongIndex - 1] : {},
-            annotationDescription = (playedSongIndex && !!state.annotationKey) ?
-                playedSong.annotations[state.annotationKey].description : null;
+            selectedSongIndex = state.selectedSongIndex,
+            selectedSong = selectedSongIndex ?
+                props.songs[selectedSongIndex - 1] : {},
+            annotationDescription = (selectedSongIndex && !!state.annotationKey) ?
+                selectedSong.annotations[state.annotationKey].description : null;
 
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
                 <div className="app-field-container songs">
                     <h1>{props.title}</h1>
-                    <SongsField
+                    <SongPlayerSection
                         songs={props.songs}
                         playedSongIndex={playedSongIndex}
+                        handleSongChange={this.handleSongChange}
+                        />
+                    <SongsField
+                        songs={props.songs}
+                        selectedSongIndex={selectedSongIndex}
                         handleSongChange={this.handleSongChange}
                     />
                 </div>
                 <div className="app-field-container notes">
                     <CSSTransitionGroup
+                        style={{ position: 'fixed', zIndex: 1 }}
                         transitionName="annotation-animation"
                         transitionEnterTimeout={100}
                         transitionLeaveTimeout={100}
@@ -118,15 +134,15 @@ class App extends React.Component {
                     }
                     </CSSTransitionGroup>
                     <NotesField
-                        playedSongAnnotations={playedSong.annotations}
-                        playedSongSpeechBubbles={playedSong.speechBubbles || props.speechBubbles}
-                        playedSongTasks={playedSong.tasks || null}
+                        selectedSongAnnotations={selectedSong.annotations}
+                        selectedSongSpeechBubbles={selectedSong.speechBubbles || props.speechBubbles}
+                        selectedSongTasks={selectedSong.tasks || null}
                     />
                 </div>
-                {playedSongIndex ?
+                {selectedSongIndex ?
                      <div className="app-field-container lyrics">
                         <LyricsField
-                            playedSongLyrics={playedSong.lyrics}
+                            selectedSongLyrics={selectedSong.lyrics}
                             handleAnnotationSelect={this.handleAnnotationSelect}
                         />
                     </div> : null

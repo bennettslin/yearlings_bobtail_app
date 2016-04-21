@@ -4,7 +4,7 @@ import ProgressHelper from '../helpers/progress-helper.jsx';
 
 const defaultProps = {
     songs: [],
-    playedSongIndex: 0,
+    selectedSongIndex: 0,
     handleSongChange() {}
 };
 
@@ -19,13 +19,13 @@ class SongsField extends React.Component {
     }
 
     render() {
-        var songs = this.props.songs,
+        const songs = this.props.songs,
             songsHeader = (
                 <SongRow key="header" isHeader={true} />
             ),
             songRows = songs.map(function(song, index) {
-                var songIndex = index + 1,
-                    isSelected = this.props.playedSongIndex === songIndex,
+                const songIndex = index + 1,
+                    isSelected = this.props.selectedSongIndex === songIndex,
                     sumTask = ProgressHelper.calculateSumTask(song.tasks);
 
                 return (

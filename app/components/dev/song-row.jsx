@@ -21,7 +21,7 @@ class SongRow extends React.Component {
     _getSongContent(sumTask) {
         return (
             <div className="song-text-wrapper">
-                <a className="text-cell button" onClick={this.props.handleSongChange.bind(null, this.props.songIndex, true)}>
+                <a className="text-cell button" onClick={this.props.handleSongChange.bind(null, this.props.songIndex, 'selected', true)}>
                     {this.props.songIndex}. {this.props.songTitle}
                 </a>
                 <span className="text-cell progress">
@@ -34,22 +34,23 @@ class SongRow extends React.Component {
     _getHeaderContent() {
         return (
             <div className="song-text-wrapper">
-                <h3 className="text-cell button-label">Song</h3>
-                <h3 className="text-cell progress">Progress</h3>
+                <h3 className="text-cell button-label">song</h3>
+                <h3 className="text-cell progress">progress</h3>
             </div>
         );
     }
 
     render() {
-        var sumTask = this.props.sumTask,
+        const sumTask = this.props.sumTask,
             className = 'song-row' + (this.props.isSelected ? ' played' : ''),
             progressBar = (!this.props.isHeader && !this.props.isFooter ?
                 <ProgressBar
                     sumTask={sumTask}
                     maxTotalNeededHours={this.props.maxTotalNeededHours}
                 /> : null
-            ),
-            wrappedTextContent;
+            );
+
+        let wrappedTextContent;
 
         if (this.props.isHeader) {
             wrappedTextContent = this._getHeaderContent();

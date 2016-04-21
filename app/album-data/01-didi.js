@@ -101,9 +101,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Zeizei
-                     */
                     time: 52,
                     verse: [
                         'Cause I get sick of hearing,',

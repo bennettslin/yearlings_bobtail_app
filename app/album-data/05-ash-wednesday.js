@@ -84,7 +84,7 @@ module.exports = {
             description: 'Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.'
         },
         faked_this_x: {
-            description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. Since I had ashed myself, the cross was slanted like the letter "X." Also, since Catherine had vowed to remain a virgin until marriage, I would "fake the sex" for myself by masturbating alone.',
+            description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter "X." Also, since Catherine had vowed to remain a virgin until marriage, I would "fake the sex" for myself by masturbating alone.',
             reference: 'https://en.wikipedia.org/wiki/Ash_Wednesday'
         },
         used_cigarette: {
@@ -95,19 +95,17 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Palm_Sunday'
         },
         catherine_vaut_bien: {
-            description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that could convince Catherine to stay.',
+            description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that could get Catherine to stay.',
             reference: 'https://en.wikipedia.org/wiki/Henry_IV_of_France'
         },
         cursed_to_be_born: {
             description: 'One juvenile argument against the Catholic Church\'s pro-life stance is that it makes no sense for unbelievers to be born at all, since it means trading the certainty of going to heaven for the likelihood of going to hell.'
         },
         tragic_mask: {
-            // TODO: Review, be more clear about the idea of drama
-            description: 'In those days, I would do anything just to write a song about it afterwards, so I could never tell how much it was all an act. It wasn\'t an easy habit to let go, since it made depression that much more bearable, and at times even comical.'
+            description: 'I learned early on that comedy and tragedy are two sides of the same coin. After all, every misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic aspects of any misfortune. The downside is that in my ongoing quest for newsworthy outcomes, whether good or bad, I could never tell whether anything I did was just an act.'
         },
         spreading_mole: {
-            // TODO: Knowing that I was sick.
-            description: 'By the end of the day, the ash was pretty smudged. Also, a spreading mole is a sign of skin cancer.'
+            description: 'By day\'s end, the ash was pretty smudged. Also, a spreading mole is a sign of cancer, which is fitting since I wasn\'t sure how sick it is to fake being Catholic.'
         },
         whered_you_attend_mass: {
             // TODO

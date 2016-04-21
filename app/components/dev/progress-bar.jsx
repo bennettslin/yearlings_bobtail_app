@@ -11,17 +11,14 @@ const defaultProps = {
 class ProgressBar extends React.Component {
 
     render() {
-        var sumTask = this.props.sumTask,
-            filledStyle,
-            totalStyle;
+        const sumTask = this.props.sumTask,
+            filledStyle = {
+                width: (sumTask.workedHours / (sumTask.neededHours || 0.01) * 100) + '%'
+            },
 
-        filledStyle = {
-            width: (sumTask.workedHours / (sumTask.neededHours || 0.01) * 100) + '%'
-        };
-
-        totalStyle = {
-            width: (sumTask.neededHours / (this.props.maxTotalNeededHours || 0.01) * 100) + '%'
-        }
+            totalStyle = {
+                width: (sumTask.neededHours / (this.props.maxTotalNeededHours || 0.01) * 100) + '%'
+            };
 
         return (
             <div className="total-progress-bar" style={totalStyle}>

@@ -4,37 +4,46 @@ import FormatHelper from '../helpers/format-helper.jsx';
 const defaultProps = {
     sectionIndex: 'left',
     sectionTitle: '',
-    playedSongLyrics: [],
+    selectedSongLyrics: [],
     handleAnnotationSelect() {}
 };
 
 class LyricsSection extends React.Component {
 
-    _parseLyric(lyric) {
-        var annotation = lyric.annotation;
+    _getStanza(stanza, stanzaIndex) {
+        return (
+            <div className={'stanza-' + stanzaIndex} key={stanzaIndex}>
+                {stanza.map(function(lyric, verseIndex) {
+                    return this._getVerse(lyric, verseIndex);
+                }, this)}
+            </div>
+        );
+    }
+
+    _getVerse(lyric, verseIndex) {
+        return (
+            <div className={'verse-' + verseIndex} key={verseIndex}>
+                {this._getParsedLyric(lyric)}
+            </div>
+        );
+    }
+
+    _getParsedLyric(lyric) {
+        const annotation = lyric.annotation;
         return FormatHelper.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
     }
 
     render() {
-        var sectionIndex = this.props.sectionIndex,
-            sectionTitleHeader = this.props.sectionTitle ? <h3>{this.props.sectionTitle}</h3> : null,
-            doublespeakerClassName = this.props.sectionTitle ? ' doublespeaker' : '',
-            alignRightClassName = this.props.sectionTitle === 'right speaker' ? ' align-right' : '',
+        const props = this.props,
+            sectionIndex = props.sectionIndex,
+            sectionTitleHeader = props.sectionTitle ? <h3>{props.sectionTitle}</h3> : null,
+            doublespeakerClassName = props.sectionTitle ? ' doublespeaker' : '',
+            alignRightClassName = props.sectionTitle === 'right speaker' ? ' align-right' : '',
             sectionClassName = 'lyrics-section ' + sectionIndex + doublespeakerClassName + alignRightClassName,
             lyricsTextArea = (
                 <div className={'lyrics-text'}>
-                    {this.props.playedSongLyrics.map(function(stanza, stanzaIndex) {
-                        return (
-                            <div className={'stanza-' + stanzaIndex} key={stanzaIndex}>
-                                {stanza.map(function(lyric, verseIndex) {
-                                    return (
-                                        <div className={'verse-' + verseIndex} key={verseIndex}>
-                                            {this._parseLyric(lyric)}
-                                        </div>
-                                    )
-                                }, this)}
-                            </div>
-                        )
+                    {props.selectedSongLyrics.map(function(stanza, stanzaIndex) {
+                        return this._getStanza(stanza, stanzaIndex);
                     }, this)}
                 </div>
             );
