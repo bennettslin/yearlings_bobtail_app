@@ -1,9 +1,6 @@
 import React from 'react';
-import LyricsSection from './lyrics-section.jsx';
-import AnnotationPopup from './annotation-popup.jsx';
-import SpeechBubblesSection from './speech-bubbles-section.jsx';
 
-const TextFormatter = {
+module.exports = {
 
     /**
      * Returns a single span element containing nested text elements.
@@ -57,23 +54,5 @@ const TextFormatter = {
                 );
             }
         }
-    }
-}
-
-export class FormattedLyricsSection extends React.Component {
-    render() {
-        return <LyricsSection {...this.props} TextFormatter={TextFormatter} />;
-    }
-}
-
-export class FormattedAnnotationPopup extends React.Component {
-    render() {
-        return <AnnotationPopup {...this.props} TextFormatter={TextFormatter} />;
-    }
-}
-
-export class FormattedSpeechBubblesSection extends React.Component {
-    render() {
-        return <SpeechBubblesSection {...this.props} TextFormatter={TextFormatter} />;
     }
 }

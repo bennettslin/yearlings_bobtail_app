@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedLyricsSection } from './text-formatter.jsx';
+import LyricsSection from './lyrics-section.jsx';
 
 const LYRICS_SECTION_NAMES = ['left', 'right'];
 const defaultProps = {
@@ -17,7 +17,7 @@ class LyricsField extends React.Component {
             isDoublespeaker = this.props.playedSongLyrics.left && this.props.playedSongLyrics.right,
             lyricsSections = filteredLyricsSectionKeys.map(function(key, index) {
                 return (
-                    <FormattedLyricsSection
+                    <LyricsSection
                         key={key}
                         sectionIndex={key}
                         sectionTitle={isDoublespeaker ? key + ' speaker' : null}

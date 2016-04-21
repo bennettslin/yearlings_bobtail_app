@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressBar from './progress-bar.jsx';
-import ProgressHelper from '../helpers/progress-helper.js';
+import ProgressHelper from '../helpers/progress-helper.jsx';
 
 const defaultProps = {
     songIndex: 0,
@@ -40,25 +40,6 @@ class SongRow extends React.Component {
         );
     }
 
-    // FIXME: This method is duplicated in progress section component.
-    _getProgressFooterContent(sumTask, fontSize) {
-        var workedHours = sumTask.workedHours,
-            neededHours = sumTask.neededHours,
-            remainingHours = neededHours - workedHours,
-            remainingTimeString = ProgressHelper.getRemainingTimeStringFromHours(remainingHours);
-
-        return (
-            <div className="task-text-wrapper footer">
-                {neededHours ?
-                    <div className={'text-cell progress font-size-' + fontSize}>
-                        <div>{neededHours} - {workedHours} = {remainingHours}h</div>
-                        <div>{remainingTimeString}</div>
-                    </div> : null
-                }
-            </div>
-        );
-    }
-
     render() {
         var sumTask = this.props.sumTask,
             className = 'song-row' + (this.props.isSelected ? ' played' : ''),
@@ -74,7 +55,7 @@ class SongRow extends React.Component {
             wrappedTextContent = this._getHeaderContent();
 
         } else if (this.props.isFooter) {
-            wrappedTextContent = this._getProgressFooterContent(sumTask, 1);
+            wrappedTextContent = ProgressHelper.getProgressFooterContent(sumTask, 1);
 
         } else {
             wrappedTextContent = this._getSongContent(sumTask);

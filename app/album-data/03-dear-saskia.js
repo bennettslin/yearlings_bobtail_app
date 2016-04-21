@@ -30,7 +30,7 @@ module.exports = {
             description: 'While I reflect on my feelings for Sasha, petrified at the thought of losing her, I\'m also literally reflected in her eyes, seeing myself as a petrified larva that never had a chance to moult.'
         },
         hes_getting_you: {
-            description: 'Everyone I had known Sasha to crush on was Jewish, and these crushes in turn motivated her to be a better Jew. I was frustrated that anyone who could be part of this positive feedback loop had the winning advantage in "getting her."'
+            description: 'Everyone I had known Sasha to crush on was Jewish, and these crushes in turn motivated her to be a better Jew. I was frustrated that anyone who could be part of this positive feedback loop instantly had the winning advantage in "getting her."'
         },
         i_would_have_too: {
             description: 'It seemed obvious to me that if Sasha were to want me, then I would certainly convert to Judaism.'

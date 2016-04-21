@@ -1,4 +1,32 @@
+import React from 'react';
+
 module.exports = {
+
+    /**********
+     * MARKUP *
+     **********/
+
+    getProgressFooterContent: function(sumTask, fontSize) {
+        var workedHours = sumTask.workedHours,
+            neededHours = sumTask.neededHours,
+            remainingHours = neededHours - workedHours,
+            remainingTimeString = this.getRemainingTimeStringFromHours(remainingHours);
+
+        return (
+            <div className="task-text-wrapper footer">
+                {neededHours ?
+                    <div className={'text-cell progress font-size-' + fontSize}>
+                        <div>{neededHours} - {workedHours} = {remainingHours}h</div>
+                        <div>{remainingTimeString}</div>
+                    </div> : null
+                }
+            </div>
+        );
+    },
+
+    /***********
+     * UTILITY *
+     ***********/
 
     getMaxTotalNeededHoursFromSongs: function(songs) {
         return songs.reduce(function(maxTotalNeededHours, song) {

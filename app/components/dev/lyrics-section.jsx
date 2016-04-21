@@ -1,4 +1,5 @@
 import React from 'react';
+import FormatHelper from '../helpers/format-helper.jsx';
 
 const defaultProps = {
     sectionIndex: 'left',
@@ -11,7 +12,7 @@ class LyricsSection extends React.Component {
 
     _parseLyric(lyric) {
         var annotation = lyric.annotation;
-        return this.props.TextFormatter.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
+        return FormatHelper.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
     }
 
     render() {

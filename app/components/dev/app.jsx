@@ -1,10 +1,9 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
+import AnnotationPopup from './annotation-popup.jsx';
 import LyricsField from './lyrics-field.jsx';
 import NotesField from './notes-field.jsx';
 import SongsField from './songs-field.jsx';
-import { FormattedAnnotationPopup,
-         FormattedLyricsColumn } from './text-formatter.jsx';
 import GlobalHelper from '../helpers/global-helper.js';
 
 const defaultProps = {
@@ -41,7 +40,10 @@ class App extends React.Component {
          * Close annotation if anywhere outside annotation is clicked, with the
          * exception of another annotation link.
          */
-        if (annotation && annotation !== e.target && !annotation.contains(e.target) && !GlobalHelper.hasParentWithTagName(e.target, 'a')) {
+        if (annotation &&
+            annotation !== e.target &&
+            !annotation.contains(e.target) &&
+            !GlobalHelper.hasParentWithTagName(e.target, 'a')) {
 
             this.handleAnnotationSelect(null, true);
         }
@@ -109,7 +111,7 @@ class App extends React.Component {
                     >
                     {!!state.annotationKey ?
                         <div key="annotation" ref="annotation" className="notes-field annotation-section">
-                            <FormattedAnnotationPopup
+                            <AnnotationPopup
                                 annotationDescription={annotationDescription}
                             />
                         </div> : null

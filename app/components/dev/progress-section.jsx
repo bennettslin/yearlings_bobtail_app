@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgressBar from './progress-bar.jsx';
 import GlobalHelper from '../helpers/global-helper.js';
-import ProgressHelper from '../helpers/progress-helper.js';
+import ProgressHelper from '../helpers/progress-helper.jsx';
 
 const defaultProps = {
     tasks: []
@@ -86,30 +86,11 @@ class ProgressSection extends React.Component {
         }, this);
     }
 
-    // FIXME: This method is duplicated in song row component.
-    _getProgressFooterContent(sumTask, fontSize) {
-        var workedHours = sumTask.workedHours,
-            neededHours = sumTask.neededHours,
-            remainingHours = neededHours - workedHours,
-            remainingTimeString = ProgressHelper.getRemainingTimeStringFromHours(remainingHours);
-
-        return (
-            <div className="task-text-wrapper footer">
-                {neededHours ?
-                    <div className={'text-cell progress font-size-' + fontSize}>
-                        <div>{neededHours} - {workedHours} = {remainingHours}h</div>
-                        <div>{remainingTimeString}</div>
-                    </div> : null
-                }
-            </div>
-        );
-    }
-
     render() {
         var tasks = this.props.tasks,
             taskRows = this._getTaskRows(tasks),
             sumTask = ProgressHelper.calculateSumTask(tasks),
-            progressFooterContent = this._getProgressFooterContent(sumTask, 2),
+            progressFooterContent = ProgressHelper.getProgressFooterContent(sumTask, 2),
             taskFooter;
 
         taskFooter = (

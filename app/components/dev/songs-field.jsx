@@ -1,6 +1,6 @@
 import React from 'react';
 import SongRow from './song-row.jsx';
-import ProgressHelper from '../helpers/progress-helper.js';
+import ProgressHelper from '../helpers/progress-helper.jsx';
 
 const defaultProps = {
     songs: [],

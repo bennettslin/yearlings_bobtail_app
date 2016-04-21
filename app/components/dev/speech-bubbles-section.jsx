@@ -1,4 +1,5 @@
 import React from 'react';
+import FormatHelper from '../helpers/format-helper.jsx';
 
 const SPEECH_BUBBLE_NAMES = ['narrative', 'backstory'];
 const defaultProps = {
@@ -15,7 +16,7 @@ class SpeechBubblesSection extends React.Component {
                         className={'speech-bubble ' + bubbleName}
                     >
                         <h2>{bubbleName}</h2>
-                        {this.props.TextFormatter.getFormattedSpan(this.props.playedSongSpeechBubbles[SPEECH_BUBBLE_NAMES[index]])}
+                        {FormatHelper.getFormattedSpan(this.props.playedSongSpeechBubbles[SPEECH_BUBBLE_NAMES[index]])}
                     </div>
                 );
             }, this);

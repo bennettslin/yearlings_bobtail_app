@@ -1,4 +1,5 @@
 import React from 'react';
+import FormatHelper from '../helpers/format-helper.jsx';
 
 const defaultProps = {
     annotationDescription: {}
@@ -7,7 +8,7 @@ const defaultProps = {
 class AnnotationPopup extends React.Component {
 
     render() {
-        var annotationSpan = this.props.TextFormatter.getFormattedSpan(this.props.annotationDescription);
+        var annotationSpan = FormatHelper.getFormattedSpan(this.props.annotationDescription);
 
         return (
             <div className="annotation-popup">

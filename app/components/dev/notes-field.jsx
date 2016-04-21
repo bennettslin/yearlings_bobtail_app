@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgressSection from './progress-section.jsx';
+import SpeechBubblesSection from './speech-bubbles-section.jsx';
 import StatsSection from './stats-section.jsx';
-import { FormattedSpeechBubblesSection } from './text-formatter.jsx';
 
 const defaultProps = {
     playedSongAnnotations: {},
@@ -19,7 +19,7 @@ class NotesField extends React.Component {
                 <StatsSection
                     annotations={props.playedSongAnnotations}
                 />
-                <FormattedSpeechBubblesSection
+                <SpeechBubblesSection
                     playedSongSpeechBubbles={props.playedSongSpeechBubbles}
                 />
                 {props.playedSongTasks ?
