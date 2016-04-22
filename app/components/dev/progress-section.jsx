@@ -10,21 +10,21 @@ const defaultProps = {
 class ProgressSection extends React.Component {
 
     componentWillMount() {
-        const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromTasks(this.props.tasks);
-
-        this.setState({
-            maxTotalNeededHours
-        });
+        this._setMaxTotalNeededHours(this.props.tasks);
     }
 
     componentWillUpdate(nextProps) {
         if (!GlobalHelper.areObjectsEqual(this.props.tasks, nextProps.tasks)) {
-            const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromTasks(nextProps.tasks);
-
-            this.setState({
-                maxTotalNeededHours
-            });
+            this._setMaxTotalNeededHours(nextProps.tasks);
         }
+    }
+
+    _setMaxTotalNeededHours(tasks) {
+        const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromTasks(tasks);
+
+        this.setState({
+            maxTotalNeededHours
+        });
     }
 
     _getProgressBar(task) {

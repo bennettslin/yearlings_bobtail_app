@@ -103,7 +103,7 @@ module.exports = {
             totalDays = hours / HOURS_IN_DAY,
             totalMonths = Math.floor(totalDays / DAYS_IN_MONTH),
             remainingWeeks = Math.floor((totalDays - (totalMonths * DAYS_IN_MONTH)) / DAYS_IN_WEEK),
-            remainingDays = Math.ceil(totalDays - (totalMonths * DAYS_IN_MONTH) - (remainingWeeks * DAYS_IN_WEEK));
+            remainingDays = Math.floor(totalDays - (totalMonths * DAYS_IN_MONTH) - (remainingWeeks * DAYS_IN_WEEK));
 
         return {
             months: totalMonths,

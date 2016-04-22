@@ -19,10 +19,12 @@ const defaultProps = {
 class SongRow extends React.Component {
 
     _getSongContent(sumTask) {
+        const props = this.props;
+
         return (
             <div className="song-text-wrapper">
-                <a className="text-cell button" onClick={this.props.handleSongChange.bind(null, this.props.songIndex, 'selected', true)}>
-                    {this.props.songIndex}. {this.props.songTitle}
+                <a className="text-cell button" onClick={props.handleSongChange.bind(null, props.songIndex, 'selected', true)}>
+                    {props.songIndex}. {props.songTitle}
                 </a>
                 <span className="text-cell progress">
                     {sumTask.workedHours}/{sumTask.neededHours}h
