@@ -1,33 +1,33 @@
 module.exports = {
 
-    getAnnotationsCount: function(annotationsObject = {}) {
-        return Object.keys(annotationsObject).length;
+    getCount: function(richTextObject = {}) {
+        return Object.keys(richTextObject).length;
     },
 
-    getTotalWordsInAnnotations: function(annotationsObject = {}) {
-        const objectKeys = Object.keys(annotationsObject);
+    getSumOfTotalWords: function(richTextObject = {}) {
+        const objectKeys = Object.keys(richTextObject);
 
         return objectKeys.reduce((wordCount, objectKey) => {
-            const annotation = annotationsObject[objectKey].description;
+            const richText = richTextObject[objectKey].description;
 
-            return wordCount + this._getTotalWordsInAnnotation(annotation);
+            return wordCount + this.getTotalWords(richText);
 
         }, 0);
     },
 
-    _getTotalWordsInAnnotation: function(annotation = '') {
-        if (annotation instanceof Array) {
-            return annotation.reduce((wordCount, annotationValue) => {
-                return wordCount + this._getTotalWordsInAnnotation(annotationValue);
+    getTotalWords: function(richText = '') {
+        if (richText instanceof Array) {
+            return richText.reduce((wordCount, richTextValue) => {
+                return wordCount + this.getTotalWords(richTextValue);
             }, 0);
 
-        } else if (typeof annotation === 'object') {
+        } else if (typeof richText === 'object') {
             // There will only ever be one of these keys.
-            const possibleKeys = ['italic', 'emphasis', 'anchor'];
+            const possibleKeys = ['left', 'right', 'verse', 'italic', 'emphasis', 'anchor'];
 
             return possibleKeys.reduce((wordCount, possibleKey) => {
-                if (annotation[possibleKey]) {
-                    return wordCount + this._getTotalWordsInAnnotation(annotation[possibleKey]);
+                if (richText[possibleKey]) {
+                    return wordCount + this.getTotalWords(richText[possibleKey]);
                 }
 
                 return wordCount;
@@ -35,7 +35,7 @@ module.exports = {
 
         // It's a string.
         } else {
-            return annotation.split(' ').length;
+            return richText.split(' ').length;
         }
     }
 }

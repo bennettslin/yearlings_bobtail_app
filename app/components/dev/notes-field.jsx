@@ -4,9 +4,12 @@ import SpeechBubblesSection from './speech-bubbles-section.jsx';
 import StatsSection from './stats-section.jsx';
 
 const defaultProps = {
+    selectedSongLyrics: {},
     selectedSongAnnotations: {},
-    selectedSongSpeechBubbles: {},
-    selectedSongTasks: {}
+    selectedSpeechBubbleKey: '',
+    speechBubbleRichText: '',
+    selectedSongTasks: {},
+    handleSpeechBubbleSelect() {}
 };
 
 class NotesField extends React.Component {
@@ -17,10 +20,14 @@ class NotesField extends React.Component {
         return (
             <div className="notes-field">
                 <StatsSection
+                    lyrics={props.selectedSongLyrics}
                     annotations={props.selectedSongAnnotations}
                 />
                 <SpeechBubblesSection
+                    speechBubbleRichText={props.speechBubbleRichText}
+                    selectedSpeechBubbleKey={props.selectedSpeechBubbleKey}
                     selectedSongSpeechBubbles={props.selectedSongSpeechBubbles}
+                    handleSpeechBubbleSelect={props.handleSpeechBubbleSelect}
                 />
                 {props.selectedSongTasks ?
                     <ProgressSection

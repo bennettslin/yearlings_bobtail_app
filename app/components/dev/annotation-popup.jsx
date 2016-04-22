@@ -2,13 +2,13 @@ import React from 'react';
 import FormatHelper from '../helpers/format-helper.jsx';
 
 const defaultProps = {
-    annotationDescription: {}
+    annotationRichText: {}
 }
 
 class AnnotationPopup extends React.Component {
 
     render() {
-        const annotationSpan = FormatHelper.getFormattedSpan(this.props.annotationDescription);
+        const annotationSpan = FormatHelper.getFormattedSpan(this.props.annotationRichText);
 
         return (
             <div className="annotation-popup">

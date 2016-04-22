@@ -3,27 +3,43 @@ import FormatHelper from '../helpers/format-helper.jsx';
 
 const SPEECH_BUBBLE_NAMES = ['narrative', 'backstory'];
 const defaultProps = {
-    selectedSongSpeechBubbles: {}
+    speechBubbleRichText: '',
+    selectedSpeechBubbleKey: '',
+    handleSpeechBubbleSelect() {}
 };
 
 class SpeechBubblesSection extends React.Component {
 
-    render() {
-        const speechBubbles = SPEECH_BUBBLE_NAMES.map((bubbleName, index) => {
-                return (
-                    <div
-                        key={index}
-                        className={'speech-bubble ' + bubbleName}
-                    >
-                        <h2>{bubbleName}</h2>
-                        {FormatHelper.getFormattedSpan(this.props.selectedSongSpeechBubbles[SPEECH_BUBBLE_NAMES[index]])}
-                    </div>
-                );
-            });
+    _getSpeechBubbleSelectButton(key) {
+        const props = this.props,
+            disabled = key === props.selectedSpeechBubbleKey,
+            className = 'select-button' + (disabled ? ' disabled' : '');
 
         return (
+            <div key={key} className={className}>
+                <h2>
+                    <a disabled={disabled}
+                        onClick={disabled ? null : props.handleSpeechBubbleSelect.bind(null, key)}
+                    >
+                        {key}
+                    </a>
+                </h2>
+            </div>
+        );
+    }
+
+    render() {
+        return (
             <div className="speech-bubbles-section">
-                {speechBubbles}
+                <div className="button-row">
+                    {SPEECH_BUBBLE_NAMES.map(key => {
+                        return this._getSpeechBubbleSelectButton(key);
+                    })}
+                </div>
+                <div className={'speech-bubble'}>
+                    {FormatHelper.getFormattedSpan(this.props.speechBubbleRichText)}
+                </div>
+
             </div>
         );
     }

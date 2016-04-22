@@ -8,7 +8,7 @@ const defaultProps = {
     handleSongChange() {}
 };
 
-class SongsField extends React.Component {
+class SongsSection extends React.Component {
 
     componentWillMount() {
         const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(this.props.songs);
@@ -46,7 +46,7 @@ class SongsField extends React.Component {
             );
 
         return (
-            <div className="songs-field">
+            <div className="songs-section">
                 {songsHeader}
                 {songRows}
                 {songsFooter}
@@ -55,5 +55,5 @@ class SongsField extends React.Component {
     }
 }
 
-SongsField.defaultProps = defaultProps;
-export default SongsField;
+SongsSection.defaultProps = defaultProps;
+export default SongsSection;

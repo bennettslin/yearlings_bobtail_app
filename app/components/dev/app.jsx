@@ -1,9 +1,12 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 import AnnotationPopup from './annotation-popup.jsx';
-import LyricsField from './lyrics-field.jsx';
+import LyricsSection from './lyrics-section.jsx';
 import NotesField from './notes-field.jsx';
-import SongsField from './songs-field.jsx';
+import ProgressSection from './progress-section.jsx';
+import SpeechBubblesSection from './speech-bubbles-section.jsx';
+import StatsSection from './stats-section.jsx';
+import SongsSection from './songs-section.jsx';
 import SongPlayerSection from './song-player-section.jsx';
 import GlobalHelper from '../helpers/global-helper.js';
 
@@ -20,19 +23,24 @@ class App extends React.Component {
 
         this._handleBodyClick = this._handleBodyClick.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
+        this.handleSpeechBubbleSelect = this.handleSpeechBubbleSelect.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
 
-        // Retrieve stored song indices, if any. Song indices start at 1.
+        // Retrieve stored song indices, if any. Song indices start at 1. (Played song index isn't presently being used.)
         this.handleSongChange(window.sessionStorage.playedSongIndex, 'played');
         this.handleSongChange(window.sessionStorage.selectedSongIndex, 'selected');
 
+        // Retrieve stored speech bubble key, if there is one.
+        this.handleSpeechBubbleSelect(window.sessionStorage.selectedSpeechBubbleKey);
+
         // Retrieve stored annotation key, if there is one.
-        this.handleAnnotationSelect(window.sessionStorage.annotationKey);
+        this.handleAnnotationSelect(window.sessionStorage.selectedAnnotationKey);
 
         this.state = {
             playedSongIndex: parseInt(window.sessionStorage.playedSongIndex) || 0,
             selectedSongIndex: parseInt(window.sessionStorage.selectedSongIndex) || 0,
-            annotationKey: window.sessionStorage.annotationKey
+            selectedSpeechBubbleKey: window.sessionStorage.selectedSpeechBubbleKey,
+            selectedAnnotationKey: window.sessionStorage.selectedAnnotationKey
         };
     }
 
@@ -58,18 +66,20 @@ class App extends React.Component {
             songIndex = parseInt(songIndex) || 0;
         }
 
-        if (songIndex >= 0 && songIndex < this.props.songs.length) {
+        if (songIndex >= 0 && songIndex <= this.props.songs.length) {
 
             // Store song index in session.
             window.sessionStorage[actionType + 'SongIndex'] = songIndex;
 
             if (setState) {
                 /**
-                 * Also reset the stored annotation key if setting the selected
-                 * song index.
+                 * Also reset the stored annotation and speech bubble keys if
+                 * changing the selected song index.
                  */
                 if (actionType === 'selected') {
                     this.handleAnnotationSelect(null, true);
+                    this.handleSpeechBubbleSelect(null, true);
+
                     this.setState({
                         selectedSongIndex: songIndex
                     });
@@ -83,12 +93,23 @@ class App extends React.Component {
         }
     }
 
-    handleAnnotationSelect(annotationKey, setState) {
-        window.sessionStorage.annotationKey = annotationKey ? annotationKey : '';
+    handleSpeechBubbleSelect(selectedSpeechBubbleKey, setState) {
+        selectedSpeechBubbleKey = selectedSpeechBubbleKey || 'narrative';
+        window.sessionStorage.selectedSpeechBubbleKey = selectedSpeechBubbleKey;
 
         if (setState) {
             this.setState({
-                annotationKey
+                selectedSpeechBubbleKey
+            });
+        }
+    }
+
+    handleAnnotationSelect(selectedAnnotationKey, setState) {
+        window.sessionStorage.selectedAnnotationKey = selectedAnnotationKey || '';
+
+        if (setState) {
+            this.setState({
+                selectedAnnotationKey
             });
         }
     }
@@ -100,48 +121,57 @@ class App extends React.Component {
             selectedSongIndex = state.selectedSongIndex,
             selectedSong = selectedSongIndex ?
                 props.songs[selectedSongIndex - 1] : {},
-            annotationDescription = (selectedSongIndex && !!state.annotationKey) ?
-                selectedSong.annotations[state.annotationKey].description : null;
+            speechBubbleRichText = (selectedSongIndex && state.selectedSpeechBubbleKey) ?
+                selectedSong.speechBubbles[state.selectedSpeechBubbleKey] :
+                props.speechBubbles[state.selectedSpeechBubbleKey],
+            annotationRichText = (selectedSongIndex && state.selectedAnnotationKey) ?
+                selectedSong.annotations[state.selectedAnnotationKey].description : null;
 
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
-                <div className="app-field-container songs">
-                    <h1>{props.title}</h1>
-                    <SongPlayerSection
-                        songs={props.songs}
-                        playedSongIndex={playedSongIndex}
-                        handleSongChange={this.handleSongChange}
-                        />
-                    <SongsField
+                <div className="field songs">
+                    <a onClick={this.handleSongChange.bind(null, 0, 'selected', true)}>
+                        <h1>{props.title}</h1>
+                    </a>
+                    <SongsSection
                         songs={props.songs}
                         selectedSongIndex={selectedSongIndex}
                         handleSongChange={this.handleSongChange}
                     />
                 </div>
-                <div className="app-field-container notes">
+                <div className="field notes">
                     <CSSTransitionGroup
                         style={{ position: 'fixed', zIndex: 1 }}
                         transitionName="annotation-animation"
                         transitionEnterTimeout={100}
                         transitionLeaveTimeout={100}
                     >
-                    {!!state.annotationKey ?
-                        <div key="annotation" ref="annotation" className="notes-field annotation-section">
+                    {state.selectedAnnotationKey ?
+                        <div key="annotation" ref="annotation" className="annotation-section">
                             <AnnotationPopup
-                                annotationDescription={annotationDescription}
+                                annotationRichText={annotationRichText}
                             />
                         </div> : null
                     }
                     </CSSTransitionGroup>
-                    <NotesField
-                        selectedSongAnnotations={selectedSong.annotations}
-                        selectedSongSpeechBubbles={selectedSong.speechBubbles || props.speechBubbles}
-                        selectedSongTasks={selectedSong.tasks || null}
+                    <StatsSection
+                        lyrics={selectedSong.lyrics}
+                        annotations={selectedSong.annotations}
                     />
+                    <SpeechBubblesSection
+                        speechBubbleRichText={speechBubbleRichText}
+                        selectedSpeechBubbleKey={state.selectedSpeechBubbleKey}
+                        handleSpeechBubbleSelect={this.handleSpeechBubbleSelect}
+                    />
+                    {selectedSong.tasks ?
+                        <ProgressSection
+                            tasks={selectedSong.tasks}
+                        /> : null
+                    }
                 </div>
                 {selectedSongIndex ?
-                     <div className="app-field-container lyrics">
-                        <LyricsField
+                     <div className="field lyrics">
+                        <LyricsSection
                             selectedSongLyrics={selectedSong.lyrics}
                             handleAnnotationSelect={this.handleAnnotationSelect}
                         />
