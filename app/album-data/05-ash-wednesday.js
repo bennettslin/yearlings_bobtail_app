@@ -286,7 +286,9 @@ module.exports = {
                             annotationKey: 'went_clear'
                         },
                         {
-                            anchor: '{noSpace}—my Tekakwitha—',
+                            anchor: {
+                                noSpace: '—my Tekakwitha—'
+                            },
                             annotationKey: 'my_tekakwitha'
                         }
 

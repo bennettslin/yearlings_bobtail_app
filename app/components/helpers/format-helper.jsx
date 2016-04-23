@@ -1,7 +1,5 @@
 import React from 'react';
 
-const NO_SPACE_STRING = '{noSpace}';
-
 module.exports = {
 
     /**
@@ -29,16 +27,16 @@ module.exports = {
      * Returns a single element wrapped in a span, italic, or anchor tag.
      */
     _getTaggedTextContent: function(text, clickHandler, index, nestedIndex) {
-        if (typeof text === 'string') {
+        if (typeof text === 'string' || text.noSpace) {
 
             /**
              * Subsequent spans of text on a line will begin with a space,
              * unless specifically told not to.
              */
             let noSpace = false;
-            if (text.indexOf(NO_SPACE_STRING) === 0) {
+            if (text.noSpace) {
                 noSpace = true;
-                text = text.slice(NO_SPACE_STRING.length);
+                text = text.noSpace;
             }
 
             return (
@@ -48,7 +46,7 @@ module.exports = {
                 </span>
             );
 
-        } else if (typeof text === 'object') {
+        } else {
             if (text.italic) {
                 return <i key={nestedIndex + index}>{this.getFormattedSpan(text.italic, clickHandler, index, nestedIndex)}</i>;
 

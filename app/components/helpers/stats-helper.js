@@ -23,7 +23,7 @@ module.exports = {
 
         } else if (typeof richText === 'object') {
             // There will only ever be one of these keys.
-            const possibleKeys = ['left', 'right', 'verse', 'italic', 'emphasis', 'anchor'];
+            const possibleKeys = ['left', 'right', 'verse', 'noSpace', 'italic', 'emphasis', 'anchor'];
 
             return possibleKeys.reduce((wordCount, possibleKey) => {
                 if (richText[possibleKey]) {
