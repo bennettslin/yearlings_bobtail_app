@@ -22,11 +22,11 @@ class SongRow extends React.Component {
         const props = this.props;
 
         return (
-            <div className="song-text-wrapper">
-                <a className="text-cell button" onClick={props.handleSongChange.bind(null, props.songIndex, 'selected', true)}>
+            <div className="text-cell-wrapper">
+                <a className="text-cell text" onClick={props.handleSongChange.bind(null, props.songIndex, 'selected', true)}>
                     {props.songIndex}. {props.songTitle}
                 </a>
-                <span className="text-cell progress">
+                <span className="text-cell figure">
                     {sumTask.workedHours}/{sumTask.neededHours}h
                 </span>
             </div>
@@ -35,9 +35,9 @@ class SongRow extends React.Component {
 
     _getHeaderContent() {
         return (
-            <div className="song-text-wrapper">
-                <h3 className="text-cell button-label">song</h3>
-                <h3 className="text-cell progress">progress</h3>
+            <div className="text-cell-wrapper">
+                <h3 className="text-cell text">song</h3>
+                <h3 className="text-cell figure">progress</h3>
             </div>
         );
     }

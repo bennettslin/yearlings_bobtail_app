@@ -8,11 +8,11 @@ const defaultProps = {
     handleAnnotationSelect() {}
 };
 
-class LyricsColumn extends React.Component {
+class LyricColumn extends React.Component {
 
     _getStanza(stanza, stanzaIndex) {
         return (
-            <div className={'stanza-' + stanzaIndex} key={stanzaIndex}>
+            <div className={'stanza ' + stanzaIndex} key={stanzaIndex}>
                 {stanza.map((verse, verseIndex) => {
                     return this._getVerse(verse, verseIndex);
                 })}
@@ -22,7 +22,7 @@ class LyricsColumn extends React.Component {
 
     _getVerse(verse, verseIndex) {
         return (
-            <div className={'verse-' + verseIndex} key={verseIndex}>
+            <div className={'verse ' + verseIndex} key={verseIndex}>
                 {this._getParsedLyric(verse)}
             </div>
         );
@@ -37,11 +37,10 @@ class LyricsColumn extends React.Component {
         const props = this.props,
             columnKey = props.columnKey,
             columnTitleHeader = props.columnTitle ? <h3>{props.columnTitle}</h3> : null,
-            doublespeakerClassName = props.columnTitle ? ' doublespeaker' : '',
-            alignRightClassName = props.columnTitle === 'right speaker' ? ' align-right' : '',
-            columnClassName = 'lyrics-column ' + columnKey + doublespeakerClassName + alignRightClassName,
-            lyricsTextArea = (
-                <div className={'lyrics-text'}>
+            doublespeakerClassName = props.columnTitle ? ' double-column' : '',
+            columnClassName = 'lyric-column ' + columnKey + doublespeakerClassName,
+            lyricTextArea = (
+                <div className={'lyric-text-area'}>
                     {props.selectedSongLyrics.map((stanza, stanzaIndex) => {
                         return this._getStanza(stanza, stanzaIndex);
                     })}
@@ -51,11 +50,11 @@ class LyricsColumn extends React.Component {
         return (
             <div className={columnClassName}>
                 {columnTitleHeader}
-                {lyricsTextArea}
+                {lyricTextArea}
             </div>
         );
     }
 }
 
-LyricsColumn.defaultProps = defaultProps;
-export default LyricsColumn;
+LyricColumn.defaultProps = defaultProps;
+export default LyricColumn;

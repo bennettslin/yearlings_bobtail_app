@@ -1,5 +1,67 @@
+/*********
+ * FONTS *
+ *********/
+
 @font-face {
   font-family: PTSansNarrow;
   src: url('../assets/fonts/pt_sans/PTN57F.ttf') format('truetype'),
        url('../assets/fonts/pt_sans/PTN77F.ttf') format('truetype')
+}
+
+/********
+ * TAGS *
+ ********/
+
+h1 {
+    font-size: 1.6em;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a {
+    .transition(color 0.05s ease);
+    .no-select;
+    cursor: pointer;
+
+    font-weight: bold;
+    color: #844;
+
+    &:hover {
+        color: #b77;
+    }
+
+    &:active {
+        color: #eaa;
+    }
+}
+
+/**********
+ * MIXINS *
+ **********/
+
+.animation-mixin(@property: opacity, @shown-value: 1, @hidden-value: 0, @duration: 0.1s, @timing: ease) {
+    transition: @property @duration @timing;
+
+    &[class*="animation-enter"] {
+        @{property}: @hidden-value;
+
+        &[class*="animation-enter-active"] {
+            @{property}: @shown-value;
+        }
+    }
+
+    &[class*="animation-leave"] {
+        @{property}: @shown-value;
+
+        &[class*="animation-leave-active"] {
+            @{property}: @hidden-value;
+        }
+    }
 }

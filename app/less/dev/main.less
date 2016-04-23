@@ -7,8 +7,6 @@ body {
 
 .app {
     @column-padding: 15px;
-    @text-wrapper-height-margin: 4px;
-    @text-wrapper-width-margin: 12px;
     @row-height-margin: 2px;
 
     @primary-row-font-size: 1.05em;
@@ -21,282 +19,230 @@ body {
     font-family: PTSansNarrow;
     font-size: 1.1em;
 
-    // Universal styling rules.
+    /**********
+     * FIELDS *
+     **********/
+
     .field {
         position: relative;
-        padding: 0 @column-padding @column-padding;
         box-sizing: border-box;
+        padding: 0 @column-padding @column-padding;
+    }
 
-        .total-progress-bar {
+    @songs-field-width: 350px;
+    .songs-field {
+        width: @songs-field-width;
+        min-width: @songs-field-width;
+        background-color: #fef;
+        font-size: 1.2em;
+    }
+
+    @notes-field-width: 350px;
+    .notes-field {
+        width: @notes-field-width;
+        min-width: @notes-field-width;
+        background-color: #fee;
+    }
+
+    .lyrics-field {
+        background-color: #ffe;
+    }
+
+    /************
+     * SECTIONS *
+     ************/
+
+    .section {
+        box-sizing: border-box;
+        padding: 0px @column-padding @column-padding;
+    }
+
+    .songs-section {
+
+        .song-row {
+            position: relative;
+            overflow: hidden;
+            margin: @row-height-margin 0;
+
+            .progress-bar {
+                background-color: #fcf;
+
+                .filled-bar {
+                    background-color: #dad;
+                }
+            }
+
+            &.played {
+                .progress-bar {
+                    background-color: #cfc;
+
+                    .filled-bar {
+                        background-color: #ada;
+                    }
+                }
+
+                a {
+                    color: #484;
+
+                    &:hover {
+                        color: #7b7;
+                    }
+
+                    &:active {
+                        color: #aea;
+                    }
+                }
+            }
+        }
+    }
+
+    .annotation-section {
+        .animation-mixin;
+        @overflow-margin-width: 5px;
+        position: absolute;
+        top: 45px;
+        left: -@overflow-margin-width;
+        width: @notes-field-width + (@overflow-margin-width * 2);
+        box-shadow: -2px 2px 8px 8px rgba(100, 100, 120, 0.2);
+        border-radius: 5px;
+        z-index: 1;
+        margin: auto 0;
+        background-color: #eff;
+    }
+
+    .progress-section {
+
+        .task-row {
+            // Header is first child.
+            &:not(:nth-child(2)) {
+                margin-top: @row-height-margin;
+            }
+
+            font-size: @primary-row-font-size;
+        }
+
+        .subtask-row {
+            padding-left: 25px;
+            font-size: @secondary-row-font-size;
+        }
+
+        [class$="subrow"] {
+            position: relative;
+            overflow: hidden;
+            margin: @row-height-margin;
+
+            .progress-bar {
+                background-color: #fcc;
+
+                .filled-bar {
+                    background-color: #daa;
+                }
+            }
+        }
+    }
+
+    .speech-bubbles-section {
+
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+
+            .disabled {
+                a {
+                    color: #aaa;
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    .stats-section {
+        .stats-row {
+            font-size: @primary-row-font-size;
+        }
+    }
+
+    .lyrics-section {
+
+        .lyric-columns {
+            display: flex;
+        }
+
+        .lyric-column {
+
+            &.double-column {
+                &.left {
+                    padding-right: @column-padding * 0.5;
+                }
+
+                &.right {
+                    padding-left: @column-padding * 0.5;
+                }
+            }
+        }
+
+        .lyric-text-area {
+            @lyric-verse-size: 1em;
+            font-size: @lyric-verse-size;
+
+            .stanza {
+                &:not(:last-child) {
+                    margin-bottom: @lyric-verse-size;
+                }
+
+                .verse {
+                    @hanging-indent-width: 1.5em;
+                    padding-left: @hanging-indent-width;
+                    text-indent:-@hanging-indent-width;
+                }
+            }
+        }
+    }
+
+    /*****************
+     * BARS AND ROWS *
+     *****************/
+
+    .progress-bar {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .filled-bar {
             position: absolute;
             width: 0%;
             height: 100%;
-            border-radius: 5px;
-            overflow: hidden;
-
-            .filled-progress-bar {
-                position: absolute;
-                width: 0%;
-                height: 100%;
-            }
-        }
-
-        [class$="text-wrapper"] {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            margin: @text-wrapper-height-margin @text-wrapper-width-margin;
-
-            .text-cell {
-                display: inline-block;
-            }
-        }
-
-        &.songs {
-            @button-column-width: 196px;
-
-            background-color: #fef;
-            font-size: 1.2em;
-
-            h3 {
-                margin-bottom: 0;
-            }
-
-            .song-row {
-                position: relative;
-                overflow: hidden;
-                margin: @row-height-margin 0;
-
-                .total-progress-bar {
-                    background-color: #fcf;
-
-                    .filled-progress-bar {
-                        background-color: #dad;
-                    }
-                }
-
-                &.played {
-                    .total-progress-bar {
-                        background-color: #cfc;
-
-                        .filled-progress-bar {
-                            background-color: #ada;
-                        }
-                    }
-
-                    a {
-                        color: #484;
-
-                        &:hover {
-                            color: #7b7;
-                        }
-
-                        &:active {
-                            color: #aea;
-                        }
-                    }
-                }
-
-                .song-text-wrapper {
-
-                    // Include header and footer.
-                    [class*="button"] {
-                        width: @button-column-width;
-                    }
-                }
-            }
-        }
-
-        &.notes {
-            @notes-column-width: 320px;
-
-            display: flex;
-            flex-direction: column;
-            width: @notes-column-width;
-            min-width: @notes-column-width;
-            padding: 0;
-            background-color: #fee;
-
-            [class*="section"] {
-                padding: 0px @column-padding @column-padding;
-                box-sizing: border-box;
-            }
-
-            .annotation-section {
-                .animation-mixin;
-                @overflow-margin-width: 5px;
-                position: absolute;
-                top: 45px;
-                left: -@overflow-margin-width;
-                width: @notes-column-width + (@overflow-margin-width * 2);
-                box-shadow: -2px 2px 8px 8px rgba(100, 100, 120, 0.2);
-                border-radius: 5px;
-                z-index: 1;
-                margin: auto 0;
-                background-color: #eff;
-            }
-
-            .speech-bubbles-section {
-
-                .button-row {
-                    display: flex;
-                    justify-content: space-between;
-
-                    .disabled {
-                        a {
-                            color: #aaa;
-                            cursor: default;
-                        }
-                    }
-                }
-            }
-
-            .progress-section {
-
-                .task-row {
-                    // Header is first child.
-                    &:not(:nth-child(2)) {
-                        margin-top: @row-height-margin;
-                    }
-
-                    font-size: @primary-row-font-size;
-                }
-
-                .subtask-row {
-                    padding-left: 25px;
-                    font-size: @secondary-row-font-size;
-                }
-
-                [class$="subrow"] {
-                    position: relative;
-                    overflow: hidden;
-                    margin: @row-height-margin;
-
-                    .total-progress-bar {
-                        background-color: #fcc;
-
-                        .filled-progress-bar {
-                            background-color: #daa;
-                        }
-                    }
-
-                    .task-text-wrapper {
-
-                        &.footer {
-                            text-align: right;
-                        }
-                    }
-                }
-            }
-
-            .stats-section {
-                .stats-row {
-                    font-size: @primary-row-font-size;
-                }
-            }
-        }
-
-        &.lyrics {
-            display: flex;
-            background-color: #ffe;
-
-            .lyrics-columns-container {
-                display: flex;
-            }
-
-            .lyrics-column {
-                .transition(width 0.2s ease);
-
-                &.doublespeaker {
-                    &.left {
-                        padding-right: @column-padding * 0.5;
-                    }
-
-                    &.right {
-                        padding-left: @column-padding * 0.5;
-                    }
-                }
-
-                &.align-right {
-                    // Keep left-aligned for now.
-                    // text-align: right;
-                }
-            }
-
-            .lyrics-text {
-                @lyrics-verse-size: 1em;
-                font-size: @lyrics-verse-size;
-
-                [class^="stanza"] {
-                    &:not(:last-child) {
-                        margin-bottom: @lyrics-verse-size;
-                    }
-
-                    [class^="verse"] {
-                        @hanging-indent-width: 1.5em;
-                        padding-left: @hanging-indent-width;
-                        text-indent:-@hanging-indent-width;
-                    }
-                }
-            }
         }
     }
 
-    h1 {
-        font-size: 1.6em;
-    }
+    .text-cell-wrapper {
+        @height-margin: 4px;
+        @width-margin: 12px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin: @height-margin @width-margin;
 
-    h3 {
-        margin-top: 0;
-    }
+        .text-cell {
+            display: inline-block;
 
-    a {
-        .transition(color 0.05s ease);
-        .no-select;
-        cursor: pointer;
+            &:first-child {
+                flex-grow: 1;
+            }
 
-        font-weight: bold;
-        color: #844;
+            &.figure {
+                text-align: right;
 
-        &:hover {
-            color: #b77;
-        }
+                &.font-size-1 {
+                    font-size: 1.4em;
+                }
 
-        &:active {
-            color: #eaa;
-        }
-    }
-
-    .progress {
-        text-align: right;
-
-        &.font-size-1 {
-            font-size: 1.4em;
-        }
-
-        &.font-size-2 {
-            font-size: 1.25em;
-        }
-    }
-}
-
-// Global animation rules.
-.animation-mixin(@property: opacity, @shown-value: 1, @hidden-value: 0, @duration: 0.1s, @timing: ease) {
-    transition: @property @duration @timing;
-
-    &[class*="animation-enter"] {
-        @{property}: @hidden-value;
-
-        &[class*="animation-enter-active"] {
-            @{property}: @shown-value;
-        }
-    }
-
-    &[class*="animation-leave"] {
-        @{property}: @shown-value;
-
-        &[class*="animation-leave-active"] {
-            @{property}: @hidden-value;
+                &.font-size-2 {
+                    font-size: 1.25em;
+                }
+            }
         }
     }
 }

@@ -1,8 +1,6 @@
 import React from 'react';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
-import AnnotationPopup from './annotation-popup.jsx';
+import AnnotationSection from './annotation-section.jsx';
 import LyricsSection from './lyrics-section.jsx';
-import NotesField from './notes-field.jsx';
 import ProgressSection from './progress-section.jsx';
 import SpeechBubblesSection from './speech-bubbles-section.jsx';
 import StatsSection from './stats-section.jsx';
@@ -26,7 +24,10 @@ class App extends React.Component {
         this.handleSpeechBubbleSelect = this.handleSpeechBubbleSelect.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
 
-        // Retrieve stored song indices, if any. Song indices start at 1. (Played song index isn't presently being used.)
+        /**
+         * Retrieve stored song indices, if any. Song indices start at 1.
+         * (Played song index isn't presently being used.)
+         */
         this.handleSongChange(window.sessionStorage.playedSongIndex, 'played');
         this.handleSongChange(window.sessionStorage.selectedSongIndex, 'selected');
 
@@ -45,7 +46,7 @@ class App extends React.Component {
     }
 
     _handleBodyClick(e) {
-        const annotation = this.refs.annotation;
+        const annotation = this.refs.annotationSection.refs.annotation;
 
         /**
          * Close annotation if anywhere outside annotation is clicked, with the
@@ -125,11 +126,11 @@ class App extends React.Component {
                 selectedSong.speechBubbles[state.selectedSpeechBubbleKey] :
                 props.speechBubbles[state.selectedSpeechBubbleKey],
             annotationRichText = (selectedSongIndex && state.selectedAnnotationKey) ?
-                selectedSong.annotations[state.selectedAnnotationKey].description : null;
+                selectedSong.annotations[state.selectedAnnotationKey].description : {};
 
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
-                <div className="field songs">
+                <div className="field songs-field">
                     <a onClick={this.handleSongChange.bind(null, 0, 'selected', true)}>
                         <h1>{props.title}</h1>
                     </a>
@@ -139,21 +140,12 @@ class App extends React.Component {
                         handleSongChange={this.handleSongChange}
                     />
                 </div>
-                <div className="field notes">
-                    <CSSTransitionGroup
-                        style={{ position: 'fixed', zIndex: 1 }}
-                        transitionName="annotation-animation"
-                        transitionEnterTimeout={100}
-                        transitionLeaveTimeout={100}
-                    >
-                    {state.selectedAnnotationKey ?
-                        <div key="annotation" ref="annotation" className="annotation-section">
-                            <AnnotationPopup
-                                annotationRichText={annotationRichText}
-                            />
-                        </div> : null
-                    }
-                    </CSSTransitionGroup>
+                <div className="field notes-field">
+                    <AnnotationSection
+                        ref="annotationSection"
+                        annotationRichText={annotationRichText}
+                        selectedAnnotationKey={state.selectedAnnotationKey}
+                    />
                     <StatsSection
                         lyrics={selectedSong.lyrics}
                         annotations={selectedSong.annotations}
@@ -170,7 +162,7 @@ class App extends React.Component {
                     }
                 </div>
                 {selectedSongIndex ?
-                     <div className="field lyrics">
+                     <div className="field lyrics-field">
                         <LyricsSection
                             selectedSongLyrics={selectedSong.lyrics}
                             handleAnnotationSelect={this.handleAnnotationSelect}

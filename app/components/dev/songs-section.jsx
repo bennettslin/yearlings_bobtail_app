@@ -46,7 +46,7 @@ class SongsSection extends React.Component {
             );
 
         return (
-            <div className="songs-section">
+            <div className="section songs-section">
                 {songsHeader}
                 {songRows}
                 {songsFooter}

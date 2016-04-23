@@ -41,12 +41,12 @@ class ProgressSection extends React.Component {
         return (
             <div key={taskIndex} className={className}>
                 {this._getProgressBar(task)}
-                <div className="task-text-wrapper">
-                    <span className="text-cell name">
+                <div className="text-cell-wrapper">
+                    <span className="text-cell text">
                         {task.taskName}
                     </span>
                     {task.neededHours ?
-                        <span className="text-cell progress">
+                        <span className="text-cell figure">
                             {task.workedHours}/{task.neededHours}h
                         </span> : null
                     }

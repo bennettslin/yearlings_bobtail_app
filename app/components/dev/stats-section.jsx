@@ -11,11 +11,11 @@ class StatsSection extends React.Component {
     _getCountRow(typeName, typeCount) {
         return (
             <div key={typeName}
-                className="count-text-wrapper">
-                <span className="text-cell name">
+                className="text-cell-wrapper">
+                <span className="text-cell text">
                     {typeName}
                 </span>
-                <span className="text-cell count">
+                <span className="text-cell figure">
                     {typeCount}
                 </span>
             </div>
@@ -32,7 +32,7 @@ class StatsSection extends React.Component {
             countPerAnnotationRow = this._getCountRow('words per annotation', countPerAnnotation);
 
         return (
-            <div className="stats-section">
+            <div className="section stats-section">
                 <h2>stats</h2>
                 <div className="stats-row">
                     {lyricsCountRow}

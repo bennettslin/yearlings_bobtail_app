@@ -21,8 +21,8 @@ class ProgressBar extends React.Component {
             };
 
         return (
-            <div className="total-progress-bar" style={totalStyle}>
-                <div className="filled-progress-bar" style={filledStyle}></div>
+            <div className="progress-bar" style={totalStyle}>
+                <div className="filled-bar" style={filledStyle}></div>
             </div>
         );
     }
