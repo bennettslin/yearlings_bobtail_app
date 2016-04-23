@@ -7,7 +7,7 @@ const defaultProps = {
     tasks: []
 };
 
-class ProgressSection extends React.Component {
+class TasksSection extends React.Component {
 
     componentWillMount() {
         this._setMaxTotalNeededHours(this.props.tasks);
@@ -100,7 +100,7 @@ class ProgressSection extends React.Component {
             );
 
         return (
-            <div className="progress-section">
+            <div className="tasks-section">
                 <h2>progress</h2>
                 {taskRows}
                 {taskFooter}
@@ -109,5 +109,5 @@ class ProgressSection extends React.Component {
     }
 }
 
-ProgressSection.defaultProps = defaultProps;
-export default ProgressSection;
+TasksSection.defaultProps = defaultProps;
+export default TasksSection;

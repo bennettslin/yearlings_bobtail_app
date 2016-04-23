@@ -1,7 +1,7 @@
 import React from 'react';
 import AnnotationSection from './annotation-section.jsx';
 import LyricsSection from './lyrics-section.jsx';
-import ProgressSection from './progress-section.jsx';
+import TasksSection from './tasks-section.jsx';
 import SpeechBubblesSection from './speech-bubbles-section.jsx';
 import StatsSection from './stats-section.jsx';
 import SongsSection from './songs-section.jsx';
@@ -156,7 +156,7 @@ class App extends React.Component {
                         handleSpeechBubbleSelect={this.handleSpeechBubbleSelect}
                     />
                     {selectedSong.tasks ?
-                        <ProgressSection
+                        <TasksSection
                             tasks={selectedSong.tasks}
                         /> : null
                     }
