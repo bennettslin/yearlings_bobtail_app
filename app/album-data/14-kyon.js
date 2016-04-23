@@ -2,7 +2,7 @@ module.exports = {
     title: 'Kyon?',
     speechBubbles: {
         narrative: 'narrative 1',
-        backstory: 'personal 1'
+        music: 'personal 1'
     },
     lyrics: {
         right: [

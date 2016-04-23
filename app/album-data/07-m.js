@@ -8,7 +8,7 @@ module.exports = {
         /**
          * Song about Mara that wasn't explicitly about Mara
          */
-        backstory: 'personal 1'
+        music: 'personal 1'
     },
     lyrics: {
         right: [
