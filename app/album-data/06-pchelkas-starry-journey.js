@@ -55,7 +55,7 @@ module.exports = {
             description: 'According to RI Research, Beyonders are an ancient race of beings born from the stars, who were scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet are beset by a nagging disquiet that they do not truly belong.'
         },
         wanderer_lost: {
-            description: 'Hitting all the right nerves, the letter from RI Research addressed my yearning to belong, and spoke to my frustration that such ends should so elude me. It then shared its hopeful news: They believed that I might be a Beyonder, and after searching for so long, they had found me.'
+            description: 'Hitting all the right nerves, the letter from RI Research addressed my yearning to belong, and spoke to my frustration that these desired ends should so elude me. It then shared its hopeful news: They believed that I might be a Beyonder, and after searching for so long, they had found me.'
         },
         waiting_for_goddard: {
             description: [

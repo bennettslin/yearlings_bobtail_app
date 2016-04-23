@@ -33,7 +33,7 @@ module.exports = {
             description: 'Catherine wanted to break up; I didn\'t. But hers was also to be the "sole ascent."'
         },
         dirge_shed_deride: {
-            description: 'A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone might listen to music differently. But Catherine mostly appreciated music for its lyrics, and as such, she wasn\'t impressed by my songwriting skills.'
+            description: 'A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music any differently. But Catherine appreciated music for its lyrics, and as such, she wasn\'t impressed by my songwriting skills.'
         },
         pressed_for_an_opinion: {
             description: 'After committing to become a better lyricist, I would ask Catherine for her honest critique. In this imagined scenario that\'s perfectly telling of our actual relationship, she puts down the James Joyce novel that she\'s reading to compliment my attempt at writing a clever verse.'
@@ -42,8 +42,7 @@ module.exports = {
             description: 'Her compliment is insincere, however, as she secretly amuses herself by drolly observing, "My, Walt Whitman." After all, referencing a poet typically studied by middle schoolers is hardly a signifier of expressive ability. And so she\'s also figuratively putting me down, for my naive hope of becoming the James Joyce of lyricists.'
         },
         poised_with_brains: {
-            // TODO
-            description: ''
+            description: 'Catherine didn\'t value the artistic strengths that I had always counted on to cover up my other weaknesses. Which made me realise that if I wanted to keep dating those so very unlike me, then I couldn\'t allow myself to have any real weaknesses.'
         },
         outside_her_shelta: {
             description: 'The Irish Travellers, a predominantly Catholic ethnic group, speak a cryptic language known as Shelta that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."',
@@ -74,7 +73,7 @@ module.exports = {
             description: [
                 'The story of Kateri Tekakwitha, the Catholic Church\'s first Native American saint, figures prominently in',
                 {
-                    italic: 'Beautiful Losers,'
+                    italic: 'Beautiful Losers.'
                 },
                 'I always assumed that "going clear" was a reference to the legend that Tekakwitha\'s smallpox scars miraculously vanished upon her death.'
             ],
@@ -95,14 +94,14 @@ module.exports = {
             reference: 'https://en.wikipedia.org/wiki/Palm_Sunday'
         },
         catherine_vaut_bien: {
-            description: 'Henry IV was born a Protestant Huguenot but converted to Catholicism before accepting the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that could get Catherine to stay.',
+            description: 'Henry IV was born a Protestant but converted to Catholicism to gain the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that could get Catherine to stay.',
             reference: 'https://en.wikipedia.org/wiki/Henry_IV_of_France'
         },
         cursed_to_be_born: {
             description: 'One juvenile argument against the Catholic Church\'s pro-life stance is that it makes no sense for unbelievers to be born at all, since it means trading the certainty of going to heaven for the likelihood of going to hell.'
         },
         tragic_mask: {
-            description: 'I learned early on that comedy and tragedy are two sides of the same coin. After all, every misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic aspects of any misfortune. The downside is that in my ongoing quest for newsworthy outcomes, whether good or bad, I could never tell whether anything I did was just an act.'
+            description: 'At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, every misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic aspects of any misfortune. The downside is that in my ongoing quest for newsworthy outcomes, whether good or bad, I could never tell whether anything I did was just an act.'
         },
         spreading_mole: {
             description: 'By day\'s end, the ash was pretty smudged. Also, a spreading mole is a sign of cancer, which is fitting since I wasn\'t sure how sick it is to fake being Catholic.'

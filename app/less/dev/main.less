@@ -9,6 +9,7 @@
 
 body {
     background-color: #999;
+    margin: 0;
 }
 
 .app {
@@ -18,110 +19,122 @@ body {
     min-height: 100vh;
     font-family: PTSansNarrow;
     font-size: 1.1em;
+}
+/**********
+ * FIELDS *
+ **********/
 
-    /**********
-     * FIELDS *
-     **********/
+.field {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 (@field-padding * 0.5);
 
-    .field {
-        position: relative;
-        box-sizing: border-box;
-        padding: 0 @field-padding;
+    &:first-child {
+        padding-left: @field-padding;
     }
 
-    .songs-field {
-        width: @songs-field-width;
-        min-width: @songs-field-width;
-        background-color: #ede;
-        font-size: 1.2em;
+    &:last-child {
+        padding-right: @field-padding;
     }
+}
 
-    .notes-field {
-        width: @notes-field-width;
-        min-width: @notes-field-width;
-        background-color: #edd;
-    }
+.songs-field {
+    width: @songs-field-width;
+    min-width: @songs-field-width;
+    background-color: #ede;
+    font-size: 1.2em;
+}
 
-    .lyrics-field {
-        background-color: #eed;
-    }
+.notes-field {
+    width: @notes-field-width;
+    min-width: @notes-field-width;
+    background-color: #edd;
+}
 
-    /************
-     * SECTIONS *
-     ************/
+.lyrics-field {
+    width: @lyrics-field-width;
+    min-width: @lyrics-field-width;
+    background-color: #eed;
+}
 
-    .section {
-        box-sizing: border-box;
-        padding: @field-padding;
-        margin: @field-padding 0;
-        background-color: rgba(255, 255, 255, 0.75);
+/************
+ * SECTIONS *
+ ************/
+
+.section {
+    box-sizing: border-box;
+    padding: @field-padding;
+    margin: @field-padding 0;
+
+    &:not(.annotation-section) {
+        background-color: rgba(255, 255, 255, 0.5);
         box-shadow: 0 2px 2px 2px rgba(100, 100, 120, 0.2);
     }
+}
 
-    /*****************
-     * BARS AND ROWS *
-     *****************/
+/*****************
+ * BARS AND ROWS *
+ *****************/
 
-    .progress-bar {
+.progress-bar {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .filled-bar {
         position: absolute;
         width: 0%;
         height: 100%;
-        border-radius: 5px;
-        overflow: hidden;
-
-        .filled-bar {
-            position: absolute;
-            width: 0%;
-            height: 100%;
-        }
     }
+}
 
-    .text-cell-wrapper {
-        @height-margin: 4px;
-        @width-margin: 12px;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        margin: @height-margin @width-margin;
+.text-cell-wrapper {
+    @height-margin: 4px;
+    @width-margin: 12px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: @height-margin @width-margin;
 
-        .text-cell {
-            display: inline-block;
+    .text-cell {
+        display: inline-block;
 
-            &:first-child {
-                flex-grow: 1;
+        &:first-child {
+            flex-grow: 1;
+        }
+
+        &.figure {
+            text-align: right;
+
+            &.font-size-1 {
+                font-size: 1.4em;
             }
 
-            &.figure {
-                text-align: right;
-
-                &.font-size-1 {
-                    font-size: 1.4em;
-                }
-
-                &.font-size-2 {
-                    font-size: 1.25em;
-                }
+            &.font-size-2 {
+                font-size: 1.25em;
             }
         }
     }
+}
 
-    .row {
-        position: relative;
-        overflow: hidden;
-        margin: @row-height-margin;
+.row {
+    position: relative;
+    overflow: hidden;
+    margin: @row-height-margin;
 
-        &.primary-row {
-            font-size: @primary-row-font-size;
-        }
-
-        &.secondary-row {
-            font-size: @secondary-row-font-size;
-        }
+    &.primary-row {
+        font-size: @primary-row-font-size;
     }
 
-
-    .popup-transition-group {
-        position: fixed;
-        z-index: 1;
+    &.secondary-row {
+        font-size: @secondary-row-font-size;
     }
+}
+
+
+.popup-transition-group {
+    position: fixed;
+    z-index: 1;
 }

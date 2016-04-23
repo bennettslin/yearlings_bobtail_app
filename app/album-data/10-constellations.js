@@ -11,7 +11,7 @@ module.exports = {
             {
                 italic: 'Finnegans Wake,'
             },
-            'I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still and everything feels at once epic and unreal. The Police\'s',
+            'I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police\'s',
             {
                 italic: 'Ghost in the Machine'
             },
@@ -78,10 +78,10 @@ module.exports = {
             description: 'Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.'
         },
         mong_ol: {
-            description: 'The Magyars share genetic origins with the Mongols, an East Asian nomadic people.'
+            description: 'The Magyars share genetic ancestry with the Mongols, an East Asian nomadic people.'
         },
         psealed_off_drains: {
-            description: 'In those days, the Robitussin I took would contain pseudoephedrine, a decongestant. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.'
+            description: 'Back in the day, the Robitussin I took contained pseudoephedrine, a decongestant. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.'
         },
         down_the_steppes: {
             description: 'In the 13th century, the Mongols swept down from the East Asian steppes and began their conquests.'
@@ -90,7 +90,7 @@ module.exports = {
             description: 'Genghis Khan, who was born Temujin, founded the Mongol Empire.'
         },
         slain_the_teeto_tatars: {
-            description: 'Genghis Khan was able to unite the Mongols by defeating the Tatars, a rival tribe. Also, "teeter-totters" and "teetotalers." Having just taken Robitussin a couple nights ago, I was wavering on taking it again so soon, as Robitussin really destroys you, both mentally and physically. But once the "drink is gone" and I\'ve had "too much in," the familiar sensation kicks in, and it feels awesome.'
+            description: 'Genghis Khan was able to unite the Mongols by defeating the Tatars, a rival tribe. Also, "teeter-totters" and "teetotalers." Having just taken Robitussin a few days prior, I was wavering on taking it again so soon, as Robitussin really destroys you, both mentally and physically. But once the "drink is gone" and I\'ve had "too much in," the familiar sensation kicks in, and it feels awesome.'
         },
         tomer_layin_the_seed: {
             description: '"Tamerlane the seed." Tamerlane, a descendant of Genghis Khan, continued the Turko-Mongol expansion into Central Asia. Also, as Tomer jokingly drops crumbs as if to leave a trail, I observe that it\'s like he\'s planting seeds that will sprout into nations.'
@@ -121,7 +121,7 @@ module.exports = {
             description: '"Our young invaders on soft quarry rest." We come to a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches.'
         },
         ourevian_battles_spent: {
-            description: '"Arabian battles spent." With the rise of Islam, the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and the Evian bottles that we had each brought into the steam tunnels were now empty.'
+            description: '"Arabian battles spent." With the rise of Islam, the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and the Evian bottles that we brought into the steam tunnels are now empty.'
         },
         aduct_uighuress: {
             description: '"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.'

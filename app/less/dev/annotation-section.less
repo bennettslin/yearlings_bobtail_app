@@ -1,13 +1,10 @@
 .annotation-section {
-    .animation-mixin;
     @overflow-margin-width: 5px;
+    .animation-mixin;
     position: absolute;
     top: 45px;
-    left: -@overflow-margin-width - @field-padding;
+    left: -@overflow-margin-width - (@field-padding * 0.5);
     width: @notes-field-width + (@overflow-margin-width * 2);
     box-shadow: -2px 2px 8px 8px rgba(100, 100, 120, 0.2);
-    border-radius: 5px;
-    z-index: 1;
-    margin: auto 0;
     background-color: #eff;
 }
