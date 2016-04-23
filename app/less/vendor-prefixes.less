@@ -14,3 +14,15 @@
           -ms-user-select: none; /* IE/Edge */
               user-select: none;
 }
+
+#gradient {
+    .linear-gradient(@startColor: #555,
+                     @endColor: #333,
+                     @fallbackColor: mix(@startColor, @endColor, 60%),
+                     @direction: bottom) {
+        background-color: @fallbackColor;
+        background: -ms-linear-gradient(@direction, @startColor, @endColor); /* IE10 */
+        background: linear-gradient(to @direction, @startColor, @endColor);
+        background-repeat: repeat-x;
+    }
+}

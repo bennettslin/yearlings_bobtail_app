@@ -105,13 +105,42 @@ module.exports = {
             description: 'Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.'
         },
         forsi_ahuro: {
-            description: 'In Farsi, the Iranian language, <i>ahura</i> is the word for an Avestan deity. In the Vedic texts of ancient India, <i>asura</i> refers to a demon. This suggests that a rift occurred amongst the Indo-Iranian people based on religious differences, and because the Vedas precede the Avesta, it\'s likely that the apostates left the Indian subcontinent and moved westward to the Iranian basin, rather than the reverse.'
+            description: [
+                'In Farsi, the Iranian language,',
+                {
+                    italic: 'ahura'
+                },
+                'is the word for an Avestan deity. In the Vedic texts of ancient India,',
+                {
+                    italic: 'asura'
+                },
+                'refers to a demon. This suggests that a rift occurred amongst the Indo-Iranian people based on religious differences, and because the Vedas precede the Avesta, it\'s likely that the apostates left the Indian subcontinent and moved westward to the Iranian basin, rather than the reverse.'
+            ]
         },
         sensegreat_devas_dayshone: {
-            description: 'Moreover, in Sanskrit, the ancient Indian language, <i>deva</i> is the word for a Vedic deity, while <i>daeva</i> in the Avesta refers to a demon. '
+            description: [
+                'Moreover, in Sanskrit, the ancient Indian language,',
+                {
+                    italic: 'deva'
+                },
+                'is the word for a Vedic deity, while',
+                {
+                    italic: 'daeva'
+                },
+                'in the Avesta refers to a demon. '
+            ]
         },
         to_soma_up: {
-            description: 'In the Vedas, <i>soma</i> is a ritual drink prepared from an unidentified botanical substance believed by some scholars to have held psychedelic properties. In the Avesta, it is referred to as <i>haoma.</i>',
+            description: [
+                'In the Vedas,',
+                {
+                    italic: 'soma'
+                },
+                'is a ritual drink prepared from an unidentified botanical substance believed by some scholars to have held psychedelic properties. In the Avesta, it is referred to as',
+                {
+                    italic: 'haoma.'
+                }
+                ],
             reference: 'https://en.wikipedia.org/wiki/Botanical_identity_of_soma%E2%80%93haoma'
         },
         our_youn_invedas: {
@@ -127,7 +156,13 @@ module.exports = {
             description: '"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.'
         },
         are_melee_tapirs: {
-            description: '"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to the horse\'s prehistoric ancestor <i>Eohippus</i>, or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many throughout history had believed to have been reached.'
+            description: [
+                '"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to the horse\'s prehistoric ancestor',
+                {
+                    italic: 'Eohippus,'
+                },
+                'or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many throughout history had believed to have been reached.'
+            ]
         },
         the_dusc_horse_yet: {
             description: '"Our melee tapers the discourse." Wielding scavenged materials as if they are swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.'
@@ -160,7 +195,13 @@ module.exports = {
             description: 'We reach Adam\'s grave, just as the indigenous Americans, having discovered more bountiful lands, perish their fears of an encroaching autumn.'
         },
         ill_sail_this_sea: {
-            description: 'Standing next to Adam\'s headstone under the predawn sky, I\'m overcome with a profound sense of clarity and purpose, and I renew my determination to finish <i>Yearling\'s Bobtail</i> guided solely by my artistic instincts.'
+            description: [
+                'Standing next to Adam\'s headstone under the predawn sky, I\'m overcome with a profound sense of clarity and purpose, and I renew my determination to finish',
+                {
+                    italic: 'Bobtail'
+                },
+                'guided solely by my artistic instincts.'
+            ]
         },
         mistodawn: {
             description: 'Back in the car, my newfound clarity proves short-lived. In its late stages, Robitussin continues to offer vivid hallucinations once you close your eyes, which is what I\'m doing on the way back to Howie\'s place, as the "mist of dawn" breaks.'

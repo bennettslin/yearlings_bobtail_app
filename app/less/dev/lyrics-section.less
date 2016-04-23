@@ -33,4 +33,66 @@
             }
         }
     }
+
+    .anchor-block {
+        position: relative;
+
+        a {
+
+            span {
+
+                span:last-child {
+                    @text-shadow-colour: white;
+                    @text-shadow-offset: 0.75px;
+                    @text-shadow-blur: 0.1px;
+                    text-shadow:
+                        -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @text-shadow-colour,
+                        @text-shadow-offset -@text-shadow-offset @text-shadow-blur @text-shadow-colour,
+                        -@text-shadow-offset @text-shadow-offset @text-shadow-blur @text-shadow-colour,
+                        @text-shadow-offset @text-shadow-offset @text-shadow-blur @text-shadow-colour;
+                    position: relative;
+                    border-bottom: 1.5px solid pink;
+                }
+            }
+        }
+
+        .code-block {
+            @dot-diameter: 0.9em;
+            position: absolute;
+            left: -@dot-diameter * 0.25;
+            top: -@dot-diameter * 0.2;
+            display: flex;
+
+            .dot {
+                width: @dot-diameter;
+                height: @dot-diameter;
+                margin-right: 0.15em;
+                border-radius: @dot-diameter * 0.5;
+
+                &.narrative {
+                    #gradient > .linear-gradient(#faa, #fff);
+                }
+
+                &.music {
+                    #gradient > .linear-gradient(#faf, #fff);
+                }
+
+                &.pun {
+                    #gradient > .linear-gradient(#afa, #fff);
+                }
+
+                &.cross-reference {
+                    #gradient > .linear-gradient(#aaf, #fff);
+                }
+
+                &.reference {
+                    #gradient > .linear-gradient(#aff, #fff);
+                }
+
+                &.external-reference {
+                    #gradient > .linear-gradient(#faf, #fff);
+                }
+            }
+        }
+    }
 }

@@ -2,7 +2,7 @@ module.exports = {
     title: 'Yearling\'s Bobtail',
     speechBubbles: {
         narrative: 'five things that changed my life',
-        backstory: 'personal yb'
+        music: 'personal yb'
     },
     legendSymbols: [
         {

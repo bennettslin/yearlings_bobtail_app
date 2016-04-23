@@ -1,7 +1,7 @@
 import React from 'react';
 import FormatHelper from '../helpers/format-helper.jsx';
 
-const SPEECH_BUBBLE_NAMES = ['narrative', 'backstory'];
+const SPEECH_BUBBLE_NAMES = ['narrative', 'music'];
 const defaultProps = {
     speechBubbleRichText: '',
     selectedSpeechBubbleKey: '',
