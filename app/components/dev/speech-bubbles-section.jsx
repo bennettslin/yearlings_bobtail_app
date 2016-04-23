@@ -31,7 +31,7 @@ class SpeechBubblesSection extends React.Component {
     render() {
         return (
             <div className="section speech-bubbles-section">
-                <div className="button-row">
+                <div className="button-block">
                     {SPEECH_BUBBLE_NAMES.map(key => {
                         return this._getSpeechBubbleSelectButton(key);
                     })}

@@ -34,7 +34,7 @@ class StatsSection extends React.Component {
         return (
             <div className="section stats-section">
                 <h2>stats</h2>
-                <div className="stats-row">
+                <div className="row primary-row">
                     {lyricsCountRow}
                     {annotationsCountRow}
                     {countPerAnnotationRow}

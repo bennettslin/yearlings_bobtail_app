@@ -1,0 +1,17 @@
+.tasks-section {
+
+    .task-block {
+        // Header is first child.
+        &:not(:nth-child(2)) {
+            margin-top: @row-height-margin;
+        }
+    }
+
+    .subtask-block {
+        padding-left: 25px;
+    }
+
+    .row {
+        .progress-bar-mixin(#fcc, #daa);
+    }
+}

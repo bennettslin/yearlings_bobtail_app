@@ -1,0 +1,23 @@
+.songs-section {
+
+    .row {
+
+        .progress-bar-mixin(#fcf, #dad);
+
+        &.played {
+            .progress-bar-mixin(#cfc, #ada);
+
+            a {
+                color: #484;
+
+                &:hover {
+                    color: #7b7;
+                }
+
+                &:active {
+                    color: #aea;
+                }
+            }
+        }
+    }
+}

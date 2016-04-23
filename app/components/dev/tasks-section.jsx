@@ -36,8 +36,8 @@ class TasksSection extends React.Component {
         );
     }
 
-    _getTaskSubrow(task, taskIndex, isSubtask) {
-        const className = isSubtask ? 'subtask-subrow' : 'task-subrow';
+    _getTaskRow(task, taskIndex, isSubtask) {
+        const className = 'row ' + (isSubtask ? 'secondary-row' : 'primary-row');
         return (
             <div key={taskIndex} className={className}>
                 {this._getProgressBar(task)}
@@ -55,15 +55,15 @@ class TasksSection extends React.Component {
         );
     }
 
-    _getSubtaskRow(subtasks) {
+    _getSubtaskBlock(subtasks) {
         if (subtasks) {
-            const subtaskSubrows = subtasks.map((subtask, subtaskIndex) => {
-                    return this._getTaskSubrow(subtask, subtaskIndex, true);
+            const subtaskRows = subtasks.map((subtask, subtaskIndex) => {
+                    return this._getTaskRow(subtask, subtaskIndex, true);
                 });
 
             return (
-                <div className="subtask-row">
-                    {subtaskSubrows}
+                <div className="subtask-block">
+                    {subtaskRows}
                 </div>
             );
 
@@ -72,15 +72,15 @@ class TasksSection extends React.Component {
         }
     }
 
-    _getTaskRows(tasks) {
+    _getTaskBlocks(tasks) {
         return tasks.map((task, taskIndex) => {
-            const taskSubrow = this._getTaskSubrow(task, taskIndex, false),
-                subtaskRow = this._getSubtaskRow(task.subtasks);
+            const taskRow = this._getTaskRow(task, taskIndex, false),
+                subtaskBlock = this._getSubtaskBlock(task.subtasks);
 
             return (
-                <div key={taskIndex} className="task-row">
-                    {taskSubrow}
-                    {subtaskRow}
+                <div key={taskIndex} className="task-block">
+                    {taskRow}
+                    {subtaskBlock}
                 </div>
             );
         });
@@ -88,20 +88,20 @@ class TasksSection extends React.Component {
 
     render() {
         const tasks = this.props.tasks,
-            taskRows = this._getTaskRows(tasks),
+            taskRows = this._getTaskBlocks(tasks),
             sumTask = ProgressHelper.calculateSumTask(tasks),
             progressFooterContent = ProgressHelper.getProgressFooterContent(sumTask, 2),
             taskFooter = (
-                <div key="footer" className="task-row">
-                    <div className="task-subrow">
+                <div key="footer" className="task-block">
+                    <div className="row">
                         {progressFooterContent}
                     </div>
                 </div>
             );
 
         return (
-            <div className="tasks-section">
-                <h2>progress</h2>
+            <div className="section tasks-section">
+                <h2>tasks</h2>
                 {taskRows}
                 {taskFooter}
             </div>

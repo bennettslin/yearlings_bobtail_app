@@ -40,7 +40,7 @@ class LyricColumn extends React.Component {
             doublespeakerClassName = props.columnTitle ? ' double-column' : '',
             columnClassName = 'lyric-column ' + columnKey + doublespeakerClassName,
             lyricTextArea = (
-                <div className={'lyric-text-area'}>
+                <div className={'lyric-block'}>
                     {props.selectedSongLyrics.map((stanza, stanzaIndex) => {
                         return this._getStanza(stanza, stanzaIndex);
                     })}

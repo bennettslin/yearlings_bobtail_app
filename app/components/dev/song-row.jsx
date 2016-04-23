@@ -45,7 +45,7 @@ class SongRow extends React.Component {
     render() {
         const props = this.props,
             sumTask = props.sumTask,
-            className = 'song-row' + (props.isSelected ? ' played' : ''),
+            className = 'row ' + (props.isSelected ? ' played' : ''),
             progressBar = (!props.isHeader && !props.isFooter ?
                 <ProgressBar
                     sumTask={sumTask}

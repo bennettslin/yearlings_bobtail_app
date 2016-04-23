@@ -1,11 +1,11 @@
 import React from 'react';
-import AnnotationSection from './annotation-section.jsx';
-import LyricsSection from './lyrics-section.jsx';
-import TasksSection from './tasks-section.jsx';
-import SpeechBubblesSection from './speech-bubbles-section.jsx';
-import StatsSection from './stats-section.jsx';
+import TitleSection from './title-section.jsx';
 import SongsSection from './songs-section.jsx';
-import SongPlayerSection from './song-player-section.jsx';
+import AnnotationSection from './annotation-section.jsx';
+import StatsSection from './stats-section.jsx';
+import SpeechBubblesSection from './speech-bubbles-section.jsx';
+import TasksSection from './tasks-section.jsx';
+import LyricsSection from './lyrics-section.jsx';
 import GlobalHelper from '../helpers/global-helper.js';
 
 const defaultProps = {
@@ -131,9 +131,10 @@ class App extends React.Component {
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
                 <div className="field songs-field">
-                    <a onClick={this.handleSongChange.bind(null, 0, 'selected', true)}>
-                        <h1>{props.title}</h1>
-                    </a>
+                    <TitleSection
+                        titleText={props.title}
+                        handleSongReset={this.handleSongChange.bind(null, 0, 'selected', true)}
+                    />
                     <SongsSection
                         songs={props.songs}
                         selectedSongIndex={selectedSongIndex}

@@ -14,13 +14,14 @@ class AnnotationSection extends React.Component {
 
         return (
             <CSSTransitionGroup
-                style={{ position: 'fixed', zIndex: 1 }}
+                className="popup-transition-group"
                 transitionName="annotation-animation"
                 transitionEnterTimeout={100}
                 transitionLeaveTimeout={100}
             >
             {this.props.selectedAnnotationKey ?
-                <div ref="annotation" className="section annotation-section">
+                <div ref="annotation"
+                    className="section annotation-section">
                     <h2>annotation</h2>
                     {annotationSpan}
                 </div> : null

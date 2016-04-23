@@ -1,0 +1,36 @@
+.lyrics-section {
+
+    .lyric-columns {
+        display: flex;
+    }
+
+    .lyric-column {
+
+        &.double-column {
+            &.left {
+                padding-right: @field-padding * 0.5;
+            }
+
+            &.right {
+                padding-left: @field-padding * 0.5;
+            }
+        }
+    }
+
+    .lyric-block {
+        @lyric-verse-size: 1em;
+        font-size: @lyric-verse-size;
+
+        .stanza {
+            &:not(:last-child) {
+                margin-bottom: @lyric-verse-size;
+            }
+
+            .verse {
+                @hanging-indent-width: 1.5em;
+                padding-left: @hanging-indent-width;
+                text-indent:-@hanging-indent-width;
+            }
+        }
+    }
+}

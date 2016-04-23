@@ -1,17 +1,17 @@
 @import "../constants.less";
-@import "../vendor-prefixes.less";
+@import "../global.less";
+
+@import "./songs-section.less";
+@import "./annotation-section.less";
+@import "./speech-bubbles-section.less";
+@import "./tasks-section.less";
+@import "./lyrics-section.less";
 
 body {
     background-color: #999;
 }
 
 .app {
-    @column-padding: 15px;
-    @row-height-margin: 2px;
-
-    @primary-row-font-size: 1.05em;
-    @secondary-row-font-size: 0.9em;
-
     display: flex;
     justify-content: center;
     height: 100%;
@@ -26,26 +26,24 @@ body {
     .field {
         position: relative;
         box-sizing: border-box;
-        padding: 0 @column-padding @column-padding;
+        padding: 0 @field-padding;
     }
 
-    @songs-field-width: 350px;
     .songs-field {
         width: @songs-field-width;
         min-width: @songs-field-width;
-        background-color: #fef;
+        background-color: #ede;
         font-size: 1.2em;
     }
 
-    @notes-field-width: 350px;
     .notes-field {
         width: @notes-field-width;
         min-width: @notes-field-width;
-        background-color: #fee;
+        background-color: #edd;
     }
 
     .lyrics-field {
-        background-color: #ffe;
+        background-color: #eed;
     }
 
     /************
@@ -54,149 +52,10 @@ body {
 
     .section {
         box-sizing: border-box;
-        padding: 0px @column-padding @column-padding;
-    }
-
-    .songs-section {
-
-        .song-row {
-            position: relative;
-            overflow: hidden;
-            margin: @row-height-margin 0;
-
-            .progress-bar {
-                background-color: #fcf;
-
-                .filled-bar {
-                    background-color: #dad;
-                }
-            }
-
-            &.played {
-                .progress-bar {
-                    background-color: #cfc;
-
-                    .filled-bar {
-                        background-color: #ada;
-                    }
-                }
-
-                a {
-                    color: #484;
-
-                    &:hover {
-                        color: #7b7;
-                    }
-
-                    &:active {
-                        color: #aea;
-                    }
-                }
-            }
-        }
-    }
-
-    .annotation-section {
-        .animation-mixin;
-        @overflow-margin-width: 5px;
-        position: absolute;
-        top: 45px;
-        left: -@overflow-margin-width;
-        width: @notes-field-width + (@overflow-margin-width * 2);
-        box-shadow: -2px 2px 8px 8px rgba(100, 100, 120, 0.2);
-        border-radius: 5px;
-        z-index: 1;
-        margin: auto 0;
-        background-color: #eff;
-    }
-
-    .tasks-section {
-
-        .task-row {
-            // Header is first child.
-            &:not(:nth-child(2)) {
-                margin-top: @row-height-margin;
-            }
-
-            font-size: @primary-row-font-size;
-        }
-
-        .subtask-row {
-            padding-left: 25px;
-            font-size: @secondary-row-font-size;
-        }
-
-        [class$="subrow"] {
-            position: relative;
-            overflow: hidden;
-            margin: @row-height-margin;
-
-            .progress-bar {
-                background-color: #fcc;
-
-                .filled-bar {
-                    background-color: #daa;
-                }
-            }
-        }
-    }
-
-    .speech-bubbles-section {
-
-        .button-row {
-            display: flex;
-            justify-content: space-between;
-
-            .disabled {
-                a {
-                    color: #aaa;
-                    cursor: default;
-                }
-            }
-        }
-    }
-
-    .stats-section {
-        .stats-row {
-            font-size: @primary-row-font-size;
-        }
-    }
-
-    .lyrics-section {
-
-        .lyric-columns {
-            display: flex;
-        }
-
-        .lyric-column {
-
-            &.double-column {
-                &.left {
-                    padding-right: @column-padding * 0.5;
-                }
-
-                &.right {
-                    padding-left: @column-padding * 0.5;
-                }
-            }
-        }
-
-        .lyric-text-area {
-            @lyric-verse-size: 1em;
-            font-size: @lyric-verse-size;
-
-            .stanza {
-                &:not(:last-child) {
-                    margin-bottom: @lyric-verse-size;
-                }
-
-                .verse {
-                    @hanging-indent-width: 1.5em;
-                    padding-left: @hanging-indent-width;
-                    text-indent:-@hanging-indent-width;
-                }
-            }
-        }
+        padding: @field-padding;
+        margin: @field-padding 0;
+        background-color: rgba(255, 255, 255, 0.75);
+        box-shadow: 0 2px 2px 2px rgba(100, 100, 120, 0.2);
     }
 
     /*****************
@@ -244,5 +103,25 @@ body {
                 }
             }
         }
+    }
+
+    .row {
+        position: relative;
+        overflow: hidden;
+        margin: @row-height-margin;
+
+        &.primary-row {
+            font-size: @primary-row-font-size;
+        }
+
+        &.secondary-row {
+            font-size: @secondary-row-font-size;
+        }
+    }
+
+
+    .popup-transition-group {
+        position: fixed;
+        z-index: 1;
     }
 }
