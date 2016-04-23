@@ -509,7 +509,7 @@ module.exports = {
                             anchor: 'herows—ourauras left—',
                             annotationKey: 'herows_ourauras_left'
                         },
-                        'to',
+                        '{noSpace}to',
                         {
                             anchor: 'Audamn\'s grave.',
                             annotationKey: 'audamns_grave'

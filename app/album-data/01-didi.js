@@ -49,7 +49,7 @@ module.exports = {
                 {
                     italic: 'Pet Sounds,'
                 },
-                'I had hoped to plant a gentle reminder that Brian Wilson\'s masterpiece was never performed live in its own time precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops many lists of rock\'s greatest albums. I was worried about indie rock\'s congealing belief that recordings merely serve to showcase live shows, because as an unknown, I could only strive to excel at the former while deferring the latter. But',
+                'I had hoped to plant a gentle reminder that Brian Wilson\'s masterpiece was never performed live in its own time, precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops many lists of rock\'s greatest albums. I was worried about indie rock\'s congealing belief that recordings merely serve to showcase live shows, because as an unknown, I could only strive to excel at the former while deferring the latter. But',
                 {
                     italic: 'Yearling\'s Bobtail'
                 },

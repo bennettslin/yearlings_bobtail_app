@@ -42,7 +42,7 @@ module.exports = {
             description: 'Her compliment is insincere, however, as she secretly amuses herself by drolly observing, "My, Walt Whitman." After all, referencing a poet typically studied by middle schoolers is hardly a signifier of expressive ability. And so she\'s also figuratively putting me down, for my naive hope of becoming the James Joyce of lyricists.'
         },
         poised_with_brains: {
-            description: 'Catherine didn\'t value the artistic strengths that I had always counted on to cover up my other weaknesses. Which made me realise that if I wanted to keep dating those so very unlike me, then I couldn\'t allow myself to have any real weaknesses.'
+            description: 'Catherine didn\'t value the artistic strengths that I had always counted on to cover up my other weaknesses. Which made me realise that if I wanted to keep dating those so very unlike me, then I couldn\'t have any real weaknesses.'
         },
         outside_her_shelta: {
             description: 'The Irish Travellers, a predominantly Catholic ethnic group, speak a cryptic language known as Shelta that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."',
@@ -100,8 +100,11 @@ module.exports = {
         cursed_to_be_born: {
             description: 'One juvenile argument against the Catholic Church\'s pro-life stance is that it makes no sense for unbelievers to be born at all, since it means trading the certainty of going to heaven for the likelihood of going to hell.'
         },
+        mistaken_for_catholic: {
+            description: 'I had conversations that day that I wouldn\'t have had otherwise, which fed my zeal for sneaking into social worlds centred on ingroup solidarity.'
+        },
         tragic_mask: {
-            description: 'At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, every misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic aspects of any misfortune. The downside is that in my ongoing quest for newsworthy outcomes, whether good or bad, I could never tell whether anything I did was just an act.'
+            description: 'At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. The downside is that in my ongoing quest for noteworthy outcomes, either good or bad, I could never tell whether anything I did was just an act.'
         },
         spreading_mole: {
             description: 'By day\'s end, the ash was pretty smudged. Also, a spreading mole is a sign of cancer, which is fitting since I wasn\'t sure how sick it is to fake being Catholic.'
@@ -283,7 +286,7 @@ module.exports = {
                             annotationKey: 'went_clear'
                         },
                         {
-                            anchor: '—my Tekakwitha—',
+                            anchor: '{noSpace}—my Tekakwitha—',
                             annotationKey: 'my_tekakwitha'
                         }
 
@@ -376,7 +379,13 @@ module.exports = {
                 },
                 {
                     time: 130,
-                    verse: 'mistaken for Catholic with some smeared ash;'
+                    verse: [
+                        {
+                            anchor: 'mistaken for Catholic',
+                            annotationKey: 'mistaken_for_catholic'
+                        },
+                        'with some smeared ash;'
+                    ]
                 },
                 {
                     time: 136,
@@ -441,7 +450,7 @@ module.exports = {
                     neededHours: 3
                 }
             ],
-            workedHours: 31,
+            workedHours: 37,
             neededHours: 40
         },
         {

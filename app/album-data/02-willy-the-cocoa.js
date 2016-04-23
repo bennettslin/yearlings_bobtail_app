@@ -600,13 +600,23 @@ module.exports = {
             ],
             [
                 {
-                    // TODO: italicise Bobtail
                     time: 191,
-                    verse: 'Bobtail\'s cover could say sorry for the world!'
+                    verse: [
+                        {
+                            italic: 'Bobtail'
+                        },
+                        '{noSpace}\'s cover could say sorry for the world!'
+                    ]
                 },
                 {
                     time: 197,
-                    verse: 'Oh, Bobtail\'s cover could say sorry…!'
+                    verse: [
+                        'Oh,',
+                        {
+                            italic: 'Bobtail'
+                        },
+                        '{noSpace}\'s cover could say sorry…!'
+                    ]
                 }
             ]
         ]

@@ -1,5 +1,7 @@
 import React from 'react';
 
+const NO_SPACE_STRING = '{noSpace}';
+
 module.exports = {
 
     /**
@@ -11,7 +13,7 @@ module.exports = {
 
         if (Array.isArray(text)) {
             return (
-                <span key={nestedIndex + '-' + index}>
+                <span key={nestedIndex + index}>
                     {text.map((textElement, index) => {
                         return this.getFormattedSpan(textElement, clickHandler, index, nestedIndex + 1);
                     })}
@@ -28,25 +30,35 @@ module.exports = {
      */
     _getTaggedTextContent: function(text, clickHandler, index, nestedIndex) {
         if (typeof text === 'string') {
+
+            /**
+             * Subsequent spans of text on a line will begin with a space,
+             * unless specifically told not to.
+             */
+            let noSpace = false;
+            if (text.indexOf(NO_SPACE_STRING) === 0) {
+                noSpace = true;
+                text = text.slice(NO_SPACE_STRING.length);
+            }
+
             return (
-                <span key={nestedIndex + '-' + index}>
-                    {/* Begin subsequent segments of each line with a space. */}
-                    {index > 0 ? ' ' : ''}
+                <span key={nestedIndex + index}>
+                    {(index > 0 && !noSpace ? ' ' : '')}
                     {text}
                 </span>
             );
 
         } else if (typeof text === 'object') {
             if (text.italic) {
-                return <i key={nestedIndex + '-' + index}>{this.getFormattedSpan(text.italic, clickHandler, index, nestedIndex)}</i>;
+                return <i key={nestedIndex + index}>{this.getFormattedSpan(text.italic, clickHandler, index, nestedIndex)}</i>;
 
             } else if (text.emphasis) {
-                return <em key={nestedIndex + '-' + index}>{this.getFormattedSpan(text.emphasis, clickHandler, index, nestedIndex)}</em>;
+                return <em key={nestedIndex + index}>{this.getFormattedSpan(text.emphasis, clickHandler, index, nestedIndex)}</em>;
 
             } else if (text.anchor) {
                 return (
                     <a
-                        key={nestedIndex + '-' + index}
+                        key={nestedIndex + index}
                         onClick={clickHandler.bind(null, text.annotationKey)}
                     >
                         {this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)}
