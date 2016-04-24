@@ -129,8 +129,8 @@ module.exports = {
             ]
         }
     },
-    lyrics: {
-        left: [
+    lyrics: [
+        [
             [
                 {
                     time: 11,
@@ -624,7 +624,7 @@ module.exports = {
                 }
             ]
         ]
-    },
+    ],
     tasks: [
         {
             taskName: 'annotations',

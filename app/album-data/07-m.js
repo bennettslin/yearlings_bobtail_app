@@ -10,8 +10,8 @@ module.exports = {
          */
         music: 'personal 1'
     },
-    lyrics: {
-        right: [
+    lyrics: [
+        [
             [
                 {
                     /**
@@ -312,7 +312,7 @@ module.exports = {
                 }
             ]
         ]
-    },
+    ],
     tasks: [
         {
             taskName: 'annotations',

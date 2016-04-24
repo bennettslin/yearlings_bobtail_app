@@ -2,7 +2,7 @@ import React from 'react';
 import FormatHelper from '../helpers/format-helper.jsx';
 
 const defaultProps = {
-    columnKey: 'left',
+    columnIndex: 0,
     columnTitle: '',
     selectedSongLyrics: [],
     handleAnnotationSelect() {}
@@ -35,10 +35,10 @@ class LyricColumn extends React.Component {
 
     render() {
         const props = this.props,
-            columnKey = props.columnKey,
+            columnIndex = props.columnIndex,
             columnTitleHeader = props.columnTitle ? <h3>{props.columnTitle}</h3> : null,
             doublespeakerClassName = props.columnTitle ? ' double-column' : '',
-            columnClassName = 'lyric-column ' + columnKey + doublespeakerClassName,
+            columnClassName = 'lyric-column ' + columnIndex + doublespeakerClassName,
             lyricTextArea = (
                 <div className={'lyric-block'}>
                     {props.selectedSongLyrics.map((stanza, stanzaIndex) => {

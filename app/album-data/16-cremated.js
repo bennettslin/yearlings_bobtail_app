@@ -4,8 +4,8 @@ module.exports = {
         narrative: 'narrative 1',
         music: 'personal 1'
     },
-    lyrics: {
-        left: [
+    lyrics: [
+        [ // left
             [
                 {
                     time: 1,
@@ -125,7 +125,7 @@ module.exports = {
                 }
             ]
         ],
-        right: [
+        [ // right
             [
                 {
                     time: 1,
@@ -245,7 +245,7 @@ module.exports = {
                 }
             ]
         ]
-    },
+    ],
     tasks: [
         {
             taskName: 'annotations',

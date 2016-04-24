@@ -71,8 +71,8 @@ module.exports = {
             description: 'I wasn\'t sure how to end a song about a painful stage of my life that mostly seems comical in retrospect. I decided I was happier to err on the side of humour.'
         }
     },
-    lyrics: {
-        right: [
+    lyrics: [
+        [
             [
                 {
                     time: 5,
@@ -358,7 +358,7 @@ module.exports = {
                 }
             ]
         ]
-    },
+    ],
     tasks: [
         {
             taskName: 'annotations',

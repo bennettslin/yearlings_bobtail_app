@@ -27,12 +27,6 @@ class TitleSection extends React.Component {
                         Scrolling annotations
                     </span>
                 </div>
-                <div
-                    className="text-cell-wrapper">
-                    <span className="text-cell text">
-                        Use gradient on anchor tags, not border bottom. And use colour constants.
-                    </span>
-                </div>
             </div>
         );
     }

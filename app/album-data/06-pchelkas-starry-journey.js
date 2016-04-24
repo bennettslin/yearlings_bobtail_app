@@ -173,8 +173,8 @@ module.exports = {
             description: 'By this point, I was already disillusioned with RI Research anyway, as their letters inexplicably began to take on Christian overtones. It\'s not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.'
         }
     },
-    lyrics: {
-        left: [
+    lyrics: [
+        [
             [
                 {
                     time: 0,
@@ -717,7 +717,7 @@ module.exports = {
                 }
             ]
         ]
-    },
+    ],
     tasks: [
         {
             taskName: 'annotations',
