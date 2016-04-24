@@ -36,13 +36,13 @@ class App extends React.Component {
         this.handleSpeechBubbleSelect(window.sessionStorage.selectedSpeechBubbleKey);
 
         // Retrieve stored annotation key, if there is one.
-        this.handleAnnotationSelect(window.sessionStorage.selectedAnnotationKey);
+        this.handleAnnotationSelect(window.sessionStorage.selectedAnnotationIndex);
 
         this.state = {
             playedSongIndex: parseInt(window.sessionStorage.playedSongIndex) || 0,
             selectedSongIndex: parseInt(window.sessionStorage.selectedSongIndex) || 0,
+            selectedAnnotationIndex: parseInt(window.sessionStorage.selectedAnnotationIndex) || 0,
             selectedSpeechBubbleKey: window.sessionStorage.selectedSpeechBubbleKey,
-            selectedAnnotationKey: window.sessionStorage.selectedAnnotationKey
         };
     }
 
@@ -106,12 +106,17 @@ class App extends React.Component {
         }
     }
 
-    handleAnnotationSelect(selectedAnnotationKey, setState) {
-        window.sessionStorage.selectedAnnotationKey = selectedAnnotationKey || '';
+    handleAnnotationSelect(selectedAnnotationIndex, setState) {
+
+        if (typeof selectedAnnotationIndex === 'string') {
+            selectedAnnotationIndex = parseInt(selectedAnnotationIndex) || 0;
+        }
+
+        window.sessionStorage.selectedAnnotationIndex = selectedAnnotationIndex || 0;
 
         if (setState) {
             this.setState({
-                selectedAnnotationKey
+                selectedAnnotationIndex
             });
         }
     }
@@ -126,8 +131,8 @@ class App extends React.Component {
             speechBubbleRichText = (selectedSongIndex && state.selectedSpeechBubbleKey) ?
                 selectedSong.speechBubbles[state.selectedSpeechBubbleKey] :
                 props.speechBubbles[state.selectedSpeechBubbleKey],
-            annotationRichText = (selectedSongIndex && state.selectedAnnotationKey) ?
-                selectedSong.annotations[state.selectedAnnotationKey].description : {};
+            annotationRichText = (selectedSongIndex && state.selectedAnnotationIndex) ?
+                selectedSong.annotations[state.selectedAnnotationIndex - 1].description : {};
 
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
@@ -146,7 +151,7 @@ class App extends React.Component {
                     <AnnotationSection
                         ref="annotationSection"
                         annotationRichText={annotationRichText}
-                        selectedAnnotationKey={state.selectedAnnotationKey}
+                        selectedAnnotationIndex={state.selectedAnnotationIndex}
                     />
                     {!selectedSongIndex ?
                         <NotesSection /> : null

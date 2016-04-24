@@ -13,50 +13,6 @@ module.exports = {
             }
         ]
     },
-    annotations: {
-        didi: {
-            description: [
-                'In Mandarin Chinese,',
-                {
-                    italic: 'didi'
-                },
-                'means "little brother." While my family is from Taiwan, the Chinese took over in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.'
-            ]
-        },
-        didnt_want_you_here: {
-            description: 'My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I remember the panic I felt when this happened.'
-        },
-        zeizei: {
-            description: [
-                {
-                    italic: 'Zeizei'
-                },
-                'means "big sister" in Mandarin Chinese.'
-            ]
-        },
-        safeway_paper_bag: {
-            description: 'Since my pants were soiled, the nurse gave me a shopping bag to carry them in. Safeway is a supermarket chain located in the western and central United States.'
-        },
-        sheriffs_badge_and_gun: {
-            description: 'After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what the label entailed. My mother\'s tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.'
-        },
-        girls_mirrors: {
-            description: 'My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.'
-        },
-        never_have_to_know: {
-            description: [
-                'By paying homage to',
-                {
-                    italic: 'Pet Sounds,'
-                },
-                'I had hoped to plant a gentle reminder that Brian Wilson\'s masterpiece was never performed live in its own time, precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops many lists of rock\'s greatest albums. I was worried about indie rock\'s congealing belief that recordings merely serve to showcase live shows, because as an unknown, I could only strive to excel at the former while deferring the latter. But',
-                {
-                    italic: 'Yearling\'s Bobtail'
-                },
-                'was indeed dead upon arrival, proving my fears well-founded. So this Didi did have to know some things after all.'
-            ]
-        }
-    },
     lyrics: [
         [
             [
@@ -65,7 +21,15 @@ module.exports = {
                     verse: [
                         {
                             anchor: 'Didi',
-                            annotationKey: 'didi'
+                            annotation: {
+                                description: [
+                                    'In Mandarin Chinese,',
+                                    {
+                                        italic: 'didi'
+                                    },
+                                    'means "little brother." While my family is from Taiwan, the Chinese took over in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.'
+                                ]
+                            }
                         },
                         'left the house this morning'
                     ]
@@ -90,7 +54,9 @@ module.exports = {
                         'Didi, you\'ve been following, I',
                         {
                             anchor: 'didn\'t want you here.',
-                            annotationKey: 'didnt_want_you_here'
+                            annotation: {
+                                description: 'My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I remember the panic I felt when this happened.'
+                            }
                         }
                     ]
                 },
@@ -106,7 +72,14 @@ module.exports = {
                         'Cause I get sick of hearing,',
                         {
                             anchor: '"Zeizei,',
-                            annotationKey: 'zeizei'
+                            annotation: {
+                                description: [
+                                    {
+                                        italic: 'Zeizei'
+                                    },
+                                    'means "big sister" in Mandarin Chinese.'
+                                ]
+                            }
                         },
                         'let Didi play with you…"'
                     ]
@@ -132,7 +105,9 @@ module.exports = {
                         'They saw him crying beside a',
                         {
                             anchor: 'Safeway paper bag,',
-                            annotationKey: 'safeway_paper_bag'
+                            annotation: {
+                                description: 'Since my pants were soiled, the nurse gave me a shopping bag to carry them in. Safeway is a supermarket chain located in the western and central United States.'
+                            }
                         }
                     ]
                 },
@@ -173,7 +148,9 @@ module.exports = {
                         'crooked thieves with your',
                         {
                             anchor: 'sheriff\'s badge and gun…',
-                            annotationKey: 'sheriffs_badge_and_gun'
+                            annotation: {
+                                description: 'After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what the label entailed. My mother\'s tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.'
+                            }
                         }
                     ]
                 },
@@ -187,7 +164,9 @@ module.exports = {
                         'taped to all the',
                         {
                             anchor: 'girls\' mirrors.',
-                            annotationKey: 'girls_mirrors'
+                            annotation: {
+                                description: 'My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.'
+                            }
                         }
                     ]
                 },
@@ -231,7 +210,19 @@ module.exports = {
                         'and there are things I hope Didi will',
                         {
                             anchor: 'never have to know.',
-                            annotationKey: 'never_have_to_know'
+                            annotation: {
+                                description: [
+                                    'By paying homage to',
+                                    {
+                                        italic: 'Pet Sounds,'
+                                    },
+                                    'I had hoped to plant a gentle reminder that Brian Wilson\'s masterpiece was never performed live in its own time, precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops many lists of rock\'s greatest albums. I was worried about indie rock\'s congealing belief that recordings merely serve to showcase live shows, because as an unknown, I could only strive to excel at the former while deferring the latter. But',
+                                    {
+                                        italic: 'Yearling\'s Bobtail'
+                                    },
+                                    'was indeed dead upon arrival, proving my fears well-founded. So this Didi did have to know some things after all.'
+                                ]
+                            }
                         }
                     ]
                 }

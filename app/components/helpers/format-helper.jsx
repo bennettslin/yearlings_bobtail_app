@@ -51,7 +51,7 @@ module.exports = {
                         {' '}
                         {this._getCodeBlock(text)}
                         <a className="anchor-link"
-                            onClick={clickHandler.bind(null, text.annotationKey)} >
+                            onClick={clickHandler.bind(null, text.annotationIndex)} >
                             {this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)}
                         </a>
                     </span>

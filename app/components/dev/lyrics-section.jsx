@@ -1,7 +1,6 @@
 import React from 'react';
 import LyricColumn from './lyric-column.jsx';
 
-const LYRICS_COLUMN_NAMES = ['left', 'right'];
 const defaultProps = {
     selectedSongLyrics: '',
     handleAnnotationSelect() {}
@@ -18,7 +17,7 @@ class LyricsSection extends React.Component {
                         key={index}
                         columnIndex={index}
                         columnTitle={isDoublespeaker ? (index === 0 ? 'left' : 'right') + ' speaker' : null}
-                        selectedSongLyrics={props.selectedSongLyrics[index]}
+                        selectedSongLyrics={lyrics}
                         handleAnnotationSelect={props.handleAnnotationSelect}
                     />
                 );

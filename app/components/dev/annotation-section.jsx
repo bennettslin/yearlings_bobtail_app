@@ -4,7 +4,7 @@ import FormatHelper from '../helpers/format-helper.jsx';
 
 const defaultProps = {
     annotationRichText: {},
-    selectedAnnotationKey: ''
+    selectedAnnotationIndex: 0
 }
 
 class AnnotationSection extends React.Component {
@@ -19,7 +19,7 @@ class AnnotationSection extends React.Component {
                 transitionEnterTimeout={100}
                 transitionLeaveTimeout={100}
             >
-            {this.props.selectedAnnotationKey ?
+            {this.props.selectedAnnotationIndex ?
                 <div ref="annotation"
                     className="section annotation-section">
                     <h2>annotation</h2>
