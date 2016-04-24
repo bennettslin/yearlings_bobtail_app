@@ -1,6 +1,7 @@
 import React from 'react';
 import TitleSection from './title-section.jsx';
 import SongsSection from './songs-section.jsx';
+import NotesSection from './notes-section.jsx';
 import AnnotationSection from './annotation-section.jsx';
 import StatsSection from './stats-section.jsx';
 import SpeechBubblesSection from './speech-bubbles-section.jsx';
@@ -147,6 +148,9 @@ class App extends React.Component {
                         annotationRichText={annotationRichText}
                         selectedAnnotationKey={state.selectedAnnotationKey}
                     />
+                    {!selectedSongIndex ?
+                        <NotesSection /> : null
+                    }
                     <StatsSection
                         lyrics={selectedSong.lyrics}
                         annotations={selectedSong.annotations}

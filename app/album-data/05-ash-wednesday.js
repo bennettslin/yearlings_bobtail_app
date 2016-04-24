@@ -113,7 +113,6 @@ module.exports = {
             // TODO
             description: ''
         }
-
     },
     lyrics: {
         left: [
@@ -123,7 +122,10 @@ module.exports = {
                     verse: [
                         {
                             anchor: 'O Catherine! My Catherine!',
-                            annotationKey: 'o_captain_my_captain'
+                            annotationKey: 'o_captain_my_captain',
+                            narrative: true,
+                            music: true,
+                            reference: true
                         },
                         'our futile trip is done'
                     ]

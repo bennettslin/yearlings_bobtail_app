@@ -26,24 +26,6 @@ module.exports = {
     },
 
     /**
-     * Returns a block of coloured dots for anchor tags.
-     */
-    _getCodeBlock: function(textObject) {
-        return (
-            <span className="code-block">
-                {ANCHOR_CODES.filter(code => {
-                    return textObject[code];
-                }).map((code, index) => {
-                    return (
-                        <div key={index} className={'dot ' + code}>
-                        </div>
-                    );
-                })}
-            </span>
-        );
-    },
-
-    /**
      * Returns a single element wrapped in a span, italic, or anchor tag.
      */
     _getTaggedTextContent: function(text, clickHandler, index, nestedIndex) {
@@ -63,7 +45,6 @@ module.exports = {
             return (index > 0 && !noSpace ? ' ' : '') + text;
 
         } else {
-            {/* FIXME: Find a way to not wrap text in spans when unnecessary. */}
             if (text.italic) {
                 return <i key={nestedIndex + index}>{this.getFormattedSpan(text.italic, clickHandler, index, nestedIndex)}</i>;
 
@@ -74,6 +55,8 @@ module.exports = {
                 return (
                     <span key={nestedIndex + index}
                         className="anchor-block">
+                        {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Unfortunately, it doesn't obey noSpace, which we would want if the anchor tag begins with an em-dash. */}
+                        {' '}
                         {this._getCodeBlock(text)}
                         <a className="anchor-link"
                             onClick={clickHandler.bind(null, text.annotationKey)} >
@@ -83,5 +66,23 @@ module.exports = {
                 );
             }
         }
+    },
+
+    /**
+     * Returns a block of coloured dots for anchor tags.
+     */
+    _getCodeBlock: function(textObject) {
+        return (
+            <span className="code-block">
+                {ANCHOR_CODES.filter(code => {
+                    return textObject[code];
+                }).map((code, index) => {
+                    return (
+                        <div key={index} className={'dot ' + code}>
+                        </div>
+                    );
+                })}
+            </span>
+        );
     }
 }
