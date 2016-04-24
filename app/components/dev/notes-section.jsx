@@ -30,7 +30,7 @@ class TitleSection extends React.Component {
                 <div
                     className="text-cell-wrapper">
                     <span className="text-cell text">
-                        Nonbreaking space to last space of span
+                        Use gradient on anchor tags, not border bottom. And use colour constants.
                     </span>
                 </div>
             </div>
