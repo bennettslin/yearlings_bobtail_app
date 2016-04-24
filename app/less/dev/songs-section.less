@@ -2,20 +2,20 @@
 
     .row {
 
-        .progress-bar-mixin(#fcf, #dad);
+        .progress-bar-mixin(@song-total-colour, @song-filled-colour);
 
         &.played {
-            .progress-bar-mixin(#cfc, #ada);
+            .progress-bar-mixin(@played-total-colour, @played-filled-colour);
 
             a {
-                color: #484;
+                color: @song-link-colour;
 
                 &:hover {
-                    color: #7b7;
+                    color: @song-hover-colour;
                 }
 
                 &:active {
-                    color: #aea;
+                    color: @song-active-colour;
                 }
             }
         }

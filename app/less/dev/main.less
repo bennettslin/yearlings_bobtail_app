@@ -41,20 +41,20 @@ body {
 .songs-field {
     width: @songs-field-width;
     min-width: @songs-field-width;
-    background-color: #ede;
+    background-color: @songs-field-colour;
     font-size: 1.2em;
 }
 
 .notes-field {
     width: @notes-field-width;
     min-width: @notes-field-width;
-    background-color: #edd;
+    background-color: @notes-field-colour;
 }
 
 .lyrics-field {
     width: @lyrics-field-width;
     min-width: @lyrics-field-width;
-    background-color: #eed;
+    background-color: @lyrics-field-colour;
 }
 
 /************
@@ -67,8 +67,8 @@ body {
     margin: @field-padding 0;
 
     &:not(.annotation-section) {
-        background-color: rgba(255, 255, 255, 0.5);
-        box-shadow: 0 2px 2px 2px rgba(100, 100, 120, 0.2);
+        background-color: @section-colour;
+        box-shadow: 0 2px 2px 2px @box-shadow-colour;
     }
 }
 

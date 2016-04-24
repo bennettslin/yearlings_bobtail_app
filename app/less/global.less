@@ -12,18 +12,18 @@ h1, h2, h3 {
 }
 
 a {
-    .transition(color 0.05s ease);
+    .transition(color 0.1s ease);
     .no-select;
     cursor: pointer;
 
     font-weight: bold;
-    color: #844;
+    color: @lyric-link-colour;
 
     &:hover {
-        color: #b77;
+        color: @lyric-hover-colour;
     }
 
     &:active {
-        color: #eaa;
+        color: @lyric-active-colour;
     }
 }

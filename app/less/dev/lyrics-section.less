@@ -42,7 +42,7 @@
             position: relative;
             z-index: 0;
             white-space: nowrap;
-            @text-shadow-colour: white;
+            @text-shadow-colour: @lyrics-field-colour;
             @text-shadow-offset: 0.75px;
             @text-shadow-blur: 0;
             text-shadow:
@@ -77,27 +77,33 @@
                 border-radius: @dot-diameter * 0.5;
 
                 &.narrative {
-                    #gradient > .linear-gradient(#faa, #fff);
+                    // #gradient > .linear-gradient(@narrative-code-colour, @lyrics-field-colour);
+                    background-color: @narrative-code-colour;
                 }
 
                 &.music {
-                    #gradient > .linear-gradient(#faf, #fff);
+                    // #gradient > .linear-gradient(@music-code-colour, @lyrics-field-colour);
+                    background-color: @music-code-colour;
                 }
 
                 &.pun {
-                    #gradient > .linear-gradient(#afa, #fff);
+                    // #gradient > .linear-gradient(@pun-code-colour, @lyrics-field-colour);
+                    background-color: @pun-code-colour;
                 }
 
                 &.cross {
-                    #gradient > .linear-gradient(#aaf, #fff);
+                    // #gradient > .linear-gradient(@cross-code-colour, @lyrics-field-colour);
+                    background-color: @cross-code-colour;
                 }
 
                 &.reference {
-                    #gradient > .linear-gradient(#aff, #fff);
+                    // #gradient > .linear-gradient(@reference-code-colour, @lyrics-field-colour);
+                    background-color: @reference-code-colour;
                 }
 
                 &.external {
-                    #gradient > .linear-gradient(#faf, #fff);
+                    // #gradient > .linear-gradient(@external-code-colour, @lyrics-field-colour);
+                    background-color: @external-code-colour;
                 }
             }
         }
