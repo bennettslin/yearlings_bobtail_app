@@ -29,20 +29,12 @@ module.exports = {
      * Returns a single element wrapped in a span, italic, or anchor tag.
      */
     _getTaggedTextContent: function(text, clickHandler, index, nestedIndex) {
-
         if (typeof text === 'string' || text.noSpace) {
-
             /**
              * Subsequent spans of text on a line will begin with a space,
              * unless specifically told not to.
              */
-            let noSpace = false;
-            if (text.noSpace) {
-                noSpace = true;
-                text = text.noSpace;
-            }
-
-            return (index > 0 && !noSpace ? ' ' : '') + text;
+            return this._getTextString(text.noSpace || text, index === 0 || text.noSpace);
 
         } else {
             if (text.italic) {
@@ -66,6 +58,21 @@ module.exports = {
                 );
             }
         }
+    },
+
+    /**
+     * Replace last space with nonbreaking space.
+     */
+    _getTextString: function(text, noSpace) {
+        const lastSpaceIndex = text.lastIndexOf(' ');
+
+        if (lastSpaceIndex > -1) {
+            text = text.slice(0, lastSpaceIndex) +
+                   '\u00a0' +
+                   text.slice(lastSpaceIndex + 1);
+        }
+
+        return (noSpace ? '' : ' ') + text;
     },
 
     /**
