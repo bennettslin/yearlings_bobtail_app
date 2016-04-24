@@ -1,5 +1,4 @@
 module.exports = {
-
     /**
      * Separate annotations.
      */
@@ -26,6 +25,12 @@ module.exports = {
             if (songElement.verse) {
             this._parseSongElement(songElement.verse, annotations);
 
+            } else if (songElement.emphasis) {
+            this._parseSongElement(songElement.emphasis, annotations);
+
+            } else if (songElement.italic) {
+            this._parseSongElement(songElement.italic, annotations);
+
             } else if (songElement.anchor) {
                 this._parseAnnotation(songElement, annotations);
             }
@@ -37,7 +42,6 @@ module.exports = {
      * to annotations array.
      */
     _parseAnnotation: function(songObject = {}, annotations = []) {
-
         // Add annotation index to song object with anchor key. 1-based index.
         songObject.annotationIndex = annotations.length + 1;
 
