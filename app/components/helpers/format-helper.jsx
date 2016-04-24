@@ -60,15 +60,10 @@ module.exports = {
                 text = text.noSpace;
             }
 
-            return (
-                <span key={nestedIndex + index}>
-                    {/* FIXME: Not ideal to add an extra element each time. */}
-                    {(index > 0 && !noSpace ? ' ' : '')}
-                    {text}
-                </span>
-            );
+            return (index > 0 && !noSpace ? ' ' : '') + text;
 
         } else {
+            {/* FIXME: Find a way to not wrap text in spans when unnecessary. */}
             if (text.italic) {
                 return <i key={nestedIndex + index}>{this.getFormattedSpan(text.italic, clickHandler, index, nestedIndex)}</i>;
 
@@ -80,7 +75,8 @@ module.exports = {
                     <span key={nestedIndex + index}
                         className="anchor-block">
                         {this._getCodeBlock(text)}
-                        <a onClick={clickHandler.bind(null, text.annotationKey)} >
+                        <a className="anchor-link"
+                            onClick={clickHandler.bind(null, text.annotationKey)} >
                             {this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)}
                         </a>
                     </span>

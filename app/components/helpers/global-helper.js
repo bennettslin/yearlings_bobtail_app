@@ -5,7 +5,7 @@ module.exports = {
     },
 
     hasParentWithTagName: function(child, parentTagName = '') {
-         let node = child.parentNode;
+         let node = child;
 
          while (node !== null) {
 
