@@ -123,12 +123,7 @@ module.exports = {
                     verse: [
                         {
                             anchor: 'O Catherine! My Catherine!',
-                            annotationKey: 'o_captain_my_captain',
-                            narrative: true,
-                            music: true,
-                            pun: true,
-                            crossReference: true,
-                            reference: true
+                            annotationKey: 'o_captain_my_captain'
                         },
                         'our futile trip is done'
                     ]

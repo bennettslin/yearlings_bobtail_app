@@ -1,5 +1,7 @@
 import React from 'react';
 
+const ANCHOR_CODES = ['narrative', 'music', 'pun', 'cross', 'reference', 'external'];
+
 module.exports = {
 
     /**
@@ -24,11 +26,20 @@ module.exports = {
     },
 
     /**
-     * Returns a coloured dot for anchor tags.
+     * Returns a block of coloured dots for anchor tags.
      */
-    _getCodeDot: function(colourClass) {
+    _getCodeBlock: function(textObject) {
         return (
-            <div className={'dot ' + colourClass}></div>
+            <span className="code-block">
+                {ANCHOR_CODES.filter(code => {
+                    return textObject[code];
+                }).map((code, index) => {
+                    return (
+                        <div key={index} className={'dot ' + code}>
+                        </div>
+                    );
+                })}
+            </span>
         );
     },
 
@@ -68,14 +79,7 @@ module.exports = {
                 return (
                     <span key={nestedIndex + index}
                         className="anchor-block">
-                        <span className="code-block">
-                            {text.narrative ? this._getCodeDot('narrative') : null}
-                            {text.music ? this._getCodeDot('music') : null}
-                            {text.pun ? this._getCodeDot('pun') : null}
-                            {text.crossReference ? this._getCodeDot('cross-reference') : null}
-                            {text.reference ? this._getCodeDot('reference') : null}
-                            {text.externalReference ? this._getCodeDot('external-reference') : null}
-                        </span>
+                        {this._getCodeBlock(text)}
                         <a onClick={clickHandler.bind(null, text.annotationKey)} >
                             {this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)}
                         </a>
