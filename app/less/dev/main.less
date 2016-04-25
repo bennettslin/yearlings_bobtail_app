@@ -64,12 +64,12 @@ body {
  * SECTIONS *
  ************/
 
-.section {
+.section, .annotation-section {
     box-sizing: border-box;
     padding: @field-padding;
     margin: @field-padding 0;
 
-    &:not(.annotation-section) {
+    &.section {
         background-color: @section-colour;
         box-shadow: 0 2px 2px 2px @box-shadow-colour;
     }

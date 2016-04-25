@@ -2,7 +2,7 @@ import React from 'react';
 import TitleSection from './title-section.jsx';
 import SongsSection from './songs-section.jsx';
 import NotesSection from './notes-section.jsx';
-import AnnotationSection from './annotation-section.jsx';
+import AnnotationPopup from './annotation-popup.jsx';
 import StatsSection from './stats-section.jsx';
 import SpeechBubblesSection from './speech-bubbles-section.jsx';
 import TasksSection from './tasks-section.jsx';
@@ -47,7 +47,8 @@ class App extends React.Component {
     }
 
     _handleBodyClick(e) {
-        const annotation = this.refs.annotationSection.refs.annotation;
+        const annotation = this.refs.annotationPopup.refs.annotationSection ?
+            this.refs.annotationPopup.refs.annotationSection.refs.annotation : null;
 
         /**
          * Close annotation if anywhere outside annotation is clicked, with the
@@ -147,8 +148,8 @@ class App extends React.Component {
                     />
                 </div>
                 <div className="field notes-field">
-                    <AnnotationSection
-                        ref="annotationSection"
+                    <AnnotationPopup
+                        ref="annotationPopup"
                         annotationData={annotationData}
                     />
                     {!selectedSongIndex ?

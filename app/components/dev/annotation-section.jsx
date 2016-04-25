@@ -1,9 +1,8 @@
 import React from 'react';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
 import FormatHelper from '../helpers/format-helper.jsx';
 
 const defaultProps = {
-    annotationData: null
+    annotationData: {}
 }
 
 class AnnotationSection extends React.Component {
@@ -12,23 +11,14 @@ class AnnotationSection extends React.Component {
         const annotationData = this.props.annotationData;
 
         return (
-            <CSSTransitionGroup
-                className="popup-transition-group"
-                transitionName="annotation-animation"
-                transitionEnterTimeout={100}
-                transitionLeaveTimeout={100}
-            >
-            {annotationData ?
-                <div ref="annotation"
-                    className="section annotation-section">
-                    <div className="code-block">
-                        {FormatHelper.getDotsBlock(annotationData.codes)}
-                    </div>
-                    <h2>{annotationData.anchor}</h2>
-                    {FormatHelper.getFormattedSpan(annotationData.description)}
-                </div> : null
-            }
-            </CSSTransitionGroup>
+            <div ref="annotation"
+                className="annotation-section">
+                <div className="code-block">
+                    {FormatHelper.getDotsBlock(annotationData.codes)}
+                </div>
+                <h2>{FormatHelper.getStrippedHeader(annotationData.anchor)}</h2>
+                {FormatHelper.getFormattedSpan(annotationData.description)}
+            </div>
         );
     }
 }
