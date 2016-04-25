@@ -15,7 +15,7 @@ module.exports = {
         return (
             <div className="text-cell-wrapper">
                 {neededHours ?
-                    <div className={'text-cell figure font-size-' + fontSize}>
+                    <div className={'text-cell footer font-size-' + fontSize}>
                         <div>{neededHours} - {workedHours} = {remainingHours}h</div>
                         <div>{remainingTimeString}</div>
                     </div> : null

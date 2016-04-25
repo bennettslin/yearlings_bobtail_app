@@ -24,7 +24,7 @@ class SongRow extends React.Component {
         return (
             <div className="text-cell-wrapper">
                 <a className="text-cell text" onClick={props.handleSongChange.bind(null, props.songIndex, 'selected', true)}>
-                    {props.songIndex}. {props.songTitle}
+                    {props.songIndex + '. ' + props.songTitle}
                 </a>
                 <span className="text-cell figure">
                     {sumTask.workedHours}/{sumTask.neededHours}h
@@ -45,7 +45,7 @@ class SongRow extends React.Component {
     render() {
         const props = this.props,
             sumTask = props.sumTask,
-            className = 'row ' + (props.isSelected ? ' played' : ''),
+            className = 'row primary-row' + (props.isSelected ? ' played' : ''),
             progressBar = (!props.isHeader && !props.isFooter ?
                 <ProgressBar
                     sumTask={sumTask}

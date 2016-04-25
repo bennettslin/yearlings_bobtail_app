@@ -79,12 +79,26 @@ body {
  * BARS AND ROWS *
  *****************/
 
+.row {
+    position: relative;
+    margin: @row-height-margin 0;
+
+    &.primary-row {
+        height: @primary-row-font-size * 1.6;
+        font-size: @primary-row-font-size;
+    }
+
+    &.secondary-row {
+        height: @secondary-row-font-size * 1.6;
+        font-size: @secondary-row-font-size;
+    }
+}
+
 .progress-bar {
     position: absolute;
     width: 0%;
     height: 100%;
-    border-radius: 5px;
-    overflow: hidden;
+    box-shadow: 0 1px 1px 1px @box-shadow-colour;
 
     .filled-bar {
         position: absolute;
@@ -97,20 +111,26 @@ body {
     @height-margin: 4px;
     @width-margin: 12px;
     position: relative;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     margin: @height-margin @width-margin;
 
     .text-cell {
-        display: inline-block;
-
         &:first-child {
             flex-grow: 1;
         }
 
-        &.figure {
-            text-align: right;
+        &.text, &.figure {
+            display: flex;
+            align-items: center;
+        }
 
+        &.footer, &.figure {
+            text-align: right;
+        }
+
+        &.footer {
             &.font-size-1 {
                 font-size: 1.4em;
             }
@@ -121,21 +141,6 @@ body {
         }
     }
 }
-
-.row {
-    position: relative;
-    overflow: hidden;
-    margin: @row-height-margin;
-
-    &.primary-row {
-        font-size: @primary-row-font-size;
-    }
-
-    &.secondary-row {
-        font-size: @secondary-row-font-size;
-    }
-}
-
 
 .popup-transition-group {
     position: fixed;
