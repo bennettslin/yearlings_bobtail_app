@@ -2,32 +2,6 @@ import React from 'react';
 
 module.exports = {
 
-    /**********
-     * MARKUP *
-     **********/
-
-    getProgressFooterContent: function(sumTask = 0, fontSize = 1) {
-        const workedHours = sumTask.workedHours,
-            neededHours = sumTask.neededHours,
-            remainingHours = neededHours - workedHours,
-            remainingTimeString = this.getRemainingTimeStringFromHours(remainingHours);
-
-        return (
-            <div className="text-cell-wrapper">
-                {neededHours ?
-                    <div className={'text-cell footer font-size-' + fontSize}>
-                        <div>{neededHours} - {workedHours} = {remainingHours}h</div>
-                        <div>{remainingTimeString}</div>
-                    </div> : null
-                }
-            </div>
-        );
-    },
-
-    /***********
-     * UTILITY *
-     ***********/
-
     getMaxTotalNeededHoursFromSongs: function(songs = []) {
         return songs.reduce((maxTotalNeededHours, song) => {
             const totalNeededHours = this.calculateSumTask(song.tasks).neededHours;

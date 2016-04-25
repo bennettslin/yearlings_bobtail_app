@@ -1,6 +1,7 @@
 import React from 'react';
 import ProgressBar from './progress-bar.jsx';
-import ProgressHelper from '../helpers/progress-helper.jsx';
+import ProgressHelper from '../helpers/progress-helper.js';
+import ProgressUtility from '../utilities/progress-utility.jsx';
 
 const defaultProps = {
     songIndex: 0,
@@ -45,7 +46,9 @@ class SongRow extends React.Component {
     render() {
         const props = this.props,
             sumTask = props.sumTask,
-            className = 'row primary-row' + (props.isSelected ? ' played' : ''),
+            className = 'row' +
+                (!props.isFooter ? ' primary-row' : '') +
+                (props.isSelected ? ' played' : ''),
             progressBar = (!props.isHeader && !props.isFooter ?
                 <ProgressBar
                     sumTask={sumTask}
@@ -59,7 +62,7 @@ class SongRow extends React.Component {
             wrappedTextContent = this._getHeaderContent();
 
         } else if (props.isFooter) {
-            wrappedTextContent = ProgressHelper.getProgressFooterContent(sumTask, 1);
+            wrappedTextContent = ProgressUtility.getProgressFooterContent(sumTask, 1);
 
         } else {
             wrappedTextContent = this._getSongContent(sumTask);

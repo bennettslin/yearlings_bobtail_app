@@ -1,5 +1,6 @@
 import React from 'react';
-import FormatHelper from '../helpers/format-helper.jsx';
+import FormatHelper from '../helpers/format-helper.js';
+import FormatUtility from '../utilities/format-utility.jsx';
 
 const defaultProps = {
     annotationData: {}
@@ -14,10 +15,10 @@ class AnnotationSection extends React.Component {
             <div ref="annotation"
                 className="annotation-section">
                 <div className="code-block">
-                    {FormatHelper.getDotsBlock(annotationData.codes)}
+                    {FormatUtility.getDotsBlock(annotationData.codes)}
                 </div>
                 <h2>{FormatHelper.getStrippedHeader(annotationData.anchor)}</h2>
-                {FormatHelper.getFormattedSpan(annotationData.description)}
+                {FormatUtility.getFormattedSpan(annotationData.description)}
             </div>
         );
     }

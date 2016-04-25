@@ -1,5 +1,5 @@
 import React from 'react';
-import FormatHelper from '../helpers/format-helper.jsx';
+import FormatUtility from '../utilities/format-utility.jsx';
 
 const SPEECH_BUBBLE_NAMES = ['narrative', 'music'];
 const defaultProps = {
@@ -37,7 +37,7 @@ class SpeechBubblesSection extends React.Component {
                     })}
                 </div>
                 <div className={'speech-bubble'}>
-                    {FormatHelper.getFormattedSpan(this.props.speechBubbleRichText)}
+                    {FormatUtility.getFormattedSpan(this.props.speechBubbleRichText)}
                 </div>
 
             </div>

@@ -1,7 +1,8 @@
 import React from 'react';
 import ProgressBar from './progress-bar.jsx';
 import GlobalHelper from '../helpers/global-helper.js';
-import ProgressHelper from '../helpers/progress-helper.jsx';
+import ProgressHelper from '../helpers/progress-helper.js';
+import ProgressUtility from '../utilities/progress-utility.jsx';
 
 const defaultProps = {
     tasks: []
@@ -90,7 +91,7 @@ class TasksSection extends React.Component {
         const tasks = this.props.tasks,
             taskRows = this._getTaskBlocks(tasks),
             sumTask = ProgressHelper.calculateSumTask(tasks),
-            progressFooterContent = ProgressHelper.getProgressFooterContent(sumTask, 2),
+            progressFooterContent = ProgressUtility.getProgressFooterContent(sumTask, 2),
             taskFooter = (
                 <div key="footer" className="task-block">
                     <div className="row">

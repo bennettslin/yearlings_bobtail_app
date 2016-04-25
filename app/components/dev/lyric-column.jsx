@@ -1,5 +1,5 @@
 import React from 'react';
-import FormatHelper from '../helpers/format-helper.jsx';
+import FormatUtility from '../utilities/format-utility.jsx';
 
 const defaultProps = {
     columnIndex: 0,
@@ -30,7 +30,7 @@ class LyricColumn extends React.Component {
 
     _getParsedLyric(lyric) {
         const annotation = lyric.annotation;
-        return FormatHelper.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
+        return FormatUtility.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
     }
 
     render() {
