@@ -107,7 +107,6 @@ class App extends React.Component {
     }
 
     handleAnnotationSelect(selectedAnnotationIndex, setState) {
-
         if (typeof selectedAnnotationIndex === 'string') {
             selectedAnnotationIndex = parseInt(selectedAnnotationIndex) || 0;
         }
@@ -131,8 +130,8 @@ class App extends React.Component {
             speechBubbleRichText = (selectedSongIndex && state.selectedSpeechBubbleKey) ?
                 selectedSong.speechBubbles[state.selectedSpeechBubbleKey] :
                 props.speechBubbles[state.selectedSpeechBubbleKey],
-            annotationRichText = (selectedSongIndex && state.selectedAnnotationIndex) ?
-                selectedSong.annotations[state.selectedAnnotationIndex - 1].description : {};
+            annotationData = (selectedSongIndex && state.selectedAnnotationIndex) ?
+                selectedSong.annotations[state.selectedAnnotationIndex - 1] : null;
 
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
@@ -150,8 +149,7 @@ class App extends React.Component {
                 <div className="field notes-field">
                     <AnnotationSection
                         ref="annotationSection"
-                        annotationRichText={annotationRichText}
-                        selectedAnnotationIndex={state.selectedAnnotationIndex}
+                        annotationData={annotationData}
                     />
                     {!selectedSongIndex ?
                         <NotesSection /> : null

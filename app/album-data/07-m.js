@@ -304,11 +304,11 @@ module.exports = {
                      * Vow for my next five year plan.
                      */
                     time: 188,
-                    verse: 'Five more, she\'ll dig up Bobtail\'s words—'
+                    verse: 'Five more, she\'ll dig up Bobtail\'s words'
                 },
                 {
                     time: 190,
-                    verse: 'I\'m not sad!'
+                    verse: '—I\'m not sad!'
                 }
             ]
         ]

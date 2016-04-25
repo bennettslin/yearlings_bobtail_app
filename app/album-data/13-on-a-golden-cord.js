@@ -319,11 +319,11 @@ module.exports = {
             [
                 {
                     time: 65,
-                    verse: 'As I soak in spirits amidst wanted ads—'
+                    verse: 'As I soak in spirits amidst wanted ads'
                 },
                 {
                     time: 68,
-                    verse: 'my desperate ailments tied in this shambler\'s dusk—'
+                    verse: '—my desperate ailments tied in this shambler\'s dusk—'
                 },
                 {
                     time: 72,

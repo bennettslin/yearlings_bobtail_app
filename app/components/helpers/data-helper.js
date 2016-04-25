@@ -2,10 +2,10 @@ module.exports = {
     /**
      * Separate annotations.
      */
-    parseAlbumObject: function(albumObject = {}) {
+    prepareAlbumObject: function(albumObject = {}) {
         albumObject.songs.forEach(song => {
             let annotations = [];
-            this._parseSongElement(song.lyrics, annotations);
+            this._parseLyricElement(song.lyrics, annotations);
 
             // Add annotations to song object.
             song.annotations = annotations;
@@ -15,24 +15,24 @@ module.exports = {
     /**
      * Recurse until object with anchor key is found.
      */
-    _parseSongElement: function(songElement = [], annotations) {
-        if (Array.isArray(songElement)) {
-            songElement.forEach(newSongElement => {
-                this._parseSongElement(newSongElement, annotations);
+    _parseLyricElement: function(lyricElement = [], annotations) {
+        if (Array.isArray(lyricElement)) {
+            lyricElement.forEach(newLyricElement => {
+                this._parseLyricElement(newLyricElement, annotations);
             });
 
-        } else if (typeof songElement === 'object') {
-            if (songElement.verse) {
-            this._parseSongElement(songElement.verse, annotations);
+        } else if (typeof lyricElement === 'object') {
+            if (lyricElement.verse) {
+            this._parseLyricElement(lyricElement.verse, annotations);
 
-            } else if (songElement.emphasis) {
-            this._parseSongElement(songElement.emphasis, annotations);
+            } else if (lyricElement.emphasis) {
+            this._parseLyricElement(lyricElement.emphasis, annotations);
 
-            } else if (songElement.italic) {
-            this._parseSongElement(songElement.italic, annotations);
+            } else if (lyricElement.italic) {
+            this._parseLyricElement(lyricElement.italic, annotations);
 
-            } else if (songElement.anchor) {
-                this._parseAnnotation(songElement, annotations);
+            } else if (lyricElement.anchor) {
+                this._prepareAnnotation(lyricElement, annotations);
             }
         }
     },
@@ -41,11 +41,20 @@ module.exports = {
      * Add annotation index to song object with anchor key, and add annotation
      * to annotations array.
      */
-    _parseAnnotation: function(songObject = {}, annotations = []) {
-        // Add annotation index to song object with anchor key. 1-based index.
-        songObject.annotationIndex = annotations.length + 1;
+    _prepareAnnotation: function(lyricElement = {}, annotations = []) {
+        // Add annotation index to lyrics. 1-based index.
+        lyricElement.annotationIndex = annotations.length + 1;
+
+        // Add anchor text to annotation object.
+        lyricElement.annotation.anchor = lyricElement.anchor;
 
         // Add annotation object to annotations array.
-        annotations.push(songObject.annotation);
+        annotations.push(lyricElement.annotation);
+
+        // Both lyrics and annotation will keep reference to colour codes.
+        lyricElement.codes = lyricElement.annotation.codes;
+
+        // Lyrics no longer needs reference to annotation.
+        delete lyricElement.annotation;
     }
 }

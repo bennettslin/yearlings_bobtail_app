@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Willy the Cocoa',
     speechBubbles: {
-        narrative: 'Willy was an autistic man who wandered our neighbourhood collecting recyclables for his living. Kids called him "The Cocoa," referring to both his Coke bottles and his seeming a bit "cuckoo." One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy\'s murder, I would lie awake in fear of what lay in his future.',
+        narrative: 'Willy was an autistic man who wandered our neighbourhood collecting recyclables for a living. Kids called him "The Cocoa," referring to both his Coke bottles and his seeming a bit "cuckoo." One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy\'s murder, I would lie awake in fear of what lay in his future.',
         music: 'In folklore of the past, changelings were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, I wanted to capture a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of Creedence Clearwater Revival, with muted mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.'
     },
     lyrics: [
@@ -282,7 +282,7 @@ module.exports = {
                 },
                 {
                     time: 89,
-                    verse: 'So to baby—to your brother—you\'ll say sorry for the world!'
+                    verse: 'So to baby —to your brother— you\'ll say sorry for the world!'
                 }
             ],
             [
@@ -292,7 +292,7 @@ module.exports = {
                         {
                             anchor: 'Killcrop',
                             annotation: {
-                                description: 'In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is plain and simple—one who "kills crops"—and reflects the primary concerns of past times, when children unable to work for their keep could lead to a family\'s ruin.'
+                                description: 'In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is plain and simple —one who "kills crops"— and reflects the primary concerns of past times, when children unable to work for their keep could lead to a family\'s ruin.'
                             }
                         },
                         'dashing kicks up puddle,'

@@ -85,6 +85,51 @@
     }
 }
 
+.code-block-mixin(@dot-diameter: 2em) {
+
+    .code-block {
+        position: relative;
+        height: @dot-diameter;
+
+        .dots-block {
+            display: flex;
+            width: auto;
+            height: 100%;
+
+            .dot {
+                width: @dot-diameter;
+                height: @dot-diameter;
+                margin-right: @dot-diameter * 0.1;
+                border-radius: @dot-diameter * 0.5;
+
+                &.narrative {
+                    background-color: @narrative-code-colour;
+                }
+
+                &.music {
+                    background-color: @music-code-colour;
+                }
+
+                &.pun {
+                    background-color: @pun-code-colour;
+                }
+
+                &.cross {
+                    background-color: @cross-code-colour;
+                }
+
+                &.reference {
+                    background-color: @reference-code-colour;
+                }
+
+                &.external {
+                    background-color: @external-code-colour;
+                }
+            }
+        }
+    }
+}
+
 .progress-bar-mixin(@progress-bar-colour, @filled-bar-colour) {
 
     .progress-bar {

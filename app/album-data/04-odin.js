@@ -85,11 +85,11 @@ module.exports = {
                 },
                 {
                     time: 73,
-                    verse: 'What\'s more, if all you live for still die at the end—'
+                    verse: 'What\'s more, if all you live for still die at the end'
                 },
                 {
                     time: 79,
-                    verse: 'like Odin\'s ashes back from the Society,'
+                    verse: '—like Odin\'s ashes back from the Society,'
                 },
                 {
                     time: 84,
@@ -283,11 +283,11 @@ module.exports = {
                 },
                 {
                     time: 79,
-                    verse: 'by opened latches that come undone by undine—'
+                    verse: 'by opened latches that come undone by undine'
                 },
                 {
                     time: 84,
-                    verse: 'which spilled a basket among other things—'
+                    verse: '—which spilled a basket among other things—'
                 },
                 {
                     time: 87,

@@ -431,14 +431,12 @@ module.exports = {
                     time: 103,
                     verse: [
                         {
-                            anchor: 'herows—ourauras left—',
+                            anchor: 'herows —ourauras left—',
                             annotation: {
                                 description: 'Other indigenous populations, such as the Inuit inhabitants of the Arctic regions, may have undertaken their migrations by boat. These seafarers, of course, would have rowed with the aurora borealis to their left. Also, wishing to be respectful, we\'ve left our "hero\'s auras" behind in the car.'
                             }
                         },
-                        {
-                            noSpace: 'to'
-                        },
+                        'to',
                         {
                             anchor: 'Audamn\'s grave.',
                             annotation: {

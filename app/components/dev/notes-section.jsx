@@ -12,13 +12,7 @@ class TitleSection extends React.Component {
                 <div
                     className="text-cell-wrapper">
                     <span className="text-cell text">
-                        Figure out em-dash rules
-                    </span>
-                </div>
-                <div
-                    className="text-cell-wrapper">
-                    <span className="text-cell text">
-                        Put colour codes in annotations (put data under annotations, not lyrics?)
+                        Format annotation header
                     </span>
                 </div>
                 <div

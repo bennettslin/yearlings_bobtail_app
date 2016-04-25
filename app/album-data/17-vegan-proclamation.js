@@ -56,7 +56,6 @@ module.exports = {
                 }
             ],
             [
-                // TODO: This whole section is italicised.
                 {
                     time: 60,
                     verse: [

@@ -9,7 +9,9 @@ module.exports = {
             [
                 {
                     time: 0,
-                    verse: '<em>L.A. to the Bay, pompous autumn waits.</em>'
+                    verse: {
+                        italic: 'L.A. to the Bay, pompous autumn waits.'
+                    }
                 }
             ],
             [

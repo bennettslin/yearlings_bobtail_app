@@ -46,14 +46,16 @@ module.exports = {
             } else if (text.anchor) {
                 return (
                     <span key={nestedIndex + index}
-                        className="anchor-block">
+                        className="code-block">
                         {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Unfortunately, it doesn't obey noSpace, which we would want if the anchor tag begins with an em-dash. */}
-                        {' '}
-                        {this._getCodeBlock(text)}
-                        <a className="anchor-link"
-                            onClick={clickHandler.bind(null, text.annotationIndex)} >
-                            {this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)}
-                        </a>
+                        { index > 0 ? ' ' : null}
+                        {this.getDotsBlock(text.codes)}
+                        <span className="text-block">
+                            <a className="anchor-link"
+                                onClick={clickHandler.bind(null, text.annotationIndex)} >
+                                {this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)}
+                            </a>
+                        </span>
                     </span>
                 );
             }
@@ -78,11 +80,11 @@ module.exports = {
     /**
      * Returns a block of coloured dots for anchor tags.
      */
-    _getCodeBlock: function(textObject) {
+    getDotsBlock: function(codesObject = {}) {
         return (
-            <span className="code-block">
+            <span className="dots-block">
                 {ANCHOR_CODES.filter(code => {
-                    return textObject[code];
+                    return codesObject[code];
                 }).map((code, index) => {
                     return (
                         <div key={index} className={'dot ' + code}>

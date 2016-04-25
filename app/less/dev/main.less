@@ -15,7 +15,7 @@ body {
 .app {
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     min-height: 100vh;
     font-family: PTSansNarrow;
     font-size: 1.1em;
@@ -28,6 +28,9 @@ body {
     position: relative;
     box-sizing: border-box;
     padding: 0 (@field-padding * 0.5);
+
+    height: 100%;
+    overflow-y: scroll;
 
     &:first-child {
         padding-left: @field-padding;

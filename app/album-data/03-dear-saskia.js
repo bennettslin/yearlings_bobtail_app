@@ -112,7 +112,7 @@ module.exports = {
                     verse: [
                         'And I\'d reflect inside withering',
                         {
-                            anchor: 'amber eyes—',
+                            anchor: 'amber eyes',
                             annotation: {
                                 description: 'Sasha\'s eyes were of an amber colour. Also, amber is fossilised tree resin that sometimes preserves the remains of trapped insects from epochs past.'
                             }
@@ -123,7 +123,7 @@ module.exports = {
                     time: 52,
                     verse: [
                         {
-                            anchor: 'your pupil\'s pupal fly,',
+                            anchor: '—your pupil\'s pupal fly,',
                             annotation: {
                                 description: 'While I reflect on my feelings for Sasha, petrified at the thought of losing her, I\'m also literally reflected in her eyes, seeing myself as a petrified larva that never had a chance to moult.'
                             }

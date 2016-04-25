@@ -73,7 +73,7 @@ module.exports = {
             [
                 {
                     time: 68,
-                    verse: 'I\'ll be stronger—not a bother, more modest, I promise—'
+                    verse: 'I\'ll be stronger —not a bother, more modest, I promise—'
                 },
                 {
                     time: 73,

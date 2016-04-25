@@ -25,7 +25,7 @@ module.exports = {
                 },
                 {
                     time: 25,
-                    verse: 'yet—if adding up—then for more you\'d vie.'
+                    verse: 'yet —if adding up— then for more you\'d vie.'
                 },
                 {
                     time: 28,

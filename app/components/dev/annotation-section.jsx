@@ -3,14 +3,13 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 import FormatHelper from '../helpers/format-helper.jsx';
 
 const defaultProps = {
-    annotationRichText: {},
-    selectedAnnotationIndex: 0
+    annotationData: null
 }
 
 class AnnotationSection extends React.Component {
 
     render() {
-        const annotationSpan = FormatHelper.getFormattedSpan(this.props.annotationRichText);
+        const annotationData = this.props.annotationData;
 
         return (
             <CSSTransitionGroup
@@ -19,11 +18,14 @@ class AnnotationSection extends React.Component {
                 transitionEnterTimeout={100}
                 transitionLeaveTimeout={100}
             >
-            {this.props.selectedAnnotationIndex ?
+            {annotationData ?
                 <div ref="annotation"
                     className="section annotation-section">
-                    <h2>annotation</h2>
-                    {annotationSpan}
+                    <div className="code-block">
+                        {FormatHelper.getDotsBlock(annotationData.codes)}
+                    </div>
+                    <h2>{annotationData.anchor}</h2>
+                    {FormatHelper.getFormattedSpan(annotationData.description)}
                 </div> : null
             }
             </CSSTransitionGroup>
