@@ -45,14 +45,14 @@ module.exports = {
         }
     },
 
-    calculateSumAllTasks: function(songs = []) {
+    calculateSumAllTasks: function(allTasks = []) {
         const sumAllTasks = {
                 workedHours: 0,
                 neededHours: 0
             };
 
-        return songs.reduce((sumAllTasks, song) => {
-            return this._addTwoTasks(sumAllTasks, this.calculateSumTask(song.tasks));
+        return allTasks.reduce((sumAllTasks, tasks) => {
+            return this._addTwoTasks(sumAllTasks, this.calculateSumTask(tasks));
         }, sumAllTasks);
     },
 

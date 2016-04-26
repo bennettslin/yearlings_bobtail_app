@@ -12,12 +12,6 @@ class TitleSection extends React.Component {
                 <div
                     className="text-cell-wrapper">
                     <span className="text-cell text">
-                        Format annotation header
-                    </span>
-                </div>
-                <div
-                    className="text-cell-wrapper">
-                    <span className="text-cell text">
                         Scrolling annotations
                     </span>
                 </div>

@@ -3,7 +3,7 @@ import React from 'react';
 module.exports = {
     /**
      * Converts anchor tag text into annotation header.
-     * FIXME: Kind of wonky still. Fix with a testing suite implemented.
+     * FIXME: Kind of wonky still. Fix once a testing suite is implemented.
      */
     getStrippedHeader: function(text = '') {
 

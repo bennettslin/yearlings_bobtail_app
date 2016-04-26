@@ -131,8 +131,17 @@ class App extends React.Component {
             speechBubbleRichText = (selectedSongIndex && state.selectedSpeechBubbleKey) ?
                 selectedSong.speechBubbles[state.selectedSpeechBubbleKey] :
                 props.speechBubbles[state.selectedSpeechBubbleKey],
+            tasks = selectedSongIndex ?
+                selectedSong.tasks :
+                props.tasks,
             annotationData = (selectedSongIndex && state.selectedAnnotationIndex) ?
                 selectedSong.annotations[state.selectedAnnotationIndex - 1] : null;
+
+        // Includes album tasks and song tasks.
+        let allTasks = props.songs.map(song => {
+            return song.tasks;
+        });
+        allTasks.push(props.tasks);
 
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
@@ -143,6 +152,7 @@ class App extends React.Component {
                     />
                     <SongsSection
                         songs={props.songs}
+                        allTasks={allTasks}
                         selectedSongIndex={selectedSongIndex}
                         handleSongChange={this.handleSongChange}
                     />
@@ -164,11 +174,9 @@ class App extends React.Component {
                         selectedSpeechBubbleKey={state.selectedSpeechBubbleKey}
                         handleSpeechBubbleSelect={this.handleSpeechBubbleSelect}
                     />
-                    {selectedSong.tasks ?
-                        <TasksSection
-                            tasks={selectedSong.tasks}
-                        /> : null
-                    }
+                    <TasksSection
+                        tasks={tasks}
+                    />
                 </div>
                 {selectedSongIndex ?
                      <div className="field lyrics-field">

@@ -4,6 +4,10 @@ import ProgressHelper from '../helpers/progress-helper.js';
 
 const defaultProps = {
     songs: [],
+
+    // Includes album tasks.
+    allTasks: [],
+
     selectedSongIndex: 0,
     handleSongChange() {}
 };
@@ -40,7 +44,7 @@ class SongsSection extends React.Component {
                     />
                 );
             }),
-            sumAllTasks = ProgressHelper.calculateSumAllTasks(songs),
+            sumAllTasks = ProgressHelper.calculateSumAllTasks(this.props.allTasks),
             songsFooter = (
                 <SongRow key="footer" isFooter={true} sumTask={sumAllTasks} />
             );

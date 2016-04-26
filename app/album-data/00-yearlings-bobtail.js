@@ -42,4 +42,26 @@ module.exports = {
         require('./17-vegan-proclamation.js'),
         require('./18-my-100000th-dream.js')
     ],
+    tasks: [
+        {
+            taskName: 'annotation header formatting',
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: 'extract animation utility',
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: 'create code popups',
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: 'setup unit and automation tests',
+            workedHours: 0,
+            neededHours: 15
+        }
+    ]
 };
