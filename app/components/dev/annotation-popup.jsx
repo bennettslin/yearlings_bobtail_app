@@ -1,5 +1,5 @@
 import React from 'react';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
+import AnimationUtility from '../utilities/animation-utility.jsx';
 import AnnotationSection from './annotation-section.jsx';
 
 const defaultProps = {
@@ -9,21 +9,12 @@ const defaultProps = {
 class AnnotationPopup extends React.Component {
 
     render() {
-        const annotationData = this.props.annotationData;
-
-        return (
-            <CSSTransitionGroup
-                className="popup-transition-group"
-                transitionName="annotation-animation"
-                transitionEnterTimeout={100}
-                transitionLeaveTimeout={100}
-            >
-            {annotationData ?
+        const annotationData = this.props.annotationData,
+            annotationElement = annotationData ?
                 <AnnotationSection ref="annotationSection"
-                    annotationData={annotationData} /> : null
-            }
-            </CSSTransitionGroup>
-        );
+                    annotationData={annotationData} /> : null;
+
+        return AnimationUtility.getTransitionGroupWrappedElement(annotationElement, "annotation-animation");
     }
 }
 
