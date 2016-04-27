@@ -11,7 +11,7 @@ module.exports = {
                 transitionEnterTimeout={100}
                 transitionLeaveTimeout={100}
             >
-            {element}
+                {element}
             </CSSTransitionGroup>
         );
     }

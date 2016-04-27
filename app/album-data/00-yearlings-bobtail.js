@@ -49,11 +49,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: 'extract animation utility',
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: 'create code popups',
             workedHours: 0,
             neededHours: 3

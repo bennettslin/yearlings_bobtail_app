@@ -1,5 +1,3 @@
-import React from 'react';
-
 module.exports = {
     /**
      * Converts anchor tag text into annotation header.

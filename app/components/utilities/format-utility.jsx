@@ -1,6 +1,5 @@
 import React from 'react';
-
-const ANCHOR_CODES = ['narrative', 'music', 'pun', 'cross', 'reference', 'external'];
+import CodeUtility from './code-utility.jsx';
 
 module.exports = {
 
@@ -49,7 +48,7 @@ module.exports = {
                         className="code-block">
                         {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Unfortunately, it doesn't obey noSpace, which we would want if the anchor tag begins with an em-dash. */}
                         { index > 0 ? ' ' : null}
-                        {this.getDotsBlock(text.codes)}
+                        {CodeUtility.getDotsBlock(text.codes)}
                         <span className="text-block">
                             <a className="anchor-link"
                                 onClick={clickHandler.bind(null, text.annotationIndex)} >
@@ -75,23 +74,5 @@ module.exports = {
         }
 
         return (noSpace ? '' : ' ') + text;
-    },
-
-    /**
-     * Returns a block of coloured dots for anchor tags.
-     */
-    getDotsBlock: function(codesObject = {}) {
-        return (
-            <span className="dots-block">
-                {ANCHOR_CODES.filter(code => {
-                    return codesObject[code];
-                }).map((code, index) => {
-                    return (
-                        <div key={index} className={'dot ' + code}>
-                        </div>
-                    );
-                })}
-            </span>
-        );
     }
 }
