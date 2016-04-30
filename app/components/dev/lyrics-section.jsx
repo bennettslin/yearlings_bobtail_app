@@ -15,8 +15,7 @@ class LyricsSection extends React.Component {
                 return (
                     <LyricColumn
                         key={index}
-                        columnIndex={index}
-                        columnTitle={isDoublespeaker ? (index === 0 ? 'left' : 'right') + ' speaker' : null}
+                        columnKey={isDoublespeaker ? (index === 0 ? 'left' : 'right') : null}
                         selectedSongLyrics={lyrics}
                         handleAnnotationSelect={props.handleAnnotationSelect}
                     />

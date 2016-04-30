@@ -44,6 +44,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: 'speech bubbles',
+            workedHours: 0,
+            neededHours: 6
+        },
+        {
             taskName: 'annotation header formatting',
             workedHours: 0,
             neededHours: 1
@@ -51,7 +56,14 @@ module.exports = {
         {
             taskName: 'create code popups',
             workedHours: 0,
-            neededHours: 3
+            neededHours: 2,
+            subtasks: [
+                {
+                    taskName: 'make popup a general utility',
+                    workedHours: 0,
+                    neededHours: 2
+                }
+            ]
         },
         {
             taskName: 'setup unit and automation tests',

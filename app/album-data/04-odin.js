@@ -2,7 +2,7 @@ module.exports = {
     title: 'Odin',
     speechBubbles: {
         narrative: 'narrative 1',
-        music: 'personal 1'
+        music: ' Doublespeaker rhyme is a literary technique I invented, in which two sets of lyrics that rhyme syllable for syllable are '
     },
     lyrics: [
         [ // left
@@ -163,7 +163,11 @@ module.exports = {
                 },
                 {
                     time: 141,
-                    verse: 'But in time, wouldn\'t you find life is simply much too long?'
+                    verse: 'But in time, wouldn\'t you find'
+                },
+                {
+                    time: 144,
+                    verse: 'life is simply much too long?'
                 }
             ],
             [
@@ -358,6 +362,10 @@ module.exports = {
                 {
                     time: 141,
                     verse: '…'
+                },
+                {
+                    time: 144,
+                    verse: '…'
                 }
             ],
             [
@@ -397,6 +405,8 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
+            workedHours: 0,
+            neededHours: 80,
             subtasks: [
                 {
                     taskName: 'references',
@@ -408,21 +418,19 @@ module.exports = {
                     workedHours: 0,
                     neededHours: 3
                 }
-            ],
-            workedHours: 0,
-            neededHours: 80
+            ]
         },
         {
             taskName: 'illustrations',
+            workedHours: 0,
+            neededHours: 0,
             subtasks: [
                 {
                     taskName: 'concept',
                     workedHours: 0,
                     neededHours: 3
                 }
-            ],
-            workedHours: 0,
-            neededHours: 0
+            ]
         }
     ]
 };
