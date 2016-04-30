@@ -1,8 +1,8 @@
 module.exports = {
     title: 'Odin',
     speechBubbles: {
-        narrative: 'narrative 1',
-        music: ' Doublespeaker rhyme is a literary technique I invented, in which two sets of lyrics that rhyme syllable for syllable are '
+        narrative: 'Throughout my family\'s stay in Taiwan, I kept thinking about Sasha. Taiwan\'s mundane daily life that was so different from my own, allowed me to reset my perspective on faith, death. Dreamlike state. Our house cat Odin died.',
+        music: ' Doublespeaker rhyme is a literary technique I invented, in which two sets of lyrics that rhyme syllable for syllable. Wakened state.'
     },
     lyrics: [
         [ // left
