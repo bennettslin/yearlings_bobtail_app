@@ -1,8 +1,9 @@
 module.exports = {
     title: 'Odin',
     speechBubbles: {
-        narrative: 'My grandfather could only afford to send one child to junior high. Cousins\' lives were so different, and had things been different, their lives would have been mine. Which meant that identity wasn\'t real, it can be whatever you want it to be, which was a comforting thought given that I was thinking of Sasha throughout. Dreamlike state. Our house cat Odin died.',
-        music: ' Doublespeaker rhyme is a literary technique I invented, in which two sets of lyrics that rhyme syllable for syllable. Wakened state.'
+        // FIXME: Massively rewrite, but this is the right idea.
+        narrative: 'Our trip to Taiwan made it clear just how different my life would have been, had my parents not immigrated to America. Yet even so, I was worlds away from what Sasha needed me to be. It seemed paradoxical that what I might be was both boundless and fixed. Later that summer, our house cat Odin died of old age, just as I was entertaining the idea of having faith. And yet, the possibility that life would never end, which faith had to offer, seemed no less terrifying than the knowledge that it would.',
+        music: 'Dreams. Doublespeaker rhyme is a literary technique I invented, in which two sets of lyrics that rhyme syllable for syllable are sung simultaneously, one voice per speaker. The effect is like a split screen in cinema.'
     },
     lyrics: [
         [ // left
@@ -405,7 +406,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 0,
+            workedHours: 3,
             neededHours: 80,
             subtasks: [
                 {
