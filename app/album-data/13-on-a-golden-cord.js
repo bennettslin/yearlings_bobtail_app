@@ -2,7 +2,7 @@ module.exports = {
     title: 'On a Golden Cord',
     speechBubbles: {
         narrative: 'narrative 1',
-        music: 'personal 1'
+        music: 'I was looking for the auditory equivalent of a split screen in cinema.'
     },
     lyrics: [
         [ // left
