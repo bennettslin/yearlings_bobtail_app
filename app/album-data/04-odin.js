@@ -1,8 +1,8 @@
 module.exports = {
     title: 'Odin',
     speechBubbles: {
-        narrative: 'Taiwan showed me how differently I would have turned out had my parents not immigrated to America, and yet I was still worlds away from what Sasha needed me to be. I couldn\'t tell if life was infinitely fluid or immovably fixed, and I wasn\'t sure which terrified me more. Our cat Odin died later that summer, just as I was exploring the idea of having faith. And yet the promise offered by faith, that life can never end, seemed no less terrifying to me than the certainty that it would.',
-        music: 'Dreams. Doublespeaker rhyme is a literary technique I invented, in which two sets of lyrics that rhyme syllable for syllable are sung simultaneously, one voice per speaker. The effect is like a split screen in cinema.'
+        narrative: 'Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed at once infinitely fluid and immovably fixed in the worst possible ways. Our house cat Odin died later that summer, just as I was exploring the idea of faith. And yet, the eternal life promised by faith seemed no less terrifying to me than the finality of death.',
+        music: 'I wanted to capture the feeling of being crushed between opposite extremes, as well as the disorientation I felt cycling between dreams of the familiar and days amongst the foreign. I was hoping for an auditory equivalent of a split screen in cinema. So I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung simultaneously, one voice per audio speaker.'
     },
     lyrics: [
         [ // left

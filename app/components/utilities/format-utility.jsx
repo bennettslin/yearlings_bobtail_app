@@ -67,6 +67,7 @@ module.exports = {
     _getTextString: function(text, noSpace) {
         const lastSpaceIndex = text.lastIndexOf(' ');
 
+        // FIXME: Only do this for lyrics, nowhere else. (Not annotations or speech bubbles.)
         if (lastSpaceIndex > -1) {
             text = text.slice(0, lastSpaceIndex) +
                    '\u00a0' +
