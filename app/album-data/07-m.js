@@ -1,6 +1,6 @@
 module.exports = {
     title: 'M',
-    speechBubbles: {
+    overviews: {
         /**
          * Playing shows, Mara, Jacob drummer
          */

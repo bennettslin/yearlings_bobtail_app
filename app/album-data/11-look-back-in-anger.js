@@ -1,6 +1,6 @@
 module.exports = {
     title: 'Look Back in Anger',
-    speechBubbles: {
+    overviews: {
         narrative: 'narrative 1',
         music: 'personal 1'
     },

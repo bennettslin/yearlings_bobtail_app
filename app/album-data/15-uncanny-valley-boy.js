@@ -1,6 +1,6 @@
 module.exports = {
     title: 'Uncanny Valley Boy',
-    speechBubbles: {
+    overviews: {
         narrative: 'narrative 1',
         music: 'personal 1'
     },

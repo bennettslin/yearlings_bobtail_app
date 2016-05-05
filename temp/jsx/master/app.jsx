@@ -45,7 +45,7 @@ var App = React.createClass({
     render: function() {
         var playedSongIndex = this.state.playedSongIndex,
             playedSongTitle = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].title : null,
-            playedSongSpeechBubbles = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].speechBubbles : this.props.speechBubbles,
+            playedSongOverviews = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].overviews : this.props.overviews,
 
             // FIXME: Let book component get this from its songs prop
             playedSongLyrics = this.state.playedSongIndex >= 0 ? this.props.songs[this.state.playedSongIndex].lyrics : null,
@@ -72,7 +72,7 @@ var App = React.createClass({
                     legendSymbols={this.props.legendSymbols}
                     playedSongIndex={playedSongIndex}
                     playedSongTitle={playedSongTitle}
-                    playedSongSpeechBubbles={playedSongSpeechBubbles}
+                    playedSongOverviews={playedSongOverviews}
                     playedSongPageIndex={playedSongPageIndex}
                     songsLength={this.props.songs.length}
                     device={this.state.device}

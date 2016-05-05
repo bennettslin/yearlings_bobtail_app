@@ -283,7 +283,7 @@ var DevApp = React.createClass({
         return {
             title: 'Yearling\'s Bobtail',
             songs: [],
-            speechBubbles: []
+            overviews: []
         };
     },
 
@@ -343,7 +343,7 @@ var DevApp = React.createClass({
     render: function () {
         var playedSongIndex = this.state.playedSongIndex,
             playedSongTitle = playedSongIndex >= 0 ? this.props.songs[playedSongIndex].title : null,
-            playedSongSpeechBubbles = playedSongIndex >= 0 ? this.props.songs[playedSongIndex].speechBubbles : this.props.speechBubbles,
+            playedSongOverviews = playedSongIndex >= 0 ? this.props.songs[playedSongIndex].overviews : this.props.overviews,
             playedSongTasks = playedSongIndex >= 0 ? this.props.songs[playedSongIndex].tasks : null,
             playedSongLyrics = playedSongIndex >= 0 ? this.props.songs[playedSongIndex].lyrics : null,
             annotationIsShown = !!this.state.annotationSpan;
@@ -386,8 +386,8 @@ var DevApp = React.createClass({
                 React.createElement(
                     'div',
                     { className: 'notes-row speech-bubbles-row' },
-                    React.createElement(DevSpeechBubblesField, {
-                        playedSongSpeechBubbles: playedSongSpeechBubbles
+                    React.createElement(DevOverviewsField, {
+                        playedSongOverviews: playedSongOverviews
                     }),
                     playedSongTasks ? React.createElement(DevProgressField, {
                         tasks: playedSongTasks
@@ -789,16 +789,16 @@ var DevSongsField = React.createClass({
 });
 var SPEECH_BUBBLE_NAMES = ['narrative', 'backstory'];
 
-var DevSpeechBubblesField = React.createClass({
+var DevOverviewsField = React.createClass({
 
     getDefaultProps: function () {
         return {
-            playedSongSpeechBubbles: {}
+            playedSongOverviews: {}
         };
     },
 
     render: function () {
-        var speechBubbles = SPEECH_BUBBLE_NAMES.map(function (bubbleName, index) {
+        var overviews = SPEECH_BUBBLE_NAMES.map(function (bubbleName, index) {
             return React.createElement(
                 'div',
                 {
@@ -810,14 +810,14 @@ var DevSpeechBubblesField = React.createClass({
                     null,
                     bubbleName
                 ),
-                TextFormatter.getFormattedSpan(this.props.playedSongSpeechBubbles[SPEECH_BUBBLE_NAMES[index]])
+                TextFormatter.getFormattedSpan(this.props.playedSongOverviews[SPEECH_BUBBLE_NAMES[index]])
             );
         }, this);
 
         return React.createElement(
             'div',
             { className: 'dev-speech-bubbles-field' },
-            speechBubbles
+            overviews
         );
     }
 });

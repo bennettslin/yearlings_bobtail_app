@@ -3,23 +3,23 @@ import FormatUtility from '../utilities/format-utility.jsx';
 
 const SPEECH_BUBBLE_NAMES = ['narrative', 'music'];
 const defaultProps = {
-    speechBubbleRichText: '',
-    selectedSpeechBubbleKey: '',
-    handleSpeechBubbleSelect() {}
+    overviewRichText: '',
+    selectedOverviewKey: '',
+    handleOverviewSelect() {}
 };
 
-class SpeechBubblesSection extends React.Component {
+class OverviewsSection extends React.Component {
 
-    _getSpeechBubbleSelectButton(key) {
+    _getOverviewSelectButton(key) {
         const props = this.props,
-            disabled = key === props.selectedSpeechBubbleKey,
+            disabled = key === props.selectedOverviewKey,
             className = 'select-button' + (disabled ? ' disabled' : '');
 
         return (
             <div key={key} className={className}>
                 <h2>
                     <a disabled={disabled}
-                        onClick={disabled ? null : props.handleSpeechBubbleSelect.bind(null, key)}
+                        onClick={disabled ? null : props.handleOverviewSelect.bind(null, key)}
                     >
                         {key}
                     </a>
@@ -30,14 +30,14 @@ class SpeechBubblesSection extends React.Component {
 
     render() {
         return (
-            <div className="section speech-bubbles-section">
+            <div className="section overviews-section">
                 <div className="button-block">
                     {SPEECH_BUBBLE_NAMES.map(key => {
-                        return this._getSpeechBubbleSelectButton(key);
+                        return this._getOverviewSelectButton(key);
                     })}
                 </div>
-                <div className={'speech-bubble'}>
-                    {FormatUtility.getFormattedSpan(this.props.speechBubbleRichText)}
+                <div className="overview-text">
+                    {FormatUtility.getFormattedSpan(this.props.overviewRichText)}
                 </div>
 
             </div>
@@ -45,5 +45,5 @@ class SpeechBubblesSection extends React.Component {
     }
 }
 
-SpeechBubblesSection.defaultProps = defaultProps;
-export default SpeechBubblesSection;
+OverviewsSection.defaultProps = defaultProps;
+export default OverviewsSection;

@@ -284,7 +284,7 @@ var DevApp = React.createClass({
         return {
             title: 'Yearling\'s Bobtail',
             songs: [],
-            speechBubbles: []
+            overviews: []
         };
     },
 
@@ -346,9 +346,9 @@ var DevApp = React.createClass({
         var playedSongIndex = this.state.playedSongIndex,
             playedSongTitle = playedSongIndex >= 0 ?
                 this.props.songs[playedSongIndex].title : null,
-            playedSongSpeechBubbles = playedSongIndex >= 0 ?
-                this.props.songs[playedSongIndex].speechBubbles :
-                this.props.speechBubbles,
+            playedSongOverviews = playedSongIndex >= 0 ?
+                this.props.songs[playedSongIndex].overviews :
+                this.props.overviews,
             playedSongTasks = playedSongIndex >= 0 ?
                 this.props.songs[playedSongIndex].tasks : null,
             playedSongLyrics = playedSongIndex >= 0 ?
@@ -380,8 +380,8 @@ var DevApp = React.createClass({
                     }
                     </ReactCSSTransitionGroup>
                     <div className="notes-row speech-bubbles-row">
-                        <DevSpeechBubblesField
-                            playedSongSpeechBubbles={playedSongSpeechBubbles}
+                        <DevOverviewsField
+                            playedSongOverviews={playedSongOverviews}
                         />
                         {playedSongTasks ?
                             <DevProgressField
@@ -755,30 +755,30 @@ var DevSongsField = React.createClass({
 });
 var SPEECH_BUBBLE_NAMES = ['narrative', 'backstory'];
 
-var DevSpeechBubblesField = React.createClass({
+var DevOverviewsField = React.createClass({
 
     getDefaultProps: function() {
         return {
-            playedSongSpeechBubbles: {}
+            playedSongOverviews: {}
         };
     },
 
     render: function() {
-        var speechBubbles = SPEECH_BUBBLE_NAMES.map(function(bubbleName, index) {
+        var overviews = SPEECH_BUBBLE_NAMES.map(function(bubbleName, index) {
                 return (
                     <div
                         key={index}
                         className={'speech-bubble ' + bubbleName}
                     >
                         <h2>{bubbleName}</h2>
-                        {TextFormatter.getFormattedSpan(this.props.playedSongSpeechBubbles[SPEECH_BUBBLE_NAMES[index]])}
+                        {TextFormatter.getFormattedSpan(this.props.playedSongOverviews[SPEECH_BUBBLE_NAMES[index]])}
                     </div>
                 );
             }, this);
 
         return (
             <div className="dev-speech-bubbles-field">
-                {speechBubbles}
+                {overviews}
             </div>
         );
     }

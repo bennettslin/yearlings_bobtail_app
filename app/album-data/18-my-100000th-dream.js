@@ -1,6 +1,6 @@
 module.exports = {
     title: 'My 100,000th Dream',
-    speechBubbles: {
+    overviews: {
         narrative: 'narrative 1',
         music: 'personal 1'
     },

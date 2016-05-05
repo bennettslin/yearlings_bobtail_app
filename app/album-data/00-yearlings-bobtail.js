@@ -1,6 +1,6 @@
 module.exports = {
     title: 'Yearling\'s Bobtail',
-    speechBubbles: {
+    overviews: {
         narrative: 'five things that changed my life',
         music: 'personal yb'
     },

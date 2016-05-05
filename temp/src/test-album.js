@@ -1,6 +1,6 @@
 exports.details = {
     title: 'Test Album',
-    speechBubbles: {
+    overviews: {
         narrative: 'narrative',
         backstory: 'personal'
     },
@@ -22,7 +22,7 @@ exports.details = {
     songs: [
         {
             title: 'First song',
-            speechBubbles: {
+            overviews: {
                 narrative: 'narrative 1',
                 backstory: 'personal 1'
             },

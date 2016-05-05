@@ -1,7 +1,7 @@
 // FIXME: Make Sasha quotes just single paragraph. Then separate out verses.
 module.exports = {
     title: 'Vegan Proclamation',
-    speechBubbles: {
+    overviews: {
         narrative: 'narrative 1',
         music: 'personal 1'
     },

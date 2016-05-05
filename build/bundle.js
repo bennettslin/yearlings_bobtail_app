@@ -14999,7 +14999,7 @@
 	 *
 	 * @providesModule shallowEqual
 	 * @typechecks
-	 * 
+	 *
 	 */
 
 	'use strict';
@@ -20160,7 +20160,7 @@
 	        value: function render() {
 	            var playedSongIndex = this.state.playedSongIndex,
 	                playedSongTitle = playedSongIndex >= 0 ? this.props.songs[playedSongIndex].title : null,
-	                playedSongSpeechBubbles = playedSongIndex >= 0 ? this.props.songs[playedSongIndex].speechBubbles : this.props.speechBubbles,
+	                playedSongOverviews = playedSongIndex >= 0 ? this.props.songs[playedSongIndex].overviews : this.props.overviews,
 	                playedSongTasks = playedSongIndex >= 0 ? this.props.songs[playedSongIndex].tasks : null,
 	                playedSongLyrics = playedSongIndex >= 0 ? this.props.songs[playedSongIndex].lyrics : null,
 	                annotationIsShown = !!this.state.annotationObject;
@@ -20203,8 +20203,8 @@
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'notes-row speech-bubbles-row' },
-	                        _react2.default.createElement(_devTextFormatter.DevFormattedSpeechBubblesField, {
-	                            playedSongSpeechBubbles: playedSongSpeechBubbles
+	                        _react2.default.createElement(_devTextFormatter.DevFormattedOverviewsField, {
+	                            playedSongOverviews: playedSongOverviews
 	                        }),
 	                        playedSongTasks ? _react2.default.createElement(_devProgressField2.default, {
 	                            tasks: playedSongTasks
@@ -20232,7 +20232,7 @@
 	DevApp.defaultProps = {
 	    title: 'Yearling\'s Bobtail',
 	    songs: [],
-	    speechBubbles: []
+	    overviews: []
 	};
 
 /***/ },
@@ -21121,7 +21121,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.DevFormattedSpeechBubblesField = exports.DevFormattedAnnotationField = exports.DevFormattedLyricsColumn = undefined;
+	exports.DevFormattedOverviewsField = exports.DevFormattedAnnotationField = exports.DevFormattedLyricsColumn = undefined;
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -21141,9 +21141,9 @@
 
 	var _devAnnotationField2 = _interopRequireDefault(_devAnnotationField);
 
-	var _devSpeechBubblesField = __webpack_require__(179);
+	var _devOverviewsField = __webpack_require__(179);
 
-	var _devSpeechBubblesField2 = _interopRequireDefault(_devSpeechBubblesField);
+	var _devOverviewsField2 = _interopRequireDefault(_devOverviewsField);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21250,23 +21250,23 @@
 	    return DevFormattedAnnotationField;
 	}(_react2.default.Component);
 
-	var DevFormattedSpeechBubblesField = exports.DevFormattedSpeechBubblesField = function (_React$Component3) {
-	    _inherits(DevFormattedSpeechBubblesField, _React$Component3);
+	var DevFormattedOverviewsField = exports.DevFormattedOverviewsField = function (_React$Component3) {
+	    _inherits(DevFormattedOverviewsField, _React$Component3);
 
-	    function DevFormattedSpeechBubblesField() {
-	        _classCallCheck(this, DevFormattedSpeechBubblesField);
+	    function DevFormattedOverviewsField() {
+	        _classCallCheck(this, DevFormattedOverviewsField);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(DevFormattedSpeechBubblesField).apply(this, arguments));
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(DevFormattedOverviewsField).apply(this, arguments));
 	    }
 
-	    _createClass(DevFormattedSpeechBubblesField, [{
+	    _createClass(DevFormattedOverviewsField, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(_devSpeechBubblesField2.default, _extends({ TextFormatter: TextFormatter }, this.props));
+	            return _react2.default.createElement(_devOverviewsField2.default, _extends({ TextFormatter: TextFormatter }, this.props));
 	        }
 	    }]);
 
-	    return DevFormattedSpeechBubblesField;
+	    return DevFormattedOverviewsField;
 	}(_react2.default.Component);
 
 /***/ },
@@ -21451,19 +21451,19 @@
 
 	var SPEECH_BUBBLE_NAMES = ['narrative', 'backstory'];
 
-	var DevSpeechBubblesField = function (_React$Component) {
-	    _inherits(DevSpeechBubblesField, _React$Component);
+	var DevOverviewsField = function (_React$Component) {
+	    _inherits(DevOverviewsField, _React$Component);
 
-	    function DevSpeechBubblesField() {
-	        _classCallCheck(this, DevSpeechBubblesField);
+	    function DevOverviewsField() {
+	        _classCallCheck(this, DevOverviewsField);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(DevSpeechBubblesField).apply(this, arguments));
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(DevOverviewsField).apply(this, arguments));
 	    }
 
-	    _createClass(DevSpeechBubblesField, [{
+	    _createClass(DevOverviewsField, [{
 	        key: 'render',
 	        value: function render() {
-	            var speechBubbles = SPEECH_BUBBLE_NAMES.map(function (bubbleName, index) {
+	            var overviews = SPEECH_BUBBLE_NAMES.map(function (bubbleName, index) {
 	                return _react2.default.createElement(
 	                    'div',
 	                    {
@@ -21475,26 +21475,26 @@
 	                        null,
 	                        bubbleName
 	                    ),
-	                    this.props.TextFormatter.getFormattedSpan(this.props.playedSongSpeechBubbles[SPEECH_BUBBLE_NAMES[index]])
+	                    this.props.TextFormatter.getFormattedSpan(this.props.playedSongOverviews[SPEECH_BUBBLE_NAMES[index]])
 	                );
 	            }, this);
 
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'dev-speech-bubbles-field' },
-	                speechBubbles
+	                overviews
 	            );
 	        }
 	    }]);
 
-	    return DevSpeechBubblesField;
+	    return DevOverviewsField;
 	}(_react2.default.Component);
 
-	exports.default = DevSpeechBubblesField;
+	exports.default = DevOverviewsField;
 
 
-	DevSpeechBubblesField.defaultProps = {
-	    playedSongSpeechBubbles: {}
+	DevOverviewsField.defaultProps = {
+	    playedSongOverviews: {}
 	};
 
 /***/ },
@@ -22086,7 +22086,7 @@
 
 	module.exports = {
 	    title: 'Yearling\'s Bobtail',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'five things that changed my life',
 	        backstory: 'personal yb'
 	    },
@@ -22154,7 +22154,7 @@
 	        workedHours: 1,
 	        neededHours: 3
 	    }],
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -22273,7 +22273,7 @@
 	        workedHours: 2,
 	        neededHours: 8
 	    }],
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'Willy was an autistic man who wandered our neighbourhood collecting recyclables for his living. Kids called him "The Cocoa," referring to both his Coke bottles and his seeming a bit "cuckoo." One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with autism at around this time, and in light of Willy\'s murder, I would lie awake in fear of what lay in store for him.',
 	        backstory: 'In folklore of the past, changelings were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, I wanted to capture a band of trolls in revelry after such a heist, and figured it was akin to the swamp rock of Creedence Clearwater Revival, with mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.'
 	    },
@@ -22472,7 +22472,7 @@
 	        workedHours: 0,
 	        neededHours: 0
 	    }],
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -22594,7 +22594,7 @@
 
 	module.exports = {
 	    title: 'Odin',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -22870,7 +22870,7 @@
 
 	module.exports = {
 	    title: 'Ash Wednesday',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'In college, I dated a nice Catholic girl named Catherine, who didn\'t think much of my lack of reading habit and broke up with me right before Ash Wednesday, the first day of Lent. So I decided to ash my own forehead and bump into her, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn\'t happen, but I did grow into a steady reader, and I probably have Catherine to thank for that.',
 	        backstory: 'For a song about two people who couldn\'t be more different, I juxtaposed Arabic maqam and Renaissance polyphony. The Arabic quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter tone flat. The shrieking whistles, which remind me of trains braking in a subway tunnel, were made by overblowing into recorders.'
 	    },
@@ -23170,7 +23170,7 @@
 
 	module.exports = {
 	    title: 'Pchelka\'s Starry Journey',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -23361,7 +23361,7 @@
 
 	module.exports = {
 	    title: 'M',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -23537,7 +23537,7 @@
 
 	module.exports = {
 	    title: 'Good Night, Sita',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -23740,7 +23740,7 @@
 
 	module.exports = {
 	    title: 'Grasshoppers Lie Heavy',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -23917,7 +23917,7 @@
 	 */
 	module.exports = {
 	    title: 'Constellations!',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'One night back in Los Angeles, my friends Ana, Howie, Tomer, and I got high on Robitussin and explored the steam tunnels under UCLA. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer, and by the end of it, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different afterwards.',
 	        backstory: ['While reading', {
 	            italic: 'Finnegans Wake,'
@@ -24410,7 +24410,7 @@
 
 	module.exports = {
 	    title: 'Look Back in Anger',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -24547,7 +24547,7 @@
 
 	module.exports = {
 	    title: 'Garryowen',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -24669,7 +24669,7 @@
 
 	module.exports = {
 	    title: 'On a Golden Cord',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -25005,7 +25005,7 @@
 
 	module.exports = {
 	    title: 'Kyon?',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -25115,7 +25115,7 @@
 
 	module.exports = {
 	    title: 'Uncanny Valley Boy',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -25331,7 +25331,7 @@
 
 	module.exports = {
 	    title: 'Cremated',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -25512,7 +25512,7 @@
 	// FIXME: Make Sasha quotes just single paragraph. Then separate out verses.
 	module.exports = {
 	    title: 'Vegan Proclamation',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },
@@ -25622,7 +25622,7 @@
 
 	module.exports = {
 	    title: 'My 100,000th Dream',
-	    speechBubbles: {
+	    overviews: {
 	        narrative: 'narrative 1',
 	        backstory: 'personal 1'
 	    },

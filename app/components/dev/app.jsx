@@ -4,7 +4,7 @@ import SongsSection from './songs-section.jsx';
 import NotesSection from './notes-section.jsx';
 import AnnotationPopup from './annotation-popup.jsx';
 import StatsSection from './stats-section.jsx';
-import SpeechBubblesSection from './speech-bubbles-section.jsx';
+import OverviewsSection from './overviews-section.jsx';
 import TasksSection from './tasks-section.jsx';
 import LyricsSection from './lyrics-section.jsx';
 import GlobalHelper from '../helpers/global-helper.js';
@@ -12,7 +12,7 @@ import GlobalHelper from '../helpers/global-helper.js';
 const defaultProps = {
     title: 'Yearling\'s Bobtail',
     songs: [],
-    speechBubbles: []
+    overviews: []
 };
 
 class App extends React.Component {
@@ -22,7 +22,7 @@ class App extends React.Component {
 
         this._handleBodyClick = this._handleBodyClick.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
-        this.handleSpeechBubbleSelect = this.handleSpeechBubbleSelect.bind(this);
+        this.handleOverviewSelect = this.handleOverviewSelect.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
 
         /**
@@ -33,7 +33,7 @@ class App extends React.Component {
         this.handleSongChange(window.sessionStorage.selectedSongIndex, 'selected');
 
         // Retrieve stored speech bubble key, if there is one.
-        this.handleSpeechBubbleSelect(window.sessionStorage.selectedSpeechBubbleKey);
+        this.handleOverviewSelect(window.sessionStorage.selectedOverviewKey);
 
         // Retrieve stored annotation key, if there is one.
         this.handleAnnotationSelect(window.sessionStorage.selectedAnnotationIndex);
@@ -42,7 +42,7 @@ class App extends React.Component {
             playedSongIndex: parseInt(window.sessionStorage.playedSongIndex) || 0,
             selectedSongIndex: parseInt(window.sessionStorage.selectedSongIndex) || 0,
             selectedAnnotationIndex: parseInt(window.sessionStorage.selectedAnnotationIndex) || 0,
-            selectedSpeechBubbleKey: window.sessionStorage.selectedSpeechBubbleKey,
+            selectedOverviewKey: window.sessionStorage.selectedOverviewKey,
         };
     }
 
@@ -81,7 +81,7 @@ class App extends React.Component {
                  */
                 if (actionType === 'selected') {
                     this.handleAnnotationSelect(null, true);
-                    this.handleSpeechBubbleSelect(null, true);
+                    this.handleOverviewSelect(null, true);
 
                     this.setState({
                         selectedSongIndex: songIndex
@@ -96,13 +96,13 @@ class App extends React.Component {
         }
     }
 
-    handleSpeechBubbleSelect(selectedSpeechBubbleKey, setState) {
-        selectedSpeechBubbleKey = selectedSpeechBubbleKey || 'narrative';
-        window.sessionStorage.selectedSpeechBubbleKey = selectedSpeechBubbleKey;
+    handleOverviewSelect(selectedOverviewKey, setState) {
+        selectedOverviewKey = selectedOverviewKey || 'narrative';
+        window.sessionStorage.selectedOverviewKey = selectedOverviewKey;
 
         if (setState) {
             this.setState({
-                selectedSpeechBubbleKey
+                selectedOverviewKey
             });
         }
     }
@@ -128,9 +128,9 @@ class App extends React.Component {
             selectedSongIndex = state.selectedSongIndex,
             selectedSong = selectedSongIndex ?
                 props.songs[selectedSongIndex - 1] : {},
-            speechBubbleRichText = (selectedSongIndex && state.selectedSpeechBubbleKey) ?
-                selectedSong.speechBubbles[state.selectedSpeechBubbleKey] :
-                props.speechBubbles[state.selectedSpeechBubbleKey],
+            overviewRichText = (selectedSongIndex && state.selectedOverviewKey) ?
+                selectedSong.overviews[state.selectedOverviewKey] :
+                props.overviews[state.selectedOverviewKey],
             tasks = selectedSongIndex ?
                 selectedSong.tasks :
                 props.tasks,
@@ -169,10 +169,10 @@ class App extends React.Component {
                         lyrics={selectedSong.lyrics}
                         annotations={selectedSong.annotations}
                     />
-                    <SpeechBubblesSection
-                        speechBubbleRichText={speechBubbleRichText}
-                        selectedSpeechBubbleKey={state.selectedSpeechBubbleKey}
-                        handleSpeechBubbleSelect={this.handleSpeechBubbleSelect}
+                    <OverviewsSection
+                        overviewRichText={overviewRichText}
+                        selectedOverviewKey={state.selectedOverviewKey}
+                        handleOverviewSelect={this.handleOverviewSelect}
                     />
                     <TasksSection
                         tasks={tasks}

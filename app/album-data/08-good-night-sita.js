@@ -1,6 +1,6 @@
 module.exports = {
     title: 'Good Night, Sita',
-    speechBubbles: {
+    overviews: {
         narrative: 'narrative 1',
         music: 'personal 1'
     },

@@ -26,10 +26,10 @@ var SynopsisBar = React.createClass({
     },
 
     render: function() {
-        var speechBubbles = (
+        var overviews = (
                 <ul className="speech-bubbles">
-                    {speechBubbleNames.map(function(bubbleName, index) {
-                        return this._getPopup('bubble', index, this.props.playedSongSpeechBubbles[speechBubbleNames[index]], bubbleName);
+                    {overviewNames.map(function(bubbleName, index) {
+                        return this._getPopup('bubble', index, this.props.playedSongOverviews[overviewNames[index]], bubbleName);
                     }.bind(this))}
                 </ul>
             ),
@@ -39,7 +39,7 @@ var SynopsisBar = React.createClass({
             <div className={className}>
                 <div className="avatar">
                 </div>
-                {speechBubbles}
+                {overviews}
             </div>
         );
     },
