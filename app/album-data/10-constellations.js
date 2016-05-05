@@ -280,7 +280,7 @@ module.exports = {
                                     {
                                         italic: 'daeva'
                                     },
-                                    'in the Avesta refers to a demon. '
+                                    'in the Avesta refers to a demon.'
                                 ]
                             }
                         }

@@ -2,7 +2,7 @@ module.exports = {
     title: 'Odin',
     speechBubbles: {
         narrative: 'Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn\'t sure which terrified me more. Our house cat Odin died later that summer, just as I was exploring the idea of having faith. And yet, the eternal life promised by faith seemed no less terrifying to me than the finality of death.',
-        music: 'I wanted to capture the feeling of being crushed between binary opposites whose differences are illusory, as well as the perpetual disorientation I felt in Taiwan of cycling between dreams of the familiar and days amongst the foreign. So I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung simultaneously, one voice per audio speaker.'
+        music: 'This song uses a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung simultaneously, one per audio speaker. I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, the two voices seem to proceed independently, each unaware of the ideas and images subtly planted in its consciousness by the other.'
     },
     lyrics: [
         [ // left
@@ -23,7 +23,7 @@ module.exports = {
                 },
                 {
                     time: 17,
-                    verse: 'silent poll of colours overused. '
+                    verse: 'silent poll of colours overused.'
                 },
                 {
                     time: 20,
