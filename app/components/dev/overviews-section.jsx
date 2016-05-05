@@ -1,7 +1,7 @@
 import React from 'react';
 import FormatUtility from '../utilities/format-utility.jsx';
 
-const SPEECH_BUBBLE_NAMES = ['narrative', 'music'];
+const OVERVIEW_NAMES = ['narrative', 'music'];
 const defaultProps = {
     overviewRichText: '',
     selectedOverviewKey: '',
@@ -32,7 +32,7 @@ class OverviewsSection extends React.Component {
         return (
             <div className="section overviews-section">
                 <div className="button-block">
-                    {SPEECH_BUBBLE_NAMES.map(key => {
+                    {OVERVIEW_NAMES.map(key => {
                         return this._getOverviewSelectButton(key);
                     })}
                 </div>
