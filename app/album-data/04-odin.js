@@ -268,7 +268,8 @@ module.exports = {
                         {
                             anchor: 'ichors',
                             annotation: {
-                                description: ''
+                                // TODO:
+                                description: 'In Greek mythology, ichor is the gold-coloured blood of the gods.'
                             }
                         },
                         'seem!'
@@ -281,7 +282,7 @@ module.exports = {
                         {
                             anchor: 'salamander',
                             annotation: {
-                                description: ''
+                                description: 'Paracelsus was a 16th-century occultist who believed that nature is made up of four elements, each of which is personified by a mythical creature. The salamander was the elemental of fire.'
                             }
                         },
                         'shall await'
