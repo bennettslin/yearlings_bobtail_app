@@ -213,11 +213,33 @@ module.exports = {
             [
                 {
                     time: 8,
-                    verse: 'By lot, once more trifling tref must reseed the earth.'
+                    verse: [
+                        {
+                            anchor: 'By lot,',
+                            annotation: {
+                                description: 'In the Book of Genesis, Lot\'s wife was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Lots are also objects drawn to decide an outcome by chance, and of course, my lot was to be born amongst the fallen.'
+                            }
+                        },
+                        'once more trifling',
+                        {
+                            anchor: 'tref must reseed the earth.',
+                            annotation: {
+                                description: 'Tref is the Yiddish word for food that is not kosher. Since it cannot be eaten, its only purpose is to break down into compost. Similarly, as I was not a member of the tribe, I could only ever be subsumed into the endless churn of the surrounding masses.'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 14,
-                    verse: 'Indifferent galaxies instead stay unmoved;'
+                    verse: [
+                        {
+                            anchor: 'Indifferent galaxies',
+                            annotation: {
+                                description: 'I wasn\'t comforted by my own conception of the universe as a vast stretch of empty space. I would have happily exchanged it for something more spiritually uplifting.'
+                            }
+                        },
+                        'instead stay unmoved;'
+                    ]
                 },
                 {
                     time: 17,
@@ -225,21 +247,57 @@ module.exports = {
                 },
                 {
                     time: 20,
-                    verse: 'In safest sleep, you ruminate on these riddles…'
+                    verse: [
+                        'In',
+                        {
+                            anchor: 'safest sleep,',
+                            // TODO:
+                            annotation: {
+                                description: ''
+                            }
+                        },
+                        'you ruminate on these riddles…'
+                    ]
                 }
             ],
             [
                 {
                     time: 26,
-                    verse: 'But how dreadful indeed, do sweet dream\'s ichors seem!'
+                    verse: [
+                        'But how dreadful indeed, do sweet dream\'s',
+                        {
+                            anchor: 'ichors',
+                            annotation: {
+                                description: ''
+                            }
+                        },
+                        'seem!'
+                    ]
                 },
                 {
                     time: 32,
-                    verse: 'Like a salamander shall await'
+                    verse: [
+                        'Like a',
+                        {
+                            anchor: 'salamander',
+                            annotation: {
+                                description: ''
+                            }
+                        },
+                        'shall await'
+                    ]
                 },
                 {
                     time: 35,
-                    verse: 'trading breath\'s bliss for present bane.'
+                    verse: [
+                        {
+                            anchor: 'trading breath\'s bliss',
+                            annotation: {
+                                description: ''
+                            }
+                        },
+                        'for present bane.'
+                    ]
                 }
             ],
             [
@@ -249,15 +307,47 @@ module.exports = {
                 },
                 {
                     time: 40,
-                    verse: 'proves shibboleth for these gentle means!'
+                    verse: [
+                        'proves',
+                        {
+                            anchor: 'shibboleth',
+                            annotation: {
+                                description: ''
+                            }
+                        },
+                        'for these',
+                        {
+                            anchor: 'gentle means!',
+                            annotation: {
+                                description: ''
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 44,
-                    verse: 'As you plummet down from couplets past;'
+                    verse: [
+                        'As you plummet down from',
+                        {
+                            anchor: 'couplets past;',
+                            annotation: {
+                                description: ''
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 47,
-                    verse: 'still, but missed bat mitzvahs come racing back.'
+                    verse: [
+                        'still, but',
+                        {
+                            anchor: 'missed bat mitzvahs',
+                            annotation: {
+                                description: ''
+                            }
+                        },
+                        'come racing back.'
+                    ]
                 },
                 {
                     time: 50,
@@ -265,7 +355,15 @@ module.exports = {
                 },
                 {
                     time: 53,
-                    verse: 'as a slave for the seasons?'
+                    verse: [
+                        'as a',
+                        {
+                            anchor: 'slave for the seasons?',
+                            annotation: {
+                                description: ''
+                            }
+                        }
+                    ]
                 }
             ],
             [
