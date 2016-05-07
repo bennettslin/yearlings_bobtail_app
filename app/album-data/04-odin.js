@@ -9,49 +9,149 @@ module.exports = {
             [
                 {
                     time: 0,
-                    verse: 'Mr. Odin died today.'
+                    verse: [
+                        {
+                            anchor: 'Mr. Odin',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        },
+                        'died today.'
+                    ]
                 }
             ],
             [
                 {
                     time: 8,
-                    verse: 'Lights off, from your hiding place of retreat emerged.'
+                    verse: [
+                        'Lights off, from your',
+                        {
+                            anchor: 'hiding place of retreat',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        },
+                        'emerged.'
+                    ]
                 },
                 {
                     time: 14,
-                    verse: 'This fridge\'s gallery in web\'s wake was strewn,'
+                    verse: [
+                        'This',
+                        {
+                            anchor: 'fridge\'s gallery in web\'s wake',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        },
+                        'was strewn,'
+                    ]
                 },
                 {
                     time: 17,
-                    verse: 'silent poll of colours overused.'
+                    verse: [
+                        'silent poll of',
+                        {
+                            anchor: 'colours overused.',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 20,
-                    verse: 'This latest piece you drew with crayons least whittled…'
+                    verse: [
+                        'This latest piece you drew with',
+                        {
+                            anchor: 'crayons least whittled…',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        }
+                    ]
                 }
             ],
             [
                 {
                     time: 26,
-                    verse: 'The house settled in sheets, you swing the iron screen.'
+                    verse: [
+                        'The',
+                        {
+                            anchor: 'house settled in sheets,',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        },
+                        'you swing the iron screen.'
+                    ]
                 },
                 {
                     time: 32,
-                    verse: 'By the alabaster balustrade,'
+                    verse: [
+                        'By the',
+                        {
+                            anchor: 'alabaster balustrade,',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 35,
-                    verse: 'baby steps inch towards crevice rays.'
+                    verse: [
+                        'baby steps inch towards',
+                        {
+                            anchor: 'crevice rays.',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        }
+                    ]
                 }
             ],
             [
                 {
                     time: 38,
-                    verse: 'Then down stygian stairs,'
+                    verse: [
+                        'Then down',
+                        {
+                            anchor: 'stygian stairs,',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 40,
-                    verse: 'through sickle-lit oriental streets.'
+                    verse: [
+                        'through',
+                        {
+                            anchor: 'sickle-lit',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        },
+                        {
+                            anchor: 'oriental streets.',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 44,
@@ -59,7 +159,17 @@ module.exports = {
                 },
                 {
                     time: 47,
-                    verse: 'till a rickshaw hiccoughs from grating cracks.'
+                    verse: [
+                        'till a',
+                        {
+                            anchor: 'rickshaw hiccoughs',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        },
+                        'from grating cracks.'
+                    ]
                 },
                 {
                     time: 50,
@@ -67,7 +177,16 @@ module.exports = {
                 },
                 {
                     time: 53,
-                    verse: 'that was safe for a heathen…'
+                    verse: [
+                        'that was safe',
+                        {
+                            anchor: 'for a heathen…',
+                            annotation: {
+                                // TODO
+                                description: ''
+                            }
+                        }
+                    ]
                 }
             ],
             [
@@ -235,7 +354,7 @@ module.exports = {
                         {
                             anchor: 'Indifferent galaxies',
                             annotation: {
-                                description: 'I wasn\'t comforted by my own conception of the universe as a vast stretch of empty space. I would have happily exchanged it for something more spiritually uplifting.'
+                                description: 'I was hardly comforted by my own conception of the universe as a vast stretch of empty space. I would have happily exchanged it for something more spiritually uplifting.'
                             }
                         },
                         'instead stay unmoved;'
@@ -251,8 +370,8 @@ module.exports = {
                         'In',
                         {
                             anchor: 'safest sleep,',
-                            // TODO:
                             annotation: {
+                                // TODO:
                                 description: ''
                             }
                         },
@@ -264,12 +383,12 @@ module.exports = {
                 {
                     time: 26,
                     verse: [
-                        'But how dreadful indeed, do sweet dream\'s',
+                        'But how dreadful indeed, do',
                         {
-                            anchor: 'ichors',
+                            anchor: 'sweet dream\'s ichors',
                             annotation: {
                                 // TODO:
-                                description: 'In Greek mythology, ichor is the gold-coloured blood of the gods.'
+                                description: 'In Greek mythology, ichor is the golden blood of the gods. I had once been given general anaesthesia  '
                             }
                         },
                         'seem!'
@@ -282,7 +401,7 @@ module.exports = {
                         {
                             anchor: 'salamander',
                             annotation: {
-                                description: 'Paracelsus was a 16th-century occultist who believed that nature is made up of four elements, each of which is personified by a mythical creature. The salamander was the elemental of fire.'
+                                description: 'Paracelsus was a 16th-century occultist who believed that nature is made up of four elements, each of which is personified by a mythical creature. The salamander is the elemental of fire.'
                             }
                         },
                         'shall await'
@@ -294,7 +413,7 @@ module.exports = {
                         {
                             anchor: 'trading breath\'s bliss',
                             annotation: {
-                                description: ''
+                                description: 'Salamanders are amphibians that begin life living underwater, before exchanging gills for lungs through metamorphosis. So the same conditions needed for them to survive as larvae suddenly become deadly in the adult stage, and vice versa.'
                             }
                         },
                         'for present bane.'
@@ -313,14 +432,16 @@ module.exports = {
                         {
                             anchor: 'shibboleth',
                             annotation: {
-                                description: ''
+                                description: [
+                                    'A shibboleth is any signifier used to differentiate members of an ingroup from outsiders. In the Book of Judges, the Gileadites asked suspected Ephraimites to pronounce the Hebrew word for a freshwater stream. Because the Ephraimites lacked the "sh" sound in their dialect, they pronounced the word as "sibboleth," thus outing themselves as enemy tribespeople.'
+                                ]
                             }
                         },
                         'for these',
                         {
                             anchor: 'gentle means!',
                             annotation: {
-                                description: ''
+                                description: 'Or else "Gentile," referring to any non-Jew.'
                             }
                         }
                     ]
@@ -332,7 +453,8 @@ module.exports = {
                         {
                             anchor: 'couplets past;',
                             annotation: {
-                                description: ''
+                                // TODO:
+                                description: 'A couplet is a pair of lines in a poem.'
                             }
                         }
                     ]
@@ -344,7 +466,7 @@ module.exports = {
                         {
                             anchor: 'missed bat mitzvahs',
                             annotation: {
-                                description: ''
+                                description: 'A bat mitzvah is a coming-of-age ritual undertaken by Jewish girls when they reach the age of twelve. Since I was in Taiwan at the time, I was unable to attend Sasha\'s bat mitzvah.'
                             }
                         },
                         'come racing back.'
@@ -352,6 +474,7 @@ module.exports = {
                 },
                 {
                     time: 50,
+                    // TODO: Future reference to Sita?
                     verse: 'To dreams of whom does each one cave in'
                 },
                 {
@@ -361,6 +484,7 @@ module.exports = {
                         {
                             anchor: 'slave for the seasons?',
                             annotation: {
+                                // TODO:
                                 description: ''
                             }
                         }
@@ -504,7 +628,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 12,
+            workedHours: 15,
             neededHours: 80,
             subtasks: [
                 {
