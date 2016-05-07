@@ -15,7 +15,8 @@ module.exports = {
                             annotation: {
                                 // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         },
                         'died today.'
                     ]

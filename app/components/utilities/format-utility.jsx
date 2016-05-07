@@ -43,9 +43,12 @@ module.exports = {
                 return <em key={nestedIndex + index}>{this.getFormattedSpan(text.emphasis, clickHandler, index, nestedIndex)}</em>;
 
             } else if (text.anchor) {
+                // TODO: For dev purposes.
+                const todoClass = text.todo ? ' todo' : '';
+
                 return (
                     <span key={nestedIndex + index}
-                        className="code-block">
+                        className={'code-block' + todoClass}>
                         {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Unfortunately, it doesn't obey noSpace, which we would want if the anchor tag begins with an em-dash. */}
                         { index > 0 ? ' ' : null}
                         {CodeUtility.getDotsBlock(text.codes)}

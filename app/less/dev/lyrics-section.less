@@ -78,4 +78,26 @@
             background-color: mix(@lyric-link-colour, white, 25%);
         }
     }
+
+    // For dev purposes.
+    .todo {
+        a {
+            color: #b00;
+
+            &:hover {
+                color: #d33;
+            }
+
+            &:active {
+                color: #f66;
+            }
+        }
+
+        .anchor-link {
+
+            &:before {
+                background-color: mix(red, white, 50%);
+            }
+        }
+    }
 }
