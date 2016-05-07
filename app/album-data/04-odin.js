@@ -13,7 +13,6 @@ module.exports = {
                         {
                             anchor: 'Mr. Odin',
                             annotation: {
-                                // TODO
                                 description: ''
                             },
                             todo: true
@@ -30,9 +29,9 @@ module.exports = {
                         {
                             anchor: 'hiding place of retreat',
                             annotation: {
-                                // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         },
                         'emerged.'
                     ]
@@ -44,9 +43,9 @@ module.exports = {
                         {
                             anchor: 'fridge\'s gallery in web\'s wake',
                             annotation: {
-                                // TODO
-                                description: ''
-                            }
+                                description: 'The drawings '
+                            },
+                            todo: true
                         },
                         'was strewn,'
                     ]
@@ -58,9 +57,9 @@ module.exports = {
                         {
                             anchor: 'colours overused.',
                             annotation: {
-                                // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -71,9 +70,9 @@ module.exports = {
                         {
                             anchor: 'crayons least whittled…',
                             annotation: {
-                                // TODO
-                                description: ''
-                            }
+                                description: 'One of my aunts gave me a box of crayons while in Taiwan.'
+                            },
+                            todo: true
                         }
                     ]
                 }
@@ -86,9 +85,9 @@ module.exports = {
                         {
                             anchor: 'house settled in sheets,',
                             annotation: {
-                                // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         },
                         'you swing the iron screen.'
                     ]
@@ -100,9 +99,9 @@ module.exports = {
                         {
                             anchor: 'alabaster balustrade,',
                             annotation: {
-                                // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -113,9 +112,9 @@ module.exports = {
                         {
                             anchor: 'crevice rays.',
                             annotation: {
-                                // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 }
@@ -128,9 +127,9 @@ module.exports = {
                         {
                             anchor: 'stygian stairs,',
                             annotation: {
-                                // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -141,16 +140,16 @@ module.exports = {
                         {
                             anchor: 'sickle-lit',
                             annotation: {
-                                // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         },
                         {
                             anchor: 'oriental streets.',
                             annotation: {
-                                // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -165,9 +164,9 @@ module.exports = {
                         {
                             anchor: 'rickshaw hiccoughs',
                             annotation: {
-                                // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         },
                         'from grating cracks.'
                     ]
@@ -183,9 +182,9 @@ module.exports = {
                         {
                             anchor: 'for a heathen…',
                             annotation: {
-                                // TODO
                                 description: ''
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 }
@@ -372,9 +371,9 @@ module.exports = {
                         {
                             anchor: 'safest sleep,',
                             annotation: {
-                                // TODO:
                                 description: ''
-                            }
+                            },
+                            todo: true
                         },
                         'you ruminate on these riddles…'
                     ]
@@ -388,9 +387,9 @@ module.exports = {
                         {
                             anchor: 'sweet dream\'s ichors',
                             annotation: {
-                                // TODO:
                                 description: 'In Greek mythology, ichor is the golden blood of the gods. I had once been given general anaesthesia  '
-                            }
+                            },
+                            todo: true
                         },
                         'seem!'
                     ]
@@ -454,9 +453,9 @@ module.exports = {
                         {
                             anchor: 'couplets past;',
                             annotation: {
-                                // TODO:
                                 description: 'A couplet is a pair of lines in a poem.'
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -485,9 +484,9 @@ module.exports = {
                         {
                             anchor: 'slave for the seasons?',
                             annotation: {
-                                // TODO:
                                 description: ''
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 }
