@@ -334,7 +334,7 @@ module.exports = {
                         {
                             anchor: 'cursed to be born,',
                             annotation: {
-                                description: 'One juvenile argument against the Catholic Church\'s pro-life stance is that it makes no sense for unbelievers to be born at all, since it means trading the certainty of going to heaven for the likelihood of going to hell.'
+                                description: 'One admittedly juvenile argument against the Catholic Church\'s pro-life stance is that it makes no sense for unbelievers to be born at all, since it means trading the certainty of going to heaven for the likelihood of going to hell.'
                             }
                         }
                     ]

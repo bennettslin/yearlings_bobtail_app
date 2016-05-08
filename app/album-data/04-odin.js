@@ -476,7 +476,16 @@ module.exports = {
             [
                 {
                     time: 59,
-                    verse: 'And if summer trips to Paris'
+                    verse: [
+                        'And if',
+                        {
+                            anchor: 'summer trips to Paris',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 63,
@@ -484,15 +493,59 @@ module.exports = {
                 },
                 {
                     time: 67,
-                    verse: 'would the rondel of her eye be stored in this neck?'
+                    verse: [
+                        'would the',
+                        {
+                            anchor: 'rondel of her eye',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'be',
+                        {
+                            anchor: 'stored in this neck?',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 73,
-                    verse: 'But cored gifts fall to discord till lives acquiesce,'
+                    verse: [
+                        'But',
+                        {
+                            anchor: 'cored gifts fall to discord',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'till lives acquiesce,'
+                    ]
                 },
                 {
                     time: 79,
-                    verse: 'by opened latches that come undone by undine'
+                    verse: [
+                        'by',
+                        {
+                            anchor: 'opened latches',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'that come undone by',
+                        {
+                            anchor: 'undine',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 84,
@@ -500,7 +553,16 @@ module.exports = {
                 },
                 {
                     time: 87,
-                    verse: 'a casket tilted back where its hopeless rests.'
+                    verse: [
+                        'a casket tilted back where its',
+                        {
+                            anchor: 'hopeless rests.',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 }
             ],
             [
@@ -556,11 +618,27 @@ module.exports = {
                 },
                 {
                     time: 107,
-                    verse: 'shivaree towards shivah seat'
+                    verse: {
+                        anchor: 'shivaree towards shivah seat',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
                 },
                 {
                     time: 111,
-                    verse: 'has pulled your floater away from your sight.'
+                    verse: [
+                        'has',
+                        {
+                            anchor: 'pulled your floater away',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'from your sight.'
+                    ]
                 },
                 {
                     time: 114,
