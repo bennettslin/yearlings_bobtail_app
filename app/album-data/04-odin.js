@@ -13,7 +13,7 @@ module.exports = {
                         {
                             anchor: 'Mr. Odin',
                             annotation: {
-                                description: 'Odin was our house cat. It\'s most likely that his name meant something in Chinese, which my sister and I retroactively anglicised as we got older and .'
+                                description: 'While we were away, our house cat Odin died of old age in the care of a family friend. His name was probably Chinese, which my sister and I then anglicised.'
                             },
                             todo: true
                         },
@@ -369,9 +369,9 @@ module.exports = {
                         {
                             anchor: 'sweet dream\'s ichors',
                             annotation: {
-                                description: 'In Greek mythology, ichor is the golden blood of the gods. I had once been given general anaesthesia  '
+                                description: 'In Greek mythology, ichor is the golden blood of the gods. I had once been given general anaesthesia '
                             },
-                            todo: true
+                            todo: 'mention that I had been reading Romantic poets'
                         },
                         'seem!'
                     ]
@@ -383,7 +383,7 @@ module.exports = {
                         {
                             anchor: 'salamander',
                             annotation: {
-                                description: 'Paracelsus was a 16th-century occultist who believed that nature is made up of four elements, each of which is personified by a mythical creature. The salamander is the elemental of fire.'
+                                description: 'Since writing lyrics in doublespeaker rhyme proved to be daunting, I would amuse myself with fun little challenges, like mentioning the four elementals of Paracelsus. Advancing alchemy in the 16th century, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. The salamander is the elemental of fire.'
                             }
                         },
                         'shall await'
@@ -506,15 +506,43 @@ module.exports = {
             [
                 {
                     time: 93,
-                    verse: 'Your seizures of spleen,'
+                    verse: [
+                        'Your',
+                        {
+                            anchor: 'seizures of spleen,',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 95,
-                    verse: 'you see the jarred sibyl had foreseen'
+                    verse: [
+                        'you see the',
+                        {
+                            anchor: 'jarred sibyl',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'had foreseen'
+                    ]
                 },
                 {
                     time: 99,
-                    verse: 'as not for wrapping by a cellophane sylph,'
+                    verse: [
+                        'as not for wrapping by a',
+                        {
+                            anchor: 'cellophane sylph,',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 102,
