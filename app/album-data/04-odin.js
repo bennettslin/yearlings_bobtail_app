@@ -2,7 +2,7 @@ module.exports = {
     title: 'Odin',
     overviews: {
         narrative: 'Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn\'t sure which terrified me more. Our house cat Odin died later that summer, just as I was exploring the idea of having faith. And yet, the eternal life promised by faith seemed no less terrifying to me than the finality of death.',
-        music: 'This song uses a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung simultaneously, one per audio speaker. I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, the two voices seem to proceed independently, each unaware of the ideas and images subtly planted along its path by the other.'
+        music: 'This song uses a literary technique I invented called doublespeaker rhyme, in which two columns of lyrics that rhyme syllable for syllable are sung simultaneously, one per audio speaker. I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, the two voices seem to proceed independently, each unaware of the ideas and images subtly planted along its path by the other.'
     },
     lyrics: [
         [ // left
@@ -13,7 +13,7 @@ module.exports = {
                         {
                             anchor: 'Mr. Odin',
                             annotation: {
-                                description: ''
+                                description: 'Odin was our house cat. It\'s most likely that his name meant something in Chinese, which my sister and I retroactively anglicised as we got older and .'
                             },
                             todo: true
                         },
@@ -29,9 +29,8 @@ module.exports = {
                         {
                             anchor: 'hiding place of retreat',
                             annotation: {
-                                description: ''
+                                description: 'The "dreaming" voice in the doublespeaker set confuses the familiar setting of Los Angeles with the foreign sights of Taiwan. Covered in cobwebs, I begin with no recollection of prior events. I may have just come out from the crawl space beneath my bed to which I regularly snuck away as a child. But it\'s possible that I emerged from somewhere else…'
                             },
-                            todo: true
                         },
                         'emerged.'
                     ]
@@ -43,25 +42,15 @@ module.exports = {
                         {
                             anchor: 'fridge\'s gallery in web\'s wake',
                             annotation: {
-                                description: 'The drawings '
-                            },
-                            todo: true
+                                description: 'My mother used to attach my drawings to our refrigerator. Here, they get snagged in the cobwebs trailing from my clothes, and scatter to the floor.'
+                            }
                         },
                         'was strewn,'
                     ]
                 },
                 {
                     time: 17,
-                    verse: [
-                        'silent poll of',
-                        {
-                            anchor: 'colours overused.',
-                            annotation: {
-                                description: ''
-                            },
-                            todo: true
-                        }
-                    ]
+                    verse: 'silent poll of colours overused.'
                 },
                 {
                     time: 20,
@@ -70,9 +59,8 @@ module.exports = {
                         {
                             anchor: 'crayons least whittled…',
                             annotation: {
-                                description: 'One of my aunts gave me a box of crayons while in Taiwan.'
-                            },
-                            todo: true
+                                description: 'When I first arrived in Taiwan, my aunt gave me a set of crayons as a gift. They were soft pastels and thus more powdery than waxy, which was the standard for children\'s crayons there. This meant that they ran out quickly, so by the end of our trip, I was left with the least used colours. Similarly, coming to Taiwan forced me to depend on previously neglected skills, such as speaking Taiwanese.'
+                            }
                         }
                     ]
                 }
@@ -85,9 +73,8 @@ module.exports = {
                         {
                             anchor: 'house settled in sheets,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'The rest of the house is asleep, snug in their blankets. Of course, sheets are also pulled over bodies of the deceased.'
+                            }
                         },
                         'you swing the iron screen.'
                     ]
@@ -99,9 +86,8 @@ module.exports = {
                         {
                             anchor: 'alabaster balustrade,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Buildings in Taiwan made heavy use of iron grates and stone slabs, to a degree that I found unfamiliar. Even ordinary living quarters had the feel of a mausoleum.'
+                            }
                         }
                     ]
                 },
@@ -112,9 +98,8 @@ module.exports = {
                         {
                             anchor: 'crevice rays.',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'I dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother\'s house pitch black all through the night. Whenever I woke up to use the bathroom, I had to slowly tiptoe towards the door, guided only by a tiny sliver of moonlight peeking out from underneath.'
+                            }
                         }
                     ]
                 }
@@ -125,11 +110,10 @@ module.exports = {
                     verse: [
                         'Then down',
                         {
-                            anchor: 'stygian stairs,',
+                            anchor: 'Stygian stairs,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'In Greek mythology, the river Styx separates the realm of the living from the underworld. At night in my grandmother\'s house, the stairs leading down to the kitchen area felt similarly foreboding.'
+                            }
                         }
                     ]
                 },
@@ -140,17 +124,16 @@ module.exports = {
                         {
                             anchor: 'sickle-lit',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'The crescent moon has a shape similar to the blade of the scythe wielded by the Grim Reaper.'
+                            }
                         },
                         {
-                            anchor: 'oriental streets.',
+                            anchor: 'oriental',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
-                        }
+                                description: 'Recognition of the word "oriental" as a pejorative began in academic circles, not through common usage. I learned of its incorrectness at around the same time that the gay community was reclaiming the word "queer." The latter approach always made more sense to me.'
+                            }
+                        },
+                        'streets.'
                     ]
                 },
                 {
@@ -164,9 +147,8 @@ module.exports = {
                         {
                             anchor: 'rickshaw hiccoughs',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'A rickshaw is a pedal-driven passenger vehicle. They were no longer in service by the time I arrived in Taiwan, but their recent prevalence could be inferred from photographs and traffic signs. Here, the uneven surface of the road causes one to jounce abruptly.'
+                            }
                         },
                         'from grating cracks.'
                     ]

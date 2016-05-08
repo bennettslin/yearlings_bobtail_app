@@ -18,7 +18,7 @@ module.exports = {
                         {
                             anchor: 'valley somersaults',
                             annotation: {
-                                description: 'I grew up in the San Fernando Valley of Southern California, where wide boulevards stretch endlessly along a grid plan, and jagged mountains block the horizon on all sides. In the mirages caused by the year-round sweltering heat, the reflections of these mountains naturally point inwards.'
+                                description: 'I grew up in the San Fernando Valley of Los Angeles in Southern California, where wide boulevards stretch endlessly along a grid plan, and jagged mountains block the horizon on all sides. In the mirages caused by the year-round sweltering heat, the reflections of these mountains naturally point inwards.'
                             }
                         },
                         'in tarred pavement mirage.',
