@@ -2,7 +2,7 @@ module.exports = {
     title: 'Cremated',
     overviews: {
         narrative: 'narrative 1',
-        music: 'personal 1'
+        music: 'Last doublespeaker rhyme, the one I was happiest with.'
     },
     lyrics: [
         [ // left

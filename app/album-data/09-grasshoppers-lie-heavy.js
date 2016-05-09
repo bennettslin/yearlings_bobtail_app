@@ -243,7 +243,7 @@ module.exports = {
                 },
                 {
                     time: 233,
-                    // TODO: The little death. (orgasm)
+                    // TODO: The little death. (orgasm) The Odin theme.
                     verse: 'and pulls you up inside her thighs.'
                 }
             ]

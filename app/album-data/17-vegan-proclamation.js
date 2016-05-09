@@ -122,6 +122,7 @@ module.exports = {
                 },
                 {
                     time: 161,
+                    // Nirvana Sappy
                     verse: 'I still love you for the airholes, dear; and now, good night."'
                 }
             ],
@@ -140,6 +141,7 @@ module.exports = {
                 },
                 {
                     time: 209,
+                    // Odin reference
                     verse: 'Our ashed heads bow from chivalry to our Siva\'s feet…'
                 }
             ]

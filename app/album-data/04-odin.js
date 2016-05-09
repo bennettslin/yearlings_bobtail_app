@@ -13,9 +13,8 @@ module.exports = {
                         {
                             anchor: 'Mr. Odin',
                             annotation: {
-                                description: 'While we were away, our house cat Odin died of old age in the care of a family friend. His name was probably Chinese, which my sister and I then anglicised.'
-                            },
-                            todo: true
+                                description: 'While we were away, our house cat Odin died of old age in the care of a family friend. It\'s likely that his name was originally something in Chinese, which my sister and I later anglicised to the name of the Norse god as we grew older.'
+                            }
                         },
                         'died today.'
                     ]
@@ -86,7 +85,7 @@ module.exports = {
                         {
                             anchor: 'alabaster balustrade,',
                             annotation: {
-                                description: 'Buildings in Taiwan made heavy use of iron grates and stone slabs, to a degree that I found unfamiliar. Even ordinary living quarters had the feel of a mausoleum.'
+                                description: 'Buildings in Taiwan made heavy use of iron grates and stone slabs, such that even ordinary living quarters had the feel of a mausoleum.'
                             }
                         }
                     ]
@@ -130,7 +129,7 @@ module.exports = {
                         {
                             anchor: 'oriental',
                             annotation: {
-                                description: 'Recognition of the word "oriental" as a pejorative began in academic circles, not through common usage. I learned of its incorrectness at around the same time that the gay community was reclaiming the word "queer." The latter approach always made more sense to me.'
+                                description: 'The word "oriental" was made into a pejorative by academic circles, not through common usage. I learned of its incorrectness at around the same time that the gay community was reclaiming the word "queer." The latter approach made more sense to me.'
                             }
                         },
                         'streets.'
@@ -182,7 +181,17 @@ module.exports = {
                 },
                 {
                     time: 67,
-                    verse: 'could some bottled butterfly dream your whims instead?'
+                    verse: [
+                        'could some',
+                        // TODO: insect in jar
+                        'bottled butterfly',
+                        {
+                            anchor: 'dream your whims instead?',
+                            annotation: {
+                                description: 'Zhuangzi was a 4th-century BCE Chinese philosopher. In his most famous musing, he recounts a dream in which he was a butterfly. When he awoke, however, he could not be sure whether he was then a man who dreamt he was a butterfly, or now a butterfly dreaming he is a man.'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 73,
@@ -190,7 +199,15 @@ module.exports = {
                 },
                 {
                     time: 79,
-                    verse: '—like Odin\'s ashes back from the Society,'
+                    verse: [
+                        '—like Odin\'s ashes back from',
+                        {
+                            anchor: 'the Society,',
+                            annotation: {
+                                description: 'The Humane Society provides pet cremation.'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 84,
@@ -208,25 +225,71 @@ module.exports = {
                 },
                 {
                     time: 95,
-                    verse: 'to be a guard\'s whistle at your feet,'
+                    verse: [
+                        'to be a',
+                        {
+                            anchor: 'guard\'s whistle',
+                            annotation: {
+                                description: 'That is, a steel whistle blown by a lifeguard to signal a warning, dropped by accident and now lost in the sand. Some dangers come with no warning, after all.'
+                            }
+                        },
+                        'at your feet,'
+                    ]
                 },
                 {
                     time: 99,
-                    verse: 'and brought your raft behind the yellow-taped grills'
+                    verse: [
+                        'and brought your raft behind the',
+                        {
+                            anchor: 'yellow-taped grills',
+                            annotation: {
+                                description: 'Barricade tape has been tied across the barbecue grills to prevent beachgoers from swimming in the shark-infested waters.'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 102,
-                    verse: 'to stand onshore keen to drift if shark swarms withheld.'
+                    verse: [
+                        // TODO: reference to stand unsure
+                        'to stand onshore',
+                        {
+                            anchor: 'keen to drift',
+                            annotation: {
+                                description: 'Of course, the ocean is just as perilous without the sharks.'
+                            },
+                            todo: true
+                        },
+                        'if shark swarms withheld.'
+                    ]
                 }
             ],
             [
                 {
                     time: 105,
-                    verse: 'Buoy bobs through sea serpents,'
+                    verse: [
+                        {
+                            anchor: 'Buoy bobs',
+                            annotation: {
+                                description: 'Of course, who\'s to say that this "boy" isn\'t also bobbing through life, oblivious to dangers lurking everywhere?'
+                            }
+                        },
+                        'through sea serpents,'
+                    ]
                 },
                 {
                     time: 107,
-                    verse: 'shivering for shivs unsheathed.'
+                    verse: [
+                        'shivering for',
+                        {
+                            anchor: 'shivs unsheathed.',
+                            // TODO: Reference to shanks in Kyon?
+                            annotation: {
+                                description: 'A shiv is a makeshift blade improvised by prison inmates.'
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 111,
@@ -234,7 +297,16 @@ module.exports = {
                 },
                 {
                     time: 114,
-                    verse: 'you frame silhouettes of torn rides'
+                    verse: [
+                        'you frame silhouettes of',
+                        {
+                            anchor: 'torn rides',
+                            annotation: {
+                                description: 'My aunt took us to an amusement park in Taiwan that seemed to be a throwback to '
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 117,
@@ -318,7 +390,7 @@ module.exports = {
                         {
                             anchor: 'By lot,',
                             annotation: {
-                                description: 'In the Book of Genesis, Lot\'s wife was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Lots are also objects drawn to decide an outcome by chance, and of course, my lot was to be born amongst the fallen.'
+                                description: 'In the Book of Genesis, Lot\'s wife was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Lots are also objects drawn to decide an outcome by chance, and of course, my lot was to be born a non-Jew.'
                             }
                         },
                         'once more trifling',
@@ -541,9 +613,14 @@ module.exports = {
                         {
                             anchor: 'undine',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: [
+                                    'The undine is a female nymph and the elemental of water. The term was coined by Paracelsus and is derived from the Latin word',
+                                    {
+                                        italic: 'unda,'
+                                    },
+                                    'meaning "wave."'
+                                ]
+                            }
                         }
                     ]
                 },
@@ -573,9 +650,8 @@ module.exports = {
                         {
                             anchor: 'seizures of spleen,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'In Hippocratic medicine, black bile is the humour secreted by the spleen to induce melancholy.'
+                            }
                         }
                     ]
                 },
@@ -586,9 +662,14 @@ module.exports = {
                         {
                             anchor: 'jarred sibyl',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: [
+                                    'The Cumaean Sibyl was a Greek prophetess who was granted immortality but not eternal youth. T.S. Eliot\'s poem',
+                                    {
+                                        italic: 'The Waste Land'
+                                    },
+                                    'begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants most. Her response is that she wants to die.'
+                                ]
+                            }
                         },
                         'had foreseen'
                     ]
@@ -600,15 +681,24 @@ module.exports = {
                         {
                             anchor: 'cellophane sylph,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                // TODO: reference to M
+                                description: 'In the works of Paracelsus, the sylph is the elemental of air and is typically described as a fairy with wings of gauze. Cellophane is a thin, transparent sheet that seals in heat.'
+                            }
                         }
                     ]
                 },
                 {
                     time: 102,
-                    verse: 'who cannot warm he who didn\'t impart warmth himself.'
+                    verse: [
+                        'who cannot warm he who',
+                        {
+                            anchor: 'didn\'t impart warmth himself.',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 }
             ],
             [
@@ -621,9 +711,8 @@ module.exports = {
                     verse: {
                         anchor: 'shivaree towards shivah seat',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'Shivaree is a French folk custom in which a crowd loudly performs a mock serenade outside the home of newlyweds. Sitting shivah is a week-long mourning period in Judaism after a close relative has passed away. Here again, I lament that not being born Jewish has lost my chance for a lifetime with Sasha.'
+                        }
                     }
                 },
                 {
@@ -633,9 +722,8 @@ module.exports = {
                         {
                             anchor: 'pulled your floater away',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Floaters are spots on the surface of the eye. When they are off-centre, it\'s impossible to look at them directly. Chasing after Sasha felt similarly futile, as if she was forever to remain a fixed distance away from me, regardless of my efforts.'
+                            }
                         },
                         'from your sight.'
                     ]
