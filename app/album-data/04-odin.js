@@ -250,18 +250,8 @@ module.exports = {
                 },
                 {
                     time: 102,
-                    verse: [
-                        // TODO: reference to stand unsure
-                        'to stand onshore',
-                        {
-                            anchor: 'keen to drift',
-                            annotation: {
-                                description: 'The ocean is as perilous without the sharks, of course. But even after you\'ve made peace with a double bind, there is no guarantee that the   .'
-                            },
-                            todo: true
-                        },
-                        'if shark swarms withheld.'
-                    ]
+                    // TODO: reference to stand unsure
+                    verse: 'to stand onshore keen to drift if shark swarms withheld.'
                 }
             ],
             [
@@ -389,7 +379,7 @@ module.exports = {
                         {
                             anchor: 'By lot,',
                             annotation: {
-                                description: 'In the Book of Genesis, Lot\'s wife was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Also, the "awake" voice in the doublespeaker set reflects my thoughts as I lie in bed, brooding over my "lot" to be born a non-Jew.'
+                                description: 'In the Book of Genesis, Lot\'s wife was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Also, lots are drawn by chance to decide an outcome, and it was my lot to be born a non-Jew.'
                             }
                         },
                         'once more trifling',
@@ -407,8 +397,9 @@ module.exports = {
                         {
                             anchor: 'Indifferent galaxies',
                             annotation: {
-                                description: 'Without the spiritual community that a lifetime with Sasha could offer, I was left with my conception of the universe as just a vast stretch of empty space.'
-                            }
+                                description: 'Without the spiritual community that a lifetime with Sasha could offer, I was left with my conception of the universe as just a vast stretch of empty space. The "awake" voice in the doublespeaker set reflects my thoughts as I lie in bed, brooding over my missed fortune.'
+                            },
+                            todo: true
                         },
                         'instead stay unmoved;'
                     ]
