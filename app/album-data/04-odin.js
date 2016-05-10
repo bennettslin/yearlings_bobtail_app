@@ -13,7 +13,7 @@ module.exports = {
                         {
                             anchor: 'Mr. Odin',
                             annotation: {
-                                description: 'While we were away, our house cat Odin died of old age in the care of a family friend. It\'s likely that his name was originally something in Chinese, which my sister and I later anglicised to the name of the Norse god as we grew older.'
+                                description: 'While we were away, our house cat Odin died of old age in the care of a family friend. It\'s likely that his name was originally something in Chinese, which my sister and I later anglicised to the name of the Norse god once we were older.'
                             }
                         },
                         'died today.'
@@ -256,7 +256,7 @@ module.exports = {
                         {
                             anchor: 'keen to drift',
                             annotation: {
-                                description: 'Of course, the ocean is just as perilous without the sharks.'
+                                description: 'The ocean is as perilous without the sharks, of course. But even after you\'ve made peace with a double bind, there is no guarantee that the   .'
                             },
                             todo: true
                         },
@@ -271,7 +271,7 @@ module.exports = {
                         {
                             anchor: 'Buoy bobs',
                             annotation: {
-                                description: 'Of course, who\'s to say that this "boy" isn\'t also bobbing through life, oblivious to dangers lurking everywhere?'
+                                description: 'But who\'s to say that this "boy" isn\'t also bobbing through life, oblivious to dangers lurking everywhere?'
                             }
                         },
                         'through sea serpents,'
@@ -285,9 +285,8 @@ module.exports = {
                             anchor: 'shivs unsheathed.',
                             // TODO: Reference to shanks in Kyon?
                             annotation: {
-                                description: 'A shiv is a makeshift blade improvised by prison inmates.'
-                            },
-                            todo: true
+                                description: 'A shiv is a makeshift blade improvised by prison inmates. To wander a prison yard is to be in constant danger of being shivved.'
+                            }
                         }
                     ]
                 },
@@ -390,14 +389,14 @@ module.exports = {
                         {
                             anchor: 'By lot,',
                             annotation: {
-                                description: 'In the Book of Genesis, Lot\'s wife was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Lots are also objects drawn to decide an outcome by chance, and of course, my lot was to be born a non-Jew.'
+                                description: 'In the Book of Genesis, Lot\'s wife was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Also, the "awake" voice in the doublespeaker set reflects my thoughts as I lie in bed, brooding over my "lot" to be born a non-Jew.'
                             }
                         },
                         'once more trifling',
                         {
                             anchor: 'tref must reseed the earth.',
                             annotation: {
-                                description: 'Tref is the Yiddish word for food that is not kosher. Since it cannot be eaten, its only purpose is to break down into compost. Similarly, as I was not a member of the tribe, I could only ever be subsumed into the endless churn of the surrounding masses.'
+                                description: 'Tref is the Yiddish word for food that is not kosher. Since it cannot be eaten, its only purpose is to break down into compost. Similarly, as I was not a Jew, I could only ever be subsumed into the endless churn of surrounding peoples.'
                             }
                         }
                     ]
@@ -408,7 +407,7 @@ module.exports = {
                         {
                             anchor: 'Indifferent galaxies',
                             annotation: {
-                                description: 'I was hardly comforted by my own conception of the universe as a vast stretch of empty space. I would have happily exchanged it for something more spiritually uplifting.'
+                                description: 'Without the spiritual community that a lifetime with Sasha could offer, I was left with my conception of the universe as just a vast stretch of empty space.'
                             }
                         },
                         'instead stay unmoved;'
@@ -420,17 +419,7 @@ module.exports = {
                 },
                 {
                     time: 20,
-                    verse: [
-                        'In',
-                        {
-                            anchor: 'safest sleep,',
-                            annotation: {
-                                description: ''
-                            },
-                            todo: true
-                        },
-                        'you ruminate on these riddles…'
-                    ]
+                    verse: 'In safest sleep, you ruminate on these riddles…'
                 }
             ],
             [
@@ -441,7 +430,7 @@ module.exports = {
                         {
                             anchor: 'sweet dream\'s ichors',
                             annotation: {
-                                description: 'In Greek mythology, ichor is the golden blood of the gods. I had once been given general anaesthesia '
+                                description: '. In Greek mythology, ichor is the golden blood of the gods. I had once been given general anaesthesia '
                             },
                             todo: 'mention that I had been reading Romantic poets'
                         },
@@ -667,7 +656,7 @@ module.exports = {
                                     {
                                         italic: 'The Waste Land'
                                     },
-                                    'begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants most. Her response is that she wants to die.'
+                                    'begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants most. She replies that she wants most to die.'
                                 ]
                             }
                         },
@@ -681,7 +670,6 @@ module.exports = {
                         {
                             anchor: 'cellophane sylph,',
                             annotation: {
-                                // TODO: reference to M
                                 description: 'In the works of Paracelsus, the sylph is the elemental of air and is typically described as a fairy with wings of gauze. Cellophane is a thin, transparent sheet that seals in heat.'
                             }
                         }
@@ -689,16 +677,8 @@ module.exports = {
                 },
                 {
                     time: 102,
-                    verse: [
-                        'who cannot warm he who',
-                        {
-                            anchor: 'didn\'t impart warmth himself.',
-                            annotation: {
-                                description: ''
-                            },
-                            todo: true
-                        }
-                    ]
+                    // TODO: reference to M
+                    verse: 'who cannot warm he who didn\'t impart warmth himself.'
                 }
             ],
             [
@@ -722,7 +702,7 @@ module.exports = {
                         {
                             anchor: 'pulled your floater away',
                             annotation: {
-                                description: 'Floaters are spots on the surface of the eye. When they are off-centre, it\'s impossible to look at them directly. Chasing after Sasha felt similarly futile, as if she was forever to remain a fixed distance away from me, regardless of my efforts.'
+                                description: 'An off-centre floater on the surface of one\'s eye is impossible to look at directly. Chasing after Sasha felt similarly frustrating and futile, as if she was always to remain a fixed distance away from me, regardless of all my frantic efforts.'
                             }
                         },
                         'from your sight.'
@@ -804,7 +784,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 23,
+            workedHours: 30,
             neededHours: 80,
             subtasks: [
                 {

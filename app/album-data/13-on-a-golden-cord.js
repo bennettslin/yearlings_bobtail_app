@@ -2,7 +2,7 @@ module.exports = {
     title: 'On a Golden Cord',
     overviews: {
         narrative: 'narrative 1',
-        music: 'I was looking for the auditory equivalent of a split screen in cinema.'
+        music: 'I was looking for the auditory equivalent of a split screen in cinema. I named doublespeaker rhyme for its pseudo-Orwellian undertone, and this song captures most .'
     },
     lyrics: [
         [ // left
