@@ -28,7 +28,7 @@ module.exports = {
                         {
                             anchor: 'hiding place of retreat',
                             annotation: {
-                                description: 'The "dreaming" voice in the doublespeaker set confuses the familiar setting of Los Angeles with the foreign sights of Taiwan. Covered in cobwebs, I begin with no recollection of prior events. I may have just come out from the crawl space beneath my bed to which I regularly snuck away as a child. But it\'s possible that I emerged from somewhere else…'
+                                description: 'The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. I begin the dream abruptly, having just come out from the crawl space beneath my bed to which I regularly snuck away as a child.'
                             },
                         },
                         'emerged.'
@@ -275,7 +275,7 @@ module.exports = {
                             anchor: 'shivs unsheathed.',
                             // TODO: Reference to shanks in Kyon?
                             annotation: {
-                                description: 'A shiv is a makeshift blade improvised by prison inmates. To wander a prison yard is to be in constant danger of being shivved.'
+                                description: 'A shiv is a makeshift blade improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved.'
                             }
                         }
                     ]
@@ -291,7 +291,7 @@ module.exports = {
                         {
                             anchor: 'torn rides',
                             annotation: {
-                                description: 'My aunt took us to an amusement park in Taiwan that seemed to be a throwback to '
+                                description: 'Roller coasters, like ocean waves, are built up and torn down against the horizon with regularity.'
                             },
                             todo: true
                         }
@@ -397,9 +397,8 @@ module.exports = {
                         {
                             anchor: 'Indifferent galaxies',
                             annotation: {
-                                description: 'Without the spiritual community that a lifetime with Sasha could offer, I was left with my conception of the universe as just a vast stretch of empty space. The "awake" voice in the doublespeaker set reflects my thoughts as I lie in bed, brooding over my missed fortune.'
-                            },
-                            todo: true
+                                description: 'Without the spiritual community that a lifetime with Sasha could offer, I was left with my conception of the universe as just light years of empty space. And while the possibilities suggested by this vast expanse were countless, being with Sasha was not one of them.'
+                            }
                         },
                         'instead stay unmoved;'
                     ]
@@ -410,7 +409,15 @@ module.exports = {
                 },
                 {
                     time: 20,
-                    verse: 'In safest sleep, you ruminate on these riddles…'
+                    verse: [
+                        'In safest sleep, you',
+                        {
+                            anchor: 'ruminate on these riddles…',
+                            annotation: {
+                                description: 'The "awake" voice in the doublespeaker set echoes my thoughts as I lie in bed, brooding over my ruined chance with Sasha, disheartened by the endless array of paths left to choose, and fearful for the certainty of forever, whether forever is to be spent in life or death.'
+                            }
+                        }
+                    ]
                 }
             ],
             [
@@ -693,7 +700,7 @@ module.exports = {
                         {
                             anchor: 'pulled your floater away',
                             annotation: {
-                                description: 'An off-centre floater on the surface of one\'s eye is impossible to look at directly. Chasing after Sasha felt similarly frustrating and futile, as if she was always to remain a fixed distance away from me, regardless of all my frantic efforts.'
+                                description: 'An off-centre floater on the surface of one\'s eye is impossible to look at directly, and any attempt will only end in frustrated tears. Pining after Sasha felt similarly futile, as she would always remain a fixed distance from me, regardless of all my frantic efforts.'
                             }
                         },
                         'from your sight.'
@@ -775,7 +782,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 30,
+            workedHours: 33,
             neededHours: 80,
             subtasks: [
                 {
