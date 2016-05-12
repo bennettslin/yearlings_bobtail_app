@@ -476,9 +476,8 @@ module.exports = {
                         {
                             anchor: 'sweet dream\'s ichors',
                             annotation: {
-                                description: '. In Greek mythology, ichor is the golden blood of the gods. I had once been given general anaesthesia '
-                            },
-                            todo: 'mention that I had been reading Romantic poets'
+                                description: 'In Greek mythology, ichor is the golden blood of the gods. Going to sleep is like a nightly transfusion, insofar as the process of swapping out old blood for new always feels irksome, even when its restoring effect afterwards is guaranteed.'
+                            }
                         },
                         'seem!'
                     ]
@@ -490,7 +489,7 @@ module.exports = {
                         {
                             anchor: 'salamander',
                             annotation: {
-                                description: 'Since writing lyrics in doublespeaker rhyme proved to be daunting, I would amuse myself with fun little challenges, like mentioning the four elementals of Paracelsus. Advancing alchemy in the 16th century, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. The salamander is the elemental of fire.'
+                                description: 'Since writing lyrics in doublespeaker rhyme proved to be daunting, I would amuse myself with fun little challenges, like mentioning the four elementals of Paracelsus. Exploring alchemy in the 16th century, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. The salamander is the elemental of fire.'
                             }
                         },
                         'shall await'
