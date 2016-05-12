@@ -28,7 +28,7 @@ module.exports = {
                         {
                             anchor: 'hiding place of retreat',
                             annotation: {
-                                description: 'The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. I begin the dream abruptly, having just come out from the crawl space beneath my bed to which I regularly snuck away as a child.'
+                                description: 'The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. I begin the dream abruptly, having just come out from the crawl space beneath my bed to which I regularly snuck away as a child. Of course, I may have just come out from somewhere else…'
                             },
                         },
                         'emerged.'
@@ -250,7 +250,7 @@ module.exports = {
                 },
                 {
                     time: 102,
-                    // TODO: reference to stand unsure
+                    // TODO: reference to stand unsure, revisit whether to have "keen to drift"
                     verse: 'to stand onshore keen to drift if shark swarms withheld.'
                 }
             ],
@@ -309,6 +309,7 @@ module.exports = {
             [
                 {
                     time: 129,
+                    // TODO: Switch these voices?
                     verse: 'Should you hide, or could you fight,'
                 },
                 {
@@ -335,7 +336,18 @@ module.exports = {
             [
                 {
                     time: 147,
-                    verse: 'But for a foetus force-fed, born preaborted,'
+                    // TODO: Reference to Ash Wednesday.
+                    verse: [
+                        'But for a',
+                        {
+                            anchor: 'foetus force-fed,',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'born preaborted,'
+                    ]
                 },
                 {
                     time: 150,
@@ -345,7 +357,16 @@ module.exports = {
             [
                 {
                     time: 166,
-                    verse: 'Though, no slave parts these seas,'
+                    verse: [
+                        'Though,',
+                        {
+                            anchor: 'no slave parts these seas,',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 168,
@@ -353,15 +374,42 @@ module.exports = {
                 },
                 {
                     time: 173,
-                    verse: 'The sudsy ocean shapes its padded bed,'
+                    verse: [
+                        'The sudsy ocean shapes its',
+                        {
+                            anchor: 'padded bed,',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 177,
+                    // TODO: Grace Darling
                     verse: 'which hitherto snubbed and spurned a wreck,'
                 },
                 {
                     time: 180,
-                    verse: 'while mermaids smile past a guileless garden gnome…'
+                    verse: [
+                        'while',
+                        {
+                            anchor: 'mermaids smile',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'past a',
+                        {
+                            anchor: 'guileless garden gnome…',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 }
             ]
         ],
@@ -414,7 +462,7 @@ module.exports = {
                         {
                             anchor: 'ruminate on these riddles…',
                             annotation: {
-                                description: 'The "awake" voice in the doublespeaker set echoes my thoughts as I lie in bed, brooding over my ruined chance with Sasha, disheartened by the endless array of paths left to choose, and fearful for the certainty of forever, whether forever is to be spent in life or death.'
+                                description: 'The "awake" voice in the doublespeaker set echoes my thoughts as I lie in bed, brooding over my ruined chance with Sasha, disheartened by the endless array of paths left to choose, and fearful over the certainty of forever, whether forever is to be spent in life or in death.'
                             }
                         }
                     ]
@@ -716,7 +764,17 @@ module.exports = {
                 },
                 {
                     time: 120,
-                    verse: 'amidst dustbunnies frozen.'
+                    verse: [
+                        'amidst',
+                        {
+                            anchor: 'dustbunnies',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'frozen.'
+                    ]
                 }
             ],
             [
@@ -748,7 +806,17 @@ module.exports = {
             [
                 {
                     time: 147,
-                    verse: 'Yet your defeat of tortoise, forced lead unthwarted,'
+                    verse: [
+                        'Yet your',
+                        {
+                            anchor: 'defeat of tortoise,',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'forced lead unthwarted,'
+                    ]
                 },
                 {
                     time: 150,
@@ -762,6 +830,7 @@ module.exports = {
                 },
                 {
                     time: 168,
+                    // TODO: Reference to Nora Barnacle
                     verse: 'can reach urchins smashed from undertows.'
                 },
                 {
@@ -770,11 +839,38 @@ module.exports = {
                 },
                 {
                     time: 177,
-                    verse: 'his litter to dust and earth was swept,'
+                    verse: [
+                        {
+                            anchor: 'his litter',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'to',
+                        {
+                            anchor: 'dust and earth',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'was swept,'
+                    ]
                 },
                 {
                     time: 180,
-                    verse: 'while Thursday\'s child has a mile less far to go…'
+                    verse: [
+                        'while',
+                        {
+                            anchor: 'Thursday\'s child',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'has a mile less far to go…'
+                    ]
                 }
             ]
         ]
@@ -782,7 +878,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 33,
+            workedHours: 39,
             neededHours: 80,
             subtasks: [
                 {
