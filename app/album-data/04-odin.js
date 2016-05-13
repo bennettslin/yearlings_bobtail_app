@@ -291,9 +291,8 @@ module.exports = {
                         {
                             anchor: 'torn rides',
                             annotation: {
-                                description: 'Roller coasters, like ocean waves, are built up and torn down against the horizon with regularity.'
-                            },
-                            todo: true
+                                description: 'Roller coasters are raised up and torn down just like ocean waves against the horizon, even if the process takes years, not seconds.'
+                            }
                         }
                     ]
                 },
@@ -810,9 +809,8 @@ module.exports = {
                         {
                             anchor: 'defeat of tortoise,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'While the tortoise defeats the hare in Aesop\'s fable, the decisive advantage still lies with the hare, who only needs to stay awake next time to clinch the victory. Similarly, while tortoises are known to live well over a century, we still beat them soundly in the race for longevity. All that\'s needed is to awaken to the call of faith, and not to lie there like a "frozen dustbunny."'
+                            }
                         },
                         'forced lead unthwarted,'
                     ]
@@ -842,15 +840,14 @@ module.exports = {
                         {
                             anchor: 'his litter',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Referring to the disposal of Odin\'s cat litter, of course, but also to his lack of progeny, given that he was neutered. At the time, my own odds of leaving behind a litter seemed better by just a sliver.'
+                            }
                         },
                         'to',
                         {
                             anchor: 'dust and earth',
                             annotation: {
-                                description: ''
+                                description: 'As the "awake" voice descends into sleep, '
                             },
                             todo: true
                         },
@@ -864,9 +861,8 @@ module.exports = {
                         {
                             anchor: 'Thursday\'s child',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: '"Monday\'s Child" is a nursery rhyme that predicts a child\'s fortune based on day of birth. Wednesday is literally "Odin\'s day" in Old English, and I was born on a Thursday. The rhyme promises that "Thursday\'s child has far to go," and indeed, the distance I had left to cover felt dispiritingly vast. Still, I was one day closer than when the day began…'
+                            }
                         },
                         'has a mile less far to go…'
                     ]

@@ -69,6 +69,16 @@ module.exports = {
             taskName: 'setup unit and automation tests',
             workedHours: 0,
             neededHours: 15
-        }
+        },
+        {
+            taskName: 'count todo annotations',
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: 'non breaking space in lyrics only',
+            workedHours: 0,
+            neededHours: 1
+        },
     ]
 };
