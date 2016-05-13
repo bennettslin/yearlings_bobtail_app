@@ -291,7 +291,7 @@ module.exports = {
                         {
                             anchor: 'torn rides',
                             annotation: {
-                                description: 'Roller coasters are raised up and torn down just like ocean waves against the horizon, even if the process takes years, not seconds.'
+                                description: 'Roller coasters are raised up and torn down just like ocean waves along the horizon, even if the process takes years, not seconds.'
                             }
                         }
                     ]
