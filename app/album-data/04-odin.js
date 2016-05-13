@@ -361,9 +361,8 @@ module.exports = {
                         {
                             anchor: 'no slave parts these seas,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'In the Book of Exodus, Moses leads the Israelites out of bondage in Egypt. Under God\'s command, Moses parts the Red Sea, allowing them to safely cross. God then returns the water, drowning the Egyptian army that is in pursuit behind them.'
+                            }
                         }
                     ]
                 },
@@ -396,17 +395,15 @@ module.exports = {
                         {
                             anchor: 'mermaids smile',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'T.S. Eliot\'s "The Love Song of J. Alfred Prufrock" explores themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they will not be singing for him.'
+                            }
                         },
                         'past a',
                         {
                             anchor: 'guileless garden gnome…',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'The gnome, a small humanoid who lives underground, is the elemental of earth in Paracelsus\'s writings. Garden gnomes are popular lawn ornaments that stand motionless while staring off into the distance, oftentimes with a trusting grin.'
+                            }
                         }
                     ]
                 }
@@ -714,7 +711,7 @@ module.exports = {
                         {
                             anchor: 'cellophane sylph,',
                             annotation: {
-                                description: 'In the works of Paracelsus, the sylph is the elemental of air and is typically described as a fairy with wings of gauze. Cellophane is a thin, transparent sheet that seals in heat.'
+                                description: 'In the works of Paracelsus, the sylph is the elemental of air, and is typically described as a fairy with wings of gauze. Cellophane is a thin, transparent sheet that seals in heat.'
                             }
                         }
                     ]
@@ -873,7 +870,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 39,
+            workedHours: 42,
             neededHours: 80,
             subtasks: [
                 {
