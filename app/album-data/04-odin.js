@@ -291,7 +291,7 @@ module.exports = {
                         {
                             anchor: 'torn rides',
                             annotation: {
-                                description: 'Roller coasters are raised up and torn down just like ocean waves along the horizon, even if the process takes years, not seconds.'
+                                description: 'Roller coasters are raised up and torn down like ocean waves along the horizon, even if the process takes years, not seconds.'
                             }
                         }
                     ]
@@ -375,7 +375,7 @@ module.exports = {
                         {
                             anchor: 'padded bed,',
                             annotation: {
-                                description: 'As I make peace with the inevitable, the ocean begins to feel more calm and inviting. But my dream is also ending, and I will soon awake to the comfort of a bed.'
+                                description: 'As I make peace with the inevitable, the ocean begins to feel more calm and inviting. But my dream is also ending, and I will soon awake in the comfort of a bed.'
                             }
                         }
                     ]
@@ -392,14 +392,14 @@ module.exports = {
                         {
                             anchor: 'mermaids smile',
                             annotation: {
-                                description: 'T.S. Eliot\'s "The Love Song of J. Alfred Prufrock" explores themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they will not be singing for him.'
+                                description: 'T.S. Eliot\'s "The Love Song of J. Alfred Prufrock" examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they do not sing for him. Similarly, while my resignation has turned the sea serpents into smiling mermaids, they do not smile for me.'
                             }
                         },
                         'past a',
                         {
                             anchor: 'guileless garden gnome…',
                             annotation: {
-                                description: 'The gnome, a small humanoid who lives underground, is the elemental of earth in Paracelsus\'s writings. Garden gnomes are popular lawn ornaments that stand motionless while staring off into the distance, oftentimes with a trusting grin.'
+                                description: 'The gnome, a small humanoid who lives underground, is the elemental of earth in Paracelsus\'s writings. Garden gnomes are lawn ornaments, some of which stand motionless before the yawning infinite, like me, staring blankly with a nervous grin.'
                             }
                         }
                     ]
@@ -482,7 +482,7 @@ module.exports = {
                         {
                             anchor: 'salamander',
                             annotation: {
-                                description: 'Since writing lyrics in doublespeaker rhyme proved to be daunting, I would amuse myself with fun little challenges, like mentioning the four elementals of Paracelsus. Exploring alchemy in the 16th century, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. The salamander is the elemental of fire.'
+                                description: 'Exploring alchemy in the 16th century, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. Since writing lyrics in doublespeaker rhyme proved to be quite daunting, I would keep myself going with fun little challenges, one of which was to mention each of the four elementals of Paracelsus. The salamander is the elemental of fire.'
                             }
                         },
                         'shall await'
@@ -530,13 +530,13 @@ module.exports = {
                 {
                     time: 44,
                     verse: [
+                        // TODO: Descending stairs.
                         'As you plummet down from',
                         {
                             anchor: 'couplets past;',
                             annotation: {
-                                description: 'A couplet is a pair of lines in a poem.'
-                            },
-                            todo: true
+                                description: 'A couplet is a pair of lines in a poem that typically rhyme and share the same metre. Sasha and I were never a couple, of course. But perhaps we were once a couplet?'
+                            }
                         }
                     ]
                 },
@@ -578,6 +578,7 @@ module.exports = {
                     verse: [
                         'And if',
                         {
+                            // Paris, Eris, apple of dischord, adam's apple, pandora's box, hope left, hopeless
                             anchor: 'summer trips to Paris',
                             annotation: {
                                 description: ''
@@ -662,7 +663,7 @@ module.exports = {
                         {
                             anchor: 'hopeless rests.',
                             annotation: {
-                                description: ''
+                                description: 'Traditionally, a hope chest contains the various items stored by young women in preparation for married life. '
                             },
                             todo: true
                         }
