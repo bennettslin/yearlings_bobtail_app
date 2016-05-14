@@ -28,7 +28,7 @@ module.exports = {
                         {
                             anchor: 'hiding place of retreat',
                             annotation: {
-                                description: 'The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. I begin the dream abruptly, having just come out from the crawl space beneath my bed to which I regularly snuck away as a child. Of course, I may have just come out from somewhere else…'
+                                description: 'The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins abruptly, as I come out from the crawl space beneath my bed to which I regularly snuck away as a child. Of course, I may have just come out from somewhere else…'
                             },
                         },
                         'emerged.'
@@ -230,7 +230,7 @@ module.exports = {
                         {
                             anchor: 'guard\'s whistle',
                             annotation: {
-                                description: 'That is, a steel whistle blown by a lifeguard to signal a warning, dropped by accident and now lost in the sand. Some dangers come with no warning, after all.'
+                                description: 'That is, a steel whistle blown by a lifeguard as a warning, dropped by accident and now lost in the sand. Some dangers come with no warning, after all.'
                             }
                         },
                         'at your feet,'
@@ -308,28 +308,27 @@ module.exports = {
             [
                 {
                     time: 129,
-                    // TODO: Switch these voices?
-                    verse: 'Should you hide, or could you fight,'
+                    verse: '…'
                 },
                 {
                     time: 132,
-                    verse: 'when your day to die has come?'
+                    verse: '…'
                 },
                 {
                     time: 135,
-                    verse: '…'
+                    verse: 'Can a holed up hostage'
                 },
                 {
                     time: 137,
-                    verse: '…'
+                    verse: 'pray for soulless solace and just play dumb?'
                 },
                 {
                     time: 141,
-                    verse: 'But in time, wouldn\'t you find'
+                    verse: '…'
                 },
                 {
                     time: 144,
-                    verse: 'life is simply much too long?'
+                    verse: '…'
                 }
             ],
             [
@@ -341,9 +340,8 @@ module.exports = {
                         {
                             anchor: 'foetus force-fed,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'I found it weird that one has no say in being brought into this world, given how quickly the exit will come, and how necessarily painful it must be.'
+                            }
                         },
                         'born preaborted,'
                     ]
@@ -357,7 +355,7 @@ module.exports = {
                 {
                     time: 166,
                     verse: [
-                        'Though,',
+                        'Though',
                         {
                             anchor: 'no slave parts these seas,',
                             annotation: {
@@ -368,7 +366,7 @@ module.exports = {
                 },
                 {
                     time: 168,
-                    verse: 'then returns them as a buffer zone.'
+                    verse: 'then returns them as a buffer zone…'
                 },
                 {
                     time: 173,
@@ -377,9 +375,8 @@ module.exports = {
                         {
                             anchor: 'padded bed,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'As I make peace with the inevitable, the ocean begins to feel more calm and inviting. But my dream is also ending, and I will soon awake to the comfort of a bed.'
+                            }
                         }
                     ]
                 },
@@ -775,27 +772,28 @@ module.exports = {
             [
                 {
                     time: 129,
-                    verse: '…'
+                    // TODO: Switch these voices?
+                    verse: 'Should you hide, or could you fight,'
                 },
                 {
                     time: 132,
-                    verse: '…'
+                    verse: 'when your day to die has come?'
                 },
                 {
                     time: 135,
-                    verse: 'Can a holed up hostage'
+                    verse: '…'
                 },
                 {
                     time: 137,
-                    verse: 'pray for soulless solace and just play dumb?'
+                    verse: '…'
                 },
                 {
                     time: 141,
-                    verse: '…'
+                    verse: 'But in time, wouldn\'t you find'
                 },
                 {
                     time: 144,
-                    verse: '…'
+                    verse: 'life is simply much too long?'
                 }
             ],
             [
@@ -806,7 +804,7 @@ module.exports = {
                         {
                             anchor: 'defeat of tortoise,',
                             annotation: {
-                                description: 'While the tortoise defeats the hare in Aesop\'s fable, the decisive advantage still lies with the hare, who only needs to stay awake next time to clinch the victory. Similarly, while tortoises are known to live well over a century, we still beat them soundly in the race for longevity. All that\'s needed is to awaken to the call of faith, and not to lie there like a "frozen dustbunny."'
+                                description: 'While the tortoise defeats the hare in Aesop\'s fable, the decisive advantage still lies with the hare, who only needs to stay awake next time to clinch the victory. Similarly, while tortoises are known to live well over a century, any one of us can beat them soundly in the race for longevity. All one needs to do is awaken to the call of faith, and not lie there like a "frozen dustbunny."'
                             }
                         },
                         'forced lead unthwarted,'
@@ -825,7 +823,7 @@ module.exports = {
                 {
                     time: 168,
                     // TODO: Reference to Nora Barnacle
-                    verse: 'can reach urchins smashed from undertows.'
+                    verse: 'can reach urchins smashed from undertows…'
                 },
                 {
                     time: 173,
@@ -844,9 +842,8 @@ module.exports = {
                         {
                             anchor: 'dust and earth',
                             annotation: {
-                                description: 'As the "awake" voice descends into sleep, '
-                            },
-                            todo: true
+                                description: 'As I fall asleep, my thoughts turn to the ground from which I will soon emerge in my dream.'
+                            }
                         },
                         'was swept,'
                     ]
