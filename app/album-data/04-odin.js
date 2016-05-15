@@ -605,7 +605,7 @@ module.exports = {
                         {
                             anchor: 'stored in this neck?',
                             annotation: {
-                                description: 'The Adam\'s apple derives from a mistranslation of the Hebrew phrase "man\'s swelling." An apocryphal tale thus arose that when Adam ate the forbidden fruit to gain knowledge of good and evil, a piece had lodged in his throat, to be worn as a permanent mark by his descendants as a reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha had left me with a permanent lump in my throat.'
+                                description: 'Due to a mistranslation, "man\'s swelling" in Hebrew entered the English lexicon as "Adam\'s apple." An apocryphal tale thus took shape that when Adam ate the forbidden fruit to gain knowledge of good and evil, a piece had lodged in his throat, which now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me with a permanent lump in my throat.'
                             }
                         }
                     ]
@@ -617,9 +617,8 @@ module.exports = {
                         {
                             anchor: 'cored gifts fall to discord',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Eris was the Greek goddess of discord. As revenge for being denied invitation to a feast, she tossed a golden apple labelled "for the fairest" in their midst. When Paris was asked to judge its rightful owner, he chose Aphrodite, who rewarded him with the hand of Helen.'
+                            }
                         },
                         'till lives acquiesce,'
                     ]
