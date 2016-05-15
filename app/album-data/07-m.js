@@ -211,9 +211,9 @@ module.exports = {
                         {
                             anchor: 'no-hope chest.',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: '',
+                                todo: true
+                            }
                         }
                     ]
                 },

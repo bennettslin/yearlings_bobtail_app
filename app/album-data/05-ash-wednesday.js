@@ -401,9 +401,9 @@ module.exports = {
                         {
                             anchor: 'where\'d you attend Mass?"',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: '',
+                                todo: true
+                            }
                         }
                     ]
                 }

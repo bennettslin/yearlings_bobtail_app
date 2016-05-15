@@ -25,8 +25,12 @@ class StatsSection extends React.Component {
     render() {
         const lyricsWordCount = StatsHelper.getTotalWords(this.props.lyrics),
             lyricsCountRow = this._getCountRow('lyrics word count', lyricsWordCount),
+            todoCount = StatsHelper.getTodoCount(this.props.annotations),
             annotationsCount = StatsHelper.getCount(this.props.annotations),
-            annotationsCountRow = this._getCountRow('annotations count', annotationsCount),
+            annotationsCountText = todoCount ?
+                (annotationsCount - todoCount) + '/' + annotationsCount :
+                annotationsCount,
+            annotationsCountRow = this._getCountRow('annotations count', annotationsCountText),
             annotationsWordCount = StatsHelper.getSumOfTotalWords(this.props.annotations),
             countPerAnnotation = annotationsCount ? Math.ceil(annotationsWordCount / annotationsCount) : '--',
             countPerAnnotationRow = this._getCountRow('words per annotation', countPerAnnotation);

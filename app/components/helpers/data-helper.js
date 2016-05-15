@@ -48,6 +48,9 @@ module.exports = {
         // Add anchor text to annotation object.
         lyricElement.annotation.anchor = lyricElement.anchor;
 
+        // TODO: For dev purposes.
+        lyricElement.todo = lyricElement.annotation.todo;
+
         // Add annotation object to annotations array.
         annotations.push(lyricElement.annotation);
 

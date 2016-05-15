@@ -4,6 +4,14 @@ module.exports = {
         return Object.keys(richTextObject).length;
     },
 
+    getTodoCount: function(richTextObject = {}) {
+        const objectKeys = Object.keys(richTextObject);
+
+        return objectKeys.reduce((todoCount, objectKey) => {
+            return todoCount + !!richTextObject[objectKey].todo;
+        }, 0);
+    },
+
     getSumOfTotalWords: function(richTextObject = {}) {
         const objectKeys = Object.keys(richTextObject);
 
@@ -11,7 +19,6 @@ module.exports = {
             const richText = richTextObject[objectKey].description;
 
             return wordCount + this.getTotalWords(richText);
-
         }, 0);
     },
 

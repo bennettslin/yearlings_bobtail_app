@@ -163,9 +163,9 @@ module.exports = {
                         {
                             anchor: 'for a heathen…',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: '',
+                                todo: true
+                            }
                         }
                     ]
                 }
@@ -359,7 +359,7 @@ module.exports = {
                         {
                             anchor: 'no slave parts these seas,',
                             annotation: {
-                                description: 'In the Book of Exodus, Moses leads the Israelites out of bondage in Egypt. Under God\'s command, Moses parts the Red Sea, allowing them to safely cross. God then returns the water, drowning the Egyptian army that is in pursuit behind them.'
+                                description: 'In the Book of Exodus, Moses leads the Israelites out of bondage in Egypt. Under God\'s command, Moses parts the Red Sea, allowing them to safely cross. God then returns the water, drowning the Egyptian army in pursuit behind them.'
                             }
                         }
                     ]
@@ -565,9 +565,9 @@ module.exports = {
                         {
                             anchor: 'slave for the seasons?',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: '',
+                                todo: true
+                            }
                         }
                     ]
                 }
@@ -758,9 +758,9 @@ module.exports = {
                         {
                             anchor: 'dustbunnies',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: '',
+                                todo: true
+                            }
                         },
                         'frozen.'
                     ]
@@ -864,8 +864,8 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 48,
-            neededHours: 80,
+            workedHours: 55,
+            neededHours: 55,
             subtasks: [
                 {
                     taskName: 'references',
