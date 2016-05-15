@@ -482,7 +482,7 @@ module.exports = {
                         {
                             anchor: 'salamander',
                             annotation: {
-                                description: 'Exploring alchemy in the 16th century, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. Since writing lyrics in doublespeaker rhyme proved to be quite daunting, I would keep myself going with fun little challenges, one of which was to mention each of the four elementals of Paracelsus. The salamander is the elemental of fire.'
+                                description: 'Exploring alchemy in the 16th century, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. Since writing lyrics in doublespeaker rhyme was often daunting, I would keep myself going with fun little challenges. One such challenge was to mention each of the four elementals of Paracelsus. The salamander is the elemental of fire.'
                             }
                         },
                         'shall await'
@@ -535,7 +535,7 @@ module.exports = {
                         {
                             anchor: 'couplets past;',
                             annotation: {
-                                description: 'A couplet is a pair of lines in a poem that typically rhyme and share the same metre. Sasha and I were never a couple, of course. But perhaps we were once a couplet?'
+                                description: 'A couplet is a pair of lines in a poem that typically rhyme and share the same metre. Sasha and I were never a couple, of course. But perhaps we were a couplet?'
                             }
                         }
                     ]
@@ -581,9 +581,8 @@ module.exports = {
                             // Paris, Eris, apple of dischord, adam's apple, pandora's box, hope left, hopeless
                             anchor: 'summer trips to Paris',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'In middle school, students who completed two years of French class were eligible to attend a summer program in France. This excited Sasha, and so it excited me as well. In Greek mythology, Paris was also the prince of Troy, whose elopement with Helen of Sparta caused the Trojan War.'
+                            }
                         }
                     ]
                 },
@@ -598,9 +597,8 @@ module.exports = {
                         {
                             anchor: 'rondel of her eye',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'A rondel is a verse form that originated in French poetry. It can also refer to anything round. The "apple of one\'s eye" is a misreading of Biblical Hebrew. The original phrase more accurately translates to "round thing of one\'s eye."'
+                            }
                         },
                         'be',
                         {
@@ -633,9 +631,8 @@ module.exports = {
                         {
                             anchor: 'opened latches',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'In Greek mythology, Pandora was the first human woman. Upon opening a box given to her by Zeus as a wedding gift, she unwittingly released all the evils that plague humanity.'
+                            }
                         },
                         'that come undone by',
                         {
@@ -661,11 +658,11 @@ module.exports = {
                     verse: [
                         'a casket tilted back where its',
                         {
+                            // TODO: link hope chest.
                             anchor: 'hopeless rests.',
                             annotation: {
-                                description: 'Traditionally, a hope chest contains the various items stored by young women in preparation for married life. '
-                            },
-                            todo: true
+                                description: 'Traditionally, a hope chest contained the various linens stored by a young woman in preparation for married life. Hope was also all that remained in the box opened by Pandora. By contrast, upon revelation of the knowledge that I could never be with Sasha, all I had left was my own hopeless state.'
+                            }
                         }
                     ]
                 }

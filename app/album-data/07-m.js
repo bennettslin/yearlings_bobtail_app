@@ -206,7 +206,16 @@ module.exports = {
                      * Hope chest.
                      */
                     time: 140,
-                    verse: 'is choked down my no-hope chest.'
+                    verse: [
+                        'is choked down my',
+                        {
+                            anchor: 'no-hope chest.',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     /**
