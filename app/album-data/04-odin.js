@@ -204,7 +204,7 @@ module.exports = {
                         {
                             anchor: 'the Society,',
                             annotation: {
-                                description: 'The Humane Society provides pet cremation.'
+                                description: 'The Humane Society offers pet cremation services.'
                             }
                         }
                     ]
@@ -578,7 +578,6 @@ module.exports = {
                     verse: [
                         'And if',
                         {
-                            // Paris, Eris, apple of dischord, adam's apple, pandora's box, hope left, hopeless
                             anchor: 'summer trips to Paris',
                             annotation: {
                                 description: 'In middle school, students who completed two years of French class were eligible to attend a summer program in France. This excited Sasha, and so it excited me as well. In Greek mythology, Paris was also the prince of Troy, whose elopement with Helen of Sparta caused the Trojan War.'
@@ -597,16 +596,17 @@ module.exports = {
                         {
                             anchor: 'rondel of her eye',
                             annotation: {
-                                description: 'A rondel is a verse form that originated in French poetry. It can also refer to anything round. The "apple of one\'s eye" is a misreading of Biblical Hebrew. The original phrase more accurately translates to "round thing of one\'s eye."'
+                                description: 'A rondel is a verse form that originated in French poetry. It can also refer to anything round. The "apple of one\'s eye" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "ball of one\'s eye." My belief that I could be the object of Sasha\'s affection was based on a similar misreading.',
+                                // TODO: Confirm reference
+                                reference: 'https://www.jstor.org/stable/283546?seq=1#page_scan_tab_contents'
                             }
                         },
                         'be',
                         {
                             anchor: 'stored in this neck?',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'The Adam\'s apple derives from a mistranslation of the Hebrew phrase "man\'s swelling." An apocryphal tale thus arose that when Adam ate the forbidden fruit to gain knowledge of good and evil, a piece had lodged in his throat, to be worn as a permanent mark by his descendants as a reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha had left me with a permanent lump in my throat.'
+                            }
                         }
                     ]
                 },
@@ -865,7 +865,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 42,
+            workedHours: 48,
             neededHours: 80,
             subtasks: [
                 {
