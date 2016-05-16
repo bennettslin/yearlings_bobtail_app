@@ -1,3 +1,4 @@
+// TODO: Past vs. present tense?
 module.exports = {
     title: 'Odin',
     overviews: {
@@ -154,20 +155,25 @@ module.exports = {
                 },
                 {
                     time: 50,
-                    verse: 'You seek the dunes once deemed a haven'
+                    verse: [
+                        'You seek the',
+                        {
+                            anchor: 'dunes once deemed a haven',
+                            annotation: {
+                                description: [
+                                    'In the Book of Genesis, Ishmael was Abraham\'s first son. Though he would not inherit Abraham\'s house and was instead banished to the desert, God promised to make him a great nation. The narrator Ishmael in Herman Melville\'s',
+                                    {
+                                        italic: 'Moby Dick'
+                                    },
+                                    'is an outcast like his namesake, although the wilderness he wanders is the ocean. It is to these metaphorical dunes of the ocean that I flee as well.'
+                                ]
+                            },
+                        }
+                    ]
                 },
                 {
                     time: 53,
-                    verse: [
-                        'that was safe',
-                        {
-                            anchor: 'for a heathen…',
-                            annotation: {
-                                description: '',
-                                todo: true
-                            }
-                        }
-                    ]
+                    verse: 'that was safe for a heathen…'
                 }
             ],
             [
@@ -183,7 +189,7 @@ module.exports = {
                     time: 67,
                     verse: [
                         'could some',
-                        // TODO: insect in jar
+                        // TODO: insect in jar link
                         'bottled butterfly',
                         {
                             anchor: 'dream your whims instead?',
@@ -291,7 +297,7 @@ module.exports = {
                         {
                             anchor: 'torn rides',
                             annotation: {
-                                description: 'Roller coasters are raised up and torn down like ocean waves along the horizon, even if the process takes years, not seconds.'
+                                description: 'Roller coasters are raised up and torn down like ocean waves along the horizon, even if the process takes years, rather than seconds.'
                             }
                         }
                     ]
@@ -320,7 +326,16 @@ module.exports = {
                 },
                 {
                     time: 137,
-                    verse: 'pray for soulless solace and just play dumb?'
+                    verse: [
+                        'pray for',
+                        {
+                            anchor: 'soulless solace',
+                            annotation: {
+                                description: 'It seemed both bizarre and cruel to me that I wasn\'t allowed to profess ignorance on the nature of my soul, and that my fate for all eternity rested on beliefs formed under duress and based on incomplete information.'
+                            },
+                        },
+                        'and just play dumb?'
+                    ]
                 },
                 {
                     time: 141,
@@ -340,7 +355,7 @@ module.exports = {
                         {
                             anchor: 'foetus force-fed,',
                             annotation: {
-                                description: 'I found it weird that one has no say in being brought into this world, given how quickly the exit will come, and how necessarily painful it must be.'
+                                description: 'I found it weird that one is allowed no say in being brought into this world, given how quickly the exit will come, and how necessarily painful it must be.'
                             }
                         },
                         'born preaborted,'
@@ -560,16 +575,7 @@ module.exports = {
                 },
                 {
                     time: 53,
-                    verse: [
-                        'as a',
-                        {
-                            anchor: 'slave for the seasons?',
-                            annotation: {
-                                description: '',
-                                todo: true
-                            }
-                        }
-                    ]
+                    verse: 'as a slave for the seasons?'
                 }
             ],
             [
@@ -753,17 +759,7 @@ module.exports = {
                 },
                 {
                     time: 120,
-                    verse: [
-                        'amidst',
-                        {
-                            anchor: 'dustbunnies',
-                            annotation: {
-                                description: '',
-                                todo: true
-                            }
-                        },
-                        'frozen.'
-                    ]
+                    verse: 'amidst dustbunnies frozen.'
                 }
             ],
             [
@@ -852,7 +848,7 @@ module.exports = {
                         {
                             anchor: 'Thursday\'s child',
                             annotation: {
-                                description: '"Monday\'s Child" is a nursery rhyme that predicts a child\'s fortune based on day of birth. Wednesday is literally "Odin\'s day" in Old English, and I was born on a Thursday. The rhyme promises that "Thursday\'s child has far to go," and indeed, the distance I had left to cover felt dispiritingly vast. Still, I was one day closer than when the day began…'
+                                description: '"Monday\'s Child" is a nursery rhyme that predicts a child\'s fortune based on day of birth. Wednesday is literally "Odin\'s day" in Old English, and I was born on a Thursday. The rhyme promises that "Thursday\'s child has far to go," and indeed, the distance I had left to cover felt dispiritingly vast. Still, I was now one day closer than when the day began…'
                             }
                         },
                         'has a mile less far to go…'
