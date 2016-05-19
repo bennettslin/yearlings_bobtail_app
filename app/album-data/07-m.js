@@ -18,7 +18,13 @@ module.exports = {
                      * Raised Buddhist, triumphed over temptations of Mara, the demon
                      */
                     time: 33,
-                    verse: 'Maravijaya…'
+                    verse: {
+                        anchor: 'Maravijaya…',
+                        annotation: {
+                            description: '',
+                            todo: true
+                        },
+                    }
                 }
             ],
             [
@@ -27,7 +33,16 @@ module.exports = {
                      * First five-year-plan
                      */
                     time: 35,
-                    verse: 'I was a lad bent on learning the talents'
+                    verse: [
+                        'I was a lad bent on',
+                        {
+                            anchor: 'learning the talents',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     time: 40,
@@ -43,7 +58,17 @@ module.exports = {
                 },
                 {
                     time: 50,
-                    verse: 'in five years I\'d be one to keep.'
+                    verse: [
+                        'in',
+                        {
+                            anchor: 'five years',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'I\'d be one to keep.'
+                    ]
                 }
             ],
             [
@@ -52,7 +77,16 @@ module.exports = {
                      * Take as long as I needed.
                      */
                     time: 54,
-                    verse: 'This moron marooned, a method mapped in my cocoon'
+                    verse: [
+                        'This moron marooned, a',
+                        {
+                            anchor: 'method mapped in my cocoon',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     time: 59,
@@ -60,18 +94,51 @@ module.exports = {
                 },
                 {
                     time: 64,
-                    verse: 'No minutiae left unmastered,'
+                    verse: {
+                        anchor: 'No minutiae left unmastered,',
+                        annotation: {
+                            description: '',
+                            todo: true
+                        },
+                    }
                 },
                 {
                     time: 67,
-                    verse: 'music cred with mindful manners merge.'
+                    verse: [
+                        {
+                            anchor: 'music cred',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'with',
+                        {
+                            anchor: 'mindful manners',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'merge.'
+                    ]
                 },
                 {
                     /**
                      * Met a Mara for certain, decided not to do all M words.
                      */
                     time: 69,
-                    verse: 'Once I metamorphose, certain I\'d impress.'
+                    verse: [
+                        'Once I',
+                        {
+                            anchor: 'metamorphose, certain',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'I\'d impress.'
+                    ]
                 }
             ],
             [
@@ -84,7 +151,16 @@ module.exports = {
                      * Jacob
                      */
                     time: 77,
-                    verse: 'spent her wishes on a friend,'
+                    verse: [
+                        'spent her',
+                        {
+                            anchor: 'wishes on a friend,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     /**
@@ -102,21 +178,49 @@ module.exports = {
                      * Mara needed confessions
                      */
                     time: 84,
-                    verse: 'Hopes wrapped in marinaded confections but'
+                    verse: [
+                        'Hopes wrapped in',
+                        {
+                            anchor: 'marinaded confections',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'but'
+                    ]
                 },
                 {
                     /**
                      * To Mara never sent
                      */
                     time: 87,
-                    verse: 'before tomorrow never sent.'
+                    verse: [
+                        'before',
+                        {
+                            anchor: 'tomorrow never sent.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     /**
                      * Ended my letters
                      */
                     time: 89,
-                    verse: 'Signed off "Love: Me" is how'
+                    verse: [
+                        {
+                            anchor: 'Signed off "Love: me"',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'is how'
+                    ]
                 },
                 {
                     time: 91,
@@ -129,18 +233,36 @@ module.exports = {
                      * Mara fiend
                      */
                     time: 94,
-                    verse: 'Morphined, I\'ll probably die pushing forty, exiled'
+                    verse: [
+                        {
+                            anchor: 'Morphined,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'I\'ll probably die pushing forty, exiled'
+                    ]
                 },
                 {
                     time: 99,
-                    verse: 'to a sand castle built by low tide;'
+                    verse: [
+                        'to a',
+                        {
+                            anchor: 'sand castle built by low tide.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     /**
                      * 33 perfect age.
                      */
                     time: 103,
-                    verse: 'far too old to be martyred,'
+                    verse: 'Far too old to be martyred,'
                 },
                 {
                     time: 106,
@@ -148,10 +270,20 @@ module.exports = {
                 },
                 {
                     /**
-                     * Mara nursed child. Job
+                     * Mara nursed child. Job, tie
                      */
                     time: 109,
-                    verse: 'a mariner\'s child who hanged from this tie.'
+                    verse: [
+                        'a',
+                        {
+                            anchor: 'mariner\'s child',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'who hanged from this tie.'
+                    ]
                 }
             ],
             [
@@ -160,18 +292,46 @@ module.exports = {
                      * Moonies
                      */
                     time: 114,
-                    verse: 'Panoramic prints pending my soon-to-be Moonie wedding,'
+                    verse: [
+                        'Panoramic prints pending my soon-to-be',
+                        {
+                            anchor: 'Moonie wedding,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     /**
                      * Maiden Mara co-signs.
                      */
                     time: 118,
-                    verse: 'fools once expecting their "Made in America" signs.'
+                    verse: [
+                        'fools once expecting their',
+                        {
+                            anchor: '"Made in America" signs.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     time: 123,
-                    verse: 'In a time capsule sealed'
+                    verse: [
+                        'In a',
+                        {
+                            anchor: 'time capsule',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'sealed'
+                    ]
                 },
                 {
                     time: 125,
@@ -182,7 +342,16 @@ module.exports = {
                      * Lies that Mara you'll net.
                      */
                     time: 128,
-                    verse: 'lies that marionette in this heap of twisted twine.'
+                    verse: [
+                        {
+                            anchor: 'lies that marionette',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'in this heap of twisted twine.'
+                    ]
                 }
             ],
             [
@@ -229,14 +398,32 @@ module.exports = {
                      * Chimney sweeps were indentured servants. In dentures
                      */
                     time: 146,
-                    verse: 'indentures dumbed as a boy.'
+                    verse: [
+                        {
+                            anchor: 'indentures dumbed',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'as a boy.'
+                    ]
                 },
                 {
                     /**
                      * Counterpart to I do, two farewell
                      */
                     time: 148,
-                    verse: 'Whispered "adieu", I bade them to fare well,'
+                    verse: [
+                        'Whispered "adieu", I',
+                        {
+                            anchor: 'bade them to fare well,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     time: 150,
@@ -246,7 +433,16 @@ module.exports = {
             [
                 {
                     time: 153,
-                    verse: 'But then I saw the world\'s a naked baby,'
+                    verse: [
+                        'But then I saw the',
+                        {
+                            anchor: 'world\'s a naked baby,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     time: 156,
@@ -261,7 +457,13 @@ module.exports = {
                      * To have a Mara you'll laugh
                      */
                     time: 160,
-                    verse: 'to have a merry ol\' laugh.'
+                    verse: {
+                        anchor: 'to have a merry ol\' laugh.',
+                        annotation: {
+                            description: '',
+                            todo: true
+                        },
+                    }
                 },
                 {
                     time: 163,
@@ -273,7 +475,16 @@ module.exports = {
                 },
                 {
                     time: 168,
-                    verse: 'is that the boy who\'s to love her baby'
+                    verse: [
+                        'is that the',
+                        {
+                            anchor: 'boy who\'s to love her baby',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     time: 170,
@@ -286,7 +497,16 @@ module.exports = {
                      * Maraless
                      */
                     time: 173,
-                    verse: 'Moral is: it\'s up to me to be alert;'
+                    verse: [
+                        {
+                            anchor: 'Moral is:',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        },
+                        'it\'s up to me to be alert;'
+                    ]
                 },
                 {
                     time: 176,
@@ -298,7 +518,13 @@ module.exports = {
                 },
                 {
                     time: 180,
-                    verse: 'friends have to lie.'
+                    verse: {
+                        anchor: 'friends have to lie.',
+                        annotation: {
+                            description: '',
+                            todo: 'After middle school, I didn\'t really have friends until adulthoood, so there were a lot of things I was still trying to figure out about the concept of friendship.'
+                        },
+                    }
                 },
                 {
                     time: 183,
@@ -313,7 +539,16 @@ module.exports = {
                      * Vow for my next five year plan.
                      */
                     time: 188,
-                    verse: 'Five more, she\'ll dig up Bobtail\'s words'
+                    verse: [
+                        'Five more, she\'ll dig up',
+                        {
+                            anchor: 'Bobtail\'s words',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     time: 190,
