@@ -4,7 +4,7 @@ module.exports = {
         /**
          * Playing shows, Mara, Jacob drummer
          */
-        narrative: 'narrative 1',
+        narrative: 'After a string of dating flops.   ',
         /**
          * Song about Mara that wasn't explicitly about Mara
          */
