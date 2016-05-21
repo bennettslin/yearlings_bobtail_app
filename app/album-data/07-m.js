@@ -2,13 +2,10 @@ module.exports = {
     title: 'M',
     overviews: {
         /**
-         * Playing shows, Mara, Jacob drummer
+         * TODO: Mention Bay Area?
          */
-        narrative: 'After a string of dating flops.   ',
-        /**
-         * Song about Mara that wasn't explicitly about Mara
-         */
-        music: 'personal 1'
+        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to secure my future chances by shaping myself into the ideal prospect. Meanwhile, I was playing shows and becoming a regular fixture in the local scene. I had a crush on a fellow scenester named Mara, and was blown away when a mutual friend hinted that the interest was shared. But Mara ended up going out with my drummer Jacob, which made things in the band awkward. And a little painful.',
+        music: 'This song is a carryover from back when we were The Yearlings. I kept the true meaning of its lyrics a secret by disguising Mara\'s name in various puns. (I didn\'t exaggerate my enunciation like I do in this recording, obviously.) Since I\'m nowhere near as skilled on bass and drums as my former bandmates, I recorded at a lower speed in order to maintain the original tempo of our performances.'
     },
     lyrics: [
         [
@@ -519,6 +516,7 @@ module.exports = {
                 {
                     time: 180,
                     verse: {
+                        // TODO: Message to Jacob
                         anchor: 'friends have to lie.',
                         annotation: {
                             description: '',
@@ -560,7 +558,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 6,
+            workedHours: 9,
             neededHours: 40,
             subtasks: [
                 {
