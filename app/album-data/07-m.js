@@ -4,8 +4,8 @@ module.exports = {
         /**
          * TODO: Mention Bay Area?
          */
-        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to secure my future chances by shaping myself into the ideal prospect. Meanwhile, I was playing shows and becoming a regular fixture in the local scene. I had a crush on a fellow scenester named Mara, and was blown away when a mutual friend hinted that the interest was shared. But Mara ended up going out with my drummer Jacob, which made things in the band awkward. And a little painful.',
-        music: 'This song is a carryover from back when we were The Yearlings. I kept the true meaning of its lyrics a secret by disguising Mara\'s name in various puns. (I didn\'t exaggerate my enunciation like I do in this recording, obviously.) Since I\'m nowhere near as skilled on bass and drums as my former bandmates, I recorded at a lower speed in order to maintain the original tempo of our performances.'
+        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to secure my future chances by shaping myself into the ideal prospect. Meanwhile, I was playing shows and becoming a regular fixture in the local scene. I liked a fellow scenester named Mara, and was dumbstruck when a mutual friend hinted that the interest was shared. But Mara ended up going out with my drummer Jacob, which made things in the band awkward. And a little painful.',
+        music: 'This song is a carryover from back when we were The Yearlings. I kept its true meaning a secret by disguising Mara\'s name in various puns. I didn\'t exaggerate my enunciation back then as I do now in this recording, obviously. Since I\'m nowhere near as skilled on bass and drums as my former bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.'
     },
     lyrics: [
         [
