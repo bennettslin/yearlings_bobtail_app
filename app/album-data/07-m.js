@@ -437,8 +437,7 @@ module.exports = {
                         {
                             anchor: 'world\'s a naked baby,',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'At some point, I realised that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can largely be understood by reading people\'s faces and recognising their needs, just as history can be known by studying textbooks.'
                             },
                         }
                     ]
@@ -452,15 +451,11 @@ module.exports = {
                     verse: 'It dropped a poop, but somehow I knew'
                 },
                 {
-                    /**
-                     * To have a Mara you'll laugh
-                     */
                     time: 160,
                     verse: {
                         anchor: 'to have a merry ol\' laugh.',
                         annotation: {
-                            description: '',
-                            todo: true
+                            description: 'Or else, "to have a Mara you\'ll laugh."'
                         },
                     }
                 },
@@ -479,8 +474,7 @@ module.exports = {
                         {
                             anchor: 'boy who\'s to love her baby',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'If the world is just as guileless and transparent as a newborn baby, then it makes no more sense to get mad at the world than to be upset with an infant. And if a woman\'s list of ideal traits in a suitor includes the kind of father he\'ll be to her child, then it makes sense that she\'ll judge him by how he treats the world.'
                             },
                         }
                     ]
@@ -498,10 +492,9 @@ module.exports = {
                     time: 173,
                     verse: [
                         {
-                            anchor: 'Moral is:',
+                            anchor: 'Moral is',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Or else, "Mara-less."'
                             },
                         },
                         'it\'s up to me to be alert;'
@@ -522,7 +515,7 @@ module.exports = {
                         anchor: 'friends have to lie.',
                         annotation: {
                             description: '',
-                            todo: 'After middle school, I didn\'t really have friends until adulthoood, so there were a lot of things I was still trying to figure out about the concept of friendship.'
+                            todo: 'After middle school, I didn\'t have close friends again until college, so there were a lot of things I was still trying to figure out about the concept of friendship.'
                         },
                     }
                 },
@@ -544,7 +537,7 @@ module.exports = {
                         {
                             anchor: 'Bobtail\'s words',
                             annotation: {
-                                description: '',
+                                description: 'I ',
                                 todo: true
                             },
                         }
