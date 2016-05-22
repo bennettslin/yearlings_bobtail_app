@@ -11,24 +11,22 @@ module.exports = {
         [
             [
                 {
-                    /**
-                     * Raised Buddhist, triumphed over temptations of Mara, the demon
-                     */
                     time: 33,
                     verse: {
                         anchor: 'Maravijaya…',
                         annotation: {
-                            description: '',
-                            todo: true
+                            description: [
+                                {
+                                    italic: 'Maravijaya,'
+                                },
+                                'which translates to "victory over Mara" in Sanskrit, is the seated posture of the Buddha as he fended off temptations from Mara, the demon who personifies fear and death in Buddhism. Similarly, getting through band practise required me to summon otherworldly reserves of self-denial after Jacob and Mara started dating.'
+                            ]
                         },
                     }
                 }
             ],
             [
                 {
-                    /**
-                     * First five-year-plan
-                     */
                     time: 35,
                     verse: [
                         'I was a lad bent on',
@@ -60,8 +58,7 @@ module.exports = {
                         {
                             anchor: 'five years',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'The five-year plans of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to make up, in hindsight it was naive to think that my own plan for rapid personal growth could be free of unintended negative effects.'
                             },
                         },
                         'I\'d be one to keep.'
@@ -75,7 +72,20 @@ module.exports = {
                      */
                     time: 54,
                     verse: [
-                        'This moron marooned, a',
+                        'This',
+                        {
+                            anchor: 'moron marooned,',
+                            annotation: {
+                                description: [
+                                    'After deciding to write a song that was secretly about Mara, I realised that I had no useful explanation for why it was titled',
+                                    {
+                                        italic: 'M.'
+                                    },
+                                    'So I made up a story that my original idea was to pack the lyrics with words that start with the letter M, which I then abandoned after this stanza proved how unfeasible an entire song written in this fashion would be.'
+                                ]
+                            },
+                        },
+                        'a',
                         {
                             anchor: 'method mapped in my cocoon',
                             annotation: {
@@ -105,7 +115,7 @@ module.exports = {
                         {
                             anchor: 'music cred',
                             annotation: {
-                                description: '',
+                                description: 'One of the biggest mistakes I ever made was assuming that ',
                                 todo: true
                             },
                         },
@@ -130,8 +140,7 @@ module.exports = {
                         {
                             anchor: 'metamorphose, certain',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Or else, "once I met a Mara, for certain I\'d impress."',
                             },
                         },
                         'I\'d impress.'
@@ -171,49 +180,37 @@ module.exports = {
                     verse: 'these words unsaid.'
                 },
                 {
-                    /**
-                     * Mara needed confessions
-                     */
                     time: 84,
                     verse: [
                         'Hopes wrapped in',
                         {
-                            anchor: 'marinaded confections',
+                            anchor: 'marinaded confections,',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Or else, "Mara-needed confessions."'
                             },
                         },
                         'but'
                     ]
                 },
                 {
-                    /**
-                     * To Mara never sent
-                     */
                     time: 87,
                     verse: [
                         'before',
                         {
                             anchor: 'tomorrow never sent.',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Or else, "before, to Mara, never sent."'
                             },
                         }
                     ]
                 },
                 {
-                    /**
-                     * Ended my letters
-                     */
                     time: 89,
                     verse: [
                         {
-                            anchor: 'Signed off "Love: me"',
+                            anchor: 'Signed off "love me"',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'I used to close my personal letters with "love bennett," absent a comma due to sheer laziness. One woman I dated joked that it sounded like a command spoken in desperation.'
                             },
                         },
                         'is how'
@@ -234,7 +231,7 @@ module.exports = {
                         {
                             anchor: 'Morphined,',
                             annotation: {
-                                description: '',
+                                description: 'Or else, "Mara-fiend."',
                                 todo: true
                             },
                         },
@@ -275,7 +272,7 @@ module.exports = {
                         {
                             anchor: 'mariner\'s child',
                             annotation: {
-                                description: '',
+                                description: 'Or else, "a Mara-nursed child." ',
                                 todo: true
                             },
                         },
@@ -365,7 +362,16 @@ module.exports = {
                      * My life in Mara
                      */
                     time: 138,
-                    verse: 'With her "I do", my life in marriage'
+                    verse: [
+                        'With her "I do,"',
+                        {
+                            anchor: 'my life in marriage',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            },
+                        }
+                    ]
                 },
                 {
                     /**
@@ -407,17 +413,13 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Counterpart to I do, two farewell
-                     */
                     time: 148,
                     verse: [
-                        'Whispered "adieu", I',
+                        'Whispered "adieu," I',
                         {
                             anchor: 'bade them to fare well,',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Or else, "I bade them two farewell."'
                             },
                         }
                     ]

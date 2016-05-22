@@ -580,7 +580,7 @@ module.exports = {
                         {
                             anchor: 'in-som\'umiak skims through channels',
                             annotation: {
-                                description: 'An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing disaster afoot, our brave tribe flees to safety "in some umiak," "skimming through channels" wreaked by a "snowy blitz." Meanwhile, being an "insomniac," I "skim through channels" that are "snow-blitzed" due to the television\'s poor reception.'
+                                description: 'An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing disaster afoot, our brave tribe flees to safety "in some umiak," skimming through icy channels wreaked by a "snowy blitz." Meanwhile, being an "insomniac," I "skim through channels" that are "snow-blitzed" due to the television\'s poor reception.'
                             }
                         },
                         'snow blitz\'d…'

@@ -264,7 +264,7 @@ module.exports = {
                         {
                             anchor: 'faked this "X,"',
                             annotation: {
-                                description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter "X." Also, since Catherine had vowed to remain a virgin until marriage, I would "fake the sex" for myself by masturbating alone.',
+                                description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X. Also, since Catherine had vowed to remain a virgin until marriage, I would "fake the sex" for myself by masturbating alone.',
                                 reference: 'https://en.wikipedia.org/wiki/Ash_Wednesday'
                             }
                         },
