@@ -276,33 +276,25 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Moonies
-                     */
                     time: 114,
                     verse: [
                         'Panoramic prints pending my soon-to-be',
                         {
                             anchor: 'Moonie wedding,',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'The Unification Church led by Sun Myung Moon is widely seen as a cult due to its means of proselytism. It is perhaps most well-known for the mass weddings in which thousands of its congregants, often referred to as Moonies, are paired into couples and married en masse in a public space. That I could resort to such means to avoid the long, hard slog of finding a mate was an enticing thought, even if also a facetious one.'
                             },
                         }
                     ]
                 },
                 {
-                    /**
-                     * Maiden Mara co-signs.
-                     */
                     time: 118,
                     verse: [
                         'fools once expecting their',
                         {
                             anchor: '"Made in America" signs.',
                             annotation: {
-                                description: 'Or else, "expecting their maiden Mara cosigns."',
-                                todo: true
+                                description: 'In these mass weddings, the pairings are often international and interracial by Reverend Moon\'s design. Were I to participate in one, I might very well be matched with a foreigner seeking the opportunity to raise a family in America. Also, "expecting their maiden Mara cosigns."'
                             },
                         }
                     ]
@@ -326,9 +318,6 @@ module.exports = {
                     verse: 'with pages of defeated spiels'
                 },
                 {
-                    /**
-                     * Lies that Mara you'll net.
-                     */
                     time: 128,
                     verse: [
                         {
@@ -397,7 +386,7 @@ module.exports = {
                         {
                             anchor: 'indentures dumbed',
                             annotation: {
-                                description: 'Chimney sweep apprentices were typically employed as indentured servants at a young age. Here, I imagine myself as one. Given the years of servitude that must pass before I can be my own person again, I am effectively wearing dentures already, and thus unable to speak.'
+                                description: 'Chimney sweep apprentices were typically employed as indentured servants at a young age. Similarly, given the years that must pass in servitude to my five-year plans before I can be my own person again, I am effectively "in dentures" already, and thus unable to speak.'
                             },
                         },
                         'as a boy.'
