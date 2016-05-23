@@ -374,27 +374,31 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Hope chest.
-                     */
                     time: 140,
                     verse: [
                         'is choked down my',
                         {
                             anchor: 'no-hope chest.',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Traditionally, a hope chest was a piece of furniture that contained the various linens stored by a young woman in preparation for married life.'
                             }
                         }
                     ]
                 },
                 {
                     /**
-                     * Something particular about chimney sweeps? I forgot.
+                     * TODO: link to urchin in Odin, mention that Mara had a lisp?
                      */
                     time: 143,
-                    verse: 'Her lispy kiss unlucky for this chimney sweep,'
+                    verse: [
+                        'Her lispy',
+                        {
+                            anchor: 'kiss unlucky for this chimney sweep,',
+                            annotation: {
+                                description: 'British tradition holds that a kiss from a chimney sweep will bring good luck to a bride on her wedding day. In the Victorian era, however, the children apprenticed to climb and clear soot from chimneys were often neglected orphans. Whatever good luck they imparted to others, for themselves only a lifetime of health problems and physical deformities awaited.'
+                            },
+                        }
+                    ]
                 },
                 {
                     /**
@@ -474,7 +478,7 @@ module.exports = {
                         {
                             anchor: 'boy who\'s to love her baby',
                             annotation: {
-                                description: 'If the world is just as guileless and transparent as a newborn baby, then it makes no more sense to get mad at the world than to be upset with an infant. And if a woman\'s list of ideal traits in a suitor includes the kind of father he\'ll be to her child, then it makes sense that she\'ll judge him by how he treats the world.'
+                                description: 'If the world is just as guileless and transparent as a newborn baby, then it makes no more sense to get mad at the world than to be upset with an infant. And if a woman\'s list of ideal traits in a mate includes what kind of father he\'ll be to her child, then it makes sense that she\'ll judge him by how he treats the world.'
                             },
                         }
                     ]
