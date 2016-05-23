@@ -5,6 +5,11 @@ module.exports = {
      */
     getStrippedHeader: function(text = '') {
 
+        // FIXME: Hack fix to keep from breaking. (M, "Bobtail's words.")
+        if (typeof text === 'object') {
+            return 'not a string.';
+        }
+
         if (this._hasSpecialCharacterAtIndex(text, 0)) {
             text = text.slice(1);
         }

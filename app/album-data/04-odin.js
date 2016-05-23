@@ -666,7 +666,7 @@ module.exports = {
                             // TODO: link hope chest.
                             anchor: 'hopeless rests.',
                             annotation: {
-                                description: 'Traditionally, a hope chest contained the various linens stored by a young woman in preparation for married life. Hope was also all that remained in the box opened by Pandora. By contrast, upon revelation of the knowledge that I could never be with Sasha, all I had left was my own hopeless state.'
+                                description: 'Hope was all that remained in the box opened by Pandora. By contrast, upon having all the hard truths of the world revealed to me by Sasha, all I had left was my own hopeless state.'
                             }
                         }
                     ]
