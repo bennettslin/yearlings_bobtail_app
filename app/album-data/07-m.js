@@ -223,9 +223,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Mara fiend
-                     */
                     time: 94,
                     verse: [
                         {
@@ -304,7 +301,7 @@ module.exports = {
                         {
                             anchor: '"Made in America" signs.',
                             annotation: {
-                                description: '',
+                                description: 'Or else, "expecting their maiden Mara cosigns."',
                                 todo: true
                             },
                         }
@@ -337,7 +334,7 @@ module.exports = {
                         {
                             anchor: 'lies that marionette',
                             annotation: {
-                                description: '',
+                                description: 'Or else, "lies that Mara you\'ll net."',
                                 todo: true
                             },
                         },
@@ -355,17 +352,13 @@ module.exports = {
                     verse: 'keeps me solely for a pet.'
                 },
                 {
-                    /**
-                     * My life in Mara
-                     */
                     time: 138,
                     verse: [
                         'With her "I do,"',
                         {
                             anchor: 'my life in marriage',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Or else, "my life in Mara." I thought I had chosen to forego this one in the recording, but the Mara-fied pronunciation is definitely there, so… yeah.'
                             },
                         }
                     ]
@@ -390,24 +383,21 @@ module.exports = {
                     verse: [
                         'Her lispy',
                         {
-                            anchor: 'kiss unlucky for this chimney sweep,',
+                            anchor: 'kiss unlucky',
                             annotation: {
-                                description: 'British tradition holds that a kiss from a chimney sweep will bring good luck to a bride on her wedding day. In the Victorian era, however, the children apprenticed to climb and clear soot from chimneys were often neglected orphans. Whatever good luck they imparted to others, for themselves only a lifetime of health problems and physical deformities awaited.'
+                                description: 'British tradition holds that a kiss from a chimney sweep will bring good luck to a bride on her wedding day. In the Victorian era, however, the children who cleared soot from chimneys were often neglected orphans. Whatever fortunes they imparted to others, for themselves only a lifetime of ill health awaited.'
                             },
-                        }
+                        },
+                        'for this chimney sweep,'
                     ]
                 },
                 {
-                    /**
-                     * Chimney sweeps were indentured servants. In dentures
-                     */
                     time: 146,
                     verse: [
                         {
                             anchor: 'indentures dumbed',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Chimney sweep apprentices were typically employed as indentured servants at a young age. Here, I imagine myself as one. Given the years of servitude that must pass before I can be my own person again, I am effectively wearing dentures already, and thus unable to speak.'
                             },
                         },
                         'as a boy.'
@@ -558,7 +548,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 17,
+            workedHours: 24,
             neededHours: 40,
             subtasks: [
                 {
