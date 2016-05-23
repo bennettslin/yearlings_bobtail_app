@@ -486,9 +486,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Maraless
-                     */
                     time: 173,
                     verse: [
                         {
@@ -511,11 +508,9 @@ module.exports = {
                 {
                     time: 180,
                     verse: {
-                        // TODO: Message to Jacob
                         anchor: 'friends have to lie.',
                         annotation: {
-                            description: '',
-                            todo: 'After middle school, I didn\'t have close friends again until college, so there were a lot of things I was still trying to figure out about the concept of friendship.'
+                            description: 'After middle school, I didn\'t have close friends again until college, so there were plenty of truths about friendship that I still had to learn for the first time.'
                         },
                     }
                 },
@@ -528,17 +523,26 @@ module.exports = {
                     verse: 'but in a year, they\'re never bad.'
                 },
                 {
-                    /**
-                     * Vow for my next five year plan.
-                     */
                     time: 188,
                     verse: [
                         'Five more, she\'ll dig up',
                         {
-                            anchor: 'Bobtail\'s words',
+                            anchor: [
+                                {
+                                    italic: 'Bobtail'
+                                },
+                                {
+                                    noSpace: '\'s words'
+                                }
+                            ],
                             annotation: {
-                                description: 'I ',
-                                todo: true
+                                description: [
+                                    'Recognising that what I wanted was Mara or someone like Mara, and having taken stock of where I needed to be to get what I wanted, I decided to return to what I do best: holing up in emotional seclusion. My next five-year plan would see the completion of',
+                                    {
+                                        italic: 'Bobtail,'
+                                    },
+                                    'my ambitious magnum opus, now conceived as a double concept album.'
+                                ]
                             },
                         }
                     ]
