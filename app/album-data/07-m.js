@@ -210,7 +210,7 @@ module.exports = {
                         {
                             anchor: 'Signed off "love me"',
                             annotation: {
-                                description: 'I used to close my personal letters with "love bennett," absent a comma due to sheer laziness. One woman I dated joked that it sounded like a command spoken in desperation.'
+                                description: 'I used to close my personal letters with "love bennett," absent a comma due to laziness. One woman I dated joked that it sounded like a desperate command.'
                             },
                         },
                         'is how'
@@ -231,8 +231,7 @@ module.exports = {
                         {
                             anchor: 'Morphined,',
                             annotation: {
-                                description: 'Or else, "Mara-fiend."',
-                                todo: true
+                                description: 'Or else, "Mara-fiend."'
                             },
                         },
                         'I\'ll probably die pushing forty, exiled'
@@ -245,8 +244,7 @@ module.exports = {
                         {
                             anchor: 'sand castle built by low tide.',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'The conclusion of my first five-year plan was also occasion to reflect on my impending mortality. I only had so much lifetime remaining, and the thought of devoting the next five years, and then five more after that, to some vague ambition that might just end up a bust as this one had… was a bit depressing.'
                             },
                         }
                     ]
@@ -272,8 +270,7 @@ module.exports = {
                         {
                             anchor: 'mariner\'s child',
                             annotation: {
-                                description: 'Or else, "a Mara-nursed child." ',
-                                todo: true
+                                description: 'Or else, "a Mara-nursed child."'
                             },
                         },
                         'who hanged from this tie.'
@@ -560,7 +557,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 9,
+            workedHours: 17,
             neededHours: 40,
             subtasks: [
                 {
