@@ -131,9 +131,6 @@ module.exports = {
                     ]
                 },
                 {
-                    /**
-                     * Met a Mara for certain, decided not to do all M words.
-                     */
                     time: 69,
                     verse: [
                         'Once I',
@@ -153,17 +150,13 @@ module.exports = {
                     verse: 'Year five, and now the one who dug me up'
                 },
                 {
-                    /**
-                     * Jacob
-                     */
                     time: 77,
                     verse: [
                         'spent her',
                         {
                             anchor: 'wishes on a friend,',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Emerging from the tail end of my first five-year plan, I conducted an audit of what my diligence had brought me. Given how easily Jacob and Mara had gotten together after one of our shows, and the nagging sense that such ease for my own wants, by contrast, was no less elusive than when I had started, I could only concede that my plan was a total washout. I felt like a genie freed from a lamp, with good fortunes to bestow on all others but myself.'
                             },
                         }
                     ]
@@ -282,7 +275,7 @@ module.exports = {
                         {
                             anchor: 'Moonie wedding,',
                             annotation: {
-                                description: 'The Unification Church led by Sun Myung Moon is widely seen as a cult due to its means of proselytism. It is perhaps most well-known for the mass weddings in which thousands of its congregants, often referred to as Moonies, are paired into couples and married en masse in a public space. That I could resort to such means to avoid the long, hard slog of finding a mate was an enticing thought, even if also a facetious one.'
+                                description: 'The Unification Church led by Sun Myung Moon is widely seen as a cult due to its means of proselytism. It is perhaps most well-known for the mass weddings in which thousands of its congregants, often referred to as Moonies, are paired into couples and married en masse. That I could resort to such measures to avoid the long, hard slog of finding a mate was an enticing thought, even if also a facetious one.'
                             },
                         }
                     ]
@@ -294,7 +287,7 @@ module.exports = {
                         {
                             anchor: '"Made in America" signs.',
                             annotation: {
-                                description: 'In these mass weddings, the pairings are often international and interracial by Reverend Moon\'s design. Were I to participate in one, I might very well be matched with a foreigner seeking the opportunity to raise a family in America. Also, "expecting their maiden Mara cosigns."'
+                                description: 'In these mass weddings, the pairings are often international and interracial by design. Had I participated in one, I might very well have been matched with a foreigner seeking a green card and hoping to raise a family in America. Also, "expecting their maiden Mara cosigns."'
                             },
                         }
                     ]
@@ -306,8 +299,7 @@ module.exports = {
                         {
                             anchor: 'time capsule',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'A time capsule is a vessel of contemporary objects that will come to be seen as historical artifacts once rediscovered by a later age. In a way, it allows a past generation to "communicate" with the future. Similarly, in my dejected state, it was hard to envision my next five-year plan being anything more than a forum for airing my present grievances to a captive future audience.'
                             },
                         },
                         'sealed'
@@ -323,8 +315,7 @@ module.exports = {
                         {
                             anchor: 'lies that marionette',
                             annotation: {
-                                description: 'Or else, "lies that Mara you\'ll net."',
-                                todo: true
+                                description: 'Or else, "lies that Mara you\'ll net."'
                             },
                         },
                         'in this heap of twisted twine.'
