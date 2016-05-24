@@ -156,7 +156,7 @@ module.exports = {
                         {
                             anchor: 'wishes on a friend,',
                             annotation: {
-                                description: 'Emerging from the tail end of my first five-year plan, I conducted an audit of what my diligence had brought me. Given how easily Jacob and Mara had gotten together after one of our shows, and the nagging sense that such ease for my own wants, by contrast, was no less elusive than when I had started, I could only concede that my plan was a total washout. I felt like a genie freed from a lamp, with good fortunes to bestow on all others but myself.'
+                                description: 'Emerging from the tail end of my first five-year plan, I conducted an audit of what my diligence had brought me. Given how easily Jacob and Mara had gotten together after one of our shows, and the nagging sense that such ease for my own desires, by contrast, was no less elusive than when I had started, I could only concede that my plan was a total washout. I felt like a genie freed from a lamp, with good fortunes to bestow on all others but myself.'
                             },
                         }
                     ]
