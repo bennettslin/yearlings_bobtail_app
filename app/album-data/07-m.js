@@ -57,7 +57,7 @@ module.exports = {
                         {
                             anchor: 'five years',
                             annotation: {
-                                description: 'The five-year plans of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to make up, in hindsight it was naive to think that my own five-year plan for rapid personal growth could be free of unintended negative effects.'
+                                description: 'The five-year plans of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to make up, it was naive in hindsight to think that my own five-year plan for rapid personal growth could be free of unintended negative effects.'
                             },
                         },
                         'I\'d be one to keep.'
@@ -66,9 +66,6 @@ module.exports = {
             ],
             [
                 {
-                    /**
-                     * Take as long as I needed.
-                     */
                     time: 54,
                     verse: [
                         'This',
