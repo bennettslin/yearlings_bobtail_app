@@ -4,8 +4,8 @@ module.exports = {
         /**
          * TODO: Mention Bay Area?
          */
-        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to secure my future chances by shaping myself into the ideal prospect. Meanwhile, I was playing shows and becoming a regular fixture in the local scene. I liked a fellow scenester named Mara, and was dumbstruck when a mutual friend hinted that the interest was shared. But Mara ended up going out with my drummer Jacob, which made things in the band awkward. And a little painful.',
-        music: 'This song is a carryover from back when we were The Yearlings. I kept its true meaning a secret by disguising Mara\'s name in various puns. I didn\'t exaggerate my enunciation back then as I do now in this recording, obviously. Since I\'m nowhere near as skilled on bass and drums as my former bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.'
+        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to secure my future chances by shaping myself into the ideal prospect. Meanwhile, I was playing shows and becoming a regular fixture in the local scene. I liked a fellow scenester named Mara, and was dumbstruck when a mutual friend hinted that the interest was shared. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.',
+        music: 'This song is a carryover from back when we were The Yearlings. I kept its true meaning a secret by disguising Mara\'s name in various puns. (I didn\'t exaggerate my enunciation back then as I do now in this recording, obviously.) Since I\'m nowhere near as skilled on bass and drums as my former bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.'
     },
     lyrics: [
         [
@@ -33,8 +33,7 @@ module.exports = {
                         {
                             anchor: 'learning the talents',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'The breakup with Catherine was uneventful, much like all the ones before. After all, I\'d done nothing wrong, per se; I just didn\'t have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. What I really needed was to take time off and build myself up from scratch, with all that Catherine found lacking in me serving as my template.'
                             },
                         }
                     ]
@@ -58,7 +57,7 @@ module.exports = {
                         {
                             anchor: 'five years',
                             annotation: {
-                                description: 'The five-year plans of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to make up, in hindsight it was naive to think that my own plan for rapid personal growth could be free of unintended negative effects.'
+                                description: 'The five-year plans of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to make up, in hindsight it was naive to think that my own five-year plan for rapid personal growth could be free of unintended negative effects.'
                             },
                         },
                         'I\'d be one to keep.'
@@ -156,15 +155,12 @@ module.exports = {
                         {
                             anchor: 'wishes on a friend,',
                             annotation: {
-                                description: 'Emerging from the tail end of my first five-year plan, I conducted an audit of what my diligence had brought me. Given how easily Jacob and Mara had gotten together after one of our shows, against the nagging sense that such ease for my own desires was no less elusive than when I had started, I could only concede that my plan was a total washout. I felt like a genie freed from a lamp, with good fortunes to bestow on all others but myself.'
+                                description: 'As my five-year plan neared its end, I conducted a review of all that my diligent effort had brought me. Seeing how easily Jacob got together with Mara after one of our shows, while noting that such ease in my own pursuits felt no less elusive than ever —with my own inability to attract Mara as key evidence— I could only conclude that my plan was a total washout. I was like a genie freed from a lamp, with good fortunes to bestow on all others but myself.'
                             },
                         }
                     ]
                 },
                 {
-                    /**
-                     * I was happy for them.
-                     */
                     time: 80,
                     verse: 'while forever I\'ll hold in peace'
                 },
@@ -234,7 +230,7 @@ module.exports = {
                         {
                             anchor: 'sand castle built by low tide.',
                             annotation: {
-                                description: 'The conclusion of my first five-year plan was also occasion to reflect on my impending mortality. I only had so much lifetime remaining, and the thought of devoting the next five years, and then five more after that, to some vague ambition that might just end up a bust as this one had… was a bit depressing.'
+                                description: 'While the conclusion of my first five-year plan was my cue to begin planning the next one, it also provided occasion to reflect on my impending mortality. I only had so much lifetime remaining, and the thought of devoting the next five years, and then five more after that, to some vague objective that might just end up a bust as this one had… was a bit depressing.'
                             },
                         }
                     ]
@@ -299,7 +295,7 @@ module.exports = {
                         {
                             anchor: 'time capsule',
                             annotation: {
-                                description: 'A time capsule is a vessel of contemporary objects that will come to be seen as historical artifacts once rediscovered by a later age. In a way, it allows a past generation to "communicate" with the future. Similarly, in my dejected state, it was hard to envision my next five-year plan being anything more than a forum for airing my present grievances to a captive future audience.'
+                                description: 'A time capsule is a vessel of contemporary objects that will come to be seen as historical artifacts once rediscovered by a later age. In a way, it allows a past generation to communicate with the future. Similarly, in my dejected state, it was hard to envision my next five-year plan being anything more than a forum for me to air my present grievances to a captive future audience.'
                             },
                         },
                         'sealed'
@@ -528,7 +524,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 27,
+            workedHours: 30,
             neededHours: 40,
             subtasks: [
                 {
