@@ -33,7 +33,7 @@ module.exports = {
                         {
                             anchor: 'learning the talents',
                             annotation: {
-                                description: 'The breakup with Catherine was uneventful, much like all the ones before. After all, I\'d done nothing wrong, per se; I just didn\'t have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. What I really needed was to take time off and build myself up from scratch, with all that Catherine found lacking in me serving as my template.'
+                                description: 'The breakup with Catherine was uneventful, much like all the ones before. After all, I\'d done nothing wrong, per se; I just didn\'t have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. What I really needed was to take time off and build myself up from scratch, with all that Catherine found lacking in me serving as the template.'
                             },
                         }
                     ]
