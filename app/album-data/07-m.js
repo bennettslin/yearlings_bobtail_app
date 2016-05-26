@@ -4,7 +4,7 @@ module.exports = {
         /**
          * TODO: Mention Bay Area?
          */
-        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to secure my future chances by shaping myself into the ideal prospect. Meanwhile, I was playing shows and becoming a regular fixture in the local scene. I liked a fellow scenester named Mara, and was dumbstruck when a mutual friend hinted that the interest was shared. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.',
+        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to secure my future chances by shaping myself into the ideal prospect over the next five years. Meanwhile, I was playing shows and becoming a regular fixture in the local scene. I liked a fellow scenester named Mara, and was dumbstruck when a mutual friend hinted that the interest was shared. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.',
         music: 'This song is a carryover from back when we were The Yearlings. I kept its true meaning a secret by disguising Mara\'s name in various puns. (I didn\'t exaggerate my enunciation back then as I do now in this recording, obviously.) Since I\'m nowhere near as skilled on bass and drums as my former bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.'
     },
     lyrics: [
@@ -57,7 +57,7 @@ module.exports = {
                         {
                             anchor: 'five years',
                             annotation: {
-                                description: 'The five-year plans of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to make up, it was naive in hindsight to think that my own five-year plan for rapid personal growth could be free of unintended negative effects.'
+                                description: 'The five-year plans of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to recover, it was naive in hindsight to think that my own five-year plan for rapid intellectual growth could be free of unintended negative effects.'
                             },
                         },
                         'I\'d be one to keep.'
@@ -103,7 +103,13 @@ module.exports = {
                         {
                             anchor: 'music cred',
                             annotation: {
-                                description: 'During this time, I consulted friends and record store clerks to expand my musical palette. Interestingly, while the offerings they suggested for classical and world music still enrich to this day, those from the indie rock subgenre have paled into insignificance. Honestly, all the time I\'ve wasted on countercultural pretense remains one of my deepest regrets. But at least I won\'t be fooled again.'
+                                description: [
+                                    'During this time, I consulted friends and record store clerks to expand my musical palette. Interestingly, while the offerings they suggested for classical and world music still enrich me to this day, those from the indie rock subgenre have paled into insignificance. Honestly, I wasted a',
+                                    {
+                                        emphasis: 'lot'
+                                    },
+                                    'of time on indie rock and its countercultural pretense, and it remains one of my deepest regrets. But at least I won\'t be fooled again.'
+                                ]
                             },
                         },
                         'with mindful manners merge.'
@@ -200,7 +206,14 @@ module.exports = {
                                 description: 'Or else, "Mara-fiend."'
                             },
                         },
-                        'I\'ll probably die pushing forty, exiled'
+                        'I\'ll probably',
+                        {
+                            anchor: 'die pushing forty,',
+                            annotation: {
+                                description: 'The conclusion of my five-year plan was occasion to reflect on my impending mortality. Like the Soviet Union, I had banked on rapid growth, and I couldn\'t cut my losses now. I had nothing to my name other than what another five-year plan might gain for me, or failing that, another one. Yet five years is such a huge chunk of lifetime to mete out all at once, and I only had so much lifetime remaining.',
+                            },
+                        },
+                        'exiled'
                     ]
                 },
                 {
@@ -210,7 +223,7 @@ module.exports = {
                         {
                             anchor: 'sand castle built by low tide.',
                             annotation: {
-                                description: 'While the conclusion of my first five-year plan was my cue to begin planning the next one, it also provided occasion to reflect on my impending mortality. I only had so much lifetime remaining, and the thought of devoting the next five years, and then five more after that, to some vague objective that might just end up a bust as this one had… was a bit depressing.'
+                                description: 'Not only did my first five-year plan fail to realise its objective, it was clear that I had missed out on some crucial emotional development in the interim. And there was no guarantee that the next one wouldn\'t blindside me in the exact same manner. I feared a future as an emotionally stunted man-child pursuing ambitions at once both infantile and futile.'
                             },
                         }
                     ]
@@ -314,7 +327,7 @@ module.exports = {
                         {
                             anchor: 'my life in marriage',
                             annotation: {
-                                description: 'Or else, "my life in Mara." I thought I had chosen to forego this one in the recording, but the Mara-fied pronunciation is definitely there, so… yeah.'
+                                description: 'Or else, "my life in Mara." I thought I had chosen to forego this one in the recording, but the Mara-fied pronunciation is distinctly there, so… yeah.'
                             },
                         }
                     ]
@@ -505,7 +518,7 @@ module.exports = {
         {
             taskName: 'annotations',
             workedHours: 33,
-            neededHours: 40,
+            neededHours: 33,
             subtasks: [
                 {
                     taskName: 'references',
