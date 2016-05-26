@@ -33,7 +33,7 @@ module.exports = {
                         {
                             anchor: 'learning the talents',
                             annotation: {
-                                description: 'The breakup with Catherine was uneventful, much like all the ones before. After all, I\'d done nothing wrong, per se; I just didn\'t have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. What I really needed was to take time off and build myself up from scratch, with all that Catherine found lacking in me serving as the template.'
+                                description: 'The breakup with Catherine was uneventful, much like all the ones before. After all, I\'d done nothing wrong, per se; I just didn\'t have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. What I really needed was to take time off and build myself up from scratch, with everything that Catherine found lacking in me serving as the template.'
                             },
                         }
                     ]
@@ -77,18 +77,11 @@ module.exports = {
                                     {
                                         italic: 'M.'
                                     },
-                                    'So I made up a story that my original idea was to pack the lyrics with words that start with the letter M, which I then abandoned after this stanza proved how unfeasible an entire song written in this fashion would be.'
+                                    'So I came up with a story that my original idea was to pack the lyrics with words that start with the letter M, which I then abandoned after this stanza proved how unfeasible an entire song written in this fashion would be.'
                                 ]
                             },
                         },
-                        'a',
-                        {
-                            anchor: 'method mapped in my cocoon',
-                            annotation: {
-                                description: '',
-                                todo: true
-                            },
-                        }
+                        'a method mapped in my cocoon'
                     ]
                 },
                 {
@@ -100,8 +93,7 @@ module.exports = {
                     verse: {
                         anchor: 'No minutiae left unmastered,',
                         annotation: {
-                            description: '',
-                            todo: true
+                            description: 'Along with reading up on general subjects like history and religion, I would also carry around an almanac to memorise trivial facts whenever I had a free minute.'
                         },
                     }
                 },
@@ -111,19 +103,10 @@ module.exports = {
                         {
                             anchor: 'music cred',
                             annotation: {
-                                description: 'One of the biggest mistakes I ever made was assuming that ',
-                                todo: true
+                                description: 'During this time, I consulted friends and record store clerks to expand my musical palette. Interestingly, while the offerings they suggested for classical and world music still enrich to this day, those from the indie rock subgenre have paled into insignificance. Honestly, all the time I\'ve wasted on countercultural pretense remains one of my deepest regrets. But at least I won\'t be fooled again.'
                             },
                         },
-                        'with',
-                        {
-                            anchor: 'mindful manners',
-                            annotation: {
-                                description: '',
-                                todo: true
-                            },
-                        },
-                        'merge.'
+                        'with mindful manners merge.'
                     ]
                 },
                 {
@@ -196,7 +179,7 @@ module.exports = {
                         {
                             anchor: 'Signed off "love me"',
                             annotation: {
-                                description: 'I used to close my personal letters with "love bennett," absent a comma due to laziness. One woman I dated joked that it sounded like a desperate command.'
+                                description: 'I used to close my personal letters with "love bennett," absent a comma due to laziness. One woman I dated joked that it sounded like a command spoken in desperation.'
                             },
                         },
                         'is how'
@@ -268,7 +251,7 @@ module.exports = {
                         {
                             anchor: 'Moonie wedding,',
                             annotation: {
-                                description: 'The Unification Church led by Sun Myung Moon is widely seen as a cult due to its means of proselytism. It is perhaps most well-known for the mass weddings in which thousands of its congregants, often referred to as Moonies, are paired into couples and married en masse. That I could resort to such measures to avoid the long, hard slog of finding a mate was an enticing thought, even if also a facetious one.'
+                                description: 'The Unification Church led by Sun Myung Moon is widely seen as a cult due to its means of proselytism. It is perhaps most well-known for the mass weddings in which thousands of its congregants, often referred to as Moonies, are paired into couples and married en masse. That I could resort to such measures to avoid the long, hard slog of finding a mate was an enticing thought, even if also just a facetious one.'
                             },
                         }
                     ]
@@ -280,7 +263,7 @@ module.exports = {
                         {
                             anchor: '"Made in America" signs.',
                             annotation: {
-                                description: 'In these mass weddings, the pairings are often international and interracial by design. Had I participated in one, I might very well have been matched with a foreigner seeking a green card and hoping to raise a family in America. Also, "expecting their maiden Mara cosigns."'
+                                description: 'The pairings in these mass weddings are often international by design. Were I to participate in one, I might very well be matched with a foreigner seeking a green card and hoping to raise a family in America. Also, "expecting their maiden Mara cosigns."'
                             },
                         }
                     ]
@@ -308,7 +291,7 @@ module.exports = {
                         {
                             anchor: 'lies that marionette',
                             annotation: {
-                                description: 'Or else, "lies that Mara you\'ll net."'
+                                description: 'Or else, with these "lies that Mara you\'ll net."'
                             },
                         },
                         'in this heap of twisted twine.'
@@ -474,7 +457,7 @@ module.exports = {
                     verse: {
                         anchor: 'friends have to lie.',
                         annotation: {
-                            description: 'After middle school, I didn\'t have close friends again until college, so there were plenty of truths about friendship that I still had to learn for the first time.'
+                            description: 'After middle school, I didn\'t have close friends again until college, so there were plenty of truths about friendship that I was still learning for the first time.'
                         },
                     }
                 },
@@ -521,7 +504,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 30,
+            workedHours: 33,
             neededHours: 40,
             subtasks: [
                 {

@@ -253,7 +253,7 @@ module.exports = {
                         {
                             anchor: 'jaw was stuck,',
                             annotation: {
-                                description: 'In another incident, a bully came up from behind and put me in a chokehold while I waited for the schoolbus. This left me with a dislocated jaw that still troubles me from time to time.'
+                                description: 'In another incident, a bully snuck up from behind and put me in a chokehold while I was waiting for the schoolbus. This left me with a dislocated jaw that still troubles me from time to time.'
                             }
                         },
                         'so now I',
