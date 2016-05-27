@@ -223,7 +223,7 @@ module.exports = {
                         {
                             anchor: 'sand castle built by low tide.',
                             annotation: {
-                                description: 'Not only did my first five-year plan fail to realise its objective, it was clear that I had missed out on some crucial emotional development in the interim. And there was no guarantee that the next one wouldn\'t blindside me in the exact same manner. I feared a future as an emotionally stunted man-child pursuing ambitions at once both infantile and futile.'
+                                description: 'Not only did my first five-year plan fail to realise its objective, it was clear that I had missed out on some crucial emotional development in the interim. And there was no guarantee that the next one wouldn\'t blindside me in the exact same manner. I feared a future as an emotionally stunted man-child forever pursuing ambitions at once both infantile and futile.'
                             },
                         }
                     ]
