@@ -1,6 +1,3 @@
-/**
- * FIXME: Should Pchelka's Starry Journey be before Ash Wednesday?
- */
 module.exports = {
     title: 'Pchelka\'s Starry Journey',
     overviews: {
