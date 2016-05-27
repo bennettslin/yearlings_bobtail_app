@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Good Night, Sita',
     overviews: {
-        narrative: 'One of the first women I tried to hit on ',
+        narrative: 'Sita was one of the first women I tried to dated in college.',
         music: 'personal 1'
     },
     lyrics: [

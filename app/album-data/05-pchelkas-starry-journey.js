@@ -1,3 +1,7 @@
+/**
+ * Ash Wednesday and Pchelka's Starry Journey have been switched from the song
+ * list order on the album.
+ */
 module.exports = {
     title: 'Pchelka\'s Starry Journey',
     overviews: {
