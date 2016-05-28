@@ -43,7 +43,7 @@ module.exports = {
                             anchor: 'Ulysses\' tomb,',
                             annotation: {
                                 description: [
-                                    'A reference to the classic "Who\'s buried in Grant\'s tomb" schoolyard riddle, of course, but also to James Joyce\'s masterpiece novel. It was Catherine\'s admiration for Joyce that motivated me to create "the',
+                                    'A reference to the classic "Who\'s buried in Grant\'s tomb" riddle, of course, but also to James Joyce\'s masterpiece novel. It was Catherine\'s admiration for Joyce that later motivated me to create "the',
                                     {
                                         italic: 'Ulysses'
                                     },
