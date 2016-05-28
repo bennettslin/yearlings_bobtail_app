@@ -1,13 +1,13 @@
 module.exports = {
     title: 'Good Night, Sita',
     overviews: {
-        narrative: 'Before Catherine and long before Mara, Sita was one of the first women I tried to hit on during those early college years. When nothing came of the few dates that followed, I scurried away in disappointment. But Sita reached out again after a good while, and we gradually became friends.',
+        narrative: 'Before Catherine and long before Mara, Sita was one of the first women I tried to hit on during those early college years. But nothing came of the few dates that followed, and I scurried away in disappointment.',
         music: [
             'In the final chapter of James Joyce\'s',
             {
                 italic: 'Ulysses,'
             },
-            'the narrator\'s thoughts are captured in a flowing stream of consciousness. I used the same approach in this song to capture the torrent of unspoken thoughts rushing through my head as I awkwardly drop Sita off after one of our last dates. The relentless thumping of a Motown beat, representing all that I wished .'
+            'the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after one of our dates. All that I long to express in the moment propels the restless thumping of a Motown beat. Even so, my flustered state takes over, and only a quick exchange of farewells ensues.'
         ]
     },
     lyrics: [
@@ -295,7 +295,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 3,
+            workedHours: 6,
             neededHours: 40,
             subtasks: [
                 {

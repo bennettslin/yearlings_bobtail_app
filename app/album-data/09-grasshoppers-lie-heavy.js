@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Grasshoppers Lie Heavy',
     overviews: {
-        narrative: 'narrative 1',
+        narrative: 'But Sita reached out again after a good while, and we gradually became friends.',
         music: 'personal 1'
     },
     lyrics: [
