@@ -1,13 +1,13 @@
 module.exports = {
     title: 'Good Night, Sita',
     overviews: {
-        narrative: 'Before Catherine and long before Mara, Sita was one of the first women I tried to hit on during those early college years. But nothing came of the few dates that followed, and I scurried away in disappointment.',
+        narrative: 'Before Catherine and long before Mara, Sita was one of the first women I tried to hit on during those early college years. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.',
         music: [
             'In the final chapter of James Joyce\'s',
             {
                 italic: 'Ulysses,'
             },
-            'the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after one of our dates. All that I long to express in the moment propels the restless thumping of a Motown beat. Even so, my flustered state takes over, and only a quick exchange of farewells ensues.'
+            'the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after a date. Meanwhile, the restless thumping of a Motown beat prods me to pour forth all that I long to express. But flustered panic takes over, and instead only brief farewells are exchanged.'
         ]
     },
     lyrics: [
