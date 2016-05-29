@@ -54,7 +54,7 @@ module.exports = {
                         {
                             anchor: 'without once knowing love',
                             annotation: {
-                                description: 'The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision. Logically, this meant that no one can ever be in a relationship, just like no one can ever get a job when every hiring manager is looking for past work experience.'
+                                description: 'The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision. If everyone thought this way, then no one could ever be in a relationship, just like no one would ever find a job if every hiring manager insisted on previous work experience.'
                             }
                         }
                     ]
@@ -94,7 +94,7 @@ module.exports = {
                         {
                             anchor: 'going Dutch',
                             annotation: {
-                                description: 'To go Dutch means to split the cost of a meal. Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This always made me feel inadequate, and comparable to a "sponge" based on my understanding of dating etiquette.'
+                                description: 'To go Dutch means to split the cost of a meal. Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This always made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.'
                             }
                         }
                     ]
@@ -127,8 +127,7 @@ module.exports = {
                     verse: {
                         anchor: 'swept in unchartable tides',
                         annotation: {
-                            description: 'Stencilled above many of the storm drains in the Bay Area is a sign that reads, "No Dumping, Drains to Ocean." As the awkwardness becomes unbearable ',
-                            todo: true
+                            description: 'The constant peril of being steered in directions for which I was not prepared has kept me on edge throughout this date, as usual. But stencilled above a nearby storm drain is a sign that reads, "No Dumping, Drains to Ocean," reminding me that even sponge and barnacle larvae are regularly carried by the current to unknown regions, and they don\'t sweat it.'
                         }
                     }
                 },
@@ -214,11 +213,11 @@ module.exports = {
                             anchor: 'ambrosia beers',
                             annotation: {
                                 description: [
-                                    'Ambrosia was the food of the Greek gods, just as beer was the drink that granted me omnipotence. Also, Ambrose Bierce was a 19th-century writer best known for two works.',
+                                    'Ambrosia was the food of the Greek gods, just as beer was the drink that granted me omnipotence. Also, the 19th-century writer Ambrose Bierce is best known for two works.',
                                     {
                                         italic: 'The Devil\'s Dictionary'
                                     },
-                                    'is a collection of satirical definitions for common words, whose brand of wit and humour I sought to follow at the time. "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed in actuality to have passed in an instant.'
+                                    'is a collection of satirical definitions for common words, whose brand of wit and humour I sought to follow at the time. "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed actually to have passed in an instant.'
                                 ]
                             }
                         }
@@ -418,7 +417,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 6,
+            workedHours: 14,
             neededHours: 40,
             subtasks: [
                 {

@@ -281,7 +281,8 @@ module.exports = {
                                         italic: 'daeva'
                                     },
                                     'in the Avesta refers to a demon.'
-                                ]
+                                ],
+                                todo: 'mention sense great devastation.'
                             }
                         }
                     ]

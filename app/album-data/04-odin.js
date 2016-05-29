@@ -470,7 +470,7 @@ module.exports = {
                         {
                             anchor: 'ruminate on these riddles…',
                             annotation: {
-                                description: 'The "awake" voice in the doublespeaker set echoes my thoughts as I lie in bed, brooding over my ruined chance with Sasha, disheartened by the endless array of paths left to choose, and fearful over the certainty of forever, whether forever is to be spent in life or in death.'
+                                description: 'The "awake" voice in the doublespeaker set echoes my thoughts as I lie in bed, brooding over my ruined chance with Sasha, disheartened by the endless array of paths left to choose, and fearful over the certainty of forever, whether that forever is to be spent in life or in death.'
                             }
                         }
                     ]
