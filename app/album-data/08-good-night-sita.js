@@ -7,7 +7,7 @@ module.exports = {
             {
                 italic: 'Ulysses,'
             },
-            'the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after a date. Meanwhile, the restless thumping of a Motown beat prods me to pour forth all that I long to express. But flustered panic takes over, and instead only brief farewells are exchanged.'
+            'the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after a date. Meanwhile, the restless thumping of a Motown beat insistently prods me to pour forth everything I long to express. But flustered panic takes over, and instead only brief farewells are exchanged.'
         ]
     },
     lyrics: [
@@ -15,7 +15,13 @@ module.exports = {
             [
                 {
                     time: 0,
-                    verse: '"Good night," she says'
+                    verse: {
+                        anchor: '"Good night," she says',
+                        annotation: {
+                            description: '',
+                            todo: true
+                        }
+                    }
                 }
             ],
             [
@@ -25,7 +31,17 @@ module.exports = {
                 },
                 {
                     time: 5,
-                    verse: 'by a gutter gurgling then we\'ll choose'
+                    verse: [
+                        'by a',
+                        {
+                            anchor: 'gutter gurgling',
+                            annotation: {
+                                description: '',
+                                todo: 'gutter next to where we stood'
+                            }
+                        },
+                        'then we\'ll choose'
+                    ]
                 },
                 {
                     time: 7,
@@ -33,7 +49,15 @@ module.exports = {
                 },
                 {
                     time: 9,
-                    verse: 'love first without once knowing love'
+                    verse: [
+                        'love first',
+                        {
+                            anchor: 'without once knowing love',
+                            annotation: {
+                                description: 'The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision. Logically, this meant that no one can ever be in a relationship, just like no one can ever get a job when every hiring manager is looking for past work experience.'
+                            }
+                        }
+                    ]
                 }
             ],
             [
@@ -47,11 +71,33 @@ module.exports = {
                 },
                 {
                     time: 14,
-                    verse: 'for this kid wearing no decoder ring'
+                    verse: [
+                        'for this kid wearing no',
+                        {
+                            anchor: 'decoder ring',
+                            annotation: {
+                                description: 'A secret decoder ring was a toy purchased through mail that allowed children to decipher encrypted messages. It seemed like a handy thing to have on a date, as I was constantly trying to tease out hidden meanings in even the most basic conversations.'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 16,
-                    verse: 'Dutch courage wimped out to going Dutch'
+                    verse: [
+                        {
+                            anchor: 'Dutch courage',
+                            annotation: {
+                                description: 'Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative. Dutch courage refers to misplaced confidence gained from alcohol. Having an older friend who faithfully plied me with cheap twelve-packs, I would down a can or two before heading out on a date.'
+                            }
+                        },
+                        'wimped out to',
+                        {
+                            anchor: 'going Dutch',
+                            annotation: {
+                                description: 'To go Dutch means to split the cost of a meal. Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This always made me feel inadequate, and comparable to a "sponge" based on my understanding of dating etiquette.'
+                            }
+                        }
+                    ]
                 }
             ],
             [
@@ -61,11 +107,30 @@ module.exports = {
                 },
                 {
                     time: 20,
-                    verse: 'nor a barnacle minds'
+                    verse: [
+                        {
+                            anchor: 'nor a barnacle',
+                            annotation: {
+                                description: [
+                                    'Nora Barnacle was James Joyce\'s wife and the inspiration for the character Molly Bloom, whose interior monologue closes out',
+                                    {
+                                        italic: 'Ulysses.'
+                                    }
+                                ]
+                            }
+                        },
+                        'minds'
+                    ]
                 },
                 {
                     time: 22,
-                    verse: 'swept in unchartable tides'
+                    verse: {
+                        anchor: 'swept in unchartable tides',
+                        annotation: {
+                            description: 'Stencilled above many of the storm drains in the Bay Area is a sign that reads, "No Dumping, Drains to Ocean." As the awkwardness becomes unbearable ',
+                            todo: true
+                        }
+                    }
                 },
                 {
                     time: 24,
@@ -73,7 +138,16 @@ module.exports = {
                 },
                 {
                     time: 26,
-                    verse: 'for the innermost matryoshka\'s'
+                    verse: [
+                        'for the',
+                        {
+                            anchor: 'innermost matryoshka\'s',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 28,
@@ -83,15 +157,44 @@ module.exports = {
             [
                 {
                     time: 29,
-                    verse: 'till then crack up another doll'
+                    verse: [
+                        'till then',
+                        {
+                            anchor: 'crack up another doll',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 32,
-                    verse: 'to find the chrysalis unchristened to all'
+                    verse: [
+                        'to find the',
+                        {
+                            anchor: 'chrysalis unchristened',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'to all'
+                    ]
                 },
                 {
                     time: 36,
-                    verse: 'who\'d buy this aping jaw fixed to his skull'
+                    verse: [
+                        'who\'d buy this',
+                        {
+                            anchor: 'aping jaw',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'fixed to his skull'
+                    ]
                 },
                 {
                     time: 40,
@@ -105,7 +208,21 @@ module.exports = {
                 },
                 {
                     time: 47,
-                    verse: 'when defined by ambrosia beers'
+                    verse: [
+                        'when defined by',
+                        {
+                            anchor: 'ambrosia beers',
+                            annotation: {
+                                description: [
+                                    'Ambrosia was the food of the Greek gods, just as beer was the drink that granted me omnipotence. Also, Ambrose Bierce was a 19th-century writer best known for two works.',
+                                    {
+                                        italic: 'The Devil\'s Dictionary'
+                                    },
+                                    'is a collection of satirical definitions for common words, whose brand of wit and humour I sought to follow at the time. "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed in actuality to have passed in an instant.'
+                                ]
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 48,
@@ -287,7 +404,13 @@ module.exports = {
             [
                 {
                     time: 123,
-                    verse: 'I sigh, "Good night."'
+                    verse: {
+                        anchor: 'I sigh, "Good night."',
+                        annotation: {
+                            description: '',
+                            todo: true
+                        }
+                    }
                 }
             ]
         ]
