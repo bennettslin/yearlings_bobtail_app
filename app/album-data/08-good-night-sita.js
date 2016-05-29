@@ -127,13 +127,21 @@ module.exports = {
                     verse: {
                         anchor: 'swept in unchartable tides',
                         annotation: {
-                            description: 'The constant peril of being steered in directions for which I was not prepared has kept me on edge throughout this date, as usual. But stencilled above a nearby storm drain is a sign that reads, "No Dumping, Drains to Ocean," reminding me that even sponge and barnacle larvae are regularly carried by the current to unknown regions, and they don\'t sweat it.'
+                            description: 'The constant peril of being steered in directions for which I wasn\'t prepared has kept me on edge throughout this date, as usual. But stencilled above a nearby storm drain is a sign that reads, "No Dumping, Drains to Ocean," reminding me that even sponge and barnacle larvae are regularly carried by the current to unknown regions, and they don\'t sweat it.'
                         }
                     }
                 },
                 {
                     time: 24,
-                    verse: 'they just always know to pry'
+                    verse: [
+                        'they just',
+                        {
+                            anchor: 'always know to pry',
+                            annotation: {
+                                description: 'After all, my friends who are more adept at dating don\'t seem to sweat the risk of being seen as "sponges" either. They just keep moving forward, curiously pressing for details, the way a starfish pries open barnacles as it glides across the seafloor.'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 26,
@@ -142,8 +150,7 @@ module.exports = {
                         {
                             anchor: 'innermost matryoshka\'s',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Matryoshka dolls are Russian nesting dolls placed one inside another in decreasing size. Lessons learned from mistakes made with one woman could be applied to the next, so each date felt like prying open one doll to get to another, with the hope of eventually reaching the last one that doesn\'t turn out hollow.'
                             }
                         }
                     ]
