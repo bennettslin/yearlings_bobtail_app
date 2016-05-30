@@ -7,7 +7,7 @@ module.exports = {
             {
                 italic: 'Ulysses,'
             },
-            'the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after a date. Meanwhile, the restless thumping of a Motown beat insistently prods me to pour forth everything I long to express. But flustered panic takes over, and instead only brief farewells are exchanged.'
+            'the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after a date. Meanwhile, the restless thumping of a Motown beat insistently prods me to pour forth everything I long to express. But flustered panic takes over, and in the end only farewells are exchanged.'
         ]
     },
     lyrics: [
@@ -150,7 +150,7 @@ module.exports = {
                         {
                             anchor: 'innermost matryoshka\'s',
                             annotation: {
-                                description: 'Matryoshka dolls are Russian nesting dolls placed one inside another in decreasing size. Lessons learned from mistakes made with one woman could be applied to the next, so each date felt like prying open one doll to get to another, with the hope of eventually reaching the last one that doesn\'t turn out hollow.'
+                                description: 'Matryoshka dolls are Russian nesting dolls placed one inside another in decreasing size. Lessons learned from mistakes made with one woman can be applied to the next, so each date felt like prying open one doll to get to another, with the hope of eventually reaching the last one that doesn\'t turn out hollow.'
                             }
                         }
                     ]
@@ -168,8 +168,7 @@ module.exports = {
                         {
                             anchor: 'crack up another doll',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Also in the idiomatic sense of making someone laugh. A friend advised me that if I could keep this up throughout a date, then I would be golden. The problem is that much of my humour at the time was deadpan. (It mostly still is.)'
                             }
                         }
                     ]
@@ -181,8 +180,7 @@ module.exports = {
                         {
                             anchor: 'chrysalis unchristened',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'A chrysalis is a butterfly that has not yet matured into an adult. It seemed that the trick to dating was to look for that rare woman inexperienced enough not to be turned off by my own lack of experience. But what made this even trickier is that every other low-status male out there most certainly had the same idea.'
                             }
                         },
                         'to all'
@@ -195,8 +193,7 @@ module.exports = {
                         {
                             anchor: 'aping jaw',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Piltdown Man was a hoax in which the oversized jaw of an orangutan was attached to the cranium of a modern human and presented as a legitimate paleontological find. I felt like a comparable fraud, given that the things that came out of my mouth exaggerated the volume of things in my head.'
                             }
                         },
                         'fixed to his skull'
@@ -204,7 +201,15 @@ module.exports = {
                 },
                 {
                     time: 40,
-                    verse: 'swaggering down these barren exhibit halls'
+                    verse: [
+                        'swaggering down these barren',
+                        {
+                            anchor: 'exhibit halls',
+                            annotation: {
+                                description: 'My thoughts continually flash back to my first date with Sita at a natural history museum. That day, we started in the hall of marine life, then strolled through various exhibits before making our way to a gallery of Native American cultures.'
+                            }
+                        }
+                    ]
                 }
             ],
             [
@@ -224,7 +229,7 @@ module.exports = {
                                     {
                                         italic: 'The Devil\'s Dictionary'
                                     },
-                                    'is a collection of satirical definitions for common words, whose brand of wit and humour I sought to follow at the time. "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed actually to have passed in an instant.'
+                                    'is a collection of satirical definitions for common words, whose brand of wit and humour I once sought to emulate. "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed to have actually passed in an instant, a literary device that I clearly stole for this song.'
                                 ]
                             }
                         }
@@ -242,7 +247,15 @@ module.exports = {
             [
                 {
                     time: 52,
-                    verse: 'pidgin palaver exchanged'
+                    verse: [
+                        {
+                            anchor: 'pidgin palaver',
+                            annotation: {
+                                description: 'A pidgin is an impromptu means of communication between groups that share no common language, and typically arises to facilitate trade between colonists and natives. It\'s also a pretty good analogy for my date conversations at the time.'
+                            }
+                        },
+                        'exchanged'
+                    ]
                 },
                 {
                     time: 54,
@@ -250,11 +263,27 @@ module.exports = {
                 },
                 {
                     time: 56,
-                    verse: 'hyped up like some disastrous play'
+                    verse: [
+                        'hyped up like some',
+                        {
+                            anchor: 'disastrous play',
+                            annotation: {
+                                description: 'Sita invited me to see a play starring a friend of hers who was a drama major. With the benefit of hindsight, the performance probably wasn\'t bad. My impression of that night was just coloured by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 58,
-                    verse: 'that starts with a lone ringing phone'
+                    verse: [
+                        'that starts with a',
+                        {
+                            anchor: 'lone ringing phone',
+                            annotation: {
+                                description: 'I remember little about the play itself, other than how it opened. As the theatre turned pitch black, the audience fell to a hush. Seconds later, a phone started ringing, and it wasn\'t immediately clear to me that it was coming from the stage.'
+                            }
+                        }
+                    ]
                 }
             ],
             [
@@ -268,7 +297,15 @@ module.exports = {
                 },
                 {
                     time: 64,
-                    verse: 'for if the tactic is to stall'
+                    verse: [
+                        'for if the',
+                        {
+                            anchor: 'tactic is to stall',
+                            annotation: {
+                                description: 'I was advised by friends to wait three days before calling back, and yet it was always agony when Sita did the same. (This is a terrible rule, by the way.)'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 66,
@@ -276,7 +313,17 @@ module.exports = {
                 },
                 {
                     time: 68,
-                    verse: 'what this understudy sought from his number'
+                    verse: [
+                        'what this',
+                        {
+                            anchor: 'understudy sought',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'from his number'
+                    ]
                 },
                 {
                     time: 70,
@@ -290,7 +337,16 @@ module.exports = {
                 },
                 {
                     time: 73,
-                    verse: 'then wise up and learn to shotgun'
+                    verse: [
+                        'then wise up and',
+                        {
+                            anchor: 'learn to shotgun',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 75,
@@ -334,7 +390,16 @@ module.exports = {
                 },
                 {
                     time: 92,
-                    verse: 'hint of sampler cologne'
+                    verse: [
+                        'hint of',
+                        {
+                            anchor: 'sampler cologne',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 }
             ],
             [
@@ -344,11 +409,29 @@ module.exports = {
                 },
                 {
                     time: 96,
-                    verse: 'always rides in single go-karts'
+                    verse: [
+                        'always rides in',
+                        {
+                            anchor: 'single go-karts',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 98,
-                    verse: 'as we wind an endless flowchart'
+                    verse: [
+                        'as we wind an',
+                        {
+                            anchor: 'endless flowchart',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 99,
@@ -358,7 +441,16 @@ module.exports = {
             [
                 {
                     time: 101,
-                    verse: 'and her veggie wishbone\'s'
+                    verse: [
+                        'and her',
+                        {
+                            anchor: 'veggie wishbone\'s',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 103,
@@ -370,7 +462,16 @@ module.exports = {
                 },
                 {
                     time: 107,
-                    verse: 'from a dummy steering wheel'
+                    verse: [
+                        'from a',
+                        {
+                            anchor: 'dummy steering wheel',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 109,
@@ -392,7 +493,17 @@ module.exports = {
                 },
                 {
                     time: 116,
-                    verse: 'as the chirping crosswalks guide'
+                    verse: [
+                        'as the',
+                        {
+                            anchor: 'chirping crosswalks',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'guide'
+                    ]
                 },
                 {
                     time: 118,
