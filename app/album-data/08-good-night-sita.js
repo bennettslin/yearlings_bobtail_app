@@ -229,7 +229,7 @@ module.exports = {
                                     {
                                         italic: 'The Devil\'s Dictionary'
                                     },
-                                    'is a collection of satirical definitions for common words, whose brand of wit and humour I once sought to emulate. "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed to have actually passed in an instant, a literary device that I clearly stole for this song.'
+                                    'is a collection of satirical definitions for common words, whose wit I sought to emulate. "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed to have passed in an instant, whose literary device I clearly stole for this song.'
                                 ]
                             }
                         }
@@ -535,7 +535,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 14,
+            workedHours: 21,
             neededHours: 40,
             subtasks: [
                 {
