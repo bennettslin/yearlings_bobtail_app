@@ -169,7 +169,7 @@ module.exports = {
                         {
                             anchor: 'chrysalis unchristened',
                             annotation: {
-                                description: 'A chrysalis is a butterfly that has not yet matured into an adult. It seemed that the trick to dating was to look for that rare woman inexperienced enough not to be turned off by my own lack of experience. But what made this even trickier is that every other low-status male out there most certainly has the same idea.'
+                                description: 'A chrysalis is a butterfly that has not yet matured into an adult. It seemed that the trick to dating was to look for that rare woman inexperienced enough not to be turned off by my own lack of experience. But what made this even trickier is that every other low-status male out there most certainly had the same idea.'
                             }
                         },
                         'to all'
@@ -542,7 +542,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 21,
+            workedHours: 24,
             neededHours: 40,
             subtasks: [
                 {
