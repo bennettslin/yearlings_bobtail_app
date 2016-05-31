@@ -18,7 +18,7 @@ module.exports = {
                     verse: {
                         anchor: '"Good night," she says',
                         annotation: {
-                            description: 'The song opens with Sita and I awkwardly facing each other as we stand outside the front gate of her boarding house, having just walked back from a date. It\'s early in the evening, as the sky begins to clear from a midday shower.'
+                            description: 'Having just walked Sita back to her boarding house after a date, I face her awkwardly as she stands before the front gate. It\'s early in the evening, with the sky beginning to clear from a midday shower.'
                         }
                     }
                 }
@@ -354,8 +354,7 @@ module.exports = {
                         {
                             anchor: 'breeze through our parts',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'I would recycle my best jokes and wittiest remarks. This made each date feel more like reprising a role as an actor, which in turn lessened the sting of rejection.'
                             }
                         }
                     ]
