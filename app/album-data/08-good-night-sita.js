@@ -18,8 +18,7 @@ module.exports = {
                     verse: {
                         anchor: '"Good night," she says',
                         annotation: {
-                            description: '',
-                            todo: true
+                            description: 'The song opens with Sita and I awkwardly facing each other as we stand outside the front gate of her boarding house, having just walked back from a date. It\'s early in the evening, as the sky begins to clear from a midday shower.'
                         }
                     }
                 }
@@ -31,17 +30,7 @@ module.exports = {
                 },
                 {
                     time: 5,
-                    verse: [
-                        'by a',
-                        {
-                            anchor: 'gutter gurgling',
-                            annotation: {
-                                description: '',
-                                todo: 'gutter next to where we stood'
-                            }
-                        },
-                        'then we\'ll choose'
-                    ]
+                    verse: 'by a gutter gurgling then we\'ll choose'
                 },
                 {
                     time: 7,
@@ -127,7 +116,7 @@ module.exports = {
                     verse: {
                         anchor: 'swept in unchartable tides',
                         annotation: {
-                            description: 'The constant peril of being steered in directions for which I wasn\'t prepared has kept me on edge throughout this date, as usual. But stencilled above a nearby storm drain is a sign that reads, "No Dumping, Drains to Ocean," reminding me that even sponge and barnacle larvae are regularly carried by the current to unknown regions, and they don\'t sweat it.'
+                            description: 'Stencilled above many storm drains in the Bay Area is a sign that reads, "No Dumping, Drains to Ocean." The constant peril of being steered in directions for which I was unprepared has kept me on edge throughout this date, as usual. But a nearby storm drain reminds me that many things, including sponge and barnacle larvae, are regularly carried by the current to unknown regions, and they don\'t sweat it.'
                         }
                     }
                 },
@@ -168,7 +157,7 @@ module.exports = {
                         {
                             anchor: 'crack up another doll',
                             annotation: {
-                                description: 'Also in the idiomatic sense of making someone laugh. A friend advised me that if I could keep this up throughout a date, then I would be golden. The problem is that much of my humour at the time was deadpan. (It mostly still is.)'
+                                description: 'Also in the idiomatic sense of making someone laugh. A friend advised me that if I could keep this up for the entire date, then I would be golden. The problem is that much of my humour at the time was deadpan. (And still is, for the most part.)'
                             }
                         }
                     ]
@@ -180,7 +169,7 @@ module.exports = {
                         {
                             anchor: 'chrysalis unchristened',
                             annotation: {
-                                description: 'A chrysalis is a butterfly that has not yet matured into an adult. It seemed that the trick to dating was to look for that rare woman inexperienced enough not to be turned off by my own lack of experience. But what made this even trickier is that every other low-status male out there most certainly had the same idea.'
+                                description: 'A chrysalis is a butterfly that has not yet matured into an adult. It seemed that the trick to dating was to look for that rare woman inexperienced enough not to be turned off by my own lack of experience. But what made this even trickier is that every other low-status male out there most certainly has the same idea.'
                             }
                         },
                         'to all'
@@ -237,7 +226,15 @@ module.exports = {
                 },
                 {
                     time: 48,
-                    verse: 'in time are seen with a focus grown clear'
+                    verse: [
+                        'in time are seen with',
+                        {
+                            anchor: 'a focus grown clear',
+                            annotation: {
+                                description: 'A few hours into a date, the alcohol\'s effects would wear off, and I would realise that I\'d just constructed an exceedingly flattering picture of myself that would almost certainly topple under greater scrutiny, like a totem pole meticulously carved from individual stumps stacked in a column.'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 50,
@@ -280,7 +277,7 @@ module.exports = {
                         {
                             anchor: 'lone ringing phone',
                             annotation: {
-                                description: 'I remember little about the play itself, other than how it opened. As the theatre turned pitch black, the audience fell to a hush. Seconds later, a phone started ringing, and it wasn\'t immediately clear to me that it was coming from the stage.'
+                                description: 'I remember little about the play itself, other than how it opened. As the theatre turned pitch black, the audience fell to a hush. Seconds later, a phone started ringing, and it wasn\'t immediately clear to me that the sound came from the stage.'
                             }
                         }
                     ]
@@ -318,8 +315,7 @@ module.exports = {
                         {
                             anchor: 'understudy sought',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'In theatre, an understudy learns the lines of a lead performer in order to serve as a replacement on short notice. Dating as a low-status male felt comparable, as I was undertaking all of the preparation yet seeing almost none of the action. In time, I just accepted that I needed to be proactive and branch out in ways that others did not, like a freelancer without steady gigs advertising on a cork board.'
                             }
                         },
                         'from his number'
@@ -342,8 +338,7 @@ module.exports = {
                         {
                             anchor: 'learn to shotgun',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'At some point, I adopted the shotgun method, which involves hitting on anyone at any moment, opportune or otherwise. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one\'s chances overall.'
                             }
                         }
                     ]
@@ -354,7 +349,16 @@ module.exports = {
                 },
                 {
                     time: 77,
-                    verse: 'so we\'ll breeze through our parts'
+                    verse: [
+                        'so we\'ll',
+                        {
+                            anchor: 'breeze through our parts',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 }
             ],
             [
@@ -378,7 +382,17 @@ module.exports = {
             [
                 {
                     time: 86,
-                    verse: 'but died unfinished alas'
+                    verse: [
+                        'but',
+                        {
+                            anchor: 'died unfinished',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'alas'
+                    ]
                 },
                 {
                     time: 88,
@@ -395,8 +409,7 @@ module.exports = {
                         {
                             anchor: 'sampler cologne',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'In those days, I kept a pile of scented strips torn from cologne advertisements found in old magazines. Then right before a date, I would rub several of them on my neck and wrists. Occasionally, I would also walk into a department store and spritz myself with the sample vials on display.'
                             }
                         }
                     ]
@@ -414,8 +427,7 @@ module.exports = {
                         {
                             anchor: 'single go-karts',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'On this most recent date from which I am now walking Sita home, we visited a go-kart raceway. There were twin go-karts available that were mainly intended to seat a parent and child side by side. When I asked Sita if she wanted to ride one together, she politely declined.'
                             }
                         }
                     ]
@@ -427,8 +439,7 @@ module.exports = {
                         {
                             anchor: 'endless flowchart',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'While I never actually drew out a flowchart for how to conduct oneself on a date, I took comfort in believing that such an endeavour was possible, as it would guarantee the best results for any given scenario. Of course, there is a danger that circumstances might trap me in an infinite loop, forcing me to repeat the same sequence of events without end.'
                             }
                         }
                     ]
@@ -446,8 +457,7 @@ module.exports = {
                         {
                             anchor: 'veggie wishbone\'s',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Being a vegetarian, Sita took me to a restaurant that was entirely meat-free, where she ordered a dish that resembled a portion of chicken, complete with sesame-stick wishbone. When we cracked it, Sita got the longer end. I don\'t know what she wished for, but needless to say, my wish didn\'t come true.'
                             }
                         }
                     ]
@@ -467,8 +477,7 @@ module.exports = {
                         {
                             anchor: 'dummy steering wheel',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'The steering wheel on the passenger side of a twin go-kart serves no purpose other than a child\'s imagination. Similarly, I possessed nothing more than the illusion of control on my dates with Sita. I knew this, yet even so, there was too much at stake for me to let go and embrace her spontaneity.'
                             }
                         }
                     ]
@@ -498,8 +507,7 @@ module.exports = {
                         {
                             anchor: 'chirping crosswalks',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'As we stand on the sidewalk outside Sita\'s house, a mechanical cuckoo sound is heard in the distance, indicating to the visually impaired that the street is now safe to cross.'
                             }
                         },
                         'guide'
@@ -524,8 +532,7 @@ module.exports = {
                     verse: {
                         anchor: 'I sigh, "Good night."',
                         annotation: {
-                            description: '',
-                            todo: true
+                            description: 'I walked home that night determined not to let another opportunity pass without confessing to Sita my feelings for her. I did exactly that in a phone call a few days later. It didn\'t turn out well, and we stopped speaking for several months.'
                         }
                     }
                 }
