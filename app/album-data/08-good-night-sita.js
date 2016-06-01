@@ -127,7 +127,7 @@ module.exports = {
                         {
                             anchor: 'always know to pry',
                             annotation: {
-                                description: 'After all, my friends who are more adept at dating don\'t seem to sweat the risk of being seen as "sponges" either. They just keep moving forward, curiously pressing for details, the way a starfish pries open barnacles as it glides across the seafloor.'
+                                description: 'After all, none of my friends sweat the risk of being seen as "sponges" either. They just keep pushing forward, showing curiosity by pressing for details, the way a starfish pries open barnacles as it glides across the seafloor.'
                             }
                         }
                     ]
@@ -139,7 +139,7 @@ module.exports = {
                         {
                             anchor: 'innermost matryoshka\'s',
                             annotation: {
-                                description: 'Matryoshka dolls are Russian nesting dolls placed one inside another in decreasing size. Lessons learned from mistakes made with one woman can be applied to the next, so each date felt like prying open one doll to get to another, with the hope of eventually reaching the last one that doesn\'t turn out hollow.'
+                                description: 'Matryoshkas are Russian nesting dolls placed one inside another in decreasing size. Lessons learned from mistakes made with one woman can be applied to the next, so each date felt like prying open one doll to get to another, with the hope of eventually reaching the last one that doesn\'t turn out hollow.'
                             }
                         }
                     ]
@@ -157,7 +157,7 @@ module.exports = {
                         {
                             anchor: 'crack up another doll',
                             annotation: {
-                                description: 'Also in the idiomatic sense of making someone laugh. A friend advised me that if I could keep this up for the entire date, then I would be golden. The problem is that much of my humour at the time was deadpan. (And still is, for the most part.)'
+                                description: 'Also in the idiomatic sense of making someone laugh. A friend advised me that if I could keep this up for the entire date, then I would be golden. The problem is that much of my humour was deadpan.'
                             }
                         }
                     ]
@@ -218,7 +218,7 @@ module.exports = {
                                     {
                                         italic: 'The Devil\'s Dictionary'
                                     },
-                                    'is a collection of satirical definitions for common words, whose wit I sought to emulate. "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed to have passed in an instant, whose literary device I clearly stole for this song.'
+                                    'is a collection of satirical definitions for common words, whose wit I sought to emulate. "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed to have passed in an instant. Clearly, I stole its literary device for this song.'
                                 ]
                             }
                         }
@@ -231,7 +231,7 @@ module.exports = {
                         {
                             anchor: 'a focus grown clear',
                             annotation: {
-                                description: 'A few hours into a date, the alcohol\'s effects would wear off, and I would realise that I\'d just constructed an exceedingly flattering picture of myself that would almost certainly topple under greater scrutiny, like a totem pole meticulously carved from individual stumps stacked in a column.'
+                                description: 'A few hours into a date, my buzz would wear off, and I would realise that I\'d just constructed an elaborate backstory that could only topple under scrutiny, like a totem pole carved from a stack of stumps rather than a single trunk.'
                             }
                         }
                     ]
@@ -248,7 +248,7 @@ module.exports = {
                         {
                             anchor: 'pidgin palaver',
                             annotation: {
-                                description: 'A pidgin is an impromptu means of communication between groups that share no common language, and typically arises to facilitate trade between colonists and natives. It\'s also a pretty good analogy for my date conversations at the time.'
+                                description: 'A pidgin is an impromptu means of communication between groups that share no common language, and typically arises to facilitate trade between colonists and natives. It\'s also a good analogy for my date conversations at the time.'
                             }
                         },
                         'exchanged'
@@ -265,7 +265,7 @@ module.exports = {
                         {
                             anchor: 'disastrous play',
                             annotation: {
-                                description: 'Sita invited me to see a play starring a friend of hers who was a drama major. With the benefit of hindsight, the performance probably wasn\'t bad. My impression of that night was just coloured by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.'
+                                description: 'Sita invited me to see a play starring a friend of hers who was a drama major. In hindsight, the performance probably wasn\'t bad. My impression was just coloured by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability that night to get a word in edgewise.'
                             }
                         }
                     ]
@@ -277,7 +277,7 @@ module.exports = {
                         {
                             anchor: 'lone ringing phone',
                             annotation: {
-                                description: 'I remember little about the play itself, other than how it opened. As the theatre turned pitch black, the audience fell to a hush. Seconds later, a phone started ringing, and it wasn\'t immediately clear to me that the sound came from the stage.'
+                                description: 'The play began with the theatre going pitch black. After the audience fell to a hush, a phone started ringing, and it wasn\'t immediately clear to me that the sound came from the stage.'
                             }
                         }
                     ]
@@ -315,7 +315,7 @@ module.exports = {
                         {
                             anchor: 'understudy sought',
                             annotation: {
-                                description: 'In theatre, an understudy learns the lines of a lead performer in order to serve as a replacement on short notice. Dating as a low-status male felt comparable, as I was undertaking all of the preparation yet seeing almost none of the action. In time, I just accepted that I needed to be proactive and branch out in ways that others did not, like a freelancer without steady gigs advertising on a cork board.'
+                                description: 'In theatre, an understudy learns the lines of a regular performer in order to serve as a replacement on short notice. Dating as a low-status male felt comparable, as I undertook all of the same preparation yet saw almost none of the action. In time, I came to accept that I needed to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.'
                             }
                         },
                         'from his number'
@@ -354,7 +354,7 @@ module.exports = {
                         {
                             anchor: 'breeze through our parts',
                             annotation: {
-                                description: 'I would recycle my best jokes and wittiest remarks. This made each date feel more like reprising a role as an actor, which in turn lessened the sting of rejection.'
+                                description: 'I would recycle my best jokes and wittiest remarks, which made going on a date feel more like reprising a role as an actor. In turn, the notion that this was all just an act helped lessen the sting of rejection.'
                             }
                         }
                     ]
@@ -386,8 +386,13 @@ module.exports = {
                         {
                             anchor: 'died unfinished',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: [
+                                    'I learned to accept rejection by repurposing it as subject matter for new songs. But it then logically followed that a life filled with rejection can',
+                                    {
+                                        emphasis: 'itself'
+                                    },
+                                    'be a work of art, albeit one that might not be completed before its raw materials run out.'
+                                ]
                             }
                         },
                         'alas'
@@ -408,7 +413,7 @@ module.exports = {
                         {
                             anchor: 'sampler cologne',
                             annotation: {
-                                description: 'In those days, I kept a pile of scented strips torn from cologne advertisements found in old magazines. Then right before a date, I would rub several of them on my neck and wrists. Occasionally, I would also walk into a department store and spritz myself with the sample vials on display.'
+                                description: 'In those days, I kept a pile of scented strips torn from cologne advertisements in old magazines. Then right before a date, I would rub several on my neck and wrists. Other times, I would visit a mall and spritz myself with the sample vials on display.'
                             }
                         }
                     ]
@@ -438,7 +443,7 @@ module.exports = {
                         {
                             anchor: 'endless flowchart',
                             annotation: {
-                                description: 'While I never actually drew out a flowchart for how to conduct oneself on a date, I took comfort in believing that such an endeavour was possible, as it would guarantee the best results for any given scenario. Of course, there is a danger that circumstances might trap me in an infinite loop, forcing me to repeat the same sequence of events without end.'
+                                description: 'While I never actually drew out a flowchart for how to conduct oneself on a date, I took comfort in believing that such an endeavour was possible, as it could then guarantee the best results for any given scenario. Of course, there is the danger of getting trapped in an infinite loop.'
                             }
                         }
                     ]
@@ -476,7 +481,7 @@ module.exports = {
                         {
                             anchor: 'dummy steering wheel',
                             annotation: {
-                                description: 'The steering wheel on the passenger side of a twin go-kart serves no purpose other than a child\'s imagination. Similarly, I possessed nothing more than the illusion of control on my dates with Sita. I knew this, yet even so, there was too much at stake for me to let go and embrace her spontaneity.'
+                                description: 'The steering wheel on the passenger side of a twin go-kart serves no purpose other than a child\'s imagination. Similarly, whatever semblance of control I felt on my dates with Sita was an illusion. I knew this, yet even so, there was too much at stake for me to let go and embrace spontaneity.'
                             }
                         }
                     ]
@@ -541,8 +546,8 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 24,
-            neededHours: 40,
+            workedHours: 27,
+            neededHours: 27,
             subtasks: [
                 {
                     taskName: 'references',
