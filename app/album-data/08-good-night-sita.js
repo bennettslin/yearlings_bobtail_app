@@ -549,16 +549,7 @@ module.exports = {
             workedHours: 27,
             neededHours: 27,
             subtasks: [
-                {
-                    taskName: 'references',
-                    workedHours: 0,
-                    neededHours: 3
-                },
-                {
-                    taskName: 'review',
-                    workedHours: 0,
-                    neededHours: 3
-                }
+
             ]
         },
         {
@@ -566,11 +557,7 @@ module.exports = {
             workedHours: 0,
             neededHours: 0,
             subtasks: [
-                {
-                    taskName: 'concept',
-                    workedHours: 0,
-                    neededHours: 3
-                }
+
             ]
         }
     ]

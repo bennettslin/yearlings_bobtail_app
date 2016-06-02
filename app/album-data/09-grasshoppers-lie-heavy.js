@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Grasshoppers Lie Heavy',
     overviews: {
-        narrative: 'But Sita reached out again after a good while, and we gradually became friends.',
+        narrative: 'After finishing high school, I scampered  But Sita reached out again after a good while, and we gradually became friends.',
         music: 'personal 1'
     },
     lyrics: [
@@ -87,11 +87,15 @@ module.exports = {
             [
                 {
                     time: 77,
-                    verse: '<em>With no sister ship slain by his side,</em>'
+                    verse: {
+                        italic: 'With no sister ship slain by his side,'
+                    }
                 },
                 {
                     time: 87,
-                    verse: '<em>and so off her list, sunken Tirpitz lies.</em>'
+                    verse: {
+                        italic: 'and so off her list, sunken Tirpitz lies.'
+                    }
                 },
                 {
                     time: 77,
@@ -227,18 +231,50 @@ module.exports = {
             [
                 {
                     time: 196,
-                    verse: '…and now you\'re left with no defences. Well, who\'d have guessed this?  You stand unsure. She lures with a tease, "Oh sweetie, you\'re right: you wear your hard-on in a sleeve." So how\'s that compromise?'
-                }
+                    verse: '…and now you\'re left with no defences.'
+                },
+                {
+                    time: 201,
+                    verse: 'Well, who\'d have guessed this?'
+                },
+                {
+                    time: 204,
+                    verse: 'You stand unsure. She lures with a tease,'
+                },
+                {
+                    time: 207,
+                    verse: '"Oh sweetie, you\'re right:'
+                },
+                {
+                    time: 209,
+                    verse: 'you wear your hard-on in a sleeve."'
+                },
+                {
+                    time: 212,
+                    verse: 'So how\'s that compromise?'
+                },
             ],
             [
                 {
                     time: 216,
-                    verse: 'And dude, you love her. When your paws were thrashed sparring with the tide, from your Grace Darling\'s beacon light fell an oar. Let pure lose to pure…'
+                    verse: 'And dude, you love her.'
+                },
+                {
+                    time: 218,
+                    verse: 'When your paws were thrashed sparring with the tide,'
+                },
+                {
+                    time: 221,
+                    verse: 'from your Grace Darling\'s beacon light fell an oar.'
+                },
+                {
+                    time: 225,
+                    verse: 'Let pure lose to pure…'
                 }
             ],
             [
                 {
-                    time: 228,
+                    time: 229,
                     verse: 'You stroke her temples. She gushes as she guides,'
                 },
                 {
@@ -255,16 +291,7 @@ module.exports = {
             workedHours: 0,
             neededHours: 40,
             subtasks: [
-                {
-                    taskName: 'references',
-                    workedHours: 0,
-                    neededHours: 3
-                },
-                {
-                    taskName: 'review',
-                    workedHours: 0,
-                    neededHours: 3
-                }
+
             ]
         },
         {
@@ -272,11 +299,7 @@ module.exports = {
             workedHours: 0,
             neededHours: 0,
             subtasks: [
-                {
-                    taskName: 'concept',
-                    workedHours: 0,
-                    neededHours: 3
-                }
+
             ]
         }
     ]
