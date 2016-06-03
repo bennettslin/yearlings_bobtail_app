@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Grasshoppers Lie Heavy',
     overviews: {
-        narrative: 'After finishing high school, I scampered  But Sita reached out again after a good while, and we gradually became friends.',
+        narrative: 'Upon finishing high school, I scampered off to college in the Bay Area and took a job washing dishes at a cafeteria, which is where I met Sita. After I scared her off, we didn\'t speak for several months, but she eventually reached out again, and we slowly became friends. Through the years, as I continued to suck at dating and through my sputtered attempts to play local shows, Sita provided moral support, though a part of me always wanted more. At some point, Sita started to like me. I\'m still not sure how.',
         music: 'personal 1'
     },
     lyrics: [
@@ -288,7 +288,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 0,
+            workedHours: 6,
             neededHours: 40,
             subtasks: [
 

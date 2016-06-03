@@ -536,7 +536,7 @@ module.exports = {
                     verse: {
                         anchor: 'I sigh, "Good night."',
                         annotation: {
-                            description: 'I walked home that night determined not to let another opportunity pass without confessing to Sita my feelings for her. I did exactly that in a phone call a few days later. It didn\'t turn out well, and we stopped speaking for several months.'
+                            description: 'I walked home that night determined not to let another opportunity pass without confessing to Sita my feelings for her. I did exactly that in a phone call a few days later. It went horribly, and I didn\'t hear from her again for months.'
                         }
                     }
                 }
