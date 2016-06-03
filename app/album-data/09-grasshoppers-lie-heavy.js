@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Grasshoppers Lie Heavy',
     overviews: {
-        narrative: 'Upon finishing high school, I scampered off to college in the Bay Area and took a job washing dishes at a cafeteria, which is where I met Sita. After I scared her off, we didn\'t speak for several months, but she eventually reached out again, and we slowly became friends. Through the years, as I continued to suck at dating and through my sputtered attempts to play local shows, Sita provided moral support, though a part of me always wanted more. At some point, Sita started to like me. I\'m still not sure how.',
+        narrative: 'Upon finishing high school, I scampered off to the Bay Area to work my way through college as a dishwasher, which is how I met Sita. After I scared her off, we didn\'t speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating and through my rough start in playing local shows, Sita gave her moral support, though a part of me always wanted more. At some point, she started to like me back. I\'m still not sure how.',
         music: 'personal 1'
     },
     lyrics: [
