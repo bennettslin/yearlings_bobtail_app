@@ -666,7 +666,7 @@ module.exports = {
                         {
                             anchor: 'can\'t ever return.',
                             annotation: {
-                                description: 'By this point, I was already disillusioned with RI Research anyway, as their letters inexplicably began to take on Christian overtones. It\'s not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.'
+                                description: 'I\'d grown disillusioned with RI Research at this point anyway, as the letters inexplicably began to take on Christian overtones. It\'s not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.'
                             }
                         }
                     ]

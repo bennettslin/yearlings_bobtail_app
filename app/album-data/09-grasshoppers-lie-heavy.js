@@ -11,9 +11,7 @@ module.exports = {
             {
                 italic: 'The Man in the High Castle,'
             },
-            'this song by itself offers a different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being a story within a story, and did so by including internal references in the lyrics to all the other songs on the album.',
-
-            'Musically, I tried to channel Simon and Garfunkel in both form and harmony. '
+            'this song by itself offers a different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being in a story within a story, and did so by including internal references in the lyrics to all the other songs on the album. Musically, I tried to channel Simon and Garfunkel in both form and harmony. '
         ]
     },
     lyrics: [
