@@ -1,8 +1,20 @@
 module.exports = {
     title: 'Grasshoppers Lie Heavy',
     overviews: {
-        narrative: 'Upon finishing high school, I scampered off to the Bay Area to work my way through college as a dishwasher, which is how I met Sita. After I scared her off, we didn\'t speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating, and through my rough start in playing local shows, Sita gave her moral support, though a part of me always wanted more. At some point, she started to like me back. I\'m still not sure how.',
-        music: 'personal 1'
+        narrative: 'Upon finishing high school, I scampered off to the Bay Area to work my way through college as a dishwasher, which is how I met Sita. After I scared her off, we didn\'t speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating, and through my rough start in playing local shows, Sita lent her moral support, though a part of me always wanted more. At some point, she started to like me back. I\'m still not sure how.',
+        music: [
+            'Just as',
+            {
+                italic: 'The Grasshopper Lies Heavy'
+            },
+            'is an alternate history novel within Philip Dick\'s',
+            {
+                italic: 'The Man in the High Castle,'
+            },
+            'this song by itself offers a different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being a story within a story, and did so by including internal references in the lyrics to all the other songs on the album.',
+
+            'Musically, I tried to channel Simon and Garfunkel in both form and harmony. '
+        ]
     },
     lyrics: [
         [
@@ -86,13 +98,13 @@ module.exports = {
             ],
             [
                 {
-                    time: 77,
+                    time: -1,
                     verse: {
                         italic: 'With no sister ship slain by his side,'
                     }
                 },
                 {
-                    time: 87,
+                    time: -1,
                     verse: {
                         italic: 'and so off her list, sunken Tirpitz lies.'
                     }
@@ -288,7 +300,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 6,
+            workedHours: 12,
             neededHours: 40,
             subtasks: [
 
