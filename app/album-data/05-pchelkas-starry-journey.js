@@ -622,7 +622,7 @@ module.exports = {
                         {
                             anchor: 'sorry I bailed,',
                             annotation: {
-                                description: 'By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn\'t a tourist in the land of autism. He wasn\'t at liberty to come and go as he pleased.'
+                                description: 'By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn\'t a tourist in the land of autism. He wasn\'t free to come and go as he pleased.'
                             }
                         },
                         {

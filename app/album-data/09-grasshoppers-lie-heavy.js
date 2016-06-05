@@ -11,7 +11,7 @@ module.exports = {
             {
                 italic: 'The Man in the High Castle,'
             },
-            'this song by itself offers a different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being in a story within a story, and did so by including internal references in the lyrics to all the other songs on the album. Musically, I tried to channel Simon and Garfunkel in both form and harmony. '
+            'this song by itself offers a different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being in a story within a story, and did so by including internal references in the lyrics to all the other songs on the album. Musically, I tried to channel Simon and Garfunkel in both form and harmony.'
         ]
     },
     lyrics: [
@@ -30,8 +30,7 @@ module.exports = {
                             {
                                 anchor: 'pompous autumn waits.',
                                 annotation: {
-                                    description: '',
-                                    todo: true
+                                    description: 'In high school, I soldiered on with the same iffy persona to which I had tied myself years earlier. It just didn\'t seem possible to become a completely different person while surrounded by all the same classmates. But in my head, I was crafting a brand new persona that was raring to go at the earliest opportunity.'
                                 }
                             }
                         ]
