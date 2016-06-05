@@ -622,7 +622,7 @@ module.exports = {
                         {
                             anchor: 'sorry I bailed,',
                             annotation: {
-                                description: 'By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn\'t a tourist in the land of autism. He couldn\'t choose to come and go as he pleased.'
+                                description: 'By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn\'t a tourist in the land of autism. He wasn\'t at liberty to come and go as he pleased.'
                             }
                         },
                         {
@@ -662,15 +662,7 @@ module.exports = {
                 {
                     time: 200,
                     verse: [
-                        'Mushka,',
-                        {
-                            anchor: 'per their bargain,',
-                            annotation: {
-                                description: '',
-                                todo: true
-                            }
-                        },
-                        'I',
+                        'Mushka, per their bargain, I',
                         {
                             anchor: 'can\'t ever return.',
                             annotation: {

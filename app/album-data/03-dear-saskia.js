@@ -327,9 +327,7 @@ module.exports = {
                         {
                             anchor: 'rat turds choked.',
                             annotation: {
-                                // TODO: Mention that Sasha and I dated after the album was made?
-                                description: 'I wasn\'t sure how to end a song about a painful stage of my life that seems comical in retrospect. I decided I was happier to err on the side of humour.',
-                                todo: true
+                                description: 'I wasn\'t sure how to end a song about a painful stage of my life that seems comical in retrospect. I decided I was happier to err on the side of humour.'
                             }
                         }
                     ]

@@ -345,15 +345,7 @@ module.exports = {
                 },
                 {
                     time: 130,
-                    verse: [
-                        {
-                            anchor: 'mistaken for Catholic',
-                            annotation: {
-                                description: 'I had conversations that day that I wouldn\'t have had otherwise, which fed my zeal for sneaking into social worlds centred on ingroup solidarity.'
-                            }
-                        },
-                        'with some smeared ash;'
-                    ]
+                    verse: 'mistaken for Catholic with some smeared ash;'
                 },
                 {
                     time: 136,
@@ -362,8 +354,7 @@ module.exports = {
                         {
                             anchor: 'tragic mask.',
                             annotation: {
-                                description: 'At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. The downside is that in my ongoing quest for noteworthy outcomes, either good or bad, I could never tell whether anything I did was just an act.',
-                                todo: true
+                                description: 'At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. So I always preferred a negative outcome to no outcome, which then made it hard to deny that everything I did was just a stage act.'
                             }
                         }
                     ]
@@ -397,16 +388,7 @@ module.exports = {
                 },
                 {
                     time: 151,
-                    verse: [
-                        '"So',
-                        {
-                            anchor: 'where\'d you attend Mass?"',
-                            annotation: {
-                                description: '',
-                                todo: true
-                            }
-                        }
-                    ]
+                    verse: '"So where\'d you attend Mass?"'
                 }
             ]
         ]
@@ -414,7 +396,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 37,
+            workedHours: 40,
             neededHours: 40,
             subtasks: [
 
