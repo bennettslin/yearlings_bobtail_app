@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Grasshoppers Lie Heavy',
     overviews: {
-        narrative: 'Upon finishing high school, I scampered off to the Bay Area to work my way through college as a dishwasher, which is how I met Sita. After I scared her off, we didn\'t speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating, and through my rough start in playing local shows, Sita lent her moral support, though a part of me always wanted more. At some point, she started to like me back. I\'m still not sure how.',
+        narrative: 'I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn\'t speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating, and through my rough start in playing local shows, Sita lent her moral support, though a part of me always wanted more. At some point, she started to like me back. I\'m still not sure how.',
         music: [
             'Just as',
             {
@@ -20,7 +20,21 @@ module.exports = {
                 {
                     time: 0,
                     verse: {
-                        italic: 'L.A. to the Bay, pompous autumn waits.'
+                        italic: [
+                            {
+                                anchor: 'L.A. to the Bay,',
+                                annotation: {
+                                    description: 'After high school, I hightailed it out of Los Angeles to attend college in the Bay Area.'
+                                }
+                            },
+                            {
+                                anchor: 'pompous autumn waits.',
+                                annotation: {
+                                    description: '',
+                                    todo: true
+                                }
+                            }
+                        ]
                     }
                 }
             ],
@@ -35,11 +49,29 @@ module.exports = {
                 },
                 {
                     time: 14,
-                    verse: 'and their molls perched on pedestals,'
+                    verse: [
+                        'and their',
+                        {
+                            anchor: 'molls perched on pedestals,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 17,
-                    verse: 'noses in penny dreadfuls.'
+                    verse: [
+                        'noses in',
+                        {
+                            anchor: 'penny dreadfuls.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 19,
@@ -47,36 +79,108 @@ module.exports = {
                 },
                 {
                     time: 22,
-                    verse: 'death of dull dishroom days'
+                    verse: [
+                        'death of',
+                        {
+                            anchor: 'dull dishroom days',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 24,
-                    verse: 'stalled by keys left on dumbwaiter trays.'
+                    verse: [
+                        'stalled by',
+                        {
+                            anchor: 'keys left on dumbwaiter trays.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 }
             ],
             [
                 {
                     time: 29,
-                    verse: 'Down the steps to fetch her lancet pen,'
+                    verse: [
+                        'Down the steps to',
+                        {
+                            anchor: 'fetch her lancet pen,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 34,
-                    verse: 'and stunned, by reflex you asked.'
+                    verse: [
+                        'and stunned, by',
+                        {
+                            anchor: 'reflex you asked.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 38,
-                    verse: 'At first she hedged, but then laying qualms to rest:'
+                    verse: [
+                        'At first she hedged, but then',
+                        {
+                            anchor: 'laying qualms to rest:',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 43,
-                    verse: 'schwa stickers attached to your sci-fi paperback.'
+                    verse: [
+                        {
+                            anchor: 'schwa stickers',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'attached to your sci-fi paperback.'
+                    ]
                 }
             ],
             [
                 {
                     time: 48,
-                    verse: 'First date nosebleed spurs tales of bare-knuckle defeats…'
-                },
+                    verse: [
+                        {
+                            anchor: 'First date nosebleed',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'spurs tales of',
+                        {
+                            anchor: 'bare-knuckle defeats…',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
+                }
+            ],
+            [
                 {
                     time: 58,
                     verse: 'Snowflakes in time come to see off the year.'
@@ -87,7 +191,17 @@ module.exports = {
                 },
                 {
                     time: 67,
-                    verse: 'Her show played in mimes, but you pleaded to hear.'
+                    verse: [
+                        'Her',
+                        {
+                            anchor: 'show played in mimes,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'but you pleaded to hear.'
+                    ]
                 },
                 {
                     time: 72,
@@ -172,7 +286,9 @@ module.exports = {
                 {
                     time: 135,
                     verse: 'She locks your arm. Key turned, returned to your guard…'
-                },
+                }
+            ],
+            [
                 {
                     time: 144,
                     verse: 'In her gingerbread prison, here now you submit.'

@@ -662,7 +662,15 @@ module.exports = {
                 {
                     time: 200,
                     verse: [
-                        'Mushka, per their bargain, I',
+                        'Mushka,',
+                        {
+                            anchor: 'per their bargain,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'I',
                         {
                             anchor: 'can\'t ever return.',
                             annotation: {

@@ -506,7 +506,13 @@ module.exports = {
                 },
                 {
                     time: 190,
-                    verse: '—I\'m not sad!'
+                    verse: {
+                        anchor: '—I\'m not sad!',
+                        annotation: {
+                            description: '',
+                            todo: true
+                        }
+                    }
                 }
             ]
         ]

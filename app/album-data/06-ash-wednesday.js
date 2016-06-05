@@ -362,7 +362,8 @@ module.exports = {
                         {
                             anchor: 'tragic mask.',
                             annotation: {
-                                description: 'At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. The downside is that in my ongoing quest for noteworthy outcomes, either good or bad, I could never tell whether anything I did was just an act.'
+                                description: 'At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. The downside is that in my ongoing quest for noteworthy outcomes, either good or bad, I could never tell whether anything I did was just an act.',
+                                todo: true
                             }
                         }
                     ]
