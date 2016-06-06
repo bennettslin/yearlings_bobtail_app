@@ -141,7 +141,7 @@ module.exports = {
                         {
                             anchor: 'sci-fi paperback.',
                             annotation: {
-                                description: 'I always brought along a book to read during the long stretches in each shift when there wasn\'t much to do. Sita was clearly hesitant to say yes to me, but I think ',
+                                description: 'I always brought along a book to read during the long stretches in each shift when there wasn\'t much to do. Sita was hesitant to say yes to me, but my taste in literature, along with my familiarity with popular culture, ultimately reassured her  ',
                                 todo: true
                             }
                         }
@@ -201,16 +201,45 @@ module.exports = {
                 {
                     time: -1,
                     verse: {
-                        italic: 'and so off her list, sunken Tirpitz lies.'
+                        italic: [
+                            'and so off her list,',
+                            {
+                                anchor: 'sunken Tirpitz',
+                                annotation: {
+                                    description: '',
+                                  todo: true
+                                }
+                            },
+                            'lies.'
+                        ]
                     }
                 },
                 {
                     time: 77,
-                    verse: 'Alone his first gig, stagefright ignites.'
+                    verse: [
+                        'Alone his first gig,',
+                        {
+                            anchor: 'stagefright ignites.',
+                            annotation: {
+                                description: '',
+                              todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 87,
-                    verse: 'But no convert\'s missed, once assured his tithe.'
+                    verse: [
+                        'But',
+                        {
+                            anchor: 'no convert\'s missed,',
+                            annotation: {
+                                description: '',
+                              todo: true
+                            }
+                        },
+                        'once assured his tithe.'
+                    ]
                 }
             ],
             [
@@ -397,7 +426,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 12,
+            workedHours: 19,
             neededHours: 40,
             subtasks: [
 
