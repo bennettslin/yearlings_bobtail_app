@@ -134,14 +134,14 @@ module.exports = {
                         {
                             anchor: 'Schwa stickers',
                             annotation: {
-                                description: 'Schwa is the underground artwork of William Barker. In the late 90s, his ovoid alien heads were popping up on posters and utility poles everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
+                                description: 'Schwa is the underground artwork of William Barker. In the late 90s, his ovoid alien heads started popping up on posters and utility poles everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
                             }
                         },
                         'attached to your',
                         {
                             anchor: 'sci-fi paperback.',
                             annotation: {
-                                description: 'I was heavily into ',
+                                description: 'I always brought along a book to read during the long stretches in each shift when there wasn\'t much to do. Sita was clearly hesitant to say yes to me, but I think ',
                                 todo: true
                             }
                         }
