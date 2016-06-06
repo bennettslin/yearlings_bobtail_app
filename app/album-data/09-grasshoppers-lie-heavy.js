@@ -93,7 +93,7 @@ module.exports = {
                         {
                             anchor: 'keys left on dumbwaiter trays.',
                             annotation: {
-                                description: 'In the cafeteria, students bussed their trays on a vertical conveyor belt, which then transported the dirty dishes to the dishroom one floor below. Occasionally someone would leave their keys on the tray by accident, and would come downstairs to retrieve them. The crew always got a kick when that happened, as it broke up the monotony.'
+                                description: 'Students bussed their trays on a vertical conveyor belt, which then transported the dirty dishes to the dishroom one floor below. Occasionally someone would leave their keys on the tray by accident, and would come downstairs to retrieve them. The crew always got a kick when that happened, as it broke up the monotony.'
                             }
                         }
                     ]
@@ -107,8 +107,7 @@ module.exports = {
                         {
                             anchor: 'fetch her lancet pen,',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Being hypoglycemic, Sita regularly checked her blood sugar level before meals by pricking a finger with a lancing device. That day, she forgot to take it with her before bussing her tray, and came to the dishroom to retrieve it.'
                             }
                         }
                     ]
@@ -120,36 +119,32 @@ module.exports = {
                         {
                             anchor: 'reflex you asked.',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'After handing Sita her lancing device, I asked her out on a date, guided purely by impulse.'
                             }
                         }
                     ]
                 },
                 {
                     time: 38,
-                    verse: [
-                        'At first she hedged, but then',
-                        {
-                            anchor: 'laying qualms to rest:',
-                            annotation: {
-                                description: '',
-                                todo: true
-                            }
-                        }
-                    ]
+                    verse: 'At first she hedged, but then laying qualms to rest:'
                 },
                 {
                     time: 43,
                     verse: [
                         {
-                            anchor: 'schwa stickers',
+                            anchor: 'Schwa stickers',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Schwa is the underground artwork of William Barker. In the late 90s, his ovoid alien heads were popping up on posters and utility poles everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
                             }
                         },
-                        'attached to your sci-fi paperback.'
+                        'attached to your',
+                        {
+                            anchor: 'sci-fi paperback.',
+                            annotation: {
+                                description: 'I was heavily into ',
+                                todo: true
+                            }
+                        }
                     ]
                 }
             ],
