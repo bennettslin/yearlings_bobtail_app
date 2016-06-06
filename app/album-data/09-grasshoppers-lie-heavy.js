@@ -53,8 +53,7 @@ module.exports = {
                         {
                             anchor: 'molls perched on pedestals,',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'Gun molls were the female companions of American gangsters in the early 1900s. In the same way that society viewed their exploits, I simultaneously desired and feared the girls who dated the boys who bullied me. Their contempt was certainly tougher to stomach.'
                             }
                         }
                     ]
@@ -66,8 +65,7 @@ module.exports = {
                         {
                             anchor: 'penny dreadfuls.',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'In 19th-century England, a new market emerged for sensational fiction published in cheap paperbacks, derided by the highbrow as penny dreadfuls.'
                             }
                         }
                     ]
@@ -83,8 +81,7 @@ module.exports = {
                         {
                             anchor: 'dull dishroom days',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'I got a job washing dishes in a cafeteria on campus, reasoning that it freed me to write song lyrics in my head for hours on end. Which was indeed the case, but I was also bored a lot as well.'
                             }
                         }
                     ]
@@ -96,8 +93,7 @@ module.exports = {
                         {
                             anchor: 'keys left on dumbwaiter trays.',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'In the cafeteria, students bussed their trays on a vertical conveyor belt, which then transported the dirty dishes to the dishroom one floor below. Occasionally someone would leave their keys on the tray by accident, and would come downstairs to retrieve them. The crew always got a kick when that happened, as it broke up the monotony.'
                             }
                         }
                     ]
