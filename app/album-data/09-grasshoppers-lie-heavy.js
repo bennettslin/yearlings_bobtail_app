@@ -81,7 +81,7 @@ module.exports = {
                         {
                             anchor: 'dull dishroom days',
                             annotation: {
-                                description: 'I got a job washing dishes in a cafeteria on campus, reasoning that it freed me to write song lyrics in my head for hours on end. Which was indeed the case, but I was also bored a lot as well.'
+                                description: 'I got a job washing dishes in a cafeteria on campus, which allowed me to sit and read for decent stretches of time, and to work on song lyrics in my head when it got busy. But I was bored a lot as well.'
                             }
                         }
                     ]
@@ -119,7 +119,7 @@ module.exports = {
                         {
                             anchor: 'reflex you asked.',
                             annotation: {
-                                description: 'After handing Sita her lancing device, I asked her out on a date, guided purely by impulse.'
+                                description: 'After handing Sita her lancing device, I made small talk for a bit before asking her out on a date, guided mostly by impulse.'
                             }
                         }
                     ]
@@ -134,15 +134,14 @@ module.exports = {
                         {
                             anchor: 'Schwa stickers',
                             annotation: {
-                                description: 'Schwa is the underground artwork of William Barker. In the late 90s, his ovoid alien heads started popping up on posters and utility poles everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
+                                description: 'Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads started popping up on posters and utility poles everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
                             }
                         },
                         'attached to your',
                         {
                             anchor: 'sci-fi paperback.',
                             annotation: {
-                                description: 'I always brought along a book to read during the long stretches in each shift when there wasn\'t much to do. Sita was hesitant to say yes to me, but my taste in literature, along with my familiarity with popular culture, ultimately reassured her  ',
-                                todo: true
+                                description: 'It was well known to the students that we hired our dishroom workers through a vocational rehabilitation program. For this reason, along with being unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my bookish tastes ultimately reassured her.'
                             }
                         }
                     ]
@@ -156,8 +155,7 @@ module.exports = {
                         {
                             anchor: 'bare-knuckle defeats…',
                             annotation: {
-                                description: '',
-                                todo: true
+                                description: 'After getting a nosebleed on the first date, I recounted past fights that ended with me getting a bloody nose. Sita seemed intrigued by my rough-and-tumble past, even as I was honest that these were literal beatdowns in which I never threw a single punch.'
                             }
                         }
                     ]
