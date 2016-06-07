@@ -65,7 +65,8 @@ module.exports = {
                         {
                             anchor: 'penny dreadfuls.',
                             annotation: {
-                                description: 'In 19th-century England, a new market emerged for sensational fiction published in cheap paperbacks, derided by the highbrow as penny dreadfuls.'
+                                description: 'In 19th-century England, a new market emerged for sensational fiction published in cheap paperbacks, derided by the highbrow as penny dreadfuls.',
+                                todo: ''
                             }
                         }
                     ]
@@ -126,7 +127,15 @@ module.exports = {
                 },
                 {
                     time: 38,
-                    verse: 'At first she hedged, but then laying qualms to rest:'
+                    verse: [
+                        'At first she hedged, but then',
+                        {
+                            anchor: 'laying qualms to rest:',
+                            annotation: {
+                                description: 'It was well known to the students that the dishroom workers were hired through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and seeming familiarity with underground culture ultimately won her over.'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 43,
@@ -134,16 +143,10 @@ module.exports = {
                         {
                             anchor: 'Schwa stickers',
                             annotation: {
-                                description: 'Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads started popping up on posters and utility poles everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
+                                description: 'Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on posters and utility poles everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
                             }
                         },
-                        'attached to your',
-                        {
-                            anchor: 'sci-fi paperback.',
-                            annotation: {
-                                description: 'It was well known to the students that we hired our dishroom workers through a vocational rehabilitation program. For this reason, along with being unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my bookish tastes ultimately reassured her.'
-                            }
-                        }
+                        'attached to your sci-fi paperback.'
                     ]
                 }
             ],
@@ -204,8 +207,13 @@ module.exports = {
                             {
                                 anchor: 'sunken Tirpitz',
                                 annotation: {
-                                    description: '',
-                                  todo: true
+                                    description: [
+                                        'The Bismarck and the Tirpitz were sister battleships of the German navy in World War II.',
+                                        {
+                                            italic: 'The Man in the High Castle'
+                                        },
+                                        'is an alternate history novel in which the Axis powers won the war.'
+                                    ]
                                 }
                             },
                             'lies.'
@@ -219,8 +227,7 @@ module.exports = {
                         {
                             anchor: 'stagefright ignites.',
                             annotation: {
-                                description: '',
-                              todo: true
+                                description: 'Shortly after Sita and I stopped talking, I began to play open mic nights. In time, I figured out just the right amount of alcohol to conquer my stagefright.'
                             }
                         }
                     ]
@@ -424,7 +431,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 19,
+            workedHours: 22,
             neededHours: 40,
             subtasks: [
 
