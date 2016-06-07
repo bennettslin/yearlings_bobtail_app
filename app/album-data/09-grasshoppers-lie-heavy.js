@@ -408,7 +408,17 @@ module.exports = {
                 },
                 {
                     time: 221,
-                    verse: 'from your Grace Darling\'s beacon light fell an oar.'
+                    verse: [
+                        'from your',
+                        {
+                            anchor: 'Grace Darling\'s beacon',
+                            annotation: {
+                                description: '',
+                              todo: true
+                            }
+                        },
+                        'light fell an oar.'
+                    ]
                 },
                 {
                     time: 225,
