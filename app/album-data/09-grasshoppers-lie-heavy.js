@@ -254,7 +254,15 @@ module.exports = {
                 },
                 {
                     time: 98,
-                    verse: 'Tonight, just sour grapes, bitter sweets'
+                    verse: [
+                        'Tonight, just',
+                        {
+                            anchor: 'sour grapes, bitter sweets',
+                            annotation: {
+                                description: 'At the end of each shift, I would scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, I would head to the dining area to find only the dried-out and picked-over scraps that no one else wanted.'
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 101,
@@ -266,21 +274,58 @@ module.exports = {
                 },
                 {
                     time: 106,
-                    verse: 'Phantom limbs trip left and right'
+                    verse: [
+                        {
+                            anchor: 'Phantom limbs',
+                            annotation: {
+                                description: 'A phantom limb is the sensation of an amputated lim',
+                                todo: true
+                            }
+                        },
+                        'trip left and right'
+                    ]
                 },
                 {
                     time: 108,
-                    verse: 'them tripped on runner\'s high.'
+                    verse: [
+                        'them',
+                        {
+                            anchor: 'tripped on runner\'s high.',
+                            annotation: {
+                                description: 'A runner\'s high is a feeling of euphoria experienced through aerobic exercise. I would often need to drink ',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 110,
-                    verse: 'Below the window of your Walkman you hide.'
+                    verse: [
+                        'Below the',
+                        {
+                            anchor: 'window of your Walkman',
+                            annotation: {
+                                description: 'The Walkman was a portable cassette player.',
+                                todo: true
+                            }
+                        },
+                        'you hide.'
+                    ]
                 }
             ],
             [
                 {
                     time: 115,
-                    verse: 'Your gate code punched, when a looming shadow nears,'
+                    verse: [
+                        'Your gate code punched, when a',
+                        {
+                            anchor: 'looming shadow nears,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 120,
@@ -292,7 +337,16 @@ module.exports = {
                 },
                 {
                     time: 130,
-                    verse: '"Hey, you know you\'re my password?"'
+                    verse: [
+                        '"Hey, you know',
+                        {
+                            anchor: 'you\'re my password?"',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 132,
@@ -308,7 +362,17 @@ module.exports = {
             [
                 {
                     time: 144,
-                    verse: 'In her gingerbread prison, here now you submit.'
+                    verse: [
+                        'In her',
+                        {
+                            anchor: 'gingerbread prison,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'here now you submit.'
+                    ]
                 },
                 {
                     time: 149,
@@ -320,7 +384,16 @@ module.exports = {
                 },
                 {
                     time: 158,
-                    verse: '"Shall I leave you," she says, "here to Philip Dick?"'
+                    verse: [
+                        '"Shall I leave you," she says,',
+                        {
+                            anchor: '"here to Philip Dick?"',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 }
             ],
             [
@@ -441,7 +514,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 22,
+            workedHours: 25,
             neededHours: 40,
             subtasks: [
 
