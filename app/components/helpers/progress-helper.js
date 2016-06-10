@@ -1,13 +1,13 @@
 module.exports = {
 
-    getMaxTotalNeededHoursFromSongs: function(songs = []) {
+    getMaxTotalNeededHoursFromSongs(songs = []) {
         return songs.reduce((maxTotalNeededHours, song) => {
             const totalNeededHours = this.calculateSumTask(song.tasks).neededHours;
             return Math.max(totalNeededHours, maxTotalNeededHours);
         }, 0);
     },
 
-    getMaxTotalNeededHoursFromTasks: function(tasks = []) {
+    getMaxTotalNeededHoursFromTasks(tasks = []) {
         return tasks.reduce((maxTotalNeededHours, task) => {
             let maxFromTask = task.neededHours;
 
@@ -20,7 +20,7 @@ module.exports = {
         }, 0);
     },
 
-    calculateSumTask: function(tasks = []) {
+    calculateSumTask(tasks = []) {
         const sumTask = {
                 workedHours: 0,
                 neededHours: 0
@@ -43,7 +43,7 @@ module.exports = {
         }
     },
 
-    calculateSumAllTasks: function(allTasks = []) {
+    calculateSumAllTasks(allTasks = []) {
         const sumAllTasks = {
                 workedHours: 0,
                 neededHours: 0
@@ -54,7 +54,7 @@ module.exports = {
         }, sumAllTasks);
     },
 
-    _addTwoTasks: function(task1 = {}, task2 = {}) {
+    _addTwoTasks(task1 = {}, task2 = {}) {
         return {
             workedHours: (task1.workedHours || 0) +
                 (task2.workedHours || 0),
@@ -63,7 +63,7 @@ module.exports = {
         };
     },
 
-    _getRemainingTimeFromHours: function(hours = 0) {
+    _getRemainingTimeFromHours(hours = 0) {
         /**
          * Assume 3 hours per weekday, and 15 hours per weekend.
          * So each week is 30 hours, so on average each day is
@@ -84,7 +84,7 @@ module.exports = {
         };
     },
 
-    getRemainingTimeStringFromHours: function(hours = 0) {
+    getRemainingTimeStringFromHours(hours = 0) {
         const remainingTimeObject = this._getRemainingTimeFromHours(hours),
             months = remainingTimeObject.months,
             weeks = remainingTimeObject.weeks,

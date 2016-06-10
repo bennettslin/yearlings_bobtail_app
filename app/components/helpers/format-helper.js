@@ -3,27 +3,54 @@ module.exports = {
      * Converts anchor tag text into annotation header.
      * FIXME: Kind of wonky still. Fix once a testing suite is implemented.
      */
-    getFormattedAnnotationTitle: function(text = '') {
-
+    getFormattedAnnotationTitle(text = '') {
         if (typeof text === 'object') {
             text = this._getStringFromObject(text);
         }
 
+        text = this._getDeletedSpecialCharactersText(text);
+        text = this._getDeletedLoneDoubleQuoteText(text);
+
+        return text;
+    },
+
+    _getDeletedSpecialCharactersText(text) {
+        // Eliminate all special characters at beginning...
         if (this._hasSpecialCharacterAtIndex(text, 0)) {
-            text = text.slice(1);
-        }
+            text = this._getDeletedSpecialCharactersText(text.slice(1));
 
-        if (this._hasSpecialCharacterAtIndex(text, text.length - 1)) {
-            text = text.slice(0, text.length - 1);
+        // ... and at end.
+        } else if (this._hasSpecialCharacterAtIndex(text, text.length - 1)) {
+            text = this._getDeletedSpecialCharactersText(text.slice(0, text.length - 1));
 
-        } else if (this._hasSpecialCharacterAtIndex(text, text.length - 2)) {
-            text = text.slice(0, text.length - 2) + text.slice(text.length - 1);
+        // Also eliminate special character right before a double quote.
+        } else if (this._hasDoubleQuoteAtIndex(text, text.length - 1) &&
+                   this._hasSpecialCharacterAtIndex(text, text.length - 2)) {
+            text = this._getDeletedSpecialCharactersText(text.slice(0, text.length - 2) + text.slice(text.length - 1));
+
         }
 
         return text;
     },
 
-    _hasSpecialCharacterAtIndex: function(text, index) {
+    _getDeletedLoneDoubleQuoteText(text) {
+        /**
+         * Note that this only knows how to differentiate between one double
+         * quote versus two.
+         */
+        const firstDoubleQuoteIndex = text.indexOf('"'),
+            lastDoubleQuoteIndex = text.lastIndexOf('"');
+
+        return (firstDoubleQuoteIndex === lastDoubleQuoteIndex) ?
+            text.replace('"', '') : text;
+    },
+
+    _hasDoubleQuoteAtIndex(text, index) {
+        const indexedChar = text.charAt(index);
+        return indexedChar === '"';
+    },
+
+    _hasSpecialCharacterAtIndex(text, index) {
         const indexedChar = text.charAt(index);
         if (index === 0) {
             return indexedChar === '—';
@@ -38,7 +65,7 @@ module.exports = {
         }
     },
 
-    _getStringFromObject: function(text) {
+    _getStringFromObject(text) {
 
         if (Array.isArray(text)) {
             /**
@@ -47,7 +74,7 @@ module.exports = {
              * M ("Bobtail's words"), but we may want to revisit this in the
              * future.
              */
-            return text.reduce((textString, textObject) => {
+            return text.reduce((textString, textObject, index) => {
                 return textString + this._getStringFromObject(textObject);
             }, '');
 

@@ -3,7 +3,7 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 module.exports = {
 
-    getTransitionGroupWrappedElement: function(element, transitionName) {
+    getTransitionGroupWrappedElement(element, transitionName) {
         return (
             <CSSTransitionGroup
                 className="popup-transition-group"

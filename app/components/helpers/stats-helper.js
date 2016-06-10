@@ -1,10 +1,10 @@
 module.exports = {
 
-    getCount: function(richTextObject = {}) {
+    getCount(richTextObject = {}) {
         return Object.keys(richTextObject).length;
     },
 
-    getTodoCount: function(richTextObject = {}) {
+    getTodoCount(richTextObject = {}) {
         const objectKeys = Object.keys(richTextObject);
 
         return objectKeys.reduce((todoCount, objectKey) => {
@@ -12,7 +12,7 @@ module.exports = {
         }, 0);
     },
 
-    getSumOfTotalWords: function(richTextObject = {}) {
+    getSumOfTotalWords(richTextObject = {}) {
         const objectKeys = Object.keys(richTextObject);
 
         return objectKeys.reduce((wordCount, objectKey) => {
@@ -22,7 +22,7 @@ module.exports = {
         }, 0);
     },
 
-    getTotalWords: function(richText = '') {
+    getTotalWords(richText = '') {
         if (richText instanceof Array) {
             return richText.reduce((wordCount, richTextValue) => {
                 return wordCount + this.getTotalWords(richTextValue);

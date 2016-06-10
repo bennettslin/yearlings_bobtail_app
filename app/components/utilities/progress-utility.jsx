@@ -3,7 +3,7 @@ import ProgressHelper from '../helpers/progress-helper.js';
 
 module.exports = {
 
-    getProgressFooterContent: function(sumTask = 0, fontSize = 1) {
+    getProgressFooterContent(sumTask = 0, fontSize = 1) {
         const workedHours = sumTask.workedHours,
             neededHours = sumTask.neededHours,
             remainingHours = neededHours - workedHours,

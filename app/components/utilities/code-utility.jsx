@@ -6,7 +6,7 @@ module.exports = {
     /**
      * Returns a block of coloured dots.
      */
-    getDotsBlock: function(codesObject = {}) {
+    getDotsBlock(codesObject = {}) {
         return (
             <span className="dots-block">
                 {ANCHOR_CODES.filter(code => {

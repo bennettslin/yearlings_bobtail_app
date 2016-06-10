@@ -2,7 +2,7 @@ module.exports = {
     /**
      * Separate annotations.
      */
-    prepareAlbumObject: function(albumObject = {}) {
+    prepareAlbumObject(albumObject = {}) {
         albumObject.songs.forEach(song => {
             let annotations = [];
             this._parseLyricElement(song.lyrics, annotations);
@@ -15,7 +15,7 @@ module.exports = {
     /**
      * Recurse until object with anchor key is found.
      */
-    _parseLyricElement: function(lyricElement = [], annotations) {
+    _parseLyricElement(lyricElement = [], annotations) {
         if (Array.isArray(lyricElement)) {
             lyricElement.forEach(newLyricElement => {
                 this._parseLyricElement(newLyricElement, annotations);
@@ -37,7 +37,7 @@ module.exports = {
         }
     },
 
-    _prepareAnnotation: function(lyricObject = {}, annotations = []) {
+    _prepareAnnotation(lyricObject = {}, annotations = []) {
         // Add annotation index to lyrics. 1-based index.
         lyricObject.annotationIndex = annotations.length + 1;
 

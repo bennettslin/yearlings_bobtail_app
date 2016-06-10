@@ -6,7 +6,7 @@ module.exports = {
     /**
      * Returns a single element containing nested elements.
      */
-    getFormattedTextElement: function(isLyric, text, clickHandler, index, nestedIndex) {
+    getFormattedTextElement(isLyric, text, clickHandler, index, nestedIndex) {
         index = index || 0;
         nestedIndex = nestedIndex || 0;
 
@@ -27,7 +27,7 @@ module.exports = {
     /**
      * Returns a single element wrapped in a span, italic, or anchor tag.
      */
-    _getTaggedTextContent: function(isLyric, text, clickHandler, index, nestedIndex) {
+    _getTaggedTextContent(isLyric, text, clickHandler, index, nestedIndex) {
         if (typeof text === 'string' || text.noSpace) {
             /**
              * Subsequent spans of text on a line will begin with a space,
@@ -64,7 +64,7 @@ module.exports = {
         }
     },
 
-    _getSpacedTextString: function(isLyric, text, noSpace) {
+    _getSpacedTextString(isLyric, text, noSpace) {
         const firstSpace = (noSpace ? '' : ' ');
 
         // Add nonbreaking space between last two words if it's a lyric.
