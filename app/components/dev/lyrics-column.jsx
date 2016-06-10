@@ -7,7 +7,7 @@ const defaultProps = {
     handleAnnotationSelect() {}
 };
 
-class LyricColumn extends React.Component {
+class LyricsColumn extends React.Component {
 
     _getStanzaElement(stanzaArray, stanzaIndex) {
         // A "stanza" wraps a block of text.
@@ -72,5 +72,5 @@ class LyricColumn extends React.Component {
     }
 }
 
-LyricColumn.defaultProps = defaultProps;
-export default LyricColumn;
+LyricsColumn.defaultProps = defaultProps;
+export default LyricsColumn;

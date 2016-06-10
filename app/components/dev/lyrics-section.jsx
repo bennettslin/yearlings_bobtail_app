@@ -1,5 +1,5 @@
 import React from 'react';
-import LyricColumn from './lyric-column.jsx';
+import LyricsColumn from './lyrics-column.jsx';
 
 const defaultProps = {
     selectedSongLyrics: '',
@@ -13,7 +13,7 @@ class LyricsSection extends React.Component {
             isDoublespeaker = props.selectedSongLyrics.length > 1,
             lyricsColumns = props.selectedSongLyrics.map((lyrics, index) => {
                 return (
-                    <LyricColumn
+                    <LyricsColumn
                         key={index}
                         columnKey={isDoublespeaker ? (index === 0 ? 'left' : 'right') : null}
                         selectedSongLyrics={lyrics}

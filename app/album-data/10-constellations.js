@@ -90,12 +90,12 @@ module.exports = {
                     time: 19,
                     lyric: [
                         {
-                            anchor: 'Walkyriens:',
+                            anchor: 'Walkyriens!',
                             annotation: {
                                 description: 'Backtrack to earlier that night. We buy the Robitussin from a Walgreens pharmacy. Also, the Valkyries in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.'
                             }
                         },
-                        'to',
+                        'To',
                         {
                             anchor: 'Walhall o\'',
                             annotation: {

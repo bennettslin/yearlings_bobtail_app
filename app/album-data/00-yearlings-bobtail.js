@@ -46,12 +46,24 @@ module.exports = {
         {
             taskName: 'speech bubbles',
             workedHours: 0,
-            neededHours: 6
+            neededHours: 3
+        },
+        {
+            taskName: 'keep doublespeaker verses parallel',
+            workedHours: 0,
+            neededHours: 3
         },
         {
             taskName: 'annotation header formatting',
-            workedHours: 0,
-            neededHours: 1
+            workedHours: 1,
+            neededHours: 1,
+            subtasks: [
+                {
+                    taskName: 'Add proper noun flags.',
+                    workedHours: 0,
+                    neededHours: 1
+                }
+            ]
         },
         {
             taskName: 'create portals',

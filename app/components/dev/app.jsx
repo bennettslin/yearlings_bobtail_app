@@ -52,7 +52,7 @@ class App extends React.Component {
 
         /**
          * Close annotation if anywhere outside annotation is clicked, with the
-         * exception of another annotation link.
+         * exception of another link.
          */
         if (annotation &&
             annotation !== e.target &&
