@@ -278,6 +278,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Gogo and his Didi,',
+                            properNoun: true,
                             annotation: {
                                 description: [
                                     'In Mandarin Chinese,',

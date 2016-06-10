@@ -1,3 +1,5 @@
+import FormatHelper from './format-helper.js';
+
 module.exports = {
     /**
      * Separate annotations.
@@ -38,11 +40,22 @@ module.exports = {
     },
 
     _prepareAnnotation(lyricObject = {}, annotations = []) {
+        let title = lyricObject.anchor;
+
         // Add annotation index to lyrics. 1-based index.
         lyricObject.annotationIndex = annotations.length + 1;
 
-        // Add anchor text to annotation object for annotation title.
-        lyricObject.annotation.title = lyricObject.anchor;
+        /**
+         * Get annotation title from anchor text. Convert from object if
+         * necessary, and also uncapitalise if not a proper noun.
+         */
+        if (typeof title === 'object') {
+            title = FormatHelper.getStringFromObject(title);
+        }
+        if (!lyricObject.properNoun) {
+            title = FormatHelper.getUncapitalisedText(title);
+        }
+        lyricObject.annotation.title = title;
 
         // For dev purposes.
         lyricObject.todo = lyricObject.annotation.todo;

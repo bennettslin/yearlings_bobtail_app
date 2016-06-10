@@ -495,6 +495,7 @@ module.exports = {
                                     noSpace: '\'s words'
                                 }
                             ],
+                            properNoun: true,
                             annotation: {
                                 description: [
                                     'Recognising that what I wanted was Mara or someone like Mara, and having taken stock of where I needed to be to get what I wanted, I decided to return to what I do best: holing up in emotional seclusion. My next five-year plan would see the completion of',

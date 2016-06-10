@@ -1,13 +1,44 @@
 module.exports = {
+
+    getStringFromObject(text) {
+
+        if (Array.isArray(text)) {
+            /**
+             * FIXME: This will not add a space between text fragments. This
+             * works for now, since the only reason to have this method is for
+             * M ("Bobtail's words"), but we may want to revisit this in the
+             * future.
+             */
+            return text.reduce((textString, textObject, index) => {
+                return textString + this.getStringFromObject(textObject);
+            }, '');
+
+        } else if (typeof text === 'object') {
+            if (text.anchor) {
+                return this.getStringFromObject(text.anchor);
+            } else if (text.emphasis) {
+                return this.getStringFromObject(text.emphasis);
+            } else if (text.italic) {
+                return this.getStringFromObject(text.italic);
+            } else if (text.noSpace) {
+                return this.getStringFromObject(text.noSpace);
+            } else {
+                return '';
+            }
+
+        } else {
+            return text;
+        }
+    },
+
+    getUncapitalisedText(text) {
+        return text.charAt(0).toLowerCase() + text.slice(1);
+    },
+
     /**
-     * Converts anchor tag text into annotation header.
-     * FIXME: Kind of wonky still. Fix once a testing suite is implemented.
+     * Converts text in anchor tag into annotation header.
      */
     getFormattedAnnotationTitle(text = '') {
-        if (typeof text === 'object') {
-            text = this._getStringFromObject(text);
-        }
-
         text = this._getDeletedSpecialCharactersText(text);
         text = this._getDeletedLoneDoubleQuoteText(text);
 
@@ -27,7 +58,6 @@ module.exports = {
         } else if (this._hasDoubleQuoteAtIndex(text, text.length - 1) &&
                    this._hasSpecialCharacterAtIndex(text, text.length - 2)) {
             text = this._getDeletedSpecialCharactersText(text.slice(0, text.length - 2) + text.slice(text.length - 1));
-
         }
 
         return text;
@@ -62,37 +92,6 @@ module.exports = {
                 indexedChar === '!' ||
                 indexedChar === '…' ||
                 indexedChar === '—';
-        }
-    },
-
-    _getStringFromObject(text) {
-
-        if (Array.isArray(text)) {
-            /**
-             * FIXME: This will not add a space between text fragments. This
-             * works for now, since the only reason to have this method is for
-             * M ("Bobtail's words"), but we may want to revisit this in the
-             * future.
-             */
-            return text.reduce((textString, textObject, index) => {
-                return textString + this._getStringFromObject(textObject);
-            }, '');
-
-        } else if (typeof text === 'object') {
-            if (text.anchor) {
-                return this._getStringFromObject(text.anchor);
-            } else if (text.emphasis) {
-                return this._getStringFromObject(text.emphasis);
-            } else if (text.italic) {
-                return this._getStringFromObject(text.italic);
-            } else if (text.noSpace) {
-                return this._getStringFromObject(text.noSpace);
-            } else {
-                return '';
-            }
-
-        } else {
-            return text;
         }
     }
 }
