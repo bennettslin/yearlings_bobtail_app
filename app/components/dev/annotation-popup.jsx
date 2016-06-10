@@ -1,24 +1,28 @@
 import React from 'react';
-import AnimationUtility from '../utilities/animation-utility.jsx';
+import Popup from '../superclasses/popup.jsx';
 import AnnotationSection from './annotation-section.jsx';
 
 const defaultProps = {
-    annotationData: null
+    annotationData: null,
+    className: 'annotation'
 }
 
-class AnnotationPopup extends React.Component {
+class AnnotationPopup extends Popup {
 
-    render() {
-        const annotationData = this.props.annotationData,
-            annotationContentElement = annotationData ?
-                <AnnotationSection
-                    ref="annotationSection"
-                    title={annotationData.title}
-                    description={annotationData.description}
-                    codes={annotationData.codes}
-                /> : null;
+    getClassName() {
+        return this.props.className;
+    }
 
-        return AnimationUtility.getTransitionGroupWrappedElement(annotationContentElement, "annotation-animation");
+    getContentElement() {
+        const annotationData = this.props.annotationData;
+
+        return annotationData ?
+            <AnnotationSection
+                ref="annotationSection"
+                title={annotationData.title}
+                description={annotationData.description}
+                codes={annotationData.codes}
+            /> : null;
     }
 }
 
