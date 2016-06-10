@@ -20,7 +20,7 @@ class AnnotationSection extends React.Component {
                 <div className="code-block">
                     {CodeUtility.getDotsBlock(props.codes)}
                 </div>
-                <h2>{FormatHelper.getStrippedHeader(props.title)}</h2>
+                <h2>{FormatHelper.getFormattedAnnotationTitle(props.title)}</h2>
                 {FormatUtility.getFormattedTextElement(false, props.description)}
             </div>
         );

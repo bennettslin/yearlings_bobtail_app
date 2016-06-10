@@ -33,7 +33,7 @@ module.exports = {
              * Subsequent spans of text on a line will begin with a space,
              * unless specifically told not to.
              */
-            return this._getTextString(isLyric, text.noSpace || text, index === 0 || text.noSpace);
+            return this._getSpacedTextString(isLyric, text.noSpace || text, index === 0 || text.noSpace);
 
         } else {
             if (text.italic) {
@@ -64,7 +64,7 @@ module.exports = {
         }
     },
 
-    _getTextString: function(isLyric, text, noSpace) {
+    _getSpacedTextString: function(isLyric, text, noSpace) {
         const firstSpace = (noSpace ? '' : ' ');
 
         // Add nonbreaking space between last two words if it's a lyric.

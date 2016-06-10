@@ -77,7 +77,7 @@ module.exports = {
         },
         {
             taskName: 'non breaking space in lyrics only',
-            workedHours: 0,
+            workedHours: 1,
             neededHours: 1
         },
     ]

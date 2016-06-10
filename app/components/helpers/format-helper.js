@@ -3,11 +3,10 @@ module.exports = {
      * Converts anchor tag text into annotation header.
      * FIXME: Kind of wonky still. Fix once a testing suite is implemented.
      */
-    getStrippedHeader: function(text = '') {
+    getFormattedAnnotationTitle: function(text = '') {
 
-        // FIXME: Hack fix to keep from breaking. (M, "Bobtail's words.")
         if (typeof text === 'object') {
-            return 'not a string.';
+            text = this._getStringFromObject(text);
         }
 
         if (this._hasSpecialCharacterAtIndex(text, 0)) {
@@ -36,6 +35,37 @@ module.exports = {
                 indexedChar === '!' ||
                 indexedChar === '…' ||
                 indexedChar === '—';
+        }
+    },
+
+    _getStringFromObject: function(text) {
+
+        if (Array.isArray(text)) {
+            /**
+             * FIXME: This will not add a space between text fragments. This
+             * works for now, since the only reason to have this method is for
+             * M ("Bobtail's words"), but we may want to revisit this in the
+             * future.
+             */
+            return text.reduce((textString, textObject) => {
+                return textString + this._getStringFromObject(textObject);
+            }, '');
+
+        } else if (typeof text === 'object') {
+            if (text.anchor) {
+                return this._getStringFromObject(text.anchor);
+            } else if (text.emphasis) {
+                return this._getStringFromObject(text.emphasis);
+            } else if (text.italic) {
+                return this._getStringFromObject(text.italic);
+            } else if (text.noSpace) {
+                return this._getStringFromObject(text.noSpace);
+            } else {
+                return '';
+            }
+
+        } else {
+            return text;
         }
     }
 }
