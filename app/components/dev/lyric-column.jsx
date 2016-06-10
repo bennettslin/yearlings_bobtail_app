@@ -9,27 +9,45 @@ const defaultProps = {
 
 class LyricColumn extends React.Component {
 
-    _getStanza(stanza, stanzaIndex) {
+    _getStanza(stanzaArray, stanzaIndex) {
+        // A "stanza" wraps a block of text.
         return (
             <div className={'stanza ' + stanzaIndex} key={stanzaIndex}>
-                {stanza.map((verse, verseIndex) => {
-                    return this._getVerse(verse, verseIndex);
+                {stanzaArray.map((verseObject, verseIndex) => {
+                    return this._getVerse(verseObject, verseIndex);
                 })}
             </div>
         );
     }
 
-    _getVerse(verse, verseIndex) {
+    _getVerse(verseObject, verseIndex) {
+        // A "verse" wraps a single line of text.
         return (
             <div className={'verse ' + verseIndex} key={verseIndex}>
-                {this._getParsedLyric(verse)}
+                {this._getParsedLyric(verseObject)}
             </div>
         );
     }
 
-    _getParsedLyric(lyric) {
-        const annotation = lyric.annotation;
-        return FormatUtility.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
+    _getParsedLyric(verseObject) {
+        /**
+            verseObject = {
+                time: 0,
+                verse: [
+                    'My',
+                    {
+                        annotationIndex: 1,
+                        anchor: 'awesome',
+                        codes: [],
+                        todo: false
+                    },
+                    'lyric.'
+                ]
+            }
+        */
+
+        console.error('verseObject', verseObject);
+        return FormatUtility.getFormattedSpan(verseObject.verse, this.props.handleAnnotationSelect);
     }
 
     render() {
@@ -38,8 +56,8 @@ class LyricColumn extends React.Component {
             columnClassName = 'lyric-column' + (props.columnKey ? ' doublespeaker ' + props.columnKey : ''),
             lyricTextArea = (
                 <div className={'lyric-block'}>
-                    {props.selectedSongLyrics.map((stanza, stanzaIndex) => {
-                        return this._getStanza(stanza, stanzaIndex);
+                    {props.selectedSongLyrics.map((stanzaArray, stanzaIndex) => {
+                        return this._getStanza(stanzaArray, stanzaIndex);
                     })}
                 </div>
             );
