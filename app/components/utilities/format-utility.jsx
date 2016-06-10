@@ -4,9 +4,9 @@ import CodeUtility from './code-utility.jsx';
 module.exports = {
 
     /**
-     * Returns a single span element containing nested text elements.
+     * Returns a single element containing nested elements.
      */
-    getFormattedSpan: function(text, clickHandler, index, nestedIndex) {
+    getFormattedTextElement: function(isLyric, text, clickHandler, index, nestedIndex) {
         index = index || 0;
         nestedIndex = nestedIndex || 0;
 
@@ -14,33 +14,33 @@ module.exports = {
             return (
                 <span key={nestedIndex + index}>
                     {text.map((textElement, index) => {
-                        return this.getFormattedSpan(textElement, clickHandler, index, nestedIndex + 1);
+                        return this.getFormattedTextElement(isLyric, textElement, clickHandler, index, nestedIndex + 1);
                     })}
                 </span>
             );
 
         } else if (typeof text === 'string' || typeof text === 'object') {
-            return this._getTaggedTextContent(text, clickHandler, index, nestedIndex);
+            return this._getTaggedTextContent(isLyric, text, clickHandler, index, nestedIndex);
         }
     },
 
     /**
      * Returns a single element wrapped in a span, italic, or anchor tag.
      */
-    _getTaggedTextContent: function(text, clickHandler, index, nestedIndex) {
+    _getTaggedTextContent: function(isLyric, text, clickHandler, index, nestedIndex) {
         if (typeof text === 'string' || text.noSpace) {
             /**
              * Subsequent spans of text on a line will begin with a space,
              * unless specifically told not to.
              */
-            return this._getTextString(text.noSpace || text, index === 0 || text.noSpace);
+            return this._getTextString(isLyric, text.noSpace || text, index === 0 || text.noSpace);
 
         } else {
             if (text.italic) {
-                return <i key={nestedIndex + index}>{this.getFormattedSpan(text.italic, clickHandler, index, nestedIndex)}</i>;
+                return <i key={nestedIndex + index}>{this.getFormattedTextElement(isLyric, text.italic, clickHandler, index, nestedIndex)}</i>;
 
             } else if (text.emphasis) {
-                return <em key={nestedIndex + index}>{this.getFormattedSpan(text.emphasis, clickHandler, index, nestedIndex)}</em>;
+                return <em key={nestedIndex + index}>{this.getFormattedTextElement(isLyric, text.emphasis, clickHandler, index, nestedIndex)}</em>;
 
             } else if (text.anchor) {
                 // TODO: For dev purposes.
@@ -55,7 +55,7 @@ module.exports = {
                         <span className="text-block">
                             <a className="anchor-link"
                                 onClick={clickHandler.bind(null, text.annotationIndex)} >
-                                {this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)}
+                                {this.getFormattedTextElement(isLyric, text.anchor, clickHandler, index, nestedIndex)}
                             </a>
                         </span>
                     </span>
@@ -64,19 +64,19 @@ module.exports = {
         }
     },
 
-    /**
-     * Replace last space with nonbreaking space.
-     */
-    _getTextString: function(text, noSpace) {
-        const lastSpaceIndex = text.lastIndexOf(' ');
+    _getTextString: function(isLyric, text, noSpace) {
+        const firstSpace = (noSpace ? '' : ' ');
 
-        // FIXME: Only do this for lyrics, nowhere else. (Not annotations or speech bubbles.)
-        // if (lastSpaceIndex > -1) {
-        //     text = text.slice(0, lastSpaceIndex) +
-        //            '\u00a0' +
-        //            text.slice(lastSpaceIndex + 1);
-        // }
+        // Add nonbreaking space between last two words if it's a lyric.
+        if (isLyric) {
+            const lastSpaceIndex = text.lastIndexOf(' ');
+            if (lastSpaceIndex > -1) {
+                text = text.slice(0, lastSpaceIndex) +
+                       '\u00a0' +
+                       text.slice(lastSpaceIndex + 1);
+            }
+        }
 
-        return (noSpace ? '' : ' ') + text;
+        return firstSpace + text;
     }
 }

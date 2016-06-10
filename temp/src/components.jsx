@@ -93,7 +93,7 @@ var TextFormatter = {
     /**
      * Returns a single span element containing nested text elements.
      */
-    getFormattedSpan: function(text, clickHandler, index, nestedIndex) {
+    getFormattedTextElement: function(text, clickHandler, index, nestedIndex) {
         index = index || 0;
         nestedIndex = nestedIndex || 0;
 
@@ -101,7 +101,7 @@ var TextFormatter = {
             return (
                 <span key={nestedIndex + '-' + index}>
                     {text.map(function(textElement, index) {
-                        return this.getFormattedSpan(textElement, clickHandler, index, nestedIndex + 1);
+                        return this.getFormattedTextElement(textElement, clickHandler, index, nestedIndex + 1);
                     }.bind(this))}
                 </span>
             );
@@ -126,10 +126,10 @@ var TextFormatter = {
 
         } else if (typeof text === 'object') {
             if (text.italic) {
-                return <i key={nestedIndex + '-' + index}>{this.getFormattedSpan(text.italic, clickHandler, index, nestedIndex)}</i>;
+                return <i key={nestedIndex + '-' + index}>{this.getFormattedTextElement(text.italic, clickHandler, index, nestedIndex)}</i>;
 
             } else if (text.emphasis) {
-                return <em key={nestedIndex + '-' + index}>{this.getFormattedSpan(text.emphasis, clickHandler, index, nestedIndex)}</em>;
+                return <em key={nestedIndex + '-' + index}>{this.getFormattedTextElement(text.emphasis, clickHandler, index, nestedIndex)}</em>;
 
             } else if (text.anchor) {
                 return (
@@ -137,7 +137,7 @@ var TextFormatter = {
                         key={nestedIndex + '-' + index}
                         onClick={clickHandler.bind(null, text.annotationKey)}
                     >
-                        {this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)}
+                        {this.getFormattedTextElement(text.anchor, clickHandler, index, nestedIndex)}
                     </a>
                 );
             }
@@ -245,8 +245,8 @@ var PopupMixin = {
             className = baseClassName + '-' + index +
                 ' popup' + (isShown ? ' expanded' : '') +
                 ((isShown && (this.props.popupsAlwaysShown !== 'none' || this.state.clickedOn)) ? ' engraved' : ''),
-            shownContentMappedTextElement = TextFormatter.getFormattedSpan(shownContentObject),
-            unshownContentMappedTextElement = TextFormatter.getFormattedSpan(unshownContentObject);
+            shownContentMappedTextElement = TextFormatter.getFormattedTextElement(shownContentObject),
+            unshownContentMappedTextElement = TextFormatter.getFormattedTextElement(unshownContentObject);
         return (
             <li
                 className={className}
@@ -335,7 +335,7 @@ var DevApp = React.createClass({
 
     handleAnnotationSelect: function(annotationKey) {
         var annotationObject = this.props.songs[this.state.playedSongIndex].annotations[annotationKey].description,
-            annotationSpan = TextFormatter.getFormattedSpan(annotationObject);
+            annotationSpan = TextFormatter.getFormattedTextElement(annotationObject);
 
         this.setState({
             annotationSpan: annotationSpan
@@ -415,7 +415,7 @@ var DevLyricsColumn = React.createClass({
 
     _parseLyric: function(lyric) {
         var annotation = lyric.annotation;
-        return TextFormatter.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
+        return TextFormatter.getFormattedTextElement(lyric.verse, this.props.handleAnnotationSelect);
     },
 
     render: function() {
@@ -771,7 +771,7 @@ var DevOverviewsField = React.createClass({
                         className={'speech-bubble ' + bubbleName}
                     >
                         <h2>{bubbleName}</h2>
-                        {TextFormatter.getFormattedSpan(this.props.playedSongOverviews[SPEECH_BUBBLE_NAMES[index]])}
+                        {TextFormatter.getFormattedTextElement(this.props.playedSongOverviews[SPEECH_BUBBLE_NAMES[index]])}
                     </div>
                 );
             }, this);

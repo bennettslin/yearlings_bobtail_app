@@ -22,8 +22,8 @@ module.exports = {
             });
 
         } else if (typeof lyricElement === 'object') {
-            if (lyricElement.verse) {
-            this._parseLyricElement(lyricElement.verse, annotations);
+            if (lyricElement.lyric) {
+            this._parseLyricElement(lyricElement.lyric, annotations);
 
             } else if (lyricElement.emphasis) {
             this._parseLyricElement(lyricElement.emphasis, annotations);

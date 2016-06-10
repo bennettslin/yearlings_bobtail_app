@@ -9,27 +9,27 @@ const defaultProps = {
 
 class LyricColumn extends React.Component {
 
-    _getStanza(stanzaArray, stanzaIndex) {
+    _getStanzaElement(stanzaArray, stanzaIndex) {
         // A "stanza" wraps a block of text.
         return (
             <div className={'stanza ' + stanzaIndex} key={stanzaIndex}>
                 {stanzaArray.map((verseObject, verseIndex) => {
-                    return this._getVerse(verseObject, verseIndex);
+                    return this._getVerseElement(verseObject, verseIndex);
                 })}
             </div>
         );
     }
 
-    _getVerse(verseObject, verseIndex) {
+    _getVerseElement(verseObject, verseIndex) {
         // A "verse" wraps a single line of text.
         return (
             <div className={'verse ' + verseIndex} key={verseIndex}>
-                {this._getLyric(verseObject)}
+                {this._getLyricElement(verseObject)}
             </div>
         );
     }
 
-    _getLyric(verseObject) {
+    _getLyricElement(verseObject) {
         // A "lyric" is a formatted text element that includes annotation data.
 
         /**
@@ -48,7 +48,7 @@ class LyricColumn extends React.Component {
             }
         */
 
-        return FormatUtility.getFormattedSpan(verseObject.lyric, this.props.handleAnnotationSelect);
+        return FormatUtility.getFormattedTextElement(true, verseObject.lyric, this.props.handleAnnotationSelect);
     }
 
     render() {
@@ -58,7 +58,7 @@ class LyricColumn extends React.Component {
             lyricTextArea = (
                 <div className={'lyric-block'}>
                     {props.selectedSongLyrics.map((stanzaArray, stanzaIndex) => {
-                        return this._getStanza(stanzaArray, stanzaIndex);
+                        return this._getStanzaElement(stanzaArray, stanzaIndex);
                     })}
                 </div>
             );

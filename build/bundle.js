@@ -21158,7 +21158,7 @@
 	    /**
 	     * Returns a single span element containing nested text elements.
 	     */
-	    getFormattedSpan: function getFormattedSpan(text, clickHandler, index, nestedIndex) {
+	    getFormattedTextElement: function getFormattedTextElement(text, clickHandler, index, nestedIndex) {
 	        index = index || 0;
 	        nestedIndex = nestedIndex || 0;
 
@@ -21167,7 +21167,7 @@
 	                'span',
 	                { key: nestedIndex + '-' + index },
 	                text.map(function (textElement, index) {
-	                    return this.getFormattedSpan(textElement, clickHandler, index, nestedIndex + 1);
+	                    return this.getFormattedTextElement(textElement, clickHandler, index, nestedIndex + 1);
 	                }.bind(this))
 	            );
 	        } else if (typeof text === 'string' || (typeof text === 'undefined' ? 'undefined' : _typeof(text)) === 'object') {
@@ -21190,13 +21190,13 @@
 	                return _react2.default.createElement(
 	                    'i',
 	                    { key: nestedIndex + '-' + index },
-	                    this.getFormattedSpan(text.italic, clickHandler, index, nestedIndex)
+	                    this.getFormattedTextElement(text.italic, clickHandler, index, nestedIndex)
 	                );
 	            } else if (text.emphasis) {
 	                return _react2.default.createElement(
 	                    'em',
 	                    { key: nestedIndex + '-' + index },
-	                    this.getFormattedSpan(text.emphasis, clickHandler, index, nestedIndex)
+	                    this.getFormattedTextElement(text.emphasis, clickHandler, index, nestedIndex)
 	                );
 	            } else if (text.anchor) {
 	                return _react2.default.createElement(
@@ -21205,7 +21205,7 @@
 	                        key: nestedIndex + '-' + index,
 	                        onClick: clickHandler.bind(null, text.annotationKey)
 	                    },
-	                    this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)
+	                    this.getFormattedTextElement(text.anchor, clickHandler, index, nestedIndex)
 	                );
 	            }
 	        }
@@ -21310,7 +21310,7 @@
 	        key: '_parseLyric',
 	        value: function _parseLyric(lyric) {
 	            var annotation = lyric.annotation;
-	            return this.props.TextFormatter.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
+	            return this.props.TextFormatter.getFormattedTextElement(lyric.verse, this.props.handleAnnotationSelect);
 	        }
 	    }, {
 	        key: 'render',
@@ -21400,7 +21400,7 @@
 	    _createClass(DevAnnotationField, [{
 	        key: "render",
 	        value: function render() {
-	            var annotationSpan = this.props.TextFormatter.getFormattedSpan(this.props.annotationObject);
+	            var annotationSpan = this.props.TextFormatter.getFormattedTextElement(this.props.annotationObject);
 
 	            return _react2.default.createElement(
 	                "div",
@@ -21475,7 +21475,7 @@
 	                        null,
 	                        bubbleName
 	                    ),
-	                    this.props.TextFormatter.getFormattedSpan(this.props.playedSongOverviews[SPEECH_BUBBLE_NAMES[index]])
+	                    this.props.TextFormatter.getFormattedTextElement(this.props.playedSongOverviews[SPEECH_BUBBLE_NAMES[index]])
 	                );
 	            }, this);
 

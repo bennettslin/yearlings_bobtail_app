@@ -90,7 +90,7 @@ var TextFormatter = {
     /**
      * Returns a single span element containing nested text elements.
      */
-    getFormattedSpan: function (text, clickHandler, index, nestedIndex) {
+    getFormattedTextElement: function (text, clickHandler, index, nestedIndex) {
         index = index || 0;
         nestedIndex = nestedIndex || 0;
 
@@ -99,7 +99,7 @@ var TextFormatter = {
                 'span',
                 { key: nestedIndex + '-' + index },
                 text.map((function (textElement, index) {
-                    return this.getFormattedSpan(textElement, clickHandler, index, nestedIndex + 1);
+                    return this.getFormattedTextElement(textElement, clickHandler, index, nestedIndex + 1);
                 }).bind(this))
             );
         } else if (typeof text === 'string' || typeof text === 'object') {
@@ -122,13 +122,13 @@ var TextFormatter = {
                 return React.createElement(
                     'i',
                     { key: nestedIndex + '-' + index },
-                    this.getFormattedSpan(text.italic, clickHandler, index, nestedIndex)
+                    this.getFormattedTextElement(text.italic, clickHandler, index, nestedIndex)
                 );
             } else if (text.emphasis) {
                 return React.createElement(
                     'em',
                     { key: nestedIndex + '-' + index },
-                    this.getFormattedSpan(text.emphasis, clickHandler, index, nestedIndex)
+                    this.getFormattedTextElement(text.emphasis, clickHandler, index, nestedIndex)
                 );
             } else if (text.anchor) {
                 return React.createElement(
@@ -137,7 +137,7 @@ var TextFormatter = {
                         key: nestedIndex + '-' + index,
                         onClick: clickHandler.bind(null, text.annotationKey)
                     },
-                    this.getFormattedSpan(text.anchor, clickHandler, index, nestedIndex)
+                    this.getFormattedTextElement(text.anchor, clickHandler, index, nestedIndex)
                 );
             }
         }
@@ -240,8 +240,8 @@ var PopupMixin = {
     _getPopup: function (baseClassName, index, shownContentObject, unshownContentObject) {
         var isShown = this._showPopup(index),
             className = baseClassName + '-' + index + ' popup' + (isShown ? ' expanded' : '') + (isShown && (this.props.popupsAlwaysShown !== 'none' || this.state.clickedOn) ? ' engraved' : ''),
-            shownContentMappedTextElement = TextFormatter.getFormattedSpan(shownContentObject),
-            unshownContentMappedTextElement = TextFormatter.getFormattedSpan(unshownContentObject);
+            shownContentMappedTextElement = TextFormatter.getFormattedTextElement(shownContentObject),
+            unshownContentMappedTextElement = TextFormatter.getFormattedTextElement(unshownContentObject);
         return React.createElement(
             'li',
             {
@@ -333,7 +333,7 @@ var DevApp = React.createClass({
 
     handleAnnotationSelect: function (annotationKey) {
         var annotationObject = this.props.songs[this.state.playedSongIndex].annotations[annotationKey].description,
-            annotationSpan = TextFormatter.getFormattedSpan(annotationObject);
+            annotationSpan = TextFormatter.getFormattedTextElement(annotationObject);
 
         this.setState({
             annotationSpan: annotationSpan
@@ -418,7 +418,7 @@ var DevLyricsColumn = React.createClass({
 
     _parseLyric: function (lyric) {
         var annotation = lyric.annotation;
-        return TextFormatter.getFormattedSpan(lyric.verse, this.props.handleAnnotationSelect);
+        return TextFormatter.getFormattedTextElement(lyric.verse, this.props.handleAnnotationSelect);
     },
 
     render: function () {
@@ -810,7 +810,7 @@ var DevOverviewsField = React.createClass({
                     null,
                     bubbleName
                 ),
-                TextFormatter.getFormattedSpan(this.props.playedSongOverviews[SPEECH_BUBBLE_NAMES[index]])
+                TextFormatter.getFormattedTextElement(this.props.playedSongOverviews[SPEECH_BUBBLE_NAMES[index]])
             );
         }, this);
 

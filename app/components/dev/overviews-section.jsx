@@ -37,7 +37,7 @@ class OverviewsSection extends React.Component {
                     })}
                 </div>
                 <div className="overview-text">
-                    {FormatUtility.getFormattedSpan(this.props.overviewRichText)}
+                    {FormatUtility.getFormattedTextElement(false, this.props.overviewRichText)}
                 </div>
 
             </div>
