@@ -10,7 +10,7 @@ module.exports = {
             [
                 {
                     time: 0,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Mr. Odin',
                             annotation: {
@@ -24,7 +24,7 @@ module.exports = {
             [
                 {
                     time: 8,
-                    verse: [
+                    lyric: [
                         'Lights off, from your',
                         {
                             anchor: 'hiding place of retreat',
@@ -37,7 +37,7 @@ module.exports = {
                 },
                 {
                     time: 14,
-                    verse: [
+                    lyric: [
                         'This',
                         {
                             anchor: 'fridge\'s gallery in web\'s wake',
@@ -50,11 +50,11 @@ module.exports = {
                 },
                 {
                     time: 17,
-                    verse: 'silent poll of colours overused.'
+                    lyric: 'silent poll of colours overused.'
                 },
                 {
                     time: 20,
-                    verse: [
+                    lyric: [
                         'This latest piece you drew with',
                         {
                             anchor: 'crayons least whittled…',
@@ -68,7 +68,7 @@ module.exports = {
             [
                 {
                     time: 26,
-                    verse: [
+                    lyric: [
                         'The',
                         {
                             anchor: 'house settled in sheets,',
@@ -81,7 +81,7 @@ module.exports = {
                 },
                 {
                     time: 32,
-                    verse: [
+                    lyric: [
                         'By the',
                         {
                             anchor: 'alabaster balustrade,',
@@ -93,7 +93,7 @@ module.exports = {
                 },
                 {
                     time: 35,
-                    verse: [
+                    lyric: [
                         'baby steps inch towards',
                         {
                             anchor: 'crevice rays.',
@@ -107,7 +107,7 @@ module.exports = {
             [
                 {
                     time: 38,
-                    verse: [
+                    lyric: [
                         'Then down',
                         {
                             anchor: 'Stygian stairs,',
@@ -119,7 +119,7 @@ module.exports = {
                 },
                 {
                     time: 40,
-                    verse: [
+                    lyric: [
                         'through',
                         {
                             anchor: 'sickle-lit',
@@ -138,11 +138,11 @@ module.exports = {
                 },
                 {
                     time: 44,
-                    verse: 'Raccoons rummage round some rubbish bags,'
+                    lyric: 'Raccoons rummage round some rubbish bags,'
                 },
                 {
                     time: 47,
-                    verse: [
+                    lyric: [
                         'till a',
                         {
                             anchor: 'rickshaw hiccoughs',
@@ -155,7 +155,7 @@ module.exports = {
                 },
                 {
                     time: 50,
-                    verse: [
+                    lyric: [
                         'You seek the',
                         {
                             anchor: 'dunes once deemed a haven',
@@ -173,21 +173,21 @@ module.exports = {
                 },
                 {
                     time: 53,
-                    verse: 'that was safe for a heathen…'
+                    lyric: 'that was safe for a heathen…'
                 }
             ],
             [
                 {
                     time: 59,
-                    verse: 'And if flutters with the fairest'
+                    lyric: 'And if flutters with the fairest'
                 },
                 {
                     time: 63,
-                    verse: 'were just sins simply dreamt,'
+                    lyric: 'were just sins simply dreamt,'
                 },
                 {
                     time: 67,
-                    verse: [
+                    lyric: [
                         'could some',
                         // TODO: insect in jar link
                         'bottled butterfly',
@@ -201,11 +201,11 @@ module.exports = {
                 },
                 {
                     time: 73,
-                    verse: 'What\'s more, if all you live for still die at the end'
+                    lyric: 'What\'s more, if all you live for still die at the end'
                 },
                 {
                     time: 79,
-                    verse: [
+                    lyric: [
                         '—like Odin\'s ashes back from',
                         {
                             anchor: 'the Society,',
@@ -217,21 +217,21 @@ module.exports = {
                 },
                 {
                     time: 84,
-                    verse: 'which filled a chasm dug up underneath—'
+                    lyric: 'which filled a chasm dug up underneath—'
                 },
                 {
                     time: 87,
-                    verse: 'can that which kills a cat spare his home if spread?'
+                    lyric: 'can that which kills a cat spare his home if spread?'
                 }
             ],
             [
                 {
                     time: 93,
-                    verse: 'You researched a gleam'
+                    lyric: 'You researched a gleam'
                 },
                 {
                     time: 95,
-                    verse: [
+                    lyric: [
                         'to be a',
                         {
                             anchor: 'guard\'s whistle',
@@ -244,7 +244,7 @@ module.exports = {
                 },
                 {
                     time: 99,
-                    verse: [
+                    lyric: [
                         'and brought your raft behind the',
                         {
                             anchor: 'yellow-taped grills',
@@ -257,13 +257,13 @@ module.exports = {
                 {
                     time: 102,
                     // TODO: reference to stand unsure, revisit whether to have "keen to drift"
-                    verse: 'to stand onshore keen to drift if shark swarms withheld.'
+                    lyric: 'to stand onshore keen to drift if shark swarms withheld.'
                 }
             ],
             [
                 {
                     time: 105,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Buoy bobs',
                             annotation: {
@@ -275,7 +275,7 @@ module.exports = {
                 },
                 {
                     time: 107,
-                    verse: [
+                    lyric: [
                         'shivering for',
                         {
                             anchor: 'shivs unsheathed.',
@@ -288,11 +288,11 @@ module.exports = {
                 },
                 {
                     time: 111,
-                    verse: 'As roller coasters of waves comfort sighs,'
+                    lyric: 'As roller coasters of waves comfort sighs,'
                 },
                 {
                     time: 114,
-                    verse: [
+                    lyric: [
                         'you frame silhouettes of',
                         {
                             anchor: 'torn rides',
@@ -304,29 +304,29 @@ module.exports = {
                 },
                 {
                     time: 117,
-                    verse: 'in your dim, lingering gaze,'
+                    lyric: 'in your dim, lingering gaze,'
                 },
                 {
                     time: 120,
-                    verse: 'a victim of erosion.'
+                    lyric: 'a victim of erosion.'
                 }
             ],
             [
                 {
                     time: 129,
-                    verse: '…'
+                    lyric: '…'
                 },
                 {
                     time: 132,
-                    verse: '…'
+                    lyric: '…'
                 },
                 {
                     time: 135,
-                    verse: 'Can a holed up hostage'
+                    lyric: 'Can a holed up hostage'
                 },
                 {
                     time: 137,
-                    verse: [
+                    lyric: [
                         'pray for',
                         {
                             anchor: 'soulless solace',
@@ -339,18 +339,18 @@ module.exports = {
                 },
                 {
                     time: 141,
-                    verse: '…'
+                    lyric: '…'
                 },
                 {
                     time: 144,
-                    verse: '…'
+                    lyric: '…'
                 }
             ],
             [
                 {
                     time: 147,
                     // TODO: Reference to Ash Wednesday.
-                    verse: [
+                    lyric: [
                         'But for a',
                         {
                             anchor: 'foetus force-fed,',
@@ -363,13 +363,13 @@ module.exports = {
                 },
                 {
                     time: 150,
-                    verse: 'your ouija board said, "Son, just hum along."'
+                    lyric: 'your ouija board said, "Son, just hum along."'
                 }
             ],
             [
                 {
                     time: 166,
-                    verse: [
+                    lyric: [
                         'Though',
                         {
                             anchor: 'no slave parts these seas,',
@@ -381,11 +381,11 @@ module.exports = {
                 },
                 {
                     time: 168,
-                    verse: 'then returns them as a buffer zone…'
+                    lyric: 'then returns them as a buffer zone…'
                 },
                 {
                     time: 173,
-                    verse: [
+                    lyric: [
                         'The sudsy ocean shapes its',
                         {
                             anchor: 'padded bed,',
@@ -398,11 +398,11 @@ module.exports = {
                 {
                     time: 177,
                     // TODO: Grace Darling
-                    verse: 'which hitherto snubbed and spurned a wreck,'
+                    lyric: 'which hitherto snubbed and spurned a wreck,'
                 },
                 {
                     time: 180,
-                    verse: [
+                    lyric: [
                         'while',
                         {
                             anchor: 'mermaids smile',
@@ -425,13 +425,13 @@ module.exports = {
             [
                 {
                     time: 0,
-                    verse: '…'
+                    lyric: '…'
                 }
             ],
             [
                 {
                     time: 8,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'By lot,',
                             annotation: {
@@ -449,7 +449,7 @@ module.exports = {
                 },
                 {
                     time: 14,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Indifferent galaxies',
                             annotation: {
@@ -461,11 +461,11 @@ module.exports = {
                 },
                 {
                     time: 17,
-                    verse: 'sigh and pull the covers over you.'
+                    lyric: 'sigh and pull the covers over you.'
                 },
                 {
                     time: 20,
-                    verse: [
+                    lyric: [
                         'In safest sleep, you',
                         {
                             anchor: 'ruminate on these riddles…',
@@ -479,7 +479,7 @@ module.exports = {
             [
                 {
                     time: 26,
-                    verse: [
+                    lyric: [
                         'But how dreadful indeed, do',
                         {
                             anchor: 'sweet dream\'s ichors',
@@ -492,7 +492,7 @@ module.exports = {
                 },
                 {
                     time: 32,
-                    verse: [
+                    lyric: [
                         'Like a',
                         {
                             anchor: 'salamander',
@@ -505,7 +505,7 @@ module.exports = {
                 },
                 {
                     time: 35,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'trading breath\'s bliss',
                             annotation: {
@@ -519,11 +519,11 @@ module.exports = {
             [
                 {
                     time: 38,
-                    verse: 'And how stingy and scarce'
+                    lyric: 'And how stingy and scarce'
                 },
                 {
                     time: 40,
-                    verse: [
+                    lyric: [
                         'proves',
                         {
                             anchor: 'shibboleth',
@@ -544,7 +544,7 @@ module.exports = {
                 },
                 {
                     time: 44,
-                    verse: [
+                    lyric: [
                         // TODO: Descending stairs.
                         'As you plummet down from',
                         {
@@ -557,7 +557,7 @@ module.exports = {
                 },
                 {
                     time: 47,
-                    verse: [
+                    lyric: [
                         'still, but',
                         {
                             anchor: 'missed bat mitzvahs',
@@ -571,17 +571,17 @@ module.exports = {
                 {
                     time: 50,
                     // TODO: Future reference to Sita?
-                    verse: 'To dreams of whom does each one cave in'
+                    lyric: 'To dreams of whom does each one cave in'
                 },
                 {
                     time: 53,
-                    verse: 'as a slave for the seasons?'
+                    lyric: 'as a slave for the seasons?'
                 }
             ],
             [
                 {
                     time: 59,
-                    verse: [
+                    lyric: [
                         'And if',
                         {
                             anchor: 'summer trips to Paris',
@@ -593,11 +593,11 @@ module.exports = {
                 },
                 {
                     time: 63,
-                    verse: 'weren\'t just myths between friends,'
+                    lyric: 'weren\'t just myths between friends,'
                 },
                 {
                     time: 67,
-                    verse: [
+                    lyric: [
                         'would the',
                         {
                             anchor: 'rondel of her eye',
@@ -618,7 +618,7 @@ module.exports = {
                 },
                 {
                     time: 73,
-                    verse: [
+                    lyric: [
                         'But',
                         {
                             anchor: 'cored gifts fall to discord',
@@ -631,7 +631,7 @@ module.exports = {
                 },
                 {
                     time: 79,
-                    verse: [
+                    lyric: [
                         'by',
                         {
                             anchor: 'opened latches',
@@ -656,11 +656,11 @@ module.exports = {
                 },
                 {
                     time: 84,
-                    verse: '—which spilled a basket among other things—'
+                    lyric: '—which spilled a basket among other things—'
                 },
                 {
                     time: 87,
-                    verse: [
+                    lyric: [
                         'a casket tilted back where its',
                         {
                             // TODO: link hope chest.
@@ -675,7 +675,7 @@ module.exports = {
             [
                 {
                     time: 93,
-                    verse: [
+                    lyric: [
                         'Your',
                         {
                             anchor: 'seizures of spleen,',
@@ -687,7 +687,7 @@ module.exports = {
                 },
                 {
                     time: 95,
-                    verse: [
+                    lyric: [
                         'you see the',
                         {
                             anchor: 'jarred sibyl',
@@ -706,7 +706,7 @@ module.exports = {
                 },
                 {
                     time: 99,
-                    verse: [
+                    lyric: [
                         'as not for wrapping by a',
                         {
                             anchor: 'cellophane sylph,',
@@ -719,17 +719,17 @@ module.exports = {
                 {
                     time: 102,
                     // TODO: reference to M
-                    verse: 'who cannot warm he who didn\'t impart warmth himself.'
+                    lyric: 'who cannot warm he who didn\'t impart warmth himself.'
                 }
             ],
             [
                 {
                     time: 105,
-                    verse: 'Coin toss to be hers from'
+                    lyric: 'Coin toss to be hers from'
                 },
                 {
                     time: 107,
-                    verse: {
+                    lyric: {
                         anchor: 'shivaree towards shivah seat',
                         annotation: {
                             description: 'Shivaree is a French folk custom in which a crowd loudly performs a mock serenade outside the home of newlyweds. Sitting shivah is a week-long mourning period in Judaism after a close relative has passed away. Here again, I lament that not being born Jewish has lost my chance for a lifetime with Sasha.'
@@ -738,7 +738,7 @@ module.exports = {
                 },
                 {
                     time: 111,
-                    verse: [
+                    lyric: [
                         'has',
                         {
                             anchor: 'pulled your floater away',
@@ -751,48 +751,48 @@ module.exports = {
                 },
                 {
                     time: 114,
-                    verse: 'You chase till dew sheds from your eyes'
+                    lyric: 'You chase till dew sheds from your eyes'
                 },
                 {
                     time: 117,
-                    verse: 'with your beleaguered remains,'
+                    lyric: 'with your beleaguered remains,'
                 },
                 {
                     time: 120,
-                    verse: 'amidst dustbunnies frozen.'
+                    lyric: 'amidst dustbunnies frozen.'
                 }
             ],
             [
                 {
                     time: 129,
                     // TODO: Switch these voices?
-                    verse: 'Should you hide, or could you fight,'
+                    lyric: 'Should you hide, or could you fight,'
                 },
                 {
                     time: 132,
-                    verse: 'when your day to die has come?'
+                    lyric: 'when your day to die has come?'
                 },
                 {
                     time: 135,
-                    verse: '…'
+                    lyric: '…'
                 },
                 {
                     time: 137,
-                    verse: '…'
+                    lyric: '…'
                 },
                 {
                     time: 141,
-                    verse: 'But in time, wouldn\'t you find'
+                    lyric: 'But in time, wouldn\'t you find'
                 },
                 {
                     time: 144,
-                    verse: 'life is simply much too long?'
+                    lyric: 'life is simply much too long?'
                 }
             ],
             [
                 {
                     time: 147,
-                    verse: [
+                    lyric: [
                         'Yet your',
                         {
                             anchor: 'defeat of tortoise,',
@@ -805,26 +805,26 @@ module.exports = {
                 },
                 {
                     time: 150,
-                    verse: 'sworn feat aforesaid, doesn\'t come anon.'
+                    lyric: 'sworn feat aforesaid, doesn\'t come anon.'
                 }
             ],
             [
                 {
                     time: 166,
-                    verse: 'Though, no grey starling\'s beak'
+                    lyric: 'Though, no grey starling\'s beak'
                 },
                 {
                     time: 168,
                     // TODO: Reference to Nora Barnacle
-                    verse: 'can reach urchins smashed from undertows…'
+                    lyric: 'can reach urchins smashed from undertows…'
                 },
                 {
                     time: 173,
-                    verse: 'But suddenly Odin\'s day is at its end;'
+                    lyric: 'But suddenly Odin\'s day is at its end;'
                 },
                 {
                     time: 177,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'his litter',
                             annotation: {
@@ -843,7 +843,7 @@ module.exports = {
                 },
                 {
                     time: 180,
-                    verse: [
+                    lyric: [
                         'while',
                         {
                             anchor: 'Thursday\'s child',

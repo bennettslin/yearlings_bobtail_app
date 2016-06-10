@@ -15,7 +15,7 @@ module.exports = {
             [
                 {
                     time: 0,
-                    verse: {
+                    lyric: {
                         anchor: '"Good night," she says',
                         annotation: {
                             description: 'Having just walked Sita back to her boarding house after a date, I face her awkwardly as she stands before the front gate. It\'s early in the evening, with the sky beginning to clear from a midday shower.'
@@ -26,19 +26,19 @@ module.exports = {
             [
                 {
                     time: 3,
-                    verse: 'or should I should you refuse'
+                    lyric: 'or should I should you refuse'
                 },
                 {
                     time: 5,
-                    verse: 'by a gutter gurgling then we\'ll choose'
+                    lyric: 'by a gutter gurgling then we\'ll choose'
                 },
                 {
                     time: 7,
-                    verse: 'either never live yet live on or to'
+                    lyric: 'either never live yet live on or to'
                 },
                 {
                     time: 9,
-                    verse: [
+                    lyric: [
                         'love first',
                         {
                             anchor: 'without once knowing love',
@@ -52,15 +52,15 @@ module.exports = {
             [
                 {
                     time: 11,
-                    verse: 'when cesspit dead ends for further speech'
+                    lyric: 'when cesspit dead ends for further speech'
                 },
                 {
                     time: 12,
-                    verse: 'are these stuttered sentences we speak'
+                    lyric: 'are these stuttered sentences we speak'
                 },
                 {
                     time: 14,
-                    verse: [
+                    lyric: [
                         'for this kid wearing no',
                         {
                             anchor: 'decoder ring',
@@ -72,7 +72,7 @@ module.exports = {
                 },
                 {
                     time: 16,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Dutch courage',
                             annotation: {
@@ -92,11 +92,11 @@ module.exports = {
             [
                 {
                     time: 18,
-                    verse: 'but even no sponge'
+                    lyric: 'but even no sponge'
                 },
                 {
                     time: 20,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'nor a barnacle',
                             annotation: {
@@ -113,7 +113,7 @@ module.exports = {
                 },
                 {
                     time: 22,
-                    verse: {
+                    lyric: {
                         anchor: 'swept in unchartable tides',
                         annotation: {
                             description: 'Stencilled above many storm drains in the Bay Area is a sign that reads, "No Dumping, Drains to Ocean." The constant peril of being steered in directions for which I was unprepared has kept me on edge throughout this date, as usual. But a nearby storm drain reminds me that many things, including sponge and barnacle larvae, are regularly carried by the current to unknown regions, and they don\'t sweat it.'
@@ -122,7 +122,7 @@ module.exports = {
                 },
                 {
                     time: 24,
-                    verse: [
+                    lyric: [
                         'they just',
                         {
                             anchor: 'always know to pry',
@@ -134,7 +134,7 @@ module.exports = {
                 },
                 {
                     time: 26,
-                    verse: [
+                    lyric: [
                         'for the',
                         {
                             anchor: 'innermost matryoshka\'s',
@@ -146,13 +146,13 @@ module.exports = {
                 },
                 {
                     time: 28,
-                    verse: 'heart of gold inside'
+                    lyric: 'heart of gold inside'
                 }
             ],
             [
                 {
                     time: 29,
-                    verse: [
+                    lyric: [
                         'till then',
                         {
                             anchor: 'crack up another doll',
@@ -164,7 +164,7 @@ module.exports = {
                 },
                 {
                     time: 32,
-                    verse: [
+                    lyric: [
                         'to find the',
                         {
                             anchor: 'chrysalis unchristened',
@@ -177,7 +177,7 @@ module.exports = {
                 },
                 {
                     time: 36,
-                    verse: [
+                    lyric: [
                         'who\'d buy this',
                         {
                             anchor: 'aping jaw',
@@ -190,7 +190,7 @@ module.exports = {
                 },
                 {
                     time: 40,
-                    verse: [
+                    lyric: [
                         'swaggering down these barren',
                         {
                             anchor: 'exhibit halls',
@@ -204,11 +204,11 @@ module.exports = {
             [
                 {
                     time: 45,
-                    verse: 'but totems so revered'
+                    lyric: 'but totems so revered'
                 },
                 {
                     time: 47,
-                    verse: [
+                    lyric: [
                         'when defined by',
                         {
                             anchor: 'ambrosia beers',
@@ -226,7 +226,7 @@ module.exports = {
                 },
                 {
                     time: 48,
-                    verse: [
+                    lyric: [
                         'in time are seen with',
                         {
                             anchor: 'a focus grown clear',
@@ -238,13 +238,13 @@ module.exports = {
                 },
                 {
                     time: 50,
-                    verse: 'and slowly the story erodes'
+                    lyric: 'and slowly the story erodes'
                 }
             ],
             [
                 {
                     time: 52,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'pidgin palaver',
                             annotation: {
@@ -256,11 +256,11 @@ module.exports = {
                 },
                 {
                     time: 54,
-                    verse: 'can only transfer good faith'
+                    lyric: 'can only transfer good faith'
                 },
                 {
                     time: 56,
-                    verse: [
+                    lyric: [
                         'hyped up like some',
                         {
                             anchor: 'disastrous play',
@@ -272,7 +272,7 @@ module.exports = {
                 },
                 {
                     time: 58,
-                    verse: [
+                    lyric: [
                         'that starts with a',
                         {
                             anchor: 'lone ringing phone',
@@ -286,15 +286,15 @@ module.exports = {
             [
                 {
                     time: 60,
-                    verse: 'but even so'
+                    lyric: 'but even so'
                 },
                 {
                     time: 62,
-                    verse: 'just that it ever rang at all'
+                    lyric: 'just that it ever rang at all'
                 },
                 {
                     time: 64,
-                    verse: [
+                    lyric: [
                         'for if the',
                         {
                             anchor: 'tactic is to stall',
@@ -306,11 +306,11 @@ module.exports = {
                 },
                 {
                     time: 66,
-                    verse: 'you\'re just ecstatic she called'
+                    lyric: 'you\'re just ecstatic she called'
                 },
                 {
                     time: 68,
-                    verse: [
+                    lyric: [
                         'what this',
                         {
                             anchor: 'understudy sought',
@@ -323,17 +323,17 @@ module.exports = {
                 },
                 {
                     time: 70,
-                    verse: 'strutting on the wall'
+                    lyric: 'strutting on the wall'
                 }
             ],
             [
                 {
                     time: 71,
-                    verse: 'we whine when first we got shunned'
+                    lyric: 'we whine when first we got shunned'
                 },
                 {
                     time: 73,
-                    verse: [
+                    lyric: [
                         'then wise up and',
                         {
                             anchor: 'learn to shotgun',
@@ -345,11 +345,11 @@ module.exports = {
                 },
                 {
                     time: 75,
-                    verse: 'last show\'s set still propped up'
+                    lyric: 'last show\'s set still propped up'
                 },
                 {
                     time: 77,
-                    verse: [
+                    lyric: [
                         'so we\'ll',
                         {
                             anchor: 'breeze through our parts',
@@ -363,25 +363,25 @@ module.exports = {
             [
                 {
                     time: 79,
-                    verse: 'though each kind new ultimatum'
+                    lyric: 'though each kind new ultimatum'
                 },
                 {
                     time: 81,
-                    verse: 'to his tribe left old and jaded'
+                    lyric: 'to his tribe left old and jaded'
                 },
                 {
                     time: 83,
-                    verse: 'the boy brave who cultivated'
+                    lyric: 'the boy brave who cultivated'
                 },
                 {
                     time: 84,
-                    verse: 'brave rejection into art'
+                    lyric: 'brave rejection into art'
                 }
             ],
             [
                 {
                     time: 86,
-                    verse: [
+                    lyric: [
                         'but',
                         {
                             anchor: 'died unfinished',
@@ -400,15 +400,15 @@ module.exports = {
                 },
                 {
                     time: 88,
-                    verse: 'hotlines get busy just as'
+                    lyric: 'hotlines get busy just as'
                 },
                 {
                     time: 90,
-                    verse: 'thoughts slide to slitting wrists that'
+                    lyric: 'thoughts slide to slitting wrists that'
                 },
                 {
                     time: 92,
-                    verse: [
+                    lyric: [
                         'hint of',
                         {
                             anchor: 'sampler cologne',
@@ -422,11 +422,11 @@ module.exports = {
             [
                 {
                     time: 94,
-                    verse: 'and a lass sniffing out these rote charms'
+                    lyric: 'and a lass sniffing out these rote charms'
                 },
                 {
                     time: 96,
-                    verse: [
+                    lyric: [
                         'always rides in',
                         {
                             anchor: 'single go-karts',
@@ -438,7 +438,7 @@ module.exports = {
                 },
                 {
                     time: 98,
-                    verse: [
+                    lyric: [
                         'as we wind an',
                         {
                             anchor: 'endless flowchart',
@@ -450,13 +450,13 @@ module.exports = {
                 },
                 {
                     time: 99,
-                    verse: 'with every given answer a no'
+                    lyric: 'with every given answer a no'
                 }
             ],
             [
                 {
                     time: 101,
-                    verse: [
+                    lyric: [
                         'and her',
                         {
                             anchor: 'veggie wishbone\'s',
@@ -468,15 +468,15 @@ module.exports = {
                 },
                 {
                     time: 103,
-                    verse: 'short end in these clutching fingers of steel'
+                    lyric: 'short end in these clutching fingers of steel'
                 },
                 {
                     time: 105,
-                    verse: 'too untrusting to ever unpeel'
+                    lyric: 'too untrusting to ever unpeel'
                 },
                 {
                     time: 107,
-                    verse: [
+                    lyric: [
                         'from a',
                         {
                             anchor: 'dummy steering wheel',
@@ -488,25 +488,25 @@ module.exports = {
                 },
                 {
                     time: 109,
-                    verse: 'settled for hugging only curbs'
+                    lyric: 'settled for hugging only curbs'
                 },
                 {
                     time: 111,
-                    verse: 'and having only tires squeal'
+                    lyric: 'and having only tires squeal'
                 }
             ],
             [
                 {
                     time: 113,
-                    verse: 'when boys who mope'
+                    lyric: 'when boys who mope'
                 },
                 {
                     time: 114,
-                    verse: 'know the beauty of simply limping away blind'
+                    lyric: 'know the beauty of simply limping away blind'
                 },
                 {
                     time: 116,
-                    verse: [
+                    lyric: [
                         'as the',
                         {
                             anchor: 'chirping crosswalks',
@@ -519,21 +519,21 @@ module.exports = {
                 },
                 {
                     time: 118,
-                    verse: 'where willows softly conspire'
+                    lyric: 'where willows softly conspire'
                 },
                 {
                     time: 120,
-                    verse: 'when boys who cope'
+                    lyric: 'when boys who cope'
                 },
                 {
                     time: 121,
-                    verse: 'only risk invites denied'
+                    lyric: 'only risk invites denied'
                 }
             ],
             [
                 {
                     time: 123,
-                    verse: {
+                    lyric: {
                         anchor: 'I sigh, "Good night."',
                         annotation: {
                             description: 'I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn\'t hear from her again for months.'

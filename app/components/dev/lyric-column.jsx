@@ -24,16 +24,18 @@ class LyricColumn extends React.Component {
         // A "verse" wraps a single line of text.
         return (
             <div className={'verse ' + verseIndex} key={verseIndex}>
-                {this._getParsedLyric(verseObject)}
+                {this._getLyric(verseObject)}
             </div>
         );
     }
 
-    _getParsedLyric(verseObject) {
+    _getLyric(verseObject) {
+        // A "lyric" is a formatted text element that includes annotation data.
+
         /**
             verseObject = {
                 time: 0,
-                verse: [
+                lyric: [
                     'My',
                     {
                         annotationIndex: 1,
@@ -46,8 +48,7 @@ class LyricColumn extends React.Component {
             }
         */
 
-        console.error('verseObject', verseObject);
-        return FormatUtility.getFormattedSpan(verseObject.verse, this.props.handleAnnotationSelect);
+        return FormatUtility.getFormattedSpan(verseObject.lyric, this.props.handleAnnotationSelect);
     }
 
     render() {

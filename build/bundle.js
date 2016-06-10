@@ -22166,88 +22166,88 @@
 	    lyrics: {
 	        right: [[{
 	            time: 17,
-	            verse: 'Didi left the house this morning'
+	            lyric: 'Didi left the house this morning'
 	        }, {
 	            time: 22,
-	            verse: 'wondering to himself, who would tie his shoes?'
+	            lyric: 'wondering to himself, who would tie his shoes?'
 	        }, {
 	            time: 28,
-	            verse: 'And he left alone because he'
+	            lyric: 'And he left alone because he'
 	        }, {
 	            time: 34,
-	            verse: 'had to finish up all his orange juice.'
+	            lyric: 'had to finish up all his orange juice.'
 	        }], [{
 	            time: 40,
-	            verse: 'Didi, you\'ve been following, I didn\'t want you here.'
+	            lyric: 'Didi, you\'ve been following, I didn\'t want you here.'
 	        }, {
 	            time: 46,
-	            verse: 'Didi, couldn\'t you find another sister to be near?'
+	            lyric: 'Didi, couldn\'t you find another sister to be near?'
 	        }], [{
 	            time: 52,
-	            verse: 'Cause I get sick of hearing, "Zeizei, let Didi play with you…"'
+	            lyric: 'Cause I get sick of hearing, "Zeizei, let Didi play with you…"'
 	        }, {
 	            time: 57,
-	            verse: 'And I tire of saying, "My Didi wants to come too."'
+	            lyric: 'And I tire of saying, "My Didi wants to come too."'
 	        }], [{
 	            time: 63,
-	            verse: 'Didi made an "accident" in class,'
+	            lyric: 'Didi made an "accident" in class,'
 	        }, {
 	            time: 68,
-	            verse: 'so the nurse sent him home, snickered the recess crowd.'
+	            lyric: 'so the nurse sent him home, snickered the recess crowd.'
 	        }, {
 	            time: 74,
-	            verse: 'They saw him crying beside a Safeway paper bag,'
+	            lyric: 'They saw him crying beside a Safeway paper bag,'
 	        }, {
 	            time: 80,
-	            verse: 'decked in overalls from the lost and found.'
+	            lyric: 'decked in overalls from the lost and found.'
 	        }], [{
 	            time: 85,
-	            verse: 'Didi, you\'ve been in the bath all this time.'
+	            lyric: 'Didi, you\'ve been in the bath all this time.'
 	        }, {
 	            time: 91,
-	            verse: 'Didi, come out, you can\'t soak there all night.'
+	            lyric: 'Didi, come out, you can\'t soak there all night.'
 	        }, {
 	            time: 97,
-	            verse: '<em>Don\'t little raisin fingers need to dry?</em>'
+	            lyric: '<em>Don\'t little raisin fingers need to dry?</em>'
 	        }], [{
 	            time: 100,
-	            verse: 'Didi, someday you will be a hero'
+	            lyric: 'Didi, someday you will be a hero'
 	        }, {
 	            time: 103,
-	            verse: 'in the movies, fighting those'
+	            lyric: 'in the movies, fighting those'
 	        }, {
 	            time: 106,
-	            verse: 'crooked thieves with your sheriff\'s badge and gun…'
+	            lyric: 'crooked thieves with your sheriff\'s badge and gun…'
 	        }, {
 	            time: 112,
-	            verse: 'Didi, one day you will be a picture'
+	            lyric: 'Didi, one day you will be a picture'
 	        }, {
 	            time: 115,
-	            verse: 'taped to all the girls\' mirrors.'
+	            lyric: 'taped to all the girls\' mirrors.'
 	        }, {
 	            time: 117,
-	            verse: 'They\'ll say, who now could have ever figured'
+	            lyric: 'They\'ll say, who now could have ever figured'
 	        }, {
 	            time: 120,
-	            verse: 'you\'d finally become someone?'
+	            lyric: 'you\'d finally become someone?'
 	        }], [{
 	            time: 129,
-	            verse: 'Didi dear, I\'m sorry that I yelled at you that way.'
+	            lyric: 'Didi dear, I\'m sorry that I yelled at you that way.'
 	        }, {
 	            time: 135,
-	            verse: 'Didi dear, I know today just wasn\'t your day.'
+	            lyric: 'Didi dear, I know today just wasn\'t your day.'
 	        }], [{
 	            time: 141,
-	            verse: 'And now I think all I want is my Didi well by tomorrow,'
+	            lyric: 'And now I think all I want is my Didi well by tomorrow,'
 	        }, {
 	            time: 146,
-	            verse: 'and there are things I hope my Didi will never know.'
+	            lyric: 'and there are things I hope my Didi will never know.'
 	        }], [{
 	            time: 152,
-	            verse: 'Yes, and now I think all I want is my Didi well by tomorrow,'
+	            lyric: 'Yes, and now I think all I want is my Didi well by tomorrow,'
 	        }, {
 	            time: 158,
-	            verse: 'and there are things I hope Didi will never have to know.'
+	            lyric: 'and there are things I hope Didi will never have to know.'
 	        }]]
 	    }
 	};
@@ -22283,25 +22283,25 @@
 	             * Talk about the San Fernando Valley being hot, mirage makes mountaintops turn upside down.
 	             */
 	            time: 11,
-	            verse: 'Hilltops gnashing dig out potholes,'
+	            lyric: 'Hilltops gnashing dig out potholes,'
 	        }, {
 	            time: 14,
-	            verse: 'the valley somersaults in tarred pavement mirage.'
+	            lyric: 'the valley somersaults in tarred pavement mirage.'
 	        }, {
 	            time: 17,
-	            verse: 'Hydrants burst as early worms work this dying coyote\'s jaw.'
+	            lyric: 'Hydrants burst as early worms work this dying coyote\'s jaw.'
 	        }, {
 	            /**
 	             * Willy collects recyclables.
 	             */
 	            time: 23,
-	            verse: 'Swill pop poured from wayside bottle,'
+	            lyric: 'Swill pop poured from wayside bottle,'
 	        }, {
 	            time: 26,
-	            verse: 'his pinhead in its shadow eclipsed in full.'
+	            lyric: 'his pinhead in its shadow eclipsed in full.'
 	        }, {
 	            time: 30,
-	            verse: [{
+	            lyric: [{
 	                italic: 'Chilled cola\'s free with salvage sold…'
 	            }]
 	        }, {
@@ -22309,139 +22309,139 @@
 	             * He ends as troll.
 	             */
 	            time: 32,
-	            verse: 'licking lips he ends his stroll.'
+	            lyric: 'licking lips he ends his stroll.'
 	        }], [{
 	            time: 35,
-	            verse: 'Oh, has Willy the Cocoa come'
+	            lyric: 'Oh, has Willy the Cocoa come'
 	        }, {
 	            time: 38,
-	            verse: 'for our tins and our jars this week?'
+	            lyric: 'for our tins and our jars this week?'
 	        }, {
 
 	            time: 41,
-	            verse: 'Saluting Mummy doing some haircutting to the sun'
+	            lyric: 'Saluting Mummy doing some haircutting to the sun'
 	        }, {
 	            time: 45,
-	            verse: 'when suddenly baby shrieks…'
+	            lyric: 'when suddenly baby shrieks…'
 	        }], [{
 	            time: 47,
-	            verse: 'As gap-toothed coma parts his forehead,'
+	            lyric: 'As gap-toothed coma parts his forehead,'
 	        }, {
 	            time: 50,
-	            verse: 'launching pair of seizures to the patch.'
+	            lyric: 'launching pair of seizures to the patch.'
 	        }, {
 	            time: 53,
-	            verse: 'Willy ducks behind the porch steps and laughs.'
+	            lyric: 'Willy ducks behind the porch steps and laughs.'
 	        }, {
 	            time: 59,
-	            verse: 'Oh ma\'am, I see your kid with whiskers,'
+	            lyric: 'Oh ma\'am, I see your kid with whiskers,'
 	        }, {
 	            time: 62,
-	            verse: 'he croaks, stroking creepers on his cheek,'
+	            lyric: 'he croaks, stroking creepers on his cheek,'
 	        }, {
 	            time: 65,
-	            verse: 'And three years howling is the longest cowlick yet I\'ve seen!'
+	            lyric: 'And three years howling is the longest cowlick yet I\'ve seen!'
 	        }], [{
 	            time: 71,
-	            verse: 'Prying X-ray spec\'d, enraged at pages clawed,'
+	            lyric: 'Prying X-ray spec\'d, enraged at pages clawed,'
 	        }, {
 	            time: 74,
-	            verse: 'a kick slams the bearded baby to the ground'
+	            lyric: 'a kick slams the bearded baby to the ground'
 	        }, {
 	            time: 77,
-	            verse: 'with his tummy clenched, muffling baffled sobs.'
+	            lyric: 'with his tummy clenched, muffling baffled sobs.'
 	        }, {
 	            time: 80,
-	            verse: 'Papa storms in roaring, Boy, are you proud?'
+	            lyric: 'Papa storms in roaring, Boy, are you proud?'
 	        }, {
 	            time: 83,
-	            verse: 'You\'d learn him good, when smarts he could\'ve took'
+	            lyric: 'You\'d learn him good, when smarts he could\'ve took'
 	        }, {
 	            time: 86,
-	            verse: 'all went instead to this clever head of yours.'
+	            lyric: 'all went instead to this clever head of yours.'
 	        }, {
 	            time: 89,
-	            verse: 'So to baby—to your brother—you\'ll say sorry for the world!'
+	            lyric: 'So to baby—to your brother—you\'ll say sorry for the world!'
 	        }], [{
 	            time: 106,
-	            verse: 'Killcrop dashing kicks up puddle,'
+	            lyric: 'Killcrop dashing kicks up puddle,'
 	        }, {
 	            time: 110,
-	            verse: 'soused loafers shouting \'tard payment is due.'
+	            lyric: 'soused loafers shouting \'tard payment is due.'
 	        }, {
 	            time: 113,
-	            verse: 'Hit this witch with switch, whispers wind, to fix his switcheroo…'
+	            lyric: 'Hit this witch with switch, whispers wind, to fix his switcheroo…'
 	        }, {
 	            time: 119,
-	            verse: 'Milksop cornered into scuffle,'
+	            lyric: 'Milksop cornered into scuffle,'
 	        }, {
 	            time: 122,
-	            verse: 'a sack-spilled glass swung sounds the past-noon toll.'
+	            lyric: 'a sack-spilled glass swung sounds the past-noon toll.'
 	        }, {
 	            time: 126,
-	            verse: [{
+	            lyric: [{
 	                italic: 'Shelled skull has freed unsalvaged soul…'
 	            }]
 	        }, {
 	            time: 128,
-	            verse: 'dripping Willy\'s stalkless bulb.'
+	            lyric: 'dripping Willy\'s stalkless bulb.'
 	        }], [{
 	            time: 131,
-	            verse: 'Oh, and August was the sawdust month'
+	            lyric: 'Oh, and August was the sawdust month'
 	        }, {
 	            time: 134,
-	            verse: 'that saw this mulch soften asphodel.'
+	            lyric: 'that saw this mulch soften asphodel.'
 	        }, {
 	            time: 137,
-	            verse: 'Baby bluebonnets bloomed as new comics soon'
+	            lyric: 'Baby bluebonnets bloomed as new comics soon'
 	        }, {
 	            time: 140,
-	            verse: 'lay forgotten amongst the mail.'
+	            lyric: 'lay forgotten amongst the mail.'
 	        }], [{
 	            time: 143,
-	            verse: 'But how marbleless, some reckoned,'
+	            lyric: 'But how marbleless, some reckoned,'
 	        }, {
 	            time: 146,
-	            verse: 'being ever stuck in imp-runt age of mind!'
+	            lyric: 'being ever stuck in imp-runt age of mind!'
 	        }, {
 	            time: 149,
-	            verse: 'Are you sick? I am seven, he\'d reply…'
+	            lyric: 'Are you sick? I am seven, he\'d reply…'
 	        }, {
 	            time: 155,
-	            verse: 'And do we speak in winded whimpers'
+	            lyric: 'And do we speak in winded whimpers'
 	        }, {
 	            time: 158,
-	            verse: 'or squelch shreds of a summer gone,'
+	            lyric: 'or squelch shreds of a summer gone,'
 	        }, {
 	            time: 161,
-	            verse: 'ever conscious of days past forever wrong?'
+	            lyric: 'ever conscious of days past forever wrong?'
 	        }], [{
 	            time: 167,
-	            verse: 'Such heavy fears, Mummy laughs,'
+	            lyric: 'Such heavy fears, Mummy laughs,'
 	        }, {
 	            time: 171,
-	            verse: 'for a cub not yet Webelos!'
+	            lyric: 'for a cub not yet Webelos!'
 	        }, {
 	            time: 173,
-	            verse: 'Son, seventy years and you\'ll be glad'
+	            lyric: 'Son, seventy years and you\'ll be glad'
 	        }, {
 	            time: 177,
-	            verse: 'to finally rest those creaking bones!'
+	            lyric: 'to finally rest those creaking bones!'
 	        }, {
 	            time: 179,
-	            verse: 'Life\'s like this quilt: patchy, then it fills…'
+	            lyric: 'Life\'s like this quilt: patchy, then it fills…'
 	        }, {
 	            time: 183,
-	            verse: 'In time with needle done, you\'ll write this book of yours.'
+	            lyric: 'In time with needle done, you\'ll write this book of yours.'
 	        }, {
 	            time: 185,
-	            verse: 'Then to Willy, in the cover could say sorry for the world!'
+	            lyric: 'Then to Willy, in the cover could say sorry for the world!'
 	        }], [{
 	            time: 191,
-	            verse: 'Bobtail\'s cover could say sorry for the world!'
+	            lyric: 'Bobtail\'s cover could say sorry for the world!'
 	        }, {
 	            time: 197,
-	            verse: 'Oh, Bobtail\'s cover could say sorry…!'
+	            lyric: 'Oh, Bobtail\'s cover could say sorry…!'
 	        }]]
 	    }
 	};
@@ -22479,109 +22479,109 @@
 	    lyrics: {
 	        right: [[{
 	            time: 5,
-	            verse: 'Dearest Sasha,'
+	            lyric: 'Dearest Sasha,'
 	        }], [{
 	            time: 7,
-	            verse: 'It\'s nearing autumn here with record highs.'
+	            lyric: 'It\'s nearing autumn here with record highs.'
 	        }, {
 	            time: 10,
-	            verse: 'Is it searing in Boston? Hope this letter finds'
+	            lyric: 'Is it searing in Boston? Hope this letter finds'
 	        }, {
 	            time: 13,
-	            verse: 'your first semester fine while I\'m out of town…'
+	            lyric: 'your first semester fine while I\'m out of town…'
 	        }, {
 	            time: 18,
-	            verse: 'You\'d love Taiwan, surrounded by walls of mountains,'
+	            lyric: 'You\'d love Taiwan, surrounded by walls of mountains,'
 	        }, {
 	            time: 22,
-	            verse: 'their peaks sealed and shielded by foggy clouds.'
+	            lyric: 'their peaks sealed and shielded by foggy clouds.'
 	        }, {
 	            time: 26,
-	            verse: 'Beneath this ceiling yields the scene a reeling feel'
+	            lyric: 'Beneath this ceiling yields the scene a reeling feel'
 	        }, {
 	            time: 30,
-	            verse: 'of some giant\'s house.'
+	            lyric: 'of some giant\'s house.'
 	        }], [{
 	            time: 33,
-	            verse: 'So… before I left, you said'
+	            lyric: 'So… before I left, you said'
 	        }, {
 	            time: 37,
-	            verse: 'I should keep your kid name, with everything it meant.'
+	            lyric: 'I should keep your kid name, with everything it meant.'
 	        }, {
 	            time: 41,
-	            verse: 'But then in your embrace, I felt you prepped to shed…'
+	            lyric: 'But then in your embrace, I felt you prepped to shed…'
 	        }], [{
 	            time: 48,
-	            verse: 'And I\'d reflect inside withering amber eyes—'
+	            lyric: 'And I\'d reflect inside withering amber eyes—'
 	        }, {
 	            time: 52,
-	            verse: 'your pupil\'s pupal fly, a pet petrified—'
+	            lyric: 'your pupil\'s pupal fly, a pet petrified—'
 	        }, {
 	            time: 56,
-	            verse: 'with you raving over how he\'s getting you'
+	            lyric: 'with you raving over how he\'s getting you'
 	        }, {
 	            time: 64,
-	            verse: 'staying kosher. Though, you know, I would have too…'
+	            lyric: 'staying kosher. Though, you know, I would have too…'
 	        }], [{
 	            time: 73,
-	            verse: 'And I sniffled daily when you skipped a grade.'
+	            lyric: 'And I sniffled daily when you skipped a grade.'
 	        }, {
 	            time: 77,
-	            verse: 'One bus seat up you moved, letting rippled braids'
+	            lyric: 'One bus seat up you moved, letting rippled braids'
 	        }, {
 	            time: 80,
-	            verse: 'caress, sun-streaked and loose, a wet-cheeked papoose'
+	            lyric: 'caress, sun-streaked and loose, a wet-cheeked papoose'
 	        }, {
 	            time: 84,
-	            verse: 'sadly weaned from you…'
+	            lyric: 'sadly weaned from you…'
 	        }], [{
 	            time: 88,
-	            verse: 'Whom I knew I\'d lose the day,'
+	            lyric: 'Whom I knew I\'d lose the day,'
 	        }, {
 	            time: 92,
-	            verse: 'you flew enraged and shooed them from their game;'
+	            lyric: 'you flew enraged and shooed them from their game;'
 	        }, {
 	            time: 95,
-	            verse: 'untied this "tetherboy," soothing in your lecture voice.'
+	            lyric: 'untied this "tetherboy," soothing in your lecture voice.'
 	        }, {
 	            time: 103,
-	            verse: 'Oh but Sasha, if anarchy reigns,'
+	            lyric: 'Oh but Sasha, if anarchy reigns,'
 	        }, {
 	            time: 107,
-	            verse: 'then no one lives when narcing to the aides,'
+	            lyric: 'then no one lives when narcing to the aides,'
 	        }, {
 	            time: 110,
-	            verse: 'who shrug when thus annoyed, yawning, "Boys will beat boys…"'
+	            lyric: 'who shrug when thus annoyed, yawning, "Boys will beat boys…"'
 	        }], [{
 	            time: 118,
-	            verse: 'Well Sasha… okay, you saw the cuts.'
+	            lyric: 'Well Sasha… okay, you saw the cuts.'
 	        }, {
 	            time: 122,
-	            verse: 'But though my jaw was stuck, so now I talk Canuck,'
+	            lyric: 'But though my jaw was stuck, so now I talk Canuck,'
 	        }, {
 	            time: 126,
-	            verse: 'there\'s been plenty days I\'ve really been through worse.'
+	            lyric: 'there\'s been plenty days I\'ve really been through worse.'
 	        }, {
 	            time: 134,
-	            verse: 'Anyway, I\'m feeling healed. Still, hugging hurts…'
+	            lyric: 'Anyway, I\'m feeling healed. Still, hugging hurts…'
 	        }], [{
 	            time: 143,
-	            verse: 'And Sasha, I know you\'ll have them all,'
+	            lyric: 'And Sasha, I know you\'ll have them all,'
 	        }, {
 	            time: 147,
-	            verse: 'while if I last the fall playing possum'
+	            lyric: 'while if I last the fall playing possum'
 	        }, {
 	            time: 151,
-	            verse: 'is a toss-up. But where some haemophile'
+	            lyric: 'is a toss-up. But where some haemophile'
 	        }, {
 	            time: 154,
-	            verse: 'might bleed the Nile to nausea,'
+	            lyric: 'might bleed the Nile to nausea,'
 	        }, {
 	            time: 158,
-	            verse: 'I can wash up, and hope the bastards croak,'
+	            lyric: 'I can wash up, and hope the bastards croak,'
 	        }, {
 	            time: 162,
-	            verse: 'on rat turds choked.'
+	            lyric: 'on rat turds choked.'
 	        }]]
 	    }
 	};
@@ -22601,263 +22601,263 @@
 	    lyrics: {
 	        left: [[{
 	            time: 0,
-	            verse: 'Mr. Odin died today.'
+	            lyric: 'Mr. Odin died today.'
 	        }], [{
 	            time: 8,
-	            verse: 'Lights off, from your hiding place of retreat emerged.'
+	            lyric: 'Lights off, from your hiding place of retreat emerged.'
 	        }, {
 	            time: 14,
-	            verse: 'This fridge\'s gallery in web\'s wake was strewn,'
+	            lyric: 'This fridge\'s gallery in web\'s wake was strewn,'
 	        }, {
 	            time: 17,
-	            verse: 'silent poll of colours overused. '
+	            lyric: 'silent poll of colours overused. '
 	        }, {
 	            time: 20,
-	            verse: 'This latest piece you drew with crayons least whittled…'
+	            lyric: 'This latest piece you drew with crayons least whittled…'
 	        }], [{
 	            time: 26,
-	            verse: 'The house settled in sheets, you swing the iron screen.'
+	            lyric: 'The house settled in sheets, you swing the iron screen.'
 	        }, {
 	            time: 32,
-	            verse: 'By the alabaster balustrade,'
+	            lyric: 'By the alabaster balustrade,'
 	        }, {
 	            time: 35,
-	            verse: 'baby steps inch towards crevice rays.'
+	            lyric: 'baby steps inch towards crevice rays.'
 	        }], [{
 	            time: 38,
-	            verse: 'Then down stygian stairs,'
+	            lyric: 'Then down stygian stairs,'
 	        }, {
 	            time: 40,
-	            verse: 'through sickle-lit oriental streets.'
+	            lyric: 'through sickle-lit oriental streets.'
 	        }, {
 	            time: 44,
-	            verse: 'Raccoons rummage round some rubbish bags,'
+	            lyric: 'Raccoons rummage round some rubbish bags,'
 	        }, {
 	            time: 47,
-	            verse: 'till a rickshaw hiccoughs from grating cracks.'
+	            lyric: 'till a rickshaw hiccoughs from grating cracks.'
 	        }, {
 	            time: 50,
-	            verse: 'You seek the dunes once deemed a haven'
+	            lyric: 'You seek the dunes once deemed a haven'
 	        }, {
 	            time: 53,
-	            verse: 'that was safe for a heathen…'
+	            lyric: 'that was safe for a heathen…'
 	        }], [{
 	            time: 59,
-	            verse: 'And if flutters with the fairest'
+	            lyric: 'And if flutters with the fairest'
 	        }, {
 	            time: 63,
-	            verse: 'were just sins simply dreamt,'
+	            lyric: 'were just sins simply dreamt,'
 	        }, {
 	            time: 67,
-	            verse: 'could some bottled butterfly dream your whims instead?'
+	            lyric: 'could some bottled butterfly dream your whims instead?'
 	        }, {
 	            time: 73,
-	            verse: 'What\'s more, if all you live for still die at the end—'
+	            lyric: 'What\'s more, if all you live for still die at the end—'
 	        }, {
 	            time: 79,
-	            verse: 'like Odin\'s ashes back from the Society,'
+	            lyric: 'like Odin\'s ashes back from the Society,'
 	        }, {
 	            time: 84,
-	            verse: 'which filled a chasm dug up underneath—'
+	            lyric: 'which filled a chasm dug up underneath—'
 	        }, {
 	            time: 87,
-	            verse: 'can that which kills a cat spare his home if spread?'
+	            lyric: 'can that which kills a cat spare his home if spread?'
 	        }], [{
 	            time: 93,
-	            verse: 'You researched a gleam'
+	            lyric: 'You researched a gleam'
 	        }, {
 	            time: 95,
-	            verse: 'to be a guard\'s whistle at your feet,'
+	            lyric: 'to be a guard\'s whistle at your feet,'
 	        }, {
 	            time: 99,
-	            verse: 'and brought your raft behind the yellow-taped grills'
+	            lyric: 'and brought your raft behind the yellow-taped grills'
 	        }, {
 	            time: 102,
-	            verse: 'to stand onshore keen to drift if shark swarms withheld.'
+	            lyric: 'to stand onshore keen to drift if shark swarms withheld.'
 	        }], [{
 	            time: 105,
-	            verse: 'Buoy bobs through sea serpents,'
+	            lyric: 'Buoy bobs through sea serpents,'
 	        }, {
 	            time: 107,
-	            verse: 'shivering for shivs unsheathed.'
+	            lyric: 'shivering for shivs unsheathed.'
 	        }, {
 	            time: 111,
-	            verse: 'As roller coasters of waves comfort sighs,'
+	            lyric: 'As roller coasters of waves comfort sighs,'
 	        }, {
 	            time: 114,
-	            verse: 'you frame silhouettes of torn rides'
+	            lyric: 'you frame silhouettes of torn rides'
 	        }, {
 	            time: 117,
-	            verse: 'in your dim, lingering gaze,'
+	            lyric: 'in your dim, lingering gaze,'
 	        }, {
 	            time: 120,
-	            verse: 'a victim of erosion.'
+	            lyric: 'a victim of erosion.'
 	        }], [{
 	            time: 129,
-	            verse: 'Should you hide, or could you fight,'
+	            lyric: 'Should you hide, or could you fight,'
 	        }, {
 	            time: 132,
-	            verse: 'when your day to die has come?'
+	            lyric: 'when your day to die has come?'
 	        }, {
 	            time: 135,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 137,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 141,
-	            verse: 'But in time, wouldn\'t you find life is simply much too long?'
+	            lyric: 'But in time, wouldn\'t you find life is simply much too long?'
 	        }], [{
 	            time: 147,
-	            verse: 'But for a foetus force-fed, born preaborted,'
+	            lyric: 'But for a foetus force-fed, born preaborted,'
 	        }, {
 	            time: 150,
-	            verse: 'your ouija board said, "Son, just hum along."'
+	            lyric: 'your ouija board said, "Son, just hum along."'
 	        }], [{
 	            time: 166,
-	            verse: 'Though, no slave parts these seas,'
+	            lyric: 'Though, no slave parts these seas,'
 	        }, {
 	            time: 168,
-	            verse: 'then returns them as a buffer zone.'
+	            lyric: 'then returns them as a buffer zone.'
 	        }, {
 	            time: 173,
-	            verse: 'The sudsy ocean shapes its padded bed,'
+	            lyric: 'The sudsy ocean shapes its padded bed,'
 	        }, {
 	            time: 177,
-	            verse: 'which hitherto snubbed and spurned a wreck,'
+	            lyric: 'which hitherto snubbed and spurned a wreck,'
 	        }, {
 	            time: 180,
-	            verse: 'while mermaids smile past a guileless garden gnome…'
+	            lyric: 'while mermaids smile past a guileless garden gnome…'
 	        }]],
 	        right: [[{
 	            time: 0,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 8,
-	            verse: 'By lot, once more trifling tref must reseed the earth.'
+	            lyric: 'By lot, once more trifling tref must reseed the earth.'
 	        }, {
 	            time: 14,
-	            verse: 'Indifferent galaxies instead stay unmoved;'
+	            lyric: 'Indifferent galaxies instead stay unmoved;'
 	        }, {
 	            time: 17,
-	            verse: 'sigh and pull the covers over you.'
+	            lyric: 'sigh and pull the covers over you.'
 	        }, {
 	            time: 20,
-	            verse: 'In safest sleep, you ruminate on these riddles…'
+	            lyric: 'In safest sleep, you ruminate on these riddles…'
 	        }], [{
 	            time: 26,
-	            verse: 'But how dreadful indeed, do sweet dream\'s ichors seem!'
+	            lyric: 'But how dreadful indeed, do sweet dream\'s ichors seem!'
 	        }, {
 	            time: 32,
-	            verse: 'Like a salamander shall await'
+	            lyric: 'Like a salamander shall await'
 	        }, {
 	            time: 35,
-	            verse: 'trading breath\'s bliss for present bane.'
+	            lyric: 'trading breath\'s bliss for present bane.'
 	        }], [{
 	            time: 38,
-	            verse: 'And how stingy and scarce'
+	            lyric: 'And how stingy and scarce'
 	        }, {
 	            time: 40,
-	            verse: 'proves shibboleth for these gentle means!'
+	            lyric: 'proves shibboleth for these gentle means!'
 	        }, {
 	            time: 44,
-	            verse: 'As you plummet down from couplets past;'
+	            lyric: 'As you plummet down from couplets past;'
 	        }, {
 	            time: 47,
-	            verse: 'still, but missed bat mitzvahs come racing back.'
+	            lyric: 'still, but missed bat mitzvahs come racing back.'
 	        }, {
 	            time: 50,
-	            verse: 'To dreams of whom does each one cave in'
+	            lyric: 'To dreams of whom does each one cave in'
 	        }, {
 	            time: 53,
-	            verse: 'as a slave for the seasons?'
+	            lyric: 'as a slave for the seasons?'
 	        }], [{
 	            time: 59,
-	            verse: 'And if summer trips to Paris'
+	            lyric: 'And if summer trips to Paris'
 	        }, {
 	            time: 63,
-	            verse: 'weren\'t just myths between friends,'
+	            lyric: 'weren\'t just myths between friends,'
 	        }, {
 	            time: 67,
-	            verse: 'would the rondel of her eye be stored in this neck?'
+	            lyric: 'would the rondel of her eye be stored in this neck?'
 	        }, {
 	            time: 73,
-	            verse: 'But cored gifts fall to discord till lives acquiesce,'
+	            lyric: 'But cored gifts fall to discord till lives acquiesce,'
 	        }, {
 	            time: 79,
-	            verse: 'by opened latches that come undone by undine—'
+	            lyric: 'by opened latches that come undone by undine—'
 	        }, {
 	            time: 84,
-	            verse: 'which spilled a basket among other things—'
+	            lyric: 'which spilled a basket among other things—'
 	        }, {
 	            time: 87,
-	            verse: 'a casket tilted back where its hopeless rests.'
+	            lyric: 'a casket tilted back where its hopeless rests.'
 	        }], [{
 	            time: 93,
-	            verse: 'Your seizures of spleen,'
+	            lyric: 'Your seizures of spleen,'
 	        }, {
 	            time: 95,
-	            verse: 'you see the jarred sibyl had foreseen'
+	            lyric: 'you see the jarred sibyl had foreseen'
 	        }, {
 	            time: 99,
-	            verse: 'as not for wrapping by a cellophane sylph,'
+	            lyric: 'as not for wrapping by a cellophane sylph,'
 	        }, {
 	            time: 102,
-	            verse: 'who cannot warm he who didn\'t impart warmth himself.'
+	            lyric: 'who cannot warm he who didn\'t impart warmth himself.'
 	        }], [{
 	            time: 105,
-	            verse: 'Coin toss to be hers from'
+	            lyric: 'Coin toss to be hers from'
 	        }, {
 	            time: 107,
-	            verse: 'shivaree towards shivah seat'
+	            lyric: 'shivaree towards shivah seat'
 	        }, {
 	            time: 111,
-	            verse: 'has pulled your floater away from your sight.'
+	            lyric: 'has pulled your floater away from your sight.'
 	        }, {
 	            time: 114,
-	            verse: 'You chase till dew sheds from your eyes'
+	            lyric: 'You chase till dew sheds from your eyes'
 	        }, {
 	            time: 117,
-	            verse: 'with your beleaguered remains,'
+	            lyric: 'with your beleaguered remains,'
 	        }, {
 	            time: 120,
-	            verse: 'amidst dustbunnies frozen.'
+	            lyric: 'amidst dustbunnies frozen.'
 	        }], [{
 	            time: 129,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 132,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 135,
-	            verse: 'Can a holed up hostage'
+	            lyric: 'Can a holed up hostage'
 	        }, {
 	            time: 137,
-	            verse: 'pray for soulless solace and just play dumb?'
+	            lyric: 'pray for soulless solace and just play dumb?'
 	        }, {
 	            time: 141,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 147,
-	            verse: 'Yet your defeat of tortoise, forced lead unthwarted,'
+	            lyric: 'Yet your defeat of tortoise, forced lead unthwarted,'
 	        }, {
 	            time: 150,
-	            verse: 'sworn feat aforesaid, doesn\'t come anon.'
+	            lyric: 'sworn feat aforesaid, doesn\'t come anon.'
 	        }], [{
 	            time: 166,
-	            verse: 'Though, no grey starling\'s beak'
+	            lyric: 'Though, no grey starling\'s beak'
 	        }, {
 	            time: 168,
-	            verse: 'can reach urchins smashed from undertows.'
+	            lyric: 'can reach urchins smashed from undertows.'
 	        }, {
 	            time: 173,
-	            verse: 'But suddenly Odin\'s day is at its end;'
+	            lyric: 'But suddenly Odin\'s day is at its end;'
 	        }, {
 	            time: 177,
-	            verse: 'his litter to dust and earth was swept,'
+	            lyric: 'his litter to dust and earth was swept,'
 	        }, {
 	            time: 180,
-	            verse: 'while Thursday\'s child has a mile less far to go…'
+	            lyric: 'while Thursday\'s child has a mile less far to go…'
 	        }]]
 	    }
 	};
@@ -22975,31 +22975,31 @@
 	    lyrics: {
 	        left: [[{
 	            time: 0,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'O Catherine! My Catherine!',
 	                annotationKey: 'o_captain_my_captain'
 	            }, 'our futile trip is done']
 	        }, {
 	            time: 6,
-	            verse: ['where it commenced: in my', {
+	            lyric: ['where it commenced: in my', {
 	                anchor: 'bookless room,',
 	                annotationKey: 'bookless_room'
 	            }]
 	        }, {
 	            time: 10,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Ulysses\' tomb,',
 	                annotationKey: 'ulysses_tomb'
 	            }, 'surely buried she\'d be!']
 	        }, {
 	            time: 16,
-	            verse: ['First we', {
+	            lyric: ['First we', {
 	                anchor: 'laid Tourette\'s,',
 	                annotationKey: 'laid_tourettes'
 	            }, 'next regrets,']
 	        }, {
 	            time: 18,
-	            verse: ['the', {
+	            lyric: ['the', {
 	                anchor: 'last day she rose',
 	                annotationKey: 'last_day_she_rose'
 	            }, 'up and left, hers the', {
@@ -23008,31 +23008,31 @@
 	            }]
 	        }, {
 	            time: 23,
-	            verse: ['But', {
+	            lyric: ['But', {
 	                anchor: 'saving herself strictly for marriage,',
 	                annotationKey: 'saving_herself_for_marriage'
 	            }, 'or really from me?']
 	        }], [{
 	            time: 30,
-	            verse: 'Oh and for Catherine, St. Catherine of God,'
+	            lyric: 'Oh and for Catherine, St. Catherine of God,'
 	        }, {
 	            time: 34,
-	            verse: ['I purge, with a', {
+	            lyric: ['I purge, with a', {
 	                anchor: 'dirge she\'d deride,',
 	                annotationKey: 'dirge_shed_deride'
 	            }]
 	        }, {
 	            time: 38,
-	            verse: 'with sadness, sad for what I am not:'
+	            lyric: 'with sadness, sad for what I am not:'
 	        }, {
 	            time: 42,
-	            verse: 'a soul to share in her eternal life.'
+	            lyric: 'a soul to share in her eternal life.'
 	        }], [{
 	            time: 46,
-	            verse: 'Oh Catherine, pressed for an opinion, sighed,'
+	            lyric: 'Oh Catherine, pressed for an opinion, sighed,'
 	        }, {
 	            time: 50,
-	            verse: [{
+	            lyric: [{
 	                anchor: '"My, what wit, man,"',
 	                annotationKey: 'my_what_wit_man'
 	            }, {
@@ -23041,28 +23041,28 @@
 	            }]
 	        }, {
 	            time: 54,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'with "Joyce" oblivious',
 	                annotationKey: 'with_joyce_oblivious'
 	            }, 'to the trump she just played.']
 	        }, {
 	            time: 62,
-	            verse: 'Couldn\'t heaven, her heaven,'
+	            lyric: 'Couldn\'t heaven, her heaven,'
 	        }, {
 	            time: 65,
-	            verse: 'brimming over with smart boys, fit just one art boy'
+	            lyric: 'brimming over with smart boys, fit just one art boy'
 	        }, {
 	            time: 69,
-	            verse: 'who tried but failed to win her heart poised with brains?'
+	            lyric: 'who tried but failed to win her heart poised with brains?'
 	        }], [{
 	            time: 76,
-	            verse: ['And as I pace, stranded here', {
+	            lyric: ['And as I pace, stranded here', {
 	                anchor: 'outside her Shelta,',
 	                annotationKey: 'outside_her_shelta'
 	            }]
 	        }, {
 	            time: 80,
-	            verse: ['in', {
+	            lyric: ['in', {
 	                anchor: 'famous raincoat',
 	                annotationKey: 'famous_raincoat'
 	            }, {
@@ -23071,7 +23071,7 @@
 	            }]
 	        }, {
 	            time: 84,
-	            verse: ['my', {
+	            lyric: ['my', {
 	                anchor: 'girl in glasses',
 	                annotationKey: 'girl_in_glasses'
 	            }, {
@@ -23083,37 +23083,37 @@
 	            }]
 	        }, {
 	            time: 8,
-	            verse: ['for I lack the wit to spare a', {
+	            lyric: ['for I lack the wit to spare a', {
 	                anchor: 'safe Algonquin abode.',
 	                annotationKey: 'safe_algonquin_abode'
 	            }]
 	        }], [{
 	            time: 95,
-	            verse: ['Well yes, I', {
+	            lyric: ['Well yes, I', {
 	                anchor: 'faked this "X,"',
 	                annotationKey: 'faked_this_x'
 	            }, 'I should confess,']
 	        }, {
 	            time: 99,
-	            verse: ['using some old', {
+	            lyric: ['using some old', {
 	                anchor: 'used cigarette.',
 	                annotationKey: 'used_cigarette'
 	            }]
 	        }, {
 	            time: 104,
-	            verse: '"So you\'d cheat your way into heaven," she might protest.'
+	            lyric: '"So you\'d cheat your way into heaven," she might protest.'
 	        }, {
 	            time: 111,
-	            verse: ['Well no, I know it\'s wrong, but I did', {
+	            lyric: ['Well no, I know it\'s wrong, but I did', {
 	                anchor: 'burn my palms,',
 	                annotationKey: 'burn_my_palms'
 	            }]
 	        }, {
 	            time: 115,
-	            verse: 'I guess that butt was still fresh.'
+	            lyric: 'I guess that butt was still fresh.'
 	        }, {
 	            time: 119,
-	            verse: [{
+	            lyric: [{
 	                italic: ['Et', {
 	                    anchor: 'Catherine vaut bien une messe…',
 	                    annotationKey: 'catherine_vaut_bien'
@@ -23121,43 +23121,43 @@
 	            }]
 	        }], [{
 	            time: 123,
-	            verse: 'On this sad day to mourn'
+	            lyric: 'On this sad day to mourn'
 	        }, {
 	            time: 125,
-	            verse: ['us wretched souls', {
+	            lyric: ['us wretched souls', {
 	                anchor: 'cursed to be born,',
 	                annotationKey: 'cursed_to_be_born'
 	            }]
 	        }, {
 	            time: 128,
-	            verse: 'a spark zips through my head to be'
+	            lyric: 'a spark zips through my head to be'
 	        }, {
 	            time: 130,
-	            verse: 'mistaken for Catholic with some smeared ash;'
+	            lyric: 'mistaken for Catholic with some smeared ash;'
 	        }, {
 	            time: 136,
-	            verse: ['to wear it like a', {
+	            lyric: ['to wear it like a', {
 	                anchor: 'tragic mask.',
 	                annotationKey: 'tragic_mask'
 	            }]
 	        }], [{
 	            time: 138,
-	            verse: 'On this Ash Wednesday morn,'
+	            lyric: 'On this Ash Wednesday morn,'
 	        }, {
 	            time: 140,
-	            verse: ['in', {
+	            lyric: ['in', {
 	                anchor: 'spreading mole',
 	                annotationKey: 'spreading_mole'
 	            }, 'my sickness borne']
 	        }, {
 	            time: 143,
-	            verse: 'upon this head for all to see.'
+	            lyric: 'upon this head for all to see.'
 	        }, {
 	            time: 146,
-	            verse: 'And maybe if Catherine sees, she\'ll ask,'
+	            lyric: 'And maybe if Catherine sees, she\'ll ask,'
 	        }, {
 	            time: 151,
-	            verse: '"So where\'d you attend Mass?"'
+	            lyric: '"So where\'d you attend Mass?"'
 	        }]]
 	    }
 	};
@@ -23177,178 +23177,178 @@
 	    lyrics: {
 	        left: [[{
 	            time: 0,
-	            verse: '<em>But F., that man is the worst nuisance on the beach.</em>'
+	            lyric: '<em>But F., that man is the worst nuisance on the beach.</em>'
 	        }], [{
 	            time: 11,
-	            verse: 'Mother, woken from her nap,'
+	            lyric: 'Mother, woken from her nap,'
 	        }, {
 	            time: 13,
-	            verse: 'hears a piercing scream and thunders,'
+	            lyric: 'hears a piercing scream and thunders,'
 	        }, {
 	            time: 15,
-	            verse: '"Why\'d you hit your baby brother, when he so looks up to you!'
+	            lyric: '"Why\'d you hit your baby brother, when he so looks up to you!'
 	        }, {
 	            time: 19,
-	            verse: 'Don\'t you remember days past,'
+	            lyric: 'Don\'t you remember days past,'
 	        }, {
 	            time: 21,
-	            verse: 'when you wanted to buy a fortress'
+	            lyric: 'when you wanted to buy a fortress'
 	        }, {
 	            time: 23,
-	            verse: 'but your daddy couldn\'t afford it,'
+	            lyric: 'but your daddy couldn\'t afford it,'
 	        }, {
 	            time: 25,
-	            verse: 'so you brought him into your room?'
+	            lyric: 'so you brought him into your room?'
 	        }], [{
 	            time: 27,
-	            verse: 'You stowed away beneath your captain bed.'
+	            lyric: 'You stowed away beneath your captain bed.'
 	        }, {
 	            time: 30,
-	            verse: 'We didn\'t hear a peep throughout the entire weekend!"'
+	            lyric: 'We didn\'t hear a peep throughout the entire weekend!"'
 	        }], [{
 	            time: 34,
-	            verse: '<em>Poor Sam Peabody!</em>'
+	            lyric: '<em>Poor Sam Peabody!</em>'
 	        }], [{
 	            time: 38,
-	            verse: 'Oh brother, when all you know is bleat,'
+	            lyric: 'Oh brother, when all you know is bleat,'
 	        }, {
 	            time: 40,
-	            verse: 'they\'ll catch you by your cape and beat you,'
+	            lyric: 'they\'ll catch you by your cape and beat you,'
 	        }, {
 	            time: 42,
-	            verse: 'threatening never to release you till you learn to kick it back.'
+	            lyric: 'threatening never to release you till you learn to kick it back.'
 	        }, {
 	            time: 46,
-	            verse: 'Feigning sick, I chanced to read'
+	            lyric: 'Feigning sick, I chanced to read'
 	        }, {
 	            time: 48,
-	            verse: 'these words in a comic to me speaking:'
+	            lyric: 'these words in a comic to me speaking:'
 	        }, {
 	            time: 50,
-	            verse: '"Are you tired of being the weakling?"…'
+	            lyric: '"Are you tired of being the weakling?"…'
 	        }, {
 	            time: 52,
-	            verse: 'I clipped and mailed the ad.'
+	            lyric: 'I clipped and mailed the ad.'
 	        }], [{
 	            time: 54,
-	            verse: 'Soon send away offers were piling up high,'
+	            lyric: 'Soon send away offers were piling up high,'
 	        }, {
 	            time: 57,
-	            verse: 'and then one day one came and made me cry and cry.'
+	            lyric: 'and then one day one came and made me cry and cry.'
 	        }, {
 	            time: 61,
-	            verse: 'Red pouches unspent for years, at once counted and sent,'
+	            lyric: 'Red pouches unspent for years, at once counted and sent,'
 	        }, {
 	            time: 64,
-	            verse: 'while all the weeks I waited, weighing those words in bold text:'
+	            lyric: 'while all the weeks I waited, weighing those words in bold text:'
 	        }], [{
 	            time: 68,
-	            verse: '"Are you a Beyonder sent down to be Earth-fostered;'
+	            lyric: '"Are you a Beyonder sent down to be Earth-fostered;'
 	        }, {
 	            time: 71,
-	            verse: 'do you often feel like a wanderer lost?"'
+	            lyric: 'do you often feel like a wanderer lost?"'
 	        }, {
 	            time: 76,
-	            verse: 'But waiting for Goddard, our two impatient paupers,'
+	            lyric: 'But waiting for Goddard, our two impatient paupers,'
 	        }, {
 	            time: 79,
-	            verse: 'Gogo and his Didi, sauntered off…'
+	            lyric: 'Gogo and his Didi, sauntered off…'
 	        }, {
 	            time: 83,
-	            verse: 'Till in hunger they were led into Huntsville and fed,'
+	            lyric: 'Till in hunger they were led into Huntsville and fed,'
 	        }, {
 	            time: 86,
-	            verse: 'dragged to sled by hunter\'s belt and launched!'
+	            lyric: 'dragged to sled by hunter\'s belt and launched!'
 	        }], [{
 	            time: 90,
-	            verse: '"Far from home and shaped like common men,'
+	            lyric: '"Far from home and shaped like common men,'
 	        }, {
 	            time: 93,
-	            verse: 'Beyonders bleed the most, their roots unknown to them.'
+	            lyric: 'Beyonders bleed the most, their roots unknown to them.'
 	        }, {
 	            time: 98,
-	            verse: 'We\'ve received your fee, and per the tests,'
+	            lyric: 'We\'ve received your fee, and per the tests,'
 	        }, {
 	            time: 101,
-	            verse: 'you are indeed a seed from that nebular nest.'
+	            lyric: 'you are indeed a seed from that nebular nest.'
 	        }, {
 	            time: 105,
-	            verse: 'Is this too much at once? We\'re trusting mum\'s to be the word.'
+	            lyric: 'Is this too much at once? We\'re trusting mum\'s to be the word.'
 	        }], [{
 	            time: 112,
-	            verse: 'Beyonders pine for a love no mortals give,'
+	            lyric: 'Beyonders pine for a love no mortals give,'
 	        }, {
 	            time: 116,
-	            verse: 'one they\'ll find only once we build the mothership.'
+	            lyric: 'one they\'ll find only once we build the mothership.'
 	        }, {
 	            time: 119,
-	            verse: 'Your monthly tithe shall fund good tidings soon to come.'
+	            lyric: 'Your monthly tithe shall fund good tidings soon to come.'
 	        }, {
 	            time: 123,
-	            verse: 'But till then, here\'s how you\'re to live…"'
+	            lyric: 'But till then, here\'s how you\'re to live…"'
 	        }], [{
 	            time: 134,
-	            verse: 'So thus we learned to act the dunce'
+	            lyric: 'So thus we learned to act the dunce'
 	        }, {
 	            time: 136,
-	            verse: 'as spies among the carnal fallen,'
+	            lyric: 'as spies among the carnal fallen,'
 	        }, {
 	            time: 138,
-	            verse: 'twin friars cast here in pollens from a star\'s placenta sac.'
+	            lyric: 'twin friars cast here in pollens from a star\'s placenta sac.'
 	        }, {
 	            time: 141,
-	            verse: 'Braced for an earth stay unloved,'
+	            lyric: 'Braced for an earth stay unloved,'
 	        }, {
 	            time: 143,
-	            verse: 'twits daily murdered for their virtue.'
+	            lyric: 'twits daily murdered for their virtue.'
 	        }, {
 	            time: 145,
-	            verse: 'Mirthful, the merciless would hurt you,'
+	            lyric: 'Mirthful, the merciless would hurt you,'
 	        }, {
 	            time: 147,
-	            verse: 'as omerta turned their backs.'
+	            lyric: 'as omerta turned their backs.'
 	        }], [{
 	            time: 149,
-	            verse: 'Stung by venomous vipers, our muted youths lapsed;'
+	            lyric: 'Stung by venomous vipers, our muted youths lapsed;'
 	        }, {
 	            time: 153,
-	            verse: 'we knew the shortest cyphers are the toughest ones to crack.'
+	            lyric: 'we knew the shortest cyphers are the toughest ones to crack.'
 	        }, {
 	            time: 156,
-	            verse: 'But every hero has a heel, we\'d realise, blind before the squad.'
+	            lyric: 'But every hero has a heel, we\'d realise, blind before the squad.'
 	        }, {
 	            time: 160,
-	            verse: 'The only spies who get to feel love first unearth their own plots!'
+	            lyric: 'The only spies who get to feel love first unearth their own plots!'
 	        }], [{
 	            time: 164,
-	            verse: 'Mushing onward, Mushka\'s dragged by collar'
+	            lyric: 'Mushing onward, Mushka\'s dragged by collar'
 	        }, {
 	            time: 167,
-	            verse: 'to his slaughter under undying dawn.'
+	            lyric: 'to his slaughter under undying dawn.'
 	        }, {
 	            time: 171,
-	            verse: 'Choked, he\'s soon a goner, no one heard his hollers;'
+	            lyric: 'Choked, he\'s soon a goner, no one heard his hollers;'
 	        }, {
 	            time: 175,
-	            verse: 'this pack honours only the idiot\'s rod.'
+	            lyric: 'this pack honours only the idiot\'s rod.'
 	        }, {
 	            time: 178,
-	            verse: 'Next cabins come equipped with pentobarbitone syringe,'
+	            lyric: 'Next cabins come equipped with pentobarbitone syringe,'
 	        }, {
 	            time: 182,
-	            verse: 'nothing too rich for glorious cosmonauts!'
+	            lyric: 'nothing too rich for glorious cosmonauts!'
 	        }], [{
 	            time: 186,
-	            verse: 'I\'m sorry I bailed, Xiao Xiang, mush on…'
+	            lyric: 'I\'m sorry I bailed, Xiao Xiang, mush on…'
 	        }, {
 	            time: 189,
-	            verse: 'I couldn\'t ditch my wails, I needed the pod.'
+	            lyric: 'I couldn\'t ditch my wails, I needed the pod.'
 	        }, {
 	            time: 193,
-	            verse: '"Kids say you\'re hopped on drugs, son, with Mum we\'ll need a word."'
+	            lyric: '"Kids say you\'re hopped on drugs, son, with Mum we\'ll need a word."'
 	        }, {
 	            time: 200,
-	            verse: 'Mushka, per their bargain, I can\'t ever return.'
+	            lyric: 'Mushka, per their bargain, I can\'t ever return.'
 	        }]]
 	    }
 	};
@@ -23368,163 +23368,163 @@
 	    lyrics: {
 	        right: [[{
 	            time: 33,
-	            verse: 'Maravijaya…'
+	            lyric: 'Maravijaya…'
 	        }], [{
 	            time: 35,
-	            verse: 'I was a lad bent on learning the talents'
+	            lyric: 'I was a lad bent on learning the talents'
 	        }, {
 	            time: 40,
-	            verse: 'that all clever girls need to see.'
+	            lyric: 'that all clever girls need to see.'
 	        }, {
 	            time: 44,
-	            verse: 'Bit my sadness with patience,'
+	            lyric: 'Bit my sadness with patience,'
 	        }, {
 	            time: 47,
-	            verse: 'with practise each day, then'
+	            lyric: 'with practise each day, then'
 	        }, {
 	            time: 50,
-	            verse: 'in five years I\'d be one to keep.'
+	            lyric: 'in five years I\'d be one to keep.'
 	        }], [{
 	            time: 54,
-	            verse: 'This moron marooned, a method mapped in my cocoon'
+	            lyric: 'This moron marooned, a method mapped in my cocoon'
 	        }, {
 	            time: 59,
-	            verse: 'to mould me into a mystery mensch.'
+	            lyric: 'to mould me into a mystery mensch.'
 	        }, {
 	            time: 64,
-	            verse: 'No minutiae left unmastered,'
+	            lyric: 'No minutiae left unmastered,'
 	        }, {
 	            time: 67,
-	            verse: 'music cred with mindful manners merge.'
+	            lyric: 'music cred with mindful manners merge.'
 	        }, {
 	            time: 69,
-	            verse: 'Once I metamorphose, certain I\'d impress.'
+	            lyric: 'Once I metamorphose, certain I\'d impress.'
 	        }], [{
 	            time: 75,
-	            verse: 'Year five, and now the one who dug me up'
+	            lyric: 'Year five, and now the one who dug me up'
 	        }, {
 	            time: 77,
-	            verse: 'spent her wishes on a friend,'
+	            lyric: 'spent her wishes on a friend,'
 	        }, {
 	            time: 80,
-	            verse: 'while forever I\'ll hold in peace'
+	            lyric: 'while forever I\'ll hold in peace'
 	        }, {
 	            time: 82,
-	            verse: 'these words unsaid.'
+	            lyric: 'these words unsaid.'
 	        }, {
 	            time: 84,
-	            verse: 'Hopes wrapped in marinaded confections but'
+	            lyric: 'Hopes wrapped in marinaded confections but'
 	        }, {
 	            time: 87,
-	            verse: 'before tomorrow never sent.'
+	            lyric: 'before tomorrow never sent.'
 	        }, {
 	            time: 89,
-	            verse: 'Signed off "Love: Me" is how'
+	            lyric: 'Signed off "Love: Me" is how'
 	        }, {
 	            time: 91,
-	            verse: 'my life and letters end.'
+	            lyric: 'my life and letters end.'
 	        }], [{
 	            time: 94,
-	            verse: 'Morphined, I\'ll probably die pushing forty, exiled'
+	            lyric: 'Morphined, I\'ll probably die pushing forty, exiled'
 	        }, {
 	            time: 99,
-	            verse: 'to a sand castle built by low tide;'
+	            lyric: 'to a sand castle built by low tide;'
 	        }, {
 	            time: 103,
-	            verse: 'far too old to be martyred,'
+	            lyric: 'far too old to be martyred,'
 	        }, {
 	            time: 106,
-	            verse: 'too young to grow smarter,'
+	            lyric: 'too young to grow smarter,'
 	        }, {
 	            time: 109,
-	            verse: 'a mariner\'s child who hanged from this tie.'
+	            lyric: 'a mariner\'s child who hanged from this tie.'
 	        }], [{
 	            time: 114,
-	            verse: 'Panoramic prints pending my soon-to-be Moonie wedding,'
+	            lyric: 'Panoramic prints pending my soon-to-be Moonie wedding,'
 	        }, {
 	            time: 118,
-	            verse: 'fools once expecting their "Made in America" signs.'
+	            lyric: 'fools once expecting their "Made in America" signs.'
 	        }, {
 	            time: 123,
-	            verse: 'In a time capsule sealed'
+	            lyric: 'In a time capsule sealed'
 	        }, {
 	            time: 125,
-	            verse: 'with pages of defeated spiels'
+	            lyric: 'with pages of defeated spiels'
 	        }, {
 	            time: 128,
-	            verse: 'lies that marionette in this heap of twisted twine.'
+	            lyric: 'lies that marionette in this heap of twisted twine.'
 	        }], [{
 	            time: 133,
-	            verse: 'All I know is that whoever finds me'
+	            lyric: 'All I know is that whoever finds me'
 	        }, {
 	            time: 136,
-	            verse: 'keeps me solely for a pet.'
+	            lyric: 'keeps me solely for a pet.'
 	        }, {
 	            time: 138,
-	            verse: 'With her "I do", my life in marriage'
+	            lyric: 'With her "I do", my life in marriage'
 	        }, {
 	            time: 140,
-	            verse: 'is choked down my no-hope chest.'
+	            lyric: 'is choked down my no-hope chest.'
 	        }, {
 	            time: 143,
-	            verse: 'Her lispy kiss unlucky for this chimney sweep,'
+	            lyric: 'Her lispy kiss unlucky for this chimney sweep,'
 	        }, {
 	            time: 146,
-	            verse: 'indentures dumbed as a boy.'
+	            lyric: 'indentures dumbed as a boy.'
 	        }, {
 	            time: 148,
-	            verse: 'Whispered "adieu", I bade them to fare well,'
+	            lyric: 'Whispered "adieu", I bade them to fare well,'
 	        }, {
 	            time: 150,
-	            verse: 'then turned to hug the void.'
+	            lyric: 'then turned to hug the void.'
 	        }], [{
 	            time: 153,
-	            verse: 'But then I saw the world\'s a naked baby,'
+	            lyric: 'But then I saw the world\'s a naked baby,'
 	        }, {
 	            time: 156,
-	            verse: 'cradled safely in my lap.'
+	            lyric: 'cradled safely in my lap.'
 	        }, {
 	            time: 158,
-	            verse: 'It dropped a poop, but somehow I knew'
+	            lyric: 'It dropped a poop, but somehow I knew'
 	        }, {
 	            time: 160,
-	            verse: 'to have a merry ol\' laugh.'
+	            lyric: 'to have a merry ol\' laugh.'
 	        }, {
 	            time: 163,
-	            verse: 'And now I wonder if the answer might be'
+	            lyric: 'And now I wonder if the answer might be'
 	        }, {
 	            time: 166,
-	            verse: 'to know: the rule for a girl'
+	            lyric: 'to know: the rule for a girl'
 	        }, {
 	            time: 168,
-	            verse: 'is that the boy who\'s to love her baby'
+	            lyric: 'is that the boy who\'s to love her baby'
 	        }, {
 	            time: 170,
-	            verse: 'should first love the world.'
+	            lyric: 'should first love the world.'
 	        }], [{
 	            time: 173,
-	            verse: 'Moral is: it\'s up to me to be alert;'
+	            lyric: 'Moral is: it\'s up to me to be alert;'
 	        }, {
 	            time: 176,
-	            verse: 'nothing comes a pure surprise.'
+	            lyric: 'nothing comes a pure surprise.'
 	        }, {
 	            time: 178,
-	            verse: 'Sometimes if it\'s all to work'
+	            lyric: 'Sometimes if it\'s all to work'
 	        }, {
 	            time: 180,
-	            verse: 'friends have to lie.'
+	            lyric: 'friends have to lie.'
 	        }, {
 	            time: 183,
-	            verse: 'And sometimes situations seem the worst,'
+	            lyric: 'And sometimes situations seem the worst,'
 	        }, {
 	            time: 185,
-	            verse: 'but in a year, they\'re never bad.'
+	            lyric: 'but in a year, they\'re never bad.'
 	        }, {
 	            time: 188,
-	            verse: 'Five more, she\'ll dig up Bobtail\'s words—'
+	            lyric: 'Five more, she\'ll dig up Bobtail\'s words—'
 	        }, {
 	            time: 190,
-	            verse: 'I\'m not sad!'
+	            lyric: 'I\'m not sad!'
 	        }]]
 	    }
 	};
@@ -23544,190 +23544,190 @@
 	    lyrics: {
 	        right: [[{
 	            time: 0,
-	            verse: '"Good night," she says'
+	            lyric: '"Good night," she says'
 	        }], [{
 	            time: 3,
-	            verse: 'or should I should you refuse'
+	            lyric: 'or should I should you refuse'
 	        }, {
 	            time: 5,
-	            verse: 'by a gutter gurgling then we\'ll choose'
+	            lyric: 'by a gutter gurgling then we\'ll choose'
 	        }, {
 	            time: 7,
-	            verse: 'either never live yet live on or to'
+	            lyric: 'either never live yet live on or to'
 	        }, {
 	            time: 9,
-	            verse: 'love first without once knowing love'
+	            lyric: 'love first without once knowing love'
 	        }], [{
 	            time: 11,
-	            verse: 'when cesspit dead ends for further speech'
+	            lyric: 'when cesspit dead ends for further speech'
 	        }, {
 	            time: 12,
-	            verse: 'are these stuttered sentences we speak'
+	            lyric: 'are these stuttered sentences we speak'
 	        }, {
 	            time: 14,
-	            verse: 'for this kid wearing no decoder ring'
+	            lyric: 'for this kid wearing no decoder ring'
 	        }, {
 	            time: 16,
-	            verse: 'Dutch courage wimped out to going Dutch'
+	            lyric: 'Dutch courage wimped out to going Dutch'
 	        }], [{
 	            time: 18,
-	            verse: 'but even no sponge'
+	            lyric: 'but even no sponge'
 	        }, {
 	            time: 20,
-	            verse: 'nor a barnacle minds'
+	            lyric: 'nor a barnacle minds'
 	        }, {
 	            time: 22,
-	            verse: 'swept in unchartable tides'
+	            lyric: 'swept in unchartable tides'
 	        }, {
 	            time: 24,
-	            verse: 'they just always know to pry'
+	            lyric: 'they just always know to pry'
 	        }, {
 	            time: 26,
-	            verse: 'for the innermost matryoshka\'s'
+	            lyric: 'for the innermost matryoshka\'s'
 	        }, {
 	            time: 28,
-	            verse: 'heart of gold inside'
+	            lyric: 'heart of gold inside'
 	        }], [{
 	            time: 29,
-	            verse: 'till then crack up another doll'
+	            lyric: 'till then crack up another doll'
 	        }, {
 	            time: 32,
-	            verse: 'to find the chrysalis unchristened to all'
+	            lyric: 'to find the chrysalis unchristened to all'
 	        }, {
 	            time: 36,
-	            verse: 'who\'d buy this aping jaw fixed to his skull'
+	            lyric: 'who\'d buy this aping jaw fixed to his skull'
 	        }, {
 	            time: 40,
-	            verse: 'swaggering down these barren exhibit halls'
+	            lyric: 'swaggering down these barren exhibit halls'
 	        }], [{
 	            time: 45,
-	            verse: 'but totems so revered'
+	            lyric: 'but totems so revered'
 	        }, {
 	            time: 47,
-	            verse: 'when defined by ambrosia beers'
+	            lyric: 'when defined by ambrosia beers'
 	        }, {
 	            time: 48,
-	            verse: 'in time are seen with a focus grown clear'
+	            lyric: 'in time are seen with a focus grown clear'
 	        }, {
 	            time: 50,
-	            verse: 'and slowly the story erodes'
+	            lyric: 'and slowly the story erodes'
 	        }], [{
 	            time: 52,
-	            verse: 'pidgin palaver exchanged'
+	            lyric: 'pidgin palaver exchanged'
 	        }, {
 	            time: 54,
-	            verse: 'can only transfer good faith'
+	            lyric: 'can only transfer good faith'
 	        }, {
 	            time: 56,
-	            verse: 'hyped up like some disastrous play'
+	            lyric: 'hyped up like some disastrous play'
 	        }, {
 	            time: 58,
-	            verse: 'that starts with a lone ringing phone'
+	            lyric: 'that starts with a lone ringing phone'
 	        }], [{
 	            time: 60,
-	            verse: 'but even so'
+	            lyric: 'but even so'
 	        }, {
 	            time: 62,
-	            verse: 'just that it ever rang at all'
+	            lyric: 'just that it ever rang at all'
 	        }, {
 	            time: 64,
-	            verse: 'for if the tactic is to stall'
+	            lyric: 'for if the tactic is to stall'
 	        }, {
 	            time: 66,
-	            verse: 'you\'re just ecstatic she called'
+	            lyric: 'you\'re just ecstatic she called'
 	        }, {
 	            time: 68,
-	            verse: 'what this understudy sought from his number'
+	            lyric: 'what this understudy sought from his number'
 	        }, {
 	            time: 70,
-	            verse: 'strutting on the wall'
+	            lyric: 'strutting on the wall'
 	        }], [{
 	            time: 71,
-	            verse: 'we whine when first we got shunned'
+	            lyric: 'we whine when first we got shunned'
 	        }, {
 	            time: 73,
-	            verse: 'then wise up and learn to shotgun'
+	            lyric: 'then wise up and learn to shotgun'
 	        }, {
 	            time: 75,
-	            verse: 'last show\'s set still propped up'
+	            lyric: 'last show\'s set still propped up'
 	        }, {
 	            time: 77,
-	            verse: 'so we\'ll breeze through our parts'
+	            lyric: 'so we\'ll breeze through our parts'
 	        }], [{
 	            time: 79,
-	            verse: 'though each kind new ultimatum'
+	            lyric: 'though each kind new ultimatum'
 	        }, {
 	            time: 81,
-	            verse: 'to his tribe left old and jaded'
+	            lyric: 'to his tribe left old and jaded'
 	        }, {
 	            time: 83,
-	            verse: 'the boy brave who cultivated'
+	            lyric: 'the boy brave who cultivated'
 	        }, {
 	            time: 84,
-	            verse: 'brave rejection into art'
+	            lyric: 'brave rejection into art'
 	        }], [{
 	            time: 86,
-	            verse: 'but died unfinished alas'
+	            lyric: 'but died unfinished alas'
 	        }, {
 	            time: 88,
-	            verse: 'hotlines get busy just as'
+	            lyric: 'hotlines get busy just as'
 	        }, {
 	            time: 90,
-	            verse: 'thoughts slide to slitting wrists that'
+	            lyric: 'thoughts slide to slitting wrists that'
 	        }, {
 	            time: 92,
-	            verse: 'hint of sampler cologne'
+	            lyric: 'hint of sampler cologne'
 	        }], [{
 	            time: 94,
-	            verse: 'and a lass sniffing out these rote charms'
+	            lyric: 'and a lass sniffing out these rote charms'
 	        }, {
 	            time: 96,
-	            verse: 'always rides in single go-karts'
+	            lyric: 'always rides in single go-karts'
 	        }, {
 	            time: 98,
-	            verse: 'as we wind an endless flowchart'
+	            lyric: 'as we wind an endless flowchart'
 	        }, {
 	            time: 99,
-	            verse: 'with every given answer a no'
+	            lyric: 'with every given answer a no'
 	        }], [{
 	            time: 101,
-	            verse: 'and her veggie wishbone\'s'
+	            lyric: 'and her veggie wishbone\'s'
 	        }, {
 	            time: 103,
-	            verse: 'short end in these clutching fingers of steel'
+	            lyric: 'short end in these clutching fingers of steel'
 	        }, {
 	            time: 105,
-	            verse: 'too untrusting to ever unpeel'
+	            lyric: 'too untrusting to ever unpeel'
 	        }, {
 	            time: 107,
-	            verse: 'from a dummy steering wheel'
+	            lyric: 'from a dummy steering wheel'
 	        }, {
 	            time: 109,
-	            verse: 'settled for hugging only curbs'
+	            lyric: 'settled for hugging only curbs'
 	        }, {
 	            time: 111,
-	            verse: 'and having only tires squeal'
+	            lyric: 'and having only tires squeal'
 	        }], [{
 	            time: 113,
-	            verse: 'when boys who mope'
+	            lyric: 'when boys who mope'
 	        }, {
 	            time: 114,
-	            verse: 'know the beauty of simply limping away blind'
+	            lyric: 'know the beauty of simply limping away blind'
 	        }, {
 	            time: 116,
-	            verse: 'as the chirping crosswalks guide'
+	            lyric: 'as the chirping crosswalks guide'
 	        }, {
 	            time: 118,
-	            verse: 'where willows softly conspire'
+	            lyric: 'where willows softly conspire'
 	        }, {
 	            time: 120,
-	            verse: 'when boys who cope'
+	            lyric: 'when boys who cope'
 	        }, {
 	            time: 121,
-	            verse: 'only risk invites denied'
+	            lyric: 'only risk invites denied'
 	        }], [{
 	            time: 123,
-	            verse: 'I sigh, "Good night."'
+	            lyric: 'I sigh, "Good night."'
 	        }]]
 	    }
 	};
@@ -23747,160 +23747,160 @@
 	    lyrics: {
 	        left: [[{
 	            time: 0,
-	            verse: '<em>L.A. to the Bay, pompous autumn waits.</em>'
+	            lyric: '<em>L.A. to the Bay, pompous autumn waits.</em>'
 	        }], [{
 	            time: 10,
-	            verse: 'Uprooted, then en route,'
+	            lyric: 'Uprooted, then en route,'
 	        }, {
 	            time: 12,
-	            verse: 'eighteen threw off the brutes'
+	            lyric: 'eighteen threw off the brutes'
 	        }, {
 	            time: 14,
-	            verse: 'and their molls perched on pedestals,'
+	            lyric: 'and their molls perched on pedestals,'
 	        }, {
 	            time: 17,
-	            verse: 'noses in penny dreadfuls.'
+	            lyric: 'noses in penny dreadfuls.'
 	        }, {
 	            time: 19,
-	            verse: 'For a cafeteria\'s wage,'
+	            lyric: 'For a cafeteria\'s wage,'
 	        }, {
 	            time: 22,
-	            verse: 'death of dull dishroom days'
+	            lyric: 'death of dull dishroom days'
 	        }, {
 	            time: 24,
-	            verse: 'stalled by keys left on dumbwaiter trays.'
+	            lyric: 'stalled by keys left on dumbwaiter trays.'
 	        }], [{
 	            time: 29,
-	            verse: 'Down the steps to fetch her lancet pen,'
+	            lyric: 'Down the steps to fetch her lancet pen,'
 	        }, {
 	            time: 34,
-	            verse: 'and stunned, by reflex you asked.'
+	            lyric: 'and stunned, by reflex you asked.'
 	        }, {
 	            time: 38,
-	            verse: 'At first she hedged, but then laying qualms to rest:'
+	            lyric: 'At first she hedged, but then laying qualms to rest:'
 	        }, {
 	            time: 43,
-	            verse: 'schwa stickers attached to your sci-fi paperback.'
+	            lyric: 'schwa stickers attached to your sci-fi paperback.'
 	        }], [{
 	            time: 48,
-	            verse: 'First date nosebleed spurs tales of bare-knuckle defeats…'
+	            lyric: 'First date nosebleed spurs tales of bare-knuckle defeats…'
 	        }, {
 	            time: 58,
-	            verse: 'Snowflakes in time come to see off the year.'
+	            lyric: 'Snowflakes in time come to see off the year.'
 	        }, {
 	            time: 63,
-	            verse: 'You cried for one to sit; it kissed your ear.'
+	            lyric: 'You cried for one to sit; it kissed your ear.'
 	        }, {
 	            time: 67,
-	            verse: 'Her show played in mimes, but you pleaded to hear.'
+	            lyric: 'Her show played in mimes, but you pleaded to hear.'
 	        }, {
 	            time: 72,
-	            verse: 'Then just like the drift, she disappeared…'
+	            lyric: 'Then just like the drift, she disappeared…'
 	        }], [{
 	            time: 77,
-	            verse: '<em>With no sister ship slain by his side,</em>'
+	            lyric: '<em>With no sister ship slain by his side,</em>'
 	        }, {
 	            time: 87,
-	            verse: '<em>and so off her list, sunken Tirpitz lies.</em>'
+	            lyric: '<em>and so off her list, sunken Tirpitz lies.</em>'
 	        }, {
 	            time: 77,
-	            verse: 'Alone his first gig, stagefright ignites.'
+	            lyric: 'Alone his first gig, stagefright ignites.'
 	        }, {
 	            time: 87,
-	            verse: 'But no convert\'s missed, once assured his tithe.'
+	            lyric: 'But no convert\'s missed, once assured his tithe.'
 	        }], [{
 	            time: 96,
-	            verse: 'Homeward, mop-sopped to your knees.'
+	            lyric: 'Homeward, mop-sopped to your knees.'
 	        }, {
 	            time: 98,
-	            verse: 'Tonight, just sour grapes, bitter sweets'
+	            lyric: 'Tonight, just sour grapes, bitter sweets'
 	        }, {
 	            time: 101,
-	            verse: 'left to brave February\'s brutal gust;'
+	            lyric: 'left to brave February\'s brutal gust;'
 	        }, {
 	            time: 104,
-	            verse: 'chimneys weep sooty dust.'
+	            lyric: 'chimneys weep sooty dust.'
 	        }, {
 	            time: 106,
-	            verse: 'Phantom limbs trip left and right'
+	            lyric: 'Phantom limbs trip left and right'
 	        }, {
 	            time: 108,
-	            verse: 'them tripped on runner\'s high.'
+	            lyric: 'them tripped on runner\'s high.'
 	        }, {
 	            time: 110,
-	            verse: 'Below the window of your Walkman you hide.'
+	            lyric: 'Below the window of your Walkman you hide.'
 	        }], [{
 	            time: 115,
-	            verse: 'Your gate code punched, when a looming shadow nears,'
+	            lyric: 'Your gate code punched, when a looming shadow nears,'
 	        }, {
 	            time: 120,
-	            verse: 'as your heartbeats, her steps, race to first.'
+	            lyric: 'as your heartbeats, her steps, race to first.'
 	        }, {
 	            time: 125,
-	            verse: 'And she deftly thrusts through the shield of your sneer:'
+	            lyric: 'And she deftly thrusts through the shield of your sneer:'
 	        }, {
 	            time: 130,
-	            verse: '"Hey, you know you\'re my password?"'
+	            lyric: '"Hey, you know you\'re my password?"'
 	        }, {
 	            time: 132,
-	            verse: 'I am? "Well, you\'re backward…"'
+	            lyric: 'I am? "Well, you\'re backward…"'
 	        }], [{
 	            time: 135,
-	            verse: 'She locks your arm. Key turned, returned to your guard…'
+	            lyric: 'She locks your arm. Key turned, returned to your guard…'
 	        }, {
 	            time: 144,
-	            verse: 'In her gingerbread prison, here now you submit.'
+	            lyric: 'In her gingerbread prison, here now you submit.'
 	        }, {
 	            time: 149,
-	            verse: 'Though never full, you\'re fed; so you hit the switch.'
+	            lyric: 'Though never full, you\'re fed; so you hit the switch.'
 	        }, {
 	            time: 153,
-	            verse: 'On your bed\'s rumpled linens, a lidless Vaseline sits.'
+	            lyric: 'On your bed\'s rumpled linens, a lidless Vaseline sits.'
 	        }, {
 	            time: 158,
-	            verse: '"Shall I leave you," she says, "here to Philip Dick?"'
+	            lyric: '"Shall I leave you," she says, "here to Philip Dick?"'
 	        }], [{
 	            time: 164,
-	            verse: 'Thoughts sift in the waiting room:'
+	            lyric: 'Thoughts sift in the waiting room:'
 	        }, {
 	            time: 166,
-	            verse: 'Why does she play bright to your gloom'
+	            lyric: 'Why does she play bright to your gloom'
 	        }, {
 	            time: 169,
-	            verse: 'past a year on a stalled friendship\'s sails?'
+	            lyric: 'past a year on a stalled friendship\'s sails?'
 	        }], [{
 	            time: 174,
-	            verse: 'On a malady your thoughts are stuck,'
+	            lyric: 'On a malady your thoughts are stuck,'
 	        }, {
 	            time: 176,
-	            verse: 'and the organ on which it struck,'
+	            lyric: 'and the organ on which it struck,'
 	        }, {
 	            time: 178,
-	            verse: 'in the everpresent scent of her trail.'
+	            lyric: 'in the everpresent scent of her trail.'
 	        }], [{
 	            time: 183,
-	            verse: 'Then you wake by a bell with a ring.'
+	            lyric: 'Then you wake by a bell with a ring.'
 	        }, {
 	            time: 185,
-	            verse: 'In her white gown, crept up she beams;'
+	            lyric: 'In her white gown, crept up she beams;'
 	        }, {
 	            time: 187,
-	            verse: 'and you marvel, glimmer of her cheek unveiled.'
+	            lyric: 'and you marvel, glimmer of her cheek unveiled.'
 	        }], [{
 	            time: 193,
-	            verse: 'She loves you…'
+	            lyric: 'She loves you…'
 	        }], [{
 	            time: 196,
-	            verse: '…and now you\'re left with no defences. Well, who\'d have guessed this?  You stand unsure. She lures with a tease, "Oh sweetie, you\'re right: you wear your hard-on in a sleeve." So how\'s that compromise?'
+	            lyric: '…and now you\'re left with no defences. Well, who\'d have guessed this?  You stand unsure. She lures with a tease, "Oh sweetie, you\'re right: you wear your hard-on in a sleeve." So how\'s that compromise?'
 	        }], [{
 	            time: 216,
-	            verse: 'And dude, you love her. When your paws were thrashed sparring with the tide, from your Grace Darling\'s beacon light fell an oar. Let pure lose to pure…'
+	            lyric: 'And dude, you love her. When your paws were thrashed sparring with the tide, from your Grace Darling\'s beacon light fell an oar. Let pure lose to pure…'
 	        }], [{
 	            time: 228,
-	            verse: 'You stroke her temples. She gushes as she guides,'
+	            lyric: 'You stroke her temples. She gushes as she guides,'
 	        }, {
 	            time: 233,
-	            verse: 'and pulls you up inside her thighs.'
+	            lyric: 'and pulls you up inside her thighs.'
 	        }]]
 	    }
 	};
@@ -24121,7 +24121,7 @@
 	    lyrics: {
 	        left: [[{
 	            time: 4,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'reverends,',
 	                annotationKey: 'reverends'
 	            }, {
@@ -24130,7 +24130,7 @@
 	            }]
 	        }, {
 	            time: 7,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Heavin\' some, Ana',
 	                annotationKey: 'heavin_some_ana'
 	            }, {
@@ -24139,7 +24139,7 @@
 	            }]
 	        }, {
 	            time: 11,
-	            verse: ['of', {
+	            lyric: ['of', {
 	                anchor: 'de exempt,',
 	                annotationKey: 'de_exempt'
 	            }, {
@@ -24151,7 +24151,7 @@
 	            }]
 	        }, {
 	            time: 19,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Walkyriens:',
 	                annotationKey: 'walkyriens'
 	            }, 'to', {
@@ -24163,7 +24163,7 @@
 	            }]
 	        }, {
 	            time: 22,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Quouffs uppraissed,',
 	                annotationKey: 'quouffs_uppraissed'
 	            }, 'this', {
@@ -24172,7 +24172,7 @@
 	            }]
 	        }, {
 	            time: 26,
-	            verse: ['We ride as', {
+	            lyric: ['We ride as', {
 	                anchor: 'Finnugreec tongue',
 	                annotationKey: 'finnugreec_tongue'
 	            }, {
@@ -24181,7 +24181,7 @@
 	            }]
 	        }], [{
 	            time: 34,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Makeyars mygrate,',
 	                annotationKey: 'makeyars_mygrate'
 	            }, 'from', {
@@ -24193,13 +24193,13 @@
 	            }]
 	        }], [{
 	            time: 41,
-	            verse: ['Then', {
+	            lyric: ['Then', {
 	                anchor: 'down the steppes',
 	                annotationKey: 'down_the_steppes'
 	            }, 'we charged,']
 	        }, {
 	            time: 45,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Drinkhis Khan, once Toomujin,',
 	                annotationKey: 'drinkhis_khan_once_toomujin'
 	            }, 'has', {
@@ -24208,7 +24208,7 @@
 	            }]
 	        }, {
 	            time: 49,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Tomer-layin\' the seed,',
 	                annotationKey: 'tomer_layin_the_seed'
 	            }, {
@@ -24217,7 +24217,7 @@
 	            }]
 	        }], [{
 	            time: 56,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Indus-trail sewerce,',
 	                annotationKey: 'indus_trail_sewerce'
 	            }, {
@@ -24226,7 +24226,7 @@
 	            }]
 	        }, {
 	            time: 60,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Forsi ahuro',
 	                annotationKey: 'forsi_ahuro'
 	            }, 'or', {
@@ -24235,7 +24235,7 @@
 	            }]
 	        }, {
 	            time: 64,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'To soma up,',
 	                annotationKey: 'to_soma_up'
 	            }, {
@@ -24247,7 +24247,7 @@
 	            }]
 	        }, {
 	            time: 70,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Ourevian battles spent,',
 	                annotationKey: 'ourevian_battles_spent'
 	            }, {
@@ -24256,7 +24256,7 @@
 	            }]
 	        }, {
 	            time: 75,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Are Melee tapirs',
 	                annotationKey: 'are_melee_tapirs'
 	            }, {
@@ -24265,7 +24265,7 @@
 	            }]
 	        }, {
 	            time: 79,
-	            verse: ['From the', {
+	            lyric: ['From the', {
 	                anchor: 'Khlmair city Ingcar Wet,',
 	                annotationKey: 'khlmair_city_ingcar_wet'
 	            }, 'to war:', {
@@ -24274,7 +24274,7 @@
 	            }]
 	        }], [{
 	            time: 86,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Pour sod, fourfeit tundr\'s',
 	                annotationKey: 'pour_sod_fourfeit_tundrs'
 	            }, {
@@ -24283,7 +24283,7 @@
 	            }]
 	        }, {
 	            time: 94,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Upridge o\' lawn',
 	                annotationKey: 'upridge_o_lawn'
 	            }, 'trod on by', {
@@ -24292,13 +24292,13 @@
 	            }]
 	        }, {
 	            time: 101,
-	            verse: ['But', {
+	            lyric: ['But', {
 	                anchor: 'past a cross Bearing Straight,',
 	                annotationKey: 'past_a_cross_bearing_straight'
 	            }]
 	        }, {
 	            time: 103,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'herows—ourauras left—',
 	                annotationKey: 'herows_ourauras_left'
 	            }, 'to', {
@@ -24307,19 +24307,19 @@
 	            }]
 	        }], [{
 	            time: 109,
-	            verse: 'And now without a chart,'
+	            lyric: 'And now without a chart,'
 	        }, {
 	            time: 112,
-	            verse: 'just the winds and the constellations known by heart,'
+	            lyric: 'just the winds and the constellations known by heart,'
 	        }, {
 	            time: 116,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'I\'ll sail this sea,',
 	                annotationKey: 'ill_sail_this_sea'
 	            }, 'there is only me and my northern star!']
 	        }], [{
 	            time: 124,
-	            verse: ['The', {
+	            lyric: ['The', {
 	                anchor: 'mistodawn,',
 	                annotationKey: 'mistodawn'
 	            }, {
@@ -24328,13 +24328,13 @@
 	            }, 'cries,']
 	        }, {
 	            time: 128,
-	            verse: {
+	            lyric: {
 	                anchor: 'sunk in tarpid lies.',
 	                annotationKey: 'sunk_in_tarpid_lies'
 	            }
 	        }, {
 	            time: 131,
-	            verse: ['In', {
+	            lyric: ['In', {
 	                anchor: 'Hollowscene',
 	                annotationKey: 'hollowscene'
 	            }, {
@@ -24343,13 +24343,13 @@
 	            }]
 	        }, {
 	            time: 135,
-	            verse: ['he sees', {
+	            lyric: ['he sees', {
 	                anchor: 'Lowkey and Freyed!',
 	                annotationKey: 'lowkey_and_freyed'
 	            }]
 	        }, {
 	            time: 139,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Noworse and Nunavutter',
 	                annotationKey: 'noworse_and_nunavutter'
 	            }, 'collide,', {
@@ -24358,13 +24358,13 @@
 	            }, 'arrives.']
 	        }, {
 	            time: 147,
-	            verse: ['How old are', {
+	            lyric: ['How old are', {
 	                anchor: 'these mummeries',
 	                annotationKey: 'these_mummeries'
 	            }, 'I have left to mine?']
 	        }], [{
 	            time: 154,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Pullar switch,',
 	                annotationKey: 'pullar_switch'
 	            }, {
@@ -24373,13 +24373,13 @@
 	            }, 'snow blitz\'d…']
 	        }, {
 	            time: 161,
-	            verse: ['Then pounds', {
+	            lyric: ['Then pounds', {
 	                anchor: 'arrhythmetic heart,',
 	                annotationKey: 'arrhythmetic_heart'
 	            }]
 	        }, {
 	            time: 165,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'Enguished buzzereds',
 	                annotationKey: 'enguished_buzzereds'
 	            }, 'come unsated find', {
@@ -24388,7 +24388,7 @@
 	            }, 'is parched.']
 	        }, {
 	            time: 169,
-	            verse: [{
+	            lyric: [{
 	                anchor: 'In mouth Deseret,',
 	                annotationKey: 'in_mouth_deseret'
 	            }, {
@@ -24417,124 +24417,124 @@
 	    lyrics: {
 	        right: [[{
 	            time: 10,
-	            verse: 'Scrambled past this hell, where flagboy last fell,'
+	            lyric: 'Scrambled past this hell, where flagboy last fell,'
 	        }, {
 	            time: 13,
-	            verse: 'dragging aglets held by the bastard\'s boot,'
+	            lyric: 'dragging aglets held by the bastard\'s boot,'
 	        }, {
 	            time: 16,
-	            verse: 'as the Van Nuys belles lunched soundless through the noon.'
+	            lyric: 'as the Van Nuys belles lunched soundless through the noon.'
 	        }, {
 	            time: 22,
-	            verse: 'Now your sapling cut says you\'ve past ring one,'
+	            lyric: 'Now your sapling cut says you\'ve past ring one,'
 	        }, {
 	            time: 25,
-	            verse: 'yet—if adding up—then for more you\'d vie.'
+	            lyric: 'yet—if adding up—then for more you\'d vie.'
 	        }, {
 	            time: 28,
-	            verse: 'From the valley of death you rode, so on spite you thrive.'
+	            lyric: 'From the valley of death you rode, so on spite you thrive.'
 	        }], [{
 	            time: 33,
-	            verse: 'Feeble feeder fish allowed to grow;'
+	            lyric: 'Feeble feeder fish allowed to grow;'
 	        }, {
 	            time: 36,
-	            verse: 'these spluttered fits found fit for show.'
+	            lyric: 'these spluttered fits found fit for show.'
 	        }, {
 	            time: 39,
-	            verse: 'You wished a cancer nibbled off,'
+	            lyric: 'You wished a cancer nibbled off,'
 	        }, {
 	            time: 42,
-	            verse: 'and laid down on the public trough.'
+	            lyric: 'and laid down on the public trough.'
 	        }], [{
 	            time: 45,
-	            verse: 'She braves the crowd filled first from sides.'
+	            lyric: 'She braves the crowd filled first from sides.'
 	        }, {
 	            time: 48,
-	            verse: 'She might complete your jigsawed life.'
+	            lyric: 'She might complete your jigsawed life.'
 	        }, {
 	            time: 51,
-	            verse: 'With hair of maraschino red,'
+	            lyric: 'With hair of maraschino red,'
 	        }, {
 	            time: 54,
-	            verse: '"Great show," she later said.'
+	            lyric: '"Great show," she later said.'
 	        }], [{
 	            time: 56,
-	            verse: 'Well there are ways to make a treat of life,'
+	            lyric: 'Well there are ways to make a treat of life,'
 	        }, {
 	            time: 63,
-	            verse: 'and you were fine when you had none.'
+	            lyric: 'and you were fine when you had none.'
 	        }, {
 	            time: 69,
-	            verse: 'But knowing now what you\'d missed out on, you find,'
+	            lyric: 'But knowing now what you\'d missed out on, you find,'
 	        }, {
 	            time: 75,
-	            verse: 'you look back in anger that it\'s done.'
+	            lyric: 'you look back in anger that it\'s done.'
 	        }], [{
 	            time: 81,
-	            verse: 'When religious kids mocked, each hypocrite\'s taunts'
+	            lyric: 'When religious kids mocked, each hypocrite\'s taunts'
 	        }, {
 	            time: 84,
-	            verse: 'would just acquit God of further need;'
+	            lyric: 'would just acquit God of further need;'
 	        }, {
 	            time: 87,
-	            verse: 'reading His obit not a bang, just a murmuring.'
+	            lyric: 'reading His obit not a bang, just a murmuring.'
 	        }, {
 	            time: 91,
-	            verse: 'Now each new concession sees this'
+	            lyric: 'Now each new concession sees this'
 	        }, {
 	            time: 94,
-	            verse: 'peasant discontented all the more,'
+	            lyric: 'peasant discontented all the more,'
 	        }, {
 	            time: 97,
-	            verse: 'with his ignorance lessened of his plight before…'
+	            lyric: 'with his ignorance lessened of his plight before…'
 	        }], [{
 	            time: 103,
-	            verse: 'Beyonders prevail, the letters preached,'
+	            lyric: 'Beyonders prevail, the letters preached,'
 	        }, {
 	            time: 106,
-	            verse: 'and thus secure, must turn the cheek.'
+	            lyric: 'and thus secure, must turn the cheek.'
 	        }, {
 	            time: 109,
-	            verse: 'You waved your pledge to this godly good,'
+	            lyric: 'You waved your pledge to this godly good,'
 	        }, {
 	            time: 112,
-	            verse: 'only to crack, sprawled where they stood…'
+	            lyric: 'only to crack, sprawled where they stood…'
 	        }], [{
 	            time: 115,
-	            verse: 'Though, if you\'re right to want what\'s yours,'
+	            lyric: 'Though, if you\'re right to want what\'s yours,'
 	        }, {
 	            time: 118,
-	            verse: 'weren\'t they right to take what\'s theirs?'
+	            lyric: 'weren\'t they right to take what\'s theirs?'
 	        }, {
 	            time: 121,
-	            verse: 'So if you\'re weeping for poor squirrels,'
+	            lyric: 'So if you\'re weeping for poor squirrels,'
 	        }, {
 	            time: 124,
-	            verse: 'also weep for poor, poor bears.'
+	            lyric: 'also weep for poor, poor bears.'
 	        }], [{
 	            time: 127,
-	            verse: 'Red and friends, lagging by the back door,'
+	            lyric: 'Red and friends, lagging by the back door,'
 	        }, {
 	            time: 130,
-	            verse: 'lift you on angel stares.'
+	            lyric: 'lift you on angel stares.'
 	        }, {
 	            time: 133,
-	            verse: 'Drunk, you\'d claim you\'ve never loved,'
+	            lyric: 'Drunk, you\'d claim you\'ve never loved,'
 	        }, {
 	            time: 136,
-	            verse: 'but it\'s too late to unscrew a Bud…'
+	            lyric: 'but it\'s too late to unscrew a Bud…'
 	        }], [{
 	            time: 139,
-	            verse: 'Yes, you were wrong to make demands on life,'
+	            lyric: 'Yes, you were wrong to make demands on life,'
 	        }, {
 	            time: 145,
-	            verse: '\'cause when you beg it never comes.'
+	            lyric: '\'cause when you beg it never comes.'
 	        }, {
 	            time: 151,
-	            verse: 'And we all find this out on our own time…'
+	            lyric: 'And we all find this out on our own time…'
 	        }, {
 	            time: 157,
-	            verse: 'Look back in anger to have won.'
+	            lyric: 'Look back in anger to have won.'
 	        }]]
 	    }
 	};
@@ -24554,109 +24554,109 @@
 	    lyrics: {
 	        left: [[{
 	            time: 17,
-	            verse: 'Brushed her off tonight, to swipe meats and wine'
+	            lyric: 'Brushed her off tonight, to swipe meats and wine'
 	        }, {
 	            time: 20,
-	            verse: 'with your crew of chefs and thieves.'
+	            lyric: 'with your crew of chefs and thieves.'
 	        }, {
 	            time: 22,
-	            verse: 'Tonight the rubber off, she offered as a thought,'
+	            lyric: 'Tonight the rubber off, she offered as a thought,'
 	        }, {
 	            time: 25,
-	            verse: 'if you would opt for bed not street.'
+	            lyric: 'if you would opt for bed not street.'
 	        }, {
 	            time: 28,
-	            verse: 'Well you\'re not me, Garryowen. Oh no, and'
+	            lyric: 'Well you\'re not me, Garryowen. Oh no, and'
 	        }, {
 	            time: 33,
-	            verse: 'I can\'t speak for this life you\'ve chosen.'
+	            lyric: 'I can\'t speak for this life you\'ve chosen.'
 	        }], [{
 	            time: 39,
-	            verse: 'Drunk pissed punks tryst, bustin\' cars with fists,'
+	            lyric: 'Drunk pissed punks tryst, bustin\' cars with fists,'
 	        }, {
 	            time: 42,
-	            verse: 'the littlest fuss will incite your rage.'
+	            lyric: 'the littlest fuss will incite your rage.'
 	        }, {
 	            time: 44,
-	            verse: 'In you come, piss drunk, smug in smegma crust,'
+	            lyric: 'In you come, piss drunk, smug in smegma crust,'
 	        }, {
 	            time: 47,
-	            verse: 'since hummers aren\'t love, or so she\'s claimed…'
+	            lyric: 'since hummers aren\'t love, or so she\'s claimed…'
 	        }, {
 	            time: 50,
-	            verse: 'Well see, Garryowen, now no one,'
+	            lyric: 'Well see, Garryowen, now no one,'
 	        }, {
 	            time: 56,
-	            verse: 'buys your grief as the boy unchosen.'
+	            lyric: 'buys your grief as the boy unchosen.'
 	        }], [{
 	            time: 61,
-	            verse: 'So the celibate you\'ll play, self-medicated,'
+	            lyric: 'So the celibate you\'ll play, self-medicated,'
 	        }, {
 	            time: 64,
-	            verse: 'stewing in hatred for the world.'
+	            lyric: 'stewing in hatred for the world.'
 	        }, {
 	            time: 67,
-	            verse: 'Slammed in the well, you\'ll glimpse yourself'
+	            lyric: 'Slammed in the well, you\'ll glimpse yourself'
 	        }, {
 	            time: 70,
-	            verse: 'with choler turned up, cringing in shame.'
+	            lyric: 'with choler turned up, cringing in shame.'
 	        }, {
 	            time: 73,
-	            verse: 'As claws you built from scratches, with your bilious malice,'
+	            lyric: 'As claws you built from scratches, with your bilious malice,'
 	        }, {
 	            time: 75,
-	            verse: 'fill up a package strapped to your scapegirl,'
+	            lyric: 'fill up a package strapped to your scapegirl,'
 	        }, {
 	            time: 78,
-	            verse: 'You\'ll slap her down, and push her out,'
+	            lyric: 'You\'ll slap her down, and push her out,'
 	        }, {
 	            time: 81,
-	            verse: 'a crumpled castaway!'
+	            lyric: 'a crumpled castaway!'
 	        }], [{
 	            time: 93,
-	            verse: 'Your rabid wit unleashed, Garryowen, to no end,'
+	            lyric: 'Your rabid wit unleashed, Garryowen, to no end,'
 	        }, {
 	            time: 100,
-	            verse: 'you\'d make her strip bare just to watch her freeze.'
+	            lyric: 'you\'d make her strip bare just to watch her freeze.'
 	        }, {
 	            time: 106,
-	            verse: 'You won\'t always have her for your pet.'
+	            lyric: 'You won\'t always have her for your pet.'
 	        }, {
 	            time: 111,
-	            verse: 'Someday she won\'t be there; someday yet!'
+	            lyric: 'Someday she won\'t be there; someday yet!'
 	        }], [{
 	            time: 116,
-	            verse: 'Final trip on a tanker, you\'ll drop your anger'
+	            lyric: 'Final trip on a tanker, you\'ll drop your anger'
 	        }, {
 	            time: 120,
-	            verse: 'to which you\'ve chained her; she\'ll sink into'
+	            lyric: 'to which you\'ve chained her; she\'ll sink into'
 	        }, {
 	            time: 123,
-	            verse: 'the briny end. Now that you\'re cleansed,'
+	            lyric: 'the briny end. Now that you\'re cleansed,'
 	        }, {
 	            time: 126,
-	            verse: 'aren\'t you the faltering dear?'
+	            lyric: 'aren\'t you the faltering dear?'
 	        }, {
 	            time: 128,
-	            verse: 'They told her, "Never help a self-abuser'
+	            lyric: 'They told her, "Never help a self-abuser'
 	        }, {
 	            time: 131,
-	            verse: 'see himself as well in you."'
+	            lyric: 'see himself as well in you."'
 	        }, {
 	            time: 134,
-	            verse: 'You\'d smite your kitten good, galled that smitten'
+	            lyric: 'You\'d smite your kitten good, galled that smitten'
 	        }, {
 	            time: 137,
-	            verse: 'she would opt just not to hear!'
+	            lyric: 'she would opt just not to hear!'
 	        }], [{
 	            time: 139,
-	            verse: 'Toora-loora-li, Garryowen, who owes no one,'
+	            lyric: 'Toora-loora-li, Garryowen, who owes no one,'
 	        }, {
 	            time: 145,
-	            verse: 'becomes someone\'s last-ditch alibi.'
+	            lyric: 'becomes someone\'s last-ditch alibi.'
 	        }, {
 	            time: 150,
-	            verse: 'You\'re a purer lie…'
+	            lyric: 'You\'re a purer lie…'
 	        }]]
 	    }
 	};
@@ -24676,323 +24676,323 @@
 	    lyrics: {
 	        left: [[{
 	            time: 5,
-	            verse: 'On a golden cord,'
+	            lyric: 'On a golden cord,'
 	        }, {
 	            time: 7,
-	            verse: 'once worn, now shorn,'
+	            lyric: 'once worn, now shorn,'
 	        }, {
 	            time: 9,
-	            verse: 'safely kept with bread and pocket lint.'
+	            lyric: 'safely kept with bread and pocket lint.'
 	        }, {
 	            time: 12,
-	            verse: 'Not of its own accord,'
+	            lyric: 'Not of its own accord,'
 	        }, {
 	            time: 15,
-	            verse: 'but broken for what its promise meant.'
+	            lyric: 'but broken for what its promise meant.'
 	        }, {
 	            time: 18,
-	            verse: 'And so she said, "Now it\'s yours again…'
+	            lyric: 'And so she said, "Now it\'s yours again…'
 	        }], [{
 	            time: 26,
-	            verse: 'And how you look tonight!'
+	            lyric: 'And how you look tonight!'
 	        }, {
 	            time: 28,
-	            verse: 'So polite, yet resigned,'
+	            lyric: 'So polite, yet resigned,'
 	        }, {
 	            time: 31,
-	            verse: 'with wounds dressed and feelings put away.'
+	            lyric: 'with wounds dressed and feelings put away.'
 	        }, {
 	            time: 33,
-	            verse: 'Full of patient replies…'
+	            lyric: 'Full of patient replies…'
 	        }, {
 	            time: 36,
-	            verse: 'But how can I trust a word you say?'
+	            lyric: 'But how can I trust a word you say?'
 	        }, {
 	            time: 40,
-	            verse: 'So spill away.. and please, dear, you have no more secrets saved.'
+	            lyric: 'So spill away.. and please, dear, you have no more secrets saved.'
 	        }, {
 	            time: 47,
-	            verse: 'I\'m sorry, but I went through your mail today…"'
+	            lyric: 'I\'m sorry, but I went through your mail today…"'
 	        }], [{
 	            time: 54,
-	            verse: 'Immerse the moulted form in holy foggy night,'
+	            lyric: 'Immerse the moulted form in holy foggy night,'
 	        }, {
 	            time: 57,
-	            verse: 'emerged beside a pauper\'s grave from dreams.'
+	            lyric: 'emerged beside a pauper\'s grave from dreams.'
 	        }, {
 	            time: 61,
-	            verse: 'The wraith surveys the widow on his pyre;'
+	            lyric: 'The wraith surveys the widow on his pyre;'
 	        }, {
 	            time: 64,
-	            verse: 'torched the bellyaches on suttee.'
+	            lyric: 'torched the bellyaches on suttee.'
 	        }], [{
 	            time: 65,
-	            verse: 'Had I grown dispirited in all this act,'
+	            lyric: 'Had I grown dispirited in all this act,'
 	        }, {
 	            time: 68,
-	            verse: 'by disparate elements, like kindling gathered up?'
+	            lyric: 'by disparate elements, like kindling gathered up?'
 	        }, {
 	            time: 72,
-	            verse: 'Guilt pardons the spectre taunting twin streetlamps;'
+	            lyric: 'Guilt pardons the spectre taunting twin streetlamps;'
 	        }, {
 	            time: 75,
-	            verse: 'hatchet man who\'s burnt enough.'
+	            lyric: 'hatchet man who\'s burnt enough.'
 	        }], [{
 	            time: 76,
-	            verse: 'But a precious gift as a shedded chain,'
+	            lyric: 'But a precious gift as a shedded chain,'
 	        }, {
 	            time: 79,
-	            verse: 'has lain to rust, one more cruel memento.'
+	            lyric: 'has lain to rust, one more cruel memento.'
 	        }, {
 	            time: 83,
-	            verse: 'Then if life were real, not just drunken play…'
+	            lyric: 'Then if life were real, not just drunken play…'
 	        }, {
 	            time: 86,
-	            verse: 'But what do I know?'
+	            lyric: 'But what do I know?'
 	        }], [{
 	            time: 87,
-	            verse: 'Just that those playful pups with their hateful fangs'
+	            lyric: 'Just that those playful pups with their hateful fangs'
 	        }, {
 	            time: 90,
-	            verse: 'knew the restraint of those born as hunters,'
+	            lyric: 'knew the restraint of those born as hunters,'
 	        }, {
 	            time: 93,
-	            verse: 'while this supposed dove chafing in his cage,'
+	            lyric: 'while this supposed dove chafing in his cage,'
 	        }, {
 	            time: 96,
-	            verse: 'just learned he\'s pecked to death his precious other.'
+	            lyric: 'just learned he\'s pecked to death his precious other.'
 	        }], [{
 	            time: 98,
-	            verse: 'But should it matter since you loved her once,'
+	            lyric: 'But should it matter since you loved her once,'
 	        }, {
 	            time: 101,
-	            verse: 'when you really thought the world that simple?'
+	            lyric: 'when you really thought the world that simple?'
 	        }, {
 	            time: 104,
-	            verse: 'And who\'s to judge how much you cared because'
+	            lyric: 'And who\'s to judge how much you cared because'
 	        }, {
 	            time: 107,
-	            verse: 'the gesture then was just a little more worth working for?…'
+	            lyric: 'the gesture then was just a little more worth working for?…'
 	        }, {
 	            time: 113,
-	            verse: 'Now the jester teeters towards…'
+	            lyric: 'Now the jester teeters towards…'
 	        }], [{
 	            time: 116,
-	            verse: 'the taunting, streetswept dawn.'
+	            lyric: 'the taunting, streetswept dawn.'
 	        }, {
 	            time: 118,
-	            verse: 'Thoughts spawned then dropped,'
+	            lyric: 'Thoughts spawned then dropped,'
 	        }, {
 	            time: 121,
-	            verse: 'of gathering up the suttee dust.'
+	            lyric: 'of gathering up the suttee dust.'
 	        }, {
 	            time: 123,
-	            verse: 'Some things just come to loss:'
+	            lyric: 'Some things just come to loss:'
 	        }, {
 	            time: 126,
-	            verse: 'this bracelet, its lustre; me, my lust.'
+	            lyric: 'this bracelet, its lustre; me, my lust.'
 	        }, {
 	            time: 130,
-	            verse: 'Or was I once, something not what I\'ve become?'
+	            lyric: 'Or was I once, something not what I\'ve become?'
 	        }, {
 	            time: 137,
-	            verse: 'Have I just killed the thing I love? '
+	            lyric: 'Have I just killed the thing I love? '
 	        }], [{
 	            time: 144,
-	            verse: 'Of fateful thoughts hung on a gilded clasp,'
+	            lyric: 'Of fateful thoughts hung on a gilded clasp,'
 	        }, {
 	            time: 147,
-	            verse: 'which this Ubermensch reavowed he\'d come to snip.'
+	            lyric: 'which this Ubermensch reavowed he\'d come to snip.'
 	        }, {
 	            time: 150,
-	            verse: 'And a smarting head throbs once his brain\'s warring halves,'
+	            lyric: 'And a smarting head throbs once his brain\'s warring halves,'
 	        }, {
 	            time: 154,
-	            verse: 'each attack with the proper fist.'
+	            lyric: 'each attack with the proper fist.'
 	        }], [{
 	            time: 155,
-	            verse: 'A sober plea finds the present you,'
+	            lyric: 'A sober plea finds the present you,'
 	        }, {
 	            time: 158,
-	            verse: 'my alias drunk, in panic and starved for leads.'
+	            lyric: 'my alias drunk, in panic and starved for leads.'
 	        }, {
 	            time: 161,
-	            verse: 'And will she label lies oaths we vowed we could,'
+	            lyric: 'And will she label lies oaths we vowed we could,'
 	        }, {
 	            time: 164,
-	            verse: 'with Garry\'s sole witness relieved?'
+	            lyric: 'with Garry\'s sole witness relieved?'
 	        }], [{
 	            time: 166,
-	            verse: 'So a plan devised divides a slave once wed;'
+	            lyric: 'So a plan devised divides a slave once wed;'
 	        }, {
 	            time: 169,
-	            verse: 'a bid for greatness\' sake, he\'s sold on as holy war.'
+	            lyric: 'a bid for greatness\' sake, he\'s sold on as holy war.'
 	        }, {
 	            time: 172,
-	            verse: 'When longed by nothing you then fight the best,'
+	            lyric: 'When longed by nothing you then fight the best,'
 	        }, {
 	            time: 176,
-	            verse: 'for kohl-eyed houris as reward.'
+	            lyric: 'for kohl-eyed houris as reward.'
 	        }]],
 	        right: [[{
 	            time: 5,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 7,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 7,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 12,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 15,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 18,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 26,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 28,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 31,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 33,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 36,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 40,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 47,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 54,
-	            verse: 'Returned a golden cord, this sole belonging signed.'
+	            lyric: 'Returned a golden cord, this sole belonging signed.'
 	        }, {
 	            time: 57,
-	            verse: 'Leave early, time\'s up, cross your date released.'
+	            lyric: 'Leave early, time\'s up, cross your date released.'
 	        }, {
 	            time: 61,
-	            verse: 'The jailer waves a bit, though uninspired,'
+	            lyric: 'The jailer waves a bit, though uninspired,'
 	        }, {
 	            time: 64,
-	            verse: 'for the well-behaved on the wing.'
+	            lyric: 'for the well-behaved on the wing.'
 	        }], [{
 	            time: 65,
-	            verse: 'As I soak in spirits amidst wanted ads—'
+	            lyric: 'As I soak in spirits amidst wanted ads—'
 	        }, {
 	            time: 68,
-	            verse: 'my desperate ailments tied in this shambler\'s dusk—'
+	            lyric: 'my desperate ailments tied in this shambler\'s dusk—'
 	        }, {
 	            time: 72,
-	            verse: 'still hardened against her fawning, misty glance,'
+	            lyric: 'still hardened against her fawning, misty glance,'
 	        }, {
 	            time: 75,
-	            verse: 'past this avenue Möbius.'
+	            lyric: 'past this avenue Möbius.'
 	        }], [{
 	            time: 76,
-	            verse: 'But the present slips past a debt unpaid,'
+	            lyric: 'But the present slips past a debt unpaid,'
 	        }, {
 	            time: 79,
-	            verse: 'that slays you once before you\'ll let it go.'
+	            lyric: 'that slays you once before you\'ll let it go.'
 	        }, {
 	            time: 83,
-	            verse: 'And if night were peeled off the front of day…'
+	            lyric: 'And if night were peeled off the front of day…'
 	        }, {
 	            time: 86,
-	            verse: 'But what do I know?'
+	            lyric: 'But what do I know?'
 	        }], [{
 	            time: 87,
-	            verse: 'Odelay!'
+	            lyric: 'Odelay!'
 	        }, {
 	            time: 90,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 93,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 96,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 98,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 101,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 104,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 107,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 113,
-	            verse: 'Mush! Mush!'
+	            lyric: 'Mush! Mush!'
 	        }], [{
 	            time: 116,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 118,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 121,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 123,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 126,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 130,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 137,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 144,
-	            verse: 'Once navels locked upon the wilted grass,'
+	            lyric: 'Once navels locked upon the wilted grass,'
 	        }, {
 	            time: 147,
-	            verse: 'digging through her innie, the outie snug-to-fit.'
+	            lyric: 'digging through her innie, the outie snug-to-fit.'
 	        }, {
 	            time: 150,
-	            verse: 'Then the guardian knot of this frayed cord detached,'
+	            lyric: 'Then the guardian knot of this frayed cord detached,'
 	        }, {
 	            time: 154,
-	            verse: 'leaked the bandage upon her wrist.'
+	            lyric: 'leaked the bandage upon her wrist.'
 	        }], [{
 	            time: 155,
-	            verse: 'The former me might have left a clue'
+	            lyric: 'The former me might have left a clue'
 	        }, {
 	            time: 158,
-	            verse: 'by trail of crumbs, which vanished as bartered feed.'
+	            lyric: 'by trail of crumbs, which vanished as bartered feed.'
 	        }, {
 	            time: 161,
-	            verse: 'Until we strangle cries knowing how we stood,'
+	            lyric: 'Until we strangle cries knowing how we stood,'
 	        }, {
 	            time: 164,
-	            verse: 'when buried whole with the deceased.'
+	            lyric: 'when buried whole with the deceased.'
 	        }], [{
 	            time: 166,
-	            verse: 'Though, the master mind reminds us, straight ahead,'
+	            lyric: 'Though, the master mind reminds us, straight ahead,'
 	        }, {
 	            time: 169,
-	            verse: 'a bigger plate awaiting nulls one half full before.'
+	            lyric: 'a bigger plate awaiting nulls one half full before.'
 	        }, {
 	            time: 172,
-	            verse: 'And fond sighs of reunion I must rest;'
+	            lyric: 'And fond sighs of reunion I must rest;'
 	        }, {
 	            time: 176,
-	            verse: 'forego like jewelry that she wore.'
+	            lyric: 'forego like jewelry that she wore.'
 	        }]]
 	    }
 	};
@@ -25012,97 +25012,97 @@
 	    lyrics: {
 	        right: [[{
 	            time: 12,
-	            verse: 'So you fled to her nest on this stork,'
+	            lyric: 'So you fled to her nest on this stork,'
 	        }, {
 	            time: 17,
-	            verse: 'history shed, having never grown your horns.'
+	            lyric: 'history shed, having never grown your horns.'
 	        }, {
 	            time: 22,
-	            verse: 'A present sent to her of a newborn…'
+	            lyric: 'A present sent to her of a newborn…'
 	        }, {
 	            time: 26,
-	            verse: 'So baby, tell me then, when you take in her breasts,'
+	            lyric: 'So baby, tell me then, when you take in her breasts,'
 	        }, {
 	            time: 31,
-	            verse: 'are you suckling to be fed?'
+	            lyric: 'are you suckling to be fed?'
 	        }, {
 	            time: 36,
-	            verse: 'Is it just her womb you bed?'
+	            lyric: 'Is it just her womb you bed?'
 	        }, {
 	            time: 40,
-	            verse: 'Well, have some more…'
+	            lyric: 'Well, have some more…'
 	        }], [{
 	            time: 47,
-	            verse: 'And how you always burned, for the slight;'
+	            lyric: 'And how you always burned, for the slight;'
 	        }, {
 	            time: 50,
-	            verse: 'spurned at first, you couldn\'t let it die!'
+	            lyric: 'spurned at first, you couldn\'t let it die!'
 	        }, {
 	            time: 53,
-	            verse: 'You\'d nurse your bruises: why, the nerve of me, to lie'
+	            lyric: 'You\'d nurse your bruises: why, the nerve of me, to lie'
 	        }, {
 	            time: 56,
-	            verse: 'in reserve while I had to learn to find'
+	            lyric: 'in reserve while I had to learn to find'
 	        }, {
 	            time: 58,
-	            verse: 'all the points you had! Then you\'d resent'
+	            lyric: 'all the points you had! Then you\'d resent'
 	        }, {
 	            time: 61,
-	            verse: 'plunders past that forced my defence…'
+	            lyric: 'plunders past that forced my defence…'
 	        }, {
 	            time: 63,
-	            verse: 'But dear, let\'s make a pact: if you\'re single then,'
+	            lyric: 'But dear, let\'s make a pact: if you\'re single then,'
 	        }, {
 	            time: 66,
-	            verse: 'I get you back? And…'
+	            lyric: 'I get you back? And…'
 	        }], [{
 	            time: 68,
-	            verse: 'I\'ll be stronger—not a bother, more modest, I promise—'
+	            lyric: 'I\'ll be stronger—not a bother, more modest, I promise—'
 	        }, {
 	            time: 73,
-	            verse: 'to parent my knight-errant as the sole keeper of his sheep herd.'
+	            lyric: 'to parent my knight-errant as the sole keeper of his sheep herd.'
 	        }, {
 	            time: 78,
-	            verse: 'And when sobered by the time-lapse to spring forward on a fallback…'
+	            lyric: 'And when sobered by the time-lapse to spring forward on a fallback…'
 	        }], [{
 	            time: 85,
-	            verse: 'my ticklish piglet, you\'ll bounce back to me, giggly, having fully gorged yourself.'
+	            lyric: 'my ticklish piglet, you\'ll bounce back to me, giggly, having fully gorged yourself.'
 	        }, {
 	            time: 93,
-	            verse: 'Bursting belly told by extra holes punched in your belt.'
+	            lyric: 'Bursting belly told by extra holes punched in your belt.'
 	        }], [{
 	            time: 104,
-	            verse: 'A shank\'s dustless silhouette bares the sill\'s sheen,'
+	            lyric: 'A shank\'s dustless silhouette bares the sill\'s sheen,'
 	        }, {
 	            time: 109,
-	            verse: 'your severed stinger left in me never lost its sting.'
+	            lyric: 'your severed stinger left in me never lost its sting.'
 	        }, {
 	            time: 116,
-	            verse: 'But other nights you\'d lap my wound clean'
+	            lyric: 'But other nights you\'d lap my wound clean'
 	        }, {
 	            time: 121,
-	            verse: 'to leave me as before, with only instinct to adore.'
+	            lyric: 'to leave me as before, with only instinct to adore.'
 	        }, {
 	            time: 127,
-	            verse: 'Besides, a you-shaped pussing sore'
+	            lyric: 'Besides, a you-shaped pussing sore'
 	        }, {
 	            time: 132,
-	            verse: 'bleeds just once, then never more…'
+	            lyric: 'bleeds just once, then never more…'
 	        }, {
 	            time: 138,
-	            verse: 'So are we agreed, honeybee? Come for me? At thirty-three?'
+	            lyric: 'So are we agreed, honeybee? Come for me? At thirty-three?'
 	        }], [{
 	            time: 174,
-	            verse: 'You say you woke one crystal morning, to find all those thoughts had gone away:'
+	            lyric: 'You say you woke one crystal morning, to find all those thoughts had gone away:'
 	        }, {
 	            time: 180,
-	            verse: 'your fear of death, your fear of never dying, and sadness for what it was.'
+	            lyric: 'your fear of death, your fear of never dying, and sadness for what it was.'
 	        }, {
 	            time: 186,
-	            verse: 'You just knew Bobtail\'s your priority, so for Bobtail I\'ll gladly wait.'
+	            lyric: 'You just knew Bobtail\'s your priority, so for Bobtail I\'ll gladly wait.'
 	        }, {
 	            time: 192,
-	            verse: 'And darling, don\'t you worry, these were only practise cuts…'
+	            lyric: 'And darling, don\'t you worry, these were only practise cuts…'
 	        }]]
 	    }
 	};
@@ -25122,203 +25122,203 @@
 	    lyrics: {
 	        left: [[{
 	            time: 14,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 17,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 21,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 27,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 31,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 35,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 40,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 44,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 47,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 50,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 54,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 62,
-	            verse: 'Oh, bastard ingrate! Some nights you wake,'
+	            lyric: 'Oh, bastard ingrate! Some nights you wake,'
 	        }, {
 	            time: 69,
-	            verse: 'climb and survey the houses you\'ve betrayed.'
+	            lyric: 'climb and survey the houses you\'ve betrayed.'
 	        }, {
 	            time: 76,
-	            verse: 'Scattered your beans over suburbia…'
+	            lyric: 'Scattered your beans over suburbia…'
 	        }, {
 	            time: 84,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 86,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 89,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 94,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 100,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 106,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 111,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 119,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 127,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 132,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 138,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 151,
-	            verse: 'Your dulling gold now gone…'
+	            lyric: 'Your dulling gold now gone…'
 	        }, {
 	            time: 157,
-	            verse: '…traded in for the trophy blondes.'
+	            lyric: '…traded in for the trophy blondes.'
 	        }], [{
 	            time: 161,
-	            verse: 'Through tatters of sky, their sun tinkles light'
+	            lyric: 'Through tatters of sky, their sun tinkles light'
 	        }, {
 	            time: 168,
-	            verse: 'in needling chimes that weave through the vines,'
+	            lyric: 'in needling chimes that weave through the vines,'
 	        }, {
 	            time: 174,
-	            verse: 'cast on your peons, old and subservient.'
+	            lyric: 'cast on your peons, old and subservient.'
 	        }, {
 	            time: 182,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 185,
-	            verse: 'Rama, Rama, Rama…'
+	            lyric: 'Rama, Rama, Rama…'
 	        }, {
 	            time: 197,
-	            verse: '…Maranatha!'
+	            lyric: '…Maranatha!'
 	        }]],
 	        right: [[{
 	            time: 14,
-	            verse: 'Beta, come wax prophetic with me.'
+	            lyric: 'Beta, come wax prophetic with me.'
 	        }, {
 	            time: 17,
-	            verse: 'Rest your rump, boy, by your old giving tree.'
+	            lyric: 'Rest your rump, boy, by your old giving tree.'
 	        }, {
 	            time: 21,
-	            verse: 'Stumped, I ponder the forespoken monster at the end of this book of yours…'
+	            lyric: 'Stumped, I ponder the forespoken monster at the end of this book of yours…'
 	        }, {
 	            time: 27,
-	            verse: 'And you, for a future, sold your whole fortune'
+	            lyric: 'And you, for a future, sold your whole fortune'
 	        }, {
 	            time: 31,
-	            verse: 'to live neutered, blissfully and orphaned.'
+	            lyric: 'to live neutered, blissfully and orphaned.'
 	        }, {
 	            time: 35,
-	            verse: 'Upon purchase of a queen\'s ship, earth right now your tourist store…'
+	            lyric: 'Upon purchase of a queen\'s ship, earth right now your tourist store…'
 	        }], [{
 	            time: 40,
-	            verse: 'But distracted by your brother\'s tantrums,'
+	            lyric: 'But distracted by your brother\'s tantrums,'
 	        }, {
 	            time: 44,
-	            verse: 'we couldn\'t imagine your mail order cult,'
+	            lyric: 'we couldn\'t imagine your mail order cult,'
 	        }, {
 	            time: 47,
-	            verse: 'till they called, suspecting you of huffing,'
+	            lyric: 'till they called, suspecting you of huffing,'
 	        }, {
 	            time: 50,
-	            verse: 'then we caught you stuffing twenties in an envelope…'
+	            lyric: 'then we caught you stuffing twenties in an envelope…'
 	        }, {
 	            time: 54,
-	            verse: 'So do you believe your "hamartia" now?'
+	            lyric: 'So do you believe your "hamartia" now?'
 	        }], [{
 	            time: 61,
-	            verse: 'Mowed down by the tides, and inundated under in unfair fights,'
+	            lyric: 'Mowed down by the tides, and inundated under in unfair fights,'
 	        }, {
 	            time: 67,
-	            verse: 'you made a bunker that shuts airtight to seal out their floods.'
+	            lyric: 'you made a bunker that shuts airtight to seal out their floods.'
 	        }, {
 	            time: 74,
-	            verse: 'But then, my little prince, safe on your tiny planet where none else fit,'
+	            lyric: 'But then, my little prince, safe on your tiny planet where none else fit,'
 	        }, {
 	            time: 80,
-	            verse: 'you finally granted their nutshells are rigged, and healed round your grudge…'
+	            lyric: 'you finally granted their nutshells are rigged, and healed round your grudge…'
 	        }], [{
 	            time: 86,
-	            verse: 'Now suddenly dressed to play, you drowned your stutter,'
+	            lyric: 'Now suddenly dressed to play, you drowned your stutter,'
 	        }, {
 	            time: 89,
-	            verse: 'smugly prepped to haze the new latecomers.'
+	            lyric: 'smugly prepped to haze the new latecomers.'
 	        }, {
 	            time: 94,
-	            verse: 'This scheming crackpot vowed to clean the jackpot out this time around…'
+	            lyric: 'This scheming crackpot vowed to clean the jackpot out this time around…'
 	        }], [{
 	            time: 100,
-	            verse: 'But have you heard, my beloved Rama king, the testifiers\' lore?'
+	            lyric: 'But have you heard, my beloved Rama king, the testifiers\' lore?'
 	        }, {
 	            time: 106,
-	            verse: 'A nation paused to watch you fail your Sita on repeat for evermore!'
+	            lyric: 'A nation paused to watch you fail your Sita on repeat for evermore!'
 	        }, {
 	            time: 111,
-	            verse: 'Did you find a rival in the goddess you once sought as prize—'
+	            lyric: 'Did you find a rival in the goddess you once sought as prize—'
 	        }, {
 	            time: 119,
-	            verse: 'your idol who riled you when you saw that you two were tied? '
+	            lyric: 'your idol who riled you when you saw that you two were tied? '
 	        }], [{
 	            time: 127,
-	            verse: 'With bride you bridled in this perfect duel match,'
+	            lyric: 'With bride you bridled in this perfect duel match,'
 	        }, {
 	            time: 132,
-	            verse: 'and so one night you chalked the sidewalks slurring Valmiki\'s chant.'
+	            lyric: 'and so one night you chalked the sidewalks slurring Valmiki\'s chant.'
 	        }, {
 	            time: 138,
-	            verse: 'When wakened from the siren, you found spelled out in dead ants: ____…'
+	            lyric: 'When wakened from the siren, you found spelled out in dead ants: ____…'
 	        }], [{
 	            time: 145,
-	            verse: 'No well worn sari could sway you from a fairer marathon!'
+	            lyric: 'No well worn sari could sway you from a fairer marathon!'
 	        }, {
 	            time: 152,
-	            verse: 'Stubborn harpies can\'t draw this contest to be one!'
+	            lyric: 'Stubborn harpies can\'t draw this contest to be one!'
 	        }], [{
 	            time: 160,
-	            verse: 'Oh child of mine, what\'s left of what these faces you flip override,'
+	            lyric: 'Oh child of mine, what\'s left of what these faces you flip override,'
 	        }, {
 	            time: 165,
-	            verse: 'and all these pages you\'ve ripped from your spine to find a cleared path'
+	            lyric: 'and all these pages you\'ve ripped from your spine to find a cleared path'
 	        }, {
 	            time: 172,
-	            verse: 'in life\'s unbearable maze? Then once for all to render it all fail-safe,'
+	            lyric: 'in life\'s unbearable maze? Then once for all to render it all fail-safe,'
 	        }, {
 	            time: 178,
-	            verse: 'your thoughts surrendered for Bobtail\'s sake, to five-year plans.'
+	            lyric: 'your thoughts surrendered for Bobtail\'s sake, to five-year plans.'
 	        }], [{
 	            time: 184,
-	            verse: 'Now son, before you embark on your great bildungsroman,'
+	            lyric: 'Now son, before you embark on your great bildungsroman,'
 	        }, {
 	            time: 191,
-	            verse: 'shouldn\'t you first be sure you\'ve finally become someone?'
+	            lyric: 'shouldn\'t you first be sure you\'ve finally become someone?'
 	        }]]
 	    }
 	};
@@ -25338,167 +25338,167 @@
 	    lyrics: {
 	        left: [[{
 	            time: 1,
-	            verse: 'Or another…'
+	            lyric: 'Or another…'
 	        }], [{
 	            time: 24,
-	            verse: 'Atavist stuck feet first,'
+	            lyric: 'Atavist stuck feet first,'
 	        }, {
 	            time: 27,
-	            verse: 'subversive inner lotus eater,'
+	            lyric: 'subversive inner lotus eater,'
 	        }, {
 	            time: 30,
-	            verse: 'an everlasting doublespeaker,'
+	            lyric: 'an everlasting doublespeaker,'
 	        }, {
 	            time: 34,
-	            verse: 'his beaten wit and id she\'s deemed her'
+	            lyric: 'his beaten wit and id she\'s deemed her'
 	        }, {
 	            time: 37,
-	            verse: 'sinking ship, maybe good for anecdotes.'
+	            lyric: 'sinking ship, maybe good for anecdotes.'
 	        }, {
 	            time: 39,
-	            verse: 'As comedy teams work, a hoot the times'
+	            lyric: 'As comedy teams work, a hoot the times'
 	        }, {
 	            time: 42,
-	            verse: 'not at each other\'s throats.'
+	            lyric: 'not at each other\'s throats.'
 	        }], [{
 	            time: 46,
-	            verse: 'Trophy bronzed from a Trojan'
+	            lyric: 'Trophy bronzed from a Trojan'
 	        }, {
 	            time: 49,
-	            verse: 'for some unforeskinned virgin,'
+	            lyric: 'for some unforeskinned virgin,'
 	        }, {
 	            time: 52,
-	            verse: 'on the shelf, serves his declared assertion:'
+	            lyric: 'on the shelf, serves his declared assertion:'
 	        }, {
 	            time: 56,
-	            verse: 'to remain inherently perfect,'
+	            lyric: 'to remain inherently perfect,'
 	        }, {
 	            time: 59,
-	            verse: 'as worn puppet his offscreen person dubs.'
+	            lyric: 'as worn puppet his offscreen person dubs.'
 	        }, {
 	            time: 61,
-	            verse: 'His silent dramedy works better;'
+	            lyric: 'His silent dramedy works better;'
 	        }, {
 	            time: 64,
-	            verse: 'twitching sword in care, he\'s anyone.'
+	            lyric: 'twitching sword in care, he\'s anyone.'
 	        }], [{
 	            time: 90,
-	            verse: 'Needle done will not retract,'
+	            lyric: 'Needle done will not retract,'
 	        }, {
 	            time: 94,
-	            verse: 'it hums a typo fragile ex passed through ash…'
+	            lyric: 'it hums a typo fragile ex passed through ash…'
 	        }, {
 	            time: 98,
-	            verse: 'With his vinyl, exit Miriam to cash his stash.'
+	            lyric: 'With his vinyl, exit Miriam to cash his stash.'
 	        }, {
 	            time: 102,
-	            verse: 'Undeluded, she\'ll bask in selfish cut-off jeans,'
+	            lyric: 'Undeluded, she\'ll bask in selfish cut-off jeans,'
 	        }, {
 	            time: 106,
-	            verse: 'and in her pool, hears not a worrisome "Bless her, Godspeed…" '
+	            lyric: 'and in her pool, hears not a worrisome "Bless her, Godspeed…" '
 	        }], [{
 	            time: 112,
-	            verse: 'The key turned and she floors it,'
+	            lyric: 'The key turned and she floors it,'
 	        }, {
 	            time: 115,
-	            verse: 'so homeward the sport\'s escorted,'
+	            lyric: 'so homeward the sport\'s escorted,'
 	        }, {
 	            time: 118,
-	            verse: 'the cleaved horizon pours the mortar in.'
+	            lyric: 'the cleaved horizon pours the mortar in.'
 	        }, {
 	            time: 121,
-	            verse: 'Redressed, he gets his notice, short an'
+	            lyric: 'Redressed, he gets his notice, short an'
 	        }, {
 	            time: 124,
-	            verse: 'apology, bold and blunt.'
+	            lyric: 'apology, bold and blunt.'
 	        }, {
 	            time: 127,
-	            verse: 'Life\'s a dumb ex-dromedary, hungry carrying'
+	            lyric: 'Life\'s a dumb ex-dromedary, hungry carrying'
 	        }, {
 	            time: 130,
-	            verse: 'this groovy second hump.'
+	            lyric: 'this groovy second hump.'
 	        }]],
 	        right: [[{
 	            time: 1,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 24,
-	            verse: 'At a vista, key turned'
+	            lyric: 'At a vista, key turned'
 	        }, {
 	            time: 27,
-	            verse: 'to first switch in her low two-seater,'
+	            lyric: 'to first switch in her low two-seater,'
 	        }, {
 	            time: 30,
-	            verse: 'and deaf from blasting frontal speakers,'
+	            lyric: 'and deaf from blasting frontal speakers,'
 	        }, {
 	            time: 34,
-	            verse: 'this phoenix risen limp beneath her'
+	            lyric: 'this phoenix risen limp beneath her'
 	        }, {
 	            time: 37,
-	            verse: 'pinkish slip, making scroonched her pantyhose.'
+	            lyric: 'pinkish slip, making scroonched her pantyhose.'
 	        }, {
 	            time: 39,
-	            verse: 'His god humming Freebird, the hula guy'
+	            lyric: 'His god humming Freebird, the hula guy'
 	        }, {
 	            time: 42,
-	            verse: 'nods as she drums her toes.'
+	            lyric: 'nods as she drums her toes.'
 	        }], [{
 	            time: 46,
-	            verse: 'Though, she ponders the children'
+	            lyric: 'Though, she ponders the children'
 	        }, {
 	            time: 49,
-	            verse: 'born from a forced conversion'
+	            lyric: 'born from a forced conversion'
 	        }, {
 	            time: 52,
-	            verse: 'on a self-servicing cleric surgeon'
+	            lyric: 'on a self-servicing cleric surgeon'
 	        }, {
 	            time: 56,
-	            verse: 'duly may inherit his burdens.'
+	            lyric: 'duly may inherit his burdens.'
 	        }, {
 	            time: 59,
-	            verse: 'This swarm pumped and kissed off, she purges up,'
+	            lyric: 'This swarm pumped and kissed off, she purges up,'
 	        }, {
 	            time: 61,
-	            verse: 'despite once promising forever,'
+	            lyric: 'despite once promising forever,'
 	        }, {
 	            time: 64,
-	            verse: 'which she swore when scarcely twenty-one.'
+	            lyric: 'which she swore when scarcely twenty-one.'
 	        }], [{
 	            time: 90,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 94,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 98,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 102,
-	            verse: '…'
+	            lyric: '…'
 	        }, {
 	            time: 106,
-	            verse: '…'
+	            lyric: '…'
 	        }], [{
 	            time: 112,
-	            verse: 'The seat hurt when he lowered it,'
+	            lyric: 'The seat hurt when he lowered it,'
 	        }, {
 	            time: 115,
-	            verse: 'though no worse but for his soreness,'
+	            lyric: 'though no worse but for his soreness,'
 	        }, {
 	            time: 118,
-	            verse: 'this geezer\'s life-support\'s abortive.'
+	            lyric: 'this geezer\'s life-support\'s abortive.'
 	        }, {
 	            time: 121,
-	            verse: 'He\'s vegging with his boner shortened;'
+	            lyric: 'He\'s vegging with his boner shortened;'
 	        }, {
 	            time: 124,
-	            verse: 'a pop, and she pulls the plug.'
+	            lyric: 'a pop, and she pulls the plug.'
 	        }, {
 	            time: 127,
-	            verse: 'Lights one up then draws a daring puff, preparing'
+	            lyric: 'Lights one up then draws a daring puff, preparing'
 	        }, {
 	            time: 130,
-	            verse: 'the scoop, he\'s getting dumped.'
+	            lyric: 'the scoop, he\'s getting dumped.'
 	        }]]
 	    }
 	};
@@ -25519,97 +25519,97 @@
 	    lyrics: {
 	        left: [[{
 	            time: 0,
-	            verse: [{
+	            lyric: [{
 	                italic: '"If you\'re just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You can\'t have both. Because a scratched record will chip a good needle… and a chipped needle will scratch a good record…"'
 	            }]
 	        }], [{
 	            time: 15,
-	            verse: 'So shall we, Odin, lightly tread'
+	            lyric: 'So shall we, Odin, lightly tread'
 	        }, {
 	            time: 19,
-	            verse: 'past the rape racks where our furor led,'
+	            lyric: 'past the rape racks where our furor led,'
 	        }, {
 	            time: 23,
-	            verse: 'to a soiled girl fouled on the false rib from our chest?'
+	            lyric: 'to a soiled girl fouled on the false rib from our chest?'
 	        }, {
 	            time: 30,
-	            verse: 'We baulked at our lives born unfair,'
+	            lyric: 'We baulked at our lives born unfair,'
 	        }, {
 	            time: 35,
-	            verse: 'set to rock this pout from horse to chair,'
+	            lyric: 'set to rock this pout from horse to chair,'
 	        }, {
 	            time: 39,
-	            verse: 'as a tempered hammer cooled by striking the smouldering air…'
+	            lyric: 'as a tempered hammer cooled by striking the smouldering air…'
 	        }, {
 	            time: 46,
-	            verse: 'Well, first pets always bear the worst,'
+	            lyric: 'Well, first pets always bear the worst,'
 	        }, {
 	            time: 50,
-	            verse: 'mere primers on how not to hurt,'
+	            lyric: 'mere primers on how not to hurt,'
 	        }, {
 	            time: 55,
-	            verse: 'and now I know why the battered kitten purrs…'
+	            lyric: 'and now I know why the battered kitten purrs…'
 	        }], [
 	        // TODO: This whole section is italicised.
 	        {
 	            time: 60,
-	            verse: [{
+	            lyric: [{
 	                italic: '"No, I\'ll smile because I believe in the big crunch. And meanwhile, the universe is a cyanided box. Because if we can\'t ever be known to be dead, we just might always be alive… to God…'
 	            }]
 	        }], [{
 	            time: 74,
-	            verse: 'Torn straps unsalvaged sows have chewed,'
+	            lyric: 'Torn straps unsalvaged sows have chewed,'
 	        }, {
 	            time: 78,
-	            verse: 'form a trail which leads to a bloody broom,'
+	            lyric: 'form a trail which leads to a bloody broom,'
 	        }, {
 	            time: 82,
-	            verse: 'its bristles scrape discharge encrusted on leather boots.'
+	            lyric: 'its bristles scrape discharge encrusted on leather boots.'
 	        }, {
 	            time: 90,
-	            verse: 'Through an alley strewn with burger shrouds,'
+	            lyric: 'Through an alley strewn with burger shrouds,'
 	        }, {
 	            time: 94,
-	            verse: 'a lone rallied youth strikes himself from his cloud,'
+	            lyric: 'a lone rallied youth strikes himself from his cloud,'
 	        }, {
 	            time: 98,
-	            verse: 'reversing his stomach and his swastikas inside out…'
+	            lyric: 'reversing his stomach and his swastikas inside out…'
 	        }, {
 	            time: 106,
-	            verse: 'Well, if first cuts are the worst ones bled…'
+	            lyric: 'Well, if first cuts are the worst ones bled…'
 	        }, {
 	            time: 110,
-	            verse: 'then none by us now, to any flesh!'
+	            lyric: 'then none by us now, to any flesh!'
 	        }, {
 	            time: 114,
-	            verse: 'This shipwrecked world is large enough for us to make amends…'
+	            lyric: 'This shipwrecked world is large enough for us to make amends…'
 	        }, {
 	            time: 120,
-	            verse: 'and to be good again…'
+	            lyric: 'and to be good again…'
 	        }], [{
 	            time: 138,
-	            verse: '"So all your leads have left and now you\'re sad, too?'
+	            lyric: '"So all your leads have left and now you\'re sad, too?'
 	        }, {
 	            time: 146,
-	            verse: 'Someday you\'ll breathe again; for one, you have to…'
+	            lyric: 'Someday you\'ll breathe again; for one, you have to…'
 	        }, {
 	            time: 154,
-	            verse: 'I don\'t know how where once I cowered I now could fly.'
+	            lyric: 'I don\'t know how where once I cowered I now could fly.'
 	        }, {
 	            time: 161,
-	            verse: 'I still love you for the airholes, dear; and now, good night."'
+	            lyric: 'I still love you for the airholes, dear; and now, good night."'
 	        }], [{
 	            time: 186,
-	            verse: 'The stardust marks us, Odin, sparks zip through our heads…'
+	            lyric: 'The stardust marks us, Odin, sparks zip through our heads…'
 	        }, {
 	            time: 194,
-	            verse: 'And can we start as children? Would we want to then?'
+	            lyric: 'And can we start as children? Would we want to then?'
 	        }, {
 	            time: 201,
-	            verse: 'The diapered white dwarf, gurgling, curls up for his sleep…'
+	            lyric: 'The diapered white dwarf, gurgling, curls up for his sleep…'
 	        }, {
 	            time: 209,
-	            verse: 'Our ashed heads bow from chivalry to our Siva\'s feet…'
+	            lyric: 'Our ashed heads bow from chivalry to our Siva\'s feet…'
 	        }]]
 	    }
 	};
@@ -25629,94 +25629,94 @@
 	    lyrics: {
 	        right: [[{
 	            time: 13,
-	            verse: 'My hundred thousandth dream, I bumped into my Sita.'
+	            lyric: 'My hundred thousandth dream, I bumped into my Sita.'
 	        }, {
 	            time: 19,
-	            verse: 'Silent for a while, we searched our eyes,'
+	            lyric: 'Silent for a while, we searched our eyes,'
 	        }, {
 	            time: 23,
-	            verse: 'then we smiled and like old times,'
+	            lyric: 'then we smiled and like old times,'
 	        }, {
 	            time: 27,
-	            verse: 'I took her shoulder as we drove from El Torito.'
+	            lyric: 'I took her shoulder as we drove from El Torito.'
 	        }, {
 	            time: 34,
-	            verse: 'I said never again we\'ll slave our whole lives away!'
+	            lyric: 'I said never again we\'ll slave our whole lives away!'
 	        }], [{
 	            time: 43,
-	            verse: 'As pretty as the rainbow, Sita! Sita!'
+	            lyric: 'As pretty as the rainbow, Sita! Sita!'
 	        }, {
 	            time: 49,
-	            verse: 'Did I ever live another life?'
+	            lyric: 'Did I ever live another life?'
 	        }, {
 	            time: 56,
-	            verse: 'As precious as a summer, Sita! Sita!'
+	            lyric: 'As precious as a summer, Sita! Sita!'
 	        }, {
 	            time: 63,
-	            verse: 'Did I ever live another life?'
+	            lyric: 'Did I ever live another life?'
 	        }, {
 	            time: 70,
-	            verse: 'And were you mine?'
+	            lyric: 'And were you mine?'
 	        }], [{
 	            time: 74,
-	            verse: 'My hundred thousandth dream, I kissed my senorita,'
+	            lyric: 'My hundred thousandth dream, I kissed my senorita,'
 	        }, {
 	            time: 80,
-	            verse: 'on the pampas where the gopis played,'
+	            lyric: 'on the pampas where the gopis played,'
 	        }, {
 	            time: 84,
-	            verse: 'and the seasons glide away.'
+	            lyric: 'and the seasons glide away.'
 	        }, {
 	            time: 89,
-	            verse: 'I can\'t remember how or when my heart was Sita\'s.'
+	            lyric: 'I can\'t remember how or when my heart was Sita\'s.'
 	        }, {
 	            time: 94,
-	            verse: 'We were young, so sure of life, never knowing time unkind!'
+	            lyric: 'We were young, so sure of life, never knowing time unkind!'
 	        }], [{
 	            time: 103,
-	            verse: 'I spent a lifetime waiting, Sita! Sita!'
+	            lyric: 'I spent a lifetime waiting, Sita! Sita!'
 	        }, {
 	            time: 110,
-	            verse: 'Did I ever live another life?'
+	            lyric: 'Did I ever live another life?'
 	        }, {
 	            time: 117,
-	            verse: 'We blow the wind in whistles, Sita! Sita!'
+	            lyric: 'We blow the wind in whistles, Sita! Sita!'
 	        }, {
 	            time: 124,
-	            verse: 'Did I ever live another life?'
+	            lyric: 'Did I ever live another life?'
 	        }, {
 	            time: 131,
-	            verse: 'When you were mine?'
+	            lyric: 'When you were mine?'
 	        }], [{
 	            time: 163,
-	            verse: 'My hundred thousandth dream, on the cliffs of El Cerrito,'
+	            lyric: 'My hundred thousandth dream, on the cliffs of El Cerrito,'
 	        }, {
 	            time: 169,
-	            verse: 'she says now it\'s dark and getting late,'
+	            lyric: 'she says now it\'s dark and getting late,'
 	        }, {
 	            time: 174,
-	            verse: 'but we\'ll always have today.'
+	            lyric: 'but we\'ll always have today.'
 	        }, {
 	            time: 178,
-	            verse: 'Why does my last thought in this world belong to Sita?'
+	            lyric: 'Why does my last thought in this world belong to Sita?'
 	        }, {
 	            time: 183,
-	            verse: 'Now the light spills warm and bright… gently fills these eyes…'
+	            lyric: 'Now the light spills warm and bright… gently fills these eyes…'
 	        }], [{
 	            time: 192,
-	            verse: 'She\'ll always come to take me, Sita! Sita!'
+	            lyric: 'She\'ll always come to take me, Sita! Sita!'
 	        }, {
 	            time: 199,
-	            verse: 'Will I ever live another life?'
+	            lyric: 'Will I ever live another life?'
 	        }, {
 	            time: 206,
-	            verse: 'Real or imaginary, Sita! Sita!'
+	            lyric: 'Real or imaginary, Sita! Sita!'
 	        }, {
 	            time: 213,
-	            verse: 'Will I ever live another life?'
+	            lyric: 'Will I ever live another life?'
 	        }, {
 	            time: 220,
-	            verse: 'When you\'ll be mine?'
+	            lyric: 'When you\'ll be mine?'
 	        }]]
 	    }
 	};

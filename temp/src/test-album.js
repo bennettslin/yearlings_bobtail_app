@@ -59,13 +59,13 @@ exports.details = {
                         {
                             devComment: 'This is a straightforward string.',
                             time: 0,
-                            verse: 'This is a straightforward string.',
+                            lyric: 'This is a straightforward string.',
                             annotation1: ''
                         },
                         {
                             devComment: 'Single italics in line.',
                             time: 0,
-                            verse: [
+                            lyric: [
                                 'Single',
                                 {
                                     italic: 'italics'
@@ -77,7 +77,7 @@ exports.details = {
                         {
                             devComment: 'Single anchor in line.',
                             time: 0,
-                            verse: [
+                            lyric: [
                                 'Single',
                                 {
                                     anchor: 'anchor',
@@ -90,7 +90,7 @@ exports.details = {
                         {
                             devComment: 'These are italics nested in an anchor.',
                             time: 0,
-                            verse: [
+                            lyric: [
                                 'These ',
                                 {
                                     anchor: [
@@ -109,7 +109,7 @@ exports.details = {
                         {
                             devComment: 'This is an anchor nested in italics.',
                             time: 0,
-                            verse: [
+                            lyric: [
                                 'This ',
                                 {
                                     italic: [
@@ -128,7 +128,7 @@ exports.details = {
                         {
                             devComment: 'These are multiple anchors in a single line.',
                             time: 0,
-                            verse: [
+                            lyric: [
                                 'These are ',
                                 {
                                     anchor: 'multiple anchors ',
@@ -146,7 +146,7 @@ exports.details = {
                         {
                             devComment: 'These are multiple italics in a single line',
                             time: 0,
-                            verse: [
+                            lyric: [
                                 'These are ',
                                 {
                                     italic: 'multiple italics '
@@ -162,7 +162,7 @@ exports.details = {
                         {
                             devComment: 'These are multiple anchors and italics in a single line.',
                             time: 0,
-                            verse: [
+                            lyric: [
                                 'These ',
                                 {
                                     italic: 'are '
@@ -186,7 +186,7 @@ exports.details = {
                         {
                             devComment: 'These are multiple lines sharing a single anchor tag...',
                             time: 0,
-                            verse: [
+                            lyric: [
                                 'These are multiple lines sharing',
                                 {
                                     anchor: 'a single anchor tag...',
@@ -198,7 +198,7 @@ exports.details = {
                         {
                             devComment: 'And this is the second line.',
                             time: 0,
-                            verse: [
+                            lyric: [
                                 {
                                     anchor: 'And this is ',
                                     annotationKey: 'multiple_lines_single_anchor'

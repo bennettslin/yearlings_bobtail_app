@@ -9,11 +9,11 @@ module.exports = {
             [
                 {
                     time: 11,
-                    verse: 'Hilltops gnashing dig out potholes,'
+                    lyric: 'Hilltops gnashing dig out potholes,'
                 },
                 {
                     time: 14,
-                    verse: [
+                    lyric: [
                         'the',
                         {
                             anchor: 'valley somersaults',
@@ -26,7 +26,7 @@ module.exports = {
                 },
                 {
                     time: 17,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Hydrants burst',
                             annotation: {
@@ -44,7 +44,7 @@ module.exports = {
                 },
                 {
                     time: 23,
-                    verse: [
+                    lyric: [
                         'Swill pop poured from',
                         {
                             anchor: 'wayside bottle,',
@@ -56,7 +56,7 @@ module.exports = {
                 },
                 {
                     time: 26,
-                    verse: [
+                    lyric: [
                         'his',
                         {
                             anchor: 'pinhead in its shadow',
@@ -69,7 +69,7 @@ module.exports = {
                 },
                 {
                     time: 30,
-                    verse: [
+                    lyric: [
                         {
                             emphasis: [
                                 {
@@ -85,7 +85,7 @@ module.exports = {
                 },
                 {
                     time: 32,
-                    verse: [
+                    lyric: [
                         'licking lips',
                         {
                             anchor: 'he ends his stroll.',
@@ -99,11 +99,11 @@ module.exports = {
             [
                 {
                     time: 35,
-                    verse: 'Oh, has Willy the Cocoa come'
+                    lyric: 'Oh, has Willy the Cocoa come'
                 },
                 {
                     time: 38,
-                    verse: [
+                    lyric: [
                         'for',
                         {
                             anchor: 'our tins and our jars',
@@ -116,7 +116,7 @@ module.exports = {
                 },
                 {
                     time: 41,
-                    verse: [
+                    lyric: [
                         'Saluting Mummy doing some',
                         {
                             anchor: 'haircutting to the sun',
@@ -128,7 +128,7 @@ module.exports = {
                 },
                 {
                     time: 45,
-                    verse: [
+                    lyric: [
                         'when',
                         {
                             anchor: 'suddenly baby shrieks…',
@@ -142,7 +142,7 @@ module.exports = {
             [
                 {
                     time: 47,
-                    verse: [
+                    lyric: [
                         'As',
                         {
                             anchor: 'gap-toothed coma',
@@ -155,7 +155,7 @@ module.exports = {
                 },
                 {
                     time: 50,
-                    verse: [
+                    lyric: [
                         'launching',
                         {
                             anchor: 'pair of seizures',
@@ -168,11 +168,11 @@ module.exports = {
                 },
                 {
                     time: 53,
-                    verse: 'Willy ducks behind the porch steps and laughs.'
+                    lyric: 'Willy ducks behind the porch steps and laughs.'
                 },
                 {
                     time: 59,
-                    verse: [
+                    lyric: [
                         'Oh ma\'am, I',
                         {
                             anchor: 'see your kid with whiskers,',
@@ -184,7 +184,7 @@ module.exports = {
                 },
                 {
                     time: 62,
-                    verse: [
+                    lyric: [
                         'he croaks, stroking',
                         {
                             anchor: 'creepers on his cheek,',
@@ -196,7 +196,7 @@ module.exports = {
                 },
                 {
                     time: 65,
-                    verse: [
+                    lyric: [
                         'And three years howling is the',
                         {
                             anchor: 'longest cowlick',
@@ -211,7 +211,7 @@ module.exports = {
             [
                 {
                     time: 71,
-                    verse: [
+                    lyric: [
                         'Prying',
                         {
                             anchor: 'X-ray spec\'d,',
@@ -230,7 +230,7 @@ module.exports = {
                 },
                 {
                     time: 74,
-                    verse: [
+                    lyric: [
                         'a',
                         {
                             anchor: 'kick slams',
@@ -250,7 +250,7 @@ module.exports = {
                 },
                 {
                     time: 77,
-                    verse: [
+                    lyric: [
                         'with his tummy clenched, muffling',
                         {
                             anchor: 'baffled sobs.',
@@ -262,11 +262,11 @@ module.exports = {
                 },
                 {
                     time: 80,
-                    verse: 'Papa storms in roaring, Boy, are you proud?'
+                    lyric: 'Papa storms in roaring, Boy, are you proud?'
                 },
                 {
                     time: 83,
-                    verse: [
+                    lyric: [
                         'You\'d learn him good, when',
                         {
                             anchor: 'smarts he could\'ve took',
@@ -278,17 +278,17 @@ module.exports = {
                 },
                 {
                     time: 86,
-                    verse: 'all went instead to this clever head of yours.'
+                    lyric: 'all went instead to this clever head of yours.'
                 },
                 {
                     time: 89,
-                    verse: 'So to baby —to your brother— you\'ll say sorry for the world!'
+                    lyric: 'So to baby —to your brother— you\'ll say sorry for the world!'
                 }
             ],
             [
                 {
                     time: 106,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Killcrop',
                             annotation: {
@@ -300,7 +300,7 @@ module.exports = {
                 },
                 {
                     time: 110,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'soused loafers',
                             annotation: {
@@ -312,7 +312,7 @@ module.exports = {
                 },
                 {
                     time: 113,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Hit this witch with switch,',
                             annotation: {
@@ -324,11 +324,11 @@ module.exports = {
                 },
                 {
                     time: 119,
-                    verse: 'Milksop cornered into scuffle,'
+                    lyric: 'Milksop cornered into scuffle,'
                 },
                 {
                     time: 122,
-                    verse: [
+                    lyric: [
                         'a',
                         {
                             anchor: 'sack-spilled glass swung',
@@ -347,7 +347,7 @@ module.exports = {
                 },
                 {
                     time: 126,
-                    verse: [
+                    lyric: [
                         {
                             emphasis: [
                                 'Shelled skull has freed',
@@ -363,7 +363,7 @@ module.exports = {
                 },
                 {
                     time: 128,
-                    verse: [
+                    lyric: [
                         'dripping',
                         {
                             anchor: 'Willy\'s stalkless bulb.',
@@ -377,7 +377,7 @@ module.exports = {
             [
                 {
                     time: 131,
-                    verse: [
+                    lyric: [
                         'Oh, and August was the',
                         {
                             anchor: 'sawdust month',
@@ -389,7 +389,7 @@ module.exports = {
                 },
                 {
                     time: 134,
-                    verse: [
+                    lyric: [
                         'that saw this',
                         {
                             anchor: 'mulch soften asphodel.',
@@ -401,7 +401,7 @@ module.exports = {
                 },
                 {
                     time: 137,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Baby bluebonnets',
                             annotation: {
@@ -414,7 +414,7 @@ module.exports = {
                 },
                 {
                     time: 140,
-                    verse: [
+                    lyric: [
                         'lay',
                         {
                             anchor: 'forgotten amongst the mail.',
@@ -428,7 +428,7 @@ module.exports = {
             [
                 {
                     time: 143,
-                    verse: [
+                    lyric: [
                         'But',
                         {
                             anchor: 'how marbleless,',
@@ -441,7 +441,7 @@ module.exports = {
                 },
                 {
                     time: 146,
-                    verse: [
+                    lyric: [
                         'being ever stuck in',
                         {
                             anchor: 'imp-runt age of mind!',
@@ -453,7 +453,7 @@ module.exports = {
                 },
                 {
                     time: 149,
-                    verse: [
+                    lyric: [
                         'Are you sick?',
                         {
                             anchor: 'I am seven,',
@@ -466,21 +466,21 @@ module.exports = {
                 },
                 {
                     time: 155,
-                    verse: 'And do we speak in winded whimpers'
+                    lyric: 'And do we speak in winded whimpers'
                 },
                 {
                     time: 158,
-                    verse: 'or squelch shreds of a summer gone,'
+                    lyric: 'or squelch shreds of a summer gone,'
                 },
                 {
                     time: 161,
-                    verse: 'ever conscious of days past forever wrong?'
+                    lyric: 'ever conscious of days past forever wrong?'
                 }
             ],
             [
                 {
                     time: 167,
-                    verse: [
+                    lyric: [
                         'Such',
                         {
                             anchor: 'heavy fears,',
@@ -493,7 +493,7 @@ module.exports = {
                 },
                 {
                     time: 171,
-                    verse: [
+                    lyric: [
                         'for a cub',
                         {
                             anchor: 'not yet Webelos!',
@@ -505,7 +505,7 @@ module.exports = {
                 },
                 {
                     time: 173,
-                    verse: [
+                    lyric: [
                         'Son,',
                         {
                             anchor: 'seventy years',
@@ -518,15 +518,15 @@ module.exports = {
                 },
                 {
                     time: 177,
-                    verse: 'to finally rest those creaking bones!'
+                    lyric: 'to finally rest those creaking bones!'
                 },
                 {
                     time: 179,
-                    verse: 'Life\'s like this quilt: patchy, then it fills…'
+                    lyric: 'Life\'s like this quilt: patchy, then it fills…'
                 },
                 {
                     time: 183,
-                    verse: [
+                    lyric: [
                         // TODO: Related to Cremated reference
                         'In time with needle done, you\'ll write this',
                         {
@@ -545,13 +545,13 @@ module.exports = {
                 },
                 {
                     time: 185,
-                    verse: 'Then to Willy, in the cover could say sorry for the world!'
+                    lyric: 'Then to Willy, in the cover could say sorry for the world!'
                 }
             ],
             [
                 {
                     time: 191,
-                    verse: [
+                    lyric: [
                         {
                             italic: 'Bobtail'
                         },
@@ -562,7 +562,7 @@ module.exports = {
                 },
                 {
                     time: 197,
-                    verse: [
+                    lyric: [
                         'Oh,',
                         {
                             italic: 'Bobtail'

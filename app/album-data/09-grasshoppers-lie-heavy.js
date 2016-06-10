@@ -19,7 +19,7 @@ module.exports = {
             [
                 {
                     time: 0,
-                    verse: {
+                    lyric: {
                         italic: [
                             {
                                 anchor: 'L.A. to the Bay,',
@@ -43,15 +43,15 @@ module.exports = {
             [
                 {
                     time: 10,
-                    verse: 'Uprooted, then en route,'
+                    lyric: 'Uprooted, then en route,'
                 },
                 {
                     time: 12,
-                    verse: 'eighteen threw off the brutes'
+                    lyric: 'eighteen threw off the brutes'
                 },
                 {
                     time: 14,
-                    verse: [
+                    lyric: [
                         'and their',
                         {
                             anchor: 'molls perched on pedestals,',
@@ -63,7 +63,7 @@ module.exports = {
                 },
                 {
                     time: 17,
-                    verse: [
+                    lyric: [
                         'noses in',
                         {
                             anchor: 'penny dreadfuls.',
@@ -76,11 +76,11 @@ module.exports = {
                 },
                 {
                     time: 19,
-                    verse: 'For a cafeteria\'s wage,'
+                    lyric: 'For a cafeteria\'s wage,'
                 },
                 {
                     time: 22,
-                    verse: [
+                    lyric: [
                         'death of',
                         {
                             anchor: 'dull dishroom days',
@@ -92,7 +92,7 @@ module.exports = {
                 },
                 {
                     time: 24,
-                    verse: [
+                    lyric: [
                         'stalled by',
                         {
                             anchor: 'keys left on dumbwaiter trays.',
@@ -106,7 +106,7 @@ module.exports = {
             [
                 {
                     time: 29,
-                    verse: [
+                    lyric: [
                         'Down the steps to',
                         {
                             anchor: 'fetch her lancet pen,',
@@ -118,7 +118,7 @@ module.exports = {
                 },
                 {
                     time: 34,
-                    verse: [
+                    lyric: [
                         'and stunned, by',
                         {
                             anchor: 'reflex you asked.',
@@ -130,7 +130,7 @@ module.exports = {
                 },
                 {
                     time: 38,
-                    verse: [
+                    lyric: [
                         'At first she hedged, but then',
                         {
                             anchor: 'laying qualms to rest:',
@@ -142,7 +142,7 @@ module.exports = {
                 },
                 {
                     time: 43,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Schwa stickers',
                             annotation: {
@@ -156,7 +156,7 @@ module.exports = {
             [
                 {
                     time: 48,
-                    verse: [
+                    lyric: [
                         'First date nosebleed spurs tales of',
                         {
                             anchor: 'bare-knuckle defeats…',
@@ -170,15 +170,15 @@ module.exports = {
             [
                 {
                     time: 58,
-                    verse: 'Snowflakes in time come to see off the year.'
+                    lyric: 'Snowflakes in time come to see off the year.'
                 },
                 {
                     time: 63,
-                    verse: 'You cried for one to sit; it kissed your ear.'
+                    lyric: 'You cried for one to sit; it kissed your ear.'
                 },
                 {
                     time: 67,
-                    verse: [
+                    lyric: [
                         'Her',
                         {
                             anchor: 'show played in mimes,',
@@ -192,19 +192,19 @@ module.exports = {
                 },
                 {
                     time: 72,
-                    verse: 'Then just like the drift, she disappeared…'
+                    lyric: 'Then just like the drift, she disappeared…'
                 }
             ],
             [
                 {
                     time: -1,
-                    verse: {
+                    lyric: {
                         italic: 'With no sister ship slain by his side,'
                     }
                 },
                 {
                     time: -1,
-                    verse: {
+                    lyric: {
                         italic: [
                             'and so off her list,',
                             {
@@ -225,7 +225,7 @@ module.exports = {
                 },
                 {
                     time: 77,
-                    verse: [
+                    lyric: [
                         'Alone his first gig,',
                         {
                             anchor: 'stagefright ignites.',
@@ -237,7 +237,7 @@ module.exports = {
                 },
                 {
                     time: 87,
-                    verse: [
+                    lyric: [
                         'But',
                         {
                             anchor: 'no convert\'s missed,',
@@ -253,11 +253,11 @@ module.exports = {
             [
                 {
                     time: 96,
-                    verse: 'Homeward, mop-sopped to your knees.'
+                    lyric: 'Homeward, mop-sopped to your knees.'
                 },
                 {
                     time: 98,
-                    verse: [
+                    lyric: [
                         'Tonight, just',
                         {
                             anchor: 'sour grapes, bitter sweets',
@@ -269,15 +269,15 @@ module.exports = {
                 },
                 {
                     time: 101,
-                    verse: 'left to brave February\'s brutal gust;'
+                    lyric: 'left to brave February\'s brutal gust;'
                 },
                 {
                     time: 104,
-                    verse: 'chimneys weep sooty dust.'
+                    lyric: 'chimneys weep sooty dust.'
                 },
                 {
                     time: 106,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Phantom limbs',
                             annotation: {
@@ -290,7 +290,7 @@ module.exports = {
                 },
                 {
                     time: 108,
-                    verse: [
+                    lyric: [
                         'them',
                         {
                             anchor: 'tripped on runner\'s high.',
@@ -303,7 +303,7 @@ module.exports = {
                 },
                 {
                     time: 110,
-                    verse: [
+                    lyric: [
                         'Below the',
                         {
                             anchor: 'window of your Walkman',
@@ -319,7 +319,7 @@ module.exports = {
             [
                 {
                     time: 115,
-                    verse: [
+                    lyric: [
                         'Your gate code punched, when a',
                         {
                             anchor: 'looming shadow nears,',
@@ -332,15 +332,15 @@ module.exports = {
                 },
                 {
                     time: 120,
-                    verse: 'as your heartbeats, her steps, race to first.'
+                    lyric: 'as your heartbeats, her steps, race to first.'
                 },
                 {
                     time: 125,
-                    verse: 'And she deftly thrusts through the shield of your sneer:'
+                    lyric: 'And she deftly thrusts through the shield of your sneer:'
                 },
                 {
                     time: 130,
-                    verse: [
+                    lyric: [
                         '"Hey, you know',
                         {
                             anchor: 'you\'re my password?"',
@@ -353,13 +353,13 @@ module.exports = {
                 },
                 {
                     time: 132,
-                    verse: 'I am? "Well, you\'re backward…"'
+                    lyric: 'I am? "Well, you\'re backward…"'
                 }
             ],
             [
                 {
                     time: 135,
-                    verse: [
+                    lyric: [
                         'She',
                         {
                             anchor: 'locks your arm.',
@@ -375,7 +375,7 @@ module.exports = {
             [
                 {
                     time: 144,
-                    verse: [
+                    lyric: [
                         'In her',
                         {
                             anchor: 'gingerbread prison,',
@@ -389,11 +389,11 @@ module.exports = {
                 },
                 {
                     time: 149,
-                    verse: 'Though never full, you\'re fed; so you hit the switch.'
+                    lyric: 'Though never full, you\'re fed; so you hit the switch.'
                 },
                 {
                     time: 153,
-                    verse: [
+                    lyric: [
                         'On your bed\'s rumpled linens, a',
                         {
                             anchor: 'lidless Vaseline sits.',
@@ -406,7 +406,7 @@ module.exports = {
                 },
                 {
                     time: 158,
-                    verse: [
+                    lyric: [
                         '"Shall I leave you," she says,',
                         {
                             anchor: '"here to Philip Dick?"',
@@ -421,7 +421,7 @@ module.exports = {
             [
                 {
                     time: 164,
-                    verse: [
+                    lyric: [
                         'Thoughts sift in the',
                         {
                             anchor: 'waiting room:',
@@ -434,7 +434,7 @@ module.exports = {
                 },
                 {
                     time: 166,
-                    verse: [
+                    lyric: [
                         'Why does she play',
                         {
                             anchor: 'bright to your gloom',
@@ -447,13 +447,13 @@ module.exports = {
                 },
                 {
                     time: 169,
-                    verse: 'past a year on a stalled friendship\'s sails?'
+                    lyric: 'past a year on a stalled friendship\'s sails?'
                 }
             ],
             [
                 {
                     time: 174,
-                    verse: [
+                    lyric: [
                         'On a',
                         {
                             anchor: 'malady',
@@ -467,7 +467,7 @@ module.exports = {
                 },
                 {
                     time: 176,
-                    verse: [
+                    lyric: [
                         'and the',
                         {
                             anchor: 'organ on which it struck,',
@@ -480,13 +480,13 @@ module.exports = {
                 },
                 {
                     time: 178,
-                    verse: 'in the everpresent scent of her trail.'
+                    lyric: 'in the everpresent scent of her trail.'
                 }
             ],
             [
                 {
                     time: 183,
-                    verse: [
+                    lyric: [
                         'Then you wake by a',
                         {
                             anchor: 'bell with a ring.',
@@ -499,7 +499,7 @@ module.exports = {
                 },
                 {
                     time: 185,
-                    verse: [
+                    lyric: [
                         'In her',
                         {
                             anchor: 'white gown,',
@@ -513,7 +513,7 @@ module.exports = {
                 },
                 {
                     time: 187,
-                    verse: [
+                    lyric: [
                         'and you marvel, glimmer of her',
                         {
                             anchor: 'cheek unveiled.',
@@ -528,21 +528,21 @@ module.exports = {
             [
                 {
                     time: 193,
-                    verse: 'She loves you…'
+                    lyric: 'She loves you…'
                 }
             ],
             [
                 {
                     time: 196,
-                    verse: '…and now you\'re left with no defences.'
+                    lyric: '…and now you\'re left with no defences.'
                 },
                 {
                     time: 201,
-                    verse: 'Well, who\'d have guessed this?'
+                    lyric: 'Well, who\'d have guessed this?'
                 },
                 {
                     time: 204,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'You stand unsure.',
                             annotation: {
@@ -555,11 +555,11 @@ module.exports = {
                 },
                 {
                     time: 207,
-                    verse: '"Oh sweetie, you\'re right:'
+                    lyric: '"Oh sweetie, you\'re right:'
                 },
                 {
                     time: 209,
-                    verse: [
+                    lyric: [
                         'you wear your',
                         {
                             anchor: 'hard-on in a sleeve."',
@@ -572,21 +572,21 @@ module.exports = {
                 },
                 {
                     time: 212,
-                    verse: 'So how\'s that compromise?'
+                    lyric: 'So how\'s that compromise?'
                 },
             ],
             [
                 {
                     time: 216,
-                    verse: 'And dude, you love her.'
+                    lyric: 'And dude, you love her.'
                 },
                 {
                     time: 218,
-                    verse: 'When your paws were thrashed sparring with the tide,'
+                    lyric: 'When your paws were thrashed sparring with the tide,'
                 },
                 {
                     time: 221,
-                    verse: [
+                    lyric: [
                         'from your',
                         {
                             anchor: 'Grace Darling\'s beacon',
@@ -607,7 +607,7 @@ module.exports = {
                 },
                 {
                     time: 225,
-                    verse: [
+                    lyric: [
                         'Let',
                         {
                             anchor: 'pure lose to pure…',
@@ -622,7 +622,7 @@ module.exports = {
             [
                 {
                     time: 229,
-                    verse: [
+                    lyric: [
                         'You',
                         {
                             anchor: 'stroke her temples.',
@@ -637,7 +637,7 @@ module.exports = {
                 {
                     time: 233,
                     // TODO: The little death. (orgasm) The Odin theme.
-                    verse: [
+                    lyric: [
                         'and pulls you up',
                         {
                             anchor: 'inside her thighs.',

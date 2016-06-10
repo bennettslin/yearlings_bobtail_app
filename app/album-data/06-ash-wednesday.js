@@ -9,7 +9,7 @@ module.exports = {
             [
                 {
                     time: 0,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'O Catherine! My Catherine!',
                             annotation: {
@@ -26,7 +26,7 @@ module.exports = {
                 },
                 {
                     time: 6,
-                    verse: [
+                    lyric: [
                         'where it commenced: in my',
                         {
                             anchor: 'bookless room,',
@@ -38,7 +38,7 @@ module.exports = {
                 },
                 {
                     time: 10,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Ulysses\' tomb,',
                             annotation: {
@@ -57,7 +57,7 @@ module.exports = {
                 },
                 {
                     time: 16,
-                    verse: [
+                    lyric: [
                         'First we',
                         {
                             anchor: 'laid Tourette\'s,',
@@ -71,7 +71,7 @@ module.exports = {
                 },
                 {
                     time: 18,
-                    verse: [
+                    lyric: [
                         'the',
                         {
                             anchor: 'last day she rose',
@@ -90,17 +90,17 @@ module.exports = {
                 },
                 {
                     time: 23,
-                    verse: 'But saving herself strictly for marriage, or really from me?'
+                    lyric: 'But saving herself strictly for marriage, or really from me?'
                 }
             ],
             [
                 {
                     time: 30,
-                    verse: 'Oh and for Catherine, St. Catherine of God,'
+                    lyric: 'Oh and for Catherine, St. Catherine of God,'
                 },
                 {
                     time: 34,
-                    verse: [
+                    lyric: [
                         'I purge, with a',
                         {
                             anchor: 'dirge she\'d deride,',
@@ -112,17 +112,17 @@ module.exports = {
                 },
                 {
                     time: 38,
-                    verse: 'with sadness, sad for what I am not:'
+                    lyric: 'with sadness, sad for what I am not:'
                 },
                 {
                     time: 42,
-                    verse: 'a soul to share in her eternal life.'
+                    lyric: 'a soul to share in her eternal life.'
                 }
             ],
             [
                 {
                     time: 46,
-                    verse: [
+                    lyric: [
                         'Oh Catherine,',
                         {
                             anchor: 'pressed for an opinion,',
@@ -135,11 +135,11 @@ module.exports = {
                 },
                 {
                     time: 50,
-                    verse: '"My, what wit, man," putting down her Joyce,'
+                    lyric: '"My, what wit, man," putting down her Joyce,'
                 },
                 {
                     time: 54,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'with "Joyce" oblivious',
                             annotation: {
@@ -151,15 +151,15 @@ module.exports = {
                 },
                 {
                     time: 62,
-                    verse: 'Couldn\'t heaven, her heaven,'
+                    lyric: 'Couldn\'t heaven, her heaven,'
                 },
                 {
                     time: 65,
-                    verse: 'brimming over with smart boys, fit just one art boy'
+                    lyric: 'brimming over with smart boys, fit just one art boy'
                 },
                 {
                     time: 69,
-                    verse: [
+                    lyric: [
                         'who tried but failed to win her heart',
                         {
                             anchor: 'poised with brains?',
@@ -173,7 +173,7 @@ module.exports = {
             [
                 {
                     time: 76,
-                    verse: [
+                    lyric: [
                         'And as I pace, stranded here',
                         {
                             anchor: 'outside her Shelta,',
@@ -186,7 +186,7 @@ module.exports = {
                 },
                 {
                     time: 80,
-                    verse: [
+                    lyric: [
                         'in',
                         {
                             anchor: 'famous raincoat',
@@ -205,7 +205,7 @@ module.exports = {
                 },
                 {
                     time: 84,
-                    verse: [
+                    lyric: [
                         'my',
                         {
                             anchor: 'girl in glasses',
@@ -245,7 +245,7 @@ module.exports = {
                 },
                 {
                     time: 8,
-                    verse: [
+                    lyric: [
                         'for I lack the wit to spare a',
                         {
                             anchor: 'safe Algonquin abode.',
@@ -259,7 +259,7 @@ module.exports = {
             [
                 {
                     time: 95,
-                    verse: [
+                    lyric: [
                         'Well yes, I',
                         {
                             anchor: 'faked this "X,"',
@@ -273,7 +273,7 @@ module.exports = {
                 },
                 {
                     time: 99,
-                    verse: [
+                    lyric: [
                         'using some old',
                         {
                             anchor: 'used cigarette.',
@@ -285,11 +285,11 @@ module.exports = {
                 },
                 {
                     time: 104,
-                    verse: '"So you\'d cheat your way into heaven," she might protest.'
+                    lyric: '"So you\'d cheat your way into heaven," she might protest.'
                 },
                 {
                     time: 111,
-                    verse: [
+                    lyric: [
                         'Well no, I know it\'s wrong, but I did',
                         {
                             anchor: 'burn my palms,',
@@ -302,11 +302,11 @@ module.exports = {
                 },
                 {
                     time: 115,
-                    verse: 'I guess that butt was still fresh.'
+                    lyric: 'I guess that butt was still fresh.'
                 },
                 {
                     time: 119,
-                    verse: [
+                    lyric: [
                         {
                             italic: [
                                 'Et',
@@ -325,11 +325,11 @@ module.exports = {
             [
                 {
                     time: 123,
-                    verse: 'On this sad day to mourn'
+                    lyric: 'On this sad day to mourn'
                 },
                 {
                     time: 125,
-                    verse: [
+                    lyric: [
                         'us wretched souls',
                         {
                             anchor: 'cursed to be born,',
@@ -341,15 +341,15 @@ module.exports = {
                 },
                 {
                     time: 128,
-                    verse: 'a spark zips through my head to be'
+                    lyric: 'a spark zips through my head to be'
                 },
                 {
                     time: 130,
-                    verse: 'mistaken for Catholic with some smeared ash;'
+                    lyric: 'mistaken for Catholic with some smeared ash;'
                 },
                 {
                     time: 136,
-                    verse: [
+                    lyric: [
                         'to wear it like a',
                         {
                             anchor: 'tragic mask.',
@@ -363,11 +363,11 @@ module.exports = {
             [
                 {
                     time: 138,
-                    verse: 'On this Ash Wednesday morn,'
+                    lyric: 'On this Ash Wednesday morn,'
                 },
                 {
                     time: 140,
-                    verse: [
+                    lyric: [
                         'in',
                         {
                             anchor: 'spreading mole',
@@ -380,15 +380,15 @@ module.exports = {
                 },
                 {
                     time: 143,
-                    verse: 'upon this head for all to see.'
+                    lyric: 'upon this head for all to see.'
                 },
                 {
                     time: 146,
-                    verse: 'And maybe if Catherine sees, she\'ll ask,'
+                    lyric: 'And maybe if Catherine sees, she\'ll ask,'
                 },
                 {
                     time: 151,
-                    verse: '"So where\'d you attend Mass?"'
+                    lyric: '"So where\'d you attend Mass?"'
                 }
             ]
         ]

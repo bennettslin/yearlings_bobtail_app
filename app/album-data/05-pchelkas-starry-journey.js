@@ -13,7 +13,7 @@ module.exports = {
             [
                 {
                     time: 0,
-                    verse: {
+                    lyric: {
                         emphasis: [
                             'But F., that man is the',
                             {
@@ -35,15 +35,15 @@ module.exports = {
             [
                 {
                     time: 11,
-                    verse: 'Mother, woken from her nap,'
+                    lyric: 'Mother, woken from her nap,'
                 },
                 {
                     time: 13,
-                    verse: 'hears a piercing scream and thunders,'
+                    lyric: 'hears a piercing scream and thunders,'
                 },
                 {
                     time: 15,
-                    verse: [
+                    lyric: [
                         '"Why\'d you',
                         {
                             anchor: 'hit your baby brother,',
@@ -55,17 +55,17 @@ module.exports = {
                 },
                 {
                     time: 17,
-                    verse: 'when he so looks up to you!'
+                    lyric: 'when he so looks up to you!'
                 }
             ],
             [
                 {
                     time: 19,
-                    verse: 'Don\'t you remember days past,'
+                    lyric: 'Don\'t you remember days past,'
                 },
                 {
                     time: 21,
-                    verse: [
+                    lyric: [
                         'when you wanted to',
                         {
                             anchor: 'buy a fortress',
@@ -77,17 +77,17 @@ module.exports = {
                 },
                 {
                     time: 23,
-                    verse: 'but your daddy couldn\'t afford it,'
+                    lyric: 'but your daddy couldn\'t afford it,'
                 },
                 {
                     time: 25,
-                    verse: 'so you brought him into your room?'
+                    lyric: 'so you brought him into your room?'
                 }
             ],
             [
                 {
                     time: 27,
-                    verse: [
+                    lyric: [
                         'You stowed away',
                         {
                             anchor: 'beneath your captain bed.',
@@ -99,7 +99,7 @@ module.exports = {
                 },
                 {
                     time: 30,
-                    verse: [
+                    lyric: [
                         'We',
                         {
                             anchor: 'didn\'t hear a peep',
@@ -114,7 +114,7 @@ module.exports = {
             [
                 {
                     time: 34,
-                    verse: {
+                    lyric: {
                         emphasis: {
                             anchor: 'Poor Sam Peabody!',
                             annotation: {
@@ -127,11 +127,11 @@ module.exports = {
             [
                 {
                     time: 38,
-                    verse: 'Oh brother, when all you know is bleat,'
+                    lyric: 'Oh brother, when all you know is bleat,'
                 },
                 {
                     time: 40,
-                    verse: [
+                    lyric: [
                         'they\'ll catch you by',
                         {
                             anchor: 'your cape',
@@ -144,11 +144,11 @@ module.exports = {
                 },
                 {
                     time: 42,
-                    verse: 'threatening never to release you'
+                    lyric: 'threatening never to release you'
                 },
                 {
                     time: 44,
-                    verse: [
+                    lyric: [
                         'till you',
                         {
                             anchor: 'learn to kick it back.',
@@ -162,7 +162,7 @@ module.exports = {
             [
                 {
                     time: 46,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Feigning sick,',
                             annotation: {
@@ -174,11 +174,11 @@ module.exports = {
                 },
                 {
                     time: 48,
-                    verse: 'these words in a comic to me speaking:'
+                    lyric: 'these words in a comic to me speaking:'
                 },
                 {
                     time: 50,
-                    verse: [
+                    lyric: [
                         '"Are you',
                         {
                             anchor: 'tired of being the weakling?"…',
@@ -190,13 +190,13 @@ module.exports = {
                 },
                 {
                     time: 52,
-                    verse: 'I clipped and mailed the ad.'
+                    lyric: 'I clipped and mailed the ad.'
                 }
             ],
             [
                 {
                     time: 54,
-                    verse: [
+                    lyric: [
                         'Soon',
                         {
                             anchor: 'send-away offers',
@@ -209,11 +209,11 @@ module.exports = {
                 },
                 {
                     time: 57,
-                    verse: 'and then one day one came and made me cry and cry.'
+                    lyric: 'and then one day one came and made me cry and cry.'
                 },
                 {
                     time: 61,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Red pouches unspent',
                             annotation: {
@@ -226,13 +226,13 @@ module.exports = {
                 },
                 {
                     time: 64,
-                    verse: 'while all the weeks I waited, weighing those words in bold text:'
+                    lyric: 'while all the weeks I waited, weighing those words in bold text:'
                 }
             ],
             [
                 {
                     time: 68,
-                    verse: [
+                    lyric: [
                         {
                             anchor: '"Are you a Beyonder',
                             annotation: {
@@ -244,7 +244,7 @@ module.exports = {
                 },
                 {
                     time: 71,
-                    verse: [
+                    lyric: [
                         'Do you often feel like a',
                         {
                             anchor: 'wanderer lost?"',
@@ -256,7 +256,7 @@ module.exports = {
                 },
                 {
                     time: 76,
-                    verse: [
+                    lyric: [
                         'But',
                         {
                             anchor: 'waiting for Goddard,',
@@ -275,7 +275,7 @@ module.exports = {
                 },
                 {
                     time: 79,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Gogo and his Didi,',
                             annotation: {
@@ -301,7 +301,7 @@ module.exports = {
                 },
                 {
                     time: 83,
-                    verse: [
+                    lyric: [
                         'Till',
                         {
                             anchor: 'in hunger they were led',
@@ -321,7 +321,7 @@ module.exports = {
                 },
                 {
                     time: 86,
-                    verse: [
+                    lyric: [
                         'dragged to sled by',
                         {
                             anchor: 'hunter\'s belt',
@@ -336,11 +336,11 @@ module.exports = {
             [
                 {
                     time: 90,
-                    verse: '"Far from home and shaped like common men,'
+                    lyric: '"Far from home and shaped like common men,'
                 },
                 {
                     time: 93,
-                    verse: [
+                    lyric: [
                         'Beyonders bleed the most, their',
                         {
                             anchor: 'roots unknown to them.',
@@ -353,15 +353,15 @@ module.exports = {
                 },
                 {
                     time: 98,
-                    verse: 'We\'ve received your fee, and per the tests,'
+                    lyric: 'We\'ve received your fee, and per the tests,'
                 },
                 {
                     time: 101,
-                    verse: 'you are indeed a seed from that nebular nest.'
+                    lyric: 'you are indeed a seed from that nebular nest.'
                 },
                 {
                     time: 105,
-                    verse: [
+                    lyric: [
                         'Is this',
                         {
                             anchor: 'too much at once?',
@@ -376,11 +376,11 @@ module.exports = {
             [
                 {
                     time: 112,
-                    verse: 'Beyonders pine for a love no mortals give,'
+                    lyric: 'Beyonders pine for a love no mortals give,'
                 },
                 {
                     time: 116,
-                    verse: [
+                    lyric: [
                         'one they\'ll find only once we build the',
                         {
                             anchor: 'mothership.',
@@ -392,11 +392,11 @@ module.exports = {
                 },
                 {
                     time: 119,
-                    verse: 'Your monthly tithe shall fund good tidings soon to come.'
+                    lyric: 'Your monthly tithe shall fund good tidings soon to come.'
                 },
                 {
                     time: 123,
-                    verse: [
+                    lyric: [
                         'But till then, here\'s',
                         {
                             anchor: 'how you\'re to live…"',
@@ -410,7 +410,7 @@ module.exports = {
             [
                 {
                     time: 134,
-                    verse: [
+                    lyric: [
                         'So thus we learned to',
                         {
                             anchor: 'act the dunce',
@@ -422,11 +422,11 @@ module.exports = {
                 },
                 {
                     time: 136,
-                    verse: 'as spies among the carnal fallen,'
+                    lyric: 'as spies among the carnal fallen,'
                 },
                 {
                     time: 138,
-                    verse: [
+                    lyric: [
                         'twin friars',
                         {
                             anchor: 'cast here in pollens',
@@ -438,17 +438,17 @@ module.exports = {
                 },
                 {
                     time: 140,
-                    verse: 'from a star\'s placenta sac.'
+                    lyric: 'from a star\'s placenta sac.'
                 }
             ],
             [
                 {
                     time: 141,
-                    verse: 'Braced for an earth stay unloved,'
+                    lyric: 'Braced for an earth stay unloved,'
                 },
                 {
                     time: 143,
-                    verse: [
+                    lyric: [
                         'twits daily',
                         {
                             anchor: 'murdered for their virtue.',
@@ -460,11 +460,11 @@ module.exports = {
                 },
                 {
                     time: 145,
-                    verse: 'Mirthful, the merciless would hurt you,'
+                    lyric: 'Mirthful, the merciless would hurt you,'
                 },
                 {
                     time: 147,
-                    verse: [
+                    lyric: [
                         'as',
                         {
                             anchor: 'omerta',
@@ -479,7 +479,7 @@ module.exports = {
             [
                 {
                     time: 149,
-                    verse: [
+                    lyric: [
                         'Stung by venomous vipers, our',
                         {
                             anchor: 'muted youths lapsed.',
@@ -491,7 +491,7 @@ module.exports = {
                 },
                 {
                     time: 153,
-                    verse: [
+                    lyric: [
                         'We knew the',
                         {
                             anchor: 'shortest cyphers',
@@ -504,7 +504,7 @@ module.exports = {
                 },
                 {
                     time: 156,
-                    verse: [
+                    lyric: [
                         'But',
                         {
                             anchor: 'every hero has a heel,',
@@ -517,7 +517,7 @@ module.exports = {
                 },
                 {
                     time: 160,
-                    verse: [
+                    lyric: [
                         'The only spies who get to feel love first',
                         {
                             anchor: 'unearth their own plots!',
@@ -531,7 +531,7 @@ module.exports = {
             [
                 {
                     time: 164,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Mushing onward,',
                             annotation: {
@@ -556,7 +556,7 @@ module.exports = {
                 },
                 {
                     time: 167,
-                    verse: [
+                    lyric: [
                         'to',
                         {
                             anchor: 'his slaughter',
@@ -575,7 +575,7 @@ module.exports = {
                 },
                 {
                     time: 171,
-                    verse: [
+                    lyric: [
                         'Choked, he\'s soon a goner,',
                         {
                             anchor: 'no one heard his hollers,',
@@ -587,7 +587,7 @@ module.exports = {
                 },
                 {
                     time: 175,
-                    verse: [
+                    lyric: [
                         'this pack honours only the',
                         {
                             anchor: 'idiot\'s rod.',
@@ -599,7 +599,7 @@ module.exports = {
                 },
                 {
                     time: 178,
-                    verse: [
+                    lyric: [
                         'Next cabins come equipped with',
                         {
                             anchor: 'pentobarbitone syringe,',
@@ -611,13 +611,13 @@ module.exports = {
                 },
                 {
                     time: 182,
-                    verse: 'nothing too rich for glorious cosmonauts!'
+                    lyric: 'nothing too rich for glorious cosmonauts!'
                 }
             ],
             [
                 {
                     time: 186,
-                    verse: [
+                    lyric: [
                         'I\'m',
                         {
                             anchor: 'sorry I bailed,',
@@ -636,7 +636,7 @@ module.exports = {
                 },
                 {
                     time: 189,
-                    verse: [
+                    lyric: [
                         'I couldn\'t ditch my wails, I',
                         {
                             anchor: 'needed the pod.',
@@ -648,7 +648,7 @@ module.exports = {
                 },
                 {
                     time: 193,
-                    verse: [
+                    lyric: [
                         '"Kids say you\'re',
                         {
                             anchor: 'hopped on drugs,',
@@ -661,7 +661,7 @@ module.exports = {
                 },
                 {
                     time: 200,
-                    verse: [
+                    lyric: [
                         'Mushka, per their bargain, I',
                         {
                             anchor: 'can\'t ever return.',

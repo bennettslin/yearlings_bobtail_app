@@ -23,7 +23,7 @@ module.exports = {
             [
                 {
                     time: 4,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'reverends,',
                             annotation: {
@@ -45,7 +45,7 @@ module.exports = {
                 },
                 {
                     time: 7,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Heavin\' some, Ana',
                             annotation: {
@@ -63,7 +63,7 @@ module.exports = {
                 },
                 {
                     time: 11,
-                    verse: [
+                    lyric: [
                         'of',
                         {
                             anchor: 'de exempt,',
@@ -88,7 +88,7 @@ module.exports = {
                 },
                 {
                     time: 19,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Walkyriens:',
                             annotation: {
@@ -112,7 +112,7 @@ module.exports = {
                 },
                 {
                     time: 22,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Quouffs uppraissed,',
                             annotation: {
@@ -136,7 +136,7 @@ module.exports = {
                 },
                 {
                     time: 26,
-                    verse: [
+                    lyric: [
                         'We ride as',
                         {
                             anchor: 'Finnugreec tongue',
@@ -157,7 +157,7 @@ module.exports = {
             [
                 {
                     time: 34,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Makeyars mygrate,',
                             annotation: {
@@ -183,7 +183,7 @@ module.exports = {
             [
                 {
                     time: 41,
-                    verse: [
+                    lyric: [
                         'Then',
                         {
                             anchor: 'down the steppes',
@@ -196,7 +196,7 @@ module.exports = {
                 },
                 {
                     time: 45,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Drinkhis Khan, once Toomujin,',
                             annotation: {
@@ -214,7 +214,7 @@ module.exports = {
                 },
                 {
                     time: 49,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Tomer-layin\' the seed,',
                             annotation: {
@@ -233,7 +233,7 @@ module.exports = {
             [
                 {
                     time: 56,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Indus-trail sewerce,',
                             annotation: {
@@ -250,7 +250,7 @@ module.exports = {
                 },
                 {
                     time: 60,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Forsi ahuro',
                             annotation: {
@@ -288,7 +288,7 @@ module.exports = {
                 },
                 {
                     time: 64,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'To soma up,',
                             annotation: {
@@ -321,7 +321,7 @@ module.exports = {
                 },
                 {
                     time: 70,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Ourevian battles spent,',
                             annotation: {
@@ -338,7 +338,7 @@ module.exports = {
                 },
                 {
                     time: 75,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Are Melee tapirs',
                             annotation: {
@@ -361,7 +361,7 @@ module.exports = {
                 },
                 {
                     time: 79,
-                    verse: [
+                    lyric: [
                         'From the',
                         {
                             anchor: 'Khlmair city Ingcar Wet,',
@@ -382,7 +382,7 @@ module.exports = {
             [
                 {
                     time: 86,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Pour sod, fourfeit tundr\'s',
                             annotation: {
@@ -399,7 +399,7 @@ module.exports = {
                 },
                 {
                     time: 94,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Upridge o\' lawn',
                             annotation: {
@@ -417,7 +417,7 @@ module.exports = {
                 },
                 {
                     time: 101,
-                    verse: [
+                    lyric: [
                         'But',
                         {
                             anchor: 'past a cross Bearing Straight,',
@@ -429,7 +429,7 @@ module.exports = {
                 },
                 {
                     time: 103,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'herows —ourauras left—',
                             annotation: {
@@ -449,15 +449,15 @@ module.exports = {
             [
                 {
                     time: 109,
-                    verse: 'And now without a chart,'
+                    lyric: 'And now without a chart,'
                 },
                 {
                     time: 112,
-                    verse: 'just the winds and the constellations known by heart,'
+                    lyric: 'just the winds and the constellations known by heart,'
                 },
                 {
                     time: 116,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'I\'ll sail this sea,',
                             annotation: {
@@ -477,7 +477,7 @@ module.exports = {
             [
                 {
                     time: 124,
-                    verse: [
+                    lyric: [
                         'The',
                         {
                             anchor: 'mistodawn,',
@@ -496,7 +496,7 @@ module.exports = {
                 },
                 {
                     time: 128,
-                    verse: {
+                    lyric: {
                         anchor: 'sunk in tarpid lies.',
                         annotation: {
                                 description: 'Tar pits occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."'
@@ -505,7 +505,7 @@ module.exports = {
                 },
                 {
                     time: 131,
-                    verse: [
+                    lyric: [
                         'In',
                         {
                             anchor: 'Hollowscene',
@@ -523,7 +523,7 @@ module.exports = {
                 },
                 {
                     time: 135,
-                    verse: [
+                    lyric: [
                         'he sees',
                         {
                             anchor: 'Lowkey and Freyed!',
@@ -535,7 +535,7 @@ module.exports = {
                 },
                 {
                     time: 139,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Noworse and Nunavutter',
                             annotation: {
@@ -554,7 +554,7 @@ module.exports = {
                 },
                 {
                     time: 147,
-                    verse: [
+                    lyric: [
                         'How old are',
                         {
                             anchor: 'these mummeries',
@@ -569,7 +569,7 @@ module.exports = {
             [
                 {
                     time: 154,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Pullar switch,',
                             annotation: {
@@ -588,7 +588,7 @@ module.exports = {
                 },
                 {
                     time: 161,
-                    verse: [
+                    lyric: [
                         'Then pounds',
                         {
                             anchor: 'arrhythmetic heart,',
@@ -600,7 +600,7 @@ module.exports = {
                 },
                 {
                     time: 165,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Enguished buzzereds',
                             annotation: {
@@ -619,7 +619,7 @@ module.exports = {
                 },
                 {
                     time: 169,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'In mouth Deseret,',
                             annotation: {

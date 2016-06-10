@@ -18,7 +18,7 @@ module.exports = {
             [
                 {
                     time: 17,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Didi',
                             annotation: {
@@ -36,21 +36,21 @@ module.exports = {
                 },
                 {
                     time: 22,
-                    verse: 'wondering to himself, who would tie his shoes?'
+                    lyric: 'wondering to himself, who would tie his shoes?'
                 },
                 {
                     time: 28,
-                    verse: 'And he left alone because he'
+                    lyric: 'And he left alone because he'
                 },
                 {
                     time: 34,
-                    verse: 'had to finish up all his orange juice.'
+                    lyric: 'had to finish up all his orange juice.'
                 }
             ],
             [
                 {
                     time: 40,
-                    verse: [
+                    lyric: [
                         'Didi, you\'ve been following, I',
                         {
                             anchor: 'didn\'t want you here.',
@@ -62,13 +62,13 @@ module.exports = {
                 },
                 {
                     time: 46,
-                    verse: 'Didi, couldn\'t you find another sister to be near?'
+                    lyric: 'Didi, couldn\'t you find another sister to be near?'
                 }
             ],
             [
                 {
                     time: 52,
-                    verse: [
+                    lyric: [
                         'Cause I get sick of hearing,',
                         {
                             anchor: '"Zeizei,',
@@ -86,22 +86,22 @@ module.exports = {
                 },
                 {
                     time: 57,
-                    verse: 'And I tire of saying, "My Didi wants to come too."'
+                    lyric: 'And I tire of saying, "My Didi wants to come too."'
                 }
             ],
             [
                 {
                     // TODO: Say more?
                     time: 63,
-                    verse: 'Didi made an "accident" in class,'
+                    lyric: 'Didi made an "accident" in class,'
                 },
                 {
                     time: 68,
-                    verse: 'so the nurse sent him home, snickered the recess crowd.'
+                    lyric: 'so the nurse sent him home, snickered the recess crowd.'
                 },
                 {
                     time: 74,
-                    verse: [
+                    lyric: [
                         'They saw him crying beside a',
                         {
                             anchor: 'Safeway paper bag,',
@@ -113,22 +113,22 @@ module.exports = {
                 },
                 {
                     time: 80,
-                    verse: 'decked in overalls from the lost and found.'
+                    lyric: 'decked in overalls from the lost and found.'
                 }
             ],
             [
                 {
                     // TODO: Say more?
                     time: 85,
-                    verse: 'Didi, you\'ve been in the bath all this time.'
+                    lyric: 'Didi, you\'ve been in the bath all this time.'
                 },
                 {
                     time: 91,
-                    verse: 'Didi, come out, you can\'t soak there all night.'
+                    lyric: 'Didi, come out, you can\'t soak there all night.'
                 },
                 {
                     time: 97,
-                    verse: {
+                    lyric: {
                         emphasis: 'Don\'t little raisin fingers need to dry?'
                     }
                 }
@@ -136,15 +136,15 @@ module.exports = {
             [
                 {
                     time: 100,
-                    verse: 'Didi, someday you will be a hero'
+                    lyric: 'Didi, someday you will be a hero'
                 },
                 {
                     time: 103,
-                    verse: 'in the movies, fighting those'
+                    lyric: 'in the movies, fighting those'
                 },
                 {
                     time: 106,
-                    verse: [
+                    lyric: [
                         'crooked thieves with your',
                         {
                             anchor: 'sheriff\'s badge and gun…',
@@ -156,11 +156,11 @@ module.exports = {
                 },
                 {
                     time: 112,
-                    verse: 'Didi, one day you will be a picture'
+                    lyric: 'Didi, one day you will be a picture'
                 },
                 {
                     time: 115,
-                    verse: [
+                    lyric: [
                         'taped to all the',
                         {
                             anchor: 'girls\' mirrors.',
@@ -172,41 +172,41 @@ module.exports = {
                 },
                 {
                     time: 117,
-                    verse: 'They\'ll say, who now could have ever figured'
+                    lyric: 'They\'ll say, who now could have ever figured'
                 },
                 {
                     time: 120,
-                    verse: 'you\'d finally become someone?'
+                    lyric: 'you\'d finally become someone?'
                 }
             ],
             [
                 {
                     time: 129,
-                    verse: 'Didi dear, I\'m sorry that I yelled at you that way.'
+                    lyric: 'Didi dear, I\'m sorry that I yelled at you that way.'
                 },
                 {
                     time: 135,
-                    verse: 'Didi dear, I know today just wasn\'t your day.'
+                    lyric: 'Didi dear, I know today just wasn\'t your day.'
                 }
             ],
             [
                 {
                     time: 141,
-                    verse: 'And now I think all I want is my Didi well by tomorrow,'
+                    lyric: 'And now I think all I want is my Didi well by tomorrow,'
                 },
                 {
                     time: 146,
-                    verse: 'and there are things I hope my Didi will never know.'
+                    lyric: 'and there are things I hope my Didi will never know.'
                 }
             ],
             [
                 {
                     time: 152,
-                    verse: 'Yes, and now I think all I want is my Didi well by tomorrow,'
+                    lyric: 'Yes, and now I think all I want is my Didi well by tomorrow,'
                 },
                 {
                     time: 158,
-                    verse: [
+                    lyric: [
                         'and there are things I hope Didi will',
                         {
                             anchor: 'never have to know.',

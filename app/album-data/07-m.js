@@ -12,7 +12,7 @@ module.exports = {
             [
                 {
                     time: 33,
-                    verse: {
+                    lyric: {
                         anchor: 'Maravijaya…',
                         annotation: {
                             description: [
@@ -28,7 +28,7 @@ module.exports = {
             [
                 {
                     time: 35,
-                    verse: [
+                    lyric: [
                         'I was a lad bent on',
                         {
                             anchor: 'learning the talents',
@@ -40,19 +40,19 @@ module.exports = {
                 },
                 {
                     time: 40,
-                    verse: 'that all clever girls need to see.'
+                    lyric: 'that all clever girls need to see.'
                 },
                 {
                     time: 44,
-                    verse: 'Bit my sadness with patience,'
+                    lyric: 'Bit my sadness with patience,'
                 },
                 {
                     time: 47,
-                    verse: 'with practise each day, then'
+                    lyric: 'with practise each day, then'
                 },
                 {
                     time: 50,
-                    verse: [
+                    lyric: [
                         'in',
                         {
                             anchor: 'five years',
@@ -67,7 +67,7 @@ module.exports = {
             [
                 {
                     time: 54,
-                    verse: [
+                    lyric: [
                         'This',
                         {
                             anchor: 'moron marooned,',
@@ -86,11 +86,11 @@ module.exports = {
                 },
                 {
                     time: 59,
-                    verse: 'to mould me into a mystery mensch.'
+                    lyric: 'to mould me into a mystery mensch.'
                 },
                 {
                     time: 64,
-                    verse: {
+                    lyric: {
                         anchor: 'No minutiae left unmastered,',
                         annotation: {
                             description: 'Along with reading up on general subjects like history and religion, I would also carry around an almanac to memorise trivial facts whenever I had a free minute.'
@@ -99,7 +99,7 @@ module.exports = {
                 },
                 {
                     time: 67,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'music cred',
                             annotation: {
@@ -117,7 +117,7 @@ module.exports = {
                 },
                 {
                     time: 69,
-                    verse: [
+                    lyric: [
                         'Once I',
                         {
                             anchor: 'metamorphose, certain',
@@ -132,11 +132,11 @@ module.exports = {
             [
                 {
                     time: 75,
-                    verse: 'Year five, and now the one who dug me up'
+                    lyric: 'Year five, and now the one who dug me up'
                 },
                 {
                     time: 77,
-                    verse: [
+                    lyric: [
                         'spent her',
                         {
                             anchor: 'wishes on a friend,',
@@ -148,15 +148,15 @@ module.exports = {
                 },
                 {
                     time: 80,
-                    verse: 'while forever I\'ll hold in peace'
+                    lyric: 'while forever I\'ll hold in peace'
                 },
                 {
                     time: 82,
-                    verse: 'these words unsaid.'
+                    lyric: 'these words unsaid.'
                 },
                 {
                     time: 84,
-                    verse: [
+                    lyric: [
                         'Hopes wrapped in',
                         {
                             anchor: 'marinaded confections,',
@@ -169,7 +169,7 @@ module.exports = {
                 },
                 {
                     time: 87,
-                    verse: [
+                    lyric: [
                         'before',
                         {
                             anchor: 'tomorrow never sent.',
@@ -181,7 +181,7 @@ module.exports = {
                 },
                 {
                     time: 89,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Signed off "love me"',
                             annotation: {
@@ -193,13 +193,13 @@ module.exports = {
                 },
                 {
                     time: 91,
-                    verse: 'my life and letters end.'
+                    lyric: 'my life and letters end.'
                 },
             ],
             [
                 {
                     time: 94,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Morphined,',
                             annotation: {
@@ -218,7 +218,7 @@ module.exports = {
                 },
                 {
                     time: 99,
-                    verse: [
+                    lyric: [
                         'to a',
                         {
                             anchor: 'sand castle built by low tide.',
@@ -233,18 +233,18 @@ module.exports = {
                      * 33 perfect age.
                      */
                     time: 103,
-                    verse: 'Far too old to be martyred,'
+                    lyric: 'Far too old to be martyred,'
                 },
                 {
                     time: 106,
-                    verse: 'too young to grow smarter,'
+                    lyric: 'too young to grow smarter,'
                 },
                 {
                     /**
                      * Mara nursed child. Job, tie
                      */
                     time: 109,
-                    verse: [
+                    lyric: [
                         'a',
                         {
                             anchor: 'mariner\'s child',
@@ -259,7 +259,7 @@ module.exports = {
             [
                 {
                     time: 114,
-                    verse: [
+                    lyric: [
                         'Panoramic prints pending my soon-to-be',
                         {
                             anchor: 'Moonie wedding,',
@@ -271,7 +271,7 @@ module.exports = {
                 },
                 {
                     time: 118,
-                    verse: [
+                    lyric: [
                         'fools once expecting their',
                         {
                             anchor: '"Made in America" signs.',
@@ -283,7 +283,7 @@ module.exports = {
                 },
                 {
                     time: 123,
-                    verse: [
+                    lyric: [
                         'In a',
                         {
                             anchor: 'time capsule',
@@ -296,11 +296,11 @@ module.exports = {
                 },
                 {
                     time: 125,
-                    verse: 'with pages of defeated spiels'
+                    lyric: 'with pages of defeated spiels'
                 },
                 {
                     time: 128,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'lies that marionette',
                             annotation: {
@@ -314,15 +314,15 @@ module.exports = {
             [
                 {
                     time: 133,
-                    verse: 'All I know is that whoever finds me'
+                    lyric: 'All I know is that whoever finds me'
                 },
                 {
                     time: 136,
-                    verse: 'keeps me solely for a pet.'
+                    lyric: 'keeps me solely for a pet.'
                 },
                 {
                     time: 138,
-                    verse: [
+                    lyric: [
                         'With her "I do,"',
                         {
                             anchor: 'my life in marriage',
@@ -334,7 +334,7 @@ module.exports = {
                 },
                 {
                     time: 140,
-                    verse: [
+                    lyric: [
                         'is choked down my',
                         {
                             anchor: 'no-hope chest.',
@@ -349,7 +349,7 @@ module.exports = {
                      * TODO: link to urchin in Odin, mention that Mara had a lisp?
                      */
                     time: 143,
-                    verse: [
+                    lyric: [
                         'Her lispy',
                         {
                             anchor: 'kiss unlucky',
@@ -362,7 +362,7 @@ module.exports = {
                 },
                 {
                     time: 146,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'indentures dumbed',
                             annotation: {
@@ -374,7 +374,7 @@ module.exports = {
                 },
                 {
                     time: 148,
-                    verse: [
+                    lyric: [
                         'Whispered "adieu," I',
                         {
                             anchor: 'bade them to fare well,',
@@ -386,13 +386,13 @@ module.exports = {
                 },
                 {
                     time: 150,
-                    verse: 'then turned to hug the void.'
+                    lyric: 'then turned to hug the void.'
                 }
             ],
             [
                 {
                     time: 153,
-                    verse: [
+                    lyric: [
                         'But then I saw the',
                         {
                             anchor: 'world\'s a naked baby,',
@@ -404,15 +404,15 @@ module.exports = {
                 },
                 {
                     time: 156,
-                    verse: 'cradled safely in my lap.'
+                    lyric: 'cradled safely in my lap.'
                 },
                 {
                     time: 158,
-                    verse: 'It dropped a poop, but somehow I knew'
+                    lyric: 'It dropped a poop, but somehow I knew'
                 },
                 {
                     time: 160,
-                    verse: {
+                    lyric: {
                         anchor: 'to have a merry ol\' laugh.',
                         annotation: {
                             description: 'Or else, "to have a Mara you\'ll laugh."'
@@ -421,15 +421,15 @@ module.exports = {
                 },
                 {
                     time: 163,
-                    verse: 'And now I wonder if the answer might be'
+                    lyric: 'And now I wonder if the answer might be'
                 },
                 {
                     time: 166,
-                    verse: 'to know: the rule for a girl'
+                    lyric: 'to know: the rule for a girl'
                 },
                 {
                     time: 168,
-                    verse: [
+                    lyric: [
                         'is that the',
                         {
                             anchor: 'boy who\'s to love her baby',
@@ -441,13 +441,13 @@ module.exports = {
                 },
                 {
                     time: 170,
-                    verse: 'should first love the world.'
+                    lyric: 'should first love the world.'
                 }
             ],
             [
                 {
                     time: 173,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'Moral is',
                             annotation: {
@@ -459,15 +459,15 @@ module.exports = {
                 },
                 {
                     time: 176,
-                    verse: 'nothing comes a pure surprise.'
+                    lyric: 'nothing comes a pure surprise.'
                 },
                 {
                     time: 178,
-                    verse: 'Sometimes if it\'s all to work'
+                    lyric: 'Sometimes if it\'s all to work'
                 },
                 {
                     time: 180,
-                    verse: {
+                    lyric: {
                         anchor: 'friends have to lie.',
                         annotation: {
                             description: 'After middle school, I didn\'t have close friends again until college, so there were plenty of truths about friendship that I was still learning for the first time.'
@@ -476,15 +476,15 @@ module.exports = {
                 },
                 {
                     time: 183,
-                    verse: 'And sometimes situations seem the worst,'
+                    lyric: 'And sometimes situations seem the worst,'
                 },
                 {
                     time: 185,
-                    verse: 'but in a year, they\'re never bad.'
+                    lyric: 'but in a year, they\'re never bad.'
                 },
                 {
                     time: 188,
-                    verse: [
+                    lyric: [
                         'Five more, she\'ll dig up',
                         {
                             anchor: [
@@ -509,7 +509,7 @@ module.exports = {
                 },
                 {
                     time: 190,
-                    verse: '—I\'m not sad!'
+                    lyric: '—I\'m not sad!'
                 }
             ]
         ]

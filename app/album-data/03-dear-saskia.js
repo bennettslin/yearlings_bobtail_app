@@ -9,13 +9,13 @@ module.exports = {
             [
                 {
                     time: 5,
-                    verse: 'Dearest Sasha,'
+                    lyric: 'Dearest Sasha,'
                 }
             ],
             [
                 {
                     time: 7,
-                    verse: [
+                    lyric: [
                         'It\'s nearing autumn here with',
                         {
                             anchor: 'record highs.',
@@ -27,11 +27,11 @@ module.exports = {
                 },
                 {
                     time: 10,
-                    verse: 'Is it searing in Boston? Hope this letter finds'
+                    lyric: 'Is it searing in Boston? Hope this letter finds'
                 },
                 {
                     time: 13,
-                    verse: [
+                    lyric: [
                         'your',
                         {
                             anchor: 'first semester',
@@ -44,7 +44,7 @@ module.exports = {
                 },
                 {
                     time: 18,
-                    verse: [
+                    lyric: [
                         {
                             anchor: 'You\'d love Taiwan,',
                             annotation: {
@@ -56,15 +56,15 @@ module.exports = {
                 },
                 {
                     time: 22,
-                    verse: 'their peaks sealed and shielded by foggy clouds.'
+                    lyric: 'their peaks sealed and shielded by foggy clouds.'
                 },
                 {
                     time: 26,
-                    verse: 'Beneath this ceiling yields the scene a reeling feel'
+                    lyric: 'Beneath this ceiling yields the scene a reeling feel'
                 },
                 {
                     time: 30,
-                    verse: [
+                    lyric: [
                         'of some',
                         {
                             anchor: 'giant\'s house.',
@@ -78,11 +78,11 @@ module.exports = {
             [
                 {
                     time: 33,
-                    verse: 'So… before I left, you said'
+                    lyric: 'So… before I left, you said'
                 },
                 {
                     time: 37,
-                    verse: [
+                    lyric: [
                         'I should',
                         {
                             anchor: 'keep your kid name,',
@@ -95,7 +95,7 @@ module.exports = {
                 },
                 {
                     time: 41,
-                    verse: [
+                    lyric: [
                         'But then in your embrace, I felt you',
                         {
                             anchor: 'prepped to shed…',
@@ -109,7 +109,7 @@ module.exports = {
             [
                 {
                     time: 48,
-                    verse: [
+                    lyric: [
                         'And I\'d reflect inside withering',
                         {
                             anchor: 'amber eyes',
@@ -121,7 +121,7 @@ module.exports = {
                 },
                 {
                     time: 52,
-                    verse: [
+                    lyric: [
                         {
                             anchor: '—your pupil\'s pupal fly,',
                             annotation: {
@@ -133,7 +133,7 @@ module.exports = {
                 },
                 {
                     time: 56,
-                    verse: [
+                    lyric: [
                         'with you raving over how',
                         {
                             anchor: 'he\'s getting you',
@@ -145,7 +145,7 @@ module.exports = {
                 },
                 {
                     time: 64,
-                    verse: [
+                    lyric: [
                         'staying kosher. Though, you know,',
                         {
                             anchor: 'I would have too…',
@@ -159,7 +159,7 @@ module.exports = {
             [
                 {
                     time: 73,
-                    verse: [
+                    lyric: [
                         'And I sniffled daily when you',
                         {
                             anchor: 'skipped a grade.',
@@ -171,11 +171,11 @@ module.exports = {
                 },
                 {
                     time: 77,
-                    verse: 'One bus seat up you moved, letting rippled braids'
+                    lyric: 'One bus seat up you moved, letting rippled braids'
                 },
                 {
                     time: 80,
-                    verse: [
+                    lyric: [
                         'caress, sun-streaked and loose, a',
                         {
                             anchor: 'wet-cheeked papoose',
@@ -187,21 +187,21 @@ module.exports = {
                 },
                 {
                     time: 84,
-                    verse: 'sadly weaned from you…'
+                    lyric: 'sadly weaned from you…'
                 }
             ],
             [
                 {
                     time: 88,
-                    verse: 'Whom I knew I\'d lose the day,'
+                    lyric: 'Whom I knew I\'d lose the day,'
                 },
                 {
                     time: 92,
-                    verse: 'you flew enraged and shooed them from their game;'
+                    lyric: 'you flew enraged and shooed them from their game;'
                 },
                 {
                     time: 95,
-                    verse: [
+                    lyric: [
                         'untied this',
                         {
                             anchor: '"tetherboy,"',
@@ -214,7 +214,7 @@ module.exports = {
                 },
                 {
                     time: 103,
-                    verse: [
+                    lyric: [
                         'Oh but Sasha, if',
                         {
                             anchor: 'anarchy reigns,',
@@ -226,7 +226,7 @@ module.exports = {
                 },
                 {
                     time: 107,
-                    verse: [
+                    lyric: [
                         'then no one lives when',
                         {
                             anchor: 'narcing to the aides,',
@@ -238,17 +238,17 @@ module.exports = {
                 },
                 {
                     time: 110,
-                    verse: 'who shrug when thus annoyed, yawning, "Boys will beat boys…"'
+                    lyric: 'who shrug when thus annoyed, yawning, "Boys will beat boys…"'
                 }
             ],
             [
                 {
                     time: 118,
-                    verse: 'Well Sasha… okay, you saw the cuts.'
+                    lyric: 'Well Sasha… okay, you saw the cuts.'
                 },
                 {
                     time: 122,
-                    verse: [
+                    lyric: [
                         'But though my',
                         {
                             anchor: 'jaw was stuck,',
@@ -268,11 +268,11 @@ module.exports = {
                 },
                 {
                     time: 126,
-                    verse: 'there\'s been plenty days I\'ve really been through worse.'
+                    lyric: 'there\'s been plenty days I\'ve really been through worse.'
                 },
                 {
                     time: 134,
-                    verse: [
+                    lyric: [
                         'Anyway, I\'m feeling healed. Still,',
                         {
                             anchor: 'hugging hurts…',
@@ -286,11 +286,11 @@ module.exports = {
             [
                 {
                     time: 143,
-                    verse: 'And Sasha, I know you\'ll have them all,'
+                    lyric: 'And Sasha, I know you\'ll have them all,'
                 },
                 {
                     time: 147,
-                    verse: [
+                    lyric: [
                         'while if I last the fall',
                         {
                             anchor: 'playing possum',
@@ -302,7 +302,7 @@ module.exports = {
                 },
                 {
                     time: 151,
-                    verse: [
+                    lyric: [
                         'is a toss-up. But where some',
                         {
                             anchor: 'haemophile',
@@ -314,15 +314,15 @@ module.exports = {
                 },
                 {
                     time: 154,
-                    verse: 'might bleed the Nile to nausea,'
+                    lyric: 'might bleed the Nile to nausea,'
                 },
                 {
                     time: 158,
-                    verse: 'I can wash up, and hope the bastards croak,'
+                    lyric: 'I can wash up, and hope the bastards croak,'
                 },
                 {
                     time: 162,
-                    verse: [
+                    lyric: [
                         'on',
                         {
                             anchor: 'rat turds choked.',
