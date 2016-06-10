@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ANCHOR_CODES = ['narrative', 'music', 'pun', 'cross', 'reference', 'external'];
+const ANCHOR_CODES = ['narrative', 'music', 'pun', 'portal', 'reference', 'external'];
 
 module.exports = {
     /**

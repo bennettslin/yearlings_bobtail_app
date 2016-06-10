@@ -24,7 +24,10 @@ module.exports = {
                             {
                                 anchor: 'L.A. to the Bay,',
                                 annotation: {
-                                    description: 'After high school, I hightailed it out of Los Angeles to attend college in the Bay Area.'
+                                    description: 'After high school, I hightailed it out of Los Angeles to attend college in the Bay Area.',
+                                    codes: {
+                                        portal: true
+                                    }
                                 }
                             },
                             {
@@ -356,7 +359,17 @@ module.exports = {
             [
                 {
                     time: 135,
-                    verse: 'She locks your arm. Key turned, returned to your guard…'
+                    verse: [
+                        'She',
+                        {
+                            anchor: 'locks your arm.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'Key turned, returned to your guard…'
+                    ]
                 }
             ],
             [
@@ -380,7 +393,16 @@ module.exports = {
                 },
                 {
                     time: 153,
-                    verse: 'On your bed\'s rumpled linens, a lidless Vaseline sits.'
+                    verse: [
+                        'On your bed\'s rumpled linens, a',
+                        {
+                            anchor: 'lidless Vaseline sits.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 158,
@@ -399,11 +421,29 @@ module.exports = {
             [
                 {
                     time: 164,
-                    verse: 'Thoughts sift in the waiting room:'
+                    verse: [
+                        'Thoughts sift in the',
+                        {
+                            anchor: 'waiting room:',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 166,
-                    verse: 'Why does she play bright to your gloom'
+                    verse: [
+                        'Why does she play',
+                        {
+                            anchor: 'bright to your gloom',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 169,
@@ -413,11 +453,30 @@ module.exports = {
             [
                 {
                     time: 174,
-                    verse: 'On a malady your thoughts are stuck,'
+                    verse: [
+                        'On a',
+                        {
+                            anchor: 'malady',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'your thoughts are stuck,'
+                    ]
                 },
                 {
                     time: 176,
-                    verse: 'and the organ on which it struck,'
+                    verse: [
+                        'and the',
+                        {
+                            anchor: 'organ on which it struck,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 178,
@@ -427,15 +486,43 @@ module.exports = {
             [
                 {
                     time: 183,
-                    verse: 'Then you wake by a bell with a ring.'
+                    verse: [
+                        'Then you wake by a',
+                        {
+                            anchor: 'bell with a ring.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 185,
-                    verse: 'In her white gown, crept up she beams;'
+                    verse: [
+                        'In her',
+                        {
+                            anchor: 'white gown,',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'crept up she beams;'
+                    ]
                 },
                 {
                     time: 187,
-                    verse: 'and you marvel, glimmer of her cheek unveiled.'
+                    verse: [
+                        'and you marvel, glimmer of her',
+                        {
+                            anchor: 'cheek unveiled.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 }
             ],
             [
@@ -455,7 +542,16 @@ module.exports = {
                 },
                 {
                     time: 204,
-                    verse: 'You stand unsure. She lures with a tease,'
+                    verse: [
+                        {
+                            anchor: 'You stand unsure.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'She lures with a tease,'
+                    ]
                 },
                 {
                     time: 207,
@@ -463,7 +559,16 @@ module.exports = {
                 },
                 {
                     time: 209,
-                    verse: 'you wear your hard-on in a sleeve."'
+                    verse: [
+                        'you wear your',
+                        {
+                            anchor: 'hard-on in a sleeve."',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 212,
@@ -490,23 +595,58 @@ module.exports = {
                               todo: true
                             }
                         },
-                        'light fell an oar.'
+                        'light',
+                        {
+                            anchor: 'fell an oar.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
                     ]
                 },
                 {
                     time: 225,
-                    verse: 'Let pure lose to pure…'
+                    verse: [
+                        'Let',
+                        {
+                            anchor: 'pure lose to pure…',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 }
             ],
             [
                 {
                     time: 229,
-                    verse: 'You stroke her temples. She gushes as she guides,'
+                    verse: [
+                        'You',
+                        {
+                            anchor: 'stroke her temples.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        },
+                        'She gushes as she guides,'
+                    ]
                 },
                 {
                     time: 233,
                     // TODO: The little death. (orgasm) The Odin theme.
-                    verse: 'and pulls you up inside her thighs.'
+                    verse: [
+                        'and pulls you up',
+                        {
+                            anchor: 'inside her thighs.',
+                            annotation: {
+                                description: '',
+                                todo: true
+                            }
+                        }
+                    ]
                 }
             ]
         ]
