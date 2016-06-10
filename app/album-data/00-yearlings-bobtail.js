@@ -54,6 +54,11 @@ module.exports = {
             neededHours: 1
         },
         {
+            taskName: 'create portals',
+            workedHours: 0,
+            neededHours: 6
+        },
+        {
             taskName: 'create code popups',
             workedHours: 0,
             neededHours: 2,

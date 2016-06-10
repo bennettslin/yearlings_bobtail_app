@@ -4,22 +4,24 @@ import CodeUtility from '../utilities/code-utility.jsx';
 import FormatUtility from '../utilities/format-utility.jsx';
 
 const defaultProps = {
-    annotationData: {}
+    title: '',
+    description: '',
+    codes: []
 }
 
 class AnnotationSection extends React.Component {
 
     render() {
-        const annotationData = this.props.annotationData;
+        const props = this.props;
 
         return (
             <div ref="annotation"
                 className="annotation-section">
                 <div className="code-block">
-                    {CodeUtility.getDotsBlock(annotationData.codes)}
+                    {CodeUtility.getDotsBlock(props.codes)}
                 </div>
-                <h2>{FormatHelper.getStrippedHeader(annotationData.title)}</h2>
-                {FormatUtility.getFormattedSpan(annotationData.description)}
+                <h2>{FormatHelper.getStrippedHeader(props.title)}</h2>
+                {FormatUtility.getFormattedSpan(props.description)}
             </div>
         );
     }

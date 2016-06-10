@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import App from './components/dev/app.jsx';
 import YearlingsBobtail from './album-data/00-yearlings-bobtail.js';
 
+// Restructure raw data to be usable by app.
 DataHelper.prepareAlbumObject(YearlingsBobtail);
 
 ReactDOM.render(<App {...YearlingsBobtail} />, document.getElementById('app'));

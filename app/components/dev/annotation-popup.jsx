@@ -11,8 +11,12 @@ class AnnotationPopup extends React.Component {
     render() {
         const annotationData = this.props.annotationData,
             annotationContentElement = annotationData ?
-                <AnnotationSection ref="annotationSection"
-                    annotationData={annotationData} /> : null;
+                <AnnotationSection
+                    ref="annotationSection"
+                    title={annotationData.title}
+                    description={annotationData.description}
+                    codes={annotationData.codes}
+                /> : null;
 
         return AnimationUtility.getTransitionGroupWrappedElement(annotationContentElement, "annotation-animation");
     }
