@@ -45,17 +45,17 @@ module.exports = {
         // Add annotation index to lyrics. 1-based index.
         lyricElement.annotationIndex = annotations.length + 1;
 
-        // Add anchor text to annotation object.
-        lyricElement.annotation.anchor = lyricElement.anchor;
+        // Add anchor text to annotation object for annotation title.
+        lyricElement.annotation.title = lyricElement.anchor;
 
         // TODO: For dev purposes.
         lyricElement.todo = lyricElement.annotation.todo;
 
-        // Add annotation object to annotations array.
-        annotations.push(lyricElement.annotation);
-
         // Both lyrics and annotation will keep reference to colour codes.
         lyricElement.codes = lyricElement.annotation.codes;
+
+        // Add annotation object to annotations array.
+        annotations.push(lyricElement.annotation);
 
         // Lyrics no longer needs reference to annotation.
         delete lyricElement.annotation;
