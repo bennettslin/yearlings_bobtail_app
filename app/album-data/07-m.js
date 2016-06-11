@@ -14,6 +14,7 @@ module.exports = {
                     time: 33,
                     lyric: {
                         anchor: 'Maravijaya…',
+                        properNoun: true,
                         annotation: {
                             description: [
                                 {
@@ -263,6 +264,7 @@ module.exports = {
                         'Panoramic prints pending my soon-to-be',
                         {
                             anchor: 'Moonie wedding,',
+                            properNoun: true,
                             annotation: {
                                 description: 'The Unification Church led by Sun Myung Moon is widely seen as a cult due to its means of proselytism. It is perhaps most well-known for the mass weddings in which thousands of its congregants, often referred to as Moonies, are paired into couples and married en masse. That I could resort to such measures to avoid the long, hard slog of finding a mate was an enticing thought, even if also just a facetious one.'
                             }
@@ -275,6 +277,7 @@ module.exports = {
                         'fools once expecting their',
                         {
                             anchor: '"Made in America" signs.',
+                            properNoun: true,
                             annotation: {
                                 description: 'The pairings in these mass weddings are often international by design. Were I to participate in one, I might very well be matched with a foreigner seeking a green card and hoping to raise a family in America. Also, "expecting their maiden Mara cosigns."'
                             }

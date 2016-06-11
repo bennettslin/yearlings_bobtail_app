@@ -42,6 +42,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Ulysses\' tomb,',
+                            properNoun: true,
                             annotation: {
                                 description: [
                                     'A reference to the classic "Who\'s buried in Grant\'s tomb" riddle, of course, but also to James Joyce\'s masterpiece novel. It was Catherine\'s admiration for Joyce that later motivated me to create "the',
@@ -313,6 +314,7 @@ module.exports = {
                                 'Et',
                                 {
                                     anchor: 'Catherine vaut bien une messe…',
+                                    properNoun: true,
                                     annotation: {
                                         description: 'Henry IV was born a Protestant but converted to Catholicism to gain the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that could get Catherine to stay.',
                                         reference: 'https://en.wikipedia.org/wiki/Henry_IV_of_France'

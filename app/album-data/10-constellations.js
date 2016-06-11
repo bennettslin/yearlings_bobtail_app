@@ -80,6 +80,7 @@ module.exports = {
                         'the',
                         {
                             anchor: 'Viking den…',
+                            properNoun: true,
                             annotation: {
                                 description: 'The Vikings were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Also, my friends, having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as Vicodin. The night will prove them wrong.'
                             }
@@ -91,6 +92,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Walkyriens,',
+                            properNoun: true,
                             annotation: {
                                 description: 'Backtrack to earlier that night. We buy the Robitussin from a Walgreens pharmacy. Also, the Valkyries in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.'
                             }
@@ -98,6 +100,7 @@ module.exports = {
                         'to',
                         {
                             anchor: 'Walhall o\'',
+                            properNoun: true,
                             annotation: {
                                 description: 'The Valkyries would bring the dead heroes to Valhalla, a majestic hall ruled by the god Odin. Also, the Walgreens aisles are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… So, "Wal-halls," if you will.'
                             }
@@ -140,6 +143,7 @@ module.exports = {
                         'We ride as',
                         {
                             anchor: 'Finnugreec tongue',
+                            properNoun: true,
                             annotation: {
                                 description: 'The Finnish language belongs in the Finno-Ugric family. Also, the licorice taste of Robitussin, which lingers in our mouths, is reminiscent of the spice fenugreek.',
                                 reference: 'https://en.wikipedia.org/wiki/Finno-Ugric_languages'
@@ -147,6 +151,7 @@ module.exports = {
                         },
                         {
                             anchor: 'Lapps are highmen.',
+                            properNoun: true,
                             annotation: {
                                 description: 'The Lapps are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally high, as the Robitussin "laps our hymen," since my friends are trying it for the first time.'
                             }
@@ -160,6 +165,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Makeyars mygrate,',
+                            properNoun: true,
                             annotation: {
                                 description: 'Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.'
                             }
@@ -199,6 +205,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Drinkhis Khan, once Toomujin,',
+                            properNoun: true,
                             annotation: {
                                 description: 'Genghis Khan, who was born Temujin, founded the Mongol Empire.'
                             }
@@ -217,12 +224,14 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Tomer-layin\' the seed,',
+                            properNoun: true,
                             annotation: {
                                 description: '"Tamerlane the seed." Tamerlane, a descendant of Genghis Khan, continued the Turko-Mongol expansion into Central Asia. Also, as Tomer jokingly drops crumbs as if to leave a trail, I observe that it\'s like he\'s planting seeds that will sprout into nations.'
                             }
                         },
                         {
                             anchor: 'Howie led the feat of avatars…',
+                            properNoun: true,
                             annotation: {
                                 description: 'Howie is walking as if his feet are made of lead. Also, "how he led the feat of avatars." The Mughals, descendants of Tamerlane, conquered the Hindu populations of the Indian subcontinent. In Hinduism, an avatar is a deity\'s earthbound incarnation, and some avatars are speculated to be historical figures whose exploits predate written tradition.'
                             }
@@ -236,6 +245,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Indus-trail sewerce,',
+                            properNoun: true,
                             annotation: {
                                 description: 'As we wind through "industrial sewers" pretending to be Mughal invaders, I explain to my friends the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."'
                             }
@@ -253,6 +263,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Forsi ahuro',
+                            properNoun: true,
                             annotation: {
                                 description: [
                                     'In Farsi, the Iranian language,',
@@ -270,6 +281,7 @@ module.exports = {
                         'or',
                         {
                             anchor: 'Sensegreat devas\'dayshone?',
+                            properNoun: true,
                             annotation: {
                                 description: [
                                     'Moreover, in Sanskrit, the ancient Indian language,',
@@ -324,6 +336,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Ourevian battles spent,',
+                            properNoun: true,
                             annotation: {
                                 description: '"Arabian battles spent." With the rise of Islam, the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and the Evian bottles that we brought into the steam tunnels are now empty.'
                             }
@@ -365,6 +378,7 @@ module.exports = {
                         'From the',
                         {
                             anchor: 'Khlmair city Ingcar Wet,',
+                            properNoun: true,
                             annotation: {
                                 description: 'Angkor Wat, or "Temple City," is a 12th-century Hindu temple built by the Khmer Empire in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie\'s dad had bought in bulk.'
                             }
@@ -391,6 +405,7 @@ module.exports = {
                         },
                         {
                             anchor: 'Siburial plains…',
+                            properNoun: true,
                             annotation: {
                                 description: 'The Americas were first settled by northeast Asian populations who gladly forfeited the "tundra\'s Siberian plains," which otherwise would have served as their "burial" grounds.'
                             }
@@ -439,6 +454,7 @@ module.exports = {
                         'to',
                         {
                             anchor: 'Audamn\'s grave.',
+                            properNoun: true,
                             annotation: {
                                 description: 'We reach Adam\'s grave, just as the indigenous Americans, having discovered more bountiful lands, perish their fears of an encroaching autumn.'
                             }
@@ -509,6 +525,7 @@ module.exports = {
                         'In',
                         {
                             anchor: 'Hollowscene',
+                            properNoun: true,
                             annotation: {
                                 description: 'The Holocene is the current geological epoch that began with the first human settlements.'
                             }
@@ -527,6 +544,7 @@ module.exports = {
                         'he sees',
                         {
                             anchor: 'Lowkey and Freyed!',
+                            properNoun: true,
                             annotation: {
                                 description: '"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.'
                             }
@@ -538,6 +556,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Noworse and Nunavutter',
+                            properNoun: true,
                             annotation: {
                                 description: '"Norse and Nunavutter collide." We have now travelled as far as Nunavut, the northernmost territory of Canada inhabited primarily by the Inuit. And yet, with the reappearance of the Norse, we realise that our bounds are not so limitless, as even our imaginations have started to repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so we end the night as we had begun it, "no worse and none the better."'
                             }
@@ -545,6 +564,7 @@ module.exports = {
                         'collide,',
                         {
                             anchor: 'Leif as the Red\'s son',
+                            properNoun: true,
                             annotation: {
                                 description: 'The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."'
                             }
@@ -603,6 +623,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Enguished buzzereds',
+                            properNoun: true,
                             annotation: {
                                 description: 'Howie had opted for the large bottle of Robitussin, thinking that the small one I had recommended wouldn\'t be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he keeps going back to the kitchen to get more water. Meanwhile, the English have now arrived to despoil the New World, with the white ruffs around their necks resembling those of "buzzards."'
                             }
@@ -610,6 +631,7 @@ module.exports = {
                         'come unsated find',
                         {
                             anchor: 'Rumspring',
+                            properNoun: true,
                             annotation: {
                                 description: 'Rumspringa is a period of adolescence during which the Amish are allowed to openly rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. It means "running around" in Pennsylvania Dutch, but I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.'
                             }

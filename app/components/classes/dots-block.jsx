@@ -2,7 +2,12 @@ import React from 'react';
 import DotButton from './dot-button.jsx';
 
 const ANCHOR_CODES = [
-    'narrative', 'music', 'portal', 'pun', 'reference', 'external'
+    'narrative',
+    'music',
+    'portal',
+    'pun',
+    'reference',
+    'external'
 ];
 
 const defaultProps = {

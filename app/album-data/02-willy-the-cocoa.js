@@ -215,6 +215,7 @@ module.exports = {
                         'Prying',
                         {
                             anchor: 'X-ray spec\'d,',
+                            properNoun: true,
                             annotation: {
                                 description: 'Back then, the back pages of a comic book were usually filled with ads for novelty items. As a kid, I once sent away for a pair of "X-ray specs," glasses that purportedly allow one to see through objects. They didn\'t work.'
                             }
@@ -367,6 +368,7 @@ module.exports = {
                         'dripping',
                         {
                             anchor: 'Willy\'s stalkless bulb.',
+                            properNoun: true,
                             annotation: {
                                 description: 'This incident happened to Willy, of course, but the lyrics haven\'t mentioned his name until now, since it easily could have been my brother. A "stalkless bulb" can refer to a brain severed from its spine, as well as to a dormant plant ready to be set in the ground.'
                             }

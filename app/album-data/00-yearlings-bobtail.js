@@ -44,7 +44,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: 'speech bubbles',
+            taskName: 'overviews',
             workedHours: 0,
             neededHours: 3
         },

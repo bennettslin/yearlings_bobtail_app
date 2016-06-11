@@ -1,3 +1,8 @@
+/**
+ * TODO: Allow two em dashes, just like double quotes. (for Constellations "herows auroras left")
+ * Automatically capitalise all that begin with I or I' (Inject in data helper)
+ */
+
 module.exports = {
 
     getStringFromObject(text) {

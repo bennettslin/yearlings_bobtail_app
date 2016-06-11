@@ -13,6 +13,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Mr. Odin',
+                            properNoun: true,
                             annotation: {
                                 description: 'While we were away, our house cat Odin died of old age in the care of a family friend. It\'s likely that his name was originally something in Chinese, which my sister and I later anglicised to the name of the Norse god once we were older.'
                             }
@@ -110,7 +111,7 @@ module.exports = {
                     lyric: [
                         'Then down',
                         {
-                            anchor: 'Stygian stairs,',
+                            anchor: 'stygian stairs,',
                             annotation: {
                                 description: 'In Greek mythology, the river Styx separates the realm of the living from the underworld. At night in my grandmother\'s house, the stairs leading down to the kitchen area felt similarly foreboding.'
                             }
@@ -847,6 +848,7 @@ module.exports = {
                         'while',
                         {
                             anchor: 'Thursday\'s child',
+                            properNoun: true,
                             annotation: {
                                 description: '"Monday\'s Child" is a nursery rhyme that predicts a child\'s fortune based on day of birth. Wednesday is literally "Odin\'s day" in Old English, and I was born on a Thursday. The rhyme promises that "Thursday\'s child has far to go," and indeed, the distance I had left to cover felt dispiritingly vast. Still, I was now one day closer than when the day began…'
                             }

@@ -146,6 +146,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Schwa stickers',
+                            properNoun: true,
                             annotation: {
                                 description: 'Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on posters and utility poles everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
                             }
@@ -591,6 +592,7 @@ module.exports = {
                         'from your',
                         {
                             anchor: 'Grace Darling\'s beacon',
+                            properNoun: true,
                             annotation: {
                                 description: '',
                               todo: true

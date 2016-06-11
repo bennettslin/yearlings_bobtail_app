@@ -75,6 +75,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Dutch courage',
+                            properNoun: true,
                             annotation: {
                                 description: 'Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative. Dutch courage refers to misplaced confidence gained from alcohol. Having an older friend who faithfully plied me with cheap twelve-packs, I would down a can or two before heading out on a date.'
                             }

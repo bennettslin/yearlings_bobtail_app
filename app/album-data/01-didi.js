@@ -21,6 +21,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Didi',
+                            properNoun: true,
                             annotation: {
                                 description: [
                                     'In Mandarin Chinese,',
@@ -105,6 +106,7 @@ module.exports = {
                         'They saw him crying beside a',
                         {
                             anchor: 'Safeway paper bag,',
+                            properNoun: true,
                             annotation: {
                                 description: 'Since my pants were soiled, the nurse gave me a shopping bag to carry them in. Safeway is a supermarket chain located in the western and central United States.'
                             }

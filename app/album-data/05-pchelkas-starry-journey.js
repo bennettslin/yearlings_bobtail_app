@@ -313,6 +313,7 @@ module.exports = {
                         'into',
                         {
                             anchor: 'Huntsville',
+                            properNoun: true,
                             annotation: {
                                 description: 'Huntsville, Alabama is where the largest NASA center is located.'
                             }
@@ -548,6 +549,7 @@ module.exports = {
                         },
                         {
                             anchor: 'Mushka\'s',
+                            properNoun: true,
                             annotation: {
                                 description: 'Pchelka and Mushka were a pair of dogs who spent a day in orbit aboard Sputnik 6. There was an error upon reentry, however, so to prevent the spacecraft from landing in hostile territory, the Soviets caused it to self-destruct, killing all aboard. In this analogy, my brother is Mushka, which of course makes me Pchelka.'
                             }
@@ -628,6 +630,7 @@ module.exports = {
                         },
                         {
                             anchor: 'Xiao Xiang,',
+                            properNoun: true,
                             annotation: {
                                 description: 'Mushka means "little fly" in Russian, and by coincidence, my brother\'s Mandarin name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee."'
                             }

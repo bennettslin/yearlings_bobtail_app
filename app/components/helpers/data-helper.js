@@ -1,3 +1,9 @@
+/**
+ * TODO V2: If a capitalised anchor was not preceded by a period, then
+ * programmatically add properNoun key to lyricObject, rather than have it
+ * hard-coded the way it is now.
+ */
+
 import FormatHelper from './format-helper.js';
 
 module.exports = {
