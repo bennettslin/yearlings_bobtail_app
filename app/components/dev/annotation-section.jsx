@@ -16,7 +16,7 @@ class AnnotationSection extends React.Component {
 
         return (
             <div ref="annotation"
-                className="annotation-section">
+                className="section annotation-section popup-content-wrapper">
                 <div className="code-block">
                     {CodeUtility.getDotsBlock(props.codes)}
                 </div>

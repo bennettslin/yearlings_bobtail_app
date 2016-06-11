@@ -64,12 +64,12 @@ body {
  * SECTIONS *
  ************/
 
-.section, .annotation-section {
+.section {
     box-sizing: border-box;
     padding: @field-padding;
     margin: @field-padding 0;
 
-    &.section {
+    &:not(.annotation-section) {
         background-color: @section-colour;
         box-shadow: 0 2px 2px 2px @box-shadow-colour;
     }
@@ -140,6 +140,11 @@ body {
             }
         }
     }
+}
+
+.popup-content-wrapper {
+    .animation-mixin;
+    box-shadow: -2px 2px 8px 8px @box-shadow-colour;
 }
 
 .popup-transition-group {

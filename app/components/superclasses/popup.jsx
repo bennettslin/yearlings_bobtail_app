@@ -7,8 +7,6 @@ class Popup extends React.Component {
         const className = this.getClassName() || 'default';
         const animationName = className + '-animation';
 
-        console.error('animationName', animationName);
-
         return AnimationUtility.getTransitionGroupWrappedElement(this.getContentElement(), animationName);
     }
 }
