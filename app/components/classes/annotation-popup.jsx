@@ -3,14 +3,13 @@ import Popup from '../superclasses/popup.jsx';
 import AnnotationSection from './annotation-section.jsx';
 
 const defaultProps = {
-    annotationData: null,
-    className: 'annotation'
+    annotationData: null
 }
 
 class AnnotationPopup extends Popup {
 
     getClassName() {
-        return this.props.className;
+        return 'annotation';
     }
 
     getContentElement() {
