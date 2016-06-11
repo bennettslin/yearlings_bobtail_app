@@ -12,6 +12,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'O Catherine! My Catherine!',
+                            properNoun: true,
                             annotation: {
                                 description: 'Walt Whitman wrote his elegy "O Captain! My Captain!" after hearing of Abraham Lincoln\'s assassination. I don\'t remember why I chose to reference it. I was probably whimpering "Oh Catherine" under my breath a lot right after the breakup.',
                                 codes: {

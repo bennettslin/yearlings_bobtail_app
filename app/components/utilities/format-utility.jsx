@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeBlock from '../classes/code-block.jsx';
+import DotsBlock from '../classes/dots-block.jsx';
 
 module.exports = {
 
@@ -48,10 +48,10 @@ module.exports = {
 
                 return (
                     <span key={nestedIndex + index}
-                        className={'code-block' + todoClass}>
+                        className={'anchor-wrapper' + todoClass}>
                         {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Unfortunately, it doesn't obey noSpace, which we would want if the anchor tag begins with an em-dash. */}
                         {index > 0 ? ' ' : null}
-                        <CodeBlock
+                        <DotsBlock
                             codes={text.codes}
                         />
                         <span className="text-block">

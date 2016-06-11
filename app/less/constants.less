@@ -85,50 +85,45 @@
     }
 }
 
-.code-block-mixin(@dot-diameter: 2em) {
+.dots-block-mixin(@dot-diameter: 2em) {
 
-    .code-block {
-        position: relative;
-        height: @dot-diameter;
+    .dots-block {
+        display: flex;
+        width: auto;
+        height: 100%;
 
-        .dots-block {
-            display: flex;
-            width: auto;
-            height: 100%;
+        .dot {
+            width: @dot-diameter;
+            height: @dot-diameter;
+            border: (@dot-diameter * 0.1) solid black;
+            border-radius: @dot-diameter;
 
-            .dot {
-                width: @dot-diameter;
-                height: @dot-diameter;
-                // border: (@dot-diameter * 0.1) solid @lyrics-field-colour;
-                border-radius: @dot-diameter;
+            &:not(:last-child) {
+                margin-right: @dot-diameter * 0.1;
+            }
 
-                &:not(:last-child) {
-                    margin-right: @dot-diameter * 0.1;
-                }
+            &.narrative {
+                background-color: @narrative-code-colour;
+            }
 
-                &.narrative {
-                    background-color: @narrative-code-colour;
-                }
+            &.music {
+                background-color: @music-code-colour;
+            }
 
-                &.music {
-                    background-color: @music-code-colour;
-                }
+            &.portal {
+                background-color: @portal-code-colour;
+            }
 
-                &.pun {
-                    background-color: @pun-code-colour;
-                }
+            &.pun {
+                background-color: @pun-code-colour;
+            }
 
-                &.portal {
-                    background-color: @portal-code-colour;
-                }
+            &.reference {
+                background-color: @reference-code-colour;
+            }
 
-                &.reference {
-                    background-color: @reference-code-colour;
-                }
-
-                &.external {
-                    background-color: @external-code-colour;
-                }
+            &.external {
+                background-color: @external-code-colour;
             }
         }
     }

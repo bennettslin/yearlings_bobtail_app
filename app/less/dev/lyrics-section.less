@@ -40,8 +40,11 @@
     }
 
     @dot-diameter: 0.9em;
-    .code-block-mixin(@dot-diameter);
-    .code-block {
+    .dots-block-mixin(@dot-diameter);
+
+    .anchor-wrapper {
+        position: relative;
+        height: @dot-diameter;
 
         .dots-block {
             position: absolute;

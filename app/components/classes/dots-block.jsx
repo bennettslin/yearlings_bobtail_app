@@ -1,4 +1,5 @@
 import React from 'react';
+import DotButton from './dot-button.jsx';
 
 const ANCHOR_CODES = [
     'narrative', 'music', 'portal', 'pun', 'reference', 'external'
@@ -8,7 +9,7 @@ const defaultProps = {
     codes: {}
 }
 
-class CodeBlock extends React.Component {
+class DotsBlock extends React.Component {
 
     render() {
         return (
@@ -18,8 +19,10 @@ class CodeBlock extends React.Component {
 
                 }).map((code, index) => {
                     return (
-                        <div key={index} className={'dot ' + code}>
-                        </div>
+                        <DotButton
+                            key={index}
+                            classValue={code}
+                        />
                     );
                 })}
             </span>
@@ -27,5 +30,5 @@ class CodeBlock extends React.Component {
     }
 }
 
-CodeBlock.defaultProps = defaultProps;
-export default CodeBlock;
+DotsBlock.defaultProps = defaultProps;
+export default DotsBlock;

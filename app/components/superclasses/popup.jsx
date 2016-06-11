@@ -4,10 +4,9 @@ import AnimationUtility from '../utilities/animation-utility.jsx';
 class Popup extends React.Component {
 
     render() {
-        const className = this.getClassName() || 'default';
-        const animationName = className + '-animation';
+        const className = this.getClassName() + '-animation';
 
-        return AnimationUtility.getTransitionGroupWrappedElement(this.getContentElement(), animationName);
+        return AnimationUtility.getTransitionGroupWrappedElement(this.getContentElement(), className);
     }
 }
 
