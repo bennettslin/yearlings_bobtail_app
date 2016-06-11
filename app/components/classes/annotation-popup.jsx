@@ -19,9 +19,9 @@ class AnnotationPopup extends Popup {
         return annotationData ?
             <AnnotationSection
                 ref="annotationSection"
+                codes={annotationData.codes}
                 title={annotationData.title}
                 description={annotationData.description}
-                codes={annotationData.codes}
             /> : null;
     }
 }

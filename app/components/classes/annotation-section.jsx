@@ -1,12 +1,12 @@
 import React from 'react';
 import FormatHelper from '../helpers/format-helper.js';
-import CodeUtility from '../utilities/code-utility.jsx';
+import CodeBlock from './code-block.jsx';
 import FormatUtility from '../utilities/format-utility.jsx';
 
 const defaultProps = {
     title: '',
     description: '',
-    codes: []
+    codes: {}
 }
 
 class AnnotationSection extends React.Component {
@@ -18,7 +18,9 @@ class AnnotationSection extends React.Component {
             <div ref="annotation"
                 className="section annotation-section popup-content-wrapper">
                 <div className="code-block">
-                    {CodeUtility.getDotsBlock(props.codes)}
+                    <CodeBlock
+                        codes={props.codes}
+                    />
                 </div>
                 <h2>{FormatHelper.getFormattedAnnotationTitle(props.title)}</h2>
                 {FormatUtility.getFormattedTextElement(false, props.description)}

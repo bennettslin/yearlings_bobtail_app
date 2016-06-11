@@ -99,9 +99,12 @@
             .dot {
                 width: @dot-diameter;
                 height: @dot-diameter;
-                margin-right: @dot-diameter * 0.1;
-                border: (@dot-diameter * 0.1) solid @lyrics-field-colour;
+                // border: (@dot-diameter * 0.1) solid @lyrics-field-colour;
                 border-radius: @dot-diameter;
+
+                &:not(:last-child) {
+                    margin-right: @dot-diameter * 0.1;
+                }
 
                 &.narrative {
                     background-color: @narrative-code-colour;

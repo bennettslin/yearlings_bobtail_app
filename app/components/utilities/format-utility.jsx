@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeUtility from './code-utility.jsx';
+import CodeBlock from '../classes/code-block.jsx';
 
 module.exports = {
 
@@ -50,8 +50,10 @@ module.exports = {
                     <span key={nestedIndex + index}
                         className={'code-block' + todoClass}>
                         {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Unfortunately, it doesn't obey noSpace, which we would want if the anchor tag begins with an em-dash. */}
-                        { index > 0 ? ' ' : null}
-                        {CodeUtility.getDotsBlock(text.codes)}
+                        {index > 0 ? ' ' : null}
+                        <CodeBlock
+                            codes={text.codes}
+                        />
                         <span className="text-block">
                             <a className="anchor-link"
                                 onClick={clickHandler.bind(null, text.annotationIndex)} >

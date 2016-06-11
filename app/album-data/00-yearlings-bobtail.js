@@ -77,7 +77,7 @@ module.exports = {
             subtasks: [
                 {
                     taskName: 'make popup a general utility',
-                    workedHours: 0,
+                    workedHours: 2,
                     neededHours: 2
                 }
             ]

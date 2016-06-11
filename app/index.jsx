@@ -4,7 +4,7 @@ import DataHelper from './components/helpers/data-helper.js'
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './components/dev/app.jsx';
+import App from './components/classes/app.jsx';
 import YearlingsBobtail from './album-data/00-yearlings-bobtail.js';
 
 // Restructure raw data to be usable by app.

@@ -1,16 +1,21 @@
 import React from 'react';
 
-const ANCHOR_CODES = ['narrative', 'music', 'pun', 'portal', 'reference', 'external'];
+const ANCHOR_CODES = [
+    'narrative', 'music', 'portal', 'pun', 'reference', 'external'
+];
 
-module.exports = {
-    /**
-     * Returns a block of coloured dots.
-     */
-    getDotsBlock(codesObject = {}) {
+const defaultProps = {
+    codes: {}
+}
+
+class CodeBlock extends React.Component {
+
+    render() {
         return (
             <span className="dots-block">
                 {ANCHOR_CODES.filter(code => {
-                    return codesObject[code];
+                    return this.props.codes[code];
+
                 }).map((code, index) => {
                     return (
                         <div key={index} className={'dot ' + code}>
@@ -21,3 +26,6 @@ module.exports = {
         );
     }
 }
+
+CodeBlock.defaultProps = defaultProps;
+export default CodeBlock;
