@@ -6,8 +6,7 @@ const defaultProps = {
     title: '',
     description: '',
     codes: {},
-    portalReference: null,
-    portalTitles: null,
+    portalObjects: null,
     handlePortalClick() {}
 }
 
@@ -18,20 +17,25 @@ class AnnotationSection extends React.Component {
         this._onPortalClick = this._onPortalClick.bind(this);
     }
 
-    _onPortalClick() {
-        const props = this.props;
-        props.handlePortalClick(props.portalReference.songIndex, props.portalReference.annotationIndex);
+    _onPortalClick(songIndex, annotationIndex) {
+        this.props.handlePortalClick(songIndex, annotationIndex);
     }
 
-    _getPortalReferenceBlock(portalReference) {
-        const portalTitles = this.props.portalTitles,
-            portalDescription = `${portalTitles.song}: ${portalTitles.annotation}`;
-
+    _getPortalReferenceBlock(portalObjects) {
         return (
             <div className="dev-only">
-                <a onClick={this._onPortalClick}>
-                    {portalDescription}
-                </a>
+                {portalObjects.map((portalObject, index) => {
+                    return (
+                        <a key={index}
+                            className="portal-button"
+                            onClick={this._onPortalClick.bind(null,
+                                    portalObject.songIndex,
+                                    portalObject.annotationIndex)}>
+                            <div className="song-title">{portalObject.songTitle}</div>
+                            <div className="annotation-title">{portalObject.annotationTitle}</div>
+                        </a>
+                    );
+                })}
             </div>
         );
     }
@@ -47,7 +51,7 @@ class AnnotationSection extends React.Component {
                     />
                 <h2>{props.title}</h2>
                 {FormatUtility.getFormattedTextElement(false, props.description)}
-                {props.portalTitles ? this._getPortalReferenceBlock(props.portalTitles) : null}
+                {props.portalObjects ? this._getPortalReferenceBlock(props.portalObjects) : null}
             </div>
         );
     }

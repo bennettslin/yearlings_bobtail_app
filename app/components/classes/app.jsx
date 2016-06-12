@@ -48,8 +48,7 @@ class App extends React.Component {
     }
 
     _handleBodyClick(e) {
-        const annotation = this.refs.annotationPopup &&
-            this.refs.annotationPopup.refs.annotationSection ?
+        const annotation = this.refs.annotationPopup.refs.annotationSection ?
             this.refs.annotationPopup.refs.annotationSection.refs.annotation : null;
 
         /**
@@ -128,28 +127,23 @@ class App extends React.Component {
         this.handleAnnotationSelect(selectedAnnotationIndex, true);
     }
 
-    _getAnnotationPopup(annotationData) {
-        const portalReference = annotationData.portalReference;
-        let portalTitles;
+    _getPortalObjects(annotationData) {
+        const portalReferences = annotationData.portalReferences;
 
-        if (portalReference) {
-            const song = this.props.songs[portalReference.songIndex - 1],
-                annotation = song.annotations[portalReference.annotationIndex - 1];
+        // Portal objects contain portal titles and indices.
+        return portalReferences ? portalReferences.map((portalReference) => {
+            const songIndex = portalReference.songIndex,
+                annotationIndex = portalReference.annotationIndex,
+                song = this.props.songs[songIndex - 1],
+                annotation = song.annotations[annotationIndex - 1];
 
-            portalTitles = {
-                song: song.title,
-                annotation: annotation.title
+            return {
+                songIndex: songIndex,
+                annotationIndex: annotationIndex,
+                songTitle: song.title,
+                annotationTitle: annotation.title
             }
-        }
-
-        return (
-            <AnnotationPopup
-                ref="annotationPopup"
-                annotationData={annotationData}
-                portalTitles={portalTitles}
-                handlePortalClick={this.handlePortalClick}
-            />
-        );
+        }) : null;
     }
 
     render() {
@@ -166,8 +160,10 @@ class App extends React.Component {
             tasks = selectedSongIndex ?
                 selectedSong.tasks :
                 props.tasks,
-            annotationPopup = (selectedSongIndex && state.selectedAnnotationIndex) ?
-                this._getAnnotationPopup(selectedSong.annotations[state.selectedAnnotationIndex - 1]) : null;
+            annotationData = (selectedSongIndex && state.selectedAnnotationIndex) ?
+                selectedSong.annotations[state.selectedAnnotationIndex - 1] : null,
+            portalObjects = annotationData ?
+                this._getPortalObjects(annotationData) : null;
 
         // Includes album tasks and song tasks.
         let allTasks = props.songs.map(song => {
@@ -190,7 +186,12 @@ class App extends React.Component {
                     />
                 </div>
                 <div className="field notes-field">
-                    {annotationPopup}
+                    <AnnotationPopup
+                        ref="annotationPopup"
+                        annotationData={annotationData}
+                        portalObjects={portalObjects}
+                        handlePortalClick={this.handlePortalClick}
+                    />
                     {!selectedSongIndex ?
                         <NotesSection /> : null
                     }

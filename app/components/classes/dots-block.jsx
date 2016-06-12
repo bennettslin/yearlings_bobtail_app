@@ -1,7 +1,7 @@
 import React from 'react';
 import DotButton from './dot-button.jsx';
 
-const ANCHOR_CODES = [
+const DOT_CODES = [
     'narrative',
     'music',
     'portal',
@@ -19,7 +19,7 @@ class DotsBlock extends React.Component {
     render() {
         return (
             <span className="dots-block">
-                {ANCHOR_CODES.filter(code => {
+                {DOT_CODES.filter(code => {
                     return this.props.codes[code];
 
                 }).map((code, index) => {

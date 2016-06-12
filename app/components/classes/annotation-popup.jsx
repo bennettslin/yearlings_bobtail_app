@@ -4,7 +4,7 @@ import AnnotationSection from './annotation-section.jsx';
 
 const defaultProps = {
     annotationData: null,
-    portalTitles: null,
+    portalObjects: null,
     handlePortalClick() {}
 }
 
@@ -23,8 +23,7 @@ class AnnotationPopup extends Popup {
                 codes={annotationData.codes}
                 title={annotationData.title}
                 description={annotationData.description}
-                portalReference={annotationData.portalReference}
-                portalTitles={this.props.portalTitles}
+                portalObjects={this.props.portalObjects}
                 handlePortalClick={this.props.handlePortalClick}
             /> : null;
     }

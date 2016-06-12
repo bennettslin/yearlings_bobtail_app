@@ -44,11 +44,14 @@ module.exports = {
             const references = this._portalReferences[referenceKey];
 
             references.forEach((reference, refIndex) => {
-                const nextRefIndex = (refIndex + 1) % references.length,
-                    song = albumObject.songs[reference.songIndex - 1],
-                    annotation = song.annotations[reference.annotationIndex - 1];
+                // Add references to all portals other than this one.
+                const song = albumObject.songs[reference.songIndex - 1],
+                    annotation = song.annotations[reference.annotationIndex - 1],
+                    portalReferences = references.filter((reference, thisIndex) => {
+                        return refIndex !== thisIndex;
+                    });
 
-                annotation.portalReference = references[nextRefIndex];
+                annotation.portalReferences = portalReferences;
             });
         }
     },
@@ -88,11 +91,13 @@ module.exports = {
         delete lyricObject.properNoun;
 
         /**
-         * Add todo to annotation object for stats helper. Also keep in lyric
-         * object for format utility.
+         * Add todo and codes to annotation.
          */
         if (lyricObject.todo) {
             lyricObject.annotation.todo = lyricObject.todo;
+        }
+        if (lyricObject.codes) {
+            lyricObject.annotation.codes = lyricObject.codes;
         }
 
         this._storePortalReference(lyricObject);

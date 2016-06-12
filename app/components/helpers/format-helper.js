@@ -86,9 +86,9 @@ module.exports = {
          * Note that this only knows how to differentiate between one wrapping
          * character versus two.
          */
-        const wrappingChars = ['"', '—'];
+        const WRAPPING_CHARS = ['"', '—'];
 
-        wrappingChars.forEach(char => {
+        WRAPPING_CHARS.forEach(char => {
             const firstIndex = text.indexOf(char),
                 lastIndex = text.lastIndexOf(char);
 
