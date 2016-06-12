@@ -15,11 +15,11 @@ module.exports = {
                             properNoun: true,
                             annotation: {
                                 description: 'Walt Whitman wrote his elegy "O Captain! My Captain!" after hearing of Abraham Lincoln\'s assassination. I don\'t remember why I chose to reference it. I was probably whimpering "Oh Catherine" under my breath a lot right after the breakup.',
-                                codes: {
-                                    narrative: true,
-                                    pun: true
-                                },
                                 reference: 'https://en.wikipedia.org/wiki/O_Captain!_My_Captain!'
+                            },
+                            codes: {
+                                narrative: true,
+                                pun: true
                             }
                         },
                         'our futile trip is done'

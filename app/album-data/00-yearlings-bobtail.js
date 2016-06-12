@@ -60,7 +60,7 @@ module.exports = {
             subtasks: [
                 {
                     taskName: 'Add proper noun flags.',
-                    workedHours: 0,
+                    workedHours: 1,
                     neededHours: 1
                 }
             ]
@@ -81,11 +81,6 @@ module.exports = {
                     neededHours: 2
                 }
             ]
-        },
-        {
-            taskName: 'setup unit and automation tests',
-            workedHours: 0,
-            neededHours: 15
         },
         {
             taskName: 'non breaking space in lyrics only',

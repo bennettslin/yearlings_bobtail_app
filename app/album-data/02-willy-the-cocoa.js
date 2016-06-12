@@ -316,6 +316,7 @@ module.exports = {
                     lyric: [
                         {
                             anchor: 'Hit this witch with switch,',
+                            portalKey: 'hit_the_switch',
                             annotation: {
                                 description: 'It was widely believed that tricking a changeling into revealing its true nature would force it to return the stolen child. The methods for doing so included hitting it with a switch, a flexible rod designed to inflict punishment.'
                             }

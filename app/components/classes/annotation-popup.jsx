@@ -15,6 +15,10 @@ class AnnotationPopup extends Popup {
     getContentElement() {
         const annotationData = this.props.annotationData;
 
+        if (annotationData && annotationData.portalReference) {
+            console.error('annotationData.portalReference', annotationData.portalReference);
+        }
+
         return annotationData ?
             <AnnotationSection
                 ref="annotationSection"

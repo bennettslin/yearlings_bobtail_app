@@ -26,9 +26,9 @@ module.exports = {
                                 properNoun: true,
                                 annotation: {
                                     description: 'After high school, I hightailed it out of Los Angeles to attend college in the Bay Area.',
-                                    codes: {
-                                        portal: true
-                                    }
+                                },
+                                codes: {
+                                    portal: true
                                 }
                             },
                             {
@@ -284,8 +284,8 @@ module.exports = {
                             anchor: 'Phantom limbs',
                             annotation: {
                                 description: 'A phantom limb is the sensation of an amputated lim',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         },
                         'trip left and right'
                     ]
@@ -298,8 +298,8 @@ module.exports = {
                             anchor: 'tripped on runner\'s high.',
                             annotation: {
                                 description: 'A runner\'s high is a feeling of euphoria experienced through aerobic exercise. I would often need to drink ',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -311,8 +311,8 @@ module.exports = {
                             anchor: 'window of your Walkman',
                             annotation: {
                                 description: 'The Walkman was a portable cassette player.',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         },
                         'you hide.'
                     ]
@@ -327,8 +327,8 @@ module.exports = {
                             anchor: 'looming shadow nears,',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -348,8 +348,8 @@ module.exports = {
                             anchor: 'you\'re my password?"',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -367,8 +367,8 @@ module.exports = {
                             anchor: 'locks your arm.',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         },
                         'Key turned, returned to your guard…'
                     ]
@@ -383,15 +383,25 @@ module.exports = {
                             anchor: 'gingerbread prison,',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         },
                         'here now you submit.'
                     ]
                 },
                 {
                     time: 149,
-                    lyric: 'Though never full, you\'re fed; so you hit the switch.'
+                    lyric: [
+                        'Though never full, you\'re fed; so you',
+                        {
+                            anchor: 'hit the switch.',
+                            portalKey: 'hit_the_switch',
+                            annotation: {
+                                description: '',
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 153,
@@ -401,8 +411,8 @@ module.exports = {
                             anchor: 'lidless Vaseline sits.',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -414,8 +424,8 @@ module.exports = {
                             anchor: '"here to Philip Dick?"',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 }
@@ -429,8 +439,8 @@ module.exports = {
                             anchor: 'waiting room:',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -442,8 +452,8 @@ module.exports = {
                             anchor: 'bright to your gloom',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -461,8 +471,8 @@ module.exports = {
                             anchor: 'malady',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         },
                         'your thoughts are stuck,'
                     ]
@@ -475,8 +485,8 @@ module.exports = {
                             anchor: 'organ on which it struck,',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -494,8 +504,8 @@ module.exports = {
                             anchor: 'bell with a ring.',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -507,8 +517,8 @@ module.exports = {
                             anchor: 'white gown,',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         },
                         'crept up she beams;'
                     ]
@@ -521,8 +531,8 @@ module.exports = {
                             anchor: 'cheek unveiled.',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 }
@@ -549,8 +559,8 @@ module.exports = {
                             anchor: 'You stand unsure.',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         },
                         'She lures with a tease,'
                     ]
@@ -567,8 +577,8 @@ module.exports = {
                             anchor: 'hard-on in a sleeve."',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -595,16 +605,16 @@ module.exports = {
                             properNoun: true,
                             annotation: {
                                 description: '',
-                              todo: true
-                            }
+                            },
+                            todo: true
                         },
                         'light',
                         {
                             anchor: 'fell an oar.',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -616,8 +626,8 @@ module.exports = {
                             anchor: 'pure lose to pure…',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 }
@@ -631,8 +641,8 @@ module.exports = {
                             anchor: 'stroke her temples.',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         },
                         'She gushes as she guides,'
                     ]
@@ -646,8 +656,8 @@ module.exports = {
                             anchor: 'inside her thighs.',
                             annotation: {
                                 description: '',
-                                todo: true
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 }
