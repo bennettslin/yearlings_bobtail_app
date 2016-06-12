@@ -1,6 +1,34 @@
 module.exports = {
 
-    getStringFromObject(text) {
+    /**
+     * Converts text in anchor tag into annotation header.
+     */
+    getFormattedAnnotationTitle(anchor, properNoun) {
+        /**
+         * Get annotation title from anchor text. Convert from object if
+         * necessary, and also uncapitalise if not a proper noun.
+         */
+        let title = anchor;
+
+        // Convert from object if necessary.
+        if (typeof title === 'object') {
+            title = this._getStringFromObject(title);
+        }
+
+        // Uncapitalise if not a proper noun.
+        if (!properNoun) {
+            if (!this._beginsWithPronounI(title)) {
+                title = this._getUncapitalisedText(title);
+            }
+        }
+
+        title = this._getDeletedSpecialCharactersText(title);
+        title = this._getDeletedWrappingCharactersText(title);
+
+        return title;
+    },
+
+    _getStringFromObject(text) {
 
         if (Array.isArray(text)) {
             /**
@@ -10,18 +38,18 @@ module.exports = {
              * future.
              */
             return text.reduce((textString, textObject, index) => {
-                return textString + this.getStringFromObject(textObject);
+                return textString + this._getStringFromObject(textObject);
             }, '');
 
         } else if (typeof text === 'object') {
             if (text.anchor) {
-                return this.getStringFromObject(text.anchor);
+                return this._getStringFromObject(text.anchor);
             } else if (text.emphasis) {
-                return this.getStringFromObject(text.emphasis);
+                return this._getStringFromObject(text.emphasis);
             } else if (text.italic) {
-                return this.getStringFromObject(text.italic);
+                return this._getStringFromObject(text.italic);
             } else if (text.noSpace) {
-                return this.getStringFromObject(text.noSpace);
+                return this._getStringFromObject(text.noSpace);
             } else {
                 return '';
             }
@@ -31,21 +59,11 @@ module.exports = {
         }
     },
 
-    getUncapitalisedText(text) {
+    _getUncapitalisedText(text) {
         return text.charAt(0).toLowerCase() + text.slice(1);
     },
 
-    /**
-     * Converts text in anchor tag into annotation header.
-     */
-    getFormattedAnnotationTitle(text = '') {
-        text = this._getDeletedSpecialCharactersText(text);
-        text = this._getDeletedWrappingCharactersText(text);
-
-        return text;
-    },
-
-    beginsWithPronounI(text) {
+    _beginsWithPronounI(text) {
         return text.indexOf('I ') === 0 || text.indexOf('I\'') === 0;
     },
 

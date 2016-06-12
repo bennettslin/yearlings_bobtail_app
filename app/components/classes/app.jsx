@@ -24,6 +24,7 @@ class App extends React.Component {
         this.handleSongChange = this.handleSongChange.bind(this);
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
+        this.handlePortalClick = this.handlePortalClick.bind(this);
 
         /**
          * Retrieve stored song indices, if any. Song indices start at 1.
@@ -47,7 +48,8 @@ class App extends React.Component {
     }
 
     _handleBodyClick(e) {
-        const annotation = this.refs.annotationPopup.refs.annotationSection ?
+        const annotation = this.refs.annotationPopup &&
+            this.refs.annotationPopup.refs.annotationSection ?
             this.refs.annotationPopup.refs.annotationSection.refs.annotation : null;
 
         /**
@@ -121,11 +123,41 @@ class App extends React.Component {
         }
     }
 
+    handlePortalClick(selectedSongIndex, selectedAnnotationIndex) {
+        this.handleSongChange(selectedSongIndex, 'selected', true);
+        this.handleAnnotationSelect(selectedAnnotationIndex, true);
+    }
+
+    _getAnnotationPopup(annotationData) {
+        const portalReference = annotationData.portalReference;
+        let portalTitles;
+
+        if (portalReference) {
+            const song = this.props.songs[portalReference.songIndex - 1],
+                annotation = song.annotations[portalReference.annotationIndex - 1];
+
+            portalTitles = {
+                song: song.title,
+                annotation: annotation.title
+            }
+        }
+
+        return (
+            <AnnotationPopup
+                ref="annotationPopup"
+                annotationData={annotationData}
+                portalTitles={portalTitles}
+                handlePortalClick={this.handlePortalClick}
+            />
+        );
+    }
+
     render() {
         const props = this.props,
             state = this.state,
             playedSongIndex = state.playedSongIndex,
             selectedSongIndex = state.selectedSongIndex,
+
             selectedSong = selectedSongIndex ?
                 props.songs[selectedSongIndex - 1] : {},
             overviewRichText = (selectedSongIndex && state.selectedOverviewKey) ?
@@ -134,8 +166,8 @@ class App extends React.Component {
             tasks = selectedSongIndex ?
                 selectedSong.tasks :
                 props.tasks,
-            annotationData = (selectedSongIndex && state.selectedAnnotationIndex) ?
-                selectedSong.annotations[state.selectedAnnotationIndex - 1] : null;
+            annotationPopup = (selectedSongIndex && state.selectedAnnotationIndex) ?
+                this._getAnnotationPopup(selectedSong.annotations[state.selectedAnnotationIndex - 1]) : null;
 
         // Includes album tasks and song tasks.
         let allTasks = props.songs.map(song => {
@@ -158,10 +190,7 @@ class App extends React.Component {
                     />
                 </div>
                 <div className="field notes-field">
-                    <AnnotationPopup
-                        ref="annotationPopup"
-                        annotationData={annotationData}
-                    />
+                    {annotationPopup}
                     {!selectedSongIndex ?
                         <NotesSection /> : null
                     }

@@ -19,11 +19,17 @@ module.exports = {
      * Separate annotations.
      */
     prepareAlbumObject(albumObject = {}) {
+        this._prepareAllAnnotations(albumObject);
+        this._populatePortalReferences(albumObject);
 
-        // For data helper, song indices start at 0.
+        this._deleteTemporaryStorage();
+    },
+
+    _prepareAllAnnotations(albumObject) {
         albumObject.songs.forEach((song, songIndex) => {
 
-            this._songIndex = songIndex;
+            // Song indices start at 1.
+            this._songIndex = songIndex + 1;
             this._annotations = [];
 
             this._parseLyricValue(song.lyrics);
@@ -31,10 +37,20 @@ module.exports = {
             // Add annotations to song object.
             song.annotations = this._annotations;
         });
+    },
 
-        this._prepareAllAnchorReferences(albumObject);
+    _populatePortalReferences(albumObject) {
+        for (const referenceKey in this._portalReferences) {
+            const references = this._portalReferences[referenceKey];
 
-        delete this._portalReferences;
+            references.forEach((reference, refIndex) => {
+                const nextRefIndex = (refIndex + 1) % references.length,
+                    song = albumObject.songs[reference.songIndex - 1],
+                    annotation = song.annotations[reference.annotationIndex - 1];
+
+                annotation.portalReference = references[nextRefIndex];
+            });
+        }
     },
 
     /**
@@ -63,27 +79,13 @@ module.exports = {
     },
 
     _prepareAnnotation(lyricObject = {}) {
-        let title = lyricObject.anchor;
 
-        // Add annotation index to lyrics. 0-based index.
+        // Add annotation index to lyrics. 1-based index.
         lyricObject.annotationIndex = this._annotations.length + 1;
 
-        /**
-         * Get annotation title from anchor text. Convert from object if
-         * necessary, and also uncapitalise if not a proper noun.
-         */
-        if (typeof title === 'object') {
-            title = FormatHelper.getStringFromObject(title);
-        }
-        if (!lyricObject.properNoun) {
-            if (!FormatHelper.beginsWithPronounI(title)) {
-                title = FormatHelper.getUncapitalisedText(title);
-            }
-        } else {
-            delete lyricObject.properNoun;
-        }
-
-        lyricObject.annotation.title = title;
+        // Add formatted annotation title.
+        lyricObject.annotation.title = FormatHelper.getFormattedAnnotationTitle(lyricObject.anchor, lyricObject.properNoun);
+        delete lyricObject.properNoun;
 
         /**
          * Add todo to annotation object for stats helper. Also keep in lyric
@@ -120,17 +122,9 @@ module.exports = {
         }
     },
 
-    _prepareAllAnchorReferences(albumObject) {
-        for (const referenceKey in this._portalReferences) {
-            const references = this._portalReferences[referenceKey];
-
-            references.forEach((reference, refIndex) => {
-                const nextRefIndex = (refIndex + 1) % references.length,
-                    song = albumObject.songs[reference.songIndex],
-                    annotation = song.annotations[reference.annotationIndex - 1];
-
-                annotation.portalReference = references[nextRefIndex];
-            });
-        }
-    },
+    _deleteTemporaryStorage() {
+        delete this._songIndex;
+        delete this._annotations;
+        delete this._portalReferences;
+    }
 }

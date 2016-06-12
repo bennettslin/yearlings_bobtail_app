@@ -3,7 +3,9 @@ import Popup from '../superclasses/popup.jsx';
 import AnnotationSection from './annotation-section.jsx';
 
 const defaultProps = {
-    annotationData: null
+    annotationData: null,
+    portalTitles: null,
+    handlePortalClick() {}
 }
 
 class AnnotationPopup extends Popup {
@@ -15,16 +17,15 @@ class AnnotationPopup extends Popup {
     getContentElement() {
         const annotationData = this.props.annotationData;
 
-        if (annotationData && annotationData.portalReference) {
-            console.error('annotationData.portalReference', annotationData.portalReference);
-        }
-
         return annotationData ?
             <AnnotationSection
                 ref="annotationSection"
                 codes={annotationData.codes}
                 title={annotationData.title}
                 description={annotationData.description}
+                portalReference={annotationData.portalReference}
+                portalTitles={this.props.portalTitles}
+                handlePortalClick={this.props.handlePortalClick}
             /> : null;
     }
 }
