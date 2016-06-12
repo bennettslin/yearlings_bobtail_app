@@ -1,8 +1,3 @@
-/**
- * TODO: Allow two em dashes, just like double quotes. (for Constellations "herows auroras left")
- * Automatically capitalise all that begin with I or I' (Inject in data helper)
- */
-
 module.exports = {
 
     getStringFromObject(text) {
@@ -45,22 +40,22 @@ module.exports = {
      */
     getFormattedAnnotationTitle(text = '') {
         text = this._getDeletedSpecialCharactersText(text);
-        text = this._getDeletedLoneDoubleQuoteText(text);
+        text = this._getDeletedWrappingCharactersText(text);
 
         return text;
     },
 
-    _getDeletedSpecialCharactersText(text) {
-        // Eliminate all special characters at beginning...
-        if (this._hasSpecialCharacterAtIndex(text, 0)) {
-            text = this._getDeletedSpecialCharactersText(text.slice(1));
+    beginsWithPronounI(text) {
+        return text.indexOf('I ') === 0 || text.indexOf('I\'') === 0;
+    },
 
-        // ... and at end.
-        } else if (this._hasSpecialCharacterAtIndex(text, text.length - 1)) {
+    _getDeletedSpecialCharactersText(text) {
+        // Eliminate all special characters at end.
+        if (this._hasSpecialCharacterAtIndex(text, text.length - 1)) {
             text = this._getDeletedSpecialCharactersText(text.slice(0, text.length - 1));
 
         // Also eliminate special character right before a double quote.
-        } else if (this._hasDoubleQuoteAtIndex(text, text.length - 1) &&
+        } else if (text.charAt(text.length - 1) === '"' &&
                    this._hasSpecialCharacterAtIndex(text, text.length - 2)) {
             text = this._getDeletedSpecialCharactersText(text.slice(0, text.length - 2) + text.slice(text.length - 1));
         }
@@ -68,35 +63,36 @@ module.exports = {
         return text;
     },
 
-    _getDeletedLoneDoubleQuoteText(text) {
+    _getDeletedWrappingCharactersText(text) {
         /**
-         * Note that this only knows how to differentiate between one double
-         * quote versus two.
+         * Note that this only knows how to differentiate between one wrapping
+         * character versus two.
          */
-        const firstDoubleQuoteIndex = text.indexOf('"'),
-            lastDoubleQuoteIndex = text.lastIndexOf('"');
+        const wrappingChars = ['"', '—'];
 
-        return (firstDoubleQuoteIndex === lastDoubleQuoteIndex) ?
-            text.replace('"', '') : text;
-    },
+        wrappingChars.forEach(char => {
+            const firstIndex = text.indexOf(char),
+                lastIndex = text.lastIndexOf(char);
 
-    _hasDoubleQuoteAtIndex(text, index) {
-        const indexedChar = text.charAt(index);
-        return indexedChar === '"';
+            // Delete if lone wrapping character.
+            if (firstIndex === lastIndex) {
+                text = text.replace(char, '');
+
+            // Delete if entire text is wrapped between wrapping characters.
+            } else if (firstIndex === 0 && lastIndex === text.length - 1) {
+                text = text.slice(1, -1);
+            }
+        });
+
+        return text;
     },
 
     _hasSpecialCharacterAtIndex(text, index) {
         const indexedChar = text.charAt(index);
-        if (index === 0) {
-            return indexedChar === '—';
-
-        } else {
-            return indexedChar === ',' ||
-                indexedChar === '.' ||
-                indexedChar === '?' ||
-                indexedChar === '!' ||
-                indexedChar === '…' ||
-                indexedChar === '—';
-        }
+        return indexedChar === ',' ||
+            indexedChar === '.' ||
+            indexedChar === '?' ||
+            indexedChar === '!' ||
+            indexedChar === '…';
     }
 }

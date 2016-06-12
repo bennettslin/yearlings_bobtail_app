@@ -59,7 +59,9 @@ module.exports = {
             title = FormatHelper.getStringFromObject(title);
         }
         if (!lyricObject.properNoun) {
-            title = FormatHelper.getUncapitalisedText(title);
+            if (!FormatHelper.beginsWithPronounI(title)) {
+                title = FormatHelper.getUncapitalisedText(title);
+            }
         }
         lyricObject.annotation.title = title;
 
