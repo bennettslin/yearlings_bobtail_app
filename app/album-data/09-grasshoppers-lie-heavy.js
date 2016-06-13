@@ -26,9 +26,6 @@ module.exports = {
                                 properNoun: true,
                                 annotation: {
                                     description: 'After high school, I hightailed it out of Los Angeles to attend college in the Bay Area.',
-                                },
-                                codes: {
-                                    portal: true
                                 }
                             },
                             {

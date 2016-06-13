@@ -4,23 +4,6 @@ module.exports = {
         narrative: 'five things that changed my life',
         music: 'personal yb'
     },
-    legendSymbols: [
-        {
-            icon: 'personal',
-            name: '',
-            description: 'description 1'
-        },
-        {
-            icon: 'puns',
-            name: '',
-            description: 'description 2'
-        },
-        {
-            icon: 'references',
-            name: '',
-            description: 'description 3'
-        }
-    ],
     pageStartingIndices: [0, 9],
     songs: [
         require('./01-didi.js'),
@@ -67,7 +50,7 @@ module.exports = {
         },
         {
             taskName: 'create portals',
-            workedHours: 0,
+            workedHours: 6,
             neededHours: 6
         },
         {

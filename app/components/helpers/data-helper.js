@@ -96,9 +96,17 @@ module.exports = {
         if (lyricObject.todo) {
             lyricObject.annotation.todo = lyricObject.todo;
         }
-        if (lyricObject.codes) {
-            lyricObject.annotation.codes = lyricObject.codes;
+
+        // FIXME: Eventually all lyric objects will have code objects.
+        if (!lyricObject.codes) {
+            lyricObject.codes = {};
         }
+
+        // If there is a portal, add to code object.
+        if (lyricObject.portalKey) {
+            lyricObject.codes.portal = true;
+        }
+        lyricObject.annotation.codes = lyricObject.codes;
 
         this._storePortalReference(lyricObject);
 
