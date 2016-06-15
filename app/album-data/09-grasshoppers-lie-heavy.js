@@ -109,7 +109,7 @@ module.exports = {
                         {
                             anchor: 'fetch her lancet pen,',
                             annotation: {
-                                description: 'Being hypoglycemic, Sita regularly checked her blood sugar level before meals by pricking a finger with a lancing device. That day, she forgot to take it with her before bussing her tray, and came to the dishroom to retrieve it.'
+                                description: 'As a diabetic, Sita regularly checked her blood sugar level before meals by pricking a finger with a lancing device. That day, she forgot to take it with her before bussing her tray, and had to come to the dishroom to retrieve it.'
                             }
                         }
                     ]
@@ -182,9 +182,9 @@ module.exports = {
                         {
                             anchor: 'show played in mimes,',
                             annotation: {
-                                description: '',
-                                todo: true
-                            }
+                                description: ''
+                            },
+                            todo: true
                         },
                         'but you pleaded to hear.'
                     ]
@@ -241,9 +241,9 @@ module.exports = {
                         {
                             anchor: 'no convert\'s missed,',
                             annotation: {
-                                description: '',
-                              todo: true
-                            }
+                                description: ''
+                            },
+                            todo: true
                         },
                         'once assured his tithe.'
                     ]
@@ -280,7 +280,7 @@ module.exports = {
                         {
                             anchor: 'Phantom limbs',
                             annotation: {
-                                description: 'A phantom limb is the sensation of an amputated lim',
+                                description: 'A phantom limb is the sensation of an amputated lim'
                             },
                             todo: true
                         },
@@ -294,7 +294,7 @@ module.exports = {
                         {
                             anchor: 'tripped on runner\'s high.',
                             annotation: {
-                                description: 'A runner\'s high is a feeling of euphoria experienced through aerobic exercise. I would often need to drink ',
+                                description: 'A runner\'s high is a feeling of euphoria experienced through aerobic exercise. I would often need to drink '
                             },
                             todo: true
                         }
@@ -307,7 +307,7 @@ module.exports = {
                         {
                             anchor: 'window of your Walkman',
                             annotation: {
-                                description: 'The Walkman was a portable cassette player.',
+                                description: 'The Walkman was a portable cassette player.'
                             },
                             todo: true
                         },
@@ -323,7 +323,7 @@ module.exports = {
                         {
                             anchor: 'looming shadow nears,',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         }
@@ -344,7 +344,7 @@ module.exports = {
                         {
                             anchor: 'you\'re my password?"',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         }
@@ -363,7 +363,7 @@ module.exports = {
                         {
                             anchor: 'locks your arm.',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         },
@@ -379,7 +379,7 @@ module.exports = {
                         {
                             anchor: 'gingerbread prison,',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         },
@@ -394,7 +394,7 @@ module.exports = {
                             anchor: 'hit the switch.',
                             portalKey: 'hit_the_switch',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         }
@@ -407,7 +407,7 @@ module.exports = {
                         {
                             anchor: 'lidless Vaseline sits.',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         }
@@ -420,7 +420,7 @@ module.exports = {
                         {
                             anchor: '"here to Philip Dick?"',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         }
@@ -435,9 +435,8 @@ module.exports = {
                         {
                             anchor: 'waiting room:',
                             annotation: {
-                                description: '',
-                            },
-                            todo: true
+                                description: 'One night, Sita had a severe hypoglycemic episode. I drove her to the hospital and sat in the waiting room while she was being examined. Also, "wedding room." In traditional weddings, the groom\'s entrance begins the ceremony. He then stands and waits for the bride to close the procession.'
+                            }
                         }
                     ]
                 },
@@ -448,9 +447,8 @@ module.exports = {
                         {
                             anchor: 'bright to your gloom',
                             annotation: {
-                                description: '',
-                            },
-                            todo: true
+                                description: 'Or else, "play bride to your groom." While I relied on humour and wit to mask my cynicism, Sita\'s positive outlook was genuinely heartfelt. What I stood to gain from her was obvious; less obvious was what she stood to gain from me.'
+                            }
                         }
                     ]
                 },
@@ -467,9 +465,8 @@ module.exports = {
                         {
                             anchor: 'malady',
                             annotation: {
-                                description: '',
-                            },
-                            todo: true
+                                description: 'Or else, on a "melody," as the wedding procession is typically accompanied by music.'
+                            }
                         },
                         'your thoughts are stuck,'
                     ]
@@ -481,9 +478,8 @@ module.exports = {
                         {
                             anchor: 'organ on which it struck,',
                             annotation: {
-                                description: '',
-                            },
-                            todo: true
+                                description: 'In a chapel, processional music may be performed on an organ. Also, organ failure is one of the dangers of hypoglycemia.'
+                            }
                         }
                     ]
                 },
@@ -500,9 +496,8 @@ module.exports = {
                         {
                             anchor: 'bell with a ring.',
                             annotation: {
-                                description: '',
-                            },
-                            todo: true
+                                description: 'At the hospital, a bell is rung to indicate that a patient has been released from care and is returning to the waiting room. Also, "belle with a ring." The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows.'
+                            }
                         }
                     ]
                 },
@@ -513,9 +508,8 @@ module.exports = {
                         {
                             anchor: 'white gown,',
                             annotation: {
-                                description: '',
-                            },
-                            todo: true
+                                description: 'White gowns are common attire in both wedding ceremonies and hospitals.'
+                            }
                         },
                         'crept up she beams;'
                     ]
@@ -527,9 +521,8 @@ module.exports = {
                         {
                             anchor: 'cheek unveiled.',
                             annotation: {
-                                description: '',
-                            },
-                            todo: true
+                                description: 'It takes some cheek to sneak up on someone who has dozed off. Also, in a traditional wedding, the father of the bride lifts her veil to kiss her on the cheek.'
+                            }
                         }
                     ]
                 }
@@ -555,7 +548,7 @@ module.exports = {
                         {
                             anchor: 'You stand unsure.',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         },
@@ -573,7 +566,7 @@ module.exports = {
                         {
                             anchor: 'hard-on in a sleeve."',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         }
@@ -601,7 +594,7 @@ module.exports = {
                             anchor: 'Grace Darling\'s beacon',
                             properNoun: true,
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         },
@@ -609,7 +602,7 @@ module.exports = {
                         {
                             anchor: 'fell an oar.',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         }
@@ -622,7 +615,7 @@ module.exports = {
                         {
                             anchor: 'pure lose to pure…',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         }
@@ -637,7 +630,7 @@ module.exports = {
                         {
                             anchor: 'stroke her temples.',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         },
@@ -652,7 +645,7 @@ module.exports = {
                         {
                             anchor: 'inside her thighs.',
                             annotation: {
-                                description: '',
+                                description: ''
                             },
                             todo: true
                         }
@@ -664,7 +657,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 25,
+            workedHours: 28,
             neededHours: 40,
             subtasks: [
 
