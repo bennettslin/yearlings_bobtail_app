@@ -521,7 +521,7 @@ module.exports = {
                         {
                             anchor: 'cheek unveiled.',
                             annotation: {
-                                description: 'It takes some cheek to sneak up on someone who has dozed off. Also, in a traditional wedding, the father of the bride lifts her veil to kiss her on the cheek.'
+                                description: 'It took some cheek to sneak up on me as I was dozing off. Also, in a traditional wedding, the father of the bride lifts her veil to kiss her on the cheek.'
                             }
                         }
                     ]
@@ -546,7 +546,7 @@ module.exports = {
                         {
                             anchor: 'You stand unsure.',
                             annotation: {
-                                description: ''
+                                description: 'I had kept my guard up for so long around Sita that it was difficult to let it down. '
                             },
                             todo: true
                         },
@@ -592,6 +592,7 @@ module.exports = {
                             anchor: 'Grace Darling\'s beacon',
                             properNoun: true,
                             annotation: {
+                                // TODO: Elaborate on how she rescued me.
                                 description: 'Grace Darling was a lighthouse keeper\'s daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26.'
                             }
                         },
@@ -611,9 +612,8 @@ module.exports = {
                         {
                             anchor: 'pure lose to pure…',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Sita and I were both virgins. This made it easier to let down my guard, as it reminded me that neither one of us really knew what we were doing.'
+                            }
                         }
                     ]
                 }
