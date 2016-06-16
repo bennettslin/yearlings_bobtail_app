@@ -531,9 +531,7 @@ module.exports = {
                 {
                     time: 193,
                     lyric: 'She loves you…'
-                }
-            ],
-            [
+                },
                 {
                     time: 196,
                     lyric: '…and now you\'re left with no defences.'
@@ -566,9 +564,8 @@ module.exports = {
                         {
                             anchor: 'hard-on in a sleeve."',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'As I put on a condom, Sita feigns to corroborate a past self-assessment of mine that I am upfront to a fault about my feelings. Or, as I had put it, that I "wear my heart on my sleeve."'
+                            }
                         }
                     ]
                 },
@@ -580,31 +577,30 @@ module.exports = {
             [
                 {
                     time: 216,
-                    lyric: 'And dude, you love her.'
+                    lyric: 'And dude, you love her…'
                 },
                 {
                     time: 218,
-                    lyric: 'When your paws were thrashed sparring with the tide,'
+                    lyric: '…when your paws were thrashed sparring with the tide,'
                 },
                 {
                     time: 221,
                     lyric: [
                         'from your',
                         {
+                            // TODO: Reference Odin.
                             anchor: 'Grace Darling\'s beacon',
                             properNoun: true,
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Grace Darling was a lighthouse keeper\'s daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26.'
+                            }
                         },
                         'light',
                         {
                             anchor: 'fell an oar.',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Or "fell Lenore." In Edgar Allan Poe\'s poem "The Raven," the narrator laments the death of his beloved Lenore.'
+                            }
                         }
                     ]
                 },
@@ -630,9 +626,8 @@ module.exports = {
                         {
                             anchor: 'stroke her temples.',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Referring to both her literal temples and her breasts.'
+                            }
                         },
                         'She gushes as she guides,'
                     ]
@@ -645,9 +640,8 @@ module.exports = {
                         {
                             anchor: 'inside her thighs.',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'We had sex.'
+                            }
                         }
                     ]
                 }
