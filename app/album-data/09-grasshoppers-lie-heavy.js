@@ -291,7 +291,7 @@ module.exports = {
                         {
                             anchor: 'tripped on runner\'s high.',
                             annotation: {
-                                description: 'A runner\'s high is a feeling of euphoria experienced through exercise. I often needed a beer or two to muster the energy to walk home after a gruelling shift, so it was hard to feel gracious towards anyone out for a nighttime jog.'
+                                description: 'A runner\'s high is a feeling of euphoria experienced through exercise. I often needed a beer or two to muster the energy to walk home after a gruelling shift, so it was hard to feel gracious towards anyone out for an evening jog.'
                             }
                         }
                     ]
@@ -303,7 +303,7 @@ module.exports = {
                         {
                             anchor: 'window of your Walkman',
                             annotation: {
-                                description: 'The Walkman was a portable cassette player. I would listen to mixtapes on the walk home, seemingly absorbed in my music even as I wished pratfalls upon others, much as a child might duck beneath a window after pulling a prank.'
+                                description: 'The Walkman is a portable cassette player. I would listen to mixtapes on the walk home, seemingly absorbed in my music even as I wished pratfalls upon others, much as a child might duck beneath a window after pulling a prank.'
                             }
                         },
                         'you hide.'
@@ -339,7 +339,7 @@ module.exports = {
                         {
                             anchor: 'you\'re my password?"',
                             annotation: {
-                                description: ''
+                                description: 'Seeing '
                             },
                             todo: true
                         }
