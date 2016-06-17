@@ -182,9 +182,8 @@ module.exports = {
                         {
                             anchor: 'show played in mimes,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'The world of dating was awash in subtle cues and quiet gestures that no one would be expected to recognise, as far as I could tell. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.'
+                            }
                         },
                         'but you pleaded to hear.'
                     ]
@@ -229,7 +228,7 @@ module.exports = {
                         {
                             anchor: 'stagefright ignites.',
                             annotation: {
-                                description: 'Shortly after Sita and I stopped talking, I began to play open mic nights. In time, I figured out just the right amount of alcohol to conquer my stagefright.'
+                                description: 'Shortly after Sita and I stopped talking, I began to play open mic nights. The first few times were a disaster, but I eventually learned to conquer my stagefright with just the right amount of alcohol.'
                             }
                         }
                     ]
@@ -241,9 +240,8 @@ module.exports = {
                         {
                             anchor: 'no convert\'s missed,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'After I grew disillusioned with the mail-order cult, I never heard from them again. Clearly, they had learned to ask for the largest payments upfront in response to this recurring scenario. My failure to win over Sita left me with a similar feeling. Now that I had fulfilled my purpose and was no longer of use, my absence would not be noticed.'
+                            }
                         },
                         'once assured his tithe.'
                     ]
@@ -261,7 +259,7 @@ module.exports = {
                         {
                             anchor: 'sour grapes, bitter sweets',
                             annotation: {
-                                description: 'At the end of each shift, I would scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, I would head to the dining area to find only the dried-out and picked-over scraps that no one else wanted.'
+                                description: 'At the end of each shift, I would scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, I would head to the dining area to pick through the dried-out scraps that no one else wanted.'
                             }
                         }
                     ]
@@ -280,9 +278,8 @@ module.exports = {
                         {
                             anchor: 'Phantom limbs',
                             annotation: {
-                                description: 'A phantom limb is the sensation of an amputated lim'
-                            },
-                            todo: true
+                                description: 'A phantom limb is the sensation that a missing limb is still attached and responsive. After several weeks of giddy hope, the thought of spending my weekends alone again, with no other prospects on the horizon, felt like an amputation.'
+                            }
                         },
                         'trip left and right'
                     ]
@@ -294,9 +291,8 @@ module.exports = {
                         {
                             anchor: 'tripped on runner\'s high.',
                             annotation: {
-                                description: 'A runner\'s high is a feeling of euphoria experienced through aerobic exercise. I would often need to drink '
-                            },
-                            todo: true
+                                description: 'A runner\'s high is a feeling of euphoria experienced through exercise. I often needed a beer or two to muster the energy to walk home after a gruelling shift, so it was hard to feel gracious towards anyone out for a nighttime jog.'
+                            }
                         }
                     ]
                 },
@@ -307,9 +303,8 @@ module.exports = {
                         {
                             anchor: 'window of your Walkman',
                             annotation: {
-                                description: 'The Walkman was a portable cassette player.'
-                            },
-                            todo: true
+                                description: 'The Walkman was a portable cassette player. I would listen to mixtapes on the walk home, seemingly absorbed in my music even as I wished pratfalls upon others, much as a child might duck beneath a window after pulling a prank.'
+                            }
                         },
                         'you hide.'
                     ]
@@ -420,7 +415,7 @@ module.exports = {
                         {
                             anchor: '"here to Philip Dick?"',
                             annotation: {
-                                description: ''
+                                description: 'Or else, "Shall I leave you here to feel up dick?"'
                             },
                             todo: true
                         }
@@ -447,7 +442,7 @@ module.exports = {
                         {
                             anchor: 'bright to your gloom',
                             annotation: {
-                                description: 'Or else, "play bride to your groom." While I relied on humour and wit to mask my cynicism, Sita\'s positive outlook was genuinely heartfelt. What I stood to gain from her was obvious; less obvious was what she stood to gain from me.'
+                                description: 'Or else, "play bride to your groom." While I relied on humour and wit to mask my cynical outlook, Sita\'s optimism was genuinely heartfelt. What I stood to gain from her was obvious; less so was what she stood to gain from me.'
                             }
                         }
                     ]
@@ -546,7 +541,7 @@ module.exports = {
                         {
                             anchor: 'You stand unsure.',
                             annotation: {
-                                description: 'I had kept my guard up for so long around Sita that it was difficult to let it down. '
+                                description: 'I had kept my guard up around Sita for so long that it was difficult to lower it again. I didn\'t want to compromise the relative security I felt by keeping .'
                             },
                             todo: true
                         },
@@ -626,7 +621,7 @@ module.exports = {
                         {
                             anchor: 'stroke her temples.',
                             annotation: {
-                                description: 'Referring to both her literal temples and her breasts.'
+                                description: 'Referring to either her literal temples, or else her figurative ones.'
                             }
                         },
                         'She gushes as she guides,'
@@ -651,7 +646,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 28,
+            workedHours: 31,
             neededHours: 40,
             subtasks: [
 

@@ -191,7 +191,7 @@ module.exports = {
                 },
                 {
                     time: 44,
-                    lyric: 'we couldn\'t imagine your mail order cult,'
+                    lyric: 'we couldn\'t imagine your mail-order cult,'
                 },
                 {
                     time: 47,

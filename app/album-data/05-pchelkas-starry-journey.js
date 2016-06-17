@@ -20,7 +20,7 @@ module.exports = {
                                 anchor: 'worst nuisance on the beach.',
                                 annotation: {
                                     description: [
-                                        'While being in a mail order cult was a painful experience, there is a comic absurdity to it as well, which this line captures beautifully. In a humourous passage from Leonard Cohen\'s otherwise tragic',
+                                        'While being in a mail-order cult was a painful experience, there is a comic absurdity to it as well, which this line captures beautifully. In a humourous passage from Leonard Cohen\'s otherwise tragic',
                                         {
                                             italic: 'Beautiful Losers,'
                                         },
