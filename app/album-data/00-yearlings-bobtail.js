@@ -79,6 +79,11 @@ module.exports = {
             taskName: 'separate out dot categories',
             workedHours: 0,
             neededHours: 8
+        },
+        {
+            taskName: 'make interactable superclass',
+            workedHours: 0,
+            neededHours: 3
         }
     ]
 };

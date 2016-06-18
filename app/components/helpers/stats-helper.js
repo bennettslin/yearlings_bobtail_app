@@ -1,3 +1,5 @@
+import Constants from '../constants/constants.js';
+
 module.exports = {
 
     getCount(richTextObject = {}) {
@@ -29,12 +31,10 @@ module.exports = {
             }, 0);
 
         } else if (typeof richText === 'object') {
-            // There will only ever be one of these keys.
-            const possibleKeys = ['lyric', 'noSpace', 'italic', 'emphasis', 'anchor'];
 
-            return possibleKeys.reduce((wordCount, possibleKey) => {
-                if (richText[possibleKey]) {
-                    return wordCount + this.getTotalWords(richText[possibleKey]);
+            return Constants.textKeys.reduce((wordCount, textKey) => {
+                if (richText[textKey]) {
+                    return wordCount + this.getTotalWords(richText[textKey]);
                 }
 
                 return wordCount;

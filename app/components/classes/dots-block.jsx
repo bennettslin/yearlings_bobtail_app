@@ -1,14 +1,6 @@
 import React from 'react';
 import DotButton from './dot-button.jsx';
-
-const DOT_CODES = [
-    'narrative',
-    'music',
-    'portal',
-    'pun',
-    'reference',
-    'external'
-];
+import Constants from '../constants/constants.js';
 
 const defaultProps = {
     codes: {}
@@ -19,7 +11,7 @@ class DotsBlock extends React.Component {
     render() {
         return (
             <span className="dots-block">
-                {DOT_CODES.filter(code => {
+                {Constants.dotCodes.filter(code => {
                     return this.props.codes[code];
 
                 }).map((code, index) => {

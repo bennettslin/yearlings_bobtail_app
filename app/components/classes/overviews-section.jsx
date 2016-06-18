@@ -1,7 +1,7 @@
 import React from 'react';
+import Constants from '../constants/constants.js';
 import FormatUtility from '../utilities/format-utility.jsx';
 
-const OVERVIEW_NAMES = ['narrative', 'music'];
 const defaultProps = {
     overviewRichText: '',
     selectedOverviewKey: '',
@@ -32,7 +32,7 @@ class OverviewsSection extends React.Component {
         return (
             <div className="section overviews-section">
                 <div className="button-block">
-                    {OVERVIEW_NAMES.map(key => {
+                    {Constants.overviewNames.map(key => {
                         return this._getOverviewSelectButton(key);
                     })}
                 </div>
