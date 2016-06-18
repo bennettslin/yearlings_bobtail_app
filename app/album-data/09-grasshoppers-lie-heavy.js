@@ -7,11 +7,11 @@ module.exports = {
             {
                 italic: 'The Grasshopper Lies Heavy'
             },
-            'is an alternate history novel within Philip Dick\'s',
+            'is an alternate history novel within Philip K. Dick\'s',
             {
                 italic: 'The Man in the High Castle,'
             },
-            'this song by itself offers a different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being in a story within a story, and did so by including internal references in the lyrics to all the other songs on the album. Musically, I tried to channel Simon and Garfunkel in both form and harmony.'
+            'this song in isolation offers a different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being a story within a story, and did so by including lyrical references to all the other songs on the album. Musically, I tried to channel Simon and Garfunkel in both form and harmony.'
         ]
     },
     lyrics: [
@@ -148,7 +148,14 @@ module.exports = {
                                 description: 'Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on posters and utility poles everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
                             }
                         },
-                        'attached to your sci-fi paperback.'
+                        'attached to your',
+                        {
+                            anchor: 'sci-fi paperback.',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
                     ]
                 }
             ],
@@ -182,7 +189,7 @@ module.exports = {
                         {
                             anchor: 'show played in mimes,',
                             annotation: {
-                                description: 'The world of dating was awash in subtle cues and quiet gestures that no one would be expected to recognise, as far as I could tell. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.'
+                                description: 'The world of dating was awash in hidden cues and gestures that no one could be expected to recognise or understand, as far as I knew. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.'
                             }
                         },
                         'but you pleaded to hear.'
@@ -318,9 +325,8 @@ module.exports = {
                         {
                             anchor: 'looming shadow nears,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'I lived along the path between the campus and Sita\'s apartment. By chance, she had been walking half a block behind that evening, debating whether to flag me down. After I turned to open the gate and noticed her presence, there was an awkward few seconds where neither of us was sure what to do next.'
+                            }
                         }
                     ]
                 },
@@ -339,9 +345,8 @@ module.exports = {
                         {
                             anchor: 'you\'re my password?"',
                             annotation: {
-                                description: 'Seeing '
-                            },
-                            todo: true
+                                description: 'Watching as I enter the passcode to unlock my front gate, Sita breaks the ice by mentioning that a topic we had once discussed is now part of a password that she recently created.'
+                            }
                         }
                     ]
                 },
@@ -358,11 +363,16 @@ module.exports = {
                         {
                             anchor: 'locks your arm.',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Shivering from the winter chill, Sita tucks her hand underneath my arm as she invites herself into my apartment. And just like that, I am once again on guard, second-guessing everything I say and do.'
+                            }
                         },
-                        'Key turned, returned to your guard…'
+                        'Key turned,',
+                        {
+                            anchor: 'returned to your guard…',
+                            annotation: {
+                                description: 'I was like an escaped convict who had just been sent back in handcuffs to the penitentiary, where a prison guard directs me into a holding cell.'
+                            }
+                        }
                     ]
                 }
             ],
@@ -374,9 +384,8 @@ module.exports = {
                         {
                             anchor: 'gingerbread prison,',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Like a gingerbread house, it\'s sweet even if not filling, readily escapable, and ultimately of one\'s own making.'
+                            }
                         },
                         'here now you submit.'
                     ]
@@ -384,7 +393,15 @@ module.exports = {
                 {
                     time: 149,
                     lyric: [
-                        'Though never full, you\'re fed; so you',
+                        'Though',
+                        {
+                            anchor: 'never full, you\'re fed;',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'so you',
                         {
                             anchor: 'hit the switch.',
                             portalKey: 'hit_the_switch',
@@ -402,9 +419,8 @@ module.exports = {
                         {
                             anchor: 'lidless Vaseline sits.',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'I kept a jar of Vaseline by my bedside, which made for quick and easy masturbation sessions. The last one was obviously quite recent.'
+                            }
                         }
                     ]
                 },
@@ -415,9 +431,8 @@ module.exports = {
                         {
                             anchor: '"here to Philip Dick?"',
                             annotation: {
-                                description: 'Or else, "Shall I leave you here to feel up dick?"'
-                            },
-                            todo: true
+                                description: 'Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my perfectly constructed bookish persona, while subtly conveying that she is fine with —and maybe even prefers— the flawed, vulnerable person underneath.'
+                            }
                         }
                     ]
                 }
@@ -442,7 +457,7 @@ module.exports = {
                         {
                             anchor: 'bright to your gloom',
                             annotation: {
-                                description: 'Or else, "play bride to your groom." While I relied on humour and wit to mask my cynical outlook, Sita\'s optimism was genuinely heartfelt. What I stood to gain from her was obvious; less so was what she stood to gain from me.'
+                                description: 'Or else, "play bride to your groom." While I relied on humour and wit to mask my cynicism, Sita\'s positive outlook was genuinely heartfelt. What I stood to gain from her was obvious; less so was what she stood to gain from me.'
                             }
                         }
                     ]
@@ -607,7 +622,7 @@ module.exports = {
                         {
                             anchor: 'pure lose to pure…',
                             annotation: {
-                                description: 'Sita and I were both virgins. This made it easier to let down my guard, as it reminded me that neither one of us really knew what we were doing.'
+                                description: 'Sita and I were both virgins. This made it easier to drop my guard, as it reminded me that neither one of us really knew what we were doing.'
                             }
                         }
                     ]
@@ -621,7 +636,7 @@ module.exports = {
                         {
                             anchor: 'stroke her temples.',
                             annotation: {
-                                description: 'Referring to either her literal temples, or else her figurative ones.'
+                                description: 'Referring to either her literal temples or her figurative ones.'
                             }
                         },
                         'She gushes as she guides,'
@@ -646,7 +661,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 31,
+            workedHours: 34,
             neededHours: 40,
             subtasks: [
 

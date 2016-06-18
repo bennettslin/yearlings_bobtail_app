@@ -70,5 +70,15 @@ module.exports = {
             workedHours: 1,
             neededHours: 1
         },
+        {
+            taskName: 'take care of em-dashes',
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: 'separate out dot categories',
+            workedHours: 0,
+            neededHours: 8
+        }
     ]
 };
