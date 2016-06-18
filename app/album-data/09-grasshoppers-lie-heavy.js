@@ -428,7 +428,7 @@ module.exports = {
                         {
                             anchor: '"here to Philip Dick?"',
                             annotation: {
-                                description: 'Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my carefully crafted bookish exterior, while subtly conveying that she is fine with the flawed person underneath.'
+                                description: 'Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my carefully crafted bookish exterior, while subtly conveying that she is fine with the flawed, vulnerable person underneath.'
                             }
                         }
                     ]
@@ -528,7 +528,7 @@ module.exports = {
                         {
                             anchor: 'cheek unveiled.',
                             annotation: {
-                                description: 'It took some cheek to sneak up on me as I was dozing off. Also, in a traditional wedding, the father of the bride lifts her veil to kiss her on the cheek.'
+                                description: 'It takes some cheek to sneak up on someone who\'s dozing off. Also, in a traditional wedding, the father of the bride lifts her veil to kiss her on the cheek.'
                             }
                         }
                     ]
@@ -537,7 +537,12 @@ module.exports = {
             [
                 {
                     time: 193,
-                    lyric: 'She loves you…'
+                    lyric: {
+                        anchor: 'She loves you…',
+                        annotation: {
+                            description: 'It took a long while for Sita and I to grow fully comfortable around each other. During the first year or so of our friendship, we mainly just studied together. Then at some point, those study sessions progressed into cuddling, followed by necking. It all happened so fast towards the end that I was still processing what might have triggered it.'
+                        }
+                    }
                 },
                 {
                     time: 196,
@@ -553,7 +558,8 @@ module.exports = {
                         {
                             anchor: 'You stand unsure.',
                             annotation: {
-                                description: 'I was wary of letting my guard down around Sita, after having kept it up for so long.'
+                                // todo: foreshadow
+                                description: 'The night that we decided to have sex, I was suddenly overcome with a weary unease. As Sita lay naked under the covers, I stood forlornly by the bedside for what seemed like several minutes.'
                             }
                         },
                         'She lures with a tease,'
@@ -570,7 +576,7 @@ module.exports = {
                         {
                             anchor: 'hard-on in a sleeve."',
                             annotation: {
-                                description: 'As I put on a condom, Sita feigns to corroborate a past self-assessment of mine that I am upfront to a fault about my feelings. Or, as I had put it, that I "wear my heart on my sleeve."'
+                                description: 'Seeing my penis tucked in a condom, Sita lightens the mood by feigning to agree with a past self-assessment of mine. I had once judged myself to be too upfront about my feelings, or as I had put it, to "wear my heart on my sleeve."'
                             }
                         }
                     ]
@@ -582,7 +588,7 @@ module.exports = {
                         {
                             anchor: 'how\'s that compromise?',
                             annotation: {
-                                description: 'I had constructed the perfect facade beneath which to tuck away my emotions when I was around Sita, and I was hesitant to compromise it now. I had little faith that my desires wouldn\'t be used against me were I to reveal them once again.'
+                                description: 'I had spent so long constructing a facade behind which to tuck away my emotions, that I was now hesitant to compromise the safety of this position. I just didn\'t want to be vulnerable again, and I had so little faith that my desires wouldn\'t be used against me, were I to reveal them so openly as once before.'
                             }
                         }
                     ]
@@ -626,7 +632,7 @@ module.exports = {
                         {
                             anchor: 'pure lose to pure…',
                             annotation: {
-                                description: 'Sita and I were both virgins, which made it easier to lower my defences, as it was a reminder that neither of us really knew what we were doing.'
+                                description: 'Sita and I were both virgins, which ultimately made it easier to lower my defences, as it was a reminder that neither of us really knew what we were doing.'
                             }
                         }
                     ]
@@ -640,7 +646,7 @@ module.exports = {
                         {
                             anchor: 'stroke her temples.',
                             annotation: {
-                                description: 'Referring to either her literal temples or her figurative ones.'
+                                description: 'Referring to her literal temples, and possibly to her figurative ones as well.'
                             }
                         },
                         'She gushes as she guides,'
@@ -654,7 +660,7 @@ module.exports = {
                         {
                             anchor: 'inside her thighs.',
                             annotation: {
-                                description: 'We had sex.'
+                                description: 'That night, we had sex for the first time.'
                             }
                         }
                     ]
@@ -666,7 +672,7 @@ module.exports = {
         {
             taskName: 'annotations',
             workedHours: 34,
-            neededHours: 40,
+            neededHours: 41,
             subtasks: [
 
             ]
