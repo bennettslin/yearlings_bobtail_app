@@ -66,8 +66,7 @@ module.exports = {
                         {
                             anchor: 'penny dreadfuls.',
                             annotation: {
-                                description: 'In 19th-century England, a new market emerged for sensational fiction published in cheap paperbacks, derided by the highbrow as penny dreadfuls.',
-                                todo: ''
+                                description: 'In 19th-century England, a new market emerged for sensational fiction published in cheap novellas, which the highbrow derided as penny dreadfuls.'
                             }
                         }
                     ]
@@ -95,7 +94,7 @@ module.exports = {
                         {
                             anchor: 'keys left on dumbwaiter trays.',
                             annotation: {
-                                description: 'Students bussed their trays on a vertical conveyor belt, which then transported the dirty dishes to the dishroom one floor below. Occasionally someone would leave their keys on the tray by accident, and would come downstairs to retrieve them. The crew always got a kick when that happened, as it broke up the monotony.'
+                                description: 'Students bussed their trays on a vertical conveyor belt, which then transported the dirty dishes to the dishroom one floor below. Occasionally someone would leave a personal item on the tray by accident, and would then come downstairs to retrieve it. The crew always got a kick when that happened, as it broke up the monotony.'
                             }
                         }
                     ]
@@ -109,7 +108,7 @@ module.exports = {
                         {
                             anchor: 'fetch her lancet pen,',
                             annotation: {
-                                description: 'As a diabetic, Sita regularly checked her blood sugar level before meals by pricking a finger with a lancing device. That day, she forgot to take it with her before bussing her tray, and had to come to the dishroom to retrieve it.'
+                                description: 'As a diabetic, Sita regularly checked her blood sugar level before meals by pricking a finger with a lancing device. That day, she forgot to take it with her before bussing her tray, and came down to the dishroom to retrieve it.'
                             }
                         }
                     ]
@@ -145,16 +144,15 @@ module.exports = {
                             anchor: 'Schwa stickers',
                             properNoun: true,
                             annotation: {
-                                description: 'Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on posters and utility poles everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
+                                description: 'Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on print media everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.'
                             }
                         },
                         'attached to your',
                         {
                             anchor: 'sci-fi paperback.',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'At the time, I was obsessed with Philip K. Dick\'s stories of altered states and dystopian worlds, and never left home without one of his novels under my arm. Sita would soon hear all about it on our first date.'
+                            }
                         }
                     ]
                 }
@@ -370,7 +368,7 @@ module.exports = {
                         {
                             anchor: 'returned to your guard…',
                             annotation: {
-                                description: 'I was like an escaped convict who had just been sent back in handcuffs to the penitentiary, where a prison guard directs me into a holding cell.'
+                                description: 'I was like an escaped convict who had just been handcuffed and sent back to the penitentiary, where a prison guard now directs me into a holding cell.'
                             }
                         }
                     ]
@@ -384,7 +382,7 @@ module.exports = {
                         {
                             anchor: 'gingerbread prison,',
                             annotation: {
-                                description: 'Like a gingerbread house, it\'s sweet even if not filling, readily escapable, and ultimately of one\'s own making.'
+                                description: 'Even if not totally filling, it\'s sweet to taste, readily escapable, and ultimately of one\'s own making.'
                             }
                         },
                         'here now you submit.'
@@ -397,9 +395,8 @@ module.exports = {
                         {
                             anchor: 'never full, you\'re fed;',
                             annotation: {
-                                description: ''
-                            },
-                            todo: true
+                                description: 'Like a tired fugitive relieved to come back to a warm bed and regular meals, I conceded that platonic friendship was better than the cold, bleak alternative.'
+                            }
                         },
                         'so you',
                         {
@@ -431,7 +428,7 @@ module.exports = {
                         {
                             anchor: '"here to Philip Dick?"',
                             annotation: {
-                                description: 'Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my perfectly constructed bookish persona, while subtly conveying that she is fine with —and maybe even prefers— the flawed, vulnerable person underneath.'
+                                description: 'Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my carefully crafted bookish exterior, while subtly conveying that she is fine with the flawed person underneath.'
                             }
                         }
                     ]
@@ -556,9 +553,8 @@ module.exports = {
                         {
                             anchor: 'You stand unsure.',
                             annotation: {
-                                description: 'I had kept my guard up around Sita for so long that it was difficult to lower it again. I didn\'t want to compromise the relative security I felt by keeping .'
-                            },
-                            todo: true
+                                description: 'I was wary of letting my guard down around Sita, after having kept it up for so long.'
+                            }
                         },
                         'She lures with a tease,'
                     ]
@@ -581,7 +577,15 @@ module.exports = {
                 },
                 {
                     time: 212,
-                    lyric: 'So how\'s that compromise?'
+                    lyric: [
+                        'So',
+                        {
+                            anchor: 'how\'s that compromise?',
+                            annotation: {
+                                description: 'I had constructed the perfect facade beneath which to tuck away my emotions when I was around Sita, and I was hesitant to compromise it now. I had little faith that my desires wouldn\'t be used against me were I to reveal them once again.'
+                            }
+                        }
+                    ]
                 },
             ],
             [
@@ -622,7 +626,7 @@ module.exports = {
                         {
                             anchor: 'pure lose to pure…',
                             annotation: {
-                                description: 'Sita and I were both virgins. This made it easier to drop my guard, as it reminded me that neither one of us really knew what we were doing.'
+                                description: 'Sita and I were both virgins, which made it easier to lower my defences, as it was a reminder that neither of us really knew what we were doing.'
                             }
                         }
                     ]

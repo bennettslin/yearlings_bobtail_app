@@ -2,7 +2,7 @@ module.exports = {
     title: 'Garryowen',
     overviews: {
         narrative: 'narrative 1',
-        music: 'personal 1'
+        music: 'talk about counterpoint sounding easier than it is.'
     },
     lyrics: [
         [

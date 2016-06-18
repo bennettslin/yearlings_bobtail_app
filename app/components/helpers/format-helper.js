@@ -112,6 +112,7 @@ module.exports = {
             indexedChar === '?' ||
             indexedChar === '!' ||
             indexedChar === ':' ||
+            indexedChar === ';' ||
             indexedChar === '…';
     }
 }

@@ -91,7 +91,7 @@ module.exports = {
                     time: 19,
                     lyric: [
                         {
-                            anchor: 'Walkyriens,',
+                            anchor: 'Walkyriens:',
                             properNoun: true,
                             annotation: {
                                 description: 'Backtrack to earlier that night. We buy the Robitussin from a Walgreens pharmacy. Also, the Valkyries in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.'
@@ -180,7 +180,7 @@ module.exports = {
                         {
                             anchor: 'psealed off drains.',
                             annotation: {
-                                description: 'Back in the day, the Robitussin I took contained pseudoephedrine, a decongestant. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.'
+                                description: 'Back in the day, the Robitussin we took contained pseudoephedrine, a decongestant. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.'
                             }
                         }
                     ]
@@ -192,6 +192,7 @@ module.exports = {
                     lyric: [
                         'Then',
                         {
+                            // TODO: mention steps
                             anchor: 'down the steppes',
                             annotation: {
                                 description: 'In the 13th century, the Mongols swept down from the East Asian steppes and began their conquests.'
@@ -407,7 +408,7 @@ module.exports = {
                             anchor: 'Siburial plains…',
                             properNoun: true,
                             annotation: {
-                                description: 'The Americas were first settled by northeast Asian populations who gladly forfeited the "tundra\'s Siberian plains," which otherwise would have served as their "burial" grounds.'
+                                description: 'The Americas were first settled by northeast Asian populations who gladly "forfeited the tundra\'s Siberian plains," which otherwise would have served as their "burial" grounds.'
                             }
                         }
                     ]
