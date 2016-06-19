@@ -13,6 +13,7 @@ module.exports = {
      * Temporary storage variables.
      */
     _songIndex: null,
+    _songDotKeys: {},
     _annotations: [],
     _portalReferences: {},
 
@@ -37,6 +38,11 @@ module.exports = {
 
             // Add annotations to song object.
             song.annotations = this._annotations;
+
+            // Add available dots to song object.
+            song.dotKeys = this._songDotKeys;
+
+            this._songDotKeys = {};
         });
     },
 
@@ -122,6 +128,7 @@ module.exports = {
         Constants.allDotKeys.forEach(dotKey => {
             if (lyricObject.annotation[dotKey]) {
                 dotKeys[dotKey] = true;
+                this._songDotKeys[dotKey] = true;
             }
         });
     },

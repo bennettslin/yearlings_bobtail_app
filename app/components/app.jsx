@@ -209,6 +209,7 @@ class App extends React.Component {
                     {!selectedSongIndex ?
                         <NotesSection /> : null
                     }
+                    <DotsSection dotKeys={selectedSong.dotKeys} />
                     <StatsSection
                         lyrics={selectedSong.lyrics}
                         annotations={selectedSong.annotations}
@@ -224,7 +225,6 @@ class App extends React.Component {
                 </div>
                 {selectedSongIndex ?
                      <div className="field right-field">
-                        <DotsSection />
                         <LyricsSection
                             selectedSongLyrics={selectedSong.lyrics}
                             handleAnnotationSelect={this.handleAnnotationSelect}
