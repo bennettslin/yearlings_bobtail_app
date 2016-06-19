@@ -11,7 +11,7 @@ class DotsBlock extends React.Component {
     render() {
         return (
             <span className="dots-block">
-                {Constants.dotKeys.filter(dotKey => {
+                {Constants.allDotKeys.filter(dotKey => {
                     return this.props.dotKeys[dotKey];
 
                 }).map((dotKey, index) => {

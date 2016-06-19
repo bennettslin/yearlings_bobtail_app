@@ -9,7 +9,9 @@ module.exports = {
         'anchor'
     ],
 
-    dotKeys: [
+    // FIXME: Temporarily have description as first dot key.
+    allDotKeys: [
+        'description',
         'pun',
         'backstory',
         'narrative',

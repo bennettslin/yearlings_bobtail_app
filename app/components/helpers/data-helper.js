@@ -4,6 +4,7 @@
  * hard-coded the way it is now.
  */
 
+import Constants from '../constants/constants.js';
 import FormatHelper from './format-helper.js';
 
 module.exports = {
@@ -83,40 +84,50 @@ module.exports = {
 
     _prepareAnnotation(lyricObject = {}) {
 
-        // Create object to store dot keys.
-        const dotKeys = {};
+        // Create annotation object to push into annotations array.
+        const annotation = lyricObject.annotation,
+
+            // Create object to store dot keys.
+            dotKeys = {};
 
         // Add annotation index to lyrics. 1-based index.
         lyricObject.annotationIndex = this._annotations.length + 1;
 
-        // Add formatted annotation title.
-        lyricObject.annotation.title = FormatHelper.getFormattedAnnotationTitle(lyricObject.anchor, lyricObject.properNoun);
+        // Add formatted title to annotation.
+        annotation.title = FormatHelper.getFormattedAnnotationTitle(lyricObject.anchor, lyricObject.properNoun);
         delete lyricObject.properNoun;
 
         /**
          * Add todo to annotation.
          */
         if (lyricObject.todo) {
-            lyricObject.annotation.todo = lyricObject.todo;
+            annotation.todo = lyricObject.todo;
         }
 
-        // If there is a portal, add to code object.
-        if (lyricObject.annotation.portal) {
-            dotKeys.portal = true;
-        }
-        lyricObject.annotation.dotKeys = dotKeys;
+        this._storeDotKeys(lyricObject, dotKeys);
+        this._storePortal(lyricObject, dotKeys);
 
-        this._storePortalReference(lyricObject);
+        // Pass dot keys to both lyrics and annotation.
+        lyricObject.dotKeys = dotKeys;
+        annotation.dotKeys = dotKeys;
 
         // Add annotation object to annotations array.
         this._annotations.push(lyricObject.annotation);
 
-        // Lyrics no longer needs reference to annotation.
+        // Lyric object no longer needs reference to annotation.
         delete lyricObject.annotation;
     },
 
-    _storePortalReference(lyricObject) {
-        // Store data for portal.
+    _storeDotKeys(lyricObject, dotKeys) {
+        Constants.allDotKeys.forEach(dotKey => {
+            if (lyricObject.annotation[dotKey]) {
+                dotKeys[dotKey] = true;
+            }
+        });
+    },
+
+    _storePortal(lyricObject, dotKeys) {
+        // Store portal references and key.
         if (lyricObject.annotation.portal) {
 
             const portalReference = {
@@ -130,6 +141,9 @@ module.exports = {
             }
 
             this._portalReferences[lyricObject.portal].push(portalReference);
+
+            // Add to dot keys object.
+            dotKeys.portal = true;
         }
     },
 

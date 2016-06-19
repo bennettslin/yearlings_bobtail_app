@@ -1,3 +1,5 @@
+/* */
+
 import React from 'react';
 import TitleSection from './title-section.jsx';
 import SongsSection from './songs-section.jsx';
@@ -19,6 +21,12 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
+
+        /**
+         * FIXME: Assign dev query function to global dq variable for now, but
+         * delete in production.
+         */
+        window.dq = this._devQuery;
 
         this._handleBodyClick = this._handleBodyClick.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
@@ -45,6 +53,13 @@ class App extends React.Component {
             selectedAnnotationIndex: parseInt(window.sessionStorage.selectedAnnotationIndex) || 0,
             selectedOverviewKey: window.sessionStorage.selectedOverviewKey,
         };
+    }
+
+    // TODO: Make this more meaningful.
+    _devQuery() {
+        console.error('window.sessionStorage.playedSongIndex', window.sessionStorage.playedSongIndex);
+        console.error('window.sessionStorage.selectedSongIndex', window.sessionStorage.selectedSongIndex);
+        console.error('window.sessionStorage.selectedAnnotationIndex', window.sessionStorage.selectedAnnotationIndex);
     }
 
     _handleBodyClick(e) {
@@ -127,8 +142,8 @@ class App extends React.Component {
         this.handleAnnotationSelect(selectedAnnotationIndex, true);
     }
 
-    _getPortalObjects(annotationData) {
-        const portalReferences = annotationData.portalReferences;
+    _getPortalObjects(annotationObject) {
+        const portalReferences = annotationObject.portalReferences;
 
         // Portal objects contain portal titles and indices.
         return portalReferences ? portalReferences.map((portalReference) => {
@@ -160,10 +175,10 @@ class App extends React.Component {
             tasks = selectedSongIndex ?
                 selectedSong.tasks :
                 props.tasks,
-            annotationData = (selectedSongIndex && state.selectedAnnotationIndex) ?
+            annotationObject = (selectedSongIndex && state.selectedAnnotationIndex) ?
                 selectedSong.annotations[state.selectedAnnotationIndex - 1] : null,
-            portalObjects = annotationData ?
-                this._getPortalObjects(annotationData) : null;
+            portalObjects = annotationObject ?
+                this._getPortalObjects(annotationObject) : null;
 
         // Includes album tasks and song tasks.
         let allTasks = props.songs.map(song => {
@@ -188,7 +203,7 @@ class App extends React.Component {
                 <div className="field notes-field">
                     <AnnotationPopup
                         ref="annotationPopup"
-                        annotationData={annotationData}
+                        annotationObject={annotationObject}
                         portalObjects={portalObjects}
                         handlePortalClick={this.handlePortalClick}
                     />

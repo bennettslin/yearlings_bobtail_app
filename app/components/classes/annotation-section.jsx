@@ -1,11 +1,13 @@
 import React from 'react';
 import DotsBlock from './dots-block.jsx';
+import Constants from '../constants/constants.js';
 import FormatUtility from '../utilities/format-utility.jsx';
 
 const defaultProps = {
-    title: '',
-    description: '',
-    dotKeys: {},
+    annotationObject: {
+        title: '',
+        dotKeys: {}
+    },
     portalObjects: null,
     handlePortalClick() {}
 }
@@ -21,9 +23,30 @@ class AnnotationSection extends React.Component {
         this.props.handlePortalClick(songIndex, annotationIndex);
     }
 
-    _getPortalReferenceBlock(portalObjects) {
+    _getAnnotationCardsBlock(annotationObject) {
+        const dotKeys = Constants.allDotKeys.filter(dotKey => {
+                return annotationObject.dotKeys[dotKey];
+            });
+
         return (
-            <div className="dev-only">
+            <div className="cards-block">
+                {dotKeys.map((dotKey, index) => {
+                    const richText = annotationObject[dotKey];
+
+                    return (
+                        <div key={index}
+                            className="annotation-card">
+                            {FormatUtility.getFormattedTextElement(false, richText)}
+                        </div>
+                    );
+                })}
+            </div>
+        );
+    }
+
+    _getPortalsBlock(portalObjects) {
+        return (
+            <div className="portals-block">
                 {portalObjects.map((portalObject, index) => {
                     return (
                         <a key={index}
@@ -41,17 +64,23 @@ class AnnotationSection extends React.Component {
     }
 
     render() {
-        const props = this.props;
+        const props = this.props,
+            annotationObject = props.annotationObject,
+            title = annotationObject.title,
+            dotKeys = annotationObject.dotKeys,
+            description = annotationObject.description;
 
         return (
             <div ref="annotation"
                 className="section annotation-section popup-content-wrapper">
                     <DotsBlock
-                        dotKeys={props.dotKeys}
+                        dotKeys={dotKeys}
                     />
-                <h2>{props.title}</h2>
-                {FormatUtility.getFormattedTextElement(false, props.description)}
-                {props.portalObjects ? this._getPortalReferenceBlock(props.portalObjects) : null}
+                <h2>{title}</h2>
+                <div className="annotation-cards">
+                    {this._getAnnotationCardsBlock(annotationObject)}
+                </div>
+                {props.portalObjects ? this._getPortalsBlock(props.portalObjects) : null}
             </div>
         );
     }

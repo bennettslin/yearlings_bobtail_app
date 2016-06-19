@@ -33,7 +33,7 @@ module.exports = {
              * Subsequent spans of text on a line will begin with a space,
              * unless specifically told not to.
              */
-            return this._getSpacedTextString(isLyric, text.noSpace || text, index === 0 || text.noSpace);
+            return this._getSpacedTextString(isLyric, text.noSpace || text, nestedIndex + index, index === 0 || text.noSpace);
 
         } else {
             if (text.italic) {
@@ -46,13 +46,14 @@ module.exports = {
                 // TODO: For dev purposes.
                 const todoClass = text.todo ? ' todo' : '';
 
+                // FIXME: Align dots correctly. (They are fine when on first word of line, but too far left otherwise.)
                 return (
                     <span key={nestedIndex + index}
                         className={'anchor-wrapper' + todoClass}>
                         {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Unfortunately, it doesn't obey noSpace, which we would want if the anchor tag begins with an em-dash. */}
                         {index > 0 ? ' ' : null}
                         <DotsBlock
-                            codes={text.codes}
+                            dotKeys={text.dotKeys}
                         />
                         <span className="text-block">
                             <a className="anchor-link"
@@ -66,7 +67,7 @@ module.exports = {
         }
     },
 
-    _getSpacedTextString(isLyric, text, noSpace) {
+    _getSpacedTextString(isLyric, text, index, noSpace) {
         const firstSpace = (noSpace ? '' : ' ');
 
         // Add nonbreaking space between last two words if it's a lyric.
@@ -79,6 +80,11 @@ module.exports = {
             }
         }
 
-        return firstSpace + text;
+        return (
+            <span key={index}
+                className="plain-text">
+                {firstSpace + text}
+            </span>
+        );
     }
 }

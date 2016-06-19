@@ -22,12 +22,14 @@
 @box-shadow-colour: rgba(100, 100, 120, 0.2);
 
 // TODO: Finalise link colours.
-@narrative-code-colour: #faa;
-@music-code-colour: #faf;
 @pun-code-colour: #afa;
+@backstory-code-colour: #faf;
+@narrative-code-colour: #faa;
+@foreshadow-code-colour: #faa;
+@music-code-colour: #faf;
 @portal-code-colour: #aaf;
+@pulpit-code-colour: #aaf;
 @reference-code-colour: #aff;
-@external-code-colour: #faf;
 
 // TODO: Finalise lyric link colours.
 @lyric-link-colour: #844;
@@ -55,6 +57,8 @@
   src: url('../assets/fonts/pt_sans/PTN57F.ttf') format('truetype'),
        url('../assets/fonts/pt_sans/PTN77F.ttf') format('truetype')
 }
+
+@text-z-index: 1;
 
 /**********
  * MIXINS *
@@ -95,15 +99,27 @@
         .dot {
             width: @dot-diameter;
             height: @dot-diameter;
-            border: (@dot-diameter * 0.1) solid black;
+            border: (@dot-diameter * 0.1) solid #aaa;
             border-radius: @dot-diameter;
 
             &:not(:last-child) {
                 margin-right: @dot-diameter * 0.1;
             }
 
+            &.pun {
+                background-color: @pun-code-colour;
+            }
+
+            &.backstory {
+                background-color: @backstory-code-colour;
+            }
+
             &.narrative {
                 background-color: @narrative-code-colour;
+            }
+
+            &.foreshadow {
+                background-color: @foreshadow-code-colour;
             }
 
             &.music {
@@ -114,16 +130,12 @@
                 background-color: @portal-code-colour;
             }
 
-            &.pun {
-                background-color: @pun-code-colour;
+            &.pulpit {
+                background-color: @pulpit-code-colour;
             }
 
             &.reference {
                 background-color: @reference-code-colour;
-            }
-
-            &.external {
-                background-color: @external-code-colour;
             }
         }
     }

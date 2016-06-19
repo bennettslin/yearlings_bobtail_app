@@ -40,7 +40,7 @@ class LyricsColumn extends React.Component {
                     {
                         annotationIndex: 1,
                         anchor: 'awesome',
-                        codes: [],
+                        dotKeys: [],
                         todo: false
                     },
                     'lyric.'

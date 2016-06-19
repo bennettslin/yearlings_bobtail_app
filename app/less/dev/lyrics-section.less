@@ -39,6 +39,16 @@
         }
     }
 
+    /**
+     * Applies to both plain text, and text within anchors, so that they are
+     * in front of dots.
+     */
+
+    .plain-text, .text-block {
+        position: relative;
+        z-index: @text-z-index;
+    }
+
     @dot-diameter: 0.9em;
     .dots-block-mixin(@dot-diameter);
 
@@ -53,7 +63,7 @@
         }
 
         .text-block {
-            position: relative;
+
         }
     }
 
