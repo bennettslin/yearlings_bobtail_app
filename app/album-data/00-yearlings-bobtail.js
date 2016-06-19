@@ -84,6 +84,11 @@ module.exports = {
             taskName: 'make interactable superclass',
             workedHours: 0,
             neededHours: 3
+        },
+        {
+            taskName: 'make selectable dots block',
+            workedHours: 0,
+            neededHours: 3
         }
     ]
 };

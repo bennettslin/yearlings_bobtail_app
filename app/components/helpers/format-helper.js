@@ -1,3 +1,5 @@
+import Constants from '../constants/constants.js';
+
 module.exports = {
 
     /**
@@ -34,25 +36,17 @@ module.exports = {
             /**
              * FIXME: This will not add a space between text fragments. This
              * works for now, since the only reason to have this method is for
-             * M ("Bobtail's words"), but we may want to revisit this in the
-             * future.
+             * the annotation title for "Bobtail's words" in M, but we may want
+             * to revisit this in the future.
              */
             return text.reduce((textString, textObject, index) => {
                 return textString + this._getStringFromObject(textObject);
             }, '');
 
         } else if (typeof text === 'object') {
-            if (text.anchor) {
-                return this._getStringFromObject(text.anchor);
-            } else if (text.emphasis) {
-                return this._getStringFromObject(text.emphasis);
-            } else if (text.italic) {
-                return this._getStringFromObject(text.italic);
-            } else if (text.noSpace) {
-                return this._getStringFromObject(text.noSpace);
-            } else {
-                return '';
-            }
+            return Constants.textKeys.reduce((prevString, textKey) => {
+                return text[textKey] ? this._getStringFromObject(text[textKey]) : prevString;
+            }, '');
 
         } else {
             return text;

@@ -28,12 +28,12 @@ module.exports = {
      * Returns a single element wrapped in a span, italic, or anchor tag.
      */
     _getTaggedTextContent(isLyric, text, clickHandler, index, nestedIndex) {
-        if (typeof text === 'string' || text.noSpace) {
+        if (typeof text === 'string') {
             /**
              * Subsequent spans of text on a line will begin with a space,
              * unless specifically told not to.
              */
-            return this._getSpacedTextString(isLyric, text.noSpace || text, nestedIndex + index, index === 0 || text.noSpace);
+            return this._getSpacedTextString(isLyric, text, nestedIndex + index, index === 0);
 
         } else {
             if (text.italic) {
@@ -67,8 +67,9 @@ module.exports = {
         }
     },
 
-    _getSpacedTextString(isLyric, text, index, noSpace) {
-        const firstSpace = (noSpace ? '' : ' ');
+    _getSpacedTextString(isLyric, text, index) {
+        // Do not add initial space if string begins with apostrophe and s.
+        const firstSpace = (text.indexOf('\'s') === 0 ? '' : ' ');
 
         // Add nonbreaking space between last two words if it's a lyric.
         if (isLyric) {

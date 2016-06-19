@@ -558,9 +558,7 @@ module.exports = {
                         {
                             italic: 'Bobtail'
                         },
-                        {
-                            noSpace: '\'s cover could say sorry for the world!'
-                        }
+                        '\'s cover could say sorry for the world!'
                     ]
                 },
                 {
@@ -570,9 +568,7 @@ module.exports = {
                         {
                             italic: 'Bobtail'
                         },
-                        {
-                            noSpace: '\'s cover could say sorry…!'
-                        }
+                        '\'s cover could say sorry…!'
                     ]
                 }
             ]

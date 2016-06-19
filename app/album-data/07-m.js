@@ -494,9 +494,7 @@ module.exports = {
                                 {
                                     italic: 'Bobtail'
                                 },
-                                {
-                                    noSpace: '\'s words—'
-                                }
+                                '\'s words—'
                             ],
                             properNoun: true,
                             annotation: {
