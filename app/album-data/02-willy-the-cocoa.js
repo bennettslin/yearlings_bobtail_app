@@ -283,7 +283,7 @@ module.exports = {
                 },
                 {
                     time: 89,
-                    lyric: 'So to baby —to your brother— you\'ll say sorry for the world!'
+                    lyric: 'So to baby— to your brother— you\'ll say sorry for the world!'
                 }
             ],
             [
@@ -293,7 +293,7 @@ module.exports = {
                         {
                             anchor: 'Killcrop',
                             annotation: {
-                                description: 'In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is plain and simple —one who "kills crops"— and reflects the primary concerns of past times, when children unable to work for their keep could lead to a family\'s ruin.'
+                                description: 'In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is plain and simple— one who "kills crops"— and reflects the primary concerns of past times, when children unable to work for their keep could lead to a family\'s ruin.'
                             }
                         },
                         'dashing kicks up puddle,'

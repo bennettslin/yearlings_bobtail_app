@@ -16,8 +16,8 @@ module.exports = {
         'foreshadow',
         'music',
         'portal',
-        'reference',
-        'external'
+        'pulpit',
+        'reference'
     ],
 
     overviewNames: [

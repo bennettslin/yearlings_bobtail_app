@@ -96,9 +96,18 @@ module.exports = {
             if (firstIndex === lastIndex) {
                 text = text.replace(char, '');
 
-            // Delete if entire text is wrapped between wrapping characters.
-            } else if (firstIndex === 0 && lastIndex === text.length - 1) {
-                text = text.slice(1, -1);
+            // If two wrapping characters...
+            } else {
+                // ... delete both '"'s if entire text is wrapped between them.
+                if (char === '"' && firstIndex === 0 && lastIndex === text.length - 1) {
+                    // e.g. '"tetherboy"'
+                    text = text.slice(1, -1);
+
+                // ... convert first '—' to a comma, and delete second.
+                } else if (char === '—') {
+                    // e.g. 'heroes— ourauras left—'
+                    text = text.replace('—', ',').replace('—', '');
+                }
             }
         });
 

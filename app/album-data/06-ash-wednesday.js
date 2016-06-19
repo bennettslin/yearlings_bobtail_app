@@ -217,7 +217,7 @@ module.exports = {
                             }
                         },
                         {
-                            anchor: 'went clear',
+                            anchor: 'went clear—',
                             annotation: {
                                 description: [
                                     'Having decided to win Catherine back by reading more books, I began with those we\'d discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen\'s earlier novel',
@@ -230,7 +230,7 @@ module.exports = {
                             }
                         },
                         {
-                            anchor: '—my Tekakwitha—',
+                            anchor: 'my Tekakwitha—',
                             annotation: {
                                 description: [
                                     'The story of Kateri Tekakwitha, the Catholic Church\'s first Native American saint, figures prominently in',

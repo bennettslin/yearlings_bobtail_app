@@ -249,11 +249,11 @@ module.exports = {
                 },
                 {
                     time: 111,
-                    lyric: 'Did you find a rival in the goddess you once sought as prize'
+                    lyric: 'Did you find a rival in the goddess you once sought as prize—'
                 },
                 {
                     time: 119,
-                    lyric: '—your idol who riled you when you saw that you two were tied?'
+                    lyric: 'your idol who riled you when you saw that you two were tied?'
                 }
             ],
             [

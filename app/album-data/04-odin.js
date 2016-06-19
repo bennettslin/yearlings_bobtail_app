@@ -202,12 +202,12 @@ module.exports = {
                 },
                 {
                     time: 73,
-                    lyric: 'What\'s more, if all you live for still die at the end'
+                    lyric: 'What\'s more, if all you live for still die at the end—'
                 },
                 {
                     time: 79,
                     lyric: [
-                        '—like Odin\'s ashes back from',
+                        'like Odin\'s ashes back from',
                         {
                             anchor: 'the Society,',
                             annotation: {
@@ -642,7 +642,7 @@ module.exports = {
                         },
                         'that come undone by',
                         {
-                            anchor: 'undine',
+                            anchor: 'undine—',
                             annotation: {
                                 description: [
                                     'The undine is a female nymph and the elemental of water. The term was coined by Paracelsus and is derived from the Latin word',
@@ -657,7 +657,7 @@ module.exports = {
                 },
                 {
                     time: 84,
-                    lyric: '—which spilled a basket among other things—'
+                    lyric: 'which spilled a basket among other things—'
                 },
                 {
                     time: 87,

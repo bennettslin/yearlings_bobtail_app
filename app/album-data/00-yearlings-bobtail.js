@@ -72,7 +72,7 @@ module.exports = {
         },
         {
             taskName: 'take care of em-dashes',
-            workedHours: 0,
+            workedHours: 1,
             neededHours: 1
         },
         {
