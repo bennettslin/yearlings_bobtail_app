@@ -401,9 +401,9 @@ module.exports = {
                         'so you',
                         {
                             anchor: 'hit the switch.',
-                            portalKey: 'hit_the_switch',
                             annotation: {
-                                description: ''
+                                description: '',
+                                portal: 'hit_the_switch'
                             },
                             todo: true
                         }

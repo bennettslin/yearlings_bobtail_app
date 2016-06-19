@@ -9,7 +9,7 @@ module.exports = {
         'anchor'
     ],
 
-    dotCodes: [
+    dotKeys: [
         'pun',
         'backstory',
         'narrative',

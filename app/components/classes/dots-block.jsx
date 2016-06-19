@@ -3,7 +3,7 @@ import DotButton from './dot-button.jsx';
 import Constants from '../constants/constants.js';
 
 const defaultProps = {
-    codes: {}
+    dotKeys: {}
 }
 
 class DotsBlock extends React.Component {
@@ -11,14 +11,14 @@ class DotsBlock extends React.Component {
     render() {
         return (
             <span className="dots-block">
-                {Constants.dotCodes.filter(code => {
-                    return this.props.codes[code];
+                {Constants.dotKeys.filter(dotKey => {
+                    return this.props.dotKeys[dotKey];
 
-                }).map((code, index) => {
+                }).map((dotKey, index) => {
                     return (
                         <DotButton
                             key={index}
-                            classValue={code}
+                            classValue={dotKey}
                         />
                     );
                 })}

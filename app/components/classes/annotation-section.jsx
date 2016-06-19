@@ -5,7 +5,7 @@ import FormatUtility from '../utilities/format-utility.jsx';
 const defaultProps = {
     title: '',
     description: '',
-    codes: {},
+    dotKeys: {},
     portalObjects: null,
     handlePortalClick() {}
 }
@@ -47,7 +47,7 @@ class AnnotationSection extends React.Component {
             <div ref="annotation"
                 className="section annotation-section popup-content-wrapper">
                     <DotsBlock
-                        codes={props.codes}
+                        dotKeys={props.dotKeys}
                     />
                 <h2>{props.title}</h2>
                 {FormatUtility.getFormattedTextElement(false, props.description)}

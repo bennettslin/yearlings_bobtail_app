@@ -20,7 +20,7 @@ class AnnotationPopup extends Popup {
         return annotationData ?
             <AnnotationSection
                 ref="annotationSection"
-                codes={annotationData.codes}
+                dotKeys={annotationData.dotKeys}
                 title={annotationData.title}
                 description={annotationData.description}
                 portalObjects={this.props.portalObjects}

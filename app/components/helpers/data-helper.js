@@ -83,6 +83,9 @@ module.exports = {
 
     _prepareAnnotation(lyricObject = {}) {
 
+        // Create object to store dot keys.
+        const dotKeys = {};
+
         // Add annotation index to lyrics. 1-based index.
         lyricObject.annotationIndex = this._annotations.length + 1;
 
@@ -91,22 +94,17 @@ module.exports = {
         delete lyricObject.properNoun;
 
         /**
-         * Add todo and codes to annotation.
+         * Add todo to annotation.
          */
         if (lyricObject.todo) {
             lyricObject.annotation.todo = lyricObject.todo;
         }
 
-        // FIXME: Eventually all lyric objects will have code objects.
-        if (!lyricObject.codes) {
-            lyricObject.codes = {};
-        }
-
         // If there is a portal, add to code object.
-        if (lyricObject.portalKey) {
-            lyricObject.codes.portal = true;
+        if (lyricObject.annotation.portal) {
+            dotKeys.portal = true;
         }
-        lyricObject.annotation.codes = lyricObject.codes;
+        lyricObject.annotation.dotKeys = dotKeys;
 
         this._storePortalReference(lyricObject);
 
@@ -119,7 +117,7 @@ module.exports = {
 
     _storePortalReference(lyricObject) {
         // Store data for portal.
-        if (lyricObject.portalKey) {
+        if (lyricObject.annotation.portal) {
 
             const portalReference = {
                 songIndex: this._songIndex,
@@ -127,11 +125,11 @@ module.exports = {
             };
 
             // If first portal reference, initialise array.
-            if (!this._portalReferences[lyricObject.portalKey]) {
-                this._portalReferences[lyricObject.portalKey] = [];
+            if (!this._portalReferences[lyricObject.portal]) {
+                this._portalReferences[lyricObject.portal] = [];
             }
 
-            this._portalReferences[lyricObject.portalKey].push(portalReference);
+            this._portalReferences[lyricObject.portal].push(portalReference);
         }
     },
 
