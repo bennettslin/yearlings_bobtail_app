@@ -35,8 +35,11 @@ class AnnotationSection extends React.Component {
 
                     return (
                         <div key={index}
-                            className="annotation-card">
-                            {FormatUtility.getFormattedTextElement(false, richText)}
+                            className={'annotation-card ' + dotKey}>
+                            {/* Portal card is slightly different. */}
+                            {dotKey === 'portal' ?
+                                this._getPortalsBlock(this.props.portalObjects) :
+                                FormatUtility.getFormattedTextElement(false, richText)}
                         </div>
                     );
                 })}
@@ -67,8 +70,7 @@ class AnnotationSection extends React.Component {
         const props = this.props,
             annotationObject = props.annotationObject,
             title = annotationObject.title,
-            dotKeys = annotationObject.dotKeys,
-            description = annotationObject.description;
+            dotKeys = annotationObject.dotKeys;
 
         return (
             <div ref="annotation"
@@ -80,7 +82,6 @@ class AnnotationSection extends React.Component {
                 <div className="annotation-cards">
                     {this._getAnnotationCardsBlock(annotationObject)}
                 </div>
-                {props.portalObjects ? this._getPortalsBlock(props.portalObjects) : null}
             </div>
         );
     }

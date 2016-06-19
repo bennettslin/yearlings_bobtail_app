@@ -17,9 +17,9 @@ module.exports = {
         'narrative',
         'foreshadow',
         'music',
-        'portal',
         'pulpit',
-        'reference'
+        'reference',
+        'portal'
     ],
 
     overviewNames: [

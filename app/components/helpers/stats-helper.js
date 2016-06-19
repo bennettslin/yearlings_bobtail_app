@@ -18,9 +18,10 @@ module.exports = {
         const objectKeys = Object.keys(richTextObject);
 
         return objectKeys.reduce((wordCount, objectKey) => {
-            const richText = richTextObject[objectKey].description;
-
-            return wordCount + this.getTotalWords(richText);
+            return wordCount + Constants.allDotKeys.reduce((newWordCount, dotKey) => {
+                const richText = richTextObject[objectKey][dotKey];
+                return newWordCount + (richText ? this.getTotalWords(richText) : 0);
+            }, 0);
         }, 0);
     },
 
