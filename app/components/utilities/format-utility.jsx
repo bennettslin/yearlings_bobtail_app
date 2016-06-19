@@ -53,6 +53,7 @@ module.exports = {
                         <span className={'anchor-wrapper' + todoClass}>
                             <DotsBlock
                                 dotKeys={text.dotKeys}
+                                interactable={false}
                             />
                             <span className="text-block">
                                 <a className="anchor-link"
