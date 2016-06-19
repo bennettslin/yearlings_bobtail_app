@@ -1,5 +1,5 @@
 import React from 'react';
-import DotsBlock from './dots-block.jsx';
+import DotButton from './dot-button.jsx';
 import Constants from '../constants/constants.js';
 import FormatUtility from '../utilities/format-utility.jsx';
 
@@ -36,6 +36,9 @@ class AnnotationSection extends React.Component {
                     return (
                         <div key={index}
                             className={'annotation-card ' + dotKey}>
+                            <DotButton
+                                classValue={dotKey}
+                            />
                             {/* Portal card is slightly different. */}
                             {dotKey === 'portal' ?
                                 this._getPortalsBlock(this.props.portalObjects) :
@@ -69,15 +72,11 @@ class AnnotationSection extends React.Component {
     render() {
         const props = this.props,
             annotationObject = props.annotationObject,
-            title = annotationObject.title,
-            dotKeys = annotationObject.dotKeys;
+            title = annotationObject.title;
 
         return (
             <div ref="annotation"
                 className="section annotation-section popup-content-wrapper">
-                    <DotsBlock
-                        dotKeys={dotKeys}
-                    />
                 <h2>{title}</h2>
                 <div className="annotation-cards">
                     {this._getAnnotationCardsBlock(annotationObject)}

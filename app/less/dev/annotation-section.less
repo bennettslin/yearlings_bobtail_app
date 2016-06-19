@@ -1,9 +1,11 @@
 .annotation-section {
     @overflow-margin-width: 5px;
     position: absolute;
-    top: 45px;
+    top: 5vh;
     left: -@overflow-margin-width - (@field-padding * 0.5);
+    max-height: 90vh;
     width: @notes-field-width + (@overflow-margin-width * 2);
+    overflow-y: scroll;
     background-color: @annotation-colour;
 
     // border-top-left-radius:     45px 15px;
@@ -18,9 +20,11 @@
 
     .cards-block {
         .annotation-card {
-            margin: 5px;
+            margin: 5px 0;
             padding: 5px;
             box-shadow: 0 1px 1px 1px @box-shadow-colour;
+
+            .dots-mixin;
         }
     }
 }
