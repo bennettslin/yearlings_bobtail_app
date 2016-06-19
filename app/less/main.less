@@ -1,14 +1,14 @@
-@import "../vendor-prefixes.less";
-@import "../constants.less";
-@import "../mixins.less";
-@import "../tags.less";
+@import "./utilities/vendor-prefixes.less";
+@import "./utilities/constants.less";
+@import "./utilities/mixins.less";
+@import "./utilities/tags.less";
 
-@import "./songs-section.less";
-@import "./annotation-section.less";
-@import "./overviews-section.less";
-@import "./tasks-section.less";
-@import "./dots.less";
-@import "./lyrics-section.less";
+@import "./classes/songs.less";
+@import "./classes/annotation.less";
+@import "./classes/overviews.less";
+@import "./classes/tasks.less";
+@import "./classes/dots.less";
+@import "./classes/lyrics.less";
 
 body {
     background-color: #999;
@@ -45,23 +45,23 @@ body {
     }
 }
 
-.songs-field {
-    width: @songs-field-width;
-    min-width: @songs-field-width;
-    background-color: @songs-field-colour;
+.left-field {
+    width: @left-field-width;
+    min-width: @left-field-width;
+    background-color: @left-field-colour;
     font-size: 1.2em;
 }
 
-.notes-field {
-    width: @notes-field-width;
-    min-width: @notes-field-width;
-    background-color: @notes-field-colour;
+.centre-field {
+    width: @centre-field-width;
+    min-width: @centre-field-width;
+    background-color: @centre-field-colour;
 }
 
-.lyrics-field {
-    width: @lyrics-field-width;
-    min-width: @lyrics-field-width;
-    background-color: @lyrics-field-colour;
+.right-field {
+    width: @right-field-width;
+    min-width: @right-field-width;
+    background-color: @right-field-colour;
 }
 
 /************

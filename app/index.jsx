@@ -1,4 +1,4 @@
-import './less/dev/main.less';
+import './less/main.less';
 import DataHelper from './components/helpers/data-helper.js'
 
 import React from 'react';

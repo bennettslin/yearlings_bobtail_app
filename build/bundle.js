@@ -21086,7 +21086,7 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'dev-lyrics-field' },
+	                { className: 'dev-right-field' },
 	                _react2.default.createElement(
 	                    'h2',
 	                    null,

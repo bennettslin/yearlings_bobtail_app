@@ -1,0 +1,111 @@
+.lyric-columns {
+    display: flex;
+}
+
+.lyric-column {
+
+    &.doublespeaker {
+        &.left {
+            padding-right: @field-padding * 0.5;
+        }
+
+        &.right {
+            padding-left: @field-padding * 0.5;
+        }
+    }
+}
+
+.lyric-block {
+    @lyric-verse-size: 1em;
+    font-size: @lyric-verse-size;
+    line-height: 150%;
+
+    a {
+        font-weight: normal;
+    }
+
+    .stanza {
+        &:not(:last-child) {
+            margin-bottom: @lyric-verse-size;
+        }
+
+        .verse {
+            @hanging-indent-width: 1.5em;
+            padding-left: @hanging-indent-width;
+            text-indent:-@hanging-indent-width;
+        }
+    }
+}
+
+/**
+ * Applies to both plain text and text within anchors, so that they are
+ * in front of dots.
+ */
+
+.text-block {
+    position: relative;
+    z-index: @text-z-index;
+}
+
+.anchor-block {
+    @anchor-block-height: 0.9em;
+    position: relative;
+    height: @anchor-block-height;
+
+    .dots-block {
+        // Override global dot diameter.
+        .dot-diameter-mixin(@anchor-block-height);
+
+        position: absolute;
+        left: -@anchor-block-height * 0.2;
+        top: -@anchor-block-height * 0.2;
+    }
+}
+
+.anchor-link {
+    position: relative;
+    z-index: 0;
+    white-space: nowrap;
+
+    @colour: @right-field-colour;
+    @offset: 0.75px;
+    @blur: 0;
+    text-shadow:
+        -@offset -@offset @blur @colour,
+        @offset -@offset @blur @colour,
+        -@offset @offset @blur @colour,
+        @offset @offset @blur @colour;
+
+    // Underline anchor tag.
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 35%;
+        bottom: 0;
+        background-color: mix(@lyric-link-colour, white, 25%);
+    }
+}
+
+// For dev purposes.
+.todo {
+    a {
+        color: #b00;
+
+        &:hover {
+            color: #d33;
+        }
+
+        &:active {
+            color: #f66;
+        }
+    }
+
+    // Make underline red.
+    .anchor-link {
+        &:before {
+            background-color: mix(red, white, 50%);
+        }
+    }
+}

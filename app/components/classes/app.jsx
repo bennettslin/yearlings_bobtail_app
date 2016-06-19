@@ -187,7 +187,7 @@ class App extends React.Component {
 
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
-                <div className="field songs-field">
+                <div className="field left-field">
                     <TitleSection
                         titleText={props.title}
                         handleSongReset={this.handleSongChange.bind(null, 0, 'selected', true)}
@@ -199,7 +199,7 @@ class App extends React.Component {
                         handleSongChange={this.handleSongChange}
                     />
                 </div>
-                <div className="field notes-field">
+                <div className="field centre-field">
                     <AnnotationPopup
                         ref="annotationPopup"
                         annotationObject={annotationObject}
@@ -223,7 +223,7 @@ class App extends React.Component {
                     />
                 </div>
                 {selectedSongIndex ?
-                     <div className="field lyrics-field">
+                     <div className="field right-field">
                         <DotsSection />
                         <LyricsSection
                             selectedSongLyrics={selectedSong.lyrics}
