@@ -868,7 +868,7 @@ module.exports = {
                 {
                     taskName: 'split into dots',
                     workedHours: 0,
-                    neededHours: 3
+                    neededHours: 4
                 }
             ]
         },

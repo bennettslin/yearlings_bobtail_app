@@ -2,6 +2,7 @@ module.exports = {
 
     // Lyrics text will only ever be under these keys.
     textKeys: [
+        'lyric', // Used for lyric word count.
         'italic',
         'emphasis',
         'anchor'
