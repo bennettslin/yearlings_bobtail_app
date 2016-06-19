@@ -1,14 +1,14 @@
 import React from 'react';
-import TitleSection from './title-section.jsx';
-import SongsSection from './songs/songs-section.jsx';
-import NotesSection from './notes-section.jsx';
-import AnnotationPopup from './annotation/annotation-popup.jsx';
-import StatsSection from './stats-section.jsx';
-import OverviewsSection from './overviews-section.jsx';
-import TasksSection from './tasks-section.jsx';
-import DotsSection from './dots/dots-section.jsx';
-import LyricsSection from './lyrics/lyrics-section.jsx';
-import GlobalHelper from '../helpers/global-helper.js';
+import TitleSection from './classes/title-section.jsx';
+import SongsSection from './classes/songs/songs-section.jsx';
+import NotesSection from './classes/notes-section.jsx';
+import AnnotationPopup from './classes/annotation/annotation-popup.jsx';
+import StatsSection from './classes/stats-section.jsx';
+import OverviewsSection from './classes/overviews-section.jsx';
+import TasksSection from './classes/tasks-section.jsx';
+import DotsSection from './classes/dots/dots-section.jsx';
+import LyricsSection from './classes/lyrics/lyrics-section.jsx';
+import GlobalHelper from './helpers/global-helper.js';
 
 const defaultProps = {
     title: 'Yearling\'s Bobtail',
