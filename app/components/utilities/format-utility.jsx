@@ -1,5 +1,5 @@
 import React from 'react';
-import DotsBlock from '../classes/dots-block.jsx';
+import DotsBlock from '../classes/dots/dots-block.jsx';
 
 module.exports = {
 
@@ -50,7 +50,7 @@ module.exports = {
                     <span key={nestedIndex + index}>
                         {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish. */}
                         {index > 0 ? this._getSpaceElement() : null}
-                        <span className={'anchor-wrapper' + todoClass}>
+                        <span className={'anchor-block' + todoClass}>
                             <DotsBlock
                                 dotKeys={text.dotKeys}
                                 interactable={false}
@@ -84,7 +84,7 @@ module.exports = {
 
         return (
             <span key={index}
-                className="plain-text">
+                className="text-block">
                 {firstSpace + text}
             </span>
         );

@@ -40,30 +40,27 @@
     }
 
     /**
-     * Applies to both plain text, and text within anchors, so that they are
+     * Applies to both plain text and text within anchors, so that they are
      * in front of dots.
      */
 
-    .plain-text, .text-block {
+    .text-block {
         position: relative;
         z-index: @text-z-index;
     }
 
-    @dot-diameter: 0.9em;
-    .dots-block-mixin(@dot-diameter);
-
-    .anchor-wrapper {
+    .anchor-block {
+        @anchor-block-height: 0.9em;
         position: relative;
-        height: @dot-diameter;
+        height: @anchor-block-height;
 
         .dots-block {
+            // Override global dot diameter.
+            .dot-diameter-mixin(@anchor-block-height);
+
             position: absolute;
-            left: -@dot-diameter * 0.2;
-            top: -@dot-diameter * 0.2;
-        }
-
-        .text-block {
-
+            left: -@anchor-block-height * 0.2;
+            top: -@anchor-block-height * 0.2;
         }
     }
 

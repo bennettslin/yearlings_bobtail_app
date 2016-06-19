@@ -1,7 +1,7 @@
 import React from 'react';
-import ProgressBar from './progress-bar.jsx';
-import ProgressHelper from '../helpers/progress-helper.js';
-import ProgressUtility from '../utilities/progress-utility.jsx';
+import ProgressBar from '../progress-bar.jsx';
+import ProgressHelper from '../../helpers/progress-helper.js';
+import ProgressUtility from '../../utilities/progress-utility.jsx';
 
 const defaultProps = {
     songIndex: 0,

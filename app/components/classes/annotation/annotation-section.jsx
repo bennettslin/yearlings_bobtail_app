@@ -1,7 +1,7 @@
 import React from 'react';
-import DotButton from './dot-button.jsx';
-import Constants from '../constants/constants.js';
-import FormatUtility from '../utilities/format-utility.jsx';
+import DotButton from '../dots/dot-button.jsx';
+import Constants from '../../constants/constants.js';
+import FormatUtility from '../../utilities/format-utility.jsx';
 
 const defaultProps = {
     annotationObject: {

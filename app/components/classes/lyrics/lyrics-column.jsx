@@ -1,5 +1,5 @@
 import React from 'react';
-import FormatUtility from '../utilities/format-utility.jsx';
+import FormatUtility from '../../utilities/format-utility.jsx';
 
 const defaultProps = {
     columnKey: '',

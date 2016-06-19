@@ -3,7 +3,7 @@
     position: absolute;
     top: 5vh;
     left: -@overflow-margin-width - (@field-padding * 0.5);
-    max-height: 50vh;
+    max-height: 80vh;
     width: @notes-field-width + (@overflow-margin-width * 2);
     overflow-y: scroll;
     background-color: @annotation-colour;
@@ -15,11 +15,20 @@
 
     .cards-block {
         .annotation-card {
+
             margin: 5px 0;
             padding: 5px;
             box-shadow: 0 1px 1px 1px @box-shadow-colour;
 
-            .dots-mixin;
+            // Begin floated dot properties.
+            position: relative;
+            clear: left;
+            overflow: auto;
+            .dot {
+                float: left;
+                margin-right: 5px;
+            }
+            // End floated dot properties.
 
             .portals-block {
                 color: #a88;

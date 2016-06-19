@@ -1,6 +1,6 @@
 import React from 'react';
 import DotButton from './dot-button.jsx';
-import Constants from '../constants/constants.js';
+import Constants from '../../constants/constants.js';
 
 const defaultProps = {
     dotKeys: {},

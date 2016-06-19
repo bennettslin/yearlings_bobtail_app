@@ -1,14 +1,13 @@
-/* */
-
 import React from 'react';
 import TitleSection from './title-section.jsx';
-import SongsSection from './songs-section.jsx';
+import SongsSection from './songs/songs-section.jsx';
 import NotesSection from './notes-section.jsx';
-import AnnotationPopup from './annotation-popup.jsx';
+import AnnotationPopup from './annotation/annotation-popup.jsx';
 import StatsSection from './stats-section.jsx';
 import OverviewsSection from './overviews-section.jsx';
 import TasksSection from './tasks-section.jsx';
-import LyricsSection from './lyrics-section.jsx';
+import DotsSection from './dots/dots-section.jsx';
+import LyricsSection from './lyrics/lyrics-section.jsx';
 import GlobalHelper from '../helpers/global-helper.js';
 
 const defaultProps = {
@@ -225,6 +224,7 @@ class App extends React.Component {
                 </div>
                 {selectedSongIndex ?
                      <div className="field lyrics-field">
+                        <DotsSection />
                         <LyricsSection
                             selectedSongLyrics={selectedSong.lyrics}
                             handleAnnotationSelect={this.handleAnnotationSelect}
