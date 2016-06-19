@@ -13,11 +13,6 @@
     // border-bottom-right-radius: 45px 15px;
     // border-bottom-left-radius:  15px 45px;
 
-    .dots-block-mixin;
-    .dots-block {
-        margin-bottom: 5px;
-    }
-
     .cards-block {
         .annotation-card {
             margin: 5px 0;
@@ -25,6 +20,19 @@
             box-shadow: 0 1px 1px 1px @box-shadow-colour;
 
             .dots-mixin;
+
+            .portals-block {
+                color: #a88;
+
+                .portal-button {
+                    cursor: pointer;
+
+                    .annotation-title {
+                        padding-left: 1.5em;
+                        font-style: italic;
+                    }
+                }
+            }
         }
     }
 }

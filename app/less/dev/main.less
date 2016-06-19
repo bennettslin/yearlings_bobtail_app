@@ -1,5 +1,7 @@
+@import "../vendor-prefixes.less";
 @import "../constants.less";
-@import "../global.less";
+@import "../mixins.less";
+@import "../tags.less";
 
 @import "./songs-section.less";
 @import "./annotation-section.less";
@@ -155,20 +157,4 @@ body {
 .popup-transition-group {
     position: fixed;
     z-index: 1;
-}
-
-/**
- * Portal link. For dev purposes only.
- */
-.portals-block {
-    color: #a88;
-
-    .portal-button {
-        cursor: pointer;
-
-        .annotation-title {
-            padding-left: 1.5em;
-            font-style: italic;
-        }
-    }
 }

@@ -1,5 +1,3 @@
-@import "./vendor-prefixes.less";
-
 @field-padding: 15px;
 @row-height-margin: 5px;
 
@@ -50,9 +48,9 @@
 @played-total-colour: #cfc;
 @played-filled-colour: #ada;
 
-/*********
- * FONTS *
- *********/
+/********
+ * TEXT *
+ ********/
 
 @font-face {
   font-family: PTSansNarrow;
@@ -61,103 +59,3 @@
 }
 
 @text-z-index: 1;
-
-/**********
- * MIXINS *
- **********/
-
-.animation-mixin(@property: opacity,
-                 @shown-value: 1,
-                 @hidden-value: 0,
-                 @duration: 0.1s,
-                 @timing: ease) {
-
-    .transition(@property @duration @timing);
-
-    &[class*="animation-enter"] {
-        @{property}: @hidden-value;
-
-        &[class*="animation-enter-active"] {
-            @{property}: @shown-value;
-        }
-    }
-
-    &[class*="animation-leave"] {
-        @{property}: @shown-value;
-
-        &[class*="animation-leave-active"] {
-            @{property}: @hidden-value;
-        }
-    }
-}
-
-.dots-mixin(@dot-diameter: 2em) {
-    .dot {
-        width: @dot-diameter;
-        height: @dot-diameter;
-        border: (@dot-diameter * 0.1) solid #aaa;
-        border-radius: @dot-diameter;
-
-        &.description {
-            background-color: @dev-dot-colour;
-        }
-
-        &.pun {
-            background-color: @pun-dot-colour;
-        }
-
-        &.backstory {
-            background-color: @backstory-dot-colour;
-        }
-
-        &.narrative {
-            background-color: @narrative-dot-colour;
-        }
-
-        &.foreshadow {
-            background-color: @foreshadow-dot-colour;
-        }
-
-        &.music {
-            background-color: @music-dot-colour;
-        }
-
-        &.pulpit {
-            background-color: @pulpit-dot-colour;
-        }
-
-        &.reference {
-            background-color: @reference-dot-colour;
-        }
-
-        &.portal {
-            background-color: @portal-dot-colour;
-        }
-    }
-}
-
-.dots-block-mixin(@dot-diameter: 2em) {
-    .dots-block {
-        display: flex;
-        width: auto;
-        height: 100%;
-
-        .dots-mixin(@dot-diameter);
-        .dot {
-            &:not(:last-child) {
-                margin-right: @dot-diameter * 0.1;
-            }
-        }
-    }
-}
-
-.progress-bar-mixin(@progress-bar-colour, @filled-bar-colour) {
-
-    .progress-bar {
-        background-color: @progress-bar-colour;
-
-        .filled-bar {
-            background-color: @filled-bar-colour;
-        }
-    }
-}

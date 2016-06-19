@@ -46,20 +46,20 @@ module.exports = {
                 // TODO: For dev purposes.
                 const todoClass = text.todo ? ' todo' : '';
 
-                // FIXME: Align dots correctly. (They are fine when on first word of line, but too far left otherwise.)
                 return (
-                    <span key={nestedIndex + index}
-                        className={'anchor-wrapper' + todoClass}>
-                        {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Unfortunately, it doesn't obey noSpace, which we would want if the anchor tag begins with an em-dash. */}
-                        {index > 0 ? ' ' : null}
-                        <DotsBlock
-                            dotKeys={text.dotKeys}
-                        />
-                        <span className="text-block">
-                            <a className="anchor-link"
-                                onClick={clickHandler.bind(null, text.annotationIndex)} >
-                                {this.getFormattedTextElement(isLyric, text.anchor, clickHandler, index, nestedIndex)}
-                            </a>
+                    <span key={nestedIndex + index}>
+                        {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish. */}
+                        {index > 0 ? this._getSpaceElement() : null}
+                        <span className={'anchor-wrapper' + todoClass}>
+                            <DotsBlock
+                                dotKeys={text.dotKeys}
+                            />
+                            <span className="text-block">
+                                <a className="anchor-link"
+                                    onClick={clickHandler.bind(null, text.annotationIndex)} >
+                                    {this.getFormattedTextElement(isLyric, text.anchor, clickHandler, index, nestedIndex)}
+                                </a>
+                            </span>
                         </span>
                     </span>
                 );
@@ -86,5 +86,9 @@ module.exports = {
                 {firstSpace + text}
             </span>
         );
+    },
+
+    _getSpaceElement() {
+        return <span className="space"> </span>;
     }
 }

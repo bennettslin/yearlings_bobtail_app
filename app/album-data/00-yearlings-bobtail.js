@@ -77,7 +77,7 @@ module.exports = {
         },
         {
             taskName: 'separate out dot categories',
-            workedHours: 0,
+            workedHours: 8,
             neededHours: 8
         },
         {
