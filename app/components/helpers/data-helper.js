@@ -23,6 +23,7 @@ module.exports = {
     prepareAlbumObject(albumObject = {}) {
         this._prepareAllAnnotations(albumObject);
         this._populatePortalReferences(albumObject);
+        this._convertOverviews(albumObject);
 
         this._deleteTemporaryStorage();
     },
@@ -36,6 +37,8 @@ module.exports = {
 
             this._parseLyricValue(song.lyrics);
 
+            this._convertOverviews(song);
+
             // Add annotations to song object.
             song.annotations = this._annotations;
 
@@ -44,6 +47,14 @@ module.exports = {
 
             this._songDotKeys = {};
         });
+    },
+
+    _convertOverviews(object) {
+        // Convert overviews object into array.
+        const overviews = Constants.overviewKeys.map(overviewKey => {
+            return object.overviews[overviewKey];
+        });
+        object.overviews = overviews;
     },
 
     _populatePortalReferences(albumObject) {
@@ -156,6 +167,7 @@ module.exports = {
 
     _deleteTemporaryStorage() {
         delete this._songIndex;
+        delete this._songDotKeys;
         delete this._annotations;
         delete this._portalReferences;
     }

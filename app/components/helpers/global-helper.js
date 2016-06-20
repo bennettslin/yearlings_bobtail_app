@@ -16,5 +16,20 @@ module.exports = {
          }
 
          return false;
+    },
+
+    setInSession(key, value) {
+        window.localStorage[key] = value;
+    },
+
+    getFromSession(key) {
+        if (key) {
+            const stringValue = window.localStorage[key],
+                intValue = parseInt(stringValue);
+            return isNaN(intValue) ? stringValue : intValue;
+
+        } else {
+            return 0;
+        }
     }
 }

@@ -4,22 +4,24 @@ import FormatUtility from '../utilities/format-utility.jsx';
 
 const defaultProps = {
     overviewRichText: '',
-    selectedOverviewKey: '',
+    selectedOverviewIndex: 0,
     handleOverviewSelect() {}
 };
 
 class OverviewsSection extends React.Component {
 
-    _getOverviewSelectButton(key) {
+    _getOverviewSelectButton(key, index) {
         const props = this.props,
-            disabled = key === props.selectedOverviewKey,
+
+            // Overview indices begin at 1.
+            disabled = key === Constants.overviewKeys[props.selectedOverviewIndex - 1],
             className = 'select-button' + (disabled ? ' disabled' : '');
 
         return (
             <div key={key} className={className}>
                 <h2>
                     <a disabled={disabled}
-                        onClick={disabled ? null : props.handleOverviewSelect.bind(null, key)}
+                        onClick={disabled ? null : props.handleOverviewSelect.bind(null, index + 1)}
                     >
                         {key}
                     </a>
@@ -32,8 +34,8 @@ class OverviewsSection extends React.Component {
         return (
             <div className="section overviews-section">
                 <div className="button-block">
-                    {Constants.overviewNames.map(key => {
-                        return this._getOverviewSelectButton(key);
+                    {Constants.overviewKeys.map((key, index) => {
+                        return this._getOverviewSelectButton(key, index);
                     })}
                 </div>
                 <div className="overview-text">

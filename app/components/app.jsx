@@ -8,6 +8,7 @@ import OverviewsSection from './classes/overviews-section.jsx';
 import TasksSection from './classes/tasks-section.jsx';
 import DotsSection from './classes/dots/dots-section.jsx';
 import LyricsSection from './classes/lyrics/lyrics-section.jsx';
+import Constants from './constants/constants.js';
 import GlobalHelper from './helpers/global-helper.js';
 
 const defaultProps = {
@@ -16,16 +17,22 @@ const defaultProps = {
     overviews: []
 };
 
+const storageObject = window.localStorage,
+    PLAYED_SONG_INDEX = Constants.sessionKeys.PLAYED_SONG_INDEX,
+    SELECTED_SONG_INDEX = Constants.sessionKeys.SELECTED_SONG_INDEX,
+    SELECTED_ANNOTATION_INDEX = Constants.sessionKeys.SELECTED_ANNOTATION_INDEX,
+    SELECTED_OVERVIEW_INDEX = Constants.sessionKeys.SELECTED_OVERVIEW_INDEX,
+    DEFAULT_OVERVIEW_INDEX = 1;
+
 class App extends React.Component {
 
     constructor(props) {
-        super(props);
+        const playedSongIndex = GlobalHelper.getFromSession(PLAYED_SONG_INDEX),
+            selectedSongIndex = GlobalHelper.getFromSession(SELECTED_SONG_INDEX),
+            selectedAnnotationIndex = GlobalHelper.getFromSession(SELECTED_ANNOTATION_INDEX),
+            selectedOverviewIndex = GlobalHelper.getFromSession(SELECTED_OVERVIEW_INDEX) || DEFAULT_OVERVIEW_INDEX;
 
-        /**
-         * FIXME: Assign dev query function to global dq variable for now, but
-         * delete in production.
-         */
-        window.dq = this._devQuery;
+        super(props);
 
         this._handleBodyClick = this._handleBodyClick.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
@@ -37,28 +44,21 @@ class App extends React.Component {
          * Retrieve stored song indices, if any. Song indices start at 1.
          * (Played song index isn't presently being used.)
          */
-        this.handleSongChange(window.sessionStorage.playedSongIndex, 'played');
-        this.handleSongChange(window.sessionStorage.selectedSongIndex, 'selected');
-
-        // Retrieve stored speech bubble key, if there is one.
-        this.handleOverviewSelect(window.sessionStorage.selectedOverviewKey);
+        this.handleSongChange(playedSongIndex, 'played');
+        this.handleSongChange(selectedSongIndex, 'selected');
 
         // Retrieve stored annotation key, if there is one.
-        this.handleAnnotationSelect(window.sessionStorage.selectedAnnotationIndex);
+        this.handleAnnotationSelect(selectedAnnotationIndex);
+
+        // Retrieve stored speech bubble key, if there is one.
+        this.handleOverviewSelect(selectedOverviewIndex);
 
         this.state = {
-            playedSongIndex: parseInt(window.sessionStorage.playedSongIndex) || 0,
-            selectedSongIndex: parseInt(window.sessionStorage.selectedSongIndex) || 0,
-            selectedAnnotationIndex: parseInt(window.sessionStorage.selectedAnnotationIndex) || 0,
-            selectedOverviewKey: window.sessionStorage.selectedOverviewKey,
+            playedSongIndex: playedSongIndex,
+            selectedSongIndex: selectedSongIndex,
+            selectedAnnotationIndex: selectedAnnotationIndex,
+            selectedOverviewIndex: selectedOverviewIndex
         };
-    }
-
-    // TODO: Make this more meaningful.
-    _devQuery() {
-        console.error('window.sessionStorage.playedSongIndex', window.sessionStorage.playedSongIndex);
-        console.error('window.sessionStorage.selectedSongIndex', window.sessionStorage.selectedSongIndex);
-        console.error('window.sessionStorage.selectedAnnotationIndex', window.sessionStorage.selectedAnnotationIndex);
     }
 
     _handleBodyClick(e) {
@@ -74,29 +74,24 @@ class App extends React.Component {
             !annotation.contains(e.target) &&
             !GlobalHelper.hasParentWithTagName(e.target, 'a')) {
 
-            this.handleAnnotationSelect(null, true);
+            this.handleAnnotationSelect(0, true);
         }
     }
 
     handleSongChange(songIndex = 0, actionType = 'selected', setState = false) {
-
-        if (typeof songIndex === 'string') {
-            songIndex = parseInt(songIndex) || 0;
-        }
-
         if (songIndex >= 0 && songIndex <= this.props.songs.length) {
-
             // Store song index in session.
-            window.sessionStorage[actionType + 'SongIndex'] = songIndex;
+            GlobalHelper.setInSession(actionType + 'SongIndex', songIndex);
 
             if (setState) {
                 /**
-                 * Also reset the stored annotation and speech bubble keys if
-                 * changing the selected song index.
+                 * Also reset the stored annotation and overview indices if
+                 * changing the selected song index. Right now, default for
+                 * overview is 1 for narrative.
                  */
                 if (actionType === 'selected') {
-                    this.handleAnnotationSelect(null, true);
-                    this.handleOverviewSelect(null, true);
+                    this.handleAnnotationSelect(0, true);
+                    this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX, true);
 
                     this.setState({
                         selectedSongIndex: songIndex
@@ -111,23 +106,19 @@ class App extends React.Component {
         }
     }
 
-    handleOverviewSelect(selectedOverviewKey, setState) {
-        selectedOverviewKey = selectedOverviewKey || 'narrative';
-        window.sessionStorage.selectedOverviewKey = selectedOverviewKey;
+    // TODO: Can these two methods be combined into one?
+    handleOverviewSelect(selectedOverviewIndex, setState) {
+        GlobalHelper.setInSession(SELECTED_OVERVIEW_INDEX, selectedOverviewIndex);
 
         if (setState) {
             this.setState({
-                selectedOverviewKey
+                selectedOverviewIndex
             });
         }
     }
 
     handleAnnotationSelect(selectedAnnotationIndex, setState) {
-        if (typeof selectedAnnotationIndex === 'string') {
-            selectedAnnotationIndex = parseInt(selectedAnnotationIndex) || 0;
-        }
-
-        window.sessionStorage.selectedAnnotationIndex = selectedAnnotationIndex || 0;
+        GlobalHelper.setInSession(SELECTED_ANNOTATION_INDEX, selectedAnnotationIndex);
 
         if (setState) {
             this.setState({
@@ -168,9 +159,11 @@ class App extends React.Component {
 
             selectedSong = selectedSongIndex ?
                 props.songs[selectedSongIndex - 1] : {},
-            overviewRichText = (selectedSongIndex && state.selectedOverviewKey) ?
-                selectedSong.overviews[state.selectedOverviewKey] :
-                props.overviews[state.selectedOverviewKey],
+
+            overviewRichText = (selectedSongIndex && state.selectedOverviewIndex) ?
+                selectedSong.overviews[state.selectedOverviewIndex - 1] :
+                props.overviews[state.selectedOverviewIndex - 1],
+
             tasks = selectedSongIndex ?
                 selectedSong.tasks :
                 props.tasks,
@@ -206,17 +199,18 @@ class App extends React.Component {
                         portalObjects={portalObjects}
                         handlePortalClick={this.handlePortalClick}
                     />
+                    {/* Show scrap notes if no selected song, otherwise show dots. */}
                     {!selectedSongIndex ?
-                        <NotesSection /> : null
+                        <NotesSection /> :
+                        <DotsSection dotKeys={selectedSong.dotKeys} />
                     }
-                    <DotsSection dotKeys={selectedSong.dotKeys} />
                     <StatsSection
                         lyrics={selectedSong.lyrics}
                         annotations={selectedSong.annotations}
                     />
                     <OverviewsSection
                         overviewRichText={overviewRichText}
-                        selectedOverviewKey={state.selectedOverviewKey}
+                        selectedOverviewIndex={state.selectedOverviewIndex}
                         handleOverviewSelect={this.handleOverviewSelect}
                     />
                     <TasksSection
