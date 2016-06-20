@@ -4,8 +4,8 @@
 module.exports = {
     title: 'M',
     overviews: {
-        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to secure my future chances by shaping myself into the ideal prospect over the next five years. Towards the end, I was playing regular shows in a local band. One scenester named Mara caught my eye, and I was dumbstruck when a mutual friend hinted that the interest was shared. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.',
-        music: 'This song is a carryover from back when we were The Yearlings. I kept its meaning a secret by disguising Mara\'s name in various puns, although my enunciation in the recording now makes this obvious. Since I\'m nowhere near as skilled on bass and drums as my old bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.'
+        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to secure my future chances by shaping myself into the ideal prospect over the next five years. Towards the end, I was playing regular shows in a local band. One scenester named Mara caught my eye, and I was dumbstruck when her friend hinted that the interest was shared. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.',
+        music: 'This song is a carryover from back when we were The Yearlings. I kept its meaning a secret by disguising Mara\'s name in various puns, although my enunciation in this recording now makes them obvious. Since I\'m nowhere near as skilled on bass and drums as my old bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.'
     },
     lyrics: [
         [
@@ -517,6 +517,11 @@ module.exports = {
         ]
     ],
     tasks: [
+        {
+            taskName: 'work out narrative order',
+            workedHours: 0,
+            neededHours: 6,
+        },
         {
             taskName: 'annotations',
             workedHours: 33,

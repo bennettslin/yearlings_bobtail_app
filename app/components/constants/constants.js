@@ -26,6 +26,8 @@ module.exports = {
         'pulpit',
         'reference',
         'portal'
+        // 'title'
+        // 'afterword'
     ],
 
     overviewKeys: [

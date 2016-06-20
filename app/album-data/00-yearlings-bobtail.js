@@ -27,12 +27,44 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: 'overviews',
+            taskName: 'write album overviews',
+            workedHours: 0,
+            neededHours: 6
+        },
+        {
+            taskName: 'make interactable superclass',
             workedHours: 0,
             neededHours: 3
         },
         {
-            taskName: 'keep doublespeaker verses parallel',
+            taskName: 'make selectable dots block',
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: 'keep doublespeaker verses parallel, allow for slightly centred.',
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: 'create dot popups',
+            workedHours: 0,
+            neededHours: 2,
+            subtasks: [
+                {
+                    taskName: 'make popup a general utility',
+                    workedHours: 2,
+                    neededHours: 2
+                }
+            ]
+        },
+        {
+            taskName: 'allow for Wikipedia links',
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: 'allow for non-lyric annotation links',
             workedHours: 0,
             neededHours: 3
         },
@@ -54,18 +86,6 @@ module.exports = {
             neededHours: 6
         },
         {
-            taskName: 'create code popups',
-            workedHours: 0,
-            neededHours: 2,
-            subtasks: [
-                {
-                    taskName: 'make popup a general utility',
-                    workedHours: 2,
-                    neededHours: 2
-                }
-            ]
-        },
-        {
             taskName: 'non breaking space in lyrics only',
             workedHours: 1,
             neededHours: 1
@@ -79,16 +99,6 @@ module.exports = {
             taskName: 'separate out dot categories',
             workedHours: 8,
             neededHours: 8
-        },
-        {
-            taskName: 'make interactable superclass',
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: 'make selectable dots block',
-            workedHours: 0,
-            neededHours: 3
         }
     ]
 };

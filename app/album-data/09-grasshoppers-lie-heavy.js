@@ -132,7 +132,7 @@ module.exports = {
                         {
                             anchor: 'laying qualms to rest:',
                             annotation: {
-                                description: 'It was well known to the students that the dishroom workers were hired through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and seeming familiarity with underground culture ultimately won her over.'
+                                description: 'It was well known to the students that our dishroom workers were hired through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and seeming familiarity with underground culture ultimately won her over.'
                             }
                         }
                     ]

@@ -144,7 +144,7 @@ module.exports = {
         {
             taskName: 'annotations',
             workedHours: 0,
-            neededHours: 40,
+            neededHours: 25,
             subtasks: [
 
             ]

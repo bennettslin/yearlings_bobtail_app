@@ -2,7 +2,7 @@ module.exports = {
     title: 'Look Back in Anger',
     overviews: {
         narrative: 'narrative 1',
-        music: 'personal 1'
+        music: 'A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would sing in hushed tones and then overdub several takes, so as not to wake his neighbours. He would also tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to channel Owen here, minus the impromptu part, of course.'
     },
     lyrics: [
         [
@@ -189,8 +189,8 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 0,
-            neededHours: 40,
+            workedHours: 7,
+            neededHours: 35,
             subtasks: [
 
             ]

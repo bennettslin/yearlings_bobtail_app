@@ -5,7 +5,7 @@
 module.exports = {
     title: 'Constellations!',
     overviews: {
-        narrative: 'One night, my friends Ana, Howie, Tomer, and I got high on Robitussin and explored the steam tunnels under UCLA. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer, and by the end of it, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different afterwards.',
+        narrative: 'One night, with my bassist Ana and her friends Howie and Tomer, we got high on Robitussin and explored the steam tunnels under UCLA. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer, and by the end of it, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different afterwards.',
         music: [
             'While reading',
             {
