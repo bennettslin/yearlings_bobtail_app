@@ -1,8 +1,8 @@
 module.exports = {
     title: 'Look Back in Anger',
     overviews: {
-        narrative: 'As The Yearlings became a fixture in the local scene, respect. But rather than alleviate my lifelong depression, this only redirected it into a simmering anger. At the same time, interest from women, I was starting to regret my relationship with Sita, a decision which in hindsight felt like it had been coerced under deprived circumstances.',
-        music: 'A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would sing in hushed tones and then overdub several takes, so as not to wake his neighbours. He would also tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to channel Owen here, minus the impromptu part, of course.'
+        narrative: 'As The Yearlings became a fixture in the local scene, respect. But rather than alleviate my depression, it only stewed it into a simmering anger. At the same time, the burgeoning interest from women, I was starting to regret my relationship with Sita, a decision which in hindsight felt like it had been coerced under deprived circumstances.',
+        music: 'A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would sing in hushed tones so as not to wake his neighbours, and then overdub several takes. He would also tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to channel Owen here, minus the impromptu part, of course.'
     },
     lyrics: [
         [
@@ -189,7 +189,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 7,
+            workedHours: 8,
             neededHours: 35,
             subtasks: [
 
