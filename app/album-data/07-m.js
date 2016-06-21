@@ -1,10 +1,7 @@
-/**
- * Should M be after Good Night, Sita?
- */
 module.exports = {
     title: 'M',
     overviews: {
-        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to secure my future chances by shaping myself into the ideal prospect over the next five years. Towards the end, I was playing regular shows in a local band. One scenester named Mara caught my eye, and I was dumbstruck when her friend hinted that the interest was shared. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.',
+        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal prospect. By the end, I was regularly attending local shows and trying to cobble together my own band. I kept running into a fellow scenester named Mara, and quickly grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.',
         music: 'This song is a carryover from back when we were The Yearlings. I kept its meaning a secret by disguising Mara\'s name in various puns, although my enunciation in this recording now makes them obvious. Since I\'m nowhere near as skilled on bass and drums as my old bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.'
     },
     lyrics: [
@@ -34,7 +31,7 @@ module.exports = {
                         {
                             anchor: 'learning the talents',
                             annotation: {
-                                description: 'The breakup with Catherine was uneventful, much like all the ones before. After all, I\'d done nothing wrong, per se; I just didn\'t have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. What I really needed was to take time off and build myself up from scratch, with everything that Catherine found lacking in me serving as the template.'
+                                description: 'Much like my previous failures, the breakup with Catherine was uneventful. After all, I\'d done nothing wrong, per se; I just didn\'t have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. What I needed was to secure my future chances by taking time off and building myself up from scratch, with everything that Catherine found lacking in me to serve as my template.'
                             }
                         }
                     ]
@@ -519,8 +516,8 @@ module.exports = {
     tasks: [
         {
             taskName: 'work out narrative order',
-            workedHours: 0,
-            neededHours: 6,
+            workedHours: 2,
+            neededHours: 2,
         },
         {
             taskName: 'annotations',

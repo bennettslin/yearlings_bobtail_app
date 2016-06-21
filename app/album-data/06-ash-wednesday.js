@@ -35,7 +35,7 @@ module.exports = {
                         {
                             anchor: 'bookless room,',
                             annotation: {
-                                description: 'Glancing around after we made out in my room one night, Catherine remarked that she didn\'t see any books. "I don\'t read," I said. In hindsight, that was probably the beginning of the end.'
+                                description: 'Glancing around my room one night, Catherine remarked that she didn\'t see any books. "I don\'t read," I said, only partly in jest. In hindsight, that was probably the beginning of the end.'
                             }
                         }
                     ]
@@ -196,14 +196,14 @@ module.exports = {
                         {
                             anchor: 'famous raincoat',
                             annotation: {
-                                description: 'Catherine introduced me to the music of Leonard Cohen, as we would lie in bed listening to his records. It was her impassioned reading of his song "Famous Blue Raincoat" that finally helped me to understand the heights that great lyrics can reach.',
+                                description: 'Catherine introduced me to the music of Leonard Cohen. It was her impassioned reading of his song "Famous Blue Raincoat" that finally helped me to understand the heights that great lyrics can reach.',
                                 reference: 'https://en.wikipedia.org/wiki/Famous_Blue_Raincoat'
                             }
                         },
                         {
                             anchor: 'unknown to roam,',
                             annotation: {
-                                description: 'As an itinerant community, the Irish Travellers are certainly known to roam. Also, raincoats are a slang term for condoms, which are infamously "unknown to Rome" due to the Catholic Church\'s opposition to birth control. Our makeout sessions never got to the point where one would be necessary, though I always held out hope.'
+                                description: 'As an itinerant community, the Irish Travellers are certainly known to roam. Also, raincoats are a slang term for condoms, which are infamously "unknown to Rome" due to the Catholic Church\'s opposition to birth control. Catherine had vowed not to engage in premarital sex; otherwise, I would have eagerly gone all the way.'
                             }
                         }
                     ]
@@ -269,7 +269,7 @@ module.exports = {
                         {
                             anchor: 'faked this "X,"',
                             annotation: {
-                                description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X. Also, since Catherine had vowed to remain a virgin until marriage, I would "fake the sex" for myself by masturbating alone.',
+                                description: 'On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner\'s forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X. Also, since Catherine insisted on going no further than kissing and petting, I would "fake the sex" for myself by masturbating afterwards.',
                                 reference: 'https://en.wikipedia.org/wiki/Ash_Wednesday'
                             }
                         },

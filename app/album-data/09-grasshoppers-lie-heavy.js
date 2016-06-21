@@ -323,7 +323,7 @@ module.exports = {
                         {
                             anchor: 'looming shadow nears,',
                             annotation: {
-                                description: 'I lived along the path between the campus and Sita\'s apartment. By chance, she had been walking half a block behind that evening, debating whether to flag me down. After I turned to open the gate and noticed her presence, there was an awkward few seconds where neither of us was sure what to do next.'
+                                description: 'I lived along the path between the campus and Sita\'s boarding house. By chance, she had been walking half a block behind that evening, debating whether to flag me down. After I turned to open the gate and noticed her presence, there was an awkward few seconds where neither of us was sure what to do next.'
                             }
                         }
                     ]
@@ -540,7 +540,7 @@ module.exports = {
                     lyric: {
                         anchor: 'She loves you…',
                         annotation: {
-                            description: 'It took a long while for Sita and I to grow fully comfortable around each other. During the first year or so of our friendship, we mainly just studied together. Then at some point, those study sessions progressed into cuddling, followed by necking. It all happened so fast towards the end that I was still processing what might have triggered it.'
+                            description: 'It took a long while for Sita and I to grow fully comfortable around each other. During the first year or so of our friendship, we mainly just studied together. Then at some point, those study sessions progressed into cuddling, followed by necking. It all happened so fast towards the end that I was still processing what exactly triggered it.'
                         }
                     }
                 },
@@ -588,7 +588,7 @@ module.exports = {
                         {
                             anchor: 'how\'s that compromise?',
                             annotation: {
-                                description: 'I had spent so long constructing a facade behind which to tuck away my emotions, that I was now hesitant to compromise the safety of this position. I just didn\'t want to be vulnerable again, and I had so little faith that my desires wouldn\'t be used against me, were I to reveal them so openly as once before.'
+                                description: 'I had spent so long constructing a facade behind which to tuck away my emotions, that I was now hesitant to compromise the safety of this position. I just didn\'t want to be vulnerable again, and I had so little faith that my desires wouldn\'t be used against me, were I to reveal them to Sita as I had once before.'
                             }
                         }
                     ]
