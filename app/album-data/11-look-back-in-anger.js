@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Look Back in Anger',
     overviews: {
-        narrative: 'As The Yearlings became a fixture in the local scene, respect. But rather than alleviate my depression, it only stewed it into a simmering anger. At the same time, the burgeoning interest from women, I was starting to regret my relationship with Sita, a decision which in hindsight felt like it had been coerced under deprived circumstances.',
+        narrative: 'As The Yearlings became fixtures in the local scene, I started to command far more attention from women than I\'d ever known. Yet curiously, rather than alleviate my depression, this only stewed it into full-blown anger. I also began to regret my relationship with Sita, which felt more and more like a coerced decision under deprived circumstances.',
         music: 'A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would sing in hushed tones so as not to wake his neighbours, and then overdub several takes. He would also tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to channel Owen here, minus the impromptu part, of course.'
     },
     lyrics: [

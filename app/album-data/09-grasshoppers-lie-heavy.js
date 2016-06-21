@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Grasshoppers Lie Heavy',
     overviews: {
-        narrative: 'I worked my way through college as a dishwasher in a cafeteria, which is where I met Sita. After I scared her off, we didn\'t speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating, and through my rough start in playing local shows, Sita lent her moral support, though a part of me always wanted more. At some point, she started to like me back. I\'m still not sure how.',
+        narrative: 'I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn\'t speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating, and through my rough start in playing local shows, Sita lent her moral support, though a part of me always wanted more. At some point, she started to like me back. I\'m still not sure how.',
         music: [
             'Just as',
             {
@@ -120,7 +120,7 @@ module.exports = {
                         {
                             anchor: 'reflex you asked.',
                             annotation: {
-                                description: 'After handing Sita her lancing device, I made small talk for a bit before asking her out on a date, guided mostly by impulse.'
+                                description: 'After handing Sita her lancing device, I made small talk before asking for her phone number. By then, I was mostly on autopilot when it came to hitting on random women in random situations.'
                             }
                         }
                     ]
