@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Look Back in Anger',
     overviews: {
-        narrative: 'As The Yearlings became fixtures in the local scene, I started to command far more attention from women than I\'d ever known. Yet curiously, rather than alleviate my depression, this only stewed it into full-blown anger. I also began to regret my relationship with Sita, which felt more and more like a coerced decision under deprived circumstances.',
+        narrative: 'With The Yearlings becoming a fixture in the local scene, I started to command more attention than I\'d ever known, particularly from women. And yet, my depression did not abate; instead, it simmered into a hard-boiled anger. I also began to regret my relationship with Sita, which felt more and more like a decision coerced under deprived conditions from which I had since been liberated.',
         music: 'A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would sing in hushed tones so as not to wake his neighbours, and then overdub several takes. He would also tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to channel Owen here, minus the impromptu part, of course.'
     },
     lyrics: [
@@ -9,15 +9,43 @@ module.exports = {
             [
                 {
                     time: 10,
-                    lyric: 'Scrambled past this hell, where flagboy last fell,'
+                    lyric: [
+                        'Scrambled past this hell, where',
+                        {
+                            anchor: 'flagboy',
+                            annotation: {
+                                description: 'During the Civil War, a colorbearer carried the flag of his respective side into battle. Charging headlong into a volley of musket fire while twirling a piece of cloth seemed like the perfect metaphor for my high school experience.'
+                            }
+                        },
+                        'last fell,'
+                    ]
                 },
                 {
                     time: 13,
-                    lyric: 'dragging aglets held by the bastard\'s boot,'
+                    lyric: [
+                        {
+                            anchor: 'dragging aglets',
+                            annotation: {
+                                description: 'An aglet is the plastic tip at each end of a shoelace.'
+                            }
+                        },
+                        'held by the bastard\'s boot,'
+                    ]
                 },
                 {
                     time: 16,
-                    lyric: 'as the Van Nuys belles lunched soundless through the noon.'
+                    lyric: [
+                        'as the',
+                        {
+                            anchor: 'Van Nuys belles lunched',
+                            properNoun: true,
+                            annotation: {
+                                description: 'In the First Battle of Bull Run, spectators picnicked on the hillside to witness what they assumed would be a quick victory. '
+                            },
+                            todo: true
+                        },
+                        'soundless through the noon.'
+                    ]
                 },
                 {
                     time: 22,
@@ -35,7 +63,10 @@ module.exports = {
             [
                 {
                     time: 33,
-                    lyric: 'Feeble feeder fish allowed to grow;'
+                    lyric: [
+                        'Feeble feeder fish',
+                        'allowed to grow;'
+                    ]
                 },
                 {
                     time: 36,

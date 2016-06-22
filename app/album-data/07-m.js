@@ -1,7 +1,7 @@
 module.exports = {
     title: 'M',
     overviews: {
-        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal prospect. By the end, I was regularly attending local shows and trying to cobble together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.',
+        narrative: 'After a string of dating flops that culminated in the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.',
         music: 'This song is a carryover from back when we were The Yearlings. I kept its meaning a secret by disguising Mara\'s name in various puns, although my enunciation in this recording now makes them obvious. Since I\'m nowhere near as skilled on bass and drums as my old bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.'
     },
     lyrics: [
@@ -91,7 +91,7 @@ module.exports = {
                     lyric: {
                         anchor: 'No minutiae left unmastered,',
                         annotation: {
-                            description: 'Along with reading up on general subjects like history and religion, I would also carry around an almanac to memorise trivial facts whenever I had a free minute.'
+                            description: 'While my ultimate goal was to be versed in all general subjects, the most rewarding moments came when I could demonstrate some random skill with seeming nonchalance. So I made sure to set aside time and energy for these more fanciful objectives, like solving a Rubik\'s Cube, or memorising the periodic table.'
                         }
                     }
                 },
