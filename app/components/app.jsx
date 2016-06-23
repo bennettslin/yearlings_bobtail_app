@@ -204,14 +204,14 @@ class App extends React.Component {
                         <NotesSection /> :
                         <DotsSection dotKeys={selectedSong.dotKeys} />
                     }
+                    <StatsSection
+                        lyrics={selectedSong.lyrics}
+                        annotations={selectedSong.annotations}
+                    />
                     <OverviewsSection
                         overviewRichText={overviewRichText}
                         selectedOverviewIndex={state.selectedOverviewIndex}
                         handleOverviewSelect={this.handleOverviewSelect}
-                    />
-                    <StatsSection
-                        lyrics={selectedSong.lyrics}
-                        annotations={selectedSong.annotations}
                     />
                     <TasksSection
                         tasks={tasks}

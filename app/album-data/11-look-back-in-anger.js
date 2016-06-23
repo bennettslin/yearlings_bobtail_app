@@ -12,24 +12,24 @@ module.exports = {
                     lyric: [
                         'Scrambled past this hell, where',
                         {
-                            anchor: 'flagboy',
+                            anchor: 'flagboy last fell,',
                             annotation: {
-                                description: 'During the Civil War, a colorbearer carried the flag of his respective side into battle. Charging headlong into a volley of musket fire while twirling a piece of cloth seemed like the perfect metaphor for my high school experience.'
+                                description: 'During the Civil War, a colorbearer carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth seemed like the perfect metaphor for my high school experience.'
                             }
-                        },
-                        'last fell,'
+                        }
                     ]
                 },
                 {
                     time: 13,
                     lyric: [
                         {
-                            anchor: 'dragging aglets',
+                            // Connection to Didi?
+                            anchor: 'dragging aglets held',
                             annotation: {
-                                description: 'An aglet is the plastic tip at each end of a shoelace.'
+                                description: 'An aglet is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. Anyone bent on seeing me trip and fall thus readily had the means to make it happen.'
                             }
                         },
-                        'held by the bastard\'s boot,'
+                        'by the bastard\'s boot,'
                     ]
                 },
                 {
@@ -37,19 +37,35 @@ module.exports = {
                     lyric: [
                         'as the',
                         {
-                            anchor: 'Van Nuys belles lunched',
+                            anchor: 'Van Nuys belles',
+                            annotation: {
+                                description: 'I went to high school in the Van Nuys neighbourhood of Los Angeles.'
+                            }
+                        },
+                        {
+                            anchor: 'lunched soundless',
                             properNoun: true,
                             annotation: {
-                                description: 'In the First Battle of Bull Run, spectators picnicked on the hillside to witness what they assumed would be a quick victory. '
-                            },
-                            todo: true
+                                description: 'In the First Battle of Bull Run, spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my daily battles with bullies were often fought and lost in full view of a lunchtime crowd.'
+                            }
                         },
                         'soundless through the noon.'
                     ]
                 },
                 {
                     time: 22,
-                    lyric: 'Now your sapling cut says you\'ve past ring one,'
+                    lyric: [
+                        'Now your',
+                        {
+                            anchor: 'sapling cut',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        },
+                        'says you\'ve',
+                        'past ring one,'
+                    ]
                 },
                 {
                     time: 25,
@@ -64,7 +80,13 @@ module.exports = {
                 {
                     time: 33,
                     lyric: [
-                        'Feeble feeder fish',
+                        {
+                            anchor: 'Feeble feeder fish',
+                            annotation: {
+                                description: 'Feeder fish are raised to be fed as live prey to other fish. As such, the pecking order inside their own tank is misleading, since it is the fittest amongst them that are first to be eaten alive. High school seemed to work the same way, as the things that ensured popularity also guaranteed to be eaten alive by the real world.'
+                            },
+                            todo: true
+                        },
                         'allowed to grow;'
                     ]
                 },
@@ -78,21 +100,57 @@ module.exports = {
                 },
                 {
                     time: 42,
-                    lyric: 'and laid down on the public trough.'
+                    lyric: [
+                        'and laid down on the',
+                        {
+                            anchor: 'public trough.',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 }
             ],
             [
                 {
                     time: 45,
-                    lyric: 'She braves the crowd filled first from sides.'
+                    lyric: [
+                        'She braves the crowd',
+                        {
+                            anchor: 'filled first from sides.',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 48,
-                    lyric: 'She might complete your jigsawed life.'
+                    lyric: [
+                        'She might complete your',
+                        {
+                            anchor: 'jigsawed life.',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 51,
-                    lyric: 'With hair of maraschino red,'
+                    lyric: [
+                        'With hair of',
+                        {
+                            anchor: 'maraschino red,',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 54,
