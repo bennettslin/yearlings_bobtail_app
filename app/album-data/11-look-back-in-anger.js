@@ -83,16 +83,24 @@ module.exports = {
                         {
                             anchor: 'Feeble feeder fish',
                             annotation: {
-                                description: 'Feeder fish are raised to be fed as live prey to other fish. As such, the pecking order inside their own tank is misleading, since it is the fittest amongst them that are first to be eaten alive. High school seemed to work the same way, as the things that ensured popularity also guaranteed to be eaten alive by the real world.'
-                            },
-                            todo: true
+                                description: 'Feeder fish are raised to be fed as live prey. As such, the pecking order inside their own tank is misleading, since it is the least fit amongst them who will live longest. High school seemed to work the same way, as the traits that once ensured my unpopularity now protected me from being eaten alive in the real world.'
+                            }
                         },
                         'allowed to grow;'
                     ]
                 },
                 {
                     time: 36,
-                    lyric: 'these spluttered fits found fit for show.'
+                    lyric: [
+                        'these spluttered fits found',
+                        {
+                            anchor: 'fit for show.',
+                            annotation: {
+                                description: ''
+                            },
+                            todo: true
+                        }
+                    ]
                 },
                 {
                     time: 39,
@@ -281,7 +289,11 @@ module.exports = {
             workedHours: 8,
             neededHours: 35,
             subtasks: [
-
+                {
+                    taskName: 'split into dots',
+                    workedHours: 0,
+                    neededHours: 3
+                }
             ]
         },
         {
