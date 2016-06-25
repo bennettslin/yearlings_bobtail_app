@@ -1,13 +1,11 @@
 /**
  * TODO: References, decide on where to put quotations marks. Balance between
  * not being clear and being too obvious.
- * Maybe this is the first time that I took it?
- * Correct places where I say they are my friends. They are Ana's friends.
  */
 module.exports = {
     title: 'Constellations!',
     overviews: {
-        narrative: 'One night, I tagged along with my bassist Ana and her friends, and together we explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.',
+        narrative: 'One night, I went along with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.',
         music: [
             'While reading',
             {
@@ -33,7 +31,11 @@ module.exports = {
                                     {
                                         italic: 'Finnegans Wake'
                                     },
-                                    'opens with the line "riverrun, past Eve and Adam\'s," so I figured I would start there as well. Robitussin can be a mystical experience, so we try to maintain a reverential air as we slowly make our way through the UCLA campus.'
+                                    'opens with the line "riverrun, past Eve and Adam\'s," so I figured I would start there as well. I was the only experienced user of Robitussin in the group, having learned of its narcotic effects after reading Jim Carroll\'s',
+                                    {
+                                        italic: 'The Basketball Diaries'
+                                    },
+                                    'earlier that summer. The others follow my lead in treating it as a mystical journey, and we slowly make our way through the UCLA campus with a reverential air.'
                                 ]
                             }
                         },
@@ -84,7 +86,7 @@ module.exports = {
                             anchor: 'Viking den…',
                             properNoun: true,
                             annotation: {
-                                description: 'The Vikings were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Also, the others, having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as Vicodin. The night will prove them wrong.'
+                                description: 'The Vikings were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Also, Ana\'s friends Howie and Tomer, being seasoned drug users but never having taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as Vicodin. The night will prove them wrong.'
                             }
                         }
                     ]
@@ -155,7 +157,7 @@ module.exports = {
                             anchor: 'Lapps are highmen.',
                             properNoun: true,
                             annotation: {
-                                description: 'The Lapps are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally high, as the Robitussin "laps our hymen," since my friends are trying it for the first time.'
+                                description: 'The Lapps are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally high, as the Robitussin "laps our hymen," since the others are trying it for the first time.'
                             }
                         }
                     ]
@@ -169,7 +171,7 @@ module.exports = {
                             anchor: 'Makeyars mygrate,',
                             properNoun: true,
                             annotation: {
-                                description: 'Cut back to the present scene. "Make yours my grate." Ana\'s friends Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.'
+                                description: 'Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.'
                             }
                         },
                         'from',
@@ -250,7 +252,7 @@ module.exports = {
                             anchor: 'Indus-trail sewerce,',
                             properNoun: true,
                             annotation: {
-                                description: 'As we wind through "industrial sewers" pretending to be Mughal invaders, I explain to my friends the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."'
+                                description: 'As we wind through "industrial sewers" pretending to be Mughal invaders, I explain the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."'
                             }
                         },
                         {
@@ -323,7 +325,7 @@ module.exports = {
                         {
                             anchor: 'our-youn\' invedas',
                             annotation: {
-                                description: 'Although the Aryans spoken of in the Vedas and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," this "unsolved query" must be put to rest, before my friends lose their minds.'
+                                description: 'Although the Aryans spoken of in the Vedas and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," this "unsolved query" must be put to rest, before the others lose their minds.'
                             }
                         },
                         {
