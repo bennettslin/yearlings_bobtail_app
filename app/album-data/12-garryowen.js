@@ -1,13 +1,13 @@
 module.exports = {
     title: 'Garryowen',
     overviews: {
-        narrative: 'I could get pretty hot-tempered when drunk, which led friends to joke that I had a sinister alter ego. I named ',
+        narrative: 'I got pretty hot-tempered when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. Being drunk allowed me to escape myself, and when I did, and act out in a relationship that I resented. ',
         music: [
-            'I named my drunk personality after Garryowen, the menacing dog owned by an Irish nationalist in James Joyce\'s',
+            'I named my drunken personality after Garryowen, the menacing dog owned by an Irish nationalist in James Joyce\'s',
             {
                 italic: 'Ulysses.'
             },
-            'As such, I went for an Irish reel, albeit one that departs from tradition in its layers of contrapuntal melodies. To capture the liveliness of a fiddle, I held my violin at chest level, which took some practise. The melodicas sounding in unison at the bridge were meant to evoke bagpipes at a funeral procession.'
+            'And so I went for an Irish reel here, though I departed from tradition by adding contrapuntal melodies. To capture the liveliness of a fiddle, I held my violin at chest level, which took some practise. The melodicas sounding in unison at the bridge were meant to evoke bagpipes at a funeral procession.'
 
         ]
     },
@@ -170,7 +170,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 3,
+            workedHours: 6,
             neededHours: 30,
             subtasks: [
                 {

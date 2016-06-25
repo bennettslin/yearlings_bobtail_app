@@ -5,7 +5,7 @@
 module.exports = {
     title: 'Constellations!',
     overviews: {
-        narrative: 'One night, with my bassist Ana and her friends Howie and Tomer, we got high on Robitussin and explored the steam tunnels under UCLA. I kept getting us to pretend we were Mongols and Vikings and other waves of human migration throughout history. In hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer, and by the end of it, I was pretty insane. I eventually regained my grip on reality, but the world always seemed different afterwards.',
+        narrative: 'One night, I tagged along with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.',
         music: [
             'While reading',
             {
@@ -167,7 +167,7 @@ module.exports = {
                             anchor: 'Makeyars mygrate,',
                             properNoun: true,
                             annotation: {
-                                description: 'Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.'
+                                description: 'Cut back to the present scene. "Make yours my grate." Ana\'s friends Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.'
                             }
                         },
                         'from',
