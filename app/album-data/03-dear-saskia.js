@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Dear Saskia',
     overviews: {
-        narrative: 'Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, as I felt no cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing can come from longing to share in someone\'s faith and roots, since faith and roots stay strong precisely by not being shared. Sasha moved away in middle school, just as I began having to deal with bullies. That summer, I wrote her a letter on a family trip to Taiwan.',
+        narrative: 'Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, as I felt no cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing comes from longing to share in someone\'s faith and roots, which stay strong precisely by not being shared. Sasha moved away in middle school, just as I began dealing with bullies. That summer, I wrote her a letter on a family trip to Taiwan.',
         music: 'As a kid, I marvelled at the Beatles for weaving melodies and chords so seamlessly. This song began as an overzealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for. In texture, I tried to match the passive-aggressive tone of the lyrics with woodwind screeches and bows scratched on violins.'
     },
     lyrics: [

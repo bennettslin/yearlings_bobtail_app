@@ -1,13 +1,13 @@
 module.exports = {
     title: 'Garryowen',
     overviews: {
-        narrative: 'I got pretty hot-tempered when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. Being drunk allowed me to escape myself, and when I did, and act out in a relationship that I resented. ',
+        narrative: 'I could get pretty hotheaded when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I fully resented my relationship with Sita at this point, and being drunk provided both an escape and an excuse to act out. But I really didn\'t like myself in such moments. I missed the hapless kid that I was in my head, and knowing now how to get it right, I longed for a do-over, without the mess. And without Sita.',
         music: [
             'I named my drunken personality after Garryowen, the menacing dog owned by an Irish nationalist in James Joyce\'s',
             {
                 italic: 'Ulysses.'
             },
-            'And so I went for an Irish reel here, though I departed from tradition by adding contrapuntal melodies. To capture the liveliness of a fiddle, I held my violin at chest level, which took some practise. The melodicas sounding in unison at the bridge were meant to evoke bagpipes at a funeral procession.'
+            'So I went for an Irish reel here, though I departed from tradition by adding contrapuntal melodies. To capture the liveliness of a fiddle, I held my violin at chest level, which took some practise. The melodicas sounding in unison at the bridge were meant to evoke bagpipes at a funeral procession.'
 
         ]
     },

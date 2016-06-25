@@ -1,11 +1,13 @@
 /**
  * TODO: References, decide on where to put quotations marks. Balance between
  * not being clear and being too obvious.
+ * Maybe this is the first time that I took it?
+ * Correct places where I say they are my friends. They are Ana's friends.
  */
 module.exports = {
     title: 'Constellations!',
     overviews: {
-        narrative: 'One night, I tagged along with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.',
+        narrative: 'One night, I tagged along with my bassist Ana and her friends, and together we explored the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.',
         music: [
             'While reading',
             {
@@ -82,7 +84,7 @@ module.exports = {
                             anchor: 'Viking den…',
                             properNoun: true,
                             annotation: {
-                                description: 'The Vikings were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Also, my friends, having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as Vicodin. The night will prove them wrong.'
+                                description: 'The Vikings were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Also, the others, having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as Vicodin. The night will prove them wrong.'
                             }
                         }
                     ]
