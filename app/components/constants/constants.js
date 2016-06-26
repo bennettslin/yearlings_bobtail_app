@@ -1,5 +1,7 @@
 module.exports = {
 
+    storage: window.localStorage,
+
     sessionKeys: {
         PLAYED_SONG_INDEX: 'playedSongIndex',
         SELECTED_SONG_INDEX: 'selectedSongIndex',

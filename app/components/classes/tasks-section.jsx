@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressBar from './progress-bar.jsx';
-import GlobalHelper from '../helpers/global-helper.js';
+import EventHelper from '../helpers/event-helper.js';
 import ProgressHelper from '../helpers/progress-helper.js';
 import ProgressUtility from '../utilities/progress-utility.jsx';
 
@@ -15,7 +15,7 @@ class TasksSection extends React.Component {
     }
 
     componentWillUpdate(nextProps) {
-        if (!GlobalHelper.areObjectsEqual(this.props.tasks, nextProps.tasks)) {
+        if (!ProgressHelper.areObjectsEqual(this.props.tasks, nextProps.tasks)) {
             this._setMaxTotalNeededHours(nextProps.tasks);
         }
     }

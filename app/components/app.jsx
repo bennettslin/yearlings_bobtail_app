@@ -9,7 +9,10 @@ import TasksSection from './classes/tasks-section.jsx';
 import DotsSection from './classes/dots/dots-section.jsx';
 import LyricsSection from './classes/lyrics/lyrics-section.jsx';
 import Constants from './constants/constants.js';
-import GlobalHelper from './helpers/global-helper.js';
+import EventHelper from './helpers/event-helper.js';
+import LogHelper from './helpers/log-helper.js';
+import ProgressHelper from './helpers/progress-helper.js';
+import SessionHelper from './helpers/session-helper.js';
 
 const defaultProps = {
     title: 'Yearling\'s Bobtail',
@@ -17,8 +20,7 @@ const defaultProps = {
     overviews: []
 };
 
-const storageObject = window.localStorage,
-    PLAYED_SONG_INDEX = Constants.sessionKeys.PLAYED_SONG_INDEX,
+const PLAYED_SONG_INDEX = Constants.sessionKeys.PLAYED_SONG_INDEX,
     SELECTED_SONG_INDEX = Constants.sessionKeys.SELECTED_SONG_INDEX,
     SELECTED_ANNOTATION_INDEX = Constants.sessionKeys.SELECTED_ANNOTATION_INDEX,
     SELECTED_OVERVIEW_INDEX = Constants.sessionKeys.SELECTED_OVERVIEW_INDEX,
@@ -27,14 +29,14 @@ const storageObject = window.localStorage,
 class App extends React.Component {
 
     constructor(props) {
-        const playedSongIndex = GlobalHelper.getFromSession(PLAYED_SONG_INDEX),
-            selectedSongIndex = GlobalHelper.getFromSession(SELECTED_SONG_INDEX),
-            selectedAnnotationIndex = GlobalHelper.getFromSession(SELECTED_ANNOTATION_INDEX),
-            selectedOverviewIndex = GlobalHelper.getFromSession(SELECTED_OVERVIEW_INDEX) || DEFAULT_OVERVIEW_INDEX;
+        const playedSongIndex = SessionHelper.getFromSession(PLAYED_SONG_INDEX),
+            selectedSongIndex = SessionHelper.getFromSession(SELECTED_SONG_INDEX),
+            selectedAnnotationIndex = SessionHelper.getFromSession(SELECTED_ANNOTATION_INDEX),
+            selectedOverviewIndex = SessionHelper.getFromSession(SELECTED_OVERVIEW_INDEX) || DEFAULT_OVERVIEW_INDEX;
 
         super(props);
 
-        this._assignWindowFunctions();
+        this._assignLogFunctions();
 
         this._handleBodyClick = this._handleBodyClick.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
@@ -63,33 +65,24 @@ class App extends React.Component {
         };
     }
 
-    _assignWindowFunctions() {
-        window.s = this._logStorageObject;
+    _assignLogFunctions() {
+        window.s = this._logStorage;
         window.a = this._logAnchorAnnotation.bind(this);
     }
 
-    _logStorageObject() {
+    _logStorage() {
         // Global helper's storage object is the default.
-        return GlobalHelper.logObject('window storage');
+        return LogHelper.logObject('window storage');
     }
 
-    // TODO: Create global methods to get all this stuff from state and props, then move as much of this as possible to global helper.
     _logAnchorAnnotation() {
-        // FIXME: Refactor, as this is duplicate code from render method?
-        const props = this.props,
-            state = this.state,
-            selectedSongIndex = state.selectedSongIndex,
+        const state = this.state,
+            selectedSongObject = this._getSelectedSongObject(),
+            annotationObject = this._getAnnotationObject(selectedSongObject),
+            lyricObject = LogHelper.getLyricObjectForAnnotationIndex(state.selectedAnnotationIndex, selectedSongObject.lyrics);
 
-            selectedSong = selectedSongIndex ?
-                props.songs[selectedSongIndex - 1] : {},
-
-            annotationObject = (selectedSongIndex && state.selectedAnnotationIndex) ?
-                selectedSong.annotations[state.selectedAnnotationIndex - 1] : null,
-
-            lyricObject = GlobalHelper.getLyricObjectForAnnotationIndex(state.selectedAnnotationIndex, selectedSong.lyrics);
-
-        GlobalHelper.logObject('lyric', lyricObject);
-        return GlobalHelper.logObject('annotation', annotationObject);
+        LogHelper.logObject('lyric', lyricObject);
+        return LogHelper.logObject('annotation', annotationObject);
     }
 
     _handleBodyClick(e) {
@@ -103,7 +96,7 @@ class App extends React.Component {
         if (annotation &&
             annotation !== e.target &&
             !annotation.contains(e.target) &&
-            !GlobalHelper.hasParentWithTagName(e.target, 'a')) {
+            !EventHelper.hasParentWithTagName(e.target, 'a')) {
 
             this.handleAnnotationSelect(0, true);
         }
@@ -112,7 +105,7 @@ class App extends React.Component {
     handleSongChange(songIndex = 0, actionType = 'selected', setState = false) {
         if (songIndex >= 0 && songIndex <= this.props.songs.length) {
             // Store song index in session.
-            GlobalHelper.setInSession(actionType + 'SongIndex', songIndex);
+            SessionHelper.setInSession(actionType + 'SongIndex', songIndex);
 
             if (setState) {
                 /**
@@ -139,7 +132,7 @@ class App extends React.Component {
 
     // TODO: Can these two methods be combined into one?
     handleOverviewSelect(selectedOverviewIndex, setState) {
-        GlobalHelper.setInSession(SELECTED_OVERVIEW_INDEX, selectedOverviewIndex);
+        SessionHelper.setInSession(SELECTED_OVERVIEW_INDEX, selectedOverviewIndex);
 
         if (setState) {
             this.setState({
@@ -149,7 +142,7 @@ class App extends React.Component {
     }
 
     handleAnnotationSelect(selectedAnnotationIndex, setState) {
-        GlobalHelper.setInSession(SELECTED_ANNOTATION_INDEX, selectedAnnotationIndex);
+        SessionHelper.setInSession(SELECTED_ANNOTATION_INDEX, selectedAnnotationIndex);
 
         if (setState) {
             this.setState({
@@ -163,23 +156,65 @@ class App extends React.Component {
         this.handleAnnotationSelect(selectedAnnotationIndex, true);
     }
 
+    _getSelectedSongObject() {
+        const selectedSongIndex = this.state.selectedSongIndex;
+
+        return selectedSongIndex ?
+            this.props.songs[selectedSongIndex - 1] : {};
+    }
+
+    _getOverviewRichText(selectedSongObject) {
+        const state = this.state,
+            selectedOverviewIndex = state.selectedOverviewIndex;
+
+        if (selectedOverviewIndex) {
+            const songOverviews = selectedSongObject.overviews;
+
+            // If no song overviews, then return album overviews.
+            return songOverviews ?
+                songOverviews[selectedOverviewIndex - 1] :
+                this.props.overviews[selectedOverviewIndex - 1];
+        } else {
+            return null;
+        }
+    }
+
+    _getTaskObjects(selectedSongObject) {
+        const songTasks = selectedSongObject.tasks;
+
+        // If no song tasks, then return album tasks.
+        return songTasks ? songTasks : this.props.tasks;
+    }
+
+    _getAnnotationObject(selectedSongObject) {
+        const annotations = selectedSongObject.annotations,
+            selectedAnnotationIndex = this.state.selectedAnnotationIndex;
+
+        return (annotations && selectedAnnotationIndex) ?
+                annotations[selectedAnnotationIndex - 1] : null;
+    }
+
     _getPortalObjects(annotationObject) {
-        const portalReferences = annotationObject.portalReferences;
+        if (annotationObject) {
+            const portalReferences = annotationObject.portalReferences;
 
-        // Portal objects contain portal titles and indices.
-        return portalReferences ? portalReferences.map((portalReference) => {
-            const songIndex = portalReference.songIndex,
-                annotationIndex = portalReference.annotationIndex,
-                song = this.props.songs[songIndex - 1],
-                annotation = song.annotations[annotationIndex - 1];
+            // Portal objects contain portal titles and indices.
+            return portalReferences ? portalReferences.map((portalReference) => {
+                const songIndex = portalReference.songIndex,
+                    annotationIndex = portalReference.annotationIndex,
+                    song = this.props.songs[songIndex - 1],
+                    annotation = song.annotations[annotationIndex - 1];
 
-            return {
-                songIndex: songIndex,
-                annotationIndex: annotationIndex,
-                songTitle: song.title,
-                annotationTitle: annotation.title
-            }
-        }) : null;
+                return {
+                    songIndex: songIndex,
+                    annotationIndex: annotationIndex,
+                    songTitle: song.title,
+                    annotationTitle: annotation.title
+                }
+            }) : null;
+        } else {
+            return null;
+        }
     }
 
     render() {
@@ -187,27 +222,12 @@ class App extends React.Component {
             state = this.state,
             playedSongIndex = state.playedSongIndex,
             selectedSongIndex = state.selectedSongIndex,
-
-            selectedSong = selectedSongIndex ?
-                props.songs[selectedSongIndex - 1] : {},
-
-            overviewRichText = (selectedSongIndex && state.selectedOverviewIndex) ?
-                selectedSong.overviews[state.selectedOverviewIndex - 1] :
-                props.overviews[state.selectedOverviewIndex - 1],
-
-            tasks = selectedSongIndex ?
-                selectedSong.tasks :
-                props.tasks,
-            annotationObject = (selectedSongIndex && state.selectedAnnotationIndex) ?
-                selectedSong.annotations[state.selectedAnnotationIndex - 1] : null,
-            portalObjects = annotationObject ?
-                this._getPortalObjects(annotationObject) : null;
-
-        // Includes album tasks and song tasks.
-        let allTasks = props.songs.map(song => {
-            return song.tasks;
-        });
-        allTasks.push(props.tasks);
+            selectedSongObject = this._getSelectedSongObject(),
+            overviewRichText = this._getOverviewRichText(selectedSongObject),
+            taskObjects = this._getTaskObjects(selectedSongObject),
+            allTaskObjects = ProgressHelper.getAllTaskObjects(props.tasks, props.songs),
+            annotationObject = this._getAnnotationObject(selectedSongObject),
+            portalObjects = this._getPortalObjects(annotationObject);
 
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
@@ -218,7 +238,7 @@ class App extends React.Component {
                     />
                     <SongsSection
                         songs={props.songs}
-                        allTasks={allTasks}
+                        allTasks={allTaskObjects}
                         selectedSongIndex={selectedSongIndex}
                         handleSongChange={this.handleSongChange}
                     />
@@ -233,11 +253,11 @@ class App extends React.Component {
                     {/* Show scrap notes if no selected song, otherwise show dots. */}
                     {!selectedSongIndex ?
                         <NotesSection /> :
-                        <DotsSection dotKeys={selectedSong.dotKeys} />
+                        <DotsSection dotKeys={selectedSongObject.dotKeys} />
                     }
                     <StatsSection
-                        lyrics={selectedSong.lyrics}
-                        annotations={selectedSong.annotations}
+                        lyrics={selectedSongObject.lyrics}
+                        annotations={selectedSongObject.annotations}
                     />
                     <OverviewsSection
                         overviewRichText={overviewRichText}
@@ -245,13 +265,13 @@ class App extends React.Component {
                         handleOverviewSelect={this.handleOverviewSelect}
                     />
                     <TasksSection
-                        tasks={tasks}
+                        tasks={taskObjects}
                     />
                 </div>
                 {selectedSongIndex ?
                      <div className="field right-field">
                         <LyricsSection
-                            selectedSongLyrics={selectedSong.lyrics}
+                            selectedSongLyrics={selectedSongObject.lyrics}
                             handleAnnotationSelect={this.handleAnnotationSelect}
                         />
                     </div> : null
