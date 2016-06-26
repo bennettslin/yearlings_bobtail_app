@@ -69,6 +69,11 @@ module.exports = {
             neededHours: 3
         },
         {
+            taskName: 'refactor to get album objects',
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: 'annotation header formatting',
             workedHours: 1,
             neededHours: 1,

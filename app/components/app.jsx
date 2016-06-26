@@ -34,7 +34,7 @@ class App extends React.Component {
 
         super(props);
 
-        window.storage = this._logStorageObject;
+        this._assignWindowFunctions();
 
         this._handleBodyClick = this._handleBodyClick.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
@@ -63,8 +63,33 @@ class App extends React.Component {
         };
     }
 
+    _assignWindowFunctions() {
+        window.s = this._logStorageObject;
+        window.a = this._logAnchorAnnotation.bind(this);
+    }
+
     _logStorageObject() {
-        return GlobalHelper.logStorageObject();
+        // Global helper's storage object is the default.
+        return GlobalHelper.logObject('window storage');
+    }
+
+    // TODO: Create global methods to get all this stuff from state and props, then move as much of this as possible to global helper.
+    _logAnchorAnnotation() {
+        // FIXME: Refactor, as this is duplicate code from render method?
+        const props = this.props,
+            state = this.state,
+            selectedSongIndex = state.selectedSongIndex,
+
+            selectedSong = selectedSongIndex ?
+                props.songs[selectedSongIndex - 1] : {},
+
+            annotationObject = (selectedSongIndex && state.selectedAnnotationIndex) ?
+                selectedSong.annotations[state.selectedAnnotationIndex - 1] : null,
+
+            lyricObject = GlobalHelper.getLyricObjectForAnnotationIndex(state.selectedAnnotationIndex, selectedSong.lyrics);
+
+        GlobalHelper.logObject('lyric', lyricObject);
+        return GlobalHelper.logObject('annotation', annotationObject);
     }
 
     _handleBodyClick(e) {
