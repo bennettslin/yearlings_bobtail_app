@@ -39,7 +39,7 @@ module.exports = {
                         {
                             anchor: 'Van Nuys belles',
                             annotation: {
-                                description: 'I went to high school in the Van Nuys neighbourhood of Los Angeles.'
+                                description: 'I went to high school in Van Nuys, a neighbourhood of Los Angeles.'
                             }
                         },
                         {
