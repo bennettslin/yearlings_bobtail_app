@@ -95,5 +95,20 @@ module.exports = {
                (weeks ? weeks + 'w' : '') +
                ((months || weeks) && days ? ', ' : '') +
                (days ? days + 'd' : '');
+    },
+
+    areObjectsEqual(objects1 = {}, objects2 = {}) {
+        // For task purposes.
+        return (JSON.stringify(objects1) === JSON.stringify(objects2));
+    },
+
+    getAllTaskObjects(albumTasks, songs) {
+        let allTaskObjects = songs.map(song => {
+            return song.tasks;
+        });
+
+        allTaskObjects.push(albumTasks);
+
+        return allTaskObjects;
     }
 }

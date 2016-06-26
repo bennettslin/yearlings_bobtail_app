@@ -21,32 +21,11 @@ module.exports = {
      * Separate annotations.
      */
     prepareAlbumObject(albumObject = {}) {
+        this._convertOverviews(albumObject);
         this._prepareAllAnnotations(albumObject);
         this._populatePortalReferences(albumObject);
-        this._convertOverviews(albumObject);
 
         this._deleteTemporaryStorage();
-    },
-
-    _prepareAllAnnotations(albumObject) {
-        albumObject.songs.forEach((song, songIndex) => {
-
-            // Song indices start at 1.
-            this._songIndex = songIndex + 1;
-            this._annotations = [];
-
-            this._parseLyricValue(song.lyrics);
-
-            this._convertOverviews(song);
-
-            // Add annotations to song object.
-            song.annotations = this._annotations;
-
-            // Add available dots to song object.
-            song.dotKeys = this._songDotKeys;
-
-            this._songDotKeys = {};
-        });
     },
 
     _convertOverviews(object) {
@@ -57,21 +36,26 @@ module.exports = {
         object.overviews = overviews;
     },
 
-    _populatePortalReferences(albumObject) {
-        for (const referenceKey in this._portalReferences) {
-            const references = this._portalReferences[referenceKey];
+    _prepareAllAnnotations(albumObject) {
+        albumObject.songs.forEach((song, songIndex) => {
 
-            references.forEach((reference, refIndex) => {
-                // Add references to all portals other than this one.
-                const song = albumObject.songs[reference.songIndex - 1],
-                    annotation = song.annotations[reference.annotationIndex - 1],
-                    portalReferences = references.filter((reference, thisIndex) => {
-                        return refIndex !== thisIndex;
-                    });
+            this._convertOverviews(song);
 
-                annotation.portalReferences = portalReferences;
-            });
-        }
+            // Song indices start at 1.
+            this._songIndex = songIndex + 1;
+            this._annotations = [];
+
+            this._parseLyricValue(song.lyrics);
+
+
+            // Add annotations to song object.
+            song.annotations = this._annotations;
+
+            // Add available dots to song object.
+            song.dotKeys = this._songDotKeys;
+
+            this._songDotKeys = {};
+        });
     },
 
     /**
@@ -162,6 +146,23 @@ module.exports = {
 
             // Add to dot keys object.
             dotKeys.portal = true;
+        }
+    },
+
+    _populatePortalReferences(albumObject) {
+        for (const referenceKey in this._portalReferences) {
+            const references = this._portalReferences[referenceKey];
+
+            references.forEach((reference, refIndex) => {
+                // Add references to all portals other than this one.
+                const song = albumObject.songs[reference.songIndex - 1],
+                    annotation = song.annotations[reference.annotationIndex - 1],
+                    portalReferences = references.filter((reference, thisIndex) => {
+                        return refIndex !== thisIndex;
+                    });
+
+                annotation.portalReferences = portalReferences;
+            });
         }
     },
 
