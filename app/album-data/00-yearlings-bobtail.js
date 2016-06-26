@@ -70,7 +70,7 @@ module.exports = {
         },
         {
             taskName: 'refactor to get album objects',
-            workedHours: 0,
+            workedHours: 3,
             neededHours: 3
         },
         {

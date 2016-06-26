@@ -20,19 +20,19 @@ const defaultProps = {
     overviews: []
 };
 
-const PLAYED_SONG_INDEX = Constants.sessionKeys.PLAYED_SONG_INDEX,
-    SELECTED_SONG_INDEX = Constants.sessionKeys.SELECTED_SONG_INDEX,
-    SELECTED_ANNOTATION_INDEX = Constants.sessionKeys.SELECTED_ANNOTATION_INDEX,
-    SELECTED_OVERVIEW_INDEX = Constants.sessionKeys.SELECTED_OVERVIEW_INDEX,
+const PLAYED_SONG_INDEX_KEY = Constants.sessionKeys.PLAYED_SONG_INDEX_KEY,
+    SELECTED_SONG_INDEX_KEY = Constants.sessionKeys.SELECTED_SONG_INDEX_KEY,
+    SELECTED_ANNOTATION_INDEX_KEY = Constants.sessionKeys.SELECTED_ANNOTATION_INDEX_KEY,
+    SELECTED_OVERVIEW_INDEX_KEY = Constants.sessionKeys.SELECTED_OVERVIEW_INDEX_KEY,
     DEFAULT_OVERVIEW_INDEX = 1;
 
 class App extends React.Component {
 
     constructor(props) {
-        const playedSongIndex = SessionHelper.getFromSession(PLAYED_SONG_INDEX),
-            selectedSongIndex = SessionHelper.getFromSession(SELECTED_SONG_INDEX),
-            selectedAnnotationIndex = SessionHelper.getFromSession(SELECTED_ANNOTATION_INDEX),
-            selectedOverviewIndex = SessionHelper.getFromSession(SELECTED_OVERVIEW_INDEX) || DEFAULT_OVERVIEW_INDEX;
+        const playedSongIndex = SessionHelper.getFromSession(PLAYED_SONG_INDEX_KEY),
+            selectedSongIndex = SessionHelper.getFromSession(SELECTED_SONG_INDEX_KEY),
+            selectedAnnotationIndex = SessionHelper.getFromSession(SELECTED_ANNOTATION_INDEX_KEY),
+            selectedOverviewIndex = SessionHelper.getFromSession(SELECTED_OVERVIEW_INDEX_KEY) || DEFAULT_OVERVIEW_INDEX;
 
         super(props);
 
@@ -45,16 +45,12 @@ class App extends React.Component {
         this.handlePortalClick = this.handlePortalClick.bind(this);
 
         /**
-         * Retrieve stored song indices, if any. Song indices start at 1.
+         * Retrieve stored indices, if any. Indices start at 1.
          * (Played song index isn't presently being used.)
          */
         this.handleSongChange(playedSongIndex, 'played');
         this.handleSongChange(selectedSongIndex, 'selected');
-
-        // Retrieve stored annotation key, if there is one.
         this.handleAnnotationSelect(selectedAnnotationIndex);
-
-        // Retrieve stored speech bubble key, if there is one.
         this.handleOverviewSelect(selectedOverviewIndex);
 
         this.state = {
@@ -132,7 +128,7 @@ class App extends React.Component {
 
     // TODO: Can these two methods be combined into one?
     handleOverviewSelect(selectedOverviewIndex, setState) {
-        SessionHelper.setInSession(SELECTED_OVERVIEW_INDEX, selectedOverviewIndex);
+        SessionHelper.setInSession(SELECTED_OVERVIEW_INDEX_KEY, selectedOverviewIndex);
 
         if (setState) {
             this.setState({
@@ -142,7 +138,7 @@ class App extends React.Component {
     }
 
     handleAnnotationSelect(selectedAnnotationIndex, setState) {
-        SessionHelper.setInSession(SELECTED_ANNOTATION_INDEX, selectedAnnotationIndex);
+        SessionHelper.setInSession(SELECTED_ANNOTATION_INDEX_KEY, selectedAnnotationIndex);
 
         if (setState) {
             this.setState({
