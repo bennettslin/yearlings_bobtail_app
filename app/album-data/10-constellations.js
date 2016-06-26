@@ -35,7 +35,7 @@ module.exports = {
                                     {
                                         italic: 'The Basketball Diaries'
                                     },
-                                    'earlier that summer. The others follow my lead in treating it as a mystical journey, and we slowly make our way through the UCLA campus with a reverential air.'
+                                    'earlier that summer. So the others follow my lead in treating it as a mystical journey, and we slowly make our way through the UCLA campus with a reverential air.'
                                 ]
                             }
                         },

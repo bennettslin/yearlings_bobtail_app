@@ -34,6 +34,8 @@ class App extends React.Component {
 
         super(props);
 
+        window.storage = this._logStorageObject;
+
         this._handleBodyClick = this._handleBodyClick.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this);
@@ -59,6 +61,10 @@ class App extends React.Component {
             selectedAnnotationIndex: selectedAnnotationIndex,
             selectedOverviewIndex: selectedOverviewIndex
         };
+    }
+
+    _logStorageObject() {
+        return GlobalHelper.logStorageObject();
     }
 
     _handleBodyClick(e) {

@@ -1,3 +1,7 @@
+import Constants from '../constants/constants.js';
+
+const storage = window.localStorage;
+
 module.exports = {
 
     areObjectsEqual(objects1 = {}, objects2 = {}) {
@@ -18,13 +22,24 @@ module.exports = {
          return false;
     },
 
+    logStorageObject() {
+        return this._logObject('window storage', storage);
+    },
+
+    _logObject(description, object) {
+        const objectString = JSON.stringify(object, null, 2),
+            formattedString = objectString.replace(/"/g , '');
+
+        return `${description}: ${formattedString}`;
+    },
+
     setInSession(key, value) {
-        window.localStorage[key] = value;
+        storage[key] = value;
     },
 
     getFromSession(key) {
         if (key) {
-            const stringValue = window.localStorage[key],
+            const stringValue = storage[key],
                 intValue = parseInt(stringValue);
             return isNaN(intValue) ? stringValue : intValue;
 

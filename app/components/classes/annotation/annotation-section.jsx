@@ -1,5 +1,5 @@
 import React from 'react';
-import DotButton from '../dots/dot-button.jsx';
+import DotsBlock from '../dots/dots-block.jsx';
 import Constants from '../../constants/constants.js';
 import FormatUtility from '../../utilities/format-utility.jsx';
 
@@ -31,13 +31,22 @@ class AnnotationSection extends React.Component {
         return (
             <div className="cards-block">
                 {dotKeys.map((dotKey, index) => {
-                    const richText = annotationObject[dotKey];
+                    const richText = annotationObject[dotKey],
+
+                        /**
+                         * Temporary workaround. Data helper will eventually
+                         * pass multiple dot keys.
+                         */
+                        tempDotKeys = {};
+
+                    tempDotKeys[dotKey] = true;
 
                     return (
                         <div key={index}
                             className={'annotation-card ' + dotKey}>
-                            <DotButton
-                                classValue={dotKey}
+                            <DotsBlock
+                                dotKeys={tempDotKeys}
+                                interactable={true}
                             />
                             {/* Portal card is slightly different. */}
                             {dotKey === 'portal' ?
