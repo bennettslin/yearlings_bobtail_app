@@ -57,7 +57,7 @@ module.exports = {
                             />
                             <span className="text-block">
                                 <a className="anchor-link"
-                                    onClick={clickHandler.bind(null, text.annotationIndex)} >
+                                    onClick={() => clickHandler(text.annotationIndex)} >
                                     {this.getFormattedTextElement(isLyric, text.anchor, clickHandler, index, nestedIndex)}
                                 </a>
                             </span>

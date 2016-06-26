@@ -21,7 +21,7 @@ class OverviewsSection extends React.Component {
             <div key={key} className={className}>
                 <h2>
                     <a disabled={disabled}
-                        onClick={disabled ? null : props.handleOverviewSelect.bind(null, index + 1)}
+                        onClick={disabled ? null : () => props.handleOverviewSelect(index + 1)}
                     >
                         {key}
                     </a>

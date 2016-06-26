@@ -36,29 +36,32 @@ class App extends React.Component {
 
         super(props);
 
-        this._assignLogFunctions();
-
         this._handleBodyClick = this._handleBodyClick.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
         this.handlePortalClick = this.handlePortalClick.bind(this);
 
+        this.state = {
+            playedSongIndex,
+            selectedSongIndex,
+            selectedAnnotationIndex,
+            selectedOverviewIndex
+        };
+    }
+
+    componentWillMount() {
+        const state = this.state;
         /**
          * Retrieve stored indices, if any. Indices start at 1.
          * (Played song index isn't presently being used.)
          */
-        this.handleSongChange(PLAYED_SONG_INDEX_KEY, playedSongIndex);
-        this.handleSongChange(SELECTED_SONG_INDEX_KEY, selectedSongIndex);
-        this.handleAnnotationSelect(selectedAnnotationIndex);
-        this.handleOverviewSelect(selectedOverviewIndex);
+        this.handleSongChange(state.playedSongIndex, PLAYED_SONG_INDEX_KEY);
+        this.handleSongChange(state.selectedSongIndex, SELECTED_SONG_INDEX_KEY);
+        this.handleAnnotationSelect(state.selectedAnnotationIndex);
+        this.handleOverviewSelect(state.selectedOverviewIndex);
 
-        this.state = {
-            playedSongIndex: playedSongIndex,
-            selectedSongIndex: selectedSongIndex,
-            selectedAnnotationIndex: selectedAnnotationIndex,
-            selectedOverviewIndex: selectedOverviewIndex
-        };
+        this._assignLogFunctions();
     }
 
     _assignLogFunctions() {
@@ -94,48 +97,46 @@ class App extends React.Component {
             !annotation.contains(e.target) &&
             !EventHelper.hasParentWithTagName(e.target, 'a')) {
 
-            this.handleAnnotationSelect(0, true);
+            this.handleAnnotationSelect(0);
         }
     }
 
-    _selectIndex(selectedIndexKey, selectedIndex, setState) {
+    _selectIndex(selectedIndex, selectedIndexKey) {
         SessionHelper.setInSession(selectedIndexKey, selectedIndex);
 
-        if (setState) {
-            this.setState({
-                [selectedIndexKey]: selectedIndex
-            })
-        }
+        this.setState({
+            [selectedIndexKey]: selectedIndex
+        })
     }
 
-    handleSongChange(selectedIndexKey = SELECTED_SONG_INDEX_KEY, selectedIndex = 0, setState = false) {
+    handleSongChange(selectedIndex = 0, selectedIndexKey = SELECTED_SONG_INDEX_KEY) {
         if (selectedIndex >= 0 && selectedIndex <= this.props.songs.length) {
             // Store song index in session.
-            this._selectIndex(selectedIndexKey, selectedIndex, setState);
+            this._selectIndex(selectedIndex, selectedIndexKey);
 
             /**
              * Also reset the stored annotation and overview indices if
              * changing the selected song index. Right now, default for
              * overview is 1 for narrative.
              */
-            if (setState && selectedIndexKey === SELECTED_SONG_INDEX_KEY) {
-                this.handleAnnotationSelect(0, true);
-                this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX, true);
+            if (selectedIndexKey === SELECTED_SONG_INDEX_KEY) {
+                this.handleAnnotationSelect(0);
+                this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX);
             }
         }
     }
 
-    handleOverviewSelect(selectedIndex, setState) {
-        this._selectIndex(SELECTED_OVERVIEW_INDEX_KEY, selectedIndex, setState);
+    handleOverviewSelect(selectedIndex) {
+        this._selectIndex(selectedIndex, SELECTED_OVERVIEW_INDEX_KEY);
     }
 
-    handleAnnotationSelect(selectedIndex, setState) {
-        this._selectIndex(SELECTED_ANNOTATION_INDEX_KEY, selectedIndex, setState);
+    handleAnnotationSelect(selectedIndex) {
+        this._selectIndex(selectedIndex, SELECTED_ANNOTATION_INDEX_KEY);
     }
 
     handlePortalClick(selectedSongIndex, selectedAnnotationIndex) {
-        this.handleSongChange(SELECTED_SONG_INDEX_KEY, selectedSongIndex, true);
-        this.handleAnnotationSelect(selectedAnnotationIndex, true);
+        this.handleSongChange(selectedSongIndex, SELECTED_SONG_INDEX_KEY);
+        this.handleAnnotationSelect(selectedAnnotationIndex);
     }
 
     _getSelectedSongObject() {

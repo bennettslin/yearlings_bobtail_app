@@ -11,7 +11,7 @@ class TitleSection extends React.Component {
         return (
             <div className="section title-section">
                 <h1>
-                    <a onClick={() => this.props.handleSongReset(undefined, 0, true)}>
+                    <a onClick={() => this.props.handleSongReset(0)}>
                         {this.props.titleText}
                     </a>
                 </h1>

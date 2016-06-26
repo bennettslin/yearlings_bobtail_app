@@ -14,15 +14,6 @@ const defaultProps = {
 
 class AnnotationSection extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this._onPortalClick = this._onPortalClick.bind(this);
-    }
-
-    _onPortalClick(songIndex, annotationIndex) {
-        this.props.handlePortalClick(songIndex, annotationIndex);
-    }
-
     _getAnnotationCardsBlock(annotationObject) {
         const dotKeys = Constants.allDotKeys.filter(dotKey => {
                 return annotationObject.dotKeys[dotKey];
@@ -66,9 +57,7 @@ class AnnotationSection extends React.Component {
                     return (
                         <a key={index}
                             className="portal-button"
-                            onClick={this._onPortalClick.bind(null,
-                                    portalObject.songIndex,
-                                    portalObject.annotationIndex)}>
+                            onClick={() => this.props.handlePortalClick(portalObject.songIndex, portalObject.annotationIndex)}>
                             <div className="song-title">{portalObject.songTitle}</div>
                             <div className="annotation-title">{portalObject.annotationTitle}</div>
                         </a>

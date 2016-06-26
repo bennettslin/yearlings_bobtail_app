@@ -24,7 +24,7 @@ class SongRow extends React.Component {
 
         return (
             <div className="text-cell-wrapper">
-                <a className="text-cell text" onClick={() => props.handleSongChange(undefined, props.songIndex, true)}>
+                <a className="text-cell text" onClick={() => props.handleSongChange(props.songIndex)}>
                     {props.songIndex + '. ' + props.songTitle}
                 </a>
                 <span className="text-cell figure">
