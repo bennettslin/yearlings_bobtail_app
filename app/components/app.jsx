@@ -48,8 +48,8 @@ class App extends React.Component {
          * Retrieve stored indices, if any. Indices start at 1.
          * (Played song index isn't presently being used.)
          */
-        this.handleSongChange(playedSongIndex, 'played');
-        this.handleSongChange(selectedSongIndex, 'selected');
+        this.handleSongChange(PLAYED_SONG_INDEX_KEY, playedSongIndex);
+        this.handleSongChange(SELECTED_SONG_INDEX_KEY, selectedSongIndex);
         this.handleAnnotationSelect(selectedAnnotationIndex);
         this.handleOverviewSelect(selectedOverviewIndex);
 
@@ -98,57 +98,43 @@ class App extends React.Component {
         }
     }
 
-    handleSongChange(songIndex = 0, actionType = 'selected', setState = false) {
-        if (songIndex >= 0 && songIndex <= this.props.songs.length) {
+    _selectIndex(selectedIndexKey, selectedIndex, setState) {
+        SessionHelper.setInSession(selectedIndexKey, selectedIndex);
+
+        if (setState) {
+            this.setState({
+                [selectedIndexKey]: selectedIndex
+            })
+        }
+    }
+
+    handleSongChange(selectedIndexKey = SELECTED_SONG_INDEX_KEY, selectedIndex = 0, setState = false) {
+        if (selectedIndex >= 0 && selectedIndex <= this.props.songs.length) {
             // Store song index in session.
-            SessionHelper.setInSession(actionType + 'SongIndex', songIndex);
+            this._selectIndex(selectedIndexKey, selectedIndex, setState);
 
-            if (setState) {
-                /**
-                 * Also reset the stored annotation and overview indices if
-                 * changing the selected song index. Right now, default for
-                 * overview is 1 for narrative.
-                 */
-                if (actionType === 'selected') {
-                    this.handleAnnotationSelect(0, true);
-                    this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX, true);
-
-                    this.setState({
-                        selectedSongIndex: songIndex
-                    });
-
-                } else if (actionType === 'played') {
-                    this.setState({
-                        playedSongIndex: songIndex
-                    });
-                }
+            /**
+             * Also reset the stored annotation and overview indices if
+             * changing the selected song index. Right now, default for
+             * overview is 1 for narrative.
+             */
+            if (setState && selectedIndexKey === SELECTED_SONG_INDEX_KEY) {
+                this.handleAnnotationSelect(0, true);
+                this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX, true);
             }
         }
     }
 
-    // TODO: Can these two methods be combined into one?
-    handleOverviewSelect(selectedOverviewIndex, setState) {
-        SessionHelper.setInSession(SELECTED_OVERVIEW_INDEX_KEY, selectedOverviewIndex);
-
-        if (setState) {
-            this.setState({
-                selectedOverviewIndex
-            });
-        }
+    handleOverviewSelect(selectedIndex, setState) {
+        this._selectIndex(SELECTED_OVERVIEW_INDEX_KEY, selectedIndex, setState);
     }
 
-    handleAnnotationSelect(selectedAnnotationIndex, setState) {
-        SessionHelper.setInSession(SELECTED_ANNOTATION_INDEX_KEY, selectedAnnotationIndex);
-
-        if (setState) {
-            this.setState({
-                selectedAnnotationIndex
-            });
-        }
+    handleAnnotationSelect(selectedIndex, setState) {
+        this._selectIndex(SELECTED_ANNOTATION_INDEX_KEY, selectedIndex, setState);
     }
 
     handlePortalClick(selectedSongIndex, selectedAnnotationIndex) {
-        this.handleSongChange(selectedSongIndex, 'selected', true);
+        this.handleSongChange(SELECTED_SONG_INDEX_KEY, selectedSongIndex, true);
         this.handleAnnotationSelect(selectedAnnotationIndex, true);
     }
 
@@ -230,7 +216,7 @@ class App extends React.Component {
                 <div className="field left-field">
                     <TitleSection
                         titleText={props.title}
-                        handleSongReset={this.handleSongChange.bind(null, 0, 'selected', true)}
+                        handleSongReset={this.handleSongChange}
                     />
                     <SongsSection
                         songs={props.songs}
