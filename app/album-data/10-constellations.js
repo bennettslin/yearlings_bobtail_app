@@ -31,11 +31,11 @@ module.exports = {
                                     {
                                         italic: 'Finnegans Wake'
                                     },
-                                    'opens with the line "riverrun, past Eve and Adam\'s," so I figured I would start there as well. I was the only experienced user of Robitussin in the group, having learned of its narcotic effects after reading Jim Carroll\'s',
+                                    'opens with the line "riverrun, past Eve and Adam\'s," so I figured I would start there as well. I was the experienced Robitussin user of the group, having read of its narcotic effects in Jim Carroll\'s',
                                     {
                                         italic: 'The Basketball Diaries'
                                     },
-                                    'earlier that summer. So the others follow my lead in treating it as a mystical journey, and we slowly make our way through the UCLA campus with a reverential air.'
+                                    'earlier that summer. So the others follow my lead in treating it as a mystical journey, and we tread with reverence through the UCLA campus.'
                                 ]
                             }
                         },
