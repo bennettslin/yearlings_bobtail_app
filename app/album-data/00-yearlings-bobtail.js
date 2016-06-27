@@ -64,11 +64,6 @@ module.exports = {
             ]
         },
         {
-            taskName: 'allow for non-lyric annotation links',
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: 'refactor to get album objects',
             workedHours: 3,
             neededHours: 3
