@@ -3,6 +3,7 @@ import TitleSection from './classes/title-section.jsx';
 import SongsSection from './classes/songs/songs-section.jsx';
 import NotesSection from './classes/notes-section.jsx';
 import AnnotationPopup from './classes/annotation/annotation-popup.jsx';
+import UrlPopup from './classes/url/url-popup.jsx';
 import StatsSection from './classes/stats-section.jsx';
 import OverviewsSection from './classes/overviews-section.jsx';
 import TasksSection from './classes/tasks-section.jsx';
@@ -41,12 +42,14 @@ class App extends React.Component {
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
         this.handlePortalClick = this.handlePortalClick.bind(this);
+        this.handleUrlClick = this.handleUrlClick.bind(this);
 
         this.state = {
             playedSongIndex,
             selectedSongIndex,
             selectedAnnotationIndex,
-            selectedOverviewIndex
+            selectedOverviewIndex,
+            url: null
         };
     }
 
@@ -97,7 +100,23 @@ class App extends React.Component {
             !annotation.contains(e.target) &&
             !EventHelper.hasParentWithTagName(e.target, 'a')) {
 
-            this.handleAnnotationSelect(0);
+            this.handleAnnotationSelect();
+        }
+
+        // FIXME: Duplicate code.
+        const url = this.refs.urlPopup.refs.urlSection ?
+            this.refs.urlPopup.refs.urlSection.refs.url : null;
+
+        /**
+         * Close url if anywhere outside url is clicked, with the
+         * exception of another link.
+         */
+        if (url &&
+            url !== e.target &&
+            !url.contains(e.target) &&
+            !EventHelper.hasParentWithTagName(e.target, 'a')) {
+
+            this.handleUrlClick();
         }
     }
 
@@ -120,7 +139,7 @@ class App extends React.Component {
              * overview is 1 for narrative.
              */
             if (selectedIndexKey === SELECTED_SONG_INDEX_KEY) {
-                this.handleAnnotationSelect(0);
+                this.handleAnnotationSelect();
                 this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX);
             }
         }
@@ -132,6 +151,16 @@ class App extends React.Component {
 
     handleAnnotationSelect(selectedIndex) {
         this._selectIndex(selectedIndex, SELECTED_ANNOTATION_INDEX_KEY);
+    }
+
+    handleUrlClick(urlString) {
+        // FIXME: Allow for non-Wikipedia urls?
+        const url = urlString ?
+            `https://en.m.wikipedia.org/wiki/${urlString}` : null;
+
+        this.setState({
+            url
+        });
     }
 
     handlePortalClick(selectedSongIndex, selectedAnnotationIndex) {
@@ -232,6 +261,11 @@ class App extends React.Component {
                         annotationObject={annotationObject}
                         portalObjects={portalObjects}
                         handlePortalClick={this.handlePortalClick}
+                        handleUrlClick={this.handleUrlClick}
+                    />
+                    <UrlPopup
+                        ref="urlPopup"
+                        url={state.url}
                     />
                     {/* Show scrap notes if no selected song, otherwise show dots. */}
                     {!selectedSongIndex ?

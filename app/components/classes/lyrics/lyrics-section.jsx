@@ -53,22 +53,6 @@ class LyricsSection extends React.Component {
          * A "lyric" is a single line of text within a column. A regular song
          * will have one lyric per verse. A doublespeaker song will have two.
          */
-
-        /**
-            verseObject = {
-                time: 0,
-                lyric: [
-                    'My',
-                    {
-                        annotationIndex: 1,
-                        anchor: 'awesome',
-                        dotKeys: [],
-                        todo: false
-                    },
-                    'lyric.'
-                ]
-            }
-        */
         return FormatUtility.getFormattedTextElement(true, lyric, this.props.handleAnnotationSelect);
     }
 

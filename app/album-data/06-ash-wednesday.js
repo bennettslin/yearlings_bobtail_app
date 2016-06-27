@@ -21,7 +21,14 @@ module.exports = {
                             music: 'music testing',
                             portal: 'portal testing',
                             pulpit: 'pulpit testing',
-                            reference: 'https://en.wikipedia.org/wiki/O_Captain!_My_Captain!'
+                            reference: [
+                                'blah blah blah,',
+                                {
+                                    anchor: 'O Captain! My Captain!',
+                                    urlString: 'O_Captain!_My_Captain!'
+                                },
+                                'and so forth.'
+                            ]
                         }
                     },
                     'our futile trip is done'
@@ -53,7 +60,12 @@ module.exports = {
                                 },
                                 'of rock albums."'
                             ],
-                            reference: 'https://en.wikipedia.org/wiki/Grant%27s_Tomb'
+                            reference: [
+                                {
+                                    anchor: 'Grant\'s Tomb',
+                                    urlString: 'Grant%27s_Tomb'
+                                }
+                            ]
                         }
                     },
                     'surely buried she\'d be!'

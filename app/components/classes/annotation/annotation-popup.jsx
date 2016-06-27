@@ -5,7 +5,8 @@ import AnnotationSection from './annotation-section.jsx';
 const defaultProps = {
     annotationObject: null,
     portalObjects: null,
-    handlePortalClick() {}
+    handlePortalClick() {},
+    handleUrlClick() {}
 }
 
 class AnnotationPopup extends Popup {
@@ -15,14 +16,16 @@ class AnnotationPopup extends Popup {
     }
 
     getContentElement() {
-        const annotationObject = this.props.annotationObject;
+        const props = this.props,
+            annotationObject = props.annotationObject;
 
         return annotationObject ?
             <AnnotationSection
                 ref="annotationSection"
                 annotationObject={annotationObject}
-                portalObjects={this.props.portalObjects}
-                handlePortalClick={this.props.handlePortalClick}
+                portalObjects={props.portalObjects}
+                handlePortalClick={props.handlePortalClick}
+                handleUrlClick={props.handleUrlClick}
             /> : null;
     }
 }

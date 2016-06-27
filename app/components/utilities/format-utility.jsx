@@ -44,7 +44,15 @@ module.exports = {
 
             } else if (text.anchor) {
                 // TODO: For dev purposes.
-                const todoClass = text.todo ? ' todo' : '';
+                const todoClass = text.todo ? ' todo' : '',
+
+                    /**
+                     * If it's an annotation, then the argument passed to the
+                     * click handler is the annotation index. Otherwise, it's a
+                     * reference, and the argument is a url string.
+                     */
+                    clickHandlerArgument = text.annotationIndex ?
+                        text.annotationIndex : text.urlString;
 
                 return (
                     <span key={nestedIndex + index}>
@@ -57,7 +65,7 @@ module.exports = {
                             />
                             <span className="text-block">
                                 <a className="anchor-link"
-                                    onClick={() => clickHandler(text.annotationIndex)} >
+                                    onClick={() => clickHandler(clickHandlerArgument)} >
                                     {this.getFormattedTextElement(isLyric, text.anchor, clickHandler, index, nestedIndex)}
                                 </a>
                             </span>
@@ -69,7 +77,7 @@ module.exports = {
     },
 
     _getSpacedTextString(isLyric, text, index) {
-        // Do not add initial space if string begins with apostrophe and s.
+        // Do not add initial space if string begins with "'s".
         const firstSpace = (text.indexOf('\'s') === 0 ? '' : ' ');
 
         // Add nonbreaking space between last two words if it's a lyric.

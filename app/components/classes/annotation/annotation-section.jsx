@@ -9,7 +9,8 @@ const defaultProps = {
         dotKeys: {}
     },
     portalObjects: null,
-    handlePortalClick() {}
+    handlePortalClick() {},
+    handleUrlClick() {}
 }
 
 class AnnotationSection extends React.Component {
@@ -42,7 +43,7 @@ class AnnotationSection extends React.Component {
                             {/* Portal card is slightly different. */}
                             {dotKey === 'portal' ?
                                 this._getPortalsBlock(this.props.portalObjects) :
-                                FormatUtility.getFormattedTextElement(false, richText)}
+                                FormatUtility.getFormattedTextElement(false, richText, this.props.handleUrlClick)}
                         </div>
                     );
                 })}

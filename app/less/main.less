@@ -5,6 +5,7 @@
 
 @import "./classes/songs.less";
 @import "./classes/annotation.less";
+@import "./classes/url.less";
 @import "./classes/overviews.less";
 @import "./classes/tasks.less";
 @import "./classes/dots.less";
@@ -70,10 +71,13 @@ body {
 
 .section {
     box-sizing: border-box;
-    padding: @field-padding;
-    margin: @field-padding 0;
 
-    &:not(.annotation-section) {
+    &:not(.url-section) {
+        padding: @field-padding;
+    }
+
+    &:not(.popup-content-wrapper) {
+        margin: @field-padding 0;
         background-color: @section-colour;
         box-shadow: 0 2px 2px 2px @box-shadow-colour;
     }
@@ -150,8 +154,14 @@ body {
     cursor: pointer;
 }
 
+// TODO: Make popup mixin.
 .popup-content-wrapper {
     .animation-mixin;
+    @overflow-margin-width: 5px;
+    position: absolute;
+    left: -@overflow-margin-width - (@field-padding * 0.5);
+    width: @centre-field-width + (@overflow-margin-width * 2);
+    overflow-y: scroll;
     box-shadow: -2px 2px 8px 8px @box-shadow-colour;
 }
 

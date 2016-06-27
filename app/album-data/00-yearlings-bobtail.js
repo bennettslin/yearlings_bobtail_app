@@ -64,11 +64,6 @@ module.exports = {
             ]
         },
         {
-            taskName: 'allow for Wikipedia links',
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: 'allow for non-lyric annotation links',
             workedHours: 0,
             neededHours: 3
@@ -115,5 +110,10 @@ module.exports = {
             workedHours: 3,
             neededHours: 3
         },
+        {
+            taskName: 'allow for Wikipedia links',
+            workedHours: 3,
+            neededHours: 3
+        }
     ]
 };
