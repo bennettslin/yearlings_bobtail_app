@@ -22,26 +22,27 @@ module.exports = {
         return true;
     },
 
-    getLyricObjectForAnnotationIndex(annotationIndex, object, lyricObject) {
+    getLyricObjectForAnnotationIndex(annotationIndex, object, returnObject) {
         // For logging purposes.
 
         if (Array.isArray(object)) {
-            return object.reduce((previousReturnObject, element) => {
-                return this.getLyricObjectForAnnotationIndex(annotationIndex, element, lyricObject) || previousReturnObject;
+            return object.reduce((previousObject, element) => {
+                return this.getLyricObjectForAnnotationIndex(annotationIndex, element, returnObject) || previousObject;
             }, null);
 
         } else if (typeof object === 'object') {
-            /**
-             * If there is no lyric object, then we are in a parent object that
-             * contains the lyric object.
-             */
-            if (!lyricObject) {
-                return this.getLyricObjectForAnnotationIndex(annotationIndex, object.lyric, object.lyric);
 
-            // Otherwise, we are now in the lyric object.
-            } else {
-                return object.annotationIndex === annotationIndex ? object : null;
+            // If it has an annotation index, return the parent lyric object.
+            if (object.annotationIndex) {
+                return object.annotationIndex === annotationIndex ? returnObject : null;
             }
+
+            // Otherwise, keep recursing until we find the object with an annotation index.
+            return Constants.textKeys.reduce((previousObject, textKey) => {
+                const currentLyricObject = (textKey.toLowerCase().indexOf('lyric') > -1) ? object[textKey] : returnObject;
+
+                return this.getLyricObjectForAnnotationIndex(annotationIndex, object[textKey], currentLyricObject) || previousObject;
+            }, null);
 
         } else {
             return null;

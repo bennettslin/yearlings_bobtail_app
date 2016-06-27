@@ -1,5 +1,5 @@
 import React from 'react';
-import LyricsColumn from './lyrics-column.jsx';
+import FormatUtility from '../../utilities/format-utility.jsx';
 
 const defaultProps = {
     selectedSongLyrics: '',
@@ -8,26 +8,84 @@ const defaultProps = {
 
 class LyricsSection extends React.Component {
 
+    _getStanzaElement(stanzaArray, stanzaIndex) {
+        // A "stanza" wraps a block of text.
+        return (
+            <div className={'stanza ' + stanzaIndex} key={stanzaIndex}>
+                {stanzaArray.map((verseObject, verseIndex) => {
+                    return this._getVerseElement(verseObject, verseIndex);
+                })}
+            </div>
+        );
+    }
+
+    _getVerseElement(verseObject, verseIndex) {
+        // A "verse" wraps a single line of text.
+        let lyricElements;
+
+        // It is a regular song.
+        if (verseObject.lyric) {
+            lyricElements = this._getLyricElement(verseObject.lyric);
+
+        // It is a doublespeaker song
+        } else {
+            lyricElements = (
+                <div className="double-lines-block">
+                    <div className="line left">
+                        {this._getLyricElement(verseObject.leftLyric)}
+                    </div>
+                    <div className="line right">
+                        {this._getLyricElement(verseObject.rightLyric)}
+                    </div>
+                </div>
+            );
+        }
+
+        return (
+            <div className={'verse ' + verseIndex} key={verseIndex}>
+                {lyricElements}
+            </div>
+        );
+    }
+
+    _getLyricElement(lyric, className) {
+        /**
+         * A "lyric" is a single line of text within a column. A regular song
+         * will have one lyric per verse. A doublespeaker song will have two.
+         */
+
+        /**
+            verseObject = {
+                time: 0,
+                lyric: [
+                    'My',
+                    {
+                        annotationIndex: 1,
+                        anchor: 'awesome',
+                        dotKeys: [],
+                        todo: false
+                    },
+                    'lyric.'
+                ]
+            }
+        */
+        return FormatUtility.getFormattedTextElement(true, lyric, this.props.handleAnnotationSelect);
+    }
+
     render() {
         const props = this.props,
-            isDoublespeaker = props.selectedSongLyrics.length > 1,
-            lyricsColumns = props.selectedSongLyrics.map((lyrics, index) => {
-                return (
-                    <LyricsColumn
-                        key={index}
-                        columnKey={isDoublespeaker ? (index === 0 ? 'left' : 'right') : null}
-                        selectedSongLyrics={lyrics}
-                        handleAnnotationSelect={props.handleAnnotationSelect}
-                    />
-                );
-            });
+            lyricsBlock = (
+                <div className={'lyrics-block'}>
+                    {props.selectedSongLyrics.map((stanzaArray, stanzaIndex) => {
+                        return this._getStanzaElement(stanzaArray, stanzaIndex);
+                    })}
+                </div>
+            );
 
         return (
             <div className="section lyrics-section">
                 <h2>lyrics</h2>
-                <div className="lyric-columns">
-                    {lyricsColumns}
-                </div>
+                {lyricsBlock}
             </div>
         );
     }

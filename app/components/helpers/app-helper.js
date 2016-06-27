@@ -68,17 +68,15 @@ module.exports = {
             });
 
         } else if (typeof lyricValue === 'object') {
-            if (lyricValue.lyric) {
-            this._parseLyricValue(lyricValue.lyric);
-
-            } else if (lyricValue.emphasis) {
-            this._parseLyricValue(lyricValue.emphasis);
-
-            } else if (lyricValue.italic) {
-            this._parseLyricValue(lyricValue.italic);
-
-            } else if (lyricValue.anchor) {
+            if (lyricValue.anchor) {
                 this._prepareAnnotation(lyricValue);
+
+            } else {
+                Constants.textKeys.forEach(textKey => {
+                    if (textKey !== 'anchor' && lyricValue[textKey]) {
+                        this._parseLyricValue(lyricValue[textKey]);
+                    }
+                });
             }
         }
     },

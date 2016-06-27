@@ -1,21 +1,4 @@
-.lyric-columns {
-    display: flex;
-}
-
-.lyric-column {
-
-    &.doublespeaker {
-        &.left {
-            padding-right: @field-padding * 0.5;
-        }
-
-        &.right {
-            padding-left: @field-padding * 0.5;
-        }
-    }
-}
-
-.lyric-block {
+.lyrics-block {
     @lyric-verse-size: 1em;
     font-size: @lyric-verse-size;
     line-height: 150%;
@@ -30,9 +13,13 @@
         }
 
         .verse {
-            @hanging-indent-width: 1.5em;
-            padding-left: @hanging-indent-width;
-            text-indent:-@hanging-indent-width;
+            // TODO: Figure out better way to distinguish odd and even verses.
+            &:nth-child(odd) {
+                background-color: #eed;
+            }
+            &:nth-child(even) {
+                // background-color: #ffe;
+            }
         }
     }
 
@@ -43,6 +30,22 @@
     .text-block {
         position: relative;
         z-index: @text-z-index;
+    }
+}
+
+.double-lines-block {
+    display: flex;
+
+    .line {
+        @hanging-indent-width: 1.5em;
+        flex-grow: 1;
+        text-indent:-@hanging-indent-width;
+        padding-left: @hanging-indent-width;
+        width: 100%;
+
+        &.left {
+            margin-right: @field-padding * 2;
+        }
     }
 }
 

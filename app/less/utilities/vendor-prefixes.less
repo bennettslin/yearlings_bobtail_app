@@ -16,14 +16,14 @@
 }
 
 // Not presently being used.
-#gradient {
-    .linear-gradient(@startColor: #555,
-                     @endColor: #333,
-                     @fallbackColor: mix(@startColor, @endColor, 60%),
-                     @direction: bottom) {
-        background-color: @fallbackColor;
-        background: -ms-linear-gradient(@direction, @startColor, @endColor); /* IE10 */
-        background: linear-gradient(to @direction, @startColor, @endColor);
-        background-repeat: repeat-x;
-    }
-}
+// #gradient {
+//     .linear-gradient(@edgeColour: #555,
+//                      @middleColour: #333,
+//                      @fallbackColor: mix(@edgeColour, @middleColour, 60%),
+//                      @direction: bottom) {
+//         background-color: @fallbackColor;
+//         background: -ms-linear-gradient(@direction, @edgeColour, @middleColour, @edgeColour); /* IE10 */
+//         background: linear-gradient(to @direction, @edgeColour, @middleColour, @edgeColour);
+//         background-repeat: repeat-x;
+//     }
+// }

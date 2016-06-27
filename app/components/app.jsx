@@ -173,7 +173,7 @@ class App extends React.Component {
         const annotations = selectedSongObject.annotations,
             selectedAnnotationIndex = this.state.selectedAnnotationIndex;
 
-        return (annotations && selectedAnnotationIndex) ?
+        return annotations ?
                 annotations[selectedAnnotationIndex - 1] : null;
     }
 

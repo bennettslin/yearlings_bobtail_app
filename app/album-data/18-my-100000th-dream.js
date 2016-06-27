@@ -6,138 +6,136 @@ module.exports = {
     },
     lyrics: [
         [
-            [
-                {
-                    time: 13,
-                    lyric: 'My hundred thousandth dream, I bumped into my Sita.'
-                },
-                {
-                    time: 19,
-                    lyric: 'Silent for a while, we searched our eyes,'
-                },
-                {
-                    time: 23,
-                    lyric: 'then we smiled and like old times,'
-                },
-                {
-                    time: 27,
-                    lyric: 'I took her shoulder as we drove from El Torito.'
-                },
-                {
-                    time: 34,
-                    lyric: 'I said never again we\'ll slave our whole lives away!'
-                }
-            ],
-            [
-                {
-                    time: 43,
-                    lyric: 'As pretty as the rainbow, Sita! Sita!'
-                },
-                {
-                    time: 49,
-                    lyric: 'Did I ever live another life?'
-                },
-                {
-                    time: 56,
-                    lyric: 'As precious as a summer, Sita! Sita!'
-                },
-                {
-                    time: 63,
-                    lyric: 'Did I ever live another life?'
-                },
-                {
-                    time: 70,
-                    lyric: 'And were you mine?'
-                }
-            ],
-            [
-                {
-                    time: 74,
-                    lyric: 'My hundred thousandth dream, I kissed my senorita,'
-                },
-                {
-                    time: 80,
-                    lyric: 'on the pampas where the gopis played,'
-                },
-                {
-                    time: 84,
-                    lyric: 'and the seasons glide away.'
-                },
-                {
-                    time: 89,
-                    lyric: 'I can\'t remember how or when my heart was Sita\'s.'
-                },
-                {
-                    time: 94,
-                    lyric: 'We were young, so sure of life, never knowing time unkind!'
-                }
-            ],
-            [
-                {
-                    time: 103,
-                    lyric: 'I spent a lifetime waiting, Sita! Sita!'
-                },
-                {
-                    time: 110,
-                    lyric: 'Did I ever live another life?'
-                },
-                {
-                    time: 117,
-                    lyric: 'We blow the wind in whistles, Sita! Sita!'
-                },
-                {
-                    time: 124,
-                    lyric: 'Did I ever live another life?'
-                },
-                {
-                    time: 131,
-                    lyric: 'When you were mine?'
-                }
-            ],
-            [
-                {
-                    time: 163,
-                    lyric: 'My hundred thousandth dream, on the cliffs of El Cerrito,'
-                },
-                {
-                    time: 169,
-                    lyric: 'she says now it\'s dark and getting late,'
-                },
-                {
-                    time: 174,
-                    lyric: 'but we\'ll always have today.'
-                },
-                {
-                    time: 178,
-                    lyric: 'Why does my last thought in this world belong to Sita?'
-                },
-                {
-                    time: 183,
-                    lyric: 'Now the light spills warm and bright… gently fills these eyes…'
-                }
-            ],
-            [
-                {
-                    time: 192,
-                    lyric: 'She\'ll always come to take me, Sita! Sita!'
-                },
-                {
-                    time: 199,
-                    lyric: 'Will I ever live another life?'
-                },
-                {
-                    time: 206,
-                    lyric: 'Real or imaginary, Sita! Sita!'
-                },
-                {
-                    time: 213,
-                    lyric: 'Will I ever live another life?'
-                },
-                {
-                    time: 220,
-                    lyric: 'When you\'ll be mine?'
-                }
-            ]
+            {
+                time: 13,
+                lyric: 'My hundred thousandth dream, I bumped into my Sita.'
+            },
+            {
+                time: 19,
+                lyric: 'Silent for a while, we searched our eyes,'
+            },
+            {
+                time: 23,
+                lyric: 'then we smiled and like old times,'
+            },
+            {
+                time: 27,
+                lyric: 'I took her shoulder as we drove from El Torito.'
+            },
+            {
+                time: 34,
+                lyric: 'I said never again we\'ll slave our whole lives away!'
+            }
+        ],
+        [
+            {
+                time: 43,
+                lyric: 'As pretty as the rainbow, Sita! Sita!'
+            },
+            {
+                time: 49,
+                lyric: 'Did I ever live another life?'
+            },
+            {
+                time: 56,
+                lyric: 'As precious as a summer, Sita! Sita!'
+            },
+            {
+                time: 63,
+                lyric: 'Did I ever live another life?'
+            },
+            {
+                time: 70,
+                lyric: 'And were you mine?'
+            }
+        ],
+        [
+            {
+                time: 74,
+                lyric: 'My hundred thousandth dream, I kissed my senorita,'
+            },
+            {
+                time: 80,
+                lyric: 'on the pampas where the gopis played,'
+            },
+            {
+                time: 84,
+                lyric: 'and the seasons glide away.'
+            },
+            {
+                time: 89,
+                lyric: 'I can\'t remember how or when my heart was Sita\'s.'
+            },
+            {
+                time: 94,
+                lyric: 'We were young, so sure of life, never knowing time unkind!'
+            }
+        ],
+        [
+            {
+                time: 103,
+                lyric: 'I spent a lifetime waiting, Sita! Sita!'
+            },
+            {
+                time: 110,
+                lyric: 'Did I ever live another life?'
+            },
+            {
+                time: 117,
+                lyric: 'We blow the wind in whistles, Sita! Sita!'
+            },
+            {
+                time: 124,
+                lyric: 'Did I ever live another life?'
+            },
+            {
+                time: 131,
+                lyric: 'When you were mine?'
+            }
+        ],
+        [
+            {
+                time: 163,
+                lyric: 'My hundred thousandth dream, on the cliffs of El Cerrito,'
+            },
+            {
+                time: 169,
+                lyric: 'she says now it\'s dark and getting late,'
+            },
+            {
+                time: 174,
+                lyric: 'but we\'ll always have today.'
+            },
+            {
+                time: 178,
+                lyric: 'Why does my last thought in this world belong to Sita?'
+            },
+            {
+                time: 183,
+                lyric: 'Now the light spills warm and bright… gently fills these eyes…'
+            }
+        ],
+        [
+            {
+                time: 192,
+                lyric: 'She\'ll always come to take me, Sita! Sita!'
+            },
+            {
+                time: 199,
+                lyric: 'Will I ever live another life?'
+            },
+            {
+                time: 206,
+                lyric: 'Real or imaginary, Sita! Sita!'
+            },
+            {
+                time: 213,
+                lyric: 'Will I ever live another life?'
+            },
+            {
+                time: 220,
+                lyric: 'When you\'ll be mine?'
+            }
         ]
     ],
     tasks: [
