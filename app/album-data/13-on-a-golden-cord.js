@@ -480,6 +480,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: 'restructure lyrics',
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: 'annotations',
             workedHours: 0,
             neededHours: 65,

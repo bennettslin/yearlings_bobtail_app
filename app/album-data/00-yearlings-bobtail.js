@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: 'change reduce to for/of to allow breaks',
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: 'write album overviews',
             workedHours: 0,
             neededHours: 6
@@ -42,7 +47,7 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: 'keep doublespeaker verses parallel, allow for slightly centred.',
+            taskName: 'allow multiple dots',
             workedHours: 0,
             neededHours: 3
         },
@@ -104,6 +109,11 @@ module.exports = {
             taskName: 'separate out dot categories',
             workedHours: 8,
             neededHours: 8
-        }
+        },
+        {
+            taskName: 'keep doublespeaker verses parallel',
+            workedHours: 3,
+            neededHours: 3
+        },
     ]
 };

@@ -38,13 +38,16 @@
 
     .line {
         @hanging-indent-width: 1.5em;
-        flex-grow: 1;
         text-indent:-@hanging-indent-width;
         padding-left: @hanging-indent-width;
-        width: 100%;
+        width: @lyric-column-width;
 
         &.left {
-            margin-right: @field-padding * 2;
+            margin-right: @field-padding;
+        }
+
+        &.right {
+            margin-left: @field-padding;
         }
     }
 }
