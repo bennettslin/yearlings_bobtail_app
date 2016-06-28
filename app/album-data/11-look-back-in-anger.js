@@ -58,21 +58,44 @@ module.exports = {
                     {
                         anchor: 'sapling cut',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'A sapling that survives its first winter will have earned its first tree ring, as plainly revealed in each cut it has endured along the way.'
+                        }
                     },
                     'says you\'ve',
-                    'past ring one,'
+                    {
+                        anchor: 'past ring one,',
+                        annotation: {
+                            description: 'A ring also symbolises long-term commitment in a relationship. And of course, after years of struggling to win someone over, I am now in my first real relationship.'
+                        }
+                    }
                 ]
             },
             {
                 time: 25,
-                lyric: 'yet— if adding up— then for more you\'d vie.'
+                lyric: [
+                    'yet— if adding up— then',
+                    {
+                        anchor: 'for more you\'d vie.',
+                        annotation: {
+                            description: 'Situations never seem that bad in hindsight, though. . After all, each new ring is an indicator of further growth.'
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 28,
-                lyric: 'From the valley of death you rode, so on spite you thrive.'
+                lyric: [
+                    'From the',
+                    {
+                        anchor: 'valley of death',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'you rode, so on spite you thrive.'
+                ]
             }
         ],
         [
