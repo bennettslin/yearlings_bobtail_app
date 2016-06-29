@@ -90,7 +90,7 @@ module.exports = {
                     {
                         anchor: 'valley of death',
                         annotation: {
-                            description: ''
+                            description: 'In his poem "Charge of the Light Brigade," Alfred Tennyson spoke of the noble six hundred who rode. '
                         },
                         todo: true
                     },
