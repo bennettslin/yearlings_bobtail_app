@@ -77,9 +77,8 @@ module.exports = {
                     {
                         anchor: 'for more you\'d vie.',
                         annotation: {
-                            description: 'Situations never seem that bad in hindsight, though. . After all, each new ring is an indicator of further growth.'
-                        },
-                        todo: true
+                            description: 'But even if it was a struggle, I made it through, which means I can do it again. And why wouldn\'t I want to? After all, much like tree rings, each new relationship is a badge to be worn, as a testament to one\'s resilience and continued growth.'
+                        }
                     }
                 ]
             },
