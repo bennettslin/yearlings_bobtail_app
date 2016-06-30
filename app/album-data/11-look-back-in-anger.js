@@ -38,7 +38,7 @@ module.exports = {
                     {
                         anchor: 'Van Nuys belles',
                         annotation: {
-                            description: 'I went to high school in Van Nuys, a neighbourhood of Los Angeles.'
+                            description: 'I went to high school in Van Nuys, a neighbourhood smack-dab in the middle of the San Fernando Valley.'
                         }
                     },
                     {
@@ -58,14 +58,14 @@ module.exports = {
                     {
                         anchor: 'sapling cut',
                         annotation: {
-                            description: 'A sapling that survives its first winter will have earned its first tree ring, as plainly revealed in each cut it has endured along the way.'
+                            description: 'A sapling that survives its first winter will have earned its first tree ring, as plainly revealed beneath each cut it has endured along the way.'
                         }
                     },
                     'says you\'ve',
                     {
                         anchor: 'past ring one,',
                         annotation: {
-                            description: 'A ring also symbolises long-term commitment in a relationship. And of course, after years of struggling to win someone over, I am now in my first real relationship.'
+                            description: 'A ring also symbolises long-term commitment in a relationship. And of course, after years of constant struggle to win someone over, I am now in my first real relationship.'
                         }
                     }
                 ]
@@ -77,7 +77,7 @@ module.exports = {
                     {
                         anchor: 'for more you\'d vie.',
                         annotation: {
-                            description: 'But even if it was a struggle, I made it through, which means I can do it again. And why wouldn\'t I want to? After all, much like tree rings, each new relationship is a badge to be worn, as a testament to one\'s resilience and continued growth.'
+                            description: 'But even if it was a struggle, I made it through, which means I can do it again. And why wouldn\'t I want to? After all, each new relationship is like one more tree ring, a testament to one\'s resilience and continued growth.'
                         }
                     }
                 ]
@@ -87,11 +87,11 @@ module.exports = {
                 lyric: [
                     'From the',
                     {
-                        anchor: 'valley of death',
+                        anchor: 'Valley of death',
+                        properNoun: true,
                         annotation: {
-                            description: 'In his poem "Charge of the Light Brigade," Alfred Tennyson spoke of the noble six hundred who rode. '
-                        },
-                        todo: true
+                            description: 'Like the six hundred who rode into the valley of death in Alfred Tennyson\'s poem "The Charge of the Light Brigade," I had quietly accepted that mine was "not to make reply" nor "to reason why" but simply "to do and die" during those years in my own Valley of death. This casual acceptance of hardship then made it easier to justify bringing it upon Sita.'
+                        }
                     },
                     'you rode, so on spite you thrive.'
                 ]
@@ -104,7 +104,7 @@ module.exports = {
                     {
                         anchor: 'Feeble feeder fish',
                         annotation: {
-                            description: 'Feeder fish are raised to be fed as live prey. As such, the pecking order inside their own tank is misleading, since it is the least fit amongst them who will live longest. High school seemed to work the same way, as the traits that once ensured my unpopularity now protected me from being eaten alive in the real world.'
+                            description: 'Feeder fish are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit amongst them who will live longest. High school seemed to work the same way, as the traits that once resigned me to unpopularity now protected me from being eaten alive in the real world.'
                         }
                     },
                     'allowed to grow;'

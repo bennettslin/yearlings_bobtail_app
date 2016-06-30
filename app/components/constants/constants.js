@@ -23,15 +23,15 @@ module.exports = {
     allDotKeys: [
         'description',
         'pun',
-        'backstory',
-        'narrative',
+        'backstory', // My perspective while making the album.
+        'narrative', // My perspective in the story.
         'foreshadow',
         'music',
         'pulpit',
         'reference',
         'portal'
         // 'title'
-        // 'afterword'
+        // 'afterword' // My perspective while making this website.
     ],
 
     overviewKeys: [
