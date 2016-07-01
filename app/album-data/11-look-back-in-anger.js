@@ -90,7 +90,7 @@ module.exports = {
                         anchor: 'Valley of death',
                         properNoun: true,
                         annotation: {
-                            description: 'Like the six hundred who rode into the valley of death in Alfred Tennyson\'s poem "The Charge of the Light Brigade," I had quietly accepted that mine was "not to make reply" nor "to reason why" but simply "to do and die" during those years in my own Valley of death. This casual acceptance of hardship then made it easier to justify bringing it upon Sita.'
+                            description: 'Like the six hundred who rode into the valley of death in Alfred Tennyson\'s poem "The Charge of the Light Brigade," I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own years in the Valley of death. This casual view of hardship enabled me to justify the pain that my ambitions would one day bring upon Sita.'
                         }
                     },
                     'you rode, so on spite you thrive.'
@@ -104,7 +104,7 @@ module.exports = {
                     {
                         anchor: 'Feeble feeder fish',
                         annotation: {
-                            description: 'Feeder fish are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit amongst them who will live longest. High school seemed to work the same way, as the traits that once resigned me to unpopularity now protected me from being eaten alive in the real world.'
+                            description: 'Feeder fish are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit who will live longest. High school seemed to work the same way, as the traits that once resigned me to unpopularity now protected me from being eaten alive in the real world.'
                         }
                     },
                     'allowed to grow;'
@@ -112,33 +112,24 @@ module.exports = {
             },
             {
                 time: 36,
-                lyric: [
-                    'these spluttered fits found',
-                    {
-                        anchor: 'fit for show.',
-                        annotation: {
-                            description: ''
-                        },
-                        todo: true
-                    }
-                ]
+                lyric: 'these spluttered fits found fit for show.'
             },
             {
                 time: 39,
-                lyric: 'You wished a cancer nibbled off,'
-            },
-            {
-                time: 42,
                 lyric: [
-                    'and laid down on the',
+                    'You wished a',
                     {
-                        anchor: 'public trough.',
+                        anchor: 'cancer nibbled off,',
                         annotation: {
                             description: ''
                         },
                         todo: true
                     }
                 ]
+            },
+            {
+                time: 42,
+                lyric: 'and laid down on the public trough.'
             }
         ],
         [
@@ -149,7 +140,7 @@ module.exports = {
                     {
                         anchor: 'filled first from sides.',
                         annotation: {
-                            description: ''
+                            description: 'At smaller venues, the first showgoers to arrive typically gravitate towards the walls and the front of the stage. Tonight, an attractive latecomer enters and has no choice but to take a space in the middle.'
                         },
                         todo: true
                     }
@@ -162,7 +153,7 @@ module.exports = {
                     {
                         anchor: 'jigsawed life.',
                         annotation: {
-                            description: ''
+                            description: 'A jigsaw puzzle is also typically begun by connecting the edge pieces and then filling in the space inward. '
                         },
                         todo: true
                     }
@@ -306,7 +297,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 8,
+            workedHours: 11,
             neededHours: 35,
             subtasks: [
                 {
