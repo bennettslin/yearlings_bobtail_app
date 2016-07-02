@@ -77,7 +77,7 @@ module.exports = {
                     {
                         anchor: 'for more you\'d vie.',
                         annotation: {
-                            description: 'But even if it was a struggle, I made it through, which means I can do it again. And why wouldn\'t I want to? After all, each new relationship is like one more tree ring, a testament to one\'s resilience and continued growth.'
+                            description: 'But even if it was a struggle, I made it through, which means I can do it again. And why wouldn\'t I? After all, each new relationship is like another tree ring, a testament to one\'s resilience and continued growth.'
                         }
                     }
                 ]
@@ -91,7 +91,8 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: 'Like the six hundred who rode into the valley of death in Alfred Tennyson\'s poem "The Charge of the Light Brigade," I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own years in the Valley of death. This casual view of hardship enabled me to justify the pain that my ambitions would one day bring upon Sita.'
-                        }
+                        },
+                        todo: 'already knew'
                     },
                     'you rode, so on spite you thrive.'
                 ]
@@ -105,7 +106,8 @@ module.exports = {
                         anchor: 'Feeble feeder fish',
                         annotation: {
                             description: 'Feeder fish are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit who will live longest. High school seemed to work the same way, as the traits that once resigned me to unpopularity now protected me from being eaten alive in the real world.'
-                        }
+                        },
+                        todo: 'creative traits, were now my ticket'
                     },
                     'allowed to grow;'
                 ]
@@ -140,9 +142,8 @@ module.exports = {
                     {
                         anchor: 'filled first from sides.',
                         annotation: {
-                            description: 'At smaller venues, the first showgoers to arrive typically gravitate towards the walls and the front of the stage. Tonight, an attractive latecomer enters and has no choice but to take a space in the middle.'
+                            description: 'At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls. A few songs into our set, I watch from onstage as an attractive latecomer makes her way through a room that is unusually packed.'
                         },
-                        todo: true
                     }
                 ]
             },
@@ -153,9 +154,8 @@ module.exports = {
                     {
                         anchor: 'jigsawed life.',
                         annotation: {
-                            description: 'A jigsaw puzzle is also typically begun by connecting the edge pieces and then filling in the space inward. '
-                        },
-                        todo: true
+                            description: 'One typically works on a jigsaw puzzle by first connecting the edge pieces and then expanding inwards. And as this latecomer squeezes her way into the middle, I wonder if she is the long-awaited final piece to the intricate puzzle that is my life.'
+                        }
                     }
                 ]
             },
@@ -166,15 +166,23 @@ module.exports = {
                     {
                         anchor: 'maraschino red,',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'Having sworn long ago to be alert and ready when the next Mara shows up in my life, I notice that the latecomer\'s hair colour matches "Mara\'s sheen of red," which is the bright red of maraschino cherries. And speaking with her after our set, I find that her personality matches their sweetness as well.'
+                        }
                     }
                 ]
             },
             {
                 time: 54,
-                lyric: '"Great show," she later said.'
+                lyric: [
+                    '"Great show,"',
+                    {
+                        anchor: 'she later said.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             }
         ],
         [
