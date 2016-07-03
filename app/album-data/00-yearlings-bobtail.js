@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: 'change every "one" to "you"',
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: 'change reduce to for/of to allow breaks',
             workedHours: 0,
             neededHours: 2

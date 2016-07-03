@@ -48,24 +48,17 @@ module.exports = {
                             description: 'In the First Battle of Bull Run, spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my daily battles with bullies were often fought and lost in full view of a lunchtime crowd.'
                         }
                     },
-                    'soundless through the noon.'
+                    'through the noon.'
                 ]
             },
             {
                 time: 22,
                 lyric: [
-                    'Now your',
-                    {
-                        anchor: 'sapling cut',
-                        annotation: {
-                            description: 'A sapling that survives its first winter will have earned its first tree ring, as plainly revealed beneath each cut it has endured along the way.'
-                        }
-                    },
-                    'says you\'ve',
+                    'Now your sapling cut says you\'ve',
                     {
                         anchor: 'past ring one,',
                         annotation: {
-                            description: 'A ring also symbolises long-term commitment in a relationship. And of course, after years of constant struggle to win someone over, I am now in my first real relationship.'
+                            description: 'A sapling that survives its first winter will have earned its first tree ring, as plainly revealed beneath each cut it has endured along the way. A ring also symbolises long-term commitment in a relationship. And of course, after years of constant struggle to win someone over, I am now in my first real relationship.'
                         }
                     }
                 ]
@@ -90,9 +83,8 @@ module.exports = {
                         anchor: 'Valley of death',
                         properNoun: true,
                         annotation: {
-                            description: 'Like the six hundred who rode into the valley of death in Alfred Tennyson\'s poem "The Charge of the Light Brigade," I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own years in the Valley of death. This casual view of hardship enabled me to justify the pain that my ambitions would one day bring upon Sita.'
-                        },
-                        todo: 'already knew'
+                            description: 'Like the six hundred who rode into the valley of death in Alfred Tennyson\'s poem "The Charge of the Light Brigade," I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own years in the Valley of death. In turn, this casual view of hardship enabled me to justify the pain that I knew my ambitions would eventually bring upon Sita.'
+                        }
                     },
                     'you rode, so on spite you thrive.'
                 ]
@@ -105,9 +97,8 @@ module.exports = {
                     {
                         anchor: 'Feeble feeder fish',
                         annotation: {
-                            description: 'Feeder fish are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit who will live longest. High school seemed to work the same way, as the traits that once resigned me to unpopularity now protected me from being eaten alive in the real world.'
-                        },
-                        todo: 'creative traits, were now my ticket'
+                            description: 'Feeder fish are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit who will live longest. High school seemed to work the same way, as my devotion to my pet projects, which left me with no time to defend myself within the social hierarchy, was now keeping me from being eaten alive in the real world.'
+                        }
                     },
                     'allowed to grow;'
                 ]
@@ -123,9 +114,8 @@ module.exports = {
                     {
                         anchor: 'cancer nibbled off,',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'It was therapeutic enough to examine myself and write songs about my own disappointments and dysfunctions. It seemed crazy that on top of that, others would credit me with giving voice to theirs as well, but I happily took it and ran with it.'
+                        }
                     }
                 ]
             },
@@ -142,7 +132,7 @@ module.exports = {
                     {
                         anchor: 'filled first from sides.',
                         annotation: {
-                            description: 'At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls. A few songs into our set, I watch from onstage as an attractive latecomer makes her way through a room that is unusually packed.'
+                            description: 'At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls. A few songs into my band\'s set, I watch from onstage as an attractive latecomer makes her way through a room that is unusually packed.'
                         },
                     }
                 ]
@@ -154,7 +144,7 @@ module.exports = {
                     {
                         anchor: 'jigsawed life.',
                         annotation: {
-                            description: 'One typically works on a jigsaw puzzle by first connecting the edge pieces and then expanding inwards. And as this latecomer squeezes her way into the middle, I wonder if she is the long-awaited final piece to the intricate puzzle that is my life.'
+                            description: 'One typically works on a jigsaw puzzle by first connecting the edge pieces, then expanding inwards. And as this latecomer squeezes her way into the middle, I wonder if she is the long-awaited final piece to the overwrought puzzle that is my life.'
                         }
                     }
                 ]
@@ -166,7 +156,7 @@ module.exports = {
                     {
                         anchor: 'maraschino red,',
                         annotation: {
-                            description: 'Having sworn long ago to be alert and ready when the next Mara shows up in my life, I notice that the latecomer\'s hair colour matches "Mara\'s sheen of red," which is the bright red of maraschino cherries. And speaking with her after our set, I find that her personality matches their sweetness as well.'
+                            description: 'Having sworn long ago to be alert and ready when the next Mara shows up in my life, I notice that the latecomer\'s hair colour matches "Mara\'s sheen of red," which is the bright red of maraschino cherries.'
                         }
                     }
                 ]
@@ -174,14 +164,13 @@ module.exports = {
             {
                 time: 54,
                 lyric: [
-                    '"Great show,"',
                     {
-                        anchor: 'she later said.',
+                        anchor: '"Great show,"',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
-                    }
+                            description: 'The best time to chat with someone in the audience is always right after your set, since they\'ve just spent the last half hour of their life making you the centre of their universe. And so, as expected, the red-haired woman is warm and receptive when I approach her.'
+                        }
+                    },
+                    'she later said.'
                 ]
             }
         ],
@@ -192,7 +181,16 @@ module.exports = {
             },
             {
                 time: 63,
-                lyric: 'and you were fine when you had none.'
+                lyric: [
+                    'and you were',
+                    {
+                        anchor: 'fine when you had none.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 69,
@@ -206,7 +204,17 @@ module.exports = {
         [
             {
                 time: 81,
-                lyric: 'When religious kids mocked, each hypocrite\'s taunts'
+                lyric: [
+                    'When',
+                    {
+                        anchor: 'religious kids mocked,',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'each hypocrite\'s taunts'
+                ]
             },
             {
                 time: 84,
@@ -214,7 +222,17 @@ module.exports = {
             },
             {
                 time: 87,
-                lyric: 'reading His obit not a bang, just a murmuring.'
+                lyric: [
+                    'reading',
+                    {
+                        anchor: 'His obit not a bang,',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'just a murmuring.'
+                ]
             },
             {
                 time: 91,
@@ -222,7 +240,16 @@ module.exports = {
             },
             {
                 time: 94,
-                lyric: 'peasant discontented all the more,'
+                lyric: [
+                    {
+                        anchor: 'peasant discontented',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'all the more,'
+                ]
             },
             {
                 time: 97,
@@ -236,7 +263,16 @@ module.exports = {
             },
             {
                 time: 106,
-                lyric: 'and thus secure, must turn the cheek.'
+                lyric: [
+                    'and thus secure,',
+                    {
+                        anchor: 'must turn the cheek.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 109,
@@ -244,7 +280,16 @@ module.exports = {
             },
             {
                 time: 112,
-                lyric: 'only to crack, sprawled where they stood…'
+                lyric: [
+                    {
+                        anchor: 'only to crack,',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'sprawled where they stood…'
+                ]
             }
         ],
         [
@@ -254,7 +299,16 @@ module.exports = {
             },
             {
                 time: 118,
-                lyric: 'weren\'t they right to take what\'s theirs?'
+                lyric: [
+                    'weren\'t they',
+                    {
+                        anchor: 'right to take what\'s theirs?',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 121,
@@ -262,25 +316,70 @@ module.exports = {
             },
             {
                 time: 124,
-                lyric: 'also weep for poor, poor bears.'
+                lyric: [
+                    'also weep for',
+                    {
+                        anchor: 'poor, poor bears.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             }
         ],
         [
             {
                 time: 127,
-                lyric: 'Red and friends, lagging by the back door,'
+                lyric: [
+                    {
+                        anchor: 'Red and friends,',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'lagging by the back door,'
+                ]
             },
             {
                 time: 130,
-                lyric: 'lift you on angel stares.'
+                lyric: [
+                    'lift you on',
+                    {
+                        anchor: 'angel stares.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 133,
-                lyric: 'Drunk, you\'d claim you\'ve never loved,'
+                lyric: [
+                    'Drunk, you\'d',
+                    {
+                        anchor: 'claim you\'ve never loved,',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 136,
-                lyric: 'but it\'s too late to unscrew a Bud…'
+                lyric: [
+                    'but it\'s too late to',
+                    {
+                        anchor: 'unscrew a Bud…',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             }
         ],
         [
@@ -290,7 +389,16 @@ module.exports = {
             },
             {
                 time: 145,
-                lyric: '\'cause when you beg it never comes.'
+                lyric: [
+                    '\'cause when you',
+                    {
+                        anchor: 'beg it never comes.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 151,
@@ -305,7 +413,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 11,
+            workedHours: 22,
             neededHours: 35,
             subtasks: [
                 {
