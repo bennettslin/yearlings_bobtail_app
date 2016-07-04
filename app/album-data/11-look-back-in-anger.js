@@ -204,17 +204,7 @@ module.exports = {
         [
             {
                 time: 81,
-                lyric: [
-                    'When',
-                    {
-                        anchor: 'religious kids mocked,',
-                        annotation: {
-                            description: 'Most of the kids who bullied me were religious, which then made it difficult to believe in '
-                        },
-                        todo: true
-                    },
-                    'each hypocrite\'s taunts'
-                ]
+                lyric: 'When religious kids mocked, each hypocrite\'s taunts'
             },
             {
                 time: 84,
@@ -227,9 +217,8 @@ module.exports = {
                     {
                         anchor: 'His obit not a bang,',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'The kids who bullied me were typically religious, which then served to discredit their religions in my view. But this appraisal was based on reason, not malice. After all, it made no sense for the one true God to entrust the spread of His message on earth to the very tormentors of those He hoped to reach.'
+                        }
                     },
                     'just a murmuring.'
                 ]
@@ -268,9 +257,8 @@ module.exports = {
                     {
                         anchor: 'must turn the cheek.',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'The letters from RI Research instructed me not to confront my tormentors, but instead to quietly take their abuse in stride, as my exalted place in the universe necessarily asked of me to always be the bigger person.'
+                        }
                     }
                 ]
             },
@@ -284,11 +272,15 @@ module.exports = {
                     {
                         anchor: 'only to crack,',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'Yet if reason discredited their beliefs, then it also had to discredit mine. After all, in a world spilling over with rival claims to the truth, who would stay loyal to a belief that promises zero community and only endless grief?'
+                        }
                     },
-                    'sprawled where they stood…'
+                    {
+                        anchor: 'sprawled where they stood…',
+                        annotation: {
+                            description: 'While I foresaw a lifetime of humiliating setbacks for myself, the bullies would continue to enjoy greater happiness and social standing. And since I had no belief left to counter the harsh reality of nature, then I just had to accept that nature favours its bullies.'
+                        }
+                    }
                 ]
             }
         ],
@@ -304,15 +296,22 @@ module.exports = {
                     {
                         anchor: 'right to take what\'s theirs?',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'As opportunities for power and influence began to open up for me, I finally understood why the bullies grabbed onto those open to them, and could even sympathise. After all, in a world that naturally favours the strong, it made no sense to voluntarily side with the weak.'
+                        }
                     }
                 ]
             },
             {
                 time: 121,
-                lyric: 'So if you\'re weeping for poor squirrels,'
+                lyric: [
+                    'So if you\'re weeping for',
+                    {
+                        anchor: 'poor squirrels,',
+                        annotation: {
+                            description: 'John Osborne\'s play "Look Back in Anger" examines the disgruntled rage of a working-class male in postwar England. In the final scene, he imagines his wife as a squirrel and then sighs "poor squirrels," acknowledging that his emotionally abusive tirades keep her in a helpless state, even as he is unlikely to change.'
+                        }
+                    }
+                ]
             },
             {
                 time: 124,
@@ -321,9 +320,8 @@ module.exports = {
                     {
                         anchor: 'poor, poor bears.',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'In response, his wife sighs "oh, poor, poor bears," recognising that he, a bear in their mutual fantasy, is also a victim, helplessly complying within a power dynamic over which he has little control.'
+                        }
                     }
                 ]
             }
@@ -344,16 +342,7 @@ module.exports = {
             },
             {
                 time: 130,
-                lyric: [
-                    'lift you on',
-                    {
-                        anchor: 'angel stares.',
-                        annotation: {
-                            description: ''
-                        },
-                        todo: true
-                    }
-                ]
+                lyric: 'lift you on angel stares.'
             },
             {
                 time: 133,
@@ -362,7 +351,7 @@ module.exports = {
                     {
                         anchor: 'claim you\'ve never loved,',
                         annotation: {
-                            description: 'My songs projected the image of a hapless kid who is forever unlucky in love. It\'s how I first learned to direct attention towards myself, and so I had refined it to perfection over the years. But as the disconnect grew between my past persona and my present fortunes, I needed greater amounts of alcohol to deceive myself into carrying about as I always had.'
+                            description: 'My songs projected the image of a hapless kid who was forever unlucky in love. It\'s how I first learned to direct attention towards myself, and so I had refined it to perfection over the years. But as the disconnect grew between my past persona and my present fortunes, I needed greater amounts of alcohol to deceive myself into carrying about as I always had.'
                         }
                     }
                 ]
@@ -374,7 +363,7 @@ module.exports = {
                     {
                         anchor: 'unscrew a Bud…',
                         annotation: {
-                            description: 'I forego the chance to meet the red-haired woman, as I would need another Budweiser to bring myself to needed levels of self-deception, and it\'s past last call. But it\'s also too late for me to "unscrew a bud," and present myself as someone who isn\'t already sexually intimate with his longtime friend.'
+                            description: 'I forego my chance to meet the red-haired woman, as I would need another Budweiser to bring myself to the required level of self-deception, and it\'s past last call. But it\'s also too late for me to "unscrew a bud," and present myself as someone who isn\'t already sexually intimate with a longtime friend.'
                         }
                     }
                 ]
@@ -411,7 +400,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 22,
+            workedHours: 29,
             neededHours: 35,
             subtasks: [
                 {
