@@ -45,7 +45,7 @@ module.exports = {
                         anchor: 'lunched soundless',
                         properNoun: true,
                         annotation: {
-                            description: 'In the First Battle of Bull Run, spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my daily battles with bullies were often fought and lost in full view of a lunchtime crowd.'
+                            description: 'In the First Battle of Bull Run, spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with bullies were fought and lost in full view of a lunchtime crowd.'
                         }
                     },
                     'through the noon.'
@@ -209,7 +209,7 @@ module.exports = {
                     {
                         anchor: 'religious kids mocked,',
                         annotation: {
-                            description: ''
+                            description: 'Most of the kids who bullied me were religious, which then made it difficult to believe in '
                         },
                         todo: true
                     },
@@ -334,10 +334,10 @@ module.exports = {
                 lyric: [
                     {
                         anchor: 'Red and friends,',
+                        properNoun: true,
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'The red-haired woman and her friends stick around as we load our gear into the van. During my brief chat with her between sets, I had left open the possibility of us all hanging out after the show.'
+                        }
                     },
                     'lagging by the back door,'
                 ]
@@ -362,9 +362,8 @@ module.exports = {
                     {
                         anchor: 'claim you\'ve never loved,',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'My songs projected the image of a hapless kid who is forever unlucky in love. It\'s how I first learned to direct attention towards myself, and so I had refined it to perfection over the years. But as the disconnect grew between my past persona and my present fortunes, I needed greater amounts of alcohol to deceive myself into carrying about as I always had.'
+                        }
                     }
                 ]
             },
@@ -375,9 +374,8 @@ module.exports = {
                     {
                         anchor: 'unscrew a Bud…',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'I forego the chance to meet the red-haired woman, as I would need another Budweiser to bring myself to needed levels of self-deception, and it\'s past last call. But it\'s also too late for me to "unscrew a bud," and present myself as someone who isn\'t already sexually intimate with his longtime friend.'
+                        }
                     }
                 ]
             }
