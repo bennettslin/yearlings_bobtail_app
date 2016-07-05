@@ -350,7 +350,7 @@ module.exports = {
                     {
                         anchor: 'claim you\'ve never loved,',
                         annotation: {
-                            description: 'My songs projected the image of a hapless kid who was forever unlucky in love. It\'s how I first learned to direct attention towards myself, and so I had refined it to perfection over the years. But as the disconnect grew between my past persona and my present fortunes, I needed greater amounts of alcohol to deceive myself into carrying about as I always had.'
+                            description: 'My songs projected the image of an inexperienced kid who was forever unlucky in love. It\'s how I first learned to direct attention towards myself, and so I had refined it to perfection over the years. But as the disconnect grew between my past persona and my present fortunes, I needed greater amounts of alcohol to deceive myself into carrying about as I always had.'
                         }
                     }
                 ]
