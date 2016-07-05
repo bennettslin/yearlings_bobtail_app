@@ -396,7 +396,7 @@ module.exports = {
                     {
                         anchor: 'world\'s a naked baby,',
                         annotation: {
-                            description: 'At some point, I realised that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can largely be understood by reading people\'s faces and recognising their needs, just as history can be known by studying textbooks.'
+                            description: 'At some point, I realised that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can largely be understood by reading people\'s faces and recognising their motives, just as history can be known by studying textbooks.'
                         }
                     }
                 ]

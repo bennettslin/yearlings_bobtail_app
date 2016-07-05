@@ -186,7 +186,7 @@ module.exports = {
                     {
                         anchor: 'fine when you had none.',
                         annotation: {
-                            description: ''
+                            description: 'I didn\'t understand why I was so angry. '
                         },
                         todo: true
                     }
@@ -233,9 +233,8 @@ module.exports = {
                     {
                         anchor: 'peasant discontented',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'During the French Revolution, the peasants were so downtrodden that each attempt by the government to appease them would backfire horribly. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.'
+                        }
                     },
                     'all the more,'
                 ]
@@ -296,7 +295,7 @@ module.exports = {
                     {
                         anchor: 'right to take what\'s theirs?',
                         annotation: {
-                            description: 'As opportunities for power and influence began to open up for me, I finally understood why the bullies grabbed onto those open to them, and could even sympathise. After all, in a world that naturally favours the strong, it made no sense to voluntarily side with the weak.'
+                            description: 'As opportunities for social advancement finally opened up for me, I began to understand why the bullies grabbed onto those given to them, and I could even sympathise. After all, in a world that naturally roots for the strong, it made no sense to question whatever means you were afforded to avoid being weak.'
                         }
                     }
                 ]
@@ -308,7 +307,7 @@ module.exports = {
                     {
                         anchor: 'poor squirrels,',
                         annotation: {
-                            description: 'John Osborne\'s play "Look Back in Anger" examines the disgruntled rage of a working-class male in postwar England. In the final scene, he imagines his wife as a squirrel and then sighs "poor squirrels," acknowledging that his emotionally abusive tirades keep her in a helpless state, even as he is unlikely to change.'
+                            description: 'John Osborne\'s play "Look Back in Anger" examines the disgruntled rage of a young working-class man in postwar England. In the final scene, the man pictures his wife as a squirrel and sighs "poor squirrels," acknowledging that his emotionally abusive tirades keep her in a helpless state.'
                         }
                     }
                 ]
@@ -320,7 +319,7 @@ module.exports = {
                     {
                         anchor: 'poor, poor bears.',
                         annotation: {
-                            description: 'In response, his wife sighs "oh, poor, poor bears," recognising that he, a bear in their mutual fantasy, is also a victim, helplessly complying within a power dynamic over which he has little control.'
+                            description: 'His wife then sighs "poor, poor bears" in response, recognising that he, a bear in their mutual fantasy, is also a victim, helplessly complying within a power dynamic over which he has little control.'
                         }
                     }
                 ]
@@ -400,7 +399,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 29,
+            workedHours: 32,
             neededHours: 35,
             subtasks: [
                 {
