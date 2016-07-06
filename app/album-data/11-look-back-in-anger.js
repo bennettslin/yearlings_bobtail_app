@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Look Back in Anger',
     overviews: {
-        narrative: 'With The Yearlings becoming a fixture in the local scene, I started to command more attention than I\'d ever known, particularly from women. And yet, my depression didn\'t abate; instead, it simmered into a hard-boiled anger. I also began to regret my relationship with Sita, which felt more and more like a decision coerced under deprived conditions from which I had since been liberated.',
+        narrative: 'With The Yearlings becoming a fixture in the local scene, I started to command more attention than I\'d ever known, particularly from women. And yet, my depression didn\'t abate, but instead simmered into a hard-boiled anger. I also began to regret my relationship with Sita, which now felt like a decision I was coerced to make, under deprived conditions from which I\'d since been freed.',
         music: 'A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would sing in hushed tones so as not to wake his neighbours, and then overdub several takes. He would also tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to channel Owen here, minus the impromptu part, of course.'
     },
     lyrics: [
@@ -186,7 +186,7 @@ module.exports = {
                     {
                         anchor: 'fine when you had none.',
                         annotation: {
-                            description: 'I didn\'t understand why my improving lot in life only made me angrier, and my best guess at the time was that I was angry for my former self, who wasn\'t permitted to know how much better life could be.'
+                            description: 'Things were finally looking up, so it baffled me to be so much angrier than before. I suspected that I felt indignant for my younger self, who had been kept in the dark for so long about how much better life could be.'
                         }
                     }
                 ]
@@ -380,14 +380,17 @@ module.exports = {
                         anchor: 'beg it never comes.',
                         annotation: {
                             description: [
-                                'But ultimately, I was just as angry',
+                                'There\'s no excuse for not looking out for yourself. I knew this now. So while I was justifiably angry',
                                 {
-                                    emphasis: 'at'
+                                    emphasis: 'for'
                                 },
-                                'my former self.'
+                                'the younger me, there was also no one better to be angry',
+                                {
+                                    emphasis: 'at.'
+                                },
+                                'I could only really blame myself for being late to the game. And that just made me angrier…'
                             ]
-                        },
-                        todo: true
+                        }
                     }
                 ]
             },
@@ -404,8 +407,15 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 32,
+            workedHours: 35,
             neededHours: 35,
+            subtasks: [
+                {
+                    taskName: 'make less wordy',
+                    workedHours: 0,
+                    neededHours: 1
+                }
+            ],
             subtasks: [
                 {
                     taskName: 'split into dots',
