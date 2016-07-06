@@ -186,9 +186,8 @@ module.exports = {
                     {
                         anchor: 'fine when you had none.',
                         annotation: {
-                            description: 'I didn\'t understand why I was so angry. '
-                        },
-                        todo: true
+                            description: 'I didn\'t understand why my improving lot in life only made me angrier, and my best guess at the time was that I was angry for my former self, who wasn\'t permitted to know how much better life could be.'
+                        }
                     }
                 ]
             },
@@ -380,7 +379,13 @@ module.exports = {
                     {
                         anchor: 'beg it never comes.',
                         annotation: {
-                            description: ''
+                            description: [
+                                'But ultimately, I was just as angry',
+                                {
+                                    emphasis: 'at'
+                                },
+                                'my former self.'
+                            ]
                         },
                         todo: true
                     }
