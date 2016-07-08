@@ -1,4 +1,5 @@
 import React from 'react';
+import Constants from '../../constants/constants.js';
 import FormatUtility from '../../utilities/format-utility.jsx';
 
 const defaultProps = {
@@ -21,45 +22,22 @@ class LyricsSection extends React.Component {
 
     _getVerseElement(verseObject, verseIndex) {
         // A "verse" wraps a single line of text.
-        let lyricElements;
 
-        // It is a regular song.
-        if (verseObject.lyric) {
-            lyricElements = this._getLyricElement(verseObject.lyric);
+        const lyricElements = verseObject.lyric ?
 
-        // It is a doublespeaker song
-        } else {
-            // FIXME: Refactor.
-            lyricElements = (
-                <div className="double-lines-block">
-                    {verseObject.leftLyric ?
-                        <div className="line far left">
-                            {this._getLyricElement(verseObject.leftLyric)}
-                        </div> : null
-                    }
-                    {verseObject.centreLeftLyric ?
-                        <div className="line centre left">
-                            {this._getLyricElement(verseObject.centreLeftLyric)}
-                        </div> : null
-                    }
-                    {verseObject.centreLyric ?
-                        <div className="line exact centre">
-                            {this._getLyricElement(verseObject.centreLyric)}
-                        </div> : null
-                    }
-                    {verseObject.centreRightLyric ?
-                        <div className="line centre right">
-                            {this._getLyricElement(verseObject.centreRightLyric)}
-                        </div> : null
-                    }
-                    {verseObject.rightLyric ?
-                        <div className="line far right">
-                            {this._getLyricElement(verseObject.rightLyric)}
-                        </div> : null
-                    }
-                </div>
-            );
-        }
+            // It is a regular verse.
+            this._getLyricElement(verseObject.lyric) :
+
+            // It is a doublespeaker verse.
+            <div className="double-lines-block">
+                {Constants.lyricColumnKeyClassPairs.map((keyClassPair, index) => {
+                    return verseObject[keyClassPair.key] ?
+                    <div key={index}
+                        className={'line ' + keyClassPair.className}>
+                        {this._getLyricElement(verseObject[keyClassPair.key])}
+                    </div> : null
+                })}
+            </div>;
 
         return (
             <div className={'verse ' + verseIndex} key={verseIndex}>

@@ -22,6 +22,29 @@ module.exports = {
         'anchor'
     ],
 
+    lyricColumnKeyClassPairs: [
+        {
+            key: 'leftLyric',
+            className: 'far left'
+        },
+        {
+            key: 'centreLeftLyric',
+            className: 'centre left'
+        },
+        {
+            key: 'centreLyric',
+            className: 'exact centre'
+        },
+        {
+            key: 'centreRightLyric',
+            className: 'centre right'
+        },
+        {
+            key: 'rightLyric',
+            className: 'far right'
+        },
+    ],
+
     // FIXME: Temporarily have description as first dot key.
     allDotKeys: [
         'description',
