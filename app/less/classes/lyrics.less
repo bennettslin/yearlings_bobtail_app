@@ -67,6 +67,8 @@
         &.right {
             text-align: right;
 
+            // FIXME: Dot block and underline bar are misaligned in right column on Firefox when anchor begins new line. It's because of the direction: rtl. Happens in left column too, for different reason. See Odin "dream your whims instead."
+
             /**
              * Styling for hanging indent with right-aligned text. The hidden
              * last letter is a stupid hack to prevent rtl from switching the
