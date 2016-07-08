@@ -29,14 +29,34 @@ class LyricsSection extends React.Component {
 
         // It is a doublespeaker song
         } else {
+            // FIXME: Refactor.
             lyricElements = (
                 <div className="double-lines-block">
-                    <div className="line left">
-                        {this._getLyricElement(verseObject.leftLyric)}
-                    </div>
-                    <div className="line right">
-                        {this._getLyricElement(verseObject.rightLyric)}
-                    </div>
+                    {verseObject.leftLyric ?
+                        <div className="line far left">
+                            {this._getLyricElement(verseObject.leftLyric)}
+                        </div> : null
+                    }
+                    {verseObject.centreLeftLyric ?
+                        <div className="line centre left">
+                            {this._getLyricElement(verseObject.centreLeftLyric)}
+                        </div> : null
+                    }
+                    {verseObject.centreLyric ?
+                        <div className="line exact centre">
+                            {this._getLyricElement(verseObject.centreLyric)}
+                        </div> : null
+                    }
+                    {verseObject.centreRightLyric ?
+                        <div className="line centre right">
+                            {this._getLyricElement(verseObject.centreRightLyric)}
+                        </div> : null
+                    }
+                    {verseObject.rightLyric ?
+                        <div className="line far right">
+                            {this._getLyricElement(verseObject.rightLyric)}
+                        </div> : null
+                    }
                 </div>
             );
         }

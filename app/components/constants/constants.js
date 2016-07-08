@@ -13,6 +13,9 @@ module.exports = {
     textKeys: [
         'lyric',
         'leftLyric',
+        'centreLeftLyric',
+        'centreLyric',
+        'centreRightLyric',
         'rightLyric',
         'italic',
         'emphasis',

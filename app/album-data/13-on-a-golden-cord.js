@@ -8,70 +8,57 @@ module.exports = {
         [
             {
                 time: 5,
-                leftLyric: 'On a golden cord,',
-                rightLyric: '…'
+                centreLyric: 'On a golden cord,'
             },
             {
                 time: 7,
-                leftLyric: 'once worn, now shorn,',
-                rightLyric: '…'
+                centreLyric: 'once worn, now shorn,'
             },
             {
                 time: 9,
-                leftLyric: 'safely kept with bread and pocket lint.',
-                rightLyric: '…'
+                centreLyric: 'safely kept with bread and pocket lint.'
             },
             {
                 time: 12,
-                leftLyric: 'Not of its own accord,',
-                rightLyric: '…'
+                centreLyric: 'Not of its own accord,'
             },
             {
                 time: 15,
-                leftLyric: 'but broken for what its promise meant.',
-                rightLyric: '…'
+                centreLyric: 'but broken for what its promise meant.'
             },
             {
                 time: 18,
-                leftLyric: 'And so she said, "Now it\'s yours again…',
-                rightLyric: '…'
+                centreLyric: 'And so she said, "Now it\'s yours again…'
             }
         ],
         [
             {
                 time: 26,
-                leftLyric: 'And how you look tonight!',
-                rightLyric: '…'
+                centreLyric: 'And how you look tonight!'
             },
             {
                 time: 28,
-                leftLyric: 'So polite, yet resigned,',
-                rightLyric: '…'
+                centreLyric: 'So polite, yet resigned,'
             },
             {
                 time: 31,
-                leftLyric: 'with wounds dressed and feelings put away.',
-                rightLyric: '…'
+                centreLyric: 'with wounds dressed and feelings put away.'
             },
             {
                 time: 33,
-                leftLyric: 'Full of patient replies…',
-                rightLyric: '…'
+                centreLyric: 'Full of patient replies…'
             },
             {
                 time: 36,
-                leftLyric: 'But how can I trust a word you say?',
-                rightLyric: '…'
+                centreLyric: 'But how can I trust a word you say?'
             },
             {
                 time: 40,
-                leftLyric: 'So spill away… and please, dear, you have no more secrets saved.',
-                rightLyric: '…'
+                centreLyric: 'So spill away… and please, dear, you have no more secrets saved.'
             },
             {
                 time: 47,
-                leftLyric: 'I\'m sorry, but I went through your mail today…"',
-                rightLyric: '…'
+                centreLyric: 'I\'m sorry, but I went through your mail today…"'
             }
         ],
         [
@@ -202,59 +189,33 @@ module.exports = {
         [
             {
                 time: 116,
-                leftLyric: 'the taunting, streetswept dawn.',
-                rightLyric: '…'
+                centreLyric: 'the taunting, streetswept dawn.'
             },
             {
                 time: 118,
-                leftLyric: 'Thoughts spawned then dropped,',
-                rightLyric: '…'
+                centreLyric: 'Thoughts spawned then dropped,'
             },
             {
                 time: 121,
-                leftLyric: 'of gathering up the suttee dust.',
-                rightLyric: '…'
+                centreLyric: 'of gathering up the suttee dust.'
             },
             {
                 time: 123,
-                leftLyric: 'Some things just come to loss:',
-                rightLyric: '…'
+                centreLyric: 'Some things just come to loss:'
             },
             {
                 time: 126,
-                leftLyric: 'this bracelet, its lustre; me, my lust.',
-                rightLyric: '…'
+                centreLyric: 'this bracelet, its lustre; me, my lust.'
             },
             {
                 time: 130,
-                leftLyric: 'Or was I once, something not what I\'ve become?',
-                rightLyric: '…'
+                centreLyric: 'Or was I once, something not what I\'ve become?'
             },
             {
                 time: 137,
-                leftLyric: 'Have I just killed the thing I love? ',
-                rightLyric: '…'
+                centreLyric: 'Have I just killed the thing I love? '
             }
         ],
-
-
-
-        [
-            {
-                time: 144,
-            },
-            {
-                time: 147,
-            },
-            {
-                time: 150,
-            },
-            {
-                time: 154,
-            }
-        ],
-
-
         [
             {
                 time: 144,

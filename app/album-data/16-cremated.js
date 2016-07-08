@@ -8,8 +8,7 @@ module.exports = {
         [
             {
                 time: 1,
-                leftLyric: 'Or another…',
-                rightLyric: '…'
+                centreLyric: 'Or another…'
             }
         ],
         [
@@ -109,28 +108,23 @@ module.exports = {
         [
             {
                 time: 90,
-                leftLyric: 'Needle done will not retract,',
-                rightLyric: '…'
+                centreLyric: 'Needle done will not retract,'
             },
             {
                 time: 94,
-                leftLyric: 'it hums a typo fragile ex passed through ash…',
-                rightLyric: '…'
+                centreLyric: 'it hums a typo fragile ex passed through ash…'
             },
             {
                 time: 98,
-                leftLyric: 'With his vinyl, exit Miriam to cash his stash.',
-                rightLyric: '…'
+                centreLyric: 'With his vinyl, exit Miriam to cash his stash.'
             },
             {
                 time: 102,
-                leftLyric: 'Undeluded, she\'ll bask in selfish cut-off jeans,',
-                rightLyric: '…'
+                centreLyric: 'Undeluded, she\'ll bask in selfish cut-off jeans,'
             },
             {
                 time: 106,
-                leftLyric: 'and in her pool, hears not a worrisome "Bless her, Godspeed…" ',
-                rightLyric: '…'
+                centreLyric: 'and in her pool, hears not a worrisome "Bless her, Godspeed…"'
             }
         ],
         [

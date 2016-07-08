@@ -9,7 +9,7 @@ module.exports = {
         [
             {
                 time: 0,
-                leftLyric: [
+                centreLyric: [
                     {
                         anchor: 'Mr. Odin',
                         properNoun: true,
@@ -18,8 +18,7 @@ module.exports = {
                         }
                     },
                     'died today.'
-                ],
-                rightLyric: '…'
+                ]
             }
         ],
         [
@@ -548,22 +547,19 @@ module.exports = {
             {
                 time: 129,
                 // TODO: Switch these voices?
-                leftLyric: '…',
-                rightLyric: 'Should you hide, or could you fight,'
+                centreRightLyric: 'Should you hide, or could you fight,'
             },
             {
                 time: 132,
-                leftLyric: '…',
-                rightLyric: 'when your day to die has come?'
+                centreRightLyric: 'when your day to die has come?'
             },
             {
                 time: 135,
-                leftLyric: 'Can a holed up hostage',
-                rightLyric: '…'
+                centreLeftLyric: 'Can a holed up hostage'
             },
             {
                 time: 137,
-                leftLyric: [
+                centreLeftLyric: [
                     'pray for',
                     {
                         anchor: 'soulless solace',
@@ -572,18 +568,15 @@ module.exports = {
                         },
                     },
                     'and just play dumb?'
-                ],
-                rightLyric: '…'
+                ]
             },
             {
                 time: 141,
-                leftLyric: '…',
-                rightLyric: 'But in time, wouldn\'t you find'
+                centreRightLyric: 'But in time, wouldn\'t you find'
             },
             {
                 time: 144,
-                leftLyric: '…',
-                rightLyric: 'life is simply much too long?'
+                centreRightLyric: 'life is simply much too long?'
             }
         ],
         [
