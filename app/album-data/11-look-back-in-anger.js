@@ -54,11 +54,18 @@ module.exports = {
             {
                 time: 22,
                 lyric: [
-                    'Now your sapling cut says you\'ve',
+                    'Now your',
+                    {
+                        anchor: 'sapling cut',
+                        annotation: {
+                            description: 'A sapling that survives its first winter will have earned its first tree ring, as plainly revealed beneath each cut it has endured along the way.'
+                        }
+                    },
+                    'says you\'ve',
                     {
                         anchor: 'past ring one,',
                         annotation: {
-                            description: 'A sapling that survives its first winter will have earned its first tree ring, as plainly revealed beneath each cut it has endured along the way. A ring also symbolises long-term commitment in a relationship. And of course, after years of constant struggle to win someone over, I am now in my first real relationship.'
+                            description: 'A ring also symbolises long-term commitment in a relationship. And of course, after years of constant struggle to win someone over, I am now in my first real relationship.'
                         }
                     }
                 ]
@@ -114,7 +121,7 @@ module.exports = {
                     {
                         anchor: 'cancer nibbled off,',
                         annotation: {
-                            description: 'It was therapeutic enough to examine myself and write songs about my own disappointments and dysfunctions. It seemed crazy that on top of that, others would credit me with giving voice to theirs as well, but I happily took it and ran with it.'
+                            description: 'It was therapeutic enough to examine myself and write songs about my own disappointments and dysfunctions. It seemed crazy that on top of that, others would credit me with giving voice to theirs as well. But I happily took it and ran with it.'
                         }
                     }
                 ]
@@ -132,7 +139,7 @@ module.exports = {
                     {
                         anchor: 'filled first from sides.',
                         annotation: {
-                            description: 'At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls. A few songs into my band\'s set, I watch from onstage as an attractive latecomer makes her way through a room that is unusually packed.'
+                            description: 'At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls. A few songs into my band\'s set, I watch from onstage as an attractive latecomer makes her way through an unusually packed room.'
                         },
                     }
                 ]
@@ -186,7 +193,7 @@ module.exports = {
                     {
                         anchor: 'fine when you had none.',
                         annotation: {
-                            description: 'Things were finally looking up, so it baffled me to be so much angrier than before. I suspected that I felt indignant for my younger self, who had been kept in the dark for so long about how much better life could be.'
+                            description: 'Things were finally looking up, so it baffled me to be as angry as ever. I suspected that I felt indignant for my younger self, who had been kept in the dark for so long about how much better life could be.'
                         }
                     }
                 ]
@@ -203,7 +210,16 @@ module.exports = {
         [
             {
                 time: 81,
-                lyric: 'When religious kids mocked, each hypocrite\'s taunts'
+                lyric: [
+                    'When',
+                    {
+                        anchor: 'religious kids mocked,',
+                        annotation: {
+                            description: 'The kids who bullied me were typically religious, which then served to discredit their religions in my view.'
+                        }
+                    },
+                    'each hypocrite\'s taunts'
+                ]
             },
             {
                 time: 84,
@@ -216,7 +232,7 @@ module.exports = {
                     {
                         anchor: 'His obit not a bang,',
                         annotation: {
-                            description: 'The kids who bullied me were typically religious, which then served to discredit their religions in my view. But this appraisal was based on reason, not malice. After all, it made no sense for the one true God to entrust the spread of His message on earth to the very tormentors of those He hoped to reach.'
+                            description: 'But this appraisal was based on reason, not malice. After all, it made no sense for the one true God to entrust the spread of His message on earth to the very tormentors of those He hoped to reach.'
                         }
                     },
                     'just a murmuring.'
@@ -270,13 +286,13 @@ module.exports = {
                     {
                         anchor: 'only to crack,',
                         annotation: {
-                            description: 'Yet if reason discredited their beliefs, then it also had to discredit mine. After all, in a world spilling over with rival claims to the truth, who would stay loyal to a belief that promises zero community and only endless grief?'
+                            description: 'Yet if reason discredited their beliefs, then it also had to discredit mine. After all, in a world abounding with rival claims to the truth, who would stay loyal to a belief that promises zero community and only endless grief?'
                         }
                     },
                     {
                         anchor: 'sprawled where they stood…',
                         annotation: {
-                            description: 'While I foresaw a lifetime of humiliating setbacks for myself, the bullies would continue to enjoy greater happiness and social standing. And since I had no belief left to counter the harsh reality of nature, then I just had to accept that nature favours its bullies.'
+                            description: 'While I foresaw a lifetime of humiliating setbacks for myself, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favours its bullies. And so I just had to accept it.'
                         }
                     }
                 ]
@@ -294,7 +310,7 @@ module.exports = {
                     {
                         anchor: 'right to take what\'s theirs?',
                         annotation: {
-                            description: 'As opportunities for social advancement finally opened up for me, I began to understand why the bullies grabbed onto those given to them, and I could even sympathise. After all, in a world that naturally roots for the strong, it made no sense to question whatever means you were afforded to avoid being weak.'
+                            description: 'As opportunities for social advancement opened up for me, I began to understand why the bullies grabbed onto those given to them, and I could even sympathise. After all, in a world that naturally roots for the strong, it makes no sense to question whatever means you\'ve been afforded to avoid being weak.'
                         }
                     }
                 ]
@@ -349,7 +365,7 @@ module.exports = {
                     {
                         anchor: 'claim you\'ve never loved,',
                         annotation: {
-                            description: 'My songs projected the image of an inexperienced kid who was forever unlucky in love. It\'s how I first learned to direct attention towards myself, and so I had refined it to perfection over the years. But as the disconnect grew between my past persona and my present fortunes, I needed greater amounts of alcohol to deceive myself into carrying about as I always had.'
+                            description: 'My songs projected the image of an inexperienced kid who was forever unlucky in love. It\'s how I first learned to draw attention, and so I had refined it to perfection over the years. But as the disconnect grew between my past persona and my present fortunes, I needed greater amounts of alcohol to deceive myself into carrying about as I always had.'
                         }
                     }
                 ]
@@ -384,11 +400,11 @@ module.exports = {
                                 {
                                     emphasis: 'for'
                                 },
-                                'the younger me, there was also no one better to be angry',
+                                'the younger me, there was also no one more worthy to be angry',
                                 {
                                     emphasis: 'at.'
                                 },
-                                'I could only really blame myself for being late to the game. And that just made me angrier…'
+                                'I could only blame myself for being late to the game. But this just made me angrier…'
                             ]
                         }
                     }

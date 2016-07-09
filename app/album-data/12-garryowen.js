@@ -22,11 +22,11 @@ module.exports = {
                 lyric: [
                     'with your crew of',
                     {
+                        // TODO: Didi thief
                         anchor: 'chefs and thieves.',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'During this time, I was staying with a bunch of crust punks. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share.'
+                        }
                     }
                 ]
             },
@@ -37,9 +37,8 @@ module.exports = {
                     {
                         anchor: 'rubber off,',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'As I soured on my relationship with Sita, sex became a bargaining chip that she held in the growing power struggle between us. Since I preferred to have sex without a condom, for example, Sita would offer to forego it for that night, before then asking for a kind favour in return.'
+                        }
                     },
                     'she offered as a thought,'
                 ]
@@ -51,9 +50,8 @@ module.exports = {
                     {
                         anchor: 'opt for bed not street.',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'To save money after my lease ended, I put my stuff in storage and alternated between sleeping with Sita and crashing at the punk house. This gave me the regular comfort of Sita\'s bed while ensuring that she never had too much leverage over me.'
+                        }
                     }
                 ]
             },
@@ -64,7 +62,7 @@ module.exports = {
                     {
                         anchor: 'you\'re not me, Garryowen.',
                         annotation: {
-                            description: ''
+                            description: 'Since I was like a different person when I was drunk, it became a running gag '
                         },
                         todo: true
                     },
@@ -87,7 +85,16 @@ module.exports = {
             },
             {
                 time: 44,
-                lyric: 'In you come, piss drunk, smug in smegma crust,'
+                lyric: [
+                    'In you come, piss drunk, smug in',
+                    {
+                        anchor: 'smegma crust,',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 47,
