@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Garryowen',
     overviews: {
-        narrative: 'I could be pretty hotheaded when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I fully resented my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn\'t like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.',
+        narrative: 'I could be pretty hotheaded when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I openly resented my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn\'t like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.',
         music: [
             'I named my drunken personality after Garryowen, the menacing dog owned by an Irish nationalist in James Joyce\'s',
             {
@@ -19,19 +19,57 @@ module.exports = {
             },
             {
                 time: 20,
-                lyric: 'with your crew of chefs and thieves.'
+                lyric: [
+                    'with your crew of',
+                    {
+                        anchor: 'chefs and thieves.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 22,
-                lyric: 'Tonight the rubber off, she offered as a thought,'
+                lyric: [
+                    'Tonight the',
+                    {
+                        anchor: 'rubber off,',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'she offered as a thought,'
+                ]
             },
             {
                 time: 25,
-                lyric: 'if you would opt for bed not street.'
+                lyric: [
+                    'if you would',
+                    {
+                        anchor: 'opt for bed not street.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 28,
-                lyric: 'Well you\'re not me, Garryowen. Oh no, and'
+                lyric: [
+                    'Well',
+                    {
+                        anchor: 'you\'re not me, Garryowen.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'Oh no, and'
+                ]
             },
             {
                 time: 33,
@@ -106,7 +144,9 @@ module.exports = {
             {
                 time: 100,
                 lyric: 'you\'d make her strip bare just to watch her freeze.'
-            },
+            }
+        ],
+        [
             {
                 time: 106,
                 lyric: 'You won\'t always have her for your pet.'
