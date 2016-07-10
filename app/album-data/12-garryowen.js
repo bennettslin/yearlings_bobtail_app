@@ -25,7 +25,7 @@ module.exports = {
                         // TODO: Didi thief
                         anchor: 'chefs and thieves.',
                         annotation: {
-                            description: 'During this time, I was staying with some crust punks who were Ana\'s friends. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share.'
+                            description: 'During this time, I was staying with some crust punks who were friends of Ana\'s. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share.'
                         }
                     }
                 ]
@@ -76,7 +76,7 @@ module.exports = {
                     {
                         anchor: 'I can\'t speak',
                         annotation: {
-                            description: 'But this also absolved me of personal responsibility, which became problematic as my actions over time spilled into physical aggression and petty larceny.'
+                            description: 'But this also absolved me of personal responsibility, which became problematic as my actions over time spilled into physical aggression and misdemeanours.'
                         }
                     },
                     'for this life you\'ve chosen.'
@@ -129,7 +129,7 @@ module.exports = {
                     {
                         anchor: 'hummers aren\'t love,',
                         annotation: {
-                            description: 'A hummer is a blowjob. Once when Sita protested that we couldn\'t have sex until after I had washed up, I snidely remarked that she could give me a blowjob, since blowjobs didn\'t count as real sex in her view.'
+                            description: 'A hummer is a blowjob. Once when Sita protested that we couldn\'t have sex until after I washed up, I snidely remarked that she could give me a blowjob, since blowjobs didn\'t count as real sex in her view.'
                         }
                     },
                     'or',
