@@ -25,7 +25,7 @@ module.exports = {
                         // TODO: Didi thief
                         anchor: 'chefs and thieves.',
                         annotation: {
-                            description: 'During this time, I was staying with a bunch of crust punks whom I met through my bassist Ana. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share.'
+                            description: 'During this time, I was staying with some crust punks who were Ana\'s friends. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share.'
                         }
                     }
                 ]
@@ -37,7 +37,7 @@ module.exports = {
                     {
                         anchor: 'rubber off,',
                         annotation: {
-                            description: 'As I grew to resent my relationship with Sita, sex became the last bargaining chip that she held in the power struggle between us. Since I preferred sex without a condom, Sita would offer to forego it that night, before then asking for a kind favour in return.'
+                            description: 'As our relationship went south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I preferred sex without a condom, she would often suggest going without it as a way to coax any small kindness out of me.'
                         }
                     },
                     'she offered as a thought,'
@@ -91,7 +91,7 @@ module.exports = {
                     {
                         anchor: 'bustin\' cars with fists,',
                         annotation: {
-                            description: 'There was a kid in the bunch named Tristan who was particularly hotheaded, and any night out with him was guaranteed to end in a fight. One time after getting kicked out of a party for just that reason, our little group wandered the streets, punching car doors to see who could make the biggest dent.'
+                            description: 'One kid named Tristan was particularly hotheaded. After we all got kicked out of a party one night for a fight that he started, Tristan started punching car doors, challenging the rest of us to see who could make the biggest dent.'
                         }
                     }
                 ]
@@ -104,7 +104,7 @@ module.exports = {
                     {
                         anchor: 'littlest fuss will incite',
                         annotation: {
-                            description: 'Tristan would lash out in a chaotic spasm of fury, yet be perfectly collected by next morning. I soon saw that his outbursts were meticulously controlled, giving him a strange inner peace, and so I vowed to indulge my drunken temper in the same manner.'
+                            description: 'Tristan would lash out in a spastic fury while blacking out, yet be perfectly collected by next morning. I came to see that his chaotic outbursts were in fact meticulously controlled, giving him a strange inner peace, and so I sought to indulge my drunken temper in the same manner.'
                         }
                     },
                     'your rage.'
@@ -117,9 +117,8 @@ module.exports = {
                     {
                         anchor: 'smegma crust,',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'Smegma is the smelly gunk that builds up on unwashed genitals. I would put my personal hygiene on hold for days while I crashed at the punk house. But once back at Sita\'s, I would still dawdle a bit before showering, since she was powerless to entice me with sex until I did.'
+                        }
                     }
                 ]
             },
@@ -130,11 +129,16 @@ module.exports = {
                     {
                         anchor: 'hummers aren\'t love,',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'A hummer is a blowjob. Once when Sita protested that we couldn\'t have sex until after I had washed up, I snidely remarked that she could give me a blowjob, since blowjobs didn\'t count as real sex in her view.'
+                        }
                     },
-                    'or so she\'s claimed…'
+                    'or',
+                    {
+                        anchor: 'so she\'s claimed…',
+                        annotation: {
+                            description: 'I came to learn that after Sita had initially rejected me, and while we were slowly building up our friendship, she was sexually intimate with other men, though always just shy of intercourse. She tried to explain that she never went all the way because she didn\'t love them. She loved me, and so I had won. But it still stung like crazy, and only added to my deepening resentment at the time.'
+                        }
+                    }
                 ]
             },
         ],
