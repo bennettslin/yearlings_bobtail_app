@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Garryowen',
     overviews: {
-        narrative: 'I could be quite hotheaded when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I openly resented my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn\'t like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.',
+        narrative: 'I could be quite moody when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I openly resented my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn\'t like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.',
         music: [
             'I named my drunken personality after Garryowen, the menacing dog owned by an Irish nationalist in James Joyce\'s',
             {
@@ -64,7 +64,7 @@ module.exports = {
                     {
                         anchor: 'you\'re not me, Garryowen.',
                         annotation: {
-                            description: 'It began as a running gag to address me as Garry when I was drunk, since my disjointed rambling and boorish stunts made me an altogether different person.'
+                            description: 'A running gag amongst my friends was to address me as Garry when I was drunk, since my disjointed rambling and boorish stunts made me an altogether different person.'
                         }
                     },
                     'Oh no, and'
@@ -76,7 +76,7 @@ module.exports = {
                     {
                         anchor: 'I can\'t speak',
                         annotation: {
-                            description: 'But this also absolved me of personal responsibility, which became problematic as my actions spilled over into physical aggression and petty larceny.'
+                            description: 'But this also absolved me of personal responsibility, which became problematic as my actions over time spilled into physical aggression and petty larceny.'
                         }
                     },
                     'for this life you\'ve chosen.'
@@ -91,15 +91,25 @@ module.exports = {
                     {
                         anchor: 'bustin\' cars with fists,',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'One kid named Tristan was particularly hotheaded, so any night out with him was guaranteed to end in a fight. After getting kicked out of a party once for just that reason, we wandered the streets punching car doors to see who could make the biggest dent.'
+                        }
                     }
                 ]
             },
             {
                 time: 42,
-                lyric: 'the littlest fuss will incite your rage.'
+                // TODO: Grasshoppers
+                lyric: [
+                    'the',
+                    {
+                        anchor: 'littlest fuss will incite',
+                        annotation: {
+                            description: 'Letting Tristan\'s rage'
+                        },
+                        todo: true
+                    },
+                    'your rage.'
+                ]
             },
             {
                 time: 44,
@@ -136,7 +146,16 @@ module.exports = {
             },
             {
                 time: 56,
-                lyric: 'buys your grief as the boy unchosen.'
+                lyric: [
+                    {
+                        anchor: 'buys your grief',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'as the boy unchosen.'
+                ]
             }
         ],
         [
