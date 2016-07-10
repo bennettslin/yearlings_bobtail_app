@@ -214,11 +214,11 @@ module.exports = {
                         anchor: 'ambrosia beers',
                         annotation: {
                             description: [
-                                'Ambrosia was the food of the Greek gods, just as beer granted me omnipotence. Also,',
+                                'Ambrosia was the food of the Greek gods, just as beer made me feel omnipotent. Also,',
                                 {
                                     italic: 'The Devil\'s Dictionary'
                                 },
-                                'by 19th-century writer Ambrose Bierce is a collection of satirical definitions for common words, whose wit I sought to emulate. His "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed to have passed in an instant. Clearly, I stole this literary device for my song.'
+                                'by 19th-century writer Ambrose Bierce is a collection of satirical definitions for common words, whose wit I sought to emulate. His "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed to have passed in an instant. Obviously, I stole this literary device for my song.'
                             ]
                         }
                     }

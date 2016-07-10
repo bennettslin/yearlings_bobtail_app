@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Garryowen',
     overviews: {
-        narrative: 'I could be quite moody when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I openly resented my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn\'t like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.',
+        narrative: 'My mood changed abruptly when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I had soured on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn\'t like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.',
         music: [
             'I named my drunken personality after Garryowen, the menacing dog owned by an Irish nationalist in James Joyce\'s',
             {
@@ -25,7 +25,7 @@ module.exports = {
                         // TODO: Didi thief
                         anchor: 'chefs and thieves.',
                         annotation: {
-                            description: 'During this time, I was staying with a bunch of crust punks. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share.'
+                            description: 'During this time, I was staying with a bunch of crust punks whom I met through my bassist Ana. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share.'
                         }
                     }
                 ]
@@ -37,7 +37,7 @@ module.exports = {
                     {
                         anchor: 'rubber off,',
                         annotation: {
-                            description: 'As I soured on my relationship with Sita, sex became a bargaining chip that she held in the growing power struggle between us. Since I preferred to have sex without a condom, for example, Sita would offer to forego it for that night, before then asking for a kind favour in return.'
+                            description: 'As I grew to resent my relationship with Sita, sex became the last bargaining chip that she held in the power struggle between us. Since I preferred sex without a condom, Sita would offer to forego it that night, before then asking for a kind favour in return.'
                         }
                     },
                     'she offered as a thought,'
@@ -91,7 +91,7 @@ module.exports = {
                     {
                         anchor: 'bustin\' cars with fists,',
                         annotation: {
-                            description: 'One kid named Tristan was particularly hotheaded, so any night out with him was guaranteed to end in a fight. After getting kicked out of a party once for just that reason, we wandered the streets punching car doors to see who could make the biggest dent.'
+                            description: 'There was a kid in the bunch named Tristan who was particularly hotheaded, and any night out with him was guaranteed to end in a fight. One time after getting kicked out of a party for just that reason, our little group wandered the streets, punching car doors to see who could make the biggest dent.'
                         }
                     }
                 ]
@@ -104,9 +104,8 @@ module.exports = {
                     {
                         anchor: 'littlest fuss will incite',
                         annotation: {
-                            description: 'Letting Tristan\'s rage'
-                        },
-                        todo: true
+                            description: 'Tristan would lash out in a chaotic spasm of fury, yet be perfectly collected by next morning. I soon saw that his outbursts were meticulously controlled, giving him a strange inner peace, and so I vowed to indulge my drunken temper in the same manner.'
+                        }
                     },
                     'your rage.'
                 ]
@@ -270,7 +269,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 6,
+            workedHours: 17,
             neededHours: 30,
             subtasks: [
                 {
