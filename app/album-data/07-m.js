@@ -151,6 +151,8 @@ module.exports = {
                 time: 82,
                 lyric: 'these words unsaid.'
             },
+        ],
+        [
             {
                 time: 84,
                 lyric: [
@@ -343,6 +345,8 @@ module.exports = {
                     }
                 ]
             },
+        ],
+        [
             {
                 /**
                  * TODO: link to urchin in Odin, mention that Mara had a lisp?
@@ -418,6 +422,8 @@ module.exports = {
                     }
                 }
             },
+        ],
+        [
             {
                 time: 163,
                 lyric: 'And now I wonder if the answer might be'
@@ -473,6 +479,8 @@ module.exports = {
                     }
                 }
             },
+        ],
+        [
             {
                 time: 183,
                 lyric: 'And sometimes situations seem the worst,'

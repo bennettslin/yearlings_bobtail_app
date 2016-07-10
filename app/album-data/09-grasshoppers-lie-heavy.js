@@ -70,6 +70,8 @@ module.exports = {
                     }
                 ]
             },
+        ],
+        [
             {
                 time: 19,
                 lyric: 'For a cafeteria\'s wage,'
@@ -276,6 +278,8 @@ module.exports = {
                 time: 104,
                 lyric: 'chimneys weep sooty dust.'
             },
+        ],
+        [
             {
                 time: 106,
                 lyric: [

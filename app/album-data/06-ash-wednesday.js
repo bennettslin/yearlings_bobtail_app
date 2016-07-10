@@ -71,6 +71,8 @@ module.exports = {
                     'surely buried she\'d be!'
                 ]
             },
+        ],
+        [
             {
                 time: 16,
                 lyric: [
@@ -165,6 +167,8 @@ module.exports = {
                     'to the trump she just played.'
                 ]
             },
+        ],
+        [
             {
                 time: 62,
                 lyric: 'Couldn\'t heaven, her heaven,'

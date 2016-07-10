@@ -51,6 +51,8 @@ module.exports = {
                     'through the noon.'
                 ]
             },
+        ],
+        [
             {
                 time: 22,
                 lyric: [
@@ -238,6 +240,8 @@ module.exports = {
                     'just a murmuring.'
                 ]
             },
+        ],
+        [
             {
                 time: 91,
                 lyric: 'Now each new concession sees this'

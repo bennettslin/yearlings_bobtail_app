@@ -90,6 +90,8 @@ module.exports = {
                     }
                 ]
             },
+        ],
+        [
             {
                 time: 19,
                 lyric: [
@@ -335,6 +337,8 @@ module.exports = {
                     }
                 ]
             },
+        ],
+        [
             {
                 time: 70,
                 lyric: [
@@ -610,6 +614,8 @@ module.exports = {
                     'snow blitz\'d…'
                 ]
             },
+        ],
+        [
             {
                 time: 161,
                 lyric: [

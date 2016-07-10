@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Garryowen',
     overviews: {
-        narrative: 'I could be pretty hotheaded when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I openly resented my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn\'t like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.',
+        narrative: 'I could be quite hotheaded when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I openly resented my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn\'t like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.',
         music: [
             'I named my drunken personality after Garryowen, the menacing dog owned by an Irish nationalist in James Joyce\'s',
             {
@@ -55,6 +55,8 @@ module.exports = {
                     }
                 ]
             },
+        ],
+        [
             {
                 time: 28,
                 lyric: [
@@ -62,22 +64,38 @@ module.exports = {
                     {
                         anchor: 'you\'re not me, Garryowen.',
                         annotation: {
-                            description: 'Since I was like a different person when I was drunk, it became a running gag '
-                        },
-                        todo: true
+                            description: 'It began as a running gag to address me as Garry when I was drunk, since my disjointed rambling and boorish stunts made me an altogether different person.'
+                        }
                     },
                     'Oh no, and'
                 ]
             },
             {
                 time: 33,
-                lyric: 'I can\'t speak for this life you\'ve chosen.'
+                lyric: [
+                    {
+                        anchor: 'I can\'t speak',
+                        annotation: {
+                            description: 'But this also absolved me of personal responsibility, which became problematic as my actions spilled over into physical aggression and petty larceny.'
+                        }
+                    },
+                    'for this life you\'ve chosen.'
+                ]
             }
         ],
         [
             {
                 time: 39,
-                lyric: 'Drunk pissed punks tryst, bustin\' cars with fists,'
+                lyric: [
+                    'Drunk pissed punks tryst,',
+                    {
+                        anchor: 'bustin\' cars with fists,',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 42,
@@ -98,8 +116,20 @@ module.exports = {
             },
             {
                 time: 47,
-                lyric: 'since hummers aren\'t love, or so she\'s claimed…'
+                lyric: [
+                    'since',
+                    {
+                        anchor: 'hummers aren\'t love,',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'or so she\'s claimed…'
+                ]
             },
+        ],
+        [
             {
                 time: 50,
                 lyric: 'Well see, Garryowen, now no one,'
@@ -126,6 +156,8 @@ module.exports = {
                 time: 70,
                 lyric: 'with choler turned up, cringing in shame.'
             },
+        ],
+        [
             {
                 time: 73,
                 lyric: 'As claws you built from scratches, with your bilious malice,'
@@ -180,6 +212,8 @@ module.exports = {
                 time: 126,
                 lyric: 'aren\'t you the faltering dear?'
             },
+        ],
+        [
             {
                 time: 128,
                 lyric: 'They told her, "Never help a self-abuser'
@@ -206,6 +240,8 @@ module.exports = {
                 time: 145,
                 lyric: 'becomes someone\'s last-ditch alibi.'
             },
+        ],
+        [
             {
                 time: 150,
                 lyric: 'You\'re a purer lie…'
