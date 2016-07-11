@@ -91,7 +91,7 @@ module.exports = {
                     {
                         anchor: 'bustin\' cars with fists,',
                         annotation: {
-                            description: 'One kid named Tristan was particularly hotheaded. After we all got kicked out of a party one night for a fight that he started, Tristan started punching car doors, challenging the rest of us to see who could make the biggest dent.'
+                            description: 'One kid named Tristan was particularly hotheaded. After we all got kicked out of a party one night for a fight that he started, Tristan started punching car doors, challenging us to see who could make the biggest dent. I didn\'t win.'
                         }
                     }
                 ]
@@ -117,7 +117,7 @@ module.exports = {
                     {
                         anchor: 'smegma crust,',
                         annotation: {
-                            description: 'Smegma is the smelly gunk that builds up on unwashed genitals. I would put my personal hygiene on hold for days while I crashed at the punk house. But once back at Sita\'s, I would still dawdle a bit before showering, since she was powerless to entice me with sex until I did.'
+                            description: 'Smegma is the smelly gunk that builds up on unwashed genitals. My personal hygiene would be put on hold for days while I crashed at the punk house. But once back at Sita\'s, I would still dawdle a bit before showering, since she was powerless to entice me with sex until I did.'
                         }
                     }
                 ]
@@ -132,11 +132,11 @@ module.exports = {
                             description: 'A hummer is a blowjob. Once when Sita protested that we couldn\'t have sex until after I washed up, I snidely remarked that she could give me a blowjob, since blowjobs didn\'t count as real sex in her view.'
                         }
                     },
-                    'or',
+                    'or so',
                     {
-                        anchor: 'so she\'s claimed…',
+                        anchor: 'she\'s claimed…',
                         annotation: {
-                            description: 'I came to learn that after Sita had initially rejected me, and while we were slowly building up our friendship, she was sexually intimate with other men, though always just shy of intercourse. She tried to explain that she never went all the way because she didn\'t love them. She loved me, and so I had won. But it still stung like crazy, and only added to my deepening resentment at the time.'
+                            description: 'I came to learn that after Sita had initially rejected me, and while we were building up our friendship, she was sexually intimate with other men, though always just shy of intercourse. She tried to explain that she never went all the way because she didn\'t love them. She loved me.  But it still stung like crazy, and only added to my deepening resentment at the time.'
                         }
                     }
                 ]
@@ -153,9 +153,8 @@ module.exports = {
                     {
                         anchor: 'buys your grief',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'My worlds collided when a neighbourhood kid who liked my band found out that I had vandalised his friend\'s bike in a drunken fit of rage.'
+                        }
                     },
                     'as the boy unchosen.'
                 ]
@@ -164,7 +163,16 @@ module.exports = {
         [
             {
                 time: 61,
-                lyric: 'So the celibate you\'ll play, self-medicated,'
+                lyric: [
+                    'So the',
+                    {
+                        anchor: 'celibate you\'ll play,',
+                        annotation: {
+                            description: 'Drinking to excess made me impotent and thus impervious to Sita\'s advances. But not having sex was also purifying in its own right, and gave me the serene feeling of being my old self, so it was win-win all around.'
+                        }
+                    },
+                    'self-medicated,'
+                ]
             },
             {
                 time: 64,
@@ -172,21 +180,56 @@ module.exports = {
             },
             {
                 time: 67,
-                lyric: 'Slammed in the well, you\'ll glimpse yourself'
+                lyric: [
+                    {
+                        anchor: 'Slammed in the well,',
+                        annotation: {
+                            description: 'Of course, using alcohol as an emotional cleanser isn\'t sustainable in the long term. At some point, vomiting into a toilet and staring at my reflection in the water became a nightly occurrence.'
+                        }
+                    },
+                    'you\'ll glimpse yourself'
+                ]
             },
             {
                 time: 70,
-                lyric: 'with choler turned up, cringing in shame.'
+                lyric: [
+                    'with',
+                    {
+                        anchor: 'choler turned up,',
+                        annotation: {
+                            description: 'The angry, resentful drunk I was becoming didn\'t match my self-image as a wide-eyed, well-meaning kid, just like I wouldn\'t have recognised myself with an upturned collar.'
+                        }
+                    },
+                    'cringing in shame.'
+                ]
             },
         ],
         [
             {
                 time: 73,
-                lyric: 'As claws you built from scratches, with your bilious malice,'
+                lyric: [
+                    'As',
+                    {
+                        anchor: 'claws you built from scratches,',
+                        annotation: {
+                            description: 'A cat scratches to sharpen its claws, just like I had kept my emotional defences sharp to guard against a lifetime of scratches.'
+                        }
+                    },
+                    'with your bilious malice,'
+                ]
             },
             {
                 time: 75,
-                lyric: 'fill up a package strapped to your scapegirl,'
+                lyric: [
+                    'fill up a package strapped to your',
+                    {
+                        anchor: 'scapegirl,',
+                        annotation: {
+                            description: 'In Biblical times, a community would absolve itself of its sins by symbolically placing them on a goat that was then banished into the desert. '
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 78,
@@ -204,13 +247,32 @@ module.exports = {
             },
             {
                 time: 100,
-                lyric: 'you\'d make her strip bare just to watch her freeze.'
+                lyric: [
+                    'you\'d',
+                    {
+                        anchor: 'make her strip bare',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'just to watch her freeze.'
+                ]
             }
         ],
         [
             {
                 time: 106,
-                lyric: 'You won\'t always have her for your pet.'
+                lyric: [
+                    'You won\'t always',
+                    {
+                        anchor: 'have her for your pet.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 111,
@@ -220,7 +282,23 @@ module.exports = {
         [
             {
                 time: 116,
-                lyric: 'Final trip on a tanker, you\'ll drop your anger'
+                lyric: [
+                    {
+                        anchor: 'Final trip on a tanker,',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    },
+                    'you\'ll',
+                    {
+                        anchor: 'drop your anger',
+                        annotation: {
+                            description: 'Or else, "drop your anchor."'
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 120,
@@ -232,17 +310,44 @@ module.exports = {
             },
             {
                 time: 126,
-                lyric: 'aren\'t you the faltering dear?'
+                lyric: [
+                    'aren\'t you the',
+                    {
+                        anchor: 'faltering dear?',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
         ],
         [
             {
                 time: 128,
-                lyric: 'They told her, "Never help a self-abuser'
+                lyric: [
+                    'They told her, "Never help a',
+                    {
+                        anchor: 'self-abuser',
+                        annotation: {
+                            description: 'I had an intermittent habit of cutting myself to cope with emotional stress. But while self-abuse can refer to self-harm, historically it was also a euphemism for masturbation. Towards the end, I masturbated frequently to lower my sex drive, hoping that this would strengthen my resolve to break up with Sita.'
+                        }
+                    }
+                ]
             },
             {
                 time: 131,
-                lyric: 'see himself as well in you."'
+                lyric: [
+                    [
+                        'see himself',
+                        {
+                            anchor: 'as well in you."',
+                            annotation: {
+                                description: 'But having the capacity to injure myself also meant that I had few reservations about harming anyone willing to shoulder my burdens as her own.'
+                            }
+                        }
+                    ]
+                ]
             },
             {
                 time: 134,
@@ -256,11 +361,28 @@ module.exports = {
         [
             {
                 time: 139,
-                lyric: 'Toora-loora-li, Garryowen, who owes no one,'
+                lyric: [
+                    {
+                        anchor: 'Toora-loora-li.',
+                        annotation: {
+                            description: 'Perhaps related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variations of it are prevalent in Irish drinking songs and lullabies.'
+                        }
+                    },
+                    'Garryowen, who owes no one,'
+                ]
             },
             {
                 time: 145,
-                lyric: 'becomes someone\'s last-ditch alibi.'
+                lyric: [
+                    'becomes someone\'s',
+                    {
+                        anchor: 'last-ditch alibi.',
+                        annotation: {
+                            description: ''
+                        },
+                        todo: true
+                    }
+                ]
             },
         ],
         [
