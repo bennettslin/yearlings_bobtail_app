@@ -168,7 +168,7 @@ module.exports = {
                     {
                         anchor: 'celibate you\'ll play,',
                         annotation: {
-                            description: 'Drinking to excess made me impotent and thus impervious to Sita\'s advances. But not having sex was also purifying in its own right, and gave me the serene feeling of being my old self, so it was win-win all around.'
+                            description: 'Drinking to excess made me impotent and thus impervious to Sita\'s advances. But not having sex was also emotionally purifying in its own right, and gave me the serene feeling of being my old self, so it was win-win all around.'
                         }
                     },
                     'self-medicated,'
@@ -184,7 +184,7 @@ module.exports = {
                     {
                         anchor: 'Slammed in the well,',
                         annotation: {
-                            description: 'Of course, using alcohol as an emotional cleanser isn\'t sustainable in the long term. At some point, vomiting into a toilet and staring at my reflection in the water became a nightly occurrence.'
+                            description: 'Of course, using alcohol as a spiritual cleanser isn\'t sustainable in the long term. Vomiting into a toilet and staring at my reflection in the water soon became a nightly occurrence.'
                         }
                     },
                     'you\'ll glimpse yourself'
@@ -197,7 +197,7 @@ module.exports = {
                     {
                         anchor: 'choler turned up,',
                         annotation: {
-                            description: 'The angry, resentful drunk I was becoming didn\'t match my self-image as a wide-eyed, well-meaning kid, just like I wouldn\'t have recognised myself with an upturned collar.'
+                            description: 'Just like I wouldn\'t have recognised myself with an upturned collar, the angry drunk returning my gaze didn\'t match my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.'
                         }
                     },
                     'cringing in shame.'
@@ -212,7 +212,7 @@ module.exports = {
                     {
                         anchor: 'claws you built from scratches,',
                         annotation: {
-                            description: 'A cat scratches to sharpen its claws, just like I had kept my emotional defences sharp to guard against a lifetime of scratches.'
+                            description: 'A cat scratches to keep its claws sharp, just like I had sharpened my emotional defences to guard against a lifetime of scratches.'
                         }
                     },
                     'with your bilious malice,'
@@ -225,9 +225,8 @@ module.exports = {
                     {
                         anchor: 'scapegirl,',
                         annotation: {
-                            description: 'In Biblical times, a community would absolve itself of its sins by symbolically placing them on a goat that was then banished into the desert. '
-                        },
-                        todo: true
+                            description: 'In Biblical times, a community would absolve itself of its sins by symbolically placing them on a goat that was then banished into the desert. For me, leaving Sita for good would serve a similar purpose. As long as she was around to cast judgment on my hypocrisy, I would have to own up to my mistakes, and not run away from them.'
+                        }
                     }
                 ]
             },
@@ -252,9 +251,8 @@ module.exports = {
                     {
                         anchor: 'make her strip bare',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'One time, Sita stripped naked only to start shivering from the cold, in a desperate appeal to both my predatory and protective instincts. But I just kept sipping my beer, quietly enjoying my cruelty.'
+                        }
                     },
                     'just to watch her freeze.'
                 ]
@@ -268,7 +266,7 @@ module.exports = {
                     {
                         anchor: 'have her for your pet.',
                         annotation: {
-                            description: ''
+                            description: 'Despite all this, I really did love Sita.'
                         },
                         todo: true
                     }
