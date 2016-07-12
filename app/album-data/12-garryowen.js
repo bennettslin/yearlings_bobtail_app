@@ -25,7 +25,7 @@ module.exports = {
                         // TODO: Didi thief
                         anchor: 'chefs and thieves.',
                         annotation: {
-                            description: 'During this time, I was staying with some crust punks who were friends of Ana\'s. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share.'
+                            description: 'During this time, I was staying with some crust punks who were friends of Ana\'s. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share. I was always in the thieving half.'
                         }
                     }
                 ]
@@ -136,7 +136,7 @@ module.exports = {
                     {
                         anchor: 'she\'s claimed…',
                         annotation: {
-                            description: 'I came to learn that after Sita had initially rejected me, and while we were building up our friendship, she was sexually intimate with other men, though always just shy of intercourse. She tried to explain that she never went all the way because she didn\'t love them. She loved me.  But it still stung like crazy, and only added to my deepening resentment at the time.'
+                            description: 'I came to learn that after Sita had initially rejected me, and while we were building up our friendship, she was sexually intimate with other men, though always shy of intercourse. She tried to explain that she never went all the way because she didn\'t love them. She loved me.  But it still stung like crazy, and only added to my deepening resentment at the time.'
                         }
                     }
                 ]
@@ -153,7 +153,7 @@ module.exports = {
                     {
                         anchor: 'buys your grief',
                         annotation: {
-                            description: 'My worlds collided when a neighbourhood kid who liked my band found out that I had vandalised his friend\'s bike in a drunken fit of rage.'
+                            description: 'My worlds collided when a neighbourhood kid who liked my band found out that I had vandalised his friend\'s bike in a fit of drunken rage. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.'
                         }
                     },
                     'as the boy unchosen.'
@@ -291,7 +291,7 @@ module.exports = {
                     {
                         anchor: 'drop your anchor',
                         annotation: {
-                            description: 'Or else, "drop your anger." Having mentally attached Sita to every one of my grievances for so long, all I could feel after the breakup was an eerie serenity. I was no longer angry or resentful, and for the time being, that was tantamount to being happy.'
+                            description: 'Or else, "drop your anger." Having mentally attached Sita to every one of my grievances for so long, all I could feel after the breakup was an eerie serenity. I was no longer angry or resentful, and that was tantamount to being happy.'
                         }
                     }
                 ]
@@ -311,9 +311,8 @@ module.exports = {
                     {
                         anchor: 'faltering dear?',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'Having wiped the slate clean, I took pains to affect an awkwardly endearing persona, right down to the posture and stammer. I\'d been switching social identities for so long that I knew the initial sense of being a phony would be fleeting. There was an extra layer of hypocrisy to this one, however, which did bother me.'
+                        }
                     }
                 ]
             },
