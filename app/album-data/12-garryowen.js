@@ -168,7 +168,7 @@ module.exports = {
                     {
                         anchor: 'celibate you\'ll play,',
                         annotation: {
-                            description: 'Drinking to excess made me impotent and thus impervious to Sita\'s advances. But not having sex was also emotionally purifying in its own right, and gave me the serene feeling of being my old self, so it was win-win all around.'
+                            description: 'Drinking to excess made me impotent and thus impervious to Sita\'s advances. But not having sex was also purifying in its own right, and lent the comfort of being my old self, so it was win-win all around.'
                         }
                     },
                     'self-medicated,'
@@ -266,7 +266,7 @@ module.exports = {
                     {
                         anchor: 'have her for your pet.',
                         annotation: {
-                            description: 'Despite all this, I really did love Sita.'
+                            description: 'I really did love Sita.'
                         },
                         todo: true
                     }
@@ -284,15 +284,14 @@ module.exports = {
                     {
                         anchor: 'Final trip on a tanker,',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'A tanker is a marine vessel that transports crude oil, but can also refer to a drinking spree. As part of my plan to start afresh, I made multiple attempts to stay sober. Since each time was to be my last, I would indulge myself and drink to oblivion, only to repeat the motions several nights later. But I finally went for a long stretch without alcohol, and that\'s when I broke up with Sita.'
+                        }
                     },
                     'you\'ll',
                     {
-                        anchor: 'drop your anger',
+                        anchor: 'drop your anchor',
                         annotation: {
-                            description: 'Or else, "drop your anchor."'
+                            description: 'Or else, "drop your anger." Like the numbness that sweeps in after a heavy weight has been lifted, I felt nothing after the breakup. I had mentally attached Sita to every one of my grievances, and now she was gone. taking them with her. Still in shock, my emotions dutifully followed my reasons, at least for the time being.'
                         },
                         todo: true
                     }
@@ -341,7 +340,7 @@ module.exports = {
                         {
                             anchor: 'as well in you."',
                             annotation: {
-                                description: 'But having the capacity to injure myself also meant that I had few reservations about harming anyone willing to shoulder my burdens as her own.'
+                                description: 'Having the capacity to injure myself also meant that I had few reservations about harming anyone willing to shoulder my burdens as her own.'
                             }
                         }
                     ]
@@ -393,7 +392,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 24,
+            workedHours: 27,
             neededHours: 30,
             subtasks: [
                 {
