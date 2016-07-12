@@ -291,9 +291,8 @@ module.exports = {
                     {
                         anchor: 'drop your anchor',
                         annotation: {
-                            description: 'Or else, "drop your anger." Like the numbness that sweeps in after a heavy weight has been lifted, I felt nothing after the breakup. I had mentally attached Sita to every one of my grievances, and now she was gone. taking them with her. Still in shock, my emotions dutifully followed my reasons, at least for the time being.'
-                        },
-                        todo: true
+                            description: 'Or else, "drop your anger." Having mentally attached Sita to every one of my grievances for so long, all I could feel after the breakup was an eerie serenity. I was no longer angry or resentful, and for the time being, that was tantamount to being happy.'
+                        }
                     }
                 ]
             },
