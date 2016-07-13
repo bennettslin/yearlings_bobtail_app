@@ -64,7 +64,7 @@ module.exports = {
                     {
                         anchor: 'you\'re not me, Garryowen.',
                         annotation: {
-                            description: 'A running gag amongst my friends was to address me as Garry when I was drunk, since my disjointed rambling and boorish stunts made me an altogether different person.'
+                            description: 'A running gag amongst my friends was to address me as Garry when I was drunk, since my disjointed rambling and oafish stunts made me an altogether different person.'
                         }
                     },
                     'Oh no, and'
@@ -266,9 +266,8 @@ module.exports = {
                     {
                         anchor: 'have her for your pet.',
                         annotation: {
-                            description: 'I really did love Sita.'
-                        },
-                        todo: true
+                            description: 'Despite everything, I really did love Sita, and I never once doubted that the breakup would be wrenching for us both.'
+                        }
                     }
                 ]
             },
@@ -284,14 +283,14 @@ module.exports = {
                     {
                         anchor: 'Final trip on a tanker,',
                         annotation: {
-                            description: 'A tanker is a marine vessel that transports crude oil, but can also refer to a drinking spree. As part of my plan to start afresh, I made multiple attempts to stay sober. Since each time was to be my last, I would indulge myself and drink to oblivion, only to repeat the motions several nights later. But I finally went for a long stretch without alcohol, and that\'s when I broke up with Sita.'
+                            description: 'A tanker is a marine vessel that transports crude oil, but can also refer to a drinking spree. As part of my plan to start afresh, I made multiple attempts to stay sober. Since each time was to be my last, I would indulge myself and drink to oblivion, only to repeat the motions several nights later. But after finally mustering the courage to break up with Sita, I really did go for a long stretch without alcohol.'
                         }
                     },
                     'you\'ll',
                     {
                         anchor: 'drop your anchor',
                         annotation: {
-                            description: 'Or else, "drop your anger." Having mentally attached Sita to every one of my grievances for so long, all I could feel after the breakup was an eerie serenity. I was no longer angry or resentful, and that was tantamount to being happy.'
+                            description: 'Or else, "drop your anger." Having mentally attached Sita to every one of my grievances for so long, all I could feel after the breakup was an eerie serenity. I was no longer angry or resentful, and that was tantamount to feeling happy.'
                         }
                     }
                 ]
@@ -311,7 +310,7 @@ module.exports = {
                     {
                         anchor: 'faltering dear?',
                         annotation: {
-                            description: 'Having wiped the slate clean, I took pains to affect an awkwardly endearing persona, right down to the posture and stammer. I\'d been switching social identities for so long that I knew the initial sense of being a phony would be fleeting. There was an extra layer of hypocrisy to this one, however, which did bother me.'
+                            description: 'Having wiped the slate clean, I took pains to affect an endearingly awkward persona, right down to the posture and stammer. I\'d been switching social identities for so long that I knew the initial sense of being a phony would be fleeting. There was an extra layer of hypocrisy this time around, however, which did bother me.'
                         }
                     }
                 ]
@@ -373,9 +372,8 @@ module.exports = {
                     {
                         anchor: 'last-ditch alibi.',
                         annotation: {
-                            description: ''
-                        },
-                        todo: true
+                            description: 'Even as my friends and I were clearly joking to say that it was Garry, and not me, who committed the previous night\'s acts of vandalism, on some level I accepted it as the truth. And now, it also wasn\'t me who had slowly sapped Sita\'s confidence over the years, leaving her a crumbled wreck. It must have been Garry. I wasn\'t there.'
+                        }
                     }
                 ]
             },
@@ -390,7 +388,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'annotations',
-            workedHours: 27,
+            workedHours: 30,
             neededHours: 30,
             subtasks: [
                 {
