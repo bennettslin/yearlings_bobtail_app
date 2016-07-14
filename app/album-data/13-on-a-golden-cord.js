@@ -105,11 +105,6 @@ module.exports = {
                 rightLyric: 'past this avenue Möbius.'
             }
         ],
-
-
-
-
-
         [
             {
                 time: 76,
@@ -128,62 +123,59 @@ module.exports = {
             },
             {
                 time: 86,
-                leftLyric: 'But what do I know?',
-                rightLyric: 'But what do I know?'
+                centreLyric: 'But what do I know?'
             }
         ],
         [
             {
+                time: -1,
+                centreLyric: {
+                    italic: 'Odelay!'
+                }
+            },
+            {
                 time: 87,
-                leftLyric: 'Just that those playful pups with their hateful fangs',
-                rightLyric: 'Odelay!'
+                centreLyric: 'Just that those playful pups with their hateful fangs'
             },
             {
                 time: 90,
-                leftLyric: 'knew the restraint of those born as hunters,',
-                rightLyric: '…'
+                centreLyric: 'knew the restraint of those born as hunters,'
             },
             {
                 time: 93,
-                leftLyric: 'while this supposed dove chafing in his cage,',
-                rightLyric: '…'
+                centreLyric: 'while this supposed dove chafing in his cage,'
             },
             {
                 time: 96,
-                leftLyric: 'just learned he\'s pecked to death his precious other.',
-                rightLyric: '…'
+                centreLyric: 'just learned he\'s pecked to death his precious other.'
             }
         ],
-
-
-
-
-
         [
             {
                 time: 98,
-                leftLyric: 'But should it matter since you loved her once,',
-                rightLyric: '…'
+                centreLyric: 'But should it matter since you loved her once,'
             },
             {
                 time: 101,
-                leftLyric: 'when you really thought the world that simple?',
-                rightLyric: '…'
+                centreLyric: 'when you really thought the world that simple?'
             },
             {
                 time: 104,
-                leftLyric: 'And who\'s to judge how much you cared because',
-                rightLyric: '…'
+                centreLyric: 'And who\'s to judge how much you cared because'
             },
             {
                 time: 107,
-                leftLyric: 'the gesture then was just a little more worth working for?…',
-                rightLyric: '…'
+                centreLyric: 'the gesture then was just a little more worth working for?…'
             },
             {
                 time: 113,
-                leftLyric: 'Now the jester teeters towards…',
-                rightLyric: 'Mush! Mush!'
+                centreLyric: 'Now the jester teeters towards…'
+            },
+            {
+                time: 113,
+                centreLyric: {
+                    italic: 'Mush! Mush!'
+                }
             }
         ],
         [

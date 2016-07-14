@@ -33,28 +33,27 @@
     }
 }
 
+// FIXME: All of this.
 .double-lines-block {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
-    // FIXME: Why is column width not expanding for text?
     .line {
         @hanging-indent-width: 1.5em;
-        @centre-width: 50%;
-        @centre-edge-margin: (@centre-width - 100%) / 2;
-        width: 100%;
+        @centre-edge-margin: 15%;
+        width: auto;
 
         &.left {
             text-indent:-@hanging-indent-width;
             padding-left: @hanging-indent-width;
 
             &.centre {
-                margin-left: @centre-edge-margin;
+                padding-left: @centre-edge-margin;
             }
         }
 
         &.centre {
-            width: @centre-width;
+            width: 100%;
 
             &.exact {
                 text-indent: 0;
@@ -66,7 +65,18 @@
         &.right {
             text-align: right;
 
-            // FIXME: Dot block and underline bar are misaligned in right column on Firefox when anchor begins new line. It's because of the direction: rtl. Happens in left column too, for different reason. See Odin "dream your whims instead."
+            /**
+             * Hack in Firefox to keep dot and underline bar properly aligned in
+             * an annotation link when it begins a new line in the right column.
+             */
+            > :first-child:before {
+                content: 'a';
+                opacity: 0;
+                font-size: 0;
+                line-height: 0;
+            }
+
+            // FIXME: Dot block and underline bar are misaligned in right column on Firefox when anchor breaks onto new line.
 
             /**
              * Styling for hanging indent with right-aligned text. The hidden
@@ -89,7 +99,7 @@
             }
 
             &.centre {
-                margin-right: @centre-edge-margin;
+                padding-right: @centre-edge-margin;
             }
         }
     }
