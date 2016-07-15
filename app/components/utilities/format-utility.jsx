@@ -67,6 +67,7 @@ module.exports = {
                                 <a className="anchor-link"
                                     onClick={() => clickHandler(clickHandlerArgument)} >
                                     {this.getFormattedTextElement(isLyric, text.anchor, clickHandler, index, nestedIndex)}
+                                    <span className="underline-bar"></span>
                                 </a>
                             </span>
                         </span>
