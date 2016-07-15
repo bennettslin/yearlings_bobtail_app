@@ -58,19 +58,15 @@ module.exports = {
                     <span key={nestedIndex + index}>
                         {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish. */}
                         {index > 0 ? this._getSpaceElement() : null}
-                        <span className={'anchor-block' + todoClass}>
+                        <a className={'anchor-block' + todoClass}
+                            onClick={() => clickHandler(clickHandlerArgument)} >
+                            <span className="underline-bar"></span>
                             <DotsBlock
                                 dotKeys={text.dotKeys}
                                 interactable={false}
                             />
-                            <span className="text-block">
-                                <a className="anchor-link"
-                                    onClick={() => clickHandler(clickHandlerArgument)} >
-                                    {this.getFormattedTextElement(isLyric, text.anchor, clickHandler, index, nestedIndex)}
-                                    <span className="underline-bar"></span>
-                                </a>
-                            </span>
-                        </span>
+                            {this.getFormattedTextElement(isLyric, text.anchor, clickHandler, index, nestedIndex)}
+                        </a>
                     </span>
                 );
             }

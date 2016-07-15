@@ -33,7 +33,6 @@
     }
 }
 
-// FIXME: All of this.
 .double-lines-block {
     display: flex;
     justify-content: space-between;
@@ -63,20 +62,6 @@
         }
 
         &.right {
-            text-align: right;
-
-            /**
-             * Hack in Firefox to keep dot and underline bar properly aligned in
-             * an annotation link when it begins a new line in the right column.
-             */
-            > :first-child:before {
-                content: 'a';
-                opacity: 0;
-                font-size: 0;
-                line-height: 0;
-            }
-
-            // FIXME: Dot block and underline bar are misaligned in right column on Firefox when anchor breaks onto new line.
 
             /**
              * Styling for hanging indent with right-aligned text. The hidden
@@ -106,25 +91,19 @@
 }
 
 .anchor-block {
-    @anchor-block-height: 0.9em;
     position: relative;
-    height: @anchor-block-height;
-
-    .dots-block {
-        // Override global dot diameter.
-        .dot-diameter-mixin(@anchor-block-height);
-
-        // FIXME: Dots should be above underline bar.
-        position: absolute;
-        left: -@anchor-block-height * 0.2;
-        top: -@anchor-block-height * 0.2;
-    }
-}
-
-.anchor-link {
-    position: relative;
-    z-index: 1;
     white-space: nowrap;
+
+    /**
+     * Stupid hack to keep dots block and underline bar aligned in right column
+     * when anchor breaks onto new line.
+     */
+    &:before {
+        content: 'a';
+        opacity: 0;
+        font-size: 0;
+        line-height: 0;
+    }
 
     @colour: @right-field-colour;
     @offset: 0.75px;
@@ -138,12 +117,23 @@
     // Underline anchor tag.
     .underline-bar {
         position: absolute;
-        z-index: -1;
         width: 100%;
         height: 35%;
         bottom: 0;
         left: 0;
         background-color: mix(@lyric-link-colour, white, 25%);
+    }
+
+    .dots-block {
+        @anchor-block-height: 0.9em;
+
+        // Override global dot diameter.
+        .dot-diameter-mixin(@anchor-block-height);
+
+        // FIXME: Dots should be above underline.
+        position: absolute;
+        left: -@anchor-block-height * 0.2;
+        top: -@anchor-block-height * 0.2;
     }
 }
 
