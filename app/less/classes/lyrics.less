@@ -125,15 +125,14 @@
     }
 
     .dots-block {
-        @anchor-block-height: 0.9em;
+        @dot-radius: 0.9em;
 
         // Override global dot diameter.
-        .dot-diameter-mixin(@anchor-block-height);
+        .dot-diameter-mixin(@dot-radius);
 
-        // FIXME: Dots should be above underline.
         position: absolute;
-        left: -@anchor-block-height * 0.2;
-        top: -@anchor-block-height * 0.2;
+        left: -@dot-radius * 0.2;
+        top: -@dot-radius * 0.2;
     }
 }
 
