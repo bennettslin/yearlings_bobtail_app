@@ -241,12 +241,13 @@ class App extends React.Component {
             annotationObject = this._getAnnotationObject(selectedSongObject),
             portalObjects = this._getPortalObjects(annotationObject);
 
+        // FIXME: Don't use bind here.
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
                 <div className="field left-field">
                     <TitleSection
                         titleText={props.title}
-                        handleSongReset={this.handleSongChange}
+                        onClick={this.handleSongChange.bind(this, 0, undefined)}
                     />
                     <SongsSection
                         songs={props.songs}
