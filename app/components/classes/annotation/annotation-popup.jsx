@@ -9,6 +9,14 @@ const defaultProps = {
     handleUrlClick() {}
 }
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class AnnotationPopup extends Popup {
 
     getClassName() {

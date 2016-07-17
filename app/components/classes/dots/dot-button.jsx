@@ -6,6 +6,14 @@ const defaultProps = {
     classValue: ''
 }
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class DotButton extends Interactable {
 
     constructor(props) {

@@ -7,6 +7,14 @@ const defaultProps = {
     interactable: false
 }
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class DotsBlock extends React.Component {
 
     render() {

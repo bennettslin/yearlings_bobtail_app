@@ -17,6 +17,14 @@ const defaultProps = {
     handleSongChange() {}
 };
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class SongRow extends React.Component {
 
     _getSongContent(sumTask) {

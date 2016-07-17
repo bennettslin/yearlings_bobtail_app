@@ -5,6 +5,14 @@ const defaultProps = {
     dotKeys: {}
 }
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class DotsSection extends React.Component {
 
     render() {

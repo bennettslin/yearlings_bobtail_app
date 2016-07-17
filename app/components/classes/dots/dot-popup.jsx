@@ -6,6 +6,14 @@ const defaultProps = {
     active: false
 }
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class DotPopup extends Popup {
 
     getClassName() {

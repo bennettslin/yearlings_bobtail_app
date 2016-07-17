@@ -6,6 +6,14 @@ const defaultProps = {
     url: null
 }
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class UrlPopup extends Popup {
 
     getClassName() {

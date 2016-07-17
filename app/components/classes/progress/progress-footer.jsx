@@ -1,6 +1,14 @@
 import React from 'react';
 import ProgressHelper from '../../helpers/progress-helper.js';
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 const ProgressFooter = ({
     sumTask = 0
 }) => {

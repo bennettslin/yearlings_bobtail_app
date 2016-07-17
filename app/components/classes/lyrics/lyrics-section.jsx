@@ -7,6 +7,14 @@ const defaultProps = {
     handleAnnotationSelect() {}
 };
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class LyricsSection extends React.Component {
 
     _getStanzaElement(stanzaArray, stanzaIndex) {

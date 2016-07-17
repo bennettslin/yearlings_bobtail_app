@@ -4,6 +4,14 @@ const defaultProps = {
     url: ''
 }
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class UrlSection extends React.Component {
 
     // TODO: Force refresh of same page if user clicks on link again.

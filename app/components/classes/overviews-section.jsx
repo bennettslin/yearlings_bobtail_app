@@ -8,6 +8,14 @@ const defaultProps = {
     handleOverviewSelect() {}
 };
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class OverviewsSection extends React.Component {
 
     _getOverviewSelectButton(key, index) {

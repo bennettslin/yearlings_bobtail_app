@@ -13,6 +13,14 @@ const defaultProps = {
     handleUrlClick() {}
 }
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class AnnotationSection extends React.Component {
 
     _getAnnotationCardsBlock(annotationObject) {

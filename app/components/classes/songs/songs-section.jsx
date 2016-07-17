@@ -12,6 +12,14 @@ const defaultProps = {
     handleSongChange() {}
 };
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class SongsSection extends React.Component {
 
     componentWillMount() {

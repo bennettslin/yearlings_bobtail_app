@@ -8,6 +8,14 @@ const defaultProps = {
     maxTotalNeededHours: 0
 };
 
+/*************
+ * CONTAINER *
+ *************/
+
+/********
+ * VIEW *
+ ********/
+
 class ProgressBar extends React.Component {
 
     render() {
