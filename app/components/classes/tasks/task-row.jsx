@@ -14,10 +14,14 @@ const TaskRow = (props) => (
  ****************/
 
 const TaskRowView = ({
+
+    // From props.
     task,
     isSubtask,
     maxTotalNeededHours
+
 }) => (
+
     <div className={'row ' + (isSubtask ? 'secondary-row' : 'primary-row')}>
         <ProgressBar
             sumTask={task}
@@ -34,6 +38,7 @@ const TaskRowView = ({
             }
         </div>
     </div>
+
 );
 
 export default TaskRow;

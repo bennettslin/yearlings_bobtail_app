@@ -3,25 +3,18 @@ import SongRow from './song-row.jsx';
 import ProgressFooter from '../progress/progress-footer.jsx';
 import ProgressHelper from '../../helpers/progress-helper.js';
 
-const defaultProps = {
-    songs: [],
-
-    // Includes album tasks.
-    allTasks: [],
-
-    selectedSongIndex: 0,
-    onSongClick() {}
-};
-
 /*************
  * CONTAINER *
  *************/
 
 const SongsSection = (props) => {
+
     const { songs,
             allTasks } = props,
+
         maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
         sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks);
+
     return (
         <SongsSectionView {...props}
             maxTotalNeededHours={maxTotalNeededHours}
@@ -35,12 +28,18 @@ const SongsSection = (props) => {
  ****************/
 
 const SongsSectionView = ({
+
+    // From props.
     songs,
     selectedSongIndex,
+    onSongClick,
+
+    // From controller.
     maxTotalNeededHours,
-    sumAllTasks,
-    onSongClick
+    sumAllTasks
+
 }) => (
+
     <div className="section songs-section">
         <div className="row">
             <div className="text-cell-wrapper">
@@ -68,7 +67,7 @@ const SongsSectionView = ({
             />
         </div>
     </div>
+
 );
 
-SongsSection.defaultProps = defaultProps;
 export default SongsSection;

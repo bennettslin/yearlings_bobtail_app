@@ -4,16 +4,18 @@ import React from 'react';
  * CONTAINER *
  *************/
 
-const ProgressBar = ({
-    sumTask,
-    maxTotalNeededHours
-}) => {
-    const filledStyle = {
+const ProgressBar = (props) => {
+
+    const { sumTask,
+            maxTotalNeededHours } = props,
+
+        filledStyle = {
             width: (sumTask.workedHours / (sumTask.neededHours || 0.01) * 100) + '%'
         },
         totalStyle = {
             width: (sumTask.neededHours / (maxTotalNeededHours || 0.01) * 100) + '%'
         };
+
     return (
         <ProgressBarView
             filledStyle={filledStyle}
@@ -27,14 +29,17 @@ const ProgressBar = ({
  ****************/
 
 const ProgressBarView = ({
+
+    // From controller.
     filledStyle,
     totalStyle
-}) => {
-    return (
-        <div className="progress-bar" style={totalStyle}>
-            <div className="filled-bar" style={filledStyle}></div>
-        </div>
-    );
-};
+
+}) => (
+
+    <div className="progress-bar" style={totalStyle}>
+        <div className="filled-bar" style={filledStyle}></div>
+    </div>
+
+);
 
 export default ProgressBar;

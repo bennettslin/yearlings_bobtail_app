@@ -16,9 +16,13 @@ const StatsSection = (props) => (
  ****************/
 
 const StatsSectionView = ({
+
+    // From props.
     lyrics,
     annotations
+
 }) => (
+
     <div className="section stats-section">
         <h2>stats</h2>
         <div className="row">
@@ -27,6 +31,7 @@ const StatsSectionView = ({
             <WordsPerAnnotationRow annotations={annotations} />
         </div>
     </div>
+
 );
 
 export default StatsSection;

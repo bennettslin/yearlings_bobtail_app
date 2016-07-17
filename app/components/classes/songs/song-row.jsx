@@ -7,12 +7,15 @@ import ProgressHelper from '../../helpers/progress-helper.js';
  *************/
 
 const SongRow = (props) => {
+
     const { song,
             songIndex,
             onSongClick } = props,
+
         songTitle = song.title,
         sumTask = ProgressHelper.calculateSumTask(song.tasks),
         onClick = () => onSongClick(songIndex);
+
     return (
         <SongRowView {...props}
             songTitle={songTitle}
@@ -27,13 +30,19 @@ const SongRow = (props) => {
  ****************/
 
 const SongRowView = ({
+
+    // From props.
     songIndex,
     isSelected,
     maxTotalNeededHours,
+
+    // From controller.
     songTitle,
     sumTask,
     onClick
+
 }) => (
+
     <div className={'row primary-row' + (isSelected ? ' played' : '')}>
         <ProgressBar
             sumTask={sumTask}
@@ -51,6 +60,7 @@ const SongRowView = ({
             </span>
         </div>
     </div>
+
 );
 
 export default SongRow;

@@ -13,9 +13,13 @@ const TitleSection = (props) => (
  ****************/
 
 const TitleSectionView = ({
+
+    // From props.
     titleText,
     onClick
+
 }) => (
+
     <div className="section title-section">
         <h1>
             <a onClick={onClick}>
@@ -23,6 +27,7 @@ const TitleSectionView = ({
             </a>
         </h1>
     </div>
+
 );
 
 export default TitleSection;

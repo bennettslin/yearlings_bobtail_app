@@ -7,14 +7,15 @@ import ProgressHelper from '../../helpers/progress-helper.js';
  * CONTAINER *
  *************/
 
-const TasksSection = ({
-    tasks
-}) => {
-    const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromTasks(tasks),
+const TasksSection = (props) => {
+
+    const { tasks } = props,
+
+        maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromTasks(tasks),
         sumTask = ProgressHelper.calculateSumTask(tasks);
+
     return (
-        <TasksSectionView
-            tasks={tasks}
+        <TasksSectionView {...props}
             maxTotalNeededHours={maxTotalNeededHours}
             sumTask={sumTask}
         />
@@ -26,10 +27,16 @@ const TasksSection = ({
  ****************/
 
 const TasksSectionView = ({
+
+    // From props.
     tasks,
+
+    // From controller.
     maxTotalNeededHours,
     sumTask
+
 }) => (
+
     <div className="section tasks-section">
         <h2>tasks</h2>
         <TasksBlock
@@ -42,6 +49,7 @@ const TasksSectionView = ({
             />
         </div>
     </div>
+
 );
 
 export default TasksSection;

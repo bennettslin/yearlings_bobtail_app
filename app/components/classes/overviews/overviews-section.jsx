@@ -8,8 +8,10 @@ import FormatUtility from '../../utilities/format-utility.jsx';
  *************/
 
 const OverviewsSection = (props) => {
+
     const { selectedOverviewIndex = 0,
             overviewRichText } = props,
+
         selectedOverviewKey = Constants.overviewKeys[selectedOverviewIndex - 1],
         overviewText = FormatUtility.getFormattedTextElement(false, overviewRichText);
 
@@ -27,31 +29,36 @@ const OverviewsSection = (props) => {
  ****************/
 
 const OverviewsSectionView = ({
+
+    // From props.
+    onOverviewClick,
+
+    // From controller.
     selectedOverviewKey,
-    overviewText,
-    onOverviewClick
-}) => {
-    return (
-        <div className="section overviews-section">
-            <div className="button-block">
-                {Constants.overviewKeys.map((overviewKey, overviewIndex) => {
-                    const isDisabled = (overviewKey === selectedOverviewKey);
-                    return (
-                        <OverviewButton
-                            key={overviewIndex}
-                            isDisabled={isDisabled}
-                            overviewKey={overviewKey}
-                            overviewIndex={overviewIndex}
-                            onOverviewClick={onOverviewClick}
-                        />
-                    );
-                })}
-            </div>
-            <div className="overview-text">
-                {overviewText}
-            </div>
+    overviewText
+
+}) => (
+
+    <div className="section overviews-section">
+        <div className="button-block">
+            {Constants.overviewKeys.map((overviewKey, overviewIndex) => {
+                const isDisabled = (overviewKey === selectedOverviewKey);
+                return (
+                    <OverviewButton
+                        key={overviewIndex}
+                        isDisabled={isDisabled}
+                        overviewKey={overviewKey}
+                        overviewIndex={overviewIndex}
+                        onOverviewClick={onOverviewClick}
+                    />
+                );
+            })}
         </div>
-    );
-}
+        <div className="overview-text">
+            {overviewText}
+        </div>
+    </div>
+
+);
 
 export default OverviewsSection;

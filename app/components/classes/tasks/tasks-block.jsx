@@ -14,10 +14,14 @@ const TasksBlock = (props) => (
  ****************/
 
 const TasksBlockView = ({
+
+    // From props.
     tasks,
     isSubtask,
     maxTotalNeededHours
+
 }) => (
+
     <div className={isSubtask ? 'subtask-block' : 'task-block'}>
         {tasks.map((task, taskIndex) => {
             return (
@@ -41,6 +45,7 @@ const TasksBlockView = ({
             );
         })}
     </div>
+
 );
 
 export default TasksBlock;

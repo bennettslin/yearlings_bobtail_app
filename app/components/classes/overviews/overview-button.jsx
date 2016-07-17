@@ -5,6 +5,7 @@ import React from 'react';
  *************/
 
 const OverviewButton = (props) => {
+
     const { isDisabled,
             overviewIndex,
             onOverviewClick } = props,
@@ -12,6 +13,7 @@ const OverviewButton = (props) => {
         // Overview indices begin at 1.
         onClick = !isDisabled ?
             () => onOverviewClick(overviewIndex + 1) : null;
+
     return (
         <OverviewButtonView {...props}
             onClick={onClick}
@@ -24,8 +26,12 @@ const OverviewButton = (props) => {
  ****************/
 
 const OverviewButtonView = ({
+
+    // From props.
     isDisabled,
     overviewKey,
+
+    // From controller.
     onClick
 }) => (
     <div className={'select-button' + (isDisabled ? ' disabled' : '')}>

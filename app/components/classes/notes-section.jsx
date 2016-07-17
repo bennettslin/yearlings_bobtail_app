@@ -13,6 +13,7 @@ const NotesSection = () => (
  ****************/
 
 const NotesSectionView = () => (
+
     <div className="section notes-section">
         <h2>scrap notes</h2>
         <div className="text-cell-wrapper">
@@ -27,6 +28,7 @@ const NotesSectionView = () => (
             </span>
         </div>
     </div>
+
 );
 
 export default NotesSection;
