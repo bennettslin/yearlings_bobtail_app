@@ -3,19 +3,11 @@ import Popup from '../../superclasses/popup.jsx';
 import AnnotationSection from './annotation-section.jsx';
 
 const defaultProps = {
-    annotationObject: null,
-    portalObjects: null,
-    handlePortalClick() {},
-    handleUrlClick() {}
+    annotationObject: {
+        title: '',
+        dotKeys: {}
+    }
 }
-
-/*************
- * CONTAINER *
- *************/
-
-/****************
- * PRESENTATION *
- ****************/
 
 class AnnotationPopup extends Popup {
 
@@ -24,16 +16,9 @@ class AnnotationPopup extends Popup {
     }
 
     getContentElement() {
-        const props = this.props,
-            annotationObject = props.annotationObject;
-
-        return annotationObject ?
-            <AnnotationSection
+        return this.props.annotationObject ?
+            <AnnotationSection {...this.props}
                 ref="annotationSection"
-                annotationObject={annotationObject}
-                portalObjects={props.portalObjects}
-                handlePortalClick={props.handlePortalClick}
-                handleUrlClick={props.handleUrlClick}
             /> : null;
     }
 }

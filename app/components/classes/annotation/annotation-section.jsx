@@ -17,11 +17,20 @@ const defaultProps = {
  * CONTAINER *
  *************/
 
+class AnnotationSection extends React.Component {
+    render() {
+        return (
+            <AnnotationSectionView {...this.props}
+            />
+        );
+    }
+}
+
 /****************
  * PRESENTATION *
  ****************/
 
-class AnnotationSection extends React.Component {
+class AnnotationSectionView extends React.Component {
 
     _getAnnotationCardsBlock(annotationObject) {
         const dotKeys = Constants.allDotKeys.filter(dotKey => {

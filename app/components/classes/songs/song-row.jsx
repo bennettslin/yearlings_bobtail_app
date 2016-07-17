@@ -10,11 +10,12 @@ const SongRow = (props) => {
 
     const { song,
             songIndex,
+            isSelected,
             onSongClick } = props,
 
         songTitle = song.title,
         sumTask = ProgressHelper.calculateSumTask(song.tasks),
-        onClick = () => onSongClick(songIndex);
+        onClick = () => !isSelected ? onSongClick(songIndex) : null;
 
     return (
         <SongRowView {...props}

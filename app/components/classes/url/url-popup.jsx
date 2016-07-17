@@ -3,16 +3,8 @@ import Popup from '../../superclasses/popup.jsx';
 import UrlSection from './url-section.jsx';
 
 const defaultProps = {
-    url: null
+    url: ''
 }
-
-/*************
- * CONTAINER *
- *************/
-
-/****************
- * PRESENTATION *
- ****************/
 
 class UrlPopup extends Popup {
 
@@ -21,14 +13,10 @@ class UrlPopup extends Popup {
     }
 
     getContentElement() {
-        const url = this.props.url;
-
-        return url ? (
-            <UrlSection
+        return this.props.url ?
+            <UrlSection {...this.props}
                 ref="urlSection"
-                url={url}
-            />
-        ) : null;
+            /> : null;
     }
 }
 
