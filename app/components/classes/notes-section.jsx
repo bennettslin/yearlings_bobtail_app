@@ -8,9 +8,9 @@ const NotesSection = () => (
     <NotesSectionView />
 );
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const NotesSectionView = () => (
     <div className="section notes-section">

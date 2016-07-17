@@ -21,9 +21,9 @@ const defaultProps = {
  * CONTAINER *
  *************/
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 class SongRow extends React.Component {
 

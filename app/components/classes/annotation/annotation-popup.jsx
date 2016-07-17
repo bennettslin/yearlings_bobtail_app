@@ -13,9 +13,9 @@ const defaultProps = {
  * CONTAINER *
  *************/
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 class AnnotationPopup extends Popup {
 

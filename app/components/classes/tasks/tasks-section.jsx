@@ -21,9 +21,9 @@ const TasksSection = ({
     );
 };
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const TasksSectionView = ({
     tasks,

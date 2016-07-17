@@ -19,9 +19,9 @@ const OverviewButton = (props) => {
     );
 };
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const OverviewButtonView = ({
     isDisabled,

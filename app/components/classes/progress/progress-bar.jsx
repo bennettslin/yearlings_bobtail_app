@@ -22,9 +22,9 @@ const ProgressBar = ({
     );
 };
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const ProgressBarView = ({
     filledStyle,

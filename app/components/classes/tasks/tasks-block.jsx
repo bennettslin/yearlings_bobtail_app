@@ -9,9 +9,9 @@ const TasksBlock = (props) => (
     <TasksBlockView {...props} />
 );
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const TasksBlockView = ({
     tasks,

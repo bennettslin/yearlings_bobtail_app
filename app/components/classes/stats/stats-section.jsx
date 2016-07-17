@@ -11,9 +11,9 @@ const StatsSection = (props) => (
     <StatsSectionView {...props} />
 );
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const StatsSectionView = ({
     lyrics,

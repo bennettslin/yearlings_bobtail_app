@@ -17,9 +17,9 @@ const defaultProps = {
  * CONTAINER *
  *************/
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 class AnnotationSection extends React.Component {
 

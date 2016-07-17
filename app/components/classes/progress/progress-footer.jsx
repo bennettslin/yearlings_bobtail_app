@@ -22,9 +22,9 @@ const ProgressFooter = ({
     );
 };
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const ProgressFooterView = ({
     workedHours,

@@ -11,9 +11,9 @@ const defaultProps = {
  * CONTAINER *
  *************/
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 class DotsBlock extends React.Component {
 

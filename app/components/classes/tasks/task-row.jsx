@@ -9,9 +9,9 @@ const TaskRow = (props) => (
     <TaskRowView {...props} />
 );
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const TaskRowView = ({
     task,

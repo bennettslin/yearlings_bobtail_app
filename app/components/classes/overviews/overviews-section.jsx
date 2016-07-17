@@ -12,9 +12,9 @@ const OverviewsSection = (props) => (
     <OverviewsSectionView {...props} />
 );
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const OverviewsSectionView = ({
     selectedOverviewIndex = 0,

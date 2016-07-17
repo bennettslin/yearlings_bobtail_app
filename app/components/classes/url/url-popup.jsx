@@ -10,9 +10,9 @@ const defaultProps = {
  * CONTAINER *
  *************/
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 class UrlPopup extends Popup {
 

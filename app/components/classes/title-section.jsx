@@ -9,9 +9,9 @@ const TitleSection = (props) => (
     <TitleSectionView {...props} />
 );
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const TitleSectionView = ({
     titleText,

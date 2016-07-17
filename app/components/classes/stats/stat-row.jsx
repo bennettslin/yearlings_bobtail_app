@@ -49,9 +49,9 @@ const WordsPerAnnotationRow = ({
     );
 }
 
-/********
- * VIEW *
- ********/
+/****************
+ * PRESENTATION *
+ ****************/
 
 const StatRowView = ({
     typeName,
