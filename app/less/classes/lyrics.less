@@ -134,11 +134,9 @@
         left: -@dot-radius * 0.2;
         top: -@dot-radius * 0.2;
     }
-}
 
-// For dev purposes.
-.todo {
-    a {
+    // For dev purposes.
+    &.todo {
         color: #c00;
 
         &:hover {
@@ -148,12 +146,10 @@
         &:active {
             color: #f66;
         }
-    }
 
-    // Make underline red.
-    .anchor-link {
-        &:before {
-            background-color: mix(red, white, 50%);
+        // Make underline red.
+        .underline-bar {
+                background-color: mix(red, white, 50%);
         }
     }
 }

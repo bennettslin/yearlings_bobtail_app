@@ -1,15 +1,16 @@
 import React from 'react';
 
-const defaultProps = {
-    titleText: '',
-    onClick() {}
-}
+/*************
+ * CONTAINER *
+ *************/
 
-class TitleSection extends React.Component {
-    render() {
-        return <TitleSectionView {...this.props} />;
-    }
-}
+const TitleSection = (props) => (
+    <TitleSectionView {...props} />
+);
+
+/********
+ * VIEW *
+ ********/
 
 const TitleSectionView = ({
     titleText,
@@ -24,5 +25,4 @@ const TitleSectionView = ({
     </div>
 );
 
-TitleSection.defaultProps = defaultProps;
 export default TitleSection;

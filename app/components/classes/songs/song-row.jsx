@@ -1,7 +1,7 @@
 import React from 'react';
-import ProgressBar from '../progress-bar.jsx';
+import ProgressBar from '../progress/progress-bar.jsx';
+import ProgressFooter from '../progress/progress-footer.jsx';
 import ProgressHelper from '../../helpers/progress-helper.js';
-import ProgressUtility from '../../utilities/progress-utility.jsx';
 
 const defaultProps = {
     songIndex: 0,
@@ -62,7 +62,11 @@ class SongRow extends React.Component {
             wrappedTextContent = this._getHeaderContent();
 
         } else if (props.isFooter) {
-            wrappedTextContent = ProgressUtility.getProgressFooterContent(sumTask, 1);
+            wrappedTextContent = (
+                <ProgressFooter
+                    sumTask={sumTask}
+                />
+            );
 
         } else {
             wrappedTextContent = this._getSongContent(sumTask);
