@@ -7,26 +7,35 @@ import FormatUtility from '../../utilities/format-utility.jsx';
  * CONTAINER *
  *************/
 
-// FIXME: Put logic in container.
-const OverviewsSection = (props) => (
-    <OverviewsSectionView {...props} />
-);
+const OverviewsSection = (props) => {
+    const { selectedOverviewIndex = 0,
+            overviewRichText } = props,
+        selectedOverviewKey = Constants.overviewKeys[selectedOverviewIndex - 1],
+        overviewText = FormatUtility.getFormattedTextElement(false, overviewRichText);
+
+    return (
+        <OverviewsSectionView {...props}
+            selectedOverviewKey={selectedOverviewKey}
+            overviewText={overviewText}
+        />
+    );
+};
+
 
 /****************
  * PRESENTATION *
  ****************/
 
 const OverviewsSectionView = ({
-    selectedOverviewIndex = 0,
-    overviewRichText,
+    selectedOverviewKey,
+    overviewText,
     onOverviewClick
 }) => {
-    const selectedOverviewKey = Constants.overviewKeys[selectedOverviewIndex - 1];
     return (
         <div className="section overviews-section">
             <div className="button-block">
                 {Constants.overviewKeys.map((overviewKey, overviewIndex) => {
-                    const isDisabled = overviewKey === selectedOverviewKey;
+                    const isDisabled = (overviewKey === selectedOverviewKey);
                     return (
                         <OverviewButton
                             key={overviewIndex}
@@ -39,7 +48,7 @@ const OverviewsSectionView = ({
                 })}
             </div>
             <div className="overview-text">
-                {FormatUtility.getFormattedTextElement(false, overviewRichText)}
+                {overviewText}
             </div>
         </div>
     );

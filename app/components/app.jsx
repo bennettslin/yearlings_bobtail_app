@@ -38,6 +38,7 @@ class App extends React.Component {
         super(props);
 
         this._handleBodyClick = this._handleBodyClick.bind(this);
+        this.handleTitleSelect = this.handleTitleSelect.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this);
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
@@ -126,6 +127,10 @@ class App extends React.Component {
         this.setState({
             [selectedIndexKey]: selectedIndex
         })
+    }
+
+    handleTitleSelect() {
+        this.handleSongChange(0);
     }
 
     handleSongChange(selectedIndex = 0, selectedIndexKey = SELECTED_SONG_INDEX_KEY) {
@@ -241,13 +246,12 @@ class App extends React.Component {
             annotationObject = this._getAnnotationObject(selectedSongObject),
             portalObjects = this._getPortalObjects(annotationObject);
 
-        // FIXME: Don't use bind here. https://ryanfunduk.com/articles/never-bind-in-render/
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
                 <div className="field left-field">
                     <TitleSection
                         titleText={props.title}
-                        onClick={this.handleSongChange.bind(this, 0, undefined)}
+                        onClick={this.handleTitleSelect}
                     />
                     <SongsSection
                         songs={props.songs}
