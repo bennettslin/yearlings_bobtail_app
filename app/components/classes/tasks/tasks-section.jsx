@@ -36,12 +36,10 @@ const TasksSectionView = ({
             tasks={tasks}
             maxTotalNeededHours={maxTotalNeededHours}
         />
-        <div key="footer" className="block task-block">
-            <div className="row">
-                <ProgressFooter
-                    sumTask={sumTask}
-                />
-            </div>
+        <div className="row">
+            <ProgressFooter
+                sumTask={sumTask}
+            />
         </div>
     </div>
 );

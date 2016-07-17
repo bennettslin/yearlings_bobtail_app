@@ -257,7 +257,7 @@ class App extends React.Component {
                         songs={props.songs}
                         allTasks={allTaskObjects}
                         selectedSongIndex={selectedSongIndex}
-                        handleSongChange={this.handleSongChange}
+                        onSongClick={this.handleSongChange}
                     />
                 </div>
                 <div className="field centre-field">

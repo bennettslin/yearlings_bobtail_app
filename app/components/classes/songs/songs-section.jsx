@@ -1,5 +1,6 @@
 import React from 'react';
 import SongRow from './song-row.jsx';
+import ProgressFooter from '../progress/progress-footer.jsx';
 import ProgressHelper from '../../helpers/progress-helper.js';
 
 const defaultProps = {
@@ -9,63 +10,65 @@ const defaultProps = {
     allTasks: [],
 
     selectedSongIndex: 0,
-    handleSongChange() {}
+    onSongClick() {}
 };
 
 /*************
  * CONTAINER *
  *************/
 
+const SongsSection = (props) => {
+    const { songs,
+            allTasks } = props,
+        maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
+        sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks);
+    return (
+        <SongsSectionView {...props}
+            maxTotalNeededHours={maxTotalNeededHours}
+            sumAllTasks={sumAllTasks}
+        />
+    );
+};
+
 /****************
  * PRESENTATION *
  ****************/
 
-class SongsSection extends React.Component {
-
-    componentWillMount() {
-        const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(this.props.songs);
-
-        this.setState({
-            maxTotalNeededHours
-        });
-    }
-
-    render() {
-        const songs = this.props.songs,
-            songsHeader = (
-                <SongRow key="header" isHeader={true} />
-            ),
-            songRows = songs.map((song, index) => {
-                const songIndex = index + 1,
-                    isSelected = this.props.selectedSongIndex === songIndex,
-                    sumTask = ProgressHelper.calculateSumTask(song.tasks);
-
-                return (
-                    <SongRow
-                        key={songIndex}
-                        songIndex={songIndex}
-                        songTitle={song.title}
-                        sumTask={sumTask}
-                        maxTotalNeededHours={this.state.maxTotalNeededHours}
-                        isSelected={isSelected}
-                        handleSongChange={this.props.handleSongChange}
-                    />
-                );
-            }),
-            sumAllTasks = ProgressHelper.calculateSumAllTasks(this.props.allTasks),
-            songsFooter = (
-                <SongRow key="footer" isFooter={true} sumTask={sumAllTasks} />
-            );
-
-        return (
-            <div className="section songs-section">
-                {songsHeader}
-                {songRows}
-                {songsFooter}
+const SongsSectionView = ({
+    songs,
+    selectedSongIndex,
+    maxTotalNeededHours,
+    sumAllTasks,
+    onSongClick
+}) => (
+    <div className="section songs-section">
+        <div className="row">
+            <div className="text-cell-wrapper">
+                <h3 className="text-cell text">song</h3>
+                <h3 className="text-cell figure">progress</h3>
             </div>
-        );
-    }
-}
+        </div>
+        {songs.map((song, index) => {
+            const songIndex = index + 1,
+                isSelected = selectedSongIndex === songIndex;
+            return (
+                <SongRow
+                    key={songIndex}
+                    song={song}
+                    songIndex={songIndex}
+                    maxTotalNeededHours={maxTotalNeededHours}
+                    isSelected={isSelected}
+                    onSongClick={onSongClick}
+                />
+            );
+        })}
+        <div className="row">
+            <ProgressFooter
+                sumTask={sumAllTasks}
+            />
+        </div>
+    </div>
+);
 
 SongsSection.defaultProps = defaultProps;
 export default SongsSection;
