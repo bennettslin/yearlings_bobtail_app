@@ -2,6 +2,8 @@
 @import "./utilities/constants.less";
 @import "./utilities/mixins.less";
 @import "./utilities/tags.less";
+@import "./utilities/popups.less";
+@import "./utilities/text.less";
 
 @import "./classes/songs.less";
 @import "./classes/annotation.less";
@@ -77,7 +79,7 @@ body {
         padding: @field-padding;
     }
 
-    &:not(.popup-content-wrapper) {
+    &:not(.in-popup) {
         margin: @field-padding 0;
         background-color: @section-colour;
         box-shadow: 0 2px 2px 2px @box-shadow-colour;
@@ -88,20 +90,4 @@ body {
 
 .interactable {
     cursor: pointer;
-}
-
-// TODO: Make popup mixin.
-.popup-content-wrapper {
-    .animation-mixin;
-    @overflow-margin-width: 5px;
-    position: absolute;
-    left: -@overflow-margin-width - (@field-padding * 0.5);
-    width: @centre-field-width + (@overflow-margin-width * 2);
-    overflow-y: scroll;
-    box-shadow: -2px 2px 8px 8px @box-shadow-colour;
-}
-
-.popup-transition-group {
-    position: fixed;
-    z-index: 1;
 }

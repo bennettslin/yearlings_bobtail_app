@@ -11,37 +11,42 @@ const defaultProps = {
  * CONTAINER *
  *************/
 
+const DotsBlock = (props) => (
+    <DotsBlockView {...props} />
+);
+
 /****************
  * PRESENTATION *
  ****************/
 
-class DotsBlock extends React.Component {
+const DotsBlockView = ({
 
-    render() {
-        const props = this.props;
+    // From props.
+    dotKeys,
+    interactable
 
-        return (
-            <span className="dots-block">
-                {Constants.allDotKeys.filter(dotKey => {
-                    return props.dotKeys[dotKey];
+}) => (
 
-                }).map((dotKey, index) => {
-                    // Return either an interactable dot button or a plain div.
-                    return props.interactable ? (
-                            <DotButton
-                                key={index}
-                                classValue={dotKey}
-                            />
-                        ) : (
-                            <div key={index}
-                                className={'dot ' + dotKey}>
-                            </div>
-                        );
-                })}
-            </span>
-        );
-    }
-}
+    <span className="dots-block">
+        {Constants.allDotKeys.filter(dotKey => {
+            return dotKeys[dotKey];
+
+        }).map((dotKey, index) => {
+            // Return either an interactable dot button or a plain div.
+            // FIXME: Right now, no difference between interactable and not.
+            return interactable ? (
+                    <div key={index}
+                        className={'dot ' + dotKey}>
+                    </div>
+                ) : (
+                    <div key={index}
+                        className={'dot ' + dotKey}>
+                    </div>
+                );
+        })}
+    </span>
+
+);
 
 DotsBlock.defaultProps = defaultProps;
 export default DotsBlock;

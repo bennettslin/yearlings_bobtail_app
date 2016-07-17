@@ -1,3 +1,5 @@
+// FIXME: Not used right now.
+
 import React from 'react';
 import DotPopup from './dot-popup.jsx';
 import Interactable from '../../superclasses/interactable.jsx';

@@ -1,3 +1,5 @@
+// FIXME: Not used right now.
+
 import React from 'react';
 import Popup from '../../superclasses/popup.jsx';
 

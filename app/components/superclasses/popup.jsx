@@ -1,14 +1,72 @@
 import React from 'react';
-import TransitionGroup from '../utilities/transition-group.jsx';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
+
+// Separate into container and presentation components?
+
+const CloseButton = ({
+    onClick
+}) => (
+    <a
+        className="close-button"
+        onClick={onClick}
+    >
+        Close
+    </a>
+);
+
+class PopupTransitionGroup extends React.Component {
+
+    _getContainerElement(element) {
+        const { className,
+                onCloseClick } = this.props;
+
+        return element ? (
+            <div className={'popup-content-wrapper ' + className}>
+                <CloseButton onClick={onCloseClick} />
+                {element}
+            </div>
+        ) : null;
+    }
+
+    render() {
+        const { className,
+                transitionName,
+                element } = this.props;
+        return (
+            <CSSTransitionGroup
+                className={'popup-transition-group ' + className}
+                transitionName={transitionName}
+                transitionEnterTimeout={100}
+                transitionLeaveTimeout={100}
+            >
+                {this._getContainerElement(element)}
+            </CSSTransitionGroup>
+        );
+    }
+}
 
 class Popup extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.onCloseClick = this.onCloseClick.bind(this);
+    }
+
+    onCloseClick() {
+        this.props.onCloseClick();
+    }
+
     render() {
-        const className = this.getClassName() + '-animation';
+        const className = this.getClassName(),
+            transitionName = className + '-animation',
+            element = this.getContentElement();
+
         return (
-            <TransitionGroup
-                element={this.getContentElement()}
-                transitionName={className}
+            <PopupTransitionGroup
+                element={element}
+                className={className}
+                transitionName={transitionName}
+                onCloseClick={this.onCloseClick}
             />
         );
     }

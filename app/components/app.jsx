@@ -89,36 +89,36 @@ class App extends React.Component {
     }
 
     _handleBodyClick(e) {
-        const annotation = this.refs.annotationPopup.refs.annotationSection ?
-            this.refs.annotationPopup.refs.annotationSection.refs.annotation : null;
+        // const annotation = this.refs.annotationPopup.refs.annotationSection ?
+        //     this.refs.annotationPopup.refs.annotationSection.refs.annotation : null;
 
-        /**
-         * Close annotation if anywhere outside annotation is clicked, with the
-         * exception of another link.
-         */
-        if (annotation &&
-            annotation !== e.target &&
-            !annotation.contains(e.target) &&
-            !EventHelper.hasParentWithTagName(e.target, 'a')) {
+        // /**
+        //  * Close annotation if anywhere outside annotation is clicked, with the
+        //  * exception of another link.
+        //  */
+        // if (annotation &&
+        //     annotation !== e.target &&
+        //     !annotation.contains(e.target) &&
+        //     !EventHelper.hasParentWithTagName(e.target, 'a')) {
 
-            this.handleAnnotationSelect();
-        }
+        //     this.handleAnnotationSelect();
+        // }
 
-        // FIXME: Duplicate code.
-        const url = this.refs.urlPopup.refs.urlSection ?
-            this.refs.urlPopup.refs.urlSection.refs.url : null;
+        // // FIXME: Duplicate code.
+        // const url = this.refs.urlPopup.refs.urlSection ?
+        //     this.refs.urlPopup.refs.urlSection.refs.url : null;
 
-        /**
-         * Close url if anywhere outside url is clicked, with the
-         * exception of another link.
-         */
-        if (url &&
-            url !== e.target &&
-            !url.contains(e.target) &&
-            !EventHelper.hasParentWithTagName(e.target, 'a')) {
+        // /**
+        //  * Close url if anywhere outside url is clicked, with the
+        //  * exception of another link.
+        //  */
+        // if (url &&
+        //     url !== e.target &&
+        //     !url.contains(e.target) &&
+        //     !EventHelper.hasParentWithTagName(e.target, 'a')) {
 
-            this.handleUrlClick();
-        }
+        //     this.handleUrlClick();
+        // }
     }
 
     _selectIndex(selectedIndex, selectedIndexKey) {
@@ -267,10 +267,12 @@ class App extends React.Component {
                         portalObjects={portalObjects}
                         handlePortalClick={this.handlePortalClick}
                         handleUrlClick={this.handleUrlClick}
+                        onCloseClick={this.handleAnnotationSelect}
                     />
                     <UrlPopup
                         ref="urlPopup"
                         url={state.url}
+                        onCloseClick={this.handleUrlClick}
                     />
                     {/* Show scrap notes if no selected song, otherwise show dots. */}
                     {!selectedSongIndex ?

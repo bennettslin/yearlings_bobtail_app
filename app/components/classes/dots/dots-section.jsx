@@ -1,32 +1,33 @@
 import React from 'react';
 import DotsBlock from './dots-block.jsx';
 
-const defaultProps = {
-    dotKeys: {}
-}
-
 /*************
  * CONTAINER *
  *************/
+
+const DotsSection = (props) => (
+    <DotsSectionView {...props} />
+);
 
 /****************
  * PRESENTATION *
  ****************/
 
-class DotsSection extends React.Component {
+const DotsSectionView = ({
 
-    render() {
-        return (
-            <div className="section dots-section">
-                <h2>dots</h2>
-                <DotsBlock
-                    dotKeys={this.props.dotKeys}
-                    interactable={true}
-                />
-            </div>
-        );
-    }
-}
+    // From props.
+    dotKeys
 
-DotsSection.defaultProps = defaultProps;
+}) => (
+
+    <div className="section dots-section">
+        <h2>dots</h2>
+        <DotsBlock
+            dotKeys={dotKeys}
+            interactable={true}
+        />
+    </div>
+
+);
+
 export default DotsSection;

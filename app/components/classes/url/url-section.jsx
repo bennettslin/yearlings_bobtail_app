@@ -1,6 +1,7 @@
 import React from 'react';
 
 const defaultProps = {
+    inPopup: true,
     url: ''
 }
 
@@ -31,7 +32,7 @@ class UrlSectionView extends React.Component {
     render() {
         return (
             <div ref="url"
-                className="section url-section popup-content-wrapper"
+                className={'section url-section' + (this.props.inPopup ? ' in-popup' : '')}
             >
                 <iframe src={this.props.url} />
             </div>

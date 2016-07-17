@@ -3,7 +3,8 @@ import Popup from '../../superclasses/popup.jsx';
 import UrlSection from './url-section.jsx';
 
 const defaultProps = {
-    url: ''
+    url: '',
+    onCloseClick() {}
 }
 
 class UrlPopup extends Popup {
@@ -16,6 +17,7 @@ class UrlPopup extends Popup {
         return this.props.url ?
             <UrlSection {...this.props}
                 ref="urlSection"
+                inPopup={true}
             /> : null;
     }
 }

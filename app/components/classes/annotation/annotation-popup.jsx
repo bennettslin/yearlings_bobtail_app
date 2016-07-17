@@ -6,7 +6,8 @@ const defaultProps = {
     annotationObject: {
         title: '',
         dotKeys: {}
-    }
+    },
+    onCloseClick() {}
 }
 
 class AnnotationPopup extends Popup {
@@ -19,6 +20,7 @@ class AnnotationPopup extends Popup {
         return this.props.annotationObject ?
             <AnnotationSection {...this.props}
                 ref="annotationSection"
+                inPopup={true}
             /> : null;
     }
 }

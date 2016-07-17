@@ -4,6 +4,7 @@ import Constants from '../../constants/constants.js';
 import FormatUtility from '../../utilities/format-utility.jsx';
 
 const defaultProps = {
+    inPopup: true,
     annotationObject: {
         title: '',
         dotKeys: {}
@@ -92,7 +93,7 @@ class AnnotationSectionView extends React.Component {
 
         return (
             <div ref="annotation"
-                className="section annotation-section popup-content-wrapper">
+                className={'section annotation-section' + (this.props.inPopup ? ' in-popup' : '')}>
                 <h2>{title}</h2>
                 <div className="annotation-cards">
                     {this._getAnnotationCardsBlock(annotationObject)}
