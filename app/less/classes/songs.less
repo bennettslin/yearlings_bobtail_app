@@ -1,22 +1,19 @@
 .songs-section {
 
-    .row {
+    .progress-bar-mixin(@song-total-colour, @song-filled-colour);
 
-        .progress-bar-mixin(@song-total-colour, @song-filled-colour);
+    .played {
+        .progress-bar-mixin(@played-total-colour, @played-filled-colour);
 
-        &.played {
-            .progress-bar-mixin(@played-total-colour, @played-filled-colour);
+        a {
+            color: @song-link-colour;
 
-            a {
-                color: @song-link-colour;
+            &:hover {
+                color: @song-hover-colour;
+            }
 
-                &:hover {
-                    color: @song-hover-colour;
-                }
-
-                &:active {
-                    color: @song-active-colour;
-                }
+            &:active {
+                color: @song-active-colour;
             }
         }
     }

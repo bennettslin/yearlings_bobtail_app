@@ -241,7 +241,7 @@ class App extends React.Component {
             annotationObject = this._getAnnotationObject(selectedSongObject),
             portalObjects = this._getPortalObjects(annotationObject);
 
-        // FIXME: Don't use bind here.
+        // FIXME: Don't use bind here. https://ryanfunduk.com/articles/never-bind-in-render/
         return (
             <div ref="app" className="app" onClick={this._handleBodyClick}>
                 <div className="field left-field">

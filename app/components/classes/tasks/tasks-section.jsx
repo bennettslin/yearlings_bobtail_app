@@ -3,9 +3,17 @@ import TasksBlock from './tasks-block.jsx';
 import ProgressFooter from '../progress/progress-footer.jsx';
 import ProgressHelper from '../../helpers/progress-helper.js';
 
+/*************
+ * CONTAINER *
+ *************/
+
 const TasksSection = (props) => (
     <TasksSectionView {...props} />
 );
+
+/********
+ * VIEW *
+ ********/
 
 const TasksSectionView = ({
     tasks
