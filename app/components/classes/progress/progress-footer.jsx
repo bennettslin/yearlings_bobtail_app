@@ -5,6 +5,7 @@ import ProgressHelper from '../../helpers/progress-helper.js';
  * CONTAINER *
  *************/
 
+// FIXME: Put logic in container.
 const ProgressFooter = (props) => (
     <ProgressFooterView {...props} />
 );

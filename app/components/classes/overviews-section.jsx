@@ -6,6 +6,7 @@ import FormatUtility from '../utilities/format-utility.jsx';
  * CONTAINER *
  *************/
 
+// FIXME: Put logic in container.
 const OverviewsSection = (props) => (
     <OverviewsSectionView {...props} />
 );
@@ -36,11 +37,11 @@ const OverviewSelectButton = ({
     );
 };
 
- const OverviewsSectionView = ({
+const OverviewsSectionView = ({
     selectedOverviewIndex = 0,
     overviewRichText,
     onOverviewClick
- }) => {
+}) => {
     const selectedOverviewKey = Constants.overviewKeys[selectedOverviewIndex - 1];
     return (
         <div className="section overviews-section">
@@ -62,6 +63,6 @@ const OverviewSelectButton = ({
             </div>
         </div>
     );
- }
+}
 
 export default OverviewsSection;

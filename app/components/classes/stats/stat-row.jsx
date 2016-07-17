@@ -9,7 +9,6 @@ const LyricsWordCountRow = ({
     lyrics
 }) => {
     const lyricsWordCount = StatsHelper.getTotalWords(lyrics);
-
     return (
         <StatRowView
             typeName="lyrics word count"
@@ -26,7 +25,6 @@ const AnnotationsCountRow = ({
         annotationsRatioCount = todoCount ?
             (annotationsCount - todoCount) + '/' + annotationsCount :
             annotationsCount;
-
     return (
         <StatRowView
             typeName="annotations count"
@@ -43,7 +41,6 @@ const WordsPerAnnotationRow = ({
         annotationAverageWordCount = annotationsWordCount ?
             Math.ceil(annotationsWordCount / annotationsCount) :
             '--';
-
     return (
         <StatRowView
             typeName="words per annotation"

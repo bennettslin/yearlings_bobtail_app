@@ -1,12 +1,16 @@
 import React from 'react';
-import AnimationUtility from '../utilities/animation-utility.jsx';
+import TransitionGroup from '../utilities/transition-group.jsx';
 
 class Popup extends React.Component {
 
     render() {
         const className = this.getClassName() + '-animation';
-
-        return AnimationUtility.getTransitionGroupWrappedElement(this.getContentElement(), className);
+        return (
+            <TransitionGroup
+                element={this.getContentElement()}
+                transitionName={className}
+            />
+        );
     }
 }
 

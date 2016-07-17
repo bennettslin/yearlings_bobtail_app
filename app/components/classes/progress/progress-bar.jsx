@@ -4,6 +4,7 @@ import React from 'react';
  * CONTAINER *
  *************/
 
+// FIXME: Put logic in container.
 const ProgressBar = (props) => (
     <ProgressBarView {...props} />
 );
