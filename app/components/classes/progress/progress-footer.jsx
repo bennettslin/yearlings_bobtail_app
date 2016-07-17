@@ -5,11 +5,15 @@ import ProgressHelper from '../../helpers/progress-helper.js';
  * CONTAINER *
  *************/
 
+const ProgressFooter = (props) => (
+    <ProgressFooterView {...props} />
+);
+
 /********
  * VIEW *
  ********/
 
-const ProgressFooter = ({
+const ProgressFooterView = ({
     sumTask = 0
 }) => {
     const workedHours = sumTask.workedHours,

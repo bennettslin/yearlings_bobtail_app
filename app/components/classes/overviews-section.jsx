@@ -20,16 +20,15 @@ const OverviewSelectButton = ({
     overviewIndex,
     onOverviewClick
 }) => {
-        // Overview indices begin at 1.
     const className = 'select-button' + (disabled ? ' disabled' : ''),
+
+        // Overview indices begin at 1.
         onClick = disabled ? null : () => onOverviewClick(overviewIndex + 1);
 
     return (
         <div className={className}>
             <h2>
-                <a disabled={disabled}
-                    onClick={onClick}
-                >
+                <a disabled={disabled} onClick={onClick}>
                     {overviewKey}
                 </a>
             </h2>

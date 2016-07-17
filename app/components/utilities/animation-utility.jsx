@@ -1,14 +1,6 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
-/*************
- * CONTAINER *
- *************/
-
-/********
- * VIEW *
- ********/
-
 module.exports = {
 
     getTransitionGroupWrappedElement(element, transitionName) {
