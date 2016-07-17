@@ -1,6 +1,7 @@
 import React from 'react';
-import Constants from '../constants/constants.js';
-import FormatUtility from '../utilities/format-utility.jsx';
+import OverviewButton from './overview-button.jsx';
+import Constants from '../../constants/constants.js';
+import FormatUtility from '../../utilities/format-utility.jsx';
 
 /*************
  * CONTAINER *
@@ -15,28 +16,6 @@ const OverviewsSection = (props) => (
  * VIEW *
  ********/
 
-const OverviewSelectButton = ({
-    disabled,
-    overviewKey,
-    overviewIndex,
-    onOverviewClick
-}) => {
-    const className = 'select-button' + (disabled ? ' disabled' : ''),
-
-        // Overview indices begin at 1.
-        onClick = disabled ? null : () => onOverviewClick(overviewIndex + 1);
-
-    return (
-        <div className={className}>
-            <h2>
-                <a disabled={disabled} onClick={onClick}>
-                    {overviewKey}
-                </a>
-            </h2>
-        </div>
-    );
-};
-
 const OverviewsSectionView = ({
     selectedOverviewIndex = 0,
     overviewRichText,
@@ -47,10 +26,11 @@ const OverviewsSectionView = ({
         <div className="section overviews-section">
             <div className="button-block">
                 {Constants.overviewKeys.map((overviewKey, overviewIndex) => {
+                    const isDisabled = overviewKey === selectedOverviewKey;
                     return (
-                        <OverviewSelectButton
+                        <OverviewButton
                             key={overviewIndex}
-                            disabled={overviewKey === selectedOverviewKey}
+                            isDisabled={isDisabled}
                             overviewKey={overviewKey}
                             overviewIndex={overviewIndex}
                             onOverviewClick={onOverviewClick}

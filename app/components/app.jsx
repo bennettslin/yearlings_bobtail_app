@@ -5,7 +5,7 @@ import NotesSection from './classes/notes-section.jsx';
 import AnnotationPopup from './classes/annotation/annotation-popup.jsx';
 import UrlPopup from './classes/url/url-popup.jsx';
 import StatsSection from './classes/stats/stats-section.jsx';
-import OverviewsSection from './classes/overviews-section.jsx';
+import OverviewsSection from './classes/overviews/overviews-section.jsx';
 import TasksSection from './classes/tasks/tasks-section.jsx';
 import DotsSection from './classes/dots/dots-section.jsx';
 import LyricsSection from './classes/lyrics/lyrics-section.jsx';

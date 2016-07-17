@@ -4,6 +4,7 @@ import React from 'react';
  * CONTAINER *
  *************/
 
+// FIXME: Put logic here so that we don't need to bind in app.jsx
 const TitleSection = (props) => (
     <TitleSectionView {...props} />
 );
