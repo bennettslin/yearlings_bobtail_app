@@ -2,58 +2,67 @@ import React from 'react';
 import Constants from '../constants/constants.js';
 import FormatUtility from '../utilities/format-utility.jsx';
 
-const defaultProps = {
-    overviewRichText: '',
-    selectedOverviewIndex: 0,
-    handleOverviewSelect() {}
-};
-
 /*************
  * CONTAINER *
  *************/
+
+const OverviewsSection = (props) => (
+    <OverviewsSectionView {...props} />
+);
 
 /********
  * VIEW *
  ********/
 
-class OverviewsSection extends React.Component {
+const OverviewSelectButton = ({
+    disabled,
+    overviewKey,
+    overviewIndex,
+    onOverviewClick
+}) => {
+        // Overview indices begin at 1.
+    const className = 'select-button' + (disabled ? ' disabled' : ''),
+        onClick = disabled ? null : () => onOverviewClick(overviewIndex + 1);
 
-    _getOverviewSelectButton(key, index) {
-        const props = this.props,
+    return (
+        <div className={className}>
+            <h2>
+                <a disabled={disabled}
+                    onClick={onClick}
+                >
+                    {overviewKey}
+                </a>
+            </h2>
+        </div>
+    );
+};
 
-            // Overview indices begin at 1.
-            disabled = key === Constants.overviewKeys[props.selectedOverviewIndex - 1],
-            className = 'select-button' + (disabled ? ' disabled' : '');
-
-        return (
-            <div key={key} className={className}>
-                <h2>
-                    <a disabled={disabled}
-                        onClick={disabled ? null : () => props.handleOverviewSelect(index + 1)}
-                    >
-                        {key}
-                    </a>
-                </h2>
+ const OverviewsSectionView = ({
+    selectedOverviewIndex = 0,
+    overviewRichText,
+    onOverviewClick
+ }) => {
+    const selectedOverviewKey = Constants.overviewKeys[selectedOverviewIndex - 1];
+    return (
+        <div className="section overviews-section">
+            <div className="button-block">
+                {Constants.overviewKeys.map((overviewKey, overviewIndex) => {
+                    return (
+                        <OverviewSelectButton
+                            key={overviewIndex}
+                            disabled={overviewKey === selectedOverviewKey}
+                            overviewKey={overviewKey}
+                            overviewIndex={overviewIndex}
+                            onOverviewClick={onOverviewClick}
+                        />
+                    );
+                })}
             </div>
-        );
-    }
-
-    render() {
-        return (
-            <div className="section overviews-section">
-                <div className="button-block">
-                    {Constants.overviewKeys.map((key, index) => {
-                        return this._getOverviewSelectButton(key, index);
-                    })}
-                </div>
-                <div className="overview-text">
-                    {FormatUtility.getFormattedTextElement(false, this.props.overviewRichText)}
-                </div>
-
+            <div className="overview-text">
+                {FormatUtility.getFormattedTextElement(false, overviewRichText)}
             </div>
-        );
-    }
-}
+        </div>
+    );
+ }
 
-OverviewsSection.defaultProps = defaultProps;
 export default OverviewsSection;

@@ -280,7 +280,7 @@ class App extends React.Component {
                     <OverviewsSection
                         overviewRichText={overviewRichText}
                         selectedOverviewIndex={state.selectedOverviewIndex}
-                        handleOverviewSelect={this.handleOverviewSelect}
+                        onOverviewClick={this.handleOverviewSelect}
                     />
                     <TasksSection
                         tasks={taskObjects}
