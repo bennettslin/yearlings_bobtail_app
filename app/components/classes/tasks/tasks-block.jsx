@@ -18,18 +18,29 @@ const TasksBlockView = ({
     isSubtask = false,
     maxTotalNeededHours
 }) => {
-    const className = 'block '+ (isSubtask ? 'subtask-block' : 'task-block');
+    const className = isSubtask ? 'subtask-block' : 'task-block';
     return (
         <div className={className}>
             {tasks.map((task, taskIndex) => {
                 return (
-                    <TaskRow
+                    <div
                         key={taskIndex}
-                        task={task}
-                        taskIndex={taskIndex}
-                        isSubtask={isSubtask}
-                        maxTotalNeededHours={maxTotalNeededHours}
-                    />
+                        className="block-unit"
+                    >
+                        <TaskRow
+                            task={task}
+                            taskIndex={taskIndex}
+                            isSubtask={isSubtask}
+                            maxTotalNeededHours={maxTotalNeededHours}
+                        />
+                        {task.subtasks ?
+                            <TasksBlock
+                                tasks={task.subtasks}
+                                isSubtask={true}
+                                maxTotalNeededHours={maxTotalNeededHours}
+                            /> : null
+                        }
+                    </div>
                 );
             })}
         </div>

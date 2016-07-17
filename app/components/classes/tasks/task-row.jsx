@@ -1,5 +1,4 @@
 import React from 'react';
-import TasksBlock from './tasks-block.jsx';
 import ProgressBar from '../progress/progress-bar.jsx';
 
 /*************
@@ -22,30 +21,21 @@ const TaskRowView = ({
 }) => {
     const className = 'row ' + (isSubtask ? 'secondary-row' : 'primary-row');
     return (
-        <div>
-            <div key={taskIndex} className={className}>
-                <ProgressBar
-                    sumTask={task}
-                    maxTotalNeededHours={maxTotalNeededHours}
-                />
-                <div className="text-cell-wrapper">
-                    <span className="text-cell text">
-                        {task.taskName}
-                    </span>
-                    {task.neededHours ?
-                        <span className="text-cell figure">
-                            {task.workedHours}/{task.neededHours}h
-                        </span> : null
-                    }
-                </div>
+        <div key={taskIndex} className={className}>
+            <ProgressBar
+                sumTask={task}
+                maxTotalNeededHours={maxTotalNeededHours}
+            />
+            <div className="text-cell-wrapper">
+                <span className="text-cell text">
+                    {task.taskName}
+                </span>
+                {task.neededHours ?
+                    <span className="text-cell figure">
+                        {task.workedHours}/{task.neededHours}h
+                    </span> : null
+                }
             </div>
-            {task.subtasks ?
-                <TasksBlock
-                    tasks={task.subtasks}
-                    isSubtask={true}
-                    maxTotalNeededHours={maxTotalNeededHours}
-                /> : null
-            }
         </div>
     );
 };
