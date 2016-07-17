@@ -5,15 +5,9 @@ import ProgressBar from '../progress/progress-bar.jsx';
  * CONTAINER *
  *************/
 
-const TaskRow = (props) => {
-    const className = 'row ' + (props.isSubtask ? 'secondary-row' : 'primary-row');
-    return (
-        <TaskRowView {...props}
-            className={className}
-        />
-    );
-};
-
+const TaskRow = (props) => (
+    <TaskRowView {...props} />
+);
 
 /********
  * VIEW *
@@ -21,11 +15,10 @@ const TaskRow = (props) => {
 
 const TaskRowView = ({
     task,
-    taskIndex,
-    maxTotalNeededHours,
-    className
+    isSubtask,
+    maxTotalNeededHours
 }) => (
-    <div key={taskIndex} className={className}>
+    <div className={'row ' + (isSubtask ? 'secondary-row' : 'primary-row')}>
         <ProgressBar
             sumTask={task}
             maxTotalNeededHours={maxTotalNeededHours}

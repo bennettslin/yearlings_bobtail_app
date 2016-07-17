@@ -5,14 +5,9 @@ import TaskRow from './task-row.jsx';
  * CONTAINER *
  *************/
 
-const TasksBlock = (props) => {
-    const className = props.isSubtask ? 'subtask-block' : 'task-block';
-    return (
-        <TasksBlockView {...props}
-            className={className}
-        />
-    );
-};
+const TasksBlock = (props) => (
+    <TasksBlockView {...props} />
+);
 
 /********
  * VIEW *
@@ -20,11 +15,10 @@ const TasksBlock = (props) => {
 
 const TasksBlockView = ({
     tasks,
-    isSubtask = false,
-    maxTotalNeededHours,
-    className
+    isSubtask,
+    maxTotalNeededHours
 }) => (
-    <div className={className}>
+    <div className={isSubtask ? 'subtask-block' : 'task-block'}>
         {tasks.map((task, taskIndex) => {
             return (
                 <div
@@ -33,7 +27,6 @@ const TasksBlockView = ({
                 >
                     <TaskRow
                         task={task}
-                        taskIndex={taskIndex}
                         isSubtask={isSubtask}
                         maxTotalNeededHours={maxTotalNeededHours}
                     />

@@ -5,33 +5,41 @@ import ProgressHelper from '../../helpers/progress-helper.js';
  * CONTAINER *
  *************/
 
-// FIXME: Put logic in container.
-const ProgressFooter = (props) => (
-    <ProgressFooterView {...props} />
-);
-
-/********
- * VIEW *
- ********/
-
-const ProgressFooterView = ({
+const ProgressFooter = ({
     sumTask = 0
 }) => {
     const workedHours = sumTask.workedHours,
         neededHours = sumTask.neededHours,
         remainingHours = neededHours - workedHours,
         remainingTimeString = ProgressHelper.getRemainingTimeStringFromHours(remainingHours);
-
     return (
-        <div className="text-cell-wrapper">
-            {neededHours ?
-                <div className={'text-cell footer'}>
-                    <div>{neededHours} - {workedHours} = {remainingHours}h</div>
-                    <div>{remainingTimeString}</div>
-                </div> : null
-            }
-        </div>
+        <ProgressFooterView
+            workedHours={workedHours}
+            neededHours={neededHours}
+            remainingHours={remainingHours}
+            remainingTimeString={remainingTimeString}
+        />
     );
 };
+
+/********
+ * VIEW *
+ ********/
+
+const ProgressFooterView = ({
+    workedHours,
+    neededHours,
+    remainingHours,
+    remainingTimeString
+}) => (
+    <div className="text-cell-wrapper">
+        {neededHours ?
+            <div className={'text-cell footer'}>
+                <div>{neededHours} - {workedHours} = {remainingHours}h</div>
+                <div>{remainingTimeString}</div>
+            </div> : null
+        }
+    </div>
+);
 
 export default ProgressFooter;
