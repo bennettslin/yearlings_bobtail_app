@@ -1,7 +1,7 @@
 import React from 'react';
 import OverviewButton from './overview-button.jsx';
 import Constants from '../../constants/constants.js';
-import FormattedText from '../text/formatted-text.jsx';
+import TextBlock from '../text/text-block.jsx';
 
 /*************
  * CONTAINER *
@@ -51,7 +51,7 @@ const OverviewsSectionView = ({
             })}
         </div>
         <div className="overview-text">
-            <FormattedText
+            <TextBlock
                 isLyric={false}
                 text={overviewRichText}
             />

@@ -1,7 +1,7 @@
 import React from 'react';
 import AnnotationPortalsBlock from './annotation-portals-block.jsx';
 import DotsBlock from '../dots/dots-block.jsx';
-import FormattedText from '../text/formatted-text.jsx';
+import TextBlock from '../text/text-block.jsx';
 
 /*************
  * CONTAINER *
@@ -52,7 +52,7 @@ const AnnotationCardView = ({
             dotKeys={tempDotKeys}
             interactable={true}
         />
-        <FormattedText
+        <TextBlock
             isLyric={false}
             text={richText}
             clickHandler={handleUrlClick}

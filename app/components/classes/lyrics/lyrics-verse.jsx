@@ -1,6 +1,6 @@
 import React from 'react';
 import Constants from '../../constants/constants.js';
-import FormattedText from '../text/formatted-text.jsx';
+import TextBlock from '../text/text-block.jsx';
 
 /*************
  * CONTAINER *
@@ -25,7 +25,7 @@ const LyricsVerseView = ({
 
     <div className="verse">
         {verseObject.lyric ? (
-                <FormattedText
+                <TextBlock
                     isLyric={true}
                     text={verseObject.lyric}
                     clickHandler={onAnnotationClick}
@@ -40,7 +40,7 @@ const LyricsVerseView = ({
                                 key={index}
                                 className={'line ' + keyClassPair.className}
                             >
-                                <FormattedText
+                                <TextBlock
                                     isLyric={true}
                                     text={verseObject[keyClassPair.key]}
                                     clickHandler={onAnnotationClick}

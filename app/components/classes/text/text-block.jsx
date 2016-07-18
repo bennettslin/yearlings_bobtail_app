@@ -6,7 +6,7 @@ import TextUnit from './text-unit.jsx';
  * CONTAINER *
  *************/
 
-const FormattedText = (props) => {
+const TextBlock = (props) => {
 
     const { text } = props,
 
@@ -15,7 +15,7 @@ const FormattedText = (props) => {
     return (typeof text === 'string' || !isArray) ? (
             <TextUnit {...props} />
         ) : (
-            <FormattedTextView {...props} />
+            <TextBlockView {...props} />
         );
 }
 
@@ -23,7 +23,7 @@ const FormattedText = (props) => {
  * PRESENTATION *
  ****************/
 
-const FormattedTextView = ({
+const TextBlockView = ({
 
     // From props.
     isLyric,
@@ -37,7 +37,7 @@ const FormattedTextView = ({
     <span>
         {text.map((textElement, index) => {
             return (
-                <FormattedText
+                <TextBlock
                     key={index}
                     isLyric={isLyric}
                     text={textElement}
@@ -51,4 +51,4 @@ const FormattedTextView = ({
 
 );
 
-export default FormattedText;
+export default TextBlock;

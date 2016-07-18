@@ -28,8 +28,8 @@ const TextSpan = (props) => {
 
     return (
         <TextSpanView {...props}
-            hasFirstSpace={hasFirstSpace}
             text={spacedText}
+            hasFirstSpace={hasFirstSpace}
         />
     );
 };
@@ -45,10 +45,12 @@ const TextSpanView = ({
     hasFirstSpace
 
 }) => (
+
     <span
-        className="text-block">
+        className="text-span">
         {(hasFirstSpace ? ' ' : '') + text}
     </span>
+
 );
 
 export default TextSpan;

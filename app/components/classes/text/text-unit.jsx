@@ -1,6 +1,6 @@
 import React from 'react';
 import AnchorBlock from './anchor-block.jsx';
-import FormattedText from './formatted-text.jsx';
+import TextBlock from './text-block.jsx';
 import TextSpan from './text-span.jsx';
 
 /*************
@@ -61,7 +61,7 @@ const ItalicView = ({
 }) => (
 
     <i>
-        <FormattedText
+        <TextBlock
             isLyric={isLyric}
             text={text}
             index={index}
@@ -84,7 +84,7 @@ const EmphasisView = ({
 }) => (
 
     <em>
-        <FormattedText
+        <TextBlock
             isLyric={isLyric}
             text={text}
             index={index}

@@ -1,5 +1,5 @@
 import React from 'react';
-import FormattedText from './formatted-text.jsx';
+import TextBlock from './text-block.jsx';
 import DotsBlock from '../dots/dots-block.jsx';
 
 /*************
@@ -64,7 +64,7 @@ const AnchorBlockView = ({
                 dotKeys={dotKeys}
                 interactable={false}
             />
-            <FormattedText
+            <TextBlock
                 isLyric={isLyric}
                 text={anchorText}
                 index={index}
