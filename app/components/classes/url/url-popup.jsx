@@ -16,7 +16,6 @@ class UrlPopup extends Popup {
     getContentElement() {
         return this.props.url ?
             <UrlSection {...this.props}
-                ref="urlSection"
                 inPopup={true}
             /> : null;
     }

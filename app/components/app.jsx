@@ -37,7 +37,6 @@ class App extends React.Component {
 
         super(props);
 
-        this._handleBodyClick = this._handleBodyClick.bind(this);
         this.handleTitleSelect = this.handleTitleSelect.bind(this);
         this.handleSongChange = this.handleSongChange.bind(this);
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this);
@@ -86,39 +85,6 @@ class App extends React.Component {
 
         LogHelper.logObject('lyric', lyricObject);
         return LogHelper.logObject('annotation', annotationObject);
-    }
-
-    _handleBodyClick(e) {
-        // const annotation = this.refs.annotationPopup.refs.annotationSection ?
-        //     this.refs.annotationPopup.refs.annotationSection.refs.annotation : null;
-
-        // /**
-        //  * Close annotation if anywhere outside annotation is clicked, with the
-        //  * exception of another link.
-        //  */
-        // if (annotation &&
-        //     annotation !== e.target &&
-        //     !annotation.contains(e.target) &&
-        //     !EventHelper.hasParentWithTagName(e.target, 'a')) {
-
-        //     this.handleAnnotationSelect();
-        // }
-
-        // // FIXME: Duplicate code.
-        // const url = this.refs.urlPopup.refs.urlSection ?
-        //     this.refs.urlPopup.refs.urlSection.refs.url : null;
-
-        // /**
-        //  * Close url if anywhere outside url is clicked, with the
-        //  * exception of another link.
-        //  */
-        // if (url &&
-        //     url !== e.target &&
-        //     !url.contains(e.target) &&
-        //     !EventHelper.hasParentWithTagName(e.target, 'a')) {
-
-        //     this.handleUrlClick();
-        // }
     }
 
     _selectIndex(selectedIndex, selectedIndexKey) {
@@ -247,7 +213,7 @@ class App extends React.Component {
             portalObjects = this._getPortalObjects(annotationObject);
 
         return (
-            <div ref="app" className="app" onClick={this._handleBodyClick}>
+            <div ref="app" className="app">
                 <div className="field left-field">
                     <TitleSection
                         titleText={props.title}

@@ -1,22 +1,12 @@
 import React from 'react';
 
-const defaultProps = {
-    inPopup: true,
-    url: ''
-}
-
 /*************
  * CONTAINER *
  *************/
 
-class UrlSection extends React.Component {
-
-    render() {
-        return (
-            <UrlSectionView {...this.props} />
-        );
-    }
-}
+const UrlSection = (props) => (
+    <UrlSectionView {...props} />
+);
 
 /****************
  * PRESENTATION *
@@ -27,18 +17,18 @@ class UrlSection extends React.Component {
 // TODO: Add navigation and exit button.
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/
 
-class UrlSectionView extends React.Component {
+const UrlSectionView = ({
 
-    render() {
-        return (
-            <div ref="url"
-                className={'section url-section' + (this.props.inPopup ? ' in-popup' : '')}
-            >
-                <iframe src={this.props.url} />
-            </div>
-        );
-    }
-}
+    // From props.
+    inPopup,
+    url
 
-UrlSection.defaultProps = defaultProps;
+}) => (
+
+    <div className={'section url-section' + (inPopup ? ' in-popup' : '')}>
+        <iframe src={url} />
+    </div>
+
+);
+
 export default UrlSection;

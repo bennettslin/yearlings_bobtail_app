@@ -1,7 +1,7 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
-// Separate into container and presentation components?
+// TODO: Separate into container and presentation components?
 
 const CloseButton = ({
     onClick
