@@ -1,107 +1,67 @@
 import React from 'react';
-import DotsBlock from '../dots/dots-block.jsx';
+import AnnotationCard from './annotation-card.jsx';
 import Constants from '../../constants/constants.js';
-import FormatUtility from '../../utilities/format-utility.jsx';
-
-const defaultProps = {
-    inPopup: true,
-    annotationObject: {
-        title: '',
-        dotKeys: {}
-    },
-    portalObjects: null,
-    handlePortalClick() {},
-    handleUrlClick() {}
-}
 
 /*************
  * CONTAINER *
  *************/
 
-class AnnotationSection extends React.Component {
-    render() {
-        return (
-            <AnnotationSectionView {...this.props}
-            />
-        );
-    }
-}
+const AnnotationSection = (props) => {
+
+    const { annotationObject } = props,
+
+        title = annotationObject.title,
+        dotKeys = Constants.allDotKeys.filter(dotKey => {
+            return annotationObject.dotKeys[dotKey];
+        });
+
+    return (
+        <AnnotationSectionView {...props}
+            title={title}
+            dotKeys={dotKeys}
+        />
+    );
+};
 
 /****************
  * PRESENTATION *
  ****************/
 
-class AnnotationSectionView extends React.Component {
+const AnnotationSectionView = ({
 
-    _getAnnotationCardsBlock(annotationObject) {
-        const dotKeys = Constants.allDotKeys.filter(dotKey => {
-                return annotationObject.dotKeys[dotKey];
-            });
+    // From props.
+    inPopup,
+    annotationObject,
+    portalObjects,
+    handlePortalClick,
+    handleUrlClick,
 
-        return (
+    // From controller.
+    title,
+    dotKeys
+
+}) => (
+
+    <div className={'section annotation-section' + (inPopup ? ' in-popup' : '')}>
+        <h2>{title}</h2>
+        <div className="annotation-cards">
             <div className="cards-block">
                 {dotKeys.map((dotKey, index) => {
-                    const richText = annotationObject[dotKey],
-
-                        /**
-                         * Temporary workaround. Data helper will eventually
-                         * pass multiple dot keys.
-                         */
-                        tempDotKeys = {};
-
-                    tempDotKeys[dotKey] = true;
-
                     return (
-                        <div key={index}
-                            className={'annotation-card ' + dotKey}>
-                            <DotsBlock
-                                dotKeys={tempDotKeys}
-                                interactable={true}
-                            />
-                            {/* Portal card is slightly different. */}
-                            {dotKey === 'portal' ?
-                                this._getPortalsBlock(this.props.portalObjects) :
-                                FormatUtility.getFormattedTextElement(false, richText, this.props.handleUrlClick)}
-                        </div>
+                        <AnnotationCard
+                            key={index}
+                            dotKey={dotKey}
+                            annotationObject={annotationObject}
+                            portalObjects={portalObjects}
+                            handlePortalClick={handlePortalClick}
+                            handleUrlClick={handleUrlClick}
+                        />
                     );
                 })}
             </div>
-        );
-    }
+        </div>
+    </div>
 
-    _getPortalsBlock(portalObjects) {
-        return (
-            <div className="portals-block">
-                {portalObjects.map((portalObject, index) => {
-                    return (
-                        <a key={index}
-                            className="portal-button"
-                            onClick={() => this.props.handlePortalClick(portalObject.songIndex, portalObject.annotationIndex)}>
-                            <div className="song-title">{portalObject.songTitle}</div>
-                            <div className="annotation-title">{portalObject.annotationTitle}</div>
-                        </a>
-                    );
-                })}
-            </div>
-        );
-    }
+);
 
-    render() {
-        const props = this.props,
-            annotationObject = props.annotationObject,
-            title = annotationObject.title;
-
-        return (
-            <div ref="annotation"
-                className={'section annotation-section' + (this.props.inPopup ? ' in-popup' : '')}>
-                <h2>{title}</h2>
-                <div className="annotation-cards">
-                    {this._getAnnotationCardsBlock(annotationObject)}
-                </div>
-            </div>
-        );
-    }
-}
-
-AnnotationSection.defaultProps = defaultProps;
 export default AnnotationSection;

@@ -3,7 +3,7 @@ import Popup from '../../superclasses/popup.jsx';
 import UrlSection from './url-section.jsx';
 
 const defaultProps = {
-    url: '',
+    url: null,
     onCloseClick() {}
 }
 
