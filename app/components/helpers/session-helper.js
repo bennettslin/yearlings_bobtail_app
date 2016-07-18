@@ -1,6 +1,6 @@
 import { STORAGE } from '../constants/constants.js';
 
-module.exports = {
+export default {
 
     setInSession(key, value) {
         STORAGE[key] = value;

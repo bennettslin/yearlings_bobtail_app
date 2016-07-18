@@ -1,6 +1,6 @@
 import { STORAGE, TEXT_KEYS } from '../constants/constants.js';
 
-module.exports = {
+export default {
 
     logObject(description, object = STORAGE) {
         const formattedString = JSON.stringify(object, null, 3);

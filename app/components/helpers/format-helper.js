@@ -1,6 +1,6 @@
 import { TEXT_KEYS } from '../constants/constants.js';
 
-module.exports = {
+export default {
 
     /**
      * Converts text in anchor tag into annotation header.

@@ -9,7 +9,7 @@ import { ALL_DOT_KEYS,
          TEXT_KEYS } from '../constants/constants.js';
 import FormatHelper from './format-helper.js';
 
-module.exports = {
+export default {
 
     /**
      * Temporary storage variables.
@@ -48,7 +48,6 @@ module.exports = {
             this._annotations = [];
 
             this._parseLyricValue(song.lyrics);
-
 
             // Add annotations to song object.
             song.annotations = this._annotations;

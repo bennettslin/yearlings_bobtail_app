@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 
     hasParentWithTagName(child, parentTagName = '') {
          let node = child;

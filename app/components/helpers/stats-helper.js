@@ -1,7 +1,7 @@
 import { ALL_DOT_KEYS,
          TEXT_KEYS } from '../constants/constants.js';
 
-module.exports = {
+export default {
 
     getCount(richTextObject = {}) {
         return Object.keys(richTextObject).length;

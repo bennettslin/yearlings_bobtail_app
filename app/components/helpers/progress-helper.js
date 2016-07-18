@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 
     getMaxTotalNeededHoursFromSongs(songs = []) {
         return songs.reduce((maxTotalNeededHours, song) => {
