@@ -262,7 +262,7 @@ class App extends React.Component {
                      <div className="field right-field">
                         <LyricsSection
                             selectedSongLyrics={selectedSongObject.lyrics}
-                            handleAnnotationSelect={this.handleAnnotationSelect}
+                            onAnnotationClick={this.handleAnnotationSelect}
                         />
                     </div> : null
                 }

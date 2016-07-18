@@ -1,91 +1,42 @@
 import React from 'react';
-import Constants from '../../constants/constants.js';
-import FormattedText from '../text/formatted-text.jsx';
-
-const defaultProps = {
-    selectedSongLyrics: '',
-    handleAnnotationSelect() {}
-};
+import LyricsStanza from './lyrics-stanza.jsx';
 
 /*************
  * CONTAINER *
  *************/
 
+const LyricsSection = (props) => (
+    <LyricsSectionView {...props} />
+);
+
 /****************
  * PRESENTATION *
  ****************/
 
-class LyricsSection extends React.Component {
+const LyricsSectionView = ({
 
-    _getStanzaElement(stanzaArray, stanzaIndex) {
-        // A "stanza" wraps a block of text.
-        return (
-            <div className={'stanza ' + stanzaIndex} key={stanzaIndex}>
-                {stanzaArray.map((verseObject, verseIndex) => {
-                    return this._getVerseElement(verseObject, verseIndex);
-                })}
-            </div>
-        );
-    }
+    // From props.
+    selectedSongLyrics,
+    onAnnotationClick
 
-    _getVerseElement(verseObject, verseIndex) {
-        // A "verse" wraps a single line of text.
+}) => (
 
-        const lyricElements = verseObject.lyric ?
+    <div className="section lyrics-section">
+        <h2>lyrics</h2>
+        <div className="lyrics-block">
+            {selectedSongLyrics.map((stanzaArray, stanzaIndex) => {
+                return (
+                    <LyricsStanza
+                        key={stanzaIndex}
+                        stanzaArray={stanzaArray}
+                        stanzaIndex={stanzaIndex}
+                        onAnnotationClick={onAnnotationClick}
+                    />
+                );
+            })}
+        </div>
+    </div>
 
-            // It is a regular verse.
-            this._getLyricElement(verseObject.lyric) :
+);
 
-            // It is a doublespeaker verse.
-            <div className="double-lines-block">
-                {Constants.lyricColumnKeyClassPairs.map((keyClassPair, index) => {
-                    return verseObject[keyClassPair.key] ?
-                    <div key={index}
-                        className={'line ' + keyClassPair.className}>
-                        {this._getLyricElement(verseObject[keyClassPair.key])}
-                    </div> : null
-                })}
-            </div>;
-
-        return (
-            <div className={'verse ' + verseIndex} key={verseIndex}>
-                {lyricElements}
-            </div>
-        );
-    }
-
-    _getLyricElement(lyric) {
-        /**
-         * A "lyric" is a single line of text within a column. A regular song
-         * will have one lyric per verse. A doublespeaker song will have two.
-         */
-        return (
-            <FormattedText
-                isLyric={true}
-                text={lyric}
-                clickHandler={this.props.handleAnnotationSelect}
-            />
-        );
-    }
-
-    render() {
-        const props = this.props,
-            lyricsBlock = (
-                <div className={'lyrics-block'}>
-                    {props.selectedSongLyrics.map((stanzaArray, stanzaIndex) => {
-                        return this._getStanzaElement(stanzaArray, stanzaIndex);
-                    })}
-                </div>
-            );
-
-        return (
-            <div className="section lyrics-section">
-                <h2>lyrics</h2>
-                {lyricsBlock}
-            </div>
-        );
-    }
-}
-
-LyricsSection.defaultProps = defaultProps;
 export default LyricsSection;

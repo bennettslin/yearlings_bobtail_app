@@ -1,6 +1,7 @@
 import React from 'react';
 import DotsBlock from '../dots/dots-block.jsx';
 
+// TODO: Make full stateless pair with container and presentation components.
 class FormattedText extends React.Component {
 
     /**
@@ -100,11 +101,13 @@ class FormattedText extends React.Component {
     }
 
     render() {
+
         const { isLyric,
                 text,
                 clickHandler,
                 index = 0,
                 nestedIndex = 0 } = this.props;
+
         return this.getFormattedTextElement(isLyric, text, clickHandler, index, nestedIndex) || null;
     }
 }
