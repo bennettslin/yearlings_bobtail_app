@@ -1,7 +1,7 @@
 import React from 'react';
 import AnnotationPortalsBlock from './annotation-portals-block.jsx';
 import DotsBlock from '../dots/dots-block.jsx';
-import FormatUtility from '../../utilities/format-utility.jsx';
+import FormattedText from '../text/formatted-text.jsx';
 
 /*************
  * CONTAINER *
@@ -20,12 +20,17 @@ const AnnotationCard = (props) => {
          * FIXME: This isn't a great way to render the content.
          */
         contentElement = dotKey === 'portal' ? (
-
             <AnnotationPortalsBlock
                 portalObjects={portalObjects}
                 handlePortalClick={handlePortalClick}
             />
-            ) : FormatUtility.getFormattedTextElement(false, richText, handleUrlClick),
+            ) : (
+                <FormattedText
+                    isLyric={false}
+                    text={richText}
+                    clickHandler={handleUrlClick}
+                />
+            ),
 
         /**
          * FIXME: Temporary workaround. Data helper will eventually

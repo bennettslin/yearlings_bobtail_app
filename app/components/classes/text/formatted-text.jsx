@@ -1,7 +1,7 @@
 import React from 'react';
-import DotsBlock from '../classes/dots/dots-block.jsx';
+import DotsBlock from '../dots/dots-block.jsx';
 
-module.exports = {
+class FormattedText extends React.Component {
 
     /**
      * Returns a single element containing nested elements.
@@ -22,7 +22,7 @@ module.exports = {
         } else if (typeof text === 'string' || typeof text === 'object') {
             return this._getTaggedTextContent(isLyric, text, clickHandler, index, nestedIndex);
         }
-    },
+    }
 
     /**
      * Returns a single element wrapped in a span, italic, or anchor tag.
@@ -71,7 +71,7 @@ module.exports = {
                 );
             }
         }
-    },
+    }
 
     _getSpacedTextString(isLyric, text, index) {
         // Do not add initial space if string begins with "'s".
@@ -93,9 +93,20 @@ module.exports = {
                 {firstSpace + text}
             </span>
         );
-    },
+    }
 
     _getSpaceElement() {
         return <span className="space"> </span>;
     }
+
+    render() {
+        const { isLyric,
+                text,
+                clickHandler,
+                index = 0,
+                nestedIndex = 0 } = this.props;
+        return this.getFormattedTextElement(isLyric, text, clickHandler, index, nestedIndex) || null;
+    }
 }
+
+export default FormattedText;

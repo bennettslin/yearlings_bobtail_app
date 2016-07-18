@@ -1,6 +1,6 @@
 import React from 'react';
 import Constants from '../../constants/constants.js';
-import FormatUtility from '../../utilities/format-utility.jsx';
+import FormattedText from '../text/formatted-text.jsx';
 
 const defaultProps = {
     selectedSongLyrics: '',
@@ -54,12 +54,18 @@ class LyricsSection extends React.Component {
         );
     }
 
-    _getLyricElement(lyric, className) {
+    _getLyricElement(lyric) {
         /**
          * A "lyric" is a single line of text within a column. A regular song
          * will have one lyric per verse. A doublespeaker song will have two.
          */
-        return FormatUtility.getFormattedTextElement(true, lyric, this.props.handleAnnotationSelect);
+        return (
+            <FormattedText
+                isLyric={true}
+                text={lyric}
+                clickHandler={this.props.handleAnnotationSelect}
+            />
+        );
     }
 
     render() {
