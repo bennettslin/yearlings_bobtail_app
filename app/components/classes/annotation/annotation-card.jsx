@@ -9,28 +9,9 @@ import FormattedText from '../text/formatted-text.jsx';
 
 const AnnotationCard = (props) => {
     const { dotKey,
-            annotationObject,
-            portalObjects,
-            handlePortalClick,
-            handleUrlClick } = props,
+            annotationObject } = props,
 
         richText = annotationObject[dotKey],
-
-        /**
-         * FIXME: This isn't a great way to render the content.
-         */
-        contentElement = dotKey === 'portal' ? (
-            <AnnotationPortalsBlock
-                portalObjects={portalObjects}
-                handlePortalClick={handlePortalClick}
-            />
-            ) : (
-                <FormattedText
-                    isLyric={false}
-                    text={richText}
-                    clickHandler={handleUrlClick}
-                />
-            ),
 
         /**
          * FIXME: Temporary workaround. Data helper will eventually
@@ -42,7 +23,7 @@ const AnnotationCard = (props) => {
 
     return (
         <AnnotationCardView {...props}
-            contentElement={contentElement}
+            richText={richText}
             tempDotKeys={tempDotKeys}
         />
     );
@@ -56,9 +37,12 @@ const AnnotationCardView = ({
 
     // From props.
     dotKey,
+    portalObjects,
+    handlePortalClick,
+    handleUrlClick,
 
     // From controller.
-    contentElement,
+    richText,
     tempDotKeys
 
 }) => (
@@ -68,7 +52,17 @@ const AnnotationCardView = ({
             dotKeys={tempDotKeys}
             interactable={true}
         />
-        {contentElement}
+        <FormattedText
+            isLyric={false}
+            text={richText}
+            clickHandler={handleUrlClick}
+        />
+        {dotKey === 'portal' ?
+            <AnnotationPortalsBlock
+                portalObjects={portalObjects}
+                handlePortalClick={handlePortalClick}
+            /> : null
+        }
     </div>
 
 );
