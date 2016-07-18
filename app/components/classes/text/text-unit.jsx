@@ -56,7 +56,7 @@ const ItalicView = ({
     text,
     nestedIndex,
     index,
-    clickHandler
+    onAnchorClick
 
 }) => (
 
@@ -66,7 +66,7 @@ const ItalicView = ({
             text={text}
             index={index}
             nestedIndex={nestedIndex}
-            clickHandler={clickHandler}
+            onAnchorClick={onAnchorClick}
         />
     </i>
 );
@@ -78,7 +78,7 @@ const EmphasisView = ({
     text,
     nestedIndex,
     index,
-    clickHandler
+    onAnchorClick
 
 }) => (
 
@@ -88,7 +88,7 @@ const EmphasisView = ({
             text={text}
             index={index}
             nestedIndex={nestedIndex}
-            clickHandler={clickHandler}
+            onAnchorClick={onAnchorClick}
         />
     </em>
 );

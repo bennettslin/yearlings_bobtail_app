@@ -33,8 +33,8 @@ const AnnotationSectionView = ({
     inPopup,
     annotationObject,
     portalObjects,
-    handlePortalClick,
-    handleUrlClick,
+    onPortalClick,
+    onUrlClick,
 
     // From controller.
     title,
@@ -53,8 +53,8 @@ const AnnotationSectionView = ({
                             dotKey={dotKey}
                             annotationObject={annotationObject}
                             portalObjects={portalObjects}
-                            handlePortalClick={handlePortalClick}
-                            handleUrlClick={handleUrlClick}
+                            onPortalClick={onPortalClick}
+                            onUrlClick={onUrlClick}
                         />
                     );
                 })}

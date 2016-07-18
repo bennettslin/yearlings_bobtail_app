@@ -16,7 +16,7 @@ export default {
         const songTasks = selectedSongObject.tasks;
 
         // If no song tasks, then return album tasks.
-        return songTasks ? songTasks : this.props.tasks;
+        return songTasks ? songTasks : tasks;
     },
 
     getOverviewRichText(selectedOverviewIndex, selectedSongObject, overviews) {

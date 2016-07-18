@@ -28,7 +28,7 @@ const LyricsVerseView = ({
                 <TextBlock
                     isLyric={true}
                     text={verseObject.lyric}
-                    clickHandler={onAnnotationClick}
+                    onAnchorClick={onAnnotationClick}
                 />
             ) : (
                 <div className="double-lines-block">
@@ -43,7 +43,7 @@ const LyricsVerseView = ({
                                 <TextBlock
                                     isLyric={true}
                                     text={verseObject[keyClassPair.key]}
-                                    clickHandler={onAnnotationClick}
+                                    onAnchorClick={onAnnotationClick}
                                 />
                             </div>
                         );

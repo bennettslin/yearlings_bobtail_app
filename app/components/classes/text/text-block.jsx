@@ -28,7 +28,7 @@ const TextBlockView = ({
     // From props.
     isLyric,
     text,
-    clickHandler,
+    onAnchorClick,
     index = 0,
     nestedIndex = 0
 
@@ -43,7 +43,7 @@ const TextBlockView = ({
                     text={textElement}
                     index={index}
                     nestedIndex={nestedIndex + 1}
-                    clickHandler={clickHandler}
+                    onAnchorClick={onAnchorClick}
                 />
             );
         })}

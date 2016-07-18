@@ -38,8 +38,8 @@ const AnnotationCardView = ({
     // From props.
     dotKey,
     portalObjects,
-    handlePortalClick,
-    handleUrlClick,
+    onPortalClick,
+    onUrlClick,
 
     // From controller.
     richText,
@@ -55,12 +55,12 @@ const AnnotationCardView = ({
         <TextBlock
             isLyric={false}
             text={richText}
-            clickHandler={handleUrlClick}
+            onAnchorClick={onUrlClick}
         />
         {dotKey === 'portal' ?
             <AnnotationPortalsBlock
                 portalObjects={portalObjects}
-                handlePortalClick={handlePortalClick}
+                onPortalClick={onPortalClick}
             /> : null
         }
     </div>

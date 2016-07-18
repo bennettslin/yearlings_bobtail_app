@@ -16,7 +16,7 @@ const AnnotationPortalsBlockView = ({
 
     // From props.
     portalObjects,
-    handlePortalClick
+    onPortalClick
 
 }) => (
 
@@ -25,7 +25,7 @@ const AnnotationPortalsBlockView = ({
             return (
                 <a key={index}
                     className="portal-button"
-                    onClick={() => handlePortalClick(portalObject.songIndex, portalObject.annotationIndex)}>
+                    onClick={() => onPortalClick(portalObject.songIndex, portalObject.annotationIndex)}>
                     <div className="song-title">{portalObject.songTitle}</div>
                     <div className="annotation-title">{portalObject.annotationTitle}</div>
                 </a>

@@ -179,12 +179,12 @@ class App extends React.Component {
                 annotationObject={annotationObject}
                 portalObjects={portalObjects}
 
-                handleTitleSelect={this.handleTitleSelect}
-                handleSongChange={this.handleSongChange}
-                handlePortalClick={this.handlePortalClick}
-                handleUrlClick={this.handleUrlClick}
-                handleAnnotationSelect={this.handleAnnotationSelect}
-                handleOverviewSelect={this.handleOverviewSelect}
+                onTitleClick={this.handleTitleSelect}
+                onSongClick={this.handleSongChange}
+                onPortalClick={this.handlePortalClick}
+                onUrlClick={this.handleUrlClick}
+                onAnnotationClick={this.handleAnnotationSelect}
+                onOverviewClick={this.handleOverviewSelect}
             />
         );
     }
@@ -216,38 +216,39 @@ const AppView = ({
     annotationObject,
     portalObjects,
 
-    handleTitleSelect,
-    handleSongChange,
-    handlePortalClick,
-    handleUrlClick,
-    handleAnnotationSelect,
-    handleOverviewSelect
+    onTitleClick,
+    onSongClick,
+    onPortalClick,
+    onUrlClick,
+    onAnnotationClick,
+    onOverviewClick
 
 }) => (
+
     <div className="app">
         <div className="field left-field">
             <TitleSection
                 titleText={title}
-                onClick={handleTitleSelect}
+                onClick={onTitleClick}
             />
             <SongsSection
                 songs={songs}
                 allTasks={allTaskObjects}
                 selectedSongIndex={selectedSongIndex}
-                onSongClick={handleSongChange}
+                onSongClick={onSongClick}
             />
         </div>
         <div className="field centre-field">
             <AnnotationPopup
                 annotationObject={annotationObject}
                 portalObjects={portalObjects}
-                handlePortalClick={handlePortalClick}
-                handleUrlClick={handleUrlClick}
-                onCloseClick={handleAnnotationSelect}
+                onPortalClick={onPortalClick}
+                onUrlClick={onUrlClick}
+                onCloseClick={onAnnotationClick}
             />
             <WikiPopup
                 url={wikiUrl}
-                onCloseClick={handleUrlClick}
+                onCloseClick={onUrlClick}
             />
             {/* Show scrap notes if no selected song, otherwise show dots. */}
             {!selectedSongIndex ?
@@ -261,7 +262,7 @@ const AppView = ({
             <OverviewsSection
                 overviewRichText={overviewRichText}
                 selectedOverviewIndex={selectedOverviewIndex}
-                onOverviewClick={handleOverviewSelect}
+                onOverviewClick={onOverviewClick}
             />
             <TasksSection
                 tasks={taskObjects}
@@ -271,7 +272,7 @@ const AppView = ({
              <div className="field right-field">
                 <LyricsSection
                     selectedSongLyrics={selectedSongLyrics}
-                    onAnnotationClick={handleAnnotationSelect}
+                    onAnnotationClick={onAnnotationClick}
                 />
             </div> : null
         }

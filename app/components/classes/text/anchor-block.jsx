@@ -41,7 +41,7 @@ const AnchorBlockView = ({
     isLyric,
     index,
     nestedIndex,
-    clickHandler,
+    onAnchorClick,
 
     // From controller.
     hasTodo,
@@ -57,7 +57,7 @@ const AnchorBlockView = ({
             <span className="space"> </span> : null
         }
         <a className={'anchor-block' + (hasTodo ? ' todo' : '')}
-            onClick={() => clickHandler(clickHandlerArgument)}
+            onClick={() => onAnchorClick(clickHandlerArgument)}
         >
             <span className="underline-bar"></span>
             <DotsBlock
@@ -69,7 +69,7 @@ const AnchorBlockView = ({
                 text={anchorText}
                 index={index}
                 nestedIndex={nestedIndex}
-                clickHandler={clickHandler}
+                onAnchorClick={onAnchorClick}
             />
         </a>
     </span>
