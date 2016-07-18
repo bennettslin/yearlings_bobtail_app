@@ -9,7 +9,11 @@ import OverviewsSection from './classes/overviews/overviews-section.jsx';
 import TasksSection from './classes/tasks/tasks-section.jsx';
 import DotsSection from './classes/dots/dots-section.jsx';
 import LyricsSection from './classes/lyrics/lyrics-section.jsx';
-import { SESSION_KEYS } from './constants/constants.js';
+import { PLAYED_SONG_INDEX_KEY,
+         SELECTED_SONG_INDEX_KEY,
+         SELECTED_ANNOTATION_INDEX_KEY,
+         SELECTED_OVERVIEW_INDEX_KEY,
+         DEFAULT_OVERVIEW_INDEX } from './constants/constants.js';
 import EventHelper from './helpers/event-helper.js';
 import LogHelper from './helpers/log-helper.js';
 import ProgressHelper from './helpers/progress-helper.js';
@@ -36,12 +40,6 @@ const App = (props) => {
 //     songs: [],
 //     overviews: []
 // };
-
-const PLAYED_SONG_INDEX_KEY = SESSION_KEYS.PLAYED_SONG_INDEX_KEY,
-    SELECTED_SONG_INDEX_KEY = SESSION_KEYS.SELECTED_SONG_INDEX_KEY,
-    SELECTED_ANNOTATION_INDEX_KEY = SESSION_KEYS.SELECTED_ANNOTATION_INDEX_KEY,
-    SELECTED_OVERVIEW_INDEX_KEY = SESSION_KEYS.SELECTED_OVERVIEW_INDEX_KEY,
-    DEFAULT_OVERVIEW_INDEX = 1;
 
 class AppView extends React.Component {
 

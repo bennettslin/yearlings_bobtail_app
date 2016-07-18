@@ -64,7 +64,6 @@ const AnnotationCardView = ({
             /> : null
         }
     </div>
-
 );
 
 export default AnnotationCard;

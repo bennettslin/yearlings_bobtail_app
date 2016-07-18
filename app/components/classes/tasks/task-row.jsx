@@ -38,7 +38,6 @@ const TaskRowView = ({
             }
         </div>
     </div>
-
 );
 
 export default TaskRow;

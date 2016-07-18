@@ -61,7 +61,6 @@ const SongRowView = ({
             </span>
         </div>
     </div>
-
 );
 
 export default SongRow;

@@ -31,7 +31,6 @@ const StatsSectionView = ({
             <WordsPerAnnotationRow annotations={annotations} />
         </div>
     </div>
-
 );
 
 export default StatsSection;

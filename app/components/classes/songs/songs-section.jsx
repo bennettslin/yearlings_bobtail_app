@@ -67,7 +67,6 @@ const SongsSectionView = ({
             />
         </div>
     </div>
-
 );
 
 export default SongsSection;

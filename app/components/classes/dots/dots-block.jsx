@@ -45,7 +45,6 @@ const DotsBlockView = ({
                 );
         })}
     </span>
-
 );
 
 DotsBlock.defaultProps = defaultProps;

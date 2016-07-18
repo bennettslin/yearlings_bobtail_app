@@ -50,7 +50,6 @@ const TextSpanView = ({
         className="text-span">
         {(hasFirstSpace ? ' ' : '') + text}
     </span>
-
 );
 
 export default TextSpan;

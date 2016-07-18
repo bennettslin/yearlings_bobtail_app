@@ -2,12 +2,11 @@ module.exports = {
 
     STORAGE: window.localStorage,
 
-    SESSION_KEYS: {
-        PLAYED_SONG_INDEX_KEY: 'playedSongIndex',
-        SELECTED_SONG_INDEX_KEY: 'selectedSongIndex',
-        SELECTED_ANNOTATION_INDEX_KEY: 'selectedAnnotationIndex',
-        SELECTED_OVERVIEW_INDEX_KEY: 'selectedOverviewIndex',
-    },
+    PLAYED_SONG_INDEX_KEY: 'playedSongIndex',
+    SELECTED_SONG_INDEX_KEY: 'selectedSongIndex',
+    SELECTED_ANNOTATION_INDEX_KEY: 'selectedAnnotationIndex',
+    SELECTED_OVERVIEW_INDEX_KEY: 'selectedOverviewIndex',
+    DEFAULT_OVERVIEW_INDEX: 1,
 
     // Lyrics text will only ever be under these keys.
     TEXT_KEYS: [

@@ -34,7 +34,6 @@ const LyricsStanzaView = ({
             );
         })}
     </div>
-
 );
 
 export default LyricsStanza;

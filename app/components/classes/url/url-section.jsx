@@ -28,7 +28,6 @@ const UrlSectionView = ({
     <div className={'section url-section' + (inPopup ? ' in-popup' : '')}>
         <iframe src={url} />
     </div>
-
 );
 
 export default UrlSection;

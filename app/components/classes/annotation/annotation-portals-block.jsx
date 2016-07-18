@@ -32,7 +32,6 @@ const AnnotationPortalsBlockView = ({
             );
         })}
     </div>
-
 );
 
 export default AnnotationPortalsBlock;

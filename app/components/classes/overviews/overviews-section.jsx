@@ -57,7 +57,6 @@ const OverviewsSectionView = ({
             />
         </div>
     </div>
-
 );
 
 export default OverviewsSection;

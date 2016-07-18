@@ -27,7 +27,6 @@ const TitleSectionView = ({
             </a>
         </h1>
     </div>
-
 );
 
 export default TitleSection;

@@ -49,7 +49,6 @@ const TasksSectionView = ({
             />
         </div>
     </div>
-
 );
 
 export default TasksSection;

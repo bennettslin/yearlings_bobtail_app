@@ -48,7 +48,6 @@ const TextBlockView = ({
             );
         })}
     </span>
-
 );
 
 export default TextBlock;

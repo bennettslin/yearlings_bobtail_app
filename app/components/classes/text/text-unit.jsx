@@ -69,7 +69,6 @@ const ItalicView = ({
             clickHandler={clickHandler}
         />
     </i>
-
 );
 
 const EmphasisView = ({
@@ -92,7 +91,6 @@ const EmphasisView = ({
             clickHandler={clickHandler}
         />
     </em>
-
 );
 
 export default TextUnit;

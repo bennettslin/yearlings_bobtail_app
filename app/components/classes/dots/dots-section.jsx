@@ -27,7 +27,6 @@ const DotsSectionView = ({
             interactable={true}
         />
     </div>
-
 );
 
 export default DotsSection;

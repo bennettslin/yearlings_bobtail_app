@@ -46,7 +46,6 @@ const ProgressFooterView = ({
             </div> : null
         }
     </div>
-
 );
 
 export default ProgressFooter;

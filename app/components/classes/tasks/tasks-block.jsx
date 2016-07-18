@@ -45,7 +45,6 @@ const TasksBlockView = ({
             );
         })}
     </div>
-
 );
 
 export default TasksBlock;

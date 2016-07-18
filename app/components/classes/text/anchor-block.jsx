@@ -73,7 +73,6 @@ const AnchorBlockView = ({
             />
         </a>
     </span>
-
 );
 
 export default AnchorBlock;

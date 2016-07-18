@@ -28,7 +28,6 @@ const NotesSectionView = () => (
             </span>
         </div>
     </div>
-
 );
 
 export default NotesSection;

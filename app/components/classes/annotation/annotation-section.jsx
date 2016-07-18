@@ -61,7 +61,6 @@ const AnnotationSectionView = ({
             </div>
         </div>
     </div>
-
 );
 
 export default AnnotationSection;

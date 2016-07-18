@@ -36,7 +36,6 @@ const LyricsSectionView = ({
             })}
         </div>
     </div>
-
 );
 
 export default LyricsSection;

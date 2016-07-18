@@ -52,7 +52,6 @@ const LyricsVerseView = ({
             )
         }
     </div>
-
 );
 
 export default LyricsVerse;

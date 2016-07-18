@@ -75,7 +75,6 @@ const StatRowView = ({
             {typeCount}
         </span>
     </div>
-
 );
 
 export {
