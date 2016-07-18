@@ -1,13 +1,13 @@
 import React from 'react';
 import Popup from '../../superclasses/popup.jsx';
-import UrlSection from './url-section.jsx';
+import WikiSection from './wiki-section.jsx';
 
 const defaultProps = {
     url: null,
     onCloseClick() {}
 }
 
-class UrlPopup extends Popup {
+class WikiPopup extends Popup {
 
     getClassName() {
         return 'url';
@@ -15,11 +15,11 @@ class UrlPopup extends Popup {
 
     getContentElement() {
         return this.props.url ?
-            <UrlSection {...this.props}
+            <WikiSection {...this.props}
                 inPopup={true}
             /> : null;
     }
 }
 
-UrlPopup.defaultProps = defaultProps;
-export default UrlPopup;
+WikiPopup.defaultProps = defaultProps;
+export default WikiPopup;

@@ -4,8 +4,8 @@ import React from 'react';
  * CONTAINER *
  *************/
 
-const UrlSection = (props) => (
-    <UrlSectionView {...props} />
+const WikiSection = (props) => (
+    <WikiSectionView {...props} />
 );
 
 /****************
@@ -17,7 +17,7 @@ const UrlSection = (props) => (
 // TODO: Add navigation and exit button.
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/
 
-const UrlSectionView = ({
+const WikiSectionView = ({
 
     // From props.
     inPopup,
@@ -30,4 +30,4 @@ const UrlSectionView = ({
     </div>
 );
 
-export default UrlSection;
+export default WikiSection;

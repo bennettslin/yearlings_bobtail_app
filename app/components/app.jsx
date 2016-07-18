@@ -3,7 +3,7 @@ import TitleSection from './classes/title/title-section.jsx';
 import SongsSection from './classes/songs/songs-section.jsx';
 import NotesSection from './classes/notes/notes-section.jsx';
 import AnnotationPopup from './classes/annotation/annotation-popup.jsx';
-import UrlPopup from './classes/url/url-popup.jsx';
+import WikiPopup from './classes/wiki/wiki-popup.jsx';
 import StatsSection from './classes/stats/stats-section.jsx';
 import OverviewsSection from './classes/overviews/overviews-section.jsx';
 import TasksSection from './classes/tasks/tasks-section.jsx';
@@ -249,8 +249,8 @@ class AppView extends React.Component {
                         handleUrlClick={this.handleUrlClick}
                         onCloseClick={this.handleAnnotationSelect}
                     />
-                    <UrlPopup
-                        ref="urlPopup"
+                    <WikiPopup
+                        ref="wikiPopup"
                         url={state.url}
                         onCloseClick={this.handleUrlClick}
                     />
