@@ -1,13 +1,33 @@
 import React from 'react';
 import DotsBlock from '../dots/dots-block.jsx';
 
+/*************
+ * CONTAINER *
+ *************/
+
+const FormattedText = (props) => (
+    <FormattedTextView {...props} />
+);
+
+/****************
+ * PRESENTATION *
+ ****************/
+
 // TODO: Make full stateless pair with container and presentation components.
-class FormattedText extends React.Component {
+const FormattedTextView = ({
+
+    isLyric,
+    text,
+    clickHandler,
+    index = 0,
+    nestedIndex = 0
+
+}) => {
 
     /**
      * Returns a single element containing nested elements.
      */
-    getFormattedTextElement(isLyric, text, clickHandler, index, nestedIndex) {
+    const _getFormattedTextElement = (isLyric, text, clickHandler, index, nestedIndex) => {
         index = index || 0;
         nestedIndex = nestedIndex || 0;
 
@@ -15,33 +35,33 @@ class FormattedText extends React.Component {
             return (
                 <span key={nestedIndex + index}>
                     {text.map((textElement, index) => {
-                        return this.getFormattedTextElement(isLyric, textElement, clickHandler, index, nestedIndex + 1);
+                        return _getFormattedTextElement(isLyric, textElement, clickHandler, index, nestedIndex + 1);
                     })}
                 </span>
             );
 
         } else if (typeof text === 'string' || typeof text === 'object') {
-            return this._getTaggedTextContent(isLyric, text, clickHandler, index, nestedIndex);
+            return _getTaggedTextContent(isLyric, text, clickHandler, index, nestedIndex);
         }
-    }
+    },
 
     /**
      * Returns a single element wrapped in a span, italic, or anchor tag.
      */
-    _getTaggedTextContent(isLyric, text, clickHandler, index, nestedIndex) {
+    _getTaggedTextContent = (isLyric, text, clickHandler, index, nestedIndex) => {
         if (typeof text === 'string') {
             /**
              * Subsequent spans of text on a line will begin with a space,
              * unless specifically told not to.
              */
-            return this._getSpacedTextString(isLyric, text, nestedIndex + index, index === 0);
+            return _getSpacedTextString(isLyric, text, nestedIndex + index, index === 0);
 
         } else {
             if (text.italic) {
-                return <i key={nestedIndex + index}>{this.getFormattedTextElement(isLyric, text.italic, clickHandler, index, nestedIndex)}</i>;
+                return <i key={nestedIndex + index}>{_getFormattedTextElement(isLyric, text.italic, clickHandler, index, nestedIndex)}</i>;
 
             } else if (text.emphasis) {
-                return <em key={nestedIndex + index}>{this.getFormattedTextElement(isLyric, text.emphasis, clickHandler, index, nestedIndex)}</em>;
+                return <em key={nestedIndex + index}>{_getFormattedTextElement(isLyric, text.emphasis, clickHandler, index, nestedIndex)}</em>;
 
             } else if (text.anchor) {
                 // TODO: For dev purposes.
@@ -58,7 +78,7 @@ class FormattedText extends React.Component {
                 return (
                     <span key={nestedIndex + index}>
                         {/* FIXME: This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish. */}
-                        {index > 0 ? this._getSpaceElement() : null}
+                        {index > 0 ? _getSpaceElement() : null}
                         <a className={'anchor-block' + todoClass}
                             onClick={() => clickHandler(clickHandlerArgument)} >
                             <span className="underline-bar"></span>
@@ -66,15 +86,15 @@ class FormattedText extends React.Component {
                                 dotKeys={text.dotKeys}
                                 interactable={false}
                             />
-                            {this.getFormattedTextElement(isLyric, text.anchor, clickHandler, index, nestedIndex)}
+                            {_getFormattedTextElement(isLyric, text.anchor, clickHandler, index, nestedIndex)}
                         </a>
                     </span>
                 );
             }
         }
-    }
+    },
 
-    _getSpacedTextString(isLyric, text, index) {
+    _getSpacedTextString = (isLyric, text, index) => {
         // Do not add initial space if string begins with "'s".
         const firstSpace = (text.indexOf('\'s') === 0 ? '' : ' ');
 
@@ -94,22 +114,13 @@ class FormattedText extends React.Component {
                 {firstSpace + text}
             </span>
         );
-    }
+    },
 
-    _getSpaceElement() {
+    _getSpaceElement = () => {
         return <span className="space"> </span>;
-    }
+    };
 
-    render() {
-
-        const { isLyric,
-                text,
-                clickHandler,
-                index = 0,
-                nestedIndex = 0 } = this.props;
-
-        return this.getFormattedTextElement(isLyric, text, clickHandler, index, nestedIndex) || null;
-    }
+    return _getFormattedTextElement(isLyric, text, clickHandler, index, nestedIndex) || null;
 }
 
 export default FormattedText;

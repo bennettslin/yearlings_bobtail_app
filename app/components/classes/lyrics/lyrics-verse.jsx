@@ -32,18 +32,21 @@ const LyricsVerseView = ({
                 />
             ) : (
                 <div className="double-lines-block">
-                    {Constants.lyricColumnKeyClassPairs.map((keyClassPair, index) => {
-                        return verseObject[keyClassPair.key] ?
-                        <div
-                            key={index}
-                            className={'line ' + keyClassPair.className}
-                        >
-                            <FormattedText
-                                isLyric={true}
-                                text={verseObject[keyClassPair.key]}
-                                clickHandler={onAnnotationClick}
-                            />
-                        </div> : null
+                    {Constants.lyricColumnKeyClassPairs.filter((keyClassPair) => {
+                        return verseObject[keyClassPair.key];
+                    }).map((keyClassPair, index) => {
+                        return (
+                            <div
+                                key={index}
+                                className={'line ' + keyClassPair.className}
+                            >
+                                <FormattedText
+                                    isLyric={true}
+                                    text={verseObject[keyClassPair.key]}
+                                    clickHandler={onAnnotationClick}
+                                />
+                            </div>
+                        );
                     })}
                 </div>
             )
