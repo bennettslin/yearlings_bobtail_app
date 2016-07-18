@@ -1,6 +1,6 @@
 import React from 'react';
 import OverviewButton from './overview-button.jsx';
-import Constants from '../../constants/constants.js';
+import { OVERVIEW_KEYS } from '../../constants/constants.js';
 import TextBlock from '../text/text-block.jsx';
 
 /*************
@@ -11,7 +11,7 @@ const OverviewsSection = (props) => {
 
     const { selectedOverviewIndex = 0 } = props,
 
-        selectedOverviewKey = Constants.overviewKeys[selectedOverviewIndex - 1];
+        selectedOverviewKey = OVERVIEW_KEYS[selectedOverviewIndex - 1];
 
     return (
         <OverviewsSectionView {...props}
@@ -27,8 +27,8 @@ const OverviewsSection = (props) => {
 const OverviewsSectionView = ({
 
     // From props.
-    onOverviewClick,
     overviewRichText,
+    onOverviewClick,
 
     // From controller.
     selectedOverviewKey
@@ -37,7 +37,7 @@ const OverviewsSectionView = ({
 
     <div className="section overviews-section">
         <div className="button-block">
-            {Constants.overviewKeys.map((overviewKey, overviewIndex) => {
+            {OVERVIEW_KEYS.map((overviewKey, overviewIndex) => {
                 const isDisabled = (overviewKey === selectedOverviewKey);
                 return (
                     <OverviewButton

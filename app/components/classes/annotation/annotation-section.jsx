@@ -1,6 +1,6 @@
 import React from 'react';
 import AnnotationCard from './annotation-card.jsx';
-import Constants from '../../constants/constants.js';
+import { ALL_DOT_KEYS } from '../../constants/constants.js';
 
 /*************
  * CONTAINER *
@@ -11,7 +11,7 @@ const AnnotationSection = (props) => {
     const { annotationObject } = props,
 
         title = annotationObject.title,
-        dotKeys = Constants.allDotKeys.filter(dotKey => {
+        dotKeys = ALL_DOT_KEYS.filter(dotKey => {
             return annotationObject.dotKeys[dotKey];
         });
 

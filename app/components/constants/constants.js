@@ -1,8 +1,8 @@
 module.exports = {
 
-    storage: window.localStorage,
+    STORAGE: window.localStorage,
 
-    sessionKeys: {
+    SESSION_KEYS: {
         PLAYED_SONG_INDEX_KEY: 'playedSongIndex',
         SELECTED_SONG_INDEX_KEY: 'selectedSongIndex',
         SELECTED_ANNOTATION_INDEX_KEY: 'selectedAnnotationIndex',
@@ -10,7 +10,7 @@ module.exports = {
     },
 
     // Lyrics text will only ever be under these keys.
-    textKeys: [
+    TEXT_KEYS: [
         'lyric',
         'leftLyric',
         'centreLeftLyric',
@@ -22,7 +22,7 @@ module.exports = {
         'anchor'
     ],
 
-    lyricColumnKeyClassPairs: [
+    LYRIC_COLUMN_KEY_CLASS_PAIRS: [
         {
             key: 'leftLyric',
             className: 'far left'
@@ -46,7 +46,7 @@ module.exports = {
     ],
 
     // FIXME: Temporarily have description as first dot key.
-    allDotKeys: [
+    ALL_DOT_KEYS: [
         'description',
         'pun',
         'backstory', // My perspective while making the album.
@@ -60,7 +60,7 @@ module.exports = {
         // 'afterword' // My perspective while making this website.
     ],
 
-    overviewKeys: [
+    OVERVIEW_KEYS: [
         'narrative',
         'music'
     ]

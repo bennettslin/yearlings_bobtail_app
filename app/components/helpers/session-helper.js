@@ -1,16 +1,14 @@
-import Constants from '../constants/constants.js';
-
-const storage = Constants.storage;
+import { STORAGE } from '../constants/constants.js';
 
 module.exports = {
 
     setInSession(key, value) {
-        storage[key] = value;
+        STORAGE[key] = value;
     },
 
     getFromSession(key) {
         if (key) {
-            const stringValue = storage[key],
+            const stringValue = STORAGE[key],
                 intValue = parseInt(stringValue);
             return isNaN(intValue) ? stringValue : intValue;
 

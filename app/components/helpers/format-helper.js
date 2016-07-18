@@ -1,4 +1,4 @@
-import Constants from '../constants/constants.js';
+import { TEXT_KEYS } from '../constants/constants.js';
 
 module.exports = {
 
@@ -44,7 +44,7 @@ module.exports = {
             }, '');
 
         } else if (typeof text === 'object') {
-            return Constants.textKeys.reduce((prevString, textKey) => {
+            return TEXT_KEYS.reduce((prevString, textKey) => {
                 return text[textKey] ? this._getStringFromObject(text[textKey]) : prevString;
             }, '');
 

@@ -9,25 +9,41 @@ import OverviewsSection from './classes/overviews/overviews-section.jsx';
 import TasksSection from './classes/tasks/tasks-section.jsx';
 import DotsSection from './classes/dots/dots-section.jsx';
 import LyricsSection from './classes/lyrics/lyrics-section.jsx';
-import Constants from './constants/constants.js';
+import { SESSION_KEYS } from './constants/constants.js';
 import EventHelper from './helpers/event-helper.js';
 import LogHelper from './helpers/log-helper.js';
 import ProgressHelper from './helpers/progress-helper.js';
 import SessionHelper from './helpers/session-helper.js';
 
-const defaultProps = {
-    title: 'Yearling\'s Bobtail',
-    songs: [],
-    overviews: []
+
+
+/*************
+ * CONTAINER *
+ *************/
+
+const App = (props) => {
+    return (
+        <AppView {...props} />
+    );
 };
 
-const PLAYED_SONG_INDEX_KEY = Constants.sessionKeys.PLAYED_SONG_INDEX_KEY,
-    SELECTED_SONG_INDEX_KEY = Constants.sessionKeys.SELECTED_SONG_INDEX_KEY,
-    SELECTED_ANNOTATION_INDEX_KEY = Constants.sessionKeys.SELECTED_ANNOTATION_INDEX_KEY,
-    SELECTED_OVERVIEW_INDEX_KEY = Constants.sessionKeys.SELECTED_OVERVIEW_INDEX_KEY,
+/****************
+ * PRESENTATION *
+ ****************/
+
+// const defaultProps = {
+//     title: 'Yearling\'s Bobtail',
+//     songs: [],
+//     overviews: []
+// };
+
+const PLAYED_SONG_INDEX_KEY = SESSION_KEYS.PLAYED_SONG_INDEX_KEY,
+    SELECTED_SONG_INDEX_KEY = SESSION_KEYS.SELECTED_SONG_INDEX_KEY,
+    SELECTED_ANNOTATION_INDEX_KEY = SESSION_KEYS.SELECTED_ANNOTATION_INDEX_KEY,
+    SELECTED_OVERVIEW_INDEX_KEY = SESSION_KEYS.SELECTED_OVERVIEW_INDEX_KEY,
     DEFAULT_OVERVIEW_INDEX = 1;
 
-class App extends React.Component {
+class AppView extends React.Component {
 
     constructor(props) {
         const playedSongIndex = SessionHelper.getFromSession(PLAYED_SONG_INDEX_KEY),
@@ -271,5 +287,5 @@ class App extends React.Component {
     }
 }
 
-App.defaultProps = defaultProps;
+// App.defaultProps = defaultProps;
 export default App;

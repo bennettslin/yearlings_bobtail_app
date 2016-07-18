@@ -1,10 +1,8 @@
-import Constants from '../constants/constants.js';
-
-const storage = Constants.storage;
+import { STORAGE, TEXT_KEYS } from '../constants/constants.js';
 
 module.exports = {
 
-    logObject(description, object = storage) {
+    logObject(description, object = STORAGE) {
         const formattedString = JSON.stringify(object, null, 3);
 
         // TODO: Prettify JSON string?
@@ -38,7 +36,7 @@ module.exports = {
             }
 
             // Otherwise, keep recursing until we find the object with an annotation index.
-            return Constants.textKeys.reduce((previousObject, textKey) => {
+            return TEXT_KEYS.reduce((previousObject, textKey) => {
                 const currentLyricObject = (textKey.toLowerCase().indexOf('lyric') > -1) ? object[textKey] : returnObject;
 
                 return this.getLyricObjectForAnnotationIndex(annotationIndex, object[textKey], currentLyricObject) || previousObject;

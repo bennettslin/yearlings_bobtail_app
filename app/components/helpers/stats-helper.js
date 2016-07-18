@@ -1,4 +1,5 @@
-import Constants from '../constants/constants.js';
+import { ALL_DOT_KEYS,
+         TEXT_KEYS } from '../constants/constants.js';
 
 module.exports = {
 
@@ -18,7 +19,7 @@ module.exports = {
         const objectKeys = Object.keys(richTextObject);
 
         return objectKeys.reduce((wordCount, objectKey) => {
-            return wordCount + Constants.allDotKeys.reduce((newWordCount, dotKey) => {
+            return wordCount + ALL_DOT_KEYS.reduce((newWordCount, dotKey) => {
                 const richText = richTextObject[objectKey][dotKey];
                 return newWordCount + (richText ? this.getTotalWords(richText) : 0);
             }, 0);
@@ -33,7 +34,7 @@ module.exports = {
 
         } else if (typeof richText === 'object') {
 
-            return Constants.textKeys.reduce((wordCount, textKey) => {
+            return TEXT_KEYS.reduce((wordCount, textKey) => {
                 if (richText[textKey]) {
                     return wordCount + this.getTotalWords(richText[textKey]);
                 }

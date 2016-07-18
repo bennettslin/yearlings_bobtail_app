@@ -4,7 +4,9 @@
  * hard-coded the way it is now.
  */
 
-import Constants from '../constants/constants.js';
+import { ALL_DOT_KEYS,
+         OVERVIEW_KEYS,
+         TEXT_KEYS } from '../constants/constants.js';
 import FormatHelper from './format-helper.js';
 
 module.exports = {
@@ -30,7 +32,7 @@ module.exports = {
 
     _convertOverviews(object) {
         // Convert overviews object into array.
-        const overviews = Constants.overviewKeys.map(overviewKey => {
+        const overviews = OVERVIEW_KEYS.map(overviewKey => {
             return object.overviews[overviewKey];
         });
         object.overviews = overviews;
@@ -72,7 +74,7 @@ module.exports = {
                 this._prepareAnnotation(lyricValue);
 
             } else {
-                Constants.textKeys.forEach(textKey => {
+                TEXT_KEYS.forEach(textKey => {
                     if (textKey !== 'anchor' && lyricValue[textKey]) {
                         this._parseLyricValue(lyricValue[textKey]);
                     }
@@ -118,7 +120,7 @@ module.exports = {
     },
 
     _storeDotKeys(lyricObject, dotKeys) {
-        Constants.allDotKeys.forEach(dotKey => {
+        ALL_DOT_KEYS.forEach(dotKey => {
             if (lyricObject.annotation[dotKey]) {
                 dotKeys[dotKey] = true;
                 this._songDotKeys[dotKey] = true;

@@ -1,6 +1,6 @@
 import React from 'react';
 import DotButton from './dot-button.jsx';
-import Constants from '../../constants/constants.js';
+import { ALL_DOT_KEYS } from '../../constants/constants.js';
 
 const defaultProps = {
     dotKeys: {},
@@ -28,7 +28,7 @@ const DotsBlockView = ({
 }) => (
 
     <span className="dots-block">
-        {Constants.allDotKeys.filter(dotKey => {
+        {ALL_DOT_KEYS.filter(dotKey => {
             return dotKeys[dotKey];
 
         }).map((dotKey, index) => {
