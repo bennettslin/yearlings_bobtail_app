@@ -14,6 +14,8 @@ const FormattedText = (props) => (
  ****************/
 
 // TODO: Make full stateless pair with container and presentation components.
+// https://medium.com/@housecor/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc#.mh9uyaeux
+// https://facebook.github.io/react/docs/reusable-components.html
 const FormattedTextView = ({
 
     isLyric,
