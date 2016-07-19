@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: 'add propTypes',
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: 'change every "one" to "you"',
             workedHours: 0,
             neededHours: 1
