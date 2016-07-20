@@ -3,7 +3,7 @@ import SessionHelper from '../../components/helpers/session-helper.js';
 
 const storedAnnotationIndex = SessionHelper.getFromSession(ANNOTATION_INDEX);
 
-const AnnotationIndexReducer = (state = storedAnnotationIndex || 0, action) => {
+const AnnotationIndexReducer = (state = storedAnnotationIndex, action) => {
     switch (action.type) {
         case ANNOTATION_INDEX:
         return action.payload;

@@ -1,6 +1,6 @@
 module.exports = {
 
-    STORAGE: window.localStorage,
+    WINDOW_STORAGE: window.localStorage,
 
     SONG_INDEX: 'songIndex',
     ANNOTATION_INDEX: 'annotationIndex',
