@@ -1,7 +1,10 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { selectWikiUrl } from '../redux/actionCreators/index.js';
+import { selectSongIndex,
+         selectAnnotationIndex,
+         selectOverviewIndex,
+         selectWikiUrl } from '../redux/actionCreators/index.js';
 
 import TitleSection from './classes/title/title-section.jsx';
 import SongsSection from './classes/songs/songs-section.jsx';
@@ -13,34 +16,15 @@ import OverviewsSection from './classes/overviews/overviews-section.jsx';
 import TasksSection from './classes/tasks/tasks-section.jsx';
 import DotsSection from './classes/dots/dots-section.jsx';
 import LyricsSection from './classes/lyrics/lyrics-section.jsx';
-import { PLAYED_SONG_INDEX_KEY,
-         ACTIVE_SONG_INDEX_KEY,
-         ACTIVE_ANNOTATION_INDEX_KEY,
-         ACTIVE_OVERVIEW_INDEX_KEY,
+import { SONG_INDEX,
+         ANNOTATION_INDEX,
+         OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from './constants/constants.js';
 import AppHelper from './helpers/app-helper.js';
 import EventHelper from './helpers/event-helper.js';
 import LogHelper from './helpers/log-helper.js';
 import ProgressHelper from './helpers/progress-helper.js';
 import SessionHelper from './helpers/session-helper.js';
-
-/*********
- * REDUX *
- *********/
-
-const mapReduxStateToProps = ({
-    activeWikiUrl
-}) => {
-    // Pass Redux state into component props.
-    return {
-        activeWikiUrl
-    };
-};
-
-const mapDispatchToProps = (dispatch) => {
-    // Pass Redux action creators into component props.
-    return bindActionCreators({ selectWikiUrl }, dispatch);
-};
 
 /*************
  * CONTAINER *
@@ -49,11 +33,6 @@ const mapDispatchToProps = (dispatch) => {
 class App extends React.Component {
 
     constructor(props) {
-        const playedSongIndex = SessionHelper.getFromSession(PLAYED_SONG_INDEX_KEY),
-            activeSongIndex = SessionHelper.getFromSession(ACTIVE_SONG_INDEX_KEY),
-            activeAnnotationIndex = SessionHelper.getFromSession(ACTIVE_ANNOTATION_INDEX_KEY),
-            activeOverviewIndex = SessionHelper.getFromSession(ACTIVE_OVERVIEW_INDEX_KEY) || DEFAULT_OVERVIEW_INDEX;
-
         super(props);
 
         this.handleTitleSelect = this.handleTitleSelect.bind(this);
@@ -62,25 +41,17 @@ class App extends React.Component {
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
         this.handlePortalSelect = this.handlePortalSelect.bind(this);
         this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this);
-
-        this.state = {
-            playedSongIndex,
-            activeSongIndex,
-            activeAnnotationIndex,
-            activeOverviewIndex
-        };
     }
 
     componentWillMount() {
-        const state = this.state;
+        const props = this.props;
         /**
          * Retrieve stored indices, if any. Indices start at 1.
          * (Played song index isn't presently being used.)
          */
-        this.handleSongSelect(state.playedSongIndex, PLAYED_SONG_INDEX_KEY);
-        this.handleSongSelect(state.activeSongIndex, ACTIVE_SONG_INDEX_KEY);
-        this.handleAnnotationSelect(state.activeAnnotationIndex);
-        this.handleOverviewSelect(state.activeOverviewIndex);
+        this.handleSongSelect(props.activeSongIndex, SONG_INDEX);
+        this.handleAnnotationSelect(props.activeAnnotationIndex);
+        this.handleOverviewSelect(props.activeOverviewIndex);
 
         this._assignLogFunctions();
     }
@@ -96,9 +67,9 @@ class App extends React.Component {
     }
 
     _logAnchorAnnotation() {
-        const { songs } = this.props,
-            { activeSongIndex,
-              activeAnnotationIndex } = this.state,
+        const { songs,
+                activeSongIndex,
+                activeAnnotationIndex } = this.props,
 
             activeSongObject = AppHelper.getSongObject(activeSongIndex, songs),
             annotationObject = AppHelper.getAnnotationObject(activeAnnotationIndex, activeSongObject),
@@ -108,29 +79,23 @@ class App extends React.Component {
         return LogHelper.logObject('annotation', annotationObject);
     }
 
-    _selectIndex(activeIndex, activeIndexKey) {
-        SessionHelper.setInSession(activeIndexKey, activeIndex);
-
-        this.setState({
-            [activeIndexKey]: activeIndex
-        })
-    }
-
     handleTitleSelect() {
         this.handleSongSelect(0);
     }
 
-    handleSongSelect(activeIndex = 0, activeIndexKey = ACTIVE_SONG_INDEX_KEY) {
+    handleSongSelect(activeIndex = 0, activeIndexKey = SONG_INDEX) {
         if (activeIndex >= 0 && activeIndex <= this.props.songs.length) {
             // Store song index in session.
-            this._selectIndex(activeIndex, activeIndexKey);
+
+            this.props.selectSongIndex(activeIndex);
+            SessionHelper.setInSession(activeIndexKey, activeIndex);
 
             /**
              * Also reset the stored annotation and overview indices if
              * changing the active song index. Right now, default for
              * overview is 1 for narrative.
              */
-            if (activeIndexKey === ACTIVE_SONG_INDEX_KEY) {
+            if (activeIndexKey === SONG_INDEX) {
                 this.handleAnnotationSelect();
                 this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX);
             }
@@ -138,11 +103,13 @@ class App extends React.Component {
     }
 
     handleOverviewSelect(activeIndex) {
-        this._selectIndex(activeIndex, ACTIVE_OVERVIEW_INDEX_KEY);
+        this.props.selectOverviewIndex(activeIndex);
+        SessionHelper.setInSession(OVERVIEW_INDEX, activeIndex);
     }
 
     handleAnnotationSelect(activeIndex) {
-        this._selectIndex(activeIndex, ACTIVE_ANNOTATION_INDEX_KEY);
+        this.props.selectAnnotationIndex(activeIndex);
+        SessionHelper.setInSession(ANNOTATION_INDEX, activeIndex);
     }
 
     handleWikiUrlSelect(urlString) {
@@ -154,7 +121,7 @@ class App extends React.Component {
     }
 
     handlePortalSelect(activeSongIndex, activeAnnotationIndex) {
-        this.handleSongSelect(activeSongIndex, ACTIVE_SONG_INDEX_KEY);
+        this.handleSongSelect(activeSongIndex, SONG_INDEX);
         this.handleAnnotationSelect(activeAnnotationIndex);
     }
 
@@ -167,14 +134,12 @@ class App extends React.Component {
                 tasks,
 
                 // From Redux.
+                activeSongIndex,
+                activeAnnotationIndex,
+                activeOverviewIndex,
                 activeWikiUrl
 
             } = this.props,
-
-            { playedSongIndex,
-              activeSongIndex,
-              activeAnnotationIndex,
-              activeOverviewIndex } = this.state,
 
             activeSongObject = AppHelper.getSongObject(activeSongIndex, songs),
             activeSongLyrics = activeSongObject.lyrics,
@@ -304,4 +269,31 @@ const AppView = ({
     </div>
 );
 
-export default connect(mapReduxStateToProps, mapDispatchToProps)(App);
+/*********
+ * STORE *
+ *********/
+
+const passReduxStateToProps = ({
+    activeSongIndex,
+    activeAnnotationIndex,
+    activeOverviewIndex,
+    activeWikiUrl
+}) => ({
+    // Pass Redux state into component props.
+    activeSongIndex,
+    activeAnnotationIndex,
+    activeOverviewIndex,
+    activeWikiUrl
+});
+
+const bindDispatchToProps = (dispatch) => (
+    // Bind Redux action creators to component props.
+    bindActionCreators({
+        selectSongIndex,
+        selectAnnotationIndex,
+        selectOverviewIndex,
+        selectWikiUrl
+    }, dispatch)
+);
+
+export default connect(passReduxStateToProps, bindDispatchToProps)(App);
