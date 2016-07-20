@@ -34,7 +34,7 @@ const AnnotationSectionView = ({
     annotationObject,
     portalObjects,
     onPortalClick,
-    onUrlClick,
+    onWikiUrlClick,
 
     // From controller.
     title,
@@ -54,7 +54,7 @@ const AnnotationSectionView = ({
                             annotationObject={annotationObject}
                             portalObjects={portalObjects}
                             onPortalClick={onPortalClick}
-                            onUrlClick={onUrlClick}
+                            onWikiUrlClick={onWikiUrlClick}
                         />
                     );
                 })}

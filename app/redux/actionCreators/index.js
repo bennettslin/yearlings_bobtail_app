@@ -1,8 +1,8 @@
-import { SELECT_URL } from '../../components/constants/constants.js';
+import { SELECT_WIKI_URL } from '../../components/constants/constants.js';
 
-export function selectUrl(url) {
+export const selectWikiUrl = (activeWikiUrl) => {
     return {
-        type: SELECT_URL,
-        payload: url
+        type: SELECT_WIKI_URL,
+        payload: activeWikiUrl
     }
 }

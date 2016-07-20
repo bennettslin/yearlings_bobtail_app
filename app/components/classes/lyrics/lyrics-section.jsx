@@ -16,7 +16,7 @@ const LyricsSection = (props) => (
 const LyricsSectionView = ({
 
     // From props.
-    selectedSongLyrics,
+    songLyrics,
     onAnnotationClick
 
 }) => (
@@ -24,7 +24,7 @@ const LyricsSectionView = ({
     <div className="section lyrics-section">
         <h2>lyrics</h2>
         <div className="lyrics-block">
-            {selectedSongLyrics.map((stanzaArray, stanzaIndex) => {
+            {songLyrics.map((stanzaArray, stanzaIndex) => {
                 return (
                     <LyricsStanza
                         key={stanzaIndex}

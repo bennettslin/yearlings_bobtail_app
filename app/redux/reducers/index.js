@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import SelectUrlReducer from './select-url.js';
+import SelectWikiUrlReducer from './select-wiki-url.js';
 
 const rootReducer = combineReducers({
-    url: SelectUrlReducer
+    activeWikiUrl: SelectWikiUrlReducer
 });
 
 export default rootReducer;

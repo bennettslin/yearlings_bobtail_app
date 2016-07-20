@@ -9,13 +9,13 @@ import TextBlock from '../text/text-block.jsx';
 
 const OverviewsSection = (props) => {
 
-    const { selectedOverviewIndex = 0 } = props,
+    const { activeOverviewIndex = 0 } = props,
 
-        selectedOverviewKey = OVERVIEW_KEYS[selectedOverviewIndex - 1];
+        activeOverviewKey = OVERVIEW_KEYS[activeOverviewIndex - 1];
 
     return (
         <OverviewsSectionView {...props}
-            selectedOverviewKey={selectedOverviewKey}
+            activeOverviewKey={activeOverviewKey}
         />
     );
 };
@@ -31,14 +31,14 @@ const OverviewsSectionView = ({
     onOverviewClick,
 
     // From controller.
-    selectedOverviewKey
+    activeOverviewKey
 
 }) => (
 
     <div className="section overviews-section">
         <div className="button-block">
             {OVERVIEW_KEYS.map((overviewKey, overviewIndex) => {
-                const isDisabled = (overviewKey === selectedOverviewKey);
+                const isDisabled = (overviewKey === activeOverviewKey);
                 return (
                     <OverviewButton
                         key={overviewIndex}

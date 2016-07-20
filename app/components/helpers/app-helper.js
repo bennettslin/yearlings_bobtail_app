@@ -1,6 +1,6 @@
 export default {
 
-    getSelectedSongObject(selectedSongIndex, songs) {
+    getSongObject(selectedSongIndex, songs) {
         return selectedSongIndex ?
             songs[selectedSongIndex - 1] : {};
     },

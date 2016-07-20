@@ -21,12 +21,12 @@ const WikiSectionView = ({
 
     // From props.
     inPopup,
-    url
+    activeWikiUrl
 
 }) => (
 
     <div className={'section wiki-section' + (inPopup ? ' in-popup' : '')}>
-        <iframe src={url} />
+        <iframe src={activeWikiUrl} />
     </div>
 );
 

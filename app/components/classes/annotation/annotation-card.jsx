@@ -39,7 +39,7 @@ const AnnotationCardView = ({
     dotKey,
     portalObjects,
     onPortalClick,
-    onUrlClick,
+    onWikiUrlClick,
 
     // From controller.
     richText,
@@ -55,7 +55,7 @@ const AnnotationCardView = ({
         <TextBlock
             isLyric={false}
             text={richText}
-            onAnchorClick={onUrlClick}
+            onAnchorClick={onWikiUrlClick}
         />
         {dotKey === 'portal' ?
             <AnnotationPortalsBlock

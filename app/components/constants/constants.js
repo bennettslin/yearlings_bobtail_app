@@ -1,14 +1,14 @@
 module.exports = {
 
     // Redux.
-    SELECT_URL: 'selectUrl',
+    SELECT_WIKI_URL: 'selectWikiUrl',
 
     STORAGE: window.localStorage,
 
     PLAYED_SONG_INDEX_KEY: 'playedSongIndex',
-    SELECTED_SONG_INDEX_KEY: 'selectedSongIndex',
-    SELECTED_ANNOTATION_INDEX_KEY: 'selectedAnnotationIndex',
-    SELECTED_OVERVIEW_INDEX_KEY: 'selectedOverviewIndex',
+    ACTIVE_SONG_INDEX_KEY: 'activeSongIndex',
+    ACTIVE_ANNOTATION_INDEX_KEY: 'activeAnnotationIndex',
+    ACTIVE_OVERVIEW_INDEX_KEY: 'activeOverviewIndex',
     DEFAULT_OVERVIEW_INDEX: 1,
 
     // Lyrics text will only ever be under these keys.

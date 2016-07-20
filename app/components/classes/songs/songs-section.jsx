@@ -31,7 +31,7 @@ const SongsSectionView = ({
 
     // From props.
     songs,
-    selectedSongIndex,
+    activeSongIndex,
     onSongClick,
 
     // From controller.
@@ -48,14 +48,14 @@ const SongsSectionView = ({
             </div>
         </div>
         {songs.map((song, index) => {
-            const isSelected = selectedSongIndex - 1 === index;
+            const isActive = activeSongIndex - 1 === index;
             return (
                 <SongRow
                     key={index}
                     song={song}
                     songIndex={index + 1}
                     maxTotalNeededHours={maxTotalNeededHours}
-                    isSelected={isSelected}
+                    isActive={isActive}
                     onSongClick={onSongClick}
                 />
             );

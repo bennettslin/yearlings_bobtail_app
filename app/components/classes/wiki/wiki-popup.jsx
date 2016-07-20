@@ -3,7 +3,7 @@ import Popup from '../../superclasses/popup.jsx';
 import WikiSection from './wiki-section.jsx';
 
 const defaultProps = {
-    url: null,
+    activeWikiUrl: null,
     onCloseClick() {}
 }
 
@@ -14,7 +14,7 @@ class WikiPopup extends Popup {
     }
 
     getContentElement() {
-        return this.props.url ?
+        return this.props.activeWikiUrl ?
             <WikiSection {...this.props}
                 inPopup={true}
             /> : null;
