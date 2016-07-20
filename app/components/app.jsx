@@ -1,6 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { selectUrl } from '../redux/actionCreators/index.js';
 
 import TitleSection from './classes/title/title-section.jsx';
 import SongsSection from './classes/songs/songs-section.jsx';
@@ -48,8 +49,7 @@ class App extends React.Component {
             playedSongIndex,
             selectedSongIndex,
             selectedAnnotationIndex,
-            selectedOverviewIndex,
-            url: null
+            selectedOverviewIndex
         };
     }
 
@@ -131,9 +131,8 @@ class App extends React.Component {
         const url = urlString ?
             `https://en.m.wikipedia.org/wiki/${urlString}` : null;
 
-        this.setState({
-            url
-        });
+        // Dispatch Redux action.
+        this.props.selectUrl(url);
     }
 
     handlePortalClick(selectedSongIndex, selectedAnnotationIndex) {
@@ -142,16 +141,22 @@ class App extends React.Component {
     }
 
     render() {
+        const {
 
-        const { songs,
+                // From album data.
+                songs,
                 overviews,
-                tasks } = this.props,
+                tasks,
+
+                // From Redux.
+                url
+
+            } = this.props,
 
             { playedSongIndex,
               selectedSongIndex,
               selectedAnnotationIndex,
-              selectedOverviewIndex,
-              url } = this.state,
+              selectedOverviewIndex } = this.state,
 
             selectedSongObject = AppHelper.getSelectedSongObject(selectedSongIndex, songs),
             selectedSongLyrics = selectedSongObject.lyrics,
@@ -281,9 +286,13 @@ const AppView = ({
     </div>
 );
 
-function mapReduxStateToProps(reduxState) {
-    // From Udemy tutorial. Passes Redux state into component props.
-    return {};
+function mapReduxStateToProps({
+    url
+}) {
+    // From Udemy tutorial. Pass Redux state into component props.
+    return {
+        url
+    };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -291,7 +300,7 @@ function mapDispatchToProps(dispatch) {
      * When an action is called, the result is passed to all reducers, which
      * then pass it back into component props.
      */
-    return bindActionCreators({}, dispatch);
+    return bindActionCreators({ selectUrl }, dispatch);
 }
 
 export default connect(mapReduxStateToProps, mapDispatchToProps)(App);

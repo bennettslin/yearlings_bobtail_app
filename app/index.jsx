@@ -10,7 +10,7 @@ import YearlingsBobtail from './albumData/00-yearlings-bobtail.js';
 
 import App from './components/app.jsx';
 
-import reducers from './reducers';
+import reducers from './redux/reducers';
 
 // From Udemy tutorial. This will allow for asynchronous Redux actions.
 const createStoreWithMiddleware = applyMiddleware()(createStore);
