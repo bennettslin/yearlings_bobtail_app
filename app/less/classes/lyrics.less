@@ -12,13 +12,27 @@
             margin-bottom: @lyric-verse-size;
         }
 
+        background-color: white;
+        box-shadow: -1px 1px 2px 2px @box-shadow-colour;
+
         .verse {
-            // TODO: Figure out better way to distinguish odd and even verses.
+            @verse-padding: 10px;
+            padding-left: @verse-padding;
+            padding-right: @verse-padding;
+
+            &:first-child {
+                padding-top: @verse-padding;
+            }
+
+            &:last-child {
+                padding-bottom: @verse-padding;
+            }
+
             &:nth-child(odd) {
-                background-color: #eed;
+                background-color: #fefefa;
             }
             &:nth-child(even) {
-                // background-color: #ffe;
+                background-color: #fcfce9;
             }
         }
     }
