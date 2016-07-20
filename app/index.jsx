@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 import './less/main.less';
 import Album from './helpers/album-helper.js';
-import YearlingsBobtail from './albumData/00-yearlings-bobtail.js';
+import YearlingsBobtail from './album/00-yearlings-bobtail.js';
 
 import App from './components/app.jsx';
 

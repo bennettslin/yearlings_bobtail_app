@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { selectSongIndex,
          selectAnnotationIndex,
          selectOverviewIndex,
-         selectWikiUrl } from '../redux/actionCreators/index.js';
+         selectWikiUrl } from '../redux/actions/index.js';
 
 import TitleSection from './title/title-section.jsx';
 import SongsSection from './songs/songs-section.jsx';
