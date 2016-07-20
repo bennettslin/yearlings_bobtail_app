@@ -39,6 +39,7 @@ const TextUnit = (props) => {
             return (
                 <AnchorBlock {...props} />
             );
+
         } else {
             return null;
         }

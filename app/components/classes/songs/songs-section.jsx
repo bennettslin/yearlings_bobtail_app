@@ -48,13 +48,12 @@ const SongsSectionView = ({
             </div>
         </div>
         {songs.map((song, index) => {
-            const songIndex = index + 1,
-                isSelected = selectedSongIndex === songIndex;
+            const isSelected = selectedSongIndex - 1 === index;
             return (
                 <SongRow
-                    key={songIndex}
+                    key={index}
                     song={song}
-                    songIndex={songIndex}
+                    songIndex={index + 1}
                     maxTotalNeededHours={maxTotalNeededHours}
                     isSelected={isSelected}
                     onSongClick={onSongClick}
