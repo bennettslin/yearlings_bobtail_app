@@ -1,5 +1,5 @@
 import React from 'react';
-import TextBlock from './text-block.jsx';
+import TextUnit from './text-unit.jsx';
 import DotsBlock from '../dots/dots-block.jsx';
 
 /*************
@@ -62,7 +62,7 @@ const AnchorBlockView = ({
                 dotKeys={dotKeys}
                 interactable={false}
             />
-            <TextBlock
+            <TextUnit
                 isLyric={isLyric}
                 isInAnchor={true}
                 text={anchorText}
