@@ -1,5 +1,5 @@
 import React from 'react';
-import { LYRIC_COLUMN_KEY_CLASS_PAIRS } from '../../constants/constants.js';
+import { LYRIC_COLUMN_CLASSES } from '../../constants/constants.js';
 import TextBlock from '../text/text-block.jsx';
 
 /*************
@@ -32,7 +32,7 @@ const LyricsVerseView = ({
                 />
             ) : (
                 <div className="double-lines-block">
-                    {LYRIC_COLUMN_KEY_CLASS_PAIRS.filter((keyClassPair) => {
+                    {LYRIC_COLUMN_CLASSES.filter((keyClassPair) => {
                         return verseObject[keyClassPair.key];
                     }).map((keyClassPair, index) => {
                         return (

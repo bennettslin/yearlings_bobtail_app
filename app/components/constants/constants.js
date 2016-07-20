@@ -21,7 +21,7 @@ module.exports = {
         'anchor'
     ],
 
-    LYRIC_COLUMN_KEY_CLASS_PAIRS: [
+    LYRIC_COLUMN_CLASSES: [
         {
             key: 'leftLyric',
             className: 'far left'

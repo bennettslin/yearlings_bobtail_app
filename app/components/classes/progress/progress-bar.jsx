@@ -37,7 +37,7 @@ const ProgressBarView = ({
 }) => (
 
     <div className="progress-bar" style={totalStyle}>
-        <div className="filled-bar" style={filledStyle}></div>
+        <div className="filled-bar" style={filledStyle} />
     </div>
 );
 

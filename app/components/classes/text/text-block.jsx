@@ -29,9 +29,7 @@ const TextBlockView = ({
     isLyric,
     isInAnchor,
     text,
-    onAnchorClick,
-    index = 0,
-    nestedIndex = 0
+    onAnchorClick
 
 }) => (
 
@@ -43,8 +41,7 @@ const TextBlockView = ({
                     isLyric={isLyric}
                     isInAnchor={isInAnchor}
                     text={textElement}
-                    index={index}
-                    nestedIndex={nestedIndex + 1}
+                    beginsNewLine={index === 0}
                     onAnchorClick={onAnchorClick}
                 />
             );
