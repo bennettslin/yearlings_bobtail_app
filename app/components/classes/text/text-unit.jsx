@@ -13,84 +13,36 @@ const TextUnit = (props) => {
 
     if (typeof text === 'string') {
         return (
-            <TextSpan {...props}
-                text={text}
-            />
+            <TextSpan {...props} />
         );
 
     } else {
         if (text.italic) {
             return (
-                <ItalicView {...props}
-                    text={text.italic}
-                />
+                <i>
+                    <TextBlock {...props}
+                        text={text.italic}
+                    />
+                </i>
             );
 
         } else if (text.emphasis) {
             return (
-                <EmphasisView {...props}
-                    text={text.emphasis}
-                />
+                <em>
+                    <TextBlock {...props}
+                        text={text.emphasis}
+                    />
+                </em>
             );
 
         } else if (text.anchor) {
             return (
-                <AnchorBlock {...props}
-                    text={text}
-                />
+                <AnchorBlock {...props} />
             );
         } else {
             return null;
         }
     }
 };
-
-/****************
- * PRESENTATION *
- ****************/
-
-const ItalicView = ({
-
-    // From props.
-    isLyric,
-    text,
-    nestedIndex,
-    index,
-    onAnchorClick
-
-}) => (
-
-    <i>
-        <TextBlock
-            isLyric={isLyric}
-            text={text}
-            index={index}
-            nestedIndex={nestedIndex}
-            onAnchorClick={onAnchorClick}
-        />
-    </i>
-);
-
-const EmphasisView = ({
-
-    // From props.
-    isLyric,
-    text,
-    nestedIndex,
-    index,
-    onAnchorClick
-
-}) => (
-
-    <em>
-        <TextBlock
-            isLyric={isLyric}
-            text={text}
-            index={index}
-            nestedIndex={nestedIndex}
-            onAnchorClick={onAnchorClick}
-        />
-    </em>
-);
 
 export default TextUnit;
