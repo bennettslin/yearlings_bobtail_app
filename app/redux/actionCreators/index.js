@@ -2,7 +2,7 @@ import { SONG_INDEX,
          ANNOTATION_INDEX,
          OVERVIEW_INDEX,
          WIKI_URL,
-         DEFAULT_OVERVIEW_INDEX } from '../../components/constants/constants.js';
+         DEFAULT_OVERVIEW_INDEX } from '../../helpers/constants.js';
 
 export const selectSongIndex = (activeSongIndex = 0) => ({
     type: SONG_INDEX,

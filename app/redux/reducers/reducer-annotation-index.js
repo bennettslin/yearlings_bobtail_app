@@ -1,5 +1,5 @@
-import { ANNOTATION_INDEX } from '../../components/constants/constants.js';
-import SessionHelper from '../../components/helpers/session-helper.js';
+import { ANNOTATION_INDEX } from '../../helpers/constants.js';
+import SessionHelper from '../../helpers/session-helper.js';
 
 const storedAnnotationIndex = SessionHelper.getFromSession(ANNOTATION_INDEX);
 

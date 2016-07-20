@@ -1,4 +1,4 @@
-import { WIKI_URL } from '../../components/constants/constants.js';
+import { WIKI_URL } from '../../helpers/constants.js';
 
 const WikiUrlReducer = (state = null, action) => {
     switch (action.type) {

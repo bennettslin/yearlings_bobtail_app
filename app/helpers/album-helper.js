@@ -6,7 +6,7 @@
 
 import { ALL_DOT_KEYS,
          OVERVIEW_KEYS,
-         TEXT_KEYS } from '../constants/constants.js';
+         TEXT_KEYS } from './constants.js';
 import FormatHelper from './format-helper.js';
 
 export default {

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import DotPopup from './dot-popup.jsx';
-import Interactable from '../../superclasses/interactable.jsx';
+import Interactable from '../superclasses/interactable.jsx';
 
 const defaultProps = {
     classValue: ''

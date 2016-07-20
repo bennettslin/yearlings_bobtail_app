@@ -6,25 +6,25 @@ import { selectSongIndex,
          selectOverviewIndex,
          selectWikiUrl } from '../redux/actionCreators/index.js';
 
-import TitleSection from './classes/title/title-section.jsx';
-import SongsSection from './classes/songs/songs-section.jsx';
-import NotesSection from './classes/notes/notes-section.jsx';
-import AnnotationPopup from './classes/annotation/annotation-popup.jsx';
-import WikiPopup from './classes/wiki/wiki-popup.jsx';
-import StatsSection from './classes/stats/stats-section.jsx';
-import OverviewsSection from './classes/overviews/overviews-section.jsx';
-import TasksSection from './classes/tasks/tasks-section.jsx';
-import DotsSection from './classes/dots/dots-section.jsx';
-import LyricsSection from './classes/lyrics/lyrics-section.jsx';
+import TitleSection from './title/title-section.jsx';
+import SongsSection from './songs/songs-section.jsx';
+import NotesSection from './notes/notes-section.jsx';
+import AnnotationPopup from './annotation/annotation-popup.jsx';
+import WikiPopup from './wiki/wiki-popup.jsx';
+import StatsSection from './stats/stats-section.jsx';
+import OverviewsSection from './overviews/overviews-section.jsx';
+import TasksSection from './tasks/tasks-section.jsx';
+import DotsSection from './dots/dots-section.jsx';
+import LyricsSection from './lyrics/lyrics-section.jsx';
 import { SONG_INDEX,
          ANNOTATION_INDEX,
          OVERVIEW_INDEX,
-         DEFAULT_OVERVIEW_INDEX } from './constants/constants.js';
-import AppHelper from './helpers/app-helper.js';
-import EventHelper from './helpers/event-helper.js';
-import LogHelper from './helpers/log-helper.js';
-import ProgressHelper from './helpers/progress-helper.js';
-import SessionHelper from './helpers/session-helper.js';
+         DEFAULT_OVERVIEW_INDEX } from '../helpers/constants.js';
+import AppHelper from '../helpers/app-helper.js';
+import EventHelper from '../helpers/event-helper.js';
+import LogHelper from '../helpers/log-helper.js';
+import ProgressHelper from '../helpers/progress-helper.js';
+import SessionHelper from '../helpers/session-helper.js';
 
 /*************
  * CONTAINER *
@@ -44,14 +44,15 @@ class App extends React.Component {
     }
 
     componentWillMount() {
-        const props = this.props;
+        const { activeSongIndex,
+                activeAnnotationIndex,
+                activeOverviewIndex } = this.props;
         /**
          * Retrieve stored indices, if any. Indices start at 1.
-         * (Played song index isn't presently being used.)
          */
-        this.handleSongSelect(props.activeSongIndex, SONG_INDEX);
-        this.handleAnnotationSelect(props.activeAnnotationIndex);
-        this.handleOverviewSelect(props.activeOverviewIndex);
+        this.handleSongSelect(activeSongIndex, SONG_INDEX);
+        this.handleAnnotationSelect(activeAnnotationIndex);
+        this.handleOverviewSelect(activeOverviewIndex);
 
         this._assignLogFunctions();
     }

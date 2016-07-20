@@ -1,4 +1,4 @@
-import { STORAGE, TEXT_KEYS } from '../constants/constants.js';
+import { STORAGE, TEXT_KEYS } from './constants.js';
 
 export default {
 

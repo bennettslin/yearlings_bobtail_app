@@ -1,5 +1,5 @@
 import { ALL_DOT_KEYS,
-         TEXT_KEYS } from '../constants/constants.js';
+         TEXT_KEYS } from './constants.js';
 
 export default {
 

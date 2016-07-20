@@ -1,5 +1,5 @@
-import { SONG_INDEX } from '../../components/constants/constants.js';
-import SessionHelper from '../../components/helpers/session-helper.js';
+import { SONG_INDEX } from '../../helpers/constants.js';
+import SessionHelper from '../../helpers/session-helper.js';
 
 const storedSongIndex = SessionHelper.getFromSession(SONG_INDEX);
 
