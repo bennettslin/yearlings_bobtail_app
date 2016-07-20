@@ -1,5 +1,8 @@
 module.exports = {
 
+    // Redux.
+    SELECT_URL: 'selectUrl',
+
     STORAGE: window.localStorage,
 
     PLAYED_SONG_INDEX_KEY: 'playedSongIndex',

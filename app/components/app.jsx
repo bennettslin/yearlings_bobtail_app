@@ -1,4 +1,7 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
 import TitleSection from './classes/title/title-section.jsx';
 import SongsSection from './classes/songs/songs-section.jsx';
 import NotesSection from './classes/notes/notes-section.jsx';
@@ -125,7 +128,6 @@ class App extends React.Component {
     }
 
     handleUrlClick(urlString) {
-        // FIXME: Allow for non-Wikipedia urls?
         const url = urlString ?
             `https://en.m.wikipedia.org/wiki/${urlString}` : null;
 
@@ -279,4 +281,17 @@ const AppView = ({
     </div>
 );
 
-export default App;
+function mapReduxStateToProps(reduxState) {
+    // From Udemy tutorial. Passes Redux state into component props.
+    return {};
+}
+
+function mapDispatchToProps(dispatch) {
+    /**
+     * When an action is called, the result is passed to all reducers, which
+     * then pass it back into component props.
+     */
+    return bindActionCreators({}, dispatch);
+}
+
+export default connect(mapReduxStateToProps, mapDispatchToProps)(App);
