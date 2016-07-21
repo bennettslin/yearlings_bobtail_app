@@ -1,12 +1,13 @@
 /**
  * TODO V2: If a capitalised anchor was not preceded by a period, then
- * programmatically add properNoun key to lyricObject, rather than have it
+ * programmatically add properNoun key to lyric, rather than have it
  * hard-coded the way it is now.
  */
 
 import { OVERVIEW_KEYS,
          TEXT_KEYS } from './constants.js';
 import FormatHelper from './format-helper.js';
+import GeneralHelper from './general-helper.js';
 
 export default {
 
@@ -16,16 +17,16 @@ export default {
     _annotations: [],
     _portalLinks: {},
 
-    prepareAlbumObject(albumObject = {}) {
-        this._convertOverviews(albumObject);
-        this._prepareAllSongs(albumObject);
-        this._injectPortalLinks(albumObject);
+    prepareAlbum(album = {}) {
+        this._convertOverviews(album);
+        this._prepareAllSongs(album);
+        this._injectPortalLinks(album);
 
         this._deleteTemporaryStorage();
     },
 
-    _prepareAllSongs(albumObject) {
-        albumObject.songs.forEach((song, songIndex) => {
+    _prepareAllSongs(album) {
+        album.songs.forEach((song, songIndex) => {
 
             this._convertOverviews(song);
 
@@ -33,7 +34,7 @@ export default {
             this._songIndex = songIndex + 1;
             this._annotations = [];
 
-            this._parseLyricValue(song.lyrics);
+            this._parseLyrics(song.lyrics);
 
             // Add annotations to song object.
             song.annotations = this._annotations;
@@ -56,66 +57,81 @@ export default {
     /**
      * Recurse until object with anchor key is found.
      */
-    _parseLyricValue(lyricValue) {
-        if (Array.isArray(lyricValue)) {
-            lyricValue.forEach(childLyricValue => {
-                this._parseLyricValue(childLyricValue);
+    _parseLyrics(lyrics) {
+        if (Array.isArray(lyrics)) {
+            lyrics.forEach(childLyricValue => {
+                this._parseLyrics(childLyricValue);
             });
 
-        } else if (typeof lyricValue === 'object') {
-            if (lyricValue.anchor) {
-                this._prepareAnnotation(lyricValue);
+        } else if (typeof lyrics === 'object') {
+            if (lyrics.anchor) {
+                this._prepareAnnotation(lyrics);
 
             } else {
                 TEXT_KEYS.forEach(textKey => {
-                    if (textKey !== 'anchor' && lyricValue[textKey]) {
-                        this._parseLyricValue(lyricValue[textKey]);
+                    if (textKey !== 'anchor' && lyrics[textKey]) {
+                        this._parseLyrics(lyrics[textKey]);
                     }
                 });
             }
         }
     },
 
-    _prepareAnnotation(lyricObject = {}, annotation = {}, dotKeys = {}) {
-        // Create new annotation and dotKeys objects.
-
+    _prepareAnnotation(lyric = {}, annotation = {}, dotKeys = {}) {
         const annotationIndex = this._annotations.length + 1,
-            cardObject = lyricObject.annotation;
+            cards = lyric.annotation;
 
         // Add annotation index to annotation and lyrics. 1-based index.
         annotation.annotationIndex = annotationIndex;
-        lyricObject.annotationIndex = annotationIndex;
+        lyric.annotationIndex = annotationIndex;
 
         // Add formatted title to annotation.
-        annotation.title = FormatHelper.getFormattedAnnotationTitle(lyricObject.anchor, lyricObject.properNoun);
+        annotation.title = FormatHelper.getFormattedAnnotationTitle(lyric.anchor, lyric.properNoun);
 
         // Add todo to annotation.
-        if (lyricObject.todo) {
-            annotation.todo = lyricObject.todo;
+        if (lyric.todo) {
+            annotation.todo = lyric.todo;
         }
 
-        // Cards may be single annotation card or array of cardObject.
-        if (Array.isArray(cardObject)) {
-            cardObject.forEach(card => {
+        // Cards may be single annotation card or array of cards.
+        if (Array.isArray(cards)) {
+            cards.forEach(card => {
+                this._addWikiToDots(card, dotKeys);
                 this._addDotKeys(card, dotKeys);
                 this._addPortalLink(card, annotationIndex, dotKeys);
             });
         } else {
-            this._addDotKeys(cardObject, dotKeys);
-            this._addPortalLink(cardObject, annotationIndex, dotKeys);
+            this._addWikiToDots(cards, dotKeys);
+            this._addDotKeys(cards, dotKeys);
+            this._addPortalLink(cards, annotationIndex, dotKeys);
         }
-        annotation.cards = cardObject;
+        annotation.cards = cards;
 
         // Add dot keys to both lyrics and annotation.
-        lyricObject.dotKeys = dotKeys;
+        lyric.dotKeys = dotKeys;
         annotation.dotKeys = dotKeys;
 
         // Add annotation object to annotations array.
         this._annotations.push(annotation);
 
         // Clean up lyric object.
-        delete lyricObject.annotation;
-        delete lyricObject.properNoun;
+        delete lyric.annotation;
+        delete lyric.properNoun;
+    },
+
+    _addWikiToDots(card, dotKeys) {
+        // If card has a wiki link, add wiki key to dot keys.
+        if (card.description) {
+            const hasWiki = GeneralHelper.findKeyInObject('wiki', card.description);
+            if (hasWiki) {
+                if (!card.dotKeys) {
+                    card.dotKeys = {};
+                }
+                card.dotKeys.wiki = true;
+                dotKeys.wiki = true;
+                this._songDotKeys.wiki = true;
+            }
+        }
     },
 
     _addDotKeys(card, dotKeys) {
@@ -148,7 +164,7 @@ export default {
             // Add portal link to portal links array.
             this._portalLinks[portal].push(portalLink);
 
-            // Add portal key to dot keys object.
+            // Add portal key to dot keys.
             dotKeys.portal = true;
             this._songDotKeys.portal = true;
 
@@ -157,7 +173,7 @@ export default {
         }
     },
 
-    _injectPortalLinks(albumObject) {
+    _injectPortalLinks(album) {
         /**
          * For each annotation with a portal, add an array of links to all
          * other portals.
@@ -166,7 +182,7 @@ export default {
             const links = this._portalLinks[linkKey];
 
             links.forEach((link, refIndex) => {
-                const song = albumObject.songs[link.songIndex - 1],
+                const song = album.songs[link.songIndex - 1],
                     annotation = song.annotations[link.annotationIndex - 1],
                     portalLinks = links.filter((link, thisIndex) => {
                         return refIndex !== thisIndex;

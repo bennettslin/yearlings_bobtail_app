@@ -5,7 +5,7 @@ import { createStore,
 import { Provider } from 'react-redux';
 
 import './less/main.less';
-import Album from './helpers/album-helper.js';
+import AlbumHelper from './helpers/album-helper.js';
 import YearlingsBobtail from './album/00-yearlings-bobtail.js';
 
 import App from './components/app.jsx';
@@ -16,7 +16,7 @@ import reducers from './redux/reducers';
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 // Restructure raw data to be usable by app.
-Album.prepareAlbumObject(YearlingsBobtail);
+AlbumHelper.prepareAlbum(YearlingsBobtail);
 
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>

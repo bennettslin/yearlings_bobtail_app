@@ -13,7 +13,7 @@ const AnnotationCard = (props) => {
 
     return (
         <AnnotationCardView {...props}
-            description={description}
+            text={description}
             dotKeys={dotKeys}
         />
     );
@@ -29,7 +29,7 @@ const AnnotationCardView = ({
     onWikiUrlClick,
 
     // From controller.
-    description,
+    text,
     dotKeys
 
 }) => (
@@ -41,7 +41,7 @@ const AnnotationCardView = ({
         />
         <TextBlock
             isLyric={false}
-            text={description}
+            text={text}
             onAnchorClick={onWikiUrlClick}
         />
     </div>

@@ -21,7 +21,7 @@ import { SONG_INDEX,
          OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from '../helpers/constants.js';
 import AppHelper from '../helpers/app-helper.js';
-import EventHelper from '../helpers/event-helper.js';
+// import GeneralHelper from '../helpers/general-helper.js';
 import LogHelper from '../helpers/log-helper.js';
 import ProgressHelper from '../helpers/progress-helper.js';
 import SessionHelper from '../helpers/session-helper.js';
