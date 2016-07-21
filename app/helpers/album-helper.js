@@ -7,7 +7,7 @@
 import { OVERVIEW_KEYS,
          TEXT_KEYS } from './constants.js';
 import FormatHelper from './format-helper.js';
-import GeneralHelper from './general-helper.js';
+import { findKeyInObject } from './general-helper.js';
 
 export default {
 
@@ -122,7 +122,7 @@ export default {
     _addWikiToDots(card, dotKeys) {
         // If card has a wiki link, add wiki key to dot keys.
         if (card.description) {
-            const hasWiki = GeneralHelper.findKeyInObject('wiki', card.description);
+            const hasWiki = findKeyInObject('wiki', card.description);
             if (hasWiki) {
                 if (!card.dotKeys) {
                     card.dotKeys = {};
@@ -181,11 +181,11 @@ export default {
         for (const linkKey in this._portalLinks) {
             const links = this._portalLinks[linkKey];
 
-            links.forEach((link, refIndex) => {
+            links.forEach((link, index) => {
                 const song = album.songs[link.songIndex - 1],
                     annotation = song.annotations[link.annotationIndex - 1],
                     portalLinks = links.filter((link, thisIndex) => {
-                        return refIndex !== thisIndex;
+                        return index !== thisIndex;
                     });
 
                 annotation.portalLinks = portalLinks;
