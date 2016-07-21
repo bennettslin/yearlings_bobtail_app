@@ -1,4 +1,4 @@
-import { STORAGE, TEXT_KEYS } from './constants.js';
+import { STORAGE, LYRIC_TEXT_KEYS } from './constants.js';
 
 export default {
 
@@ -36,7 +36,7 @@ export default {
             }
 
             // Otherwise, keep recursing until we find the object with an annotation index.
-            return TEXT_KEYS.reduce((previousObject, textKey) => {
+            return LYRIC_TEXT_KEYS.reduce((previousObject, textKey) => {
                 const currentLyricObject = (textKey.toLowerCase().indexOf('lyric') > -1) ? object[textKey] : returnObject;
 
                 return this.getLyricObjectForAnnotationIndex(annotationIndex, object[textKey], currentLyricObject) || previousObject;

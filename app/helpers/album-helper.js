@@ -5,7 +5,7 @@
  */
 
 import { OVERVIEW_KEYS,
-         TEXT_KEYS } from './constants.js';
+         LYRIC_TEXT_KEYS } from './constants.js';
 import FormatHelper from './format-helper.js';
 import { findKeyInObject } from './general-helper.js';
 
@@ -68,7 +68,7 @@ export default {
                 this._prepareAnnotation(lyrics);
 
             } else {
-                TEXT_KEYS.forEach(textKey => {
+                LYRIC_TEXT_KEYS.forEach(textKey => {
                     if (textKey !== 'anchor' && lyrics[textKey]) {
                         this._parseLyrics(lyrics[textKey]);
                     }

@@ -9,8 +9,14 @@ module.exports = {
 
     DEFAULT_OVERVIEW_INDEX: 1,
 
-    // Lyrics text will only ever be under these keys.
     TEXT_KEYS: [
+        'italic',
+        'emphasis',
+        'anchor'
+    ],
+
+    // Lyrics text will only ever be under these keys.
+    LYRIC_TEXT_KEYS: [
         'lyric',
         'leftLyric',
         'centreLeftLyric',

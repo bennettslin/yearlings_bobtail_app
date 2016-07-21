@@ -1,5 +1,6 @@
 import React from 'react';
 import StatsHelper from '../../helpers/stats-helper.js';
+import { LYRIC_TEXT_KEYS } from '../../helpers/constants.js';
 
 /*************
  * CONTAINER *
@@ -9,7 +10,7 @@ const LyricsWordCountRow = (props) => {
 
     const { lyrics } = props,
 
-        lyricsWordCount = StatsHelper.getTotalWords(lyrics);
+        lyricsWordCount = StatsHelper.getTotalWords(lyrics, LYRIC_TEXT_KEYS);
 
     return (
         <StatRowView
@@ -42,7 +43,7 @@ const WordsPerAnnotationRow = (props) => {
     const { annotations } = props,
 
         annotationsCount = StatsHelper.getCount(annotations),
-        annotationsWordCount = StatsHelper.getSumOfTotalWords(annotations),
+        annotationsWordCount = StatsHelper.getSumOfTotalWordsInAnnotations(annotations),
         annotationAverageWordCount = annotationsWordCount ?
             Math.ceil(annotationsWordCount / annotationsCount) :
             '--';

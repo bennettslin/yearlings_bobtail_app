@@ -1,4 +1,4 @@
-import { TEXT_KEYS } from './constants.js';
+import { LYRIC_TEXT_KEYS } from './constants.js';
 
 export default {
 
@@ -44,7 +44,7 @@ export default {
             }, '');
 
         } else if (typeof text === 'object') {
-            return TEXT_KEYS.reduce((prevString, textKey) => {
+            return LYRIC_TEXT_KEYS.reduce((prevString, textKey) => {
                 return text[textKey] ? this._getStringFromObject(text[textKey]) : prevString;
             }, '');
 
