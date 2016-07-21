@@ -58,7 +58,7 @@ module.exports = {
         },
         {
             taskName: 'allow multiple dots',
-            workedHours: 0,
+            workedHours: 3,
             neededHours: 3
         },
         {

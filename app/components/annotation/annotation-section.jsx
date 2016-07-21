@@ -1,6 +1,6 @@
 import React from 'react';
 import AnnotationUnit from './annotation-unit.jsx';
-import AnnotationPortalsBlock from './annotation-portals-block.jsx';
+// import AnnotationPortalsBlock from './annotation-portals-block.jsx';
 
 /*************
  * CONTAINER *
@@ -25,10 +25,12 @@ const AnnotationSectionView = ({
 
     // From props.
     inPopup,
+
+    // FIXME: Passing songs only because it's needed for portal links. Is there a better way?
+    songs,
     annotation,
-    portalLinks,
-    onPortalClick,
     onWikiUrlClick,
+    onPortalClick,
 
     // From controller.
     title
@@ -39,16 +41,12 @@ const AnnotationSectionView = ({
         <h2>{title}</h2>
         <div className="cards-block">
             <AnnotationUnit
+                songs={songs}
                 annotation={annotation}
                 onWikiUrlClick={onWikiUrlClick}
+                onPortalClick={onPortalClick}
             />
         </div>
-        {portalLinks ?
-            <AnnotationPortalsBlock
-                portalLinks={portalLinks}
-                onPortalClick={onPortalClick}
-            /> : null
-        }
     </div>
 );
 

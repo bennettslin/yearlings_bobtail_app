@@ -38,7 +38,7 @@ const AnnotationsCountRow = (props) => {
 }
 
 const WordsPerAnnotationRow = (props) => {
-
+    // FIXME: This is broken.
     const { annotations } = props,
 
         annotationsCount = StatsHelper.getCount(annotations),

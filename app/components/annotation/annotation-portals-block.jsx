@@ -1,5 +1,4 @@
 import React from 'react';
-import DotsBlock from '../dots/dots-block.jsx';
 
 /*************
  * CONTAINER *
@@ -22,10 +21,6 @@ const AnnotationPortalsBlockView = ({
 }) => (
 
     <div className="portals-block">
-        <DotsBlock
-            dotKeys={{ portal: true }}
-            interactable={true}
-        />
         {portalLinks.map((portalObject, index) => {
             const { songIndex,
                     annotationIndex,

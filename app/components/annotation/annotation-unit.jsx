@@ -27,7 +27,8 @@ const AnnotationUnit = (props) => {
  ****************/
 
  const AnnotationUnitView = ({
-     annotation
+     annotation,
+     songs
  }) => (
      <div className="annotation-cards-block">
           {annotation.cards.map((card, index) => {
@@ -35,6 +36,7 @@ const AnnotationUnit = (props) => {
                   <AnnotationCard
                       key={index}
                       card={card}
+                      songs={songs}
                   />
               );
           })}

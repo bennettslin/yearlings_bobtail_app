@@ -144,7 +144,6 @@ class App extends React.Component {
             activeSong = AppHelper.getSong(activeSongIndex, songs),
             overviewText = AppHelper.getOverviewText(activeOverviewIndex, activeSong, albumOverviews),
             annotation = AppHelper.getAnnotation(activeAnnotationIndex, activeSong),
-            portalLinks = AppHelper.getPortalLinks(annotation, songs),
             tasks = AppHelper.getTasks(activeSong, albumTasks),
             allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs);
 
@@ -163,7 +162,6 @@ class App extends React.Component {
                 tasks={tasks}
                 allTasks={allTasks}
                 annotation={annotation}
-                portalLinks={portalLinks}
 
                 onTitleClick={this.handleTitleSelect}
                 onSongClick={this.handleSongSelect}
@@ -200,7 +198,6 @@ const AppView = ({
     tasks,
     allTasks,
     annotation,
-    portalLinks,
 
     onTitleClick,
     onSongClick,
@@ -226,8 +223,8 @@ const AppView = ({
         </div>
         <div className="field centre-field">
             <AnnotationPopup
+                songs={songs}
                 annotation={annotation}
-                portalLinks={portalLinks}
                 onPortalClick={onPortalClick}
                 onWikiUrlClick={onWikiUrlClick}
                 onCloseClick={onAnnotationClick}

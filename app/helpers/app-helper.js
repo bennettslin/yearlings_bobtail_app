@@ -32,9 +32,9 @@ export default {
         }
     },
 
-    getPortalLinks(annotationObject, songs) {
-        if (annotationObject) {
-            const { portalLinks } = annotationObject;
+    getPortalLinks(card, songs) {
+        if (card) {
+            const { portalLinks } = card;
 
             // Each portal link contains a portal title and index.
             return portalLinks ? portalLinks.map((portalLink) => {

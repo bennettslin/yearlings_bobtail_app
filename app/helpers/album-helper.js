@@ -12,7 +12,7 @@ import { findKeyInObject } from './general-helper.js';
 export default {
 
      // Temporary storage variables.
-    _songIndex: null,
+    _songIndex: 0,
     _songDotKeys: {},
     _annotations: [],
     _portalLinks: {},
@@ -95,15 +95,15 @@ export default {
 
         // Cards may be single annotation card or array of cards.
         if (Array.isArray(cards)) {
-            cards.forEach(card => {
+            cards.forEach((card, cardIndex) => {
                 this._addWikiToDots(card, dotKeys);
                 this._addDotKeys(card, dotKeys);
-                this._addPortalLink(card, annotationIndex, dotKeys);
+                this._addPortalLink(card, dotKeys, annotationIndex, cardIndex);
             });
         } else {
             this._addWikiToDots(cards, dotKeys);
             this._addDotKeys(cards, dotKeys);
-            this._addPortalLink(cards, annotationIndex, dotKeys);
+            this._addPortalLink(cards, dotKeys, annotationIndex);
         }
         annotation.cards = cards;
 
@@ -144,16 +144,15 @@ export default {
         }
     },
 
-    _addPortalLink(card, annotationIndex, dotKeys) {
-        // Add portal link to annotation.
-        // FIXME: If portal is under card, shouldn't portal link also be under card?
-
+    _addPortalLink(card, dotKeys, annotationIndex, cardIndex = 0) {
+        // Add portal link to annotation card..
         const { portal } = card;
         if (portal) {
 
             const portalLink = {
                 songIndex: this._songIndex,
-                annotationIndex
+                annotationIndex,
+                cardIndex
             };
 
             // If first portal link, initialise array.
@@ -184,11 +183,13 @@ export default {
             links.forEach((link, index) => {
                 const song = album.songs[link.songIndex - 1],
                     annotation = song.annotations[link.annotationIndex - 1],
+                    card = Array.isArray(annotation.cards) ?
+                        annotation.cards[link.cardIndex] : annotation.cards,
                     portalLinks = links.filter((link, thisIndex) => {
                         return index !== thisIndex;
                     });
 
-                annotation.portalLinks = portalLinks;
+                card.portalLinks = portalLinks;
             });
         }
     },

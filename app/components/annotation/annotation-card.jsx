@@ -1,20 +1,31 @@
 import React from 'react';
 import DotsBlock from '../dots/dots-block.jsx';
 import TextBlock from '../text/text-block.jsx';
+import AnnotationPortalsBlock from './annotation-portals-block.jsx';
+import AppHelper from '../../helpers/app-helper.js';
 
 /*************
  * CONTAINER *
  *************/
 
 const AnnotationCard = (props) => {
-    const { card } = props,
+
+    const { card, songs } = props,
         { description,
-          dotKeys } = card;
+          dotKeys = {} } = card;
+
+    const portalLinks = AppHelper.getPortalLinks(card, songs);
+
+    // Add portal key to dot keys.
+    if (portalLinks) {
+        dotKeys.portal = true;
+    }
 
     return (
         <AnnotationCardView {...props}
             text={description}
             dotKeys={dotKeys}
+            portalLinks={portalLinks}
         />
     );
 };
@@ -27,10 +38,12 @@ const AnnotationCardView = ({
 
     // From props.
     onWikiUrlClick,
+    onPortalClick,
 
     // From controller.
     text,
-    dotKeys
+    dotKeys,
+    portalLinks
 
 }) => (
 
@@ -44,6 +57,12 @@ const AnnotationCardView = ({
             text={text}
             onAnchorClick={onWikiUrlClick}
         />
+        {portalLinks ?
+            <AnnotationPortalsBlock
+                portalLinks={portalLinks}
+                onPortalClick={onPortalClick}
+            /> : null
+        }
     </div>
 );
 
