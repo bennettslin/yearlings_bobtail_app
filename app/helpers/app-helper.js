@@ -1,27 +1,27 @@
 export default {
 
-    getSongObject(activeSongIndex, songs) {
+    getSong(activeSongIndex, songs) {
         return activeSongIndex ?
             songs[activeSongIndex - 1] : {};
     },
 
-    getAnnotationObject(activeAnnotationIndex, activeSongObject) {
-        const annotations = activeSongObject.annotations;
+    getAnnotation(activeAnnotationIndex, activeSong) {
+        const annotations = activeSong.annotations;
 
         return annotations ?
                 annotations[activeAnnotationIndex - 1] : null;
     },
 
-    getTaskObjects(activeSongObject, tasks) {
-        const songTasks = activeSongObject.tasks;
+    getTasks(activeSong, tasks) {
+        const songTasks = activeSong.tasks;
 
         // If no song tasks, then return album tasks.
         return songTasks ? songTasks : tasks;
     },
 
-    getOverviewRichText(activeOverviewIndex, activeSongObject, overviews) {
+    getOverviewText(activeOverviewIndex, activeSong, overviews) {
         if (activeOverviewIndex) {
-            const songOverviews = activeSongObject.overviews;
+            const songOverviews = activeSong.overviews;
 
             // If no song overviews, then return album overviews.
             return songOverviews ?
@@ -32,14 +32,14 @@ export default {
         }
     },
 
-    getPortalObjects(annotationObject, songs) {
+    getPortalLinks(annotationObject, songs) {
         if (annotationObject) {
-            const portalReferences = annotationObject.portalReferences;
+            const { portalLinks } = annotationObject;
 
-            // Portal objects contain portal titles and indices.
-            return portalReferences ? portalReferences.map((portalReference) => {
-                const songIndex = portalReference.songIndex,
-                    annotationIndex = portalReference.annotationIndex,
+            // Each portal link contains a portal title and index.
+            return portalLinks ? portalLinks.map((portalLink) => {
+                const { songIndex,
+                        annotationIndex } = portalLink,
                     song = songs[songIndex - 1],
                     annotation = song.annotations[annotationIndex - 1];
 

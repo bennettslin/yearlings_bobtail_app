@@ -4,28 +4,22 @@
  * hard-coded the way it is now.
  */
 
-import { ALL_DOT_KEYS,
-         OVERVIEW_KEYS,
+import { OVERVIEW_KEYS,
          TEXT_KEYS } from './constants.js';
 import FormatHelper from './format-helper.js';
 
 export default {
 
-    /**
-     * Temporary storage variables.
-     */
+     // Temporary storage variables.
     _songIndex: null,
     _songDotKeys: {},
     _annotations: [],
-    _portalReferences: {},
+    _portalLinks: {},
 
-    /**
-     * Separate annotations.
-     */
     prepareAlbumObject(albumObject = {}) {
         this._convertOverviews(albumObject);
         this._prepareAllSongs(albumObject);
-        this._populatePortalReferences(albumObject);
+        this._injectPortalLinks(albumObject);
 
         this._deleteTemporaryStorage();
     },
@@ -82,107 +76,103 @@ export default {
         }
     },
 
-    _prepareAnnotation(lyricObject = {}) {
+    _prepareAnnotation(lyricObject = {}, annotation = {}, dotKeys = {}) {
+        // Create new annotation and dotKeys objects.
 
-        // Create annotation object to push into annotations array.
-        const annotation = {},
+        const annotationIndex = this._annotations.length + 1,
+            cardObject = lyricObject.annotation;
 
-            // Create object to store dot keys.
-            dotKeys = {};
-
-        // Cards may be single annotation object or array of annotation objects.
-        annotation.cards = lyricObject.annotation;
-
-        // Add annotation index to lyrics. 1-based index.
-        annotation.annotationIndex = this._annotations.length + 1;
-
-        // FIXME: Not DRY!
-        lyricObject.annotationIndex = annotation.annotationIndex;
+        // Add annotation index to annotation and lyrics. 1-based index.
+        annotation.annotationIndex = annotationIndex;
+        lyricObject.annotationIndex = annotationIndex;
 
         // Add formatted title to annotation.
         annotation.title = FormatHelper.getFormattedAnnotationTitle(lyricObject.anchor, lyricObject.properNoun);
-        delete lyricObject.properNoun;
 
-        /**
-         * Add todo to annotation.
-         */
+        // Add todo to annotation.
         if (lyricObject.todo) {
             annotation.todo = lyricObject.todo;
         }
 
-        this._storeDotKeys(annotation.cards, dotKeys);
+        // Cards may be single annotation card or array of cardObject.
+        if (Array.isArray(cardObject)) {
+            cardObject.forEach(card => {
+                this._addDotKeys(card, dotKeys);
+                this._addPortalLink(card, annotationIndex, dotKeys);
+            });
+        } else {
+            this._addDotKeys(cardObject, dotKeys);
+            this._addPortalLink(cardObject, annotationIndex, dotKeys);
+        }
+        annotation.cards = cardObject;
 
-        // Comment out for now.
-        // this._storePortal(lyricObject, dotKeys);
-
-        // Pass dot keys to both lyrics and annotation.
+        // Add dot keys to both lyrics and annotation.
         lyricObject.dotKeys = dotKeys;
         annotation.dotKeys = dotKeys;
 
         // Add annotation object to annotations array.
         this._annotations.push(annotation);
 
-        // Lyric object no longer needs reference to annotation.
+        // Clean up lyric object.
         delete lyricObject.annotation;
+        delete lyricObject.properNoun;
     },
 
-    _storeDotKeys(cards, dotKeys) {
-
-        // FIXME: Should be more DRY.
-        if (Array.isArray(cards)) {
-            cards.forEach(card => {
-                ALL_DOT_KEYS.forEach(dotKey => {
-                    if (card.dotKeys && card.dotKeys[dotKey]) {
-                        dotKeys[dotKey] = true;
-                        this._songDotKeys[dotKey] = true;
-                    }
-                });
-            });
-        } else {
-
-            ALL_DOT_KEYS.forEach(dotKey => {
-                if (cards.dotKeys && cards.dotKeys[dotKey]) {
-                    dotKeys[dotKey] = true;
-                    this._songDotKeys[dotKey] = true;
-                }
+    _addDotKeys(card, dotKeys) {
+        // Add dot keys to both song and annotation card.
+        if (card.dotKeys) {
+            Object.keys(card.dotKeys).forEach(dotKey => {
+                dotKeys[dotKey] = true;
+                this._songDotKeys[dotKey] = true;
             });
         }
     },
 
-    _storePortal(lyricObject, dotKeys) {
-        // Store portal references and key.
-        if (lyricObject.annotation.portal) {
+    _addPortalLink(card, annotationIndex, dotKeys) {
+        // Add portal link to annotation.
+        // FIXME: If portal is under card, shouldn't portal link also be under card?
 
-            const portalReference = {
+        const { portal } = card;
+        if (portal) {
+
+            const portalLink = {
                 songIndex: this._songIndex,
-                annotationIndex: lyricObject.annotationIndex
+                annotationIndex
             };
 
-            // If first portal reference, initialise array.
-            if (!this._portalReferences[lyricObject.portal]) {
-                this._portalReferences[lyricObject.portal] = [];
+            // If first portal link, initialise array.
+            if (!this._portalLinks[portal]) {
+                this._portalLinks[portal] = [];
             }
 
-            this._portalReferences[lyricObject.portal].push(portalReference);
+            // Add portal link to portal links array.
+            this._portalLinks[portal].push(portalLink);
 
-            // Add to dot keys object.
+            // Add portal key to dot keys object.
             dotKeys.portal = true;
+            this._songDotKeys.portal = true;
+
+            // Clean up card unit.
+            delete card.portal;
         }
     },
 
-    _populatePortalReferences(albumObject) {
-        for (const referenceKey in this._portalReferences) {
-            const references = this._portalReferences[referenceKey];
+    _injectPortalLinks(albumObject) {
+        /**
+         * For each annotation with a portal, add an array of links to all
+         * other portals.
+         */
+        for (const linkKey in this._portalLinks) {
+            const links = this._portalLinks[linkKey];
 
-            references.forEach((reference, refIndex) => {
-                // Add references to all portals other than this one.
-                const song = albumObject.songs[reference.songIndex - 1],
-                    annotation = song.annotations[reference.annotationIndex - 1],
-                    portalReferences = references.filter((reference, thisIndex) => {
+            links.forEach((link, refIndex) => {
+                const song = albumObject.songs[link.songIndex - 1],
+                    annotation = song.annotations[link.annotationIndex - 1],
+                    portalLinks = links.filter((link, thisIndex) => {
                         return refIndex !== thisIndex;
                     });
 
-                annotation.portalReferences = portalReferences;
+                annotation.portalLinks = portalLinks;
             });
         }
     },
@@ -191,6 +181,6 @@ export default {
         delete this._songIndex;
         delete this._songDotKeys;
         delete this._annotations;
-        delete this._portalReferences;
+        delete this._portalLinks;
     }
 }

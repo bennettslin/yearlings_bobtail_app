@@ -45,16 +45,14 @@ module.exports = {
         },
     ],
 
-    // FIXME: Temporarily have description as first dot key.
     ALL_DOT_KEYS: [
-        'description',
         'pun',
         'backstory', // My perspective while making the album.
         'narrative', // My perspective in the story.
         'foreshadow',
         'music',
         'pulpit',
-        'reference',
+        'wiki',
         'portal'
         // 'title'
         // 'afterword' // My perspective while making this website.

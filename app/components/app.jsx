@@ -72,12 +72,12 @@ class App extends React.Component {
                 activeSongIndex,
                 activeAnnotationIndex } = this.props,
 
-            activeSongObject = AppHelper.getSongObject(activeSongIndex, songs),
-            annotationObject = AppHelper.getAnnotationObject(activeAnnotationIndex, activeSongObject),
-            lyricObject = LogHelper.getLyricObjectForAnnotationIndex(activeAnnotationIndex, activeSongObject.lyrics);
+            activeSong = AppHelper.getSong(activeSongIndex, songs),
+            annotation = AppHelper.getAnnotation(activeAnnotationIndex, activeSong),
+            lyricObject = LogHelper.getLyricObjectForAnnotationIndex(activeAnnotationIndex, activeSong.lyrics);
 
         LogHelper.logObject('lyric', lyricObject);
-        return LogHelper.logObject('annotation', annotationObject);
+        return LogHelper.logObject('annotation', annotation);
     }
 
     handleTitleSelect() {
@@ -113,9 +113,9 @@ class App extends React.Component {
         SessionHelper.setInSession(ANNOTATION_INDEX, activeIndex);
     }
 
-    handleWikiUrlSelect(urlString) {
-        const activeWikiUrl = urlString ?
-            `https://en.m.wikipedia.org/wiki/${urlString}` : null;
+    handleWikiUrlSelect(activeWiki) {
+        const activeWikiUrl = activeWiki ?
+            `https://en.m.wikipedia.org/wiki/${activeWiki}` : null;
 
         // Dispatch Redux action.
         this.props.selectWikiUrl(activeWikiUrl);
@@ -128,11 +128,10 @@ class App extends React.Component {
 
     render() {
         const {
-
                 // From album data.
                 songs,
-                overviews,
-                tasks,
+                overviews: albumOverviews,
+                tasks: albumTasks,
 
                 // From Redux.
                 activeSongIndex,
@@ -142,33 +141,29 @@ class App extends React.Component {
 
             } = this.props,
 
-            activeSongObject = AppHelper.getSongObject(activeSongIndex, songs),
-            activeSongLyrics = activeSongObject.lyrics,
-            activeSongAnnotations = activeSongObject.annotations,
-            activeSongDotKeys = activeSongObject.dotKeys,
-
-            overviewRichText = AppHelper.getOverviewRichText(activeOverviewIndex, activeSongObject, overviews),
-            taskObjects = AppHelper.getTaskObjects(activeSongObject, tasks),
-            allTaskObjects = ProgressHelper.getAllTaskObjects(tasks, songs),
-            annotationObject = AppHelper.getAnnotationObject(activeAnnotationIndex, activeSongObject),
-            portalObjects = AppHelper.getPortalObjects(annotationObject, songs);
+            activeSong = AppHelper.getSong(activeSongIndex, songs),
+            overviewText = AppHelper.getOverviewText(activeOverviewIndex, activeSong, albumOverviews),
+            annotation = AppHelper.getAnnotation(activeAnnotationIndex, activeSong),
+            portalLinks = AppHelper.getPortalLinks(annotation, songs),
+            tasks = AppHelper.getTasks(activeSong, albumTasks),
+            allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs);
 
         return (
             <AppView {...this.props}
                 activeSongIndex={activeSongIndex}
                 activeOverviewIndex={activeOverviewIndex}
 
-                activeSongLyrics={activeSongLyrics}
-                activeSongAnnotations={activeSongAnnotations}
-                activeSongDotKeys={activeSongDotKeys}
+                activeSongLyrics={activeSong.lyrics}
+                activeSongAnnotations={activeSong.annotations}
+                activeSongDotKeys={activeSong.dotKeys}
 
                 activeWikiUrl={activeWikiUrl}
-                overviewRichText={overviewRichText}
+                overviewText={overviewText}
 
-                taskObjects={taskObjects}
-                allTaskObjects={allTaskObjects}
-                annotationObject={annotationObject}
-                portalObjects={portalObjects}
+                tasks={tasks}
+                allTasks={allTasks}
+                annotation={annotation}
+                portalLinks={portalLinks}
 
                 onTitleClick={this.handleTitleSelect}
                 onSongClick={this.handleSongSelect}
@@ -200,12 +195,12 @@ const AppView = ({
     activeSongDotKeys,
 
     activeWikiUrl,
-    overviewRichText,
+    overviewText,
 
-    taskObjects,
-    allTaskObjects,
-    annotationObject,
-    portalObjects,
+    tasks,
+    allTasks,
+    annotation,
+    portalLinks,
 
     onTitleClick,
     onSongClick,
@@ -224,15 +219,15 @@ const AppView = ({
             />
             <SongsSection
                 songs={songs}
-                allTasks={allTaskObjects}
+                allTasks={allTasks}
                 activeSongIndex={activeSongIndex}
                 onSongClick={onSongClick}
             />
         </div>
         <div className="field centre-field">
             <AnnotationPopup
-                annotationObject={annotationObject}
-                portalObjects={portalObjects}
+                annotation={annotation}
+                portalLinks={portalLinks}
                 onPortalClick={onPortalClick}
                 onWikiUrlClick={onWikiUrlClick}
                 onCloseClick={onAnnotationClick}
@@ -251,12 +246,12 @@ const AppView = ({
                 annotations={activeSongAnnotations}
             />
             <OverviewsSection
-                overviewRichText={overviewRichText}
+                overviewText={overviewText}
                 activeOverviewIndex={activeOverviewIndex}
                 onOverviewClick={onOverviewClick}
             />
             <TasksSection
-                tasks={taskObjects}
+                tasks={tasks}
             />
         </div>
         {activeSongIndex ?

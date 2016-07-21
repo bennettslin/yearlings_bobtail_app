@@ -14,27 +14,7 @@ module.exports = {
         [
             {
                 time: 24,
-                leftLyric: [
-                    {
-                        anchor: 'Atavist',
-                        annotation: [
-                            {
-                                description: 'testing',
-                                codes: {
-                                    pun: true,
-                                    backstory: true,
-                                    narrative: true,
-                                    foreshadow: true,
-                                    music: true,
-                                    portal: true,
-                                    pulpit: true
-                                }
-                            }
-                        ],
-                        todo: true
-                    },
-                    'stuck feet first,'
-                ],
+                leftLyric: 'Atavist stuck feet first,',
                 rightLyric: 'At a vista, key turned'
             },
             {

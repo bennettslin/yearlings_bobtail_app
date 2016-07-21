@@ -13,20 +13,19 @@ module.exports = {
                         anchor: 'O Catherine! My Catherine!',
                         properNoun: true,
                         annotation: {
-                            description: 'Walt Whitman wrote his elegy "O Captain! My Captain!" after hearing of Abraham Lincoln\'s assassination. I don\'t remember why I chose to reference it. I was probably whimpering "Oh Catherine" under my breath a lot right after the breakup.',
-                            dotKeys: {
-                                pun: 'pun testing',
-                                backstory: 'backstory testing',
-                                narrative: 'narrative testing'
-                            },
-                            reference: [
-                                'blah blah blah,',
+                            description: [
+                                'Walt Whitman wrote his elegy',
                                 {
-                                    anchor: 'O Captain! My Captain!',
-                                    urlString: 'O_Captain!_My_Captain!'
+                                    anchor: '"O Captain! My Captain!"',
+                                    wiki: 'O_Captain!_My_Captain!'
                                 },
-                                'and so forth.'
-                            ]
+                                'after hearing of Abraham Lincoln\'s assassination. I don\'t remember why I chose to reference it. I was probably whimpering "Oh Catherine" under my breath a lot right after the breakup.'],
+                            dotKeys: {
+                                pun: true,
+                                backstory: true,
+                                narrative: true,
+                            },
+                            portal: 'hit_the_switch'
                         }
                     },
                     'our futile trip is done'
@@ -42,15 +41,14 @@ module.exports = {
                             {
                                 description: 'Glancing around my room one night, Catherine remarked that she didn\'t see any books. "I don\'t read," I said, only partly in jest. In hindsight, that was probably the beginning of the end.',
                                 dotKeys: {
-                                    foreshadow: 'foreshadow testing',
-                                    music: 'music testing'
+                                    foreshadow: true,
+                                    music: true
                                 }
                             },
                             {
-                                description: 'testing',
+                                description: 'testing testing testing',
                                 dotKeys: {
-                                    portal: 'portal testing',
-                                    pulpit: 'pulpit testing'
+                                    pulpit: true
                                 }
                             }
                         ]
@@ -65,17 +63,16 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                'A reference to the classic "Who\'s buried in Grant\'s tomb" riddle, of course, but also to James Joyce\'s masterpiece novel. It was Catherine\'s admiration for Joyce that later motivated me to create "the',
+                                'A reference to the classic "Who\'s buried in',
+                                {
+                                    anchor: 'Grant\'s tomb"',
+                                    wiki: 'Grant%27s_Tomb'
+                                },
+                                'riddle, of course, but also to James Joyce\'s masterpiece novel. It was Catherine\'s admiration for Joyce that later motivated me to create "the',
                                 {
                                     italic: 'Ulysses'
                                 },
                                 'of rock albums."'
-                            ],
-                            reference: [
-                                {
-                                    anchor: 'Grant\'s Tomb',
-                                    urlString: 'Grant%27s_Tomb'
-                                }
                             ]
                         }
                     },

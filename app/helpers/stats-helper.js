@@ -3,40 +3,40 @@ import { ALL_DOT_KEYS,
 
 export default {
 
-    getCount(richTextObject = {}) {
-        return Object.keys(richTextObject).length;
+    getCount(textObject = {}) {
+        return Object.keys(textObject).length;
     },
 
-    getTodoCount(richTextObject = {}) {
-        const objectKeys = Object.keys(richTextObject);
+    getTodoCount(textObject = {}) {
+        const objectKeys = Object.keys(textObject);
 
         return objectKeys.reduce((todoCount, objectKey) => {
-            return todoCount + !!richTextObject[objectKey].todo;
+            return todoCount + !!textObject[objectKey].todo;
         }, 0);
     },
 
-    getSumOfTotalWords(richTextObject = {}) {
-        const objectKeys = Object.keys(richTextObject);
+    getSumOfTotalWords(textObject = {}) {
+        const objectKeys = Object.keys(textObject);
 
         return objectKeys.reduce((wordCount, objectKey) => {
             return wordCount + ALL_DOT_KEYS.reduce((newWordCount, dotKey) => {
-                const richText = richTextObject[objectKey][dotKey];
-                return newWordCount + (richText ? this.getTotalWords(richText) : 0);
+                const text = textObject[objectKey][dotKey];
+                return newWordCount + (text ? this.getTotalWords(text) : 0);
             }, 0);
         }, 0);
     },
 
-    getTotalWords(richText = '') {
-        if (richText instanceof Array) {
-            return richText.reduce((wordCount, richTextValue) => {
-                return wordCount + this.getTotalWords(richTextValue);
+    getTotalWords(text = '') {
+        if (text instanceof Array) {
+            return text.reduce((wordCount, textValue) => {
+                return wordCount + this.getTotalWords(textValue);
             }, 0);
 
-        } else if (typeof richText === 'object') {
+        } else if (typeof text === 'object') {
 
             return TEXT_KEYS.reduce((wordCount, textKey) => {
-                if (richText[textKey]) {
-                    return wordCount + this.getTotalWords(richText[textKey]);
+                if (text[textKey]) {
+                    return wordCount + this.getTotalWords(text[textKey]);
                 }
 
                 return wordCount;
@@ -44,7 +44,7 @@ export default {
 
         // It's a string.
         } else {
-            return richText.split(' ').length;
+            return text.split(' ').length;
         }
     }
 }

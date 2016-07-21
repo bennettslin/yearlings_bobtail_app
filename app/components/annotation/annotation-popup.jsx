@@ -3,7 +3,7 @@ import Popup from '../superclasses/popup.jsx';
 import AnnotationSection from './annotation-section.jsx';
 
 const defaultProps = {
-    annotationObject: null,
+    annotation: null,
     onCloseClick() {}
 }
 
@@ -14,7 +14,7 @@ class AnnotationPopup extends Popup {
     }
 
     getContentElement() {
-        return this.props.annotationObject ?
+        return this.props.annotation ?
             <AnnotationSection {...this.props}
                 inPopup={true}
             /> : null;

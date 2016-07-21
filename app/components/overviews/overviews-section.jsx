@@ -27,7 +27,7 @@ const OverviewsSection = (props) => {
 const OverviewsSectionView = ({
 
     // From props.
-    overviewRichText,
+    overviewText,
     onOverviewClick,
 
     // From controller.
@@ -53,7 +53,7 @@ const OverviewsSectionView = ({
         <div className="overview-text">
             <TextBlock
                 isLyric={false}
-                text={overviewRichText}
+                text={overviewText}
             />
         </div>
     </div>

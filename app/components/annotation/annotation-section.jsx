@@ -1,6 +1,6 @@
 import React from 'react';
 import AnnotationUnit from './annotation-unit.jsx';
-import { ALL_DOT_KEYS } from '../../helpers/constants.js';
+import AnnotationPortalsBlock from './annotation-portals-block.jsx';
 
 /*************
  * CONTAINER *
@@ -8,17 +8,11 @@ import { ALL_DOT_KEYS } from '../../helpers/constants.js';
 
 const AnnotationSection = (props) => {
 
-    const { annotationObject } = props,
-
-        title = annotationObject.title,
-        dotKeys = ALL_DOT_KEYS.filter(dotKey => {
-            return annotationObject.dotKeys[dotKey];
-        });
+    const { annotation } = props;
 
     return (
         <AnnotationSectionView {...props}
-            title={title}
-            dotKeys={dotKeys}
+            title={annotation.title}
         />
     );
 };
@@ -31,14 +25,13 @@ const AnnotationSectionView = ({
 
     // From props.
     inPopup,
-    annotationObject,
-    portalObjects, // FIXME: Portal objects will also need to be separated by individual card.
+    annotation,
+    portalLinks,
     onPortalClick,
     onWikiUrlClick,
 
     // From controller.
-    title,
-    dotKeys
+    title
 
 }) => (
 
@@ -46,13 +39,16 @@ const AnnotationSectionView = ({
         <h2>{title}</h2>
         <div className="cards-block">
             <AnnotationUnit
-                dotKeys={dotKeys}
-                annotationObject={annotationObject}
-                portalObjects={portalObjects}
-                onPortalClick={onPortalClick}
+                annotation={annotation}
                 onWikiUrlClick={onWikiUrlClick}
             />
         </div>
+        {portalLinks ?
+            <AnnotationPortalsBlock
+                portalLinks={portalLinks}
+                onPortalClick={onPortalClick}
+            /> : null
+        }
     </div>
 );
 

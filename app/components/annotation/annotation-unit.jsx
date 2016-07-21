@@ -7,20 +7,16 @@ import AnnotationCard from './annotation-card.jsx';
 
 const AnnotationUnit = (props) => {
 
-    const { annotationObject } = props;
+    const { annotation } = props;
 
-    console.log('annotation object', annotationObject);
-
-    if (Array.isArray(annotationObject.cards)) {
-        console.log('cards is an array');
+    if (Array.isArray(annotation.cards)) {
         return (
             <AnnotationUnitView {...props} />
         );
     } else {
-        console.log('cards is object');
         return (
             <AnnotationCard {...props}
-                annotationObject={annotationObject.cards}
+                card={annotation.cards}
             />
         );
     }
@@ -31,14 +27,14 @@ const AnnotationUnit = (props) => {
  ****************/
 
  const AnnotationUnitView = ({
-     annotationObject
+     annotation
  }) => (
      <div className="annotation-cards-block">
-          {annotationObject.cards.map((annotation, index) => {
+          {annotation.cards.map((card, index) => {
               return (
                   <AnnotationCard
                       key={index}
-                      annotationObject={annotation}
+                      card={card}
                   />
               );
           })}
