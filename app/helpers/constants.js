@@ -15,7 +15,10 @@ module.exports = {
         'anchor'
     ],
 
-    // Lyrics text will only ever be under these keys.
+    /**
+     * Lyrics text will only ever be under these keys. Includes both lyric keys
+     * and general keys.
+     */
     LYRIC_TEXT_KEYS: [
         'lyric',
         'leftLyric',

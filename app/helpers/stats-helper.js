@@ -15,7 +15,7 @@ export default {
         }, 0);
     },
 
-    getSumOfTotalWordsInAnnotations(annotations = {}, textKeys = TEXT_KEYS) {
+    getSumOfTotalWordsInAnnotations(annotations = [], textKeys = TEXT_KEYS) {
         return annotations.reduce((wordCount, annotation) => {
             const { cards } = annotation;
             if (Array.isArray(cards)) {
