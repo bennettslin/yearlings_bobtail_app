@@ -14,13 +14,11 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: 'Walt Whitman wrote his elegy "O Captain! My Captain!" after hearing of Abraham Lincoln\'s assassination. I don\'t remember why I chose to reference it. I was probably whimpering "Oh Catherine" under my breath a lot right after the breakup.',
-                            pun: 'pun testing',
-                            backstory: 'backstory testing',
-                            narrative: 'narrative testing',
-                            foreshadow: 'foreshadow testing',
-                            music: 'music testing',
-                            portal: 'portal testing',
-                            pulpit: 'pulpit testing',
+                            dotKeys: {
+                                pun: 'pun testing',
+                                backstory: 'backstory testing',
+                                narrative: 'narrative testing'
+                            },
                             reference: [
                                 'blah blah blah,',
                                 {
@@ -40,9 +38,22 @@ module.exports = {
                     'where it commenced: in my',
                     {
                         anchor: 'bookless room,',
-                        annotation: {
-                            description: 'Glancing around my room one night, Catherine remarked that she didn\'t see any books. "I don\'t read," I said, only partly in jest. In hindsight, that was probably the beginning of the end.'
-                        }
+                        annotation: [
+                            {
+                                description: 'Glancing around my room one night, Catherine remarked that she didn\'t see any books. "I don\'t read," I said, only partly in jest. In hindsight, that was probably the beginning of the end.',
+                                dotKeys: {
+                                    foreshadow: 'foreshadow testing',
+                                    music: 'music testing'
+                                }
+                            },
+                            {
+                                description: 'testing',
+                                dotKeys: {
+                                    portal: 'portal testing',
+                                    pulpit: 'pulpit testing'
+                                }
+                            }
+                        ]
                     }
                 ]
             },

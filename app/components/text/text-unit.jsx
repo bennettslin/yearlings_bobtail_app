@@ -16,7 +16,7 @@ const TextUnit = (props) => {
             <TextSpan {...props} />
         );
 
-    } else {
+    } else if (typeof text === 'object') {
         if (text.italic) {
             return (
                 <i>
@@ -39,11 +39,10 @@ const TextUnit = (props) => {
             return (
                 <AnchorBlock {...props} />
             );
-
-        } else {
-            return null;
         }
     }
+
+    return null;
 };
 
 export default TextUnit;

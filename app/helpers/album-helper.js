@@ -24,21 +24,13 @@ export default {
      */
     prepareAlbumObject(albumObject = {}) {
         this._convertOverviews(albumObject);
-        this._prepareAllAnnotations(albumObject);
+        this._prepareAllSongs(albumObject);
         this._populatePortalReferences(albumObject);
 
         this._deleteTemporaryStorage();
     },
 
-    _convertOverviews(object) {
-        // Convert overviews object into array.
-        const overviews = OVERVIEW_KEYS.map(overviewKey => {
-            return object.overviews[overviewKey];
-        });
-        object.overviews = overviews;
-    },
-
-    _prepareAllAnnotations(albumObject) {
+    _prepareAllSongs(albumObject) {
         albumObject.songs.forEach((song, songIndex) => {
 
             this._convertOverviews(song);
@@ -57,6 +49,14 @@ export default {
 
             this._songDotKeys = {};
         });
+    },
+
+    _convertOverviews(object) {
+        // Convert overviews object into array.
+        const overviews = OVERVIEW_KEYS.map(overviewKey => {
+            return object.overviews[overviewKey];
+        });
+        object.overviews = overviews;
     },
 
     /**
@@ -85,13 +85,19 @@ export default {
     _prepareAnnotation(lyricObject = {}) {
 
         // Create annotation object to push into annotations array.
-        const annotation = lyricObject.annotation,
+        const annotation = {},
 
             // Create object to store dot keys.
             dotKeys = {};
 
+        // Cards may be single annotation object or array of annotation objects.
+        annotation.cards = lyricObject.annotation;
+
         // Add annotation index to lyrics. 1-based index.
-        lyricObject.annotationIndex = this._annotations.length + 1;
+        annotation.annotationIndex = this._annotations.length + 1;
+
+        // FIXME: Not DRY!
+        lyricObject.annotationIndex = annotation.annotationIndex;
 
         // Add formatted title to annotation.
         annotation.title = FormatHelper.getFormattedAnnotationTitle(lyricObject.anchor, lyricObject.properNoun);
@@ -104,27 +110,43 @@ export default {
             annotation.todo = lyricObject.todo;
         }
 
-        this._storeDotKeys(lyricObject, dotKeys);
-        this._storePortal(lyricObject, dotKeys);
+        this._storeDotKeys(annotation.cards, dotKeys);
+
+        // Comment out for now.
+        // this._storePortal(lyricObject, dotKeys);
 
         // Pass dot keys to both lyrics and annotation.
         lyricObject.dotKeys = dotKeys;
         annotation.dotKeys = dotKeys;
 
         // Add annotation object to annotations array.
-        this._annotations.push(lyricObject.annotation);
+        this._annotations.push(annotation);
 
         // Lyric object no longer needs reference to annotation.
         delete lyricObject.annotation;
     },
 
-    _storeDotKeys(lyricObject, dotKeys) {
-        ALL_DOT_KEYS.forEach(dotKey => {
-            if (lyricObject.annotation[dotKey]) {
-                dotKeys[dotKey] = true;
-                this._songDotKeys[dotKey] = true;
-            }
-        });
+    _storeDotKeys(cards, dotKeys) {
+
+        // FIXME: Should be more DRY.
+        if (Array.isArray(cards)) {
+            cards.forEach(card => {
+                ALL_DOT_KEYS.forEach(dotKey => {
+                    if (card.dotKeys && card.dotKeys[dotKey]) {
+                        dotKeys[dotKey] = true;
+                        this._songDotKeys[dotKey] = true;
+                    }
+                });
+            });
+        } else {
+
+            ALL_DOT_KEYS.forEach(dotKey => {
+                if (cards.dotKeys && cards.dotKeys[dotKey]) {
+                    dotKeys[dotKey] = true;
+                    this._songDotKeys[dotKey] = true;
+                }
+            });
+        }
     },
 
     _storePortal(lyricObject, dotKeys) {

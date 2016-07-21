@@ -5,33 +5,30 @@
     // border-bottom-right-radius: 45px 15px;
     // border-bottom-left-radius:  15px 45px;
 
-    .cards-block {
-        .annotation-card {
+    .annotation-card {
+        margin: 5px 0;
+        padding: 5px;
+        box-shadow: 0 1px 1px 1px @box-shadow-colour;
 
-            margin: 5px 0;
-            padding: 5px;
-            box-shadow: 0 1px 1px 1px @box-shadow-colour;
+        // Begin floated dot properties.
+        // position: relative;
+        // clear: left;
+        // overflow: auto;
+        // .dot {
+        //     float: left;
+        //     margin-right: 5px;
+        // }
+        // End floated dot properties.
 
-            // Begin floated dot properties.
-            // position: relative;
-            // clear: left;
-            // overflow: auto;
-            // .dot {
-            //     float: left;
-            //     margin-right: 5px;
-            // }
-            // End floated dot properties.
+        .portals-block {
+            color: #a88;
 
-            .portals-block {
-                color: #a88;
+            .portal-button {
+                cursor: pointer;
 
-                .portal-button {
-                    cursor: pointer;
-
-                    .annotation-title {
-                        padding-left: 1.5em;
-                        font-style: italic;
-                    }
+                .annotation-title {
+                    padding-left: 1.5em;
+                    font-style: italic;
                 }
             }
         }

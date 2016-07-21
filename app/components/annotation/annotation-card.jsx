@@ -2,6 +2,7 @@ import React from 'react';
 import AnnotationPortalsBlock from './annotation-portals-block.jsx';
 import DotsBlock from '../dots/dots-block.jsx';
 import TextBlock from '../text/text-block.jsx';
+import { ALL_DOT_KEYS } from '../../helpers/constants.js';
 
 /*************
  * CONTAINER *
@@ -11,20 +12,12 @@ const AnnotationCard = (props) => {
     const { dotKey,
             annotationObject } = props,
 
-        richText = annotationObject[dotKey],
-
-        /**
-         * FIXME: Temporary workaround. Data helper will eventually
-         * pass multiple dot keys.
-         */
-        tempDotKeys = {
-            [dotKey]: true
-        };
+        richText = annotationObject['description'];
 
     return (
         <AnnotationCardView {...props}
             richText={richText}
-            tempDotKeys={tempDotKeys}
+            dotKeys={annotationObject.dotKeys}
         />
     );
 };
@@ -43,13 +36,13 @@ const AnnotationCardView = ({
 
     // From controller.
     richText,
-    tempDotKeys
+    dotKeys
 
 }) => (
 
     <div className={'annotation-card ' + dotKey}>
         <DotsBlock
-            dotKeys={tempDotKeys}
+            dotKeys={dotKeys}
             interactable={true}
         />
         <TextBlock

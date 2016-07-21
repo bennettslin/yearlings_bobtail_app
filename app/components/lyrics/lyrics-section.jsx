@@ -26,12 +26,16 @@ const LyricsSectionView = ({
         <div className="lyrics-block">
             {songLyrics.map((stanzaArray, stanzaIndex) => {
                 return (
-                    <LyricsStanza
+                    <div
                         key={stanzaIndex}
-                        stanzaArray={stanzaArray}
-                        stanzaIndex={stanzaIndex}
-                        onAnnotationClick={onAnnotationClick}
-                    />
+                        className="lyrics-card"
+                    >
+                        <LyricsStanza
+                            stanzaArray={stanzaArray}
+                            stanzaIndex={stanzaIndex}
+                            onAnnotationClick={onAnnotationClick}
+                        />
+                    </div>
                 );
             })}
         </div>

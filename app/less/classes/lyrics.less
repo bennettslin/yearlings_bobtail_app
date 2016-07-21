@@ -3,14 +3,21 @@
     font-size: @lyric-verse-size;
     line-height: 150%;
 
+    .lyrics-card {
+        display: flex;
+        justify-content: center;
+        
+        &:not(:last-child) {
+            margin-bottom: @lyric-verse-size;
+        }
+    }
+
     a {
         font-weight: normal;
     }
 
     .stanza {
-        &:not(:last-child) {
-            margin-bottom: @lyric-verse-size;
-        }
+        display: inline-block;
 
         background-color: white;
         box-shadow: -1px 1px 2px 2px @box-shadow-colour;
@@ -51,7 +58,6 @@
     .line {
         @hanging-indent-width: 1.5em;
         @centre-edge-margin: 15%;
-        width: auto;
 
         &.left {
             text-indent:-@hanging-indent-width;
