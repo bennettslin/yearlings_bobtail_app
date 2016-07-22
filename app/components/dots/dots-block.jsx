@@ -36,11 +36,11 @@ const DotsBlockView = ({
             // FIXME: Right now, no difference between interactable and not.
             return interactable ? (
                     <div key={index}
-                        className={'dot ' + dotKey}>
+                        className={`dot ${dotKey}`}>
                     </div>
                 ) : (
                     <div key={index}
-                        className={'dot ' + dotKey}>
+                        className={`dot ${dotKey}`}>
                     </div>
                 );
         })}

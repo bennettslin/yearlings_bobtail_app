@@ -21,7 +21,7 @@ class PopupTransitionGroup extends React.Component {
                 onCloseClick } = this.props;
 
         return element ? (
-            <div className={'popup-content-wrapper ' + className}>
+            <div className={`popup-content-wrapper ${className}`}>
                 <CloseButton onClick={onCloseClick} />
                 {element}
             </div>
@@ -34,7 +34,7 @@ class PopupTransitionGroup extends React.Component {
                 element } = this.props;
         return (
             <CSSTransitionGroup
-                className={'popup-transition-group ' + className}
+                className={`popup-transition-group ${className}`}
                 transitionName={transitionName}
                 transitionEnterTimeout={100}
                 transitionLeaveTimeout={100}
@@ -58,14 +58,13 @@ class Popup extends React.Component {
 
     render() {
         const className = this.getClassName(),
-            transitionName = className + '-animation',
             element = this.getContentElement();
 
         return (
             <PopupTransitionGroup
                 element={element}
                 className={className}
-                transitionName={transitionName}
+                transitionName={`${className}-animation`}
                 onCloseClick={this.onCloseClick}
             />
         );

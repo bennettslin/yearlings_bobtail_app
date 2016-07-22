@@ -27,7 +27,7 @@ class DotButton extends Interactable {
     }
 
     getClassName() {
-        return 'dot ' + this.props.classValue;
+        return `dot ${this.props.classValue}`;
     }
 
     getContentElement() {

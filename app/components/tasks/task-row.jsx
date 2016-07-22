@@ -22,7 +22,7 @@ const TaskRowView = ({
 
 }) => (
 
-    <div className={'row ' + (isSubtask ? 'secondary-row' : 'primary-row')}>
+    <div className={`row ${isSubtask ? 'secondary-row' : 'primary-row'}`}>
         <ProgressBar
             sumTask={task}
             maxTotalNeededHours={maxTotalNeededHours}

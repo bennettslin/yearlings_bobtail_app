@@ -27,7 +27,7 @@ const AnnotationsCountRow = (props) => {
         todoCount = StatsHelper.getTodoCount(annotations),
         annotationsCount = StatsHelper.getCount(annotations),
         annotationsRatioCount = todoCount ?
-            (annotationsCount - todoCount) + '/' + annotationsCount :
+            `${annotationsCount - todoCount}/${annotationsCount}` :
             annotationsCount;
 
     return (

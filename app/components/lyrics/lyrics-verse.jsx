@@ -38,7 +38,7 @@ const LyricsVerseView = ({
                         return (
                             <div
                                 key={index}
-                                className={'line ' + keyClassPair.className}
+                                className={`line ${keyClassPair.className}`}
                             >
                                 <TextBlock
                                     isLyric={true}

@@ -58,7 +58,7 @@ const AnchorBlockView = ({
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
         { !beginsNewLine ? ' ' : null }
         <a
-            className={'anchor-block' + (hasTodo ? ' todo' : '')}
+            className={`anchor-block${hasTodo ? ' todo' : ''}`}
             onClick={() => onAnchorClick(clickHandlerArgument)}
         >
             <span className="underline-bar"></span>

@@ -16,7 +16,7 @@ class Interactable extends React.Component {
     }
 
     render() {
-        const className = 'interactable ' + this.getClassName();
+        const className = `interactable ${this.getClassName()}`;
 
         return (
             <div onClick={this.handleInteraction}

@@ -37,7 +37,7 @@ const AnnotationSectionView = ({
 
 }) => (
 
-    <div className={'section annotation-section' + (inPopup ? ' in-popup' : '')}>
+    <div className={`section annotation-section${inPopup ? ' in-popup' : ''}`}>
         <h2>{title}</h2>
         <div className="cards-block">
             <AnnotationUnit

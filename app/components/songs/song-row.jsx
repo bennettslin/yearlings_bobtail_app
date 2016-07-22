@@ -44,7 +44,7 @@ const SongRowView = ({
 
 }) => (
 
-    <div className={'row primary-row' + (isActive ? ' played' : '')}>
+    <div className={`row primary-row${isActive ? ' played' : ''}`}>
         <ProgressBar
             sumTask={sumTask}
             maxTotalNeededHours={maxTotalNeededHours}
@@ -54,7 +54,7 @@ const SongRowView = ({
                 className="text-cell text"
                 onClick={onClick}
             >
-                {songIndex + '. ' + songTitle}
+                {`${songIndex}. ${songTitle}`}
             </a>
             <span className="text-cell figure">
                 {sumTask.workedHours}/{sumTask.neededHours}h

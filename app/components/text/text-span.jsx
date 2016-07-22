@@ -21,9 +21,7 @@ const TextSpan = (props) => {
     if (isLyric) {
         const lastSpaceIndex = text.lastIndexOf(' ');
         if (lastSpaceIndex > -1) {
-            spacedText = text.slice(0, lastSpaceIndex) +
-                '\u00a0' +
-                text.slice(lastSpaceIndex + 1);
+            spacedText = `${text.slice(0, lastSpaceIndex)}\u00a0${text.slice(lastSpaceIndex + 1)}`;
         }
     }
 

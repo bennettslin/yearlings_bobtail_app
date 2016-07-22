@@ -36,7 +36,7 @@ const OverviewButtonView = ({
 
 }) => (
 
-    <div className={'select-button' + (isDisabled ? ' disabled' : '')}>
+    <div className={`select-button${isDisabled ? ' disabled' : ''}`}>
         <h2>
             <a disabled={isDisabled} onClick={onClick}>
                 {overviewKey}
