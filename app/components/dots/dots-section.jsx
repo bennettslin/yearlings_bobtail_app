@@ -16,7 +16,8 @@ const DotsSection = (props) => (
 const DotsSectionView = ({
 
     // From props.
-    dotKeys
+    dotKeys,
+    onDotClick
 
 }) => (
 
@@ -24,7 +25,7 @@ const DotsSectionView = ({
         <h2>dots</h2>
         <DotsBlock
             dotKeys={dotKeys}
-            interactable={true}
+            onDotClick={onDotClick}
         />
     </div>
 );

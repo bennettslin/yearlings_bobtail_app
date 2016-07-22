@@ -1,50 +1,41 @@
-// FIXME: Not used right now.
-
 import React from 'react';
-import DotPopup from './dot-popup.jsx';
-import Interactable from '../superclasses/interactable.jsx';
-
-const defaultProps = {
-    classValue: ''
-}
 
 /*************
  * CONTAINER *
  *************/
 
+const DotButton = (props) => {
+
+    const { dotKey,
+            onDotClick } = props,
+
+        onClick = onDotClick ? () => onDotClick(dotKey) : null;
+
+    return (
+        <DotButtonView {...props}
+            onClick={onClick}
+        />
+    );
+}
+
 /****************
  * PRESENTATION *
  ****************/
 
-class DotButton extends Interactable {
+const DotButtonView = ({
 
-    constructor(props) {
-        super(props);
+    // From props.
+    dotKey,
 
-        this.state = {
-            active: false
-        };
-    }
+    // From controller.
+    onClick
 
-    getClassName() {
-        return `dot ${this.props.classValue}`;
-    }
+}) => (
+    <div
+        className={`dot ${dotKey}`}
+        onClick={onClick}
+    >
+    </div>
+);
 
-    getContentElement() {
-        return (
-            <DotPopup
-                classValue={this.props.classValue}
-                active={this.state.active}
-            />
-        );
-    }
-
-    handleInteraction() {
-        this.setState({
-            active: !this.state.active
-        });
-    }
-}
-
-DotButton.defaultProps = defaultProps;
 export default DotButton;

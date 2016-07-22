@@ -126,6 +126,11 @@ class App extends React.Component {
         this.handleAnnotationSelect(activeAnnotationIndex);
     }
 
+    handleDotToggle(dotKey) {
+        // TODO: Toggle dot key.
+        console.log(dotKey);
+    }
+
     render() {
         const {
                 // From album data.
@@ -169,6 +174,7 @@ class App extends React.Component {
                 onWikiUrlClick={this.handleWikiUrlSelect}
                 onAnnotationClick={this.handleAnnotationSelect}
                 onOverviewClick={this.handleOverviewSelect}
+                onDotClick={this.handleDotToggle}
             />
         );
     }
@@ -204,7 +210,8 @@ const AppView = ({
     onPortalClick,
     onWikiUrlClick,
     onAnnotationClick,
-    onOverviewClick
+    onOverviewClick,
+    onDotClick
 
 }) => (
 
@@ -236,7 +243,10 @@ const AppView = ({
             {/* Show scrap notes if no active song, otherwise show dots. */}
             {!activeSongIndex ?
                 <NotesSection /> :
-                <DotsSection dotKeys={activeSongDotKeys} />
+                <DotsSection
+                    dotKeys={activeSongDotKeys}
+                    onDotClick={onDotClick}
+                />
             }
             <StatsSection
                 lyrics={activeSongLyrics}

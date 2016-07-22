@@ -23,7 +23,7 @@ const DotsBlockView = ({
 
     // From props.
     dotKeys,
-    interactable
+    onDotClick
 
 }) => (
 
@@ -32,17 +32,13 @@ const DotsBlockView = ({
             return dotKeys[dotKey];
 
         }).map((dotKey, index) => {
-            // Return either an interactable dot button or a plain div.
-            // FIXME: Right now, no difference between interactable and not.
-            return interactable ? (
-                    <div key={index}
-                        className={`dot ${dotKey}`}>
-                    </div>
-                ) : (
-                    <div key={index}
-                        className={`dot ${dotKey}`}>
-                    </div>
-                );
+            return (
+                <DotButton
+                    key={index}
+                    dotKey={dotKey}
+                    onDotClick={onDotClick}
+                />
+            );
         })}
     </span>
 );
