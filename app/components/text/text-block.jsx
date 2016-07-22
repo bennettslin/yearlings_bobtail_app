@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import AnchorBlock from './anchor-block.jsx';
 import TextUnit from './text-unit.jsx';
 

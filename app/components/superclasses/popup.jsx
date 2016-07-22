@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 // TODO: Separate into container and presentation components?
@@ -14,7 +14,7 @@ const CloseButton = ({
     </a>
 );
 
-class PopupTransitionGroup extends React.Component {
+class PopupTransitionGroup extends Component {
 
     _getContainerElement(element) {
         const { className,
@@ -45,7 +45,7 @@ class PopupTransitionGroup extends React.Component {
     }
 }
 
-class Popup extends React.Component {
+class Popup extends Component {
 
     constructor(props) {
         super(props);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import AnnotationUnit from './annotation-unit.jsx';
 // import AnnotationPortalsBlock from './annotation-portals-block.jsx';
 

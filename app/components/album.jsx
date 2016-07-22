@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { selectSongIndex,
@@ -30,7 +30,7 @@ import SessionHelper from '../helpers/session-helper.js';
  * CONTAINER *
  *************/
 
-class App extends React.Component {
+class App extends Component {
 
     constructor(props) {
         super(props);
@@ -215,7 +215,7 @@ const AppView = ({
 
 }) => (
 
-    <div className="app">
+    <div className="album">
         <div className="field left-field">
             <TitleSection
                 titleText={title}

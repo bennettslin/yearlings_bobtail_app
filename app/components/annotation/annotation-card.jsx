@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import DotsBlock from '../dots/dots-block.jsx';
 import TextBlock from '../text/text-block.jsx';
 import AnnotationPortalsBlock from './annotation-portals-block.jsx';

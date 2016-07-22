@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ProgressBar from '../progress/progress-bar.jsx';
 import ProgressHelper from '../../helpers/progress-helper.js';
 

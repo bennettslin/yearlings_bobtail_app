@@ -2,9 +2,9 @@
  * Generic element that will listen for hover events on desktop devices, and
  * click events on mobile devices.
  */
-import React from 'react';
+import React, { Component } from 'react';
 
-class Interactable extends React.Component {
+class Interactable extends Component {
 
     constructor(props) {
         super(props);

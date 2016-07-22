@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SongRow from './song-row.jsx';
 import ProgressFooter from '../progress/progress-footer.jsx';
 import ProgressHelper from '../../helpers/progress-helper.js';

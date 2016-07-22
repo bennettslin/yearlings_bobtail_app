@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Popup from '../superclasses/popup.jsx';
 import AnnotationSection from './annotation-section.jsx';
 

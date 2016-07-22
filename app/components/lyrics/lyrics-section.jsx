@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import LyricsStanza from './lyrics-stanza.jsx';
 
 /*************

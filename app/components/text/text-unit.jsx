@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import AnchorBlock from './anchor-block.jsx';
 import TextBlock from './text-block.jsx';
 import TextSpan from './text-span.jsx';

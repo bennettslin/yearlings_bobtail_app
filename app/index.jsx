@@ -3,24 +3,17 @@ import ReactDOM from 'react-dom';
 import { createStore,
          applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-
-import './less/main.less';
-import AlbumHelper from './helpers/album-helper.js';
-import YearlingsBobtail from './album/00-yearlings-bobtail.js';
-
-import App from './components/app.jsx';
+import { Router, browserHistory } from 'react-router';
 
 import reducers from './redux/reducers';
+import routes from './routes.jsx';
 
 // From Udemy tutorial. This will allow for asynchronous Redux actions.
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-// Restructure raw data to be usable by app.
-AlbumHelper.prepareAlbum(YearlingsBobtail);
-
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
-        <App {...YearlingsBobtail} />
+        <Router history={browserHistory} routes={routes} />
     </Provider>,
     document.getElementById('app')
 );
