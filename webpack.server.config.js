@@ -1,9 +1,13 @@
-const fs = require('fs')
+// For server-side rendering in production. Doesn't currently work.
+
+const fs = require('fs');
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 
 const PATHS = {
     app: path.join(__dirname, 'app'),
-    build: path.join(__dirname, 'build')
+    build_prod: path.join(__dirname, 'build_prod')
 };
 
 module.exports = {
@@ -11,7 +15,8 @@ module.exports = {
     entry: path.resolve(__dirname, 'server.js'),
 
     output: {
-        filename: 'server.bundle.js'
+        path: PATHS.build_prod,
+        filename: 'bundle.js'
     },
 
     target: 'node',
@@ -38,23 +43,21 @@ module.exports = {
             {
                 // http://survivejs.com/webpack/loading-less-or-sass/
                 test: /\.less$/,
-                loader: 'style!css!less',
-
-                // Include accepts either a path or an array of paths.
-                include: PATHS.app
+                loader: ExtractTextPlugin.extract('style-loader', 'style!css!less'),
+                include: PATHS.app,
+                exclude: /node_modules/
             },
             {
                 // Set up jsx. This accepts js too, thanks to RegExp.
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader?presets[]=es2015&presets[]=react',
-                /**
-                 * Parse only app files! Without this it will go through the
-                 * entire project. In addition to being slow, that will most
-                 * likely result in an error.
-                 */
-                include: PATHS.app
-            },
+                loader: 'babel-loader?presets[]=es2015&presets[]=react'
+            }
         ]
-    }
+    },
+
+    plugins: [
+      // Output extracted CSS to a file.
+      new ExtractTextPlugin('[name].[chunkhash].css')
+    ]
 }

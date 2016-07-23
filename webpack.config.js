@@ -3,7 +3,8 @@ const path = require('path');
 
 const PATHS = {
     app: path.join(__dirname, 'app'),
-    build: path.join(__dirname, 'build')
+    build_dev: path.join(__dirname, 'build_dev'),
+    style: path.join(__dirname, 'app/less')
 };
 
 module.exports = {
@@ -16,13 +17,8 @@ module.exports = {
         app: PATHS.app
     },
 
-    // '' is needed to allow imports without an extension.
-    resolve: {
-        extensions: ['', '.js', '.jsx']
-    },
-
     output: {
-        path: PATHS.build,
+        path: PATHS.build_dev,
         filename: 'bundle.js'
     },
 
@@ -39,17 +35,14 @@ module.exports = {
                 loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
             },
             {
-                // http://survivejs.com/webpack/loading-less-or-sass/
+                // http://survivejs.com/webpack/loading-assets/loading-styles/
                 test: /\.less$/,
                 loader: 'style!css!less',
-
-                // Include accepts either a path or an array of paths.
-                include: PATHS.app
+                include: PATHS.style
             },
             {
                 // Set up jsx. This accepts js too, thanks to RegExp.
                 test: /\.jsx?$/,
-                exclude: /node_modules/,
                 loader: 'babel-loader?presets[]=es2015&presets[]=react',
                 /**
                  * Parse only app files! Without this it will go through the
@@ -57,7 +50,7 @@ module.exports = {
                  * likely result in an error.
                  */
                 include: PATHS.app
-            },
+            }
         ]
     }
 }

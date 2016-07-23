@@ -1,4 +1,5 @@
 node_modules
+build_prod
 npm-debug.log
 bundle.js
 .env
