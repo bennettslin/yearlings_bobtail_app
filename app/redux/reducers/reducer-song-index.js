@@ -6,9 +6,9 @@ const storedSongIndex = SessionHelper.getFromSession(SONG_INDEX);
 const SongIndexReducer = (state = storedSongIndex, action) => {
     switch (action.type) {
         case SONG_INDEX:
-        return action.payload;
+            return action.payload;
         default:
-        return state;
+            return state;
     }
 }
 
