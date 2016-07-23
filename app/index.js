@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 
 import reducers from './redux/reducers';
-import routes from './routes.jsx';
+import routes from './routes.js';
 
 // From Udemy tutorial. This will allow for asynchronous Redux actions.
 const createStoreWithMiddleware = applyMiddleware()(createStore);
