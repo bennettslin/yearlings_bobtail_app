@@ -18,6 +18,11 @@ class Index extends Component {
 }
 
 class App extends React.Component {
+
+    componentWillMount() {
+        console.error('id', this.props.params);
+    }
+
     render() {
         return (
             <Album {...YearlingsBobtail} />
@@ -28,5 +33,6 @@ class App extends React.Component {
 export default (
     <Route path="/" component={Index}>
         <IndexRoute component={App} />
+        <Route path="/yearlings_bobtail" component={App} />
     </Route>
 );
