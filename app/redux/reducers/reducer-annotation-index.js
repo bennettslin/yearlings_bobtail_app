@@ -6,9 +6,9 @@ const storedAnnotationIndex = SessionHelper.getFromSession(ANNOTATION_INDEX);
 const AnnotationIndexReducer = (state = storedAnnotationIndex, action) => {
     switch (action.type) {
         case ANNOTATION_INDEX:
-        return action.payload;
+            return action.payload;
         default:
-        return state;
+            return state;
     }
 }
 

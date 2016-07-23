@@ -6,9 +6,9 @@ const storedOverviewIndex = SessionHelper.getFromSession(OVERVIEW_INDEX);
 const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
     switch (action.type) {
         case OVERVIEW_INDEX:
-        return action.payload;
+            return action.payload;
         default:
-        return state;
+            return state;
     }
 }
 
