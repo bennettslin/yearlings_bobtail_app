@@ -1,3 +1,5 @@
+// For dev purposes. Log object info.
+
 import { STORAGE, LYRIC_TEXT_KEYS } from './constants.js';
 
 export default {

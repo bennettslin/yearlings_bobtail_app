@@ -13,8 +13,7 @@ import { SONG_INDEX,
          ANNOTATION_INDEX,
          OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from '../helpers/constants.js';
-import AppHelper from '../helpers/app-helper.js';
-// import GeneralHelper from '../helpers/general-helper.js';
+import AppHelper from '../helpers/album-view-helper.js';
 import LogHelper from '../helpers/log-helper.js';
 import ProgressHelper from '../helpers/progress-helper.js';
 import SessionHelper from '../helpers/session-helper.js';
@@ -142,7 +141,7 @@ class App extends Component {
             allTasks = ProgressHelper.getAllTaskObjects(tasks, songs);
 
         return (
-            <AlbumView {...this.props}
+            <AppView {...this.props}
                 activeSongIndex={activeSongIndex}
                 activeAnnotationIndex={activeAnnotationIndex}
                 activeOverviewIndex={activeOverviewIndex}
@@ -170,7 +169,7 @@ class App extends Component {
  * PRESENTATION *
  ****************/
 
-const AlbumView = ({
+const AppView = ({
 
     // From props.
     title,

@@ -1,3 +1,5 @@
+// Store data in browser's local storage.
+
 import { WINDOW_STORAGE,
          OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from './constants.js';

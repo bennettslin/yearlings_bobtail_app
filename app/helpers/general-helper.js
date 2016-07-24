@@ -1,3 +1,5 @@
+// Basic helpers that only know DOM elements and JavaScript objects.
+
 export const findKeyInObject = (key, object) => {
     if (!object) {
         return false;

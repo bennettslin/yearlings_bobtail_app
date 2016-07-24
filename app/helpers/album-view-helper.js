@@ -1,3 +1,5 @@
+// Parse album data for presentation.
+
 export default {
 
     getSong(activeSongIndex, songs) {

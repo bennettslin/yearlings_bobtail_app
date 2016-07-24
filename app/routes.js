@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Route, IndexRoute } from 'react-router';
 
 import './less/main.less';
-import Album from './components/album.jsx';
-import AlbumHelper from './helpers/album-helper.js';
-import YearlingsBobtail from './album/00-yearlings-bobtail.js';
+import App from './components/app.jsx';
+import AlbumData from './album/00-yearlings-bobtail.js';
+import { prepareAlbumData } from './helpers/album-build-helper.js';
 
 // Restructure raw data to be usable by app.
-AlbumHelper.prepareAlbum(YearlingsBobtail);
+prepareAlbumData(AlbumData);
 
-class App extends Component {
+class Root extends Component {
     render() {
         return (
             <div className="index">
@@ -19,17 +19,22 @@ class App extends Component {
     }
 }
 
-class Index extends React.Component {
+/**
+ * FIXME: This component passes the album data as props to the app. This is just
+ * a workaround until I figure out how to structure the components to play well
+ * with React Router.
+ */
+class Wrapper extends React.Component {
     render() {
         return (
-            <Album {...YearlingsBobtail} />
+            <App {...AlbumData} />
         );
     }
 }
 
 export default (
-    <Route path="/" component={App}>
-        <IndexRoute component={Index} />
-        <Route path="/yearlings_bobtail" component={Index} />
+    <Route path="/" component={Root}>
+        <IndexRoute component={Wrapper} />
+        <Route path="/yearlings_bobtail" component={Wrapper} />
     </Route>
 );

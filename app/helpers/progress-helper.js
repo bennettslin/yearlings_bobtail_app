@@ -1,3 +1,5 @@
+// For dev purposes. Calculate progress completed and left to do on tasks.
+
 export default {
 
     getMaxTotalNeededHoursFromSongs(songs = []) {

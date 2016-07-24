@@ -1,3 +1,5 @@
+// Constants used by all components.
+
 module.exports = {
 
     WINDOW_STORAGE: window.localStorage,

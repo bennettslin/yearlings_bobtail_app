@@ -7,7 +7,7 @@ import StatsSection from '../stats/stats-section.jsx';
 import OverviewsSection from '../overviews/overviews-section.jsx';
 import TasksSection from '../tasks/tasks-section.jsx';
 import LyricsSection from '../lyrics/lyrics-section.jsx';
-import AppHelper from '../../helpers/app-helper.js';
+import AppHelper from '../../helpers/album-view-helper.js';
 
 /*************
  * CONTAINER *
