@@ -25,7 +25,6 @@ const Shared = (props) => {
     return (
         <SharedView {...props}
             activeSong={activeSong}
-            activeSongDotKeys={activeSong.dotKeys}
             overviewText={overviewText}
             tasks={tasks}
         />
@@ -37,7 +36,7 @@ const Shared = (props) => {
  ****************/
 
 const SharedView = (props) => {
-    
+
     const {
         // From props.
         activeSongIndex,
@@ -59,6 +58,9 @@ const SharedView = (props) => {
                     activeOverviewIndex={activeOverviewIndex}
                     onOverviewClick={onOverviewClick}
                 />
+                {/* Technically, stats only knows active song data so it really
+                  * belongs in song column. But we're putting it here because
+                  * it keeps the layout balanced, and it's just a dev tool. */}
                 <StatsSection
                     lyrics={activeSong.lyrics}
                     annotations={activeSong.annotations}

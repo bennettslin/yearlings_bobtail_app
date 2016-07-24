@@ -19,6 +19,7 @@ const Song = (props) => {
     return (
         <SongView {...props}
             annotation={annotation}
+            activeSongDotKeys={activeSong.dotKeys}
             activeSongLyrics={activeSong.lyrics}
         />
     );
@@ -34,7 +35,6 @@ const SongView = ({
     songs,
 
     activeWikiUrl,
-    activeSongDotKeys,
 
     onDotClick,
     onPortalClick,
@@ -43,6 +43,7 @@ const SongView = ({
 
     // From controller.
     annotation,
+    activeSongDotKeys,
     activeSongLyrics
 
 }) => (
