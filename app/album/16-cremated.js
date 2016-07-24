@@ -126,6 +126,7 @@ module.exports = {
             {
                 time: 121,
                 leftLyric: 'Redressed, he gets his notice, short an',
+                // Veggie wishbone.
                 rightLyric: 'He\'s vegging with his boner shortened;'
             },
             {

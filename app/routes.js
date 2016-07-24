@@ -9,20 +9,17 @@ import YearlingsBobtail from './album/00-yearlings-bobtail.js';
 // Restructure raw data to be usable by app.
 AlbumHelper.prepareAlbum(YearlingsBobtail);
 
-class Index extends Component {
+class App extends Component {
     render() {
         return (
-            <div className="index">{this.props.children}</div>
+            <div className="index">
+                {this.props.children}
+            </div>
         );
     }
 }
 
-class App extends React.Component {
-
-    componentWillMount() {
-        console.error('id', this.props.params);
-    }
-
+class Index extends React.Component {
     render() {
         return (
             <Album {...YearlingsBobtail} />
@@ -31,8 +28,8 @@ class App extends React.Component {
 }
 
 export default (
-    <Route path="/" component={Index}>
-        <IndexRoute component={App} />
-        <Route path="/yearlings_bobtail" component={App} />
+    <Route path="/" component={App}>
+        <IndexRoute component={Index} />
+        <Route path="/yearlings_bobtail" component={Index} />
     </Route>
 );

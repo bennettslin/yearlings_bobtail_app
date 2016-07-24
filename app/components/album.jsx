@@ -8,14 +8,7 @@ import { selectSongIndex,
 
 import TitleSection from './title/title-section.jsx';
 import SongsSection from './songs/songs-section.jsx';
-import NotesSection from './notes/notes-section.jsx';
-import AnnotationPopup from './annotation/annotation-popup.jsx';
-import WikiPopup from './wiki/wiki-popup.jsx';
-import StatsSection from './stats/stats-section.jsx';
-import OverviewsSection from './overviews/overviews-section.jsx';
-import TasksSection from './tasks/tasks-section.jsx';
-import DotsSection from './dots/dots-section.jsx';
-import LyricsSection from './lyrics/lyrics-section.jsx';
+import SongSection from './songs/song-section.jsx';
 import { SONG_INDEX,
          ANNOTATION_INDEX,
          OVERVIEW_INDEX,
@@ -135,8 +128,8 @@ class App extends Component {
         const {
                 // From album data.
                 songs,
-                overviews: albumOverviews,
-                tasks: albumTasks,
+                overviews,
+                tasks,
 
                 // From Redux.
                 activeSongIndex,
@@ -146,27 +139,20 @@ class App extends Component {
 
             } = this.props,
 
-            activeSong = AppHelper.getSong(activeSongIndex, songs),
-            overviewText = AppHelper.getOverviewText(activeOverviewIndex, activeSong, albumOverviews),
-            annotation = AppHelper.getAnnotation(activeAnnotationIndex, activeSong),
-            tasks = AppHelper.getTasks(activeSong, albumTasks),
-            allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs);
+            allTasks = ProgressHelper.getAllTaskObjects(tasks, songs);
 
         return (
-            <AppView {...this.props}
+            <AlbumView {...this.props}
                 activeSongIndex={activeSongIndex}
+                activeAnnotationIndex={activeAnnotationIndex}
                 activeOverviewIndex={activeOverviewIndex}
 
-                activeSongLyrics={activeSong.lyrics}
-                activeSongAnnotations={activeSong.annotations}
-                activeSongDotKeys={activeSong.dotKeys}
-
                 activeWikiUrl={activeWikiUrl}
-                overviewText={overviewText}
 
-                tasks={tasks}
+                albumOverviews={overviews}
+                albumTasks={tasks}
+
                 allTasks={allTasks}
-                annotation={annotation}
 
                 onTitleClick={this.handleTitleSelect}
                 onSongClick={this.handleSongSelect}
@@ -184,7 +170,7 @@ class App extends Component {
  * PRESENTATION *
  ****************/
 
-const AppView = ({
+const AlbumView = ({
 
     // From props.
     title,
@@ -192,18 +178,15 @@ const AppView = ({
 
     // From controller.
     activeSongIndex,
+    activeAnnotationIndex,
     activeOverviewIndex,
 
-    activeSongLyrics,
-    activeSongAnnotations,
-    activeSongDotKeys,
-
     activeWikiUrl,
-    overviewText,
 
-    tasks,
+    // FIXME: Refactor. Song should not know album objects.
+    albumOverviews,
+    albumTasks,
     allTasks,
-    annotation,
 
     onTitleClick,
     onSongClick,
@@ -216,7 +199,7 @@ const AppView = ({
 }) => (
 
     <div className="album">
-        <div className="field left-field">
+        <div className="column songs-column">
             <TitleSection
                 titleText={title}
                 onClick={onTitleClick}
@@ -228,47 +211,22 @@ const AppView = ({
                 onSongClick={onSongClick}
             />
         </div>
-        <div className="field centre-field">
-            <AnnotationPopup
-                songs={songs}
-                annotation={annotation}
-                onPortalClick={onPortalClick}
-                onWikiUrlClick={onWikiUrlClick}
-                onCloseClick={onAnnotationClick}
-            />
-            <WikiPopup
-                activeWikiUrl={activeWikiUrl}
-                onCloseClick={onWikiUrlClick}
-            />
-            {/* Show scrap notes if no active song, otherwise show dots. */}
-            {!activeSongIndex ?
-                <NotesSection /> :
-                <DotsSection
-                    dotKeys={activeSongDotKeys}
-                    onDotClick={onDotClick}
-                />
-            }
-            <StatsSection
-                lyrics={activeSongLyrics}
-                annotations={activeSongAnnotations}
-            />
-            <OverviewsSection
-                overviewText={overviewText}
-                activeOverviewIndex={activeOverviewIndex}
-                onOverviewClick={onOverviewClick}
-            />
-            <TasksSection
-                tasks={tasks}
-            />
-        </div>
-        {activeSongIndex ?
-             <div className="field right-field">
-                <LyricsSection
-                    songLyrics={activeSongLyrics}
-                    onAnnotationClick={onAnnotationClick}
-                />
-            </div> : null
-        }
+        <SongSection
+            songs={songs}
+            activeSongIndex={activeSongIndex}
+            activeAnnotationIndex={activeAnnotationIndex}
+            activeOverviewIndex={activeOverviewIndex}
+            activeWikiUrl={activeWikiUrl}
+
+            albumOverviews={albumOverviews}
+            albumTasks={albumTasks}
+
+            onDotClick={onDotClick}
+            onOverviewClick={onOverviewClick}
+            onPortalClick={onPortalClick}
+            onWikiUrlClick={onWikiUrlClick}
+            onAnnotationClick={onAnnotationClick}
+        />
     </div>
 );
 

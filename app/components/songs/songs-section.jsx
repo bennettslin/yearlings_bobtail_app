@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SongRow from './song-row.jsx';
+import SongsRow from './songs-row.jsx';
 import ProgressFooter from '../progress/progress-footer.jsx';
 import ProgressHelper from '../../helpers/progress-helper.js';
 
@@ -50,7 +50,7 @@ const SongsSectionView = ({
         {songs.map((song, index) => {
             const isActive = activeSongIndex - 1 === index;
             return (
-                <SongRow
+                <SongsRow
                     key={index}
                     song={song}
                     songIndex={index + 1}

@@ -6,7 +6,7 @@ import ProgressHelper from '../../helpers/progress-helper.js';
  * CONTAINER *
  *************/
 
-const SongRow = (props) => {
+const SongsRow = (props) => {
 
     const { song,
             songIndex,
@@ -18,7 +18,7 @@ const SongRow = (props) => {
         onClick = () => !isActive ? onSongClick(songIndex) : null;
 
     return (
-        <SongRowView {...props}
+        <SongsRowView {...props}
             songTitle={songTitle}
             sumTask={sumTask}
             onClick={onClick}
@@ -30,7 +30,7 @@ const SongRow = (props) => {
  * PRESENTATION *
  ****************/
 
-const SongRowView = ({
+const SongsRowView = ({
 
     // From props.
     songIndex,
@@ -63,4 +63,4 @@ const SongRowView = ({
     </div>
 );
 
-export default SongRow;
+export default SongsRow;

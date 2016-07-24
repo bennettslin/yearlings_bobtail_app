@@ -32,39 +32,38 @@ body {
  * FIELDS *
  **********/
 
-.field {
+.column, .field {
     position: relative;
     box-sizing: border-box;
-    padding: 0 (@field-padding * 0.5);
+    padding: 0 (@column-padding * 0.5);
 
     height: 100%;
     overflow-y: scroll;
-
-    &:first-child {
-        padding-left: @field-padding;
-    }
-
-    &:last-child {
-        padding-right: @field-padding;
-    }
 }
 
-.left-field {
-    width: @left-field-width;
-    min-width: @left-field-width;
+.songs-column {
+    width: @column-width;
+    min-width: @column-width;
+    padding-left: @column-padding;
     background-color: @left-field-colour;
     font-size: 1.2em;
 }
 
-.centre-field {
-    width: @centre-field-width;
-    min-width: @centre-field-width;
+.song-column {
+    display: flex;
+    padding-left: 0;
+}
+
+.data-field {
+    width: @column-width;
+    min-width: @column-width;
     background-color: @centre-field-colour;
 }
 
-.right-field {
+.lyrics-field {
     width: @right-field-width;
     min-width: @right-field-width;
+    padding-right: @column-padding;
     background-color: @right-field-colour;
 }
 
@@ -76,11 +75,11 @@ body {
     box-sizing: border-box;
 
     &:not(.url-section) {
-        padding: @field-padding;
+        padding: @column-padding;
     }
 
     &:not(.in-popup) {
-        margin: @field-padding 0;
+        margin: @column-padding 0;
         background-color: @section-colour;
         box-shadow: 0 2px 2px 2px @box-shadow-colour;
     }
