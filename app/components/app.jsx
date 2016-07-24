@@ -6,17 +6,42 @@ import { selectSongIndex,
          selectOverviewIndex,
          selectWikiUrl } from '../redux/actions/index.js';
 
-import TitleSection from './title/title-section.jsx';
-import SongsSection from './songs/songs-section.jsx';
-import SongSection from './songs/song-section.jsx';
+import Album from './album.jsx';
+
 import { SONG_INDEX,
          ANNOTATION_INDEX,
          OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from '../helpers/constants.js';
-import AppHelper from '../helpers/album-view-helper.js';
+import AlbumHelper from '../helpers/album-view-helper.js';
 import LogHelper from '../helpers/log-helper.js';
-import ProgressHelper from '../helpers/progress-helper.js';
 import SessionHelper from '../helpers/session-helper.js';
+
+/*********
+ * STORE *
+ *********/
+
+const passReduxStateToProps = ({
+    activeSongIndex,
+    activeAnnotationIndex,
+    activeOverviewIndex,
+    activeWikiUrl
+}) => ({
+    // Pass Redux state into component props.
+    activeSongIndex,
+    activeAnnotationIndex,
+    activeOverviewIndex,
+    activeWikiUrl
+});
+
+const bindDispatchToProps = (dispatch) => (
+    // Bind Redux action creators to component props.
+    bindActionCreators({
+        selectSongIndex,
+        selectAnnotationIndex,
+        selectOverviewIndex,
+        selectWikiUrl
+    }, dispatch)
+);
 
 /*************
  * CONTAINER *
@@ -64,8 +89,8 @@ class App extends Component {
                 activeSongIndex,
                 activeAnnotationIndex } = this.props,
 
-            activeSong = AppHelper.getSong(activeSongIndex, songs),
-            annotation = AppHelper.getAnnotation(activeAnnotationIndex, activeSong),
+            activeSong = AlbumHelper.getSong(activeSongIndex, songs),
+            annotation = AlbumHelper.getAnnotation(activeAnnotationIndex, activeSong),
             lyricObject = LogHelper.getLyricObjectForAnnotationIndex(activeAnnotationIndex, activeSong.lyrics);
 
         LogHelper.logObject('lyric', lyricObject);
@@ -124,136 +149,45 @@ class App extends Component {
     }
 
     render() {
+
         const {
                 // From album data.
                 songs,
+                title,
                 overviews,
                 tasks,
 
                 // From Redux.
                 activeSongIndex,
-                activeAnnotationIndex,
                 activeOverviewIndex,
+                activeAnnotationIndex,
                 activeWikiUrl
 
-            } = this.props,
-
-            allTasks = ProgressHelper.getAllTaskObjects(tasks, songs);
+            } = this.props;
 
         return (
-            <AppView {...this.props}
-                activeSongIndex={activeSongIndex}
-                activeAnnotationIndex={activeAnnotationIndex}
-                activeOverviewIndex={activeOverviewIndex}
+            <div className="app">
+                <Album
+                    songs={songs}
+                    albumTitle={title}
+                    albumOverviews={overviews}
+                    albumTasks={tasks}
 
-                activeWikiUrl={activeWikiUrl}
+                    activeSongIndex={activeSongIndex}
+                    activeOverviewIndex={activeOverviewIndex}
+                    activeAnnotationIndex={activeAnnotationIndex}
+                    activeWikiUrl={activeWikiUrl}
 
-                albumOverviews={overviews}
-                albumTasks={tasks}
-
-                allTasks={allTasks}
-
-                onTitleClick={this.handleTitleSelect}
-                onSongClick={this.handleSongSelect}
-                onPortalClick={this.handlePortalSelect}
-                onWikiUrlClick={this.handleWikiUrlSelect}
-                onAnnotationClick={this.handleAnnotationSelect}
-                onOverviewClick={this.handleOverviewSelect}
-                onDotClick={this.handleDotToggle}
-            />
+                    onSongClick={this.handleSongSelect}
+                    onPortalClick={this.handlePortalSelect}
+                    onWikiUrlClick={this.handleWikiUrlSelect}
+                    onAnnotationClick={this.handleAnnotationSelect}
+                    onOverviewClick={this.handleOverviewSelect}
+                    onDotClick={this.handleDotToggle}
+                />
+            </div>
         );
     }
 };
-
-/****************
- * PRESENTATION *
- ****************/
-
-const AppView = ({
-
-    // From props.
-    title,
-    songs,
-
-    // From controller.
-    activeSongIndex,
-    activeAnnotationIndex,
-    activeOverviewIndex,
-
-    activeWikiUrl,
-
-    // FIXME: Refactor. Song should not know album objects.
-    albumOverviews,
-    albumTasks,
-    allTasks,
-
-    onTitleClick,
-    onSongClick,
-    onPortalClick,
-    onWikiUrlClick,
-    onAnnotationClick,
-    onOverviewClick,
-    onDotClick
-
-}) => (
-
-    <div className="album">
-        <div className="column songs-column">
-            <TitleSection
-                titleText={title}
-                onClick={onTitleClick}
-            />
-            <SongsSection
-                songs={songs}
-                allTasks={allTasks}
-                activeSongIndex={activeSongIndex}
-                onSongClick={onSongClick}
-            />
-        </div>
-        <SongSection
-            songs={songs}
-            activeSongIndex={activeSongIndex}
-            activeAnnotationIndex={activeAnnotationIndex}
-            activeOverviewIndex={activeOverviewIndex}
-            activeWikiUrl={activeWikiUrl}
-
-            albumOverviews={albumOverviews}
-            albumTasks={albumTasks}
-
-            onDotClick={onDotClick}
-            onOverviewClick={onOverviewClick}
-            onPortalClick={onPortalClick}
-            onWikiUrlClick={onWikiUrlClick}
-            onAnnotationClick={onAnnotationClick}
-        />
-    </div>
-);
-
-/*********
- * STORE *
- *********/
-
-const passReduxStateToProps = ({
-    activeSongIndex,
-    activeAnnotationIndex,
-    activeOverviewIndex,
-    activeWikiUrl
-}) => ({
-    // Pass Redux state into component props.
-    activeSongIndex,
-    activeAnnotationIndex,
-    activeOverviewIndex,
-    activeWikiUrl
-});
-
-const bindDispatchToProps = (dispatch) => (
-    // Bind Redux action creators to component props.
-    bindActionCreators({
-        selectSongIndex,
-        selectAnnotationIndex,
-        selectOverviewIndex,
-        selectWikiUrl
-    }, dispatch)
-);
 
 export default connect(passReduxStateToProps, bindDispatchToProps)(App);

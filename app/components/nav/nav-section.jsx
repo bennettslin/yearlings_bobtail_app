@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SongsRow from './songs-row.jsx';
+import NavRow from './nav-row.jsx';
 import ProgressFooter from '../progress/progress-footer.jsx';
 import ProgressHelper from '../../helpers/progress-helper.js';
 
@@ -7,7 +7,7 @@ import ProgressHelper from '../../helpers/progress-helper.js';
  * CONTAINER *
  *************/
 
-const SongsSection = (props) => {
+const NavSection = (props) => {
 
     const { songs,
             allTasks } = props,
@@ -16,7 +16,7 @@ const SongsSection = (props) => {
         sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks);
 
     return (
-        <SongsSectionView {...props}
+        <NavSectionView {...props}
             maxTotalNeededHours={maxTotalNeededHours}
             sumAllTasks={sumAllTasks}
         />
@@ -27,7 +27,7 @@ const SongsSection = (props) => {
  * PRESENTATION *
  ****************/
 
-const SongsSectionView = ({
+const NavSectionView = ({
 
     // From props.
     songs,
@@ -50,7 +50,7 @@ const SongsSectionView = ({
         {songs.map((song, index) => {
             const isActive = activeSongIndex - 1 === index;
             return (
-                <SongsRow
+                <NavRow
                     key={index}
                     song={song}
                     songIndex={index + 1}
@@ -68,4 +68,4 @@ const SongsSectionView = ({
     </div>
 );
 
-export default SongsSection;
+export default NavSection;

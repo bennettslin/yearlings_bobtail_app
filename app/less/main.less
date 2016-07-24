@@ -19,7 +19,7 @@ body {
     margin: 0;
 }
 
-.album {
+.app {
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -32,39 +32,34 @@ body {
  * FIELDS *
  **********/
 
-.column, .field {
-    position: relative;
+.column {
+    display: flex;
     box-sizing: border-box;
-    padding: 0 (@column-padding * 0.5);
+}
 
+.field {
+    width: @field-width;
+    min-width: @field-width;
+    padding: 0 (@field-padding * 0.5);
     height: 100%;
     overflow-y: scroll;
 }
 
-.songs-column {
-    width: @column-width;
-    min-width: @column-width;
-    padding-left: @column-padding;
-    background-color: @left-field-colour;
+.album-field {
+    padding-left: @field-padding;
+    background-color: @album-field-colour;
     font-size: 1.2em;
 }
 
-.song-column {
-    display: flex;
-    padding-left: 0;
+.shared-field {
+    background-color: @shared-field-colour;
 }
 
-.data-field {
-    width: @column-width;
-    min-width: @column-width;
-    background-color: @centre-field-colour;
-}
-
-.lyrics-field {
-    width: @right-field-width;
-    min-width: @right-field-width;
-    padding-right: @column-padding;
-    background-color: @right-field-colour;
+.song-field {
+    width: @song-field-width;
+    min-width: @song-field-width;
+    padding-right: @field-padding;
+    background-color: @song-field-colour;
 }
 
 /************
@@ -75,11 +70,11 @@ body {
     box-sizing: border-box;
 
     &:not(.url-section) {
-        padding: @column-padding;
+        padding: @field-padding;
     }
 
     &:not(.in-popup) {
-        margin: @column-padding 0;
+        margin: @field-padding 0;
         background-color: @section-colour;
         box-shadow: 0 2px 2px 2px @box-shadow-colour;
     }

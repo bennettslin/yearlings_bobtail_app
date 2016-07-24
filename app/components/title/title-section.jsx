@@ -4,9 +4,18 @@ import React, { Component } from 'react';
  * CONTAINER *
  *************/
 
-const TitleSection = (props) => (
-    <TitleSectionView {...props} />
-);
+const TitleSection = (props) => {
+
+    const { onTitleClick } = props,
+
+        onClick = () => onTitleClick(0);
+
+    return (
+        <TitleSectionView {...props}
+            onClick={onClick}
+        />
+    );
+};
 
 /****************
  * PRESENTATION *
@@ -15,7 +24,7 @@ const TitleSection = (props) => (
 const TitleSectionView = ({
 
     // From props.
-    titleText,
+    title,
     onClick
 
 }) => (
@@ -23,7 +32,7 @@ const TitleSectionView = ({
     <div className="section title-section">
         <h1>
             <a onClick={onClick}>
-                {titleText}
+                {title}
             </a>
         </h1>
     </div>

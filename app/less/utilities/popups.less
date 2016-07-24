@@ -3,8 +3,8 @@
     .animation-mixin;
     @overflow-margin-width: 5px;
     position: absolute;
-    left: -@overflow-margin-width - (@column-padding * 0.5);
-    width: @centre-field-width + (@overflow-margin-width * 2);
+    left: -@overflow-margin-width - @field-width - @field-padding;
+    width: @field-width + (@overflow-margin-width * 2);
     overflow-y: scroll;
     box-shadow: -2px 2px 8px 8px @box-shadow-colour;
 
