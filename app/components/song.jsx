@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import AnnotationPopup from './annotation/annotation-popup.jsx';
 import WikiPopup from './wiki/wiki-popup.jsx';
 import DotsSection from './dots/dots-section.jsx';

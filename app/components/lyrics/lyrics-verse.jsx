@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { LYRIC_COLUMN_CLASSES } from '../../helpers/constants.js';
 import TextBlock from '../text/text-block.jsx';
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TextUnit from './text-unit.jsx';
 import DotsBlock from '../dots/dots-block.jsx';
 

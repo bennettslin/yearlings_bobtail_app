@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import OverviewButton from './overview-button.jsx';
 import { OVERVIEW_KEYS } from '../../helpers/constants.js';
 import TextBlock from '../text/text-block.jsx';

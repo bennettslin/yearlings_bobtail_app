@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import StatsHelper from '../../helpers/stats-helper.js';
 import { LYRIC_TEXT_KEYS } from '../../helpers/constants.js';
 

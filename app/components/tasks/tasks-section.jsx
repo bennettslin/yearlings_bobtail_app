@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TasksBlock from './tasks-block.jsx';
 import ProgressFooter from '../progress/progress-footer.jsx';
 import ProgressHelper from '../../helpers/progress-helper.js';

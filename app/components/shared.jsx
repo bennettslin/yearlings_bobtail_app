@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Song from './song.jsx';
 import NotesSection from './notes/notes-section.jsx';
 import OverviewsSection from './overviews/overviews-section.jsx';

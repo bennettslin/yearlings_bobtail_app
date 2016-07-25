@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Shared from './shared.jsx';
 import TitleSection from './title/title-section.jsx';
 import NavSection from './nav/nav-section.jsx';
