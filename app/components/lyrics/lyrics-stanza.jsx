@@ -1,5 +1,5 @@
-import React from 'react';
-import LyricsVerse from './lyrics-verse.jsx';
+import React from 'react'
+import LyricsVerse from './lyrics-verse.jsx'
 
 /*************
  * CONTAINER *
@@ -7,7 +7,7 @@ import LyricsVerse from './lyrics-verse.jsx';
 
 const LyricsStanza = (props) => (
     <LyricsStanzaView {...props} />
-);
+)
 
 /****************
  * PRESENTATION *
@@ -31,9 +31,9 @@ const LyricsStanzaView = ({
                     verseIndex={verseIndex}
                     onAnnotationClick={onAnnotationClick}
                 />
-            );
+            )
         })}
     </div>
-);
+)
 
-export default LyricsStanza;
+export default LyricsStanza

@@ -1,5 +1,5 @@
-import React from 'react';
-import AnnotationCard from './annotation-card.jsx';
+import React from 'react'
+import AnnotationCard from './annotation-card.jsx'
 
 /*************
  * CONTAINER *
@@ -7,20 +7,20 @@ import AnnotationCard from './annotation-card.jsx';
 
 const AnnotationUnit = (props) => {
 
-    const { annotation } = props;
+    const { annotation } = props
 
     if (Array.isArray(annotation.cards)) {
         return (
             <AnnotationUnitView {...props} />
-        );
+        )
     } else {
         return (
             <AnnotationCard {...props}
                 card={annotation.cards}
             />
-        );
+        )
     }
-};
+}
 
 /****************
  * PRESENTATION *
@@ -38,9 +38,9 @@ const AnnotationUnit = (props) => {
                       card={card}
                       songs={songs}
                   />
-              );
+              )
           })}
      </div>
- );
+ )
 
-export default AnnotationUnit;
+export default AnnotationUnit

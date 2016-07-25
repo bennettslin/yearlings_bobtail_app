@@ -1,7 +1,7 @@
-import React from 'react';
-import NavRow from './nav-row.jsx';
-import ProgressFooter from '../progress/progress-footer.jsx';
-import ProgressHelper from '../../helpers/progress-helper.js';
+import React from 'react'
+import NavRow from './nav-row.jsx'
+import ProgressFooter from '../progress/progress-footer.jsx'
+import ProgressHelper from '../../helpers/progress-helper.js'
 
 /*************
  * CONTAINER *
@@ -13,15 +13,15 @@ const NavSection = (props) => {
             allTasks } = props,
 
         maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
-        sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks);
+        sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks)
 
     return (
         <NavSectionView {...props}
             maxTotalNeededHours={maxTotalNeededHours}
             sumAllTasks={sumAllTasks}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -48,7 +48,7 @@ const NavSectionView = ({
             </div>
         </div>
         {songs.map((song, index) => {
-            const isActive = activeSongIndex - 1 === index;
+            const isActive = activeSongIndex - 1 === index
             return (
                 <NavRow
                     key={index}
@@ -58,7 +58,7 @@ const NavSectionView = ({
                     isActive={isActive}
                     onSongClick={onSongClick}
                 />
-            );
+            )
         })}
         <div className="row">
             <ProgressFooter
@@ -66,6 +66,6 @@ const NavSectionView = ({
             />
         </div>
     </div>
-);
+)
 
-export default NavSection;
+export default NavSection

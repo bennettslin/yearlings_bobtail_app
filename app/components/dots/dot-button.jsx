@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 /*************
  * CONTAINER *
@@ -9,13 +9,13 @@ const DotButton = (props) => {
     const { dotKey,
             onDotClick } = props,
 
-        onClick = onDotClick ? () => onDotClick(dotKey) : null;
+        onClick = onDotClick ? () => onDotClick(dotKey) : null
 
     return (
         <DotButtonView {...props}
             onClick={onClick}
         />
-    );
+    )
 }
 
 /****************
@@ -36,6 +36,6 @@ const DotButtonView = ({
         onClick={onClick}
     >
     </div>
-);
+)
 
-export default DotButton;
+export default DotButton

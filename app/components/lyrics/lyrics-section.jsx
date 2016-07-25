@@ -1,5 +1,5 @@
-import React from 'react';
-import LyricsStanza from './lyrics-stanza.jsx';
+import React from 'react'
+import LyricsStanza from './lyrics-stanza.jsx'
 
 /*************
  * CONTAINER *
@@ -7,7 +7,7 @@ import LyricsStanza from './lyrics-stanza.jsx';
 
 const LyricsSection = (props) => (
     <LyricsSectionView {...props} />
-);
+)
 
 /****************
  * PRESENTATION *
@@ -36,10 +36,10 @@ const LyricsSectionView = ({
                             onAnnotationClick={onAnnotationClick}
                         />
                     </div>
-                );
+                )
             })}
         </div>
     </div>
-);
+)
 
-export default LyricsSection;
+export default LyricsSection

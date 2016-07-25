@@ -2,12 +2,12 @@
 
 import { WINDOW_STORAGE,
          OVERVIEW_INDEX,
-         DEFAULT_OVERVIEW_INDEX } from './constants.js';
+         DEFAULT_OVERVIEW_INDEX } from './constants.js'
 
 export default {
 
     setInSession(key, value) {
-        WINDOW_STORAGE[key] = value;
+        WINDOW_STORAGE[key] = value
     },
 
     getFromSession(key) {
@@ -16,13 +16,13 @@ export default {
             const defaultValue =
                     (key === OVERVIEW_INDEX ? DEFAULT_OVERVIEW_INDEX : 0),
                 value = WINDOW_STORAGE[key] || defaultValue,
-                intValue = parseInt(value);
+                intValue = parseInt(value)
 
             // Session only ever stores numerical indices.
-            return isNaN(intValue) ? defaultValue : intValue;
+            return isNaN(intValue) ? defaultValue : intValue
 
         } else {
-            return 0;
+            return 0
         }
     }
 }

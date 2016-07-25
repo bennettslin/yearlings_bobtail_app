@@ -1,7 +1,7 @@
-import React from 'react';
-import OverviewButton from './overview-button.jsx';
-import { OVERVIEW_KEYS } from '../../helpers/constants.js';
-import TextBlock from '../text/text-block.jsx';
+import React from 'react'
+import OverviewButton from './overview-button.jsx'
+import { OVERVIEW_KEYS } from '../../helpers/constants.js'
+import TextBlock from '../text/text-block.jsx'
 
 /*************
  * CONTAINER *
@@ -11,14 +11,14 @@ const OverviewsSection = (props) => {
 
     const { activeOverviewIndex = 0 } = props,
 
-        activeOverviewKey = OVERVIEW_KEYS[activeOverviewIndex - 1];
+        activeOverviewKey = OVERVIEW_KEYS[activeOverviewIndex - 1]
 
     return (
         <OverviewsSectionView {...props}
             activeOverviewKey={activeOverviewKey}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -38,7 +38,7 @@ const OverviewsSectionView = ({
     <div className="section overviews-section">
         <div className="button-block">
             {OVERVIEW_KEYS.map((overviewKey, overviewIndex) => {
-                const isDisabled = (overviewKey === activeOverviewKey);
+                const isDisabled = (overviewKey === activeOverviewKey)
                 return (
                     <OverviewButton
                         key={overviewIndex}
@@ -47,7 +47,7 @@ const OverviewsSectionView = ({
                         overviewIndex={overviewIndex}
                         onOverviewClick={onOverviewClick}
                     />
-                );
+                )
             })}
         </div>
         <div className="overview-text">
@@ -57,6 +57,6 @@ const OverviewsSectionView = ({
             />
         </div>
     </div>
-);
+)
 
-export default OverviewsSection;
+export default OverviewsSection

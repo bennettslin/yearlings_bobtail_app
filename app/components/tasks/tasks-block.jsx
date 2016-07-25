@@ -1,5 +1,5 @@
-import React from 'react';
-import TaskRow from './task-row.jsx';
+import React from 'react'
+import TaskRow from './task-row.jsx'
 
 /*************
  * CONTAINER *
@@ -7,7 +7,7 @@ import TaskRow from './task-row.jsx';
 
 const TasksBlock = (props) => (
     <TasksBlockView {...props} />
-);
+)
 
 /****************
  * PRESENTATION *
@@ -42,9 +42,9 @@ const TasksBlockView = ({
                         /> : null
                     }
                 </div>
-            );
+            )
         })}
     </div>
-);
+)
 
-export default TasksBlock;
+export default TasksBlock

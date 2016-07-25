@@ -1,6 +1,6 @@
-import React from 'react';
-import Popup from '../superclasses/popup.jsx';
-import AnnotationSection from './annotation-section.jsx';
+import React from 'react'
+import Popup from '../superclasses/popup.jsx'
+import AnnotationSection from './annotation-section.jsx'
 
 const defaultProps = {
     annotation: null,
@@ -10,16 +10,16 @@ const defaultProps = {
 class AnnotationPopup extends Popup {
 
     getClassName() {
-        return 'annotation';
+        return 'annotation'
     }
 
     getContentElement() {
         return this.props.annotation ?
             <AnnotationSection {...this.props}
                 inPopup={true}
-            /> : null;
+            /> : null
     }
 }
 
-AnnotationPopup.defaultProps = defaultProps;
-export default AnnotationPopup;
+AnnotationPopup.defaultProps = defaultProps
+export default AnnotationPopup

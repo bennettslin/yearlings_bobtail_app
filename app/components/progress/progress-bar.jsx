@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 /*************
  * CONTAINER *
@@ -14,15 +14,15 @@ const ProgressBar = (props) => {
         },
         totalStyle = {
             width: (sumTask.neededHours / (maxTotalNeededHours || 0.01) * 100) + '%'
-        };
+        }
 
     return (
         <ProgressBarView
             filledStyle={filledStyle}
             totalStyle={totalStyle}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -39,6 +39,6 @@ const ProgressBarView = ({
     <div className="progress-bar" style={totalStyle}>
         <div className="filled-bar" style={filledStyle} />
     </div>
-);
+)
 
-export default ProgressBar;
+export default ProgressBar

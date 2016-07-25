@@ -1,6 +1,6 @@
-import React from 'react';
-import Popup from '../superclasses/popup.jsx';
-import WikiSection from './wiki-section.jsx';
+import React from 'react'
+import Popup from '../superclasses/popup.jsx'
+import WikiSection from './wiki-section.jsx'
 
 const defaultProps = {
     activeWikiUrl: null,
@@ -10,16 +10,16 @@ const defaultProps = {
 class WikiPopup extends Popup {
 
     getClassName() {
-        return 'url';
+        return 'url'
     }
 
     getContentElement() {
         return this.props.activeWikiUrl ?
             <WikiSection {...this.props}
                 inPopup={true}
-            /> : null;
+            /> : null
     }
 }
 
-WikiPopup.defaultProps = defaultProps;
-export default WikiPopup;
+WikiPopup.defaultProps = defaultProps
+export default WikiPopup

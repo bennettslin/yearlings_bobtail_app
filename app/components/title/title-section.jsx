@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 /*************
  * CONTAINER *
@@ -8,14 +8,14 @@ const TitleSection = (props) => {
 
     const { onTitleClick } = props,
 
-        onClick = () => onTitleClick(0);
+        onClick = () => onTitleClick(0)
 
     return (
         <TitleSectionView {...props}
             onClick={onClick}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -36,6 +36,6 @@ const TitleSectionView = ({
             </a>
         </h1>
     </div>
-);
+)
 
-export default TitleSection;
+export default TitleSection

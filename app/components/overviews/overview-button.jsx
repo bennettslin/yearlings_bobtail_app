@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 /*************
  * CONTAINER *
@@ -12,14 +12,14 @@ const OverviewButton = (props) => {
 
         // Overview indices begin at 1.
         onClick = !isDisabled ?
-            () => onOverviewClick(overviewIndex + 1) : null;
+            () => onOverviewClick(overviewIndex + 1) : null
 
     return (
         <OverviewButtonView {...props}
             onClick={onClick}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -43,6 +43,6 @@ const OverviewButtonView = ({
             </a>
         </h2>
     </div>
-);
+)
 
-export default OverviewButton;
+export default OverviewButton

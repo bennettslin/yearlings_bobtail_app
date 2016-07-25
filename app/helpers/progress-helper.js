@@ -4,44 +4,44 @@ export default {
 
     getMaxTotalNeededHoursFromSongs(songs = []) {
         return songs.reduce((maxTotalNeededHours, song) => {
-            const totalNeededHours = this.calculateSumTask(song.tasks).neededHours;
-            return Math.max(totalNeededHours, maxTotalNeededHours);
-        }, 0);
+            const totalNeededHours = this.calculateSumTask(song.tasks).neededHours
+            return Math.max(totalNeededHours, maxTotalNeededHours)
+        }, 0)
     },
 
     getMaxTotalNeededHoursFromTasks(tasks = []) {
         return tasks.reduce((maxTotalNeededHours, task) => {
-            let maxFromTask = task.neededHours;
+            let maxFromTask = task.neededHours
 
             if (task.subtasks) {
-                const maxFromSubtasks = this.getMaxTotalNeededHoursFromTasks(task.subtasks);
-                maxFromTask = Math.max(maxFromSubtasks, maxFromTask);
+                const maxFromSubtasks = this.getMaxTotalNeededHoursFromTasks(task.subtasks)
+                maxFromTask = Math.max(maxFromSubtasks, maxFromTask)
             }
 
-            return Math.max(maxTotalNeededHours, maxFromTask);
-        }, 0);
+            return Math.max(maxTotalNeededHours, maxFromTask)
+        }, 0)
     },
 
     calculateSumTask(tasks = []) {
         const sumTask = {
                 workedHours: 0,
                 neededHours: 0
-            };
+            }
 
         if (tasks.length === 0) {
-            return sumTask;
+            return sumTask
 
         } else {
             return tasks.reduce((sumTask, task) => {
 
                 // Calculate sum of subtasks, if there are any.
                 if (task.subtasks) {
-                    const sumSubtask = this.calculateSumTask(task.subtasks);
-                    task = this._addTwoTasks(sumSubtask, task);
+                    const sumSubtask = this.calculateSumTask(task.subtasks)
+                    task = this._addTwoTasks(sumSubtask, task)
                 }
 
-                return this._addTwoTasks(sumTask, task);
-            }, sumTask);
+                return this._addTwoTasks(sumTask, task)
+            }, sumTask)
         }
     },
 
@@ -49,11 +49,11 @@ export default {
         const sumAllTasks = {
                 workedHours: 0,
                 neededHours: 0
-            };
+            }
 
         return allTasks.reduce((sumAllTasks, tasks) => {
-            return this._addTwoTasks(sumAllTasks, this.calculateSumTask(tasks));
-        }, sumAllTasks);
+            return this._addTwoTasks(sumAllTasks, this.calculateSumTask(tasks))
+        }, sumAllTasks)
     },
 
     _addTwoTasks(task1 = {}, task2 = {}) {
@@ -62,7 +62,7 @@ export default {
                 (task2.workedHours || 0),
             neededHours: (task1.neededHours || 0) +
                 (task2.neededHours || 0)
-        };
+        }
     },
 
     _getRemainingTimeFromHours(hours = 0) {
@@ -77,40 +77,40 @@ export default {
             totalDays = hours / HOURS_IN_DAY,
             totalMonths = Math.floor(totalDays / DAYS_IN_MONTH),
             remainingWeeks = Math.floor((totalDays - (totalMonths * DAYS_IN_MONTH)) / DAYS_IN_WEEK),
-            remainingDays = Math.floor(totalDays - (totalMonths * DAYS_IN_MONTH) - (remainingWeeks * DAYS_IN_WEEK));
+            remainingDays = Math.floor(totalDays - (totalMonths * DAYS_IN_MONTH) - (remainingWeeks * DAYS_IN_WEEK))
 
         return {
             months: totalMonths,
             weeks: remainingWeeks,
             days: remainingDays
-        };
+        }
     },
 
     getRemainingTimeStringFromHours(hours = 0) {
         const remainingTimeObject = this._getRemainingTimeFromHours(hours),
             months = remainingTimeObject.months,
             weeks = remainingTimeObject.weeks,
-            days = remainingTimeObject.days;
+            days = remainingTimeObject.days
 
         return (months ? months + 'm' : '') +
                (months && weeks ? ', ' : '') +
                (weeks ? weeks + 'w' : '') +
                ((months || weeks) && days ? ', ' : '') +
-               (days ? days + 'd' : '');
+               (days ? days + 'd' : '')
     },
 
     areObjectsEqual(objects1 = {}, objects2 = {}) {
         // For task purposes.
-        return (JSON.stringify(objects1) === JSON.stringify(objects2));
+        return (JSON.stringify(objects1) === JSON.stringify(objects2))
     },
 
     getAllTaskObjects(albumTasks, songs) {
         let allTaskObjects = songs.map(song => {
-            return song.tasks;
-        });
+            return song.tasks
+        })
 
-        allTaskObjects.push(albumTasks);
+        allTaskObjects.push(albumTasks)
 
-        return allTaskObjects;
+        return allTaskObjects
     }
 }

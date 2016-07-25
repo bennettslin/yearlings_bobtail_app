@@ -1,5 +1,5 @@
-import React from 'react';
-import ProgressBar from '../progress/progress-bar.jsx';
+import React from 'react'
+import ProgressBar from '../progress/progress-bar.jsx'
 
 /*************
  * CONTAINER *
@@ -7,7 +7,7 @@ import ProgressBar from '../progress/progress-bar.jsx';
 
 const TaskRow = (props) => (
     <TaskRowView {...props} />
-);
+)
 
 /****************
  * PRESENTATION *
@@ -38,6 +38,6 @@ const TaskRowView = ({
             }
         </div>
     </div>
-);
+)
 
-export default TaskRow;
+export default TaskRow

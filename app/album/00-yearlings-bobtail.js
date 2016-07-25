@@ -121,4 +121,4 @@ module.exports = {
             neededHours: 3
         }
     ]
-};
+}

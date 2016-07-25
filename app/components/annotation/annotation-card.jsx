@@ -1,8 +1,8 @@
-import React from 'react';
-import DotsBlock from '../dots/dots-block.jsx';
-import TextBlock from '../text/text-block.jsx';
-import AnnotationPortalsBlock from './annotation-portals-block.jsx';
-import AppHelper from '../../helpers/album-view-helper.js';
+import React from 'react'
+import DotsBlock from '../dots/dots-block.jsx'
+import TextBlock from '../text/text-block.jsx'
+import AnnotationPortalsBlock from './annotation-portals-block.jsx'
+import AppHelper from '../../helpers/album-view-helper.js'
 
 /*************
  * CONTAINER *
@@ -12,13 +12,13 @@ const AnnotationCard = (props) => {
 
     const { card, songs } = props,
         { description,
-          dotKeys = {} } = card;
+          dotKeys = {} } = card
 
-    const portalLinks = AppHelper.getPortalLinks(card, songs);
+    const portalLinks = AppHelper.getPortalLinks(card, songs)
 
     // Add portal key to dot keys.
     if (portalLinks) {
-        dotKeys.portal = true;
+        dotKeys.portal = true
     }
 
     return (
@@ -27,8 +27,8 @@ const AnnotationCard = (props) => {
             dotKeys={dotKeys}
             portalLinks={portalLinks}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -64,6 +64,6 @@ const AnnotationCardView = ({
             /> : null
         }
     </div>
-);
+)
 
-export default AnnotationCard;
+export default AnnotationCard

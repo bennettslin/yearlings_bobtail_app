@@ -1,5 +1,5 @@
-import React from 'react';
-import ProgressHelper from '../../helpers/progress-helper.js';
+import React from 'react'
+import ProgressHelper from '../../helpers/progress-helper.js'
 
 /*************
  * CONTAINER *
@@ -12,7 +12,7 @@ const ProgressFooter = (props) => {
         workedHours = sumTask.workedHours,
         neededHours = sumTask.neededHours,
         remainingHours = neededHours - workedHours,
-        remainingTime = ProgressHelper.getRemainingTimeStringFromHours(remainingHours);
+        remainingTime = ProgressHelper.getRemainingTimeStringFromHours(remainingHours)
 
     return (
         <ProgressFooterView
@@ -21,8 +21,8 @@ const ProgressFooter = (props) => {
             remainingHours={remainingHours}
             remainingTime={remainingTime}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -46,6 +46,6 @@ const ProgressFooterView = ({
             </div> : null
         }
     </div>
-);
+)
 
-export default ProgressFooter;
+export default ProgressFooter

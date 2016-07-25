@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 /*************
  * CONTAINER *
@@ -6,7 +6,7 @@ import React from 'react';
 
 const WikiSection = (props) => (
     <WikiSectionView {...props} />
-);
+)
 
 /****************
  * PRESENTATION *
@@ -28,6 +28,6 @@ const WikiSectionView = ({
     <div className={`section wiki-section${inPopup ? ' in-popup' : ''}`}>
         <iframe src={activeWikiUrl} />
     </div>
-);
+)
 
-export default WikiSection;
+export default WikiSection

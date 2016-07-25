@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 import { LyricsWordCountRow,
          AnnotationsCountRow,
-         WordsPerAnnotationRow } from './stat-row.jsx';
+         WordsPerAnnotationRow } from './stat-row.jsx'
 
 /*************
  * CONTAINER *
@@ -9,7 +9,7 @@ import { LyricsWordCountRow,
 
 const StatsSection = (props) => (
     <StatsSectionView {...props} />
-);
+)
 
 /****************
  * PRESENTATION *
@@ -31,6 +31,6 @@ const StatsSectionView = ({
             <WordsPerAnnotationRow annotations={annotations} />
         </div>
     </div>
-);
+)
 
-export default StatsSection;
+export default StatsSection

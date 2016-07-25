@@ -453,4 +453,4 @@ module.exports = {
             ]
         }
     ]
-};
+}

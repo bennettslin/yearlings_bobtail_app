@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 /*************
  * CONTAINER *
@@ -6,7 +6,7 @@ import React from 'react';
 
 const AnnotationPortalsBlock = (props) => (
     <AnnotationPortalsBlockView {...props} />
-);
+)
 
 /****************
  * PRESENTATION *
@@ -25,7 +25,7 @@ const AnnotationPortalsBlockView = ({
             const { songIndex,
                     annotationIndex,
                     songTitle,
-                    annotationTitle } = portalObject;
+                    annotationTitle } = portalObject
             return (
                 <a key={index}
                     className="portal-button"
@@ -33,9 +33,9 @@ const AnnotationPortalsBlockView = ({
                     <div className="song-title">{songTitle}</div>
                     <div className="annotation-title">{annotationTitle}</div>
                 </a>
-            );
+            )
         })}
     </div>
-);
+)
 
-export default AnnotationPortalsBlock;
+export default AnnotationPortalsBlock

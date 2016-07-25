@@ -1,5 +1,5 @@
-import React from 'react';
-import DotsBlock from './dots-block.jsx';
+import React from 'react'
+import DotsBlock from './dots-block.jsx'
 
 /*************
  * CONTAINER *
@@ -7,7 +7,7 @@ import DotsBlock from './dots-block.jsx';
 
 const DotsSection = (props) => (
     <DotsSectionView {...props} />
-);
+)
 
 /****************
  * PRESENTATION *
@@ -28,6 +28,6 @@ const DotsSectionView = ({
             onDotClick={onDotClick}
         />
     </div>
-);
+)
 
-export default DotsSection;
+export default DotsSection

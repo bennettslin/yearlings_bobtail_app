@@ -1,6 +1,6 @@
-import React from 'react';
-import { LYRIC_COLUMN_CLASSES } from '../../helpers/constants.js';
-import TextBlock from '../text/text-block.jsx';
+import React from 'react'
+import { LYRIC_COLUMN_CLASSES } from '../../helpers/constants.js'
+import TextBlock from '../text/text-block.jsx'
 
 /*************
  * CONTAINER *
@@ -8,7 +8,7 @@ import TextBlock from '../text/text-block.jsx';
 
 const LyricsVerse = (props) => (
     <LyricsVerseView {...props} />
-);
+)
 
 /****************
  * PRESENTATION *
@@ -33,7 +33,7 @@ const LyricsVerseView = ({
             ) : (
                 <div className="double-lines-block">
                     {LYRIC_COLUMN_CLASSES.filter((keyClassPair) => {
-                        return verseObject[keyClassPair.key];
+                        return verseObject[keyClassPair.key]
                     }).map((keyClassPair, index) => {
                         return (
                             <div
@@ -46,12 +46,12 @@ const LyricsVerseView = ({
                                     onAnchorClick={onAnnotationClick}
                                 />
                             </div>
-                        );
+                        )
                     })}
                 </div>
             )
         }
     </div>
-);
+)
 
-export default LyricsVerse;
+export default LyricsVerse

@@ -1,6 +1,6 @@
-import React from 'react';
-import AnnotationUnit from './annotation-unit.jsx';
-// import AnnotationPortalsBlock from './annotation-portals-block.jsx';
+import React from 'react'
+import AnnotationUnit from './annotation-unit.jsx'
+// import AnnotationPortalsBlock from './annotation-portals-block.jsx'
 
 /*************
  * CONTAINER *
@@ -8,14 +8,14 @@ import AnnotationUnit from './annotation-unit.jsx';
 
 const AnnotationSection = (props) => {
 
-    const { annotation } = props;
+    const { annotation } = props
 
     return (
         <AnnotationSectionView {...props}
             title={annotation.title}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -48,6 +48,6 @@ const AnnotationSectionView = ({
             />
         </div>
     </div>
-);
+)
 
-export default AnnotationSection;
+export default AnnotationSection

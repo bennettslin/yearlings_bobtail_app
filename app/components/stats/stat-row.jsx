@@ -1,6 +1,6 @@
-import React from 'react';
-import StatsHelper from '../../helpers/stats-helper.js';
-import { LYRIC_TEXT_KEYS } from '../../helpers/constants.js';
+import React from 'react'
+import StatsHelper from '../../helpers/stats-helper.js'
+import { LYRIC_TEXT_KEYS } from '../../helpers/constants.js'
 
 /*************
  * CONTAINER *
@@ -10,14 +10,14 @@ const LyricsWordCountRow = (props) => {
 
     const { lyrics } = props,
 
-        lyricsWordCount = StatsHelper.getTotalWords(lyrics, LYRIC_TEXT_KEYS);
+        lyricsWordCount = StatsHelper.getTotalWords(lyrics, LYRIC_TEXT_KEYS)
 
     return (
         <StatRowView
             typeName="lyrics word count"
             typeCount={lyricsWordCount}
         />
-    );
+    )
 }
 
 const AnnotationsCountRow = (props) => {
@@ -28,14 +28,14 @@ const AnnotationsCountRow = (props) => {
         annotationsCount = StatsHelper.getCount(annotations),
         annotationsRatioCount = todoCount ?
             `${annotationsCount - todoCount}/${annotationsCount}` :
-            annotationsCount;
+            annotationsCount
 
     return (
         <StatRowView
             typeName="annotations count"
             typeCount={annotationsRatioCount}
         />
-    );
+    )
 }
 
 const WordsPerAnnotationRow = (props) => {
@@ -46,14 +46,14 @@ const WordsPerAnnotationRow = (props) => {
         annotationsWordCount = StatsHelper.getSumOfTotalWordsInAnnotations(annotations),
         annotationAverageWordCount = annotationsWordCount ?
             Math.ceil(annotationsWordCount / annotationsCount) :
-            '--';
+            '--'
 
     return (
         <StatRowView
             typeName="words per annotation"
             typeCount={annotationAverageWordCount}
         />
-    );
+    )
 }
 
 /****************
@@ -76,10 +76,10 @@ const StatRowView = ({
             {typeCount}
         </span>
     </div>
-);
+)
 
 export {
     LyricsWordCountRow,
     AnnotationsCountRow,
     WordsPerAnnotationRow
-};
+}

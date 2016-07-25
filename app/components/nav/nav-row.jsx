@@ -1,6 +1,6 @@
-import React from 'react';
-import ProgressBar from '../progress/progress-bar.jsx';
-import ProgressHelper from '../../helpers/progress-helper.js';
+import React from 'react'
+import ProgressBar from '../progress/progress-bar.jsx'
+import ProgressHelper from '../../helpers/progress-helper.js'
 
 /*************
  * CONTAINER *
@@ -15,7 +15,7 @@ const NavRow = (props) => {
 
         songTitle = song.title,
         sumTask = ProgressHelper.calculateSumTask(song.tasks),
-        onClick = () => !isActive ? onSongClick(songIndex) : null;
+        onClick = () => !isActive ? onSongClick(songIndex) : null
 
     return (
         <NavRowView {...props}
@@ -23,7 +23,7 @@ const NavRow = (props) => {
             sumTask={sumTask}
             onClick={onClick}
         />
-    );
+    )
 }
 
 /****************
@@ -61,6 +61,6 @@ const NavRowView = ({
             </span>
         </div>
     </div>
-);
+)
 
-export default NavRow;
+export default NavRow

@@ -1,7 +1,7 @@
-import React from 'react';
-import AnchorBlock from './anchor-block.jsx';
-import TextBlock from './text-block.jsx';
-import TextSpan from './text-span.jsx';
+import React from 'react'
+import AnchorBlock from './anchor-block.jsx'
+import TextBlock from './text-block.jsx'
+import TextSpan from './text-span.jsx'
 
 /*************
  * CONTAINER *
@@ -9,12 +9,12 @@ import TextSpan from './text-span.jsx';
 
 const TextUnit = (props) => {
 
-    const { text } = props;
+    const { text } = props
 
     if (typeof text === 'string') {
         return (
             <TextSpan {...props} />
-        );
+        )
 
     } else if (typeof text === 'object') {
         if (text.italic) {
@@ -24,7 +24,7 @@ const TextUnit = (props) => {
                         text={text.italic}
                     />
                 </i>
-            );
+            )
 
         } else if (text.emphasis) {
             return (
@@ -33,16 +33,16 @@ const TextUnit = (props) => {
                         text={text.emphasis}
                     />
                 </em>
-            );
+            )
 
         } else if (text.anchor) {
             return (
                 <AnchorBlock {...props} />
-            );
+            )
         }
     }
 
-    return null;
-};
+    return null
+}
 
-export default TextUnit;
+export default TextUnit

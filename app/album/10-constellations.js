@@ -703,4 +703,4 @@ module.exports = {
             ]
         }
     ]
-};
+}

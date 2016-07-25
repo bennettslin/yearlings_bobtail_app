@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 /*************
  * CONTAINER *
@@ -14,14 +14,14 @@ const TextSpan = (props) => {
          * Subsequent spans of text on a line will begin with a space, unless
          * it's in an anchor, or it begins with "'s."
          */
-        hasFirstSpace = !isInAnchor && (text.indexOf('\'s') !== 0);
+        hasFirstSpace = !isInAnchor && (text.indexOf('\'s') !== 0)
 
     // Add nonbreaking space between last two words if it's a lyric.
-    let spacedText = text;
+    let spacedText = text
     if (isLyric) {
-        const lastSpaceIndex = text.lastIndexOf(' ');
+        const lastSpaceIndex = text.lastIndexOf(' ')
         if (lastSpaceIndex > -1) {
-            spacedText = `${text.slice(0, lastSpaceIndex)}\u00a0${text.slice(lastSpaceIndex + 1)}`;
+            spacedText = `${text.slice(0, lastSpaceIndex)}\u00a0${text.slice(lastSpaceIndex + 1)}`
         }
     }
 
@@ -30,8 +30,8 @@ const TextSpan = (props) => {
             text={spacedText}
             hasFirstSpace={hasFirstSpace}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -49,6 +49,6 @@ const TextSpanView = ({
         className="text-span">
         {(hasFirstSpace ? ' ' : '') + text}
     </span>
-);
+)
 
-export default TextSpan;
+export default TextSpan

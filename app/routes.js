@@ -1,13 +1,13 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import React, { Component } from 'react'
+import { Route, IndexRoute } from 'react-router'
 
-import './less/main.less';
-import App from './components/app.jsx';
-import AlbumData from './album/00-yearlings-bobtail.js';
-import { prepareAlbumData } from './helpers/album-build-helper.js';
+import './less/main.less'
+import App from './components/app.jsx'
+import AlbumData from './album/00-yearlings-bobtail.js'
+import { prepareAlbumData } from './helpers/album-build-helper.js'
 
 // Restructure raw data to be usable by app.
-prepareAlbumData(AlbumData);
+prepareAlbumData(AlbumData)
 
 class Root extends Component {
     render() {
@@ -15,7 +15,7 @@ class Root extends Component {
             <div className="index">
                 {this.props.children}
             </div>
-        );
+        )
     }
 }
 
@@ -28,7 +28,7 @@ class Wrapper extends React.Component {
     render() {
         return (
             <App {...AlbumData} />
-        );
+        )
     }
 }
 
@@ -37,4 +37,4 @@ export default (
         <IndexRoute component={Wrapper} />
         <Route path="/yearlings_bobtail" component={Wrapper} />
     </Route>
-);
+)

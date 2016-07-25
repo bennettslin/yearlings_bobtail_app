@@ -1,8 +1,8 @@
-import React from 'react';
-import Shared from './shared.jsx';
-import TitleSection from './title/title-section.jsx';
-import NavSection from './nav/nav-section.jsx';
-import ProgressHelper from '../helpers/progress-helper.js';
+import React from 'react'
+import Shared from './shared.jsx'
+import TitleSection from './title/title-section.jsx'
+import NavSection from './nav/nav-section.jsx'
+import ProgressHelper from '../helpers/progress-helper.js'
 
 /*************
  * CONTAINER *
@@ -13,14 +13,14 @@ const Album = (props) => {
     const { songs,
             albumTasks } = props,
 
-        allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs);
+        allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs)
 
     return (
         <AlbumView {...props}
             allTasks={allTasks}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -38,7 +38,7 @@ const AlbumView = (props) => {
         // From controller.
         allTasks
 
-    } = props;
+    } = props
 
     return (
         <div className="column album-column">
@@ -56,7 +56,7 @@ const AlbumView = (props) => {
             </div>
             <Shared {...props} />
         </div>
-    );
-};
+    )
+}
 
-export default Album;
+export default Album

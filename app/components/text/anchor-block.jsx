@@ -1,6 +1,6 @@
-import React from 'react';
-import TextUnit from './text-unit.jsx';
-import DotsBlock from '../dots/dots-block.jsx';
+import React from 'react'
+import TextUnit from './text-unit.jsx'
+import DotsBlock from '../dots/dots-block.jsx'
 
 /*************
  * CONTAINER *
@@ -19,10 +19,10 @@ const AnchorBlock = (props) => {
          * click handler is the annotation index. Otherwise, it's a
          * reference, and the argument is a url string.
          */
-        clickHandlerArgument = text.annotationIndex || text.wiki;
+        clickHandlerArgument = text.annotationIndex || text.wiki
 
     if (text.wiki && dotKeys) {
-            dotKeys.wiki = true;
+            dotKeys.wiki = true
     }
 
     return (
@@ -32,8 +32,8 @@ const AnchorBlock = (props) => {
             anchorText={anchorText}
             clickHandlerArgument={clickHandlerArgument}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -74,6 +74,6 @@ const AnchorBlockView = ({
             />
         </a>
     </span>
-);
+)
 
-export default AnchorBlock;
+export default AnchorBlock

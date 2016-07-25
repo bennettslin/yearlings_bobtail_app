@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 /*************
  * CONTAINER *
@@ -6,7 +6,7 @@ import React from 'react';
 
 const NotesSection = () => (
     <NotesSectionView />
-);
+)
 
 /****************
  * PRESENTATION *
@@ -28,6 +28,6 @@ const NotesSectionView = () => (
             </span>
         </div>
     </div>
-);
+)
 
-export default NotesSection;
+export default NotesSection

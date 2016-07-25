@@ -1,10 +1,10 @@
-import React from 'react';
-import Song from './song.jsx';
-import NotesSection from './notes/notes-section.jsx';
-import OverviewsSection from './overviews/overviews-section.jsx';
-import StatsSection from './stats/stats-section.jsx';
-import TasksSection from './tasks/tasks-section.jsx';
-import AlbumHelper from '../helpers/album-view-helper.js';
+import React from 'react'
+import Song from './song.jsx'
+import NotesSection from './notes/notes-section.jsx'
+import OverviewsSection from './overviews/overviews-section.jsx'
+import StatsSection from './stats/stats-section.jsx'
+import TasksSection from './tasks/tasks-section.jsx'
+import AlbumHelper from '../helpers/album-view-helper.js'
 
 /*************
  * CONTAINER *
@@ -20,7 +20,7 @@ const Shared = (props) => {
 
         activeSong = AlbumHelper.getSong(activeSongIndex, songs),
         overviewText = AlbumHelper.getOverviewText(activeOverviewIndex, activeSong, albumOverviews),
-        tasks = AlbumHelper.getTasks(activeSong, albumTasks);
+        tasks = AlbumHelper.getTasks(activeSong, albumTasks)
 
     return (
         <SharedView {...props}
@@ -28,8 +28,8 @@ const Shared = (props) => {
             overviewText={overviewText}
             tasks={tasks}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -48,7 +48,7 @@ const SharedView = (props) => {
         overviewText,
         tasks
 
-    } = props;
+    } = props
 
     return (
         <div className="column shared-column">
@@ -74,7 +74,7 @@ const SharedView = (props) => {
                 <Song {...props} /> : null
             }
         </div>
-    );
-};
+    )
+}
 
-export default Shared;
+export default Shared

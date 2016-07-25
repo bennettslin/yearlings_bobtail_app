@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import { selectSongIndex,
          selectAnnotationIndex,
          selectOverviewIndex,
-         selectWikiUrl } from '../redux/actions/index.js';
+         selectWikiUrl } from '../redux/actions/index.js'
 
-import Album from './album.jsx';
+import Album from './album.jsx'
 
 import { SONG_INDEX,
          ANNOTATION_INDEX,
          OVERVIEW_INDEX,
-         DEFAULT_OVERVIEW_INDEX } from '../helpers/constants.js';
-import AlbumHelper from '../helpers/album-view-helper.js';
-import LogHelper from '../helpers/log-helper.js';
-import SessionHelper from '../helpers/session-helper.js';
+         DEFAULT_OVERVIEW_INDEX } from '../helpers/constants.js'
+import AlbumHelper from '../helpers/album-view-helper.js'
+import LogHelper from '../helpers/log-helper.js'
+import SessionHelper from '../helpers/session-helper.js'
 
 /*********
  * STORE *
@@ -31,7 +31,7 @@ const passReduxStateToProps = ({
     activeAnnotationIndex,
     activeOverviewIndex,
     activeWikiUrl
-});
+})
 
 const bindDispatchToProps = (dispatch) => (
     // Bind Redux action creators to component props.
@@ -41,7 +41,7 @@ const bindDispatchToProps = (dispatch) => (
         selectOverviewIndex,
         selectWikiUrl
     }, dispatch)
-);
+)
 
 /*************
  * CONTAINER *
@@ -50,38 +50,38 @@ const bindDispatchToProps = (dispatch) => (
 class App extends Component {
 
     constructor(props) {
-        super(props);
+        super(props)
 
-        this.handleTitleSelect = this.handleTitleSelect.bind(this);
-        this.handleSongSelect = this.handleSongSelect.bind(this);
-        this.handleOverviewSelect = this.handleOverviewSelect.bind(this);
-        this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this);
-        this.handlePortalSelect = this.handlePortalSelect.bind(this);
-        this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this);
+        this.handleTitleSelect = this.handleTitleSelect.bind(this)
+        this.handleSongSelect = this.handleSongSelect.bind(this)
+        this.handleOverviewSelect = this.handleOverviewSelect.bind(this)
+        this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this)
+        this.handlePortalSelect = this.handlePortalSelect.bind(this)
+        this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
     }
 
     componentWillMount() {
         const { activeSongIndex,
                 activeAnnotationIndex,
-                activeOverviewIndex } = this.props;
+                activeOverviewIndex } = this.props
         /**
          * Retrieve stored indices, if any. Indices start at 1.
          */
-        this.handleSongSelect(activeSongIndex, SONG_INDEX);
-        this.handleAnnotationSelect(activeAnnotationIndex);
-        this.handleOverviewSelect(activeOverviewIndex);
+        this.handleSongSelect(activeSongIndex, SONG_INDEX)
+        this.handleAnnotationSelect(activeAnnotationIndex)
+        this.handleOverviewSelect(activeOverviewIndex)
 
-        this._assignLogFunctions();
+        this._assignLogFunctions()
     }
 
     _assignLogFunctions() {
-        window.s = this._logStorage;
-        window.a = this._logAnchorAnnotation.bind(this);
+        window.s = this._logStorage
+        window.a = this._logAnchorAnnotation.bind(this)
     }
 
     _logStorage() {
         // Global helper's storage object is the default.
-        return LogHelper.logObject('window storage');
+        return LogHelper.logObject('window storage')
     }
 
     _logAnchorAnnotation() {
@@ -91,22 +91,22 @@ class App extends Component {
 
             activeSong = AlbumHelper.getSong(activeSongIndex, songs),
             annotation = AlbumHelper.getAnnotation(activeAnnotationIndex, activeSong),
-            lyricObject = LogHelper.getLyricObjectForAnnotationIndex(activeAnnotationIndex, activeSong.lyrics);
+            lyricObject = LogHelper.getLyricObjectForAnnotationIndex(activeAnnotationIndex, activeSong.lyrics)
 
-        LogHelper.logObject('lyric', lyricObject);
-        return LogHelper.logObject('annotation', annotation);
+        LogHelper.logObject('lyric', lyricObject)
+        return LogHelper.logObject('annotation', annotation)
     }
 
     handleTitleSelect() {
-        this.handleSongSelect(0);
+        this.handleSongSelect(0)
     }
 
     handleSongSelect(activeIndex = 0, activeIndexKey = SONG_INDEX) {
         if (activeIndex >= 0 && activeIndex <= this.props.songs.length) {
             // Store song index in session.
 
-            this.props.selectSongIndex(activeIndex);
-            SessionHelper.setInSession(activeIndexKey, activeIndex);
+            this.props.selectSongIndex(activeIndex)
+            SessionHelper.setInSession(activeIndexKey, activeIndex)
 
             /**
              * Also reset the stored annotation and overview indices if
@@ -114,38 +114,38 @@ class App extends Component {
              * overview is 1 for narrative.
              */
             if (activeIndexKey === SONG_INDEX) {
-                this.handleAnnotationSelect();
-                this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX);
+                this.handleAnnotationSelect()
+                this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX)
             }
         }
     }
 
     handleOverviewSelect(activeIndex) {
-        this.props.selectOverviewIndex(activeIndex);
-        SessionHelper.setInSession(OVERVIEW_INDEX, activeIndex);
+        this.props.selectOverviewIndex(activeIndex)
+        SessionHelper.setInSession(OVERVIEW_INDEX, activeIndex)
     }
 
     handleAnnotationSelect(activeIndex) {
-        this.props.selectAnnotationIndex(activeIndex);
-        SessionHelper.setInSession(ANNOTATION_INDEX, activeIndex);
+        this.props.selectAnnotationIndex(activeIndex)
+        SessionHelper.setInSession(ANNOTATION_INDEX, activeIndex)
     }
 
     handleWikiUrlSelect(activeWiki) {
         const activeWikiUrl = activeWiki ?
-            `https://en.m.wikipedia.org/wiki/${activeWiki}` : null;
+            `https://en.m.wikipedia.org/wiki/${activeWiki}` : null
 
         // Dispatch Redux action.
-        this.props.selectWikiUrl(activeWikiUrl);
+        this.props.selectWikiUrl(activeWikiUrl)
     }
 
     handlePortalSelect(activeSongIndex, activeAnnotationIndex) {
-        this.handleSongSelect(activeSongIndex, SONG_INDEX);
-        this.handleAnnotationSelect(activeAnnotationIndex);
+        this.handleSongSelect(activeSongIndex, SONG_INDEX)
+        this.handleAnnotationSelect(activeAnnotationIndex)
     }
 
     handleDotToggle(dotKey) {
         // TODO: Toggle dot key.
-        console.log(dotKey);
+        console.log(dotKey)
     }
 
     render() {
@@ -163,7 +163,7 @@ class App extends Component {
                 activeAnnotationIndex,
                 activeWikiUrl
 
-            } = this.props;
+            } = this.props
 
         return (
             <div className="app">
@@ -186,8 +186,8 @@ class App extends Component {
                     onDotClick={this.handleDotToggle}
                 />
             </div>
-        );
+        )
     }
-};
+}
 
-export default connect(passReduxStateToProps, bindDispatchToProps)(App);
+export default connect(passReduxStateToProps, bindDispatchToProps)(App)

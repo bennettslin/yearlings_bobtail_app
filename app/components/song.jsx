@@ -1,9 +1,9 @@
-import React from 'react';
-import AnnotationPopup from './annotation/annotation-popup.jsx';
-import WikiPopup from './wiki/wiki-popup.jsx';
-import DotsSection from './dots/dots-section.jsx';
-import LyricsSection from './lyrics/lyrics-section.jsx';
-import AlbumHelper from '../helpers/album-view-helper.js';
+import React from 'react'
+import AnnotationPopup from './annotation/annotation-popup.jsx'
+import WikiPopup from './wiki/wiki-popup.jsx'
+import DotsSection from './dots/dots-section.jsx'
+import LyricsSection from './lyrics/lyrics-section.jsx'
+import AlbumHelper from '../helpers/album-view-helper.js'
 
 /*************
  * CONTAINER *
@@ -14,7 +14,7 @@ const Song = (props) => {
     const { activeSong,
             activeAnnotationIndex } = props,
 
-        annotation = AlbumHelper.getAnnotation(activeAnnotationIndex, activeSong);
+        annotation = AlbumHelper.getAnnotation(activeAnnotationIndex, activeSong)
 
     return (
         <SongView {...props}
@@ -22,8 +22,8 @@ const Song = (props) => {
             activeSongDotKeys={activeSong.dotKeys}
             activeSongLyrics={activeSong.lyrics}
         />
-    );
-};
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -71,6 +71,6 @@ const SongView = ({
             />
         </div>
     </div>
-);
+)
 
-export default Song;
+export default Song
