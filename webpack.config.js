@@ -8,16 +8,16 @@
 const webpack = require('webpack'),
     path = require('path'),
     PATHS = {
-        app: path.join(__dirname, 'app'),
-        build: path.join(__dirname, 'build'),
-        less: path.join(__dirname, 'app/less')
+        app: path.resolve(__dirname, 'app'),
+        build: path.resolve(__dirname, 'build'),
+        less: path.resolve(__dirname, 'app/less')
     };
 
 module.exports = {
 
     resolve: {
         root: [
-            // Import modules as if /app is the root.
+            // Import modules as if ./app is the root.
             path.resolve(__dirname, './app')
         ],
         // import from files without specifying extensions.
@@ -35,6 +35,16 @@ module.exports = {
     output: {
         path: PATHS.build,
         filename: 'bundle.js'
+    },
+
+    /**
+     * From Enzyme docs:
+     * http://airbnb.io/enzyme/docs/guides/webpack.html
+     */
+    externals: {
+        'react/addons': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true
     },
 
     devServer: {
