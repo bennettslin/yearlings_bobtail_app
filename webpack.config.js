@@ -15,6 +15,15 @@ const webpack = require('webpack'),
 
 module.exports = {
 
+    resolve: {
+        root: [
+            // Import modules as if /app is the root.
+            path.resolve(__dirname, './app')
+        ],
+        // import from files without specifying extensions.
+        extensions: ['', '.js', '.json', '.jsx']
+    },
+
     /**
      * Entry accepts a path or an object of entries. We'll be using the latter
      * form given it's convenient with more complex configurations.
