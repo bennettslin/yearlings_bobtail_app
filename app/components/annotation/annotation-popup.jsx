@@ -1,6 +1,6 @@
 import React from 'react'
-import Popup from '../superclasses/popup.jsx'
-import AnnotationSection from './annotation-section.jsx'
+import Popup from '../superclasses/popup'
+import AnnotationSection from './annotation-section'
 
 const defaultProps = {
     annotation: null,

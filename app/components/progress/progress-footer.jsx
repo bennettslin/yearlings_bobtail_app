@@ -1,5 +1,5 @@
 import React from 'react'
-import ProgressHelper from '../../helpers/progress-helper.js'
+import ProgressHelper from 'helpers/progress-helper'
 
 /*************
  * CONTAINER *

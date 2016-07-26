@@ -1,5 +1,5 @@
 import React from 'react'
-import AnnotationCard from './annotation-card.jsx'
+import AnnotationCard from './annotation-card'
 
 /*************
  * CONTAINER *

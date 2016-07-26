@@ -1,7 +1,7 @@
 import React from 'react'
-import AnchorBlock from './anchor-block.jsx'
-import TextBlock from './text-block.jsx'
-import TextSpan from './text-span.jsx'
+import AnchorBlock from './anchor-block'
+import TextBlock from './text-block'
+import TextSpan from './text-span'
 
 /*************
  * CONTAINER *

@@ -1,6 +1,6 @@
 import React from 'react'
-import TextUnit from './text-unit.jsx'
-import DotsBlock from '../dots/dots-block.jsx'
+import TextUnit from './text-unit'
+import DotsBlock from '../dots/dots-block'
 
 /*************
  * CONTAINER *

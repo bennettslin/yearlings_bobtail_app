@@ -2,7 +2,7 @@
 
 import { WINDOW_STORAGE,
          OVERVIEW_INDEX,
-         DEFAULT_OVERVIEW_INDEX } from './constants.js'
+         DEFAULT_OVERVIEW_INDEX } from './constants'
 
 export default {
 

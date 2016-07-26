@@ -1,7 +1,7 @@
 import React from 'react'
-import NavRow from './nav-row.jsx'
-import ProgressFooter from '../progress/progress-footer.jsx'
-import ProgressHelper from '../../helpers/progress-helper.js'
+import NavRow from './nav-row'
+import ProgressFooter from '../progress/progress-footer'
+import ProgressHelper from 'helpers/progress-helper'
 
 /*************
  * CONTAINER *

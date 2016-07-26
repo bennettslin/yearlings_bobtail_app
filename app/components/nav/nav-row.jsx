@@ -1,6 +1,6 @@
 import React from 'react'
-import ProgressBar from '../progress/progress-bar.jsx'
-import ProgressHelper from '../../helpers/progress-helper.js'
+import ProgressBar from '../progress/progress-bar'
+import ProgressHelper from 'helpers/progress-helper'
 
 /*************
  * CONTAINER *

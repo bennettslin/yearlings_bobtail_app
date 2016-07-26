@@ -4,17 +4,15 @@ import { connect } from 'react-redux'
 import { selectSongIndex,
          selectAnnotationIndex,
          selectOverviewIndex,
-         selectWikiUrl } from '../redux/actions/index.js'
-
-import Album from './album.jsx'
-
+         selectWikiUrl } from 'redux/actions'
+import Album from './album'
 import { SONG_INDEX,
          ANNOTATION_INDEX,
          OVERVIEW_INDEX,
-         DEFAULT_OVERVIEW_INDEX } from '../helpers/constants.js'
-import AlbumHelper from '../helpers/album-view-helper.js'
-import LogHelper from '../helpers/log-helper.js'
-import SessionHelper from '../helpers/session-helper.js'
+         DEFAULT_OVERVIEW_INDEX } from 'helpers/constants'
+import AlbumHelper from 'helpers/album-view-helper'
+import LogHelper from 'helpers/log-helper'
+import SessionHelper from 'helpers/session-helper'
 
 /*********
  * STORE *

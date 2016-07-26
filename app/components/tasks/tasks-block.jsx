@@ -1,5 +1,5 @@
 import React from 'react'
-import TaskRow from './task-row.jsx'
+import TaskRow from './task-row'
 
 /*************
  * CONTAINER *

@@ -1,6 +1,5 @@
 import React from 'react'
-import AnnotationUnit from './annotation-unit.jsx'
-// import AnnotationPortalsBlock from './annotation-portals-block.jsx'
+import AnnotationUnit from './annotation-unit'
 
 /*************
  * CONTAINER *

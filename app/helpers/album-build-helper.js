@@ -1,9 +1,9 @@
 // Parse album data for build.
 
 import { OVERVIEW_KEYS,
-         LYRIC_TEXT_KEYS } from './constants.js'
-import { getFormattedAnnotationTitle } from './format-helper.js'
-import { findKeyInObject } from './general-helper.js'
+         LYRIC_TEXT_KEYS } from './constants'
+import { getFormattedAnnotationTitle } from './format-helper'
+import { findKeyInObject } from './general-helper'
 
 const _tempStore = {
     songIndex: 0,

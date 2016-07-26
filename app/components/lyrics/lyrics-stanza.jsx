@@ -1,5 +1,5 @@
 import React from 'react'
-import LyricsVerse from './lyrics-verse.jsx'
+import LyricsVerse from './lyrics-verse'
 
 /*************
  * CONTAINER *

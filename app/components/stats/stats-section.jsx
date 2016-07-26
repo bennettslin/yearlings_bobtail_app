@@ -1,7 +1,7 @@
 import React from 'react'
 import { LyricsWordCountRow,
          AnnotationsCountRow,
-         WordsPerAnnotationRow } from './stat-row.jsx'
+         WordsPerAnnotationRow } from './stat-row'
 
 /*************
  * CONTAINER *

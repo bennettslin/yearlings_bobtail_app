@@ -1,9 +1,9 @@
 import React from 'react'
-import AnnotationPopup from './annotation/annotation-popup.jsx'
-import WikiPopup from './wiki/wiki-popup.jsx'
-import DotsSection from './dots/dots-section.jsx'
-import LyricsSection from './lyrics/lyrics-section.jsx'
-import AlbumHelper from '../helpers/album-view-helper.js'
+import AnnotationPopup from './annotation/annotation-popup'
+import WikiPopup from './wiki/wiki-popup'
+import DotsSection from './dots/dots-section'
+import LyricsSection from './lyrics/lyrics-section'
+import AlbumHelper from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *

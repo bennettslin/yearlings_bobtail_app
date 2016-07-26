@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { Route, IndexRoute } from 'react-router'
 
 import './less/main.less'
-import App from './components/app.jsx'
-import AlbumData from './album/00-yearlings-bobtail.js'
-import { prepareAlbumData } from './helpers/album-build-helper.js'
+import App from './components/app'
+import AlbumData from './album/00-yearlings-bobtail'
+import { prepareAlbumData } from './helpers/album-build-helper'
 
 // Restructure raw data to be usable by app.
 prepareAlbumData(AlbumData)

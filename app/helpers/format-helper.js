@@ -1,6 +1,6 @@
 // Helpers for parsing text objects.
 
-import { LYRIC_TEXT_KEYS } from './constants.js'
+import { LYRIC_TEXT_KEYS } from './constants'
 
 // Parses text in anchor tag into annotation header.
 export const getFormattedAnnotationTitle = (anchor, properNoun) => {

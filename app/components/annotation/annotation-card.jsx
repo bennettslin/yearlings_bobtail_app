@@ -1,8 +1,8 @@
 import React from 'react'
-import DotsBlock from '../dots/dots-block.jsx'
-import TextBlock from '../text/text-block.jsx'
-import AnnotationPortalsBlock from './annotation-portals-block.jsx'
-import AppHelper from '../../helpers/album-view-helper.js'
+import DotsBlock from '../dots/dots-block'
+import TextBlock from '../text/text-block'
+import AnnotationPortalsBlock from './annotation-portals-block'
+import AppHelper from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *

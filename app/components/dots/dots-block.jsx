@@ -1,6 +1,6 @@
 import React from 'react'
-import DotButton from './dot-button.jsx'
-import { ALL_DOT_KEYS } from '../../helpers/constants.js'
+import DotButton from './dot-button'
+import { ALL_DOT_KEYS } from 'helpers/constants'
 
 const defaultProps = {
     dotKeys: {},

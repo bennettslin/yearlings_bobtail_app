@@ -1,6 +1,6 @@
 import React from 'react'
-import { LYRIC_COLUMN_CLASSES } from '../../helpers/constants.js'
-import TextBlock from '../text/text-block.jsx'
+import TextBlock from '../text/text-block'
+import { LYRIC_COLUMN_CLASSES } from 'helpers/constants'
 
 /*************
  * CONTAINER *

@@ -21,7 +21,7 @@ module.exports = {
             path.resolve(__dirname, './app')
         ],
         // import from files without specifying extensions.
-        extensions: ['', '.js', '.json', '.jsx']
+        extensions: ['', '.js', '.jsx', '.less']
     },
 
     /**

@@ -1,6 +1,6 @@
 import React from 'react'
-import AnchorBlock from './anchor-block.jsx'
-import TextUnit from './text-unit.jsx'
+import AnchorBlock from './anchor-block'
+import TextUnit from './text-unit'
 
 /*************
  * CONTAINER *

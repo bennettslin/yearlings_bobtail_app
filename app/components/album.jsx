@@ -1,8 +1,8 @@
 import React from 'react'
-import Shared from './shared.jsx'
-import TitleSection from './title/title-section.jsx'
-import NavSection from './nav/nav-section.jsx'
-import ProgressHelper from '../helpers/progress-helper.js'
+import Shared from './shared'
+import TitleSection from './title/title-section'
+import NavSection from './nav/nav-section'
+import ProgressHelper from 'helpers/progress-helper'
 
 /*************
  * CONTAINER *

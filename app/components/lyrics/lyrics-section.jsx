@@ -1,5 +1,5 @@
 import React from 'react'
-import LyricsStanza from './lyrics-stanza.jsx'
+import LyricsStanza from './lyrics-stanza'
 
 /*************
  * CONTAINER *

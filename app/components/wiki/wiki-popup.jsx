@@ -1,6 +1,6 @@
 import React from 'react'
-import Popup from '../superclasses/popup.jsx'
-import WikiSection from './wiki-section.jsx'
+import Popup from '../superclasses/popup'
+import WikiSection from './wiki-section'
 
 const defaultProps = {
     activeWikiUrl: null,

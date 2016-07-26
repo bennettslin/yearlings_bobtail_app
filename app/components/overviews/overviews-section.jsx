@@ -1,7 +1,7 @@
 import React from 'react'
-import OverviewButton from './overview-button.jsx'
-import { OVERVIEW_KEYS } from '../../helpers/constants.js'
-import TextBlock from '../text/text-block.jsx'
+import OverviewButton from './overview-button'
+import TextBlock from '../text/text-block'
+import { OVERVIEW_KEYS } from 'helpers/constants'
 
 /*************
  * CONTAINER *

@@ -1,7 +1,7 @@
 // For dev purposes. Calculate words in lyrics and annotations.
 
 import { ALL_DOT_KEYS,
-         TEXT_KEYS } from './constants.js'
+         TEXT_KEYS } from './constants'
 
 export default {
 
