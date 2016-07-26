@@ -4,12 +4,10 @@ import { SONG_INDEX,
          OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX,
          WIKI_URL } from '../app/helpers/constants'
-
-import SessionHelper from '../app/helpers/session-helper'
-import SongIndexReducer from '../app/redux/reducers/reducer-song-index'
-import AnnotationIndexReducer from '../app/redux/reducers/reducer-annotation-index'
-import OverviewIndexReducer from '../app/redux/reducers/reducer-overview-index'
-import WikiUrlReducer from '../app/redux/reducers/reducer-wiki-url'
+import { SongIndexReducer,
+         AnnotationIndexReducer,
+         OverviewIndexReducer,
+         WikiUrlReducer } from '../app/redux/reducers'
 
 describe('reducers', () => {
 
