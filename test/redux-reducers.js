@@ -1,0 +1,77 @@
+import { expect } from 'chai'
+import { SONG_INDEX,
+         ANNOTATION_INDEX,
+         OVERVIEW_INDEX,
+         DEFAULT_OVERVIEW_INDEX,
+         WIKI_URL } from '../app/helpers/constants'
+
+import SessionHelper from '../app/helpers/session-helper'
+import SongIndexReducer from '../app/redux/reducers/reducer-song-index'
+import AnnotationIndexReducer from '../app/redux/reducers/reducer-annotation-index'
+import OverviewIndexReducer from '../app/redux/reducers/reducer-overview-index'
+import WikiUrlReducer from '../app/redux/reducers/reducer-wiki-url'
+
+describe('reducers', () => {
+
+    describe('SongIndexReducer', () => {
+
+        /**
+         * FIXME: This expect doesn't work because session helper seems to know
+         * a different window object?
+         */
+        //  it('returns stored index if initial state', () => {
+        //      const STORED_INDEX = 15
+        //      expect(SongIndexReducer(undefined, {})).to.equal(STORED_INDEX)
+        //  })
+
+        it('returns current index if passed unknown type', () => {
+            const CURRENT_INDEX = 11
+            expect(SongIndexReducer(CURRENT_INDEX, {})).to.equal(CURRENT_INDEX)
+        })
+
+        it('handles action type of song index', () => {
+            const NEW_INDEX = 6,
+                action = { type: SONG_INDEX, payload: NEW_INDEX }
+            expect(SongIndexReducer(undefined, action)).to.equal(NEW_INDEX)
+        })
+    })
+
+    describe('AnnotationIndexReducer', () => {
+        it('returns current index if passed unknown type', () => {
+            const CURRENT_INDEX = 13
+            expect(AnnotationIndexReducer(CURRENT_INDEX, {})).to.equal(CURRENT_INDEX)
+        })
+
+        it('handles action type of annotation index', () => {
+            const NEW_INDEX = 8,
+                action = { type: ANNOTATION_INDEX, payload: NEW_INDEX }
+            expect(AnnotationIndexReducer(undefined, action)).to.equal(NEW_INDEX)
+        })
+    })
+
+    describe('OverviewIndexReducer', () => {
+        it('returns current index if passed unknown type', () => {
+            const CURRENT_INDEX = 2
+            expect(OverviewIndexReducer(CURRENT_INDEX, {})).to.equal(CURRENT_INDEX)
+        })
+
+        it('handles action type of overview index', () => {
+            const NEW_INDEX = 2,
+                action = { type: OVERVIEW_INDEX, payload: NEW_INDEX }
+            expect(OverviewIndexReducer(undefined, action)).to.equal(NEW_INDEX)
+        })
+    })
+
+    describe('WikiUrlReducer', () => {
+        it('returns current url if passed unknown type', () => {
+            const CURRENT_URL = 'Pterodactylus'
+            expect(WikiUrlReducer(CURRENT_URL, {})).to.equal(CURRENT_URL)
+        })
+
+        it('handles action type of wiki url', () => {
+            const NEW_WIKI_URL = 'Tyrannosaurus',
+                action = { type: WIKI_URL, payload: NEW_WIKI_URL }
+            expect(WikiUrlReducer(undefined, action)).to.equal(NEW_WIKI_URL)
+        })
+    })
+})
