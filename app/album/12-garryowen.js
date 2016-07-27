@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Garryowen',
     overviews: {
-        narrative: 'My mood changed abruptly when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I had soured on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I really didn\'t like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.',
+        narrative: 'My mood changed when I drank, leading friends to joke that I had a sinister alter ego. It wasn\'t far from the truth. I had soured on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I didn\'t like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.',
         music: [
             'I named my drunken personality after Garryowen, the menacing dog owned by an Irish nationalist in James Joyce\'s',
             {
@@ -310,7 +310,7 @@ module.exports = {
                     {
                         anchor: 'faltering dear?',
                         annotation: {
-                            description: 'Having wiped the slate clean, I took pains to affect an endearingly awkward persona, right down to the posture and stammer. I\'d been switching social identities for so long that I knew the initial sense of being a phony would be fleeting. There was an extra layer of hypocrisy this time around, however, which did bother me.'
+                            description: 'Having wiped the slate clean, I took pains to affect an endearingly awkward persona, right down to the posture and stammer. I\'d been switching social identities for so long that I knew the initial feeling of being a phony would be fleeting. There was an extra layer of hypocrisy this time around, however, which did bother me.'
                         }
                     }
                 ]
@@ -337,7 +337,7 @@ module.exports = {
                         {
                             anchor: 'as well in you."',
                             annotation: {
-                                description: 'Having the capacity to injure myself also meant that I had few reservations about harming anyone willing to shoulder my burdens as her own.'
+                                description: 'Having the capacity to injure myself also meant that I would have few qualms about harming anyone willing to side with me, shouldering my burdens as her own.'
                             }
                         }
                     ]

@@ -1,7 +1,7 @@
 module.exports = {
     title: 'On a Golden Cord',
     overviews: {
-        narrative: 'narrative 1',
+        narrative: 'After a long night out with my friends, I would often stumble into Sita\'s bed and quickly doze off. But one night, Sita was still up and waiting to confront me, having snooped around on my computer earlier and discovering my plans to break up. Our fight ended with her returning the gold-tone bracelet I had given her at the start of our relationship. Since I had nowhere to sleep that night, I wandered the streets until the sun came up.',
         music: 'I was looking for the auditory equivalent of a split screen in cinema. I named doublespeaker rhyme for its pseudo-Orwellian undertone, and this song captures most .'
     },
     lyrics: [
@@ -283,7 +283,7 @@ module.exports = {
         },
         {
             taskName: 'annotations',
-            workedHours: 0,
+            workedHours: 3,
             neededHours: 65,
             subtasks: [
                 {
