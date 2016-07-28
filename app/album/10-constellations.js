@@ -601,7 +601,7 @@ module.exports = {
                     {
                         anchor: 'Pullar switch,',
                         annotation: {
-                            description: 'Geomagnetic reversal occurs when the Earth\'s magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses. Also, crashed on a couch in Howie\'s attic, I pull the switch on a black-and-white television to turn it on.',
+                            description: 'Geomagnetic reversal occurs when the Earth\'s magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses. Also, crashed on a couch in Howie\'s attic, I turn on an old black-and-white television by "pulling the switch."',
                             reference: 'https://en.wikipedia.org/wiki/Geomagnetic_reversal'
                         }
                     },
@@ -662,7 +662,7 @@ module.exports = {
                     {
                         anchor: 'black Letter-Day Sensed ahead…',
                         annotation: {
-                            description: 'Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." The Mormons did not allow blacks to attain priesthood until 1978.'
+                            description: 'Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." The Mormons did not allow its black members to attain priesthood until 1978.'
                         }
                     },
                     {

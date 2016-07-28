@@ -1,8 +1,14 @@
 module.exports = {
     title: 'On a Golden Cord',
     overviews: {
-        narrative: 'After a long night out with my friends, I would often stumble into Sita\'s bed and quickly doze off. But one night, Sita was still up and waiting to confront me, having snooped around on my computer earlier and discovering my plans to break up. Our fight ended with her returning the gold-tone bracelet I had given her at the start of our relationship. Since I had nowhere to sleep that night, I wandered the streets until the sun came up.',
-        music: 'I was looking for the auditory equivalent of a split screen in cinema. I named doublespeaker rhyme for its pseudo-Orwellian undertone, and this song captures most .'
+        narrative: 'After a long night out with friends, I might stumble on to Sita\'s place, slip into bed with her, and quickly doze off. But one night Sita was waiting to confront me, having discovered my plans to break up with her when she snooped around on my computer earlier. In tears, she returned the gold-tone bracelet I had given her at the start of our relationship, and then kicked me out. With nowhere to go, I wandered the streets until the sun came up.',
+        music: [
+            'I named doublespeaker rhyme partly for its Orwellian undertone, which this song captures well. Like the citizens of George Orwell\'s',
+            {
+                italic: 'Nineteen Eighty-Four,'
+            },
+            'I had to sift through contradictory thoughts to make sense of the breakup. While I blamed Garryowen for the breakup, he could just as easily blame me. '
+        ]
     },
     lyrics: [
         [

@@ -3,7 +3,7 @@ module.exports = {
     title: 'Odin',
     overviews: {
         narrative: 'Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn\'t sure which terrified me more. Our house cat Odin died later that summer, just as I was exploring the idea of having faith. And yet, the eternal life promised by faith seemed no less terrifying to me than the finality of death.',
-        music: 'This song uses a literary technique I invented called doublespeaker rhyme, in which two columns of lyrics that rhyme syllable for syllable are sung simultaneously, one per audio speaker. I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, the two voices seem to proceed independently, each unaware of the ideas and images subtly planted along its path by the other.'
+        music: 'This song uses a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one to each audio speaker, creating the musical version of a cinematic split screen. Here, I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, the two voices proceed independently, each unaware of the ideas and images subtly planted along its path by the other.'
     },
     lyrics: [
         [
@@ -14,7 +14,7 @@ module.exports = {
                         anchor: 'Mr. Odin',
                         properNoun: true,
                         annotation: {
-                            description: 'While we were away, our house cat Odin died of old age in the care of a family friend. It\'s likely that his name was originally something in Chinese, which my sister and I later anglicised to the name of the Norse god once we were older.'
+                            description: 'While we were away, our house cat Odin died of old age in the care of a family friend. It\'s likely that his name originally meant something in Chinese, which my sister and I later anglicised into the name of the Norse god once we were older.'
                         }
                     },
                     'died today.'
