@@ -1,13 +1,14 @@
 module.exports = {
     title: 'On a Golden Cord',
     overviews: {
-        narrative: 'After a long night out with friends, I might stumble on to Sita\'s place, slip into bed with her, and quickly doze off. But one night Sita was waiting to confront me, having discovered my plans to break up with her when she snooped around on my computer earlier. In tears, she returned the gold-tone bracelet I had given her at the start of our relationship, and then kicked me out. With nowhere to go, I wandered the streets until the sun came up.',
+        narrative: 'After a long night out with friends, I might stumble on to Sita\'s place, slip into bed with her, and quickly doze off. But one night Sita was waiting to confront me, having discovered my plans to break up with her when she snooped around on my computer earlier. In tears, she returned the gold-tone bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise.',
+        // TODO: Mention that while I was always yielding to Garryowen, it was unusual for Garryowen to yield to me.
         music: [
-            'I named doublespeaker rhyme partly for its Orwellian undertone, which this song captures well. Like the citizens of George Orwell\'s',
+            'To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell\'s',
             {
-                italic: 'Nineteen Eighty-Four,'
+                italic: 'Nineteen Eighty-Four.'
             },
-            'I had to sift through contradictory thoughts to make sense of the breakup. While I blamed Garryowen for the breakup, he could just as easily blame me. '
+            'So I used doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the internal conflict between my sober self and my drunken alter ego. Since the breakup allowed me to regress in emotional age, I evoked the musical style of my childhood hero Johnny Horton, a country star who sang about the Klondike Gold Rush.'
         ]
     },
     lyrics: [
@@ -289,7 +290,7 @@ module.exports = {
         },
         {
             taskName: 'annotations',
-            workedHours: 6,
+            workedHours: 9,
             neededHours: 65,
             subtasks: [
                 {
