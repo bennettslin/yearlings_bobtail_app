@@ -337,7 +337,7 @@ module.exports = {
                         {
                             anchor: `as well in you."`,
                             annotation: {
-                                description: `Having the capacity to injure myself also meant that I would have few qualms about harming anyone willing to side with me, shouldering my burdens as her own.`
+                                description: `Having the capacity to injure myself also meant that I would have few compunctions about harming anyone willing to stand alongside me, taking on my troubles as her own.`
                             }
                         }
                     ]
