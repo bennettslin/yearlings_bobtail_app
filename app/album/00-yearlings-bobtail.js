@@ -1,8 +1,8 @@
 module.exports = {
-    title: 'Yearling\'s Bobtail',
+    title: `Yearling's Bobtail`,
     overviews: {
-        narrative: 'five things that changed my life',
-        music: 'personal yb'
+        narrative: `five things that changed my life`,
+        music: `personal yb`
     },
     pageStartingIndices: [0, 9],
     songs: [
@@ -27,96 +27,96 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: 'add propTypes',
+            taskName: `add propTypes`,
             workedHours: 0,
             neededHours: 1
         },
         {
-            taskName: 'change every "one" to "you"',
+            taskName: `change every "one" to "you"`,
             workedHours: 0,
             neededHours: 1
         },
         {
-            taskName: 'change reduce to for/of to allow breaks',
+            taskName: `change reduce to for/of to allow breaks`,
             workedHours: 0,
             neededHours: 2
         },
         {
-            taskName: 'write album overviews',
+            taskName: `write album overviews`,
             workedHours: 0,
             neededHours: 6
         },
         {
-            taskName: 'make interactable superclass',
+            taskName: `make interactable superclass`,
             workedHours: 0,
             neededHours: 3
         },
         {
-            taskName: 'make selectable dots block',
+            taskName: `make selectable dots block`,
             workedHours: 0,
             neededHours: 3
         },
         {
-            taskName: 'allow multiple dots',
+            taskName: `allow multiple dots`,
             workedHours: 3,
             neededHours: 3
         },
         {
-            taskName: 'create dot popups',
+            taskName: `create dot popups`,
             workedHours: 0,
             neededHours: 2,
             subtasks: [
                 {
-                    taskName: 'make popup a general utility',
+                    taskName: `make popup a general utility`,
                     workedHours: 2,
                     neededHours: 2
                 }
             ]
         },
         {
-            taskName: 'refactor to get album objects',
+            taskName: `refactor to get album objects`,
             workedHours: 3,
             neededHours: 3
         },
         {
-            taskName: 'annotation header formatting',
+            taskName: `annotation header formatting`,
             workedHours: 1,
             neededHours: 1,
             subtasks: [
                 {
-                    taskName: 'Add proper noun flags.',
+                    taskName: `Add proper noun flags.`,
                     workedHours: 1,
                     neededHours: 1
                 }
             ]
         },
         {
-            taskName: 'create portals',
+            taskName: `create portals`,
             workedHours: 6,
             neededHours: 6
         },
         {
-            taskName: 'non breaking space in lyrics only',
+            taskName: `non breaking space in lyrics only`,
             workedHours: 1,
             neededHours: 1
         },
         {
-            taskName: 'take care of em-dashes',
+            taskName: `take care of em-dashes`,
             workedHours: 1,
             neededHours: 1
         },
         {
-            taskName: 'separate out dot categories',
+            taskName: `separate out dot categories`,
             workedHours: 8,
             neededHours: 8
         },
         {
-            taskName: 'keep doublespeaker verses parallel',
+            taskName: `keep doublespeaker verses parallel`,
             workedHours: 3,
             neededHours: 3
         },
         {
-            taskName: 'allow for Wikipedia links',
+            taskName: `allow for Wikipedia links`,
             workedHours: 3,
             neededHours: 3
         }

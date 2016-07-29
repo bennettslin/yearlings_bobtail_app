@@ -1,171 +1,171 @@
 module.exports = {
-    title: 'Cremated',
+    title: `Cremated`,
     overviews: {
-        narrative: 'narrative 1',
-        music: 'Last doublespeaker rhyme, the one I was happiest with.'
+        narrative: `narrative 1`,
+        music: `Last doublespeaker rhyme, the one I was happiest with.`
     },
     lyrics: [
         [
             {
                 time: 1,
-                centreLyric: 'Or another…'
+                centreLyric: `Or another…`
             }
         ],
         [
             {
                 time: 24,
-                leftLyric: 'Atavist stuck feet first,',
-                rightLyric: 'At a vista, key turned'
+                leftLyric: `Atavist stuck feet first,`,
+                rightLyric: `At a vista, key turned`
             },
             {
                 time: 27,
-                leftLyric: 'subversive inner lotus eater,',
-                rightLyric: 'to first switch in her low two-seater,'
+                leftLyric: `subversive inner lotus eater,`,
+                rightLyric: `to first switch in her low two-seater,`
             },
             {
                 time: 30,
-                leftLyric: 'an everlasting doublespeaker,',
-                rightLyric: 'and deaf from blasting frontal speakers,'
+                leftLyric: `an everlasting doublespeaker,`,
+                rightLyric: `and deaf from blasting frontal speakers,`
             },
             {
                 time: 34,
-                leftLyric: 'his beaten wit and id she\'s deemed her',
-                rightLyric: 'this phoenix risen limp beneath her'
+                leftLyric: `his beaten wit and id she's deemed her`,
+                rightLyric: `this phoenix risen limp beneath her`
             },
             {
                 time: 37,
-                leftLyric: 'sinking ship, maybe good for anecdotes.',
-                rightLyric: 'pinkish slip, making scroonched her pantyhose.'
+                leftLyric: `sinking ship, maybe good for anecdotes.`,
+                rightLyric: `pinkish slip, making scroonched her pantyhose.`
             },
             {
                 time: 39,
-                leftLyric: 'As comedy teams work, a hoot the times',
-                rightLyric: 'His god humming Freebird, the hula guy'
+                leftLyric: `As comedy teams work, a hoot the times`,
+                rightLyric: `His god humming Freebird, the hula guy`
             },
             {
                 time: 42,
-                leftLyric: 'not at each other\'s throats.',
-                rightLyric: 'nods as she drums her toes.'
+                leftLyric: `not at each other's throats.`,
+                rightLyric: `nods as she drums her toes.`
             }
         ],
         [
             {
                 time: 46,
-                leftLyric: 'Trophy bronzed from a Trojan',
-                rightLyric: 'Though, she ponders the children'
+                leftLyric: `Trophy bronzed from a Trojan`,
+                rightLyric: `Though, she ponders the children`
             },
             {
                 time: 49,
-                leftLyric: 'for some unforeskinned virgin,',
-                rightLyric: 'born from a forced conversion'
+                leftLyric: `for some unforeskinned virgin,`,
+                rightLyric: `born from a forced conversion`
             },
             {
                 time: 52,
-                leftLyric: 'on the shelf, serves his declared assertion:',
-                rightLyric: 'on a self-servicing cleric surgeon'
+                leftLyric: `on the shelf, serves his declared assertion:`,
+                rightLyric: `on a self-servicing cleric surgeon`
             },
             {
                 time: 56,
-                leftLyric: 'to remain inherently perfect,',
-                rightLyric: 'duly may inherit his burdens.'
+                leftLyric: `to remain inherently perfect,`,
+                rightLyric: `duly may inherit his burdens.`
             },
             {
                 time: 59,
-                leftLyric: 'as worn puppet his offscreen person dubs.',
-                rightLyric: 'This swarm pumped and kissed off, she purges up,'
+                leftLyric: `as worn puppet his offscreen person dubs.`,
+                rightLyric: `This swarm pumped and kissed off, she purges up,`
             },
             {
                 time: 61,
-                leftLyric: 'His silent dramedy works better;',
-                rightLyric: 'despite once promising forever,'
+                leftLyric: `His silent dramedy works better;`,
+                rightLyric: `despite once promising forever,`
             },
             {
                 time: 64,
-                leftLyric: 'twitching sword in care, he\'s anyone.',
-                rightLyric: 'which she swore when scarcely twenty-one.'
+                leftLyric: `twitching sword in care, he's anyone.`,
+                rightLyric: `which she swore when scarcely twenty-one.`
             }
         ],
         [
             {
                 time: 90,
-                centreLyric: 'Needle done will not retract,'
+                centreLyric: `Needle done will not retract,`
             },
             {
                 time: 94,
-                centreLyric: 'it hums a typo fragile ex passed through ash…'
+                centreLyric: `it hums a typo fragile ex passed through ash…`
             },
             {
                 time: 98,
-                centreLyric: 'With his vinyl, exit Miriam to cash his stash.'
+                centreLyric: `With his vinyl, exit Miriam to cash his stash.`
             },
             {
                 time: 102,
-                centreLyric: 'Undeluded, she\'ll bask in selfish cut-off jeans,'
+                centreLyric: `Undeluded, she'll bask in selfish cut-off jeans,`
             },
             {
                 time: 106,
-                centreLyric: 'and in her pool, hears not a worrisome "Bless her, Godspeed…"'
+                centreLyric: `and in her pool, hears not a worrisome "Bless her, Godspeed…"`
             }
         ],
         [
             {
                 time: 112,
-                leftLyric: 'The key turned and she floors it,',
-                rightLyric: 'The seat hurt when he lowered it,'
+                leftLyric: `The key turned and she floors it,`,
+                rightLyric: `The seat hurt when he lowered it,`
             },
             {
                 time: 115,
-                leftLyric: 'so homeward the sport\'s escorted,',
-                rightLyric: 'though no worse but for his soreness,'
+                leftLyric: `so homeward the sport's escorted,`,
+                rightLyric: `though no worse but for his soreness,`
             },
             {
                 time: 118,
-                leftLyric: 'the cleaved horizon pours the mortar in.',
-                rightLyric: 'this geezer\'s life-support\'s abortive.'
+                leftLyric: `the cleaved horizon pours the mortar in.`,
+                rightLyric: `this geezer's life-support's abortive.`
             },
             {
                 time: 121,
-                leftLyric: 'Redressed, he gets his notice, short an',
+                leftLyric: `Redressed, he gets his notice, short an`,
                 // Veggie wishbone.
-                rightLyric: 'He\'s vegging with his boner shortened;'
+                rightLyric: `He's vegging with his boner shortened;`
             },
             {
                 time: 124,
-                leftLyric: 'apology, bold and blunt.',
-                rightLyric: 'a pop, and she pulls the plug.'
+                leftLyric: `apology, bold and blunt.`,
+                rightLyric: `a pop, and she pulls the plug.`
             },
             {
                 time: 127,
-                leftLyric: 'Life\'s a dumb ex-dromedary, hungry carrying',
-                rightLyric: 'Lights one up then draws a daring puff, preparing'
+                leftLyric: `Life's a dumb ex-dromedary, hungry carrying`,
+                rightLyric: `Lights one up then draws a daring puff, preparing`
             },
             {
                 time: 130,
-                leftLyric: 'this groovy second hump.',
-                rightLyric: 'the scoop, he\'s getting dumped.'
+                leftLyric: `this groovy second hump.`,
+                rightLyric: `the scoop, he's getting dumped.`
             }
         ]
     ],
     tasks: [
         {
-            taskName: 'restructure lyrics',
+            taskName: `restructure lyrics`,
             workedHours: 1,
             neededHours: 1
         },
         {
-            taskName: 'annotations',
+            taskName: `annotations`,
             workedHours: 0,
             neededHours: 35,
             subtasks: [
                 {
-                    taskName: 'split into dots',
+                    taskName: `split into dots`,
                     workedHours: 0,
                     neededHours: 3
                 }
             ]
         },
         {
-            taskName: 'illustrations',
+            taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
             subtasks: [

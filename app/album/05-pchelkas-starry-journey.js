@@ -1,12 +1,12 @@
 /**
- * Ash Wednesday and Pchelka's Starry Journey have been switched from the song
+ * Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
  * list order on the album.
  */
 module.exports = {
-    title: 'Pchelka\'s Starry Journey',
+    title: `Pchelka's Starry Journey`,
     overviews: {
-        narrative: 'At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to a race of interstellar beings, with a mission to shut myself from the world. I did so by being unresponsive like my brother, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail-order cult. It took me a long while to recover.',
-        music: 'Pchelka and Mushka were dogs sent into orbit under the Soviet space program. They were killed upon reentry. In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.'
+        narrative: `At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to a race of interstellar beings, with a mission to shut myself from the world. I did so by being unresponsive like my brother, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail-order cult. It took me a long while to recover.`,
+        music: `Pchelka and Mushka were dogs sent into orbit under the Soviet space program. They were killed upon reentry. In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
     },
     lyrics: [
         [
@@ -14,16 +14,16 @@ module.exports = {
                 time: 0,
                 lyric: {
                     emphasis: [
-                        'But F., that man is the',
+                        `But F., that man is the`,
                         {
-                            anchor: 'worst nuisance on the beach.',
+                            anchor: `worst nuisance on the beach.`,
                             annotation: {
                                 description: [
-                                    'While being in a mail-order cult was a painful experience, there is a comic absurdity to it as well, which this line captures beautifully. In a humourous passage from Leonard Cohen\'s otherwise tragic',
+                                    `While being in a mail-order cult was a painful experience, there is a comic absurdity to it as well, which this line captures beautifully. In a humourous passage from Leonard Cohen's otherwise tragic`,
                                     {
-                                        italic: 'Beautiful Losers,'
+                                        italic: `Beautiful Losers,`
                                     },
-                                    'the character F. tires of getting bullied at the beach. He signs up for the Charles Axis bodybuilding course advertised in a comic book, only to discover that Charles Axis is the one who bullies him.'
+                                    `the character F. tires of getting bullied at the beach. He signs up for the Charles Axis bodybuilding course advertised in a comic book, only to discover that Charles Axis is the one who bullies him.`
                                 ]
                             }
                         }
@@ -34,64 +34,64 @@ module.exports = {
         [
             {
                 time: 11,
-                lyric: 'Mother, woken from her nap,'
+                lyric: `Mother, woken from her nap,`
             },
             {
                 time: 13,
-                lyric: 'hears a piercing scream and thunders,'
+                lyric: `hears a piercing scream and thunders,`
             },
             {
                 time: 15,
                 lyric: [
-                    '"Why\'d you',
+                    `"Why'd you`,
                     {
-                        anchor: 'hit your baby brother,',
+                        anchor: `hit your baby brother,`,
                         annotation: {
-                            description: 'The times that I hit my brother were actually rare. They just stick out in my memory.'
+                            description: `The times that I hit my brother were actually rare. They just stick out in my memory.`
                         }
                     }
                 ]
             },
             {
                 time: 17,
-                lyric: 'when he so looks up to you!'
+                lyric: `when he so looks up to you!`
             }
         ],
         [
             {
                 time: 19,
-                lyric: 'Don\'t you remember days past,'
+                lyric: `Don't you remember days past,`
             },
             {
                 time: 21,
                 lyric: [
-                    'when you wanted to',
+                    `when you wanted to`,
                     {
-                        anchor: 'buy a fortress',
+                        anchor: `buy a fortress`,
                         annotation: {
-                            description: 'Our cousin was well off and would receive new toys on a regular basis, one of which was a lifesize wooden castle. Since my birthday is in November, I always had the option of asking for a more expensive toy, which would then serve as my Christmas gift as well. So I was dismayed to learn that some toys were too expensive to count even for two gifts.'
+                            description: `Our cousin was well off and would receive new toys on a regular basis, one of which was a lifesize wooden castle. Since my birthday is in November, I always had the option of asking for a more expensive toy, which would then serve as my Christmas gift as well. So I was dismayed to learn that some toys were too expensive to count even for two gifts.`
                         }
                     }
                 ]
             },
             {
                 time: 23,
-                lyric: 'but your daddy couldn\'t afford it,'
+                lyric: `but your daddy couldn't afford it,`
             },
             {
                 time: 25,
-                lyric: 'so you brought him into your room?'
+                lyric: `so you brought him into your room?`
             }
         ],
         [
             {
                 time: 27,
                 lyric: [
-                    'You stowed away',
+                    `You stowed away`,
                     {
-                        anchor: 'beneath your captain bed.',
+                        anchor: `beneath your captain bed.`,
                         annotation: {
-                            description: 'I slept in a captain bed that rested atop a dresser on one side, with the other side placed flush against the wall. By removing the bottom drawer, I could crawl into the space underneath with my brother and stay hidden.'
+                            description: `I slept in a captain bed that rested atop a dresser on one side, with the other side placed flush against the wall. By removing the bottom drawer, I could crawl into the space underneath with my brother and stay hidden.`
                         }
                     }
                 ]
@@ -99,14 +99,14 @@ module.exports = {
             {
                 time: 30,
                 lyric: [
-                    'We',
+                    `We`,
                     {
-                        anchor: 'didn\'t hear a peep',
+                        anchor: `didn't hear a peep`,
                         annotation: {
-                            description: 'My brother would play alongside me for hours without once speaking or interacting. It was a strange closeness we shared.'
+                            description: `My brother would play alongside me for hours without once speaking or interacting. It was a strange closeness we shared.`
                         }
                     },
-                    'throughout the entire weekend!"'
+                    `throughout the entire weekend!"`
                 ]
             }
         ],
@@ -115,9 +115,9 @@ module.exports = {
                 time: 34,
                 lyric: {
                     emphasis: {
-                        anchor: 'Poor Sam Peabody!',
+                        anchor: `Poor Sam Peabody!`,
                         annotation: {
-                            description: 'When my family visited Canada one late summer, the white-throated sparrow was in breeding season, and we heard its song everywhere. I found the sound so haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.'
+                            description: `When my family visited Canada one late summer, the white-throated sparrow was in breeding season, and we heard its song everywhere. I found the sound so haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.`
                         }
                     }
                 }
@@ -126,33 +126,33 @@ module.exports = {
         [
             {
                 time: 38,
-                lyric: 'Oh brother, when all you know is bleat,'
+                lyric: `Oh brother, when all you know is bleat,`
             },
             {
                 time: 40,
                 lyric: [
-                    'they\'ll catch you by',
+                    `they'll catch you by`,
                     {
-                        anchor: 'your cape',
+                        anchor: `your cape`,
                         annotation: {
-                            description: 'I was well-liked in elementary school for being physically small and ever eager to draw cartoon figures for anyone who asked. But these very traits that had once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.'
+                            description: `I was well-liked in elementary school for being physically small and ever eager to draw cartoon figures for anyone who asked. But these very traits that had once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.`
                         }
                     },
-                    'and beat you,'
+                    `and beat you,`
                 ]
             },
             {
                 time: 42,
-                lyric: 'threatening never to release you'
+                lyric: `threatening never to release you`
             },
             {
                 time: 44,
                 lyric: [
-                    'till you',
+                    `till you`,
                     {
-                        anchor: 'learn to kick it back.',
+                        anchor: `learn to kick it back.`,
                         annotation: {
-                            description: 'In middle school, the most well-liked kids were the ones who were least concerned about being liked. This ran counter to my instinct for throwing myself whole-heartedly into anything worth doing.'
+                            description: `In middle school, the most well-liked kids were the ones who were least concerned about being liked. This ran counter to my instinct for throwing myself whole-heartedly into anything worth doing.`
                         }
                     }
                 ]
@@ -163,69 +163,69 @@ module.exports = {
                 time: 46,
                 lyric: [
                     {
-                        anchor: 'Feigning sick,',
+                        anchor: `Feigning sick,`,
                         annotation: {
-                            description: 'As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press too deeply on it.'
+                            description: `As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press too deeply on it.`
                         }
                     },
-                    'I chanced to read'
+                    `I chanced to read`
                 ]
             },
             {
                 time: 48,
-                lyric: 'these words in a comic to me speaking:'
+                lyric: `these words in a comic to me speaking:`
             },
             {
                 time: 50,
                 lyric: [
-                    '"Are you',
+                    `"Are you`,
                     {
-                        anchor: 'tired of being the weakling?"…',
+                        anchor: `tired of being the weakling?"…`,
                         annotation: {
-                            description: 'In a well-known advertisement seen in comic books at the time, a skinny guy builds up his muscles by sending away for Charles Atlas\'s free bodybuilding guide, which then allows him to take revenge on a bully.'
+                            description: `In a well-known advertisement seen in comic books at the time, a skinny guy builds up his muscles by sending away for Charles Atlas's free bodybuilding guide, which then allows him to take revenge on a bully.`
                         }
                     }
                 ]
             },
             {
                 time: 52,
-                lyric: 'I clipped and mailed the ad.'
+                lyric: `I clipped and mailed the ad.`
             }
         ],
         [
             {
                 time: 54,
                 lyric: [
-                    'Soon',
+                    `Soon`,
                     {
-                        anchor: 'send-away offers',
+                        anchor: `send-away offers`,
                         annotation: {
-                            description: 'Since I had few friends, I would amuse myself by sending away for free samples and making small purchases through mail order. As a result, I got flooded with junk mail advertising even more such offers. It was during this time that I received the letter from RI Research, Special Human Being Laboratory.'
+                            description: `Since I had few friends, I would amuse myself by sending away for free samples and making small purchases through mail order. As a result, I got flooded with junk mail advertising even more such offers. It was during this time that I received the letter from RI Research, Special Human Being Laboratory.`
                         }
                     },
-                    'were piling up high,'
+                    `were piling up high,`
                 ]
             },
             {
                 time: 57,
-                lyric: 'and then one day one came and made me cry and cry.'
+                lyric: `and then one day one came and made me cry and cry.`
             },
             {
                 time: 61,
                 lyric: [
                     {
-                        anchor: 'Red pouches unspent',
+                        anchor: `Red pouches unspent`,
                         annotation: {
-                            description: 'In East Asian cultures, adult relatives give monetary gifts to children sealed in red envelopes. My parents insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.',
-                            reference: 'https://en.wikipedia.org/wiki/Red_envelope'
+                            description: `In East Asian cultures, adult relatives give monetary gifts to children sealed in red envelopes. My parents insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
+                            reference: `https://en.wikipedia.org/wiki/Red_envelope`
                         }
                     },
-                    'for years, at once counted and sent,'
+                    `for years, at once counted and sent,`
                 ]
             },
             {
                 time: 64,
-                lyric: 'while all the weeks I waited, weighing those words in bold text:'
+                lyric: `while all the weeks I waited, weighing those words in bold text:`
             }
         ],
         [
@@ -233,22 +233,22 @@ module.exports = {
                 time: 68,
                 lyric: [
                     {
-                        anchor: '"Are you a Beyonder',
+                        anchor: `"Are you a Beyonder`,
                         annotation: {
-                            description: 'According to RI Research, Beyonders are an ancient race of beings born from the stars, who were scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet are beset by a nagging disquiet that they do not truly belong.'
+                            description: `According to RI Research, Beyonders are an ancient race of beings born from the stars, who were scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet are beset by a nagging disquiet that they do not truly belong.`
                         }
                     },
-                    'sent down to be Earth-fostered?'
+                    `sent down to be Earth-fostered?`
                 ]
             },
             {
                 time: 71,
                 lyric: [
-                    'Do you often feel like a',
+                    `Do you often feel like a`,
                     {
-                        anchor: 'wanderer lost?"',
+                        anchor: `wanderer lost?"`,
                         annotation: {
-                            description: 'Hitting all the right nerves, the letter from RI Research addressed my yearning to belong, and spoke to my frustration that these desired ends should so elude me. It then shared its hopeful news: They believed that I might be a Beyonder, and after searching for so long, they had found me.'
+                            description: `Hitting all the right nerves, the letter from RI Research addressed my yearning to belong, and spoke to my frustration that these desired ends should so elude me. It then shared its hopeful news: They believed that I might be a Beyonder, and after searching for so long, they had found me.`
                         }
                     }
                 ]
@@ -256,153 +256,153 @@ module.exports = {
             {
                 time: 76,
                 lyric: [
-                    'But',
+                    `But`,
                     {
-                        anchor: 'waiting for Goddard,',
+                        anchor: `waiting for Goddard,`,
                         annotation: {
                             description: [
-                                'Robert Goddard ushered in the Space Age by inventing the liquid-fueled rocket. Unfortunately in my case, I couldn\'t wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then. Also,',
+                                `Robert Goddard ushered in the Space Age by inventing the liquid-fueled rocket. Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then. Also,`,
                                 {
-                                    italic: 'Waiting for Godot'
+                                    italic: `Waiting for Godot`
                                 },
-                                'is a play by Samuel Beckett that explores existential themes.'
+                                `is a play by Samuel Beckett that explores existential themes.`
                             ]
                         }
                     },
-                    'our two impatient paupers,'
+                    `our two impatient paupers,`
                 ]
             },
             {
                 time: 79,
                 lyric: [
                     {
-                        anchor: 'Gogo and his Didi,',
+                        anchor: `Gogo and his Didi,`,
                         properNoun: true,
                         annotation: {
                             description: [
-                                'In Mandarin Chinese,',
+                                `In Mandarin Chinese,`,
                                 {
-                                    italic: 'Gogo'
+                                    italic: `Gogo`
                                 },
-                                'means "big brother." And of course,',
+                                `means "big brother." And of course,`,
                                 {
-                                    italic: 'Didi'
+                                    italic: `Didi`
                                 },
-                                'this time refers to',
+                                `this time refers to`,
                                 {
-                                    emphasis: 'my'
+                                    emphasis: `my`
                                 },
-                                'little brother. Didi and Gogo are also the respective pet names of Vladimir and Estragon, the two characters who are still waiting for Godot by the end of Beckett\'s play.',
+                                `little brother. Didi and Gogo are also the respective pet names of Vladimir and Estragon, the two characters who are still waiting for Godot by the end of Beckett's play.`,
                             ]
                         }
                     },
-                    'sauntered off…'
+                    `sauntered off…`
                 ]
             },
             {
                 time: 83,
                 lyric: [
-                    'Till',
+                    `Till`,
                     {
-                        anchor: 'in hunger they were led',
+                        anchor: `in hunger they were led`,
                         annotation: {
-                            description: 'Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes Laika, the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I liked the analogy of being thrust helplessly from one desperate circumstance to another.'
+                            description: `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes Laika, the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I liked the analogy of being thrust helplessly from one desperate circumstance to another.`
                         }
                     },
-                    'into',
+                    `into`,
                     {
-                        anchor: 'Huntsville',
+                        anchor: `Huntsville`,
                         properNoun: true,
                         annotation: {
-                            description: 'Huntsville, Alabama is where the largest NASA center is located.'
+                            description: `Huntsville, Alabama is where the largest NASA center is located.`
                         }
                     },
-                    'and fed,'
+                    `and fed,`
                 ]
             },
             {
                 time: 86,
                 lyric: [
-                    'dragged to sled by',
+                    `dragged to sled by`,
                     {
-                        anchor: 'hunter\'s belt',
+                        anchor: `hunter's belt`,
                         annotation: {
-                            description: 'The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward animals.'
+                            description: `The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward animals.`
                         }
                     },
-                    'and launched!'
+                    `and launched!`
                 ]
             }
         ],
         [
             {
                 time: 90,
-                lyric: '"Far from home and shaped like common men,'
+                lyric: `"Far from home and shaped like common men,`
             },
             {
                 time: 93,
                 lyric: [
-                    'Beyonders bleed the most, their',
+                    `Beyonders bleed the most, their`,
                     {
-                        anchor: 'roots unknown to them.',
+                        anchor: `roots unknown to them.`,
                         annotation: {
-                            description: 'I didn\'t know this at the time, but the notion of "star people" was a New Age belief popular in the 1970s. Like Beyonders, star people arrived on Earth with no recollection of their true origin. Undoubtedly, the letters from RI Research drew much of their material from this body of thought.',
-                            reference: 'https://en.wikipedia.org/wiki/Star_people_(New_Age_belief)'
+                            description: `I didn't know this at the time, but the notion of "star people" was a New Age belief popular in the 1970s. Like Beyonders, star people arrived on Earth with no recollection of their true origin. Undoubtedly, the letters from RI Research drew much of their material from this body of thought.`,
+                            reference: `https://en.wikipedia.org/wiki/Star_people_(New_Age_belief)`
                         }
                     }
                 ]
             },
             {
                 time: 98,
-                lyric: 'We\'ve received your fee, and per the tests,'
+                lyric: `We've received your fee, and per the tests,`
             },
             {
                 time: 101,
-                lyric: 'you are indeed a seed from that nebular nest.'
+                lyric: `you are indeed a seed from that nebular nest.`
             },
             {
                 time: 105,
                 lyric: [
-                    'Is this',
+                    `Is this`,
                     {
-                        anchor: 'too much at once?',
+                        anchor: `too much at once?`,
                         annotation: {
-                            description: 'I sobbed when I got the letter confirming that I was a Beyonder. While I was relieved to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.'
+                            description: `I sobbed when I got the letter confirming that I was a Beyonder. While I was relieved to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`
                         }
                     },
-                    'We\'re trusting mum\'s to be the word.'
+                    `We're trusting mum's to be the word.`
                 ]
             }
         ],
         [
             {
                 time: 112,
-                lyric: 'Beyonders pine for a love no mortals give,'
+                lyric: `Beyonders pine for a love no mortals give,`
             },
             {
                 time: 116,
                 lyric: [
-                    'one they\'ll find only once we build the',
+                    `one they'll find only once we build the`,
                     {
-                        anchor: 'mothership.',
+                        anchor: `mothership.`,
                         annotation: {
-                            description: 'To present the appearance of a legitimate institute, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included a spacecraft that would allow us to make contact with our extraplanetary kin.'
+                            description: `To present the appearance of a legitimate institute, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included a spacecraft that would allow us to make contact with our extraplanetary kin.`
                         }
                     }
                 ]
             },
             {
                 time: 119,
-                lyric: 'Your monthly tithe shall fund good tidings soon to come.'
+                lyric: `Your monthly tithe shall fund good tidings soon to come.`
             },
             {
                 time: 123,
                 lyric: [
-                    'But till then, here\'s',
+                    `But till then, here's`,
                     {
-                        anchor: 'how you\'re to live…"',
+                        anchor: `how you're to live…"`,
                         annotation: {
-                            description: 'The letters cautioned me to keep myself separate from society. I realised that my brother had been doing this all along, and thus modelled my own behaviour after his.'
+                            description: `The letters cautioned me to keep myself separate from society. I realised that my brother had been doing this all along, and thus modelled my own behaviour after his.`
                         }
                     }
                 ]
@@ -412,68 +412,68 @@ module.exports = {
             {
                 time: 134,
                 lyric: [
-                    'So thus we learned to',
+                    `So thus we learned to`,
                     {
-                        anchor: 'act the dunce',
+                        anchor: `act the dunce`,
                         annotation: {
-                            description: 'By adopting my brother\'s composure in refusing to acknowledge or respond to other students, I came across as dimwitted.'
+                            description: `By adopting my brother's composure in refusing to acknowledge or respond to other students, I came across as dimwitted.`
                         }
                     }
                 ]
             },
             {
                 time: 136,
-                lyric: 'as spies among the carnal fallen,'
+                lyric: `as spies among the carnal fallen,`
             },
             {
                 time: 138,
                 lyric: [
-                    'twin friars',
+                    `twin friars`,
                     {
-                        anchor: 'cast here in pollens',
+                        anchor: `cast here in pollens`,
                         annotation: {
-                            description: 'In Greek mythology, Castor and Pollux were twin brothers fathered by Zeus. Castor was mortal, however, so Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with all its spiritual answers.'
+                            description: `In Greek mythology, Castor and Pollux were twin brothers fathered by Zeus. Castor was mortal, however, so Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with all its spiritual answers.`
                         }
                     }
                 ]
             },
             {
                 time: 140,
-                lyric: 'from a star\'s placenta sac.'
+                lyric: `from a star's placenta sac.`
             }
         ],
         [
             {
                 time: 141,
-                lyric: 'Braced for an earth stay unloved,'
+                lyric: `Braced for an earth stay unloved,`
             },
             {
                 time: 143,
                 lyric: [
-                    'twits daily',
+                    `twits daily`,
                     {
-                        anchor: 'murdered for their virtue.',
+                        anchor: `murdered for their virtue.`,
                         annotation: {
-                            description: 'Like all ordeals, mine became more bearable once I could tie it to a greater purpose.'
+                            description: `Like all ordeals, mine became more bearable once I could tie it to a greater purpose.`
                         }
                     }
                 ]
             },
             {
                 time: 145,
-                lyric: 'Mirthful, the merciless would hurt you,'
+                lyric: `Mirthful, the merciless would hurt you,`
             },
             {
                 time: 147,
                 lyric: [
-                    'as',
+                    `as`,
                     {
-                        anchor: 'omerta',
+                        anchor: `omerta`,
                         annotation: {
-                            description: 'Omerta is the Mafia\'s code of honour that praises silence and refusal to cooperate with authorities. Of course, I wasn\'t the first kid ever to observe similarities between school life and prison culture.'
+                            description: `Omerta is the Mafia's code of honour that praises silence and refusal to cooperate with authorities. Of course, I wasn't the first kid ever to observe similarities between school life and prison culture.`
                         }
                     },
-                    'turned their backs.'
+                    `turned their backs.`
                 ]
             }
         ],
@@ -481,11 +481,11 @@ module.exports = {
             {
                 time: 149,
                 lyric: [
-                    'Stung by venomous vipers, our',
+                    `Stung by venomous vipers, our`,
                     {
-                        anchor: 'muted youths lapsed.',
+                        anchor: `muted youths lapsed.`,
                         annotation: {
-                            description: 'While I only spent a year actively feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It\'s not that I lacked the will to correct their perceptions. I was as baffled as anyone about what had just happened, and there were no guide books for how to proceed from there.'
+                            description: `While I only spent a year actively feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It's not that I lacked the will to correct their perceptions. I was as baffled as anyone about what had just happened, and there were no guide books for how to proceed from there.`
                         }
                     }
                 ]
@@ -493,37 +493,37 @@ module.exports = {
             {
                 time: 153,
                 lyric: [
-                    'We knew the',
+                    `We knew the`,
                     {
-                        anchor: 'shortest cyphers',
+                        anchor: `shortest cyphers`,
                         annotation: {
-                            description: 'The lengthier a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer openings others were given to get under my skin.'
+                            description: `The lengthier a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer openings others were given to get under my skin.`
                         }
                     },
-                    'are the toughest ones to crack.'
+                    `are the toughest ones to crack.`
                 ]
             },
             {
                 time: 156,
                 lyric: [
-                    'But',
+                    `But`,
                     {
-                        anchor: 'every hero has a heel,',
+                        anchor: `every hero has a heel,`,
                         annotation: {
-                            description: 'The Greek hero Achilles was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved acceptance from others.'
+                            description: `The Greek hero Achilles was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved acceptance from others.`
                         }
                     },
-                    'we\'d realise, blind before the squad.'
+                    `we'd realise, blind before the squad.`
                 ]
             },
             {
                 time: 160,
                 lyric: [
-                    'The only spies who get to feel love first',
+                    `The only spies who get to feel love first`,
                     {
-                        anchor: 'unearth their own plots!',
+                        anchor: `unearth their own plots!`,
                         annotation: {
-                            description: 'Figuratively, to reveal one\'s secret plans, but also literally, to dig one\'s own grave. A spy succeeds by staying hidden; recognition and appreciation can only come after facing the firing squad. Similarly, at some point I tried to open up, thus sabotaging my past efforts to be unresponsive, but this only exposed me to greater scrutiny, as I was now forced to explain myself.'
+                            description: `Figuratively, to reveal one's secret plans, but also literally, to dig one's own grave. A spy succeeds by staying hidden; recognition and appreciation can only come after facing the firing squad. Similarly, at some point I tried to open up, thus sabotaging my past efforts to be unresponsive, but this only exposed me to greater scrutiny, as I was now forced to explain myself.`
                         }
                     }
                 ]
@@ -534,43 +534,43 @@ module.exports = {
                 time: 164,
                 lyric: [
                     {
-                        anchor: 'Mushing onward,',
+                        anchor: `Mushing onward,`,
                         annotation: {
                             description: [
-                                'Upon their arrival in the New World, the French learned the practise of dog sledding from the natives. They commanded their dog teams to move by shouting',
+                                `Upon their arrival in the New World, the French learned the practise of dog sledding from the natives. They commanded their dog teams to move by shouting`,
                                 {
-                                    italic: '"marche,"'
+                                    italic: `"marche,"`
                                 },
-                                'meaning "go." After the territory was ceded to the British, this term continued in English as "mush."'
+                                `meaning "go." After the territory was ceded to the British, this term continued in English as "mush."`
                                 ],
-                            reference: 'https://en.wikipedia.org/wiki/Mushing'
+                            reference: `https://en.wikipedia.org/wiki/Mushing`
                         }
                     },
                     {
-                        anchor: 'Mushka\'s',
+                        anchor: `Mushka's`,
                         properNoun: true,
                         annotation: {
-                            description: 'Pchelka and Mushka were a pair of dogs who spent a day in orbit aboard Sputnik 6. There was an error upon reentry, however, so to prevent the spacecraft from landing in hostile territory, the Soviets caused it to self-destruct, killing all aboard. In this analogy, my brother is Mushka, which of course makes me Pchelka.'
+                            description: `Pchelka and Mushka were a pair of dogs who spent a day in orbit aboard Sputnik 6. There was an error upon reentry, however, so to prevent the spacecraft from landing in hostile territory, the Soviets caused it to self-destruct, killing all aboard. In this analogy, my brother is Mushka, which of course makes me Pchelka.`
                         }
                     },
-                    'dragged by collar'
+                    `dragged by collar`
                 ]
             },
             {
                 time: 167,
                 lyric: [
-                    'to',
+                    `to`,
                     {
-                        anchor: 'his slaughter',
+                        anchor: `his slaughter`,
                         annotation: {
-                            description: 'I wrote this song during the peak of my activism within the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.'
+                            description: `I wrote this song during the peak of my activism within the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`
                         }
                     },
-                    'under',
+                    `under`,
                     {
-                        anchor: 'undying dawn.',
+                        anchor: `undying dawn.`,
                         annotation: {
-                            description: 'During summer in the Arctic, the sun remains visible for the full 24 hours of each day.'
+                            description: `During summer in the Arctic, the sun remains visible for the full 24 hours of each day.`
                         }
                     }
                 ]
@@ -578,11 +578,11 @@ module.exports = {
             {
                 time: 171,
                 lyric: [
-                    'Choked, he\'s soon a goner,',
+                    `Choked, he's soon a goner,`,
                     {
-                        anchor: 'no one heard his hollers,',
+                        anchor: `no one heard his hollers,`,
                         annotation: {
-                            description: 'I often wondered whether my brother was screaming on the inside, as I was during this time. If so, then he certainly wasn\'t being heard.'
+                            description: `I often wondered whether my brother was screaming on the inside, as I was during this time. If so, then he certainly wasn't being heard.`
                         }
                     }
                 ]
@@ -590,11 +590,11 @@ module.exports = {
             {
                 time: 175,
                 lyric: [
-                    'this pack honours only the',
+                    `this pack honours only the`,
                     {
-                        anchor: 'idiot\'s rod.',
+                        anchor: `idiot's rod.`,
                         annotation: {
-                            description: 'The Iditarod is an annual sled dog race held in Alaska. The rod refers to the whip used by some mushers to keep the pack disciplined.'
+                            description: `The Iditarod is an annual sled dog race held in Alaska. The rod refers to the whip used by some mushers to keep the pack disciplined.`
                         }
                     }
                 ]
@@ -602,49 +602,49 @@ module.exports = {
             {
                 time: 178,
                 lyric: [
-                    'Next cabins come equipped with',
+                    `Next cabins come equipped with`,
                     {
-                        anchor: 'pentobarbitone syringe,',
+                        anchor: `pentobarbitone syringe,`,
                         annotation: {
-                            description: 'A pentobarbitone injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected in advance.'
+                            description: `A pentobarbitone injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected in advance.`
                         }
                     }
                 ]
             },
             {
                 time: 182,
-                lyric: 'nothing too rich for glorious cosmonauts!'
+                lyric: `nothing too rich for glorious cosmonauts!`
             }
         ],
         [
             {
                 time: 186,
                 lyric: [
-                    'I\'m',
+                    `I'm`,
                     {
-                        anchor: 'sorry I bailed,',
+                        anchor: `sorry I bailed,`,
                         annotation: {
-                            description: 'By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn\'t a tourist in the land of autism. He wasn\'t free to come and go as he pleased.'
+                            description: `By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn't a tourist in the land of autism. He wasn't free to come and go as he pleased.`
                         }
                     },
                     {
-                        anchor: 'Xiao Xiang,',
+                        anchor: `Xiao Xiang,`,
                         properNoun: true,
                         annotation: {
-                            description: 'Mushka means "little fly" in Russian, and by coincidence, my brother\'s Mandarin name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee."'
+                            description: `Mushka means "little fly" in Russian, and by coincidence, my brother's Mandarin name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee."`
                         }
                     },
-                    'mush on…'
+                    `mush on…`
                 ]
             },
             {
                 time: 189,
                 lyric: [
-                    'I couldn\'t ditch my wails, I',
+                    `I couldn't ditch my wails, I`,
                     {
-                        anchor: 'needed the pod.',
+                        anchor: `needed the pod.`,
                         annotation: {
-                            description: 'A group of whales is called a pod. Because I wanted to belong to a social group, I couldn\'t "ditch my whales," and thus I sought out a metaphorical escape pod.'
+                            description: `A group of whales is called a pod. Because I wanted to belong to a social group, I couldn't "ditch my whales," and thus I sought out a metaphorical escape pod.`
                         }
                     }
                 ]
@@ -652,24 +652,24 @@ module.exports = {
             {
                 time: 193,
                 lyric: [
-                    '"Kids say you\'re',
+                    `"Kids say you're`,
                     {
-                        anchor: 'hopped on drugs,',
+                        anchor: `hopped on drugs,`,
                         annotation: {
-                            description: 'Eventually a classmate suspected me of being on drugs, and I was sent to the principal\'s office. When my mother came to pick me up, she proceeded to chew out the principal for even suspecting that I was capable of such a thing. Since I was generally more responsive around authority figures, he had to agree that the charge didn\'t make sense, and dropped it.'
+                            description: `Eventually a classmate suspected me of being on drugs, and I was sent to the principal's office. When my mother came to pick me up, she proceeded to chew out the principal for even suspecting that I was capable of such a thing. Since I was generally more responsive around authority figures, he had to agree that the charge didn't make sense, and dropped it.`
                         }
                     },
-                    'son, with Mum we\'ll need a word."'
+                    `son, with Mum we'll need a word."`
                 ]
             },
             {
                 time: 200,
                 lyric: [
-                    'Mushka, per their bargain, I',
+                    `Mushka, per their bargain, I`,
                     {
-                        anchor: 'can\'t ever return.',
+                        anchor: `can't ever return.`,
                         annotation: {
-                            description: 'I\'d grown disillusioned with RI Research at this point anyway, as the letters inexplicably began to take on Christian overtones. It\'s not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.'
+                            description: `I'd grown disillusioned with RI Research at this point anyway, as the letters inexplicably began to take on Christian overtones. It's not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.`
                         }
                     }
                 ]
@@ -678,19 +678,19 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: 'annotations',
+            taskName: `annotations`,
             workedHours: 40,
             neededHours: 40,
             subtasks: [
                 {
-                    taskName: 'split into dots',
+                    taskName: `split into dots`,
                     workedHours: 0,
                     neededHours: 3
                 }
             ]
         },
         {
-            taskName: 'illustrations',
+            taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
             subtasks: [
