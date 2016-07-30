@@ -1,7 +1,7 @@
 module.exports = {
     title: `On a Golden Cord`,
     overviews: {
-        narrative: `After a long night out with friends, I might stumble on to Sita's place, slip into bed with her, and quickly doze off. But one night Sita was waiting to confront me, having discovered my plans to break up with her when she snooped around on my computer earlier. In tears, she returned the gold-tone bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise.`,
+        narrative: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night Sita was waiting to confront me, having discovered my plans to break up with her when she snooped around on my computer earlier. In tears, she returned the gold bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise.`,
         // TODO: Mention that while I was always yielding to Garryowen, it was unusual for Garryowen to yield to me.
         music: [
             `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
@@ -23,7 +23,16 @@ module.exports = {
             },
             {
                 time: 9,
-                centreLyric: `safely kept with bread and pocket lint.`
+                centreLyric: [
+                    `safely kept with`,
+                    {
+                        anchor: `bread and pocket lint.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 12,
@@ -31,7 +40,16 @@ module.exports = {
             },
             {
                 time: 15,
-                centreLyric: `but broken for what its promise meant.`
+                centreLyric: [
+                    `but broken for`,
+                    {
+                        anchor: `what its promise meant.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 18,
@@ -290,7 +308,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 9,
+            workedHours: 12,
             neededHours: 65,
             subtasks: [
                 {
