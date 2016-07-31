@@ -14,6 +14,7 @@ module.exports = {
     lyrics: [
         [
             {
+                // TODO: Mention white throated sparrow.
                 time: 5,
                 centreLyric: [
                     'On a',
@@ -333,7 +334,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 12,
+            workedHours: 20,
             neededHours: 65,
             subtasks: [
                 {
