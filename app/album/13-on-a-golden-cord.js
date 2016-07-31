@@ -1,7 +1,7 @@
 module.exports = {
     title: `On a Golden Cord`,
     overviews: {
-        narrative: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night Sita was waiting to confront me, having discovered my plans to break up with her when she snooped around on my computer earlier. In tears, she returned the gold bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise.`,
+        narrative: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night Sita was waiting to confront me, having discovered my plans to break up with her while snooping around on my computer earlier. In tears, she returned the gold bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise.`,
         // TODO: Mention that while I was always yielding to Garryowen, it was unusual for Garryowen to yield to me.
         music: [
             `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
@@ -15,7 +15,15 @@ module.exports = {
         [
             {
                 time: 5,
-                centreLyric: `On a golden cord,`
+                centreLyric: [
+                    'On a',
+                    {
+                        anchor: `golden cord,`,
+                        annotation: {
+                            description: `Early in our relationship, I had bought Sita a gold bracelet from a jewelry store at our local mall. It was quite expensive relative to my wage at the time.`
+                        }
+                    }
+                ]
             },
             {
                 time: 7,
@@ -28,9 +36,8 @@ module.exports = {
                     {
                         anchor: `bread and pocket lint.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `After Sita returned the bracelet, I put it in the front pocket of my jacket, which is where I would stash bread rolls taken from the cafeteria to munch on later. With my hands tucked in as well to keep warm that night, I turned the bracelet over and over through my fingers, just as I turned over the thoughts in my head.`
+                        }
                     }
                 ]
             },
@@ -41,14 +48,14 @@ module.exports = {
             {
                 time: 15,
                 centreLyric: [
-                    `but broken for`,
+                    `but`,
                     {
-                        anchor: `what its promise meant.`,
+                        anchor: `broken`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    }
+                            description: `When I walked into the living room to find Sita on the couch, the bracelet lay pitifully in a mangled heap on the coffee table. I thought she had damaged it on purpose, but it turns out that I had only ever seen it snugly wrapped around her wrist, where its dozens of tiny links were kept locked in place.`
+                        }
+                    },
+                    `for what its promise meant.`,
                 ]
             },
             {
@@ -63,7 +70,16 @@ module.exports = {
             },
             {
                 time: 28,
-                centreLyric: `So polite, yet resigned,`
+                centreLyric: [
+                    `So`,
+                    {
+                        anchor: `polite, yet resigned,`,
+                        annotation: {
+                            description: `While Sita had spent the entire day `
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 31,
@@ -83,7 +99,16 @@ module.exports = {
             },
             {
                 time: 47,
-                centreLyric: `I'm sorry, but I went through your mail today…"`
+                centreLyric: [
+                    `I'm sorry, but I`,
+                        {
+                            anchor: `went through your mail`,
+                            annotation: {
+                                description: `Confused about why I had grown unusually distant, Sita finally broke down earlier that day and sifted through the emails on my computer, which I kept at her place because it was a desktop. In doing so, she discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving repeated promises that I would be single again soon.`
+                            }
+                        },
+                        `today…"`
+                ]
             }
         ],
         [
