@@ -27,6 +27,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `fix M "Bobtail's words"`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: `allow for music link in lyrics`,
+            workedHours: 0,
+            neededHours: 8
+        },
+        {
             taskName: `replace em dash with \u2011, change format helper`,
             workedHours: 0,
             neededHours: 1
