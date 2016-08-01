@@ -37,7 +37,7 @@ module.exports = {
                     {
                         anchor: `bread and pocket lint.`,
                         annotation: {
-                            description: `After Sita returned the bracelet, I put it in the front pocket of my jacket, which is where I would stash bread rolls taken from the cafeteria to munch on later. With my hands tucked in as well to keep warm that night, I turned the bracelet over and over through my fingers, just as I turned over the thoughts in my head.`
+                            description: `After Sita returned the bracelet, I put it in the front pocket of my jacket, which is where I stashed bread rolls from the cafeteria to munch on later. With my hands tucked in as well to keep warm, I stroked the bracelet over and over across my fingers that night, just as I turned over the thoughts in my head.`
                         }
                     }
                 ]
@@ -53,7 +53,7 @@ module.exports = {
                     {
                         anchor: `broken`,
                         annotation: {
-                            description: `When I walked into the living room to find Sita on the couch, the bracelet lay pitifully in a mangled heap on the coffee table. I thought she had damaged it on purpose, but it turns out that I had only ever seen it snugly wrapped around her wrist, where its dozens of tiny links were kept locked in place.`
+                            description: `When I walked into the living room to find Sita on the couch, the bracelet lay in a mangled heap on the coffee table. I thought she had damaged it on purpose, but it turns out that I had only ever seen it snugly wrapped around her wrist, where its dozens of tiny links were kept intricately locked in place.`
                         }
                     },
                     `for what its promise meant.`,
@@ -76,9 +76,8 @@ module.exports = {
                     {
                         anchor: `polite, yet resigned,`,
                         annotation: {
-                            description: `While Sita had spent the entire day `
-                        },
-                        todo: true
+                            description: `Sita had spent the day bottling up her emotions, braced for that night's confrontation. Meanwhile, I had wandered in just minutes prior, ready to pass out. So while she was now exploding in hysterics, I was still struggling to process the situation in my drunken state. As such, my responses to her were calm but curt, which only added to her fluster.`
+                        }
                     }
                 ]
             },
@@ -105,7 +104,7 @@ module.exports = {
                         {
                             anchor: `went through your mail`,
                             annotation: {
-                                description: `Confused about why I had grown unusually distant, Sita finally broke down earlier that day and sifted through the emails on my computer, which I kept at her place because it was a desktop. In doing so, she discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving repeated promises that I would be single again soon.`
+                                description: `Confused about why I had grown unusually distant, Sita finally broke down earlier that day and sifted through the emails on my computer, which I kept at her place because it was a desktop. She thus discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving assurances that I would be single again soon.`
                             }
                         },
                         `today…"`
@@ -116,11 +115,29 @@ module.exports = {
             {
                 time: 54,
                 leftLyric: `Immerse the moulted form in holy foggy night,`,
-                rightLyric: `Returned a golden cord, this sole belonging signed.`
+                rightLyric: [
+                    {
+                        anchor: `Returned a golden cord,`,
+                        annotation: {
+                            description: `The "drunken" voice in the doublespeaker set `
+                        },
+                        todo: true
+                    },
+                    `this sole belonging signed.`
+                ]
             },
             {
                 time: 57,
-                leftLyric: `emerged beside a pauper's grave from dreams.`,
+                leftLyric: [
+                    {
+                        anchor: `emerged beside a pauper's grave`,
+                        annotation: {
+                            description: `The "sober" voice in the doublespeaker set`
+                        },
+                        todo: true
+                    },
+                    `from dreams.`
+                ],
                 rightLyric: `Leave early, time's up, cross your date released.`
             },
             {
@@ -130,8 +147,26 @@ module.exports = {
             },
             {
                 time: 64,
-                leftLyric: `torched the bellyaches on suttee.`,
-                rightLyric: `for the well-behaved on the wing.`
+                leftLyric: [
+                    `torched the`,
+                    {
+                        anchor: `bellyaches on suttee.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
+                rightLyric: [
+                    `for the`,
+                    {
+                        anchor: `well-behaved on the wing.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             }
         ],
         [
@@ -147,13 +182,40 @@ module.exports = {
             },
             {
                 time: 72,
-                leftLyric: `Guilt pardons the spectre taunting twin streetlamps;`,
+                leftLyric: [
+                    `Guilt pardons the`,
+                    {
+                        anchor: `spectre taunting twin streetlamps;`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
                 rightLyric: `still hardened against her fawning, misty glance,`
             },
             {
                 time: 75,
-                leftLyric: `hatchet man who's burnt enough.`,
-                rightLyric: `past this avenue Möbius.`
+                leftLyric: [
+                    {
+                        anchor: `hatchet man`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `who's burnt enough.`
+                ],
+                rightLyric: [
+                    `past this`,
+                    {
+                        anchor: `avenue Möbius.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             }
         ],
         [
@@ -179,14 +241,29 @@ module.exports = {
         ],
         [
             {
+                // TODO: Note that I was delirious due to dehydration.
                 time: -1,
                 centreLyric: {
-                    italic: `Odelay!`
+                    italic: {
+                        anchor: `Odelay!`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
                 }
             },
             {
                 time: 87,
-                centreLyric: `Just that those playful pups with their hateful fangs`
+                centreLyric: [
+                    `Just that those playful`,
+                    {
+                        anchor: `pups with their hateful fangs`,
+                        annotation: {
+                            description: `Given how much more vicious the bullies could have been, I realised that they actively held back their blows, believing their cruelty to be in good fun. Similarly, baby predators instinctively understand their claws and fangs to be weapons, and will thus contain themselves during rough play.`
+                        }
+                    }
+                ]
             },
             {
                 time: 90,
@@ -194,7 +271,15 @@ module.exports = {
             },
             {
                 time: 93,
-                centreLyric: `while this supposed dove chafing in his cage,`
+                centreLyric: [
+                    `while this supposed`,
+                    {
+                        anchor: `dove chafing in his cage,`,
+                        annotation: {
+                            description: `A dove, on the other hand, can peck its cagemate to death, unaware of the deadly nature of its beak. Similarly, seeing myself as the perennial victim, I had caused Sita far greater emotional trauma than I had ever received at the hands of the bullies.`
+                        }
+                    }
+                ]
             },
             {
                 time: 96,
@@ -225,7 +310,13 @@ module.exports = {
             {
                 time: 113,
                 centreLyric: {
-                    italic: `Mush! Mush!`
+                    italic: {
+                        anchor: `Mush! Mush!`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
                 }
             }
         ],
@@ -239,6 +330,7 @@ module.exports = {
                 centreLyric: `Thoughts spawned then dropped,`
             },
             {
+                // Sooty dust.
                 time: 121,
                 centreLyric: `of gathering up the suttee dust.`
             },
@@ -334,7 +426,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 20,
+            workedHours: 27,
             neededHours: 65,
             subtasks: [
                 {

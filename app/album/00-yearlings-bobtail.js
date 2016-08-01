@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `replace em dash with \u2011, change format helper`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `add propTypes`,
             workedHours: 0,
             neededHours: 1
