@@ -27,11 +27,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `fix M "Bobtail's words"`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `allow for music link in lyrics`,
             workedHours: 0,
             neededHours: 8
