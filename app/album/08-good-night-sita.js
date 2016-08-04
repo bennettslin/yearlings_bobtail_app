@@ -1,7 +1,7 @@
 module.exports = {
     title: `Good Night, Sita`,
     overviews: {
-        narrative: `A while after Catherine and sometime before Mara, I tried to hit on a fellow college student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
+        narrative: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
         music: [
             `In the final chapter of James Joyce's`,
             {

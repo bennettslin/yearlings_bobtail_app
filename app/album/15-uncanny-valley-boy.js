@@ -5,159 +5,159 @@ module.exports = {
         music: `personal 1`
     },
     lyrics: [
-        [
-            [
-                {
-                    time: 14,
-                    lyric: `…`
-                },
-                {
-                    time: 17,
-                    lyric: `…`
-                },
-                {
-                    time: 21,
-                    lyric: `…`
-                },
-                {
-                    time: 27,
-                    lyric: `…`
-                },
-                {
-                    time: 31,
-                    lyric: `…`
-                },
-                {
-                    time: 35,
-                    lyric: `…`
-                }
-            ],
-            [
-                {
-                    time: 40,
-                    lyric: `…`
-                },
-                {
-                    time: 44,
-                    lyric: `…`
-                },
-                {
-                    time: 47,
-                    lyric: `…`
-                },
-                {
-                    time: 50,
-                    lyric: `…`
-                },
-                {
-                    time: 54,
-                    lyric: `…`
-                }
-            ],
-            [
-                {
-                    time: 62,
-                    lyric: `Oh, bastard ingrate! Some nights you wake,`
-                },
-                {
-                    time: 69,
-                    lyric: `climb and survey the houses you've betrayed.`
-                },
-                {
-                    time: 76,
-                    lyric: `Scattered your beans over suburbia…`
-                },
-                {
-                    time: 84,
-                    lyric: `…`
-                },
-            ],
-            [
-                {
-                    time: 86,
-                    lyric: `…`
-                },
-                {
-                    time: 89,
-                    lyric: `…`
-                },
-                {
-                    time: 94,
-                    lyric: `…`
-                }
-            ],
-            [
-                {
-                    time: 100,
-                    lyric: `…`
-                },
-                {
-                    time: 106,
-                    lyric: `…`
-                },
-                {
-                    time: 111,
-                    lyric: `…`
-                },
-                {
-                    time: 119,
-                    lyric: `…`
-                }
-            ],
-            [
-                {
-                    time: 127,
-                    lyric: `…`
-                },
-                {
-                    time: 132,
-                    lyric: `…`
-                },
-                {
-                    time: 138,
-                    lyric: `…`
-                }
-            ],
-            [
-                {
-                    time: 151,
-                    lyric: `Your dulling gold now gone…`
-                },
-                {
-                    time: 157,
-                    lyric: `…traded in for the trophy blondes.`
-                }
-            ],
-            [
-                {
-                    time: 161,
-                    lyric: `Through tatters of sky, their sun tinkles light`
-                },
-                {
-                    time: 168,
-                    lyric: `in needling chimes that weave through the vines,`
-                },
-                {
-                    time: 174,
-                    lyric: `cast on your peons, old and subservient.`
-                },
-                {
-                    time: 182,
-                    lyric: `…`
-                }
-            ],
-            [
-                {
-                    time: 185,
-                    lyric: `Rama, Rama, Rama…`
-                },
-                {
-                    time: 197,
-                    lyric: `…Maranatha!`
-                }
-            ]
-        ],
-        [
+        // [
+        //     [
+        //         {
+        //             time: 14,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 17,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 21,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 27,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 31,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 35,
+        //             lyric: `…`
+        //         }
+        //     ],
+        //     [
+        //         {
+        //             time: 40,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 44,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 47,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 50,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 54,
+        //             lyric: `…`
+        //         }
+        //     ],
+        //     [
+        //         {
+        //             time: 62,
+        //             lyric: `Oh, bastard ingrate! Some nights you wake,`
+        //         },
+        //         {
+        //             time: 69,
+        //             lyric: `climb and survey the houses you've betrayed.`
+        //         },
+        //         {
+        //             time: 76,
+        //             lyric: `Scattered your beans over suburbia…`
+        //         },
+        //         {
+        //             time: 84,
+        //             lyric: `…`
+        //         },
+        //     ],
+        //     [
+        //         {
+        //             time: 86,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 89,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 94,
+        //             lyric: `…`
+        //         }
+        //     ],
+        //     [
+        //         {
+        //             time: 100,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 106,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 111,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 119,
+        //             lyric: `…`
+        //         }
+        //     ],
+        //     [
+        //         {
+        //             time: 127,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 132,
+        //             lyric: `…`
+        //         },
+        //         {
+        //             time: 138,
+        //             lyric: `…`
+        //         }
+        //     ],
+        //     [
+        //         {
+        //             time: 151,
+        //             lyric: `Your dulling gold now gone…`
+        //         },
+        //         {
+        //             time: 157,
+        //             lyric: `…traded in for the trophy blondes.`
+        //         }
+        //     ],
+        //     [
+        //         {
+        //             time: 161,
+        //             lyric: `Through tatters of sky, their sun tinkles light`
+        //         },
+        //         {
+        //             time: 168,
+        //             lyric: `in needling chimes that weave through the vines,`
+        //         },
+        //         {
+        //             time: 174,
+        //             lyric: `cast on your peons, old and subservient.`
+        //         },
+        //         {
+        //             time: 182,
+        //             lyric: `…`
+        //         }
+        //     ],
+        //     [
+        //         {
+        //             time: 185,
+        //             lyric: `Rama, Rama, Rama…`
+        //         },
+        //         {
+        //             time: 197,
+        //             lyric: `…Maranatha!`
+        //         }
+        //     ]
+        // ],
+
             [
                 {
                     time: 14,
@@ -308,7 +308,7 @@ module.exports = {
                     lyric: `shouldn't you first be sure you've finally become someone?`
                 }
             ]
-        ]
+
     ],
     tasks: [
         {

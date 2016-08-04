@@ -30,7 +30,7 @@ module.exports = {
                         {
                             anchor: `pompous autumn waits.`,
                             annotation: {
-                                description: `In high school, I soldiered on with the same iffy persona to which I had tied myself years earlier. It just didn't seem possible to become a completely different person while surrounded by all the same classmates. But in my head, I was crafting a brand new persona that was raring to go at the earliest opportunity.`
+                                description: `In high school, I soldiered on with the same iffy persona to which I had tied myself years earlier in middle school. It just didn't seem possible to become a completely different person while surrounded by all the same classmates. But in my head, I was crafting a brand new persona that was raring to go at the earliest opportunity.`
                             }
                         }
                     ]
@@ -83,7 +83,7 @@ module.exports = {
                     {
                         anchor: `dull dishroom days`,
                         annotation: {
-                            description: `I got a job washing dishes in a cafeteria on campus, which allowed me to sit and read for decent stretches of time, and to work on song lyrics in my head when it got busy. But I was bored a lot as well.`
+                            description: `I got a job washing dishes at a university cafeteria. The pay was decent, but the work was uneventful. I would sit and read while the dishes piled up, then clean them all at once. When it got really busy, I would switch to writing song lyrics in my head.`
                         }
                     }
                 ]
@@ -95,7 +95,7 @@ module.exports = {
                     {
                         anchor: `keys left on dumbwaiter trays.`,
                         annotation: {
-                            description: `Students bussed their trays on a vertical conveyor belt, which then transported the dirty dishes to the dishroom one floor below. Occasionally someone would leave a personal item on the tray by accident, and would then come downstairs to retrieve it. The crew always got a kick when that happened, as it broke up the monotony.`
+                            description: `The university students bussed their trays on a vertical conveyor belt, which then transported the dirty dishes to the dishroom one floor below. Occasionally someone would leave a personal item on the tray by accident, and would then come downstairs to retrieve it. The crew always got a kick when that happened, as it broke up the monotony.`
                         }
                     }
                 ]
@@ -109,7 +109,7 @@ module.exports = {
                     {
                         anchor: `fetch her lancet pen,`,
                         annotation: {
-                            description: `As a diabetic, Sita regularly checked her blood sugar level before meals by pricking a finger with a lancing device. That day, she forgot to take it with her before bussing her tray, and came down to the dishroom to retrieve it.`
+                            description: `As a diabetic, Sita regularly checked her blood sugar level before meals by pricking her finger with a lancing device. That day, she forgot to take it with her after bussing her tray, and came down to the dishroom to retrieve it.`
                         }
                     }
                 ]
@@ -133,7 +133,7 @@ module.exports = {
                     {
                         anchor: `laying qualms to rest:`,
                         annotation: {
-                            description: `It was well known to the students that our dishroom workers were hired through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and seeming familiarity with underground culture ultimately won her over.`
+                            description: `It was well known to the students that the cafeteria hired most of its workers through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and seeming familiarity with underground culture ultimately won her over.`
                         }
                     }
                 ]
