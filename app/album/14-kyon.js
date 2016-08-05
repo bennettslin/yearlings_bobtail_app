@@ -1,7 +1,11 @@
 module.exports = {
     title: `Kyon?`,
     overviews: {
-        narrative: `narrative 1`,
+        narrative: `With the breakup, I finally had enough distance from my relationship to see just how dysfunctional it had become, and how it was entirely my doing. I saw just how emotionally abusive 
+
+
+
+         I spent a long time trying to understand Sita's psyche, `,
         music: `personal 1`
     },
     lyrics: [
