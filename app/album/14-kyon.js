@@ -1,11 +1,7 @@
 module.exports = {
     title: `Kyon?`,
     overviews: {
-        narrative: `With the breakup, I finally had enough distance from my relationship to see just how dysfunctional it had become, and how it was entirely my doing. I saw just how emotionally abusive 
-
-
-
-         I spent a long time trying to understand Sita's psyche, `,
+        narrative: `The breakup finally gave me enough distance from my past self to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita had chosen to endure my cruelty for so long. I tried hard to understand her psyche, and eventually came to see how thoroughly she had subsumed her identity in our relationship. I was fighting for myself. She was fighting for us.`,
         music: `personal 1`
     },
     lyrics: [
