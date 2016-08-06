@@ -201,35 +201,8 @@ module.exports = {
         ],
         [
             {
-                time: -1,
-                lyric: {
-                    italic: `With no sister ship slain by his side,`
-                }
-            },
-            {
-                time: -1,
-                lyric: {
-                    italic: [
-                        `and so off her list,`,
-                        {
-                            anchor: `sunken Tirpitz`,
-                            annotation: {
-                                description: [
-                                    `The Bismarck and the Tirpitz were sister battleships of the German navy in World War II.`,
-                                    {
-                                        italic: `The Man in the High Castle`
-                                    },
-                                    `is an alternate history novel in which the Axis powers won the war.`
-                                ]
-                            }
-                        },
-                        `lies.`
-                    ]
-                }
-            },
-            {
                 time: 77,
-                lyric: [
+                leftLyric: [
                     `Alone his first gig,`,
                     {
                         anchor: `stagefright ignites.`,
@@ -237,11 +210,12 @@ module.exports = {
                             description: `Shortly after Sita and I stopped talking, I began to play open mic nights. The first few times were a disaster, but I eventually learned to conquer my stagefright with just the right amount of alcohol.`
                         }
                     }
-                ]
+                ],
+                rightLyric: `With no sister ship slain by his side,`
             },
             {
                 time: 87,
-                lyric: [
+                leftLyric: [
                     `But`,
                     {
                         anchor: `no convert's missed,`,
@@ -250,6 +224,22 @@ module.exports = {
                         }
                     },
                     `once assured his tithe.`
+                ],
+                rightLyric: [
+                    `and so off her list,`,
+                    {
+                        anchor: `sunken Tirpitz`,
+                        annotation: {
+                            description: [
+                                `The Bismarck and the Tirpitz were sister battleships of the German navy in World War II.`,
+                                {
+                                    italic: `The Man in the High Castle`
+                                },
+                                `is an alternate history novel in which the Axis powers won the war.`
+                            ]
+                        }
+                    },
+                    `lies.`
                 ]
             }
         ],

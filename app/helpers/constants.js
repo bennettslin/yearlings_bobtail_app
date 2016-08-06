@@ -11,6 +11,9 @@ module.exports = {
 
     DEFAULT_OVERVIEW_INDEX: 1,
 
+    TOP_SIDE_VERSE_TIME: -1,
+    BOTTOM_SIDE_VERSE_TIME: Number.MAX_SAFE_INTEGER,
+
     TEXT_KEYS: [
         'italic',
         'emphasis',
