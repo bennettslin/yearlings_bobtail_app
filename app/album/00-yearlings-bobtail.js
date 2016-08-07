@@ -28,8 +28,8 @@ module.exports = {
     tasks: [
         {
             taskName: `create a side stanza object`,
-            workedHours: 0,
-            neededHours: 8
+            workedHours: 2,
+            neededHours: 3
         },
         {
             taskName: `allow for music link in lyrics`,

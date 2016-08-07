@@ -23,7 +23,10 @@ const LyricsStanzaView = ({
 }) => (
 
     <div className="stanza">
-        {stanzaArray.map((verseObject, verseIndex) => {
+        {/* Ignore side stanzas, which are arrays. */}
+        {stanzaArray
+            .filter((verseObject) => !(verseObject instanceof Array))
+            .map((verseObject, verseIndex) => {
             return (
                 <LyricsVerse
                     key={verseIndex}

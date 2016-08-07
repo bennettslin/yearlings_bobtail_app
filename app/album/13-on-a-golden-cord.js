@@ -1,6 +1,4 @@
 // TODO: Pronouns out of whack!
-import { TOP_SIDE_VERSE_TIME, BOTTOM_SIDE_VERSE_TIME } from 'helpers/constants'
-
 module.exports = {
     title: `On a Golden Cord`,
     overviews: {
@@ -143,7 +141,7 @@ module.exports = {
                     {
                         anchor: `pauper's grave`,
                         annotation: {
-                            description: `I had spent weeks rehearsing for the breakup, which I assumed could be scheduled at my convenience, and would follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was buried in haste and without ceremony, just like the unknown deceased.`
+                            description: `I had spent weeks rehearsing the breakup, which I assumed could be scheduled at my convenience and would follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was buried in careless haste, much like those who cannot afford proper ritual.`
                         }
                     },
                     `from dreams.`
@@ -162,9 +160,8 @@ module.exports = {
                     {
                         anchor: `bellyaches on suttee.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Suttee is an outlawed Hindu custom in which a widow must throw herself on her husband's funeral pyre. Similarly, I knew I could be rid of Sita forever if I just killed myself off little by little, until no trace remained of the boyfriend she once knew.`
+                        }
                     }
                 ],
                 rightLyric: [
@@ -267,19 +264,21 @@ module.exports = {
             }
         ],
         [
-            {
-                // TODO: Note that I was delirious due to dehydration.
-                time: TOP_SIDE_VERSE_TIME,
-                centreLyric: {
-                    italic: {
-                        anchor: `Odelay!`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
+            [
+                {
+                    // TODO: Note that I was delirious due to dehydration.
+                    // Top side stanza.
+                    lyric: {
+                        italic: {
+                            anchor: `Odelay!`,
+                            annotation: {
+                                description: ``
+                            },
+                            todo: true
+                        }
                     }
-                }
-            },
+                },
+            ],
             {
                 time: 87,
                 centreLyric: [
@@ -334,18 +333,20 @@ module.exports = {
                 time: 113,
                 centreLyric: `Now the jester teeters towards…`
             },
-            {
-                time: BOTTOM_SIDE_VERSE_TIME,
-                centreLyric: {
-                    italic: {
-                        anchor: `Mush! Mush!`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
+            [
+                {
+                    // Bottom side stanza.
+                    lyric: {
+                        italic: {
+                            anchor: `Mush! Mush!`,
+                            annotation: {
+                                description: ``
+                            },
+                            todo: true
+                        }
                     }
                 }
-            }
+            ]
         ],
         [
             {
@@ -453,7 +454,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 27,
+            workedHours: 35,
             neededHours: 65,
             subtasks: [
                 {

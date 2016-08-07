@@ -1,5 +1,3 @@
-import { TOP_SIDE_VERSE_TIME, BOTTOM_SIDE_VERSE_TIME } from 'helpers/constants'
-
 module.exports = {
     title: `Uncanny Valley Boy`,
     overviews: {
@@ -201,10 +199,12 @@ module.exports = {
             }
         ],
         [
-            {
-                time: TOP_SIDE_VERSE_TIME,
-                lyric: `Rama, Rama, Rama…`
-            },
+            [
+                {
+                    // Top side stanza.
+                    lyric: `Rama, Rama, Rama…`
+                }
+            ],
             {
                 time: 184,
                 lyric: `Now son, before you embark on your great bildungsroman,`
@@ -213,10 +213,12 @@ module.exports = {
                 time: 191,
                 lyric: `shouldn't you first be sure you've finally become someone?`
             },
-            {
-                time: BOTTOM_SIDE_VERSE_TIME,
-                lyric: `…Maranatha!`
-            },
+            [
+                {
+                    // Bottom side stanza.
+                    lyric: `…Maranatha!`
+                }
+            ]
         ]
     ],
     tasks: [

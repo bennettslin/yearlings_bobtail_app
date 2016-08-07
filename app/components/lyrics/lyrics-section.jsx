@@ -1,6 +1,5 @@
 import React from 'react'
 import LyricsStanza from './lyrics-stanza'
-import { TOP_SIDE_VERSE_TIME, BOTTOM_SIDE_VERSE_TIME } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -29,23 +28,22 @@ const LyricsSectionView = ({
 
                 /**
                  * Determine whether the first and last verse objects are side
-                 * verse objects.
+                 * stanzas.
                  */
                 const firstVerseObject = stanzaArray[0],
                     lastVerseObject = stanzaArray[stanzaArray.length - 1]
 
-                let topSideVerseObject,
-                    bottomSideVerseObject
+                let topSideStanzaArray,
+                    bottomSideStanzaArray
 
-                if (firstVerseObject.time === TOP_SIDE_VERSE_TIME) {
-                    topSideVerseObject = stanzaArray.shift()
+                if (firstVerseObject instanceof Array) {
+                    topSideStanzaArray = firstVerseObject
                 }
 
-                if (lastVerseObject.time === BOTTOM_SIDE_VERSE_TIME) {
-                    bottomSideVerseObject = stanzaArray.pop()
+                if (lastVerseObject instanceof Array) {
+                    bottomSideStanzaArray = lastVerseObject
                 }
-
-                // TODO: Create a side stanza component.
+                
                 // TODO: Create an about music link.
 
                 return (
@@ -58,6 +56,25 @@ const LyricsSectionView = ({
                             stanzaIndex={stanzaIndex}
                             onAnnotationClick={onAnnotationClick}
                         />
+                        {/* Include side stanzas, if there are any. */}
+                        {topSideStanzaArray || bottomSideStanzaArray ?
+                            <div className="side-stanza-block">
+                                {topSideStanzaArray ?
+                                    <LyricsStanza
+                                    stanzaArray={topSideStanzaArray}
+                                    stanzaIndex={stanzaIndex}
+                                    onAnnotationClick={onAnnotationClick}
+                                    /> : null
+                                }
+                                {bottomSideStanzaArray ?
+                                    <LyricsStanza
+                                    stanzaArray={bottomSideStanzaArray}
+                                    stanzaIndex={stanzaIndex}
+                                    onAnnotationClick={onAnnotationClick}
+                                    /> : null
+                                }
+                            </div> : null
+                        }
                     </div>
                 )
             })}
