@@ -17,7 +17,6 @@ const LyricsStanzaView = ({
 
     // From props.
     stanzaArray,
-    stanzaIndex,
     onAnnotationClick
 
 }) => (

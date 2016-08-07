@@ -31,19 +31,10 @@ const LyricsSectionView = ({
                  * stanzas.
                  */
                 const firstVerseObject = stanzaArray[0],
-                    lastVerseObject = stanzaArray[stanzaArray.length - 1]
+                    lastVerseObject = stanzaArray[stanzaArray.length - 1],
+                    hasTopSideStanza = firstVerseObject instanceof Array,
+                    hasBottomSideStanza = lastVerseObject instanceof Array
 
-                let topSideStanzaArray,
-                    bottomSideStanzaArray
-
-                if (firstVerseObject instanceof Array) {
-                    topSideStanzaArray = firstVerseObject
-                }
-
-                if (lastVerseObject instanceof Array) {
-                    bottomSideStanzaArray = lastVerseObject
-                }
-                
                 // TODO: Create an about music link.
 
                 return (
@@ -53,23 +44,20 @@ const LyricsSectionView = ({
                     >
                         <LyricsStanza
                             stanzaArray={stanzaArray}
-                            stanzaIndex={stanzaIndex}
                             onAnnotationClick={onAnnotationClick}
                         />
                         {/* Include side stanzas, if there are any. */}
-                        {topSideStanzaArray || bottomSideStanzaArray ?
-                            <div className="side-stanza-block">
-                                {topSideStanzaArray ?
+                        {hasTopSideStanza || hasBottomSideStanza ?
+                            <div className={`side-stanza-block${!hasTopSideStanza ? ' bottom-only' : ''}`}>
+                                {hasTopSideStanza ?
                                     <LyricsStanza
-                                    stanzaArray={topSideStanzaArray}
-                                    stanzaIndex={stanzaIndex}
+                                    stanzaArray={firstVerseObject}
                                     onAnnotationClick={onAnnotationClick}
                                     /> : null
                                 }
-                                {bottomSideStanzaArray ?
+                                {hasBottomSideStanza ?
                                     <LyricsStanza
-                                    stanzaArray={bottomSideStanzaArray}
-                                    stanzaIndex={stanzaIndex}
+                                    stanzaArray={lastVerseObject}
                                     onAnnotationClick={onAnnotationClick}
                                     /> : null
                                 }

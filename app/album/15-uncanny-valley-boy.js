@@ -202,7 +202,7 @@ module.exports = {
             [
                 {
                     // Top side stanza.
-                    lyric: `Rama, Rama, Rama…`
+                    lyric: `Rama, Rama…`
                 }
             ],
             {

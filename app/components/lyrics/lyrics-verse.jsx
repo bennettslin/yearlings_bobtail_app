@@ -6,9 +6,18 @@ import { LYRIC_COLUMN_CLASSES } from 'helpers/constants'
  * CONTAINER *
  *************/
 
-const LyricsVerse = (props) => (
-    <LyricsVerseView {...props} />
-)
+const LyricsVerse = (props) => {
+
+    const { verseObject } = props,
+
+        isSingleSpeaker = !!verseObject.lyric
+
+    return (
+        <LyricsVerseView {...props}
+            isSingleSpeaker={isSingleSpeaker}
+        />
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -19,17 +28,22 @@ const LyricsVerseView = ({
     // From props.
     verseObject,
     verseIndex,
-    onAnnotationClick
+    onAnnotationClick,
+
+    // From controller.
+    isSingleSpeaker
 
 }) => (
 
     <div className="verse">
-        {verseObject.lyric ? (
-                <TextBlock
-                    isLyric={true}
-                    text={verseObject.lyric}
-                    onAnchorClick={onAnnotationClick}
-                />
+        {isSingleSpeaker ? (
+                <div className="line left">
+                    <TextBlock
+                        isLyric={true}
+                        text={verseObject.lyric}
+                        onAnchorClick={onAnnotationClick}
+                    />
+                </div>
             ) : (
                 <div className="double-lines-block">
                     {LYRIC_COLUMN_CLASSES.filter((keyClassPair) => {

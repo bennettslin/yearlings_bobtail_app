@@ -3,6 +3,10 @@
     font-size: @lyric-verse-size;
     line-height: 150%;
 
+    a {
+        font-weight: normal;
+    }
+
     .lyrics-card {
         display: flex;
         justify-content: center;
@@ -12,8 +16,22 @@
         }
     }
 
-    a {
-        font-weight: normal;
+    .side-stanza-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &.bottom-only {
+            justify-content: flex-end;
+        }
+
+        .stanza {
+            margin-left: 10px;
+
+            &:not(:first-child):last-child {
+                margin-top: 20px;
+            }
+        }
     }
 
     .stanza {
@@ -54,55 +72,55 @@
 .double-lines-block {
     display: flex;
     justify-content: space-between;
+}
 
-    .line {
-        @hanging-indent-width: 1.5em;
-        @centre-edge-margin: 15%;
+.line {
+    @hanging-indent-width: 1.5em;
+    @centre-edge-margin: 15%;
 
-        &.left {
-            text-indent:-@hanging-indent-width;
-            padding-left: @hanging-indent-width;
+    &.left {
+        text-indent:-@hanging-indent-width;
+        padding-left: @hanging-indent-width;
 
-            &.centre {
-                padding-left: @centre-edge-margin;
-            }
+        &.centre {
+            padding-left: @centre-edge-margin;
+        }
+    }
+
+    &.centre {
+        width: 100%;
+
+        &.exact {
+            text-indent: 0;
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+
+    &.right {
+
+        /**
+         * Styling for hanging indent with right-aligned text. The hidden
+         * last letter is a stupid hack to prevent rtl from switching the
+         * order of the last letter.
+         */
+        text-indent:-@hanging-indent-width;
+        padding-right: @hanging-indent-width;
+        direction: rtl;
+        &:after {
+            content: 'a';
+            opacity: 0;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        &.far {
+            // Single gutter between far left and right columns.
+            margin-left: @field-padding;
         }
 
         &.centre {
-            width: 100%;
-
-            &.exact {
-                text-indent: 0;
-                padding-left: 0;
-                text-align: center;
-            }
-        }
-
-        &.right {
-
-            /**
-             * Styling for hanging indent with right-aligned text. The hidden
-             * last letter is a stupid hack to prevent rtl from switching the
-             * order of the last letter.
-             */
-            text-indent:-@hanging-indent-width;
-            padding-right: @hanging-indent-width;
-            direction: rtl;
-            &:after {
-                content: 'a';
-                opacity: 0;
-                font-size: 0;
-                line-height: 0;
-            }
-
-            &.far {
-                // Single gutter between far left and right columns.
-                margin-left: @field-padding;
-            }
-
-            &.centre {
-                padding-right: @centre-edge-margin;
-            }
+            padding-right: @centre-edge-margin;
         }
     }
 }
