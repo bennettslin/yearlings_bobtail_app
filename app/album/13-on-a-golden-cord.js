@@ -1,3 +1,6 @@
+// TODO: Pronouns out of whack!
+import { TOP_SIDE_VERSE_TIME, BOTTOM_SIDE_VERSE_TIME } from 'helpers/constants'
+
 module.exports = {
     title: `On a Golden Cord`,
     overviews: {
@@ -114,27 +117,34 @@ module.exports = {
         [
             {
                 time: 54,
-                leftLyric: `Immerse the moulted form in holy foggy night,`,
-                rightLyric: [
+                leftLyric: [
                     {
-                        anchor: `Returned a golden cord,`,
+                        anchor: `Immerse the moulted form`,
                         annotation: {
-                            description: `The "drunken" voice in the doublespeaker set `
-                        },
-                        todo: true
+                            description: `With the breakup now irreversible, the "sober" voice in the doublespeaker set calmly resurrects the ghost of his drunken alter ego, whom he had sacrificed as an unwitting accomplice in the plot to end his relationship.`
+                        }
                     },
-                    `this sole belonging signed.`
+                    `in holy foggy night,`
+                ],
+                rightLyric: [
+                    `Returned a golden cord, this`,
+                    {
+                        anchor: `sole belonging signed.`,
+                        annotation: {
+                            description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice in the doublespeaker set can only recollect his past crimes. As such, he believes himself to be newly released from prison, having just now retrieved from property storage the gold bracelet in his hand.`
+                        }
+                    }
                 ]
             },
             {
                 time: 57,
                 leftLyric: [
+                    `emerged beside a`,
                     {
-                        anchor: `emerged beside a pauper's grave`,
+                        anchor: `pauper's grave`,
                         annotation: {
-                            description: `The "sober" voice in the doublespeaker set`
-                        },
-                        todo: true
+                            description: `I had spent weeks rehearsing for the breakup, which I assumed could be scheduled at my convenience, and would follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was buried in haste and without ceremony, just like the unknown deceased.`
+                        }
                     },
                     `from dreams.`
                 ],
@@ -162,9 +172,8 @@ module.exports = {
                     {
                         anchor: `well-behaved on the wing.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Feeling no lingering malice, I can only assume that I served out my sentence without complaint, and was thus granted an early release for good behaviour.`
+                        }
                     }
                 ]
             }
@@ -173,7 +182,16 @@ module.exports = {
             {
                 time: 65,
                 leftLyric: `Had I grown dispirited in all this act,`,
-                rightLyric: `As I soak in spirits amidst wanted ads—`
+                rightLyric: [
+                    `As I soak in spirits amidst`,
+                    {
+                        anchor: `wanted ads—`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 68,
@@ -192,7 +210,16 @@ module.exports = {
                         todo: true
                     }
                 ],
-                rightLyric: `still hardened against her fawning, misty glance,`
+                rightLyric: [
+                    `still hardened against her`,
+                    {
+                        anchor: `fawning, misty glance,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 75,
@@ -242,7 +269,7 @@ module.exports = {
         [
             {
                 // TODO: Note that I was delirious due to dehydration.
-                time: -1,
+                time: TOP_SIDE_VERSE_TIME,
                 centreLyric: {
                     italic: {
                         anchor: `Odelay!`,
@@ -308,7 +335,7 @@ module.exports = {
                 centreLyric: `Now the jester teeters towards…`
             },
             {
-                time: 113,
+                time: BOTTOM_SIDE_VERSE_TIME,
                 centreLyric: {
                     italic: {
                         anchor: `Mush! Mush!`,
@@ -437,6 +464,7 @@ module.exports = {
             ]
         },
         {
+            // Drunken me holds gold bracelet over kid's head in the morning.
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
