@@ -141,7 +141,7 @@ module.exports = {
                     {
                         anchor: `pauper's grave`,
                         annotation: {
-                            description: `I had spent weeks rehearsing the breakup, which I assumed could be scheduled at my convenience and would follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was buried in careless haste, much like those who cannot afford proper ritual.`
+                            description: `I had spent weeks rehearsing the breakup, which I assumed could be scheduled at my convenience and would follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was disposed of in careless haste, much like those who cannot afford a proper burial.`
                         }
                     },
                     `from dreams.`

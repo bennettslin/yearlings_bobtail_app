@@ -40,7 +40,7 @@ const LyricsSectionView = ({
                 return (
                     <div
                         key={stanzaIndex}
-                        className="lyrics-card"
+                        className="lyrics-unit"
                     >
                         <LyricsStanza
                             stanzaArray={stanzaArray}
@@ -48,7 +48,7 @@ const LyricsSectionView = ({
                         />
                         {/* Include side stanzas, if there are any. */}
                         {hasTopSideStanza || hasBottomSideStanza ?
-                            <div className={`side-stanza-block${!hasTopSideStanza ? ' bottom-only' : ''}`}>
+                            <div className={`side-stanza${!hasTopSideStanza ? ' bottom-only' : ''}`}>
                                 {hasTopSideStanza ?
                                     <LyricsStanza
                                     stanzaArray={firstVerseObject}

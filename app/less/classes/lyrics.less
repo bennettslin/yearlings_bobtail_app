@@ -7,7 +7,7 @@
         font-weight: normal;
     }
 
-    .lyrics-card {
+    .lyrics-unit {
         display: flex;
         justify-content: center;
 
@@ -16,7 +16,9 @@
         }
     }
 
-    .side-stanza-block {
+    .side-stanza {
+        @side-stanza-padding: 10px;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -26,10 +28,10 @@
         }
 
         .stanza {
-            margin-left: 10px;
+            margin-left: @side-stanza-padding;
 
             &:not(:first-child):last-child {
-                margin-top: 20px;
+                margin-top: @side-stanza-padding;
             }
         }
     }
