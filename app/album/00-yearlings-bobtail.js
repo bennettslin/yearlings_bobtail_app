@@ -32,11 +32,6 @@ module.exports = {
             neededHours: 8
         },
         {
-            taskName: `replace em dash with \u2011, change format helper`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `add propTypes`,
             workedHours: 0,
             neededHours: 1
@@ -134,6 +129,11 @@ module.exports = {
             taskName: `allow for side stanza`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `replace em dash with \u2011, change format helper`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

@@ -3,8 +3,7 @@ import DotButton from './dot-button'
 import { ALL_DOT_KEYS } from 'helpers/constants'
 
 const defaultProps = {
-    dotKeys: {},
-    interactable: false
+    dotKeys: {}
 }
 
 /*************

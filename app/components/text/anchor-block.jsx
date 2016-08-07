@@ -64,7 +64,6 @@ const AnchorBlockView = ({
             <span className="underline-bar"></span>
             <DotsBlock
                 dotKeys={dotKeys}
-                interactable={false}
             />
             <TextBlock
                 isLyric={isLyric}
