@@ -9,6 +9,12 @@ module.exports = {
     OVERVIEW_INDEX: 'overviewIndex',
     WIKI_URL: 'wikiUrl',
 
+    /**
+     * If there is one side stanza, it defaults to top. If there are two, one
+     * is the top, other is the bottom.
+     */
+    BOTTOM_ONLY_SIDE_STANZA: 'bottomOnlySideStanza',
+
     DEFAULT_OVERVIEW_INDEX: 1,
 
     TEXT_KEYS: [

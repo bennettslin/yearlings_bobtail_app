@@ -1,3 +1,5 @@
+import { BOTTOM_ONLY_SIDE_STANZA } from 'helpers/constants'
+
 /**
  * Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
  * list order on the album.
@@ -111,6 +113,7 @@ module.exports = {
             },
             [
                 {
+                    side: BOTTOM_ONLY_SIDE_STANZA,
                     lyric: {
                         emphasis: {
                             anchor: `Poor Sam Peabody!`,

@@ -54,17 +54,6 @@ module.exports = {
             }
         ],
         [
-            [
-                {
-                    lyric: `Oh, bastard ingrate! Some nights you wake,`
-                },
-                {
-                    lyric: `climb and survey the houses you've betrayed.`
-                },
-                {
-                    lyric: `Scattered your beans over suburbia…`
-                }
-            ],
             {
                 time: 61,
                 lyric: `Mowed down by the tides, and inundated under in unfair fights,`
@@ -80,7 +69,18 @@ module.exports = {
             {
                 time: 80,
                 lyric: `you finally granted their nutshells are rigged, and healed round your grudge…`
-            }
+            },
+            [
+                {
+                    lyric: `Oh, bastard ingrate! Some nights you wake,`
+                },
+                {
+                    lyric: `climb and survey the houses you've betrayed.`
+                },
+                {
+                    lyric: `Scattered your beans over suburbia…`
+                }
+            ]
         ],
         [
             {
@@ -129,14 +129,6 @@ module.exports = {
             }
         ],
         [
-            [
-                {
-                    lyric: `Your dulling gold now gone…`
-                },
-                {
-                    lyric: `…traded in for the trophy blondes.`
-                }
-            ],
             {
                 time: 145,
                 lyric: `No well worn sari could sway you from a fairer marathon!`
@@ -144,20 +136,17 @@ module.exports = {
             {
                 time: 152,
                 lyric: `Stubborn harpies can't draw this contest to be one!`
-            }
-        ],
-        [
+            },
             [
                 {
-                    lyric: `Through tatters of sky, their sun tinkles light`
+                    lyric: `Your dulling gold now gone…`
                 },
                 {
-                    lyric: `in needling chimes that weave through the vines,`
-                },
-                {
-                    lyric: `cast on your peons, old and subservient.`
+                    lyric: `…traded in for the trophy blondes.`
                 }
-            ],
+            ]
+        ],
+        [
             {
                 time: 160,
                 lyric: `Oh child of mine, what's left of what these faces you flip override,`
@@ -173,15 +162,20 @@ module.exports = {
             {
                 time: 178,
                 lyric: `your thoughts surrendered for Bobtail's sake, to five-year plans.`
-            }
-        ],
-        [
+            },
             [
                 {
-                    // Top side stanza.
-                    lyric: `Rama, Rama…`
+                    lyric: `Through tatters of sky, their sun tinkles light`
+                },
+                {
+                    lyric: `in needling chimes that weave through the vines,`
+                },
+                {
+                    lyric: `cast on your peons, old and subservient.`
                 }
-            ],
+            ]
+        ],
+        [
             {
                 time: 184,
                 lyric: `Now son, before you embark on your great bildungsroman,`
@@ -192,7 +186,11 @@ module.exports = {
             },
             [
                 {
-                    // Bottom side stanza.
+                    lyric: `Rama, Rama…`
+                }
+            ],
+            [
+                {
                     lyric: `…Maranatha!`
                 }
             ]

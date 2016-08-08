@@ -1,4 +1,5 @@
-// TODO: Pronouns out of whack!
+import { BOTTOM_ONLY_SIDE_STANZA } from 'helpers/constants'
+
 module.exports = {
     title: `On a Golden Cord`,
     overviews: {
@@ -260,21 +261,6 @@ module.exports = {
             }
         ],
         [
-            [
-                {
-                    // TODO: Note that I was delirious due to dehydration.
-                    // Top side stanza.
-                    lyric: {
-                        italic: {
-                            anchor: `Odelay!`,
-                            annotation: {
-                                description: ``
-                            },
-                            todo: true
-                        }
-                    }
-                },
-            ],
             {
                 time: 87,
                 centreLyric: [
@@ -306,7 +292,21 @@ module.exports = {
             {
                 time: 96,
                 centreLyric: `just learned he's pecked to death his precious other.`
-            }
+            },
+            [
+                {
+                    // TODO: Note that I was delirious due to dehydration.
+                    lyric: {
+                        italic: {
+                            anchor: `Odelay!`,
+                            annotation: {
+                                description: ``
+                            },
+                            todo: true
+                        }
+                    }
+                },
+            ]
         ],
         [
             {
@@ -331,7 +331,7 @@ module.exports = {
             },
             [
                 {
-                    // Bottom side stanza.
+                    side: BOTTOM_ONLY_SIDE_STANZA,
                     lyric: {
                         italic: {
                             anchor: `Mush! Mush!`,

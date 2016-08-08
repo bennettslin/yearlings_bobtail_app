@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `allow for call and response lyrics`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `allow for music link in lyrics`,
             workedHours: 0,
             neededHours: 8
