@@ -409,7 +409,7 @@ module.exports = {
                     {
                         anchor: `lidless Vaseline sits.`,
                         annotation: {
-                            description: `I kept a jar of Vaseline by my bedside, which made for quick and easy masturbation sessions. The last one was obviously quite recent.`
+                            description: `I kept a jar of Vaseline by my bedside, which made masturbation quick and easy. Its last usage was obviously quite recent.`
                         }
                     }
                 ]
@@ -421,7 +421,7 @@ module.exports = {
                     {
                         anchor: `"here to Philip Dick?"`,
                         annotation: {
-                            description: `Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my carefully crafted bookish exterior, while subtly conveying that she is fine with the flawed, vulnerable person underneath.`
+                            description: `Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my carefully crafted bookish persona, while subtly conveying that she is perfectly comfortable with the flawed, vulnerable person underneath.`
                         }
                     }
                 ]

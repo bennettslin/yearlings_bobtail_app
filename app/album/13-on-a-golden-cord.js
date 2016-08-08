@@ -38,7 +38,7 @@ module.exports = {
                     {
                         anchor: `bread and pocket lint.`,
                         annotation: {
-                            description: `After Sita returned the bracelet, I put it in the front pocket of my jacket, which is where I stashed bread rolls from the cafeteria to munch on later. With my hands tucked in as well to keep warm, I stroked the bracelet over and over that night, just as I turned over the thoughts in my head.`
+                            description: `After Sita returned the bracelet, I put it in the front pocket of my jacket, which is where I often stashed bread rolls from the cafeteria to munch on later. With my hands tucked in as well to keep warm, I stroked the bracelet over and over that night, just as I turned over the thoughts in my head.`
                         }
                     }
                 ]
@@ -54,7 +54,7 @@ module.exports = {
                     {
                         anchor: `broken`,
                         annotation: {
-                            description: `When I walked into the living room to find Sita on the couch, the bracelet lay in a mangled heap on the coffee table. I thought she had damaged it on purpose, but it turns out that I had only ever seen it snugly wrapped around her wrist, where its dozens of tiny links were kept intricately locked in place.`
+                            description: `When I walked into the living room to find Sita on the couch, the bracelet lay in a mangled heap on the coffee table. I wondered if she had damaged it on purpose, but it turns out that I had only ever seen it snugly wrapped around her wrist, where its dozens of tiny links were kept intricately locked in place.`
                         }
                     },
                     `for what its promise meant.`,
@@ -77,7 +77,7 @@ module.exports = {
                     {
                         anchor: `polite, yet resigned,`,
                         annotation: {
-                            description: `Sita had spent the day bottling up her emotions, braced for that night's confrontation. Meanwhile, I had wandered in just minutes prior, ready to pass out. So while she was now exploding in hysterics, I was still struggling to process the situation in my drunken state. As such, my responses to her were calm but curt, which only added to her fluster.`
+                            description: `Sita had spent the day bottling up her emotions, braced for that night's confrontation. Meanwhile, I had wandered in just minutes prior, ready to pass out. So while she was now exploding in hysterics, I was still struggling to process the situation in my drunken state. As such, all my responses were calm but curt, which only added to her fluster.`
                         }
                     }
                 ]
@@ -105,7 +105,7 @@ module.exports = {
                         {
                             anchor: `went through your mail`,
                             annotation: {
-                                description: `Confused about why I had grown unusually distant, Sita finally caved in that day and decided to snoop around on my computer, which I kept at her place because it was a desktop. She thus discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving assurances that I would be single again soon.`
+                                description: `Confused about why I had grown unusually distant, Sita finally caved in that day and decided to snoop around on my computer, which I kept at her place because it was a desktop. She thus discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving assurances that I would soon be single again.`
                             }
                         },
                         `today…"`
@@ -119,7 +119,7 @@ module.exports = {
                     {
                         anchor: `Immerse the moulted form`,
                         annotation: {
-                            description: `With the breakup now irreversible, the "sober" voice in the doublespeaker set calmly resurrects the ghost of his drunken alter ego, whom he had sacrificed as an unwitting accomplice in the plot to end his relationship.`
+                            description: `With the breakup now irreversible, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a plot to end his relationship.`
                         }
                     },
                     `in holy foggy night,`
@@ -160,7 +160,7 @@ module.exports = {
                     {
                         anchor: `bellyaches on suttee.`,
                         annotation: {
-                            description: `Suttee is an outlawed Hindu custom in which a widow must throw herself on her husband's funeral pyre. Similarly, I knew I could be rid of Sita forever if I just killed myself off little by little, until no trace remained of the boyfriend she once knew.`
+                            description: `Suttee is an outlawed Hindu custom in which a widow must commit suicide by throwing herself on her husband's funeral pyre. Similarly, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, until no trace remained of whom she once knew.`
                         }
                     }
                 ],
@@ -169,7 +169,7 @@ module.exports = {
                     {
                         anchor: `well-behaved on the wing.`,
                         annotation: {
-                            description: `Feeling no lingering malice, I can only assume that I served out my sentence without complaint, and was thus granted an early release for good behaviour.`
+                            description: `Feeling no malice, drunken me can only surmise that he served out his sentence without complaint, and was granted an early release for good behaviour.`
                         }
                     }
                 ]
@@ -184,9 +184,8 @@ module.exports = {
                     {
                         anchor: `wanted ads—`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `As drunken me wanders the streets, he pauses by habit to read flyers seeking bandmates that are posted on utility poles, much like a vigilante of the Old West might take interest in wanted posters.`
+                        }
                     }
                 ]
             },
@@ -202,19 +201,18 @@ module.exports = {
                     {
                         anchor: `spectre taunting twin streetlamps;`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Sober me observes as his drunken half lashes out in defiance at twin streetlamps, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed the act.`
+                        }
                     }
                 ],
                 rightLyric: [
                     `still hardened against her`,
                     {
+                        // TODO: Link to streetlamps?
                         anchor: `fawning, misty glance,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Sensing that Sita gazes downward upon him from the night sky, drunken me realises that remnants of his past bitterness still remain deep within.`
+                        }
                     }
                 ]
             },
@@ -224,9 +222,8 @@ module.exports = {
                     {
                         anchor: `hatchet man`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `A hatchet man is an underling who carries out the most disagreeable tasks of an operation. Sober me recognises the trauma that must certainly linger, and so forgives his drunken half's lack of sympathy for his victim.`
+                        }
                     },
                     `who's burnt enough.`
                 ],
@@ -235,9 +232,8 @@ module.exports = {
                     {
                         anchor: `avenue Möbius.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `A Möbius strip is a surface with only one side, and can be created by joining the ends of a half-twisted paper strip. As drunken me ambles down twisting sidewalks, mentally digging through the dense layers of half-truths that helped justify his act, it occurs to him that perhaps there really aren't two sides to this story. Or two sides to this mind…`
+                        }
                     }
                 ]
             }
@@ -454,7 +450,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 35,
+            workedHours: 42,
             neededHours: 65,
             subtasks: [
                 {
