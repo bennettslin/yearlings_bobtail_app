@@ -53,27 +53,18 @@ module.exports = {
                 lyric: `So do you believe your "hamartia" now?`
             }
         ],
-
-        //     [
-        //         {
-        //             time: 62,
-        //             lyric: `Oh, bastard ingrate! Some nights you wake,`
-        //         },
-        //         {
-        //             time: 69,
-        //             lyric: `climb and survey the houses you've betrayed.`
-        //         },
-        //         {
-        //             time: 76,
-        //             lyric: `Scattered your beans over suburbia…`
-        //         },
-        //         {
-        //             time: 84,
-        //             lyric: `…`
-        //         },
-        //     ],
-
         [
+            [
+                {
+                    lyric: `Oh, bastard ingrate! Some nights you wake,`
+                },
+                {
+                    lyric: `climb and survey the houses you've betrayed.`
+                },
+                {
+                    lyric: `Scattered your beans over suburbia…`
+                }
+            ],
             {
                 time: 61,
                 lyric: `Mowed down by the tides, and inundated under in unfair fights,`
@@ -137,19 +128,15 @@ module.exports = {
                 lyric: `When wakened from the siren, you found spelled out in dead ants: ____…`
             }
         ],
-
-        //     [
-        //         {
-        //             time: 151,
-        //             lyric: `Your dulling gold now gone…`
-        //         },
-        //         {
-        //             time: 157,
-        //             lyric: `…traded in for the trophy blondes.`
-        //         }
-        //     ],
-
         [
+            [
+                {
+                    lyric: `Your dulling gold now gone…`
+                },
+                {
+                    lyric: `…traded in for the trophy blondes.`
+                }
+            ],
             {
                 time: 145,
                 lyric: `No well worn sari could sway you from a fairer marathon!`
@@ -159,28 +146,18 @@ module.exports = {
                 lyric: `Stubborn harpies can't draw this contest to be one!`
             }
         ],
-
-        //     [
-        //         {
-        //             time: 161,
-        //             lyric: `Through tatters of sky, their sun tinkles light`
-        //         },
-        //         {
-        //             time: 168,
-        //             lyric: `in needling chimes that weave through the vines,`
-        //         },
-        //         {
-        //             time: 174,
-        //             lyric: `cast on your peons, old and subservient.`
-        //         },
-        //         {
-        //             time: 182,
-        //             lyric: `…`
-        //         }
-        //     ],
-        // ],
-
         [
+            [
+                {
+                    lyric: `Through tatters of sky, their sun tinkles light`
+                },
+                {
+                    lyric: `in needling chimes that weave through the vines,`
+                },
+                {
+                    lyric: `cast on your peons, old and subservient.`
+                }
+            ],
             {
                 time: 160,
                 lyric: `Oh child of mine, what's left of what these faces you flip override,`

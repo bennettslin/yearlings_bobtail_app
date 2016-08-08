@@ -36,16 +36,22 @@ const LyricsSectionView = ({
                     hasBottomSideStanza = lastVerseObject instanceof Array
 
                 // TODO: Create an about music link.
+                // TODO: Extract lyrics unit to its own component.
+                // TODO: Allow lyrics container to wrap main stanza in its own container when there is a side stanza, to fix stanza 100% height issue. (Don't leave it as it is here, because it's a wasted container when it's not needed.)
+
+                // TODO: Need a better way to determine side stanza, to distinguish it from music link, and to determine whether it's a top or bottom stanza.
 
                 return (
                     <div
                         key={stanzaIndex}
                         className="lyrics-unit"
                     >
-                        <LyricsStanza
-                            stanzaArray={stanzaArray}
-                            onAnnotationClick={onAnnotationClick}
-                        />
+                        <div className="main-stanza">
+                            <LyricsStanza
+                                stanzaArray={stanzaArray}
+                                onAnnotationClick={onAnnotationClick}
+                            />
+                        </div>
                         {/* Include side stanzas, if there are any. */}
                         {hasTopSideStanza || hasBottomSideStanza ?
                             <div className={`side-stanza${!hasTopSideStanza ? ' bottom-only' : ''}`}>
