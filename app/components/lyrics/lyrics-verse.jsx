@@ -27,7 +27,6 @@ const LyricsVerseView = ({
 
     // From props.
     verseObject,
-    verseIndex,
     onAnnotationClick,
 
     // From controller.

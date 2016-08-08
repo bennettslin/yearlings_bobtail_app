@@ -30,7 +30,6 @@ const LyricsStanzaView = ({
                 <LyricsVerse
                     key={verseIndex}
                     verseObject={verseObject}
-                    verseIndex={verseIndex}
                     onAnnotationClick={onAnnotationClick}
                 />
             )
