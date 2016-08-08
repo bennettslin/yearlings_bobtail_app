@@ -184,7 +184,7 @@ module.exports = {
                     {
                         anchor: `wanted ads—`,
                         annotation: {
-                            description: `As drunken me wanders the streets, he pauses by habit to read flyers seeking bandmates that are posted on utility poles, much like a vigilante of the Old West might take interest in wanted posters.`
+                            description: `As drunken me wanders the streets, he pauses to read flyers seeking bandmates that are posted on utility poles, much like a vigilante of the Old West might take interest in a wanted poster.`
                         }
                     }
                 ]
