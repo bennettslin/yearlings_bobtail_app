@@ -185,7 +185,7 @@ module.exports = {
                     {
                         anchor: `wanted ads—`,
                         annotation: {
-                            description: `As drunken me wanders the streets, he pauses to read flyers seeking bandmates that are posted on utility poles, much like a vigilante of the Old West might take interest in a wanted poster.`
+                            description: `As drunken me wanders the Oakland streets, he pauses to read flyers seeking bandmates that are posted on utility poles, much like a vigilante of the Old West might take interest in a wanted poster.`
                         }
                     }
                 ]
@@ -295,14 +295,12 @@ module.exports = {
             },
             [
                 {
-                    // TODO: Note that I was delirious due to dehydration.
                     lyric: {
                         italic: {
                             anchor: `Odelay!`,
                             annotation: {
-                                description: ``
-                            },
-                            todo: true
+                                description: `With another hour or two left till sunrise, I began to feel the mild euphoria of dehydration, and decided to practise my yodelling.`
+                            }
                         }
                     }
                 },
@@ -336,9 +334,8 @@ module.exports = {
                         italic: {
                             anchor: `Mush! Mush!`,
                             annotation: {
-                                description: ``
-                            },
-                            todo: true
+                                description: `Trudging onward through the chilly night, I was reminded of happier days as a child, when I would sing Johnny Horton's "North to Alaska," and my sister would back me up by heaving "Mush! Mush!"`
+                            }
                         }
                     }
                 }
@@ -372,7 +369,15 @@ module.exports = {
             },
             {
                 time: 137,
-                centreLyric: `Have I just killed the thing I love? `
+                centreLyric: [
+                    `Have I just`,
+                    {
+                        anchor: `killed the thing I love?`,
+                        annotation: {
+                            description: `While in prison for homosexuality, Oscar Wilde witnessed the execution of a man convicted of murdering his wife. Sympathising with the man's plight, Wilde wrote his poem "The Ballad of Reading Gaol," which finds a common thread tying the man's crime to his own— and to all of humanity's— with its refrain, "For each man kills the thing he loves."`
+                        }
+                    }
+                ]
             }
         ],
         [
@@ -450,7 +455,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 42,
+            workedHours: 45,
             neededHours: 65,
             subtasks: [
                 {
