@@ -252,8 +252,28 @@ module.exports = {
             },
             {
                 time: 83,
-                leftLyric: `Then if life were real, not just drunken play…`,
-                rightLyric: `And if night were peeled off the front of day…`
+                leftLyric: [
+                    `Then if`,
+                    {
+                        anchor: `life were real,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `not just drunken play…`
+                ],
+                rightLyric: [
+                    `And if`,
+                    {
+                        anchor: `night were peeled`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `off the front of day…`
+                ]
             },
             {
                 time: 86,
@@ -313,7 +333,16 @@ module.exports = {
             },
             {
                 time: 101,
-                centreLyric: `when you really thought the world that simple?`
+                centreLyric: [
+                    `when you really thought the`,
+                    {
+                        anchor: `world that simple?`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 104,
@@ -344,7 +373,16 @@ module.exports = {
         [
             {
                 time: 116,
-                centreLyric: `the taunting, streetswept dawn.`
+                centreLyric: [
+                    `the taunting,`,
+                    {
+                        anchor: `streetswept dawn.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 118,
@@ -353,7 +391,16 @@ module.exports = {
             {
                 // Sooty dust.
                 time: 121,
-                centreLyric: `of gathering up the suttee dust.`
+                centreLyric: [
+                    `of gathering up the`,
+                    {
+                        anchor: `suttee dust.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 123,
