@@ -10,18 +10,20 @@ const AnchorBlock = (props) => {
 
     const { text } = props,
 
-        hasTodo = text.todo,
-        dotKeys = text.dotKeys || {},
-        anchorText = text.anchor,
+        { annotationIndex,
+          anchor: anchorText,
+          todo: hasTodo,
+          dotKeys = {},
+          wiki } = text,
 
         /**
          * If it's an annotation, then the argument passed to the
          * click handler is the annotation index. Otherwise, it's a
          * reference, and the argument is a url string.
          */
-        clickHandlerArgument = text.annotationIndex || text.wiki
+        clickHandlerArgument = annotationIndex || wiki
 
-    if (text.wiki && dotKeys) {
+    if (wiki && dotKeys) {
             dotKeys.wiki = true
     }
 

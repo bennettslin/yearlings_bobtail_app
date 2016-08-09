@@ -46,8 +46,8 @@ export default {
                     annotation = song.annotations[annotationIndex - 1]
 
                 return {
-                    songIndex: songIndex,
-                    annotationIndex: annotationIndex,
+                    songIndex,
+                    annotationIndex,
                     songTitle: song.title,
                     annotationTitle: annotation.title
                 }

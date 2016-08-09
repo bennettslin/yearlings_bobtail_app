@@ -31,6 +31,7 @@ const DotButtonView = ({
     onClick
 
 }) => (
+    
     <div
         className={`dot ${dotKey}`}
         onClick={onClick}

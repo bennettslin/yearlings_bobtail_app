@@ -23,8 +23,7 @@ const TasksBlockView = ({
 }) => (
 
     <div className={isSubtask ? 'subtask-block' : 'task-block'}>
-        {tasks.map((task, taskIndex) => {
-            return (
+        {tasks.map((task, taskIndex) => (
                 <div
                     key={taskIndex}
                     className="block-unit"
@@ -43,7 +42,7 @@ const TasksBlockView = ({
                     }
                 </div>
             )
-        })}
+        )}
     </div>
 )
 

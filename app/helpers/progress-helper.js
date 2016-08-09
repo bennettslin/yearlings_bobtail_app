@@ -88,9 +88,9 @@ export default {
 
     getRemainingTimeStringFromHours(hours = 0) {
         const remainingTimeObject = this._getRemainingTimeFromHours(hours),
-            months = remainingTimeObject.months,
-            weeks = remainingTimeObject.weeks,
-            days = remainingTimeObject.days
+            { months,
+              weeks,
+              days } = remainingTimeObject
 
         return (months ? months + 'm' : '') +
                (months && weeks ? ', ' : '') +
@@ -105,9 +105,7 @@ export default {
     },
 
     getAllTaskObjects(albumTasks, songs) {
-        let allTaskObjects = songs.map(song => {
-            return song.tasks
-        })
+        let allTaskObjects = songs.map(song => song.tasks)
 
         allTaskObjects.push(albumTasks)
 

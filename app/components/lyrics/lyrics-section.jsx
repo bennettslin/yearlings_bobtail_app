@@ -24,15 +24,14 @@ const LyricsSectionView = ({
     <div className="section lyrics-section">
         <h2>lyrics</h2>
         <div className="lyrics-block">
-            {songLyrics.map((stanzaArray, stanzaIndex) => {
-                return (
+            {songLyrics.map((stanzaArray, stanzaIndex) => (
                     <LyricsUnit
                         key={stanzaIndex}
                         stanzaArray={stanzaArray}
                         onAnnotationClick={onAnnotationClick}
                     />
                 )
-            })}
+            )}
         </div>
     </div>
 )

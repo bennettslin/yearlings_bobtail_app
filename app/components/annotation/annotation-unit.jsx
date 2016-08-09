@@ -31,15 +31,14 @@ const AnnotationUnit = (props) => {
      songs
  }) => (
      <div className="annotation-cards-block">
-          {annotation.cards.map((card, index) => {
-              return (
+          {annotation.cards.map((card, index) => (
                   <AnnotationCard
                       key={index}
                       card={card}
                       songs={songs}
                   />
               )
-          })}
+          )}
      </div>
  )
 

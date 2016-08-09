@@ -34,8 +34,7 @@ const TextBlockView = ({
 }) => (
 
     <span>
-        {text.map((textElement, index) => {
-            return (
+        {text.map((textElement, index) => (
                 <TextBlock
                     key={index}
                     isLyric={isLyric}
@@ -45,7 +44,7 @@ const TextBlockView = ({
                     onAnchorClick={onAnchorClick}
                 />
             )
-        })}
+        )}
     </span>
 )
 
