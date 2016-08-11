@@ -10,8 +10,14 @@ const LyricsUnit = (props) => {
 
     const { stanzaArray } = props,
 
+        // Determine whether there are anchor stanzas.
+        firstVerseObject = stanzaArray[0],
+        dotStanza = firstVerseObject instanceof Array ?
+            firstVerseObject : null,
+        isDotOnlyStanza = dotStanza && stanzaArray.length === 1,
+
         // Determine whether there are side stanzas.
-        lastVerseObject = stanzaArray[stanzaArray.length - 1],
+        lastVerseObject = stanzaArray.length > 1 ? stanzaArray[stanzaArray.length - 1] : null,
         lastSideStanza = lastVerseObject instanceof Array ?
             lastVerseObject : null,
         nextLastVerseObject = stanzaArray.length > 1 ?
@@ -25,6 +31,8 @@ const LyricsUnit = (props) => {
 
     return (
         <LyricsUnitView {...props}
+            dotStanza={dotStanza}
+            isDotOnlyStanza={isDotOnlyStanza}
             lastSideStanza={lastSideStanza}
             nextLastSideStanza={nextLastSideStanza}
             bottomOnlySideStanza={bottomOnlySideStanza}
@@ -45,38 +53,47 @@ const LyricsUnitView = ({
     onAnnotationClick,
 
     // From controller.
+    dotStanza,
+    isDotOnlyStanza,
     lastSideStanza,
     nextLastSideStanza,
     bottomOnlySideStanza
 
 }) => (
+
     <div className="lyrics-unit">
-        {/* If there is a side stanza, wrap main stanza for proper height. */}
-        {lastSideStanza ?
-            <div className="main-stanza">
+        {/* Make dot stanza component, and figure out good class names. */}
+        {dotStanza ?
+            <div className="stanza-block dot-anchor">
                 <LyricsStanza
-                stanzaArray={stanzaArray}
-                onAnnotationClick={onAnnotationClick}
+                    isAnchor={true}
+                    stanzaArray={dotStanza}
+                    onAnnotationClick={onAnnotationClick}
                 />
-            </div> :
-            <LyricsStanza
-            stanzaArray={stanzaArray}
-            onAnnotationClick={onAnnotationClick}
-            />
+            </div> : null
+        }
+        {/* If there are other elements, wrap main stanza for proper height. */}
+        {!isDotOnlyStanza ?
+            <div className="stanza-block main">
+                <LyricsStanza
+                    stanzaArray={stanzaArray}
+                    onAnnotationClick={onAnnotationClick}
+                />
+            </div> : null
         }
         {/* Include side stanzas, if there are any. */}
         {lastSideStanza ?
-            <div className={`side-stanza${bottomOnlySideStanza ? ' bottom-only' : ''}`}>
+            <div className={`stanza-block side${bottomOnlySideStanza ? ' bottom-only' : ''}`}>
                 {nextLastSideStanza ?
                     <LyricsStanza
-                    stanzaArray={nextLastSideStanza}
-                    onAnnotationClick={onAnnotationClick}
+                        stanzaArray={nextLastSideStanza}
+                        onAnnotationClick={onAnnotationClick}
                     /> : null
                 }
                 {lastSideStanza ?
                     <LyricsStanza
-                    stanzaArray={lastSideStanza}
-                    onAnnotationClick={onAnnotationClick}
+                        stanzaArray={lastSideStanza}
+                        onAnnotationClick={onAnnotationClick}
                     /> : null
                 }
             </div> : null

@@ -435,18 +435,65 @@ module.exports = {
             },
             {
                 time: 147,
-                leftLyric: `which this Ubermensch reavowed he'd come to snip.`,
-                rightLyric: `digging through her innie, the outie snug-to-fit.`
+                leftLyric: [
+                    `which this`,
+                    {
+                        anchor: `Ubermensch`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `reavowed he'd come to snip.`
+                ],
+                rightLyric: [
+                    {
+                        anchor: `digging through her innie,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `the outie snug-to-fit.`
+                ]
             },
             {
                 time: 150,
                 leftLyric: `And a smarting head throbs once his brain's warring halves,`,
-                rightLyric: `Then the guardian knot of this frayed cord detached,`
+                rightLyric: [
+                    `Then the`,
+                    {
+                        anchor: `guardian knot`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `of this frayed cord detached,`
+                ]
             },
             {
                 time: 154,
-                leftLyric: `each attack with the proper fist.`,
-                rightLyric: `leaked the bandage upon her wrist.`
+                leftLyric: [
+                    `each`,
+                    {
+                        anchor: `attack with the proper fist.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
+                rightLyric: [
+                    {
+                        anchor: `leaked the bandage`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `upon her wrist.`
+                ]
             }
         ],
         [
@@ -489,7 +536,17 @@ module.exports = {
             },
             {
                 time: 176,
-                leftLyric: `for kohl-eyed houris as reward.`,
+                leftLyric: [
+                    `for`,
+                    {
+                        anchor: `kohl-eyed houris`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `as reward.`
+                ],
                 rightLyric: `forego like jewelry that she wore.`
             }
         ]

@@ -33,7 +33,7 @@ module.exports = {
         },
         {
             taskName: `allow for music link in lyrics`,
-            workedHours: 0,
+            workedHours: 3,
             neededHours: 8
         },
         {

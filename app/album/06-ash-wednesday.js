@@ -6,6 +6,28 @@ module.exports = {
     },
     lyrics: [
         [
+            [
+                {
+                    lyric: {
+                        anchor: `test 1`,
+                        annotation: {
+                            description: `test music annotation text 1`
+                        }
+                    }
+                }
+            ]
+        ],
+        [
+            [
+                {
+                    lyric: {
+                        anchor: `test 2`,
+                        annotation: {
+                            description: `test music annotation text 2`
+                        }
+                    }
+                }
+            ],
             {
                 time: 0,
                 lyric: [

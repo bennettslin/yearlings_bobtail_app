@@ -16,25 +16,30 @@
         }
     }
 
-    .side-stanza {
-        @side-stanza-padding: 10px;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        &.bottom-only {
-            justify-content: flex-end;
+    .stanza-block {
+        @stanza-block-margin: 10px;
+        &:not(:first-child) {
+            margin-left: @stanza-block-margin;
         }
 
-        .stanza {
-            margin-left: @side-stanza-padding;
+        &.side {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-            &:not(:first-child):last-child {
-                margin-top: @side-stanza-padding;
+            &.bottom-only {
+                justify-content: flex-end;
+            }
+
+            .stanza {
+                &:not(:first-child):last-child {
+                    margin-top: @stanza-block-margin;
+                }
             }
         }
     }
+
 
     .stanza {
         background-color: white;

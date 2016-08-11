@@ -17,11 +17,12 @@ const LyricsStanzaView = ({
 
     // From props.
     stanzaArray,
+    isAnchor,
     onAnnotationClick
 
 }) => (
 
-    <div className="stanza">
+    <div className={`stanza${isAnchor ? ' anchor' : ''}`}>
         {/* Ignore side stanzas, which are arrays. */}
         {stanzaArray
             .filter((verseObject) => !(verseObject instanceof Array))
