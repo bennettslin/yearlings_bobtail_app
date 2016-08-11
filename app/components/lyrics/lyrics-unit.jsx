@@ -40,8 +40,6 @@ const LyricsUnit = (props) => {
     )
 }
 
-// TODO: Create an about music link.
-
 /****************
  * PRESENTATION *
  ****************/
@@ -62,17 +60,17 @@ const LyricsUnitView = ({
 }) => (
 
     <div className="lyrics-unit">
-        {/* Make dot stanza component, and figure out good class names. */}
+        {/* Make dot stanza component, remove dot info from lyrics stanza, and figure out good class names. */}
         {dotStanza ?
-            <div className="stanza-block dot-anchor">
+            <div className="stanza-block dot">
                 <LyricsStanza
-                    isAnchor={true}
+                    isDot={true}
+                    isDotOnlyStanza={isDotOnlyStanza}
                     stanzaArray={dotStanza}
                     onAnnotationClick={onAnnotationClick}
                 />
             </div> : null
         }
-        {/* If there are other elements, wrap main stanza for proper height. */}
         {!isDotOnlyStanza ?
             <div className="stanza-block main">
                 <LyricsStanza

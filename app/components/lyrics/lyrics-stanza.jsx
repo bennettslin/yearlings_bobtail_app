@@ -1,4 +1,5 @@
 import React from 'react'
+import DotsBlock from '../dots/dots-block'
 import LyricsVerse from './lyrics-verse'
 
 /*************
@@ -17,23 +18,28 @@ const LyricsStanzaView = ({
 
     // From props.
     stanzaArray,
-    isAnchor,
+    isDot,
+    isDotOnlyStanza,
     onAnnotationClick
 
 }) => (
 
-    <div className={`stanza${isAnchor ? ' anchor' : ''}`}>
+    <div className={`stanza${isDot ? ' anchor' : ''}${isDotOnlyStanza ? ' dot-only' : ''}`}>
         {/* Ignore side stanzas, which are arrays. */}
         {stanzaArray
             .filter((verseObject) => !(verseObject instanceof Array))
             .map((verseObject, verseIndex) => {
-            return (
-                <LyricsVerse
-                    key={verseIndex}
-                    verseObject={verseObject}
-                    onAnnotationClick={onAnnotationClick}
-                />
-            )
+                return isDot ? (
+                    <DotsBlock
+                        dotKeys={{ pun: true }}
+                    />
+                ) : (
+                    <LyricsVerse
+                        key={verseIndex}
+                        verseObject={verseObject}
+                        onAnnotationClick={onAnnotationClick}
+                    />
+                )
         })}
     </div>
 )

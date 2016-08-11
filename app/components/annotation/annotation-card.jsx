@@ -47,7 +47,7 @@ const AnnotationCardView = ({
 
 }) => (
 
-    <div className={'annotation-card'}>
+    <div className="annotation-card">
         <DotsBlock
             dotKeys={dotKeys}
             interactable={true}
