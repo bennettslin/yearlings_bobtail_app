@@ -438,11 +438,23 @@ module.exports = {
                 leftLyric: [
                     `which this`,
                     {
-                        anchor: `Ubermensch`,
-                        annotation: {
-                            description: ``
+                        anchor: {
+                            italic: `Übermensch`
                         },
-                        todo: true
+                        properNoun: true,
+                        annotation: {
+                            description: [
+                                `In`,
+                                {
+                                    italic: `Thus Spoke Zarathustra,`
+                                },
+                                `Friedrich Nietzsche proposed the`,
+                                {
+                                    italic: `Übermensch,`
+                                },
+                                `or "overhuman", as an ideal of perfection towards which each person may strive, which I understood to be a precondition for creating great works. But since the underlying motive for bettering myself had always been a desire to attract women, my lifelong ambition to be a great artist meant that I would always have a cheating heart.`
+                            ]
+                        }
                     },
                     `reavowed he'd come to snip.`
                 ],
@@ -479,9 +491,8 @@ module.exports = {
                     {
                         anchor: `attack with the proper fist.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Each hemisphere of the brain controls the opposite side of the body. So when I punched myself in the head, as I was wont to do when trying to clear my thoughts, it was as if my right brain were attacking my left brain with the one fist under its command.`
+                        }
                     }
                 ],
                 rightLyric: [
@@ -628,7 +639,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 45,
+            workedHours: 48,
             neededHours: 65,
             subtasks: [
                 {
