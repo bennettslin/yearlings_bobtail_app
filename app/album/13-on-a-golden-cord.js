@@ -504,8 +504,28 @@ module.exports = {
             },
             {
                 time: 158,
-                leftLyric: `my alias drunk, in panic and starved for leads.`,
-                rightLyric: `by trail of crumbs, which vanished as bartered feed.`
+                leftLyric: [
+                    `my`,
+                    {
+                        anchor: `alias drunk, in panic`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `and starved for leads.`
+                ],
+                rightLyric: [
+                    `by`,
+                    {
+                        anchor: `trail of crumbs,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `which vanished as bartered feed.`
+                ]
             },
             {
                 time: 161,
@@ -514,25 +534,74 @@ module.exports = {
             },
             {
                 time: 164,
-                leftLyric: `with Garry's sole witness relieved?`,
-                rightLyric: `when buried whole with the deceased.`
+                leftLyric: [
+                        `with`,
+                        {
+                            anchor: `Garry's sole witness`,
+                            annotation: {
+                                description: ``
+                            },
+                            todo: true
+                        },
+                        `relieved?`
+                ],
+                rightLyric: [
+                    `when`,
+                    {
+                        anchor: `buried whole`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `with the deceased.`
+                ]
             }
         ],
         [
             {
                 time: 166,
                 leftLyric: `So a plan devised divides a slave once wed;`,
-                rightLyric: `Though, the master mind reminds us, straight ahead,`
+                rightLyric: [
+                    `Though, the`,
+                    {
+                        anchor: `master mind`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `reminds us, straight ahead,`
+                ]
             },
             {
                 time: 169,
-                leftLyric: `a bid for greatness' sake, he's sold on as holy war.`,
+                leftLyric: [
+                    `a bid for greatness' sake, he's sold on as`,
+                    {
+                        anchor: `holy war.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
                 rightLyric: `a bigger plate awaiting nulls one half full before.`
             },
             {
                 time: 172,
                 leftLyric: `When longed by nothing you then fight the best,`,
-                rightLyric: `And fond sighs of reunion I must rest;`
+                rightLyric: [
+                    `And`,
+                    {
+                        anchor: `fond sighs of reunion`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `I must rest;`
+                ]
             },
             {
                 time: 176,
