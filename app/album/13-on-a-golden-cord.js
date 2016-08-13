@@ -619,11 +619,16 @@ module.exports = {
                 leftLyric: [
                     `for`,
                     {
-                        anchor: `kohl-eyed houris`,
+                        anchor: `kohl-eyed`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Kohl is a Middle Eastern cosmetic that has been used since antiquity to darken the eyelids.`
+                        }
+                    },
+                    {
+                        anchor: `houris`,
+                        annotation: {
+                            description: `In Islamic mythology, the houris are maidens who await the faithful in paradise. This idea gained notoriety in the West when it was reported that suicide bombers were being lured with the promise of 72 virgins in heaven. But given my quest to date more women, at great cost to myself and greater suffering to others, perhaps all that distinguished me from these disaffected young men was my place of birth.`
+                        }
                     },
                     `as reward.`
                 ],
@@ -639,7 +644,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 48,
+            workedHours: 51,
             neededHours: 65,
             subtasks: [
                 {
