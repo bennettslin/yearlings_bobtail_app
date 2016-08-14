@@ -1,3 +1,5 @@
+// FIXME: Change pronouns from I and me to drunken me and sober me.
+
 import { BOTTOM_ONLY_SIDE_STANZA } from 'helpers/constants'
 
 module.exports = {
@@ -120,7 +122,7 @@ module.exports = {
                     {
                         anchor: `Immerse the moulted form`,
                         annotation: {
-                            description: `With the breakup now irreversible, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a plot to end his relationship.`
+                            description: `With the breakup now irreversible, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a scheme to end his relationship.`
                         }
                     },
                     `in holy foggy night,`
@@ -363,7 +365,7 @@ module.exports = {
                         italic: {
                             anchor: `Mush! Mush!`,
                             annotation: {
-                                description: `Trudging onward through the chilly twilight, I was reminded of happier days as a child, when I would sing Johnny Horton's "North to Alaska," and my sister would back me up by heaving "Mush! Mush!"`
+                                description: `Marching onward through the brisk twilight, I was reminded of simpler days as a child, when I would sing Johnny Horton's "North to Alaska," and my sister would back me up by heaving "Mush! Mush!"`
                             }
                         }
                     }
@@ -517,9 +519,8 @@ module.exports = {
                     {
                         anchor: `alias drunk, in panic`,
                         annotation: {
-                            description: `It was almost never the case`
-                        },
-                        todo: true
+                            description: `Once drunk, I always stayed drunk until I crashed. As such, while the sober me was adept at morphing into his drunken half, the reverse was not true. So as I got progressively more sober that night, reason and doubt crept in beside the single-minded directives that usually governed my drunken thought. I questioned if dating another woman would fulfill me, and whether my newfound ability to attract women wasn't a mere fluke.`
+                        }
                     },
                     `and starved for leads.`
                 ],
@@ -546,6 +547,7 @@ module.exports = {
                         `with`,
                         {
                             anchor: `Garry's sole witness`,
+                            properNoun: true,
                             annotation: {
                                 description: ``
                             },
@@ -589,9 +591,8 @@ module.exports = {
                     {
                         anchor: `holy war.`,
                         annotation: {
-                            description: `Most of the 9/11 terrorists were not told that it would be a suicide mission. Similarly, in orchestrating my  `
-                        },
-                        todo: true
+                            description: `Most of the 9/11 hijackers were unaware that it was a suicide mission, having prepared instead to make public statements on their religious motivation. Similarly, in orchestrating my plot to be rid of Sita, I had sold my drunken half on the artistic benefits of breaking up, while neglecting to mention the huge emotional sacrifice it would entail.`
+                        }
                     }
                 ],
                 rightLyric: `a bigger plate awaiting nulls one half full before.`
@@ -641,7 +642,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 51,
+            workedHours: 59,
             neededHours: 65,
             subtasks: [
                 {
