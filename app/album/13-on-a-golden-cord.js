@@ -306,7 +306,7 @@ module.exports = {
                     {
                         anchor: `dove chafing in his cage,`,
                         annotation: {
-                            description: `A dove, on the other hand, can peck its cagemate to death, unaware of the deadly nature of its beak. Similarly, seeing myself as the perennial victim, I had caused Sita far greater emotional trauma than I had ever received at the hands of the bullies.`
+                            description: `A dove, on the other hand, can peck its cagemate to death, unaware of the deadly nature of its beak. Similarly, seeing myself only as the perennial victim, I had caused Sita far greater emotional trauma than I had ever received at the hands of the bullies.`
                         }
                     }
                 ]
@@ -478,7 +478,7 @@ module.exports = {
                     {
                         anchor: `guardian knot`,
                         annotation: {
-                            description: `In antiquity, the Gordian knot was a rope so tightly entangled that, according to prophecy, whosoever unravelled it would rule all of Asia. Alexander the Great succeeded simply by slicing it in half. While the umbilical cord passes sustenance to the fetus, outside the mother's womb it shrivels into a navel. And so Sita was now my guardian, as I was hers, as we sustained each other through our locked navels. But like Alexander, I severed this "guardian knot," in my bid for artistic greatness.`
+                            description: `In antiquity, the Gordian knot was a rope so tightly entangled that whosoever could unravel it would rule all of Asia. Alexander the Great simply cut it in half with his sword. While the umbilical cord passes sustenance to the fetus, outside the mother's womb it shrivels to a navel. So Sita became my guardian, and I hers, as we sustained each other through our locked navels. But like Alexander, I severed this "guardian knot," in my bid for artistic greatness.`
                         }
                     },
                     `of this frayed cord detached,`
@@ -519,7 +519,7 @@ module.exports = {
                     {
                         anchor: `alias drunk, in panic`,
                         annotation: {
-                            description: `Once drunk, I always stayed drunk until I crashed. As such, while the sober me was adept at morphing into his drunken half, the reverse was not true. So as I got progressively more sober that night, reason and doubt crept in beside the single-minded directives that usually governed my drunken thought. I questioned if dating another woman would fulfill me, and whether my newfound ability to attract women wasn't a mere fluke.`
+                            description: `Once drunk, I always stayed drunk until I crashed. As such, while the sober me was adept at morphing into his drunken half, the reverse was not true. So as I got progressively more sober that night, panicked doubt crept up beside the brashness that usually governed my drunken thought. I questioned if dating more women would fulfill me, and whether my newfound ability to attract them wasn't a fluke.`
                         }
                     },
                     `and starved for leads.`
@@ -529,9 +529,8 @@ module.exports = {
                     {
                         anchor: `trail of crumbs,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Suddenly fearing the emotional upheaval ahead, I wondered aloud whether it was too late to walk back the damage I had done. But even if I wanted to, I couldn't find my way back. All night I had been nibbling on the bread in my pocket rather than pinching off crumbs for a trail, trading long-term security to satisfy my short-term hunger.`
+                        }
                     },
                     `which vanished as bartered feed.`
                 ]
@@ -549,7 +548,7 @@ module.exports = {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
                             annotation: {
-                                description: ``
+                                description: `I didn't want to be the villain.`
                             },
                             todo: true
                         },
@@ -577,11 +576,10 @@ module.exports = {
                     {
                         anchor: `master mind`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `In college, I learned that being drunk made it easy to single-mindedly perform unpleasant tasks such as writing papers, and humoured myself by comparing my drunken half to a slave taking orders from his master, my sober half. I realised that I was now pursuing this very strategy to break up with Sita.`
+                        }
                     },
-                    `reminds us, straight ahead,`
+                    `reminds us, straight ahead`
                 ]
             },
             {
