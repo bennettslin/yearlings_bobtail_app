@@ -319,7 +319,7 @@ module.exports = {
                         italic: {
                             anchor: `Odelay!`,
                             annotation: {
-                                description: `With another hour or two left till sunrise, I began to feel the mild euphoria of dehydration, and decided to practise my yodelling.`
+                                description: `With an hour or two left before daybreak, I began to feel the mild euphoria of dehydration, and decided to practise my yodelling.`
                             }
                         }
                     }
@@ -363,7 +363,7 @@ module.exports = {
                         italic: {
                             anchor: `Mush! Mush!`,
                             annotation: {
-                                description: `Trudging onward through the chilly night, I was reminded of happier days as a child, when I would sing Johnny Horton's "North to Alaska," and my sister would back me up by heaving "Mush! Mush!"`
+                                description: `Trudging onward through the chilly twilight, I was reminded of happier days as a child, when I would sing Johnny Horton's "North to Alaska," and my sister would back me up by heaving "Mush! Mush!"`
                             }
                         }
                     }
@@ -448,7 +448,7 @@ module.exports = {
                                 {
                                     italic: `Thus Spoke Zarathustra,`
                                 },
-                                `Friedrich Nietzsche proposed the`,
+                                `Friedrich Nietzsche offered the`,
                                 {
                                     italic: `Übermensch,`
                                 },
@@ -460,11 +460,10 @@ module.exports = {
                 ],
                 rightLyric: [
                     {
-                        anchor: `digging through her innie,`,
+                        anchor: `digging through her innie`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Some babies have belly buttons that go in, others have ones that stick out. During sex, Sita and I would sometimes engage in baby talk and refer to our respective parts as her "innie" and my "outie."`
+                        }
                     },
                     `the outie snug-to-fit.`
                 ]
@@ -477,9 +476,8 @@ module.exports = {
                     {
                         anchor: `guardian knot`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `In antiquity, the Gordian knot was a rope so tightly entangled that, according to prophecy, whosoever unravelled it would rule all of Asia. Alexander the Great succeeded simply by slicing it in half. While the umbilical cord passes sustenance to the fetus, outside the mother's womb it shrivels into a navel. And so Sita was now my guardian, as I was hers, as we sustained each other through our locked navels. But like Alexander, I severed this "guardian knot," in my bid for artistic greatness.`
+                        }
                     },
                     `of this frayed cord detached,`
                 ]
@@ -491,7 +489,7 @@ module.exports = {
                     {
                         anchor: `attack with the proper fist.`,
                         annotation: {
-                            description: `Each hemisphere of the brain controls the opposite side of the body. So when I punched myself in the head, as I was wont to do when trying to clear my thoughts, it was as if my right brain were attacking my left brain with the one fist under its command.`
+                            description: `The right hemisphere of the brain controls the left side of the body, and the left hemisphere, the right. So when I started punching myself in the head, in frustration over conflicting desires, it was as if each hemisphere was attacking the other using the one fist under its command.`
                         }
                     }
                 ],
@@ -499,9 +497,8 @@ module.exports = {
                     {
                         anchor: `leaked the bandage`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `With our emotional bond now severed, Sita began to bleed both metaphorically and literally, as she experimented with cutting to ease her depression.`
+                        }
                     },
                     `upon her wrist.`
                 ]
@@ -520,7 +517,7 @@ module.exports = {
                     {
                         anchor: `alias drunk, in panic`,
                         annotation: {
-                            description: ``
+                            description: `It was almost never the case`
                         },
                         todo: true
                     },
@@ -592,7 +589,7 @@ module.exports = {
                     {
                         anchor: `holy war.`,
                         annotation: {
-                            description: `Some of the 9/11 terrorists had no idea they were on a suicide mission.`
+                            description: `Most of the 9/11 terrorists were not told that it would be a suicide mission. Similarly, in orchestrating my  `
                         },
                         todo: true
                     }

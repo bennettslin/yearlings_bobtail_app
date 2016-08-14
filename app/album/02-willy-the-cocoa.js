@@ -535,7 +535,7 @@ module.exports = {
                         anchor: `book of yours.`,
                         annotation: {
                             description: [
-                                `My mother always insisted that I was destined to do great things, even as I bounced from one interest to the next as a kid.`,
+                                `My mother always insisted that I was destined to make great artistic works, even as I bounced from one interest to the next as a kid.`,
                                 {
                                     italic: `Bobtail`
                                 },
