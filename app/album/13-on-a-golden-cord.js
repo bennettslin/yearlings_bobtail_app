@@ -254,28 +254,8 @@ module.exports = {
             },
             {
                 time: 83,
-                leftLyric: [
-                    `Then if`,
-                    {
-                        anchor: `life were real,`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    },
-                    `not just drunken play…`
-                ],
-                rightLyric: [
-                    `And if`,
-                    {
-                        anchor: `night were peeled`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    },
-                    `off the front of day…`
-                ]
+                leftLyric: `Then if life were real, not just drunken play…`,
+                rightLyric: `And if night were peeled off the front of day…`
             },
             {
                 time: 86,
@@ -335,16 +315,7 @@ module.exports = {
             },
             {
                 time: 101,
-                centreLyric: [
-                    `when you really thought the`,
-                    {
-                        anchor: `world that simple?`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    }
-                ]
+                centreLyric: `when you really thought the world that simple?`
             },
             {
                 time: 104,
@@ -380,9 +351,8 @@ module.exports = {
                     {
                         anchor: `streetswept dawn.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `As daylight broke, the mechanical street sweepers came out in full force, beeping and purring as they went.`
+                        }
                     }
                 ]
             },
@@ -398,9 +368,8 @@ module.exports = {
                     {
                         anchor: `suttee dust.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `I imagined Sita by now to be fully immolated on the burnt rubble of our ruined relationship.`
+                        }
                     }
                 ]
             },
@@ -548,23 +517,12 @@ module.exports = {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
                             annotation: {
-                                description: `I didn't want to be the villain.`
-                            },
-                            todo: true
+                                description: `All my promises to Sita had proven to be lies, but of course I didn't intend them to be. Circumstances just forced my hand. Still, while I strongly wished to argue my case, I realised that the breakup would be done with sooner if I just accepted myself as the villain. And so the sober me, called up to testify for his drunken half, stayed silent.`
+                            }
                         },
                         `relieved?`
                 ],
-                rightLyric: [
-                    `when`,
-                    {
-                        anchor: `buried whole`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    },
-                    `with the deceased.`
-                ]
+                rightLyric: `when buried whole with the deceased.`
             }
         ],
         [
@@ -598,17 +556,7 @@ module.exports = {
             {
                 time: 172,
                 leftLyric: `When longed by nothing you then fight the best,`,
-                rightLyric: [
-                    `And`,
-                    {
-                        anchor: `fond sighs of reunion`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    },
-                    `I must rest;`
-                ]
+                rightLyric: `And fond sighs of reunion I must rest;`
             },
             {
                 time: 176,
@@ -628,7 +576,15 @@ module.exports = {
                     },
                     `as reward.`
                 ],
-                rightLyric: `forego like jewelry that she wore.`
+                rightLyric: [
+                    {
+                        anchor: `forego like jewelry`,
+                        annotation: {
+                            description: `As these things often go, Sita and I had a turbulent on-again, off again relationship for a while longer. During one stretch when things were looking rosier than ever, she asked to have the bracelet back to wear again, which I happily obliged. Somehow I had dented it in my pocket that night, however, creating a permanent reminder that certain things can never be undone, only amended.`
+                        }
+                    },
+                    `that she wore.`
+                ]
             }
         ]
     ],
@@ -640,8 +596,8 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 59,
-            neededHours: 65,
+            workedHours: 66,
+            neededHours: 66,
             subtasks: [
                 {
                     taskName: `split into dots`,
