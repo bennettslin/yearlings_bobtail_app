@@ -11,7 +11,10 @@ module.exports = {
                     lyric: {
                         anchor: `test 1`,
                         annotation: {
-                            description: `test music annotation text 1`
+                            description: `test music annotation text 1`,
+                            dotKeys: {
+                                pun: true
+                            }
                         }
                     }
                 }
@@ -23,7 +26,10 @@ module.exports = {
                     lyric: {
                         anchor: `test 2`,
                         annotation: {
-                            description: `test music annotation text 2`
+                            description: `test music annotation text 2`,
+                            dotKeys: {
+                                narrative: true
+                            }
                         }
                     }
                 }

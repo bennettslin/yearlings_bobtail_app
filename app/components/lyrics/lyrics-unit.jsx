@@ -1,4 +1,5 @@
 import React from 'react'
+import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
 import { BOTTOM_ONLY_SIDE_STANZA } from 'helpers/constants'
 
@@ -12,9 +13,9 @@ const LyricsUnit = (props) => {
 
         // Determine whether there are anchor stanzas.
         firstVerseObject = stanzaArray[0],
-        dotStanza = firstVerseObject instanceof Array ?
-            firstVerseObject : null,
-        isDotOnlyStanza = dotStanza && stanzaArray.length === 1,
+        dotStanzaObject = firstVerseObject instanceof Array ?
+            firstVerseObject[0].lyric : null,
+        isDotOnlyUnit = dotStanzaObject && stanzaArray.length === 1,
 
         // Determine whether there are side stanzas.
         lastVerseObject = stanzaArray.length > 1 ? stanzaArray[stanzaArray.length - 1] : null,
@@ -31,8 +32,8 @@ const LyricsUnit = (props) => {
 
     return (
         <LyricsUnitView {...props}
-            dotStanza={dotStanza}
-            isDotOnlyStanza={isDotOnlyStanza}
+            dotStanzaObject={dotStanzaObject}
+            isDotOnlyUnit={isDotOnlyUnit}
             lastSideStanza={lastSideStanza}
             nextLastSideStanza={nextLastSideStanza}
             bottomOnlySideStanza={bottomOnlySideStanza}
@@ -51,8 +52,8 @@ const LyricsUnitView = ({
     onAnnotationClick,
 
     // From controller.
-    dotStanza,
-    isDotOnlyStanza,
+    dotStanzaObject,
+    isDotOnlyUnit,
     lastSideStanza,
     nextLastSideStanza,
     bottomOnlySideStanza
@@ -60,18 +61,15 @@ const LyricsUnitView = ({
 }) => (
 
     <div className="lyrics-unit">
-        {/* Make dot stanza component, remove dot info from lyrics stanza, and figure out good class names. */}
-        {dotStanza ?
-            <div className="stanza-block dot">
-                <LyricsStanza
-                    isDot={true}
-                    isDotOnlyStanza={isDotOnlyStanza}
-                    stanzaArray={dotStanza}
+        {dotStanzaObject ?
+            <div className={`stanza-block dot ${isDotOnlyUnit ? 'only' : 'shared'}`}>
+                <DotStanza
+                    dotStanzaObject={dotStanzaObject}
                     onAnnotationClick={onAnnotationClick}
                 />
             </div> : null
         }
-        {!isDotOnlyStanza ?
+        {!isDotOnlyUnit ?
             <div className="stanza-block main">
                 <LyricsStanza
                     stanzaArray={stanzaArray}

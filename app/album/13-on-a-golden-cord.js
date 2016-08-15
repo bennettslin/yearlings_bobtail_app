@@ -319,7 +319,17 @@ module.exports = {
             },
             {
                 time: 104,
-                centreLyric: `And who's to judge how much you cared because`
+                centreLyric: [
+                    `And who's to`,
+                    {
+                        anchor: `judge how much you cared`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `because`
+                ]
             },
             {
                 time: 107,
@@ -597,7 +607,7 @@ module.exports = {
         {
             taskName: `annotations`,
             workedHours: 66,
-            neededHours: 66,
+            neededHours: 67,
             subtasks: [
                 {
                     taskName: `split into dots`,

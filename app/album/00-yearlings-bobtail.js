@@ -32,11 +32,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `allow for music link in lyrics`,
-            workedHours: 3,
-            neededHours: 8
-        },
-        {
             taskName: `add propTypes`,
             workedHours: 0,
             neededHours: 1
@@ -139,6 +134,11 @@ module.exports = {
             taskName: `replace em dash with \u2011, change format helper`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `allow for music link in lyrics`,
+            workedHours: 4,
+            neededHours: 4
         }
     ]
 }

@@ -18,29 +18,22 @@ const LyricsStanzaView = ({
 
     // From props.
     stanzaArray,
-    isDot,
-    isDotOnlyStanza,
     onAnnotationClick
 
 }) => (
 
-    <div className={`stanza${isDot ? ' anchor' : ''}${isDotOnlyStanza ? ' dot-only' : ''}`}>
+    <div className="stanza">
         {/* Ignore side stanzas, which are arrays. */}
         {stanzaArray
             .filter((verseObject) => !(verseObject instanceof Array))
-            .map((verseObject, verseIndex) => {
-                return isDot ? (
-                    <DotsBlock
-                        dotKeys={{ pun: true }}
-                    />
-                ) : (
+            .map((verseObject, verseIndex) => (
                     <LyricsVerse
                         key={verseIndex}
                         verseObject={verseObject}
                         onAnnotationClick={onAnnotationClick}
                     />
                 )
-        })}
+            )}
     </div>
 )
 

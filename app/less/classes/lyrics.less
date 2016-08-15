@@ -38,6 +38,23 @@
                 }
             }
         }
+
+        &.dot {
+            &.shared {
+                @shared-dot-diameter: 2.5em;
+                .dot-diameter-mixin(@shared-dot-diameter);
+
+            }
+
+            &.only {
+                @only-dot-diameter: 3em;
+                .dot-diameter-mixin(@only-dot-diameter);
+            }
+
+            .stanza {
+                border-radius: 50%;
+            }
+        }
     }
 
 
