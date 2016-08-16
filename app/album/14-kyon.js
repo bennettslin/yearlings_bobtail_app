@@ -1,3 +1,5 @@
+// Be more specific that this began an on again off again relationship
+
 module.exports = {
     title: `Kyon?`,
     overviews: {
@@ -8,13 +10,32 @@ module.exports = {
         [
             {
                 time: 12,
-                lyric: `So you fled to her nest on this stork,`
+                lyric: [
+                    `So you fled to her`,
+                    {
+                        anchor: `nest on this stork,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 17,
-                lyric: `history shed, having never grown your horns.`
+                lyric: [
+                    `history shed, having`,
+                    {
+                        anchor: `never grown your horns.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
+                // portal
                 time: 22,
                 lyric: `A present sent to her of a newborn…`
             },
@@ -28,7 +49,16 @@ module.exports = {
             },
             {
                 time: 36,
-                lyric: `Is it just her womb you bed?`
+                lyric: [
+                    `Is it just her`,
+                    {
+                        anchor: `womb you bed?`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 40,
@@ -42,7 +72,16 @@ module.exports = {
             },
             {
                 time: 50,
-                lyric: `spurned at first, you couldn't let it die!`
+                lyric: [
+                    {
+                        anchor: `spurned at first,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `you couldn't let it die!`
+                ]
             },
             {
                 time: 53,
@@ -54,11 +93,29 @@ module.exports = {
             },
             {
                 time: 58,
-                lyric: `all the points you had! Then you'd resent`
+                lyric: [
+                    {
+                        anchor: `all the points`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `you had! Then you'd resent`
+                ]
             },
             {
                 time: 61,
-                lyric: `plunders past that forced my defence…`
+                lyric: [
+                    {
+                        anchor: `plunders past`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `that forced my defence…`
+                ]
             },
             {
                 time: 63,
@@ -72,31 +129,104 @@ module.exports = {
         [
             {
                 time: 68,
-                lyric: `I'll be stronger— not a bother, more modest, I promise—`
+                lyric: [
+                    `I'll be stronger— not a bother,`,
+                    {
+                        anchor: `more modest,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `I promise—`
+                ]
             },
             {
                 time: 73,
-                lyric: `to parent my knight-errant as the sole keeper of his sheep herd.`
+                lyric: [
+                    `to parent my`,
+                    {
+                        anchor: `knight-errant`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `as the sole`,
+                    {
+                        anchor: `keeper of his sheep herd.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 78,
-                lyric: `And when sobered by the time-lapse to spring forward on a fallback…`
+                lyric: [
+                    `And when`,
+                    {
+                        anchor: `sobered by the time-lapse`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `to`,
+                    {
+                        anchor: `spring forward on a fallback…`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             }
         ],
         [
             {
                 time: 85,
-                lyric: `my ticklish piglet, you'll bounce back to me, giggly, having fully gorged yourself.`
+                lyric: [
+                    `my ticklish piglet, you'll bounce back to me, giggly, having`,
+                    {
+                        anchor: `fully gorged yourself.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 93,
-                lyric: `Bursting belly told by extra holes punched in your belt.`
+                lyric: [
+                    `Bursting belly told by`,
+                    {
+                        anchor: `extra holes`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `punched in your belt.`
+                ]
             }
         ],
         [
             {
                 time: 104,
-                lyric: `A shank's dustless silhouette bares the sill's sheen,`
+                lyric: [
+                    `A`,
+                    {
+                        anchor: `shank's dustless silhouette`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `bares the sill's sheen,`
+                ]
             },
             {
                 time: 109,
@@ -104,7 +234,16 @@ module.exports = {
             },
             {
                 time: 116,
-                lyric: `But other nights you'd lap my wound clean`
+                lyric: [
+                    `But other nights you'd`,
+                    {
+                        anchor: `lap my wound clean`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 121,
@@ -112,7 +251,16 @@ module.exports = {
             },
             {
                 time: 127,
-                lyric: `Besides, a you-shaped pussing sore`
+                lyric: [
+                    `Besides, a`,
+                    {
+                        anchor: `you-shaped pussing sore`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 132,
@@ -120,7 +268,24 @@ module.exports = {
             },
             {
                 time: 138,
-                lyric: `So are we agreed, honeybee? Come for me? At thirty-three?`
+                lyric: [
+                    `So are we agreed,`,
+                    {
+                        anchor: `honeybee?`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `Come for me? At`,
+                    {
+                        anchor: `thirty-three?`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             }
         ],
         [
@@ -130,22 +295,66 @@ module.exports = {
             },
             {
                 time: 180,
-                lyric: `your fear of death, your fear of never dying, and sadness for what it was.`
+                lyric: [
+                    `your`,
+                    {
+                        anchor: `fear of death,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `your fear of never dying, and`,
+                    {
+                        anchor: `sadness`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `for what it was.`
+                ]
             },
             {
                 time: 186,
-                lyric: `You just knew Bobtail's your priority, so for Bobtail I'll gladly wait.`
+                lyric: [
+                    `You just knew`,
+                    {
+                        anchor: `Bobtail's your priority`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `so for Bobtail`,
+                    {
+                        anchor: `I'll gladly wait.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 192,
-                lyric: `And darling, don't you worry, these were only practise cuts…`
+                lyric: [
+                    `And darling, don't you worry, these were only`,
+                    {
+                        anchor: `practise cuts…`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             }
         ]
     ],
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 3,
+            workedHours: 6,
             neededHours: 35,
             subtasks: [
                 {

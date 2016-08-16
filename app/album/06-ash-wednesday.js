@@ -9,6 +9,7 @@ module.exports = {
             [
                 {
                     lyric: {
+                        // Anchor text must be present not to break, but isn't used.
                         anchor: `test 1`,
                         annotation: {
                             description: `test music annotation text 1`,
@@ -447,6 +448,21 @@ module.exports = {
                 time: 151,
                 lyric: `"So where'd you attend Mass?"`
             }
+        ],
+        [
+            [
+                {
+                    lyric: {
+                        anchor: `test 3`,
+                        annotation: {
+                            description: `test music annotation text 3`,
+                            dotKeys: {
+                                music: true
+                            }
+                        }
+                    }
+                }
+            ]
         ]
     ],
     tasks: [
