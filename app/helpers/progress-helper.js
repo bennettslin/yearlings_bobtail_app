@@ -2,6 +2,18 @@
 
 export default {
 
+    hasRemainingHours(task) {
+        const { workedHours,
+                neededHours,
+                subtasks } = task
+        return workedHours < neededHours ||
+            (subtasks && subtasks.reduce((hasRemainingHours, subtask) => {
+                const { workedHours,
+                        neededHours } = subtask
+                return workedHours < neededHours || hasRemainingHours
+            }, false))
+    },
+
     getMaxTotalNeededHoursFromSongs(songs = []) {
         return songs.reduce((maxTotalNeededHours, song) => {
             const totalNeededHours = this.calculateSumTask(song.tasks).neededHours
