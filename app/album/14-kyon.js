@@ -1,10 +1,18 @@
 // Be more specific that this began an on again off again relationship
 
 module.exports = {
-    title: `Kyon?`,
+    // TODO: Hindi word for "Why"
+    title: `Kyon? (क्यों)`,
     overviews: {
         narrative: `The breakup finally gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita had chosen to endure my cruelty for so long. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her identity to our relationship. I was fighting for myself. She was fighting for us.`,
-        music: `personal 1`
+        music: [
+            `I tried to write this song from Sita's perspective. It's possible that I caricatured her somewhat unfairly, but it's also possible that we really`,
+            {
+                emphasis: `were`
+            },
+            `caricatures, both of us, given our youth and naivety. We had settled into an unhealthy power dynamic early on, then failed to grow within our respective roles. In hindsight, Sita was waiting desperately for me to grow up, because she couldn't do it without me. So that's what the music evokes: desperate… waiting.`
+
+        ]
     },
     lyrics: [
         [
@@ -290,6 +298,7 @@ module.exports = {
         ],
         [
             {
+                // TODO: Peacocks sound like they're saying Kyon?
                 time: 174,
                 lyric: `You say you woke one crystal morning, to find all those thoughts had gone away:`
             },
@@ -354,7 +363,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 6,
+            workedHours: 9,
             neededHours: 35,
             subtasks: [
                 {
