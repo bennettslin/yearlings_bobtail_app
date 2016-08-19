@@ -238,7 +238,17 @@ module.exports = {
             },
             {
                 time: 109,
-                lyric: `your severed stinger left in me never lost its sting.`
+                lyric: [
+                    `your`,
+                    {
+                        anchor: `severed stinger`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `left in me never lost its sting.`
+                ]
             },
             {
                 time: 116,
@@ -309,19 +319,26 @@ module.exports = {
                     {
                         anchor: `fear of death,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `As a child, I found the thought of living forever to be no less frightening than having to die. After we began sleeping together, Sita grew accustomed to my night terrors and would soothe me when I woke up screaming from visions of my mortality. Or immortality. I could never really tell which.`
+                        }
                     },
-                    `your fear of never dying, and`,
+                    `your`,
                     {
-                        anchor: `sadness`,
+                        anchor: `fear of never dying,`,
                         annotation: {
-                            description: ``
+                            description: [
+                                `Sita agreed with my sentiment, but had an `,
+                                {
+                                    italic: `moksha`
+                                },
+                                `offered by Sita's Hindu faith,
+
+                                , and it was the subject of countless discussions we had about spirituality.`
+                            ]
                         },
                         todo: true
                     },
-                    `for what it was.`
+                    `and sadness for what it was.`
                 ]
             },
             {
@@ -329,9 +346,9 @@ module.exports = {
                 lyric: [
                     `You just knew`,
                     {
-                        anchor: `Bobtail's your priority`,
+                        anchor: `Bobtail's your priority,`,
                         annotation: {
-                            description: ``
+                            description: `I don't know how it happened, `
                         },
                         todo: true
                     },
@@ -363,7 +380,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 9,
+            workedHours: 12,
             neededHours: 35,
             subtasks: [
                 {
