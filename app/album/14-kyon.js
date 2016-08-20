@@ -4,7 +4,7 @@ module.exports = {
     // TODO: Hindi word for "Why"
     title: `Kyon? (क्यों?)`,
     overviews: {
-        narrative: `The final breakup gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita had chosen to endure my cruelty for so long. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her identity to our relationship. I was fighting for myself. She was fighting for us.`,
+        narrative: `The breakup years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita had chosen to endure my cruelty for so long. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her identity to our relationship. I was fighting for myself. She was fighting for us.`,
         music: [
             `I tried to write this song from Sita's perspective. It's possible that I caricatured her somewhat unfairly, but it's also possible that we both really`,
             {
@@ -34,7 +34,7 @@ module.exports = {
                     {
                         anchor: `never grown your horns.`,
                         annotation: {
-                            description: `Of course, my desire to leave was also motivated by shame. Any kindness I now showed Sita could only be viewed as atonement for past crimes. My role in this relationship was to be forever penitent, whereas I could just start over with someone new, untainted by sin.`
+                            description: `Of course, my desire to leave was also driven by shame. Any kindness I showed Sita could now only be viewed as atonement for past crimes. My role in this relationship was to be forever penitent, whereas I could just start over with someone new, untainted by sin.`
                         }
                     }
                 ]
@@ -51,9 +51,8 @@ module.exports = {
                     {
                         anchor: `take in her breasts,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `I was struck by how motherly every woman's nude body initially seemed. It always scared me, far more than I let on, to gamble away the familiar warmth of Sita's love on new and uncertain romantic ventures, and that fear seemed to manifest in a hormonal desire to be nurtured, rather than pleasured.`
+                        }
                     }
                 ]
             },
@@ -68,7 +67,7 @@ module.exports = {
                     {
                         anchor: `womb you bed?`,
                         annotation: {
-                            description: `Of course, Sita was under no illusion that what I wanted was really just to sleep with more women, to compensate for the inadequacy I felt being the less sexually experienced one in the relationship.`
+                            description: `Of course, Sita was under no illusion that what I really wanted was to sleep with other women, to compensate for the inadequacy I felt in being the less sexually experienced one in our relationship.`
                         }
                     }
                 ]
@@ -135,9 +134,8 @@ module.exports = {
                     {
                         anchor: `let's make a pact:`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Sita knew it was only a matter of time before I wanted the mature, slow-burning love that she wanted. And so after each breakup, she would seek my assurance that I would consider rekindling what we once had, whenever that time should come.`
+                        }
                     },
                     `if you're single then,`
                 ]
