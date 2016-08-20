@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `allow for title to have annotations`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `allow for call and response lyrics`,
             workedHours: 0,
             neededHours: 1

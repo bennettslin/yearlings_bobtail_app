@@ -5,9 +5,9 @@ import { BOTTOM_ONLY_SIDE_STANZA } from 'helpers/constants'
 module.exports = {
     title: `On a Golden Cord`,
     overviews: {
-        narrative: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise.`,
+        narrative: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups.`,
         music: [
-            `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
+            `To make sense of that first breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
             {
                 italic: `Nineteen Eighty-Four.`
             },
@@ -121,7 +121,7 @@ module.exports = {
                     {
                         anchor: `Immerse the moulted form`,
                         annotation: {
-                            description: `With the breakup now irreversible, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a scheme to end his relationship.`
+                            description: `With our relationship now in irreversible decline, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a scheme to end his relationship.`
                         }
                     },
                     `in holy foggy night,`

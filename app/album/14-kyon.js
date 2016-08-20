@@ -2,16 +2,15 @@
 
 module.exports = {
     // TODO: Hindi word for "Why"
-    title: `Kyon? (क्यों)`,
+    title: `Kyon? (क्यों?)`,
     overviews: {
-        narrative: `The breakup finally gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita had chosen to endure my cruelty for so long. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her identity to our relationship. I was fighting for myself. She was fighting for us.`,
+        narrative: `The final breakup gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita had chosen to endure my cruelty for so long. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her identity to our relationship. I was fighting for myself. She was fighting for us.`,
         music: [
-            `I tried to write this song from Sita's perspective. It's possible that I caricatured her somewhat unfairly, but it's also possible that we really`,
+            `I tried to write this song from Sita's perspective. It's possible that I caricatured her somewhat unfairly, but it's also possible that we both really`,
             {
                 emphasis: `were`
             },
-            `caricatures, both of us, given our youth and naivety. We had settled into an unhealthy power dynamic early on, then failed to grow within our respective roles. In hindsight, Sita was waiting desperately for me to grow up, because she couldn't do it without me. So that's what the music evokes: desperate… waiting.`
-
+            `caricatures, given our youthful naivety. We had settled into an unhealthy power dynamic early on, then failed to grow within our respective roles. In hindsight, Sita was desperately waiting for me to grow up, because she couldn't do it without me. And so that's what I had the music here evoke: waiting… desperately.`
         ]
     },
     lyrics: [
@@ -23,9 +22,8 @@ module.exports = {
                     {
                         anchor: `nest on this stork,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `In European folklore, the stork delivers babies to expecting parents. Each time I broke up with Sita to date another woman, I always reverted to the same naive, wide-eyed persona. I longed to relive the giddiness of puppy love, like an infant experiencing the world for the first time.`
+                        }
                     }
                 ]
             },
@@ -36,9 +34,8 @@ module.exports = {
                     {
                         anchor: `never grown your horns.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Of course, my desire to leave was also motivated by shame. Any kindness I now showed Sita could only be viewed as atonement for past crimes. My role in this relationship was to be forever penitent, whereas I could just start over with someone new, untainted by sin.`
+                        }
                     }
                 ]
             },
@@ -49,7 +46,16 @@ module.exports = {
             },
             {
                 time: 26,
-                lyric: `So baby, tell me then, when you take in her breasts,`
+                lyric: [
+                    `So baby, tell me then, when you`,
+                    {
+                        anchor: `take in her breasts,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 31,
@@ -62,9 +68,8 @@ module.exports = {
                     {
                         anchor: `womb you bed?`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Of course, Sita was under no illusion that what I wanted was really just to sleep with more women, to compensate for the inadequacy I felt being the less sexually experienced one in the relationship.`
+                        }
                     }
                 ]
             },
@@ -84,7 +89,7 @@ module.exports = {
                     {
                         anchor: `spurned at first,`,
                         annotation: {
-                            description: ``
+                            description: `It still surprises me just how bitter I was `
                         },
                         todo: true
                     },
@@ -93,11 +98,11 @@ module.exports = {
             },
             {
                 time: 53,
-                lyric: `You'd nurse your bruises: why, the nerve of me, to lie`
+                lyric: `You'd nurse your bruises: why, the nerve of me to lie`
             },
             {
                 time: 56,
-                lyric: `in reserve while I had to learn to find`
+                lyric: `in reserve, while I had to learn to find`
             },
             {
                 time: 58,
@@ -105,9 +110,8 @@ module.exports = {
                     {
                         anchor: `all the points`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `After Sita rejected me, we spent a year getting to know each other as friends, during which time I was always trying to impress her without appearing to do so. One day I solved her friend's Rubik's Cube, a skill I had picked up during my first five-year plan. Her friend gushed as I humbly shrugged, and all the while Sita sat and smiled. I had become a puzzle for her to figure out.`
+                        }
                     },
                     `you had! Then you'd resent`
                 ]
@@ -118,16 +122,25 @@ module.exports = {
                     {
                         anchor: `plunders past`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `I resented that Sita had kept quiet about her sexual past when we first began dating, and that it was precisely the painful lessons learnt from these encounters that made her wary of my earlier advances. Of course, I missed the irony in being the one who would surely provide the most painful lesson by far.`
+                        }
                     },
                     `that forced my defence…`
                 ]
             },
             {
                 time: 63,
-                lyric: `But dear, let's make a pact: if you're single then,`
+                lyric: [
+                    `But dear,`,
+                    {
+                        anchor: `let's make a pact:`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `if you're single then,`
+                ]
             },
             {
                 time: 66,
