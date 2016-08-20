@@ -149,15 +149,13 @@ module.exports = {
             {
                 time: 68,
                 lyric: [
-                    `I'll be stronger— not a bother,`,
                     {
-                        anchor: `more modest,`,
+                        anchor: `I'll be stronger—`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Sita was always promising to "get better." It was a weird trick I had unconsciously played on her, as if the blame didn't lie squarely with me.`
+                        }
                     },
-                    `I promise—`
+                    `not a bother, more modest, I promise—`
                 ]
             },
             {
