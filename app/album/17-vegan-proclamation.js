@@ -143,6 +143,7 @@ module.exports = {
                 // Odin reference
                 lyric: `Our ashed heads bow from chivalry to our Siva's feet…`
             }
+            // Talk about flirting with conservative politics. These days, I'd say I'm vegan maybe 90% of the time, the naysaying judgment of hardcore vegans notwithstanding.
         ]
     ],
     tasks: [

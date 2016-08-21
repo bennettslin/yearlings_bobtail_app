@@ -10,7 +10,7 @@ module.exports = {
             {
                 emphasis: `were`
             },
-            `caricatures, given our youthful naivety. We had settled into an unhealthy power dynamic early on, then failed to grow within our respective roles. In hindsight, Sita was desperately waiting for me to grow up, because she couldn't do it without me. And so that's what I had the music here evoke: waiting… desperately.`
+            `caricatures, given our youthful naivety. We had settled into an unhealthy power dynamic early on, then failed to grow within our respective roles. In hindsight, Sita was desperately waiting for me to grow up, because she couldn't do it without me. So that's what the music evokes: waiting… desperately.`
         ]
     },
     lyrics: [
@@ -51,7 +51,7 @@ module.exports = {
                     {
                         anchor: `take in her breasts,`,
                         annotation: {
-                            description: `I was struck by how motherly every woman's nude body initially seemed. It always scared me, far more than I let on, to gamble away the familiar warmth of Sita's love on new and uncertain romantic ventures, and that fear seemed to manifest in a hormonal desire to be nurtured, rather than pleasured.`
+                            description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love on some new and uncertain romantic venture, and that fear seemed to manifest in a hormonal desire to be nurtured, rather than pleasured. I was always struck by how motherly every woman's nude body initially seemed to me.`
                         }
                     }
                 ]
@@ -121,7 +121,7 @@ module.exports = {
                     {
                         anchor: `plunders past`,
                         annotation: {
-                            description: `I resented that Sita had kept quiet about her sexual past when we first began dating, and that it was precisely the painful lessons learnt from these encounters that made her wary of my earlier advances. Of course, I missed the irony in being the one who would surely provide the most painful lesson by far.`
+                            description: `I resented that Sita had kept quiet about her sexual past when we first began dating, and that it was precisely the painful lessons learnt from these past encounters that made her wary of my earlier advances. Of course, I missed the irony in being the one who would surely provide the most painful lesson by far.`
                         }
                     },
                     `that forced my defence…`
@@ -165,38 +165,40 @@ module.exports = {
                     {
                         anchor: `knight-errant`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `In medieval romance, a knight-errant wanders in search of adventures, proving his chivalry in the name of courtly love.`
+                        }
                     },
                     `as the sole`,
                     {
                         anchor: `keeper of his sheep herd.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `In the sense of being the one who tends to the herd, as well as being the only one to keep from`,
+                                {
+                                    emphasis: `amongst`
+                                },
+                                `the herd. Sita was now resigned to my infidelity, and only held out the hope that her permissiveness might earn her a privileged place amidst all the other women I desired.`
+                            ]
+                        }
                     }
                 ]
             },
             {
                 time: 78,
                 lyric: [
-                    `And when`,
+                    `And when sobered by the`,
                     {
-                        anchor: `sobered by the time-lapse`,
+                        anchor: `time-lapse`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `In time-lapse photography, the frame rate at which images are captured is lower than upon playback, causing time to speed up. Sita anticipated that my years of infidelity would whiz by in a flash, as the pursuit of other women could only grow repetitive, imprinting few standout memories.`
+                        }
                     },
                     `to`,
                     {
                         anchor: `spring forward on a fallback…`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Sita hoped that the endless disappointments I was sure to face as an aging playboy would compel me to return to her, my fallback option, with relief rather than reluctance. The passage of time is invoked by the classic mnemonic for daylight saving time, "spring forward, fall back," which teaches us to set our clocks one hour forward in the spring, and backward in the fall.`
+                        }
                     }
                 ]
             }
