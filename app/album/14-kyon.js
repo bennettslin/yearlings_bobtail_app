@@ -51,7 +51,7 @@ module.exports = {
                     {
                         anchor: `take in her breasts,`,
                         annotation: {
-                            description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love on some new and uncertain romantic venture, and that fear seemed to manifest in a hormonal desire to be nurtured, rather than pleasured. I was always struck by how motherly every woman's nude body initially seemed to me.`
+                            description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love on some new and uncertain romantic venture, and that fear seemed to manifest in a hormonal desire to be nurtured more than pleasured. I was always struck by how motherly every woman's naked body initially seemed to me.`
                         }
                     }
                 ]
@@ -88,9 +88,8 @@ module.exports = {
                     {
                         anchor: `spurned at first,`,
                         annotation: {
-                            description: `It still surprises me just how bitter I was `
-                        },
-                        todo: true
+                            description: `Given the ease by which I was now able to attract other women, I grew increasingly bitter over Sita's initial rejection of me, along with the endless series of hoops I was made to jump through to finally win her over.`
+                        }
                     },
                     `you couldn't let it die!`
                 ]
@@ -109,7 +108,7 @@ module.exports = {
                     {
                         anchor: `all the points`,
                         annotation: {
-                            description: `After Sita rejected me, we spent a year getting to know each other as friends, during which time I was always trying to impress her without appearing to do so. One day I solved her friend's Rubik's Cube, a skill I had picked up during my first five-year plan. Her friend gushed as I humbly shrugged, and all the while Sita sat and smiled. I had become a puzzle for her to figure out.`
+                            description: `After Sita rejected me, we spent a year getting to know each other as friends, during which time I was always trying to impress her without appearing to do so. One day I solved her friend's Rubik's Cube, a skill I had picked up during my first five-year plan. While her friend raved, I humbly shrugged, as Sita just sat there and smiled. I had become a puzzle for her to figure out.`
                         }
                     },
                     `you had! Then you'd resent`
@@ -121,7 +120,7 @@ module.exports = {
                     {
                         anchor: `plunders past`,
                         annotation: {
-                            description: `I resented that Sita had kept quiet about her sexual past when we first began dating, and that it was precisely the painful lessons learnt from these past encounters that made her wary of my earlier advances. Of course, I missed the irony in being the one who would surely provide the most painful lesson by far.`
+                            description: `The pain of rejection was aggravated by the later revelation of Sita's sexual past, and all the more so because it was precisely the painful lessons learnt from these past encounters that had made her wary of my earlier advances. Of course, I missed the irony in being the one who would surely end up providing the most painful lesson by far.`
                         }
                     },
                     `that forced my defence…`
@@ -152,7 +151,7 @@ module.exports = {
                     {
                         anchor: `I'll be stronger—`,
                         annotation: {
-                            description: `Sita was always promising to "get better." It was a weird trick I had unconsciously played on her, as if the blame didn't lie squarely with me.`
+                            description: `Sita was always promising to "get better." It was a weird trick I had unconsciously played on her, as if all the blame didn't lie squarely with me.`
                         }
                     },
                     `not a bother, more modest, I promise—`
@@ -190,7 +189,7 @@ module.exports = {
                     {
                         anchor: `time-lapse`,
                         annotation: {
-                            description: `In time-lapse photography, the frame rate at which images are captured is lower than upon playback, causing time to speed up. Sita anticipated that my years of infidelity would whiz by in a flash, as the pursuit of other women could only grow repetitive, imprinting few standout memories.`
+                            description: `In time-lapse photography, the frame rate at which images are captured is lower than upon playback, causing time to speed up. Sita anticipated that my years of infidelity would whiz by in a flash, as the pursuit of other women grew repetitive, imprinting few standout memories.`
                         }
                     },
                     `to`,
@@ -206,16 +205,7 @@ module.exports = {
         [
             {
                 time: 85,
-                lyric: [
-                    `my ticklish piglet, you'll bounce back to me, giggly, having`,
-                    {
-                        anchor: `fully gorged yourself.`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    }
-                ]
+                lyric: `my ticklish piglet, you'll bounce back to me, giggly, having fully gorged yourself.`
             },
             {
                 time: 93,
@@ -224,9 +214,8 @@ module.exports = {
                     {
                         anchor: `extra holes`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `More holes in one's belt might be needed to support the wider girth that comes from being overfed. As notches, they can also tally one's sexual conquests.`
+                        }
                     },
                     `punched in your belt.`
                 ]
@@ -391,7 +380,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 12,
+            workedHours: 20,
             neededHours: 35,
             subtasks: [
                 {

@@ -91,7 +91,7 @@ module.exports = {
                     {
                         anchor: `bustin' cars with fists,`,
                         annotation: {
-                            description: `One kid named Tristan was particularly hotheaded. After we all got kicked out of a party one night for a fight that he started, Tristan started punching car doors, challenging us to see who could make the biggest dent. I didn't win.`
+                            description: `One kid named Tristan was particularly hotheaded. After we all got kicked out of a party one night for a fight that he incited, Tristan started punching car doors, challenging us to see who could make the biggest dent. I didn't win.`
                         }
                     }
                 ]
@@ -136,7 +136,7 @@ module.exports = {
                     {
                         anchor: `she's claimed…`,
                         annotation: {
-                            description: `I came to learn that after Sita had initially rejected me, and while we were building up our friendship, she was sexually intimate with other men, though always shy of intercourse. She tried to explain that she never went all the way because she didn't love them. She loved me.  But it still stung like crazy, and only added to my deepening resentment at the time.`
+                            description: `Throughout our budding friendship, Sita neglected to mention the extent of her past sexual intimacy with other men, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only added to my deepening resentment at the time.`
                         }
                     }
                 ]
