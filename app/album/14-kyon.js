@@ -4,7 +4,7 @@ module.exports = {
     // TODO: Hindi word for "Why"
     title: `Kyon? (क्यों?)`,
     overviews: {
-        narrative: `The breakup years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita had chosen to endure my cruelty for so long. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her identity to our relationship. I was fighting for myself. She was fighting for us.`,
+        narrative: `The breakup years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita willingly continued to endure my cruelty. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her identity to our relationship. I was fighting for myself. She was fighting for us.`,
         music: [
             `I tried to write this song from Sita's perspective. It's possible that I caricatured her somewhat unfairly, but it's also possible that we both really`,
             {
@@ -229,9 +229,8 @@ module.exports = {
                     {
                         anchor: `shank's dustless silhouette`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `A shank is a prison inmate's makeshift blade. During our breakup years, I would habitually return to Sita promising to mend my ways. Things would be peachy again for a few months, after which I would run off once more with another woman. I was like a reformed convict who lets his shank collect dust where it sits on the windowsill, then relapses without warning, taking it with him.`
+                        }
                     },
                     `bares the sill's sheen,`
                 ]
@@ -274,7 +273,7 @@ module.exports = {
                     {
                         anchor: `you-shaped pussing sore`,
                         annotation: {
-                            description: ``
+                            description: `Or else a U-shaped sore.`
                         },
                         todo: true
                     }
@@ -291,7 +290,7 @@ module.exports = {
                     {
                         anchor: `honeybee?`,
                         annotation: {
-                            description: ``
+                            description: `Unlike other stinging insects, honeybee.`
                         },
                         todo: true
                     },
@@ -327,13 +326,11 @@ module.exports = {
                         anchor: `fear of never dying,`,
                         annotation: {
                             description: [
-                                `Sita agreed with my sentiment, but had an `,
+                                `While Sita sympathised with my fears, her Hindu faith offered solace in the form of`,
                                 {
-                                    italic: `moksha`
+                                    italic: `moksha,`
                                 },
-                                `offered by Sita's Hindu faith,
-
-                                , and it was the subject of countless discussions we had about spirituality.`
+                                `or transcendent release from the cycle of rebirth. xxx it was the subject of countless discussions we had about spirituality.`
                             ]
                         },
                         todo: true

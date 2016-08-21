@@ -494,7 +494,7 @@ module.exports = {
                         anchor: `shivs unsheathed.`,
                         // TODO: Reference to shanks in Kyon?
                         annotation: {
-                            description: `A shiv is a makeshift blade improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved.`
+                            description: `A shiv is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved.`
                         }
                     }
                 ],
