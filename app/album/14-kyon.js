@@ -326,14 +326,13 @@ module.exports = {
                         anchor: `fear of never dying,`,
                         annotation: {
                             description: [
-                                `While Sita sympathised with my fears, her Hindu faith offered solace in the form of`,
+                                `Sympathising with my hunger for spiritual wisdom, Sita often invited me to attend Hindu services with her, which I eagerly obliged. On the question of an afterlife, I found Hinduism's notion of`,
                                 {
                                     italic: `moksha,`
                                 },
-                                `or transcendent release from the cycle of rebirth. xxx it was the subject of countless discussions we had about spirituality.`
+                                `or transcendent release from the cycle of rebirth, to be the most comforting answer by far.`
                             ]
-                        },
-                        todo: true
+                        }
                     },
                     `and sadness for what it was.`
                 ]
@@ -345,17 +344,21 @@ module.exports = {
                     {
                         anchor: `Bobtail's your priority,`,
                         annotation: {
-                            description: `I don't know how it happened, `
-                        },
-                        todo: true
+                            description: [
+                                `As I began to work resolutely on`,
+                                {
+                                    italic: `Bobtail,`
+                                },
+                                `my night terrors grew less frequent, and my depression slowly subsided. Recognising this great boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more indifferent to Sita's needs.`
+                            ]
+                        }
                     },
                     `so for Bobtail`,
                     {
                         anchor: `I'll gladly wait.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `But Sita happily encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was largely uninterested in the local scene, she still enjoyed being the one I would be taking home after the show.`
+                        }
                     }
                 ]
             },
@@ -366,7 +369,7 @@ module.exports = {
                     {
                         anchor: `practise cuts…`,
                         annotation: {
-                            description: ``
+                            description: `Despite xxx, Sita never lost her sardonic sense of humour. After she began experimenting with cutting, I expressed concern. She smiled and xxx. `
                         },
                         todo: true
                     }
@@ -377,7 +380,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 20,
+            workedHours: 27,
             neededHours: 35,
             subtasks: [
                 {

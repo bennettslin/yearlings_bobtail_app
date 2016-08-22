@@ -381,7 +381,7 @@ module.exports = {
                     {
                         anchor: `unscrew a Bud…`,
                         annotation: {
-                            description: `I forego my chance to meet the red-haired woman, as I would need another Budweiser to bring myself to the required level of self-deception, and it's past last call. But it's also too late for me to "unscrew a bud," and present myself as someone who isn't already sexually intimate with a longtime friend.`
+                            description: `I forego my chance to meet the red-haired woman, as I would need another Budweiser to bring myself to the required level of self-deception, and it's after last call. But it's also too late for me to "unscrew a bud," and present myself as someone who isn't already sexually intimate with a longtime friend.`
                         }
                     }
                 ]
