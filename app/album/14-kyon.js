@@ -4,7 +4,7 @@ module.exports = {
     // TODO: Hindi word for "Why"
     title: `Kyon? (क्यों?)`,
     overviews: {
-        narrative: `The breakup years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita willingly continued to endure my cruelty. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her identity to our relationship. I was fighting for myself. She was fighting for us.`,
+        narrative: `The breakup years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita willingly continued to endure my cruelty. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her sense of worth to our relationship. I was fighting for myself. She was fighting for us.`,
         music: [
             `I tried to write this song from Sita's perspective. It's possible that I caricatured her somewhat unfairly, but it's also possible that we both really`,
             {
@@ -369,9 +369,8 @@ module.exports = {
                     {
                         anchor: `practise cuts…`,
                         annotation: {
-                            description: `Despite xxx, Sita never lost her sardonic sense of humour. After she began experimenting with cutting, I expressed concern. She smiled and xxx. `
-                        },
-                        todo: true
+                            description: `Even in anguish, Sita never lost her sardonic sense of humour. When I expressed concern after she began cutting herself, Sita smiled sweetly and assured me that it was only for practise.`
+                        }
                     }
                 ]
             }
