@@ -88,7 +88,7 @@ module.exports = {
                     {
                         anchor: `spurned at first,`,
                         annotation: {
-                            description: `Given the ease by which I was now able to attract other women, I grew increasingly bitter over Sita's initial rejection of me, along with the endless series of hoops I was made to jump through to finally win her over.`
+                            description: `Given the ease by which I could now attract other women, I grew increasingly indignant over Sita's initial rejection of me, along with the endless hoops I was made to jump through to finally win her over.`
                         }
                     },
                     `you couldn't let it die!`
@@ -229,7 +229,7 @@ module.exports = {
                     {
                         anchor: `shank's dustless silhouette`,
                         annotation: {
-                            description: `A shank is a prison inmate's makeshift blade. During our breakup years, I would habitually return to Sita promising to mend my ways. Things would be peachy again for a few months, after which I would run off once more with another woman. I was like a reformed convict who lets his shank collect dust where it sits on the windowsill, then relapses without warning, taking it with him.`
+                            description: `A shank is a prison inmate's makeshift blade. During our breakup years, I would habitually return to Sita promising to mend my ways. Things would be peachy again for a few months, after which I would run off once more with another woman. I was like a reformed convict who leaves his shank to collect dust on the windowsill, then relapses without warning, taking it with him.`
                         }
                     },
                     `bares the sill's sheen,`
@@ -242,9 +242,8 @@ module.exports = {
                     {
                         anchor: `severed stinger`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `The honeybee has a barbed stinger that stays lodged in a person's skin. At the time, I failed to appreciate what it meant to Sita to have given her virginity to me, and how it drove her to keep trying to make things work.`
+                        }
                     },
                     `left in me never lost its sting.`
                 ]
@@ -256,9 +255,8 @@ module.exports = {
                     {
                         anchor: `lap my wound clean`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `After ejaculating inside her, I would go down on Sita until she reached orgasm. She once listed this as an example of my thoughtfulness when I asked her what she saw in me that was worth holding onto, because I couldn't think of anything myself.`
+                        }
                     }
                 ]
             },
@@ -273,15 +271,22 @@ module.exports = {
                     {
                         anchor: `you-shaped pussing sore`,
                         annotation: {
-                            description: `Or else a U-shaped sore.`
-                        },
-                        todo: true
+                            description: `Or else, "U-shaped." Yet another comparison of vaginal penetration to an inflicted lesion. I think I was feeling both guilty and horny when I wrote these lyrics.`
+                        }
                     }
                 ]
             },
             {
                 time: 132,
-                lyric: `bleeds just once, then never more…`
+                lyric: [
+                    {
+                        anchor: `bleeds just once,`,
+                        annotation: {
+                            description: `Much like a vagina only bleeds the first time when the hymen is ruptured, every subsequent breakup felt more like an irritant on an already open wound.`
+                        }
+                    },
+                    `then never more…`
+                ]
             },
             {
                 time: 138,
@@ -290,17 +295,15 @@ module.exports = {
                     {
                         anchor: `honeybee?`,
                         annotation: {
-                            description: `Unlike other stinging insects, honeybee.`
-                        },
-                        todo: true
+                            description: `A honeybee will die after stinging a person, as its stinger is attached to vital organs. Having given my virginity to Sita in return, I realised too late that there was something inside me that could never be recovered apart from her as well.`
+                        }
                     },
                     `Come for me? At`,
                     {
                         anchor: `thirty-three?`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `I hated the idea of getting older, and often joked that I would kill myself at thirty-three, the age at which Jesus was crucified, since clearly that was all the time one needed to change the world. So when I suggested it as the age at which I would return for Sita in accordance with our little pact, the subtext was understood.`
+                        }
                     }
                 ]
             }
@@ -343,6 +346,7 @@ module.exports = {
                     `You just knew`,
                     {
                         anchor: `Bobtail's your priority,`,
+                        properNoun: true,
                         annotation: {
                             description: [
                                 `As I began to work resolutely on`,
@@ -379,8 +383,8 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 27,
-            neededHours: 35,
+            workedHours: 30,
+            neededHours: 30,
             subtasks: [
                 {
                     taskName: `split into dots`,

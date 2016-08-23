@@ -253,7 +253,17 @@ module.exports = {
             },
             {
                 time: 83,
-                leftLyric: `Then if life were real, not just drunken play…`,
+                leftLyric: [
+                    `Then if`,
+                    {
+                        anchor: `life were real,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `not just drunken play…`
+                ],
                 rightLyric: `And if night were peeled off the front of day…`
             },
             {
