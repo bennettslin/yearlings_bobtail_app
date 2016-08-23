@@ -357,7 +357,7 @@ module.exports = {
                     {
                         anchor: `I'll gladly wait.`,
                         annotation: {
-                            description: `But Sita happily encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was largely uninterested in the local scene, she still enjoyed being the one I would be taking home after the show.`
+                            description: `But Sita happily encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was largely uninterested in the local scene, she still enjoyed being the one I would take home after the show.`
                         }
                     }
                 ]
