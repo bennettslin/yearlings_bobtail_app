@@ -240,6 +240,7 @@ module.exports = {
                 lyric: [
                     `your`,
                     {
+                        // TODO: Make analogy more clear.
                         anchor: `severed stinger`,
                         annotation: {
                             description: `The honeybee has a barbed stinger that stays lodged in a person's skin. At the time, I failed to appreciate what it meant to Sita to have given her virginity to me, and how it drove her to keep trying to make things work.`
@@ -255,7 +256,7 @@ module.exports = {
                     {
                         anchor: `lap my wound clean`,
                         annotation: {
-                            description: `After ejaculating inside her, I would go down on Sita until she reached orgasm. She once listed this as an example of my thoughtfulness when I asked her what she saw in me that was worth holding onto, because I couldn't think of anything myself.`
+                            description: `After ejaculating, I would go down on Sita until she reached orgasm. She once listed this as an example of my thoughtfulness when I asked her what she saw in me that was worth holding onto, because I couldn't think of anything myself.`
                         }
                     }
                 ]
