@@ -258,13 +258,21 @@ module.exports = {
                     {
                         anchor: `life were real,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `A lingering effect of Robitussin is that my emotions never felt genuine. They were more like cues to help me ad lib through an improv scene. Sita's friends at the time labelled me "fake" and "pretentious," which I wore with pride.`
+                        }
                     },
                     `not just drunken play…`
                 ],
-                rightLyric: `And if night were peeled off the front of day…`
+                rightLyric: [
+                    `And if`,
+                    {
+                        anchor: `night were peeled`,
+                        annotation: {
+                            description: `When a friend asked what life after Robitussin felt like, I described each passing moment as a layer of Colorforms being peeled away to reveal the next.`
+                        }
+                    },
+                    `off the front of day…`
+                ]
             },
             {
                 time: 86,
@@ -615,8 +623,8 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 66,
-            neededHours: 67,
+            workedHours: 67,
+            neededHours: 68,
             subtasks: [
                 {
                     taskName: `split into dots`,
