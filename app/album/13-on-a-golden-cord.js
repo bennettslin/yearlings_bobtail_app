@@ -256,10 +256,10 @@ module.exports = {
                 leftLyric: [
                     `Then if`,
                     {
-                        // TODO: Rephrase better.
                         anchor: `life were real,`,
                         annotation: {
-                            description: `A lingering effect of Robitussin is that my emotions never felt genuine. They were more like cues to help me ad lib through an improv scene. Sita's friends at the time labelled me "fake" and "pretentious," which I wore with pride.`
+                            // TODO: Not sure if I like this one either.
+                            description: `A lingering effect of Robitussin is that my emotions never felt genuine. Sita's friends universally saw me as fake and pretentious, with one describing me as someone forever ad libbing an improv scene.`
                         }
                     },
                     `not just drunken play…`

@@ -354,7 +354,7 @@ module.exports = {
                                 {
                                     italic: `Bobtail,`
                                 },
-                                `my night terrors grew less frequent, and my depression slowly subsided. Recognising this great boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more indifferent to Sita's needs.`
+                                `my night terrors grew less frequent, and my depression subsided. Recognising this great boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more indifferent to Sita's needs.`
                             ]
                         }
                     },
@@ -362,7 +362,7 @@ module.exports = {
                     {
                         anchor: `I'll gladly wait.`,
                         annotation: {
-                            description: `But Sita happily encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was largely uninterested in the local scene, she still enjoyed being the one I would take home after the show.`
+                            description: `But Sita happily encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was largely uninterested in the local scene, she still enjoyed being seen going home with me after the show.`
                         }
                     }
                 ]
