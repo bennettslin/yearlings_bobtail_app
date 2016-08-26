@@ -258,8 +258,7 @@ module.exports = {
                     {
                         anchor: `life were real,`,
                         annotation: {
-                            // TODO: Not sure if I like this one either.
-                            description: `A lingering effect of Robitussin is that my emotions never felt genuine. Sita's friends universally saw me as fake and pretentious, with one describing me as someone forever ad libbing an improv scene.`
+                            description: `Sita's friends weren't wrong when they described me as fake and pretentious. My emotions just didn't seem legitimate, and so I acted upon them the way an actor takes cues to ad lib an improv scene. At the time, I blamed the lingering effect of Robitussin.`
                         }
                     },
                     `not just drunken play…`
