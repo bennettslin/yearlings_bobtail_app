@@ -1,7 +1,7 @@
 module.exports = {
     title: `Uncanny Valley Boy`,
     overviews: {
-        narrative: `narrative 1`,
+        narrative: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged my every whim to find myself in my own way. But now I was getting older, and they were disappointed that I still hadn't matured. On top of this, they adored Sita and firmly believed me to be in the wrong to leave her. The weight of the guilt that I felt was crushing. Still, I wasn't about to change my ways.`,
         music: `personal 1`
     },
     lyrics: [
@@ -161,7 +161,13 @@ module.exports = {
             },
             {
                 time: 178,
-                lyric: `your thoughts surrendered for Bobtail's sake, to five-year plans.`
+                lyric: [
+                    `your thoughts surrendered for`,
+                    {
+                        italic: `Bobtail`
+                    },
+                    `'s sake, to five-year plans.`
+                ]
             },
             [
                 {
@@ -204,7 +210,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 0,
+            workedHours: 3,
             neededHours: 45,
             subtasks: [
                 {
