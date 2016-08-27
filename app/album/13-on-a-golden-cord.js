@@ -258,7 +258,7 @@ module.exports = {
                     {
                         anchor: `life were real,`,
                         annotation: {
-                            description: `Sita's friends weren't wrong when they described me as fake and pretentious. My emotions just didn't seem legitimate, and so I acted upon them the way an actor takes cues to ad lib an improv scene. At the time, I blamed the lingering effect of Robitussin.`
+                            description: `Sita's friends weren't wrong when they described me as fake and pretentious. My emotions just didn't feel legitimate, and so I acted upon them the way an actor takes cues to ad lib an improv scene. At the time, I blamed the lingering effect of Robitussin.`
                         }
                     },
                     `not just drunken play…`
