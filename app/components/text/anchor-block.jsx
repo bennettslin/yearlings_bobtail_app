@@ -13,7 +13,7 @@ const AnchorBlock = (props) => {
         { annotationIndex,
           anchor: anchorText,
           todo: hasTodo,
-          dotKeys = {},
+          dotKeys,
           wiki } = text,
 
         /**
@@ -22,10 +22,6 @@ const AnchorBlock = (props) => {
          * reference, and the argument is a url string.
          */
         clickHandlerArgument = annotationIndex || wiki
-
-    if (wiki && dotKeys) {
-            dotKeys.wiki = true
-    }
 
     return (
         <AnchorBlockView {...props}
@@ -63,10 +59,15 @@ const AnchorBlockView = ({
             className={`anchor-block${hasTodo ? ' todo' : ''}`}
             onClick={() => onAnchorClick(clickHandlerArgument)}
         >
-            <span className="underline-bar"></span>
-            <DotsBlock
+            {isLyric ?
+                <span className="underline-bar">
+                </span> : null
+            }
+            {dotKeys ?
+                <DotsBlock
                 dotKeys={dotKeys}
-            />
+                /> : null
+            }
             <TextBlock
                 isLyric={isLyric}
                 isInAnchor={true}

@@ -1,6 +1,5 @@
 .anchor-block {
     position: relative;
-    white-space: nowrap;
 
     /**
      * Stupid hack to keep dots block and underline bar aligned in right column
@@ -11,25 +10,6 @@
         opacity: 0;
         font-size: 0;
         line-height: 0;
-    }
-
-    @colour: @song-field-colour;
-    @offset: 0.75px;
-    @blur: 0;
-    text-shadow:
-        -@offset -@offset @blur @colour,
-        @offset -@offset @blur @colour,
-        -@offset @offset @blur @colour,
-        @offset @offset @blur @colour;
-
-    // Underline anchor tag.
-    .underline-bar {
-        position: absolute;
-        width: 100%;
-        height: 35%;
-        bottom: 0;
-        left: 0;
-        background-color: mix(@lyric-link-colour, white, 25%);
     }
 
     .dots-block {
@@ -63,4 +43,10 @@
                 background-color: mix(red, white, 50%);
         }
     }
+}
+
+// Text followed by an anchor block will still be in front of dots.
+.text-span {
+    position: relative;
+    z-index: @text-z-index;
 }

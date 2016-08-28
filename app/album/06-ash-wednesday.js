@@ -53,7 +53,8 @@ module.exports = {
                                     anchor: `"O Captain! My Captain!"`,
                                     wiki: `O_Captain!_My_Captain!`
                                 },
-                                `after hearing of Abraham Lincoln's assassination. I don't remember why I chose to reference it. I was probably whimpering "Oh Catherine" under my breath a lot right after the breakup.`],
+                                `after hearing of Abraham Lincoln's assassination. I don't remember why I chose to reference it. I was probably whimpering "Oh Catherine" under my breath a lot right after the breakup.`
+                            ],
                             dotKeys: {
                                 pun: true,
                                 backstory: true,

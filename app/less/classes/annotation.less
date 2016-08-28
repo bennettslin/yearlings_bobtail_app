@@ -1,27 +1,28 @@
 .annotation-section {
 
-    // border-top-left-radius:     45px 15px;
-    // border-top-right-radius:    15px 45px;
-    // border-bottom-right-radius: 45px 15px;
-    // border-bottom-left-radius:  15px 45px;
-
     .annotation-card, {
+        min-height: 1.75em;
         margin: 5px 0;
         padding: 5px;
         box-shadow: 0 1px 1px 1px @box-shadow-colour;
 
-        // Begin floated dot properties.
-        // position: relative;
-        // clear: left;
-        // overflow: auto;
-        // .dot {
-        //     float: left;
-        //     margin-right: 5px;
-        // }
-        // End floated dot properties.
+        .dots-block {
+            @dot-diameter: 1.75em;
+            .dot-diameter-mixin(@dot-diameter);
+            position: absolute;
+            height: @dot-diameter;
+            opacity: .45;
+        }
 
-        > .dots-block {
-            .dot-diameter-mixin(1.75em);
+        .text-span {
+            @colour: white;
+            @offset: 0.75px;
+            @blur: 0;
+            text-shadow:
+                -@offset -@offset @blur @colour,
+                @offset -@offset @blur @colour,
+                -@offset @offset @blur @colour,
+                @offset @offset @blur @colour;
         }
     }
 
