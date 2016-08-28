@@ -16,6 +16,9 @@ import AlbumHelper from 'helpers/album-view-helper'
 import LogHelper from 'helpers/log-helper'
 import SessionHelper from 'helpers/session-helper'
 
+// FIXME: Get rid of eventually.
+import { ALL_DOT_KEYS } from 'helpers/constants'
+
 /*********
  * STORE *
  *********/
@@ -58,22 +61,36 @@ class App extends Component {
         this.handleSongSelect = this.handleSongSelect.bind(this)
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this)
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this)
-        this.handleDotKeySelect = this.handleDotKeySelect.bind(this)
+        this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handlePortalSelect = this.handlePortalSelect.bind(this)
         this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
+
+        // FIXME: Do this for now.
+        const activeDotKeys = ALL_DOT_KEYS.reduce((dotKeyObject, dotKey) => {
+            dotKeyObject[dotKey] = true
+            return dotKeyObject
+        }, {})
+
+        this.state = {
+            activeDotKeys
+        }
     }
 
     componentWillMount() {
         const { activeSongIndex,
                 activeAnnotationIndex,
-                activeDotKeys,
+                // activeDotKeys,
                 activeOverviewIndex } = this.props
         /**
          * Retrieve stored indices, if any. Indices start at 1.
          */
         this.handleSongSelect(activeSongIndex, SONG_INDEX)
         this.handleAnnotationSelect(activeAnnotationIndex)
-        this.handleDotKeySelect(activeDotKeys)
+
+        for (const dotKey in this.state.activeDotKeys) {
+            this.handleDotToggle(dotKey, true)
+        }
+
         this.handleOverviewSelect(activeOverviewIndex)
 
         this._assignLogFunctions()
@@ -130,9 +147,14 @@ class App extends Component {
         SessionHelper.setInSession(OVERVIEW_INDEX, activeIndex)
     }
 
-    handleDotKeySelect(dotKey, isActive) {
-        this.props.selectDotKey(dotKey, isActive)
-        SessionHelper.setInSession(DOT_KEYS, dotKey, isActive)
+    handleDotToggle(dotKey, isActive = null) {
+        const activeDotKeys = Object.assign({}, this.state.activeDotKeys)
+            activeDotKeys[dotKey] = (isActive !== null) ?
+                isActive : !this.state.activeDotKeys[dotKey]
+                
+        this.setState({
+            activeDotKeys
+        })
     }
 
     handleAnnotationSelect(activeIndex) {
@@ -153,11 +175,6 @@ class App extends Component {
         this.handleAnnotationSelect(activeAnnotationIndex)
     }
 
-    handleDotToggle(dotKey) {
-        // TODO: Toggle dot key.
-        console.log(dotKey)
-    }
-
     render() {
 
         const {
@@ -171,10 +188,12 @@ class App extends Component {
                 activeSongIndex,
                 activeOverviewIndex,
                 activeAnnotationIndex,
-                activeDotKeys,
+                // activeDotKeys,
                 activeWikiUrl
 
             } = this.props
+
+        const activeDotKeys = this.state.activeDotKeys
 
         return (
             <div className="app">
