@@ -6,7 +6,7 @@ module.exports = {
 
     SONG_INDEX: 'songIndex',
     ANNOTATION_INDEX: 'annotationIndex',
-    DOT_KEYS: 'dotKeys',
+    ACTIVE_DOT_KEYS: 'activeDotKeys',
     OVERVIEW_INDEX: 'overviewIndex',
     WIKI_URL: 'wikiUrl',
 

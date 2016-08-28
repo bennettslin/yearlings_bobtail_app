@@ -35,7 +35,7 @@ const DotButtonView = ({
 }) => (
 
     <div
-        className={`dot ${dotKey}${isActive ? ' active' : ''}${isPresent ? ' present' : ''}`}
+        className={`dot ${dotKey}${isActive ? '' : ' inactive'}${isPresent ? '' : ' unpresent'}`}
         onClick={onClick}
     >
     </div>

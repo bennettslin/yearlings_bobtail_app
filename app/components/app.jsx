@@ -3,13 +3,13 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { selectSongIndex,
          selectAnnotationIndex,
-         selectDotKey,
+         toggleDotKeys,
          selectOverviewIndex,
          selectWikiUrl } from 'redux/actions'
 import Album from './album'
 import { SONG_INDEX,
          ANNOTATION_INDEX,
-         DOT_KEYS,
+         ACTIVE_DOT_KEYS,
          OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from 'helpers/constants'
 import AlbumHelper from 'helpers/album-view-helper'
@@ -43,7 +43,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         selectSongIndex,
         selectAnnotationIndex,
-        selectDotKey,
+        toggleDotKeys,
         selectOverviewIndex,
         selectWikiUrl
     }, dispatch)
@@ -65,14 +65,8 @@ class App extends Component {
         this.handlePortalSelect = this.handlePortalSelect.bind(this)
         this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
 
-        // FIXME: Do this for now.
-        const activeDotKeys = ALL_DOT_KEYS.reduce((dotKeyObject, dotKey) => {
-            dotKeyObject[dotKey] = true
-            return dotKeyObject
-        }, {})
-
         this.state = {
-            activeDotKeys
+            activeDotKeys: {}
         }
     }
 
@@ -86,11 +80,7 @@ class App extends Component {
          */
         this.handleSongSelect(activeSongIndex, SONG_INDEX)
         this.handleAnnotationSelect(activeAnnotationIndex)
-
-        for (const dotKey in this.state.activeDotKeys) {
-            this.handleDotToggle(dotKey, true)
-        }
-
+        this.handleDotToggle()
         this.handleOverviewSelect(activeOverviewIndex)
 
         this._assignLogFunctions()
@@ -148,13 +138,24 @@ class App extends Component {
     }
 
     handleDotToggle(dotKey, isActive = null) {
-        const activeDotKeys = Object.assign({}, this.state.activeDotKeys)
+        let activeDotKeys
+
+        // Initialising, get from session.
+        if (!dotKey) {
+            activeDotKeys = SessionHelper.getFromSession(ACTIVE_DOT_KEYS)
+
+        // Setting a single dot key.
+        } else {
+            activeDotKeys = Object.assign({}, this.state.activeDotKeys)
             activeDotKeys[dotKey] = (isActive !== null) ?
                 isActive : !this.state.activeDotKeys[dotKey]
-                
+        }
+
         this.setState({
             activeDotKeys
         })
+
+        SessionHelper.setInSession(ACTIVE_DOT_KEYS, JSON.stringify(activeDotKeys))
     }
 
     handleAnnotationSelect(activeIndex) {

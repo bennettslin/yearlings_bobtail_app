@@ -23,19 +23,6 @@
     .dot {
         border-radius: 50%;
 
-        // FIXME: Eventually make better styling, of course.
-        &.present {
-            border: 3px solid orange;
-        }
-
-        &.active {
-            border: 3px solid green;
-
-            &.present {
-                border: 3px solid purple;
-            }
-        }
-
         &.pun {
             background-color: @pun-dot-colour;
         }
@@ -70,6 +57,15 @@
 
         &.title {
             background-color: white;
+        }
+
+        // FIXME: Eventually make better styling, of course.
+        &.inactive {
+            background-color: lightGray;
+        }
+
+        &.unpresent {
+            opacity: 0.25;
         }
     }
 }

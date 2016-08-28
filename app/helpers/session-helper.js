@@ -1,6 +1,6 @@
 // Store data in browser's local storage.
 
-import { DOT_KEYS,
+import { ACTIVE_DOT_KEYS,
          ALL_DOT_KEYS,
          WINDOW_STORAGE,
          OVERVIEW_INDEX,
@@ -13,8 +13,8 @@ export default {
     },
 
     getFromSession(key) {
-        if (key === DOT_KEYS) {
-            return WINDOW_STORAGE[key] || this._getDefaultDotKeysObject();
+        if (key === ACTIVE_DOT_KEYS) {
+            return this._getValidOrDefaultDotKeysObject(WINDOW_STORAGE[key])
 
         } else if (key) {
             // Default is 0 unless specified otherwise.
@@ -31,11 +31,21 @@ export default {
         }
     },
 
-    _getDefaultDotKeysObject() {
-        const dotKeysObject = {}
-        ALL_DOT_KEYS.forEach(dotKey => {
-            dotKeysObject[dotKey] = true
-        })
-        return JSON.stringify(dotKeysObject)
+    // FIXME: Add validation methods that return valid or default value for all, and test them! ʦ
+
+    _getValidOrDefaultDotKeysObject(tryValue) {
+        // Value is a valid object.
+        try {
+            const dotKeysObject = JSON.parse(tryValue)
+            return dotKeysObject
+
+        // Create dot keys object from scratch, with all values true.
+        } catch (e) {
+            const dotKeysObject = {}
+            ALL_DOT_KEYS.forEach(dotKey => {
+                dotKeysObject[dotKey] = true
+            })
+            return dotKeysObject
+        }
     }
 }
