@@ -18,7 +18,7 @@ module.exports = {
     DEFAULT_OVERVIEW_INDEX: 1,
 
     // This is only used by the stats helper.
-    TEXT_KEYS: [
+    STAT_TEXT_KEYS: [
         'italic',
         'emphasis',
         'anchor'

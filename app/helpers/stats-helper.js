@@ -1,7 +1,7 @@
 // For dev purposes. Calculate words in lyrics and annotations.
 
 import { ALL_DOT_KEYS,
-         TEXT_KEYS } from './constants'
+         STAT_TEXT_KEYS } from './constants'
 
 export default {
 
@@ -17,7 +17,7 @@ export default {
         }, 0)
     },
 
-    getSumOfTotalWordsInAnnotations(annotations = [], textKeys = TEXT_KEYS) {
+    getSumOfTotalWordsInAnnotations(annotations = [], textKeys = STAT_TEXT_KEYS) {
         return annotations.reduce((wordCount, annotation) => {
             const { cards } = annotation
             if (Array.isArray(cards)) {
@@ -30,7 +30,7 @@ export default {
         }, 0)
     },
 
-    getTotalWords(text = '', textKeys = TEXT_KEYS) {
+    getTotalWords(text = '', textKeys = STAT_TEXT_KEYS) {
         if (text instanceof Array) {
             return text.reduce((wordCount, textValue) => {
                 return wordCount + this.getTotalWords(textValue, textKeys)
