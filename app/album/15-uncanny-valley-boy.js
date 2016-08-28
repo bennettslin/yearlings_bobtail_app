@@ -1,34 +1,117 @@
 module.exports = {
     title: `Uncanny Valley Boy`,
     overviews: {
-        narrative: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged my every whim to find myself in my own way. But now I was getting older, and they were disappointed that I still hadn't matured. On top of this, they adored Sita and firmly believed me to be in the wrong to leave her. The weight of the guilt that I felt was crushing. Still, I wasn't about to change my ways.`,
+        narrative: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But now I was getting older, and they were disappointed that I still hadn't matured. On top of this, they adored Sita and firmly believed me to be in the wrong to leave her. The weight of the guilt that I felt was crushing. Still, I wasn't about to change my ways.`,
         music: `personal 1`
     },
     lyrics: [
         [
             {
                 time: 14,
-                lyric: `Beta, come wax prophetic with me.`
+                lyric: [
+                    {
+                        anchor: `Beta,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `come`,
+                    {
+                        anchor: `wax prophetic`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `with me.`
+                ]
             },
             {
                 time: 17,
-                lyric: `Rest your rump, boy, by your old giving tree.`
+                lyric: [
+                    `Rest your rump, boy, by your old`,
+                    {
+                        anchor: `giving tree.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 21,
-                lyric: `Stumped, I ponder the forespoken monster at the end of this book of yours…`
+                lyric: [
+                    {
+                        anchor: `Stumped,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `I ponder the`,
+                    {
+                        anchor: `forespoken monster`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `at the end of this`,
+                    {
+                        anchor: `book of yours…`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 27,
-                lyric: `And you, for a future, sold your whole fortune`
+                lyric: [
+                    `And you, for a future,`,
+                    {
+                        anchor: `sold your whole fortune`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 31,
-                lyric: `to live neutered, blissfully and orphaned.`
+                lyric: [
+                    `to live neutered,`,
+                    {
+                        anchor: `blissfully and orphaned.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 35,
-                lyric: `Upon purchase of a queen's ship, earth right now your tourist store…`
+                lyric: [
+                    {
+                        anchor: `Upon purchase of a queen's ship,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    {
+                        anchor: `earth right now your tourist store…`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             }
         ],
         [
@@ -50,7 +133,17 @@ module.exports = {
             },
             {
                 time: 54,
-                lyric: `So do you believe your "hamartia" now?`
+                lyric: [
+                    `So do you believe`,
+                    {
+                        anchor: `your "hamartia"`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `now?`
+                ]
             }
         ],
         [
@@ -192,12 +285,25 @@ module.exports = {
             },
             [
                 {
-                    lyric: `Rama, Rama…`
+                    lyric: {
+                        anchor: `Rama, Rama…`,
+                        properNoun: true,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
                 }
             ],
             [
                 {
-                    lyric: `…Maranatha!`
+                    lyric: {
+                        anchor: `…Maranatha!`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
                 }
             ]
         ]
