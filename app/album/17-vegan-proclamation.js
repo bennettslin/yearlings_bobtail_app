@@ -1,11 +1,32 @@
 // FIXME: Make Sasha quotes just single paragraph. Then separate out verses.
 module.exports = {
-    title: `Vegan Proclamation`,
+    title: {
+        anchor: `Vegan Proclamation`,
+        annotation: {
+            description: ``
+        },
+        todo: true
+    },
     overviews: {
         narrative: `narrative 1`,
         music: `personal 1`
     },
     lyrics: [
+        [
+            [
+                {
+                    lyric: {
+                        anchor: `theme`,
+                        annotation: {
+                            description: ``,
+                            dotKeys: {
+                                music: true
+                            }
+                        }
+                    }
+                }
+            ]
+        ],
         [
             {
                 time: 0,

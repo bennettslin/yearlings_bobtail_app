@@ -48,6 +48,7 @@ const LyricsUnit = (props) => {
 const LyricsUnitView = ({
 
     // From props.
+    isTitleUnit,
     stanzaArray,
     onAnnotationClick,
 
@@ -60,7 +61,7 @@ const LyricsUnitView = ({
 
 }) => (
 
-    <div className="lyrics-unit">
+    <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}`}>
         {dotStanzaObject ?
             <div className={`stanza-block dot ${isDotOnlyUnit ? 'only' : 'shared'}`}>
                 <DotStanza

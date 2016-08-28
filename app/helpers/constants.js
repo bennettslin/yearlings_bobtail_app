@@ -17,6 +17,7 @@ module.exports = {
 
     DEFAULT_OVERVIEW_INDEX: 1,
 
+    // This is only used by the stats helper.
     TEXT_KEYS: [
         'italic',
         'emphasis',
@@ -70,8 +71,8 @@ module.exports = {
         'music',
         'pulpit',
         'wiki',
-        'portal'
-        // 'title'
+        'portal',
+        'title'
         // 'afterword' // My perspective while making this website.
     ],
 

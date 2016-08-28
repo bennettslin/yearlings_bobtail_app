@@ -3,7 +3,13 @@
  * not being clear and being too obvious.
  */
 module.exports = {
-    title: `Constellations!`,
+    title: {
+        anchor: `Constellations!`,
+        annotation: {
+            description: ``
+        },
+        todo: true
+    },
     overviews: {
         narrative: `One night, I went along with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
         music: [
@@ -19,6 +25,21 @@ module.exports = {
         ]
     },
     lyrics: [
+        [
+            [
+                {
+                    lyric: {
+                        anchor: `theme`,
+                        annotation: {
+                            description: ``,
+                            dotKeys: {
+                                music: true
+                            }
+                        }
+                    }
+                }
+            ]
+        ],
         [
             {
                 time: 4,

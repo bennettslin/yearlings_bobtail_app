@@ -2,7 +2,13 @@
 
 module.exports = {
     // TODO: Hindi word for "Why"
-    title: `Kyon? (क्यों?)`,
+    title: {
+        anchor: `Kyon? (क्यों?)`,
+        annotation: {
+            description: ``
+        },
+        todo: true
+    },
     overviews: {
         narrative: `The breakup years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita willingly continued to endure my cruelty. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her sense of worth to our relationship. I was fighting for myself. She was fighting for us.`,
         music: [
@@ -14,6 +20,21 @@ module.exports = {
         ]
     },
     lyrics: [
+        [
+            [
+                {
+                    lyric: {
+                        anchor: `theme`,
+                        annotation: {
+                            description: ``,
+                            dotKeys: {
+                                music: true
+                            }
+                        }
+                    }
+                }
+            ]
+        ],
         [
             {
                 time: 12,

@@ -27,6 +27,7 @@ const LyricsSectionView = ({
             {songLyrics.map((stanzaArray, stanzaIndex) => (
                     <LyricsUnit
                         key={stanzaIndex}
+                        isTitleUnit={stanzaIndex === 0}
                         stanzaArray={stanzaArray}
                         onAnnotationClick={onAnnotationClick}
                     />

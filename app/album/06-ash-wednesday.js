@@ -1,5 +1,11 @@
 module.exports = {
-    title: `Ash Wednesday`,
+    title: {
+        anchor: `Ash Wednesday`,
+        annotation: {
+            description: ``
+        },
+        todo: true
+    },
     overviews: {
         narrative: `In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday, the first day of Lent. So I decided to ash my own forehead and bump into her, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I probably have Catherine to thank for that.`,
         music: `For a song about two people who couldn't be more different, I juxtaposed Arabic maqam and Renaissance polyphony. The quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter step flat. The shrieking whistles, which remind me of trains braking in a subway tunnel, were made by overblowing into recorders.`
@@ -9,12 +15,11 @@ module.exports = {
             [
                 {
                     lyric: {
-                        // Anchor text must be present not to break, but isn't used.
-                        anchor: `test 1`,
+                        anchor: `theme`,
                         annotation: {
-                            description: `test music annotation text 1`,
+                            description: ``,
                             dotKeys: {
-                                pun: true
+                                music: true
                             }
                         }
                     }

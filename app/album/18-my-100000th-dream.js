@@ -1,10 +1,31 @@
 module.exports = {
-    title: `My 100,000th Dream`,
+    title: {
+        anchor: `My 100,000th Dream`,
+        annotation: {
+            description: ``
+        },
+        todo: true
+    },
     overviews: {
         narrative: `narrative 1`,
         music: `personal 1`
     },
     lyrics: [
+        [
+            [
+                {
+                    lyric: {
+                        anchor: `theme`,
+                        annotation: {
+                            description: ``,
+                            dotKeys: {
+                                music: true
+                            }
+                        }
+                    }
+                }
+            ]
+        ],
         [
             {
                 time: 13,

@@ -1,5 +1,11 @@
 module.exports = {
-    title: `Garryowen`,
+    title: {
+        anchor: `Garryowen`,
+        annotation: {
+            description: ``
+        },
+        todo: true
+    },
     overviews: {
         narrative: `My mood changed when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I had soured on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I didn't like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
         music: [
@@ -12,6 +18,21 @@ module.exports = {
         ]
     },
     lyrics: [
+        [
+            [
+                {
+                    lyric: {
+                        anchor: `theme`,
+                        annotation: {
+                            description: ``,
+                            dotKeys: {
+                                music: true
+                            }
+                        }
+                    }
+                }
+            ]
+        ],
         [
             {
                 time: 17,

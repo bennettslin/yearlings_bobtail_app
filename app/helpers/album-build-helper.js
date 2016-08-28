@@ -27,6 +27,9 @@ const _prepareAllSongs = (album) => {
         _tempStore.songIndex = songIndex + 1
         _tempStore.annotations = []
 
+        _addTitleToLyrics(song.title, song.lyrics)
+        const anchor = song.title.anchor
+        song.title = anchor
         _parseLyrics(song.lyrics)
 
         // Add annotations to song object.
@@ -45,6 +48,18 @@ const _convertOverviews = (object) => {
         return object.overviews[overviewKey]
     })
     object.overviews = overviews
+}
+
+/**
+ * Add title object as if it is the first stanza of the lyrics object.
+ */
+const _addTitleToLyrics = (title, lyrics) => {
+    const { annotation } = title
+    if (annotation) {
+        title.properNoun = true
+        annotation.dotKeys = { title: true }
+    }
+    lyrics[0].push({lyric: title})
 }
 
 /**

@@ -1,10 +1,31 @@
 module.exports = {
-    title: `Cremated`,
+    title: {
+        anchor: `Cremated`,
+        annotation: {
+            description: ``
+        },
+        todo: true
+    },
     overviews: {
         narrative: `narrative 1`,
         music: `Last doublespeaker rhyme, the one I was happiest with.`
     },
     lyrics: [
+        [
+            [
+                {
+                    lyric: {
+                        anchor: `theme`,
+                        annotation: {
+                            description: ``,
+                            dotKeys: {
+                                music: true
+                            }
+                        }
+                    }
+                }
+            ]
+        ],
         [
             {
                 time: 1,

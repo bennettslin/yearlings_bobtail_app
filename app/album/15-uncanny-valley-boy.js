@@ -1,10 +1,31 @@
 module.exports = {
-    title: `Uncanny Valley Boy`,
+    title: {
+        anchor: `Uncanny Valley Boy`,
+        annotation: {
+            description: ``
+        },
+        todo: true
+    },
     overviews: {
         narrative: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But now I was getting older, and they were disappointed that I still hadn't matured. On top of this, they adored Sita and firmly believed me to be in the wrong to leave her. The weight of the guilt that I felt was crushing. Still, I wasn't about to change my ways.`,
         music: `personal 1`
     },
     lyrics: [
+        [
+            [
+                {
+                    lyric: {
+                        anchor: `theme`,
+                        annotation: {
+                            description: ``,
+                            dotKeys: {
+                                music: true
+                            }
+                        }
+                    }
+                }
+            ]
+        ],
         [
             {
                 time: 14,
