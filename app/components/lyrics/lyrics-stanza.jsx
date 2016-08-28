@@ -1,5 +1,4 @@
 import React from 'react'
-import DotsBlock from '../dots/dots-block'
 import LyricsVerse from './lyrics-verse'
 
 /*************

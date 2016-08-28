@@ -1,6 +1,8 @@
 // Store data in browser's local storage.
 
-import { WINDOW_STORAGE,
+import { DOT_KEYS,
+         ALL_DOT_KEYS,
+         WINDOW_STORAGE,
          OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from './constants'
 
@@ -11,7 +13,10 @@ export default {
     },
 
     getFromSession(key) {
-        if (key) {
+        if (key === DOT_KEYS) {
+            return WINDOW_STORAGE[key] || this._getDefaultDotKeysObject();
+
+        } else if (key) {
             // Default is 0 unless specified otherwise.
             const defaultValue =
                     (key === OVERVIEW_INDEX ? DEFAULT_OVERVIEW_INDEX : 0),
@@ -24,5 +29,13 @@ export default {
         } else {
             return 0
         }
+    },
+
+    _getDefaultDotKeysObject() {
+        const dotKeysObject = {}
+        ALL_DOT_KEYS.forEach(dotKey => {
+            dotKeysObject[dotKey] = true
+        })
+        return JSON.stringify(dotKeysObject)
     }
 }

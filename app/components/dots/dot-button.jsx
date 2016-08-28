@@ -9,7 +9,7 @@ const DotButton = (props) => {
     const { dotKey,
             onDotClick } = props,
 
-        onClick = onDotClick ? () => onDotClick(dotKey) : null
+        onClick = () => onDotClick(dotKey)
 
     return (
         <DotButtonView {...props}
@@ -26,14 +26,16 @@ const DotButtonView = ({
 
     // From props.
     dotKey,
+    isActive,
+    isPresent,
 
     // From controller.
     onClick
 
 }) => (
-    
+
     <div
-        className={`dot ${dotKey}`}
+        className={`dot ${dotKey}${isActive ? ' active' : ''}${isPresent ? ' present' : ''}`}
         onClick={onClick}
     >
     </div>

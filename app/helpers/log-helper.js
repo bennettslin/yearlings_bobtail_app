@@ -1,10 +1,10 @@
 // For dev purposes. Log object info.
 
-import { STORAGE, LYRIC_TEXT_KEYS } from './constants'
+import { WINDOW_STORAGE, LYRIC_TEXT_KEYS } from './constants'
 
 export default {
 
-    logObject(description, object = STORAGE) {
+    logObject(description, object = WINDOW_STORAGE) {
         const formattedString = JSON.stringify(object, null, 3)
 
         // TODO: Prettify JSON string?

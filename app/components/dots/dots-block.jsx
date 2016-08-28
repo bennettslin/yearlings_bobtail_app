@@ -3,16 +3,25 @@ import DotButton from './dot-button'
 import { ALL_DOT_KEYS } from 'helpers/constants'
 
 const defaultProps = {
-    dotKeys: {}
+    activeDotKeys: {},
+    presentDotKeys: {}
 }
 
 /*************
  * CONTAINER *
  *************/
 
-const DotsBlock = (props) => (
-    <DotsBlockView {...props} />
-)
+const DotsBlock = (props) => {
+
+    const { onDotClick } = props,
+        isInteractive = !!onDotClick
+
+    return (
+        <DotsBlockView {...props}
+            isInteractive={isInteractive}
+        />
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -21,23 +30,45 @@ const DotsBlock = (props) => (
 const DotsBlockView = ({
 
     // From props.
-    dotKeys,
-    onDotClick
+    showUnpresent,
+    activeDotKeys,
+    presentDotKeys,
+    onDotClick,
+
+    // From controller.
+    isInteractive
 
 }) => (
 
-    <span className="dots-block">
-        {ALL_DOT_KEYS.filter(dotKey => {
-            return dotKeys[dotKey]
+    <span className={`dots-block${isInteractive ? ' interactive' : ''}`}>
+        {ALL_DOT_KEYS.map((dotKey, index) => {
+            const isActive = activeDotKeys[dotKey],
+                isPresent = presentDotKeys[dotKey]
 
-        }).map((dotKey, index) => {
-            return (
-                <DotButton
-                    key={index}
-                    dotKey={dotKey}
-                    onDotClick={onDotClick}
-                />
-            )
+            if (isInteractive) {
+                /**
+                 * It's in dots block or dot stanza. All dots are shown in dots
+                 * block, while only present dots are shown in dot stanza.
+                 */
+                return (isPresent || showUnpresent ?
+                    <DotButton
+                        key={index}
+                        isActive={isActive}
+                        isPresent={isPresent}
+                        dotKey={dotKey}
+                        onDotClick={onDotClick}
+                    /> : null
+                )
+
+            } else {
+                // It's in anchor block or annotation card.
+                return (isPresent ?
+                    <div
+                        key={index}
+                        className={`dot ${dotKey}`}
+                    ></div> : null
+                )
+            }
         })}
     </span>
 )

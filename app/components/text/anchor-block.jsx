@@ -65,7 +65,7 @@ const AnchorBlockView = ({
             }
             {dotKeys ?
                 <DotsBlock
-                dotKeys={dotKeys}
+                    presentDotKeys={dotKeys}
                 /> : null
             }
             <TextBlock

@@ -17,7 +17,7 @@ const DotStanza = (props) => {
     return (
         <div className="stanza">
             <DotsBlock
-                dotKeys={dotKeys}
+                presentDotKeys={dotKeys}
                 onDotClick={onDotClick}
             />
         </div>

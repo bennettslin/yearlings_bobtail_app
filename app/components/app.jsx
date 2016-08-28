@@ -3,11 +3,13 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { selectSongIndex,
          selectAnnotationIndex,
+         selectDotKey,
          selectOverviewIndex,
          selectWikiUrl } from 'redux/actions'
 import Album from './album'
 import { SONG_INDEX,
          ANNOTATION_INDEX,
+         DOT_KEYS,
          OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from 'helpers/constants'
 import AlbumHelper from 'helpers/album-view-helper'
@@ -21,12 +23,14 @@ import SessionHelper from 'helpers/session-helper'
 const passReduxStateToProps = ({
     activeSongIndex,
     activeAnnotationIndex,
+    activeDotKeys,
     activeOverviewIndex,
     activeWikiUrl
 }) => ({
     // Pass Redux state into component props.
     activeSongIndex,
     activeAnnotationIndex,
+    activeDotKeys,
     activeOverviewIndex,
     activeWikiUrl
 })
@@ -36,6 +40,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         selectSongIndex,
         selectAnnotationIndex,
+        selectDotKey,
         selectOverviewIndex,
         selectWikiUrl
     }, dispatch)
@@ -49,11 +54,11 @@ class App extends Component {
 
     constructor(props) {
         super(props)
-
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
         this.handleSongSelect = this.handleSongSelect.bind(this)
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this)
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this)
+        this.handleDotKeySelect = this.handleDotKeySelect.bind(this)
         this.handlePortalSelect = this.handlePortalSelect.bind(this)
         this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
     }
@@ -61,12 +66,14 @@ class App extends Component {
     componentWillMount() {
         const { activeSongIndex,
                 activeAnnotationIndex,
+                activeDotKeys,
                 activeOverviewIndex } = this.props
         /**
          * Retrieve stored indices, if any. Indices start at 1.
          */
         this.handleSongSelect(activeSongIndex, SONG_INDEX)
         this.handleAnnotationSelect(activeAnnotationIndex)
+        this.handleDotKeySelect(activeDotKeys)
         this.handleOverviewSelect(activeOverviewIndex)
 
         this._assignLogFunctions()
@@ -123,6 +130,11 @@ class App extends Component {
         SessionHelper.setInSession(OVERVIEW_INDEX, activeIndex)
     }
 
+    handleDotKeySelect(dotKey, isActive) {
+        this.props.selectDotKey(dotKey, isActive)
+        SessionHelper.setInSession(DOT_KEYS, dotKey, isActive)
+    }
+
     handleAnnotationSelect(activeIndex) {
         this.props.selectAnnotationIndex(activeIndex)
         SessionHelper.setInSession(ANNOTATION_INDEX, activeIndex)
@@ -159,6 +171,7 @@ class App extends Component {
                 activeSongIndex,
                 activeOverviewIndex,
                 activeAnnotationIndex,
+                activeDotKeys,
                 activeWikiUrl
 
             } = this.props
@@ -174,6 +187,7 @@ class App extends Component {
                     activeSongIndex={activeSongIndex}
                     activeOverviewIndex={activeOverviewIndex}
                     activeAnnotationIndex={activeAnnotationIndex}
+                    activeDotKeys={activeDotKeys}
                     activeWikiUrl={activeWikiUrl}
 
                     onSongClick={this.handleSongSelect}
