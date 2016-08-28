@@ -59,7 +59,10 @@ const _addTitleToLyrics = (title, lyrics) => {
         title.properNoun = true
         annotation.dotKeys = { title: true }
     }
-    lyrics[0].push({lyric: title})
+    lyrics[0].push({
+        lyric: title,
+        isTitle: true
+    })
 }
 
 /**

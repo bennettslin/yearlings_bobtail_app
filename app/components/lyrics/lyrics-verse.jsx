@@ -10,11 +10,13 @@ const LyricsVerse = (props) => {
 
     const { verseObject } = props,
 
-        isSingleSpeaker = !!verseObject.lyric
+        isSingleSpeaker = !!verseObject.lyric,
+        isTitle = verseObject.isTitle
 
     return (
         <LyricsVerseView {...props}
             isSingleSpeaker={isSingleSpeaker}
+            isTitle={isTitle}
         />
     )
 }
@@ -30,13 +32,14 @@ const LyricsVerseView = ({
     onAnnotationClick,
 
     // From controller.
-    isSingleSpeaker
+    isSingleSpeaker,
+    isTitle
 
 }) => (
 
     <div className="verse">
         {isSingleSpeaker ? (
-                <div className="line left">
+                <div className={`line${isTitle ? '' : ' left'}`}>
                     <TextBlock
                         isLyric={true}
                         text={verseObject.lyric}
