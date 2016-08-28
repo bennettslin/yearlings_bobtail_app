@@ -1,17 +1,22 @@
 .annotation-section {
 
     .annotation-card, {
-        min-height: 1.75em;
+        min-height: 1.8em;
         margin: 5px 0;
         padding: 5px;
         box-shadow: 0 1px 1px 1px @box-shadow-colour;
 
         .dots-block {
-            @dot-diameter: 1.75em;
+            @dot-diameter: 1.6em;
             .dot-diameter-mixin(@dot-diameter);
             position: absolute;
             height: @dot-diameter;
             opacity: .45;
+        }
+
+        .anchor-block {
+            // Change to hand-drawn Wikipedia icon.
+            cursor: cell;
         }
 
         .text-span {
