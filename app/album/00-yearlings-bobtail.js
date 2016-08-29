@@ -27,6 +27,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `fix wiki url not showing in annotation`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `hide annotation when dots inactive`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `allow for call and response lyrics`,
             workedHours: 0,
             neededHours: 1
@@ -54,16 +64,6 @@ module.exports = {
         {
             taskName: `make interactable superclass`,
             workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `make selectable dots block`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `allow multiple dots`,
-            workedHours: 3,
             neededHours: 3
         },
         {
@@ -142,6 +142,16 @@ module.exports = {
         },
         {
             taskName: `allow for title to have annotations`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `make selectable dots block`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `allow multiple dots`,
             workedHours: 3,
             neededHours: 3
         }

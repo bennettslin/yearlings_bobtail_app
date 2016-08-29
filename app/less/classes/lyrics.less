@@ -13,7 +13,11 @@
 
         &.title-unit {
             .main {
-                font-size: 1.25em;
+                font-size: 1.5em;
+
+                .verse {
+                    padding: 15px;
+                }
             }
         }
 
@@ -69,14 +73,14 @@
 
         &.dot {
             &.shared {
-                @shared-dot-diameter: 2.5em;
+                @shared-dot-diameter: 1.5em;
                 .dot-diameter-mixin(@shared-dot-diameter);
                 display: flex;
                 align-items: center;
             }
 
             &.only {
-                @only-dot-diameter: 3em;
+                @only-dot-diameter: 2em;
                 .dot-diameter-mixin(@only-dot-diameter);
             }
 
