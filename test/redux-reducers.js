@@ -1,9 +1,9 @@
 import { expect } from 'chai'
-import { SONG_INDEX,
-         ANNOTATION_INDEX,
-         OVERVIEW_INDEX,
+import { ACTIVE_SONG_INDEX,
+         ACTIVE_ANNOTATION_INDEX,
+         ACTIVE_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX,
-         WIKI_URL } from '../app/helpers/constants'
+         ACTIVE_WIKI_URL } from '../app/helpers/constants'
 import { SongIndexReducer,
          AnnotationIndexReducer,
          OverviewIndexReducer,
@@ -30,7 +30,7 @@ describe('reducers', () => {
 
         it('handles action type of song index', () => {
             const NEW_INDEX = 6,
-                action = { type: SONG_INDEX, payload: NEW_INDEX }
+                action = { type: ACTIVE_SONG_INDEX, payload: NEW_INDEX }
             expect(SongIndexReducer(undefined, action)).to.equal(NEW_INDEX)
         })
     })
@@ -43,10 +43,12 @@ describe('reducers', () => {
 
         it('handles action type of annotation index', () => {
             const NEW_INDEX = 8,
-                action = { type: ANNOTATION_INDEX, payload: NEW_INDEX }
+                action = { type: ACTIVE_ANNOTATION_INDEX, payload: NEW_INDEX }
             expect(AnnotationIndexReducer(undefined, action)).to.equal(NEW_INDEX)
         })
     })
+
+    // TODO: Write unit tests for dot keys reducer.
 
     describe('OverviewIndexReducer', () => {
         it('returns current index if passed unknown type', () => {
@@ -56,7 +58,7 @@ describe('reducers', () => {
 
         it('handles action type of overview index', () => {
             const NEW_INDEX = 2,
-                action = { type: OVERVIEW_INDEX, payload: NEW_INDEX }
+                action = { type: ACTIVE_OVERVIEW_INDEX, payload: NEW_INDEX }
             expect(OverviewIndexReducer(undefined, action)).to.equal(NEW_INDEX)
         })
     })
@@ -69,7 +71,7 @@ describe('reducers', () => {
 
         it('handles action type of wiki url', () => {
             const NEW_WIKI_URL = 'Tyrannosaurus',
-                action = { type: WIKI_URL, payload: NEW_WIKI_URL }
+                action = { type: ACTIVE_WIKI_URL, payload: NEW_WIKI_URL }
             expect(WikiUrlReducer(undefined, action)).to.equal(NEW_WIKI_URL)
         })
     })

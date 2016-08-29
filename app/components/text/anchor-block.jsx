@@ -1,6 +1,7 @@
 import React from 'react'
 import TextBlock from './text-block'
 import DotsBlock from '../dots/dots-block'
+import { getIntersection } from 'helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -8,13 +9,16 @@ import DotsBlock from '../dots/dots-block'
 
 const AnchorBlock = (props) => {
 
-    const { text } = props,
+    const { text,
+            activeDotKeys } = props,
 
         { annotationIndex,
           anchor: anchorText,
           todo: hasTodo,
           dotKeys,
           wiki } = text,
+
+        intersectedDotKeys = getIntersection(dotKeys, activeDotKeys),
 
         /**
          * If it's an annotation, then the argument passed to the
@@ -26,7 +30,7 @@ const AnchorBlock = (props) => {
     return (
         <AnchorBlockView {...props}
             hasTodo={hasTodo}
-            dotKeys={dotKeys}
+            dotKeys={intersectedDotKeys}
             anchorText={anchorText}
             clickHandlerArgument={clickHandlerArgument}
         />

@@ -3,7 +3,7 @@
 import { ACTIVE_DOT_KEYS,
          ALL_DOT_KEYS,
          WINDOW_STORAGE,
-         OVERVIEW_INDEX,
+         ACTIVE_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from './constants'
 
 export default {
@@ -26,7 +26,7 @@ export default {
         } else if (key) {
             // Default is 0 unless specified otherwise.
             const defaultValue =
-                    (key === OVERVIEW_INDEX ? DEFAULT_OVERVIEW_INDEX : 0),
+                    (key === ACTIVE_OVERVIEW_INDEX ? DEFAULT_OVERVIEW_INDEX : 0),
                 value = WINDOW_STORAGE[key] || defaultValue,
                 intValue = parseInt(value)
 
@@ -38,7 +38,7 @@ export default {
         }
     },
 
-    // FIXME: Add validation methods that return valid or default value for all, and test them! ʦ
+    // TODO: Add validation methods that return valid or default value for all, and test them! ʦ
 
     _getValidDotKeys(tryValue) {
         // Value is a valid object.

@@ -29,6 +29,7 @@ const LyricsVerseView = ({
 
     // From props.
     verseObject,
+    activeDotKeys,
     onAnnotationClick,
 
     // From controller.
@@ -43,6 +44,7 @@ const LyricsVerseView = ({
                     <TextBlock
                         isLyric={true}
                         text={verseObject.lyric}
+                        activeDotKeys={activeDotKeys}
                         onAnchorClick={onAnnotationClick}
                     />
                 </div>
@@ -59,6 +61,7 @@ const LyricsVerseView = ({
                                 <TextBlock
                                     isLyric={true}
                                     text={verseObject[keyClassPair.key]}
+                                    activeDotKeys={activeDotKeys}
                                     onAnchorClick={onAnnotationClick}
                                 />
                             </div>

@@ -1,17 +1,17 @@
-import { SONG_INDEX,
-         ANNOTATION_INDEX,
+import { ACTIVE_SONG_INDEX,
+         ACTIVE_ANNOTATION_INDEX,
          ACTIVE_DOT_KEYS,
-         OVERVIEW_INDEX,
-         WIKI_URL,
+         ACTIVE_OVERVIEW_INDEX,
+         ACTIVE_WIKI_URL,
          DEFAULT_OVERVIEW_INDEX } from '../../helpers/constants'
 
 export const selectSongIndex = (activeSongIndex = 0) => ({
-    type: SONG_INDEX,
+    type: ACTIVE_SONG_INDEX,
     payload: activeSongIndex
 })
 
 export const selectAnnotationIndex = (activeAnnotationIndex = 0) => ({
-    type: ANNOTATION_INDEX,
+    type: ACTIVE_ANNOTATION_INDEX,
     payload: activeAnnotationIndex
 })
 
@@ -22,11 +22,11 @@ export const toggleDotKey = (dotKey, isActive = false) => ({
 })
 
 export const selectOverviewIndex = (activeOverviewIndex = DEFAULT_OVERVIEW_INDEX) => ({
-    type: OVERVIEW_INDEX,
+    type: ACTIVE_OVERVIEW_INDEX,
     payload: activeOverviewIndex
 })
 
 export const selectWikiUrl = (activeWikiUrl = null) => ({
-    type: WIKI_URL,
+    type: ACTIVE_WIKI_URL,
     payload: activeWikiUrl
 })

@@ -7,10 +7,10 @@ import { selectSongIndex,
          selectOverviewIndex,
          selectWikiUrl } from 'redux/actions'
 import Album from './album'
-import { SONG_INDEX,
-         ANNOTATION_INDEX,
+import { ACTIVE_SONG_INDEX,
+         ACTIVE_ANNOTATION_INDEX,
          ACTIVE_DOT_KEYS,
-         OVERVIEW_INDEX,
+         ACTIVE_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from 'helpers/constants'
 import AlbumHelper from 'helpers/album-view-helper'
 import LogHelper from 'helpers/log-helper'
@@ -94,7 +94,7 @@ class App extends Component {
         this.handleSongSelect(0)
     }
 
-    handleSongSelect(activeIndex = 0, activeIndexKey = SONG_INDEX) {
+    handleSongSelect(activeIndex = 0, activeIndexKey = ACTIVE_SONG_INDEX) {
         if (activeIndex >= 0 && activeIndex <= this.props.songs.length) {
             // Store song index in session.
 
@@ -106,7 +106,7 @@ class App extends Component {
              * changing the active song index. Right now, default for
              * overview is 1 for narrative.
              */
-            if (activeIndexKey === SONG_INDEX) {
+            if (activeIndexKey === ACTIVE_SONG_INDEX) {
                 this.handleAnnotationSelect()
                 this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX)
             }
@@ -115,7 +115,7 @@ class App extends Component {
 
     handleOverviewSelect(activeIndex) {
         this.props.selectOverviewIndex(activeIndex)
-        SessionHelper.setInSession(OVERVIEW_INDEX, activeIndex)
+        SessionHelper.setInSession(ACTIVE_OVERVIEW_INDEX, activeIndex)
     }
 
     handleDotToggle(dotKey) {
@@ -124,9 +124,9 @@ class App extends Component {
         SessionHelper.setDotInSession(dotKey, isActive)
     }
 
-    handleAnnotationSelect(activeIndex) {
+    handleAnnotationSelect(activeIndex = 0) {
         this.props.selectAnnotationIndex(activeIndex)
-        SessionHelper.setInSession(ANNOTATION_INDEX, activeIndex)
+        SessionHelper.setInSession(ACTIVE_ANNOTATION_INDEX, activeIndex)
     }
 
     handleWikiUrlSelect(activeWiki) {
@@ -138,7 +138,7 @@ class App extends Component {
     }
 
     handlePortalSelect(activeSongIndex, activeAnnotationIndex) {
-        this.handleSongSelect(activeSongIndex, SONG_INDEX)
+        this.handleSongSelect(activeSongIndex, ACTIVE_SONG_INDEX)
         this.handleAnnotationSelect(activeAnnotationIndex)
     }
 

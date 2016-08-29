@@ -1,20 +1,23 @@
 import { expect } from 'chai'
-import { SONG_INDEX,
-         ANNOTATION_INDEX,
-         OVERVIEW_INDEX,
+import { ACTIVE_SONG_INDEX,
+         ACTIVE_ANNOTATION_INDEX,
+         ACTIVE_DOT_KEYS,
+         ALL_DOT_KEYS,
+         ACTIVE_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX,
-         WIKI_URL } from '../app/helpers/constants'
+         ACTIVE_WIKI_URL } from '../app/helpers/constants'
 import { selectSongIndex,
          selectAnnotationIndex,
+         toggleDotKey,
          selectOverviewIndex,
          selectWikiUrl } from '../app/redux/actions'
 
 describe('actions', () => {
-    
+
     describe('selectSongIndex', () => {
         it('has the correct type', () => {
             const action = selectSongIndex()
-            expect(action.type).to.equal(SONG_INDEX)
+            expect(action.type).to.equal(ACTIVE_SONG_INDEX)
         })
 
         it ('has a default payload of 0', () => {
@@ -32,7 +35,7 @@ describe('actions', () => {
     describe('selectAnnotationIndex', () => {
         it('has the correct type', () => {
             const action = selectAnnotationIndex()
-            expect(action.type).to.equal(ANNOTATION_INDEX)
+            expect(action.type).to.equal(ACTIVE_ANNOTATION_INDEX)
         })
 
         it ('has a default payload of 0', () => {
@@ -47,10 +50,19 @@ describe('actions', () => {
         })
     })
 
+    // TODO: Write unit tests for dot keys action creator.
+
+    describe('toggleDotKey', () => {
+        it('has the correct type', () => {
+            const action = toggleDotKey()
+            expect(action.type).to.equal(ACTIVE_DOT_KEYS)
+        })
+    })
+
     describe('selectOverviewIndex', () => {
         it('has the correct type', () => {
             const action = selectOverviewIndex()
-            expect(action.type).to.equal(OVERVIEW_INDEX)
+            expect(action.type).to.equal(ACTIVE_OVERVIEW_INDEX)
         })
 
         it ('has a default payload of 1', () => {
@@ -68,7 +80,7 @@ describe('actions', () => {
     describe('selectWikiUrl', () => {
         it('has the correct type', () => {
             const action = selectWikiUrl()
-            expect(action.type).to.equal(WIKI_URL)
+            expect(action.type).to.equal(ACTIVE_WIKI_URL)
         })
 
         it ('has a default payload of null', () => {

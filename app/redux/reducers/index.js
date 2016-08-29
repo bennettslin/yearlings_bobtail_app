@@ -1,20 +1,20 @@
 import { combineReducers } from 'redux'
-import { SONG_INDEX,
-         ANNOTATION_INDEX,
+import { ACTIVE_SONG_INDEX,
+         ACTIVE_ANNOTATION_INDEX,
          ACTIVE_DOT_KEYS,
-         OVERVIEW_INDEX,
+         ACTIVE_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX,
-         WIKI_URL } from '../../helpers/constants'
+         ACTIVE_WIKI_URL } from '../../helpers/constants'
 import SessionHelper from '../../helpers/session-helper'
 
-const storedSongIndex = SessionHelper.getFromSession(SONG_INDEX)
-const storedAnnotationIndex = SessionHelper.getFromSession(ANNOTATION_INDEX)
+const storedSongIndex = SessionHelper.getFromSession(ACTIVE_SONG_INDEX)
+const storedAnnotationIndex = SessionHelper.getFromSession(ACTIVE_ANNOTATION_INDEX)
 const storedDotKeys = SessionHelper.getFromSession(ACTIVE_DOT_KEYS)
-const storedOverviewIndex = SessionHelper.getFromSession(OVERVIEW_INDEX)
+const storedOverviewIndex = SessionHelper.getFromSession(ACTIVE_OVERVIEW_INDEX)
 
 export const SongIndexReducer = (state = storedSongIndex, action) => {
     switch (action.type) {
-        case SONG_INDEX:
+        case ACTIVE_SONG_INDEX:
             return action.payload
         default:
             return state
@@ -23,7 +23,7 @@ export const SongIndexReducer = (state = storedSongIndex, action) => {
 
 export const AnnotationIndexReducer = (state = storedAnnotationIndex, action) => {
     switch (action.type) {
-        case ANNOTATION_INDEX:
+        case ACTIVE_ANNOTATION_INDEX:
             return action.payload
         default:
             return state
@@ -46,7 +46,7 @@ export const DotKeysReducer = (state = storedDotKeys, action) => {
 
 export const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
     switch (action.type) {
-        case OVERVIEW_INDEX:
+        case ACTIVE_OVERVIEW_INDEX:
             return action.payload
         default:
             return state
@@ -55,7 +55,7 @@ export const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
 
 export const WikiUrlReducer = (state = null, action) => {
     switch (action.type) {
-        case WIKI_URL:
+        case ACTIVE_WIKI_URL:
             return action.payload
         default:
             return state

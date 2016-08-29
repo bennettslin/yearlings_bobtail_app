@@ -4,11 +4,11 @@ module.exports = {
 
     WINDOW_STORAGE: window.localStorage,
 
-    SONG_INDEX: 'songIndex',
-    ANNOTATION_INDEX: 'annotationIndex',
+    ACTIVE_SONG_INDEX: 'activeSongIndex',
+    ACTIVE_ANNOTATION_INDEX: 'activeAnnotationIndex',
     ACTIVE_DOT_KEYS: 'activeDotKeys',
-    OVERVIEW_INDEX: 'overviewIndex',
-    WIKI_URL: 'wikiUrl',
+    ACTIVE_OVERVIEW_INDEX: 'activeOverviewIndex',
+    ACTIVE_WIKI_URL: 'activeWikiUrl',
 
     /**
      * If there is one side stanza, it defaults to top. If there are two, one

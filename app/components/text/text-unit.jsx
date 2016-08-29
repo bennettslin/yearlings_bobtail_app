@@ -2,6 +2,7 @@ import React from 'react'
 import AnchorBlock from './anchor-block'
 import TextBlock from './text-block'
 import TextSpan from './text-span'
+import { intersects } from 'helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -9,7 +10,8 @@ import TextSpan from './text-span'
 
 const TextUnit = (props) => {
 
-    const { text } = props
+    const { text,
+            activeDotKeys } = props
 
     if (typeof text === 'string') {
         return (
@@ -36,8 +38,12 @@ const TextUnit = (props) => {
             )
 
         } else if (text.anchor) {
-            return (
-                <AnchorBlock {...props} />
+            const shouldShowAnchor = intersects(text.dotKeys, activeDotKeys)
+            return (shouldShowAnchor ?
+                <AnchorBlock {...props} /> :
+                <TextBlock {...props}
+                    text={text.anchor}
+                />
             )
         }
     }

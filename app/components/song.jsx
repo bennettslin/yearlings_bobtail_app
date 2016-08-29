@@ -54,6 +54,7 @@ const SongView = ({
             <AnnotationPopup
                 songs={songs}
                 annotation={annotation}
+                activeDotKeys={activeDotKeys}
                 onPortalClick={onPortalClick}
                 onWikiUrlClick={onWikiUrlClick}
                 onCloseClick={onAnnotationClick}
@@ -70,6 +71,7 @@ const SongView = ({
             />
             <LyricsSection
                 songLyrics={activeSongLyrics}
+                activeDotKeys={activeDotKeys}
                 onAnnotationClick={onAnnotationClick}
             />
         </div>

@@ -17,6 +17,7 @@ const LyricsSectionView = ({
 
     // From props.
     songLyrics,
+    activeDotKeys,
     onAnnotationClick
 
 }) => (
@@ -29,6 +30,7 @@ const LyricsSectionView = ({
                         key={stanzaIndex}
                         isTitleUnit={stanzaIndex === 0}
                         stanzaArray={stanzaArray}
+                        activeDotKeys={activeDotKeys}
                         onAnnotationClick={onAnnotationClick}
                     />
                 )

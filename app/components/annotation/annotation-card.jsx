@@ -3,6 +3,8 @@ import DotsBlock from '../dots/dots-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
 import AppHelper from 'helpers/album-view-helper'
+// FIXME: Parent should check intersects, child should check getIntersection. Also see dotStanza.
+import { intersects, getIntersection } from 'helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -10,23 +12,29 @@ import AppHelper from 'helpers/album-view-helper'
 
 const AnnotationCard = (props) => {
 
-    const { card, songs } = props,
-        { description,
-          dotKeys = {} } = card
+    const { card,
+            songs,
+            activeDotKeys } = props,
 
-    const portalLinks = AppHelper.getPortalLinks(card, songs)
+        { description,
+          dotKeys = {} } = card,
+
+        portalLinks = AppHelper.getPortalLinks(card, songs)
 
     // Add portal key to dot keys.
     if (portalLinks) {
         dotKeys.portal = true
     }
 
-    return (
+    const shouldShow = intersects(dotKeys, activeDotKeys),
+        intersectedDotKeys = getIntersection(dotKeys, activeDotKeys)
+
+    return (shouldShow ?
         <AnnotationCardView {...props}
             text={description}
-            dotKeys={dotKeys}
+            dotKeys={intersectedDotKeys}
             portalLinks={portalLinks}
-        />
+        /> : null
     )
 }
 
