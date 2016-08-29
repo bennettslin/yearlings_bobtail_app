@@ -38,6 +38,8 @@ const DotButtonView = ({
         className={`dot ${dotKey}${isActive ? '' : ' inactive'}${isPresent ? '' : ' unpresent'}`}
         onClick={onClick}
     >
+        {/* FIXME: Dots ultimately won't have text, of course. */}
+        {dotKey}
     </div>
 )
 

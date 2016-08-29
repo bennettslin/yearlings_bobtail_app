@@ -51,7 +51,7 @@ const _convertOverviews = (object) => {
 }
 
 /**
- * Add title object as if it is the first unit of the lyrics object.
+ * Add title object as if it is the first stanza of the lyrics object.
  */
 const _addTitleToLyrics = (title, lyrics) => {
     const { annotation } = title
@@ -59,10 +59,10 @@ const _addTitleToLyrics = (title, lyrics) => {
         title.properNoun = true
         annotation.dotKeys = { title: true }
     }
-    lyrics.unshift([{
+    lyrics[0].push({
         lyric: title,
         isTitle: true
-    }])
+    })
 }
 
 /**
