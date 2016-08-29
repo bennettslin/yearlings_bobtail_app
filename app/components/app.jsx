@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { selectSongIndex,
          selectAnnotationIndex,
-         toggleDotKeys,
+         toggleDotKey,
          selectOverviewIndex,
          selectWikiUrl } from 'redux/actions'
 import Album from './album'
@@ -15,9 +15,6 @@ import { SONG_INDEX,
 import AlbumHelper from 'helpers/album-view-helper'
 import LogHelper from 'helpers/log-helper'
 import SessionHelper from 'helpers/session-helper'
-
-// FIXME: Get rid of eventually.
-import { ALL_DOT_KEYS } from 'helpers/constants'
 
 /*********
  * STORE *
@@ -43,7 +40,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         selectSongIndex,
         selectAnnotationIndex,
-        toggleDotKeys,
+        toggleDotKey,
         selectOverviewIndex,
         selectWikiUrl
     }, dispatch)
@@ -64,25 +61,9 @@ class App extends Component {
         this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handlePortalSelect = this.handlePortalSelect.bind(this)
         this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
-
-        this.state = {
-            activeDotKeys: {}
-        }
     }
 
     componentWillMount() {
-        const { activeSongIndex,
-                activeAnnotationIndex,
-                // activeDotKeys,
-                activeOverviewIndex } = this.props
-        /**
-         * Retrieve stored indices, if any. Indices start at 1.
-         */
-        this.handleSongSelect(activeSongIndex, SONG_INDEX)
-        this.handleAnnotationSelect(activeAnnotationIndex)
-        this.handleDotToggle()
-        this.handleOverviewSelect(activeOverviewIndex)
-
         this._assignLogFunctions()
     }
 
@@ -137,25 +118,10 @@ class App extends Component {
         SessionHelper.setInSession(OVERVIEW_INDEX, activeIndex)
     }
 
-    handleDotToggle(dotKey, isActive = null) {
-        let activeDotKeys
-
-        // Initialising, get from session.
-        if (!dotKey) {
-            activeDotKeys = SessionHelper.getFromSession(ACTIVE_DOT_KEYS)
-
-        // Setting a single dot key.
-        } else {
-            activeDotKeys = Object.assign({}, this.state.activeDotKeys)
-            activeDotKeys[dotKey] = (isActive !== null) ?
-                isActive : !this.state.activeDotKeys[dotKey]
-        }
-
-        this.setState({
-            activeDotKeys
-        })
-
-        SessionHelper.setInSession(ACTIVE_DOT_KEYS, JSON.stringify(activeDotKeys))
+    handleDotToggle(dotKey) {
+        const isActive = !this.props.activeDotKeys[dotKey]
+        this.props.toggleDotKey(dotKey, isActive)
+        SessionHelper.setDotInSession(dotKey, isActive)
     }
 
     handleAnnotationSelect(activeIndex) {
@@ -189,12 +155,10 @@ class App extends Component {
                 activeSongIndex,
                 activeOverviewIndex,
                 activeAnnotationIndex,
-                // activeDotKeys,
+                activeDotKeys,
                 activeWikiUrl
 
             } = this.props
-
-        const activeDotKeys = this.state.activeDotKeys
 
         return (
             <div className="app">

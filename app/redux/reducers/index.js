@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { SONG_INDEX,
          ANNOTATION_INDEX,
-         DOT_KEYS,
+         ACTIVE_DOT_KEYS,
          OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX,
          WIKI_URL } from '../../helpers/constants'
@@ -9,7 +9,7 @@ import SessionHelper from '../../helpers/session-helper'
 
 const storedSongIndex = SessionHelper.getFromSession(SONG_INDEX)
 const storedAnnotationIndex = SessionHelper.getFromSession(ANNOTATION_INDEX)
-const storedDotKeys = SessionHelper.getFromSession(DOT_KEYS)
+const storedDotKeys = SessionHelper.getFromSession(ACTIVE_DOT_KEYS)
 const storedOverviewIndex = SessionHelper.getFromSession(OVERVIEW_INDEX)
 
 export const SongIndexReducer = (state = storedSongIndex, action) => {
@@ -32,8 +32,13 @@ export const AnnotationIndexReducer = (state = storedAnnotationIndex, action) =>
 
 export const DotKeysReducer = (state = storedDotKeys, action) => {
     switch (action.type) {
-        case DOT_KEYS:
-            return action.payload
+        case ACTIVE_DOT_KEYS:
+            const { dotKey,
+                    isActive } = action.payload,
+                // Copy state object.
+                newState = Object.assign({}, state)
+            newState[dotKey] = isActive
+            return newState
         default:
             return state
     }

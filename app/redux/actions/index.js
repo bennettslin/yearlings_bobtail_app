@@ -1,6 +1,6 @@
 import { SONG_INDEX,
          ANNOTATION_INDEX,
-         DOT_KEYS,
+         ACTIVE_DOT_KEYS,
          OVERVIEW_INDEX,
          WIKI_URL,
          DEFAULT_OVERVIEW_INDEX } from '../../helpers/constants'
@@ -15,9 +15,10 @@ export const selectAnnotationIndex = (activeAnnotationIndex = 0) => ({
     payload: activeAnnotationIndex
 })
 
-export const selectDotKey = (dotKey, isActive = false) => ({
-    type: DOT_KEYS,
-    payload: isActive
+export const toggleDotKey = (dotKey, isActive = false) => ({
+    type: ACTIVE_DOT_KEYS,
+    payload: { dotKey,
+               isActive }
 })
 
 export const selectOverviewIndex = (activeOverviewIndex = DEFAULT_OVERVIEW_INDEX) => ({

@@ -8,13 +8,20 @@ import { ACTIVE_DOT_KEYS,
 
 export default {
 
+    setDotInSession(dotKey, isActive) {
+        const activeDotKeys = this._getValidDotKeys(WINDOW_STORAGE[ACTIVE_DOT_KEYS])
+        activeDotKeys[dotKey] = isActive
+
+        this.setInSession(ACTIVE_DOT_KEYS, JSON.stringify(activeDotKeys))
+    },
+
     setInSession(key, value) {
         WINDOW_STORAGE[key] = value
     },
 
     getFromSession(key) {
         if (key === ACTIVE_DOT_KEYS) {
-            return this._getValidOrDefaultDotKeysObject(WINDOW_STORAGE[key])
+            return this._getValidDotKeys(WINDOW_STORAGE[key])
 
         } else if (key) {
             // Default is 0 unless specified otherwise.
@@ -33,7 +40,7 @@ export default {
 
     // FIXME: Add validation methods that return valid or default value for all, and test them! ʦ
 
-    _getValidOrDefaultDotKeysObject(tryValue) {
+    _getValidDotKeys(tryValue) {
         // Value is a valid object.
         try {
             const dotKeysObject = JSON.parse(tryValue)
