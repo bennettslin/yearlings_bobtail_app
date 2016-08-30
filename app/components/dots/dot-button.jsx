@@ -39,7 +39,9 @@ const DotButtonView = ({
         onClick={onClick}
     >
         {/* FIXME: Dots ultimately won't have text, of course. */}
-        {dotKey}
+        <div className="dot-text">
+            {dotKey}
+        </div>
     </div>
 )
 
