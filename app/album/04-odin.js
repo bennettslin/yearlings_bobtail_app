@@ -160,7 +160,7 @@ module.exports = {
                     {
                         anchor: `salamander`,
                         annotation: {
-                            description: `Exploring alchemy in the 16th century, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. Since writing lyrics in doublespeaker rhyme was often daunting, I would keep myself going with fun little challenges. One such challenge was to mention each of the four elementals of Paracelsus. The salamander is the elemental of fire.`
+                            description: `Exploring alchemy in the 16th century, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. Since writing lyrics in doublespeaker rhyme was often daunting, I would keep myself going with fun little challenges. One of these was to mention each of the four elementals of Paracelsus. The salamander is the elemental of fire.`
                         }
                     },
                     `shall await`
