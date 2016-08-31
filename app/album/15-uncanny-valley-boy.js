@@ -7,9 +7,9 @@ module.exports = {
         todo: true
     },
     overviews: {
-        narrative: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing relative to my age. On top of this, they were devastated when I finally left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I wasn't about to change my ways.`,
+        narrative: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing as well. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I wasn't about to change my ways.`,
         music: [
-            `This song was originally about a nightmare I had, but was soon abandoned after I couldn't remember what made the nightmare scary. I revived it here, thinking it would be perfect for conveying a lecture delivered by a nightmarish version of my parents. This also begins a three-song medley à la`,
+            `I originally began writing this song to describe a nightmare I had, but abandoned it when I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents. This also begins a three-song medley à la`,
             {
                 italic: `Abbey Road`
             },
