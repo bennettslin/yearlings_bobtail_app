@@ -10,13 +10,6 @@ const LyricsUnit = (props) => {
 
     const { stanzaArray } = props,
 
-
-        /**
-         * Treat the first object as the unit index. If it is not, all other
-         * steps will fail gracefully.
-         */
-        unitIndexObject = stanzaArray[0],
-
         // Determine whether lyric unit has a custom layout.
         { customLayout,
 
@@ -25,7 +18,7 @@ const LyricsUnit = (props) => {
 
           // Determine whether there are side stanzas.
           topSideStanza,
-          bottomSideStanza } = unitIndexObject,
+          bottomSideStanza } = stanzaArray[0],
 
         isDotOnly = dotStanza && stanzaArray.length === 1,
         isBottomOnly = !topSideStanza && bottomSideStanza
