@@ -21,21 +21,6 @@ module.exports = {
     },
     lyrics: [
         [
-            [
-                {
-                    lyric: {
-                        anchor: `theme`,
-                        annotation: {
-                            description: ``,
-                            dotKeys: {
-                                music: true
-                            }
-                        }
-                    }
-                }
-            ]
-        ],
-        [
             {
                 time: 12,
                 lyric: [

@@ -1,3 +1,5 @@
+import { RIGHT, OVERLAP } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `Uncanny Valley Boy`,
@@ -17,21 +19,6 @@ module.exports = {
         ]
     },
     lyrics: [
-        [
-            [
-                {
-                    lyric: {
-                        anchor: `theme`,
-                        annotation: {
-                            description: ``,
-                            dotKeys: {
-                                music: true
-                            }
-                        }
-                    }
-                }
-            ]
-        ],
         [
             {
                 time: 14,
@@ -293,7 +280,7 @@ module.exports = {
             {
                 // TODO: Figure out times for these.
                 time: '?',
-                stanzaLayout: 'right overlap',
+                customLayout: `${RIGHT} ${OVERLAP}`,
                 lyric: {
                     italic: `Your dulling gold now gone…`
                 }
@@ -308,7 +295,7 @@ module.exports = {
         [
             {
                 time: '?',
-                stanzaLayout: 'right overlap',
+                customLayout: `${RIGHT} ${OVERLAP}`,
                 lyric: {
                     italic: `…traded in for the trophy blondes.`
                 }
@@ -414,7 +401,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `restructure lyrics`,
+            taskName: `"to find a cleared path," "Rama… …Maranatha"`,
             workedHours: 0,
             neededHours: 1
         },
@@ -437,6 +424,11 @@ module.exports = {
             subtasks: [
 
             ]
+        },
+        {
+            taskName: `restructure lyrics`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

@@ -22,25 +22,10 @@ module.exports = {
     },
     lyrics: [
         [
-            [
-                {
-                    lyric: {
-                        anchor: `theme`,
-                        annotation: {
-                            description: ``,
-                            dotKeys: {
-                                music: true
-                            }
-                        }
-                    }
-                }
-            ]
-        ],
-        [
             {
                 // TODO: Mention white throated sparrow.
                 time: 5,
-                centreLyric: [
+                centre: [
                     'On a',
                     {
                         anchor: `golden cord,`,
@@ -52,11 +37,11 @@ module.exports = {
             },
             {
                 time: 7,
-                centreLyric: `once worn, now shorn,`
+                centre: `once worn, now shorn,`
             },
             {
                 time: 9,
-                centreLyric: [
+                centre: [
                     `safely kept with`,
                     {
                         anchor: `bread and pocket lint.`,
@@ -68,11 +53,11 @@ module.exports = {
             },
             {
                 time: 12,
-                centreLyric: `Not of its own accord,`
+                centre: `Not of its own accord,`
             },
             {
                 time: 15,
-                centreLyric: [
+                centre: [
                     `but`,
                     {
                         anchor: `broken`,
@@ -85,17 +70,17 @@ module.exports = {
             },
             {
                 time: 18,
-                centreLyric: `And so she said, "Now it's yours again…`
+                centre: `And so she said, "Now it's yours again…`
             }
         ],
         [
             {
                 time: 26,
-                centreLyric: `And how you look tonight!`
+                centre: `And how you look tonight!`
             },
             {
                 time: 28,
-                centreLyric: [
+                centre: [
                     `So`,
                     {
                         anchor: `polite, yet resigned,`,
@@ -107,23 +92,23 @@ module.exports = {
             },
             {
                 time: 31,
-                centreLyric: `with wounds dressed and feelings put away.`
+                centre: `with wounds dressed and feelings put away.`
             },
             {
                 time: 33,
-                centreLyric: `Full of patient replies…`
+                centre: `Full of patient replies…`
             },
             {
                 time: 36,
-                centreLyric: `But how can I trust a word you say?`
+                centre: `But how can I trust a word you say?`
             },
             {
                 time: 40,
-                centreLyric: `So spill away… and please, dear, you have no more secrets saved.`
+                centre: `So spill away… and please, dear, you have no more secrets saved.`
             },
             {
                 time: 47,
-                centreLyric: [
+                centre: [
                     `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
@@ -138,7 +123,7 @@ module.exports = {
         [
             {
                 time: 54,
-                leftLyric: [
+                left: [
                     {
                         anchor: `Immerse the moulted form`,
                         annotation: {
@@ -147,7 +132,7 @@ module.exports = {
                     },
                     `in holy foggy night,`
                 ],
-                rightLyric: [
+                right: [
                     `Returned a golden cord, this`,
                     {
                         anchor: `sole belonging signed.`,
@@ -159,7 +144,7 @@ module.exports = {
             },
             {
                 time: 57,
-                leftLyric: [
+                left: [
                     `emerged beside a`,
                     {
                         anchor: `pauper's grave`,
@@ -169,16 +154,16 @@ module.exports = {
                     },
                     `from dreams.`
                 ],
-                rightLyric: `Leave early, time's up, cross your date released.`
+                right: `Leave early, time's up, cross your date released.`
             },
             {
                 time: 61,
-                leftLyric: `The wraith surveys the widow on his pyre;`,
-                rightLyric: `The jailer waves a bit, though uninspired,`
+                left: `The wraith surveys the widow on his pyre;`,
+                right: `The jailer waves a bit, though uninspired,`
             },
             {
                 time: 64,
-                leftLyric: [
+                left: [
                     `torched the`,
                     {
                         anchor: `bellyaches on suttee.`,
@@ -187,7 +172,7 @@ module.exports = {
                         }
                     }
                 ],
-                rightLyric: [
+                right: [
                     `for the`,
                     {
                         anchor: `well-behaved on the wing.`,
@@ -201,8 +186,8 @@ module.exports = {
         [
             {
                 time: 65,
-                leftLyric: `Had I grown dispirited in all this act,`,
-                rightLyric: [
+                left: `Had I grown dispirited in all this act,`,
+                right: [
                     `As I soak in spirits amidst`,
                     {
                         anchor: `wanted ads—`,
@@ -214,12 +199,12 @@ module.exports = {
             },
             {
                 time: 68,
-                leftLyric: `by disparate elements, like kindling gathered up?`,
-                rightLyric: `my desperate ailments tied in this shambler's dusk—`
+                left: `by disparate elements, like kindling gathered up?`,
+                right: `my desperate ailments tied in this shambler's dusk—`
             },
             {
                 time: 72,
-                leftLyric: [
+                left: [
                     `Guilt pardons the`,
                     {
                         anchor: `spectre taunting twin streetlamps;`,
@@ -228,7 +213,7 @@ module.exports = {
                         }
                     }
                 ],
-                rightLyric: [
+                right: [
                     `still hardened against her`,
                     {
                         // TODO: Link to streetlamps?
@@ -241,7 +226,7 @@ module.exports = {
             },
             {
                 time: 75,
-                leftLyric: [
+                left: [
                     {
                         anchor: `hatchet man`,
                         annotation: {
@@ -250,7 +235,7 @@ module.exports = {
                     },
                     `who's burnt enough.`
                 ],
-                rightLyric: [
+                right: [
                     `past this`,
                     {
                         anchor: `avenue Möbius.`,
@@ -264,17 +249,17 @@ module.exports = {
         [
             {
                 time: 76,
-                leftLyric: `But a precious gift as a shedded chain,`,
-                rightLyric: `But the present slips past a debt unpaid,`
+                left: `But a precious gift as a shedded chain,`,
+                right: `But the present slips past a debt unpaid,`
             },
             {
                 time: 79,
-                leftLyric: `has lain to rust, one more cruel memento.`,
-                rightLyric: `that slays you once before you'll let it go.`
+                left: `has lain to rust, one more cruel memento.`,
+                right: `that slays you once before you'll let it go.`
             },
             {
                 time: 83,
-                leftLyric: [
+                left: [
                     `Then if`,
                     {
                         anchor: `life were real,`,
@@ -284,7 +269,7 @@ module.exports = {
                     },
                     `not just drunken play…`
                 ],
-                rightLyric: [
+                right: [
                     `And if`,
                     {
                         anchor: `night were peeled`,
@@ -297,13 +282,13 @@ module.exports = {
             },
             {
                 time: 86,
-                centreLyric: `But what do I know?`
+                centre: `But what do I know?`
             }
         ],
         [
             {
                 time: 87,
-                centreLyric: [
+                centre: [
                     `Just that those playful`,
                     {
                         anchor: `pups with their hateful fangs`,
@@ -315,11 +300,11 @@ module.exports = {
             },
             {
                 time: 90,
-                centreLyric: `knew the restraint of those born as hunters,`
+                centre: `knew the restraint of those born as hunters,`
             },
             {
                 time: 93,
-                centreLyric: [
+                centre: [
                     `while this supposed`,
                     {
                         anchor: `dove chafing in his cage,`,
@@ -331,7 +316,7 @@ module.exports = {
             },
             {
                 time: 96,
-                centreLyric: `just learned he's pecked to death his precious other.`
+                centre: `just learned he's pecked to death his precious other.`
             },
             [
                 {
@@ -349,15 +334,15 @@ module.exports = {
         [
             {
                 time: 98,
-                centreLyric: `But should it matter since you loved her once,`
+                centre: `But should it matter since you loved her once,`
             },
             {
                 time: 101,
-                centreLyric: `when you really thought the world that simple?`
+                centre: `when you really thought the world that simple?`
             },
             {
                 time: 104,
-                centreLyric: [
+                centre: [
                     `And who's to`,
                     {
                         anchor: `judge how much you cared`,
@@ -371,11 +356,11 @@ module.exports = {
             },
             {
                 time: 107,
-                centreLyric: `the gesture then was just a little more worth working for?…`
+                centre: `the gesture then was just a little more worth working for?…`
             },
             {
                 time: 113,
-                centreLyric: `Now the jester teeters towards…`
+                centre: `Now the jester teeters towards…`
             },
             [
                 {
@@ -394,7 +379,7 @@ module.exports = {
         [
             {
                 time: 116,
-                centreLyric: [
+                centre: [
                     `the taunting,`,
                     {
                         anchor: `streetswept dawn.`,
@@ -406,12 +391,12 @@ module.exports = {
             },
             {
                 time: 118,
-                centreLyric: `Thoughts spawned then dropped,`
+                centre: `Thoughts spawned then dropped,`
             },
             {
                 // Sooty dust.
                 time: 121,
-                centreLyric: [
+                centre: [
                     `of gathering up the`,
                     {
                         anchor: `suttee dust.`,
@@ -423,19 +408,19 @@ module.exports = {
             },
             {
                 time: 123,
-                centreLyric: `Some things just come to loss:`
+                centre: `Some things just come to loss:`
             },
             {
                 time: 126,
-                centreLyric: `this bracelet, its lustre; me, my lust.`
+                centre: `this bracelet, its lustre; me, my lust.`
             },
             {
                 time: 130,
-                centreLyric: `Or was I once, something not what I've become?`
+                centre: `Or was I once, something not what I've become?`
             },
             {
                 time: 137,
-                centreLyric: [
+                centre: [
                     `Have I just`,
                     {
                         anchor: `killed the thing I love?`,
@@ -449,12 +434,12 @@ module.exports = {
         [
             {
                 time: 144,
-                leftLyric: `Of fateful thoughts hung on a gilded clasp,`,
-                rightLyric: `Once navels locked upon the wilted grass,`
+                left: `Of fateful thoughts hung on a gilded clasp,`,
+                right: `Once navels locked upon the wilted grass,`
             },
             {
                 time: 147,
-                leftLyric: [
+                left: [
                     `which this`,
                     {
                         anchor: {
@@ -477,7 +462,7 @@ module.exports = {
                     },
                     `reavowed he'd come to snip.`
                 ],
-                rightLyric: [
+                right: [
                     {
                         anchor: `digging through her innie`,
                         annotation: {
@@ -489,8 +474,8 @@ module.exports = {
             },
             {
                 time: 150,
-                leftLyric: `And a smarting head throbs once his brain's warring halves,`,
-                rightLyric: [
+                left: `And a smarting head throbs once his brain's warring halves,`,
+                right: [
                     `Then the`,
                     {
                         anchor: `guardian knot`,
@@ -503,7 +488,7 @@ module.exports = {
             },
             {
                 time: 154,
-                leftLyric: [
+                left: [
                     `each`,
                     {
                         anchor: `attack with the proper fist.`,
@@ -512,7 +497,7 @@ module.exports = {
                         }
                     }
                 ],
-                rightLyric: [
+                right: [
                     {
                         anchor: `leaked the bandage`,
                         annotation: {
@@ -526,12 +511,12 @@ module.exports = {
         [
             {
                 time: 155,
-                leftLyric: `A sober plea finds the present you,`,
-                rightLyric: `The former me might have left a clue`
+                left: `A sober plea finds the present you,`,
+                right: `The former me might have left a clue`
             },
             {
                 time: 158,
-                leftLyric: [
+                left: [
                     `my`,
                     {
                         anchor: `alias drunk, in panic`,
@@ -541,7 +526,7 @@ module.exports = {
                     },
                     `and starved for leads.`
                 ],
-                rightLyric: [
+                right: [
                     `by`,
                     {
                         anchor: `trail of crumbs,`,
@@ -554,12 +539,12 @@ module.exports = {
             },
             {
                 time: 161,
-                leftLyric: `And will she label lies oaths we vowed we could,`,
-                rightLyric: `Until we strangle cries knowing how we stood,`
+                left: `And will she label lies oaths we vowed we could,`,
+                right: `Until we strangle cries knowing how we stood,`
             },
             {
                 time: 164,
-                leftLyric: [
+                left: [
                         `with`,
                         {
                             anchor: `Garry's sole witness`,
@@ -570,14 +555,14 @@ module.exports = {
                         },
                         `relieved?`
                 ],
-                rightLyric: `when buried whole with the deceased.`
+                right: `when buried whole with the deceased.`
             }
         ],
         [
             {
                 time: 166,
-                leftLyric: `So a plan devised divides a slave once wed;`,
-                rightLyric: [
+                left: `So a plan devised divides a slave once wed;`,
+                right: [
                     `Though, the`,
                     {
                         anchor: `master mind`,
@@ -590,7 +575,7 @@ module.exports = {
             },
             {
                 time: 169,
-                leftLyric: [
+                left: [
                     `a bid for greatness' sake, he's sold on as`,
                     {
                         anchor: `holy war.`,
@@ -599,16 +584,16 @@ module.exports = {
                         }
                     }
                 ],
-                rightLyric: `a bigger plate awaiting nulls one half full before.`
+                right: `a bigger plate awaiting nulls one half full before.`
             },
             {
                 time: 172,
-                leftLyric: `When longed by nothing you then fight the best,`,
-                rightLyric: `And fond sighs of reunion I must rest;`
+                left: `When longed by nothing you then fight the best,`,
+                right: `And fond sighs of reunion I must rest;`
             },
             {
                 time: 176,
-                leftLyric: [
+                left: [
                     `for`,
                     {
                         anchor: `kohl-eyed`,
@@ -624,7 +609,7 @@ module.exports = {
                     },
                     `as reward.`
                 ],
-                rightLyric: [
+                right: [
                     {
                         anchor: `forego like jewelry`,
                         annotation: {

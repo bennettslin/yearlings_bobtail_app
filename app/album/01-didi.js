@@ -1,3 +1,5 @@
+import { RIGHT, OVERLAP } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: 'Didi (弟弟)',
@@ -20,22 +22,6 @@ module.exports = {
         ]
     },
     lyrics: [
-        [
-            [
-                {
-                    lyric: {
-                        // Anchor text must be present not to break, but isn't used.
-                        anchor: `theme`,
-                        annotation: {
-                            description: ``,
-                            dotKeys: {
-                                music: true
-                            }
-                        }
-                    }
-                }
-            ]
-        ],
         [
             {
                 time: 17,
@@ -153,7 +139,7 @@ module.exports = {
         [
             {
                 time: 97,
-                stanzaLayout: 'right overlap',
+                customLayout: `${RIGHT} ${OVERLAP}`,
                 lyric: {
                     emphasis: `Don't little raisin fingers need to dry?`
                 }

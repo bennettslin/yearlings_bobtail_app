@@ -12,34 +12,18 @@ module.exports = {
     },
     lyrics: [
         [
-            [
-                {
-                    lyric: {
-                        anchor: `theme`,
-                        annotation: {
-                            description: ``,
-                            dotKeys: {
-                                music: true
-                            }
+            {
+                unitIndex: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: ``,
+                        dotKeys: {
+                            music: true
                         }
                     }
                 }
-            ]
-        ],
-        [
-            [
-                {
-                    lyric: {
-                        anchor: `test 2`,
-                        annotation: {
-                            description: `test music annotation text 2`,
-                            dotKeys: {
-                                narrative: true
-                            }
-                        }
-                    }
-                }
-            ],
+            },
             {
                 time: 0,
                 lyric: [
@@ -456,19 +440,18 @@ module.exports = {
             }
         ],
         [
-            [
-                {
-                    lyric: {
-                        anchor: `test 3`,
-                        annotation: {
-                            description: `test music annotation text 3`,
-                            dotKeys: {
-                                music: true
-                            }
+            {
+                unitIndex: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: ``,
+                        dotKeys: {
+                            music: true
                         }
                     }
                 }
-            ]
+            }
         ]
     ],
     tasks: [

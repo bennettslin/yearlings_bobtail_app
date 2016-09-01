@@ -27,17 +27,17 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `fix wiki url not showing in annotation`,
+            taskName: `improve custom stanza layouts`,
             workedHours: 0,
-            neededHours: 1
+            neededHours: 2
+        },
+        {
+            taskName: `add verse, prechorus, chorus categories to stanzas, stylise`,
+            workedHours: 0,
+            neededHours: 2
         },
         {
             taskName: `hide annotation when dots inactive`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `allow for call and response lyrics`,
             workedHours: 0,
             neededHours: 1
         },
@@ -154,6 +154,16 @@ module.exports = {
             taskName: `allow multiple dots`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `fix wiki url not showing in annotation`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `allow for call and response lyrics`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

@@ -11,16 +11,21 @@ const LyricsUnit = (props) => {
 
     const { stanzaArray } = props,
 
-        // Determine whether stanza has a custom layout. (FIXME: This won't work if first object is not a text stanza.)
-        stanzaLayout = stanzaArray[0].stanzaLayout,
 
-        // Determine whether there are anchor stanzas.
-        firstVerseObject = stanzaArray[0],
-        dotStanzaObject = firstVerseObject instanceof Array ?
-            firstVerseObject[0].lyric : null,
+        /**
+         * Treat the first object as the unit index. If it is not, all other
+         * steps will fail gracefully.
+         */
+        unitIndexObject = stanzaArray[0],
+
+        // Determine whether lyric unit has a custom layout.
+        customLayout = unitIndexObject.customLayout,
+
+        // Determine whether there are dot stanzas.
+        dotStanzaObject = unitIndexObject.dotStanza,
         isDotOnlyUnit = dotStanzaObject && stanzaArray.length === 1,
 
-        // Determine whether there are side stanzas.
+        // Determine whether there are side stanzas, which are always on right.
         lastVerseObject = stanzaArray.length > 1 ? stanzaArray[stanzaArray.length - 1] : null,
         lastSideStanza = lastVerseObject instanceof Array ?
             lastVerseObject : null,
@@ -33,9 +38,11 @@ const LyricsUnit = (props) => {
         bottomOnlySideStanza = lastSideStanza ?
             lastSideStanza[0].side === BOTTOM_ONLY_SIDE_STANZA : false
 
+    console.error('unitIndexObject.unitIndex', unitIndexObject.unitIndex);
+
     return (
         <LyricsUnitView {...props}
-            stanzaLayout={stanzaLayout}
+            customLayout={customLayout}
             dotStanzaObject={dotStanzaObject}
             isDotOnlyUnit={isDotOnlyUnit}
             lastSideStanza={lastSideStanza}
@@ -58,7 +65,7 @@ const LyricsUnitView = ({
     onAnnotationClick,
 
     // From controller.
-    stanzaLayout,
+    customLayout,
     dotStanzaObject,
     isDotOnlyUnit,
     lastSideStanza,
@@ -67,7 +74,7 @@ const LyricsUnitView = ({
 
 }) => (
 
-    <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}`}>
+    <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}${customLayout ? ` custom ${customLayout}` : ''}`}>
         {dotStanzaObject ?
             <div className={`stanza-block dot ${isDotOnlyUnit ? 'only' : 'shared'}`}>
                 <DotStanza
@@ -78,7 +85,7 @@ const LyricsUnitView = ({
             </div> : null
         }
         {!isDotOnlyUnit ?
-            <div className={`stanza-block main${stanzaLayout ? ` ${stanzaLayout}` : ''}`}>
+            <div className={`stanza-block main`}>
                 <LyricsStanza
                     activeDotKeys={activeDotKeys}
                     stanzaArray={stanzaArray}

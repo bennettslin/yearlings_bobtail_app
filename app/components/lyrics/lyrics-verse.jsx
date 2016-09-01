@@ -1,6 +1,6 @@
 import React from 'react'
 import TextBlock from '../text/text-block'
-import { LYRIC_COLUMN_CLASSES } from 'helpers/constants'
+import { DOUBLESPEAKER_KEYS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -50,17 +50,17 @@ const LyricsVerseView = ({
                 </div>
             ) : (
                 <div className="double-lines-block">
-                    {LYRIC_COLUMN_CLASSES.filter((keyClassPair) => {
-                        return verseObject[keyClassPair.key]
-                    }).map((keyClassPair, index) => {
+                    {DOUBLESPEAKER_KEYS.filter(key => {
+                        return verseObject[key]
+                    }).map((key, index) => {
                         return (
                             <div
                                 key={index}
-                                className={`line ${keyClassPair.className}`}
+                                className={`line ${key}`}
                             >
                                 <TextBlock
                                     isLyric={true}
-                                    text={verseObject[keyClassPair.key]}
+                                    text={verseObject[key]}
                                     activeDotKeys={activeDotKeys}
                                     onAnchorClick={onAnnotationClick}
                                 />

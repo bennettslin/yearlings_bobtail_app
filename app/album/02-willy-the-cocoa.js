@@ -1,3 +1,5 @@
+import { LEFT, RIGHT, OVERLAP } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: 'Willy the Cocoa',
@@ -11,21 +13,6 @@ module.exports = {
         music: `In folklore of the past, changelings were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, I wanted to mimic a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of Creedence Clearwater Revival, with muted mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`
     },
     lyrics: [
-        [
-            [
-                {
-                    lyric: {
-                        anchor: `theme`,
-                        annotation: {
-                            description: ``,
-                            dotKeys: {
-                                music: true
-                            }
-                        }
-                    }
-                }
-            ]
-        ],
         [
             {
                 time: 11,
@@ -91,7 +78,7 @@ module.exports = {
         [
             {
                 time: 30,
-                stanzaLayout: 'right overlap',
+                customLayout: `${LEFT} ${OVERLAP}`,
                 lyric: [
                     {
                         italic: [
@@ -110,7 +97,7 @@ module.exports = {
         [
             {
                 time: 32,
-                stanzaLayout: 'left overlap',
+                customLayout: `${RIGHT} ${OVERLAP}`,
                 lyric: [
                     `licking lips`,
                     {
@@ -377,7 +364,7 @@ module.exports = {
         [
             {
                 time: 126,
-                stanzaLayout: 'right overlap',
+                customLayout: `${LEFT} ${OVERLAP}`,
                 lyric: [
                     {
                         italic: [
@@ -396,7 +383,7 @@ module.exports = {
         [
             {
                 time: 128,
-                stanzaLayout: 'left overlap',
+                customLayout: `${RIGHT} ${OVERLAP}`,
                 lyric: [
                     `dripping`,
                     {

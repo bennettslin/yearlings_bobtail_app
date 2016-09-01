@@ -24,6 +24,22 @@
         &:not(:last-child) {
             margin-bottom: @lyric-verse-size;
         }
+
+        &.custom {
+            @margin-offset: 15%;
+            @overlap-margin: 20px;
+            position: relative;
+
+            &.left {
+                margin-right: @margin-offset;
+            }
+            &.right {
+                margin-left: @margin-offset;
+            }
+            &.overlap {
+                margin-top: -@overlap-margin;
+            }
+        }
     }
 
     .anchor-block {
@@ -53,20 +69,6 @@
         @stanza-block-margin: 10px;
         &:not(:first-child) {
             margin-left: @stanza-block-margin;
-        }
-
-        // FIXME: Make these custom layouts based on flexbox, if possible. It might be better to add the class to a parent container.
-        &.left {
-            position: relative;
-            left: -10%;
-        }
-        &.right {
-            position: relative;
-            right: -10%;
-        }
-        &.overlap {
-            position: relative;
-            margin-top: -22.5px;
         }
 
         &.side {

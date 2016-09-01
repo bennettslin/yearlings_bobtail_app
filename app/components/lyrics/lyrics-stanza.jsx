@@ -27,12 +27,13 @@ const LyricsStanzaView = ({
         {stanzaArray
             .filter((verseObject) => !(verseObject instanceof Array))
             .map((verseObject, verseIndex) => (
-                    <LyricsVerse
-                        key={verseIndex}
-                        verseObject={verseObject}
-                        activeDotKeys={activeDotKeys}
-                        onAnnotationClick={onAnnotationClick}
-                    />
+                    !verseObject.unitIndex ?
+                        <LyricsVerse
+                            key={verseIndex}
+                            verseObject={verseObject}
+                            activeDotKeys={activeDotKeys}
+                            onAnnotationClick={onAnnotationClick}
+                        /> : null
                 )
             )}
     </div>

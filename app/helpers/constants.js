@@ -1,5 +1,12 @@
 // Constants used by all components.
 
+const LEFT = 'left',
+    CENTRE = 'centre',
+    RIGHT = 'right',
+    ITALIC = 'italic',
+    EMPHASIS = 'emphasis',
+    ANCHOR = 'anchor'
+
 module.exports = {
 
     WINDOW_STORAGE: window.localStorage,
@@ -20,9 +27,26 @@ module.exports = {
 
     // This is only used by the stats helper.
     STAT_TEXT_KEYS: [
-        'italic',
-        'emphasis',
-        'anchor'
+        ITALIC,
+        EMPHASIS,
+        ANCHOR
+    ],
+
+    LEFT,
+    CENTRE,
+    RIGHT,
+    OVERLAP: 'overlap',
+
+    // Temporary.
+    ALBUM_BUILD_KEYS: [
+        'lyric',
+        LEFT,
+        CENTRE,
+        RIGHT,
+        ITALIC,
+        EMPHASIS,
+        ANCHOR,
+        'dotStanza'
     ],
 
     /**
@@ -31,39 +55,18 @@ module.exports = {
      */
     LYRIC_TEXT_KEYS: [
         'lyric',
-
-        // Doublespeaker left.
-        'leftLyric',
-
-        // Doublespeaker centre.
-        'centreLyric',
-
-        // Doublespeaker right.
-        'rightLyric',
-        'italic',
-        'emphasis',
-        'anchor'
+        LEFT,
+        CENTRE,
+        RIGHT,
+        ITALIC,
+        EMPHASIS,
+        ANCHOR
     ],
 
-    LEFT_LYRIC: 'left',
-    CENTRE_LYRIC: 'centre',
-    RIGHT_LYRIC: 'right',
-    OVERLAP: 'overlap',
-
-    // FIXME: Match keys with classNames. And add overlap to constants.
-    LYRIC_COLUMN_CLASSES: [
-        {
-            key: 'leftLyric',
-            className: 'left'
-        },
-        {
-            key: 'centreLyric',
-            className: 'centre'
-        },
-        {
-            key: 'rightLyric',
-            className: 'right'
-        },
+    DOUBLESPEAKER_KEYS: [
+        LEFT,
+        CENTRE,
+        RIGHT
     ],
 
     ALL_DOT_KEYS: [

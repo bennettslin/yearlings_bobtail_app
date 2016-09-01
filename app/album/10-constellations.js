@@ -2,6 +2,9 @@
  * TODO: References, decide on where to put quotations marks. Balance between
  * not being clear and being too obvious.
  */
+
+ import { RIGHT, OVERLAP } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `Constellations!`,
@@ -25,21 +28,6 @@ module.exports = {
         ]
     },
     lyrics: [
-        [
-            [
-                {
-                    lyric: {
-                        anchor: `theme`,
-                        annotation: {
-                            description: ``,
-                            dotKeys: {
-                                music: true
-                            }
-                        }
-                    }
-                }
-            ]
-        ],
         [
             {
                 time: 4,
@@ -536,25 +524,28 @@ module.exports = {
                             description: `As I indulge in visions of a "mastodon hunted by sabre-toothed tigers," I'm haunted by the sober truth that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.`
                         }
                     },
-                    `cries,`
+                    `cries…`
                 ]
             }
         ],
         [
             {
                 time: 128,
-                stanzaLayout: 'right overlap',
+                customLayout: `${RIGHT} ${OVERLAP}`,
                 lyric: {
-                    anchor: `sunk in tarpid lies.`,
-                    annotation: {
+                    italic: {
+                        anchor: `sunk in tarpid lies!`,
+                        annotation: {
                             description: `Tar pits occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`
                         }
+                    }
                 }
             }
         ],
         [
             {
                 time: 131,
+                customLayout: OVERLAP,
                 lyric: [
                     `In`,
                     {
@@ -565,7 +556,7 @@ module.exports = {
                         }
                     },
                     {
-                        anchor: `broughtour ancister toughtim rite,`,
+                        anchor: `broughtour ancister toughtim rite…`,
                         annotation: {
                             description: `In the epic narrative playing out in my mind, the mastodon becomes a spirit animal, as we have "brought our ancestral totems and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
                         }
@@ -576,22 +567,25 @@ module.exports = {
         [
             {
                 time: 135,
-                stanzaLayout: 'right overlap',
-                lyric: [
-                    `he sees`,
-                    {
-                        anchor: `Lowkey and Freyed!`,
-                        properNoun: true,
-                        annotation: {
-                            description: `"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
+                customLayout: `${RIGHT} ${OVERLAP}`,
+                lyric: {
+                    italic: [
+                        `he sees`,
+                        {
+                            anchor: `Lowkey and Freyed!`,
+                            properNoun: true,
+                            annotation: {
+                                description: `"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
+                            }
                         }
-                    }
-                ]
+                    ]
+                }
             }
         ],
         [
             {
                 time: 139,
+                customLayout: OVERLAP,
                 lyric: [
                     {
                         anchor: `Noworse and Nunavutter`,
@@ -600,16 +594,23 @@ module.exports = {
                             description: `"Norse and Nunavutter collide." We have now travelled as far as Nunavut, the northernmost territory of Canada inhabited primarily by the Inuit. And yet, with the reappearance of the Norse, we realise that our bounds are not so limitless, as even our imaginations have started to repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so we end the night as we had begun it, "no worse and none the better."`
                         }
                     },
-                    `collide,`,
-                    {
-                        anchor: `Leif as the Red's son`,
-                        properNoun: true,
-                        annotation: {
-                            description: `The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."`
-                        }
-                    },
-                    `arrives.`
+                    `collide…`,
                 ]
+            },
+            {
+                time: '?',
+                lyric: {
+                    italic: [
+                        {
+                            anchor: `Leif as the Red's son`,
+                            properNoun: true,
+                            annotation: {
+                                description: `The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."`
+                            }
+                        },
+                        `arrives!`
+                    ]
+                }
             },
             {
                 time: 147,

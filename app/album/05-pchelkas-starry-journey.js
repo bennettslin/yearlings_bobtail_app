@@ -1,4 +1,4 @@
-import { BOTTOM_ONLY_SIDE_STANZA } from 'helpers/constants'
+import { RIGHT, OVERLAP, BOTTOM_ONLY_SIDE_STANZA } from 'helpers/constants'
 
 /**
  * Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
@@ -17,21 +17,6 @@ module.exports = {
         music: `Pchelka and Mushka were dogs sent into orbit under the Soviet space program. They were killed upon reentry. In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
     },
     lyrics: [
-        [
-            [
-                {
-                    lyric: {
-                        anchor: `theme`,
-                        annotation: {
-                            description: ``,
-                            dotKeys: {
-                                music: true
-                            }
-                        }
-                    }
-                }
-            ]
-        ],
         [
             {
                 time: 0,
@@ -137,7 +122,7 @@ module.exports = {
             {
                 // TODO: Figure out time for this.
                 time: '?',
-                stanzaLayout: 'right overlap',
+                customLayout: `${RIGHT} ${OVERLAP}`,
                 lyric: {
                     emphasis: {
                         anchor: `Poor Sam Peabody!`,

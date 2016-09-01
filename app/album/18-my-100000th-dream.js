@@ -12,21 +12,6 @@ module.exports = {
     },
     lyrics: [
         [
-            [
-                {
-                    lyric: {
-                        anchor: `theme`,
-                        annotation: {
-                            description: ``,
-                            dotKeys: {
-                                music: true
-                            }
-                        }
-                    }
-                }
-            ]
-        ],
-        [
             {
                 time: 13,
                 lyric: `My hundred thousandth dream, I bumped into my Sita.`

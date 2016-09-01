@@ -1,7 +1,7 @@
 // Parse album data for build.
 
 import { OVERVIEW_KEYS,
-         LYRIC_TEXT_KEYS } from './constants'
+         ALBUM_BUILD_KEYS } from './constants'
 import { getFormattedAnnotationTitle } from './format-helper'
 import { findKeyInObject } from './general-helper'
 
@@ -59,29 +59,40 @@ const _addTitleToLyrics = (title, lyrics) => {
         title.properNoun = true
         annotation.dotKeys = { title: true }
     }
-    lyrics[0].push({
-        lyric: title,
-        isTitle: true
-    })
+
+    // If first unit contains a lone dot stanza, append title to unit.
+    if (lyrics[0][0].unitIndex && lyrics[0].length === 1) {
+        lyrics[0].push({
+            lyric: title,
+            isTitle: true
+        })
+
+    // Otherwise, create a new first unit that just contains the title.
+    } else {
+        lyrics.unshift([{
+            lyric: title,
+            isTitle: true
+        }])
+    }
 }
 
 /**
  * Recurse until object with anchor key is found.
  */
-const _parseLyrics = (lyrics) => {
-    if (Array.isArray(lyrics)) {
-        lyrics.forEach(childLyricValue => {
+const _parseLyrics = (lyric) => {
+    if (Array.isArray(lyric)) {
+        lyric.forEach(childLyricValue => {
             _parseLyrics(childLyricValue)
         })
 
-    } else if (typeof lyrics === 'object') {
-        if (lyrics.anchor) {
-            _prepareAnnotation(lyrics)
+    } else if (typeof lyric === 'object') {
+        if (lyric.anchor) {
+            _prepareAnnotation(lyric)
 
         } else {
-            LYRIC_TEXT_KEYS.forEach(textKey => {
-                if (textKey !== 'anchor' && lyrics[textKey]) {
-                    _parseLyrics(lyrics[textKey])
+            ALBUM_BUILD_KEYS.forEach(textKey => {
+                if (textKey !== 'anchor' && lyric[textKey]) {
+                    _parseLyrics(lyric[textKey])
                 }
             })
         }

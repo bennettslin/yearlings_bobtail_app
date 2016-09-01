@@ -22,21 +22,6 @@ module.exports = {
     },
     lyrics: [
         [
-            [
-                {
-                    lyric: {
-                        anchor: `theme`,
-                        annotation: {
-                            description: ``,
-                            dotKeys: {
-                                music: true
-                            }
-                        }
-                    }
-                }
-            ]
-        ],
-        [
             {
                 time: 0,
                 lyric: {
@@ -223,7 +208,7 @@ module.exports = {
         [
             {
                 time: 77,
-                leftLyric: [
+                left: [
                     `Alone his first gig,`,
                     {
                         anchor: `stagefright ignites.`,
@@ -232,11 +217,11 @@ module.exports = {
                         }
                     }
                 ],
-                rightLyric: `With no sister ship slain by his side,`
+                right: `With no sister ship slain by his side,`
             },
             {
                 time: 87,
-                leftLyric: [
+                left: [
                     `But`,
                     {
                         anchor: `no convert's missed,`,
@@ -246,7 +231,7 @@ module.exports = {
                     },
                     `once assured his tithe.`
                 ],
-                rightLyric: [
+                right: [
                     `and so off her list,`,
                     {
                         anchor: `sunken Tirpitz`,
