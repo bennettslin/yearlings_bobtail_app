@@ -182,29 +182,58 @@ module.exports = {
         [
             {
                 time: 61,
-                lyric: `Mowed down by the tides, and inundated under in unfair fights,`
+                lyric: `Mowed down by the tides,`
+            },
+            {
+                time: '?',
+                lyric: `and inundated under in unfair fights,`
             },
             {
                 time: 67,
-                lyric: `you made a bunker that shuts airtight to seal out their floods.`
+                lyric: `you made a bunker that shuts airtight`
             },
             {
-                time: 74,
-                lyric: `But then, my little prince, safe on your tiny planet where none else fit,`
-            },
-            {
-                time: 80,
-                lyric: `you finally granted their nutshells are rigged, and healed round your grudge…`
+                time: '?',
+                lyric: `to seal out their floods.`
             },
             [
                 {
-                    lyric: `Oh, bastard ingrate! Some nights you wake,`
+                    lyric: `Oh, bastard ingrate!`
                 },
                 {
-                    lyric: `climb and survey the houses you've betrayed.`
+                    lyric: `Some nights you wake,`
                 },
                 {
-                    lyric: `Scattered your beans over suburbia…`
+                    lyric: `climb and survey`
+                },
+                {
+                    lyric: `the houses you've betrayed.`
+                }
+            ]
+        ],
+        [
+            {
+                time: 74,
+                lyric: `But then, my little prince,`
+            },
+            {
+                time: '?',
+                lyric: `safe on your tiny planet where none else fit,`
+            },
+            {
+                time: 80,
+                lyric: `you finally granted their nutshells are rigged,`
+            },
+            {
+                time: '?',
+                lyric: `and healed round your grudge…`
+            },
+            [
+                {
+                    lyric: `Scattered your beans`
+                },
+                {
+                    lyric: `over suburbia…`
                 }
             ]
         ],
@@ -288,15 +317,43 @@ module.exports = {
         [
             {
                 time: 160,
-                lyric: `Oh child of mine, what's left of what these faces you flip override,`
+                lyric: `Oh child of mine,`
+            },
+            {
+                time: '?',
+                lyric: `what's left of what these faces you flip override,`
             },
             {
                 time: 165,
-                lyric: `and all these pages you've ripped from your spine to find a cleared path`
+                lyric: `and all these pages you've ripped from your spine`
             },
             {
+                time: '?',
+                lyric: `to find a cleared path`
+            },
+            [
+                {
+                    lyric: `Through tatters of sky,`
+                },
+                {
+                    lyric: `their sun tinkles light`
+                },
+                {
+                    lyric: `in needling chimes`
+                },
+                {
+                    lyric: `that weave through the vines,`
+                }
+            ]
+        ],
+        [
+            {
                 time: 172,
-                lyric: `in life's unbearable maze? Then once for all to render it all fail-safe,`
+                lyric: `in life's unbearable maze?`
+            },
+            {
+                time: '?',
+                lyric: `Then once for all to render it all fail-safe,`
             },
             {
                 time: 178,
@@ -305,18 +362,19 @@ module.exports = {
                     {
                         italic: `Bobtail`
                     },
-                    `'s sake, to five-year plans.`
+                    `'s sake,`
                 ]
+            },
+            {
+                time: '?',
+                lyric: `to five-year plans.`
             },
             [
                 {
-                    lyric: `Through tatters of sky, their sun tinkles light`
+                    lyric: `cast on your peons,`
                 },
                 {
-                    lyric: `in needling chimes that weave through the vines,`
-                },
-                {
-                    lyric: `cast on your peons, old and subservient.`
+                    lyric: `old and subservient.`
                 }
             ]
         ],
