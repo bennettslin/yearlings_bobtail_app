@@ -78,7 +78,7 @@ const _getDeletedWrappingCharactersText = (text) => {
      * Note that this only knows how to differentiate between one wrapping
      * character versus two.
      */
-    const WRAPPING_CHARS = ['"', '—']
+    const WRAPPING_CHARS = ['"', '—', '…']
 
     WRAPPING_CHARS.forEach(char => {
         const firstIndex = text.indexOf(char),

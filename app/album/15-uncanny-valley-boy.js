@@ -182,6 +182,15 @@ module.exports = {
                     {
                         lyric: `the houses you've betrayed.`
                     }
+                ],
+                subStanzaClass: RIGHT,
+                subStanza: [
+                    {
+                        time: '?',
+                        lyric: {
+                            italic: `to seal out their floods.`
+                        }
+                    }
                 ]
             },
             {
@@ -195,10 +204,6 @@ module.exports = {
             {
                 time: 67,
                 lyric: `you made a bunker that shuts airtight`
-            },
-            {
-                time: '?',
-                lyric: `to seal out their floods.`
             }
         ],
         [
@@ -210,6 +215,15 @@ module.exports = {
                     },
                     {
                         lyric: `over suburbia…`
+                    }
+                ],
+                subStanzaClass: RIGHT,
+                subStanza: [
+                    {
+                        time: '?',
+                        lyric: {
+                            italic: `and healed round your grudge…`
+                        }
                     }
                 ]
             },
@@ -224,10 +238,6 @@ module.exports = {
             {
                 time: 80,
                 lyric: `you finally granted their nutshells are rigged,`
-            },
-            {
-                time: '?',
-                lyric: `and healed round your grudge…`
             }
         ],
         [
@@ -278,33 +288,39 @@ module.exports = {
         ],
         [
             {
+                unitIndex: true,
+                subStanzaClass: RIGHT,
+                subStanza: [
+                    {
+                        // TODO: Figure out times for these.
+                        time: '?',
+                        lyric: {
+                            italic: `Your dulling gold now gone…`
+                        }
+                    }
+                ]
+            },
+            {
                 time: 145,
                 lyric: `No well worn sari could sway you from a fairer marathon!`
             }
         ],
         [
             {
-                // TODO: Figure out times for these.
-                time: '?',
-                customLayout: `${RIGHT} ${OVERLAP}`,
-                lyric: {
-                    italic: `Your dulling gold now gone…`
-                }
-            }
-        ],
-        [
+                unitIndex: true,
+                subStanzaClass: RIGHT,
+                subStanza: [
+                    {
+                        time: '?',
+                        lyric: {
+                            italic: `…traded in for the trophy blondes.`
+                        }
+                    }
+                ],
+            },
             {
                 time: 152,
                 lyric: `Stubborn harpies can't draw this contest to be one!`
-            }
-        ],
-        [
-            {
-                time: '?',
-                customLayout: `${RIGHT} ${OVERLAP}`,
-                lyric: {
-                    italic: `…traded in for the trophy blondes.`
-                }
             }
         ],
         [
@@ -323,6 +339,15 @@ module.exports = {
                     {
                         lyric: `that weave through the vines,`
                     }
+                ],
+                subStanzaClass: RIGHT,
+                subStanza: [
+                    {
+                        time: '?',
+                        lyric: {
+                            italic: `to find a cleared path`
+                        }
+                    }
                 ]
             },
             {
@@ -336,10 +361,6 @@ module.exports = {
             {
                 time: 165,
                 lyric: `and all these pages you've ripped from your spine`
-            },
-            {
-                time: '?',
-                lyric: `to find a cleared path`
             }
         ],
         [
@@ -351,6 +372,15 @@ module.exports = {
                     },
                     {
                         lyric: `old and subservient.`
+                    }
+                ],
+                subStanzaClass: RIGHT,
+                subStanza: [
+                    {
+                        time: '?',
+                        lyric: {
+                            italic: `to five-year plans.`
+                        }
                     }
                 ]
             },
@@ -371,10 +401,6 @@ module.exports = {
                     },
                     `'s sake,`
                 ]
-            },
-            {
-                time: '?',
-                lyric: `to five-year plans.`
             }
         ],
         [
@@ -382,20 +408,24 @@ module.exports = {
                 unitIndex: true,
                 topSideStanza: [
                     {
+                        stanzaIndex: true,
+                        subStanzaClass: RIGHT,
+                        subStanza: [
+                            {
+                                lyric: {
+                                    anchor: `…Maranatha!`,
+                                    annotation: {
+                                        description: ``
+                                    },
+                                    todo: true
+                                }
+                            }
+                        ]
+                    },
+                    {
                         lyric: {
                             anchor: `Rama, Rama…`,
                             properNoun: true,
-                            annotation: {
-                                description: ``
-                            },
-                            todo: true
-                        }
-                    }
-                ],
-                bottomSideStanza: [
-                    {
-                        lyric: {
-                            anchor: `…Maranatha!`,
                             annotation: {
                                 description: ``
                             },
@@ -416,8 +446,8 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `"to find a cleared path," "Rama… …Maranatha"`,
-            workedHours: 0,
+            taskName: `allow sub stanzas`,
+            workedHours: 1,
             neededHours: 1
         },
         {

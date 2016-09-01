@@ -24,22 +24,6 @@
         &:not(:last-child) {
             margin-bottom: @lyric-verse-size;
         }
-
-        &.custom {
-            @margin-offset: 15%;
-            @overlap-margin: 20px;
-            position: relative;
-
-            &.left {
-                margin-right: @margin-offset;
-            }
-            &.right {
-                margin-left: @margin-offset;
-            }
-            &.overlap {
-                margin-top: -@overlap-margin;
-            }
-        }
     }
 
     .anchor-block {
@@ -66,6 +50,10 @@
     }
 
     .stanza-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         @stanza-block-margin: 10px;
         &:not(:first-child) {
             margin-left: @stanza-block-margin;
@@ -78,12 +66,6 @@
 
             &.bottom-only {
                 justify-content: flex-end;
-            }
-
-            .stanza {
-                &:not(:first-child):last-child {
-                    margin-top: @stanza-block-margin;
-                }
             }
         }
 
@@ -103,6 +85,11 @@
             .stanza {
                 border-radius: 50%;
             }
+        }
+
+        .sub-block {
+            margin-top: -2.5px;
+            display: flex;
         }
     }
 
@@ -130,6 +117,21 @@
             &:nth-child(even) {
                 background-color: #fcfce9;
             }
+        }
+    }
+
+    .custom {
+        @side-padding: 15%;
+        @overlap-margin: 20px;
+
+        &.left {
+            padding-right: @side-padding;
+        }
+        &.right {
+            padding-left: @side-padding;
+        }
+        &.overlap {
+            margin-top: -@overlap-margin;
         }
     }
 }

@@ -78,7 +78,7 @@ module.exports = {
         [
             {
                 time: 30,
-                customLayout: `${LEFT} ${OVERLAP}`,
+                unitClass: `${LEFT} ${OVERLAP}`,
                 lyric: [
                     {
                         italic: [
@@ -97,7 +97,7 @@ module.exports = {
         [
             {
                 time: 32,
-                customLayout: `${RIGHT} ${OVERLAP}`,
+                unitClass: `${RIGHT} ${OVERLAP}`,
                 lyric: [
                     `licking lips`,
                     {
@@ -364,7 +364,7 @@ module.exports = {
         [
             {
                 time: 126,
-                customLayout: `${LEFT} ${OVERLAP}`,
+                unitClass: `${LEFT} ${OVERLAP}`,
                 lyric: [
                     {
                         italic: [
@@ -383,7 +383,7 @@ module.exports = {
         [
             {
                 time: 128,
-                customLayout: `${RIGHT} ${OVERLAP}`,
+                unitClass: `${RIGHT} ${OVERLAP}`,
                 lyric: [
                     `dripping`,
                     {

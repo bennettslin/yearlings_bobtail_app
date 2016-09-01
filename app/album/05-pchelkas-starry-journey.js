@@ -93,6 +93,24 @@ module.exports = {
         ],
         [
             {
+                unitIndex: true,
+                subStanzaClass: RIGHT,
+                subStanza: [
+                    {
+                        // TODO: Figure out time for this.
+                        time: '?',
+                        lyric: {
+                            emphasis: {
+                                anchor: `Poor Sam Peabody!`,
+                                annotation: {
+                                    description: `When my family visited Canada one late summer, the white-throated sparrow was in breeding season, and we heard its song everywhere. I found the sound so haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.`
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
                 time: 27,
                 lyric: [
                     `You stowed away`,
@@ -117,21 +135,6 @@ module.exports = {
                     `throughout the entire weekend!"`
                 ]
             },
-        ],
-        [
-            {
-                // TODO: Figure out time for this.
-                time: '?',
-                customLayout: `${RIGHT} ${OVERLAP}`,
-                lyric: {
-                    emphasis: {
-                        anchor: `Poor Sam Peabody!`,
-                        annotation: {
-                            description: `When my family visited Canada one late summer, the white-throated sparrow was in breeding season, and we heard its song everywhere. I found the sound so haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.`
-                        }
-                    }
-                }
-            }
         ],
         [
             {

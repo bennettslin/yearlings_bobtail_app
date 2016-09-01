@@ -127,6 +127,18 @@ module.exports = {
         ],
         [
             {
+                unitIndex: true,
+                subStanzaClass: RIGHT,
+                subStanza: [
+                    {
+                        time: 97,
+                        lyric: {
+                            emphasis: `Don't little raisin fingers need to dry?`
+                        }
+                    }
+                ],
+            },
+            {
                 // TODO: Say more?
                 time: 85,
                 lyric: `Didi, you've been in the bath all this time.`
@@ -134,15 +146,6 @@ module.exports = {
             {
                 time: 91,
                 lyric: `Didi, come out, you can't soak there all night.`
-            }
-        ],
-        [
-            {
-                time: 97,
-                customLayout: `${RIGHT} ${OVERLAP}`,
-                lyric: {
-                    emphasis: `Don't little raisin fingers need to dry?`
-                }
             }
         ],
         [

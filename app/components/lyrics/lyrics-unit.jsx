@@ -10,27 +10,30 @@ const LyricsUnit = (props) => {
 
     const { stanzaArray } = props,
 
-        // Determine whether lyric unit has a custom layout.
-        { customLayout,
-
-          // Determine whether there are dot stanzas.
+        { unitClass,
           dotStanza,
-
-          // Determine whether there are side stanzas.
+          subStanza,
+          subStanzaClass,
           topSideStanza,
           bottomSideStanza } = stanzaArray[0],
 
         isDotOnly = dotStanza && stanzaArray.length === 1,
-        isBottomOnly = !topSideStanza && bottomSideStanza
+        isBottomOnly = !topSideStanza && bottomSideStanza,
+        topSideSubStanza = topSideStanza ? topSideStanza[0].subStanza : null,
+        topSideSubStanzaClass = topSideStanza ? topSideStanza[0].subStanzaClass : null
 
     return (
         <LyricsUnitView {...props}
-            customLayout={customLayout}
+            unitClass={unitClass}
             dotStanza={dotStanza}
             isDotOnly={isDotOnly}
+            subStanza={subStanza}
+            subStanzaClass={subStanzaClass}
             topSideStanza={topSideStanza}
             bottomSideStanza={bottomSideStanza}
             isBottomOnly={isBottomOnly}
+            topSideSubStanza={topSideSubStanza}
+            topSideSubStanzaClass={topSideSubStanzaClass}
         />
     )
 }
@@ -48,54 +51,58 @@ const LyricsUnitView = ({
     onAnnotationClick,
 
     // From controller.
-    customLayout,
+    unitClass,
     dotStanza,
     isDotOnly,
+    subStanza,
+    subStanzaClass,
     topSideStanza,
     bottomSideStanza,
-    isBottomOnly
+    isBottomOnly,
+    topSideSubStanza,
+    topSideSubStanzaClass
 
-}) => (
-
-    <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}${customLayout ? ` custom ${customLayout}` : ''}`}>
-        {dotStanza ?
-            <div className={`stanza-block dot ${isDotOnly ? 'only' : 'shared'}`}>
-                <DotStanza
-                    activeDotKeys={activeDotKeys}
-                    dotStanzaObject={dotStanza}
-                    onAnnotationClick={onAnnotationClick}
-                />
-            </div> : null
-        }
-        {!isDotOnly ?
-            <div className={`stanza-block main`}>
+}) => {
+    const getStanza = (stanzaArray, inSubBlock, subStanzaClass) => {
+        return stanzaArray ? (
+            inSubBlock ?
+                <div className={`sub-block${subStanzaClass ? ` custom ${subStanzaClass}` : ''}`}>
+                    {getStanza(stanzaArray, false)}
+                </div> :
                 <LyricsStanza
                     activeDotKeys={activeDotKeys}
                     stanzaArray={stanzaArray}
                     onAnnotationClick={onAnnotationClick}
                 />
-            </div> : null
-        }
-        {/* Include side stanzas, if there are any. */}
-        {topSideStanza || bottomSideStanza ?
-            <div className={`stanza-block side${isBottomOnly ? ' bottom-only' : ''}`}>
-                {topSideStanza ?
-                    <LyricsStanza
+        ) : null
+    }
+
+    return (
+        <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}${unitClass ? ` custom ${unitClass}` : ''}`}>
+            {dotStanza ?
+                <div className={`stanza-block dot ${isDotOnly ? 'only' : 'shared'}`}>
+                    <DotStanza
                         activeDotKeys={activeDotKeys}
-                        stanzaArray={topSideStanza}
+                        dotStanzaObject={dotStanza}
                         onAnnotationClick={onAnnotationClick}
-                    /> : null
-                }
-                {bottomSideStanza ?
-                    <LyricsStanza
-                        activeDotKeys={activeDotKeys}
-                        stanzaArray={bottomSideStanza}
-                        onAnnotationClick={onAnnotationClick}
-                    /> : null
-                }
-            </div> : null
-        }
-    </div>
-)
+                    />
+                </div> : null
+            }
+            {!isDotOnly ?
+                <div className="stanza-block main">
+                    {getStanza(stanzaArray)}
+                    {getStanza(subStanza, true, subStanzaClass)}
+                </div> : null
+            }
+            {topSideStanza || bottomSideStanza ?
+                <div className={`stanza-block side${isBottomOnly ? ' bottom-only' : ''}`}>
+                    {getStanza(topSideStanza)}
+                    {getStanza(topSideSubStanza, true, topSideSubStanzaClass)}
+                    {getStanza(bottomSideStanza)}
+                </div> : null
+            }
+        </div>
+    )
+}
 
 export default LyricsUnit

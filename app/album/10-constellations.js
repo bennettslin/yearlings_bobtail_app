@@ -509,6 +509,23 @@ module.exports = {
         ],
         [
             {
+                unitIndex: true,
+                subStanzaClass: RIGHT,
+                subStanza: [
+                    {
+                        time: 128,
+                        lyric: {
+                            italic: {
+                                anchor: `sunk in tarpid lies!`,
+                                annotation: {
+                                    description: `Tar pits occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`
+                                }
+                            }
+                        }
+                    }
+                ],
+            },
+            {
                 time: 124,
                 lyric: [
                     `The`,
@@ -530,22 +547,29 @@ module.exports = {
         ],
         [
             {
-                time: 128,
-                customLayout: `${RIGHT} ${OVERLAP}`,
-                lyric: {
-                    italic: {
-                        anchor: `sunk in tarpid lies!`,
-                        annotation: {
-                            description: `Tar pits occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`
+                unitIndex: true,
+                unitClass: OVERLAP,
+                subStanzaClass: RIGHT,
+                subStanza: [
+                    {
+                        time: 135,
+                        lyric: {
+                            italic: [
+                                `he sees`,
+                                {
+                                    anchor: `Lowkey and Freyed!`,
+                                    properNoun: true,
+                                    annotation: {
+                                        description: `"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
+                                    }
+                                }
+                            ]
                         }
                     }
-                }
-            }
-        ],
-        [
+                ],
+            },
             {
                 time: 131,
-                customLayout: OVERLAP,
                 lyric: [
                     `In`,
                     {
@@ -566,26 +590,8 @@ module.exports = {
         ],
         [
             {
-                time: 135,
-                customLayout: `${RIGHT} ${OVERLAP}`,
-                lyric: {
-                    italic: [
-                        `he sees`,
-                        {
-                            anchor: `Lowkey and Freyed!`,
-                            properNoun: true,
-                            annotation: {
-                                description: `"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
-                            }
-                        }
-                    ]
-                }
-            }
-        ],
-        [
-            {
                 time: 139,
-                customLayout: OVERLAP,
+                unitClass: OVERLAP,
                 lyric: [
                     {
                         anchor: `Noworse and Nunavutter`,

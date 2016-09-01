@@ -559,7 +559,7 @@ module.exports = {
             {
                 time: 129,
                 // TODO: Switch these voices?
-                customLayout: 'left',
+                unitClass: LEFT,
                 lyric: `Should you hide, or could you fight,`
             },
             {
@@ -570,7 +570,7 @@ module.exports = {
         [
             {
                 time: 135,
-                customLayout: `${RIGHT} ${OVERLAP}`,
+                unitClass: `${RIGHT} ${OVERLAP}`,
                 lyric: `Can a holed up hostage`
             },
             {
@@ -590,7 +590,7 @@ module.exports = {
         [
             {
                 time: 141,
-                customLayout: `${LEFT} ${OVERLAP}`,
+                unitClass: `${LEFT} ${OVERLAP}`,
                 lyric: `But in time, wouldn't you find`
             },
             {
