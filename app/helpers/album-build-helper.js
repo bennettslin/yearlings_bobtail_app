@@ -50,17 +50,18 @@ const _convertOverviews = (object) => {
     object.overviews = overviews
 }
 
-/**
- * Add title object as if it is the first stanza of the lyrics object.
- */
 const _addTitleToLyrics = (title, lyrics) => {
+    // Add title object to lyrics object.
     const { annotation } = title
     if (annotation) {
         title.properNoun = true
         annotation.dotKeys = { title: true }
     }
 
-    // If first unit contains a lone dot stanza, append title to unit.
+    /**
+     * If first unit contains a lone dot stanza, append title to unit. TODO:
+     * There might turn out to be no instances where this is ever the case.
+     */
     if (lyrics[0][0].unitIndex && lyrics[0].length === 1) {
         lyrics[0].push({
             lyric: title,

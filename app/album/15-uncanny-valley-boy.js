@@ -168,6 +168,23 @@ module.exports = {
         ],
         [
             {
+                unitIndex: true,
+                topSideStanza: [
+                    {
+                        lyric: `Oh, bastard ingrate!`
+                    },
+                    {
+                        lyric: `Some nights you wake,`
+                    },
+                    {
+                        lyric: `climb and survey`
+                    },
+                    {
+                        lyric: `the houses you've betrayed.`
+                    }
+                ]
+            },
+            {
                 time: 61,
                 lyric: `Mowed down by the tides,`
             },
@@ -182,23 +199,20 @@ module.exports = {
             {
                 time: '?',
                 lyric: `to seal out their floods.`
-            },
-            [
-                {
-                    lyric: `Oh, bastard ingrate!`
-                },
-                {
-                    lyric: `Some nights you wake,`
-                },
-                {
-                    lyric: `climb and survey`
-                },
-                {
-                    lyric: `the houses you've betrayed.`
-                }
-            ]
+            }
         ],
         [
+            {
+                unitIndex: true,
+                topSideStanza: [
+                    {
+                        lyric: `Scattered your beans`
+                    },
+                    {
+                        lyric: `over suburbia…`
+                    }
+                ]
+            },
             {
                 time: 74,
                 lyric: `But then, my little prince,`
@@ -214,15 +228,7 @@ module.exports = {
             {
                 time: '?',
                 lyric: `and healed round your grudge…`
-            },
-            [
-                {
-                    lyric: `Scattered your beans`
-                },
-                {
-                    lyric: `over suburbia…`
-                }
-            ]
+            }
         ],
         [
             {
@@ -303,6 +309,23 @@ module.exports = {
         ],
         [
             {
+                unitIndex: true,
+                topSideStanza: [
+                    {
+                        lyric: `Through tatters of sky,`
+                    },
+                    {
+                        lyric: `their sun tinkles light`
+                    },
+                    {
+                        lyric: `in needling chimes`
+                    },
+                    {
+                        lyric: `that weave through the vines,`
+                    }
+                ]
+            },
+            {
                 time: 160,
                 lyric: `Oh child of mine,`
             },
@@ -317,23 +340,20 @@ module.exports = {
             {
                 time: '?',
                 lyric: `to find a cleared path`
-            },
-            [
-                {
-                    lyric: `Through tatters of sky,`
-                },
-                {
-                    lyric: `their sun tinkles light`
-                },
-                {
-                    lyric: `in needling chimes`
-                },
-                {
-                    lyric: `that weave through the vines,`
-                }
-            ]
+            }
         ],
         [
+            {
+                unitIndex: true,
+                topSideStanza: [
+                    {
+                        lyric: `cast on your peons,`
+                    },
+                    {
+                        lyric: `old and subservient.`
+                    }
+                ]
+            },
             {
                 time: 172,
                 lyric: `in life's unbearable maze?`
@@ -355,17 +375,35 @@ module.exports = {
             {
                 time: '?',
                 lyric: `to five-year plans.`
-            },
-            [
-                {
-                    lyric: `cast on your peons,`
-                },
-                {
-                    lyric: `old and subservient.`
-                }
-            ]
+            }
         ],
         [
+            {
+                unitIndex: true,
+                topSideStanza: [
+                    {
+                        lyric: {
+                            anchor: `Rama, Rama…`,
+                            properNoun: true,
+                            annotation: {
+                                description: ``
+                            },
+                            todo: true
+                        }
+                    }
+                ],
+                bottomSideStanza: [
+                    {
+                        lyric: {
+                            anchor: `…Maranatha!`,
+                            annotation: {
+                                description: ``
+                            },
+                            todo: true
+                        }
+                    }
+                ]
+            },
             {
                 time: 184,
                 lyric: `Now son, before you embark on your great bildungsroman,`
@@ -373,30 +411,7 @@ module.exports = {
             {
                 time: 191,
                 lyric: `shouldn't you first be sure you've finally become someone?`
-            },
-            [
-                {
-                    lyric: {
-                        anchor: `Rama, Rama…`,
-                        properNoun: true,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    }
-                }
-            ],
-            [
-                {
-                    lyric: {
-                        anchor: `…Maranatha!`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    }
-                }
-            ]
+            }
         ]
     ],
     tasks: [

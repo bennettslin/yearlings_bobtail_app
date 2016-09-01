@@ -1,7 +1,6 @@
 import React from 'react'
 import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
-import { BOTTOM_ONLY_SIDE_STANZA } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -19,35 +18,26 @@ const LyricsUnit = (props) => {
         unitIndexObject = stanzaArray[0],
 
         // Determine whether lyric unit has a custom layout.
-        customLayout = unitIndexObject.customLayout,
+        { customLayout,
 
-        // Determine whether there are dot stanzas.
-        dotStanzaObject = unitIndexObject.dotStanza,
-        isDotOnlyUnit = dotStanzaObject && stanzaArray.length === 1,
+          // Determine whether there are dot stanzas.
+          dotStanza,
 
-        // Determine whether there are side stanzas, which are always on right.
-        lastVerseObject = stanzaArray.length > 1 ? stanzaArray[stanzaArray.length - 1] : null,
-        lastSideStanza = lastVerseObject instanceof Array ?
-            lastVerseObject : null,
-        nextLastVerseObject = stanzaArray.length > 1 ?
-            stanzaArray[stanzaArray.length - 2] : null,
-        nextLastSideStanza = lastSideStanza &&
-            nextLastVerseObject &&
-            nextLastVerseObject instanceof Array ?
-            nextLastVerseObject : null,
-        bottomOnlySideStanza = lastSideStanza ?
-            lastSideStanza[0].side === BOTTOM_ONLY_SIDE_STANZA : false
+          // Determine whether there are side stanzas.
+          topSideStanza,
+          bottomSideStanza } = unitIndexObject,
 
-    console.error('unitIndexObject.unitIndex', unitIndexObject.unitIndex);
+        isDotOnly = dotStanza && stanzaArray.length === 1,
+        isBottomOnly = !topSideStanza && bottomSideStanza
 
     return (
         <LyricsUnitView {...props}
             customLayout={customLayout}
-            dotStanzaObject={dotStanzaObject}
-            isDotOnlyUnit={isDotOnlyUnit}
-            lastSideStanza={lastSideStanza}
-            nextLastSideStanza={nextLastSideStanza}
-            bottomOnlySideStanza={bottomOnlySideStanza}
+            dotStanza={dotStanza}
+            isDotOnly={isDotOnly}
+            topSideStanza={topSideStanza}
+            bottomSideStanza={bottomSideStanza}
+            isBottomOnly={isBottomOnly}
         />
     )
 }
@@ -66,25 +56,25 @@ const LyricsUnitView = ({
 
     // From controller.
     customLayout,
-    dotStanzaObject,
-    isDotOnlyUnit,
-    lastSideStanza,
-    nextLastSideStanza,
-    bottomOnlySideStanza
+    dotStanza,
+    isDotOnly,
+    topSideStanza,
+    bottomSideStanza,
+    isBottomOnly
 
 }) => (
 
     <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}${customLayout ? ` custom ${customLayout}` : ''}`}>
-        {dotStanzaObject ?
-            <div className={`stanza-block dot ${isDotOnlyUnit ? 'only' : 'shared'}`}>
+        {dotStanza ?
+            <div className={`stanza-block dot ${isDotOnly ? 'only' : 'shared'}`}>
                 <DotStanza
                     activeDotKeys={activeDotKeys}
-                    dotStanzaObject={dotStanzaObject}
+                    dotStanzaObject={dotStanza}
                     onAnnotationClick={onAnnotationClick}
                 />
             </div> : null
         }
-        {!isDotOnlyUnit ?
+        {!isDotOnly ?
             <div className={`stanza-block main`}>
                 <LyricsStanza
                     activeDotKeys={activeDotKeys}
@@ -94,19 +84,19 @@ const LyricsUnitView = ({
             </div> : null
         }
         {/* Include side stanzas, if there are any. */}
-        {lastSideStanza ?
-            <div className={`stanza-block side${bottomOnlySideStanza ? ' bottom-only' : ''}`}>
-                {nextLastSideStanza ?
+        {topSideStanza || bottomSideStanza ?
+            <div className={`stanza-block side${isBottomOnly ? ' bottom-only' : ''}`}>
+                {topSideStanza ?
                     <LyricsStanza
                         activeDotKeys={activeDotKeys}
-                        stanzaArray={nextLastSideStanza}
+                        stanzaArray={topSideStanza}
                         onAnnotationClick={onAnnotationClick}
                     /> : null
                 }
-                {lastSideStanza ?
+                {bottomSideStanza ?
                     <LyricsStanza
                         activeDotKeys={activeDotKeys}
-                        stanzaArray={lastSideStanza}
+                        stanzaArray={bottomSideStanza}
                         onAnnotationClick={onAnnotationClick}
                     /> : null
                 }

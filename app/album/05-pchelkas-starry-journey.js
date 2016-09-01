@@ -1,4 +1,4 @@
-import { RIGHT, OVERLAP, BOTTOM_ONLY_SIDE_STANZA } from 'helpers/constants'
+import { RIGHT, OVERLAP } from 'helpers/constants'
 
 /**
  * Ash Wednesday and Pchelka`s Starry Journey have been switched from the song

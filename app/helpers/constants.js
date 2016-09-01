@@ -17,12 +17,6 @@ module.exports = {
     ACTIVE_OVERVIEW_INDEX: 'activeOverviewIndex',
     ACTIVE_WIKI_URL: 'activeWikiUrl',
 
-    /**
-     * If there is one side stanza, it defaults to top. If there are two, one
-     * is the top, other is the bottom.
-     */
-    BOTTOM_ONLY_SIDE_STANZA: 'bottomOnlySideStanza',
-
     DEFAULT_OVERVIEW_INDEX: 1,
 
     // This is only used by the stats helper.
@@ -46,7 +40,9 @@ module.exports = {
         ITALIC,
         EMPHASIS,
         ANCHOR,
-        'dotStanza'
+        'dotStanza',
+        'topSideStanza',
+        'bottomSideStanza'
     ],
 
     /**
