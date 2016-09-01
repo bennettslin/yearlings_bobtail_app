@@ -45,6 +45,11 @@ module.exports = {
         'anchor'
     ],
 
+    LEFT_LYRIC: 'left',
+    CENTRE_LYRIC: 'centre',
+    RIGHT_LYRIC: 'right',
+    OVERLAP: 'overlap',
+
     // FIXME: Match keys with classNames. And add overlap to constants.
     LYRIC_COLUMN_CLASSES: [
         {
