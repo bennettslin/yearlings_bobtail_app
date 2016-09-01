@@ -55,6 +55,20 @@
             margin-left: @stanza-block-margin;
         }
 
+        // FIXME: Make these custom layouts based on flexbox, if possible. It might be better to add the class to a parent container.
+        &.left {
+            position: relative;
+            left: -10%;
+        }
+        &.right {
+            position: relative;
+            right: -10%;
+        }
+        &.overlap {
+            position: relative;
+            margin-top: -22.5px;
+        }
+
         &.side {
             display: flex;
             flex-direction: column;
@@ -130,23 +144,18 @@
     &.left {
         text-indent:-@hanging-indent-width;
         padding-left: @hanging-indent-width;
-
-        &.centre {
-            padding-left: @centre-edge-margin;
-        }
     }
 
     &.centre {
         width: 100%;
-
-        &.exact {
-            text-indent: 0;
-            padding-left: 0;
-            text-align: center;
-        }
+        text-indent: 0;
+        padding-left: 0;
+        text-align: center;
     }
 
     &.right {
+        // Single gutter between far left and right columns.
+        margin-left: @field-padding;
 
         /**
          * Styling for hanging indent with right-aligned text. The hidden
@@ -161,15 +170,6 @@
             opacity: 0;
             font-size: 0;
             line-height: 0;
-        }
-
-        &.far {
-            // Single gutter between far left and right columns.
-            margin-left: @field-padding;
-        }
-
-        &.centre {
-            padding-right: @centre-edge-margin;
         }
     }
 }

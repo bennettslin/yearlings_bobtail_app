@@ -11,6 +11,9 @@ const LyricsUnit = (props) => {
 
     const { stanzaArray } = props,
 
+        // Determine whether stanza has a custom layout. (FIXME: This won't work if first object is not a text stanza.)
+        stanzaLayout = stanzaArray[0].stanzaLayout,
+
         // Determine whether there are anchor stanzas.
         firstVerseObject = stanzaArray[0],
         dotStanzaObject = firstVerseObject instanceof Array ?
@@ -32,6 +35,7 @@ const LyricsUnit = (props) => {
 
     return (
         <LyricsUnitView {...props}
+            stanzaLayout={stanzaLayout}
             dotStanzaObject={dotStanzaObject}
             isDotOnlyUnit={isDotOnlyUnit}
             lastSideStanza={lastSideStanza}
@@ -54,6 +58,7 @@ const LyricsUnitView = ({
     onAnnotationClick,
 
     // From controller.
+    stanzaLayout,
     dotStanzaObject,
     isDotOnlyUnit,
     lastSideStanza,
@@ -73,7 +78,7 @@ const LyricsUnitView = ({
             </div> : null
         }
         {!isDotOnlyUnit ?
-            <div className="stanza-block main">
+            <div className={`stanza-block main${stanzaLayout ? ` ${stanzaLayout}` : ''}`}>
                 <LyricsStanza
                     activeDotKeys={activeDotKeys}
                     stanzaArray={stanzaArray}

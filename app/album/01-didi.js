@@ -148,9 +148,12 @@ module.exports = {
             {
                 time: 91,
                 lyric: `Didi, come out, you can't soak there all night.`
-            },
+            }
+        ],
+        [
             {
                 time: 97,
+                stanzaLayout: 'right overlap',
                 lyric: {
                     emphasis: `Don't little raisin fingers need to dry?`
                 }

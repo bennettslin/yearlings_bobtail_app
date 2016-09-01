@@ -31,36 +31,33 @@ module.exports = {
      */
     LYRIC_TEXT_KEYS: [
         'lyric',
+
+        // Doublespeaker left.
         'leftLyric',
-        'centreLeftLyric',
+
+        // Doublespeaker centre.
         'centreLyric',
-        'centreRightLyric',
+
+        // Doublespeaker right.
         'rightLyric',
         'italic',
         'emphasis',
         'anchor'
     ],
 
+    // FIXME: Match keys with classNames. And add overlap to constants.
     LYRIC_COLUMN_CLASSES: [
         {
             key: 'leftLyric',
-            className: 'far left'
-        },
-        {
-            key: 'centreLeftLyric',
-            className: 'centre left'
+            className: 'left'
         },
         {
             key: 'centreLyric',
-            className: 'exact centre'
-        },
-        {
-            key: 'centreRightLyric',
-            className: 'centre right'
+            className: 'centre'
         },
         {
             key: 'rightLyric',
-            className: 'far right'
+            className: 'right'
         },
     ],
 

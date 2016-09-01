@@ -568,19 +568,23 @@ module.exports = {
             {
                 time: 129,
                 // TODO: Switch these voices?
-                centreRightLyric: `Should you hide, or could you fight,`
+                stanzaLayout: 'left',
+                lyric: `Should you hide, or could you fight,`
             },
             {
                 time: 132,
-                centreRightLyric: `when your day to die has come?`
-            },
+                lyric: `when your day to die has come?`
+            }
+        ],
+        [
             {
                 time: 135,
-                centreLeftLyric: `Can a holed up hostage`
+                stanzaLayout: 'right overlap',
+                lyric: `Can a holed up hostage`
             },
             {
                 time: 137,
-                centreLeftLyric: [
+                lyric: [
                     `pray for`,
                     {
                         anchor: `soulless solace`,
@@ -591,13 +595,16 @@ module.exports = {
                     `and just play dumb?`
                 ]
             },
+        ],
+        [
             {
                 time: 141,
-                centreRightLyric: `But in time, wouldn't you find`
+                stanzaLayout: 'left overlap',
+                lyric: `But in time, wouldn't you find`
             },
             {
                 time: 144,
-                centreRightLyric: `life is simply much too long?`
+                lyric: `life is simply much too long?`
             }
         ],
         [

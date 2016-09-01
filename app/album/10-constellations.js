@@ -538,16 +538,21 @@ module.exports = {
                     },
                     `cries,`
                 ]
-            },
+            }
+        ],
+        [
             {
                 time: 128,
+                stanzaLayout: 'right overlap',
                 lyric: {
                     anchor: `sunk in tarpid lies.`,
                     annotation: {
                             description: `Tar pits occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`
                         }
                 }
-            },
+            }
+        ],
+        [
             {
                 time: 131,
                 lyric: [
@@ -566,9 +571,12 @@ module.exports = {
                         }
                     }
                 ]
-            },
+            }
+        ],
+        [
             {
                 time: 135,
+                stanzaLayout: 'right overlap',
                 lyric: [
                     `he sees`,
                     {
@@ -579,7 +587,9 @@ module.exports = {
                         }
                     }
                 ]
-            },
+            }
+        ],
+        [
             {
                 time: 139,
                 lyric: [

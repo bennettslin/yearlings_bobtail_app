@@ -86,12 +86,15 @@ module.exports = {
                     },
                     `eclipsed in full.`
                 ]
-            },
+            }
+        ],
+        [
             {
                 time: 30,
+                stanzaLayout: 'right overlap',
                 lyric: [
                     {
-                        emphasis: [
+                        italic: [
                             {
                                 anchor: `Chilled cola's free`,
                                 annotation: {
@@ -102,9 +105,12 @@ module.exports = {
                         ]
                     }
                 ]
-            },
+            }
+        ],
+        [
             {
                 time: 32,
+                stanzaLayout: 'left overlap',
                 lyric: [
                     `licking lips`,
                     {
@@ -367,11 +373,14 @@ module.exports = {
                     }
                 ]
             },
+        ],
+        [
             {
                 time: 126,
+                stanzaLayout: 'right overlap',
                 lyric: [
                     {
-                        emphasis: [
+                        italic: [
                             `Shelled skull has freed`,
                             {
                                 anchor: `unsalvaged soul…`,
@@ -382,9 +391,12 @@ module.exports = {
                         ]
                     }
                 ]
-            },
+            }
+        ],
+        [
             {
                 time: 128,
+                stanzaLayout: 'left overlap',
                 lyric: [
                     `dripping`,
                     {

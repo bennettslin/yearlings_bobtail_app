@@ -258,19 +258,32 @@ module.exports = {
             {
                 time: 145,
                 lyric: `No well worn sari could sway you from a fairer marathon!`
-            },
+            }
+        ],
+        [
+            {
+                // TODO: Figure out times for these.
+                time: '?',
+                stanzaLayout: 'right overlap',
+                lyric: {
+                    italic: `Your dulling gold now gone…`
+                }
+            }
+        ],
+        [
             {
                 time: 152,
                 lyric: `Stubborn harpies can't draw this contest to be one!`
-            },
-            [
-                {
-                    lyric: `Your dulling gold now gone…`
-                },
-                {
-                    lyric: `…traded in for the trophy blondes.`
+            }
+        ],
+        [
+            {
+                time: '?',
+                stanzaLayout: 'right overlap',
+                lyric: {
+                    italic: `…traded in for the trophy blondes.`
                 }
-            ]
+            }
         ],
         [
             {
