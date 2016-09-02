@@ -62,7 +62,7 @@ const _addTitleToLyrics = (title, lyrics) => {
      * If first unit contains a lone dot stanza, append title to unit. TODO:
      * There might turn out to be no instances where this is ever the case.
      */
-    if (lyrics[0][0].unitIndex && lyrics[0].length === 1) {
+    if (lyrics[0][0].unitExtras && lyrics[0].length === 1) {
         lyrics[0].push({
             lyric: title,
             isTitle: true

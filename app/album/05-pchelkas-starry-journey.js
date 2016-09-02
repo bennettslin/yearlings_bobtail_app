@@ -93,8 +93,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
-                subStanzaClass: RIGHT,
+                unitExtras: true,
                 subStanza: [
                     {
                         // TODO: Figure out time for this.

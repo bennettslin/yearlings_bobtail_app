@@ -285,7 +285,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
+                unitExtras: true,
                 topSideStanza: [
                     {
                         lyric: {
@@ -334,7 +334,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
+                unitExtras: true,
                 bottomSideStanza: [
                     {
                         lyric: {

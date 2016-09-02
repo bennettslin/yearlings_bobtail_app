@@ -127,8 +127,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
-                subStanzaClass: RIGHT,
+                unitExtras: true,
                 subStanza: [
                     {
                         time: 97,

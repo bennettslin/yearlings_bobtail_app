@@ -509,8 +509,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
-                subStanzaClass: RIGHT,
+                unitExtras: true,
                 subStanza: [
                     {
                         time: 128,
@@ -547,9 +546,8 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
+                unitExtras: true,
                 unitClass: OVERLAP,
-                subStanzaClass: RIGHT,
                 subStanza: [
                     {
                         time: 135,
@@ -590,8 +588,11 @@ module.exports = {
         ],
         [
             {
+                unitExtras: true,
+                unitClass: OVERLAP
+            },
+            {
                 time: 139,
-                unitClass: OVERLAP,
                 lyric: [
                     {
                         anchor: `Noworse and Nunavutter`,

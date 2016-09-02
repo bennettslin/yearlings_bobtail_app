@@ -557,9 +557,12 @@ module.exports = {
         ],
         [
             {
+                unitExtras: true,
+                unitClass: LEFT
+            },
+            {
                 time: 129,
                 // TODO: Switch these voices?
-                unitClass: LEFT,
                 lyric: `Should you hide, or could you fight,`
             },
             {
@@ -569,8 +572,11 @@ module.exports = {
         ],
         [
             {
+                unitExtras: true,
+                unitClass: `${RIGHT} ${OVERLAP}`
+            },
+            {
                 time: 135,
-                unitClass: `${RIGHT} ${OVERLAP}`,
                 lyric: `Can a holed up hostage`
             },
             {
@@ -589,8 +595,11 @@ module.exports = {
         ],
         [
             {
+                unitExtras: true,
+                unitClass: LEFT
+            },
+            {
                 time: 141,
-                unitClass: `${LEFT} ${OVERLAP}`,
                 lyric: `But in time, wouldn't you find`
             },
             {
@@ -599,6 +608,10 @@ module.exports = {
             }
         ],
         [
+            {
+                unitExtras: true,
+                unitClass: OVERLAP
+            },
             {
                 time: 147,
                 // TODO: Reference to Ash Wednesday.

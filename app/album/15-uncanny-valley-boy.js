@@ -168,7 +168,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
+                unitExtras: true,
                 topSideStanza: [
                     {
                         lyric: `Oh, bastard ingrate!`
@@ -183,7 +183,6 @@ module.exports = {
                         lyric: `the houses you've betrayed.`
                     }
                 ],
-                subStanzaClass: RIGHT,
                 subStanza: [
                     {
                         time: '?',
@@ -208,7 +207,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
+                unitExtras: true,
                 topSideStanza: [
                     {
                         lyric: `Scattered your beans`
@@ -217,7 +216,6 @@ module.exports = {
                         lyric: `over suburbia…`
                     }
                 ],
-                subStanzaClass: RIGHT,
                 subStanza: [
                     {
                         time: '?',
@@ -288,8 +286,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
-                subStanzaClass: RIGHT,
+                unitExtras: true,
                 subStanza: [
                     {
                         // TODO: Figure out times for these.
@@ -307,8 +304,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
-                subStanzaClass: RIGHT,
+                unitExtras: true,
                 subStanza: [
                     {
                         time: '?',
@@ -325,7 +321,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
+                unitExtras: true,
                 topSideStanza: [
                     {
                         lyric: `Through tatters of sky,`
@@ -340,7 +336,6 @@ module.exports = {
                         lyric: `that weave through the vines,`
                     }
                 ],
-                subStanzaClass: RIGHT,
                 subStanza: [
                     {
                         time: '?',
@@ -365,7 +360,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
+                unitExtras: true,
                 topSideStanza: [
                     {
                         lyric: `cast on your peons,`
@@ -374,7 +369,6 @@ module.exports = {
                         lyric: `old and subservient.`
                     }
                 ],
-                subStanzaClass: RIGHT,
                 subStanza: [
                     {
                         time: '?',
@@ -405,11 +399,10 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
+                unitExtras: true,
                 topSideStanza: [
                     {
-                        stanzaIndex: true,
-                        subStanzaClass: RIGHT,
+                        stanzaExtras: true,
                         subStanza: [
                             {
                                 lyric: {

@@ -13,14 +13,12 @@ const LyricsUnit = (props) => {
         { unitClass,
           dotStanza,
           subStanza,
-          subStanzaClass,
           topSideStanza,
           bottomSideStanza } = stanzaArray[0],
 
         isDotOnly = dotStanza && stanzaArray.length === 1,
         isBottomOnly = !topSideStanza && bottomSideStanza,
-        topSideSubStanza = topSideStanza ? topSideStanza[0].subStanza : null,
-        topSideSubStanzaClass = topSideStanza ? topSideStanza[0].subStanzaClass : null
+        topSideSubStanza = topSideStanza ? topSideStanza[0].subStanza : null
 
     return (
         <LyricsUnitView {...props}
@@ -28,12 +26,10 @@ const LyricsUnit = (props) => {
             dotStanza={dotStanza}
             isDotOnly={isDotOnly}
             subStanza={subStanza}
-            subStanzaClass={subStanzaClass}
             topSideStanza={topSideStanza}
             bottomSideStanza={bottomSideStanza}
             isBottomOnly={isBottomOnly}
             topSideSubStanza={topSideSubStanza}
-            topSideSubStanzaClass={topSideSubStanzaClass}
         />
     )
 }
@@ -55,18 +51,16 @@ const LyricsUnitView = ({
     dotStanza,
     isDotOnly,
     subStanza,
-    subStanzaClass,
     topSideStanza,
     bottomSideStanza,
     isBottomOnly,
     topSideSubStanza,
-    topSideSubStanzaClass
 
 }) => {
-    const getStanza = (stanzaArray, inSubBlock, subStanzaClass) => {
+    const getStanza = (stanzaArray, inSubBlock) => {
         return stanzaArray ? (
             inSubBlock ?
-                <div className={`sub-block${subStanzaClass ? ` custom ${subStanzaClass}` : ''}`}>
+                <div className="sub-block custom right">
                     {getStanza(stanzaArray, false)}
                 </div> :
                 <LyricsStanza
@@ -91,13 +85,13 @@ const LyricsUnitView = ({
             {!isDotOnly ?
                 <div className="stanza-block main">
                     {getStanza(stanzaArray)}
-                    {getStanza(subStanza, true, subStanzaClass)}
+                    {getStanza(subStanza, true)}
                 </div> : null
             }
             {topSideStanza || bottomSideStanza ?
                 <div className={`stanza-block side${isBottomOnly ? ' bottom-only' : ''}`}>
                     {getStanza(topSideStanza)}
-                    {getStanza(topSideSubStanza, true, topSideSubStanzaClass)}
+                    {getStanza(topSideSubStanza, true)}
                     {getStanza(bottomSideStanza)}
                 </div> : null
             }

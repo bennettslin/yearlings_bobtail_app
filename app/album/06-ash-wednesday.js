@@ -13,7 +13,7 @@ module.exports = {
     lyrics: [
         [
             {
-                unitIndex: true,
+                unitExtras: true,
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
@@ -441,7 +441,7 @@ module.exports = {
         ],
         [
             {
-                unitIndex: true,
+                unitExtras: true,
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
