@@ -13,6 +13,7 @@ import { ACTIVE_SONG_INDEX,
          ACTIVE_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from 'helpers/constants'
 import AlbumHelper from 'helpers/album-view-helper'
+import { intersects } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
 import SessionHelper from 'helpers/session-helper'
 
@@ -122,6 +123,30 @@ class App extends Component {
         const isActive = !this.props.activeDotKeys[dotKey]
         this.props.toggleDotKey(dotKey, isActive)
         SessionHelper.setDotInSession(dotKey, isActive)
+
+        // If this is the last active dot key, then close the annotation.
+        if (!isActive) {
+            this._deselectAnnotationWithNoActiveDots(dotKey)
+        }
+    }
+
+    _deselectAnnotationWithNoActiveDots(dotKey) {
+        const { activeAnnotationIndex,
+                activeSongIndex,
+                activeDotKeys,
+                songs } = this.props
+
+        const activeSong = AlbumHelper.getSong(activeSongIndex, songs),
+            annotation = AlbumHelper.getAnnotation(activeAnnotationIndex, activeSong),
+            presentDotKeys = annotation ? annotation.dotKeys : null,
+
+            // The dotKey being toggled inactive is still active at this stage.
+            postActiveDotKeys = Object.assign(activeDotKeys, { [dotKey]: false })
+
+        // Deselect annotation if all its dot keys are inactive.
+        if (annotation && !intersects(presentDotKeys, postActiveDotKeys)) {
+            this.handleAnnotationSelect()
+        }
     }
 
     handleAnnotationSelect(activeIndex = 0) {

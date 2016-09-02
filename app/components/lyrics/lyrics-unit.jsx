@@ -12,7 +12,7 @@ const LyricsUnit = (props) => {
 
         { unitClass,
           sectionClass,
-          sectionIndex,
+          subsequentClass,
           dotStanza,
           subStanza,
           topSideStanza,
@@ -26,7 +26,7 @@ const LyricsUnit = (props) => {
         <LyricsUnitView {...props}
             unitClass={unitClass}
             sectionClass={sectionClass}
-            sectionIndex={sectionIndex}
+            subsequentClass={subsequentClass}
             dotStanza={dotStanza}
             isDotOnly={isDotOnly}
             subStanza={subStanza}
@@ -53,7 +53,7 @@ const LyricsUnitView = ({
     // From controller.
     unitClass,
     sectionClass,
-    sectionIndex,
+    subsequentClass,
     dotStanza,
     isDotOnly,
     subStanza,
@@ -91,7 +91,7 @@ const LyricsUnitView = ({
                 </div> : null
             }
             {!isDotOnly ?
-                <div className={`stanza-block main${sectionIndex ? ' subsequent' : ''}`}>
+                <div className={`stanza-block main${subsequentClass ? ' subsequent' : ''}`}>
                     {getStanza({ stanzaArray, isMain: true })}
                     {getStanza({ stanzaArray: subStanza, inSubBlock: true })}
                 </div> : null

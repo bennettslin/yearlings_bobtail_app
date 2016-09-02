@@ -218,7 +218,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: 'bridge',
-                sectionIndex: 1
+                subsequentClass: true
             }
         ],
         [
@@ -279,7 +279,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: 'chorus',
-                sectionIndex: 1
+                subsequentClass: true
             }
         ]
     ],

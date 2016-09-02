@@ -71,6 +71,10 @@
             &.bottom-only {
                 justify-content: flex-end;
             }
+
+            .stanza {
+                box-shadow: 0 1px 2px 2px yellow;
+            }
         }
 
         &.dot {
@@ -95,6 +99,10 @@
         .sub-block {
             margin-top: -2.5px;
             display: flex;
+
+            .stanza {
+                box-shadow: 0 1px 2px 2px red;
+            }
         }
     }
 
@@ -106,19 +114,19 @@
         // This refers to the verse section!
         // TODO: Better styling, of course.
         &.verse {
-            border: 1px solid orange;
+            box-shadow: 0 1px 2px 2px orange;
         }
 
         &.prechorus {
-            border: 1px solid green;
+            box-shadow: 0 1px 2px 2px green;
         }
 
         &.chorus {
-            border: 1px solid blue;
+            box-shadow: 0 1px 2px 2px blue;
         }
 
         &.bridge {
-            border: 1px solid purple;
+            box-shadow: 0 1px 2px 2px purple;
         }
 
         // This refers to the verse lyric!

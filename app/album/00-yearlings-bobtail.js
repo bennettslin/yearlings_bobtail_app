@@ -27,12 +27,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `add verse, prechorus, chorus categories to stanzas, stylise`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `hide annotation when dots inactive`,
+            taskName: `add song structures to lyrics`,
             workedHours: 0,
             neededHours: 1
         },
@@ -45,11 +40,6 @@ module.exports = {
             taskName: `change every "one" to "you"`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `change reduce to for/of to allow breaks`,
-            workedHours: 0,
-            neededHours: 2
         },
         {
             taskName: `write album overviews`,
@@ -164,6 +154,16 @@ module.exports = {
             taskName: `improve custom stanza layouts`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `add song sections to stanzas, stylise`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `hide annotation when dots inactive`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
