@@ -509,22 +509,6 @@ module.exports = {
         ],
         [
             {
-                unitExtras: true,
-                subStanza: [
-                    {
-                        time: 128,
-                        lyric: {
-                            italic: {
-                                anchor: `sunk in tarpid lies!`,
-                                annotation: {
-                                    description: `Tar pits occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`
-                                }
-                            }
-                        }
-                    }
-                ],
-            },
-            {
                 time: 124,
                 lyric: [
                     `The`,
@@ -542,30 +526,25 @@ module.exports = {
                     },
                     `cries…`
                 ]
-            }
-        ],
-        [
+            },
             {
-                unitExtras: true,
-                unitClass: OVERLAP,
+                unitMap: true,
                 subStanza: [
                     {
-                        time: 135,
+                        time: 128,
                         lyric: {
-                            italic: [
-                                `he sees`,
-                                {
-                                    anchor: `Lowkey and Freyed!`,
-                                    properNoun: true,
-                                    annotation: {
-                                        description: `"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
-                                    }
+                            italic: {
+                                anchor: `sunk in tarpid lies!`,
+                                annotation: {
+                                    description: `Tar pits occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`
                                 }
-                            ]
+                            }
                         }
                     }
                 ],
-            },
+            }
+        ],
+        [
             {
                 time: 131,
                 lyric: [
@@ -584,13 +563,30 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                unitClass: OVERLAP,
+                subStanza: [
+                    {
+                        time: 135,
+                        lyric: {
+                            italic: [
+                                `he sees`,
+                                {
+                                    anchor: `Lowkey and Freyed!`,
+                                    properNoun: true,
+                                    annotation: {
+                                        description: `"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
             }
         ],
         [
-            {
-                unitExtras: true,
-                unitClass: OVERLAP
-            },
             {
                 time: 139,
                 lyric: [
@@ -631,6 +627,10 @@ module.exports = {
                     },
                     `I have left to mine?`
                 ]
+            },
+            {
+                unitMap: true,
+                unitClass: OVERLAP
             }
         ],
         [

@@ -27,11 +27,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `improve custom stanza layouts`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `add verse, prechorus, chorus categories to stanzas, stylise`,
             workedHours: 0,
             neededHours: 2
@@ -164,6 +159,11 @@ module.exports = {
             taskName: `allow for call and response lyrics`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `improve custom stanza layouts`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

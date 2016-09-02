@@ -17,14 +17,16 @@ const LyricsStanzaView = ({
 
     // From props.
     stanzaArray,
+    sectionClass,
+    sectionIndex,
     activeDotKeys,
     onAnnotationClick
 
 }) => (
 
-    <div className="stanza">
+    <div className={`stanza${sectionClass ? ` ${sectionClass}` : ''}`}>
         {stanzaArray.map((verseObject, verseIndex) => (
-            !verseObject.stanzaExtras && !verseObject.unitExtras ?
+            !verseObject.stanzaMap && !verseObject.unitMap ?
                 <LyricsVerse
                     key={verseIndex}
                     verseObject={verseObject}

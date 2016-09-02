@@ -285,21 +285,6 @@ module.exports = {
         ],
         [
             {
-                unitExtras: true,
-                topSideStanza: [
-                    {
-                        lyric: {
-                            italic: {
-                                anchor: `Odelay!`,
-                                annotation: {
-                                    description: `With an hour or two left before daybreak, I began to feel the mild euphoria of dehydration, and decided to practise my yodelling.`
-                                }
-                            }
-                        }
-                    }
-                ]
-            },
-            {
                 time: 87,
                 centre: [
                     `Just that those playful`,
@@ -330,24 +315,24 @@ module.exports = {
             {
                 time: 96,
                 centre: `just learned he's pecked to death his precious other.`
-            }
-        ],
-        [
+            },
             {
-                unitExtras: true,
-                bottomSideStanza: [
+                unitMap: true,
+                topSideStanza: [
                     {
                         lyric: {
                             italic: {
-                                anchor: `Mush! Mush!`,
+                                anchor: `Odelay!`,
                                 annotation: {
-                                    description: `Marching onward through the brisk twilight, I was reminded of simpler days as a child, when I would sing Johnny Horton's "North to Alaska," and my sister would back me up by heaving "Mush! Mush!"`
+                                    description: `With an hour or two left before daybreak, I began to feel the mild euphoria of dehydration, and decided to practise my yodelling.`
                                 }
                             }
                         }
-                   }
+                    }
                 ]
-            },
+            }
+        ],
+        [
             {
                 time: 98,
                 centre: `But should it matter since you loved her once,`
@@ -377,6 +362,21 @@ module.exports = {
             {
                 time: 113,
                 centre: `Now the jester teeters towards…`
+            },
+            {
+                unitMap: true,
+                bottomSideStanza: [
+                    {
+                        lyric: {
+                            italic: {
+                                anchor: `Mush! Mush!`,
+                                annotation: {
+                                    description: `Marching onward through the brisk twilight, I was reminded of simpler days as a child, when I would sing Johnny Horton's "North to Alaska," and my sister would back me up by heaving "Mush! Mush!"`
+                                }
+                            }
+                        }
+                   }
+                ]
             }
         ],
         [

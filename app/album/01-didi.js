@@ -53,6 +53,10 @@ module.exports = {
             {
                 time: 34,
                 lyric: `had to finish up all his orange juice.`
+            },
+            {
+                unitMap: true,
+                sectionClass: 'verse'
             }
         ],
         [
@@ -71,6 +75,10 @@ module.exports = {
             {
                 time: 46,
                 lyric: `Didi, couldn't you find another sister to be near?`
+            },
+            {
+                unitMap: true,
+                sectionClass: 'prechorus'
             }
         ],
         [
@@ -95,6 +103,10 @@ module.exports = {
             {
                 time: 57,
                 lyric: `And I tire of saying, "My Didi wants to come too."`
+            },
+            {
+                unitMap: true,
+                sectionClass: 'chorus'
             }
         ],
         [
@@ -123,20 +135,13 @@ module.exports = {
             {
                 time: 80,
                 lyric: `decked in overalls from the lost and found.`
+            },
+            {
+                unitMap: true,
+                sectionClass: 'verse'
             }
         ],
         [
-            {
-                unitExtras: true,
-                subStanza: [
-                    {
-                        time: 97,
-                        lyric: {
-                            emphasis: `Don't little raisin fingers need to dry?`
-                        }
-                    }
-                ],
-            },
             {
                 // TODO: Say more?
                 time: 85,
@@ -145,6 +150,18 @@ module.exports = {
             {
                 time: 91,
                 lyric: `Didi, come out, you can't soak there all night.`
+            },
+            {
+                unitMap: true,
+                sectionClass: 'prechorus',
+                subStanza: [
+                    {
+                        time: 97,
+                        lyric: {
+                            emphasis: `Don't little raisin fingers need to dry?`
+                        }
+                    }
+                ],
             }
         ],
         [
@@ -169,6 +186,12 @@ module.exports = {
                 ]
             },
             {
+                unitMap: true,
+                sectionClass: 'bridge'
+            }
+        ],
+        [
+            {
                 time: 112,
                 lyric: `Didi, one day you will be a picture`
             },
@@ -191,6 +214,11 @@ module.exports = {
             {
                 time: 120,
                 lyric: `you'd finally become someone?`
+            },
+            {
+                unitMap: true,
+                sectionClass: 'bridge',
+                sectionIndex: 1
             }
         ],
         [
@@ -201,6 +229,10 @@ module.exports = {
             {
                 time: 135,
                 lyric: `Didi dear, I know today just wasn't your day.`
+            },
+            {
+                unitMap: true,
+                sectionClass: 'prechorus'
             }
         ],
         [
@@ -211,6 +243,10 @@ module.exports = {
             {
                 time: 146,
                 lyric: `and there are things I hope my Didi will never know.`
+            },
+            {
+                unitMap: true,
+                sectionClass: 'chorus'
             }
         ],
         [
@@ -239,6 +275,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: 'chorus',
+                sectionIndex: 1
             }
         ]
     ],

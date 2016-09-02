@@ -557,10 +557,6 @@ module.exports = {
         ],
         [
             {
-                unitExtras: true,
-                unitClass: LEFT
-            },
-            {
                 time: 129,
                 // TODO: Switch these voices?
                 lyric: `Should you hide, or could you fight,`
@@ -568,13 +564,13 @@ module.exports = {
             {
                 time: 132,
                 lyric: `when your day to die has come?`
+            },
+            {
+                unitMap: true,
+                unitClass: LEFT
             }
         ],
         [
-            {
-                unitExtras: true,
-                unitClass: `${RIGHT} ${OVERLAP}`
-            },
             {
                 time: 135,
                 lyric: `Can a holed up hostage`
@@ -592,12 +588,12 @@ module.exports = {
                     `and just play dumb?`
                 ]
             },
+            {
+                unitMap: true,
+                unitClass: `${RIGHT} ${OVERLAP}`
+            }
         ],
         [
-            {
-                unitExtras: true,
-                unitClass: LEFT
-            },
             {
                 time: 141,
                 lyric: `But in time, wouldn't you find`
@@ -605,13 +601,13 @@ module.exports = {
             {
                 time: 144,
                 lyric: `life is simply much too long?`
+            },
+            {
+                unitMap: true,
+                unitClass: LEFT
             }
         ],
         [
-            {
-                unitExtras: true,
-                unitClass: OVERLAP
-            },
             {
                 time: 147,
                 // TODO: Reference to Ash Wednesday.
@@ -640,6 +636,10 @@ module.exports = {
                 time: 150,
                 left: `your ouija board said, "Son, just hum along."`,
                 right: `sworn feat aforesaid, doesn't come anon.`
+            },
+            {
+                unitMap: true,
+                unitClass: OVERLAP
             }
         ],
         [

@@ -13,7 +13,7 @@ module.exports = {
     lyrics: [
         [
             {
-                unitExtras: true,
+                unitMap: true,
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
@@ -23,7 +23,9 @@ module.exports = {
                         }
                     }
                 }
-            },
+            }
+        ],
+        [
             {
                 time: 0,
                 lyric: [
@@ -98,6 +100,18 @@ module.exports = {
                     `surely buried she'd be!`
                 ]
             },
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: ``,
+                        dotKeys: {
+                            music: true
+                        }
+                    }
+                }
+            }
         ],
         [
             {
@@ -441,7 +455,7 @@ module.exports = {
         ],
         [
             {
-                unitExtras: true,
+                unitMap: true,
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {

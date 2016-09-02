@@ -168,7 +168,19 @@ module.exports = {
         ],
         [
             {
-                unitExtras: true,
+                time: 61,
+                lyric: `Mowed down by the tides,`
+            },
+            {
+                time: '?',
+                lyric: `and inundated under in unfair fights,`
+            },
+            {
+                time: 67,
+                lyric: `you made a bunker that shuts airtight`
+            },
+            {
+                unitMap: true,
                 topSideStanza: [
                     {
                         lyric: `Oh, bastard ingrate!`
@@ -191,23 +203,23 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            {
-                time: 61,
-                lyric: `Mowed down by the tides,`
-            },
-            {
-                time: '?',
-                lyric: `and inundated under in unfair fights,`
-            },
-            {
-                time: 67,
-                lyric: `you made a bunker that shuts airtight`
             }
         ],
         [
             {
-                unitExtras: true,
+                time: 74,
+                lyric: `But then, my little prince,`
+            },
+            {
+                time: '?',
+                lyric: `safe on your tiny planet where none else fit,`
+            },
+            {
+                time: 80,
+                lyric: `you finally granted their nutshells are rigged,`
+            },
+            {
+                unitMap: true,
                 topSideStanza: [
                     {
                         lyric: `Scattered your beans`
@@ -224,18 +236,6 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            {
-                time: 74,
-                lyric: `But then, my little prince,`
-            },
-            {
-                time: '?',
-                lyric: `safe on your tiny planet where none else fit,`
-            },
-            {
-                time: 80,
-                lyric: `you finally granted their nutshells are rigged,`
             }
         ],
         [
@@ -286,7 +286,11 @@ module.exports = {
         ],
         [
             {
-                unitExtras: true,
+                time: 145,
+                lyric: `No well worn sari could sway you from a fairer marathon!`
+            },
+            {
+                unitMap: true,
                 subStanza: [
                     {
                         // TODO: Figure out times for these.
@@ -296,15 +300,15 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            {
-                time: 145,
-                lyric: `No well worn sari could sway you from a fairer marathon!`
             }
         ],
         [
             {
-                unitExtras: true,
+                time: 152,
+                lyric: `Stubborn harpies can't draw this contest to be one!`
+            },
+            {
+                unitMap: true,
                 subStanza: [
                     {
                         time: '?',
@@ -313,15 +317,23 @@ module.exports = {
                         }
                     }
                 ],
-            },
-            {
-                time: 152,
-                lyric: `Stubborn harpies can't draw this contest to be one!`
             }
         ],
         [
             {
-                unitExtras: true,
+                time: 160,
+                lyric: `Oh child of mine,`
+            },
+            {
+                time: '?',
+                lyric: `what's left of what these faces you flip override,`
+            },
+            {
+                time: 165,
+                lyric: `and all these pages you've ripped from your spine`
+            },
+            {
+                unitMap: true,
                 topSideStanza: [
                     {
                         lyric: `Through tatters of sky,`
@@ -344,40 +356,9 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            {
-                time: 160,
-                lyric: `Oh child of mine,`
-            },
-            {
-                time: '?',
-                lyric: `what's left of what these faces you flip override,`
-            },
-            {
-                time: 165,
-                lyric: `and all these pages you've ripped from your spine`
             }
         ],
         [
-            {
-                unitExtras: true,
-                topSideStanza: [
-                    {
-                        lyric: `cast on your peons,`
-                    },
-                    {
-                        lyric: `old and subservient.`
-                    }
-                ],
-                subStanza: [
-                    {
-                        time: '?',
-                        lyric: {
-                            italic: `to five-year plans.`
-                        }
-                    }
-                ]
-            },
             {
                 time: 172,
                 lyric: `in life's unbearable maze?`
@@ -395,14 +376,51 @@ module.exports = {
                     },
                     `'s sake,`
                 ]
+            },
+            {
+                unitMap: true,
+                topSideStanza: [
+                    {
+                        lyric: `cast on your peons,`
+                    },
+                    {
+                        lyric: `old and subservient.`
+                    }
+                ],
+                subStanza: [
+                    {
+                        time: '?',
+                        lyric: {
+                            italic: `to five-year plans.`
+                        }
+                    }
+                ]
             }
         ],
         [
             {
-                unitExtras: true,
+                time: 184,
+                lyric: `Now son, before you embark on your great bildungsroman,`
+            },
+            {
+                time: 191,
+                lyric: `shouldn't you first be sure you've finally become someone?`
+            },
+            {
+                unitMap: true,
                 topSideStanza: [
                     {
-                        stanzaExtras: true,
+                        lyric: {
+                            anchor: `Rama, Rama…`,
+                            properNoun: true,
+                            annotation: {
+                                description: ``
+                            },
+                            todo: true
+                        }
+                    },
+                    {
+                        stanzaMap: true,
                         subStanza: [
                             {
                                 lyric: {
@@ -414,26 +432,8 @@ module.exports = {
                                 }
                             }
                         ]
-                    },
-                    {
-                        lyric: {
-                            anchor: `Rama, Rama…`,
-                            properNoun: true,
-                            annotation: {
-                                description: ``
-                            },
-                            todo: true
-                        }
                     }
                 ]
-            },
-            {
-                time: 184,
-                lyric: `Now son, before you embark on your great bildungsroman,`
-            },
-            {
-                time: 191,
-                lyric: `shouldn't you first be sure you've finally become someone?`
             }
         ]
     ],

@@ -59,6 +59,10 @@
             margin-left: @stanza-block-margin;
         }
 
+        &.subsequent {
+            margin-top: -@stanza-block-margin;
+        }
+
         &.side {
             display: flex;
             flex-direction: column;
@@ -74,6 +78,7 @@
                 @shared-dot-diameter: 1.5em;
                 .dot-diameter-mixin(@shared-dot-diameter);
                 display: flex;
+                flex-direction: row;
                 align-items: center;
             }
 
@@ -98,6 +103,25 @@
         background-color: white;
         box-shadow: 0 1px 2px 2px @box-shadow-colour;
 
+        // This refers to the verse section!
+        // TODO: Better styling, of course.
+        &.verse {
+            border: 1px solid orange;
+        }
+
+        &.prechorus {
+            border: 1px solid green;
+        }
+
+        &.chorus {
+            border: 1px solid blue;
+        }
+
+        &.bridge {
+            border: 1px solid purple;
+        }
+
+        // This refers to the verse lyric!
         .verse {
             @verse-padding: 10px;
             padding-left: @verse-padding;

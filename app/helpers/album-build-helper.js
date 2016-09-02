@@ -52,7 +52,12 @@ const _convertOverviews = (object) => {
 
 const _addTitleToLyrics = (title, lyrics) => {
     // Add title object to lyrics object.
-    const { annotation } = title
+    const { annotation } = title,
+        titleObject = {
+            lyric: title,
+            isTitle: true
+        }
+
     if (annotation) {
         title.properNoun = true
         annotation.dotKeys = { title: true }
@@ -62,18 +67,12 @@ const _addTitleToLyrics = (title, lyrics) => {
      * If first unit contains a lone dot stanza, append title to unit. TODO:
      * There might turn out to be no instances where this is ever the case.
      */
-    if (lyrics[0][0].unitExtras && lyrics[0].length === 1) {
-        lyrics[0].push({
-            lyric: title,
-            isTitle: true
-        })
+    if (lyrics[0][lyrics[0].length - 1].unitMap && lyrics[0].length === 1) {
+        lyrics[0].unshift(titleObject)
 
     // Otherwise, create a new first unit that just contains the title.
     } else {
-        lyrics.unshift([{
-            lyric: title,
-            isTitle: true
-        }])
+        lyrics.unshift([titleObject])
     }
 }
 

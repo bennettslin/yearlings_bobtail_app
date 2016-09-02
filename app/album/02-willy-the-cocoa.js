@@ -52,27 +52,6 @@ module.exports = {
         ],
         [
             {
-                unitExtras: true,
-                subStanza: [
-                    {
-                        time: 30,
-                        lyric: [
-                            {
-                                italic: [
-                                    {
-                                        anchor: `Chilled cola's free`,
-                                        annotation: {
-                                            description: `At the recycling center where Willy drops off his recyclables, a complimentary soft drink is part of his reimbursement.`
-                                        }
-                                    },
-                                    `with salvage sold…`
-                                ]
-                            }
-                        ]
-                    }
-                ],
-            },
-            {
                 time: 23,
                 lyric: [
                     `Swill pop poured from`,
@@ -96,13 +75,30 @@ module.exports = {
                     },
                     `eclipsed in full.`
                 ]
+            },
+            {
+                unitMap: true,
+                subStanza: [
+                    {
+                        time: 30,
+                        lyric: [
+                            {
+                                italic: [
+                                    {
+                                        anchor: `Chilled cola's free`,
+                                        annotation: {
+                                            description: `At the recycling center where Willy drops off his recyclables, a complimentary soft drink is part of his reimbursement.`
+                                        }
+                                    },
+                                    `with salvage sold…`
+                                ]
+                            }
+                        ]
+                    }
+                ],
             }
         ],
         [
-            {
-                unitExtras: true,
-                unitClass: `${LEFT} ${OVERLAP}`
-            },
             {
                 time: 32,
                 lyric: [
@@ -114,7 +110,11 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+            {
+                unitMap: true,
+                unitClass: `${LEFT} ${OVERLAP}`
+            },
         ],
         [
             {
@@ -347,27 +347,6 @@ module.exports = {
         ],
         [
             {
-                unitExtras: true,
-                subStanza: [
-                    {
-                        time: 126,
-                        lyric: [
-                            {
-                                italic: [
-                                    `Shelled skull has freed`,
-                                    {
-                                        anchor: `unsalvaged soul…`,
-                                        annotation: {
-                                            description: `Given that abuse of an underdeveloped child often led to its death, religious doctrine in the past typically gave assurance that such children were devoid of souls. But I came to a different conclusion. If my brother and I were so alike in physical makeup, despite being so different in mental presence, then it made more sense to believe that no one has a soul.`
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-            },
-            {
                 time: 119,
                 lyric: `Milksop cornered into scuffle,`
             },
@@ -390,12 +369,29 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                subStanza: [
+                    {
+                        time: 126,
+                        lyric: [
+                            {
+                                italic: [
+                                    `Shelled skull has freed`,
+                                    {
+                                        anchor: `unsalvaged soul…`,
+                                        annotation: {
+                                            description: `Given that abuse of an underdeveloped child often led to its death, religious doctrine in the past typically gave assurance that such children were devoid of souls. But I came to a different conclusion. If my brother and I were so alike in physical makeup, despite being so different in mental presence, then it made more sense to believe that no one has a soul.`
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+            }
         ],
         [
-            {
-                unitExtras: true,
-                unitClass: `${LEFT} ${OVERLAP}`
-            },
             {
                 time: 128,
                 lyric: [
@@ -408,6 +404,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                unitClass: `${LEFT} ${OVERLAP}`
             }
         ],
         [
