@@ -1,4 +1,4 @@
-import { LEFT, RIGHT, OVERLAP } from 'helpers/constants'
+import { LEFT, RIGHT, OVERLAP, VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -48,6 +48,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -78,6 +82,8 @@ module.exports = {
             },
             {
                 unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true,
                 subStanza: [
                     {
                         time: 30,
@@ -113,7 +119,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: `${LEFT} ${OVERLAP}`
+                unitClass: `${LEFT} ${OVERLAP}`,
+                sectionClass: VERSE
             },
         ],
         [
@@ -157,6 +164,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -226,6 +237,10 @@ module.exports = {
                     },
                     `yet I've seen!`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -304,6 +319,10 @@ module.exports = {
             {
                 time: 89,
                 lyric: `So to baby— to your brother— you'll say sorry for the world!`
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -343,6 +362,10 @@ module.exports = {
                     },
                     `whispers wind, to fix his switcheroo…`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -371,6 +394,8 @@ module.exports = {
             },
             {
                 unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true,
                 subStanza: [
                     {
                         time: 126,
@@ -407,7 +432,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: `${LEFT} ${OVERLAP}`
+                unitClass: `${LEFT} ${OVERLAP}`,
+                sectionClass: VERSE
             }
         ],
         [
@@ -459,6 +485,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -511,6 +541,10 @@ module.exports = {
             {
                 time: 161,
                 lyric: `ever conscious of days past forever wrong?`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -582,6 +616,10 @@ module.exports = {
             {
                 time: 185,
                 lyric: `Then to Willy, in the cover could say sorry for the world!`
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -603,6 +641,11 @@ module.exports = {
                     },
                     `'s cover could say sorry…!`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE,
+                subsequentClass: true
             }
         ]
     ],

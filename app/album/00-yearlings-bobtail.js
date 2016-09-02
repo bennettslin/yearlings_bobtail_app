@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `time story`,
+            workedHours: 0,
+            neededHours: 8
+        },
+        {
             taskName: `add song structures to lyrics`,
             workedHours: 0,
             neededHours: 1
@@ -54,7 +59,7 @@ module.exports = {
         {
             taskName: `create dot popups`,
             workedHours: 0,
-            neededHours: 2,
+            neededHours: 3,
             subtasks: [
                 {
                     taskName: `make popup a general utility`,

@@ -1,7 +1,5 @@
 import React from 'react'
 import DotsBlock from '../dots/dots-block'
-
-// FIXME: Parent should check intersects, child should check getIntersection. Also see annotation card.
 import { intersects } from 'helpers/dot-helper'
 
 /*************

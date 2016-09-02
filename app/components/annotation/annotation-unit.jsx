@@ -10,9 +10,7 @@ const AnnotationUnit = (props) => {
     const { annotation } = props
 
     if (Array.isArray(annotation.cards)) {
-        return (
-            <AnnotationUnitView {...props} />
-        )
+        return <AnnotationUnitView {...props} />
     } else {
         return (
             <AnnotationCard {...props}
@@ -26,26 +24,25 @@ const AnnotationUnit = (props) => {
  * PRESENTATION *
  ****************/
 
- const AnnotationUnitView = ({
+const AnnotationUnitView = ({
 
-     // From props.
-     annotation,
-     songs,
-     activeDotKeys
+    // From props.
+    annotation,
+    songs,
+    activeDotKeys
 
- }) => (
+}) => (
 
-     <div className="annotation-cards-block">
-          {annotation.cards.map((card, index) => (
-                  <AnnotationCard
-                      key={index}
-                      card={card}
-                      songs={songs}
-                      activeDotKeys={activeDotKeys}
-                  />
-              )
-          )}
-     </div>
- )
+    <div className="annotation-cards-block">
+        {annotation.cards.map((card, index) => (
+            <AnnotationCard
+                key={index}
+                card={card}
+                songs={songs}
+                activeDotKeys={activeDotKeys}
+            />
+        ))}
+    </div>
+)
 
 export default AnnotationUnit

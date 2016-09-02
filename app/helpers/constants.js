@@ -31,6 +31,11 @@ module.exports = {
     RIGHT,
     OVERLAP: 'overlap',
 
+    VERSE: 'verse',
+    PRECHORUS: 'prechorus',
+    CHORUS: 'chorus',
+    BRIDGE: 'bridge',
+
     // Temporary.
     ALBUM_BUILD_KEYS: [
         'lyric',

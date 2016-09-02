@@ -3,7 +3,6 @@ import DotsBlock from '../dots/dots-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
 import AppHelper from 'helpers/album-view-helper'
-// FIXME: Parent should check intersects, child should check getIntersection. Also see dotStanza.
 import { intersects, getIntersection } from 'helpers/dot-helper'
 
 /*************

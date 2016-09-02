@@ -1,4 +1,4 @@
-import { RIGHT, OVERLAP } from 'helpers/constants'
+import { RIGHT, OVERLAP, VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -56,7 +56,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: 'verse'
+                sectionClass: VERSE
             }
         ],
         [
@@ -78,7 +78,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: 'prechorus'
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -106,7 +106,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: 'chorus'
+                sectionClass: CHORUS
             }
         ],
         [
@@ -138,7 +138,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: 'verse'
+                sectionClass: VERSE
             }
         ],
         [
@@ -153,7 +153,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: 'prechorus',
+                sectionClass: PRECHORUS,
                 subStanza: [
                     {
                         time: 97,
@@ -187,7 +187,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: 'bridge'
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -217,7 +217,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: 'bridge',
+                sectionClass: BRIDGE,
                 subsequentClass: true
             }
         ],
@@ -232,7 +232,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: 'prechorus'
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -246,7 +246,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: 'chorus'
+                sectionClass: CHORUS
             }
         ],
         [
@@ -278,7 +278,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: 'chorus',
+                sectionClass: CHORUS,
                 subsequentClass: true
             }
         ]
