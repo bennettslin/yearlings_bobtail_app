@@ -68,6 +68,7 @@ class App extends Component {
         this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handlePortalSelect = this.handlePortalSelect.bind(this)
         this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
+        this._onBodyClick = this._onBodyClick.bind(this)
     }
 
     componentWillMount() {
@@ -97,11 +98,13 @@ class App extends Component {
         return LogHelper.logObject('annotation', annotation)
     }
 
-    handleTitleSelect() {
-        this.handleSongSelect(0)
+    handleTitleSelect(e) {
+        this.handleSongSelect(e, 0)
     }
 
-    handleSongSelect(activeIndex = 0, activeIndexKey = ACTIVE_SONG_INDEX) {
+    handleSongSelect(e, activeIndex = 0, activeIndexKey = ACTIVE_SONG_INDEX) {
+        if (e) { e.stopPropagation() }
+
         if (activeIndex >= 0 && activeIndex <= this.props.songs.length) {
             // Store song index in session.
 
@@ -115,18 +118,22 @@ class App extends Component {
              */
             if (activeIndexKey === ACTIVE_SONG_INDEX) {
                 this.handleAnnotationSelect()
-                this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX)
+                this.handleOverviewSelect(e, DEFAULT_OVERVIEW_INDEX)
                 this.handleTimeSelect()
             }
         }
     }
 
-    handleOverviewSelect(activeIndex) {
+    handleOverviewSelect(e, activeIndex) {
+        if (e) { e.stopPropagation() }
+
         this.props.selectOverviewIndex(activeIndex)
         SessionHelper.setInSession(ACTIVE_OVERVIEW_INDEX, activeIndex)
     }
 
-    handleDotToggle(dotKey) {
+    handleDotToggle(e, dotKey) {
+        if (e) { e.stopPropagation() }
+
         const isActive = !this.props.activeDotKeys[dotKey]
         this.props.toggleDotKey(dotKey, isActive)
         SessionHelper.setDotInSession(dotKey, isActive)
@@ -135,6 +142,42 @@ class App extends Component {
         if (!isActive) {
             this._deselectAnnotationWithNoActiveDots(dotKey)
         }
+    }
+
+    handleAnnotationSelect(e, activeIndex = 0) {
+        if (e) { e.stopPropagation() }
+
+        this.props.selectAnnotationIndex(activeIndex)
+        SessionHelper.setInSession(ACTIVE_ANNOTATION_INDEX, activeIndex)
+    }
+
+    handleWikiUrlSelect(e, activeWiki) {
+        if (e) { e.stopPropagation() }
+
+        const activeWikiUrl = activeWiki ?
+            `https://en.m.wikipedia.org/wiki/${activeWiki}` : null
+
+        // Dispatch Redux action.
+        this.props.selectWikiUrl(activeWikiUrl)
+    }
+
+    handlePortalSelect(e, activeSongIndex, activeAnnotationIndex) {
+        if (e) { e.stopPropagation() }
+
+        this.handleSongSelect(e, activeSongIndex, ACTIVE_SONG_INDEX)
+        this.handleAnnotationSelect(e, activeAnnotationIndex)
+    }
+
+    handleTimeSelect(e, activeTime = 0) {
+        if (e) { e.stopPropagation() }
+
+        this.props.selectTime(activeTime)
+        SessionHelper.setInSession(ACTIVE_TIME, activeTime)
+    }
+
+    _onBodyClick(e) {
+        this.handleAnnotationSelect()
+        this.handleWikiUrlSelect()
     }
 
     _deselectAnnotationWithNoActiveDots(dotKey) {
@@ -154,34 +197,6 @@ class App extends Component {
         if (annotation && !intersects(presentDotKeys, postActiveDotKeys)) {
             this.handleAnnotationSelect()
         }
-    }
-
-    handleAnnotationSelect(activeIndex = 0, e) {
-        // Prevent verse from also being clicked.
-        if (e) {
-            e.stopPropagation();
-        }
-
-        this.props.selectAnnotationIndex(activeIndex)
-        SessionHelper.setInSession(ACTIVE_ANNOTATION_INDEX, activeIndex)
-    }
-
-    handleWikiUrlSelect(activeWiki) {
-        const activeWikiUrl = activeWiki ?
-            `https://en.m.wikipedia.org/wiki/${activeWiki}` : null
-
-        // Dispatch Redux action.
-        this.props.selectWikiUrl(activeWikiUrl)
-    }
-
-    handlePortalSelect(activeSongIndex, activeAnnotationIndex) {
-        this.handleSongSelect(activeSongIndex, ACTIVE_SONG_INDEX)
-        this.handleAnnotationSelect(activeAnnotationIndex)
-    }
-
-    handleTimeSelect(activeTime = 0) {
-        this.props.selectTime(activeTime)
-        SessionHelper.setInSession(ACTIVE_TIME, activeTime)
     }
 
     render() {
@@ -204,7 +219,7 @@ class App extends Component {
             } = this.props
 
         return (
-            <div className="app">
+            <div className="app" onClick={this._onBodyClick}>
                 <Album
                     songs={songs}
                     albumTitle={title}

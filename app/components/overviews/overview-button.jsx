@@ -12,7 +12,7 @@ const OverviewButton = (props) => {
 
         // Overview indices begin at 1.
         onClick = !isDisabled ?
-            () => onOverviewClick(overviewIndex + 1) : null
+            (e) => onOverviewClick(e, overviewIndex + 1) : null
 
     return (
         <OverviewButtonView {...props}
@@ -38,7 +38,7 @@ const OverviewButtonView = ({
 
     <div className={`select-button${isDisabled ? ' disabled' : ''}`}>
         <h2>
-            <a disabled={isDisabled} onClick={onClick}>
+            <a className="enabled" disabled={isDisabled} onClick={onClick}>
                 {overviewKey}
             </a>
         </h2>

@@ -10,7 +10,7 @@ const DotButton = (props) => {
             isDisabled,
             onDotClick } = props,
 
-        onClick = !isDisabled ? () => onDotClick(dotKey) : null
+        onClick = !isDisabled ? (e) => onDotClick(e, dotKey) : null
 
     return (
         <DotButtonView {...props}

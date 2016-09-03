@@ -10,7 +10,7 @@ const CloseButton = ({
         className="close-button enabled"
         onClick={onClick}
     >
-        Close
+        {'\u274C'}
     </a>
 )
 
@@ -52,8 +52,8 @@ class Popup extends Component {
         this.onCloseClick = this.onCloseClick.bind(this)
     }
 
-    onCloseClick() {
-        this.props.onCloseClick()
+    onCloseClick(e) {
+        this.props.onCloseClick(e)
     }
 
     render() {

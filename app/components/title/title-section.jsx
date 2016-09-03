@@ -8,7 +8,7 @@ const TitleSection = (props) => {
 
     const { onTitleClick } = props,
 
-        onClick = () => onTitleClick(0)
+        onClick = (e) => onTitleClick(e, 0)
 
     return (
         <TitleSectionView {...props}

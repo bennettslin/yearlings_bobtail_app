@@ -29,7 +29,7 @@ const AnnotationPortalsBlockView = ({
             return (
                 <a key={index}
                     className="portal-button"
-                    onClick={() => onPortalClick(songIndex, annotationIndex)}>
+                    onClick={(e) => onPortalClick(e, songIndex, annotationIndex)}>
                     <div className="song-title">{songTitle}</div>
                     <div className="annotation-title">{annotationTitle}</div>
                 </a>

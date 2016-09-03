@@ -65,7 +65,7 @@ const AnchorBlockView = ({
         { !beginsNewLine ? ' ' : null }
         <a
             className={`anchor-block ${isDisabled ? 'disabled' : 'enabled'}${hasTodo ? ' todo' : ''}`}
-            onClick={!isDisabled ? e => onAnchorClick(clickHandlerArgument, e) : null}
+            onClick={!isDisabled ? e => onAnchorClick(e, clickHandlerArgument) : null}
         >
             {isLyric ?
                 <span className="underline-bar">
