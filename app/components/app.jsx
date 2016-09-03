@@ -149,7 +149,13 @@ class App extends Component {
         }
     }
 
-    handleAnnotationSelect(activeIndex = 0) {
+    handleAnnotationSelect(activeIndex = 0, e) {
+
+        // Prevent verse from also being clicked.
+        if (e) {
+            e.stopPropagation();
+        }
+
         this.props.selectAnnotationIndex(activeIndex)
         SessionHelper.setInSession(ACTIVE_ANNOTATION_INDEX, activeIndex)
     }

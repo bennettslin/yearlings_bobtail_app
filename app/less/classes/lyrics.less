@@ -35,10 +35,10 @@
         @offset: 0.75px;
         @blur: 0;
         text-shadow:
-            -@offset -@offset @blur @colour,
-            @offset -@offset @blur @colour,
-            -@offset @offset @blur @colour,
-            @offset @offset @blur @colour;
+        -@offset -@offset @blur @colour,
+        @offset -@offset @blur @colour,
+        -@offset @offset @blur @colour,
+        @offset @offset @blur @colour;
 
         // Underline anchor tag.
         .underline-bar {
@@ -47,7 +47,18 @@
             height: 35%;
             bottom: 0;
             left: 0;
-            background-color: mix(@lyric-link-colour, white, 25%);
+        }
+
+        &.enabled {
+            .underline-bar {
+                background-color: mix(@lyric-link-colour, white, 25%);
+            }
+        }
+
+        &.disabled {
+            .underline-bar {
+                background-color: mix(gray, white, 25%);
+            }
         }
     }
 

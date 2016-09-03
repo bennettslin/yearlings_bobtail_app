@@ -29,6 +29,7 @@ const LyricsVerseView = ({
 
     // From props.
     verseObject,
+    activeAnnotationIndex,
     activeDotKeys,
     onAnnotationClick,
 
@@ -38,12 +39,13 @@ const LyricsVerseView = ({
 
 }) => (
 
-    <div className="verse">
+    <div className="verse" onClick={() => {}}>
         {isSingleSpeaker ? (
                 <div className={`line${isTitle ? '' : ' left'}`}>
                     <TextBlock
                         isLyric={true}
                         text={verseObject.lyric}
+                        activeAnnotationIndex={activeAnnotationIndex}
                         activeDotKeys={activeDotKeys}
                         onAnchorClick={onAnnotationClick}
                     />
@@ -61,6 +63,7 @@ const LyricsVerseView = ({
                                 <TextBlock
                                     isLyric={true}
                                     text={verseObject[key]}
+                                    activeAnnotationIndex={activeAnnotationIndex}
                                     activeDotKeys={activeDotKeys}
                                     onAnchorClick={onAnnotationClick}
                                 />

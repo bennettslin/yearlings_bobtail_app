@@ -47,6 +47,7 @@ const LyricsUnitView = ({
     // From props.
     isTitleUnit,
     stanzaArray,
+    activeAnnotationIndex,
     activeDotKeys,
     onAnnotationClick,
 
@@ -72,6 +73,7 @@ const LyricsUnitView = ({
                 </div> :
                 <LyricsStanza
                     sectionClass={isMain ? sectionClass : ''}
+                    activeAnnotationIndex={activeAnnotationIndex}
                     activeDotKeys={activeDotKeys}
                     stanzaArray={stanzaArray}
                     onAnnotationClick={onAnnotationClick}

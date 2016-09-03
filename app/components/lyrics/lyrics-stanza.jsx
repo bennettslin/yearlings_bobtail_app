@@ -18,6 +18,7 @@ const LyricsStanzaView = ({
     // From props.
     stanzaArray,
     sectionClass,
+    activeAnnotationIndex,
     activeDotKeys,
     onAnnotationClick
 
@@ -29,6 +30,7 @@ const LyricsStanzaView = ({
                 <LyricsVerse
                     key={verseIndex}
                     verseObject={verseObject}
+                    activeAnnotationIndex={activeAnnotationIndex}
                     activeDotKeys={activeDotKeys}
                     onAnnotationClick={onAnnotationClick}
                 /> : null

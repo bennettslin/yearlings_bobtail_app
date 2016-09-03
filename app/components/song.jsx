@@ -34,6 +34,7 @@ const SongView = ({
     // From props.
     songs,
 
+    activeAnnotationIndex,
     activeDotKeys,
     activeWikiUrl,
 
@@ -71,6 +72,7 @@ const SongView = ({
             />
             <LyricsSection
                 songLyrics={activeSongLyrics}
+                activeAnnotationIndex={activeAnnotationIndex}
                 activeDotKeys={activeDotKeys}
                 onAnnotationClick={onAnnotationClick}
             />

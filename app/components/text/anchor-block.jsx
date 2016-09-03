@@ -10,6 +10,7 @@ import { getIntersection } from 'helpers/dot-helper'
 const AnchorBlock = (props) => {
 
     const { text,
+            activeAnnotationIndex,
             activeDotKeys } = props,
 
         { annotationIndex,
@@ -18,6 +19,7 @@ const AnchorBlock = (props) => {
           dotKeys,
           wiki } = text,
 
+        isEnabled = !annotationIndex || annotationIndex !== activeAnnotationIndex,
         intersectedDotKeys = getIntersection(dotKeys, activeDotKeys),
 
         /**
@@ -30,6 +32,7 @@ const AnchorBlock = (props) => {
     return (
         <AnchorBlockView {...props}
             hasTodo={hasTodo}
+            isEnabled={isEnabled}
             dotKeys={intersectedDotKeys}
             anchorText={anchorText}
             clickHandlerArgument={clickHandlerArgument}
@@ -50,6 +53,7 @@ const AnchorBlockView = ({
 
     // From controller.
     hasTodo,
+    isEnabled,
     dotKeys,
     anchorText,
     clickHandlerArgument
@@ -60,8 +64,8 @@ const AnchorBlockView = ({
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
         { !beginsNewLine ? ' ' : null }
         <a
-            className={`anchor-block${hasTodo ? ' todo' : ''}`}
-            onClick={() => onAnchorClick(clickHandlerArgument)}
+            className={`anchor-block ${isEnabled ? 'enabled' : 'disabled'}${hasTodo ? ' todo' : ''}`}
+            onClick={isEnabled ? e => onAnchorClick(clickHandlerArgument, e) : null}
         >
             {isLyric ?
                 <span className="underline-bar">

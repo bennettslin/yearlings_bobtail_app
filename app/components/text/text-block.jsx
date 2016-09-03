@@ -29,6 +29,7 @@ const TextBlockView = ({
     isLyric,
     isInAnchor,
     text,
+    activeAnnotationIndex,
     activeDotKeys,
     onAnchorClick
 
@@ -41,6 +42,7 @@ const TextBlockView = ({
                     isLyric={isLyric}
                     isInAnchor={isInAnchor}
                     text={textElement}
+                    activeAnnotationIndex={activeAnnotationIndex}
                     activeDotKeys={activeDotKeys}
                     beginsNewLine={index === 0}
                     onAnchorClick={onAnchorClick}

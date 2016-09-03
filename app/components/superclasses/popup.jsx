@@ -7,7 +7,7 @@ const CloseButton = ({
     onClick
 }) => (
     <a
-        className="close-button"
+        className="close-button enabled"
         onClick={onClick}
     >
         Close
