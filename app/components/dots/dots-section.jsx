@@ -19,17 +19,31 @@ const DotsSectionView = ({
     showUnpresent,
     activeDotKeys,
     presentDotKeys,
-    onDotClick
+    hoveredDotIndex,
+    onDotClick,
+    onDotHover
 
 }) => (
 
     <div className="section dots-section">
         <h2>dots</h2>
+        {showUnpresent ?
+            <div className="tooltip-container">
+                <div className={`tooltip-block ${hoveredDotIndex}`}>
+                    {hoveredDotIndex ?
+                        <div className="tooltip">
+                            hello hello test
+                        </div> : null
+                    }
+                </div>
+            </div> : null
+        }
         <DotsBlock
             showUnpresent={showUnpresent}
             activeDotKeys={activeDotKeys}
             presentDotKeys={presentDotKeys}
             onDotClick={onDotClick}
+            onDotHover={onDotHover}
         />
     </div>
 )

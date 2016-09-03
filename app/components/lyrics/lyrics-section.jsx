@@ -20,8 +20,10 @@ const LyricsSectionView = ({
     activeTime,
     activeAnnotationIndex,
     activeDotKeys,
+    hoveredLineIndex,
     onAnnotationClick,
-    onTimeClick
+    onTimeClick,
+    onLineHover
 
 }) => (
 
@@ -36,8 +38,10 @@ const LyricsSectionView = ({
                         activeAnnotationIndex={activeAnnotationIndex}
                         activeDotKeys={activeDotKeys}
                         activeTime={activeTime}
+                        hoveredLineIndex={hoveredLineIndex}
                         onAnnotationClick={onAnnotationClick}
                         onTimeClick={onTimeClick}
+                        onLineHover={onLineHover}
                     />
                 )
             )}

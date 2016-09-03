@@ -27,19 +27,19 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `songs need end times`,
+            taskName: `figure out state terminology`,
             workedHours: 0,
-            neededHours: 1
+            neededHours: 2
+        },
+        {
+            taskName: `refactor to use dot index rather than key`,
+            workedHours: 0,
+            neededHours: 2
         },
         {
             taskName: `add song sections to lyrics`,
             workedHours: 1,
             neededHours: 2
-        },
-        {
-            taskName: `add propTypes`,
-            workedHours: 0,
-            neededHours: 1
         },
         {
             taskName: `change every "one" to "you"`,
@@ -57,16 +57,9 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `create dot popups`,
+            taskName: `create dot tooltips`,
             workedHours: 0,
-            neededHours: 3,
-            subtasks: [
-                {
-                    taskName: `make popup a general utility`,
-                    workedHours: 2,
-                    neededHours: 2
-                }
-            ]
+            neededHours: 3
         },
         {
             taskName: `refactor to get album objects`,
@@ -184,6 +177,26 @@ module.exports = {
             taskName: `dismiss popup by clicking on body`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `songs need end times`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `make popup a general utility`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `store line index for hoverable play button`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `hoverable play button on verse`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

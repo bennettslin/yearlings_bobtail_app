@@ -50,8 +50,10 @@ const LyricsUnitView = ({
     activeAnnotationIndex,
     activeDotKeys,
     activeTime,
+    hoveredLineIndex,
     onAnnotationClick,
     onTimeClick,
+    onLineHover,
 
     // From controller.
     unitClass,
@@ -78,25 +80,17 @@ const LyricsUnitView = ({
                     activeAnnotationIndex={activeAnnotationIndex}
                     activeDotKeys={activeDotKeys}
                     activeTime={activeTime}
+                    hoveredLineIndex={hoveredLineIndex}
                     stanzaArray={stanzaArray}
                     onAnnotationClick={onAnnotationClick}
                     onTimeClick={onTimeClick}
+                    onLineHover={onLineHover}
                 />
         ) : null
     }
 
     return (
         <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}${unitClass ? ` custom ${unitClass}` : ''}`}>
-            {dotStanza ?
-                <div className={`stanza-block dot ${isDotOnly ? 'only' : 'shared'}`}>
-                    <DotStanza
-                        activeAnnotationIndex={activeAnnotationIndex}
-                        activeDotKeys={activeDotKeys}
-                        dotStanzaObject={dotStanza}
-                        onAnnotationClick={onAnnotationClick}
-                    />
-                </div> : null
-            }
             {!isDotOnly ?
                 <div className={`stanza-block main${subsequentClass ? ' subsequent' : ''}`}>
                     {getStanza({ stanzaArray, isMain: true })}
@@ -108,6 +102,16 @@ const LyricsUnitView = ({
                     {getStanza({ stanzaArray: topSideStanza })}
                     {getStanza({ stanzaArray: topSideSubStanza, inSubBlock: true })}
                     {getStanza({ stanzaArray: bottomSideStanza })}
+                </div> : null
+            }
+            {dotStanza ?
+                <div className={`stanza-block dot ${isDotOnly ? 'only' : 'shared'}`}>
+                    <DotStanza
+                        activeAnnotationIndex={activeAnnotationIndex}
+                        activeDotKeys={activeDotKeys}
+                        dotStanzaObject={dotStanza}
+                        onAnnotationClick={onAnnotationClick}
+                    />
                 </div> : null
             }
         </div>

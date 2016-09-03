@@ -10,7 +10,8 @@ const _tempStore = {
     songDotKeys: {},
     annotations: [],
     portalLinks: {},
-    lastLyricObject: {}
+    lastLyricObject: {},
+    lineIndexCounter: 0
 }
 
 export const prepareAlbumData = (album = {}) => {
@@ -27,14 +28,16 @@ const _prepareAllSongs = (album) => {
         // Song indices start at 1.
         _tempStore.songIndex = songIndex + 1
         _tempStore.annotations = []
+        _tempStore.lineIndexCounter = 0
 
         _addTitleToLyrics(song.title, song.lyrics)
         const anchor = song.title.anchor
         song.title = anchor
         _parseLyrics(song.lyrics)
 
-        // Make last verse's next time the song's total time.
+        // Make last verse's next time the song's total time and add line index.
         _tempStore.lastLyricObject.nextTime = song.totalTime
+        _tempStore.lastLyricObject.lineIndex = _tempStore.lineIndexCounter
 
         // Add annotations to song object.
         song.annotations = _tempStore.annotations
@@ -90,9 +93,11 @@ const _addTitleToLyrics = (title, lyrics) => {
 const _parseLyrics = (lyric) => {
     /**
      * If lyric object has time, add it as nextTime to the last lyric object,
-     * then replace it as the last lyric object.
+     * then replace it as the last lyric object. Also add line index.
      */
     if (!isNaN(lyric.time)) {
+        _tempStore.lastLyricObject.lineIndex = _tempStore.lineIndexCounter
+        _tempStore.lineIndexCounter++
         _tempStore.lastLyricObject.nextTime = lyric.time
         _tempStore.lastLyricObject = lyric
     }

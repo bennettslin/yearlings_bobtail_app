@@ -1,5 +1,6 @@
 import React from 'react'
 import TextBlock from '../text/text-block'
+import LyricsPlayButton from './lyrics-play-button'
 import { DOUBLESPEAKER_KEYS } from 'helpers/constants'
 
 /*************
@@ -9,12 +10,15 @@ import { DOUBLESPEAKER_KEYS } from 'helpers/constants'
 const LyricsVerse = (props) => {
 
     const { verseObject,
+            activeTime,
+            hoveredLineIndex,
             onTimeClick,
-            activeTime } = props,
+            onLineHover } = props,
         { lyric,
           isTitle,
           time,
-          nextTime } = verseObject,
+          nextTime,
+          lineIndex } = verseObject,
 
         /**
          * It's active if it's between time and nextTime, or if all three times
@@ -23,14 +27,21 @@ const LyricsVerse = (props) => {
         isActive = (time <= activeTime && activeTime < nextTime) ||
                    (time === activeTime && nextTime === activeTime),
         isSingleSpeaker = !!lyric,
-        onClick = !isNaN(time) ? e => onTimeClick(e, time) : null
+        isEnabled = lineIndex === hoveredLineIndex,
+        onClick = !isNaN(time) ? e => onTimeClick(e, time) : null,
+        onMouseEnter = onLineHover ? e => onLineHover(e, lineIndex) : null,
+        onMouseLeave = onLineHover ? e => onLineHover(e) : null
 
     return (
         <LyricsVerseView {...props}
             isSingleSpeaker={isSingleSpeaker}
+            time={time}
             isActive={isActive}
+            isEnabled={isEnabled}
             isTitle={isTitle}
             onClick={onClick}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
         />
     )
 }
@@ -48,14 +59,26 @@ const LyricsVerseView = ({
     onAnnotationClick,
 
     // From controller.
+    time,
     isActive,
+    isEnabled,
     isSingleSpeaker,
     isTitle,
-    onClick
+    onClick,
+    onMouseEnter,
+    onMouseLeave
 
 }) => (
 
-    <div className={`verse${isActive ? ' active' : ''}${onClick ? ' enabled' : ''}`} onClick={onClick}>
+    <div className={`verse${isActive ? ' active' : ''}${isEnabled ? ' enabled' : ''}${onClick ? ' interactable' : ''}`}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+    >
+        <LyricsPlayButton
+            time={time}
+            isEnabled={isEnabled}
+            onClick={onClick}
+        />
         {isSingleSpeaker ? (
                 <div className={`line${isTitle ? '' : ' left'}`}>
                     <TextBlock

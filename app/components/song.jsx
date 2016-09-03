@@ -38,12 +38,16 @@ const SongView = ({
     activeDotKeys,
     activeWikiUrl,
     activeTime,
+    hoveredDotIndex,
+    hoveredLineIndex,
 
     onDotClick,
     onPortalClick,
     onWikiUrlClick,
     onAnnotationClick,
     onTimeClick,
+    onDotHover,
+    onLineHover,
 
     // From controller.
     annotation,
@@ -68,17 +72,21 @@ const SongView = ({
             />
             <DotsSection
                 showUnpresent={true}
+                hoveredDotIndex={hoveredDotIndex}
                 activeDotKeys={activeDotKeys}
                 presentDotKeys={presentDotKeys}
                 onDotClick={onDotClick}
+                onDotHover={onDotHover}
             />
             <LyricsSection
                 songLyrics={activeSongLyrics}
                 activeTime={activeTime}
                 activeAnnotationIndex={activeAnnotationIndex}
                 activeDotKeys={activeDotKeys}
+                hoveredLineIndex={hoveredLineIndex}
                 onTimeClick={onTimeClick}
                 onAnnotationClick={onAnnotationClick}
+                onLineHover={onLineHover}
             />
         </div>
     </div>

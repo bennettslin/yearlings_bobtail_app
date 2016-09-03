@@ -57,7 +57,7 @@
 
         &.disabled {
             .underline-bar {
-                background-color: mix(gray, white, 25%);
+                background-color: mix(gray, white, 15%);
             }
         }
     }
@@ -133,18 +133,14 @@
         &.outro-section { box-shadow: 0 1px 2px 2px tan; }
 
         .verse {
+            transition: color 0.1s ease;
 
-            // TODO: Better styling, of course.
-            &.enabled {
-                cursor: alias;
+            &.interactable:hover {
+                color: green;
+            }
 
-                &:hover {
-                    color: green;
-                }
-
-                &.active {
-                    border: 1px dotted green;
-                }
+            &.active {
+                color: blue;
             }
 
             @verse-padding: 10px;
@@ -164,6 +160,39 @@
             }
             &:nth-child(even) {
                 background-color: #fcfce9;
+            }
+        }
+    }
+
+    .play-button-container {
+        position: relative;
+
+        // FIXME: Improve styling, of course.
+        .play-button-block {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            left: -60px;
+
+            .play-button {
+                transition: opacity 0.1s ease 0.2s;
+                padding: 5px 15px;
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0 1px 2px 2px lightGray;
+                opacity: 0;
+
+                &.enabled {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .play-button-container {
+        .play-button-block {
+            .play-button {
+
             }
         }
     }

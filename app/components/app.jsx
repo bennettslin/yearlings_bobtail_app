@@ -66,9 +66,16 @@ class App extends Component {
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this)
         this.handleTimeSelect = this.handleTimeSelect.bind(this)
         this.handleDotToggle = this.handleDotToggle.bind(this)
+        this.handleDotHover = this.handleDotHover.bind(this)
+        this.handleLineHover = this.handleLineHover.bind(this)
         this.handlePortalSelect = this.handlePortalSelect.bind(this)
         this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
+
+        this.state = {
+            hoveredDotIndex: 0,
+            hoveredLineIndex: 0
+        }
     }
 
     componentWillMount() {
@@ -131,16 +138,30 @@ class App extends Component {
         SessionHelper.setInSession(ACTIVE_OVERVIEW_INDEX, activeIndex)
     }
 
-    handleDotToggle(e, dotKey) {
+    handleDotHover(e, hoveredDotIndex = 0) {
+        // Hovered dot index sets the text, as well as the position of the tooltip.
+
+        this.setState({
+            hoveredDotIndex
+        })
+    }
+
+    handleLineHover(e, hoveredLineIndex = 0) {
+        this.setState({
+            hoveredLineIndex
+        })
+    }
+
+    handleDotToggle(e, toggleDotKey) {
         if (e) { e.stopPropagation() }
 
-        const isActive = !this.props.activeDotKeys[dotKey]
-        this.props.toggleDotKey(dotKey, isActive)
-        SessionHelper.setDotInSession(dotKey, isActive)
+        const isActive = !this.props.activeDotKeys[toggleDotKey]
+        this.props.toggleDotKey(toggleDotKey, isActive)
+        SessionHelper.setDotInSession(toggleDotKey, isActive)
 
         // If this is the last active dot key, then close the annotation.
         if (!isActive) {
-            this._deselectAnnotationWithNoActiveDots(dotKey)
+            this._deselectAnnotationWithNoActiveDots(toggleDotKey)
         }
     }
 
@@ -216,7 +237,9 @@ class App extends Component {
                 activeDotKeys,
                 activeWikiUrl
 
-            } = this.props
+            } = this.props,
+            { hoveredDotIndex,
+              hoveredLineIndex } = this.state
 
         return (
             <div className="app" onClick={this._onBodyClick}>
@@ -232,6 +255,8 @@ class App extends Component {
                     activeTime={activeTime}
                     activeDotKeys={activeDotKeys}
                     activeWikiUrl={activeWikiUrl}
+                    hoveredDotIndex={hoveredDotIndex}
+                    hoveredLineIndex={hoveredLineIndex}
 
                     onSongClick={this.handleSongSelect}
                     onPortalClick={this.handlePortalSelect}
@@ -240,6 +265,8 @@ class App extends Component {
                     onOverviewClick={this.handleOverviewSelect}
                     onTimeClick={this.handleTimeSelect}
                     onDotClick={this.handleDotToggle}
+                    onDotHover={this.handleDotHover}
+                    onLineHover={this.handleLineHover}
                 />
             </div>
         )

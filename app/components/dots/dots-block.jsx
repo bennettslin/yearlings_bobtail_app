@@ -35,6 +35,7 @@ const DotsBlockView = ({
     activeDotKeys,
     presentDotKeys,
     onDotClick,
+    onDotHover,
 
     // From controller.
     isInteractive
@@ -54,11 +55,13 @@ const DotsBlockView = ({
                 return (isPresent || showUnpresent ?
                     <DotButton
                         key={index}
+                        dotIndex={index + 1}
                         isDisabled={isDisabled}
                         isActive={isActive}
                         isPresent={isPresent}
                         dotKey={dotKey}
                         onDotClick={onDotClick}
+                        onDotHover={showUnpresent ? onDotHover : null}
                     /> : null
                 )
 
