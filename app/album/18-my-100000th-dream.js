@@ -6,6 +6,7 @@ module.exports = {
         },
         todo: true
     },
+    totalTime: 244,
     overviews: {
         narrative: `narrative 1`,
         music: `personal 1`

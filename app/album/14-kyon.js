@@ -9,6 +9,7 @@ module.exports = {
         },
         todo: true
     },
+    totalTime: 225,
     overviews: {
         narrative: `The breakup years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita willingly continued to endure my cruelty. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her sense of worth to our relationship. I was fighting for myself. She was fighting for us.`,
         music: [

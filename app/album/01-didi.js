@@ -8,6 +8,7 @@ module.exports = {
         },
         todo: true
     },
+    totalTime: 177,
     overviews: {
         narrative: `As a child, I depended on my older sister to do most everything for me, like zipping my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`,
         music: [

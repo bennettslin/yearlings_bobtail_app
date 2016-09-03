@@ -6,6 +6,7 @@ module.exports = {
         },
         todo: true
     },
+    totalTime: 164,
     overviews: {
         narrative: `narrative 1`,
         music: `Last doublespeaker rhyme, the one I was happiest with.`

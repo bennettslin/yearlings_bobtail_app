@@ -8,6 +8,7 @@ module.exports = {
         },
         todo: true
     },
+    totalTime: 201,
     overviews: {
         narrative: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
         music: [

@@ -33,6 +33,9 @@ const _prepareAllSongs = (album) => {
         song.title = anchor
         _parseLyrics(song.lyrics)
 
+        // Make last verse's next time the song's total time.
+        _tempStore.lastLyricObject.nextTime = song.totalTime
+
         // Add annotations to song object.
         song.annotations = _tempStore.annotations
 

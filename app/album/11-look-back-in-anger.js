@@ -6,6 +6,7 @@ module.exports = {
         },
         todo: true
     },
+    totalTime: 175,
     overviews: {
         narrative: `With The Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. And yet, my depression didn't abate, but instead simmered into a hard-boiled anger. I also began to regret my relationship with Sita, which now felt like a decision I was coerced to make, under deprived conditions from which I'd since been freed.`,
         music: `A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would sing in hushed tones so as not to wake his neighbours, and then overdub several takes. He would also tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to channel Owen here, minus the impromptu part, of course.`
