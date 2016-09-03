@@ -15,7 +15,7 @@ const NavRow = (props) => {
 
         songTitle = song.title,
         sumTask = ProgressHelper.calculateSumTask(song.tasks),
-        onClick = (e) => !isActive ? onSongClick(e, songIndex) : null
+        onClick = e => !isActive ? onSongClick(e, songIndex) : null
 
     return (
         <NavRowView {...props}

@@ -23,7 +23,7 @@ const LyricsVerse = (props) => {
         isActive = (time <= activeTime && activeTime < nextTime) ||
                    (time === activeTime && nextTime === activeTime),
         isSingleSpeaker = !!lyric,
-        onClick = !isNaN(time) ? (e) => onTimeClick(e, time) : null
+        onClick = !isNaN(time) ? e => onTimeClick(e, time) : null
 
     return (
         <LyricsVerseView {...props}

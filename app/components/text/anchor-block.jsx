@@ -11,7 +11,8 @@ const AnchorBlock = (props) => {
 
     const { text,
             activeAnnotationIndex,
-            activeDotKeys } = props,
+            activeDotKeys,
+            onAnchorClick } = props,
 
         { annotationIndex,
           anchor: anchorText,
@@ -27,7 +28,8 @@ const AnchorBlock = (props) => {
          * click handler is the annotation index. Otherwise, it's a
          * reference, and the argument is a url string.
          */
-        clickHandlerArgument = annotationIndex || wiki
+        clickHandlerArgument = annotationIndex || wiki,
+        onClick = !isDisabled ? e => onAnchorClick(e, clickHandlerArgument) : null
 
     return (
         <AnchorBlockView {...props}
@@ -35,7 +37,7 @@ const AnchorBlock = (props) => {
             isDisabled={isDisabled}
             dotKeys={intersectedDotKeys}
             anchorText={anchorText}
-            clickHandlerArgument={clickHandlerArgument}
+            onClick={onClick}
         />
     )
 }
@@ -49,14 +51,13 @@ const AnchorBlockView = ({
     // From props.
     isLyric,
     beginsNewLine,
-    onAnchorClick,
 
     // From controller.
     hasTodo,
     isDisabled,
     dotKeys,
     anchorText,
-    clickHandlerArgument
+    onClick
 
 }) => (
 
@@ -65,7 +66,7 @@ const AnchorBlockView = ({
         { !beginsNewLine ? ' ' : null }
         <a
             className={`anchor-block ${isDisabled ? 'disabled' : 'enabled'}${hasTodo ? ' todo' : ''}`}
-            onClick={!isDisabled ? e => onAnchorClick(e, clickHandlerArgument) : null}
+            onClick={onClick}
         >
             {isLyric ?
                 <span className="underline-bar">
@@ -81,7 +82,6 @@ const AnchorBlockView = ({
                 isLyric={isLyric}
                 isInAnchor={true}
                 text={anchorText}
-                onAnchorClick={onAnchorClick}
             />
         </a>
     </span>

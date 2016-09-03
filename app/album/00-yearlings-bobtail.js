@@ -179,6 +179,11 @@ module.exports = {
             taskName: `add time to components`,
             workedHours: 8,
             neededHours: 8
+        },
+        {
+            taskName: `dismiss popup by clicking on body`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

@@ -18,7 +18,7 @@ const DotStanza = (props) => {
 
         isDisabled = annotationIndex === activeAnnotationIndex,
         shouldShow = intersects(dotKeys, activeDotKeys),
-        onDotClick = (e) => onAnnotationClick(e, annotationIndex)
+        onDotClick = e => onAnnotationClick(e, annotationIndex)
 
     return (shouldShow ?
         <div className="stanza">

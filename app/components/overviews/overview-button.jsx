@@ -12,7 +12,7 @@ const OverviewButton = (props) => {
 
         // Overview indices begin at 1.
         onClick = !isDisabled ?
-            (e) => onOverviewClick(e, overviewIndex + 1) : null
+            e => onOverviewClick(e, overviewIndex + 1) : null
 
     return (
         <OverviewButtonView {...props}
