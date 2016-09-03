@@ -1,3 +1,5 @@
+import { VERSE, CHORUS } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: 'M',
@@ -65,6 +67,10 @@ module.exports = {
                     },
                     `I'd be one to keep.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -130,6 +136,11 @@ module.exports = {
                     },
                     `I'd impress.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -157,6 +168,10 @@ module.exports = {
                 time: 82,
                 lyric: `these words unsaid.`
             },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
+            }
         ],
         [
             {
@@ -200,6 +215,11 @@ module.exports = {
                 time: 91,
                 lyric: `my life and letters end.`
             },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
+            }
         ],
         [
             {
@@ -259,6 +279,10 @@ module.exports = {
                     },
                     `who hanged from this tie.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -316,6 +340,11 @@ module.exports = {
                     },
                     `in this heap of twisted twine.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -351,6 +380,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
+            }
         ],
         [
             {
@@ -396,6 +429,11 @@ module.exports = {
             {
                 time: 150,
                 lyric: `then turned to hug the void.`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -428,6 +466,11 @@ module.exports = {
                     }
                 }
             },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
+            }
         ],
         [
             {
@@ -453,6 +496,11 @@ module.exports = {
             {
                 time: 170,
                 lyric: `should first love the world.`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -485,6 +533,11 @@ module.exports = {
                     }
                 }
             },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
+            }
         ],
         [
             {
@@ -522,6 +575,11 @@ module.exports = {
             {
                 time: 190,
                 lyric: `I'm not sad!`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ]
     ],

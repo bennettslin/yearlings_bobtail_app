@@ -31,7 +31,7 @@ const TitleSectionView = ({
 
     <div className="section title-section">
         <h1>
-            <a onClick={onClick}>
+            <a className="enabled" onClick={onClick}>
                 {title}
             </a>
         </h1>
