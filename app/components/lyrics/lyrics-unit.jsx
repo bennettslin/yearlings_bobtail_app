@@ -86,6 +86,7 @@ const LyricsUnitView = ({
             {dotStanza ?
                 <div className={`stanza-block dot ${isDotOnly ? 'only' : 'shared'}`}>
                     <DotStanza
+                        activeAnnotationIndex={activeAnnotationIndex}
                         activeDotKeys={activeDotKeys}
                         dotStanzaObject={dotStanza}
                         onAnnotationClick={onAnnotationClick}

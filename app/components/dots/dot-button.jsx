@@ -7,9 +7,10 @@ import React from 'react'
 const DotButton = (props) => {
 
     const { dotKey,
+            isDisabled,
             onDotClick } = props,
 
-        onClick = () => onDotClick(dotKey)
+        onClick = !isDisabled ? () => onDotClick(dotKey) : null
 
     return (
         <DotButtonView {...props}
@@ -26,6 +27,7 @@ const DotButtonView = ({
 
     // From props.
     dotKey,
+    isDisabled,
     isActive,
     isPresent,
 
@@ -35,7 +37,7 @@ const DotButtonView = ({
 }) => (
 
     <div
-        className={`dot ${dotKey}${isActive ? '' : ' inactive'}${isPresent ? '' : ' unpresent'}`}
+        className={`dot ${dotKey}${isActive ? '' : ' inactive'}${isPresent ? '' : ' unpresent'} ${isDisabled ? 'disabled' : 'enabled'}`}
         onClick={onClick}
     >
         {/* FIXME: Dots ultimately won't have text, of course. */}

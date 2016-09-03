@@ -19,7 +19,7 @@ const AnchorBlock = (props) => {
           dotKeys,
           wiki } = text,
 
-        isEnabled = !annotationIndex || annotationIndex !== activeAnnotationIndex,
+        isDisabled = annotationIndex && annotationIndex === activeAnnotationIndex,
         intersectedDotKeys = getIntersection(dotKeys, activeDotKeys),
 
         /**
@@ -32,7 +32,7 @@ const AnchorBlock = (props) => {
     return (
         <AnchorBlockView {...props}
             hasTodo={hasTodo}
-            isEnabled={isEnabled}
+            isDisabled={isDisabled}
             dotKeys={intersectedDotKeys}
             anchorText={anchorText}
             clickHandlerArgument={clickHandlerArgument}
@@ -53,7 +53,7 @@ const AnchorBlockView = ({
 
     // From controller.
     hasTodo,
-    isEnabled,
+    isDisabled,
     dotKeys,
     anchorText,
     clickHandlerArgument
@@ -64,8 +64,8 @@ const AnchorBlockView = ({
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
         { !beginsNewLine ? ' ' : null }
         <a
-            className={`anchor-block ${isEnabled ? 'enabled' : 'disabled'}${hasTodo ? ' todo' : ''}`}
-            onClick={isEnabled ? e => onAnchorClick(clickHandlerArgument, e) : null}
+            className={`anchor-block ${isDisabled ? 'disabled' : 'enabled'}${hasTodo ? ' todo' : ''}`}
+            onClick={!isDisabled ? e => onAnchorClick(clickHandlerArgument, e) : null}
         >
             {isLyric ?
                 <span className="underline-bar">
@@ -73,6 +73,7 @@ const AnchorBlockView = ({
             }
             {dotKeys ?
                 <DotsBlock
+                    isDisabled={isDisabled}
                     presentDotKeys={dotKeys}
                 /> : null
             }

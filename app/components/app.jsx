@@ -150,7 +150,6 @@ class App extends Component {
     }
 
     handleAnnotationSelect(activeIndex = 0, e) {
-
         // Prevent verse from also being clicked.
         if (e) {
             e.stopPropagation();
@@ -171,6 +170,10 @@ class App extends Component {
     handlePortalSelect(activeSongIndex, activeAnnotationIndex) {
         this.handleSongSelect(activeSongIndex, ACTIVE_SONG_INDEX)
         this.handleAnnotationSelect(activeAnnotationIndex)
+    }
+
+    handleTimeSelect() {
+
     }
 
     render() {

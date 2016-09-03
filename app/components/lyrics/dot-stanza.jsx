@@ -10,11 +10,13 @@ const DotStanza = (props) => {
 
     const { onAnnotationClick,
             dotStanzaObject,
+            activeAnnotationIndex,
             activeDotKeys } = props,
 
         { annotationIndex,
           dotKeys } = dotStanzaObject,
 
+        isDisabled = annotationIndex === activeAnnotationIndex,
         shouldShow = intersects(dotKeys, activeDotKeys),
         onDotClick = () => onAnnotationClick(annotationIndex)
 
@@ -22,6 +24,7 @@ const DotStanza = (props) => {
         <div className="stanza">
             {/* This will break if dot stanzas ever have more than one dot. */}
             <DotsBlock
+                isDisabled={isDisabled}
                 activeDotKeys={dotKeys}
                 presentDotKeys={dotKeys}
                 onDotClick={onDotClick}

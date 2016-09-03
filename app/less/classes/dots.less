@@ -6,16 +6,18 @@
 
     &.interactive {
         .dot {
-            .transition(background-color 0.1s ease);
-            cursor: pointer;
+            &.enabled {
+                .transition(background-color 0.1s ease);
+                cursor: pointer;
 
-            // FIXME: Make styling better, of course.
-            &:hover {
-                background-color: orange;
-            }
+                // FIXME: Make styling better, of course.
+                &:hover {
+                    background-color: orange;
+                }
 
-            &:active {
-                background-color: red;
+                &:active {
+                    background-color: red;
+                }
             }
 
             // FIXME: Temporary styling for dot text.
@@ -73,6 +75,10 @@
         }
 
         &.unpresent {
+            opacity: 0.25;
+        }
+
+        &.disabled {
             opacity: 0.25;
         }
     }

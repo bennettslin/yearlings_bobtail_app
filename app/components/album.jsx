@@ -1,6 +1,7 @@
 import React from 'react'
 import Shared from './shared'
 import TitleSection from './title/title-section'
+import DevSection from './dev/dev-section'
 import NavSection from './nav/nav-section'
 import ProgressHelper from 'helpers/progress-helper'
 
@@ -46,6 +47,8 @@ const AlbumView = (props) => {
                 <TitleSection
                     title={albumTitle}
                     onTitleClick={onSongClick}
+                />
+                <DevSection
                 />
                 <NavSection
                     songs={songs}

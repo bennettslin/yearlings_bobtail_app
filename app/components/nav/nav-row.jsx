@@ -51,7 +51,7 @@ const NavRowView = ({
         />
         <div className="text-cell-wrapper">
             <a
-                className="text-cell text"
+                className="text-cell text enabled"
                 onClick={onClick}
             >
                 {`${songIndex}. ${songTitle}`}

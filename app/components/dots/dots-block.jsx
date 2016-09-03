@@ -31,6 +31,7 @@ const DotsBlockView = ({
 
     // From props.
     showUnpresent,
+    isDisabled,
     activeDotKeys,
     presentDotKeys,
     onDotClick,
@@ -53,6 +54,7 @@ const DotsBlockView = ({
                 return (isPresent || showUnpresent ?
                     <DotButton
                         key={index}
+                        isDisabled={isDisabled}
                         isActive={isActive}
                         isPresent={isPresent}
                         dotKey={dotKey}
@@ -65,7 +67,7 @@ const DotsBlockView = ({
                 return (isPresent ?
                     <div
                         key={index}
-                        className={`dot ${dotKey}`}
+                        className={`dot ${dotKey} ${isDisabled ? 'disabled' : 'enabled'}`}
                     ></div> : null
                 )
             }

@@ -169,6 +169,11 @@ module.exports = {
             taskName: `hide annotation when dots inactive`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `disable active annotations`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
