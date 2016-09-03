@@ -32,11 +32,11 @@ module.exports = {
     RIGHT,
     OVERLAP: 'overlap',
 
-    VERSE: 'verse',
-    PRECHORUS: 'prechorus',
-    CHORUS: 'chorus',
-    POSTCHORUS: 'postchorus',
-    BRIDGE: 'bridge',
+    VERSE: 'verse-section',
+    PRECHORUS: 'prechorus-section',
+    CHORUS: 'chorus-section',
+    POSTCHORUS: 'postchorus-section',
+    BRIDGE: 'bridge-section',
 
     // Temporary.
     ALBUM_BUILD_KEYS: [

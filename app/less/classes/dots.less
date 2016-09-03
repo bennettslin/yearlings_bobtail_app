@@ -6,18 +6,13 @@
 
     &.interactive {
         .dot {
+
+            // TODO: Interactive styling.
             &.enabled {
-                .transition(background-color 0.1s ease);
                 cursor: pointer;
-
-                // FIXME: Make styling better, of course.
-                &:hover {
-                    background-color: orange;
-                }
-
-                &:active {
-                    background-color: red;
-                }
+                .transition(background-color 0.1s ease);
+                &:hover { background-color: orange; }
+                &:active { background-color: red; }
             }
 
             // FIXME: Temporary styling for dot text.
@@ -33,53 +28,20 @@
     .dot {
         border-radius: 50%;
 
-        &.pun {
-            background-color: @pun-dot-colour;
-        }
+        // TODO: Key styling.
+        &.pun { background-color: @pun-dot-colour; }
+        &.backstory { background-color: @backstory-dot-colour; }
+        &.narrative { background-color: @narrative-dot-colour; }
+        &.foreshadow { background-color: @foreshadow-dot-colour; }
+        &.music { background-color: @music-dot-colour; }
+        &.pulpit { background-color: @pulpit-dot-colour; }
+        &.wiki { background-color: @wiki-dot-colour; }
+        &.portal { background-color: @portal-dot-colour; }
+        &.title { background-color: white; }
 
-        &.backstory {
-            background-color: @backstory-dot-colour;
-        }
-
-        &.narrative {
-            background-color: @narrative-dot-colour;
-        }
-
-        &.foreshadow {
-            background-color: @foreshadow-dot-colour;
-        }
-
-        &.music {
-            background-color: @music-dot-colour;
-        }
-
-        &.pulpit {
-            background-color: @pulpit-dot-colour;
-        }
-
-        &.wiki {
-            background-color: @wiki-dot-colour;
-        }
-
-        &.portal {
-            background-color: @portal-dot-colour;
-        }
-
-        &.title {
-            background-color: white;
-        }
-
-        // FIXME: Eventually make better styling, of course.
-        &.inactive {
-            background-color: lightGray;
-        }
-
-        &.unpresent {
-            opacity: 0.25;
-        }
-
-        &.disabled {
-            opacity: 0.25;
-        }
+        // FIXME: State styling.
+        &.inactive { background-color: lightGray; }
+        &.unpresent { opacity: 0.25; }
+        &.disabled { opacity: 0.25; }
     }
 }

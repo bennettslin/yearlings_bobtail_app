@@ -123,32 +123,16 @@
     .stanza {
         box-shadow: 0 1px 2px 2px @box-shadow-colour;
 
-        // This refers to the verse section!
-        // FIXME: Fix this, as I will forget and this is a disaster waiting to happen.
         // TODO: Better styling, of course.
-        &.verse {
-            box-shadow: 0 1px 2px 2px orange;
-        }
+        &.verse-section { box-shadow: 0 1px 2px 2px orange; }
+        &.prechorus-section { box-shadow: 0 1px 2px 2px green; }
+        &.chorus-section { box-shadow: 0 1px 2px 2px blue; }
+        &.postchorus-section { box-shadow: 0 1px 2px 2px violet; }
+        &.bridge-section { box-shadow: 0 1px 2px 2px purple; }
 
-        &.prechorus {
-            box-shadow: 0 1px 2px 2px green;
-        }
-
-        &.chorus {
-            box-shadow: 0 1px 2px 2px blue;
-        }
-
-        &.postchorus {
-            box-shadow: 0 1px 2px 2px violet;
-        }
-
-        &.bridge {
-            box-shadow: 0 1px 2px 2px purple;
-        }
-
-        // FIXME: This refers to the verse lyric!
-        // TODO: Better styling, of course.
         .verse {
+
+            // TODO: Better styling, of course.
             &.enabled {
                 cursor: alias;
 
