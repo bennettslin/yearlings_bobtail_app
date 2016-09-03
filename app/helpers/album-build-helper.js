@@ -9,7 +9,8 @@ const _tempStore = {
     songIndex: 0,
     songDotKeys: {},
     annotations: [],
-    portalLinks: {}
+    portalLinks: {},
+    lastLyricObject: {}
 }
 
 export const prepareAlbumData = (album = {}) => {
@@ -54,6 +55,7 @@ const _addTitleToLyrics = (title, lyrics) => {
     // Add title object to lyrics object.
     const { annotation } = title,
         titleObject = {
+            time: 0,
             lyric: title,
             isTitle: true
         }
@@ -74,12 +76,24 @@ const _addTitleToLyrics = (title, lyrics) => {
     } else {
         lyrics.unshift([titleObject])
     }
+
+    // Store so that next lyric object can add its time as nextTime.
+    _tempStore.lastLyricObject = lyrics[0][0]
 }
 
 /**
  * Recurse until object with anchor key is found.
  */
 const _parseLyrics = (lyric) => {
+    /**
+     * If lyric object has time, add it as nextTime to the last lyric object,
+     * then replace it as the last lyric object.
+     */
+    if (!isNaN(lyric.time)) {
+        _tempStore.lastLyricObject.nextTime = lyric.time
+        _tempStore.lastLyricObject = lyric
+    }
+
     if (Array.isArray(lyric)) {
         lyric.forEach(childLyricValue => {
             _parseLyrics(childLyricValue)

@@ -42,6 +42,7 @@ const SongView = ({
     onPortalClick,
     onWikiUrlClick,
     onAnnotationClick,
+    onTimeClick,
 
     // From controller.
     annotation,
@@ -74,6 +75,7 @@ const SongView = ({
                 songLyrics={activeSongLyrics}
                 activeAnnotationIndex={activeAnnotationIndex}
                 activeDotKeys={activeDotKeys}
+                onTimeClick={onTimeClick}
                 onAnnotationClick={onAnnotationClick}
             />
         </div>

@@ -8,15 +8,22 @@ import { DOUBLESPEAKER_KEYS } from 'helpers/constants'
 
 const LyricsVerse = (props) => {
 
-    const { verseObject } = props,
+    const { verseObject,
+            onTimeClick } = props,
+        { lyric,
+          isTitle,
+          time } = verseObject,
 
-        isSingleSpeaker = !!verseObject.lyric,
-        isTitle = verseObject.isTitle
+        // TODO: Get nextTime from verseObject.
+
+        isSingleSpeaker = !!lyric,
+        onClick = !isNaN(time) ? () => onTimeClick(time) : null
 
     return (
         <LyricsVerseView {...props}
             isSingleSpeaker={isSingleSpeaker}
             isTitle={isTitle}
+            onClick={onClick}
         />
     )
 }
@@ -35,11 +42,12 @@ const LyricsVerseView = ({
 
     // From controller.
     isSingleSpeaker,
-    isTitle
+    isTitle,
+    onClick
 
 }) => (
 
-    <div className="verse" onClick={() => {}}>
+    <div className="verse" onClick={onClick}>
         {isSingleSpeaker ? (
                 <div className={`line${isTitle ? '' : ' left'}`}>
                     <TextBlock

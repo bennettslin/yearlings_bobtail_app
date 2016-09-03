@@ -34,6 +34,7 @@ const AlbumView = (props) => {
         songs,
         albumTitle,
         activeSongIndex,
+        activeTime,
         onSongClick,
 
         // From controller.
@@ -49,6 +50,7 @@ const AlbumView = (props) => {
                     onTitleClick={onSongClick}
                 />
                 <DevSection
+                    activeTime={activeTime}
                 />
                 <NavSection
                     songs={songs}

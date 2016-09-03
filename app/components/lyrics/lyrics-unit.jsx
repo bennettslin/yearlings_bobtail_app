@@ -50,6 +50,7 @@ const LyricsUnitView = ({
     activeAnnotationIndex,
     activeDotKeys,
     onAnnotationClick,
+    onTimeClick,
 
     // From controller.
     unitClass,
@@ -77,6 +78,7 @@ const LyricsUnitView = ({
                     activeDotKeys={activeDotKeys}
                     stanzaArray={stanzaArray}
                     onAnnotationClick={onAnnotationClick}
+                    onTimeClick={onTimeClick}
                 />
         ) : null
     }

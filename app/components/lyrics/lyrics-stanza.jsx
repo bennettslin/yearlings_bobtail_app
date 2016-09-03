@@ -20,7 +20,8 @@ const LyricsStanzaView = ({
     sectionClass,
     activeAnnotationIndex,
     activeDotKeys,
-    onAnnotationClick
+    onAnnotationClick,
+    onTimeClick
 
 }) => (
 
@@ -33,6 +34,7 @@ const LyricsStanzaView = ({
                     activeAnnotationIndex={activeAnnotationIndex}
                     activeDotKeys={activeDotKeys}
                     onAnnotationClick={onAnnotationClick}
+                    onTimeClick={onTimeClick}
                 /> : null
             )
         )}

@@ -13,6 +13,7 @@ module.exports = {
 
     ACTIVE_SONG_INDEX: 'activeSongIndex',
     ACTIVE_ANNOTATION_INDEX: 'activeAnnotationIndex',
+    ACTIVE_TIME: 'activeTime',
     ACTIVE_DOT_KEYS: 'activeDotKeys',
     ACTIVE_OVERVIEW_INDEX: 'activeOverviewIndex',
     ACTIVE_WIKI_URL: 'activeWikiUrl',

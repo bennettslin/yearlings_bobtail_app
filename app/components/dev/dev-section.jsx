@@ -15,13 +15,14 @@ const DevSection = (props) => (
 const DevSectionView = ({
 
     // From props.
+    activeTime
 
 }) => (
 
     <div className="section dev-section">
         <h2>dev</h2>
         <div className="row">
-            hi
+            Active Time: {activeTime}
         </div>
     </div>
 )

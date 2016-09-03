@@ -17,9 +17,6 @@ module.exports = {
     lyrics: [
         [
             {
-                hi: 'hi'
-            },
-            {
                 time: 0,
                 centre: [
                     {

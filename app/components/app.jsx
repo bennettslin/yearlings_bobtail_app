@@ -3,12 +3,14 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { selectSongIndex,
          selectAnnotationIndex,
+         selectTime,
          toggleDotKey,
          selectOverviewIndex,
          selectWikiUrl } from 'redux/actions'
 import Album from './album'
 import { ACTIVE_SONG_INDEX,
          ACTIVE_ANNOTATION_INDEX,
+         ACTIVE_TIME,
          ACTIVE_DOT_KEYS,
          ACTIVE_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from 'helpers/constants'
@@ -24,6 +26,7 @@ import SessionHelper from 'helpers/session-helper'
 const passReduxStateToProps = ({
     activeSongIndex,
     activeAnnotationIndex,
+    activeTime,
     activeDotKeys,
     activeOverviewIndex,
     activeWikiUrl
@@ -31,6 +34,7 @@ const passReduxStateToProps = ({
     // Pass Redux state into component props.
     activeSongIndex,
     activeAnnotationIndex,
+    activeTime,
     activeDotKeys,
     activeOverviewIndex,
     activeWikiUrl
@@ -41,6 +45,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         selectSongIndex,
         selectAnnotationIndex,
+        selectTime,
         toggleDotKey,
         selectOverviewIndex,
         selectWikiUrl
@@ -59,6 +64,7 @@ class App extends Component {
         this.handleSongSelect = this.handleSongSelect.bind(this)
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this)
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this)
+        this.handleTimeSelect = this.handleTimeSelect.bind(this)
         this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handlePortalSelect = this.handlePortalSelect.bind(this)
         this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
@@ -103,13 +109,14 @@ class App extends Component {
             SessionHelper.setInSession(activeIndexKey, activeIndex)
 
             /**
-             * Also reset the stored annotation and overview indices if
-             * changing the active song index. Right now, default for
-             * overview is 1 for narrative.
+             * Also reset the stored annotation, time, and overview if changing
+             * the active song index. Right now, default for overview is 1 for
+             * narrative.
              */
             if (activeIndexKey === ACTIVE_SONG_INDEX) {
                 this.handleAnnotationSelect()
                 this.handleOverviewSelect(DEFAULT_OVERVIEW_INDEX)
+                this.handleTimeSelect()
             }
         }
     }
@@ -172,8 +179,9 @@ class App extends Component {
         this.handleAnnotationSelect(activeAnnotationIndex)
     }
 
-    handleTimeSelect() {
-
+    handleTimeSelect(activeTime = 0) {
+        this.props.selectTime(activeTime)
+        SessionHelper.setInSession(ACTIVE_TIME, activeTime)
     }
 
     render() {
@@ -189,6 +197,7 @@ class App extends Component {
                 activeSongIndex,
                 activeOverviewIndex,
                 activeAnnotationIndex,
+                activeTime,
                 activeDotKeys,
                 activeWikiUrl
 
@@ -205,6 +214,7 @@ class App extends Component {
                     activeSongIndex={activeSongIndex}
                     activeOverviewIndex={activeOverviewIndex}
                     activeAnnotationIndex={activeAnnotationIndex}
+                    activeTime={activeTime}
                     activeDotKeys={activeDotKeys}
                     activeWikiUrl={activeWikiUrl}
 
@@ -213,6 +223,7 @@ class App extends Component {
                     onWikiUrlClick={this.handleWikiUrlSelect}
                     onAnnotationClick={this.handleAnnotationSelect}
                     onOverviewClick={this.handleOverviewSelect}
+                    onTimeClick={this.handleTimeSelect}
                     onDotClick={this.handleDotToggle}
                 />
             </div>

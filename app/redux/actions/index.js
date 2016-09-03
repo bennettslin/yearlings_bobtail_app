@@ -1,5 +1,6 @@
 import { ACTIVE_SONG_INDEX,
          ACTIVE_ANNOTATION_INDEX,
+         ACTIVE_TIME,
          ACTIVE_DOT_KEYS,
          ACTIVE_OVERVIEW_INDEX,
          ACTIVE_WIKI_URL,
@@ -13,6 +14,11 @@ export const selectSongIndex = (activeSongIndex = 0) => ({
 export const selectAnnotationIndex = (activeAnnotationIndex = 0) => ({
     type: ACTIVE_ANNOTATION_INDEX,
     payload: activeAnnotationIndex
+})
+
+export const selectTime = (activeTime = 0) => ({
+    type: ACTIVE_TIME,
+    payload: activeTime
 })
 
 export const toggleDotKey = (dotKey, isActive = false) => ({

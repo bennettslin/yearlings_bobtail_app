@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import { ACTIVE_SONG_INDEX,
          ACTIVE_ANNOTATION_INDEX,
+         ACTIVE_TIME,
          ACTIVE_DOT_KEYS,
          ACTIVE_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX,
@@ -9,6 +10,7 @@ import SessionHelper from '../../helpers/session-helper'
 
 const storedSongIndex = SessionHelper.getFromSession(ACTIVE_SONG_INDEX)
 const storedAnnotationIndex = SessionHelper.getFromSession(ACTIVE_ANNOTATION_INDEX)
+const storedTime = SessionHelper.getFromSession(ACTIVE_TIME)
 const storedDotKeys = SessionHelper.getFromSession(ACTIVE_DOT_KEYS)
 const storedOverviewIndex = SessionHelper.getFromSession(ACTIVE_OVERVIEW_INDEX)
 
@@ -24,6 +26,15 @@ export const SongIndexReducer = (state = storedSongIndex, action) => {
 export const AnnotationIndexReducer = (state = storedAnnotationIndex, action) => {
     switch (action.type) {
         case ACTIVE_ANNOTATION_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const TimeReducer = (state = storedTime, action) => {
+    switch (action.type) {
+        case ACTIVE_TIME:
             return action.payload
         default:
             return state
@@ -65,6 +76,7 @@ export const WikiUrlReducer = (state = null, action) => {
 const rootReducer = combineReducers({
     activeSongIndex: SongIndexReducer,
     activeAnnotationIndex: AnnotationIndexReducer,
+    activeTime: TimeReducer,
     activeDotKeys: DotKeysReducer,
     activeOverviewIndex: OverviewIndexReducer,
     activeWikiUrl: WikiUrlReducer
