@@ -1,3 +1,5 @@
+import { REFRAIN, VERSE, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, OUTRO } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `Grasshoppers Lie Heavy`,
@@ -41,6 +43,10 @@ module.exports = {
                         }
                     ]
                 }
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
             }
         ],
         [
@@ -76,6 +82,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
         ],
         [
             {
@@ -105,6 +115,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -162,6 +177,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -176,6 +195,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -203,6 +227,10 @@ module.exports = {
             {
                 time: 72,
                 lyric: `Then just like the drift, she disappeared…`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -247,6 +275,10 @@ module.exports = {
                     },
                     `lies.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
             }
         ],
         [
@@ -274,6 +306,10 @@ module.exports = {
                 time: 104,
                 lyric: `chimneys weep sooty dust.`
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
         ],
         [
             {
@@ -312,6 +348,11 @@ module.exports = {
                     },
                     `you hide.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -350,6 +391,10 @@ module.exports = {
             {
                 time: 132,
                 lyric: `I am? "Well, you're backward…"`
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -371,6 +416,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -431,6 +481,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -461,6 +515,10 @@ module.exports = {
             {
                 time: 169,
                 lyric: `past a year on a stalled friendship's sails?`
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -492,6 +550,11 @@ module.exports = {
             {
                 time: 178,
                 lyric: `in the everpresent scent of her trail.`
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE,
+                subsequentClass: true
             }
         ],
         [
@@ -531,6 +594,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE,
+                subsequentClass: true
             }
         ],
         [
@@ -592,6 +660,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: OUTRO
+            }
         ],
         [
             {
@@ -635,6 +707,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: OUTRO,
+                subsequentClass: true
             }
         ],
         [
@@ -663,6 +740,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: OUTRO,
+                subsequentClass: true
             }
         ]
     ],

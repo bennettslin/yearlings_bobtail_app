@@ -1,6 +1,6 @@
 // TODO: Past vs. present tense?
 
-import { LEFT, RIGHT, OVERLAP, VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
+import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -31,7 +31,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: '?'
+                sectionClass: REFRAIN
             }
         ],
         [

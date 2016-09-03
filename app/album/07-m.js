@@ -1,4 +1,4 @@
-import { VERSE, CHORUS } from 'helpers/constants'
+import { REFRAIN, VERSE, CHORUS } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -28,6 +28,10 @@ module.exports = {
                         ]
                     }
                 }
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
             }
         ],
         [

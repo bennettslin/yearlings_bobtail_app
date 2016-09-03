@@ -32,9 +32,9 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `add song structures to lyrics`,
-            workedHours: 0,
-            neededHours: 1
+            taskName: `add song sections to lyrics`,
+            workedHours: 1,
+            neededHours: 2
         },
         {
             taskName: `add propTypes`,
@@ -176,7 +176,7 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `time story`,
+            taskName: `add time to components`,
             workedHours: 8,
             neededHours: 8
         }

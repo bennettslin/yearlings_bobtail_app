@@ -1,3 +1,5 @@
+import { VERSE, CHORUS, POSTCHORUS } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `Good Night, Sita`,
@@ -26,6 +28,10 @@ module.exports = {
                         description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as she stands before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`
                     }
                 }
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -52,6 +58,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -93,6 +104,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -153,6 +169,10 @@ module.exports = {
             {
                 time: 28,
                 lyric: `heart of gold inside`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -205,6 +225,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: POSTCHORUS
             }
         ],
         [
@@ -245,6 +269,10 @@ module.exports = {
             {
                 time: 50,
                 lyric: `and slowly the story erodes`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -287,6 +315,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -330,6 +363,10 @@ module.exports = {
             {
                 time: 70,
                 lyric: `strutting on the wall`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -364,6 +401,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: POSTCHORUS
             }
         ],
         [
@@ -382,6 +423,11 @@ module.exports = {
             {
                 time: 84,
                 lyric: `brave rejection into art`
+            },
+            {
+                unitMap: true,
+                sectionClass: POSTCHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -423,6 +469,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -457,6 +507,11 @@ module.exports = {
             {
                 time: 99,
                 lyric: `with every given answer a no`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -499,6 +554,10 @@ module.exports = {
             {
                 time: 111,
                 lyric: `and having only tires squeal`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -534,6 +593,11 @@ module.exports = {
             {
                 time: 121,
                 lyric: `only risk invites denied`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -545,6 +609,11 @@ module.exports = {
                         description: `I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`
                     }
                 }
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ]
     ],
