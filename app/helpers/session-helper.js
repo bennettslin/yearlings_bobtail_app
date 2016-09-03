@@ -19,6 +19,7 @@ export default {
         WINDOW_STORAGE[key] = value
     },
 
+    // TODO: This currently does not allow for float times.
     getFromSession(key) {
         if (key === ACTIVE_DOT_KEYS) {
             return this._getValidDotKeys(WINDOW_STORAGE[key])

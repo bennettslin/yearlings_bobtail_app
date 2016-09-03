@@ -49,6 +49,7 @@ const LyricsUnitView = ({
     stanzaArray,
     activeAnnotationIndex,
     activeDotKeys,
+    activeTime,
     onAnnotationClick,
     onTimeClick,
 
@@ -76,6 +77,7 @@ const LyricsUnitView = ({
                     sectionClass={isMain ? sectionClass : ''}
                     activeAnnotationIndex={activeAnnotationIndex}
                     activeDotKeys={activeDotKeys}
+                    activeTime={activeTime}
                     stanzaArray={stanzaArray}
                     onAnnotationClick={onAnnotationClick}
                     onTimeClick={onTimeClick}

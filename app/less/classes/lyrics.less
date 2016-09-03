@@ -124,6 +124,7 @@
         box-shadow: 0 1px 2px 2px @box-shadow-colour;
 
         // This refers to the verse section!
+        // FIXME: Fix this, as I will forget and this is a disaster waiting to happen.
         // TODO: Better styling, of course.
         &.verse {
             box-shadow: 0 1px 2px 2px orange;
@@ -141,12 +142,17 @@
             box-shadow: 0 1px 2px 2px purple;
         }
 
-        // This refers to the verse lyric!
+        // FIXME: This refers to the verse lyric!
+        // TODO: Better styling, of course.
         .verse {
             cursor: alias;
 
             &:hover {
                 color: green;
+            }
+
+            &.active {
+                border: 1px dotted green;
             }
 
             @verse-padding: 10px;

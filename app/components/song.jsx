@@ -37,6 +37,7 @@ const SongView = ({
     activeAnnotationIndex,
     activeDotKeys,
     activeWikiUrl,
+    activeTime,
 
     onDotClick,
     onPortalClick,
@@ -73,6 +74,7 @@ const SongView = ({
             />
             <LyricsSection
                 songLyrics={activeSongLyrics}
+                activeTime={activeTime}
                 activeAnnotationIndex={activeAnnotationIndex}
                 activeDotKeys={activeDotKeys}
                 onTimeClick={onTimeClick}
