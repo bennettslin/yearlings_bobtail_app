@@ -55,7 +55,7 @@ const LyricsVerseView = ({
 
 }) => (
 
-    <div className={`verse${isActive ? ' active' : ''}`} onClick={onClick}>
+    <div className={`verse${isActive ? ' active' : ''}${onClick ? ' enabled' : ''}`} onClick={onClick}>
         {isSingleSpeaker ? (
                 <div className={`line${isTitle ? '' : ' left'}`}>
                     <TextBlock

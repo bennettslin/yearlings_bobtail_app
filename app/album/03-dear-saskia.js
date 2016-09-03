@@ -1,3 +1,5 @@
+import { VERSE, PRECHORUS, CHORUS } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `Dear Saskia`,
@@ -15,6 +17,10 @@ module.exports = {
             {
                 time: 5,
                 lyric: `Dearest Sasha,`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -48,6 +54,13 @@ module.exports = {
                 ]
             },
             {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
+            }
+        ],
+        [
+            {
                 time: 18,
                 lyric: [
                     {
@@ -78,6 +91,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -109,6 +127,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -159,6 +181,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -193,6 +219,10 @@ module.exports = {
             {
                 time: 84,
                 lyric: `sadly weaned from you…`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -217,6 +247,12 @@ module.exports = {
                     `soothing in your lecture voice.`
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
+            }
+        ],
+        [
             {
                 time: 103,
                 lyric: [
@@ -244,6 +280,11 @@ module.exports = {
             {
                 time: 110,
                 lyric: `who shrug when thus annoyed, yawning, "Boys will beat boys…"`
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -286,6 +327,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -336,6 +381,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ]
     ],

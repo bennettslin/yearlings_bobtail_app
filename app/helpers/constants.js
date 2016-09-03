@@ -35,6 +35,7 @@ module.exports = {
     VERSE: 'verse',
     PRECHORUS: 'prechorus',
     CHORUS: 'chorus',
+    POSTCHORUS: 'postchorus',
     BRIDGE: 'bridge',
 
     // Temporary.

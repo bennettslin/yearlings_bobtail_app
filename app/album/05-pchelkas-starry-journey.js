@@ -1,4 +1,4 @@
-import { RIGHT, OVERLAP } from 'helpers/constants'
+import { RIGHT, OVERLAP, VERSE, PRECHORUS, POSTCHORUS, CHORUS, BRIDGE } from 'helpers/constants'
 
 /**
  * Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
@@ -37,6 +37,10 @@ module.exports = {
                         }
                     ]
                 }
+            },
+            {
+                unitMap: true,
+                sectionClass: '?'
             }
         ],
         [
@@ -63,6 +67,10 @@ module.exports = {
             {
                 time: 17,
                 lyric: `when he so looks up to you!`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -89,6 +97,11 @@ module.exports = {
             {
                 time: 25,
                 lyric: `so you brought him into your room?`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -132,7 +145,8 @@ module.exports = {
                             }
                         }
                     }
-                ]
+                ],
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -168,6 +182,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -202,6 +220,11 @@ module.exports = {
             {
                 time: 52,
                 lyric: `I clipped and mailed the ad.`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -238,6 +261,10 @@ module.exports = {
             {
                 time: 64,
                 lyric: `while all the weeks I waited, weighing those words in bold text:`
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -344,6 +371,10 @@ module.exports = {
                     },
                     `and launched!`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -373,6 +404,12 @@ module.exports = {
                 lyric: `you are indeed a seed from that nebular nest.`
             },
             {
+                unitMap: true,
+                sectionClass: POSTCHORUS
+            }
+        ],
+        [
+            {
                 time: 105,
                 lyric: [
                     `Is this`,
@@ -384,6 +421,11 @@ module.exports = {
                     },
                     `We're trusting mum's to be the word.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: POSTCHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -418,6 +460,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -452,6 +498,10 @@ module.exports = {
             {
                 time: 140,
                 lyric: `from a star's placenta sac.`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -487,6 +537,11 @@ module.exports = {
                     },
                     `turned their backs.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -539,6 +594,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -626,6 +685,10 @@ module.exports = {
             {
                 time: 182,
                 lyric: `nothing too rich for glorious cosmonauts!`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -662,6 +725,12 @@ module.exports = {
                 ]
             },
             {
+                unitMap: true,
+                sectionClass: POSTCHORUS
+            }
+        ],
+        [
+            {
                 time: 193,
                 lyric: [
                     `"Kids say you're`,
@@ -685,6 +754,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: POSTCHORUS,
+                subsequentClass: true
             }
         ]
     ],

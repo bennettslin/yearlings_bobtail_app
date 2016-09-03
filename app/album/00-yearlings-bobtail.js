@@ -27,9 +27,9 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `time story`,
+            taskName: `songs need end times`,
             workedHours: 0,
-            neededHours: 8
+            neededHours: 1
         },
         {
             taskName: `add song structures to lyrics`,
@@ -174,6 +174,11 @@ module.exports = {
             taskName: `disable active annotations`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `time story`,
+            workedHours: 8,
+            neededHours: 8
         }
     ]
 }

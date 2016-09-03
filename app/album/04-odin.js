@@ -1,6 +1,6 @@
 // TODO: Past vs. present tense?
 
-import { LEFT, RIGHT, OVERLAP } from 'helpers/constants'
+import { LEFT, RIGHT, OVERLAP, VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -28,6 +28,10 @@ module.exports = {
                     },
                     `died today.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: '?'
             }
         ],
         [
@@ -87,6 +91,12 @@ module.exports = {
                 right: `sigh and pull the covers over you.`
             },
             {
+                unitMap: true,
+                sectionClass: VERSE
+            }
+        ],
+        [
+            {
                 time: 20,
                 left: [
                     `This latest piece you drew with`,
@@ -106,6 +116,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -174,6 +188,10 @@ module.exports = {
                     },
                     `for present bane.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -265,6 +283,13 @@ module.exports = {
                 ]
             },
             {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
+            }
+        ],
+        [
+            {
                 time: 50,
                 left: [
                     `You seek the`,
@@ -288,6 +313,10 @@ module.exports = {
                 time: 53,
                 left: `that was safe for a heathen…`,
                 right: `as a slave for the seasons?`
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -407,6 +436,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -479,6 +512,10 @@ module.exports = {
                 left: `to stand onshore keen to drift if shark swarms withheld.`,
                 // TODO: reference to M
                 right: `who cannot warm he who didn't impart warmth himself.`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -542,6 +579,13 @@ module.exports = {
                 right: `You chase till dew sheds from your eyes`
             },
             {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
+            }
+        ],
+        [
+            {
                 time: 117,
                 left: `in your dim, lingering gaze,`,
                 right: `with your beleaguered remains,`
@@ -550,6 +594,10 @@ module.exports = {
                 time: 120,
                 left: `a victim of erosion.`,
                 right: `amidst dustbunnies frozen.`
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -564,8 +612,9 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: LEFT
-            }
+                unitClass: LEFT,
+                sectionClass: BRIDGE
+            },
         ],
         [
             {
@@ -587,7 +636,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: `${RIGHT} ${OVERLAP}`
+                unitClass: `${RIGHT} ${OVERLAP}`,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -601,7 +651,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: LEFT
+                unitClass: LEFT,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -636,7 +687,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: OVERLAP
+                unitClass: OVERLAP,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -722,6 +774,10 @@ module.exports = {
                     },
                     `has a mile less far to go…`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ]
     ],

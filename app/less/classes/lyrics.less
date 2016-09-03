@@ -138,6 +138,10 @@
             box-shadow: 0 1px 2px 2px blue;
         }
 
+        &.postchorus {
+            box-shadow: 0 1px 2px 2px violet;
+        }
+
         &.bridge {
             box-shadow: 0 1px 2px 2px purple;
         }
@@ -145,14 +149,16 @@
         // FIXME: This refers to the verse lyric!
         // TODO: Better styling, of course.
         .verse {
-            cursor: alias;
+            &.enabled {
+                cursor: alias;
 
-            &:hover {
-                color: green;
-            }
+                &:hover {
+                    color: green;
+                }
 
-            &.active {
-                border: 1px dotted green;
+                &.active {
+                    border: 1px dotted green;
+                }
             }
 
             @verse-padding: 10px;

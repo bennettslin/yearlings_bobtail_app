@@ -1,3 +1,5 @@
+import { VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `Ash Wednesday`,
@@ -110,7 +112,8 @@ module.exports = {
                             music: true
                         }
                     }
-                }
+                },
+                sectionClass: VERSE
             }
         ],
         [
@@ -150,6 +153,11 @@ module.exports = {
             {
                 time: 23,
                 lyric: `But saving herself strictly for marriage, or really from me?`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -176,6 +184,10 @@ module.exports = {
             {
                 time: 42,
                 lyric: `a soul to share in her eternal life.`
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -208,6 +220,10 @@ module.exports = {
                     `to the trump she just played.`
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
         ],
         [
             {
@@ -229,6 +245,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -315,6 +336,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -382,6 +407,10 @@ module.exports = {
                         ],
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -420,6 +449,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -451,6 +484,11 @@ module.exports = {
             {
                 time: 151,
                 lyric: `"So where'd you attend Mass?"`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ],
         [
