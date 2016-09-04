@@ -11,13 +11,12 @@ module.exports = {
 
     WINDOW_STORAGE: window.localStorage,
 
-    ACTIVE_SONG_INDEX: 'activeSongIndex',
-    ACTIVE_ANNOTATION_INDEX: 'activeAnnotationIndex',
-    ACTIVE_TIME: 'activeTime',
-    ACTIVE_DOT_KEYS: 'activeDotKeys',
-    ACTIVE_OVERVIEW_INDEX: 'activeOverviewIndex',
-    ACTIVE_WIKI_URL: 'activeWikiUrl',
-
+    SELECTED_SONG_INDEX: 'selectedSongIndex',
+    SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
+    SELECTED_TIME: 'selectedTime',
+    SELECTED_DOT_KEYS: 'selectedDotKeys',
+    SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
+    SELECTED_WIKI_URL: 'selectedWikiUrl',
     DEFAULT_OVERVIEW_INDEX: 1,
 
     // This is only used by the stats helper.

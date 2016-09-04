@@ -10,7 +10,7 @@ import { DOUBLESPEAKER_KEYS } from 'helpers/constants'
 const LyricsVerse = (props) => {
 
     const { verseObject,
-            activeTime,
+            selectedTime,
             hoveredLineIndex,
             onTimeClick,
             onLineHover } = props,
@@ -21,24 +21,26 @@ const LyricsVerse = (props) => {
           lineIndex } = verseObject,
 
         /**
-         * It's active if it's between time and nextTime, or if all three times
-         * are equal (such as in the title, when the verse starts at 0.)
+         * It's selected if it's between time and nextTime, or if all three
+         * times are equal (such as in the title, when the verse starts at 0.)
          */
-        isActive = (time <= activeTime && activeTime < nextTime) ||
-                   (time === activeTime && nextTime === activeTime),
+        isSelected = (time <= selectedTime && selectedTime < nextTime) ||
+                   (time === selectedTime && nextTime === selectedTime),
+        isHovered = lineIndex === hoveredLineIndex && !isSelected,
         isSingleSpeaker = !!lyric,
-        isEnabled = lineIndex === hoveredLineIndex,
-        onClick = !isNaN(time) ? e => onTimeClick(e, time) : null,
+        isInteractable = !isNaN(time),
+        onClick = isInteractable ? e => onTimeClick(e, time) : null,
         onMouseEnter = onLineHover ? e => onLineHover(e, lineIndex) : null,
         onMouseLeave = onLineHover ? e => onLineHover(e) : null
 
     return (
         <LyricsVerseView {...props}
-            isSingleSpeaker={isSingleSpeaker}
             time={time}
-            isActive={isActive}
-            isEnabled={isEnabled}
             isTitle={isTitle}
+            isHovered={isHovered}
+            isSelected={isSelected}
+            isInteractable={isInteractable}
+            isSingleSpeaker={isSingleSpeaker}
             onClick={onClick}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
@@ -54,14 +56,15 @@ const LyricsVerseView = ({
 
     // From props.
     verseObject,
-    activeAnnotationIndex,
-    activeDotKeys,
+    selectedAnnotationIndex,
+    selectedDotKeys,
     onAnnotationClick,
 
     // From controller.
     time,
-    isActive,
-    isEnabled,
+    isInteractable,
+    isSelected,
+    isHovered,
     isSingleSpeaker,
     isTitle,
     onClick,
@@ -70,13 +73,14 @@ const LyricsVerseView = ({
 
 }) => (
 
-    <div className={`verse${isActive ? ' active' : ''}${isEnabled ? ' enabled' : ''}${onClick ? ' interactable' : ''}`}
+    <div className={`verse${isSelected ? ' selected' : ''}${isInteractable ? ' interactable' : ''}`}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
     >
         <LyricsPlayButton
             time={time}
-            isEnabled={isEnabled}
+            isHovered={isHovered}
+            isSelected={isSelected}
             onClick={onClick}
         />
         {isSingleSpeaker ? (
@@ -84,8 +88,8 @@ const LyricsVerseView = ({
                     <TextBlock
                         isLyric={true}
                         text={verseObject.lyric}
-                        activeAnnotationIndex={activeAnnotationIndex}
-                        activeDotKeys={activeDotKeys}
+                        selectedAnnotationIndex={selectedAnnotationIndex}
+                        selectedDotKeys={selectedDotKeys}
                         onAnchorClick={onAnnotationClick}
                     />
                 </div>
@@ -102,8 +106,8 @@ const LyricsVerseView = ({
                                 <TextBlock
                                     isLyric={true}
                                     text={verseObject[key]}
-                                    activeAnnotationIndex={activeAnnotationIndex}
-                                    activeDotKeys={activeDotKeys}
+                                    selectedAnnotationIndex={selectedAnnotationIndex}
+                                    selectedDotKeys={selectedDotKeys}
                                     onAnchorClick={onAnnotationClick}
                                 />
                             </div>

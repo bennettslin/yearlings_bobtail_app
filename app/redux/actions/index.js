@@ -1,38 +1,38 @@
-import { ACTIVE_SONG_INDEX,
-         ACTIVE_ANNOTATION_INDEX,
-         ACTIVE_TIME,
-         ACTIVE_DOT_KEYS,
-         ACTIVE_OVERVIEW_INDEX,
-         ACTIVE_WIKI_URL,
+import { SELECTED_SONG_INDEX,
+         SELECTED_ANNOTATION_INDEX,
+         SELECTED_TIME,
+         SELECTED_DOT_KEYS,
+         SELECTED_OVERVIEW_INDEX,
+         SELECTED_WIKI_URL,
          DEFAULT_OVERVIEW_INDEX } from '../../helpers/constants'
 
-export const selectSongIndex = (activeSongIndex = 0) => ({
-    type: ACTIVE_SONG_INDEX,
-    payload: activeSongIndex
+export const selectSongIndex = (selectedSongIndex = 0) => ({
+    type: SELECTED_SONG_INDEX,
+    payload: selectedSongIndex
 })
 
-export const selectAnnotationIndex = (activeAnnotationIndex = 0) => ({
-    type: ACTIVE_ANNOTATION_INDEX,
-    payload: activeAnnotationIndex
+export const selectAnnotationIndex = (selectedAnnotationIndex = 0) => ({
+    type: SELECTED_ANNOTATION_INDEX,
+    payload: selectedAnnotationIndex
 })
 
-export const selectTime = (activeTime = 0) => ({
-    type: ACTIVE_TIME,
-    payload: activeTime
+export const selectTime = (selectedTime = 0) => ({
+    type: SELECTED_TIME,
+    payload: selectedTime
 })
 
-export const toggleDotKey = (dotKey, isActive = false) => ({
-    type: ACTIVE_DOT_KEYS,
-    payload: { dotKey,
-               isActive }
+export const selectDotKey = (selectedDotKey, isSelected = false) => ({
+    type: SELECTED_DOT_KEYS,
+    payload: { selectedDotKey,
+               isSelected }
 })
 
-export const selectOverviewIndex = (activeOverviewIndex = DEFAULT_OVERVIEW_INDEX) => ({
-    type: ACTIVE_OVERVIEW_INDEX,
-    payload: activeOverviewIndex
+export const selectOverviewIndex = (selectedOverviewIndex = DEFAULT_OVERVIEW_INDEX) => ({
+    type: SELECTED_OVERVIEW_INDEX,
+    payload: selectedOverviewIndex
 })
 
-export const selectWikiUrl = (activeWikiUrl = null) => ({
-    type: ACTIVE_WIKI_URL,
-    payload: activeWikiUrl
+export const selectWikiUrl = (selectedWikiUrl = null) => ({
+    type: SELECTED_WIKI_URL,
+    payload: selectedWikiUrl
 })

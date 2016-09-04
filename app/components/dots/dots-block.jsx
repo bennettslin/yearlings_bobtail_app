@@ -3,7 +3,7 @@ import DotButton from './dot-button'
 import { ALL_DOT_KEYS } from 'helpers/constants'
 
 const defaultProps = {
-    activeDotKeys: {},
+    selectedDotKeys: {},
     presentDotKeys: {}
 }
 
@@ -14,11 +14,11 @@ const defaultProps = {
 const DotsBlock = (props) => {
 
     const { onDotClick } = props,
-        isInteractive = !!onDotClick
+        isInteractable = !!onDotClick
 
     return (
         <DotsBlockView {...props}
-            isInteractive={isInteractive}
+            isInteractable={isInteractable}
         />
     )
 }
@@ -32,22 +32,22 @@ const DotsBlockView = ({
     // From props.
     showUnpresent,
     isDisabled,
-    activeDotKeys,
+    selectedDotKeys,
     presentDotKeys,
     onDotClick,
     onDotHover,
 
     // From controller.
-    isInteractive
+    isInteractable
 
 }) => (
 
-    <span className={`dots-block${isInteractive ? ' interactive' : ''}`}>
+    <span className={`dots-block${isInteractable ? ' interactable' : ''}`}>
         {ALL_DOT_KEYS.map((dotKey, index) => {
-            const isActive = activeDotKeys[dotKey],
+            const isActive = selectedDotKeys[dotKey],
                 isPresent = presentDotKeys[dotKey]
 
-            if (isInteractive) {
+            if (isInteractable) {
                 /**
                  * It's in dots block or dot stanza. All dots are shown in dots
                  * block, while only present dots are shown in dot stanza.

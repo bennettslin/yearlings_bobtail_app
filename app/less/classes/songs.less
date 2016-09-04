@@ -2,10 +2,10 @@
 
     .progress-bar-mixin(@song-total-colour, @song-filled-colour);
 
-    .played {
+    .selected {
         .progress-bar-mixin(@played-total-colour, @played-filled-colour);
 
-        a {
+        a.enabled {
             color: @song-link-colour;
 
             &:hover {

@@ -1,5 +1,5 @@
-// Check if at least one present key is an active key.
-export const intersects = (presentKeys = {}, activeKeys = {}) => {
+// Check if at least one present key is selected.
+export const intersects = (presentKeys = {}, selectedKeys = {}) => {
 
     const presentKeysArray = Object.keys(presentKeys)
 
@@ -9,16 +9,16 @@ export const intersects = (presentKeys = {}, activeKeys = {}) => {
 
     } else {
         return presentKeysArray.reduce((intersects, presentKey) => {
-            return intersects || activeKeys[presentKey]
+            return intersects || selectedKeys[presentKey]
         }, false)
     }
 }
 
-// Return an object that only contains keys that are both present and active.
-export const getIntersection = (presentKeys = {}, activeKeys = {}) => {
+// Return an object that only contains keys that are both present and selected.
+export const getIntersection = (presentKeys = {}, selectedKeys = {}) => {
 
     const intersectionArray = Object.keys(presentKeys).filter(presentKey => {
-            return activeKeys[presentKey]
+            return selectedKeys[presentKey]
         }),
         intersectionObject = {}
 

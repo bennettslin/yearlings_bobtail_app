@@ -10,12 +10,12 @@ const NavRow = (props) => {
 
     const { song,
             songIndex,
-            isActive,
+            isSelected,
             onSongClick } = props,
 
         songTitle = song.title,
         sumTask = ProgressHelper.calculateSumTask(song.tasks),
-        onClick = e => !isActive ? onSongClick(e, songIndex) : null
+        onClick = !isSelected ? e => onSongClick(e, songIndex) : null
 
     return (
         <NavRowView {...props}
@@ -34,7 +34,7 @@ const NavRowView = ({
 
     // From props.
     songIndex,
-    isActive,
+    isSelected,
     maxTotalNeededHours,
 
     // From controller.
@@ -44,14 +44,14 @@ const NavRowView = ({
 
 }) => (
 
-    <div className={`row primary-row${isActive ? ' played' : ''}`}>
+    <div className={`row primary-row${isSelected ? ' selected' : ''}`}>
         <ProgressBar
             sumTask={sumTask}
             maxTotalNeededHours={maxTotalNeededHours}
         />
         <div className="text-cell-wrapper">
             <a
-                className="text-cell text enabled"
+                className={`text-cell text${isSelected ? '' : ' enabled'}`}
                 onClick={onClick}
             >
                 {`${songIndex}. ${songTitle}`}

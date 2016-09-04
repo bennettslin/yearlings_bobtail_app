@@ -29,7 +29,7 @@ const AnnotationUnitView = ({
     // From props.
     annotation,
     songs,
-    activeDotKeys
+    selectedDotKeys
 
 }) => (
 
@@ -39,7 +39,7 @@ const AnnotationUnitView = ({
                 key={index}
                 card={card}
                 songs={songs}
-                activeDotKeys={activeDotKeys}
+                selectedDotKeys={selectedDotKeys}
             />
         ))}
     </div>

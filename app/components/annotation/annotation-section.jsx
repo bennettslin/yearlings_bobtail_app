@@ -28,7 +28,7 @@ const AnnotationSectionView = ({
     // FIXME: Passing songs only because it's needed for portal links. Is there a better way?
     songs,
     annotation,
-    activeDotKeys,
+    selectedDotKeys,
     onWikiUrlClick,
     onPortalClick,
 
@@ -43,7 +43,7 @@ const AnnotationSectionView = ({
             <AnnotationUnit
                 songs={songs}
                 annotation={annotation}
-                activeDotKeys={activeDotKeys}
+                selectedDotKeys={selectedDotKeys}
                 onWikiUrlClick={onWikiUrlClick}
                 onPortalClick={onPortalClick}
             />

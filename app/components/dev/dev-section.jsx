@@ -1,4 +1,5 @@
 import React from 'react'
+import { getFormattedTime } from 'helpers/format-helper'
 
 /*************
  * CONTAINER *
@@ -15,14 +16,14 @@ const DevSection = (props) => (
 const DevSectionView = ({
 
     // From props.
-    activeTime
+    selectedTime
 
 }) => (
 
     <div className="section dev-section">
         <h2>dev</h2>
         <div className="row">
-            Active Time: {activeTime}
+            Selected Time: {getFormattedTime(selectedTime)}
         </div>
     </div>
 )

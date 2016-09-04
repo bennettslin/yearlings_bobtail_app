@@ -13,18 +13,18 @@ import AlbumHelper from 'helpers/album-view-helper'
 const Shared = (props) => {
 
     const { songs,
-            activeSongIndex,
-            activeOverviewIndex,
+            selectedSongIndex,
+            selectedOverviewIndex,
             albumOverviews,
             albumTasks } = props,
 
-        activeSong = AlbumHelper.getSong(activeSongIndex, songs),
-        overviewText = AlbumHelper.getOverviewText(activeOverviewIndex, activeSong, albumOverviews),
-        tasks = AlbumHelper.getTasks(activeSong, albumTasks)
+        selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+        overviewText = AlbumHelper.getOverviewText(selectedOverviewIndex, selectedSong, albumOverviews),
+        tasks = AlbumHelper.getTasks(selectedSong, albumTasks)
 
     return (
         <SharedView {...props}
-            activeSong={activeSong}
+            selectedSong={selectedSong}
             overviewText={overviewText}
             tasks={tasks}
         />
@@ -39,12 +39,12 @@ const SharedView = (props) => {
 
     const {
         // From props.
-        activeSongIndex,
-        activeOverviewIndex,
+        selectedSongIndex,
+        selectedOverviewIndex,
         onOverviewClick,
 
         // From controller.
-        activeSong,
+        selectedSong,
         overviewText,
         tasks
 
@@ -55,22 +55,22 @@ const SharedView = (props) => {
             <div className="field shared-field">
                 <OverviewsSection
                     overviewText={overviewText}
-                    activeOverviewIndex={activeOverviewIndex}
+                    selectedOverviewIndex={selectedOverviewIndex}
                     onOverviewClick={onOverviewClick}
                 />
-                {/* Technically, stats only knows active song data so it really
+                {/* Technically, stats only knows selected song data so it really
                   * belongs in song column. But we're putting it here because
                   * it keeps the layout balanced, and it's just a dev tool. */}
                 <StatsSection
-                    lyrics={activeSong.lyrics}
-                    annotations={activeSong.annotations}
+                    lyrics={selectedSong.lyrics}
+                    annotations={selectedSong.annotations}
                 />
                 <TasksSection
                     tasks={tasks}
                 />
                 <NotesSection />
             </div>
-            {activeSongIndex ?
+            {selectedSongIndex ?
                 <Song {...props} /> : null
             }
         </div>

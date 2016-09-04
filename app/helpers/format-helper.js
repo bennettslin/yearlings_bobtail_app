@@ -2,6 +2,14 @@
 
 import { LYRIC_TEXT_KEYS } from './constants'
 
+export const getFormattedTime = (time) => {
+    const minutes = Math.floor(time / 60),
+        seconds = Math.floor(time % 60),
+        zeroTen = seconds < 10 ? '0' : ''
+
+    return `${minutes}:${zeroTen}${seconds}`
+}
+
 // Parses text in anchor tag into annotation header.
 export const getFormattedAnnotationTitle = (anchor, properNoun) => {
     /**

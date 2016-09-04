@@ -17,7 +17,7 @@ const DotsSectionView = ({
 
     // From props.
     showUnpresent,
-    activeDotKeys,
+    selectedDotKeys,
     presentDotKeys,
     hoveredDotIndex,
     onDotClick,
@@ -40,7 +40,7 @@ const DotsSectionView = ({
         }
         <DotsBlock
             showUnpresent={showUnpresent}
-            activeDotKeys={activeDotKeys}
+            selectedDotKeys={selectedDotKeys}
             presentDotKeys={presentDotKeys}
             onDotClick={onDotClick}
             onDotHover={onDotHover}

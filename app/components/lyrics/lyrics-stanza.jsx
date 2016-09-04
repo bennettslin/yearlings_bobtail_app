@@ -18,9 +18,9 @@ const LyricsStanzaView = ({
     // From props.
     stanzaArray,
     sectionClass,
-    activeAnnotationIndex,
-    activeDotKeys,
-    activeTime,
+    selectedAnnotationIndex,
+    selectedDotKeys,
+    selectedTime,
     hoveredLineIndex,
     onAnnotationClick,
     onTimeClick,
@@ -34,9 +34,9 @@ const LyricsStanzaView = ({
                 <LyricsVerse
                     key={verseIndex}
                     verseObject={verseObject}
-                    activeAnnotationIndex={activeAnnotationIndex}
-                    activeDotKeys={activeDotKeys}
-                    activeTime={activeTime}
+                    selectedAnnotationIndex={selectedAnnotationIndex}
+                    selectedDotKeys={selectedDotKeys}
+                    selectedTime={selectedTime}
                     hoveredLineIndex={hoveredLineIndex}
                     onAnnotationClick={onAnnotationClick}
                     onTimeClick={onTimeClick}

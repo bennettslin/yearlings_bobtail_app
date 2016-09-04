@@ -11,16 +11,16 @@ import AlbumHelper from 'helpers/album-view-helper'
 
 const Song = (props) => {
 
-    const { activeSong,
-            activeAnnotationIndex } = props,
+    const { selectedSong,
+            selectedAnnotationIndex } = props,
 
-        annotation = AlbumHelper.getAnnotation(activeAnnotationIndex, activeSong)
+        annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong)
 
     return (
         <SongView {...props}
             annotation={annotation}
-            presentDotKeys={activeSong.dotKeys}
-            activeSongLyrics={activeSong.lyrics}
+            presentDotKeys={selectedSong.dotKeys}
+            selectedSongLyrics={selectedSong.lyrics}
         />
     )
 }
@@ -34,10 +34,10 @@ const SongView = ({
     // From props.
     songs,
 
-    activeAnnotationIndex,
-    activeDotKeys,
-    activeWikiUrl,
-    activeTime,
+    selectedAnnotationIndex,
+    selectedDotKeys,
+    selectedWikiUrl,
+    selectedTime,
     hoveredDotIndex,
     hoveredLineIndex,
 
@@ -52,7 +52,7 @@ const SongView = ({
     // From controller.
     annotation,
     presentDotKeys,
-    activeSongLyrics
+    selectedSongLyrics
 
 }) => (
 
@@ -61,28 +61,28 @@ const SongView = ({
             <AnnotationPopup
                 songs={songs}
                 annotation={annotation}
-                activeDotKeys={activeDotKeys}
+                selectedDotKeys={selectedDotKeys}
                 onPortalClick={onPortalClick}
                 onWikiUrlClick={onWikiUrlClick}
                 onCloseClick={onAnnotationClick}
             />
             <WikiPopup
-                activeWikiUrl={activeWikiUrl}
+                selectedWikiUrl={selectedWikiUrl}
                 onCloseClick={onWikiUrlClick}
             />
             <DotsSection
                 showUnpresent={true}
                 hoveredDotIndex={hoveredDotIndex}
-                activeDotKeys={activeDotKeys}
+                selectedDotKeys={selectedDotKeys}
                 presentDotKeys={presentDotKeys}
                 onDotClick={onDotClick}
                 onDotHover={onDotHover}
             />
             <LyricsSection
-                songLyrics={activeSongLyrics}
-                activeTime={activeTime}
-                activeAnnotationIndex={activeAnnotationIndex}
-                activeDotKeys={activeDotKeys}
+                songLyrics={selectedSongLyrics}
+                selectedTime={selectedTime}
+                selectedAnnotationIndex={selectedAnnotationIndex}
+                selectedDotKeys={selectedDotKeys}
                 hoveredLineIndex={hoveredLineIndex}
                 onTimeClick={onTimeClick}
                 onAnnotationClick={onAnnotationClick}

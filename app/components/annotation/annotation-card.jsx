@@ -13,7 +13,7 @@ const AnnotationCard = (props) => {
 
     const { card,
             songs,
-            activeDotKeys } = props,
+            selectedDotKeys } = props,
 
         { description,
           dotKeys = {} } = card,
@@ -25,8 +25,8 @@ const AnnotationCard = (props) => {
         dotKeys.portal = true
     }
 
-    const shouldShow = intersects(dotKeys, activeDotKeys),
-        intersectedDotKeys = getIntersection(dotKeys, activeDotKeys)
+    const shouldShow = intersects(dotKeys, selectedDotKeys),
+        intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys)
 
     return (shouldShow ?
         <AnnotationCardView {...props}
@@ -57,7 +57,6 @@ const AnnotationCardView = ({
     <div className="annotation-card">
         <DotsBlock
             presentDotKeys={dotKeys}
-            interactable={true}
         />
         <TextBlock
             isLyric={false}

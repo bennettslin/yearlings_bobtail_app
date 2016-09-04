@@ -26,11 +26,11 @@ const TextBlock = (props) => {
 const TextBlockView = ({
 
     // From props.
+    text,
     isLyric,
     isInAnchor,
-    text,
-    activeAnnotationIndex,
-    activeDotKeys,
+    selectedAnnotationIndex,
+    selectedDotKeys,
     onAnchorClick
 
 }) => (
@@ -39,11 +39,11 @@ const TextBlockView = ({
         {text.map((textElement, index) => (
                 <TextBlock
                     key={index}
+                    text={textElement}
                     isLyric={isLyric}
                     isInAnchor={isInAnchor}
-                    text={textElement}
-                    activeAnnotationIndex={activeAnnotationIndex}
-                    activeDotKeys={activeDotKeys}
+                    selectedAnnotationIndex={selectedAnnotationIndex}
+                    selectedDotKeys={selectedDotKeys}
                     beginsNewLine={index === 0}
                     onAnchorClick={onAnchorClick}
                 />

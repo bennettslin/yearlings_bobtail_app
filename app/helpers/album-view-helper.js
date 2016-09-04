@@ -2,33 +2,33 @@
 
 export default {
 
-    getSong(activeSongIndex, songs) {
-        return activeSongIndex ?
-            songs[activeSongIndex - 1] : {}
+    getSong(selectedSongIndex, songs) {
+        return selectedSongIndex ?
+            songs[selectedSongIndex - 1] : {}
     },
 
-    getAnnotation(activeAnnotationIndex, activeSong) {
-        const annotations = activeSong.annotations
+    getAnnotation(selectedAnnotationIndex, selectedSong) {
+        const annotations = selectedSong.annotations
 
         return annotations ?
-                annotations[activeAnnotationIndex - 1] : null
+                annotations[selectedAnnotationIndex - 1] : null
     },
 
-    getTasks(activeSong, tasks) {
-        const songTasks = activeSong.tasks
+    getTasks(selectedSong, tasks) {
+        const songTasks = selectedSong.tasks
 
         // If no song tasks, then return album tasks.
         return songTasks ? songTasks : tasks
     },
 
-    getOverviewText(activeOverviewIndex, activeSong, overviews) {
-        if (activeOverviewIndex) {
-            const songOverviews = activeSong.overviews
+    getOverviewText(selectedOverviewIndex, selectedSong, overviews) {
+        if (selectedOverviewIndex) {
+            const songOverviews = selectedSong.overviews
 
             // If no song overviews, then return album overviews.
             return songOverviews ?
-                songOverviews[activeOverviewIndex - 1] :
-                overviews[activeOverviewIndex - 1]
+                songOverviews[selectedOverviewIndex - 1] :
+                overviews[selectedOverviewIndex - 1]
         } else {
             return null
         }

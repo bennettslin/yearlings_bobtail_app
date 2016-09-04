@@ -10,8 +10,8 @@ import { getIntersection } from 'helpers/dot-helper'
 const AnchorBlock = (props) => {
 
     const { text,
-            activeAnnotationIndex,
-            activeDotKeys,
+            selectedAnnotationIndex,
+            selectedDotKeys,
             onAnchorClick } = props,
 
         { annotationIndex,
@@ -20,8 +20,8 @@ const AnchorBlock = (props) => {
           dotKeys,
           wiki } = text,
 
-        isDisabled = annotationIndex && annotationIndex === activeAnnotationIndex,
-        intersectedDotKeys = getIntersection(dotKeys, activeDotKeys),
+        isSelected = annotationIndex && annotationIndex === selectedAnnotationIndex,
+        intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
 
         /**
          * If it's an annotation, then the argument passed to the
@@ -29,12 +29,12 @@ const AnchorBlock = (props) => {
          * reference, and the argument is a url string.
          */
         clickHandlerArgument = annotationIndex || wiki,
-        onClick = !isDisabled ? e => onAnchorClick(e, clickHandlerArgument) : null
+        onClick = !isSelected ? e => onAnchorClick(e, clickHandlerArgument) : null
 
     return (
         <AnchorBlockView {...props}
             hasTodo={hasTodo}
-            isDisabled={isDisabled}
+            isSelected={isSelected}
             dotKeys={intersectedDotKeys}
             anchorText={anchorText}
             onClick={onClick}
@@ -54,7 +54,7 @@ const AnchorBlockView = ({
 
     // From controller.
     hasTodo,
-    isDisabled,
+    isSelected,
     dotKeys,
     anchorText,
     onClick
@@ -65,7 +65,7 @@ const AnchorBlockView = ({
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
         { !beginsNewLine ? ' ' : null }
         <a
-            className={`anchor-block ${isDisabled ? 'disabled' : 'enabled'}${hasTodo ? ' todo' : ''}`}
+            className={`anchor-block ${isSelected ? '' : 'enabled'}${hasTodo ? ' todo' : ''}`}
             onClick={onClick}
         >
             {isLyric ?
@@ -74,7 +74,7 @@ const AnchorBlockView = ({
             }
             {dotKeys ?
                 <DotsBlock
-                    isDisabled={isDisabled}
+                    isDisabled={isSelected}
                     presentDotKeys={dotKeys}
                 /> : null
             }

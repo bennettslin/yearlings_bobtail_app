@@ -11,7 +11,7 @@ import { intersects } from 'helpers/dot-helper'
 const TextUnit = (props) => {
 
     const { text,
-            activeDotKeys } = props
+            selectedDotKeys } = props
 
     if (typeof text === 'string') {
         return (
@@ -38,7 +38,7 @@ const TextUnit = (props) => {
             )
 
         } else if (text.anchor) {
-            const shouldShowAnchor = intersects(text.dotKeys, activeDotKeys)
+            const shouldShowAnchor = intersects(text.dotKeys, selectedDotKeys)
             return (shouldShowAnchor ?
                 <AnchorBlock {...props} /> :
                 <TextBlock {...props}

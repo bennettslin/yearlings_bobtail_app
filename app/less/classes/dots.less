@@ -23,12 +23,11 @@
     width: auto;
     height: 100%;
 
-    &.interactive {
+    &.interactable {
         .dot {
 
             // TODO: Interactive styling.
             &.enabled {
-                cursor: pointer;
                 .transition(background-color 0.1s ease);
                 &:hover { background-color: orange; }
                 &:active { background-color: red; }

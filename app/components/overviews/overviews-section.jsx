@@ -9,13 +9,13 @@ import { OVERVIEW_KEYS } from 'helpers/constants'
 
 const OverviewsSection = (props) => {
 
-    const { activeOverviewIndex = 0 } = props,
+    const { selectedOverviewIndex = 0 } = props,
 
-        activeOverviewKey = OVERVIEW_KEYS[activeOverviewIndex - 1]
+        selectedOverviewKey = OVERVIEW_KEYS[selectedOverviewIndex - 1]
 
     return (
         <OverviewsSectionView {...props}
-            activeOverviewKey={activeOverviewKey}
+            selectedOverviewKey={selectedOverviewKey}
         />
     )
 }
@@ -31,14 +31,14 @@ const OverviewsSectionView = ({
     onOverviewClick,
 
     // From controller.
-    activeOverviewKey
+    selectedOverviewKey
 
 }) => (
 
     <div className="section overviews-section">
         <div className="button-block">
             {OVERVIEW_KEYS.map((overviewKey, overviewIndex) => {
-                const isDisabled = (overviewKey === activeOverviewKey)
+                const isDisabled = (overviewKey === selectedOverviewKey)
                 return (
                     <OverviewButton
                         key={overviewIndex}

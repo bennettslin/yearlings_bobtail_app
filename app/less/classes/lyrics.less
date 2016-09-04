@@ -47,17 +47,12 @@
             height: 35%;
             bottom: 0;
             left: 0;
+            background-color: mix(gray, white, 15%);
         }
 
         &.enabled {
             .underline-bar {
                 background-color: mix(@lyric-link-colour, white, 25%);
-            }
-        }
-
-        &.disabled {
-            .underline-bar {
-                background-color: mix(gray, white, 15%);
             }
         }
     }
@@ -134,12 +129,15 @@
 
         .verse {
             transition: color 0.1s ease;
+            // cursor: default;
 
-            &.interactable:hover {
-                color: green;
+            &.interactable:not(.selected) {
+                &:hover {
+                    color: green;
+                }
             }
 
-            &.active {
+            &.selected {
                 color: blue;
             }
 
@@ -172,27 +170,20 @@
             display: flex;
             flex-direction: row;
             position: absolute;
-            left: -60px;
+            left: -55px;
+            top: -5px;
 
             .play-button {
-                transition: opacity 0.1s ease 0.2s;
                 padding: 5px 15px;
                 background-color: white;
                 border-radius: 5px;
                 box-shadow: 0 1px 2px 2px lightGray;
                 opacity: 0;
 
-                &.enabled {
+                &.hovered, &.selected {
+                    transition: opacity 0.1s ease 0.2s;
                     opacity: 1;
                 }
-            }
-        }
-    }
-
-    .play-button-container {
-        .play-button-block {
-            .play-button {
-
             }
         }
     }

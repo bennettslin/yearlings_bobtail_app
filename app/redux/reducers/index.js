@@ -1,22 +1,22 @@
 import { combineReducers } from 'redux'
-import { ACTIVE_SONG_INDEX,
-         ACTIVE_ANNOTATION_INDEX,
-         ACTIVE_TIME,
-         ACTIVE_DOT_KEYS,
-         ACTIVE_OVERVIEW_INDEX,
+import { SELECTED_SONG_INDEX,
+         SELECTED_ANNOTATION_INDEX,
+         SELECTED_TIME,
+         SELECTED_DOT_KEYS,
+         SELECTED_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX,
-         ACTIVE_WIKI_URL } from '../../helpers/constants'
+         SELECTED_WIKI_URL } from '../../helpers/constants'
 import SessionHelper from '../../helpers/session-helper'
 
-const storedSongIndex = SessionHelper.getFromSession(ACTIVE_SONG_INDEX)
-const storedAnnotationIndex = SessionHelper.getFromSession(ACTIVE_ANNOTATION_INDEX)
-const storedTime = SessionHelper.getFromSession(ACTIVE_TIME)
-const storedDotKeys = SessionHelper.getFromSession(ACTIVE_DOT_KEYS)
-const storedOverviewIndex = SessionHelper.getFromSession(ACTIVE_OVERVIEW_INDEX)
+const storedSongIndex = SessionHelper.getFromSession(SELECTED_SONG_INDEX)
+const storedAnnotationIndex = SessionHelper.getFromSession(SELECTED_ANNOTATION_INDEX)
+const storedTime = SessionHelper.getFromSession(SELECTED_TIME)
+const storedDotKeys = SessionHelper.getFromSession(SELECTED_DOT_KEYS)
+const storedOverviewIndex = SessionHelper.getFromSession(SELECTED_OVERVIEW_INDEX)
 
 export const SongIndexReducer = (state = storedSongIndex, action) => {
     switch (action.type) {
-        case ACTIVE_SONG_INDEX:
+        case SELECTED_SONG_INDEX:
             return action.payload
         default:
             return state
@@ -25,7 +25,7 @@ export const SongIndexReducer = (state = storedSongIndex, action) => {
 
 export const AnnotationIndexReducer = (state = storedAnnotationIndex, action) => {
     switch (action.type) {
-        case ACTIVE_ANNOTATION_INDEX:
+        case SELECTED_ANNOTATION_INDEX:
             return action.payload
         default:
             return state
@@ -34,7 +34,7 @@ export const AnnotationIndexReducer = (state = storedAnnotationIndex, action) =>
 
 export const TimeReducer = (state = storedTime, action) => {
     switch (action.type) {
-        case ACTIVE_TIME:
+        case SELECTED_TIME:
             return action.payload
         default:
             return state
@@ -43,12 +43,12 @@ export const TimeReducer = (state = storedTime, action) => {
 
 export const DotKeysReducer = (state = storedDotKeys, action) => {
     switch (action.type) {
-        case ACTIVE_DOT_KEYS:
-            const { dotKey,
-                    isActive } = action.payload,
+        case SELECTED_DOT_KEYS:
+            const { selectedDotKey,
+                    isSelected } = action.payload,
                 // Copy state object.
                 newState = Object.assign({}, state)
-            newState[dotKey] = isActive
+            newState[selectedDotKey] = isSelected
             return newState
         default:
             return state
@@ -57,7 +57,7 @@ export const DotKeysReducer = (state = storedDotKeys, action) => {
 
 export const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
     switch (action.type) {
-        case ACTIVE_OVERVIEW_INDEX:
+        case SELECTED_OVERVIEW_INDEX:
             return action.payload
         default:
             return state
@@ -66,7 +66,7 @@ export const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
 
 export const WikiUrlReducer = (state = null, action) => {
     switch (action.type) {
-        case ACTIVE_WIKI_URL:
+        case SELECTED_WIKI_URL:
             return action.payload
         default:
             return state
@@ -74,12 +74,12 @@ export const WikiUrlReducer = (state = null, action) => {
 }
 
 const rootReducer = combineReducers({
-    activeSongIndex: SongIndexReducer,
-    activeAnnotationIndex: AnnotationIndexReducer,
-    activeTime: TimeReducer,
-    activeDotKeys: DotKeysReducer,
-    activeOverviewIndex: OverviewIndexReducer,
-    activeWikiUrl: WikiUrlReducer
+    selectedSongIndex: SongIndexReducer,
+    selectedAnnotationIndex: AnnotationIndexReducer,
+    selectedTime: TimeReducer,
+    selectedDotKeys: DotKeysReducer,
+    selectedOverviewIndex: OverviewIndexReducer,
+    selectedWikiUrl: WikiUrlReducer
 })
 
 export default rootReducer

@@ -47,9 +47,9 @@ const LyricsUnitView = ({
     // From props.
     isTitleUnit,
     stanzaArray,
-    activeAnnotationIndex,
-    activeDotKeys,
-    activeTime,
+    selectedAnnotationIndex,
+    selectedDotKeys,
+    selectedTime,
     hoveredLineIndex,
     onAnnotationClick,
     onTimeClick,
@@ -77,9 +77,9 @@ const LyricsUnitView = ({
                 </div> :
                 <LyricsStanza
                     sectionClass={isMain ? sectionClass : ''}
-                    activeAnnotationIndex={activeAnnotationIndex}
-                    activeDotKeys={activeDotKeys}
-                    activeTime={activeTime}
+                    selectedAnnotationIndex={selectedAnnotationIndex}
+                    selectedDotKeys={selectedDotKeys}
+                    selectedTime={selectedTime}
                     hoveredLineIndex={hoveredLineIndex}
                     stanzaArray={stanzaArray}
                     onAnnotationClick={onAnnotationClick}
@@ -107,8 +107,8 @@ const LyricsUnitView = ({
             {dotStanza ?
                 <div className={`stanza-block dot ${isDotOnly ? 'only' : 'shared'}`}>
                     <DotStanza
-                        activeAnnotationIndex={activeAnnotationIndex}
-                        activeDotKeys={activeDotKeys}
+                        selectedAnnotationIndex={selectedAnnotationIndex}
+                        selectedDotKeys={selectedDotKeys}
                         dotStanzaObject={dotStanza}
                         onAnnotationClick={onAnnotationClick}
                     />

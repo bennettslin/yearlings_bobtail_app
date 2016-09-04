@@ -4,15 +4,15 @@ import { connect } from 'react-redux'
 import { selectSongIndex,
          selectAnnotationIndex,
          selectTime,
-         toggleDotKey,
+         selectDotKey,
          selectOverviewIndex,
          selectWikiUrl } from 'redux/actions'
 import Album from './album'
-import { ACTIVE_SONG_INDEX,
-         ACTIVE_ANNOTATION_INDEX,
-         ACTIVE_TIME,
-         ACTIVE_DOT_KEYS,
-         ACTIVE_OVERVIEW_INDEX,
+import { SELECTED_SONG_INDEX,
+         SELECTED_ANNOTATION_INDEX,
+         SELECTED_TIME,
+         SELECTED_DOT_KEYS,
+         SELECTED_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from 'helpers/constants'
 import AlbumHelper from 'helpers/album-view-helper'
 import { intersects } from 'helpers/dot-helper'
@@ -24,20 +24,20 @@ import SessionHelper from 'helpers/session-helper'
  *********/
 
 const passReduxStateToProps = ({
-    activeSongIndex,
-    activeAnnotationIndex,
-    activeTime,
-    activeDotKeys,
-    activeOverviewIndex,
-    activeWikiUrl
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    selectedTime,
+    selectedDotKeys,
+    selectedOverviewIndex,
+    selectedWikiUrl
 }) => ({
     // Pass Redux state into component props.
-    activeSongIndex,
-    activeAnnotationIndex,
-    activeTime,
-    activeDotKeys,
-    activeOverviewIndex,
-    activeWikiUrl
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    selectedTime,
+    selectedDotKeys,
+    selectedOverviewIndex,
+    selectedWikiUrl
 })
 
 const bindDispatchToProps = (dispatch) => (
@@ -46,7 +46,7 @@ const bindDispatchToProps = (dispatch) => (
         selectSongIndex,
         selectAnnotationIndex,
         selectTime,
-        toggleDotKey,
+        selectDotKey,
         selectOverviewIndex,
         selectWikiUrl
     }, dispatch)
@@ -65,7 +65,7 @@ class App extends Component {
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this)
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this)
         this.handleTimeSelect = this.handleTimeSelect.bind(this)
-        this.handleDotToggle = this.handleDotToggle.bind(this)
+        this.handleDotSelect = this.handleDotSelect.bind(this)
         this.handleDotHover = this.handleDotHover.bind(this)
         this.handleLineHover = this.handleLineHover.bind(this)
         this.handlePortalSelect = this.handlePortalSelect.bind(this)
@@ -94,12 +94,12 @@ class App extends Component {
 
     _logAnchorAnnotation() {
         const { songs,
-                activeSongIndex,
-                activeAnnotationIndex } = this.props,
+                selectedSongIndex,
+                selectedAnnotationIndex } = this.props,
 
-            activeSong = AlbumHelper.getSong(activeSongIndex, songs),
-            annotation = AlbumHelper.getAnnotation(activeAnnotationIndex, activeSong),
-            lyricObject = LogHelper.getLyricObjectForAnnotationIndex(activeAnnotationIndex, activeSong.lyrics)
+            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+            annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong),
+            lyricObject = LogHelper.getLyricObjectForAnnotationIndex(selectedAnnotationIndex, selectedSong.lyrics)
 
         LogHelper.logObject('lyric', lyricObject)
         return LogHelper.logObject('annotation', annotation)
@@ -109,21 +109,21 @@ class App extends Component {
         this.handleSongSelect(e, 0)
     }
 
-    handleSongSelect(e, activeIndex = 0, activeIndexKey = ACTIVE_SONG_INDEX) {
+    handleSongSelect(e, selectedIndex = 0, selectedIndexKey = SELECTED_SONG_INDEX) {
         if (e) { e.stopPropagation() }
 
-        if (activeIndex >= 0 && activeIndex <= this.props.songs.length) {
+        if (selectedIndex >= 0 && selectedIndex <= this.props.songs.length) {
             // Store song index in session.
 
-            this.props.selectSongIndex(activeIndex)
-            SessionHelper.setInSession(activeIndexKey, activeIndex)
+            this.props.selectSongIndex(selectedIndex)
+            SessionHelper.setInSession(selectedIndexKey, selectedIndex)
 
             /**
              * Also reset the stored annotation, time, and overview if changing
-             * the active song index. Right now, default for overview is 1 for
+             * the selected song index. Right now, default for overview is 1 for
              * narrative.
              */
-            if (activeIndexKey === ACTIVE_SONG_INDEX) {
+            if (selectedIndexKey === SELECTED_SONG_INDEX) {
                 this.handleAnnotationSelect()
                 this.handleOverviewSelect(e, DEFAULT_OVERVIEW_INDEX)
                 this.handleTimeSelect()
@@ -131,11 +131,11 @@ class App extends Component {
         }
     }
 
-    handleOverviewSelect(e, activeIndex) {
+    handleOverviewSelect(e, selectedIndex) {
         if (e) { e.stopPropagation() }
 
-        this.props.selectOverviewIndex(activeIndex)
-        SessionHelper.setInSession(ACTIVE_OVERVIEW_INDEX, activeIndex)
+        this.props.selectOverviewIndex(selectedIndex)
+        SessionHelper.setInSession(SELECTED_OVERVIEW_INDEX, selectedIndex)
     }
 
     handleDotHover(e, hoveredDotIndex = 0) {
@@ -152,48 +152,48 @@ class App extends Component {
         })
     }
 
-    handleDotToggle(e, toggleDotKey) {
+    handleDotSelect(e, selectDotKey) {
         if (e) { e.stopPropagation() }
 
-        const isActive = !this.props.activeDotKeys[toggleDotKey]
-        this.props.toggleDotKey(toggleDotKey, isActive)
-        SessionHelper.setDotInSession(toggleDotKey, isActive)
+        const isSelected = !this.props.selectedDotKeys[selectDotKey]
+        this.props.selectDotKey(selectDotKey, isSelected)
+        SessionHelper.setDotInSession(selectDotKey, isSelected)
 
-        // If this is the last active dot key, then close the annotation.
-        if (!isActive) {
-            this._deselectAnnotationWithNoActiveDots(toggleDotKey)
+        // If this is the last selected dot key, then close the annotation.
+        if (!isSelected) {
+            this._deselectAnnotationWithNoSelectedDots(selectDotKey)
         }
     }
 
-    handleAnnotationSelect(e, activeIndex = 0) {
+    handleAnnotationSelect(e, selectedIndex = 0) {
         if (e) { e.stopPropagation() }
 
-        this.props.selectAnnotationIndex(activeIndex)
-        SessionHelper.setInSession(ACTIVE_ANNOTATION_INDEX, activeIndex)
+        this.props.selectAnnotationIndex(selectedIndex)
+        SessionHelper.setInSession(SELECTED_ANNOTATION_INDEX, selectedIndex)
     }
 
-    handleWikiUrlSelect(e, activeWiki) {
+    handleWikiUrlSelect(e, selectedWiki) {
         if (e) { e.stopPropagation() }
 
-        const activeWikiUrl = activeWiki ?
-            `https://en.m.wikipedia.org/wiki/${activeWiki}` : null
+        const selectedWikiUrl = selectedWiki ?
+            `https://en.m.wikipedia.org/wiki/${selectedWiki}` : null
 
         // Dispatch Redux action.
-        this.props.selectWikiUrl(activeWikiUrl)
+        this.props.selectWikiUrl(selectedWikiUrl)
     }
 
-    handlePortalSelect(e, activeSongIndex, activeAnnotationIndex) {
+    handlePortalSelect(e, selectedSongIndex, selectedAnnotationIndex) {
         if (e) { e.stopPropagation() }
 
-        this.handleSongSelect(e, activeSongIndex, ACTIVE_SONG_INDEX)
-        this.handleAnnotationSelect(e, activeAnnotationIndex)
+        this.handleSongSelect(e, selectedSongIndex, SELECTED_SONG_INDEX)
+        this.handleAnnotationSelect(e, selectedAnnotationIndex)
     }
 
-    handleTimeSelect(e, activeTime = 0) {
+    handleTimeSelect(e, selectedTime = 0) {
         if (e) { e.stopPropagation() }
 
-        this.props.selectTime(activeTime)
-        SessionHelper.setInSession(ACTIVE_TIME, activeTime)
+        this.props.selectTime(selectedTime)
+        SessionHelper.setInSession(SELECTED_TIME, selectedTime)
     }
 
     _onBodyClick(e) {
@@ -201,21 +201,21 @@ class App extends Component {
         this.handleWikiUrlSelect()
     }
 
-    _deselectAnnotationWithNoActiveDots(dotKey) {
-        const { activeAnnotationIndex,
-                activeSongIndex,
-                activeDotKeys,
+    _deselectAnnotationWithNoSelectedDots(dotKey) {
+        const { selectedAnnotationIndex,
+                selectedSongIndex,
+                selectedDotKeys,
                 songs } = this.props
 
-        const activeSong = AlbumHelper.getSong(activeSongIndex, songs),
-            annotation = AlbumHelper.getAnnotation(activeAnnotationIndex, activeSong),
+        const selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+            annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong),
             presentDotKeys = annotation ? annotation.dotKeys : null,
 
-            // The dotKey being toggled inactive is still active at this stage.
-            postActiveDotKeys = Object.assign(activeDotKeys, { [dotKey]: false })
+            // The dotKey being deselected is still selected at this stage.
+            postSelectedDotKeys = Object.assign(selectedDotKeys, { [dotKey]: false })
 
-        // Deselect annotation if all its dot keys are inactive.
-        if (annotation && !intersects(presentDotKeys, postActiveDotKeys)) {
+        // Deselect annotation if all its dot keys are deselected.
+        if (annotation && !intersects(presentDotKeys, postSelectedDotKeys)) {
             this.handleAnnotationSelect()
         }
     }
@@ -230,12 +230,12 @@ class App extends Component {
                 tasks,
 
                 // From Redux.
-                activeSongIndex,
-                activeOverviewIndex,
-                activeAnnotationIndex,
-                activeTime,
-                activeDotKeys,
-                activeWikiUrl
+                selectedSongIndex,
+                selectedOverviewIndex,
+                selectedAnnotationIndex,
+                selectedTime,
+                selectedDotKeys,
+                selectedWikiUrl
 
             } = this.props,
             { hoveredDotIndex,
@@ -249,12 +249,12 @@ class App extends Component {
                     albumOverviews={overviews}
                     albumTasks={tasks}
 
-                    activeSongIndex={activeSongIndex}
-                    activeOverviewIndex={activeOverviewIndex}
-                    activeAnnotationIndex={activeAnnotationIndex}
-                    activeTime={activeTime}
-                    activeDotKeys={activeDotKeys}
-                    activeWikiUrl={activeWikiUrl}
+                    selectedSongIndex={selectedSongIndex}
+                    selectedOverviewIndex={selectedOverviewIndex}
+                    selectedAnnotationIndex={selectedAnnotationIndex}
+                    selectedTime={selectedTime}
+                    selectedDotKeys={selectedDotKeys}
+                    selectedWikiUrl={selectedWikiUrl}
                     hoveredDotIndex={hoveredDotIndex}
                     hoveredLineIndex={hoveredLineIndex}
 
@@ -264,7 +264,7 @@ class App extends Component {
                     onAnnotationClick={this.handleAnnotationSelect}
                     onOverviewClick={this.handleOverviewSelect}
                     onTimeClick={this.handleTimeSelect}
-                    onDotClick={this.handleDotToggle}
+                    onDotClick={this.handleDotSelect}
                     onDotHover={this.handleDotHover}
                     onLineHover={this.handleLineHover}
                 />
