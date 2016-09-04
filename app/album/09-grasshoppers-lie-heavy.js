@@ -1,4 +1,4 @@
-import { REFRAIN, VERSE, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -85,7 +85,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -119,8 +119,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -200,7 +200,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: PRECHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -309,7 +309,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -352,8 +352,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -421,7 +421,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: PRECHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -555,7 +555,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: BRIDGE,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -599,7 +599,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: BRIDGE,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -712,7 +712,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: OUTRO,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -745,7 +745,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: OUTRO,
-                subsequentClass: true
+                subsequent: true
             }
         ]
     ],

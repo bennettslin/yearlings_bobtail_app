@@ -1,4 +1,4 @@
-import { RIGHT, OVERLAP, VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
+import { RIGHT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RESPONSE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -57,7 +57,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -139,7 +139,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -155,6 +155,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: PRECHORUS,
+                subsectionClass: RESPONSE,
                 subStanza: [
                     {
                         time: 97,
@@ -162,7 +163,7 @@ module.exports = {
                             emphasis: `Don't little raisin fingers need to dry?`
                         }
                     }
-                ],
+                ]
             }
         ],
         [
@@ -219,7 +220,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: BRIDGE,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -280,7 +281,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: CHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ]
     ],

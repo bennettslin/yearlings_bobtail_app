@@ -1,4 +1,4 @@
-import { VERSE, CHORUS } from 'helpers/constants'
+import { VERSES, CHORUS } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -37,7 +37,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -89,7 +89,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -141,7 +141,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [

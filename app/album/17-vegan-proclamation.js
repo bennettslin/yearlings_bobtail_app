@@ -1,5 +1,5 @@
 // FIXME: Make Sasha quotes just single paragraph. Then separate out verses.
-import { REFRAIN, VERSE, PRECHORUS, CHORUS } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -44,7 +44,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -62,8 +62,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -113,7 +113,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -131,8 +131,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -201,7 +201,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: CHORUS,
-                subsequentClass: true
+                subsequent: true
             }
             // Talk about flirting with conservative politics. These days, I'd say I'm vegan maybe 90% of the time, the naysaying judgment of hardcore vegans notwithstanding.
         ]

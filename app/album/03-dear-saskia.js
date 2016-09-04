@@ -1,4 +1,4 @@
-import { VERSE, PRECHORUS, CHORUS } from 'helpers/constants'
+import { VERSES, PRECHORUS, CHORUS } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -21,7 +21,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -56,8 +56,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -95,8 +95,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -223,7 +223,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -285,7 +285,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: PRECHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -386,7 +386,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: CHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ]
     ],

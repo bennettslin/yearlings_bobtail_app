@@ -1,5 +1,5 @@
 // Be more specific that this began an on again off again relationship
-import { VERSE, PRECHORUS, CHORUS, BRIDGE, REFRAIN } from 'helpers/constants'
+import { VERSES, PRECHORUS, CHORUS, BRIDGE, REFRAIN } from 'helpers/constants'
 
 module.exports = {
     // TODO: Hindi word for "Why"
@@ -54,7 +54,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -92,8 +92,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -171,7 +171,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: BRIDGE,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -301,7 +301,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -354,8 +354,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [

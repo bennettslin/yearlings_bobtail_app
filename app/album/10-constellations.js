@@ -3,7 +3,7 @@
  * not being clear and being too obvious.
  */
 
- import { RIGHT, OVERLAP, VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
+ import { RIGHT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RESPONSE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -102,7 +102,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -179,8 +179,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -366,7 +366,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -507,7 +507,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: PRECHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -577,7 +577,8 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: BRIDGE
+                sectionClass: BRIDGE,
+                subsectionClass: RESPONSE
             }
         ],
         [
@@ -620,7 +621,8 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: BRIDGE
+                sectionClass: BRIDGE,
+                subsectionClass: RESPONSE
             }
         ],
         [

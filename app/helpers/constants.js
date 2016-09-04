@@ -31,13 +31,17 @@ module.exports = {
     RIGHT,
     OVERLAP: 'overlap',
 
-    REFRAIN: 'refrain-section',
-    VERSE: 'verse-section',
-    PRECHORUS: 'prechorus-section',
-    CHORUS: 'chorus-section',
-    POSTCHORUS: 'postchorus-section',
-    BRIDGE: 'bridge-section',
-    OUTRO: 'outro-section',
+    TITLE: 'title',
+    REFRAIN: 'refrain',
+    VERSES: 'verses',
+    PRECHORUS: 'prechorus',
+    CHORUS: 'chorus',
+    POSTCHORUS: 'postchorus',
+    BRIDGE: 'bridge',
+    OUTRO: 'outro',
+    RHYME: 'rhyme',
+    RESPONSE: 'response',
+    BACKGROUND: 'background',
 
     // Temporary.
     ALBUM_BUILD_KEYS: [

@@ -1,4 +1,4 @@
-import { REFRAIN, VERSE, CHORUS, BRIDGE } from 'helpers/constants'
+import { REFRAIN, VERSES, CHORUS, BRIDGE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -52,7 +52,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -68,8 +68,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -100,7 +100,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -116,9 +116,9 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true,
+                subsequent: true
             }
         ],
         [
@@ -176,7 +176,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -192,8 +192,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ]
     ],

@@ -1,4 +1,4 @@
-import { RIGHT, OVERLAP, REFRAIN, VERSE, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE } from 'helpers/constants'
+import { RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE } from 'helpers/constants'
 
 /**
  * Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
@@ -71,7 +71,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -101,8 +101,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -186,7 +186,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -224,8 +224,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -426,7 +426,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: POSTCHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -502,7 +502,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -541,8 +541,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -759,7 +759,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: POSTCHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ]
     ],

@@ -1,6 +1,7 @@
 import React from 'react'
 import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
+import { TITLE } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -8,11 +9,15 @@ import LyricsStanza from './lyrics-stanza'
 
 const LyricsUnit = (props) => {
 
-    const { stanzaArray } = props,
+    const { stanzaArray,
+            isTitleUnit } = props,
 
         { unitClass,
           sectionClass,
-          subsequentClass,
+          subsectionClass,
+          backgroundClass,
+          subBackgroundClass,
+          subsequent,
           dotStanza,
           subStanza,
           topSideStanza,
@@ -25,8 +30,11 @@ const LyricsUnit = (props) => {
     return (
         <LyricsUnitView {...props}
             unitClass={unitClass}
-            sectionClass={sectionClass}
-            subsequentClass={subsequentClass}
+            sectionClass={isTitleUnit ? TITLE : sectionClass}
+            subsectionClass={subsectionClass}
+            backgroundClass={backgroundClass}
+            subBackgroundClass={subBackgroundClass}
+            subsequent={subsequent}
             dotStanza={dotStanza}
             isDotOnly={isDotOnly}
             subStanza={subStanza}
@@ -58,7 +66,10 @@ const LyricsUnitView = ({
     // From controller.
     unitClass,
     sectionClass,
-    subsequentClass,
+    subsectionClass,
+    subsequent,
+    backgroundClass,
+    subBackgroundClass,
     dotStanza,
     isDotOnly,
     subStanza,
@@ -68,40 +79,52 @@ const LyricsUnitView = ({
     topSideSubStanza,
 
 }) => {
-    // TODO: Can this be refactored to not use this getter method?
-    const getStanza = ({ stanzaArray, isMain, inSubBlock }) => {
-        return stanzaArray ? (
-            inSubBlock ?
-                <div className="sub-block custom right">
-                    {getStanza({ stanzaArray, inSubBlock: false })}
-                </div> :
-                <LyricsStanza
-                    sectionClass={isMain ? sectionClass : ''}
-                    selectedAnnotationIndex={selectedAnnotationIndex}
-                    selectedDotKeys={selectedDotKeys}
-                    selectedTime={selectedTime}
-                    hoveredLineIndex={hoveredLineIndex}
-                    stanzaArray={stanzaArray}
-                    onAnnotationClick={onAnnotationClick}
-                    onTimeClick={onTimeClick}
-                    onLineHover={onLineHover}
-                />
-        ) : null
+    const getStanza = ({ stanzaArray, inMain, addSub, isSub }) => {
+        if (stanzaArray) {
+            if (addSub) {
+                return (
+                    <div className="sub-block custom right">
+                    {getStanza({ stanzaArray, inMain, isSub: true })}
+                    </div>
+                )
+            } else {
+                const className = inMain ?
+                    (isSub ? subsectionClass :
+                        sectionClass) :
+                    (isSub ? subBackgroundClass :
+                        backgroundClass)
+                return (
+                    <LyricsStanza
+                        stanzaArray={stanzaArray}
+                        sectionClass={className}
+                        selectedAnnotationIndex={selectedAnnotationIndex}
+                        selectedDotKeys={selectedDotKeys}
+                        selectedTime={selectedTime}
+                        hoveredLineIndex={hoveredLineIndex}
+                        onAnnotationClick={onAnnotationClick}
+                        onTimeClick={onTimeClick}
+                        onLineHover={onLineHover}
+                    />
+                )
+            }
+        } else {
+            return null
+        }
     }
 
     return (
         <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}${unitClass ? ` custom ${unitClass}` : ''}`}>
             {!isDotOnly ?
-                <div className={`stanza-block main${subsequentClass ? ' subsequent' : ''}`}>
-                    {getStanza({ stanzaArray, isMain: true })}
-                    {getStanza({ stanzaArray: subStanza, inSubBlock: true })}
+                <div className={`stanza-block main${subsequent ? ' subsequent' : ''}`}>
+                    {getStanza({ stanzaArray, inMain: true })}
+                    {getStanza({ stanzaArray: subStanza, inMain: true, addSub: true })}
                 </div> : null
             }
             {topSideStanza || bottomSideStanza ?
                 <div className={`stanza-block side${isBottomOnly ? ' bottom-only' : ''}`}>
                     {getStanza({ stanzaArray: topSideStanza })}
-                    {getStanza({ stanzaArray: topSideSubStanza, inSubBlock: true })}
                     {getStanza({ stanzaArray: bottomSideStanza })}
+                    {getStanza({ stanzaArray: topSideSubStanza, addSub: true })}
                 </div> : null
             }
             {dotStanza ?

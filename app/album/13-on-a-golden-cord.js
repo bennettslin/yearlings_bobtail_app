@@ -1,5 +1,5 @@
 // FIXME: Change pronouns from I and me to drunken me and sober me.
-import { VERSE, CHORUS, BRIDGE } from 'helpers/constants'
+import { VERSES, CHORUS, BRIDGE, BACKGROUND } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -74,7 +74,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -125,8 +125,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -261,7 +261,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: CHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -305,7 +305,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: CHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -355,7 +355,8 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: BRIDGE
+                sectionClass: BRIDGE,
+                backgroundClass: BACKGROUND
             }
         ],
         [
@@ -404,7 +405,8 @@ module.exports = {
                    }
                ],
                 sectionClass: BRIDGE,
-                subsequentClass: true
+                backgroundClass: BACKGROUND,
+                subsequent: true
             }
         ],
         [
@@ -463,7 +465,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -599,7 +601,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: CHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -666,7 +668,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: CHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ]
     ],

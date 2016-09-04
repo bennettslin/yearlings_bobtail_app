@@ -15,7 +15,6 @@
 
             .main {
                 font-size: 1.5em;
-                box-shadow: 0 1px 2px 2px brown;
 
                 .verse {
                     padding: 15px;
@@ -79,10 +78,6 @@
             &.bottom-only {
                 justify-content: flex-end;
             }
-
-            .stanza {
-                box-shadow: 0 1px 2px 2px yellow;
-            }
         }
 
         &.dot {
@@ -107,10 +102,6 @@
         .sub-block {
             margin-top: -2.5px;
             display: flex;
-
-            .stanza {
-                box-shadow: 0 1px 2px 2px red;
-            }
         }
     }
 
@@ -119,13 +110,17 @@
         box-shadow: 0 1px 2px 2px @box-shadow-colour;
 
         // TODO: Better styling, of course.
-        &.refrain-section { box-shadow: 0 1px 2px 2px tomato; }
-        &.verse-section { box-shadow: 0 1px 2px 2px orange; }
-        &.prechorus-section { box-shadow: 0 1px 2px 2px green; }
-        &.chorus-section { box-shadow: 0 1px 2px 2px blue; }
-        &.postchorus-section { box-shadow: 0 1px 2px 2px violet; }
-        &.bridge-section { box-shadow: 0 1px 2px 2px purple; }
-        &.outro-section { box-shadow: 0 1px 2px 2px tan; }
+        &.title { border: 2px solid brown; }
+        &.refrain { border: 2px solid tomato; }
+        &.verses { border: 2px solid orange; }
+        &.prechorus { border: 2px solid green; }
+        &.chorus { border: 2px solid blue; }
+        &.postchorus { border: 2px solid violet; }
+        &.bridge { border: 2px solid purple; }
+        &.outro { border: 2px solid tan; }
+        &.rhyme { border: 2px solid turquoise; }
+        &.response { border: 2px solid cadetBlue; }
+        &.background { border: 2px solid skyBlue; }
 
         .verse {
             transition: color 0.1s ease;

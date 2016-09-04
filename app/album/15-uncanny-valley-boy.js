@@ -1,4 +1,4 @@
-import { RIGHT, OVERLAP, VERSE, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
+import { RIGHT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO, RHYME, RESPONSE, BACKGROUND } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -91,7 +91,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -142,8 +142,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true
+                sectionClass: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -186,7 +186,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: PRECHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -226,7 +226,9 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: CHORUS
+                sectionClass: CHORUS,
+                subsectionClass: RHYME,
+                backgroundClass: BACKGROUND
             }
         ],
         [
@@ -260,7 +262,9 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: CHORUS
+                sectionClass: CHORUS,
+                subsectionClass: RHYME,
+                backgroundClass: BACKGROUND
             }
         ],
         [
@@ -278,7 +282,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -307,7 +311,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: PRECHORUS,
-                subsequentClass: true
+                subsequent: true
             }
         ],
         [
@@ -344,7 +348,8 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: PRECHORUS
+                sectionClass: PRECHORUS,
+                subsectionClass: RESPONSE
             }
         ],
         [
@@ -362,7 +367,8 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: PRECHORUS
+                sectionClass: PRECHORUS,
+                subsectionClass: RESPONSE
             }
         ],
         [
@@ -402,7 +408,9 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: CHORUS
+                sectionClass: CHORUS,
+                subsectionClass: RHYME,
+                backgroundClass: BACKGROUND
             }
         ],
         [
@@ -442,7 +450,9 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: CHORUS
+                sectionClass: CHORUS,
+                subsectionClass: RHYME,
+                backgroundClass: BACKGROUND
             }
         ],
         [
@@ -482,7 +492,9 @@ module.exports = {
                         ]
                     }
                 ],
-                sectionClass: OUTRO
+                sectionClass: OUTRO,
+                backgroundClass: BACKGROUND,
+                subBackgroundClass: RESPONSE
             }
         ]
     ],

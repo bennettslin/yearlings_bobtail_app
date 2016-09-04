@@ -1,4 +1,4 @@
-import { LEFT, RIGHT, OVERLAP, VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
+import { LEFT, RIGHT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -52,7 +52,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -83,8 +83,9 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true,
+                sectionClass: VERSES,
+                subsectionClass: RHYME,
+                subsequent: true,
                 subStanza: [
                     {
                         time: 30,
@@ -121,7 +122,7 @@ module.exports = {
             {
                 unitMap: true,
                 unitClass: `${LEFT} ${OVERLAP}`,
-                sectionClass: VERSE
+                sectionClass: VERSES
             },
         ],
         [
@@ -366,7 +367,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -395,8 +396,9 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSE,
-                subsequentClass: true,
+                sectionClass: VERSES,
+                subsectionClass: RHYME,
+                subsequent: true,
                 subStanza: [
                     {
                         time: 126,
@@ -434,7 +436,7 @@ module.exports = {
             {
                 unitMap: true,
                 unitClass: `${LEFT} ${OVERLAP}`,
-                sectionClass: VERSE
+                sectionClass: VERSES
             }
         ],
         [
@@ -646,7 +648,7 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: BRIDGE,
-                subsequentClass: true
+                subsequent: true
             }
         ]
     ],
