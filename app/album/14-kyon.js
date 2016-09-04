@@ -1,4 +1,5 @@
 // Be more specific that this began an on again off again relationship
+import { VERSE, PRECHORUS, CHORUS, BRIDGE, REFRAIN } from 'helpers/constants'
 
 module.exports = {
     // TODO: Hindi word for "Why"
@@ -52,6 +53,12 @@ module.exports = {
                 lyric: `A present sent to her of a newborn…`
             },
             {
+                unitMap: true,
+                sectionClass: VERSE
+            }
+        ],
+        [
+            {
                 time: 26,
                 lyric: [
                     `So baby, tell me then, when you`,
@@ -82,6 +89,11 @@ module.exports = {
             {
                 time: 40,
                 lyric: `Well, have some more…`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -109,6 +121,12 @@ module.exports = {
                 time: 56,
                 lyric: `in reserve, while I had to learn to find`
             },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE
+            }
+        ],
+        [
             {
                 time: 58,
                 lyric: [
@@ -149,6 +167,11 @@ module.exports = {
             {
                 time: 66,
                 lyric: `I get you back? And…`
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE,
+                subsequentClass: true
             }
         ],
         [
@@ -207,6 +230,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -226,6 +253,10 @@ module.exports = {
                     },
                     `punched in your belt.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -268,6 +299,12 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
+        ],
+        [
             {
                 time: 121,
                 lyric: `to leave me as before, with only instinct to adore.`
@@ -314,6 +351,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -385,6 +427,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
             }
         ]
     ],

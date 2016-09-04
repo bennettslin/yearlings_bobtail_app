@@ -1,3 +1,5 @@
+import { VERSE, CHORUS } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `My 100,000th Dream`,
@@ -32,6 +34,10 @@ module.exports = {
             {
                 time: 34,
                 lyric: `I said never again we'll slave our whole lives away!`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -54,6 +60,10 @@ module.exports = {
             {
                 time: 70,
                 lyric: `And were you mine?`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -76,6 +86,10 @@ module.exports = {
             {
                 time: 94,
                 lyric: `We were young, so sure of life, never knowing time unkind!`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -98,6 +112,10 @@ module.exports = {
             {
                 time: 131,
                 lyric: `When you were mine?`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -120,6 +138,10 @@ module.exports = {
             {
                 time: 183,
                 lyric: `Now the light spills warm and bright… gently fills these eyes…`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -142,6 +164,10 @@ module.exports = {
             {
                 time: 220,
                 lyric: `When you'll be mine?`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ]
     ],

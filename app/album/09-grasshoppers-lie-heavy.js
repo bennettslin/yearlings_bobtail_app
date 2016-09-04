@@ -1,4 +1,4 @@
-import { REFRAIN, VERSE, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, OUTRO } from 'helpers/constants'
+import { REFRAIN, VERSE, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
 
 module.exports = {
     title: {

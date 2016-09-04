@@ -46,6 +46,7 @@ module.exports = {
                     `as the`,
                     {
                         anchor: `Van Nuys belles`,
+                        properNoun: true,
                         annotation: {
                             description: `I went to high school in Van Nuys, a neighbourhood smack-dab in the middle of the San Fernando Valley.`
                         }

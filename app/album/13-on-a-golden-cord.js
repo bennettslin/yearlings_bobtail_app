@@ -1,4 +1,5 @@
 // FIXME: Change pronouns from I and me to drunken me and sober me.
+import { VERSE, CHORUS, BRIDGE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -70,6 +71,10 @@ module.exports = {
             {
                 time: 18,
                 centre: `And so she said, "Now it's yours again…`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -117,6 +122,11 @@ module.exports = {
                         },
                         `today…"`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -180,6 +190,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -243,6 +257,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -282,6 +301,11 @@ module.exports = {
             {
                 time: 86,
                 centre: `But what do I know?`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -330,7 +354,8 @@ module.exports = {
                             }
                         }
                     }
-                ]
+                ],
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -377,7 +402,9 @@ module.exports = {
                             }
                         }
                    }
-                ]
+               ],
+                sectionClass: BRIDGE,
+                subsequentClass: true
             }
         ],
         [
@@ -433,6 +460,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -510,6 +541,10 @@ module.exports = {
                     },
                     `upon her wrist.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -560,6 +595,11 @@ module.exports = {
                         `relieved?`
                 ],
                 right: `when buried whole with the deceased.`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -622,6 +662,11 @@ module.exports = {
                     },
                     `that she wore.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ]
     ],

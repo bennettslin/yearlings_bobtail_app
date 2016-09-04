@@ -1,4 +1,6 @@
 // FIXME: Make Sasha quotes just single paragraph. Then separate out verses.
+import { REFRAIN, VERSE, PRECHORUS, CHORUS } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `Vegan Proclamation`,
@@ -21,6 +23,10 @@ module.exports = {
                         italic: `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You can't have both. Because a scratched record will chip a good needle… and a chipped needle will scratch a good record…"`
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
             }
         ],
         [
@@ -37,6 +43,12 @@ module.exports = {
                 lyric: `to a soiled girl fouled on the false rib from our chest?`
             },
             {
+                unitMap: true,
+                sectionClass: VERSE
+            }
+        ],
+        [
+            {
                 time: 30,
                 lyric: `We baulked at our lives born unfair,`
             },
@@ -49,6 +61,13 @@ module.exports = {
                 lyric: `as a tempered hammer cooled by striking the smouldering air…`
             },
             {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
+            }
+        ],
+        [
+            {
                 time: 46,
                 lyric: `Well, first pets always bear the worst,`
             },
@@ -59,6 +78,10 @@ module.exports = {
             {
                 time: 55,
                 lyric: `and now I know why the battered kitten purrs…`
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -70,6 +93,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
+            }
         ],
         [
             {
@@ -85,6 +112,12 @@ module.exports = {
                 lyric: `its bristles scrape discharge encrusted on leather boots.`
             },
             {
+                unitMap: true,
+                sectionClass: VERSE
+            }
+        ],
+        [
+            {
                 time: 90,
                 lyric: `Through an alley strewn with burger shrouds,`
             },
@@ -96,6 +129,13 @@ module.exports = {
                 time: 98,
                 lyric: `reversing his stomach and his swastikas inside out…`
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
+            }
+        ],
+        [
             {
                 time: 106,
                 lyric: `Well, if first cuts are the worst ones bled…`
@@ -111,6 +151,10 @@ module.exports = {
             {
                 time: 120,
                 lyric: `and to be good again…`
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -130,6 +174,10 @@ module.exports = {
                 time: 161,
                 // Nirvana Sappy
                 lyric: `I still love you for the airholes, dear; and now, good night."`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -149,6 +197,11 @@ module.exports = {
                 time: 209,
                 // Odin reference
                 lyric: `Our ashed heads bow from chivalry to our Siva's feet…`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
             // Talk about flirting with conservative politics. These days, I'd say I'm vegan maybe 90% of the time, the naysaying judgment of hardcore vegans notwithstanding.
         ]

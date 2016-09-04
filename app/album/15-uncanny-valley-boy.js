@@ -1,4 +1,4 @@
-import { RIGHT, OVERLAP } from 'helpers/constants'
+import { RIGHT, OVERLAP, VERSE, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -90,6 +90,12 @@ module.exports = {
                 ]
             },
             {
+                unitMap: true,
+                sectionClass: VERSE
+            }
+        ],
+        [
+            {
                 time: 27,
                 lyric: [
                     `And you, for a future,`,
@@ -133,6 +139,11 @@ module.exports = {
                         todo: true
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -153,6 +164,12 @@ module.exports = {
                 lyric: `then we caught you stuffing twenties in an envelope…`
             },
             {
+                unitMap: true,
+                sectionClass: PRECHORUS
+            }
+        ],
+        [
+            {
                 time: 54,
                 lyric: [
                     `So do you believe`,
@@ -165,6 +182,11 @@ module.exports = {
                     },
                     `now?`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -203,7 +225,8 @@ module.exports = {
                             italic: `to seal out their floods.`
                         }
                     }
-                ]
+                ],
+                sectionClass: CHORUS
             }
         ],
         [
@@ -236,7 +259,8 @@ module.exports = {
                             italic: `and healed round your grudge…`
                         }
                     }
-                ]
+                ],
+                sectionClass: CHORUS
             }
         ],
         [
@@ -251,6 +275,10 @@ module.exports = {
             {
                 time: 94,
                 lyric: `This scheming crackpot vowed to clean the jackpot out this time around…`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE
             }
         ],
         [
@@ -263,12 +291,23 @@ module.exports = {
                 lyric: `A nation paused to watch you fail your Sita on repeat for evermore!`
             },
             {
+                unitMap: true,
+                sectionClass: PRECHORUS
+            }
+        ],
+        [
+            {
                 time: 111,
                 lyric: `Did you find a rival in the goddess you once sought as prize—`
             },
             {
                 time: 119,
                 lyric: `your idol who riled you when you saw that you two were tied?`
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -283,6 +322,10 @@ module.exports = {
             {
                 time: 138,
                 lyric: `When wakened from the siren, you found spelled out in dead ants: ____…`
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -300,7 +343,8 @@ module.exports = {
                             italic: `Your dulling gold now gone…`
                         }
                     }
-                ]
+                ],
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -318,6 +362,7 @@ module.exports = {
                         }
                     }
                 ],
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -356,7 +401,8 @@ module.exports = {
                             italic: `to find a cleared path`
                         }
                     }
-                ]
+                ],
+                sectionClass: CHORUS
             }
         ],
         [
@@ -395,7 +441,8 @@ module.exports = {
                             italic: `to five-year plans.`
                         }
                     }
-                ]
+                ],
+                sectionClass: CHORUS
             }
         ],
         [
@@ -434,7 +481,8 @@ module.exports = {
                             }
                         ]
                     }
-                ]
+                ],
+                sectionClass: OUTRO
             }
         ]
     ],

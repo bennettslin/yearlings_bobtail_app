@@ -1,3 +1,5 @@
+import { REFRAIN, VERSE, CHORUS, BRIDGE } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `Cremated`,
@@ -16,6 +18,10 @@ module.exports = {
             {
                 time: 1,
                 centre: `Or another…`
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
             }
         ],
         [
@@ -45,6 +51,12 @@ module.exports = {
                 right: `pinkish slip, making scroonched her pantyhose.`
             },
             {
+                unitMap: true,
+                sectionClass: VERSE
+            }
+        ],
+        [
+            {
                 time: 39,
                 left: `As comedy teams work, a hoot the times`,
                 right: `His god humming Freebird, the hula guy`
@@ -53,6 +65,11 @@ module.exports = {
                 time: 42,
                 left: `not at each other's throats.`,
                 right: `nods as she drums her toes.`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -79,17 +96,29 @@ module.exports = {
             {
                 time: 59,
                 left: `as worn puppet his offscreen person dubs.`,
-                right: `This swarm pumped and kissed off, she purges up,`
+                right: `This swarm pumped and kissed off, she purges up.`
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
+        ],
+        [
             {
                 time: 61,
                 left: `His silent dramedy works better;`,
-                right: `despite once promising forever,`
+                right: `Despite once promising forever,`
             },
             {
                 time: 64,
                 left: `twitching sword in care, he's anyone.`,
                 right: `which she swore when scarcely twenty-one.`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true,
+                subsequentClass: true
             }
         ],
         [
@@ -112,6 +141,10 @@ module.exports = {
             {
                 time: 106,
                 centre: `and in her pool, hears not a worrisome "Bless her, Godspeed…"`
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -142,6 +175,12 @@ module.exports = {
                 right: `a pop, and she pulls the plug.`
             },
             {
+                unitMap: true,
+                sectionClass: VERSE
+            }
+        ],
+        [
+            {
                 time: 127,
                 left: `Life's a dumb ex-dromedary, hungry carrying`,
                 right: `Lights one up then draws a daring puff, preparing`
@@ -150,6 +189,11 @@ module.exports = {
                 time: 130,
                 left: `this groovy second hump.`,
                 right: `the scoop, he's getting dumped.`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ]
     ],

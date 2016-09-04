@@ -37,11 +37,6 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `add song sections to lyrics`,
-            workedHours: 1,
-            neededHours: 2
-        },
-        {
             taskName: `change every "one" to "you"`,
             workedHours: 0,
             neededHours: 1
@@ -195,6 +190,11 @@ module.exports = {
         },
         {
             taskName: `hoverable play button on verse`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `add song sections to lyrics`,
             workedHours: 2,
             neededHours: 2
         }
