@@ -1,3 +1,5 @@
+import { VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `Look Back in Anger`,
@@ -58,6 +60,10 @@ module.exports = {
                     `through the noon.`
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
         ],
         [
             {
@@ -104,6 +110,11 @@ module.exports = {
                     },
                     `you rode, so on spite you thrive.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -138,6 +149,10 @@ module.exports = {
             {
                 time: 42,
                 lyric: `and laid down on the public trough.`
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -188,6 +203,11 @@ module.exports = {
                     },
                     `she later said.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -214,6 +234,10 @@ module.exports = {
             {
                 time: 75,
                 lyric: `you look back in anger that it's done.`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -247,6 +271,10 @@ module.exports = {
                     `just a murmuring.`
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
         ],
         [
             {
@@ -268,6 +296,11 @@ module.exports = {
             {
                 time: 97,
                 lyric: `with his ignorance lessened of his plight before…`
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -307,6 +340,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -349,6 +386,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -392,6 +433,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE,
+                subsequentClass: true
             }
         ],
         [
@@ -428,6 +474,10 @@ module.exports = {
             {
                 time: 157,
                 lyric: `Look back in anger to have won.`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ]
     ],

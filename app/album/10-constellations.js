@@ -3,7 +3,7 @@
  * not being clear and being too obvious.
  */
 
- import { RIGHT, OVERLAP } from 'helpers/constants'
+ import { RIGHT, OVERLAP, VERSE, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -100,6 +100,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
         ],
         [
             {
@@ -172,6 +176,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: VERSE,
+                subsequentClass: true
             }
         ],
         [
@@ -200,6 +209,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
+            }
         ],
         [
             {
@@ -253,6 +266,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -347,6 +364,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
         ],
         [
             {
@@ -409,6 +430,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
             }
         ],
         [
@@ -478,6 +503,11 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -506,6 +536,10 @@ module.exports = {
                     },
                     `there is only me and my northern star!`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ],
         [
@@ -543,6 +577,7 @@ module.exports = {
                         }
                     }
                 ],
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -585,6 +620,7 @@ module.exports = {
                         }
                     }
                 ],
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -631,7 +667,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: OVERLAP
+                unitClass: OVERLAP,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -654,6 +691,10 @@ module.exports = {
                     `snow blitz'd…`
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: PRECHORUS
+            }
         ],
         [
             {
@@ -718,6 +759,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
             }
         ]
     ],

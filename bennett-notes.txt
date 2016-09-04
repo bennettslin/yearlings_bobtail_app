@@ -1,0 +1,9 @@
+These are logic states that the view :
+"selected" is a state that is stored. (opposite: "deselected")
+"interactable" is something that can always be interacted with.
+"enabled" is something that is interactable at this time. (opposite: "disabled")
+
+These are view states that the controller doesn't care about:
+"hovered" is when the mouse is over it.
+"active" is when it's currently being clicked.
+Note: mobile will need a third class that is the counterpart to hovered. I haven't thought it through just yet.

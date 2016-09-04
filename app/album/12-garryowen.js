@@ -1,3 +1,5 @@
+import { REFRAIN, VERSE, CHORUS, BRIDGE } from 'helpers/constants'
+
 module.exports = {
     title: {
         anchor: `Garryowen`,
@@ -62,6 +64,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
         ],
         [
             {
@@ -88,6 +94,10 @@ module.exports = {
                     },
                     `for this life you've chosen.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
             }
         ],
         [
@@ -148,6 +158,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: VERSE
+            }
         ],
         [
             {
@@ -165,6 +179,10 @@ module.exports = {
                     },
                     `as the boy unchosen.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
             }
         ],
         [
@@ -210,6 +228,10 @@ module.exports = {
                     `cringing in shame.`
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
+            }
         ],
         [
             {
@@ -244,6 +266,11 @@ module.exports = {
             {
                 time: 81,
                 lyric: `a crumpled castaway!`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -263,6 +290,10 @@ module.exports = {
                     },
                     `just to watch her freeze.`
                 ]
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
             }
         ],
         [
@@ -281,6 +312,10 @@ module.exports = {
             {
                 time: 111,
                 lyric: `Someday she won't be there; someday yet!`
+            },
+            {
+                unitMap: true,
+                sectionClass: BRIDGE
             }
         ],
         [
@@ -322,6 +357,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: CHORUS
+            }
         ],
         [
             {
@@ -357,6 +396,11 @@ module.exports = {
             {
                 time: 137,
                 lyric: `she would opt just not to hear!`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequentClass: true
             }
         ],
         [
@@ -384,11 +428,20 @@ module.exports = {
                     }
                 ]
             },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
+            }
         ],
         [
             {
                 time: 150,
                 lyric: `You're a purer lie…`
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN,
+                subsequentClass: true
             }
         ]
     ],

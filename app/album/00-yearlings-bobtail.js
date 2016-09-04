@@ -27,7 +27,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `figure out state terminology`,
+            taskName: `use correct state descriptors`,
             workedHours: 0,
             neededHours: 2
         },
