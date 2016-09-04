@@ -1,5 +1,5 @@
 // FIXME: Change pronouns from I and me to drunken me and sober me.
-import { VERSES, CHORUS, BRIDGE, BACKGROUND } from 'helpers/constants'
+import { VERSES, CHORUS, BRIDGE, BACKING } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -356,7 +356,7 @@ module.exports = {
                     }
                 ],
                 sectionClass: BRIDGE,
-                backgroundClass: BACKGROUND
+                sideSectionClass: BACKING
             }
         ],
         [
@@ -405,7 +405,7 @@ module.exports = {
                    }
                ],
                 sectionClass: BRIDGE,
-                backgroundClass: BACKGROUND,
+                sideSectionClass: BACKING,
                 subsequent: true
             }
         ],

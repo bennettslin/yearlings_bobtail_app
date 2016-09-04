@@ -71,7 +71,6 @@ const SongView = ({
                 onCloseClick={onWikiUrlClick}
             />
             <DotsSection
-                showUnpresent={true}
                 hoveredDotIndex={hoveredDotIndex}
                 selectedDotKeys={selectedDotKeys}
                 presentDotKeys={presentDotKeys}

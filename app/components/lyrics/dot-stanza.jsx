@@ -16,7 +16,9 @@ const DotStanza = (props) => {
         { annotationIndex,
           dotKeys } = dotStanzaObject,
 
-        isDisabled = annotationIndex === selectedAnnotationIndex,
+        isSelected = annotationIndex === selectedAnnotationIndex,
+
+        // Hide entire stanza if dot key is not present.
         shouldShow = intersects(dotKeys, selectedDotKeys),
         onDotClick = e => onAnnotationClick(e, annotationIndex)
 
@@ -24,8 +26,7 @@ const DotStanza = (props) => {
         <div className="stanza">
             {/* This will break if dot stanzas ever have more than one dot. */}
             <DotsBlock
-                isDisabled={isDisabled}
-                selectedDotKeys={dotKeys}
+                selectedDotKeys={isSelected ? dotKeys : {}}
                 presentDotKeys={dotKeys}
                 onDotClick={onDotClick}
             />

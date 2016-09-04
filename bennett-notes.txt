@@ -6,6 +6,11 @@ These are logic states that the view :
 These are view states that the controller doesn't care about:
 "hovered" is when the mouse is over it.
 "active" is when it's currently being clicked.
+
+"foreground" applies to dots that are meant to be plainly visible.
+"background" applies to dots that are meant to be detectable but not visible.
+"present" applies to dots that are relevant to this song. (opposite: "absent")
+
 Note: mobile will need a third class that is the counterpart to hovered. I haven't thought it through just yet.
 
 Scores:

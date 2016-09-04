@@ -27,11 +27,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `use correct state descriptors`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `refactor to use dot index rather than key`,
             workedHours: 0,
             neededHours: 2
@@ -195,6 +190,11 @@ module.exports = {
         },
         {
             taskName: `add song sections to lyrics`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `use correct state descriptors`,
             workedHours: 2,
             neededHours: 2
         }

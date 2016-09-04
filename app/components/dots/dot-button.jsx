@@ -8,11 +8,14 @@ const DotButton = (props) => {
 
     const { dotKey,
             dotIndex,
-            isDisabled,
+            isSelected,
+            canDeselect,
             onDotClick,
             onDotHover } = props,
 
-        onClick = !isDisabled ? e => onDotClick(e, dotKey) : null,
+        isEnabled = !isSelected || canDeselect,
+        isToggleDeselected = canDeselect && !isSelected,
+        onClick = isEnabled && onDotClick ? e => onDotClick(e, dotKey) : null,
 
         /**
          * FIXME: Not ideal that button knows both dot key and dot index.
@@ -23,6 +26,8 @@ const DotButton = (props) => {
 
     return (
         <DotButtonView {...props}
+            isEnabled={isEnabled}
+            isToggleDeselected={isToggleDeselected}
             onClick={onClick}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
@@ -38,11 +43,11 @@ const DotButtonView = ({
 
     // From props.
     dotKey,
-    isDisabled,
-    isActive,
     isPresent,
 
     // From controller.
+    isEnabled,
+    isToggleDeselected,
     onClick,
     onMouseEnter,
     onMouseLeave
@@ -50,7 +55,7 @@ const DotButtonView = ({
 }) => (
 
     <div
-        className={`dot ${dotKey}${isActive ? '' : ' inactive'}${isPresent ? '' : ' unpresent'} ${isDisabled ? 'disabled' : 'enabled'}`}
+        className={`dot ${dotKey}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}`}
         onClick={onClick}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}

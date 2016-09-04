@@ -41,7 +41,7 @@ module.exports = {
     OUTRO: 'outro',
     RHYME: 'rhyme',
     RESPONSE: 'response',
-    BACKGROUND: 'background',
+    BACKING: 'backing',
 
     // Temporary.
     ALBUM_BUILD_KEYS: [

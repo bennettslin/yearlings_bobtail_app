@@ -16,7 +16,6 @@ const DotsSection = (props) => (
 const DotsSectionView = ({
 
     // From props.
-    showUnpresent,
     selectedDotKeys,
     presentDotKeys,
     hoveredDotIndex,
@@ -27,19 +26,17 @@ const DotsSectionView = ({
 
     <div className="section dots-section">
         <h2>dots</h2>
-        {showUnpresent ?
-            <div className="tooltip-container">
-                <div className={`tooltip-block ${hoveredDotIndex}`}>
-                    {hoveredDotIndex ?
-                        <div className="tooltip">
-                            hello hello test
-                        </div> : null
-                    }
-                </div>
-            </div> : null
-        }
+        <div className="tooltip-container">
+            <div className={`tooltip-block ${hoveredDotIndex}`}>
+                {hoveredDotIndex ?
+                    <div className="tooltip">
+                        hello hello test
+                    </div> : null
+                }
+            </div>
+        </div>
         <DotsBlock
-            showUnpresent={showUnpresent}
+            inDotsSection={true}
             selectedDotKeys={selectedDotKeys}
             presentDotKeys={presentDotKeys}
             onDotClick={onDotClick}

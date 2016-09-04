@@ -15,8 +15,8 @@ const LyricsUnit = (props) => {
         { unitClass,
           sectionClass,
           subsectionClass,
-          backgroundClass,
-          subBackgroundClass,
+          sideSectionClass,
+          sideSubsectionClass,
           subsequent,
           dotStanza,
           subStanza,
@@ -32,8 +32,8 @@ const LyricsUnit = (props) => {
             unitClass={unitClass}
             sectionClass={isTitleUnit ? TITLE : sectionClass}
             subsectionClass={subsectionClass}
-            backgroundClass={backgroundClass}
-            subBackgroundClass={subBackgroundClass}
+            sideSectionClass={sideSectionClass}
+            sideSubsectionClass={sideSubsectionClass}
             subsequent={subsequent}
             dotStanza={dotStanza}
             isDotOnly={isDotOnly}
@@ -68,8 +68,8 @@ const LyricsUnitView = ({
     sectionClass,
     subsectionClass,
     subsequent,
-    backgroundClass,
-    subBackgroundClass,
+    sideSectionClass,
+    sideSubsectionClass,
     dotStanza,
     isDotOnly,
     subStanza,
@@ -91,8 +91,8 @@ const LyricsUnitView = ({
                 const className = inMain ?
                     (isSub ? subsectionClass :
                         sectionClass) :
-                    (isSub ? subBackgroundClass :
-                        backgroundClass)
+                    (isSub ? sideSubsectionClass :
+                        sideSectionClass)
                 return (
                     <LyricsStanza
                         stanzaArray={stanzaArray}

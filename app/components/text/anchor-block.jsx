@@ -74,7 +74,7 @@ const AnchorBlockView = ({
             }
             {dotKeys ?
                 <DotsBlock
-                    isDisabled={isSelected}
+                    inBackground={isSelected}
                     presentDotKeys={dotKeys}
                 /> : null
             }

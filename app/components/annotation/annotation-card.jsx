@@ -56,6 +56,7 @@ const AnnotationCardView = ({
 
     <div className="annotation-card">
         <DotsBlock
+            inBackground={true}
             presentDotKeys={dotKeys}
         />
         <TextBlock

@@ -1,4 +1,4 @@
-import { RIGHT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO, RHYME, RESPONSE, BACKGROUND } from 'helpers/constants'
+import { RIGHT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO, RHYME, RESPONSE, BACKING } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -228,7 +228,7 @@ module.exports = {
                 ],
                 sectionClass: CHORUS,
                 subsectionClass: RHYME,
-                backgroundClass: BACKGROUND
+                sideSectionClass: BACKING
             }
         ],
         [
@@ -264,7 +264,7 @@ module.exports = {
                 ],
                 sectionClass: CHORUS,
                 subsectionClass: RHYME,
-                backgroundClass: BACKGROUND
+                sideSectionClass: BACKING
             }
         ],
         [
@@ -410,7 +410,7 @@ module.exports = {
                 ],
                 sectionClass: CHORUS,
                 subsectionClass: RHYME,
-                backgroundClass: BACKGROUND
+                sideSectionClass: BACKING
             }
         ],
         [
@@ -452,7 +452,7 @@ module.exports = {
                 ],
                 sectionClass: CHORUS,
                 subsectionClass: RHYME,
-                backgroundClass: BACKGROUND
+                sideSectionClass: BACKING
             }
         ],
         [
@@ -493,8 +493,8 @@ module.exports = {
                     }
                 ],
                 sectionClass: OUTRO,
-                backgroundClass: BACKGROUND,
-                subBackgroundClass: RESPONSE
+                sideSectionClass: BACKING,
+                sideSubsectionClass: RESPONSE
             }
         ]
     ],
