@@ -5,11 +5,8 @@ import ProgressHelper from 'helpers/progress-helper'
  * CONTAINER *
  *************/
 
-const ProgressFooter = (props) => {
-
-    const { sumTask } = props,
-
-        workedHours = sumTask.workedHours,
+const ProgressFooter = ({ sumTask }) => {
+    const workedHours = sumTask.workedHours,
         neededHours = sumTask.neededHours,
         remainingHours = neededHours - workedHours,
         remainingTime = ProgressHelper.getRemainingTimeStringFromHours(remainingHours)
@@ -37,7 +34,6 @@ const ProgressFooterView = ({
     remainingTime
 
 }) => (
-
     <div className="text-cell-wrapper">
         {neededHours ?
             <div className={'text-cell footer'}>

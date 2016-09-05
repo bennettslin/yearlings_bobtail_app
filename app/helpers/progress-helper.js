@@ -122,5 +122,9 @@ export default {
         allTaskObjects.push(albumTasks)
 
         return allTaskObjects
+    },
+
+    getBarWidthStyle(numerator, denominator) {
+        return (numerator / (denominator || 0.01) * 100) + '%'
     }
 }

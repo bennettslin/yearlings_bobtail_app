@@ -9,20 +9,21 @@ import AlbumHelper from 'helpers/album-view-helper'
  * CONTAINER *
  *************/
 
-const Song = (props) => {
+const Song = ({
 
-    const { selectedSong,
-            selectedAnnotationIndex } = props,
+    selectedSong,
+    selectedAnnotationIndex,
+    ...other }) => {
 
-        annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong),
-        hasDoubleColumns = selectedSong.doubleColumns
+    const annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong)
 
     return (
-        <SongView {...props}
+        <SongView {...other}
             annotation={annotation}
-            hasDoubleColumns={hasDoubleColumns}
+            selectedAnnotationIndex={selectedAnnotationIndex}
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
+            hasDoubleColumns={selectedSong.doubleColumns}
         />
     )
 }
@@ -44,7 +45,6 @@ const SongView = ({
     hoveredLineIndex,
     isNarrowScreen,
     selectedLyricColumnIndex,
-    hasDoubleColumns,
 
     onDotClick,
     onPortalClick,
@@ -58,7 +58,8 @@ const SongView = ({
     // From controller.
     annotation,
     presentDotKeys,
-    selectedSongLyrics
+    selectedSongLyrics,
+    hasDoubleColumns
 
 }) => (
 
@@ -92,9 +93,9 @@ const SongView = ({
                 selectedAnnotationIndex={selectedAnnotationIndex}
                 selectedDotKeys={selectedDotKeys}
                 hoveredLineIndex={hoveredLineIndex}
+                onLineHover={onLineHover}
                 onTimeClick={onTimeClick}
                 onAnnotationClick={onAnnotationClick}
-                onLineHover={onLineHover}
                 onLyricColumnClick={onLyricColumnClick}
             />
         </div>

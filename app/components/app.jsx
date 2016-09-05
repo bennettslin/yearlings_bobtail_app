@@ -245,10 +245,7 @@ class App extends Component {
     }
 
     render() {
-
-        const {
-                // From album data.
-                songs,
+        const { songs,
                 title,
                 overviews,
                 tasks,
@@ -259,13 +256,12 @@ class App extends Component {
                 selectedAnnotationIndex,
                 selectedTime,
                 selectedDotKeys,
-                selectedWikiUrl
+                selectedWikiUrl } = this.props,
 
-            } = this.props,
             { hoveredDotIndex,
               hoveredLineIndex,
-              isNarrowScreen,
-              selectedLyricColumnIndex } = this.state
+              selectedLyricColumnIndex,
+              isNarrowScreen } = this.state
 
         return (
             <div className="app" onClick={this._onBodyClick}>
@@ -283,8 +279,8 @@ class App extends Component {
                     selectedWikiUrl={selectedWikiUrl}
                     hoveredDotIndex={hoveredDotIndex}
                     hoveredLineIndex={hoveredLineIndex}
-                    isNarrowScreen={isNarrowScreen}
                     selectedLyricColumnIndex={selectedLyricColumnIndex}
+                    isNarrowScreen={isNarrowScreen}
 
                     onSongClick={this.handleSongSelect}
                     onPortalClick={this.handlePortalSelect}

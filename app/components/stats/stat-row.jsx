@@ -6,11 +6,8 @@ import { LYRIC_TEXT_KEYS } from 'helpers/constants'
  * CONTAINER *
  *************/
 
-const LyricsWordCountRow = (props) => {
-
-    const { lyrics } = props,
-
-        lyricsWordCount = StatsHelper.getTotalWords(lyrics, LYRIC_TEXT_KEYS)
+const LyricsWordCountRow = ({ lyrics }) => {
+    const lyricsWordCount = StatsHelper.getTotalWords(lyrics, LYRIC_TEXT_KEYS)
 
     return (
         <StatRowView
@@ -20,11 +17,8 @@ const LyricsWordCountRow = (props) => {
     )
 }
 
-const AnnotationsCountRow = (props) => {
-
-    const { annotations } = props,
-
-        todoCount = StatsHelper.getTodoCount(annotations),
+const AnnotationsCountRow = ({ annotations }) => {
+    const todoCount = StatsHelper.getTodoCount(annotations),
         annotationsCount = StatsHelper.getCount(annotations),
         annotationsRatioCount = todoCount ?
             `${annotationsCount - todoCount}/${annotationsCount}` :
@@ -38,11 +32,8 @@ const AnnotationsCountRow = (props) => {
     )
 }
 
-const WordsPerAnnotationRow = (props) => {
-    // FIXME: This is broken.
-    const { annotations } = props,
-
-        annotationsCount = StatsHelper.getCount(annotations),
+const WordsPerAnnotationRow = ({ annotations }) => {
+    const annotationsCount = StatsHelper.getCount(annotations),
         annotationsWordCount = StatsHelper.getSumOfTotalWordsInAnnotations(annotations),
         annotationAverageWordCount = annotationsWordCount ?
             Math.ceil(annotationsWordCount / annotationsCount) :
@@ -67,7 +58,6 @@ const StatRowView = ({
     typeCount
 
 }) => (
-
     <div className="text-cell-wrapper">
         <span className="text-cell text">
             {typeName}

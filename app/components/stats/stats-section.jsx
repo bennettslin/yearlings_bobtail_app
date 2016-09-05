@@ -22,7 +22,6 @@ const StatsSectionView = ({
     annotations
 
 }) => (
-
     <div className="section stats-section">
         <h2>stats</h2>
         <div className="row">

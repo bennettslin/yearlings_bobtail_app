@@ -13,7 +13,6 @@ const NotesSection = () => (
  ****************/
 
 const NotesSectionView = () => (
-
     <div className="section notes-section">
         <h2>scrap notes</h2>
         <ul>

@@ -10,20 +10,24 @@ import AlbumHelper from 'helpers/album-view-helper'
  * CONTAINER *
  *************/
 
-const Shared = (props) => {
+const Shared = ({
 
-    const { songs,
-            selectedSongIndex,
-            selectedOverviewIndex,
-            albumOverviews,
-            albumTasks } = props,
+    songs,
+    selectedSongIndex,
+    selectedOverviewIndex,
+    albumOverviews,
+    albumTasks,
+    ...other }) => {
 
-        selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+    const selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
         overviewText = AlbumHelper.getOverviewText(selectedOverviewIndex, selectedSong, albumOverviews),
         tasks = AlbumHelper.getTasks(selectedSong, albumTasks)
 
     return (
-        <SharedView {...props}
+        <SharedView {...other}
+            songs={songs}
+            selectedSongIndex={selectedSongIndex}
+            selectedOverviewIndex={selectedOverviewIndex}
             selectedSong={selectedSong}
             overviewText={overviewText}
             tasks={tasks}
@@ -35,46 +39,42 @@ const Shared = (props) => {
  * PRESENTATION *
  ****************/
 
-const SharedView = (props) => {
+const SharedView = ({
+    // From props.
+    selectedSongIndex,
+    selectedOverviewIndex,
+    onOverviewClick,
 
-    const {
-        // From props.
-        selectedSongIndex,
-        selectedOverviewIndex,
-        onOverviewClick,
-
-        // From controller.
-        selectedSong,
-        overviewText,
-        tasks
-
-    } = props
-
-    return (
-        <div className="column shared-column">
-            <div className="field shared-field">
-                <OverviewsSection
-                    overviewText={overviewText}
-                    selectedOverviewIndex={selectedOverviewIndex}
-                    onOverviewClick={onOverviewClick}
-                />
-                {/* Technically, stats only knows selected song data so it really
-                  * belongs in song column. But we're putting it here because
-                  * it keeps the layout balanced, and it's just a dev tool. */}
-                <StatsSection
-                    lyrics={selectedSong.lyrics}
-                    annotations={selectedSong.annotations}
-                />
-                <TasksSection
-                    tasks={tasks}
-                />
-                <NotesSection />
-            </div>
-            {selectedSongIndex ?
-                <Song {...props} /> : null
-            }
+    // From controller.
+    selectedSong,
+    overviewText,
+    tasks,
+    ...other }) => (
+    <div className="column shared-column">
+        <div className="field shared-field">
+            <OverviewsSection
+                overviewText={overviewText}
+                selectedOverviewIndex={selectedOverviewIndex}
+                onOverviewClick={onOverviewClick}
+            />
+            {/* Technically, stats only knows selected song data so it really
+              * belongs in song column. But we're putting it here because
+              * it keeps the layout balanced, and it's just a dev tool. */}
+            <StatsSection
+                lyrics={selectedSong.lyrics}
+                annotations={selectedSong.annotations}
+            />
+            <TasksSection
+                tasks={tasks}
+            />
+            <NotesSection />
         </div>
-    )
-}
+        {selectedSongIndex ?
+            <Song {...other}
+                selectedSong={selectedSong}
+            /> : null
+        }
+    </div>
+)
 
 export default Shared

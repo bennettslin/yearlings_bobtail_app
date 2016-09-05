@@ -9,15 +9,18 @@ import ProgressHelper from 'helpers/progress-helper'
  * CONTAINER *
  *************/
 
-const Album = (props) => {
+const Album = ({
 
-    const { songs,
-            albumTasks } = props,
+    songs,
+    albumTasks,
+    ...other }) => {
 
-        allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs)
+    const allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs)
 
     return (
-        <AlbumView {...props}
+        <AlbumView {...other}
+            songs={songs}
+            albumTasks={albumTasks}
             allTasks={allTasks}
         />
     )
@@ -27,45 +30,44 @@ const Album = (props) => {
  * PRESENTATION *
  ****************/
 
-const AlbumView = (props) => {
+const AlbumView = ({
+    // From props.
+    songs,
+    albumTitle,
+    selectedSongIndex,
+    selectedTime,
+    isNarrowScreen,
+    onSongClick,
+    onScreenWidthClick,
 
-    const {
-        // From props.
-        songs,
-        albumTitle,
-        selectedSongIndex,
-        selectedTime,
-        isNarrowScreen,
-        onSongClick,
-        onScreenWidthClick,
-
-        // From controller.
-        allTasks
-
-    } = props
-
-    return (
-        <div className="column album-column">
-            <div className="field album-field">
-                <TitleSection
-                    title={albumTitle}
-                    onTitleClick={onSongClick}
-                />
-                <DevSection
-                    selectedTime={selectedTime}
-                    isNarrowScreen={isNarrowScreen}
-                    onScreenWidthClick={onScreenWidthClick}
-                />
-                <NavSection
-                    songs={songs}
-                    allTasks={allTasks}
-                    selectedSongIndex={selectedSongIndex}
-                    onSongClick={onSongClick}
-                />
-            </div>
-            <Shared {...props} />
+    // From controller.
+    allTasks,
+    ...other }) => (
+    <div className="column album-column">
+        <div className="field album-field">
+            <TitleSection
+                title={albumTitle}
+                onTitleClick={onSongClick}
+            />
+            <DevSection
+                selectedTime={selectedTime}
+                isNarrowScreen={isNarrowScreen}
+                onScreenWidthClick={onScreenWidthClick}
+            />
+            <NavSection
+                songs={songs}
+                allTasks={allTasks}
+                selectedSongIndex={selectedSongIndex}
+                onSongClick={onSongClick}
+            />
         </div>
-    )
-}
+        <Shared {...other}
+            songs={songs}
+            selectedSongIndex={selectedSongIndex}
+            selectedTime={selectedTime}
+            isNarrowScreen={isNarrowScreen}
+        />
+    </div>
+)
 
 export default Album

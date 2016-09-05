@@ -1,20 +1,15 @@
 import React from 'react'
+import ProgressHelper from 'helpers/progress-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const ProgressBar = (props) => {
-
-    const { sumTask,
-            maxTotalNeededHours } = props,
-
-        filledStyle = {
-            width: (sumTask.workedHours / (sumTask.neededHours || 0.01) * 100) + '%'
-        },
-        totalStyle = {
-            width: (sumTask.neededHours / (maxTotalNeededHours || 0.01) * 100) + '%'
-        }
+const ProgressBar = ({ sumTask, maxTotalNeededHours }) => {
+    const { workedHours,
+            neededHours } = sumTask,
+        filledStyle = { width: ProgressHelper.getBarWidthStyle(workedHours, neededHours) },
+        totalStyle = { width: ProgressHelper.getBarWidthStyle(neededHours, maxTotalNeededHours) }
 
     return (
         <ProgressBarView
@@ -35,7 +30,6 @@ const ProgressBarView = ({
     totalStyle
 
 }) => (
-
     <div className="progress-bar" style={totalStyle}>
         <div className="filled-bar" style={filledStyle} />
     </div>
