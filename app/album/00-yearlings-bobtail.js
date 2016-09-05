@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `correct stanzas too wide in narrow lyrics`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `optimise transferring props`,
             workedHours: 0,
             neededHours: 3

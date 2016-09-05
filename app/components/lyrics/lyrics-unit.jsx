@@ -96,7 +96,7 @@ const LyricsUnitView = ({
         if (stanzaArray) {
             if (addSub) {
                 return (
-                    <div className={`sub-block custom${hiddenLyricColumnKey ? '' : ' right'}`}>
+                    <div className="sub-block custom right">
                     {getStanza({ stanzaArray, inMain, isSub: true })}
                     </div>
                 )
