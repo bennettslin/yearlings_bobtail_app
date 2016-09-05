@@ -72,6 +72,11 @@ module.exports = {
         ANCHOR
     ],
 
+    LYRIC_COLUMN_KEYS: [
+        LEFT,
+        RIGHT
+    ],
+
     DOUBLESPEAKER_KEYS: [
         LEFT,
         CENTRE,

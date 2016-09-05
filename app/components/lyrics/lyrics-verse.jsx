@@ -62,6 +62,7 @@ const LyricsVerseView = ({
     verseObject,
     selectedAnnotationIndex,
     selectedDotKeys,
+    hiddenLyricColumnKey,
     onAnnotationClick,
 
     // From controller.
@@ -102,12 +103,16 @@ const LyricsVerseView = ({
             ) : (
                 <div className="double-lines-block">
                     {DOUBLESPEAKER_KEYS.filter(key => {
+                        if (key === hiddenLyricColumnKey) {
+                            return false
+                        }
+
                         return verseObject[key]
                     }).map((key, index) => {
                         return (
                             <div
                                 key={index}
-                                className={`line ${key}`}
+                                className={`line ${hiddenLyricColumnKey ? 'left' : key}`}
                             >
                                 <TextBlock
                                     isLyric={true}

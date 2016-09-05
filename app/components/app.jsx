@@ -71,12 +71,14 @@ class App extends Component {
         this.handlePortalSelect = this.handlePortalSelect.bind(this)
         this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
         this.handleScreenWidthSelect = this.handleScreenWidthSelect.bind(this)
+        this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
 
         this.state = {
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
-            isNarrowScreen: false
+            isNarrowScreen: true,
+            selectedLyricColumnIndex: 1
         }
     }
 
@@ -225,8 +227,20 @@ class App extends Component {
     }
 
     handleScreenWidthSelect(e) {
+        const { isNarrowScreen } = this.state,
+            newLyricColumnIndex = !isNarrowScreen ? 1 : 0
+
+        // Refactor to use handleLyricColumnSelect method.
         this.setState({
-            isNarrowScreen: !this.state.isNarrowScreen
+            isNarrowScreen: !isNarrowScreen,
+            selectedLyricColumnIndex: newLyricColumnIndex
+        })
+    }
+
+    handleLyricColumnSelect(e, selectedIndex = 0) {
+        console.error('selectedIndex', selectedIndex);
+        this.setState({
+            selectedLyricColumnIndex: selectedIndex
         })
     }
 
@@ -250,7 +264,8 @@ class App extends Component {
             } = this.props,
             { hoveredDotIndex,
               hoveredLineIndex,
-              isNarrowScreen } = this.state
+              isNarrowScreen,
+              selectedLyricColumnIndex } = this.state
 
         return (
             <div className="app" onClick={this._onBodyClick}>
@@ -269,6 +284,7 @@ class App extends Component {
                     hoveredDotIndex={hoveredDotIndex}
                     hoveredLineIndex={hoveredLineIndex}
                     isNarrowScreen={isNarrowScreen}
+                    selectedLyricColumnIndex={selectedLyricColumnIndex}
 
                     onSongClick={this.handleSongSelect}
                     onPortalClick={this.handlePortalSelect}
@@ -280,6 +296,7 @@ class App extends Component {
                     onDotHover={this.handleDotHover}
                     onLineHover={this.handleLineHover}
                     onScreenWidthClick={this.handleScreenWidthSelect}
+                    onLyricColumnClick={this.handleLyricColumnSelect}
                 />
             </div>
         )

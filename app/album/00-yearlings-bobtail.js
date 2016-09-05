@@ -27,7 +27,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `foldable lyrics section`,
+            taskName: `optimise transferring props`,
             workedHours: 0,
             neededHours: 3
         },
@@ -202,6 +202,11 @@ module.exports = {
             taskName: `use correct state descriptors`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `foldable lyrics section`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }

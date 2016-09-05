@@ -1,7 +1,7 @@
 import React from 'react'
 import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
-import { TITLE } from 'helpers/constants'
+import { TITLE, LEFT, RIGHT, LYRIC_COLUMN_KEYS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -10,7 +10,8 @@ import { TITLE } from 'helpers/constants'
 const LyricsUnit = (props) => {
 
     const { stanzaArray,
-            isTitleUnit } = props,
+            isTitleUnit,
+            selectedLyricColumnIndex } = props,
 
         { unitClass,
           sectionClass,
@@ -23,9 +24,13 @@ const LyricsUnit = (props) => {
           topSideStanza,
           bottomSideStanza } = stanzaArray[stanzaArray.length - 1],
 
-        isDotOnly = dotStanza && stanzaArray.length === 1,
+        hiddenLyricColumnKey = selectedLyricColumnIndex ? LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2]: null,
         isBottomOnly = !topSideStanza && bottomSideStanza,
-        topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null
+        topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
+        isDotOnly = dotStanza && stanzaArray.length === 1,
+        hasSide = topSideStanza || bottomSideStanza,
+        showMain = !isDotOnly && !hasSide || hiddenLyricColumnKey !== LEFT,
+        showSide = hasSide && hiddenLyricColumnKey !== RIGHT
 
     return (
         <LyricsUnitView {...props}
@@ -36,12 +41,15 @@ const LyricsUnit = (props) => {
             sideSubsectionClass={sideSubsectionClass}
             subsequent={subsequent}
             dotStanza={dotStanza}
-            isDotOnly={isDotOnly}
             subStanza={subStanza}
             topSideStanza={topSideStanza}
             bottomSideStanza={bottomSideStanza}
             isBottomOnly={isBottomOnly}
+            isDotOnly={isDotOnly}
+            showMain={showMain}
+            showSide={showSide}
             topSideSubStanza={topSideSubStanza}
+            hiddenLyricColumnKey={hiddenLyricColumnKey}
         />
     )
 }
@@ -62,6 +70,7 @@ const LyricsUnitView = ({
     onAnnotationClick,
     onTimeClick,
     onLineHover,
+    hiddenLyricColumnKey,
 
     // From controller.
     unitClass,
@@ -71,19 +80,23 @@ const LyricsUnitView = ({
     sideSectionClass,
     sideSubsectionClass,
     dotStanza,
-    isDotOnly,
     subStanza,
     topSideStanza,
     bottomSideStanza,
-    isBottomOnly,
     topSideSubStanza,
+    isBottomOnly,
+    isDotOnly,
+    showMain,
+    showSide
 
 }) => {
+
+    // TODO: Don't bother passing hidden lyric column key to verse if it's not necessary.
     const getStanza = ({ stanzaArray, inMain, addSub, isSub }) => {
         if (stanzaArray) {
             if (addSub) {
                 return (
-                    <div className="sub-block custom right">
+                    <div className={`sub-block custom${hiddenLyricColumnKey ? '' : ' right'}`}>
                     {getStanza({ stanzaArray, inMain, isSub: true })}
                     </div>
                 )
@@ -101,6 +114,7 @@ const LyricsUnitView = ({
                         selectedDotKeys={selectedDotKeys}
                         selectedTime={selectedTime}
                         hoveredLineIndex={hoveredLineIndex}
+                        hiddenLyricColumnKey={hiddenLyricColumnKey}
                         onAnnotationClick={onAnnotationClick}
                         onTimeClick={onTimeClick}
                         onLineHover={onLineHover}
@@ -114,13 +128,13 @@ const LyricsUnitView = ({
 
     return (
         <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}${unitClass ? ` custom ${unitClass}` : ''}`}>
-            {!isDotOnly ?
-                <div className={`stanza-block main${subsequent ? ' subsequent' : ''}`}>
+            {showMain ?
+                <div className={`stanza-block ${subsequent ? ' subsequent' : ''}`}>
                     {getStanza({ stanzaArray, inMain: true })}
                     {getStanza({ stanzaArray: subStanza, inMain: true, addSub: true })}
                 </div> : null
             }
-            {topSideStanza || bottomSideStanza ?
+            {showSide ?
                 <div className={`stanza-block side${isBottomOnly ? ' bottom-only' : ''}`}>
                     {getStanza({ stanzaArray: topSideStanza })}
                     {getStanza({ stanzaArray: bottomSideStanza })}

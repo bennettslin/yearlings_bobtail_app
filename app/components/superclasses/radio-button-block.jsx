@@ -11,7 +11,8 @@ const RadioButtonBlock = (props) => {
     const { selectedButtonIndex = 0,
             buttonKeys } = props,
 
-        selectedButtonKey = buttonKeys[selectedButtonIndex - 1]
+        selectedButtonKey = selectedButtonIndex > 0 ?
+            buttonKeys[selectedButtonIndex - 1] : null
 
     return (
         <RadioButtonBlockView {...props}

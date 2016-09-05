@@ -14,11 +14,13 @@ const Song = (props) => {
     const { selectedSong,
             selectedAnnotationIndex } = props,
 
-        annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong)
+        annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong),
+        hasDoubleColumns = selectedSong.doubleColumns
 
     return (
         <SongView {...props}
             annotation={annotation}
+            hasDoubleColumns={hasDoubleColumns}
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
         />
@@ -41,6 +43,8 @@ const SongView = ({
     hoveredDotIndex,
     hoveredLineIndex,
     isNarrowScreen,
+    selectedLyricColumnIndex,
+    hasDoubleColumns,
 
     onDotClick,
     onPortalClick,
@@ -49,6 +53,7 @@ const SongView = ({
     onTimeClick,
     onDotHover,
     onLineHover,
+    onLyricColumnClick,
 
     // From controller.
     annotation,
@@ -80,6 +85,8 @@ const SongView = ({
             />
             <LyricsSection
                 isNarrowScreen={isNarrowScreen}
+                selectedLyricColumnIndex={selectedLyricColumnIndex}
+                hasDoubleColumns={hasDoubleColumns}
                 songLyrics={selectedSongLyrics}
                 selectedTime={selectedTime}
                 selectedAnnotationIndex={selectedAnnotationIndex}
@@ -88,6 +95,7 @@ const SongView = ({
                 onTimeClick={onTimeClick}
                 onAnnotationClick={onAnnotationClick}
                 onLineHover={onLineHover}
+                onLyricColumnClick={onLyricColumnClick}
             />
         </div>
     </div>

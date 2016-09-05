@@ -31,7 +31,7 @@ const DevSectionView = ({
             className="enabled"
             onClick={onScreenWidthClick}
         >
-            {isNarrowScreen ? 'narrow' : 'widen'}
+            {isNarrowScreen ? 'widen' : 'narrow'}
         </a>
     </div>
 )

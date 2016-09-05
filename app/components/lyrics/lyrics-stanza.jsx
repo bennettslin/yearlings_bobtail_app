@@ -22,6 +22,7 @@ const LyricsStanzaView = ({
     selectedDotKeys,
     selectedTime,
     hoveredLineIndex,
+    hiddenLyricColumnKey,
     onAnnotationClick,
     onTimeClick,
     onLineHover
@@ -38,6 +39,7 @@ const LyricsStanzaView = ({
                     selectedDotKeys={selectedDotKeys}
                     selectedTime={selectedTime}
                     hoveredLineIndex={hoveredLineIndex}
+                    hiddenLyricColumnKey={hiddenLyricColumnKey}
                     onAnnotationClick={onAnnotationClick}
                     onTimeClick={onTimeClick}
                     onLineHover={onLineHover}

@@ -8,6 +8,7 @@ module.exports = {
         },
         todo: true
     },
+    doubleColumns: true,
     totalTime: 164,
     overviews: {
         narrative: `narrative 1`,
