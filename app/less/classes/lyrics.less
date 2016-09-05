@@ -156,28 +156,27 @@
         }
     }
 
-    .play-button-container {
+    .play-button-unit {
         position: relative;
 
-        // FIXME: Improve styling, of course.
         .play-button-block {
             display: flex;
-            flex-direction: row;
             position: absolute;
-            left: -55px;
-            top: -5px;
+            right: 100%;
+            padding-right: 1em;
 
             .play-button {
-                padding: 5px 15px;
-                background-color: white;
-                border-radius: 5px;
-                box-shadow: 0 1px 2px 2px lightGray;
+                font-size: 0.8em;
                 opacity: 0;
 
                 &.hovered, &.selected {
                     transition: opacity 0.1s ease 0.2s;
                     opacity: 1;
                 }
+            }
+
+            .playing-icon {
+                color: black;
             }
         }
     }

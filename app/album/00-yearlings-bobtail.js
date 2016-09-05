@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `foldable lyrics section`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `refactor to use dot index rather than key`,
             workedHours: 0,
             neededHours: 2

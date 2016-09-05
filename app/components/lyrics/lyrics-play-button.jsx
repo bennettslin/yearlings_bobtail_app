@@ -16,17 +16,15 @@ const LyricsPlayButton = ({
 
 }) => (
 
-    <div className="play-button-container">
-        {/* TODO: Figure out best layout. */}
+    <div className="play-button-unit">
         <div className="play-button-block">
             {!isSelected ?
                 <a className={`play-button enabled${isHovered ? ' hovered' : ''}`}
                     onClick={onClick}
                 >
-                    {/* TODO: When playing, show playing instead, and make it not selectable. */}
                     {getFormattedTime(time)}
                 </a> :
-                <div>
+                <div className="playing-icon">
                     {'\u25B6'}
                 </div>
             }

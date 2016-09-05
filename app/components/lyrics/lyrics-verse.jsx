@@ -21,15 +21,19 @@ const LyricsVerse = (props) => {
           lineIndex } = verseObject,
 
         /**
-         * It's selected if it's between time and nextTime, or if all three
-         * times are equal (such as in the title, when the verse starts at 0.)
+         * It's selected if it's between time and nextTime.
          */
-        isSelected = (time <= selectedTime && selectedTime < nextTime) ||
-                   (time === selectedTime && nextTime === selectedTime),
-        isHovered = lineIndex === hoveredLineIndex && !isSelected,
+        isSelected = (time <= selectedTime && selectedTime < nextTime),
+
+        /**
+         * If there is no duration between time and nextTime, it can be
+         * selected but not marked as selected.
+         */
+        isSameTimeSelected = time === selectedTime && time === nextTime,
+        isHovered = lineIndex === hoveredLineIndex,
         isSingleSpeaker = !!lyric,
-        isInteractable = !isNaN(time),
-        onClick = isInteractable ? e => onTimeClick(e, time) : null,
+        isInteractable = !isNaN(time) && !isSameTimeSelected,
+        onClick = isInteractable && !isSelected ? e => onTimeClick(e, time) : null,
         onMouseEnter = onLineHover ? e => onLineHover(e, lineIndex) : null,
         onMouseLeave = onLineHover ? e => onLineHover(e) : null
 
@@ -77,12 +81,14 @@ const LyricsVerseView = ({
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
     >
-        <LyricsPlayButton
-            time={time}
-            isHovered={isHovered}
-            isSelected={isSelected}
-            onClick={onClick}
-        />
+        {isInteractable ?
+            <LyricsPlayButton
+                time={time}
+                isHovered={isHovered}
+                isSelected={isSelected}
+                onClick={onClick}
+            /> : null
+        }
         {isSingleSpeaker ? (
                 <div className={`line${isTitle ? '' : ' left'}`}>
                     <TextBlock

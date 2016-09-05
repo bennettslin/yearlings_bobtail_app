@@ -8,7 +8,7 @@ module.exports = {
         annotation: {
             description: ``
         },
-        todo: true
+        todo: false
     },
     totalTime: 200,
     overviews: {

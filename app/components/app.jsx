@@ -170,6 +170,8 @@ class App extends Component {
 
         this.props.selectAnnotationIndex(selectedIndex)
         SessionHelper.setInSession(SELECTED_ANNOTATION_INDEX, selectedIndex)
+
+        this.handleWikiUrlSelect(e)
     }
 
     handleWikiUrlSelect(e, selectedWiki) {
