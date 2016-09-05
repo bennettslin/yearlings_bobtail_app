@@ -7,16 +7,18 @@ import ProgressHelper from 'helpers/progress-helper'
  * CONTAINER *
  *************/
 
-const NavSection = (props) => {
+const NavSection = ({
 
-    const { songs,
-            allTasks } = props,
+    songs,
+    allTasks,
+    ...other }) => {
 
-        maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
+    const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
         sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks)
 
     return (
-        <NavSectionView {...props}
+        <NavSectionView {...other}
+            songs={songs}
             maxTotalNeededHours={maxTotalNeededHours}
             sumAllTasks={sumAllTasks}
         />
@@ -39,7 +41,6 @@ const NavSectionView = ({
     sumAllTasks
 
 }) => (
-
     <div className="section songs-section">
         <div className="row">
             <div className="text-cell-wrapper">

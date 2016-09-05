@@ -21,7 +21,6 @@ const DevSectionView = ({
     onScreenWidthClick
 
 }) => (
-
     <div className="section dev-section">
         <h2>dev</h2>
         <div className="row">

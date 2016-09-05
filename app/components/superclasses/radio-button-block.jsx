@@ -6,16 +6,18 @@ import TextBlock from '../text/text-block'
  * CONTAINER *
  *************/
 
-const RadioButtonBlock = (props) => {
+const RadioButtonBlock = ({
 
-    const { selectedButtonIndex = 0,
-            buttonKeys } = props,
+    selectedButtonIndex = 0,
+    buttonKeys,
+    ...other }) => {
 
-        selectedButtonKey = selectedButtonIndex > 0 ?
-            buttonKeys[selectedButtonIndex - 1] : null
+    const selectedButtonKey = selectedButtonIndex > 0 ?
+        buttonKeys[selectedButtonIndex - 1] : null
 
     return (
-        <RadioButtonBlockView {...props}
+        <RadioButtonBlockView {...other}
+            buttonKeys={buttonKeys}
             selectedButtonKey={selectedButtonKey}
         />
     )
@@ -35,10 +37,9 @@ const RadioButtonBlockView = ({
     selectedButtonKey
 
 }) => (
-
     <div className="radio-button-block">
         {buttonKeys.map((buttonKey, buttonIndex) => {
-            const isDisabled = (buttonKey === selectedButtonKey)
+            const isDisabled = buttonKey === selectedButtonKey
             return (
                 <RadioButton
                     key={buttonIndex}

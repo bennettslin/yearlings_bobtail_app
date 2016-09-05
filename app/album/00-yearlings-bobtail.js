@@ -27,12 +27,17 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `make radio buttons float`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `correct stanzas too wide in narrow lyrics`,
             workedHours: 0,
             neededHours: 2
         },
         {
-            taskName: `optimise transferring props`,
+            taskName: `https://www.npmjs.com/package/babel-preset-stage-2`,
             workedHours: 0,
             neededHours: 3
         },

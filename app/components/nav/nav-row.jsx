@@ -6,19 +6,21 @@ import ProgressHelper from 'helpers/progress-helper'
  * CONTAINER *
  *************/
 
-const NavRow = (props) => {
+const NavRow = ({
+    song,
+    songIndex,
+    isSelected,
+    onSongClick,
+    ...other }) => {
 
-    const { song,
-            songIndex,
-            isSelected,
-            onSongClick } = props,
-
-        songTitle = song.title,
+    const songTitle = song.title,
         sumTask = ProgressHelper.calculateSumTask(song.tasks),
         onClick = !isSelected ? e => onSongClick(e, songIndex) : null
 
     return (
-        <NavRowView {...props}
+        <NavRowView {...other}
+            songIndex={songIndex}
+            isSelected={isSelected}
             songTitle={songTitle}
             sumTask={sumTask}
             onClick={onClick}
@@ -43,7 +45,6 @@ const NavRowView = ({
     onClick
 
 }) => (
-
     <div className={`row primary-row${isSelected ? ' selected' : ''}`}>
         <ProgressBar
             sumTask={sumTask}

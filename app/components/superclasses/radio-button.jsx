@@ -4,18 +4,20 @@ import React from 'react'
  * CONTAINER *
  *************/
 
-const RadioButton = (props) => {
+const RadioButton = ({
 
-    const { isDisabled,
-            buttonIndex,
-            onButtonClick } = props,
+    isDisabled,
+    buttonIndex,
+    onButtonClick,
+    ...other }) => {
 
-        // Indices begin at 1.
-        onClick = !isDisabled ?
+    // Indices begin at 1.
+    const onClick = !isDisabled ?
             e => onButtonClick(e, buttonIndex + 1) : null
 
     return (
-        <RadioButtonView {...props}
+        <RadioButtonView {...other}
+            isDisabled={isDisabled}
             onClick={onClick}
         />
     )
@@ -35,7 +37,6 @@ const RadioButtonView = ({
     onClick
 
 }) => (
-
     <div className={`radio-button${isDisabled ? ' disabled' : ''}`}>
         <h2>
             <a className={isDisabled ? '' : 'enabled'} onClick={onClick}>
