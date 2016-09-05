@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `figure out best way to do portals`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `make radio buttons float`,
             workedHours: 0,
             neededHours: 2
@@ -35,11 +40,6 @@ module.exports = {
             taskName: `correct stanzas too wide in narrow lyrics`,
             workedHours: 0,
             neededHours: 2
-        },
-        {
-            taskName: `https://www.npmjs.com/package/babel-preset-stage-2`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `refactor to use dot index rather than key`,
@@ -215,6 +215,11 @@ module.exports = {
         },
         {
             taskName: `foldable lyrics section`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `https://www.npmjs.com/package/babel-preset-stage-2`,
             workedHours: 3,
             neededHours: 3
         }

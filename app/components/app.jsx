@@ -230,15 +230,14 @@ class App extends Component {
         const { isNarrowScreen } = this.state,
             newLyricColumnIndex = !isNarrowScreen ? 1 : 0
 
-        // Refactor to use handleLyricColumnSelect method.
+        this.handleLyricColumnSelect(e, newLyricColumnIndex)
+
         this.setState({
-            isNarrowScreen: !isNarrowScreen,
-            selectedLyricColumnIndex: newLyricColumnIndex
+            isNarrowScreen: !isNarrowScreen
         })
     }
 
     handleLyricColumnSelect(e, selectedIndex = 0) {
-        console.error('selectedIndex', selectedIndex);
         this.setState({
             selectedLyricColumnIndex: selectedIndex
         })

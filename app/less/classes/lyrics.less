@@ -22,8 +22,14 @@
             .stanza {
                 font-size: 1.5em;
 
+                @title-verse-padding: 15px;
+
                 .verse {
-                    padding: 15px;
+                    padding: @title-verse-padding;
+
+                    .play-button-block {
+                        margin-top: -@title-verse-padding;
+                    }
                 }
             }
         }
@@ -127,63 +133,75 @@
         &.rhyme { border: 2px solid turquoise; }
         &.response { border: 2px solid cadetBlue; }
         &.backing { border: 2px solid skyBlue; }
+    }
 
-        .verse {
-            transition: color 0.1s ease;
+    .verse {
+        transition: color 0.1s ease;
 
-            &.interactable:not(.selected) {
+        &.interactable {
+            position: relative;
+
+            &:not(.selected) {
                 &:hover {
                     color: green;
                 }
             }
+        }
 
-            &.selected {
-                color: blue;
-            }
+        &.selected {
+            color: blue;
+        }
 
-            @verse-padding: 10px;
-            padding-left: @verse-padding;
-            padding-right: @verse-padding;
+        @verse-padding: 10px;
+        padding-left: @verse-padding;
+        padding-right: @verse-padding;
 
-            &:first-child {
-                padding-top: @verse-padding;
+        &:first-child {
+            padding-top: @verse-padding;
+            .play-button-block {
+                margin-top: -@verse-padding;
+                a, div {
+                    margin-top: @verse-padding;
+                }
             }
+        }
+        &:last-child {
+            padding-bottom: @verse-padding;
+            .play-button-block {
+                a, div {
+                    margin-bottom: @verse-padding;
+                }
+            }
+        }
 
-            &:last-child {
-                padding-bottom: @verse-padding;
-            }
-
-            &:nth-child(odd) {
-                background-color: #fefefa;
-            }
-            &:nth-child(even) {
-                background-color: #fcfce9;
-            }
+        &:nth-child(odd) {
+            background-color: #fefefa;
+        }
+        &:nth-child(even) {
+            background-color: #fcfce9;
         }
     }
 
-    .play-button-unit {
-        position: relative;
+    .play-button-block {
+        position: absolute;
+        right: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-right: 5px;
 
-        .play-button-block {
-            display: flex;
-            position: absolute;
-            right: 100%;
-            padding-right: 1em;
+        .play-button {
+            font-size: 0.8em;
+            opacity: 0;
 
-            .play-button {
-                font-size: 0.8em;
-                opacity: 0;
-
-                &.hovered, &.selected {
-                    transition: opacity 0.1s ease 0.2s;
-                    opacity: 1;
-                }
+            &.hovered, &.selected {
+                transition: opacity 0.1s ease 0.2s;
+                opacity: 1;
             }
+        }
 
-            .playing-icon {
-                color: black;
-            }
+        .playing-icon {
+            color: black;
         }
     }
 

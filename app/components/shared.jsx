@@ -31,6 +31,8 @@ const Shared = ({
             selectedSong={selectedSong}
             overviewText={overviewText}
             tasks={tasks}
+            lyrics={selectedSong.lyrics}
+            annotations={selectedSong.annotations}
         />
     )
 }
@@ -47,9 +49,10 @@ const SharedView = ({
     onOverviewClick,
 
     // From controller.
-    selectedSong,
     overviewText,
     tasks,
+    lyrics,
+    annotations,
 
 ...other }) => (
     <div className="column shared-column">
@@ -63,8 +66,8 @@ const SharedView = ({
               * belongs in song column. But we're putting it here because
               * it keeps the layout balanced, and it's just a dev tool. */}
             <StatsSection
-                lyrics={selectedSong.lyrics}
-                annotations={selectedSong.annotations}
+                lyrics={lyrics}
+                annotations={annotations}
             />
             <TasksSection
                 tasks={tasks}
@@ -73,7 +76,6 @@ const SharedView = ({
         </div>
         {selectedSongIndex ?
             <Song {...other}
-                selectedSong={selectedSong}
             /> : null
         }
     </div>

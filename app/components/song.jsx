@@ -15,6 +15,7 @@ const Song = ({
     selectedAnnotationIndex,
 
 ...other }) => {
+
     const annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong)
 
     return (
