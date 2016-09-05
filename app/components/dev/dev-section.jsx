@@ -16,15 +16,23 @@ const DevSection = (props) => (
 const DevSectionView = ({
 
     // From props.
-    selectedTime
+    selectedTime,
+    isNarrowScreen,
+    onScreenWidthClick
 
 }) => (
 
     <div className="section dev-section">
         <h2>dev</h2>
         <div className="row">
-            Selected Time: {getFormattedTime(selectedTime)}
+            selected time: {getFormattedTime(selectedTime)}
         </div>
+        <a
+            className="enabled"
+            onClick={onScreenWidthClick}
+        >
+            {isNarrowScreen ? 'narrow' : 'widen'}
+        </a>
     </div>
 )
 

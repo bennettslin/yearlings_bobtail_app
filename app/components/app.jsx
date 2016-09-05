@@ -70,11 +70,13 @@ class App extends Component {
         this.handleLineHover = this.handleLineHover.bind(this)
         this.handlePortalSelect = this.handlePortalSelect.bind(this)
         this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
+        this.handleScreenWidthSelect = this.handleScreenWidthSelect.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
 
         this.state = {
             hoveredDotIndex: 0,
-            hoveredLineIndex: 0
+            hoveredLineIndex: 0,
+            isNarrowScreen: false
         }
     }
 
@@ -222,6 +224,12 @@ class App extends Component {
         }
     }
 
+    handleScreenWidthSelect(e) {
+        this.setState({
+            isNarrowScreen: !this.state.isNarrowScreen
+        })
+    }
+
     render() {
 
         const {
@@ -241,7 +249,8 @@ class App extends Component {
 
             } = this.props,
             { hoveredDotIndex,
-              hoveredLineIndex } = this.state
+              hoveredLineIndex,
+              isNarrowScreen } = this.state
 
         return (
             <div className="app" onClick={this._onBodyClick}>
@@ -259,6 +268,7 @@ class App extends Component {
                     selectedWikiUrl={selectedWikiUrl}
                     hoveredDotIndex={hoveredDotIndex}
                     hoveredLineIndex={hoveredLineIndex}
+                    isNarrowScreen={isNarrowScreen}
 
                     onSongClick={this.handleSongSelect}
                     onPortalClick={this.handlePortalSelect}
@@ -269,6 +279,7 @@ class App extends Component {
                     onDotClick={this.handleDotSelect}
                     onDotHover={this.handleDotHover}
                     onLineHover={this.handleLineHover}
+                    onScreenWidthClick={this.handleScreenWidthSelect}
                 />
             </div>
         )

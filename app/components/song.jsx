@@ -40,6 +40,7 @@ const SongView = ({
     selectedTime,
     hoveredDotIndex,
     hoveredLineIndex,
+    isNarrowScreen,
 
     onDotClick,
     onPortalClick,
@@ -78,6 +79,7 @@ const SongView = ({
                 onDotHover={onDotHover}
             />
             <LyricsSection
+                isNarrowScreen={isNarrowScreen}
                 songLyrics={selectedSongLyrics}
                 selectedTime={selectedTime}
                 selectedAnnotationIndex={selectedAnnotationIndex}

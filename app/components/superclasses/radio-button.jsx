@@ -4,18 +4,18 @@ import React from 'react'
  * CONTAINER *
  *************/
 
-const OverviewButton = (props) => {
+const RadioButton = (props) => {
 
     const { isDisabled,
-            overviewIndex,
-            onOverviewClick } = props,
+            buttonIndex,
+            onButtonClick } = props,
 
-        // Overview indices begin at 1.
+        // Indices begin at 1.
         onClick = !isDisabled ?
-            e => onOverviewClick(e, overviewIndex + 1) : null
+            e => onButtonClick(e, buttonIndex + 1) : null
 
     return (
-        <OverviewButtonView {...props}
+        <RadioButtonView {...props}
             onClick={onClick}
         />
     )
@@ -25,24 +25,24 @@ const OverviewButton = (props) => {
  * PRESENTATION *
  ****************/
 
-const OverviewButtonView = ({
+const RadioButtonView = ({
 
     // From props.
     isDisabled,
-    overviewKey,
+    buttonKey,
 
     // From controller.
     onClick
 
 }) => (
 
-    <div className={`select-button${isDisabled ? ' disabled' : ''}`}>
+    <div className={`radio-button${isDisabled ? ' disabled' : ''}`}>
         <h2>
             <a className={isDisabled ? '' : 'enabled'} onClick={onClick}>
-                {overviewKey}
+                {buttonKey}
             </a>
         </h2>
     </div>
 )
 
-export default OverviewButton
+export default RadioButton

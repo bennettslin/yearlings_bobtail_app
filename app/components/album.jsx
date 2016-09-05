@@ -35,7 +35,9 @@ const AlbumView = (props) => {
         albumTitle,
         selectedSongIndex,
         selectedTime,
+        isNarrowScreen,
         onSongClick,
+        onScreenWidthClick,
 
         // From controller.
         allTasks
@@ -51,6 +53,8 @@ const AlbumView = (props) => {
                 />
                 <DevSection
                     selectedTime={selectedTime}
+                    isNarrowScreen={isNarrowScreen}
+                    onScreenWidthClick={onScreenWidthClick}
                 />
                 <NavSection
                     songs={songs}

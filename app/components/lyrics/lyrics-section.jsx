@@ -21,6 +21,7 @@ const LyricsSectionView = ({
     selectedAnnotationIndex,
     selectedDotKeys,
     hoveredLineIndex,
+    isNarrowScreen,
     onAnnotationClick,
     onTimeClick,
     onLineHover

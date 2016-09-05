@@ -22,7 +22,7 @@ const LyricsPlayButton = ({
                 <a className={`play-button enabled${isHovered ? ' hovered' : ''}`}
                     onClick={onClick}
                 >
-                    {getFormattedTime(time)}
+                    {`\u25B6${getFormattedTime(time)}`}
                 </a> :
                 <div className="playing-icon">
                     {'\u25B6'}
