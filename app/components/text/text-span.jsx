@@ -4,17 +4,18 @@ import React from 'react'
  * CONTAINER *
  *************/
 
-const TextSpan = (props) => {
+const TextSpan = ({
 
-    const { isLyric,
-            isInAnchor,
-            text } = props,
+    isLyric,
+    isInAnchor,
+    text
 
-        /**
-         * Subsequent spans of text on a line will begin with a space, unless
-         * it's in an anchor, or it begins with "'s."
-         */
-        hasFirstSpace = !isInAnchor && (text.indexOf('\'s') !== 0)
+}) => {
+    /**
+     * Subsequent spans of text on a line will begin with a space, unless
+     * it's in an anchor, or it begins with "'s."
+     */
+    const hasFirstSpace = !isInAnchor && (text.indexOf('\'s') !== 0)
 
     // Add nonbreaking space between last two words if it's a lyric.
     let spacedText = text
@@ -26,7 +27,7 @@ const TextSpan = (props) => {
     }
 
     return (
-        <TextSpanView {...props}
+        <TextSpanView
             text={spacedText}
             hasFirstSpace={hasFirstSpace}
         />
@@ -44,7 +45,6 @@ const TextSpanView = ({
     hasFirstSpace
 
 }) => (
-
     <span
         className="text-span">
         {(hasFirstSpace ? ' ' : '') + text}

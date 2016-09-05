@@ -9,9 +9,9 @@ const RadioButton = ({
     isDisabled,
     buttonIndex,
     onButtonClick,
-    ...other }) => {
 
-    // Indices begin at 1.
+...other }) => {
+
     const onClick = !isDisabled ?
             e => onButtonClick(e, buttonIndex + 1) : null
 

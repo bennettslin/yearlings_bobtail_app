@@ -4,14 +4,16 @@ import React from 'react'
  * CONTAINER *
  *************/
 
-const TitleSection = (props) => {
+const TitleSection = ({
 
-    const { onTitleClick } = props,
+    onTitleClick,
 
-        onClick = e => onTitleClick(e, 0)
+...other }) => {
+
+    const onClick = e => onTitleClick(e, 0)
 
     return (
-        <TitleSectionView {...props}
+        <TitleSectionView {...other}
             onClick={onClick}
         />
     )
@@ -28,7 +30,6 @@ const TitleSectionView = ({
     onClick
 
 }) => (
-
     <div className="section title-section">
         <h1>
             <a className="enabled" onClick={onClick}>

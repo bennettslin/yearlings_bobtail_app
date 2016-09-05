@@ -40,18 +40,14 @@ const DotsBlockView = ({
 
     // From props.
     inDotsSection,
-    canDeselect,
     inBackground,
     selectedDotKeys,
     presentDotKeys,
-    onDotClick,
-    onDotHover,
 
     // From controller.
-    isInteractable
+    isInteractable,
 
-}) => (
-
+...other }) => (
     <span className={`dots-block${isInteractable ? ' interactable' : ''}`}>
         {ALL_DOT_KEYS.map((dotKey, index) => {
             const isSelected = selectedDotKeys[dotKey],
@@ -63,15 +59,12 @@ const DotsBlockView = ({
                  * dotssection, while only present dots are shown in dot stanza.
                  */
                 return (isPresent || inDotsSection ?
-                    <DotButton
+                    <DotButton {...other}
                         key={index}
                         dotKey={dotKey}
                         dotIndex={index + 1}
                         isPresent={isPresent}
                         isSelected={isSelected}
-                        canDeselect={canDeselect}
-                        onDotClick={onDotClick}
-                        onDotHover={onDotHover}
                     /> : null
                 )
 

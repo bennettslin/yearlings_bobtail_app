@@ -13,8 +13,8 @@ const Song = ({
 
     selectedSong,
     selectedAnnotationIndex,
-    ...other }) => {
 
+...other }) => {
     const annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong)
 
     return (
@@ -31,6 +31,8 @@ const Song = ({
 /****************
  * PRESENTATION *
  ****************/
+
+// FIXME: Passing songs only because it's needed for portal links. Is there a better way?
 
 const SongView = ({
 

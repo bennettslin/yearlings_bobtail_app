@@ -9,27 +9,27 @@ import { intersects, getIntersection } from 'helpers/dot-helper'
  * CONTAINER *
  *************/
 
-const AnnotationCard = (props) => {
+const AnnotationCard = ({
 
-    const { card,
-            songs,
-            selectedDotKeys } = props,
+    card,
+    songs,
+    selectedDotKeys,
 
-        { description,
+...other }) => {
+
+    const { description,
           dotKeys = {} } = card,
 
         portalLinks = AppHelper.getPortalLinks(card, songs)
 
     // Add portal key to dot keys.
-    if (portalLinks) {
-        dotKeys.portal = true
-    }
+    if (portalLinks) { dotKeys.portal = true }
 
     const shouldShow = intersects(dotKeys, selectedDotKeys),
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys)
 
     return (shouldShow ?
-        <AnnotationCardView {...props}
+        <AnnotationCardView {...other}
             text={description}
             dotKeys={intersectedDotKeys}
             portalLinks={portalLinks}
@@ -53,7 +53,6 @@ const AnnotationCardView = ({
     portalLinks
 
 }) => (
-
     <div className="annotation-card">
         <DotsBlock
             inBackground={true}

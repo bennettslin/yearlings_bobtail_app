@@ -11,7 +11,8 @@ const NavSection = ({
 
     songs,
     allTasks,
-    ...other }) => {
+
+...other }) => {
 
     const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
         sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks)

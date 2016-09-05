@@ -6,15 +6,17 @@ import { intersects } from 'helpers/dot-helper'
  * CONTAINER *
  *************/
 
-const DotStanza = (props) => {
+const DotStanza = ({
 
-    const { onAnnotationClick,
-            dotStanzaObject,
-            selectedAnnotationIndex,
-            selectedDotKeys } = props,
+    onAnnotationClick,
+    dotStanzaObject,
+    selectedAnnotationIndex,
+    selectedDotKeys
 
-        { annotationIndex,
-          dotKeys } = dotStanzaObject,
+}) => {
+
+    const { annotationIndex,
+            dotKeys } = dotStanzaObject,
 
         isSelected = annotationIndex === selectedAnnotationIndex,
 

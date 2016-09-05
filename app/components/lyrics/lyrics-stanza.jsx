@@ -18,31 +18,14 @@ const LyricsStanzaView = ({
     // From props.
     stanzaArray,
     sectionClass,
-    selectedAnnotationIndex,
-    selectedDotKeys,
-    selectedTime,
-    hoveredLineIndex,
-    hiddenLyricColumnKey,
-    onAnnotationClick,
-    onTimeClick,
-    onLineHover
 
-}) => (
-
+...other }) => (
     <div className={`stanza${sectionClass ? ` ${sectionClass}` : ''}`}>
         {stanzaArray.map((verseObject, verseIndex) => (
             !verseObject.stanzaMap && !verseObject.unitMap ?
-                <LyricsVerse
+                <LyricsVerse {...other}
                     key={verseIndex}
                     verseObject={verseObject}
-                    selectedAnnotationIndex={selectedAnnotationIndex}
-                    selectedDotKeys={selectedDotKeys}
-                    selectedTime={selectedTime}
-                    hoveredLineIndex={hoveredLineIndex}
-                    hiddenLyricColumnKey={hiddenLyricColumnKey}
-                    onAnnotationClick={onAnnotationClick}
-                    onTimeClick={onTimeClick}
-                    onLineHover={onLineHover}
                 /> : null
             )
         )}

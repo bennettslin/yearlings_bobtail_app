@@ -264,7 +264,10 @@ class App extends Component {
               isNarrowScreen } = this.state
 
         return (
-            <div className="app" onClick={this._onBodyClick}>
+            <div
+                className="app"
+                onClick={this._onBodyClick}
+            >
                 <Album
                     songs={songs}
                     albumTitle={title}

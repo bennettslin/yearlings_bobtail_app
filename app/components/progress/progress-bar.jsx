@@ -6,6 +6,7 @@ import ProgressHelper from 'helpers/progress-helper'
  *************/
 
 const ProgressBar = ({ sumTask, maxTotalNeededHours }) => {
+
     const { workedHours,
             neededHours } = sumTask,
         filledStyle = { width: ProgressHelper.getBarWidthStyle(workedHours, neededHours) },

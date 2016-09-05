@@ -8,21 +8,25 @@ import { intersects } from 'helpers/dot-helper'
  * CONTAINER *
  *************/
 
-const TextUnit = (props) => {
+const TextUnit = ({
 
-    const { text,
-            selectedDotKeys } = props
+    text,
+    selectedDotKeys,
+
+...other }) => {
 
     if (typeof text === 'string') {
         return (
-            <TextSpan {...props} />
+            <TextSpan {...other}
+                text={text}
+            />
         )
 
     } else if (typeof text === 'object') {
         if (text.italic) {
             return (
                 <i>
-                    <TextBlock {...props}
+                    <TextBlock {...other}
                         text={text.italic}
                     />
                 </i>
@@ -31,7 +35,7 @@ const TextUnit = (props) => {
         } else if (text.emphasis) {
             return (
                 <em>
-                    <TextBlock {...props}
+                    <TextBlock {...other}
                         text={text.emphasis}
                     />
                 </em>
@@ -40,8 +44,11 @@ const TextUnit = (props) => {
         } else if (text.anchor) {
             const shouldShowAnchor = intersects(text.dotKeys, selectedDotKeys)
             return (shouldShowAnchor ?
-                <AnchorBlock {...props} /> :
-                <TextBlock {...props}
+                <AnchorBlock {...other}
+                    text={text}
+                    selectedDotKeys={selectedDotKeys}
+                /> :
+                <TextBlock {...other}
                     text={text.anchor}
                 />
             )

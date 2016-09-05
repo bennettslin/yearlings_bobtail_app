@@ -19,7 +19,6 @@ const AnnotationPortalsBlockView = ({
     onPortalClick
 
 }) => (
-
     <div className="portals-block">
         {portalLinks.map((portalObject, index) => {
             const { songIndex,

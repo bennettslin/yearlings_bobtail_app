@@ -6,6 +6,7 @@ import ProgressHelper from 'helpers/progress-helper'
  *************/
 
 const ProgressFooter = ({ sumTask }) => {
+
     const workedHours = sumTask.workedHours,
         neededHours = sumTask.neededHours,
         remainingHours = neededHours - workedHours,

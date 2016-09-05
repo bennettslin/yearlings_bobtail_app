@@ -7,11 +7,13 @@ import ProgressHelper from 'helpers/progress-helper'
  *************/
 
 const NavRow = ({
+
     song,
     songIndex,
     isSelected,
     onSongClick,
-    ...other }) => {
+
+...other }) => {
 
     const songTitle = song.title,
         sumTask = ProgressHelper.calculateSumTask(song.tasks),

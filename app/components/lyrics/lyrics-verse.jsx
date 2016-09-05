@@ -7,18 +7,22 @@ import { DOUBLESPEAKER_KEYS } from 'helpers/constants'
  * CONTAINER *
  *************/
 
-const LyricsVerse = (props) => {
+const LyricsVerse = ({
 
-    const { verseObject,
-            selectedTime,
-            hoveredLineIndex,
-            onTimeClick,
-            onLineHover } = props,
-        { lyric,
-          isTitle,
-          time,
-          nextTime,
-          lineIndex } = verseObject,
+    verseObject,
+    selectedTime,
+    hoveredLineIndex,
+    onAnnotationClick,
+    onTimeClick,
+    onLineHover,
+
+...other }) => {
+
+    const { lyric,
+            isTitle,
+            time,
+            nextTime,
+            lineIndex } = verseObject,
 
         /**
          * It's selected if it's between time and nextTime.
@@ -33,19 +37,22 @@ const LyricsVerse = (props) => {
         isHovered = lineIndex === hoveredLineIndex,
         isSingleSpeaker = !!lyric,
         isInteractable = !isNaN(time) && !isSameTimeSelected,
-        onClick = isInteractable && !isSelected ? e => onTimeClick(e, time) : null,
+        onPlayButtonClick = isInteractable && !isSelected ? e => onTimeClick(e, time) : null,
+        onAnchorClick = onAnnotationClick,
         onMouseEnter = onLineHover ? e => onLineHover(e, lineIndex) : null,
         onMouseLeave = onLineHover ? e => onLineHover(e) : null
 
     return (
-        <LyricsVerseView {...props}
+        <LyricsVerseView {...other}
+            verseObject={verseObject}
             time={time}
             isTitle={isTitle}
             isHovered={isHovered}
             isSelected={isSelected}
             isInteractable={isInteractable}
             isSingleSpeaker={isSingleSpeaker}
-            onClick={onClick}
+            onPlayButtonClick={onPlayButtonClick}
+            onAnchorClick={onAnchorClick}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         />
@@ -60,10 +67,7 @@ const LyricsVerseView = ({
 
     // From props.
     verseObject,
-    selectedAnnotationIndex,
-    selectedDotKeys,
     hiddenLyricColumnKey,
-    onAnnotationClick,
 
     // From controller.
     time,
@@ -72,11 +76,11 @@ const LyricsVerseView = ({
     isHovered,
     isSingleSpeaker,
     isTitle,
-    onClick,
+    onPlayButtonClick,
     onMouseEnter,
-    onMouseLeave
+    onMouseLeave,
 
-}) => (
+...other }) => (
 
     <div className={`verse${isSelected ? ' selected' : ''}${isInteractable ? ' interactable' : ''}`}
         onMouseEnter={onMouseEnter}
@@ -87,26 +91,20 @@ const LyricsVerseView = ({
                 time={time}
                 isHovered={isHovered}
                 isSelected={isSelected}
-                onClick={onClick}
+                onClick={onPlayButtonClick}
             /> : null
         }
         {isSingleSpeaker ? (
                 <div className={`line${isTitle ? '' : ' left'}`}>
-                    <TextBlock
+                    <TextBlock {...other}
                         isLyric={true}
                         text={verseObject.lyric}
-                        selectedAnnotationIndex={selectedAnnotationIndex}
-                        selectedDotKeys={selectedDotKeys}
-                        onAnchorClick={onAnnotationClick}
                     />
                 </div>
             ) : (
                 <div className="double-lines-block">
                     {DOUBLESPEAKER_KEYS.filter(key => {
-                        if (key === hiddenLyricColumnKey) {
-                            return false
-                        }
-
+                        if (key === hiddenLyricColumnKey) { return false }
                         return verseObject[key]
                     }).map((key, index) => {
                         return (
@@ -114,12 +112,9 @@ const LyricsVerseView = ({
                                 key={index}
                                 className={`line ${hiddenLyricColumnKey ? 'left' : key}`}
                             >
-                                <TextBlock
+                                <TextBlock {...other}
                                     isLyric={true}
                                     text={verseObject[key]}
-                                    selectedAnnotationIndex={selectedAnnotationIndex}
-                                    selectedDotKeys={selectedDotKeys}
-                                    onAnchorClick={onAnnotationClick}
                                 />
                             </div>
                         )

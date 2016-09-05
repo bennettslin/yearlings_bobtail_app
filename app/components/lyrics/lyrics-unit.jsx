@@ -7,22 +7,24 @@ import { TITLE, LEFT, RIGHT, LYRIC_COLUMN_KEYS } from 'helpers/constants'
  * CONTAINER *
  *************/
 
-const LyricsUnit = (props) => {
+const LyricsUnit = ({
 
-    const { stanzaArray,
-            isTitleUnit,
-            selectedLyricColumnIndex } = props,
+    stanzaArray,
+    isTitleUnit,
+    selectedLyricColumnIndex,
 
-        { unitClass,
-          sectionClass,
-          subsectionClass,
-          sideSectionClass,
-          sideSubsectionClass,
-          subsequent,
-          dotStanza,
-          subStanza,
-          topSideStanza,
-          bottomSideStanza } = stanzaArray[stanzaArray.length - 1],
+...other }) => {
+
+    const { unitClass,
+            sectionClass,
+            subsectionClass,
+            sideSectionClass,
+            sideSubsectionClass,
+            subsequent,
+            dotStanza,
+            subStanza,
+            topSideStanza,
+            bottomSideStanza } = stanzaArray[stanzaArray.length - 1],
 
         hiddenLyricColumnKey = selectedLyricColumnIndex ? LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2]: null,
         isBottomOnly = !topSideStanza && bottomSideStanza,
@@ -33,7 +35,9 @@ const LyricsUnit = (props) => {
         showSide = hasSide && hiddenLyricColumnKey !== RIGHT
 
     return (
-        <LyricsUnitView {...props}
+        <LyricsUnitView {...other}
+            stanzaArray={stanzaArray}
+            isTitleUnit={isTitleUnit}
             unitClass={unitClass}
             sectionClass={isTitleUnit ? TITLE : sectionClass}
             subsectionClass={subsectionClass}
@@ -65,12 +69,7 @@ const LyricsUnitView = ({
     stanzaArray,
     selectedAnnotationIndex,
     selectedDotKeys,
-    selectedTime,
-    hoveredLineIndex,
     onAnnotationClick,
-    onTimeClick,
-    onLineHover,
-    hiddenLyricColumnKey,
 
     // From controller.
     unitClass,
@@ -87,9 +86,9 @@ const LyricsUnitView = ({
     isBottomOnly,
     isDotOnly,
     showMain,
-    showSide
+    showSide,
 
-}) => {
+...other }) => {
 
     // TODO: Don't bother passing hidden lyric column key to verse if it's not necessary.
     const getStanza = ({ stanzaArray, inMain, addSub, isSub }) => {
@@ -107,17 +106,12 @@ const LyricsUnitView = ({
                     (isSub ? sideSubsectionClass :
                         sideSectionClass)
                 return (
-                    <LyricsStanza
+                    <LyricsStanza {...other}
                         stanzaArray={stanzaArray}
                         sectionClass={className}
                         selectedAnnotationIndex={selectedAnnotationIndex}
                         selectedDotKeys={selectedDotKeys}
-                        selectedTime={selectedTime}
-                        hoveredLineIndex={hoveredLineIndex}
-                        hiddenLyricColumnKey={hiddenLyricColumnKey}
                         onAnnotationClick={onAnnotationClick}
-                        onTimeClick={onTimeClick}
-                        onLineHover={onLineHover}
                     />
                 )
             }

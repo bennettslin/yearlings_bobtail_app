@@ -7,18 +7,20 @@ import { getIntersection } from 'helpers/dot-helper'
  * CONTAINER *
  *************/
 
-const AnchorBlock = (props) => {
+const AnchorBlock = ({
 
-    const { text,
-            selectedAnnotationIndex,
-            selectedDotKeys,
-            onAnchorClick } = props,
+    text,
+    selectedAnnotationIndex,
+    selectedDotKeys,
+    onAnchorClick,
 
-        { annotationIndex,
-          anchor: anchorText,
-          todo: hasTodo,
-          dotKeys,
-          wiki } = text,
+...other }) => {
+
+    const { annotationIndex,
+            anchor,
+            todo,
+            dotKeys,
+            wiki } = text,
 
         isSelected = annotationIndex && annotationIndex === selectedAnnotationIndex,
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
@@ -32,11 +34,11 @@ const AnchorBlock = (props) => {
         onClick = !isSelected ? e => onAnchorClick(e, clickHandlerArgument) : null
 
     return (
-        <AnchorBlockView {...props}
-            hasTodo={hasTodo}
+        <AnchorBlockView {...other}
+            hasTodo={todo}
             isSelected={isSelected}
             dotKeys={intersectedDotKeys}
-            anchorText={anchorText}
+            anchorText={anchor}
             onClick={onClick}
         />
     )

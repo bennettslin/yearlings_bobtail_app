@@ -27,25 +27,14 @@ const TextBlockView = ({
 
     // From props.
     text,
-    isLyric,
-    isInAnchor,
-    selectedAnnotationIndex,
-    selectedDotKeys,
-    onAnchorClick
 
-}) => (
-
+...other }) => (
     <span>
         {text.map((textElement, index) => (
-                <TextBlock
+                <TextBlock {...other}
                     key={index}
                     text={textElement}
-                    isLyric={isLyric}
-                    isInAnchor={isInAnchor}
-                    selectedAnnotationIndex={selectedAnnotationIndex}
-                    selectedDotKeys={selectedDotKeys}
                     beginsNewLine={index === 0}
-                    onAnchorClick={onAnchorClick}
                 />
             )
         )}

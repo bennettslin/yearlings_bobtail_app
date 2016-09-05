@@ -17,8 +17,8 @@ const Shared = ({
     selectedOverviewIndex,
     albumOverviews,
     albumTasks,
-    ...other }) => {
 
+...other }) => {
     const selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
         overviewText = AlbumHelper.getOverviewText(selectedOverviewIndex, selectedSong, albumOverviews),
         tasks = AlbumHelper.getTasks(selectedSong, albumTasks)
@@ -40,6 +40,7 @@ const Shared = ({
  ****************/
 
 const SharedView = ({
+
     // From props.
     selectedSongIndex,
     selectedOverviewIndex,
@@ -49,7 +50,8 @@ const SharedView = ({
     selectedSong,
     overviewText,
     tasks,
-    ...other }) => (
+
+...other }) => (
     <div className="column shared-column">
         <div className="field shared-field">
             <OverviewsSection

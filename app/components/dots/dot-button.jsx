@@ -4,16 +4,18 @@ import React from 'react'
  * CONTAINER *
  *************/
 
-const DotButton = (props) => {
+const DotButton = ({
 
-    const { dotKey,
-            dotIndex,
-            isSelected,
-            canDeselect,
-            onDotClick,
-            onDotHover } = props,
+    dotKey,
+    dotIndex,
+    isSelected,
+    canDeselect,
+    onDotClick,
+    onDotHover,
 
-        isEnabled = !isSelected || canDeselect,
+...other }) => {
+
+    const isEnabled = !isSelected || canDeselect,
         isToggleDeselected = canDeselect && !isSelected,
         onClick = isEnabled && onDotClick ? e => onDotClick(e, dotKey) : null,
 
@@ -25,7 +27,8 @@ const DotButton = (props) => {
         onMouseLeave = onDotHover ? e => onDotHover(e) : null
 
     return (
-        <DotButtonView {...props}
+        <DotButtonView {...other}
+            dotKey={dotKey}
             isEnabled={isEnabled}
             isToggleDeselected={isToggleDeselected}
             onClick={onClick}
@@ -53,7 +56,6 @@ const DotButtonView = ({
     onMouseLeave
 
 }) => (
-
     <div
         className={`dot ${dotKey}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}`}
         onClick={onClick}

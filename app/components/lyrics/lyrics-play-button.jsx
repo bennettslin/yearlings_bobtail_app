@@ -1,11 +1,11 @@
 import React from 'react'
 import { getFormattedTime } from 'helpers/format-helper'
 
-// FIXME: Need to figure out a way to not show play button on more than one verse, which happens if first line starts at 0.
-
 /*************
  * CONTAINER *
  *************/
+
+// TODO: Make play button take up width of line.
 
 const LyricsPlayButton = ({
 
@@ -15,7 +15,6 @@ const LyricsPlayButton = ({
     onClick
 
 }) => (
-
     <div className="play-button-unit">
         <div className="play-button-block">
             {!isSelected ?

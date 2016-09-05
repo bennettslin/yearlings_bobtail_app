@@ -13,8 +13,8 @@ const Album = ({
 
     songs,
     albumTasks,
-    ...other }) => {
 
+...other }) => {
     const allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs)
 
     return (
@@ -31,6 +31,7 @@ const Album = ({
  ****************/
 
 const AlbumView = ({
+
     // From props.
     songs,
     albumTitle,
@@ -42,7 +43,8 @@ const AlbumView = ({
 
     // From controller.
     allTasks,
-    ...other }) => (
+
+...other }) => (
     <div className="column album-column">
         <div className="field album-field">
             <TitleSection

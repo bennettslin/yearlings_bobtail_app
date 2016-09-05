@@ -32,7 +32,6 @@ const AnnotationUnitView = ({
     selectedDotKeys
 
 }) => (
-
     <div className="annotation-cards-block">
         {annotation.cards.map((card, index) => (
             <AnnotationCard

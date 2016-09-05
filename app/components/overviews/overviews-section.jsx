@@ -23,7 +23,6 @@ const OverviewsSectionView = ({
     onOverviewClick
 
 }) => (
-
     <div className="section overviews-section">
         <RadioButtonBlock
             selectedButtonIndex={selectedOverviewIndex}

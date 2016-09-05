@@ -10,7 +10,8 @@ const RadioButtonBlock = ({
 
     selectedButtonIndex = 0,
     buttonKeys,
-    ...other }) => {
+
+...other }) => {
 
     const selectedButtonKey = selectedButtonIndex > 0 ?
         buttonKeys[selectedButtonIndex - 1] : null

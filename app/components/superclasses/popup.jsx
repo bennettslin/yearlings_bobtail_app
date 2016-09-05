@@ -4,7 +4,9 @@ import CSSTransitionGroup from 'react-addons-css-transition-group'
 // TODO: Separate into container and presentation components?
 
 const CloseButton = ({
+
     onClick
+
 }) => (
     <a
         className="close-button enabled"
@@ -21,7 +23,10 @@ class PopupTransitionGroup extends Component {
                 onCloseClick } = this.props
 
         return element ? (
-            <div className={`popup-content-wrapper ${className}`}>
+            <div
+                className={`popup-content-wrapper ${className}`}
+                onClick={e => e.stopPropagation()}
+            >
                 <CloseButton onClick={onCloseClick} />
                 {element}
             </div>

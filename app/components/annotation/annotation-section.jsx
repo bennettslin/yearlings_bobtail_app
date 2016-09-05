@@ -25,27 +25,14 @@ const AnnotationSectionView = ({
     // From props.
     inPopup,
 
-    // FIXME: Passing songs only because it's needed for portal links. Is there a better way?
-    songs,
-    annotation,
-    selectedDotKeys,
-    onWikiUrlClick,
-    onPortalClick,
-
     // From controller.
-    title
+    title,
 
-}) => (
-
-    <div className={`section annotation-section${inPopup ? ' in-popup' : ''}`} onClick={e => e.stopPropagation()}>
+...other }) => (
+    <div className={`section annotation-section${inPopup ? ' in-popup' : ''}`}>
         <h2>{title}</h2>
         <div className="cards-block">
-            <AnnotationUnit
-                songs={songs}
-                annotation={annotation}
-                selectedDotKeys={selectedDotKeys}
-                onWikiUrlClick={onWikiUrlClick}
-                onPortalClick={onPortalClick}
+            <AnnotationUnit {...other}
             />
         </div>
     </div>
