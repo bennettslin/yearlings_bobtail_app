@@ -27,6 +27,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `line width resizing is buggy in doublespeaker songs.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `show notated scores`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `call line width resizing method at appropriate times`,
             workedHours: 0,
             neededHours: 1
