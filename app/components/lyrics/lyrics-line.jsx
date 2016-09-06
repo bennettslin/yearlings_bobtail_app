@@ -15,8 +15,8 @@ class LyricsLine extends Component {
      */
     componentWillMount() { this.setDOMWidth(true) }
     componentDidMount() { this.setDOMWidth() }
-    componentWillUpdate() { this.setDOMWidth(true) }
-    componentDidUpdate() { this.setDOMWidth() }
+    componentWillUpdate(nextProps, nextState) { this.setDOMWidth(true) }
+    componentDidUpdate(prevProps, prevState) { this.setDOMWidth() }
     setDOMWidth(unset) {
         if (this.props.columnKey !== TITLE) {
             const parent = ReactDOM.findDOMNode(this.myParent)
