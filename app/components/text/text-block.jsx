@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+
 import AnchorBlock from './anchor-block'
 import TextUnit from './text-unit'
 
@@ -6,17 +7,22 @@ import TextUnit from './text-unit'
  * CONTAINER *
  *************/
 
-const TextBlock = (props) => {
+class TextBlock extends Component {
+    constructor(props) {
+        super(props)
+    }
 
-    const { text } = props,
+    render() {
+        const { text } = this.props,
 
-        isArray = Array.isArray(text)
+            isArray = Array.isArray(text)
 
-    return (typeof text === 'string' || !isArray) ? (
-            <TextUnit {...props} />
-        ) : (
-            <TextBlockView {...props} />
-        )
+        return (typeof text === 'string' || !isArray) ? (
+                <TextUnit {...this.props} />
+            ) : (
+                <TextBlockView {...this.props} />
+            )
+    }
 }
 
 /****************
