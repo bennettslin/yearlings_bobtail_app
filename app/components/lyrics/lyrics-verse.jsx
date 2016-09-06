@@ -2,7 +2,7 @@ import React from 'react'
 import TextBlock from '../text/text-block'
 import LyricsPlayButton from './lyrics-play-button'
 import LyricsLine from './lyrics-line'
-import { DOUBLESPEAKER_KEYS } from 'helpers/constants'
+import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -97,8 +97,8 @@ const LyricsVerseView = ({
         }
         {isSingleSpeaker ? (
                 <LyricsLine {...other}
-                    className={`line${isTitle ? '' : ' left'}`}
                     text={verseObject.lyric}
+                    columnKey={isTitle ? TITLE : LEFT}
                 />
             ) : (
                 <div className="double-lines-block">
@@ -109,8 +109,8 @@ const LyricsVerseView = ({
                         return (
                             <LyricsLine {...other}
                                 key={index}
-                                className={`line ${hiddenLyricColumnKey ? 'left' : key}`}
                                 text={verseObject[key]}
+                                columnKey={hiddenLyricColumnKey ? LEFT : key}
                             />
                         )
                     })}
