@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-
-import AnchorBlock from './anchor-block'
 import TextUnit from './text-unit'
 
 /*************

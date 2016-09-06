@@ -27,17 +27,17 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `call line width resizing method at appropriate times`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `figure out best way to do portals`,
             workedHours: 0,
             neededHours: 3
         },
         {
             taskName: `make radio buttons float`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `correct stanzas too wide in narrow lyrics`,
             workedHours: 0,
             neededHours: 2
         },
@@ -222,6 +222,11 @@ module.exports = {
             taskName: `https://www.npmjs.com/package/babel-preset-stage-2`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `correct stanzas too wide in narrow lyrics`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

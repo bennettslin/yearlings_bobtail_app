@@ -10,7 +10,7 @@ const defaultProps = {
 class WikiPopup extends Popup {
 
     getClassName() {
-        return 'url'
+        return 'wiki'
     }
 
     getContentElement() {

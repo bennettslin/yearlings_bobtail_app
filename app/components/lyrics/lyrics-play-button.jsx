@@ -17,13 +17,13 @@ const LyricsPlayButton = ({
 }) => (
     <div className="play-button-block">
         {!isSelected ?
-            <a className={`play-button enabled${isHovered ? ' hovered' : ''}`}
+            <a className={`play-child play-button ${isSelected ? '' : ' enabled'}${isHovered ? ' hovered' : ''}`}
                 onClick={onClick}
             >
                 {`\u25B6${getFormattedTime(time)}`}
             </a> :
-            <div className="playing-icon">
-                {'\u25B6'}
+            <div className="play-child play-icon">
+                {`\u25B6`}
             </div>
         }
     </div>

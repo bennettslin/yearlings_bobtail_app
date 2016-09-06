@@ -1,5 +1,4 @@
 import React from 'react'
-import TextBlock from '../text/text-block'
 import LyricsPlayButton from './lyrics-play-button'
 import LyricsLine from './lyrics-line'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from 'helpers/constants'
