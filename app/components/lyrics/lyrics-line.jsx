@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import TextBlock from '../text/text-block'
-import { TITLE } from 'helpers/constants'
+import { TITLE, CENTRE } from 'helpers/constants'
 
 class LyricsLine extends Component {
 
@@ -15,10 +15,26 @@ class LyricsLine extends Component {
      */
     componentWillMount() { this.setDOMWidth(true) }
     componentDidMount() { this.setDOMWidth() }
-    componentWillUpdate(nextProps, nextState) { this.setDOMWidth(true) }
-    componentDidUpdate(prevProps, prevState) { this.setDOMWidth() }
+
+    // TODO: Should know selectedSongIndex and isNarrow, and only ever calls these when those are changed.
+    componentWillUpdate(nextProps, nextState) {
+        // console.warn('nextProps', nextProps);
+        this.setDOMWidth(true)
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        // console.warn('prevProps', prevProps);
+        this.setDOMWidth()
+    }
+
     setDOMWidth(unset) {
-        if (this.props.columnKey !== TITLE) {
+        /**
+         * TODO: I'm not sure why this method is buggy with centre columns. So
+         * I'm excluding it for now, since the only songs that have them, the
+         * doublespeaker ones, don't need them for wide layout, and of course
+         * centre columns become left columns in narrow layout.
+         */
+        if (this.props.columnKey !== TITLE && this.props.columnKey !== CENTRE) {
             const parent = ReactDOM.findDOMNode(this.myParent)
             if (parent) {
                 if (unset) {
