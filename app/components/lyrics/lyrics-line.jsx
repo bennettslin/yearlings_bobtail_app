@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import TextBlock from '../text/text-block'
 import { TITLE, CENTRE } from 'helpers/constants'
 
+// Making this a React component to attach ref for line width resizing.
 class LyricsLine extends Component {
 
     constructor(props) {

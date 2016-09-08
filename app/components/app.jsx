@@ -74,11 +74,17 @@ class App extends Component {
         this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
 
+        /**
+         * TODO: Putting these hovered states in app for now rather than the
+         * relevant child components, because I anticipate that in mobile these
+         * states will be toggled and persisted by clicks. (And untoggled upon
+         * scroll.) Revisit whether this is the best idea.
+         */
         this.state = {
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
-            isNarrowScreen: true,
-            selectedLyricColumnIndex: 1
+            isNarrowScreen: false,
+            selectedLyricColumnIndex: 0
         }
     }
 

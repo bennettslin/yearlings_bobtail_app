@@ -25,15 +25,30 @@ const DotStanza = ({
         onDotClick = e => onAnnotationClick(e, annotationIndex)
 
     return (shouldShow ?
-        <div className="stanza">
-            {/* This will break if dot stanzas ever have more than one dot. */}
-            <DotsBlock
-                selectedDotKeys={isSelected ? dotKeys : {}}
-                presentDotKeys={dotKeys}
-                onDotClick={onDotClick}
-            />
-        </div> : null
+        <DotStanzaView
+            isSelected={isSelected}
+            dotKeys={dotKeys}
+            onDotClick={onDotClick}
+        /> : null
     )
 }
+
+const DotStanzaView = ({
+
+    // From controller.
+    isSelected,
+    dotKeys,
+    onDotClick
+
+}) => (
+    <div className="stanza">
+        {/* This will break if dot stanzas ever have more than one dot. */}
+        <DotsBlock
+            selectedDotKeys={isSelected ? dotKeys : {}}
+            presentDotKeys={dotKeys}
+            onDotClick={onDotClick}
+        />
+    </div>
+)
 
 export default DotStanza
