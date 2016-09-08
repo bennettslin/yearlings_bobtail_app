@@ -13,18 +13,28 @@ class LyricsLine extends Component {
      * Ugly workaround to adjust line width to fit child text when text wraps
      * onto a new line, but it works. (Well, fingers crossed.)
      */
-    componentWillMount() { this.setDOMWidth(true) }
-    componentDidMount() { this.setDOMWidth() }
-
-    // TODO: Should know selectedSongIndex and isNarrow, and only ever calls these when those are changed.
-    componentWillUpdate(nextProps, nextState) {
-        // console.warn('nextProps', nextProps);
+    componentWillMount() {
         this.setDOMWidth(true)
+    }
+    componentDidMount() {
+        this.setDOMWidth()
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        if (this._shouldResetWidthBasedOnProps(this.props, nextProps)) {
+            this.setDOMWidth(true)
+        }
     }
 
     componentDidUpdate(prevProps, prevState) {
-        // console.warn('prevProps', prevProps);
-        this.setDOMWidth()
+        if (this._shouldResetWidthBasedOnProps(prevProps, this.props)) {
+            this.setDOMWidth()
+        }
+    }
+
+    _shouldResetWidthBasedOnProps(oldProps, newProps) {
+        return oldProps.selectedSongIndex !== newProps.selectedSongIndex ||
+            oldProps.isNarrowScreen !== newProps.isNarrowScreen
     }
 
     setDOMWidth(unset) {

@@ -38,6 +38,7 @@ const LyricsSectionView = ({
             {songLyrics.map((stanzaArray, stanzaIndex) => (
                     <LyricsUnit {...other}
                         key={stanzaIndex}
+                        isNarrowScreen={isNarrowScreen}
                         isTitleUnit={stanzaIndex === 0}
                         stanzaArray={stanzaArray}
                         selectedLyricColumnIndex={selectedLyricColumnIndex}

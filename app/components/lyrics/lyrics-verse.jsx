@@ -108,6 +108,7 @@ const LyricsVerseView = ({
                         return (
                             <LyricsLine {...other}
                                 key={index}
+                                lineIndex={index}
                                 text={verseObject[key]}
                                 columnKey={hiddenLyricColumnKey ? LEFT : key}
                             />

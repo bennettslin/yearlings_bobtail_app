@@ -48,6 +48,7 @@ const SongView = ({
     hoveredLineIndex,
     isNarrowScreen,
     selectedLyricColumnIndex,
+    selectedSongIndex,
 
     onDotClick,
     onPortalClick,
@@ -89,11 +90,12 @@ const SongView = ({
             />
             <LyricsSection
                 isNarrowScreen={isNarrowScreen}
+                selectedSongIndex={selectedSongIndex}
+                selectedAnnotationIndex={selectedAnnotationIndex}
                 selectedLyricColumnIndex={selectedLyricColumnIndex}
                 hasDoubleColumns={hasDoubleColumns}
                 songLyrics={selectedSongLyrics}
                 selectedTime={selectedTime}
-                selectedAnnotationIndex={selectedAnnotationIndex}
                 selectedDotKeys={selectedDotKeys}
                 hoveredLineIndex={hoveredLineIndex}
                 onLineHover={onLineHover}

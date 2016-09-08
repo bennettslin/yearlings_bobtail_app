@@ -76,6 +76,7 @@ const SharedView = ({
         </div>
         {selectedSongIndex ?
             <Song {...other}
+                selectedSongIndex={selectedSongIndex}
             /> : null
         }
     </div>

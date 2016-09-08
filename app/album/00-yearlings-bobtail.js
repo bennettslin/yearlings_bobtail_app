@@ -32,11 +32,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `call line width resizing method at appropriate times`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `figure out best way to do portals`,
             workedHours: 0,
             neededHours: 3
@@ -235,6 +230,11 @@ module.exports = {
         },
         {
             taskName: `line width resizing is buggy in doublespeaker songs.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `call line width resizing method at appropriate times`,
             workedHours: 1,
             neededHours: 1
         }
