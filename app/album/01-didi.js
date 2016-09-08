@@ -4,9 +4,14 @@ module.exports = {
     title: {
         anchor: 'Didi (弟弟)',
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: [
+                `In Mandarin Chinese,`,
+                {
+                    italic: `didi`
+                },
+                `means "little brother." While my family is from Taiwan, the Chinese took over the island in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.`
+            ]
+        }
     },
     totalTime: 177,
     overviews: {
@@ -26,22 +31,7 @@ module.exports = {
         [
             {
                 time: 17,
-                lyric: [
-                    {
-                        anchor: `Didi`,
-                        properNoun: true,
-                        annotation: {
-                            description: [
-                                `In Mandarin Chinese,`,
-                                {
-                                    italic: `didi`
-                                },
-                                `means "little brother." While my family is from Taiwan, the Chinese took over in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.`
-                            ]
-                        }
-                    },
-                    `left the house this morning`
-                ]
+                lyric: `Didi left the house this morning`
             },
             {
                 time: 22,

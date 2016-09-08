@@ -4,9 +4,8 @@ module.exports = {
     title: {
         anchor: `Dear Saskia`,
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: `Sasha's given name was actually Saskia, but because this was difficult for children to pronounce, she had gone by the nickname of Sasha her entire life.`
+        }
     },
     totalTime: 171,
     overviews: {
@@ -111,7 +110,7 @@ module.exports = {
                     {
                         anchor: `keep your kid name,`,
                         annotation: {
-                            description: `Sasha's given name was actually Saskia, but because this was difficult for small children to pronounce, her friends had always called her Sasha. Once in Boston, however, she decided that she would go by Saskia. I asked her if I should start calling her Saskia as well. She said no, that it would be nice to always be reminded of which friends knew her first.`
+                            description: `Sasha decided that, once in Boston, she would start to go by her given name of Saskia. I asked her if I should start calling her Saskia as well. She said no, that it would be nice to always be reminded of which friends knew her first.`
                         }
                     },
                     `with everything it meant.`
