@@ -11,7 +11,7 @@ module.exports = {
     doubleColumns: true,
     totalTime: 164,
     overviews: {
-        narrative: `It bothered Sita that, to add insult to injury, the women I left her for were always white. But it's not that  Miriam `,
+        narrative: `To add insult to injury, the women I left Sita for were typically white, which bothered her immensely. But it's not that  Miriam `,
         music: `A Shepard tone is an auditory illusion in which a single tone seems to descend continuously in pitch, yet stays within a fixed register.
 
 
