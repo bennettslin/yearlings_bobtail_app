@@ -11,8 +11,12 @@ module.exports = {
     doubleColumns: true,
     totalTime: 164,
     overviews: {
-        narrative: `narrative 1`,
-        music: `Last doublespeaker rhyme, the one I was happiest with.`
+        narrative: `It bothered Sita that, to add insult to injury, the women I left her for were always white. But it's not that  Miriam `,
+        music: `A Shepard tone is an auditory illusion in which a single tone seems to descend continuously in pitch, yet stays within a fixed register.
+
+
+
+         This song also uses doublespeaker rhyme, as my original intent was to juxtapose my perspective with Miriam's. I kept getting the two sets of lyrics mixed up, however, which I guess just goes to prove that we were both thinking the same thoughts.`
     },
     lyrics: [
         [
