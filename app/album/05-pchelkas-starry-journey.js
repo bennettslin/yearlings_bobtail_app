@@ -8,14 +8,13 @@ module.exports = {
     title: {
         anchor: `Pchelka's Starry Journey`,
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: `In this allegorical retelling, I imagine myself as Pchelka, and my brother as Mushka.`
+        }
     },
     totalTime: 211,
     overviews: {
         narrative: `At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to a race of interstellar beings, with a mission to shut myself from the world. I did so by being unresponsive like my brother, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail-order cult. It took me a long while to recover.`,
-        music: `Pchelka and Mushka were dogs sent into orbit under the Soviet space program. They were killed upon reentry. In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
+        music: `Pchelka and Mushka were dogs sent into orbit under the Soviet space program. In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
     },
     lyrics: [
         [
@@ -623,7 +622,7 @@ module.exports = {
                         anchor: `Mushka's`,
                         properNoun: true,
                         annotation: {
-                            description: `Pchelka and Mushka were a pair of dogs who spent a day in orbit aboard Sputnik 6. There was an error upon reentry, however, so to prevent the spacecraft from landing in hostile territory, the Soviets caused it to self-destruct, killing all aboard. In this analogy, my brother is Mushka, which of course makes me Pchelka.`
+                            description: `While Pchelka and Mushka successfully spent a day in orbit aboard Sputnik 6, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all aboard. In my own analogy, I as Pchelka managed to avoid the sad fate that my brother as Mushka could not.`
                         }
                     },
                     `dragged by collar`
@@ -708,7 +707,7 @@ module.exports = {
                         anchor: `Xiao Xiang,`,
                         properNoun: true,
                         annotation: {
-                            description: `Mushka means "little fly" in Russian, and by coincidence, my brother's Mandarin name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee."`
+                            description: `Mushka means "little fly" in Russian. By coincidence, my brother's Mandarin name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`
                         }
                     },
                     `mush on…`
