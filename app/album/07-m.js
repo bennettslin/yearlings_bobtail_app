@@ -4,9 +4,8 @@ module.exports = {
     title: {
         anchor: 'M',
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: `To avoid mentioning Mara by name, I entitled this song "M," which I planned to explain by packing the lyrics with words that start with the letter M. In hindsight, I probably wasn't fooling anyone.`
+        }
     },
     totalTime: 215,
     overviews: {
@@ -81,22 +80,7 @@ module.exports = {
         [
             {
                 time: 54,
-                lyric: [
-                    `This`,
-                    {
-                        anchor: `moron marooned,`,
-                        annotation: {
-                            description: [
-                                `After deciding to write a song that was secretly about Mara, I realised that I had no useful explanation for why it was titled`,
-                                {
-                                    italic: `M.`
-                                },
-                                `So I came up with a story that my original idea was to pack the lyrics with words that start with the letter M, which I then abandoned after this stanza proved how unfeasible an entire song written in this fashion would be.`
-                            ]
-                        }
-                    },
-                    `a method mapped in my cocoon`
-                ]
+                lyric: `This moron marooned, a method mapped in my cocoon`
             },
             {
                 time: 59,
@@ -107,6 +91,7 @@ module.exports = {
                 lyric: {
                     anchor: `No minutiae left unmastered,`,
                     annotation: {
+                        // TODO: I already mentioned the Rubik's Cube in Kyon.
                         description: `While my ultimate goal was to be versed in all general subjects, the most rewarding moments came when I could demonstrate some random skill with seeming nonchalance. So I made sure to set aside time and energy for these more fanciful objectives, like solving a Rubik's Cube, or memorising the periodic table.`
                     }
                 }
@@ -144,6 +129,17 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE ME***`,
+                    annotation: {
+                        description: [
+                            `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this fashion would be.`
+                        ],
+                        dotKeys: {
+                            music: true
+                        }
+                    }
+                },
                 sectionClass: VERSES,
                 subsequent: true
             }

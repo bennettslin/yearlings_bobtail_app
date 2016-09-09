@@ -4,9 +4,8 @@ module.exports = {
     title: {
         anchor: `Ash Wednesday`,
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: `Ash Wednesday is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
+        }
     },
     totalTime: 163,
     overviews: {
