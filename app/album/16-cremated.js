@@ -11,7 +11,7 @@ module.exports = {
     doubleColumns: true,
     totalTime: 164,
     overviews: {
-        narrative: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly. I can't deny that dating white women silenced the nagging questions I had about my racial inferiority, but I didn't seek them out. A case in point is Miriam, who approached me at a party, having seen my band perform a week earlier. She was the storybook ending my ego had been waiting for: young, blonde, and instantly drawn to me. In the end, we lasted a few months. I felt like just another conquest.`,
+        narrative: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly. But while dating white women helped silence the questions nagging at me about my racial inferiority, I really didn't seek them out. A case in point is Miriam, who came up to me at a party, having seen my band perform a week earlier. She was the storybook ending my ego had been waiting for: young, blonde, and instantly drawn to me. In the end, we lasted a few months. It felt like I was a conquest.`,
         music: `A Shepard tone is an auditory illusion in which a single tone seems to descend continuously in pitch, yet stays within a fixed register.
 
 
