@@ -336,7 +336,16 @@ module.exports = {
         [
             {
                 time: 145,
-                lyric: `No well worn sari could sway you from a fairer marathon!`
+                lyric: [
+                    `No well worn sari could sway you from a`,
+                    {
+                        anchor: `fairer marathon!`,
+                        annotation: {
+                            description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly.`
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
