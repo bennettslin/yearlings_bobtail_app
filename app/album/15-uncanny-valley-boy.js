@@ -122,13 +122,12 @@ module.exports = {
             {
                 time: 31,
                 lyric: [
-                    `to live neutered,`,
+                    `to live neutered, blissfully`,
                     {
-                        anchor: `blissfully and orphaned.`,
+                        anchor: `and orphaned.`,
                         annotation: {
-                            description: `Or else, "blissfully endorphined."`
-                        },
-                        todo: true
+                            description: `Or else, blissfully "endorphined." Being perpetually inebriated allowed me to ignore the reality of having parents whose high expectations I had failed to meet.`
+                        }
                     }
                 ]
             },
@@ -546,7 +545,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 6,
+            workedHours: 14,
             neededHours: 45,
             subtasks: [
                 {
