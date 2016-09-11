@@ -91,11 +91,11 @@ module.exports = {
                         anchor: `book of yours…`,
                         annotation: {
                             description: [
-                                `Like Grover, I was also a character trapped within a self-referential work, hoping to shape the outcome towards which I was being propelled relentlessly. Unlike Grover, however, I had a funny inkling of who the monster at the end of`,
+                                `Like Grover, I was also a character trapped within a self-referential work, hoping to shape the outcome towards which I was being relentlessly propelled. Unlike Grover, however, I had a funny inkling of who the monster at the end of`,
                                 {
                                     italic: `Bobtail`
                                 },
-                                `might be.`
+                                `might prove to be.`
                             ]
                         }
                     }
