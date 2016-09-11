@@ -4,9 +4,8 @@ module.exports = {
     title: {
         anchor: `Uncanny Valley Boy`,
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: `The uncanny valley is a theory that human replicas feel more repulsive the further they grow lifelike while remaining less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this one-time Valley boy from the San Fernando Valley elicited a similar revulsion.`
+        }
     },
     doubleColumns: true,
     totalTime: 204,
@@ -29,22 +28,21 @@ module.exports = {
                         anchor: `Beta,`,
                         annotation: {
                             description: [
+                                `In Hindi,`,
                                 {
                                     // बेटा
-                                    italic: `Beta`
+                                    italic: `beta`
                                 },
-                                `is the Hindi word for "son." My parents were so thoroughly on `
+                                `means "son." My parents had taken Sita's side so unequivocally that I now imagine them addressing me as an Indian parent would.`
                             ]
-                        },
-                        todo: true
+                        }
                     },
                     `come`,
                     {
                         anchor: `wax prophetic`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `The common expression is to "wax poetic," of course. Here, like ghosts of days yet to come, my parents invite me on a night journey to witness all that my naked ambitions will soon have wrought.`
+                        }
                     },
                     `with me.`
                 ]
@@ -56,9 +54,14 @@ module.exports = {
                     {
                         anchor: `giving tree.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `Shel Silverstein's`,
+                                {
+                                    italic: `The Giving Tree`
+                                },
+                                `is a children's book about a tree's nurturing love for a boy, and the increasingly self-sacrificing nature of her gifts as the boy grows into a man. Many read it as an allegory for unhealthy parent-child relationships.`
+                            ]
+                        }
                     }
                 ]
             },
@@ -68,25 +71,33 @@ module.exports = {
                     {
                         anchor: `Stumped,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `The tree finally sacrifices herself, allowing the boy to chop down her trunk to build a boat. When the boy returns as an old man, the tree is now just a stump and can only offer a place to sit and rest. But in their claim to be stumped, my parents are also feigning to be oblivious to the disgraceful outcome of my story.`
+                        }
                     },
                     `I ponder the`,
                     {
                         anchor: `forespoken monster`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                {
+                                    italic: `The Monster at the End of This Book`
+                                },
+                                `is a Sesame Street children's book in which Grover tries to prevent the reader from reaching the last page of the book, fearful of the monster lying in wait. As it turns out, the only monster present at the end is Grover himself, much to his embarrassment.`
+                            ]
+                        }
                     },
                     `at the end of this`,
                     {
                         anchor: `book of yours…`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `Like Grover, I was also a character trapped within a self-referential work, hoping to shape the outcome towards which I was being propelled relentlessly. Unlike Grover, however, I had a funny inkling of who the monster at the end of`,
+                                {
+                                    italic: `Bobtail`
+                                },
+                                `might be.`
+                            ]
+                        }
                     }
                 ]
             },
@@ -103,9 +114,8 @@ module.exports = {
                     {
                         anchor: `sold your whole fortune`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Or else, a future "soldier of fortune." My parents lament that the opportunism born from my ego has led me to squander everything I had that was good with Sita, in favour of less savoury pursuits.`
+                        }
                     }
                 ]
             },
@@ -116,7 +126,7 @@ module.exports = {
                     {
                         anchor: `blissfully and orphaned.`,
                         annotation: {
-                            description: ``
+                            description: `Or else, "blissfully endorphined."`
                         },
                         todo: true
                     }
@@ -469,11 +479,30 @@ module.exports = {
         [
             {
                 time: 184,
-                lyric: `Now son, before you embark on your great bildungsroman,`
+                lyric: [
+                    `Now son, before you embark on your`,
+                    {
+                        anchor: `great bildungsroman,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 191,
-                lyric: `shouldn't you first be sure you've finally become someone?`
+                // TODO: Didi portal.
+                lyric: [
+                    `shouldn't you first be sure you've`,
+                    {
+                        anchor: `finally become someone?`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,

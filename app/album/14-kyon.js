@@ -2,13 +2,16 @@
 import { VERSES, PRECHORUS, CHORUS, BRIDGE, REFRAIN } from 'helpers/constants'
 
 module.exports = {
-    // TODO: Hindi word for "Why"
     title: {
         anchor: `Kyon? (क्यों?)`,
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: [
+                {
+                    italic: `Kyon`
+                },
+                `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language.`
+            ]
+        }
     },
     totalTime: 225,
     overviews: {
