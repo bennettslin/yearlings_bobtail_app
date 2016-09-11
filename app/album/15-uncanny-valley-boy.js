@@ -10,7 +10,7 @@ module.exports = {
     doubleColumns: true,
     totalTime: 204,
     overviews: {
-        narrative: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing as well. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I wasn't about to change my ways.`,
+        narrative: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing as well. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I had a master plan to follow, and wasn't about to change my ways.`,
         music: [
             `I originally began writing this song to describe a nightmare I had, but abandoned it when I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents. This also begins a three-song medley à la`,
             {
@@ -91,7 +91,7 @@ module.exports = {
                         anchor: `book of yours…`,
                         annotation: {
                             description: [
-                                `Like Grover, I was also a character trapped within a self-referential work, hoping to shape the outcome towards which I was being relentlessly propelled. Unlike Grover, however, I had a funny inkling of who the monster at the end of`,
+                                `Like Grover, I was also a character trapped within a self-referential work, hoping to shape the outcome towards which I was being relentlessly thrust. Unlike Grover, however, I had a funny inkling of who the monster at the end of`,
                                 {
                                     italic: `Bobtail`
                                 },
@@ -114,7 +114,7 @@ module.exports = {
                     {
                         anchor: `sold your whole fortune`,
                         annotation: {
-                            description: `Or else, a future "soldier of fortune." My parents lament that the opportunism born from my ego has led me to squander everything I had that was good with Sita, in favour of less savoury pursuits.`
+                            description: `Also, a future "soldier of fortune." My parents lament that the opportunism born from my ego has led me to squander all I had that was good with Sita, in favour of more unsavoury and foolhardy pursuits.`
                         }
                     }
                 ]
@@ -137,16 +137,14 @@ module.exports = {
                     {
                         anchor: `Upon purchase of a queen's ship,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship was built. Patiently waiting for corrective justice thus became my strategy in life. Also, "a pawn perches over queenship." In the game of chess, the lowly pawn can become a mighty queen by steadily clambering towards the other side of the board.`
+                        }
                     },
                     {
                         anchor: `earth right now your tourist store…`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `The mail-order cult warned me not to grow attached to earthly concerns, for I was just a visitor. Or else, "birthright now you're to restore." Having had my head filled with visions of great accomplishments as a child, I assumed that my rightful place was to be recognised for them, so I was committed to fulfilling my end of that bargain.`
+                        }
                     }
                 ]
             },
