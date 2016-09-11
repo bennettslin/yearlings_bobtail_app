@@ -31,8 +31,10 @@ const _prepareAllSongs = (album) => {
         _tempStore.lineIndexCounter = 0
 
         _addTitleToLyrics(song.title, song.lyrics)
-        const anchor = song.title.anchor
-        song.title = anchor
+        // Do not confuse anchor key with string prototype anchor method.
+        if (typeof song.title.anchor !== 'function') {
+            song.title = song.title.anchor
+        }
         _parseLyrics(song.lyrics)
 
         // Make last verse's next time the song's total time and add line index.

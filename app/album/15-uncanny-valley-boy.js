@@ -126,7 +126,7 @@ module.exports = {
                     {
                         anchor: `and orphaned.`,
                         annotation: {
-                            description: `Or else, blissfully "endorphined." Being perpetually inebriated allowed me to ignore the reality of having parents whose high expectations I had failed to meet.`
+                            description: `Or else, blissfully "endorphined." Being perpetually inebriated allowed me to ignore my reality of having parents whose high expectations I failed to meet.`
                         }
                     }
                 ]
