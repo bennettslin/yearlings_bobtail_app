@@ -40,9 +40,9 @@ const _getStringFromObject = (text) => {
 
     if (Array.isArray(text)) {
         /**
-         * This adds a whitespace unless the subsequent text begins with "'s."
-         * This applies to "Bobtail's words" in M and "surrendered for Bobtail's
-         * sake" in Uncanny Valley.
+         * This adds a whitespace unless the following text begins with "'s."
+         * Check "Bobtail's words" in M and "surrendered for Bobtail's sake" in
+         * Uncanny Valley.
          */
         return text.reduce((textString, textObject, index) => {
             const objectString = _getStringFromObject(textObject),
