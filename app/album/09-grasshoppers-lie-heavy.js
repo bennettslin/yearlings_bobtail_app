@@ -4,7 +4,7 @@ module.exports = {
     title: {
         anchor: `Grasshoppers Lie Heavy`,
         annotation: {
-            description: ``
+            description: `In addition to the Philip Dick reference, I thought this title `
         },
         todo: true
     },

@@ -27,6 +27,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `scroll played lyric into view`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `don't allow lyric play button to be hoverable`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `show notated scores`,
             workedHours: 0,
             neededHours: 3

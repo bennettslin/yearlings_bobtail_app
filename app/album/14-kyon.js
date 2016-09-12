@@ -398,7 +398,12 @@ module.exports = {
                 lyric: [
                     `You just knew`,
                     {
-                        anchor: `Bobtail's your priority,`,
+                        anchor: [
+                            {
+                                italic: `Bobtail`
+                            },
+                            `'s your priority,`
+                        ],
                         properNoun: true,
                         annotation: {
                             description: [
@@ -410,7 +415,10 @@ module.exports = {
                             ]
                         }
                     },
-                    `so for Bobtail`,
+                    `so for`,
+                    {
+                        italic: `Bobtail`
+                    },
                     {
                         anchor: `I'll gladly wait.`,
                         annotation: {

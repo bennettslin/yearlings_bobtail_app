@@ -40,13 +40,15 @@ const _getStringFromObject = (text) => {
 
     if (Array.isArray(text)) {
         /**
-         * FIXME: This will not add a space between text fragments. This
-         * works for now, since the only reason to have this method is for
-         * the annotation title for "Bobtail's words" in M, but we may want
-         * to revisit this in the future.
+         * This adds a whitespace unless the subsequent text begins with "'s."
+         * This applies to "Bobtail's words" in M and "surrendered for Bobtail's
+         * sake" in Uncanny Valley.
          */
         return text.reduce((textString, textObject, index) => {
-            return textString + _getStringFromObject(textObject)
+            const objectString = _getStringFromObject(textObject),
+                whiteSpace = objectString.indexOf('\'s') === 0 ? '' : ' '
+
+            return textString + whiteSpace + objectString
         }, '')
 
     } else if (typeof text === 'object') {

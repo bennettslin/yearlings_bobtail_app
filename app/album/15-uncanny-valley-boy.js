@@ -12,7 +12,7 @@ module.exports = {
     overviews: {
         narrative: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing as well. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I had a master plan to follow, and wasn't about to change my ways.`,
         music: [
-            `I originally began writing this song to describe a nightmare I had, but abandoned it when I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents. This also begins a three-song medley à la`,
+            `I originally began writing this song to describe a nightmare I had, but abandoned it after I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents. This also begins a three-song medley à la`,
             {
                 italic: `Abbey Road`
             },
@@ -71,7 +71,7 @@ module.exports = {
                     {
                         anchor: `Stumped,`,
                         annotation: {
-                            description: `The tree finally sacrifices herself, allowing the boy to chop down her trunk to build a boat. When the boy returns as an old man, the tree is now just a stump and can only offer a place to sit and rest. But in their claim to be stumped, my parents are also feigning to be oblivious to the disgraceful outcome of my story.`
+                            description: `The tree finally sacrifices herself, allowing the boy to chop down her trunk to build a boat. When the boy returns as an old man, the tree is now just a stump and can only offer a place to sit and rest. But in their claim to be stumped, my parents are also feigning to be oblivious to the outcome of my story.`
                         }
                     },
                     `I ponder the`,
@@ -165,11 +165,30 @@ module.exports = {
             },
             {
                 time: 47,
-                lyric: `till they called, suspecting you of huffing,`
+                lyric: [
+                    `till they called,`,
+                    {
+                        anchor: `suspecting you of huffing,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 50,
-                lyric: `then we caught you stuffing twenties in an envelope…`
+                lyric: [
+                    `then we caught you`,
+                    {
+                        anchor: `stuffing twenties`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `in an envelope…`
+                ]
             },
             {
                 unitMap: true,
@@ -182,11 +201,10 @@ module.exports = {
                 lyric: [
                     `So do you believe`,
                     {
-                        anchor: `your "hamartia"`,
+                        anchor: `your hamartia`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `In Greek tragedy, hamartia is the character flaw that leads to a protagonist's downfall. (I've since learned that the accent is on the third syllable. However, my English teacher pronounced it as I have, so I plead miseducation.) A famous example is Oedipus, whose arrogance leads him to believe that prophecy can be escaped. Here, my parents ask whether I've learned the lesson of Oedipus, while slyly mocking my past belief of being born from the stars, or in their words, "a Martian."`
+                        }
                     },
                     `now?`
                 ]
@@ -208,12 +226,22 @@ module.exports = {
             },
             {
                 time: 67,
-                lyric: `you made a bunker that shuts airtight`
+                lyric: [
+                    `you made a`,
+                    {
+                        anchor: `bunker that shuts airtight`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
                 topSideStanza: [
                     {
+                        // TODO: In music commentary, say that counter melody was originally lead melody.
                         lyric: `Oh, bastard ingrate!`
                     },
                     {
@@ -242,21 +270,55 @@ module.exports = {
         [
             {
                 time: 74,
-                lyric: `But then, my little prince,`
+                lyric: [
+                    `But then, my`,
+                    {
+                        anchor: `little prince,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: '?',
-                lyric: `safe on your tiny planet where none else fit,`
+                lyric: [
+                    `safe on your`,
+                    {
+                        anchor: `tiny planet`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `where none else fit,`
+                ]
             },
             {
                 time: 80,
-                lyric: `you finally granted their nutshells are rigged,`
+                lyric: [
+                    `you finally granted their`,
+                    {
+                        anchor: `nutshells are rigged,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
                 topSideStanza: [
                     {
-                        lyric: `Scattered your beans`
+                        lyric: {
+                            anchor: `Scattered your beans`,
+                            annotation: {
+                                description: ``
+                            },
+                            todo: true
+                        }
                     },
                     {
                         lyric: `over suburbia…`
@@ -278,11 +340,29 @@ module.exports = {
         [
             {
                 time: 86,
-                lyric: `Now suddenly dressed to play, you drowned your stutter,`
+                lyric: [
+                    `Now suddenly dressed to play, you`,
+                    {
+                        anchor: `drowned your stutter,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 89,
-                lyric: `smugly prepped to haze the new latecomers.`
+                lyric: [
+                    `smugly prepped to`,
+                    {
+                        anchor: `haze the new latecomers.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 94,
@@ -296,11 +376,39 @@ module.exports = {
         [
             {
                 time: 100,
-                lyric: `But have you heard, my beloved Rama king, the testifiers' lore?`
+                lyric: [
+                    `But have you heard, my beloved`,
+                    {
+                        anchor: `Rama king,`,
+                        properNoun: true,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `the`,
+                    {
+                        anchor: `testifiers' lore?`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 106,
-                lyric: `A nation paused to watch you fail your Sita on repeat for evermore!`
+                lyric: [
+                    `A`,
+                    {
+                        anchor: `nation paused`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `to watch you fail your Sita on repeat for evermore!`
+                ]
             },
             {
                 unitMap: true,
@@ -314,7 +422,16 @@ module.exports = {
             },
             {
                 time: 119,
-                lyric: `your idol who riled you when you saw that you two were tied?`
+                lyric: [
+                    `your idol who riled you when you saw that you`,
+                    {
+                        anchor: `two were tied?`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -325,15 +442,60 @@ module.exports = {
         [
             {
                 time: 127,
-                lyric: `With bride you bridled in this perfect duel match,`
+                lyric: [
+                    `With bride you bridled in this perfect`,
+                    {
+                        anchor: `duel match,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 132,
-                lyric: `and so one night you chalked the sidewalks slurring Valmiki's chant.`
+                lyric: [
+                    `and so one night you`,
+                    {
+                        anchor: `chalked the sidewalks`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `slurring`,
+                    {
+                        anchor: `Valmiki's chant.`,
+                        properNoun: true,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 138,
-                lyric: `When wakened from the siren, you found spelled out in dead ants: ____…`
+                lyric: [
+                    `When`,
+                    {
+                        anchor: `wakened from the siren,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `you found spelled out in`,
+                    {
+                        anchor: `dead ants:`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `____…`
+                ]
             },
             {
                 unitMap: true,
@@ -344,7 +506,15 @@ module.exports = {
             {
                 time: 145,
                 lyric: [
-                    `No well worn sari could sway you from a`,
+                    `No`,
+                    {
+                        anchor: `well worn sari`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `could sway you from a`,
                     {
                         anchor: `fairer marathon!`,
                         annotation: {
@@ -361,7 +531,17 @@ module.exports = {
                         // TODO: Figure out times for these.
                         time: '?',
                         lyric: {
-                            italic: `Your dulling gold now gone…`
+                            italic: [
+                                `Your`,
+                                {
+                                    anchor: `dulling gold`,
+                                    annotation: {
+                                        description: ``
+                                    },
+                                    todo: true
+                                },
+                                `now gone…`
+                            ]
                         }
                     }
                 ],
@@ -372,7 +552,16 @@ module.exports = {
         [
             {
                 time: 152,
-                lyric: `Stubborn harpies can't draw this contest to be one!`
+                lyric: [
+                    `Stubborn harpies can't draw this contest`,
+                    {
+                        anchor: `to be one!`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -381,7 +570,16 @@ module.exports = {
                         time: '?',
                         // TODO: Move Cremated overview part about Sita here?
                         lyric: {
-                            italic: `…traded in for the trophy blondes.`
+                            italic: [
+                                `…traded in for the`,
+                                {
+                                    anchor: `trophy blondes.`,
+                                    annotation: {
+                                        description: ``
+                                    },
+                                    todo: true
+                                }
+                            ]
                         }
                     }
                 ],
@@ -396,11 +594,30 @@ module.exports = {
             },
             {
                 time: '?',
-                lyric: `what's left of what these faces you flip override,`
+                lyric: [
+                    `what's left of what these`,
+                    {
+                        anchor: `faces you flip override,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 165,
-                lyric: `and all these pages you've ripped from your spine`
+                lyric: [
+                    `and all these`,
+                    {
+                        anchor: `pages you've ripped`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `from your spine`
+                ]
             },
             {
                 unitMap: true,
@@ -409,13 +626,31 @@ module.exports = {
                         lyric: `Through tatters of sky,`
                     },
                     {
-                        lyric: `their sun tinkles light`
+                        lyric: [
+                            `their`,
+                            {
+                                anchor: `sun tinkles light`,
+                                annotation: {
+                                    description: ``
+                                },
+                                todo: true
+                            }
+                        ]
                     },
                     {
                         lyric: `in needling chimes`
                     },
                     {
-                        lyric: `that weave through the vines,`
+                        lyric: [
+                            `that`,
+                            {
+                                anchor: `weave through the vines,`,
+                                annotation: {
+                                    description: ``
+                                },
+                                todo: true
+                            }
+                        ]
                     }
                 ],
                 subStanza: [
@@ -443,18 +678,33 @@ module.exports = {
             {
                 time: 178,
                 lyric: [
-                    `your thoughts surrendered for`,
+                    `your thoughts`,
                     {
-                        italic: `Bobtail`
-                    },
-                    `'s sake,`
+                        anchor: [
+                            `surrendered for`,
+                            {
+                                italic: `Bobtail`
+                            },
+                            `'s sake,`
+                        ],
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
                 ]
             },
             {
                 unitMap: true,
                 topSideStanza: [
                     {
-                        lyric: `cast on your peons,`
+                        lyric: {
+                            anchor: `cast on your peons,`,
+                            annotation: {
+                                description: ``
+                            },
+                            todo: true
+                        }
                     },
                     {
                         lyric: `old and subservient.`

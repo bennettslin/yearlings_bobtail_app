@@ -4,9 +4,14 @@ module.exports = {
     title: {
         anchor: `Look Back in Anger`,
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: [
+                `John Osborne's play`,
+                {
+                    italic: `Look Back in Anger`
+                },
+                `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife.`
+            ]
+        }
     },
     totalTime: 175,
     overviews: {
@@ -371,7 +376,13 @@ module.exports = {
                     {
                         anchor: `poor squirrels,`,
                         annotation: {
-                            description: `John Osborne's play "Look Back in Anger" examines the disgruntled rage of a young working-class man in postwar England. In the final scene, the man pictures his wife as a squirrel and sighs "poor squirrels," acknowledging that his emotionally abusive tirades keep her in a helpless state.`
+                            description: [
+                                `In the final scene of `,
+                                {
+                                    italic: `Look Back in Anger,`
+                                },
+                                `the main character pictures his wife as a squirrel and sighs "poor squirrels," acknowledging that his emotionally abusive tirades keep her in a helpless state.`
+                            ]
                         }
                     }
                 ]
