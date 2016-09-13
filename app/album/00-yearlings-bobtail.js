@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `colour verse based on odd or even`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `scroll played lyric into view`,
             workedHours: 0,
             neededHours: 1

@@ -425,7 +425,7 @@ module.exports = {
                     {
                         anchor: `fail your Sita`,
                         annotation: {
-                            description: `Many contemporary audiences find it problematic that upon reuniting with Sita, Rama's first action was to demand proof of her purity. The same self-centred chauvinism is what prompted my desire to be the more sexually experienced partner, leading me to stray from Sita and seek other women.`
+                            description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. The same self-centred chauvinism is what prompted my desire to be the more sexually experienced partner, leading me to stray from Sita and seek other women.`
                         }
                     },
                     `on repeat for evermore!`
@@ -823,7 +823,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 21,
+            workedHours: 24,
             neededHours: 45,
             subtasks: [
                 {
