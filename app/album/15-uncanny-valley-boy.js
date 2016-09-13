@@ -275,7 +275,12 @@ module.exports = {
                     {
                         anchor: `little prince,`,
                         annotation: {
-                            description: ``
+                            description: [
+                                {
+                                    italic: `The Little Prince,`
+                                },
+                                `by Antoine de Saint-Exupéry, is a children's book `
+                            ]
                         },
                         todo: true
                     }
@@ -382,17 +387,21 @@ module.exports = {
                         anchor: `Rama king,`,
                         properNoun: true,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `Rama is an avatar of the Hindu god Vishnu and the hero of the`,
+                                {
+                                    italic: `Ramayana,`
+                                },
+                                `an ancient Indian epic poem. The tale recounts Rama's marriage to Sita, daughter of Mother Earth, and his battle to rescue her after she is kidnapped by the demon king Ravana. My parents are also snidely calling me a "drama king," given that everything I do is an act.`
+                            ]
+                        }
                     },
                     `the`,
                     {
                         anchor: `testifiers' lore?`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Or else, "test of fire." After Rama defeats Ravana, he forces Sita to walk through sacrificial fire to prove that she had remained chaste throughout her abduction. She does, and escapes unharmed.`
+                        }
                     }
                 ]
             },
@@ -403,11 +412,23 @@ module.exports = {
                     {
                         anchor: `nation paused`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `In 1987, a television serial based on the`,
+                                {
+                                    italic: `Ramayana`
+                                },
+                                `began broadcasting throughout India. Traffic and train stations would come to a standstill each week as the country sat glued to their television screens.`
+                            ]
+                        }
                     },
-                    `to watch you fail your Sita on repeat for evermore!`
+                    `to watch you`,
+                    {
+                        anchor: `fail your Sita`,
+                        annotation: {
+                            description: `Many contemporary audiences find it problematic that upon reuniting with Sita, Rama's first action was to demand proof of her purity. The same self-centred chauvinism is what prompted my desire to be the more sexually experienced partner, leading me to stray from Sita and seek other women.`
+                        }
+                    },
+                    `on repeat for evermore!`
                 ]
             },
             {
@@ -427,9 +448,9 @@ module.exports = {
                     {
                         anchor: `two were tied?`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            // TODO: Elaborate?
+                            description: `Tied in both the matrimonial and the competitive sense.`
+                        }
                     }
                 ]
             },
@@ -445,11 +466,11 @@ module.exports = {
                 lyric: [
                     `With bride you bridled in this perfect`,
                     {
-                        anchor: `duel match,`,
+                        // TODO: Note I changed "duel" to "dual" here.
+                        anchor: `dual match,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `A dual match implying a harmonious union between me and Sita, which is what everyone saw, as well as a "duel match" implying the opposite, which is what I felt.`
+                        }
                     }
                 ]
             },
@@ -469,9 +490,18 @@ module.exports = {
                         anchor: `Valmiki's chant.`,
                         properNoun: true,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `Though Valmiki eventually became renowned as the author of the epic`,
+                                {
+                                    italic: `Ramayana,`
+                                },
+                                `his early life was spent as a notorious highway robber. One day, desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Valmiki's heart was so full of sin, however, that he could only repeat the word`,
+                                {
+                                    italic: `mara,`
+                                },
+                                `meaning death. Still, the grace of Rama caused the syllables to keep shifting until Valmiki could finally chant Rama's name.`
+                            ]
+                        }
                     }
                 ]
             },

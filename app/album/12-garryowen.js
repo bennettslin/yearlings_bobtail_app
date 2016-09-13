@@ -4,19 +4,24 @@ module.exports = {
     title: {
         anchor: `Garryowen`,
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: [
+                `In`,
+                {
+                    italic: `Ulysses,`
+                },
+                `Garryowen is a menacing dog owned by an anti-Semitic Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
+            ]
+        }
     },
     totalTime: 187,
     overviews: {
         narrative: `My mood changed when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I had soured on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I didn't like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
         music: [
-            `I named my drunken personality after Garryowen, the menacing dog owned by an Irish nationalist in James Joyce's`,
+            `Since I took the name of my drunken personality from James Joyce's`,
             {
-                italic: `Ulysses.`
+                italic: `Ulysses,`
             },
-            `So I went for an Irish reel here, though I departed from tradition by adding contrapuntal melodies. To capture the liveliness of a fiddle, I held my violin at chest level, which took some practise. The melodicas sounding in unison at the bridge were meant to evoke bagpipes at a funeral procession.`
+            `I went for an Irish reel here, departing from tradition with the inclusion of contrapuntal melodies. To capture the liveliness of a fiddle, I held my violin at chest level, which took some practise. The melodicas sounding in unison at the bridge were meant to evoke bagpipes at a funeral procession.`
 
         ]
     },
