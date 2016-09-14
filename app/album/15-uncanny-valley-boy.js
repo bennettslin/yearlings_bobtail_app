@@ -469,7 +469,7 @@ module.exports = {
                         // TODO: Note I changed "duel" to "dual" here.
                         anchor: `dual match,`,
                         annotation: {
-                            description: `A dual match implying a harmonious union between me and Sita, which is what everyone saw, as well as a "duel match" implying the opposite, which is what I felt.`
+                            description: `A dual match implying a harmonious union between Sita and me, which is what everyone saw, as well as a "duel match" implying the opposite, which is what I felt.`
                         }
                     }
                 ]
@@ -550,9 +550,8 @@ module.exports = {
                     {
                         anchor: `fairer marathon!`,
                         annotation: {
-                            description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly.`
-                        },
-                        todo: true
+                            description: `The constant one-upmanship between Sita and me wasn't just petty. It was exhausting to keep an inner tally of every time one of us slighted the other. I wanted life to feel more like a marathon, which rewards persistence and resolve. Since I possessed those traits in spades, that seemed most fair to me. Also, "marathon" sounds like Mara's full name spoken with a lisp. Deep down, what I was really chasing after was someone like Mara.`
+                        }
                     }
                 ]
             },
@@ -607,7 +606,7 @@ module.exports = {
                                 {
                                     anchor: `trophy blondes.`,
                                     annotation: {
-                                        description: ``
+                                        description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly.`
                                     },
                                     todo: true
                                 }
@@ -825,7 +824,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 24,
+            workedHours: 27,
             neededHours: 45,
             subtasks: [
                 {
