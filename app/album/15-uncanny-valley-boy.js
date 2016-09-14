@@ -4,7 +4,7 @@ module.exports = {
     title: {
         anchor: `Uncanny Valley Boy`,
         annotation: {
-            description: `The uncanny valley is a theory that human replicas feel more repulsive the further they grow lifelike while remaining less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this one-time Valley boy from the San Fernando Valley elicited a similar revulsion.`
+            description: `The uncanny valley is a theory that human replicas feel more repulsive the further they grow lifelike while remaining less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando Valley boy now elicited a similar revulsion.`
         }
     },
     doubleColumns: true,
@@ -481,9 +481,8 @@ module.exports = {
                     {
                         anchor: `chalked the sidewalks`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `One night, my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk. Since I didn't want my artwork to crowd anyone else's, I ran ahead of the group.`
+                        }
                     },
                     `slurring`,
                     {
@@ -491,15 +490,15 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                `Though Valmiki eventually became renowned as the author of the epic`,
+                                `Valmiki, the renowned author of the epic`,
                                 {
                                     italic: `Ramayana,`
                                 },
-                                `his early life was spent as a notorious highway robber. One day, desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Valmiki's heart was so full of sin, however, that he could only repeat the word`,
+                                `began his early life as Ratnakar, a notorious highway robber. Desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar's heart was so full of sin, however, that he could only repeat the word`,
                                 {
                                     italic: `mara,`
                                 },
-                                `meaning death. Still, the grace of Rama caused the syllables to keep shifting until Valmiki could finally chant Rama's name.`
+                                `or "death." Still, the grace of Rama caused the syllables to shift, until Ratnakar could finally chant Rama's name.`
                             ]
                         }
                     }
@@ -512,17 +511,21 @@ module.exports = {
                     {
                         anchor: `wakened from the siren,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Having lost sight of the group, I ended up passing out behind a bush, until I was jolted awake by an ambulance siren. In Greek mythology, the Sirens were beautiful women who lured sailors to the rocks with their enchanted singing. My ambitions taught me to resist Sita's love as if it were a siren song.`
+                        }
                     },
                     `you found spelled out in`,
                     {
                         anchor: `dead ants:`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `As Ratnakar chanted Rama's name, his concentration was so intense that an anthill formed over him and remained undisturbed for years. And so he came to be known as Valmiki, since`,
+                                {
+                                    italic: `valmika`
+                                },
+                                `means "anthill" in Sanskrit. Meanwhile, my sidewalk art had killed off some ants, whose dead bodies outlined what I had drunkenly scrawled in chalk: Mara's name.`
+                            ]
+                        }
                     },
                     `____…`
                 ]
@@ -540,9 +543,8 @@ module.exports = {
                     {
                         anchor: `well worn sari`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `On special occasions and for family events, Sita would wear a sari. It always looked really good on her. But also, "well-worn sorry." Sita's apologies for not being better eventually grew tiresome, precisely because she shouldn't have had to make them in the first place.`
+                        }
                     },
                     `could sway you from a`,
                     {
