@@ -550,7 +550,7 @@ module.exports = {
                     {
                         anchor: `fairer marathon!`,
                         annotation: {
-                            description: `The constant one-upmanship between Sita and me wasn't just petty. It was exhausting to keep an inner tally of every time one of us slighted the other. I wanted life to feel more like a marathon, which rewards persistence and resolve. Since I possessed those traits in spades, that seemed most fair to me. Also, "marathon" sounds like Mara's full name spoken with a lisp. Deep down, what I was really chasing after was someone like Mara.`
+                            description: `The constant one-upmanship between Sita and me wasn't just petty. It was exhausting to keep an inner tally of every time one of us slighted the other. I wanted life to feel more like a marathon, which rewards persistence and resolve. Since I possessed those traits in spades, that seemed most fair to me. Also, "marathon" sounds like Mara's full name spoken with a lisp. After all this time, I was still chasing after someone like Mara.`
                         }
                     }
                 ]
