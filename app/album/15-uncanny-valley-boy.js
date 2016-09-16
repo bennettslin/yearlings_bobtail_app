@@ -530,7 +530,7 @@ module.exports = {
                     {
                         anchor: `____…`,
                         annotation: {
-                            description: `It was Mara's name. No real cliffhanger here. "M" just established a precedent for me to be gun-shy about mentioning her anywhere in my lyrics.`
+                            description: `I had written Mara's name. No real cliffhanger here. "M" just set a precedent for me to be gun-shy about mentioning her anywhere in my lyrics.`
                         }
                     }
                 ]
@@ -784,10 +784,9 @@ module.exports = {
                                 {
                                     italic: `Bobtail`
                                 },
-                                `was to push this genre into the musical medium.`
+                                `was to push the boundaries of this genre into the musical realm.`
                             ]
-                        },
-                        todo: true
+                        }
                     }
                 ]
             },
@@ -799,9 +798,14 @@ module.exports = {
                     {
                         anchor: `finally become someone?`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `Of course, a key component of the`,
+                                {
+                                    italic: `Bildungsroman`
+                                },
+                                `is the main character's moral and psychological growth as they pass from youth to adulthood. Without this crucial development in character, there is no story to be told, a point to which my parents allude here.`
+                            ]
+                        }
                     }
                 ]
             },

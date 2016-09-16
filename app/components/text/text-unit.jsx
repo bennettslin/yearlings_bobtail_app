@@ -42,8 +42,8 @@ const TextUnit = ({
             )
 
         } else if (text.anchor) {
-            const shouldShowAnchor = intersects(text.dotKeys, selectedDotKeys)
-            return (shouldShowAnchor ?
+            const showAsAnchor = intersects(text.dotKeys, selectedDotKeys)
+            return (showAsAnchor ?
                 <AnchorBlock {...other}
                     text={text}
                     selectedDotKeys={selectedDotKeys}
