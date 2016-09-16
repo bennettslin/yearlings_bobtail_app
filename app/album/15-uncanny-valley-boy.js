@@ -498,7 +498,7 @@ module.exports = {
                                 {
                                     italic: `mara,`
                                 },
-                                `or "death." Still, the grace of Rama caused the syllables to slowly shift, until Ratnakar could finally chant Rama's name.`
+                                `or "death." Still, the grace of Rama caused the syllables to slowly shift, until Ratnakar was finally chanting Rama's name.`
                             ]
                         }
                     }
