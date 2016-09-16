@@ -4,7 +4,7 @@ module.exports = {
     title: {
         anchor: `Uncanny Valley Boy`,
         annotation: {
-            description: `The uncanny valley is a theory that human replicas feel more repulsive the further they grow lifelike while remaining less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando Valley boy now elicited a similar revulsion.`
+            description: `The uncanny valley is a theory that human replicas become more repulsive to us as they grow further lifelike while remaining less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando Valley boy now elicited a similar revulsion.`
         }
     },
     doubleColumns: true,
@@ -494,11 +494,11 @@ module.exports = {
                                 {
                                     italic: `Ramayana,`
                                 },
-                                `began his early life as Ratnakar, a notorious highway robber. Desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar's heart was so full of sin, however, that he could only repeat the word`,
+                                `began his early life as Ratnakar, a notorious highway robber. Desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar was so sinful, however, that he could only repeat the word`,
                                 {
                                     italic: `mara,`
                                 },
-                                `or "death." Still, the grace of Rama caused the syllables to shift, until Ratnakar could finally chant Rama's name.`
+                                `or "death." Still, the grace of Rama caused the syllables to slowly shift, until Ratnakar could finally chant Rama's name.`
                             ]
                         }
                     }
@@ -523,11 +523,16 @@ module.exports = {
                                 {
                                     italic: `valmika`
                                 },
-                                `means "anthill" in Sanskrit. Meanwhile, my sidewalk art had killed off some ants, whose dead bodies outlined what I had drunkenly scrawled in chalk: Mara's name.`
+                                `means "anthill" in Sanskrit. Meanwhile, my sidewalk art had killed off some ants, whose dead bodies outlined what I had drunkenly scrawled in chalk.`
                             ]
                         }
                     },
-                    `____…`
+                    {
+                        anchor: `____…`,
+                        annotation: {
+                            description: `It was Mara's name. No real cliffhanger here. "M" just established a precedent for me to be gun-shy about mentioning her anywhere in my lyrics.`
+                        }
+                    }
                 ]
             },
             {
@@ -759,9 +764,28 @@ module.exports = {
                 lyric: [
                     `Now son, before you embark on your`,
                     {
-                        anchor: `great bildungsroman,`,
+                        anchor: [
+                            `great`,
+                            {
+                                italic: `Bildungsroman,`
+                            }
+                        ],
                         annotation: {
-                            description: ``
+                            description: [
+                                `A`,
+                                {
+                                    italic: `Bildungsroman`
+                                },
+                                `is a literary coming-of-age story, of which James Joyce's first novel,`,
+                                {
+                                    italic: `A Portrait of the Artist as a Young Man,`
+                                },
+                                `is a well-known example. My conceit for`,
+                                {
+                                    italic: `Bobtail`
+                                },
+                                `was to push this genre into the musical medium.`
+                            ]
                         },
                         todo: true
                     }
@@ -789,9 +813,8 @@ module.exports = {
                             anchor: `Rama, Rama…`,
                             properNoun: true,
                             annotation: {
-                                description: ``
-                            },
-                            todo: true
+                                description: `Like Valmiki as he chanted Rama's name, I desperately wanted to be good again.`
+                            }
                         }
                     },
                     {
@@ -801,9 +824,14 @@ module.exports = {
                                 lyric: {
                                     anchor: `…Maranatha!`,
                                     annotation: {
-                                        description: ``
-                                    },
-                                    todo: true
+                                        description: [
+                                            `In my case, however, the syllables slowly shifted until I was chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I embraced instead the promise of acceptance by Western society, as represented by an expression of Western faith. In the New Testament,`,
+                                            {
+                                                italic: `maranatha`
+                                            },
+                                            `is Aramaic for "our Lord has come."`
+                                        ]
+                                    }
                                 }
                             }
                         ]
@@ -823,7 +851,7 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 27,
+            workedHours: 30,
             neededHours: 45,
             subtasks: [
                 {
