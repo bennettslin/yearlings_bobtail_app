@@ -588,9 +588,8 @@ module.exports = {
                     {
                         anchor: `to be one!`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Or else, to be "won."`
+                        }
                     }
                 ]
             },
