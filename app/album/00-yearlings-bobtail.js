@@ -27,6 +27,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `no space before italic in anchor (Bobtail's sake and Bildungsroman)`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `delay in annotation popup after scroll and then link clicked?`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `colour verse based on odd or even`,
             workedHours: 0,
             neededHours: 2

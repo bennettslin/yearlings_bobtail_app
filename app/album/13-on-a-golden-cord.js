@@ -5,9 +5,8 @@ module.exports = {
     title: {
         anchor: `On a Golden Cord`,
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: `Here, I wanted to follow in the footsteps of other ruminations upon still-life objects, such as John Keats's "Ode on a Grecian Urn."`
+        }
     },
     doubleColumns: true,
     totalTime: 201,
@@ -26,15 +25,7 @@ module.exports = {
             {
                 // TODO: Mention white throated sparrow.
                 time: 5,
-                centre: [
-                    'On a',
-                    {
-                        anchor: `golden cord,`,
-                        annotation: {
-                            description: `Early in our relationship, I had bought Sita a gold bracelet from a jewelry store at our local mall. It was quite expensive relative to my wage at the time.`
-                        }
-                    }
-                ]
+                centre: `On a golden cord,`
             },
             {
                 time: 7,
@@ -371,21 +362,20 @@ module.exports = {
             },
             {
                 time: 104,
-                centre: [
-                    `And who's to`,
-                    {
-                        anchor: `judge how much you cared`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    },
-                    `because`
-                ]
+                centre: `And who's to judge how much you cared because`
             },
             {
                 time: 107,
-                centre: `the gesture then was just a little more worth working for?…`
+                centre: [
+                    `the`,
+                    {
+                        anchor: `gesture then`,
+                        annotation: {
+                            description: `I had bought Sita the gold bracelet from a jewelry store at the local mall. It was a bit expensive relative to my wage, which made its underlying meaning seem all the more potent at the time.`
+                        }
+                    },
+                    `was just a little more worth working for?…`
+                ]
             },
             {
                 time: 113,
