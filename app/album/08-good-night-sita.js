@@ -1,7 +1,12 @@
 import { VERSES, CHORUS, POSTCHORUS } from 'helpers/constants'
 
 module.exports = {
-    title: `Good Night, Sita`,
+    title: {
+        anchor: `Good Night, Sita`,
+        annotation: {
+            description: `In "An Occurrence at Owl Creek Bridge" by satirist Ambrose Bierce, a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, in which I recollect every date with Sita thus far, turns out to be sandwiched between a brief exchange of farewells.`
+        }
+    },
     totalTime: 131,
     overviews: {
         narrative: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
@@ -10,7 +15,7 @@ module.exports = {
             {
                 italic: `Ulysses,`
             },
-            `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after a date. Meanwhile, the restless thumping of a Motown beat insistently prods me to pour forth everything I long to express. But flustered panic takes over, and in the end only farewells are exchanged.`
+            `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after a date. Meanwhile, the restless thumping of a Motown beat insistently prods me to pour forth everything that I long to express. But flustered panic takes over, and once again it all goes unmentioned.`
         ]
     },
     lyrics: [
@@ -239,11 +244,11 @@ module.exports = {
                         anchor: `ambrosia beers`,
                         annotation: {
                             description: [
-                                `Ambrosia was the food of the Greek gods, just as beer made me feel omnipotent. Also,`,
+                                `Ambrosia was the food of the Greek gods, just as beer made me feel omnipotent. Ambrose Bierce also wrote`,
                                 {
-                                    italic: `The Devil's Dictionary`
+                                    italic: `The Devil's Dictionary,`
                                 },
-                                `by 19th-century writer Ambrose Bierce is a collection of satirical definitions for common words, whose wit I sought to emulate. His "An Occurrence at Owl Creek Bridge" is a short story in which a seemingly long span of time is revealed to have passed in an instant. Obviously, I stole this literary device for my song.`
+                                `a collection of satirical definitions for common words, whose wit I sought to emulate.`
                             ]
                         }
                     }
