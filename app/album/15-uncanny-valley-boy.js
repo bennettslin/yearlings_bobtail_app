@@ -170,9 +170,8 @@ module.exports = {
                     {
                         anchor: `suspecting you of huffing,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Inhalant abuse was the supposed youth trend du jour of my middle school years. And I suppose I fit the profile of someone who had just sniffed glue, which is how I got called into the principal's office.`
+                        }
                     }
                 ]
             },
@@ -183,9 +182,8 @@ module.exports = {
                     {
                         anchor: `stuffing twenties`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `I had pen pals as a child, so my parents didn't find it odd when I mailed cash to the mail-order cult in colourful stationery. Only after speaking to my principal did they become suspicious and finally opened one of them.`
+                        }
                     },
                     `in an envelope…`
                 ]
@@ -203,7 +201,7 @@ module.exports = {
                     {
                         anchor: `your hamartia`,
                         annotation: {
-                            description: `In Greek tragedy, hamartia is the character flaw that leads to a protagonist's downfall. (I've since learned that the accent is on the third syllable. However, my English teacher pronounced it as I have, so I plead miseducation.) A famous example is Oedipus, whose arrogance leads him to believe that prophecy can be escaped. Here, my parents ask whether I've learned the lesson of Oedipus, while slyly mocking my past belief of being born from the stars, or in their words, "a Martian."`
+                            description: `In Greek tragedy, hamartia is the character flaw that leads to a protagonist's downfall. (I've since learned that the accent is on the third syllable. However, my English teacher pronounced it as I have, so I plead miseducation.) A famous example is Oedipus, whose arrogance leads him to believe that prophecy can be escaped. Here, my parents ask whether I've learned the lesson of Oedipus, while mocking my past belief of being born from the stars, or in their words, "a Martian."`
                         }
                     },
                     `now?`
@@ -276,13 +274,13 @@ module.exports = {
                         anchor: `little prince,`,
                         annotation: {
                             description: [
+                                `Antoine de Saint-Exupéry's`,
                                 {
-                                    italic: `The Little Prince,`
+                                    italic: `The Little Prince`
                                 },
-                                `by Antoine de Saint-Exupéry, is a children's book `
+                                `is about a young prince who arrives on Earth from a distant asteroid. During his stay, the prince keenly observes the absurdities of the adult world, and in turn learns a poignant lesson on love and loss.`
                             ]
-                        },
-                        todo: true
+                        }
                     }
                 ]
             },
@@ -293,7 +291,7 @@ module.exports = {
                     {
                         anchor: `tiny planet`,
                         annotation: {
-                            description: ``
+                            description: `Like the little prince, `
                         },
                         todo: true
                     },
@@ -320,9 +318,8 @@ module.exports = {
                         lyric: {
                             anchor: `Scattered your beans`,
                             annotation: {
-                                description: ``
-                            },
-                            todo: true
+                                description: `As I recall, the nightmare began with me scattering magic beans all around my neighbourhood. It was clearly influenced by the English fairy tale "Jack and the Beanstalk," although I'm not sure why. `
+                            }
                         }
                     },
                     {
@@ -666,9 +663,8 @@ module.exports = {
                             {
                                 anchor: `sun tinkles light`,
                                 annotation: {
-                                    description: ``
-                                },
-                                todo: true
+                                    description: `Or else, their "son." In the nightmare, I was now ruler of the neighbourhood, showering my subjects in my urine, their sole means of subsistence. In hindsight, my brain was probably telling me to get up and use the bathroom.`
+                                }
                             }
                         ]
                     },
@@ -681,9 +677,8 @@ module.exports = {
                             {
                                 anchor: `weave through the vines,`,
                                 annotation: {
-                                    description: ``
-                                },
-                                todo: true
+                                    description: `The magic beans had sprouted into thick, twisted vines, blocking out the sky as far and wide as my helpless subjects could see.`
+                                }
                             }
                         ]
                     }
@@ -733,16 +728,15 @@ module.exports = {
                 unitMap: true,
                 topSideStanza: [
                     {
-                        lyric: {
-                            anchor: `cast on your peons,`,
-                            annotation: {
-                                description: ``
-                            },
-                            todo: true
-                        }
+                        lyric: `cast on your peons,`
                     },
                     {
-                        lyric: `old and subservient.`
+                        lyric: {
+                            anchor: `old and subservient.`,
+                            annotation: {
+                                description: `Amongst those I ruled over were my parents, now decrepit after a lifetime of following my bidding.`
+                            }
+                        }
                     }
                 ],
                 subStanza: [
@@ -803,7 +797,7 @@ module.exports = {
                                 {
                                     italic: `Bildungsroman`
                                 },
-                                `is the main character's moral and psychological growth as they pass from youth to adulthood. Without this crucial development in character, there is no story to be told, a point to which my parents allude here.`
+                                `is the protagonist's moral and psychological growth as they pass from youth to adulthood. Without this crucial character development, there is no story to be told, a point to which my parents slyly allude here.`
                             ]
                         }
                     }
