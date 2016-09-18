@@ -23,15 +23,15 @@ export const getFormattedAnnotationTitle = (anchor, properNoun) => {
         title = _getStringFromObject(title)
     }
 
+    title = _getDeletedSpecialCharactersText(title)
+    title = _getDeletedWrappingCharactersText(title)
+
     // Uncapitalise if not a proper noun.
     if (!properNoun) {
         if (!_beginsWithPronounI(title)) {
             title = _getUncapitalisedText(title)
         }
     }
-
-    title = _getDeletedSpecialCharactersText(title)
-    title = _getDeletedWrappingCharactersText(title)
 
     return title
 }

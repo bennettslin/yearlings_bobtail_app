@@ -18,7 +18,13 @@ module.exports = {
         [
             {
                 time: 1,
-                centre: `Or another…`
+                centre: {
+                    anchor: `Or another…`,
+                    annotation: {
+                        description: ``
+                    },
+                    todo: true
+                }
             },
             {
                 unitMap: true,
