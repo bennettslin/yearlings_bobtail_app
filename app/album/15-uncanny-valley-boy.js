@@ -440,8 +440,7 @@ module.exports = {
                     {
                         anchor: `two were tied?`,
                         annotation: {
-                            // TODO: Elaborate?
-                            description: `Tied in both the matrimonial and the competitive sense.`
+                            description: `Tied in both the matrimonial and the competitive sense. At some point, I began to see the relationship as a zero-sum game that only one of us could win.`
                         }
                     }
                 ]
@@ -559,17 +558,7 @@ module.exports = {
                         // TODO: Figure out times for these.
                         time: '?',
                         lyric: {
-                            italic: [
-                                `Your`,
-                                {
-                                    anchor: `dulling gold`,
-                                    annotation: {
-                                        description: ``
-                                    },
-                                    todo: true
-                                },
-                                `now gone…`
-                            ]
+                            italic: `Your dulling gold now gone…`
                         }
                     }
                 ],
@@ -595,16 +584,14 @@ module.exports = {
                 subStanza: [
                     {
                         time: '?',
-                        // TODO: Move Cremated overview part about Sita here?
                         lyric: {
                             italic: [
                                 `…traded in for the`,
                                 {
                                     anchor: `trophy blondes.`,
                                     annotation: {
-                                        description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly.`
-                                    },
-                                    todo: true
+                                        description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly. In my defence, it wasn't by design, but seeing her loss as my gain, I let her believe the worst. But also, trophy "bronze." My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or people, and most were arguably worse.`
+                                    }
                                 }
                             ]
                         }
@@ -841,8 +828,8 @@ module.exports = {
         },
         {
             taskName: `annotations`,
-            workedHours: 30,
-            neededHours: 45,
+            workedHours: 38,
+            neededHours: 38,
             subtasks: [
                 {
                     taskName: `split into dots`,
