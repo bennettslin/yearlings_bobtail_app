@@ -27,6 +27,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Safari...`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `no space before italic in anchor (Bobtail's sake and Bildungsroman)`,
             workedHours: 0,
             neededHours: 1

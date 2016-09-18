@@ -143,7 +143,7 @@ module.exports = {
                     {
                         anchor: `earth right now your tourist store…`,
                         annotation: {
-                            description: `The mail-order cult warned me not to grow attached to earthly concerns, for I was just a visitor. Or else, "birthright now you're to restore." Having had my head filled with visions of great accomplishments as a child, I assumed that my rightful place was to be recognised for them, so I was committed to fulfilling my end of that bargain.`
+                            description: `The mail-order cult warned me not to grow attached to earthly concerns, for I was just visiting here. Or else, "birthright now you're to restore." Having had my head filled with visions of greatness as a child, I always assumed that my rightful place was to be recognised for it. My belief in myself as a Beyonder didn't exactly temper this expectation.`
                         }
                     }
                 ]
@@ -182,7 +182,7 @@ module.exports = {
                     {
                         anchor: `stuffing twenties`,
                         annotation: {
-                            description: `I had pen pals as a child, so my parents didn't find it odd when I mailed cash to the mail-order cult in colourful stationery. Only after speaking to my principal did they become suspicious and finally opened one of them.`
+                            description: `I had pen pals as a child, so my parents didn't find it odd when I mailed cash to the mail-order cult in colourful stationery. Only after speaking to my principal did they become suspicious and finally open one of them.`
                         }
                     },
                     `in an envelope…`
@@ -229,9 +229,8 @@ module.exports = {
                     {
                         anchor: `bunker that shuts airtight`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `I learned early on to deal with problems by shutting myself away. Then, once safely ensconced, I was at liberty to examine my situation.`
+                        }
                     }
                 ]
             },
@@ -291,9 +290,8 @@ module.exports = {
                     {
                         anchor: `tiny planet`,
                         annotation: {
-                            description: `Like the little prince, `
-                        },
-                        todo: true
+                            description: `Like the prince, I was also a visitor from beyond the stars, seeing the world at large through guileless eyes.`
+                        }
                     },
                     `where none else fit,`
                 ]
@@ -305,9 +303,8 @@ module.exports = {
                     {
                         anchor: `nutshells are rigged,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `The shell game is a classic swindle in which a small ball is placed under three shells, which are then shuffled in plain view. Typically, sleight of hand is used to misplace the ball. Having now recognised life to be a shell game, I was eager to begin my studies of how to guard against it, or perhaps even to employ it as a grifter myself.`
+                        }
                     }
                 ]
             },
@@ -347,9 +344,8 @@ module.exports = {
                     {
                         anchor: `drowned your stutter,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Sometime in middle school, I developed a stammer. In college, I found that drinking made it disappear.`
+                        }
                     }
                 ]
             },
@@ -360,9 +356,8 @@ module.exports = {
                     {
                         anchor: `haze the new latecomers.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Some secret societies are infamous for their abusive hazing rituals. Having once endured such abuse as my dues for joining society, I was now ready to dole it out to others.`
+                        }
                     }
                 ]
             },
@@ -422,7 +417,7 @@ module.exports = {
                     {
                         anchor: `fail your Sita`,
                         annotation: {
-                            description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. The same self-centred chauvinism is what prompted my desire to be the more sexually experienced partner, leading me to stray from Sita and seek other women.`
+                            description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. This self-centred chauvinism is also what prompted my desire to be the more sexually experienced partner, leading me to stray from Sita and seek out other women.`
                         }
                     },
                     `on repeat for evermore!`
@@ -631,9 +626,8 @@ module.exports = {
                     {
                         anchor: `faces you flip override,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `At some point, I noticed that I wore drastically different faces for different people and different situations. This wasn't the case when I was a child, which could only mean that there was once a true me, and now there wasn't.`
+                        }
                     }
                 ]
             },
@@ -644,9 +638,8 @@ module.exports = {
                     {
                         anchor: `pages you've ripped`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `My parents lament my fervent readiness to devalue past sentiments for the sake of present ambitions, as if I were tearing out old pages from a scrapbook to free up space for new inserts.`
+                        }
                     },
                     `from your spine`
                 ]
@@ -718,9 +711,8 @@ module.exports = {
                             `'s sake,`
                         ],
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Like the one before, my latest five-year plan was meant to yield dramatic improvements in my life through a major overhaul of the underlying system. As such, it made no sense to question it while the work was still being done.`
+                        }
                     }
                 ]
             },
@@ -797,7 +789,7 @@ module.exports = {
                                 {
                                     italic: `Bildungsroman`
                                 },
-                                `is the protagonist's moral and psychological growth as they pass from youth to adulthood. Without this crucial character development, there is no story to be told, a point to which my parents slyly allude here.`
+                                `is the protagonist's moral and psychological growth from youth to adulthood. Without this crucial development in character, there is no story to be told, a point to which my parents slyly allude here.`
                             ]
                         }
                     }
