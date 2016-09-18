@@ -799,6 +799,7 @@ module.exports = {
                         subStanza: [
                             {
                                 lyric: {
+                                    // TODO: Annotation proper noun is wrong.
                                     anchor: `…Maranatha!`,
                                     annotation: {
                                         description: [
