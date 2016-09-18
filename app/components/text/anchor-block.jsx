@@ -80,10 +80,11 @@ const AnchorBlockView = ({
                     presentDotKeys={dotKeys}
                 /> : null
             }
+            {/* Only the first text span inside the anchor will forego space. */}
             <TextBlock
                 isLyric={isLyric}
-                isInAnchor={true}
                 text={anchorText}
+                foregoSpace={true}
             />
         </a>
     </span>

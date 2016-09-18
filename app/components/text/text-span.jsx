@@ -7,7 +7,7 @@ import React from 'react'
 const TextSpan = ({
 
     isLyric,
-    isInAnchor,
+    foregoSpace,
     text
 
 }) => {
@@ -15,7 +15,7 @@ const TextSpan = ({
      * Subsequent spans of text on a line will begin with a space, unless
      * it's in an anchor, or it begins with "'s."
      */
-    const hasFirstSpace = !isInAnchor && (text.indexOf('\'s') !== 0)
+    const hasFirstSpace = !foregoSpace && (text.indexOf('\'s') !== 0)
 
     // Add nonbreaking space between last two words if it's a lyric.
     let spacedText = text

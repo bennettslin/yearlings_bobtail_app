@@ -32,11 +32,6 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `no space before italic in anchor (Bobtail's sake and Bildungsroman)`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `delay in annotation popup after scroll and then link clicked?`,
             workedHours: 0,
             neededHours: 1
@@ -265,6 +260,11 @@ module.exports = {
         },
         {
             taskName: `call line width resizing method at appropriate times`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `no space before italic in anchor (Bobtail's sake and Bildungsroman)`,
             workedHours: 1,
             neededHours: 1
         }
