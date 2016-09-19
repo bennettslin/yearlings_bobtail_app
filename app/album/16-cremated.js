@@ -34,28 +34,118 @@ module.exports = {
         [
             {
                 time: 24,
-                left: `Atavist stuck feet first,`,
-                right: `At a vista, key turned`
+                left: [
+                    {
+                        anchor: `Atavist`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    {
+                        anchor: `stuck feet first,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
+                right: [
+                    {
+                        anchor: `At a vista,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `key turned`
+                ]
             },
             {
                 time: 27,
-                left: `subversive inner lotus eater,`,
-                right: `to first switch in her low two-seater,`
+                left: [
+                    `subversive`,
+                    {
+                        anchor: `inner lotus eater,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
+                right: [
+                    `to`,
+                    {
+                        anchor: `first switch`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `in her low two-seater,`
+                ]
             },
             {
                 time: 30,
-                left: `an everlasting doublespeaker,`,
+                left: [
+                    `an everlasting`,
+                    {
+                        anchor: `doublespeaker,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
                 right: `and deaf from blasting frontal speakers,`
             },
             {
                 time: 34,
-                left: `his beaten wit and id she's deemed her`,
-                right: `this phoenix risen limp beneath her`
+                left: [
+                    `his beaten`,
+                    {
+                        anchor: `wit and id`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `she's deemed her`
+                ],
+                right: [
+                    `this`,
+                    {
+                        anchor: `phoenix risen limp`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `beneath her`
+                ]
             },
             {
                 time: 37,
-                left: `sinking ship, maybe good for anecdotes.`,
-                right: `pinkish slip, making scroonched her pantyhose.`
+                left: [
+                    `sinking ship, maybe`,
+                    {
+                        anchor: `good for anecdotes.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
+                right: [
+                    {
+                        anchor: `pinkish slip,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `making scroonched her pantyhose.`
+                ]
             },
             {
                 unitMap: true,
@@ -66,11 +156,37 @@ module.exports = {
             {
                 time: 39,
                 left: `As comedy teams work, a hoot the times`,
-                right: `His god humming Freebird, the hula guy`
+                right: [
+                    {
+                        anchor: `His god humming Freebird,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `the`,
+                    {
+                        anchor: `hula guy`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 42,
-                left: `not at each other's throats.`,
+                left: [
+                    `not`,
+                    {
+                        // TODO: Abbott and Costello, Martin and Lewis
+                        anchor: `at each other's throats.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
                 right: `nods as she drums her toes.`
             },
             {
@@ -82,28 +198,99 @@ module.exports = {
         [
             {
                 time: 46,
-                left: `Trophy bronzed from a Trojan`,
+                left: [
+                    `Trophy`,
+                    {
+                        anchor: `bronzed from a Trojan`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
                 right: `Though, she ponders the children`
             },
             {
                 time: 49,
-                left: `for some unforeskinned virgin,`,
-                right: `born from a forced conversion`
+                left: [
+                    `for some`,
+                    {
+                        anchor: `unforeskinned virgin,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
+                right: [
+                    `born from a`,
+                    {
+                        anchor: `forced conversion`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 52,
                 left: `on the shelf, serves his declared assertion:`,
-                right: `on a self-servicing cleric surgeon`
+                right: [
+                    `on a`,
+                    {
+                        anchor: `self-servicing cleric surgeon`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 56,
-                left: `to remain inherently perfect,`,
+                left: [
+                    `to remain`,
+                    {
+                        anchor: `inherently perfect,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
                 right: `duly may inherit his burdens.`
             },
             {
                 time: 59,
-                left: `as worn puppet his offscreen person dubs.`,
-                right: `This swarm pumped and kissed off, she purges up.`
+                left: [
+                    `as`,
+                    {
+                        anchor: `worn puppet`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `his`,
+                    {
+                        anchor: `offscreen person dubs.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
+                right: [
+                    `This swarm pumped and kissed off, she`,
+                    {
+                        anchor: `purges up.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -118,8 +305,26 @@ module.exports = {
             },
             {
                 time: 64,
-                left: `twitching sword in care, he's anyone.`,
-                right: `which she swore when scarcely twenty-one.`
+                left: [
+                    {
+                        anchor: `twitching sword`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `in care, he's anyone.`
+                ],
+                right: [
+                    `which she swore when scarcely`,
+                    {
+                        anchor: `twenty-one.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -131,23 +336,85 @@ module.exports = {
         [
             {
                 time: 90,
-                centre: `Needle done will not retract,`
+                centre: [
+                    {
+                        // TODO: Willy portal.
+                        anchor: `Needle done`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `will not retract,`
+                ]
             },
             {
                 time: 94,
-                centre: `it hums a typo fragile ex passed through ash…`
+                centre: [
+                    `it hums a`,
+                    {
+                        anchor: `typo`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    {
+                        anchor: `fragile ex`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `passed through ash…`
+                ]
             },
             {
                 time: 98,
-                centre: `With his vinyl, exit Miriam to cash his stash.`
+                centre: [
+                    `With his`,
+                    {
+                        anchor: `vinyl, exit`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `Miriam to cash his stash.`
+                ]
             },
             {
                 time: 102,
-                centre: `Undeluded, she'll bask in selfish cut-off jeans,`
+                centre: [
+                    {
+                        anchor: `Undeluded,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `she'll bask in`,
+                    {
+                        anchor: `selfish cut-off jeans,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 106,
-                centre: `and in her pool, hears not a worrisome "Bless her, Godspeed…"`
+                centre: [
+                    `and in her pool, hears not a`,
+                    {
+                        anchor: `worrisome "Bless her, Godspeed…"`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -162,24 +429,95 @@ module.exports = {
             },
             {
                 time: 115,
-                left: `so homeward the sport's escorted,`,
-                right: `though no worse but for his soreness,`
+                left: [
+                    `so`,
+                    {
+                        anchor: `homeward the sport's escorted,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
+                right: [
+                    `though no worse but for`,
+                    {
+                        anchor: `his soreness,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 118,
-                left: `the cleaved horizon pours the mortar in.`,
-                right: `this geezer's life-support's abortive.`
+                left: [
+                    `the`,
+                    {
+                        anchor: `cleaved horizon`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `pours the mortar in.`
+                ],
+                right: [
+                    `this geezer's`,
+                    {
+                        anchor: `life-support's abortive.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 121,
-                left: `Redressed, he gets his notice, short an`,
-                // Veggie wishbone.
-                right: `He's vegging with his boner shortened;`
+                left: [
+                    {
+                        anchor: `Redressed,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `he gets his notice, short an`
+                ],
+                // Veggie wishbone. portal
+                right: [
+                    `He's`,
+                    {
+                        anchor: `vegging with his boner shortened;`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 124,
                 left: `apology, bold and blunt.`,
-                right: `a pop, and she pulls the plug.`
+                right: [
+                    {
+                        anchor: `a pop,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `and she`,
+                    {
+                        anchor: `pulls the plug.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -189,13 +527,47 @@ module.exports = {
         [
             {
                 time: 127,
-                left: `Life's a dumb ex-dromedary, hungry carrying`,
-                right: `Lights one up then draws a daring puff, preparing`
+                left: [
+                    `Life's a dumb`,
+                    {
+                        anchor: `ex-dromedary,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
+                right: `Lights one up then draws a daring`
             },
             {
                 time: 130,
-                left: `this groovy second hump.`,
-                right: `the scoop, he's getting dumped.`
+                left: [
+                    `hungry carrying this groovy`,
+                    {
+                        anchor: `second hump.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ],
+                right: [
+                    `puff,`,
+                    {
+                        anchor: `preparing the scoop,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    {
+                        anchor: `he's getting dumped.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -207,7 +579,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 6,
+            workedHours: 13,
             neededHours: 35,
             subtasks: [
                 {

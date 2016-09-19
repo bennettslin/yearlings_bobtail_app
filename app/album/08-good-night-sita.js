@@ -520,7 +520,7 @@ module.exports = {
                 lyric: [
                     `and her`,
                     {
-                        anchor: `veggie wishbone's`,
+                        anchor: `veggie wishbone's short end`,
                         annotation: {
                             description: `Sita took me to a vegetarian restaurant where she ordered a dish resembling a portion of chicken, complete with sesame-stick wishbone. When we cracked it, Sita got the longer end. Needless to say, my wish was not granted.`
                         }
@@ -528,8 +528,9 @@ module.exports = {
                 ]
             },
             {
+                // TODO: Time might be wrong after moving "short end"
                 time: 103,
-                lyric: `short end in these clutching fingers of steel`
+                lyric: `in these clutching fingers of steel`
             },
             {
                 time: 105,
