@@ -15,9 +15,9 @@ const LyricsPlayButton = ({
     onClick
 
 }) => (
-    <div className="play-button-block">
+    <div className={`play-button-block${isHovered || isSelected ? ' slid-out' : ''}`}>
         {!isSelected ?
-            <a className={`play-child play-button ${isSelected ? '' : ' enabled'}${isHovered ? ' hovered' : ''}`}
+            <a className={`play-child play-button${isSelected ? '' : ' enabled'}${isHovered ? ' hovered' : ''}`}
                 onClick={onClick}
             >
                 {`\u25B6${getFormattedTime(time)}`}

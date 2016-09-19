@@ -44,12 +44,7 @@ module.exports = {
         {
             taskName: `scroll played lyric into view`,
             workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `don't allow lyric play button to be hoverable`,
-            workedHours: 0,
-            neededHours: 1
+            neededHours: 2
         },
         {
             taskName: `show notated scores`,
@@ -265,6 +260,11 @@ module.exports = {
         },
         {
             taskName: `no space before italic in anchor (Bobtail's sake and Bildungsroman)`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `don't allow lyric play button to be hoverable`,
             workedHours: 1,
             neededHours: 1
         }

@@ -37,6 +37,9 @@ body {
 .column {
     display: flex;
     box-sizing: border-box;
+
+    // Needed by Safari.
+    height: 100%;
 }
 
 .field {
@@ -44,6 +47,7 @@ body {
     min-width: @field-width;
     padding: 0 (@field-padding * 0.5);
     height: 100%;
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 

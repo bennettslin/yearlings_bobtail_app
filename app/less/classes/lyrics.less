@@ -42,9 +42,9 @@
     .anchor-block {
         white-space: nowrap;
 
-        @colour: @song-field-colour;
         @offset: 0.75px;
-        @blur: 0;
+        @blur: 0px;
+        @colour: @song-field-colour;
         text-shadow:
         -@offset -@offset @blur @colour,
         @offset -@offset @blur @colour,
@@ -184,8 +184,11 @@
 
     .play-button-block {
         position: absolute;
-        right: 100%;
         height: 100%;
+
+        &.slid-out {
+            right: 100%;
+        }
 
         // Either button or icon.
         .play-child {
