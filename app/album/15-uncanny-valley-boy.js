@@ -698,7 +698,7 @@ module.exports = {
                             `'s sake,`
                         ],
                         annotation: {
-                            description: `Like the one before, my latest five-year plan was meant to yield dramatic improvements in my life through a major overhaul of the underlying system. As such, it made no sense to question it while the work was still being done.`
+                            description: `My latest five-year plan, like the one before, was meant to yield dramatic improvements in my life through a major overhaul of the underlying system. As such, it made no sense to question it while the work was still being done.`
                         }
                     }
                 ]

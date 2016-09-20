@@ -38,16 +38,14 @@ module.exports = {
                     {
                         anchor: `Atavist`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Atavism occurs when genetic traits reappear after having disappeared generations ago. Given my brother's autism and my father's likely Asperger syndrome, my mother always advised me not to have children, as the genes I carried for autism would be passed on to them. As a result, I had to wonder if those I dated ever thought the same.`
+                        }
                     },
                     {
                         anchor: `stuck feet first,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `My brother was a breech baby, meaning that he exited the womb bottom first rather than head first. My mother once hypothesised this to be the cause of his autism.`
+                        }
                     }
                 ],
                 right: [
@@ -68,9 +66,8 @@ module.exports = {
                     {
                         anchor: `inner lotus eater,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `In Greek mythology, the lotus-eaters were islanders observed by Odysseus to while away their days eating the narcotic fruit of the lotus. In the same vein, Miriam was surprised by how much I drank, but like Odysseus, she made no judgments and simply kept her distance.`
+                        }
                     }
                 ],
                 right: [
@@ -87,16 +84,7 @@ module.exports = {
             },
             {
                 time: 30,
-                left: [
-                    `an everlasting`,
-                    {
-                        anchor: `doublespeaker,`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    }
-                ],
+                left: `an everlasting doublespeaker,`,
                 right: `and deaf from blasting frontal speakers,`
             },
             {
@@ -106,7 +94,7 @@ module.exports = {
                     {
                         anchor: `wit and id`,
                         annotation: {
-                            description: ``
+                            description: `I had confided to Miriam that I entertained the idea of having `
                         },
                         todo: true
                     },
@@ -579,7 +567,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 13,
+            workedHours: 16,
             neededHours: 35,
             subtasks: [
                 {
