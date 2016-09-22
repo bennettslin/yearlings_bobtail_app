@@ -66,7 +66,7 @@ module.exports = {
                     {
                         anchor: `inner lotus eater,`,
                         annotation: {
-                            description: `In Greek mythology, the lotus-eaters were islanders observed by Odysseus to while away their days eating the narcotic fruit of the lotus. In the same vein, Miriam was surprised by how much I drank, but like Odysseus, she made no judgments and simply kept her distance.`
+                            description: `In Greek mythology, the lotus-eaters were islanders observed by Odysseus to while away their days eating the narcotic fruit of the lotus. Similarly, Miriam would comment on how much I drank, but make no judgments. In hindsight, it was because she, like Odysseus, was keeping her distance.`
                         }
                     }
                 ],
@@ -94,9 +94,8 @@ module.exports = {
                     {
                         anchor: `wit and id`,
                         annotation: {
-                            description: `I had confided to Miriam that I entertained the idea of having `
-                        },
-                        todo: true
+                            description: `Miriam heard me proclaim all the wonders of having a second personality, both to keep the creative juices flowing as well as to arbitrate life decisions.`
+                        }
                     },
                     `she's deemed her`
                 ],
@@ -119,7 +118,7 @@ module.exports = {
                     {
                         anchor: `good for anecdotes.`,
                         annotation: {
-                            description: ``
+                            description: `Though Miriam was fascinated by my character, it eventually dawned on me that `
                         },
                         todo: true
                     }
