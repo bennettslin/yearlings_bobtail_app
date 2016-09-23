@@ -1,4 +1,3 @@
-// FIXME: Make Sasha quotes just single paragraph. Then separate out verses.
 import { REFRAIN, VERSES, PRECHORUS, CHORUS } from 'helpers/constants'
 
 module.exports = {
@@ -11,7 +10,7 @@ module.exports = {
     },
     totalTime: 241,
     overviews: {
-        narrative: `narrative 1`,
+        narrative: `I had `,
         music: `personal 1`
     },
     lyrics: [
