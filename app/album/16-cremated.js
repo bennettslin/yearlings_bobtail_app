@@ -44,7 +44,7 @@ module.exports = {
                     {
                         anchor: `stuck feet first,`,
                         annotation: {
-                            description: `My brother was a breech baby, meaning that he exited the womb bottom first rather than head first, which complicated his delivery. My mother originally hypothesised this to be the cause of his autism.`
+                            description: `My brother was a breech baby, meaning that he exited the womb bottom first rather than head first, which complicated the delivery. My mother initially hypothesised this to be the cause of his autism.`
                         }
                     }
                 ],
@@ -94,8 +94,9 @@ module.exports = {
                     {
                         anchor: `wit and id`,
                         annotation: {
-                            description: `Miriam heard me exclaim the wonders of a second personality, both to keep the creative juices flowing, as well as to help arbitrate life decisions.`
-                        }
+                            description: `Miriam heard me exclaim the wonders of an impulsive drunken personality , both to keep the creative juices flowing, as well as to help arbitrate life decisions.`
+                        },
+                        todo: true
                     },
                     `she's deemed her`
                 ],
@@ -118,7 +119,7 @@ module.exports = {
                     {
                         anchor: `good for anecdotes.`,
                         annotation: {
-                            description: `Miriam blew apart my theory that being interesting at all costs is the key to dating. Though she was fascinated by my character, it wasn't as I would have hoped. I was the oddball ex whose antics provided grist for amusing tales, not the life companion who would one day hear her tell them.`
+                            description: `Though Miriam was fascinated by my character, it wasn't in the way one should hope, blowing apart my theory that interestingness at all costs is the key to dating. I was the oddball ex providing grist for a lifetime of amusing tales, not the life companion to whom she would one day tell them.`
                         }
                     }
                 ],
@@ -165,10 +166,14 @@ module.exports = {
                 left: [
                     `not`,
                     {
-                        // TODO: Abbott and Costello, Martin and Lewis
+                        // TODO: phrasing...
                         anchor: `at each other's throats.`,
                         annotation: {
-                            description: ``
+                            description: `Just as some comedy duos famously did not get along offscreen, like Abbott and Costello or Martin and Lewis,
+
+                            . Similarly, while Miriam enjoyed the idea of my two personalities befuddling each other, she recognised
+
+                             the underlying dysfunction, and wanted no part of it.`
                         },
                         todo: true
                     }
