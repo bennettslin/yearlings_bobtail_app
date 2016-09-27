@@ -44,7 +44,7 @@ module.exports = {
                     {
                         anchor: `stuck feet first,`,
                         annotation: {
-                            description: `My brother was a breech baby, meaning that he exited the womb bottom first rather than head first. My mother once hypothesised this to be the cause of his autism.`
+                            description: `My brother was a breech baby, meaning that he exited the womb bottom first rather than head first, which complicated his delivery. My mother originally hypothesised this to be the cause of his autism.`
                         }
                     }
                 ],
@@ -94,7 +94,7 @@ module.exports = {
                     {
                         anchor: `wit and id`,
                         annotation: {
-                            description: `Miriam heard me proclaim all the wonders of having a second personality, both to keep the creative juices flowing as well as to arbitrate life decisions.`
+                            description: `Miriam heard me exclaim the wonders of a second personality, both to keep the creative juices flowing, as well as to help arbitrate life decisions.`
                         }
                     },
                     `she's deemed her`
@@ -118,9 +118,8 @@ module.exports = {
                     {
                         anchor: `good for anecdotes.`,
                         annotation: {
-                            description: `Though Miriam was fascinated by my character, it eventually dawned on me that `
-                        },
-                        todo: true
+                            description: `Miriam blew apart my theory that being interesting at all costs is the key to dating. Though she was fascinated by my character, it wasn't as I would have hoped. I was the oddball ex whose antics provided grist for amusing tales, not the life companion who would one day hear her tell them.`
+                        }
                     }
                 ],
                 right: [
