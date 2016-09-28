@@ -94,9 +94,8 @@ module.exports = {
                     {
                         anchor: `wit and id`,
                         annotation: {
-                            description: `Miriam heard me exclaim the wonders of an impulsive drunken personality , both to keep the creative juices flowing, as well as to help arbitrate life decisions.`
-                        },
-                        todo: true
+                            description: `I told Miriam about my drunken personality and explained my belief that allowing it to win over my thoughts, and even to arbitrate life decisions, was the key to keeping my creative juices flowing.`
+                        }
                     },
                     `she's deemed her`
                 ],
@@ -119,7 +118,7 @@ module.exports = {
                     {
                         anchor: `good for anecdotes.`,
                         annotation: {
-                            description: `Though Miriam was fascinated by my character, it wasn't in the way one should hope, blowing apart my theory that interestingness at all costs is the key to dating. I was the oddball ex providing grist for a lifetime of amusing tales, not the life companion to whom she would one day tell them.`
+                            description: `Though Miriam was fascinated by my character, it wasn't in the way one should hope, which blew apart my theory that interestingness at all costs is the key to dating. I was the oddball ex providing grist for a lifetime of amusing tales, not the life companion to whom she would one day tell them.`
                         }
                     }
                 ],
@@ -166,14 +165,9 @@ module.exports = {
                 left: [
                     `not`,
                     {
-                        // TODO: phrasing...
                         anchor: `at each other's throats.`,
                         annotation: {
-                            description: `Just as some comedy duos famously did not get along offscreen, like Abbott and Costello or Martin and Lewis,
-
-                            . Similarly, while Miriam enjoyed the idea of my two personalities befuddling each other, she recognised
-
-                             the underlying dysfunction, and wanted no part of it.`
+                            description: `Some comedy duos famously did not get along, which enlivened their dynamic when the tapes were rolling. Like Abbott and Costello or Martin and Lewis, my two personalities often outwitted each other, much to Miriam's entertainment. But even so, she recognised its basis in mental dysfunction and ultimately chose not to get involved.`
                         },
                         todo: true
                     }
@@ -570,7 +564,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 16,
+            workedHours: 22,
             neededHours: 35,
             subtasks: [
                 {
