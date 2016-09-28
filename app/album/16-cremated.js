@@ -167,9 +167,8 @@ module.exports = {
                     {
                         anchor: `at each other's throats.`,
                         annotation: {
-                            description: `Some comedy duos famously did not get along, which only enlivened their dynamic when the tapes were rolling. Like Abbott and Costello or Martin and Lewis, my two personalities would befuddle and outwit each other, much to Miriam's delight. But even so, she recognised the underlying mental discord that fueled this spectacle, and ultimately wanted no part in it.`
-                        },
-                        todo: true
+                            description: `Some comedy duos famously did not get along, which enlivened their dynamic when the tapes were rolling. Like Abbott and Costello or Martin and Lewis, my two personalities would befuddle and outwit each other, much to Miriam's entertainment. But even so, she recognised the underlying mental stress that fueled this spectacle, and ultimately wanted no part in it.`
+                        }
                     }
                 ],
                 right: `nods as she drums her toes.`
