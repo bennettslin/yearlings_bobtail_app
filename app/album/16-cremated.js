@@ -21,9 +21,8 @@ module.exports = {
                 centre: {
                     anchor: `Or another…`,
                     annotation: {
-                        description: ``
-                    },
-                    todo: true
+                        description: `Even if I couldn't be with Mara, I could still be with someone like her. Namely, Miriam.`
+                    }
                 }
             },
             {
@@ -140,11 +139,16 @@ module.exports = {
                 left: `As comedy teams work, a hoot the times`,
                 right: [
                     {
-                        anchor: `His god humming Freebird,`,
+                        anchor: `His god humming "Freebird,"`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo loudly plays Lynyrd Skynyrd's "Freebird," he sways and strums his ukulele, as if in rhythm to the rumblings of his all-American mountain god. And Miriam, who happens to be`,
+                                {
+                                    emphasis: `my`,
+                                },
+                                `god, hums along as well.`
+                            ]
+                        }
                     },
                     `the`,
                     {
