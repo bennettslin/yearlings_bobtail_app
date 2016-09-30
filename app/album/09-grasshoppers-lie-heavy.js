@@ -4,7 +4,7 @@ module.exports = {
     title: {
         anchor: `Grasshoppers Lie Heavy`,
         annotation: {
-            description: `In addition to the Philip Dick reference, I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, with neither one wishing to be the first to reveal itself.`
+            description: `In addition to the Philip Dick reference, I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, with neither wishing to be the first to reveal itself.`
         }
     },
     doubleColumns: true,

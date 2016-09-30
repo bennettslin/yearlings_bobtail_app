@@ -52,9 +52,8 @@ module.exports = {
                     {
                         anchor: `At a vista,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Driving in her car, Miriam and I arrive at a secluded spot on a cliff overlooking the San Francisco Bay.`
+                        }
                     },
                     `key turned`
                 ]
@@ -75,9 +74,8 @@ module.exports = {
                     {
                         anchor: `first switch`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `After parking the car, Miriam turns on the stereo by flipping the ignition switch to the accessory position.`
+                        }
                     },
                     `in her low two-seater,`
                 ]
@@ -94,7 +92,7 @@ module.exports = {
                     {
                         anchor: `wit and id`,
                         annotation: {
-                            description: `I told Miriam about my drunken personality and explained my belief that allowing it to win over my thoughts, and even to arbitrate life decisions, was the key to keeping my creative juices flowing.`
+                            description: `In Freudian psychology, the id represents the primal impulses of the psyche. I told Miriam about my drunken personality, and explained my belief that allowing it to win over my thoughts, and even to arbitrate life decisions, was the key to keeping my creative juices flowing.`
                         }
                     },
                     `she's deemed her`
@@ -104,9 +102,8 @@ module.exports = {
                     {
                         anchor: `phoenix risen limp`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `In Greek mythology, the phoenix is a bird that is reborn from its own ashes. Or else, "penis risen limp." Having broken up with Sita to date Miriam, I also await my triumphant rebirth. And yet, as Miriam climbs on top of me to make out, I'm overcome with self-doubt and thus struggle to maintain an erection.`
+                        }
                     },
                     `beneath her`
                 ]
@@ -126,9 +123,8 @@ module.exports = {
                     {
                         anchor: `pinkish slip,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice given to inform an employee that they've been fired…`
+                        }
                     },
                     `making scroonched her pantyhose.`
                 ]
