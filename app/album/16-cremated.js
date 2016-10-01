@@ -21,7 +21,7 @@ module.exports = {
                 centre: {
                     anchor: `Or another…`,
                     annotation: {
-                        description: `Even if I couldn't be with Mara, I could still be with someone like her. Namely, Miriam.`
+                        description: `Even if I couldn't be with Mara, I could still be with someone like her. And that someone was Miriam.`
                     }
                 }
             },
@@ -146,7 +146,7 @@ module.exports = {
                                 {
                                     emphasis: `my`,
                                 },
-                                `god, hums along as well.`
+                                `god, hums along while .`
                             ]
                         }
                     },
@@ -154,9 +154,8 @@ module.exports = {
                     {
                         anchor: `hula guy`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Of course, the dashboard ornament also represents the objectification of an ethnic group similar to mine. I wasn't thinking in those terms at the time, though. I was just so happy to be wanted.`
+                        }
                     }
                 ]
             },
