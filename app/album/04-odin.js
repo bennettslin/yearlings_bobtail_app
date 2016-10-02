@@ -1,4 +1,5 @@
 // TODO: Past vs. present tense?
+// Be more open about Buddhist upbringing.
 
 import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
 

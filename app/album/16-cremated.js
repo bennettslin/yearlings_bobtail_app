@@ -142,11 +142,11 @@ module.exports = {
                         anchor: `His god humming "Freebird,"`,
                         annotation: {
                             description: [
-                                `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo loudly plays Lynyrd Skynyrd's "Freebird," he sways and strums his ukulele, as if in rhythm to the rumblings of his all-American mountain god. And Miriam, who happens to be`,
+                                `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo blares Lynyrd Skynyrd's "Freebird," he sways and strums his ukulele, as if to the rumblings of his all-American mountain god. In actuality, of course, it's because Miriam, who happens to be`,
                                 {
                                     emphasis: `my`,
                                 },
-                                `god, hums along while .`
+                                `god, is humming along and tapping the underside of the dashboard with her feet.`
                             ]
                         }
                     },
@@ -154,7 +154,7 @@ module.exports = {
                     {
                         anchor: `hula guy`,
                         annotation: {
-                            description: `Of course, the dashboard ornament also represents the objectification of an ethnic group similar to mine. I wasn't thinking in those terms at the time, though. I was just so happy to be wanted.`
+                            description: `Some may rightfully protest that these dashboard ornaments objectify certain ethnic groups. I wasn't thinking in those terms at the time, though. I was just so happy to be wanted.`
                         }
                     }
                 ]
@@ -166,7 +166,7 @@ module.exports = {
                     {
                         anchor: `at each other's throats.`,
                         annotation: {
-                            description: `Some comedy duos famously did not get along, which enlivened their dynamic when the tapes were rolling. Like Abbott and Costello or Martin and Lewis, my two personalities would befuddle and outwit each other, much to Miriam's entertainment. But even so, she recognised the mental distress that surely fueled this spectacle, and wanted no lasting part in it.`
+                            description: `Some comedy duos famously did not get along, which enlivened their dynamic when the tapes were rolling. Like Abbott and Costello or Martin and Lewis, my two personalities would befuddle each other, much to Miriam's entertainment. But even so, she recognised the mental distress that fueled this spectacle, and wanted no lasting part in it.`
                         }
                     }
                 ],
@@ -186,9 +186,8 @@ module.exports = {
                     {
                         anchor: `bronzed from a Trojan`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `The first time I had sex with a woman other than Sita, I was so amazed that I kept the condom lying around for days, much like proud parents who bronze their baby's outgrown shoes.`
+                        }
                     }
                 ],
                 right: `Though, she ponders the children`
@@ -265,13 +264,19 @@ module.exports = {
                     }
                 ],
                 right: [
-                    `This swarm pumped and kissed off, she`,
+                    `This`,
+                    {
+                        anchor: `swarm pumped and kissed off,`,
+                        annotation: {
+                            description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob and swallowing the ejaculate.`
+                        }
+                    },
+                    `she`,
                     {
                         anchor: `purges up.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Of course, given the expected defectiveness of my progeny, I imagine Miriam symbolically vomiting the sperm that carries my genes, which must never be allowed to mingle with hers.`
+                        }
                     }
                 ]
             },
@@ -303,16 +308,14 @@ module.exports = {
                     {
                         anchor: `twenty-one.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Miriam was several years younger than me, and thus eager to live it up just as I was ready to settle down.`
+                        }
                     }
                 ]
             },
             {
                 unitMap: true,
                 sectionClass: VERSES,
-                subsequent: true,
                 subsequent: true
             }
         ],
@@ -406,23 +409,14 @@ module.exports = {
         ],
         [
             {
+                // NOTE: I switched the next three three lines, left for right.
                 time: 112,
-                left: `The key turned and she floors it,`,
-                right: `The seat hurt when he lowered it,`
+                left: `The seat hurt when he lowered it,`,
+                right: `The key turned and she floors it,`
             },
             {
                 time: 115,
                 left: [
-                    `so`,
-                    {
-                        anchor: `homeward the sport's escorted,`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    }
-                ],
-                right: [
                     `though no worse but for`,
                     {
                         anchor: `his soreness,`,
@@ -431,22 +425,20 @@ module.exports = {
                         },
                         todo: true
                     }
+                ],
+                right: [
+                    `so`,
+                    {
+                        anchor: `homeward the sport's escorted,`,
+                        annotation: {
+                            description: `Having plied me with sex to ensure that I can be a "good sport," Miriam now prepares to drive me home.`
+                        }
+                    }
                 ]
             },
             {
                 time: 118,
                 left: [
-                    `the`,
-                    {
-                        anchor: `cleaved horizon`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    },
-                    `pours the mortar in.`
-                ],
-                right: [
                     `this geezer's`,
                     {
                         anchor: `life-support's abortive.`,
@@ -455,6 +447,16 @@ module.exports = {
                         },
                         todo: true
                     }
+                ],
+                right: [
+                    `the`,
+                    {
+                        anchor: `cleaved horizon`,
+                        annotation: {
+                            description: `As we make our way downhill, I imagine the horizon to be a cleaver splitting the sky open, and the road we drive on to be cement spilling down upon us from the rupture.`
+                        }
+                    },
+                    `pours the mortar in.`
                 ]
             },
             {
@@ -475,9 +477,8 @@ module.exports = {
                     {
                         anchor: `vegging with his boner shortened;`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Flaccid and basking in a post-coital glow, I'm about to be blindsided by Miriam's true intention for this day's outing.`
+                        }
                     }
                 ]
             },
@@ -485,20 +486,12 @@ module.exports = {
                 time: 124,
                 left: `apology, bold and blunt.`,
                 right: [
-                    {
-                        anchor: `a pop,`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    },
-                    `and she`,
+                    `a pop, and she`,
                     {
                         anchor: `pulls the plug.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Upon hearing the cigarette lighter pop out, Miriam pulls it from the socket to light her cigarette. But also, having satisfied me with an orgasmic "pop," Miriam now feels less troubled to "pull the plug" on our relationship.`
+                        }
                     }
                 ]
             },
@@ -539,17 +532,10 @@ module.exports = {
                     {
                         anchor: `preparing the scoop,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Miriam braces to deliver the bad news that we're breaking up. Metaphorically, she waits with "scoop" in hand for her pet cat to take its "dump," eager to keep the house fresh and clean.`
+                        }
                     },
-                    {
-                        anchor: `he's getting dumped.`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    }
+                    `he's getting dumped.`
                 ]
             },
             {
@@ -562,7 +548,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 22,
+            workedHours: 30,
             neededHours: 35,
             subtasks: [
                 {
