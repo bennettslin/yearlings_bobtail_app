@@ -139,6 +139,7 @@ module.exports = {
                 left: `As comedy teams work, a hoot the times`,
                 right: [
                     {
+                        // TODO: Mention phoenix
                         anchor: `His god humming "Freebird,"`,
                         annotation: {
                             description: [
