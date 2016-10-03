@@ -187,7 +187,7 @@ module.exports = {
                     {
                         anchor: `bronzed from a Trojan`,
                         annotation: {
-                            description: `The first time I had sex with a woman other than Sita, I was so amazed that I kept the condom lying around for days, much like proud parents who bronze their baby's outgrown shoes.`
+                            description: `The first time I had sex with a woman other than Sita, I was so amazed that I left the condom on the nightstand for days, much like proud parents who bronze their baby's outgrown shoes.`
                         }
                     }
                 ],
@@ -200,7 +200,7 @@ module.exports = {
                     {
                         anchor: `unforeskinned virgin,`,
                         annotation: {
-                            description: ``
+                            description: `Miriam was surprised that I was circumcised, since the other Asian fellow she dated hadn't been.`
                         },
                         todo: true
                     }
