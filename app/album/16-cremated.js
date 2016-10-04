@@ -198,9 +198,15 @@ module.exports = {
                 left: [
                     `for some`,
                     {
-                        anchor: `unforeskinned virgin,`,
+                        anchor: `unforeskinned`,
                         annotation: {
-                            description: `Miriam was surprised that I was circumcised, since she had recently dated an Asian fellow who wasn't.`
+                            description: `Miriam wasn't sure that I'd be circumcised, since the other Asian fellow she dated hadn't been.`
+                        }
+                    },
+                    {
+                        anchor: `virgin,`,
+                        annotation: {
+                            description: `I was always trying to recreate the nervous and heady feeling of doing it for the first time. Miriam would oblige, even as she found it unsettling.`
                         }
                     }
                 ],
@@ -209,7 +215,7 @@ module.exports = {
                     {
                         anchor: `forced conversion`,
                         annotation: {
-                            description: `Historically, conquered peoples were forced to assimilate by adopting the religious beliefs of their conquerors. Oftentimes, however, they would simply rename old customs and deities and incorporate them into their new faith. Here, I imagine Miriam judging my own attempts at assimilation to be just as inadequate, and thus fearing that corrupting traces of my old ways yet remain.`
+                            description: `Historically, conquered peoples were forced to assimilate by adopting the religious beliefs of their conquerors. Oftentimes, however, they would simply rename old customs and deities and incorporate them into their new faith. Here, I imagine Miriam judging my own attempts at assimilation to be just as inadequate. She thus fears that corrupting traces of my old ways yet remain.`
                         }
                     }
                 ]
@@ -222,7 +228,7 @@ module.exports = {
                     {
                         anchor: `self-servicing cleric surgeon`,
                         annotation: {
-                            description: `Of course, it was my own conflicted mental state that drove me to assimilate in the first place. I was like someone who had forcibly converted himself, and then performed his own circumcision.`
+                            description: `Of course, it was my own conflicted mental state that drove me to seek assimilation in the first place. I was like someone who had forcibly converted himself, and then performed his own circumcision.`
                         }
                     }
                 ]
@@ -451,7 +457,7 @@ module.exports = {
                     {
                         anchor: `cleaved horizon`,
                         annotation: {
-                            description: `As we make our way downhill, I imagine the horizon to be a cleaver splitting the sky open, and the road we drive on to be cement spilling down upon us from the rupture.`
+                            description: `As we make our way downhill, I imagine the horizon to be a cleaver splitting the sky open, and the road we drive on to be cement spilling down upon me from the rupture.`
                         }
                     },
                     `pours the mortar in.`
@@ -530,7 +536,7 @@ module.exports = {
                     {
                         anchor: `preparing the scoop,`,
                         annotation: {
-                            description: `Miriam braces to deliver the bad news that we're breaking up. Metaphorically, she waits with "scoop" in hand for her pet cat to take its "dump," eager to keep the house fresh and clean.`
+                            description: `Miriam braces to deliver the bad news that we're breaking up. Metaphorically, she waits with "scoop" in hand for her cat to take its "dump," eager as she is to keep the house fresh and clean.`
                         }
                     },
                     `he's getting dumped.`
