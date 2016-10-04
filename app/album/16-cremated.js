@@ -187,7 +187,7 @@ module.exports = {
                     {
                         anchor: `bronzed from a Trojan`,
                         annotation: {
-                            description: `The first time I had sex with a woman other than Sita, I was so amazed that I left the condom on the nightstand for days, much like proud parents who bronze their baby's outgrown shoes.`
+                            description: `The first time I had sex with a woman other than Sita, I was so amazed that I left the used condom on the nightstand for days, much like proud parents who bronze their baby's outgrown shoes.`
                         }
                     }
                 ],
@@ -200,9 +200,8 @@ module.exports = {
                     {
                         anchor: `unforeskinned virgin,`,
                         annotation: {
-                            description: `Miriam was surprised that I was circumcised, since the other Asian fellow she dated hadn't been.`
-                        },
-                        todo: true
+                            description: `Miriam was surprised that I was circumcised, since she had recently dated an Asian fellow who wasn't.`
+                        }
                     }
                 ],
                 right: [
@@ -210,9 +209,8 @@ module.exports = {
                     {
                         anchor: `forced conversion`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Historically, conquered peoples were forced to assimilate by adopting the religious beliefs of their conquerors. Oftentimes, however, they would simply rename old customs and deities and incorporate them into their new faith. Here, I imagine Miriam judging my own attempts at assimilation to be just as inadequate, and thus fearing that corrupting traces of my old ways yet remain.`
+                        }
                     }
                 ]
             },
@@ -224,9 +222,8 @@ module.exports = {
                     {
                         anchor: `self-servicing cleric surgeon`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Of course, it was my own conflicted mental state that drove me to assimilate in the first place. I was like someone who had forcibly converted himself, and then performed his own circumcision.`
+                        }
                     }
                 ]
             },
@@ -550,7 +547,7 @@ module.exports = {
         {
             taskName: `annotations`,
             workedHours: 30,
-            neededHours: 35,
+            neededHours: 45,
             subtasks: [
                 {
                     taskName: `split into dots`,
