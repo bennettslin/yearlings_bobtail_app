@@ -381,7 +381,7 @@ module.exports = {
                                 {
                                     italic: `The Selfish Gene,`
                                 },
-                                `Richard Dawkins describes evolution from the perspective of genes themselves, rather than the organisms that carry them. Here, I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, leading her to block me forever from what lies underneath her cutoffs.`
+                                `Richard Dawkins describes evolution from the perspective of genes themselves, rather than the organisms that carry them. Here, I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, leading her to block me forever from the goods underneath her cutoffs.`
                             ]
                         }
                     }
