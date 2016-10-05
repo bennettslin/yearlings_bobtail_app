@@ -331,9 +331,8 @@ module.exports = {
                         // TODO: Willy portal.
                         anchor: `Needle done`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected. Both seem like appropriate metaphors for the silent and sedate end to my relationship with Miriam.`
+                        }
                     },
                     `will not retract,`
                 ]
@@ -345,16 +344,14 @@ module.exports = {
                     {
                         anchor: `typo`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `I was a typo in the sense of being Miriam's mistake. But also a "Type O," the universal blood donor, given that I kept wanting to offer more of myself while having little chance of being saved in return.`
+                        }
                     },
                     {
                         anchor: `fragile ex`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Different boyfriends react to breakups in different ways, and I was the snivelling kind. But also "fragile X," which is a genetic syndrome caused by a mutated X chromosome that results in mental disability.`
+                        }
                     },
                     `passed through ash…`
                 ]
@@ -366,9 +363,8 @@ module.exports = {
                     {
                         anchor: `vinyl, exit`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Miriam had borrowed some of my records. After the breakup, I never got them back. Also, "final exit" is a euphemism used by proponents of assisted suicide. Here, I imagine Miriam helping me to end myself, and then helping herself to my record collection, which she'll trade for cash at a music store.`
+                        }
                     },
                     `Miriam to cash his stash.`
                 ]
@@ -376,20 +372,18 @@ module.exports = {
             {
                 time: 102,
                 centre: [
-                    {
-                        anchor: `Undeluded,`,
-                        annotation: {
-                            description: ``
-                        },
-                        todo: true
-                    },
-                    `she'll bask in`,
+                    `Undeluded, she'll bask in`,
                     {
                         anchor: `selfish cut-off jeans,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `In`,
+                                {
+                                    italic: `The Selfish Gene,`
+                                },
+                                `Richard Dawkins describes evolution from the perspective of genes themselves, rather than the organisms that carry them. Here, I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, leading her to block me forever from what lies underneath her cutoffs.`
+                            ]
+                        }
                     }
                 ]
             },
@@ -435,7 +429,7 @@ module.exports = {
                     {
                         anchor: `homeward the sport's escorted,`,
                         annotation: {
-                            description: `Having plied me with sex to ensure that I can be a "good sport," Miriam now prepares to drive me home.`
+                            description: `Having plied me with sex to ensure that I'll be a "good sport," Miriam now prepares to drive me home.`
                         }
                     }
                 ]
@@ -457,7 +451,7 @@ module.exports = {
                     {
                         anchor: `cleaved horizon`,
                         annotation: {
-                            description: `As we make our way downhill, I imagine the horizon to be a cleaver splitting the sky open, and the road we drive on to be cement spilling down upon me from the rupture.`
+                            description: `As we make our way downhill, I picture the horizon as a cleaver splitting the sky open. The road we drive on then becomes cement spilling down upon me from the rupture.`
                         }
                     },
                     `pours the mortar in.`
