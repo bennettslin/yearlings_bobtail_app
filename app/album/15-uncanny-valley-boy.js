@@ -713,7 +713,7 @@ module.exports = {
                         lyric: {
                             anchor: `old and subservient.`,
                             annotation: {
-                                description: `Amongst those I ruled over were my parents, now decrepit after a lifetime of following my bidding.`
+                                description: `Amongst those I ruled over were my parents, now feeble and senile after a lifetime of following my bidding.`
                             }
                         }
                     }

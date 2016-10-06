@@ -12,7 +12,7 @@ module.exports = {
     totalTime: 164,
     overviews: {
         narrative: `While I can't deny that dating white women helped silence the nagging feeling I had of being racially inferior, I really didn't seek them out. A case in point is Miriam, who approached me at a party, having seen my band perform a week earlier. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me with no effort on my part. We lasted a few months. In the end, I had to wonder if she was slumming it, and whether I was just one more checkbox to mark off.`,
-        music: `A Shepard tone is an auditory illusion in which a single tone descends continuously in pitch while staying within a fixed register. It seemed an apt metaphor for my breakup with Miriam, which left me utterly deflated as I was forced to confront the racial underpinnings of my genetic inferiority complex. This song also uses doublespeaker rhyme, though I've since forgetten which voice represents whose perspective. I suppose that's the point: we both knew full well that the relationship was doomed.`
+        music: `A Shepard tone is an auditory illusion in which a single tone descends continuously in pitch while staying within a fixed register. It seemed an apt metaphor for my breakup with Miriam, which left me utterly deflated as I was forced to confront my genetic inferiority complex. This song also uses doublespeaker rhyme, though I've since forgetten which voice represents whose perspective. I suppose that's the point: we both knew equally well that the relationship was doomed.`
     },
     lyrics: [
         [
@@ -331,7 +331,7 @@ module.exports = {
                         // TODO: Willy portal.
                         anchor: `Needle done`,
                         annotation: {
-                            description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected. Both seem like appropriate metaphors for the silent and sedate end to my relationship with Miriam.`
+                            description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected. Having just been told by Miriam that she's breaking up with me, I remain silent and sedated. I imagine myself as a terminally ill patient being allowed to die, as my favourite records play in the background.`
                         }
                     },
                     `will not retract,`
@@ -350,7 +350,7 @@ module.exports = {
                     {
                         anchor: `fragile ex`,
                         annotation: {
-                            description: `Different boyfriends react to breakups in different ways, and I was the snivelling kind. But also "fragile X," which is a genetic syndrome caused by a mutated X chromosome that results in mental disability.`
+                            description: `Different boyfriends react to breakups in different ways, and I was the frail kind. But also "fragile X," which is a genetic syndrome caused by a mutated X chromosome that results in mental disability.`
                         }
                     },
                     `passed through ash…`
@@ -363,7 +363,7 @@ module.exports = {
                     {
                         anchor: `vinyl, exit`,
                         annotation: {
-                            description: `Miriam had borrowed some of my records. After the breakup, I never got them back. Also, "final exit" is a euphemism used by proponents of assisted suicide. Here, I imagine Miriam helping me to end myself, and then helping herself to my record collection, which she'll trade for cash at a music store.`
+                            description: `After Miriam helps me to end myself, I imagine her helping herself to my record collection, which she'll trade for cash at a music store. Also, "final exit" is a euphemism used by proponents of assisted suicide.`
                         }
                     },
                     `Miriam to cash his stash.`
@@ -381,7 +381,7 @@ module.exports = {
                                 {
                                     italic: `The Selfish Gene,`
                                 },
-                                `Richard Dawkins describes evolution from the perspective of genes themselves, rather than the organisms that carry them. Here, I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, leading her to block me forever from the goods underneath her cutoffs.`
+                                `Richard Dawkins explains natural selection from the vantage point of genes themselves, rather than the organisms that carry them. Here, I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, leading her to block me from ever again getting underneath her cutoffs.`
                             ]
                         }
                     }
@@ -390,13 +390,24 @@ module.exports = {
             {
                 time: 106,
                 centre: [
-                    `and in her pool, hears not a`,
+                    `and`,
                     {
-                        anchor: `worrisome "Bless her, Godspeed…"`,
+                        anchor: `in her pool,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Lying on my metaphorical deathbed, I picture Miriam lounging by a pool, eternally radiant in her youth. I exhaust my last breath to wish her well, but she plunges back into the deep end and doesn't hear me. In every which way, she has already moved on.`
+                        }
+                    },
+                    {
+                        anchor: `hears not a worrisome`,
+                        annotation: {
+                            description: `I genuinely wished Miriam the best and continued to worry about her well-being. This surprised me, given the contrast of how selfishly I behaved each time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even for a little while. As far as I was concerned, then, I got the better end of the deal.`
+                        }
+                    },
+                    {
+                        anchor: `"Bless her, Godspeed…"`,
+                        annotation: {
+                            description: `In her gene pool, "here's not where some lesser gods peed." When I was a child, the idea of being watched over by inferior gods seemed a fitting rationale for my family's defective genes. After all, I felt insecure enough as it was about belonging to a different faith, one associated primarily with a race deemed inferior by society.`
+                        }
                     }
                 ]
             },
@@ -546,7 +557,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 36,
+            workedHours: 39,
             neededHours: 45,
             subtasks: [
                 {
