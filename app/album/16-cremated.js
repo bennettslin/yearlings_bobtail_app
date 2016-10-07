@@ -21,7 +21,7 @@ module.exports = {
                 centre: {
                     anchor: `Or another…`,
                     annotation: {
-                        description: `Even if I couldn't be with Mara, I could still be with someone like her. And that someone was Miriam.`
+                        description: `Even if I couldn't be with Mara, I could still be with someone like her. Namely, Miriam.`
                     }
                 }
             },
