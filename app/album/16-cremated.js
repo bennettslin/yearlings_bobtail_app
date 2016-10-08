@@ -420,7 +420,17 @@ module.exports = {
             {
                 // NOTE: I switched the next three three lines, left for right.
                 time: 112,
-                left: `The seat hurt when he lowered it,`,
+                left: [
+                    `The`,
+                    {
+                        anchor: `seat hurt`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `when he lowered it,`
+                ],
                 right: `The key turned and she floors it,`
             },
             {
@@ -517,9 +527,8 @@ module.exports = {
                     {
                         anchor: `ex-dromedary,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `The dromedary, or Arabian camel, has a single hump on its back. The Bactrian camel has two.`
+                        }
                     }
                 ],
                 right: `Lights one up then draws a daring`
@@ -531,9 +540,8 @@ module.exports = {
                     {
                         anchor: `second hump.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `A camel stores fat in its hump, allowing it to travel for days without eating.  By trading away Sita's love for the ego boost I gained from "humping" other women, I was like a starving camel who sacrifices his only meal for a flashy new adornment on his back.`
+                        }
                     }
                 ],
                 right: [
