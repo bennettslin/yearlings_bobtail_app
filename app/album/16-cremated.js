@@ -89,6 +89,7 @@ module.exports = {
                 left: [
                     `his beaten`,
                     {
+                        // TODO: Connect id to drunken personality.
                         anchor: `wit and id`,
                         annotation: {
                             description: `In Freudian psychology, the id represents the primal impulses of the psyche. I told Miriam about my drunken personality, and explained my belief that allowing it to win over my thoughts, and even to arbitrate life decisions, was the key to keeping my creative juices flowing.`
@@ -240,9 +241,8 @@ module.exports = {
                     {
                         anchor: `inherently perfect,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `I never told Miriam that the real purpose of my drunken personality was to blame it for all the selfish things that I desired but was too cowardly to own up to. Which makes sense, since the latest thing that I selfishly desired was her.`
+                        }
                     }
                 ],
                 right: `duly may inherit his burdens.`
@@ -254,7 +254,7 @@ module.exports = {
                     {
                         anchor: `worn puppet`,
                         annotation: {
-                            description: ``
+                            description: `Having a drunken personality was like `
                         },
                         todo: true
                     },
@@ -262,7 +262,7 @@ module.exports = {
                     {
                         anchor: `offscreen person dubs.`,
                         annotation: {
-                            description: ``
+                            description: `Of course, since I was frequently drunk, it wasn't obvious to me during those `
                         },
                         todo: true
                     }
@@ -562,8 +562,8 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 39,
-            neededHours: 45,
+            workedHours: 47,
+            neededHours: 47,
             subtasks: [
                 {
                     taskName: `split into dots`,
