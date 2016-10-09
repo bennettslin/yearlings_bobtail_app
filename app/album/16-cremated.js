@@ -331,7 +331,7 @@ module.exports = {
                         // TODO: Willy portal.
                         anchor: `Needle done`,
                         annotation: {
-                            description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected. Having just been told by Miriam that she's breaking up with me, I remain silent and sedated. I imagine myself as a terminally ill patient being allowed to die, as my favourite records play in the background.`
+                            description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected. Fast-forward in time. Having just been told by Miriam that she's breaking up with me, I remain silent and sedated. I imagine myself as a terminally ill patient being allowed to die, as my favourite records play in the background.`
                         }
                     },
                     `will not retract,`
@@ -397,10 +397,11 @@ module.exports = {
                             description: `Lying on my metaphorical deathbed, I picture Miriam lounging by a pool, eternally radiant in her youth. I exhaust my last breath to wish her well, but she plunges back into the deep end and doesn't hear me. In every which way, she has already moved on.`
                         }
                     },
+                    `hears not a`,
                     {
-                        anchor: `hears not a worrisome`,
+                        anchor: `worrisome`,
                         annotation: {
-                            description: `I genuinely wished Miriam the best and continued to worry about her well-being. This surprised me, given the contrast of how selfishly I behaved each time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even for a little while. As far as I was concerned, then, I got the better end of the deal.`
+                            description: `I genuinely wished Miriam the best and continued to care about her well-being. This surprised me, given the contrast of how selfishly I behaved each time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even for a little while. So as far as I was concerned, it was a pretty sweet deal.`
                         }
                     },
                     {
@@ -425,9 +426,8 @@ module.exports = {
                     {
                         anchor: `seat hurt`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `While reclining the seat with Miriam on top of me, I had managed to throw out my back. Now back in the present, the pain worsens during the car ride home, and I facetiously reason that it's because I'm getting on in my years.`
+                        }
                     },
                     `when he lowered it,`
                 ],
@@ -440,9 +440,8 @@ module.exports = {
                     {
                         anchor: `his soreness,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Miriam needed sex more often than Sita did, which ran me ragged as I was always still recovering from the last time. But here once again, I suppose that it's old age doing me in.`
+                        }
                     }
                 ],
                 right: [
@@ -460,11 +459,10 @@ module.exports = {
                 left: [
                     `this geezer's`,
                     {
-                        anchor: `life-support's abortive.`,
+                        anchor: `life support's abortive.`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Based on the perceived motives of younger women who date much older men, I assume that Miriam would jump at the first excuse to remove me from life support.`
+                        }
                     }
                 ],
                 right: [
@@ -484,9 +482,8 @@ module.exports = {
                     {
                         anchor: `Redressed,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `The sex followed by a blowjob, as it turns out, was meant to serve as redress for the bad news that was forthcoming. Of course, having put my clothes back on, I am also literally "redressed."`
+                        }
                     },
                     `he gets his notice, short an`
                 ],
@@ -549,7 +546,7 @@ module.exports = {
                     {
                         anchor: `preparing the scoop,`,
                         annotation: {
-                            description: `Miriam braces to deliver the bad news that we're breaking up. Metaphorically, she waits with "scoop" in hand for her cat to take its "dump," eager as she is to keep the house fresh and clean.`
+                            description: `Miriam braces to deliver the bad news that we're breaking up. Metaphorically, she waits with "scoop" in hand for her cat to take its "dump," eager as she is to keep her house fresh and clean.`
                         }
                     },
                     `he's getting dumped.`
