@@ -254,17 +254,15 @@ module.exports = {
                     {
                         anchor: `worn puppet`,
                         annotation: {
-                            description: `Having a drunken personality was like `
-                        },
-                        todo: true
+                            description: `Having a drunken personality was like being a ventriloquist whose specialty is the comedy roast. My dummy could then deliver the insults all day long, while I sat by as a harmless onlooker.`
+                        }
                     },
                     `his`,
                     {
                         anchor: `offscreen person dubs.`,
                         annotation: {
-                            description: `Of course, since I was frequently drunk, it wasn't obvious to me during those `
-                        },
-                        todo: true
+                            description: `Of course, during the frequent and lengthy periods when I was drunk, it sure didn't seem obvious that I was the dummy whose words and actions were being dictated by my sober personality, rather than the other way around.`
+                        }
                     }
                 ],
                 right: [
@@ -301,9 +299,8 @@ module.exports = {
                     {
                         anchor: `twitching sword`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `While dubbing may refer to the replacement of an actor's voice in post-production, it also refers to the ritual of conferring knighthood. Here, I imagine my drunken personality erratically trying to tap a perilously sharp sword on the sober me's shoulder.`
+                        }
                     },
                     `in care, he's anyone.`
                 ],
