@@ -10,7 +10,7 @@ module.exports = {
     },
     totalTime: 241,
     overviews: {
-        narrative: `I had `,
+        narrative: `All this time, I had been burning bridges with my bandmates, as I doubled down on writing and recording everything myself. Since we rarely played shows as a result, I had few opportunities to meet new women after Miriam left. Most devastasting of all, Sita had stopped torturing herself and had fallen in love with someone new. I truly hated myself at this point, but I was all I had. Slowly, then, I began the long, arduous process of remaking myself into a good person. One of my first small victories was to go vegan.`,
         music: `personal 1`
     },
     lyrics: [
@@ -208,7 +208,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 0,
+            workedHours: 7,
             neededHours: 35,
             subtasks: [
                 {
