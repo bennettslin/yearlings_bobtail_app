@@ -4,7 +4,7 @@ module.exports = {
     title: {
         anchor: `Cremated`,
         annotation: {
-            description: `A childhood playmate once asked me if I'd heard of cremation. I hadn't, and assumed it was something fun and tasty. That contrast between expectation and actualisation neatly sums up the innocent day trip that ended in my breakup with Miriam.`
+            description: `A childhood playmate once asked me if I knew what cremation was. I didn't, and assumed it must be fun and tasty. That contrast between expectation and reality neatly sums up the seemingly innocent day trip that ended with Miriam breaking up with me.`
         }
     },
     doubleColumns: true,
