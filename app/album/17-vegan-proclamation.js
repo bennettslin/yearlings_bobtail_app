@@ -11,7 +11,7 @@ module.exports = {
     totalTime: 241,
     overviews: {
         narrative: `Having doubled down on writing and recording all the songs myself, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left. Most heartbreaking of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had was myself now, and I hated myself. But slowly, I began the long, arduous process of remaking myself into a good person. My first small victory was to go vegan.`,
-        music: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. This ironic contrast left an impact on me, and I thought it would work well here. Especially since the last song ended with me listening to my records as I faded away.`
+        music: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast left an impact on me, and I thought it would work well here. Especially since the last song ended with me listening to my records as I faded away.`
     },
     lyrics: [
         [
