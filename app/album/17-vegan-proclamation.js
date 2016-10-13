@@ -19,7 +19,17 @@ module.exports = {
                 time: 0,
                 lyric: [
                     {
-                        italic: `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You can't have both. Because a scratched record will chip a good needle… and a chipped needle will scratch a good record…"`
+                        italic: [
+                            `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
+                            {
+                                anchor: `can't have both.`,
+                                annotation: {
+                                    description: `When I first `
+                                },
+                                todo: true
+                            },
+                            `Because a scratched record will chip a good needle… and a chipped needle will scratch a good record…"`
+                        ]
                     }
                 ]
             },
@@ -31,15 +41,45 @@ module.exports = {
         [
             {
                 time: 15,
-                lyric: `So shall we, Odin, lightly tread`
+                lyric: [
+                    `So shall we,`,
+                    {
+                        anchor: `Odin,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `lightly tread`
+                ]
             },
             {
                 time: 19,
-                lyric: `past the rape racks where our furor led,`
+                lyric: [
+                    `past the`,
+                    {
+                        anchor: `rape racks`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `where our furor led,`
+                ]
             },
             {
                 time: 23,
-                lyric: `to a soiled girl fouled on the false rib from our chest?`
+                lyric: [
+                    `to a soiled girl fouled on the`,
+                    {
+                        anchor: `false rib`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `from our chest?`
+                ]
             },
             {
                 unitMap: true,
@@ -53,7 +93,15 @@ module.exports = {
             },
             {
                 time: 35,
-                lyric: `set to rock this pout from horse to chair,`
+                lyric: [
+                    `set to rock this pout from`,
+                    {
+                        anchor: `horse to chair,`,
+                        annotation: {
+                            description: `That is to say, from rocking horse to rocking chair.`
+                        }
+                    }
+                ]
             },
             {
                 time: 39,
@@ -68,7 +116,17 @@ module.exports = {
         [
             {
                 time: 46,
-                lyric: `Well, first pets always bear the worst,`
+                lyric: [
+                    `Well,`,
+                    {
+                        anchor: `first pets`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `always bear the worst,`
+                ]
             },
             {
                 time: 50,
@@ -76,7 +134,16 @@ module.exports = {
             },
             {
                 time: 55,
-                lyric: `and now I know why the battered kitten purrs…`
+                lyric: [
+                    `and now I know why the`,
+                    {
+                        anchor: `battered kitten purrs…`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -88,7 +155,25 @@ module.exports = {
                 time: 60,
                 lyric: [
                     {
-                        italic: `"No, I'll smile because I believe in the big crunch. And meanwhile, the universe is a cyanided box. Because if we can't ever be known to be dead, we just might always be alive… to God…`
+                        italic: [
+                            `"No, I'll smile because I believe in the`,
+                            {
+                                anchor: `big crunch.`,
+                                annotation: {
+                                    description: ``
+                                },
+                                todo: true
+                            },
+                            `And meanwhile, the universe is a`,
+                            {
+                                anchor: `cyanided box.`,
+                                annotation: {
+                                    description: ``
+                                },
+                                todo: true
+                            },
+                            ` Because if we can't ever be known to be dead, we just might always be alive… to God…"`
+                        ]
                     }
                 ]
             },
@@ -100,11 +185,29 @@ module.exports = {
         [
             {
                 time: 74,
-                lyric: `Torn straps unsalvaged sows have chewed,`
+                lyric: [
+                    `Torn straps unsalvaged`,
+                    {
+                        anchor: `sows have chewed,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 78,
-                lyric: `form a trail which leads to a bloody broom,`
+                lyric: [
+                    `form a trail which leads to a`,
+                    {
+                        anchor: `bloody broom,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 82,
@@ -118,15 +221,58 @@ module.exports = {
         [
             {
                 time: 90,
-                lyric: `Through an alley strewn with burger shrouds,`
+                lyric: [
+                    `Through an alley strewn with`,
+                    {
+                        anchor: `burger shrouds,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 94,
-                lyric: `a lone rallied youth strikes himself from his cloud,`
+                lyric: [
+                    `a lone`,
+                    {
+                        anchor: `rallied youth`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `strikes`,
+                    {
+                        anchor: `himself from his cloud,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 98,
-                lyric: `reversing his stomach and his swastikas inside out…`
+                lyric: [
+                    {
+                        anchor: `reversing his stomach`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `and his`,
+                    {
+                        anchor: `swastikas`,
+                        annotation: {
+                            // TODO: Grasshoppers portal
+                            description: `The swastika is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid any association with violence and hatred, modern-day Hindus and Buddhists usually present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
+                        }
+                    },
+                    `inside out…`
+                ]
             },
             {
                 unitMap: true,
@@ -141,7 +287,17 @@ module.exports = {
             },
             {
                 time: 110,
-                lyric: `then none by us now, to any flesh!`
+                lyric: [
+                    `then`,
+                    {
+                        anchor: `none by us now,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `to any flesh!`
+                ]
             },
             {
                 time: 114,
@@ -159,11 +315,30 @@ module.exports = {
         [
             {
                 time: 138,
-                lyric: `"So all your leads have left and now you're sad, too?`
+                lyric: [
+                    `"So all your`,
+                    {
+                        anchor: `leads have left`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `and now you're sad, too?`
+                ]
             },
             {
                 time: 146,
-                lyric: `Someday you'll breathe again; for one, you have to…`
+                lyric: [
+                    `Someday you'll breathe again; for one,`,
+                    {
+                        anchor: `you have to…`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 154,
@@ -172,7 +347,17 @@ module.exports = {
             {
                 time: 161,
                 // Nirvana Sappy
-                lyric: `I still love you for the airholes, dear; and now, good night."`
+                lyric: [
+                    `I still love you for the`,
+                    {
+                        anchor: `airholes,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `dear; and now, good night."`
+                ]
             },
             {
                 unitMap: true,
@@ -182,6 +367,7 @@ module.exports = {
         [
             {
                 time: 186,
+                // Ash Wednesday reference.
                 lyric: `The stardust marks us, Odin, sparks zip through our heads…`
             },
             {
@@ -190,12 +376,31 @@ module.exports = {
             },
             {
                 time: 201,
-                lyric: `The diapered white dwarf, gurgling, curls up for his sleep…`
+                lyric: [
+                    `The`,
+                    {
+                        anchor: `diapered white dwarf,`,
+                        annotation: {
+                            description: `In Hindu mythology, Apasmara is a dwarf demon who personifies ignorance. A white dwarf is a `
+                        },
+                        todo: true
+                    },
+                    `gurgling, curls up for his sleep…`
+                ]
             },
             {
                 time: 209,
                 // Odin reference
-                lyric: `Our ashed heads bow from chivalry to our Siva's feet…`
+                lyric: [
+                    `Our ashed heads bow from chivalry to our`,
+                    {
+                        anchor: `Siva's feet…`,
+                        annotation: {
+                            description: `Nataraja, or "lord of dance," is a revered depiction of the Hindu god Siva as a cosmic dancer, who dances to tear down the universe and build it up again in an endless cycle.`
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
