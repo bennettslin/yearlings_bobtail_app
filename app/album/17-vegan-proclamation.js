@@ -158,11 +158,10 @@ module.exports = {
                         italic: [
                             `"No, I'll smile because I believe in the`,
                             {
-                                anchor: `big crunch.`,
+                                anchor: `Big Crunch.`,
                                 annotation: {
-                                    description: ``
-                                },
-                                todo: true
+                                    description: `The Big Crunch is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another Big Bang. I found the thought comforting as it jibes with the Hindu belief that the universe is a living force like us, bound to an eternal cycle of death and rebirth.`
+                                }
                             },
                             `And meanwhile, the universe is a`,
                             {
@@ -381,9 +380,8 @@ module.exports = {
                     {
                         anchor: `diapered white dwarf,`,
                         annotation: {
-                            description: `In Hindu mythology, Apasmara is a dwarf demon who personifies ignorance. A white dwarf is a `
-                        },
-                        todo: true
+                            description: `Apasmara is a dwarf demon of ignorance in Hindu mythology. A white dwarf is the dense remnant of an aged star. As I began to take an unflinching look at all the hurt I'd caused, I was comforted to know that those who came before me had learned from their mistakes. And yet, it felt just as dispiriting to know that those coming after had yet to make theirs. The universe never truly learns, and I was part of the reason why. I had this same thought about my brother many years ago, which made me realise that all I could do was love him for who he was.`
+                        }
                     },
                     `gurgling, curls up for his sleep…`
                 ]
@@ -396,9 +394,8 @@ module.exports = {
                     {
                         anchor: `Siva's feet…`,
                         annotation: {
-                            description: `Nataraja, or "lord of dance," is a revered depiction of the Hindu god Siva as a cosmic dancer, who dances to tear down the universe and build it up again in an endless cycle.`
-                        },
-                        todo: true
+                            description: `Nataraja, or "lord of dance," is a revered depiction of the Hindu god Siva as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
+                        }
                     }
                 ]
             },
