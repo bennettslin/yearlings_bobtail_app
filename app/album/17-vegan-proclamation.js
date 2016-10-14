@@ -167,11 +167,18 @@ module.exports = {
                             {
                                 anchor: `cyanided box.`,
                                 annotation: {
+                                    description: `In quantum theory, superposition describes how a particle exists as a combination of its possible states. To explain the problem of applying this concept to larger objects, Erwin Schrödinger proposed a famous thought experiment known as Schrödinger's cat. We imagine a cat sealed inside a steel chamber, where it stands an equal chance of being killed by cyanide or surviving. Since we cannot observe the outcome for ourselves, we must regard the cat as being simultaneously dead and alive.`
+                                }
+                            },
+                            ` Because if we can't ever be`,
+                            {
+                                anchor: `known to be dead,`,
+                                annotation: {
                                     description: ``
                                 },
                                 todo: true
                             },
-                            ` Because if we can't ever be known to be dead, we just might always be alive… to God…"`
+                            `we just might always be alive… to God…"`
                         ]
                     }
                 ]
@@ -410,7 +417,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 10,
+            workedHours: 16,
             neededHours: 35,
             subtasks: [
                 {
