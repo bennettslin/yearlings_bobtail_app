@@ -24,9 +24,8 @@ module.exports = {
                             {
                                 anchor: `can't have both.`,
                                 annotation: {
-                                    description: `When I first `
-                                },
-                                todo: true
+                                    description: `A friend offered this advice when he gave me his turntable, and as it turns out, what can be said for vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my most thoughtful deeds would always be tainted by my most hurtful ones. I couldn't keep two separate selves, with one being praised for my kindness, and the other taking the blame for my selfish desires. I couldn't be both.`
+                                }
                             },
                             `Because a scratched record will chip a good needle… and a chipped needle will scratch a good record…"`
                         ]
