@@ -4,12 +4,12 @@ module.exports = {
     title: {
         anchor: `Vegan Proclamation`,
         annotation: {
-            description: `While Sita was naturally a vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go vegan. I supported her during this transition by preparing vegan meals and abstaining from eating animal products in her presence. But it wasn't until after the breakup that I vowed to become a vegan myself.`
+            description: `While Sita was naturally a vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go vegan. I supported her during this transition by preparing vegan meals and abstaining from eating animal products in her presence. But it wasn't until after the last breakup that I vowed to become a vegan myself.`
         }
     },
     totalTime: 241,
     overviews: {
-        narrative: `Having doubled down on writing and recording all the songs myself, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left. Most heartbreaking of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had was myself now, and I hated myself. But slowly, I began the long, arduous process of remaking myself into a good person. My first small victory was to go vegan.`,
+        narrative: `Having doubled down on writing and recording all the songs myself, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had was myself now, and I hated myself. But slowly, I began the long, arduous process of remaking myself into a good person. My first small victory was to go vegan.`,
         music: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast left an impact on me, and I thought it would work well here. Especially since the previous song ended with me listening to my records as I faded away.`
     },
     lyrics: [
@@ -264,7 +264,7 @@ module.exports = {
                     {
                         anchor: `reversing his stomach`,
                         annotation: {
-                            description: `And so I decided that nothing again should ever suffer or die to satisfy my hunger.`
+                            description: `It seemed so vulgar that anything should have to suffer or die just to satisfy my hunger. And once I came to that conclusion, I literally could no longer stomach the taste of meat.`
                         }
                     },
                     `and his`,
@@ -272,7 +272,7 @@ module.exports = {
                         anchor: `swastikas`,
                         annotation: {
                             // TODO: Grasshoppers portal
-                            description: `The swastika is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid any association with violence and hatred, modern-day Hindus and Buddhists usually present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
+                            description: `The swastika is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid any association with violence and hatred, modern-day Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
                         }
                     },
                     `inside out…`
@@ -296,9 +296,8 @@ module.exports = {
                     {
                         anchor: `none by us now,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `And so, wishing no more to be the cause of hurt to anyone or anything, I decided to go vegan.`
+                        }
                     },
                     `to any flesh!`
                 ]
@@ -324,9 +323,8 @@ module.exports = {
                     {
                         anchor: `leads have left`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `For the past several years, my modus operandi was simple. I would stay with Sita up until I had another option to pursue. Then, when that prospect failed, as it always did, I would come crawling back, because Sita always let me. But our circumstances were now reversed. There were no more options coming down the pike for me, while Sita had met someone with whom she fully intended to stay.`
+                        }
                     },
                     `and now you're sad, too?`
                 ]
@@ -338,9 +336,8 @@ module.exports = {
                     {
                         anchor: `you have to…`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Overcome with jealousy and heartbreak, I had no excuse to complain, as I had caused Sita this exact same torment countless times. So in our last phone conversation, I simply asked her meekly how she had managed it. She replied that she didn't know. There were days when she just didn't want to live. And yet, each day would pass just the same, pushing her into the next, as days added up to weeks, and weeks turned into months, until the excruciating pain quietly dulled into an aching sadness.`
+                        }
                     }
                 ]
             },
@@ -356,9 +353,8 @@ module.exports = {
                     {
                         anchor: `airholes,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `In Nirvana's "Sappy," Kurt Cobain compares the victim of an emotionally abusive relationship to a small creature kept in a jar with breathing holes punched in its lid. I liked the imagery, so I borrowed it shamelessly here.`
+                        }
                     },
                     `dear; and now, good night."`
                 ]
