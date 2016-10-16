@@ -4,14 +4,13 @@ module.exports = {
     title: {
         anchor: `Vegan Proclamation`,
         annotation: {
-            description: ``
-        },
-        todo: true
+            description: `While Sita was naturally a vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go vegan. I supported her during this transition by preparing vegan meals and abstaining from eating animal products in her presence. But it wasn't until after the breakup that I vowed to become a vegan myself.`
+        }
     },
     totalTime: 241,
     overviews: {
         narrative: `Having doubled down on writing and recording all the songs myself, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left. Most heartbreaking of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had was myself now, and I hated myself. But slowly, I began the long, arduous process of remaking myself into a good person. My first small victory was to go vegan.`,
-        music: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast left an impact on me, and I thought it would work well here. Especially since the last song ended with me listening to my records as I faded away.`
+        music: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast left an impact on me, and I thought it would work well here. Especially since the previous song ended with me listening to my records as I faded away.`
     },
     lyrics: [
         [
@@ -44,10 +43,10 @@ module.exports = {
                     `So shall we,`,
                     {
                         anchor: `Odin,`,
+                        properNoun: true,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `As a child, I never gave much thought to our house cat Odin. He just seemed like another household furnishing. So after Sita and I adopted a cat who became our pride and joy, I would marvel at why my nurturing instinct, which came so effortlessly now, was so hard to come by then. Years later, as my failure to nurture my relationship with Sita led to its deterioration, I thought back to Odin often.`
+                        }
                     },
                     `lightly tread`
                 ]
@@ -73,9 +72,8 @@ module.exports = {
                     {
                         anchor: `false rib`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `The lower five rib pairs are known as false ribs, as they do not attach directly to the sternum. In Genesis, God gave life to Eve by taking one of Adam's ribs. My own promises to sacrifice for Sita proved to be lies, however, trapping her in a helpless state where she could never feel truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
+                        }
                     },
                     `from our chest?`
                 ]
@@ -120,9 +118,8 @@ module.exports = {
                     {
                         anchor: `first pets`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, realised that her kitten thought it was dying. She lived with that guilt ever afterwards.`
+                        }
                     },
                     `always bear the worst,`
                 ]
@@ -138,9 +135,8 @@ module.exports = {
                     {
                         anchor: `battered kitten purrs…`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Of course, Sita, in turn, was my first pet. In hindsight, the reason I could live with myself, while hurting her for as long as I did, was because I accepted at face value the facade of sanity that she constructed as a coping mechanism. I allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`
+                        }
                     }
                 ]
             },
@@ -158,24 +154,24 @@ module.exports = {
                             `"No, I'll smile because I believe in the`,
                             {
                                 anchor: `Big Crunch.`,
+                                properNoun: true,
                                 annotation: {
-                                    description: `The Big Crunch is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another Big Bang. I found the thought comforting as it jibes with the Hindu belief that the universe is a living force like us, bound to an eternal cycle of death and rebirth.`
+                                    description: `The Big Crunch is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another Big Bang. I found the thought comforting as it jibes with the Hindu belief that the universe is a living force, helplessly bound like us to an eternal cycle of death and rebirth.`
                                 }
                             },
                             `And meanwhile, the universe is a`,
                             {
                                 anchor: `cyanided box.`,
                                 annotation: {
-                                    description: `In quantum theory, superposition describes how a particle exists as a combination of its possible states. To explain the problem of applying this concept to larger objects, Erwin Schrödinger proposed a famous thought experiment known as Schrödinger's cat. We imagine a cat sealed inside a steel chamber, where it stands an equal chance of being killed by cyanide or surviving. Since we cannot observe the outcome for ourselves, we must regard the cat as being simultaneously dead and alive.`
+                                    description: `In quantum theory, a particle exists as a combination of its possible states. To explain the problem of applying this concept to larger objects, Erwin Schrödinger proposed a famous thought experiment known as Schrödinger's cat. We imagine a cat sealed inside a steel chamber, where it stands an equal chance of being killed by cyanide or surviving. Since we cannot observe the outcome, we must regard the cat as being simultaneously dead and alive.`
                                 }
                             },
                             ` Because if we can't ever be`,
                             {
                                 anchor: `known to be dead,`,
                                 annotation: {
-                                    description: ``
-                                },
-                                todo: true
+                                    description: `Deism is the belief that God, having created the universe, no longer intervenes in its progress. I liked the idea that if something greater than ourselves cannot observe us, then much like Schrödinger's battered cat, some part of us may always live on.`
+                                }
                             },
                             `we just might always be alive… to God…"`
                         ]
@@ -240,21 +236,25 @@ module.exports = {
             {
                 time: 94,
                 lyric: [
-                    `a lone`,
+                    `a`,
                     {
-                        anchor: `rallied youth`,
+                        anchor: `lone rallied youth`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Having spent the past several years both playing and attending shows, I saw firsthand how easy it was for an audience to get whipped up while being of one mind. And now, as that world drifted away and I was all alone, I wondered what exactly drew me to those crowds, and why I so longed to be adored by them. I questioned everything I valued up to that day, like a reformed Hitler Youth aghast at all the things he cheered for at the Nuremberg Rallies.`
+                        }
                     },
-                    `strikes`,
                     {
-                        anchor: `himself from his cloud,`,
+                        anchor: `strikes himself from his cloud,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: [
+                                `The insignia of the`,
+                                {
+                                    italic: `Schutzstaffel,`
+                                },
+                                `the paramilitary group that carried out the Holocaust, consists of two thunderbolts side by side. Wishing no more to strike down anyone with my thunderbolts, I struck myself down, leaving behind my former convictions in the process.`
+
+                            ]
+                        }
                     }
                 ]
             },
@@ -264,9 +264,8 @@ module.exports = {
                     {
                         anchor: `reversing his stomach`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `And so I decided that nothing again should ever suffer or die to satisfy my hunger.`
+                        }
                     },
                     `and his`,
                     {
@@ -399,6 +398,7 @@ module.exports = {
                     `Our ashed heads bow from chivalry to our`,
                     {
                         anchor: `Siva's feet…`,
+                        properNoun: true,
                         annotation: {
                             description: `Nataraja, or "lord of dance," is a revered depiction of the Hindu god Siva as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
                         }
@@ -416,7 +416,7 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 16,
+            workedHours: 27,
             neededHours: 35,
             subtasks: [
                 {
