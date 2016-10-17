@@ -237,9 +237,8 @@ module.exports = {
                     {
                         anchor: `burger shrouds,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `As a vegan, I became sensitive to anything even remotely suggestive of meat or animal byproducts, such as a hamburger wrapper, and realised that I too had been inured, living in a society built on the commoditisation of animal suffering.`
+                        }
                     }
                 ]
             },
