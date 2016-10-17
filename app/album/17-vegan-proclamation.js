@@ -58,11 +58,17 @@ module.exports = {
                     {
                         anchor: `rape racks`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Dairy cows are impregnated every year to keep them at peak lactation. This is done by restraining them in an apparatus commonly referred to as a "rape rack," where they are then forcibly inseminated.`
+                        }
                     },
-                    `where our furor led,`
+                    `where our`,
+                    {
+                        anchor: `furor`,
+                        annotation: {
+                            description: `Or else, "führer," a German title of leadership mainly associated with Adolf Hitler. Amongst animal rights proponents, comparisons between factory farming and the Holocaust are obvious, however impolitic.`
+                        }
+                    },
+                    `led,`
                 ]
             },
             {
@@ -72,10 +78,15 @@ module.exports = {
                     {
                         anchor: `false rib`,
                         annotation: {
-                            description: `The lower five rib pairs are known as false ribs, as they do not attach directly to the sternum. In Genesis, God gave life to Eve by taking one of Adam's ribs. My own promises to sacrifice for Sita proved to be lies, however, trapping her in a helpless state where she could never feel truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
+                            description: `The lower five rib pairs are known as false ribs, as they do not attach directly to the sternum.`
                         }
                     },
-                    `from our chest?`
+                    {
+                        anchor: `from our chest?`,
+                        annotation: {
+                            description: `In Genesis, God gave life to Eve by taking one of Adam's ribs. My own promises to sacrifice for Sita proved to be lies, however, trapping her in a helpless state where she could never feel truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
+                        }
+                    }
                 ]
             },
             {
@@ -187,13 +198,13 @@ module.exports = {
             {
                 time: 74,
                 lyric: [
+                    // TODO: Link to unsalvaged soul. Willy
                     `Torn straps unsalvaged`,
                     {
                         anchor: `sows have chewed,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `On factory farms, breeding sows are strapped inside metal cages so small that they cannot move. In response to high stress, they develop repetitive, self-destructive movements such as chewing on cage bars. The sole purpose of their suffering is to produce piglets for slaughter, and once they grow too sickly or weak, they too are slaughtered.`
+                        }
                     }
                 ]
             },
@@ -204,9 +215,8 @@ module.exports = {
                     {
                         anchor: `bloody broom,`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Understandably, factory farm workers become inured to the daily violence, which casts a pall over even mundane tasks like sweeping the floor.`
+                        }
                     }
                 ]
             },
@@ -296,7 +306,7 @@ module.exports = {
                     {
                         anchor: `none by us now,`,
                         annotation: {
-                            description: `And so, wishing no more to be the cause of hurt to anyone or anything, I decided to go vegan.`
+                            description: `And so, wishing no more to be the cause of hurt to anyone or anything, I decided to become a vegan.`
                         }
                     },
                     `to any flesh!`
@@ -308,7 +318,15 @@ module.exports = {
             },
             {
                 time: 120,
-                lyric: `and to be good again…`
+                lyric: [
+                    `and to be`,
+                    {
+                        anchor: `good again…`,
+                        annotation: {
+                            description: `Upon going vegan, I became a volunteer at People for the Ethical Treatment of Animals, and for several years, I took part in their demonstrations for animal rights. Though I'm no longer involved, I still credit PETA with helping me to like myself again.`
+                        }
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -412,8 +430,8 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 27,
-            neededHours: 35,
+            workedHours: 34,
+            neededHours: 34,
             subtasks: [
                 {
                     taskName: `split into dots`,
