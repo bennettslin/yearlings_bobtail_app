@@ -4,13 +4,13 @@ module.exports = {
     title: {
         anchor: `My 100,000th Dream`,
         annotation: {
-            description: ``
+            description: `I read that we have four dreams on average each night, which means that `
         },
         todo: true
     },
     totalTime: 244,
     overviews: {
-        narrative: `narrative 1`,
+        narrative: `Every night I would dream of reuniting with Sita, and each time I would wake up in a panicked sweat as the realisation came roaring back that I had lost her forever. I would then slog through the day under a crushing blanket of sadness, only to crawl back into bed knowing the cruel tricks my mind would once again play. I had no idea when this dreadful torment would end. I feared it never would.`,
         music: `personal 1`
     },
     lyrics: [
@@ -174,14 +174,10 @@ module.exports = {
     tasks: [
         {
             taskName: `annotations`,
-            workedHours: 0,
+            workedHours: 3,
             neededHours: 25,
             subtasks: [
-                {
-                    taskName: `split into dots`,
-                    workedHours: 0,
-                    neededHours: 2
-                }
+
             ]
         },
         {

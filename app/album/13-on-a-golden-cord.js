@@ -674,11 +674,7 @@ module.exports = {
             workedHours: 67,
             neededHours: 68,
             subtasks: [
-                {
-                    taskName: `split into dots`,
-                    workedHours: 0,
-                    neededHours: 3
-                }
+
             ]
         },
         {
