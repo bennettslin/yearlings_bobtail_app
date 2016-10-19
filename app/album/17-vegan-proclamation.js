@@ -4,7 +4,7 @@ module.exports = {
     title: {
         anchor: `Vegan Proclamation`,
         annotation: {
-            description: `While Sita was naturally a vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go vegan. I supported her during this transition by preparing vegan meals and abstaining from eating animal products in her presence. But it wasn't until after the last breakup that I vowed to become a vegan myself.`
+            description: `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go vegan. I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. Only after we stopped speaking to each other did I vow to become a vegan myself.`
         }
     },
     totalTime: 241,

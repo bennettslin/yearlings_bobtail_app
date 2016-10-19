@@ -10,8 +10,13 @@ module.exports = {
     },
     totalTime: 244,
     overviews: {
-        narrative: `Every night I would dream of reuniting with Sita, and each time I would wake up in a panicked sweat as the realisation came roaring back that I had lost her forever. I would then slog through the day under a crushing blanket of sadness, only to crawl back into bed knowing the cruel tricks my mind would once again play. I had no idea when this dreadful torment would end. I feared it never would.`,
-        music: `personal 1`
+        narrative: `Every night I dreamt of reuniting with Sita, only to wake up in a panicked sweat as the reality came roaring back that I had lost her forever. I would slog through the day under a crushing blanket of despair, then crawl back into bed with dread, awaiting the cruel tricks soon to be played by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
+        music: [
+            `This song is another carryover from the days of The Yearlings and was by far the fan favourite. I suppose it's telling that even when we were still together, my romantic song that I wrote for Sita was all about the regret I would feel as an old man at having lost her. During the years after we no longer spoke and I was trying hard to be good again, I would keep digging further back into my past to figure out where things went wrong. And so this last song of the album revisits the musical textures of all the others in reverse, ending with the autoharp and glockenspiel from the intro to`,
+            {
+                italic: `Didi.`
+            }
+        ],
     },
     lyrics: [
         [
@@ -69,7 +74,7 @@ module.exports = {
         [
             {
                 time: 74,
-                lyric: `My hundred thousandth dream, I kissed my senorita,`
+                lyric: `My hundred thousandth dream, I kissed my señorita,`
             },
             {
                 time: 80,
