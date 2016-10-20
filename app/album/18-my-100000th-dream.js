@@ -46,10 +46,10 @@ module.exports = {
                     `I took her shoulder as we drove from`,
                     {
                         anchor: `El Torito.`,
+                        properNoun: true,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `Sita worked as a hostess at El Torito, a Mexican chain restaurant. I would often pick her up when her shift was over, as I seem to be doing now in my dream.`
+                        }
                     }
                 ]
             },
@@ -108,6 +108,7 @@ module.exports = {
                     `on the`,
                     {
                         anchor: `Pampas`,
+                        properNoun: true,
                         annotation: {
                             description: `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the Pampas, the grassy lowlands spanning the southeastern end of South America.`
                         }
