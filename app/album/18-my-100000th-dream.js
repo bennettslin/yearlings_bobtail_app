@@ -4,9 +4,8 @@ module.exports = {
     title: {
         anchor: `My 100,000th Dream`,
         annotation: {
-            description: `I read that we have four dreams on average each night, which means that `
-        },
-        todo: true
+            description: `I once read that we typically dream four times per night. Over a lifetime, that's about 100,000 dreams. This song, then, is about the very last dream I'll ever dream.`
+        }
     },
     totalTime: 244,
     overviews: {
@@ -22,7 +21,16 @@ module.exports = {
         [
             {
                 time: 13,
-                lyric: `My hundred thousandth dream, I bumped into my Sita.`
+                lyric: [
+                    `My hundred thousandth dream, I`,
+                    {
+                        anchor: `bumped into my Sita.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 19,
@@ -34,7 +42,16 @@ module.exports = {
             },
             {
                 time: 27,
-                lyric: `I took her shoulder as we drove from El Torito.`
+                lyric: [
+                    `I took her shoulder as we drove from`,
+                    {
+                        anchor: `El Torito.`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 34,
@@ -52,7 +69,16 @@ module.exports = {
             },
             {
                 time: 49,
-                lyric: `Did I ever live another life?`
+                lyric: [
+                    `Did I ever`,
+                    {
+                        anchor: `live another life?`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 56,
@@ -78,7 +104,23 @@ module.exports = {
             },
             {
                 time: 80,
-                lyric: `on the pampas where the gopis played,`
+                lyric: [
+                    `on the`,
+                    {
+                        anchor: `Pampas`,
+                        annotation: {
+                            description: `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the Pampas, the grassy lowlands spanning the southeastern end of South America.`
+                        }
+                    },
+                    `where the`,
+                    {
+                        anchor: `gopis`,
+                        annotation: {
+                            description: `In Hindu mythology, the gopis are cow herdesses who are devotees of the god Krishna. I watched a lot of Bollywood movies with Sita, and now my dream is slowly turning into one, as the gopis sing and dance in the background.`
+                        }
+                    },
+                    `played,`
+                ]
             },
             {
                 time: 84,
@@ -126,7 +168,16 @@ module.exports = {
         [
             {
                 time: 163,
-                lyric: `My hundred thousandth dream, on the cliffs of El Cerrito,`
+                lyric: [
+                    `My hundred thousandth dream, on the`,
+                    {
+                        anchor: `cliffs of El Cerrito,`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 time: 169,
@@ -138,7 +189,17 @@ module.exports = {
             },
             {
                 time: 178,
-                lyric: `Why does my last thought in this world belong to Sita?`
+                lyric: [
+                    `Why does my`,
+                    {
+                        anchor: `last thought`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `in this world belong to Sita?`
+                ]
             },
             {
                 time: 183,
@@ -168,7 +229,15 @@ module.exports = {
             },
             {
                 time: 220,
-                lyric: `When you'll be mine?`
+                lyric: [
+                    {
+                        anchor: `When you'll be mine?`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
