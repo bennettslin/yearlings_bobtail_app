@@ -73,6 +73,7 @@ class App extends Component {
         this.handleScreenWidthSelect = this.handleScreenWidthSelect.bind(this)
         this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
+        this._onKeyPress = this._onKeyPress.bind(this)
 
         /**
          * TODO: Putting these hovered states in app for now rather than the
@@ -213,6 +214,10 @@ class App extends Component {
         this.handleWikiUrlSelect()
     }
 
+    _onKeyPress(e) {
+        console.error('e', e);
+    }
+
     _deselectAnnotationWithNoSelectedDots(dotKey) {
         const { selectedAnnotationIndex,
                 selectedSongIndex,
@@ -273,6 +278,7 @@ class App extends Component {
                 className="app"
                 onClick={this._onBodyClick}
             >
+                <input onKeyPress={this._onKeyPress} />
                 <Album
                     songs={songs}
                     albumTitle={title}

@@ -56,7 +56,7 @@ const DotButtonView = ({
     onMouseLeave
 
 }) => (
-    <div
+    <button
         className={`dot ${dotKey}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}`}
         onClick={onClick}
         onMouseEnter={onMouseEnter}
@@ -66,7 +66,7 @@ const DotButtonView = ({
         <div className="dot-text">
             {dotKey}
         </div>
-    </div>
+    </button>
 )
 
 export default DotButton

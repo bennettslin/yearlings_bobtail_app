@@ -32,6 +32,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `scrollbars in Chrome are weird`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `make annotations keyboard accessible`,
+            workedHours: 0,
+            neededHours: 5
+        },
+        {
             taskName: `Safari...`,
             workedHours: 0,
             neededHours: 2
