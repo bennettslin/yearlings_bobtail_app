@@ -1,7 +1,12 @@
 module.exports = {
     title: `Yearling's Bobtail`,
     overviews: {
-        narrative: `five things that changed my life`,
+        // Hi, I'm Bennett. end of my relationship,
+        // Narrowed down to five things that changed my life.
+        // Spent the next five years
+        narrative: `Hi, I'm Bennett. `,
+        // Wrote and recorded all the parts myself.
+        // Released in 2006.
         music: `personal yb`
     },
     pageStartingIndices: [0, 9],
