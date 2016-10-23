@@ -37,9 +37,9 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `make annotations keyboard accessible`,
+            taskName: `use scroll into view if needed npm package`,
             workedHours: 0,
-            neededHours: 5
+            neededHours: 2
         },
         {
             taskName: `Safari...`,
@@ -282,6 +282,11 @@ module.exports = {
             taskName: `don't allow lyric play button to be hoverable`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `make annotations keyboard accessible`,
+            workedHours: 5,
+            neededHours: 5
         }
     ]
 }
