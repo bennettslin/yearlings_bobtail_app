@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { selectSongIndex,
@@ -73,7 +74,7 @@ class App extends Component {
         this.handleScreenWidthSelect = this.handleScreenWidthSelect.bind(this)
         this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
-        this._onKeyPress = this._onKeyPress.bind(this)
+        this._onKeyDown = this._onKeyDown.bind(this)
 
         /**
          * TODO: Putting these hovered states in app for now rather than the
@@ -82,6 +83,8 @@ class App extends Component {
          * scroll.) Revisit whether this is the best idea.
          */
         this.state = {
+            accessedAnnotationIndex: props.selectedAnnotationIndex,
+            accessedAnnotationOutlined: false,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
             isNarrowScreen: false,
@@ -91,6 +94,11 @@ class App extends Component {
 
     componentWillMount() {
         this._assignLogFunctions()
+    }
+
+    componentDidMount() {
+        // Allows app to begin listening for keyboard events.
+        ReactDOM.findDOMNode(this.refs.app).focus()
     }
 
     _assignLogFunctions() {
@@ -139,6 +147,11 @@ class App extends Component {
                 this.handleOverviewSelect(e, DEFAULT_OVERVIEW_INDEX)
                 this.handleTimeSelect()
             }
+
+            this.setState({
+                accessedAnnotationIndex: 0,
+                accessedAnnotationOutlined: false
+            })
         }
     }
 
@@ -183,6 +196,20 @@ class App extends Component {
         SessionHelper.setInSession(SELECTED_ANNOTATION_INDEX, selectedIndex)
 
         this.handleWikiUrlSelect(e)
+
+        // Keep accessed index, even if annotation is deselected.
+        if (selectedIndex !== 0) {
+            this.setState({
+                accessedAnnotationIndex: selectedIndex,
+            })
+        }
+
+        // Remove outline if annotation was clicked.
+        if (e && e.type === 'click') {
+            this.setState({
+                accessedAnnotationOutlined: false
+            })
+        }
     }
 
     handleWikiUrlSelect(e, selectedWiki) {
@@ -212,10 +239,72 @@ class App extends Component {
     _onBodyClick(e) {
         this.handleAnnotationSelect()
         this.handleWikiUrlSelect()
+
+        this.setState({
+            accessedAnnotationOutlined: false
+        })
     }
 
-    _onKeyPress(e) {
-        console.error('e', e);
+    _onKeyDown(e) {
+        const { selectedAnnotationIndex,
+                selectedSongIndex,
+                songs } = this.props,
+            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+            annotationsLength = selectedSong.annotations.length
+
+        const { key: keyName } = e
+        let { accessedAnnotationIndex,
+              accessedAnnotationOutlined } = this.state
+
+        switch (keyName) {
+            case 'ArrowLeft':
+            case 'ArrowRight':
+
+                if (!selectedAnnotationIndex && !accessedAnnotationOutlined) {
+                    accessedAnnotationIndex = accessedAnnotationIndex || 1
+                } else {
+                    if (keyName === 'ArrowLeft') {
+                        accessedAnnotationIndex--
+                        if (accessedAnnotationIndex <= 0) {
+                            accessedAnnotationIndex = annotationsLength
+                        }
+                    } else if (keyName === 'ArrowRight') {
+                        accessedAnnotationIndex++
+                        if (accessedAnnotationIndex > annotationsLength) {
+                            accessedAnnotationIndex = 1
+                        }
+                    }
+                    if (selectedAnnotationIndex) {
+                        this.handleAnnotationSelect(e, accessedAnnotationIndex)
+                    }
+                }
+                accessedAnnotationOutlined = true
+            break;
+            case ' ':
+            case 'Enter':
+                // Select or deselect annotation, but keep access outline.
+                if (accessedAnnotationOutlined) {
+                    if (selectedAnnotationIndex) {
+                        this.handleAnnotationSelect()
+                    } else {
+                        this.handleAnnotationSelect(e, accessedAnnotationIndex)
+                    }
+                }
+                break;
+            case 'Escape':
+                // Deselect annotation, and lose access outline.
+                accessedAnnotationOutlined = false
+                if (selectedAnnotationIndex) {
+                    this.handleAnnotationSelect()
+                }
+                break;
+            default:
+        }
+
+        this.setState({
+            accessedAnnotationIndex,
+            accessedAnnotationOutlined
+        })
     }
 
     _deselectAnnotationWithNoSelectedDots(dotKey) {
@@ -268,23 +357,29 @@ class App extends Component {
                 selectedDotKeys,
                 selectedWikiUrl } = this.props,
 
-            { hoveredDotIndex,
+            { accessedAnnotationIndex,
+              accessedAnnotationOutlined,
+              hoveredDotIndex,
               hoveredLineIndex,
               selectedLyricColumnIndex,
               isNarrowScreen } = this.state
 
         return (
             <div
+                ref="app"
                 className="app"
                 onClick={this._onBodyClick}
+                onKeyDown={this._onKeyDown}
+                tabIndex="0"
             >
-                <input onKeyPress={this._onKeyPress} />
                 <Album
                     songs={songs}
                     albumTitle={title}
                     albumOverviews={overviews}
                     albumTasks={tasks}
 
+                    accessedAnnotationIndex={accessedAnnotationIndex}
+                    accessedAnnotationOutlined={accessedAnnotationOutlined}
                     selectedSongIndex={selectedSongIndex}
                     selectedOverviewIndex={selectedOverviewIndex}
                     selectedAnnotationIndex={selectedAnnotationIndex}

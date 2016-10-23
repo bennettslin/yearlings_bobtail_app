@@ -10,6 +10,8 @@ import { getIntersection } from 'helpers/dot-helper'
 const AnchorBlock = ({
 
     text,
+    accessedAnnotationIndex,
+    accessedAnnotationOutlined,
     selectedAnnotationIndex,
     selectedDotKeys,
     onAnchorClick,
@@ -23,6 +25,7 @@ const AnchorBlock = ({
             wiki } = text,
 
         isSelected = annotationIndex && annotationIndex === selectedAnnotationIndex,
+        isAccessOutlined = annotationIndex === accessedAnnotationIndex && accessedAnnotationOutlined,
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
 
         /**
@@ -36,6 +39,7 @@ const AnchorBlock = ({
     return (
         <AnchorBlockView {...other}
             hasTodo={todo}
+            isAccessOutlined={isAccessOutlined}
             isSelected={isSelected}
             dotKeys={intersectedDotKeys}
             anchorText={anchor}
@@ -56,6 +60,7 @@ const AnchorBlockView = ({
 
     // From controller.
     hasTodo,
+    isAccessOutlined,
     isSelected,
     dotKeys,
     anchorText,
@@ -67,7 +72,7 @@ const AnchorBlockView = ({
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
         { !beginsNewLine ? ' ' : null }
         <a
-            className={`anchor-block ${isSelected ? '' : 'enabled'}${hasTodo ? ' todo' : ''}`}
+            className={`anchor-block ${isAccessOutlined ? 'access-outlined' : ''} ${isSelected ? '' : 'enabled'}${hasTodo ? ' todo' : ''}`}
             onClick={onClick}
         >
             {isLyric ?
