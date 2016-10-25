@@ -15,3 +15,5 @@ Note: mobile will need a third class that is the counterpart to hovered. I haven
 
 Scores:
 Garryowen refrains
+
+https://www.npmjs.com/package/scroll-into-view-if-needed

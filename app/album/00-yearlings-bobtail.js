@@ -38,7 +38,7 @@ module.exports = {
         },
         {
             taskName: `use scroll into view if needed npm package`,
-            workedHours: 0,
+            workedHours: 1,
             neededHours: 2
         },
         {
@@ -47,7 +47,7 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `delay in annotation popup after scroll and then link clicked?`,
+            taskName: `delay in annotation popup after scroll and then link clicked? only in firefox, it seems`,
             workedHours: 0,
             neededHours: 1
         },

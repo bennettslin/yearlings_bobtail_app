@@ -24,7 +24,8 @@
     "react-dom": "^15.2.1",
     "react-redux": "^4.4.5",
     "react-router": "^2.6.0",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "scroll-into-view-if-needed": "^1.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.7.2",

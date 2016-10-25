@@ -401,6 +401,7 @@ module.exports = {
                         }
                     },
                     {
+                        // TODO: There is a mention of my Buddhism here.
                         anchor: `"Bless her, Godspeed…"`,
                         annotation: {
                             description: `In her gene pool, "here's not where some lesser gods peed." When I was a child, the idea of being watched over by inferior gods seemed a fitting rationale for my family's defective genes. After all, I felt insecure enough as it was about belonging to a different faith, one associated primarily with a race deemed inferior by society.`

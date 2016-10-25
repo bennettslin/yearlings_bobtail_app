@@ -590,6 +590,7 @@ module.exports = {
                         anchor: `Hollowscene`,
                         properNoun: true,
                         annotation: {
+                            // TODO: indie rock scene
                             description: `The Holocene is the current geological epoch that began with the first human settlements.`
                         }
                     },
