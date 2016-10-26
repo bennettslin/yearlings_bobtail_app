@@ -1,6 +1,6 @@
 import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
 
-// TODO: Missing portals for Ash Wednesday, Constellations, Look Back in Anger, and Cremated.
+// TODO: Missing portals for Ash Wednesday, Look Back in Anger, and Cremated.
 
 module.exports = {
     title: {
@@ -278,7 +278,7 @@ module.exports = {
                 right: [
                     `and so off her list,`,
                     {
-                        anchor: `sunken Tirpitz`,
+                        anchor: `sunken Tirpitz lies.`,
                         annotation: {
                             description: [
                                 `The Bismarck and the Tirpitz were sister battleships of the German navy in World War II.`,
@@ -286,10 +286,10 @@ module.exports = {
                                     italic: `The Man in the High Castle`
                                 },
                                 `is an alternate history novel in which the Axis powers won the war.`
-                            ]
+                            ],
+                            portal: `sunken_tirpitz`
                         }
-                    },
-                    `lies.`
+                    }
                 ]
             },
             {
