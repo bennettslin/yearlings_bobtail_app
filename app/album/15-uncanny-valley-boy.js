@@ -570,7 +570,14 @@ module.exports = {
             {
                 time: 152,
                 lyric: [
-                    `Stubborn harpies can't draw this contest`,
+                    `Stubborn`,
+                    {
+                        anchor: `harpies`,
+                        annotation: {
+                            portal: `harpies`
+                        }
+                    },
+                    `can't draw this contest`,
                     {
                         anchor: `to be one!`,
                         annotation: {
@@ -765,7 +772,6 @@ module.exports = {
             },
             {
                 time: 191,
-                // TODO: Didi portal.
                 lyric: [
                     `shouldn't you first be sure you've`,
                     {
@@ -777,7 +783,8 @@ module.exports = {
                                     italic: `Bildungsroman`
                                 },
                                 `is the protagonist's moral and psychological growth from youth to adulthood. Without this crucial development in character, there is no story to be told, a point to which my parents slyly allude here.`
-                            ]
+                            ],
+                            portal: `finally_become_someone`
                         }
                     }
                 ]

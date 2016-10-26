@@ -4,6 +4,7 @@ module.exports = {
         // Hi, I'm Bennett. end of my relationship,
         // Narrowed down to five things that changed my life.
         // Spent the next five years
+        // Ulysses of rock albums.
         narrative: `Hi, I'm Bennett. `,
         // Wrote and recorded all the parts myself.
         // Released in 2006.
@@ -31,6 +32,11 @@ module.exports = {
         require('./18-my-100000th-dream')
     ],
     tasks: [
+        {
+            taskName: `foreign characters in portal increase line height`,
+            workedHours: 0,
+            neededHours: 1
+        },
         {
             taskName: `scrollbars in Chrome are weird`,
             workedHours: 0,

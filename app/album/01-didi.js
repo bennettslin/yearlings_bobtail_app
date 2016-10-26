@@ -118,7 +118,8 @@ module.exports = {
                         anchor: `Safeway paper bag,`,
                         properNoun: true,
                         annotation: {
-                            description: `Since my pants were soiled, the nurse gave me a shopping bag to carry them in. Safeway is a supermarket chain located in the western and central United States.`
+                            description: `Since my pants were soiled, the nurse gave me a shopping bag to carry them in. Safeway is a supermarket chain located in the western and central United States.`,
+                            portal: `safeway_paper_bag`
                         }
                     }
                 ]
@@ -150,7 +151,7 @@ module.exports = {
                     {
                         time: 97,
                         lyric: {
-                            emphasis: `Don't little raisin fingers need to dry?`
+                            italic: `Don't little raisin fingers need to dry?`
                         }
                     }
                 ]
@@ -205,7 +206,15 @@ module.exports = {
             },
             {
                 time: 120,
-                lyric: `you'd finally become someone?`
+                lyric: [
+                    `you'd`,
+                    {
+                        anchor: `finally become someone?`,
+                        annotation: {
+                            portal: `finally_become_someone`
+                        }
+                    }
+                ]
             },
             {
                 unitMap: true,

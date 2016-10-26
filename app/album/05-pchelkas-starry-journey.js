@@ -153,7 +153,15 @@ module.exports = {
         [
             {
                 time: 38,
-                lyric: `Oh brother, when all you know is bleat,`
+                lyric: [
+                    `Oh brother, when all you`,
+                    {
+                        anchor: `know is bleat,`,
+                        annotation: {
+                            portal: `know_is_bleat`
+                        }
+                    }
+                ]
             },
             {
                 time: 40,

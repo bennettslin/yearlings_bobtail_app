@@ -126,7 +126,8 @@ module.exports = {
                     {
                         anchor: `littlest fuss will incite`,
                         annotation: {
-                            description: `Tristan would lash out in a spastic fury while blacking out, yet be perfectly collected by next morning. I came to see that his chaotic outbursts were in fact meticulously controlled, giving him a strange inner peace, and so I sought to indulge my drunken temper in the same manner.`
+                            description: `Tristan would lash out in a spastic fury while blacking out, yet be perfectly collected by next morning. I came to see that his chaotic outbursts were in fact meticulously controlled, giving him a strange inner peace, and so I sought to indulge my drunken temper in the same manner.`,
+                            portal: `lidless_vaseline_sits`
                         }
                     },
                     `your rage.`

@@ -100,7 +100,8 @@ module.exports = {
                         anchor: `Pampas`,
                         properNoun: true,
                         annotation: {
-                            description: `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the Pampas, the grassy lowlands spanning the southeastern end of South America.`
+                            description: `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the Pampas, the grassy lowlands spanning the southeastern end of South America.`,
+                            portal: `pampas`
                         }
                     },
                     `where the`,

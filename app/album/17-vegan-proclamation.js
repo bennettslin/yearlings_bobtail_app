@@ -280,8 +280,8 @@ module.exports = {
                     {
                         anchor: `swastikas`,
                         annotation: {
-                            // TODO: Grasshoppers portal
-                            description: `The swastika is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid any association with violence and hatred, modern-day Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
+                            description: `The swastika is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid any association with violence and hatred, modern-day Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`,
+                            portal: `swastikas`
                         }
                     },
                     `inside out…`
@@ -384,8 +384,15 @@ module.exports = {
         [
             {
                 time: 186,
-                // Ash Wednesday reference.
-                lyric: `The stardust marks us, Odin, sparks zip through our heads…`
+                lyric: [
+                    `The stardust marks us, Odin,`,
+                    {
+                        anchor: `sparks zip through our heads…`,
+                        annotation: {
+                            portal: `spark_zips`
+                        }
+                    }
+                ]
             },
             {
                 time: 194,
@@ -406,14 +413,14 @@ module.exports = {
             },
             {
                 time: 209,
-                // Odin reference
                 lyric: [
-                    `Our ashed heads bow from chivalry to our`,
+                    `Our ashed heads bow from`,
                     {
-                        anchor: `Siva's feet…`,
+                        anchor: `chivalry to our Siva's feet…`,
                         properNoun: true,
                         annotation: {
-                            description: `Nataraja, or "lord of dance," is a revered depiction of the Hindu god Siva as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
+                            description: `Nataraja, or "lord of dance," is a revered depiction of the Hindu god Siva as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`,
+                            portal: `chivalry`
                         }
                     }
                 ]

@@ -137,7 +137,13 @@ module.exports = {
             {
                 time: 48,
                 lyric: [
-                    `And I'd reflect inside withering`,
+                    `And I'd reflect inside`,
+                    {
+                        anchor: `withering`,
+                        annotation: {
+                            portal: `withering`
+                        }
+                    },
                     {
                         anchor: `amber eyes—`,
                         annotation: {

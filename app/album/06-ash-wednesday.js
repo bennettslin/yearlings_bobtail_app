@@ -48,7 +48,6 @@ module.exports = {
                                 backstory: true,
                                 narrative: true,
                             },
-                            portal: `hit_the_switch`
                         }
                     },
                     `our futile trip is done`
@@ -432,7 +431,16 @@ module.exports = {
             },
             {
                 time: 128,
-                lyric: `a spark zips through my head to be`
+                lyric: [
+                    `a`,
+                    {
+                        anchor: `spark zips through my head`,
+                        annotation: {
+                            portal: `spark_zips`
+                        }
+                    },
+                    `to be`
+                ]
             },
             {
                 time: 130,

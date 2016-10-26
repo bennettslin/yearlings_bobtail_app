@@ -425,7 +425,8 @@ module.exports = {
                     {
                         anchor: `suttee dust.`,
                         annotation: {
-                            description: `I imagined Sita by now to be fully immolated on the burnt rubble of our ruined relationship.`
+                            description: `I imagined Sita by now to be fully immolated on the burnt rubble of our ruined relationship.`,
+                            portal: `suttee_dust`
                         }
                     }
                 ]

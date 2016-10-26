@@ -1,5 +1,7 @@
 import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
 
+// TODO: Missing portals for Ash Wednesday, Constellations, Look Back in Anger, and Cremated.
+
 module.exports = {
     title: {
         anchor: `Grasshoppers Lie Heavy`,
@@ -37,9 +39,11 @@ module.exports = {
                             }
                         },
                         {
+                            // TODO: Separate 'pompous' anchor?
                             anchor: `pompous autumn waits.`,
                             annotation: {
-                                description: `In high school, I soldiered on with the same iffy persona to which I had tied myself years earlier in middle school. It just didn't seem possible to become a completely different person while surrounded by all the same classmates. But in my head, I was crafting a brand new persona that was raring to go at the earliest opportunity.`
+                                description: `In high school, I soldiered on with the same iffy persona to which I had tied myself years earlier in middle school. It just didn't seem possible to become a completely different person while surrounded by all the same classmates. But in my head, I was crafting a brand new persona that was raring to go at the earliest opportunity.`,
+                                portal: `pampas`
                             }
                         }
                     ]
@@ -167,14 +171,16 @@ module.exports = {
                         anchor: `Schwa stickers`,
                         properNoun: true,
                         annotation: {
-                            description: `Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on print media everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.`
+                            description: `Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on print media everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.`,
+                            portal: `swastikas`
                         }
                     },
                     `attached to your`,
                     {
                         anchor: `sci-fi paperback.`,
                         annotation: {
-                            description: `At the time, I was obsessed with Philip K. Dick's stories of altered states and dystopian worlds, and never left home without one of his novels under my arm. Sita would soon hear all about it on our first date.`
+                            description: `At the time, I was obsessed with Philip K. Dick's stories of altered states and dystopian worlds, and never left home without one of his novels under my arm. Sita would soon hear all about it on our first date.`,
+                            portal: `safeway_paper_bag`
                         }
                     }
                 ]
@@ -188,11 +194,20 @@ module.exports = {
             {
                 time: 48,
                 lyric: [
-                    `First date nosebleed spurs tales of`,
+                    `First date`,
+                    {
+                        // TODO: Move description over here?
+                        anchor: `nosebleed`,
+                        annotation: {
+                            portal: `know_is_bleat`
+                        }
+                    },
+                    `spurs tales of`,
                     {
                         anchor: `bare-knuckle defeats…`,
                         annotation: {
-                            description: `After getting a nosebleed on the first date, I recounted past fights that ended with me getting a bloody nose. Sita seemed intrigued by my rough-and-tumble past, even as I was honest that these were literal beatdowns in which I never threw a single punch.`
+                            description: `After getting a nosebleed on the first date, I recounted past fights that ended with me getting a bloody nose. Sita seemed intrigued by my rough-and-tumble past, even as I was honest that these were literal beatdowns in which I never threw a single punch.`,
+                            portal: `barnacle`
                         }
                     }
                 ]
@@ -305,7 +320,20 @@ module.exports = {
             },
             {
                 time: 104,
-                lyric: `chimneys weep sooty dust.`
+                lyric: [
+                    {
+                        anchor: `chimneys weep`,
+                        annotation: {
+                            portal: `chimney_sweep`
+                        }
+                    },
+                    {
+                        anchor: `sooty dust.`,
+                        annotation: {
+                            portal: `suttee_dust`
+                        }
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -371,7 +399,16 @@ module.exports = {
             },
             {
                 time: 120,
-                lyric: `as your heartbeats, her steps, race to first.`
+                lyric: [
+                    `as your`,
+                    {
+                        anchor: `heartbeats,`,
+                        annotation: {
+                            portal: `harpies`
+                        }
+                    },
+                    `her steps, race to first.`
+                ]
             },
             {
                 time: 125,
@@ -452,10 +489,8 @@ module.exports = {
                     {
                         anchor: `hit the switch.`,
                         annotation: {
-                            description: ``,
                             portal: `hit_the_switch`
-                        },
-                        todo: true
+                        }
                     }
                 ]
             },
@@ -466,7 +501,8 @@ module.exports = {
                     {
                         anchor: `lidless Vaseline sits.`,
                         annotation: {
-                            description: `I kept a jar of Vaseline by my bedside, which made masturbation quick and easy. Its last usage was obviously quite recent.`
+                            description: `I kept a jar of Vaseline by my bedside, which made masturbation quick and easy. Its last usage was obviously quite recent.`,
+                            portal: `lidless_vaseline_sits`
                         }
                     }
                 ]
@@ -550,7 +586,16 @@ module.exports = {
             },
             {
                 time: 178,
-                lyric: `in the everpresent scent of her trail.`
+                lyric: [
+                    `in the`,
+                    {
+                        anchor: `ever-present scent`,
+                        annotation: {
+                            portal: 'present_sent'
+                        }
+                    },
+                    `of her trail.`
+                ]
             },
             {
                 unitMap: true,
@@ -566,7 +611,8 @@ module.exports = {
                     {
                         anchor: `bell with a ring.`,
                         annotation: {
-                            description: `At the hospital, a bell is rung to indicate that a patient has been released from care and is returning to the waiting room. Also, "belle with a ring." The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows.`
+                            description: `At the hospital, a bell is rung to indicate that a patient has been released from care and is returning to the waiting room. Also, "belle with a ring." The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows.`,
+                            portal: `withering`
                         }
                     }
                 ]
@@ -623,11 +669,13 @@ module.exports = {
             {
                 time: 204,
                 lyric: [
+                    `You`,
                     {
-                        anchor: `You stand unsure.`,
+                        anchor: `stand unsure.`,
                         annotation: {
                             // todo: foreshadow
-                            description: `The night that we decided to have sex, I was suddenly overcome with a weary unease. As Sita lay naked under the covers, I stood forlornly by the bedside for what seemed like several minutes.`
+                            description: `The night that we decided to have sex, I was suddenly overcome with a weary unease. As Sita lay naked under the covers, I stood forlornly by the bedside for what seemed like several minutes.`,
+                            portal: `stand_onshore`
                         }
                     },
                     `She lures with a tease,`
@@ -680,12 +728,12 @@ module.exports = {
                 lyric: [
                     `from your`,
                     {
-                        // TODO: Reference Odin.
                         anchor: `Grace Darling's beacon`,
                         properNoun: true,
                         annotation: {
                             // TODO: Elaborate on how she rescued me.
-                            description: `Grace Darling was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26.`
+                            description: `Grace Darling was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26.`,
+                            portal: `grey_starling`
                         }
                     },
                     `light`,

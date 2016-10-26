@@ -400,7 +400,14 @@ module.exports = {
                             description: `British tradition holds that a kiss from a chimney sweep will bring good luck to a bride on her wedding day. In the Victorian era, however, the children who cleared soot from chimneys were often neglected orphans. Whatever fortunes they imparted to others, for themselves only a lifetime of ill health awaited.`
                         }
                     },
-                    `for this chimney sweep,`
+                    `for this`,
+                    {
+                        // TODO: Move description over here?
+                        anchor: `chimney sweep,`,
+                        annotation: {
+                            portal: `chimney_sweep`
+                        }
+                    }
                 ]
             },
             {

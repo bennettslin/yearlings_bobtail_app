@@ -599,8 +599,14 @@ module.exports = {
             {
                 time: 183,
                 lyric: [
-                    // TODO: Related to Cremated reference
-                    `In time with needle done, you'll write this`,
+                    `In time with`,
+                    {
+                        anchor: `needle done,`,
+                        annotation: {
+                            portal: `needle_done`
+                        }
+                    },
+                    `you'll write this`,
                     {
                         anchor: `book of yours.`,
                         annotation: {

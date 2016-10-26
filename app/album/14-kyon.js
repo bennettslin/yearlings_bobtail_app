@@ -51,9 +51,17 @@ module.exports = {
                 ]
             },
             {
-                // portal
                 time: 22,
-                lyric: `A present sent to her of a newborn…`
+                lyric: [
+                    `A`,
+                    {
+                        anchor: `present sent`,
+                        annotation: {
+                            portal: `present_sent`
+                        }
+                    },
+                    `to her of a newborn…`
+                ]
             },
             {
                 unitMap: true,

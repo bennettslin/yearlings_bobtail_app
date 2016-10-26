@@ -324,10 +324,10 @@ module.exports = {
                 time: 90,
                 centre: [
                     {
-                        // TODO: Willy portal.
                         anchor: `Needle done`,
                         annotation: {
-                            description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected. Fast-forward in time. Having just been told by Miriam that she's breaking up with me, I remain silent and sedated. I imagine myself as a terminally ill patient being allowed to die, as my favourite records play in the background.`
+                            description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected. Fast-forward in time. Having just been told by Miriam that she's breaking up with me, I remain silent and sedated. I imagine myself as a terminally ill patient being allowed to die, as my favourite records play in the background.`,
+                            portal: 'needle_done'
                         }
                     },
                     `will not retract,`
@@ -484,13 +484,13 @@ module.exports = {
                     },
                     `he gets his notice, short an`
                 ],
-                // Veggie wishbone. portal
                 right: [
                     `He's`,
                     {
                         anchor: `vegging with his boner shortened;`,
                         annotation: {
-                            description: `Flaccid and basking in a post-coital glow, I'm about to be blindsided by Miriam's true intention for this day's outing.`
+                            description: `Flaccid and basking in a post-coital glow, I'm about to be blindsided by Miriam's true intention for this day's outing.`,
+                            portal: `veggie_wishbone`
                         }
                     }
                 ]

@@ -28,6 +28,7 @@ const TextUnit = ({
                 <i>
                     <TextBlock {...other}
                         text={text.italic}
+                        selectedDotKeys={selectedDotKeys}
                     />
                 </i>
             )

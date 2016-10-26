@@ -127,7 +127,8 @@ module.exports = {
                                 {
                                     italic: `Ulysses.`
                                 }
-                            ]
+                            ],
+                            portal: `barnacle`
                         }
                     },
                     `minds`
@@ -522,7 +523,8 @@ module.exports = {
                     {
                         anchor: `veggie wishbone's short end`,
                         annotation: {
-                            description: `Sita took me to a vegetarian restaurant where she ordered a dish resembling a portion of chicken, complete with sesame-stick wishbone. When we cracked it, Sita got the longer end. Needless to say, my wish was not granted.`
+                            description: `Sita took me to a vegetarian restaurant where she ordered a dish resembling a portion of chicken, complete with sesame-stick wishbone. When we cracked it, Sita got the longer end. Needless to say, my wish was not granted.`,
+                            portal: `veggie_wishbone`
                         }
                     }
                 ]

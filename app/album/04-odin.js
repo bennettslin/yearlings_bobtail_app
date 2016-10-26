@@ -299,7 +299,7 @@ module.exports = {
                         },
                     }
                 ],
-                // TODO: Future reference to Sita?
+                // TODO: Portal: Future reference to Sita?
                 right: `To dreams of whom does each one cave in`
             },
             {
@@ -501,8 +501,16 @@ module.exports = {
             },
             {
                 time: 102,
-                // TODO: reference to stand unsure, revisit whether to have "keen to drift"
-                left: `to stand onshore keen to drift if shark swarms withheld.`,
+                left: [
+                    `to`,
+                    {
+                        anchor: `stand onshore`,
+                        annotation: {
+                            portal: `stand_onshore`
+                        }
+                    },
+                    `keen to drift if shark swarms withheld.`
+                ],
                 // TODO: reference to M
                 right: `who cannot warm he who didn't impart warmth himself.`
             },
@@ -527,20 +535,19 @@ module.exports = {
             },
             {
                 time: 107,
-                left: [
-                    `shivering for`,
-                    {
-                        anchor: `shivs unsheathed.`,
-                        // TODO: Reference to shanks in Kyon?
-                        annotation: {
-                            description: `A shiv is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved.`
-                        }
+                left: {
+                    anchor: `shivering for shivs unsheathed.`,
+                    // TODO: Reference to shanks in Kyon?
+                    annotation: {
+                        description: `A shiv is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved.`,
+                        portal: `chivalry`
                     }
-                ],
+                },
                 right: {
                     anchor: `shivaree towards shivah seat`,
                     annotation: {
-                        description: `Shivaree is a French folk custom in which a crowd loudly performs a mock serenade outside the home of newlyweds. Sitting shivah is a week-long mourning period in Judaism after a close relative has passed away. Here again, I lament that not being born Jewish has lost my chance for a lifetime with Sasha.`
+                        description: `Shivaree is a French folk custom in which a crowd loudly performs a mock serenade outside the home of newlyweds. Sitting shivah is a week-long mourning period in Judaism after a close relative has passed away. Here again, I lament that not being born Jewish has lost my chance for a lifetime with Sasha.`,
+                        portal: `chivalry`
                     }
                 }
             },
@@ -696,7 +703,15 @@ module.exports = {
                         }
                     }
                 ],
-                right: `Though, no grey starling's beak`
+                right: [
+                    `Though, no`,
+                    {
+                        anchor: `grey starling's beak`,
+                        annotation: {
+                            portal: `grey_starling`
+                        }
+                    }
+                ]
             },
             {
                 time: 168,
