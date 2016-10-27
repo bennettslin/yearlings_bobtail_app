@@ -288,6 +288,11 @@ module.exports = {
             taskName: `make annotations keyboard accessible`,
             workedHours: 5,
             neededHours: 5
+        },
+        {
+            taskName: `pass accessible class to dot stanzas`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

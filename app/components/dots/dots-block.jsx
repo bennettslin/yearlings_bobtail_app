@@ -48,6 +48,7 @@ const DotsBlockView = ({
     isInteractable,
 
 ...other }) => (
+
     <span className={`dots-block${isInteractable ? ' interactable' : ''}`}>
         {ALL_DOT_KEYS.map((dotKey, index) => {
             const isSelected = selectedDotKeys[dotKey],

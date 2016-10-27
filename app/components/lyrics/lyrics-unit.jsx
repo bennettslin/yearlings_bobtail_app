@@ -67,9 +67,6 @@ const LyricsUnitView = ({
     // From props.
     isTitleUnit,
     stanzaArray,
-    selectedAnnotationIndex,
-    selectedDotKeys,
-    onAnnotationClick,
 
     // From controller.
     unitClass,
@@ -109,9 +106,6 @@ const LyricsUnitView = ({
                     <LyricsStanza {...other}
                         stanzaArray={stanzaArray}
                         sectionClass={className}
-                        selectedAnnotationIndex={selectedAnnotationIndex}
-                        selectedDotKeys={selectedDotKeys}
-                        onAnnotationClick={onAnnotationClick}
                     />
                 )
             }
@@ -137,11 +131,8 @@ const LyricsUnitView = ({
             }
             {dotStanza ?
                 <div className={`stanza-block dot ${isDotOnly ? 'only' : 'shared'}`}>
-                    <DotStanza
-                        selectedAnnotationIndex={selectedAnnotationIndex}
-                        selectedDotKeys={selectedDotKeys}
+                    <DotStanza {...other}
                         dotStanzaObject={dotStanza}
-                        onAnnotationClick={onAnnotationClick}
                     />
                 </div> : null
             }
