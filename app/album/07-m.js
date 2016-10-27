@@ -593,6 +593,31 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `post-album annotations`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `include references`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `sort out past and present tense`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `separate annotations into dot categories`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `work out narrative order`,
             workedHours: 2,
             neededHours: 2,
@@ -600,10 +625,7 @@ module.exports = {
         {
             taskName: `annotations`,
             workedHours: 33,
-            neededHours: 33,
-            subtasks: [
-
-            ]
+            neededHours: 33
         },
         {
             taskName: `illustrations`,

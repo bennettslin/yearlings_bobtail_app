@@ -666,17 +666,39 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `post-album annotations`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `include references`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `sort out past and present tense`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `separate annotations into dot categories`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `restructure lyrics`,
             workedHours: 1,
             neededHours: 1
         },
         {
             taskName: `annotations`,
-            workedHours: 67,
-            neededHours: 68,
-            subtasks: [
-
-            ]
+            workedHours: 68,
+            neededHours: 68
         },
         {
             // Drunken me holds gold bracelet over kid's head in the morning.

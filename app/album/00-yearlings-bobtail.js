@@ -33,18 +33,23 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `foreign characters in portal increase line height`,
+            taskName: `write album overviews`,
             workedHours: 0,
-            neededHours: 1
+            neededHours: 6
         },
         {
-            taskName: `scrollbars in Chrome are weird`,
+            taskName: `foreign characters in portal increase line height`,
             workedHours: 0,
             neededHours: 1
         },
         {
             taskName: `use scroll into view if needed npm package`,
             workedHours: 1,
+            neededHours: 2
+        },
+        {
+            taskName: `scroll played lyric into view`,
+            workedHours: 0,
             neededHours: 2
         },
         {
@@ -63,16 +68,6 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `scroll played lyric into view`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `show notated scores`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `figure out best way to do portals`,
             workedHours: 0,
             neededHours: 3
@@ -81,21 +76,6 @@ module.exports = {
             taskName: `make radio buttons float`,
             workedHours: 0,
             neededHours: 2
-        },
-        {
-            taskName: `refactor to use dot index rather than key`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `change every "one" to "you"`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `write album overviews`,
-            workedHours: 0,
-            neededHours: 6
         },
         {
             taskName: `make interactable superclass`,
@@ -107,6 +87,21 @@ module.exports = {
             workedHours: 0,
             neededHours: 3
         },
+        // {
+        //     taskName: `refactor to use dot index rather than key`,
+        //     workedHours: 0,
+        //     neededHours: 2
+        // },
+        // {
+        //     taskName: `show notated scores`,
+        //     workedHours: 0,
+        //     neededHours: 3
+        // },
+        // {
+        //     taskName: `change every "one" to "you"`,
+        //     workedHours: 0,
+        //     neededHours: 1
+        // },
         {
             taskName: `refactor to get album objects`,
             workedHours: 3,
