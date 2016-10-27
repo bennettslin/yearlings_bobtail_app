@@ -1,6 +1,6 @@
 import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
 
-// TODO: Missing portals for Ash Wednesday, Look Back in Anger, and Cremated.
+// TODO: Missing portals for Ash Wednesday, and Look Back in Anger. Is 'down the steps' a portal?
 
 module.exports = {
     title: {
@@ -446,7 +446,12 @@ module.exports = {
                             description: `Shivering from the winter chill, Sita tucks her hand underneath my arm as she invites herself into my apartment. And just like that, I am once again on guard, second-guessing everything I say and do.`
                         }
                     },
-                    `Key turned,`,
+                    {
+                        anchor: `Key turned,`,
+                        annotation: {
+                            portal: `key_turned`
+                        }
+                    },
                     {
                         anchor: `returned to your guard…`,
                         annotation: {

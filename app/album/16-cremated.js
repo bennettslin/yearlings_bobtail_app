@@ -53,7 +53,13 @@ module.exports = {
                             description: `Driving in her car, Miriam and I arrive at a secluded spot on a cliff overlooking the San Francisco Bay.`
                         }
                     },
-                    `key turned`
+                    {
+                        // TODO: There are actually two 'key turned's in this song.
+                        anchor: `key turned`,
+                        annotation: {
+                            portal: `key_turned`
+                        }
+                    }
                 ]
             },
             {
