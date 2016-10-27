@@ -118,7 +118,14 @@ module.exports = {
                         anchor: `Safeway paper bag,`,
                         properNoun: true,
                         annotation: {
-                            description: `Since my pants were soiled, the nurse gave me a shopping bag to carry them in. Safeway is a supermarket chain located in the western and central United States.`,
+                            description: [
+                                `Since my pants were soiled, the nurse gave me a shopping bag to carry them in.`,
+                                {
+                                    anchor: `Safeway`,
+                                    wiki: `Safeway_Inc.`
+                                },
+                                `is a supermarket chain located in the western and central United States.`
+                            ],
                             portal: `safeway_paper_bag`
                         }
                     }

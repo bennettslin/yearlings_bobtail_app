@@ -312,8 +312,13 @@ module.exports = {
                     {
                         anchor: `talk Canuck,`,
                         annotation: {
-                            description: `The slang term Canuck refers to a Canadian. After the chokehold incident, I would clench my jaw to prevent it from locking whenever I spoke. This developed into a peculiar habit of pronunciation that some to this day mistake for a Canadian accent.`,
-                            reference: `https://en.wikipedia.org/wiki/Canadian_raising`
+                            description: [
+                                `The slang term Canuck refers to a Canadian. After the chokehold incident, I would clench my jaw to prevent it from locking whenever I spoke. This developed into a peculiar habit of pronunciation that some to this day mistake for a`,
+                                {
+                                    anchor: `Canadian accent.`,
+                                    wiki: `Canadian_raising`
+                                }
+                            ]
                         }
                     }
                 ]

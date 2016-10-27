@@ -260,8 +260,14 @@ module.exports = {
                     {
                         anchor: `Red pouches unspent`,
                         annotation: {
-                            description: `In East Asian cultures, adult relatives give monetary gifts to children sealed in red envelopes. My parents insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
-                            reference: `https://en.wikipedia.org/wiki/Red_envelope`
+                            description: [
+                                `In East Asian cultures, adult relatives give monetary gifts to children sealed in`,
+                                {
+                                    anchor: `red envelopes.`,
+                                    wiki: `Red_envelope`
+                                },
+                                `My parents insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`
+                            ]
                         }
                     },
                     `for years, at once counted and sent,`
@@ -398,8 +404,14 @@ module.exports = {
                     {
                         anchor: `roots unknown to them.`,
                         annotation: {
-                            description: `I didn't know this at the time, but the notion of "star people" was a New Age belief popular in the 1970s. Like Beyonders, star people arrived on Earth with no recollection of their true origin. Undoubtedly, the letters from RI Research drew much of their material from this body of thought.`,
-                            reference: `https://en.wikipedia.org/wiki/Star_people_(New_Age_belief)`
+                            description: [
+                                `I didn't know this at the time, but the notion of`,
+                                {
+                                    anchor: `"star people"`,
+                                    wiki: `Star_people_(New_Age_belief)`
+                                },
+                                `was a New Age belief popular in the 1970s. Like Beyonders, star people arrived on Earth with no recollection of their true origin. Undoubtedly, the letters from RI Research drew much of their material from this body of thought.`
+                            ]
                         }
                     }
                 ]
@@ -621,9 +633,12 @@ module.exports = {
                                 {
                                     italic: `"marche,"`
                                 },
-                                `meaning "go." After the territory was ceded to the British, this term continued in English as "mush."`
-                                ],
-                            reference: `https://en.wikipedia.org/wiki/Mushing`
+                                `meaning "go." After the territory was ceded to the British, this term continued in English as`,
+                                {
+                                    anchor: `"mush."`,
+                                    wiki: `Mushing`
+                                }
+                            ]
                         }
                     },
                     {
