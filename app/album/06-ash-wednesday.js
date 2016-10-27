@@ -123,8 +123,14 @@ module.exports = {
                     {
                         anchor: `laid Tourette's,`,
                         annotation: {
-                            description: `Like those with Tourette syndrome who suffer from uncontrollable tics, we said and did things on impulse during the breakup. Also, Jesus was "laid to rest" on the first day…`,
-                            reference: `https://en.wikipedia.org/wiki/Tourette_syndrome`
+                            description: [
+                                `Like those with`,
+                                {
+                                    anchor: `Tourette syndrome`,
+                                    wiki: `Tourette_syndrome`
+                                },
+                                `who suffer from uncontrollable tics, we said and did things on impulse during the breakup. Also, Jesus was "laid to rest" on the first day…`
+                            ]
                         }
                     },
                     `next regrets,`,
@@ -259,8 +265,14 @@ module.exports = {
                     {
                         anchor: `outside her Shelta,`,
                         annotation: {
-                            description: `The Irish Travellers, a predominantly Catholic ethnic group, speak a cryptic language known as Shelta that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."`,
-                            reference: `https://en.wikipedia.org/wiki/Shelta`
+                            description: [
+                                `The Irish Travellers, a predominantly Catholic ethnic group, speak a cryptic language known as`,
+                                {
+                                    anchor: `Shelta`,
+                                    wiki: `Shelta`
+                                },
+                                `that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."`
+                            ]
                         }
                     }
                 ]
@@ -272,8 +284,14 @@ module.exports = {
                     {
                         anchor: `famous raincoat`,
                         annotation: {
-                            description: `Catherine introduced me to the music of Leonard Cohen. It was her impassioned reading of his song "Famous Blue Raincoat" that finally helped me to understand the heights that great lyrics can reach.`,
-                            reference: `https://en.wikipedia.org/wiki/Famous_Blue_Raincoat`
+                            description: [
+                                `Catherine introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
+                                {
+                                    anchor: `"Famous Blue Raincoat"`,
+                                    wiki: `Famous_Blue_Raincoat`
+                                },
+                                `that finally helped me to understand the heights that great lyrics can reach.`
+                            ]
                         }
                     },
                     {
@@ -291,8 +309,14 @@ module.exports = {
                     {
                         anchor: `girl in glasses`,
                         annotation: {
-                            description: `The critic Dorothy Parker, whose wit Catherine admired, famously quipped that "men seldom make passes at girls who wear glasses."`,
-                            reference: `https://en.wikipedia.org/wiki/Dorothy_Parker`
+                            description: [
+                                `The critic`,
+                                {
+                                    anchor: `Dorothy Parker,`,
+                                    wiki: `Dorothy_Parker`
+                                },
+                                `whose wit Catherine admired, famously quipped that "men seldom make passes at girls who wear glasses."`
+                            ]
                         }
                     },
                     {
