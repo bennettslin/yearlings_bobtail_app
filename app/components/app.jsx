@@ -149,9 +149,12 @@ class App extends Component {
                 this.handleTimeSelect()
             }
 
+            /**
+             * Keep annotation anchor access outlined if already so, and just
+             * set the index to 1. Otherwise set it to 0.
+             */
             this.setState({
-                accessedAnnotationIndex: 0,
-                accessedAnnotationOutlined: false
+                accessedAnnotationIndex: this.state.accessedAnnotationOutlined ? 1 : 0
             })
         }
     }

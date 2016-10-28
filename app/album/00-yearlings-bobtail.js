@@ -43,11 +43,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `use scroll into view if needed npm package`,
-            workedHours: 1,
-            neededHours: 2
-        },
-        {
             taskName: `scroll played lyric into view`,
             workedHours: 0,
             neededHours: 2
@@ -298,6 +293,11 @@ module.exports = {
             taskName: `wiki in italic not recognised`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `use scroll into view if needed npm package`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
