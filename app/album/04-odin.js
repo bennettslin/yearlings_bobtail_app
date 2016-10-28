@@ -469,7 +469,10 @@ module.exports = {
                             description: [
                                 `The Cumaean Sibyl was a Greek prophetess who was granted immortality but not eternal youth. T.S. Eliot's poem`,
                                 {
-                                    italic: `The Waste Land`
+                                    italic: {
+                                        anchor: `The Waste Land`,
+                                        wiki: `The_Waste_Land`
+                                    }
                                 },
                                 `begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants most. She replies that she wants most to die.`
                             ]
@@ -546,7 +549,18 @@ module.exports = {
                 right: {
                     anchor: `shivaree towards shivah seat`,
                     annotation: {
-                        description: `Shivaree is a French folk custom in which a crowd loudly performs a mock serenade outside the home of newlyweds. Sitting shivah is a week-long mourning period in Judaism after a close relative has passed away. Here again, I lament that not being born Jewish has lost my chance for a lifetime with Sasha.`,
+                        description: [
+                            {
+                                anchor: `Shivaree`,
+                                wiki: `Shivaree`
+                            },
+                            `is a French folk custom in which a crowd loudly performs a mock serenade outside the home of newlyweds. Sitting`,
+                            {
+                                anchor: `shivah`,
+                                wiki: `Shiva_(Judaism)`
+                            },
+                            `is a week-long mourning period in Judaism after a close relative has passed away. Here again, I lament that not being born Jewish has lost my chance for a lifetime with Sasha.`
+                        ],
                         portal: `chivalry`
                     }
                 }
@@ -760,7 +774,14 @@ module.exports = {
                     {
                         anchor: `mermaids smile`,
                         annotation: {
-                            description: `T.S. Eliot's "The Love Song of J. Alfred Prufrock" examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they do not sing for him. Similarly, while my resignation has turned the sea serpents into smiling mermaids, they do not smile for me.`
+                            description: [
+                                `T.S. Eliot's`,
+                                {
+                                    anchor: `"The Love Song of J. Alfred Prufrock"`,
+                                    wiki: `The_Love_Song_of_J._Alfred_Prufrock`
+                                },
+                                `examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they do not sing for him. Similarly, while my resignation has turned the sea serpents into smiling mermaids, they do not smile for me.`
+                            ]
                         }
                     },
                     `past a`,
@@ -777,7 +798,13 @@ module.exports = {
                         anchor: `Thursday's child`,
                         properNoun: true,
                         annotation: {
-                            description: `"Monday's Child" is a nursery rhyme that predicts a child's fortune based on day of birth. Wednesday is literally "Odin's day" in Old English, and I was born on a Thursday. The rhyme promises that "Thursday's child has far to go," and indeed, the distance I had left to cover felt dispiritingly vast. Still, I was now one day closer than when the day began…`
+                            description: [
+                                {
+                                    anchor: `"Monday's Child"`,
+                                    wiki: `Monday%27s_Child`
+                                },
+                                `is a nursery rhyme that predicts a child's fortune based on day of birth. Wednesday is literally "Odin's day" in Old English, and I was born on a Thursday. The rhyme promises that "Thursday's child has far to go," and indeed, the distance I had left to cover felt dispiritingly vast. Still, I was now one day closer than when the day began…`
+                            ]
                         }
                     },
                     `has a mile less far to go…`

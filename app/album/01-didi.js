@@ -9,7 +9,12 @@ module.exports = {
                 {
                     italic: `didi`
                 },
-                `means "little brother." While my family is from Taiwan, the Chinese took over the island in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.`
+                `means "little brother." While my family is from`,
+                {
+                    anchor: `Taiwan,`,
+                    wiki: `Taiwan`
+                },
+                `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.`
             ]
         }
     },
@@ -19,11 +24,17 @@ module.exports = {
         music: [
             `James Joyce's novel`,
             {
-                italic: `A Portrait of the Artist as a Young Man`
+                italic: {
+                    anchor: `A Portrait of the Artist as a Young Man`,
+                    wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
+                }
             },
             `begins in the simple prose of a child, so I did the same for this first song of the album, which is sung from my sister's perspective. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to The Beach Boys'`,
             {
-                italic: `Pet Sounds.`
+                italic: {
+                    anchor: `Pet Sounds.`,
+                    wiki: `Pet_Sounds`
+                }
             }
         ]
     },
