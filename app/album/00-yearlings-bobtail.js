@@ -33,14 +33,14 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `scroll lyrics to top upon song change, regardless of access outline`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `write album overviews`,
             workedHours: 0,
             neededHours: 6
-        },
-        {
-            taskName: `foreign characters in portal increase line height`,
-            workedHours: 0,
-            neededHours: 1
         },
         {
             taskName: `scroll played lyric into view`,
@@ -298,6 +298,11 @@ module.exports = {
             taskName: `use scroll into view if needed npm package`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `foreign characters in portal increase line height`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
