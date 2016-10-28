@@ -29,6 +29,7 @@ const DotStanza = ({
 
     return (shouldShow ?
         <DotStanzaView
+            annotationIndex={annotationIndex}
             isSelected={isSelected}
             isAccessOutlined={isAccessOutlined}
             dotKeys={dotKeys}

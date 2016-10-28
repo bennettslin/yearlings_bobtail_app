@@ -250,7 +250,7 @@ class App extends Component {
                 selectedSongIndex,
                 songs } = this.props,
             selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
-            annotationsLength = selectedSong.annotations.length
+            annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0
 
         const { key: keyName } = e
         let { accessedAnnotationIndex,

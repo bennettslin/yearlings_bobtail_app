@@ -41,6 +41,7 @@ const AnchorBlock = ({
             hasTodo={todo}
             isAccessOutlined={isAccessOutlined}
             isSelected={isSelected}
+            annotationIndex={annotationIndex}
             dotKeys={intersectedDotKeys}
             anchorText={anchor}
             onClick={onClick}
@@ -62,6 +63,7 @@ const AnchorBlockView = ({
     hasTodo,
     isAccessOutlined,
     isSelected,
+    annotationIndex,
     dotKeys,
     anchorText,
     onClick
@@ -72,7 +74,7 @@ const AnchorBlockView = ({
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
         { !beginsNewLine ? ' ' : null }
         <a
-            className={`anchor-block${isAccessOutlined ? ' access-outlined' : ''}${isSelected ? '' : ' enabled'}${hasTodo ? ' todo' : ''}`}
+            className={`anchor-block annotation-${annotationIndex}${isAccessOutlined ? ' access-outlined' : ''}${isSelected ? '' : ' enabled'}${hasTodo ? ' todo' : ''}`}
             onClick={onClick}
         >
             {isLyric ?
