@@ -19,6 +19,7 @@ import AlbumHelper from 'helpers/album-view-helper'
 import { intersects } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
 import SessionHelper from 'helpers/session-helper'
+import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 
 /*********
  * STORE *
@@ -254,7 +255,9 @@ class App extends Component {
 
         const { key: keyName } = e
         let { accessedAnnotationIndex,
-              accessedAnnotationOutlined } = this.state
+              accessedAnnotationOutlined } = this.state,
+            willSelectAnnotation = false,
+            willScrollToAnchor = false
 
         switch (keyName) {
             case 'ArrowLeft':
@@ -263,6 +266,7 @@ class App extends Component {
                 if (!selectedAnnotationIndex && !accessedAnnotationOutlined) {
                     accessedAnnotationIndex = accessedAnnotationIndex || 1
                 } else {
+                    willScrollToAnchor = true
                     if (keyName === 'ArrowLeft') {
                         accessedAnnotationIndex--
                         if (accessedAnnotationIndex <= 0) {
@@ -275,7 +279,7 @@ class App extends Component {
                         }
                     }
                     if (selectedAnnotationIndex) {
-                        this.handleAnnotationSelect(e, accessedAnnotationIndex)
+                        willSelectAnnotation = true
                     }
                 }
                 accessedAnnotationOutlined = true
@@ -287,7 +291,8 @@ class App extends Component {
                     if (selectedAnnotationIndex) {
                         this.handleAnnotationSelect()
                     } else {
-                        this.handleAnnotationSelect(e, accessedAnnotationIndex)
+                        willScrollToAnchor = true
+                        willSelectAnnotation = true
                     }
                 }
                 break;
@@ -299,6 +304,19 @@ class App extends Component {
                 }
                 break;
             default:
+        }
+
+        if (willSelectAnnotation) {
+            this.handleAnnotationSelect(e, accessedAnnotationIndex)
+        }
+
+        if (willScrollToAnchor) {
+            const annotationAnchor = document.getElementsByClassName(`annotation-${accessedAnnotationIndex}`)[0]
+            if (annotationAnchor) {
+                scrollIntoViewIfNeeded(annotationAnchor, false, {
+                    duration: 100
+                })
+            }
         }
 
         this.setState({
