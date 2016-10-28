@@ -805,11 +805,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Ash Wednesday portal`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `Look Back portal`,
             workedHours: 0,
             neededHours: 1
