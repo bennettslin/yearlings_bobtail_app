@@ -7,8 +7,12 @@ export const findKeyInObject = (key, object) => {
         return object.reduce((keyFound, element) => {
             return keyFound || findKeyInObject(key, element)
         }, false)
+    } else if (typeof object === 'object') {
+        return Object.keys(object).reduce((keyFound, currentKey) => {
+            return keyFound || !!object[key] || findKeyInObject(key, object[currentKey])
+        }, false)
     } else {
-        return !!object[key]
+        return false
     }
 }
 

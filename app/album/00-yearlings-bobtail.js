@@ -33,11 +33,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `wiki in italic not recognised`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `write album overviews`,
             workedHours: 0,
             neededHours: 6
@@ -296,6 +291,11 @@ module.exports = {
         },
         {
             taskName: `pass accessible class to dot stanzas`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `wiki in italic not recognised`,
             workedHours: 1,
             neededHours: 1
         }
