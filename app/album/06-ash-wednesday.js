@@ -4,7 +4,13 @@ module.exports = {
     title: {
         anchor: `Ash Wednesday`,
         annotation: {
-            description: `Ash Wednesday is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
+            description: [
+                {
+                    anchor: `Ash Wednesday`,
+                    wiki: `Ash_Wednesday`
+                },
+                `is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
+            ]
         }
     },
     totalTime: 163,
@@ -325,24 +331,30 @@ module.exports = {
                             description: [
                                 `Having decided to win Catherine back by reading more books, I began with those we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's earlier novel`,
                                 {
-                                    italic: `Beautiful Losers,`
+                                    italic: {
+                                        anchor: `Beautiful Losers,`,
+                                        wiki: `Beautiful_Losers`
+                                    }
                                 },
                                 `particularly in its line, "Did you ever go clear?"`
-                            ],
-                            reference: `https://en.wikipedia.org/wiki/Beautiful_Losers`
+                            ]
                         }
                     },
                     {
                         anchor: `my Tekakwitha—`,
                         annotation: {
                             description: [
-                                `The story of Kateri Tekakwitha, the Catholic Church's first Native American saint, figures prominently in`,
+                                `The story of`,
+                                {
+                                    anchor: `Kateri Tekakwitha,`,
+                                    wiki: `Kateri_Tekakwitha`
+                                },
+                                `the Catholic Church's first Native American saint, figures prominently in`,
                                 {
                                     italic: `Beautiful Losers.`
                                 },
                                 `I always assumed that "going clear" was a reference to the legend that Tekakwitha's smallpox scars miraculously vanished upon her death.`
-                            ],
-                            reference: `https://en.wikipedia.org/wiki/Kateri_Tekakwitha`
+                            ]
                         }
                     }
 
@@ -373,8 +385,7 @@ module.exports = {
                     {
                         anchor: `faked this "X,"`,
                         annotation: {
-                            description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X. Also, since Catherine insisted on going no further than kissing and petting, I would "fake the sex" for myself by masturbating afterwards.`,
-                            reference: `https://en.wikipedia.org/wiki/Ash_Wednesday`
+                            description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X. Also, since Catherine insisted on going no further than kissing and petting, I would "fake the sex" for myself by masturbating afterwards.`
                         }
                     },
                     `I should confess,`
@@ -403,8 +414,13 @@ module.exports = {
                     {
                         anchor: `burn my palms,`,
                         annotation: {
-                            description: `The ash used comes from burning the palm branches that were blessed on the previous year's Palm Sunday.`,
-                            reference: `https://en.wikipedia.org/wiki/Palm_Sunday`
+                            description: [
+                                `The ash used comes from burning the palm branches that were blessed on the previous year's`,
+                                {
+                                    anchor: `Palm Sunday.`,
+                                    wiki: `Palm_Sunday`
+                                }
+                            ]
                         }
                     }
                 ]
@@ -423,8 +439,13 @@ module.exports = {
                                 anchor: `Catherine vaut bien une messe…`,
                                 properNoun: true,
                                 annotation: {
-                                    description: `Henry IV was born a Protestant but converted to Catholicism to gain the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that could get Catherine to stay.`,
-                                    reference: `https://en.wikipedia.org/wiki/Henry_IV_of_France`
+                                    description: [
+                                        {
+                                            anchor: `Henry IV`,
+                                            wiki: `Henry_IV_of_France`
+                                        },
+                                        `was born a Protestant but converted to Catholicism to gain the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that could get Catherine to stay.`
+                                    ]
                                 }
                             }
                         ],

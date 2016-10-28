@@ -68,8 +68,14 @@ module.exports = {
                     {
                         anchor: `whispures a low sigh, bein'…`,
                         annotation: {
-                            description: `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the role played by psychedelic drugs throughout history that had never been taught to me in school. One theory is that manna from heaven, based on its description in the Bible, was a psilocybin mushroom.`,
-                            reference: `https://en.wikipedia.org/wiki/Manna`
+                            description: [
+                                `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the role played by psychedelic drugs throughout history that had never been taught to me in school. One theory is that`,
+                                {
+                                    anchor: `manna`,
+                                    wiki: `Manna`
+                                },
+                                `from heaven, based on its description in the Bible, was a psilocybin mushroom.`
+                            ]
                         }
                     }
                 ]
@@ -164,8 +170,14 @@ module.exports = {
                         anchor: `Finnugreec tongue`,
                         properNoun: true,
                         annotation: {
-                            description: `The Finnish language belongs in the Finno-Ugric family. Also, the licorice taste of Robitussin, which lingers in our mouths, is reminiscent of the spice fenugreek.`,
-                            reference: `https://en.wikipedia.org/wiki/Finno-Ugric_languages`
+                            description: [
+                                `The Finnish language belongs in the`,
+                                {
+                                    anchor: `Finno-Ugric`,
+                                    wiki: `Finno-Ugric_languages`
+                                },
+                                `family. Also, the licorice taste of Robitussin, which lingers in our mouths, is reminiscent of the spice fenugreek.`
+                            ]
                         }
                     },
                     {
@@ -340,14 +352,16 @@ module.exports = {
                             description: [
                                 `In the Vedas,`,
                                 {
-                                    italic: `soma`
+                                    italic: {
+                                        anchor: `soma`,
+                                        wiki: `Botanical_identity_of_soma%E2%80%93haoma`
+                                    }
                                 },
                                 `is a ritual drink prepared from an unidentified botanical substance believed by some scholars to have held psychedelic properties. In the Avesta, it is referred to as`,
                                 {
                                     italic: `haoma.`
                                 }
-                                ],
-                            reference: `https://en.wikipedia.org/wiki/Botanical_identity_of_soma%E2%80%93haoma`
+                            ]
                         }
                     },
                     {
@@ -682,8 +696,13 @@ module.exports = {
                     {
                         anchor: `Pullar switch,`,
                         annotation: {
-                            description: `Geomagnetic reversal occurs when the Earth's magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses. Also, crashed on a couch in Howie's attic, I turn on an old black-and-white television by "pulling the switch."`,
-                            reference: `https://en.wikipedia.org/wiki/Geomagnetic_reversal`
+                            description: [
+                                {
+                                    anchor: `Geomagnetic reversal`,
+                                    wiki: `Geomagnetic_reversal`
+                                },
+                                `occurs when the Earth's magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses. Also, crashed on a couch in Howie's attic, I turn on an old black-and-white television by "pulling the switch."`
+                            ]
                         }
                     },
                     {
@@ -740,8 +759,14 @@ module.exports = {
                     {
                         anchor: `In mouth Deseret,`,
                         annotation: {
-                            description: `My mouth is dry like a "desert." Also, Deseret is an alphabet developed by the early Mormons, also known as Latter-Day Saints.`,
-                            reference: `https://en.wikipedia.org/wiki/Deseret_alphabet`
+                            description: [
+                                `My mouth is dry like a "desert." Also,`,
+                                {
+                                    anchor: `Deseret`,
+                                    wiki: `Deseret_alphabet`
+                                },
+                                `is an alphabet developed by the early Mormons, also known as Latter-Day Saints.`
+                            ]
                         }
                     },
                     {

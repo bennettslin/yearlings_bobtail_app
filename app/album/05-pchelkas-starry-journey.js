@@ -221,7 +221,14 @@ module.exports = {
                     {
                         anchor: `tired of being the weakling?"…`,
                         annotation: {
-                            description: `In a well-known advertisement seen in comic books at the time, a skinny guy builds up his muscles by sending away for Charles Atlas's free bodybuilding guide, which then allows him to take revenge on a bully.`
+                            description: [
+                                `In a well-known advertisement seen in comic books at the time, a skinny guy builds up his muscles by sending away for`,
+                                {
+                                    anchor: `Charles Atlas's`,
+                                    wiki: `Charles_Atlas`
+                                },
+                                `free bodybuilding guide, which then allows him to take revenge on a bully.`
+                            ]
                         }
                     }
                 ]
