@@ -1,6 +1,6 @@
 import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
 
-// TODO: Missing portals for Ash Wednesday, and Look Back in Anger. Is 'down the steps' a portal?
+// TODO: Missing portal for Look Back in Anger. Is 'down the steps' a portal?
 
 module.exports = {
     title: {
@@ -159,7 +159,8 @@ module.exports = {
                     {
                         anchor: `laying qualms to rest:`,
                         annotation: {
-                            description: `It was well known to the students that the cafeteria hired most of its workers through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and seeming familiarity with underground culture ultimately won her over.`
+                            description: `It was well known to the students that the cafeteria hired most of its workers through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and seeming familiarity with underground culture ultimately won her over.`,
+                            portal: `laid_tourettes`
                         }
                     }
                 ]

@@ -136,7 +136,8 @@ module.exports = {
                                     wiki: `Tourette_syndrome`
                                 },
                                 `who suffer from uncontrollable tics, we said and did things on impulse during the breakup. Also, Jesus was "laid to rest" on the first day…`
-                            ]
+                            ],
+                            portal: `laid_tourettes`
                         }
                     },
                     `next regrets,`,
