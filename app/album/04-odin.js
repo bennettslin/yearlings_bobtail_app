@@ -225,7 +225,14 @@ module.exports = {
                         anchor: `shibboleth`,
                         annotation: {
                             description: [
-                                `A shibboleth is any signifier used to differentiate members of an ingroup from outsiders. In the Book of Judges, the Gileadites asked suspected Ephraimites to pronounce the Hebrew word for a freshwater stream. Because the Ephraimites lacked the "sh" sound in their dialect, they pronounced the word as "sibboleth," thus outing themselves as enemy tribespeople.`
+                                [
+                                    `A`,
+                                    {
+                                        anchor: `shibboleth`,
+                                        wiki: `Shibboleth`
+                                    },
+                                    `is any signifier used to differentiate members of an ingroup from outsiders. In the Book of Judges, the Gileadites asked suspected Ephraimites to pronounce the Hebrew word for a freshwater stream. Because the Ephraimites lacked the "sh" sound in their dialect, they pronounced the word as "sibboleth," thus outing themselves as enemy tribespeople.`
+                                ]
                             ]
                         }
                     },
@@ -259,7 +266,14 @@ module.exports = {
                     {
                         anchor: `rickshaw hiccoughs`,
                         annotation: {
-                            description: `A rickshaw is a pedal-driven passenger vehicle. They were no longer in service by the time I arrived in Taiwan, but their recent prevalence could be inferred from photographs and traffic signs. Here, the uneven surface of the road causes one to jounce abruptly.`
+                            description: [
+                                `A`,
+                                {
+                                    anchor: `rickshaw`,
+                                    wiki: `Rickshaw`
+                                },
+                                `is a pedal-driven passenger vehicle. They were no longer in service by the time I arrived in Taiwan, but their recent prevalence could be inferred from photographs and traffic signs. Here, the uneven surface of the road causes one to jounce abruptly.`
+                            ]
                         }
                     },
                     `from grating cracks.`
@@ -269,7 +283,14 @@ module.exports = {
                     {
                         anchor: `missed bat mitzvahs`,
                         annotation: {
-                            description: `A bat mitzvah is a coming-of-age ritual undertaken by Jewish girls when they reach the age of twelve. Since I was in Taiwan at the time, I was unable to attend Sasha's bat mitzvah.`
+                            description: [
+                                `A`,
+                                {
+                                    anchor: `bat mitzvah`,
+                                    wiki: `Bar_and_Bat_Mitzvah`
+                                },
+                                `is a coming-of-age ritual undertaken by Jewish girls when they reach the age of twelve. Since I was in Taiwan at the time, I was unable to attend Sasha's bat mitzvah.`
+                            ]
                         }
                     },
                     `come racing back.`
@@ -340,7 +361,13 @@ module.exports = {
                     {
                         anchor: `dream your whims instead?`,
                         annotation: {
-                            description: `Zhuangzi was a 4th-century BCE Chinese philosopher. In his most famous musing, he recounts a dream in which he was a butterfly. When he awoke, however, he could not be sure whether he was then a man who dreamt he was a butterfly, or now a butterfly dreaming he is a man.`
+                            description: [
+                                {
+                                    anchor: `Zhuangzi`,
+                                    wiki: `Zhuang_Zhou`
+                                },
+                                `was a 4th-century BCE Chinese philosopher. In his most famous musing, he recounts a dream in which he was a butterfly. When he awoke, however, he could not be sure whether he was then a man who dreamt he was a butterfly, or now a butterfly dreaming he is a man.`
+                            ]
                         }
                     }
                 ],
