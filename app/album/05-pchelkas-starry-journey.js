@@ -341,7 +341,7 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                `In Mandarin Chinese,`,
+                                `In Chinese,`,
                                 {
                                     italic: `Gogo`
                                 },
@@ -737,7 +737,7 @@ module.exports = {
                         anchor: `Xiao Xiang,`,
                         properNoun: true,
                         annotation: {
-                            description: `Mushka means "little fly" in Russian. By coincidence, my brother's Mandarin name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`
+                            description: `Mushka means "little fly" in Russian. By coincidence, my brother's Chinese name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`
                         }
                     },
                     `mush on…`

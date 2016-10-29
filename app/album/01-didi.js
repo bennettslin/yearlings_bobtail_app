@@ -5,16 +5,16 @@ module.exports = {
         anchor: 'Didi (弟弟)',
         annotation: {
             description: [
-                `In Mandarin Chinese,`,
-                {
-                    italic: `didi`
-                },
-                `means "little brother." While my family is from`,
+                `While my family is from`,
                 {
                     anchor: `Taiwan,`,
                     wiki: `Taiwan`
                 },
-                `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.`
+                `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words, and`,
+                {
+                    italic: `didi`
+                },
+                `in Chinese means "little brother." `
             ]
         }
     },
@@ -99,7 +99,7 @@ module.exports = {
                                 {
                                     italic: `Zeizei`
                                 },
-                                `means "big sister" in Mandarin Chinese.`
+                                `means "big sister" in Chinese.`
                             ]
                         }
                     },
@@ -195,7 +195,14 @@ module.exports = {
                     {
                         anchor: `sheriff's badge and gun…`,
                         annotation: {
-                            description: `After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what the label entailed. My mother's tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.`
+                            description: [
+                                `After`,
+                                {
+                                    anchor: `China stripped Taiwan`,
+                                    wiki: `Cross-Strait_relations`
+                                },
+                                `of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what the label entailed. My mother's tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.`
+                            ]
                         }
                     }
                 ]
