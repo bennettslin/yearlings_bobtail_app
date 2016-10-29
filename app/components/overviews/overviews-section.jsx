@@ -20,7 +20,8 @@ const OverviewsSectionView = ({
     // From props.
     overviewText,
     selectedOverviewIndex,
-    onOverviewClick
+    onOverviewClick,
+    onWikiUrlClick
 
 }) => (
     <div className="section overviews-section">
@@ -33,6 +34,7 @@ const OverviewsSectionView = ({
             <TextBlock
                 isLyric={false}
                 text={overviewText}
+                onAnchorClick={onWikiUrlClick}
             />
         </div>
     </div>

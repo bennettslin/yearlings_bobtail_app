@@ -1,6 +1,6 @@
 import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
 
-// TODO: Missing portal for Look Back in Anger. Is 'down the steps' a portal?
+// TODO: Missing portal for Look Back in Anger. Is it "bell"? Is 'down the steps' a portal?
 
 module.exports = {
     title: {
