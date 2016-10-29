@@ -149,6 +149,15 @@ class App extends Component {
                 this.handleTimeSelect()
             }
 
+            // Scroll to top of lyrics.
+            const lyricsScrollHome = document.getElementsByClassName(`lyrics-scroll-home`)[0]
+
+            if (lyricsScrollHome) {
+                scrollIntoViewIfNeeded(lyricsScrollHome, false, {
+                    duration: 100
+                })
+            }
+
             /**
              * Keep annotation anchor access outlined if already so, and just
              * set the index to 1. Otherwise set it to 0.

@@ -33,11 +33,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `scroll lyrics to top upon song change, regardless of access outline`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `write album overviews`,
             workedHours: 0,
             neededHours: 6
@@ -306,6 +301,11 @@ module.exports = {
         },
         {
             taskName: `allow wikis in urls`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `scroll lyrics to top upon song change, regardless of access outline`,
             workedHours: 1,
             neededHours: 1
         }

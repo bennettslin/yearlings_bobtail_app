@@ -26,7 +26,8 @@ const LyricsSectionView = ({
 
 ...other }) => (
     <div className={`section lyrics-section${isNarrowScreen ? ' narrow' : ''}`}>
-        <h2>lyrics</h2>
+        {/* Upon song change, scroll to element with this class name. */}
+        <h2 className="lyrics-scroll-home">lyrics</h2>
         {isNarrowScreen && hasDoubleColumns ?
             <RadioButtonBlock
                 selectedButtonIndex={selectedLyricColumnIndex}
