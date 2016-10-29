@@ -830,7 +830,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `post-album annotations`,
+            taskName: `afterword annotations`,
             workedHours: 0,
             neededHours: 1
         },
@@ -840,7 +840,7 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `include references`,
+            taskName: `include wiki urls`,
             workedHours: 0,
             neededHours: 1
         },

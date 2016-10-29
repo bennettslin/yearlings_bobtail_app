@@ -92,8 +92,7 @@ module.exports = {
         'pulpit',
         'wiki',
         'portal',
-        'title'
-        // 'afterword' // My perspective while making this website.
+        'afterword' // My perspective while making this website.
     ],
 
     OVERVIEW_KEYS: [

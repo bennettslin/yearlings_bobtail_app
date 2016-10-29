@@ -286,51 +286,42 @@ module.exports = {
             },
             {
                 time: 158,
-                lyric: [
-                    `and there are things I hope Didi will`,
-                    {
-                        anchor: `never have to know.`,
-                        annotation: {
-                            description: [
-                                `By paying homage to`,
-                                {
-                                    italic: `Pet Sounds,`
-                                },
-                                `I had hoped to plant a gentle reminder that Brian Wilson's masterpiece was never performed live in its own time, precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops many lists of rock's greatest albums. I was worried about indie rock's congealing belief that recordings merely serve to showcase live shows, because as an unknown, I could only strive to excel at the former while deferring the latter. But`,
-                                {
-                                    italic: `Yearling's Bobtail`
-                                },
-                                `was indeed dead upon arrival, proving my fears well-founded. So this Didi did have to know some things after all.`
-                            ]
-                        }
-                    }
-                ]
+                lyric: `and there are things I hope Didi will never have to know.`
             },
             {
                 unitMap: true,
                 sectionClass: CHORUS,
                 subsequent: true
             }
+        ],
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `When I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,
+                            {
+                                italic: `Pet Sounds`
+                            },
+                            `was also meant as a gentle reminder that Brian Wilson's masterpiece was never performed live in its own time, precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops most lists of rock's greatest albums. But`,
+                            {
+                                italic: `Yearling's Bobtail`
+                            },
+                            `was indeed dead upon arrival, proving my fears well-founded. So this Didi did have to know some things after all…`
+                        ],
+                        dotKeys: {
+                            afterword: true
+                        }
+                    }
+                }
+            }
         ]
     ],
     tasks: [
         {
-            taskName: `post-album annotations`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `include references`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
         },
@@ -351,6 +342,21 @@ module.exports = {
             subtasks: [
 
             ]
+        },
+        {
+            taskName: `afterword annotations`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `include wiki urls`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `sort out past and present tense`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
