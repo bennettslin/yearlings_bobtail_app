@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import spinnerUrl from '../../../app/assets/images/default_spinner.svg'
+import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 
 /*************
  * CONTAINER *
@@ -13,11 +13,11 @@ const WikiSection = (props) => (
  * PRESENTATION *
  ****************/
 
-// TODO: Force refresh of same page if user clicks on link again.
+// TODO: Show that active wiki anchor is disabled.
 // TODO: Automatically scroll to hide search bar on top.
 // TODO: Add navigation and exit button.
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/
-// TODO: What if there's no response from backend?
+// TODO: If loading time is too long, show page with a "There was a problem connecting to Wikipedia. Try again?"
 
 class WikiSectionView extends Component {
 
@@ -30,7 +30,22 @@ class WikiSectionView extends Component {
         }
     }
 
+    componentWillReceiveProps({ selectedWikiUrl }) {
+        if (selectedWikiUrl && selectedWikiUrl !== this.props.selectedWikiUrl) {
+            this.setState({ webviewLoading: true })
+        }
+    }
+
     onWebviewLoad(e) {
+        /**
+         * Pausing this for now, as I've run into cross-origin issues.
+         */
+        // try {
+        //     const webview = this.refs.webview,
+        //     webviewDoc = webview.contentDocument || webview.contentWindow.document
+        // } catch (e) {
+        // }
+
         this.setState({
             webviewLoading: false
         })
@@ -49,11 +64,12 @@ class WikiSectionView extends Component {
                     <div className="spinner-container">
                         <img
                             className="spinner"
-                            src={spinnerUrl}
+                            src={spinnerSvg}
                         />
                     </div> : null
                 }
                 <iframe
+                    ref="webview"
                     className={`webview${webviewLoading ? ' loading' : ''}`}
                     src={selectedWikiUrl}
                     onLoad={this.onWebviewLoad}
