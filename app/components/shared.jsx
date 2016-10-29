@@ -47,7 +47,6 @@ const SharedView = ({
     selectedSongIndex,
     selectedOverviewIndex,
     onOverviewClick,
-    onWikiUrlClick,
 
     // From controller.
     overviewText,
@@ -58,11 +57,10 @@ const SharedView = ({
 ...other }) => (
     <div className="column shared-column">
         <div className="field shared-field">
-            <OverviewsSection
+            <OverviewsSection {...other}
                 overviewText={overviewText}
                 selectedOverviewIndex={selectedOverviewIndex}
                 onOverviewClick={onOverviewClick}
-                onWikiUrlClick={onWikiUrlClick}
             />
             {/* Technically, stats only knows selected song data so it really
               * belongs in song column. But we're putting it here because
