@@ -219,7 +219,6 @@ const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0) => {
 }
 
 const _injectPortalLinks = (album) => {
-    console.error('_tempStore.portalLinks', _tempStore.portalLinks);
     /**
      * For each annotation with a portal, add an array of links to all
      * other portals.
