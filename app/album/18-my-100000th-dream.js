@@ -257,7 +257,7 @@ module.exports = {
         {
             taskName: `include references`,
             workedHours: 0,
-            neededHours: 3
+            neededHours: 1
         },
         {
             taskName: `sort out past and present tense`,
