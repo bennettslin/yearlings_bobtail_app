@@ -33,6 +33,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `lyrics, not app, should care about hovered line`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `refactor app handlers`,
             workedHours: 0,
             neededHours: 2

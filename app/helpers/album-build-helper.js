@@ -10,8 +10,8 @@ const _tempStore = {
     songDotKeys: {},
     annotations: [],
     portalLinks: {},
-    lastLyricObject: {},
-    lineIndexCounter: 0
+    _lastLineObject: {},
+    _lineIndexCounter: 0
 }
 
 export const prepareAlbumData = (album = {}) => {
@@ -28,7 +28,7 @@ const _prepareAllSongs = (album) => {
         // Song indices start at 1.
         _tempStore.songIndex = songIndex + 1
         _tempStore.annotations = []
-        _tempStore.lineIndexCounter = 0
+        _tempStore._lineIndexCounter = 0
 
         _addTitleToLyrics(song.title, song.lyrics)
         // Do not confuse anchor key with string prototype anchor method.
@@ -37,9 +37,9 @@ const _prepareAllSongs = (album) => {
         }
         _parseLyrics(song.lyrics)
 
-        // Make last verse's next time the song's total time and add line index.
-        _tempStore.lastLyricObject.nextTime = song.totalTime
-        _tempStore.lastLyricObject.lineIndex = _tempStore.lineIndexCounter
+        // Make last line's next time the song's total time and add line index.
+        _tempStore._lastLineObject.nextTime = song.totalTime
+        _tempStore._lastLineObject.lineIndex = _tempStore._lineIndexCounter
 
         // Add annotations to song object.
         song.annotations = _tempStore.annotations
@@ -84,8 +84,8 @@ const _addTitleToLyrics = (title, lyrics) => {
         lyrics.unshift([titleObject])
     }
 
-    // Store so that next lyric object can add its time as nextTime.
-    _tempStore.lastLyricObject = lyrics[0][0]
+    // Store so that next line object can add its time as nextTime.
+    _tempStore._lastLineObject = lyrics[0][0]
 }
 
 /**
@@ -93,14 +93,14 @@ const _addTitleToLyrics = (title, lyrics) => {
  */
 const _parseLyrics = (lyric) => {
     /**
-     * If lyric object has time, add it as nextTime to the last lyric object,
-     * then replace it as the last lyric object. Also add line index.
+     * If line object has time, add it as nextTime to the last line object,
+     * then replace it as the last line object. Also add line index.
      */
     if (!isNaN(lyric.time)) {
-        _tempStore.lastLyricObject.lineIndex = _tempStore.lineIndexCounter
-        _tempStore.lineIndexCounter++
-        _tempStore.lastLyricObject.nextTime = lyric.time
-        _tempStore.lastLyricObject = lyric
+        _tempStore._lastLineObject.lineIndex = _tempStore._lineIndexCounter
+        _tempStore._lineIndexCounter++
+        _tempStore._lastLineObject.nextTime = lyric.time
+        _tempStore._lastLineObject = lyric
     }
 
     if (Array.isArray(lyric)) {
@@ -159,7 +159,7 @@ const _prepareAnnotation = (lyric = {}, annotation = {}, dotKeys = {}) => {
     // Add annotation object to annotations array.
     _tempStore.annotations.push(annotation)
 
-    // Clean up lyric object.
+    // Clean up line object.
     delete lyric.annotation
     delete lyric.properNoun
 }
