@@ -14,7 +14,14 @@ import { SELECTED_SONG_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
-         DEFAULT_OVERVIEW_INDEX } from 'helpers/constants'
+         DEFAULT_OVERVIEW_INDEX,
+         ARROW_LEFT,
+         ARROW_RIGHT,
+         ARROW_UP,
+         ARROW_DOWN,
+         ENTER,
+         ESCAPE,
+         SPACE } from 'helpers/constants'
 import AlbumHelper from 'helpers/album-view-helper'
 import { intersects } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -105,6 +112,7 @@ class App extends Component {
     _assignLogFunctions() {
         window.s = this._logStorage
         window.a = this._logAnchorAnnotation.bind(this)
+        window.g = this._logSong.bind(this)
     }
 
     _logStorage() {
@@ -123,6 +131,15 @@ class App extends Component {
 
         LogHelper.logObject('lyric', lyricObject)
         return LogHelper.logObject('annotation', annotation)
+    }
+
+    _logSong() {
+        const { songs,
+                selectedSongIndex } = this.props,
+
+            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs)
+
+        return LogHelper.logObject('selectedSong', selectedSong)
     }
 
     handleTitleSelect(e) {
@@ -249,42 +266,31 @@ class App extends Component {
         SessionHelper.setInSession(SELECTED_TIME, selectedTime)
     }
 
-    _onBodyClick(e) {
-        this.handleAnnotationSelect()
-        this.handleWikiUrlSelect()
-
-        this.setState({
-            accessedAnnotationOutlined: false
-        })
-    }
-
-    _onKeyDown(e) {
+    _handleAccessedAnnotationSelect(keyName) {
         const { selectedAnnotationIndex,
                 selectedSongIndex,
                 songs } = this.props,
             selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
             annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0
 
-        const { key: keyName } = e
         let { accessedAnnotationIndex,
               accessedAnnotationOutlined } = this.state,
             willSelectAnnotation = false,
             willScrollToAnchor = false
 
         switch (keyName) {
-            case 'ArrowLeft':
-            case 'ArrowRight':
-
+            case ARROW_LEFT:
+            case ARROW_RIGHT:
                 if (!selectedAnnotationIndex && !accessedAnnotationOutlined) {
                     accessedAnnotationIndex = accessedAnnotationIndex || 1
                 } else {
                     willScrollToAnchor = true
-                    if (keyName === 'ArrowLeft') {
+                    if (keyName === ARROW_LEFT) {
                         accessedAnnotationIndex--
                         if (accessedAnnotationIndex <= 0) {
                             accessedAnnotationIndex = annotationsLength
                         }
-                    } else if (keyName === 'ArrowRight') {
+                    } else if (keyName === ARROW_RIGHT) {
                         accessedAnnotationIndex++
                         if (accessedAnnotationIndex > annotationsLength) {
                             accessedAnnotationIndex = 1
@@ -295,9 +301,9 @@ class App extends Component {
                     }
                 }
                 accessedAnnotationOutlined = true
-            break;
-            case ' ':
-            case 'Enter':
+                break
+            case ENTER:
+            case SPACE:
                 // Select or deselect annotation, but keep access outline.
                 if (accessedAnnotationOutlined) {
                     if (selectedAnnotationIndex) {
@@ -307,19 +313,18 @@ class App extends Component {
                         willSelectAnnotation = true
                     }
                 }
-                break;
-            case 'Escape':
+                break
+            case ESCAPE:
                 // Deselect annotation, and lose access outline.
                 accessedAnnotationOutlined = false
                 if (selectedAnnotationIndex) {
                     this.handleAnnotationSelect()
                 }
-                break;
-            default:
+                break
         }
 
         if (willSelectAnnotation) {
-            this.handleAnnotationSelect(e, accessedAnnotationIndex)
+            this.handleAnnotationSelect(undefined, accessedAnnotationIndex)
         }
 
         if (willScrollToAnchor) {
@@ -334,6 +339,42 @@ class App extends Component {
         this.setState({
             accessedAnnotationIndex,
             accessedAnnotationOutlined
+        })
+    }
+
+    // For dev purposes only.
+    _handleAccessedTimeSelect(keyName) {
+
+        if (keyName === ARROW_UP) {
+
+        } else if (keyName === ARROW_DOWN) {
+
+        }
+    }
+
+    _onKeyDown(e) {
+        const { key: keyName } = e
+        switch (keyName) {
+            case ARROW_LEFT:
+            case ARROW_RIGHT:
+            case ENTER:
+            case ESCAPE:
+            case SPACE:
+                this._handleAccessedAnnotationSelect(keyName)
+                break
+            case ARROW_UP:
+            case ARROW_DOWN:
+                this._handleAccessedTimeSelect(keyName)
+                break
+        }
+    }
+
+    _onBodyClick(e) {
+        this.handleAnnotationSelect()
+        this.handleWikiUrlSelect()
+
+        this.setState({
+            accessedAnnotationOutlined: false
         })
     }
 

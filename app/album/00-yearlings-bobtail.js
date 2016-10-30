@@ -33,14 +33,14 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `reset dom width of lines upon changing from left to right`,
+            taskName: `refactor app handlers`,
             workedHours: 0,
-            neededHours: 1
+            neededHours: 2
         },
         {
-            taskName: `write album overviews`,
+            taskName: `dev mechanism to play line`,
             workedHours: 0,
-            neededHours: 6
+            neededHours: 3
         },
         {
             taskName: `scroll played lyric into view`,
@@ -48,12 +48,7 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `Safari...`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `delay in annotation popup after scroll and then link clicked? only in firefox, it seems`,
+            taskName: `reset dom width of lines upon changing from left to right`,
             workedHours: 0,
             neededHours: 1
         },
@@ -61,6 +56,11 @@ module.exports = {
             taskName: `colour verse based on odd or even`,
             workedHours: 0,
             neededHours: 2
+        },
+        {
+            taskName: `write album overviews`,
+            workedHours: 0,
+            neededHours: 6
         },
         {
             taskName: `figure out best way to do portals`,
@@ -82,6 +82,16 @@ module.exports = {
             workedHours: 0,
             neededHours: 3
         },
+        // {
+        //     taskName: `Safari...`,
+        //     workedHours: 0,
+        //     neededHours: 2
+        // },
+        // {
+        //     taskName: `delay in annotation popup after scroll and then link clicked? only in firefox, it seems`,
+        //     workedHours: 0,
+        //     neededHours: 1
+        // },
         // {
         //     taskName: `refactor to use dot index rather than key`,
         //     workedHours: 0,
