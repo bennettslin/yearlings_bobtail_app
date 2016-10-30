@@ -30,10 +30,6 @@ class WikiSectionView extends Component {
         }
     }
 
-    componentWillMount({ selectedWikiUrl }) {
-        this._onWikiUrlReceived(selectedWikiUrl)
-    }
-
     componentWillReceiveProps({ selectedWikiUrl }) {
         this._onWikiUrlReceived(selectedWikiUrl)
     }

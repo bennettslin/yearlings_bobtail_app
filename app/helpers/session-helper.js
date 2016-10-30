@@ -45,6 +45,12 @@ export default {
         if (key === SELECTED_DOT_KEYS) {
             return _getValidDotKeys(WINDOW_STORAGE[key])
 
+        } else if (key === SELECTED_WIKI_URL) {
+            const defaultValue = '',
+                value = WINDOW_STORAGE[key] || defaultValue
+
+            return value
+
         } else if (key) {
             // Default is 0 unless specified otherwise.
             const defaultValue =

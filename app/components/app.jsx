@@ -249,7 +249,7 @@ class App extends Component {
         if (e) { e.stopPropagation() }
 
         const selectedWikiUrl = selectedWiki ?
-            `https://en.m.wikipedia.org/wiki/${selectedWiki}` : null
+            `https://en.m.wikipedia.org/wiki/${selectedWiki}` : ''
 
         // Dispatch Redux action.
         this.props.selectWikiUrl(selectedWikiUrl)
