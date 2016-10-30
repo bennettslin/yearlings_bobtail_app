@@ -48,6 +48,7 @@ const SongView = ({
     selectedTime,
     hoveredDotIndex,
     hoveredLineIndex,
+    selectedLineIndex,
     isNarrowScreen,
     selectedLyricColumnIndex,
     selectedSongIndex,
@@ -102,6 +103,7 @@ const SongView = ({
                 selectedTime={selectedTime}
                 selectedDotKeys={selectedDotKeys}
                 hoveredLineIndex={hoveredLineIndex}
+                selectedLineIndex={selectedLineIndex}
                 onLineHover={onLineHover}
                 onTimeClick={onTimeClick}
                 onAnnotationClick={onAnnotationClick}

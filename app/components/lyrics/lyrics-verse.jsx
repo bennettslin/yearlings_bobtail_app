@@ -82,7 +82,7 @@ const LyricsVerseView = ({
 
 ...other }) => (
 
-    <div className={`verse${isSelected ? ' selected' : ''}${isInteractable ? ' interactable' : ''}`}
+    <div className={`verse verse-${verseObject.lineIndex || 'timeless'}${isSelected ? ' selected' : ''}${isInteractable ? ' interactable' : ''}`}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
     >
@@ -108,7 +108,6 @@ const LyricsVerseView = ({
                         return (
                             <LyricsLine {...other}
                                 key={index}
-                                lineIndex={index}
                                 text={verseObject[key]}
                                 columnKey={hiddenLyricColumnKey ? LEFT : key}
                             />

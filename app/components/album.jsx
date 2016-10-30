@@ -69,6 +69,7 @@ const AlbumView = ({
             songs={songs}
             selectedSongIndex={selectedSongIndex}
             selectedTime={selectedTime}
+            selectedLineIndex={selectedLineIndex}
             isNarrowScreen={isNarrowScreen}
         />
     </div>

@@ -97,6 +97,9 @@ const _parseLyrics = (lyric) => {
      * then replace it as the last line object. Also add line index.
      */
     if (!isNaN(lyric.time)) {
+        // Add line index to lyric line object.
+        lyric.lineIndex = _tempStore._lineIndexCounter
+
         _tempStore._lastLineObject.lineIndex = _tempStore._lineIndexCounter
         _tempStore._lineIndexCounter++
         _tempStore._lastLineObject.nextTime = lyric.time
