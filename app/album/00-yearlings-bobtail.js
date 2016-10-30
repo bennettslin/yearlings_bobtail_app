@@ -33,9 +33,14 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `dev mechanism to play line`,
+            taskName: `switch from time logic to verse index in verse`,
             workedHours: 0,
-            neededHours: 3
+            neededHours: 1
+        },
+        {
+            taskName: `bug where you click on verse, then key away`,
+            workedHours: 0,
+            neededHours: 1
         },
         {
             taskName: `scroll played lyric into view`,
@@ -343,6 +348,11 @@ module.exports = {
             taskName: `store wiki url in session`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `dev mechanism to play line`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }

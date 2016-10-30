@@ -34,22 +34,6 @@ export const selectVerseIndex = (selectedVerseIndex = 0) => {
     }
 }
 
-export const selectTime = (selectedTime = 0) => {
-    setInSession(SELECTED_TIME, selectedTime)
-    return {
-        type: SELECTED_TIME,
-        payload: selectedTime
-    }
-}
-
-export const selectOverviewIndex = (selectedOverviewIndex = DEFAULT_OVERVIEW_INDEX) => {
-    setInSession(SELECTED_OVERVIEW_INDEX, selectedOverviewIndex)
-    return {
-        type: SELECTED_OVERVIEW_INDEX,
-        payload: selectedOverviewIndex
-    }
-}
-
 export const selectWikiUrl = (selectedWikiUrl = '') => {
     setInSession(SELECTED_WIKI_URL, selectedWikiUrl)
     return {
@@ -64,5 +48,22 @@ export const selectDotKey = (selectedDotKey, isSelected = false) => {
         type: SELECTED_DOT_KEYS,
         payload: { selectedDotKey,
                    isSelected }
+    }
+}
+
+// Keep in Redux for now, but perhaps scrap later.
+export const selectTime = (selectedTime = 0) => {
+    setInSession(SELECTED_TIME, selectedTime)
+    return {
+        type: SELECTED_TIME,
+        payload: selectedTime
+    }
+}
+
+export const selectOverviewIndex = (selectedOverviewIndex = DEFAULT_OVERVIEW_INDEX) => {
+    setInSession(SELECTED_OVERVIEW_INDEX, selectedOverviewIndex)
+    return {
+        type: SELECTED_OVERVIEW_INDEX,
+        payload: selectedOverviewIndex
     }
 }

@@ -45,9 +45,9 @@ export const VerseIndexReducer = (state = storedVerseIndex, action) => {
     }
 }
 
-export const TimeReducer = (state = storedTime, action) => {
+export const WikiUrlReducer = (state = storedWikiUrl, action) => {
     switch (action.type) {
-        case SELECTED_TIME:
+        case SELECTED_WIKI_URL:
             return action.payload
         default:
             return state
@@ -68,18 +68,18 @@ export const DotKeysReducer = (state = storedDotKeys, action) => {
     }
 }
 
-export const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
+// Keep in Redux for now, but perhaps scrap later.
+export const TimeReducer = (state = storedTime, action) => {
     switch (action.type) {
-        case SELECTED_OVERVIEW_INDEX:
+        case SELECTED_TIME:
             return action.payload
         default:
             return state
     }
 }
-
-export const WikiUrlReducer = (state = storedWikiUrl, action) => {
+export const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
     switch (action.type) {
-        case SELECTED_WIKI_URL:
+        case SELECTED_OVERVIEW_INDEX:
             return action.payload
         default:
             return state
