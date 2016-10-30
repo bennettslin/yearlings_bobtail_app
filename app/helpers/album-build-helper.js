@@ -70,7 +70,6 @@ const _addTitleToLyrics = (title, lyrics) => {
 
     if (annotation) {
         title.properNoun = true
-        annotation.dotKeys = { title: true }
     }
 
     /**

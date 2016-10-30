@@ -301,7 +301,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `When I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,
+                            `As I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,
                             {
                                 italic: `Pet Sounds`
                             },
@@ -309,7 +309,7 @@ module.exports = {
                             {
                                 italic: `Yearling's Bobtail`
                             },
-                            `was indeed dead upon arrival, proving my fears well-founded. So this Didi did have to know some things after all…`
+                            `was dead upon arrival, proving my fears well-founded. So this Didi did have to know some things after all…`
                         ],
                         dotKeys: {
                             afterword: true

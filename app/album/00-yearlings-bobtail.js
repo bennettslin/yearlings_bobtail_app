@@ -33,6 +33,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `reset dom width of lines upon changing from left to right`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `write album overviews`,
             workedHours: 0,
             neededHours: 6
@@ -308,6 +313,11 @@ module.exports = {
             taskName: `scroll lyrics to top upon song change, regardless of access outline`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `add spinner to wiki section`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
