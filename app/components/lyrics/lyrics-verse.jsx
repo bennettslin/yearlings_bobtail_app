@@ -22,7 +22,7 @@ const LyricsVerse = ({
             isTitle,
             time,
             nextTime,
-            lineIndex } = verseObject,
+            verseIndex } = verseObject,
 
         /**
          * It's selected if it's between time and nextTime.
@@ -34,12 +34,12 @@ const LyricsVerse = ({
          * selected but not marked as selected.
          */
         isSameTimeSelected = time === selectedTime && time === nextTime,
-        isHovered = lineIndex === hoveredLineIndex,
+        isHovered = verseIndex === hoveredLineIndex,
         isSingleSpeaker = !!lyric,
         isInteractable = !isNaN(time) && !isSameTimeSelected,
         onPlayButtonClick = isInteractable && !isSelected ? e => onTimeClick(e, time) : null,
         onAnchorClick = onAnnotationClick,
-        onMouseEnter = onLineHover ? e => onLineHover(e, lineIndex) : null,
+        onMouseEnter = onLineHover ? e => onLineHover(e, verseIndex) : null,
         onMouseLeave = onLineHover ? e => onLineHover(e) : null
 
     return (
@@ -82,7 +82,7 @@ const LyricsVerseView = ({
 
 ...other }) => (
 
-    <div className={`verse verse-${verseObject.lineIndex || 'timeless'}${isSelected ? ' selected' : ''}${isInteractable ? ' interactable' : ''}`}
+    <div className={`verse verse-${verseObject.verseIndex || 'timeless'}${isSelected ? ' selected' : ''}${isInteractable ? ' interactable' : ''}`}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
     >

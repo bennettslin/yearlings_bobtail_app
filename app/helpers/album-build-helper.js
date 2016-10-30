@@ -10,8 +10,8 @@ const _tempStore = {
     songDotKeys: {},
     annotations: [],
     portalLinks: {},
-    _lastLineObject: {},
-    _lineIndexCounter: 0
+    _lastVerseObject: {},
+    _verseIndexCounter: 0
 }
 
 export const prepareAlbumData = (album = {}) => {
@@ -28,7 +28,7 @@ const _prepareAllSongs = (album) => {
         // Song indices start at 1.
         _tempStore.songIndex = songIndex + 1
         _tempStore.annotations = []
-        _tempStore._lineIndexCounter = 0
+        _tempStore._verseIndexCounter = 0
 
         _addTitleToLyrics(song.title, song.lyrics)
         // Do not confuse anchor key with string prototype anchor method.
@@ -38,8 +38,8 @@ const _prepareAllSongs = (album) => {
         _parseLyrics(song.lyrics)
 
         // Make last line's next time the song's total time and add line index.
-        _tempStore._lastLineObject.nextTime = song.totalTime
-        _tempStore._lastLineObject.lineIndex = _tempStore._lineIndexCounter
+        _tempStore._lastVerseObject.nextTime = song.totalTime
+        _tempStore._lastVerseObject.verseIndex = _tempStore._verseIndexCounter
 
         // Add annotations to song object.
         song.annotations = _tempStore.annotations
@@ -85,7 +85,7 @@ const _addTitleToLyrics = (title, lyrics) => {
     }
 
     // Store so that next line object can add its time as nextTime.
-    _tempStore._lastLineObject = lyrics[0][0]
+    _tempStore._lastVerseObject = lyrics[0][0]
 }
 
 /**
@@ -98,12 +98,12 @@ const _parseLyrics = (lyric) => {
      */
     if (!isNaN(lyric.time)) {
         // Add line index to lyric line object.
-        lyric.lineIndex = _tempStore._lineIndexCounter
+        lyric.verseIndex = _tempStore._verseIndexCounter
 
-        _tempStore._lastLineObject.lineIndex = _tempStore._lineIndexCounter
-        _tempStore._lineIndexCounter++
-        _tempStore._lastLineObject.nextTime = lyric.time
-        _tempStore._lastLineObject = lyric
+        _tempStore._lastVerseObject.verseIndex = _tempStore._verseIndexCounter
+        _tempStore._verseIndexCounter++
+        _tempStore._lastVerseObject.nextTime = lyric.time
+        _tempStore._lastVerseObject = lyric
     }
 
     if (Array.isArray(lyric)) {

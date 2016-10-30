@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
-         SELECTED_LINE_INDEX,
+         SELECTED_VERSE_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
@@ -12,7 +12,7 @@ import SessionHelper from '../../helpers/session-helper'
 const { getFromSession } = SessionHelper,
     storedSongIndex = getFromSession(SELECTED_SONG_INDEX),
     storedAnnotationIndex = getFromSession(SELECTED_ANNOTATION_INDEX),
-    storedLineIndex = getFromSession(SELECTED_LINE_INDEX),
+    storedVerseIndex = getFromSession(SELECTED_VERSE_INDEX),
     storedTime = getFromSession(SELECTED_TIME),
     storedDotKeys = getFromSession(SELECTED_DOT_KEYS),
     storedOverviewIndex = getFromSession(SELECTED_OVERVIEW_INDEX),
@@ -36,9 +36,9 @@ export const AnnotationIndexReducer = (state = storedAnnotationIndex, action) =>
     }
 }
 
-export const LineIndexReducer = (state = storedLineIndex, action) => {
+export const VerseIndexReducer = (state = storedVerseIndex, action) => {
     switch (action.type) {
-        case SELECTED_LINE_INDEX:
+        case SELECTED_VERSE_INDEX:
             return action.payload
         default:
             return state
@@ -89,7 +89,7 @@ export const WikiUrlReducer = (state = storedWikiUrl, action) => {
 const rootReducer = combineReducers({
     selectedSongIndex: SongIndexReducer,
     selectedAnnotationIndex: AnnotationIndexReducer,
-    selectedLineIndex: LineIndexReducer,
+    selectedVerseIndex: VerseIndexReducer,
     selectedTime: TimeReducer,
     selectedDotKeys: DotKeysReducer,
     selectedOverviewIndex: OverviewIndexReducer,

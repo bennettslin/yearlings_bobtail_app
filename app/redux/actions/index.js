@@ -1,6 +1,6 @@
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
-         SELECTED_LINE_INDEX,
+         SELECTED_VERSE_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
@@ -26,11 +26,11 @@ export const selectAnnotationIndex = (selectedAnnotationIndex = 0) => {
     }
 }
 
-export const selectLineIndex = (selectedLineIndex = 0) => {
-    setInSession(SELECTED_LINE_INDEX, selectedLineIndex)
+export const selectVerseIndex = (selectedVerseIndex = 0) => {
+    setInSession(SELECTED_VERSE_INDEX, selectedVerseIndex)
     return {
-        type: SELECTED_LINE_INDEX,
-        payload: selectedLineIndex
+        type: SELECTED_VERSE_INDEX,
+        payload: selectedVerseIndex
     }
 }
 

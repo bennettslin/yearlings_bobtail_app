@@ -13,7 +13,7 @@ module.exports = {
 
     SELECTED_SONG_INDEX: 'selectedSongIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
-    SELECTED_LINE_INDEX: 'selectedLineIndex',
+    SELECTED_VERSE_INDEX: 'selectedVerseIndex',
     SELECTED_TIME: 'selectedTime',
     SELECTED_DOT_KEYS: 'selectedDotKeys',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',

@@ -36,7 +36,7 @@ const AlbumView = ({
     songs,
     albumTitle,
     selectedSongIndex,
-    selectedLineIndex,
+    selectedVerseIndex,
     selectedTime,
     isNarrowScreen,
     onSongClick,
@@ -54,7 +54,7 @@ const AlbumView = ({
             />
             <DevSection
                 selectedTime={selectedTime}
-                selectedLineIndex={selectedLineIndex}
+                selectedVerseIndex={selectedVerseIndex}
                 isNarrowScreen={isNarrowScreen}
                 onScreenWidthClick={onScreenWidthClick}
             />
@@ -69,7 +69,7 @@ const AlbumView = ({
             songs={songs}
             selectedSongIndex={selectedSongIndex}
             selectedTime={selectedTime}
-            selectedLineIndex={selectedLineIndex}
+            selectedVerseIndex={selectedVerseIndex}
             isNarrowScreen={isNarrowScreen}
         />
     </div>

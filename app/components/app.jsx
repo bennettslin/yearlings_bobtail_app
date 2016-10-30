@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { selectSongIndex,
          selectAnnotationIndex,
-         selectLineIndex,
+         selectVerseIndex,
          selectTime,
          selectDotKey,
          selectOverviewIndex,
@@ -12,7 +12,7 @@ import { selectSongIndex,
 import Album from './album'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
-         SELECTED_LINE_INDEX,
+         SELECTED_VERSE_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
@@ -37,7 +37,7 @@ import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 const passReduxStateToProps = ({
     selectedSongIndex,
     selectedAnnotationIndex,
-    selectedLineIndex,
+    selectedVerseIndex,
     selectedTime,
     selectedDotKeys,
     selectedOverviewIndex,
@@ -46,7 +46,7 @@ const passReduxStateToProps = ({
     // Pass Redux state into component props.
     selectedSongIndex,
     selectedAnnotationIndex,
-    selectedLineIndex,
+    selectedVerseIndex,
     selectedTime,
     selectedDotKeys,
     selectedOverviewIndex,
@@ -58,7 +58,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         selectSongIndex,
         selectAnnotationIndex,
-        selectLineIndex,
+        selectVerseIndex,
         selectTime,
         selectDotKey,
         selectOverviewIndex,
@@ -345,11 +345,11 @@ class App extends Component {
     }
 
     // For dev purposes only.
-    _handleAccessedLineSelect(keyName) {
+    _handleAccessedVerseSelect(keyName) {
         if (keyName === ARROW_UP) {
-            this.props.selectLineIndex(5)
+            this.props.selectVerseIndex(5)
         } else if (keyName === ARROW_DOWN) {
-            this.props.selectLineIndex(10)
+            this.props.selectVerseIndex(10)
         }
     }
 
@@ -365,7 +365,7 @@ class App extends Component {
                 break
             case ARROW_UP:
             case ARROW_DOWN:
-                this._handleAccessedLineSelect(keyName)
+                this._handleAccessedVerseSelect(keyName)
                 break
         }
     }
@@ -425,7 +425,7 @@ class App extends Component {
                 selectedSongIndex,
                 selectedOverviewIndex,
                 selectedAnnotationIndex,
-                selectedLineIndex,
+                selectedVerseIndex,
                 selectedTime,
                 selectedDotKeys,
                 selectedWikiUrl } = this.props,
@@ -456,7 +456,7 @@ class App extends Component {
                     selectedSongIndex={selectedSongIndex}
                     selectedOverviewIndex={selectedOverviewIndex}
                     selectedAnnotationIndex={selectedAnnotationIndex}
-                    selectedLineIndex={selectedLineIndex}
+                    selectedVerseIndex={selectedVerseIndex}
                     selectedTime={selectedTime}
                     selectedDotKeys={selectedDotKeys}
                     selectedWikiUrl={selectedWikiUrl}

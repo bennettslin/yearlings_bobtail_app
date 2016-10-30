@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
-         SELECTED_LINE_INDEX,
+         SELECTED_VERSE_INDEX,
          SELECTED_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX,
          SELECTED_WIKI_URL } from '../app/helpers/constants'
@@ -58,7 +58,7 @@ describe('reducers', () => {
 
         it('handles action type of annotation index', () => {
             const NEW_INDEX = 9,
-                action = { type: SELECTED_LINE_INDEX, payload: NEW_INDEX }
+                action = { type: SELECTED_VERSE_INDEX, payload: NEW_INDEX }
             expect(LineIndexReducer(undefined, action)).to.equal(NEW_INDEX)
         })
     })
