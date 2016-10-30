@@ -42,15 +42,6 @@ export const selectTime = (selectedTime = 0) => {
     }
 }
 
-export const selectDotKey = (selectedDotKey, isSelected = false) => {
-    setDotInSession(selectedDotKey, isSelected)
-    return {
-        type: SELECTED_DOT_KEYS,
-        payload: { selectedDotKey,
-                   isSelected }
-    }
-}
-
 export const selectOverviewIndex = (selectedOverviewIndex = DEFAULT_OVERVIEW_INDEX) => {
     setInSession(SELECTED_OVERVIEW_INDEX, selectedOverviewIndex)
     return {
@@ -59,7 +50,19 @@ export const selectOverviewIndex = (selectedOverviewIndex = DEFAULT_OVERVIEW_IND
     }
 }
 
-export const selectWikiUrl = (selectedWikiUrl = null) => ({
-    type: SELECTED_WIKI_URL,
-    payload: selectedWikiUrl
-})
+export const selectWikiUrl = (selectedWikiUrl = '') => {
+    setInSession(SELECTED_WIKI_URL, selectedWikiUrl)
+    return {
+        type: SELECTED_WIKI_URL,
+        payload: selectedWikiUrl
+    }
+}
+
+export const selectDotKey = (selectedDotKey, isSelected = false) => {
+    setDotInSession(selectedDotKey, isSelected)
+    return {
+        type: SELECTED_DOT_KEYS,
+        payload: { selectedDotKey,
+                   isSelected }
+    }
+}

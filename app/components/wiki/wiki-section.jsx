@@ -30,7 +30,15 @@ class WikiSectionView extends Component {
         }
     }
 
+    componentWillMount({ selectedWikiUrl }) {
+        this._onWikiUrlReceived(selectedWikiUrl)
+    }
+
     componentWillReceiveProps({ selectedWikiUrl }) {
+        this._onWikiUrlReceived(selectedWikiUrl)
+    }
+
+    _onWikiUrlReceived(selectedWikiUrl) {
         if (selectedWikiUrl && selectedWikiUrl !== this.props.selectedWikiUrl) {
             this.setState({ webviewLoading: true })
         }

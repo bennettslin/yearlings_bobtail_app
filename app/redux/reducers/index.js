@@ -15,7 +15,8 @@ const { getFromSession } = SessionHelper,
     storedLineIndex = getFromSession(SELECTED_LINE_INDEX),
     storedTime = getFromSession(SELECTED_TIME),
     storedDotKeys = getFromSession(SELECTED_DOT_KEYS),
-    storedOverviewIndex = getFromSession(SELECTED_OVERVIEW_INDEX)
+    storedOverviewIndex = getFromSession(SELECTED_OVERVIEW_INDEX),
+    storedWikiUrl = getFromSession(SELECTED_WIKI_URL)
 
 export const SongIndexReducer = (state = storedSongIndex, action) => {
     switch (action.type) {
@@ -76,7 +77,7 @@ export const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
     }
 }
 
-export const WikiUrlReducer = (state = null, action) => {
+export const WikiUrlReducer = (state = storedWikiUrl, action) => {
     switch (action.type) {
         case SELECTED_WIKI_URL:
             return action.payload
