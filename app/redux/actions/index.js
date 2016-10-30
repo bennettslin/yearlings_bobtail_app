@@ -6,37 +6,58 @@ import { SELECTED_SONG_INDEX,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_WIKI_URL,
          DEFAULT_OVERVIEW_INDEX } from '../../helpers/constants'
+ import SessionHelper from '../../helpers/session-helper'
 
-export const selectSongIndex = (selectedSongIndex = 0) => ({
-    type: SELECTED_SONG_INDEX,
-    payload: selectedSongIndex
-})
+ const { setInSession, setDotInSession } = SessionHelper
 
-export const selectAnnotationIndex = (selectedAnnotationIndex = 0) => ({
-    type: SELECTED_ANNOTATION_INDEX,
-    payload: selectedAnnotationIndex
-})
+export const selectSongIndex = (selectedSongIndex = 0) => {
+    setInSession(SELECTED_SONG_INDEX, selectedSongIndex)
+    return {
+        type: SELECTED_SONG_INDEX,
+        payload: selectedSongIndex
+    }
+}
 
-export const selectLineIndex = (selectedLineIndex = 0) => ({
-    type: SELECTED_LINE_INDEX,
-    payload: selectedLineIndex
-})
+export const selectAnnotationIndex = (selectedAnnotationIndex = 0) => {
+    setInSession(SELECTED_ANNOTATION_INDEX, selectedAnnotationIndex)
+    return {
+        type: SELECTED_ANNOTATION_INDEX,
+        payload: selectedAnnotationIndex
+    }
+}
 
-export const selectTime = (selectedTime = 0) => ({
-    type: SELECTED_TIME,
-    payload: selectedTime
-})
+export const selectLineIndex = (selectedLineIndex = 0) => {
+    setInSession(SELECTED_LINE_INDEX, selectedLineIndex)
+    return {
+        type: SELECTED_LINE_INDEX,
+        payload: selectedLineIndex
+    }
+}
 
-export const selectDotKey = (selectedDotKey, isSelected = false) => ({
-    type: SELECTED_DOT_KEYS,
-    payload: { selectedDotKey,
-               isSelected }
-})
+export const selectTime = (selectedTime = 0) => {
+    setInSession(SELECTED_TIME, selectedTime)
+    return {
+        type: SELECTED_TIME,
+        payload: selectedTime
+    }
+}
 
-export const selectOverviewIndex = (selectedOverviewIndex = DEFAULT_OVERVIEW_INDEX) => ({
-    type: SELECTED_OVERVIEW_INDEX,
-    payload: selectedOverviewIndex
-})
+export const selectDotKey = (selectedDotKey, isSelected = false) => {
+    setDotInSession(selectedDotKey, isSelected)
+    return {
+        type: SELECTED_DOT_KEYS,
+        payload: { selectedDotKey,
+                   isSelected }
+    }
+}
+
+export const selectOverviewIndex = (selectedOverviewIndex = DEFAULT_OVERVIEW_INDEX) => {
+    setInSession(SELECTED_OVERVIEW_INDEX, selectedOverviewIndex)
+    return {
+        type: SELECTED_OVERVIEW_INDEX,
+        payload: selectedOverviewIndex
+    }
+}
 
 export const selectWikiUrl = (selectedWikiUrl = null) => ({
     type: SELECTED_WIKI_URL,

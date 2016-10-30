@@ -27,7 +27,6 @@ import { SELECTED_SONG_INDEX,
 import AlbumHelper from 'helpers/album-view-helper'
 import { intersects } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
-import SessionHelper from 'helpers/session-helper'
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 
 /*********
@@ -160,7 +159,6 @@ class App extends Component {
             // Store song index in session.
 
             this.props.selectSongIndex(selectedIndex)
-            SessionHelper.setInSession(selectedIndexKey, selectedIndex)
 
             /**
              * Also reset the stored annotation, time, and overview if changing
@@ -196,7 +194,6 @@ class App extends Component {
         if (e) { e.stopPropagation() }
 
         this.props.selectOverviewIndex(selectedIndex)
-        SessionHelper.setInSession(SELECTED_OVERVIEW_INDEX, selectedIndex)
     }
 
     handleDotHover(e, hoveredDotIndex = 0) {
@@ -218,7 +215,6 @@ class App extends Component {
 
         const isSelected = !this.props.selectedDotKeys[selectDotKey]
         this.props.selectDotKey(selectDotKey, isSelected)
-        SessionHelper.setDotInSession(selectDotKey, isSelected)
 
         // If this is the last selected dot key, then close the annotation.
         if (!isSelected) {
@@ -230,7 +226,6 @@ class App extends Component {
         if (e) { e.stopPropagation() }
 
         this.props.selectAnnotationIndex(selectedIndex)
-        SessionHelper.setInSession(SELECTED_ANNOTATION_INDEX, selectedIndex)
 
         this.handleWikiUrlSelect(e)
 
@@ -270,7 +265,6 @@ class App extends Component {
         if (e) { e.stopPropagation() }
 
         this.props.selectTime(selectedTime)
-        SessionHelper.setInSession(SELECTED_TIME, selectedTime)
     }
 
     _handleAccessedAnnotationSelect(keyName) {
@@ -351,7 +345,6 @@ class App extends Component {
 
     // For dev purposes only.
     _handleAccessedLineSelect(keyName) {
-        console.error('keyName', keyName);
         if (keyName === ARROW_UP) {
             this.props.selectLineIndex(5)
         } else if (keyName === ARROW_DOWN) {
