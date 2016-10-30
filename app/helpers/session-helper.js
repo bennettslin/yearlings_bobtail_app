@@ -6,10 +6,28 @@ import { SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX } from './constants'
 
+// TODO: Add validation methods that return valid or default value for all, and test them! ʦ
+
+const _getValidDotKeys = (tryValue) => {
+        // Value is a valid object.
+        try {
+            const dotKeysObject = JSON.parse(tryValue)
+            return dotKeysObject
+
+        // Create dot keys object from scratch, with all values true.
+        } catch (e) {
+            const dotKeysObject = {}
+            ALL_DOT_KEYS.forEach(dotKey => {
+                dotKeysObject[dotKey] = true
+            })
+            return dotKeysObject
+        }
+    }
+
 export default {
 
     setDotInSession(dotKey, isActive) {
-        const selectedDotKeys = this._getValidDotKeys(WINDOW_STORAGE[SELECTED_DOT_KEYS])
+        const selectedDotKeys = _getValidDotKeys(WINDOW_STORAGE[SELECTED_DOT_KEYS])
         selectedDotKeys[dotKey] = isActive
 
         this.setInSession(SELECTED_DOT_KEYS, JSON.stringify(selectedDotKeys))
@@ -22,7 +40,7 @@ export default {
     // TODO: This currently does not allow for float times.
     getFromSession(key) {
         if (key === SELECTED_DOT_KEYS) {
-            return this._getValidDotKeys(WINDOW_STORAGE[key])
+            return _getValidDotKeys(WINDOW_STORAGE[key])
 
         } else if (key) {
             // Default is 0 unless specified otherwise.
@@ -36,24 +54,6 @@ export default {
 
         } else {
             return 0
-        }
-    },
-
-    // TODO: Add validation methods that return valid or default value for all, and test them! ʦ
-
-    _getValidDotKeys(tryValue) {
-        // Value is a valid object.
-        try {
-            const dotKeysObject = JSON.parse(tryValue)
-            return dotKeysObject
-
-        // Create dot keys object from scratch, with all values true.
-        } catch (e) {
-            const dotKeysObject = {}
-            ALL_DOT_KEYS.forEach(dotKey => {
-                dotKeysObject[dotKey] = true
-            })
-            return dotKeysObject
         }
     }
 }

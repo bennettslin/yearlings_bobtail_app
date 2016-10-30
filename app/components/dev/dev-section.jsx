@@ -17,6 +17,7 @@ const DevSectionView = ({
 
     // From props.
     selectedTime,
+    selectedLineIndex,
     isNarrowScreen,
     onScreenWidthClick
 
@@ -25,6 +26,9 @@ const DevSectionView = ({
         <h2>dev</h2>
         <div className="row">
             selected time: {getFormattedTime(selectedTime)}
+        </div>
+        <div className="row">
+            selected line index: {selectedLineIndex}
         </div>
         <a
             className="enabled"

@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
+         SELECTED_LINE_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
@@ -8,11 +9,13 @@ import { SELECTED_SONG_INDEX,
          SELECTED_WIKI_URL } from '../../helpers/constants'
 import SessionHelper from '../../helpers/session-helper'
 
-const storedSongIndex = SessionHelper.getFromSession(SELECTED_SONG_INDEX)
-const storedAnnotationIndex = SessionHelper.getFromSession(SELECTED_ANNOTATION_INDEX)
-const storedTime = SessionHelper.getFromSession(SELECTED_TIME)
-const storedDotKeys = SessionHelper.getFromSession(SELECTED_DOT_KEYS)
-const storedOverviewIndex = SessionHelper.getFromSession(SELECTED_OVERVIEW_INDEX)
+const { getFromSession } = SessionHelper,
+    storedSongIndex = getFromSession(SELECTED_SONG_INDEX),
+    storedAnnotationIndex = getFromSession(SELECTED_ANNOTATION_INDEX),
+    storedLineIndex = getFromSession(SELECTED_LINE_INDEX),
+    storedTime = getFromSession(SELECTED_TIME),
+    storedDotKeys = getFromSession(SELECTED_DOT_KEYS),
+    storedOverviewIndex = getFromSession(SELECTED_OVERVIEW_INDEX)
 
 export const SongIndexReducer = (state = storedSongIndex, action) => {
     switch (action.type) {
@@ -26,6 +29,15 @@ export const SongIndexReducer = (state = storedSongIndex, action) => {
 export const AnnotationIndexReducer = (state = storedAnnotationIndex, action) => {
     switch (action.type) {
         case SELECTED_ANNOTATION_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const LineIndexReducer = (state = storedLineIndex, action) => {
+    switch (action.type) {
+        case SELECTED_LINE_INDEX:
             return action.payload
         default:
             return state
@@ -76,6 +88,7 @@ export const WikiUrlReducer = (state = null, action) => {
 const rootReducer = combineReducers({
     selectedSongIndex: SongIndexReducer,
     selectedAnnotationIndex: AnnotationIndexReducer,
+    selectedLineIndex: LineIndexReducer,
     selectedTime: TimeReducer,
     selectedDotKeys: DotKeysReducer,
     selectedOverviewIndex: OverviewIndexReducer,

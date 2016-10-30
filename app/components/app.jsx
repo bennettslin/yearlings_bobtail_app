@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { selectSongIndex,
          selectAnnotationIndex,
+         selectLineIndex,
          selectTime,
          selectDotKey,
          selectOverviewIndex,
@@ -11,6 +12,7 @@ import { selectSongIndex,
 import Album from './album'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
+         SELECTED_LINE_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
@@ -35,6 +37,7 @@ import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 const passReduxStateToProps = ({
     selectedSongIndex,
     selectedAnnotationIndex,
+    selectedLineIndex,
     selectedTime,
     selectedDotKeys,
     selectedOverviewIndex,
@@ -43,6 +46,7 @@ const passReduxStateToProps = ({
     // Pass Redux state into component props.
     selectedSongIndex,
     selectedAnnotationIndex,
+    selectedLineIndex,
     selectedTime,
     selectedDotKeys,
     selectedOverviewIndex,
@@ -54,6 +58,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         selectSongIndex,
         selectAnnotationIndex,
+        selectLineIndex,
         selectTime,
         selectDotKey,
         selectOverviewIndex,
@@ -69,6 +74,8 @@ class App extends Component {
 
     constructor(props) {
         super(props)
+
+        // Bind this to event handlers.
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
         this.handleSongSelect = this.handleSongSelect.bind(this)
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this)
@@ -343,12 +350,12 @@ class App extends Component {
     }
 
     // For dev purposes only.
-    _handleAccessedTimeSelect(keyName) {
-
+    _handleAccessedLineSelect(keyName) {
+        console.error('keyName', keyName);
         if (keyName === ARROW_UP) {
-
+            this.props.selectLineIndex(5)
         } else if (keyName === ARROW_DOWN) {
-
+            this.props.selectLineIndex(10)
         }
     }
 
@@ -364,7 +371,7 @@ class App extends Component {
                 break
             case ARROW_UP:
             case ARROW_DOWN:
-                this._handleAccessedTimeSelect(keyName)
+                this._handleAccessedLineSelect(keyName)
                 break
         }
     }
@@ -424,6 +431,7 @@ class App extends Component {
                 selectedSongIndex,
                 selectedOverviewIndex,
                 selectedAnnotationIndex,
+                selectedLineIndex,
                 selectedTime,
                 selectedDotKeys,
                 selectedWikiUrl } = this.props,
@@ -454,6 +462,7 @@ class App extends Component {
                     selectedSongIndex={selectedSongIndex}
                     selectedOverviewIndex={selectedOverviewIndex}
                     selectedAnnotationIndex={selectedAnnotationIndex}
+                    selectedLineIndex={selectedLineIndex}
                     selectedTime={selectedTime}
                     selectedDotKeys={selectedDotKeys}
                     selectedWikiUrl={selectedWikiUrl}

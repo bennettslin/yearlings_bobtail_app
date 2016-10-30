@@ -1,11 +1,13 @@
 import { expect } from 'chai'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
+         SELECTED_LINE_INDEX,
          SELECTED_OVERVIEW_INDEX,
          DEFAULT_OVERVIEW_INDEX,
          SELECTED_WIKI_URL } from '../app/helpers/constants'
 import { SongIndexReducer,
          AnnotationIndexReducer,
+         LineIndexReducer,
          OverviewIndexReducer,
          WikiUrlReducer } from '../app/redux/reducers'
 
@@ -45,6 +47,19 @@ describe('reducers', () => {
             const NEW_INDEX = 8,
                 action = { type: SELECTED_ANNOTATION_INDEX, payload: NEW_INDEX }
             expect(AnnotationIndexReducer(undefined, action)).to.equal(NEW_INDEX)
+        })
+    })
+
+    describe('LineIndexReducer', () => {
+        it('returns current index if passed unknown type', () => {
+            const CURRENT_INDEX = 14
+            expect(LineIndexReducer(CURRENT_INDEX, {})).to.equal(CURRENT_INDEX)
+        })
+
+        it('handles action type of annotation index', () => {
+            const NEW_INDEX = 9,
+                action = { type: SELECTED_LINE_INDEX, payload: NEW_INDEX }
+            expect(LineIndexReducer(undefined, action)).to.equal(NEW_INDEX)
         })
     })
 
