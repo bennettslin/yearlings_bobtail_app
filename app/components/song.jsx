@@ -57,7 +57,7 @@ const SongView = ({
     onPortalClick,
     onWikiUrlClick,
     onAnnotationClick,
-    onTimeClick,
+    onVerseClick,
     onDotHover,
     onLineHover,
     onLyricColumnClick,
@@ -105,7 +105,7 @@ const SongView = ({
                 hoveredLineIndex={hoveredLineIndex}
                 selectedVerseIndex={selectedVerseIndex}
                 onLineHover={onLineHover}
-                onTimeClick={onTimeClick}
+                onVerseClick={onVerseClick}
                 onAnnotationClick={onAnnotationClick}
                 onLyricColumnClick={onLyricColumnClick}
             />

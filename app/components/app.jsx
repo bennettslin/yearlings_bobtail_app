@@ -80,7 +80,7 @@ class App extends Component {
         this.handleSongSelect = this.handleSongSelect.bind(this)
         this.handleOverviewSelect = this.handleOverviewSelect.bind(this)
         this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this)
-        this.handleTimeSelect = this.handleTimeSelect.bind(this)
+        this.handleVerseSelect = this.handleVerseSelect.bind(this)
         this.handleDotSelect = this.handleDotSelect.bind(this)
         this.handleDotHover = this.handleDotHover.bind(this)
         this.handleLineHover = this.handleLineHover.bind(this)
@@ -175,7 +175,7 @@ class App extends Component {
             if (selectedIndexKey === SELECTED_SONG_INDEX) {
                 this.handleAnnotationSelect()
                 this.handleOverviewSelect(e, DEFAULT_OVERVIEW_INDEX)
-                this.handleTimeSelect()
+                this.handleVerseSelect()
             }
 
             // Scroll to top of lyrics.
@@ -268,10 +268,10 @@ class App extends Component {
         this.handleAnnotationSelect(e, selectedAnnotationIndex)
     }
 
-    handleTimeSelect(e, selectedTime = 0) {
+    handleVerseSelect(e, selectedVerseIndex = 0) {
         if (e) { e.stopPropagation() }
 
-        this.props.selectTime(selectedTime)
+        this.props.selectVerseIndex(selectedVerseIndex)
     }
 
     _handleAccessedAnnotationSelect(keyName) {
@@ -359,9 +359,9 @@ class App extends Component {
             timesLength = selectedSong.times ? selectedSong.times.length : 0
 
         if (keyName === ARROW_UP) {
-            this.props.selectVerseIndex(selectedVerseIndex - 1)
+            this.handleVerseSelect(undefined, selectedVerseIndex - 1)
         } else if (keyName === ARROW_DOWN) {
-            this.props.selectVerseIndex(selectedVerseIndex + 1)
+            this.handleVerseSelect(undefined, selectedVerseIndex + 1)
         }
     }
 
@@ -482,7 +482,7 @@ class App extends Component {
                     onWikiUrlClick={this.handleWikiUrlSelect}
                     onAnnotationClick={this.handleAnnotationSelect}
                     onOverviewClick={this.handleOverviewSelect}
-                    onTimeClick={this.handleTimeSelect}
+                    onVerseClick={this.handleVerseSelect}
                     onDotClick={this.handleDotSelect}
                     onDotHover={this.handleDotHover}
                     onLineHover={this.handleLineHover}
