@@ -338,6 +338,11 @@ module.exports = {
             taskName: `add spinner to wiki section`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `store wiki url in session`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
