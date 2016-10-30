@@ -11,6 +11,7 @@ const LyricsVerse = ({
 
     verseObject,
     selectedTime,
+    selectedVerseIndex,
     hoveredLineIndex,
     onAnnotationClick,
     onTimeClick,
@@ -27,7 +28,9 @@ const LyricsVerse = ({
         /**
          * It's selected if it's between time and nextTime.
          */
-        isSelected = (time <= selectedTime && selectedTime < nextTime),
+        // isSelected = (time <= selectedTime && selectedTime < nextTime),
+
+        isSelected = verseIndex === selectedVerseIndex,
 
         /**
          * If there is no duration between time and nextTime, it can be

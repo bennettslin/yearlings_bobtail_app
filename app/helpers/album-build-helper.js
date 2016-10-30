@@ -6,10 +6,11 @@ import { getFormattedAnnotationTitle } from './format-helper'
 import { findKeyInObject } from './general-helper'
 
 const _tempStore = {
-    songIndex: 0,
-    songDotKeys: {},
-    annotations: [],
-    portalLinks: {},
+    _songIndex: 0,
+    _songDotKeys: {},
+    _annotations: [],
+    _portalLinks: {},
+    _songTimes: [],
     _lastVerseObject: {},
     _verseIndexCounter: 0
 }
@@ -26,9 +27,11 @@ const _prepareAllSongs = (album) => {
         _convertOverviews(song)
 
         // Song indices start at 1.
-        _tempStore.songIndex = songIndex + 1
-        _tempStore.annotations = []
+        _tempStore._songIndex = songIndex + 1
+        _tempStore._annotations = []
         _tempStore._verseIndexCounter = 0
+        _tempStore._songDotKeys = {}
+        _tempStore._songTimes = []
 
         _addTitleToLyrics(song.title, song.lyrics)
         // Do not confuse anchor key with string prototype anchor method.
@@ -42,12 +45,13 @@ const _prepareAllSongs = (album) => {
         _tempStore._lastVerseObject.verseIndex = _tempStore._verseIndexCounter
 
         // Add annotations to song object.
-        song.annotations = _tempStore.annotations
+        song.annotations = _tempStore._annotations
 
         // Add available dots to song object.
-        song.dotKeys = _tempStore.songDotKeys
+        song.dotKeys = _tempStore._songDotKeys
 
-        _tempStore.songDotKeys = {}
+        // Add times for all verses to song object.
+        song.times = _tempStore._songTimes
     })
 }
 
@@ -99,6 +103,7 @@ const _parseLyrics = (lyric) => {
     if (!isNaN(lyric.time)) {
         // Add line index to lyric line object.
         lyric.verseIndex = _tempStore._verseIndexCounter
+        _tempStore._songTimes.push(lyric.time)
 
         _tempStore._lastVerseObject.verseIndex = _tempStore._verseIndexCounter
         _tempStore._verseIndexCounter++
@@ -126,7 +131,7 @@ const _parseLyrics = (lyric) => {
 }
 
 const _prepareAnnotation = (lyric = {}, annotation = {}, dotKeys = {}) => {
-    const annotationIndex = _tempStore.annotations.length + 1,
+    const annotationIndex = _tempStore._annotations.length + 1,
         cards = lyric.annotation
 
     // Add annotation index to annotation and lyrics. 1-based index.
@@ -160,7 +165,7 @@ const _prepareAnnotation = (lyric = {}, annotation = {}, dotKeys = {}) => {
     annotation.dotKeys = dotKeys
 
     // Add annotation object to annotations array.
-    _tempStore.annotations.push(annotation)
+    _tempStore._annotations.push(annotation)
 
     // Clean up line object.
     delete lyric.annotation
@@ -177,7 +182,7 @@ const _addWikiToDots = (card, dotKeys) => {
             }
             card.dotKeys.wiki = true
             dotKeys.wiki = true
-            _tempStore.songDotKeys.wiki = true
+            _tempStore._songDotKeys.wiki = true
         }
     }
 }
@@ -187,7 +192,7 @@ const _addDotKeys = (card, dotKeys) => {
     if (card.dotKeys) {
         Object.keys(card.dotKeys).forEach(dotKey => {
             dotKeys[dotKey] = true
-            _tempStore.songDotKeys[dotKey] = true
+            _tempStore._songDotKeys[dotKey] = true
         })
     }
 }
@@ -198,22 +203,22 @@ const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0) => {
     if (portal) {
 
         const portalLink = {
-            songIndex: _tempStore.songIndex,
+            songIndex: _tempStore._songIndex,
             annotationIndex,
             cardIndex
         }
 
         // If first portal link, initialise array.
-        if (!_tempStore.portalLinks[portal]) {
-            _tempStore.portalLinks[portal] = []
+        if (!_tempStore._portalLinks[portal]) {
+            _tempStore._portalLinks[portal] = []
         }
 
         // Add portal link to portal links array.
-        _tempStore.portalLinks[portal].push(portalLink)
+        _tempStore._portalLinks[portal].push(portalLink)
 
         // Add portal key to dot keys.
         dotKeys.portal = true
-        _tempStore.songDotKeys.portal = true
+        _tempStore._songDotKeys.portal = true
 
         // Clean up card unit.
         delete card.portal
@@ -225,8 +230,8 @@ const _injectPortalLinks = (album) => {
      * For each annotation with a portal, add an array of links to all
      * other portals.
      */
-    for (const linkKey in _tempStore.portalLinks) {
-        const links = _tempStore.portalLinks[linkKey]
+    for (const linkKey in _tempStore._portalLinks) {
+        const links = _tempStore._portalLinks[linkKey]
 
         links.forEach((link, index) => {
             const song = album.songs[link.songIndex - 1],

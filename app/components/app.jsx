@@ -144,9 +144,15 @@ class App extends Component {
         const { songs,
                 selectedSongIndex } = this.props,
 
-            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs)
+            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+            copiedSong = Object.assign({}, selectedSong)
 
-        return LogHelper.logObject('selectedSong', selectedSong)
+        delete copiedSong.annotations
+        delete copiedSong.lyrics
+        delete copiedSong.overviews
+        delete copiedSong.tasks
+
+        return LogHelper.logObject('copiedSong', copiedSong)
     }
 
     handleTitleSelect(e) {
@@ -346,10 +352,16 @@ class App extends Component {
 
     // For dev purposes only.
     _handleAccessedVerseSelect(keyName) {
+        const { selectedSongIndex,
+                selectedVerseIndex,
+                songs } = this.props,
+            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+            timesLength = selectedSong.times ? selectedSong.times.length : 0
+
         if (keyName === ARROW_UP) {
-            this.props.selectVerseIndex(5)
+            this.props.selectVerseIndex(selectedVerseIndex - 1)
         } else if (keyName === ARROW_DOWN) {
-            this.props.selectVerseIndex(10)
+            this.props.selectVerseIndex(selectedVerseIndex + 1)
         }
     }
 
