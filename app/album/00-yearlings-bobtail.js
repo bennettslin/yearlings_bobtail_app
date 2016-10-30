@@ -33,6 +33,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `dev mechanism to play line`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `scroll played lyric into view`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `lyrics, not app, should care about hovered line`,
             workedHours: 0,
             neededHours: 3
@@ -43,14 +53,9 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `dev mechanism to play line`,
+            taskName: `scrap multiple overviews`,
             workedHours: 0,
             neededHours: 3
-        },
-        {
-            taskName: `scroll played lyric into view`,
-            workedHours: 0,
-            neededHours: 2
         },
         {
             taskName: `reset dom width of lines upon changing from left to right`,
