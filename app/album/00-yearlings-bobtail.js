@@ -33,9 +33,14 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `switch from time logic to verse index in verse`,
+            taskName: `scroll played verse into view`,
             workedHours: 0,
-            neededHours: 1
+            neededHours: 2
+        },
+        {
+            taskName: `make played verse accessible`,
+            workedHours: 0,
+            neededHours: 2
         },
         {
             taskName: `bug where you click on verse, then key away`,
@@ -43,9 +48,9 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `scroll played lyric into view`,
+            taskName: `switch from time logic to verse index in verse`,
             workedHours: 0,
-            neededHours: 2
+            neededHours: 1
         },
         {
             taskName: `lyrics, not app, should care about hovered line`,
