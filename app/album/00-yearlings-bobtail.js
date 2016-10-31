@@ -30,6 +30,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `change overviews`,
+            workedHours: 1,
+            neededHours: 3
+        },
+        {
             taskName: `method to log selected verse`,
             workedHours: 0,
             neededHours: 1
@@ -63,11 +68,6 @@ module.exports = {
             taskName: `refactor app handlers`,
             workedHours: 0,
             neededHours: 2
-        },
-        {
-            taskName: `scrap multiple overviews`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `reset dom width of lines upon changing from left to right`,

@@ -39,3 +39,5 @@
 * When dot section is accessed:
 
 * When player section is accessed:
+
+* When overview section is accessed:
