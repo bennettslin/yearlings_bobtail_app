@@ -96,11 +96,6 @@ module.exports = {
         'afterword' // My perspective while making this website.
     ],
 
-    OVERVIEW_KEYS: [
-        'narrative',
-        'music'
-    ],
-
     ARROW_LEFT: 'ArrowLeft',
     ARROW_RIGHT: 'ArrowRight',
     ARROW_UP: 'ArrowUp',

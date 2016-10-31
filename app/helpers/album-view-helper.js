@@ -21,19 +21,6 @@ export default {
         return songTasks ? songTasks : tasks
     },
 
-    getOverviewText(selectedOverviewIndex, selectedSong, overviews) {
-        if (selectedOverviewIndex) {
-            const songOverviews = selectedSong.overviews
-
-            // If no song overviews, then return album overviews.
-            return songOverviews ?
-                songOverviews[selectedOverviewIndex - 1] :
-                overviews[selectedOverviewIndex - 1]
-        } else {
-            return null
-        }
-    },
-
     getPortalLinks(card, songs) {
         if (card) {
             const { portalLinks } = card

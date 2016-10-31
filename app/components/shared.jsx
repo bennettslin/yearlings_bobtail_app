@@ -20,7 +20,7 @@ const Shared = ({
 
 ...other }) => {
     const selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
-        overviewText = AlbumHelper.getOverviewText(selectedOverviewIndex, selectedSong, albumOverviews),
+        overviewText = selectedSong.overview,
         tasks = AlbumHelper.getTasks(selectedSong, albumTasks)
 
     return (

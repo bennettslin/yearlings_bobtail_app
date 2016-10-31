@@ -1,15 +1,12 @@
 module.exports = {
     title: `Yearling's Bobtail`,
-    overviews: {
-        // Hi, I'm Bennett. end of my relationship,
-        // Narrowed down to five things that changed my life.
-        // Spent the next five years
-        // Ulysses of rock albums.
-        narrative: `Hi, I'm Bennett. `,
-        // Wrote and recorded all the parts myself.
-        // Released in 2006.
-        music: `personal yb`
-    },
+    // Hi, I'm Bennett. end of my relationship,
+    // Narrowed down to five things that changed my life.
+    // Spent the next five years
+    // Ulysses of rock albums.
+    // Wrote and recorded all the parts myself.
+    // Released in 2006.
+    overview: 'placeholder',
     pageStartingIndices: [0, 9],
     songs: [
         require('./01-didi'),
@@ -32,6 +29,11 @@ module.exports = {
         require('./18-my-100000th-dream')
     ],
     tasks: [
+        {
+            taskName: `method to log selected verse`,
+            workedHours: 0,
+            neededHours: 1
+        },
         {
             taskName: `scroll played verse into view`,
             workedHours: 0,

@@ -1,7 +1,6 @@
 import React from 'react'
 import TextBlock from '../text/text-block'
 import RadioButtonBlock from '../superclasses/radio-button-block'
-import { OVERVIEW_KEYS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -25,11 +24,7 @@ const OverviewsSectionView = ({
 
 }) => (
     <div className="section overviews-section">
-        <RadioButtonBlock
-            selectedButtonIndex={selectedOverviewIndex}
-            buttonKeys={OVERVIEW_KEYS}
-            onButtonClick={onOverviewClick}
-        />
+        <h2>overview</h2>
         <div className="overview-text">
             <TextBlock
                 isLyric={false}

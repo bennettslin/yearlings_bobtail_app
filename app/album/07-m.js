@@ -8,9 +8,7 @@ module.exports = {
         }
     },
     totalTime: 215,
-    overviews: {
-        narrative: `After a string of dating flops that culminated in the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.`
-    },
+    overview: `After a string of dating flops that culminated in the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.`,
     lyrics: [
         [
             {

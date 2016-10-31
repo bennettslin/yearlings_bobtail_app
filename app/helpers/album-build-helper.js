@@ -1,7 +1,6 @@
 // Parse album data for build.
 
-import { OVERVIEW_KEYS,
-         ALBUM_BUILD_KEYS } from './constants'
+import { ALBUM_BUILD_KEYS } from './constants'
 import { getFormattedAnnotationTitle } from './format-helper'
 import { findKeyInObject } from './general-helper'
 
@@ -16,7 +15,7 @@ const _tempStore = {
 }
 
 export const prepareAlbumData = (album = {}) => {
-    _convertOverviews(album)
+    // _convertOverviews(album)
     _prepareAllSongs(album)
     _injectPortalLinks(album)
 }
@@ -24,7 +23,7 @@ export const prepareAlbumData = (album = {}) => {
 const _prepareAllSongs = (album) => {
     album.songs.forEach((song, songIndex) => {
 
-        _convertOverviews(song)
+        // _convertOverviews(song)
 
         // Song indices start at 1.
         _tempStore._songIndex = songIndex + 1
@@ -53,14 +52,6 @@ const _prepareAllSongs = (album) => {
         // Add times for all verses to song object.
         song.times = _tempStore._songTimes
     })
-}
-
-const _convertOverviews = (object) => {
-    // Convert overviews object into array.
-    const overviews = OVERVIEW_KEYS.map(overviewKey => {
-        return object.overviews[overviewKey]
-    })
-    object.overviews = overviews
 }
 
 const _addTitleToLyrics = (title, lyrics) => {

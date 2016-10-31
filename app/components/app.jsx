@@ -430,7 +430,7 @@ class App extends Component {
     render() {
         const { songs,
                 title,
-                overviews,
+                overview,
                 tasks,
 
                 // From Redux.
@@ -460,7 +460,7 @@ class App extends Component {
                 <Album
                     songs={songs}
                     albumTitle={title}
-                    albumOverviews={overviews}
+                    albumOverview={overview}
                     albumTasks={tasks}
 
                     accessedAnnotationIndex={accessedAnnotationIndex}
