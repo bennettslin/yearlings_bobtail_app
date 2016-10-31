@@ -11,16 +11,29 @@ module.exports = {
     doubleColumns: true,
     totalTime: 201,
     overviews: {
-        narrative: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
-        music: [
-            `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
-            {
-                italic: `Nineteen Eighty-Four.`
-            },
-            `So I used doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the internal conflict between my sober self and my drunken alter ego. Since the breakup allowed me to regress in emotional age, I evoked the musical style of my childhood hero Johnny Horton, a country star who sang about the Klondike Gold Rush.`
-        ]
+        narrative: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`
     },
     lyrics: [
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
+                            {
+                                italic: `Nineteen Eighty-Four.`
+                            },
+                            `So I used doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the internal conflict between my sober self and my drunken alter ego. Since the breakup allowed me to regress in emotional age, I evoked the musical style of my childhood hero Johnny Horton, a country star who sang about the Klondike Gold Rush.`
+                        ],
+                        dotKeys: {
+                            music: true
+                        }
+                    }
+                }
+            }
+        ],
         [
             {
                 // TODO: Mention white throated sparrow.

@@ -20,29 +20,42 @@ module.exports = {
     },
     totalTime: 177,
     overviews: {
-        narrative: `As a child, I depended on my older sister to do most everything for me, like zipping my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`,
-        music: [
-            `James Joyce's novel`,
-            {
-                italic: {
-                    anchor: `A Portrait of the Artist as a Young Man`,
-                    wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
-                }
-            },
-            `begins in the simple prose of a child, so I did the same for this first song of the album, which is sung from my sister's perspective. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to`,
-            {
-                anchor: `The Beach Boys'`,
-                wiki: `The_Beach_Boys`
-            },
-            {
-                italic: {
-                    anchor: `Pet Sounds.`,
-                    wiki: `Pet_Sounds`
-                }
-            }
-        ]
+        narrative: `As a child, I depended on my older sister to do most everything for me, like zipping my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`
     },
     lyrics: [
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `James Joyce's novel`,
+                            {
+                                italic: {
+                                    anchor: `A Portrait of the Artist as a Young Man`,
+                                    wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
+                                }
+                            },
+                            `begins in the simple prose of a child, so I did the same for this first song of the album, which is sung from my sister's perspective. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to`,
+                            {
+                                anchor: `The Beach Boys'`,
+                                wiki: `The_Beach_Boys`
+                            },
+                            {
+                                italic: {
+                                    anchor: `Pet Sounds.`,
+                                    wiki: `Pet_Sounds`
+                                }
+                            }
+                        ],
+                        dotKeys: {
+                            music: true
+                        }
+                    }
+                }
+            }
+        ],
         [
             {
                 time: 17,

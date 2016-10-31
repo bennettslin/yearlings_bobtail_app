@@ -15,16 +15,29 @@ module.exports = {
     },
     totalTime: 225,
     overviews: {
-        narrative: `The breakup years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita willingly continued to endure my cruelty. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her sense of worth to our relationship. I was fighting for myself. She was fighting for us.`,
-        music: [
-            `I tried to write this song from Sita's perspective. It's possible that I caricatured her somewhat unfairly, but it's also possible that we both really`,
-            {
-                emphasis: `were`
-            },
-            `caricatures, given our youthful naivety. We had settled into an unhealthy power dynamic early on, then failed to grow within our respective roles. In hindsight, Sita was desperately waiting for me to grow up, because she couldn't do it without me. So that's what the music evokes: waiting… desperately.`
-        ]
+        narrative: `The breakup years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita willingly continued to endure my cruelty. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her sense of worth to our relationship. I was fighting for myself. She was fighting for us.`
     },
     lyrics: [
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `I tried to write this song from Sita's perspective. It's possible that I caricatured her somewhat unfairly, but it's also possible that we both really`,
+                            {
+                                emphasis: `were`
+                            },
+                            `caricatures, given our youthful naivety. We had settled into an unhealthy power dynamic early on, then failed to grow within our respective roles. In hindsight, Sita was desperately waiting for me to grow up, because she couldn't do it without me. So that's what the music evokes: waiting… desperately.`
+                        ],
+                        dotKeys: {
+                            music: true
+                        }
+                    }
+                }
+            }
+        ],
         [
             {
                 time: 12,

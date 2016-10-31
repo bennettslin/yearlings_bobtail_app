@@ -10,10 +10,23 @@ module.exports = {
     doubleColumns: true,
     totalTime: 164,
     overviews: {
-        narrative: `While I can't deny that dating white women helped silence the nagging feeling I had of being racially inferior, I really didn't seek them out. A case in point is Miriam, who approached me at a party, having seen my band perform a week earlier. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me with no effort on my part. We lasted a few months. In the end, I had to wonder if she was slumming it, and whether I was just one more checkbox to mark off.`,
-        music: `A Shepard tone is an auditory illusion in which a single tone descends continuously in pitch while staying within a fixed register. It seemed an apt metaphor for my breakup with Miriam, which left me utterly deflated as I was forced to confront my genetic inferiority complex. This song also uses doublespeaker rhyme, though I've since forgetten which voice represents whose perspective. I suppose that's the point: we both knew equally well that the relationship was doomed.`
+        narrative: `While I can't deny that dating white women helped silence the nagging feeling I had of being racially inferior, I really didn't seek them out. A case in point is Miriam, who approached me at a party, having seen my band perform a week earlier. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me with no effort on my part. We lasted a few months. In the end, I had to wonder if she was slumming it, and whether I was just one more checkbox to mark off.`
     },
     lyrics: [
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `A Shepard tone is an auditory illusion in which a single tone descends continuously in pitch while staying within a fixed register. It seemed an apt metaphor for my breakup with Miriam, which left me utterly deflated as I was forced to confront my genetic inferiority complex. This song also uses doublespeaker rhyme, though I've since forgetten which voice represents whose perspective. I suppose that's the point: we both knew equally well that the relationship was doomed.`,
+                        dotKeys: {
+                            music: true
+                        }
+                    }
+                }
+            }
+        ],
         [
             {
                 time: 1,

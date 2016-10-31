@@ -12,20 +12,33 @@ module.exports = {
     doubleColumns: true,
     totalTime: 272,
     overviews: {
-        narrative: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating, and through my rough start in performing live, Sita lent her moral support, though a part of me always wanted more. At some point, she started to like me back. I'm still not sure how.`,
-        music: [
-            `Just as`,
-            {
-                italic: `The Grasshopper Lies Heavy`
-            },
-            `is an alternate history novel within Philip K. Dick's`,
-            {
-                italic: `The Man in the High Castle,`
-            },
-            `this song in isolation offers a different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being a story within a story, and did so by including lyrical references to all the other songs on the album. Musically, I tried to channel Simon and Garfunkel in both form and harmony.`
-        ]
+        narrative: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating, and through my rough start in performing live, Sita lent her moral support, though a part of me always wanted more. At some point, she started to like me back. I'm still not sure how.`
     },
     lyrics: [
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `Just as`,
+                            {
+                                italic: `The Grasshopper Lies Heavy`
+                            },
+                            `is an alternate history novel within Philip K. Dick's`,
+                            {
+                                italic: `The Man in the High Castle,`
+                            },
+                            `this song in isolation offers a different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being a story within a story, and did so by including lyrical references to all the other songs on the album. Musically, I tried to channel Simon and Garfunkel in both form and harmony.`
+                        ],
+                        dotKeys: {
+                            music: true
+                        }
+                    }
+                }
+            }
+        ],
         [
             {
                 time: 0,

@@ -15,20 +15,33 @@ module.exports = {
     },
     totalTime: 180,
     overviews: {
-        narrative: `One night, I went along with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
-        music: [
-            `While reading`,
-            {
-                italic: `Finnegans Wake,`
-            },
-            `I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police's`,
-            {
-                italic: `Ghost in the Machine`
-            },
-            `was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere.`
-        ]
+        narrative: `One night, I went along with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`
     },
     lyrics: [
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `While reading`,
+                            {
+                                italic: `Finnegans Wake,`
+                            },
+                            `I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police's`,
+                            {
+                                italic: `Ghost in the Machine`
+                            },
+                            `was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere.`
+                        ],
+                        dotKeys: {
+                            music: true
+                        }
+                    }
+                }
+            }
+        ],
         [
             {
                 time: 4,

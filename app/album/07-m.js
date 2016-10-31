@@ -9,10 +9,23 @@ module.exports = {
     },
     totalTime: 215,
     overviews: {
-        narrative: `After a string of dating flops that culminated in the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.`,
-        music: `This song is a carryover from back when my band was The Yearlings. I kept its meaning a secret by disguising Mara's name in various puns, although my enunciation in this recording now makes them obvious. Since I'm nowhere near as skilled on bass and drums as my old bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.`
+        narrative: `After a string of dating flops that culminated in the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.`
     },
     lyrics: [
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `This song is a carryover from back when my band was The Yearlings. I kept its meaning a secret by disguising Mara's name in various puns, although my enunciation in this recording now makes them obvious. Since I'm nowhere near as skilled on bass and drums as my old bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.`,
+                        dotKeys: {
+                            music: true
+                        }
+                    }
+                }
+            }
+        ],
         [
             {
                 time: 33,
