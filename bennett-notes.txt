@@ -19,15 +19,3 @@ Garryowen refrains
 
 Scrolling:
 https://www.npmjs.com/package/scroll-into-view-if-needed
-
-Accessibility:
-When access is on:
-* Display will show all possible keys to click.
-* Display will highlight selected things.
-
-Any key but "esc" will trigger access on.
-"Esc" key will trigger access off.
-Click will trigger access off.
-
-When access is off, all possible keys can fire except "Enter" and "Space."
-When access is on, all possible keys can fire.
