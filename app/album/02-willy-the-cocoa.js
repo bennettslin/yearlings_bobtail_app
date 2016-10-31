@@ -16,6 +16,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
+                        // WIKI: Changelings and CCR
                         description: `In folklore of the past, changelings were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, I wanted to mimic a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of Creedence Clearwater Revival, with muted mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`,
                         dotKeys: {
                             music: true
@@ -36,6 +37,7 @@ module.exports = {
                     {
                         anchor: `valley somersaults`,
                         annotation: {
+                            // WIKI: San Fernando Valley
                             description: `I grew up in the San Fernando Valley of Southern California, where wide boulevards stretch endlessly along a grid plan, and jagged mountains block the horizon on all sides. In the mirages caused by the year-round sweltering heat, the reflections of these mountains naturally point inwards.`
                         }
                     },
