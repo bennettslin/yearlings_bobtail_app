@@ -16,7 +16,8 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `As a kid, I marvelled at the Beatles for weaving melodies and chords so seamlessly. This song began life as an overzealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for, and trotted it back out. The passive-aggressive lyrics are matched in texture by screeching woodwinds and scratch tones on violins.`,
+                        // wiki: beatles
+                        description: `As a kid, I marvelled at The Beatles for weaving melodies and chords so seamlessly. This song began life as an overzealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for, and trotted it back out. The passive-aggressive lyrics are matched in texture by screeching woodwinds and scratch tones on violins.`,
                         dotKeys: {
                             music: true
                         }
@@ -158,6 +159,7 @@ module.exports = {
                     {
                         anchor: `amber eyes—`,
                         annotation: {
+                            // wiki: amber
                             description: `Sasha's eyes were of an amber colour. Also, amber is fossilised tree resin that sometimes preserves the remains of trapped insects from epochs past.`
                         }
                     }
@@ -228,6 +230,7 @@ module.exports = {
                     {
                         anchor: `wet-cheeked papoose`,
                         annotation: {
+                            // wiki: papoose
                             description: `Over time, Sasha and I sat together less and less frequently on the schoolbus. One afternoon, as her hair blew in my face from the seat ahead of mine, I realised that we were no longer peers. I felt like a papoose, or a Native American child, strapped to a basket on his mother's back, in anguish over having to start walking on his own.`
                         }
                     }
@@ -289,6 +292,7 @@ module.exports = {
                     {
                         anchor: `narcing to the aides,`,
                         annotation: {
+                            // wiki: narc
                             description: `To narc is to be a snitch, much like the narcotics officers who gather intelligence on drug dealers by going undercover as high school students. It caught me off guard that the school aides typically declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.`
                         }
                     }
@@ -324,6 +328,7 @@ module.exports = {
                         anchor: `talk Canuck,`,
                         annotation: {
                             description: [
+                                // wiki: canuck
                                 `The slang term Canuck refers to a Canadian. After the chokehold incident, I would clench my jaw to prevent it from locking whenever I spoke. This developed into a peculiar habit of pronunciation that some to this day mistake for a`,
                                 {
                                     anchor: `Canadian accent.`,
@@ -367,6 +372,7 @@ module.exports = {
                     {
                         anchor: `playing possum`,
                         annotation: {
+                            // wiki: possum
                             description: `To avoid confrontation, an opossum will faint and remain comatose, creating the impression of being dead. Similarly, I didn't see any way out of the next few years except to periodically exit my body at will and hope for the best.`
                         }
                     }
@@ -379,6 +385,7 @@ module.exports = {
                     {
                         anchor: `haemophile`,
                         annotation: {
+                            // wiki: haemophilia
                             description: `Haemophilia is a disease in which blood cannot clot properly, leading to continuous bleeding.`
                         }
                     }

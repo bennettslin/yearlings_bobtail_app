@@ -486,8 +486,14 @@ module.exports = {
                     {
                         anchor: `Baby bluebonnets`,
                         annotation: {
-                            // WIKI: Bluebonnet
-                            description: `The bluebonnet is another garden flower, and a bonnet is what my mother tucks my brother's head in to protect him from the sun. But in light of Willy's murder, I wonder how well-protected his head is against other things.`
+                            description: [
+                                `The`,
+                                {
+                                    anchor: `bluebonnet`,
+                                    wiki: 'Bluebonnet_(plant)'
+                                },
+                                `is another garden flower, and a bonnet is what my mother tucks my brother's head in to protect him from the sun. But in light of Willy's murder, I wonder how well-protected his head is against other things.`
+                            ]
                         }
 
                     },
