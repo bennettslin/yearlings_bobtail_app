@@ -9,16 +9,19 @@ const TitleSection = ({
 
     accessedOn,
     accessedSectionKey,
+    accessedSongIndex,
     onTitleClick,
 
 ...other }) => {
 
-    const accessHighlighted = accessedOn && accessedSectionKey === PLAYER,
-        onClick = e => onTitleClick(e, 0)
+    const sectionAccessHighlighted = accessedOn && accessedSectionKey === PLAYER,
+        onClick = e => onTitleClick(e, 0),
+        titleAccessHighlighted = sectionAccessHighlighted && accessedSongIndex === 0
 
     return (
         <TitleSectionView {...other}
-            accessHighlighted={accessHighlighted}
+            sectionAccessHighlighted={sectionAccessHighlighted}
+            titleAccessHighlighted={titleAccessHighlighted}
             onClick={onClick}
         />
     )
@@ -32,12 +35,13 @@ const TitleSectionView = ({
 
     // From props.
     title,
-    accessHighlighted,
+    sectionAccessHighlighted,
+    titleAccessHighlighted,
     onClick
 
 }) => (
-    <div className={`section title-section${accessHighlighted ? ' access-highlighted' : ''}`}>
-        <h1 className={accessHighlighted ? 'access-highlighted' : ''}>
+    <div className={`section title-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}>
+        <h1 className={titleAccessHighlighted ? 'access-highlighted' : ''}>
             <a className="enabled" onClick={onClick}>
                 {title}
             </a>

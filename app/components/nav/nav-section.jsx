@@ -20,14 +20,14 @@ const NavSection = ({
     const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
         sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks),
 
-        accessHighlighted = accessedOn && accessedSectionKey === PLAYER
+        sectionAccessHighlighted = accessedOn && accessedSectionKey === PLAYER
 
     return (
         <NavSectionView {...other}
             songs={songs}
             maxTotalNeededHours={maxTotalNeededHours}
             sumAllTasks={sumAllTasks}
-            accessHighlighted={accessHighlighted}
+            sectionAccessHighlighted={sectionAccessHighlighted}
         />
     )
 }
@@ -46,11 +46,11 @@ const NavSectionView = ({
 
     // From controller.
     maxTotalNeededHours,
-    sumAllTasks,
-    accessHighlighted
+    sectionAccessHighlighted,
+    sumAllTasks
 
 }) => (
-    <div className={`section songs-section${accessHighlighted ? ' access-highlighted' : ''}`}>
+    <div className={`section songs-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}>
         <div className="row">
             <div className="text-cell-wrapper">
                 <h3 className="text-cell text">song</h3>
@@ -59,7 +59,7 @@ const NavSectionView = ({
         </div>
         {songs.map((song, index) => {
             const isSelected = selectedSongIndex - 1 === index,
-                isAccessHighlighted = accessHighlighted && accessedSongIndex - 1 === index
+                accessHighlighted = sectionAccessHighlighted && accessedSongIndex - 1 === index
 
             return (
                 <NavRow
@@ -68,7 +68,7 @@ const NavSectionView = ({
                     songIndex={index + 1}
                     maxTotalNeededHours={maxTotalNeededHours}
                     isSelected={isSelected}
-                    accessHighlighted={isAccessHighlighted}
+                    accessHighlighted={accessHighlighted}
                     onSongClick={onSongClick}
                 />
             )
