@@ -43,6 +43,7 @@ const AlbumView = ({
     onScreenWidthClick,
     accessedOn,
     accessedSectionKey,
+    accessedSongIndex,
 
     // From controller.
     allTasks,
@@ -52,6 +53,7 @@ const AlbumView = ({
         <div className="field album-field">
             <TitleSection
                 title={albumTitle}
+                accessHighlighted={accessedOn && !accessedSongIndex}
                 onTitleClick={onSongClick}
             />
             <DevSection
@@ -66,6 +68,7 @@ const AlbumView = ({
                 selectedSongIndex={selectedSongIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                accessedSongIndex={accessedSongIndex}
                 onSongClick={onSongClick}
             />
         </div>

@@ -21,7 +21,7 @@ export default {
         copiedSong.tasks = `tasks length: ${copiedSong.tasks.length}`
         copiedSong.times = `times length: ${copiedSong.times.length}`
 
-        return this._logObject('Song', copiedSong)
+        return this._logObject('selected song', copiedSong)
 },
 
     logVerse({ props }) {
@@ -32,7 +32,7 @@ export default {
             selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
             verse = AlbumHelper.getVerse(selectedVerseIndex, selectedSong)
 
-        return this._logObject('verse', verse)
+        return this._logObject('selected verse', verse)
     },
 
     logAnchorAnnotation({ props }) {
@@ -43,22 +43,11 @@ export default {
             selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
             annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong)
 
-        return this._logObject('annotation', annotation)
+        return this._logObject('selected annotation', annotation)
     },
 
-    _logObject(description, object = WINDOW_STORAGE) {
+    _logObject(description, object) {
         const formattedString = JSON.stringify(object, null, 3)
-
-        // TODO: Prettify JSON string?
-
-            // // Remove quote before key.
-            // .replace(new RegExp('  "', 'g'), '  ')
-
-            // // Remove quote after key.
-            // .replace(new RegExp('":', 'g'), ':')
-
-            // // Remove backslash before quote.
-            // .replace(new RegExp('\\\\"', 'g'), '"')
 
         console.info(`${description}: ${formattedString}`)
         return true

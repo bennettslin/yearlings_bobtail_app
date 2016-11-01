@@ -27,11 +27,12 @@ const TitleSectionView = ({
 
     // From props.
     title,
+    accessHighlighted,
     onClick
 
 }) => (
     <div className="section title-section">
-        <h1>
+        <h1 className={accessHighlighted ? 'access-highlighted' : ''}>
             <a className="enabled" onClick={onClick}>
                 {title}
             </a>

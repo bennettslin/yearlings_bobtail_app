@@ -39,6 +39,7 @@ const NavRowView = ({
     // From props.
     songIndex,
     isSelected,
+    accessHighlighted,
     maxTotalNeededHours,
 
     // From controller.
@@ -47,7 +48,7 @@ const NavRowView = ({
     onClick
 
 }) => (
-    <div className={`row primary-row${isSelected ? ' selected' : ''}`}>
+    <div className={`row primary-row${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}`}>
         <ProgressBar
             sumTask={sumTask}
             maxTotalNeededHours={maxTotalNeededHours}

@@ -116,6 +116,7 @@ class App extends Component {
         this.state = {
             accessedAnnotationIndex: props.selectedAnnotationIndex,
             accessedAnnotationOutlined: false,
+            accessedSongIndex: props.selectedSongIndex,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
             isNarrowScreen: false,
@@ -153,8 +154,7 @@ class App extends Component {
 
             /**
              * Also reset the stored annotation, time, and overview if changing
-             * the selected song index. Right now, default for overview is 1 for
-             * narrative.
+             * the selected song index.
              */
             if (selectedIndexKey === SELECTED_SONG_INDEX) {
                 this.handleAnnotationSelect()
@@ -176,7 +176,8 @@ class App extends Component {
              * set the index to 1. Otherwise set it to 0.
              */
             this.setState({
-                accessedAnnotationIndex: this.state.accessedAnnotationOutlined ? 1 : 0
+                accessedAnnotationIndex: this.state.accessedAnnotationOutlined ? 1 : 0,
+                accessedSongIndex: selectedIndex
             })
         }
     }
@@ -353,22 +354,61 @@ class App extends Component {
         // Keep as integer. 0 is false, 1 is true.
         const accessedOn = (this.props.accessedOn + 1) % 2
         this.props.accessOn(accessedOn)
+
+        if (!this.props.accessedOn) {
+            this._resetAccessedIndices()
+        }
     }
 
     _handleSectionAccess() {
         const accessedSectionIndex = (this.props.accessedSectionIndex + 1) % SECTION_KEYS.length
         this.props.accessSectionIndex(accessedSectionIndex)
+
+        this._resetAccessedIndices()
+    }
+
+    // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed.
+    _resetAccessedIndices() {
+        // Reset accessed song index to what is selected.
+        this.setState({
+            accessedSongIndex: this.props.selectedSongIndex
+        })
+    }
+
+    _handleSongAccess(keyName) {
+        // Include option of no song.
+        const songsLength = this.props.songs.length + 1
+        let accessedSongIndex = this.state.accessedSongIndex
+
+        switch (keyName) {
+            case ARROW_UP:
+                // Accommodate Javascript unable to handle negative modulo.
+                accessedSongIndex  = ((((accessedSongIndex - 1) % songsLength) + songsLength) % songsLength)
+                break
+            case ARROW_DOWN:
+                accessedSongIndex = (accessedSongIndex + 1) % songsLength
+                break
+            case ENTER:
+                this.handleSongSelect(undefined, accessedSongIndex)
+                break
+        }
+
+        this.setState({
+            accessedSongIndex
+        })
     }
 
     _onKeyDown(e) {
+        const { key: keyName } = e
 
-        // If access is off, any key turns it on.
+        // If access is off, any key besides Escape turns it on.
         if (!this.props.accessedOn) {
-            this._handleAccessOn()
+            if (keyName !== ESCAPE) {
+                this._handleAccessOn()
+            }
 
         // If access is on...
         } else {
-            const { key: keyName } = e
 
             // Spacebar accesses next section...
             if (keyName === SPACE) {
@@ -384,6 +424,7 @@ class App extends Component {
 
                 switch (accessedSectionKey) {
                     case PLAYER:
+                        this._handleSongAccess(keyName)
                         break
                     case OVERVIEW:
                         break
@@ -460,6 +501,7 @@ class App extends Component {
 
             { accessedAnnotationIndex,
               accessedAnnotationOutlined,
+              accessedSongIndex,
               hoveredDotIndex,
               hoveredLineIndex,
               selectedLyricColumnIndex,
@@ -486,6 +528,7 @@ class App extends Component {
 
                     accessedAnnotationIndex={accessedAnnotationIndex}
                     accessedAnnotationOutlined={accessedAnnotationOutlined}
+                    accessedSongIndex={accessedSongIndex}
                     selectedSongIndex={selectedSongIndex}
                     selectedOverviewIndex={selectedOverviewIndex}
                     selectedAnnotationIndex={selectedAnnotationIndex}
