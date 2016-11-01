@@ -17,7 +17,6 @@ import { SELECTED_SONG_INDEX,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_WIKI_URL,
-         DEFAULT_OVERVIEW_INDEX,
          ARROW_LEFT,
          ARROW_RIGHT,
          ARROW_UP,
@@ -142,7 +141,7 @@ class App extends Component {
              */
             if (selectedIndexKey === SELECTED_SONG_INDEX) {
                 this.handleAnnotationSelect()
-                this.handleOverviewSelect(e, DEFAULT_OVERVIEW_INDEX)
+                this.handleOverviewSelect()
                 this.handleVerseSelect()
             }
 
@@ -165,7 +164,7 @@ class App extends Component {
         }
     }
 
-    handleOverviewSelect(e, selectedIndex) {
+    handleOverviewSelect(e, selectedIndex = 0) {
         if (e) { e.stopPropagation() }
 
         this.props.selectOverviewIndex(selectedIndex)

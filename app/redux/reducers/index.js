@@ -5,7 +5,6 @@ import { SELECTED_SONG_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
-         DEFAULT_OVERVIEW_INDEX,
          SELECTED_WIKI_URL } from '../../helpers/constants'
 import SessionHelper from '../../helpers/session-helper'
 

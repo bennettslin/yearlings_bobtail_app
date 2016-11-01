@@ -18,7 +18,6 @@ module.exports = {
     SELECTED_DOT_KEYS: 'selectedDotKeys',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_WIKI_URL: 'selectedWikiUrl',
-    DEFAULT_OVERVIEW_INDEX: 1,
 
     // This is only used by the stats helper.
     STAT_TEXT_KEYS: [

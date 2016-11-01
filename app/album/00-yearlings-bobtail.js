@@ -30,14 +30,14 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `have accessed sections`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `change overviews`,
             workedHours: 1,
             neededHours: 3
-        },
-        {
-            taskName: `method to log selected verse`,
-            workedHours: 0,
-            neededHours: 1
         },
         {
             taskName: `scroll played verse into view`,
@@ -360,6 +360,11 @@ module.exports = {
             taskName: `dev mechanism to play line`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `method to log selected verse`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

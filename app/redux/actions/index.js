@@ -4,8 +4,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
-         SELECTED_WIKI_URL,
-         DEFAULT_OVERVIEW_INDEX } from '../../helpers/constants'
+         SELECTED_WIKI_URL } from '../../helpers/constants'
  import SessionHelper from '../../helpers/session-helper'
 
  const { setInSession, setDotInSession } = SessionHelper
@@ -60,7 +59,7 @@ export const selectTime = (selectedTime = 0) => {
     }
 }
 
-export const selectOverviewIndex = (selectedOverviewIndex = DEFAULT_OVERVIEW_INDEX) => {
+export const selectOverviewIndex = (selectedOverviewIndex = 0) => {
     setInSession(SELECTED_OVERVIEW_INDEX, selectedOverviewIndex)
     return {
         type: SELECTED_OVERVIEW_INDEX,
