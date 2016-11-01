@@ -87,6 +87,7 @@ module.exports = {
                     {
                         anchor: `pinhead in its shadow`,
                         annotation: {
+                            // WIKI: microcephaly
                             description: `Willy has microcephaly, a medical condition in which the brain fails to develop properly, resulting in a head that is abnormally small in size. He peers through an empty soda bottle, the top of which is tapered like the outline of his skull.`
                         }
                     },
@@ -266,6 +267,7 @@ module.exports = {
                         anchor: `X-ray spec'd,`,
                         properNoun: true,
                         annotation: {
+                            // WIKI: X-Ray_Specs_(novelty)
                             description: `Back then, the back pages of a comic book were usually filled with ads for novelty items. As a kid, I once sent away for a pair of "X-ray specs," glasses that purportedly allow one to see through objects. They didn't work.`
                         }
                     },
@@ -346,6 +348,7 @@ module.exports = {
                     {
                         anchor: `Killcrop`,
                         annotation: {
+                            // WIKI: Non-wiki killcrop?
                             description: `In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is plain and simple— one who "kills crops"— and reflects the primary concerns of past times, when children unable to work for their keep could lead to a family's ruin.`
                         }
                     },
@@ -471,6 +474,7 @@ module.exports = {
                     {
                         anchor: `mulch soften asphodel.`,
                         annotation: {
+                            // WIKI: asphodel (check)
                             description: `The asphodel is a popular garden plant, as well as an immortal flower of the underworld in Greek mythology. Since we are made of the same physical matter as the mulch we use to soften the soil, I remark that Willy's body must have also "softened the asphalt" beneath which it lay.`
                         }
                     }
@@ -482,6 +486,7 @@ module.exports = {
                     {
                         anchor: `Baby bluebonnets`,
                         annotation: {
+                            // WIKI: Bluebonnet
                             description: `The bluebonnet is another garden flower, and a bonnet is what my mother tucks my brother's head in to protect him from the sun. But in light of Willy's murder, I wonder how well-protected his head is against other things.`
                         }
 
@@ -527,6 +532,7 @@ module.exports = {
                     {
                         anchor: `imp-runt age of mind!`,
                         annotation: {
+                            // WIKI: Imprinting_(psychology)
                             description: `"Imprinting" is a period during which a child acquires certain behaviour, such as emotional attachment. Each time my mother learned a new concept related to child development, she would blame herself for not having known it soon enough to help my brother. An "imp-runt" is also literally the weakest child in a litter of goblins, and thus a prime choice to be replaced with a human.`
                         }
                     }
@@ -583,6 +589,7 @@ module.exports = {
                     {
                         anchor: `not yet Webelos!`,
                         annotation: {
+                            // WIKI: Webelos
                             description: `The oldest Cub Scouts in a pack, those in the fourth or fifth grade, belong to the Webelos den. We were taught that it stands for "We'll Be Loyal Scouts," but it was originally "Wolf, Bear, Lion, Scout." My mother might also be saying that I am not yet "way below."`
                         }
                     }
