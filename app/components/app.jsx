@@ -374,8 +374,11 @@ class App extends Component {
 
     // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
     _resetAccessedIndices(accessedSectionKey) {
+
+        const accessedSongIndex = accessedSectionKey === PLAYER ? this.state.accessedSongIndex : this.props.selectedSongIndex
+
         this.setState({
-            accessedSongIndex: accessedSectionKey === PLAYER ? this.state.accessedSectionIndex : this.props.selectedSongIndex
+            accessedSongIndex
         })
     }
 
