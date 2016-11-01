@@ -361,17 +361,21 @@ class App extends Component {
     }
 
     _handleSectionAccess() {
-        const accessedSectionIndex = (this.props.accessedSectionIndex + 1) % SECTION_KEYS.length
-        this.props.accessSectionIndex(accessedSectionIndex)
+        let accessedSectionIndex = (this.props.accessedSectionIndex + 1) % SECTION_KEYS.length
 
-        this._resetAccessedIndices()
+        // Skip lyrics section if no selected song.
+        if (SECTION_KEYS[accessedSectionIndex] === LYRICS && this.props.selectedSongIndex === 0) {
+            accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
+        }
+
+        this.props.accessSectionIndex(accessedSectionIndex)
+        this._resetAccessedIndices(SECTION_KEYS[accessedSectionIndex])
     }
 
-    // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed.
-    _resetAccessedIndices() {
-        // Reset accessed song index to what is selected.
+    // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
+    _resetAccessedIndices(accessedSectionKey) {
         this.setState({
-            accessedSongIndex: this.props.selectedSongIndex
+            accessedSongIndex: accessedSectionKey === PLAYER ? this.state.accessedSectionIndex : this.props.selectedSongIndex
         })
     }
 

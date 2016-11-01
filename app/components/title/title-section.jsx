@@ -1,4 +1,5 @@
 import React from 'react'
+import { PLAYER } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -6,14 +7,18 @@ import React from 'react'
 
 const TitleSection = ({
 
+    accessedOn,
+    accessedSectionKey,
     onTitleClick,
 
 ...other }) => {
 
-    const onClick = e => onTitleClick(e, 0)
+    const accessHighlighted = accessedOn && accessedSectionKey === PLAYER,
+        onClick = e => onTitleClick(e, 0)
 
     return (
         <TitleSectionView {...other}
+            accessHighlighted={accessHighlighted}
             onClick={onClick}
         />
     )
@@ -31,7 +36,7 @@ const TitleSectionView = ({
     onClick
 
 }) => (
-    <div className="section title-section">
+    <div className={`section title-section${accessHighlighted ? ' access-highlighted' : ''}`}>
         <h1 className={accessHighlighted ? 'access-highlighted' : ''}>
             <a className="enabled" onClick={onClick}>
                 {title}

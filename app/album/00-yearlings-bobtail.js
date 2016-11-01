@@ -30,12 +30,12 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `handle resetting accessed indices`,
+            taskName: `fix current mess with accessed song indices`,
             workedHours: 0,
             neededHours: 1
         },
         {
-            taskName: `accessed sections skip lyrics if no selected song`,
+            taskName: `handle resetting accessed indices`,
             workedHours: 0,
             neededHours: 1
         },
@@ -378,6 +378,11 @@ module.exports = {
         },
         {
             taskName: `access song index`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `accessed sections skip lyrics if no selected song`,
             workedHours: 1,
             neededHours: 1
         }

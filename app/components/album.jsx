@@ -53,7 +53,9 @@ const AlbumView = ({
         <div className="field album-field">
             <TitleSection
                 title={albumTitle}
-                accessHighlighted={accessedOn && !accessedSongIndex}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                accessedSongIndex={accessedSongIndex}
                 onTitleClick={onSongClick}
             />
             <DevSection
