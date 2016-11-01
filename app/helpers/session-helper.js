@@ -4,8 +4,7 @@ import { SELECTED_DOT_KEYS,
          ALL_DOT_KEYS,
          WINDOW_STORAGE,
          SELECTED_OVERVIEW_INDEX,
-         SELECTED_WIKI_URL,
-         DEFAULT_OVERVIEW_INDEX } from './constants'
+         SELECTED_WIKI_URL } from './constants'
 
 // TODO: Add validation methods that return valid or default value for all, and test them! ʦ
 
@@ -54,7 +53,7 @@ export default {
         } else if (key) {
             // Default is 0 unless specified otherwise.
             const defaultValue =
-                    (key === SELECTED_OVERVIEW_INDEX ? DEFAULT_OVERVIEW_INDEX : (key === SELECTED_WIKI_URL ? '' : 0)),
+                    (key === SELECTED_WIKI_URL ? '' : 0),
                 value = WINDOW_STORAGE[key] || defaultValue,
                 intValue = parseInt(value)
 

@@ -3,7 +3,6 @@ import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
          SELECTED_VERSE_INDEX,
          SELECTED_OVERVIEW_INDEX,
-         DEFAULT_OVERVIEW_INDEX,
          SELECTED_WIKI_URL } from '../app/helpers/constants'
 import { SongIndexReducer,
          AnnotationIndexReducer,

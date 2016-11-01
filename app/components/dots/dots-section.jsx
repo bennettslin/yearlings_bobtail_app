@@ -1,13 +1,26 @@
 import React from 'react'
 import DotsBlock from './dots-block'
+import { DOTS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
  *************/
 
-const DotsSection = (props) => (
-    <DotsSectionView {...props} />
-)
+ const DotsSection = ({
+
+     accessedOn,
+     accessedSectionKey,
+
+ ...other }) => {
+
+     const accessHighlighted = accessedOn && accessedSectionKey === DOTS
+
+     return (
+         <DotsSectionView {...other}
+             accessHighlighted={accessHighlighted}
+         />
+     )
+ }
 
 /****************
  * PRESENTATION *
@@ -18,8 +31,11 @@ const DotsSectionView = ({
     // From props.
     hoveredDotIndex,
 
+    // From controller.
+    accessHighlighted,
+
 ...other }) => (
-    <div className="section dots-section">
+    <div className={`section dots-section${accessHighlighted ? ' access-highlighted' : ''}`}>
         <h2>dots</h2>
         <div className="tooltip-container">
             <div className={`tooltip-block ${hoveredDotIndex}`}>

@@ -41,6 +41,8 @@ const AlbumView = ({
     isNarrowScreen,
     onSongClick,
     onScreenWidthClick,
+    accessedOn,
+    accessedSectionKey,
 
     // From controller.
     allTasks,
@@ -62,6 +64,8 @@ const AlbumView = ({
                 songs={songs}
                 allTasks={allTasks}
                 selectedSongIndex={selectedSongIndex}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
                 onSongClick={onSongClick}
             />
         </div>
@@ -70,6 +74,8 @@ const AlbumView = ({
             selectedSongIndex={selectedSongIndex}
             selectedTime={selectedTime}
             selectedVerseIndex={selectedVerseIndex}
+            accessedOn={accessedOn}
+            accessedSectionKey={accessedSectionKey}
             isNarrowScreen={isNarrowScreen}
         />
     </div>

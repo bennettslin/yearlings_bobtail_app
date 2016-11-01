@@ -1,10 +1,52 @@
 // For dev purposes. Log object info.
-
+import AlbumHelper from 'helpers/album-view-helper'
 import { WINDOW_STORAGE, LYRIC_TEXT_KEYS } from './constants'
 
 export default {
 
-    logObject(description, object = WINDOW_STORAGE) {
+    logStorage() {
+        // Global helper's storage object is the default.
+        return this._logObject('window storage')
+    },
+
+    logSong({ props }) {
+        const { songs,
+                selectedSongIndex } = props,
+
+            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+            copiedSong = Object.assign({}, selectedSong)
+
+        copiedSong.lyrics = `lyrics length: ${copiedSong.lyrics.length}`
+        copiedSong.annotations = `annotations length: ${copiedSong.annotations.length}`
+        copiedSong.tasks = `tasks length: ${copiedSong.tasks.length}`
+        copiedSong.times = `times length: ${copiedSong.times.length}`
+
+        return this._logObject('Song', copiedSong)
+},
+
+    logVerse({ props }) {
+        const { songs,
+                selectedSongIndex,
+                selectedVerseIndex } = props,
+
+            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+            verse = AlbumHelper.getVerse(selectedVerseIndex, selectedSong)
+
+        return this._logObject('verse', verse)
+    },
+
+    logAnchorAnnotation({ props }) {
+        const { songs,
+                selectedSongIndex,
+                selectedAnnotationIndex } = props,
+
+            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+            annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong)
+
+        return this._logObject('annotation', annotation)
+    },
+
+    _logObject(description, object = WINDOW_STORAGE) {
         const formattedString = JSON.stringify(object, null, 3)
 
         // TODO: Prettify JSON string?
@@ -22,12 +64,12 @@ export default {
         return true
     },
 
-    getLyricObjectForAnnotationIndex(annotationIndex, object, returnObject) {
+    _getLyricObjectForAnnotationIndex(annotationIndex, object, returnObject) {
         // For logging purposes.
 
         if (Array.isArray(object)) {
             return object.reduce((previousObject, element) => {
-                return this.getLyricObjectForAnnotationIndex(annotationIndex, element, returnObject) || previousObject
+                return this._getLyricObjectForAnnotationIndex(annotationIndex, element, returnObject) || previousObject
             }, null)
 
         } else if (typeof object === 'object') {
@@ -41,7 +83,7 @@ export default {
             return LYRIC_TEXT_KEYS.reduce((previousObject, textKey) => {
                 const currentLyricObject = (textKey.toLowerCase().indexOf('lyric') > -1) ? object[textKey] : returnObject
 
-                return this.getLyricObjectForAnnotationIndex(annotationIndex, object[textKey], currentLyricObject) || previousObject
+                return this._getLyricObjectForAnnotationIndex(annotationIndex, object[textKey], currentLyricObject) || previousObject
             }, null)
 
         } else {

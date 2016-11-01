@@ -46,6 +46,9 @@ const SharedView = ({
     // From props.
     selectedSongIndex,
     selectedOverviewIndex,
+    accessedOn,
+    accessedSectionKey,
+
     onOverviewClick,
 
     // From controller.
@@ -60,6 +63,8 @@ const SharedView = ({
             <OverviewsSection {...other}
                 overviewText={overviewText}
                 selectedOverviewIndex={selectedOverviewIndex}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
                 onOverviewClick={onOverviewClick}
             />
             {/* Technically, stats only knows selected song data so it really
@@ -77,6 +82,8 @@ const SharedView = ({
         {selectedSongIndex ?
             <Song {...other}
                 selectedSongIndex={selectedSongIndex}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
             /> : null
         }
     </div>

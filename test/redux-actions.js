@@ -4,7 +4,6 @@ import { SELECTED_SONG_INDEX,
          SELECTED_DOT_KEYS,
          ALL_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
-         DEFAULT_OVERVIEW_INDEX,
          SELECTED_WIKI_URL } from '../app/helpers/constants'
 import { selectSongIndex,
          selectAnnotationIndex,
@@ -67,7 +66,7 @@ describe('actions', () => {
 
         it ('has a default payload of 1', () => {
             const action = selectOverviewIndex()
-            expect(action.payload).to.equal(DEFAULT_OVERVIEW_INDEX)
+            expect(action.payload).to.equal(0)
         })
 
         it('returns the new payload', () => {

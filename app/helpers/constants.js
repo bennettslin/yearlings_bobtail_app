@@ -5,11 +5,22 @@ const LEFT = 'left',
     RIGHT = 'right',
     ITALIC = 'italic',
     EMPHASIS = 'emphasis',
-    ANCHOR = 'anchor'
+    ANCHOR = 'anchor',
+
+    PLAYER = 'player',
+    OVERVIEW = 'overview',
+    LYRICS = 'lyrics',
+    DOTS = 'dots'
 
 module.exports = {
 
     WINDOW_STORAGE: window.localStorage,
+
+    PLAYER,
+    OVERVIEW,
+    LYRICS,
+    DOTS,
+    SECTION_KEYS: [PLAYER, OVERVIEW, LYRICS, DOTS],
 
     SELECTED_SONG_INDEX: 'selectedSongIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
@@ -18,7 +29,8 @@ module.exports = {
     SELECTED_DOT_KEYS: 'selectedDotKeys',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_WIKI_URL: 'selectedWikiUrl',
-    DEFAULT_OVERVIEW_INDEX: 1,
+    ACCESSED_ON: 'accessOn',
+    ACCESSED_SECTION_INDEX: 'accessedSectionIndex',
 
     // This is only used by the stats helper.
     STAT_TEXT_KEYS: [

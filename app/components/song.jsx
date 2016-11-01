@@ -52,6 +52,8 @@ const SongView = ({
     isNarrowScreen,
     selectedLyricColumnIndex,
     selectedSongIndex,
+    accessedOn,
+    accessedSectionKey,
 
     onDotClick,
     onPortalClick,
@@ -88,6 +90,8 @@ const SongView = ({
                 hoveredDotIndex={hoveredDotIndex}
                 selectedDotKeys={selectedDotKeys}
                 presentDotKeys={presentDotKeys}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
                 onDotClick={onDotClick}
                 onDotHover={onDotHover}
             />
@@ -98,6 +102,8 @@ const SongView = ({
                 selectedSongIndex={selectedSongIndex}
                 selectedAnnotationIndex={selectedAnnotationIndex}
                 selectedLyricColumnIndex={selectedLyricColumnIndex}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
                 hasDoubleColumns={hasDoubleColumns}
                 songLyrics={selectedSongLyrics}
                 selectedTime={selectedTime}
