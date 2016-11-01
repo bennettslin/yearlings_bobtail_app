@@ -350,12 +350,13 @@ class App extends Component {
         }
     }
 
-    _handleAccessOn() {
-        // Keep as integer. 0 is false, 1 is true.
-        const accessedOn = (this.props.accessedOn + 1) % 2
-        this.props.accessOn(accessedOn)
+    _handleAccessOn(accessedOn) {
+        // Stored as integer. 0 is false, 1 is true.
+        const toBeAccesssedOn = typeof accessedOn !== 'undefined' ? accessedOn : (this.props.accessedOn + 1) % 2
 
-        if (!this.props.accessedOn) {
+        this.props.accessOn(toBeAccesssedOn)
+
+        if (!toBeAccesssedOn) {
             this._resetAccessedIndices()
         }
     }
@@ -445,6 +446,7 @@ class App extends Component {
     }
 
     _onBodyClick(e) {
+        this._handleAccessOn(false)
         this.handleAnnotationSelect()
         this.handleWikiUrlSelect()
 
