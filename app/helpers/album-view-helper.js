@@ -1,4 +1,5 @@
 // Parse album data for presentation.
+import { ALBUM_BUILD_KEYS } from './constants'
 
 export default {
 
@@ -8,10 +9,29 @@ export default {
     },
 
     getAnnotation(selectedAnnotationIndex, selectedSong) {
-        const annotations = selectedSong.annotations
+        const { annotations } = selectedSong
 
         return annotations ?
                 annotations[selectedAnnotationIndex - 1] : null
+    },
+
+    getVerse(selectedVerseIndex, selectedSong) {
+        const { lyrics } = selectedSong
+
+        return this._parseLyrics(lyrics, selectedVerseIndex)
+    },
+
+    /**
+     * Recurse until object with verse index is found.
+     */
+    _parseLyrics(lyric, selectedVerseIndex) {
+        if (lyric.verseIndex === selectedVerseIndex) {
+            return lyric
+        } else if (Array.isArray(lyric)) {
+            return lyric.reduce((childSelectedLyric, childLyric) => {
+                return childSelectedLyric || this._parseLyrics(childLyric, selectedVerseIndex)
+            }, null)
+        }
     },
 
     getTasks(selectedSong, tasks) {

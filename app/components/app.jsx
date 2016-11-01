@@ -117,42 +117,10 @@ class App extends Component {
     }
 
     _assignLogFunctions() {
-        window.s = this._logStorage
-        window.a = this._logAnchorAnnotation.bind(this)
-        window.g = this._logSong.bind(this)
-    }
-
-    _logStorage() {
-        // Global helper's storage object is the default.
-        return LogHelper.logObject('window storage')
-    }
-
-    _logAnchorAnnotation() {
-        const { songs,
-                selectedSongIndex,
-                selectedAnnotationIndex } = this.props,
-
-            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
-            annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong),
-            lyricObject = LogHelper.getLyricObjectForAnnotationIndex(selectedAnnotationIndex, selectedSong.lyrics)
-
-        LogHelper.logObject('lyric', lyricObject)
-        return LogHelper.logObject('annotation', annotation)
-    }
-
-    _logSong() {
-        const { songs,
-                selectedSongIndex } = this.props,
-
-            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
-            copiedSong = Object.assign({}, selectedSong)
-
-        delete copiedSong.annotations
-        delete copiedSong.lyrics
-        delete copiedSong.overviews
-        delete copiedSong.tasks
-
-        return LogHelper.logObject('copiedSong', copiedSong)
+        window.t = LogHelper.logStorage.bind(LogHelper)
+        window.s = LogHelper.logSong.bind(LogHelper, this)
+        window.v = LogHelper.logVerse.bind(LogHelper, this)
+        window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
     }
 
     handleTitleSelect(e) {
