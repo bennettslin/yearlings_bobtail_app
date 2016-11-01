@@ -5,7 +5,9 @@ import { SELECTED_SONG_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
-         SELECTED_WIKI_URL } from '../../helpers/constants'
+         SELECTED_WIKI_URL,
+         ACCESSED_ON,
+         ACCESSED_SECTION_INDEX } from '../../helpers/constants'
 import SessionHelper from '../../helpers/session-helper'
 
 const { getFromSession } = SessionHelper,
@@ -15,7 +17,9 @@ const { getFromSession } = SessionHelper,
     storedTime = getFromSession(SELECTED_TIME),
     storedDotKeys = getFromSession(SELECTED_DOT_KEYS),
     storedOverviewIndex = getFromSession(SELECTED_OVERVIEW_INDEX),
-    storedWikiUrl = getFromSession(SELECTED_WIKI_URL)
+    storedWikiUrl = getFromSession(SELECTED_WIKI_URL),
+    storedAccessedOn = getFromSession(ACCESSED_ON),
+    storedAccessedSectionIndex = getFromSession(ACCESSED_SECTION_INDEX)
 
 export const SongIndexReducer = (state = storedSongIndex, action) => {
     switch (action.type) {
@@ -85,6 +89,24 @@ export const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
     }
 }
 
+export const AccessedOnReducer = (state = storedAccessedOn, action) => {
+    switch (action.type) {
+        case ACCESSED_ON:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const AccessedSectionIndexReducer = (state = storedAccessedSectionIndex, action) => {
+    switch (action.type) {
+        case ACCESSED_SECTION_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
 const rootReducer = combineReducers({
     selectedSongIndex: SongIndexReducer,
     selectedAnnotationIndex: AnnotationIndexReducer,
@@ -92,7 +114,9 @@ const rootReducer = combineReducers({
     selectedTime: TimeReducer,
     selectedDotKeys: DotKeysReducer,
     selectedOverviewIndex: OverviewIndexReducer,
-    selectedWikiUrl: WikiUrlReducer
+    selectedWikiUrl: WikiUrlReducer,
+    accessedOn: AccessedOnReducer,
+    accessedSectionIndex: AccessedSectionIndexReducer
 })
 
 export default rootReducer

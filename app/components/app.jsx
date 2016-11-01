@@ -8,7 +8,9 @@ import { selectSongIndex,
          selectTime,
          selectDotKey,
          selectOverviewIndex,
-         selectWikiUrl } from 'redux/actions'
+         selectWikiUrl,
+         accessOn,
+         accessSectionIndex } from 'redux/actions'
 import Album from './album'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
@@ -17,6 +19,15 @@ import { SELECTED_SONG_INDEX,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_WIKI_URL,
+         ACCESSED_ON,
+         ACCESSED_SECTION_INDEX,
+
+         PLAYER,
+         OVERVIEW,
+         LYRICS,
+         DOTS,
+         SECTION_KEYS,
+
          ARROW_LEFT,
          ARROW_RIGHT,
          ARROW_UP,
@@ -40,7 +51,9 @@ const passReduxStateToProps = ({
     selectedTime,
     selectedDotKeys,
     selectedOverviewIndex,
-    selectedWikiUrl
+    selectedWikiUrl,
+    accessedOn,
+    accessedSectionIndex
 }) => ({
     // Pass Redux state into component props.
     selectedSongIndex,
@@ -49,7 +62,9 @@ const passReduxStateToProps = ({
     selectedTime,
     selectedDotKeys,
     selectedOverviewIndex,
-    selectedWikiUrl
+    selectedWikiUrl,
+    accessedOn,
+    accessedSectionIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
@@ -61,7 +76,9 @@ const bindDispatchToProps = (dispatch) => (
         selectTime,
         selectDotKey,
         selectOverviewIndex,
-        selectWikiUrl
+        selectWikiUrl,
+        accessOn,
+        accessSectionIndex
     }, dispatch)
 )
 
@@ -332,20 +349,50 @@ class App extends Component {
         }
     }
 
+    _handleAccessOn() {
+        // Keep as integer. 0 is false, 1 is true.
+        const accessedOn = (this.props.accessedOn + 1) % 2
+        this.props.accessOn(accessedOn)
+    }
+
+    _handleSectionAccess() {
+        const accessedSectionIndex = (this.props.accessedSectionIndex + 1) % SECTION_KEYS.length
+        this.props.accessSectionIndex(accessedSectionIndex)
+    }
+
     _onKeyDown(e) {
-        const { key: keyName } = e
-        switch (keyName) {
-            case ARROW_LEFT:
-            case ARROW_RIGHT:
-            case ENTER:
-            case ESCAPE:
-            case SPACE:
-                this._handleAccessedAnnotationSelect(keyName)
-                break
-            case ARROW_UP:
-            case ARROW_DOWN:
-                this._handleAccessedVerseSelect(keyName)
-                break
+
+        // If access is off, any key turns it on.
+        if (!this.props.accessedOn) {
+            this._handleAccessOn()
+
+        // If access is on...
+        } else {
+            const { key: keyName } = e
+
+            // Spacebar accesses next section...
+            if (keyName === SPACE) {
+                this._handleSectionAccess()
+
+            // Escape turns off access...
+            } else if (keyName === ESCAPE) {
+                this._handleAccessOn()
+
+            // Otherwise, it depends on what section is accessed.
+            } else {
+                const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
+
+                switch (accessedSectionKey) {
+                    case PLAYER:
+                        break
+                    case OVERVIEW:
+                        break
+                    case LYRICS:
+                        break
+                    case DOTS:
+                        break
+                }
+            }
         }
     }
 
@@ -407,14 +454,18 @@ class App extends Component {
                 selectedVerseIndex,
                 selectedTime,
                 selectedDotKeys,
-                selectedWikiUrl } = this.props,
+                selectedWikiUrl,
+                accessedOn,
+                accessedSectionIndex } = this.props,
 
             { accessedAnnotationIndex,
               accessedAnnotationOutlined,
               hoveredDotIndex,
               hoveredLineIndex,
               selectedLyricColumnIndex,
-              isNarrowScreen } = this.state
+              isNarrowScreen } = this.state,
+
+            accessedSectionKey = SECTION_KEYS[accessedSectionIndex]
 
         return (
             <div
@@ -429,6 +480,9 @@ class App extends Component {
                     albumTitle={title}
                     albumOverview={overview}
                     albumTasks={tasks}
+
+                    accessedOn={accessedOn}
+                    accessedSectionKey={accessedSectionKey}
 
                     accessedAnnotationIndex={accessedAnnotationIndex}
                     accessedAnnotationOutlined={accessedAnnotationOutlined}

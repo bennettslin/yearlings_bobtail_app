@@ -1,15 +1,27 @@
 import React from 'react'
 import LyricsUnit from './lyrics-unit'
 import RadioButtonBlock from '../superclasses/radio-button-block'
-import { LYRIC_COLUMN_KEYS } from 'helpers/constants'
+import { LYRIC_COLUMN_KEYS, LYRICS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
  *************/
 
-const LyricsSection = (props) => (
-    <LyricsSectionView {...props} />
-)
+ const LyricsSection = ({
+
+     accessedOn,
+     accessedSectionKey,
+
+ ...other }) => {
+
+     const accessHighlighted = accessedOn && accessedSectionKey === LYRICS
+
+     return (
+         <LyricsSectionView {...other}
+             accessHighlighted={accessHighlighted}
+         />
+     )
+ }
 
 /****************
  * PRESENTATION *
@@ -24,8 +36,11 @@ const LyricsSectionView = ({
     hasDoubleColumns,
     onLyricColumnClick,
 
+    // From controller.
+    accessHighlighted,
+
 ...other }) => (
-    <div className={`section lyrics-section${isNarrowScreen ? ' narrow' : ''}`}>
+    <div className={`section lyrics-section${accessHighlighted ? ' access-highlighted' : ''}${isNarrowScreen ? ' narrow' : ''}`}>
         {/* Upon song change, scroll to element with this class name. */}
         <h2 className="lyrics-scroll-home">lyrics</h2>
         {isNarrowScreen && hasDoubleColumns ?

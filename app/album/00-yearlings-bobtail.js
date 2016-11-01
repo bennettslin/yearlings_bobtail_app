@@ -30,11 +30,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `have accessed sections`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `change overviews`,
             workedHours: 1,
             neededHours: 3
@@ -365,6 +360,11 @@ module.exports = {
             taskName: `method to log selected verse`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `have accessed sections`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
