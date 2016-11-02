@@ -51,7 +51,7 @@ const OverviewsSectionView = ({
         <div className="overview-text">
             {/* Temporary button. */}
             <button onClick={onOverviewClick}>
-                {autoShowBubble ? 'auto show' : 'sleep'}
+                {autoShowBubble ? 'show' : 'sleep'}
             </button>
             <TextBlock
                 isLyric={false}

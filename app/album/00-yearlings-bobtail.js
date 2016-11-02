@@ -36,7 +36,7 @@ module.exports = {
         },
         {
             taskName: `change overviews`,
-            workedHours: 1,
+            workedHours: 2,
             neededHours: 3
         },
         {

@@ -190,6 +190,9 @@ class App extends Component {
             this._handleAccessOn(0)
         }
 
+        /**
+         * Stored as integer. 0 is auto show bubble, 1 is auto hide.
+         */
         this.props.selectOverviewIndex((this.props.selectedOverviewIndex + 1) % 2)
     }
 
