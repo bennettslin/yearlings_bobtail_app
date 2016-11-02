@@ -39,5 +39,14 @@
 * When dot section is accessed:
 
 * When player section is accessed:
+    * Up and Down arrows and "Enter" are shown.
+    * When section is first accessed:
+        * Accessed song is selected song.
+
+    * When Up and Down arrows are pressed:
+        * Accessed song is previous or next song.
+
+    * When "Enter" is pressed:
+        * Select the accessed song.
 
 * When overview section is accessed:

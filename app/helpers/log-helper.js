@@ -6,7 +6,7 @@ export default {
 
     logStorage() {
         // Global helper's storage object is the default.
-        return this._logObject('window storage')
+        return this._logObject('window storage', WINDOW_STORAGE)
     },
 
     logSong({ props }) {

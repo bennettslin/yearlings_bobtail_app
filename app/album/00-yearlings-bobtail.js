@@ -70,11 +70,6 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `reset dom width of lines upon changing from left to right`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `colour verse based on odd or even`,
             workedHours: 0,
             neededHours: 2
@@ -383,6 +378,11 @@ module.exports = {
         },
         {
             taskName: `fix current mess with accessed song indices`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `reset dom width of lines upon changing from left to right`,
             workedHours: 1,
             neededHours: 1
         }

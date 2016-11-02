@@ -145,7 +145,10 @@ class App extends Component {
     }
 
     handleSongSelect(e, selectedIndex = 0, selectedIndexKey = SELECTED_SONG_INDEX) {
-        if (e) { e.stopPropagation() }
+        if (e) {
+            e.stopPropagation()
+            this._handleAccessOn(0)
+        }
 
         if (selectedIndex >= 0 && selectedIndex <= this.props.songs.length) {
             // Store song index in session.
@@ -183,7 +186,10 @@ class App extends Component {
     }
 
     handleOverviewSelect(e, selectedIndex = 0) {
-        if (e) { e.stopPropagation() }
+        if (e) {
+            e.stopPropagation()
+            this._handleAccessOn(0)
+        }
 
         this.props.selectOverviewIndex(selectedIndex)
     }
@@ -203,7 +209,10 @@ class App extends Component {
     }
 
     handleDotSelect(e, selectDotKey) {
-        if (e) { e.stopPropagation() }
+        if (e) {
+            e.stopPropagation()
+            this._handleAccessOn(0)
+        }
 
         const isSelected = !this.props.selectedDotKeys[selectDotKey]
         this.props.selectDotKey(selectDotKey, isSelected)
@@ -215,7 +224,10 @@ class App extends Component {
     }
 
     handleAnnotationSelect(e, selectedIndex = 0) {
-        if (e) { e.stopPropagation() }
+        if (e) {
+            e.stopPropagation()
+            this._handleAccessOn(0)
+        }
 
         this.props.selectAnnotationIndex(selectedIndex)
 
@@ -237,7 +249,10 @@ class App extends Component {
     }
 
     handleWikiUrlSelect(e, selectedWiki) {
-        if (e) { e.stopPropagation() }
+        if (e) {
+            e.stopPropagation()
+            this._handleAccessOn(0)
+        }
 
         const selectedWikiUrl = selectedWiki ?
             `https://en.m.wikipedia.org/wiki/${selectedWiki}` : ''
@@ -247,14 +262,20 @@ class App extends Component {
     }
 
     handlePortalSelect(e, selectedSongIndex, selectedAnnotationIndex) {
-        if (e) { e.stopPropagation() }
+        if (e) {
+            e.stopPropagation()
+            this._handleAccessOn(0)
+        }
 
         this.handleSongSelect(e, selectedSongIndex, SELECTED_SONG_INDEX)
         this.handleAnnotationSelect(e, selectedAnnotationIndex)
     }
 
     handleVerseSelect(e, selectedVerseIndex = 0) {
-        if (e) { e.stopPropagation() }
+        if (e) {
+            e.stopPropagation()
+            this._handleAccessOn(0)
+        }
 
         this.props.selectVerseIndex(selectedVerseIndex)
     }
@@ -364,9 +385,11 @@ class App extends Component {
     _handleSectionAccess() {
         let accessedSectionIndex = (this.props.accessedSectionIndex + 1) % SECTION_KEYS.length
 
-        // Skip lyrics section if no selected song.
-        if (SECTION_KEYS[accessedSectionIndex] === LYRICS && this.props.selectedSongIndex === 0) {
-            accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
+        // Skip lyrics and dots sections if no selected song.
+        if (this.props.selectedSongIndex === 0) {
+            while (SECTION_KEYS[accessedSectionIndex] === LYRICS || SECTION_KEYS[accessedSectionIndex] === DOTS) {
+                accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
+            }
         }
 
         this.props.accessSectionIndex(accessedSectionIndex)
@@ -411,7 +434,7 @@ class App extends Component {
 
         // If access is off, any key besides Escape turns it on.
         if (!this.props.accessedOn) {
-            if (keyName !== ESCAPE) {
+            if (keyName !== ESCAPE && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
                 this._handleAccessOn()
             }
 
@@ -446,7 +469,7 @@ class App extends Component {
     }
 
     _onBodyClick(e) {
-        this._handleAccessOn(false)
+        this._handleAccessOn(0)
         this.handleAnnotationSelect()
         this.handleWikiUrlSelect()
 

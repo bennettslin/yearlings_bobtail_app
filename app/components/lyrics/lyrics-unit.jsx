@@ -54,6 +54,7 @@ const LyricsUnit = ({
             showSide={showSide}
             topSideSubStanza={topSideSubStanza}
             hiddenLyricColumnKey={hiddenLyricColumnKey}
+            selectedLyricColumnIndex={selectedLyricColumnIndex}
         />
     )
 }
