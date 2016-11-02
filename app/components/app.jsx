@@ -161,7 +161,6 @@ class App extends Component {
              */
             if (selectedIndexKey === SELECTED_SONG_INDEX) {
                 this.handleAnnotationSelect()
-                this.handleOverviewSelect()
                 this.handleVerseSelect()
             }
 
@@ -185,13 +184,13 @@ class App extends Component {
         }
     }
 
-    handleOverviewSelect(e, selectedIndex = 0) {
+    handleOverviewSelect(e) {
         if (e) {
             e.stopPropagation()
             this._handleAccessOn(0)
         }
 
-        this.props.selectOverviewIndex(selectedIndex)
+        this.props.selectOverviewIndex((this.props.selectedOverviewIndex + 1) % 2)
     }
 
     handleDotHover(e, hoveredDotIndex = 0) {
@@ -396,6 +395,12 @@ class App extends Component {
         this._resetAccessedIndices(SECTION_KEYS[accessedSectionIndex])
     }
 
+    _handleOverviewAccess(keyName) {
+        if (keyName === ENTER) {
+            this.handleOverviewSelect()
+        }
+    }
+
     // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
     _resetAccessedIndices(accessedSectionKey) {
 
@@ -458,6 +463,7 @@ class App extends Component {
                         this._handleSongAccess(keyName)
                         break
                     case OVERVIEW:
+                        this._handleOverviewAccess(keyName)
                         break
                     case LYRICS:
                         break

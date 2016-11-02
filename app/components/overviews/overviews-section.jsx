@@ -9,16 +9,23 @@ import { OVERVIEW } from 'helpers/constants'
 
 const OverviewsSection = ({
 
+    selectedOverviewIndex,
     accessedOn,
     accessedSectionKey,
 
 ...other }) => {
 
-    const accessHighlighted = accessedOn && accessedSectionKey === OVERVIEW
+    const accessHighlighted = accessedOn && accessedSectionKey === OVERVIEW,
+
+        /**
+         * Remember that the default to auto show bubble is 0.
+         */
+        autoShowBubble = !selectedOverviewIndex
 
     return (
         <OverviewsSectionView {...other}
             accessHighlighted={accessHighlighted}
+            autoShowBubble={autoShowBubble}
         />
     )
 }
@@ -31,17 +38,21 @@ const OverviewsSectionView = ({
 
     // From props.
     overviewText,
-    selectedOverviewIndex,
     onOverviewClick,
     onWikiUrlClick,
 
     // From controller.
-    accessHighlighted
+    accessHighlighted,
+    autoShowBubble
 
 }) => (
     <div className={`section overviews-section${accessHighlighted ? ' access-highlighted' : ''}`}>
         <h2>overview</h2>
         <div className="overview-text">
+            {/* Temporary button. */}
+            <button onClick={onOverviewClick}>
+                {autoShowBubble ? 'auto show' : 'sleep'}
+            </button>
             <TextBlock
                 isLyric={false}
                 text={overviewText}
