@@ -7,6 +7,7 @@ module.exports = {
     title: {
         anchor: 'Odin',
         annotation: {
+            // wiki: Odin, under Norse god.
             description: `It's likely that Odin's original name meant something in Chinese, which my sister and I later anglicised into the name of the Norse god once we were older.`
         }
     },
@@ -55,6 +56,7 @@ module.exports = {
                     {
                         anchor: `By lot,`,
                         annotation: {
+                            // wiki: lot
                             description: `In the Book of Genesis, Lot's wife was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Also, lots are drawn by chance to decide an outcome, and it was my lot to be born a non-Jew.`
                         }
                     },

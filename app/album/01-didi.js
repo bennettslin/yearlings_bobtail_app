@@ -35,11 +35,7 @@ module.exports = {
                                     wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
                                 }
                             },
-                            `begins in the simple prose of a child, so I did the same for this first song of the album, which is sung from my sister's perspective. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to`,
-                            {
-                                anchor: `The Beach Boys'`,
-                                wiki: `The_Beach_Boys`
-                            },
+                            `begins in the simple prose of a child, so I did the same for this first song of the album, which is sung from my sister's perspective. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to The Beach Boys'`,
                             {
                                 italic: {
                                     anchor: `Pet Sounds.`,
