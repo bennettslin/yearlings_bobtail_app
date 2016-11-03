@@ -40,11 +40,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `change overviews`,
-            workedHours: 2,
-            neededHours: 3
-        },
-        {
             taskName: `scroll played verse into view`,
             workedHours: 0,
             neededHours: 2
@@ -401,5 +396,10 @@ module.exports = {
             workedHours: 1,
             neededHours: 2
         },
+        {
+            taskName: `change overviews`,
+            workedHours: 3,
+            neededHours: 3
+        }
     ]
 }
