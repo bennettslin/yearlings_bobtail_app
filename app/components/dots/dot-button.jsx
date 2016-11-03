@@ -48,6 +48,7 @@ const DotButtonView = ({
     dotKey,
     isPresent,
     annotationIndex,
+    accessHighlighted,
     isAccessOutlined,
 
     // From controller.
@@ -59,7 +60,7 @@ const DotButtonView = ({
 
 }) => (
     <button
-        className={`dot ${dotKey}${annotationIndex ? ' annotation-' + annotationIndex : ''}${isAccessOutlined ? ' access-outlined' : ''}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}`}
+        className={`dot ${dotKey}${annotationIndex ? ' annotation-' + annotationIndex : ''}${accessHighlighted ? ' access-highlighted' : ''}${isAccessOutlined ? ' access-outlined' : ''}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}`}
         onClick={onClick}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}

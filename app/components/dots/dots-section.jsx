@@ -13,11 +13,11 @@ import { DOTS_SECTION } from 'helpers/constants'
 
  ...other }) => {
 
-     const accessHighlighted = accessedOn && accessedSectionKey === DOTS_SECTION
+     const sectionAccessHighlighted = accessedOn && accessedSectionKey === DOTS_SECTION
 
      return (
          <DotsSectionView {...other}
-             accessHighlighted={accessHighlighted}
+             sectionAccessHighlighted={sectionAccessHighlighted}
          />
      )
  }
@@ -32,10 +32,10 @@ const DotsSectionView = ({
     hoveredDotIndex,
 
     // From controller.
-    accessHighlighted,
+    sectionAccessHighlighted,
 
 ...other }) => (
-    <div className={`section dots-section${accessHighlighted ? ' access-highlighted' : ''}`}>
+    <div className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}>
         <h2>dots</h2>
         <div className="tooltip-container">
             <div className={`tooltip-block ${hoveredDotIndex}`}>
@@ -48,6 +48,7 @@ const DotsSectionView = ({
         </div>
         <DotsBlock {...other}
             inDotsSection={true}
+            sectionAccessHighlighted={sectionAccessHighlighted}
         />
     </div>
 )

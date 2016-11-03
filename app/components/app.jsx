@@ -31,6 +31,8 @@ import { SELECTED_SONG_INDEX,
          DOTS_SECTION,
          SECTION_KEYS,
 
+         ALL_DOT_KEYS,
+
          ARROW_LEFT,
          ARROW_RIGHT,
          ARROW_UP,
@@ -126,6 +128,7 @@ class App extends Component {
             accessedAnnotationIndex: props.selectedAnnotationIndex,
             accessedAnnotationOutlined: false,
             accessedSongIndex: props.selectedSongIndex,
+            accessedDotIndex: 0,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
             isNarrowScreen: false,
@@ -233,18 +236,18 @@ class App extends Component {
         this.props.selectPlayerOptionIndex((((this.props.selectedPlayerOptionIndex + direction) % 3) + 3) % 3)
     }
 
-    selectDot(e, selectDotKey) {
+    selectDot(e, selectedDotKey) {
         if (e) {
             e.stopPropagation()
             this._handleAccessOn(0)
         }
 
-        const isSelected = !this.props.selectedDotKeys[selectDotKey]
-        this.props.selectDotKey(selectDotKey, isSelected)
+        const isSelected = !this.props.selectedDotKeys[selectedDotKey]
+        this.props.selectDotKey(selectedDotKey, isSelected)
 
         // If this is the last selected dot key, then close the annotation.
         if (!isSelected) {
-            this._deselectAnnotationWithNoSelectedDots(selectDotKey)
+            this._deselectAnnotationWithNoSelectedDots(selectedDotKey)
         }
     }
 
@@ -505,6 +508,32 @@ class App extends Component {
         }
     }
 
+    _handleDotAccess(keyName) {
+        if (keyName === ENTER) {
+            this.selectDot(undefined, ALL_DOT_KEYS[this.state.accessedDotIndex])
+
+        } else if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
+            let accessedDotIndex,
+                direction
+
+            switch (keyName) {
+                case ARROW_LEFT:
+                    direction = ALL_DOT_KEYS.length - 1
+                    break
+                case ARROW_RIGHT:
+                    direction = 1
+                    break
+            }
+
+            accessedDotIndex = (this.state.accessedDotIndex + direction) % ALL_DOT_KEYS.length
+
+            this.setState({
+                accessedDotIndex
+            })
+        }
+
+    }
+
     // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
     _resetAccessedIndices(accessedSectionKey) {
 
@@ -553,6 +582,7 @@ class App extends Component {
                         this._handleLyricsAccess(keyName)
                         break
                     case DOTS_SECTION:
+                        this._handleDotAccess(keyName)
                         break
                 }
             }
@@ -610,6 +640,7 @@ class App extends Component {
               accessedAnnotationIndex,
               accessedAnnotationOutlined,
               accessedSongIndex,
+              accessedDotIndex,
               hoveredDotIndex,
               hoveredLineIndex,
               selectedLyricColumnIndex,
@@ -639,6 +670,7 @@ class App extends Component {
                     accessedAnnotationIndex={accessedAnnotationIndex}
                     accessedAnnotationOutlined={accessedAnnotationOutlined}
                     accessedSongIndex={accessedSongIndex}
+                    accessedDotIndex={accessedDotIndex}
                     selectedSongIndex={selectedSongIndex}
                     selectedOverviewIndex={selectedOverviewIndex}
                     selectedPlayerOptionIndex={selectedPlayerOptionIndex}

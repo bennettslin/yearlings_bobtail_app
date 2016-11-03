@@ -43,6 +43,8 @@ const DotsBlockView = ({
     inBackground,
     selectedDotKeys,
     presentDotKeys,
+    sectionAccessHighlighted,
+    accessedDotIndex,
 
     // From controller.
     isInteractable,
@@ -59,11 +61,14 @@ const DotsBlockView = ({
                  * It's in dots section or dot stanza. All dots are shown in
                  * dotssection, while only present dots are shown in dot stanza.
                  */
+
+                const accessHighlighted = sectionAccessHighlighted && accessedDotIndex === index
                 return (isPresent || inDotsSection ?
                     <DotButton {...other}
                         key={index}
                         dotKey={dotKey}
                         dotIndex={index + 1}
+                        accessHighlighted={accessHighlighted}
                         isPresent={isPresent}
                         isSelected={isSelected}
                     /> : null

@@ -390,6 +390,11 @@ module.exports = {
             taskName: `reset dom width of lines upon changing from left to right`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `add player section`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

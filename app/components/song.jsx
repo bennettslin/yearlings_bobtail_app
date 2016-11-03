@@ -42,6 +42,7 @@ const SongView = ({
 
     accessedAnnotationIndex,
     accessedAnnotationOutlined,
+    accessedDotIndex,
     selectedAnnotationIndex,
     selectedDotKeys,
     selectedWikiUrl,
@@ -92,6 +93,7 @@ const SongView = ({
                 presentDotKeys={presentDotKeys}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                accessedDotIndex={accessedDotIndex}
                 onDotClick={onDotClick}
                 onDotHover={onDotHover}
             />
