@@ -18,14 +18,14 @@ const OverviewsSection = ({
     const accessHighlighted = accessedOn && accessedSectionKey === OVERVIEW,
 
         /**
-         * Remember that the default to auto show bubble is 0.
+         * Remember that the default to show bubble text is 0.
          */
-        autoShowBubble = !selectedOverviewIndex
+        showBubbleText = !selectedOverviewIndex
 
     return (
         <OverviewsSectionView {...other}
             accessHighlighted={accessHighlighted}
-            autoShowBubble={autoShowBubble}
+            showBubbleText={showBubbleText}
         />
     )
 }
@@ -43,21 +43,20 @@ const OverviewsSectionView = ({
 
     // From controller.
     accessHighlighted,
-    autoShowBubble
+    showBubbleText
 
 }) => (
     <div className={`section overviews-section${accessHighlighted ? ' access-highlighted' : ''}`}>
         <h2>overview</h2>
         <div className="overview-text">
-            {/* Temporary button. */}
-            <button onClick={onOverviewClick}>
-                {autoShowBubble ? 'show' : 'sleep'}
-            </button>
-            <TextBlock
+            <button onClick={onOverviewClick}>(Bennett icon)</button>
+            { showBubbleText ?
+                <TextBlock
                 isLyric={false}
                 text={overviewText}
                 onAnchorClick={onWikiUrlClick}
-            />
+                /> : null
+            }
         </div>
     </div>
 )

@@ -140,9 +140,9 @@ class App extends Component {
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
     }
 
-    /******************
-     * EVENT HANDLERS *
-     ******************/
+    /*************************
+     * STATE CHANGE HANDLERS *
+     *************************/
 
     selectTitle(e) {
         this.selectSong(e, 0)
@@ -176,6 +176,9 @@ class App extends Component {
                     duration: 100
                 })
             }
+
+            // Show overview bubble text for selected song.
+            this.props.selectOverviewIndex(0)
 
             /**
              * Keep annotation anchor access outlined if already so, and just
@@ -226,7 +229,9 @@ class App extends Component {
         this.selectWiki(e)
 
         // Keep accessed index, even if annotation is deselected.
-        if (selectedIndex !== 0) {
+        if (selectedIndex > 0) {
+            this.props.selectOverviewIndex(1)
+
             this.setState({
                 accessedAnnotationIndex: selectedIndex,
             })

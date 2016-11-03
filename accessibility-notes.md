@@ -47,9 +47,12 @@
 
 * When overview section is accessed:
     * "Enter" is shown.
-    * When section is first accessed:
-        * Accessed
+    * When "Enter" is pressed:
+        * Overview text toggles on and off.
+    * (Automatically toggles on when new song is selected.)
+    * (Automatically toggles off when annotation or wiki is selected.)
 
 * When dot section is accessed:
 
 * When annotation section is accessed:
+    * Arrow keys and "Enter" are shown.
