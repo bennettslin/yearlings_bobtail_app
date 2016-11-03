@@ -203,6 +203,7 @@ module.exports = {
                         anchor: `sheriff's badge and gun…`,
                         annotation: {
                             description: [
+                                // Wiki: Revisit?
                                 `After`,
                                 {
                                     anchor: `China stripped Taiwan`,

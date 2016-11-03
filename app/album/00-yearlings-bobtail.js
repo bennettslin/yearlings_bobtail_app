@@ -30,6 +30,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `have class to show visual keyboard keys`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `handle resetting accessed indices`,
             workedHours: 0,
             neededHours: 1

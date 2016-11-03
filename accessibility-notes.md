@@ -34,10 +34,6 @@
         * If there is an accessed anchor, open its annotation.
         * If there is an accessed line, select it.
 
-* When annotation section is accessed:
-
-* When dot section is accessed:
-
 * When player section is accessed:
     * Up and Down arrows and "Enter" are shown.
     * When section is first accessed:
@@ -50,3 +46,10 @@
         * Select the accessed song.
 
 * When overview section is accessed:
+    * "Enter" is shown.
+    * When section is first accessed:
+        * Accessed
+
+* When dot section is accessed:
+
+* When annotation section is accessed:

@@ -92,18 +92,18 @@ class App extends Component {
         super(props)
 
         // Bind this to event handlers.
-        this.handleTitleSelect = this.handleTitleSelect.bind(this)
-        this.handleSongSelect = this.handleSongSelect.bind(this)
-        this.handleOverviewSelect = this.handleOverviewSelect.bind(this)
-        this.handleAnnotationSelect = this.handleAnnotationSelect.bind(this)
-        this.handleVerseSelect = this.handleVerseSelect.bind(this)
-        this.handleDotSelect = this.handleDotSelect.bind(this)
-        this.handleDotHover = this.handleDotHover.bind(this)
-        this.handleLineHover = this.handleLineHover.bind(this)
-        this.handlePortalSelect = this.handlePortalSelect.bind(this)
-        this.handleWikiUrlSelect = this.handleWikiUrlSelect.bind(this)
-        this.handleScreenWidthSelect = this.handleScreenWidthSelect.bind(this)
-        this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
+        this.selectTitle = this.selectTitle.bind(this)
+        this.selectSong = this.selectSong.bind(this)
+        this.selectOverview = this.selectOverview.bind(this)
+        this.selectAnnotation = this.selectAnnotation.bind(this)
+        this.selectVerse = this.selectVerse.bind(this)
+        this.selectDot = this.selectDot.bind(this)
+        this.hoverDot = this.hoverDot.bind(this)
+        this.hoverLine = this.hoverLine.bind(this)
+        this.selectPortal = this.selectPortal.bind(this)
+        this.selectWiki = this.selectWiki.bind(this)
+        this.selectScreenWidth = this.selectScreenWidth.bind(this)
+        this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
         this._onKeyDown = this._onKeyDown.bind(this)
 
@@ -140,11 +140,15 @@ class App extends Component {
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
     }
 
-    handleTitleSelect(e) {
-        this.handleSongSelect(e, 0)
+    /******************
+     * EVENT HANDLERS *
+     ******************/
+
+    selectTitle(e) {
+        this.selectSong(e, 0)
     }
 
-    handleSongSelect(e, selectedIndex = 0, selectedIndexKey = SELECTED_SONG_INDEX) {
+    selectSong(e, selectedIndex = 0, selectedIndexKey = SELECTED_SONG_INDEX) {
         if (e) {
             e.stopPropagation()
             this._handleAccessOn(0)
@@ -160,8 +164,8 @@ class App extends Component {
              * the selected song index.
              */
             if (selectedIndexKey === SELECTED_SONG_INDEX) {
-                this.handleAnnotationSelect()
-                this.handleVerseSelect()
+                this.selectAnnotation()
+                this.selectVerse()
             }
 
             // Scroll to top of lyrics.
@@ -184,7 +188,7 @@ class App extends Component {
         }
     }
 
-    handleOverviewSelect(e) {
+    selectOverview(e) {
         if (e) {
             e.stopPropagation()
             this._handleAccessOn(0)
@@ -196,21 +200,7 @@ class App extends Component {
         this.props.selectOverviewIndex((this.props.selectedOverviewIndex + 1) % 2)
     }
 
-    handleDotHover(e, hoveredDotIndex = 0) {
-        // Hovered dot index sets the text, as well as the position of the tooltip.
-
-        this.setState({
-            hoveredDotIndex
-        })
-    }
-
-    handleLineHover(e, hoveredLineIndex = 0) {
-        this.setState({
-            hoveredLineIndex
-        })
-    }
-
-    handleDotSelect(e, selectDotKey) {
+    selectDot(e, selectDotKey) {
         if (e) {
             e.stopPropagation()
             this._handleAccessOn(0)
@@ -225,7 +215,7 @@ class App extends Component {
         }
     }
 
-    handleAnnotationSelect(e, selectedIndex = 0) {
+    selectAnnotation(e, selectedIndex = 0) {
         if (e) {
             e.stopPropagation()
             this._handleAccessOn(0)
@@ -233,7 +223,7 @@ class App extends Component {
 
         this.props.selectAnnotationIndex(selectedIndex)
 
-        this.handleWikiUrlSelect(e)
+        this.selectWiki(e)
 
         // Keep accessed index, even if annotation is deselected.
         if (selectedIndex !== 0) {
@@ -250,7 +240,7 @@ class App extends Component {
         }
     }
 
-    handleWikiUrlSelect(e, selectedWiki) {
+    selectWiki(e, selectedWiki) {
         if (e) {
             e.stopPropagation()
             this._handleAccessOn(0)
@@ -263,17 +253,17 @@ class App extends Component {
         this.props.selectWikiUrl(selectedWikiUrl)
     }
 
-    handlePortalSelect(e, selectedSongIndex, selectedAnnotationIndex) {
+    selectPortal(e, selectedSongIndex, selectedAnnotationIndex) {
         if (e) {
             e.stopPropagation()
             this._handleAccessOn(0)
         }
 
-        this.handleSongSelect(e, selectedSongIndex, SELECTED_SONG_INDEX)
-        this.handleAnnotationSelect(e, selectedAnnotationIndex)
+        this.selectSong(e, selectedSongIndex, SELECTED_SONG_INDEX)
+        this.selectAnnotation(e, selectedAnnotationIndex)
     }
 
-    handleVerseSelect(e, selectedVerseIndex = 0) {
+    selectVerse(e, selectedVerseIndex = 0) {
         if (e) {
             e.stopPropagation()
             this._handleAccessOn(0)
@@ -282,7 +272,42 @@ class App extends Component {
         this.props.selectVerseIndex(selectedVerseIndex)
     }
 
-    _handleAccessedAnnotationSelect(keyName) {
+    selectScreenWidth(e) {
+        const { isNarrowScreen } = this.state,
+            newLyricColumnIndex = !isNarrowScreen ? 1 : 0
+
+        this.selectLyricColumn(e, newLyricColumnIndex)
+
+        this.setState({
+            isNarrowScreen: !isNarrowScreen
+        })
+    }
+
+    selectLyricColumn(e, selectedIndex = 0) {
+        this.setState({
+            selectedLyricColumnIndex: selectedIndex
+        })
+    }
+
+    hoverDot(e, hoveredDotIndex = 0) {
+        // Hovered dot index sets the text, as well as the position of the tooltip.
+
+        this.setState({
+            hoveredDotIndex
+        })
+    }
+
+    hoverLine(e, hoveredLineIndex = 0) {
+        this.setState({
+            hoveredLineIndex
+        })
+    }
+
+    /*******************
+     * ACCESS HANDLERS *
+     *******************/
+
+    _handleLyricsAccess(keyName) {
         const { selectedAnnotationIndex,
                 selectedSongIndex,
                 songs } = this.props,
@@ -323,7 +348,7 @@ class App extends Component {
                 // Select or deselect annotation, but keep access outline.
                 if (accessedAnnotationOutlined) {
                     if (selectedAnnotationIndex) {
-                        this.handleAnnotationSelect()
+                        this.selectAnnotation()
                     } else {
                         willScrollToAnchor = true
                         willSelectAnnotation = true
@@ -334,13 +359,13 @@ class App extends Component {
                 // Deselect annotation, and lose access outline.
                 accessedAnnotationOutlined = false
                 if (selectedAnnotationIndex) {
-                    this.handleAnnotationSelect()
+                    this.selectAnnotation()
                 }
                 break
         }
 
         if (willSelectAnnotation) {
-            this.handleAnnotationSelect(undefined, accessedAnnotationIndex)
+            this.selectAnnotation(undefined, accessedAnnotationIndex)
         }
 
         if (willScrollToAnchor) {
@@ -367,9 +392,9 @@ class App extends Component {
             timesLength = selectedSong.times ? selectedSong.times.length : 0
 
         if (keyName === ARROW_UP) {
-            this.handleVerseSelect(undefined, selectedVerseIndex - 1)
+            this.selectVerse(undefined, selectedVerseIndex - 1)
         } else if (keyName === ARROW_DOWN) {
-            this.handleVerseSelect(undefined, selectedVerseIndex + 1)
+            this.selectVerse(undefined, selectedVerseIndex + 1)
         }
     }
 
@@ -400,7 +425,7 @@ class App extends Component {
 
     _handleOverviewAccess(keyName) {
         if (keyName === ENTER) {
-            this.handleOverviewSelect()
+            this.selectOverview()
         }
     }
 
@@ -428,7 +453,7 @@ class App extends Component {
                 accessedSongIndex = (accessedSongIndex + 1) % songsLength
                 break
             case ENTER:
-                this.handleSongSelect(undefined, accessedSongIndex)
+                this.selectSong(undefined, accessedSongIndex)
                 break
         }
 
@@ -469,6 +494,7 @@ class App extends Component {
                         this._handleOverviewAccess(keyName)
                         break
                     case LYRICS:
+                        this._handleLyricsAccess(keyName)
                         break
                     case DOTS:
                         break
@@ -479,8 +505,8 @@ class App extends Component {
 
     _onBodyClick(e) {
         this._handleAccessOn(0)
-        this.handleAnnotationSelect()
-        this.handleWikiUrlSelect()
+        this.selectAnnotation()
+        this.selectWiki()
 
         this.setState({
             accessedAnnotationOutlined: false
@@ -502,25 +528,8 @@ class App extends Component {
 
         // Deselect annotation if all its dot keys are deselected.
         if (annotation && !intersects(presentDotKeys, postSelectedDotKeys)) {
-            this.handleAnnotationSelect()
+            this.selectAnnotation()
         }
-    }
-
-    handleScreenWidthSelect(e) {
-        const { isNarrowScreen } = this.state,
-            newLyricColumnIndex = !isNarrowScreen ? 1 : 0
-
-        this.handleLyricColumnSelect(e, newLyricColumnIndex)
-
-        this.setState({
-            isNarrowScreen: !isNarrowScreen
-        })
-    }
-
-    handleLyricColumnSelect(e, selectedIndex = 0) {
-        this.setState({
-            selectedLyricColumnIndex: selectedIndex
-        })
     }
 
     render() {
@@ -582,17 +591,17 @@ class App extends Component {
                     selectedLyricColumnIndex={selectedLyricColumnIndex}
                     isNarrowScreen={isNarrowScreen}
 
-                    onSongClick={this.handleSongSelect}
-                    onPortalClick={this.handlePortalSelect}
-                    onWikiUrlClick={this.handleWikiUrlSelect}
-                    onAnnotationClick={this.handleAnnotationSelect}
-                    onOverviewClick={this.handleOverviewSelect}
-                    onVerseClick={this.handleVerseSelect}
-                    onDotClick={this.handleDotSelect}
-                    onDotHover={this.handleDotHover}
-                    onLineHover={this.handleLineHover}
-                    onScreenWidthClick={this.handleScreenWidthSelect}
-                    onLyricColumnClick={this.handleLyricColumnSelect}
+                    onSongClick={this.selectSong}
+                    onPortalClick={this.selectPortal}
+                    onWikiUrlClick={this.selectWiki}
+                    onAnnotationClick={this.selectAnnotation}
+                    onOverviewClick={this.selectOverview}
+                    onVerseClick={this.selectVerse}
+                    onDotClick={this.selectDot}
+                    onDotHover={this.hoverDot}
+                    onLineHover={this.hoverLine}
+                    onScreenWidthClick={this.selectScreenWidth}
+                    onLyricColumnClick={this.selectLyricColumn}
                 />
             </div>
         )
