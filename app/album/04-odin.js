@@ -64,6 +64,7 @@ module.exports = {
                     {
                         anchor: `tref must reseed the earth.`,
                         annotation: {
+                            // wiki: tref
                             description: `Tref is the Yiddish word for food that is not kosher. Since it cannot be eaten, its only purpose is to break down into compost. Similarly, as I was not a Jew, I could only ever be subsumed into the endless churn of surrounding peoples.`
                         }
                     }
@@ -109,6 +110,7 @@ module.exports = {
                     {
                         anchor: `crayons least whittled…`,
                         annotation: {
+                            // wiki: pastel
                             description: `When I first arrived in Taiwan, my aunt gave me a set of crayons as a gift. They were soft pastels and thus more powdery than waxy, which was the standard for children's crayons there. This meant that they ran out quickly, so by the end of our trip, I was left with the least used colours. Similarly, coming to Taiwan forced me to depend on previously neglected skills, such as speaking Taiwanese.`
                         }
                     }
@@ -146,6 +148,7 @@ module.exports = {
                     {
                         anchor: `sweet dream's ichors`,
                         annotation: {
+                            // wiki: ichor
                             description: `In Greek mythology, ichor is the golden blood of the gods. Going to sleep is like a nightly transfusion, insofar as the process of swapping out old blood for new always feels irksome, even when its restoring effect afterwards is guaranteed.`
                         }
                     },
@@ -159,6 +162,7 @@ module.exports = {
                     {
                         anchor: `alabaster balustrade,`,
                         annotation: {
+                            // wiki: alabaster
                             description: `Buildings in Taiwan made heavy use of iron grates and stone slabs, such that even ordinary living quarters had the feel of a mausoleum.`
                         }
                     }
@@ -168,6 +172,7 @@ module.exports = {
                     {
                         anchor: `salamander`,
                         annotation: {
+                            // wiki: paracelsus, salamander
                             description: `Exploring alchemy in the 16th century, Paracelsus believed that nature is made up of four elements, each personified by a mythical creature. Since writing lyrics in doublespeaker rhyme was often daunting, I would keep myself going with fun little challenges. One of these was to mention each of the four elementals of Paracelsus. The salamander is the elemental of fire.`
                         }
                     },
@@ -189,6 +194,7 @@ module.exports = {
                     {
                         anchor: `trading breath's bliss`,
                         annotation: {
+                            // wiki: salamander
                             description: `Salamanders are amphibians that begin life living underwater, before exchanging gills for lungs through metamorphosis. So the same conditions needed for them to survive as larvae suddenly become deadly in the adult stage, and vice versa.`
                         }
                     },
@@ -208,6 +214,7 @@ module.exports = {
                     {
                         anchor: `stygian stairs,`,
                         annotation: {
+                            // wiki: styx
                             description: `In Greek mythology, the river Styx separates the realm of the living from the underworld. At night in my grandmother's house, the stairs leading down to the kitchen area felt similarly foreboding.`
                         }
                     }
@@ -221,12 +228,14 @@ module.exports = {
                     {
                         anchor: `sickle-lit`,
                         annotation: {
+                            // wiki: grim reaper
                             description: `The crescent moon has a shape similar to the blade of the scythe wielded by the Grim Reaper.`
                         }
                     },
                     {
                         anchor: `oriental`,
                         annotation: {
+                            // wiki: oriental
                             description: `The word "oriental" was made into a pejorative by academic circles, not through common usage. I learned of its incorrectness at around the same time that the gay community was reclaiming the word "queer." The latter approach made more sense to me.`
                         }
                     },
@@ -253,6 +262,7 @@ module.exports = {
                     {
                         anchor: `gentle means!`,
                         annotation: {
+                            // wiki: gentile
                             description: `Or else "Gentile," referring to any non-Jew.`
                         }
                     }
@@ -267,6 +277,7 @@ module.exports = {
                     {
                         anchor: `couplets past;`,
                         annotation: {
+                            // wiki: couplet
                             description: `A couplet is a pair of lines in a poem that typically rhyme and share the same metre. Sasha and I were never a couple, of course. But perhaps we were a couplet?`
                         }
                     }
@@ -324,6 +335,7 @@ module.exports = {
                         anchor: `dunes once deemed a haven`,
                         annotation: {
                             description: [
+                                // wiki: ishmael
                                 `In the Book of Genesis, Ishmael was Abraham's first son. Though he would not inherit Abraham's house and was instead banished to the desert, God promised to make him a great nation. The narrator Ishmael in Herman Melville's`,
                                 {
                                     italic: `Moby Dick`
@@ -355,6 +367,7 @@ module.exports = {
                     {
                         anchor: `summer trips to Paris`,
                         annotation: {
+                            // wiki: paris
                             description: `In middle school, students who completed two years of French class were eligible to attend a summer program in France. This excited Sasha, and so it excited me as well. In Greek mythology, Paris was also the prince of Troy, whose elopement with Helen of Sparta caused the Trojan War.`
                         }
                     }
@@ -389,6 +402,7 @@ module.exports = {
                     {
                         anchor: `rondel of her eye`,
                         annotation: {
+                            // wiki: rondel
                             description: `A rondel is a verse form that originated in French poetry. It can also refer to anything round. The "apple of one's eye" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "ball of one's eye." My belief that I could be the object of Sasha's affection was based on a similar misreading.`,
                             // TODO: Confirm reference
                             reference: `https://www.jstor.org/stable/283546?seq=1#page_scan_tab_contents`
@@ -398,6 +412,7 @@ module.exports = {
                     {
                         anchor: `stored in this neck?`,
                         annotation: {
+                            // wiki: adam's apple
                             description: `Due to a mistranslation, "man's swelling" in Hebrew entered the English lexicon as "Adam's apple." An apocryphal tale thus took shape that when Adam ate the forbidden fruit to gain knowledge of good and evil, a piece had lodged in his throat, which now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me with a permanent lump in my throat.`
                         }
                     }
@@ -411,6 +426,7 @@ module.exports = {
                     {
                         anchor: `cored gifts fall to discord`,
                         annotation: {
+                            // wiki: eris
                             description: `Eris was the Greek goddess of discord. As revenge for being denied invitation to a feast, she tossed a golden apple labelled "for the fairest" in their midst. When Paris was asked to judge its rightful owner, he chose Aphrodite, who rewarded him with the hand of Helen.`
                         }
                     },
@@ -424,6 +440,7 @@ module.exports = {
                     {
                         anchor: `the Society,`,
                         annotation: {
+                            // wiki: humane society
                             description: `The Humane Society offers pet cremation services.`
                         }
                     }
@@ -433,6 +450,7 @@ module.exports = {
                     {
                         anchor: `opened latches`,
                         annotation: {
+                            // wiki: pandora
                             description: `In Greek mythology, Pandora was the first human woman. Upon opening a box given to her by Zeus as a wedding gift, she unwittingly released all the evils that plague humanity.`
                         }
                     },
@@ -441,6 +459,7 @@ module.exports = {
                         anchor: `undine—`,
                         annotation: {
                             description: [
+                                // wiki: undine
                                 `The undine is a female nymph and the elemental of water. The term was coined by Paracelsus and is derived from the Latin word`,
                                 {
                                     italic: `unda,`
@@ -462,7 +481,7 @@ module.exports = {
                 right: [
                     `a casket tilted back where its`,
                     {
-                        // TODO: link hope chest.
+                        // TODO: portal hope chest?
                         anchor: `hopeless rests.`,
                         annotation: {
                             description: `Hope was all that remained in the box opened by Pandora. By contrast, upon having all the hard truths of the world revealed to me by Sasha, all I had left was my own hopeless state.`
@@ -484,6 +503,7 @@ module.exports = {
                     {
                         anchor: `seizures of spleen,`,
                         annotation: {
+                            // wiki: black bile?
                             description: `In Hippocratic medicine, black bile is the humour secreted by the spleen to induce melancholy.`
                         }
                     }
@@ -507,6 +527,7 @@ module.exports = {
                         anchor: `jarred sibyl`,
                         annotation: {
                             description: [
+                                // wiki: cumaean sibyl
                                 `The Cumaean Sibyl was a Greek prophetess who was granted immortality but not eternal youth. T.S. Eliot's poem`,
                                 {
                                     italic: {
@@ -537,6 +558,8 @@ module.exports = {
                     {
                         anchor: `cellophane sylph,`,
                         annotation: {
+                            // wiki: sylph
+                            // todo: users know what cellophane is.
                             description: `In the works of Paracelsus, the sylph is the elemental of air, and is typically described as a fairy with wings of gauze. Cellophane is a thin, transparent sheet that seals in heat.`
                         }
                     }
@@ -582,6 +605,7 @@ module.exports = {
                     anchor: `shivering for shivs unsheathed.`,
                     // TODO: Reference to shanks in Kyon?
                     annotation: {
+                        // wiki: shiv
                         description: `A shiv is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved.`,
                         portal: `chivalry`
                     }
@@ -728,6 +752,7 @@ module.exports = {
                     {
                         anchor: `defeat of tortoise,`,
                         annotation: {
+                            // wiki: tortoise and hare
                             description: `While the tortoise defeats the hare in Aesop's fable, the decisive advantage still lies with the hare, who only needs to stay awake next time to clinch the victory. Similarly, while tortoises are known to live well over a century, any one of us can beat them soundly in the race for longevity. All one needs to do is awaken to the call of faith, and not lie there like a "frozen dustbunny."`
                         }
                     },
@@ -753,6 +778,7 @@ module.exports = {
                     {
                         anchor: `no slave parts these seas,`,
                         annotation: {
+                            // wiki: parting of red sea
                             description: `In the Book of Exodus, Moses leads the Israelites out of bondage in Egypt. Under God's command, Moses parts the Red Sea, allowing them to safely cross. God then returns the water, drowning the Egyptian army in pursuit behind them.`
                         }
                     }
@@ -828,6 +854,7 @@ module.exports = {
                     {
                         anchor: `guileless garden gnome…`,
                         annotation: {
+                            // wiki: gnome
                             description: `The gnome, a small humanoid who lives underground, is the elemental of earth in Paracelsus's writings. Garden gnomes are lawn ornaments, some of which stand motionless before the yawning infinite, like me, staring blankly with a nervous grin.`
                         }
                     }
