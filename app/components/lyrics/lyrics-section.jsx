@@ -1,7 +1,7 @@
 import React from 'react'
 import LyricsUnit from './lyrics-unit'
 import RadioButtonBlock from '../superclasses/radio-button-block'
-import { LYRIC_COLUMN_KEYS, LYRICS } from 'helpers/constants'
+import { LYRIC_COLUMN_KEYS, LYRICS_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -14,7 +14,7 @@ import { LYRIC_COLUMN_KEYS, LYRICS } from 'helpers/constants'
 
  ...other }) => {
 
-     const accessHighlighted = accessedOn && accessedSectionKey === LYRICS
+     const accessHighlighted = accessedOn && accessedSectionKey === LYRICS_SECTION
 
      return (
          <LyricsSectionView {...other}

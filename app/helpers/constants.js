@@ -7,20 +7,22 @@ const LEFT = 'left',
     EMPHASIS = 'emphasis',
     ANCHOR = 'anchor',
 
-    PLAYER = 'player',
-    OVERVIEW = 'overview',
-    LYRICS = 'lyrics',
-    DOTS = 'dots'
+    PLAYER_SECTION = 'player_section',
+    SONGS_SECTION = 'songs_section',
+    OVERVIEW_SECTION = 'overview_section',
+    LYRICS_SECTION = 'lyrics_section',
+    DOTS_SECTION = 'dots_section'
 
 module.exports = {
 
     WINDOW_STORAGE: window.localStorage,
 
-    PLAYER,
-    OVERVIEW,
-    LYRICS,
-    DOTS,
-    SECTION_KEYS: [PLAYER, OVERVIEW, LYRICS, DOTS],
+    SONGS_SECTION,
+    PLAYER_SECTION,
+    OVERVIEW_SECTION,
+    LYRICS_SECTION,
+    DOTS_SECTION,
+    SECTION_KEYS: [SONGS_SECTION, PLAYER_SECTION, OVERVIEW_SECTION, LYRICS_SECTION, DOTS_SECTION],
 
     SELECTED_SONG_INDEX: 'selectedSongIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
@@ -28,6 +30,7 @@ module.exports = {
     SELECTED_TIME: 'selectedTime',
     SELECTED_DOT_KEYS: 'selectedDotKeys',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
+    SELECTED_PLAYER_OPTION_INDEX: 'selectedPlayerOptionIndex',
     SELECTED_WIKI_URL: 'selectedWikiUrl',
     ACCESSED_ON: 'accessOn',
     ACCESSED_SECTION_INDEX: 'accessedSectionIndex',

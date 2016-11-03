@@ -8,6 +8,7 @@ import { selectSongIndex,
          selectTime,
          selectDotKey,
          selectOverviewIndex,
+         selectPlayerOptionIndex,
          selectWikiUrl,
          accessOn,
          accessSectionIndex } from 'redux/actions'
@@ -18,14 +19,16 @@ import { SELECTED_SONG_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
+         SELECTED_PLAYER_OPTION_INDEX,
          SELECTED_WIKI_URL,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX,
 
-         PLAYER,
-         OVERVIEW,
-         LYRICS,
-         DOTS,
+         SONGS_SECTION,
+         PLAYER_SECTION,
+         OVERVIEW_SECTION,
+         LYRICS_SECTION,
+         DOTS_SECTION,
          SECTION_KEYS,
 
          ARROW_LEFT,
@@ -51,6 +54,7 @@ const passReduxStateToProps = ({
     selectedTime,
     selectedDotKeys,
     selectedOverviewIndex,
+    selectedPlayerOptionIndex,
     selectedWikiUrl,
     accessedOn,
     accessedSectionIndex
@@ -62,6 +66,7 @@ const passReduxStateToProps = ({
     selectedTime,
     selectedDotKeys,
     selectedOverviewIndex,
+    selectedPlayerOptionIndex,
     selectedWikiUrl,
     accessedOn,
     accessedSectionIndex
@@ -76,6 +81,7 @@ const bindDispatchToProps = (dispatch) => (
         selectTime,
         selectDotKey,
         selectOverviewIndex,
+        selectPlayerOptionIndex,
         selectWikiUrl,
         accessOn,
         accessSectionIndex
@@ -92,9 +98,11 @@ class App extends Component {
         super(props)
 
         // Bind this to event handlers.
+        this.togglePlay = this.togglePlay.bind(this)
         this.selectTitle = this.selectTitle.bind(this)
         this.selectSong = this.selectSong.bind(this)
         this.selectOverview = this.selectOverview.bind(this)
+        this.selectPlayerOption = this.selectPlayerOption.bind(this)
         this.selectAnnotation = this.selectAnnotation.bind(this)
         this.selectVerse = this.selectVerse.bind(this)
         this.selectDot = this.selectDot.bind(this)
@@ -114,6 +122,7 @@ class App extends Component {
          * scroll.) Revisit whether this is the best idea.
          */
         this.state = {
+            isPlaying: false,
             accessedAnnotationIndex: props.selectedAnnotationIndex,
             accessedAnnotationOutlined: false,
             accessedSongIndex: props.selectedSongIndex,
@@ -143,6 +152,14 @@ class App extends Component {
     /*************************
      * STATE CHANGE HANDLERS *
      *************************/
+
+    togglePlay(e) {
+        const isPlaying = !this.state.isPlaying
+
+        this.setState({
+            isPlaying
+        })
+    }
 
     selectTitle(e) {
         this.selectSong(e, 0)
@@ -198,9 +215,22 @@ class App extends Component {
         }
 
         /**
-         * Stored as integer. 0 is auto show bubble, 1 is auto hide.
+         * Stored as integer. 0 is to show bubble, 1 is to hide it.
          */
         this.props.selectOverviewIndex((this.props.selectedOverviewIndex + 1) % 2)
+    }
+
+    selectPlayerOption(e, direction = 1) {
+        if (e) {
+            e.stopPropagation()
+            this._handleAccessOn(0)
+        }
+
+        /**
+         * Stored as integer. 0 is to "continue after next," 1 is to "repeat," 2 is to "pause after song."
+         */
+         // Accommodate Javascript unable to handle negative modulo.
+        this.props.selectPlayerOptionIndex((((this.props.selectedPlayerOptionIndex + direction) % 3) + 3) % 3)
     }
 
     selectDot(e, selectDotKey) {
@@ -230,6 +260,8 @@ class App extends Component {
 
         // Keep accessed index, even if annotation is deselected.
         if (selectedIndex > 0) {
+
+            // Hide overview bubble text.
             this.props.selectOverviewIndex(1)
 
             this.setState({
@@ -419,7 +451,7 @@ class App extends Component {
 
         // Skip lyrics and dots sections if no selected song.
         if (this.props.selectedSongIndex === 0) {
-            while (SECTION_KEYS[accessedSectionIndex] === LYRICS || SECTION_KEYS[accessedSectionIndex] === DOTS) {
+            while (SECTION_KEYS[accessedSectionIndex] === LYRICS_SECTION || SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
                 accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
             }
         }
@@ -432,16 +464,6 @@ class App extends Component {
         if (keyName === ENTER) {
             this.selectOverview()
         }
-    }
-
-    // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
-    _resetAccessedIndices(accessedSectionKey) {
-
-        const accessedSongIndex = accessedSectionKey === PLAYER ? this.state.accessedSongIndex : this.props.selectedSongIndex
-
-        this.setState({
-            accessedSongIndex
-        })
     }
 
     _handleSongAccess(keyName) {
@@ -461,6 +483,32 @@ class App extends Component {
                 this.selectSong(undefined, accessedSongIndex)
                 break
         }
+
+        this.setState({
+            accessedSongIndex
+        })
+    }
+
+    _handlePlayerAccess(keyName) {
+        const selectedPlayerOptionIndex = this.props.selectedPlayerOptionIndex
+
+        switch (keyName) {
+            case ENTER:
+                this.togglePlay()
+                break
+            case ARROW_LEFT:
+                this.selectPlayerOption(undefined, -1)
+                break
+            case ARROW_RIGHT:
+                this.selectPlayerOption()
+                break
+        }
+    }
+
+    // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
+    _resetAccessedIndices(accessedSectionKey) {
+
+        const accessedSongIndex = accessedSectionKey === SONGS_SECTION ? this.state.accessedSongIndex : this.props.selectedSongIndex
 
         this.setState({
             accessedSongIndex
@@ -492,16 +540,19 @@ class App extends Component {
                 const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
 
                 switch (accessedSectionKey) {
-                    case PLAYER:
+                    case SONGS_SECTION:
                         this._handleSongAccess(keyName)
                         break
-                    case OVERVIEW:
+                    case PLAYER_SECTION:
+                        this._handlePlayerAccess(keyName)
+                        break
+                    case OVERVIEW_SECTION:
                         this._handleOverviewAccess(keyName)
                         break
-                    case LYRICS:
+                    case LYRICS_SECTION:
                         this._handleLyricsAccess(keyName)
                         break
-                    case DOTS:
+                    case DOTS_SECTION:
                         break
                 }
             }
@@ -546,6 +597,7 @@ class App extends Component {
                 // From Redux.
                 selectedSongIndex,
                 selectedOverviewIndex,
+                selectedPlayerOptionIndex,
                 selectedAnnotationIndex,
                 selectedVerseIndex,
                 selectedTime,
@@ -554,7 +606,8 @@ class App extends Component {
                 accessedOn,
                 accessedSectionIndex } = this.props,
 
-            { accessedAnnotationIndex,
+            { isPlaying,
+              accessedAnnotationIndex,
               accessedAnnotationOutlined,
               accessedSongIndex,
               hoveredDotIndex,
@@ -578,6 +631,8 @@ class App extends Component {
                     albumOverview={overview}
                     albumTasks={tasks}
 
+                    isPlaying={isPlaying}
+
                     accessedOn={accessedOn}
                     accessedSectionKey={accessedSectionKey}
 
@@ -586,6 +641,7 @@ class App extends Component {
                     accessedSongIndex={accessedSongIndex}
                     selectedSongIndex={selectedSongIndex}
                     selectedOverviewIndex={selectedOverviewIndex}
+                    selectedPlayerOptionIndex={selectedPlayerOptionIndex}
                     selectedAnnotationIndex={selectedAnnotationIndex}
                     selectedVerseIndex={selectedVerseIndex}
                     selectedTime={selectedTime}
@@ -601,6 +657,8 @@ class App extends Component {
                     onWikiUrlClick={this.selectWiki}
                     onAnnotationClick={this.selectAnnotation}
                     onOverviewClick={this.selectOverview}
+                    onPlayerOptionClick={this.selectPlayerOption}
+                    onPlayButtonClick={this.togglePlay}
                     onVerseClick={this.selectVerse}
                     onDotClick={this.selectDot}
                     onDotHover={this.hoverDot}

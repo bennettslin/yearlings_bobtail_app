@@ -1,6 +1,7 @@
 import React from 'react'
 import Shared from './shared'
 import TitleSection from './title/title-section'
+import PlayerSection from './player/player-section'
 import DevSection from './dev/dev-section'
 import NavSection from './nav/nav-section'
 import ProgressHelper from 'helpers/progress-helper'
@@ -35,11 +36,15 @@ const AlbumView = ({
     // From props.
     songs,
     albumTitle,
+    isPlaying,
     selectedSongIndex,
     selectedVerseIndex,
+    selectedPlayerOptionIndex,
     selectedTime,
     isNarrowScreen,
     onSongClick,
+    onPlayButtonClick,
+    onPlayerOptionClick,
     onScreenWidthClick,
     accessedOn,
     accessedSectionKey,
@@ -57,6 +62,14 @@ const AlbumView = ({
                 accessedSectionKey={accessedSectionKey}
                 accessedSongIndex={accessedSongIndex}
                 onTitleClick={onSongClick}
+            />
+            <PlayerSection
+                isPlaying={isPlaying}
+                selectedPlayerOptionIndex={selectedPlayerOptionIndex}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                onPlayButtonClick={onPlayButtonClick}
+                onPlayerOptionClick={onPlayerOptionClick}
             />
             <DevSection
                 selectedTime={selectedTime}

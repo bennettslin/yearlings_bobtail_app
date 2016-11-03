@@ -1,6 +1,6 @@
 import React from 'react'
 import DotsBlock from './dots-block'
-import { DOTS } from 'helpers/constants'
+import { DOTS_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -13,7 +13,7 @@ import { DOTS } from 'helpers/constants'
 
  ...other }) => {
 
-     const accessHighlighted = accessedOn && accessedSectionKey === DOTS
+     const accessHighlighted = accessedOn && accessedSectionKey === DOTS_SECTION
 
      return (
          <DotsSectionView {...other}

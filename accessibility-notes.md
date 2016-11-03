@@ -35,6 +35,13 @@
         * If there is an accessed line, select it.
 
 * When player section is accessed:
+    * "Enter" and Left and Right arrow keys are shown.
+    * When "Enter" is pressed:
+        * Toggle between play and pause.
+    * When Left and Right arrows are pressed:
+        * Toggle through "continue to next," "pause after song," "repeat song"
+
+* When songs section is accessed:
     * Up and Down arrows and "Enter" are shown.
     * When section is first accessed:
         * Accessed song is selected song.

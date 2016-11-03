@@ -2,7 +2,7 @@ import React from 'react'
 import NavRow from './nav-row'
 import ProgressFooter from '../progress/progress-footer'
 import ProgressHelper from 'helpers/progress-helper'
-import { PLAYER } from 'helpers/constants'
+import { SONGS_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -20,7 +20,7 @@ const NavSection = ({
     const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
         sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks),
 
-        sectionAccessHighlighted = accessedOn && accessedSectionKey === PLAYER
+        sectionAccessHighlighted = accessedOn && accessedSectionKey === SONGS_SECTION
 
     return (
         <NavSectionView {...other}

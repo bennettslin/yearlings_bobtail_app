@@ -4,6 +4,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_TIME,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
+         SELECTED_PLAYER_OPTION_INDEX,
          SELECTED_WIKI_URL,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
@@ -66,6 +67,14 @@ export const selectOverviewIndex = (selectedOverviewIndex = 0) => {
     return {
         type: SELECTED_OVERVIEW_INDEX,
         payload: selectedOverviewIndex
+    }
+}
+
+export const selectPlayerOptionIndex = (selectedPlayerOptionIndex = 0) => {
+    setInSession(SELECTED_PLAYER_OPTION_INDEX, selectedPlayerOptionIndex)
+    return {
+        type: SELECTED_PLAYER_OPTION_INDEX,
+        payload: selectedPlayerOptionIndex
     }
 }
 

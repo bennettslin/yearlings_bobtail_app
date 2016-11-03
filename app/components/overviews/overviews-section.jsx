@@ -1,7 +1,7 @@
 import React from 'react'
 import TextBlock from '../text/text-block'
 import RadioButtonBlock from '../superclasses/radio-button-block'
-import { OVERVIEW } from 'helpers/constants'
+import { OVERVIEW_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -15,7 +15,7 @@ const OverviewsSection = ({
 
 ...other }) => {
 
-    const accessHighlighted = accessedOn && accessedSectionKey === OVERVIEW,
+    const accessHighlighted = accessedOn && accessedSectionKey === OVERVIEW_SECTION,
 
         /**
          * Remember that the default to show bubble text is 0.

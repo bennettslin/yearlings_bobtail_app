@@ -3,7 +3,6 @@
 import { SELECTED_DOT_KEYS,
          ALL_DOT_KEYS,
          WINDOW_STORAGE,
-         SELECTED_OVERVIEW_INDEX,
          SELECTED_WIKI_URL } from './constants'
 
 // TODO: Add validation methods that return valid or default value for all, and test them! ʦ
