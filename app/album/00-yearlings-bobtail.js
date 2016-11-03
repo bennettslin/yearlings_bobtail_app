@@ -395,6 +395,11 @@ module.exports = {
             taskName: `add player section`,
             workedHours: 2,
             neededHours: 2
-        }
+        },
+        {
+            taskName: `make dots section accessible`,
+            workedHours: 1,
+            neededHours: 2
+        },
     ]
 }

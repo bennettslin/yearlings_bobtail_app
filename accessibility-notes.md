@@ -38,7 +38,7 @@
     * "Enter" and Left and Right arrow keys are shown.
     * When "Enter" is pressed:
         * Toggle between play and pause.
-    * When Left and Right arrows are pressed:
+    * When Left or Right arrows are pressed:
         * Toggle through "continue to next," "pause after song," "repeat song"
 
 * When songs section is accessed:
@@ -47,7 +47,7 @@
         * Accessed song is selected song.
 
     * When Up and Down arrows are pressed:
-        * Accessed song is previous or next song.
+        * or song is previous or next song.
 
     * When "Enter" is pressed:
         * Select the accessed song.
@@ -60,6 +60,13 @@
     * (Automatically toggles off when annotation or wiki is selected.)
 
 * When dot section is accessed:
+    * Left and Right arrows and "Enter" are shown.
+    * When section is first accessed:
+        * Accessed dot is first dot, or else previously accessed dot.
+    * When Left or Right arrows are pressed:
+        * Accessed dot is previous or next dot.
+    * When "Enter" is pressed.
+        * Toggle the accessed dot.
 
 * When annotation section is accessed:
     * Arrow keys and "Enter" are shown.
