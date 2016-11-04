@@ -17,7 +17,7 @@ const NavRow = ({
 
     const songTitle = song.title,
         sumTask = ProgressHelper.calculateSumTask(song.tasks),
-        onClick = !isSelected ? e => onSongClick(e, songIndex) : null
+        onClick = e => onSongClick(e, songIndex)
 
     return (
         <NavRowView {...other}
@@ -54,8 +54,9 @@ const NavRowView = ({
             maxTotalNeededHours={maxTotalNeededHours}
         />
         <div className="text-cell-wrapper">
+            {/* TODO: Keep enabled for now, to allow user to reset the current song. In the future, consider disabling if *all* the default parameters are the same. */}
             <a
-                className={`text-cell text${isSelected ? '' : ' enabled'}`}
+                className="text-cell text enabled"
                 onClick={onClick}
             >
                 {`${songIndex}. ${songTitle}`}

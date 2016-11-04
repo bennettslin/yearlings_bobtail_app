@@ -325,6 +325,7 @@ class App extends Component {
 
         // A new song has been selected.
         if (selectedVerseIndex === 0) {
+
             // Set verse to 1 by default.
             selectedVerseIndex = 1
             selectedTimePlayed = 0
