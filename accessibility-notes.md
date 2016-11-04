@@ -14,26 +14,6 @@
     * Stage section shows "Esc" key.
     * Keys can be clicked, which performs the action and then turns access off.
 
-* When lyric section is accessed:
-    * Arrow keys and "Enter" are shown.
-    * When up and down arrows are pressed:
-        * If there is no accessed line:
-            * Accessed line closest to last accessed element is highlighted.
-            * Accessed anchor, if any, is unhighlighted.
-        * If there is an accessed line:
-            * Highlight previous or next accessed line.
-
-    * When left and right arrows are pressed:
-        * If there is no accessed anchor:
-            * Accessed anchor closest to last accessed element is highlighted.
-            * Accessed line, if any, is unhighlighted.
-        * If there is an accessed anchor:
-            * Highlight previous or next accessed anchor.
-
-    * When "Enter" is pressed:
-        * If there is an accessed anchor, open its annotation.
-        * If there is an accessed line, select it.
-
 * When player section is accessed:
     * "Enter" and Left and Right arrow keys are shown.
     * When "Enter" is pressed:
@@ -67,6 +47,26 @@
         * Accessed dot is previous or next dot.
     * When "Enter" is pressed.
         * Toggle the accessed dot.
+
+* When lyric section is accessed:
+    * Arrow keys and "Enter" are shown.
+    * When up and down arrows are pressed:
+        * If there is no accessed line:
+            * Accessed line closest to last accessed element is highlighted.
+            * Accessed anchor, if any, is unhighlighted.
+        * If there is an accessed line:
+            * Highlight previous or next accessed line.
+
+    * When left and right arrows are pressed:
+        * If there is no accessed anchor:
+            * Accessed anchor closest to last accessed element is highlighted.
+            * Accessed line, if any, is unhighlighted.
+        * If there is an accessed anchor:
+            * Highlight previous or next accessed anchor.
+
+    * When "Enter" is pressed:
+        * If there is an accessed anchor, open its annotation.
+        * If there is an accessed line, select it.
 
 * When annotation section is accessed:
     * Arrow keys and "Enter" are shown.

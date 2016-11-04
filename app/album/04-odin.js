@@ -62,9 +62,13 @@ module.exports = {
                     {
                         anchor: `By lot,`,
                         annotation: {
-                            // wiki: lot
                             description: [
-                                `In the Book of Genesis, Lot's wife was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Also, lots are drawn by chance to decide an outcome, and it was my lot to be born a non-Jew.`
+                                `In the Book of Genesis,`,
+                                {
+                                    anchor: `Lot's wife`,
+                                    wiki: `Lot%27s_wife`
+                                },
+                                `was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Also, lots are drawn by chance to decide an outcome, and it was my lot to be born a non-Jew.`
                             ]
                         }
                     },
@@ -123,7 +127,6 @@ module.exports = {
                     {
                         anchor: `crayons least whittled…`,
                         annotation: {
-                            // wiki: pastel
                             description: [
                                 `When I first arrived in Taiwan, my aunt gave me a set of crayons as a gift. They were`,
                                 {
@@ -278,18 +281,25 @@ module.exports = {
                     {
                         anchor: `sickle-lit`,
                         annotation: {
-                            // wiki: grim reaper
                             description: [
-                                `The crescent moon has a shape similar to the blade of the scythe wielded by the Grim Reaper.`
+                                `The crescent moon has a shape similar to the blade of the scythe wielded by the`,
+                                {
+                                    anchor: `Grim Reaper.`,
+                                    wiki: `Death_(personification)`
+                                }
                             ]
                         }
                     },
                     {
                         anchor: `oriental`,
                         annotation: {
-                            // wiki: oriental
                             description: [
-                                `The word "oriental" was made into a pejorative by academic circles, not through common usage. I learned of its incorrectness at around the same time that the gay community was reclaiming the word "queer." The latter approach made more sense to me.`
+                                `The word`,
+                                {
+                                    anchor: `"oriental"`,
+                                    wiki: `Orient`
+                                },
+                                `was made into a pejorative by academic circles, not through common usage. I learned of its incorrectness at around the same time that the gay community was reclaiming the word "queer." The latter approach made more sense to me.`
                             ]
                         }
                     },
@@ -316,9 +326,13 @@ module.exports = {
                     {
                         anchor: `gentle means!`,
                         annotation: {
-                            // wiki: gentile
                             description: [
-                                `Or else "Gentile," referring to any non-Jew.`
+                                `Or else`,
+                                {
+                                    anchor: `"Gentile,"`,
+                                    wiki: `Gentile`
+                                },
+                                `referring to any non-Jew.`
                             ]
                         }
                     }
@@ -433,9 +447,13 @@ module.exports = {
                     {
                         anchor: `summer trips to Paris`,
                         annotation: {
-                            // wiki: paris
                             description: [
-                                `In middle school, students who completed two years of French class were eligible to attend a summer program in France. This excited Sasha, and so it excited me as well. In Greek mythology, Paris was also the prince of Troy, whose elopement with Helen of Sparta caused the Trojan War.`
+                                `In middle school, students who completed two years of French class were eligible to attend a summer program in France. This excited Sasha, and so it excited me as well. In Greek mythology,`,
+                                {
+                                    anchor: `Paris`,
+                                    wiki: `Paris_(mythology)`
+                                },
+                                `was also the prince of Troy, whose elopement with Helen of Sparta caused the Trojan War.`
                             ]
                         }
                     }
@@ -486,9 +504,13 @@ module.exports = {
                     {
                         anchor: `stored in this neck?`,
                         annotation: {
-                            // wiki: adam's apple
                             description: [
-                                `Due to a mistranslation, "man's swelling" in Hebrew entered the English lexicon as "Adam's apple." An apocryphal tale thus took shape that when Adam ate the forbidden fruit to gain knowledge of good and evil, a piece had lodged in his throat, which now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me with a permanent lump in my throat.`
+                                `Due to a mistranslation, "man's swelling" in Hebrew entered the English lexicon as`,
+                                {
+                                    anchor: `"Adam's apple."`,
+                                    wiki: `Adam%27s_apple`
+                                },
+                                `An apocryphal tale thus took shape that when Adam ate the forbidden fruit to gain knowledge of good and evil, a piece had lodged in his throat, which now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me with a permanent lump in my throat.`
                             ]
                         }
                     }
@@ -502,9 +524,12 @@ module.exports = {
                     {
                         anchor: `cored gifts fall to discord`,
                         annotation: {
-                            // wiki: eris
                             description: [
-                                `Eris was the Greek goddess of discord. As revenge for being denied invitation to a feast, she tossed a golden apple labelled "for the fairest" in their midst. When Paris was asked to judge its rightful owner, he chose Aphrodite, who rewarded him with the hand of Helen.`
+                                {
+                                    anchor: `Eris`,
+                                    wiki: `Eris_(mythology)`
+                                },
+                                `was the Greek goddess of discord. As revenge for being denied invitation to a feast, she tossed a golden apple labelled "for the fairest" in their midst. When Paris was asked to judge its rightful owner, he chose Aphrodite, who rewarded him with the hand of Helen.`
                             ]
                         }
                     },
@@ -518,9 +543,13 @@ module.exports = {
                     {
                         anchor: `the Society,`,
                         annotation: {
-                            // wiki: humane society
                             description: [
-                                `The Humane Society offers pet cremation services.`
+                                `The`,
+                                {
+                                    anchor: `Humane Society`,
+                                    wiki: `The_Humane_Society_of_the_United_States`
+                                },
+                                `offers pet cremation services.`
                             ]
                         }
                     }
@@ -623,8 +652,12 @@ module.exports = {
                         anchor: `jarred sibyl`,
                         annotation: {
                             description: [
-                                // wiki: cumaean sibyl
-                                `The Cumaean Sibyl was a Greek prophetess who was granted immortality but not eternal youth. T.S. Eliot's poem`,
+                                `The`,
+                                {
+                                    anchor: `Cumaean Sibyl`,
+                                    wiki: `Cumaean_Sibyl`
+                                },
+                                `was a Greek prophetess who was granted immortality but not eternal youth. T.S. Eliot's poem`,
                                 {
                                     italic: {
                                         anchor: `The Waste Land`,
@@ -860,9 +893,13 @@ module.exports = {
                     {
                         anchor: `defeat of tortoise,`,
                         annotation: {
-                            // wiki: tortoise and hare
                             description: [
-                                `While the tortoise defeats the hare in Aesop's fable, the decisive advantage still lies with the hare, who only needs to stay awake next time to clinch the victory. Similarly, while tortoises are known to live well over a century, any one of us can beat them soundly in the race for longevity. All one needs to do is awaken to the call of faith, and not lie there like a "frozen dustbunny."`
+                                `While the tortoise defeats the hare in`,
+                                {
+                                    anchor: `Aesop's fable,`,
+                                    wiki: `The_Tortoise_and_the_Hare`
+                                },
+                                `the decisive advantage still lies with the hare, who only needs to stay awake next time to clinch the victory. Similarly, while tortoises are known to live well over a century, any one of us can beat them soundly in the race for longevity. All one needs to do is awaken to the call of faith, and not lie there like a "frozen dustbunny."`
                             ]
                         }
                     },
@@ -888,9 +925,13 @@ module.exports = {
                     {
                         anchor: `no slave parts these seas,`,
                         annotation: {
-                            // wiki: parting of red sea
                             description: [
-                                `In the Book of Exodus, Moses leads the Israelites out of bondage in Egypt. Under God's command, Moses parts the Red Sea, allowing them to safely cross. God then returns the water, drowning the Egyptian army in pursuit behind them.`
+                                `In the Book of Exodus, Moses leads the Israelites out of bondage in Egypt. Under God's command, Moses`,
+                                {
+                                    anchor: `parts the Red Sea,`,
+                                    wiki: `Crossing_the_Red_Sea`
+                                },
+                                `allowing them to safely cross. God then returns the water, drowning the Egyptian army in pursuit behind them.`
                             ]
                         }
                     }
