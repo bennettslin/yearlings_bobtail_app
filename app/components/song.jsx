@@ -46,7 +46,6 @@ const SongView = ({
     selectedAnnotationIndex,
     selectedDotKeys,
     selectedWikiUrl,
-    selectedTimePlayed,
     hoveredDotIndex,
     hoveredLineIndex,
     selectedVerseIndex,
@@ -108,7 +107,6 @@ const SongView = ({
                 accessedSectionKey={accessedSectionKey}
                 hasDoubleColumns={hasDoubleColumns}
                 songLyrics={selectedSongLyrics}
-                selectedTimePlayed={selectedTimePlayed}
                 selectedDotKeys={selectedDotKeys}
                 hoveredLineIndex={hoveredLineIndex}
                 selectedVerseIndex={selectedVerseIndex}

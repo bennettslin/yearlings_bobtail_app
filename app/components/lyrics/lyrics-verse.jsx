@@ -10,7 +10,6 @@ import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from 'helpers/constants'
 const LyricsVerse = ({
 
     verseObject,
-    selectedTimePlayed,
     selectedVerseIndex,
     hoveredLineIndex,
     onAnnotationClick,
@@ -22,24 +21,19 @@ const LyricsVerse = ({
     const { lyric,
             isTitle,
             time,
-            nextTime,
             verseIndex } = verseObject,
-
-        /**
-         * It's selected if it's between time and nextTime.
-         */
-        // isSelected = (time <= selectedTimePlayed && selectedTimePlayed < nextTime),
 
         isSelected = verseIndex === selectedVerseIndex,
 
         /**
-         * If there is no duration between time and nextTime, it can be
-         * selected but not marked as selected.
+         * TODO: If there is no duration between time and nextTime, it can be
+         * selected but not marked as selected. This feature was previously
+         * implemented, but was dependent on the next time value, so was
+         * removed.
          */
-        isSameTimeSelected = time === selectedTimePlayed && time === nextTime,
         isHovered = verseIndex === hoveredLineIndex,
         isSingleSpeaker = !!lyric,
-        isInteractable = !isNaN(time) && !isSameTimeSelected,
+        isInteractable = !isNaN(time),
         onPlayButtonClick = isInteractable && !isSelected ? e => onVerseClick(e, verseIndex) : null,
         onAnchorClick = onAnnotationClick,
         onMouseEnter = onLineHover ? e => onLineHover(e, verseIndex) : null,

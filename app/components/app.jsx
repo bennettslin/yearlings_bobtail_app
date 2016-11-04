@@ -189,13 +189,7 @@ class App extends Component {
             }
 
             // Scroll to top of lyrics.
-            const lyricsScrollHome = document.getElementsByClassName(`lyrics-scroll-home`)[0]
-
-            if (lyricsScrollHome) {
-                scrollIntoViewIfNeeded(lyricsScrollHome, false, {
-                    duration: 100
-                })
-            }
+            scrollElementIntoView('lyrics-scroll', 'home')
 
             // Show overview bubble text for selected song.
             this.props.selectOverviewIndex(0)
@@ -316,11 +310,10 @@ class App extends Component {
                 selectedVerseIndex++
             }
 
-            this._saveTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll: true })
+            this._storeTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll: true })
         }
     }
 
-    // FIXME: This is presently a little weird. When a new song begins, the selected verse is 0. But the default selected verse should be 1. There technically shouldn't be no verse selected.
     selectVerse(e, selectedVerseIndex = 0) {
         if (e) {
             e.stopPropagation()
@@ -330,8 +323,10 @@ class App extends Component {
         let selectedTimePlayed,
             scroll
 
-        // Do not scroll when new song is selected.
+        // A new song has been selected.
         if (selectedVerseIndex === 0) {
+            // Set verse to 1 by default.
+            selectedVerseIndex = 1
             selectedTimePlayed = 0
             scroll = false
 
@@ -345,10 +340,15 @@ class App extends Component {
             scroll = true
         }
 
-        this._saveTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll })
+        this._storeTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll })
     }
 
-    _saveTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll }) {
+    _storeTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll }) {
+        /**
+         * Since time and verse are in sync, this helper method can be called
+         * by either one.
+         */
+
         /**
         * TODO: Make this more robust, so that a verse change prompted by the
         * player will only scroll the lyrics if the previous verse is visible

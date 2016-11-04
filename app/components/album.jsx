@@ -90,7 +90,6 @@ const AlbumView = ({
         <Shared {...other}
             songs={songs}
             selectedSongIndex={selectedSongIndex}
-            selectedTimePlayed={selectedTimePlayed}
             selectedVerseIndex={selectedVerseIndex}
             accessedOn={accessedOn}
             accessedSectionKey={accessedSectionKey}
