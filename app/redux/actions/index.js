@@ -1,7 +1,7 @@
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
          SELECTED_VERSE_INDEX,
-         SELECTED_TIME,
+         SELECTED_TIME_PLAYED,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_PLAYER_OPTION_INDEX,
@@ -54,11 +54,11 @@ export const selectDotKey = (selectedDotKey, isSelected = false) => {
 }
 
 // Keep in Redux for now, but perhaps scrap later.
-export const selectTime = (selectedTime = 0) => {
-    setInSession(SELECTED_TIME, selectedTime)
+export const selectTimePlayed = (selectedTimePlayed = 0) => {
+    setInSession(SELECTED_TIME_PLAYED, selectedTimePlayed)
     return {
-        type: SELECTED_TIME,
-        payload: selectedTime
+        type: SELECTED_TIME_PLAYED,
+        payload: selectedTimePlayed
     }
 }
 

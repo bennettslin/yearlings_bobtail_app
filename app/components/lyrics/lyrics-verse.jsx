@@ -10,7 +10,7 @@ import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from 'helpers/constants'
 const LyricsVerse = ({
 
     verseObject,
-    selectedTime,
+    selectedTimePlayed,
     selectedVerseIndex,
     hoveredLineIndex,
     onAnnotationClick,
@@ -28,7 +28,7 @@ const LyricsVerse = ({
         /**
          * It's selected if it's between time and nextTime.
          */
-        // isSelected = (time <= selectedTime && selectedTime < nextTime),
+        // isSelected = (time <= selectedTimePlayed && selectedTimePlayed < nextTime),
 
         isSelected = verseIndex === selectedVerseIndex,
 
@@ -36,7 +36,7 @@ const LyricsVerse = ({
          * If there is no duration between time and nextTime, it can be
          * selected but not marked as selected.
          */
-        isSameTimeSelected = time === selectedTime && time === nextTime,
+        isSameTimeSelected = time === selectedTimePlayed && time === nextTime,
         isHovered = verseIndex === hoveredLineIndex,
         isSingleSpeaker = !!lyric,
         isInteractable = !isNaN(time) && !isSameTimeSelected,

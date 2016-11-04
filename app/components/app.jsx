@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { selectSongIndex,
          selectAnnotationIndex,
          selectVerseIndex,
-         selectTime,
+         selectTimePlayed,
          selectDotKey,
          selectOverviewIndex,
          selectPlayerOptionIndex,
@@ -16,7 +16,7 @@ import Album from './album'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
          SELECTED_VERSE_INDEX,
-         SELECTED_TIME,
+         SELECTED_TIME_PLAYED,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_PLAYER_OPTION_INDEX,
@@ -42,8 +42,8 @@ import { SELECTED_SONG_INDEX,
          SPACE } from 'helpers/constants'
 import AlbumHelper from 'helpers/album-view-helper'
 import { intersects } from 'helpers/dot-helper'
+import { scrollElementIntoView } from 'helpers/general-helper'
 import LogHelper from 'helpers/log-helper'
-import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 
 /*********
  * STORE *
@@ -53,7 +53,7 @@ const passReduxStateToProps = ({
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedVerseIndex,
-    selectedTime,
+    selectedTimePlayed,
     selectedDotKeys,
     selectedOverviewIndex,
     selectedPlayerOptionIndex,
@@ -65,7 +65,7 @@ const passReduxStateToProps = ({
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedVerseIndex,
-    selectedTime,
+    selectedTimePlayed,
     selectedDotKeys,
     selectedOverviewIndex,
     selectedPlayerOptionIndex,
@@ -80,7 +80,7 @@ const bindDispatchToProps = (dispatch) => (
         selectSongIndex,
         selectAnnotationIndex,
         selectVerseIndex,
-        selectTime,
+        selectTimePlayed,
         selectDotKey,
         selectOverviewIndex,
         selectPlayerOptionIndex,
@@ -303,13 +303,63 @@ class App extends Component {
         this.selectAnnotation(e, selectedAnnotationIndex)
     }
 
+    selectTime(e, selectedTimePlayed = 0) {
+        const { selectedSongIndex,
+                songs } = this.props,
+            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs)
+
+        if (selectedTimePlayed >= 0 && selectedTimePlayed < selectedSong.totalTime) {
+
+            // Select corresponding verse.
+            let selectedVerseIndex = 1
+            while (selectedTimePlayed >= selectedSong.times[selectedVerseIndex]) {
+                selectedVerseIndex++
+            }
+
+            this._saveTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll: true })
+        }
+    }
+
+    // FIXME: This is presently a little weird. When a new song begins, the selected verse is 0. But the default selected verse should be 1. There technically shouldn't be no verse selected.
     selectVerse(e, selectedVerseIndex = 0) {
         if (e) {
             e.stopPropagation()
             this._handleAccessOn(0)
         }
 
+        let selectedTimePlayed,
+            scroll
+
+        // Do not scroll when new song is selected.
+        if (selectedVerseIndex === 0) {
+            selectedTimePlayed = 0
+            scroll = false
+
+        } else {
+            const { selectedSongIndex,
+                songs } = this.props,
+                selectedSong = AlbumHelper.getSong(selectedSongIndex, songs)
+
+            // Select corresponding time.
+            selectedTimePlayed = selectedSong.times[selectedVerseIndex - 1]
+            scroll = true
+        }
+
+        this._saveTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll })
+    }
+
+    _saveTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll }) {
+        /**
+        * TODO: Make this more robust, so that a verse change prompted by the
+        * player will only scroll the lyrics if the previous verse is visible
+        * and the selected verse is not.
+        */
+        if (scroll) {
+            scrollElementIntoView('verse', selectedVerseIndex)
+        }
+
         this.props.selectVerseIndex(selectedVerseIndex)
+        this.props.selectTimePlayed(selectedTimePlayed)
     }
 
     selectScreenWidth(e) {
@@ -409,12 +459,7 @@ class App extends Component {
         }
 
         if (willScrollToAnchor) {
-            const annotationAnchor = document.getElementsByClassName(`annotation-${accessedAnnotationIndex}`)[0]
-            if (annotationAnchor) {
-                scrollIntoViewIfNeeded(annotationAnchor, false, {
-                    duration: 100
-                })
-            }
+            scrollElementIntoView('annotation', accessedAnnotationIndex)
         }
 
         this.setState({
@@ -482,6 +527,13 @@ class App extends Component {
             case ARROW_DOWN:
                 accessedSongIndex = (accessedSongIndex + 1) % songsLength
                 break
+            // FIXME: Left and right arrows are for dev purposes only.
+            case ARROW_LEFT:
+                this.selectTime(undefined, this.props.selectedTimePlayed - 1)
+                break
+            case ARROW_RIGHT:
+                this.selectTime(undefined, this.props.selectedTimePlayed + 1)
+                break
             case ENTER:
                 this.selectSong(undefined, accessedSongIndex)
                 break
@@ -531,7 +583,6 @@ class App extends Component {
                 accessedDotIndex
             })
         }
-
     }
 
     // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
@@ -630,7 +681,7 @@ class App extends Component {
                 selectedPlayerOptionIndex,
                 selectedAnnotationIndex,
                 selectedVerseIndex,
-                selectedTime,
+                selectedTimePlayed,
                 selectedDotKeys,
                 selectedWikiUrl,
                 accessedOn,
@@ -676,7 +727,7 @@ class App extends Component {
                     selectedPlayerOptionIndex={selectedPlayerOptionIndex}
                     selectedAnnotationIndex={selectedAnnotationIndex}
                     selectedVerseIndex={selectedVerseIndex}
-                    selectedTime={selectedTime}
+                    selectedTimePlayed={selectedTimePlayed}
                     selectedDotKeys={selectedDotKeys}
                     selectedWikiUrl={selectedWikiUrl}
                     hoveredDotIndex={hoveredDotIndex}

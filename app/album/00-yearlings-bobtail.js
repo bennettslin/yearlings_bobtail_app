@@ -30,6 +30,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `selected line will change selected time`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `selected time will change selected line`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `have class to show visual keyboard keys`,
             workedHours: 0,
             neededHours: 2

@@ -16,7 +16,7 @@ const DevSection = (props) => (
 const DevSectionView = ({
 
     // From props.
-    selectedTime,
+    selectedTimePlayed,
     selectedVerseIndex,
     isNarrowScreen,
     onScreenWidthClick
@@ -25,7 +25,7 @@ const DevSectionView = ({
     <div className="section dev-section">
         <h2>dev</h2>
         <div className="row">
-            selected time: {getFormattedTime(selectedTime)}
+            selected time: {getFormattedTime(selectedTimePlayed)}
         </div>
         <div className="row">
             selected verse index: {selectedVerseIndex}

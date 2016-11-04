@@ -40,7 +40,7 @@ const AlbumView = ({
     selectedSongIndex,
     selectedVerseIndex,
     selectedPlayerOptionIndex,
-    selectedTime,
+    selectedTimePlayed,
     isNarrowScreen,
     onSongClick,
     onPlayButtonClick,
@@ -72,7 +72,7 @@ const AlbumView = ({
                 onPlayerOptionClick={onPlayerOptionClick}
             />
             <DevSection
-                selectedTime={selectedTime}
+                selectedTimePlayed={selectedTimePlayed}
                 selectedVerseIndex={selectedVerseIndex}
                 isNarrowScreen={isNarrowScreen}
                 onScreenWidthClick={onScreenWidthClick}
@@ -90,7 +90,7 @@ const AlbumView = ({
         <Shared {...other}
             songs={songs}
             selectedSongIndex={selectedSongIndex}
-            selectedTime={selectedTime}
+            selectedTimePlayed={selectedTimePlayed}
             selectedVerseIndex={selectedVerseIndex}
             accessedOn={accessedOn}
             accessedSectionKey={accessedSectionKey}

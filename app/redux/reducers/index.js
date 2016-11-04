@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
          SELECTED_VERSE_INDEX,
-         SELECTED_TIME,
+         SELECTED_TIME_PLAYED,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_PLAYER_OPTION_INDEX,
@@ -15,7 +15,7 @@ const { getFromSession } = SessionHelper,
     storedSongIndex = getFromSession(SELECTED_SONG_INDEX),
     storedAnnotationIndex = getFromSession(SELECTED_ANNOTATION_INDEX),
     storedVerseIndex = getFromSession(SELECTED_VERSE_INDEX),
-    storedTime = getFromSession(SELECTED_TIME),
+    storedTime = getFromSession(SELECTED_TIME_PLAYED),
     storedDotKeys = getFromSession(SELECTED_DOT_KEYS),
     storedOverviewIndex = getFromSession(SELECTED_OVERVIEW_INDEX),
     storedPlayerOptionIndex = getFromSession(SELECTED_PLAYER_OPTION_INDEX),
@@ -76,7 +76,7 @@ export const DotKeysReducer = (state = storedDotKeys, action) => {
 // Keep in Redux for now, but perhaps scrap later.
 export const TimeReducer = (state = storedTime, action) => {
     switch (action.type) {
-        case SELECTED_TIME:
+        case SELECTED_TIME_PLAYED:
             return action.payload
         default:
             return state
@@ -123,7 +123,7 @@ const rootReducer = combineReducers({
     selectedSongIndex: SongIndexReducer,
     selectedAnnotationIndex: AnnotationIndexReducer,
     selectedVerseIndex: VerseIndexReducer,
-    selectedTime: TimeReducer,
+    selectedTimePlayed: TimeReducer,
     selectedDotKeys: DotKeysReducer,
     selectedOverviewIndex: OverviewIndexReducer,
     selectedPlayerOptionIndex: PlayerOptionIndexReducer,
