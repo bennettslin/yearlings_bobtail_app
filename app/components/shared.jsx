@@ -13,21 +13,19 @@ import AlbumHelper from 'helpers/album-view-helper'
 const Shared = ({
 
     songs,
+    overview,
     selectedSongIndex,
-    selectedOverviewIndex,
-    albumOverviews,
     albumTasks,
 
 ...other }) => {
     const selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
-        overviewText = selectedSong.overview,
+        overviewText = selectedSong.overview ? selectedSong.overview : overview,
         tasks = AlbumHelper.getTasks(selectedSong, albumTasks)
 
     return (
         <SharedView {...other}
             songs={songs}
             selectedSongIndex={selectedSongIndex}
-            selectedOverviewIndex={selectedOverviewIndex}
             selectedSong={selectedSong}
             overviewText={overviewText}
             tasks={tasks}
@@ -45,10 +43,8 @@ const SharedView = ({
 
     // From props.
     selectedSongIndex,
-    selectedOverviewIndex,
     accessedOn,
     accessedSectionKey,
-
     onOverviewClick,
 
     // From controller.
@@ -62,7 +58,6 @@ const SharedView = ({
         <div className="field shared-field">
             <OverviewsSection {...other}
                 overviewText={overviewText}
-                selectedOverviewIndex={selectedOverviewIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
                 onOverviewClick={onOverviewClick}

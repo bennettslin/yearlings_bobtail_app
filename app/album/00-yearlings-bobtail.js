@@ -6,7 +6,7 @@ module.exports = {
     // Ulysses of rock albums.
     // Wrote and recorded all the parts myself.
     // Released in 2006.
-    overview: 'placeholder',
+    overview: 'placeholder text',
     pageStartingIndices: [0, 9],
     songs: [
         require('./01-didi'),

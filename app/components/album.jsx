@@ -13,15 +13,15 @@ import ProgressHelper from 'helpers/progress-helper'
 const Album = ({
 
     songs,
-    albumTasks,
+    tasks,
 
 ...other }) => {
-    const allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs)
+    const allTasks = ProgressHelper.getAllTaskObjects(tasks, songs)
 
     return (
         <AlbumView {...other}
             songs={songs}
-            albumTasks={albumTasks}
+            albumTasks={tasks}
             allTasks={allTasks}
         />
     )
@@ -35,7 +35,7 @@ const AlbumView = ({
 
     // From props.
     songs,
-    albumTitle,
+    title,
     isPlaying,
     selectedSongIndex,
     selectedVerseIndex,
@@ -57,7 +57,7 @@ const AlbumView = ({
     <div className="column album-column">
         <div className="field album-field">
             <TitleSection
-                title={albumTitle}
+                title={title}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
                 accessedSongIndex={accessedSongIndex}

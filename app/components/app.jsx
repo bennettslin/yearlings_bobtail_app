@@ -43,6 +43,7 @@ import { SELECTED_SONG_INDEX,
          ESCAPE,
          SPACE } from 'helpers/constants'
 import AlbumHelper from 'helpers/album-view-helper'
+import AccessHelper from 'helpers/access-helper'
 import { intersects } from 'helpers/dot-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
 import LogHelper from 'helpers/log-helper'
@@ -102,21 +103,7 @@ class App extends Component {
         super(props)
 
         // Bind this to event handlers.
-        this.togglePlay = this.togglePlay.bind(this)
-        this.selectSong = this.selectSong.bind(this)
-        this.selectOverview = this.selectOverview.bind(this)
-        this.selectPlayerOption = this.selectPlayerOption.bind(this)
-        this.selectAnnotation = this.selectAnnotation.bind(this)
-        this.selectVerse = this.selectVerse.bind(this)
-        this.selectDot = this.selectDot.bind(this)
-        this.hoverDot = this.hoverDot.bind(this)
-        this.hoverLine = this.hoverLine.bind(this)
-        this.selectPortal = this.selectPortal.bind(this)
-        this.selectWiki = this.selectWiki.bind(this)
-        this.selectScreenWidth = this.selectScreenWidth.bind(this)
-        this.selectLyricColumn = this.selectLyricColumn.bind(this)
-        this._onBodyClick = this._onBodyClick.bind(this)
-        this._onKeyDown = this._onKeyDown.bind(this)
+        this._bindEventHandlers()
 
         /**
          * TODO: Putting these hovered states in app for now rather than the
@@ -150,12 +137,31 @@ class App extends Component {
      * HELPERS *
      ***********/
 
-     _assignLogFunctions() {
-         window.t = LogHelper.logStorage.bind(LogHelper)
-         window.s = LogHelper.logSong.bind(LogHelper, this)
-         window.v = LogHelper.logVerse.bind(LogHelper, this)
-         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
-     }
+    _bindEventHandlers() {
+        this.togglePlay = this.togglePlay.bind(this)
+        this.selectSong = this.selectSong.bind(this)
+        this.selectOverview = this.selectOverview.bind(this)
+        this.selectPlayerOption = this.selectPlayerOption.bind(this)
+        this.selectAnnotation = this.selectAnnotation.bind(this)
+        this.selectVerse = this.selectVerse.bind(this)
+        this.selectDot = this.selectDot.bind(this)
+        this.hoverDot = this.hoverDot.bind(this)
+        this.hoverLine = this.hoverLine.bind(this)
+        this.selectPortal = this.selectPortal.bind(this)
+        this.selectWiki = this.selectWiki.bind(this)
+        this.selectScreenWidth = this.selectScreenWidth.bind(this)
+        this.selectLyricColumn = this.selectLyricColumn.bind(this)
+        this._handleSectionAccess = this._handleSectionAccess.bind(this)
+        this._onBodyClick = this._onBodyClick.bind(this)
+        this._onKeyDown = this._onKeyDown.bind(this)
+    }
+
+    _assignLogFunctions() {
+        window.t = LogHelper.logStorage.bind(LogHelper)
+        window.s = LogHelper.logSong.bind(LogHelper, this)
+        window.v = LogHelper.logVerse.bind(LogHelper, this)
+        window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
+    }
 
     // Focus for accessibility.
     _focusApp(element = this.refs.app) {
@@ -613,6 +619,14 @@ class App extends Component {
         }
     }
 
+    _handleAnnotationAccess(keyName) {
+
+    }
+
+    _handleWikiAccess(keyName) {
+
+    }
+
     // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
     // TODO: Instead of resetting, maybe just set before each one is accessed.
     _resetAccessedIndices(accessedSectionKey) {
@@ -624,49 +638,6 @@ class App extends Component {
         })
     }
 
-    _handleKeyIfUniversal(keyName) {
-        // These keys will always fire, even if access is off.
-        switch (keyName) {
-            // Directly access sections.
-            case 'a':
-            case 'A':
-                this._handleSectionAccess(PLAYER_SECTION, true)
-                break
-            case 'd':
-            case 'D':
-                this._handleSectionAccess(DOTS_SECTION, true)
-                break
-            case 'l':
-            case 'L':
-                this._handleSectionAccess(LYRICS_SECTION, true)
-                break
-            case 's':
-            case 'S':
-                this._handleSectionAccess(SONGS_SECTION, true)
-                break
-            // Toggle selected overview index.
-            case 'b':
-            case 'B':
-                this.selectOverview()
-                break
-            // Toggle player option index.
-            case 'o':
-            case 'O':
-                this.selectPlayerOption()
-                break
-            // Toggle isPlaying.
-            case 'p':
-            case 'P':
-                this.togglePlay()
-                break
-            default:
-                return false
-                break
-        }
-
-        return true
-    }
-
     _onKeyDown(e) {
         const { key: keyName } = e
 
@@ -675,9 +646,15 @@ class App extends Component {
             this._focusApp()
         }
 
-        if (!this._handleKeyIfUniversal(keyName)) {
-            // If access is off, any key besides Escape turns it on.
+        if (!AccessHelper.handleKeyIfUniversal({
+                keyName,
+                handleSectionAccess: this._handleSectionAccess,
+                selectOverview: this.selectOverview,
+                selectPlayerOption: this.selectPlayerOption,
+                togglePlay: this.togglePlay
+            })) {
 
+            // If access is off, any key besides Escape turns it on.
             if (!this.props.accessedOn) {
                 if (keyName !== ESCAPE && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
                     this._handleAccessOn()
@@ -714,6 +691,12 @@ class App extends Component {
                         case DOTS_SECTION:
                             this._handleDotAccess(keyName)
                             break
+                        case ANNOTATION_SECTION:
+                            this._handleAnnotationAccess(keyName)
+                            break
+                        case WIKI_SECTION:
+                            this._handleWikiAccess(keyName)
+                            break
                     }
                 }
             }
@@ -740,35 +723,7 @@ class App extends Component {
     }
 
     render() {
-        const { songs,
-                title,
-                overview,
-                tasks,
-
-                // From Redux.
-                selectedSongIndex,
-                selectedOverviewIndex,
-                selectedPlayerOptionIndex,
-                selectedAnnotationIndex,
-                selectedVerseIndex,
-                selectedTimePlayed,
-                selectedDotKeys,
-                selectedWikiUrl,
-                accessedOn,
-                accessedSectionIndex } = this.props,
-
-            { isPlaying,
-              accessedAnnotationIndex,
-              accessedAnnotationOutlined,
-              accessedSongIndex,
-              accessedDotIndex,
-              hoveredDotIndex,
-              hoveredLineIndex,
-              selectedLyricColumnIndex,
-              isNarrowScreen } = this.state,
-
-            accessedSectionKey = SECTION_KEYS[accessedSectionIndex]
-
+        const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
         return (
             <div
                 ref="app"
@@ -777,34 +732,8 @@ class App extends Component {
                 onKeyDown={this._onKeyDown}
                 tabIndex="0"
             >
-                <Album
-                    songs={songs}
-                    albumTitle={title}
-                    albumOverview={overview}
-                    albumTasks={tasks}
-
-                    isPlaying={isPlaying}
-
-                    accessedOn={accessedOn}
+                <Album {...this.props} {...this.state}
                     accessedSectionKey={accessedSectionKey}
-
-                    accessedAnnotationIndex={accessedAnnotationIndex}
-                    accessedAnnotationOutlined={accessedAnnotationOutlined}
-                    accessedSongIndex={accessedSongIndex}
-                    accessedDotIndex={accessedDotIndex}
-                    selectedSongIndex={selectedSongIndex}
-                    selectedOverviewIndex={selectedOverviewIndex}
-                    selectedPlayerOptionIndex={selectedPlayerOptionIndex}
-                    selectedAnnotationIndex={selectedAnnotationIndex}
-                    selectedVerseIndex={selectedVerseIndex}
-                    selectedTimePlayed={selectedTimePlayed}
-                    selectedDotKeys={selectedDotKeys}
-                    selectedWikiUrl={selectedWikiUrl}
-                    hoveredDotIndex={hoveredDotIndex}
-                    hoveredLineIndex={hoveredLineIndex}
-                    selectedLyricColumnIndex={selectedLyricColumnIndex}
-                    isNarrowScreen={isNarrowScreen}
-
                     onSongClick={this.selectSong}
                     onPortalClick={this.selectPortal}
                     onWikiUrlClick={this.selectWiki}
