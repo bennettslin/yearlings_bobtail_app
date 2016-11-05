@@ -183,28 +183,22 @@ class App extends Component {
         this.selectSong(e, 0)
     }
 
-    selectSong(e, selectedIndex = 0, selectedIndexKey = SELECTED_SONG_INDEX) {
+    selectSong(e, selectedIndex = 0) {
         this._stopPropagation(e)
 
         if (selectedIndex >= 0 && selectedIndex <= this.props.songs.length) {
-            // Store song index in session.
-
-            this.props.selectSongIndex(selectedIndex)
-
-            /**
-             * Also reset the stored annotation, time, and overview if changing
-             * the selected song index.
-             */
-            if (selectedIndexKey === SELECTED_SONG_INDEX) {
-                this.selectAnnotation()
-                this.selectVerse()
-            }
 
             // Scroll to top of lyrics.
             scrollElementIntoView('lyrics-scroll', 'home')
 
+            // Reset the stored annotation, time, and overview.
+            this.selectAnnotation()
+            this.selectVerse()
+
             // Show overview bubble text for selected song.
             this.props.selectOverviewIndex(0)
+
+            this.props.selectSongIndex(selectedIndex)
 
             /**
              * Keep annotation anchor access outlined if already so, and just

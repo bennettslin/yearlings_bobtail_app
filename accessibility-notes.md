@@ -100,4 +100,3 @@
     * "p" to toggle "isPlaying"
     * "o" to toggle "playerOptionIndex"
     * "b" to toggle "selectedOverviewIndex"
-    * FIXME: This doesn't currently work when wiki section is open.
