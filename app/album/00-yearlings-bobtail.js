@@ -30,6 +30,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `focus sections`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `have class to show visual keyboard keys`,
             workedHours: 0,
             neededHours: 2

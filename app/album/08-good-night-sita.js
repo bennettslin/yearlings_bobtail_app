@@ -4,6 +4,7 @@ module.exports = {
     title: {
         anchor: `Good Night, Sita`,
         annotation: {
+            // wiki: occurrence, bierce
             description: `In "An Occurrence at Owl Creek Bridge" by satirist Ambrose Bierce, a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, in which I recollect every date with Sita thus far, turns out to be sandwiched between a brief exchange of farewells.`
         }
     },
@@ -92,6 +93,7 @@ module.exports = {
                     {
                         anchor: `decoder ring`,
                         annotation: {
+                            // wiki: decoder ring
                             description: `A secret decoder ring was a toy purchased through mail that allowed children to decipher encrypted messages. It seemed like a handy thing to have on a date, as I was constantly trying to tease out hidden meanings in even the most basic conversations.`
                         }
                     }
@@ -104,6 +106,7 @@ module.exports = {
                         anchor: `Dutch courage`,
                         properNoun: true,
                         annotation: {
+                            // wiki: dutch courage
                             description: `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative. Dutch courage refers to misplaced confidence gained from alcohol. Having an older friend who faithfully plied me with cheap twelve-packs, I would down a can or two before heading out on a date.`
                         }
                     },
@@ -111,6 +114,7 @@ module.exports = {
                     {
                         anchor: `going Dutch`,
                         annotation: {
+                            // wiki: go dutch
                             description: `To go Dutch means to split the cost of a meal. Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This always made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.`
                         }
                     }
@@ -134,6 +138,7 @@ module.exports = {
                         anchor: `nor a barnacle`,
                         annotation: {
                             description: [
+                                // wiki: nora barnacle
                                 `Nora Barnacle was James Joyce's wife and the inspiration for the character Molly Bloom, whose interior monologue closes out`,
                                 {
                                     italic: `Ulysses.`
@@ -173,6 +178,7 @@ module.exports = {
                     {
                         anchor: `innermost matryoshka's`,
                         annotation: {
+                            // wiki: matryoshka
                             description: `Matryoshkas are Russian nesting dolls placed one inside another in decreasing size. Lessons learned from mistakes made with one woman can be applied to the next, so each date felt like prying open one doll to get to another, with the hope of eventually reaching the last one that doesn't turn out hollow.`
                         }
                     }
@@ -207,6 +213,7 @@ module.exports = {
                     {
                         anchor: `chrysalis unchristened`,
                         annotation: {
+                            // wiki: chrysalis
                             description: `A chrysalis is a butterfly that has not yet matured into an adult. It seemed that the trick to dating was to look for that rare woman inexperienced enough not to be turned off by my own lack of experience. Of course, every other low-status male had the same idea.`
                         }
                     },
@@ -220,6 +227,7 @@ module.exports = {
                     {
                         anchor: `aping jaw`,
                         annotation: {
+                            // wiki: piltdown man
                             description: `Piltdown Man was a paleontological hoax in which the oversized jaw of an orangutan was attached to the cranium of a modern human. I felt like a comparable fraud, as the things that came out of my mouth exaggerated the volume of things in my head.`
                         }
                     },
@@ -256,6 +264,7 @@ module.exports = {
                         anchor: `ambrosia beers`,
                         annotation: {
                             description: [
+                                // wiki: ambrosia, devil's dictionary
                                 `Ambrosia was the food of the Greek gods, just as beer made me feel omnipotent. Ambrose Bierce also wrote`,
                                 {
                                     italic: `The Devil's Dictionary,`
@@ -294,6 +303,7 @@ module.exports = {
                     {
                         anchor: `pidgin palaver`,
                         annotation: {
+                            // wiki: pidgin
                             description: `A pidgin is an impromptu language intended solely to facilitate trade between colonists and natives. It's also a good analogy for my date conversations at the time.`
                         }
                     },
@@ -366,6 +376,7 @@ module.exports = {
                     {
                         anchor: `understudy sought`,
                         annotation: {
+                            // wiki: understudy
                             description: `In theatre, an understudy learns the lines of a regular performer in order to serve as a replacement on short notice. Dating as a low-status male felt comparable, as I undertook all of the same preparation yet saw almost none of the action. I finally accepted that I had to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`
                         }
                     },
@@ -393,6 +404,7 @@ module.exports = {
                     {
                         anchor: `learn to shotgun`,
                         annotation: {
+                            // wiki: shotgun method?
                             description: `I came to adopt the shotgun method, which involves hitting on anyone, at any moment. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`
                         }
                     }

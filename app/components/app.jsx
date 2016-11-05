@@ -142,7 +142,7 @@ class App extends Component {
 
     componentDidMount() {
         // Allows app to begin listening for keyboard events.
-        ReactDOM.findDOMNode(this.refs.app).focus()
+        this._focusApp()
     }
 
     _assignLogFunctions() {
@@ -150,6 +150,11 @@ class App extends Component {
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
+    }
+
+    // Focus for accessibility.
+    _focusApp(element = this.refs.app) {
+        ReactDOM.findDOMNode(this.refs.app).focus()
     }
 
     /*************************
@@ -598,6 +603,11 @@ class App extends Component {
 
     _onKeyDown(e) {
         const { key: keyName } = e
+
+        // TODO: Focus strategically, based on accessed section.
+        if (keyName !== 'Tab') {
+            this._focusApp()
+        }
 
         // If access is off, any key besides Escape turns it on.
         if (!this.props.accessedOn) {
