@@ -32,6 +32,7 @@ module.exports = {
                     properNoun: true,
                     annotation: {
                         description: [
+                            // wiki: Mara
                             {
                                 italic: `Maravijaya,`
                             },
@@ -77,6 +78,7 @@ module.exports = {
                     {
                         anchor: `five years`,
                         annotation: {
+                            // wiki: Soviet five year plans
                             description: `The five-year plans of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to recover, it was naive in hindsight to think that my own five-year plan for rapid intellectual growth could be free of unintended negative effects.`
                         }
                     },
@@ -306,6 +308,7 @@ module.exports = {
                         anchor: `Moonie wedding,`,
                         properNoun: true,
                         annotation: {
+                            // wiki: Unification church
                             description: `The Unification Church led by Sun Myung Moon is widely seen as a cult due to its means of proselytism. It is perhaps most well-known for the mass weddings in which thousands of its congregants, often referred to as Moonies, are paired into couples and married en masse. That I could resort to such measures to avoid the long, hard slog of finding a mate was an enticing thought, even if also just a facetious one.`
                         }
                     }
@@ -331,6 +334,7 @@ module.exports = {
                     {
                         anchor: `time capsule`,
                         annotation: {
+                            // wiki: time capsule
                             description: `A time capsule is a vessel of contemporary objects that will come to be seen as historical artifacts once rediscovered by a later age. In a way, it allows a past generation to communicate with the future. Similarly, in my dejected state, it was hard to envision my next five-year plan being anything more than a forum for me to air my present grievances to a captive future audience.`
                         }
                     },
@@ -347,6 +351,8 @@ module.exports = {
                     {
                         anchor: `lies that marionette`,
                         annotation: {
+                            // TODO: Make more clear.
+                            // wiki: marionette
                             description: `Or else, with these "lies that Mara you'll net."`
                         }
                     },
@@ -387,6 +393,7 @@ module.exports = {
                     {
                         anchor: `no-hope chest.`,
                         annotation: {
+                            // wiki: hope chest
                             description: `Traditionally, a hope chest was a piece of furniture that contained the various linens stored by a young woman in preparation for married life.`
                         }
                     }
@@ -408,6 +415,8 @@ module.exports = {
                     {
                         anchor: `kiss unlucky`,
                         annotation: {
+                            // wiki: chimney sweep
+                            // TODO: Move to chimney sweep annotation.
                             description: `British tradition holds that a kiss from a chimney sweep will bring good luck to a bride on her wedding day. In the Victorian era, however, the children who cleared soot from chimneys were often neglected orphans. Whatever fortunes they imparted to others, for themselves only a lifetime of ill health awaited.`
                         }
                     },
@@ -427,6 +436,7 @@ module.exports = {
                     {
                         anchor: `indentures dumbed`,
                         annotation: {
+                            // wiki: indentured servants
                             description: `Chimney sweep apprentices were typically employed as indentured servants at a young age. Similarly, given the years that must pass in servitude to my five-year plans before I can be my own person again, I am effectively "in dentures" already, and thus unable to speak.`
                         }
                     },
