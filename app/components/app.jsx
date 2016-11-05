@@ -173,10 +173,9 @@ class App extends Component {
      *************************/
 
     togglePlay(e) {
-        const isPlaying = !this.state.isPlaying
-
+        this._stopPropagation(e)
         this.setState({
-            isPlaying
+            isPlaying: !this.state.isPlaying
         })
     }
 
@@ -219,22 +218,28 @@ class App extends Component {
     }
 
     selectOverview(e) {
+        // Stored as integer. 0 is to show bubble, 1 is to hide it.
+        const selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % 2
         this._stopPropagation(e)
 
-        /**
-         * Stored as integer. 0 is to show bubble, 1 is to hide it.
-         */
-        this.props.selectOverviewIndex((this.props.selectedOverviewIndex + 1) % 2)
+        this.props.selectOverviewIndex(selectedOverviewIndex)
+
+        // Close annotation and wiki sections if showing bubble.
+        if (selectedOverviewIndex === 0) {
+            this.selectAnnotation()
+        }
     }
 
     selectPlayerOption(e, direction = 1) {
+        // TODO: Make not hard-coded.
+        const optionsLength = 3
+
         this._stopPropagation(e)
 
         /**
          * Stored as integer. 0 is to "continue after next," 1 is to "repeat," 2 is to "pause after song."
          */
-         // Accommodate Javascript unable to handle negative modulo.
-        this.props.selectPlayerOptionIndex((((this.props.selectedPlayerOptionIndex + direction) % 3) + 3) % 3)
+        this.props.selectPlayerOptionIndex((this.props.selectedPlayerOptionIndex + direction + optionsLength) % optionsLength)
     }
 
     selectDot(e, selectedDotKey) {
@@ -253,7 +258,6 @@ class App extends Component {
         this._stopPropagation(e)
 
         this.props.selectAnnotationIndex(selectedIndex)
-
         this.selectWiki(e)
 
         // Keep accessed index, even if annotation is deselected.
@@ -283,6 +287,8 @@ class App extends Component {
 
         // Dispatch Redux action.
         this.props.selectWikiUrl(selectedWikiUrl)
+
+        this._focusApp()
     }
 
     selectPortal(e, selectedSongIndex, selectedAnnotationIndex) {
@@ -524,8 +530,7 @@ class App extends Component {
 
         switch (keyName) {
             case ARROW_UP:
-                // Accommodate Javascript unable to handle negative modulo.
-                accessedSongIndex  = ((((accessedSongIndex - 1) % songsLength) + songsLength) % songsLength)
+                accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
                 break
             case ARROW_DOWN:
                 accessedSongIndex = (accessedSongIndex + 1) % songsLength
@@ -606,45 +611,64 @@ class App extends Component {
             this._focusApp()
         }
 
-        // If access is off, any key besides Escape turns it on.
-        if (!this.props.accessedOn) {
-            if (keyName !== ESCAPE && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
-                this._handleAccessOn()
-            }
+        switch (keyName) {
+            // Toggle selected overview index.
+            case 'b':
+            case 'B':
+                this.selectOverview()
+                break
+            // Toggle player option index.
+            case 'o':
+            case 'O':
+                this.selectPlayerOption()
+                break
+            // Toggle isPlaying.
+            case 'p':
+            case 'P':
+                this.togglePlay()
+                break
+            default:
+                // If access is off, any key besides Escape turns it on.
+                if (!this.props.accessedOn) {
+                    if (keyName !== ESCAPE && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                        this._handleAccessOn()
+                    }
 
-        // If access is on...
-        } else {
+                // If access is on...
+                } else {
 
-            // Spacebar accesses next section...
-            if (keyName === SPACE) {
-                this._handleSectionAccess()
+                    // Spacebar accesses next section...
+                    if (keyName === SPACE) {
+                        this._handleSectionAccess()
 
-            // Escape turns off access...
-            } else if (keyName === ESCAPE) {
-                this._handleAccessOn()
+                    // Escape turns off access...
+                    } else if (keyName === ESCAPE) {
+                        this._handleAccessOn()
 
-            // Otherwise, it depends on what section is accessed.
-            } else {
-                const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
+                    // Otherwise, it depends on what section is accessed.
+                    } else {
+                        const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
 
-                switch (accessedSectionKey) {
-                    case SONGS_SECTION:
-                        this._handleSongAccess(keyName)
-                        break
-                    case PLAYER_SECTION:
-                        this._handlePlayerAccess(keyName)
-                        break
-                    case OVERVIEW_SECTION:
-                        this._handleOverviewAccess(keyName)
-                        break
-                    case LYRICS_SECTION:
-                        this._handleLyricsAccess(keyName)
-                        break
-                    case DOTS_SECTION:
-                        this._handleDotAccess(keyName)
-                        break
+                        switch (accessedSectionKey) {
+                            case SONGS_SECTION:
+                                this._handleSongAccess(keyName)
+                                break
+                            case PLAYER_SECTION:
+                                this._handlePlayerAccess(keyName)
+                                break
+                            case OVERVIEW_SECTION:
+                                this._handleOverviewAccess(keyName)
+                                break
+                            case LYRICS_SECTION:
+                                this._handleLyricsAccess(keyName)
+                                break
+                            case DOTS_SECTION:
+                                this._handleDotAccess(keyName)
+                                break
+                        }
+                    }
                 }
-            }
+                break
         }
     }
 

@@ -30,9 +30,14 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `focus sections`,
+            taskName: `method to log portals and wikis`,
             workedHours: 0,
             neededHours: 2
+        },
+        {
+            taskName: `focus sections, and have them route events to app`,
+            workedHours: 0,
+            neededHours: 3
         },
         {
             taskName: `have class to show visual keyboard keys`,

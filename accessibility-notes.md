@@ -1,8 +1,8 @@
 # Accessibility
 
 * To turn on and off:
-    * Any key but "esc" turns access on.
-    * "Esc" key turns access off.
+    * Any key but "Esc" turns access on.
+    * "Esc" key turns access off, except from annotation or wiki section.
     * Any click turns access off.
 
 * When access is turned on:
@@ -11,7 +11,7 @@
 * When access is on:
     * Accessed section shows all possible keys to press.
     * Next section shows "Space" key, which goes to next section.
-    * Stage section shows "Esc" key.
+    * Stage section shows "Esc" key, unless annotation or wiki section is accessed.
     * Keys can be clicked, which performs the action and then turns access off.
 
 * When player section is accessed:
@@ -50,23 +50,54 @@
 
 * When lyric section is accessed:
     * Arrow keys and "Enter" are shown.
+    * Accessed element is title or selected verse.
+
     * When up and down arrows are pressed:
         * If there is no accessed verse:
             * Accessed verse closest to last accessed element is highlighted.
-            * Accessed anchor, if any, is unhighlighted.
+            * Accessed annotation, if any, is unhighlighted.
         * If there is an accessed verse:
             * Highlight previous or next accessed verse.
 
     * When left and right arrows are pressed:
-        * If there is no accessed anchor:
-            * Accessed anchor closest to last accessed element is highlighted.
+        * If there is no accessed annotation:
+            * Accessed annotation closest to last accessed element is highlighted.
             * Accessed verse, if any, is unhighlighted.
-        * If there is an accessed anchor:
-            * Highlight previous or next accessed anchor.
+        * If there is an accessed annotation:
+            * Highlight previous or next accessed annotation.
 
     * When "Enter" is pressed:
-        * If there is an accessed anchor, open its annotation.
+        * If there is an accessed annotation, select its annotation.
         * If there is an accessed verse, select it.
+        * Annotation section becomes accessed section and is highlighted.
 
 * When annotation section is accessed:
     * Arrow keys and "Enter" are shown.
+    * "Esc" key is shown on close button.
+    * "Space" key is shown on lyric section.
+    * Accessed element is wiki anchor, if any.
+
+    * When left and right arrows are pressed:
+        * Select previous or next annotation.
+
+    * When up and down arrows are pressed:
+        * Highlight previous or next wiki anchor.
+
+    * When "Enter" is pressed:
+        * Wiki section becomes accessed section and is highlighted.
+
+    * When "Space" or "Esc" is pressed:
+        * Annotation section is closed, and lyric section becomes accessed section.
+
+* When wiki url is accessed:
+    * "Esc" key is shown on close button.
+    * "Space" key is shown on annotation section.
+
+    * When "Space" or "Esc" is pressed:
+        * Wiki section is closed, and annotation section becomes accessed section.
+
+* These keys will always fire, even if access is off:
+    * "p" to toggle "isPlaying"
+    * "o" to toggle "playerOptionIndex"
+    * "b" to toggle "selectedOverviewIndex"
+    * FIXME: This doesn't currently work when wiki section is open.
