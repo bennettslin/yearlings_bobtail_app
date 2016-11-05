@@ -101,7 +101,6 @@ class App extends Component {
 
         // Bind this to event handlers.
         this.togglePlay = this.togglePlay.bind(this)
-        this.selectTitle = this.selectTitle.bind(this)
         this.selectSong = this.selectSong.bind(this)
         this.selectOverview = this.selectOverview.bind(this)
         this.selectPlayerOption = this.selectPlayerOption.bind(this)
@@ -177,10 +176,6 @@ class App extends Component {
         this.setState({
             isPlaying: !this.state.isPlaying
         })
-    }
-
-    selectTitle(e) {
-        this.selectSong(e, 0)
     }
 
     selectSong(e, selectedIndex = 0) {
