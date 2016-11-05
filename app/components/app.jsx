@@ -152,9 +152,20 @@ class App extends Component {
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
     }
 
+    /***********
+     * HELPERS *
+     ***********/
+
     // Focus for accessibility.
     _focusApp(element = this.refs.app) {
         ReactDOM.findDOMNode(this.refs.app).focus()
+    }
+
+    _stopPropagation(e) {
+        if (e) {
+            e.stopPropagation()
+            this._handleAccessOn(0)
+        }
     }
 
     /*************************
@@ -174,10 +185,7 @@ class App extends Component {
     }
 
     selectSong(e, selectedIndex = 0, selectedIndexKey = SELECTED_SONG_INDEX) {
-        if (e) {
-            e.stopPropagation()
-            this._handleAccessOn(0)
-        }
+        this._stopPropagation(e)
 
         if (selectedIndex >= 0 && selectedIndex <= this.props.songs.length) {
             // Store song index in session.
@@ -211,10 +219,7 @@ class App extends Component {
     }
 
     selectOverview(e) {
-        if (e) {
-            e.stopPropagation()
-            this._handleAccessOn(0)
-        }
+        this._stopPropagation(e)
 
         /**
          * Stored as integer. 0 is to show bubble, 1 is to hide it.
@@ -223,10 +228,7 @@ class App extends Component {
     }
 
     selectPlayerOption(e, direction = 1) {
-        if (e) {
-            e.stopPropagation()
-            this._handleAccessOn(0)
-        }
+        this._stopPropagation(e)
 
         /**
          * Stored as integer. 0 is to "continue after next," 1 is to "repeat," 2 is to "pause after song."
@@ -236,10 +238,7 @@ class App extends Component {
     }
 
     selectDot(e, selectedDotKey) {
-        if (e) {
-            e.stopPropagation()
-            this._handleAccessOn(0)
-        }
+        this._stopPropagation(e)
 
         const isSelected = !this.props.selectedDotKeys[selectedDotKey]
         this.props.selectDotKey(selectedDotKey, isSelected)
@@ -251,10 +250,7 @@ class App extends Component {
     }
 
     selectAnnotation(e, selectedIndex = 0) {
-        if (e) {
-            e.stopPropagation()
-            this._handleAccessOn(0)
-        }
+        this._stopPropagation(e)
 
         this.props.selectAnnotationIndex(selectedIndex)
 
@@ -280,10 +276,7 @@ class App extends Component {
     }
 
     selectWiki(e, selectedWiki) {
-        if (e) {
-            e.stopPropagation()
-            this._handleAccessOn(0)
-        }
+        this._stopPropagation(e)
 
         const selectedWikiUrl = selectedWiki ?
             `https://en.m.wikipedia.org/wiki/${selectedWiki}` : ''
@@ -293,10 +286,7 @@ class App extends Component {
     }
 
     selectPortal(e, selectedSongIndex, selectedAnnotationIndex) {
-        if (e) {
-            e.stopPropagation()
-            this._handleAccessOn(0)
-        }
+        this._stopPropagation(e)
 
         this.selectSong(e, selectedSongIndex, SELECTED_SONG_INDEX)
         this.selectAnnotation(e, selectedAnnotationIndex)
@@ -320,10 +310,7 @@ class App extends Component {
     }
 
     selectVerse(e, selectedVerseIndex = 0) {
-        if (e) {
-            e.stopPropagation()
-            this._handleAccessOn(0)
-        }
+        this._stopPropagation(e)
 
         let selectedTimePlayed,
             scroll
@@ -396,6 +383,16 @@ class App extends Component {
     hoverLine(e, hoveredLineIndex = 0) {
         this.setState({
             hoveredLineIndex
+        })
+    }
+
+    _onBodyClick(e) {
+        this._handleAccessOn(0)
+        this.selectAnnotation()
+        this.selectWiki()
+
+        this.setState({
+            accessedAnnotationOutlined: false
         })
     }
 
@@ -649,16 +646,6 @@ class App extends Component {
                 }
             }
         }
-    }
-
-    _onBodyClick(e) {
-        this._handleAccessOn(0)
-        this.selectAnnotation()
-        this.selectWiki()
-
-        this.setState({
-            accessedAnnotationOutlined: false
-        })
     }
 
     _deselectAnnotationWithNoSelectedDots(dotKey) {

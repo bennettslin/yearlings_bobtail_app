@@ -50,7 +50,14 @@ module.exports = {
                         anchor: `El Torito.`,
                         properNoun: true,
                         annotation: {
-                            description: `Sita worked as a hostess at El Torito, a Mexican chain restaurant. I would often pick her up when her shift was over, as I seem to be doing now in my dream.`
+                            description: [
+                                `Sita worked as a hostess at`,
+                                {
+                                    anchor: `El Torito,`,
+                                    wiki: `El_Torito`
+                                },
+                                `a Mexican chain restaurant. I would often pick her up when her shift was over, as I seem to be doing now in my dream.`
+                            ]
                         }
                     }
                 ]
@@ -111,7 +118,14 @@ module.exports = {
                         anchor: `Pampas`,
                         properNoun: true,
                         annotation: {
-                            description: `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the Pampas, the grassy lowlands spanning the southeastern end of South America.`,
+                            description: [
+                                `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the`,
+                                {
+                                    anchor: `Pampas,`,
+                                    wiki: `Pampas`
+                                },
+                                `the grassy lowlands spanning the southeastern end of South America.`
+                            ],
                             portal: `pampas`
                         }
                     },
@@ -119,7 +133,14 @@ module.exports = {
                     {
                         anchor: `gopis`,
                         annotation: {
-                            description: `In Hindu mythology, the gopis are cow herdesses who are devotees of the god Krishna. I watched a lot of Bollywood movies with Sita, and now my dream is slowly turning into one, as the gopis sing and dance in the background.`
+                            description: [
+                                `In Hindu mythology, the`,
+                                {
+                                    anchor: `gopis`,
+                                    wiki: `Gopi`
+                                },
+                                `are cow herdesses who are devotees of the god Krishna. I watched a lot of Bollywood movies with Sita, and now my dream is slowly turning into one, as the gopis sing and dance in the background.`
+                            ]
                         }
                     },
                     `played,`
@@ -176,7 +197,14 @@ module.exports = {
                     {
                         anchor: `cliffs of El Cerrito,`,
                         annotation: {
-                            description: `The city of El Cerrito has a sprawling hillside area with hiking trails, secluded groves, and a great view of the San Francisco Bay. In our happier days, it was one of Sita's habitual choices for a weekend outing.`
+                            description: [
+                                `The city of`,
+                                {
+                                    anchor: `El Cerrito`,
+                                    wiki: `El_Cerrito,_California`
+                                },
+                                `has a sprawling hillside area with hiking trails, secluded groves, and a great view of the San Francisco Bay. In our happier days, it was one of Sita's habitual choices for a weekend outing.`
+                            ]
                         }
                     }
                 ]
@@ -266,11 +294,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `include wiki urls`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -292,6 +315,11 @@ module.exports = {
             subtasks: [
 
             ]
+        },
+        {
+            taskName: `include wiki urls`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
