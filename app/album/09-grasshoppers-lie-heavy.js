@@ -7,8 +7,17 @@ module.exports = {
         anchor: `Grasshoppers Lie Heavy`,
         annotation: {
             // wiki: Philip Dick, Man in High Castle
-            // TODO: Switch these annotations
-            description: `In addition to the Philip Dick reference, I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, with neither wishing to be the first to reveal itself.`
+            description: [
+                `I was reading a lot of Philip Dick novels during this time, including`,
+                {
+                    italic: `The Man in the High Castle,`
+                },
+                `in which the Axis powers had won World War II. Curiously, the characters in this alternate history are engrossed in their own alternate history novel called`,
+                {
+                    italic: `The Grasshopper Lies Heavy,`
+                },
+                `in which the Allies had won. Beyond the Philip Dick reference, I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, with neither wishing to be the first to reveal itself.`
+            ]
         }
     },
     doubleColumns: true,
@@ -27,11 +36,7 @@ module.exports = {
                             {
                                 italic: `The Grasshopper Lies Heavy`
                             },
-                            `is an alternate history novel within Philip K. Dick's`,
-                            {
-                                italic: `The Man in the High Castle,`
-                            },
-                            `this song in isolation offers a different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being a story within a story, and did so by including lyrical references to all the other songs on the album. Musically, I tried to channel Simon and Garfunkel in both form and harmony.`
+                            `is an alternate history novel that offers its readers a vastly different reality, this song in isolation offers a vastly different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being a story within a story, and did so by including lyrical references to all the other songs on the album. Musically, I tried to channel Simon and Garfunkel in both form and harmony.`
                         ],
                         dotKeys: {
                             music: true
@@ -307,11 +312,10 @@ module.exports = {
                         annotation: {
                             // wiki: tirpitz
                             description: [
-                                `The Bismarck and the Tirpitz were sister battleships of the German navy in World War II.`,
+                                `The Bismarck and the Tirpitz were sister battleships of the German navy in World War II. After all, the Axis were the heroes in`,
                                 {
-                                    italic: `The Man in the High Castle`
-                                },
-                                `is an alternate history novel in which the Axis powers won the war.`
+                                    italic: `The Man in the High Castle.`
+                                }
                             ],
                             portal: `sunken_tirpitz`
                         }
