@@ -5,6 +5,7 @@ module.exports = {
         anchor: `Look Back in Anger`,
         annotation: {
             description: [
+                // wiki: osborne, look back in anger
                 `John Osborne's play`,
                 {
                     italic: `Look Back in Anger`
@@ -38,6 +39,7 @@ module.exports = {
                     {
                         anchor: `flagboy last fell,`,
                         annotation: {
+                            // wiki: colorbearer
                             description: `During the Civil War, a colorbearer carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth seemed like the perfect metaphor for my high school experience.`
                         }
                     }
@@ -50,6 +52,7 @@ module.exports = {
                         // Connection to Didi?
                         anchor: `dragging aglets held`,
                         annotation: {
+                            // wiki: aglet
                             description: `An aglet is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. Anyone bent on seeing me trip and fall thus readily had the means to make it happen.`
                         }
                     },
@@ -64,6 +67,7 @@ module.exports = {
                         anchor: `Van Nuys belles`,
                         properNoun: true,
                         annotation: {
+                            // wiki: van nuys
                             description: `I went to high school in Van Nuys, a neighbourhood smack-dab in the middle of the San Fernando Valley.`
                         }
                     },
@@ -71,6 +75,7 @@ module.exports = {
                         anchor: `lunched soundless`,
                         properNoun: true,
                         annotation: {
+                            // wiki: first battle of bull run
                             description: `In the First Battle of Bull Run, spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with bullies were fought and lost in full view of a lunchtime crowd.`
                         }
                     },
@@ -122,6 +127,7 @@ module.exports = {
                         anchor: `Valley of death`,
                         properNoun: true,
                         annotation: {
+                            // wiki: tennyson, charge of light brigade
                             description: `Like the six hundred who rode into the valley of death in Alfred Tennyson's poem "The Charge of the Light Brigade," I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own years in the Valley of death. In turn, this casual view of hardship enabled me to justify the pain that I knew my ambitions would eventually bring upon Sita.`
                         }
                     },
@@ -304,6 +310,7 @@ module.exports = {
                     {
                         anchor: `peasant discontented`,
                         annotation: {
+                            // wiki: french revolution
                             description: `During the French Revolution, the peasants were so downtrodden that each attempt by the government to appease them would backfire horribly. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`
                         }
                     },
