@@ -29,6 +29,8 @@ import { SELECTED_SONG_INDEX,
          OVERVIEW_SECTION,
          LYRICS_SECTION,
          DOTS_SECTION,
+         ANNOTATION_SECTION,
+         WIKI_SECTION,
          SECTION_KEYS,
 
          ALL_DOT_KEYS,
@@ -144,16 +146,16 @@ class App extends Component {
         this._focusApp()
     }
 
-    _assignLogFunctions() {
-        window.t = LogHelper.logStorage.bind(LogHelper)
-        window.s = LogHelper.logSong.bind(LogHelper, this)
-        window.v = LogHelper.logVerse.bind(LogHelper, this)
-        window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
-    }
-
     /***********
      * HELPERS *
      ***********/
+
+     _assignLogFunctions() {
+         window.t = LogHelper.logStorage.bind(LogHelper)
+         window.s = LogHelper.logSong.bind(LogHelper, this)
+         window.v = LogHelper.logVerse.bind(LogHelper, this)
+         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
+     }
 
     // Focus for accessibility.
     _focusApp(element = this.refs.app) {
@@ -492,16 +494,34 @@ class App extends Component {
         }
     }
 
-    _handleSectionAccess() {
-        let accessedSectionIndex = (this.props.accessedSectionIndex + 1) % SECTION_KEYS.length
+    _handleSectionAccess(accessedSectionKey) {
+        let accessedSectionIndex = 0
 
-        // Skip lyrics and dots sections if no selected song.
-        if (this.props.selectedSongIndex === 0) {
-            while (SECTION_KEYS[accessedSectionIndex] === LYRICS_SECTION || SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
+        // If no section key specified, rotate through sections.
+        if (!accessedSectionKey) {
+            accessedSectionIndex = (this.props.accessedSectionIndex + 1) % SECTION_KEYS.length
+
+            // Skip lyrics and dots sections if no selected song.
+            if (this.props.selectedSongIndex === 0) {
+                while (SECTION_KEYS[accessedSectionIndex] === LYRICS_SECTION || SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
+                    accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
+                }
+            }
+
+            // Always skip annotation and wiki sections.
+            // TODO: More efficient way to do this?
+            while (SECTION_KEYS[accessedSectionIndex] === ANNOTATION_SECTION || SECTION_KEYS[accessedSectionIndex] === WIKI_SECTION) {
                 accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
+            }
+
+        // Otherwise, find section index for section key.
+        } else {
+            while (SECTION_KEYS[accessedSectionIndex] !== accessedSectionKey && accessedSectionIndex < SECTION_KEYS.length) {
+                accessedSectionIndex++
             }
         }
 
+        this._handleAccessOn(1)
         this.props.accessSectionIndex(accessedSectionIndex)
         this._resetAccessedIndices(SECTION_KEYS[accessedSectionIndex])
     }
@@ -583,6 +603,7 @@ class App extends Component {
     }
 
     // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
+    // TODO: Instead of resetting, maybe just set before each one is accessed.
     _resetAccessedIndices(accessedSectionKey) {
 
         const accessedSongIndex = accessedSectionKey === SONGS_SECTION ? this.state.accessedSongIndex : this.props.selectedSongIndex
@@ -592,15 +613,26 @@ class App extends Component {
         })
     }
 
-    _onKeyDown(e) {
-        const { key: keyName } = e
-
-        // TODO: Focus strategically, based on accessed section.
-        if (keyName !== 'Tab') {
-            this._focusApp()
-        }
-
+    _handleKeyIfUniversal(keyName) {
+        // These keys will always fire, even if access is off.
         switch (keyName) {
+            // Directly access sections.
+            case 'a':
+            case 'A':
+                this._handleSectionAccess(PLAYER_SECTION)
+                break
+            case 'd':
+            case 'D':
+                this._handleSectionAccess(DOTS_SECTION)
+                break
+            case 'l':
+            case 'L':
+                this._handleSectionAccess(LYRICS_SECTION)
+                break
+            case 's':
+            case 'S':
+                this._handleSectionAccess(SONGS_SECTION)
+                break
             // Toggle selected overview index.
             case 'b':
             case 'B':
@@ -617,47 +649,63 @@ class App extends Component {
                 this.togglePlay()
                 break
             default:
-                // If access is off, any key besides Escape turns it on.
-                if (!this.props.accessedOn) {
-                    if (keyName !== ESCAPE && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
-                        this._handleAccessOn()
-                    }
+                return false
+                break
+        }
 
-                // If access is on...
+        return true
+    }
+
+    _onKeyDown(e) {
+        const { key: keyName } = e
+
+        // TODO: Focus strategically, based on accessed section.
+        if (keyName !== 'Tab') {
+            this._focusApp()
+        }
+
+        if (!this._handleKeyIfUniversal(keyName)) {
+            // If access is off, any key besides Escape turns it on.
+
+            if (!this.props.accessedOn) {
+                if (keyName !== ESCAPE && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                    this._handleAccessOn()
+                }
+
+            // If access is on...
+            } else {
+
+                // Spacebar accesses next section...
+                if (keyName === SPACE) {
+                    this._handleSectionAccess()
+
+                // Escape turns off access...
+                } else if (keyName === ESCAPE) {
+                    this._handleAccessOn()
+
+                // Otherwise, it depends on what section is accessed.
                 } else {
+                    const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
 
-                    // Spacebar accesses next section...
-                    if (keyName === SPACE) {
-                        this._handleSectionAccess()
-
-                    // Escape turns off access...
-                    } else if (keyName === ESCAPE) {
-                        this._handleAccessOn()
-
-                    // Otherwise, it depends on what section is accessed.
-                    } else {
-                        const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
-
-                        switch (accessedSectionKey) {
-                            case SONGS_SECTION:
-                                this._handleSongAccess(keyName)
-                                break
-                            case PLAYER_SECTION:
-                                this._handlePlayerAccess(keyName)
-                                break
-                            case OVERVIEW_SECTION:
-                                this._handleOverviewAccess(keyName)
-                                break
-                            case LYRICS_SECTION:
-                                this._handleLyricsAccess(keyName)
-                                break
-                            case DOTS_SECTION:
-                                this._handleDotAccess(keyName)
-                                break
-                        }
+                    switch (accessedSectionKey) {
+                        case SONGS_SECTION:
+                            this._handleSongAccess(keyName)
+                            break
+                        case PLAYER_SECTION:
+                            this._handlePlayerAccess(keyName)
+                            break
+                        case OVERVIEW_SECTION:
+                            this._handleOverviewAccess(keyName)
+                            break
+                        case LYRICS_SECTION:
+                            this._handleLyricsAccess(keyName)
+                            break
+                        case DOTS_SECTION:
+                            this._handleDotAccess(keyName)
+                            break
                     }
                 }
-                break
+            }
         }
     }
 

@@ -11,7 +11,9 @@ const LEFT = 'left',
     SONGS_SECTION = 'songs_section',
     OVERVIEW_SECTION = 'overview_section',
     LYRICS_SECTION = 'lyrics_section',
-    DOTS_SECTION = 'dots_section'
+    DOTS_SECTION = 'dots_section',
+    ANNOTATION_SECTION = 'annotation_section',
+    WIKI_SECTION = 'wiki_section'
 
 module.exports = {
 
@@ -22,7 +24,17 @@ module.exports = {
     OVERVIEW_SECTION,
     LYRICS_SECTION,
     DOTS_SECTION,
-    SECTION_KEYS: [SONGS_SECTION, PLAYER_SECTION, OVERVIEW_SECTION, LYRICS_SECTION, DOTS_SECTION],
+    ANNOTATION_SECTION,
+    WIKI_SECTION,
+    SECTION_KEYS: [
+        SONGS_SECTION,
+        PLAYER_SECTION,
+        OVERVIEW_SECTION,
+        LYRICS_SECTION,
+        DOTS_SECTION,
+        ANNOTATION_SECTION,
+        WIKI_SECTION
+    ],
 
     SELECTED_SONG_INDEX: 'selectedSongIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',

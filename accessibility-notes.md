@@ -97,6 +97,10 @@
         * Wiki section is closed, and annotation section becomes accessed section.
 
 * These keys will always fire, even if access is off:
+    * "a" to access player section (audio)
+    * "d" to access dots section
+    * "l" to access lyrics section
+    * "s" to access songs section
     * "p" to toggle "isPlaying"
     * "o" to toggle "playerOptionIndex"
     * "b" to toggle "selectedOverviewIndex"

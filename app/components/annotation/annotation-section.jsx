@@ -1,17 +1,26 @@
 import React from 'react'
 import AnnotationUnit from './annotation-unit'
+import { ANNOTATION_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *
  *************/
 
-const AnnotationSection = (props) => {
+const AnnotationSection = ({
 
-    const { annotation } = props
+    annotation,
+    accessedOn,
+    accessedSectionKey,
+
+...other }) => {
+
+    const sectionAccessHighlighted = accessedOn && accessedSectionKey === ANNOTATION_SECTION
 
     return (
-        <AnnotationSectionView {...props}
+        <AnnotationSectionView {...other}
+            annotation={annotation}
             title={annotation.title}
+            sectionAccessHighlighted={sectionAccessHighlighted}
         />
     )
 }
@@ -27,9 +36,10 @@ const AnnotationSectionView = ({
 
     // From controller.
     title,
+    sectionAccessHighlighted,
 
 ...other }) => (
-    <div className={`section annotation-section${inPopup ? ' in-popup' : ''}`}>
+    <div className={`section annotation-section${inPopup ? ' in-popup' : ''}${sectionAccessHighlighted ? ' access-highlighted' : ''}`}>
         <h2>{title}</h2>
         <div className="cards-block">
             <AnnotationUnit {...other}
