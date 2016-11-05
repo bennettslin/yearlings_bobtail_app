@@ -8,8 +8,13 @@ module.exports = {
     title: {
         anchor: `Pchelka's Starry Journey`,
         annotation: {
-            // wiki: soviet dogs
-            description: `Pchelka and Mushka were dogs sent into orbit under the Soviet space program. In this allegorical retelling, I imagine myself as Pchelka, and my brother as Mushka.`
+            description: [
+                {
+                    anchor: `Pchelka and Mushka`,
+                    wiki: `Soviet_space_dogs`
+                },
+                `were dogs sent into orbit under the Soviet space program. In this allegorical retelling, I imagine myself as Pchelka, and my brother as Mushka.`
+            ]
         }
     },
     totalTime: 211,
@@ -21,8 +26,14 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // wiki: Tuvan throat singing
-                        description: `In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in Tuvan throat singing, where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`,
+                        description: [
+                            `In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in`,
+                            {
+                                anchor: `Tuvan throat singing,`,
+                                wiki: `Tuvan_throat_singing`
+                            },
+                            `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
+                        ],
                         dotKeys: {
                             music: true
                         }
@@ -39,11 +50,13 @@ module.exports = {
                         {
                             anchor: `worst nuisance on the beach.`,
                             annotation: {
-                                // wiki: beautiful losers
                                 description: [
                                     `While being in a mail-order cult was a painful experience, there is a comic absurdity to it as well, which this line captures beautifully. In a humourous passage from Leonard Cohen's otherwise tragic`,
                                     {
-                                        italic: `Beautiful Losers,`
+                                        italic: {
+                                            anchor: `Beautiful Losers,`,
+                                            wiki: `Beautiful_Losers`
+                                        }
                                     },
                                     `the character F. tires of getting bullied at the beach. He signs up for the Charles Axis bodybuilding course advertised in a comic book, only to discover that Charles Axis is the one who bullies him.`
                                 ]
@@ -126,7 +139,6 @@ module.exports = {
                     {
                         anchor: `beneath your captain bed.`,
                         annotation: {
-                            // wiki: captain bed
                             description: `I slept in a captain bed that rested atop a dresser on one side, with the other side placed flush against the wall. By removing the bottom drawer, I could crawl into the space underneath with my brother and stay hidden.`
                         }
                     }
@@ -155,8 +167,14 @@ module.exports = {
                             emphasis: {
                                 anchor: `Poor Sam Peabody!`,
                                 annotation: {
-                                    // wiki: white throated sparrow
-                                    description: `When my family visited Canada one late summer, the white-throated sparrow was in breeding season, and we heard its song everywhere. I found the sound so haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.`
+                                    description: [
+                                        `When my family visited Canada one late summer, the`,
+                                        {
+                                            anchor: `white-throated sparrow`,
+                                            wiki: `White-throated_sparrow`
+                                        },
+                                        `was in breeding season, and we heard its song everywhere. I found the sound haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.`
+                                    ]
                                 }
                             }
                         }
@@ -338,10 +356,16 @@ module.exports = {
                         anchor: `waiting for Goddard,`,
                         annotation: {
                             description: [
-                                // wiki: goddard, godot
-                                `Robert Goddard ushered in the Space Age by inventing the liquid-fueled rocket. Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then. Also,`,
                                 {
-                                    italic: `Waiting for Godot`
+                                    anchor: `Robert Goddard`,
+                                    wiki: `Robert_H._Goddard`
+                                },
+                                `ushered in the Space Age by inventing the liquid-fueled rocket. Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then. Also,`,
+                                {
+                                    italic: {
+                                        anchor: `Waiting for Godot`,
+                                        wiki: `Waiting_for_Godot`
+                                    }
                                 },
                                 `is a play by Samuel Beckett that explores existential themes.`
                             ]
@@ -392,8 +416,14 @@ module.exports = {
                         anchor: `Huntsville`,
                         properNoun: true,
                         annotation: {
-                            // wiki: huntsville
-                            description: `Huntsville, Alabama is where the largest NASA center is located.`
+                            description: [
+                                `Huntsville, Alabama is where the`,
+                                {
+                                    anchor: `largest NASA center`,
+                                    wiki: `Marshall_Space_Flight_Center`
+                                },
+                                `is located.`
+                            ]
                         }
                     },
                     `and fed,`
@@ -406,8 +436,14 @@ module.exports = {
                     {
                         anchor: `hunter's belt`,
                         annotation: {
-                            // wiki: orion
-                            description: `The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the hunter in Greek mythology. Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward animals.`
+                            description: [
+                                `The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the`,
+                                {
+                                    anchor: `hunter in Greek mythology.`,
+                                    wiki: `Orion_(mythology)`
+                                },
+                                `Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward animals.`
+                            ]
                         }
                     },
                     `and launched!`
@@ -537,8 +573,14 @@ module.exports = {
                     {
                         anchor: `cast here in pollens`,
                         annotation: {
-                            // wiki: castor and pollux
-                            description: `In Greek mythology, Castor and Pollux were twin brothers fathered by Zeus. Castor was mortal, however, so Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with all its spiritual answers.`
+                            description: [
+                                `In Greek mythology,`,
+                                {
+                                    anchor: `Castor and Pollux`,
+                                    wiki: `Castor_and_Pollux`
+                                },
+                                `were twin brothers fathered by Zeus. Castor was mortal, however, so Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with all its spiritual answers.`
+                            ]
                         }
                     }
                 ]
@@ -580,8 +622,13 @@ module.exports = {
                     {
                         anchor: `omerta`,
                         annotation: {
-                            // wiki: omerta
-                            description: `Omerta is the Mafia's code of honour that praises silence and refusal to cooperate with authorities. Of course, I wasn't the first kid ever to observe similarities between school life and prison culture.`
+                            description: [
+                                {
+                                    anchor: `Omerta`,
+                                    wiki: `Omertà`
+                                },
+                                `is the Mafia's code of honour that praises silence and refusal to cooperate with authorities. Of course, I wasn't the first kid ever to observe similarities between school life and prison culture.`
+                            ]
                         }
                     },
                     `turned their backs.`
@@ -613,8 +660,14 @@ module.exports = {
                     {
                         anchor: `shortest cyphers`,
                         annotation: {
-                            // wiki: cryptogram
-                            description: `The lengthier a cryptogram gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer openings others were given to get under my skin.`
+                            description: [
+                                `The lengthier a`,
+                                {
+                                    anchor: `cryptogram`,
+                                    wiki: `Cryptogram`
+                                },
+                                `gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer openings others were given to get under my skin.`
+                            ]
                         }
                     },
                     `are the toughest ones to crack.`
@@ -627,8 +680,14 @@ module.exports = {
                     {
                         anchor: `every hero has a heel,`,
                         annotation: {
-                            // wiki: achilles
-                            description: `The Greek hero Achilles was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved acceptance from others.`
+                            description: [
+                                `The Greek hero`,
+                                {
+                                    anchor: `Achilles`,
+                                    wiki: `Achilles`
+                                },
+                                `was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved acceptance from others.`
+                            ]
                         }
                     },
                     `we'd realise, blind before the squad.`
@@ -719,8 +778,14 @@ module.exports = {
                     {
                         anchor: `idiot's rod.`,
                         annotation: {
-                            // wiki: iditarod
-                            description: `The Iditarod is an annual sled dog race held in Alaska. The rod refers to the whip used by some mushers to keep the pack disciplined.`
+                            description: [
+                                `The`,
+                                {
+                                    anchor: `Iditarod`,
+                                    wiki: `Iditarod_Trail_Sled_Dog_Race`
+                                },
+                                `is an annual sled dog race held in Alaska. The rod refers to the whip used by some mushers to keep the pack disciplined.`
+                            ]
                         }
                     }
                 ]
@@ -732,8 +797,14 @@ module.exports = {
                     {
                         anchor: `pentobarbitone syringe,`,
                         annotation: {
-                            // wiki: pentobarbitone
-                            description: `A pentobarbitone injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected in advance.`
+                            description: [
+                                `A`,
+                                {
+                                    anchor: `pentobarbitone`,
+                                    wiki: `Pentobarbital`
+                                },
+                                `injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected in advance.`
+                            ]
                         }
                     }
                 ]
@@ -775,8 +846,9 @@ module.exports = {
                     {
                         anchor: `needed the pod.`,
                         annotation: {
-                            // wiki: pod
-                            description: `A group of whales is called a pod. Because I wanted to belong to a social group, I couldn't "ditch my whales," and thus I sought out a metaphorical escape pod.`
+                            description: [
+                                `A group of whales is called a pod. Because I wanted to belong to a social group, I couldn't "ditch my whales," and thus I sought out a metaphorical escape pod.`
+                            ]
                         }
                     }
                 ]

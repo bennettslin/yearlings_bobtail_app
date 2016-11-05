@@ -38,6 +38,7 @@ const TextUnit = ({
                 <em>
                     <TextBlock {...other}
                         text={text.emphasis}
+                        selectedDotKeys={selectedDotKeys}
                     />
                 </em>
             )
