@@ -99,6 +99,16 @@ module.exports = {
             workedHours: 0,
             neededHours: 3
         },
+        {
+            taskName: `"problem with indie" in footer`,
+            workedHours: 0,
+            neededHours: 8
+        },
+        {
+            taskName: `progressive tooltips`,
+            workedHours: 0,
+            neededHours: 8
+        },
         // {
         //     taskName: `Safari...`,
         //     workedHours: 0,

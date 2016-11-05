@@ -903,11 +903,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `include wiki urls`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -929,6 +924,11 @@ module.exports = {
             subtasks: [
 
             ]
+        },
+        {
+            taskName: `include wiki urls`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

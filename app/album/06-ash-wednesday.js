@@ -5,6 +5,7 @@ module.exports = {
         anchor: `Ash Wednesday`,
         annotation: {
             description: [
+                // wiki: ash wednesday
                 {
                     anchor: `Ash Wednesday`,
                     wiki: `Ash_Wednesday`
@@ -14,6 +15,7 @@ module.exports = {
         }
     },
     totalTime: 163,
+    // TODO: Move much of this to title annotation.
     overview: `In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday, the first day of Lent. So I decided to ash my own forehead and bump into her, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I probably have Catherine to thank for that.`,
     lyrics: [
         [
@@ -22,6 +24,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
+                        // wiki: maqam, polyphony
                         description: `For a song about two people who couldn't be more different, I juxtaposed Arabic maqam and Renaissance polyphony. The quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter step flat. The shrieking whistles, which remind me of trains braking in a subway tunnel, were made by overblowing into recorders.`,
                         dotKeys: {
                             music: true
@@ -181,6 +184,7 @@ module.exports = {
                     {
                         anchor: `dirge she'd deride,`,
                         annotation: {
+                            // wiki: dirge
                             description: `A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music any differently. But Catherine appreciated music for its lyrics, and as such, she wasn't impressed by my songwriting skills.`
                         }
                     }
@@ -270,6 +274,7 @@ module.exports = {
                         anchor: `outside her Shelta,`,
                         annotation: {
                             description: [
+                                // wiki: travellers, *not* shelta
                                 `The Irish Travellers, a predominantly Catholic ethnic group, speak a cryptic language known as`,
                                 {
                                     anchor: `Shelta`,
@@ -289,6 +294,7 @@ module.exports = {
                         anchor: `famous raincoat`,
                         annotation: {
                             description: [
+                                // wiki: leonard cohen, not famous blue raincoat
                                 `Catherine introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
                                 {
                                     anchor: `"Famous Blue Raincoat"`,
@@ -365,6 +371,7 @@ module.exports = {
                     {
                         anchor: `safe Algonquin abode.`,
                         annotation: {
+                            // wiki: algonquin round table
                             description: `Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.`
                         }
                     }

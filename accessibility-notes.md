@@ -51,22 +51,22 @@
 * When lyric section is accessed:
     * Arrow keys and "Enter" are shown.
     * When up and down arrows are pressed:
-        * If there is no accessed line:
-            * Accessed line closest to last accessed element is highlighted.
+        * If there is no accessed verse:
+            * Accessed verse closest to last accessed element is highlighted.
             * Accessed anchor, if any, is unhighlighted.
-        * If there is an accessed line:
-            * Highlight previous or next accessed line.
+        * If there is an accessed verse:
+            * Highlight previous or next accessed verse.
 
     * When left and right arrows are pressed:
         * If there is no accessed anchor:
             * Accessed anchor closest to last accessed element is highlighted.
-            * Accessed line, if any, is unhighlighted.
+            * Accessed verse, if any, is unhighlighted.
         * If there is an accessed anchor:
             * Highlight previous or next accessed anchor.
 
     * When "Enter" is pressed:
         * If there is an accessed anchor, open its annotation.
-        * If there is an accessed line, select it.
+        * If there is an accessed verse, select it.
 
 * When annotation section is accessed:
     * Arrow keys and "Enter" are shown.

@@ -310,7 +310,6 @@ module.exports = {
                     {
                         anchor: `narcing to the aides,`,
                         annotation: {
-                            // wiki: Non-wiki: narc
                             description: [
                                 `To narc is to be a snitch, much like the narcotics officers who gather intelligence on drug dealers by going undercover as high school students. It caught me off guard that the school aides typically declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.`
                             ]
@@ -465,11 +464,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `include wiki urls`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -491,6 +485,11 @@ module.exports = {
             subtasks: [
 
             ]
+        },
+        {
+            taskName: `include wiki urls`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

@@ -377,7 +377,6 @@ module.exports = {
                     {
                         anchor: `Killcrop`,
                         annotation: {
-                            // WIKI: Non-wiki killcrop?
                             description: [
                                 `In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is plain and simple— one who "kills crops"— and reflects the primary concerns of past times, when children unable to work for their keep could lead to a family's ruin.`
                             ]
@@ -744,11 +743,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `include wiki urls`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -770,6 +764,11 @@ module.exports = {
             subtasks: [
 
             ]
+        },
+        {
+            taskName: `include wiki urls`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

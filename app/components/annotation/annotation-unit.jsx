@@ -32,7 +32,7 @@ const AnnotationUnitView = ({
 ...other }) => (
     <div className="annotation-cards-block">
         {annotation.cards.map((card, index) => (
-            <AnnotationCard
+            <AnnotationCard {...other}
                 key={index}
                 card={card}
             />
