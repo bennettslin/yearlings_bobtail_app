@@ -185,7 +185,9 @@ module.exports = {
                         anchor: `dirge she'd deride,`,
                         annotation: {
                             // wiki: dirge
-                            description: `A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music any differently. But Catherine appreciated music for its lyrics, and as such, she wasn't impressed by my songwriting skills.`
+                            description: [
+                                `A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music any differently. But Catherine appreciated music for its lyrics, and as such, she wasn't impressed by my songwriting skills.`
+                            ]
                         }
                     }
                 ]
@@ -372,7 +374,9 @@ module.exports = {
                         anchor: `safe Algonquin abode.`,
                         annotation: {
                             // wiki: algonquin round table
-                            description: `Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.`
+                            description: [
+                                `Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.`
+                            ]
                         }
                     }
                 ]

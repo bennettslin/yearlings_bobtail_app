@@ -90,7 +90,9 @@ module.exports = {
                         anchor: `molls perched on pedestals,`,
                         annotation: {
                             // wiki: moll
-                            description: `Gun molls were the female companions of American gangsters in the early 1900s. In the same way that society viewed their exploits, I simultaneously desired and feared the girls who dated the boys who bullied me. Their contempt was certainly tougher to stomach.`
+                            description: [
+                                `Gun molls were the female companions of American gangsters in the early 1900s. In the same way that society viewed their exploits, I simultaneously desired and feared the girls who dated the boys who bullied me. Their contempt was certainly tougher to stomach.`
+                            ]
                         }
                     }
                 ]
@@ -103,7 +105,9 @@ module.exports = {
                         anchor: `penny dreadfuls.`,
                         annotation: {
                             // wiki: penny dreadful
-                            description: `In 19th-century England, a new market emerged for sensational fiction published in cheap novellas, which the highbrow derided as penny dreadfuls.`
+                            description: [
+                                `In 19th-century England, a new market emerged for sensational fiction published in cheap novellas, which the highbrow derided as penny dreadfuls.`
+                            ]
                         }
                     }
                 ]
@@ -163,7 +167,9 @@ module.exports = {
                         anchor: `fetch her lancet pen,`,
                         annotation: {
                             // wiki: lancet pen
-                            description: `As a diabetic, Sita regularly checked her blood sugar level before meals by pricking her finger with a lancing device. That day, she forgot to take it with her after bussing her tray, and came down to the dishroom to retrieve it.`
+                            description: [
+                                `As a diabetic, Sita regularly checked her blood sugar level before meals by pricking her finger with a lancing device. That day, she forgot to take it with her after bussing her tray, and came down to the dishroom to retrieve it.`
+                            ]
                         }
                     }
                 ]
@@ -201,7 +207,9 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: Schwa, or William Barker
-                            description: `Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on print media everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.`,
+                            description: [
+                                `Schwa is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on print media everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.`
+                            ],
                             portal: `swastikas`
                         }
                     },
@@ -378,7 +386,9 @@ module.exports = {
                         anchor: `Phantom limbs`,
                         annotation: {
                             // wiki: phantom limb
-                            description: `A phantom limb is the sensation that a missing limb is still attached and responsive. After several weeks of giddy hope, the thought of spending my weekends alone again, with no other prospects on the horizon, felt like an amputation.`
+                            description: [
+                                `A phantom limb is the sensation that a missing limb is still attached and responsive. After several weeks of giddy hope, the thought of spending my weekends alone again, with no other prospects on the horizon, felt like an amputation.`
+                            ]
                         }
                     },
                     `trip left and right`
@@ -392,7 +402,9 @@ module.exports = {
                         anchor: `tripped on runner's high.`,
                         annotation: {
                             // wiki: runner's high
-                            description: `A runner's high is a feeling of euphoria experienced through exercise. I often needed a beer or two to muster the energy to walk home after a gruelling shift, so it was hard to feel gracious towards anyone out for an evening jog.`
+                            description: [
+                                `A runner's high is a feeling of euphoria experienced through exercise. I often needed a beer or two to muster the energy to walk home after a gruelling shift, so it was hard to feel gracious towards anyone out for an evening jog.`
+                            ]
                         }
                     }
                 ]
@@ -405,7 +417,9 @@ module.exports = {
                         anchor: `window of your Walkman`,
                         annotation: {
                             // wiki: walkman
-                            description: `The Walkman is a portable cassette player. I would listen to mixtapes on the walk home, seemingly absorbed in my music even as I wished pratfalls upon others, much as a child might duck beneath a window after pulling a prank.`
+                            description: [
+                                `The Walkman is a portable cassette player. I would listen to mixtapes on the walk home, seemingly absorbed in my music even as I wished pratfalls upon others, much as a child might duck beneath a window after pulling a prank.`
+                            ]
                         }
                     },
                     `you hide.`
@@ -771,7 +785,9 @@ module.exports = {
                         annotation: {
                             // TODO: Elaborate on how she rescued me.
                             // wiki: grace darling
-                            description: `Grace Darling was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26.`,
+                            description: [
+                                `Grace Darling was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26.`
+                            ],
                             portal: `grey_starling`
                         }
                     },
@@ -780,7 +796,9 @@ module.exports = {
                         anchor: `fell an oar.`,
                         annotation: {
                             // wiki: poe, raven
-                            description: `Or "fell Lenore." In Edgar Allan Poe's poem "The Raven," the narrator laments the death of his beloved Lenore.`
+                            description: [
+                                `Or "fell Lenore." In Edgar Allan Poe's poem "The Raven," the narrator laments the death of his beloved Lenore.`
+                            ]
                         }
                     }
                 ]
