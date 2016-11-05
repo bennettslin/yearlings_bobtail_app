@@ -20,11 +20,12 @@ class PopupTransitionGroup extends Component {
 
     _getContainerElement(element) {
         const { className,
-                onCloseClick } = this.props
+                onCloseClick,
+                sectionAccessHighlighted } = this.props
 
         return element ? (
             <div
-                className={`popup-content-wrapper ${className}`}
+                className={`popup-content-wrapper ${className}${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
                 onClick={e => e.stopPropagation()}
             >
                 <CloseButton onClick={onCloseClick} />
@@ -63,13 +64,18 @@ class Popup extends Component {
 
     render() {
         const className = this.getClassName(),
-            element = this.getContentElement()
+            element = this.getContentElement(),
+            { accessedOn,
+              accessedSectionKey } = this.props,
+
+            sectionAccessHighlighted = accessedOn && accessedSectionKey === `${className}_section`
 
         return (
             <PopupTransitionGroup
                 element={element}
                 className={className}
                 transitionName={`${className}-animation`}
+                sectionAccessHighlighted={sectionAccessHighlighted}
                 onCloseClick={this.onCloseClick}
             />
         )

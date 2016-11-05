@@ -6,21 +6,9 @@ import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
  * CONTAINER *
  *************/
 
-const WikiSection = ({
-
-    accessedOn,
-    accessedSectionKey,
-
-...other }) => {
-
-    const sectionAccessHighlighted = accessedOn && accessedSectionKey === WIKI_SECTION
-
-    return (
-        <WikiSectionView {...other}
-            sectionAccessHighlighted={sectionAccessHighlighted}
-        />
-    )
-}
+const WikiSection = (props) => (
+    <WikiSectionView {...props} />
+)
 
 /****************
  * PRESENTATION *
@@ -70,13 +58,12 @@ class WikiSectionView extends Component {
 
     render() {
         const { inPopup,
-                selectedWikiUrl,
-                sectionAccessHighlighted } = this.props,
+                selectedWikiUrl } = this.props,
             { webviewLoading } = this.state
 
         return (
             <div
-                className={`section wiki-section${inPopup ? ' in-popup' : ''}${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
+                className={`section wiki-section${inPopup ? ' in-popup' : ''}`}
             >
                 {webviewLoading ?
                     <div className="spinner-container">

@@ -78,12 +78,16 @@ const SongView = ({
                 songs={songs}
                 annotation={annotation}
                 selectedDotKeys={selectedDotKeys}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
                 onPortalClick={onPortalClick}
                 onWikiUrlClick={onWikiUrlClick}
                 onCloseClick={onAnnotationClick}
             />
             <WikiPopup
                 selectedWikiUrl={selectedWikiUrl}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
                 onCloseClick={onWikiUrlClick}
             />
             <DotsSection

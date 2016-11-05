@@ -9,18 +9,13 @@ import { ANNOTATION_SECTION } from 'helpers/constants'
 const AnnotationSection = ({
 
     annotation,
-    accessedOn,
-    accessedSectionKey,
 
 ...other }) => {
-
-    const sectionAccessHighlighted = accessedOn && accessedSectionKey === ANNOTATION_SECTION
 
     return (
         <AnnotationSectionView {...other}
             annotation={annotation}
             title={annotation.title}
-            sectionAccessHighlighted={sectionAccessHighlighted}
         />
     )
 }
@@ -36,10 +31,9 @@ const AnnotationSectionView = ({
 
     // From controller.
     title,
-    sectionAccessHighlighted,
 
 ...other }) => (
-    <div className={`section annotation-section${inPopup ? ' in-popup' : ''}${sectionAccessHighlighted ? ' access-highlighted' : ''}`}>
+    <div className={`section annotation-section${inPopup ? ' in-popup' : ''}`}>
         <h2>{title}</h2>
         <div className="cards-block">
             <AnnotationUnit {...other}

@@ -175,6 +175,8 @@ class App extends Component {
 
     togglePlay(e) {
         this._stopPropagation(e)
+        if (e) { this._handleSectionAccess(PLAYER_SECTION) }
+
         this.setState({
             isPlaying: !this.state.isPlaying
         })
@@ -182,6 +184,7 @@ class App extends Component {
 
     selectSong(e, selectedIndex = 0) {
         this._stopPropagation(e)
+        if (e) { this._handleSectionAccess(SONGS_SECTION) }
 
         if (selectedIndex >= 0 && selectedIndex <= this.props.songs.length) {
 
@@ -212,6 +215,7 @@ class App extends Component {
         // Stored as integer. 0 is to show bubble, 1 is to hide it.
         const selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % 2
         this._stopPropagation(e)
+        if (e) { this._handleSectionAccess(OVERVIEW_SECTION) }
 
         this.props.selectOverviewIndex(selectedOverviewIndex)
 
@@ -226,6 +230,7 @@ class App extends Component {
         const optionsLength = 3
 
         this._stopPropagation(e)
+        if (e) { this._handleSectionAccess(PLAYER_SECTION) }
 
         /**
          * Stored as integer. 0 is to "continue after next," 1 is to "repeat," 2 is to "pause after song."
@@ -235,6 +240,7 @@ class App extends Component {
 
     selectDot(e, selectedDotKey) {
         this._stopPropagation(e)
+        if (e) { this._handleSectionAccess(DOTS_SECTION) }
 
         const isSelected = !this.props.selectedDotKeys[selectedDotKey]
         this.props.selectDotKey(selectedDotKey, isSelected)
@@ -247,9 +253,10 @@ class App extends Component {
 
     selectAnnotation(e, selectedIndex = 0) {
         this._stopPropagation(e)
+        if (e) { this._handleSectionAccess(ANNOTATION_SECTION) }
 
         this.props.selectAnnotationIndex(selectedIndex)
-        this.selectWiki(e)
+        this.selectWiki()
 
         // Keep accessed index, even if annotation is deselected.
         if (selectedIndex > 0) {
@@ -272,6 +279,7 @@ class App extends Component {
 
     selectWiki(e, selectedWiki) {
         this._stopPropagation(e)
+        if (e) { this._handleSectionAccess(WIKI_SECTION) }
 
         const selectedWikiUrl = selectedWiki ?
             `https://en.m.wikipedia.org/wiki/${selectedWiki}` : ''
@@ -285,8 +293,8 @@ class App extends Component {
     selectPortal(e, selectedSongIndex, selectedAnnotationIndex) {
         this._stopPropagation(e)
 
-        this.selectSong(e, selectedSongIndex, SELECTED_SONG_INDEX)
-        this.selectAnnotation(e, selectedAnnotationIndex)
+        this.selectSong(undefined, selectedSongIndex, SELECTED_SONG_INDEX)
+        this.selectAnnotation(undefined, selectedAnnotationIndex)
     }
 
     selectTime(e, selectedTimePlayed = 0) {
@@ -308,6 +316,7 @@ class App extends Component {
 
     selectVerse(e, selectedVerseIndex = 0) {
         this._stopPropagation(e)
+        if (e) { this._handleSectionAccess(LYRICS_SECTION) }
 
         let selectedTimePlayed,
             scroll
@@ -356,7 +365,7 @@ class App extends Component {
         const { isNarrowScreen } = this.state,
             newLyricColumnIndex = !isNarrowScreen ? 1 : 0
 
-        this.selectLyricColumn(e, newLyricColumnIndex)
+        this.selectLyricColumn(undefined, newLyricColumnIndex)
 
         this.setState({
             isNarrowScreen: !isNarrowScreen
@@ -494,7 +503,7 @@ class App extends Component {
         }
     }
 
-    _handleSectionAccess(accessedSectionKey) {
+    _handleSectionAccess(accessedSectionKey, accessOn) {
         let accessedSectionIndex = 0
 
         // If no section key specified, rotate through sections.
@@ -521,9 +530,13 @@ class App extends Component {
             }
         }
 
-        this._handleAccessOn(1)
         this.props.accessSectionIndex(accessedSectionIndex)
         this._resetAccessedIndices(SECTION_KEYS[accessedSectionIndex])
+
+        // Access on if section accessed from universal key.
+        if (accessOn) {
+            this._handleAccessOn(1)
+        }
     }
 
     _handleOverviewAccess(keyName) {
@@ -562,8 +575,6 @@ class App extends Component {
     }
 
     _handlePlayerAccess(keyName) {
-        const selectedPlayerOptionIndex = this.props.selectedPlayerOptionIndex
-
         switch (keyName) {
             case ENTER:
                 this.togglePlay()
@@ -619,19 +630,19 @@ class App extends Component {
             // Directly access sections.
             case 'a':
             case 'A':
-                this._handleSectionAccess(PLAYER_SECTION)
+                this._handleSectionAccess(PLAYER_SECTION, true)
                 break
             case 'd':
             case 'D':
-                this._handleSectionAccess(DOTS_SECTION)
+                this._handleSectionAccess(DOTS_SECTION, true)
                 break
             case 'l':
             case 'L':
-                this._handleSectionAccess(LYRICS_SECTION)
+                this._handleSectionAccess(LYRICS_SECTION, true)
                 break
             case 's':
             case 'S':
-                this._handleSectionAccess(SONGS_SECTION)
+                this._handleSectionAccess(SONGS_SECTION, true)
                 break
             // Toggle selected overview index.
             case 'b':

@@ -44,7 +44,7 @@ module.exports = {
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_PLAYER_OPTION_INDEX: 'selectedPlayerOptionIndex',
     SELECTED_WIKI_URL: 'selectedWikiUrl',
-    ACCESSED_ON: 'accessOn',
+    ACCESSED_ON: 'accessedOn',
     ACCESSED_SECTION_INDEX: 'accessedSectionIndex',
 
     // This is only used by the stats helper.
