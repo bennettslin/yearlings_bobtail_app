@@ -246,7 +246,8 @@ module.exports = {
                         // TODO: mention steps
                         anchor: `down the steppes`,
                         annotation: {
-                            description: `In the 13th century, the Mongols swept down from the East Asian steppes and began their conquests.`
+                            description: `In the 13th century, the Mongols swept down from the East Asian steppes and began their conquests.`,
+                            portal: `down_the_steppes`
                         }
                     },
                     `we charged,`
