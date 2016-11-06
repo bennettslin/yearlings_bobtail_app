@@ -134,6 +134,7 @@ class App extends Component {
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScreenWidth = this.selectScreenWidth.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
+        this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
         this._onKeyDown = this._onKeyDown.bind(this)
@@ -392,62 +393,23 @@ class App extends Component {
      * ACCESS HANDLERS *
      *******************/
 
-    _handleAccessOn(accessedOn) {
+    _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
         // Stored as integer. 0 is false, 1 is true.
-        const toBeAccesssedOn = typeof accessedOn !== 'undefined' ? accessedOn : (this.props.accessedOn + 1) % 2
-
-        this.props.accessOn(toBeAccesssedOn)
-
-        if (!toBeAccesssedOn) {
-            this._resetAccessedIndices()
-        }
+        this.props.accessOn(accessedOn)
     }
 
     _handleSectionAccess(accessedSectionKey, accessOn) {
-        let accessedSectionIndex = 0
+        const accessedSectionIndex = AccessHelper.handleSectionAccess({
+            selectedSongIndex: this.props.selectedSongIndex,
+            accessedSectionIndex: this.props.accessedSectionIndex,
+            accessedSectionKey,
+            accessOn,
+            handleAccessOn: this._handleAccessOn
+        })
 
-        // If no section key specified, rotate through sections.
-        if (!accessedSectionKey) {
-            accessedSectionIndex = (this.props.accessedSectionIndex + 1) % SECTION_KEYS.length
-
-            // Skip lyrics and dots sections if no selected song.
-            if (this.props.selectedSongIndex === 0) {
-                while (SECTION_KEYS[accessedSectionIndex] === LYRICS_SECTION || SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
-                    accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
-                }
-            }
-
-            // Always skip annotation and wiki sections.
-            // TODO: More efficient way to do this?
-            while (SECTION_KEYS[accessedSectionIndex] === ANNOTATION_SECTION || SECTION_KEYS[accessedSectionIndex] === WIKI_SECTION) {
-                accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
-            }
-
-        // Otherwise, find section index for section key.
-        } else {
-            while (SECTION_KEYS[accessedSectionIndex] !== accessedSectionKey && accessedSectionIndex < SECTION_KEYS.length) {
-                accessedSectionIndex++
-            }
-        }
+        console.error('accessedSectionIndex', accessedSectionIndex);
 
         this.props.accessSectionIndex(accessedSectionIndex)
-        this._resetAccessedIndices(SECTION_KEYS[accessedSectionIndex])
-
-        // Access on if section accessed from universal key.
-        if (accessOn) {
-            this._handleAccessOn(1)
-        }
-    }
-
-    // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
-    // TODO: Instead of resetting, maybe just set before each one is accessed.
-    _resetAccessedIndices(accessedSectionKey) {
-
-        const accessedSongIndex = accessedSectionKey === SONGS_SECTION ? this.state.accessedSongIndex : this.props.selectedSongIndex
-
-        this.setState({
-            accessedSongIndex
-        })
     }
 
     _onKeyDown(e) {

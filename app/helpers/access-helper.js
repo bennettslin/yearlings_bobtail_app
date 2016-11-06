@@ -2,6 +2,9 @@ import { SONGS_SECTION,
          AUDIO_SECTION,
          LYRICS_SECTION,
          DOTS_SECTION,
+         ANNOTATION_SECTION,
+         WIKI_SECTION,
+         SECTION_KEYS,
 
          ALL_DOT_KEYS,
          ARROW_LEFT,
@@ -61,6 +64,45 @@ export default {
         }
 
         return true
+    },
+
+    handleSectionAccess({
+        selectedSongIndex,
+        accessedSectionIndex = 0,
+        accessedSectionKey,
+        accessOn,
+        handleAccessOn
+    }) {
+        // If no section key specified, rotate through sections.
+        if (!accessedSectionKey) {
+            accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
+
+            // Skip lyrics and dots sections if no selected song.
+            if (selectedSongIndex === 0) {
+                while (SECTION_KEYS[accessedSectionIndex] === LYRICS_SECTION || SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
+                    accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
+                }
+            }
+
+            // Always skip annotation and wiki sections.
+            // TODO: More efficient way to do this?
+            while (SECTION_KEYS[accessedSectionIndex] === ANNOTATION_SECTION || SECTION_KEYS[accessedSectionIndex] === WIKI_SECTION) {
+                accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
+            }
+
+        // Otherwise, find section index for section key.
+        } else {
+            while (SECTION_KEYS[accessedSectionIndex] !== accessedSectionKey && accessedSectionIndex < SECTION_KEYS.length) {
+                accessedSectionIndex++
+            }
+        }
+
+        // Access on if section accessed from universal key.
+        if (accessOn) {
+            handleAccessOn(1)
+        }
+
+        return accessedSectionIndex
     },
 
     handleSongAccess({
