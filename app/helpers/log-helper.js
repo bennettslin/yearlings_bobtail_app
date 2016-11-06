@@ -22,20 +22,12 @@ export default {
 },
 
     logVerse({ props }) {
-        const { selectedVerseIndex } = props,
-
-            selectedSong = getSong(props),
-            verse = getVerse(selectedVerseIndex, selectedSong)
-
+        const verse = getVerse(props)
         return this._logObject('selected verse', verse)
     },
 
     logAnchorAnnotation({ props }) {
-        const { selectedAnnotationIndex } = props,
-
-            selectedSong = getSong(props),
-            annotation = getAnnotation(selectedAnnotationIndex, selectedSong)
-
+        const annotation = getAnnotation(props)
         return this._logObject('selected annotation', annotation)
     },
 

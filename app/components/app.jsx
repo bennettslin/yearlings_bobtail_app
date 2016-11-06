@@ -514,11 +514,8 @@ class App extends Component {
     }
 
     _deselectAnnotationWithNoSelectedDots(dotKey) {
-        const { selectedAnnotationIndex,
-                selectedDotKeys } = this.props
-
-        const selectedSong = getSong(this.props),
-            annotation = getAnnotation(selectedAnnotationIndex, selectedSong),
+        const { selectedDotKeys } = this.props,
+            annotation = getAnnotation(this.props),
             presentDotKeys = annotation ? annotation.dotKeys : null,
 
             // The dotKey being deselected is still selected at this stage.

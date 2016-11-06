@@ -19,14 +19,14 @@ export const getSong = ({ selectedSongIndex, songs }) => {
         songs[selectedSongIndex - 1] : {}
 }
 
-export const getAnnotation = (selectedAnnotationIndex, selectedSong) => {
-    const { annotations } = selectedSong
-    return annotations ?
-            annotations[selectedAnnotationIndex - 1] : null
+export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }) => {
+    selectedSong = selectedSong || getSong(other)
+    return selectedSong.annotations ?
+            selectedSong.annotations[selectedAnnotationIndex - 1] : null
 }
 
-export const getVerse = (selectedVerseIndex, selectedSong) => {
-    const { lyrics } = selectedSong
+export const getVerse = ({ selectedVerseIndex, ...other }) => {
+    const { lyrics } = getSong(other)
     return _parseLyrics(lyrics, selectedVerseIndex)
 }
 

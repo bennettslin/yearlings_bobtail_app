@@ -16,7 +16,7 @@ const Song = ({
 
 ...other }) => {
 
-    const annotation = getAnnotation(selectedAnnotationIndex, selectedSong)
+    const annotation = getAnnotation({ selectedAnnotationIndex, selectedSong })
 
     return (
         <SongView {...other}
