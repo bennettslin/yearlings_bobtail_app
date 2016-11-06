@@ -1,3 +1,5 @@
+import { getAnnotation } from 'helpers/album-view-helper'
+
 // Check if at least one present key is selected.
 export const intersects = (presentKeys = {}, selectedKeys = {}) => {
 
@@ -27,4 +29,15 @@ export const getIntersection = (presentKeys = {}, selectedKeys = {}) => {
     })
 
     return intersectionObject
+}
+
+export const allDotsDeselected = (props, dotKey) => {
+    const { selectedDotKeys } = props,
+        annotation = getAnnotation(props),
+        presentDotKeys = annotation ? annotation.dotKeys : null,
+
+        // The dotKey being deselected is still selected at this stage.
+        postSelectedDotKeys = Object.assign(selectedDotKeys, { [dotKey]: false })
+
+    return annotation && !intersects(presentDotKeys, postSelectedDotKeys)
 }

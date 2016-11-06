@@ -24,9 +24,9 @@ import { SONGS_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotation } from 'helpers/album-view-helper'
+import { getSong } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
-import { intersects } from 'helpers/dot-helper'
+import { allDotsDeselected } from 'helpers/dot-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
 import LogHelper from 'helpers/log-helper'
 
@@ -236,8 +236,8 @@ class App extends Component {
         this.props.selectDotKey(selectedDotKey, isSelected)
 
         // If this is the last selected dot key, then close the annotation.
-        if (!isSelected) {
-            this._deselectAnnotationWithNoSelectedDots(selectedDotKey)
+        if (!isSelected && allDotsDeselected(this.props, selectedDotKey)) {
+            this.selectAnnotation()
         }
     }
 
@@ -508,22 +508,8 @@ class App extends Component {
                         break
                 }
 
-                this.setState(newState)
+                if (newState) { this.setState(newState) }
             }
-        }
-    }
-
-    _deselectAnnotationWithNoSelectedDots(dotKey) {
-        const { selectedDotKeys } = this.props,
-            annotation = getAnnotation(this.props),
-            presentDotKeys = annotation ? annotation.dotKeys : null,
-
-            // The dotKey being deselected is still selected at this stage.
-            postSelectedDotKeys = Object.assign(selectedDotKeys, { [dotKey]: false })
-
-        // Deselect annotation if all its dot keys are deselected.
-        if (annotation && !intersects(presentDotKeys, postSelectedDotKeys)) {
-            this.selectAnnotation()
         }
     }
 
