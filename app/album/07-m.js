@@ -421,22 +421,14 @@ module.exports = {
                  */
                 time: 143,
                 lyric: [
-                    `Her lispy`,
+                    `Her lispy kiss unlucky for this`,
                     {
-                        anchor: `kiss unlucky`,
-                        annotation: {
-                            // wiki: chimney sweep
-                            // TODO: Move to chimney sweep annotation.
-                            description: [
-                                `British tradition holds that a kiss from a chimney sweep will bring good luck to a bride on her wedding day. In the Victorian era, however, the children who cleared soot from chimneys were often neglected orphans. Whatever fortunes they imparted to others, for themselves only a lifetime of ill health awaited.`
-                            ]
-                        }
-                    },
-                    `for this`,
-                    {
-                        // TODO: Move description over here?
                         anchor: `chimney sweep,`,
                         annotation: {
+                            // wiki: chimney sweep
+                            description: [
+                                `British tradition holds that a kiss from a chimney sweep will bring good luck to a bride on her wedding day. In the Victorian era, however, the children who cleared soot from chimneys were often neglected orphans. Whatever fortunes they imparted to others, for themselves only a lifetime of ill health awaited.`
+                            ],
                             portal: `chimney_sweep`
                         }
                     }

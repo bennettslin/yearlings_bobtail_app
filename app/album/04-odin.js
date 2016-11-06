@@ -687,14 +687,13 @@ module.exports = {
                     {
                         anchor: `cellophane sylph,`,
                         annotation: {
-                            // TODO: users know what cellophane is.
                             description: [
                                 `In the works of Paracelsus, the`,
                                 {
                                     anchor: `sylph`,
                                     wiki: `Sylph`
                                 },
-                                `is the elemental of air, and is typically described as a fairy with wings of gauze. Cellophane is a thin, transparent sheet that seals in heat.`
+                                `is the elemental of air, and is typically described as a fairy with wings of gauze. Cellophane, of course, is thin and see-through like gauze, and is used to seal in heat.`
                             ]
                         }
                     }
