@@ -12,8 +12,7 @@ import { SONGS_SECTION,
          ARROW_UP,
          ARROW_DOWN,
          ENTER,
-         ESCAPE,
-         SPACE } from 'helpers/constants'
+         ESCAPE } from 'helpers/constants'
 
 export default {
 
@@ -87,7 +86,6 @@ export default {
             }
 
             // Always skip annotation and wiki sections.
-            // TODO: More efficient way to do this?
             while (SECTION_KEYS[accessedSectionIndex] === ANNOTATION_SECTION || SECTION_KEYS[accessedSectionIndex] === WIKI_SECTION) {
                 accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
             }
@@ -113,8 +111,7 @@ export default {
         accessedSongIndex,
         selectedTimePlayed,
         selectTime,
-        selectSong,
-        setState
+        selectSong
     }) {
         switch (keyName) {
             case ARROW_UP:
@@ -135,9 +132,9 @@ export default {
                 break
         }
 
-        setState({
+        return {
             accessedSongIndex
-        })
+        }
     },
 
     handleAudioAccess({
@@ -161,8 +158,7 @@ export default {
     handleDotAccess({
         keyName,
         accessedDotIndex,
-        selectDot,
-        setState
+        selectDot
     }) {
         if (keyName === ENTER) {
             selectDot(undefined, ALL_DOT_KEYS[accessedDotIndex])
@@ -180,10 +176,10 @@ export default {
             }
 
             accessedDotIndex = (accessedDotIndex + direction) % ALL_DOT_KEYS.length
+        }
 
-            setState({
-                accessedDotIndex
-            })
+        return {
+            accessedDotIndex
         }
     },
 
@@ -215,8 +211,7 @@ export default {
         accessedAnnotationIndex,
         accessedAnnotationOutlined,
         selectAnnotation,
-        scrollElementIntoView,
-        setState
+        scrollElementIntoView
     }) {
         let willSelectAnnotation = false,
             willScrollToAnchor = false
@@ -273,9 +268,9 @@ export default {
             scrollElementIntoView('annotation', accessedAnnotationIndex)
         }
 
-        setState({
+        return {
             accessedAnnotationIndex,
             accessedAnnotationOutlined
-        })
+        }
     }
 }

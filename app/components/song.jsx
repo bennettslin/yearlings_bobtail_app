@@ -3,7 +3,7 @@ import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
 import LyricsSection from './lyrics/lyrics-section'
-import AlbumHelper from 'helpers/album-view-helper'
+import { getAnnotation } from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *
@@ -16,7 +16,7 @@ const Song = ({
 
 ...other }) => {
 
-    const annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong)
+    const annotation = getAnnotation(selectedAnnotationIndex, selectedSong)
 
     return (
         <SongView {...other}

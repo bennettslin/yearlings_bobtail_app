@@ -4,7 +4,7 @@ import NotesSection from './notes/notes-section'
 import OverviewsSection from './overviews/overviews-section'
 import StatsSection from './stats/stats-section'
 import TasksSection from './tasks/tasks-section'
-import AlbumHelper from 'helpers/album-view-helper'
+import { getSong, getTasks } from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *
@@ -18,10 +18,10 @@ const Shared = ({
     albumTasks,
 
 ...other }) => {
-    const selectedSong = AlbumHelper.getSong({ selectedSongIndex, songs }),
+    const selectedSong = getSong({ selectedSongIndex, songs }),
         { overview } = selectedSong,
         overviewText = overview ? overview : albumOverview,
-        tasks = AlbumHelper.getTasks(selectedSong, albumTasks)
+        tasks = getTasks(selectedSong, albumTasks)
 
     return (
         <SharedView {...other}

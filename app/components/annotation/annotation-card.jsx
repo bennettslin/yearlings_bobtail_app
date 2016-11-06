@@ -2,7 +2,7 @@ import React from 'react'
 import DotsBlock from '../dots/dots-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
-import AppHelper from 'helpers/album-view-helper'
+import { getPortalLinks } from 'helpers/album-view-helper'
 import { intersects, getIntersection } from 'helpers/dot-helper'
 
 /*************
@@ -20,7 +20,7 @@ const AnnotationCard = ({
     const { description,
           dotKeys = {} } = card,
 
-        portalLinks = AppHelper.getPortalLinks(card, songs)
+        portalLinks = getPortalLinks(card, songs)
 
     // Add portal key to dot keys.
     if (portalLinks) { dotKeys.portal = true }

@@ -1,5 +1,5 @@
 // For dev purposes. Log object info.
-import AlbumHelper from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getVerse } from 'helpers/album-view-helper'
 import { WINDOW_STORAGE, LYRIC_TEXT_KEYS } from './constants'
 
 export default {
@@ -10,7 +10,7 @@ export default {
     },
 
     logSong({ props }) {
-        const selectedSong = AlbumHelper.getSong(props),
+        const selectedSong = getSong(props),
             copiedSong = Object.assign({}, selectedSong)
 
         copiedSong.lyrics = `lyrics length: ${copiedSong.lyrics.length}`
@@ -24,8 +24,8 @@ export default {
     logVerse({ props }) {
         const { selectedVerseIndex } = props,
 
-            selectedSong = AlbumHelper.getSong(props),
-            verse = AlbumHelper.getVerse(selectedVerseIndex, selectedSong)
+            selectedSong = getSong(props),
+            verse = getVerse(selectedVerseIndex, selectedSong)
 
         return this._logObject('selected verse', verse)
     },
@@ -33,8 +33,8 @@ export default {
     logAnchorAnnotation({ props }) {
         const { selectedAnnotationIndex } = props,
 
-            selectedSong = AlbumHelper.getSong(props),
-            annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong)
+            selectedSong = getSong(props),
+            annotation = getAnnotation(selectedAnnotationIndex, selectedSong)
 
         return this._logObject('selected annotation', annotation)
     },

@@ -24,7 +24,7 @@ import { SONGS_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import AlbumHelper from 'helpers/album-view-helper'
+import { getSong, getAnnotation } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
 import { intersects } from 'helpers/dot-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
@@ -138,7 +138,6 @@ class App extends Component {
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
         this._onKeyDown = this._onKeyDown.bind(this)
-        this.setState = this.setState.bind(this)
     }
 
     _assignLogFunctions() {
@@ -289,7 +288,7 @@ class App extends Component {
     }
 
     selectTime(e, selectedTimePlayed = 0) {
-        const selectedSong = AlbumHelper.getSong(this.props)
+        const selectedSong = getSong(this.props)
 
         if (selectedTimePlayed >= 0 && selectedTimePlayed < selectedSong.totalTime) {
 
@@ -319,7 +318,7 @@ class App extends Component {
             scroll = false
 
         } else {
-            const selectedSong = AlbumHelper.getSong(this.props)
+            const selectedSong = getSong(this.props)
 
             // Select corresponding time.
             selectedTimePlayed = selectedSong.times[selectedVerseIndex - 1]
@@ -418,98 +417,98 @@ class App extends Component {
             this._focusApp()
         }
 
-        if (!AccessHelper.handleKeyIfUniversal({
-                keyName,
-                handleSectionAccess: this._handleSectionAccess,
-                selectOverview: this.selectOverview,
-                selectAudioOption: this.selectAudioOption,
-                togglePlay: this.togglePlay
-            })) {
+        // If universal key, handle and return.
+        if (AccessHelper.handleKeyIfUniversal({
+            keyName,
+            handleSectionAccess: this._handleSectionAccess,
+            selectOverview: this.selectOverview,
+            selectAudioOption: this.selectAudioOption,
+            togglePlay: this.togglePlay
+        })) { return }
 
-            // If access is off, any key besides Escape turns it on.
-            if (!this.props.accessedOn) {
-                if (keyName !== ESCAPE && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
-                    this._handleAccessOn()
-                }
+        // If access is off, any key besides Escape turns it on.
+        if (!this.props.accessedOn) {
+            if (keyName !== ESCAPE && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                this._handleAccessOn()
+            }
 
-            // If access is on...
+        // If access is on...
+        } else {
+            // Spacebar accesses next section...
+            if (keyName === SPACE) {
+                this._handleSectionAccess()
+
+            // Escape turns off access...
+            } else if (keyName === ESCAPE) {
+                this._handleAccessOn()
+
+            // Otherwise, it depends on what section is accessed.
             } else {
-                // Spacebar accesses next section...
-                if (keyName === SPACE) {
-                    this._handleSectionAccess()
+                const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
+                let newState
 
-                // Escape turns off access...
-                } else if (keyName === ESCAPE) {
-                    this._handleAccessOn()
+                switch (accessedSectionKey) {
+                    case SONGS_SECTION:
+                        newState = AccessHelper.handleSongAccess({
+                            keyName,
+                            // Include option of no song.
+                            songsLength: this.props.songs.length + 1,
+                            accessedSongIndex: this.state.accessedSongIndex,
+                            selectedTimePlayed: this.props.selectedTimePlayed,
+                            selectTime: this.selectTime,
+                            selectSong: this.selectSong
+                        })
+                        break
+                    case AUDIO_SECTION:
+                        AccessHelper.handleAudioAccess({
+                            keyName,
+                            togglePlay: this.togglePlay,
+                            selectAudioOption: this.selectAudioOption
+                        })
+                        break
+                    case OVERVIEW_SECTION:
+                        AccessHelper.handleOverviewAccess({
+                            keyName,
+                            selectOverview: this.selectOverview
+                        })
+                        break
+                    case LYRICS_SECTION:
+                        const { selectedAnnotationIndex } = this.props,
+                            { accessedAnnotationIndex,
+                              accessedAnnotationOutlined } = this.state,
+                            selectedSong = getSong(this.props),
+                            annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0
 
-                // Otherwise, it depends on what section is accessed.
-                } else {
-                    const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
-
-                    switch (accessedSectionKey) {
-                        case SONGS_SECTION:
-                            AccessHelper.handleSongAccess({
-                                keyName,
-                                // Include option of no song.
-                                songsLength: this.props.songs.length + 1,
-                                accessedSongIndex: this.state.accessedSongIndex,
-                                selectedTimePlayed: this.props.selectedTimePlayed,
-                                selectTime: this.selectTime,
-                                selectSong: this.selectSong,
-                                setState: this.setState
-                            })
-                            break
-                        case AUDIO_SECTION:
-                            AccessHelper.handleAudioAccess({
-                                keyName,
-                                togglePlay: this.togglePlay,
-                                selectAudioOption: this.selectAudioOption
-                            })
-                            break
-                        case OVERVIEW_SECTION:
-                            AccessHelper.handleOverviewAccess({
-                                keyName,
-                                selectOverview: this.selectOverview
-                            })
-                            break
-                        case LYRICS_SECTION:
-                            const { selectedAnnotationIndex } = this.props,
-                                { accessedAnnotationIndex,
-                                  accessedAnnotationOutlined } = this.state,
-                                selectedSong = AlbumHelper.getSong(this.props),
-                                annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0
-
-                            AccessHelper.handleLyricsAccess({
-                                keyName,
-                                selectedAnnotationIndex,
-                                annotationsLength,
-                                accessedAnnotationIndex,
-                                accessedAnnotationOutlined,
-                                selectAnnotation: this.selectAnnotation,
-                                scrollElementIntoView,
-                                setState: this.setState
-                            })
-                            break
-                        case DOTS_SECTION:
-                            AccessHelper.handleDotAccess({
-                                keyName,
-                                accessedDotIndex: this.state.accessedDotIndex,
-                                selectDot: this.selectDot,
-                                setState: this.setState
-                            })
-                            break
-                        case ANNOTATION_SECTION:
-                            AccessHelper.handleAnnotationAccess({
-                                keyName
-                            })
-                            break
-                        case WIKI_SECTION:
-                            AccessHelper.handleWikiAccess({
-                                keyName
-                            })
-                            break
-                    }
+                        newState = AccessHelper.handleLyricsAccess({
+                            keyName,
+                            selectedAnnotationIndex,
+                            annotationsLength,
+                            accessedAnnotationIndex,
+                            accessedAnnotationOutlined,
+                            selectAnnotation: this.selectAnnotation,
+                            scrollElementIntoView
+                        })
+                        break
+                    case DOTS_SECTION:
+                        newState = AccessHelper.handleDotAccess({
+                            keyName,
+                            accessedDotIndex: this.state.accessedDotIndex,
+                            selectDot: this.selectDot
+                        })
+                        break
+                    case ANNOTATION_SECTION:
+                        AccessHelper.handleAnnotationAccess({
+                            keyName
+                        })
+                        break
+                    case WIKI_SECTION:
+                        AccessHelper.handleWikiAccess({
+                            keyName
+                        })
+                        break
                 }
+
+                this.setState(newState)
             }
         }
     }
@@ -518,8 +517,8 @@ class App extends Component {
         const { selectedAnnotationIndex,
                 selectedDotKeys } = this.props
 
-        const selectedSong = AlbumHelper.getSong(this.props),
-            annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong),
+        const selectedSong = getSong(this.props),
+            annotation = getAnnotation(selectedAnnotationIndex, selectedSong),
             presentDotKeys = annotation ? annotation.dotKeys : null,
 
             // The dotKey being deselected is still selected at this stage.

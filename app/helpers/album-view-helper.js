@@ -1,66 +1,61 @@
 // Parse album data for presentation.
 import { ALBUM_BUILD_KEYS } from './constants'
 
-export default {
+/**
+ * Recurse until object with verse index is found.
+ */
+const _parseLyrics = (lyric, selectedVerseIndex) => {
+    if (lyric.verseIndex === selectedVerseIndex) {
+        return lyric
+    } else if (Array.isArray(lyric)) {
+        return lyric.reduce((childSelectedLyric, childLyric) => {
+            return childSelectedLyric || _parseLyrics(childLyric, selectedVerseIndex)
+        }, null)
+    }
+}
 
-    getSong({ selectedSongIndex, songs }) {
-        return selectedSongIndex ?
-            songs[selectedSongIndex - 1] : {}
-    },
+export const getSong = ({ selectedSongIndex, songs }) => {
+    return selectedSongIndex ?
+        songs[selectedSongIndex - 1] : {}
+}
 
-    getAnnotation(selectedAnnotationIndex, selectedSong) {
-        const { annotations } = selectedSong
+export const getAnnotation = (selectedAnnotationIndex, selectedSong) => {
+    const { annotations } = selectedSong
+    return annotations ?
+            annotations[selectedAnnotationIndex - 1] : null
+}
 
-        return annotations ?
-                annotations[selectedAnnotationIndex - 1] : null
-    },
+export const getVerse = (selectedVerseIndex, selectedSong) => {
+    const { lyrics } = selectedSong
+    return _parseLyrics(lyrics, selectedVerseIndex)
+}
 
-    getVerse(selectedVerseIndex, selectedSong) {
-        const { lyrics } = selectedSong
+export const getTasks = (selectedSong, tasks) => {
+    const songTasks = selectedSong.tasks
 
-        return this._parseLyrics(lyrics, selectedVerseIndex)
-    },
+    // If no song tasks, then return album tasks.
+    return songTasks ? songTasks : tasks
+}
 
-    /**
-     * Recurse until object with verse index is found.
-     */
-    _parseLyrics(lyric, selectedVerseIndex) {
-        if (lyric.verseIndex === selectedVerseIndex) {
-            return lyric
-        } else if (Array.isArray(lyric)) {
-            return lyric.reduce((childSelectedLyric, childLyric) => {
-                return childSelectedLyric || this._parseLyrics(childLyric, selectedVerseIndex)
-            }, null)
-        }
-    },
+export const getPortalLinks = (card, songs) => {
+    if (card) {
+        const { portalLinks } = card
 
-    getTasks(selectedSong, tasks) {
-        const songTasks = selectedSong.tasks
+        // Each portal link contains a portal title and index.
+        return portalLinks ? portalLinks.map((portalLink) => {
+            const { songIndex,
+                    annotationIndex } = portalLink,
+                song = songs[songIndex - 1],
+                annotation = song.annotations[annotationIndex - 1]
 
-        // If no song tasks, then return album tasks.
-        return songTasks ? songTasks : tasks
-    },
-
-    getPortalLinks(card, songs) {
-        if (card) {
-            const { portalLinks } = card
-
-            // Each portal link contains a portal title and index.
-            return portalLinks ? portalLinks.map((portalLink) => {
-                const { songIndex,
-                        annotationIndex } = portalLink,
-                    song = songs[songIndex - 1],
-                    annotation = song.annotations[annotationIndex - 1]
-
-                return {
-                    songIndex,
-                    annotationIndex,
-                    songTitle: song.title,
-                    annotationTitle: annotation.title
-                }
-            }) : null
-        } else {
-            return null
-        }
+            return {
+                songIndex,
+                annotationIndex,
+                songTitle: song.title,
+                annotationTitle: annotation.title
+            }
+        }) : null
+    } else {
+        return null
     }
 }
