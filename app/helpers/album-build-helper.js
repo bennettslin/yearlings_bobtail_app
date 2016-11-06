@@ -164,10 +164,14 @@ const _prepareAnnotation = (lyric = {}, annotation = {}, dotKeys = {}) => {
 }
 
 const _addWikiToDots = (card, dotKeys) => {
+    const { description } = card
+
     // If card has a wiki link, add wiki key to dot keys.
-    if (card.description) {
-        const hasWiki = findKeyInObject('wiki', card.description)
+    if (description) {
+        const hasWiki = findKeyInObject('wiki', description, 'wikiIndex')
         if (hasWiki) {
+
+            // Add wiki anchor index to each anchor with wiki.
             if (!card.dotKeys) {
                 card.dotKeys = {}
             }

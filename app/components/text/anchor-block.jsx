@@ -74,7 +74,7 @@ const AnchorBlockView = ({
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
         { !beginsNewLine ? ' ' : null }
         <a
-            className={`anchor-block annotation-${annotationIndex}${isAccessOutlined ? ' access-outlined' : ''}${isSelected ? '' : ' enabled'}${hasTodo ? ' todo' : ''}`}
+            className={`anchor-block${annotationIndex ? ' annotation-' + annotationIndex : ''}${isAccessOutlined ? ' access-outlined' : ''}${isSelected ? '' : ' enabled'}${hasTodo ? ' todo' : ''}`}
             onClick={onClick}
         >
             {isLyric ?
