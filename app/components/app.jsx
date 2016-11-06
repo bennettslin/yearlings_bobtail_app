@@ -401,13 +401,11 @@ class App extends Component {
     _handleSectionAccess(accessedSectionKey, accessOn) {
         const accessedSectionIndex = AccessHelper.handleSectionAccess({
             selectedSongIndex: this.props.selectedSongIndex,
-            accessedSectionIndex: this.props.accessedSectionIndex,
+            currentAccessedSectionIndex: this.props.accessedSectionIndex,
             accessedSectionKey,
             accessOn,
             handleAccessOn: this._handleAccessOn
         })
-
-        console.error('accessedSectionIndex', accessedSectionIndex);
 
         this.props.accessSectionIndex(accessedSectionIndex)
     }

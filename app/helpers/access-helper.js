@@ -68,14 +68,16 @@ export default {
 
     handleSectionAccess({
         selectedSongIndex,
-        accessedSectionIndex = 0,
+        currentAccessedSectionIndex,
         accessedSectionKey,
         accessOn,
         handleAccessOn
     }) {
+        let accessedSectionIndex = 0
+
         // If no section key specified, rotate through sections.
         if (!accessedSectionKey) {
-            accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
+            accessedSectionIndex = (currentAccessedSectionIndex + 1) % SECTION_KEYS.length
 
             // Skip lyrics and dots sections if no selected song.
             if (selectedSongIndex === 0) {
