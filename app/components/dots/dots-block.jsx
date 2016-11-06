@@ -45,13 +45,14 @@ const DotsBlockView = ({
     presentDotKeys,
     sectionAccessHighlighted,
     accessedDotIndex,
+    annotationIndex,
 
     // From controller.
     isInteractable,
 
 ...other }) => (
 
-    <span className={`dots-block${isInteractable ? ' interactable' : ''}`}>
+    <span className={`dots-block${annotationIndex ? ' annotation-' + annotationIndex : ''}${isInteractable ? ' interactable' : ''}`}>
         {ALL_DOT_KEYS.map((dotKey, index) => {
             const isSelected = selectedDotKeys[dotKey],
                 isPresent = presentDotKeys[dotKey]
