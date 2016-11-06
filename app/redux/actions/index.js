@@ -4,7 +4,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_TIME_PLAYED,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
-         SELECTED_PLAYER_OPTION_INDEX,
+         SELECTED_AUDIO_OPTION_INDEX,
          SELECTED_WIKI_URL,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
@@ -70,11 +70,11 @@ export const selectOverviewIndex = (selectedOverviewIndex = 0) => {
     }
 }
 
-export const selectPlayerOptionIndex = (selectedPlayerOptionIndex = 0) => {
-    setInSession(SELECTED_PLAYER_OPTION_INDEX, selectedPlayerOptionIndex)
+export const selectAudioOptionIndex = (selectedAudioOptionIndex = 0) => {
+    setInSession(SELECTED_AUDIO_OPTION_INDEX, selectedAudioOptionIndex)
     return {
-        type: SELECTED_PLAYER_OPTION_INDEX,
-        payload: selectedPlayerOptionIndex
+        type: SELECTED_AUDIO_OPTION_INDEX,
+        payload: selectedAudioOptionIndex
     }
 }
 

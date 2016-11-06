@@ -14,7 +14,7 @@
     * Stage section shows "Esc" key, unless annotation or wiki section is accessed.
     * Keys can be clicked, which performs the action and then turns access off.
 
-* When player section is accessed:
+* When audio section is accessed:
     * "Enter" and Left and Right arrow keys are shown.
     * When "Enter" is pressed:
         * Toggle between play and pause.
@@ -97,10 +97,10 @@
         * Wiki section is closed, and annotation section becomes accessed section.
 
 * These keys will always fire, even if access is off:
-    * "a" to access player section (audio)
+    * "a" to access audio section
     * "d" to access dots section
     * "l" to access lyrics section
     * "s" to access songs section
     * "p" to toggle "isPlaying"
-    * "o" to toggle "playerOptionIndex"
+    * "o" to toggle "audioOptionIndex"
     * "b" to toggle "selectedOverviewIndex"

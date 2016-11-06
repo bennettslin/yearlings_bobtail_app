@@ -402,7 +402,7 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `add player section`,
+            taskName: `add audio section`,
             workedHours: 2,
             neededHours: 2
         },

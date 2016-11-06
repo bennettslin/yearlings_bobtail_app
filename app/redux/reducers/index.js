@@ -5,7 +5,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_TIME_PLAYED,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
-         SELECTED_PLAYER_OPTION_INDEX,
+         SELECTED_AUDIO_OPTION_INDEX,
          SELECTED_WIKI_URL,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
@@ -18,7 +18,7 @@ const { getFromSession } = SessionHelper,
     storedTime = getFromSession(SELECTED_TIME_PLAYED),
     storedDotKeys = getFromSession(SELECTED_DOT_KEYS),
     storedOverviewIndex = getFromSession(SELECTED_OVERVIEW_INDEX),
-    storedPlayerOptionIndex = getFromSession(SELECTED_PLAYER_OPTION_INDEX),
+    storedAudioOptionIndex = getFromSession(SELECTED_AUDIO_OPTION_INDEX),
     storedWikiUrl = getFromSession(SELECTED_WIKI_URL),
     storedAccessedOn = getFromSession(ACCESSED_ON),
     storedAccessedSectionIndex = getFromSession(ACCESSED_SECTION_INDEX)
@@ -92,9 +92,9 @@ export const OverviewIndexReducer = (state = storedOverviewIndex, action) => {
     }
 }
 
-export const PlayerOptionIndexReducer = (state = storedPlayerOptionIndex, action) => {
+export const AudioOptionIndexReducer = (state = storedAudioOptionIndex, action) => {
     switch (action.type) {
-        case SELECTED_PLAYER_OPTION_INDEX:
+        case SELECTED_AUDIO_OPTION_INDEX:
             return action.payload
         default:
             return state
@@ -126,7 +126,7 @@ const rootReducer = combineReducers({
     selectedTimePlayed: TimeReducer,
     selectedDotKeys: DotKeysReducer,
     selectedOverviewIndex: OverviewIndexReducer,
-    selectedPlayerOptionIndex: PlayerOptionIndexReducer,
+    selectedAudioOptionIndex: AudioOptionIndexReducer,
     selectedWikiUrl: WikiUrlReducer,
     accessedOn: AccessedOnReducer,
     accessedSectionIndex: AccessedSectionIndexReducer

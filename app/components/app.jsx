@@ -8,13 +8,13 @@ import { selectSongIndex,
          selectTimePlayed,
          selectDotKey,
          selectOverviewIndex,
-         selectPlayerOptionIndex,
+         selectAudioOptionIndex,
          selectWikiUrl,
          accessOn,
          accessSectionIndex } from 'redux/actions'
 import Album from './album'
 import { SONGS_SECTION,
-         PLAYER_SECTION,
+         AUDIO_SECTION,
          OVERVIEW_SECTION,
          LYRICS_SECTION,
          DOTS_SECTION,
@@ -22,13 +22,6 @@ import { SONGS_SECTION,
          WIKI_SECTION,
          SECTION_KEYS,
 
-         ALL_DOT_KEYS,
-
-         ARROW_LEFT,
-         ARROW_RIGHT,
-         ARROW_UP,
-         ARROW_DOWN,
-         ENTER,
          ESCAPE,
          SPACE } from 'helpers/constants'
 import AlbumHelper from 'helpers/album-view-helper'
@@ -48,7 +41,7 @@ const passReduxStateToProps = ({
     selectedTimePlayed,
     selectedDotKeys,
     selectedOverviewIndex,
-    selectedPlayerOptionIndex,
+    selectedAudioOptionIndex,
     selectedWikiUrl,
     accessedOn,
     accessedSectionIndex
@@ -60,7 +53,7 @@ const passReduxStateToProps = ({
     selectedTimePlayed,
     selectedDotKeys,
     selectedOverviewIndex,
-    selectedPlayerOptionIndex,
+    selectedAudioOptionIndex,
     selectedWikiUrl,
     accessedOn,
     accessedSectionIndex
@@ -75,7 +68,7 @@ const bindDispatchToProps = (dispatch) => (
         selectTimePlayed,
         selectDotKey,
         selectOverviewIndex,
-        selectPlayerOptionIndex,
+        selectAudioOptionIndex,
         selectWikiUrl,
         accessOn,
         accessSectionIndex
@@ -130,7 +123,7 @@ class App extends Component {
         this.togglePlay = this.togglePlay.bind(this)
         this.selectSong = this.selectSong.bind(this)
         this.selectOverview = this.selectOverview.bind(this)
-        this.selectPlayerOption = this.selectPlayerOption.bind(this)
+        this.selectAudioOption = this.selectAudioOption.bind(this)
         this.selectAnnotation = this.selectAnnotation.bind(this)
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
@@ -172,7 +165,7 @@ class App extends Component {
 
     togglePlay(e) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess(PLAYER_SECTION) }
+        if (e) { this._handleSectionAccess(AUDIO_SECTION) }
 
         this.setState({
             isPlaying: !this.state.isPlaying
@@ -222,17 +215,17 @@ class App extends Component {
         }
     }
 
-    selectPlayerOption(e, direction = 1) {
+    selectAudioOption(e, direction = 1) {
         // TODO: Make not hard-coded.
         const optionsLength = 3
 
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess(PLAYER_SECTION) }
+        if (e) { this._handleSectionAccess(AUDIO_SECTION) }
 
         /**
          * Stored as integer. 0 is to "continue after next," 1 is to "repeat," 2 is to "pause after song."
          */
-        this.props.selectPlayerOptionIndex((this.props.selectedPlayerOptionIndex + direction + optionsLength) % optionsLength)
+        this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
     }
 
     selectDot(e, selectedDotKey) {
@@ -343,7 +336,7 @@ class App extends Component {
 
         /**
         * TODO: Make this more robust, so that a verse change prompted by the
-        * player will only scroll the lyrics if the previous verse is visible
+        * audio will only scroll the lyrics if the previous verse is visible
         * and the selected verse is not.
         */
         if (scroll) {
@@ -398,19 +391,6 @@ class App extends Component {
     /*******************
      * ACCESS HANDLERS *
      *******************/
-
-    // For dev purposes only.
-    _handleAccessedVerseSelect(keyName) {
-        const { selectedVerseIndex } = this.props,
-            selectedSong = AlbumHelper.getSong(this.props),
-            timesLength = selectedSong.times ? selectedSong.times.length : 0
-
-        if (keyName === ARROW_UP) {
-            this.selectVerse(undefined, selectedVerseIndex - 1)
-        } else if (keyName === ARROW_DOWN) {
-            this.selectVerse(undefined, selectedVerseIndex + 1)
-        }
-    }
 
     _handleAccessOn(accessedOn) {
         // Stored as integer. 0 is false, 1 is true.
@@ -482,7 +462,7 @@ class App extends Component {
                 keyName,
                 handleSectionAccess: this._handleSectionAccess,
                 selectOverview: this.selectOverview,
-                selectPlayerOption: this.selectPlayerOption,
+                selectAudioOption: this.selectAudioOption,
                 togglePlay: this.togglePlay
             })) {
 
@@ -519,11 +499,11 @@ class App extends Component {
                                 setState: this.setState
                             })
                             break
-                        case PLAYER_SECTION:
-                            AccessHelper.handlePlayerAccess({
+                        case AUDIO_SECTION:
+                            AccessHelper.handleAudioAccess({
                                 keyName,
                                 togglePlay: this.togglePlay,
-                                selectPlayerOption: this.selectPlayerOption
+                                selectAudioOption: this.selectAudioOption
                             })
                             break
                         case OVERVIEW_SECTION:
@@ -608,8 +588,8 @@ class App extends Component {
                     onWikiUrlClick={this.selectWiki}
                     onAnnotationClick={this.selectAnnotation}
                     onOverviewClick={this.selectOverview}
-                    onPlayerOptionClick={this.selectPlayerOption}
-                    onPlayButtonClick={this.togglePlay}
+                    onAudioOptionClick={this.selectAudioOption}
+                    onPlayClick={this.togglePlay}
                     onVerseClick={this.selectVerse}
                     onDotClick={this.selectDot}
                     onDotHover={this.hoverDot}

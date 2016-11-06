@@ -1,5 +1,5 @@
 import { SONGS_SECTION,
-         PLAYER_SECTION,
+         AUDIO_SECTION,
          LYRICS_SECTION,
          DOTS_SECTION,
 
@@ -18,7 +18,7 @@ export default {
         keyName,
         handleSectionAccess,
         selectOverview,
-        selectPlayerOption,
+        selectAudioOption,
         togglePlay
     }) {
         // These keys will always fire, even if access is off.
@@ -26,7 +26,7 @@ export default {
             // Directly access sections.
             case 'a':
             case 'A':
-                handleSectionAccess(PLAYER_SECTION, true)
+                handleSectionAccess(AUDIO_SECTION, true)
                 break
             case 'd':
             case 'D':
@@ -45,10 +45,10 @@ export default {
             case 'B':
                 selectOverview()
                 break
-            // Toggle player option index.
+            // Toggle audio option index.
             case 'o':
             case 'O':
-                selectPlayerOption()
+                selectAudioOption()
                 break
             // Toggle isPlaying.
             case 'p':
@@ -96,20 +96,20 @@ export default {
         })
     },
 
-    handlePlayerAccess({
+    handleAudioAccess({
         keyName,
         togglePlay,
-        selectPlayerOption
+        selectAudioOption
     }) {
         switch (keyName) {
             case ENTER:
                 togglePlay()
                 break
             case ARROW_LEFT:
-                selectPlayerOption(undefined, -1)
+                selectAudioOption(undefined, -1)
                 break
             case ARROW_RIGHT:
-                selectPlayerOption()
+                selectAudioOption()
                 break
         }
     },
