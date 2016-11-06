@@ -13,18 +13,7 @@ import { selectSongIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
 import Album from './album'
-import { SELECTED_SONG_INDEX,
-         SELECTED_ANNOTATION_INDEX,
-         SELECTED_VERSE_INDEX,
-         SELECTED_TIME_PLAYED,
-         SELECTED_DOT_KEYS,
-         SELECTED_OVERVIEW_INDEX,
-         SELECTED_PLAYER_OPTION_INDEX,
-         SELECTED_WIKI_URL,
-         ACCESSED_ON,
-         ACCESSED_SECTION_INDEX,
-
-         SONGS_SECTION,
+import { SONGS_SECTION,
          PLAYER_SECTION,
          OVERVIEW_SECTION,
          LYRICS_SECTION,
@@ -144,6 +133,7 @@ class App extends Component {
         this.selectPlayerOption = this.selectPlayerOption.bind(this)
         this.selectAnnotation = this.selectAnnotation.bind(this)
         this.selectVerse = this.selectVerse.bind(this)
+        this.selectTime = this.selectTime.bind(this)
         this.selectDot = this.selectDot.bind(this)
         this.hoverDot = this.hoverDot.bind(this)
         this.hoverLine = this.hoverLine.bind(this)
@@ -154,6 +144,7 @@ class App extends Component {
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
         this._onKeyDown = this._onKeyDown.bind(this)
+        this.setState = this.setState.bind(this)
     }
 
     _assignLogFunctions() {
@@ -299,7 +290,7 @@ class App extends Component {
     selectPortal(e, selectedSongIndex, selectedAnnotationIndex) {
         this._stopPropagation(e)
 
-        this.selectSong(undefined, selectedSongIndex, SELECTED_SONG_INDEX)
+        this.selectSong(undefined, selectedSongIndex)
         this.selectAnnotation(undefined, selectedAnnotationIndex)
     }
 
@@ -545,88 +536,6 @@ class App extends Component {
         }
     }
 
-    _handleOverviewAccess(keyName) {
-        if (keyName === ENTER) {
-            this.selectOverview()
-        }
-    }
-
-    _handleSongAccess(keyName) {
-        // Include option of no song.
-        const songsLength = this.props.songs.length + 1
-        let accessedSongIndex = this.state.accessedSongIndex
-
-        switch (keyName) {
-            case ARROW_UP:
-                accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
-                break
-            case ARROW_DOWN:
-                accessedSongIndex = (accessedSongIndex + 1) % songsLength
-                break
-            // FIXME: Left and right arrows are for dev purposes only.
-            case ARROW_LEFT:
-                this.selectTime(undefined, this.props.selectedTimePlayed - 1)
-                break
-            case ARROW_RIGHT:
-                this.selectTime(undefined, this.props.selectedTimePlayed + 1)
-                break
-            case ENTER:
-                this.selectSong(undefined, accessedSongIndex)
-                break
-        }
-
-        this.setState({
-            accessedSongIndex
-        })
-    }
-
-    _handlePlayerAccess(keyName) {
-        switch (keyName) {
-            case ENTER:
-                this.togglePlay()
-                break
-            case ARROW_LEFT:
-                this.selectPlayerOption(undefined, -1)
-                break
-            case ARROW_RIGHT:
-                this.selectPlayerOption()
-                break
-        }
-    }
-
-    _handleDotAccess(keyName) {
-        if (keyName === ENTER) {
-            this.selectDot(undefined, ALL_DOT_KEYS[this.state.accessedDotIndex])
-
-        } else if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-            let accessedDotIndex,
-                direction
-
-            switch (keyName) {
-                case ARROW_LEFT:
-                    direction = ALL_DOT_KEYS.length - 1
-                    break
-                case ARROW_RIGHT:
-                    direction = 1
-                    break
-            }
-
-            accessedDotIndex = (this.state.accessedDotIndex + direction) % ALL_DOT_KEYS.length
-
-            this.setState({
-                accessedDotIndex
-            })
-        }
-    }
-
-    _handleAnnotationAccess(keyName) {
-
-    }
-
-    _handleWikiAccess(keyName) {
-
-    }
-
     // TODO: If called from handleAccessOn, reset all. If called from handleSectionAccess, only reset the sections that aren't accessed. Will need all sections accessible to fully test.
     // TODO: Instead of resetting, maybe just set before each one is accessed.
     _resetAccessedIndices(accessedSectionKey) {
@@ -662,7 +571,6 @@ class App extends Component {
 
             // If access is on...
             } else {
-
                 // Spacebar accesses next section...
                 if (keyName === SPACE) {
                     this._handleSectionAccess()
@@ -677,25 +585,50 @@ class App extends Component {
 
                     switch (accessedSectionKey) {
                         case SONGS_SECTION:
-                            this._handleSongAccess(keyName)
+                            AccessHelper.handleSongAccess({
+                                keyName,
+                                // Include option of no song.
+                                songsLength: this.props.songs.length + 1,
+                                accessedSongIndex: this.state.accessedSongIndex,
+                                selectedTimePlayed: this.props.selectedTimePlayed,
+                                selectTime: this.selectTime,
+                                selectSong: this.selectSong,
+                                setState: this.setState
+                            })
                             break
                         case PLAYER_SECTION:
-                            this._handlePlayerAccess(keyName)
+                            AccessHelper.handlePlayerAccess({
+                                keyName,
+                                togglePlay: this.togglePlay,
+                                selectPlayerOption: this.selectPlayerOption
+                            })
                             break
                         case OVERVIEW_SECTION:
-                            this._handleOverviewAccess(keyName)
+                            AccessHelper.handleOverviewAccess({
+                                keyName,
+                                selectOverview: this.selectOverview
+                            })
                             break
                         case LYRICS_SECTION:
                             this._handleLyricsAccess(keyName)
                             break
                         case DOTS_SECTION:
-                            this._handleDotAccess(keyName)
+                            AccessHelper.handleDotAccess({
+                                keyName,
+                                accessedDotIndex: this.state.accessedDotIndex,
+                                selectDot: this.selectDot,
+                                setState: this.setState
+                            })
                             break
                         case ANNOTATION_SECTION:
-                            this._handleAnnotationAccess(keyName)
+                            AccessHelper.handleAnnotationAccess({
+                                keyName
+                            })
                             break
                         case WIKI_SECTION:
-                            this._handleWikiAccess(keyName)
+                            AccessHelper.handleWikiAccess({
+                                keyName
+                            })
                             break
                     }
                 }

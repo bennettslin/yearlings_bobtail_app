@@ -13,13 +13,14 @@ import AlbumHelper from 'helpers/album-view-helper'
 const Shared = ({
 
     songs,
-    overview,
+    overview: albumOverview,
     selectedSongIndex,
     albumTasks,
 
 ...other }) => {
     const selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
-        overviewText = selectedSong.overview ? selectedSong.overview : overview,
+        { overview } = selectedSong,
+        overviewText = overview ? overview : albumOverview,
         tasks = AlbumHelper.getTasks(selectedSong, albumTasks)
 
     return (

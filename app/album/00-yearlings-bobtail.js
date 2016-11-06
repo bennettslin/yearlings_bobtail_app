@@ -65,11 +65,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `switch from time logic to verse index in verse`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `lyrics, not app, should care about hovered line`,
             workedHours: 0,
             neededHours: 3
@@ -428,6 +423,11 @@ module.exports = {
         },
         {
             taskName: `selected time will change selected line`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `switch from time logic to verse index in verse`,
             workedHours: 1,
             neededHours: 1
         }

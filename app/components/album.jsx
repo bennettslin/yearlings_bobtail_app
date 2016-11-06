@@ -13,15 +13,15 @@ import ProgressHelper from 'helpers/progress-helper'
 const Album = ({
 
     songs,
-    tasks,
+    tasks: albumTasks,
 
 ...other }) => {
-    const allTasks = ProgressHelper.getAllTaskObjects(tasks, songs)
+    const allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs)
 
     return (
         <AlbumView {...other}
             songs={songs}
-            albumTasks={tasks}
+            albumTasks={albumTasks}
             allTasks={allTasks}
         />
     )
