@@ -22,9 +22,18 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // wiki: maqam, polyphony
                         description: [
-                            `For a song about two people who couldn't be more different, I juxtaposed Arabic maqam and Renaissance polyphony. The quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter step flat. The shrieking whistles, which remind me of trains braking in a subway tunnel, were made by overblowing into recorders.`
+                            `For a song about two people who couldn't be more different, I juxtaposed`,
+                            {
+                                anchor: `Arabic maqam`,
+                                wiki: `Arabic_maqam`
+                            },
+                            `and`,
+                            {
+                                anchor: `Renaissance polyphony.`,
+                                wiki: `Polyphony`
+                            },
+                            `The quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter step flat. The shrieking whistles, which remind me of trains braking in a subway tunnel, were made by overblowing into recorders.`
                         ],
                         dotKeys: {
                             music: true
@@ -175,7 +184,8 @@ module.exports = {
         [
             {
                 time: 30,
-                lyric: `Oh and for Catherine, St. Catherine of God,`
+                // Note: I'm spelling out Saint, from St.
+                lyric: `Oh and for Catherine, Saint Catherine of God,`
             },
             {
                 time: 34,
@@ -184,9 +194,13 @@ module.exports = {
                     {
                         anchor: `dirge she'd deride,`,
                         annotation: {
-                            // wiki: dirge
                             description: [
-                                `A dirge is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music any differently. But Catherine appreciated music for its lyrics, and as such, she wasn't impressed by my songwriting skills.`
+                                `A`,
+                                {
+                                    anchor: `dirge`,
+                                    wiki: `Dirge`
+                                },
+                                `is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music any differently. But Catherine appreciated music for its lyrics, and as such, she wasn't impressed by my songwriting skills.`
                             ]
                         }
                     }
@@ -276,8 +290,12 @@ module.exports = {
                         anchor: `outside her Shelta,`,
                         annotation: {
                             description: [
-                                // wiki: travellers, *not* shelta
-                                `The Irish Travellers, a predominantly Catholic ethnic group, speak a cryptic language known as`,
+                                `The`,
+                                {
+                                    anchor: `Irish Travellers,`,
+                                    wiki: `Irish_Travellers`
+                                },
+                                `a predominantly Catholic ethnic group, speak a cryptic language known as`,
                                 {
                                     anchor: `Shelta`,
                                     wiki: `Shelta`
@@ -296,7 +314,6 @@ module.exports = {
                         anchor: `famous raincoat`,
                         annotation: {
                             description: [
-                                // wiki: leonard cohen, not famous blue raincoat
                                 `Catherine introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
                                 {
                                     anchor: `"Famous Blue Raincoat"`,
@@ -337,10 +354,7 @@ module.exports = {
                             description: [
                                 `Having decided to win Catherine back by reading more books, I began with those we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's earlier novel`,
                                 {
-                                    italic: {
-                                        anchor: `Beautiful Losers,`,
-                                        wiki: `Beautiful_Losers`
-                                    }
+                                    italic: `Beautiful Losers,`
                                 },
                                 `particularly in its line, "Did you ever go clear?"`
                             ]
@@ -359,7 +373,7 @@ module.exports = {
                                 {
                                     italic: `Beautiful Losers.`
                                 },
-                                `I always assumed that "going clear" was a reference to the legend that Tekakwitha's smallpox scars miraculously vanished upon her death.`
+                                `I always assumed that "going clear" was a reference to the legend that her smallpox scars miraculously vanished upon her death. Tekakwitha was baptised as Saint Catherine.`
                             ]
                         }
                     }
@@ -373,9 +387,13 @@ module.exports = {
                     {
                         anchor: `safe Algonquin abode.`,
                         annotation: {
-                            // wiki: algonquin round table
                             description: [
-                                `Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the Algonquin Round Table, a social circle of New York City writers known for their clever wordplay and wit.`
+                                `Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured through tribal warfare. Dorothy Parker was a member of the`,
+                                {
+                                    anchor: `Algonquin Round Table,`,
+                                    wiki: `Algonquin_Round_Table`
+                                },
+                                `a social circle of New York City writers known for their clever wordplay and wit.`
                             ]
                         }
                     }
