@@ -159,9 +159,31 @@ class App extends Component {
         }
     }
 
-    /*************************
-     * STATE CHANGE HANDLERS *
-     *************************/
+    _closePopupIfOpen(accessOff) {
+        const { selectedAnnotationIndex,
+                selectedWikiUrl } = this.props
+
+        // If there is a popup, close it.
+        if (selectedAnnotationIndex) {
+            if (selectedWikiUrl) {
+                this.selectWiki()
+                this._handleSectionAccess(ANNOTATION_SECTION)
+            } else {
+                this.selectAnnotation()
+                this._handleSectionAccess(LYRICS_SECTION)
+            }
+
+            if (accessOff) { this._handleAccessOn(0) }
+
+            return true
+        }
+
+        return false
+    }
+
+    /*******************
+     * EVENT LISTENERS *
+     *******************/
 
     togglePlay(e) {
         this._stopPropagation(e)
@@ -388,51 +410,6 @@ class App extends Component {
         })
     }
 
-    /*******************
-     * ACCESS HANDLERS *
-     *******************/
-
-    _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
-        // Stored as integer. 0 is false, 1 is true.
-        this.props.accessOn(accessedOn)
-    }
-
-    _handleSectionAccess(accessedSectionKey, accessOn) {
-        const accessedSectionIndex = AccessHelper.handleSectionAccess({
-            selectedSongIndex: this.props.selectedSongIndex,
-            currentAccessedSectionIndex: this.props.accessedSectionIndex,
-            accessedSectionKey,
-            accessOn,
-            handleAccessOn: this._handleAccessOn
-        })
-
-        this.props.accessSectionIndex(accessedSectionIndex)
-    }
-
-    _closePopupIfOpen(accessOff) {
-        const { selectedAnnotationIndex,
-                selectedWikiUrl } = this.props
-
-        // If there is a popup, close it.
-        if (selectedAnnotationIndex) {
-            if (selectedWikiUrl) {
-                this.selectWiki()
-                this._handleSectionAccess(ANNOTATION_SECTION)
-            } else {
-                this.selectAnnotation()
-                this._handleSectionAccess(LYRICS_SECTION)
-            }
-
-            if (accessOff) {
-                this._handleAccessOn(0)
-            }
-
-            return true
-        } else {
-            return false
-        }
-    }
-
     onKeyDown(e) {
         const { key: keyName } = e
 
@@ -540,6 +517,27 @@ class App extends Component {
                 if (newState) { this.setState(newState) }
             }
         }
+    }
+
+    /*******************
+     * ACCESS HANDLERS *
+     *******************/
+
+    _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
+        // Stored as integer. 0 is false, 1 is true.
+        this.props.accessOn(accessedOn)
+    }
+
+    _handleSectionAccess(accessedSectionKey, accessOn) {
+        const accessedSectionIndex = AccessHelper.handleSectionAccess({
+            selectedSongIndex: this.props.selectedSongIndex,
+            currentAccessedSectionIndex: this.props.accessedSectionIndex,
+            accessedSectionKey,
+            accessOn,
+            handleAccessOn: this._handleAccessOn
+        })
+
+        this.props.accessSectionIndex(accessedSectionIndex)
     }
 
     render() {
