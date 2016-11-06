@@ -6,7 +6,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_AUDIO_OPTION_INDEX,
-         SELECTED_WIKI_URL,
+         SELECTED_WIKI_INDEX,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
 import SessionHelper from '../../helpers/session-helper'
@@ -19,7 +19,7 @@ const { getFromSession } = SessionHelper,
     storedDotKeys = getFromSession(SELECTED_DOT_KEYS),
     storedOverviewIndex = getFromSession(SELECTED_OVERVIEW_INDEX),
     storedAudioOptionIndex = getFromSession(SELECTED_AUDIO_OPTION_INDEX),
-    storedWikiUrl = getFromSession(SELECTED_WIKI_URL),
+    storedWikiIndex = getFromSession(SELECTED_WIKI_INDEX),
     storedAccessedOn = getFromSession(ACCESSED_ON),
     storedAccessedSectionIndex = getFromSession(ACCESSED_SECTION_INDEX)
 
@@ -50,9 +50,9 @@ export const VerseIndexReducer = (state = storedVerseIndex, action) => {
     }
 }
 
-export const WikiUrlReducer = (state = storedWikiUrl, action) => {
+export const WikiIndexReducer = (state = storedWikiIndex, action) => {
     switch (action.type) {
-        case SELECTED_WIKI_URL:
+        case SELECTED_WIKI_INDEX:
             return action.payload
         default:
             return state
@@ -127,7 +127,7 @@ const rootReducer = combineReducers({
     selectedDotKeys: DotKeysReducer,
     selectedOverviewIndex: OverviewIndexReducer,
     selectedAudioOptionIndex: AudioOptionIndexReducer,
-    selectedWikiUrl: WikiUrlReducer,
+    selectedWikiIndex: WikiIndexReducer,
     accessedOn: AccessedOnReducer,
     accessedSectionIndex: AccessedSectionIndexReducer
 })

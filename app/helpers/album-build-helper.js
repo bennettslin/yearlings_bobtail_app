@@ -2,12 +2,13 @@
 
 import { ALBUM_BUILD_KEYS } from './constants'
 import { getFormattedAnnotationTitle } from './format-helper'
-import { findKeyInObject } from './general-helper'
 
 const _tempStore = {
     _songIndex: 0,
     _songDotKeys: {},
     _annotations: [],
+    _wikis: [],
+    _wikiIndex: 1,
     _portalLinks: {},
     _songTimes: [],
     _lastVerseObject: {},
@@ -137,19 +138,23 @@ const _prepareAnnotation = (lyric = {}, annotation = {}, dotKeys = {}) => {
         annotation.todo = lyric.todo
     }
 
+    _tempStore._wikis = []
+
     // Cards may be single annotation card or array of cards.
     if (Array.isArray(cards)) {
         cards.forEach((card, cardIndex) => {
-            _addWikiToDots(card, dotKeys)
+            _prepareWikis(card, dotKeys)
             _addDotKeys(card, dotKeys)
             _addPortalLink(card, dotKeys, annotationIndex, cardIndex)
         })
     } else {
-        _addWikiToDots(cards, dotKeys)
+        _prepareWikis(cards, dotKeys)
         _addDotKeys(cards, dotKeys)
         _addPortalLink(cards, dotKeys, annotationIndex)
     }
+
     annotation.cards = cards
+    annotation.wikis = _tempStore._wikis
 
     // Add dot keys to both lyrics and annotation.
     lyric.dotKeys = dotKeys
@@ -163,14 +168,40 @@ const _prepareAnnotation = (lyric = {}, annotation = {}, dotKeys = {}) => {
     delete lyric.properNoun
 }
 
-const _addWikiToDots = (card, dotKeys) => {
+const _addWikiIndexIfFound = (key, object, reset = true) => {
+    if (reset) {
+        _tempStore._wikiIndex = 1
+        reset = false
+    }
+
+    if (!object) {
+        return false
+    } else if (Array.isArray(object)) {
+        return object.reduce((keyFound, element) => {
+            return _addWikiIndexIfFound(key, element, reset) || keyFound
+        }, false)
+    } else if (typeof object === 'object') {
+        return Object.keys(object).reduce((keyFound, currentKey) => {
+            if (!object.wikiIndex && typeof object[key] === 'string') {
+                object.wikiIndex = _tempStore._wikiIndex
+                _tempStore._wikiIndex++
+                _tempStore._wikis.push(object[key])
+            }
+
+            return keyFound || !!object[key] || _addWikiIndexIfFound(key, object[currentKey], reset)
+        }, false)
+    } else {
+        return false
+    }
+}
+
+const _prepareWikis = (card, dotKeys) => {
     const { description } = card
 
     // If card has a wiki link, add wiki key to dot keys.
     if (description) {
-        const hasWiki = findKeyInObject('wiki', description, 'wikiIndex')
+        const hasWiki = _addWikiIndexIfFound('wiki', description, 'wikiIndex')
         if (hasWiki) {
-
             // Add wiki anchor index to each anchor with wiki.
             if (!card.dotKeys) {
                 card.dotKeys = {}

@@ -2,13 +2,11 @@ import { expect } from 'chai'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
          SELECTED_VERSE_INDEX,
-         SELECTED_OVERVIEW_INDEX,
-         SELECTED_WIKI_URL } from '../app/helpers/constants'
+         SELECTED_OVERVIEW_INDEX } from '../app/helpers/constants'
 import { SongIndexReducer,
          AnnotationIndexReducer,
          LineIndexReducer,
-         OverviewIndexReducer,
-         WikiUrlReducer } from '../app/redux/reducers'
+         OverviewIndexReducer } from '../app/redux/reducers'
 
 describe('reducers', () => {
 
@@ -74,19 +72,6 @@ describe('reducers', () => {
             const NEW_INDEX = 2,
                 action = { type: SELECTED_OVERVIEW_INDEX, payload: NEW_INDEX }
             expect(OverviewIndexReducer(undefined, action)).to.equal(NEW_INDEX)
-        })
-    })
-
-    describe('WikiUrlReducer', () => {
-        it('returns current url if passed unknown type', () => {
-            const CURRENT_URL = 'Pterodactylus'
-            expect(WikiUrlReducer(CURRENT_URL, {})).to.equal(CURRENT_URL)
-        })
-
-        it('handles action type of wiki url', () => {
-            const NEW_WIKI_URL = 'Tyrannosaurus',
-                action = { type: SELECTED_WIKI_URL, payload: NEW_WIKI_URL }
-            expect(WikiUrlReducer(undefined, action)).to.equal(NEW_WIKI_URL)
         })
     })
 })

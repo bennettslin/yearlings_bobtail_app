@@ -30,6 +30,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `store wiki index instead of url`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `method to log portals and wikis`,
             workedHours: 0,
             neededHours: 2
@@ -430,6 +435,11 @@ module.exports = {
             taskName: `switch from time logic to verse index in verse`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `add wiki index`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

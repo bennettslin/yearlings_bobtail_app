@@ -3,13 +3,11 @@ import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
          SELECTED_DOT_KEYS,
          ALL_DOT_KEYS,
-         SELECTED_OVERVIEW_INDEX,
-         SELECTED_WIKI_URL } from '../app/helpers/constants'
+         SELECTED_OVERVIEW_INDEX } from '../app/helpers/constants'
 import { selectSongIndex,
          selectAnnotationIndex,
          selectDotKey,
-         selectOverviewIndex,
-         selectWikiUrl } from '../app/redux/actions'
+         selectOverviewIndex } from '../app/redux/actions'
 
 describe('actions', () => {
 
@@ -73,24 +71,6 @@ describe('actions', () => {
             const NEW_INDEX = 3,
                 action = selectOverviewIndex(NEW_INDEX)
             expect(action.payload).to.equal(NEW_INDEX)
-        })
-    })
-
-    describe('selectWikiUrl', () => {
-        it('has the correct type', () => {
-            const action = selectWikiUrl()
-            expect(action.type).to.equal(SELECTED_WIKI_URL)
-        })
-
-        it ('has a default payload of null', () => {
-            const action = selectWikiUrl()
-            expect(action.payload).to.equal(null)
-        })
-
-        it('returns the new payload', () => {
-            const NEW_WIKI_URL = 'Velociraptor',
-                action = selectWikiUrl(NEW_WIKI_URL)
-            expect(action.payload).to.equal(NEW_WIKI_URL)
         })
     })
 })

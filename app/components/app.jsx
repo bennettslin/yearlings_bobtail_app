@@ -9,7 +9,7 @@ import { selectSongIndex,
          selectDotKey,
          selectOverviewIndex,
          selectAudioOptionIndex,
-         selectWikiUrl,
+         selectWikiIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
 import Album from './album'
@@ -42,7 +42,7 @@ const passReduxStateToProps = ({
     selectedDotKeys,
     selectedOverviewIndex,
     selectedAudioOptionIndex,
-    selectedWikiUrl,
+    selectedWikiIndex,
     accessedOn,
     accessedSectionIndex
 }) => ({
@@ -54,7 +54,7 @@ const passReduxStateToProps = ({
     selectedDotKeys,
     selectedOverviewIndex,
     selectedAudioOptionIndex,
-    selectedWikiUrl,
+    selectedWikiIndex,
     accessedOn,
     accessedSectionIndex
 })
@@ -69,7 +69,7 @@ const bindDispatchToProps = (dispatch) => (
         selectDotKey,
         selectOverviewIndex,
         selectAudioOptionIndex,
-        selectWikiUrl,
+        selectWikiIndex,
         accessOn,
         accessSectionIndex
     }, dispatch)
@@ -161,11 +161,11 @@ class App extends Component {
 
     _closePopupIfOpen(accessOff) {
         const { selectedAnnotationIndex,
-                selectedWikiUrl } = this.props
+                selectedWikiIndex } = this.props
 
         // If there is a popup, close it.
         if (selectedAnnotationIndex) {
-            if (selectedWikiUrl) {
+            if (selectedWikiIndex) {
                 this.selectWiki()
                 this._handleSectionAccess(ANNOTATION_SECTION)
             } else {
@@ -293,11 +293,11 @@ class App extends Component {
         this._stopPropagation(e)
         if (e) { this._handleSectionAccess(WIKI_SECTION) }
 
-        const selectedWikiUrl = selectedWiki ?
+        const selectedWikiIndex = selectedWiki ?
             `https://en.m.wikipedia.org/wiki/${selectedWiki}` : ''
 
         // Dispatch Redux action.
-        this.props.selectWikiUrl(selectedWikiUrl)
+        this.props.selectWikiIndex(selectedWikiIndex)
 
         this._focusApp()
     }

@@ -43,7 +43,7 @@ module.exports = {
     SELECTED_DOT_KEYS: 'selectedDotKeys',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
-    SELECTED_WIKI_URL: 'selectedWikiUrl',
+    SELECTED_WIKI_INDEX: 'selectedWikiUrl',
     ACCESSED_ON: 'accessedOn',
     ACCESSED_SECTION_INDEX: 'accessedSectionIndex',
 

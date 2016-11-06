@@ -5,7 +5,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_AUDIO_OPTION_INDEX,
-         SELECTED_WIKI_URL,
+         SELECTED_WIKI_INDEX,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
  import SessionHelper from '../../helpers/session-helper'
@@ -36,11 +36,11 @@ export const selectVerseIndex = (selectedVerseIndex = 0) => {
     }
 }
 
-export const selectWikiUrl = (selectedWikiUrl = '') => {
-    setInSession(SELECTED_WIKI_URL, selectedWikiUrl)
+export const selectWikiIndex = (selectedWikiIndex = '') => {
+    setInSession(SELECTED_WIKI_INDEX, selectedWikiIndex)
     return {
-        type: SELECTED_WIKI_URL,
-        payload: selectedWikiUrl
+        type: SELECTED_WIKI_INDEX,
+        payload: selectedWikiIndex
     }
 }
 

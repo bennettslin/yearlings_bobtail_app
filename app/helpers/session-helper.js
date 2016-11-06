@@ -3,7 +3,7 @@
 import { SELECTED_DOT_KEYS,
          ALL_DOT_KEYS,
          WINDOW_STORAGE,
-         SELECTED_WIKI_URL } from './constants'
+         SELECTED_WIKI_INDEX } from './constants'
 
 // TODO: Add validation methods that return valid or default value for all, and test them! ʦ
 
@@ -43,7 +43,7 @@ export default {
         if (key === SELECTED_DOT_KEYS) {
             return _getValidDotKeys(WINDOW_STORAGE[key])
 
-        } else if (key === SELECTED_WIKI_URL) {
+        } else if (key === SELECTED_WIKI_INDEX) {
             const defaultValue = '',
                 value = WINDOW_STORAGE[key] || defaultValue
 
@@ -52,7 +52,7 @@ export default {
         } else if (key) {
             // Default is 0 unless specified otherwise.
             const defaultValue =
-                    (key === SELECTED_WIKI_URL ? '' : 0),
+                    (key === SELECTED_WIKI_INDEX ? '' : 0),
                 value = WINDOW_STORAGE[key] || defaultValue,
                 intValue = parseInt(value)
 
