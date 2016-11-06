@@ -3,7 +3,7 @@ import { ALBUM_BUILD_KEYS } from './constants'
 
 export default {
 
-    getSong(selectedSongIndex, songs) {
+    getSong({ selectedSongIndex, songs }) {
         return selectedSongIndex ?
             songs[selectedSongIndex - 1] : {}
     },

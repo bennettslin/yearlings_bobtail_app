@@ -18,7 +18,7 @@ const Shared = ({
     albumTasks,
 
 ...other }) => {
-    const selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+    const selectedSong = AlbumHelper.getSong({ selectedSongIndex, songs }),
         { overview } = selectedSong,
         overviewText = overview ? overview : albumOverview,
         tasks = AlbumHelper.getTasks(selectedSong, albumTasks)

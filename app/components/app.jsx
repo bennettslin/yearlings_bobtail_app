@@ -295,9 +295,7 @@ class App extends Component {
     }
 
     selectTime(e, selectedTimePlayed = 0) {
-        const { selectedSongIndex,
-                songs } = this.props,
-            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs)
+        const selectedSong = AlbumHelper.getSong(this.props)
 
         if (selectedTimePlayed >= 0 && selectedTimePlayed < selectedSong.totalTime) {
 
@@ -327,9 +325,7 @@ class App extends Component {
             scroll = false
 
         } else {
-            const { selectedSongIndex,
-                songs } = this.props,
-                selectedSong = AlbumHelper.getSong(selectedSongIndex, songs)
+            const selectedSong = AlbumHelper.getSong(this.props)
 
             // Select corresponding time.
             selectedTimePlayed = selectedSong.times[selectedVerseIndex - 1]
@@ -403,83 +399,10 @@ class App extends Component {
      * ACCESS HANDLERS *
      *******************/
 
-    _handleLyricsAccess(keyName) {
-        const { selectedAnnotationIndex,
-                selectedSongIndex,
-                songs } = this.props,
-            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
-            annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0
-
-        let { accessedAnnotationIndex,
-              accessedAnnotationOutlined } = this.state,
-            willSelectAnnotation = false,
-            willScrollToAnchor = false
-
-        switch (keyName) {
-            case ARROW_LEFT:
-            case ARROW_RIGHT:
-                if (!selectedAnnotationIndex && !accessedAnnotationOutlined) {
-                    accessedAnnotationIndex = accessedAnnotationIndex || 1
-                } else {
-                    willScrollToAnchor = true
-                    if (keyName === ARROW_LEFT) {
-                        accessedAnnotationIndex--
-                        if (accessedAnnotationIndex <= 0) {
-                            accessedAnnotationIndex = annotationsLength
-                        }
-                    } else if (keyName === ARROW_RIGHT) {
-                        accessedAnnotationIndex++
-                        if (accessedAnnotationIndex > annotationsLength) {
-                            accessedAnnotationIndex = 1
-                        }
-                    }
-                    if (selectedAnnotationIndex) {
-                        willSelectAnnotation = true
-                    }
-                }
-                accessedAnnotationOutlined = true
-                break
-            case ENTER:
-            case SPACE:
-                // Select or deselect annotation, but keep access outline.
-                if (accessedAnnotationOutlined) {
-                    if (selectedAnnotationIndex) {
-                        this.selectAnnotation()
-                    } else {
-                        willScrollToAnchor = true
-                        willSelectAnnotation = true
-                    }
-                }
-                break
-            case ESCAPE:
-                // Deselect annotation, and lose access outline.
-                accessedAnnotationOutlined = false
-                if (selectedAnnotationIndex) {
-                    this.selectAnnotation()
-                }
-                break
-        }
-
-        if (willSelectAnnotation) {
-            this.selectAnnotation(undefined, accessedAnnotationIndex)
-        }
-
-        if (willScrollToAnchor) {
-            scrollElementIntoView('annotation', accessedAnnotationIndex)
-        }
-
-        this.setState({
-            accessedAnnotationIndex,
-            accessedAnnotationOutlined
-        })
-    }
-
     // For dev purposes only.
     _handleAccessedVerseSelect(keyName) {
-        const { selectedSongIndex,
-                selectedVerseIndex,
-                songs } = this.props,
-            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+        const { selectedVerseIndex } = this.props,
+            selectedSong = AlbumHelper.getSong(this.props),
             timesLength = selectedSong.times ? selectedSong.times.length : 0
 
         if (keyName === ARROW_UP) {
@@ -610,7 +533,22 @@ class App extends Component {
                             })
                             break
                         case LYRICS_SECTION:
-                            this._handleLyricsAccess(keyName)
+                            const { selectedAnnotationIndex } = this.props,
+                                { accessedAnnotationIndex,
+                                  accessedAnnotationOutlined } = this.state,
+                                selectedSong = AlbumHelper.getSong(this.props),
+                                annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0
+
+                            AccessHelper.handleLyricsAccess({
+                                keyName,
+                                selectedAnnotationIndex,
+                                annotationsLength,
+                                accessedAnnotationIndex,
+                                accessedAnnotationOutlined,
+                                selectAnnotation: this.selectAnnotation,
+                                scrollElementIntoView,
+                                setState: this.setState
+                            })
                             break
                         case DOTS_SECTION:
                             AccessHelper.handleDotAccess({
@@ -638,11 +576,9 @@ class App extends Component {
 
     _deselectAnnotationWithNoSelectedDots(dotKey) {
         const { selectedAnnotationIndex,
-                selectedSongIndex,
-                selectedDotKeys,
-                songs } = this.props
+                selectedDotKeys } = this.props
 
-        const selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+        const selectedSong = AlbumHelper.getSong(this.props),
             annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong),
             presentDotKeys = annotation ? annotation.dotKeys : null,
 

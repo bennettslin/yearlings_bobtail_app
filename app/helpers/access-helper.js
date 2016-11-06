@@ -162,5 +162,76 @@ export default {
         keyName
     }) {
 
+    },
+
+    handleLyricsAccess({
+        keyName,
+        selectedAnnotationIndex,
+        annotationsLength,
+        accessedAnnotationIndex,
+        accessedAnnotationOutlined,
+        selectAnnotation,
+        scrollElementIntoView,
+        setState
+    }) {
+        let willSelectAnnotation = false,
+            willScrollToAnchor = false
+
+        switch (keyName) {
+            case ARROW_LEFT:
+            case ARROW_RIGHT:
+                if (!selectedAnnotationIndex && !accessedAnnotationOutlined) {
+                    accessedAnnotationIndex = accessedAnnotationIndex || 1
+                } else {
+                    willScrollToAnchor = true
+                    if (keyName === ARROW_LEFT) {
+                        accessedAnnotationIndex--
+                        if (accessedAnnotationIndex <= 0) {
+                            accessedAnnotationIndex = annotationsLength
+                        }
+                    } else if (keyName === ARROW_RIGHT) {
+                        accessedAnnotationIndex++
+                        if (accessedAnnotationIndex > annotationsLength) {
+                            accessedAnnotationIndex = 1
+                        }
+                    }
+                    if (selectedAnnotationIndex) {
+                        willSelectAnnotation = true
+                    }
+                }
+                accessedAnnotationOutlined = true
+                break
+            case ENTER:
+                // Select or deselect annotation, but keep access outline.
+                if (accessedAnnotationOutlined) {
+                    if (selectedAnnotationIndex) {
+                        selectAnnotation()
+                    } else {
+                        willScrollToAnchor = true
+                        willSelectAnnotation = true
+                    }
+                }
+                break
+            case ESCAPE:
+                // Deselect annotation, and lose access outline.
+                accessedAnnotationOutlined = false
+                if (selectedAnnotationIndex) {
+                    selectAnnotation()
+                }
+                break
+        }
+
+        if (willSelectAnnotation) {
+            selectAnnotation(undefined, accessedAnnotationIndex)
+        }
+
+        if (willScrollToAnchor) {
+            scrollElementIntoView('annotation', accessedAnnotationIndex)
+        }
+
+        setState({
+            accessedAnnotationIndex,
+            accessedAnnotationOutlined
+        })
     }
 }

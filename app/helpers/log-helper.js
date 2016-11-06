@@ -10,10 +10,7 @@ export default {
     },
 
     logSong({ props }) {
-        const { songs,
-                selectedSongIndex } = props,
-
-            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+        const selectedSong = AlbumHelper.getSong(props),
             copiedSong = Object.assign({}, selectedSong)
 
         copiedSong.lyrics = `lyrics length: ${copiedSong.lyrics.length}`
@@ -25,22 +22,18 @@ export default {
 },
 
     logVerse({ props }) {
-        const { songs,
-                selectedSongIndex,
-                selectedVerseIndex } = props,
+        const { selectedVerseIndex } = props,
 
-            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+            selectedSong = AlbumHelper.getSong(props),
             verse = AlbumHelper.getVerse(selectedVerseIndex, selectedSong)
 
         return this._logObject('selected verse', verse)
     },
 
     logAnchorAnnotation({ props }) {
-        const { songs,
-                selectedSongIndex,
-                selectedAnnotationIndex } = props,
+        const { selectedAnnotationIndex } = props,
 
-            selectedSong = AlbumHelper.getSong(selectedSongIndex, songs),
+            selectedSong = AlbumHelper.getSong(props),
             annotation = AlbumHelper.getAnnotation(selectedAnnotationIndex, selectedSong)
 
         return this._logObject('selected annotation', annotation)
