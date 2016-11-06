@@ -261,7 +261,7 @@ module.exports = {
                         anchor: `tired of being the weakling?"…`,
                         annotation: {
                             description: [
-                                `In a well-known advertisement seen in comic books at the time, a skinny guy builds up his muscles by sending away for`,
+                                `In a well-known advertisement seen in the back of comic books at the time, a skinny guy builds up his muscles by sending away for`,
                                 {
                                     anchor: `Charles Atlas's`,
                                     wiki: `Charles_Atlas`
