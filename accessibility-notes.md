@@ -86,14 +86,14 @@
     * When "Enter" is pressed:
         * Wiki section becomes accessed section and is highlighted.
 
-    * When "Space" or "Esc" is pressed:
+    * When "Space" is pressed:
         * Annotation section is closed, and lyric section becomes accessed section.
 
 * When wiki url is accessed:
     * "Esc" key is shown on close button.
     * "Space" key is shown on annotation section.
 
-    * When "Space" or "Esc" is pressed:
+    * When "Space" is pressed:
         * Wiki section is closed, and annotation section becomes accessed section.
 
 * These keys will always fire, even if access is off:
@@ -104,3 +104,4 @@
     * "p" to toggle "isPlaying"
     * "o" to toggle "audioOptionIndex"
     * "b" to toggle "selectedOverviewIndex"
+    * "Escape" to close a popup

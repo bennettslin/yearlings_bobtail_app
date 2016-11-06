@@ -409,6 +409,30 @@ class App extends Component {
         this.props.accessSectionIndex(accessedSectionIndex)
     }
 
+    _closePopupIfOpen(accessOff) {
+        const { selectedAnnotationIndex,
+                selectedWikiUrl } = this.props
+
+        // If there is a popup, close it.
+        if (selectedAnnotationIndex) {
+            if (selectedWikiUrl) {
+                this.selectWiki()
+                this._handleSectionAccess(ANNOTATION_SECTION)
+            } else {
+                this.selectAnnotation()
+                this._handleSectionAccess(LYRICS_SECTION)
+            }
+
+            if (accessOff) {
+                this._handleAccessOn(0)
+            }
+
+            return true
+        } else {
+            return false
+        }
+    }
+
     onKeyDown(e) {
         const { key: keyName } = e
 
@@ -426,6 +450,9 @@ class App extends Component {
             togglePlay: this.togglePlay
         })) { return }
 
+        // If Escape to close popup, close it and return.
+        if (keyName === ESCAPE && this._closePopupIfOpen(true)) { return }
+
         // If access is off, any key besides Escape turns it on.
         if (!this.props.accessedOn) {
             if (keyName !== ESCAPE && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
@@ -434,15 +461,17 @@ class App extends Component {
 
         // If access is on...
         } else {
-            // Spacebar accesses next section...
-            if (keyName === SPACE) {
-                this._handleSectionAccess()
-
-            // Escape turns off access...
-            } else if (keyName === ESCAPE) {
+            // Escape turns off access.
+            if (keyName === ESCAPE) {
                 this._handleAccessOn()
 
-            // Otherwise, it depends on what section is accessed.
+            // Space closes popup if open, otherwise accesses next section.
+            } else if (keyName === SPACE) {
+                if (!this._closePopupIfOpen()) {
+                    this._handleSectionAccess()
+                }
+
+            // Assign handler based on which section is accessed.
             } else {
                 const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
                 let newState
