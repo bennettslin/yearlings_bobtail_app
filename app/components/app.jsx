@@ -137,7 +137,7 @@ class App extends Component {
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
-        this._onKeyDown = this._onKeyDown.bind(this)
+        this.onKeyDown = this.onKeyDown.bind(this)
     }
 
     _assignLogFunctions() {
@@ -409,7 +409,7 @@ class App extends Component {
         this.props.accessSectionIndex(accessedSectionIndex)
     }
 
-    _onKeyDown(e) {
+    onKeyDown(e) {
         const { key: keyName } = e
 
         // TODO: Focus strategically, based on accessed section.
@@ -520,7 +520,7 @@ class App extends Component {
                 ref="app"
                 className="app"
                 onClick={this._onBodyClick}
-                onKeyDown={this._onKeyDown}
+                onKeyDown={this.onKeyDown}
                 tabIndex="0"
             >
                 <Album {...this.props} {...this.state}
@@ -536,6 +536,7 @@ class App extends Component {
                     onDotClick={this.selectDot}
                     onDotHover={this.hoverDot}
                     onLineHover={this.hoverLine}
+                    onKeyDown={this.onKeyDown}
                     onScreenWidthClick={this.selectScreenWidth}
                     onLyricColumnClick={this.selectLyricColumn}
                 />

@@ -50,7 +50,9 @@ const NavSectionView = ({
     sumAllTasks
 
 }) => (
-    <div className={`section songs-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}>
+    <div
+        className={`section songs-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
+    >
         <div className="row">
             <div className="text-cell-wrapper">
                 <h3 className="text-cell text">song</h3>
