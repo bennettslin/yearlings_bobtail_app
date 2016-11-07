@@ -24,7 +24,7 @@ import { SONGS_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong } from 'helpers/album-view-helper'
+import { getSong, getAnnotationsLength } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
@@ -95,9 +95,8 @@ class App extends Component {
          */
         this.state = {
             isPlaying: false,
-            accessedAnnotationIndex: props.selectedAnnotationIndex,
-            accessedAnnotationOutlined: false,
             accessedSongIndex: props.selectedSongIndex,
+            accessedAnnotationIndex: props.selectedAnnotationIndex || 1,
             accessedDotIndex: 0,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
@@ -213,13 +212,9 @@ class App extends Component {
 
             this.props.selectSongIndex(selectedIndex)
 
-            /**
-             * Keep annotation anchor access outlined if already so, and just
-             * set the index to 1. Otherwise set it to 0.
-             */
             this.setState({
-                accessedAnnotationIndex: this.state.accessedAnnotationOutlined ? 1 : 0,
-                accessedSongIndex: selectedIndex
+                accessedSongIndex: selectedIndex,
+                accessedAnnotationIndex: 1
             })
         }
     }
@@ -264,9 +259,9 @@ class App extends Component {
         }
     }
 
-    selectAnnotation(e, selectedIndex = 0) {
+    selectAnnotation(e, selectedIndex = 0, newSectionAccess) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess(ANNOTATION_SECTION) }
+        if (e || newSectionAccess) { this._handleSectionAccess(ANNOTATION_SECTION) }
 
         this.props.selectAnnotationIndex(selectedIndex)
         this.selectWiki()
@@ -278,14 +273,7 @@ class App extends Component {
             this.props.selectOverviewIndex(1)
 
             this.setState({
-                accessedAnnotationIndex: selectedIndex,
-            })
-        }
-
-        // Remove outline if annotation was clicked.
-        if (e && e.type === 'click') {
-            this.setState({
-                accessedAnnotationOutlined: false
+                accessedAnnotationIndex: selectedIndex
             })
         }
     }
@@ -412,10 +400,6 @@ class App extends Component {
         this._handleAccessOn(0)
         this.selectAnnotation()
         this.selectWiki()
-
-        this.setState({
-            accessedAnnotationOutlined: false
-        })
     }
 
     onKeyDown(e) {
@@ -487,18 +471,10 @@ class App extends Component {
                         })
                         break
                     case LYRICS_SECTION:
-                        const { selectedAnnotationIndex } = this.props,
-                            { accessedAnnotationIndex,
-                              accessedAnnotationOutlined } = this.state,
-                            selectedSong = getSong(this.props),
-                            annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0
-
                         newState = AccessHelper.handleLyricsAccess({
                             keyName,
-                            selectedAnnotationIndex,
-                            annotationsLength,
-                            accessedAnnotationIndex,
-                            accessedAnnotationOutlined,
+                            annotationsLength: getAnnotationsLength(this.props),
+                            accessedAnnotationIndex: this.state.accessedAnnotationIndex,
                             selectAnnotation: this.selectAnnotation,
                             scrollElementIntoView
                         })
@@ -512,7 +488,8 @@ class App extends Component {
                         break
                     case ANNOTATION_SECTION:
                         AccessHelper.handleAnnotationAccess({
-                            keyName
+                            keyName,
+                            selectAnnotation: this.selectAnnotation
                         })
                         break
                     case WIKI_SECTION:

@@ -10,30 +10,30 @@ const DotStanza = ({
 
     onAnnotationClick,
     dotStanzaObject,
-    accessedAnnotationIndex,
-    accessedAnnotationOutlined,
     selectedAnnotationIndex,
-    selectedDotKeys
+    selectedDotKeys,
+    sectionAccessHighlighted,
+    accessedAnnotationIndex,
 
-}) => {
+...other }) => {
 
     const { annotationIndex,
             dotKeys } = dotStanzaObject,
 
         isSelected = annotationIndex === selectedAnnotationIndex,
-        isAccessOutlined = annotationIndex === accessedAnnotationIndex && accessedAnnotationOutlined,
+        accessHighlighted = sectionAccessHighlighted && accessedAnnotationIndex === annotationIndex,
 
         // Hide entire stanza if dot key is not present.
         shouldShow = intersects(dotKeys, selectedDotKeys),
         onDotClick = e => onAnnotationClick(e, annotationIndex)
 
     return (shouldShow ?
-        <DotStanzaView
+        <DotStanzaView {...other}
             annotationIndex={annotationIndex}
             isSelected={isSelected}
-            isAccessOutlined={isAccessOutlined}
             dotKeys={dotKeys}
             onDotClick={onDotClick}
+            accessHighlighted={accessHighlighted}
         /> : null
     )
 }
@@ -43,10 +43,11 @@ const DotStanzaView = ({
     // From controller.
     isSelected,
     dotKeys,
+    accessHighlighted,
 
 ...other }) => (
 
-    <div className="stanza">
+    <div className={`stanza${accessHighlighted ? ' access-highlighted' : ''}`}>
         {/* This will break if dot stanzas ever have more than one dot. */}
         <DotsBlock {...other}
             selectedDotKeys={isSelected ? dotKeys : {}}

@@ -44,9 +44,6 @@ const SongView = ({
     // From props.
     songs,
 
-    accessedAnnotationIndex,
-    accessedAnnotationOutlined,
-    accessedDotIndex,
     selectedAnnotationIndex,
     selectedWikiIndex,
     selectedDotKeys,
@@ -59,6 +56,8 @@ const SongView = ({
     selectedSongIndex,
     accessedOn,
     accessedSectionKey,
+    accessedAnnotationIndex,
+    accessedDotIndex,
 
     onDotClick,
     onPortalClick,
@@ -111,7 +110,6 @@ const SongView = ({
             <LyricsSection
                 isNarrowScreen={isNarrowScreen}
                 accessedAnnotationIndex={accessedAnnotationIndex}
-                accessedAnnotationOutlined={accessedAnnotationOutlined}
                 selectedSongIndex={selectedSongIndex}
                 selectedAnnotationIndex={selectedAnnotationIndex}
                 selectedLyricColumnIndex={selectedLyricColumnIndex}

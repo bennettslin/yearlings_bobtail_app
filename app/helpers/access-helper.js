@@ -14,6 +14,7 @@ import { SONGS_SECTION,
          ENTER,
          ESCAPE } from 'helpers/constants'
 
+
 export default {
 
     handleKeyIfUniversal({
@@ -137,6 +138,38 @@ export default {
         }
     },
 
+    handleLyricsAccess({
+        keyName,
+        annotationsLength,
+        accessedAnnotationIndex,
+        selectAnnotation,
+        scrollElementIntoView
+    }) {
+        let willScrollToAnchor = false
+
+        switch (keyName) {
+            case ARROW_LEFT:
+                // Remember that annotations are 1-based.
+                accessedAnnotationIndex = (accessedAnnotationIndex + annotationsLength - 2) % annotationsLength + 1
+                willScrollToAnchor = true
+                break
+            case ARROW_RIGHT:
+                accessedAnnotationIndex = accessedAnnotationIndex % annotationsLength + 1
+                willScrollToAnchor = true
+                break
+            case ENTER:
+                selectAnnotation(undefined, accessedAnnotationIndex, true)
+        }
+
+        if (willScrollToAnchor) {
+            scrollElementIntoView('annotation', accessedAnnotationIndex)
+        }
+
+        return {
+            accessedAnnotationIndex
+        }
+    },
+
     handleAudioAccess({
         keyName,
         togglePlay,
@@ -192,85 +225,16 @@ export default {
         }
     },
 
-    handleAnnotationAccess({
-        keyName
-    }) {
-
-    },
-
     handleWikiAccess({
         keyName
     }) {
 
     },
 
-    handleLyricsAccess({
+    handleAnnotationAccess({
         keyName,
-        selectedAnnotationIndex,
-        annotationsLength,
-        accessedAnnotationIndex,
-        accessedAnnotationOutlined,
-        selectAnnotation,
-        scrollElementIntoView
+        selectAnnotation
     }) {
-        let willSelectAnnotation = false,
-            willScrollToAnchor = false
 
-        switch (keyName) {
-            case ARROW_LEFT:
-            case ARROW_RIGHT:
-                if (!selectedAnnotationIndex && !accessedAnnotationOutlined) {
-                    accessedAnnotationIndex = accessedAnnotationIndex || 1
-                } else {
-                    willScrollToAnchor = true
-                    if (keyName === ARROW_LEFT) {
-                        accessedAnnotationIndex--
-                        if (accessedAnnotationIndex <= 0) {
-                            accessedAnnotationIndex = annotationsLength
-                        }
-                    } else if (keyName === ARROW_RIGHT) {
-                        accessedAnnotationIndex++
-                        if (accessedAnnotationIndex > annotationsLength) {
-                            accessedAnnotationIndex = 1
-                        }
-                    }
-                    if (selectedAnnotationIndex) {
-                        willSelectAnnotation = true
-                    }
-                }
-                accessedAnnotationOutlined = true
-                break
-            case ENTER:
-                // Select or deselect annotation, but keep access outline.
-                if (accessedAnnotationOutlined) {
-                    if (selectedAnnotationIndex) {
-                        selectAnnotation()
-                    } else {
-                        willScrollToAnchor = true
-                        willSelectAnnotation = true
-                    }
-                }
-                break
-            case ESCAPE:
-                // Deselect annotation, and lose access outline.
-                accessedAnnotationOutlined = false
-                if (selectedAnnotationIndex) {
-                    selectAnnotation()
-                }
-                break
-        }
-
-        if (willSelectAnnotation) {
-            selectAnnotation(undefined, accessedAnnotationIndex)
-        }
-
-        if (willScrollToAnchor) {
-            scrollElementIntoView('annotation', accessedAnnotationIndex)
-        }
-
-        return {
-            accessedAnnotationIndex,
-            accessedAnnotationOutlined
-        }
     }
 }

@@ -119,7 +119,11 @@
 
 
     .stanza {
-        box-shadow: 0 1px 2px 2px @box-shadow-colour;
+
+        // FIXME: This conditional might not be needed, based on how access highlighted styling is finalised.
+        &:not(.access-highlighted) {
+            box-shadow: 0 1px 2px 2px @box-shadow-colour;
+        }
 
         // TODO: Better styling, of course.
         &.title { border: 2px solid brown; }

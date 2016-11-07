@@ -10,11 +10,11 @@ import { getIntersection } from 'helpers/dot-helper'
 const AnchorBlock = ({
 
     text,
-    accessedAnnotationIndex,
-    accessedAnnotationOutlined,
     selectedAnnotationIndex,
     selectedWikiIndex,
     selectedDotKeys,
+    accessedAnnotationIndex,
+    sectionAccessHighlighted,
     onAnchorClick,
 
 ...other }) => {
@@ -26,8 +26,8 @@ const AnchorBlock = ({
             wikiIndex } = text,
 
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
-        isAccessOutlined = annotationIndex === accessedAnnotationIndex && accessedAnnotationOutlined,
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
+        accessHighlighted = sectionAccessHighlighted && accessedAnnotationIndex === annotationIndex,
 
         /**
          * If it's an annotation, then the argument passed to the
@@ -40,9 +40,9 @@ const AnchorBlock = ({
     return (
         <AnchorBlockView {...other}
             hasTodo={todo}
-            isAccessOutlined={isAccessOutlined}
             isSelected={isSelected}
             annotationIndex={annotationIndex}
+            accessHighlighted={accessHighlighted}
             wikiIndex={wikiIndex}
             dotKeys={intersectedDotKeys}
             anchorText={anchor}
@@ -60,10 +60,10 @@ const AnchorBlockView = ({
     // From props.
     isLyric,
     beginsNewLine,
+    accessHighlighted,
 
     // From controller.
     hasTodo,
-    isAccessOutlined,
     isSelected,
     annotationIndex,
     wikiIndex,
@@ -77,7 +77,7 @@ const AnchorBlockView = ({
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
         { !beginsNewLine ? ' ' : null }
         <a
-            className={`anchor-block${annotationIndex ? ' annotation-' + annotationIndex : ''}${wikiIndex ? ' wiki-' + wikiIndex : ''}${isAccessOutlined ? ' access-outlined' : ''}${isSelected ? '' : ' enabled'}${hasTodo ? ' todo' : ''}`}
+            className={`anchor-block${accessHighlighted ? ' access-highlighted' : ''}${annotationIndex ? ' annotation-' + annotationIndex : ''}${wikiIndex ? ' wiki-' + wikiIndex : ''}${isSelected ? '' : ' enabled'}${hasTodo ? ' todo' : ''}`}
             onClick={onClick}
         >
             {isLyric ?

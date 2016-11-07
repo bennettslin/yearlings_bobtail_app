@@ -19,6 +19,11 @@ export const getSong = ({ selectedSongIndex, songs }) => {
         songs[selectedSongIndex - 1] : {}
 }
 
+export const getAnnotationsLength = (props) => {
+    const selectedSong = getSong(props)
+    return selectedSong.annotations ? selectedSong.annotations.length : 0
+}
+
 export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }) => {
     selectedSong = selectedSong || getSong(other)
     return selectedSong.annotations ?

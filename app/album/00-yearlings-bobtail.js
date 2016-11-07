@@ -30,7 +30,17 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `store wiki index instead of url`,
+            taskName: `access keys should skip unshown annotations`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: `include portal indices`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `add previous and next buttons to annotation popup`,
             workedHours: 0,
             neededHours: 2
         },
@@ -438,6 +448,11 @@ module.exports = {
         },
         {
             taskName: `add wiki index`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `store wiki index instead of url`,
             workedHours: 2,
             neededHours: 2
         }
