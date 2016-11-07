@@ -18,7 +18,7 @@ const Song = ({
 ...other }) => {
 
     const annotation = getAnnotation({ selectedAnnotationIndex, selectedSong }),
-        selectedWikiUrl = selectedWikiIndex ? `https://en.m.wikipedia.org/wiki/${annotation.wikis[selectedWikiIndex - 1]}` : null
+        selectedWikiUrl = selectedWikiIndex ? `https://en.m.wikipedia.org/wiki/${annotation.popupAnchors[selectedWikiIndex - 1]}` : null
 
     return (
         <SongView {...other}

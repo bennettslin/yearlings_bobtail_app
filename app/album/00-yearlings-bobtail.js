@@ -45,7 +45,7 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `method to log portals and wikis`,
+            taskName: `method to log portals and popupAnchors`,
             workedHours: 0,
             neededHours: 2
         },
@@ -362,7 +362,7 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `allow wikis in urls`,
+            taskName: `allow popupAnchors in urls`,
             workedHours: 1,
             neededHours: 1
         },

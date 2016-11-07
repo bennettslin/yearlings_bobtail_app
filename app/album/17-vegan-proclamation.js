@@ -443,8 +443,13 @@ module.exports = {
                         anchor: `chivalry to our Siva's feet…`,
                         properNoun: true,
                         annotation: {
-                            // wiki: Nataraja
-                            description: `Nataraja, or "lord of dance," is a revered depiction of the Hindu god Siva as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`,
+                            description: [
+                                {
+                                    anchor: `Nataraja,`,
+                                    wiki: `Nataraja`
+                                },
+                                `or "lord of dance," is a revered depiction of the Hindu god Siva as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
+                            ],
                             portal: `chivalry`
                         }
                     }

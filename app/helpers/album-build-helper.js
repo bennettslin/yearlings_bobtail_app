@@ -7,7 +7,7 @@ const _tempStore = {
     _songIndex: 0,
     _songDotKeys: {},
     _annotations: [],
-    _wikis: [],
+    _popupAnchors: [],
     _wikiIndex: 1,
     _portalLinks: {},
     _songTimes: [],
@@ -138,7 +138,7 @@ const _prepareAnnotation = (lyric = {}, annotation = {}, dotKeys = {}) => {
         annotation.todo = lyric.todo
     }
 
-    _tempStore._wikis = []
+    _tempStore._popupAnchors = []
 
     // Cards may be single annotation card or array of cards.
     if (Array.isArray(cards)) {
@@ -154,7 +154,7 @@ const _prepareAnnotation = (lyric = {}, annotation = {}, dotKeys = {}) => {
     }
 
     annotation.cards = cards
-    annotation.wikis = _tempStore._wikis
+    annotation.popupAnchors = _tempStore._popupAnchors
 
     // Add dot keys to both lyrics and annotation.
     lyric.dotKeys = dotKeys
@@ -189,7 +189,7 @@ const _addWikiIndexIfFound = (key, object, reset = true) => {
             if (!object.wikiIndex && typeof object[key] === 'string') {
                 object.wikiIndex = _tempStore._wikiIndex
                 _tempStore._wikiIndex++
-                _tempStore._wikis.push(object[key])
+                _tempStore._popupAnchors.push(object[key])
                 delete object[key]
             }
 
@@ -244,6 +244,9 @@ const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0) => {
 
         // Add portal link to portal links array.
         _tempStore._portalLinks[portal].push(portalLink)
+
+        // Add portalIndex to popupAnchors array.
+        _tempStore._popupAnchors.push({ portalIndex: _tempStore._popupAnchors.length })
 
         // Add portal key to dot keys.
         dotKeys.portal = true
