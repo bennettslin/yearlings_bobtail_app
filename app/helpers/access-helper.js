@@ -138,15 +138,19 @@ export default {
         }
     },
 
-    handleLyricsAccess({
+    handleLyricsAndAnnotationAccess({
         keyName,
+        fromAnnotationSection,
         annotationsLength,
         accessedAnnotationIndex,
         selectAnnotation,
         scrollElementIntoView
     }) {
+        // Switch to annotation section upon "Enter" key from lyric section.
+        const newSectionAccess = !fromAnnotationSection && keyName === ENTER
         let willScrollToAnchor = false
 
+        // Both lyric and annotation sections will change accessed annotation.
         switch (keyName) {
             case ARROW_LEFT:
                 // Remember that annotations are 1-based.
@@ -157,12 +161,18 @@ export default {
                 accessedAnnotationIndex = accessedAnnotationIndex % annotationsLength + 1
                 willScrollToAnchor = true
                 break
-            case ENTER:
-                selectAnnotation(undefined, accessedAnnotationIndex, true)
         }
 
         if (willScrollToAnchor) {
             scrollElementIntoView('annotation', accessedAnnotationIndex)
+        }
+
+        /**
+         * Annotation section will also select after arrow key. Lyric section
+         * will only select upon "Enter" key.
+         */
+        if (fromAnnotationSection || newSectionAccess) {
+            selectAnnotation(undefined, accessedAnnotationIndex, newSectionAccess)
         }
 
         return {

@@ -470,9 +470,12 @@ class App extends Component {
                             selectOverview: this.selectOverview
                         })
                         break
+                    case ANNOTATION_SECTION:
                     case LYRICS_SECTION:
-                        newState = AccessHelper.handleLyricsAccess({
+                        const fromAnnotationSection = accessedSectionKey === ANNOTATION_SECTION
+                        newState = AccessHelper.handleLyricsAndAnnotationAccess({
                             keyName,
+                            fromAnnotationSection,
                             annotationsLength: getAnnotationsLength(this.props),
                             accessedAnnotationIndex: this.state.accessedAnnotationIndex,
                             selectAnnotation: this.selectAnnotation,
@@ -484,12 +487,6 @@ class App extends Component {
                             keyName,
                             accessedDotIndex: this.state.accessedDotIndex,
                             selectDot: this.selectDot
-                        })
-                        break
-                    case ANNOTATION_SECTION:
-                        AccessHelper.handleAnnotationAccess({
-                            keyName,
-                            selectAnnotation: this.selectAnnotation
                         })
                         break
                     case WIKI_SECTION:
