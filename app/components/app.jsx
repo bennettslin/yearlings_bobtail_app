@@ -265,7 +265,7 @@ class App extends Component {
         this.selectWiki()
 
         // Keep accessed index, even if annotation is deselected.
-        if (selectedIndex > 0) {
+        if (selectedIndex) {
 
             // Hide overview bubble text.
             this.props.selectOverviewIndex(1)
@@ -419,6 +419,7 @@ class App extends Component {
         // If universal key, handle and return.
         if (AccessHelper.handleKeyIfUniversal({
             keyName,
+            canAccessSections: !this.props.selectedWikiIndex && !this.props.selectedAnnotationIndex,
             handleSectionAccess: this._handleSectionAccess,
             selectOverview: this.selectOverview,
             selectAudioOption: this.selectAudioOption,

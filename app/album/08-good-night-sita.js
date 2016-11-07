@@ -251,9 +251,12 @@ module.exports = {
                     {
                         anchor: `aping jaw`,
                         annotation: {
-                            // wiki: piltdown man
                             description: [
-                                `Piltdown Man was a paleontological hoax in which the oversized jaw of an orangutan was attached to the cranium of a modern human. I felt like a comparable fraud, as the things that came out of my mouth exaggerated the volume of things in my head.`
+                                {
+                                    anchor: `Piltdown Man`,
+                                    wiki: `Piltdown_Man`
+                                },
+                                `was a paleontological hoax in which the oversized jaw of an orangutan was attached to the cranium of a modern human. I felt like a comparable fraud, as the things that came out of my mouth exaggerated the volume of things in my head.`
                             ]
                         }
                     },
@@ -290,10 +293,16 @@ module.exports = {
                         anchor: `ambrosia beers`,
                         annotation: {
                             description: [
-                                // wiki: ambrosia, devil's dictionary
-                                `Ambrosia was the food of the Greek gods, just as beer made me feel omnipotent. Ambrose Bierce also wrote`,
                                 {
-                                    italic: `The Devil's Dictionary,`
+                                    anchor: `Ambrosia`,
+                                    wiki: `Ambrosia`
+                                },
+                                `was the food of the Greek gods, just as beer made me feel omnipotent. Ambrose Bierce also wrote`,
+                                {
+                                    italic: {
+                                        anchor: `The Devil's Dictionary,`,
+                                        wiki: `The_Devil%27s_Dictionary`
+                                    }
                                 },
                                 `a collection of satirical definitions for common words, whose wit I sought to emulate.`
                             ]
@@ -329,9 +338,13 @@ module.exports = {
                     {
                         anchor: `pidgin palaver`,
                         annotation: {
-                            // wiki: pidgin
                             description: [
-                                `A pidgin is an impromptu language intended solely to facilitate trade between colonists and natives. It's also a good analogy for my date conversations at the time.`
+                                `A`,
+                                {
+                                    anchor: `pidgin`,
+                                    wiki: `Pidgin`
+                                },
+                                `is an impromptu language intended solely to facilitate trade between colonists and natives. It's also a good analogy for my date conversations at the time.`
                             ]
                         }
                     },
@@ -404,9 +417,13 @@ module.exports = {
                     {
                         anchor: `understudy sought`,
                         annotation: {
-                            // wiki: understudy
                             description: [
-                                `In theatre, an understudy learns the lines of a regular performer in order to serve as a replacement on short notice. Dating as a low-status male felt comparable, as I undertook all of the same preparation yet saw almost none of the action. I finally accepted that I had to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`
+                                `In theatre, an`,
+                                {
+                                    anchor: `understudy`,
+                                    wiki: `Understudy`
+                                },
+                                `learns the lines of a regular performer in order to serve as a replacement on short notice. Dating as a low-status male felt comparable, as I undertook all of the same preparation yet saw almost none of the action. I finally accepted that I had to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`
                             ]
                         }
                     },

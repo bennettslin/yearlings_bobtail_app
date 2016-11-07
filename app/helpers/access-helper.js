@@ -19,30 +19,15 @@ export default {
 
     handleKeyIfUniversal({
         keyName,
+        canAccessSections,
         handleSectionAccess,
         selectOverview,
         selectAudioOption,
         togglePlay
     }) {
+
         // These keys will always fire, even if access is off.
         switch (keyName) {
-            // Directly access sections.
-            case 'a':
-            case 'A':
-                handleSectionAccess(AUDIO_SECTION, true)
-                break
-            case 'd':
-            case 'D':
-                handleSectionAccess(DOTS_SECTION, true)
-                break
-            case 'l':
-            case 'L':
-                handleSectionAccess(LYRICS_SECTION, true)
-                break
-            case 's':
-            case 'S':
-                handleSectionAccess(SONGS_SECTION, true)
-                break
             // Toggle selected overview index.
             case 'b':
             case 'B':
@@ -59,8 +44,34 @@ export default {
                 togglePlay()
                 break
             default:
-                return false
-                break
+                /**
+                 * Directly access sections. These keys fire only if no
+                 * selected annotation or wiki.
+                 */
+                if (canAccessSections) {
+                    switch (keyName) {
+                        case 'a':
+                        case 'A':
+                            handleSectionAccess(AUDIO_SECTION, true)
+                            break
+                        case 'd':
+                        case 'D':
+                            handleSectionAccess(DOTS_SECTION, true)
+                            break
+                        case 'l':
+                        case 'L':
+                            handleSectionAccess(LYRICS_SECTION, true)
+                            break
+                        case 's':
+                        case 'S':
+                            handleSectionAccess(SONGS_SECTION, true)
+                            break
+                        default:
+                        return false
+                    }
+                } else {
+                    return false
+                }
         }
 
         return true
