@@ -17,6 +17,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
+                        // wiki: shepard tone
                         description: `A Shepard tone is an auditory illusion in which a single tone descends continuously in pitch while staying within a fixed register. It seemed an apt metaphor for my breakup with Miriam, which left me utterly deflated as I was forced to confront my genetic inferiority complex. This song also uses doublespeaker rhyme, though I've since forgetten which voice represents whose perspective. I suppose that's the point: we both knew equally well that the relationship was doomed.`,
                         dotKeys: {
                             music: true
@@ -47,12 +48,14 @@ module.exports = {
                     {
                         anchor: `Atavist`,
                         annotation: {
+                            // wiki: atavism
                             description: `Atavism occurs when genetic traits reappear after having disappeared generations ago. Given my brother's autism and my father's likely Asperger syndrome, my mother always advised me not to have children, as the genes I carried for autism would be passed on to them. As a result, I had to wonder if those I dated ever thought the same.`
                         }
                     },
                     {
                         anchor: `stuck feet first,`,
                         annotation: {
+                            // wiki: breech birth
                             description: `My brother was a breech baby, meaning that he exited the womb bottom first rather than head first, which complicated the delivery. My mother initially hypothesised this to be the cause of his autism.`
                         }
                     }
@@ -80,6 +83,7 @@ module.exports = {
                     {
                         anchor: `inner lotus eater,`,
                         annotation: {
+                            // wiki: lotus eater
                             description: `In Greek mythology, the lotus-eaters were islanders observed by Odysseus to while away their days eating the narcotic fruit of the lotus. Similarly, Miriam would comment on how much I drank, but make no judgments. In hindsight, it was because she, like Odysseus, was keeping her distance.`
                         }
                     }
@@ -108,6 +112,7 @@ module.exports = {
                         // TODO: Connect id to drunken personality.
                         anchor: `wit and id`,
                         annotation: {
+                            // wiki: id
                             description: `In Freudian psychology, the id represents the primal impulses of the psyche. I told Miriam about my drunken personality, and explained my belief that allowing it to win over my thoughts, and even to arbitrate life decisions, was the key to keeping my creative juices flowing.`
                         }
                     },
@@ -118,6 +123,7 @@ module.exports = {
                     {
                         anchor: `phoenix risen limp`,
                         annotation: {
+                            // wiki: phoenix
                             description: `In Greek mythology, the phoenix is a bird that is reborn from its own ashes. Or else, "penis risen limp." Having broken up with Sita to date Miriam, I also await my triumphant rebirth. And yet, as Miriam climbs on top of me to make out, I'm overcome with self-doubt and thus struggle to maintain an erection.`
                         }
                     },
@@ -159,6 +165,7 @@ module.exports = {
                         // TODO: Mention phoenix
                         anchor: `His god humming "Freebird,"`,
                         annotation: {
+                            // wiki: freebird
                             description: [
                                 `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo blares Lynyrd Skynyrd's "Freebird," he sways and strums his ukulele, as if to the rumblings of his all-American mountain god. In actuality, of course, it's because Miriam, who happens to be`,
                                 {
@@ -184,6 +191,7 @@ module.exports = {
                     {
                         anchor: `at each other's throats.`,
                         annotation: {
+                            // wiki: abbot and costello, martin and lewis
                             description: `Some comedy duos famously did not get along, which enlivened their dynamic when the tapes were rolling. Like Abbott and Costello or Martin and Lewis, my two personalities would befuddle each other, much to Miriam's entertainment. But even so, she recognised the mental distress that fueled this spectacle, and wanted no lasting part in it.`
                         }
                     }
@@ -232,6 +240,7 @@ module.exports = {
                     {
                         anchor: `forced conversion`,
                         annotation: {
+                            // wiki: forced conversion?
                             description: `Historically, conquered peoples were forced to assimilate by adopting the religious beliefs of their conquerors. Oftentimes, however, they would simply rename old customs and deities and incorporate them into their new faith. Here, I imagine Miriam judging my own attempts at assimilation to be just as inadequate. She thus fears that corrupting traces of my old ways yet remain.`
                         }
                     }
@@ -315,6 +324,7 @@ module.exports = {
                     {
                         anchor: `twitching sword`,
                         annotation: {
+                            // wiki: knighthood
                             description: `While dubbing may refer to the replacement of an actor's voice in post-production, it also refers to the ritual of conferring knighthood. Here, I imagine my drunken personality erratically trying to tap a perilously sharp sword on the sober me's shoulder.`
                         }
                     },
@@ -357,12 +367,14 @@ module.exports = {
                     {
                         anchor: `typo`,
                         annotation: {
+                            // wiki: type o
                             description: `I was a typo in the sense of being Miriam's mistake. But also a "Type O," the universal blood donor, given that I kept wanting to offer more of myself while having little chance of being saved in return.`
                         }
                     },
                     {
                         anchor: `fragile ex`,
                         annotation: {
+                            // wiki: fragile x
                             description: `Different boyfriends react to breakups in different ways, and I was the frail kind. But also "fragile X," which is a genetic syndrome caused by a mutated X chromosome that results in mental disability.`
                         }
                     },
@@ -376,6 +388,7 @@ module.exports = {
                     {
                         anchor: `vinyl, exit`,
                         annotation: {
+                            // wiki: assisted suicide
                             description: `After Miriam helps me to end myself, I imagine her helping herself to my record collection, which she'll trade for cash at a music store. Also, "final exit" is a euphemism used by proponents of assisted suicide.`
                         }
                     },
@@ -389,6 +402,7 @@ module.exports = {
                     {
                         anchor: `selfish cut-off jeans,`,
                         annotation: {
+                            // wiki: selfish gene, dawkins
                             description: [
                                 `In`,
                                 {
@@ -538,6 +552,7 @@ module.exports = {
                     {
                         anchor: `ex-dromedary,`,
                         annotation: {
+                            // wiki: dromedary
                             description: `The dromedary, or Arabian camel, has a single hump on its back. The Bactrian camel has two.`
                         }
                     }
