@@ -138,6 +138,7 @@ class App extends Component {
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
         this.onKeyDown = this.onKeyDown.bind(this)
+        this.handleAnnotationSectionClick = this.handleAnnotationSectionClick.bind(this)
     }
 
     _assignLogFunctions() {
@@ -149,7 +150,7 @@ class App extends Component {
 
     // Focus for accessibility.
     _focusApp(element = this.refs.app) {
-        ReactDOM.findDOMNode(this.refs.app).focus()
+        ReactDOM.findDOMNode(element).focus()
     }
 
     _stopPropagation(e) {
@@ -289,16 +290,11 @@ class App extends Component {
         }
     }
 
-    selectWiki(e, selectedWiki) {
+    selectWiki(e, selectedWikiIndex = 0) {
         this._stopPropagation(e)
         if (e) { this._handleSectionAccess(WIKI_SECTION) }
 
-        const selectedWikiIndex = selectedWiki ?
-            `https://en.m.wikipedia.org/wiki/${selectedWiki}` : ''
-
-        // Dispatch Redux action.
         this.props.selectWikiIndex(selectedWikiIndex)
-
         this._focusApp()
     }
 
@@ -398,6 +394,18 @@ class App extends Component {
         this.setState({
             hoveredLineIndex
         })
+    }
+
+    handleAnnotationSectionClick(e) {
+        if (this.props.selectedWikiIndex) {
+            this.selectWiki()
+        }
+
+        /**
+         * For some reason, clicking on annotation popup moves focus to body,
+         * so we will re-place the focus on app again.
+         */
+        this._focusApp()
     }
 
     _onBodyClick(e) {
@@ -566,6 +574,7 @@ class App extends Component {
                     onKeyDown={this.onKeyDown}
                     onScreenWidthClick={this.selectScreenWidth}
                     onLyricColumnClick={this.selectLyricColumn}
+                    onAnnotationSectionClick={this.handleAnnotationSectionClick}
                 />
             </div>
         )

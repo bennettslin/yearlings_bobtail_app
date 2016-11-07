@@ -13,15 +13,18 @@ const Song = ({
 
     selectedSong,
     selectedAnnotationIndex,
+    selectedWikiIndex,
 
 ...other }) => {
 
-    const annotation = getAnnotation({ selectedAnnotationIndex, selectedSong })
+    const annotation = getAnnotation({ selectedAnnotationIndex, selectedSong }),
+        selectedWikiUrl = selectedWikiIndex ? `https://en.m.wikipedia.org/wiki/${annotation.wikis[selectedWikiIndex - 1]}` : null
 
     return (
         <SongView {...other}
             annotation={annotation}
             selectedAnnotationIndex={selectedAnnotationIndex}
+            selectedWikiUrl={selectedWikiUrl}
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
@@ -63,6 +66,7 @@ const SongView = ({
     onDotHover,
     onLineHover,
     onLyricColumnClick,
+    onAnnotationSectionClick,
 
     // From controller.
     annotation,
@@ -83,6 +87,7 @@ const SongView = ({
                 onPortalClick={onPortalClick}
                 onWikiUrlClick={onWikiUrlClick}
                 onCloseClick={onAnnotationClick}
+                onSectionClick={onAnnotationSectionClick}
             />
             <WikiPopup
                 selectedWikiUrl={selectedWikiUrl}

@@ -37,13 +37,13 @@ module.exports = {
     ],
 
     SELECTED_SONG_INDEX: 'selectedSongIndex',
+    SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
+    SELECTED_WIKI_INDEX: 'selectedWikiIndex',
     SELECTED_VERSE_INDEX: 'selectedVerseIndex',
     SELECTED_TIME_PLAYED: 'selectedTimePlayed',
     SELECTED_DOT_KEYS: 'selectedDotKeys',
-    SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
-    SELECTED_WIKI_INDEX: 'selectedWikiUrl',
     ACCESSED_ON: 'accessedOn',
     ACCESSED_SECTION_INDEX: 'accessedSectionIndex',
 

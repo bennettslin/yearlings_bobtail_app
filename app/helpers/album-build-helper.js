@@ -174,24 +174,27 @@ const _addWikiIndexIfFound = (key, object, reset = true) => {
         reset = false
     }
 
-    if (!object) {
+    if (!object || typeof object !== 'object') {
         return false
+
     } else if (Array.isArray(object)) {
         return object.reduce((keyFound, element) => {
             return _addWikiIndexIfFound(key, element, reset) || keyFound
         }, false)
-    } else if (typeof object === 'object') {
+
+    } else {
         return Object.keys(object).reduce((keyFound, currentKey) => {
+            const hasWiki = !!object[key]
+
             if (!object.wikiIndex && typeof object[key] === 'string') {
                 object.wikiIndex = _tempStore._wikiIndex
                 _tempStore._wikiIndex++
                 _tempStore._wikis.push(object[key])
+                delete object[key]
             }
 
-            return keyFound || !!object[key] || _addWikiIndexIfFound(key, object[currentKey], reset)
+            return keyFound || hasWiki || _addWikiIndexIfFound(key, object[currentKey], reset)
         }, false)
-    } else {
-        return false
     }
 }
 

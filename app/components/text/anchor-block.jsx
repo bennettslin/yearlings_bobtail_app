@@ -22,7 +22,7 @@ const AnchorBlock = ({
             anchor,
             todo,
             dotKeys,
-            wiki } = text,
+            wikiIndex } = text,
 
         isSelected = annotationIndex && annotationIndex === selectedAnnotationIndex,
         isAccessOutlined = annotationIndex === accessedAnnotationIndex && accessedAnnotationOutlined,
@@ -33,7 +33,7 @@ const AnchorBlock = ({
          * click handler is the annotation index. Otherwise, it's a
          * reference, and the argument is a url string.
          */
-        clickHandlerArgument = annotationIndex || wiki,
+        clickHandlerArgument = annotationIndex || wikiIndex,
         onClick = !isSelected ? e => onAnchorClick(e, clickHandlerArgument) : null
 
     return (

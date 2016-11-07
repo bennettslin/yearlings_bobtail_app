@@ -2,8 +2,7 @@
 
 import { SELECTED_DOT_KEYS,
          ALL_DOT_KEYS,
-         WINDOW_STORAGE,
-         SELECTED_WIKI_INDEX } from './constants'
+         WINDOW_STORAGE } from './constants'
 
 // TODO: Add validation methods that return valid or default value for all, and test them! ʦ
 
@@ -43,21 +42,12 @@ export default {
         if (key === SELECTED_DOT_KEYS) {
             return _getValidDotKeys(WINDOW_STORAGE[key])
 
-        } else if (key === SELECTED_WIKI_INDEX) {
-            const defaultValue = '',
-                value = WINDOW_STORAGE[key] || defaultValue
-
-            return value
-
         } else if (key) {
-            // Default is 0 unless specified otherwise.
-            const defaultValue =
-                    (key === SELECTED_WIKI_INDEX ? '' : 0),
-                value = WINDOW_STORAGE[key] || defaultValue,
+            // Session only ever stores numerical indices. Default is 0.
+            const value = WINDOW_STORAGE[key] || 0,
                 intValue = parseInt(value)
 
-            // Session only ever stores numerical indices.
-            return isNaN(intValue) ? defaultValue : intValue
+            return isNaN(intValue) ? 0 : intValue
 
         } else {
             return 0
