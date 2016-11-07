@@ -44,6 +44,7 @@ module.exports = {
                     {
                         anchor: `nest on this stork,`,
                         annotation: {
+                            // wiki: stork in folklore?
                             description: `In European folklore, the stork delivers babies to expecting parents. Each time I broke up with Sita to date another woman, I always reverted to the same naive, wide-eyed persona. I longed to relive the giddiness of puppy love, like an infant experiencing the world for the first time.`
                         }
                     }
@@ -216,6 +217,7 @@ module.exports = {
                     {
                         anchor: `knight-errant`,
                         annotation: {
+                            // wiki: knight errant
                             description: `In medieval romance, a knight-errant wanders in search of adventures, proving his chivalry in the name of courtly love.`
                         }
                     },
@@ -241,6 +243,7 @@ module.exports = {
                     {
                         anchor: `time-lapse`,
                         annotation: {
+                            // wiki: timelapse
                             description: `In time-lapse photography, the frame rate at which images are captured is lower than upon playback, causing time to speed up. Sita anticipated that my years of infidelity would whiz by in a flash, as the pursuit of other women grew repetitive, imprinting few standout memories.`
                         }
                     },
@@ -248,6 +251,7 @@ module.exports = {
                     {
                         anchor: `spring forward on a fallback…`,
                         annotation: {
+                            // wiki: daylight saving time?
                             description: `Sita hoped that the endless disappointments I was sure to face as an aging playboy would compel me to return to her, my fallback option, with relief rather than reluctance. The passage of time is invoked by the classic mnemonic for daylight saving time, "spring forward, fall back," which teaches us to set our clocks one hour forward in the spring, and backward in the fall.`
                         }
                     }
@@ -289,6 +293,7 @@ module.exports = {
                     {
                         anchor: `shank's dustless silhouette`,
                         annotation: {
+                            // wiki: shank
                             description: `A shank is a prison inmate's makeshift blade. During our breakup years, I would habitually return to Sita promising to mend my ways. Things would be peachy again for a few months, after which I would run off once more with another woman. I was like a reformed convict who leaves his shank to collect dust on the windowsill, then relapses without warning, taking it with him.`
                         }
                     },
@@ -303,6 +308,7 @@ module.exports = {
                         // TODO: Make analogy more clear.
                         anchor: `severed stinger`,
                         annotation: {
+                            // wiki: honeybee
                             description: `The honeybee has a barbed stinger that stays lodged in a person's skin. At the time, I failed to appreciate what it meant to Sita to have given her virginity to me, and how it drove her to keep trying to make things work.`
                         }
                     },
@@ -369,6 +375,7 @@ module.exports = {
                     {
                         anchor: `thirty-three?`,
                         annotation: {
+                            // wiki: jesus
                             description: `I hated the idea of getting older, and often joked that I would kill myself at thirty-three, the age at which Jesus was crucified, since clearly that was all the time one needed to change the world. So when I suggested it as the age at which I would return for Sita in accordance with our little pact, the subtext was understood.`
                         }
                     }
@@ -400,6 +407,7 @@ module.exports = {
                     {
                         anchor: `fear of never dying,`,
                         annotation: {
+                            // wiki: moksha
                             description: [
                                 `Sympathising with my hunger for spiritual wisdom, Sita often invited me to attend Hindu services with her, which I eagerly obliged. On the question of an afterlife, I found Hinduism's notion of`,
                                 {
