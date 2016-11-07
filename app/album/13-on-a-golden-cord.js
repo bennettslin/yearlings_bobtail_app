@@ -5,6 +5,7 @@ module.exports = {
     title: {
         anchor: `On a Golden Cord`,
         annotation: {
+            // wiki: keats? Or ode? Mention pretentious
             description: `Here, I wanted to follow in the footsteps of other ruminations upon still-life objects, such as John Keats's "Ode on a Grecian Urn."`
         }
     },
@@ -18,6 +19,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
+                        // wiki: orwell. 1984. johnny horton, klondike gold rush.
                         description: [
                             `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
                             {
@@ -161,6 +163,7 @@ module.exports = {
                     {
                         anchor: `pauper's grave`,
                         annotation: {
+                            // wiki: pauper's grave
                             description: `I had spent weeks rehearsing the breakup, which I assumed could be scheduled at my convenience and would follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was disposed of in careless haste, much like those who cannot afford a proper burial.`
                         }
                     },
@@ -180,6 +183,7 @@ module.exports = {
                     {
                         anchor: `bellyaches on suttee.`,
                         annotation: {
+                            // wiki: suttee
                             description: `Suttee is an outlawed Hindu custom in which a widow must commit suicide by throwing herself on her husband's funeral pyre. Similarly, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, until no trace remained of whom she once knew.`
                         }
                     }
@@ -246,6 +250,7 @@ module.exports = {
                     {
                         anchor: `hatchet man`,
                         annotation: {
+                            // wiki: hatchet man
                             description: `A hatchet man is an underling who carries out the most disagreeable tasks of an operation. Sober me recognises the trauma that must certainly linger, and so forgives his drunken half's lack of sympathy for his victim.`
                         }
                     },
@@ -256,6 +261,7 @@ module.exports = {
                     {
                         anchor: `avenue Möbius.`,
                         annotation: {
+                            // wiki: mobius
                             description: `A Möbius strip is a surface with only one side, and can be created by joining the ends of a half-twisted paper strip. As drunken me ambles down twisting sidewalks, mentally digging through the dense layers of half-truths that helped justify his act, it occurs to him that perhaps there really aren't two sides to this story. Or two sides to this mind…`
                         }
                     }
@@ -295,6 +301,7 @@ module.exports = {
                     {
                         anchor: `night were peeled`,
                         annotation: {
+                            // wiki: colorform
                             description: `When a friend asked what life after Robitussin felt like, I described each passing moment as a layer of Colorforms being peeled away to reveal the next.`
                         }
                     },
@@ -399,7 +406,9 @@ module.exports = {
                         lyric: {
                             italic: {
                                 anchor: `Mush! Mush!`,
+                                properNoun: true,
                                 annotation: {
+                                    // wiki: north to alaska
                                     description: `Marching onward through the brisk twilight, I was reminded of simpler days as a child, when I would sing Johnny Horton's "North to Alaska," and my sister would back me up by heaving "Mush! Mush!"`
                                 }
                             }
@@ -419,6 +428,7 @@ module.exports = {
                     {
                         anchor: `streetswept dawn.`,
                         annotation: {
+                            // wiki: mechanical streetsweeper?
                             description: `As daylight broke, the mechanical street sweepers came out in full force, beeping and purring as they went.`
                         }
                     }
@@ -461,6 +471,7 @@ module.exports = {
                     {
                         anchor: `killed the thing I love?`,
                         annotation: {
+                            // wiki: wilde, reading gaol
                             description: `While in prison for homosexuality, Oscar Wilde witnessed the execution of a man convicted of murdering his wife. Sympathising with the man's plight, Wilde wrote his poem "The Ballad of Reading Gaol," which finds a common thread tying the man's crime to his own— and to all of humanity's— with its refrain, "For each man kills the thing he loves."`
                         }
                     }
@@ -487,6 +498,7 @@ module.exports = {
                         },
                         properNoun: true,
                         annotation: {
+                            // wiki: Nietzsche, ubermensch
                             description: [
                                 `In`,
                                 {
@@ -520,6 +532,7 @@ module.exports = {
                     {
                         anchor: `guardian knot`,
                         annotation: {
+                            // wiki: gordian knot
                             description: `In antiquity, the Gordian knot was a rope so tightly entangled that whosoever could unravel it would rule all of Asia. Alexander the Great simply cut it in half with his sword. While the umbilical cord passes sustenance to the fetus, outside the mother's womb it shrivels to a navel. So Sita became my guardian, and I hers, as we sustained each other through our locked navels. But like Alexander, I severed this "guardian knot," in my bid for artistic greatness.`
                         }
                     },
@@ -647,12 +660,14 @@ module.exports = {
                     {
                         anchor: `kohl-eyed`,
                         annotation: {
+                            // wiki: kohl
                             description: `Kohl is a Middle Eastern cosmetic that has been used since antiquity to darken the eyelids.`
                         }
                     },
                     {
                         anchor: `houris`,
                         annotation: {
+                            // wiki: houri
                             description: `In the Quran, the houris are maidens who await the faithful in paradise. This concept gained notoriety in the West when it was reported that suicide bombers were being lured with the promise of 72 virgins in heaven. But given my quest to date more women, at great cost to myself and greater suffering to others, perhaps all that distinguished me from these disaffected young men was my nation of birth.`
                         }
                     },
