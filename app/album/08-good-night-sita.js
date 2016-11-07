@@ -95,9 +95,13 @@ module.exports = {
                     {
                         anchor: `decoder ring`,
                         annotation: {
-                            // wiki: decoder ring
                             description: [
-                                `A secret decoder ring was a toy purchased through mail that allowed children to decipher encrypted messages. It seemed like a handy thing to have on a date, as I was constantly trying to tease out hidden meanings in even the most basic conversations.`
+                                `A`,
+                                {
+                                    anchor: `secret decoder ring`,
+                                    wiki: `Secret_decoder_ring`
+                                },
+                                `was a toy purchased through mail that allowed children to decipher encrypted messages. It seemed like a handy thing to have on a date, as I was constantly trying to tease out hidden meanings in even the most basic conversations.`
                             ]
                         }
                     }
@@ -110,9 +114,13 @@ module.exports = {
                         anchor: `Dutch courage`,
                         properNoun: true,
                         annotation: {
-                            // wiki: dutch courage
                             description: [
-                                `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative. Dutch courage refers to misplaced confidence gained from alcohol. Having an older friend who faithfully plied me with cheap twelve-packs, I would down a can or two before heading out on a date.`
+                                `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
+                                {
+                                    anchor: `Dutch courage`,
+                                    wiki: `Dutch_courage`
+                                },
+                                `refers to misplaced confidence gained from alcohol. Having an older friend who faithfully plied me with cheap twelve-packs, I would down a can or two before heading out on a date.`
                             ]
                         }
                     },
@@ -120,9 +128,13 @@ module.exports = {
                     {
                         anchor: `going Dutch`,
                         annotation: {
-                            // wiki: go dutch
                             description: [
-                                `To go Dutch means to split the cost of a meal. Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This always made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.`
+                                `To`,
+                                {
+                                    anchor: `go Dutch`,
+                                    wiki: `Going_Dutch`
+                                },
+                                `means to split the cost of a meal. Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This always made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.`
                             ]
                         }
                     }

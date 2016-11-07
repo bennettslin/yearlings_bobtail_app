@@ -167,10 +167,8 @@ class App extends Component {
         if (selectedAnnotationIndex) {
             if (selectedWikiIndex) {
                 this.selectWiki()
-                this._handleSectionAccess(ANNOTATION_SECTION)
             } else {
                 this.selectAnnotation()
-                this._handleSectionAccess(LYRICS_SECTION)
             }
 
             if (accessOff) { this._handleAccessOn(0) }
@@ -275,12 +273,18 @@ class App extends Component {
             this.setState({
                 accessedAnnotationIndex: selectedIndex
             })
+        } else {
+            this._handleSectionAccess(LYRICS_SECTION)
         }
     }
 
     selectWiki(e, selectedWikiIndex = 0) {
         this._stopPropagation(e)
         if (e) { this._handleSectionAccess(WIKI_SECTION) }
+
+        if (!selectedWikiIndex) {
+            this._handleSectionAccess(ANNOTATION_SECTION)
+        }
 
         this.props.selectWikiIndex(selectedWikiIndex)
         this._focusApp()
@@ -385,6 +389,8 @@ class App extends Component {
     }
 
     handleAnnotationSectionClick(e) {
+        this._handleAccessOn(0)
+
         if (this.props.selectedWikiIndex) {
             this.selectWiki()
         }
