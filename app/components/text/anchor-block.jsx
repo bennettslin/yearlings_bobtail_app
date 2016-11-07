@@ -13,6 +13,7 @@ const AnchorBlock = ({
     accessedAnnotationIndex,
     accessedAnnotationOutlined,
     selectedAnnotationIndex,
+    selectedWikiIndex,
     selectedDotKeys,
     onAnchorClick,
 
@@ -24,7 +25,7 @@ const AnchorBlock = ({
             dotKeys,
             wikiIndex } = text,
 
-        isSelected = annotationIndex && annotationIndex === selectedAnnotationIndex,
+        isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
         isAccessOutlined = annotationIndex === accessedAnnotationIndex && accessedAnnotationOutlined,
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
 
@@ -42,6 +43,7 @@ const AnchorBlock = ({
             isAccessOutlined={isAccessOutlined}
             isSelected={isSelected}
             annotationIndex={annotationIndex}
+            wikiIndex={wikiIndex}
             dotKeys={intersectedDotKeys}
             anchorText={anchor}
             onClick={onClick}
@@ -64,6 +66,7 @@ const AnchorBlockView = ({
     isAccessOutlined,
     isSelected,
     annotationIndex,
+    wikiIndex,
     dotKeys,
     anchorText,
     onClick
@@ -74,7 +77,7 @@ const AnchorBlockView = ({
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
         { !beginsNewLine ? ' ' : null }
         <a
-            className={`anchor-block${annotationIndex ? ' annotation-' + annotationIndex : ''}${isAccessOutlined ? ' access-outlined' : ''}${isSelected ? '' : ' enabled'}${hasTodo ? ' todo' : ''}`}
+            className={`anchor-block${annotationIndex ? ' annotation-' + annotationIndex : ''}${wikiIndex ? ' wiki-' + wikiIndex : ''}${isAccessOutlined ? ' access-outlined' : ''}${isSelected ? '' : ' enabled'}${hasTodo ? ' todo' : ''}`}
             onClick={onClick}
         >
             {isLyric ?

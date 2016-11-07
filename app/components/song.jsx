@@ -24,6 +24,7 @@ const Song = ({
         <SongView {...other}
             annotation={annotation}
             selectedAnnotationIndex={selectedAnnotationIndex}
+            selectedWikiIndex={selectedWikiIndex}
             selectedWikiUrl={selectedWikiUrl}
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
@@ -47,6 +48,7 @@ const SongView = ({
     accessedAnnotationOutlined,
     accessedDotIndex,
     selectedAnnotationIndex,
+    selectedWikiIndex,
     selectedDotKeys,
     selectedWikiUrl,
     hoveredDotIndex,
@@ -82,6 +84,7 @@ const SongView = ({
                 songs={songs}
                 annotation={annotation}
                 selectedDotKeys={selectedDotKeys}
+                selectedWikiIndex={selectedWikiIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
                 onPortalClick={onPortalClick}

@@ -46,6 +46,7 @@ const AnnotationCardView = ({
     // From props.
     onWikiUrlClick,
     onPortalClick,
+    selectedWikiIndex,
 
     // From controller.
     text,
@@ -61,6 +62,7 @@ const AnnotationCardView = ({
         <TextBlock
             isLyric={false}
             text={text}
+            selectedWikiIndex={selectedWikiIndex}
             onAnchorClick={onWikiUrlClick}
         />
         {portalLinks ?
