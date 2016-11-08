@@ -183,9 +183,13 @@ module.exports = {
                     {
                         anchor: `fetch her lancet pen,`,
                         annotation: {
-                            // wiki: lancet pen
                             description: [
-                                `As a diabetic, Sita regularly checked her blood sugar level before meals by pricking her finger with a lancing device. That day, she forgot to take it with her after bussing her tray, and came down to the dishroom to retrieve it.`
+                                `As a diabetic, Sita regularly checked her blood sugar level before meals by pricking her finger with a`,
+                                {
+                                    anchor: `lancing device.`,
+                                    wiki: `Blood_lancet`
+                                },
+                                `That day, she forgot to take it with her after bussing her tray, and came down to the dishroom to retrieve it.`
                             ]
                         }
                     }
@@ -338,9 +342,13 @@ module.exports = {
                     {
                         anchor: `sunken Tirpitz lies.`,
                         annotation: {
-                            // wiki: tirpitz
                             description: [
-                                `The Bismarck and the Tirpitz were sister battleships of the German navy in World War II. After all, the Axis were the heroes in`,
+                                    `The Bismarck and the Tirpitz were`,
+                                    {
+                                        anchor: `sister battleships`,
+                                        wiki: `Bismarck-class_battleship`
+                                    },
+                                    `of the German navy in World War II. After all, the Axis were the heroes in`,
                                 {
                                     italic: `The Man in the High Castle.`
                                 }
@@ -405,9 +413,13 @@ module.exports = {
                     {
                         anchor: `Phantom limbs`,
                         annotation: {
-                            // wiki: phantom limb
                             description: [
-                                `A phantom limb is the sensation that a missing limb is still attached and responsive. After several weeks of giddy hope, the thought of spending my weekends alone again, with no other prospects on the horizon, felt like an amputation.`
+                                `A`,
+                                {
+                                    anchor: `phantom limb`,
+                                    wiki: `Phantom_limb`
+                                },
+                                `is the sensation that a missing limb is still attached and responsive. After several weeks of giddy hope, the thought of spending my weekends alone again, with no other prospects on the horizon, felt like an amputation.`
                             ]
                         }
                     },
@@ -421,9 +433,13 @@ module.exports = {
                     {
                         anchor: `tripped on runner's high.`,
                         annotation: {
-                            // wiki: runner's high
                             description: [
-                                `A runner's high is a feeling of euphoria experienced through exercise. I often needed a beer or two to muster the energy to walk home after a gruelling shift, so it was hard to feel gracious towards anyone out for an evening jog.`
+                                `A`,
+                                {
+                                    anchor: `runner's high`,
+                                    wiki: `Neurobiological_effects_of_physical_exercise`
+                                },
+                                `is a feeling of euphoria experienced through exercise. I often needed a beer or two to muster the energy to walk home after a gruelling shift, so it was hard to feel gracious towards anyone out for an evening jog.`
                             ]
                         }
                     }
@@ -436,9 +452,13 @@ module.exports = {
                     {
                         anchor: `window of your Walkman`,
                         annotation: {
-                            // wiki: walkman
                             description: [
-                                `The Walkman is a portable cassette player. I would listen to mixtapes on the walk home, seemingly absorbed in my music even as I wished pratfalls upon others, much as a child might duck beneath a window after pulling a prank.`
+                                `The`,
+                                {
+                                    anchor: `Walkman`,
+                                    wiki: `Walkman`
+                                },
+                                `is a portable cassette player. I would listen to mixtapes on the walk home, seemingly absorbed in my music even as I wished pratfalls upon others, much as a child might duck beneath a window after pulling a prank.`
                             ]
                         }
                     },
@@ -804,9 +824,12 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // TODO: Elaborate on how she rescued me.
-                            // wiki: grace darling
                             description: [
-                                `Grace Darling was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26.`
+                                {
+                                    anchor: `Grace Darling`,
+                                    wiki: `Grace_Darling`
+                                },
+                                `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26.`
                             ],
                             portal: `grey_starling`
                         }
@@ -815,9 +838,13 @@ module.exports = {
                     {
                         anchor: `fell an oar.`,
                         annotation: {
-                            // wiki: poe, raven
                             description: [
-                                `Or "fell Lenore." In Edgar Allan Poe's poem "The Raven," the narrator laments the death of his beloved Lenore.`
+                                `Or "fell Lenore." In Edgar Allan Poe's poem`,
+                                {
+                                    anchor: `"The Raven,"`,
+                                    wiki: `The_Raven`
+                                },
+                                `the narrator laments the death of his beloved Lenore.`
                             ]
                         }
                     }
