@@ -84,7 +84,7 @@ const AnchorBlockView = ({
                 <span className="underline-bar">
                 </span> : null
             }
-            {dotKeys ?
+            {dotKeys && !wikiIndex ?
                 <DotsBlock
                     inBackground={isSelected}
                     presentDotKeys={dotKeys}

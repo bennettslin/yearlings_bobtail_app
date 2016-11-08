@@ -756,7 +756,7 @@ module.exports = {
                         description: [
                             {
                                 anchor: `Shivaree`,
-                                wiki: `Shivaree`
+                                wiki: `Charivari`
                             },
                             `is a French folk custom in which a crowd loudly performs a mock serenade outside the home of newlyweds. Sitting`,
                             {

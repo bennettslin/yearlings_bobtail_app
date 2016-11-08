@@ -232,10 +232,10 @@ const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0) => {
     if (portal) {
 
         const portalLink = {
-            songIndex: _tempStore._songIndex,
-            annotationIndex,
-            cardIndex
-        }
+                songIndex: _tempStore._songIndex,
+                annotationIndex,
+                cardIndex
+            }
 
         // If first portal link, initialise array.
         if (!_tempStore._portalLinks[portal]) {
@@ -244,9 +244,6 @@ const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0) => {
 
         // Add portal link to portal links array.
         _tempStore._portalLinks[portal].push(portalLink)
-
-        // Add portalIndex to popupAnchors array.
-        _tempStore._popupAnchors.push({ portalIndex: _tempStore._popupAnchors.length })
 
         // Add portal key to dot keys.
         dotKeys.portal = true
@@ -272,9 +269,14 @@ const _injectPortalLinks = (album) => {
                     annotation.cards[link.cardIndex] : annotation.cards,
                 portalLinks = links.filter((link, thisIndex) => {
                     return index !== thisIndex
+                }).map((link, thisIndex) => {
+                    link.portalIndex = annotation.popupAnchors.length + thisIndex
+                    return link
                 })
 
             card.portalLinks = portalLinks
+
+            delete link.cardIndex
         })
     }
 }

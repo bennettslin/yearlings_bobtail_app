@@ -49,13 +49,15 @@ export const getPortalLinks = (card, songs) => {
         // Each portal link contains a portal title and index.
         return portalLinks ? portalLinks.map((portalLink) => {
             const { songIndex,
-                    annotationIndex } = portalLink,
+                    annotationIndex,
+                    portalIndex } = portalLink,
                 song = songs[songIndex - 1],
                 annotation = song.annotations[annotationIndex - 1]
 
             return {
                 songIndex,
                 annotationIndex,
+                portalIndex,
                 songTitle: song.title,
                 annotationTitle: annotation.title
             }
