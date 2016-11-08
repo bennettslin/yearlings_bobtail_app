@@ -30,6 +30,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `hide portals when portal dot turned off`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `hide wiki anchors when wiki dot turned off`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `access keys should skip unshown annotations`,
             workedHours: 0,
             neededHours: 2

@@ -12,6 +12,7 @@ const TextUnit = ({
 
     text,
     selectedDotKeys,
+    showWikis,
 
 ...other }) => {
 
@@ -44,8 +45,10 @@ const TextUnit = ({
             )
 
         } else if (text.anchor) {
-            const showAsAnchor = intersects(text.dotKeys, selectedDotKeys)
-            return (showAsAnchor ?
+            const showAsAnchor = intersects(text.dotKeys, selectedDotKeys),
+                showIfWiki = showWikis !== false
+
+            return (showAsAnchor && showIfWiki ?
                 <AnchorBlock {...other}
                     text={text}
                     selectedDotKeys={selectedDotKeys}

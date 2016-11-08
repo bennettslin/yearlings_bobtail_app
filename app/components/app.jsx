@@ -22,6 +22,8 @@ import { SONGS_SECTION,
          WIKI_SECTION,
          SECTION_KEYS,
 
+         WIKI,
+
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getAnnotationsLength } from 'helpers/album-view-helper'
@@ -250,6 +252,11 @@ class App extends Component {
 
         const isSelected = !this.props.selectedDotKeys[selectedDotKey]
         this.props.selectDotKey(selectedDotKey, isSelected)
+
+        // Close wiki popup if deselected.
+        if (!isSelected && selectedDotKey === WIKI && this.props.selectedWikiIndex) {
+            this._closePopupIfOpen()
+        }
 
         // If this is the last selected dot key, then close the annotation.
         if (!isSelected && allDotsDeselected(this.props, selectedDotKey)) {

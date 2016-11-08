@@ -4,9 +4,13 @@ module.exports = {
     title: {
         anchor: `Good Night, Sita`,
         annotation: {
-            // wiki: occurrence, bierce
             description: [
-                `In "An Occurrence at Owl Creek Bridge" by satirist Ambrose Bierce, a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, in which I recollect every date with Sita thus far, turns out to be sandwiched between a brief exchange of farewells.`
+                `In`,
+                {
+                    anchor: `"An Occurrence at Owl Creek Bridge"`,
+                    wiki: `An_Occurrence_at_Owl_Creek_Bridge`
+                },
+                `by satirist Ambrose Bierce, a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, in which I recollect every date with Sita thus far, turns out to be sandwiched between a brief exchange of farewells.`
             ]
         }
     },
@@ -158,8 +162,11 @@ module.exports = {
                         anchor: `nor a barnacle`,
                         annotation: {
                             description: [
-                                // wiki: nora barnacle
-                                `Nora Barnacle was James Joyce's wife and the inspiration for the character Molly Bloom, whose interior monologue closes out`,
+                                {
+                                    anchor: `Nora Barnacle`,
+                                    wiki: `Nora_Barnacle`
+                                },
+                                `was James Joyce's wife and the inspiration for the character Molly Bloom, whose interior monologue closes out`,
                                 {
                                     italic: `Ulysses.`
                                 }
@@ -198,9 +205,12 @@ module.exports = {
                     {
                         anchor: `innermost matryoshka's`,
                         annotation: {
-                            // wiki: matryoshka
                             description: [
-                                `Matryoshkas are Russian nesting dolls placed one inside another in decreasing size. Lessons learned from mistakes made with one woman can be applied to the next, so each date felt like prying open one doll to get to another, with the hope of eventually reaching the last one that doesn't turn out hollow.`
+                                {
+                                    anchor: `Matryoshkas`,
+                                    wiki: `Matryoshka_doll`
+                                },
+                                `are Russian nesting dolls placed one inside another in decreasing size. Lessons learned from mistakes made with one woman can be applied to the next, so each date felt like prying open one doll to get to another, with the hope of eventually reaching the last one that doesn't turn out hollow.`
                             ]
                         }
                     }
@@ -235,9 +245,13 @@ module.exports = {
                     {
                         anchor: `chrysalis unchristened`,
                         annotation: {
-                            // wiki: chrysalis
                             description: [
-                                `A chrysalis is a butterfly that has not yet matured into an adult. It seemed that the trick to dating was to look for that rare woman inexperienced enough not to be turned off by my own lack of experience. Of course, every other low-status male had the same idea.`
+                                `A`,
+                                {
+                                    anchor: `chrysalis`,
+                                    wiki: `Pupa`
+                                },
+                                `is a butterfly that has not yet matured into an adult. It seemed that the trick to dating was to look for that rare woman inexperienced enough not to be turned off by my own lack of experience. Of course, every other low-status male had the same idea.`
                             ]
                         }
                     },
@@ -453,7 +467,7 @@ module.exports = {
                         annotation: {
                             // wiki: shotgun method?
                             description: [
-                                `I came to adopt the shotgun method, which involves hitting on anyone, at any moment. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`
+                                `I came to adopt the shotgun approach, which involves hitting on anyone, at any moment. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`
                             ]
                         }
                     }

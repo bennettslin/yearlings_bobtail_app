@@ -7,6 +7,8 @@ const LEFT = 'left',
     EMPHASIS = 'emphasis',
     ANCHOR = 'anchor',
 
+    WIKI = 'wiki',
+
     AUDIO_SECTION = 'audio_section',
     SONGS_SECTION = 'songs_section',
     OVERVIEW_SECTION = 'overview_section',
@@ -111,6 +113,8 @@ module.exports = {
         RIGHT
     ],
 
+    WIKI,
+
     ALL_DOT_KEYS: [
         'pun',
         'backstory', // My perspective while making the album.
@@ -118,7 +122,7 @@ module.exports = {
         'foreshadow',
         'music',
         'pulpit',
-        'wiki',
+        WIKI,
         'portal',
         'afterword' // My perspective while making this website.
     ],

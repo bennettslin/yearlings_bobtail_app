@@ -26,13 +26,17 @@ const AnnotationCard = ({
     if (portalLinks) { dotKeys.portal = true }
 
     const shouldShow = intersects(dotKeys, selectedDotKeys),
-        intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys)
+        intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
+        showWikis = selectedDotKeys.wiki,
+        showPortals = selectedDotKeys.portal
 
     return (shouldShow ?
         <AnnotationCardView {...other}
             text={description}
             dotKeys={intersectedDotKeys}
             portalLinks={portalLinks}
+            showWikis={showWikis}
+            showPortals={showPortals}
         /> : null
     )
 }
@@ -51,7 +55,9 @@ const AnnotationCardView = ({
     // From controller.
     text,
     dotKeys,
-    portalLinks
+    portalLinks,
+    showWikis,
+    showPortals
 
 }) => (
     <div className="annotation-card">
@@ -62,10 +68,11 @@ const AnnotationCardView = ({
         <TextBlock
             isLyric={false}
             text={text}
+            showWikis={showWikis}
             selectedWikiIndex={selectedWikiIndex}
             onAnchorClick={onWikiUrlClick}
         />
-        {portalLinks ?
+        {portalLinks && showPortals ?
             <AnnotationPortalsBlock
                 portalLinks={portalLinks}
                 onPortalClick={onPortalClick}

@@ -6,11 +6,18 @@ module.exports = {
     title: {
         anchor: `Grasshoppers Lie Heavy`,
         annotation: {
-            // wiki: Philip Dick, Man in High Castle
             description: [
-                `I was reading a lot of Philip Dick novels during this time, including`,
+                `I was reading a lot of`,
                 {
-                    italic: `The Man in the High Castle,`
+                    anchor: `Philip Dick`,
+                    wiki: `Philip_K._Dick`
+                },
+                `novels during this time, including`,
+                {
+                    italic: {
+                        anchor: `The Man in the High Castle,`,
+                        wiki: `The_Man_in_the_High_Castle`
+                    }
                 },
                 `in which the Axis powers had won World War II. Curiously, the characters in this alternate history are engrossed in their own alternate history novel called`,
                 {
@@ -30,13 +37,17 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // wiki: simon and garfunkel
                         description: [
                             `Just as`,
                             {
                                 italic: `The Grasshopper Lies Heavy`
                             },
-                            `is an alternate history novel that offers its readers a vastly different reality, this song in isolation offers a vastly different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being a story within a story, and did so by including lyrical references to all the other songs on the album. Musically, I tried to channel Simon and Garfunkel in both form and harmony.`
+                            `is an alternate history novel that offers its readers a vastly different reality, this song in isolation offers a vastly different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being a story within a story, and did so by including lyrical references to all the other songs on the album. Musically, I tried to channel`,
+                            {
+                                anchor: `Simon and Garfunkel`,
+                                wiki: `Simon_%26_Garfunkel`
+                            },
+                            `in both form and harmony.`
                         ],
                         dotKeys: {
                             music: true
@@ -89,9 +100,12 @@ module.exports = {
                     {
                         anchor: `molls perched on pedestals,`,
                         annotation: {
-                            // wiki: moll
                             description: [
-                                `Gun molls were the female companions of American gangsters in the early 1900s. In the same way that society viewed their exploits, I simultaneously desired and feared the girls who dated the boys who bullied me. Their contempt was certainly tougher to stomach.`
+                                {
+                                    anchor: `Gun molls`,
+                                    wiki: `Gun_moll`
+                                },
+                                `were the female companions of American gangsters in the early 1900s. In the same way that society viewed their exploits, I simultaneously desired and feared the girls who dated the boys who bullied me. Their contempt was certainly tougher to stomach.`
                             ]
                         }
                     }
@@ -104,9 +118,12 @@ module.exports = {
                     {
                         anchor: `penny dreadfuls.`,
                         annotation: {
-                            // wiki: penny dreadful
                             description: [
-                                `In 19th-century England, a new market emerged for sensational fiction published in cheap novellas, which the highbrow derided as penny dreadfuls.`
+                                `In 19th-century England, a new market emerged for sensational fiction published in cheap novellas, which the highbrow derided as`,
+                                {
+                                    anchor: `penny dreadfuls.`,
+                                    wiki: `Penny_dreadful`
+                                }
                             ]
                         }
                     }
