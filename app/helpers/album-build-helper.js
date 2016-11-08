@@ -16,7 +16,6 @@ const _tempStore = {
 }
 
 export const prepareAlbumData = (album = {}) => {
-    // _convertOverviews(album)
     _prepareAllSongs(album)
     _injectPortalLinks(album)
 
@@ -135,10 +134,10 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough) => {
         if (Array.isArray(cards)) {
             cards.forEach((card, cardIndex) => {
                 // Reset wikiIndex only for first card.
-                _prepareWikis(card, undefined, true, cardIndex === 0)
+                _prepareCard(card, undefined, true, cardIndex === 0)
             })
         } else {
-            _prepareWikis(cards, undefined, true)
+            _prepareCard(cards, undefined, true)
         }
 
         annotation.popupAnchors = _tempStore._popupAnchors
@@ -168,12 +167,12 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough) => {
         // Cards may be single annotation card or array of cards.
         if (Array.isArray(cards)) {
             cards.forEach((card, cardIndex) => {
-                _prepareWikis(card, dotKeys)
+                _prepareCard(card, dotKeys)
                 _addDotKeys(card, dotKeys)
                 _addPortalLink(card, dotKeys, annotationIndex, cardIndex)
             })
         } else {
-            _prepareWikis(cards, dotKeys)
+            _prepareCard(cards, dotKeys)
             _addDotKeys(cards, dotKeys)
             _addPortalLink(cards, dotKeys, annotationIndex)
         }
@@ -231,7 +230,7 @@ const _parseWiki = (key, object, finalPassThrough, reset = true) => {
     }
 }
 
-const _prepareWikis = (card, dotKeys, finalPassThrough, reset) => {
+const _prepareCard = (card, dotKeys, finalPassThrough, reset) => {
     const { description,
             portalLinks } = card
 
@@ -250,10 +249,12 @@ const _prepareWikis = (card, dotKeys, finalPassThrough, reset) => {
         }
     }
 
-    if (portalLinks) {
+    if (portalLinks && finalPassThrough) {
         portalLinks.forEach(link => {
             link.portalIndex = _tempStore._popupAnchorIndex
+            _tempStore._popupAnchors.push(_tempStore._popupAnchorIndex)
             _tempStore._popupAnchorIndex++
+            delete link.cardIndex
         })
     }
 }
@@ -311,10 +312,12 @@ const _injectPortalLinks = (album) => {
                     annotation.cards[link.cardIndex] : annotation.cards,
                 portalLinks = links.filter((link, thisIndex) => {
                     return index !== thisIndex
+                }).map(link => {
+                    // Return a *copy* of the link object.
+                    return Object.assign({}, link)
                 })
 
             card.portalLinks = portalLinks
-            delete link.cardIndex
         })
     }
 }
