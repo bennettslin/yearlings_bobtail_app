@@ -187,7 +187,7 @@ class App extends Component {
 
     togglePlay(e) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess(AUDIO_SECTION) }
+        if (e) { this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION }) }
 
         this.setState({
             isPlaying: !this.state.isPlaying
@@ -196,8 +196,7 @@ class App extends Component {
 
     selectSong(e, selectedIndex = 0) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess(SONGS_SECTION) }
-
+        if (e) { this._handleSectionAccess({ accessedSectionKey: SONGS_SECTION }) }
         if (selectedIndex >= 0 && selectedIndex <= this.props.songs.length) {
 
             // Scroll to top of lyrics.
@@ -223,8 +222,7 @@ class App extends Component {
         // Stored as integer. 0 is to show bubble, 1 is to hide it.
         const selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % 2
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess(OVERVIEW_SECTION) }
-
+        if (e) { this._handleSectionAccess({ accessedSectionKey: OVERVIEW_SECTION }) }
         this.props.selectOverviewIndex(selectedOverviewIndex)
 
         // Close annotation and wiki sections if showing bubble.
@@ -238,8 +236,7 @@ class App extends Component {
         const optionsLength = 3
 
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess(AUDIO_SECTION) }
-
+        if (e) { this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION }) }
         /**
          * Stored as integer. 0 is to "continue after next," 1 is to "repeat," 2 is to "pause after song."
          */
@@ -248,8 +245,7 @@ class App extends Component {
 
     selectDot(e, selectedDotKey) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess(DOTS_SECTION) }
-
+        if (e) { this._handleSectionAccess({ accessedSectionKey: DOTS_SECTION }) }
         const isSelected = !this.props.selectedDotKeys[selectedDotKey]
         this.props.selectDotKey(selectedDotKey, isSelected)
 
@@ -264,47 +260,48 @@ class App extends Component {
         }
     }
 
-    selectAnnotation(e, selectedIndex = 0, newSectionAccess) {
+    selectAnnotation(e, selectedAnnotationIndex = 0, newSectionAccess) {
         this._stopPropagation(e)
-        if (e || newSectionAccess) { this._handleSectionAccess(ANNOTATION_SECTION) }
 
         // Called from arrow buttons in popup.
-        if (typeof selectedIndex === 'object') {
-            const { direction } = selectedIndex
+        if (typeof selectedAnnotationIndex === 'object') {
+            const { direction } = selectedAnnotationIndex
 
-            selectedIndex = getAnnotationIndexForDirection(this.props, this.props.selectedAnnotationIndex, direction)
+            selectedAnnotationIndex = getAnnotationIndexForDirection(this.props, this.props.selectedAnnotationIndex, direction)
 
-            scrollElementIntoView('annotation', selectedIndex)
+            scrollElementIntoView('annotation', selectedAnnotationIndex)
         }
 
-        this.props.selectAnnotationIndex(selectedIndex)
+        this.props.selectAnnotationIndex(selectedAnnotationIndex)
         this.selectWiki()
 
         // Keep accessed index, even if annotation is deselected.
-        if (selectedIndex) {
+        if (selectedAnnotationIndex) {
 
             // Hide overview bubble text.
             this.props.selectOverviewIndex(1)
 
             this.setState({
-                accessedAnnotationIndex: selectedIndex
+                accessedAnnotationIndex: selectedAnnotationIndex
             })
-
-        } else {
-            this._handleSectionAccess(LYRICS_SECTION)
         }
+
+        this._handleSectionAccess({
+            accessedSectionKey: selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION,
+            selectedAnnotationIndex
+        })
     }
 
     selectWiki(e, selectedWikiIndex = 0) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess(WIKI_SECTION) }
-
-        if (!selectedWikiIndex) {
-            this._handleSectionAccess(ANNOTATION_SECTION)
-        }
 
         this.props.selectWikiIndex(selectedWikiIndex)
         this._focusApp()
+
+        this._handleSectionAccess({
+            accessedSectionKey: selectedWikiIndex ? WIKI_SECTION : ANNOTATION_SECTION,
+            selectedWikiIndex
+        })
     }
 
     selectPortal(e, selectedSongIndex, selectedAnnotationIndex) {
@@ -331,7 +328,7 @@ class App extends Component {
 
     selectVerse(e, selectedVerseIndex = 0) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess(LYRICS_SECTION) }
+        if (e) { this._handleSectionAccess({ accessedSectionKey: LYRICS_SECTION }) }
 
         let selectedTimePlayed,
             scroll
@@ -531,10 +528,22 @@ class App extends Component {
 
     _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
         // Stored as integer. 0 is false, 1 is true.
+
         this.props.accessOn(accessedOn)
     }
 
-    _handleSectionAccess(accessedSectionKey, accessOn) {
+    _handleSectionAccess({ accessedSectionKey,
+                           accessOn,
+                           selectedWikiIndex = this.props.selectedWikiIndex,
+                           selectedAnnotationIndex = this.props.selectedAnnotationIndex }) {
+
+        // Accessed section can only be the top popup section.
+        if (accessedSectionKey) {
+            if ((selectedWikiIndex && accessedSectionKey !== WIKI_SECTION) || (selectedAnnotationIndex && accessedSectionKey !== ANNOTATION_SECTION && accessedSectionKey !== WIKI_SECTION)) {
+                return
+            }
+        }
+
         const accessedSectionIndex = AccessHelper.handleSectionAccess({
             selectedSongIndex: this.props.selectedSongIndex,
             currentAccessedSectionIndex: this.props.accessedSectionIndex,

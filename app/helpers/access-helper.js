@@ -51,26 +51,33 @@ export default {
                  * selected annotation or wiki.
                  */
                 if (canAccessSections) {
+                    let accessedSectionKey
+
                     switch (keyName) {
                         case 'a':
                         case 'A':
-                            handleSectionAccess(AUDIO_SECTION, true)
+                            accessedSectionKey = AUDIO_SECTION
                             break
                         case 'd':
                         case 'D':
-                            handleSectionAccess(DOTS_SECTION, true)
+                            accessedSectionKey = DOTS_SECTION
                             break
                         case 'l':
                         case 'L':
-                            handleSectionAccess(LYRICS_SECTION, true)
+                            accessedSectionKey = LYRICS_SECTION
                             break
                         case 's':
                         case 'S':
-                            handleSectionAccess(SONGS_SECTION, true)
+                            accessedSectionKey = SONGS_SECTION
                             break
                         default:
                         return false
                     }
+
+                    handleSectionAccess({
+                        accessedSectionKey,
+                        accessOn: true
+                    })
                 } else {
                     return false
                 }
