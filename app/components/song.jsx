@@ -86,9 +86,10 @@ const SongView = ({
                 selectedWikiIndex={selectedWikiIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                showArrows={true}
                 onPortalClick={onPortalClick}
                 onWikiUrlClick={onWikiUrlClick}
-                onCloseClick={onAnnotationClick}
+                onPopupButtonClick={onAnnotationClick}
                 onSectionClick={onAnnotationSectionClick}
             />
             <WikiPopup
