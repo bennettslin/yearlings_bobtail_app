@@ -26,7 +26,7 @@ import { SONGS_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotationsLength } from 'helpers/album-view-helper'
+import { getSong, getAnnotationIndexForDirection } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
@@ -280,6 +280,7 @@ class App extends Component {
             this.setState({
                 accessedAnnotationIndex: selectedIndex
             })
+
         } else {
             this._handleSectionAccess(LYRICS_SECTION)
         }
@@ -490,7 +491,7 @@ class App extends Component {
                         newState = AccessHelper.handleLyricsAndAnnotationAccess({
                             keyName,
                             fromAnnotationSection,
-                            annotationsLength: getAnnotationsLength(this.props),
+                            props: this.props,
                             accessedAnnotationIndex: this.state.accessedAnnotationIndex,
                             selectAnnotation: this.selectAnnotation,
                             scrollElementIntoView

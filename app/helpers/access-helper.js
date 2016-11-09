@@ -1,3 +1,5 @@
+import { getAnnotationIndexForDirection } from 'helpers/album-view-helper'
+
 import { SONGS_SECTION,
          AUDIO_SECTION,
          LYRICS_SECTION,
@@ -151,8 +153,8 @@ export default {
 
     handleLyricsAndAnnotationAccess({
         keyName,
+        props,
         fromAnnotationSection,
-        annotationsLength,
         accessedAnnotationIndex,
         selectAnnotation,
         scrollElementIntoView
@@ -165,11 +167,11 @@ export default {
         switch (keyName) {
             case ARROW_LEFT:
                 // Remember that annotations are 1-based.
-                accessedAnnotationIndex = (accessedAnnotationIndex + annotationsLength - 2) % annotationsLength + 1
+                accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, -1)
                 willScrollToAnchor = true
                 break
             case ARROW_RIGHT:
-                accessedAnnotationIndex = accessedAnnotationIndex % annotationsLength + 1
+                accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, 1)
                 willScrollToAnchor = true
                 break
         }
