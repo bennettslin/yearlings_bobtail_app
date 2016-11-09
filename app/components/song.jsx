@@ -96,7 +96,7 @@ const SongView = ({
                 selectedWikiUrl={selectedWikiUrl}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
-                onCloseClick={onWikiUrlClick}
+                onPopupButtonClick={onWikiUrlClick}
             />
             <DotsSection
                 hoveredDotIndex={hoveredDotIndex}
