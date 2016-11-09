@@ -19,16 +19,29 @@
         height: 45vh;
         background-color: white;
     }
+
+    .button {
+        position: absolute;
+        padding: 10px;
+
+        &.close-button {
+            top: 0;
+            right: 0;
+        }
+
+        &.previous-button {
+            left: 0;
+            bottom: 0;
+        }
+
+        &.next-button {
+            right: 0;
+            bottom: 0;
+        }
+    }
 }
 
 .popup-transition-group {
     position: fixed;
     z-index: 1;
-}
-
-.close-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
 }
