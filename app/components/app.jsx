@@ -268,6 +268,15 @@ class App extends Component {
         this._stopPropagation(e)
         if (e || newSectionAccess) { this._handleSectionAccess(ANNOTATION_SECTION) }
 
+        // Called from arrow buttons in popup.
+        if (typeof selectedIndex === 'object') {
+            const { direction } = selectedIndex
+
+            selectedIndex = getAnnotationIndexForDirection(this.props, this.props.selectedAnnotationIndex, direction)
+
+            scrollElementIntoView('annotation', selectedIndex)
+        }
+
         this.props.selectAnnotationIndex(selectedIndex)
         this.selectWiki()
 

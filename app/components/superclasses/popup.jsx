@@ -29,8 +29,7 @@ const PopupButton = ({
     }
 
     if (!isNaN(direction)) {
-        // FIXME: Make it behave like close button, just for now.
-        onClick = e => onPopupButtonClick(e, 0)
+        onClick = e => onPopupButtonClick(e, { direction })
     } else {
         onClick = e => onPopupButtonClick(e, 0)
     }
