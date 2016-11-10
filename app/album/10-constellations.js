@@ -10,8 +10,14 @@ module.exports = {
         // TODO: Format to keep exclamation point in annotation title.
         anchor: `Constellations!`,
         annotation: {
-            // wiki: closed eye hallucination
-            description: `The best part about Robitussin is the closed-eye hallucinations, which are vivid images that seem to be projected onto the backdrop of one's eyelids. If they ever get intense enough to become frightening, one simply opens one's eyes, and they instantly go away. At the time, I called them constellations.`
+            description: [
+                `The best part about Robitussin is the`,
+                {
+                    anchor: `closed-eye hallucinations,`,
+                    wiki: `Closed-eye_hallucination`
+                },
+                `which are vivid images that seem to be projected onto the backdrop of one's eyelids. If they ever get intense enough to become frightening, one simply opens one's eyes, and they instantly go away. At the time, I called them constellations.`
+            ]
         }
     },
     totalTime: 180,
