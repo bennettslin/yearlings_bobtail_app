@@ -1,6 +1,6 @@
 import React from 'react'
 import DotsBlock from '../dots/dots-block'
-import { intersects } from 'helpers/dot-helper'
+import { getIntersection } from 'helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -23,15 +23,15 @@ const DotStanza = ({
         isSelected = annotationIndex === selectedAnnotationIndex,
         accessHighlighted = sectionAccessHighlighted && accessedAnnotationIndex === annotationIndex,
 
-        // Hide entire stanza if dot key is not present.
-        shouldShow = intersects(dotKeys, selectedDotKeys),
+        // Hide dot keys that are not present.
+        intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
         onDotClick = e => onAnnotationClick(e, annotationIndex)
 
-    return (shouldShow ?
+    return (intersectedDotKeys ?
         <DotStanzaView {...other}
             annotationIndex={annotationIndex}
             isSelected={isSelected}
-            dotKeys={dotKeys}
+            dotKeys={intersectedDotKeys}
             onDotClick={onDotClick}
             accessHighlighted={accessHighlighted}
         /> : null

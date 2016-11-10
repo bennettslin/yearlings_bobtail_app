@@ -2,6 +2,7 @@ import React from 'react'
 import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
 import { TITLE, LEFT, RIGHT, LYRIC_COLUMN_KEYS } from 'helpers/constants'
+import { intersects } from 'helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -12,6 +13,7 @@ const LyricsUnit = ({
     stanzaArray,
     isTitleUnit,
     selectedLyricColumnIndex,
+    selectedDotKeys,
 
 ...other }) => {
 
@@ -32,7 +34,8 @@ const LyricsUnit = ({
         isDotOnly = dotStanza && stanzaArray.length === 1,
         hasSide = topSideStanza || bottomSideStanza,
         showMain = !isDotOnly && !hasSide || hiddenLyricColumnKey !== LEFT,
-        showSide = hasSide && hiddenLyricColumnKey !== RIGHT
+        showSide = hasSide && hiddenLyricColumnKey !== RIGHT,
+        shouldShowDotStanza = dotStanza ? intersects(dotStanza.dotKeys, selectedDotKeys) : false
 
     return (
         <LyricsUnitView {...other}
@@ -44,6 +47,8 @@ const LyricsUnit = ({
             sideSectionClass={sideSectionClass}
             sideSubsectionClass={sideSubsectionClass}
             subsequent={subsequent}
+            shouldShowDotStanza={shouldShowDotStanza}
+            selectedDotKeys={selectedDotKeys}
             dotStanza={dotStanza}
             subStanza={subStanza}
             topSideStanza={topSideStanza}
@@ -76,6 +81,8 @@ const LyricsUnitView = ({
     subsequent,
     sideSectionClass,
     sideSubsectionClass,
+    shouldShowDotStanza,
+    selectedDotKeys,
     dotStanza,
     subStanza,
     topSideStanza,
@@ -107,6 +114,7 @@ const LyricsUnitView = ({
                     <LyricsStanza {...other}
                         stanzaArray={stanzaArray}
                         sectionClass={className}
+                        selectedDotKeys={selectedDotKeys}
                     />
                 )
             }
@@ -130,10 +138,11 @@ const LyricsUnitView = ({
                     {getStanza({ stanzaArray: topSideSubStanza, addSub: true })}
                 </div> : null
             }
-            {dotStanza ?
+            {shouldShowDotStanza ?
                 <div className={`stanza-block dot ${isDotOnly ? 'only' : 'shared'}`}>
                     <DotStanza {...other}
                         dotStanzaObject={dotStanza}
+                        selectedDotKeys={selectedDotKeys}
                     />
                 </div> : null
             }
