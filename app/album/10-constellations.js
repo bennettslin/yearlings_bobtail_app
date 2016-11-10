@@ -60,14 +60,16 @@ module.exports = {
                     {
                         anchor: `reverends,`,
                         annotation: {
-                            // wiki: basketball diaries
                             description: [
                                 {
                                     italic: `Finnegans Wake`
                                 },
                                 `opens with the line "riverrun, past Eve and Adam's," so I figured I would start there as well. I was the experienced Robitussin user of the group, having read of its narcotic effects in Jim Carroll's`,
                                 {
-                                    italic: `The Basketball Diaries`
+                                    italic: {
+                                        anchor: `The Basketball Diaries`,
+                                        wiki: `The_Basketball_Diaries`
+                                    }
                                 },
                                 `earlier that summer. So the others follow my lead in treating it as a mystical journey, and we tread with reverence through the UCLA campus.`
                             ]
@@ -93,14 +95,17 @@ module.exports = {
                     {
                         anchor: `whispures a low sigh, bein'…`,
                         annotation: {
-                            // wiki: psilocybin
                             description: [
                                 `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the role played by psychedelic drugs throughout history that had never been taught to me in school. One theory is that`,
                                 {
                                     anchor: `manna`,
                                     wiki: `Manna`
                                 },
-                                `from heaven, based on its description in the Bible, was a psilocybin mushroom.`
+                                `from heaven, based on its description in the Bible, was a`,
+                                {
+                                    anchor: `psilocybin mushroom.`,
+                                    wiki: `Psilocybin_mushroom`
+                                }
                             ]
                         }
                     }
@@ -113,15 +118,32 @@ module.exports = {
                     {
                         anchor: `de exempt,`,
                         annotation: {
-                            // wiki: dextromethorphan, plagues
-                            description: `The Israelites, "being of the exempt," were spared the plagues that God visited upon Egypt, just as we are now immune to flu symptoms. "DXM" is the standard abbreviation for dextromethorphan, the cough suppressant found in Robitussin.`
+                            description: [
+                                `The Israelites, "being of the exempt," were spared the`,
+                                {
+                                    anchor: `plagues`,
+                                    wiki: `Plagues_of_Egypt`
+                                },
+                                `that God visited upon Egypt, just as we are now immune to flu symptoms. "DXM" is the standard abbreviation for`,
+                                {
+                                    anchor: `dextromethorphan,`,
+                                    wiki: `Dextromethorphan`
+                                },
+                                `the cough suppressant found in Robitussin.`
+                            ]
                         }
                     },
                     {
                         anchor: `exit us`,
                         annotation: {
-                            // wiki: exodus
-                            description: `The Book of "Exodus" recounts how the Israelites discovered manna during their trek out of Egypt.`
+                            description: [
+                                `The Book of`,
+                                {
+                                    anchor: `"Exodus"`,
+                                    wiki: `Book_of_Exodus`
+                                },
+                                `recounts how the Israelites discovered manna during their trek out of Egypt.`
+                            ]
                         }
                     },
                     `the`,
