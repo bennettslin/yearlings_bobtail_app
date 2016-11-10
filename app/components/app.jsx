@@ -84,6 +84,8 @@ const bindDispatchToProps = (dispatch) => (
 class App extends Component {
 
     constructor(props) {
+        const accessedAnnotationIndex = getAnnotationIndexForDirection(props)
+
         super(props)
 
         // Bind this to event handlers.
@@ -98,7 +100,7 @@ class App extends Component {
         this.state = {
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
-            accessedAnnotationIndex: props.selectedAnnotationIndex || 1,
+            accessedAnnotationIndex,
             accessedDotIndex: 0,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
@@ -258,6 +260,11 @@ class App extends Component {
         if (!isSelected && allDotsDeselected(this.props, selectedDotKey)) {
             this.selectAnnotation()
         }
+
+        // Advance to the next accesible annotation, if needed.
+        this.setState({
+            accessedAnnotationIndex: getAnnotationIndexForDirection(this.props, this.state.accessedAnnotationIndex)
+        })
     }
 
     selectAnnotation(e, selectedAnnotationIndex = 0, newSectionAccess) {

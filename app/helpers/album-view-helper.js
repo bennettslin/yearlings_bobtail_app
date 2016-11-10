@@ -28,7 +28,7 @@ export const getAnnotationsDotKeys = (props) => {
     }) : null
 }
 
-export const getAnnotationIndexForDirection = (props, currentIndex, direction) => {
+export const getAnnotationIndexForDirection = (props, currentIndex = 1, direction) => {
     const selectedSong = getSong(props),
         annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0,
         selectedDotKeys = props.selectedDotKeys,
@@ -38,6 +38,18 @@ export const getAnnotationIndexForDirection = (props, currentIndex, direction) =
 
     // Skip over deselected annotations.
     do {
+        /**
+         * This gets called upon initial load and upon deselecting a dot, so
+         * allow for the possibility that we don't need to change the index.
+         */
+        if (typeof direction === 'undefined') {
+            direction = 0
+
+        // But if this is the second time around, then begin incrementing.
+        } else if (direction === 0) {
+            direction = 1
+        }
+
         // Remember that annotations are 1-based.
         returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
     } while (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys))
