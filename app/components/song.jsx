@@ -57,6 +57,7 @@ const SongView = ({
     accessedOn,
     accessedSectionKey,
     accessedAnnotationIndex,
+    accessedPopupAnchorIndex,
     accessedDotIndex,
 
     onDotClick,
@@ -82,6 +83,7 @@ const SongView = ({
             <AnnotationPopup
                 songs={songs}
                 annotation={annotation}
+                accessedPopupAnchorIndex={accessedPopupAnchorIndex}
                 selectedDotKeys={selectedDotKeys}
                 selectedWikiIndex={selectedWikiIndex}
                 accessedOn={accessedOn}

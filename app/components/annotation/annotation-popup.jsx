@@ -13,10 +13,11 @@ class AnnotationPopup extends Popup {
         return 'annotation'
     }
 
-    getContentElement() {
+    getContentElement(sectionAccessHighlighted) {
         return this.props.annotation ?
             <AnnotationSection {...this.props}
                 inPopup={true}
+                sectionAccessHighlighted={sectionAccessHighlighted}
             /> : null
     }
 }

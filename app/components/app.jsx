@@ -296,7 +296,12 @@ class App extends Component {
             this.props.selectOverviewIndex(1)
 
             this.setState({
-                accessedAnnotationIndex: selectedAnnotationIndex
+                accessedAnnotationIndex: selectedAnnotationIndex,
+                accessedPopupAnchorIndex: getPopupAnchorIndexForDirection({
+                    // FIXME: This isn't exactly right.
+                    props: this.props,
+                    selectedAnnotationIndex
+                })
             })
         }
 
@@ -521,6 +526,16 @@ class App extends Component {
                             selectAnnotation: this.selectAnnotation,
                             scrollElementIntoView
                         })
+
+                        if (accessedSectionKey === ANNOTATION_SECTION) {
+                            newState.accessedPopupAnchorIndex = AccessHelper.handleAnnotationAccess({
+                                keyName,
+                                props: this.props,
+                                accessedPopupAnchorIndex: this.state.accessedPopupAnchorIndex,
+                                selectWiki: this.selectWiki,
+                                selectPortal: this.selectPortal
+                            })
+                        }
                         break
                     case DOTS_SECTION:
                         newState = AccessHelper.handleDotAccess({

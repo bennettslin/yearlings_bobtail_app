@@ -1,4 +1,4 @@
-import { getAnnotationIndexForDirection } from 'helpers/album-view-helper'
+import { getAnnotationIndexForDirection, getPopupAnchorIndexForDirection } from 'helpers/album-view-helper'
 
 import { SONGS_SECTION,
          AUDIO_SECTION,
@@ -158,6 +158,27 @@ export default {
         }
     },
 
+    handleAnnotationAccess({
+        keyName,
+        props,
+        accessedPopupAnchorIndex,
+        selectWiki,
+        selectPortal
+    }) {
+        switch (keyName) {
+            case ARROW_UP:
+                accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, -1)
+                break
+            case ARROW_DOWN:
+                accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, 1)
+                break
+            case ENTER:
+                break
+        }
+
+        return accessedPopupAnchorIndex
+    },
+
     handleLyricsAndAnnotationAccess({
         keyName,
         props,
@@ -257,13 +278,6 @@ export default {
 
     handleWikiAccess({
         keyName
-    }) {
-
-    },
-
-    handleAnnotationAccess({
-        keyName,
-        selectAnnotation
     }) {
 
     }

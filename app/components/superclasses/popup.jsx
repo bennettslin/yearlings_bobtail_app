@@ -111,12 +111,11 @@ class Popup extends Component {
 
     render() {
         const className = this.getClassName(),
-            element = this.getContentElement(),
             { accessedOn,
               accessedSectionKey,
               showArrows } = this.props,
-
-            sectionAccessHighlighted = accessedOn && accessedSectionKey === `${className}_section`
+            sectionAccessHighlighted = accessedOn && accessedSectionKey === `${className}_section`,
+            element = this.getContentElement(sectionAccessHighlighted)
 
         return (
             <PopupTransitionGroup

@@ -74,6 +74,30 @@ export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, directi
 
     if (annotation && annotation.popupAnchors) {
 
+        const popupAnchorsLength = annotation.popupAnchors.length
+
+        if (popupAnchorsLength < 2) {
+            return popupAnchorsLength
+        }
+
+        let returnIndex = currentIndex
+
+        // Skip over deselected popup anchors.
+        do {
+            if (typeof direction === 'undefined') {
+                direction = 0
+
+            } else if (direction === 0) {
+                direction = 1
+            }
+
+            // Remember that annotations are 1-based.
+            returnIndex = (returnIndex + popupAnchorsLength + direction - 1) % popupAnchorsLength + 1
+
+        // FIXME: correst this.
+    } while (currentIndex === returnIndex)
+
+        return returnIndex
     }
 
     return currentIndex

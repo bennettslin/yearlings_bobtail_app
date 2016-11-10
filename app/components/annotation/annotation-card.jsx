@@ -51,6 +51,8 @@ const AnnotationCardView = ({
     onWikiUrlClick,
     onPortalClick,
     selectedWikiIndex,
+    sectionAccessHighlighted,
+    accessedPopupAnchorIndex,
 
     // From controller.
     text,
@@ -70,11 +72,15 @@ const AnnotationCardView = ({
             text={text}
             showWikis={showWikis}
             selectedWikiIndex={selectedWikiIndex}
+            sectionAccessHighlighted={sectionAccessHighlighted}
+            accessedPopupAnchorIndex={accessedPopupAnchorIndex}
             onAnchorClick={onWikiUrlClick}
         />
         {portalLinks && showPortals ?
             <AnnotationPortalsBlock
                 portalLinks={portalLinks}
+                sectionAccessHighlighted={sectionAccessHighlighted}
+                accessedPopupAnchorIndex={accessedPopupAnchorIndex}
                 onPortalClick={onPortalClick}
             /> : null
         }

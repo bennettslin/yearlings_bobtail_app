@@ -16,7 +16,9 @@ const AnnotationPortalsBlockView = ({
 
     // From props.
     portalLinks,
-    onPortalClick
+    onPortalClick,
+    sectionAccessHighlighted,
+    accessedPopupAnchorIndex
 
 }) => (
     <div className="portals-block">
@@ -25,10 +27,13 @@ const AnnotationPortalsBlockView = ({
                     annotationIndex,
                     portalIndex,
                     songTitle,
-                    annotationTitle } = portalObject
+                    annotationTitle } = portalObject,
+
+            accessHighlighted = sectionAccessHighlighted && accessedPopupAnchorIndex === portalIndex
+
             return (
                 <a key={index}
-                    className={`portal-button enabled${portalIndex ? ' portal-' + portalIndex : ''}`}
+                    className={`portal-button enabled${portalIndex ? ' portal-' + portalIndex : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
                     onClick={e => onPortalClick(e, songIndex, annotationIndex)}>
                     <div className="song-title">{songTitle}</div>
                     <div className="annotation-title">{annotationTitle}</div>

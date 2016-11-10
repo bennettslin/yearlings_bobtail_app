@@ -14,6 +14,7 @@ const AnchorBlock = ({
     selectedWikiIndex,
     selectedDotKeys,
     accessedAnnotationIndex,
+    accessedPopupAnchorIndex,
     sectionAccessHighlighted,
     onAnchorClick,
 
@@ -23,11 +24,12 @@ const AnchorBlock = ({
             anchor,
             todo,
             dotKeys,
-            wikiIndex } = text,
+            wikiIndex,
+            portalIndex } = text,
 
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
-        accessHighlighted = sectionAccessHighlighted && accessedAnnotationIndex === annotationIndex,
+        accessHighlighted = sectionAccessHighlighted && ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex) || (accessedPopupAnchorIndex && accessedPopupAnchorIndex === wikiIndex)),
 
         /**
          * If it's an annotation, then the argument passed to the
