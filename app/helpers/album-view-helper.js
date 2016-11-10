@@ -29,32 +29,37 @@ export const getAnnotationsDotKeys = (props) => {
 }
 
 export const getAnnotationIndexForDirection = (props, currentIndex = 1, direction) => {
-    const selectedSong = getSong(props),
-        annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0,
-        selectedDotKeys = props.selectedDotKeys,
-        annotationsDotKeys = selectedSong.annotationsDotKeys
+    const selectedSong = getSong(props)
 
-    let returnIndex = currentIndex
+    if (selectedSong.annotations) {
+        const annotationsLength = selectedSong.annotations.length,
+            selectedDotKeys = props.selectedDotKeys,
+            annotationsDotKeys = selectedSong.annotationsDotKeys
 
-    // Skip over deselected annotations.
-    do {
-        /**
-         * This gets called upon initial load and upon deselecting a dot, so
-         * allow for the possibility that we don't need to change the index.
-         */
-        if (typeof direction === 'undefined') {
-            direction = 0
+        let returnIndex = currentIndex
 
-        // But if this is the second time around, then begin incrementing.
-        } else if (direction === 0) {
-            direction = 1
-        }
+        // Skip over deselected annotations.
+        do {
+            /**
+             * This gets called upon initial load and upon deselecting a dot, so
+             * allow for the possibility that we don't need to change the index.
+             */
+            if (typeof direction === 'undefined') {
+                direction = 0
 
-        // Remember that annotations are 1-based.
-        returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
-    } while (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys))
+            // But if this is the second time around, then begin incrementing.
+            } else if (direction === 0) {
+                direction = 1
+            }
 
-    return returnIndex
+            // Remember that annotations are 1-based.
+            returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
+        } while (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys))
+
+        return returnIndex
+    }
+
+    return currentIndex
 }
 
 export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }) => {

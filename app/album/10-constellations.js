@@ -33,11 +33,17 @@ module.exports = {
                         description: [
                             `While reading`,
                             {
-                                italic: `Finnegans Wake,`
+                                italic: {
+                                    anchor: `Finnegans Wake,`,
+                                    wiki: `Finnegans_Wake`
+                                }
                             },
                             `I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police's`,
                             {
-                                italic: `Ghost in the Machine`
+                                italic: {
+                                    anchor: `Ghost in the Machine`,
+                                    wiki: `Ghost_in_the_Machine_(album)`
+                                }
                             },
                             `was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere.`
                         ],
