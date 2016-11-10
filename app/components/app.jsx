@@ -458,7 +458,7 @@ class App extends Component {
             // Space closes popup if open, otherwise accesses next section.
             } else if (keyName === SPACE) {
                 if (!this._closePopupIfOpen()) {
-                    this._handleSectionAccess()
+                    this._handleSectionAccess({})
                 }
 
             // Assign handler based on which section is accessed.
