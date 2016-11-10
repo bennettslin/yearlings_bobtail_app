@@ -26,7 +26,7 @@ import { SONGS_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotationIndexForDirection } from 'helpers/album-view-helper'
+import { getSong, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
@@ -84,7 +84,8 @@ const bindDispatchToProps = (dispatch) => (
 class App extends Component {
 
     constructor(props) {
-        const accessedAnnotationIndex = getAnnotationIndexForDirection(props)
+        const accessedAnnotationIndex = getAnnotationIndexForDirection(props),
+            accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props)
 
         super(props)
 
@@ -101,6 +102,7 @@ class App extends Component {
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
             accessedAnnotationIndex,
+            accessedPopupAnchorIndex,
             accessedDotIndex: 0,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
@@ -196,10 +198,10 @@ class App extends Component {
         })
     }
 
-    selectSong(e, selectedIndex = 0) {
+    selectSong(e, selectedSongIndex = 0) {
         this._stopPropagation(e)
         if (e) { this._handleSectionAccess({ accessedSectionKey: SONGS_SECTION }) }
-        if (selectedIndex >= 0 && selectedIndex <= this.props.songs.length) {
+        if (selectedSongIndex >= 0 && selectedSongIndex <= this.props.songs.length) {
 
             // Scroll to top of lyrics.
             scrollElementIntoView('lyrics-scroll', 'home')
@@ -211,11 +213,15 @@ class App extends Component {
             // Show overview bubble text for selected song.
             this.props.selectOverviewIndex(0)
 
-            this.props.selectSongIndex(selectedIndex)
+            this.props.selectSongIndex(selectedSongIndex)
 
             this.setState({
-                accessedSongIndex: selectedIndex,
-                accessedAnnotationIndex: 1
+                accessedSongIndex: selectedSongIndex,
+                accessedAnnotationIndex: getAnnotationIndexForDirection({
+                    songs: this.props.songs,
+                    selectedDotKeys: this.props.selectedDotKeys,
+                    selectedSongIndex
+                }, 1)
             })
         }
     }

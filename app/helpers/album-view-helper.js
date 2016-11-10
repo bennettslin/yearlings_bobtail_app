@@ -68,6 +68,17 @@ export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other 
             selectedSong.annotations[selectedAnnotationIndex - 1] : null
 }
 
+export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, direction) => {
+    // TODO: do this.
+    const annotation = getAnnotation(props)
+
+    if (annotation && annotation.popupAnchors) {
+
+    }
+
+    return currentIndex
+}
+
 export const getVerse = ({ selectedVerseIndex, ...other }) => {
     const { lyrics } = getSong(other)
     return _parseLyrics(lyrics, selectedVerseIndex)
