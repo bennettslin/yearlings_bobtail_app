@@ -156,7 +156,7 @@ class App extends Component {
     }
 
     _stopPropagation(e) {
-        if (e) {
+        if (typeof e === 'object') {
             e.stopPropagation()
             this._handleAccessOn(0)
         }
@@ -169,13 +169,12 @@ class App extends Component {
         // If there is a popup, close it.
         if (selectedAnnotationIndex) {
             if (selectedWikiIndex) {
-                this.selectWiki()
+                this.selectWiki(true)
             } else {
-                this.selectAnnotation()
+                this.selectAnnotation(true)
             }
 
             if (accessOff) { this._handleAccessOn(0) }
-
             return true
         }
 
@@ -262,6 +261,7 @@ class App extends Component {
     }
 
     selectAnnotation(e, selectedAnnotationIndex = 0, newSectionAccess) {
+        // Note that e is set to true from closePopup method.
         this._stopPropagation(e)
 
         // Called from arrow buttons in popup.
@@ -287,22 +287,27 @@ class App extends Component {
             })
         }
 
-        this._handleSectionAccess({
-            accessedSectionKey: selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION,
-            selectedAnnotationIndex
-        })
+        if (e) {
+            this._handleSectionAccess({
+                accessedSectionKey: selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION,
+                selectedAnnotationIndex
+            })
+        }
     }
 
     selectWiki(e, selectedWikiIndex = 0) {
+        // Note that e is set to true from closePopup method.
         this._stopPropagation(e)
 
         this.props.selectWikiIndex(selectedWikiIndex)
         this._focusApp()
 
-        this._handleSectionAccess({
-            accessedSectionKey: selectedWikiIndex ? WIKI_SECTION : ANNOTATION_SECTION,
-            selectedWikiIndex
-        })
+        if (e) {
+            this._handleSectionAccess({
+                accessedSectionKey: selectedWikiIndex ? WIKI_SECTION : ANNOTATION_SECTION,
+                selectedWikiIndex
+            })
+        }
     }
 
     selectPortal(e, selectedSongIndex, selectedAnnotationIndex) {
@@ -529,7 +534,6 @@ class App extends Component {
 
     _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
         // Stored as integer. 0 is false, 1 is true.
-
         this.props.accessOn(accessedOn)
     }
 
