@@ -29,7 +29,6 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // wiki: finnegans wake, police
                         description: [
                             `While reading`,
                             {
