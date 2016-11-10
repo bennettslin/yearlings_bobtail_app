@@ -1,5 +1,6 @@
 // Parse album data for presentation.
 import { ALBUM_BUILD_KEYS } from './constants'
+import { intersects } from 'helpers/dot-helper'
 
 /**
  * Recurse until object with verse index is found.
@@ -19,18 +20,29 @@ export const getSong = ({ selectedSongIndex, songs }) => {
         songs[selectedSongIndex - 1] : {}
 }
 
-export const getAnnotations = (props) => {
-    const selectedSong = getSong(props)
+export const getAnnotationsDotKeys = (props) => {
+    const selectedSong = props.selectedSong || getSong(props)
 
-    return selectedSong.annotations
+    return selectedSong ? selectedSong.annotations.map(annotation => {
+        return annotation.dotKeys
+    }) : null
 }
 
 export const getAnnotationIndexForDirection = (props, currentIndex, direction) => {
     const selectedSong = getSong(props),
-        annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0
+        annotationsLength = selectedSong.annotations ? selectedSong.annotations.length : 0,
+        selectedDotKeys = props.selectedDotKeys,
+        annotationsDotKeys = selectedSong.annotationsDotKeys
 
-    // Remember that annotations are 1-based.
-    return (currentIndex + annotationsLength + direction - 1) % annotationsLength + 1
+    let returnIndex = currentIndex
+
+    // Skip over deselected annotations.
+    do {
+        // Remember that annotations are 1-based.
+        returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
+    } while (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys))
+
+    return returnIndex
 }
 
 export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }) => {

@@ -1,5 +1,5 @@
 // For dev purposes. Log object info.
-import { getSong, getAnnotations, getAnnotation, getVerse } from 'helpers/album-view-helper'
+import { getSong, getAnnotationsDotKeys, getAnnotation, getVerse } from 'helpers/album-view-helper'
 import { WINDOW_STORAGE, LYRIC_TEXT_KEYS } from './constants'
 
 export default {
@@ -21,9 +21,9 @@ export default {
         return this._logObject('selected song', copiedSong)
     },
 
-    logAnnotations({ props }) {
-        const annotations = getAnnotations(props)
-        return this._logObject('annotations', annotations)
+    logAnnotationsDotKeys({ props }) {
+        const annotationsDotKeys = getAnnotationsDotKeys(props)
+        return this._logObject('annotations', annotationsDotKeys)
     },
 
     logVerse({ props }) {

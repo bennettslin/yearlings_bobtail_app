@@ -192,7 +192,7 @@ export default {
          * will only select upon "Enter" key.
          */
         if (fromAnnotationSection || newSectionAccess) {
-            selectAnnotation(undefined, accessedAnnotationIndex, newSectionAccess)
+            selectAnnotation(newSectionAccess, accessedAnnotationIndex)
         }
 
         return {

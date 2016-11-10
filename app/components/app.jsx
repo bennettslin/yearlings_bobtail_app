@@ -147,7 +147,7 @@ class App extends Component {
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
-        window.n = LogHelper.logAnnotations.bind(LogHelper, this)
+        window.n = LogHelper.logAnnotationsDotKeys.bind(LogHelper, this)
     }
 
     // Focus for accessibility.

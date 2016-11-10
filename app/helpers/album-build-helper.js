@@ -2,6 +2,7 @@
 
 import { ALBUM_BUILD_KEYS } from './constants'
 import { getFormattedAnnotationTitle } from './format-helper'
+import { getAnnotationsDotKeys } from 'helpers/album-view-helper'
 
 const _tempStore = {
     _songIndex: 0,
@@ -55,6 +56,7 @@ const _prepareAllSongs = (album) => {
 
         // Add annotations to song object.
         song.annotations = _tempStore._annotations
+        song.annotationsDotKeys = getAnnotationsDotKeys({ selectedSong: song })
 
         // Add available dots to song object.
         song.dotKeys = _tempStore._songDotKeys
