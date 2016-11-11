@@ -21,9 +21,8 @@ export const prepareAlbumData = (album = {}) => {
     _injectPortalLinks(album)
 
     /**
-     * Add wiki indices. This needs to know the portal indices, which in turn
-     * can only be determined after collecting portal links from the entire
-     * album.
+     * Add wiki and portal indices. These can only be determined after
+     * collecting portal links from the entire album.
      */
     _addWikiAndPortalIndices(album)
 }
@@ -132,11 +131,11 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough) => {
         const annotation = _tempStore._annotations[_tempStore._annotationIndex]
 
         _tempStore._popupAnchors = []
+        _tempStore._popupAnchorIndex = 1
 
         if (Array.isArray(cards)) {
             cards.forEach((card, cardIndex) => {
-                // Reset wikiIndex only for first card.
-                _prepareCard(card, undefined, true, cardIndex === 0)
+                _prepareCard(card, undefined, true)
             })
         } else {
             _prepareCard(cards, undefined, true)
@@ -193,56 +192,13 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough) => {
     }
 }
 
-/**
- * FIXME: This method does more than parse wikis now. Consider renaming it to
- * avoid confusion.
- */
-const _parseWiki = (key, object, finalPassThrough, reset = true) => {
-    /**
-     * This method gets called in two places. The first time is simply to check
-     * if there is a wiki key. The second is to add the wiki index.
-     */
-    if (finalPassThrough && reset) {
-        _tempStore._popupAnchorIndex = 1
-        reset = false
-    }
-
-    if (!object || typeof object !== 'object') {
-        return false
-
-    } else if (Array.isArray(object)) {
-        return object.reduce((keyFound, element) => {
-            // Reversing order so that index gets added if needed.
-            if (finalPassThrough) {
-                return _parseWiki(key, element, finalPassThrough, reset) || keyFound
-            } else {
-                return keyFound || _parseWiki(key, element, finalPassThrough, reset)
-            }
-        }, false)
-
-    } else {
-        return Object.keys(object).reduce((keyFound, currentKey) => {
-            const hasWiki = !!object[key]
-
-            if (finalPassThrough && !object.wikiIndex && typeof object[key] === 'string') {
-                object.wikiIndex = _tempStore._popupAnchorIndex
-                _tempStore._popupAnchorIndex++
-                _tempStore._popupAnchors.push(object[key])
-                delete object[key]
-            }
-
-            return keyFound || hasWiki || _parseWiki(key, object[currentKey], finalPassThrough, reset)
-        }, false)
-    }
-}
-
-const _prepareCard = (card, dotKeys, finalPassThrough, reset) => {
+const _prepareCard = (card, dotKeys, finalPassThrough) => {
     const { description,
             portalLinks } = card
 
     // If card has a wiki link, add wiki key to dot keys.
-    if (description || finalPassThrough) {
-        const hasWiki = _parseWiki('wiki', description, finalPassThrough, reset)
+    if (description) {
+        const hasWiki = _parseWiki('wiki', description, finalPassThrough)
 
         if (hasWiki && !finalPassThrough) {
             // Add wiki anchor index to each anchor with wiki.
@@ -262,6 +218,42 @@ const _prepareCard = (card, dotKeys, finalPassThrough, reset) => {
             link.portalIndex = _tempStore._popupAnchorIndex
             _tempStore._popupAnchorIndex++
         })
+    }
+}
+
+const _parseWiki = (key, object, finalPassThrough) => {
+    /**
+     * This method gets called in two places. The first time is simply to check
+     * if there is a wiki key. The second is in the final pass through, to add
+     * the wiki index.
+     */
+
+    if (!object || typeof object !== 'object') {
+        return false
+
+    } else if (Array.isArray(object)) {
+        return object.reduce((keyFound, element) => {
+            // Reversing order so that index gets added if needed.
+            if (finalPassThrough) {
+                return _parseWiki(key, element, finalPassThrough) || keyFound
+            } else {
+                return keyFound || _parseWiki(key, element, finalPassThrough)
+            }
+        }, false)
+
+    } else {
+        return Object.keys(object).reduce((keyFound, currentKey) => {
+            const hasWiki = !!object[key]
+
+            if (finalPassThrough && !object.wikiIndex && typeof object[key] === 'string') {
+                object.wikiIndex = _tempStore._popupAnchorIndex
+                _tempStore._popupAnchorIndex++
+                _tempStore._popupAnchors.push(object[key])
+                delete object[key]
+            }
+
+            return keyFound || hasWiki || _parseWiki(key, object[currentKey], finalPassThrough)
+        }, false)
     }
 }
 
