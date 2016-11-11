@@ -260,18 +260,15 @@ class App extends Component {
 
     selectDot(e, selectedDotKey) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess({ accessedSectionKey: DOTS_SECTION }) }
+
         const isSelected = !this.props.selectedDotKeys[selectedDotKey]
         this.props.selectDotKey(selectedDotKey, isSelected)
+
+        let annotationDeselected
 
         // Close wiki popup if deselected.
         if (!isSelected && selectedDotKey === WIKI && this.props.selectedWikiIndex) {
             this._closePopupIfOpen()
-        }
-
-        // If this is the last selected dot key, then close the annotation.
-        if (!isSelected && allDotsDeselected(this.props, selectedDotKey)) {
-            this.selectAnnotation()
         }
 
         // Advance to the next accesible annotation and popup anchor, if needed.
@@ -279,6 +276,20 @@ class App extends Component {
             accessedAnnotationIndex: getAnnotationIndexForDirection(this.props, this.state.accessedAnnotationIndex),
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(this.props, this.state.accessedPopupAnchorIndex)
         })
+
+        // If this is the last selected dot key, then close the annotation.
+        if (!isSelected && allDotsDeselected(this.props, selectedDotKey)) {
+            this.selectAnnotation()
+            annotationDeselected = true
+        }
+
+        if (e) { this._handleSectionAccess({
+            accessedSectionKey: DOTS_SECTION,
+
+            // App does not yet know that popups have been deselected.
+            selectedAnnotationIndex: annotationDeselected ? 0 : undefined,
+            selectedWikiIndex: annotationDeselected ? 0 : undefined
+        }) }
     }
 
     selectAnnotation(e, selectedAnnotationIndex = 0, newSectionAccess) {

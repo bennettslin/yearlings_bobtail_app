@@ -35,11 +35,6 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `reset popup anchor index after annotation change`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `focus sections, and have them route events to app`,
             workedHours: 0,
             neededHours: 3
@@ -468,6 +463,11 @@ module.exports = {
         },
         {
             taskName: `access keys should skip unshown popup anchors`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `reset popup anchor index after annotation change`,
             workedHours: 2,
             neededHours: 2
         }

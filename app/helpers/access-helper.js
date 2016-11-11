@@ -164,23 +164,23 @@ export default {
         accessedPopupAnchorIndex,
         selectWikiOrPortal
     }) {
-        let toSelectPopupAnchor = false
-
         switch (keyName) {
             case ARROW_UP:
                 accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, -1)
-                toSelectPopupAnchor = true
                 break
             case ARROW_DOWN:
                 accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, 1)
-                toSelectPopupAnchor = true
                 break
             case ENTER:
                 selectWikiOrPortal()
+                return false
+                break
+            default:
+                return false
                 break
         }
 
-        return toSelectPopupAnchor ? accessedPopupAnchorIndex : false
+        return accessedPopupAnchorIndex
     },
 
     handleLyricsAndAnnotationAccess({
@@ -193,7 +193,9 @@ export default {
     }) {
         // Switch to annotation section upon "Enter" key from lyric section.
         const newSectionAccess = !fromAnnotationSection && keyName === ENTER
+
         let willScrollToAnchor = false,
+            // TODO: Can this be simplified to not use toSelectAnnotation flag?
             toSelectAnnotation = false
 
         // Both lyric and annotation sections will change accessed annotation.
