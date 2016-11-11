@@ -36,6 +36,11 @@ export default {
         return this._logObject('selected annotation', annotation)
     },
 
+    logAccessedAnnotation({ state }) {
+        const { accessedAnnotationIndex } = state
+        return this._logObject('accessed annotation index', accessedAnnotationIndex)
+    },
+
     _logObject(description, object) {
         const formattedString = JSON.stringify(object, null, 3)
 
