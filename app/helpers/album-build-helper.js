@@ -253,10 +253,10 @@ const _prepareCard = (card, dotKeys, finalPassThrough, reset) => {
 
     if (portalLinks && finalPassThrough) {
         portalLinks.forEach(link => {
-            link.portalIndex = _tempStore._popupAnchorIndex
-            _tempStore._popupAnchors.push(_tempStore._popupAnchorIndex)
-            _tempStore._popupAnchorIndex++
             delete link.cardIndex
+            _tempStore._popupAnchors.push(Object.assign({}, link))
+            link.portalIndex = _tempStore._popupAnchorIndex
+            _tempStore._popupAnchorIndex++
         })
     }
 }
