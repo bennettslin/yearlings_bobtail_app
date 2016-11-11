@@ -26,7 +26,7 @@ import { SONGS_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
@@ -137,6 +137,7 @@ class App extends Component {
         this.hoverLine = this.hoverLine.bind(this)
         this.selectPortal = this.selectPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
+        this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
         this.selectScreenWidth = this.selectScreenWidth.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
@@ -152,6 +153,7 @@ class App extends Component {
         window.v = LogHelper.logVerse.bind(LogHelper, this)
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
         window.n = LogHelper.logAnnotationsDotKeys.bind(LogHelper, this)
+        window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
     }
 
     // Focus for accessibility.
@@ -206,9 +208,11 @@ class App extends Component {
             // Scroll to top of lyrics.
             scrollElementIntoView('lyrics-scroll', 'home')
 
-            // Reset the stored annotation, time, and overview.
-            this.selectAnnotation()
-            this.selectVerse()
+            // Reset the stored annotation, time, and overview, unless selected from portal.
+            if (e) {
+                this.selectAnnotation()
+                this.selectVerse()
+            }
 
             // Show overview bubble text for selected song.
             this.props.selectOverviewIndex(0)
@@ -328,11 +332,24 @@ class App extends Component {
         }
     }
 
-    selectPortal(e, selectedSongIndex, selectedAnnotationIndex) {
+    selectPortal(e,  selectedSongIndex, selectedAnnotationIndex) {
         this._stopPropagation(e)
 
         this.selectSong(undefined, selectedSongIndex)
         this.selectAnnotation(undefined, selectedAnnotationIndex)
+    }
+
+    selectWikiOrPortal() {
+        const annotation = getAnnotation(this.props)
+        if (annotation.popupAnchors && annotation.popupAnchors.length) {
+            const popupAnchorObject = annotation.popupAnchors[this.state.accessedPopupAnchorIndex - 1]
+
+            if (typeof popupAnchorObject === 'string') {
+                this.selectWiki(true, this.state.accessedPopupAnchorIndex)
+            } else {
+                this.selectPortal(undefined, popupAnchorObject.songIndex, popupAnchorObject.annotationIndex)
+            }
+        }
     }
 
     selectTime(e, selectedTimePlayed = 0) {
@@ -528,13 +545,16 @@ class App extends Component {
                         })
 
                         if (accessedSectionKey === ANNOTATION_SECTION) {
-                            newState.accessedPopupAnchorIndex = AccessHelper.handleAnnotationAccess({
+                            const accessedPopupAnchorIndex = AccessHelper.handleAnnotationAccess({
                                 keyName,
                                 props: this.props,
                                 accessedPopupAnchorIndex: this.state.accessedPopupAnchorIndex,
-                                selectWiki: this.selectWiki,
-                                selectPortal: this.selectPortal
+                                selectWikiOrPortal: this.selectWikiOrPortal
                             })
+
+                            if (accessedPopupAnchorIndex) {
+                                newState.accessedPopupAnchorIndex = accessedPopupAnchorIndex
+                            }
                         }
                         break
                     case DOTS_SECTION:

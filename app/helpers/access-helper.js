@@ -143,13 +143,13 @@ export default {
                 break
             // FIXME: Left and right arrows are for dev purposes only.
             case ARROW_LEFT:
-                selectTime(undefined, selectedTimePlayed - 1)
+                selectTime(true, selectedTimePlayed - 1)
                 break
             case ARROW_RIGHT:
-                selectTime(undefined, selectedTimePlayed + 1)
+                selectTime(true, selectedTimePlayed + 1)
                 break
             case ENTER:
-                selectSong(undefined, accessedSongIndex)
+                selectSong(true, accessedSongIndex)
                 break
         }
 
@@ -162,8 +162,7 @@ export default {
         keyName,
         props,
         accessedPopupAnchorIndex,
-        selectWiki,
-        selectPortal
+        selectWikiOrPortal
     }) {
         switch (keyName) {
             case ARROW_UP:
@@ -173,6 +172,8 @@ export default {
                 accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, 1)
                 break
             case ENTER:
+                selectWikiOrPortal()
+                accessedPopupAnchorIndex = false
                 break
         }
 
@@ -189,7 +190,8 @@ export default {
     }) {
         // Switch to annotation section upon "Enter" key from lyric section.
         const newSectionAccess = !fromAnnotationSection && keyName === ENTER
-        let willScrollToAnchor = false
+        let willScrollToAnchor = false,
+            toSelectAnnotation = false
 
         // Both lyric and annotation sections will change accessed annotation.
         switch (keyName) {
@@ -197,10 +199,12 @@ export default {
                 // Remember that annotations are 1-based.
                 accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, -1)
                 willScrollToAnchor = true
+                toSelectAnnotation = fromAnnotationSection
                 break
             case ARROW_RIGHT:
                 accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, 1)
                 willScrollToAnchor = true
+                toSelectAnnotation = fromAnnotationSection
                 break
         }
 
@@ -212,13 +216,14 @@ export default {
          * Annotation section will also select after arrow key. Lyric section
          * will only select upon "Enter" key.
          */
-        if (fromAnnotationSection || newSectionAccess) {
-            selectAnnotation(newSectionAccess, accessedAnnotationIndex)
+        if (toSelectAnnotation || newSectionAccess) {
+            selectAnnotation (newSectionAccess, accessedAnnotationIndex)
+
+        } else if (keyName !== ENTER) {
+            return { accessedAnnotationIndex }
         }
 
-        return {
-            accessedAnnotationIndex
-        }
+        return {}
     },
 
     handleAudioAccess({
