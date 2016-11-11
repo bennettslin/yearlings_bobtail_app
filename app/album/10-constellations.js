@@ -151,8 +151,19 @@ module.exports = {
                         anchor: `Viking den…`,
                         properNoun: true,
                         annotation: {
-                            // wiki: viking, vicodin
-                            description: `The Vikings were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Also, Ana's friends Howie and Tomer, being seasoned drug users but never having taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as Vicodin. The night will prove them wrong.`
+                            description: [
+                                `The`,
+                                {
+                                    anchor: `Vikings`,
+                                    wiki: `Vikings`
+                                },
+                                `were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Also, Ana's friends Howie and Tomer, being seasoned drug users but never having taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as`,
+                                {
+                                    anchor: `Vicodin.`,
+                                    wiki: `Hydrocodone/paracetamol`
+                                },
+                                `The night will prove them wrong.`
+                            ]
                         }
                     }
                 ]
@@ -171,7 +182,9 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: valkyries, walgreens
-                            description: `Backtrack to earlier that night. We buy the Robitussin from a Walgreens pharmacy. Also, the Valkyries in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.`
+                            description: [
+                                `Backtrack to earlier that night. We buy the Robitussin from a Walgreens pharmacy. Also, the Valkyries in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.`
+                            ]
                         }
                     },
                     `to`,
@@ -180,14 +193,18 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: walhalla
-                            description: `The Valkyries would bring the dead heroes to Valhalla, a majestic hall ruled by the god Odin. Also, the Walgreens aisles are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… So, "Wal-halls," if you will.`
+                            description: [
+                                `The Valkyries would bring the dead heroes to Valhalla, a majestic hall ruled by the god Odin. Also, the Walgreens aisles are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… So, "Wal-halls," if you will.`
+                            ]
                         }
                     },
                     {
                         anchor: `mead-Tussin!`,
                         annotation: {
                             // wiki: mead
-                            description: `Mead was the drink of the Norse gods, and we go with Wal-Tussin as our "medicine" of choice.`
+                            description: [
+                                `Mead was the drink of the Norse gods, and we go with Wal-Tussin as our "medicine" of choice.`
+                            ]
                         }
                     }
                 ]
@@ -241,7 +258,9 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: lapp
-                            description: `The Lapps are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally high, as the Robitussin "laps our hymen," since the others are trying it for the first time.`
+                            description: [
+                                `The Lapps are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally high, as the Robitussin "laps our hymen," since the others are trying it for the first time.`
+                            ]
                         }
                     }
                 ]
@@ -261,21 +280,27 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: magyar
-                            description: `Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.`
+                            description: [
+                                `Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.`
+                            ]
                         }
                     },
                     `from`,
                     {
                         anchor: `among ol'`,
                         annotation: {// wiki: mongol
-                            description: `The Magyars share genetic ancestry with the Mongols, an East Asian nomadic people.`
+                            description: [
+                                `The Magyars share genetic ancestry with the Mongols, an East Asian nomadic people.`
+                            ]
                         }
                     },
                     {
                         anchor: `psealed off drains.`,
                         annotation: {
                             // wiki: pseudephedrine
-                            description: `Back in the day, the Robitussin we took contained pseudoephedrine, a decongestant. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.`
+                            description: [
+                                `Back in the day, the Robitussin we took contained pseudoephedrine, a decongestant. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.`
+                            ]
                         }
                     }
                 ]
@@ -295,7 +320,9 @@ module.exports = {
                         anchor: `down the steppes`,
                         annotation: {
                             // wiki: steppes
-                            description: `In the 13th century, the Mongols swept down from the East Asian steppes and began their conquests.`,
+                            description: [
+                                `In the 13th century, the Mongols swept down from the East Asian steppes and began their conquests.`
+                            ],
                             portal: `down_the_steppes`
                         }
                     },
@@ -309,8 +336,13 @@ module.exports = {
                         anchor: `Drinkhis Khan, once Toomujin,`,
                         properNoun: true,
                         annotation: {
-                            // wiki: genghis khan
-                            description: `Genghis Khan, who was born Temujin, founded the Mongol Empire.`
+                            description: [
+                                {
+                                    anchor: `Genghis Khan,`,
+                                    wiki: `Genghis_Khan`
+                                },
+                                `who was born Temujin, founded the Mongol Empire.`
+                            ]
                         }
                     },
                     `has`,
@@ -319,7 +351,9 @@ module.exports = {
                         annotation: {
                             // wiki: tatars
                             // TODO: briefly describe teetotaler and teeter totter reference.
-                            description: `Genghis Khan was able to unite the Mongols by defeating the Tatars, a rival tribe. Also, "teeter-totters" and "teetotalers." Having just taken Robitussin a few days prior, I was wavering on taking it again so soon, as Robitussin really destroys you, both mentally and physically. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in, and it feels awesome.`
+                            description: [
+                                `Genghis Khan was able to unite the Mongols by defeating the Tatars, a rival tribe. Also, "teeter-totters" and "teetotalers." Having just taken Robitussin a few days prior, I was wavering on taking it again so soon, as Robitussin really destroys you, both mentally and physically. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in, and it feels awesome.`
+                            ]
                         }
                     }
                 ]
@@ -331,8 +365,14 @@ module.exports = {
                         anchor: `Tomer-layin' the seed,`,
                         properNoun: true,
                         annotation: {
-                            // wiki: tamerlane
-                            description: `"Tamerlane the seed." Tamerlane, a descendant of Genghis Khan, continued the Turko-Mongol expansion into Central Asia. Also, as Tomer jokingly drops crumbs as if to leave a trail, I observe that it's like he's planting seeds that will sprout into nations.`
+                            description: [
+                                `"Tamerlane the seed."`,
+                                {
+                                    anchor: `Tamerlane,`,
+                                    wiki: `Timur`
+                                },
+                                `a descendant of Genghis Khan, continued the Turko-Mongol expansion into Central Asia. Also, as Tomer jokingly drops crumbs as if to leave a trail, I observe that it's like he's planting seeds that will sprout into nations.`
+                            ]
                         }
                     },
                     {
@@ -340,7 +380,9 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: mughal, avatar
-                            description: `Howie is walking as if his feet are made of lead. Also, "how he led the feat of avatars." The Mughals, descendants of Tamerlane, conquered the Hindu populations of the Indian subcontinent. In Hinduism, an avatar is a deity's earthbound incarnation, and some avatars are speculated to be historical figures whose exploits predate written tradition.`
+                            description: [
+                                `Howie is walking as if his feet are made of lead. Also, "how he led the feat of avatars." The Mughals, descendants of Tamerlane, conquered the Hindu populations of the Indian subcontinent. In Hinduism, an avatar is a deity's earthbound incarnation, and some avatars are speculated to be historical figures whose exploits predate written tradition.`
+                            ]
                         }
                     }
                 ]
@@ -359,14 +401,18 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: aryan invasion
-                            description: `As we wind through "industrial sewers" pretending to be Mughal invaders, I explain the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."`
+                            description: [
+                                `As we wind through "industrial sewers" pretending to be Mughal invaders, I explain the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."`
+                            ]
                         }
                     },
                     {
                         anchor: `questurns Indo Hairapins:`,
                         annotation: {
                             // wiki: indo harappan culture
-                            description: `Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.`
+                            description: [
+                                `Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.`
+                            ]
                         }
                     }
                 ]
@@ -439,7 +485,9 @@ module.exports = {
                         anchor: `our-youn' invedas`,
                         annotation: {
                             // wiki: aryan
-                            description: `Although the Aryans spoken of in the Vedas and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," this "unsolved query" must be put to rest, before the others lose their minds.`
+                            description: [
+                                `Although the Aryans spoken of in the Vedas and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," this "unsolved query" must be put to rest, before the others lose their minds.`
+                            ]
                         }
                     },
                     {
@@ -464,7 +512,9 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: islam, evian
-                            description: `"Arabian battles spent." With the rise of Islam, the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and the Evian bottles that we brought into the steam tunnels are now empty.`
+                            description: [
+                                `"Arabian battles spent." With the rise of Islam, the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and the Evian bottles that we brought into the steam tunnels are now empty.`
+                            ]
                         }
                     },
                     {
@@ -472,7 +522,9 @@ module.exports = {
                         annotation: {
                             // wiki: uighur
                             // define egress?
-                            description: `"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.`
+                            description: [
+                                `"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.`
+                            ]
                         }
                     }
                 ]
@@ -510,7 +562,9 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: angkor wat, khmer empire
-                            description: `Angkor Wat, or "Temple City," is a 12th-century Hindu temple built by the Khmer Empire in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie's dad had bought in bulk.`
+                            description: [
+                                `Angkor Wat, or "Temple City," is a 12th-century Hindu temple built by the Khmer Empire in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie's dad had bought in bulk.`
+                            ]
                         }
                     },
                     `to war:`,
@@ -518,7 +572,9 @@ module.exports = {
                         anchor: `scimitary of'fence!`,
                         annotation: {
                             // wiki: scimitar
-                            description: `The next plan of attack is to visit the grave of our friend Adam. And so, rested and reenergised, we renew our "scimitar offence" and drive through the "cemetery fence."`
+                            description: [
+                                `The next plan of attack is to visit the grave of our friend Adam. And so, rested and reenergised, we renew our "scimitar offence" and drive through the "cemetery fence."`
+                            ]
                         }
                     }
                 ]
@@ -543,7 +599,9 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: siberia
-                            description: `The Americas were first settled by northeast Asian populations who gladly "forfeited the tundra's Siberian plains," which otherwise would have served as their "burial" grounds.`
+                            description: [
+                                `The Americas were first settled by northeast Asian populations who gladly "forfeited the tundra's Siberian plains," which otherwise would have served as their "burial" grounds.`
+                            ]
                         }
                     }
                 ]
@@ -562,7 +620,9 @@ module.exports = {
                         anchor: `forc'd nations sank…`,
                         annotation: {
                             // wiki: first nations, beringia
-                            description: `"A bridge of land trod on by First Nations sank." Indigenous Americans, known in Canada as the First Nations, were forced to leave their Asian homelands due to growing scarcity of resources. According to the Beringia theory, they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.`
+                            description: [
+                                `"A bridge of land trod on by First Nations sank." Indigenous Americans, known in Canada as the First Nations, were forced to leave their Asian homelands due to growing scarcity of resources. According to the Beringia theory, they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.`
+                            ]
                         }
                     }
                 ]
@@ -575,7 +635,9 @@ module.exports = {
                         anchor: `past a cross Bearing Straight,`,
                         annotation: {
                             // wiki: bering strait
-                            description: `We "passed a cross, bearing straight," just as those before us had "passed across the Bering Strait."`
+                            description: [
+                                `We "passed a cross, bearing straight," just as those before us had "passed across the Bering Strait."`
+                            ]
                         }
                     }
                 ]
@@ -587,7 +649,9 @@ module.exports = {
                         anchor: `herows— ourauras left—`,
                         annotation: {
                             // wiki: aurora borealis, inuit
-                            description: `Other indigenous populations, such as the Inuit inhabitants of the Arctic regions, may have undertaken their migrations by boat. These seafarers, of course, would have rowed with the aurora borealis to their left. Also, wishing to be respectful, we've left our "hero's auras" behind in the car.`
+                            description: [
+                                `Other indigenous populations, such as the Inuit inhabitants of the Arctic regions, may have undertaken their migrations by boat. These seafarers, of course, would have rowed with the aurora borealis to their left. Also, wishing to be respectful, we've left our "hero's auras" behind in the car.`
+                            ]
                         }
                     },
                     `to`,
@@ -653,7 +717,9 @@ module.exports = {
                         anchor: `ha'nt'd by sobre-trooth tiedgirl`,
                         annotation: {
                             // wiki: mastodon, sabre-tooth tiger
-                            description: `As I indulge in visions of a "mastodon hunted by sabre-toothed tigers," I'm haunted by the sober truth that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.`
+                            description: [
+                                `As I indulge in visions of a "mastodon hunted by sabre-toothed tigers," I'm haunted by the sober truth that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.`
+                            ]
                         }
                     },
                     `cries…`
@@ -669,7 +735,9 @@ module.exports = {
                                 anchor: `sunk in tarpid lies!`,
                                 annotation: {
                                     // wiki: tarpit
-                                    description: `Tar pits occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`,
+                                    description: [
+                                        `Tar pits occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`
+                                    ],
                                     portal: `sunken_tirpitz`
                                 }
                             }
@@ -691,14 +759,18 @@ module.exports = {
                         annotation: {
                             // wiki: holocene
                             // TODO: indie rock scene
-                            description: `The Holocene is the current geological epoch that began with the first human settlements.`
+                            description: [
+                                `The Holocene is the current geological epoch that began with the first human settlements.`
+                            ]
                         }
                     },
                     {
                         anchor: `broughtour ancister toughtim rite…`,
                         annotation: {
                             // wiki: totem
-                            description: `In the epic narrative playing out in my mind, the mastodon becomes a spirit animal, as we have "brought our ancestral totems and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
+                            description: [
+                                `In the epic narrative playing out in my mind, the mastodon becomes a spirit animal, as we have "brought our ancestral totems and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
+                            ]
                         }
                     }
                 ]
@@ -717,7 +789,9 @@ module.exports = {
                                     properNoun: true,
                                     annotation: {
                                         // wiki: loki, freyja
-                                        description: `"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
+                                        description: [
+                                            `"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
+                                        ]
                                     }
                                 }
                             ]
@@ -737,7 +811,9 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: nunavat
-                            description: `"Norse and Nunavutter collide." We have now travelled as far as Nunavut, the northernmost territory of Canada inhabited primarily by the Inuit. And yet, with the reappearance of the Norse, we realise that our bounds are not so limitless, as even our imaginations have started to repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so we end the night as we had begun it, "no worse and none the better."`
+                            description: [
+                                `"Norse and Nunavutter collide." We have now travelled as far as Nunavut, the northernmost territory of Canada inhabited primarily by the Inuit. And yet, with the reappearance of the Norse, we realise that our bounds are not so limitless, as even our imaginations have started to repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so we end the night as we had begun it, "no worse and none the better."`
+                            ]
                         }
                     },
                     `collide…`,
@@ -752,7 +828,9 @@ module.exports = {
                             properNoun: true,
                             annotation: {
                                 // wiki: leif ericson
-                                description: `The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."`
+                                description: [
+                                    `The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."`
+                                ]
                             }
                         },
                         `arrives!`
@@ -767,7 +845,9 @@ module.exports = {
                         anchor: `these mummeries`,
                         annotation: {
                             // wiki: mummer
-                            description: `A mummer is a masked mime, while a mummy is a preserved corpse. All of time has collapsed into a singularity, as my memories blur into those of the world history that I keenly dig through. Everyone is at once dead and not dead, as am I. Or is this all a staged performance that I've chosen to act in?`
+                            description: [
+                                `A mummer is a masked mime, while a mummy is a preserved corpse. All of time has collapsed into a singularity, as my memories blur into those of the world history that I keenly dig through. Everyone is at once dead and not dead, as am I. Or is this all a staged performance that I've chosen to act in?`
+                            ]
                         }
                     },
                     `I have left to mine?`
@@ -799,7 +879,9 @@ module.exports = {
                         anchor: `in-som'umiak skims through channels`,
                         annotation: {
                             // wiki: umiak, insomniac
-                            description: `An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing disaster afoot, our brave tribe flees to safety "in some umiak," skimming through icy channels wreaked by a "snowy blitz." Meanwhile, being an "insomniac," I "skim through channels" that are "snow-blitzed" due to the television's poor reception.`
+                            description: [
+                                `An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing disaster afoot, our brave tribe flees to safety "in some umiak," skimming through icy channels wreaked by a "snowy blitz." Meanwhile, being an "insomniac," I "skim through channels" that are "snow-blitzed" due to the television's poor reception.`
+                            ]
                         }
                     },
                     `snow blitz'd…`
@@ -819,7 +901,9 @@ module.exports = {
                         anchor: `arrhythmetic heart,`,
                         annotation: {
                             // wiki: arrhythmia
-                            description: `Arrhythmia, or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.`
+                            description: [
+                                `Arrhythmia, or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.`
+                            ]
                         }
                     }
                 ]
@@ -832,7 +916,9 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: english
-                            description: `Howie had opted for the large bottle of Robitussin, thinking that the small one I had recommended wouldn't be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he keeps going back to the kitchen to get more water. Meanwhile, the English have now arrived to despoil the New World, with the white ruffs around their necks resembling those of "buzzards."`
+                            description: [
+                                `Howie had opted for the large bottle of Robitussin, thinking that the small one I had recommended wouldn't be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he keeps going back to the kitchen to get more water. Meanwhile, the English have now arrived to despoil the New World, with the white ruffs around their necks resembling those of "buzzards."`
+                            ]
                         }
                     },
                     `come unsated find`,
@@ -841,7 +927,9 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             // wiki: rumspring, amish
-                            description: `Rumspringa is a period of adolescence during which the Amish are allowed to openly rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. It means "running around" in Pennsylvania Dutch, but I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
+                            description: [
+                                `Rumspringa is a period of adolescence during which the Amish are allowed to openly rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. It means "running around" in Pennsylvania Dutch, but I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
+                            ]
                         }
                     },
                     `is parched.`
