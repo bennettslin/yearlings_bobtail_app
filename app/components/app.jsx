@@ -272,9 +272,10 @@ class App extends Component {
             this.selectAnnotation()
         }
 
-        // Advance to the next accesible annotation, if needed.
+        // Advance to the next accesible annotation and popup anchor, if needed.
         this.setState({
-            accessedAnnotationIndex: getAnnotationIndexForDirection(this.props, this.state.accessedAnnotationIndex)
+            accessedAnnotationIndex: getAnnotationIndexForDirection(this.props, this.state.accessedAnnotationIndex),
+            accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(this.props, this.state.accessedPopupAnchorIndex)
         })
     }
 

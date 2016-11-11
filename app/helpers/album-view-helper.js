@@ -54,7 +54,12 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
 
             // Remember that annotations are 1-based.
             returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
-        } while (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys))
+
+    /**
+     * Prevent index from incrementing forever by stopping after return index
+     * is once again current index, with direction set.
+     */
+    } while (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) && !(direction !== 0 && currentIndex === returnIndex))
 
         return returnIndex
     }
@@ -69,11 +74,13 @@ export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other 
 }
 
 export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, direction) => {
-    const annotation = getAnnotation(props)
+    const annotation = getAnnotation(props),
+        selectedDotKeys = props.selectedDotKeys
 
     if (annotation && annotation.popupAnchors) {
 
-        const popupAnchorsLength = annotation.popupAnchors.length
+        const { popupAnchors } = annotation,
+            popupAnchorsLength = popupAnchors.length
 
         if (popupAnchorsLength < 2) {
             return popupAnchorsLength
@@ -93,8 +100,11 @@ export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, directi
             // Remember that annotations are 1-based.
             returnIndex = (returnIndex + popupAnchorsLength + direction - 1) % popupAnchorsLength + 1
 
-        // FIXME: correst this.
-    } while (currentIndex === returnIndex)
+        /**
+         * Skip wiki anchors if wiki dot not selected, and portal anchors if
+         * portal dot not selected.
+         */
+     } while (((typeof popupAnchors[returnIndex - 1] === 'string' && !selectedDotKeys.wiki) || (typeof popupAnchors[returnIndex - 1] === 'object' && !selectedDotKeys.portal)) && !(direction !== 0 && currentIndex === returnIndex))
 
         return returnIndex
     }
