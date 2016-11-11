@@ -30,18 +30,8 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `access keys should skip unshown annotations`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `add previous and next buttons to annotation popup`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `method to log portals and wikis`,
-            workedHours: 0,
+            workedHours: 2,
             neededHours: 2
         },
         {
@@ -53,11 +43,6 @@ module.exports = {
             taskName: `have class to show visual keyboard keys`,
             workedHours: 0,
             neededHours: 2
-        },
-        {
-            taskName: `handle resetting accessed indices`,
-            workedHours: 0,
-            neededHours: 1
         },
         {
             taskName: `scroll played verse into view`,
@@ -465,6 +450,16 @@ module.exports = {
             taskName: `hide wiki anchors when wiki dot turned off`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `access keys should skip unshown annotations`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `access keys should skip unshown popup anchors`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
