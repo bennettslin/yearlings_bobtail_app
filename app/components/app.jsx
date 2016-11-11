@@ -210,6 +210,8 @@ class App extends Component {
 
         this.setState({
             accessedSongIndex: selectedSongIndex,
+
+            // App does not know new index, so pass it directly.
             accessedAnnotationIndex: getAnnotationIndexForDirection({
                 songs: this.props.songs,
                 selectedDotKeys: this.props.selectedDotKeys,
@@ -303,6 +305,8 @@ class App extends Component {
 
             this.setState({
                 accessedAnnotationIndex: selectedAnnotationIndex,
+
+                // App does not know new index, so pass it directly.
                 accessedPopupAnchorIndex: getPopupAnchorIndexForDirection({
                     selectedAnnotationIndex,
                     songs: this.props.songs,
