@@ -30,11 +30,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `access keys should skip unshown popup anchors`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `scroll to annotation after portal`,
             workedHours: 0,
             neededHours: 2
@@ -468,6 +463,11 @@ module.exports = {
         },
         {
             taskName: `add previous and next buttons to annotation popup`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `access keys should skip unshown popup anchors`,
             workedHours: 2,
             neededHours: 2
         }

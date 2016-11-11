@@ -104,8 +104,7 @@ export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, directi
          * Skip wiki anchors if wiki dot not selected, and portal anchors if
          * portal dot not selected.
          */
-     } while (((typeof popupAnchors[returnIndex - 1] === 'string' && !selectedDotKeys.wiki) || (typeof popupAnchors[returnIndex - 1] === 'object' && !selectedDotKeys.portal)) && !(direction !== 0 && currentIndex === returnIndex))
-
+        } while (((typeof popupAnchors[returnIndex - 1] === 'string' && !selectedDotKeys.wiki) || (typeof popupAnchors[returnIndex - 1] === 'object' && !selectedDotKeys.portal)) && !(direction !== 0 && currentIndex === returnIndex))
         return returnIndex
     }
 

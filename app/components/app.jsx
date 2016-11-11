@@ -304,10 +304,11 @@ class App extends Component {
             this.setState({
                 accessedAnnotationIndex: selectedAnnotationIndex,
                 accessedPopupAnchorIndex: getPopupAnchorIndexForDirection({
-                    // FIXME: This isn't exactly right.
-                    props: this.props,
-                    selectedAnnotationIndex: 1
-                })
+                    selectedAnnotationIndex,
+                    songs: this.props.songs,
+                    selectedSongIndex: this.props.selectedSongIndex,
+                    selectedDotKeys: this.props.selectedDotKeys
+                }, 1)
             })
         }
 

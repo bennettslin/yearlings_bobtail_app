@@ -164,20 +164,23 @@ export default {
         accessedPopupAnchorIndex,
         selectWikiOrPortal
     }) {
+        let toSelectPopupAnchor = false
+
         switch (keyName) {
             case ARROW_UP:
                 accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, -1)
+                toSelectPopupAnchor = true
                 break
             case ARROW_DOWN:
                 accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, 1)
+                toSelectPopupAnchor = true
                 break
             case ENTER:
                 selectWikiOrPortal()
-                accessedPopupAnchorIndex = false
                 break
         }
 
-        return accessedPopupAnchorIndex
+        return toSelectPopupAnchor ? accessedPopupAnchorIndex : false
     },
 
     handleLyricsAndAnnotationAccess({
