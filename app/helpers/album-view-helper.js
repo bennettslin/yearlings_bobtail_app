@@ -69,7 +69,6 @@ export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other 
 }
 
 export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, direction) => {
-    // TODO: do this.
     const annotation = getAnnotation(props)
 
     if (annotation && annotation.popupAnchors) {

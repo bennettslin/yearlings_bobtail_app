@@ -202,31 +202,32 @@ class App extends Component {
 
     selectSong(e, selectedSongIndex = 0) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess({ accessedSectionKey: SONGS_SECTION }) }
-        if (selectedSongIndex >= 0 && selectedSongIndex <= this.props.songs.length) {
+
+        // Show overview bubble text for selected song.
+        this.props.selectOverviewIndex(0)
+
+        this.props.selectSongIndex(selectedSongIndex)
+
+        this.setState({
+            accessedSongIndex: selectedSongIndex,
+            accessedAnnotationIndex: getAnnotationIndexForDirection({
+                songs: this.props.songs,
+                selectedDotKeys: this.props.selectedDotKeys,
+                selectedSongIndex
+            }, 1)
+        })
+
+        /**
+         * Reset the stored annotation, time, and overview, unless selected
+         * from portal.
+         */
+        if (e) {
+            this._handleSectionAccess({ accessedSectionKey: SONGS_SECTION })
+            this.selectAnnotation()
+            this.selectVerse()
 
             // Scroll to top of lyrics.
             scrollElementIntoView('lyrics-scroll', 'home')
-
-            // Reset the stored annotation, time, and overview, unless selected from portal.
-            if (e) {
-                this.selectAnnotation()
-                this.selectVerse()
-            }
-
-            // Show overview bubble text for selected song.
-            this.props.selectOverviewIndex(0)
-
-            this.props.selectSongIndex(selectedSongIndex)
-
-            this.setState({
-                accessedSongIndex: selectedSongIndex,
-                accessedAnnotationIndex: getAnnotationIndexForDirection({
-                    songs: this.props.songs,
-                    selectedDotKeys: this.props.selectedDotKeys,
-                    selectedSongIndex
-                }, 1)
-            })
         }
     }
 
@@ -304,7 +305,7 @@ class App extends Component {
                 accessedPopupAnchorIndex: getPopupAnchorIndexForDirection({
                     // FIXME: This isn't exactly right.
                     props: this.props,
-                    selectedAnnotationIndex
+                    selectedAnnotationIndex: 1
                 })
             })
         }
