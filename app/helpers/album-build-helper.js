@@ -193,6 +193,10 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough) => {
     }
 }
 
+/**
+ * FIXME: This method does more than parse wikis now. Consider renaming it to
+ * avoid confusion.
+ */
 const _parseWiki = (key, object, finalPassThrough, reset = true) => {
     /**
      * This method gets called in two places. The first time is simply to check
@@ -237,7 +241,7 @@ const _prepareCard = (card, dotKeys, finalPassThrough, reset) => {
             portalLinks } = card
 
     // If card has a wiki link, add wiki key to dot keys.
-    if (description) {
+    if (description || finalPassThrough) {
         const hasWiki = _parseWiki('wiki', description, finalPassThrough, reset)
 
         if (hasWiki && !finalPassThrough) {
