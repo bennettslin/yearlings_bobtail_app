@@ -53,14 +53,14 @@
     * Accessed element is title or selected verse.
 
     * When up and down arrows are pressed:
-        * If there is no accessed verse:
+        * If there is an accessed annotation:
             * Accessed verse closest to last accessed element is highlighted.
             * Accessed annotation, if any, is unhighlighted.
         * If there is an accessed verse:
             * Highlight previous or next accessed verse.
 
     * When left and right arrows are pressed:
-        * If there is no accessed annotation:
+        * If there is an accessed verse:
             * Accessed annotation closest to last accessed element is highlighted.
             * Accessed verse, if any, is unhighlighted.
         * If there is an accessed annotation:
