@@ -375,7 +375,6 @@ module.exports = {
                     {
                         anchor: `thirty-three?`,
                         annotation: {
-                            // wiki: jesus
                             description: `I hated the idea of getting older, and often joked that I would kill myself at thirty-three, the age at which Jesus was crucified, since clearly that was all the time one needed to change the world. So when I suggested it as the age at which I would return for Sita in accordance with our little pact, the subtext was understood.`
                         }
                     }

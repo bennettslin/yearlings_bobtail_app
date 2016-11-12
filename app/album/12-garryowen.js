@@ -22,13 +22,17 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // wiki: irish reel
                         description: [
                             `Since I took the name of my drunken personality from James Joyce's`,
                             {
                                 italic: `Ulysses,`
                             },
-                            `I went for an Irish reel here, departing from tradition with the inclusion of contrapuntal melodies. To capture the liveliness of a fiddle, I held my violin at chest level, which took some practise. The melodicas sounding in unison at the bridge were meant to evoke bagpipes at a funeral procession.`
+                            `I went for an`,
+                            {
+                                anchor: `Irish reel`,
+                                wiki: `Reel_(dance)`
+                            },
+                            `here, departing from tradition with the inclusion of contrapuntal melodies. To capture the liveliness of a fiddle, I held my violin at chest level, which took some practise. The melodicas sounding in unison at the bridge were meant to evoke bagpipes at a funeral procession.`
                         ],
                         dotKeys: {
                             music: true
@@ -151,8 +155,13 @@ module.exports = {
                     {
                         anchor: `smegma crust,`,
                         annotation: {
-                            // wiki: smegma
-                            description: `Smegma is the smelly gunk that builds up on unwashed genitals. My personal hygiene would be put on hold for days while I crashed at the punk house. But once back at Sita's, I would still dawdle a bit before showering, since she was powerless to entice me with sex until I did.`
+                            description: [
+                                {
+                                    anchor: `Smegma`,
+                                    wiki: `Smegma`
+                                },
+                                `is the smelly gunk that builds up on unwashed genitals. My personal hygiene would be put on hold for days while I crashed at the punk house. But once back at Sita's, I would still dawdle a bit before showering, since she was powerless to entice me with sex until I did.`
+                            ]
                         }
                     }
                 ]
@@ -240,7 +249,7 @@ module.exports = {
                     {
                         anchor: `choler turned up,`,
                         annotation: {
-                            // wiki: choler
+                            // TODO: Define choler
                             description: `Just like I wouldn't have recognised myself with an upturned collar, the angry drunk returning my gaze didn't match my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`
                         }
                     },
@@ -273,8 +282,14 @@ module.exports = {
                     {
                         anchor: `scapegirl,`,
                         annotation: {
-                            // wiki: scapegoat
-                            description: `In Biblical times, a community would absolve itself of its sins by symbolically placing them on a goat that was then banished into the desert. For me, leaving Sita for good would serve a similar purpose. As long as she was around to cast judgment on my hypocrisy, I would have to own up to my mistakes, and not run away from them.`
+                            description: [
+                                `In Biblical times, a community would absolve itself of its sins by symbolically placing them on a`,
+                                {
+                                    anchor: `goat`,
+                                    wiki: `Scapegoat`
+                                },
+                                `that was then banished into the desert. For me, leaving Sita for good would serve a similar purpose. As long as she was around to cast judgment on my hypocrisy, I would have to own up to my mistakes, and not run away from them.`
+                            ]
                         }
                     }
                 ]
@@ -430,7 +445,6 @@ module.exports = {
                     {
                         anchor: `Toora-loora-li.`,
                         annotation: {
-                            // wiki: Too_Ra_Loo_Ra_Loo_Ral?
                             description: `Perhaps related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variations of it are prevalent in Irish drinking songs and lullabies.`
                         }
                     },

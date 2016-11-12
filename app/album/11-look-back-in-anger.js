@@ -5,10 +5,12 @@ module.exports = {
         anchor: `Look Back in Anger`,
         annotation: {
             description: [
-                // wiki: osborne, look back in anger
                 `John Osborne's play`,
                 {
-                    italic: `Look Back in Anger`
+                    italic: {
+                        anchor: `Look Back in Anger`,
+                        wiki: `Look_Back_in_Anger`
+                    }
                 },
                 `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife.`
             ]
@@ -39,8 +41,14 @@ module.exports = {
                     {
                         anchor: `flagboy last fell,`,
                         annotation: {
-                            // wiki: colorbearer
-                            description: `During the Civil War, a colorbearer carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth seemed like the perfect metaphor for my high school experience.`
+                            description: [
+                                `During the Civil War, a`,
+                                {
+                                    anchor: `colorbearer`,
+                                    wiki: `Standard-bearer`
+                                },
+                                `carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth seemed like the perfect metaphor for my high school experience.`
+                            ]
                         }
                     }
                 ]
@@ -52,8 +60,14 @@ module.exports = {
                         // Connection to Didi?
                         anchor: `dragging aglets held`,
                         annotation: {
-                            // wiki: aglet
-                            description: `An aglet is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. Anyone bent on seeing me trip and fall thus readily had the means to make it happen.`
+                            description: [
+                                `An`,
+                                {
+                                    anchor: `aglet`,
+                                    wiki: `Aglet`
+                                },
+                                `is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. Anyone bent on seeing me trip and fall thus readily had the means to make it happen.`
+                            ]
                         }
                     },
                     `by the bastard's boot,`
@@ -67,16 +81,28 @@ module.exports = {
                         anchor: `Van Nuys belles`,
                         properNoun: true,
                         annotation: {
-                            // wiki: van nuys
-                            description: `I went to high school in Van Nuys, a neighbourhood smack-dab in the middle of the San Fernando Valley.`
+                            description: [
+                                `I went to high school in`,
+                                {
+                                    anchor: `Van Nuys,`,
+                                    wiki: `Van_Nuys`
+                                },
+                                `a neighbourhood smack-dab in the middle of the San Fernando Valley.`
+                            ]
                         }
                     },
                     {
                         anchor: `lunched soundless`,
                         properNoun: true,
                         annotation: {
-                            // wiki: first battle of bull run
-                            description: `In the First Battle of Bull Run, spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with bullies were fought and lost in full view of a lunchtime crowd.`
+                            description: [
+                                `In the`,
+                                {
+                                    anchor: `First Battle of Bull Run,`,
+                                    wiki: `First_Battle_of_Bull_Run`
+                                },
+                                `spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with bullies were fought and lost in full view of a lunchtime crowd.`
+                            ]
                         }
                     },
                     `through the noon.`
@@ -127,8 +153,14 @@ module.exports = {
                         anchor: `Valley of death`,
                         properNoun: true,
                         annotation: {
-                            // wiki: tennyson, charge of light brigade
-                            description: `Like the six hundred who rode into the valley of death in Alfred Tennyson's poem "The Charge of the Light Brigade," I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own years in the Valley of death. In turn, this casual view of hardship enabled me to justify the pain that I knew my ambitions would eventually bring upon Sita.`
+                            description: [
+                                `Like the six hundred who rode into the valley of death in Alfred Tennyson's poem`,
+                                {
+                                    anchor: `"The Charge of the Light Brigade,"`,
+                                    wiki: `Charge_of_the_Light_Brigade`
+                                },
+                                `I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own years in the Valley of death. In turn, this casual view of hardship enabled me to justify the pain that I knew my ambitions would eventually bring upon Sita.`
+                            ]
                         }
                     },
                     `you rode, so on spite you thrive.`
@@ -310,8 +342,14 @@ module.exports = {
                     {
                         anchor: `peasant discontented`,
                         annotation: {
-                            // wiki: french revolution
-                            description: `During the French Revolution, the peasants were so downtrodden that each attempt by the government to appease them would backfire horribly. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`
+                            description: [
+                                `During the`,
+                                {
+                                    anchor: `French Revolution,`,
+                                    wiki: `French_Revolution`
+                                },
+                                `the peasants were so downtrodden that each attempt by the government to appease them would backfire horribly. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`
+                            ]
                         }
                     },
                     `all the more,`
@@ -339,6 +377,7 @@ module.exports = {
                     {
                         anchor: `must turn the cheek.`,
                         annotation: {
+                            // TODO: Mention Jesus
                             description: `The letters from RI Research instructed me not to confront my tormentors, but instead to quietly take their abuse in stride, as my exalted place in the universe necessarily asked of me to always be the bigger person.`
                         }
                     }
