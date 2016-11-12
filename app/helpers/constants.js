@@ -21,7 +21,7 @@ module.exports = {
 
     WINDOW_STORAGE: window.localStorage,
 
-    LYRIC_TIME_ELEMENT: 'time_element',
+    LYRIC_VERSE_ELEMENT: 'verse_element',
     LYRIC_ANNOTATION_ELEMENT: 'annotation_element',
 
     SONGS_SECTION,

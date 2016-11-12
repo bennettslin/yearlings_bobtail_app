@@ -2,6 +2,7 @@ import React from 'react'
 import LyricsPlayButton from './lyrics-play-button'
 import LyricsLine from './lyrics-line'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from 'helpers/constants'
+import { LYRIC_VERSE_ELEMENT } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -10,6 +11,9 @@ import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from 'helpers/constants'
 const LyricsVerse = ({
 
     verseObject,
+    sectionAccessHighlighted,
+    accessedLyricElement,
+    accessedVerseIndex,
     selectedVerseIndex,
     hoveredLineIndex,
     onAnnotationClick,
@@ -24,6 +28,7 @@ const LyricsVerse = ({
             verseIndex } = verseObject,
 
         isSelected = verseIndex === selectedVerseIndex,
+        accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
 
         /**
          * TODO: If there is no duration between time and nextTime, it can be
@@ -43,6 +48,9 @@ const LyricsVerse = ({
         <LyricsVerseView {...other}
             verseObject={verseObject}
             time={time}
+            accessHighlighted={accessHighlighted}
+            sectionAccessHighlighted={sectionAccessHighlighted}
+            accessedLyricElement={accessedLyricElement}
             isTitle={isTitle}
             isHovered={isHovered}
             isSelected={isSelected}
@@ -68,6 +76,7 @@ const LyricsVerseView = ({
 
     // From controller.
     time,
+    accessHighlighted,
     isInteractable,
     isSelected,
     isHovered,
@@ -79,7 +88,7 @@ const LyricsVerseView = ({
 
 ...other }) => (
 
-    <div className={`verse verse-${verseObject.verseIndex || 'timeless'}${isSelected ? ' selected' : ''}${isInteractable ? ' interactable' : ''}`}
+    <div className={`verse verse-${verseObject.verseIndex || 'timeless'}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
     >

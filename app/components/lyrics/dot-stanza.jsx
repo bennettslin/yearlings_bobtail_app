@@ -1,6 +1,7 @@
 import React from 'react'
 import DotsBlock from '../dots/dots-block'
 import { getIntersection } from 'helpers/dot-helper'
+import { LYRIC_ANNOTATION_ELEMENT } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -14,6 +15,7 @@ const DotStanza = ({
     selectedDotKeys,
     sectionAccessHighlighted,
     accessedAnnotationIndex,
+    accessedLyricElement,
 
 ...other }) => {
 
@@ -21,7 +23,7 @@ const DotStanza = ({
             dotKeys } = dotStanzaObject,
 
         isSelected = annotationIndex === selectedAnnotationIndex,
-        accessHighlighted = sectionAccessHighlighted && accessedAnnotationIndex === annotationIndex,
+        accessHighlighted = sectionAccessHighlighted && accessedAnnotationIndex === annotationIndex && accessedLyricElement === LYRIC_ANNOTATION_ELEMENT,
 
         // Hide dot keys that are not present.
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),

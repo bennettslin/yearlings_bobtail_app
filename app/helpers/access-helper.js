@@ -1,4 +1,4 @@
-import { getAnnotationIndexForDirection, getPopupAnchorIndexForDirection } from 'helpers/album-view-helper'
+import { getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getVerseIndexForDirection } from 'helpers/album-view-helper'
 
 import { SONGS_SECTION,
          AUDIO_SECTION,
@@ -8,7 +8,7 @@ import { SONGS_SECTION,
          WIKI_SECTION,
          SECTION_KEYS,
 
-         LYRIC_TIME_ELEMENT,
+         LYRIC_VERSE_ELEMENT,
          LYRIC_ANNOTATION_ELEMENT,
 
          ALL_DOT_KEYS,
@@ -160,60 +160,12 @@ export default {
         }
     },
 
-    handleLyricsAccess({
-        keyName,
-        props
-    }) {
-        switch (keyName) {
-            case ARROW_UP:
-
-                break
-            case ARROW_DOWN:
-
-                break
-            case ENTER:
-
-                break
-            default:
-                return false
-                break
-        }
-
-        return {
-
-        }
-    },
-
-    handleAnnotationAccess({
-        keyName,
-        props,
-        accessedPopupAnchorIndex,
-        selectWikiOrPortal
-    }) {
-        switch (keyName) {
-            case ARROW_UP:
-                accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, -1)
-                break
-            case ARROW_DOWN:
-                accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, 1)
-                break
-            case ENTER:
-                selectWikiOrPortal()
-                return false
-                break
-            default:
-                return false
-                break
-        }
-
-        return accessedPopupAnchorIndex
-    },
-
     handleLyricsAndAnnotationAccess({
         keyName,
         props,
         fromAnnotationSection,
         accessedAnnotationIndex,
+        accessedLyricElement,
         selectAnnotation,
         scrollElementIntoView
     }) {
@@ -258,6 +210,65 @@ export default {
         }
 
         return newState || false
+    },
+
+    handleLyricsAccess({
+        keyName,
+        props,
+        accessedVerseIndex
+    }) {
+        let newState,
+            direction
+
+        switch (keyName) {
+            case ARROW_UP:
+                direction = -1
+                break
+            case ARROW_DOWN:
+                direction = 1
+                break
+            case ENTER:
+                break
+            default:
+                return false
+                break
+        }
+
+        if (direction) {
+            newState = { accessedLyricElement: LYRIC_VERSE_ELEMENT,
+                         accessedVerseIndex: getVerseIndexForDirection(props, accessedVerseIndex, direction) }
+        }
+
+        return newState || false
+    },
+
+    handleAnnotationAccess({
+        keyName,
+        props,
+        accessedPopupAnchorIndex,
+        selectWikiOrPortal
+    }) {
+        let direction
+
+        switch (keyName) {
+            case ARROW_UP:
+                direction = -1
+                break
+            case ARROW_DOWN:
+                direction = 1
+                break
+            case ENTER:
+                selectWikiOrPortal()
+                return false
+                break
+            default:
+                return false
+                break
+        }
+
+        accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, direction)
+
+        return accessedPopupAnchorIndex
     },
 
     handleAudioAccess({

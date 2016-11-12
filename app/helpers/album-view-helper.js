@@ -28,6 +28,12 @@ export const getAnnotationsDotKeys = (props) => {
     }) : null
 }
 
+export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }) => {
+    selectedSong = selectedSong || getSong(other)
+    return selectedSong.annotations ?
+            selectedSong.annotations[selectedAnnotationIndex - 1] : null
+}
+
 export const getAnnotationIndexForDirection = (props, currentIndex = 1, direction) => {
     const selectedSong = getSong(props)
 
@@ -67,10 +73,17 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
     return currentIndex
 }
 
-export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }) => {
-    selectedSong = selectedSong || getSong(other)
-    return selectedSong.annotations ?
-            selectedSong.annotations[selectedAnnotationIndex - 1] : null
+export const getVerseIndexForDirection = (props, currentIndex = 1, direction = 1) => {
+    const selectedSong = getSong(props)
+
+    if (selectedSong.times) {
+        const timesLength = selectedSong.times.length
+
+        // Verse indices are 0-based.
+        return (currentIndex + timesLength + direction) % timesLength
+    }
+
+    return currentIndex
 }
 
 export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, direction) => {

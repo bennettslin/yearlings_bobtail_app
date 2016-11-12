@@ -57,6 +57,8 @@ const SongView = ({
     accessedOn,
     accessedSectionKey,
     accessedAnnotationIndex,
+    accessedVerseIndex,
+    accessedLyricElement,
     accessedPopupAnchorIndex,
     accessedDotIndex,
 
@@ -112,12 +114,14 @@ const SongView = ({
             />
             <LyricsSection
                 isNarrowScreen={isNarrowScreen}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                accessedLyricElement={accessedLyricElement}
                 accessedAnnotationIndex={accessedAnnotationIndex}
+                accessedVerseIndex={accessedVerseIndex}
                 selectedSongIndex={selectedSongIndex}
                 selectedAnnotationIndex={selectedAnnotationIndex}
                 selectedLyricColumnIndex={selectedLyricColumnIndex}
-                accessedOn={accessedOn}
-                accessedSectionKey={accessedSectionKey}
                 hasDoubleColumns={hasDoubleColumns}
                 songLyrics={selectedSongLyrics}
                 selectedDotKeys={selectedDotKeys}

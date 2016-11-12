@@ -22,7 +22,7 @@ import { SONGS_SECTION,
          WIKI_SECTION,
          SECTION_KEYS,
 
-         LYRIC_TIME_ELEMENT,
+         LYRIC_VERSE_ELEMENT,
          LYRIC_ANNOTATION_ELEMENT,
 
          WIKI,
@@ -106,8 +106,9 @@ class App extends Component {
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
             accessedAnnotationIndex,
+            accessedVerseIndex: 0,
             accessedPopupAnchorIndex,
-            accessedLyricElement: LYRIC_TIME_ELEMENT,
+            accessedLyricElement: LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
@@ -563,6 +564,7 @@ class App extends Component {
                             fromAnnotationSection,
                             props: this.props,
                             accessedAnnotationIndex: this.state.accessedAnnotationIndex,
+                            accessedLyricElement: this.state.accessedLyricElement,
                             selectAnnotation: this.selectAnnotation,
                             scrollElementIntoView
                         }) || {}
@@ -570,9 +572,14 @@ class App extends Component {
                         if (accessedSectionKey === LYRICS_SECTION) {
                             const newLyricState = AccessHelper.handleLyricsAccess({
                                 keyName,
-                                props: this.props
+                                props: this.props,
+                                accessedVerseIndex: this.state.accessedVerseIndex
                             })
-                            
+
+                            if (newLyricState) {
+                                newState = Object.assign(newState, newLyricState)
+                            }
+
                         } else if (accessedSectionKey === ANNOTATION_SECTION) {
                             const accessedPopupAnchorIndex = AccessHelper.handleAnnotationAccess({
                                 keyName,
