@@ -181,29 +181,47 @@ module.exports = {
                         anchor: `Walkyriens:`,
                         properNoun: true,
                         annotation: {
-                            // wiki: valkyries, walgreens
+
                             description: [
-                                `Backtrack to earlier that night. We buy the Robitussin from a Walgreens pharmacy. Also, the Valkyries in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.`
+                                `Backtrack to earlier that night. We buy the Robitussin from a`,
+                                {
+                                    anchor: `Walgreens`,
+                                    wiki: `Walgreens`
+                                },
+                                `pharmacy. Also, the`,
+                                {
+                                    anchor: `Valkyries`,
+                                    wiki: `Valkyrie`
+                                },
+                                `in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.`
                             ]
                         }
                     },
                     `to`,
                     {
-                        anchor: `Walhall o'`,
+                        // NOTE: I changed from 'Walhall.'
+                        anchor: `Wal-hall o'`,
                         properNoun: true,
                         annotation: {
-                            // wiki: walhalla
                             description: [
-                                `The Valkyries would bring the dead heroes to Valhalla, a majestic hall ruled by the god Odin. Also, the Walgreens aisles are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… So, "Wal-halls," if you will.`
+                                `The Valkyries would bring the dead heroes to`,
+                                {
+                                    anchor: `Valhalla,`,
+                                    wiki: `Valhalla`
+                                },
+                                `a majestic hall ruled by the god Odin. Also, the Walgreens aisles are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… So, "Wal-halls," if you will.`
                             ]
                         }
                     },
                     {
                         anchor: `mead-Tussin!`,
                         annotation: {
-                            // wiki: mead
                             description: [
-                                `Mead was the drink of the Norse gods, and we go with Wal-Tussin as our "medicine" of choice.`
+                                {
+                                    anchor: `Mead`,
+                                    wiki: `Mead`
+                                },
+                                `was the drink of the Norse gods, and we go with Wal-Tussin as our "medicine" of choice.`
                             ]
                         }
                     }
@@ -222,9 +240,13 @@ module.exports = {
                     {
                         anchor: `boundless Kalevalley ends.`,
                         annotation: {
-                            // wiki: kalevala
                             description: [
-                                `The Kalevala is the national epic poem of Finland. Also, the San Fernando Valley, which I hated as a teenager, is`,
+                                `The`,
+                                {
+                                    anchor: `Kalevala`,
+                                    wiki: `Kalevala`
+                                },
+                                `is the national epic poem of Finland. Also, the San Fernando Valley, which I hated as a teenager, is`,
                                 {
                                     emphasis: `the`
                                 },
@@ -242,14 +264,17 @@ module.exports = {
                         anchor: `Finnugreec tongue`,
                         properNoun: true,
                         annotation: {
-                            // wiki: fenugreek
                             description: [
                                 `The Finnish language belongs in the`,
                                 {
                                     anchor: `Finno-Ugric`,
                                     wiki: `Finno-Ugric_languages`
                                 },
-                                `family. Also, the licorice taste of Robitussin, which lingers in our mouths, is reminiscent of the spice fenugreek.`
+                                `family. Also, the licorice taste of Robitussin, which lingers in our mouths, is reminiscent of the spice`,
+                                {
+                                    anchor: `fenugreek.`,
+                                    wiki: `Fenugreek`
+                                }
                             ]
                         }
                     },
@@ -257,9 +282,13 @@ module.exports = {
                         anchor: `Lapps are highmen.`,
                         properNoun: true,
                         annotation: {
-                            // wiki: lapp
                             description: [
-                                `The Lapps are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally high, as the Robitussin "laps our hymen," since the others are trying it for the first time.`
+                                `The`,
+                                {
+                                    anchor: `Lapps`,
+                                    wiki: `Sami_people`
+                                },
+                                `are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally high, as the Robitussin "laps our hymen," since the others are trying it for the first time.`
                             ]
                         }
                     }
@@ -279,27 +308,40 @@ module.exports = {
                         anchor: `Makeyars mygrate,`,
                         properNoun: true,
                         annotation: {
-                            // wiki: magyar
                             description: [
-                                `Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the Magyars are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.`
+                                `Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the`,
+                                {
+                                    anchor: `Magyars`,
+                                    wiki: `Hungarians`
+                                },
+                                `are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.`
                             ]
                         }
                     },
                     `from`,
                     {
                         anchor: `among ol'`,
-                        annotation: {// wiki: mongol
+                        annotation: {
                             description: [
-                                `The Magyars share genetic ancestry with the Mongols, an East Asian nomadic people.`
+                                `The Magyars share genetic ancestry with the`,
+                                {
+                                    anchor: `Mongols,`,
+                                    wiki: `Mongols`
+                                },
+                                `an East Asian nomadic people.`
                             ]
                         }
                     },
                     {
                         anchor: `psealed off drains.`,
                         annotation: {
-                            // wiki: pseudephedrine
                             description: [
-                                `Back in the day, the Robitussin we took contained pseudoephedrine, a decongestant. Because of its use in the illegal manufacture of methamphetamine, however, this is no longer the case.`
+                                `Back in the day, the Robitussin we took contained`,
+                                {
+                                    anchor: `pseudoephedrine,`,
+                                    wiki: `Pseudoephedrine`
+                                },
+                                `a decongestant. Because of its use in the illicit manufacture of methamphetamine, however, this is no longer the case.`
                             ]
                         }
                     }
@@ -319,9 +361,13 @@ module.exports = {
                         // TODO: mention steps
                         anchor: `down the steppes`,
                         annotation: {
-                            // wiki: steppes
                             description: [
-                                `In the 13th century, the Mongols swept down from the East Asian steppes and began their conquests.`
+                                `In the 13th century, the Mongols swept down from the East Asian`,
+                                {
+                                    anchor: `steppes`,
+                                    wiki: `Steppe`
+                                },
+                                `and began their conquests.`
                             ],
                             portal: `down_the_steppes`
                         }
@@ -535,11 +581,18 @@ module.exports = {
                     {
                         anchor: `Are Melee tapirs`,
                         annotation: {
-                            // wiki: malay tapir, eohippus
                             description: [
-                                `"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the Malayan tapir is distantly related to the horse and bears a similarity to the horse's prehistoric ancestor`,
+                                `"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the`,
                                 {
-                                    italic: `Eohippus,`
+                                    anchor: `Malayan tapir`,
+                                    wiki: `Malayan_tapir`
+                                },
+                                `is distantly related to the horse and bears a similarity to the horse's prehistoric ancestor`,
+                                {
+                                    italic: {
+                                        anchor: `Eohippus,`,
+                                        wiki: `Eohippus`
+                                    }
                                 },
                                 `or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many throughout history had believed to have been reached.`
                             ]
@@ -561,9 +614,17 @@ module.exports = {
                         anchor: `Khlmair city Ingcar Wet,`,
                         properNoun: true,
                         annotation: {
-                            // wiki: angkor wat, khmer empire
                             description: [
-                                `Angkor Wat, or "Temple City," is a 12th-century Hindu temple built by the Khmer Empire in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie's dad had bought in bulk.`
+                                {
+                                    anchor: `Angkor Wat,`,
+                                    wiki: `Angkor_Wat`
+                                },
+                                `or "Temple City," is a 12th-century Hindu temple built by the`,
+                                {
+                                    anchor: `Khmer Empire`,
+                                    wiki: `Khmer_Empire`
+                                },
+                                `in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie's dad had bought in bulk.`
                             ]
                         }
                     },
@@ -619,9 +680,18 @@ module.exports = {
                     {
                         anchor: `forc'd nations sank…`,
                         annotation: {
-                            // wiki: first nations, beringia
                             description: [
-                                `"A bridge of land trod on by First Nations sank." Indigenous Americans, known in Canada as the First Nations, were forced to leave their Asian homelands due to growing scarcity of resources. According to the Beringia theory, they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.`
+                                `"A bridge of land trod on by First Nations sank." Indigenous Americans, known in Canada as the`,
+                                {
+                                    anchor: `First Nations,`,
+                                    wiki: `First_Nations`
+                                },
+                                `were forced to leave their Asian homelands due to growing scarcity of resources. According to the`,
+                                {
+                                    anchor: `Beringia theory,`,
+                                    wiki: `Beringia`
+                                },
+                                `they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.`
                             ]
                         }
                     }
@@ -650,7 +720,17 @@ module.exports = {
                         annotation: {
                             // wiki: aurora borealis, inuit
                             description: [
-                                `Other indigenous populations, such as the Inuit inhabitants of the Arctic regions, may have undertaken their migrations by boat. These seafarers, of course, would have rowed with the aurora borealis to their left. Also, wishing to be respectful, we've left our "hero's auras" behind in the car.`
+                                `Other indigenous populations, such as the`,
+                                {
+                                    anchor: `Inuit`,
+                                    wiki: `Inuit`
+                                },
+                                `inhabitants of the Arctic regions, may have undertaken their migrations by boat. These seafarers, of course, would have rowed with the`,
+                                {
+                                    anchor: `aurora borealis`,
+                                    wiki: `Aurora`
+                                },
+                                `to their left. Also, wishing to be respectful, we've left our "hero's auras" behind in the car.`
                             ]
                         }
                     },
@@ -734,9 +814,12 @@ module.exports = {
                             italic: {
                                 anchor: `sunk in tarpid lies!`,
                                 annotation: {
-                                    // wiki: tarpit
                                     description: [
-                                        `Tar pits occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`
+                                        {
+                                            anchor: `Tar pits`,
+                                            wiki: `Tar_pit`
+                                        },
+                                        `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`
                                     ],
                                     portal: `sunken_tirpitz`
                                 }
@@ -757,19 +840,27 @@ module.exports = {
                         anchor: `Hollowscene`,
                         properNoun: true,
                         annotation: {
-                            // wiki: holocene
                             // TODO: indie rock scene
                             description: [
-                                `The Holocene is the current geological epoch that began with the first human settlements.`
+                                `The`,
+                                {
+                                    anchor: `Holocene`,
+                                    wiki: `Holocene`
+                                },
+                                `is the current geological epoch that began with the first human settlements.`
                             ]
                         }
                     },
                     {
                         anchor: `broughtour ancister toughtim rite…`,
                         annotation: {
-                            // wiki: totem
                             description: [
-                                `In the epic narrative playing out in my mind, the mastodon becomes a spirit animal, as we have "brought our ancestral totems and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
+                                `In the epic narrative playing out in my mind, the mastodon becomes a spirit animal, as we have "brought our ancestral`,
+                                {
+                                    anchor: `totems`,
+                                    wiki: `Totem`
+                                },
+                                `and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
                             ]
                         }
                     }
