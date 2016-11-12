@@ -1,4 +1,5 @@
 import { getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getVerseIndexForDirection } from 'helpers/album-view-helper'
+import { scrollElementIntoView } from 'helpers/general-helper'
 
 import { SONGS_SECTION,
          AUDIO_SECTION,
@@ -166,8 +167,7 @@ export default {
         fromAnnotationSection,
         accessedAnnotationIndex,
         accessedLyricElement,
-        selectAnnotation,
-        scrollElementIntoView
+        selectAnnotation
     }) {
         let newState,
             toSelectAnnotation = false,
@@ -181,7 +181,12 @@ export default {
                 toSelectAnnotation = fromAnnotationSection
                 break
             case ENTER:
-                toSelectAnnotation = !fromAnnotationSection
+                // Only select annotation if annotation is accessed element.
+                if (accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
+                    toSelectAnnotation = !fromAnnotationSection
+                } else {
+                    return false
+                }
                 break
             default:
                 return false
@@ -215,9 +220,12 @@ export default {
     handleLyricsAccess({
         keyName,
         props,
-        accessedVerseIndex
+        accessedVerseIndex,
+        accessedLyricElement,
+        selectVerse
     }) {
         let newState,
+            toSelectVerse = false,
             direction
 
         switch (keyName) {
@@ -228,6 +236,12 @@ export default {
                 direction = 1
                 break
             case ENTER:
+                // Only select verse if verse is accessed element.
+                if (accessedLyricElement === LYRIC_VERSE_ELEMENT) {
+                    toSelectVerse = true
+                } else {
+                    return false
+                }
                 break
             default:
                 return false
@@ -235,8 +249,13 @@ export default {
         }
 
         if (direction) {
+            accessedVerseIndex = getVerseIndexForDirection(props, accessedVerseIndex, direction)
             newState = { accessedLyricElement: LYRIC_VERSE_ELEMENT,
-                         accessedVerseIndex: getVerseIndexForDirection(props, accessedVerseIndex, direction) }
+                         accessedVerseIndex }
+        }
+
+        if (toSelectVerse) {
+            selectVerse(true, accessedVerseIndex)
         }
 
         return newState || false

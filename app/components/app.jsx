@@ -393,25 +393,23 @@ class App extends Component {
 
     selectVerse(e, selectedVerseIndex = 0) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess({ accessedSectionKey: LYRICS_SECTION }) }
 
         let selectedTimePlayed,
             scroll
 
-        // A new song has been selected.
-        if (selectedVerseIndex === 0) {
-
-            // Set verse to 1 by default.
-            selectedVerseIndex = 1
-            selectedTimePlayed = 0
-            scroll = false
-
-        } else {
+        if (e) {
             const selectedSong = getSong(this.props)
 
             // Select corresponding time.
             selectedTimePlayed = selectedSong.times[selectedVerseIndex - 1]
             scroll = true
+
+            this._handleSectionAccess({ accessedSectionKey: LYRICS_SECTION })
+
+        // A new song has been selected.
+        } else {
+            selectedTimePlayed = 0
+            scroll = false
         }
 
         this._storeTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll })
@@ -431,6 +429,10 @@ class App extends Component {
         if (scroll) {
             scrollElementIntoView('verse', selectedVerseIndex)
         }
+
+        this.setState({
+            accessedVerseIndex: selectedVerseIndex
+        })
 
         this.props.selectVerseIndex(selectedVerseIndex)
         this.props.selectTimePlayed(selectedTimePlayed)
@@ -565,15 +567,16 @@ class App extends Component {
                             props: this.props,
                             accessedAnnotationIndex: this.state.accessedAnnotationIndex,
                             accessedLyricElement: this.state.accessedLyricElement,
-                            selectAnnotation: this.selectAnnotation,
-                            scrollElementIntoView
+                            selectAnnotation: this.selectAnnotation
                         }) || {}
 
                         if (accessedSectionKey === LYRICS_SECTION) {
                             const newLyricState = AccessHelper.handleLyricsAccess({
                                 keyName,
                                 props: this.props,
-                                accessedVerseIndex: this.state.accessedVerseIndex
+                                accessedVerseIndex: this.state.accessedVerseIndex,
+                                accessedLyricElement: this.state.accessedLyricElement,
+                                selectVerse: this.selectVerse
                             })
 
                             if (newLyricState) {
