@@ -16,7 +16,6 @@ import { SONGS_SECTION,
          ENTER,
          ESCAPE } from 'helpers/constants'
 
-
 export default {
 
     handleKeyIfUniversal({
@@ -155,6 +154,30 @@ export default {
 
         return {
             accessedSongIndex
+        }
+    },
+
+    handleLyricsAccess({
+        keyName,
+        props
+    }) {
+        switch (keyName) {
+            case ARROW_UP:
+
+                break
+            case ARROW_DOWN:
+
+                break
+            case ENTER:
+
+                break
+            default:
+                return false
+                break
+        }
+
+        return {
+
         }
     },
 

@@ -22,6 +22,9 @@ import { SONGS_SECTION,
          WIKI_SECTION,
          SECTION_KEYS,
 
+         LYRIC_TIME_ELEMENT,
+         LYRIC_ANNOTATION_ELEMENT,
+
          WIKI,
 
          ESCAPE,
@@ -103,6 +106,7 @@ class App extends Component {
             accessedSongIndex: props.selectedSongIndex,
             accessedAnnotationIndex,
             accessedPopupAnchorIndex,
+            accessedLyricElement: LYRIC_TIME_ELEMENT,
             accessedDotIndex: 0,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
@@ -562,7 +566,11 @@ class App extends Component {
                             scrollElementIntoView
                         })
 
-                        if (accessedSectionKey === ANNOTATION_SECTION) {
+                        if (accessedSectionKey === LYRICS_SECTION) {
+                            // AccessHelper.handleLyricsAccess({
+                            //     keyName
+                            // })
+                        } else if (accessedSectionKey === ANNOTATION_SECTION) {
                             const accessedPopupAnchorIndex = AccessHelper.handleAnnotationAccess({
                                 keyName,
                                 props: this.props,
@@ -572,6 +580,7 @@ class App extends Component {
 
                             if (accessedPopupAnchorIndex) {
                                 newState.accessedPopupAnchorIndex = accessedPopupAnchorIndex
+                                newState.accessedLyricElement = LYRIC_ANNOTATION_ELEMENT
                             }
                         }
                         break
