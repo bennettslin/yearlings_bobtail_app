@@ -395,10 +395,14 @@ module.exports = {
                     {
                         anchor: `slain the teeto-Tatars!`,
                         annotation: {
-                            // wiki: tatars
                             // TODO: briefly describe teetotaler and teeter totter reference.
                             description: [
-                                `Genghis Khan was able to unite the Mongols by defeating the Tatars, a rival tribe. Also, "teeter-totters" and "teetotalers." Having just taken Robitussin a few days prior, I was wavering on taking it again so soon, as Robitussin really destroys you, both mentally and physically. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in, and it feels awesome.`
+                                `Genghis Khan was able to unite the Mongols by defeating the`,
+                                {
+                                    anchor: `Tatars,`,
+                                    wiki: `Tatars`
+                                },
+                                `a rival tribe. Also, "teeter-totters" and "teetotalers." Having just taken Robitussin a few days prior, I was wavering on taking it again so soon, as Robitussin really destroys you, both mentally and physically. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in, and it feels awesome.`
                             ]
                         }
                     }
@@ -425,9 +429,18 @@ module.exports = {
                         anchor: `Howie led the feat of avatars…`,
                         properNoun: true,
                         annotation: {
-                            // wiki: mughal, avatar
                             description: [
-                                `Howie is walking as if his feet are made of lead. Also, "how he led the feat of avatars." The Mughals, descendants of Tamerlane, conquered the Hindu populations of the Indian subcontinent. In Hinduism, an avatar is a deity's earthbound incarnation, and some avatars are speculated to be historical figures whose exploits predate written tradition.`
+                                `Howie is walking as if his feet are made of lead. Also, "how he led the feat of avatars." The`,
+                                {
+                                    anchor: `Mughals,`,
+                                    wiki: `Mughal_Empire`
+                                },
+                                `descendants of Tamerlane, conquered the Hindu populations of the Indian subcontinent. In Hinduism, an`,
+                                {
+                                    anchor: `avatar`,
+                                    wiki: `Avatar`
+                                },
+                                `is a deity's earthbound incarnation, and some avatars are speculated to be historical figures whose exploits predate written tradition.`
                             ]
                         }
                     }
@@ -446,18 +459,26 @@ module.exports = {
                         anchor: `Indus-trail sewerce,`,
                         properNoun: true,
                         annotation: {
-                            // wiki: aryan invasion
                             description: [
-                                `As we wind through "industrial sewers" pretending to be Mughal invaders, I explain the problem with the Aryan Invasion theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."`
+                                `As we wind through "industrial sewers" pretending to be Mughal invaders, I explain the problem with the`,
+                                {
+                                    anchor: `Aryan Invasion`,
+                                    wiki: `Indo-Aryan_migration_theory`
+                                },
+                                `theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."`
                             ]
                         }
                     },
                     {
                         anchor: `questurns Indo Hairapins:`,
                         annotation: {
-                            // wiki: indo harappan culture
                             description: [
-                                `Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about questions surrounding the Indo-Harappan Civilisation, named after the excavations in Harappa that led to its modern discovery.`
+                                `Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about questions surrounding the`,
+                                {
+                                    anchor: `"Indo-Harappan" Civilisation,`,
+                                    wiki: `Indus_Valley_Civilisation`
+                                },
+                                `named after the excavations in Harappa that led to its modern discovery.`
                             ]
                         }
                     }
@@ -470,18 +491,34 @@ module.exports = {
                         anchor: `Forsi ahuro`,
                         properNoun: true,
                         annotation: {
-                            // wiki: ahura/asura, avesta, veda
                             // TODO: connect persian to iranian.
+                            // TODO: Is this confusing?
                             description: [
-                                `In Farsi, the Iranian language,`,
+                                `In the Iranian language of Farsi,`,
                                 {
-                                    italic: `ahura`
+                                    italic: {
+                                        anchor: `ahura`,
+                                        wiki: `Ahura`
+                                    }
                                 },
-                                `is the word for an Avestan deity. In the Vedic texts of ancient India,`,
+                                `is the word for an Avestan deity. But in the Vedic texts of ancient India,`,
                                 {
-                                    italic: `asura`
+                                    italic: {
+                                        anchor: `asura`,
+                                        wiki: `Asura`
+                                    }
                                 },
-                                `refers to a demon. This suggests that a rift occurred amongst the Indo-Iranian people based on religious differences, and because the Vedas precede the Avesta, it's likely that the apostates left the Indian subcontinent and moved westward to the Iranian basin, rather than the reverse.`
+                                `refers to a demon. This suggests that a rift occurred amongst the Indo-Iranian people based on religious differences, and because the`,
+                                {
+                                    anchor: `Vedas`,
+                                    wiki: `Vedas`
+                                },
+                                `precede the`,
+                                {
+                                    anchor: `Avesta,`,
+                                    wiki: `Avesta`
+                                },
+                                `it's likely that the apostates left the Indian subcontinent and moved westward to the Iranian basin, rather than the reverse.`
                             ]
                         }
                     },
@@ -490,17 +527,22 @@ module.exports = {
                         anchor: `Sensegreat devas'dayshone?`,
                         properNoun: true,
                         annotation: {
-                            // wiki: deva/daeva
                             description: [
                                 `Moreover, in Sanskrit, the ancient Indian language,`,
                                 {
-                                    italic: `deva`
+                                    italic: {
+                                        anchor: `deva`,
+                                        wiki: `Deva_(Hinduism)`
+                                    }
                                 },
                                 `is the word for a Vedic deity, while`,
                                 {
-                                    italic: `daeva`
+                                    italic: {
+                                        anchor: `daeva`,
+                                        wiki: `Daeva`
+                                    }
                                 },
-                                `in the Avesta refers to a demon. Thus, whether one "foresees a hero" or "senses great devastation" as the "devas' day shone" depends on which side of the rift one has aligned with.`
+                                `in the Avesta refers to a demon. Thus, whether one "foresees a hero" or "senses great devastation" as the "deva's day shone" depends on which side of the rift one has aligned with.`
                             ]
                         }
                     }
@@ -557,19 +599,32 @@ module.exports = {
                         anchor: `Ourevian battles spent,`,
                         properNoun: true,
                         annotation: {
-                            // wiki: islam, evian
+                            // TODO: Be more clear about Arabs.
                             description: [
-                                `"Arabian battles spent." With the rise of Islam, the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and the Evian bottles that we brought into the steam tunnels are now empty.`
+                                `"Arabian battles." With the rise of`,
+                                {
+                                    anchor: `Islam,`,
+                                    wiki: `Islam`
+                                },
+                                `the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and "our`,
+                                {
+                                    anchor: `Evian`,
+                                    wiki: `Evian`
+                                },
+                                `bottles" that we brought into the steam tunnels are now empty.`
                             ]
                         }
                     },
                     {
                         anchor: `a'duct Uighuress.`,
                         annotation: {
-                            // wiki: uighur
-                            // define egress?
                             description: [
-                                `"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the Uighurs, a Turkic people. Also, through "a duct, we egress" the steam tunnels.`
+                                `"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the`,
+                                {
+                                    anchor: `Uighurs,`,
+                                    wiki: `Uyghurs`
+                                },
+                                `a Turkic people. Also, through "a duct, we egress," or exit, the steam tunnels.`
                             ]
                         }
                     }
@@ -632,9 +687,13 @@ module.exports = {
                     {
                         anchor: `scimitary of'fence!`,
                         annotation: {
-                            // wiki: scimitar
                             description: [
-                                `The next plan of attack is to visit the grave of our friend Adam. And so, rested and reenergised, we renew our "scimitar offence" and drive through the "cemetery fence."`
+                                `The next plan of attack is to visit the grave of our friend Adam. And so, rested and reenergised, we renew our`,
+                                {
+                                    anchor: `"scimitar`,
+                                    wiki: `Scimitar`
+                                },
+                                `offence" and drive through the "cemetery fence."`
                             ]
                         }
                     }
@@ -659,9 +718,13 @@ module.exports = {
                         anchor: `Siburial plains…`,
                         properNoun: true,
                         annotation: {
-                            // wiki: siberia
                             description: [
-                                `The Americas were first settled by northeast Asian populations who gladly "forfeited the tundra's Siberian plains," which otherwise would have served as their "burial" grounds.`
+                                `The Americas were first settled by northeast Asian populations who gladly "forfeited the tundra's`,
+                                {
+                                    anchor: `Siberian`,
+                                    wiki: `Siberia`
+                                },
+                                `plains," which otherwise would have served as their "burial" grounds.`
                             ]
                         }
                     }
@@ -704,9 +767,12 @@ module.exports = {
                     {
                         anchor: `past a cross Bearing Straight,`,
                         annotation: {
-                            // wiki: bering strait
                             description: [
-                                `We "passed a cross, bearing straight," just as those before us had "passed across the Bering Strait."`
+                                `We "passed a cross, bearing straight," just as those before us had "passed across the`,
+                                {
+                                    anchor: `Bering Strait."`,
+                                    wiki: `Bering_Strait`
+                                }
                             ]
                         }
                     }
@@ -718,7 +784,6 @@ module.exports = {
                     {
                         anchor: `herows— ourauras left—`,
                         annotation: {
-                            // wiki: aurora borealis, inuit
                             description: [
                                 `Other indigenous populations, such as the`,
                                 {
@@ -889,7 +954,6 @@ module.exports = {
                                     anchor: `Lowkey and Freyed!`,
                                     properNoun: true,
                                     annotation: {
-                                        // wiki: loki, freyja
                                         description: [
                                             `"He sees low-key and fried," but also, in his brother and sister, he sees`,
                                             {
@@ -968,9 +1032,18 @@ module.exports = {
                     {
                         anchor: `these mummeries`,
                         annotation: {
-                            // wiki: mummer
                             description: [
-                                `A mummer is a masked mime, while a mummy is a preserved corpse. All of time has collapsed into a singularity, as my memories blur into those of the world history that I keenly dig through. Everyone is at once dead and not dead, as am I. Or is this all a staged performance that I've chosen to act in?`
+                                `A`,
+                                {
+                                    anchor: `mummer`,
+                                    wiki: `Mummers_play`
+                                },
+                                `is a masked mime, while a`,
+                                {
+                                    anchor: `mummy`,
+                                    wiki: `Mummy`
+                                },
+                                `is a preserved corpse. All of time has collapsed into a singularity, as my memories blur into those of the world history that I keenly dig through. Everyone is at once dead and not dead, as am I. Or is this all a staged performance that I've chosen to act in?`
                             ]
                         }
                     },
@@ -1002,7 +1075,6 @@ module.exports = {
                     {
                         anchor: `in-som'umiak skims through channels`,
                         annotation: {
-                            // wiki: umiak, insomniac
                             description: [
                                 `An`,
                                 {
