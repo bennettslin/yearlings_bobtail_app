@@ -87,7 +87,7 @@ const bindDispatchToProps = (dispatch) => (
 class App extends Component {
 
     constructor(props) {
-        const accessedAnnotationIndex = getAnnotationIndexForDirection(props, props.selectedAnnotationIndex),
+        const accessedAnnotationIndex = getAnnotationIndexForDirection(props, props.selectedAnnotationIndex || 1),
             accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, 1)
 
         super(props)
