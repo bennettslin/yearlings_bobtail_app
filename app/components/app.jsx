@@ -87,6 +87,7 @@ const bindDispatchToProps = (dispatch) => (
 class App extends Component {
 
     constructor(props) {
+        // If no annotation selected, default to 1. 
         const accessedAnnotationIndex = getAnnotationIndexForDirection(props, props.selectedAnnotationIndex || 1),
             accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, 1)
 
