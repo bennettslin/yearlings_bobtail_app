@@ -790,15 +790,25 @@ module.exports = {
                     {
                         anchor: `mistodawn,`,
                         annotation: {
+                            // TODO: I already mentioned the closed eye hallucinations earlier.
                             description: `Back in the car, my newfound clarity proves short-lived. In its late stages, Robitussin continues to offer vivid hallucinations once you close your eyes, which is what I'm doing on the way back to Howie's place, as the "mist of dawn" breaks.`
                         }
                     },
                     {
                         anchor: `ha'nt'd by sobre-trooth tiedgirl`,
                         annotation: {
-                            // wiki: mastodon, sabre-tooth tiger
                             description: [
-                                `As I indulge in visions of a "mastodon hunted by sabre-toothed tigers," I'm haunted by the sober truth that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.`
+                                `As I indulge in visions of a`,
+                                {
+                                    anchor: `"mastodon`,
+                                    wiki: `Mastodon`
+                                },
+                                `hunted by`,
+                                {
+                                    anchor: `sabre-toothed tigers,"`,
+                                    wiki: `Smilodon`
+                                },
+                                `I'm "haunted by the sober truth" that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.`
                             ]
                         }
                     },
@@ -881,7 +891,17 @@ module.exports = {
                                     annotation: {
                                         // wiki: loki, freyja
                                         description: [
-                                            `"He sees low-key and fried," but also, in his brother and sister, he sees Loki and Freyja. The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
+                                            `"He sees low-key and fried," but also, in his brother and sister, he sees`,
+                                            {
+                                                anchor: `"Loki`,
+                                                wiki: `Loki`
+                                            },
+                                            `and`,
+                                            {
+                                                anchor: `Freyja."`,
+                                                wiki: `Freyja`
+                                            },
+                                            `The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
                                         ]
                                     }
                                 }
@@ -901,9 +921,13 @@ module.exports = {
                         anchor: `Noworse and Nunavutter`,
                         properNoun: true,
                         annotation: {
-                            // wiki: nunavat
                             description: [
-                                `"Norse and Nunavutter collide." We have now travelled as far as Nunavut, the northernmost territory of Canada inhabited primarily by the Inuit. And yet, with the reappearance of the Norse, we realise that our bounds are not so limitless, as even our imaginations have started to repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so we end the night as we had begun it, "no worse and none the better."`
+                                `"Norse and Nunavutter collide." We have now travelled as far as`,
+                                {
+                                    anchor: `Nunavut,`,
+                                    wiki: `Nunavut`
+                                },
+                                `the northernmost territory of Canada inhabited primarily by the Inuit. And yet, with the reappearance of the Norse, we realise that our bounds are not so limitless, as even our imaginations have started to repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so we end the night as we had begun it, "no worse and none the better."`
                             ]
                         }
                     },
@@ -918,9 +942,18 @@ module.exports = {
                             anchor: `Leif as the Red's son`,
                             properNoun: true,
                             annotation: {
-                                // wiki: leif ericson
                                 description: [
-                                    `The Norse explorer Leif Erikson was the son of Erik the Red, who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."`
+                                    `The Norse explorer`,
+                                    {
+                                        anchor: `Leif Erikson`,
+                                        wiki: `Leif_Erikson`
+                                    },
+                                    `was the son of`,
+                                    {
+                                        anchor: `Erik the Red,`,
+                                        wiki: `Erik_the_Red`
+                                    },
+                                    `who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."`
                                 ]
                             }
                         },
@@ -971,7 +1004,17 @@ module.exports = {
                         annotation: {
                             // wiki: umiak, insomniac
                             description: [
-                                `An umiak is an Inuit boat traditionally made from whalebone and sealskin. Sensing disaster afoot, our brave tribe flees to safety "in some umiak," skimming through icy channels wreaked by a "snowy blitz." Meanwhile, being an "insomniac," I "skim through channels" that are "snow-blitzed" due to the television's poor reception.`
+                                `An`,
+                                {
+                                    anchor: `umiak`,
+                                    wiki: `Umiak`
+                                },
+                                `is an Inuit boat traditionally made from whalebone and sealskin. Sensing disaster afoot, our brave tribe flees to safety "in some umiak," skimming through icy channels wreaked by a "snowy blitz." Meanwhile, being an`,
+                                {
+                                    anchor: `"insomniac,"`,
+                                    wiki: `Insomnia`
+                                },
+                                `I "skim through channels" that are "snow-blitzed" due to the television's poor reception.`
                             ]
                         }
                     },
@@ -991,9 +1034,12 @@ module.exports = {
                     {
                         anchor: `arrhythmetic heart,`,
                         annotation: {
-                            // wiki: arrhythmia
                             description: [
-                                `Arrhythmia, or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.`
+                                {
+                                    anchor: `Arrhythmia,`,
+                                    wiki: `Cardiac_arrhythmia`
+                                },
+                                `or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.`
                             ]
                         }
                     }
@@ -1006,9 +1052,13 @@ module.exports = {
                         anchor: `Enguished buzzereds`,
                         properNoun: true,
                         annotation: {
-                            // wiki: english
                             description: [
-                                `Howie had opted for the large bottle of Robitussin, thinking that the small one I had recommended wouldn't be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he keeps going back to the kitchen to get more water. Meanwhile, the English have now arrived to despoil the New World, with the white ruffs around their necks resembling those of "buzzards."`
+                                `Howie had opted for the large bottle of Robitussin, thinking that the small one I had recommended wouldn't be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he keeps going back to the kitchen to get more water. Meanwhile, the`,
+                                {
+                                    anchor: `"English"`,
+                                    wiki: `English_people`
+                                },
+                                `have now arrived to despoil the New World, with the white ruffs around their necks resembling those of "buzzards."`
                             ]
                         }
                     },
@@ -1017,9 +1067,17 @@ module.exports = {
                         anchor: `Rumspring`,
                         properNoun: true,
                         annotation: {
-                            // wiki: rumspring, amish
                             description: [
-                                `Rumspringa is a period of adolescence during which the Amish are allowed to openly rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. It means "running around" in Pennsylvania Dutch, but I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
+                                {
+                                    anchor: `Rumspringa`,
+                                    wiki: `Rumspringa`
+                                },
+                                `is a period of adolescence during which the`,
+                                {
+                                    anchor: `Amish`,
+                                    wiki: `Amish`
+                                },
+                                `are allowed to openly rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. It means "running around" in Pennsylvania Dutch, but I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
                             ]
                         }
                     },
@@ -1032,14 +1090,18 @@ module.exports = {
                     {
                         anchor: `In mouth Deseret,`,
                         annotation: {
-                            // wiki: mormon
                             description: [
                                 `My mouth is dry like a "desert." Also,`,
                                 {
                                     anchor: `Deseret`,
                                     wiki: `Deseret_alphabet`
                                 },
-                                `is an alphabet developed by the early Mormons, also known as Latter-Day Saints.`
+                                `is an alphabet developed by the early`,
+                                {
+                                    anchor: `Mormons,`,
+                                    wiki: `Mormons`
+                                },
+                                `also known as Latter-Day Saints.`
                             ]
                         }
                     },
