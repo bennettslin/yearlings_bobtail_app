@@ -87,7 +87,7 @@ const bindDispatchToProps = (dispatch) => (
 class App extends Component {
 
     constructor(props) {
-        // If no annotation selected, default to 1. 
+        // If no annotation selected, default to 1.
         const accessedAnnotationIndex = getAnnotationIndexForDirection(props, props.selectedAnnotationIndex || 1),
             accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, 1)
 
@@ -565,7 +565,7 @@ class App extends Component {
                             accessedAnnotationIndex: this.state.accessedAnnotationIndex,
                             selectAnnotation: this.selectAnnotation,
                             scrollElementIntoView
-                        })
+                        }) || {}
 
                         if (accessedSectionKey === LYRICS_SECTION) {
                             // AccessHelper.handleLyricsAccess({
@@ -581,7 +581,6 @@ class App extends Component {
 
                             if (accessedPopupAnchorIndex) {
                                 newState.accessedPopupAnchorIndex = accessedPopupAnchorIndex
-                                newState.accessedLyricElement = LYRIC_ANNOTATION_ELEMENT
                             }
                         }
                         break

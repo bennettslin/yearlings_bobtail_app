@@ -214,44 +214,43 @@ export default {
         selectAnnotation,
         scrollElementIntoView
     }) {
-        // Switch to annotation section upon "Enter" key from lyric section.
-        const newSectionAccess = !fromAnnotationSection && keyName === ENTER
+        let toSelectAnnotation = false,
+            direction
 
-        let willScrollToAnchor = false,
-            // TODO: Can this be simplified to not use toSelectAnnotation flag?
-            toSelectAnnotation = false
-
-        // Both lyric and annotation sections will change accessed annotation.
+        // Both lyric and annotation sections can change accessed annotation.
         switch (keyName) {
             case ARROW_LEFT:
-                // Remember that annotations are 1-based.
-                accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, -1)
-                willScrollToAnchor = true
+            case ARROW_RIGHT:
+                direction = keyName === ARROW_LEFT ? -1 : 1
                 toSelectAnnotation = fromAnnotationSection
                 break
-            case ARROW_RIGHT:
-                accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, 1)
-                willScrollToAnchor = true
-                toSelectAnnotation = fromAnnotationSection
+            case ENTER:
+                toSelectAnnotation = !fromAnnotationSection
+                break
+            default:
+                return false
                 break
         }
 
-        if (willScrollToAnchor) {
+        if (direction) {
+            accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, direction)
             scrollElementIntoView('annotation', accessedAnnotationIndex)
         }
 
         /**
-         * Annotation section will also select after arrow key. Lyric section
-         * will only select upon "Enter" key.
+         * Select with arrow key from annotation section, and with "Enter" key
+         * from lyric section. If from lyric section, also handle section
+         * access.
          */
-        if (toSelectAnnotation || newSectionAccess) {
-            selectAnnotation (newSectionAccess, accessedAnnotationIndex)
+        if (toSelectAnnotation) {
+            selectAnnotation (!fromAnnotationSection, accessedAnnotationIndex)
 
-        } else if (keyName !== ENTER) {
+        // Change accessed index with arrow key from lyric section.
+        } else if (!fromAnnotationSection) {
             return { accessedAnnotationIndex }
         }
 
-        return {}
+        return false
     },
 
     handleAudioAccess({
