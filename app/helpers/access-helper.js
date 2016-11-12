@@ -252,6 +252,8 @@ export default {
             accessedVerseIndex = getVerseIndexForDirection(props, accessedVerseIndex, direction)
             newState = { accessedLyricElement: LYRIC_VERSE_ELEMENT,
                          accessedVerseIndex }
+
+            scrollElementIntoView('verse', accessedVerseIndex)
         }
 
         if (toSelectVerse) {

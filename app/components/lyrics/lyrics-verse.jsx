@@ -88,7 +88,7 @@ const LyricsVerseView = ({
 
 ...other }) => (
 
-    <div className={`verse verse-${verseObject.verseIndex || 'timeless'}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
+    <div className={`verse verse-${verseObject.verseIndex}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
     >
