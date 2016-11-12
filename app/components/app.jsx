@@ -568,9 +568,11 @@ class App extends Component {
                         }) || {}
 
                         if (accessedSectionKey === LYRICS_SECTION) {
-                            // AccessHelper.handleLyricsAccess({
-                            //     keyName
-                            // })
+                            const newLyricState = AccessHelper.handleLyricsAccess({
+                                keyName,
+                                props: this.props
+                            })
+                            
                         } else if (accessedSectionKey === ANNOTATION_SECTION) {
                             const accessedPopupAnchorIndex = AccessHelper.handleAnnotationAccess({
                                 keyName,

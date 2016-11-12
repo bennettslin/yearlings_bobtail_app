@@ -8,6 +8,9 @@ import { SONGS_SECTION,
          WIKI_SECTION,
          SECTION_KEYS,
 
+         LYRIC_TIME_ELEMENT,
+         LYRIC_ANNOTATION_ELEMENT,
+
          ALL_DOT_KEYS,
          ARROW_LEFT,
          ARROW_RIGHT,
@@ -214,7 +217,8 @@ export default {
         selectAnnotation,
         scrollElementIntoView
     }) {
-        let toSelectAnnotation = false,
+        let newState,
+            toSelectAnnotation = false,
             direction
 
         // Both lyric and annotation sections can change accessed annotation.
@@ -233,6 +237,8 @@ export default {
         }
 
         if (direction) {
+            // Change accessed lyric element to annotation.
+            newState = { accessedLyricElement: LYRIC_ANNOTATION_ELEMENT }
             accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, direction)
             scrollElementIntoView('annotation', accessedAnnotationIndex)
         }
@@ -247,10 +253,11 @@ export default {
 
         // Change accessed index with arrow key from lyric section.
         } else if (!fromAnnotationSection) {
-            return { accessedAnnotationIndex }
+            newState = newState || {}
+            newState.accessedAnnotationIndex = accessedAnnotationIndex
         }
 
-        return false
+        return newState || false
     },
 
     handleAudioAccess({
