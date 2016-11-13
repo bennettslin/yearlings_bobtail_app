@@ -184,6 +184,11 @@ class App extends Component {
                 this.selectWiki(true)
             } else {
                 this.selectAnnotation(true)
+
+                // If closing annotation, set lyric element to annotation.
+                this.setState({
+                    accessedLyricElement: LYRIC_ANNOTATION_ELEMENT
+                })
             }
 
             if (accessOff) { this._handleAccessOn(0) }
