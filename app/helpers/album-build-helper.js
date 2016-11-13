@@ -97,12 +97,11 @@ const _addTitleToLyrics = (title, lyrics) => {
 const _parseLyrics = (lyric, finalPassThrough) => {
 
     if (!finalPassThrough && !isNaN(lyric.time)) {
-        // Add line index to lyric line object.
+        // Add verse index to lyric object.
         lyric.verseIndex = _tempStore._verseIndexCounter
 
         // Add time to song times.
         _tempStore._songTimes.push(lyric.time)
-        _tempStore._verseIndexCounter++
     }
 
     if (Array.isArray(lyric)) {
@@ -121,6 +120,11 @@ const _parseLyrics = (lyric, finalPassThrough) => {
                 }
             })
         }
+    }
+
+    // Increment counter here to allow annotation to get correct verseIndex.
+    if (!isNaN(lyric.time)) {
+        _tempStore._verseIndexCounter++
     }
 }
 
@@ -155,6 +159,7 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough) => {
 
         // Add annotation index to annotation and lyrics. 1-based index.
         annotation.annotationIndex = annotationIndex
+        annotation.verseIndex = _tempStore._verseIndexCounter
         lyric.annotationIndex = annotationIndex
 
         // Add formatted title to annotation.
