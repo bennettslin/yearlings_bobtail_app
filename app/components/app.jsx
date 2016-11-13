@@ -298,7 +298,11 @@ class App extends Component {
         }) }
     }
 
-    selectAnnotation(e, selectedAnnotationIndex = 0, newSectionAccess) {
+    /**
+     * When selecting a portal, selectedSongIndex argument is passed in because
+     * props does not yet know new selected song. Ugly workaround, but it works.
+     */
+    selectAnnotation(e, selectedAnnotationIndex = 0, selectedSongIndex) {
         // Note that e is set to true from closePopup method.
         this._stopPropagation(e)
 
@@ -327,7 +331,7 @@ class App extends Component {
                 accessedPopupAnchorIndex: getPopupAnchorIndexForDirection({
                     selectedAnnotationIndex,
                     songs: this.props.songs,
-                    selectedSongIndex: this.props.selectedSongIndex,
+                    selectedSongIndex: selectedSongIndex || this.props.selectedSongIndex,
                     selectedDotKeys: this.props.selectedDotKeys
                 }, 1)
             })
@@ -360,7 +364,7 @@ class App extends Component {
         this._stopPropagation(e)
 
         this.selectSong(undefined, selectedSongIndex)
-        this.selectAnnotation(undefined, selectedAnnotationIndex)
+        this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
     }
 
     selectWikiOrPortal() {
