@@ -17,8 +17,14 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // wiki: shepard tone
-                        description: `A Shepard tone is an auditory illusion in which a single tone descends continuously in pitch while staying within a fixed register. It seemed an apt metaphor for my breakup with Miriam, which left me utterly deflated as I was forced to confront my genetic inferiority complex. This song also uses doublespeaker rhyme, though I've since forgetten which voice represents whose perspective. I suppose that's the point: we both knew equally well that the relationship was doomed.`,
+                        description: [
+                            `A`,
+                            {
+                                anchor: `Shepard tone`,
+                                wiki: `Shepard_tone`
+                            },
+                            `is an auditory illusion in which a single tone descends continuously in pitch while staying within a fixed register. It seemed an apt metaphor for my breakup with Miriam, which left me utterly deflated as I was forced to confront my genetic inferiority complex. This song also uses doublespeaker rhyme, though I've since forgetten which voice represents whose perspective. I suppose that's the point: we both knew equally well that the relationship was doomed.`
+                        ],
                         dotKeys: {
                             music: true
                         }
@@ -48,15 +54,26 @@ module.exports = {
                     {
                         anchor: `Atavist`,
                         annotation: {
-                            // wiki: atavism
-                            description: `Atavism occurs when genetic traits reappear after having disappeared generations ago. Given my brother's autism and my father's likely Asperger syndrome, my mother always advised me not to have children, as the genes I carried for autism would be passed on to them. As a result, I had to wonder if those I dated ever thought the same.`
+                            description: [
+                                {
+                                    anchor: `Atavism`,
+                                    wiki: `Atavism`
+                                },
+                                `occurs when genetic traits reappear after having disappeared generations ago. Given my brother's autism and my father's likely Asperger syndrome, my mother always advised me not to have children, as the genes I carried for autism would be passed on to them. As a result, I had to wonder if those I dated ever thought the same.`
+                            ]
                         }
                     },
                     {
                         anchor: `stuck feet first,`,
                         annotation: {
-                            // wiki: breech birth
-                            description: `My brother was a breech baby, meaning that he exited the womb bottom first rather than head first, which complicated the delivery. My mother initially hypothesised this to be the cause of his autism.`
+                            description: [
+                                `My brother was a`,
+                                {
+                                    anchor: `breech baby,`,
+                                    wiki: `Breech_birth`
+                                },
+                                `meaning that he exited the womb bottom first rather than head first, which complicated the delivery. My mother initially hypothesised this to be the cause of his autism.`
+                            ]
                         }
                     }
                 ],
@@ -83,8 +100,14 @@ module.exports = {
                     {
                         anchor: `inner lotus eater,`,
                         annotation: {
-                            // wiki: lotus eater
-                            description: `In Greek mythology, the lotus-eaters were islanders observed by Odysseus to while away their days eating the narcotic fruit of the lotus. Similarly, Miriam would comment on how much I drank, but make no judgments. In hindsight, it was because she, like Odysseus, was keeping her distance.`
+                            description: [
+                                `In Greek mythology, the`,
+                                {
+                                    anchor: `lotus-eaters`,
+                                    wiki: `Lotus-eaters`
+                                },
+                                `were islanders observed by Odysseus to while away their days eating the narcotic fruit of the lotus. Similarly, Miriam would comment on how much I drank, but make no judgments. In hindsight, it was because she, like Odysseus, was keeping her distance.`
+                            ]
                         }
                     }
                 ],
@@ -112,8 +135,14 @@ module.exports = {
                         // TODO: Connect id to drunken personality.
                         anchor: `wit and id`,
                         annotation: {
-                            // wiki: id
-                            description: `In Freudian psychology, the id represents the primal impulses of the psyche. I told Miriam about my drunken personality, and explained my belief that allowing it to win over my thoughts, and even to arbitrate life decisions, was the key to keeping my creative juices flowing.`
+                            description: [
+                                `In Freudian psychology, the`,
+                                {
+                                    anchor: `id`,
+                                    wiki: `Id,_ego_and_super-ego`
+                                },
+                                `represents the primal impulses of the psyche. I told Miriam about my drunken personality, and explained my belief that allowing it to win over my thoughts, and even to arbitrate life decisions, was the key to keeping my creative juices flowing.`
+                            ]
                         }
                     },
                     `she's deemed her`
@@ -123,8 +152,14 @@ module.exports = {
                     {
                         anchor: `phoenix risen limp`,
                         annotation: {
-                            // wiki: phoenix
-                            description: `In Greek mythology, the phoenix is a bird that is reborn from its own ashes. Or else, "penis risen limp." Having broken up with Sita to date Miriam, I also await my triumphant rebirth. And yet, as Miriam climbs on top of me to make out, I'm overcome with self-doubt and thus struggle to maintain an erection.`
+                            description: [
+                                `In Greek mythology, the`,
+                                {
+                                    anchor: `phoenix`,
+                                    wiki: `Phoenix_(mythology)`
+                                },
+                                `is a bird that is reborn from its own ashes. Or else, "penis risen limp." Having broken up with Sita to date Miriam, I also await my triumphant rebirth. And yet, as Miriam climbs on top of me to make out, I'm overcome with self-doubt and thus struggle to maintain an erection.`
+                            ]
                         }
                     },
                     `beneath her`
@@ -165,9 +200,13 @@ module.exports = {
                         // TODO: Mention phoenix
                         anchor: `His god humming "Freebird,"`,
                         annotation: {
-                            // wiki: freebird
                             description: [
-                                `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo blares Lynyrd Skynyrd's "Freebird," he sways and strums his ukulele, as if to the rumblings of his all-American mountain god. In actuality, of course, it's because Miriam, who happens to be`,
+                                `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo blares Lynyrd Skynyrd's`,
+                                {
+                                    anchor: `"Freebird,"`,
+                                    wiki: `Free_Bird`
+                                },
+                                `he sways and strums his ukulele, as if to the rumblings of his all-American mountain god. In actuality, of course, it's because Miriam, who happens to be`,
                                 {
                                     emphasis: `my`,
                                 },
@@ -191,8 +230,19 @@ module.exports = {
                     {
                         anchor: `at each other's throats.`,
                         annotation: {
-                            // wiki: abbot and costello, martin and lewis
-                            description: `Some comedy duos famously did not get along, which enlivened their dynamic when the tapes were rolling. Like Abbott and Costello or Martin and Lewis, my two personalities would befuddle each other, much to Miriam's entertainment. But even so, she recognised the mental distress that fueled this spectacle, and wanted no lasting part in it.`
+                            description: [
+                                `Some comedy duos famously did not get along, which enlivened their dynamic when the tapes were rolling. Like`,
+                                {
+                                    anchor: `Abbott and Costello`,
+                                    wiki: `Abbott_and_Costello`
+                                },
+                                `or`,
+                                {
+                                    anchor: `Martin and Lewis,`,
+                                    wiki: `Martin_and_Lewis`
+                                },
+                                `my two personalities would befuddle each other, much to Miriam's entertainment. But even so, she recognised the mental distress that fueled this spectacle, and wanted no lasting part in it.`
+                            ]
                         }
                     }
                 ],
@@ -240,8 +290,14 @@ module.exports = {
                     {
                         anchor: `forced conversion`,
                         annotation: {
-                            // wiki: forced conversion?
-                            description: `Historically, conquered peoples were forced to assimilate by adopting the religious beliefs of their conquerors. Oftentimes, however, they would simply rename old customs and deities and incorporate them into their new faith. Here, I imagine Miriam judging my own attempts at assimilation to be just as inadequate. She thus fears that corrupting traces of my old ways yet remain.`
+                            description: [
+                                `Historically, conquered peoples were`,
+                                {
+                                    anchor: `forced to assimilate`,
+                                    wiki: `Forced_conversion`
+                                },
+                                `by adopting the religious beliefs of their conquerors. Oftentimes, however, they would simply rename old customs and deities and incorporate them into their new faith. Here, I imagine Miriam judging my own attempts at assimilation to be just as inadequate. She thus fears that corrupting traces of my old ways yet remain.`
+                            ]
                         }
                     }
                 ]
@@ -324,8 +380,14 @@ module.exports = {
                     {
                         anchor: `twitching sword`,
                         annotation: {
-                            // wiki: knighthood
-                            description: `While dubbing may refer to the replacement of an actor's voice in post-production, it also refers to the ritual of conferring knighthood. Here, I imagine my drunken personality erratically trying to tap a perilously sharp sword on the sober me's shoulder.`
+                            description: [
+                                `While dubbing may refer to the replacement of an actor's voice in post-production, it also refers to the ritual of`,
+                                {
+                                    anchor: `conferring knighthood.`,
+                                    wiki: `Accolade`
+                                },
+                                `Here, I imagine my drunken personality erratically trying to tap a perilously sharp sword on the sober me's shoulder.`
+                            ]
                         }
                     },
                     `in care, he's anyone.`
@@ -367,15 +429,27 @@ module.exports = {
                     {
                         anchor: `typo`,
                         annotation: {
-                            // wiki: type o
-                            description: `I was a typo in the sense of being Miriam's mistake. But also a "Type O," the universal blood donor, given that I kept wanting to offer more of myself while having little chance of being saved in return.`
+                            description: [
+                                `I was a typo in the sense of being Miriam's mistake. But also a`,
+                                {
+                                    anchor: `"Type O,"`,
+                                    wiki: `Blood_type`
+                                },
+                                `the universal blood donor, given that I kept wanting to offer more of myself while having little chance of being saved in return.`
+                            ]
                         }
                     },
                     {
                         anchor: `fragile ex`,
                         annotation: {
-                            // wiki: fragile x
-                            description: `Different boyfriends react to breakups in different ways, and I was the frail kind. But also "fragile X," which is a genetic syndrome caused by a mutated X chromosome that results in mental disability.`
+                            description: [
+                                `Different boyfriends react to breakups in different ways, and I was the frail kind. But also`,
+                                {
+                                    anchor: `"fragile X,"`,
+                                    wiki: `Fragile_X_syndrome`
+                                },
+                                `which is a genetic syndrome caused by a mutated X chromosome that results in mental disability.`
+                            ]
                         }
                     },
                     `passed through ash…`
@@ -388,8 +462,13 @@ module.exports = {
                     {
                         anchor: `vinyl, exit`,
                         annotation: {
-                            // wiki: assisted suicide
-                            description: `After Miriam helps me to end myself, I imagine her helping herself to my record collection, which she'll trade for cash at a music store. Also, "final exit" is a euphemism used by proponents of assisted suicide.`
+                            description: [
+                                `After Miriam helps me to end myself, I imagine her helping herself to my record collection, which she'll trade for cash at a music store. Also, "final exit" is a euphemism used by proponents of`,
+                                {
+                                    anchor: `assisted suicide.`,
+                                    wiki: `Assisted_suicide`
+                                }
+                            ]
                         }
                     },
                     `Miriam to cash his stash.`
@@ -402,11 +481,13 @@ module.exports = {
                     {
                         anchor: `selfish cut-off jeans,`,
                         annotation: {
-                            // wiki: selfish gene, dawkins
                             description: [
                                 `In`,
                                 {
-                                    italic: `The Selfish Gene,`
+                                    italic: {
+                                        anchor: `The Selfish Gene,`,
+                                        wiki: `The_Selfish_Gene`
+                                    }
                                 },
                                 `Richard Dawkins explains natural selection from the vantage point of genes themselves, rather than the organisms that carry them. Here, I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, leading her to block me from ever again getting underneath her cutoffs.`
                             ]
@@ -552,8 +633,14 @@ module.exports = {
                     {
                         anchor: `ex-dromedary,`,
                         annotation: {
-                            // wiki: dromedary
-                            description: `The dromedary, or Arabian camel, has a single hump on its back. The Bactrian camel has two.`
+                            description: [
+                                `The`,
+                                {
+                                    anchor: `dromedary,`,
+                                    wiki: `Dromedary`
+                                },
+                                `or Arabian camel, has a single hump on its back. The Bactrian camel has two.`
+                            ]
                         }
                     }
                 ],
