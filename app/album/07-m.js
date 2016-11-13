@@ -373,10 +373,13 @@ module.exports = {
                     {
                         anchor: `lies that marionette`,
                         annotation: {
-                            // TODO: Make more clear.
-                            // wiki: marionette
                             description: [
-                                `Or else, with these "lies that Mara you'll net."`
+                                `I was like a`,
+                                {
+                                    anchor: `marionette`,
+                                    wiki: `Marionette`
+                                },
+                                `that Mara had grown tired of controlling from above. Of course, it was my own fault for believing in such "lies that Mara you'll net."`
                             ]
                         }
                     },

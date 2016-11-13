@@ -465,10 +465,7 @@ module.exports = {
                     {
                         anchor: `learn to shotgun`,
                         annotation: {
-                            // wiki: shotgun method?
-                            description: [
-                                `I came to adopt the shotgun approach, which involves hitting on anyone, at any moment. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`
-                            ]
+                            description: `I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`
                         }
                     }
                 ]

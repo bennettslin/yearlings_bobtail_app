@@ -177,11 +177,15 @@ module.exports = {
                 left: [
                     `emerged beside a`,
                     {
-                        anchor: `pauper's grave`,
+                        anchor: `paupers' grave`,
                         annotation: {
-                            // wiki: pauper's grave
+                            // NOTE: I changed "pauper's" to "paupers'."
                             description: [
-                                `I had spent weeks rehearsing the breakup, which I assumed could be scheduled at my convenience and would follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was disposed of in careless haste, much like those who cannot afford a proper burial.`
+                                `I had spent weeks rehearsing the breakup, which I assumed could be scheduled at my convenience and would follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
+                                {
+                                    anchor: `paupers' grave.`,
+                                    wiki: `Potter%27s_field`
+                                }
                             ]
                         }
                     },
