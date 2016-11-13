@@ -1,5 +1,5 @@
 import React from 'react'
-import { SONGS_SECTION } from 'helpers/constants'
+import { NAV_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -14,7 +14,7 @@ const TitleSection = ({
 
 ...other }) => {
 
-    const sectionAccessHighlighted = accessedOn && accessedSectionKey === SONGS_SECTION,
+    const sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION,
         onClick = e => onTitleClick(e, 0),
         titleAccessHighlighted = sectionAccessHighlighted && accessedSongIndex === 0
 

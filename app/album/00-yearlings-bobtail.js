@@ -35,22 +35,7 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `focus sections, and have them route events to app`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `have class to show visual keyboard keys`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `scroll played verse into view`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `make played verse accessible`,
             workedHours: 0,
             neededHours: 2
         },
@@ -133,6 +118,11 @@ module.exports = {
         //     taskName: `change every "one" to "you"`,
         //     workedHours: 0,
         //     neededHours: 1
+        // },
+        // {
+        //     taskName: `focus sections, and have them route events to app`,
+        //     workedHours: 0,
+        //     neededHours: 3
         // },
         {
             taskName: `refactor to get album objects`,
@@ -468,6 +458,16 @@ module.exports = {
         },
         {
             taskName: `reset popup anchor index after annotation change`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `scroll played verse into view`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `make played verse accessible`,
             workedHours: 2,
             neededHours: 2
         }

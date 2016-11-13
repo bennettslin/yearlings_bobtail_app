@@ -2,7 +2,7 @@ import React from 'react'
 import NavRow from './nav-row'
 import ProgressFooter from '../progress/progress-footer'
 import ProgressHelper from 'helpers/progress-helper'
-import { SONGS_SECTION } from 'helpers/constants'
+import { NAV_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -20,7 +20,7 @@ const NavSection = ({
     const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
         sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks),
 
-        sectionAccessHighlighted = accessedOn && accessedSectionKey === SONGS_SECTION
+        sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION
 
     return (
         <NavSectionView {...other}
@@ -51,7 +51,7 @@ const NavSectionView = ({
 
 }) => (
     <div
-        className={`section songs-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
+        className={`section nav-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
     >
         <div className="row">
             <div className="text-cell-wrapper">

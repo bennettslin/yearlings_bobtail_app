@@ -1,7 +1,7 @@
 import { getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getVerseIndexForDirection } from 'helpers/album-view-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
 
-import { SONGS_SECTION,
+import { NAV_SECTION,
          AUDIO_SECTION,
          LYRICS_SECTION,
          DOTS_SECTION,
@@ -71,7 +71,7 @@ export default {
                             break
                         case 's':
                         case 'S':
-                            accessedSectionKey = SONGS_SECTION
+                            accessedSectionKey = NAV_SECTION
                             break
                         default:
                         return false

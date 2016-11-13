@@ -35,7 +35,9 @@ const DotsSectionView = ({
     sectionAccessHighlighted,
 
 ...other }) => (
-    <div className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}>
+    <div
+        className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
+    >
         <h2>dots</h2>
         <div className="tooltip-container">
             <div className={`tooltip-block ${hoveredDotIndex}`}>

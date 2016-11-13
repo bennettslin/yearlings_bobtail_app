@@ -40,7 +40,9 @@ const LyricsSectionView = ({
     sectionAccessHighlighted,
 
 ...other }) => (
-    <div className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${isNarrowScreen ? ' narrow' : ''}`}>
+    <div
+        className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${isNarrowScreen ? ' narrow' : ''}`}
+    >
         {/* Upon song change, scroll to element with this class name. */}
         <h2 className="lyrics-scroll-home">lyrics</h2>
         {isNarrowScreen && hasDoubleColumns ?

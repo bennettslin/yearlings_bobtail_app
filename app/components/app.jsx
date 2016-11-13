@@ -13,7 +13,7 @@ import { selectSongIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
 import Album from './album'
-import { SONGS_SECTION,
+import { NAV_SECTION,
          AUDIO_SECTION,
          OVERVIEW_SECTION,
          LYRICS_SECTION,
@@ -149,7 +149,7 @@ class App extends Component {
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
-        this.onKeyDown = this.onKeyDown.bind(this)
+        this.handleKeyDown = this.handleKeyDown.bind(this)
         this.handleAnnotationSectionClick = this.handleAnnotationSectionClick.bind(this)
     }
 
@@ -230,7 +230,7 @@ class App extends Component {
          * from portal.
          */
         if (e) {
-            this._handleSectionAccess({ accessedSectionKey: SONGS_SECTION })
+            this._handleSectionAccess({ accessedSectionKey: NAV_SECTION })
             this.selectAnnotation()
             this.selectVerse()
 
@@ -350,7 +350,9 @@ class App extends Component {
         this._stopPropagation(e)
 
         this.props.selectWikiIndex(selectedWikiIndex)
-        this._focusApp()
+        if (selectedWikiIndex) {
+            this._focusApp()
+        }
 
         if (e) {
             this._handleSectionAccess({
@@ -480,10 +482,6 @@ class App extends Component {
             this.selectWiki()
         }
 
-        /**
-         * For some reason, clicking on annotation popup moves focus to body,
-         * so we will re-place the focus on app again.
-         */
         this._focusApp()
     }
 
@@ -493,8 +491,12 @@ class App extends Component {
         this.selectWiki()
     }
 
-    onKeyDown(e) {
+    handleKeyDown(e) {
         const { key: keyName } = e
+
+        if (e) {
+            e.preventDefault()
+        }
 
         // TODO: Focus strategically, based on accessed section.
         if (keyName !== 'Tab') {
@@ -538,7 +540,7 @@ class App extends Component {
                 let newState
 
                 switch (accessedSectionKey) {
-                    case SONGS_SECTION:
+                    case NAV_SECTION:
                         newState = AccessHelper.handleSongAccess({
                             keyName,
                             // Include option of no song.
@@ -624,6 +626,8 @@ class App extends Component {
      *******************/
 
     _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
+        this._focusApp()
+
         // Stored as integer. 0 is false, 1 is true.
         this.props.accessOn(accessedOn)
     }
@@ -649,6 +653,7 @@ class App extends Component {
         })
 
         this.props.accessSectionIndex(accessedSectionIndex)
+        this._focusApp()
     }
 
     render() {
@@ -658,7 +663,7 @@ class App extends Component {
                 ref="app"
                 className="app"
                 onClick={this._onBodyClick}
-                onKeyDown={this.onKeyDown}
+                onKeyDown={this.handleKeyDown}
                 tabIndex="0"
             >
                 <Album {...this.props} {...this.state}
@@ -674,7 +679,6 @@ class App extends Component {
                     onDotClick={this.selectDot}
                     onDotHover={this.hoverDot}
                     onLineHover={this.hoverLine}
-                    onKeyDown={this.onKeyDown}
                     onScreenWidthClick={this.selectScreenWidth}
                     onLyricColumnClick={this.selectLyricColumn}
                     onAnnotationSectionClick={this.handleAnnotationSectionClick}

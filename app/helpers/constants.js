@@ -9,13 +9,13 @@ const LEFT = 'left',
 
     WIKI = 'wiki',
 
-    AUDIO_SECTION = 'audio_section',
-    SONGS_SECTION = 'songs_section',
-    OVERVIEW_SECTION = 'overview_section',
-    LYRICS_SECTION = 'lyrics_section',
-    DOTS_SECTION = 'dots_section',
-    ANNOTATION_SECTION = 'annotation_section',
-    WIKI_SECTION = 'wiki_section'
+    AUDIO_SECTION = 'audio-section',
+    NAV_SECTION = 'nav-section',
+    OVERVIEW_SECTION = 'overview-section',
+    LYRICS_SECTION = 'lyrics-section',
+    DOTS_SECTION = 'dots-section',
+    ANNOTATION_SECTION = 'annotation-section',
+    WIKI_SECTION = 'wiki-section'
 
 module.exports = {
 
@@ -24,7 +24,7 @@ module.exports = {
     LYRIC_VERSE_ELEMENT: 'verse_element',
     LYRIC_ANNOTATION_ELEMENT: 'annotation_element',
 
-    SONGS_SECTION,
+    NAV_SECTION,
     AUDIO_SECTION,
     OVERVIEW_SECTION,
     LYRICS_SECTION,
@@ -32,7 +32,7 @@ module.exports = {
     ANNOTATION_SECTION,
     WIKI_SECTION,
     SECTION_KEYS: [
-        SONGS_SECTION,
+        NAV_SECTION,
         AUDIO_SECTION,
         OVERVIEW_SECTION,
         LYRICS_SECTION,

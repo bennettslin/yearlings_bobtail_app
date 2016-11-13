@@ -37,7 +37,9 @@ const AudioSectionView = ({
     sectionAccessHighlighted
 
 }) => (
-    <div className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}>
+    <div
+        className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
+    >
         <h2>audio</h2>
             <button onClick={onPlayClick}>{isPlaying ? 'Playing' : 'Paused' }</button>
             <button onClick={onAudioOptionClick}>audio option: {selectedAudioOptionIndex}</button>

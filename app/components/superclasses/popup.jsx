@@ -114,7 +114,7 @@ class Popup extends Component {
             { accessedOn,
               accessedSectionKey,
               showArrows } = this.props,
-            sectionAccessHighlighted = accessedOn && accessedSectionKey === `${className}_section`,
+            sectionAccessHighlighted = accessedOn && accessedSectionKey === `${className}-section`,
             element = this.getContentElement(sectionAccessHighlighted)
 
         return (

@@ -46,7 +46,9 @@ const OverviewsSectionView = ({
     showBubbleText
 
 }) => (
-    <div className={`section overviews-section${accessHighlighted ? ' access-highlighted' : ''}`}>
+    <div
+        className={`section overview-section${accessHighlighted ? ' access-highlighted' : ''}`}
+    >
         <h2>overview</h2>
         <div className="overview-text">
             <button onClick={onOverviewClick}>(Bennett icon)</button>
