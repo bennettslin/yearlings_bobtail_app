@@ -4,8 +4,14 @@ module.exports = {
     title: {
         anchor: `Uncanny Valley Boy`,
         annotation: {
-            // wiki: uncanny valley
-            description: `The uncanny valley is a theory that human replicas become more repulsive to us as they grow further lifelike while remaining less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando Valley boy now elicited a similar revulsion.`
+            description: [
+                `The`,
+                {
+                    anchor: `uncanny valley`,
+                    wiki: `Uncanny_valley`
+                },
+                `is a theory that human replicas become more repulsive to us as they grow further lifelike while remaining less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando Valley boy now elicited a similar revulsion.`
+            ]
         }
     },
     doubleColumns: true,
@@ -19,10 +25,12 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            // wiki: abbey road
                             `I originally began writing this song to describe a nightmare I had, but abandoned it after I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents. This also begins a three-song medley à la`,
                             {
-                                italic: `Abbey Road`
+                                italic: {
+                                    anchor: `Abbey Road`,
+                                    wiki: `Abbey_Road`
+                                }
                             },
                             `by the Beatles, which provides a nice push towards the album's finish.`
                         ],
@@ -54,7 +62,6 @@ module.exports = {
                     {
                         anchor: `wax prophetic`,
                         annotation: {
-                            // wiki: wax?
                             description: `The common expression is to "wax poetic," of course. Here, like ghosts of days yet to come, my parents invite me on a night journey to witness all that my naked ambitions will soon have wrought.`
                         }
                     },
@@ -68,11 +75,13 @@ module.exports = {
                     {
                         anchor: `giving tree.`,
                         annotation: {
-                            // wiki: giving tree
                             description: [
                                 `Shel Silverstein's`,
                                 {
-                                    italic: `The Giving Tree`
+                                    italic: {
+                                        anchor: `The Giving Tree`,
+                                        wiki: `The_Giving_Tree`
+                                    }
                                 },
                                 `is a children's book about a tree's nurturing love for a boy, and the increasingly self-sacrificing nature of her gifts as the boy grows into a man. Many read it as an allegory for unhealthy parent-child relationships.`
                             ]
@@ -93,10 +102,12 @@ module.exports = {
                     {
                         anchor: `forespoken monster`,
                         annotation: {
-                            // wiki: monster at end of book
                             description: [
                                 {
-                                    italic: `The Monster at the End of This Book`
+                                    italic: {
+                                        anchor: `The Monster at the End of This Book`,
+                                        wiki: `The_Monster_at_the_End_of_This_Book:_Starring_Lovable,_Furry_Old_Grover`
+                                    }
                                 },
                                 `is a Sesame Street children's book in which Grover tries to prevent the reader from reaching the last page of the book, fearful of the monster lying in wait. As it turns out, the only monster present at the end is Grover himself, much to his embarrassment.`
                             ]
@@ -130,8 +141,7 @@ module.exports = {
                     {
                         anchor: `sold your whole fortune`,
                         annotation: {
-                            // wiki: soldier of fortune?
-                            description: `Also, a future "soldier of fortune." My parents lament that the opportunism born from my ego has led me to squander all I had that was good with Sita, in favour of more unsavoury and foolhardy pursuits.`
+                            description: `Also, a future "soldier of fortune," or mercenary. My parents lament that the opportunism born from my ego has led me to squander all I had that was good with Sita, in favour of more unsavoury and foolhardy pursuits.`
                         }
                     }
                 ]
@@ -187,8 +197,14 @@ module.exports = {
                     {
                         anchor: `suspecting you of huffing,`,
                         annotation: {
-                            // wiki: huffing?
-                            description: `Inhalant abuse was the supposed youth trend du jour of my middle school years. And I suppose I fit the profile of someone who had just sniffed glue, which is how I got called into the principal's office.`
+                            description: [
+                                `Inhalant abuse, or`,
+                                {
+                                    anchor: `"huffing,"`,
+                                    wiki: `Inhalant`
+                                },
+                                `was the supposed youth trend du jour of my middle school years. And I suppose I fit the profile of someone who had just sniffed glue, which is how I got called into the principal's office.`
+                        ]
                         }
                     }
                 ]
@@ -219,8 +235,14 @@ module.exports = {
                     {
                         anchor: `your hamartia`,
                         annotation: {
-                            // wiki: hamartia
-                            description: `In Greek tragedy, hamartia is the character flaw that leads to a protagonist's downfall. (I've since learned that the accent is on the third syllable. However, my English teacher pronounced it as I have, so I plead miseducation.) A famous example is Oedipus, whose arrogance leads him to believe that prophecy can be escaped. Here, my parents ask whether I've learned the lesson of Oedipus, while mocking my past belief of being born from the stars, or in their words, "a Martian."`
+                            description: [
+                                `In Greek tragedy,`,
+                                {
+                                    anchor: `hamartia`,
+                                    wiki: `Hamartia`
+                                },
+                                `is the character flaw that leads to a protagonist's downfall. (I've since learned that the accent is on the third syllable. However, my English teacher pronounced it as I have, so I plead miseducation.) A famous example is Oedipus, whose arrogance leads him to believe that prophecy can be escaped. Here, my parents ask whether I've learned the lesson of Oedipus, while mocking my past belief of being born from the stars, or in their words, "a Martian."`
+                            ]
                         }
                     },
                     `now?`
@@ -291,11 +313,13 @@ module.exports = {
                     {
                         anchor: `little prince,`,
                         annotation: {
-                            // wiki: little prince
                             description: [
                                 `Antoine de Saint-Exupéry's`,
                                 {
-                                    italic: `The Little Prince`
+                                    italic: {
+                                        anchor: `The Little Prince`,
+                                        wiki: `The_Little_Prince`
+                                    }
                                 },
                                 `is about a young prince who arrives on Earth from a distant asteroid. During his stay, the prince keenly observes the absurdities of the adult world, and in turn learns a poignant lesson on love and loss.`
                             ]
@@ -323,8 +347,14 @@ module.exports = {
                     {
                         anchor: `nutshells are rigged,`,
                         annotation: {
-                            // wiki: shell game
-                            description: `The shell game is a classic swindle in which a small ball is placed under three shells, which are then shuffled in plain view. Typically, sleight of hand is used to misplace the ball. Having now recognised life to be a shell game, I was eager to begin my studies of how to guard against it, or perhaps even to employ it as a grifter myself.`
+                            description: [
+                                `The`,
+                                {
+                                    anchor: `shell game`,
+                                    wiki: `Shell_game`
+                                },
+                                `is a classic swindle in which a small ball is placed under three shells, which are then shuffled in plain view. Typically, sleight of hand is used to misplace the ball. Having now recognised life to be a shell game, I was eager to begin my studies of how to guard against it, or perhaps even to employ it as a grifter myself.`
+                            ]
                         }
                     }
                 ]
@@ -336,8 +366,14 @@ module.exports = {
                         lyric: {
                             anchor: `Scattered your beans`,
                             annotation: {
-                                // wiki: jack and the beanstalk
-                                description: `As I recall, the nightmare began with me scattering magic beans all around my neighbourhood. It was clearly influenced by the English fairy tale "Jack and the Beanstalk," although I'm not sure why. `
+                                description: [
+                                    `As I recall, the nightmare began with me scattering magic beans all around my neighbourhood. It was clearly influenced by the English fairy tale`,
+                                    {
+                                        anchor: `"Jack and the Beanstalk,"`,
+                                        wiki: `Jack_and_the_Beanstalk`
+                                    },
+                                    `although I'm not sure why.`
+                                ]
                             }
                         }
                     },
@@ -401,11 +437,17 @@ module.exports = {
                         anchor: `Rama king,`,
                         properNoun: true,
                         annotation: {
-                            // wiki: rama, ramayana
                             description: [
-                                `Rama is an avatar of the Hindu god Vishnu and the hero of the`,
                                 {
-                                    italic: `Ramayana,`
+                                    anchor: `Rama`,
+                                    wiki: `Rama`
+                                },
+                                `is an avatar of the Hindu god Vishnu and the hero of the`,
+                                {
+                                    italic: {
+                                        anchor: `Ramayana,`,
+                                        wiki: `Ramayana`
+                                    }
                                 },
                                 `an ancient Indian epic poem. The tale recounts Rama's marriage to Sita, daughter of Mother Earth, and his battle to rescue her after she is kidnapped by the demon king Ravana. My parents are also snidely calling me a "drama king," given that everything I do is an act.`
                             ]
@@ -503,9 +545,12 @@ module.exports = {
                         anchor: `Valmiki's chant.`,
                         properNoun: true,
                         annotation: {
-                            // wiki: valmiki
                             description: [
-                                `Valmiki, the renowned author of the epic`,
+                                {
+                                    anchor: `Valmiki,`,
+                                    wiki: `Valmiki`
+                                },
+                                `the renowned author of the epic`,
                                 {
                                     italic: `Ramayana,`
                                 },
@@ -526,8 +571,14 @@ module.exports = {
                     {
                         anchor: `wakened from the siren,`,
                         annotation: {
-                            // wiki: siren
-                            description: `Having lost sight of the group, I ended up passing out behind a bush, until I was jolted awake by an ambulance siren. In Greek mythology, the Sirens were beautiful women who lured sailors to the rocks with their enchanted singing. My ambitions taught me to resist Sita's love as if it were a siren song.`
+                            description: [
+                                `Having lost sight of the group, I ended up passing out behind a bush, until I was jolted awake by an ambulance siren. In Greek mythology, the`,
+                                {
+                                    anchor: `Sirens`,
+                                    wiki: `Siren_(mythology)`
+                                },
+                                `were beautiful women who lured sailors to the rocks with their enchanted singing. My ambitions taught me to resist Sita's love as if it were a siren song.`
+                            ]
                         }
                     },
                     `you found spelled out in`,
@@ -564,8 +615,14 @@ module.exports = {
                     {
                         anchor: `well worn sari`,
                         annotation: {
-                            // wiki: sari
-                            description: `On special occasions and for family events, Sita would wear a sari. It always looked really good on her. But also, "well-worn sorry." Sita's apologies for not being better eventually grew tiresome, precisely because she shouldn't have had to make them in the first place.`
+                            description: [
+                                `On special occasions and for family events, Sita would wear a`,
+                                {
+                                    anchor: `sari.`,
+                                    wiki: `Sari`
+                                },
+                                `It always looked really good on her. But also, "well-worn sorry." Sita's apologies for not being better eventually grew tiresome, precisely because she shouldn't have had to make them in the first place.`
+                            ]
                         }
                     },
                     `could sway you from a`,
@@ -573,7 +630,9 @@ module.exports = {
                         anchor: `fairer marathon!`,
                         annotation: {
                             // TODO: mention Mara's lisp?
-                            description: `The constant one-upmanship between Sita and me wasn't just petty. It was exhausting to keep an inner tally of every time one of us slighted the other. I wanted life to feel more like a marathon, which rewards persistence and resolve. Since I possessed those traits in spades, that seemed most fair to me. Also, "marathon" sounds like Mara's full name spoken with a lisp. After all this time, I was still chasing after someone like Mara.`
+                            description: [
+                                `The constant one-upmanship between Sita and me wasn't just petty. It was exhausting to keep an inner tally of every time one of us slighted the other. I wanted life to feel more like a marathon, which rewards persistence and resolve. Since I possessed those traits in spades, that seemed most fair to me. Also, "marathon" sounds like Mara's full name spoken with a lisp. After all this time, I was still chasing after someone like Mara.`
+                            ]
                         }
                     }
                 ]
@@ -779,11 +838,13 @@ module.exports = {
                             }
                         ],
                         annotation: {
-                            // wiki: bildungsroman
                             description: [
                                 `A`,
                                 {
-                                    italic: `Bildungsroman`
+                                    italic: {
+                                        anchor: `Bildungsroman`,
+                                        wiki: `Bildungsroman`
+                                    }
                                 },
                                 `is a literary coming-of-age story, of which James Joyce's first novel,`,
                                 {
@@ -835,14 +896,15 @@ module.exports = {
                         subStanza: [
                             {
                                 lyric: {
-                                    // TODO: Annotation proper noun is wrong.
                                     anchor: `…Maranatha!`,
                                     annotation: {
-                                        // wiki: maranatha
                                         description: [
-                                            `In my case, however, the syllables slowly shifted until I was chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I embraced instead the promise of acceptance by Western society, as represented by an expression of Western faith. In the New Testament,`,
+                                            `In my case, however, the syllables slowly shifted until I was chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I embraced instead the promise of acceptance by Western society and its women, as represented by an expression of Western faith. In the New Testament,`,
                                             {
-                                                italic: `maranatha`
+                                                italic: {
+                                                    anchor: `maranatha`,
+                                                    wiki: `Maranatha`
+                                                }
                                             },
                                             `is Aramaic for "our Lord has come."`
                                         ]

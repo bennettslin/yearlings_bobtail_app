@@ -4,12 +4,18 @@ module.exports = {
     title: {
         anchor: `Vegan Proclamation`,
         annotation: {
-            description: `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go vegan. I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. Only after we stopped speaking to each other did I vow to become a vegan myself.`
+            description: [
+                `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
+                {
+                    anchor: `vegan.`,
+                    wiki: `Veganism`
+                },
+                `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step towards liking myself again.`
+            ]
         }
     },
     totalTime: 241,
-    // wiki: vegan
-    overview: `Having doubled down on writing and recording all the songs myself, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had was myself now, and I hated myself. But slowly, I began the long, arduous process of remaking myself into a good person. My first small victory was to go vegan.`,
+    overview: `Having doubled down on writing and recording all the songs myself, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had was myself now, and I hated myself. But slowly, I began the long, arduous process of remaking myself into a good person.`,
     lyrics: [
         [
             {
@@ -77,8 +83,14 @@ module.exports = {
                     {
                         anchor: `furor`,
                         annotation: {
-                            // wiki: Führer
-                            description: `Or else, "führer," a German title of leadership mainly associated with Adolf Hitler. Amongst animal rights proponents, comparisons between factory farming and the Holocaust are obvious, however impolitic.`
+                            description: [
+                                `Or else,`,
+                                {
+                                    anchor: `"führer,"`,
+                                    wiki: `Führer`
+                                },
+                                `a German title of leadership mainly associated with Adolf Hitler. Amongst animal rights proponents, comparisons between factory farming and the Holocaust are obvious, however impolitic.`
+                            ]
                         }
                     },
                     `led,`
@@ -91,15 +103,22 @@ module.exports = {
                     {
                         anchor: `false rib`,
                         annotation: {
-                            // wiki: false rib
-                            description: `The lower five rib pairs are known as false ribs, as they do not attach directly to the sternum.`
+                            description: [
+                                `The lower five rib pairs are known as false ribs, as they do not attach directly to the sternum.`
+                            ]
                         }
                     },
                     {
                         anchor: `from our chest?`,
                         annotation: {
-                            // wiki: Eve?
-                            description: `In Genesis, God gave life to Eve by taking one of Adam's ribs. My own promises to sacrifice for Sita proved to be lies, however, trapping her in a helpless state where she could never feel truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
+                            description: [
+                                `In Genesis, God gave life to`,
+                                {
+                                    anchor: `Eve`,
+                                    wiki: `Eve`
+                                },
+                                `by taking one of Adam's ribs. My own promises to sacrifice for Sita proved to be lies, however, trapping her in a helpless state where she could never feel truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
+                            ]
                         }
                     }
                 ]
@@ -182,24 +201,41 @@ module.exports = {
                                 anchor: `Big Crunch.`,
                                 properNoun: true,
                                 annotation: {
-                                    // wiki: big crunch
-                                    description: `The Big Crunch is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another Big Bang. I found the thought comforting as it jibes with the Hindu belief that the universe is a living force, helplessly bound like us to an eternal cycle of death and rebirth.`
+                                    description: [
+                                        `The`,
+                                        {
+                                            anchor: `Big Crunch`,
+                                            wiki: `Big_Crunch`
+                                        },
+                                        `is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another Big Bang. I found the thought comforting as it jibes with the Hindu belief that the universe is a living force, helplessly bound like us to an eternal cycle of death and rebirth.`
+                                    ]
                                 }
                             },
                             `And meanwhile, the universe is a`,
                             {
                                 anchor: `cyanided box.`,
                                 annotation: {
-                                    // wiki: schrodinger's cat
-                                    description: `In quantum theory, a particle exists as a combination of its possible states. To explain the problem of applying this concept to larger objects, Erwin Schrödinger proposed a famous thought experiment known as Schrödinger's cat. We imagine a cat sealed inside a steel chamber, where it stands an equal chance of being killed by cyanide or surviving. Since we cannot observe the outcome, we must regard the cat as being simultaneously dead and alive.`
+                                    description: [
+                                        `In quantum theory, a particle exists as a combination of its possible states. To explain the problem of applying this concept to larger objects, Erwin Schrödinger proposed a famous thought experiment known as`,
+                                        {
+                                            anchor: `Schrödinger's cat.`,
+                                            wiki: `Schrödinger%27s_cat`
+                                        },
+                                        `We imagine a cat sealed inside a steel chamber, where it stands an equal chance of being killed by cyanide or surviving. Since we cannot observe the outcome, we must regard the cat as being simultaneously dead and alive.`
+                                    ]
                                 }
                             },
                             ` Because if we can't ever be`,
                             {
                                 anchor: `known to be dead,`,
                                 annotation: {
-                                    // wiki: deism
-                                    description: `Deism is the belief that God, having created the universe, no longer intervenes in its progress. I liked the idea that if something greater than ourselves cannot observe us, then much like Schrödinger's battered cat, some part of us may always live on.`
+                                    description: [
+                                        {
+                                            anchor: `Deism`,
+                                            wiki: `Deism`
+                                        },
+                                        `is the belief that God, having created the universe, no longer intervenes in its progress. I liked the idea that if something greater than ourselves cannot observe us, then much like Schrödinger's battered cat, some part of us may always live on.`
+                                    ]
                                 }
                             },
                             `we just might always be alive… to God…"`
@@ -267,18 +303,26 @@ module.exports = {
                     {
                         anchor: `lone rallied youth`,
                         annotation: {
-                            // wiki: hitler youth
-                            description: `Having spent the past several years both playing and attending shows, I saw firsthand how easy it was for an audience to get whipped up while being of one mind. And now, as that world drifted away and I was all alone, I wondered what exactly drew me to those crowds, and why I so longed to be adored by them. I questioned everything I valued up to that day, like a reformed Hitler Youth aghast at all the things he cheered for at the Nuremberg Rallies.`
+                            description: [
+                                `Having spent the past several years both playing and attending shows, I saw firsthand how easy it was for an audience to get whipped up while being of one mind. And now, as that world drifted away and I was all alone, I wondered what exactly drew me to those crowds, and why I so longed to be adored by them. I questioned everything I valued up to that day, like a reformed`,
+                                {
+                                    anchor: `Hitler Youth`,
+                                    wiki: `Hitler_Youth`
+                                },
+                                `aghast at all the things he cheered for at the Nuremberg Rallies.`
+                            ]
                         }
                     },
                     {
                         anchor: `strikes himself from his cloud,`,
                         annotation: {
-                            // wiki: schutzstaffel
                             description: [
                                 `The insignia of the`,
                                 {
-                                    italic: `Schutzstaffel,`
+                                    italic: {
+                                        anchor: `Schutzstaffel,`,
+                                        wiki: `Schutzstaffel`
+                                    }
                                 },
                                 `the paramilitary group that carried out the Holocaust, consists of two thunderbolts side by side. Wishing no more to strike down anyone with my thunderbolts, I struck myself down, leaving behind my former convictions in the process.`
 
@@ -300,8 +344,14 @@ module.exports = {
                     {
                         anchor: `swastikas`,
                         annotation: {
-                            // wiki: swastika
-                            description: `The swastika is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid any association with violence and hatred, modern-day Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`,
+                            description: [
+                                `The`,
+                                {
+                                    anchor: `swastika`,
+                                    wiki: `Swastika`
+                                },
+                                `is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid any association with violence and hatred, modern-day Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
+                            ],
                             portal: `swastikas`
                         }
                     },
@@ -343,8 +393,14 @@ module.exports = {
                     {
                         anchor: `good again…`,
                         annotation: {
-                            // wiki: Peta
-                            description: `Upon going vegan, I became a volunteer at People for the Ethical Treatment of Animals, and for several years, I took part in their demonstrations for animal rights. Though I'm no longer involved, I still credit PETA with helping me to like myself again.`
+                            description: [
+                                `Upon going vegan, I became a volunteer at`,
+                                {
+                                    anchor: `People for the Ethical Treatment of Animals,`,
+                                    wiki: `People_for_the_Ethical_Treatment_of_Animals`
+                                },
+                                `and for several years, I took part in their demonstrations for animal rights.`
+                            ]
                         }
                     }
                 ]
@@ -386,14 +442,19 @@ module.exports = {
             },
             {
                 time: 161,
-                // Nirvana Sappy
                 lyric: [
                     `I still love you for the`,
                     {
                         anchor: `airholes,`,
                         annotation: {
-                            // wiki: nirvana, sappy
-                            description: `In Nirvana's "Sappy," Kurt Cobain compares the victim of an emotionally abusive relationship to a small creature kept in a jar with breathing holes punched in its lid. I liked the imagery, so I borrowed it shamelessly here.`
+                            description: [
+                                `In Nirvana's`,
+                                {
+                                    anchor: `"Sappy,"`,
+                                    wiki: `Sappy`
+                                },
+                                `Kurt Cobain compares the victim of an emotionally abusive relationship to a small creature kept in a jar with breathing holes punched in its lid. I liked the imagery, so I borrowed it shamelessly here.`
+                            ]
                         }
                     },
                     `dear; and now, good night."`
@@ -428,8 +489,18 @@ module.exports = {
                     {
                         anchor: `diapered white dwarf,`,
                         annotation: {
-                            // wiki: apasmara, white dwarf
-                            description: `Apasmara is a dwarf demon of ignorance in Hindu mythology. A white dwarf is the dense remnant of an aged star. As I began to take an unflinching look at all the hurt I'd caused, I was comforted to know that those who came before me had learned from their mistakes. And yet, it felt just as dispiriting to know that those coming after had yet to make theirs. The universe never truly learns, and I was part of the reason why. I had this same thought about my brother many years ago, which made me realise that all I could do was love him for who he was.`
+                            description: [
+                                {
+                                    anchor: `Apasmara`,
+                                    wiki: `Apasmara`
+                                },
+                                `is a dwarf demon of ignorance in Hindu mythology. A`,
+                                {
+                                    anchor: `white dwarf`,
+                                    wiki: `White_dwarf`
+                                },
+                                `is the dense remnant of an aged star. As I began to take an unflinching look at all the hurt I'd caused, I was comforted to know that those who came before me had learned from their mistakes. And yet, it felt just as dispiriting to know that those coming after had yet to make theirs. The universe never truly learns, and I was part of the reason why. I had this same thought about my brother many years ago, which made me realise that all I could do was love him for who he was.`
+                            ]
                         }
                     },
                     `gurgling, curls up for his sleep…`
@@ -448,7 +519,12 @@ module.exports = {
                                     anchor: `Nataraja,`,
                                     wiki: `Nataraja`
                                 },
-                                `or "lord of dance," is a revered depiction of the Hindu god Siva as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
+                                `or "lord of dance," is a revered depiction of the Hindu god`,
+                                {
+                                    anchor: `Siva`,
+                                    wiki: `Shiva`
+                                },
+                                `as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
                             ],
                             portal: `chivalry`
                         }

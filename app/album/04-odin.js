@@ -510,7 +510,12 @@ module.exports = {
                                     anchor: `"Adam's apple."`,
                                     wiki: `Adam%27s_apple`
                                 },
-                                `An apocryphal tale thus took shape that when Adam ate the forbidden fruit to gain knowledge of good and evil, a piece had lodged in his throat, which now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me with a permanent lump in my throat.`
+                                `An apocryphal tale thus took shape that when`,
+                                {
+                                    anchor: `Adam`,
+                                    wiki: `Adam`
+                                },
+                                `ate the forbidden fruit to gain knowledge of good and evil, a piece had lodged in his throat, which now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me with a permanent lump in my throat.`
                             ]
                         }
                     }
