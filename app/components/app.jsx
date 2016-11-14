@@ -87,10 +87,6 @@ const bindDispatchToProps = (dispatch) => (
 class App extends Component {
 
     constructor(props) {
-        // If no annotation selected, default to 1.
-        const accessedAnnotationIndex = getAnnotationIndexForDirection(props, props.selectedAnnotationIndex || 1),
-            accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, 1)
-
         super(props)
 
         // Bind this to event handlers.
@@ -105,9 +101,10 @@ class App extends Component {
         this.state = {
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
-            accessedAnnotationIndex,
-            accessedVerseIndex: 0,
-            accessedPopupAnchorIndex,
+            accessedVerseIndex: props.selectedVerseIndex,
+            // If no annotation selected, default to 1.
+            accessedAnnotationIndex: getAnnotationIndexForDirection(props, props.selectedAnnotationIndex || 1),
+            accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
             accessedLyricElement: LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
             hoveredDotIndex: 0,

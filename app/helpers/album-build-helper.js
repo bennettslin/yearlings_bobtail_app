@@ -8,12 +8,13 @@ const _tempStore = {
     _songIndex: 0,
     _songDotKeys: {},
     _annotations: [],
-    _annotationIndex: 0,
     _popupAnchors: [],
     _wikiIndex: 1,
     _portalLinks: {},
     _songTimes: [],
-    _verseIndexCounter: 0
+    _verseIndexCounter: 0,
+    _firstAnnotationIndexOfVerse: 0,
+    _finalAnnotationIndex: 0,
 }
 
 export const prepareAlbumData = (album = {}) => {
@@ -30,7 +31,7 @@ export const prepareAlbumData = (album = {}) => {
 const _addWikiAndPortalIndices = (album) => {
     album.songs.forEach((song, songIndex) => {
         _tempStore._annotations = song.annotations
-        _tempStore._annotationIndex = 0
+        _tempStore._finalAnnotationIndex = 0
 
         _parseLyrics(song.lyrics, true)
     })
@@ -100,6 +101,9 @@ const _parseLyrics = (lyric, finalPassThrough) => {
         // Add verse index to lyric object.
         lyric.verseIndex = _tempStore._verseIndexCounter
 
+        // Add last annotation index.
+        lyric.lastAnnotationIndex = _tempStore._annotations.length
+
         // Add time to song times.
         _tempStore._songTimes.push(lyric.time)
     }
@@ -122,9 +126,19 @@ const _parseLyrics = (lyric, finalPassThrough) => {
         }
     }
 
-    // Increment counter here to allow annotation to get correct verseIndex.
     if (!isNaN(lyric.time)) {
+        // Increment counter here to allow annotation to get correct verseIndex.
         _tempStore._verseIndexCounter++
+    }
+
+    if (lyric.lyric) {
+        // Add first annotation index of verse, if any.
+        if (_tempStore._firstAnnotationIndexOfVerse) {
+            // Last annotation index is no longer needed.
+            delete lyric.lastAnnotationIndex
+            lyric.currentAnnotationIndex = _tempStore._firstAnnotationIndexOfVerse
+            _tempStore._firstAnnotationIndexOfVerse = 0
+        }
     }
 }
 
@@ -132,7 +146,7 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough) => {
     const cards = lyric.annotation
 
     if (finalPassThrough) {
-        const annotation = _tempStore._annotations[_tempStore._annotationIndex]
+        const annotation = _tempStore._annotations[_tempStore._finalAnnotationIndex]
 
         _tempStore._popupAnchors = []
         _tempStore._popupAnchorIndex = 1
@@ -150,12 +164,16 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough) => {
         // Clean up lyric object, now that it's the final pass through.
         delete lyric.annotation
 
-        _tempStore._annotationIndex++
+        _tempStore._finalAnnotationIndex++
 
     } else {
         const annotationIndex = _tempStore._annotations.length + 1,
             annotation = {},
             dotKeys = {}
+
+        if (!_tempStore._firstAnnotationIndexOfVerse) {
+            _tempStore._firstAnnotationIndexOfVerse = annotationIndex
+        }
 
         // Add annotation index to annotation and lyrics. 1-based index.
         annotation.annotationIndex = annotationIndex
