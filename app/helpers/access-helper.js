@@ -171,6 +171,7 @@ export default {
         fromAnnotationSection,
         accessedAnnotationIndex,
         accessedLyricElement,
+        accessedVerseIndex,
         selectAnnotation
     }) {
         let newState,
@@ -198,9 +199,29 @@ export default {
         }
 
         if (direction) {
-            // Change accessed lyric element to annotation.
-            newState = { accessedLyricElement: LYRIC_ANNOTATION_ELEMENT }
-            accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, direction)
+            // If accessed element is already annotation, proceed.
+            if (accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
+                accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, direction)
+
+                if (!fromAnnotationSection) {
+                    newState = {
+                        accessedAnnotationIndex,
+                        accessedVerseIndex: getVerseIndexForAnnotationIndex(props, accessedAnnotationIndex)
+                    }
+                }
+
+            /**
+             * Otherwise, change the accessed element, and also choose the
+             * annotation index based on the current accessed verse index.
+             */
+            } else {
+                accessedAnnotationIndex = getAnnotationIndexForVerseIndex(props, accessedVerseIndex, direction)
+                newState = {
+                    accessedLyricElement: LYRIC_ANNOTATION_ELEMENT,
+                    accessedAnnotationIndex
+                }
+            }
+
             scrollElementIntoView('annotation', accessedAnnotationIndex)
         }
 
@@ -211,12 +232,6 @@ export default {
          */
         if (toSelectAnnotation) {
             selectAnnotation (!fromAnnotationSection, accessedAnnotationIndex)
-
-        // Change accessed index with arrow key from lyric section.
-        } else if (!fromAnnotationSection) {
-            newState = newState || {}
-            newState.accessedAnnotationIndex = accessedAnnotationIndex
-            newState.accessedVerseIndex = getVerseIndexForAnnotationIndex(props, accessedAnnotationIndex)
         }
 
         return newState || false
@@ -225,6 +240,7 @@ export default {
     handleLyricsAccess({
         keyName,
         props,
+        accessedAnnotationIndex,
         accessedVerseIndex,
         accessedLyricElement,
         selectVerse
@@ -254,13 +270,23 @@ export default {
         }
 
         if (direction) {
-            accessedVerseIndex = getVerseIndexForDirection(props, accessedVerseIndex, direction)
-            newState = {
-                accessedLyricElement: LYRIC_VERSE_ELEMENT,
-                accessedVerseIndex,
+            // If accessed element is already verse, proceed.
+            if (accessedLyricElement === LYRIC_VERSE_ELEMENT) {
+                accessedVerseIndex = getVerseIndexForDirection(props, accessedVerseIndex, direction)
+                newState = {
+                    accessedVerseIndex,
 
-                // Also set accessed annotation index.
-                accessedAnnotationIndex: getAnnotationIndexForVerseIndex(props, accessedVerseIndex)
+                    // Also set accessed annotation index.
+                    accessedAnnotationIndex: getAnnotationIndexForVerseIndex(props, accessedVerseIndex)
+                }
+
+            // Otherwise, do nothing other than change the accessed element.
+            } else {
+                accessedVerseIndex = getVerseIndexForAnnotationIndex(props, accessedAnnotationIndex)
+                newState = {
+                    accessedLyricElement: LYRIC_VERSE_ELEMENT,
+                    accessedVerseIndex
+                }
             }
 
             scrollElementIntoView('verse', accessedVerseIndex)

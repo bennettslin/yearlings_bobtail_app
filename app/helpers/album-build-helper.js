@@ -46,6 +46,7 @@ const _prepareAllSongs = (album) => {
         _tempStore._verseIndexCounter = 0
         _tempStore._songDotKeys = {}
         _tempStore._songTimes = []
+        _tempStore._firstAnnotationIndexOfVerse = 0
 
         _addTitleToLyrics(song.title, song.lyrics)
         // Do not confuse anchor key with string prototype anchor method.

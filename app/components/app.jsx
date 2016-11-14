@@ -579,6 +579,7 @@ class App extends Component {
                             fromAnnotationSection,
                             props: this.props,
                             accessedAnnotationIndex: this.state.accessedAnnotationIndex,
+                            accessedVerseIndex: this.state.accessedVerseIndex,
                             accessedLyricElement: this.state.accessedLyricElement,
                             selectAnnotation: this.selectAnnotation
                         }) || {}
@@ -587,6 +588,7 @@ class App extends Component {
                             const newLyricState = AccessHelper.handleLyricsAccess({
                                 keyName,
                                 props: this.props,
+                                accessedAnnotationIndex: this.state.accessedAnnotationIndex,
                                 accessedVerseIndex: this.state.accessedVerseIndex,
                                 accessedLyricElement: this.state.accessedLyricElement,
                                 selectVerse: this.selectVerse

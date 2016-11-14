@@ -38,6 +38,11 @@ export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other 
             selectedSong.annotations[selectedAnnotationIndex - 1] : null
 }
 
+const getAnnotationsLength = (props) => {
+    const selectedSong = getSong(props)
+    return selectedSong.annotations ? selectedSong.annotations.length : 0
+}
+
 export const getAnnotationIndexForDirection = (props, currentIndex = 1, direction) => {
     const selectedSong = getSong(props)
 
@@ -65,11 +70,11 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
             // Remember that annotations are 1-based.
             returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
 
-    /**
-     * Prevent index from incrementing forever by stopping after return index
-     * is once again current index, with direction set.
-     */
-    } while (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) && !(direction !== 0 && currentIndex === returnIndex))
+        /**
+         * Prevent index from incrementing forever by stopping after return
+         * index is once again current index, with direction set.
+         */
+        } while (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) && !(direction !== 0 && currentIndex === returnIndex))
 
         return returnIndex
     }
@@ -115,14 +120,27 @@ export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, directi
     return currentIndex
 }
 
-export const getAnnotationIndexForVerseIndex = (props, verseIndex) => {
+export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction) => {
     const verse = getVerse({
-        selectedVerseIndex: verseIndex,
-        selectedSongIndex: props.selectedSongIndex,
-        songs: props.songs
-    })
+            selectedVerseIndex: verseIndex,
+            selectedSongIndex: props.selectedSongIndex,
+            songs: props.songs
+        }),
+        annotationsLength = getAnnotationsLength(props)
 
-    return verse.currentAnnotationIndex || verse.lastAnnotationIndex
+    // If the verse has its own annotation, pick it.
+    if (verse.currentAnnotationIndex) {
+        return verse.currentAnnotationIndex
+
+    // Otherwise, return either previous or next depending on direction.
+    } else if (direction) {
+        const annotationIndex = direction === -1 ? verse.lastAnnotationIndex : ((verse.lastAnnotationIndex + 1) % annotationsLength)
+
+        return annotationIndex
+
+    } else {
+        return verse.lastAnnotationIndex
+    }
 }
 
 export const getVerse = ({ selectedVerseIndex, ...other }) => {
