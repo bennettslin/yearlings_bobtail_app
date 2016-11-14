@@ -51,6 +51,10 @@
 * When lyric section is accessed:
     * Arrow keys and "Enter" are shown.
     * Accessed element is title or selected verse.
+    * Accessed verse is selected verse.
+    * Accessed annotation is:
+        * Selected annotation if there is one.
+        * If not, closest annotation to selected verse.
 
     * When up and down arrows are pressed:
         * If there is an accessed annotation:

@@ -627,8 +627,28 @@ class App extends Component {
      * ACCESS HANDLERS *
      *******************/
 
+    _selectDefaultSectionElementIndex(accessedSectionIndex) {
+        const accessedSectionKey = SECTION_KEYS[accessedSectionIndex]
+        let newState
+
+        switch (accessedSectionKey) {
+            case NAV_SECTION:
+                newState = { accessedSongIndex: this.props.selectedSongIndex }
+                break
+            case LYRICS_SECTION:
+                break
+            default:
+                break
+        }
+
+        if (newState) {
+             this.setState(newState)
+        }
+    }
+
     _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
         this._focusApp()
+        this._selectDefaultSectionElementIndex(this.props.accessedSectionIndex)
 
         // Stored as integer. 0 is false, 1 is true.
         this.props.accessOn(accessedOn)
@@ -653,6 +673,8 @@ class App extends Component {
             accessOn,
             handleAccessOn: this._handleAccessOn
         })
+
+        this._selectDefaultSectionElementIndex(accessedSectionIndex)
 
         this.props.accessSectionIndex(accessedSectionIndex)
         this._focusApp()
