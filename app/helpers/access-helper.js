@@ -1,4 +1,8 @@
-import { getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getVerseIndexForDirection } from 'helpers/album-view-helper'
+import { getAnnotationIndexForDirection,
+         getPopupAnchorIndexForDirection,
+         getVerseIndexForDirection,
+         getAnnotationIndexForVerseIndex,
+         getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
 
 import { NAV_SECTION,
@@ -212,6 +216,7 @@ export default {
         } else if (!fromAnnotationSection) {
             newState = newState || {}
             newState.accessedAnnotationIndex = accessedAnnotationIndex
+            newState.accessedVerseIndex = getVerseIndexForAnnotationIndex(props, accessedAnnotationIndex)
         }
 
         return newState || false
@@ -250,8 +255,13 @@ export default {
 
         if (direction) {
             accessedVerseIndex = getVerseIndexForDirection(props, accessedVerseIndex, direction)
-            newState = { accessedLyricElement: LYRIC_VERSE_ELEMENT,
-                         accessedVerseIndex }
+            newState = {
+                accessedLyricElement: LYRIC_VERSE_ELEMENT,
+                accessedVerseIndex,
+
+                // Also set accessed annotation index.
+                accessedAnnotationIndex: getAnnotationIndexForVerseIndex(props, accessedVerseIndex)
+            }
 
             scrollElementIntoView('verse', accessedVerseIndex)
         }

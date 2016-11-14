@@ -2,16 +2,20 @@
 import { ALBUM_BUILD_KEYS } from './constants'
 import { intersects } from 'helpers/dot-helper'
 
-/**
- * Recurse until object with verse index is found.
- */
 const _parseLyrics = (lyric, selectedVerseIndex) => {
+    // Recurse until object with verse index is found.
+
     if (lyric.verseIndex === selectedVerseIndex) {
         return lyric
+
     } else if (Array.isArray(lyric)) {
         return lyric.reduce((childSelectedLyric, childLyric) => {
             return childSelectedLyric || _parseLyrics(childLyric, selectedVerseIndex)
         }, null)
+
+    // Object with verseIndex key not found, so dig into subStanza.
+    } else if (lyric.subStanza) {
+        return _parseLyrics(lyric.subStanza, selectedVerseIndex)
     }
 }
 
@@ -118,7 +122,7 @@ export const getAnnotationIndexForVerseIndex = (props, verseIndex) => {
         songs: props.songs
     })
 
-    return verse.currentAnnotationIndex || verse.lastAnnotationIndex + 1
+    return verse.currentAnnotationIndex || verse.lastAnnotationIndex
 }
 
 export const getVerse = ({ selectedVerseIndex, ...other }) => {

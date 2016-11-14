@@ -182,9 +182,13 @@ class App extends Component {
             } else {
                 this.selectAnnotation(true)
 
-                // If closing annotation, set lyric element to annotation.
+                /**
+                 * If closing annotation, set lyric element to annotation, and
+                 * set accessed annotation index to closed annotation.
+                 */
                 this.setState({
-                    accessedLyricElement: LYRIC_ANNOTATION_ELEMENT
+                    accessedLyricElement: LYRIC_ANNOTATION_ELEMENT,
+                    accessedAnnotationIndex: selectedAnnotationIndex
                 })
             }
 
@@ -636,9 +640,10 @@ class App extends Component {
                 newState = { accessedSongIndex: this.props.selectedSongIndex }
                 break
             case LYRICS_SECTION:
-                if (this.state.accessedLyricElement === LYRIC_VERSE_ELEMENT) {
-                    newState = { accessedVerseIndex: this.props.selectedVerseIndex }
-                }
+                newState = {
+                    accessedVerseIndex: this.props.selectedVerseIndex,
+                    accessedAnnotationIndex: getAnnotationIndexForVerseIndex(this.props, this.props.selectedVerseIndex)
+                 }
                 break
             default:
                 break
