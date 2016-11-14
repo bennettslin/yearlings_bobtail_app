@@ -29,7 +29,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
@@ -636,6 +636,9 @@ class App extends Component {
                 newState = { accessedSongIndex: this.props.selectedSongIndex }
                 break
             case LYRICS_SECTION:
+                if (this.state.accessedLyricElement === LYRIC_VERSE_ELEMENT) {
+                    newState = { accessedVerseIndex: this.props.selectedVerseIndex }
+                }
                 break
             default:
                 break

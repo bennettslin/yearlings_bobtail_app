@@ -73,19 +73,6 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
     return currentIndex
 }
 
-export const getVerseIndexForDirection = (props, currentIndex = 1, direction = 1) => {
-    const selectedSong = getSong(props)
-
-    if (selectedSong.times) {
-        const timesLength = selectedSong.times.length
-
-        // Verse indices are 0-based.
-        return (currentIndex + timesLength + direction) % timesLength
-    }
-
-    return currentIndex
-}
-
 export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, direction) => {
     const annotation = getAnnotation(props),
         selectedDotKeys = props.selectedDotKeys
@@ -124,9 +111,42 @@ export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, directi
     return currentIndex
 }
 
+export const getAnnotationIndexForVerseIndex = (props, verseIndex) => {
+    const verse = getVerse({
+        selectedVerseIndex: verseIndex,
+        selectedSongIndex: props.selectedSongIndex,
+        songs: props.songs
+    })
+
+    return verse.currentAnnotationIndex || verse.lastAnnotationIndex + 1
+}
+
 export const getVerse = ({ selectedVerseIndex, ...other }) => {
     const { lyrics } = getSong(other)
     return _parseLyrics(lyrics, selectedVerseIndex)
+}
+
+export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
+    const annotation = getAnnotation({
+        selectedAnnotationIndex: annotationIndex,
+        selectedSongIndex: props.selectedSongIndex,
+        songs: props.songs
+    })
+
+    return annotation.verseIndex
+}
+
+export const getVerseIndexForDirection = (props, currentIndex = 1, direction = 1) => {
+    const selectedSong = getSong(props)
+
+    if (selectedSong.times) {
+        const timesLength = selectedSong.times.length
+
+        // Verse indices are 0-based.
+        return (currentIndex + timesLength + direction) % timesLength
+    }
+
+    return currentIndex
 }
 
 export const getTasks = (selectedSong, tasks) => {
