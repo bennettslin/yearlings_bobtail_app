@@ -465,7 +465,7 @@ module.exports = {
                                     anchor: `Aryan Invasion`,
                                     wiki: `Indo-Aryan_migration_theory`
                                 },
-                                `theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by Aryan invaders from the north, who were the "Indus trail source."`
+                                `theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by invaders from the north, who were the "Indus trail source."`
                             ]
                         }
                     },
@@ -572,9 +572,13 @@ module.exports = {
                     {
                         anchor: `our-youn' invedas`,
                         annotation: {
-                            // wiki: aryan
                             description: [
-                                `Although the Aryans spoken of in the Vedas and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," this "unsolved query" must be put to rest, before the others lose their minds.`
+                                `Although the`,
+                                {
+                                    anchor: `Aryans`,
+                                    wiki: `Aryan`
+                                },
+                                `spoken of in the Vedas and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," this "unsolved query" must be put to rest, before the others lose their minds.`
                             ]
                         }
                     },
