@@ -172,7 +172,8 @@ export default {
         accessedAnnotationIndex,
         accessedLyricElement,
         accessedVerseIndex,
-        selectAnnotation
+        selectAnnotation,
+        lyricColumnShown
     }) {
         let newState,
             toSelectAnnotation = false,
@@ -201,7 +202,7 @@ export default {
         if (direction) {
             // If accessed element is already annotation, proceed.
             if (accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
-                accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, direction)
+                accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, direction, undefined, lyricColumnShown)
 
                 if (!fromAnnotationSection) {
                     newState = {

@@ -27,6 +27,9 @@ import { NAV_SECTION,
 
          WIKI,
 
+         LEFT,
+         RIGHT,
+
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
@@ -109,8 +112,8 @@ class App extends Component {
             accessedDotIndex: 0,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
-            isNarrowScreen: false,
-            selectedLyricColumnIndex: 0
+            isNarrowScreen: true,
+            selectedLyricColumnIndex: 1
         }
     }
 
@@ -573,7 +576,9 @@ class App extends Component {
                         break
                     case ANNOTATION_SECTION:
                     case LYRICS_SECTION:
-                        const fromAnnotationSection = accessedSectionKey === ANNOTATION_SECTION
+                        const fromAnnotationSection = accessedSectionKey === ANNOTATION_SECTION,
+                            lyricColumnShown = this.state.isNarrowScreen ? (this.state.selectedLyricColumnIndex === 1 ? LEFT : RIGHT) : undefined
+
                         newState = AccessHelper.handleLyricsAndAnnotationAccess({
                             keyName,
                             fromAnnotationSection,
@@ -581,7 +586,8 @@ class App extends Component {
                             accessedAnnotationIndex: this.state.accessedAnnotationIndex,
                             accessedVerseIndex: this.state.accessedVerseIndex,
                             accessedLyricElement: this.state.accessedLyricElement,
-                            selectAnnotation: this.selectAnnotation
+                            selectAnnotation: this.selectAnnotation,
+                            lyricColumnShown
                         }) || {}
 
                         if (accessedSectionKey === LYRICS_SECTION) {

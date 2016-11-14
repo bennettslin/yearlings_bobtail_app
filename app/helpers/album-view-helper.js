@@ -1,5 +1,7 @@
 // Parse album data for presentation.
-import { ALBUM_BUILD_KEYS } from './constants'
+import { ALBUM_BUILD_KEYS,
+         LEFT,
+         RIGHT } from './constants'
 import { intersects } from 'helpers/dot-helper'
 
 const _parseLyrics = (lyric, selectedVerseIndex) => {
@@ -43,7 +45,14 @@ const getAnnotationsLength = (props) => {
     return selectedSong.annotations ? selectedSong.annotations.length : 0
 }
 
-export const getAnnotationIndexForDirection = (props, currentIndex = 1, direction, unpresentDirection) => {
+const _shouldShowAnnotationForColumn = (annotation, lyricColumnShown) => {
+    if (!lyricColumnShown) {
+        return true
+    }
+    return annotation.column ? (annotation.column === lyricColumnShown) : true
+}
+
+export const getAnnotationIndexForDirection = (props, currentIndex = 1, direction, unpresentDirection, lyricColumnShown) => {
     const selectedSong = getSong(props)
 
     if (selectedSong.annotations) {
@@ -76,9 +85,16 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
          * Prevent index from incrementing forever by stopping after return
          * index is once again current index, with direction set.
          */
-        } while (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) && !(direction !== 0 && currentIndex === returnIndex))
+        } while (
+            // Continue if dots don't intersect...
+            (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) ||
 
-        console.error('selectedSong.annotations[returnIndex]', selectedSong.annotations[returnIndex]);
+            // Or if this annotation isn't in the shown column...
+            !_shouldShowAnnotationForColumn(selectedSong.annotations[returnIndex - 1], lyricColumnShown)) &&
+
+            // And as long as we haven't exhausted all indices.
+            !(direction !== 0 && currentIndex === returnIndex)
+        )
 
         return returnIndex
     }
