@@ -30,11 +30,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `reset each section's accessed element index upon access`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `scroll to annotation after portal`,
             workedHours: 0,
             neededHours: 2
@@ -473,6 +468,11 @@ module.exports = {
         },
         {
             taskName: `make played verse accessible`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `reset each section's accessed element index upon access`,
             workedHours: 2,
             neededHours: 2
         }
