@@ -140,7 +140,7 @@ export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, directi
     return currentIndex
 }
 
-export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction) => {
+export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction, lyricColumnShown) => {
     const verse = getVerse({
             selectedVerseIndex: verseIndex,
             selectedSongIndex: props.selectedSongIndex,
@@ -168,7 +168,7 @@ export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction) =>
      * Ensure that this annotation index is present. Otherwise, specify
      * direction that we will search if this annotation index is not present.
      */
-    return getAnnotationIndexForDirection(props, returnIndex, undefined, direction)
+    return getAnnotationIndexForDirection(props, returnIndex, undefined, direction, lyricColumnShown)
 }
 
 export const getVerse = ({ selectedVerseIndex, ...other }) => {

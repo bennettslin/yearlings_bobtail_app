@@ -216,7 +216,8 @@ export default {
              * annotation index based on the current accessed verse index.
              */
             } else {
-                accessedAnnotationIndex = getAnnotationIndexForVerseIndex(props, accessedVerseIndex, direction)
+                accessedAnnotationIndex = getAnnotationIndexForVerseIndex(props, accessedVerseIndex, direction, lyricColumnShown)
+
                 newState = {
                     accessedLyricElement: LYRIC_ANNOTATION_ELEMENT,
                     accessedAnnotationIndex

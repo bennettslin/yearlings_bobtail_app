@@ -30,6 +30,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `check when *all* dots are deselected`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `cancel scroll if new scroll or if manually scrolled`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `scroll to annotation after portal`,
             workedHours: 0,
             neededHours: 2
@@ -88,6 +98,11 @@ module.exports = {
             taskName: `"problem with indie" in footer`,
             workedHours: 0,
             neededHours: 8
+        },
+        {
+            taskName: `create stage section`,
+            workedHours: 0,
+            neededHours: 3
         },
         {
             taskName: `progressive tooltips`,

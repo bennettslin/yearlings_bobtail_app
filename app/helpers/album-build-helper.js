@@ -164,7 +164,7 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
     }
 
     // Doublespeaker lyrics have separate keys for each column.
-    if (lyric[LYRIC] || lyric[LEFT] || lyric[RIGHT]) {
+    if (lyric[LYRIC] || lyric[LEFT] || lyric[RIGHT] || lyric.dotStanza) {
         // Add first annotation index of verse, if any.
         if (_tempStore._firstAnnotationIndexOfVerse) {
             // Last annotation index is no longer needed.
