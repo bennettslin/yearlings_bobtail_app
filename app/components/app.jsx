@@ -29,7 +29,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import { scrollElementIntoView } from 'helpers/general-helper'
@@ -188,7 +188,8 @@ class App extends Component {
                  */
                 this.setState({
                     accessedLyricElement: LYRIC_ANNOTATION_ELEMENT,
-                    accessedAnnotationIndex: selectedAnnotationIndex
+                    accessedAnnotationIndex: selectedAnnotationIndex,
+                    accessedVerseIndex: getVerseIndexForAnnotationIndex(this.props, selectedAnnotationIndex)
                 })
             }
 
