@@ -40,6 +40,24 @@ const _addWikiAndPortalIndices = (album) => {
     })
 }
 
+const _markSideStanzas = (lyrics) => {
+    lyrics.forEach(stanza => {
+        const hasSideStanzas = stanza.reduce((hasSideStanzas, verse) => {
+            return hasSideStanzas || !!verse.topSideStanza || !!verse.bottomSideStanza
+        }, false)
+
+        if (hasSideStanzas) {
+            stanza.forEach(verse => {
+                if (verse.topSideStanza || verse.bottomSideStanza) {
+                    verse.rightColumn = true
+                } else {
+                    verse.leftColumn = true
+                }
+            })
+        }
+    })
+}
+
 const _prepareAllSongs = (album) => {
     album.songs.forEach((song, songIndex) => {
 
@@ -56,6 +74,8 @@ const _prepareAllSongs = (album) => {
         if (typeof song.title.anchor !== 'function') {
             song.title = song.title.anchor
         }
+
+        _markSideStanzas(song.lyrics)
         _parseLyrics(song.lyrics)
 
         // Add annotations to song object.
@@ -99,7 +119,7 @@ const _addTitleToLyrics = (title, lyrics) => {
 /**
  * Recurse until object with anchor key is found.
  */
-const _parseLyrics = (lyric, finalPassThrough) => {
+const _parseLyrics = (lyric, finalPassThrough, textKey) => {
 
     if (!finalPassThrough && !isNaN(lyric.time)) {
         // Add verse index to lyric object.
@@ -114,17 +134,25 @@ const _parseLyrics = (lyric, finalPassThrough) => {
 
     if (Array.isArray(lyric)) {
         lyric.forEach(childLyricValue => {
-            _parseLyrics(childLyricValue, finalPassThrough)
+            _parseLyrics(childLyricValue, finalPassThrough, textKey)
         })
 
     } else if (typeof lyric === 'object') {
         if (lyric.anchor) {
-            _prepareAnnotation(lyric, finalPassThrough)
+            _prepareAnnotation(lyric, finalPassThrough, textKey)
 
         } else {
-            ALBUM_BUILD_KEYS.forEach(textKey => {
-                if (textKey !== 'anchor' && lyric[textKey]) {
-                    _parseLyrics(lyric[textKey], finalPassThrough)
+            ALBUM_BUILD_KEYS.forEach(childTextKey => {
+                if (childTextKey !== 'anchor' && lyric[childTextKey]) {
+                    let sideStanzaTextKey
+
+                    if (lyric.leftColumn) {
+                        sideStanzaTextKey = 'leftColumn'
+                    } else if (lyric.rightColumn) {
+                        sideStanzaTextKey = 'rightColumn'
+                    }
+
+                    _parseLyrics(lyric[childTextKey], finalPassThrough, (textKey || sideStanzaTextKey || childTextKey))
                 }
             })
         }
@@ -135,6 +163,7 @@ const _parseLyrics = (lyric, finalPassThrough) => {
         _tempStore._verseIndexCounter++
     }
 
+    // Doublespeaker lyrics have separate keys for each column.
     if (lyric[LYRIC] || lyric[LEFT] || lyric[RIGHT]) {
         // Add first annotation index of verse, if any.
         if (_tempStore._firstAnnotationIndexOfVerse) {
@@ -146,7 +175,7 @@ const _parseLyrics = (lyric, finalPassThrough) => {
     }
 }
 
-const _prepareAnnotation = (lyric = {}, finalPassThrough) => {
+const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
     const cards = lyric.annotation
 
     if (finalPassThrough) {
@@ -182,6 +211,14 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough) => {
         // Add annotation index to annotation and lyrics. 1-based index.
         annotation.annotationIndex = annotationIndex
         annotation.verseIndex = _tempStore._verseIndexCounter
+
+        // Let annotation know if it's in a doublespeaker column.
+        if (textKey === LEFT || textKey === 'leftColumn') {
+            annotation.column = LEFT
+        } else if (textKey === RIGHT || textKey === 'rightColumn') {
+            annotation.column = RIGHT
+        }
+
         lyric.annotationIndex = annotationIndex
 
         // Add formatted title to annotation.

@@ -43,7 +43,7 @@ const getAnnotationsLength = (props) => {
     return selectedSong.annotations ? selectedSong.annotations.length : 0
 }
 
-export const getAnnotationIndexForDirection = (props, currentIndex = 1, direction) => {
+export const getAnnotationIndexForDirection = (props, currentIndex = 1, direction, unpresentDirection) => {
     const selectedSong = getSong(props)
 
     if (selectedSong.annotations) {
@@ -64,7 +64,9 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
 
             // But if this is the second time around, then begin incrementing.
             } else if (direction === 0) {
-                direction = 1
+
+                // Unless specified, search forward.
+                direction = unpresentDirection || 1
             }
 
             // Remember that annotations are 1-based.
@@ -75,6 +77,8 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
          * index is once again current index, with direction set.
          */
         } while (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) && !(direction !== 0 && currentIndex === returnIndex))
+
+        console.error('selectedSong.annotations[returnIndex]', selectedSong.annotations[returnIndex]);
 
         return returnIndex
     }
@@ -128,19 +132,27 @@ export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction) =>
         }),
         annotationsLength = getAnnotationsLength(props)
 
+    let returnIndex
+
     // If the verse has its own annotation, pick it.
     if (verse.currentAnnotationIndex) {
-        return verse.currentAnnotationIndex
+        returnIndex = verse.currentAnnotationIndex
 
     // Otherwise, return either previous or next depending on direction.
     } else if (direction) {
         const annotationIndex = direction === -1 ? verse.lastAnnotationIndex : ((verse.lastAnnotationIndex + 1) % annotationsLength)
 
-        return annotationIndex
+        returnIndex = annotationIndex
 
     } else {
-        return verse.lastAnnotationIndex
+        returnIndex = verse.lastAnnotationIndex
     }
+
+    /**
+     * Ensure that this annotation index is present. Otherwise, specify
+     * direction that we will search if this annotation index is not present.
+     */
+    return getAnnotationIndexForDirection(props, returnIndex, undefined, direction)
 }
 
 export const getVerse = ({ selectedVerseIndex, ...other }) => {
