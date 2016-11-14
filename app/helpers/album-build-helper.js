@@ -1,6 +1,9 @@
 // Parse album data for build.
 
-import { ALBUM_BUILD_KEYS } from './constants'
+import { ALBUM_BUILD_KEYS,
+         LYRIC,
+         LEFT,
+         RIGHT } from './constants'
 import { getFormattedAnnotationTitle } from './format-helper'
 import { getAnnotationsDotKeys } from 'helpers/album-view-helper'
 
@@ -132,7 +135,7 @@ const _parseLyrics = (lyric, finalPassThrough) => {
         _tempStore._verseIndexCounter++
     }
 
-    if (lyric.lyric) {
+    if (lyric[LYRIC] || lyric[LEFT] || lyric[RIGHT]) {
         // Add first annotation index of verse, if any.
         if (_tempStore._firstAnnotationIndexOfVerse) {
             // Last annotation index is no longer needed.

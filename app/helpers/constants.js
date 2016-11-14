@@ -1,6 +1,7 @@
 // Constants used by all components.
 
-const LEFT = 'left',
+const LYRIC = 'lyric',
+    LEFT = 'left',
     CENTRE = 'centre',
     RIGHT = 'right',
     ITALIC = 'italic',
@@ -59,6 +60,7 @@ module.exports = {
         ANCHOR
     ],
 
+    LYRIC,
     LEFT,
     CENTRE,
     RIGHT,
@@ -78,7 +80,7 @@ module.exports = {
 
     // Temporary.
     ALBUM_BUILD_KEYS: [
-        'lyric',
+        LYRIC,
         LEFT,
         CENTRE,
         RIGHT,
