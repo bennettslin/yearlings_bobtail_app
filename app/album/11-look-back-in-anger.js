@@ -378,7 +378,7 @@ module.exports = {
                         anchor: `must turn the cheek.`,
                         annotation: {
                             // TODO: Mention Jesus
-                            description: `The letters from RI Research instructed me not to confront my tormentors, but instead to quietly take their abuse in stride, as my exalted place in the universe necessarily asked of me to always be the bigger person.`
+                            description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to quietly take their abuse in stride, as my exalted place in the universe necessarily asked of me to always be the bigger person.`
                         }
                     }
                 ]

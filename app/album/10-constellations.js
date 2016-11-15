@@ -16,7 +16,7 @@ module.exports = {
                     anchor: `closed-eye hallucinations,`,
                     wiki: `Closed-eye_hallucination`
                 },
-                `which are vivid images that seem to be projected onto the backdrop of one's eyelids. If they ever get intense enough to become frightening, one simply opens one's eyes, and they instantly go away. At the time, I called them constellations.`
+                `which are vivid images that seem to be projected onto the backdrop of one's eyelids. If they ever get intense enough to become frightening, one simply opens one's eyes, and they instantly go away. At the time, I called them "constellations."`
             ]
         }
     },
@@ -491,8 +491,6 @@ module.exports = {
                         anchor: `Forsi ahuro`,
                         properNoun: true,
                         annotation: {
-                            // TODO: connect persian to iranian.
-                            // TODO: Is this confusing?
                             description: [
                                 `In the Iranian language of Farsi,`,
                                 {
@@ -508,7 +506,12 @@ module.exports = {
                                         wiki: `Asura`
                                     }
                                 },
-                                `refers to a demon. This suggests that a rift occurred amongst the Indo-Iranian people based on religious differences, and because the`,
+                                `refers to a demon. This suggests that a rift occurred amongst the`,
+                                {
+                                    anchor: `Indo-Iranian`,
+                                    wiki: `Indo-Iranians`
+                                },
+                                `people based on religious differences, and because the`,
                                 {
                                     anchor: `Vedas`,
                                     wiki: `Vedas`
@@ -603,14 +606,13 @@ module.exports = {
                         anchor: `Ourevian battles spent,`,
                         properNoun: true,
                         annotation: {
-                            // TODO: Be more clear about Arabs.
                             description: [
-                                `"Arabian battles." With the rise of`,
+                                `"Arabian battles." As the`,
                                 {
-                                    anchor: `Islam,`,
-                                    wiki: `Islam`
+                                    anchor: `Arabs`,
+                                    wiki: `Arabs`
                                 },
-                                `the Persians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and "our`,
+                                `begin their rapid conquest of the Middle East in the name of Islam, the Iranians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and "our`,
                                 {
                                     anchor: `Evian`,
                                     wiki: `Evian`
@@ -859,8 +861,7 @@ module.exports = {
                     {
                         anchor: `mistodawn,`,
                         annotation: {
-                            // TODO: I already mentioned the closed eye hallucinations earlier.
-                            description: `Back in the car, my newfound clarity proves short-lived. In its late stages, Robitussin continues to offer vivid hallucinations once you close your eyes, which is what I'm doing on the way back to Howie's place, as the "mist of dawn" breaks.`
+                            description: `The "mist of dawn" breaks, and we head back to the car. On our way now to Howie's place, my newfound clarity proves short-lived, as I lean back and settle in for some closed-eye hallucinations.`
                         }
                     },
                     {

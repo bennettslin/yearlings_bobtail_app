@@ -522,7 +522,7 @@ module.exports = {
                 lyric: [
                     `With bride you bridled in this perfect`,
                     {
-                        // TODO: Note I changed "duel" to "dual" here.
+                        // NOTE: I changed "duel" to "dual" here.
                         anchor: `dual match,`,
                         annotation: {
                             description: `A dual match implying a harmonious union between Sita and me, which is what everyone saw, as well as a "duel match" implying the opposite, which is what I felt.`
