@@ -258,9 +258,9 @@ module.exports = {
                 lyric: [
                     `First date`,
                     {
-                        // TODO: Move description over here?
                         anchor: `nosebleed`,
                         annotation: {
+                            description: `After getting a nosebleed on the first date, I recounted past fights that ended with me getting a bloody nose.`,
                             portal: `know_is_bleat`
                         }
                     },
@@ -268,7 +268,7 @@ module.exports = {
                     {
                         anchor: `bare-knuckle defeats…`,
                         annotation: {
-                            description: `After getting a nosebleed on the first date, I recounted past fights that ended with me getting a bloody nose. Sita seemed intrigued by my rough-and-tumble past, even as I was honest that these were literal beatdowns in which I never threw a single punch.`,
+                            description: `Sita seemed intrigued by my rough-and-tumble past, even as I was honest that these were literal beatdowns in which I never threw a single punch.`,
                             portal: `barnacle`
                         }
                     }

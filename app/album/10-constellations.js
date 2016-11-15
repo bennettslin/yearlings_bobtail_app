@@ -394,14 +394,13 @@ module.exports = {
                     {
                         anchor: `slain the teeto-Tatars!`,
                         annotation: {
-                            // TODO: briefly describe teetotaler and teeter totter reference.
                             description: [
                                 `Genghis Khan was able to unite the Mongols by defeating the`,
                                 {
                                     anchor: `Tatars,`,
                                     wiki: `Tatars`
                                 },
-                                `a rival tribe. Also, "teeter-totters" and "teetotalers." Having just taken Robitussin a few days prior, I was wavering on taking it again so soon, as Robitussin really destroys you, both mentally and physically. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in, and it feels awesome.`
+                                `a rival tribe. Like a "teeter-totter," I was wavering back and forth on whether to take Robitussin that night, since I'd just taken it a few days prior, and Robitussin really destroys you both mentally and physically. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in and kills off any lingering protests from my inner "teetotaler."`
                             ]
                         }
                     }
