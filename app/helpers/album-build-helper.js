@@ -224,7 +224,7 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
         lyric.annotationIndex = annotationIndex
 
         // Add formatted title to annotation.
-        annotation.title = getFormattedAnnotationTitle(lyric.anchor, lyric.properNoun)
+        annotation.title = getFormattedAnnotationTitle(lyric.anchor, lyric.properNoun, lyric.keepEndCharacter)
 
         // Add todo to annotation.
         if (lyric.todo) {

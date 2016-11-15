@@ -7,8 +7,8 @@
 
 module.exports = {
     title: {
-        // TODO: Format to keep exclamation point in annotation title.
         anchor: `Constellations!`,
+        keepEndCharacter: true,
         annotation: {
             description: [
                 `The best part about Robitussin is the`,

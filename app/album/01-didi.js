@@ -5,16 +5,16 @@ module.exports = {
         anchor: 'Didi (弟弟)',
         annotation: {
             description: [
-                `While my family is from`,
+                `In Chinese,`,
+                {
+                    italic: `didi`
+                },
+                `means "little brother." While my family is from`,
                 {
                     anchor: `Taiwan,`,
                     wiki: `Taiwan`
                 },
-                `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words, and`,
-                {
-                    italic: `didi`
-                },
-                `in Chinese means "little brother." `
+                `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.`
             ]
         }
     },

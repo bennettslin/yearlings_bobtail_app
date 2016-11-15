@@ -11,7 +11,7 @@ export const getFormattedTime = (time) => {
 }
 
 // Parses text in anchor tag into annotation header.
-export const getFormattedAnnotationTitle = (anchor, properNoun) => {
+export const getFormattedAnnotationTitle = (anchor, properNoun, keepEndCharacter) => {
     /**
      * Get annotation title from anchor text. Convert from object if
      * necessary, and also uncapitalise if not a proper noun.
@@ -23,7 +23,10 @@ export const getFormattedAnnotationTitle = (anchor, properNoun) => {
         title = _getStringFromObject(title)
     }
 
-    title = _getDeletedSpecialCharactersText(title)
+    // This flag exists solely for "Constellations!" title.
+    if (!keepEndCharacter) {
+        title = _getDeletedSpecialCharactersText(title)
+    }
     title = _getDeletedWrappingCharactersText(title)
 
     // Uncapitalise if not a proper noun.
