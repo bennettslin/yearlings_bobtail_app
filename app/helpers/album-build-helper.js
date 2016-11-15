@@ -16,7 +16,8 @@ const _tempStore = {
     _portalLinks: {},
     _songTimes: [],
     _verseIndexCounter: 0,
-    _firstAnnotationIndexOfVerse: 0,
+    _currentAnnotationIndices: [],
+    _firstRightAnnotationIndexOfVerse: 0,
     _finalAnnotationIndex: 0,
 }
 
@@ -67,7 +68,8 @@ const _prepareAllSongs = (album) => {
         _tempStore._verseIndexCounter = 0
         _tempStore._songDotKeys = {}
         _tempStore._songTimes = []
-        _tempStore._firstAnnotationIndexOfVerse = 0
+        _tempStore._currentAnnotationIndices = []
+        _tempStore._firstRightAnnotationIndexOfVerse = 0
 
         _addTitleToLyrics(song.title, song.lyrics)
         // Do not confuse anchor key with string prototype anchor method.
@@ -166,11 +168,13 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
     // Doublespeaker lyrics have separate keys for each column.
     if (lyric[LYRIC] || lyric[LEFT] || lyric[RIGHT] || lyric.dotStanza) {
         // Add first annotation index of verse, if any.
-        if (_tempStore._firstAnnotationIndexOfVerse) {
+        if (_tempStore._currentAnnotationIndices.length) {
             // Last annotation index is no longer needed.
             delete lyric.lastAnnotationIndex
-            lyric.currentAnnotationIndex = _tempStore._firstAnnotationIndexOfVerse
-            _tempStore._firstAnnotationIndexOfVerse = 0
+
+            lyric.currentAnnotationIndices = _tempStore._currentAnnotationIndices
+
+            _tempStore._currentAnnotationIndices = []
         }
     }
 }
@@ -204,9 +208,7 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
             annotation = {},
             dotKeys = {}
 
-        if (!_tempStore._firstAnnotationIndexOfVerse) {
-            _tempStore._firstAnnotationIndexOfVerse = annotationIndex
-        }
+        _tempStore._currentAnnotationIndices.push(annotationIndex)
 
         // Add annotation index to annotation and lyrics. 1-based index.
         annotation.annotationIndex = annotationIndex

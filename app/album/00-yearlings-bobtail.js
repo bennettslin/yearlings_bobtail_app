@@ -40,11 +40,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `doublespeaker verses should also know current annotation index for right column`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `check what happens when *all* dots are deselected`,
             workedHours: 0,
             neededHours: 1
@@ -510,6 +505,11 @@ module.exports = {
             taskName: `access left and right column buttons`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `doublespeaker verses should also know current annotation index for right column`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

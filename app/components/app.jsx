@@ -144,7 +144,7 @@ class App extends Component {
         this.selectPortal = this.selectPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
-        this.selectScreenWidth = this.selectScreenWidth.bind(this)
+        this.selectLyricColumnWidth = this.selectLyricColumnWidth.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
@@ -454,20 +454,20 @@ class App extends Component {
         this.props.selectTimePlayed(selectedTimePlayed)
     }
 
-    selectScreenWidth(e) {
-        const { isSingleLyricColumn } = this.state,
-            newLyricColumnIndex = !isSingleLyricColumn ? 1 : 0
+    selectLyricColumnWidth(e) {
+        const isSingleLyricColumn = !this.state.isSingleLyricColumn,
+            newLyricColumnIndex = isSingleLyricColumn ? 1 : 0
 
-        this.selectLyricColumn(undefined, newLyricColumnIndex)
+        this.selectLyricColumn(undefined, newLyricColumnIndex, isSingleLyricColumn)
 
         this.setState({
-            isSingleLyricColumn: !isSingleLyricColumn
+            isSingleLyricColumn
         })
     }
 
-    selectLyricColumn(e, selectedIndex = 0) {
+    selectLyricColumn(e, selectedIndex = 0, isSingleLyricColumn = this.state.isSingleLyricColumn) {
         this.setState({
-            selectedLyricColumnIndex: this.state.isSingleLyricColumn ? selectedIndex : 0
+            selectedLyricColumnIndex: isSingleLyricColumn ? selectedIndex : 0
         })
     }
 
@@ -721,7 +721,7 @@ class App extends Component {
                     onDotClick={this.selectDot}
                     onDotHover={this.hoverDot}
                     onLineHover={this.hoverLine}
-                    onScreenWidthClick={this.selectScreenWidth}
+                    onScreenWidthClick={this.selectLyricColumnWidth}
                     onLyricColumnClick={this.selectLyricColumn}
                     onAnnotationSectionClick={this.handleAnnotationSectionClick}
                 />

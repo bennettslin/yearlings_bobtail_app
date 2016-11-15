@@ -34,10 +34,10 @@ export const getAnnotationsDotKeys = (props) => {
     }) : null
 }
 
-export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }) => {
+export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }, annotationIndex) => {
     selectedSong = selectedSong || getSong(other)
     return selectedSong.annotations ?
-            selectedSong.annotations[selectedAnnotationIndex - 1] : null
+            selectedSong.annotations[(annotationIndex || selectedAnnotationIndex) - 1] : null
 }
 
 const getAnnotationsLength = (props) => {
@@ -151,8 +151,17 @@ export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction, ly
     let returnIndex
 
     // If the verse has its own annotation, pick it.
-    if (verse.currentAnnotationIndex) {
-        returnIndex = verse.currentAnnotationIndex
+    if (verse.currentAnnotationIndices) {
+        /**
+         * Rotate through all current indices, in case some are in the hidden
+         * column.
+         */
+        let currentCounter = 0
+        do {
+            returnIndex = verse.currentAnnotationIndices[currentCounter]
+            currentCounter++
+
+        } while (currentCounter < verse.currentAnnotationIndices.length && !_shouldShowAnnotationForColumn(getAnnotation(props, returnIndex), lyricColumnShown))
 
     // Otherwise, return either previous or next depending on direction.
     } else if (direction) {
@@ -178,10 +187,9 @@ export const getVerse = ({ selectedVerseIndex, ...other }) => {
 
 export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
     const annotation = getAnnotation({
-        selectedAnnotationIndex: annotationIndex,
         selectedSongIndex: props.selectedSongIndex,
         songs: props.songs
-    })
+    }, annotationIndex)
 
     return annotation.verseIndex
 }
