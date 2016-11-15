@@ -30,7 +30,22 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `check when *all* dots are deselected`,
+            taskName: `dot stanzas and side stanzas should also default to last verse`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `switching left and right lyric columns should default to new accessed verse and annotation`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `doublespeaker verses should also know current annotation index for right column`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `check what happens when *all* dots are deselected`,
             workedHours: 0,
             neededHours: 1
         },
@@ -490,6 +505,11 @@ module.exports = {
             taskName: `reset each section's accessed element index upon access`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `access left and right column buttons`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

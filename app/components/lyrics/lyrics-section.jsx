@@ -31,7 +31,7 @@ const LyricsSectionView = ({
 
     // From props.
     songLyrics,
-    isNarrowScreen,
+    isSingleLyricColumn,
     selectedLyricColumnIndex,
     hasDoubleColumns,
     onLyricColumnClick,
@@ -41,11 +41,11 @@ const LyricsSectionView = ({
 
 ...other }) => (
     <div
-        className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${isNarrowScreen ? ' narrow' : ''}`}
+        className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${isSingleLyricColumn ? ' narrow' : ''}`}
     >
         {/* Upon song change, scroll to element with this class name. */}
         <h2 className="lyrics-scroll-home">lyrics</h2>
-        {isNarrowScreen && hasDoubleColumns ?
+        {isSingleLyricColumn && hasDoubleColumns ?
             <RadioButtonBlock
                 selectedButtonIndex={selectedLyricColumnIndex}
                 buttonKeys={LYRIC_COLUMN_KEYS}
@@ -56,7 +56,7 @@ const LyricsSectionView = ({
             {songLyrics.map((stanzaArray, stanzaIndex) => (
                     <LyricsUnit {...other}
                         key={stanzaIndex}
-                        isNarrowScreen={isNarrowScreen}
+                        isSingleLyricColumn={isSingleLyricColumn}
                         isTitleUnit={stanzaIndex === 0}
                         stanzaArray={stanzaArray}
                         selectedLyricColumnIndex={selectedLyricColumnIndex}

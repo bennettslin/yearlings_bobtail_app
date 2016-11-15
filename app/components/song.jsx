@@ -51,7 +51,7 @@ const SongView = ({
     hoveredDotIndex,
     hoveredLineIndex,
     selectedVerseIndex,
-    isNarrowScreen,
+    isSingleLyricColumn,
     selectedLyricColumnIndex,
     selectedSongIndex,
     accessedOn,
@@ -113,7 +113,7 @@ const SongView = ({
                 onDotHover={onDotHover}
             />
             <LyricsSection
-                isNarrowScreen={isNarrowScreen}
+                isSingleLyricColumn={isSingleLyricColumn}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
                 accessedLyricElement={accessedLyricElement}

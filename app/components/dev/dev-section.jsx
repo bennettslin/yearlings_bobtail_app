@@ -18,7 +18,7 @@ const DevSectionView = ({
     // From props.
     selectedTimePlayed,
     selectedVerseIndex,
-    isNarrowScreen,
+    isSingleLyricColumn,
     onScreenWidthClick
 
 }) => (
@@ -34,7 +34,7 @@ const DevSectionView = ({
             className="enabled"
             onClick={onScreenWidthClick}
         >
-            {isNarrowScreen ? 'widen' : 'narrow'}
+            {isSingleLyricColumn ? 'widen' : 'narrow'}
         </a>
     </div>
 )

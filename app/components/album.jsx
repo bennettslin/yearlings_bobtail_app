@@ -41,7 +41,7 @@ const AlbumView = ({
     selectedVerseIndex,
     selectedAudioOptionIndex,
     selectedTimePlayed,
-    isNarrowScreen,
+    isSingleLyricColumn,
     onSongClick,
     onPlayClick,
     onAudioOptionClick,
@@ -74,7 +74,7 @@ const AlbumView = ({
             <DevSection
                 selectedTimePlayed={selectedTimePlayed}
                 selectedVerseIndex={selectedVerseIndex}
-                isNarrowScreen={isNarrowScreen}
+                isSingleLyricColumn={isSingleLyricColumn}
                 onScreenWidthClick={onScreenWidthClick}
             />
             <NavSection
@@ -93,7 +93,7 @@ const AlbumView = ({
             selectedVerseIndex={selectedVerseIndex}
             accessedOn={accessedOn}
             accessedSectionKey={accessedSectionKey}
-            isNarrowScreen={isNarrowScreen}
+            isSingleLyricColumn={isSingleLyricColumn}
         />
     </div>
 )

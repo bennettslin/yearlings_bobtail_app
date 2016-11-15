@@ -112,7 +112,7 @@ class App extends Component {
             accessedDotIndex: 0,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
-            isNarrowScreen: true,
+            isSingleLyricColumn: true,
             selectedLyricColumnIndex: 1
         }
     }
@@ -455,19 +455,19 @@ class App extends Component {
     }
 
     selectScreenWidth(e) {
-        const { isNarrowScreen } = this.state,
-            newLyricColumnIndex = !isNarrowScreen ? 1 : 0
+        const { isSingleLyricColumn } = this.state,
+            newLyricColumnIndex = !isSingleLyricColumn ? 1 : 0
 
         this.selectLyricColumn(undefined, newLyricColumnIndex)
 
         this.setState({
-            isNarrowScreen: !isNarrowScreen
+            isSingleLyricColumn: !isSingleLyricColumn
         })
     }
 
     selectLyricColumn(e, selectedIndex = 0) {
         this.setState({
-            selectedLyricColumnIndex: selectedIndex
+            selectedLyricColumnIndex: this.state.isSingleLyricColumn ? selectedIndex : 0
         })
     }
 
@@ -577,7 +577,7 @@ class App extends Component {
                     case ANNOTATION_SECTION:
                     case LYRICS_SECTION:
                         const fromAnnotationSection = accessedSectionKey === ANNOTATION_SECTION,
-                            lyricColumnShown = this.state.isNarrowScreen ? (this.state.selectedLyricColumnIndex === 1 ? LEFT : RIGHT) : undefined
+                            lyricColumnShown = this.state.isSingleLyricColumn ? (this.state.selectedLyricColumnIndex === 1 ? LEFT : RIGHT) : undefined
 
                         newState = AccessHelper.handleLyricsAndAnnotationAccess({
                             keyName,
@@ -587,6 +587,7 @@ class App extends Component {
                             accessedVerseIndex: this.state.accessedVerseIndex,
                             accessedLyricElement: this.state.accessedLyricElement,
                             selectAnnotation: this.selectAnnotation,
+                            selectLyricColumn: this.selectLyricColumn,
                             lyricColumnShown
                         }) || {}
 
