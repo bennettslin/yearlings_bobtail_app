@@ -51,7 +51,7 @@ module.exports = {
                 lyric: [
                     `with your crew of`,
                     {
-                        // TODO: Didi thief
+                        // REFERENCE: crooked thieves in Didi?
                         anchor: `chefs and thieves.`,
                         annotation: {
                             description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share. I was always in the thieving half.`
@@ -249,8 +249,7 @@ module.exports = {
                     {
                         anchor: `choler turned up,`,
                         annotation: {
-                            // TODO: Define choler
-                            description: `Just like I wouldn't have recognised myself with an upturned collar, the angry drunk returning my gaze didn't match my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`
+                            description: `In Hippocratic medicine, choler, or yellow bile, is the humour that induces aggression. Just like I wouldn't have recognised myself with an "upturned collar," the angry drunk returning my gaze didn't match my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`
                         }
                     },
                     `cringing in shame.`

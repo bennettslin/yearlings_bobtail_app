@@ -429,7 +429,7 @@ module.exports = {
                         },
                     }
                 ],
-                // TODO: Portal: Future reference to Sita?
+                // REFERENCE: Future reference to Sita?
                 right: `To dreams of whom does each one cave in`
             },
             {
@@ -472,7 +472,7 @@ module.exports = {
                 time: 67,
                 left: [
                     `could some`,
-                    // TODO: insect in jar link
+                    // REFERENCE: Reference to insect in jar in Vegan Proclamation?
                     `bottled butterfly`,
                     {
                         anchor: `dream your whims instead?`,
@@ -499,9 +499,7 @@ module.exports = {
                                     wiki: `Rondel_(poem)`
                                 },
                                 `is a verse form that originated in French poetry. It can also refer to anything round. The "apple of one's eye" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "ball of one's eye." My belief that I could be the object of Sasha's affection was based on a similar misreading.`
-                            ],
-                            // TODO: Confirm reference
-                            reference: `https://www.jstor.org/stable/283546?seq=1#page_scan_tab_contents`
+                            ]
                         }
                     },
                     `be`,
@@ -609,7 +607,7 @@ module.exports = {
                 right: [
                     `a casket tilted back where its`,
                     {
-                        // TODO: portal hope chest?
+                        // REFERENCE: Hope chest in M?
                         anchor: `hopeless rests.`,
                         annotation: {
                             description: `Hope was all that remained in the box opened by Pandora. By contrast, upon having all the hard truths of the world revealed to me by Sasha, all I had left was my own hopeless state.`
@@ -720,7 +718,7 @@ module.exports = {
                     },
                     `keen to drift if shark swarms withheld.`
                 ],
-                // TODO: reference to M
+                // REFERENCE: Reference to passage in M?
                 right: `who cannot warm he who didn't impart warmth himself.`
             },
             {
@@ -746,7 +744,7 @@ module.exports = {
                 time: 107,
                 left: {
                     anchor: `shivering for shivs unsheathed.`,
-                    // TODO: Reference to shanks in Kyon?
+                    // REFERENCE: Shanks in Kyon?
                     annotation: {
                         description: [
                             `A`,
@@ -885,7 +883,7 @@ module.exports = {
         [
             {
                 time: 147,
-                // TODO: Reference to Ash Wednesday.
+                // REFERENCE: Reference to abortion in Ash Wednesday?
                 left: [
                     `But for a`,
                     {
@@ -957,7 +955,7 @@ module.exports = {
             {
                 time: 168,
                 left: `then returns them as a buffer zone…`,
-                // TODO: Reference to Nora Barnacle
+                // REFERENCE: Nora Barnacle in Good Night, Sita?
                 right: `can reach urchins smashed from undertows…`
             },
             {
@@ -975,7 +973,7 @@ module.exports = {
             },
             {
                 time: 177,
-                // TODO: Grace Darling
+                // REFERENCE: Grace Darling in Grasshoppers?
                 left: `which hitherto snubbed and spurned a wreck,`,
                 right: [
                     {

@@ -358,16 +358,15 @@ module.exports = {
                 lyric: [
                     `Then`,
                     {
-                        // TODO: mention steps
                         anchor: `down the steppes`,
                         annotation: {
                             description: [
-                                `In the 13th century, the Mongols swept down from the East Asian`,
+                                `As we rush down the earthen steps leading into the steam tunnels, I imagine us as 13th-century Mongol horsemen sweeping down from the Asian`,
                                 {
                                     anchor: `steppes`,
                                     wiki: `Steppe`
                                 },
-                                `and began their conquests.`
+                                `to begin their conquests.`
                             ],
                             portal: `down_the_steppes`
                         }

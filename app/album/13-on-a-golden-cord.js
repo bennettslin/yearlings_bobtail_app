@@ -263,7 +263,7 @@ module.exports = {
                 right: [
                     `still hardened against her`,
                     {
-                        // TODO: Link to streetlamps?
+                        // REFERENCE: Link to streetlamps in left column?
                         anchor: `fawning, misty glance,`,
                         annotation: {
                             description: `Sensing that Sita gazes downward upon him from the night sky, drunken me realises that remnants of his past bitterness still remain deep within.`
