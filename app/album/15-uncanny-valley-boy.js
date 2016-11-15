@@ -659,8 +659,15 @@ module.exports = {
                     `Stubborn`,
                     {
                         anchor: `harpies`,
-                        // wiki: harpies, brief description.
                         annotation: {
+                            description: [
+                                `In Greek mythology, the`,
+                                {
+                                    anchor: `harpies`,
+                                    wiki: `Harpy`
+                                },
+                                `were female monsters with human heads and birdlike bodies. In common parlance, a harpy is a nagging woman.`
+                            ],
                             portal: `harpies`
                         }
                     },

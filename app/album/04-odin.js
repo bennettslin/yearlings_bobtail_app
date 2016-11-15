@@ -191,9 +191,13 @@ module.exports = {
                     {
                         anchor: `alabaster balustrade,`,
                         annotation: {
-                            // wiki: alabaster
                             description: [
-                                `Buildings in Taiwan made heavy use of iron grates and stone slabs, such that even ordinary living quarters had the feel of a mausoleum.`
+                                `Buildings in Taiwan made heavy use of iron grates and stone slabs, such that even ordinary living quarters had the feel of a mausoleum adorned with`,
+                                {
+                                    anchor: `alabaster`,
+                                    wiki: `Alabaster`
+                                },
+                                `carvings.`
                             ]
                         }
                     }

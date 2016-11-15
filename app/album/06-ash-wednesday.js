@@ -100,6 +100,7 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
+                                // todo: make clear that Catherine would die in my bookless room.
                                 `A reference to the classic "Who's buried in`,
                                 {
                                     anchor: `Grant's tomb"`,
