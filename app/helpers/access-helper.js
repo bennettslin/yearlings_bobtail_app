@@ -190,15 +190,17 @@ export default {
 
             /**
              * FIXME: Using 'e' instead of 'l' for now to not conflict with
-             *R lyric universal key.
+             * lyric universal key.
              */
             case 'e':
             case 'E':
             case 'r':
             case 'R':
-                // Handle selection of left or right lyric column.
-                selectLyricColumn(undefined, keyName === 'e' || keyName === 'E' ? 1 : 2)
-                return
+                if (!fromAnnotationSection) {
+                    // Handle selection of left or right lyric column.
+                    selectLyricColumn(undefined, keyName === 'e' || keyName === 'E' ? 1 : 2)
+                    return
+                }
                 break
             case ENTER:
                 // Only select annotation if annotation is accessed element.

@@ -68,6 +68,9 @@
         * If there is an accessed annotation:
             * Highlight previous or next accessed annotation.
 
+    * When 'e' or 'r' is pressed:
+        * Accessed element will switch to verse.
+
     * When "Enter" is pressed:
         * If there is an accessed annotation, select its annotation.
         * If there is an accessed verse, select it.

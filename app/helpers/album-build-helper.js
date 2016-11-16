@@ -15,7 +15,7 @@ const _tempStore = {
     _wikiIndex: 1,
     _portalLinks: {},
     _songTimes: [],
-    _verseIndexCounter: 0,
+    _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
     _firstRightAnnotationIndexOfVerse: 0,
     _finalAnnotationIndex: 0,
@@ -65,7 +65,7 @@ const _prepareAllSongs = (album) => {
         // Song indices start at 1.
         _tempStore._songIndex = songIndex + 1
         _tempStore._annotations = []
-        _tempStore._verseIndexCounter = 0
+        _tempStore._verseIndexCounter = -1
         _tempStore._songDotKeys = {}
         _tempStore._songTimes = []
         _tempStore._currentAnnotationIndices = []
@@ -123,7 +123,11 @@ const _addTitleToLyrics = (title, lyrics) => {
  */
 const _parseLyrics = (lyric, finalPassThrough, textKey) => {
 
+    // In other words, if lyric.time is a valid number.
     if (!finalPassThrough && !isNaN(lyric.time)) {
+
+        _tempStore._verseIndexCounter++
+
         // Add verse index to lyric object.
         lyric.verseIndex = _tempStore._verseIndexCounter
 
@@ -132,6 +136,10 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
 
         // Add time to song times.
         _tempStore._songTimes.push(lyric.time)
+
+    }
+
+    if (!isNaN(lyric.time)) {
     }
 
     if (Array.isArray(lyric)) {
@@ -158,11 +166,6 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
                 }
             })
         }
-    }
-
-    if (!isNaN(lyric.time)) {
-        // Increment counter here to allow annotation to get correct verseIndex.
-        _tempStore._verseIndexCounter++
     }
 
     // Doublespeaker lyrics have separate keys for each column.

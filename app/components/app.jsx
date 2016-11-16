@@ -262,7 +262,7 @@ class App extends Component {
             this.selectVerse()
 
             // Scroll to top of lyrics.
-            scrollElementIntoView('lyrics-scroll', 'home')
+            this.scrollElementIntoView('lyrics-scroll', 'home')
         }
     }
 
@@ -339,7 +339,7 @@ class App extends Component {
 
             selectedAnnotationIndex = getAnnotationIndexForDirection(this.props, this.props.selectedAnnotationIndex, direction)
 
-            scrollElementIntoView('annotation', selectedAnnotationIndex)
+            this.scrollElementIntoView('annotation', selectedAnnotationIndex)
         }
 
         this.props.selectAnnotationIndex(selectedAnnotationIndex)
@@ -460,7 +460,7 @@ class App extends Component {
         * and the selected verse is not.
         */
         if (scroll) {
-            scrollElementIntoView('verse', selectedVerseIndex)
+            this.scrollElementIntoView('verse', selectedVerseIndex)
         }
 
         this.setState({
@@ -483,9 +483,25 @@ class App extends Component {
     }
 
     selectLyricColumn(e, selectedIndex = 0, isSingleLyricColumn = this.state.isSingleLyricColumn) {
-        this.setState({
+
+        const newState = {
             selectedLyricColumnIndex: isSingleLyricColumn ? selectedIndex : 0
-        })
+        }
+
+        /**
+         * If accessed lyric element is annotation that's in a column, select
+         * its verse.
+         */
+        if (this.state.accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
+            const annotation = getAnnotation(this.props, this.state.accessedAnnotationIndex)
+
+            if (annotation && annotation.column) {
+                newState.accessedLyricElement = LYRIC_VERSE_ELEMENT
+                newState.accessedVerseIndex =  getVerseIndexForAnnotationIndex(this.props, this.state.accessedAnnotationIndex)
+            }
+        }
+
+        this.setState(newState)
     }
 
     hoverDot(e, hoveredDotIndex = 0) {

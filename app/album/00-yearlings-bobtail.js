@@ -30,11 +30,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `dot stanzas and side stanzas belong to last verse`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `skip hidden verses when showing right column`,
             workedHours: 0,
             neededHours: 2
@@ -48,11 +43,6 @@ module.exports = {
             taskName: `check what happens when *all* dots are deselected (try Didi)`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `cancel scroll if new scroll or if manually scrolled`,
-            workedHours: 0,
-            neededHours: 2
         },
         {
             taskName: `scroll to annotation after portal`,
@@ -153,6 +143,11 @@ module.exports = {
         //     taskName: `focus sections, and have them route events to app`,
         //     workedHours: 0,
         //     neededHours: 3
+        // },
+        // {
+        //     taskName: `cancel scroll if new scroll or if manually scrolled`,
+        //     workedHours: 0,
+        //     neededHours: 2
         // },
         {
             taskName: `refactor to get album objects`,
@@ -515,6 +510,11 @@ module.exports = {
             taskName: `doublespeaker verses should also know current annotation index for right column`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `dot stanzas and side stanzas belong to last verse`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
