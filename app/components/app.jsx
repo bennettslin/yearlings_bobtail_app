@@ -32,7 +32,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -488,6 +488,14 @@ class App extends Component {
             selectedLyricColumnIndex: isSingleLyricColumn ? selectedIndex : 0
         }
 
+        let lyricColumnShown
+
+        if (selectedIndex === 1) {
+            lyricColumnShown = LEFT
+        } else if (selectedIndex === 2) {
+            lyricColumnShown = RIGHT
+        }
+
         /**
          * If accessed lyric element is annotation that's in a column, select
          * its verse.
@@ -497,9 +505,12 @@ class App extends Component {
 
             if (annotation && annotation.column) {
                 newState.accessedLyricElement = LYRIC_VERSE_ELEMENT
-                newState.accessedVerseIndex =  getVerseIndexForAnnotationIndex(this.props, this.state.accessedAnnotationIndex)
+                newState.accessedVerseIndex =  getVerseIndexForAnnotationIndex(this.props, this.state.accessedAnnotationIndex, lyricColumnShown)
             }
+        } else {
+            newState.accessedVerseIndex =  getVerseIndexForDirection(this.props, this.state.accessedVerseIndex, undefined, lyricColumnShown)
         }
+
 
         this.setState(newState)
     }
