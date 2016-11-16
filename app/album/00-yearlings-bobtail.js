@@ -30,16 +30,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `skip hidden verses when showing right column`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `switching left and right lyric columns should default to new accessed verse and annotation`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `check what happens when *all* dots are deselected (try Didi)`,
             workedHours: 0,
             neededHours: 1
@@ -515,6 +505,16 @@ module.exports = {
             taskName: `dot stanzas and side stanzas belong to last verse`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `skip hidden verses when showing right column`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `switching left and right lyric columns should default to visible accessed verse`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
