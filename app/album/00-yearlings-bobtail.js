@@ -30,6 +30,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `begin list of persistence checks`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `persist lyric column`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `check what happens when *all* dots are deselected (try Didi)`,
             workedHours: 0,
             neededHours: 1

@@ -206,11 +206,7 @@ module.exports = {
                                     anchor: `"Freebird,"`,
                                     wiki: `Free_Bird`
                                 },
-                                `he sways and strums his ukulele, as if to the rumblings of his all-American mountain god. In actuality, of course, it's because Miriam, who happens to be`,
-                                {
-                                    emphasis: `my`,
-                                },
-                                `god, is humming along and tapping the underside of the dashboard with her feet.`
+                                `he strums his ukulele in rhythm to his all-American mountain god, whose rumblings retell the legend of an all-American phoenix.`
                             ]
                         }
                     },
@@ -246,7 +242,22 @@ module.exports = {
                         }
                     }
                 ],
-                right: `nods as she drums her toes.`
+                right: [
+                    `nods as`,
+                    {
+                        anchor: `she drums her toes.`,
+                        annotation: {
+                            description: [
+                                `Of course, he actually sways because Miriam, who happens to be`,
+                                {
+                                    emphasis: `my`,
+                                },
+                                `all-American god, is humming along and tapping the underside of the dashboard with her feet.`
+                            ]
+                        },
+                        todo: true
+                    }
+                ]
             },
             {
                 unitMap: true,
