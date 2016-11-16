@@ -26,6 +26,12 @@ export const getSong = ({ selectedSongIndex, songs }) => {
         songs[selectedSongIndex - 1] : {}
 }
 
+export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }, annotationIndex) => {
+    selectedSong = selectedSong || getSong(other)
+    return selectedSong.annotations ?
+            selectedSong.annotations[(annotationIndex || selectedAnnotationIndex) - 1] : null
+}
+
 export const getAnnotationsDotKeys = (props) => {
     const selectedSong = props.selectedSong || getSong(props)
 
@@ -34,22 +40,29 @@ export const getAnnotationsDotKeys = (props) => {
     }) : null
 }
 
-export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }, annotationIndex) => {
-    selectedSong = selectedSong || getSong(other)
-    return selectedSong.annotations ?
-            selectedSong.annotations[(annotationIndex || selectedAnnotationIndex) - 1] : null
-}
-
 const getAnnotationsLength = (props) => {
     const selectedSong = getSong(props)
     return selectedSong.annotations ? selectedSong.annotations.length : 0
 }
 
+export const getVerse = ({ selectedVerseIndex, ...other }, verseIndex) => {
+    const { lyrics } = getSong(other)
+    return _parseLyrics(lyrics, verseIndex || selectedVerseIndex)
+}
+
 const _shouldShowAnnotationForColumn = (annotation, lyricColumnShown) => {
+    if (!lyricColumnShown || !annotation.column) {
+        return true
+    }
+    return annotation.column === lyricColumnShown
+}
+
+const _shouldShowVerseForColumn = (verse, lyricColumnShown) => {
     if (!lyricColumnShown) {
         return true
     }
-    return annotation.column ? (annotation.column === lyricColumnShown) : true
+
+    return lyricColumnShown === LEFT ? !verse.rightColumn : !verse.leftColumn
 }
 
 export const getAnnotationIndexForDirection = (props, currentIndex = 1, direction, unpresentDirection, lyricColumnShown) => {
@@ -102,44 +115,6 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
     return currentIndex
 }
 
-export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, direction) => {
-    const annotation = getAnnotation(props),
-        selectedDotKeys = props.selectedDotKeys
-
-    if (annotation && annotation.popupAnchors) {
-
-        const { popupAnchors } = annotation,
-            popupAnchorsLength = popupAnchors.length
-
-        if (popupAnchorsLength < 2) {
-            return popupAnchorsLength
-        }
-
-        let returnIndex = currentIndex
-
-        // Skip over deselected popup anchors.
-        do {
-            if (typeof direction === 'undefined') {
-                direction = 0
-
-            } else if (direction === 0) {
-                direction = 1
-            }
-
-            // Remember that annotations are 1-based.
-            returnIndex = (returnIndex + popupAnchorsLength + direction - 1) % popupAnchorsLength + 1
-
-        /**
-         * Skip wiki anchors if wiki dot not selected, and portal anchors if
-         * portal dot not selected.
-         */
-        } while (((typeof popupAnchors[returnIndex - 1] === 'string' && !selectedDotKeys.wiki) || (typeof popupAnchors[returnIndex - 1] === 'object' && !selectedDotKeys.portal)) && !(direction !== 0 && currentIndex === returnIndex))
-        return returnIndex
-    }
-
-    return currentIndex
-}
-
 export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction, lyricColumnShown) => {
     const verse = getVerse({
             selectedVerseIndex: verseIndex,
@@ -180,9 +155,38 @@ export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction, ly
     return getAnnotationIndexForDirection(props, returnIndex, undefined, direction, lyricColumnShown)
 }
 
-export const getVerse = ({ selectedVerseIndex, ...other }) => {
-    const { lyrics } = getSong(other)
-    return _parseLyrics(lyrics, selectedVerseIndex)
+export const getVerseIndexForDirection = (props, currentIndex = 1, direction, lyricColumnShown) => {
+    const selectedSong = getSong(props)
+
+    if (selectedSong.times) {
+        const timesLength = selectedSong.times.length
+
+        let returnIndex = currentIndex
+
+        do {
+            if (typeof direction === 'undefined') {
+                direction = 0
+
+            // If this is the second time around, begin incrementing backwards.
+            } else if (direction === 0) {
+                direction = -1
+            }
+
+            // Verse indices are 0-based.
+            returnIndex = (returnIndex + timesLength + direction) % timesLength
+
+        } while (
+            // Continue if this verse is in the hidden column.
+            !_shouldShowVerseForColumn(getVerse(props, returnIndex), lyricColumnShown) &&
+
+            // And as long as we haven't exhausted all indices.
+            !(direction !== 0 && currentIndex === returnIndex)
+        )
+
+        return returnIndex
+    }
+
+    return currentIndex
 }
 
 export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
@@ -194,14 +198,39 @@ export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
     return annotation.verseIndex
 }
 
-export const getVerseIndexForDirection = (props, currentIndex = 1, direction = 1) => {
-    const selectedSong = getSong(props)
+export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, direction) => {
+    const annotation = getAnnotation(props),
+        selectedDotKeys = props.selectedDotKeys
 
-    if (selectedSong.times) {
-        const timesLength = selectedSong.times.length
+    if (annotation && annotation.popupAnchors) {
 
-        // Verse indices are 0-based.
-        return (currentIndex + timesLength + direction) % timesLength
+        const { popupAnchors } = annotation,
+            popupAnchorsLength = popupAnchors.length
+
+        if (popupAnchorsLength < 2) {
+            return popupAnchorsLength
+        }
+
+        let returnIndex = currentIndex
+
+        // Skip over deselected popup anchors.
+        do {
+            if (typeof direction === 'undefined') {
+                direction = 0
+
+            } else if (direction === 0) {
+                direction = 1
+            }
+
+            // Remember that annotations are 1-based.
+            returnIndex = (returnIndex + popupAnchorsLength + direction - 1) % popupAnchorsLength + 1
+
+        /**
+         * Skip wiki anchors if wiki dot not selected, and portal anchors if
+         * portal dot not selected.
+         */
+        } while (((typeof popupAnchors[returnIndex - 1] === 'string' && !selectedDotKeys.wiki) || (typeof popupAnchors[returnIndex - 1] === 'object' && !selectedDotKeys.portal)) && !(direction !== 0 && currentIndex === returnIndex))
+        return returnIndex
     }
 
     return currentIndex

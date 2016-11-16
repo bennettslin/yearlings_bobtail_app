@@ -262,7 +262,8 @@ export default {
         accessedVerseIndex,
         accessedLyricElement,
         selectVerse,
-        scrollElementIntoView
+        scrollElementIntoView,
+        lyricColumnShown
     }) {
         let newState,
             toSelectVerse = false,
@@ -291,7 +292,7 @@ export default {
         if (direction) {
             // If accessed element is already verse, proceed.
             if (accessedLyricElement === LYRIC_VERSE_ELEMENT) {
-                accessedVerseIndex = getVerseIndexForDirection(props, accessedVerseIndex, direction)
+                accessedVerseIndex = getVerseIndexForDirection(props, accessedVerseIndex, direction, lyricColumnShown)
                 newState = {
                     accessedVerseIndex,
 

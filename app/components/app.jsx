@@ -633,7 +633,8 @@ class App extends Component {
                                 accessedVerseIndex: this.state.accessedVerseIndex,
                                 accessedLyricElement: this.state.accessedLyricElement,
                                 selectVerse: this.selectVerse,
-                                scrollElementIntoView: this.scrollElementIntoView
+                                scrollElementIntoView: this.scrollElementIntoView,
+                                lyricColumnShown
                             })
 
                             if (newLyricState) {
