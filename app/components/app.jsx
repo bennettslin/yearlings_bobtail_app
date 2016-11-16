@@ -35,8 +35,8 @@ import { NAV_SECTION,
 import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
-import { scrollElementIntoView } from 'helpers/general-helper'
 import LogHelper from 'helpers/log-helper'
+import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 
 /*********
  * STORE *
@@ -201,6 +201,23 @@ class App extends Component {
         }
 
         return false
+    }
+
+    /**
+     * scrollIntoViewIfNeeded should return a cancel function. It presently
+     * does not. Keeping this in app component for now, in case this function
+     * is added later.
+     * https://www.npmjs.com/package/scroll-into-view-if-needed
+     */
+    scrollElementIntoView(className, index, duration = 75) {
+        const selector = `${className}-${index}`,
+            element = document.getElementsByClassName(selector)[0]
+
+        if (element) {
+            scrollIntoViewIfNeeded(element, false, {
+                duration
+            })
+        }
     }
 
     /*******************
@@ -586,9 +603,10 @@ class App extends Component {
                             accessedAnnotationIndex: this.state.accessedAnnotationIndex,
                             accessedVerseIndex: this.state.accessedVerseIndex,
                             accessedLyricElement: this.state.accessedLyricElement,
+                            lyricColumnShown,
                             selectAnnotation: this.selectAnnotation,
                             selectLyricColumn: this.selectLyricColumn,
-                            lyricColumnShown
+                            scrollElementIntoView: this.scrollElementIntoView
                         }) || {}
 
                         if (accessedSectionKey === LYRICS_SECTION) {
@@ -598,7 +616,8 @@ class App extends Component {
                                 accessedAnnotationIndex: this.state.accessedAnnotationIndex,
                                 accessedVerseIndex: this.state.accessedVerseIndex,
                                 accessedLyricElement: this.state.accessedLyricElement,
-                                selectVerse: this.selectVerse
+                                selectVerse: this.selectVerse,
+                                scrollElementIntoView: this.scrollElementIntoView
                             })
 
                             if (newLyricState) {

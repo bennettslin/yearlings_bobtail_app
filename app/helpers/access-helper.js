@@ -3,7 +3,6 @@ import { getAnnotationIndexForDirection,
          getVerseIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
-import { scrollElementIntoView } from 'helpers/general-helper'
 
 import { NAV_SECTION,
          AUDIO_SECTION,
@@ -172,9 +171,10 @@ export default {
         accessedAnnotationIndex,
         accessedLyricElement,
         accessedVerseIndex,
+        lyricColumnShown,
         selectAnnotation,
         selectLyricColumn,
-        lyricColumnShown
+        scrollElementIntoView
     }) {
         let newState,
             toSelectAnnotation = false,
@@ -259,7 +259,8 @@ export default {
         accessedAnnotationIndex,
         accessedVerseIndex,
         accessedLyricElement,
-        selectVerse
+        selectVerse,
+        scrollElementIntoView
     }) {
         let newState,
             toSelectVerse = false,
