@@ -100,7 +100,7 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                // todo: make clear that Catherine would die in my bookless room.
+                                // TODO: make clear that Catherine would die in my bookless room.
                                 `A reference to the classic "Who's buried in`,
                                 {
                                     anchor: `Grant's tomb"`,
@@ -599,11 +599,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `include wiki urls`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -625,6 +620,11 @@ module.exports = {
             subtasks: [
 
             ]
+        },
+        {
+            taskName: `include wiki urls`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

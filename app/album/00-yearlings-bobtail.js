@@ -35,11 +35,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `check what happens when *all* dots are deselected (try Didi)`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `scroll to annotation after portal`,
             workedHours: 0,
             neededHours: 2
@@ -523,6 +518,11 @@ module.exports = {
         },
         {
             taskName: `persist lyric column`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `check what happens when *all* dots are deselected (try Didi)`,
             workedHours: 1,
             neededHours: 1
         }
