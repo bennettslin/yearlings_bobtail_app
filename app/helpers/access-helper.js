@@ -198,7 +198,7 @@ export default {
             case 'R':
                 if (!fromAnnotationSection) {
                     // Handle selection of left or right lyric column.
-                    selectLyricColumn(undefined, keyName === 'e' || keyName === 'E' ? 1 : 2)
+                    selectLyricColumn(undefined, keyName === 'e' || keyName === 'E' ? 0 : 1)
                     return
                 }
                 break

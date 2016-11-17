@@ -28,7 +28,7 @@ const LyricsUnit = ({
             topSideStanza,
             bottomSideStanza } = stanzaArray[stanzaArray.length - 1],
 
-        hiddenLyricColumnKey = selectedLyricColumnIndex ? LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2]: null,
+        hiddenLyricColumnKey = selectedLyricColumnIndex >= 0 ? LYRIC_COLUMN_KEYS[(selectedLyricColumnIndex + 1) % 2] : null,
         isBottomOnly = !topSideStanza && bottomSideStanza,
         topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
         isDotOnly = dotStanza && stanzaArray.length === 1,

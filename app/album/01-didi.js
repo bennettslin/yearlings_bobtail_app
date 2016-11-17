@@ -80,7 +80,10 @@ module.exports = {
                     {
                         anchor: `didn't want you here.`,
                         annotation: {
-                            description: `My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I remember the panic I felt when this happened.`
+                            description: `My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I remember the panic I felt when this happened.`,
+                            dotKeys: {
+                                afterword: true
+                            }
                         }
                     }
                 ]
@@ -107,7 +110,10 @@ module.exports = {
                                     italic: `Zeizei`
                                 },
                                 `means "big sister" in Chinese.`
-                            ]
+                            ],
+                            dotKeys: {
+                                afterword: true
+                            }
                         }
                     },
                     `let Didi play with you…"`
@@ -202,7 +208,10 @@ module.exports = {
                     {
                         anchor: `sheriff's badge and gun…`,
                         annotation: {
-                            description: `After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what the label entailed. My mother's tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.`
+                            description: `After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what the label entailed. My mother's tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.`,
+                            dotKeys: {
+                                afterword: true
+                            }
                         }
                     }
                 ]
@@ -224,7 +233,10 @@ module.exports = {
                     {
                         anchor: `girls' mirrors.`,
                         annotation: {
-                            description: `My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`
+                            description: `My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
+                            dotKeys: {
+                                afterword: true
+                            }
                         }
                     }
                 ]
