@@ -9,6 +9,7 @@ import { selectSongIndex,
          selectDotKey,
          selectOverviewIndex,
          selectAudioOptionIndex,
+         selectLyricColumnIndex,
          selectWikiIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
@@ -24,6 +25,7 @@ import { NAV_SECTION,
 
          LYRIC_VERSE_ELEMENT,
          LYRIC_ANNOTATION_ELEMENT,
+         LYRIC_COLUMN_KEYS,
 
          WIKI,
 
@@ -50,6 +52,7 @@ const passReduxStateToProps = ({
     selectedDotKeys,
     selectedOverviewIndex,
     selectedAudioOptionIndex,
+    selectedLyricColumnIndex,
     selectedWikiIndex,
     accessedOn,
     accessedSectionIndex
@@ -62,6 +65,7 @@ const passReduxStateToProps = ({
     selectedDotKeys,
     selectedOverviewIndex,
     selectedAudioOptionIndex,
+    selectedLyricColumnIndex,
     selectedWikiIndex,
     accessedOn,
     accessedSectionIndex
@@ -77,6 +81,7 @@ const bindDispatchToProps = (dispatch) => (
         selectDotKey,
         selectOverviewIndex,
         selectAudioOptionIndex,
+        selectLyricColumnIndex,
         selectWikiIndex,
         accessOn,
         accessSectionIndex
@@ -112,8 +117,7 @@ class App extends Component {
             accessedDotIndex: 0,
             hoveredDotIndex: 0,
             hoveredLineIndex: 0,
-            isSingleLyricColumn: true,
-            selectedLyricColumnIndex: 1
+            isSingleLyricColumn: true
         }
     }
 
@@ -482,19 +486,10 @@ class App extends Component {
         })
     }
 
-    selectLyricColumn(e, selectedIndex = 0, isSingleLyricColumn = this.state.isSingleLyricColumn) {
+    selectLyricColumn(e, selectedLyricColumnIndex = 0, isSingleLyricColumn = this.state.isSingleLyricColumn) {
 
-        const newState = {
-            selectedLyricColumnIndex: isSingleLyricColumn ? selectedIndex : 0
-        }
-
-        let lyricColumnShown
-
-        if (selectedIndex === 1) {
-            lyricColumnShown = LEFT
-        } else if (selectedIndex === 2) {
-            lyricColumnShown = RIGHT
-        }
+        const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
+        let newState = {}
 
         /**
          * If accessed lyric element is annotation that's in a column, select
@@ -511,7 +506,7 @@ class App extends Component {
             newState.accessedVerseIndex =  getVerseIndexForDirection(this.props, this.state.accessedVerseIndex, undefined, lyricColumnShown)
         }
 
-
+        this.props.selectLyricColumnIndex(selectedLyricColumnIndex)
         this.setState(newState)
     }
 
@@ -621,7 +616,7 @@ class App extends Component {
                     case ANNOTATION_SECTION:
                     case LYRICS_SECTION:
                         const fromAnnotationSection = accessedSectionKey === ANNOTATION_SECTION,
-                            lyricColumnShown = this.state.isSingleLyricColumn ? (this.state.selectedLyricColumnIndex === 1 ? LEFT : RIGHT) : undefined
+                            lyricColumnShown = this.state.isSingleLyricColumn ? (LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]) : undefined
 
                         newState = AccessHelper.handleLyricsAndAnnotationAccess({
                             keyName,

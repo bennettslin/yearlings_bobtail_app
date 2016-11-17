@@ -35,11 +35,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `persist lyric column`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `check what happens when *all* dots are deselected (try Didi)`,
             workedHours: 0,
             neededHours: 1
@@ -525,6 +520,11 @@ module.exports = {
             taskName: `switching left and right lyric columns should default to visible accessed verse`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `persist lyric column`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

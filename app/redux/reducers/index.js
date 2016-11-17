@@ -6,6 +6,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_AUDIO_OPTION_INDEX,
+         SELECTED_LYRIC_COLUMN_INDEX,
          SELECTED_WIKI_INDEX,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
@@ -19,6 +20,7 @@ const { getFromSession } = SessionHelper,
     storedDotKeys = getFromSession(SELECTED_DOT_KEYS),
     storedOverviewIndex = getFromSession(SELECTED_OVERVIEW_INDEX),
     storedAudioOptionIndex = getFromSession(SELECTED_AUDIO_OPTION_INDEX),
+    storedLyricColumnIndex = getFromSession(SELECTED_LYRIC_COLUMN_INDEX),
     storedWikiIndex = getFromSession(SELECTED_WIKI_INDEX),
     storedAccessedOn = getFromSession(ACCESSED_ON),
     storedAccessedSectionIndex = getFromSession(ACCESSED_SECTION_INDEX)
@@ -101,6 +103,15 @@ export const AudioOptionIndexReducer = (state = storedAudioOptionIndex, action) 
     }
 }
 
+export const LyricColumnIndexReducer = (state = storedLyricColumnIndex, action) => {
+    switch (action.type) {
+        case SELECTED_LYRIC_COLUMN_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
 export const AccessedOnReducer = (state = storedAccessedOn, action) => {
     switch (action.type) {
         case ACCESSED_ON:
@@ -127,6 +138,7 @@ const rootReducer = combineReducers({
     selectedDotKeys: DotKeysReducer,
     selectedOverviewIndex: OverviewIndexReducer,
     selectedAudioOptionIndex: AudioOptionIndexReducer,
+    selectedLyricColumnIndex: LyricColumnIndexReducer,
     selectedWikiIndex: WikiIndexReducer,
     accessedOn: AccessedOnReducer,
     accessedSectionIndex: AccessedSectionIndexReducer

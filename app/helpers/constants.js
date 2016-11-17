@@ -50,6 +50,7 @@ module.exports = {
     SELECTED_TIME_PLAYED: 'selectedTimePlayed',
     SELECTED_DOT_KEYS: 'selectedDotKeys',
     SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
+    SELECTED_LYRIC_COLUMN_INDEX: 'selectedLyricColumnIndex',
     ACCESSED_ON: 'accessedOn',
     ACCESSED_SECTION_INDEX: 'accessedSectionIndex',
 

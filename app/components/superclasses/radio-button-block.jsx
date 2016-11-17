@@ -13,8 +13,8 @@ const RadioButtonBlock = ({
 
 ...other }) => {
 
-    const selectedButtonKey = selectedButtonIndex > 0 ?
-        buttonKeys[selectedButtonIndex - 1] : null
+    const selectedButtonKey = selectedButtonIndex >= 0 ?
+        buttonKeys[selectedButtonIndex] : null
 
     return (
         <RadioButtonBlockView {...other}

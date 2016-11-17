@@ -13,7 +13,7 @@ const RadioButton = ({
 ...other }) => {
 
     const onClick = !isDisabled ?
-            e => onButtonClick(e, buttonIndex + 1) : null
+            e => onButtonClick(e, buttonIndex) : null
 
     return (
         <RadioButtonView {...other}
