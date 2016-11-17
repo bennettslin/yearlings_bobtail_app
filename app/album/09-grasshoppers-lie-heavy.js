@@ -823,13 +823,12 @@ module.exports = {
                         anchor: `Grace Darling's beacon`,
                         properNoun: true,
                         annotation: {
-                            // TODO: Elaborate on how she rescued me.
                             description: [
                                 {
                                     anchor: `Grace Darling`,
                                     wiki: `Grace_Darling`
                                 },
-                                `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26.`
+                                `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26. And, of course, Sita was my "grace darling," having rescued me from a sea of loneliness.`
                             ],
                             portal: `grey_starling`
                         }

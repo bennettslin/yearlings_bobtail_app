@@ -76,7 +76,7 @@ module.exports = {
                         anchor: `bookless room,`,
                         annotation: [
                             {
-                                description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I said, only partly in jest. In hindsight, that was probably the beginning of the end.`,
+                                description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I said, only partly in jest.`,
                                 dotKeys: {
                                     foreshadow: true,
                                     music: true
@@ -100,17 +100,16 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                // todo: make clear that Catherine would die in my bookless room.
                                 `A reference to the classic "Who's buried in`,
                                 {
                                     anchor: `Grant's tomb"`,
                                     wiki: `Grant%27s_Tomb`
                                 },
-                                `riddle, of course, but also to James Joyce's masterpiece novel. It was Catherine's admiration for Joyce that later motivated me to create "the`,
+                                `riddle, of course, but also to James Joyce's masterpiece novel`,
                                 {
-                                    italic: `Ulysses`
+                                    italic: `Ulysses,`
                                 },
-                                `of rock albums."`
+                                `which Catherine was reading at the time. In hindsight, that night was probably the beginning of the end, as Catherine surmised that a boyfriend who doesn't read would be the death of her.`
                             ]
                         }
                     },
@@ -586,6 +585,7 @@ module.exports = {
                 }
             }
         ]
+        // TODO: Afterword should mention that Catherine inspired me to create the Ulysses of rock albums. Consider moving it from overview.
     ],
     tasks: [
         {
