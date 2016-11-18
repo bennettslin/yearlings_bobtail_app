@@ -31,7 +31,7 @@ module.exports = {
         }
     ],
     tip: {
-
+        description: 'placeholder tip'
     },
     totalTime: 175,
     overview: `With The Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. And yet, my depression didn't abate, but instead simmered into a hard-boiled anger. I also began to regret my relationship with Sita, which now felt like a decision I was coerced to make, under deprived conditions from which I'd since been freed.`,

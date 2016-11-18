@@ -21,7 +21,7 @@ module.exports = {
         }
     ],
     tip: {
-
+        description: 'placeholder tip'
     },
     overview: 'placeholder text',
     pageStartingIndices: [0, 9],

@@ -29,7 +29,7 @@ module.exports = {
         }
     ],
     tip: {
-
+        description: 'placeholder tip'
     },
     totalTime: 131,
     overview: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,

@@ -42,7 +42,7 @@ module.exports = {
         }
     ],
     tip: {
-
+        description: 'placeholder tip'
     },
     doubleColumns: true,
     totalTime: 272,

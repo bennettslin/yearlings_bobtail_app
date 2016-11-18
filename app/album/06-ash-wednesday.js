@@ -28,7 +28,7 @@ module.exports = {
         }
     ],
     tip: {
-
+        description: 'placeholder tip'
     },
     totalTime: 163,
     overview: `In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I probably have Catherine to thank for that.`,
