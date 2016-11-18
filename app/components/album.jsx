@@ -4,6 +4,7 @@ import TitleSection from './title/title-section'
 import AudioSection from './audio/audio-section'
 import DevSection from './dev/dev-section'
 import NavSection from './nav/nav-section'
+import TipsSection from './tips/tips-section'
 import ProgressHelper from 'helpers/progress-helper'
 
 /*************
@@ -70,6 +71,8 @@ const AlbumView = ({
                 accessedSectionKey={accessedSectionKey}
                 onPlayClick={onPlayClick}
                 onAudioOptionClick={onAudioOptionClick}
+            />
+            <TipsSection
             />
             <DevSection
                 selectedTimePlayed={selectedTimePlayed}

@@ -3,6 +3,7 @@ import Song from './song'
 import NotesSection from './notes/notes-section'
 import OverviewsSection from './overviews/overviews-section'
 import StatsSection from './stats/stats-section'
+import StageSection from './stage/stage-section'
 import TasksSection from './tasks/tasks-section'
 import { getSong, getTasks } from 'helpers/album-view-helper'
 
@@ -73,6 +74,7 @@ const SharedView = ({
             <TasksSection
                 tasks={tasks}
             />
+            <StageSection />
             <NotesSection />
         </div>
         {selectedSongIndex ?
