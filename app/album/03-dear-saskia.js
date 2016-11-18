@@ -7,6 +7,23 @@ module.exports = {
             description: `Sasha's given name was actually Saskia, but because this was difficult for children to pronounce, she had gone by the nickname of Sasha her entire life.`
         }
     },
+    scenes: [
+        {
+            time: 0,
+            description: 'placeholder description'
+        },
+        {
+            time: 0,
+            description: 'placeholder description'
+        },
+        {
+            time: 0,
+            description: 'placeholder description'
+        }
+    ],
+    tip: {
+
+    },
     totalTime: 171,
     overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, as I felt no cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away in middle school, just as I began dealing with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyrics: [

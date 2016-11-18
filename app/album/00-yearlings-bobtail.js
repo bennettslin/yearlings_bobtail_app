@@ -6,6 +6,23 @@ module.exports = {
     // Ulysses of rock albums.
     // Wrote and recorded all the parts myself.
     // Released in 2006.
+    scenes: [
+        {
+            time: 0,
+            description: 'placeholder description'
+        },
+        {
+            time: 0,
+            description: 'placeholder description'
+        },
+        {
+            time: 0,
+            description: 'placeholder description'
+        }
+    ],
+    tip: {
+
+    },
     overview: 'placeholder text',
     pageStartingIndices: [0, 9],
     songs: [

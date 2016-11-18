@@ -10,6 +10,7 @@ import { selectSongIndex,
          selectOverviewIndex,
          selectAudioOptionIndex,
          selectLyricColumnIndex,
+         selectTipsIndex,
          selectWikiIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
@@ -53,6 +54,7 @@ const passReduxStateToProps = ({
     selectedOverviewIndex,
     selectedAudioOptionIndex,
     selectedLyricColumnIndex,
+    selectedTipsIndex,
     selectedWikiIndex,
     accessedOn,
     accessedSectionIndex
@@ -66,6 +68,7 @@ const passReduxStateToProps = ({
     selectedOverviewIndex,
     selectedAudioOptionIndex,
     selectedLyricColumnIndex,
+    selectedTipsIndex,
     selectedWikiIndex,
     accessedOn,
     accessedSectionIndex
@@ -82,6 +85,7 @@ const bindDispatchToProps = (dispatch) => (
         selectOverviewIndex,
         selectAudioOptionIndex,
         selectLyricColumnIndex,
+        selectTipsIndex,
         selectWikiIndex,
         accessOn,
         accessSectionIndex
@@ -150,6 +154,7 @@ class App extends Component {
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
         this.selectLyricColumnWidth = this.selectLyricColumnWidth.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
+        this.selectTips = this.selectTips.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
@@ -293,6 +298,18 @@ class App extends Component {
          * Stored as integer. 0 is to "continue after next," 1 is to "repeat," 2 is to "pause after song."
          */
         this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
+    }
+
+    selectTips(e, selectedTipsIndex) {
+        // TODO: Also make this one not hard-coded.
+        const tipsLength = 3
+
+        this._stopPropagation(e)
+        if (typeof selectedTipsIndex === 'undefined') {
+            selectedTipsIndex = (this.props.selectedTipsIndex + 1) % tipsLength
+        }
+
+        this.props.selectTipsIndex(selectedTipsIndex)
     }
 
     selectDot(e, selectedDotKey) {
@@ -766,6 +783,7 @@ class App extends Component {
                     onScreenWidthClick={this.selectLyricColumnWidth}
                     onLyricColumnClick={this.selectLyricColumn}
                     onAnnotationSectionClick={this.handleAnnotationSectionClick}
+                    onTipsClick={this.selectTips}
                 />
             </div>
         )

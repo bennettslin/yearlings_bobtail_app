@@ -41,12 +41,14 @@ const AlbumView = ({
     selectedSongIndex,
     selectedVerseIndex,
     selectedAudioOptionIndex,
+    selectedTipsIndex,
     selectedTimePlayed,
     isSingleLyricColumn,
     onSongClick,
     onPlayClick,
     onAudioOptionClick,
     onScreenWidthClick,
+    onTipsClick,
     accessedOn,
     accessedSectionKey,
     accessedSongIndex,
@@ -73,6 +75,8 @@ const AlbumView = ({
                 onAudioOptionClick={onAudioOptionClick}
             />
             <TipsSection
+                selectedTipsIndex={selectedTipsIndex}
+                onTipsClick={onTipsClick}
             />
             <DevSection
                 selectedTimePlayed={selectedTimePlayed}

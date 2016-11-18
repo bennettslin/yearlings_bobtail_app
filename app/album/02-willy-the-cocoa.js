@@ -7,6 +7,23 @@ module.exports = {
             description: `Kids in the neighbourhood called Willy "The Cocoa," referring both to his Coke bottles and to his seeming a bit "cuckoo." `
         }
     },
+    scenes: [
+        {
+            time: 0,
+            description: 'placeholder description'
+        },
+        {
+            time: 0,
+            description: 'placeholder description'
+        },
+        {
+            time: 0,
+            description: 'placeholder description'
+        }
+    ],
+    tip: {
+
+    },
     totalTime: 207,
     overview: `Willy was an autistic man who wandered our neighbourhood collecting recyclables for a living. One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
     lyrics: [

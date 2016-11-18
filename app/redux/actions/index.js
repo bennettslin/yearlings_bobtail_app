@@ -6,6 +6,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_AUDIO_OPTION_INDEX,
          SELECTED_LYRIC_COLUMN_INDEX,
+         SELECTED_TIPS_INDEX,
          SELECTED_WIKI_INDEX,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
@@ -84,6 +85,14 @@ export const selectLyricColumnIndex = (selectedLyricColumnIndex = 0) => {
     return {
         type: SELECTED_LYRIC_COLUMN_INDEX,
         payload: selectedLyricColumnIndex
+    }
+}
+
+export const selectTipsIndex = (selectedTipsIndex = 0) => {
+    setInSession(SELECTED_TIPS_INDEX, selectedTipsIndex)
+    return {
+        type: SELECTED_TIPS_INDEX,
+        payload: selectedTipsIndex
     }
 }
 

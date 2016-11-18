@@ -7,6 +7,23 @@ module.exports = {
             description: `I once read that we typically dream four times per night. Over a lifetime, that's about 100,000 dreams. This song, then, is about the very last dream I'll ever dream.`
         }
     },
+    scenes: [
+        {
+            time: 0,
+            description: 'placeholder description'
+        },
+        {
+            time: 0,
+            description: 'placeholder description'
+        },
+        {
+            time: 0,
+            description: 'placeholder description'
+        }
+    ],
+    tip: {
+
+    },
     totalTime: 244,
     overview: `Every night I dreamt of reuniting with Sita, only to wake up in a panicked sweat as the reality came roaring back that I had lost her forever. I would slog through the day under a crushing blanket of despair, then crawl back into bed with dread, awaiting the cruel tricks soon to be played by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
     lyrics: [

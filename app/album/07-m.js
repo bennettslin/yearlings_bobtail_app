@@ -7,6 +7,23 @@ module.exports = {
             description: `To avoid mentioning Mara by name, I entitled this song "M," which I planned to explain by packing the lyrics with words that start with the letter M. In hindsight, I probably wasn't fooling anyone.`
         }
     },
+    scenes: [
+        {
+            time: 0,
+            description: 'placeholder description'
+        },
+        {
+            time: 0,
+            description: 'placeholder description'
+        },
+        {
+            time: 0,
+            description: 'placeholder description'
+        }
+    ],
+    tip: {
+
+    },
     totalTime: 215,
     overview: `After a string of dating flops that culminated in the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.`,
     lyrics: [

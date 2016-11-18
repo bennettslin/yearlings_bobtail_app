@@ -7,6 +7,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_OVERVIEW_INDEX,
          SELECTED_AUDIO_OPTION_INDEX,
          SELECTED_LYRIC_COLUMN_INDEX,
+         SELECTED_TIPS_INDEX,
          SELECTED_WIKI_INDEX,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
@@ -21,6 +22,7 @@ const { getFromSession } = SessionHelper,
     storedOverviewIndex = getFromSession(SELECTED_OVERVIEW_INDEX),
     storedAudioOptionIndex = getFromSession(SELECTED_AUDIO_OPTION_INDEX),
     storedLyricColumnIndex = getFromSession(SELECTED_LYRIC_COLUMN_INDEX),
+    storedTipsIndex = getFromSession(SELECTED_TIPS_INDEX),
     storedWikiIndex = getFromSession(SELECTED_WIKI_INDEX),
     storedAccessedOn = getFromSession(ACCESSED_ON),
     storedAccessedSectionIndex = getFromSession(ACCESSED_SECTION_INDEX)
@@ -112,6 +114,15 @@ export const LyricColumnIndexReducer = (state = storedLyricColumnIndex, action) 
     }
 }
 
+export const TipsIndexReducer = (state = storedTipsIndex, action) => {
+    switch (action.type) {
+        case SELECTED_TIPS_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
 export const AccessedOnReducer = (state = storedAccessedOn, action) => {
     switch (action.type) {
         case ACCESSED_ON:
@@ -139,6 +150,7 @@ const rootReducer = combineReducers({
     selectedOverviewIndex: OverviewIndexReducer,
     selectedAudioOptionIndex: AudioOptionIndexReducer,
     selectedLyricColumnIndex: LyricColumnIndexReducer,
+    selectedTipsIndex: TipsIndexReducer,
     selectedWikiIndex: WikiIndexReducer,
     accessedOn: AccessedOnReducer,
     accessedSectionIndex: AccessedSectionIndexReducer
