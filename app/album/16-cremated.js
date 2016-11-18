@@ -130,10 +130,9 @@ module.exports = {
             {
                 time: 34,
                 left: [
-                    `his beaten`,
+                    `his`,
                     {
-                        // TODO: Connect id to drunken personality.
-                        anchor: `wit and id`,
+                        anchor: `beaten wit and id`,
                         annotation: {
                             description: [
                                 `In Freudian psychology, the`,
@@ -141,7 +140,7 @@ module.exports = {
                                     anchor: `id`,
                                     wiki: `Id,_ego_and_super-ego`
                                 },
-                                `represents the primal impulses of the psyche. I told Miriam about my drunken personality, and explained my belief that allowing it to win over my thoughts, and even to arbitrate life decisions, was the key to keeping my creative juices flowing.`
+                                `represents the primal impulses of the psyche. I told Miriam about my id, otherwise known as my drunken personality, and explained my belief that allowing it to win over my rational thoughts was the key to keeping my creative juices flowing.`
                             ]
                         }
                     },
@@ -172,7 +171,7 @@ module.exports = {
                     {
                         anchor: `good for anecdotes.`,
                         annotation: {
-                            description: `Though Miriam was fascinated by my character, it wasn't in the way one should hope, which blew apart my theory that interestingness at all costs is the key to dating. I was the oddball ex providing grist for a lifetime of amusing tales, not the life companion to whom she would one day tell them.`
+                            description: `Though Miriam was entertained by my character, it wasn't in the way one should hope, which blew apart my theory that interestingness at all costs is the key to dating. I was the oddball ex providing grist for a lifetime of amusing tales, not the life companion to whom she would one day tell them.`
                         }
                     }
                 ],
@@ -236,7 +235,7 @@ module.exports = {
                                     anchor: `Martin and Lewis,`,
                                     wiki: `Martin_and_Lewis`
                                 },
-                                `my two personalities would befuddle each other, much to Miriam's entertainment. But even so, she recognised the mental distress that fueled this spectacle, and wanted no lasting part in it.`
+                                `my two personalities would befuddle each other, much to Miriam's delight. But even so, she recognised the mental distress that fueled this spectacle, and wanted no lasting part in it.`
                             ]
                         }
                     }

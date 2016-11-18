@@ -328,7 +328,6 @@ module.exports = {
                 lyric: [
                     `your`,
                     {
-                        // TODO: Make analogy more clear.
                         anchor: `severed stinger`,
                         annotation: {
                             description: [
@@ -337,7 +336,7 @@ module.exports = {
                                     anchor: `honeybee`,
                                     wiki: `Honey_bee`
                                 },
-                                `has a barbed stinger that stays lodged in a person's skin. At the time, I failed to appreciate what it meant to Sita to have given her virginity to me, and how it drove her to keep trying to make things work.`
+                                `has a barbed stinger that stays lodged in a person's skin. At the time, I failed to appreciate what it meant to Sita to have given her virginity to me. She had to make things work, because a part of me was now permanently lodged inside of her.`
                             ]
                         }
                     },
@@ -397,14 +396,14 @@ module.exports = {
                     {
                         anchor: `honeybee?`,
                         annotation: {
-                            description: `A honeybee will die after stinging a person, as its stinger is attached to vital organs. Having given my virginity to Sita in return, I realised too late that there was something inside me that could never be recovered apart from her as well.`
+                            description: `A honeybee will die after stinging someone, as its stinger is connected to vital organs. Having given my virginity to Sita in return, I realised too late that there was something inside me that could never be recovered apart from her as well.`
                         }
                     },
                     `Come for me? At`,
                     {
                         anchor: `thirty-three?`,
                         annotation: {
-                            description: `I hated the idea of getting older, and often joked that I would kill myself at thirty-three, the age at which Jesus was crucified, since clearly that was all the time one needed to change the world. So when I suggested it as the age at which I would return for Sita in accordance with our little pact, the subtext was understood.`
+                            description: `I hated the idea of getting older and often joked that I would kill myself at thirty-three, the age at which Jesus was crucified, since clearly that was all the time one needed to change the world. So when I suggested to Sita that I would come back to look for her at thirty-three, in accordance with our little pact, the subtext was understood.`
                         }
                     }
                 ]
