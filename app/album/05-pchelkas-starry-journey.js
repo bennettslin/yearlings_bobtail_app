@@ -882,6 +882,7 @@ module.exports = {
         ],
         [
             {
+                // TODO: Music mention David Bowie's space oddity.
                 time: 193,
                 lyric: [
                     `"Kids say you're`,
