@@ -328,10 +328,10 @@ module.exports = {
                             description: [
                                 `Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the`,
                                 {
-                                    anchor: `Magyars`,
+                                    anchor: `"Magyars"`,
                                     wiki: `Hungarians`
                                 },
-                                `are a Finno-Ugric people who migrated from the Ural Mountains and established the state of Hungary.`
+                                `are a Finno-Ugric people who "migrated" from the Ural Mountains and established the state of Hungary.`
                             ]
                         }
                     },
@@ -342,7 +342,7 @@ module.exports = {
                             description: [
                                 `The Magyars share genetic ancestry with the`,
                                 {
-                                    anchor: `Mongols,`,
+                                    anchor: `"Mongols,"`,
                                     wiki: `Mongols`
                                 },
                                 `an East Asian nomadic people.`
@@ -355,7 +355,7 @@ module.exports = {
                             description: [
                                 `Back in the day, the Robitussin we took contained`,
                                 {
-                                    anchor: `pseudoephedrine,`,
+                                    anchor: `"pseudoephedrine,"`,
                                     wiki: `Pseudoephedrine`
                                 },
                                 `a decongestant. Because of its use in the illicit manufacture of methamphetamine, however, this is no longer the case.`
@@ -400,10 +400,10 @@ module.exports = {
                         annotation: {
                             description: [
                                 {
-                                    anchor: `Genghis Khan,`,
+                                    anchor: `"Genghis Khan,"`,
                                     wiki: `Genghis_Khan`
                                 },
-                                `who was born Temujin, founded the Mongol Empire.`
+                                `who was born "Temujin," founded the Mongol Empire.`
                             ]
                         }
                     },
@@ -414,7 +414,7 @@ module.exports = {
                             description: [
                                 `Genghis Khan was able to unite the Mongols by defeating the`,
                                 {
-                                    anchor: `Tatars,`,
+                                    anchor: `"Tatars,"`,
                                     wiki: `Tatars`
                                 },
                                 `a rival tribe. Like a "teeter-totter," I was wavering back and forth on whether to take Robitussin that night, since I'd just taken it a few days prior, and Robitussin really destroys you both mentally and physically. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in and kills off any lingering protests from my inner "teetotaler."`
@@ -450,7 +450,7 @@ module.exports = {
                                     anchor: `Mughals,`,
                                     wiki: `Mughal_Empire`
                                 },
-                                `descendants of Tamerlane, conquered the Hindu populations of the Indian subcontinent. In Hinduism, an`,
+                                `Muslim descendants of Tamerlane, conquered the Hindu populations of the Indian subcontinent. In Hinduism, an`,
                                 {
                                     anchor: `avatar`,
                                     wiki: `Avatar`
@@ -560,7 +560,7 @@ module.exports = {
                                         wiki: `Daeva`
                                     }
                                 },
-                                `in the Avesta refers to a demon. Thus, whether one "foresees a hero" or "senses great devastation" as the "deva's day shone" depends on which side of the rift one has aligned with.`
+                                `in the Avesta refers to a demon. Thus, whether one "foresees a hero" or "senses great devastation" as the "deva's day shone" depends on which side of the rift one is aligned with.`
                             ]
                         }
                     }
