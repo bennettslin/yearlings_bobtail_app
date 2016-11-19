@@ -326,7 +326,7 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                `Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the entrances to the steam tunnels, which are hidden amongst "old, sealed-off drains." Also, the`,
+                                `Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the hidden grate that leads down to the steam tunnels. Also, the`,
                                 {
                                     anchor: `"Magyars"`,
                                     wiki: `Hungarians`
@@ -358,7 +358,7 @@ module.exports = {
                                     anchor: `"pseudoephedrine,"`,
                                     wiki: `Pseudoephedrine`
                                 },
-                                `a decongestant. Because of its use in the illicit manufacture of methamphetamine, however, this is no longer the case.`
+                                `a decongestant. Because of its use in the illicit manufacture of methamphetamine, however, this is no longer the case. Also, the entrance to the steam tunnels is hidden "among old, sealed-off drains."`
                             ]
                         }
                     }

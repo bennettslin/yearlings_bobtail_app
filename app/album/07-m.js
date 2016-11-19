@@ -457,7 +457,7 @@ module.exports = {
         [
             {
                 /**
-                 * TODO: link to urchin in Odin, mention that Mara had a lisp?
+                 * TODO: link to urchin in Odin?
                  */
                 time: 143,
                 lyric: [
@@ -466,13 +466,12 @@ module.exports = {
                         anchor: `chimney sweep,`,
                         annotation: {
                             description: [
-                                // TODO: finish this one, break out lisp.
                                 `British tradition holds that a kiss from a`,
                                 {
                                     anchor: `chimney sweep`,
                                     wiki: `Chimney_sweep`
                                 },
-                                `will bring good luck to a bride on her wedding day. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, for themselves only a lifetime of ill health awaited. Similarly, any kiss from Mara xxx would be given in courtesy, further highlighting my misfortune of not being with her.`
+                                `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, for themselves only a lifetime of ill health awaited. Similarly, any kiss blown from Mara on her wedding day would only highlight my misfortune of not being with her.`
                             ],
                             portal: `chimney_sweep`
                         }
