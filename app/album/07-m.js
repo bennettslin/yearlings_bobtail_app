@@ -75,7 +75,7 @@ module.exports = {
                     {
                         anchor: `learning the talents`,
                         annotation: {
-                            description: `Much like my previous failures, the breakup with Catherine was uneventful. After all, I'd done nothing wrong, per se; I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. What I needed was to secure my future chances by taking time off and building myself up from scratch, with everything that Catherine found lacking in me to serve as my template.`
+                            description: `The breakup with Catherine was uneventful, since I'd done nothing wrong, per se. I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up tons of attractive traits from scratch, with everything that Catherine found lacking in me to serve as my template.`
                         }
                     }
                 ]
@@ -105,7 +105,7 @@ module.exports = {
                                     anchor: `five-year plans`,
                                     wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`
                                 },
-                                `of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to recover, it was naive in hindsight to think that my own five-year plan for rapid intellectual growth could be free of unintended negative effects.`
+                                `of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to recover, in hindsight perhaps it was naive to think that my own five-year plan for rapid intellectual growth could be free of unintended negative effects.`
                             ]
                         }
                     },
@@ -131,8 +131,7 @@ module.exports = {
                 lyric: {
                     anchor: `No minutiae left unmastered,`,
                     annotation: {
-                        // TODO: I already mentioned the Rubik's Cube in Kyon.
-                        description: `While my ultimate goal was to be versed in all general subjects, the most rewarding moments came when I could demonstrate some random skill with seeming nonchalance. So I made sure to set aside time and energy for these more fanciful objectives, like solving a Rubik's Cube, or memorising the periodic table.`
+                        description: `While my ultimate goal was to be versed in all general subjects, the most rewarding moments came when I could demonstrate some random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like learning to throat sing, or memorising the periodic table.`
                     }
                 }
             },
@@ -147,7 +146,7 @@ module.exports = {
                                 {
                                     emphasis: `lot`
                                 },
-                                `of time on indie rock and its countercultural pretense, and it remains one of my deepest regrets. But at least I won't be fooled again.`
+                                `of time on indie rock and its countercultural pretense, and it remains one of my deepest regrets. But I won't be fooled again.`
                             ]
                         }
                     },
@@ -246,7 +245,7 @@ module.exports = {
                     {
                         anchor: `Signed off "love me"`,
                         annotation: {
-                            description: `I used to close my personal letters with "love bennett," absent a comma due to laziness. One woman I dated joked that it sounded like a command spoken in desperation.`
+                            description: `I used to close my personal letters with "Love Bennett," absent a comma out of laziness. One woman I dated joked that it sounded like a command spoken in desperation.`
                         }
                     },
                     `is how`
@@ -289,7 +288,7 @@ module.exports = {
                     {
                         anchor: `sand castle built by low tide.`,
                         annotation: {
-                            description: `Not only did my first five-year plan fail to realise its objective, it was clear that I had missed out on some crucial emotional development in the interim. And there was no guarantee that the next one wouldn't blindside me in the exact same manner. I feared a future as an emotionally stunted man-child forever pursuing ambitions at once both infantile and futile.`
+                            description: `Not only did my first five-year plan fail to realise its objective, it was clear that I had missed out on some crucial emotional development in the interim. And there was no guarantee that the next one wouldn't blindside me in the exact same manner. I feared a future as an emotionally stunted man-child, forever pursuing ambitions at once both infantile and futile.`
                         }
                     }
                 ]
@@ -341,7 +340,7 @@ module.exports = {
                                     anchor: `Unification Church`,
                                     wiki: `Unification_Church`
                                 },
-                                `led by Sun Myung Moon is widely seen as a cult due to its means of proselytism. It is perhaps most well-known for the mass weddings in which thousands of its congregants, often referred to as Moonies, are paired into couples and married en masse. That I could resort to such measures to avoid the long, hard slog of finding a mate was an enticing thought, even if also just a facetious one.`
+                                `led by Sun Myung Moon is widely seen as a cult due to its aggressive proselytism. It is perhaps best known for its mass weddings in which thousands of congregants, often referred to as Moonies, are paired into couples and married en masse. That I could resort to such measures to avoid the long, hard slog of finding a mate was an enticing thought, even if purely facetious.`
                             ]
                         }
                     }
@@ -527,7 +526,7 @@ module.exports = {
                     {
                         anchor: `world's a naked baby,`,
                         annotation: {
-                            description: `At some point, I realised that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can largely be understood by reading people's faces and recognising their motives, just as history can be known by studying textbooks.`
+                            description: `At some point, I realised that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can largely be understood by stepping into people's shoes and recognising their desires and motives, no less than history can be known by studying textbooks.`
                         }
                     }
                 ]

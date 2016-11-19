@@ -179,7 +179,7 @@ module.exports = {
                     {
                         anchor: `all the points`,
                         annotation: {
-                            description: `After Sita rejected me, we spent a year getting to know each other as friends, during which time I was always trying to impress her without appearing to do so. One day I solved her friend's Rubik's Cube, a skill I had picked up during my first five-year plan. While her friend raved, I humbly shrugged, as Sita just sat there and smiled. I had become a puzzle for her to figure out.`
+                            description: `After Sita rejected me, we spent a year getting to know each other as friends, during which time I still tried to impress her without appearing to do so. One day I solved her friend's Rubik's Cube, a skill I had picked up during my first five-year plan. While her friend raved, I humbly shrugged, as Sita just sat there and smiled. I had become a puzzle for her to figure out.`
                         }
                     },
                     `you had! Then you'd resent`
