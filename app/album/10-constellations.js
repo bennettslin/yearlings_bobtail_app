@@ -38,7 +38,7 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 180,
-    overview: `One night, I went along with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I kept getting us to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
+    overview: `One night, I went along with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got them all to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
     lyrics: [
         [
             {
@@ -176,7 +176,7 @@ module.exports = {
                                 },
                                 `were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Also, Ana's friends Howie and Tomer, being seasoned drug users but never having taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as`,
                                 {
-                                    anchor: `Vicodin.`,
+                                    anchor: `"Vicodin."`,
                                     wiki: `Hydrocodone/paracetamol`
                                 },
                                 `The night will prove them wrong.`
@@ -226,7 +226,7 @@ module.exports = {
                                     anchor: `Valhalla,`,
                                     wiki: `Valhalla`
                                 },
-                                `a majestic hall ruled by the god Odin. Also, the Walgreens aisles are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… So, "Wal-halls," if you will.`
+                                `a majestic hall ruled by the god Odin. Also, the Walgreens aisles are "Wal-halls," as they are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… and so forth.`
                             ]
                         }
                     },
@@ -238,7 +238,7 @@ module.exports = {
                                     anchor: `Mead`,
                                     wiki: `Mead`
                                 },
-                                `was the drink of the Norse gods, and we go with Wal-Tussin as our "medicine" of choice.`
+                                `was the drink of the Norse gods, and we look for Wal-Tussin as our "medicine" of choice.`
                             ]
                         }
                     }
@@ -250,7 +250,7 @@ module.exports = {
                     {
                         anchor: `Quouffs uppraissed,`,
                         annotation: {
-                            description: `Having appraised our quaffs, we now upraise them. And whatever coughs we might have, they are definitely suppressed.`
+                            description: `We "upraise" our "quaffs" to "appraise" them for the medicinal property that keeps "coughs suppressed."`
                         }
                     },
                     `this`,
@@ -284,12 +284,12 @@ module.exports = {
                             description: [
                                 `The Finnish language belongs in the`,
                                 {
-                                    anchor: `Finno-Ugric`,
+                                    anchor: `"Finno-Ugric"`,
                                     wiki: `Finno-Ugric_languages`
                                 },
-                                `family. Also, the licorice taste of Robitussin, which lingers in our mouths, is reminiscent of the spice`,
+                                `family. Also, the licorice taste of Robitussin, which lingers on our tongues, is reminiscent of the spice`,
                                 {
-                                    anchor: `fenugreek.`,
+                                    anchor: `"fenugreek."`,
                                     wiki: `Fenugreek`
                                 }
                             ]
@@ -305,7 +305,7 @@ module.exports = {
                                     anchor: `Lapps`,
                                     wiki: `Sami_people`
                                 },
-                                `are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally high, as the Robitussin "laps our hymen," since the others are trying it for the first time.`
+                                `are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally "high men," as the Robitussin "laps our hymen," since the others are doing it for the first time.`
                             ]
                         }
                     }
@@ -893,7 +893,7 @@ module.exports = {
                                     anchor: `sabre-toothed tigers,"`,
                                     wiki: `Smilodon`
                                 },
-                                `I'm "haunted by the sober truth" that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.`
+                                `I am subconsciously "haunted by the sober truth" that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.`
                             ]
                         }
                     },
@@ -914,7 +914,7 @@ module.exports = {
                                             anchor: `Tar pits`,
                                             wiki: `Tar_pit`
                                         },
-                                        `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit," my mastodon lies, just as I have "sunk in torpid lies."`
+                                        `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit" is where my mastodon "lies," just as I have "sunk in torpid lies."`
                                     ],
                                     portal: `sunken_tirpitz`
                                 }
@@ -936,13 +936,12 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                // TODO: Connect this to the next one.
                                 `The`,
                                 {
                                     anchor: `Holocene`,
                                     wiki: `Holocene`
                                 },
-                                `is the current geological epoch that began with the first human settlements. Also, Robitussin is a dissociative drug that causes a sense of detachment, both from reality and from oneself. This is a blessing in my case, however, as I suddenly catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`
+                                `is the current geological epoch that began with the first human settlements. Also, as Robitussin is a dissociative drug, I gradually start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`
                             ]
                         }
                     },
@@ -955,7 +954,7 @@ module.exports = {
                                     anchor: `totems`,
                                     wiki: `Totem`
                                 },
-                                `and rites" to our new homelands. But then, in a sudden out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
+                                `and rites" to our new homelands. Having now achieved a full out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
                             ]
                         }
                     }
@@ -975,7 +974,7 @@ module.exports = {
                                     properNoun: true,
                                     annotation: {
                                         description: [
-                                            `"He sees low-key and fried," but also, in his brother and sister, he sees`,
+                                            `"He sees low-key and fried," but also, in my brother and sister, I see`,
                                             {
                                                 anchor: `"Loki`,
                                                 wiki: `Loki`

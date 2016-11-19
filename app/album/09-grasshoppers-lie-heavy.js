@@ -86,10 +86,9 @@ module.exports = {
                             }
                         },
                         {
-                            // TODO: Separate 'pompous' anchor?
                             anchor: `pompous autumn waits.`,
                             annotation: {
-                                description: `In high school, I soldiered on with the same iffy persona to which I had tied myself years earlier in middle school. It just didn't seem possible to become a completely different person while surrounded by all the same classmates. But in my head, I was crafting a brand new persona that was raring to go at the earliest opportunity.`,
+                                description: `In high school, I soldiered on with the same gutless personality to which I had tied myself in middle school. It just didn't seem possible to become a completely different person while surrounded by all the same classmates. But in my head I was crafting a brand new persona, typified by pompous pretense, that was raring to go at the first opportunity.`,
                                 portal: `pampas`
                             }
                         }

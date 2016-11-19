@@ -269,12 +269,12 @@ module.exports = {
             {
                 time: 74,
                 lyric: [
-                    // TODO: Link to unsalvaged soul. Willy
-                    `Torn straps unsalvaged`,
+                    `Torn straps`,
                     {
-                        anchor: `sows have chewed,`,
+                        anchor: `unsalvaged sows have chewed,`,
                         annotation: {
-                            description: `On factory farms, breeding sows are strapped inside metal cages so small that they cannot move. In response to high stress, they develop repetitive, self-destructive movements such as chewing on cage bars. The sole purpose of their suffering is to produce piglets for slaughter, and once they grow too sickly or weak, they too are slaughtered.`
+                            description: `On factory farms, breeding sows are strapped inside metal cages so small that they cannot move. In response to high stress, they develop repetitive, self-destructive movements such as chewing on cage bars. The sole purpose of their suffering is to produce piglets for slaughter, and once they grow too sickly or weak, they too are slaughtered.`,
+                            portal: `unsalvaged_sows`
                         }
                     }
                 ]

@@ -471,7 +471,8 @@ module.exports = {
                                     {
                                         anchor: `unsalvaged soul…`,
                                         annotation: {
-                                            description: `Given that abuse of an underdeveloped child often led to its death, religious doctrine in the past typically gave assurance that such children were devoid of souls. But I came to a different conclusion. If my brother and I were so alike in physical makeup, despite being so different in mental presence, then it made more sense to believe that no one has a soul.`
+                                            description: `Given that abuse of an underdeveloped child often led to its death, religious doctrine in the past typically gave assurance that such children were devoid of souls. But I came to a different conclusion. If my brother and I were so alike in physical makeup, despite being so different in mental presence, then it made more sense to believe that no one has a soul.`,
+                                            portal: `unsalvaged_sows`
                                         }
                                     }
                                 ]

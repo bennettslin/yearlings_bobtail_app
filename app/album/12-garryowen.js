@@ -152,7 +152,6 @@ module.exports = {
             },
             {
                 time: 42,
-                // TODO: Grasshoppers
                 lyric: [
                     `the`,
                     {
