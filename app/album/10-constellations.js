@@ -935,14 +935,14 @@ module.exports = {
                         anchor: `Hollowscene`,
                         properNoun: true,
                         annotation: {
-                            // TODO: indie rock scene
                             description: [
+                                // TODO: Connect this to the next one.
                                 `The`,
                                 {
                                     anchor: `Holocene`,
                                     wiki: `Holocene`
                                 },
-                                `is the current geological epoch that began with the first human settlements.`
+                                `is the current geological epoch that began with the first human settlements. Also, Robitussin is a dissociative drug that causes a sense of detachment, both from reality and from oneself. This is a blessing in my case, however, as I suddenly catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`
                             ]
                         }
                     },
