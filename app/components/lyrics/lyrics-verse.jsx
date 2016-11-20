@@ -16,6 +16,7 @@ const LyricsVerse = ({
     accessedVerseIndex,
     selectedVerseIndex,
     hoveredLineIndex,
+    lyricsStartAtZero,
     onAnnotationClick,
     onVerseClick,
     onLineHover,
@@ -38,7 +39,7 @@ const LyricsVerse = ({
          */
         isHovered = verseIndex === hoveredLineIndex,
         isSingleSpeaker = !!lyric,
-        isInteractable = !isNaN(time),
+        isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero),
         onPlayClick = isInteractable && !isSelected ? e => onVerseClick(e, verseIndex) : null,
         onAnchorClick = onAnnotationClick,
         onMouseEnter = onLineHover ? e => onLineHover(e, verseIndex) : null,

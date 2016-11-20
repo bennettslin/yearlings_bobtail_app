@@ -16,7 +16,7 @@ export default {
         copiedSong.lyrics = `lyrics length: ${copiedSong.lyrics.length}`
         copiedSong.annotations = `annotations length: ${copiedSong.annotations.length}`
         copiedSong.tasks = `tasks length: ${copiedSong.tasks.length}`
-        copiedSong.times = `times length: ${copiedSong.times.length}`
+        // copiedSong.times = `times length: ${copiedSong.times.length}`
 
         return this._logObject('selected song', copiedSong)
     },

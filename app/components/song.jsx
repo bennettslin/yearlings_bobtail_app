@@ -54,6 +54,7 @@ const SongView = ({
     isSingleLyricColumn,
     selectedLyricColumnIndex,
     selectedSongIndex,
+    lyricsStartAtZero,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
@@ -118,6 +119,7 @@ const SongView = ({
             />
             <LyricsSection
                 isSingleLyricColumn={isSingleLyricColumn}
+                lyricsStartAtZero={lyricsStartAtZero}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
                 nextSectionKey={nextSectionKey}

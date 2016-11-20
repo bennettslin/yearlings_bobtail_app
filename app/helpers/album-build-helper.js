@@ -96,7 +96,9 @@ const _addTitleToLyrics = (title, lyrics) => {
     // Add title object to lyrics object.
     const { annotation } = title,
         titleObject = {
-            time: 0,
+
+            // Set title time to -1.
+            time: -1,
             lyric: title,
             isTitle: true
         }
@@ -136,7 +138,6 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
 
         // Add time to song times.
         _tempStore._songTimes.push(lyric.time)
-
     }
 
     if (!isNaN(lyric.time)) {

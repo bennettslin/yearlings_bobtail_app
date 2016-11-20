@@ -47,6 +47,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `make title verse have time null if lyric verse has time 0`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: `lyrics, not app, should care about hovered line`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `begin list of persistence checks`,
             workedHours: 0,
             neededHours: 1
@@ -65,11 +75,6 @@ module.exports = {
             taskName: `bug where you click on verse, then key away`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `lyrics, not app, should care about hovered line`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `refactor app handlers`,
@@ -542,6 +547,16 @@ module.exports = {
             taskName: `check what happens when *all* dots are deselected (try Didi)`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `get next section key`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `add other buttons to audio player`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }

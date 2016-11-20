@@ -26,6 +26,20 @@ export const getSong = ({ selectedSongIndex, songs }) => {
         songs[selectedSongIndex - 1] : {}
 }
 
+export const getLyricsStartAtZero = (props, selectedSongIndex) => {
+    const selectedSong = getSong({
+        selectedSongIndex: selectedSongIndex || props.selectedSongIndex,
+        songs: props.songs
+    })
+
+    return selectedSong.times ? selectedSong.times[1] === 0 : true
+}
+
+export const getSongTimes = (props) => {
+    const selectedSong = getSong(props)
+    return selectedSong.times || []
+}
+
 export const getAnnotation = ({ selectedAnnotationIndex, selectedSong, ...other }, annotationIndex) => {
     selectedSong = selectedSong || getSong(other)
     return selectedSong.annotations ?

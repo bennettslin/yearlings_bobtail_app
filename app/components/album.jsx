@@ -44,7 +44,14 @@ const AlbumView = ({
     selectedTipsIndex,
     selectedTimePlayed,
     isSingleLyricColumn,
+    isHome,
+    isFirstSong,
+    isLastSong,
+    isFirstVerse,
+    isLastVerse,
+    audioSongTitle,
     onSongClick,
+    onVerseClick,
     onPlayClick,
     onAudioOptionClick,
     onScreenWidthClick,
@@ -69,12 +76,21 @@ const AlbumView = ({
                 onTitleClick={onSongClick}
             />
             <AudioSection
+                isHome={isHome}
+                isFirstSong={isFirstSong}
+                isLastSong={isLastSong}
+                isFirstVerse={isFirstVerse}
+                isLastVerse={isLastVerse}
+                audioSongTitle={audioSongTitle}
+                selectedSongIndex={selectedSongIndex}
                 isPlaying={isPlaying}
                 selectedAudioOptionIndex={selectedAudioOptionIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
                 nextSectionKey={nextSectionKey}
                 onPlayClick={onPlayClick}
+                onAudioSongClick={onSongClick}
+                onAudioTimeClick={onVerseClick}
                 onAudioOptionClick={onAudioOptionClick}
             />
             <TipsSection
@@ -106,6 +122,7 @@ const AlbumView = ({
             accessedSectionKey={accessedSectionKey}
             nextSectionKey={nextSectionKey}
             isSingleLyricColumn={isSingleLyricColumn}
+            onVerseClick={onVerseClick}
         />
     </div>
 )

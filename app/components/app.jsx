@@ -35,7 +35,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero } from 'helpers/album-view-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -242,8 +242,21 @@ class App extends Component {
         })
     }
 
-    selectSong(e, selectedSongIndex = 0) {
+    selectSong(e, selectedSongIndex = 0, direction) {
         this._stopPropagation(e)
+
+        // Called from audio section's previous or next buttons.
+        if (direction) {
+            selectedSongIndex = this.props.selectedSongIndex + direction
+
+            /**
+             * Previous and next song buttons can only select songs. They can't
+             * return home.
+             */
+            if (selectedSongIndex <= 0 || selectedSongIndex > this.props.songs.length) {
+                return
+            }
+        }
 
         // Show overview bubble text for selected song.
         this.props.selectOverviewIndex(0)
@@ -266,9 +279,11 @@ class App extends Component {
          * from portal.
          */
         if (e) {
-            this._handleSectionAccess({ accessedSectionKey: NAV_SECTION })
+            const selectedVerseIndex = getLyricsStartAtZero(this.props, selectedSongIndex) ? 1 : 0
+
+            this._handleSectionAccess({ accessedSectionKey: direction ? AUDIO_SECTION : NAV_SECTION })
             this.selectAnnotation()
-            this.selectVerse()
+            this.selectVerse(undefined, selectedVerseIndex)
 
             // Scroll to top of lyrics.
             this.scrollElementIntoView('lyrics-scroll', 'home')
@@ -434,31 +449,45 @@ class App extends Component {
         const selectedSong = getSong(this.props)
 
         if (selectedTimePlayed >= 0 && selectedTimePlayed < selectedSong.totalTime) {
+            let selectedVerseIndex = 0
+
+            // Title verse is selectable only if lyrics start after time 0.
+            if (selectedTimePlayed === 0) {
+                selectedVerseIndex = getLyricsStartAtZero(this.props) ? 1 : 0
 
             // Select corresponding verse.
-            let selectedVerseIndex = 1
-            while (selectedTimePlayed >= selectedSong.times[selectedVerseIndex]) {
-                selectedVerseIndex++
+            } else {
+                while (selectedVerseIndex < selectedSong.times.length - 1 && selectedTimePlayed >= selectedSong.times[selectedVerseIndex + 1]) {
+                    selectedVerseIndex++
+                }
             }
 
             this._storeTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll: true })
         }
     }
 
-    selectVerse(e, selectedVerseIndex = 0) {
+    selectVerse(e, selectedVerseIndex = 0, direction) {
+        const songTimes = getSongTimes(this.props),
+            currentSongTime = songTimes[this.props.selectedVerseIndex]
+
         this._stopPropagation(e)
+
+        // This was called from audio rewind and forward buttons.
+        if (direction) {
+            selectedVerseIndex = this.props.selectedVerseIndex + direction
+            if (selectedVerseIndex < (getLyricsStartAtZero(this.props) ? 1 : 0) || selectedVerseIndex >= songTimes.length) {
+                return
+            }
+        }
 
         let selectedTimePlayed,
             scroll
 
         if (e) {
-            const selectedSong = getSong(this.props)
-
             // Select corresponding time.
-            selectedTimePlayed = selectedSong.times[selectedVerseIndex - 1]
+            selectedTimePlayed = songTimes[selectedVerseIndex]
             scroll = true
-
-            this._handleSectionAccess({ accessedSectionKey: LYRICS_SECTION })
+            this._handleSectionAccess({ accessedSectionKey: direction ? AUDIO_SECTION : LYRICS_SECTION })
 
         // A new song has been selected.
         } else {
@@ -725,7 +754,9 @@ class App extends Component {
 
     _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
         this._focusApp()
-        this._selectDefaultSectionElementIndex(this.props.accessedSectionIndex)
+        if (accessedOn) {
+            this._selectDefaultSectionElementIndex(this.props.accessedSectionIndex)
+        }
 
         // Stored as integer. 0 is false, 1 is true.
         this.props.accessOn(accessedOn)
@@ -759,7 +790,19 @@ class App extends Component {
 
     render() {
         const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex],
-            nextSectionKey = AccessHelper.getNextSectionKey(this.props)
+            nextSectionKey = AccessHelper.getNextSectionKey(this.props),
+
+            { songs,
+              selectedSongIndex,
+              selectedVerseIndex } = this.props,
+            songTimes = getSongTimes(this.props),
+            isHome = selectedSongIndex === 0,
+            isFirstSong = selectedSongIndex === 1,
+            isLastSong = selectedSongIndex === songs.length,
+            audioSongTitle = selectedSongIndex ? `${selectedSongIndex}. ${songs[selectedSongIndex - 1].title}` : null,
+            lyricsStartAtZero = getLyricsStartAtZero(this.props),
+            isFirstVerse = selectedVerseIndex === (lyricsStartAtZero ? 1 : 0),
+            isLastVerse = selectedVerseIndex === songTimes.length - 1
 
         return (
             <div
@@ -770,6 +813,13 @@ class App extends Component {
                 tabIndex="0"
             >
                 <Album {...this.props} {...this.state}
+                    isHome={isHome}
+                    isFirstSong={isFirstSong}
+                    isLastSong={isLastSong}
+                    lyricsStartAtZero={lyricsStartAtZero}
+                    isFirstVerse={isFirstVerse}
+                    isLastVerse={isLastVerse}
+                    audioSongTitle={audioSongTitle}
                     accessedSectionKey={accessedSectionKey}
                     nextSectionKey={nextSectionKey}
                     onSongClick={this.selectSong}
