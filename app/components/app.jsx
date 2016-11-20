@@ -560,14 +560,13 @@ class App extends Component {
     handleKeyDown(e) {
         const { key: keyName } = e
 
-        // FIXME: Move this to not prevent default for non keys.
-        if (e) {
-            e.preventDefault()
-        }
-
-        // TODO: Focus strategically, based on accessed section.
-        if (keyName !== 'Tab') {
+        // Do not handle if any modifier keys are present.
+        if (e && (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === 'Tab')) {
+            return
+        } else {
+            // TODO: Focus strategically, based on accessed section.
             this._focusApp()
+            e.preventDefault()
         }
 
         // If universal key, handle and return.
@@ -585,7 +584,7 @@ class App extends Component {
 
         // If access is off, any key besides Escape turns it on.
         if (!this.props.accessedOn) {
-            if (keyName !== ESCAPE && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+            if (keyName !== ESCAPE) {
                 this._handleAccessOn()
             }
 
