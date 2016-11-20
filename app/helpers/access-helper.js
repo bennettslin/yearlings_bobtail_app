@@ -403,9 +403,14 @@ export default {
         }
     },
 
-    handleWikiAccess({
-        keyName
-    }) {
-
+    getNextSectionKey(props) {
+        /**
+         * If there's a popup, return lyrics section. Otherwise, return the
+         * next section.
+         */
+        return props.selectedAnnotationIndex || props.selectedWikiIndex ? LYRICS_SECTION : SECTION_KEYS[this.handleSectionAccess({
+            selectedSongIndex: props.selectedSongIndex,
+            currentAccessedSectionIndex: (props.accessedSectionIndex) % SECTION_KEYS.length
+        })]
     }
 }

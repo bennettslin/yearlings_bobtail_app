@@ -759,16 +759,7 @@ class App extends Component {
 
     render() {
         const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex],
-
-            /**
-             * TODO: Repurposing this method to get next section key. Consider
-             * renaming it and changing it to make this added context more
-             * clear.
-             */
-            nextSectionKey = SECTION_KEYS[AccessHelper.handleSectionAccess({
-                selectedSongIndex: this.props.selectedSongIndex,
-                currentAccessedSectionIndex: (this.props.accessedSectionIndex) % SECTION_KEYS.length
-            })]
+            nextSectionKey = AccessHelper.getNextSectionKey(this.props)
 
         return (
             <div
