@@ -51,6 +51,7 @@ const AlbumView = ({
     onTipsClick,
     accessedOn,
     accessedSectionKey,
+    nextSectionKey,
     accessedSongIndex,
 
     // From controller.
@@ -63,6 +64,7 @@ const AlbumView = ({
                 title={title}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
                 accessedSongIndex={accessedSongIndex}
                 onTitleClick={onSongClick}
             />
@@ -71,6 +73,7 @@ const AlbumView = ({
                 selectedAudioOptionIndex={selectedAudioOptionIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
                 onPlayClick={onPlayClick}
                 onAudioOptionClick={onAudioOptionClick}
             />
@@ -90,6 +93,7 @@ const AlbumView = ({
                 selectedSongIndex={selectedSongIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
                 accessedSongIndex={accessedSongIndex}
                 onSongClick={onSongClick}
             />
@@ -100,6 +104,7 @@ const AlbumView = ({
             selectedVerseIndex={selectedVerseIndex}
             accessedOn={accessedOn}
             accessedSectionKey={accessedSectionKey}
+            nextSectionKey={nextSectionKey}
             isSingleLyricColumn={isSingleLyricColumn}
         />
     </div>

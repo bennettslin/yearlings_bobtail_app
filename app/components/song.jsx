@@ -56,6 +56,7 @@ const SongView = ({
     selectedSongIndex,
     accessedOn,
     accessedSectionKey,
+    nextSectionKey,
     accessedAnnotationIndex,
     accessedVerseIndex,
     accessedLyricElement,
@@ -90,6 +91,7 @@ const SongView = ({
                 selectedWikiIndex={selectedWikiIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
                 showArrows={true}
                 onPortalClick={onPortalClick}
                 onWikiUrlClick={onWikiUrlClick}
@@ -100,6 +102,7 @@ const SongView = ({
                 selectedWikiUrl={selectedWikiUrl}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
                 onPopupButtonClick={onWikiUrlClick}
             />
             <DotsSection
@@ -108,6 +111,7 @@ const SongView = ({
                 presentDotKeys={presentDotKeys}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
                 accessedDotIndex={accessedDotIndex}
                 onDotClick={onDotClick}
                 onDotHover={onDotHover}
@@ -116,6 +120,7 @@ const SongView = ({
                 isSingleLyricColumn={isSingleLyricColumn}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
                 accessedLyricElement={accessedLyricElement}
                 accessedAnnotationIndex={accessedAnnotationIndex}
                 accessedVerseIndex={accessedVerseIndex}

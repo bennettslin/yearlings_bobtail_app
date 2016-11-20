@@ -47,6 +47,7 @@ const SharedView = ({
     selectedSongIndex,
     accessedOn,
     accessedSectionKey,
+    nextSectionKey,
     onOverviewClick,
 
     // From controller.
@@ -62,6 +63,7 @@ const SharedView = ({
                 overviewText={overviewText}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
                 onOverviewClick={onOverviewClick}
             />
             {/* Technically, stats only knows selected song data so it really
@@ -82,6 +84,7 @@ const SharedView = ({
                 selectedSongIndex={selectedSongIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
             /> : null
         }
     </div>

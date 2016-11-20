@@ -10,14 +10,17 @@ import { DOTS_SECTION } from 'helpers/constants'
 
      accessedOn,
      accessedSectionKey,
+     nextSectionKey,
 
  ...other }) => {
 
-     const sectionAccessHighlighted = accessedOn && accessedSectionKey === DOTS_SECTION
+     const sectionAccessHighlighted = accessedOn && accessedSectionKey === DOTS_SECTION,
+         sectionNextHighlighted = accessedOn && nextSectionKey === DOTS_SECTION
 
      return (
          <DotsSectionView {...other}
              sectionAccessHighlighted={sectionAccessHighlighted}
+             sectionNextHighlighted={sectionNextHighlighted}
          />
      )
  }
@@ -33,10 +36,11 @@ const DotsSectionView = ({
 
     // From controller.
     sectionAccessHighlighted,
+    sectionNextHighlighted,
 
 ...other }) => (
     <div
-        className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
+        className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
         <h2>dots</h2>
         <div className="tooltip-container">

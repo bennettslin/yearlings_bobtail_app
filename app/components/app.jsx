@@ -560,6 +560,7 @@ class App extends Component {
     handleKeyDown(e) {
         const { key: keyName } = e
 
+        // FIXME: Move this to not prevent default for non keys.
         if (e) {
             e.preventDefault()
         }
@@ -758,7 +759,18 @@ class App extends Component {
     }
 
     render() {
-        const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
+        const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex],
+
+            /**
+             * TODO: Repurposing this method to get next section key. Consider
+             * renaming it and changing it to make this added context more
+             * clear.
+             */
+            nextSectionKey = SECTION_KEYS[AccessHelper.handleSectionAccess({
+                selectedSongIndex: this.props.selectedSongIndex,
+                currentAccessedSectionIndex: (this.props.accessedSectionIndex) % SECTION_KEYS.length
+            })]
+
         return (
             <div
                 ref="app"
@@ -769,6 +781,7 @@ class App extends Component {
             >
                 <Album {...this.props} {...this.state}
                     accessedSectionKey={accessedSectionKey}
+                    nextSectionKey={nextSectionKey}
                     onSongClick={this.selectSong}
                     onPortalClick={this.selectPortal}
                     onWikiUrlClick={this.selectWiki}

@@ -12,10 +12,12 @@ const OverviewsSection = ({
     selectedOverviewIndex,
     accessedOn,
     accessedSectionKey,
+    nextSectionKey,
 
 ...other }) => {
 
     const accessHighlighted = accessedOn && accessedSectionKey === OVERVIEW_SECTION,
+        nextHighlighted = accessedOn && nextSectionKey === OVERVIEW_SECTION,
 
         /**
          * Remember that the default to show bubble text is 0.
@@ -25,6 +27,7 @@ const OverviewsSection = ({
     return (
         <OverviewsSectionView {...other}
             accessHighlighted={accessHighlighted}
+            nextHighlighted={nextHighlighted}
             showBubbleText={showBubbleText}
         />
     )
@@ -43,11 +46,12 @@ const OverviewsSectionView = ({
 
     // From controller.
     accessHighlighted,
+    nextHighlighted,
     showBubbleText
 
 }) => (
     <div
-        className={`section overview-section${accessHighlighted ? ' access-highlighted' : ''}`}
+        className={`section overview-section${accessHighlighted ? ' access-highlighted' : ''}${nextHighlighted ? ' next-highlighted' : ''}`}
     >
         <h2>overview</h2>
         <div className="overview-text">

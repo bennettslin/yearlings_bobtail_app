@@ -11,14 +11,18 @@ import { LYRIC_COLUMN_KEYS, LYRICS_SECTION } from 'helpers/constants'
 
      accessedOn,
      accessedSectionKey,
+     nextSectionKey,
 
  ...other }) => {
 
-     const sectionAccessHighlighted = accessedOn && accessedSectionKey === LYRICS_SECTION
+     const sectionAccessHighlighted = accessedOn && accessedSectionKey === LYRICS_SECTION,
+        sectionNextHighlighted = accessedOn && nextSectionKey === LYRICS_SECTION
+
 
      return (
          <LyricsSectionView {...other}
              sectionAccessHighlighted={sectionAccessHighlighted}
+             sectionNextHighlighted={sectionNextHighlighted}
          />
      )
  }
@@ -38,10 +42,11 @@ const LyricsSectionView = ({
 
     // From controller.
     sectionAccessHighlighted,
+    sectionNextHighlighted,
 
 ...other }) => (
     <div
-        className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${isSingleLyricColumn ? ' narrow' : ''}`}
+        className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${isSingleLyricColumn ? ' narrow' : ''}`}
     >
         {/* Upon song change, scroll to element with this class name. */}
         <h2 className="lyrics-scroll-home">lyrics</h2>

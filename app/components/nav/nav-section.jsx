@@ -14,13 +14,15 @@ const NavSection = ({
     allTasks,
     accessedOn,
     accessedSectionKey,
+    nextSectionKey,
 
 ...other }) => {
 
     const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
         sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks),
 
-        sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION
+        sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION,
+        sectionNextHighlighted = accessedOn && nextSectionKey === NAV_SECTION
 
     return (
         <NavSectionView {...other}
@@ -28,6 +30,7 @@ const NavSection = ({
             maxTotalNeededHours={maxTotalNeededHours}
             sumAllTasks={sumAllTasks}
             sectionAccessHighlighted={sectionAccessHighlighted}
+            sectionNextHighlighted={sectionNextHighlighted}
         />
     )
 }
@@ -47,11 +50,12 @@ const NavSectionView = ({
     // From controller.
     maxTotalNeededHours,
     sectionAccessHighlighted,
+    sectionNextHighlighted,
     sumAllTasks
 
 }) => (
     <div
-        className={`section nav-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
+        className={`section nav-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
         <div className="row">
             <div className="text-cell-wrapper">
