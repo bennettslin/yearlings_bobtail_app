@@ -1,10 +1,10 @@
 import React from 'react'
 import Shared from './shared'
-import TitleSection from './title/title-section'
-import AudioSection from './audio/audio-section'
-import DevSection from './dev/dev-section'
-import NavSection from './nav/nav-section'
-import TipsSection from './tips/tips-section'
+import TitleSection from '../title/title-section'
+import AudioSection from '../audio/audio-section'
+import DevSection from '../dev/dev-section'
+import NavSection from '../nav/nav-section'
+import TipsSection from '../tips/tips-section'
 import ProgressHelper from 'helpers/progress-helper'
 
 /*************

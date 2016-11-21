@@ -1,8 +1,8 @@
 import React from 'react'
-import AnnotationPopup from './annotation/annotation-popup'
-import WikiPopup from './wiki/wiki-popup'
-import DotsSection from './dots/dots-section'
-import LyricsSection from './lyrics/lyrics-section'
+import AnnotationPopup from '../annotation/annotation-popup'
+import WikiPopup from '../wiki/wiki-popup'
+import DotsSection from '../dots/dots-section'
+import LyricsSection from '../lyrics/lyrics-section'
 import { getAnnotation } from 'helpers/album-view-helper'
 
 /*************

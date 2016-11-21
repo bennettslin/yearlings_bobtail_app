@@ -52,18 +52,8 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `make admin toggle button`,
+            taskName: `make audio buttons accessible`,
             workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `make audio buttons accessible`,
-            workedHours: 1,
-            neededHours: 1
-        },
-        {
-            taskName: `make audio buttons accessible`,
-            workedHours: 1,
             neededHours: 1
         },
         {
@@ -580,6 +570,11 @@ module.exports = {
         },
         {
             taskName: `get viewport size`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `make admin toggle button`,
             workedHours: 1,
             neededHours: 1
         }

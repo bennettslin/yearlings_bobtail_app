@@ -15,7 +15,7 @@ import { selectSongIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
 import AdminToggleField from './admin/admin-toggle-field'
-import Album from './album'
+import Switch from './switch'
 import { NAV_SECTION,
          AUDIO_SECTION,
          OVERVIEW_SECTION,
@@ -842,34 +842,32 @@ class App extends Component {
                     isAdmin={isAdmin}
                     onClick={this.toggleAdmin}
                 />
-                {isAdmin ?
-                    <Album {...this.props} {...this.state}
-                        isHome={isHome}
-                        isFirstSong={isFirstSong}
-                        isLastSong={isLastSong}
-                        lyricsStartAtZero={lyricsStartAtZero}
-                        isFirstVerse={isFirstVerse}
-                        isLastVerse={isLastVerse}
-                        audioSongTitle={audioSongTitle}
-                        accessedSectionKey={accessedSectionKey}
-                        nextSectionKey={nextSectionKey}
-                        onSongClick={this.selectSong}
-                        onPortalClick={this.selectPortal}
-                        onWikiUrlClick={this.selectWiki}
-                        onAnnotationClick={this.selectAnnotation}
-                        onOverviewClick={this.selectOverview}
-                        onAudioOptionClick={this.selectAudioOption}
-                        onPlayClick={this.togglePlay}
-                        onVerseClick={this.selectVerse}
-                        onDotClick={this.selectDot}
-                        onDotHover={this.hoverDot}
-                        onLineHover={this.hoverLine}
-                        onScreenWidthClick={this.selectLyricColumnWidth}
-                        onLyricColumnClick={this.selectLyricColumn}
-                        onAnnotationSectionClick={this.handleAnnotationSectionClick}
-                        onTipsClick={this.selectTips}
-                    /> : null
-                }
+                <Switch {...this.props} {...this.state}
+                    isHome={isHome}
+                    isFirstSong={isFirstSong}
+                    isLastSong={isLastSong}
+                    lyricsStartAtZero={lyricsStartAtZero}
+                    isFirstVerse={isFirstVerse}
+                    isLastVerse={isLastVerse}
+                    audioSongTitle={audioSongTitle}
+                    accessedSectionKey={accessedSectionKey}
+                    nextSectionKey={nextSectionKey}
+                    onSongClick={this.selectSong}
+                    onPortalClick={this.selectPortal}
+                    onWikiUrlClick={this.selectWiki}
+                    onAnnotationClick={this.selectAnnotation}
+                    onOverviewClick={this.selectOverview}
+                    onAudioOptionClick={this.selectAudioOption}
+                    onPlayClick={this.togglePlay}
+                    onVerseClick={this.selectVerse}
+                    onDotClick={this.selectDot}
+                    onDotHover={this.hoverDot}
+                    onLineHover={this.hoverLine}
+                    onScreenWidthClick={this.selectLyricColumnWidth}
+                    onLyricColumnClick={this.selectLyricColumn}
+                    onAnnotationSectionClick={this.handleAnnotationSectionClick}
+                    onTipsClick={this.selectTips}
+                />
             </div>
         )
     }
