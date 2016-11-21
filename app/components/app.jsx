@@ -25,6 +25,8 @@ import { NAV_SECTION,
          WIKI_SECTION,
          SECTION_KEYS,
 
+         AUDIO_OPTIONS,
+
          LYRIC_VERSE_ELEMENT,
          LYRIC_ANNOTATION_ELEMENT,
          LYRIC_COLUMN_KEYS,
@@ -325,14 +327,11 @@ class App extends Component {
     }
 
     selectAudioOption(e, direction = 1) {
-        // TODO: Make not hard-coded.
-        const optionsLength = 3
+        const optionsLength = AUDIO_OPTIONS.length
 
         this._stopPropagation(e)
         if (e) { this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION }) }
-        /**
-         * Stored as integer. 0 is to "continue after next," 1 is to "repeat," 2 is to "pause after song."
-         */
+
         this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
     }
 

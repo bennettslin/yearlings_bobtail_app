@@ -16,10 +16,10 @@ const Live = (props) => {
  ****************/
 
 const LiveView = ({
-    
+
 }) => (
     <div className="live">
-        hello
+        placeholder
     </div>
 )
 

@@ -47,11 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `constants for audio options`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `make audio buttons accessible`,
             workedHours: 0,
             neededHours: 1
@@ -575,6 +570,11 @@ module.exports = {
         },
         {
             taskName: `make admin toggle button`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `constants for audio options`,
             workedHours: 1,
             neededHours: 1
         }

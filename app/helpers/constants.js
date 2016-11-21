@@ -16,7 +16,11 @@ const LYRIC = 'lyric',
     LYRICS_SECTION = 'lyrics-section',
     DOTS_SECTION = 'dots-section',
     ANNOTATION_SECTION = 'annotation-section',
-    WIKI_SECTION = 'wiki-section'
+    WIKI_SECTION = 'wiki-section',
+
+    CONTINUE = 'continue',
+    REPEAT = 'repeat',
+    PAUSE_AT_END = 'pause_at_end'
 
 module.exports = {
 
@@ -24,6 +28,16 @@ module.exports = {
 
     LYRIC_VERSE_ELEMENT: 'verse_element',
     LYRIC_ANNOTATION_ELEMENT: 'annotation_element',
+
+    CONTINUE,
+    REPEAT,
+    PAUSE_AT_END,
+
+    AUDIO_OPTIONS: [
+        CONTINUE,
+        REPEAT,
+        PAUSE_AT_END
+    ],
 
     NAV_SECTION,
     AUDIO_SECTION,

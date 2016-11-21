@@ -1,5 +1,6 @@
 import React from 'react'
-import { AUDIO_SECTION } from 'helpers/constants'
+import { AUDIO_OPTIONS,
+         AUDIO_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -110,7 +111,7 @@ const AudioSectionView = ({
                 >
                     {'\u21E5'}
                 </a>
-                <a onClick={onAudioOptionClick}>Option: {selectedAudioOptionIndex}</a>
+                <a onClick={onAudioOptionClick}>Option: {AUDIO_OPTIONS[selectedAudioOptionIndex]}</a>
             </div>
     </div>
 )
