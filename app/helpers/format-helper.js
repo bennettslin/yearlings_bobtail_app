@@ -3,6 +3,9 @@
 import { LYRIC_TEXT_KEYS } from './constants'
 
 export const getFormattedTime = (time) => {
+    if (time === -1) {
+        time = 0
+    }
     const minutes = Math.floor(time / 60),
         seconds = Math.floor(time % 60),
         zeroTen = seconds < 10 ? '0' : ''

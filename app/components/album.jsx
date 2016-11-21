@@ -60,6 +60,8 @@ const AlbumView = ({
     accessedSectionKey,
     nextSectionKey,
     accessedSongIndex,
+    windowWidth,
+    windowHeight,
 
     // From controller.
     allTasks,
@@ -98,6 +100,8 @@ const AlbumView = ({
                 onTipsClick={onTipsClick}
             />
             <DevSection
+                windowWidth={windowWidth}
+                windowHeight={windowHeight}
                 selectedTimePlayed={selectedTimePlayed}
                 selectedVerseIndex={selectedVerseIndex}
                 isSingleLyricColumn={isSingleLyricColumn}

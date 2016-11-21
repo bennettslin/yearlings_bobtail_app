@@ -14,6 +14,7 @@ import { selectSongIndex,
          selectWikiIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
+import AdminToggleField from './admin/admin-toggle-field'
 import Album from './album'
 import { NAV_SECTION,
          AUDIO_SECTION,
@@ -110,7 +111,9 @@ class App extends Component {
          * states will be toggled and persisted by clicks. (And untoggled upon
          * scroll.) Revisit whether this is the best idea.
          */
+
         this.state = {
+            isAdmin: true,
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
@@ -127,6 +130,8 @@ class App extends Component {
 
     componentWillMount() {
         this._assignLogFunctions()
+        this.windowResize()
+        window.onresize = this.windowResize
     }
 
     componentDidMount() {
@@ -138,7 +143,16 @@ class App extends Component {
      * HELPERS *
      ***********/
 
+    windowResize(e) {
+        const target = e ? e.target : window
+        this.setState({
+            windowHeight: target.innerHeight,
+            windowWidth: target.innerWidth
+        })
+    }
+
     _bindEventHandlers() {
+        this.toggleAdmin = this.toggleAdmin.bind(this)
         this.togglePlay = this.togglePlay.bind(this)
         this.selectSong = this.selectSong.bind(this)
         this.selectOverview = this.selectOverview.bind(this)
@@ -160,6 +174,7 @@ class App extends Component {
         this._onBodyClick = this._onBodyClick.bind(this)
         this.handleKeyDown = this.handleKeyDown.bind(this)
         this.handleAnnotationSectionClick = this.handleAnnotationSectionClick.bind(this)
+        this.windowResize = this.windowResize.bind(this)
     }
 
     _assignLogFunctions() {
@@ -232,6 +247,12 @@ class App extends Component {
     /*******************
      * EVENT LISTENERS *
      *******************/
+
+    toggleAdmin(e) {
+        this.setState({
+            isAdmin: !this.state.isAdmin
+        })
+    }
 
     togglePlay(e) {
         this._stopPropagation(e)
@@ -799,6 +820,7 @@ class App extends Component {
             { songs,
               selectedSongIndex,
               selectedVerseIndex } = this.props,
+            { isAdmin } = this.state,
             songTimes = getSongTimes(this.props),
             isHome = selectedSongIndex === 0,
             isFirstSong = selectedSongIndex === 1,
@@ -816,32 +838,38 @@ class App extends Component {
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"
             >
-                <Album {...this.props} {...this.state}
-                    isHome={isHome}
-                    isFirstSong={isFirstSong}
-                    isLastSong={isLastSong}
-                    lyricsStartAtZero={lyricsStartAtZero}
-                    isFirstVerse={isFirstVerse}
-                    isLastVerse={isLastVerse}
-                    audioSongTitle={audioSongTitle}
-                    accessedSectionKey={accessedSectionKey}
-                    nextSectionKey={nextSectionKey}
-                    onSongClick={this.selectSong}
-                    onPortalClick={this.selectPortal}
-                    onWikiUrlClick={this.selectWiki}
-                    onAnnotationClick={this.selectAnnotation}
-                    onOverviewClick={this.selectOverview}
-                    onAudioOptionClick={this.selectAudioOption}
-                    onPlayClick={this.togglePlay}
-                    onVerseClick={this.selectVerse}
-                    onDotClick={this.selectDot}
-                    onDotHover={this.hoverDot}
-                    onLineHover={this.hoverLine}
-                    onScreenWidthClick={this.selectLyricColumnWidth}
-                    onLyricColumnClick={this.selectLyricColumn}
-                    onAnnotationSectionClick={this.handleAnnotationSectionClick}
-                    onTipsClick={this.selectTips}
+                <AdminToggleField
+                    isAdmin={isAdmin}
+                    onClick={this.toggleAdmin}
                 />
+                {isAdmin ?
+                    <Album {...this.props} {...this.state}
+                        isHome={isHome}
+                        isFirstSong={isFirstSong}
+                        isLastSong={isLastSong}
+                        lyricsStartAtZero={lyricsStartAtZero}
+                        isFirstVerse={isFirstVerse}
+                        isLastVerse={isLastVerse}
+                        audioSongTitle={audioSongTitle}
+                        accessedSectionKey={accessedSectionKey}
+                        nextSectionKey={nextSectionKey}
+                        onSongClick={this.selectSong}
+                        onPortalClick={this.selectPortal}
+                        onWikiUrlClick={this.selectWiki}
+                        onAnnotationClick={this.selectAnnotation}
+                        onOverviewClick={this.selectOverview}
+                        onAudioOptionClick={this.selectAudioOption}
+                        onPlayClick={this.togglePlay}
+                        onVerseClick={this.selectVerse}
+                        onDotClick={this.selectDot}
+                        onDotHover={this.hoverDot}
+                        onLineHover={this.hoverLine}
+                        onScreenWidthClick={this.selectLyricColumnWidth}
+                        onLyricColumnClick={this.selectLyricColumn}
+                        onAnnotationSectionClick={this.handleAnnotationSectionClick}
+                        onTipsClick={this.selectTips}
+                    /> : null
+                }
             </div>
         )
     }

@@ -19,7 +19,9 @@ const DevSectionView = ({
     selectedTimePlayed,
     selectedVerseIndex,
     isSingleLyricColumn,
-    onScreenWidthClick
+    onScreenWidthClick,
+    windowWidth,
+    windowHeight
 
 }) => (
     <div className="section dev-section">
@@ -29,6 +31,9 @@ const DevSectionView = ({
         </div>
         <div className="row">
             selected verse index: {selectedVerseIndex}
+        </div>
+        <div className="row">
+            window size: {windowWidth} x {windowHeight}
         </div>
         <a
             className="enabled"
