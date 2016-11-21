@@ -169,7 +169,7 @@ export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction, ly
     return getAnnotationIndexForDirection(props, returnIndex, undefined, direction, lyricColumnShown)
 }
 
-export const getVerseIndexForDirection = (props, currentIndex = 1, direction, lyricColumnShown) => {
+export const getVerseIndexForDirection = (props, currentIndex = 1, direction, lyricColumnShown, noModulo) => {
     const selectedSong = getSong(props),
         lyricsStartAtZero = getLyricsStartAtZero(props)
 
@@ -188,9 +188,16 @@ export const getVerseIndexForDirection = (props, currentIndex = 1, direction, ly
             }
 
             // Verse indices are 0-based.
-            returnIndex = (returnIndex + timesLength + direction) % timesLength
+            if (noModulo) {
+                returnIndex = returnIndex + direction
+            } else {
+                returnIndex = (returnIndex + timesLength + direction) % timesLength
+            }
 
         } while (
+            // If no modulo, make sure return index is within range.
+            returnIndex >= 0 && returnIndex < timesLength &&
+
             // Continue if this verse is in the hidden column.
             (!_shouldShowVerseForColumn(getVerse(props, returnIndex), lyricColumnShown) ||
 
@@ -199,7 +206,6 @@ export const getVerseIndexForDirection = (props, currentIndex = 1, direction, ly
 
             // And as long as we haven't exhausted all indices.
             !(direction !== 0 && currentIndex === returnIndex)
-
         )
 
         return returnIndex

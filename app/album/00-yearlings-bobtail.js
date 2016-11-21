@@ -47,11 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `make title verse have time null if lyric verse has time 0`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `lyrics, not app, should care about hovered line`,
             workedHours: 0,
             neededHours: 3
@@ -557,6 +552,11 @@ module.exports = {
             taskName: `add other buttons to audio player`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `make title verse have time null if lyric verse has time 0`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

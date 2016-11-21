@@ -474,10 +474,11 @@ class App extends Component {
 
         // This was called from audio rewind and forward buttons.
         if (direction) {
-            selectedVerseIndex = this.props.selectedVerseIndex + direction
-            if (selectedVerseIndex < (getLyricsStartAtZero(this.props) ? 1 : 0) || selectedVerseIndex >= songTimes.length) {
+            selectedVerseIndex = getVerseIndexForDirection(this.props, this.props.selectedVerseIndex, direction, LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex], true)
+            if (selectedVerseIndex < 0 || selectedVerseIndex >= songTimes.length) {
                 return
             }
+
         }
 
         let selectedTimePlayed,
