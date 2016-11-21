@@ -472,7 +472,10 @@ class App extends Component {
 
         this._stopPropagation(e)
 
-        // This was called from audio rewind and forward buttons.
+        /**
+         * This was called from audio rewind and forward buttons, which do not
+         * have modulo selection.
+         */
         if (direction) {
             selectedVerseIndex = getVerseIndexForDirection(this.props, this.props.selectedVerseIndex, direction, LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex], true)
             if (selectedVerseIndex < 0 || selectedVerseIndex >= songTimes.length) {
