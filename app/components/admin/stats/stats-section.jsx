@@ -22,7 +22,7 @@ const StatsSectionView = ({
     annotations
 
 }) => (
-    <div className="section stats-section">
+    <div className="admin section stats-section">
         <h2>stats</h2>
         <div className="row">
             <LyricsWordCountRow lyrics={lyrics} />

@@ -10,6 +10,7 @@ const LYRIC = 'lyric',
 
     WIKI = 'wiki',
 
+    // These are class names.
     AUDIO_SECTION = 'audio-section',
     NAV_SECTION = 'nav-section',
     OVERVIEW_SECTION = 'overview-section',
@@ -25,6 +26,12 @@ const LYRIC = 'lyric',
 module.exports = {
 
     WINDOW_STORAGE: window.localStorage,
+
+    // These are class names.
+    PHONE_WIDTH: 'phone-width',
+    TABLET_WIDTH: 'tablet-width',
+    LAPTOP_WIDTH: 'laptop-width',
+    MONITOR_WIDTH: 'monitor-width',
 
     LYRIC_VERSE_ELEMENT: 'verse_element',
     LYRIC_ANNOTATION_ELEMENT: 'annotation_element',

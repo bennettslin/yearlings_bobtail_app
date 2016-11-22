@@ -34,6 +34,8 @@ import { LYRIC_COLUMN_KEYS, LYRICS_SECTION } from 'helpers/constants'
 const LyricsSectionView = ({
 
     // From props.
+    isAdmin,
+    deviceWidth,
     songLyrics,
     isSingleLyricColumn,
     selectedLyricColumnIndex,
@@ -46,7 +48,7 @@ const LyricsSectionView = ({
 
 ...other }) => (
     <div
-        className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${isSingleLyricColumn ? ' narrow' : ''}`}
+        className={`section lyrics-section ${deviceWidth} ${isAdmin ? 'admin' : 'live'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${isSingleLyricColumn ? ' single-column' : ''}`}
     >
         {/* Upon song change, scroll to element with this class name. */}
         <h2 className="lyrics-scroll-home">lyrics</h2>

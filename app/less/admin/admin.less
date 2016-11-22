@@ -48,6 +48,23 @@
     background-color: @song-field-colour;
 }
 
+/************
+ * SECTIONS *
+ ************/
+
+.section {
+    &.admin {
+        box-sizing: border-box;
+        padding: @field-padding;
+
+        &:not(.in-popup) {
+            margin: @field-padding 0;
+            background-color: @section-colour;
+            box-shadow: 0 2px 2px 2px @box-shadow-colour;
+        }
+    }
+}
+
 .admin-toggle {
     position: fixed;
     bottom: top;

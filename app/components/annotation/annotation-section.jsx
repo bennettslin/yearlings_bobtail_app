@@ -28,6 +28,7 @@ const AnnotationSectionView = ({
 
     // From props.
     inPopup,
+    isAdmin,
 
     // From controller.
     title,
@@ -35,7 +36,7 @@ const AnnotationSectionView = ({
 
 ...other }) => (
     <div
-        className={`section annotation-section${inPopup ? ' in-popup' : ''}`}
+        className={`section annotation-section ${isAdmin ? 'admin' : 'live'}${inPopup ? ' in-popup' : ''}`}
         onClick={onSectionClick}
     >
         <h2>{title}</h2>

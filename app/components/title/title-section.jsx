@@ -37,6 +37,7 @@ const TitleSection = ({
 const TitleSectionView = ({
 
     // From props.
+    isAdmin,
     title,
     sectionAccessHighlighted,
     sectionNextHighlighted,
@@ -44,7 +45,7 @@ const TitleSectionView = ({
     onClick
 
 }) => (
-    <div className={`section title-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}>
+    <div className={`section title-section ${isAdmin ? 'admin' : 'live'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}>
         <h1 className={titleAccessHighlighted ? 'access-highlighted' : ''}>
             <a className="enabled" onClick={onClick}>
                 {title}

@@ -85,6 +85,7 @@ const SongView = ({
     <div className="column song-column">
         <div className="field song-field">
             <AnnotationPopup
+                isAdmin={true}
                 songs={songs}
                 annotation={annotation}
                 accessedPopupAnchorIndex={accessedPopupAnchorIndex}
@@ -100,6 +101,7 @@ const SongView = ({
                 onSectionClick={onAnnotationSectionClick}
             />
             <WikiPopup
+                isAdmin={true}
                 selectedWikiUrl={selectedWikiUrl}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
@@ -107,6 +109,7 @@ const SongView = ({
                 onPopupButtonClick={onWikiUrlClick}
             />
             <DotsSection
+                isAdmin={true}
                 hoveredDotIndex={hoveredDotIndex}
                 selectedDotKeys={selectedDotKeys}
                 presentDotKeys={presentDotKeys}
@@ -118,6 +121,7 @@ const SongView = ({
                 onDotHover={onDotHover}
             />
             <LyricsSection
+                isAdmin={true}
                 isSingleLyricColumn={isSingleLyricColumn}
                 lyricsStartAtZero={lyricsStartAtZero}
                 accessedOn={accessedOn}

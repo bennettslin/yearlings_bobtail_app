@@ -40,6 +40,7 @@ const OverviewsSection = ({
 const OverviewsSectionView = ({
 
     // From props.
+    isAdmin,
     overviewText,
     onOverviewClick,
     onWikiUrlClick,
@@ -51,7 +52,7 @@ const OverviewsSectionView = ({
 
 }) => (
     <div
-        className={`section overview-section${accessHighlighted ? ' access-highlighted' : ''}${nextHighlighted ? ' next-highlighted' : ''}`}
+        className={`section overview-section ${isAdmin ? 'admin' : 'live'}${accessHighlighted ? ' access-highlighted' : ''}${nextHighlighted ? ' next-highlighted' : ''}`}
     >
         <h2>overview</h2>
         <div className="overview-text">

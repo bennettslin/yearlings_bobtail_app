@@ -39,6 +39,7 @@ import { NAV_SECTION,
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero } from 'helpers/album-view-helper'
+import { resizeWindow } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -146,11 +147,7 @@ class App extends Component {
      ***********/
 
     windowResize(e) {
-        const target = e ? e.target : window
-        this.setState({
-            windowHeight: target.innerHeight,
-            windowWidth: target.innerWidth
-        })
+        this.setState(resizeWindow(e ? e.target : window, this.state.isAdmin))
     }
 
     _bindEventHandlers() {

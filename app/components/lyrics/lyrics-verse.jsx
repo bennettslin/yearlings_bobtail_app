@@ -73,6 +73,7 @@ const LyricsVerseView = ({
 
     // From props.
     verseObject,
+    isSingleLyricColumn,
     hiddenLyricColumnKey,
 
     // From controller.
@@ -109,8 +110,7 @@ const LyricsVerseView = ({
             ) : (
                 <div className="double-lines-block">
                     {DOUBLESPEAKER_KEYS.filter(key => {
-                        if (key === hiddenLyricColumnKey) { return false }
-                        return verseObject[key]
+                        return key === hiddenLyricColumnKey && isSingleLyricColumn ? false : verseObject[key]
                     }).map((key, index) => {
                         return (
                             <LyricsLine {...other}

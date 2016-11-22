@@ -35,6 +35,9 @@ const Album = ({
 const AlbumView = ({
 
     // From props.
+    deviceWidth,
+    windowWidth,
+    windowHeight,
     songs,
     title,
     isPlaying,
@@ -60,8 +63,6 @@ const AlbumView = ({
     accessedSectionKey,
     nextSectionKey,
     accessedSongIndex,
-    windowWidth,
-    windowHeight,
 
     // From controller.
     allTasks,
@@ -70,6 +71,7 @@ const AlbumView = ({
     <div className="column album-column">
         <div className="field album-field">
             <TitleSection
+                isAdmin={true}
                 title={title}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
@@ -78,6 +80,7 @@ const AlbumView = ({
                 onTitleClick={onSongClick}
             />
             <AudioSection
+                isAdmin={true}
                 isHome={isHome}
                 isFirstSong={isFirstSong}
                 isLastSong={isLastSong}
@@ -97,10 +100,12 @@ const AlbumView = ({
                 onAudioOptionClick={onAudioOptionClick}
             />
             <TipsSection
+                isAdmin={true}
                 selectedTipsIndex={selectedTipsIndex}
                 onTipsClick={onTipsClick}
             />
             <DevSection
+                deviceWidth={deviceWidth}
                 windowWidth={windowWidth}
                 windowHeight={windowHeight}
                 selectedVerseIndex={selectedVerseIndex}
@@ -108,6 +113,7 @@ const AlbumView = ({
                 onScreenWidthClick={onScreenWidthClick}
             />
             <NavSection
+                isAdmin={true}
                 songs={songs}
                 allTasks={allTasks}
                 selectedSongIndex={selectedSongIndex}

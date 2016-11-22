@@ -57,13 +57,14 @@ class WikiSectionView extends Component {
     }
 
     render() {
-        const { inPopup,
+        const { isAdmin,
+                inPopup,
                 selectedWikiUrl } = this.props,
             { webviewLoading } = this.state
 
         return (
             <div
-                className={`section wiki-section${inPopup ? ' in-popup' : ''}`}
+                className={`section wiki-section ${isAdmin ? 'admin' : 'live'}${inPopup ? ' in-popup' : ''}`}
             >
                 {webviewLoading ?
                     <div className="spinner-container">
