@@ -66,12 +66,12 @@ export default {
                     let accessedSectionKey
 
                     switch (keyName) {
-                        case 'a':
-                        case 'A':
+                        case 'w':
+                        case 'W':
                             accessedSectionKey = AUDIO_SECTION
                             break
-                        case 'd':
-                        case 'D':
+                        case 'j':
+                        case 'J':
                             accessedSectionKey = DOTS_SECTION
                             break
                         case 'l':
@@ -146,23 +146,33 @@ export default {
         selectTime,
         selectSong
     }) {
-        switch (keyName) {
-            case ARROW_UP:
-                accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
-                break
-            case ARROW_DOWN:
-                accessedSongIndex = (accessedSongIndex + 1) % songsLength
-                break
-            // FIXME: Left and right arrows are for dev purposes only.
-            case ARROW_LEFT:
-                selectTime(true, selectedTimePlayed - 1)
-                break
-            case ARROW_RIGHT:
-                selectTime(true, selectedTimePlayed + 1)
-                break
-            case ENTER:
-                selectSong(true, accessedSongIndex)
-                break
+
+        const index = this.getIntegerForKey(keyName)
+
+        // Go straight to index if chosen.
+        if (index >= 0 && index < songsLength) {
+            selectSong(true, index)
+            accessedSongIndex = index
+
+        } else {
+            switch (keyName) {
+                case ARROW_UP:
+                    accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
+                    break
+                case ARROW_DOWN:
+                    accessedSongIndex = (accessedSongIndex + 1) % songsLength
+                    break
+                // FIXME: Left and right arrows are for dev purposes only.
+                case ARROW_LEFT:
+                    selectTime(true, selectedTimePlayed - 1)
+                    break
+                case ARROW_RIGHT:
+                    selectTime(true, selectedTimePlayed + 1)
+                    break
+                case ENTER:
+                    selectSong(true, accessedSongIndex)
+                    break
+            }
         }
 
         return {
@@ -390,25 +400,26 @@ export default {
         // Go straight to index if chosen.
         if (index >= 0 && index < ALL_DOT_KEYS.length) {
             selectDot(undefined, ALL_DOT_KEYS[index])
-            return
-        }
+            accessedDotIndex = index
 
-        if (keyName === ENTER) {
-            selectDot(undefined, ALL_DOT_KEYS[accessedDotIndex])
+        } else {
+            if (keyName === ENTER) {
+                selectDot(undefined, ALL_DOT_KEYS[accessedDotIndex])
 
-        } else if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-            let direction
+            } else if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
+                let direction
 
-            switch (keyName) {
-                case ARROW_LEFT:
+                switch (keyName) {
+                    case ARROW_LEFT:
                     direction = ALL_DOT_KEYS.length - 1
                     break
-                case ARROW_RIGHT:
+                    case ARROW_RIGHT:
                     direction = 1
                     break
-            }
+                }
 
-            accessedDotIndex = (accessedDotIndex + direction) % ALL_DOT_KEYS.length
+                accessedDotIndex = (accessedDotIndex + direction) % ALL_DOT_KEYS.length
+            }
         }
 
         return {
@@ -449,11 +460,11 @@ export default {
 
         // Char codes for uppercase are 65 to 90.
         } else if (charCode >= 65 && charCode <= 90) {
-            return charCode - 65
+            return charCode - 55
 
         // Char codes for lowercase are 97 to 122.
         } else if (charCode >= 97 && charCode <= 122) {
-            return charCode - 97
+            return charCode - 87
 
         } else {
             return -1

@@ -104,8 +104,8 @@
         * Wiki section is closed, and annotation section becomes accessed section.
 
 * These keys will always fire, even if access is off:
-    * "a" to access audio section
-    * "d" to access dots section
+    * "w" to access audio section
+    * "j" to access dots section
     * "l" to access lyrics section
     * "s" to access songs section
     * "p" to toggle "isPlaying"
