@@ -18,7 +18,6 @@ const AudioSection = ({
 
     const sectionAccessHighlighted = accessedOn && accessedSectionKey === AUDIO_SECTION,
         sectionNextHighlighted = accessedOn && nextSectionKey === AUDIO_SECTION,
-        onHomeClick = e => onAudioSongClick(e, 0),
         onPreviousSongClick = e => onAudioSongClick(e, undefined, -1),
         onRewindClick = e => onAudioTimeClick(e, undefined, -1),
         onFastForwardClick = e => onAudioTimeClick(e, undefined, 1),
@@ -28,7 +27,6 @@ const AudioSection = ({
         <AudioSectionView {...other}
             sectionAccessHighlighted={sectionAccessHighlighted}
             sectionNextHighlighted={sectionNextHighlighted}
-            onHomeClick={onHomeClick}
             onPreviousSongClick={onPreviousSongClick}
             onRewindClick={onRewindClick}
             onFastForwardClick={onFastForwardClick}
@@ -58,7 +56,6 @@ const AudioSectionView = ({
     // From controller.
     sectionAccessHighlighted,
     sectionNextHighlighted,
-    onHomeClick,
     onPreviousSongClick,
     onRewindClick,
     onFastForwardClick,
@@ -77,15 +74,9 @@ const AudioSectionView = ({
             <div className="audio-button-block">
                 <a
                     className={isHome ? '' : 'enabled'}
-                    onClick={onHomeClick}
-                >
-                    {'\u2302'}
-                </a>
-                <a
-                    className={isHome || isFirstSong ? '' : 'enabled'}
                     onClick={onPreviousSongClick}
                 >
-                    {'\u21E4'}
+                    {isHome || isFirstSong ? '\u2302' : '\u21E4'}
                 </a>
                 <a
                     className={isHome || isFirstVerse ? '' : 'enabled'}

@@ -351,17 +351,25 @@ export default {
     handleAudioAccess({
         keyName,
         togglePlay,
-        selectAudioOption
+        selectAudioOption,
+        selectSong,
+        selectVerse
     }) {
         switch (keyName) {
             case ENTER:
-                togglePlay()
+                selectAudioOption()
                 break
             case ARROW_LEFT:
-                selectAudioOption(undefined, -1)
+                selectSong(undefined, undefined, -1)
                 break
             case ARROW_RIGHT:
-                selectAudioOption()
+                selectSong(undefined, undefined, 1)
+                break
+            case ARROW_UP:
+                selectVerse(undefined, undefined, -1)
+                break
+            case ARROW_DOWN:
+                selectVerse(undefined, undefined, 1)
                 break
         }
     },

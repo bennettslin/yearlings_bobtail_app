@@ -272,11 +272,7 @@ class App extends Component {
         if (direction) {
             selectedSongIndex = this.props.selectedSongIndex + direction
 
-            /**
-             * Previous and next song buttons can only select songs. They can't
-             * return home.
-             */
-            if (selectedSongIndex <= 0 || selectedSongIndex > this.props.songs.length) {
+            if (selectedSongIndex < 0 || selectedSongIndex > this.props.songs.length) {
                 return
             }
         }
@@ -674,7 +670,9 @@ class App extends Component {
                         AccessHelper.handleAudioAccess({
                             keyName,
                             togglePlay: this.togglePlay,
-                            selectAudioOption: this.selectAudioOption
+                            selectAudioOption: this.selectAudioOption,
+                            selectVerse: this.selectVerse,
+                            selectSong: this.selectSong
                         })
                         break
                     case OVERVIEW_SECTION:

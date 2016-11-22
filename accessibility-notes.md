@@ -15,11 +15,13 @@
     * Keys can be clicked, which performs the action and then turns access off.
 
 * When audio section is accessed:
-    * "Enter" and Left and Right arrow keys are shown.
+    * "Enter" and arrow keys are shown. ("p" to play is a universal key.)
     * When "Enter" is pressed:
-        * Toggle between play and pause.
+        * Toggle through audio options.
     * When Left or Right arrows are pressed:
-        * Toggle through "continue to next," "pause after song," "repeat song"
+        * Select previous or next song.
+    * When Up or Down arrows are pressed:
+        * Select previous or next time.
 
 * When songs section is accessed:
     * Up and Down arrows and "Enter" are shown.
