@@ -38,8 +38,8 @@ export default {
         // These keys will always fire, even if access is off.
         switch (keyName) {
             // Toggle selected overview index.
-            case 'b':
-            case 'B':
+            case 'z':
+            case 'Z':
                 selectOverview()
                 break
             // Toggle admin.

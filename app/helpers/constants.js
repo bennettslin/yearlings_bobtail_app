@@ -13,7 +13,6 @@ const LYRIC = 'lyric',
     // These are class names.
     AUDIO_SECTION = 'audio-section',
     NAV_SECTION = 'nav-section',
-    OVERVIEW_SECTION = 'overview-section',
     LYRICS_SECTION = 'lyrics-section',
     DOTS_SECTION = 'dots-section',
     ANNOTATION_SECTION = 'annotation-section',
@@ -48,7 +47,6 @@ module.exports = {
 
     NAV_SECTION,
     AUDIO_SECTION,
-    OVERVIEW_SECTION,
     LYRICS_SECTION,
     DOTS_SECTION,
     ANNOTATION_SECTION,
@@ -56,7 +54,6 @@ module.exports = {
     SECTION_KEYS: [
         NAV_SECTION,
         AUDIO_SECTION,
-        OVERVIEW_SECTION,
         LYRICS_SECTION,
         DOTS_SECTION,
         ANNOTATION_SECTION,

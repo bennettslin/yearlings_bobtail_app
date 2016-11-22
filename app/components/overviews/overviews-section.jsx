@@ -10,24 +10,16 @@ import { OVERVIEW_SECTION } from 'helpers/constants'
 const OverviewsSection = ({
 
     selectedOverviewIndex,
-    accessedOn,
-    accessedSectionKey,
-    nextSectionKey,
 
 ...other }) => {
 
-    const accessHighlighted = accessedOn && accessedSectionKey === OVERVIEW_SECTION,
-        nextHighlighted = accessedOn && nextSectionKey === OVERVIEW_SECTION,
-
-        /**
-         * Remember that the default to show bubble text is 0.
-         */
-        showBubbleText = !selectedOverviewIndex
+    /**
+    * Remember that the default to show bubble text is 0.
+    */
+    const showBubbleText = !selectedOverviewIndex
 
     return (
         <OverviewsSectionView {...other}
-            accessHighlighted={accessHighlighted}
-            nextHighlighted={nextHighlighted}
             showBubbleText={showBubbleText}
         />
     )
@@ -46,13 +38,11 @@ const OverviewsSectionView = ({
     onWikiUrlClick,
 
     // From controller.
-    accessHighlighted,
-    nextHighlighted,
     showBubbleText
 
 }) => (
     <div
-        className={`section overview-section ${isAdmin ? 'admin' : 'live'}${accessHighlighted ? ' access-highlighted' : ''}${nextHighlighted ? ' next-highlighted' : ''}`}
+        className={`section overview-section ${isAdmin ? 'admin' : 'live'}`}
     >
         <h2>overview</h2>
         <div className="overview-text">

@@ -47,9 +47,24 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `hook up live sections`,
+            taskName: `make visual keyboard keys`,
             workedHours: 0,
-            neededHours: 2
+            neededHours: 3
+        },
+        {
+            taskName: `make each dot accessible in dots`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `make each song accessible in nav`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `pass screen sizes to sections`,
+            workedHours: 0,
+            neededHours: 1
         },
         {
             taskName: `pass screen sizes to sections`,
@@ -68,11 +83,6 @@ module.exports = {
         },
         {
             taskName: `scroll to annotation after portal`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `have class to show visual keyboard keys`,
             workedHours: 0,
             neededHours: 2
         },
@@ -587,6 +597,11 @@ module.exports = {
             taskName: `make audio buttons accessible`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `hook up live sections`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
