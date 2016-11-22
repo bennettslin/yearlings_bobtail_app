@@ -385,6 +385,14 @@ export default {
         accessedDotIndex,
         selectDot
     }) {
+        const index = this.getIntegerForKey(keyName) - 1
+
+        // Go straight to index if chosen.
+        if (index >= 0 && index < ALL_DOT_KEYS.length) {
+            selectDot(undefined, ALL_DOT_KEYS[index])
+            return
+        }
+
         if (keyName === ENTER) {
             selectDot(undefined, ALL_DOT_KEYS[accessedDotIndex])
 
@@ -426,5 +434,29 @@ export default {
             selectedSongIndex: props.selectedSongIndex,
             currentAccessedSectionIndex: (props.accessedSectionIndex) % SECTION_KEYS.length
         })]
+    },
+
+    getIntegerForKey(keyName) {
+        if (keyName.length > 1) {
+            return -1
+        }
+
+        const charCode = keyName.charCodeAt(0)
+
+        // Char codes for numbers are 48 to 57.
+        if (charCode >= 48 && charCode <= 57) {
+            return charCode - 48
+
+        // Char codes for uppercase are 65 to 90.
+        } else if (charCode >= 65 && charCode <= 90) {
+            return charCode - 65
+
+        // Char codes for lowercase are 97 to 122.
+        } else if (charCode >= 97 && charCode <= 122) {
+            return charCode - 97
+
+        } else {
+            return -1
+        }
     }
 }
