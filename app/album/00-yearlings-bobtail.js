@@ -47,11 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `make audio buttons accessible`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `lyrics, not app, should care about hovered line`,
             workedHours: 0,
             neededHours: 3
@@ -575,6 +570,11 @@ module.exports = {
         },
         {
             taskName: `constants for audio options`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `make audio buttons accessible`,
             workedHours: 1,
             neededHours: 1
         }

@@ -1,6 +1,6 @@
 import React from 'react'
 import NavRow from './nav-row'
-import ProgressFooter from '../progress/progress-footer'
+import ProgressFooter from '../admin/progress/progress-footer'
 import ProgressHelper from 'helpers/progress-helper'
 import { NAV_SECTION } from 'helpers/constants'
 

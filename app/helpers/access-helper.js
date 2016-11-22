@@ -31,7 +31,8 @@ export default {
         handleSectionAccess,
         selectOverview,
         selectAudioOption,
-        togglePlay
+        togglePlay,
+        toggleAdmin
     }) {
 
         // These keys will always fire, even if access is off.
@@ -40,6 +41,11 @@ export default {
             case 'b':
             case 'B':
                 selectOverview()
+                break
+            // Toggle admin.
+            case 'm':
+            case 'M':
+                toggleAdmin()
                 break
             // Toggle audio option index.
             case 'o':

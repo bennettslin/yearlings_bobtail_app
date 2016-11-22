@@ -4,10 +4,10 @@ import React from 'react'
  * CONTAINER *
  *************/
 
-const AdminToggleField = (props) => {
+const AdminToggle = (props) => {
 
     return (
-        <AdminToggleFieldView {...props} />
+        <AdminToggleView {...props} />
     )
 }
 
@@ -15,14 +15,14 @@ const AdminToggleField = (props) => {
  * PRESENTATION *
  ****************/
 
-const AdminToggleFieldView = ({
+const AdminToggleView = ({
 
     // From props.
     isAdmin,
     onClick
 
 }) => (
-    <div className="admin-toggle-field">
+    <div className="admin-toggle">
         <a
             className="enabled"
             onClick={onClick}
@@ -32,4 +32,4 @@ const AdminToggleFieldView = ({
     </div>
 )
 
-export default AdminToggleField
+export default AdminToggle

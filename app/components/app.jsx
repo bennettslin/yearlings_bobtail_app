@@ -14,7 +14,7 @@ import { selectSongIndex,
          selectWikiIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
-import AdminToggleField from './admin/admin-toggle-field'
+import AdminToggle from './admin/admin-toggle'
 import Switch from './switch'
 import { NAV_SECTION,
          AUDIO_SECTION,
@@ -625,7 +625,8 @@ class App extends Component {
             handleSectionAccess: this._handleSectionAccess,
             selectOverview: this.selectOverview,
             selectAudioOption: this.selectAudioOption,
-            togglePlay: this.togglePlay
+            togglePlay: this.togglePlay,
+            toggleAdmin: this.toggleAdmin
         })) { return }
 
         // If Escape to close popup, close it and return.
@@ -835,7 +836,7 @@ class App extends Component {
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"
             >
-                <AdminToggleField
+                <AdminToggle
                     isAdmin={isAdmin}
                     onClick={this.toggleAdmin}
                 />

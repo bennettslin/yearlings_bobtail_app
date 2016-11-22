@@ -1,5 +1,5 @@
 import React from 'react'
-import ProgressBar from '../progress/progress-bar'
+import ProgressBar from '../admin/progress/progress-bar'
 import ProgressHelper from 'helpers/progress-helper'
 
 /*************

@@ -5,15 +5,16 @@
 @import "./utilities/popups";
 @import "./utilities/text";
 
+@import "./admin/admin";
+@import "./admin/progress";
+@import "./admin/tasks";
+
 @import "./classes/access";
-@import "./classes/admin";
 @import "./classes/audio";
 @import "./classes/songs";
 @import "./classes/annotation";
 @import "./classes/wiki";
 @import "./classes/overviews";
-@import "./classes/tasks";
-@import "./classes/progress";
 @import "./classes/dots";
 @import "./classes/lyrics";
 
@@ -31,44 +32,6 @@ body {
     min-height: 100vh;
     font-family: PTSansNarrow;
     font-size: 1.1em;
-}
-
-/**********
- * FIELDS *
- **********/
-
-.column {
-    display: flex;
-    box-sizing: border-box;
-
-    // Needed by Safari.
-    height: 100%;
-}
-
-.field {
-    width: @field-width;
-    min-width: @field-width;
-    padding: 0 (@field-padding * 0.5);
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-.album-field {
-    padding-left: @field-padding;
-    background-color: @album-field-colour;
-    font-size: 1.2em;
-}
-
-.shared-field {
-    background-color: @shared-field-colour;
-}
-
-.song-field {
-    width: @song-field-width;
-    min-width: @song-field-width;
-    padding-right: @field-padding;
-    background-color: @song-field-colour;
 }
 
 /************

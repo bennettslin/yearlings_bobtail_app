@@ -111,4 +111,5 @@
     * "p" to toggle "isPlaying"
     * "o" to toggle "audioOptionIndex"
     * "b" to toggle "selectedOverviewIndex"
+    * "m" to toggle admin field. This won't be possible live, of course.
     * "Escape" to close a popup

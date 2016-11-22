@@ -1,0 +1,57 @@
+@field-padding: 15px;
+
+// Field widths.
+@field-width: 350px;
+@song-field-width: auto;
+
+// Field colours.
+@album-field-colour: #ede;
+@shared-field-colour: #edd;
+@song-field-colour: #eed;
+@annotation-colour: #eff;
+
+/**********
+ * FIELDS *
+ **********/
+
+.column {
+    display: flex;
+    box-sizing: border-box;
+
+    // Needed by Safari.
+    height: 100%;
+}
+
+.field {
+    width: @field-width;
+    min-width: @field-width;
+    padding: 0 (@field-padding * 0.5);
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.album-field {
+    padding-left: @field-padding;
+    background-color: @album-field-colour;
+    font-size: 1.2em;
+}
+
+.shared-field {
+    background-color: @shared-field-colour;
+}
+
+.song-field {
+    width: @song-field-width;
+    min-width: @song-field-width;
+    padding-right: @field-padding;
+    background-color: @song-field-colour;
+}
+
+.admin-toggle {
+    position: fixed;
+    bottom: top;
+    right: 0;
+    color: red;
+    background-color: black;
+}
