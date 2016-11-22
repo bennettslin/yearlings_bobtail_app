@@ -7,25 +7,24 @@ import { LYRIC_COLUMN_KEYS, LYRICS_SECTION } from 'helpers/constants'
  * CONTAINER *
  *************/
 
- const LyricsSection = ({
+const LyricsSection = ({
 
-     accessedOn,
-     accessedSectionKey,
-     nextSectionKey,
+    accessedOn,
+    accessedSectionKey,
+    nextSectionKey,
 
- ...other }) => {
+...other }) => {
 
-     const sectionAccessHighlighted = accessedOn && accessedSectionKey === LYRICS_SECTION,
+    const sectionAccessHighlighted = accessedOn && accessedSectionKey === LYRICS_SECTION,
         sectionNextHighlighted = accessedOn && nextSectionKey === LYRICS_SECTION
 
-
-     return (
-         <LyricsSectionView {...other}
-             sectionAccessHighlighted={sectionAccessHighlighted}
-             sectionNextHighlighted={sectionNextHighlighted}
-         />
-     )
- }
+    return (
+        <LyricsSectionView {...other}
+            sectionAccessHighlighted={sectionAccessHighlighted}
+            sectionNextHighlighted={sectionNextHighlighted}
+        />
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -36,7 +35,7 @@ const LyricsSectionView = ({
     // From props.
     isAdmin,
     deviceWidth,
-    songLyrics,
+    songLyrics = [],
     isSingleLyricColumn,
     selectedLyricColumnIndex,
     hasDoubleColumns,
@@ -48,7 +47,7 @@ const LyricsSectionView = ({
 
 ...other }) => (
     <div
-        className={`section lyrics-section ${deviceWidth} ${isAdmin ? 'admin' : 'live'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${isSingleLyricColumn ? ' single-column' : ''}`}
+        className={`section lyrics-section ${deviceWidth ? deviceWidth : ''} ${isAdmin ? 'admin' : 'live'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${isSingleLyricColumn ? ' single-column' : ''}`}
     >
         {/* Upon song change, scroll to element with this class name. */}
         <h2 className="lyrics-scroll-home">lyrics</h2>

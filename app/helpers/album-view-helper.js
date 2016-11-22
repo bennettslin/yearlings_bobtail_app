@@ -295,3 +295,19 @@ export const getPortalLinks = (card, songs) => {
         return null
     }
 }
+
+export const getWikiUrl = (props) => {
+    const { selectedWikiIndex } = props
+    if (selectedWikiIndex) {
+        const annotation = getAnnotation(props),
+            wikiPath = annotation.popupAnchors[selectedWikiIndex - 1]
+        return `https://en.m.wikipedia.org/wiki/${wikiPath}`
+    } else {
+        return null
+    }
+}
+
+export const getOverviewText = (props) => {
+    const songOverview = getSong(props).overview
+    return songOverview || props.overview
+}

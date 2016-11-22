@@ -10,7 +10,7 @@ import { NAV_SECTION } from 'helpers/constants'
 
 const NavSection = ({
 
-    songs,
+    songs = [],
     allTasks,
     accessedOn,
     accessedSectionKey,
@@ -19,7 +19,7 @@ const NavSection = ({
 ...other }) => {
 
     const maxTotalNeededHours = ProgressHelper.getMaxTotalNeededHoursFromSongs(songs),
-        sumAllTasks = ProgressHelper.calculateSumAllTasks(allTasks),
+        sumAllTasks = allTasks ? ProgressHelper.calculateSumAllTasks(allTasks) : null,
 
         sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION,
         sectionNextHighlighted = accessedOn && nextSectionKey === NAV_SECTION
@@ -58,12 +58,14 @@ const NavSectionView = ({
     <div
         className={`section nav-section ${isAdmin ? 'admin' : 'live'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
-        <div className="row">
-            <div className="text-cell-wrapper">
-                <h3 className="text-cell text">song</h3>
-                <h3 className="text-cell figure">progress</h3>
-            </div>
-        </div>
+        {isAdmin ?
+            <div className="row">
+                <div className="text-cell-wrapper">
+                    <h3 className="text-cell text">song</h3>
+                    <h3 className="text-cell figure">progress</h3>
+                </div>
+            </div> : null
+        }
         {songs.map((song, index) => {
             const isSelected = selectedSongIndex - 1 === index,
                 accessHighlighted = sectionAccessHighlighted && accessedSongIndex - 1 === index
@@ -80,11 +82,13 @@ const NavSectionView = ({
                 />
             )
         })}
-        <div className="row">
-            <ProgressFooter
-                sumTask={sumAllTasks}
-            />
-        </div>
+        {isAdmin ?
+            <div className="row">
+                <ProgressFooter
+                    sumTask={sumAllTasks}
+                />
+            </div> : null
+        }
     </div>
 )
 

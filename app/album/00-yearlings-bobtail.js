@@ -47,9 +47,14 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `pass screen sizes to sections`,
+            taskName: `hook up live sections`,
             workedHours: 0,
             neededHours: 2
+        },
+        {
+            taskName: `pass screen sizes to sections`,
+            workedHours: 0,
+            neededHours: 1
         },
         {
             taskName: `lyrics, not app, should care about hovered line`,

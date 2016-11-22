@@ -5,30 +5,20 @@ import OverviewsSection from '../overviews/overviews-section'
 import StatsSection from './stats/stats-section'
 import StageSection from '../stage/stage-section'
 import TasksSection from './tasks/tasks-section'
-import { getSong, getTasks } from 'helpers/album-view-helper'
+import { getSong, getTasks, getOverviewText } from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const Shared = ({
+const Shared = (props) => {
 
-    songs,
-    overview: albumOverview,
-    selectedSongIndex,
-    albumTasks,
-
-...other }) => {
-    const selectedSong = getSong({ selectedSongIndex, songs }),
-        { overview } = selectedSong,
-        overviewText = overview ? overview : albumOverview,
-        tasks = getTasks(selectedSong, albumTasks)
+    const selectedSong = getSong(props),
+        overviewText = getOverviewText(props),
+        tasks = getTasks(selectedSong, props.albumTasks)
 
     return (
-        <SharedView {...other}
-            songs={songs}
-            selectedSongIndex={selectedSongIndex}
-            selectedSong={selectedSong}
+        <SharedView {...props}
             overviewText={overviewText}
             tasks={tasks}
             lyrics={selectedSong.lyrics}
@@ -67,9 +57,6 @@ const SharedView = ({
                 nextSectionKey={nextSectionKey}
                 onOverviewClick={onOverviewClick}
             />
-            {/* Technically, stats only knows selected song data so it really
-              * belongs in song column. But we're putting it here because
-              * it keeps the layout balanced, and it's just a dev tool. */}
             <StatsSection
                 lyrics={lyrics}
                 annotations={annotations}
@@ -82,14 +69,12 @@ const SharedView = ({
             />
             <NotesSection />
         </div>
-        {selectedSongIndex ?
-            <Song {...other}
-                selectedSongIndex={selectedSongIndex}
-                accessedOn={accessedOn}
-                accessedSectionKey={accessedSectionKey}
-                nextSectionKey={nextSectionKey}
-            /> : null
-        }
+        <Song {...other}
+            selectedSongIndex={selectedSongIndex}
+            accessedOn={accessedOn}
+            accessedSectionKey={accessedSectionKey}
+            nextSectionKey={nextSectionKey}
+        />
     </div>
 )
 

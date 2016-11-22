@@ -3,28 +3,21 @@ import AnnotationPopup from '../annotation/annotation-popup'
 import WikiPopup from '../wiki/wiki-popup'
 import DotsSection from '../dots/dots-section'
 import LyricsSection from '../lyrics/lyrics-section'
-import { getAnnotation } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const Song = ({
+const Song = (props) => {
 
-    selectedSong,
-    selectedAnnotationIndex,
-    selectedWikiIndex,
-
-...other }) => {
-
-    const annotation = getAnnotation({ selectedAnnotationIndex, selectedSong }),
-        selectedWikiUrl = selectedWikiIndex ? `https://en.m.wikipedia.org/wiki/${annotation.popupAnchors[selectedWikiIndex - 1]}` : null
+    const selectedSong = getSong(props),
+        annotation = getAnnotation(props),
+        selectedWikiUrl = getWikiUrl(props)
 
     return (
-        <SongView {...other}
+        <SongView {...props}
             annotation={annotation}
-            selectedAnnotationIndex={selectedAnnotationIndex}
-            selectedWikiIndex={selectedWikiIndex}
             selectedWikiUrl={selectedWikiUrl}
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
@@ -120,29 +113,31 @@ const SongView = ({
                 onDotClick={onDotClick}
                 onDotHover={onDotHover}
             />
-            <LyricsSection
-                isAdmin={true}
-                isSingleLyricColumn={isSingleLyricColumn}
-                lyricsStartAtZero={lyricsStartAtZero}
-                accessedOn={accessedOn}
-                accessedSectionKey={accessedSectionKey}
-                nextSectionKey={nextSectionKey}
-                accessedLyricElement={accessedLyricElement}
-                accessedAnnotationIndex={accessedAnnotationIndex}
-                accessedVerseIndex={accessedVerseIndex}
-                selectedSongIndex={selectedSongIndex}
-                selectedAnnotationIndex={selectedAnnotationIndex}
-                selectedLyricColumnIndex={selectedLyricColumnIndex}
-                hasDoubleColumns={hasDoubleColumns}
-                songLyrics={selectedSongLyrics}
-                selectedDotKeys={selectedDotKeys}
-                hoveredLineIndex={hoveredLineIndex}
-                selectedVerseIndex={selectedVerseIndex}
-                onLineHover={onLineHover}
-                onVerseClick={onVerseClick}
-                onAnnotationClick={onAnnotationClick}
-                onLyricColumnClick={onLyricColumnClick}
-            />
+            {selectedSongIndex ?
+                <LyricsSection
+                    isAdmin={true}
+                    isSingleLyricColumn={isSingleLyricColumn}
+                    lyricsStartAtZero={lyricsStartAtZero}
+                    accessedOn={accessedOn}
+                    accessedSectionKey={accessedSectionKey}
+                    nextSectionKey={nextSectionKey}
+                    accessedLyricElement={accessedLyricElement}
+                    accessedAnnotationIndex={accessedAnnotationIndex}
+                    accessedVerseIndex={accessedVerseIndex}
+                    selectedSongIndex={selectedSongIndex}
+                    selectedAnnotationIndex={selectedAnnotationIndex}
+                    selectedLyricColumnIndex={selectedLyricColumnIndex}
+                    hasDoubleColumns={hasDoubleColumns}
+                    songLyrics={selectedSongLyrics}
+                    selectedDotKeys={selectedDotKeys}
+                    hoveredLineIndex={hoveredLineIndex}
+                    selectedVerseIndex={selectedVerseIndex}
+                    onLineHover={onLineHover}
+                    onVerseClick={onVerseClick}
+                    onAnnotationClick={onAnnotationClick}
+                    onLyricColumnClick={onLyricColumnClick}
+                /> : null
+            }
         </div>
     </div>
 )
