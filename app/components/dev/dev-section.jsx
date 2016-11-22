@@ -1,5 +1,4 @@
 import React from 'react'
-import { getFormattedTime } from 'helpers/format-helper'
 
 /*************
  * CONTAINER *
@@ -16,7 +15,6 @@ const DevSection = (props) => (
 const DevSectionView = ({
 
     // From props.
-    selectedTimePlayed,
     selectedVerseIndex,
     isSingleLyricColumn,
     onScreenWidthClick,
@@ -26,9 +24,6 @@ const DevSectionView = ({
 }) => (
     <div className="section dev-section">
         <h2>dev</h2>
-        <div className="row">
-            selected time: {getFormattedTime(selectedTimePlayed)}
-        </div>
         <div className="row">
             selected verse index: {selectedVerseIndex}
         </div>

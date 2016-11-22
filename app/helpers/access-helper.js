@@ -360,16 +360,16 @@ export default {
                 selectAudioOption()
                 break
             case ARROW_LEFT:
-                selectSong(undefined, undefined, -1)
+                selectSong(true, undefined, -1)
                 break
             case ARROW_RIGHT:
-                selectSong(undefined, undefined, 1)
+                selectSong(true, undefined, 1)
                 break
             case ARROW_UP:
-                selectVerse(undefined, undefined, -1)
+                selectVerse(true, undefined, -1)
                 break
             case ARROW_DOWN:
-                selectVerse(undefined, undefined, 1)
+                selectVerse(true, undefined, 1)
                 break
         }
     },

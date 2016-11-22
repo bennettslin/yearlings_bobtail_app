@@ -1,4 +1,5 @@
 import React from 'react'
+import { getFormattedTime } from 'helpers/format-helper'
 import { AUDIO_OPTIONS,
          AUDIO_SECTION } from 'helpers/constants'
 
@@ -43,6 +44,7 @@ const AudioSectionView = ({
 
     // From props.
     isPlaying,
+    selectedTimePlayed,
     selectedAudioOptionIndex,
     isHome,
     isFirstSong,
@@ -68,7 +70,7 @@ const AudioSectionView = ({
         <h2>audio</h2>
             {!isHome ?
                 <div className="audio-banner-block">
-                    {audioSongTitle}
+                    {audioSongTitle} - {getFormattedTime(selectedTimePlayed)}
                 </div> : null
             }
             <div className="audio-button-block">

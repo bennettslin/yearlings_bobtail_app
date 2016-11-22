@@ -86,6 +86,7 @@ const AlbumView = ({
                 audioSongTitle={audioSongTitle}
                 selectedSongIndex={selectedSongIndex}
                 isPlaying={isPlaying}
+                selectedTimePlayed={selectedTimePlayed}
                 selectedAudioOptionIndex={selectedAudioOptionIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
@@ -102,7 +103,6 @@ const AlbumView = ({
             <DevSection
                 windowWidth={windowWidth}
                 windowHeight={windowHeight}
-                selectedTimePlayed={selectedTimePlayed}
                 selectedVerseIndex={selectedVerseIndex}
                 isSingleLyricColumn={isSingleLyricColumn}
                 onScreenWidthClick={onScreenWidthClick}
