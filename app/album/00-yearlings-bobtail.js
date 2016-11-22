@@ -47,34 +47,19 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `lyrics, not app, should care about hovered line`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `make visual keyboard keys`,
             workedHours: 0,
             neededHours: 3
         },
         {
-            taskName: `make each dot accessible in dots`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `make each song accessible in nav`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `pass screen sizes to sections`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `pass screen sizes to sections`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `lyrics, not app, should care about hovered line`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `begin list of persistence checks`,
@@ -602,6 +587,16 @@ module.exports = {
             taskName: `hook up live sections`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `make each dot accessible in dots`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `make each song accessible in nav`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

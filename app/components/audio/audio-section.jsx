@@ -43,7 +43,6 @@ const AudioSection = ({
 const AudioSectionView = ({
 
     // From props.
-    isAdmin,
     isPlaying,
     selectedTimePlayed,
     selectedAudioOptionIndex,
@@ -66,7 +65,7 @@ const AudioSectionView = ({
 
 }) => (
     <div
-        className={`section audio-section ${isAdmin ? 'admin' : 'live'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
+        className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
         <h2>audio</h2>
             {!isHome ?

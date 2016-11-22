@@ -56,7 +56,7 @@ const NavSectionView = ({
 
 }) => (
     <div
-        className={`section nav-section ${isAdmin ? 'admin' : 'live'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
+        className={`section nav-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
         {isAdmin ?
             <div className="row">

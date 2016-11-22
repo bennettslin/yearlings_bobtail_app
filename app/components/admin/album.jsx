@@ -71,7 +71,6 @@ const AlbumView = ({
     <div className="column album-column">
         <div className="field album-field">
             <TitleSection
-                isAdmin={true}
                 title={title}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
@@ -80,7 +79,6 @@ const AlbumView = ({
                 onTitleClick={onSongClick}
             />
             <AudioSection
-                isAdmin={true}
                 isHome={isHome}
                 isFirstSong={isFirstSong}
                 isLastSong={isLastSong}
@@ -100,7 +98,6 @@ const AlbumView = ({
                 onAudioOptionClick={onAudioOptionClick}
             />
             <TipsSection
-                isAdmin={true}
                 selectedTipsIndex={selectedTipsIndex}
                 onTipsClick={onTipsClick}
             />

@@ -15,12 +15,11 @@ const TipsSection = (props) => (
 const TipsSectionView = ({
 
     // From props.
-    isAdmin,
     selectedTipsIndex,
     onTipsClick
 
 }) => (
-    <div className={`section tips-section ${isAdmin ? 'admin' : 'live'}`}>
+    <div className={`section tips-section`}>
         <h2>tips</h2>
         <button onClick={onTipsClick}>tips: {selectedTipsIndex}</button>
     </div>

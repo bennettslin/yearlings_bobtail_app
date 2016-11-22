@@ -15,10 +15,9 @@ const StageSection = (props) => (
 const StageSectionView = ({
 
     // From props.
-    isAdmin
 
 }) => (
-    <div className={`section stage-section ${isAdmin ? 'admin' : 'live'}`}>
+    <div className={`section stage-section`}>
         <h2>stage</h2>
     </div>
 )

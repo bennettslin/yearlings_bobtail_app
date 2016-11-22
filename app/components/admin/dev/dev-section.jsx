@@ -23,7 +23,7 @@ const DevSectionView = ({
     onScreenWidthClick
 
 }) => (
-    <div className="admin section dev-section">
+    <div className="section dev-section">
         <h2>dev</h2>
         <div className="row">
             selected verse index: {selectedVerseIndex}

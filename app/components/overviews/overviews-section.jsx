@@ -32,7 +32,6 @@ const OverviewsSection = ({
 const OverviewsSectionView = ({
 
     // From props.
-    isAdmin,
     overviewText,
     onOverviewClick,
     onWikiUrlClick,
@@ -42,7 +41,7 @@ const OverviewsSectionView = ({
 
 }) => (
     <div
-        className={`section overview-section ${isAdmin ? 'admin' : 'live'}`}
+        className={`section overview-section`}
     >
         <h2>overview</h2>
         <div className="overview-text">

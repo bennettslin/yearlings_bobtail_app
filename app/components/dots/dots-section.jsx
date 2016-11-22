@@ -32,7 +32,6 @@ import { DOTS_SECTION } from 'helpers/constants'
 const DotsSectionView = ({
 
     // From props.
-    isAdmin,
     hoveredDotIndex,
 
     // From controller.
@@ -41,7 +40,7 @@ const DotsSectionView = ({
 
 ...other }) => (
     <div
-        className={`section dots-section ${isAdmin ? 'admin' : 'live'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
+        className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
         <h2>dots</h2>
         <div className="tooltip-container">

@@ -815,7 +815,8 @@ class App extends Component {
             { songs,
               selectedSongIndex,
               selectedVerseIndex } = this.props,
-            { isAdmin } = this.state,
+            { isAdmin,
+              deviceWidth } = this.state,
             songTimes = getSongTimes(this.props),
             isHome = selectedSongIndex === 0,
             isFirstSong = selectedSongIndex === 1,
@@ -828,7 +829,7 @@ class App extends Component {
         return (
             <div
                 ref="app"
-                className="app"
+                className={`app ${isAdmin ? 'admin' : 'live'} ${deviceWidth}`}
                 onClick={this._onBodyClick}
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"

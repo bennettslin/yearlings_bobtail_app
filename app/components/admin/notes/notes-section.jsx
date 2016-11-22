@@ -13,7 +13,7 @@ const NotesSection = () => (
  ****************/
 
 const NotesSectionView = () => (
-    <div className="admin section notes-section">
+    <div className="section notes-section">
         <h2>scrap notes</h2>
         <ul>
             <li>Get unit tests to work with Mocha</li>
