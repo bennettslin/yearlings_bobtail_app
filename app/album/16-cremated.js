@@ -269,8 +269,7 @@ module.exports = {
                                 },
                                 `all-American god, is humming along and tapping the underside of the dashboard with her feet.`
                             ]
-                        },
-                        todo: true
+                        }
                     }
                 ]
             },

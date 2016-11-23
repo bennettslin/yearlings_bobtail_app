@@ -39,22 +39,18 @@ export default {
         switch (keyName) {
             // Toggle selected overview index.
             case 'z':
-            case 'Z':
                 selectOverview()
                 break
             // Toggle admin.
             case 'm':
-            case 'M':
                 toggleAdmin()
                 break
             // Toggle audio option index.
             case 'o':
-            case 'O':
                 selectAudioOption()
                 break
             // Toggle isPlaying.
             case 'p':
-            case 'P':
                 togglePlay()
                 break
             default:
@@ -67,19 +63,15 @@ export default {
 
                     switch (keyName) {
                         case 'w':
-                        case 'W':
                             accessedSectionKey = AUDIO_SECTION
                             break
                         case 'j':
-                        case 'J':
                             accessedSectionKey = DOTS_SECTION
                             break
                         case 'l':
-                        case 'L':
                             accessedSectionKey = LYRICS_SECTION
                             break
                         case 's':
-                        case 'S':
                             accessedSectionKey = NAV_SECTION
                             break
                         default:
@@ -147,7 +139,7 @@ export default {
         selectSong
     }) {
 
-        const index = this.getIntegerForKey(keyName)
+        const index = this.getIntegerForCharKey(keyName)
 
         // Go straight to index if chosen.
         if (index >= 0 && index < songsLength) {
@@ -209,12 +201,10 @@ export default {
              * lyric universal key.
              */
             case 'e':
-            case 'E':
             case 'r':
-            case 'R':
                 if (!fromAnnotationSection) {
                     // Handle selection of left or right lyric column.
-                    selectLyricColumn(undefined, keyName === 'e' || keyName === 'E' ? 0 : 1)
+                    selectLyricColumn(undefined, keyName === 'e' ? 0 : 1)
                     return
                 }
                 break
@@ -395,7 +385,7 @@ export default {
         accessedDotIndex,
         selectDot
     }) {
-        const index = this.getIntegerForKey(keyName) - 1
+        const index = this.getIntegerForCharKey(keyName) - 1
 
         // Go straight to index if chosen.
         if (index >= 0 && index < ALL_DOT_KEYS.length) {
@@ -447,7 +437,7 @@ export default {
         })]
     },
 
-    getIntegerForKey(keyName) {
+    getIntegerForCharKey(keyName) {
         if (keyName.length > 1) {
             return -1
         }
@@ -457,10 +447,6 @@ export default {
         // Char codes for numbers are 48 to 57.
         if (charCode >= 48 && charCode <= 57) {
             return charCode - 48
-
-        // Char codes for uppercase are 65 to 90.
-        } else if (charCode >= 65 && charCode <= 90) {
-            return charCode - 55
 
         // Char codes for lowercase are 97 to 122.
         } else if (charCode >= 97 && charCode <= 122) {

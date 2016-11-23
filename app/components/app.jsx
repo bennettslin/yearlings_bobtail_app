@@ -604,7 +604,7 @@ class App extends Component {
     }
 
     handleKeyDown(e) {
-        const { key: keyName } = e
+        let { key: keyName } = e
 
         // Do not handle if any modifier keys are present.
         if (e && (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === 'Tab')) {
@@ -614,6 +614,13 @@ class App extends Component {
             this._focusApp()
             e.preventDefault()
         }
+
+        // Make all single characters lowercase.
+        if (keyName.length === 1) {
+            keyName = keyName.toLowerCase()
+        }
+
+        console.error('keyName', keyName);
 
         // If universal key, handle and return.
         if (AccessHelper.handleKeyIfUniversal({
