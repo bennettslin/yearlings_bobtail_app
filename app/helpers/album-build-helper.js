@@ -216,7 +216,15 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
 
         // Add annotation index to annotation and lyrics. 1-based index.
         annotation.annotationIndex = annotationIndex
-        annotation.verseIndex = _tempStore._verseIndexCounter
+
+        /**
+         * Register whether this annotation is in the verse with the index.
+         */
+        if (lyric.time) {
+            annotation.verseIndex = _tempStore._verseIndexCounter
+        } else {
+            annotation.mostRecentVerseIndex = _tempStore._verseIndexCounter
+        }
 
         // Let annotation know if it's in a doublespeaker column.
         if (textKey === LEFT || textKey === 'leftColumn') {

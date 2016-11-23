@@ -213,7 +213,10 @@ class App extends Component {
                 this.setState({
                     accessedLyricElement: LYRIC_ANNOTATION_ELEMENT,
                     accessedAnnotationIndex: selectedAnnotationIndex,
-                    accessedVerseIndex: getVerseIndexForAnnotationIndex(this.props, selectedAnnotationIndex)
+                    accessedVerseIndex: getVerseIndexForAnnotationIndex({
+                        props: this.props,
+                        index: selectedAnnotationIndex
+                    })
                 })
             }
 
@@ -488,7 +491,13 @@ class App extends Component {
          * have modulo selection.
          */
         if (direction) {
-            selectedVerseIndex = getVerseIndexForDirection(this.props, this.props.selectedVerseIndex, direction, LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex], true)
+            selectedVerseIndex = getVerseIndexForDirection({
+                props: this.props,
+                index: this.props.selectedVerseIndex,
+                direction,
+                lyricColumnShown: LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex],
+                noModulo: true
+            })
             if (selectedVerseIndex < 0 || selectedVerseIndex >= songTimes.length) {
                 return
             }
@@ -561,10 +570,18 @@ class App extends Component {
 
             if (annotation && annotation.column) {
                 newState.accessedLyricElement = LYRIC_VERSE_ELEMENT
-                newState.accessedVerseIndex =  getVerseIndexForAnnotationIndex(this.props, this.state.accessedAnnotationIndex, lyricColumnShown)
+                newState.accessedVerseIndex = getVerseIndexForAnnotationIndex({
+                    props: this.props,
+                    index: this.state.accessedAnnotationIndex,
+                    lyricColumnShown
+                })
             }
         } else {
-            newState.accessedVerseIndex =  getVerseIndexForDirection(this.props, this.state.accessedVerseIndex, undefined, lyricColumnShown)
+            newState.accessedVerseIndex =  getVerseIndexForDirection({
+                props: this.props,
+                index: this.state.accessedVerseIndex,
+                lyricColumnShown
+            })
         }
 
         this.props.selectLyricColumnIndex(selectedLyricColumnIndex)

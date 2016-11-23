@@ -177,22 +177,46 @@ export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction, ly
     return getAnnotationIndexForDirection(props, returnIndex, undefined, direction, lyricColumnShown)
 }
 
-export const getVerseIndexForDirection = (props, currentIndex = 1, direction, lyricColumnShown, noModulo) => {
+export const getVerseIndexForDirection = ({
+    props,
+    index,
+    recentIndex,
+    direction,
+    lyricColumnShown,
+    noModulo
+}) => {
     const selectedSong = getSong(props),
-        lyricsStartAtZero = getLyricsStartAtZero(props)
+        lyricsStartAtZero = getLyricsStartAtZero(props),
+        specifiedDirection = direction
 
     if (selectedSong.times) {
         const timesLength = selectedSong.times.length
 
-        let returnIndex = currentIndex
+        // If no verse index, pick the closest index based on direction.
+        let returnIndex
+        if (!isNaN(index)) {
+            returnIndex = index
+        } else {
+            returnIndex = (!direction || direction === -1) ? recentIndex : (recentIndex + 1) % timesLength
+        }
 
         do {
-            if (typeof direction === 'undefined') {
+            /**
+             * If no specified direction, or if we have just picked the closest
+             * index, then stay put the first time around.
+             */
+            if (typeof direction === 'undefined' || !isNaN(recentIndex)) {
+                // Reset recent index to prevent infinite loop.
+                recentIndex = undefined
                 direction = 0
 
-            // If this is the second time around, begin incrementing backwards.
+            /**
+             * If this is the second time around, begin incrementing in the
+             * direction of the originally specified direction, if any. Default
+             * is backwards.
+             */
             } else if (direction === 0) {
-                direction = -1
+                direction = specifiedDirection || -1
             }
 
             // Verse indices are 0-based.
@@ -213,25 +237,37 @@ export const getVerseIndexForDirection = (props, currentIndex = 1, direction, ly
             (returnIndex === 0 && lyricsStartAtZero)) &&
 
             // And as long as we haven't exhausted all indices.
-            !(direction !== 0 && currentIndex === returnIndex)
+            !(direction !== 0 && index === returnIndex)
         )
 
         return returnIndex
     }
 
-    return currentIndex
+    return index
 }
 
-export const getVerseIndexForAnnotationIndex = (props, annotationIndex, lyricColumnShown) => {
+export const getVerseIndexForAnnotationIndex = ({
+    props,
+    index,
+    direction,
+    lyricColumnShown
+}) => {
     const annotation = getAnnotation({
         selectedSongIndex: props.selectedSongIndex,
         songs: props.songs
-    }, annotationIndex)
+    }, index)
 
     /**
-     * Ensure that this verse index is not hidden. Otherwise, look backwards.
+     * Ensure that this verse index is not hidden. Otherwise, search in the
+     * specified direction.
      */
-    return getVerseIndexForDirection(props, annotation.verseIndex, undefined, lyricColumnShown)
+    return getVerseIndexForDirection({
+        props,
+        index: annotation.verseIndex,
+        recentIndex: annotation.mostRecentVerseIndex,
+        direction,
+        lyricColumnShown
+    })
 }
 
 export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, direction) => {
