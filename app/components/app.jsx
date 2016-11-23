@@ -621,7 +621,9 @@ class App extends Component {
             selectAudioOption: this.selectAudioOption,
             selectTips: this.selectTips,
             togglePlay: this.togglePlay,
-            toggleAdmin: this.toggleAdmin
+            toggleAdmin: this.toggleAdmin,
+            selectedTimePlayed: this.props.selectedTimePlayed,
+            selectTime: this.selectTime
         })) { return }
 
         // If Escape to close popup, close it and return.
@@ -657,8 +659,6 @@ class App extends Component {
                             // Include option of no song.
                             songsLength: this.props.songs.length + 1,
                             accessedSongIndex: this.state.accessedSongIndex,
-                            selectedTimePlayed: this.props.selectedTimePlayed,
-                            selectTime: this.selectTime,
                             selectSong: this.selectSong
                         })
                         break

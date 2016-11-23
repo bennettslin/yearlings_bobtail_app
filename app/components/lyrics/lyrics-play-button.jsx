@@ -9,7 +9,6 @@ import { getFormattedTime } from 'helpers/format-helper'
 
 const LyricsPlayButton = ({
 
-    time,
     isSelected,
     onClick
 
@@ -19,7 +18,7 @@ const LyricsPlayButton = ({
             <a className={`play-child play-button${isSelected ? '' : ' enabled'}`}
                 onClick={onClick}
             >
-                {`\u25B6${getFormattedTime(time)}`}
+                {`\u25B6`}
             </a> :
             <div className="play-child play-icon">
                 {`\u25B6`}

@@ -36,7 +36,6 @@ const LyricsVerse = ({
     return (
         <LyricsVerseView {...other}
             verseObject={verseObject}
-            time={time}
             accessHighlighted={accessHighlighted}
             sectionAccessHighlighted={sectionAccessHighlighted}
             accessedLyricElement={accessedLyricElement}
@@ -62,7 +61,6 @@ const LyricsVerseView = ({
     hiddenLyricColumnKey,
 
     // From controller.
-    time,
     accessHighlighted,
     isInteractable,
     isSelected,
@@ -78,7 +76,6 @@ const LyricsVerseView = ({
     >
         {isInteractable ?
             <LyricsPlayButton
-                time={time}
                 isSelected={isSelected}
                 onClick={onPlayClick}
             /> : null

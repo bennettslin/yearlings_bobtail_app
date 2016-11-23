@@ -33,11 +33,20 @@ export default {
         selectAudioOption,
         selectTips,
         togglePlay,
-        toggleAdmin
+        toggleAdmin,
+        selectTime,
+        selectedTimePlayed
     }) {
 
         // These keys will always fire, even if access is off.
         switch (keyName) {
+            // FIXME: These are for dev purposes only.
+            case ',':
+                selectTime(true, selectedTimePlayed - 1)
+                break
+            case '.':
+                selectTime(true, selectedTimePlayed + 1)
+                break
             // Toggle selected overview index.
             case 'z':
                 selectOverview()
@@ -139,8 +148,6 @@ export default {
         keyName,
         songsLength,
         accessedSongIndex,
-        selectedTimePlayed,
-        selectTime,
         selectSong
     }) {
 
@@ -158,13 +165,6 @@ export default {
                     break
                 case ARROW_DOWN:
                     accessedSongIndex = (accessedSongIndex + 1) % songsLength
-                    break
-                // FIXME: Left and right arrows are for dev purposes only.
-                case ARROW_LEFT:
-                    selectTime(true, selectedTimePlayed - 1)
-                    break
-                case ARROW_RIGHT:
-                    selectTime(true, selectedTimePlayed + 1)
                     break
                 case ENTER:
                     selectSong(true, accessedSongIndex)

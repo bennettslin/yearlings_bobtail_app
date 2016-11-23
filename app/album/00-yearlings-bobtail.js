@@ -47,6 +47,21 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `accessed verse should default to closest annotation based on arrow`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `accessed verse with no time should default to closest verse based on arrow`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `hovered dot tooltips should also just be css`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `make visual keyboard keys`,
             workedHours: 0,
             neededHours: 3
@@ -60,11 +75,6 @@ module.exports = {
             taskName: `scroll to annotation after portal`,
             workedHours: 0,
             neededHours: 2
-        },
-        {
-            taskName: `bug where you click on verse, then key away`,
-            workedHours: 0,
-            neededHours: 1
         },
         {
             taskName: `refactor app handlers`,
