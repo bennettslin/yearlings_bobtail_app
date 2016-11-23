@@ -42,7 +42,6 @@ const SongView = ({
     selectedDotKeys,
     selectedWikiUrl,
     hoveredDotIndex,
-    hoveredLineIndex,
     selectedVerseIndex,
     isSingleLyricColumn,
     selectedLyricColumnIndex,
@@ -63,7 +62,6 @@ const SongView = ({
     onAnnotationClick,
     onVerseClick,
     onDotHover,
-    onLineHover,
     onLyricColumnClick,
     onAnnotationSectionClick,
 
@@ -126,9 +124,7 @@ const SongView = ({
                     hasDoubleColumns={hasDoubleColumns}
                     songLyrics={selectedSongLyrics}
                     selectedDotKeys={selectedDotKeys}
-                    hoveredLineIndex={hoveredLineIndex}
                     selectedVerseIndex={selectedVerseIndex}
-                    onLineHover={onLineHover}
                     onVerseClick={onVerseClick}
                     onAnnotationClick={onAnnotationClick}
                     onLyricColumnClick={onLyricColumnClick}

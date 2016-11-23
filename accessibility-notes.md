@@ -110,6 +110,7 @@
     * "s" to access songs section
     * "p" to toggle "isPlaying"
     * "o" to toggle "audioOptionIndex"
+    * "t" to toggle "selectedTipsIndex"
     * "z" to toggle "selectedOverviewIndex"
     * "m" to toggle admin field. This won't be possible live, of course.
     * "Escape" to close a popup

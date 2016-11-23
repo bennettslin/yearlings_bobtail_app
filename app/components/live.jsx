@@ -70,7 +70,6 @@ const LiveView = ({
     accessedDotIndex,
 
     hoveredDotIndex,
-    hoveredLineIndex,
     lyricsStartAtZero,
 
     isSingleLyricColumn,
@@ -91,7 +90,6 @@ const LiveView = ({
     onWikiUrlClick,
     onAnnotationClick,
     onDotHover,
-    onLineHover,
     onLyricColumnClick,
     onAnnotationSectionClick,
 
@@ -205,9 +203,7 @@ const LiveView = ({
                 hasDoubleColumns={hasDoubleColumns}
                 songLyrics={selectedSongLyrics}
                 selectedDotKeys={selectedDotKeys}
-                hoveredLineIndex={hoveredLineIndex}
                 selectedVerseIndex={selectedVerseIndex}
-                onLineHover={onLineHover}
                 onVerseClick={onVerseClick}
                 onAnnotationClick={onAnnotationClick}
                 onLyricColumnClick={onLyricColumnClick}

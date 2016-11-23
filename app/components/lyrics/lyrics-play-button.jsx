@@ -10,14 +10,13 @@ import { getFormattedTime } from 'helpers/format-helper'
 const LyricsPlayButton = ({
 
     time,
-    isHovered,
     isSelected,
     onClick
 
 }) => (
-    <div className={`play-button-block${isHovered || isSelected ? ' slid-out' : ''}`}>
+    <div className="play-button-block">
         {!isSelected ?
-            <a className={`play-child play-button${isSelected ? '' : ' enabled'}${isHovered ? ' hovered' : ''}`}
+            <a className={`play-child play-button${isSelected ? '' : ' enabled'}`}
                 onClick={onClick}
             >
                 {`\u25B6${getFormattedTime(time)}`}

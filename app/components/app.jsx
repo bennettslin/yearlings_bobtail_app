@@ -126,7 +126,6 @@ class App extends Component {
             accessedLyricElement: LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
             hoveredDotIndex: 0,
-            hoveredLineIndex: 0,
             isSingleLyricColumn: true
         }
     }
@@ -161,7 +160,6 @@ class App extends Component {
         this.selectTime = this.selectTime.bind(this)
         this.selectDot = this.selectDot.bind(this)
         this.hoverDot = this.hoverDot.bind(this)
-        this.hoverLine = this.hoverLine.bind(this)
         this.selectPortal = this.selectPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
@@ -581,12 +579,6 @@ class App extends Component {
         })
     }
 
-    hoverLine(e, hoveredLineIndex = 0) {
-        this.setState({
-            hoveredLineIndex
-        })
-    }
-
     handleAnnotationSectionClick(e) {
         this._handleAccessOn(0)
 
@@ -620,8 +612,6 @@ class App extends Component {
             keyName = keyName.toLowerCase()
         }
 
-        console.error('keyName', keyName);
-
         // If universal key, handle and return.
         if (AccessHelper.handleKeyIfUniversal({
             keyName,
@@ -629,6 +619,7 @@ class App extends Component {
             handleSectionAccess: this._handleSectionAccess,
             selectOverview: this.selectOverview,
             selectAudioOption: this.selectAudioOption,
+            selectTips: this.selectTips,
             togglePlay: this.togglePlay,
             toggleAdmin: this.toggleAdmin
         })) { return }
@@ -865,7 +856,6 @@ class App extends Component {
                     onVerseClick={this.selectVerse}
                     onDotClick={this.selectDot}
                     onDotHover={this.hoverDot}
-                    onLineHover={this.hoverLine}
                     onScreenWidthClick={this.selectLyricColumnWidth}
                     onLyricColumnClick={this.selectLyricColumn}
                     onAnnotationSectionClick={this.handleAnnotationSectionClick}

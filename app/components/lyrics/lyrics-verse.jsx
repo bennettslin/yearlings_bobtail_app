@@ -15,11 +15,9 @@ const LyricsVerse = ({
     accessedLyricElement,
     accessedVerseIndex,
     selectedVerseIndex,
-    hoveredLineIndex,
     lyricsStartAtZero,
     onAnnotationClick,
     onVerseClick,
-    onLineHover,
 
 ...other }) => {
 
@@ -30,20 +28,10 @@ const LyricsVerse = ({
 
         isSelected = verseIndex === selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
-
-        /**
-         * TODO: If there is no duration between time and nextTime, it can be
-         * selected but not marked as selected. This feature was previously
-         * implemented, but was dependent on the next time value, so was
-         * removed.
-         */
-        isHovered = verseIndex === hoveredLineIndex,
         isSingleSpeaker = !!lyric,
         isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero),
         onPlayClick = isInteractable && !isSelected ? e => onVerseClick(e, verseIndex) : null,
-        onAnchorClick = onAnnotationClick,
-        onMouseEnter = onLineHover ? e => onLineHover(e, verseIndex) : null,
-        onMouseLeave = onLineHover ? e => onLineHover(e) : null
+        onAnchorClick = onAnnotationClick
 
     return (
         <LyricsVerseView {...other}
@@ -53,14 +41,11 @@ const LyricsVerse = ({
             sectionAccessHighlighted={sectionAccessHighlighted}
             accessedLyricElement={accessedLyricElement}
             isTitle={isTitle}
-            isHovered={isHovered}
             isSelected={isSelected}
             isInteractable={isInteractable}
             isSingleSpeaker={isSingleSpeaker}
             onPlayClick={onPlayClick}
             onAnchorClick={onAnchorClick}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
         />
     )
 }
@@ -81,7 +66,6 @@ const LyricsVerseView = ({
     accessHighlighted,
     isInteractable,
     isSelected,
-    isHovered,
     isSingleSpeaker,
     isTitle,
     onPlayClick,
@@ -91,13 +75,10 @@ const LyricsVerseView = ({
 ...other }) => (
 
     <div className={`verse verse-${verseObject.verseIndex}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
     >
         {isInteractable ?
             <LyricsPlayButton
                 time={time}
-                isHovered={isHovered}
                 isSelected={isSelected}
                 onClick={onPlayClick}
             /> : null

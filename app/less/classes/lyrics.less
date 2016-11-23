@@ -145,9 +145,15 @@
         &.interactable {
             position: relative;
 
+            // Play button hover styling.
             &:not(.selected) {
                 &:hover {
                     color: green;
+
+                    .play-button {
+                        transition: opacity 0.1s ease 0.2s;
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -189,10 +195,7 @@
     .play-button-block {
         position: absolute;
         height: 100%;
-
-        &.slid-out {
-            right: 100%;
-        }
+        right: 100%;
 
         // Either button or icon.
         .play-child {
@@ -206,11 +209,6 @@
 
         .play-button {
             opacity: 0;
-
-            &.hovered {
-                transition: opacity 0.1s ease 0.2s;
-                opacity: 1;
-            }
         }
 
         .play-icon {

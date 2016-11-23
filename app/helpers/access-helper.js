@@ -31,6 +31,7 @@ export default {
         handleSectionAccess,
         selectOverview,
         selectAudioOption,
+        selectTips,
         togglePlay,
         toggleAdmin
     }) {
@@ -52,6 +53,10 @@ export default {
             // Toggle isPlaying.
             case 'p':
                 togglePlay()
+                break
+            // Select tips.
+            case 't':
+                selectTips()
                 break
             default:
                 /**

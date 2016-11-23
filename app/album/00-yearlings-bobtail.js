@@ -47,21 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `make all keys lowercase`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `make tips accessible`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `lyrics, not app, should care about hovered line`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `make visual keyboard keys`,
             workedHours: 0,
             neededHours: 3
@@ -605,6 +590,21 @@ module.exports = {
         },
         {
             taskName: `pass screen sizes to sections`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `make all keys lowercase`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `make tips accessible`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `lyrics, not app, should care about hovered line`,
             workedHours: 1,
             neededHours: 1
         }

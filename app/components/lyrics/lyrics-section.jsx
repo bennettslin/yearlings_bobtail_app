@@ -33,7 +33,6 @@ const LyricsSection = ({
 const LyricsSectionView = ({
 
     // From props.
-    deviceWidth,
     songLyrics = [],
     isSingleLyricColumn,
     selectedLyricColumnIndex,
