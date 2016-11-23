@@ -28,7 +28,7 @@ const LyricsVerse = ({
 
         isSelected = verseIndex === selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
-        isSingleSpeaker = !!lyric,
+        isDoubleSpeaker = !lyric,
         isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero),
         onPlayClick = isInteractable && !isSelected ? e => onVerseClick(e, verseIndex) : null,
         onAnchorClick = onAnnotationClick
@@ -42,7 +42,7 @@ const LyricsVerse = ({
             isTitle={isTitle}
             isSelected={isSelected}
             isInteractable={isInteractable}
-            isSingleSpeaker={isSingleSpeaker}
+            isDoubleSpeaker={isDoubleSpeaker}
             onPlayClick={onPlayClick}
             onAnchorClick={onAnchorClick}
         />
@@ -57,14 +57,14 @@ const LyricsVerseView = ({
 
     // From props.
     verseObject,
-    isSingleLyricColumn,
+    showSingleLyricColumn,
     hiddenLyricColumnKey,
 
     // From controller.
     accessHighlighted,
     isInteractable,
     isSelected,
-    isSingleSpeaker,
+    isDoubleSpeaker,
     isTitle,
     onPlayClick,
     onMouseEnter,
@@ -80,25 +80,25 @@ const LyricsVerseView = ({
                 onClick={onPlayClick}
             /> : null
         }
-        {isSingleSpeaker ? (
+        {isDoubleSpeaker ? (
+            <div className="double-lines-block">
+                {DOUBLESPEAKER_KEYS.filter(key => {
+                    return key === hiddenLyricColumnKey && showSingleLyricColumn ? false : verseObject[key]
+                }).map((key, index) => {
+                    return (
+                        <LyricsLine {...other}
+                            key={index}
+                            text={verseObject[key]}
+                            columnKey={hiddenLyricColumnKey ? LEFT : key}
+                        />
+                    )
+                })}
+            </div>
+            ) : (
                 <LyricsLine {...other}
                     text={verseObject.lyric}
                     columnKey={isTitle ? TITLE : LEFT}
                 />
-            ) : (
-                <div className="double-lines-block">
-                    {DOUBLESPEAKER_KEYS.filter(key => {
-                        return key === hiddenLyricColumnKey && isSingleLyricColumn ? false : verseObject[key]
-                    }).map((key, index) => {
-                        return (
-                            <LyricsLine {...other}
-                                key={index}
-                                text={verseObject[key]}
-                                columnKey={hiddenLyricColumnKey ? LEFT : key}
-                            />
-                        )
-                    })}
-                </div>
             )
         }
     </div>

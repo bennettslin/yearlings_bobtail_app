@@ -35,7 +35,7 @@ class LyricsLine extends Component {
 
     _shouldResetWidthBasedOnProps(oldProps, newProps) {
         return oldProps.selectedSongIndex !== newProps.selectedSongIndex ||
-            oldProps.isSingleLyricColumn !== newProps.isSingleLyricColumn ||
+            oldProps.showSingleLyricColumn !== newProps.showSingleLyricColumn ||
             oldProps.selectedLyricColumnIndex !== newProps.selectedLyricColumnIndex
 
     }

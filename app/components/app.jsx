@@ -127,7 +127,7 @@ class App extends Component {
             accessedLyricElement: LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
             hoveredDotIndex: 0,
-            isSingleLyricColumn: true
+            showSingleLyricColumn: true
         }
     }
 
@@ -546,17 +546,17 @@ class App extends Component {
     }
 
     selectLyricColumnWidth(e) {
-        const isSingleLyricColumn = !this.state.isSingleLyricColumn,
-            newLyricColumnIndex = isSingleLyricColumn ? 1 : 0
+        const showSingleLyricColumn = !this.state.showSingleLyricColumn,
+            newLyricColumnIndex = showSingleLyricColumn ? 1 : 0
 
-        this.selectLyricColumn(undefined, newLyricColumnIndex, isSingleLyricColumn)
+        this.selectLyricColumn(undefined, newLyricColumnIndex, showSingleLyricColumn)
 
         this.setState({
-            isSingleLyricColumn
+            showSingleLyricColumn
         })
     }
 
-    selectLyricColumn(e, selectedLyricColumnIndex = 0, isSingleLyricColumn = this.state.isSingleLyricColumn) {
+    selectLyricColumn(e, selectedLyricColumnIndex = 0, showSingleLyricColumn = this.state.showSingleLyricColumn) {
 
         const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
         let newState = {}
@@ -697,7 +697,7 @@ class App extends Component {
                     case ANNOTATION_SECTION:
                     case LYRICS_SECTION:
                         const fromAnnotationSection = accessedSectionKey === ANNOTATION_SECTION,
-                            lyricColumnShown = this.state.isSingleLyricColumn ? (LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]) : undefined
+                            lyricColumnShown = this.state.showSingleLyricColumn ? (LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]) : undefined
 
                         newState = AccessHelper.handleLyricsAndAnnotationAccess({
                             keyName,

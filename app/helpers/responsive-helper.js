@@ -12,7 +12,7 @@ export const resizeWindow = (target, isAdmin) => {
         }
 
     let deviceWidth,
-        isSingleLyricColumn = true
+        showSingleLyricColumn = true
 
     // TODO: Make sure these are right.
     if (innerWidth <= 320) {
@@ -23,14 +23,14 @@ export const resizeWindow = (target, isAdmin) => {
         deviceWidth = LAPTOP_WIDTH
     } else {
         deviceWidth = MONITOR_WIDTH
-        isSingleLyricColumn = false
+        showSingleLyricColumn = false
     }
 
     newState.deviceWidth = deviceWidth
 
     // Admin page has option to set single lyric column directly.
     if (!isAdmin) {
-        newState.isSingleLyricColumn = isSingleLyricColumn
+        newState.showSingleLyricColumn = showSingleLyricColumn
     }
 
     return newState

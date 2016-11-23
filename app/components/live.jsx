@@ -72,7 +72,7 @@ const LiveView = ({
     hoveredDotIndex,
     lyricsStartAtZero,
 
-    isSingleLyricColumn,
+    showSingleLyricColumn,
     isHome,
     isFirstSong,
     isLastSong,
@@ -189,7 +189,7 @@ const LiveView = ({
         />
         {selectedSongIndex ?
             <LyricsSection
-                isSingleLyricColumn={isSingleLyricColumn}
+                showSingleLyricColumn={showSingleLyricColumn}
                 lyricsStartAtZero={lyricsStartAtZero}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}

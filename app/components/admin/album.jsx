@@ -46,7 +46,7 @@ const AlbumView = ({
     selectedAudioOptionIndex,
     selectedTipsIndex,
     selectedTimePlayed,
-    isSingleLyricColumn,
+    showSingleLyricColumn,
     isHome,
     isFirstSong,
     isLastSong,
@@ -106,7 +106,7 @@ const AlbumView = ({
                 windowWidth={windowWidth}
                 windowHeight={windowHeight}
                 selectedVerseIndex={selectedVerseIndex}
-                isSingleLyricColumn={isSingleLyricColumn}
+                showSingleLyricColumn={showSingleLyricColumn}
                 onScreenWidthClick={onScreenWidthClick}
             />
             <NavSection
@@ -128,7 +128,7 @@ const AlbumView = ({
             accessedOn={accessedOn}
             accessedSectionKey={accessedSectionKey}
             nextSectionKey={nextSectionKey}
-            isSingleLyricColumn={isSingleLyricColumn}
+            showSingleLyricColumn={showSingleLyricColumn}
             onVerseClick={onVerseClick}
         />
     </div>

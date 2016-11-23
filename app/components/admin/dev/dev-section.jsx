@@ -19,7 +19,7 @@ const DevSectionView = ({
     windowWidth,
     windowHeight,
     selectedVerseIndex,
-    isSingleLyricColumn,
+    showSingleLyricColumn,
     onScreenWidthClick
 
 }) => (
@@ -38,7 +38,7 @@ const DevSectionView = ({
             className="enabled"
             onClick={onScreenWidthClick}
         >
-            Shown columns: {isSingleLyricColumn ? 'one' : 'two'}
+            Shown columns: {showSingleLyricColumn ? 'one' : 'two'}
         </a>
     </div>
 )

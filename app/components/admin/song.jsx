@@ -43,7 +43,7 @@ const SongView = ({
     selectedWikiUrl,
     hoveredDotIndex,
     selectedVerseIndex,
-    isSingleLyricColumn,
+    showSingleLyricColumn,
     selectedLyricColumnIndex,
     selectedSongIndex,
     lyricsStartAtZero,
@@ -110,7 +110,7 @@ const SongView = ({
             />
             {selectedSongIndex ?
                 <LyricsSection
-                    isSingleLyricColumn={isSingleLyricColumn}
+                    showSingleLyricColumn={showSingleLyricColumn}
                     lyricsStartAtZero={lyricsStartAtZero}
                     accessedOn={accessedOn}
                     accessedSectionKey={accessedSectionKey}
