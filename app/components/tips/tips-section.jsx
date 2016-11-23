@@ -1,4 +1,5 @@
 import React from 'react'
+import { TIPS_OPTIONS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -21,7 +22,7 @@ const TipsSectionView = ({
 }) => (
     <div className={`section tips-section`}>
         <h2>tips</h2>
-        <button onClick={onTipsClick}>tips: {selectedTipsIndex}</button>
+        <button onClick={onTipsClick}>tips: {TIPS_OPTIONS[selectedTipsIndex]}</button>
     </div>
 )
 

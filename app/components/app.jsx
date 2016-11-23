@@ -25,6 +25,7 @@ import { NAV_SECTION,
          WIKI_SECTION,
          SECTION_KEYS,
 
+         TIPS_OPTIONS,
          AUDIO_OPTIONS,
 
          LYRIC_VERSE_ELEMENT,
@@ -330,8 +331,7 @@ class App extends Component {
     }
 
     selectTips(e, selectedTipsIndex) {
-        // TODO: Also make this one not hard-coded.
-        const tipsLength = 3
+        const tipsLength = TIPS_OPTIONS.length
 
         this._stopPropagation(e)
         if (typeof selectedTipsIndex === 'undefined') {

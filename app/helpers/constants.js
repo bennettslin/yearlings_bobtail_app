@@ -18,9 +18,15 @@ const LYRIC = 'lyric',
     ANNOTATION_SECTION = 'annotation-section',
     WIKI_SECTION = 'wiki-section',
 
+    // Audio options.
     CONTINUE = 'continue',
     REPEAT = 'repeat',
-    PAUSE_AT_END = 'pause_at_end'
+    PAUSE_AT_END = 'pause_at_end',
+
+    // Tips options.
+    SHOWN = 'tip_shown',
+    HIDDEN = 'tip_hidden',
+    DISABLED = 'tips_disabled'
 
 module.exports = {
 
@@ -43,6 +49,16 @@ module.exports = {
         CONTINUE,
         REPEAT,
         PAUSE_AT_END
+    ],
+
+    SHOWN,
+    HIDDEN,
+    DISABLED,
+
+    TIPS_OPTIONS: [
+        SHOWN,
+        HIDDEN,
+        DISABLED
     ],
 
     NAV_SECTION,

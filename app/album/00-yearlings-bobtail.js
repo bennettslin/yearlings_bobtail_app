@@ -642,6 +642,11 @@ module.exports = {
             taskName: `accessed verse with no time should default to closest verse based on arrow`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `Make tips not hard-coded`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
