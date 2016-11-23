@@ -47,7 +47,27 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `accessed verse with no time should default to closest verse based on arrow`,
+            taskName: `Arrow should not hide upon access`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Uncanny Valley doesn't show both columns in wide`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Uncanny Valley should be its own column type`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Scroll to accessed verse when switching columns?`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Make play button touch focused`,
             workedHours: 0,
             neededHours: 1
         },
@@ -615,6 +635,11 @@ module.exports = {
         },
         {
             taskName: `accessed verse should default to closest annotation based on arrow`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `accessed verse with no time should default to closest verse based on arrow`,
             workedHours: 1,
             neededHours: 1
         }
