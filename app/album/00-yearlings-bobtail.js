@@ -47,11 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `accessed verse should default to closest annotation based on arrow`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `accessed verse with no time should default to closest verse based on arrow`,
             workedHours: 0,
             neededHours: 1
@@ -615,6 +610,11 @@ module.exports = {
         },
         {
             taskName: `lyrics, not app, should care about hovered line`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `accessed verse should default to closest annotation based on arrow`,
             workedHours: 1,
             neededHours: 1
         }

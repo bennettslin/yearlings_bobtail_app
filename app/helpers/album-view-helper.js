@@ -143,14 +143,22 @@ export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction, ly
     if (verse.currentAnnotationIndices) {
         /**
          * Rotate through all current indices, in case some are in the hidden
-         * column.
+         * column. Start from leftmost if initial direction is left, and
+         * rightmost if initial direction is right.
          */
-        let currentCounter = 0
+        /**
+         * If prompted by left arrow, start left and search inward. If prompted
+         * by right arrow, start right.
+         */
+        let currentCounter = direction === -1 ? 0 : (verse.currentAnnotationIndices.length - 1)
+
         do {
             returnIndex = verse.currentAnnotationIndices[currentCounter]
-            currentCounter++
 
-        } while (currentCounter < verse.currentAnnotationIndices.length && !_shouldShowAnnotationForColumn(getAnnotation(props, returnIndex), lyricColumnShown))
+            // Move inward, which is the opposite direction.
+            currentCounter -= direction
+
+        } while (currentCounter >= 0 && currentCounter < verse.currentAnnotationIndices.length && !_shouldShowAnnotationForColumn(getAnnotation(props, returnIndex), lyricColumnShown))
 
     // Otherwise, return either previous or next depending on direction.
     } else if (direction) {
