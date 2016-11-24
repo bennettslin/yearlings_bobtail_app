@@ -41,7 +41,6 @@ const SongView = ({
     selectedWikiIndex,
     selectedDotKeys,
     selectedWikiUrl,
-    hoveredDotIndex,
     selectedVerseIndex,
     showSingleLyricColumn,
     selectedLyricColumnIndex,
@@ -61,7 +60,6 @@ const SongView = ({
     onWikiUrlClick,
     onAnnotationClick,
     onVerseClick,
-    onDotHover,
     onLyricColumnClick,
     onAnnotationSectionClick,
 
@@ -98,7 +96,6 @@ const SongView = ({
                 onPopupButtonClick={onWikiUrlClick}
             />
             <DotsSection
-                hoveredDotIndex={hoveredDotIndex}
                 selectedDotKeys={selectedDotKeys}
                 presentDotKeys={presentDotKeys}
                 accessedOn={accessedOn}
@@ -106,7 +103,6 @@ const SongView = ({
                 nextSectionKey={nextSectionKey}
                 accessedDotIndex={accessedDotIndex}
                 onDotClick={onDotClick}
-                onDotHover={onDotHover}
             />
             {selectedSongIndex ?
                 <LyricsSection

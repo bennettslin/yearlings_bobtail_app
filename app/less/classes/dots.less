@@ -1,54 +1,11 @@
-.tooltip-container {
-    position: relative;
-
-    // FIXME: Improve styling, of course.
-    .tooltip-block {
-        top: -40px;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-
-        .tooltip {
-            padding: 5px 15px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 1px 2px 2px lightGray;
-        }
-    }
-}
-
 .dots-block {
     .dot-diameter-mixin;
     display: flex;
     width: auto;
     height: 100%;
 
-    &.interactable {
-        .dot {
-
-            // TODO: Obviously.
-            &.access-outlined {
-                background-color: violet;
-            }
-
-            // TODO: Interactive styling.
-            &.enabled {
-                .transition(background-color 0.1s ease);
-                &:hover { background-color: orange; }
-                &:active { background-color: red; }
-            }
-
-            // FIXME: Temporary styling for dot text.
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .dot-text {
-                font-size: .6em;
-            }
-        }
-    }
-
     .dot {
+        position: relative;
         border-radius: 50%;
 
         // TODO: Key styling.
@@ -68,4 +25,70 @@
         &.disabled { background-color: lightGray; }
         &.deselected { background-color: lightGray; }
     }
+
+    .dot-interactable {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    &.interactable {
+        .dot {
+            // FIXME: Temporary styling for dot text.
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .dot-text {
+                font-size: .6em;
+            }
+
+            // TODO: Obviously.
+            &.access-outlined {
+                background-color: violet;
+            }
+
+            &:first-child {
+                .tooltip {
+                    left: 0;
+                }
+            }
+
+            &:last-child {
+                .tooltip {
+                    right: 0;
+                }
+            }
+
+            // TODO: Interactive styling.
+            &.enabled {
+                .transition(background-color 0.1s ease);
+
+                &:active { background-color: red; }
+                &.hovered {
+                    background-color: orange;
+
+                    .tooltip {
+                        z-index: 1;
+                        .transition(opacity 0.2s ease);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tooltip {
+    position: absolute;
+    top: -2.5em;
+    width: 100px;
+
+    .transition(opacity 0.1s ease 0.1s);
+    opacity: 0;
+
+    // FIXME: Improve styling, of course.
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 2px lightGray;
 }

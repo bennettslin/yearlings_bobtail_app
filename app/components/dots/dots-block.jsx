@@ -66,6 +66,7 @@ const DotsBlockView = ({
                 const accessHighlighted = sectionAccessHighlighted && accessedDotIndex === index
                 return (isPresent || inDotsSection ?
                     <DotButton {...other}
+                        inDotsSection={inDotsSection}
                         key={index}
                         dotKey={dotKey}
                         dotIndex={index + 1}

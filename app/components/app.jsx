@@ -109,13 +109,6 @@ class App extends Component {
         // Bind this to event handlers.
         this._bindEventHandlers()
 
-        /**
-         * TODO: Putting these hovered states in app for now rather than the
-         * relevant child components, because I anticipate that in mobile these
-         * states will be toggled and persisted by clicks. (And untoggled upon
-         * scroll.) Revisit whether this is the best idea.
-         */
-
         this.state = {
             isAdmin: true,
             isPlaying: false,
@@ -126,7 +119,6 @@ class App extends Component {
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
             accessedLyricElement: LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
-            hoveredDotIndex: 0,
             showSingleLyricColumn: true
         }
     }
@@ -160,7 +152,6 @@ class App extends Component {
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
         this.selectDot = this.selectDot.bind(this)
-        this.hoverDot = this.hoverDot.bind(this)
         this.selectPortal = this.selectPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
@@ -588,14 +579,6 @@ class App extends Component {
         this.setState(newState)
     }
 
-    hoverDot(e, hoveredDotIndex = 0) {
-        // Hovered dot index sets the text, as well as the position of the tooltip.
-
-        this.setState({
-            hoveredDotIndex
-        })
-    }
-
     handleAnnotationSectionClick(e) {
         this._handleAccessOn(0)
 
@@ -872,7 +855,6 @@ class App extends Component {
                     onPlayClick={this.togglePlay}
                     onVerseClick={this.selectVerse}
                     onDotClick={this.selectDot}
-                    onDotHover={this.hoverDot}
                     onScreenWidthClick={this.selectLyricColumnWidth}
                     onLyricColumnClick={this.selectLyricColumn}
                     onAnnotationSectionClick={this.handleAnnotationSectionClick}

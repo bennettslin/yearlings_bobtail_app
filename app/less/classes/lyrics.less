@@ -140,27 +140,6 @@
     }
 
     .verse {
-        transition: color 0.1s ease;
-
-        &.interactable {
-            position: relative;
-
-            // Play button hover styling.
-            &:not(.selected) {
-                &:hover {
-                    color: green;
-
-                    .play-button {
-                        transition: opacity 0.1s ease 0.2s;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-
-        &.selected {
-            color: blue;
-        }
 
         @verse-padding: 10px;
         padding-left: @verse-padding;
@@ -190,6 +169,27 @@
         &:nth-child(even) {
             background-color: #fcfce9;
         }
+
+        .transition(color 0.1s ease);
+
+        &.interactable {
+            position: relative;
+
+            &.selected {
+                color: blue;
+            }
+
+            // Play button hover styling.
+            &:not(.selected) {
+                &:hover {
+                    color: green;
+
+                    .play-button {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
     }
 
     .play-button-block {
@@ -199,7 +199,6 @@
 
         // Either button or icon.
         .play-child {
-            // padding-right: 5px;
             box-sizing: border-box;
             height: 100%;
             font-size: 1em;
@@ -208,6 +207,7 @@
         }
 
         .play-button {
+            .transition(opacity 0.1s ease 0.2s);
             opacity: 0;
         }
 

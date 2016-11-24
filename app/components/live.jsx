@@ -69,7 +69,6 @@ const LiveView = ({
     accessedPopupAnchorIndex,
     accessedDotIndex,
 
-    hoveredDotIndex,
     lyricsStartAtZero,
 
     showSingleLyricColumn,
@@ -89,7 +88,6 @@ const LiveView = ({
     onPortalClick,
     onWikiUrlClick,
     onAnnotationClick,
-    onDotHover,
     onLyricColumnClick,
     onAnnotationSectionClick,
 
@@ -177,7 +175,6 @@ const LiveView = ({
             onPopupButtonClick={onWikiUrlClick}
         />
         <DotsSection
-            hoveredDotIndex={hoveredDotIndex}
             selectedDotKeys={selectedDotKeys}
             presentDotKeys={presentDotKeys}
             accessedOn={accessedOn}
@@ -185,7 +182,6 @@ const LiveView = ({
             nextSectionKey={nextSectionKey}
             accessedDotIndex={accessedDotIndex}
             onDotClick={onDotClick}
-            onDotHover={onDotHover}
         />
         {selectedSongIndex ?
             <LyricsSection

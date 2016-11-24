@@ -47,32 +47,12 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Arrow should not hide upon access`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `Uncanny Valley doesn't show both columns in wide`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `Uncanny Valley should be its own column type`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `Scroll to accessed verse when switching columns?`,
             workedHours: 0,
             neededHours: 1
         },
         {
             taskName: `Make play button touch focused`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `hovered dot tooltips should also just be css`,
             workedHours: 0,
             neededHours: 1
         },
@@ -645,6 +625,16 @@ module.exports = {
         },
         {
             taskName: `Make tips not hard-coded`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Uncanny Valley doesn't show both columns in wide`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `refactor hovered dot tooltips`,
             workedHours: 1,
             neededHours: 1
         }

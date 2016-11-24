@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 /*************
  * CONTAINER *
@@ -11,20 +11,12 @@ const DotButton = ({
     isSelected,
     canDeselect,
     onDotClick,
-    onDotHover,
 
 ...other }) => {
 
     const isEnabled = !isSelected || canDeselect,
         isToggleDeselected = canDeselect && !isSelected,
-        onClick = isEnabled && onDotClick ? e => onDotClick(e, dotKey) : null,
-
-        /**
-         * FIXME: Not ideal that button knows both dot key and dot index.
-         * Consider refactoring so that key is derived from index.
-         */
-        onMouseEnter = onDotHover ? e => onDotHover(e, dotIndex) : null,
-        onMouseLeave = onDotHover ? e => onDotHover(e) : null
+        onClick = isEnabled && onDotClick ? e => onDotClick(e, dotKey) : null
 
     return (
         <DotButtonView {...other}
@@ -32,8 +24,6 @@ const DotButton = ({
             isEnabled={isEnabled}
             isToggleDeselected={isToggleDeselected}
             onClick={onClick}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
         />
     )
 }
@@ -42,32 +32,65 @@ const DotButton = ({
  * PRESENTATION *
  ****************/
 
-const DotButtonView = ({
+// Making this a React component to store hover state.
+class DotButtonView extends Component {
 
-    // From props.
-    dotKey,
-    isPresent,
-    accessHighlighted,
+    constructor(props) {
+        super(props)
 
-    // From controller.
-    isEnabled,
-    isToggleDeselected,
-    onClick,
-    onMouseEnter,
-    onMouseLeave
+        this.onHover = this.onHover.bind(this)
 
-}) => (
-    <button
-        className={`dot ${dotKey}${accessHighlighted ? ' access-highlighted' : ''}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}`}
-        onClick={onClick}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-    >
-        {/* FIXME: Dots ultimately won't have text, of course. */}
-        <div className="dot-text">
-            {dotKey}
-        </div>
-    </button>
-)
+        this.state = {
+            isHovered: false
+        }
+    }
+
+    onHover(e) {
+        const { type } = e
+        this.setState({
+            isHovered: type === 'mouseenter'
+        })
+    }
+
+    render () {
+        const {
+
+            // From props.
+            dotKey,
+            isPresent,
+            accessHighlighted,
+            inDotsSection,
+
+            // From controller.
+            isEnabled,
+            isToggleDeselected,
+            onClick
+
+        } = this.props,
+        { isHovered } = this.state
+
+        return (
+            <a
+                className={`dot ${dotKey}${accessHighlighted ? ' access-highlighted' : ''}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}${isHovered ? ' hovered' : ''}`}
+                onClick={onClick}
+            >
+                {inDotsSection ?
+                    <div className="tooltip">
+                        hello hello test
+                    </div> : null
+                }
+                {/* FIXME: Dots ultimately won't have text, of course. */}
+                <div className="dot-text">
+                    {dotKey}
+                </div>
+                <div className="dot-interactable"
+                    onMouseEnter={this.onHover}
+                    onMouseLeave={this.onHover}
+                >
+                </div>
+            </a>
+        )
+    }
+}
 
 export default DotButton
