@@ -140,9 +140,8 @@
     }
 
     .verse {
-
         @verse-padding: 10px;
-        padding-left: @verse-padding;
+        padding-left: @verse-padding * 1.25;
         padding-right: @verse-padding;
 
         &:first-child {
@@ -187,6 +186,10 @@
                     .play-button {
                         opacity: 1;
                     }
+
+                    .small-play-button {
+                        opacity: 0;
+                    }
                 }
             }
         }
@@ -195,20 +198,32 @@
     .play-button-block {
         position: absolute;
         height: 100%;
+        width: 1em;
         left: -0.5em;
 
         // Either button or icon.
         .play-child {
             box-sizing: border-box;
             height: 100%;
+            width: 100%;
             font-size: 1em;
             display: flex;
+            justify-content: center;
             align-items: center;
+
+            &:not(.play-icon) {
+                .transition(opacity 0.5s ease);
+            }
+        }
+
+        .small-play-button {
+            position: absolute;
         }
 
         .play-button {
-            .transition(opacity 0.1s ease 0.2s);
+            position: relative;
             opacity: 0;
+            z-index: 1;
         }
 
         .play-icon {

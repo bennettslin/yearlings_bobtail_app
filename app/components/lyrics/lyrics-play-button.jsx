@@ -15,6 +15,11 @@ const LyricsPlayButton = ({
 }) => (
     <div className="play-button-block">
         {!isSelected ?
+            <div className="play-child small-play-button">
+                <div>{`\u2022`}</div>
+            </div> : null
+        }
+        {!isSelected ?
             <a className={`play-child play-button${isSelected ? '' : ' enabled'}`}
                 onClick={onClick}
             >
