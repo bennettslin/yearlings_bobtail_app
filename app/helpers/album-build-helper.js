@@ -19,6 +19,7 @@ const _tempStore = {
     _currentAnnotationIndices: [],
     _firstRightAnnotationIndexOfVerse: 0,
     _finalAnnotationIndex: 0,
+    _lyricInTime: false
 }
 
 export const prepareAlbumData = (album = {}) => {
@@ -140,9 +141,6 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
         _tempStore._songTimes.push(lyric.time)
     }
 
-    if (!isNaN(lyric.time)) {
-    }
-
     if (Array.isArray(lyric)) {
         lyric.forEach(childLyricValue => {
             _parseLyrics(childLyricValue, finalPassThrough, textKey)
@@ -162,6 +160,12 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
                     } else if (lyric.rightColumn) {
                         sideStanzaTextKey = 'rightColumn'
                     }
+
+                    /**
+                     * Any annotation in this lyric should know whether it is
+                     * in a verse with a time.
+                     */
+                    _tempStore._lyricInTime = !!lyric.time
 
                     _parseLyrics(lyric[childTextKey], finalPassThrough, (textKey || sideStanzaTextKey || childTextKey))
                 }
@@ -220,7 +224,7 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
         /**
          * Register whether this annotation is in the verse with the index.
          */
-        if (lyric.time) {
+        if (_tempStore._lyricInTime) {
             annotation.verseIndex = _tempStore._verseIndexCounter
         } else {
             annotation.mostRecentVerseIndex = _tempStore._verseIndexCounter

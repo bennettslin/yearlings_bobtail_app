@@ -192,10 +192,18 @@ export const getVerseIndexForDirection = ({
     if (selectedSong.times) {
         const timesLength = selectedSong.times.length
 
-        // If no verse index, pick the closest index based on direction.
         let returnIndex
+
+        // We know which verse index we want.
         if (!isNaN(index)) {
             returnIndex = index
+
+            // We are coming from an annotation, so stay put the first time.
+            if (recentIndex === false) {
+                direction = undefined
+            }
+
+        // If no verse index, pick the closest index based on direction.
         } else {
             returnIndex = (!direction || direction === -1) ? recentIndex : (recentIndex + 1) % timesLength
         }
@@ -264,7 +272,7 @@ export const getVerseIndexForAnnotationIndex = ({
     return getVerseIndexForDirection({
         props,
         index: annotation.verseIndex,
-        recentIndex: annotation.mostRecentVerseIndex,
+        recentIndex: annotation.mostRecentVerseIndex || false,
         direction,
         lyricColumnShown
     })
