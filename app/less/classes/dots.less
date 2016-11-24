@@ -68,11 +68,15 @@
                 &:active { background-color: red; }
                 &.hovered {
                     background-color: orange;
+                    animation: transformLightBounce 0.15s;
 
                     .tooltip {
                         z-index: 1;
-                        .transition(opacity 0.2s ease);
+                        .transition(opacity 0.15s ease);
+                        animation: transformSnapback 0.15s;
+
                         opacity: 1;
+                        transform: scale(1);
                     }
                 }
             }
@@ -86,7 +90,9 @@
     text-align: center;
 
     .transition(opacity 0.1s ease 0.1s);
+
     opacity: 0;
+    transform: scale(0);
 
     // FIXME: Improve styling, of course.
     padding: 5px 15px;
