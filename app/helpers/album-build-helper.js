@@ -20,6 +20,7 @@ const _tempStore = {
     _firstRightAnnotationIndexOfVerse: 0,
     _finalAnnotationIndex: 0,
     _hasSideStanzas: false,
+    _isDoublespeaker: false,
     _lyricInTime: false
 }
 
@@ -74,6 +75,7 @@ const _prepareAllSongs = (album) => {
         _tempStore._currentAnnotationIndices = []
         _tempStore._firstRightAnnotationIndexOfVerse = 0
         _tempStore._hasSideStanzas = false
+        _tempStore._isDoublespeaker = false
 
         _addTitleToLyrics(song.title, song.lyrics)
         // Do not confuse anchor key with string prototype anchor method.
@@ -86,6 +88,7 @@ const _prepareAllSongs = (album) => {
         song.hasSideStanzas = _tempStore._hasSideStanzas
 
         _parseLyrics(song.lyrics)
+        song.isDoublespeaker = _tempStore._isDoublespeaker
 
         // Add annotations to song object.
         song.annotations = _tempStore._annotations
@@ -158,8 +161,14 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
 
         } else {
             ALBUM_BUILD_KEYS.forEach(childTextKey => {
+
                 if (childTextKey !== 'anchor' && lyric[childTextKey]) {
                     let sideStanzaTextKey
+
+                    // Let song know that it is a doublespeaker song.
+                    if (childTextKey === LEFT || childTextKey === RIGHT) {
+                        _tempStore._isDoublespeaker = true
+                    }
 
                     if (lyric.leftColumn) {
                         sideStanzaTextKey = 'leftColumn'

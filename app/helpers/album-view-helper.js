@@ -1,7 +1,13 @@
 // Parse album data for presentation.
 import { ALBUM_BUILD_KEYS,
          LEFT,
-         RIGHT } from './constants'
+         RIGHT,
+
+         PHONE_WIDTH,
+         TABLET_WIDTH,
+         LAPTOP_WIDTH,
+         MONITOR_WIDTH } from './constants'
+
 import { intersects } from 'helpers/dot-helper'
 
 const _parseLyrics = (lyric, selectedVerseIndex) => {
@@ -33,6 +39,38 @@ export const getLyricsStartAtZero = (props, selectedSongIndex) => {
     })
 
     return selectedSong.times ? selectedSong.times[1] === 0 : true
+}
+
+export const getShowSingleLyricColumn = (props, state) => {
+    // if is admin, return showSingleLyricColumn
+    if (state.isAdmin) {
+        return state.showSingleLyricColumnInAdmin
+
+    } else {
+        const selectedSong = getSong(props),
+            { hasSideStanzas,
+              isDoublespeaker,
+              forceSingleColumn } = selectedSong,
+            { deviceWidth } = state
+
+            console.error('deviceWidth', deviceWidth);
+        let showSingleLyricColumn = false
+
+        // Applies to Vegan Proclamation.
+        if (forceSingleColumn) {
+            showSingleLyricColumn = true
+
+        // Applies to Uncanny Valley Boy.
+        } else if (hasSideStanzas && !isDoublespeaker) {
+            return deviceWidth === PHONE_WIDTH
+
+        // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
+        } else if (isDoublespeaker) {
+            return deviceWidth !== MONITOR_WIDTH
+        }
+
+        return showSingleLyricColumn
+    }
 }
 
 export const getSongTimes = (props) => {

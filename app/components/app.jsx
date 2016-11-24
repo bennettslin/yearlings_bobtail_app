@@ -39,7 +39,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn } from 'helpers/album-view-helper'
 import { resizeWindow } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -119,7 +119,7 @@ class App extends Component {
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
             accessedLyricElement: LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
-            showSingleLyricColumn: false
+            showSingleLyricColumnInAdmin: false
         }
     }
 
@@ -537,17 +537,12 @@ class App extends Component {
     }
 
     selectLyricColumnWidth(e) {
-        const showSingleLyricColumn = !this.state.showSingleLyricColumn,
-            newLyricColumnIndex = showSingleLyricColumn ? 1 : 0
-
-        this.selectLyricColumn(undefined, newLyricColumnIndex, showSingleLyricColumn)
-
         this.setState({
-            showSingleLyricColumn
+            showSingleLyricColumnInAdmin: !this.state.showSingleLyricColumnInAdmin
         })
     }
 
-    selectLyricColumn(e, selectedLyricColumnIndex = 0, showSingleLyricColumn = this.state.showSingleLyricColumn) {
+    selectLyricColumn(e, selectedLyricColumnIndex = 0) {
 
         const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
         let newState = {}
@@ -680,7 +675,7 @@ class App extends Component {
                     case ANNOTATION_SECTION:
                     case LYRICS_SECTION:
                         const fromAnnotationSection = accessedSectionKey === ANNOTATION_SECTION,
-                            lyricColumnShown = this.state.showSingleLyricColumn ? (LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]) : undefined
+                            lyricColumnShown = getShowSingleLyricColumn(this.props, this.state) ? (LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]) : undefined
 
                         newState = AccessHelper.handleLyricsAndAnnotationAccess({
                             keyName,
@@ -807,20 +802,22 @@ class App extends Component {
     }
 
     render() {
-        const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex],
-            nextSectionKey = AccessHelper.getNextSectionKey(this.props),
-
+        const { props, state } = this,
+            accessedSectionKey = SECTION_KEYS[props.accessedSectionIndex],
+            nextSectionKey = AccessHelper.getNextSectionKey(props),
             { songs,
               selectedSongIndex,
-              selectedVerseIndex } = this.props,
+              selectedVerseIndex } = props,
             { isAdmin,
-              deviceWidth } = this.state,
-            songTimes = getSongTimes(this.props),
+              deviceWidth } = state,
+
+            songTimes = getSongTimes(props),
+            showSingleLyricColumn = getShowSingleLyricColumn(props, state),
             isHome = selectedSongIndex === 0,
             isFirstSong = selectedSongIndex === 1,
             isLastSong = selectedSongIndex === songs.length,
             audioSongTitle = selectedSongIndex ? `${selectedSongIndex}. ${songs[selectedSongIndex - 1].title}` : null,
-            lyricsStartAtZero = getLyricsStartAtZero(this.props),
+            lyricsStartAtZero = getLyricsStartAtZero(props),
             isFirstVerse = selectedVerseIndex === (lyricsStartAtZero ? 1 : 0),
             isLastVerse = selectedVerseIndex === songTimes.length - 1
 
@@ -859,6 +856,7 @@ class App extends Component {
                     onLyricColumnClick={this.selectLyricColumn}
                     onAnnotationSectionClick={this.handleAnnotationSectionClick}
                     onTipsClick={this.selectTips}
+                    showSingleLyricColumn={showSingleLyricColumn}
                 />
             </div>
         )
