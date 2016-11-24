@@ -50,8 +50,8 @@ const DotStanzaView = ({
 ...other }) => (
 
     <div className={`stanza${accessHighlighted ? ' access-highlighted' : ''}`}>
-        {/* This will break if dot stanzas ever have more than one dot. */}
         <DotsBlock {...other}
+            onlyShowFirstDotKey={true}
             selectedDotKeys={isSelected ? dotKeys : {}}
             presentDotKeys={dotKeys}
         />

@@ -47,12 +47,27 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Scroll to accessed verse when switching columns?`,
+            taskName: `setDOMWidth method doesn't work on reload`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Have small play button`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Make dot tooltip touch focused`,
             workedHours: 0,
             neededHours: 1
         },
         {
             taskName: `Make play button touch focused`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Scroll to accessed verse when switching columns?`,
             workedHours: 0,
             neededHours: 1
         },
@@ -635,6 +650,11 @@ module.exports = {
         },
         {
             taskName: `refactor hovered dot tooltips`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Make dot stanza single dot`,
             workedHours: 1,
             neededHours: 1
         }
