@@ -185,6 +185,7 @@
 
                     .play-button {
                         opacity: 1;
+                        font-size: 1em;
                     }
 
                     .small-play-button {
@@ -195,11 +196,13 @@
         }
     }
 
+    @play-button-block-width: 1.5em;
+
     .play-button-block {
         position: absolute;
         height: 100%;
-        width: 1em;
-        left: -0.5em;
+        width: @play-button-block-width;
+        left: -@play-button-block-width / 2;
 
         // Either button or icon.
         .play-child {
@@ -213,6 +216,7 @@
 
             &:not(.play-icon) {
                 .transition(opacity 0.5s ease);
+                .transition(font 0.1s ease);
             }
         }
 
@@ -222,6 +226,7 @@
 
         .play-button {
             position: relative;
+            font-size: 0.1em;
             opacity: 0;
             z-index: 1;
         }

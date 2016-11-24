@@ -15,9 +15,9 @@ const LyricsPlayButton = ({
 }) => (
     <div className="play-button-block">
         {!isSelected ?
-            <div className="play-child small-play-button">
+            <a className="play-child small-play-button enabled">
                 <div>{`\u2022`}</div>
-            </div> : null
+            </a> : null
         }
         {!isSelected ?
             <a className={`play-child play-button${isSelected ? '' : ' enabled'}`}
