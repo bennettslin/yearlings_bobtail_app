@@ -47,15 +47,17 @@
                 background-color: violet;
             }
 
+            @tooltip-bleed-margin: 15px;
+
             &:first-child {
                 .tooltip {
-                    left: 0;
+                    left: -@tooltip-bleed-margin;
                 }
             }
 
             &:last-child {
                 .tooltip {
-                    right: 0;
+                    right: -@tooltip-bleed-margin;
                 }
             }
 
@@ -80,8 +82,8 @@
 
 .tooltip {
     position: absolute;
-    top: -2.5em;
-    width: 100px;
+    bottom: @default-dot-diameter + 10px;
+    text-align: center;
 
     .transition(opacity 0.1s ease 0.1s);
     opacity: 0;

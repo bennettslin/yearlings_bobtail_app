@@ -8,7 +8,15 @@ const LYRIC = 'lyric',
     EMPHASIS = 'emphasis',
     ANCHOR = 'anchor',
 
+    PUN = 'pun',
+    BACKSTORY = 'backstory',
+    NARRATIVE = 'narrative',
+    FORESHADOW = 'foreshadow',
+    MUSIC = 'music',
+    PULPIT = 'pulpit',
     WIKI = 'wiki',
+    PORTAL = 'portal',
+    AFTERWORD = 'afterword',
 
     // These are class names.
     AUDIO_SECTION = 'audio-section',
@@ -157,16 +165,28 @@ module.exports = {
     WIKI,
 
     ALL_DOT_KEYS: [
-        'pun',
-        'backstory', // My perspective while making the album.
-        'narrative', // My perspective in the story.
-        'foreshadow',
-        'music',
-        'pulpit',
+        PUN,
+        BACKSTORY, // My perspective while making the album.
+        NARRATIVE, // My perspective in the story.
+        FORESHADOW,
+        MUSIC,
+        PULPIT,
         WIKI,
-        'portal',
-        'afterword' // My perspective while making this website.
+        PORTAL,
+        AFTERWORD // My perspective while making this website.
     ],
+
+    DOT_DESCRIPTIONS: {
+        [PUN]: 'pun description',
+        [BACKSTORY]: 'backstory description', // My perspective while making the album.
+        [NARRATIVE]: 'narrative description', // My perspective in the story.
+        [FORESHADOW]: 'foreshadow description',
+        [MUSIC]: 'music description',
+        [PULPIT]: 'pulpit description',
+        [WIKI]: 'wiki description',
+        [PORTAL]: 'portal description',
+        [AFTERWORD]: 'afterword description'
+    },
 
     ARROW_LEFT: 'ArrowLeft',
     ARROW_RIGHT: 'ArrowRight',

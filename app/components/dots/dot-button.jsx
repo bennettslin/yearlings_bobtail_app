@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { DOT_DESCRIPTIONS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -76,7 +77,7 @@ class DotButtonView extends Component {
             >
                 {inDotsSection ?
                     <div className="tooltip">
-                        hello hello test
+                        {DOT_DESCRIPTIONS[dotKey]}
                     </div> : null
                 }
                 {/* FIXME: Dots ultimately won't have text, of course. */}
