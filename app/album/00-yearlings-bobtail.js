@@ -47,7 +47,17 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `setDOMWidth method doesn't work on reload`,
+            taskName: `make radio buttons float`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: `make lyric column expandable`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `setDOMWidth method doesn't work on reload and device width change`,
             workedHours: 0,
             neededHours: 1
         },
@@ -100,11 +110,6 @@ module.exports = {
             taskName: `figure out best way to do portals`,
             workedHours: 0,
             neededHours: 3
-        },
-        {
-            taskName: `make radio buttons float`,
-            workedHours: 0,
-            neededHours: 2
         },
         {
             taskName: `make interactable superclass`,

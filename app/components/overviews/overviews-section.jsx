@@ -1,6 +1,5 @@
 import React from 'react'
 import TextBlock from '../text/text-block'
-import RadioButtonBlock from '../superclasses/radio-button-block'
 import { OVERVIEW_SECTION } from 'helpers/constants'
 
 /*************

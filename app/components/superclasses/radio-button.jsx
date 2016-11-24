@@ -37,7 +37,7 @@ const RadioButtonView = ({
     onClick
 
 }) => (
-    <div className={`radio-button${isDisabled ? ' disabled' : ''}`}>
+    <div className={`radio-button${isDisabled ? ' disabled' : ''} ${buttonKey}`}>
         <h2>
             <a className={isDisabled ? '' : 'enabled'} onClick={onClick}>
                 {buttonKey}

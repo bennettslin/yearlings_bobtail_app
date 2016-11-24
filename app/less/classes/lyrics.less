@@ -3,16 +3,28 @@
     &.monitor-width, &.laptop-width {
         .lyrics-section {
             position: absolute;
-            right: 0;
             height: 100%;
+            right: 0;
             overflow-y: scroll;
         }
     }
 }
 
+.radio-button-block {
+    position: fixed;
+    padding: 5px;
+    display: flex;
+    z-index: @text-z-index + 1;
+
+    // Accommodate scrollbar.
+    right: 16px;
+
+    background-color: gray;
+}
+
 .lyrics-section {
     // Accommodate right scrollbar.
-    padding: 20px 5px;
+    padding: 0 5px;
 
     &.single-column {
         max-width: 600px;
@@ -20,6 +32,8 @@
 }
 
 .lyrics-block {
+    padding: 20px 0;
+
     @lyric-verse-size: 1em;
     font-size: @lyric-verse-size;
     line-height: 150%;
@@ -309,3 +323,15 @@
         }
     }
 }
+
+// .radio-button {
+//     position: fixed;
+//
+//     &.left {
+//         left: 0;
+//     }
+//
+//     &.right {
+//         right: 0;
+//     }
+// }

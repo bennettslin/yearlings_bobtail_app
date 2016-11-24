@@ -1,6 +1,7 @@
 import React from 'react'
 import LyricsUnit from './lyrics-unit'
 import RadioButtonBlock from '../superclasses/radio-button-block'
+import RadioButton from '../superclasses/radio-button'
 import { LYRIC_COLUMN_KEYS, LYRICS_SECTION } from 'helpers/constants'
 
 /*************
@@ -51,6 +52,19 @@ const LyricsSectionView = ({
         {/* Upon song change, scroll to element with this class name. */}
         {isAdmin ? <h2 className="lyrics-scroll-home">lyrics</h2> : null}
         {showSingleLyricColumn && hasDoubleColumns ?
+            // LYRIC_COLUMN_KEYS.map((buttonKey, index) => {
+            //     const isDisabled = index === selectedLyricColumnIndex,
+            //         onButtonClick = !isDisabled ? onLyricColumnClick : null
+            //     return (
+            //         <RadioButton
+            //             key={index}
+            //             isDisabled={isDisabled}
+            //             buttonKey={buttonKey}
+            //             buttonIndex={index}
+            //             onButtonClick={onButtonClick}
+            //         />
+            //     )
+            // }) : null
             <RadioButtonBlock
                 selectedButtonIndex={selectedLyricColumnIndex}
                 buttonKeys={LYRIC_COLUMN_KEYS}

@@ -53,7 +53,6 @@ export const getShowSingleLyricColumn = (props, state) => {
               forceSingleColumn } = selectedSong,
             { deviceWidth } = state
 
-            console.error('deviceWidth', deviceWidth);
         let showSingleLyricColumn = false
 
         // Applies to Vegan Proclamation.

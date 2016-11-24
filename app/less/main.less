@@ -47,13 +47,13 @@ body {
     cursor: pointer;
 }
 
-.radio-button-block, .audio-button-block {
+.disabled {
+    a {
+        color: @disabled-link-colour;
+    }
+}
+
+.audio-button-block {
     display: flex;
     justify-content: space-between;
-
-    .disabled {
-        a {
-            color: @disabled-link-colour;
-        }
-    }
 }
