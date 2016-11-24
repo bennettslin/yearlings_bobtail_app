@@ -18,7 +18,7 @@ export const resizeWindow = (target, isAdmin) => {
         deviceWidth = PHONE_WIDTH
     } else if (innerWidth <= 800) {
         deviceWidth = TABLET_WIDTH
-    } else if (innerWidth <= 1450) {
+    } else if (innerWidth <= 1400) {
         deviceWidth = LAPTOP_WIDTH
     } else {
         deviceWidth = MONITOR_WIDTH

@@ -809,7 +809,9 @@ class App extends Component {
               selectedSongIndex,
               selectedVerseIndex } = props,
             { isAdmin,
-              deviceWidth } = state,
+              deviceWidth,
+              windowWidth,
+              windowHeight } = state,
 
             songTimes = getSongTimes(props),
             showSingleLyricColumn = getShowSingleLyricColumn(props, state),
@@ -831,6 +833,8 @@ class App extends Component {
             >
                 <AdminToggle
                     isAdmin={isAdmin}
+                    windowWidth={windowWidth}
+                    windowHeight={windowHeight}
                     onClick={this.toggleAdmin}
                 />
                 <Switch {...this.props} {...this.state}

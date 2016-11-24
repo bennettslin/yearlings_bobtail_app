@@ -47,11 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `make radio buttons float`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `make lyric column expandable`,
             workedHours: 0,
             neededHours: 3
@@ -667,6 +662,11 @@ module.exports = {
             taskName: `try out keyframes`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `make radio buttons float`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
