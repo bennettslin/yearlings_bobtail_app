@@ -15,7 +15,8 @@ class LyricsLine extends Component {
      * onto a new line, but it works. (Well, fingers crossed.)
      */
     componentWillMount() {
-        this.setDOMWidth(true)
+        // FIXME: Don't bother to call here, because refs aren't established at this point.
+        // this.setDOMWidth(true)
     }
     componentDidMount() {
         this.setDOMWidth()
@@ -54,7 +55,11 @@ class LyricsLine extends Component {
                     parent.removeAttribute('style')
 
                 } else {
-                    const offsetWidth = ReactDOM.findDOMNode(this.myChild).offsetWidth
+
+                    // FIXME: The issue seems to be that the offsetWidth is wrong when this method gets called in componentDidMount.
+
+                    const child = ReactDOM.findDOMNode(this.myChild),
+                        offsetWidth = child.offsetWidth
 
                     // Allow for 10px padding on each side.
                     parent.style.maxWidth = offsetWidth - 20 + 'px'

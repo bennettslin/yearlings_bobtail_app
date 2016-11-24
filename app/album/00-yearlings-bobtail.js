@@ -47,12 +47,12 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `setDOMWidth method doesn't work on reload`,
+            taskName: `try out keyframes`,
             workedHours: 0,
             neededHours: 1
         },
         {
-            taskName: `Have small play button`,
+            taskName: `setDOMWidth method doesn't work on reload`,
             workedHours: 0,
             neededHours: 1
         },
@@ -655,6 +655,11 @@ module.exports = {
         },
         {
             taskName: `Make dot stanza single dot`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Have small play button`,
             workedHours: 1,
             neededHours: 1
         }
