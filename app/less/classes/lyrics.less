@@ -1,7 +1,18 @@
-.lyrics-section {
-    &.single-column {
-        width: 320px;
+.live {
+
+    &.monitor-width, &.laptop-width {
+        .lyrics-section {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            overflow-y: scroll;
+        }
     }
+}
+
+.lyrics-section {
+    // Accommodate right scrollbar.
+    padding: 20px 5px;
 }
 
 .lyrics-block {

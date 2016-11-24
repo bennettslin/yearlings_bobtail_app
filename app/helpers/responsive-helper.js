@@ -15,11 +15,11 @@ export const resizeWindow = (target, isAdmin) => {
         showSingleLyricColumn = true
 
     // TODO: Make sure these are right.
-    if (innerWidth <= 320) {
+    if (innerWidth <= 400) {
         deviceWidth = PHONE_WIDTH
-    } else if (innerWidth <= 720) {
+    } else if (innerWidth <= 800) {
         deviceWidth = TABLET_WIDTH
-    } else if (innerWidth <= 1200) {
+    } else if (innerWidth <= 1400) {
         deviceWidth = LAPTOP_WIDTH
     } else {
         deviceWidth = MONITOR_WIDTH

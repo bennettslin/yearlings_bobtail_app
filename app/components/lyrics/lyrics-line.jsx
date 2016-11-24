@@ -55,7 +55,6 @@ class LyricsLine extends Component {
                     parent.removeAttribute('style')
 
                 } else {
-
                     // FIXME: The issue seems to be that the offsetWidth is wrong when this method gets called in componentDidMount.
 
                     const child = ReactDOM.findDOMNode(this.myChild),

@@ -103,55 +103,67 @@ const LiveView = ({
 
 ...other }) => (
     <div className="live">
-        <TitleSection
-            title={title}
-            accessedOn={accessedOn}
-            accessedSectionKey={accessedSectionKey}
-            nextSectionKey={nextSectionKey}
-            accessedSongIndex={accessedSongIndex}
-            onTitleClick={onSongClick}
-        />
-        <AudioSection
-            isHome={isHome}
-            isFirstSong={isFirstSong}
-            isLastSong={isLastSong}
-            isFirstVerse={isFirstVerse}
-            isLastVerse={isLastVerse}
-            audioSongTitle={audioSongTitle}
-            selectedSongIndex={selectedSongIndex}
-            isPlaying={isPlaying}
-            selectedTimePlayed={selectedTimePlayed}
-            selectedAudioOptionIndex={selectedAudioOptionIndex}
-            accessedOn={accessedOn}
-            accessedSectionKey={accessedSectionKey}
-            nextSectionKey={nextSectionKey}
-            onPlayClick={onPlayClick}
-            onAudioSongClick={onSongClick}
-            onAudioTimeClick={onVerseClick}
-            onAudioOptionClick={onAudioOptionClick}
-        />
-        <TipsSection
-            selectedTipsIndex={selectedTipsIndex}
-            onTipsClick={onTipsClick}
-        />
-        <NavSection
-            songs={songs}
-            selectedSongIndex={selectedSongIndex}
-            accessedOn={accessedOn}
-            accessedSectionKey={accessedSectionKey}
-            nextSectionKey={nextSectionKey}
-            accessedSongIndex={accessedSongIndex}
-            onSongClick={onSongClick}
-        />
-        <OverviewsSection {...other}
-            overviewText={overviewText}
-            accessedOn={accessedOn}
-            accessedSectionKey={accessedSectionKey}
-            nextSectionKey={nextSectionKey}
-            onOverviewClick={onOverviewClick}
-        />
-        <StageSection
-        />
+        {false ?
+            <TitleSection
+                title={title}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
+                accessedSongIndex={accessedSongIndex}
+                onTitleClick={onSongClick}
+            /> : null
+        }
+        {false ?
+            <AudioSection
+                isHome={isHome}
+                isFirstSong={isFirstSong}
+                isLastSong={isLastSong}
+                isFirstVerse={isFirstVerse}
+                isLastVerse={isLastVerse}
+                audioSongTitle={audioSongTitle}
+                selectedSongIndex={selectedSongIndex}
+                isPlaying={isPlaying}
+                selectedTimePlayed={selectedTimePlayed}
+                selectedAudioOptionIndex={selectedAudioOptionIndex}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
+                onPlayClick={onPlayClick}
+                onAudioSongClick={onSongClick}
+                onAudioTimeClick={onVerseClick}
+                onAudioOptionClick={onAudioOptionClick}
+            /> : null
+        }
+        {false ?
+            <TipsSection
+                selectedTipsIndex={selectedTipsIndex}
+                onTipsClick={onTipsClick}
+            /> : null
+        }
+        {false ?
+            <NavSection
+                songs={songs}
+                selectedSongIndex={selectedSongIndex}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
+                accessedSongIndex={accessedSongIndex}
+                onSongClick={onSongClick}
+            /> : null
+        }
+        {false ?
+            <OverviewsSection {...other}
+                overviewText={overviewText}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
+                onOverviewClick={onOverviewClick}
+            /> : null
+        }
+        {false ?
+            <StageSection
+            /> : null
+        }
         <AnnotationPopup
             songs={songs}
             annotation={annotation}
@@ -174,15 +186,17 @@ const LiveView = ({
             nextSectionKey={nextSectionKey}
             onPopupButtonClick={onWikiUrlClick}
         />
-        <DotsSection
-            selectedDotKeys={selectedDotKeys}
-            presentDotKeys={presentDotKeys}
-            accessedOn={accessedOn}
-            accessedSectionKey={accessedSectionKey}
-            nextSectionKey={nextSectionKey}
-            accessedDotIndex={accessedDotIndex}
-            onDotClick={onDotClick}
-        />
+        {false ?
+            <DotsSection
+                selectedDotKeys={selectedDotKeys}
+                presentDotKeys={presentDotKeys}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
+                accessedDotIndex={accessedDotIndex}
+                onDotClick={onDotClick}
+            /> : null
+        }
         {selectedSongIndex ?
             <LyricsSection
                 showSingleLyricColumn={showSingleLyricColumn}

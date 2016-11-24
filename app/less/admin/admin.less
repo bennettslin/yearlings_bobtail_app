@@ -42,7 +42,6 @@
 .album-field {
     padding-left: @field-padding;
     background-color: @album-field-colour;
-    // font-size: 1.2em;
 }
 
 .shared-field {
@@ -61,9 +60,7 @@
  ************/
 
 .admin {
-
     .section {
-        box-sizing: border-box;
         padding: @field-padding;
 
         &:not(.in-popup) {
@@ -75,6 +72,7 @@
 }
 
 .admin-toggle {
+    z-index: 1;
     position: fixed;
     bottom: top;
     right: 0;

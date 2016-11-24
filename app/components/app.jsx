@@ -110,7 +110,7 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            isAdmin: true,
+            isAdmin: false,
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
@@ -119,7 +119,7 @@ class App extends Component {
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
             accessedLyricElement: LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
-            showSingleLyricColumn: true
+            showSingleLyricColumn: false
         }
     }
 
