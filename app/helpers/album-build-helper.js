@@ -19,6 +19,7 @@ const _tempStore = {
     _currentAnnotationIndices: [],
     _firstRightAnnotationIndexOfVerse: 0,
     _finalAnnotationIndex: 0,
+    _hasSideStanzas: false,
     _lyricInTime: false
 }
 
@@ -49,6 +50,7 @@ const _markSideStanzas = (lyrics) => {
         }, false)
 
         if (hasSideStanzas) {
+            _tempStore._hasSideStanzas = true
             stanza.forEach(verse => {
                 if (verse.topSideStanza || verse.bottomSideStanza) {
                     verse.rightColumn = true
@@ -71,6 +73,7 @@ const _prepareAllSongs = (album) => {
         _tempStore._songTimes = []
         _tempStore._currentAnnotationIndices = []
         _tempStore._firstRightAnnotationIndexOfVerse = 0
+        _tempStore._hasSideStanzas = false
 
         _addTitleToLyrics(song.title, song.lyrics)
         // Do not confuse anchor key with string prototype anchor method.
@@ -79,6 +82,9 @@ const _prepareAllSongs = (album) => {
         }
 
         _markSideStanzas(song.lyrics)
+        // Only applies to "On a Golden Cord" and "Uncanny Valley Boy."
+        song.hasSideStanzas = _tempStore._hasSideStanzas
+
         _parseLyrics(song.lyrics)
 
         // Add annotations to song object.
