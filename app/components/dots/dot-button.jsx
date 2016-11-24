@@ -39,17 +39,27 @@ class DotButtonView extends Component {
     constructor(props) {
         super(props)
 
-        this.onHover = this.onHover.bind(this)
+        this.onMouse = this.onMouse.bind(this)
+        this.onTouch = this.onTouch.bind(this)
 
         this.state = {
-            isHovered: false
+            isMoused: false,
+            isTouched: false,
         }
     }
 
-    onHover(e) {
+    onMouse(e) {
         const { type } = e
         this.setState({
-            isHovered: type === 'mouseenter'
+            isMoused: type === 'mouseenter'
+        })
+    }
+
+    // FIXME: Revisit to see if this works properly.
+    onTouch(e) {
+        const { type } = e
+        this.setState({
+            isTouched: type === 'touchstart'
         })
     }
 
@@ -68,11 +78,12 @@ class DotButtonView extends Component {
             onClick
 
         } = this.props,
-        { isHovered } = this.state
+        { isMoused,
+          isTouched } = this.state
 
         return (
             <a
-                className={`dot ${dotKey}${accessHighlighted ? ' access-highlighted' : ''}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}${isHovered ? ' hovered' : ''}`}
+                className={`dot ${dotKey}${accessHighlighted ? ' access-highlighted' : ''}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}${isMoused || isTouched ? ' show-tooltip' : ''}`}
                 onClick={onClick}
             >
                 {inDotsSection ?
@@ -80,13 +91,15 @@ class DotButtonView extends Component {
                         {DOT_DESCRIPTIONS[dotKey]}
                     </div> : null
                 }
-                {/* FIXME: Dots ultimately won't have text, of course. */}
+                {/* FIXME: Dot text will be outside button. */}
                 <div className="dot-text">
                     {dotKey}
                 </div>
                 <div className="dot-interactable"
-                    onMouseEnter={this.onHover}
-                    onMouseLeave={this.onHover}
+                    onMouseEnter={this.onMouse}
+                    onMouseLeave={this.onMouse}
+                    onTouchStart={this.onTouch}
+                    onTouchEnd={this.onTouch}
                 >
                 </div>
             </a>
