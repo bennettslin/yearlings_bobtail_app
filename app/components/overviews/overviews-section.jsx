@@ -32,6 +32,7 @@ const OverviewsSection = ({
 const OverviewsSectionView = ({
 
     // From props.
+    isAdmin,
     overviewText,
     onOverviewClick,
     onWikiUrlClick,
@@ -43,7 +44,7 @@ const OverviewsSectionView = ({
     <div
         className={`section overview-section`}
     >
-        <h2>overview</h2>
+        {isAdmin ? <h2>overview</h2> : null}
         <div className="overview-text">
             <button onClick={onOverviewClick}>(Bennett icon)</button>
             { showBubbleText ?

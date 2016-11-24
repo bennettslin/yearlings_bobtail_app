@@ -96,6 +96,7 @@ const SongView = ({
                 onPopupButtonClick={onWikiUrlClick}
             />
             <DotsSection
+                isAdmin={true}
                 selectedDotKeys={selectedDotKeys}
                 presentDotKeys={presentDotKeys}
                 accessedOn={accessedOn}
@@ -106,6 +107,7 @@ const SongView = ({
             />
             {selectedSongIndex ?
                 <LyricsSection
+                    isAdmin={true}
                     showSingleLyricColumn={showSingleLyricColumn}
                     lyricsStartAtZero={lyricsStartAtZero}
                     accessedOn={accessedOn}

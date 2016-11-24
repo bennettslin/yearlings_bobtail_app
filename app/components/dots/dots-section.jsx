@@ -31,6 +31,9 @@ import { DOTS_SECTION } from 'helpers/constants'
 
 const DotsSectionView = ({
 
+    // From props.
+    isAdmin,
+
     // From controller.
     sectionAccessHighlighted,
     sectionNextHighlighted,
@@ -39,7 +42,7 @@ const DotsSectionView = ({
     <div
         className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
-        <h2>dots</h2>
+        {isAdmin ? <h2>dots</h2> : null}
         <DotsBlock {...other}
             inDotsSection={true}
             sectionAccessHighlighted={sectionAccessHighlighted}

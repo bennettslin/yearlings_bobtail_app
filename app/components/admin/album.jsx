@@ -79,6 +79,7 @@ const AlbumView = ({
                 onTitleClick={onSongClick}
             />
             <AudioSection
+                isAdmin={true}
                 isHome={isHome}
                 isFirstSong={isFirstSong}
                 isLastSong={isLastSong}
@@ -98,6 +99,7 @@ const AlbumView = ({
                 onAudioOptionClick={onAudioOptionClick}
             />
             <TipsSection
+                isAdmin={true}
                 selectedTipsIndex={selectedTipsIndex}
                 onTipsClick={onTipsClick}
             />

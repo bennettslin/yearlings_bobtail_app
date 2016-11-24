@@ -33,6 +33,7 @@ const LyricsSection = ({
 const LyricsSectionView = ({
 
     // From props.
+    isAdmin,
     songLyrics = [],
     showSingleLyricColumn,
     selectedLyricColumnIndex,
@@ -48,7 +49,7 @@ const LyricsSectionView = ({
         className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${showSingleLyricColumn ? ' single-column' : ''}`}
     >
         {/* Upon song change, scroll to element with this class name. */}
-        <h2 className="lyrics-scroll-home">lyrics</h2>
+        {isAdmin ? <h2 className="lyrics-scroll-home">lyrics</h2> : null}
         {showSingleLyricColumn && hasDoubleColumns ?
             <RadioButtonBlock
                 selectedButtonIndex={selectedLyricColumnIndex}

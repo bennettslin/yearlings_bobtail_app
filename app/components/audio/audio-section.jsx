@@ -43,6 +43,7 @@ const AudioSection = ({
 const AudioSectionView = ({
 
     // From props.
+    isAdmin,
     isPlaying,
     selectedTimePlayed,
     selectedAudioOptionIndex,
@@ -67,50 +68,50 @@ const AudioSectionView = ({
     <div
         className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
-        <h2>audio</h2>
-            {!isHome ?
-                <div className="audio-banner-block">
-                    {audioSongTitle} - {getFormattedTime(selectedTimePlayed)}
-                </div> : null
-            }
-            <div className="audio-button-block">
-                <a
-                    className={isHome ? '' : 'enabled'}
-                    onClick={onPreviousSongClick}
-                >
-                    {isHome || isFirstSong ? '\u2302' : '\u21E4'}
-                </a>
-                <a
-                    className={isHome || isFirstVerse ? '' : 'enabled'}
-                    onClick={onRewindClick}
-                >
-                    {'\u23EA'}
-                </a>
-                <a
-                    className="enabled"
-                    onClick={onPlayClick}
-                >
-                    {isPlaying ? '\u23F8' : '\u25BA' }
-                </a>
-                <a
-                    className={isHome || isLastVerse ? '' : 'enabled'}
-                    onClick={onFastForwardClick}
-                >
-                    {'\u23E9'}
-                </a>
-                <a
-                    className={isLastSong ? '' : 'enabled'}
-                    onClick={onNextSongClick}
-                >
-                    {'\u21E5'}
-                </a>
-                <a
-                    className="enabled"
-                    onClick={onAudioOptionClick}
-                >
-                    Option: {AUDIO_OPTIONS[selectedAudioOptionIndex]}
-                </a>
-            </div>
+        {isAdmin ? <h2>audio</h2> : null}
+        {!isHome ?
+            <div className="audio-banner-block">
+                {audioSongTitle} - {getFormattedTime(selectedTimePlayed)}
+            </div> : null
+        }
+        <div className="audio-button-block">
+            <a
+                className={isHome ? '' : 'enabled'}
+                onClick={onPreviousSongClick}
+            >
+                {isHome || isFirstSong ? '\u2302' : '\u21E4'}
+            </a>
+            <a
+                className={isHome || isFirstVerse ? '' : 'enabled'}
+                onClick={onRewindClick}
+            >
+                {'\u23EA'}
+            </a>
+            <a
+                className="enabled"
+                onClick={onPlayClick}
+            >
+                {isPlaying ? '\u23F8' : '\u25BA' }
+            </a>
+            <a
+                className={isHome || isLastVerse ? '' : 'enabled'}
+                onClick={onFastForwardClick}
+            >
+                {'\u23E9'}
+            </a>
+            <a
+                className={isLastSong ? '' : 'enabled'}
+                onClick={onNextSongClick}
+            >
+                {'\u21E5'}
+            </a>
+            <a
+                className="enabled"
+                onClick={onAudioOptionClick}
+            >
+                Option: {AUDIO_OPTIONS[selectedAudioOptionIndex]}
+            </a>
+        </div>
     </div>
 )
 
