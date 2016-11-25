@@ -13,9 +13,6 @@
     z-index: @text-z-index + 1;
     font-size: 2em;
 
-    // Accommodate scrollbar.
-    right: 16px;
-
     background-color: gray;
 }
 
@@ -24,6 +21,9 @@
     padding: 5px;
     display: flex;
     z-index: @text-z-index + 1;
+
+    // Accommodate scrollbar.
+    right: 16px;
 
     background-color: gray;
 }
@@ -48,8 +48,8 @@
             height: 100%;
         }
 
-        // Needed for Chrome.
-        .radio-button-block {
+        // Needed to expand properly in Chrome.
+        .expand-button-block {
             left: 0;
         }
     }

@@ -58,7 +58,7 @@ const LyricsSectionView = ({
                     className="expand-button enabled"
                     onClick={onLyricExpandClick}
                 >
-                    +
+                    {isLyricExpanded ? '---' : '+++'}
                 </a>
             </div> : null
         }
