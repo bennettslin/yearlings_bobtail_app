@@ -81,7 +81,7 @@ const LyricsVerseView = ({
             /> : null
         }
         {isDoubleSpeaker ? (
-            <div className="double-lines-block">
+            <div className={`double-lines-block${hiddenLyricColumnKey ? ' hidden-' + hiddenLyricColumnKey : ''}`}>
                 {DOUBLESPEAKER_KEYS.filter(key => {
                     return key === hiddenLyricColumnKey && showSingleLyricColumn ? false : verseObject[key]
                 }).map((key, index) => {
@@ -89,7 +89,7 @@ const LyricsVerseView = ({
                         <LyricsLine {...other}
                             key={index}
                             text={verseObject[key]}
-                            columnKey={hiddenLyricColumnKey ? LEFT : key}
+                            columnKey={key}
                         />
                     )
                 })}

@@ -304,6 +304,15 @@
     justify-content: space-between;
 }
 
+// Single right column should be text-aligned to right.
+.single-column {
+    .double-lines-block {
+        &.hidden-left {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
 .line {
     @hanging-indent-width: 1.5em;
     @centre-edge-margin: 15%;
@@ -321,8 +330,10 @@
     }
 
     &.right {
-        // Single gutter between far left and right columns.
-        margin-left: @field-padding;
+        // If both columns show, have a single gutter between them.
+        &:not(:first-child) {
+            margin-left: @field-padding;
+        }
 
         /**
          * Styling for hanging indent with right-aligned text. The hidden
