@@ -47,11 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `polyfill for Safari, which only knows keyCode for letters, numbers, and punctuation`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `setDOMWidth method doesn't work on reload and device width change`,
             workedHours: 0,
             neededHours: 1
@@ -672,6 +667,11 @@ module.exports = {
             taskName: `make lyric column expandable`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `polyfill for Safari, which only knows keyCode for letters, numbers, and punctuation`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

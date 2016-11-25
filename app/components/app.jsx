@@ -604,7 +604,7 @@ class App extends Component {
               charCode } = e
 
         // Workaround for Safari, which doesn't recognise key on event.
-        if (!charCode) {
+        if (keyName === 'Unidentified') {
             keyName = String.fromCharCode(keyCode)
         }
 
