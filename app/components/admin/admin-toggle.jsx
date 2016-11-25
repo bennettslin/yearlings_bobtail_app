@@ -19,6 +19,7 @@ const AdminToggleView = ({
 
     // From props.
     isAdmin,
+    deviceWidth,
     windowWidth,
     windowHeight,
     onClick
@@ -31,6 +32,9 @@ const AdminToggleView = ({
         >
             {isAdmin ? 'Live' : 'Admin'}
         </a>
+        <div>
+            {deviceWidth}
+        </div>
         <div>
             {windowWidth} x {windowHeight}
         </div>

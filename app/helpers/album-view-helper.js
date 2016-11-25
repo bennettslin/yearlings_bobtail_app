@@ -4,6 +4,7 @@ import { ALBUM_BUILD_KEYS,
          RIGHT,
 
          PHONE_WIDTH,
+         MINI_WIDTH,
          TABLET_WIDTH,
          LAPTOP_WIDTH,
          MONITOR_WIDTH } from './constants'
@@ -42,7 +43,7 @@ export const getLyricsStartAtZero = (props, selectedSongIndex) => {
 }
 
 export const getIsLyricExpandable = ({ isAdmin, deviceWidth }) => {
-    return !isAdmin && (deviceWidth === PHONE_WIDTH || deviceWidth === TABLET_WIDTH)
+    return !isAdmin && (deviceWidth === PHONE_WIDTH || deviceWidth === MINI_WIDTH || deviceWidth === TABLET_WIDTH)
 }
 
 export const getShowSingleLyricColumn = (props, state) => {
@@ -69,7 +70,11 @@ export const getShowSingleLyricColumn = (props, state) => {
 
         // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
         } else if (isDoublespeaker) {
-            return deviceWidth !== MONITOR_WIDTH
+            /**
+             * In tablet width, lyrics section takes up full width of bottom,
+             * while in monitor width, the screen is wide enough as well.
+             */
+            return deviceWidth !== MONITOR_WIDTH && deviceWidth !== TABLET_WIDTH
         }
 
         return showSingleLyricColumn

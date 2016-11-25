@@ -735,11 +735,6 @@ class App extends Component {
                             selectDot: this.selectDot
                         })
                         break
-                    case WIKI_SECTION:
-                        AccessHelper.handleWikiAccess({
-                            keyName
-                        })
-                        break
                 }
 
                 if (newState) { this.setState(newState) }
@@ -843,6 +838,7 @@ class App extends Component {
             >
                 <AdminToggle
                     isAdmin={isAdmin}
+                    deviceWidth={deviceWidth}
                     windowWidth={windowWidth}
                     windowHeight={windowHeight}
                     onClick={this.toggleAdmin}

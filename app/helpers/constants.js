@@ -42,6 +42,7 @@ module.exports = {
 
     // These are class names.
     PHONE_WIDTH: 'phone-width',
+    MINI_WIDTH: 'mini-width',
     TABLET_WIDTH: 'tablet-width',
     LAPTOP_WIDTH: 'laptop-width',
     MONITOR_WIDTH: 'monitor-width',

@@ -47,9 +47,9 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `make lyric column expandable`,
+            taskName: `polyfill for Safari, which only knows keyCode for letters, numbers, and punctuation`,
             workedHours: 0,
-            neededHours: 3
+            neededHours: 1
         },
         {
             taskName: `setDOMWidth method doesn't work on reload and device width change`,
@@ -667,6 +667,11 @@ module.exports = {
             taskName: `make radio buttons float`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `make lyric column expandable`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
