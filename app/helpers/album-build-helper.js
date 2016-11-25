@@ -3,7 +3,8 @@
 import { ALBUM_BUILD_KEYS,
          LYRIC,
          LEFT,
-         RIGHT } from './constants'
+         RIGHT,
+         CENTRE } from './constants'
 import { getFormattedAnnotationTitle } from './format-helper'
 import { getAnnotationsDotKeys } from 'helpers/album-view-helper'
 
@@ -189,7 +190,7 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
     }
 
     // Doublespeaker lyrics have separate keys for each column.
-    if (lyric[LYRIC] || lyric[LEFT] || lyric[RIGHT] || lyric.dotStanza) {
+    if (lyric[LYRIC] || lyric[LEFT] || lyric[RIGHT] || lyric[CENTRE] || lyric.dotStanza) {
         // Add first annotation index of verse, if any.
         if (_tempStore._currentAnnotationIndices.length) {
             // Last annotation index is no longer needed.
