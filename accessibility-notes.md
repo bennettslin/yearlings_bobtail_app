@@ -73,6 +73,9 @@
     * When 'e' or 'r' is pressed:
         * Accessed element will switch to verse.
 
+    * When 'x' is pressed:
+        * Lyric section is expanded.
+
     * When "Enter" is pressed:
         * If there is an accessed annotation, select its annotation.
         * If there is an accessed verse, select it.

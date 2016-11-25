@@ -186,7 +186,6 @@ export default {
         accessedVerseIndex,
         lyricColumnShown,
         selectAnnotation,
-        selectLyricColumn,
         scrollElementIntoView
     }) {
         let newState,
@@ -199,19 +198,6 @@ export default {
             case ARROW_RIGHT:
                 direction = keyName === ARROW_LEFT ? -1 : 1
                 toSelectAnnotation = fromAnnotationSection
-                break
-
-            /**
-             * FIXME: Using 'e' instead of 'l' for now to not conflict with
-             * lyric universal key.
-             */
-            case 'e':
-            case 'r':
-                if (!fromAnnotationSection) {
-                    // Handle selection of left or right lyric column.
-                    selectLyricColumn(undefined, keyName === 'e' ? 0 : 1)
-                    return
-                }
                 break
             case ENTER:
                 // Only select annotation if annotation is accessed element.
@@ -276,6 +262,8 @@ export default {
         accessedVerseIndex,
         accessedLyricElement,
         selectVerse,
+        selectLyricColumn,
+        selectLyricExpand,
         scrollElementIntoView,
         lyricColumnShown
     }) {
@@ -284,6 +272,19 @@ export default {
             direction
 
         switch (keyName) {
+            /**
+             * FIXME: Using 'e' instead of 'l' for now to not conflict with
+             * lyric universal key.
+             */
+            case 'x':
+                selectLyricExpand()
+                return
+                break
+            case 'e':
+            case 'r':
+                selectLyricColumn(undefined, keyName === 'e' ? 0 : 1)
+                return
+                break
             case ARROW_UP:
                 direction = -1
                 break

@@ -694,7 +694,6 @@ class App extends Component {
                             accessedLyricElement: this.state.accessedLyricElement,
                             lyricColumnShown,
                             selectAnnotation: this.selectAnnotation,
-                            selectLyricColumn: this.selectLyricColumn,
                             scrollElementIntoView: this.scrollElementIntoView
                         }) || {}
 
@@ -706,6 +705,8 @@ class App extends Component {
                                 accessedVerseIndex: this.state.accessedVerseIndex,
                                 accessedLyricElement: this.state.accessedLyricElement,
                                 selectVerse: this.selectVerse,
+                                selectLyricColumn: this.selectLyricColumn,
+                                selectLyricExpand: this.selectLyricExpand,
                                 scrollElementIntoView: this.scrollElementIntoView,
                                 lyricColumnShown
                             })
