@@ -599,7 +599,14 @@ class App extends Component {
     }
 
     handleKeyDown(e) {
-        let { key: keyName } = e
+        let { key: keyName,
+              keyCode,
+              charCode } = e
+
+        // Workaround for Safari, which doesn't recognise key on event.
+        if (!charCode) {
+            keyName = String.fromCharCode(keyCode)
+        }
 
         // Do not handle if any modifier keys are present.
         if (e && (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === 'Tab')) {

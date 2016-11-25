@@ -40,9 +40,11 @@ export default {
         // These keys will always fire, even if access is off.
         switch (keyName) {
             // FIXME: These are for dev purposes only.
+            case '¼': // For Safari.
             case ',':
                 selectTime(true, selectedTimePlayed - 1)
                 break
+            case '¾': // For Safari.
             case '.':
                 selectTime(true, selectedTimePlayed + 1)
                 break
