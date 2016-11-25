@@ -41,6 +41,10 @@ export const getLyricsStartAtZero = (props, selectedSongIndex) => {
     return selectedSong.times ? selectedSong.times[1] === 0 : true
 }
 
+export const getIsLyricExpandable = ({ isAdmin, deviceWidth }) => {
+    return !isAdmin && (deviceWidth === PHONE_WIDTH || deviceWidth === TABLET_WIDTH)
+}
+
 export const getShowSingleLyricColumn = (props, state) => {
     // if is admin, return showSingleLyricColumn
     if (state.isAdmin) {

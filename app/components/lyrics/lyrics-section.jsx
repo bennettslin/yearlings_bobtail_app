@@ -39,6 +39,9 @@ const LyricsSectionView = ({
     showSingleLyricColumn,
     selectedLyricColumnIndex,
     hasDoubleColumns,
+    isLyricExpandable,
+    isLyricExpanded,
+    onLyricExpandClick,
     onLyricColumnClick,
 
     // From controller.
@@ -47,8 +50,18 @@ const LyricsSectionView = ({
 
 ...other }) => (
     <div
-        className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${showSingleLyricColumn ? ' single-column' : ''}`}
+        className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${showSingleLyricColumn ? ' single-column' : ''}${isLyricExpandable ? ' expandable' : ''}${isLyricExpanded ? ' expanded' : ''}`}
     >
+        {isLyricExpandable ?
+            <div className="expand-button-block">
+                <a
+                    className="expand-button enabled"
+                    onClick={onLyricExpandClick}
+                >
+                    +
+                </a>
+            </div> : null
+        }
         {/* Upon song change, scroll to element with this class name. */}
         {isAdmin ? <h2 className="lyrics-scroll-home">lyrics</h2> : null}
         {showSingleLyricColumn && hasDoubleColumns ?

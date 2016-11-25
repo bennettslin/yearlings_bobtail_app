@@ -39,7 +39,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable } from 'helpers/album-view-helper'
 import { resizeWindow } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -119,7 +119,8 @@ class App extends Component {
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
             accessedLyricElement: LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
-            showSingleLyricColumnInAdmin: false
+            showSingleLyricColumnInAdmin: false,
+            isLyricExpanded: false
         }
     }
 
@@ -157,6 +158,7 @@ class App extends Component {
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
         this.selectLyricColumnWidth = this.selectLyricColumnWidth.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
+        this.selectLyricExpand = this.selectLyricExpand.bind(this)
         this.selectTips = this.selectTips.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
@@ -542,6 +544,12 @@ class App extends Component {
         })
     }
 
+    selectLyricExpand(e) {
+        this.setState({
+            isLyricExpanded: !this.state.isLyricExpanded
+        })
+    }
+
     selectLyricColumn(e, selectedLyricColumnIndex = 0) {
 
         const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
@@ -815,6 +823,7 @@ class App extends Component {
 
             songTimes = getSongTimes(props),
             showSingleLyricColumn = getShowSingleLyricColumn(props, state),
+            isLyricExpandable = getIsLyricExpandable(state),
             isHome = selectedSongIndex === 0,
             isFirstSong = selectedSongIndex === 1,
             isLastSong = selectedSongIndex === songs.length,
@@ -847,6 +856,8 @@ class App extends Component {
                     audioSongTitle={audioSongTitle}
                     accessedSectionKey={accessedSectionKey}
                     nextSectionKey={nextSectionKey}
+                    showSingleLyricColumn={showSingleLyricColumn}
+                    isLyricExpandable={isLyricExpandable}
                     onSongClick={this.selectSong}
                     onPortalClick={this.selectPortal}
                     onWikiUrlClick={this.selectWiki}
@@ -859,8 +870,8 @@ class App extends Component {
                     onScreenWidthClick={this.selectLyricColumnWidth}
                     onLyricColumnClick={this.selectLyricColumn}
                     onAnnotationSectionClick={this.handleAnnotationSectionClick}
+                    onLyricExpandClick={this.selectLyricExpand}
                     onTipsClick={this.selectTips}
-                    showSingleLyricColumn={showSingleLyricColumn}
                 />
             </div>
         )

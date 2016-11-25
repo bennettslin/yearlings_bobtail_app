@@ -72,6 +72,8 @@ const LiveView = ({
     lyricsStartAtZero,
 
     showSingleLyricColumn,
+    isLyricExpanded,
+    isLyricExpandable,
     isHome,
     isFirstSong,
     isLastSong,
@@ -90,6 +92,7 @@ const LiveView = ({
     onAnnotationClick,
     onLyricColumnClick,
     onAnnotationSectionClick,
+    onLyricExpandClick,
 
     // From controller.
     overviewText,
@@ -102,7 +105,7 @@ const LiveView = ({
     hasDoubleColumns,
 
 ...other }) => (
-    <div className="live">
+    <div className="column live-column">
         {false ?
             <TitleSection
                 title={title}
@@ -199,6 +202,8 @@ const LiveView = ({
         }
         {selectedSongIndex ?
             <LyricsSection
+                isLyricExpanded={isLyricExpanded}
+                isLyricExpandable={isLyricExpandable}
                 showSingleLyricColumn={showSingleLyricColumn}
                 lyricsStartAtZero={lyricsStartAtZero}
                 accessedOn={accessedOn}
@@ -217,6 +222,7 @@ const LiveView = ({
                 onVerseClick={onVerseClick}
                 onAnnotationClick={onAnnotationClick}
                 onLyricColumnClick={onLyricColumnClick}
+                onLyricExpandClick={onLyricExpandClick}
             /> : null
         }
     </div>
