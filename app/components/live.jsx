@@ -108,7 +108,7 @@ const LiveView = ({
     hasDoubleColumns,
 
 ...other }) => (
-    <div className="live-column">
+    <div className={`live-column${isLyricExpanded ? ' lyric-expanded' : ''}`}>
         {false ?
             <TipsSection
                 selectedTipsIndex={selectedTipsIndex}

@@ -94,8 +94,10 @@
         &.expandable {
             height: @collapsed-lyric-section-height;
         }
+    }
 
-        &.expanded {
+    .lyric-expanded {
+        .lyrics-section {
             height: ~"calc(100% - @{menu-height-mini-tablet})";
         }
     }
@@ -111,8 +113,8 @@
             width: 100%;
         }
 
-        .lyrics-section {
-            &.expanded {
+        .lyric-expanded {
+            .lyrics-section {
                 height: ~"calc(100% - @{menu-height-phone})";
             }
         }

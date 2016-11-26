@@ -115,5 +115,6 @@
     * "o" to toggle "audioOptionIndex"
     * "t" to toggle "selectedTipsIndex"
     * "z" to toggle "selectedOverviewIndex"
+    * "x" to expand lyric section
     * "m" to toggle admin field. This won't be possible live, of course.
     * "Escape" to close a popup

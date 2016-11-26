@@ -47,17 +47,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Hide Bennett when lyrics is up.`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `Hide overview when lyrics is expanded.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `Make lyrics ear just a toggle.`,
+            taskName: `Hide overview when lyrics is expanded, collapse lyric when overview shown.`,
             workedHours: 0,
             neededHours: 1
         },
@@ -710,6 +700,11 @@ module.exports = {
         },
         {
             taskName: `Make lyrics expand accessible.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Make lyrics ear just a toggle.`,
             workedHours: 1,
             neededHours: 1
         }
