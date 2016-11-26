@@ -47,11 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Hide overview when lyrics is expanded, collapse lyric when overview shown.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `Overview toggles among three.`,
             workedHours: 0,
             neededHours: 2
@@ -705,6 +700,11 @@ module.exports = {
         },
         {
             taskName: `Make lyrics ear just a toggle.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Hide overview when lyrics is expanded, collapse lyric when overview shown.`,
             workedHours: 1,
             neededHours: 1
         }

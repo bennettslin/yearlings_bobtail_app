@@ -307,6 +307,11 @@ class App extends Component {
             selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % 2
         }
 
+        // Collapse lyric section if overview shown.
+        if (selectedOverviewIndex === 0) {
+            this.selectLyricExpand(undefined, false)
+        }
+
         // Stored as integer. 0 is to show overview, 1 is to hide it.
         this.props.selectOverviewIndex(selectedOverviewIndex)
 
@@ -546,10 +551,13 @@ class App extends Component {
         })
     }
 
-    selectLyricExpand(e) {
+    selectLyricExpand(e, isLyricExpanded = !this.state.isLyricExpanded) {
         this.setState({
-            isLyricExpanded: !this.state.isLyricExpanded
+            isLyricExpanded
         })
+
+        // Hide overview.
+        this.selectOverview(undefined, 1)
     }
 
     selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2) {
