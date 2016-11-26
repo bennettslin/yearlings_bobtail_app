@@ -1,11 +1,28 @@
 @overview-toggle-width: 100px;
 @overview-toggle-height: 150px;
 
+@overview-subfield-margin: 5px;
+@overview-popup-content-wrapper-padding: 15px;
+
+@overview-toggle-tablet-width: @overview-toggle-width / 2;
+@overview-toggle-tablet-height: @overview-toggle-height / 2;
+
+@overview-toggle-phone-width: @overview-toggle-width / 3;
+@overview-toggle-phone-height: @overview-toggle-height / 3;
+
+
 // Subfield in main field.
 .overview-subfield {
     position: absolute;
-    width: 100%;
-    height: 100%;
+
+    // Ensure overview is below lyrics.
+    z-index: 0;
+
+    // This is necessary to avoid right scrollbar in phone width.
+    width: ~"calc(100% - @{overview-subfield-margin} * 2 - @{overview-popup-content-wrapper-padding} * 2)";
+    height: ~"calc(100% - @{overview-subfield-margin} * 2)";
+
+    margin: @overview-subfield-margin;
     display: flex;
 }
 
@@ -38,12 +55,15 @@
         display: block;
         width: 100%;
         height: 100%;
+    }
 
-        .popup-content-wrapper {
-            position: absolute;
-            min-width: 320px;
-            width: 50%;
-        }
+    &.popup-content-wrapper {
+        width: 75%;
+        min-width: 200px;
+        max-width: 450px;
+        border-radius: 25px;
+        padding: @overview-popup-content-wrapper-padding;
+        margin-left: 25px;
     }
 }
 
@@ -63,6 +83,14 @@
         bottom: 0;
     }
 
+    .overview-toggle-section {
+        width: @overview-toggle-tablet-width;
+    }
+
+    .overview-toggle-button {
+        height: @overview-toggle-tablet-height;
+    }
+
     &.phone-width {
 
         .overview-subfield {
@@ -70,11 +98,22 @@
         }
 
         .overview-toggle-section {
-            height: @overview-toggle-height;
+            width: @overview-toggle-phone-width;
+            height: @overview-toggle-phone-height;
+        }
+
+        .overview-toggle-button {
+            // FIXME: Sometimes the text is still too large for certain phone heights.
+            height: @overview-toggle-phone-height;
         }
 
         .overview-toggle-button, .overview.popup-content-wrapper {
             min-width: 100%;
+        }
+
+        .overview.popup-content-wrapper {
+            margin-left: 0;
+            margin-bottom: 25px;
         }
     }
 }

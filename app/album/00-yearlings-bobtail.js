@@ -47,11 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `have overview toggle and style`,
-            workedHours: 0,
-            neededHours: 5
-        },
-        {
             taskName: `style nav section and accommodate beginning and final options`,
             workedHours: 0,
             neededHours: 5
@@ -687,6 +682,11 @@ module.exports = {
             taskName: `polyfill for Safari, which only knows keyCode for letters, numbers, and punctuation`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `have overview toggle and style`,
+            workedHours: 5,
+            neededHours: 5
         }
     ]
 }
