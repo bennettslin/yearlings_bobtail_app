@@ -639,6 +639,7 @@ class App extends Component {
             togglePlay: this.togglePlay,
             toggleAdmin: this.toggleAdmin,
             selectedTimePlayed: this.props.selectedTimePlayed,
+            selectLyricExpand: this.selectLyricExpand,
             selectTime: this.selectTime
         })) { return }
 
@@ -719,7 +720,6 @@ class App extends Component {
                                 accessedLyricElement: this.state.accessedLyricElement,
                                 selectVerse: this.selectVerse,
                                 selectLyricColumn: this.selectLyricColumn,
-                                selectLyricExpand: this.selectLyricExpand,
                                 scrollElementIntoView: this.scrollElementIntoView,
                                 lyricColumnShown
                             })

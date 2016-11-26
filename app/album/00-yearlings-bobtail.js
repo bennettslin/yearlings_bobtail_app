@@ -57,11 +57,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `Make lyrics expand accessible.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `Make lyrics ear just a toggle.`,
             workedHours: 0,
             neededHours: 1
@@ -77,9 +72,9 @@ module.exports = {
             neededHours: 5
         },
         {
-            taskName: `make beginning and final song options possible`,
+            taskName: `make beginning and final song options possible, with layout`,
             workedHours: 0,
-            neededHours: 3
+            neededHours: 5
         },
         {
             taskName: `setDOMWidth method doesn't work on reload and device width change`,
@@ -712,6 +707,11 @@ module.exports = {
             taskName: `have overview toggle and style`,
             workedHours: 5,
             neededHours: 5
+        },
+        {
+            taskName: `Make lyrics expand accessible.`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

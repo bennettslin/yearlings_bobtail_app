@@ -35,6 +35,7 @@ export default {
         togglePlay,
         toggleAdmin,
         selectTime,
+        selectLyricExpand,
         selectedTimePlayed
     }) {
         // These keys will always fire, even if access is off.
@@ -47,6 +48,10 @@ export default {
             case '¾': // For Safari.
             case '.':
                 selectTime(true, selectedTimePlayed + 1)
+                break
+            // Toggle lyric expand.
+            case 'x':
+                selectLyricExpand()
                 break
             // Toggle selected overview index.
             case 'z':
@@ -264,7 +269,6 @@ export default {
         accessedLyricElement,
         selectVerse,
         selectLyricColumn,
-        selectLyricExpand,
         scrollElementIntoView,
         lyricColumnShown
     }) {
@@ -277,10 +281,6 @@ export default {
              * FIXME: Using 'e' instead of 'l' for now to not conflict with
              * lyric universal key.
              */
-            case 'x':
-                selectLyricExpand()
-                return
-                break
             case 'e':
             case 'r':
                 selectLyricColumn(undefined, keyName === 'e' ? 0 : 1)

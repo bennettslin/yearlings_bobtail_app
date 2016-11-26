@@ -4,6 +4,9 @@
 @overview-subfield-margin: 5px;
 @overview-popup-content-wrapper-padding: 15px;
 
+@overview-toggle-laptop-width: @overview-toggle-width * 2 / 3;
+@overview-toggle-laptop-height: @overview-toggle-height * 2 / 3;
+
 @overview-toggle-tablet-width: @overview-toggle-width / 2;
 @overview-toggle-tablet-height: @overview-toggle-height / 2;
 
@@ -73,6 +76,16 @@
     // Overview is at the top in desktop.
     .overview-toggle-button, .overview.popup-content-wrapper {
         top: 0;
+    }
+
+    &.laptop-width {
+        .overview-toggle-section {
+            width: @overview-toggle-laptop-width;
+        }
+
+        .overview-toggle-button {
+            height: @overview-toggle-laptop-height;
+        }
     }
 }
 
