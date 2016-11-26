@@ -5,129 +5,108 @@
 
 @nav-height: 50px;
 
-.live {
+@overview-toggle-width: 100px;
+@overview-toggle-height: 150px;
 
-    .main-column {
+.main-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.field {
+    border: 2px dotted green;
+}
+
+.subfield {
+    border: 2px dotted orange;
+}
+
+.menu-field {
+    display: flex;
+}
+
+.main-field {
+    position: relative;
+    flex-grow: 1;
+}
+
+.nav-field {
+    height: @nav-height;
+}
+
+.nav-section {
+    height: 100%;
+    width: 200px;
+    overflow: hidden;
+}
+
+&.monitor-width, &.laptop-width {
+
+    .live-column {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
     }
 
-    .menu-field {
-        display: flex;
-    }
-
-    .field {
-        border: 2px dotted green;
-    }
-
-    .subfield {
-        border: 2px dotted orange;
-    }
-
-    .main-field {
-        position: relative;
+    .main-column {
         flex-grow: 1;
     }
 
-    .nav-field {
-        height: @nav-height;
+    .menu-field {
+        height: @menu-height-laptop-monitor;
     }
 
-    .nav-section {
+    .lyrics-section {
         height: 100%;
-        width: 200px;
-        overflow: hidden;
     }
+}
 
-    .overview-subfield {
-        position: relative;
+&.tablet-width, &.mini-width, &.phone-width {
+
+    .main-column {
         width: 100%;
-        height: 100%;
-        display: flex;
+        height: 100% - @collapsed-lyric-section-height;
+    }
 
-        .overview-section {
-            border: 1px solid blue;
+    .menu-field {
+        height: @menu-height-mini-tablet;
+        order: 1;
+    }
+
+    .nav-field {
+        order: 2;
+    }
+
+    .main-field {
+        order: 3;
+    }
+
+    .lyrics-section {
+        position: absolute;
+
+        &.expandable {
+            height: @collapsed-lyric-section-height;
         }
 
-        .overview-popup-container {
-            position: relative;
-            flex-grow: 1;
-            border: 1px solid purple;
+        &.expanded {
+            height: ~"calc(100% - @{menu-height-mini-tablet})";
         }
     }
 
-    &.monitor-width, &.laptop-width {
-
-        .live-column {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .main-column {
-            flex-grow: 1;
-        }
+    &.phone-width {
+        // Phone has no nav field.
 
         .menu-field {
-            height: @menu-height-laptop-monitor;
+            height: @menu-height-phone;
         }
 
-        .lyrics-section {
-            height: 100%;
-        }
-    }
-
-    &.tablet-width, &.mini-width, &.phone-width {
-
-        .main-column {
+        .audio-section {
             width: 100%;
-            height: 100% - @collapsed-lyric-section-height;
-        }
-
-        .menu-field {
-            height: @menu-height-mini-tablet;
-            order: 1;
-        }
-
-        .nav-field {
-            order: 2;
-        }
-
-        .main-field {
-            order: 3;
         }
 
         .lyrics-section {
-            position: absolute;
-
-            &.expandable {
-                height: @collapsed-lyric-section-height;
-            }
-
             &.expanded {
-                height: ~"calc(100% - @{menu-height-mini-tablet})";
-            }
-        }
-
-        .overview-subfield {
-            bottom: 0;
-        }
-
-        &.phone-width {
-            // Phone has no nav field.
-
-            .menu-field {
-                height: @menu-height-phone;
-            }
-
-            .audio-section {
-                width: 100%;
-            }
-
-            .lyrics-section {
-                &.expanded {
-                    height: ~"calc(100% - @{menu-height-phone})";
-                }
+                height: ~"calc(100% - @{menu-height-phone})";
             }
         }
     }

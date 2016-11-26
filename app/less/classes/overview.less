@@ -1,29 +1,80 @@
-.live {
+@overview-toggle-width: 100px;
+@overview-toggle-height: 150px;
 
-    .overview-toggle-section {
-        width: 100px;
-        height: 100%;
-    }
+// Subfield in main field.
+.overview-subfield {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
 
-    .overview-toggle-button {
+// Toggle container.
+.overview-toggle-section {
+    position: relative;
+    width: @overview-toggle-width;
+    height: 100%;
+}
+
+.overview-toggle-button {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: @overview-toggle-height;
+
+    // Temporary.
+    background-color: #848;
+}
+
+// Popup container.
+.overview-popup-container {
+    position: relative;
+    flex-grow: 1;
+}
+
+.overview {
+    &.popup-transition-group {
+        position: absolute;
         display: block;
-        font-size: 3em;
         width: 100%;
         height: 100%;
+
+        .popup-content-wrapper {
+            position: absolute;
+            min-width: 320px;
+            width: 50%;
+        }
+    }
+}
+
+// Responsive rules.
+&.monitor-width, &.laptop-width {
+
+    // Overview is at the top in desktop.
+    .overview-toggle-button, .overview.popup-content-wrapper {
+        top: 0;
+    }
+}
+
+&.tablet-width, &.mini-width, &.phone-width {
+
+    // Overview is at the bottom in mobile.
+    .overview-toggle-button, .overview.popup-content-wrapper {
+        bottom: 0;
     }
 
-    .overview {
-        &.popup-transition-group {
-            position: relative;
-            display: block;
-            width: 100%;
-            height: 100%;
-            padding: 5px;
+    &.phone-width {
 
-            .popup-content-wrapper {
-                height: 100%;
-                width: 50%;
-            }
+        .overview-subfield {
+            flex-direction: column-reverse;
+        }
+
+        .overview-toggle-section {
+            height: @overview-toggle-height;
+        }
+
+        .overview-toggle-button, .overview.popup-content-wrapper {
+            min-width: 100%;
         }
     }
 }
