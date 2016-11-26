@@ -1,16 +1,16 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import OverviewsSection from '../app/components/overviews/overview-section.jsx'
+import OverviewSection from '../app/components/overview/overview-section.jsx'
 
-describe('OverviewsSection', () => {
-    let overviewsSection
+describe('OverviewSection', () => {
+    let overviewSection
 
     beforeEach(() => {
-        overviewsSection = shallow(<OverviewsSection />)
+        overviewSection = shallow(<OverviewSection />)
     })
 
     it('should exist', () => {
-        expect(overviewsSection).to.exist
+        expect(overviewSection).to.exist
     })
 })

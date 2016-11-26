@@ -1,7 +1,7 @@
 import React from 'react'
 import Song from './song'
 import NotesSection from './notes/notes-section'
-import OverviewsSection from '../overviews/overviews-section'
+import OverviewSection from '../overview/overview-section'
 import StatsSection from './stats/stats-section'
 import StageSection from '../stage/stage-section'
 import TasksSection from './tasks/tasks-section'
@@ -49,7 +49,7 @@ const SharedView = ({
 ...other }) => (
     <div className="column shared-column">
         <div className="admin-field shared-admin-field">
-            <OverviewsSection {...other}
+            <OverviewSection {...other}
                 isAdmin={true}
                 overviewText={overviewText}
                 onOverviewClick={onOverviewClick}

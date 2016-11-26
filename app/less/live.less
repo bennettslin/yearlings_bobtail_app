@@ -5,8 +5,6 @@
 
 @nav-height: 50px;
 
-@overview-height: 150px;
-
 .live {
 
     .main-column {
@@ -42,14 +40,17 @@
         overflow: hidden;
     }
 
-    .overviews-subfield {
-        position: absolute;
+    .overview-subfield {
+        position: relative;
         width: 100%;
-        height: @overview-height;
+        height: 100%;
         display: flex;
-        justify-content: space-between;
 
-        .overviews-popup-container {
+        .overview-section {
+            border: 1px solid blue;
+        }
+
+        .overview-popup-container {
             position: relative;
             flex-grow: 1;
             border: 1px solid purple;
@@ -108,7 +109,7 @@
             }
         }
 
-        .overviews-subfield {
+        .overview-subfield {
             bottom: 0;
         }
 

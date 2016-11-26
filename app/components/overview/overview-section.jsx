@@ -6,9 +6,9 @@ import { OVERVIEW_SECTION } from 'helpers/constants'
  * CONTAINER *
  *************/
 
-const OverviewsSection = (props) => {
+const OverviewSection = (props) => {
     return (
-        <OverviewsSectionView {...props} />
+        <OverviewSectionView {...props} />
     )
 }
 
@@ -16,7 +16,7 @@ const OverviewsSection = (props) => {
  * PRESENTATION *
  ****************/
 
-const OverviewsSectionView = ({
+const OverviewSectionView = ({
 
     // From props.
     isAdmin,
@@ -37,4 +37,4 @@ const OverviewsSectionView = ({
     </div>
 )
 
-export default OverviewsSection
+export default OverviewSection

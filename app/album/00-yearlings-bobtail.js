@@ -107,7 +107,7 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `write album overviews`,
+            taskName: `write album overview`,
             workedHours: 0,
             neededHours: 6
         },
@@ -449,7 +449,7 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `change overviews`,
+            taskName: `change overview`,
             workedHours: 3,
             neededHours: 3
         },

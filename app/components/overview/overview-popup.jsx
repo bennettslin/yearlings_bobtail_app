@@ -1,26 +1,26 @@
 import React from 'react'
 import Popup from '../superclasses/popup'
-import OverviewsSection from './overviews-section'
+import OverviewSection from './overview-section'
 
 const defaultProps = {
     selectedOverviewIndex: 0,
     onCloseClick() {}
 }
 
-class OverviewsPopup extends Popup {
+class OverviewPopup extends Popup {
 
     getClassName() {
-        return 'overviews'
+        return 'overview'
     }
 
     getContentElement() {
         // Default is to show the overview.
         return !this.props.selectedOverviewIndex ?
-            <OverviewsSection {...this.props}
+            <OverviewSection {...this.props}
                 inPopup={true}
             /> : null
     }
 }
 
-OverviewsPopup.defaultProps = defaultProps
-export default OverviewsPopup
+OverviewPopup.defaultProps = defaultProps
+export default OverviewPopup

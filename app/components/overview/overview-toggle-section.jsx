@@ -6,10 +6,10 @@ import { OVERVIEW_SECTION } from 'helpers/constants'
  * CONTAINER *
  *************/
 
-const OverviewsToggleSection = (props) => {
+const OverviewToggleSection = (props) => {
 
     return (
-        <OverviewsToggleSectionView {...props} />
+        <OverviewToggleSectionView {...props} />
     )
 }
 
@@ -17,7 +17,7 @@ const OverviewsToggleSection = (props) => {
  * PRESENTATION *
  ****************/
 
-const OverviewsToggleSectionView = ({
+const OverviewToggleSectionView = ({
 
     // From props.
     selectedOverviewIndex,
@@ -33,4 +33,4 @@ const OverviewsToggleSectionView = ({
     </div>
 )
 
-export default OverviewsToggleSection
+export default OverviewToggleSection

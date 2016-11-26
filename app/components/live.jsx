@@ -3,8 +3,8 @@ import TitleSection from './title/title-section'
 import AudioSection from './audio/audio-section'
 import NavSection from './nav/nav-section'
 import TipsSection from './tips/tips-section'
-import OverviewsToggleSection from './overviews/overviews-toggle-section'
-import OverviewsPopup from './overviews/overviews-popup'
+import OverviewToggleSection from './overview/overview-toggle-section'
+import OverviewPopup from './overview/overview-popup'
 import StageSection from './stage/stage-section'
 import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
@@ -181,13 +181,14 @@ const LiveView = ({
                 />
             </div>
             <div className="field main-field">
-                <div className="subfield overviews-subfield">
-                    <OverviewsToggleSection {...other}
+                <div className="subfield overview-subfield">
+                    <OverviewToggleSection {...other}
                         selectedOverviewIndex={selectedOverviewIndex}
                         onOverviewClick={onOverviewClick}
                     />
-                    <div className="overviews-popup-container">
-                        <OverviewsPopup
+                    <div className="overview-popup-container">
+                        <OverviewPopup
+                            hideClose={true}
                             selectedOverviewIndex={selectedOverviewIndex}
                             overviewText={overviewText}
                             onPopupButtonClick={onOverviewClick}
