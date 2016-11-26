@@ -1,6 +1,5 @@
 import React from 'react'
 import TextBlock from '../text/text-block'
-import { OVERVIEW_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *

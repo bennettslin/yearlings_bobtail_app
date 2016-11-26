@@ -277,14 +277,8 @@ export default {
             direction
 
         switch (keyName) {
-            /**
-             * FIXME: Using 'e' instead of 'l' for now to not conflict with
-             * lyric universal key.
-             */
             case 'e':
-            case 'r':
-                selectLyricColumn(undefined, keyName === 'e' ? 0 : 1)
-                return
+                selectLyricColumn()
                 break
             case ARROW_UP:
                 direction = -1
@@ -434,15 +428,6 @@ export default {
 
         return {
             accessedDotIndex
-        }
-    },
-
-    handleOverviewAccess({
-        keyName,
-        selectOverview
-    }) {
-        if (keyName === ENTER) {
-            selectOverview()
         }
     },
 

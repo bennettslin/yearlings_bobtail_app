@@ -70,8 +70,8 @@
         * If there is an accessed annotation:
             * Highlight previous or next accessed annotation.
 
-    * When 'e' or 'r' is pressed:
-        * Accessed element will switch to verse.
+    * When 'e':
+        * Lyric column is toggled.
 
     * When 'x' is pressed:
         * Lyric section is expanded.

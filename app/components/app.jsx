@@ -18,7 +18,6 @@ import AdminToggle from './admin/admin-toggle'
 import Switch from './switch'
 import { NAV_SECTION,
          AUDIO_SECTION,
-         OVERVIEW_SECTION,
          LYRICS_SECTION,
          DOTS_SECTION,
          ANNOTATION_SECTION,
@@ -304,8 +303,6 @@ class App extends Component {
     selectOverview(e, selectedOverviewIndex) {
         this._stopPropagation(e)
 
-        if (e) { this._handleSectionAccess({ accessedSectionKey: OVERVIEW_SECTION }) }
-
         if (typeof selectedOverviewIndex === 'undefined') {
             selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % 2
         }
@@ -555,7 +552,7 @@ class App extends Component {
         })
     }
 
-    selectLyricColumn(e, selectedLyricColumnIndex = 0) {
+    selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2) {
 
         const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
         let newState = {}
@@ -686,12 +683,6 @@ class App extends Component {
                             selectAudioOption: this.selectAudioOption,
                             selectVerse: this.selectVerse,
                             selectSong: this.selectSong
-                        })
-                        break
-                    case OVERVIEW_SECTION:
-                        AccessHelper.handleOverviewAccess({
-                            keyName,
-                            selectOverview: this.selectOverview
                         })
                         break
                     case ANNOTATION_SECTION:

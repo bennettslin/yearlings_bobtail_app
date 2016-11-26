@@ -1,7 +1,5 @@
 import React from 'react'
 import LyricsUnit from './lyrics-unit'
-import RadioButtonBlock from '../superclasses/radio-button-block'
-import RadioButton from '../superclasses/radio-button'
 import { LYRIC_COLUMN_KEYS, LYRICS_SECTION } from 'helpers/constants'
 
 /*************
@@ -66,11 +64,16 @@ const LyricsSectionView = ({
         }
         {isAdmin ? <h2>lyrics</h2> : null}
         {showSingleLyricColumn && hasDoubleColumns ?
-            <RadioButtonBlock
-                selectedButtonIndex={selectedLyricColumnIndex}
-                buttonKeys={LYRIC_COLUMN_KEYS}
-                onButtonClick={onLyricColumnClick}
-            /> : null
+            <div className="ear-button-block">
+                <h2>
+                    <a
+                        className="enabled"
+                        onClick={onLyricColumnClick}
+                    >
+                        {selectedLyricColumnIndex}
+                    </a>
+                </h2>
+            </div> : null
         }
         <div className="lyrics-block">
             {songLyrics.map((stanzaArray, stanzaIndex) => (
