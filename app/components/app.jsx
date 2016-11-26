@@ -301,11 +301,16 @@ class App extends Component {
         }
     }
 
-    selectOverview(e) {
-        // Stored as integer. 0 is to show bubble, 1 is to hide it.
-        const selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % 2
+    selectOverview(e, selectedOverviewIndex) {
         this._stopPropagation(e)
+
         if (e) { this._handleSectionAccess({ accessedSectionKey: OVERVIEW_SECTION }) }
+
+        if (typeof selectedOverviewIndex === 'undefined') {
+            selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % 2
+        }
+
+        // Stored as integer. 0 is to show overview, 1 is to hide it.
         this.props.selectOverviewIndex(selectedOverviewIndex)
 
         // Close annotation and wiki sections if showing bubble.
@@ -595,6 +600,7 @@ class App extends Component {
     _onBodyClick(e) {
         this._handleAccessOn(0)
         this.selectAnnotation()
+        this.selectOverview(undefined, 1)
         this.selectWiki()
     }
 

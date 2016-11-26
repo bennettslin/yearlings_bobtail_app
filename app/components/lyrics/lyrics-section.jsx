@@ -52,6 +52,8 @@ const LyricsSectionView = ({
     <div
         className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${showSingleLyricColumn ? ' single-column' : ''}${isLyricExpandable ? ' expandable' : ''}${isLyricExpanded ? ' expanded' : ''}`}
     >
+        {/* Upon song change, scroll to element with this class name. */}
+        <div className="lyrics-scroll-home"></div>
         {isLyricExpandable ?
             <div className="expand-button-block">
                 <a
@@ -62,8 +64,7 @@ const LyricsSectionView = ({
                 </a>
             </div> : null
         }
-        {/* Upon song change, scroll to element with this class name. */}
-        {isAdmin ? <h2 className="lyrics-scroll-home">lyrics</h2> : null}
+        {isAdmin ? <h2>lyrics</h2> : null}
         {showSingleLyricColumn && hasDoubleColumns ?
             <RadioButtonBlock
                 selectedButtonIndex={selectedLyricColumnIndex}

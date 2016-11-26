@@ -6,21 +6,9 @@ import { OVERVIEW_SECTION } from 'helpers/constants'
  * CONTAINER *
  *************/
 
-const OverviewsSection = ({
-
-    selectedOverviewIndex,
-
-...other }) => {
-
-    /**
-    * Remember that the default to show bubble text is 0.
-    */
-    const showBubbleText = !selectedOverviewIndex
-
+const OverviewsSection = (props) => {
     return (
-        <OverviewsSectionView {...other}
-            showBubbleText={showBubbleText}
-        />
+        <OverviewsSectionView {...props} />
     )
 }
 
@@ -32,27 +20,19 @@ const OverviewsSectionView = ({
 
     // From props.
     isAdmin,
-    overviewText,
-    onOverviewClick,
-    onWikiUrlClick,
-
-    // From controller.
-    showBubbleText
+    inPopup,
+    overviewText
 
 }) => (
     <div
-        className={`section overview-section`}
+        className={`section overview-section${inPopup ? ' in-popup' : ''}`}
     >
         {isAdmin ? <h2>overview</h2> : null}
         <div className="overview-text">
-            <button onClick={onOverviewClick}>(Bennett icon)</button>
-            { showBubbleText ?
-                <TextBlock
+            <TextBlock
                 isLyric={false}
                 text={overviewText}
-                onAnchorClick={onWikiUrlClick}
-                /> : null
-            }
+            />
         </div>
     </div>
 )

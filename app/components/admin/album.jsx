@@ -69,7 +69,7 @@ const AlbumView = ({
 
 ...other }) => (
     <div className="column album-column">
-        <div className="field album-field">
+        <div className="admin-field album-admin-field">
             <TitleSection
                 title={title}
                 accessedOn={accessedOn}

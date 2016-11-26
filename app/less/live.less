@@ -1,3 +1,137 @@
+@collapsed-lyric-section-height: 32%;
+@menu-height-laptop-monitor: 72px;
+@menu-height-mini-tablet: 60px;
+@menu-height-phone: 50px;
+
+@nav-height: 50px;
+
+@overview-height: 150px;
+
+.live {
+
+    .main-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .menu-field {
+        display: flex;
+    }
+
+    .field {
+        border: 2px dotted green;
+    }
+
+    .subfield {
+        border: 2px dotted orange;
+    }
+
+    .main-field {
+        position: relative;
+        flex-grow: 1;
+    }
+
+    .nav-field {
+        height: @nav-height;
+    }
+
+    .nav-section {
+        height: 100%;
+        width: 200px;
+        overflow: hidden;
+    }
+
+    .overviews-subfield {
+        position: absolute;
+        width: 100%;
+        height: @overview-height;
+        display: flex;
+        justify-content: space-between;
+
+        .overviews-popup-container {
+            position: relative;
+            flex-grow: 1;
+            border: 1px solid purple;
+        }
+    }
+
+    &.monitor-width, &.laptop-width {
+
+        .live-column {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .main-column {
+            flex-grow: 1;
+        }
+
+        .menu-field {
+            height: @menu-height-laptop-monitor;
+        }
+
+        .lyrics-section {
+            height: 100%;
+        }
+    }
+
+    &.tablet-width, &.mini-width, &.phone-width {
+
+        .main-column {
+            width: 100%;
+            height: 100% - @collapsed-lyric-section-height;
+        }
+
+        .menu-field {
+            height: @menu-height-mini-tablet;
+            order: 1;
+        }
+
+        .nav-field {
+            order: 2;
+        }
+
+        .main-field {
+            order: 3;
+        }
+
+        .lyrics-section {
+            position: absolute;
+
+            &.expandable {
+                height: @collapsed-lyric-section-height;
+            }
+
+            &.expanded {
+                height: ~"calc(100% - @{menu-height-mini-tablet})";
+            }
+        }
+
+        .overviews-subfield {
+            bottom: 0;
+        }
+
+        &.phone-width {
+            // Phone has no nav field.
+
+            .menu-field {
+                height: @menu-height-phone;
+            }
+
+            .audio-section {
+                width: 100%;
+            }
+
+            .lyrics-section {
+                &.expanded {
+                    height: ~"calc(100% - @{menu-height-phone})";
+                }
+            }
+        }
+    }
+}
+
 .live-column {
     position: relative;
     width: 100%;

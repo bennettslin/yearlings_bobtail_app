@@ -3,13 +3,15 @@ import TitleSection from './title/title-section'
 import AudioSection from './audio/audio-section'
 import NavSection from './nav/nav-section'
 import TipsSection from './tips/tips-section'
-import OverviewsSection from './overviews/overviews-section'
+import OverviewsToggleSection from './overviews/overviews-toggle-section'
+import OverviewsPopup from './overviews/overviews-popup'
 import StageSection from './stage/stage-section'
 import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
 import LyricsSection from './lyrics/lyrics-section'
 import { getSong, getAnnotation, getOverviewText, getWikiUrl } from 'helpers/album-view-helper'
+import { PHONE_WIDTH } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -26,9 +28,9 @@ const Live = (props) => {
         <LiveView {...props}
             overviewText={overviewText}
             lyrics={selectedSong.lyrics}
-            annotations={selectedSong.annotations}
             annotation={annotation}
             selectedWikiUrl={selectedWikiUrl}
+            annotations={selectedSong.annotations}
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
@@ -59,6 +61,7 @@ const LiveView = ({
     selectedTipsIndex,
     selectedTimePlayed,
     selectedLyricColumnIndex,
+    selectedOverviewIndex,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
@@ -107,64 +110,9 @@ const LiveView = ({
 ...other }) => (
     <div className="column live-column">
         {false ?
-            <TitleSection
-                title={title}
-                accessedOn={accessedOn}
-                accessedSectionKey={accessedSectionKey}
-                nextSectionKey={nextSectionKey}
-                accessedSongIndex={accessedSongIndex}
-                onTitleClick={onSongClick}
-            /> : null
-        }
-        {false ?
-            <AudioSection
-                isHome={isHome}
-                isFirstSong={isFirstSong}
-                isLastSong={isLastSong}
-                isFirstVerse={isFirstVerse}
-                isLastVerse={isLastVerse}
-                audioSongTitle={audioSongTitle}
-                selectedSongIndex={selectedSongIndex}
-                isPlaying={isPlaying}
-                selectedTimePlayed={selectedTimePlayed}
-                selectedAudioOptionIndex={selectedAudioOptionIndex}
-                accessedOn={accessedOn}
-                accessedSectionKey={accessedSectionKey}
-                nextSectionKey={nextSectionKey}
-                onPlayClick={onPlayClick}
-                onAudioSongClick={onSongClick}
-                onAudioTimeClick={onVerseClick}
-                onAudioOptionClick={onAudioOptionClick}
-            /> : null
-        }
-        {false ?
             <TipsSection
                 selectedTipsIndex={selectedTipsIndex}
                 onTipsClick={onTipsClick}
-            /> : null
-        }
-        {false ?
-            <NavSection
-                songs={songs}
-                selectedSongIndex={selectedSongIndex}
-                accessedOn={accessedOn}
-                accessedSectionKey={accessedSectionKey}
-                nextSectionKey={nextSectionKey}
-                accessedSongIndex={accessedSongIndex}
-                onSongClick={onSongClick}
-            /> : null
-        }
-        {false ?
-            <OverviewsSection {...other}
-                overviewText={overviewText}
-                accessedOn={accessedOn}
-                accessedSectionKey={accessedSectionKey}
-                nextSectionKey={nextSectionKey}
-                onOverviewClick={onOverviewClick}
-            /> : null
-        }
-        {false ?
-            <StageSection
             /> : null
         }
         <AnnotationPopup
@@ -200,6 +148,69 @@ const LiveView = ({
                 onDotClick={onDotClick}
             /> : null
         }
+        <div className="main-column">
+            <div className="field menu-field">
+                {deviceWidth !== PHONE_WIDTH ?
+                    <TitleSection
+                    title={title}
+                    accessedOn={accessedOn}
+                    accessedSectionKey={accessedSectionKey}
+                    nextSectionKey={nextSectionKey}
+                    accessedSongIndex={accessedSongIndex}
+                    onTitleClick={onSongClick}
+                    /> : null
+                }
+                <AudioSection
+                    isHome={isHome}
+                    isFirstSong={isFirstSong}
+                    isLastSong={isLastSong}
+                    isFirstVerse={isFirstVerse}
+                    isLastVerse={isLastVerse}
+                    audioSongTitle={audioSongTitle}
+                    selectedSongIndex={selectedSongIndex}
+                    isPlaying={isPlaying}
+                    selectedTimePlayed={selectedTimePlayed}
+                    selectedAudioOptionIndex={selectedAudioOptionIndex}
+                    accessedOn={accessedOn}
+                    accessedSectionKey={accessedSectionKey}
+                    nextSectionKey={nextSectionKey}
+                    onPlayClick={onPlayClick}
+                    onAudioSongClick={onSongClick}
+                    onAudioTimeClick={onVerseClick}
+                    onAudioOptionClick={onAudioOptionClick}
+                />
+            </div>
+            <div className="field main-field">
+                <div className="subfield overviews-subfield">
+                    <OverviewsToggleSection {...other}
+                        selectedOverviewIndex={selectedOverviewIndex}
+                        onOverviewClick={onOverviewClick}
+                    />
+                    <div className="overviews-popup-container">
+                        <OverviewsPopup
+                            selectedOverviewIndex={selectedOverviewIndex}
+                            overviewText={overviewText}
+                            onPopupButtonClick={onOverviewClick}
+                        />
+                    </div>
+                </div>
+                <StageSection
+                />
+            </div>
+            {deviceWidth !== PHONE_WIDTH ?
+                <div className="field nav-field">
+                    <NavSection
+                        songs={songs}
+                        selectedSongIndex={selectedSongIndex}
+                        accessedOn={accessedOn}
+                        accessedSectionKey={accessedSectionKey}
+                        nextSectionKey={nextSectionKey}
+                        accessedSongIndex={accessedSongIndex}
+                        onSongClick={onSongClick}
+                    />
+                </div> : null
+            }
+        </div>
         {selectedSongIndex ?
             <LyricsSection
                 isLyricExpanded={isLyricExpanded}

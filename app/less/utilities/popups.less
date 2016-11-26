@@ -1,15 +1,26 @@
 // TODO: Make popup mixin.
+@overflow-margin-width: 5px;
+
+.admin {
+    .popup-content-wrapper {
+        left: -@overflow-margin-width - @field-width - @field-padding;
+        width: @field-width + (@overflow-margin-width * 2);
+    }
+
+    .popup-transition-group {
+        position: fixed;
+        z-index: 1;
+    }
+}
+
 .popup-content-wrapper {
     .animation-mixin;
-    @overflow-margin-width: 5px;
     position: absolute;
-    left: -@overflow-margin-width - @field-width - @field-padding;
-    width: @field-width + (@overflow-margin-width * 2);
-    // overflow-y: scroll;
     box-shadow: -2px 2px 8px 8px @box-shadow-colour;
 
     &.annotation {
         top: 5vh;
+        height: 100%;
         max-height: 40vh;
         background-color: @annotation-colour;
     }
@@ -39,9 +50,4 @@
             bottom: 0;
         }
     }
-}
-
-.popup-transition-group {
-    position: fixed;
-    z-index: 1;
 }

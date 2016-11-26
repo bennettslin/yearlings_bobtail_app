@@ -48,13 +48,10 @@ const SharedView = ({
 
 ...other }) => (
     <div className="column shared-column">
-        <div className="field shared-field">
+        <div className="admin-field shared-admin-field">
             <OverviewsSection {...other}
                 isAdmin={true}
                 overviewText={overviewText}
-                accessedOn={accessedOn}
-                accessedSectionKey={accessedSectionKey}
-                nextSectionKey={nextSectionKey}
                 onOverviewClick={onOverviewClick}
             />
             <StatsSection

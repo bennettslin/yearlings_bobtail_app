@@ -47,6 +47,21 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `have overview toggle and style`,
+            workedHours: 0,
+            neededHours: 5
+        },
+        {
+            taskName: `style nav section and accommodate beginning and final options`,
+            workedHours: 0,
+            neededHours: 5
+        },
+        {
+            taskName: `make beginning and final song options possible`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `setDOMWidth method doesn't work on reload and device width change`,
             workedHours: 0,
             neededHours: 1

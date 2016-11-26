@@ -1,9 +1,24 @@
 .live {
 
-    &.monitor-width, &.laptop-width {
-        .lyrics-section {
-            height: 100%;
-            right: 0;
+    .lyrics-section {
+        padding: 0 5px;
+        overflow-y: scroll;
+        .transition(height 0.2s ease);
+
+        // FIXME: This should be the same width as the breakpoint where tablet becomes mini.
+        &.single-column {
+            max-width: 600px;
+        }
+
+        &.expandable {
+            bottom: 0;
+            width: 100%;
+            max-width: 100%;
+
+            // Needed to expand properly in Chrome.
+            .expand-button-block {
+                left: 0;
+            }
         }
     }
 }
@@ -26,33 +41,6 @@
     right: 16px;
 
     background-color: gray;
-}
-
-.lyrics-section {
-    position: absolute;
-    padding: 0 5px;
-    overflow-y: scroll;
-    .transition(height 0.2s ease);
-
-    &.single-column {
-        max-width: 600px;
-    }
-
-    &.expandable {
-        bottom: 0;
-        width: 100%;
-        max-width: 100%;
-        height: 33%;
-
-        &.expanded {
-            height: 100%;
-        }
-
-        // Needed to expand properly in Chrome.
-        .expand-button-block {
-            left: 0;
-        }
-    }
 }
 
 .lyrics-block {
