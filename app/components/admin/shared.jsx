@@ -47,7 +47,7 @@ const SharedView = ({
     annotations,
 
 ...other }) => (
-    <div className="column shared-column">
+    <div className="admin-column shared-admin-column">
         <div className="admin-field shared-admin-field">
             <OverviewSection {...other}
                 isAdmin={true}

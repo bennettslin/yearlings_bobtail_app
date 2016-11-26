@@ -71,7 +71,7 @@ const SongView = ({
 
 }) => (
 
-    <div className="column song-column">
+    <div className="admin-column song-admin-column">
         <div className="admin-field song-admin-field">
             <AnnotationPopup
                 songs={songs}

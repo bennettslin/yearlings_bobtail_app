@@ -68,7 +68,7 @@ const AlbumView = ({
     allTasks,
 
 ...other }) => (
-    <div className="column album-column">
+    <div className="admin-column album-admin-column">
         <div className="admin-field album-admin-field">
             <TitleSection
                 title={title}

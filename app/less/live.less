@@ -15,11 +15,11 @@
 }
 
 .field {
-    border: 2px dotted green;
+    // border: 2px dotted green;
 }
 
 .subfield {
-    border: 2px dotted orange;
+    // border: 2px dotted orange;
 }
 
 .menu-field {
@@ -35,13 +35,15 @@
     height: @nav-height;
 }
 
-.nav-section {
-    height: 100%;
-    width: 200px;
-    overflow: hidden;
+.live {
+    .nav-section {
+        height: 100%;
+        width: 200px;
+        overflow: hidden;
+    }
 }
 
-&.monitor-width, &.laptop-width {
+.monitor-width, .laptop-width {
 
     .live-column {
         display: flex;
@@ -61,7 +63,7 @@
     }
 }
 
-&.tablet-width, &.mini-width, &.phone-width {
+.tablet-width, .mini-width, .phone-width {
 
     .main-column {
         width: 100%;
