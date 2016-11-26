@@ -70,6 +70,12 @@ module.exports = {
         DISABLED
     ],
 
+    OVERVIEW_OPTIONS: [
+        SHOWN,
+        HIDDEN,
+        DISABLED
+    ],
+
     NAV_SECTION,
     AUDIO_SECTION,
     LYRICS_SECTION,
