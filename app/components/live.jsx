@@ -108,7 +108,7 @@ const LiveView = ({
     hasDoubleColumns,
 
 ...other }) => (
-    <div className="column live-column">
+    <div className="live-column">
         {false ?
             <TipsSection
                 selectedTipsIndex={selectedTipsIndex}
