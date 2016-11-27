@@ -52,7 +52,12 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `Make popups scale transform.`,
+            taskName: `Fix tooltips in Firefox and Safari.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Wiki popups are broken in Chrome.`,
             workedHours: 0,
             neededHours: 1
         },
@@ -730,6 +735,16 @@ module.exports = {
         },
         {
             taskName: `Overview toggles among three.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Make popups scale transform.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Fix overview toggle order by using keys.`,
             workedHours: 1,
             neededHours: 1
         }

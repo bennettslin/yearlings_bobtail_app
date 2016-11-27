@@ -88,8 +88,8 @@ module.exports = {
 
     OVERVIEW_OPTIONS: [
         SHOWN,
-        HIDDEN,
-        DISABLED
+        DISABLED,
+        HIDDEN
     ],
 
     NAV_SECTION,

@@ -25,6 +25,7 @@ import { NAV_SECTION,
          SECTION_KEYS,
 
          SHOWN,
+         HIDDEN,
          DISABLED,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS,
@@ -314,14 +315,30 @@ class App extends Component {
         this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
     }
 
-    selectOverview(e, selectedOverviewIndex) {
+    selectOverview(e, selectedOverviewIndex, selectedOverviewKey) {
+
+        this._stopPropagation(e)
 
         // Overview cannot be shown while lyric column is expanded.
         if (this.state.isLyricExpanded) {
             return
         }
 
-        this._stopPropagation(e)
+        // If option is disabled, bypass hidden option and show overview.
+        if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === DISABLED) {
+            selectedOverviewKey = SHOWN
+        }
+
+        // If there is a key, choose index based on it.
+        if (selectedOverviewKey) {
+            let index = 0
+            while (index < OVERVIEW_OPTIONS.length && typeof selectedOverviewIndex === 'undefined') {
+                if (selectedOverviewKey === OVERVIEW_OPTIONS[index]) {
+                    selectedOverviewIndex = index
+                }
+                index++
+            }
+        }
 
         if (typeof selectedOverviewIndex === 'undefined') {
             selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % OVERVIEW_OPTIONS.length
@@ -410,7 +427,7 @@ class App extends Component {
 
             // Hide overview if shown.
             if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                this.selectOverview(undefined, 1)
+                this.selectOverview(undefined, undefined, HIDDEN)
             }
 
             this.setState({
@@ -572,7 +589,7 @@ class App extends Component {
 
             // Hide overview if shown.
             if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                this.selectOverview(undefined, 1)
+                this.selectOverview(undefined, undefined, HIDDEN)
             }
         }
     }
@@ -626,7 +643,7 @@ class App extends Component {
 
         // Hide overview if shown.
         if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-            this.selectOverview(undefined, 1)
+            this.selectOverview(undefined, undefined, HIDDEN)
         }
     }
 
