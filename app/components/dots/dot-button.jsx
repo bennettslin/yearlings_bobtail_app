@@ -83,11 +83,13 @@ class DotButtonView extends Component {
 
         return (
             <div
-                className={`dot-block${isEnabled ? ' dot-enabled' : ''}${isMoused || isTouched ? ' interacted' : ' uninteracted'}`}
+                className={`dot-container${isEnabled ? ' dot-enabled' : ''}${isMoused || isTouched ? ' interacted' : ' uninteracted'}`}
             >
                 {inDotsSection ?
-                    <div className="tooltip">
-                        {DOT_DESCRIPTIONS[dotKey]}
+                    <div className="tooltip-container">
+                        <div className="tooltip">
+                            {DOT_DESCRIPTIONS[dotKey]}
+                        </div>
                     </div> : null
                 }
                 <div className={`dot ${dotKey}${isPresent ? '' : ' background'}${isToggleDeselected ? ' deselected' : ''}${isEnabled ? '' : ' disabled'}${accessHighlighted ? ' access-highlighted' : ''}`}>

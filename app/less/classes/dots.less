@@ -6,16 +6,18 @@
 
     &.interactable {
 
-        .dot-block {
+        .dot-container {
             position: relative;
 
             &.dot-enabled {
 
                 &.interacted {
 
-                    .tooltip {
+                    .tooltip-container {
                         z-index: 1;
+                    }
 
+                    .tooltip {
                         animation: tooltipGrow 0.25s;
                         opacity: 1;
                         transform: scale(1);
@@ -36,18 +38,18 @@
                 }
             }
 
-            @tooltip-bleed-margin: 15px;
-            &:first-child {
-                .tooltip {
-                    left: -@tooltip-bleed-margin;
-                }
-            }
-
-            &:last-child {
-                .tooltip {
-                    right: -@tooltip-bleed-margin;
-                }
-            }
+            // @tooltip-bleed-margin: 15px;
+            // &:first-child {
+            //     .tooltip {
+            //         left: -@tooltip-bleed-margin;
+            //     }
+            // }
+            //
+            // &:last-child {
+            //     .tooltip {
+            //         right: -@tooltip-bleed-margin;
+            //     }
+            // }
         }
 
         .dot {
@@ -99,17 +101,20 @@
     &:active { background-color: red; opacity: 0.2; }
 }
 
-.tooltip {
+.tooltip-container {
     position: absolute;
-    // FIXME: This centres in Firefox and Safari, but unfortunately breaks the tooltip animation, which is based on transform scale.
-    // left: 50%;
-    // transform: translateY(-50%);
-    bottom: @default-dot-diameter + 10px;
-    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
 
-    // FIXME: Improve styling, of course.
-    padding: 5px 15px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 1px 2px 2px lightGray;
+    // TODO: This accommodates dot borders, but borders are temporary.
+    bottom: @default-dot-diameter + 15px;
+
+    .tooltip {
+        // FIXME: Improve styling, of course.
+        text-align: center;
+        padding: 5px 15px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px 2px lightGray;
+    }
 }

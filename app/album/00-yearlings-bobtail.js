@@ -47,21 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Fix tooltip positioning in Firefox and Safari.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `Wiki popups are broken in Chrome.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `Embed toggle button in overview for phone.`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `make prologue and epilogue options possible, with layout`,
             workedHours: 0,
             neededHours: 5
@@ -70,6 +55,11 @@ module.exports = {
             taskName: `style nav section and accommodate beginning and final options`,
             workedHours: 0,
             neededHours: 5
+        },
+        {
+            taskName: `Embed toggle button in overview for phone.`,
+            workedHours: 0,
+            neededHours: 2
         },
         {
             taskName: `setDOMWidth method doesn't work on reload and device width change`,
@@ -185,6 +175,11 @@ module.exports = {
         //     taskName: `cancel scroll if new scroll or if manually scrolled`,
         //     workedHours: 0,
         //     neededHours: 2
+        // },
+        // {
+        //     taskName: `Wiki popups are broken in Chrome. (But only in Canary, it seems.)`,
+        //     workedHours: 0,
+        //     neededHours: 1
         // },
         {
             taskName: `refactor to get album objects`,
@@ -745,6 +740,11 @@ module.exports = {
         },
         {
             taskName: `Put tooltip outside of anchor.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Fix tooltip positioning in Firefox and Safari.`,
             workedHours: 1,
             neededHours: 1
         }

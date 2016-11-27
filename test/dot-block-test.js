@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import DotBlock from '../app/components/dots/dot-block.jsx'
+import DotBlock from '../app/components/dots/dot-container.jsx'
 
 describe('DotBlock', () => {
     let dotBlock
