@@ -47,6 +47,26 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Make device widths accessible.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Make popups scale transform.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Make popups scale transform.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Embed toggle button in overview for phone.`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `Overview toggles among three.`,
             workedHours: 0,
             neededHours: 2

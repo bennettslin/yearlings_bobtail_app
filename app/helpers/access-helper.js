@@ -34,6 +34,7 @@ export default {
         selectTips,
         togglePlay,
         toggleAdmin,
+        windowResize,
         selectTime,
         selectLyricExpand,
         selectedTimePlayed
@@ -60,6 +61,10 @@ export default {
             // Toggle admin.
             case 'm':
                 toggleAdmin()
+                break
+            // Toggle window width.
+            case 'n':
+                windowResize(undefined, true)
                 break
             // Toggle audio option index.
             case 'o':

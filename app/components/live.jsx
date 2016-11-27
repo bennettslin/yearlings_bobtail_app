@@ -11,7 +11,7 @@ import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
 import LyricsSection from './lyrics/lyrics-section'
 import { getSong, getAnnotation, getOverviewText, getWikiUrl } from 'helpers/album-view-helper'
-import { PHONE_WIDTH } from 'helpers/constants'
+import { PHONE_WIDTH_OBJECT } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -19,13 +19,16 @@ import { PHONE_WIDTH } from 'helpers/constants'
 
 const Live = (props) => {
 
-    const selectedSong = getSong(props),
+    const { deviceWidth } = props,
+        selectedSong = getSong(props),
         overviewText = getOverviewText(props),
         annotation = getAnnotation(props),
-        selectedWikiUrl = getWikiUrl(props)
+        selectedWikiUrl = getWikiUrl(props),
+        isPhone = deviceWidth === PHONE_WIDTH_OBJECT.className
 
     return (
         <LiveView {...props}
+            isPhone={isPhone}
             overviewText={overviewText}
             lyrics={selectedSong.lyrics}
             annotation={annotation}
@@ -98,6 +101,7 @@ const LiveView = ({
     onLyricExpandClick,
 
     // From controller.
+    isPhone,
     overviewText,
     tasks,
     lyrics,
@@ -150,7 +154,7 @@ const LiveView = ({
         }
         <div className="main-column">
             <div className="field menu-field">
-                {deviceWidth !== PHONE_WIDTH ?
+                {!isPhone ?
                     <TitleSection
                     title={title}
                     accessedOn={accessedOn}
@@ -198,7 +202,7 @@ const LiveView = ({
                 <StageSection
                 />
             </div>
-            {deviceWidth !== PHONE_WIDTH ?
+            {!isPhone ?
                 <div className="field nav-field">
                     <NavSection
                         songs={songs}

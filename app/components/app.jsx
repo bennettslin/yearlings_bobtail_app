@@ -138,8 +138,8 @@ class App extends Component {
      * HELPERS *
      ***********/
 
-    windowResize(e) {
-        this.setState(resizeWindow(e ? e.target : window, this.state.isAdmin))
+    windowResize(e, adminToggle) {
+        this.setState(resizeWindow(e ? e.target : undefined, adminToggle ? this.state.deviceWidth : undefined))
     }
 
     _bindEventHandlers() {
@@ -643,6 +643,7 @@ class App extends Component {
             selectTips: this.selectTips,
             togglePlay: this.togglePlay,
             toggleAdmin: this.toggleAdmin,
+            windowResize: this.windowResize,
             selectedTimePlayed: this.props.selectedTimePlayed,
             selectLyricExpand: this.selectLyricExpand,
             selectTime: this.selectTime

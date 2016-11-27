@@ -3,11 +3,10 @@ import { ALBUM_BUILD_KEYS,
          LEFT,
          RIGHT,
 
-         PHONE_WIDTH,
-         MINI_WIDTH,
-         TABLET_WIDTH,
-         LAPTOP_WIDTH,
-         MONITOR_WIDTH } from './constants'
+         PHONE_WIDTH_OBJECT,
+         MINI_WIDTH_OBJECT,
+         TABLET_WIDTH_OBJECT,
+         MONITOR_WIDTH_OBJECT } from './constants'
 
 import { intersects } from 'helpers/dot-helper'
 
@@ -43,7 +42,7 @@ export const getLyricsStartAtZero = (props, selectedSongIndex) => {
 }
 
 export const getIsLyricExpandable = ({ isAdmin, deviceWidth }) => {
-    return !isAdmin && (deviceWidth === PHONE_WIDTH || deviceWidth === MINI_WIDTH || deviceWidth === TABLET_WIDTH)
+    return !isAdmin && (deviceWidth === PHONE_WIDTH_OBJECT.className || deviceWidth === MINI_WIDTH_OBJECT.className || deviceWidth === TABLET_WIDTH_OBJECT.className)
 }
 
 export const getShowSingleLyricColumn = (props, state) => {
@@ -66,7 +65,7 @@ export const getShowSingleLyricColumn = (props, state) => {
 
         // Applies to Uncanny Valley Boy.
         } else if (hasSideStanzas && !isDoublespeaker) {
-            return deviceWidth === PHONE_WIDTH
+            return deviceWidth === PHONE_WIDTH_OBJECT.className
 
         // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
         } else if (isDoublespeaker) {
@@ -74,7 +73,7 @@ export const getShowSingleLyricColumn = (props, state) => {
              * In tablet width, lyrics section takes up full width of bottom,
              * while in monitor width, the screen is wide enough as well.
              */
-            return deviceWidth !== MONITOR_WIDTH && deviceWidth !== TABLET_WIDTH
+            return deviceWidth !== MONITOR_WIDTH_OBJECT.className && deviceWidth !== TABLET_WIDTH_OBJECT.className
         }
 
         return showSingleLyricColumn

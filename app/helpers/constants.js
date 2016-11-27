@@ -34,18 +34,34 @@ const LYRIC = 'lyric',
     // Tips options.
     SHOWN = 'tip_shown',
     HIDDEN = 'tip_hidden',
-    DISABLED = 'tips_disabled'
+    DISABLED = 'tips_disabled',
+
+    // Device widths.
+    // TODO: Make sure these maxWidths are right.
+    PHONE_WIDTH_OBJECT = {className: 'phone-width', maxWidth: 500},
+    MINI_WIDTH_OBJECT = {className: 'mini-width', maxWidth: 720},
+    TABLET_WIDTH_OBJECT = {className: 'tablet-width', maxWidth: 900},
+    LAPTOP_WIDTH_OBJECT = {className: 'laptop-width', maxWidth: 1400},
+    MONITOR_WIDTH_OBJECT = {className: 'monitor-width'}
 
 module.exports = {
 
     WINDOW_STORAGE: window.localStorage,
 
-    // These are class names.
-    PHONE_WIDTH: 'phone-width',
-    MINI_WIDTH: 'mini-width',
-    TABLET_WIDTH: 'tablet-width',
-    LAPTOP_WIDTH: 'laptop-width',
-    MONITOR_WIDTH: 'monitor-width',
+    PHONE_WIDTH_OBJECT,
+    MINI_WIDTH_OBJECT,
+    TABLET_WIDTH_OBJECT,
+    LAPTOP_WIDTH_OBJECT,
+    MONITOR_WIDTH_OBJECT,
+
+    // Used for admin purposes.
+    DEVICE_WIDTH_OBJECTS: [
+        PHONE_WIDTH_OBJECT,
+        MINI_WIDTH_OBJECT,
+        TABLET_WIDTH_OBJECT,
+        LAPTOP_WIDTH_OBJECT,
+        MONITOR_WIDTH_OBJECT,
+    ],
 
     LYRIC_VERSE_ELEMENT: 'verse_element',
     LYRIC_ANNOTATION_ELEMENT: 'annotation_element',

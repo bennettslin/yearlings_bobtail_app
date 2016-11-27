@@ -9,9 +9,22 @@
 @overview-toggle-height: 150px;
 
 .live-column {
+    position: relative;
+    // width: 100%;
+    width: 500px;
+
     // Needed by Safari.
     height: 100%;
 }
+
+// FIXME: For admin device width toggle.
+// .app.live {
+//     &:not(.monitor-width) {
+//         .live-column {
+//             left: 0;
+//         }
+//     }
+// }
 
 .main-column {
     display: flex;
@@ -66,9 +79,21 @@
     .lyrics-section {
         height: 100%;
     }
+
+    // FIXME: For admin device width toggle.
+    // &.laptop-width {
+    //     .live-column {
+    //         max-width: 1400px;
+    //     }
+    // }
 }
 
 .tablet-width, .mini-width, .phone-width {
+
+    // FIXME: For admin device width toggle.
+    // .live-column {
+    //     max-width: 900px;
+    // }
 
     .main-column {
         width: 100%;
@@ -102,8 +127,20 @@
         }
     }
 
+    // FIXME: For admin device width toggle.
+    // &.mini-width {
+    //     .live-column {
+    //         max-width: 720px;
+    //     }
+    // }
+
     &.phone-width {
         // Phone has no nav field.
+
+        // FIXME: For admin device width toggle.
+        // .live-column {
+        //     max-width: 500px;
+        // }
 
         .menu-field {
             height: @menu-height-phone;
@@ -119,9 +156,4 @@
             }
         }
     }
-}
-
-.live-column {
-    position: relative;
-    width: 100%;
 }
