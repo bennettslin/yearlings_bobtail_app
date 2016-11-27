@@ -15,13 +15,16 @@
 
 .popup-content-wrapper {
 
-    // Make this more efficient, less hard-coded.
-    animation: transformSnapback 0.2s;
-
+    // TODO: Don't use tooltip keyframes. Create another keyframes for popups.
+    /**
+     * If changing these duration values, don't forget to also change
+     * transitionEnterTimeout and transitionLeaveTimeout in popup.jsx.
+     */
     &[class*="animation-enter"] {
         transform: scale(0);
 
         &[class*="animation-enter-active"] {
+            animation: tooltipGrow 0.35s;
             transform: scale(1);
         }
     }
@@ -30,11 +33,12 @@
         transform: scale(1);
 
         &[class*="animation-leave-active"] {
+            animation: tooltipShrink 0.2s;
             transform: scale(0);
         }
     }
+    // End this code.
 
-    .animation-mixin;
     position: absolute;
     background-color: white;
     box-shadow: -2px 2px 8px 8px @box-shadow-colour;

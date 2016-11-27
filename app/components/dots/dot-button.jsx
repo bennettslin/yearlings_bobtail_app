@@ -83,7 +83,7 @@ class DotButtonView extends Component {
 
         return (
             <a
-                className={`dot ${dotKey}${accessHighlighted ? ' access-highlighted' : ''}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}${isMoused || isTouched ? ' show-tooltip' : ''}`}
+                className={`dot ${dotKey}${accessHighlighted ? ' access-highlighted' : ''}${isPresent ? '' : ' background'}${isEnabled ? ' enabled' : ' disabled'}${isToggleDeselected ? ' deselected' : ''}${isMoused || isTouched ? ' show-tooltip' : ' hide-tooltip'}`}
                 onClick={onClick}
             >
                 {inDotsSection ?

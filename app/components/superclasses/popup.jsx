@@ -92,8 +92,8 @@ class PopupTransitionGroup extends Component {
             <CSSTransitionGroup
                 className={`popup-transition-group ${className}`}
                 transitionName={transitionName}
-                transitionEnterTimeout={500}
-                transitionLeaveTimeout={500}
+                transitionEnterTimeout={350}
+                transitionLeaveTimeout={200}
             >
                 {this._getContainerElement(element)}
             </CSSTransitionGroup>

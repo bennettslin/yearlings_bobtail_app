@@ -56,15 +56,32 @@
      }
  }
 
- @keyframes transformSnapback {
+// These popup values are good for tooltips, not for popups.
+ @keyframes tooltipGrow {
      0% {
-         transform: scale(0.5);
+         transform: scale(0.8);
+         opacity: 0;
      }
-     55% {
+     40% {
          transform: scale(1.1);
+     }
+     72% {
+         transform: scale(0.95);
      }
      100% {
          transform: scale(1);
+         opacity: 1;
+     }
+ }
+
+ @keyframes tooltipShrink {
+     0% {
+         transform: scale(1);
+         opacity: 1;
+     }
+     100% {
+         transform: scale(0.8);
+         opacity: 0;
      }
  }
 

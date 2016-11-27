@@ -47,6 +47,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Put tooltip outside of anchor.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `Make popups scale transform.`,
             workedHours: 0,
             neededHours: 1

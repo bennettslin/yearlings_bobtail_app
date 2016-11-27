@@ -1,0 +1,24 @@
+.animation-mixin(@property: opacity,
+                 @shown-value: 1,
+                 @hidden-value: 0,
+                 @duration: 0.1s,
+                 @timing: ease) {
+
+    .transition(@property @duration @timing);
+
+    &[class*="animation-enter"] {
+        @{property}: @hidden-value;
+
+        &[class*="animation-enter-active"] {
+            @{property}: @shown-value;
+        }
+    }
+
+    &[class*="animation-leave"] {
+        @{property}: @shown-value;
+
+        &[class*="animation-leave-active"] {
+            @{property}: @hidden-value;
+        }
+    }
+}
