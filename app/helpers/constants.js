@@ -200,9 +200,9 @@ module.exports = {
     ],
 
     DOT_DESCRIPTIONS: {
-        [PUN]: 'pun description',
+        [PUN]: 'pun',
         [BACKSTORY]: 'backstory description', // My perspective while making the album.
-        [NARRATIVE]: 'narrative description', // My perspective in the story.
+        [NARRATIVE]: 'narrative really description', // My perspective in the story.
         [FORESHADOW]: 'foreshadow description',
         [MUSIC]: 'music description',
         [PULPIT]: 'pulpit description',

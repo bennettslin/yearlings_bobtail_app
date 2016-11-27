@@ -47,12 +47,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Put tooltip outside of anchor.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `Fix tooltips in Firefox and Safari.`,
+            taskName: `Fix tooltip positioning in Firefox and Safari.`,
             workedHours: 0,
             neededHours: 1
         },
@@ -745,6 +740,11 @@ module.exports = {
         },
         {
             taskName: `Fix overview toggle order by using keys.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Put tooltip outside of anchor.`,
             workedHours: 1,
             neededHours: 1
         }

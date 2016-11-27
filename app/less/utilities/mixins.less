@@ -1,12 +1,16 @@
 .dot-diameter-mixin(@dot-diameter: @default-dot-diameter) {
-    .dot {
-        width: @dot-diameter;
-        height: @dot-diameter;
-        border: (@dot-diameter * 0.1) solid #aaa;
 
+    .dot-block {
         &:not(:last-child) {
             margin-right: @dot-diameter * 0.1;
         }
+    }
+
+    .dot {
+        width: @dot-diameter;
+        height: @dot-diameter;
+        border-radius: 50%;
+        border: (@dot-diameter * 0.1) solid #aaa;
     }
 }
 

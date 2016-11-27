@@ -90,7 +90,7 @@ export default {
                         case 'w':
                             accessedSectionKey = AUDIO_SECTION
                             break
-                        case 'j':
+                        case 'k':
                             accessedSectionKey = DOTS_SECTION
                             break
                         case 'l':

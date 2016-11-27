@@ -4,51 +4,39 @@
     width: auto;
     height: 100%;
 
-    .dot {
-        position: relative;
-        border-radius: 50%;
-
-        // TODO: Key styling.
-        &.pun { background-color: @pun-dot-colour; }
-        &.backstory { background-color: @backstory-dot-colour; }
-        &.narrative { background-color: @narrative-dot-colour; }
-        &.foreshadow { background-color: @foreshadow-dot-colour; }
-        &.music { background-color: @music-dot-colour; }
-        &.pulpit { background-color: @pulpit-dot-colour; }
-        &.wiki { background-color: @wiki-dot-colour; }
-        &.portal { background-color: @portal-dot-colour; }
-        &.title { background-color: white; }
-        &.afterword { background-color: white; }
-
-        // TODO: Improve state styling.
-        &.background { opacity: 0.35; }
-        &.disabled { background-color: lightGray; }
-        &.deselected { background-color: lightGray; }
-    }
-
-    .dot-interactable {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
     &.interactable {
-        .dot {
-            // FIXME: Temporary styling for dot text.
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .dot-text {
-                font-size: .6em;
-            }
 
-            // TODO: Obviously.
-            &.access-outlined {
-                background-color: violet;
+        .dot-block {
+            position: relative;
+
+            &.dot-enabled {
+
+                &.interacted {
+
+                    .tooltip {
+                        z-index: 1;
+
+                        animation: tooltipGrow 0.25s;
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+
+                    .dot {
+                        animation: transformLightBounce 0.15s;
+                        background-color: orange;
+                    }
+                }
+
+                &.uninteracted {
+
+                    .tooltip {
+                        animation: tooltipShrink 0.1s;
+                        opacity: 0;
+                    }
+                }
             }
 
             @tooltip-bleed-margin: 15px;
-
             &:first-child {
                 .tooltip {
                     left: -@tooltip-bleed-margin;
@@ -60,44 +48,62 @@
                     right: -@tooltip-bleed-margin;
                 }
             }
+        }
 
-            // TODO: Interactive styling.
-            &.enabled {
-                .transition(background-color 0.1s ease);
+        .dot {
+            // TODO: Improve state styling.
+            &.background { opacity: 0.35; }
+            &.disabled { background-color: lightGray; }
+            &.deselected { background-color: lightGray; }
 
-                &:active { background-color: red; }
-
-                .tooltip {
-                    // .transition(opacity 0.51s ease);
-                }
-
-                &.show-tooltip {
-                    background-color: orange;
-                    animation: transformLightBounce 0.1s;
-
-                    .tooltip {
-                        z-index: 1;
-
-                        animation: tooltipGrow 0.25s;
-                        opacity: 1;
-                        transform: scale(1);
-                    }
-                }
-
-                &.hide-tooltip {
-
-                    .tooltip {
-                        animation: tooltipShrink 0.1s;
-                        opacity: 0;
-                    }
-                }
+            // TODO: Obviously.
+            &.access-outlined {
+                background-color: violet;
             }
         }
     }
 }
 
+.dot {
+    .transition(background-color 0.15s ease);
+
+    // TODO: Key styling.
+    &.pun { background-color: @pun-dot-colour; }
+    &.backstory { background-color: @backstory-dot-colour; }
+    &.narrative { background-color: @narrative-dot-colour; }
+    &.foreshadow { background-color: @foreshadow-dot-colour; }
+    &.music { background-color: @music-dot-colour; }
+    &.pulpit { background-color: @pulpit-dot-colour; }
+    &.wiki { background-color: @wiki-dot-colour; }
+    &.portal { background-color: @portal-dot-colour; }
+    &.title { background-color: white; }
+    &.afterword { background-color: white; }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dot-text {
+        font-size: .6em;
+    }
+}
+
+.dot-interactable {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    // FIXME: Not great.
+    border-radius: 50%;
+    &:active { background-color: red; opacity: 0.2; }
+}
+
 .tooltip {
     position: absolute;
+    // FIXME: This centres in Firefox and Safari, but unfortunately breaks the tooltip animation, which is based on transform scale.
+    // left: 50%;
+    // transform: translateY(-50%);
     bottom: @default-dot-diameter + 10px;
     text-align: center;
 
