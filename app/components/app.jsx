@@ -552,12 +552,15 @@ class App extends Component {
     }
 
     selectLyricExpand(e, isLyricExpanded = !this.state.isLyricExpanded) {
-        this.setState({
-            isLyricExpanded
-        })
+        // Don't bother if lyric is not expandable.
+        if (getIsLyricExpandable(this.state)) {
+            this.setState({
+                isLyricExpanded
+            })
 
-        // Hide overview.
-        this.selectOverview(undefined, 1)
+            // Hide overview.
+            this.selectOverview(undefined, 1)
+        }
     }
 
     selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2) {
