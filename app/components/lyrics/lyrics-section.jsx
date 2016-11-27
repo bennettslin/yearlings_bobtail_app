@@ -36,8 +36,6 @@ const LyricsSectionView = ({
     songLyrics = [],
     showSingleLyricColumn,
     selectedLyricColumnIndex,
-    hasDoubleColumns,
-    onLyricColumnClick,
 
     // From controller.
     sectionAccessHighlighted,
@@ -50,18 +48,6 @@ const LyricsSectionView = ({
         {/* Upon song change, scroll to element with this class name. */}
         <div className="lyrics-scroll-home"></div>
         {isAdmin ? <h2>lyrics</h2> : null}
-        {showSingleLyricColumn && hasDoubleColumns ?
-            <div className="ear-button-block">
-                <h2>
-                    <a
-                        className="enabled"
-                        onClick={onLyricColumnClick}
-                    >
-                        {selectedLyricColumnIndex}
-                    </a>
-                </h2>
-            </div> : null
-        }
         <div className="lyrics-block">
             {songLyrics.map((stanzaArray, stanzaIndex) => (
                     <LyricsUnit {...other}

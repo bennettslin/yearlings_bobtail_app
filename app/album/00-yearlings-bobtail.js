@@ -47,16 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Make device widths accessible.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `Make popups scale transform.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `Make popups scale transform.`,
             workedHours: 0,
             neededHours: 1
@@ -725,6 +715,11 @@ module.exports = {
         },
         {
             taskName: `Hide overview when lyrics is expanded, collapse lyric when overview shown.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Make device widths accessible.`,
             workedHours: 1,
             neededHours: 1
         }

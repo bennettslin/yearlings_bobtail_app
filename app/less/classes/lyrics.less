@@ -1,6 +1,8 @@
 .live {
 
     .lyrics-section {
+        width: 100%;
+        overflow-y: scroll;
         padding: 0 5px;
 
         // FIXME: This should be the same width as the breakpoint where tablet becomes mini.
@@ -14,19 +16,32 @@
     bottom: 0;
     display: flex;
     justify-content: center;
-    overflow-y: scroll;
     .transition(height 0.2s ease);
 
     &.expandable {
         width: 100%;
+    }
 
-        // Needed to expand properly in Chrome.
-        .expand-button-block {
-            left: 0;
-        }
+    .button-block {
+        position: absolute;
+        top: 0;
+        z-index: @text-z-index + 1;
+
+        padding: 10px;
+        font-size: 3em;
+        background-color: gray;
     }
 }
 
+.expand-button-block {
+    // Needed to expand properly in Chrome.
+    left: 0;
+}
+
+.ear-button-block {
+    // Accommodate scrollbar.
+    right: 16px;
+}
 
 .monitor-width, .laptop-width {
 
@@ -58,24 +73,4 @@
             }
         }
     }
-}
-
-.expand-button-block {
-    position: fixed;
-    z-index: @text-z-index + 1;
-    font-size: 2em;
-
-    background-color: gray;
-}
-
-.ear-button-block {
-    position: fixed;
-    padding: 5px;
-    display: flex;
-    z-index: @text-z-index + 1;
-
-    // Accommodate scrollbar.
-    right: 16px;
-
-    background-color: gray;
 }
