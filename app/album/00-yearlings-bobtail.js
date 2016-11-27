@@ -47,11 +47,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Make lyric column its own component.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `Make popups scale transform.`,
             workedHours: 0,
             neededHours: 1
@@ -62,17 +57,12 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `Overview toggles among three.`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `style nav section and accommodate beginning and final options`,
+            taskName: `make prologue and epilogue options possible, with layout`,
             workedHours: 0,
             neededHours: 5
         },
         {
-            taskName: `make beginning and final song options possible, with layout`,
+            taskName: `style nav section and accommodate beginning and final options`,
             workedHours: 0,
             neededHours: 5
         },
@@ -725,6 +715,16 @@ module.exports = {
         },
         {
             taskName: `Make device widths accessible.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Make lyric column its own component.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Overview toggles among three.`,
             workedHours: 1,
             neededHours: 1
         }

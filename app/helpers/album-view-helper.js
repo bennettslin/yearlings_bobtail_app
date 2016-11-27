@@ -28,7 +28,7 @@ const _parseLyrics = (lyric, selectedVerseIndex) => {
 }
 
 export const getSong = ({ selectedSongIndex, songs }) => {
-    return selectedSongIndex ?
+    return selectedSongIndex && selectedSongIndex <= songs.length ?
         songs[selectedSongIndex - 1] : {}
 }
 

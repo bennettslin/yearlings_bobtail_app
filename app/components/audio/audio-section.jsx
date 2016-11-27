@@ -50,6 +50,7 @@ const AudioSectionView = ({
     isHome,
     isFirstSong,
     isLastSong,
+    isFin,
     isFirstVerse,
     isLastVerse,
     audioSongTitle,
@@ -69,7 +70,7 @@ const AudioSectionView = ({
         className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
         {isAdmin ? <h2>audio</h2> : null}
-        {!isHome ?
+        {!isHome && !isFin ?
             <div className="audio-banner-block">
                 {audioSongTitle} - {getFormattedTime(selectedTimePlayed)}
             </div> : null
@@ -82,7 +83,7 @@ const AudioSectionView = ({
                 {isHome || isFirstSong ? '\u2302' : '\u21E4'}
             </a>
             <a
-                className={isHome || isFirstVerse ? '' : 'enabled'}
+                className={isHome || isFin || isFirstVerse ? '' : 'enabled'}
                 onClick={onRewindClick}
             >
                 {'\u23EA'}
@@ -94,16 +95,16 @@ const AudioSectionView = ({
                 {isPlaying ? '\u23F8' : '\u25BA' }
             </a>
             <a
-                className={isHome || isLastVerse ? '' : 'enabled'}
+                className={isHome || isFin || isLastVerse ? '' : 'enabled'}
                 onClick={onFastForwardClick}
             >
                 {'\u23E9'}
             </a>
             <a
-                className={isLastSong ? '' : 'enabled'}
+                className={isFin ? '' : 'enabled'}
                 onClick={onNextSongClick}
             >
-                {'\u21E5'}
+                {isFin || isLastSong ? '\u2302' : '\u21E5'}
             </a>
             <a
                 className="enabled"

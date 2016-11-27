@@ -108,7 +108,7 @@
 
 * These keys will always fire, even if access is off:
     * "w" to access audio section
-    * "j" to access dots section
+    * "k" to access dots section
     * "l" to access lyrics section
     * "s" to access songs section
     * "p" to toggle "isPlaying"

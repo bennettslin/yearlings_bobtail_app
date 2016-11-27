@@ -31,10 +31,10 @@ const LYRIC = 'lyric',
     REPEAT = 'repeat',
     PAUSE_AT_END = 'pause_at_end',
 
-    // Tips options.
-    SHOWN = 'tip_shown',
-    HIDDEN = 'tip_hidden',
-    DISABLED = 'tips_disabled',
+    // Tip and overview options.
+    SHOWN = 'shown',
+    HIDDEN = 'hidden',
+    DISABLED = 'disabled',
 
     // Device widths.
     // TODO: Make sure these maxWidths are right.

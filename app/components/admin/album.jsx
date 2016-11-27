@@ -50,6 +50,7 @@ const AlbumView = ({
     isHome,
     isFirstSong,
     isLastSong,
+    isFin,
     isFirstVerse,
     isLastVerse,
     audioSongTitle,
@@ -83,6 +84,7 @@ const AlbumView = ({
                 isHome={isHome}
                 isFirstSong={isFirstSong}
                 isLastSong={isLastSong}
+                isFin={isFin}
                 isFirstVerse={isFirstVerse}
                 isLastVerse={isLastVerse}
                 audioSongTitle={audioSongTitle}

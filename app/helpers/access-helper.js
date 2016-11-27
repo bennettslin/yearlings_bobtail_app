@@ -171,10 +171,10 @@ export default {
 
         } else {
             switch (keyName) {
-                case ARROW_UP:
+                case ARROW_LEFT:
                     accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
                     break
-                case ARROW_DOWN:
+                case ARROW_RIGHT:
                     accessedSongIndex = (accessedSongIndex + 1) % songsLength
                     break
                 case ENTER:

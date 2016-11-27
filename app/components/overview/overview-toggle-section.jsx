@@ -1,5 +1,6 @@
 import React from 'react'
 import TextBlock from '../text/text-block'
+import { OVERVIEW_OPTIONS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -28,7 +29,7 @@ const OverviewToggleSectionView = ({
     <div
         className="section overview-toggle-section"
     >
-        <a className="overview-toggle-button enabled" onClick={onOverviewClick}>{selectedOverviewIndex}</a>
+        <a className="overview-toggle-button enabled" onClick={onOverviewClick}>{OVERVIEW_OPTIONS[selectedOverviewIndex]}</a>
     </div>
 )
 

@@ -26,6 +26,7 @@ const NotesSectionView = () => (
             <li>Sinon.js?</li>
             <li>http://stackoverflow.com/questions/6372444/how-to-draw-an-irregular-hand-drawn-line-using-svg-canvas</li>
             <li>http://codepen.io/tmrDevelops/pen/NPXodB</li>
+            <li>http://stackoverflow.com/questions/8866736/css-speech-bubble-with-box-shadow</li>
         </ul>
     </div>
 )

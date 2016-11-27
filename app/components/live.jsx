@@ -83,6 +83,7 @@ const LiveView = ({
     isHome,
     isFirstSong,
     isLastSong,
+    isFin,
     isFirstVerse,
     isLastVerse,
     audioSongTitle,
@@ -112,7 +113,7 @@ const LiveView = ({
     hasDoubleColumns,
 
 ...other }) => (
-    <div className={`live-column${isLyricExpanded ? ' lyric-expanded' : ''}`}>
+    <div className={`live-window${isLyricExpanded ? ' lyric-expanded' : ''}`}>
         {false ?
             <TipsSection
                 selectedTipsIndex={selectedTipsIndex}
@@ -168,6 +169,7 @@ const LiveView = ({
                     isHome={isHome}
                     isFirstSong={isFirstSong}
                     isLastSong={isLastSong}
+                    isFin={isFin}
                     isFirstVerse={isFirstVerse}
                     isLastVerse={isLastVerse}
                     audioSongTitle={audioSongTitle}

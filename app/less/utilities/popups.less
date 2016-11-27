@@ -14,21 +14,39 @@
 }
 
 .popup-content-wrapper {
+
+    // Make this more efficient, less hard-coded.
+    animation: transformSnapback 0.2s;
+
+    &[class*="animation-enter"] {
+        transform: scale(0);
+
+        &[class*="animation-enter-active"] {
+            transform: scale(1);
+        }
+    }
+
+    &[class*="animation-leave"] {
+        transform: scale(1);
+
+        &[class*="animation-leave-active"] {
+            transform: scale(0);
+        }
+    }
+
     .animation-mixin;
     position: absolute;
+    background-color: white;
     box-shadow: -2px 2px 8px 8px @box-shadow-colour;
 
     &.annotation {
         top: 5vh;
-        height: 100%;
         max-height: 40vh;
-        background-color: @annotation-colour;
     }
 
     &.wiki {
         top: 50vh;
         height: 45vh;
-        background-color: white;
     }
 
     .button {

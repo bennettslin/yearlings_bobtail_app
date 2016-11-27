@@ -24,6 +24,9 @@ import { NAV_SECTION,
          WIKI_SECTION,
          SECTION_KEYS,
 
+         SHOWN,
+         DISABLED,
+         OVERVIEW_OPTIONS,
          TIPS_OPTIONS,
          AUDIO_OPTIONS,
 
@@ -109,7 +112,7 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            isAdmin: false,
+            isAdmin: true,
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
@@ -263,13 +266,15 @@ class App extends Component {
         if (direction) {
             selectedSongIndex = this.props.selectedSongIndex + direction
 
-            if (selectedSongIndex < 0 || selectedSongIndex > this.props.songs.length) {
+            if (selectedSongIndex < 0 || selectedSongIndex > this.props.songs.length + 1) {
                 return
             }
         }
 
-        // Show overview bubble text for selected song.
-        this.props.selectOverviewIndex(0)
+        // Show overview unless disabled.
+        if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED) {
+            this.selectOverview(undefined, 0)
+        }
 
         this.props.selectSongIndex(selectedSongIndex)
 
@@ -300,27 +305,6 @@ class App extends Component {
         }
     }
 
-    selectOverview(e, selectedOverviewIndex) {
-        this._stopPropagation(e)
-
-        if (typeof selectedOverviewIndex === 'undefined') {
-            selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % 2
-        }
-
-        // Collapse lyric section if overview shown.
-        if (selectedOverviewIndex === 0) {
-            this.selectLyricExpand(undefined, false)
-        }
-
-        // Stored as integer. 0 is to show overview, 1 is to hide it.
-        this.props.selectOverviewIndex(selectedOverviewIndex)
-
-        // Close annotation and wiki sections if showing bubble.
-        if (selectedOverviewIndex === 0) {
-            this.selectAnnotation()
-        }
-    }
-
     selectAudioOption(e, direction = 1) {
         const optionsLength = AUDIO_OPTIONS.length
 
@@ -328,6 +312,32 @@ class App extends Component {
         if (e) { this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION }) }
 
         this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
+    }
+
+    selectOverview(e, selectedOverviewIndex) {
+
+        // Overview cannot be shown while lyric column is expanded.
+        if (this.state.isLyricExpanded) {
+            return
+        }
+
+        this._stopPropagation(e)
+
+        if (typeof selectedOverviewIndex === 'undefined') {
+            selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % OVERVIEW_OPTIONS.length
+        }
+
+        // Stored as integer. 0 is to show overview, 1 is to hide it.
+        this.props.selectOverviewIndex(selectedOverviewIndex)
+
+        // If showing overview...
+        if (e && OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
+            // Close annotation and wiki sections.
+            this.selectAnnotation()
+
+            // Collapse lyric section.
+            this.selectLyricExpand(undefined, false)
+        }
     }
 
     selectTips(e, selectedTipsIndex) {
@@ -398,8 +408,10 @@ class App extends Component {
         // Keep accessed index, even if annotation is deselected.
         if (selectedAnnotationIndex) {
 
-            // Hide overview bubble text.
-            this.props.selectOverviewIndex(1)
+            // Hide overview if shown.
+            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+                this.selectOverview(undefined, 1)
+            }
 
             this.setState({
                 accessedAnnotationIndex: selectedAnnotationIndex,
@@ -558,8 +570,10 @@ class App extends Component {
                 isLyricExpanded
             })
 
-            // Hide overview.
-            this.selectOverview(undefined, 1)
+            // Hide overview if shown.
+            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+                this.selectOverview(undefined, 1)
+            }
         }
     }
 
@@ -608,8 +622,12 @@ class App extends Component {
     _onBodyClick(e) {
         this._handleAccessOn(0)
         this.selectAnnotation()
-        this.selectOverview(undefined, 1)
         this.selectWiki()
+
+        // Hide overview if shown.
+        if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+            this.selectOverview(undefined, 1)
+        }
     }
 
     handleKeyDown(e) {
@@ -682,8 +700,8 @@ class App extends Component {
                     case NAV_SECTION:
                         newState = AccessHelper.handleSongAccess({
                             keyName,
-                            // Include option of no song.
-                            songsLength: this.props.songs.length + 1,
+                            // Include options of beginning and end.
+                            songsLength: this.props.songs.length + 2,
                             accessedSongIndex: this.state.accessedSongIndex,
                             selectSong: this.selectSong
                         })
@@ -839,7 +857,8 @@ class App extends Component {
             isHome = selectedSongIndex === 0,
             isFirstSong = selectedSongIndex === 1,
             isLastSong = selectedSongIndex === songs.length,
-            audioSongTitle = selectedSongIndex ? `${selectedSongIndex}. ${songs[selectedSongIndex - 1].title}` : null,
+            isFin = selectedSongIndex === songs.length + 1,
+            audioSongTitle = selectedSongIndex && selectedSongIndex <= songs.length ? `${selectedSongIndex}. ${songs[selectedSongIndex - 1].title}` : null,
             lyricsStartAtZero = getLyricsStartAtZero(props),
             isFirstVerse = selectedVerseIndex === (lyricsStartAtZero ? 1 : 0),
             isLastVerse = selectedVerseIndex === songTimes.length - 1
@@ -863,6 +882,7 @@ class App extends Component {
                     isHome={isHome}
                     isFirstSong={isFirstSong}
                     isLastSong={isLastSong}
+                    isFin={isFin}
                     lyricsStartAtZero={lyricsStartAtZero}
                     isFirstVerse={isFirstVerse}
                     isLastVerse={isLastVerse}
