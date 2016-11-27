@@ -2,22 +2,59 @@
 
     .lyrics-section {
         padding: 0 5px;
-        overflow-y: scroll;
-        .transition(height 0.2s ease);
 
         // FIXME: This should be the same width as the breakpoint where tablet becomes mini.
         &.single-column {
-            max-width: 600px;
+            max-width: 720px;
         }
+    }
+}
+
+.lyric-column {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    .transition(height 0.2s ease);
+
+    &.expandable {
+        width: 100%;
+
+        // Needed to expand properly in Chrome.
+        .expand-button-block {
+            left: 0;
+        }
+    }
+}
+
+
+.monitor-width, .laptop-width {
+
+    .lyrics-section {
+        height: 100%;
+    }
+}
+
+.tablet-width, .mini-width, .phone-width {
+
+    .lyric-column {
+        position: absolute;
 
         &.expandable {
-            bottom: 0;
-            width: 100%;
-            max-width: 100%;
+            height: @collapsed-lyric-section-height;
+        }
+    }
 
-            // Needed to expand properly in Chrome.
-            .expand-button-block {
-                left: 0;
+    .lyric-expanded {
+        .lyric-column {
+            height: ~"calc(100% - @{menu-height-mini-tablet})";
+        }
+    }
+
+    &.phone-width {
+        .lyric-expanded {
+            .lyric-column {
+                height: ~"calc(100% - @{menu-height-phone})";
             }
         }
     }

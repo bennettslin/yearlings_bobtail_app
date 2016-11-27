@@ -217,9 +217,18 @@ const LiveView = ({
             }
         </div>
         {selectedSongIndex ?
+            <div className={`lyric-column${isLyricExpandable ? ' expandable' : ''}`}>
+            {isLyricExpandable ?
+                <div className="expand-button-block">
+                    <a
+                        className="expand-button enabled"
+                        onClick={onLyricExpandClick}
+                    >
+                        {isLyricExpanded ? '-' : '+'}
+                    </a>
+                </div> : null
+            }
             <LyricsSection
-                isLyricExpanded={isLyricExpanded}
-                isLyricExpandable={isLyricExpandable}
                 showSingleLyricColumn={showSingleLyricColumn}
                 lyricsStartAtZero={lyricsStartAtZero}
                 accessedOn={accessedOn}
@@ -238,8 +247,8 @@ const LiveView = ({
                 onVerseClick={onVerseClick}
                 onAnnotationClick={onAnnotationClick}
                 onLyricColumnClick={onLyricColumnClick}
-                onLyricExpandClick={onLyricExpandClick}
-            /> : null
+            />
+            </div> : null
         }
     </div>
 )
