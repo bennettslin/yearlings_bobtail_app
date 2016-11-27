@@ -47,6 +47,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Make lyric column its own component.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `Make popups scale transform.`,
             workedHours: 0,
             neededHours: 1

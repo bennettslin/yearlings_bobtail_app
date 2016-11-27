@@ -9,7 +9,7 @@ import StageSection from './stage/stage-section'
 import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
-import LyricsSection from './lyrics/lyrics-section'
+import LyricColumn from './lyric-column'
 import { getSong, getAnnotation, getOverviewText, getWikiUrl } from 'helpers/album-view-helper'
 import { PHONE_WIDTH_OBJECT } from 'helpers/constants'
 
@@ -216,48 +216,29 @@ const LiveView = ({
                 </div> : null
             }
         </div>
-        {selectedSongIndex ?
-            <div className={`lyric-column${isLyricExpandable ? ' expandable' : ''}`}>
-            {isLyricExpandable ?
-                <div className="button-block expand-button-block">
-                    <a
-                        className="enabled"
-                        onClick={onLyricExpandClick}
-                    >
-                        {isLyricExpanded ? '-' : '+'}
-                    </a>
-                </div> : null
-            }
-            {showSingleLyricColumn && hasDoubleColumns ?
-                <div className="button-block ear-button-block">
-                    <a
-                        className="enabled"
-                        onClick={onLyricColumnClick}
-                    >
-                        {selectedLyricColumnIndex}
-                    </a>
-                </div> : null
-            }
-            <LyricsSection
-                showSingleLyricColumn={showSingleLyricColumn}
-                lyricsStartAtZero={lyricsStartAtZero}
-                accessedOn={accessedOn}
-                accessedSectionKey={accessedSectionKey}
-                nextSectionKey={nextSectionKey}
-                accessedLyricElement={accessedLyricElement}
-                accessedAnnotationIndex={accessedAnnotationIndex}
-                accessedVerseIndex={accessedVerseIndex}
-                selectedSongIndex={selectedSongIndex}
-                selectedAnnotationIndex={selectedAnnotationIndex}
-                selectedLyricColumnIndex={selectedLyricColumnIndex}
-                songLyrics={selectedSongLyrics}
-                selectedDotKeys={selectedDotKeys}
-                selectedVerseIndex={selectedVerseIndex}
-                onVerseClick={onVerseClick}
-                onAnnotationClick={onAnnotationClick}
-            />
-            </div> : null
-        }
+        <LyricColumn
+            showSingleLyricColumn={showSingleLyricColumn}
+            hasDoubleColumns={hasDoubleColumns}
+            isLyricExpanded={isLyricExpanded}
+            isLyricExpandable={isLyricExpandable}
+            lyricsStartAtZero={lyricsStartAtZero}
+            accessedOn={accessedOn}
+            accessedSectionKey={accessedSectionKey}
+            nextSectionKey={nextSectionKey}
+            accessedLyricElement={accessedLyricElement}
+            accessedAnnotationIndex={accessedAnnotationIndex}
+            accessedVerseIndex={accessedVerseIndex}
+            selectedSongIndex={selectedSongIndex}
+            selectedAnnotationIndex={selectedAnnotationIndex}
+            selectedLyricColumnIndex={selectedLyricColumnIndex}
+            songLyrics={selectedSongLyrics}
+            selectedDotKeys={selectedDotKeys}
+            selectedVerseIndex={selectedVerseIndex}
+            onVerseClick={onVerseClick}
+            onAnnotationClick={onAnnotationClick}
+            onLyricExpandClick={onLyricExpandClick}
+            onLyricColumnClick={onLyricColumnClick}
+        />
     </div>
 )
 
