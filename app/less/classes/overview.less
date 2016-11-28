@@ -14,7 +14,7 @@
 @overview-toggle-phone-height: @overview-toggle-height / 3;
 
 
-// Subfield in main field.
+// In main field.
 .overview-subfield {
     position: absolute;
 
@@ -25,11 +25,40 @@
     z-index: 0;
 
     // This is necessary to avoid right scrollbar in phone width.
-    width: ~"calc(100% - @{overview-subfield-margin} * 2 - @{overview-popup-content-wrapper-padding} * 2)";
+    width: ~"calc(100% - @{overview-subfield-margin} * 2)";
     height: ~"calc(100% - @{overview-subfield-margin} * 2)";
 
     margin: @overview-subfield-margin;
     display: flex;
+}
+
+
+// FIXME: It would be ideal for only the overview toggle to animate left, while the song speech bubble stays put. Because ideally it should be the same speech bubble for both logue and song, that just moves to a new position.
+// In main field.
+.overview-logue-subfield {
+    position: absolute;
+
+    .overview {
+        &.popup-transition-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: @overview-subfield-margin;
+        }
+
+        &.popup-content-wrapper {
+            position: relative;
+        }
+    }
+}
+
+.is-song {
+    .overview {
+        &.popup-content-wrapper {
+            // Space for speech bubble arrow. Overridden in phone width.
+            margin-left: 25px;
+        }
+    }
 }
 
 // Toggle container.
@@ -69,7 +98,6 @@
         max-width: 450px;
         border-radius: 25px;
         padding: @overview-popup-content-wrapper-padding;
-        margin-left: 25px;
 
         background-color: white;
     }
@@ -83,6 +111,12 @@
         .overview-subfield {
             left: -@overview-toggle-width - @overview-subfield-margin;
         }
+    }
+
+    .overview-logue-subfield {
+        right: 0;
+        width: 50%;
+        height: 100%;
     }
 
     // Overview is at the top in desktop.
@@ -115,6 +149,16 @@
     .lyric-expanded, .is-logue {
         .overview-subfield {
             left: -@overview-toggle-tablet-width - @overview-subfield-margin;
+        }
+    }
+
+    .overview-logue-subfield {
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+
+        .overview-popup-container {
+
         }
     }
 
@@ -159,9 +203,11 @@
             min-width: 100%;
         }
 
-        .overview.popup-content-wrapper {
-            margin-left: 0;
-            margin-bottom: 25px;
+        .is-song {
+            .overview.popup-content-wrapper {
+                margin-left: 0;
+                margin-bottom: 25px;
+            }
         }
     }
 }

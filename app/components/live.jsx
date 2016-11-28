@@ -197,6 +197,12 @@ const LiveView = ({
                     />
                 </div>
                 <div className="field main-field">
+                    {/* Ideal for song and logue to not be in separate overview subfields. */}
+                    <div className="subfield overview-logue-subfield">
+                            <OverviewPopup {...overviewPopupProps}
+                                inOverviewSubfield={false}
+                            />
+                    </div>
                     <div className="subfield overview-subfield">
                         <OverviewToggleSection {...other}
                             selectedOverviewIndex={selectedOverviewIndex}
@@ -210,11 +216,6 @@ const LiveView = ({
                     </div>
                     <StageSection
                     />
-                    <div className="overview-popup-container">
-                            <OverviewPopup {...overviewPopupProps}
-                                inOverviewSubfield={false}
-                            />
-                    </div>
                 </div>
                 {!isPhone ?
                     <div className="field nav-field">
