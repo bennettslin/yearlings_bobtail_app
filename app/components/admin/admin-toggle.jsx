@@ -30,7 +30,7 @@ const AdminToggleView = ({
             className="enabled"
             onClick={onClick}
         >
-            {isAdmin ? 'Live' : 'Admin'}
+            {isAdmin ? 'Admin' : 'Live'}
         </a>
         <div>
             {deviceWidth}

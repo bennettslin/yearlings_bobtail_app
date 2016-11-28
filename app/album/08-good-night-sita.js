@@ -45,7 +45,7 @@ module.exports = {
                             {
                                 italic: `Ulysses,`
                             },
-                            `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after a date. Meanwhile, the restless thumping of a Motown beat insistently prods me to pour forth everything that I long to express. But flustered panic takes over, and once again it all goes unmentioned.`
+                            `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after a date. Meanwhile, the restless thumping of a Motown disco beat insistently prods me to pour forth everything that I long to express. But flustered panic takes over, and once again it all goes unmentioned.`
                         ],
                         dotKeys: {
                             music: true

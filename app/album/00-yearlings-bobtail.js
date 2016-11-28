@@ -57,11 +57,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `make prologue and epilogue options possible, with layout`,
-            workedHours: 0,
-            neededHours: 5
-        },
-        {
             taskName: `style nav section and accommodate beginning and final options`,
             workedHours: 0,
             neededHours: 5
@@ -757,6 +752,11 @@ module.exports = {
             taskName: `Fix tooltip positioning in Firefox and Safari.`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `make prologue and epilogue options possible, with layout`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
