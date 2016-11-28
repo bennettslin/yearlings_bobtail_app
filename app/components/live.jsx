@@ -111,136 +111,150 @@ const LiveView = ({
     selectedSongLyrics,
     hasDoubleColumns,
 
-...other }) => (
-    <div className={`live-window${isPrologue || isEpilogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ''}`}>
-        {false ?
-            <TipsSection
-                selectedTipsIndex={selectedTipsIndex}
-                onTipsClick={onTipsClick}
-            /> : null
+...other }) => {
+
+    const isLogue = isPrologue || isEpilogue,
+        overviewPopupProps = {
+            isLogue,
+            hideClose: true,
+            selectedOverviewIndex,
+            overviewText,
+            onPopupButtonClick: onOverviewClick
         }
-        <AnnotationPopup
-            songs={songs}
-            annotation={annotation}
-            accessedPopupAnchorIndex={accessedPopupAnchorIndex}
-            selectedDotKeys={selectedDotKeys}
-            selectedWikiIndex={selectedWikiIndex}
-            accessedOn={accessedOn}
-            accessedSectionKey={accessedSectionKey}
-            nextSectionKey={nextSectionKey}
-            showArrows={true}
-            onPortalClick={onPortalClick}
-            onWikiUrlClick={onWikiUrlClick}
-            onPopupButtonClick={onAnnotationClick}
-            onSectionClick={onAnnotationSectionClick}
-        />
-        <WikiPopup
-            selectedWikiUrl={selectedWikiUrl}
-            accessedOn={accessedOn}
-            accessedSectionKey={accessedSectionKey}
-            nextSectionKey={nextSectionKey}
-            onPopupButtonClick={onWikiUrlClick}
-        />
-        {false ?
-            <DotsSection
+
+    return (
+        <div className={`live-window${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ''}`}>
+            {false ?
+                <TipsSection
+                    selectedTipsIndex={selectedTipsIndex}
+                    onTipsClick={onTipsClick}
+                /> : null
+            }
+            <AnnotationPopup
+                songs={songs}
+                annotation={annotation}
+                accessedPopupAnchorIndex={accessedPopupAnchorIndex}
                 selectedDotKeys={selectedDotKeys}
-                presentDotKeys={presentDotKeys}
+                selectedWikiIndex={selectedWikiIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
                 nextSectionKey={nextSectionKey}
-                accessedDotIndex={accessedDotIndex}
-                onDotClick={onDotClick}
-            /> : null
-        }
-        <div className="main-column">
-            <div className="field menu-field">
-                {!isPhone ?
-                    <TitleSection
-                    title={title}
+                showArrows={true}
+                onPortalClick={onPortalClick}
+                onWikiUrlClick={onWikiUrlClick}
+                onPopupButtonClick={onAnnotationClick}
+                onSectionClick={onAnnotationSectionClick}
+            />
+            <WikiPopup
+                selectedWikiUrl={selectedWikiUrl}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
+                onPopupButtonClick={onWikiUrlClick}
+            />
+            {false ?
+                <DotsSection
+                    selectedDotKeys={selectedDotKeys}
+                    presentDotKeys={presentDotKeys}
                     accessedOn={accessedOn}
                     accessedSectionKey={accessedSectionKey}
                     nextSectionKey={nextSectionKey}
-                    accessedSongIndex={accessedSongIndex}
-                    onTitleClick={onSongClick}
-                    /> : null
-                }
-                <AudioSection
-                    isPrologue={isPrologue}
-                    isFirstSong={isFirstSong}
-                    isLastSong={isLastSong}
-                    isEpilogue={isEpilogue}
-                    isFirstVerse={isFirstVerse}
-                    isLastVerse={isLastVerse}
-                    selectedSongTitle={selectedSongTitle}
-                    selectedSongIndex={selectedSongIndex}
-                    isPlaying={isPlaying}
-                    selectedTimePlayed={selectedTimePlayed}
-                    selectedAudioOptionIndex={selectedAudioOptionIndex}
-                    accessedOn={accessedOn}
-                    accessedSectionKey={accessedSectionKey}
-                    nextSectionKey={nextSectionKey}
-                    onPlayClick={onPlayClick}
-                    onAudioSongClick={onSongClick}
-                    onAudioTimeClick={onVerseClick}
-                    onAudioOptionClick={onAudioOptionClick}
-                />
-            </div>
-            <div className="field main-field">
-                <div className="subfield overview-subfield">
-                    <OverviewToggleSection {...other}
-                        selectedOverviewIndex={selectedOverviewIndex}
-                        onOverviewClick={onOverviewClick}
-                    />
-                    <div className="overview-popup-container">
-                        <OverviewPopup
-                            hideClose={true}
-                            selectedOverviewIndex={selectedOverviewIndex}
-                            overviewText={overviewText}
-                            onPopupButtonClick={onOverviewClick}
-                        />
-                    </div>
-                </div>
-                <StageSection
-                />
-            </div>
-            {!isPhone ?
-                <div className="field nav-field">
-                    <NavSection
-                        songs={songs}
-                        selectedSongIndex={selectedSongIndex}
+                    accessedDotIndex={accessedDotIndex}
+                    onDotClick={onDotClick}
+                /> : null
+            }
+            <div className="main-column">
+                <div className="field menu-field">
+                    {!isPhone ?
+                        <TitleSection
+                        title={title}
                         accessedOn={accessedOn}
                         accessedSectionKey={accessedSectionKey}
                         nextSectionKey={nextSectionKey}
                         accessedSongIndex={accessedSongIndex}
-                        onSongClick={onSongClick}
+                        onTitleClick={onSongClick}
+                        /> : null
+                    }
+                    <AudioSection
+                        isPrologue={isPrologue}
+                        isFirstSong={isFirstSong}
+                        isLastSong={isLastSong}
+                        isEpilogue={isEpilogue}
+                        isFirstVerse={isFirstVerse}
+                        isLastVerse={isLastVerse}
+                        selectedSongTitle={selectedSongTitle}
+                        selectedSongIndex={selectedSongIndex}
+                        isPlaying={isPlaying}
+                        selectedTimePlayed={selectedTimePlayed}
+                        selectedAudioOptionIndex={selectedAudioOptionIndex}
+                        accessedOn={accessedOn}
+                        accessedSectionKey={accessedSectionKey}
+                        nextSectionKey={nextSectionKey}
+                        onPlayClick={onPlayClick}
+                        onAudioSongClick={onSongClick}
+                        onAudioTimeClick={onVerseClick}
+                        onAudioOptionClick={onAudioOptionClick}
                     />
-                </div> : null
-            }
+                </div>
+                <div className="field main-field">
+                    <div className="subfield overview-subfield">
+                        <OverviewToggleSection {...other}
+                            selectedOverviewIndex={selectedOverviewIndex}
+                            onOverviewClick={onOverviewClick}
+                        />
+                        <div className="overview-popup-container">
+                                <OverviewPopup {...overviewPopupProps}
+                                    inOverviewSubfield={true}
+                                />
+                        </div>
+                    </div>
+                    <StageSection
+                    />
+                    <div className="overview-popup-container">
+                            <OverviewPopup {...overviewPopupProps}
+                                inOverviewSubfield={false}
+                            />
+                    </div>
+                </div>
+                {!isPhone ?
+                    <div className="field nav-field">
+                        <NavSection
+                            songs={songs}
+                            selectedSongIndex={selectedSongIndex}
+                            accessedOn={accessedOn}
+                            accessedSectionKey={accessedSectionKey}
+                            nextSectionKey={nextSectionKey}
+                            accessedSongIndex={accessedSongIndex}
+                            onSongClick={onSongClick}
+                        />
+                    </div> : null
+                }
+            </div>
+            <LyricColumn
+                showSingleLyricColumn={showSingleLyricColumn}
+                hasDoubleColumns={hasDoubleColumns}
+                isLyricExpanded={isLyricExpanded}
+                isLyricExpandable={isLyricExpandable}
+                lyricsStartAtZero={lyricsStartAtZero}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
+                accessedLyricElement={accessedLyricElement}
+                accessedAnnotationIndex={accessedAnnotationIndex}
+                accessedVerseIndex={accessedVerseIndex}
+                selectedSongIndex={selectedSongIndex}
+                selectedAnnotationIndex={selectedAnnotationIndex}
+                selectedLyricColumnIndex={selectedLyricColumnIndex}
+                songLyrics={selectedSongLyrics}
+                selectedDotKeys={selectedDotKeys}
+                selectedVerseIndex={selectedVerseIndex}
+                onVerseClick={onVerseClick}
+                onAnnotationClick={onAnnotationClick}
+                onLyricExpandClick={onLyricExpandClick}
+                onLyricColumnClick={onLyricColumnClick}
+            />
         </div>
-        <LyricColumn
-            showSingleLyricColumn={showSingleLyricColumn}
-            hasDoubleColumns={hasDoubleColumns}
-            isLyricExpanded={isLyricExpanded}
-            isLyricExpandable={isLyricExpandable}
-            lyricsStartAtZero={lyricsStartAtZero}
-            accessedOn={accessedOn}
-            accessedSectionKey={accessedSectionKey}
-            nextSectionKey={nextSectionKey}
-            accessedLyricElement={accessedLyricElement}
-            accessedAnnotationIndex={accessedAnnotationIndex}
-            accessedVerseIndex={accessedVerseIndex}
-            selectedSongIndex={selectedSongIndex}
-            selectedAnnotationIndex={selectedAnnotationIndex}
-            selectedLyricColumnIndex={selectedLyricColumnIndex}
-            songLyrics={selectedSongLyrics}
-            selectedDotKeys={selectedDotKeys}
-            selectedVerseIndex={selectedVerseIndex}
-            onVerseClick={onVerseClick}
-            onAnnotationClick={onAnnotationClick}
-            onLyricExpandClick={onLyricExpandClick}
-            onLyricColumnClick={onLyricColumnClick}
-        />
-    </div>
-)
+    )
+}
 
 export default Live
