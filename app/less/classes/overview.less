@@ -78,12 +78,27 @@
 // Responsive rules.
 .monitor-width, .laptop-width {
 
+    // Hidden to left when is logue.
+    .is-logue {
+        .overview-subfield {
+            left: -@overview-toggle-width - @overview-subfield-margin;
+        }
+    }
+
     // Overview is at the top in desktop.
     .overview-toggle-button, .overview.popup-content-wrapper {
         top: 0;
     }
 
     &.laptop-width {
+
+        // Hidden to left when is logue.
+        .is-logue {
+            .overview-subfield {
+                left: -@overview-toggle-laptop-width - @overview-subfield-margin;
+            }
+        }
+
         .overview-toggle-section {
             width: @overview-toggle-laptop-width;
         }
@@ -97,7 +112,7 @@
 .tablet-width, .mini-width, .phone-width {
 
     // Hidden to left when lyric expanded.
-    .lyric-expanded {
+    .lyric-expanded, .is-logue {
         .overview-subfield {
             left: -@overview-toggle-tablet-width - @overview-subfield-margin;
         }
@@ -120,7 +135,7 @@
 
         // Hidden to left when lyric expanded.
         // FIXME: This won't be needed once toggle is embedded in popup.
-        .lyric-expanded {
+        .lyric-expanded, .is-logue {
             .overview-subfield {
                 left: -@overview-toggle-phone-width - @overview-subfield-margin;
             }
