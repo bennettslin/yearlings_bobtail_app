@@ -18,6 +18,7 @@ const DevSectionView = ({
     deviceWidth,
     windowWidth,
     windowHeight,
+    selectedSongIndex,
     selectedVerseIndex,
     showSingleLyricColumn,
     onScreenWidthClick
@@ -25,6 +26,9 @@ const DevSectionView = ({
 }) => (
     <div className="section dev-section">
         <h2>dev</h2>
+        <div className="row">
+            selected song index: {selectedSongIndex}
+        </div>
         <div className="row">
             selected verse index: {selectedVerseIndex}
         </div>

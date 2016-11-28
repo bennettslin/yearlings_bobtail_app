@@ -36,7 +36,6 @@ const SongView = ({
 
     // From props.
     songs,
-
     selectedAnnotationIndex,
     selectedWikiIndex,
     selectedDotKeys,
@@ -105,7 +104,7 @@ const SongView = ({
                 accessedDotIndex={accessedDotIndex}
                 onDotClick={onDotClick}
             />
-            {selectedSongIndex ?
+            {selectedSongIndex && selectedSongIndex < songs.length - 1 ?
                 <LyricsSection
                     isAdmin={true}
                     showSingleLyricColumn={showSingleLyricColumn}

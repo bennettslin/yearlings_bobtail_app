@@ -21,7 +21,6 @@ const Live = (props) => {
 
     const { deviceWidth } = props,
         selectedSong = getSong(props),
-        overviewText = getOverviewText(props),
         annotation = getAnnotation(props),
         selectedWikiUrl = getWikiUrl(props),
         isPhone = deviceWidth === PHONE_WIDTH_OBJECT.className
@@ -29,8 +28,8 @@ const Live = (props) => {
     return (
         <LiveView {...props}
             isPhone={isPhone}
-            overviewText={overviewText}
             lyrics={selectedSong.lyrics}
+            overviewText={selectedSong.overview}
             annotation={annotation}
             selectedWikiUrl={selectedWikiUrl}
             annotations={selectedSong.annotations}
@@ -80,13 +79,13 @@ const LiveView = ({
     showSingleLyricColumn,
     isLyricExpanded,
     isLyricExpandable,
-    isHome,
+    isPrologue,
     isFirstSong,
     isLastSong,
-    isFin,
+    isEpilogue,
     isFirstVerse,
     isLastVerse,
-    audioSongTitle,
+    selectedSongTitle,
     onSongClick,
     onVerseClick,
     onPlayClick,
@@ -166,13 +165,13 @@ const LiveView = ({
                     /> : null
                 }
                 <AudioSection
-                    isHome={isHome}
+                    isPrologue={isPrologue}
                     isFirstSong={isFirstSong}
                     isLastSong={isLastSong}
-                    isFin={isFin}
+                    isEpilogue={isEpilogue}
                     isFirstVerse={isFirstVerse}
                     isLastVerse={isLastVerse}
-                    audioSongTitle={audioSongTitle}
+                    selectedSongTitle={selectedSongTitle}
                     selectedSongIndex={selectedSongIndex}
                     isPlaying={isPlaying}
                     selectedTimePlayed={selectedTimePlayed}

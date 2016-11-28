@@ -1,31 +1,27 @@
 module.exports = {
     title: `Yearling's Bobtail`,
-    // Hi, I'm Bennett. end of my relationship,
-    // Narrowed down to five things that changed my life.
-    // Spent the next five years
-    // Ulysses of rock albums.
-    // Wrote and recorded all the parts myself.
-    // Released in 2006.
-    scenes: [
-        {
-            time: 0,
-            description: 'placeholder description'
-        },
-        {
-            time: 0,
-            description: 'placeholder description'
-        },
-        {
-            time: 0,
-            description: 'placeholder description'
-        }
-    ],
-    tip: {
-        description: 'placeholder tip'
-    },
-    overview: 'placeholder text',
     pageStartingIndices: [0, 9],
     songs: [
+        {
+            // Hi, I'm Bennett. end of my relationship,
+            // Narrowed down to five things that changed my life.
+            // Spent the next five years
+            // Ulysses of rock albums.
+            // Wrote and recorded all the parts myself.
+            // Released in 2006.
+            logue: true,
+            title: 'prologue',
+            scenes: [
+                {
+                    time: 0,
+                    description: 'prologue description'
+                }
+            ],
+            tip: {
+                description: 'prologue tip'
+            },
+            overview: 'prologue text',
+        },
         require('./01-didi'),
         require('./02-willy-the-cocoa'),
         require('./03-dear-saskia'),
@@ -43,7 +39,21 @@ module.exports = {
         require('./15-uncanny-valley-boy'),
         require('./16-cremated'),
         require('./17-vegan-proclamation'),
-        require('./18-my-100000th-dream')
+        require('./18-my-100000th-dream'),
+        {
+            logue: true,
+            title: 'epilogue',
+            scenes: [
+                {
+                    time: 0,
+                    description: 'epilogue description'
+                }
+            ],
+            tip: {
+                description: 'epilogue tip'
+            },
+            overview: 'epilogue text'
+        }
     ],
     tasks: [
         {

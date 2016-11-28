@@ -14,15 +14,14 @@ import { getSong, getTasks, getOverviewText } from 'helpers/album-view-helper'
 const Shared = (props) => {
 
     const selectedSong = getSong(props),
-        overviewText = getOverviewText(props),
         tasks = getTasks(selectedSong, props.albumTasks)
 
     return (
         <SharedView {...props}
-            overviewText={overviewText}
             tasks={tasks}
             lyrics={selectedSong.lyrics}
             annotations={selectedSong.annotations}
+            overviewText={selectedSong.overview}
         />
     )
 }

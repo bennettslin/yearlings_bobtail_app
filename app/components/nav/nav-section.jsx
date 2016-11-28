@@ -67,14 +67,14 @@ const NavSectionView = ({
             </div> : null
         }
         {songs.map((song, index) => {
-            const isSelected = selectedSongIndex - 1 === index,
-                accessHighlighted = sectionAccessHighlighted && accessedSongIndex - 1 === index
+            const isSelected = selectedSongIndex === index,
+                accessHighlighted = sectionAccessHighlighted && accessedSongIndex === index
 
             return (
                 <NavRow
                     key={index}
                     song={song}
-                    songIndex={index + 1}
+                    songIndex={index}
                     maxTotalNeededHours={maxTotalNeededHours}
                     isSelected={isSelected}
                     accessHighlighted={accessHighlighted}

@@ -56,7 +56,7 @@ export default {
                 break
             // Toggle selected overview index.
             case 'z':
-                selectOverview()
+                selectOverview(true)
                 break
             // Toggle admin.
             case 'm':

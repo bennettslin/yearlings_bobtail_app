@@ -47,13 +47,13 @@ const AlbumView = ({
     selectedTipsIndex,
     selectedTimePlayed,
     showSingleLyricColumn,
-    isHome,
+    isPrologue,
     isFirstSong,
     isLastSong,
-    isFin,
+    isEpilogue,
     isFirstVerse,
     isLastVerse,
-    audioSongTitle,
+    selectedSongTitle,
     onSongClick,
     onVerseClick,
     onPlayClick,
@@ -81,13 +81,13 @@ const AlbumView = ({
             />
             <AudioSection
                 isAdmin={true}
-                isHome={isHome}
+                isPrologue={isPrologue}
                 isFirstSong={isFirstSong}
                 isLastSong={isLastSong}
-                isFin={isFin}
+                isEpilogue={isEpilogue}
                 isFirstVerse={isFirstVerse}
                 isLastVerse={isLastVerse}
-                audioSongTitle={audioSongTitle}
+                selectedSongTitle={selectedSongTitle}
                 selectedSongIndex={selectedSongIndex}
                 isPlaying={isPlaying}
                 selectedTimePlayed={selectedTimePlayed}
@@ -109,6 +109,7 @@ const AlbumView = ({
                 deviceWidth={deviceWidth}
                 windowWidth={windowWidth}
                 windowHeight={windowHeight}
+                selectedSongIndex={selectedSongIndex}
                 selectedVerseIndex={selectedVerseIndex}
                 showSingleLyricColumn={showSingleLyricColumn}
                 onScreenWidthClick={onScreenWidthClick}

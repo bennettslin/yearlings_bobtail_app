@@ -38,10 +38,12 @@ export const prepareAlbumData = (album = {}) => {
 
 const _addWikiAndPortalIndices = (album) => {
     album.songs.forEach((song, songIndex) => {
-        _tempStore._annotations = song.annotations
-        _tempStore._finalAnnotationIndex = 0
+        if (!song.logue) {
+            _tempStore._annotations = song.annotations
+            _tempStore._finalAnnotationIndex = 0
 
-        _parseLyrics(song.lyrics, true)
+            _parseLyrics(song.lyrics, true)
+        }
     })
 }
 
@@ -67,39 +69,41 @@ const _markSideStanzas = (lyrics) => {
 const _prepareAllSongs = (album) => {
     album.songs.forEach((song, songIndex) => {
 
-        // Song indices start at 1.
-        _tempStore._songIndex = songIndex + 1
-        _tempStore._annotations = []
-        _tempStore._verseIndexCounter = -1
-        _tempStore._songDotKeys = {}
-        _tempStore._songTimes = []
-        _tempStore._currentAnnotationIndices = []
-        _tempStore._firstRightAnnotationIndexOfVerse = 0
-        _tempStore._hasSideStanzas = false
-        _tempStore._isDoublespeaker = false
+        if (!song.logue) {
+            // Song indices start at 1.
+            _tempStore._songIndex = songIndex + 1
+            _tempStore._annotations = []
+            _tempStore._verseIndexCounter = -1
+            _tempStore._songDotKeys = {}
+            _tempStore._songTimes = []
+            _tempStore._currentAnnotationIndices = []
+            _tempStore._firstRightAnnotationIndexOfVerse = 0
+            _tempStore._hasSideStanzas = false
+            _tempStore._isDoublespeaker = false
 
-        _addTitleToLyrics(song.title, song.lyrics)
-        // Do not confuse anchor key with string prototype anchor method.
-        if (typeof song.title.anchor !== 'function') {
-            song.title = song.title.anchor
+            _addTitleToLyrics(song.title, song.lyrics)
+            // Do not confuse anchor key with string prototype anchor method.
+            if (typeof song.title.anchor !== 'function') {
+                song.title = song.title.anchor
+            }
+
+            _markSideStanzas(song.lyrics)
+            // Only applies to "On a Golden Cord" and "Uncanny Valley Boy."
+            song.hasSideStanzas = _tempStore._hasSideStanzas
+
+            _parseLyrics(song.lyrics)
+            song.isDoublespeaker = _tempStore._isDoublespeaker
+
+            // Add annotations to song object.
+            song.annotations = _tempStore._annotations
+            song.annotationsDotKeys = getAnnotationsDotKeys({ selectedSong: song })
+
+            // Add available dots to song object.
+            song.dotKeys = _tempStore._songDotKeys
+
+            // Add times for all verses to song object.
+            song.times = _tempStore._songTimes
         }
-
-        _markSideStanzas(song.lyrics)
-        // Only applies to "On a Golden Cord" and "Uncanny Valley Boy."
-        song.hasSideStanzas = _tempStore._hasSideStanzas
-
-        _parseLyrics(song.lyrics)
-        song.isDoublespeaker = _tempStore._isDoublespeaker
-
-        // Add annotations to song object.
-        song.annotations = _tempStore._annotations
-        song.annotationsDotKeys = getAnnotationsDotKeys({ selectedSong: song })
-
-        // Add available dots to song object.
-        song.dotKeys = _tempStore._songDotKeys
-
-        // Add times for all verses to song object.
-        song.times = _tempStore._songTimes
     })
 }
 

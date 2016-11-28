@@ -47,13 +47,13 @@ const AudioSectionView = ({
     isPlaying,
     selectedTimePlayed,
     selectedAudioOptionIndex,
-    isHome,
+    isPrologue,
     isFirstSong,
     isLastSong,
-    isFin,
+    isEpilogue,
     isFirstVerse,
     isLastVerse,
-    audioSongTitle,
+    selectedSongTitle,
     onPlayClick,
     onAudioOptionClick,
 
@@ -70,20 +70,18 @@ const AudioSectionView = ({
         className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
         {isAdmin ? <h2>audio</h2> : null}
-        {!isHome && !isFin ?
-            <div className="audio-banner-block">
-                {audioSongTitle} - {getFormattedTime(selectedTimePlayed)}
-            </div> : null
-        }
+        <div className="audio-banner-block">
+            {selectedSongTitle}{!isPrologue && !isEpilogue ? ': ' + getFormattedTime(selectedTimePlayed) : ''}
+        </div>
         <div className="audio-button-block">
             <a
-                className={isHome ? '' : 'enabled'}
+                className={isPrologue ? '' : 'enabled'}
                 onClick={onPreviousSongClick}
             >
-                {isHome || isFirstSong ? '\u2302' : '\u21E4'}
+                {isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
             </a>
             <a
-                className={isHome || isFin || isFirstVerse ? '' : 'enabled'}
+                className={isPrologue || isEpilogue || isFirstVerse ? '' : 'enabled'}
                 onClick={onRewindClick}
             >
                 {'\u23EA'}
@@ -95,16 +93,16 @@ const AudioSectionView = ({
                 {isPlaying ? '\u23F8' : '\u25BA' }
             </a>
             <a
-                className={isHome || isFin || isLastVerse ? '' : 'enabled'}
+                className={isPrologue || isEpilogue || isLastVerse ? '' : 'enabled'}
                 onClick={onFastForwardClick}
             >
                 {'\u23E9'}
             </a>
             <a
-                className={isFin ? '' : 'enabled'}
+                className={isEpilogue ? '' : 'enabled'}
                 onClick={onNextSongClick}
             >
-                {isFin || isLastSong ? '\u2302' : '\u21E5'}
+                {isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
             </a>
             <a
                 className="enabled"

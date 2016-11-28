@@ -42,7 +42,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable } from 'helpers/album-view-helper'
 import { resizeWindow } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -267,7 +267,7 @@ class App extends Component {
         if (direction) {
             selectedSongIndex = this.props.selectedSongIndex + direction
 
-            if (selectedSongIndex < 0 || selectedSongIndex > this.props.songs.length + 1) {
+            if (selectedSongIndex < 0 || selectedSongIndex > this.props.songs.length - 1) {
                 return
             }
         }
@@ -717,8 +717,7 @@ class App extends Component {
                     case NAV_SECTION:
                         newState = AccessHelper.handleSongAccess({
                             keyName,
-                            // Include options of beginning and end.
-                            songsLength: this.props.songs.length + 2,
+                            songsLength: this.props.songs.length,
                             accessedSongIndex: this.state.accessedSongIndex,
                             selectSong: this.selectSong
                         })
@@ -871,11 +870,13 @@ class App extends Component {
             songTimes = getSongTimes(props),
             showSingleLyricColumn = getShowSingleLyricColumn(props, state),
             isLyricExpandable = getIsLyricExpandable(state),
-            isHome = selectedSongIndex === 0,
+            isPrologue = selectedSongIndex === 0,
             isFirstSong = selectedSongIndex === 1,
-            isLastSong = selectedSongIndex === songs.length,
-            isFin = selectedSongIndex === songs.length + 1,
-            audioSongTitle = selectedSongIndex && selectedSongIndex <= songs.length ? `${selectedSongIndex}. ${songs[selectedSongIndex - 1].title}` : null,
+            isLastSong = selectedSongIndex === songs.length - 2,
+            isEpilogue = selectedSongIndex === songs.length - 1,
+
+            selectedSongTitle = getSongTitle(props, isPrologue || isEpilogue),
+
             lyricsStartAtZero = getLyricsStartAtZero(props),
             isFirstVerse = selectedVerseIndex === (lyricsStartAtZero ? 1 : 0),
             isLastVerse = selectedVerseIndex === songTimes.length - 1
@@ -896,14 +897,14 @@ class App extends Component {
                     onClick={this.toggleAdmin}
                 />
                 <Switch {...this.props} {...this.state}
-                    isHome={isHome}
+                    isPrologue={isPrologue}
                     isFirstSong={isFirstSong}
                     isLastSong={isLastSong}
-                    isFin={isFin}
+                    isEpilogue={isEpilogue}
                     lyricsStartAtZero={lyricsStartAtZero}
                     isFirstVerse={isFirstVerse}
                     isLastVerse={isLastVerse}
-                    audioSongTitle={audioSongTitle}
+                    selectedSongTitle={selectedSongTitle}
                     accessedSectionKey={accessedSectionKey}
                     nextSectionKey={nextSectionKey}
                     showSingleLyricColumn={showSingleLyricColumn}

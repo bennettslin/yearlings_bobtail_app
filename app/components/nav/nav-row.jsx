@@ -1,6 +1,7 @@
 import React from 'react'
 import ProgressBar from '../admin/progress/progress-bar'
 import ProgressHelper from 'helpers/progress-helper'
+import { getSongTitle } from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *
@@ -15,7 +16,8 @@ const NavRow = ({
 
 ...other }) => {
 
-    const songTitle = song.title,
+    const isLogue = song.logue,
+        songTitle = getSongTitle({ song, songIndex }, isLogue),
         sumTask = ProgressHelper.calculateSumTask(song.tasks),
         onClick = e => onSongClick(e, songIndex)
 
@@ -59,7 +61,7 @@ const NavRowView = ({
                 className="text-cell text enabled"
                 onClick={onClick}
             >
-                {`${songIndex}. ${songTitle}`}
+                {songTitle}
             </a>
             <span className="text-cell figure">
                 {sumTask.workedHours}/{sumTask.neededHours}h

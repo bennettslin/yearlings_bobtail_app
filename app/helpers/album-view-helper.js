@@ -28,8 +28,14 @@ const _parseLyrics = (lyric, selectedVerseIndex) => {
 }
 
 export const getSong = ({ selectedSongIndex, songs }) => {
-    return selectedSongIndex && selectedSongIndex <= songs.length ?
-        songs[selectedSongIndex - 1] : {}
+    return songs[selectedSongIndex]
+}
+
+export const getSongTitle = (props, isLogue) => {
+    const songIndex = props.songIndex || props.selectedSongIndex,
+        song = props.song || props.songs[songIndex]
+
+    return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
 }
 
 export const getLyricsStartAtZero = (props, selectedSongIndex) => {
