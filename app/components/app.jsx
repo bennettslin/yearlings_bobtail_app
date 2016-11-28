@@ -113,7 +113,7 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            isAdmin: true,
+            isAdmin: false,
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
@@ -194,7 +194,13 @@ class App extends Component {
 
     _closePopupIfOpen(accessOff) {
         const { selectedAnnotationIndex,
-                selectedWikiIndex } = this.props
+                selectedWikiIndex,
+                selectedOverviewIndex } = this.props
+
+        // Hide overview.
+        if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
+            this.selectOverview(undefined, undefined, HIDDEN)
+        }
 
         // If there is a popup, close it.
         if (selectedAnnotationIndex) {
