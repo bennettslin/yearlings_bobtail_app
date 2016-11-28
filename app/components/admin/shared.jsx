@@ -5,7 +5,7 @@ import OverviewSection from '../overview/overview-section'
 import StatsSection from './stats/stats-section'
 import StageSection from '../stage/stage-section'
 import TasksSection from './tasks/tasks-section'
-import { getSong, getTasks, getOverviewText } from 'helpers/album-view-helper'
+import { getSong, getTasks } from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *

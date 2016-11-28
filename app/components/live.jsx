@@ -10,7 +10,7 @@ import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
 import LyricColumn from './lyric-column'
-import { getSong, getAnnotation, getOverviewText, getWikiUrl } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
 import { PHONE_WIDTH_OBJECT } from 'helpers/constants'
 
 /*************

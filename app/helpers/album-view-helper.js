@@ -409,8 +409,3 @@ export const getWikiUrl = (props) => {
         return null
     }
 }
-
-export const getOverviewText = (props) => {
-    const songOverview = getSong(props).overview
-    return songOverview || props.overview
-}
