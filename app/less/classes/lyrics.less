@@ -16,11 +16,13 @@
     bottom: 0;
     display: flex;
     justify-content: center;
-    .transition(height 0.2s ease);
 
-    &.expandable {
-        width: 100%;
-    }
+    background-color: #88d;
+
+    // TODO: This hides the accessed section highlighting, which is fine, since it's temporary anyway.
+    overflow: hidden;
+
+    .transition(height 0.2s ease);
 
     .button-block {
         position: absolute;
@@ -43,27 +45,50 @@
     right: 16px;
 }
 
+.monitor-width, .laptop-width {
+
+    // TODO: Needs a better animation for hiding lyric column in logue for monitor and laptop widths.
+    .lyric-column {
+        height: 100%;
+    }
+
+    .is-logue {
+        .lyric-column {
+            width: 0;
+        }
+    }
+}
+
 .tablet-width, .mini-width, .phone-width {
 
     .lyric-column {
         position: absolute;
+        width: 100%;
 
-        &.expandable {
-            height: @collapsed-lyric-section-height;
-        }
+        height: @collapsed-lyric-section-height;
     }
 
     .lyric-expanded {
-        .lyric-column {
-            height: ~"calc(100% - @{menu-height-mini-tablet})";
+        &:not(.is-logue) {
+            .lyric-column {
+                height: ~"calc(100% - @{menu-height-mini-tablet})";
+            }
         }
     }
 
     &.phone-width {
         .lyric-expanded {
-            .lyric-column {
-                height: ~"calc(100% - @{menu-height-phone})";
+            &:not(.is-logue) {
+                .lyric-column {
+                    height: ~"calc(100% - @{menu-height-phone})";
+                }
             }
         }
+    }
+}
+
+.is-logue {
+    .lyric-column {
+        height: 0;
     }
 }

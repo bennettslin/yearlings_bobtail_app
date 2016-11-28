@@ -20,11 +20,12 @@ const LyricColumn = ({
     showEarButton = showSingleLyricColumn && hasDoubleColumns,
     earButtonText = selectedLyricColumnIndex === 0 ? 'left' : 'right'
 
-    return selectedSongIndex ?
+    return (
         <LyricColumnView {...other}
             showEarButton={showEarButton}
             earButtonText={earButtonText}
-        /> : null
+        />
+    )
 }
 
 /****************

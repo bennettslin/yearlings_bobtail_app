@@ -26,6 +26,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    .transition(height 0.2s ease);
 }
 
 .field {
@@ -90,6 +92,12 @@
     .main-column {
         width: 100%;
         height: 100% - @collapsed-lyric-section-height;
+    }
+
+    .is-logue {
+        .main-column {
+            height: 100%;
+        }
     }
 
     .menu-field {
