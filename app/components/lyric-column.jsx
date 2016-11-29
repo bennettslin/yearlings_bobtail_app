@@ -45,7 +45,7 @@ const LyricColumnView = ({
     earButtonText,
 
 ...other }) => (
-    <div className={`lyric-column${isLyricExpandable ? ' expandable' : ''}`}>
+    <div className="lyric-column">
         {isLyricExpandable ?
             <div className="button-block expand-button-block">
                 <a

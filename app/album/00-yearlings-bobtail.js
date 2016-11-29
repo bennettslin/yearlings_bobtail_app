@@ -122,16 +122,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `make interactable superclass`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `create dot tooltips`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `"problem with indie" in footer`,
             workedHours: 0,
             neededHours: 8
@@ -142,7 +132,7 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `progressive tooltips`,
+            taskName: `progressive tips`,
             workedHours: 0,
             neededHours: 8
         },
@@ -757,6 +747,11 @@ module.exports = {
             taskName: `make prologue and epilogue options possible, with layout`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `create dot tooltips`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
