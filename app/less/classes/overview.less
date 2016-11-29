@@ -13,7 +13,7 @@
 @overview-toggle-phone-width: @overview-toggle-width / 3;
 @overview-toggle-phone-height: @overview-toggle-height / 3;
 
-@toggle-animation-duration: 0.9s;
+@toggle-animation-duration: 0.2s;
 
 // In main field.
 .overview-subfield {
@@ -30,9 +30,6 @@
     display: flex;
 }
 
-
-// FIXME: It would be ideal for only the overview toggle to animate left, while the song speech bubble stays put. Because ideally it should be the same speech bubble for both logue and song, that just moves to a new position.
-// In main field.
 .overview-logue-subfield {
     position: absolute;
 
@@ -67,27 +64,24 @@
 
     // Ensure toggle button is above popup container.
     z-index: 1;
-
-    border: 1px solid orange;
 }
 
-.overview-toggle-button {
+// Animated container for toggle button.
+.overview-toggle-button-container {
     position: absolute;
     width: 100%;
     height: @overview-toggle-height;
 
-    // FIXME: Positioning works, but animation doesn't work?!
-    .transition(right @toggle-animation-duration ease);
-    right: 0;
+    .transition(margin @toggle-animation-duration ease);
+    margin-left: 0;
 
-    // Temporary.
-    background-color: #88d;
+    background-color: #d84;
 }
 
 // Hidden to left when is logue.
 .is-logue {
-    .overview-toggle-button:not(.in-popup) {
-        right: 100%;
+    .overview-toggle-button-container:not(.in-popup) {
+        margin-left: ~"calc(-100% - @{overview-subfield-margin})"
     }
 }
 
@@ -127,7 +121,7 @@
     }
 
     // Overview is at the top in desktop.
-    .overview-toggle-button, .overview.popup-content-wrapper {
+    .overview-toggle-button-container, .overview.popup-content-wrapper {
         top: 0;
     }
 
@@ -147,8 +141,8 @@
 
     // Hidden to left when lyric expanded.
     .lyric-expanded {
-        .overview-toggle-button:not(.in-popup) {
-            right: 100%;
+        .overview-toggle-button-container:not(.in-popup) {
+            margin-left: ~"calc(-100% - @{overview-subfield-margin})"
         }
     }
 
@@ -167,15 +161,15 @@
         width: @overview-toggle-tablet-width;
     }
 
-    .overview-toggle-button {
+    .overview-toggle-button-container {
         height: @overview-toggle-tablet-height;
     }
 
     &.phone-width {
         // Hidden to left when overview is shown.
         .overview-shown {
-            .overview-toggle-button:not(.in-popup) {
-                right: 100%;
+            .overview-toggle-button-container:not(.in-popup) {
+                margin-left: ~"calc(-100% - @{overview-subfield-margin})"
             }
         }
 
@@ -194,11 +188,11 @@
             height: @overview-toggle-phone-height;
         }
 
-        .overview-toggle-button {
+        .overview-toggle-button-container {
             height: @overview-toggle-phone-height;
         }
 
-        .overview-toggle-button, .overview.popup-content-wrapper {
+        .overview-toggle-button-container, .overview.popup-content-wrapper {
             min-width: 100%;
         }
 
