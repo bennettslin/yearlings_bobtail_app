@@ -11,7 +11,7 @@ import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
 import LyricColumn from './lyric-column'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { PHONE_WIDTH_OBJECT } from 'helpers/constants'
+import { PHONE_WIDTH_OBJECT, SHOWN } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -79,6 +79,8 @@ const LiveView = ({
     showSingleLyricColumn,
     isLyricExpanded,
     isLyricExpandable,
+    isOverviewShown,
+
     isPrologue,
     isFirstSong,
     isLastSong,
@@ -177,7 +179,12 @@ const LiveView = ({
             onAudioTimeClick: onVerseClick,
             onAudioOptionClick
         },
+        overviewToggleSectionProps = {
+            selectedOverviewIndex,
+            onOverviewClick
+        },
         overviewPopupProps = {
+            deviceWidth,
             isLogue,
             hideClose: true,
             selectedOverviewIndex,
@@ -218,7 +225,7 @@ const LiveView = ({
         }
 
     return (
-        <div className={`live-window${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ''}`}>
+        <div className={`live-window${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ''}${isOverviewShown ? ' overview-shown' : ''}`}>
             {false ?
                 <TipsSection {...tipsSectionProps} /> : null
             }
@@ -242,12 +249,9 @@ const LiveView = ({
                             />
                     </div>
                     <div className="subfield overview-subfield">
-                        <OverviewToggleSection {...other}
-                            selectedOverviewIndex={selectedOverviewIndex}
-                            onOverviewClick={onOverviewClick}
-                        />
+                        <OverviewToggleSection {...overviewToggleSectionProps} />
                         <div className="overview-popup-container">
-                                <OverviewPopup {...overviewPopupProps}
+                                <OverviewPopup {...overviewPopupProps} {...overviewToggleSectionProps}
                                     inOverviewSubfield={true}
                                 />
                         </div>

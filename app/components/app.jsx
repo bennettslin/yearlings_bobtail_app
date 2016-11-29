@@ -867,7 +867,8 @@ class App extends Component {
             nextSectionKey = AccessHelper.getNextSectionKey(props),
             { songs,
               selectedSongIndex,
-              selectedVerseIndex } = props,
+              selectedVerseIndex,
+              selectedOverviewIndex } = props,
             { isAdmin,
               deviceWidth,
               windowWidth,
@@ -876,6 +877,8 @@ class App extends Component {
             songTimes = getSongTimes(props),
             showSingleLyricColumn = getShowSingleLyricColumn(props, state),
             isLyricExpandable = getIsLyricExpandable(state),
+            isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
+
             isPrologue = selectedSongIndex === 0,
             isFirstSong = selectedSongIndex === 1,
             isLastSong = selectedSongIndex === songs.length - 2,
@@ -915,6 +918,7 @@ class App extends Component {
                     nextSectionKey={nextSectionKey}
                     showSingleLyricColumn={showSingleLyricColumn}
                     isLyricExpandable={isLyricExpandable}
+                    isOverviewShown={isOverviewShown}
                     onSongClick={this.selectSong}
                     onPortalClick={this.selectPortal}
                     onWikiUrlClick={this.selectWiki}

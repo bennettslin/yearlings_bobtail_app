@@ -177,9 +177,8 @@
 
     &.phone-width {
 
-        // Hidden to left when lyric expanded.
-        // FIXME: This won't be needed once toggle is embedded in popup.
-        .lyric-expanded, .is-logue {
+        // Hidden to left when overview is shown.
+        .is-logue, .lyric-expanded, .overview-shown {
             .overview-subfield {
                 left: -@overview-toggle-phone-width - @overview-subfield-margin;
             }
@@ -187,6 +186,12 @@
 
         .overview-subfield {
             flex-direction: column-reverse;
+
+            .overview-popup-container {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
         }
 
         .overview-toggle-section {
@@ -195,7 +200,6 @@
         }
 
         .overview-toggle-button {
-            // FIXME: Sometimes the text is still too large for certain phone heights.
             height: @overview-toggle-phone-height;
         }
 
@@ -206,7 +210,6 @@
         .is-song {
             .overview.popup-content-wrapper {
                 margin-left: 0;
-                margin-bottom: 25px;
             }
         }
     }

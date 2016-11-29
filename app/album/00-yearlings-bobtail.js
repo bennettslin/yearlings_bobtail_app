@@ -752,6 +752,11 @@ module.exports = {
             taskName: `create dot tooltips`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `animate nav field when lyric column is expanded`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
