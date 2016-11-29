@@ -89,8 +89,6 @@
 .overview-popup-container {
     position: relative;
     flex-grow: 1;
-
-    border: 1px solid green;
 }
 
 .overview {
@@ -131,7 +129,7 @@
             width: @overview-toggle-laptop-width;
         }
 
-        .overview-toggle-button {
+        .overview-toggle-button-container {
             height: @overview-toggle-laptop-height;
         }
     }
@@ -153,7 +151,7 @@
     }
 
     // Overview is at the bottom in mobile.
-    .overview-toggle-button, .overview.popup-content-wrapper {
+    .overview-toggle-button-container, .overview.popup-content-wrapper {
         bottom: 0;
     }
 
