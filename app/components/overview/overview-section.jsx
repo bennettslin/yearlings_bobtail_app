@@ -37,7 +37,9 @@ const OverviewSectionView = ({
             />
         </div>
         {!isAdmin && deviceWidth === PHONE_WIDTH_OBJECT.className ?
-            <OverviewToggleSection {...other} /> : null
+            <OverviewToggleSection {...other}
+                inPopup={true}
+            /> : null
         }
     </div>
 )

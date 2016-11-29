@@ -20,6 +20,7 @@ const OverviewToggleSection = (props) => {
 const OverviewToggleSectionView = ({
 
     // From props.
+    inPopup,
     selectedOverviewIndex,
 
     // From controller.
@@ -29,7 +30,7 @@ const OverviewToggleSectionView = ({
     <div
         className="section overview-toggle-section"
     >
-        <a className="overview-toggle-button enabled" onClick={onOverviewClick}>{OVERVIEW_OPTIONS[selectedOverviewIndex]}</a>
+        <a className={`overview-toggle-button enabled${inPopup ? ' in-popup' : ''}`} onClick={onOverviewClick}>{OVERVIEW_OPTIONS[selectedOverviewIndex]}</a>
     </div>
 )
 
