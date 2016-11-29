@@ -113,7 +113,7 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            isAdmin: true,
+            isAdmin: false,
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
