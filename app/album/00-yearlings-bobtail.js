@@ -62,11 +62,6 @@ module.exports = {
             neededHours: 5
         },
         {
-            taskName: `Embed toggle button in overview for phone.`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `setDOMWidth method doesn't work on reload and device width change`,
             workedHours: 0,
             neededHours: 1
@@ -757,6 +752,11 @@ module.exports = {
             taskName: `animate nav field when lyric column is expanded`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `Embed toggle button in overview for phone.`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

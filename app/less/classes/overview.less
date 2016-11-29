@@ -73,12 +73,12 @@
 
 .overview-toggle-button {
     position: absolute;
-    // display: block;
     width: 100%;
     height: @overview-toggle-height;
 
     // FIXME: Positioning works, but animation doesn't work?!
     .transition(right @toggle-animation-duration ease);
+    right: 0;
 
     // Temporary.
     background-color: #88d;
