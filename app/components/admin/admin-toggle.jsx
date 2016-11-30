@@ -19,6 +19,7 @@ const AdminToggleView = ({
 
     // From props.
     isAdmin,
+    isLyricExpanded,
     deviceWidth,
     windowWidth,
     windowHeight,
@@ -32,6 +33,9 @@ const AdminToggleView = ({
         >
             {isAdmin ? 'Admin' : 'Live'}
         </a>
+        <div>
+            {isLyricExpanded ? 'expanded' : 'collapsed'}
+        </div>
         <div>
             {deviceWidth}
         </div>

@@ -31,6 +31,10 @@ export const getSong = ({ selectedSongIndex, songs }) => {
     return songs[selectedSongIndex]
 }
 
+export const getIsLogue = ({ selectedSongIndex, songs }) => {
+    return selectedSongIndex === 0 || selectedSongIndex === songs.length - 1
+}
+
 export const getSongTitle = (props, isLogue) => {
     const songIndex = props.songIndex || props.selectedSongIndex,
         song = props.song || props.songs[songIndex]

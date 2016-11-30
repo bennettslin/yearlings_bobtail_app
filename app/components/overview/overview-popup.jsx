@@ -14,7 +14,9 @@ class OverviewPopup extends Popup {
     }
 
     getContentElement() {
-        return !this.props.selectedOverviewIndex && (this.props.isLogue ? !this.props.inOverviewSubfield : this.props.inOverviewSubfield) ?
+        let showPopup = this.props.isLogue ? !this.props.inOverviewSubfield : (!this.props.selectedOverviewIndex ? this.props.inOverviewSubfield : false)
+
+        return showPopup ?
             <OverviewSection {...this.props}
                 inPopup={true}
             /> : null

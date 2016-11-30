@@ -42,7 +42,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable } from 'helpers/album-view-helper'
 import { resizeWindow } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -143,7 +143,9 @@ class App extends Component {
      ***********/
 
     windowResize(e, adminToggle) {
-        this.setState(resizeWindow(e ? e.target : undefined, adminToggle ? this.state.deviceWidth : undefined))
+        const resizedWindowObject = resizeWindow(e ? e.target : undefined, adminToggle ? this.state.deviceWidth : undefined)
+
+        this.setState(resizedWindowObject)
     }
 
     _bindEventHandlers() {
@@ -278,9 +280,9 @@ class App extends Component {
             }
         }
 
-        // Show overview unless disabled.
+        // Show overview if it's not disabled.
         if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED) {
-            this.selectOverview(undefined, 0)
+            this.selectOverview(undefined, undefined, SHOWN)
         }
 
         this.props.selectSongIndex(selectedSongIndex)
@@ -321,12 +323,29 @@ class App extends Component {
         this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
     }
 
+    selectLyricExpand(e, isLyricExpanded = !this.state.isLyricExpanded) {
+        // Don't bother if lyric is not expandable, or if it's a logue.
+        if (getIsLyricExpandable(this.state) && !getIsLogue(this.props)) {
+            this.setState({
+                isLyricExpanded
+            })
+
+            // Hide overview if shown.
+            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+                this.selectOverview(undefined, undefined, HIDDEN)
+            }
+        }
+    }
+
     selectOverview(e, selectedOverviewIndex, selectedOverviewKey) {
 
         this._stopPropagation(e)
 
-        // Overview cannot be shown while lyric column is expanded.
-        if (this.state.isLyricExpanded) {
+        /**
+         * User cannot change overview option if lyric is expanded in an
+         * expanded width, or if it's a logue.
+         */
+        if ((getIsLyricExpandable(this.state) && this.state.isLyricExpanded) || getIsLogue(this.props)) {
             return
         }
 
@@ -584,20 +603,6 @@ class App extends Component {
         this.setState({
             showSingleLyricColumnInAdmin: !this.state.showSingleLyricColumnInAdmin
         })
-    }
-
-    selectLyricExpand(e, isLyricExpanded = !this.state.isLyricExpanded) {
-        // Don't bother if lyric is not expandable.
-        if (getIsLyricExpandable(this.state)) {
-            this.setState({
-                isLyricExpanded
-            })
-
-            // Hide overview if shown.
-            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                this.selectOverview(undefined, undefined, HIDDEN)
-            }
-        }
     }
 
     selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2) {
@@ -900,6 +905,7 @@ class App extends Component {
             >
                 <AdminToggle
                     isAdmin={isAdmin}
+                    isLyricExpanded={this.state.isLyricExpanded}
                     deviceWidth={deviceWidth}
                     windowWidth={windowWidth}
                     windowHeight={windowHeight}
