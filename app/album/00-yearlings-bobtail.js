@@ -57,6 +57,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `toggle min and max device widths`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `style nav section and accommodate beginning and final options`,
             workedHours: 0,
             neededHours: 5
