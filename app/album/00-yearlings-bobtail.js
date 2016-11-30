@@ -57,11 +57,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `make text wrap around toggle in overview in phone.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `style nav section and accommodate beginning and final options`,
             workedHours: 0,
             neededHours: 5
@@ -762,6 +757,16 @@ module.exports = {
             taskName: `Embed toggle button in overview for phone.`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `strategically disable and show overview, nav, lyric expansion`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `make text wrap around toggle in overview in phone.`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

@@ -234,6 +234,12 @@ const LiveView = ({
             {false ?
                 <DotsSection {...dotsSectionProps} /> : null
             }
+            {/* Ideal for song and logue to not be in separate overview subfields. */}
+            <div className="subfield overview-logue-subfield">
+                    <OverviewPopup {...overviewPopupProps}
+                        inOverviewSubfield={false}
+                    />
+            </div>
             <div className="main-column">
                 <div className="field menu-field">
                     {!isPhone ?
@@ -242,12 +248,6 @@ const LiveView = ({
                     <AudioSection {...audioSectionProps} />
                 </div>
                 <div className="field main-field">
-                    {/* Ideal for song and logue to not be in separate overview subfields. */}
-                    <div className="subfield overview-logue-subfield">
-                            <OverviewPopup {...overviewPopupProps}
-                                inOverviewSubfield={false}
-                            />
-                    </div>
                     <div className="subfield overview-subfield">
                         <OverviewToggleSection {...overviewToggleSectionProps} />
                         <div className="overview-popup-container">

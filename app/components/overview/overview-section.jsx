@@ -32,16 +32,16 @@ const OverviewSectionView = ({
     >
         {isAdmin ? <h2>overview</h2> : null}
         <div className="overview-text">
+        {!isLogue && !isAdmin && deviceWidth === PHONE_WIDTH_OBJECT.className ?
+            <OverviewToggleSection {...other}
+            inPopup={true}
+            /> : null
+        }
             <TextBlock
                 isLyric={false}
                 text={overviewText}
             />
         </div>
-        {!isLogue && !isAdmin && deviceWidth === PHONE_WIDTH_OBJECT.className ?
-            <OverviewToggleSection {...other}
-                inPopup={true}
-            /> : null
-        }
     </div>
 )
 
