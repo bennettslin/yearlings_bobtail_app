@@ -229,8 +229,6 @@ const LiveView = ({
             {false ?
                 <TipsSection {...tipsSectionProps} /> : null
             }
-            <AnnotationPopup {...annotationPopupProps} />
-            <WikiPopup {...wikiPopupProps} />
             {false ?
                 <DotsSection {...dotsSectionProps} /> : null
             }
@@ -248,6 +246,16 @@ const LiveView = ({
                     <AudioSection {...audioSectionProps} />
                 </div>
                 <div className="field main-field">
+                    <StageSection
+                    />
+                    <div className="field popup-field">
+                        <div className="subfield annotation-subfield">
+                            <AnnotationPopup {...annotationPopupProps} />
+                        </div>
+                        <div className="subfield wiki-subfield">
+                            <WikiPopup {...wikiPopupProps} />
+                        </div>
+                    </div>
                     <div className="subfield overview-subfield">
                         <OverviewToggleSection {...overviewToggleSectionProps} />
                         <div className="overview-popup-container">
@@ -256,8 +264,6 @@ const LiveView = ({
                                 />
                         </div>
                     </div>
-                    <StageSection
-                    />
                 </div>
                 {!isPhone ?
                     <div className="field nav-field">

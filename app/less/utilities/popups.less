@@ -9,11 +9,52 @@
     .popup-content-wrapper {
         left: -@overflow-margin-width - @field-width - @field-padding;
         width: @field-width + (@overflow-margin-width * 2);
+
+        &.annotation {
+            top: 5vh;
+            max-height: 40vh;
+        }
+
+        &.wiki {
+            top: 50vh;
+            height: 45vh;
+        }
     }
 
     .popup-transition-group {
         position: fixed;
         z-index: 1;
+    }
+}
+
+.popup-field {
+    border: 2px solid green;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .subfield {
+        position: relative;
+    }
+
+    // Experimental values for now.
+    .annotation-subfield {
+        height: 33%;
+    }
+
+    .wiki-subfield {
+        height: 67%;
+    }
+
+    .popup-transition-group {
+        position: absolute;
+        border: 2px solid red;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -44,16 +85,6 @@
     position: absolute;
     background-color: white;
     box-shadow: -2px 2px 8px 8px @box-shadow-colour;
-
-    &.annotation {
-        top: 5vh;
-        max-height: 40vh;
-    }
-
-    &.wiki {
-        top: 50vh;
-        height: 45vh;
-    }
 
     .button {
         position: absolute;
