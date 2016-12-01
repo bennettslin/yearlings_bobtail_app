@@ -4,11 +4,6 @@
         width: 100%;
         overflow-y: scroll;
         padding: 0 5px;
-
-        // FIXME: This should be the same width as the breakpoint where tablet becomes mini.
-        &.single-column {
-            max-width: 720px;
-        }
     }
 }
 
@@ -50,6 +45,11 @@
     // TODO: Needs a better animation for hiding lyric column in logue for monitor and laptop widths.
     .lyric-column {
         height: 100%;
+    }
+
+    // FIXME: This should be the same width as the breakpoint where tablet becomes mini.
+    .single-column {
+        max-width: 720px;
     }
 
     .is-logue {

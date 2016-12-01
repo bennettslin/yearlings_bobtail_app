@@ -40,7 +40,7 @@ const LYRIC = 'lyric',
     // TODO: Make sure these maxWidths are right.
     PHONE_WIDTH_OBJECT = {className: 'phone-width', maxWidth: 500},
     MINI_WIDTH_OBJECT = {className: 'mini-width', maxWidth: 720},
-    TABLET_WIDTH_OBJECT = {className: 'tablet-width', maxWidth: 900},
+    TABLET_WIDTH_OBJECT = {className: 'tablet-width', maxWidth: 1100},
     LAPTOP_WIDTH_OBJECT = {className: 'laptop-width', maxWidth: 1400},
     MONITOR_WIDTH_OBJECT = {className: 'monitor-width'}
 
