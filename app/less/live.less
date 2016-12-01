@@ -1,3 +1,10 @@
+@phone-max-width: 500px;
+@mini-max-width: 720px;
+@tablet-max-width: 1100px;
+@laptop-max-width: 1400px;
+
+// Menu width can get as narrow as 380px. (Tablet width's 1100px - lyric column's 720px.)
+
 @collapsed-lyric-section-height: 32%;
 @menu-height-laptop-monitor: 72px;
 @menu-height-mini-tablet: 60px;
@@ -85,7 +92,7 @@
     // For admin device width toggle. Should be the same as in constants.js.
     &.laptop-width {
         .live-window {
-            max-width: 1400px;
+            max-width: @laptop-max-width;
         }
     }
 }
@@ -94,7 +101,7 @@
 
     // For admin device width toggle. Should be the same as in constants.js.
     .live-window {
-        max-width: 1100px;
+        max-width: @tablet-max-width;
     }
 
     .main-column {
@@ -124,7 +131,7 @@
     // For admin device width toggle. Should be the same as in constants.js.
     &.mini-width {
         .live-window {
-            max-width: 720px;
+            max-width: @mini-max-width;
         }
     }
 
@@ -133,7 +140,7 @@
 
         // For admin device width toggle. Should be the same as in constants.js.
         .live-window {
-            max-width: 500px;
+            max-width: @phone-max-width;
         }
 
         .menu-field {
