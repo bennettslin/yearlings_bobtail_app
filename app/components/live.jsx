@@ -50,6 +50,7 @@ const LiveView = ({
     deviceWidth,
     windowWidth,
     windowHeight,
+    bookStartingIndices,
     songs,
     title,
     isPlaying,
@@ -193,6 +194,7 @@ const LiveView = ({
         },
         navSectionProps = {
             songs,
+            bookStartingIndices,
             selectedSongIndex,
             accessedOn,
             accessedSectionKey,

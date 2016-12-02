@@ -1,24 +1,102 @@
-.nav-section {
+.admin {
+    .nav-section {
 
-    .progress-bar-mixin(@song-total-colour, @song-filled-colour);
+        .progress-bar-mixin(@song-total-colour, @song-filled-colour);
+
+        .selected {
+            .progress-bar-mixin(@played-total-colour, @played-filled-colour);
+
+            a.enabled {
+                color: @song-link-colour;
+
+                &:hover {
+                    color: @song-hover-colour;
+                }
+
+                &:active {
+                    color: @song-active-colour;
+                }
+            }
+        }
+
+        .primary-row {
+            line-height: 1em;
+        }
+    }
+}
+
+.live {
+
+    .books-block, .book-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .nav-section {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        overflow: visible;
+
+        border: 1px solid purple;
+    }
+
+    .books-block {
+        position: relative;
+        height: 100%;
+    }
+
+    .book-block {
+        height: 100%;
+    }
+
+    .nav-song {
+        position: relative;
+        width: @nav-height;
+        height: 100%;
+
+        border: 1px solid green;
+    }
+
+    .nav-circle-container {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid cyan;
+    }
+
+    .nav-circle {
+        @nav-circle-diameter: @nav-height / 2;
+        width: @nav-circle-diameter;
+        height: @nav-circle-diameter;
+        background-color: yellow;
+        border-radius: 50%;
+    }
 
     .selected {
-        .progress-bar-mixin(@played-total-colour, @played-filled-colour);
-
-        a.enabled {
-            color: @song-link-colour;
-
-            &:hover {
-                color: @song-hover-colour;
-            }
-
-            &:active {
-                color: @song-active-colour;
-            }
+        .nav-circle {
+            background-color: orange;
         }
     }
 
-    .primary-row {
-        line-height: 1em;
+    .nav-title {
+        position: relative;
+        top: -25%;
+        left: -25%;
+        // bottom: @nav-height;
+
+        // FIXME: Make transform vendor friendly.
+        transform: rotate(315deg);
+        white-space: nowrap;
+
+        border: 1px dotted red;
     }
 }

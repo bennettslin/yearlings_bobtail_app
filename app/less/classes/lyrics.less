@@ -12,7 +12,10 @@
     display: flex;
     justify-content: center;
 
-    // background-color: #88d;
+    // This fixes the issue of being unable to scroll between stanzas.
+    z-index: 0;
+
+    background-color: #88d;
 
     // TODO: This hides the accessed section highlighting, which is fine, since it's temporary anyway.
     overflow: hidden;
@@ -37,7 +40,7 @@
 
 .ear-button-block {
     // Accommodate scrollbar.
-    right: 16px;
+    right: 17px;
 }
 
 .monitor-width, .laptop-width {

@@ -1,6 +1,6 @@
 module.exports = {
     title: `Yearling's Bobtail`,
-    pageStartingIndices: [0, 9],
+    bookStartingIndices: [1, 10],
     songs: [
         {
             // Hi, I'm Bennett. end of my relationship,
