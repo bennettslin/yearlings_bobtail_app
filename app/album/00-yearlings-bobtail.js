@@ -62,9 +62,9 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `style nav section and accommodate beginning and final options`,
+            taskName: `style and animate nav field`,
             workedHours: 0,
-            neededHours: 5
+            neededHours: 8
         },
         {
             taskName: `setDOMWidth method doesn't work on reload and device width change`,
@@ -772,6 +772,11 @@ module.exports = {
             taskName: `make text wrap around toggle in overview in phone.`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `do nav field`,
+            workedHours: 5,
+            neededHours: 5
         }
     ]
 }

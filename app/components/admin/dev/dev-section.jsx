@@ -20,6 +20,8 @@ const DevSectionView = ({
     windowHeight,
     selectedSongIndex,
     selectedVerseIndex,
+    selectedNavIndex,
+    selectedDotsIndex,
     showSingleLyricColumn,
     onScreenWidthClick
 
@@ -31,6 +33,12 @@ const DevSectionView = ({
         </div>
         <div className="row">
             selected verse index: {selectedVerseIndex}
+        </div>
+        <div className="row">
+            selected nav index: {selectedNavIndex}
+        </div>
+        <div className="row">
+            selected dots index: {selectedDotsIndex}
         </div>
         <div className="row">
             window size: {windowWidth} x {windowHeight}

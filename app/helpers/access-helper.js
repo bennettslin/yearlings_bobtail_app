@@ -37,6 +37,8 @@ export default {
         windowResize,
         selectTime,
         selectLyricExpand,
+        selectNavExpand,
+        selectDotsExpand,
         selectedTimePlayed
     }) {
         // These keys will always fire, even if access is off.
@@ -49,6 +51,14 @@ export default {
             case '¾': // For Safari.
             case '.':
                 selectTime(true, selectedTimePlayed + 1)
+                break
+            // Toggle nav expand.
+            case 'v':
+                selectNavExpand()
+                break
+            // Toggle dots expand.
+            case 'y':
+                selectDotsExpand()
                 break
             // Toggle lyric expand.
             case 'x':

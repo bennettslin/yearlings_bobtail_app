@@ -12,6 +12,8 @@ import { selectSongIndex,
          selectLyricColumnIndex,
          selectTipsIndex,
          selectWikiIndex,
+         selectNavIndex,
+         selectDotsIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
 import AdminToggle from './admin/admin-toggle'
@@ -64,6 +66,8 @@ const passReduxStateToProps = ({
     selectedLyricColumnIndex,
     selectedTipsIndex,
     selectedWikiIndex,
+    selectedNavIndex,
+    selectedDotsIndex,
     accessedOn,
     accessedSectionIndex
 }) => ({
@@ -78,6 +82,8 @@ const passReduxStateToProps = ({
     selectedLyricColumnIndex,
     selectedTipsIndex,
     selectedWikiIndex,
+    selectedNavIndex,
+    selectedDotsIndex,
     accessedOn,
     accessedSectionIndex
 })
@@ -95,6 +101,8 @@ const bindDispatchToProps = (dispatch) => (
         selectLyricColumnIndex,
         selectTipsIndex,
         selectWikiIndex,
+        selectNavIndex,
+        selectDotsIndex,
         accessOn,
         accessSectionIndex
     }, dispatch)
@@ -164,6 +172,8 @@ class App extends Component {
         this.selectLyricColumnWidth = this.selectLyricColumnWidth.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
+        this.selectNavExpand = this.selectNavExpand.bind(this)
+        this.selectDotsExpand = this.selectDotsExpand.bind(this)
         this.selectTips = this.selectTips.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
@@ -335,6 +345,24 @@ class App extends Component {
                 this.selectOverview(undefined, undefined, HIDDEN)
             }
         }
+    }
+
+    selectNavExpand(e, selectedNavIndex) {
+        this._stopPropagation(e)
+        if (typeof selectedNavIndex === 'undefined') {
+            selectedNavIndex = (this.props.selectedNavIndex + 1) % 2
+        }
+
+        this.props.selectNavIndex(selectedNavIndex)
+    }
+
+    selectDotsExpand(e, selectedDotsIndex) {
+        this._stopPropagation(e)
+        if (typeof selectedDotsIndex === 'undefined') {
+            selectedDotsIndex = (this.props.selectedDotsIndex + 1) % 2
+        }
+
+        this.props.selectDotsIndex(selectedDotsIndex)
     }
 
     selectOverview(e, selectedOverviewIndex, selectedOverviewKey) {
@@ -695,6 +723,8 @@ class App extends Component {
             windowResize: this.windowResize,
             selectedTimePlayed: this.props.selectedTimePlayed,
             selectLyricExpand: this.selectLyricExpand,
+            selectNavExpand: this.selectNavExpand,
+            selectDotsExpand: this.selectDotsExpand,
             selectTime: this.selectTime
         })) { return }
 
@@ -938,6 +968,8 @@ class App extends Component {
                     onLyricColumnClick={this.selectLyricColumn}
                     onAnnotationSectionClick={this.handleAnnotationSectionClick}
                     onLyricExpandClick={this.selectLyricExpand}
+                    onNavExpandClick={this.selectNavExpand}
+                    onDotsExpandClick={this.selectDotsExpand}
                     onTipsClick={this.selectTips}
                 />
             </div>

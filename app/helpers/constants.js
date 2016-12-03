@@ -117,6 +117,8 @@ module.exports = {
     SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
     SELECTED_LYRIC_COLUMN_INDEX: 'selectedLyricColumnIndex',
     SELECTED_TIPS_INDEX: 'selectedTipsIndex',
+    SELECTED_NAV_INDEX: 'selectedNavIndex',
+    SELECTED_DOTS_INDEX: 'selectedDotsIndex',
     ACCESSED_ON: 'accessedOn',
     ACCESSED_SECTION_INDEX: 'accessedSectionIndex',
 

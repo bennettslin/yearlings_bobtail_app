@@ -9,6 +9,8 @@ import { SELECTED_SONG_INDEX,
          SELECTED_LYRIC_COLUMN_INDEX,
          SELECTED_TIPS_INDEX,
          SELECTED_WIKI_INDEX,
+         SELECTED_NAV_INDEX,
+         SELECTED_DOTS_INDEX,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
 import SessionHelper from '../../helpers/session-helper'
@@ -24,6 +26,8 @@ const { getFromSession } = SessionHelper,
     storedLyricColumnIndex = getFromSession(SELECTED_LYRIC_COLUMN_INDEX),
     storedTipsIndex = getFromSession(SELECTED_TIPS_INDEX),
     storedWikiIndex = getFromSession(SELECTED_WIKI_INDEX),
+    storedNavIndex = getFromSession(SELECTED_NAV_INDEX),
+    storedDotsIndex = getFromSession(SELECTED_DOTS_INDEX),
     storedAccessedOn = getFromSession(ACCESSED_ON),
     storedAccessedSectionIndex = getFromSession(ACCESSED_SECTION_INDEX)
 
@@ -123,6 +127,24 @@ export const TipsIndexReducer = (state = storedTipsIndex, action) => {
     }
 }
 
+export const NavIndexReducer = (state = storedNavIndex, action) => {
+    switch (action.type) {
+        case SELECTED_NAV_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const DotsIndexReducer = (state = storedDotsIndex, action) => {
+    switch (action.type) {
+        case SELECTED_DOTS_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
 export const AccessedOnReducer = (state = storedAccessedOn, action) => {
     switch (action.type) {
         case ACCESSED_ON:
@@ -152,6 +174,8 @@ const rootReducer = combineReducers({
     selectedLyricColumnIndex: LyricColumnIndexReducer,
     selectedTipsIndex: TipsIndexReducer,
     selectedWikiIndex: WikiIndexReducer,
+    selectedNavIndex: NavIndexReducer,
+    selectedDotsIndex: DotsIndexReducer,
     accessedOn: AccessedOnReducer,
     accessedSectionIndex: AccessedSectionIndexReducer
 })

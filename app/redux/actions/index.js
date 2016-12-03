@@ -8,6 +8,8 @@ import { SELECTED_SONG_INDEX,
          SELECTED_LYRIC_COLUMN_INDEX,
          SELECTED_TIPS_INDEX,
          SELECTED_WIKI_INDEX,
+         SELECTED_NAV_INDEX,
+         SELECTED_DOTS_INDEX,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
  import SessionHelper from '../../helpers/session-helper'
@@ -93,6 +95,22 @@ export const selectTipsIndex = (selectedTipsIndex = 0) => {
     return {
         type: SELECTED_TIPS_INDEX,
         payload: selectedTipsIndex
+    }
+}
+
+export const selectNavIndex = (selectedNavIndex = 0) => {
+    setInSession(SELECTED_NAV_INDEX, selectedNavIndex)
+    return {
+        type: SELECTED_NAV_INDEX,
+        payload: selectedNavIndex
+    }
+}
+
+export const selectDotsIndex = (selectedDotsIndex = 0) => {
+    setInSession(SELECTED_DOTS_INDEX, selectedDotsIndex)
+    return {
+        type: SELECTED_DOTS_INDEX,
+        payload: selectedDotsIndex
     }
 }
 

@@ -46,6 +46,8 @@ const AlbumView = ({
     selectedAudioOptionIndex,
     selectedTipsIndex,
     selectedTimePlayed,
+    selectedNavIndex,
+    selectedDotsIndex,
     showSingleLyricColumn,
     isPrologue,
     isFirstSong,
@@ -111,6 +113,8 @@ const AlbumView = ({
                 windowHeight={windowHeight}
                 selectedSongIndex={selectedSongIndex}
                 selectedVerseIndex={selectedVerseIndex}
+                selectedNavIndex={selectedNavIndex}
+                selectedDotsIndex={selectedDotsIndex}
                 showSingleLyricColumn={showSingleLyricColumn}
                 onScreenWidthClick={onScreenWidthClick}
             />

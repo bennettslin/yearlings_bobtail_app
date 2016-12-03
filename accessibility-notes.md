@@ -117,4 +117,5 @@
     * "z" to toggle "selectedOverviewIndex"
     * "x" to expand lyric section
     * "m" to toggle admin field. This won't be possible live, of course.
+    * "n" to rotate device width. This won't be possible live, of course.
     * "Escape" to close a popup
