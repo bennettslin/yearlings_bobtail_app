@@ -234,7 +234,7 @@ const LiveView = ({
         }
 
     return (
-        <div className={`live-window${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ''}${isOverviewShown ? ' overview-shown' : ''}`}>
+        <div className={`live-window${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ''}${selectedNavIndex ? '' : ' nav-expanded'}${isOverviewShown ? ' overview-shown' : ''}`}>
             {false ?
                 <TipsSection {...tipsSectionProps} /> : null
             }

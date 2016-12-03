@@ -4,7 +4,7 @@
     * Not present
 
 * In all but phone
-    *
+    * Songs can collapse and expand
 
 * In mini and tablet
     * Field and titles hide upon lyric expansion
@@ -14,4 +14,3 @@
     * Titles hide upon wiki shown
 
 # Todo
-* Show or hide nav songs based on nav toggle

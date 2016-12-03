@@ -83,7 +83,7 @@ const NavSectionView = ({
 
     return (
         <div
-            className={`section nav-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${selectedNavIndex ? ' nav-collapsed' : ' nav-expanded'}`}
+            className={`section nav-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
         >
             {isAdmin ?
                 <div className="row">

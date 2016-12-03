@@ -110,15 +110,25 @@
         }
     }
 
-    .nav-title {
+    .nav-title-container {
         position: relative;
         top: -25%;
         left: -25%;
 
         // FIXME: Make transform vendor friendly.
         transform: rotate(315deg);
-        white-space: nowrap;
+    }
 
-        border: 1px dotted red;
+    .nav-title {
+        white-space: nowrap;
+        .transition(transform 0.2s ease);
+
+        transform: scale(0);
+    }
+
+    .nav-expanded:not(.lyric-expanded) {
+        .nav-title {
+            transform: scale(1);
+        }
     }
 }

@@ -56,8 +56,10 @@ const NavSongView = ({
                 {isLogue ? null : songIndex}
             </a>
         </div>
-        <div className="nav-title">
-            {songTitle}
+        <div className="nav-title-container">
+            <div className="nav-title">
+                {songTitle}
+            </div>
         </div>
     </div>
 )
