@@ -1,3 +1,6 @@
+@toggle-button-block-width: @nav-width;
+@toggle-button-block-margin: @nav-width / 2;
+
 .admin {
     .nav-section {
 
@@ -29,16 +32,9 @@
     .nav-section {
         position: absolute;
         width: 100%;
-        bottom: 0;
         overflow: visible;
 
         border: 1px solid red;
-    }
-
-    .books-block-container, .books-block {
-        position: relative;
-        width: 100%;
-        height: 100%;
     }
 
     .books-block-container, .books-block, .book-block {
@@ -46,6 +42,27 @@
 
         &.books-block {
             justify-content: space-between;
+        }
+    }
+
+    .books-block-container {
+        height: 100%;
+    }
+
+    .books-block {
+        position: relative;
+        // FIXME: Instead of 100%, calculate total widths of logue and book blocks, because they get collapsed.
+        left: ~"calc(-100% + @{toggle-button-block-width} + @{toggle-button-block-margin})";
+        width: 0;
+        height: 100%;
+
+        .transition(left 0.4s ease, width 0.5s ease);
+    }
+
+    .nav-expanded {
+        .books-block {
+            left: 0;
+            width: 100%;
         }
     }
 
@@ -61,8 +78,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        border: 1px solid cyan;
     }
 
     .nav-circle-container {
@@ -71,9 +86,12 @@
     }
 
     .toggle-button-block {
-        margin-right: @nav-height / 2;
+        margin-right: @toggle-button-block-margin;
         min-width: @nav-width;
         height: 100%;
+
+        // FIXME: Consolidate all z-indices under single chain of constants.
+        z-index: 1;
 
         background-color: purple;
     }
@@ -96,7 +114,6 @@
         position: relative;
         top: -25%;
         left: -25%;
-        // bottom: @nav-height;
 
         // FIXME: Make transform vendor friendly.
         transform: rotate(315deg);

@@ -14,4 +14,4 @@
     * Titles hide upon wiki shown
 
 # Todo
-* Add nav toggle button.
+* Show or hide nav songs based on nav toggle
