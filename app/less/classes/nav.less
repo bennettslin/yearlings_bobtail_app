@@ -36,99 +36,109 @@
 
         border: 1px solid red;
     }
+}
 
-    .books-block-container, .books-block, .book-block {
-        display: flex;
+.books-block-container, .books-block, .book-block {
+    display: flex;
 
-        &.books-block {
-            justify-content: space-between;
-        }
+    &.books-block {
+        justify-content: space-between;
     }
+}
 
-    .books-block-container {
-        height: 100%;
-    }
+.books-block-container {
+    height: 100%;
+}
 
+.books-block {
+    position: relative;
+    // FIXME: Instead of 100%, calculate total widths of logue and book blocks, because they get collapsed.
+    left: ~"calc(-100% + @{toggle-button-block-width} + @{toggle-button-block-margin})";
+    width: 0;
+    height: 100%;
+
+    .transition(left 0.4s ease, width 0.5s ease);
+}
+
+.nav-expanded {
     .books-block {
-        position: relative;
-        // FIXME: Instead of 100%, calculate total widths of logue and book blocks, because they get collapsed.
-        left: ~"calc(-100% + @{toggle-button-block-width} + @{toggle-button-block-margin})";
-        width: 0;
-        height: 100%;
-
-        .transition(left 0.4s ease, width 0.5s ease);
-    }
-
-    .nav-expanded {
-        .books-block {
-            left: 0;
-            width: 100%;
-        }
-    }
-
-    .nav-song {
-        position: relative;
-        width: @nav-width;
-
-        border: 1px solid green;
-    }
-
-    .nav-circle-container, .toggle-button-block {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nav-circle-container {
-        position: absolute;
+        left: 0;
         width: 100%;
     }
+}
 
-    .toggle-button-block {
-        margin-right: @toggle-button-block-margin;
-        min-width: @nav-width;
+.nav-song {
+    position: relative;
+    width: @nav-width;
+
+    border: 1px solid green;
+}
+
+.nav-circle-container, .toggle-button-block, .nav-circle, .nav-toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.nav-circle-container, &.toggle-button-block {
         height: 100%;
-
-        // FIXME: Consolidate all z-indices under single chain of constants.
-        z-index: 1;
-
-        background-color: purple;
     }
+}
 
-    .nav-circle, .nav-toggle-button {
-        @nav-circle-diameter: @nav-height * 2 / 3;
-        width: @nav-circle-diameter;
-        height: @nav-circle-diameter;
-        background-color: yellow;
-        border-radius: 50%;
+.nav-circle-container {
+    position: absolute;
+    width: 100%;
+}
+
+.toggle-button-block {
+    margin-right: @toggle-button-block-margin;
+    min-width: @nav-width;
+    height: 100%;
+
+    // FIXME: Consolidate all z-indices under single chain of constants.
+    z-index: 1;
+
+    background-color: purple;
+}
+
+.nav-circle, .nav-toggle-button {
+    @nav-circle-diameter: @nav-height * 2 / 3;
+    width: @nav-circle-diameter;
+    height: @nav-circle-diameter;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.selected {
+    .nav-circle {
+        background-color: orange;
     }
+}
 
-    .selected {
-        .nav-circle {
-            background-color: orange;
-        }
-    }
+.nav-title-container {
+    position: relative;
+    left: 25%;
+    top: -40%;
 
+    // FIXME: Make transform vendor friendly.
+    transform: rotate(315deg);
+}
+
+.tablet-width, .mini-width {
     .nav-title-container {
-        position: relative;
-        top: -25%;
-        left: -25%;
-
-        // FIXME: Make transform vendor friendly.
-        transform: rotate(315deg);
+        transform: rotate(45deg);
+        top: 90%;
     }
+}
 
+.nav-title {
+    white-space: nowrap;
+    .transition(transform 0.2s ease);
+
+    transform: scale(0);
+}
+
+.nav-expanded:not(.lyric-expanded) {
     .nav-title {
-        white-space: nowrap;
-        .transition(transform 0.2s ease);
-
-        transform: scale(0);
-    }
-
-    .nav-expanded:not(.lyric-expanded) {
-        .nav-title {
-            transform: scale(1);
-        }
+        transform: scale(1);
     }
 }

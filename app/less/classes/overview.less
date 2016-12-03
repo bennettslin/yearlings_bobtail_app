@@ -4,11 +4,14 @@
 @overview-subfield-margin: 5px;
 @overview-popup-content-wrapper-padding: 15px;
 
-@overview-toggle-laptop-width: @overview-toggle-width * 2 / 3;
-@overview-toggle-laptop-height: @overview-toggle-height * 2 / 3;
+@overview-toggle-laptop-width: @overview-toggle-width / 1.5;
+@overview-toggle-laptop-height: @overview-toggle-height / 1.5;
 
-@overview-toggle-tablet-width: @overview-toggle-width / 2;
-@overview-toggle-tablet-height: @overview-toggle-height / 2;
+@overview-toggle-tablet-width: @overview-toggle-width / 1.7;
+@overview-toggle-tablet-height: @overview-toggle-height / 1.7;
+
+@overview-toggle-mini-width: @overview-toggle-width / 2;
+@overview-toggle-mini-height: @overview-toggle-height / 2;
 
 @overview-toggle-phone-width: @overview-toggle-width / 2.5;
 @overview-toggle-phone-height: @overview-toggle-height / 2.5;
@@ -168,6 +171,16 @@
 
     .overview-toggle-button-container {
         height: @overview-toggle-tablet-height;
+    }
+
+    &.mini-width {
+        .overview-toggle-section {
+            width: @overview-toggle-mini-width;
+        }
+
+        .overview-toggle-button-container {
+            height: @overview-toggle-mini-height;
+        }
     }
 
     &.phone-width {
