@@ -26,46 +26,38 @@
 }
 
 .live {
-
-    .books-block, .book-block {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
     .nav-section {
         position: absolute;
         width: 100%;
         bottom: 0;
         overflow: visible;
 
-        border: 1px solid purple;
+        border: 1px solid red;
     }
 
-    .books-block {
+    .books-block-container, .books-block {
         position: relative;
+        width: 100%;
         height: 100%;
     }
 
-    .book-block {
-        height: 100%;
+    .books-block-container, .books-block, .book-block {
+        display: flex;
+
+        &.books-block {
+            justify-content: space-between;
+        }
     }
 
     .nav-song {
         position: relative;
-        width: @nav-height;
-        height: 100%;
+        width: @nav-width;
 
         border: 1px solid green;
     }
 
-    .nav-circle-container {
-        position: absolute;
-        left: 0;
-        bottom: 0;
+    .nav-circle-container, .toggle-button-block {
         height: 100%;
-        width: 100%;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -73,8 +65,21 @@
         border: 1px solid cyan;
     }
 
-    .nav-circle {
-        @nav-circle-diameter: @nav-height / 2;
+    .nav-circle-container {
+        position: absolute;
+        width: 100%;
+    }
+
+    .toggle-button-block {
+        margin-right: @nav-height / 2;
+        min-width: @nav-width;
+        height: 100%;
+
+        background-color: purple;
+    }
+
+    .nav-circle, .nav-toggle-button {
+        @nav-circle-diameter: @nav-height * 2 / 3;
         width: @nav-circle-diameter;
         height: @nav-circle-diameter;
         background-color: yellow;

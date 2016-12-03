@@ -49,8 +49,10 @@ const NavSectionView = ({
     songs,
     bookStartingIndices,
     selectedSongIndex,
+    selectedNavIndex,
     accessedSongIndex,
     onSongClick,
+    onNavExpandClick,
 
     // From controller.
     sumAllTasks,
@@ -97,28 +99,35 @@ const NavSectionView = ({
                         return getNavItem(song, index)
                     })}
                 </div> :
-                <div className="books-block">
-                    <div className="book-block logue">
-                        {getNavItem(songs[0], 0)}
+                <div className="books-block-container">
+                    <div className="toggle-button-block">
+                        <a className="nav-toggle-button enabled" onClick={onNavExpandClick}>
+                            {selectedNavIndex}
+                        </a>
                     </div>
-                    {bookStartingIndices.map((startingIndex, index) => {
-                        const nextIndex = (index < bookStartingIndices.length - 1) ? bookStartingIndices[index + 1] : (songsLength - 1)
+                    <div className="books-block">
+                        <div className="book-block logue">
+                            {getNavItem(songs[0], 0)}
+                        </div>
+                        {bookStartingIndices.map((startingIndex, index) => {
+                            const nextIndex = (index < bookStartingIndices.length - 1) ? bookStartingIndices[index + 1] : (songsLength - 1)
 
-                        return (
-                            <div
-                                key={index}
-                                className={`book-block book-${index + 1}`}
-                            >
-                                {Array.from(Array(nextIndex - startingIndex).keys()).map(currentIndex => {
-                                    const songIndex = currentIndex + startingIndex,
-                                        song = songs[songIndex]
-                                    return getNavItem(song, songIndex)
-                                })}
-                            </div>
-                        )
-                    })}
-                    <div className="book-block logue">
-                        {getNavItem(songs[songsLength - 1], songsLength - 1)}
+                            return (
+                                <div
+                                    key={index}
+                                    className={`book-block book-${index + 1}`}
+                                >
+                                    {Array.from(Array(nextIndex - startingIndex).keys()).map(currentIndex => {
+                                        const songIndex = currentIndex + startingIndex,
+                                            song = songs[songIndex]
+                                        return getNavItem(song, songIndex)
+                                    })}
+                                </div>
+                            )
+                        })}
+                        <div className="book-block logue">
+                            {getNavItem(songs[songsLength - 1], songsLength - 1)}
+                        </div>
                     </div>
                 </div>
             }

@@ -67,6 +67,7 @@ const LiveView = ({
     selectedTimePlayed,
     selectedLyricColumnIndex,
     selectedOverviewIndex,
+    selectedNavIndex,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
@@ -104,6 +105,7 @@ const LiveView = ({
     onLyricColumnClick,
     onAnnotationSectionClick,
     onLyricExpandClick,
+    onNavExpandClick,
 
     // From controller.
     isPhone,
@@ -199,11 +201,13 @@ const LiveView = ({
             songs,
             bookStartingIndices,
             selectedSongIndex,
+            selectedNavIndex,
             accessedOn,
             accessedSectionKey,
             nextSectionKey,
             accessedSongIndex,
-            onSongClick
+            onSongClick,
+            onNavExpandClick
         },
         lyricColumnProps = {
             showSingleLyricColumn,
