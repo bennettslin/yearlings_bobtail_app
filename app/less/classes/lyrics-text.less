@@ -68,6 +68,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        /**
+         * Limit width of stanzas when lyric column is full width of screen.
+         * This is necessary for Vegan Proclamation. This value doesn't affect
+         * the layout anywhere else.
+         */
         max-width: 720px;
 
         @stanza-block-margin: 10px;

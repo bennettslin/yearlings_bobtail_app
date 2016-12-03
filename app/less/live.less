@@ -3,7 +3,19 @@
 @tablet-max-width: 1100px;
 @laptop-max-width: 1400px;
 
-// Menu width can get as narrow as 380px. (Tablet width's 1100px - lyric column's 720px.)
+/**
+ * This is the maximum lyric column width in monitor, as determined by the
+ * width of On a Golden Cord in double columns. Menu and nav widths can be as
+ * narrow as 656px. (1401 - 745.)
+ */
+@golden-cord-width: 745px;
+
+/**
+ * This is the maximum lyric column width in laptop, as determined by the
+ * width of Vegan Proclamation. Menua dn nav widths can be as narrow as 531px
+ * (1101 - 570.)
+ */
+@single-column-max-width: 570px;
 
 @collapsed-lyric-section-height: 32%;
 @menu-height-laptop-monitor: 72px;
@@ -39,14 +51,43 @@
 
 .field {
     // border: 2px dotted green;
+
+    /**
+     * Desktop menu and nav will calculate widths based on screen width, so
+     * they are placed outside the main column. Use this "desktop" class name
+     * because they each have a placeholder that is still in the main column.
+     */
+    &.desktop {
+        position: absolute;
+        left: 0;
+
+        &.menu-field {
+            top: 0;
+        }
+
+        &.nav-field {
+            bottom: 0;
+        }
+    }
+
+    // Keep the placeholder hidden;
+    &.placeholder {
+        visibility: hidden;
+    }
 }
 
 .subfield {
     // border: 2px dotted orange;
 }
 
+.menu-field, .nav-field {
+    max-width: @tablet-max-width;
+}
+
 .menu-field {
     display: flex;
+
+    border: 2px dotted violet;
 }
 
 .main-field {
@@ -58,6 +99,8 @@
     position: relative;
     .transition(height 0.2s ease);
     height: @nav-height;
+
+    background-color: #4d4;
 }
 
 // Hide nav bar when lyric column is expanded.
@@ -90,11 +133,33 @@
         height: @menu-height-laptop-monitor;
     }
 
+    .field {
+        &.desktop {
+            width: ~"calc(100% - @{golden-cord-width})";
+        }
+    }
+
+    // .menu-field, .nav-field {
+    //     width: @menu-nav-monitor-width;
+    //     width: 100%;
+    // }
+
     // For admin device width toggle. Should be the same as in constants.js.
     &.laptop-width {
         .live-window {
             max-width: @laptop-max-width;
         }
+
+        .field {
+            &.desktop {
+                width: ~"calc(100% - @{single-column-max-width})";
+            }
+        }
+
+        // .menu-field, .nav-field {
+        //     width: @menu-nav-laptop-width;
+        //     width: 100%;
+        // }
     }
 }
 

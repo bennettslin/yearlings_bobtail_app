@@ -11,7 +11,7 @@ import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
 import LyricColumn from './lyric-column'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { PHONE_WIDTH_OBJECT, SHOWN } from 'helpers/constants'
+import { PHONE_WIDTH_OBJECT, LAPTOP_WIDTH_OBJECT, MONITOR_WIDTH_OBJECT, SHOWN } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -23,11 +23,13 @@ const Live = (props) => {
         selectedSong = getSong(props),
         annotation = getAnnotation(props),
         selectedWikiUrl = getWikiUrl(props),
-        isPhone = deviceWidth === PHONE_WIDTH_OBJECT.className
+        isPhone = deviceWidth === PHONE_WIDTH_OBJECT.className,
+        isDesktop = deviceWidth === LAPTOP_WIDTH_OBJECT.className || deviceWidth === MONITOR_WIDTH_OBJECT.className
 
     return (
         <LiveView {...props}
             isPhone={isPhone}
+            isDesktop={isDesktop}
             lyrics={selectedSong.lyrics}
             overviewText={selectedSong.overview}
             annotation={annotation}
@@ -105,6 +107,7 @@ const LiveView = ({
 
     // From controller.
     isPhone,
+    isDesktop,
     overviewText,
     tasks,
     lyrics,
@@ -240,13 +243,24 @@ const LiveView = ({
                         inOverviewSubfield={false}
                     />
             </div>
-            <div className="main-column">
-                <div className="field menu-field">
+            {isDesktop ?
+                <div className="field menu-field desktop">
                     {!isPhone ?
                         <TitleSection {...titleSectionProps} /> : null
                     }
                     <AudioSection {...audioSectionProps} />
-                </div>
+                </div> : null
+            }
+            <div className="main-column">
+                {!isDesktop ?
+                    <div className="field menu-field">
+                        {!isPhone ?
+                            <TitleSection {...titleSectionProps} /> : null
+                        }
+                        <AudioSection {...audioSectionProps} />
+                    </div> :
+                    <div className="field menu-field placeholder"></div>
+                }
                 <div className="field main-field">
                     <StageSection
                     />
@@ -267,12 +281,18 @@ const LiveView = ({
                         </div>
                     </div>
                 </div>
-                {!isPhone ?
+                {!isDesktop && !isPhone ?
                     <div className="field nav-field">
                         <NavSection {...navSectionProps} />
-                    </div> : null
+                    </div> : isDesktop ?
+                    <div className="field nav-field placeholder"></div> : null
                 }
             </div>
+            {isDesktop ?
+                <div className="field nav-field desktop">
+                    <NavSection {...navSectionProps} />
+                </div> : null
+            }
             <LyricColumn {...lyricColumnProps} />
         </div>
     )
