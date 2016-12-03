@@ -12,7 +12,7 @@
 
 /**
  * This is the maximum lyric column width in laptop, as determined by the
- * width of Vegan Proclamation. Menua dn nav widths can be as narrow as 531px
+ * width of Vegan Proclamation. Menu and nav widths can be as narrow as 531px
  * (1101 - 570.)
  */
 @single-column-max-width: 570px;
@@ -81,7 +81,8 @@
 }
 
 .menu-field, .nav-field {
-    max-width: @tablet-max-width;
+    // Ensure that this isn't some grossly huge value.
+    max-width: @laptop-max-width;
 }
 
 .menu-field {
