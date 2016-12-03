@@ -244,7 +244,7 @@ const LiveView = ({
                     />
             </div>
             {isDesktop ?
-                <div className="field menu-field desktop">
+                <div className="field menu-field outside-main">
                     {!isPhone ?
                         <TitleSection {...titleSectionProps} /> : null
                     }
@@ -281,15 +281,12 @@ const LiveView = ({
                         </div>
                     </div>
                 </div>
-                {!isDesktop && !isPhone ?
-                    <div className="field nav-field">
-                        <NavSection {...navSectionProps} />
-                    </div> : isDesktop ?
+                {isDesktop ?
                     <div className="field nav-field placeholder"></div> : null
                 }
             </div>
-            {isDesktop ?
-                <div className="field nav-field desktop">
+            {!isPhone ?
+                <div className="field nav-field outside-main">
                     <NavSection {...navSectionProps} />
                 </div> : null
             }

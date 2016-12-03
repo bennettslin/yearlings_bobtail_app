@@ -57,7 +57,7 @@
      * they are placed outside the main column. Use this "desktop" class name
      * because they each have a placeholder that is still in the main column.
      */
-    &.desktop {
+    &.outside-main {
         position: absolute;
         left: 0;
 
@@ -135,15 +135,10 @@
     }
 
     .field {
-        &.desktop {
+        &.outside-main {
             width: ~"calc(100% - @{golden-cord-width})";
         }
     }
-
-    // .menu-field, .nav-field {
-    //     width: @menu-nav-monitor-width;
-    //     width: 100%;
-    // }
 
     // For admin device width toggle. Should be the same as in constants.js.
     &.laptop-width {
@@ -152,15 +147,10 @@
         }
 
         .field {
-            &.desktop {
+            &.outside-main {
                 width: ~"calc(100% - @{single-column-max-width})";
             }
         }
-
-        // .menu-field, .nav-field {
-        //     width: @menu-nav-laptop-width;
-        //     width: 100%;
-        // }
     }
 }
 
@@ -182,6 +172,10 @@
         }
     }
 
+    .field {
+        width: 100%;
+    }
+
     .menu-field {
         height: @menu-height-mini-tablet;
         order: 1;
@@ -189,6 +183,10 @@
 
     .nav-field {
         order: 2;
+
+        &.outside-main {
+            top: @menu-height-mini-tablet;
+        }
     }
 
     .main-field {

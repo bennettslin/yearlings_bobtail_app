@@ -14,3 +14,4 @@
     * Titles hide upon wiki shown
 
 # Todo
+* Add nav toggle button.
