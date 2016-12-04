@@ -51,12 +51,12 @@ const NavSongView = ({
         className={`enabled nav-song${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
         onClick={onClick}
     >
-        <div className="nav-circle-container">
+        <div className="nav-circle-block">
             <div className="nav-circle">
                 {isLogue ? null : songIndex}
             </div>
         </div>
-        <div className="nav-title-container">
+        <div className="nav-title-block">
             <div className="nav-title">
                 {songTitle}
             </div>

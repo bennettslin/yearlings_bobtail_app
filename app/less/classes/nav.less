@@ -4,6 +4,7 @@
 @book-block-extra-margin: @nav-width / 2;
 @book-block-padding: 4px;
 
+// FIXME: This equation is now wrong.
 /**
  * Total width of nav field is:
  * 21 * @nav-circle-diameter +
@@ -49,15 +50,12 @@
     }
 }
 
-.books-block-container, .books-block, .book-block {
+// All containers.
+.books-container, .book-column-block, .books-block, .book-column, .book-block {
     display: flex;
-
-    &.books-block {
-        justify-content: space-between;
-    }
 }
 
-.books-block-container {
+.books-container {
     height: 100%;
 }
 
@@ -65,9 +63,9 @@
     position: relative;
 
     // Total width of nav, minus toggle button block.
+    // FIXME: This value is now wrong.
     left: ~"calc(-8 * @{book-block-padding} - 7 * @{book-block-margin} - @{book-block-extra-margin} - 20 * @{nav-circle-diameter})";
     width: 0;
-    height: 100%;
 
     .transition(left 0.4s ease, width 0.5s ease);
 }
@@ -79,39 +77,24 @@
     }
 }
 
-.book-block, .toggle-button-block {
+// .book-column {
+//     display: none;
+//
+//     &.column-shown {
+//         display: block;
+//     }
+// }
+
+.book-block {
     padding: 0 @book-block-padding;
-
-    &.book-block {
-        margin: 0 @book-block-margin;
-        background-color: #48d;
-    }
+    margin: 0 @book-block-margin;
+    background-color: #48d;
+    border-radius: @book-block-radius @book-block-radius 0 0;
 }
 
-.nav-song {
-    position: relative;
-    width: @nav-circle-diameter;
-}
-
-.nav-circle-container, .toggle-button-block, .nav-circle, .nav-toggle-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &.nav-circle-container, &.toggle-button-block {
-        height: 100%;
-    }
-}
-
-.nav-circle-container {
-    position: absolute;
-    width: 100%;
-}
-
-.toggle-button-block {
-    margin-right: @book-block-extra-margin;
-    min-width: @nav-circle-diameter;
-    height: 100%;
+.nav-toggle {
+    margin-left: 0;
+    border-radius: 0 @book-block-radius 0 0;
 
     // FIXME: Consolidate all z-indices under single chain of constants.
     z-index: 1;
@@ -119,13 +102,26 @@
     background-color: purple;
 }
 
-.book-block:last-child {
-    margin-right: @book-block-extra-margin;
+.nav-song {
+    width: @nav-circle-diameter;
+
+    .nav-circle-block {
+        position: absolute;
+    }
 }
 
-.nav-circle, .nav-toggle-button {
-    min-width: @nav-circle-diameter;
-    // width: @nav-circle-diameter;
+.nav-circle-block, .nav-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.nav-circle-block {
+        height: 100%;
+    }
+}
+
+.nav-circle {
+    width: @nav-circle-diameter;
     height: @nav-circle-diameter;
     background-color: yellow;
     border-radius: 50%;
@@ -136,8 +132,11 @@
         background-color: orange;
     }
 }
+// .book-block:last-child {
+//     margin-right: @book-block-extra-margin;
+// }
 
-.nav-title-container {
+.nav-title-block {
     position: relative;
     left: 25%;
     top: -40%;
@@ -146,27 +145,17 @@
     transform: rotate(315deg);
 }
 
-.laptop-width, .monitor-width {
-    .book-block {
-        border-radius: @book-block-radius @book-block-radius 0 0;
-    }
-
-    .toggle-button-block {
-        border-top-right-radius: @book-block-radius;
-    }
-}
-
 .tablet-width, .mini-width {
 
     .book-block {
         border-radius: 0 0 @book-block-radius @book-block-radius;
     }
 
-    .toggle-button-block {
-        border-bottom-right-radius: @book-block-radius;
+    .nav-toggle {
+        border-radius: 0 0 @book-block-radius 0;
     }
 
-    .nav-title-container {
+    .nav-title-block {
         transform: rotate(45deg);
         top: 90%;
     }
@@ -180,8 +169,10 @@
 }
 
 .nav-expanded:not(.lyric-expanded) {
-    .nav-title {
-        transform: scale(1);
+    .column-shown {
+        .nav-title {
+            transform: scale(1);
+        }
     }
 }
 

@@ -37,6 +37,7 @@ export default {
         windowResize,
         selectTime,
         selectLyricExpand,
+        selectBookColumn,
         selectNavExpand,
         selectDotsExpand,
         selectedTimePlayed
@@ -63,6 +64,10 @@ export default {
             // Toggle lyric expand.
             case 'x':
                 selectLyricExpand()
+                break
+            // Toggle book column.
+            case 'u':
+                selectBookColumn()
                 break
             // Toggle selected overview index.
             case 'z':

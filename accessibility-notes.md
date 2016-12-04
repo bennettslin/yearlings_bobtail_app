@@ -23,7 +23,7 @@
     * When Up or Down arrows are pressed:
         * Select previous or next time.
 
-* When songs section is accessed:
+* When nav section is accessed:
     * Up and Down arrows and "Enter" are shown.
     * When section is first accessed:
         * Accessed song is selected song.
@@ -115,6 +115,7 @@
     * "o" to toggle "audioOptionIndex"
     * "t" to toggle "selectedTipsIndex"
     * "z" to toggle "selectedOverviewIndex"
+    * "u" to toggle "selectedBookColumnIndex"
     * "x" to expand lyric section
     * "m" to toggle admin field. This won't be possible live, of course.
     * "n" to rotate device width. This won't be possible live, of course.

@@ -10,7 +10,7 @@ import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
 import LyricColumn from './lyric-column'
-import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getWikiUrl, getShowSingleBookColumn } from 'helpers/album-view-helper'
 import { PHONE_WIDTH_OBJECT, LAPTOP_WIDTH_OBJECT, MONITOR_WIDTH_OBJECT, SHOWN } from 'helpers/constants'
 
 /*************
@@ -24,7 +24,9 @@ const Live = (props) => {
         annotation = getAnnotation(props),
         selectedWikiUrl = getWikiUrl(props),
         isPhone = deviceWidth === PHONE_WIDTH_OBJECT.className,
-        isDesktop = deviceWidth === LAPTOP_WIDTH_OBJECT.className || deviceWidth === MONITOR_WIDTH_OBJECT.className
+        isDesktop = deviceWidth === LAPTOP_WIDTH_OBJECT.className || deviceWidth === MONITOR_WIDTH_OBJECT.className,
+
+        showSingleBookColumn = getShowSingleBookColumn(props)
 
     return (
         <LiveView {...props}
@@ -38,6 +40,7 @@ const Live = (props) => {
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
+            showSingleBookColumn={showSingleBookColumn}
         />
     )
 }
@@ -68,6 +71,7 @@ const LiveView = ({
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedNavIndex,
+    selectedBookColumnIndex,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
@@ -106,6 +110,7 @@ const LiveView = ({
     onAnnotationSectionClick,
     onLyricExpandClick,
     onNavExpandClick,
+    onBookColumnClick,
 
     // From controller.
     isPhone,
@@ -118,6 +123,7 @@ const LiveView = ({
     presentDotKeys,
     selectedSongLyrics,
     hasDoubleColumns,
+    showSingleBookColumn,
 
 ...other }) => {
 
@@ -200,14 +206,17 @@ const LiveView = ({
         navSectionProps = {
             songs,
             bookStartingIndices,
+            showSingleBookColumn,
             selectedSongIndex,
             selectedNavIndex,
+            selectedBookColumnIndex,
             accessedOn,
             accessedSectionKey,
             nextSectionKey,
             accessedSongIndex,
             onSongClick,
-            onNavExpandClick
+            onNavExpandClick,
+            onBookColumnClick
         },
         lyricColumnProps = {
             showSingleLyricColumn,

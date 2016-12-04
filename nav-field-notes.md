@@ -13,6 +13,10 @@
 * In laptop and monitor
     * Titles hide upon wiki shown
 
+* Selected book column index changes back to default:
+    * Upon new song selected.
+    * Upon nav section collapse.
+
 # Todo
 * Flag to show one book column or another, based on selected song index
 * Toggle button in place of one book

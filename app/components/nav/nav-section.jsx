@@ -51,8 +51,11 @@ const NavSectionView = ({
     selectedSongIndex,
     selectedNavIndex,
     accessedSongIndex,
+    selectedBookColumnIndex,
+    showSingleBookColumn,
     onSongClick,
     onNavExpandClick,
+    onBookColumnClick,
 
     // From controller.
     sumAllTasks,
@@ -83,7 +86,7 @@ const NavSectionView = ({
 
     return (
         <div
-            className={`section nav-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
+            className={`section nav-section${showSingleBookColumn ? ' single-book-column' : ''}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
         >
             {isAdmin ?
                 <div className="row">
@@ -94,39 +97,59 @@ const NavSectionView = ({
                 </div> : null
             }
             {isAdmin ?
-                <div className="songs-block">
+                <div className="admin-block">
                     {songs.map((song, index) => {
                         return getNavItem(song, index)
                     })}
                 </div> :
-                <div className="books-block-container">
-                    <div className="toggle-button-block">
-                        <a className="nav-toggle-button enabled" onClick={onNavExpandClick}>
+                <div className="books-container">
+                    <div className="books-toggle-block book-block nav-circle-block nav-toggle">
+                        <a className="nav-expand-button nav-circle enabled" onClick={onNavExpandClick}>
                             {selectedNavIndex}
                         </a>
                     </div>
                     <div className="books-block">
-                        <div className="book-block logue">
-                            {getNavItem(songs[0], 0)}
-                        </div>
-                        {bookStartingIndices.map((startingIndex, index) => {
-                            const nextIndex = (index < bookStartingIndices.length - 1) ? bookStartingIndices[index + 1] : (songsLength - 1)
-
-                            return (
-                                <div
-                                    key={index}
-                                    className={`book-block book-${index + 1}`}
-                                >
-                                    {Array.from(Array(nextIndex - startingIndex).keys()).map(currentIndex => {
-                                        const songIndex = currentIndex + startingIndex,
+                        <div className={`book-column-block${!showSingleBookColumn || selectedBookColumnIndex === 1 ? ' column-shown' : ''}`}>
+                            {showSingleBookColumn ?
+                                <div className="books-toggle-block book-block nav-circle-block book-toggle">
+                                    <a className="nav-expand-button nav-circle enabled" onClick={onBookColumnClick}>
+                                        +
+                                    </a>
+                                </div> : null
+                            }
+                            <div className={`book-column`}>
+                                <div className="book-block logue">
+                                    {getNavItem(songs[0], 0)}
+                                </div>
+                                <div className="book-block">
+                                    {Array.from(Array(bookStartingIndices[1] - bookStartingIndices[0]).keys()).map(currentIndex => {
+                                        const songIndex = currentIndex + bookStartingIndices[0],
                                             song = songs[songIndex]
                                         return getNavItem(song, songIndex)
                                     })}
                                 </div>
-                            )
-                        })}
-                        <div className="book-block logue">
-                            {getNavItem(songs[songsLength - 1], songsLength - 1)}
+                            </div>
+                        </div>
+                        <div className={`book-column-block${!showSingleBookColumn || selectedBookColumnIndex === 2 ? ' column-shown' : ''}`}>
+                            <div className={`book-column`}>
+                                <div className="book-block">
+                                    {Array.from(Array(songsLength - 1 - bookStartingIndices[1]).keys()).map(currentIndex => {
+                                        const songIndex = currentIndex + bookStartingIndices[1],
+                                            song = songs[songIndex]
+                                        return getNavItem(song, songIndex)
+                                    })}
+                                </div>
+                                <div className="book-block logue">
+                                    {getNavItem(songs[songsLength - 1], songsLength - 1)}
+                                </div>
+                            </div>
+                            {showSingleBookColumn ?
+                                <div className="books-toggle-block book-block nav-circle-block book-toggle">
+                                    <a className="nav-expand-button nav-circle enabled" onClick={onBookColumnClick}>
+                                        +
+                                    </a>
+                                </div> : null
+                            }
                         </div>
                     </div>
                 </div>

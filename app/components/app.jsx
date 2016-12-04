@@ -44,7 +44,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable, getSelectedBookColumnIndex } from 'helpers/album-view-helper'
 import { resizeWindow } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -131,6 +131,7 @@ class App extends Component {
             accessedLyricElement: LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
             showSingleLyricColumnInAdmin: false,
+            selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false
         }
     }
@@ -173,6 +174,7 @@ class App extends Component {
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
         this.selectNavExpand = this.selectNavExpand.bind(this)
+        this.selectBookColumn = this.selectBookColumn.bind(this)
         this.selectDotsExpand = this.selectDotsExpand.bind(this)
         this.selectTips = this.selectTips.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
@@ -665,6 +667,12 @@ class App extends Component {
         this.setState(newState)
     }
 
+    selectBookColumn(e, selectedBookColumnIndex = this.state.selectedBookColumnIndex % 2 + 1) {
+        this.setState({
+            selectedBookColumnIndex
+        })
+    }
+
     handleAnnotationSectionClick(e) {
         this._handleAccessOn(0)
 
@@ -725,6 +733,7 @@ class App extends Component {
             selectLyricExpand: this.selectLyricExpand,
             selectNavExpand: this.selectNavExpand,
             selectDotsExpand: this.selectDotsExpand,
+            selectBookColumn: this.selectBookColumn,
             selectTime: this.selectTime
         })) { return }
 
@@ -969,6 +978,7 @@ class App extends Component {
                     onAnnotationSectionClick={this.handleAnnotationSectionClick}
                     onLyricExpandClick={this.selectLyricExpand}
                     onNavExpandClick={this.selectNavExpand}
+                    onBookColumnClick={this.selectBookColumn}
                     onDotsExpandClick={this.selectDotsExpand}
                     onTipsClick={this.selectTips}
                 />

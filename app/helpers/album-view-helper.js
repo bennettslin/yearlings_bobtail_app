@@ -6,6 +6,7 @@ import { ALBUM_BUILD_KEYS,
          PHONE_WIDTH_OBJECT,
          MINI_WIDTH_OBJECT,
          TABLET_WIDTH_OBJECT,
+         LAPTOP_WIDTH_OBJECT,
          MONITOR_WIDTH_OBJECT } from './constants'
 
 import { intersects } from 'helpers/dot-helper'
@@ -87,6 +88,34 @@ export const getShowSingleLyricColumn = (props, state) => {
         }
 
         return showSingleLyricColumn
+    }
+}
+
+export const getSelectedBookColumnIndex = (props) => {
+    const { selectedSongIndex,
+            songs,
+            bookStartingIndices } = props
+
+    // Assumes two book starting indices.
+    return selectedSongIndex < bookStartingIndices[1] ? 1 : 2
+}
+
+export const getShowSingleBookColumn = (state) => {
+    const { deviceWidth,
+            windowWidth } = state
+
+    // FIXME: Always be true for now.
+    return true
+
+    // FIXME: Revisit these numbers.
+    if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
+        return false
+
+    } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
+        return true
+
+    } else {
+        return windowWidth < 1024
     }
 }
 
