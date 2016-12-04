@@ -1,6 +1,6 @@
 import React from 'react'
 import NavRow from './nav-row'
-import NavButton from './nav-song'
+import NavButton from './nav-button'
 
 /*************
  * CONTAINER *
@@ -28,9 +28,7 @@ const NavItem = ({
         }
 
     return isAdmin ?
-        <NavRow {...other} {...navItemProps}
-            maxTotalNeededHours={maxTotalNeededHours}
-        /> :
+        <NavRow {...other} {...navItemProps} /> :
         <NavButton {...other} {...navItemProps} />
 }
 

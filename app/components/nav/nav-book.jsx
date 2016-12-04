@@ -1,5 +1,5 @@
 import React from 'react'
-import NavButton from './nav-song'
+import NavButton from './nav-button'
 
 /*************
  * CONTAINER *

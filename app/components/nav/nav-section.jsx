@@ -91,6 +91,7 @@ const NavSectionView = ({
                     {songs.map((song, index) => {
                         return (
                             <NavItem {...navItemProps}
+                                key={index}
                                 song={song}
                                 index={index}
                             />

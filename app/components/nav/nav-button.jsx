@@ -38,7 +38,6 @@ const NavButtonView = ({
     songIndex,
     isSelected,
     accessHighlighted,
-    maxTotalNeededHours,
 
     // From controller.
     isLogue,
@@ -47,7 +46,7 @@ const NavButtonView = ({
 
 }) => (
     <a
-        className={`enabled nav-song${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
+        className={`enabled nav-button${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
         onClick={onClick}
     >
         <div className="nav-icon-block">
