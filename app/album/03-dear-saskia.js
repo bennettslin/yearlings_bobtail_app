@@ -491,17 +491,17 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `annotations`,
-            workedHours: 24,
-            neededHours: 24
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
             subtasks: [
 
             ]
+        },
+        {
+            taskName: `annotations`,
+            workedHours: 24,
+            neededHours: 24
         },
         {
             taskName: `include wiki urls`,

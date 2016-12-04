@@ -822,11 +822,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `annotations`,
-            workedHours: 68,
-            neededHours: 68
-        },
-        {
             // Drunken me holds gold bracelet over kid's head in the morning.
             taskName: `illustrations`,
             workedHours: 0,
@@ -834,6 +829,11 @@ module.exports = {
             subtasks: [
 
             ]
+        },
+        {
+            taskName: `annotations`,
+            workedHours: 68,
+            neededHours: 68
         },
         {
             taskName: `include wiki urls`,

@@ -722,17 +722,17 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `annotations`,
-            workedHours: 47,
-            neededHours: 47
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
             subtasks: [
 
             ]
+        },
+        {
+            taskName: `annotations`,
+            workedHours: 47,
+            neededHours: 47
         },
         {
             taskName: `restructure lyrics`,
