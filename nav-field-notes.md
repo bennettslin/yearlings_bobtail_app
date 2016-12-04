@@ -14,3 +14,13 @@
     * Titles hide upon wiki shown
 
 # Todo
+* Flag to show one book column or another, based on selected song index
+* Toggle button in place of one book
+* Animate toggling of one book to another
+* Accessibility should be able to toggle as well.
+
+* Determine breakpoints at which to show single-column version for each device width. Make song circle widths dynamic after it is too narrow.
+
+* Nav field should hide all contents.
+* Nav song widths should be dynamic.
+* annotation and wiki rules

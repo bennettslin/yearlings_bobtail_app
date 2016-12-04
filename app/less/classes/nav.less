@@ -1,5 +1,18 @@
-@toggle-button-block-width: @nav-width;
-@toggle-button-block-margin: @nav-width / 2;
+@book-block-radius: @nav-width / 2;
+
+@book-block-margin: 1px;
+@book-block-extra-margin: @nav-width / 2;
+@book-block-padding: 4px;
+
+/**
+ * Total width of nav field is:
+ * 21 * @nav-circle-diameter +
+ * 10 * @book-block-padding +
+ * 8 * @book-block-margin +
+ * 2 * @book-block-extra-margin
+ */
+
+@nav-circle-diameter: 44px;
 
 .admin {
     .nav-section {
@@ -33,8 +46,6 @@
         position: absolute;
         width: 100%;
         overflow: visible;
-
-        border: 1px solid red;
     }
 }
 
@@ -52,8 +63,9 @@
 
 .books-block {
     position: relative;
-    // FIXME: Instead of 100%, calculate total widths of logue and book blocks, because they get collapsed.
-    left: ~"calc(-100% + @{toggle-button-block-width} + @{toggle-button-block-margin})";
+
+    // Total width of nav, minus toggle button block.
+    left: ~"calc(-8 * @{book-block-padding} - 7 * @{book-block-margin} - @{book-block-extra-margin} - 20 * @{nav-circle-diameter})";
     width: 0;
     height: 100%;
 
@@ -67,11 +79,18 @@
     }
 }
 
+.book-block, .toggle-button-block {
+    padding: 0 @book-block-padding;
+
+    &.book-block {
+        margin: 0 @book-block-margin;
+        background-color: #48d;
+    }
+}
+
 .nav-song {
     position: relative;
-    width: @nav-width;
-
-    border: 1px solid green;
+    width: @nav-circle-diameter;
 }
 
 .nav-circle-container, .toggle-button-block, .nav-circle, .nav-toggle-button {
@@ -90,8 +109,8 @@
 }
 
 .toggle-button-block {
-    margin-right: @toggle-button-block-margin;
-    min-width: @nav-width;
+    margin-right: @book-block-extra-margin;
+    min-width: @nav-circle-diameter;
     height: 100%;
 
     // FIXME: Consolidate all z-indices under single chain of constants.
@@ -100,9 +119,13 @@
     background-color: purple;
 }
 
+.book-block:last-child {
+    margin-right: @book-block-extra-margin;
+}
+
 .nav-circle, .nav-toggle-button {
-    @nav-circle-diameter: @nav-height * 2 / 3;
-    width: @nav-circle-diameter;
+    min-width: @nav-circle-diameter;
+    // width: @nav-circle-diameter;
     height: @nav-circle-diameter;
     background-color: yellow;
     border-radius: 50%;
@@ -123,7 +146,26 @@
     transform: rotate(315deg);
 }
 
+.laptop-width, .monitor-width {
+    .book-block {
+        border-radius: @book-block-radius @book-block-radius 0 0;
+    }
+
+    .toggle-button-block {
+        border-top-right-radius: @book-block-radius;
+    }
+}
+
 .tablet-width, .mini-width {
+
+    .book-block {
+        border-radius: 0 0 @book-block-radius @book-block-radius;
+    }
+
+    .toggle-button-block {
+        border-bottom-right-radius: @book-block-radius;
+    }
+
     .nav-title-container {
         transform: rotate(45deg);
         top: 90%;
@@ -140,5 +182,12 @@
 .nav-expanded:not(.lyric-expanded) {
     .nav-title {
         transform: scale(1);
+    }
+}
+
+// Hide nav bar when lyric column is expanded.
+.lyric-expanded:not(.is-logue) {
+    .nav-field {
+        height: 0;
     }
 }
