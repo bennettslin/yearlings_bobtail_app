@@ -1,16 +1,16 @@
-@book-block-radius: @nav-width / 2;
+@nav-book-radius: @nav-width / 2;
 
-@book-block-margin: 1px;
-@book-block-extra-margin: @nav-width / 2;
-@book-block-padding: 4px;
+@nav-book-margin: 1px;
+@nav-book-extra-margin: @nav-width / 2;
+@nav-book-padding: 4px;
 
 // FIXME: This equation is now wrong.
 /**
  * Total width of nav field is:
  * 21 * @nav-icon-diameter +
- * 10 * @book-block-padding +
- * 8 * @book-block-margin +
- * 2 * @book-block-extra-margin
+ * 10 * @nav-book-padding +
+ * 8 * @nav-book-margin +
+ * 2 * @nav-book-extra-margin
  */
 
 @nav-icon-diameter: 44px;
@@ -51,11 +51,11 @@
 }
 
 // All containers.
-.books-container, .book-column-block, .books-block, .book-column, .book-block {
+.live-nav-block, .book-column-block, .books-block, .book-column, .nav-book {
     display: flex;
 }
 
-.books-container {
+.live-nav-block {
     height: 100%;
 }
 
@@ -64,7 +64,7 @@
 
     // Total width of nav, minus toggle button block.
     // FIXME: This value is now wrong.
-    left: ~"calc(-8 * @{book-block-padding} - 7 * @{book-block-margin} - @{book-block-extra-margin} - 20 * @{nav-icon-diameter})";
+    left: ~"calc(-8 * @{nav-book-padding} - 7 * @{nav-book-margin} - @{nav-book-extra-margin} - 20 * @{nav-icon-diameter})";
     width: 0;
 
     .transition(left 0.4s ease, width 0.5s ease);
@@ -85,16 +85,16 @@
 //     }
 // }
 
-.book-block {
-    padding: 0 @book-block-padding;
-    margin: 0 @book-block-margin;
+.nav-book {
+    padding: 0 @nav-book-padding;
+    margin: 0 @nav-book-margin;
     background-color: #48d;
-    border-radius: @book-block-radius @book-block-radius 0 0;
+    border-radius: @nav-book-radius @nav-book-radius 0 0;
 }
 
 .nav-toggle {
     margin-left: 0;
-    border-radius: 0 @book-block-radius 0 0;
+    border-radius: 0 @nav-book-radius 0 0;
 
     // FIXME: Consolidate all z-indices under single chain of constants.
     z-index: 1;
@@ -132,8 +132,8 @@
         background-color: orange;
     }
 }
-// .book-block:last-child {
-//     margin-right: @book-block-extra-margin;
+// .nav-book:last-child {
+//     margin-right: @nav-book-extra-margin;
 // }
 
 .nav-title-block {
@@ -147,12 +147,12 @@
 
 .tablet-width, .mini-width {
 
-    .book-block {
-        border-radius: 0 0 @book-block-radius @book-block-radius;
+    .nav-book {
+        border-radius: 0 0 @nav-book-radius @nav-book-radius;
     }
 
     .nav-toggle {
-        border-radius: 0 0 @book-block-radius 0;
+        border-radius: 0 0 @nav-book-radius 0;
     }
 
     .nav-title-block {

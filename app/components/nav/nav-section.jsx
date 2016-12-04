@@ -98,69 +98,56 @@ const NavSectionView = ({
                         )
                     })}
                 </div> :
-                <div className="books-container">
-                    <div className="books-toggle-block book-block nav-icon-block nav-toggle">
-                        <a className="nav-expand-button nav-icon enabled" onClick={onNavExpandClick}>
-                            {selectedNavIndex}
-                        </a>
-                    </div>
+                <div className="live-nav-block">
+                    {/* nav toggle */}
+                    <NavBook {...navItemProps}
+                        isNavToggle={true}
+                        buttonText={selectedNavIndex + ''}
+                        onButtonClick={onNavExpandClick}
+                    />
                     <div className="books-block">
                         <div className={`book-column-block${!showSingleBookColumn || selectedBookColumnIndex === 1 ? ' column-shown' : ''}`}>
+                            {/* column 1 toggle */}
                             {showSingleBookColumn ?
-                                <div className="books-toggle-block book-block nav-icon-block book-toggle">
-                                    <a className="nav-expand-button nav-icon enabled" onClick={onBookColumnClick}>
-                                        +
-                                    </a>
-                                </div> : null
+                                <NavBook {...navItemProps}
+                                    buttonText={'+'}
+                                    onButtonClick={onBookColumnClick}
+                                /> : null
                             }
                             <div className={`book-column`}>
-                                <div className="book-block logue">
-                                    <NavItem {...navItemProps}
-                                        song={songs[0]}
-                                        index={0}
-                                    />
-                                </div>
-                                <div className="book-block">
-                                    {Array.from(Array(bookStartingIndices[1] - bookStartingIndices[0]).keys()).map(currentIndex => {
-                                        const songIndex = currentIndex + bookStartingIndices[0]
-                                        return (
-                                            <NavItem {...navItemProps}
-                                                key={currentIndex}
-                                                song={songs[songIndex]}
-                                                index={songIndex}
-                                            />
-                                        )
-                                    })}
-                                </div>
+                                {/* prologue */}
+                                <NavBook {...navItemProps}
+                                    song={songs[0]}
+                                    index={0}
+                                />
+                                {/* songs 1 - 9 */}
+                                <NavBook {...navItemProps}
+                                    songs={songs}
+                                    beginArrayIndex={bookStartingIndices[0]}
+                                    endArrayIndex={bookStartingIndices[1]}
+                                />
                             </div>
                         </div>
                         <div className={`book-column-block${!showSingleBookColumn || selectedBookColumnIndex === 2 ? ' column-shown' : ''}`}>
                             <div className={`book-column`}>
-                                <div className="book-block">
-                                    {Array.from(Array(songsLength - 1 - bookStartingIndices[1]).keys()).map(currentIndex => {
-                                        const songIndex = currentIndex + bookStartingIndices[1]
-                                            return (
-                                                <NavItem {...navItemProps}
-                                                    key={currentIndex}
-                                                    song={songs[songIndex]}
-                                                    index={songIndex}
-                                                />
-                                            )
-                                    })}
-                                </div>
-                                <div className="book-block logue">
-                                    <NavItem {...navItemProps}
-                                        song={songs[songsLength - 1]}
-                                        index={songsLength - 1}
-                                    />
-                                </div>
+                                {/* songs 10 - 18 */}
+                                <NavBook {...navItemProps}
+                                    songs={songs}
+                                    beginArrayIndex={bookStartingIndices[1]}
+                                    endArrayIndex={songsLength - 1}
+                                />
+                                {/* epilogue */}
+                                <NavBook {...navItemProps}
+                                    song={songs[songsLength - 1]}
+                                    index={songsLength - 1}
+                                />
                             </div>
+                            {/* column 2 toggle */}
                             {showSingleBookColumn ?
-                                <div className="books-toggle-block book-block nav-icon-block book-toggle">
-                                    <a className="nav-expand-button nav-icon enabled" onClick={onBookColumnClick}>
-                                        +
-                                    </a>
-                                </div> : null
+                                <NavBook {...navItemProps}
+                                    buttonText={'+'}
+                                    onButtonClick={onBookColumnClick}
+                                /> : null
                             }
                         </div>
                     </div>

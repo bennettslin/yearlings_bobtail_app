@@ -1,18 +1,14 @@
 import React from 'react'
-import NavButton from './nav-button'
+import NavItem from './nav-item'
 
 /*************
  * CONTAINER *
  *************/
 
-const NavBook = ({
-
-...other }) => {
+const NavBook = (props) => {
 
     return (
-        <NavBookView {...other}
-
-        />
+        <NavBookView {...props} />
     )
 }
 
@@ -23,13 +19,27 @@ const NavBook = ({
 const NavBookView = ({
 
     // From props.
+    isNavToggle,
+    songs,
+    beginArrayIndex,
+    endArrayIndex,
 
-
-    // From controller.
-
-
-}) => (
-    <div></div>
+...other }) => (
+    <div className={`nav-book${isNavToggle ? ' nav-toggle' : ''}`}>
+        {songs ?
+            Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
+                const songIndex = currentIndex + beginArrayIndex
+                    return (
+                        <NavItem {...other}
+                            key={currentIndex}
+                            song={songs[songIndex]}
+                            index={songIndex}
+                        />
+                    )
+            }) :
+            <NavItem {...other} />
+        }
+    </div>
 )
 
 export default NavBook

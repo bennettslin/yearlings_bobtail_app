@@ -8,19 +8,21 @@ const NavButton = ({
 
     song,
     songIndex,
+    buttonText,
     isSelected,
     onSongClick,
+    onButtonClick,
 
 ...other }) => {
 
-    const isLogue = song.logue,
-        songTitle = song.title,
-        onClick = e => onSongClick(e, songIndex)
+    const isLogue = song ? song.logue : null,
+        iconText = buttonText || (isLogue ? null : songIndex),
+        songTitle = song ? song.title : null,
+        onClick = song ? e => onSongClick(e, songIndex) : onButtonClick
 
     return (
         <NavButtonView {...other}
-            isLogue={isLogue}
-            songIndex={songIndex}
+            iconText={iconText}
             isSelected={isSelected}
             songTitle={songTitle}
             onClick={onClick}
@@ -35,12 +37,11 @@ const NavButton = ({
 const NavButtonView = ({
 
     // From props.
-    songIndex,
     isSelected,
     accessHighlighted,
 
     // From controller.
-    isLogue,
+    iconText,
     songTitle,
     onClick
 
@@ -51,7 +52,7 @@ const NavButtonView = ({
     >
         <div className="nav-icon-block">
             <div className="nav-icon">
-                {isLogue ? null : songIndex}
+                {iconText}
             </div>
         </div>
         <div className="nav-title-block">

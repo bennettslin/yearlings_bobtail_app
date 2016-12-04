@@ -8,7 +8,6 @@ import NavButton from './nav-button'
 
 const NavItem = ({
 
-    song,
     index,
     isAdmin,
     selectedSongIndex,
@@ -20,9 +19,7 @@ const NavItem = ({
     const isSelected = selectedSongIndex === index,
         accessHighlighted = sectionAccessHighlighted && accessedSongIndex === index,
         navItemProps = {
-            key: index,
             songIndex: index,
-            song,
             isSelected,
             accessHighlighted
         }
