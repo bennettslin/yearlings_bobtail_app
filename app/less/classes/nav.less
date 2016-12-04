@@ -7,13 +7,13 @@
 // FIXME: This equation is now wrong.
 /**
  * Total width of nav field is:
- * 21 * @nav-circle-diameter +
+ * 21 * @nav-icon-diameter +
  * 10 * @book-block-padding +
  * 8 * @book-block-margin +
  * 2 * @book-block-extra-margin
  */
 
-@nav-circle-diameter: 44px;
+@nav-icon-diameter: 44px;
 
 .admin {
     .nav-section {
@@ -64,7 +64,7 @@
 
     // Total width of nav, minus toggle button block.
     // FIXME: This value is now wrong.
-    left: ~"calc(-8 * @{book-block-padding} - 7 * @{book-block-margin} - @{book-block-extra-margin} - 20 * @{nav-circle-diameter})";
+    left: ~"calc(-8 * @{book-block-padding} - 7 * @{book-block-margin} - @{book-block-extra-margin} - 20 * @{nav-icon-diameter})";
     width: 0;
 
     .transition(left 0.4s ease, width 0.5s ease);
@@ -103,32 +103,32 @@
 }
 
 .nav-song {
-    width: @nav-circle-diameter;
+    width: @nav-icon-diameter;
 
-    .nav-circle-block {
+    .nav-icon-block {
         position: absolute;
     }
 }
 
-.nav-circle-block, .nav-circle {
+.nav-icon-block, .nav-icon {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    &.nav-circle-block {
+    &.nav-icon-block {
         height: 100%;
     }
 }
 
-.nav-circle {
-    width: @nav-circle-diameter;
-    height: @nav-circle-diameter;
+.nav-icon {
+    width: @nav-icon-diameter;
+    height: @nav-icon-diameter;
     background-color: yellow;
     border-radius: 50%;
 }
 
 .selected {
-    .nav-circle {
+    .nav-icon {
         background-color: orange;
     }
 }

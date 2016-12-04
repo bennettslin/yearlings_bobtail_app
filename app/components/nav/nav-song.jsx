@@ -1,11 +1,10 @@
 import React from 'react'
-import { getSongTitle } from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const NavSong = ({
+const NavButton = ({
 
     song,
     songIndex,
@@ -19,7 +18,7 @@ const NavSong = ({
         onClick = e => onSongClick(e, songIndex)
 
     return (
-        <NavSongView {...other}
+        <NavButtonView {...other}
             isLogue={isLogue}
             songIndex={songIndex}
             isSelected={isSelected}
@@ -33,7 +32,7 @@ const NavSong = ({
  * PRESENTATION *
  ****************/
 
-const NavSongView = ({
+const NavButtonView = ({
 
     // From props.
     songIndex,
@@ -51,8 +50,8 @@ const NavSongView = ({
         className={`enabled nav-song${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
         onClick={onClick}
     >
-        <div className="nav-circle-block">
-            <div className="nav-circle">
+        <div className="nav-icon-block">
+            <div className="nav-icon">
                 {isLogue ? null : songIndex}
             </div>
         </div>
@@ -64,4 +63,4 @@ const NavSongView = ({
     </a>
 )
 
-export default NavSong
+export default NavButton
