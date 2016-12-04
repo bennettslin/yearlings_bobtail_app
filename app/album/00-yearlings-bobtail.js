@@ -57,6 +57,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `deal with low screen heights`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `toggle min and max device widths`,
             workedHours: 0,
             neededHours: 1
