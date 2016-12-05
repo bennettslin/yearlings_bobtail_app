@@ -53,6 +53,7 @@ const NavSectionView = ({
     accessedSongIndex,
     selectedBookColumnIndex,
     showSingleBookColumn,
+    shrinkNavIcon,
     onSongClick,
     onNavExpandClick,
     onBookColumnClick,
@@ -76,7 +77,7 @@ const NavSectionView = ({
 
     return (
         <div
-            className={`section nav-section${showSingleBookColumn ? ' single-book-column' : ''}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
+            className={`section nav-section${shrinkNavIcon ? ' shrink-icon' : ' static-icon'}${showSingleBookColumn ? ' single-book-column' : ' double-book-column'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
         >
             {isAdmin ?
                 <div className="row">
@@ -106,7 +107,7 @@ const NavSectionView = ({
                         onButtonClick={onNavExpandClick}
                     />
                     <div className="books-block">
-                        <div className={`book-column-block${!showSingleBookColumn || selectedBookColumnIndex === 1 ? ' column-shown' : ' column-hidden'}`}>
+                        <div className={`book-column-block column-1${!showSingleBookColumn || selectedBookColumnIndex === 1 ? ' column-shown' : ' column-hidden'}`}>
                             {/* column 1 toggle */}
                             {showSingleBookColumn ?
                                 <div className="toggle-column">
@@ -119,6 +120,7 @@ const NavSectionView = ({
                             <div className={`book-column`}>
                                 {/* prologue */}
                                 <NavBook {...navItemProps}
+                                    isLogue={true}
                                     song={songs[0]}
                                     index={0}
                                 />
@@ -130,7 +132,7 @@ const NavSectionView = ({
                                 />
                             </div>
                         </div>
-                        <div className={`book-column-block${!showSingleBookColumn || selectedBookColumnIndex === 2 ? ' column-shown' : ' column-hidden'}`}>
+                        <div className={`book-column-block column-2${!showSingleBookColumn || selectedBookColumnIndex === 2 ? ' column-shown' : ' column-hidden'}`}>
                             <div className={`book-column`}>
                                 {/* songs 10 - 18 */}
                                 <NavBook {...navItemProps}
@@ -140,6 +142,7 @@ const NavSectionView = ({
                                 />
                                 {/* epilogue */}
                                 <NavBook {...navItemProps}
+                                    isLogue={true}
                                     song={songs[songsLength - 1]}
                                     index={songsLength - 1}
                                 />

@@ -19,10 +19,11 @@
     * Upon nav section accessed.
 
 # Todo
-* Animate toggling of one book to another
+* Breakpoints should be in constants.js file.
+* Move appropriate methods to responsive helper file.
 
-* Determine breakpoints at which to show single-column version for each device width. Make song circle widths dynamic after it is too narrow.
+* Animate toggling of one book to another
+* Collapsing nav should know dynamic widths. (Do this after figuring out how to animate toggling of one book to another.)
 
 * Nav field should hide all contents.
-* Nav song widths should be dynamic.
 * annotation and wiki rules

@@ -106,13 +106,29 @@ export const getShowSingleBookColumn = (state) => {
 
     // FIXME: Revisit these numbers.
     if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
-        return false
+        return windowWidth < 1597
 
     } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
         return true
 
     } else {
-        return windowWidth < 1024
+        return windowWidth < 852
+    }
+}
+
+export const getShrinkNavIcon = (state) => {
+    const { deviceWidth,
+            windowWidth } = state
+
+    // FIXME: Revisit these numbers.
+    if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
+        return windowWidth >= 1597 && windowWidth < 1765
+
+    } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
+        return windowWidth < 1176
+
+    } else {
+        return windowWidth < 606 || (windowWidth >= 852 && windowWidth < 1020)
     }
 }
 

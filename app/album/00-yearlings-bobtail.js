@@ -67,11 +67,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `style and animate nav field`,
-            workedHours: 0,
-            neededHours: 8
-        },
-        {
             taskName: `setDOMWidth method doesn't work on reload and device width change`,
             workedHours: 0,
             neededHours: 1
@@ -782,6 +777,11 @@ module.exports = {
             taskName: `do nav field`,
             workedHours: 5,
             neededHours: 5
+        },
+        {
+            taskName: `make nav field responsive`,
+            workedHours: 8,
+            neededHours: 8
         }
     ]
 }

@@ -12,10 +12,10 @@
 
 /**
  * This is the maximum lyric column width in laptop, as determined by the
- * width of Vegan Proclamation. Menu and nav widths can be as narrow as 531px
- * (1101 - 570.)
+ * width of Uncanny Valley and Vegan Proclamation. Menu and nav widths can be
+ * as narrow as 531px. (1101 - 570.)
  */
-@single-column-max-width: 570px;
+@uncanny-valley-width: 570px;
 
 @collapsed-lyric-section-height: 32%;
 @menu-height-laptop-monitor: 72px;
@@ -156,7 +156,7 @@
 
         .field {
             &.outside-main {
-                width: ~"calc(100% - @{single-column-max-width})";
+                width: ~"calc(100% - @{uncanny-valley-width})";
             }
         }
     }

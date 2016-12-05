@@ -10,7 +10,7 @@ import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
 import LyricColumn from './lyric-column'
-import { getSong, getAnnotation, getWikiUrl, getShowSingleBookColumn } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getWikiUrl, getShowSingleBookColumn, getShrinkNavIcon } from 'helpers/album-view-helper'
 import { PHONE_WIDTH_OBJECT, LAPTOP_WIDTH_OBJECT, MONITOR_WIDTH_OBJECT, SHOWN } from 'helpers/constants'
 
 /*************
@@ -26,7 +26,8 @@ const Live = (props) => {
         isPhone = deviceWidth === PHONE_WIDTH_OBJECT.className,
         isDesktop = deviceWidth === LAPTOP_WIDTH_OBJECT.className || deviceWidth === MONITOR_WIDTH_OBJECT.className,
 
-        showSingleBookColumn = getShowSingleBookColumn(props)
+        showSingleBookColumn = getShowSingleBookColumn(props),
+        shrinkNavIcon = getShrinkNavIcon(props)
 
     return (
         <LiveView {...props}
@@ -41,6 +42,7 @@ const Live = (props) => {
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
             showSingleBookColumn={showSingleBookColumn}
+            shrinkNavIcon={shrinkNavIcon}
         />
     )
 }
@@ -124,6 +126,7 @@ const LiveView = ({
     selectedSongLyrics,
     hasDoubleColumns,
     showSingleBookColumn,
+    shrinkNavIcon,
 
 ...other }) => {
 
@@ -207,6 +210,7 @@ const LiveView = ({
             songs,
             bookStartingIndices,
             showSingleBookColumn,
+            shrinkNavIcon,
             selectedSongIndex,
             selectedNavIndex,
             selectedBookColumnIndex,
