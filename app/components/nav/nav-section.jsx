@@ -111,8 +111,6 @@ const NavSectionView = ({
                             {showSingleBookColumn ?
                                 <div className="toggle-column">
                                     <NavBook {...navItemProps}
-                                        isBookToggle={true}
-                                        index={bookStartingIndices[1] - 1}
                                         buttonText={'k'}
                                         onButtonClick={onBookColumnClick}
                                     />
@@ -150,8 +148,6 @@ const NavSectionView = ({
                             {showSingleBookColumn ?
                                 <div className="toggle-column">
                                     <NavBook {...navItemProps}
-                                        isBookToggle={true}
-                                        index={bookStartingIndices[1]}
                                         buttonText={'k'}
                                         onButtonClick={onBookColumnClick}
                                     />

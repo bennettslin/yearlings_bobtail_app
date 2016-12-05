@@ -15,12 +15,11 @@
 
 * Selected book column index changes back to default:
     * Upon new song selected.
-    * Upon nav section collapse.
+    * Upon nav section expand.
     * Upon nav section accessed.
 
 # Todo
 * Animate toggling of one book to another
-* Accessibility should be able to toggle as well.
 
 * Determine breakpoints at which to show single-column version for each device width. Make song circle widths dynamic after it is too narrow.
 

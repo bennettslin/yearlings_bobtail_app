@@ -181,10 +181,7 @@ export default {
         selectBookColumn
     }) {
 
-        const index = this.getIntegerForCharKey(keyName),
-            toggleButtonAccessed = (accessedIndex) => {
-                return showSingleBookColumn && ((selectedBookColumnIndex === 1 && accessedIndex === bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedIndex === bookStartingIndices[1] - 1))
-            }
+        const index = this.getIntegerForCharKey(keyName)
 
         // Go straight to index if chosen.
         if (index >= 0 && index < songsLength) {
@@ -201,18 +198,14 @@ export default {
                     accessedSongIndex = (accessedSongIndex + 1) % songsLength
                     break
                 case ENTER:
-
-                    // Toggle button was actually accessed.
-                    if (toggleButtonAccessed(accessedSongIndex)) {
-                        selectBookColumn()
-
-                    // Select accessed song.
-                    } else {
-                        selectSong(true, accessedSongIndex)
-                    }
-
+                    selectSong(true, accessedSongIndex)
                     break
             }
+        }
+
+        // Select the book column that contains the accessed song index.
+        if (showSingleBookColumn && ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1]))) {
+            selectBookColumn()
         }
 
         return {
