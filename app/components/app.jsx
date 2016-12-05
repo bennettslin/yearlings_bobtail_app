@@ -359,6 +359,11 @@ class App extends Component {
             selectedNavIndex = (this.props.selectedNavIndex + 1) % 2
         }
 
+        // Reset book column upon nav expand.
+        if (selectedNavIndex === 0) {
+            this.selectBookColumn(undefined, true)
+        }
+
         this.props.selectNavIndex(selectedNavIndex)
     }
 
