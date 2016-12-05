@@ -108,14 +108,14 @@
 
 * These keys will always fire, even if access is off:
     * "w" to access audio section
-    * "k" to access dots section
+    * "u" to access dots section
     * "l" to access lyrics section
     * "s" to access songs section
     * "p" to toggle "isPlaying"
     * "o" to toggle "audioOptionIndex"
     * "t" to toggle "selectedTipsIndex"
     * "z" to toggle "selectedOverviewIndex"
-    * "u" to toggle "selectedBookColumnIndex"
+    * "k" to toggle "selectedBookColumnIndex"
     * "x" to expand lyric section
     * "m" to toggle admin field. This won't be possible live, of course.
     * "n" to rotate device width. This won't be possible live, of course.

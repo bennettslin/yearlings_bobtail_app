@@ -44,7 +44,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable, getSelectedBookColumnIndex } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable, getSelectedBookColumnIndex, getShowSingleBookColumn } from 'helpers/album-view-helper'
 import { resizeWindow } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -297,6 +297,7 @@ class App extends Component {
             this.selectOverview(undefined, undefined, SHOWN)
         }
 
+        this.selectBookColumn(e, true, selectedSongIndex)
         this.props.selectSongIndex(selectedSongIndex)
 
         this.setState({
@@ -317,7 +318,10 @@ class App extends Component {
         if (e) {
             const selectedVerseIndex = getLyricsStartAtZero(this.props, selectedSongIndex) ? 1 : 0
 
-            this._handleSectionAccess({ accessedSectionKey: direction ? AUDIO_SECTION : NAV_SECTION })
+            this._handleSectionAccess({
+                accessedSectionKey: direction ? AUDIO_SECTION : NAV_SECTION,
+                selectedSongIndex
+            })
             this.selectAnnotation()
             this.selectVerse(undefined, selectedVerseIndex)
 
@@ -667,7 +671,11 @@ class App extends Component {
         this.setState(newState)
     }
 
-    selectBookColumn(e, selectedBookColumnIndex = this.state.selectedBookColumnIndex % 2 + 1) {
+    selectBookColumn(e, reset, selectedSongIndex = this.props.selectedSongIndex) {
+        // Either reset or else toggle.
+
+        const selectedBookColumnIndex = reset ? getSelectedBookColumnIndex(this.props, selectedSongIndex) : this.state.selectedBookColumnIndex % 2 + 1
+
         this.setState({
             selectedBookColumnIndex
         })
@@ -769,7 +777,11 @@ class App extends Component {
                             keyName,
                             songsLength: this.props.songs.length,
                             accessedSongIndex: this.state.accessedSongIndex,
-                            selectSong: this.selectSong
+                            selectSong: this.selectSong,
+                            showSingleBookColumn: getShowSingleBookColumn(this.state),
+                            selectedBookColumnIndex: this.state.selectedBookColumnIndex,
+                            bookStartingIndices: this.props.bookStartingIndices,
+                            selectBookColumn: this.selectBookColumn
                         })
                         break
                     case AUDIO_SECTION:
@@ -846,12 +858,13 @@ class App extends Component {
      * ACCESS HANDLERS *
      *******************/
 
-    _selectDefaultSectionElementIndex(accessedSectionIndex) {
+    _selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex) {
         const accessedSectionKey = SECTION_KEYS[accessedSectionIndex]
         let newState
 
         switch (accessedSectionKey) {
             case NAV_SECTION:
+                this.selectBookColumn(undefined, true, selectedSongIndex)
                 newState = { accessedSongIndex: this.props.selectedSongIndex }
                 break
             case LYRICS_SECTION:
@@ -869,10 +882,10 @@ class App extends Component {
         }
     }
 
-    _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
+    _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2, accessedSectionIndex = this.props.accessedSectionIndex) {
         this._focusApp()
         if (accessedOn) {
-            this._selectDefaultSectionElementIndex(this.props.accessedSectionIndex)
+            this._selectDefaultSectionElementIndex(accessedSectionIndex)
         }
 
         // Stored as integer. 0 is false, 1 is true.
@@ -881,6 +894,7 @@ class App extends Component {
 
     _handleSectionAccess({ accessedSectionKey,
                            accessOn,
+                           selectedSongIndex = this.props.selectedSongIndex,
                            selectedWikiIndex = this.props.selectedWikiIndex,
                            selectedAnnotationIndex = this.props.selectedAnnotationIndex }) {
 
@@ -892,15 +906,14 @@ class App extends Component {
         }
 
         const accessedSectionIndex = AccessHelper.handleSectionAccess({
-            selectedSongIndex: this.props.selectedSongIndex,
+            selectedSongIndex,
             currentAccessedSectionIndex: this.props.accessedSectionIndex,
             accessedSectionKey,
             accessOn,
             handleAccessOn: this._handleAccessOn
         })
 
-        this._selectDefaultSectionElementIndex(accessedSectionIndex)
-
+        this._selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex)
         this.props.accessSectionIndex(accessedSectionIndex)
         this._focusApp()
     }

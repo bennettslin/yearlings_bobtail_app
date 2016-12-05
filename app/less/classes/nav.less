@@ -51,7 +51,7 @@
 }
 
 // All containers.
-.live-nav-block, .book-column-block, .books-block, .book-column, .nav-book {
+.live-nav-block, .book-column-block, .books-block, .book-column, .toggle-column, .nav-book {
     display: flex;
 }
 
@@ -77,13 +77,24 @@
     }
 }
 
-// .book-column {
-//     display: none;
-//
-//     &.column-shown {
-//         display: block;
-//     }
-// }
+// TODO: Showing and hiding animations.
+.column-hidden {
+    .book-column {
+        display: none;
+    }
+    .toggle-column {
+        display: flex;
+    }
+}
+
+.column-shown {
+    .book-column {
+        display: flex;
+    }
+    .toggle-column {
+        display: none;
+    }
+}
 
 .nav-book {
     padding: 0 @nav-book-padding;

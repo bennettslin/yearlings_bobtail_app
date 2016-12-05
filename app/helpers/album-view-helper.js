@@ -91,21 +91,18 @@ export const getShowSingleLyricColumn = (props, state) => {
     }
 }
 
-export const getSelectedBookColumnIndex = (props) => {
-    const { selectedSongIndex,
-            songs,
-            bookStartingIndices } = props
+export const getSelectedBookColumnIndex = (props, selectedSongIndex) => {
+    const { songs,
+            bookStartingIndices } = props,
+        songIndex = typeof selectedSongIndex !== 'undefined' ? selectedSongIndex : props.selectedSongIndex
 
     // Assumes two book starting indices.
-    return selectedSongIndex < bookStartingIndices[1] ? 1 : 2
+    return songIndex < bookStartingIndices[1] ? 1 : 2
 }
 
 export const getShowSingleBookColumn = (state) => {
     const { deviceWidth,
             windowWidth } = state
-
-    // FIXME: Always be true for now.
-    return true
 
     // FIXME: Revisit these numbers.
     if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {

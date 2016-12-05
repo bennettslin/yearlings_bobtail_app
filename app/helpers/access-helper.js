@@ -66,7 +66,7 @@ export default {
                 selectLyricExpand()
                 break
             // Toggle book column.
-            case 'u':
+            case 'k':
                 selectBookColumn()
                 break
             // Toggle selected overview index.
@@ -105,7 +105,7 @@ export default {
                         case 'w':
                             accessedSectionKey = AUDIO_SECTION
                             break
-                        case 'k':
+                        case 'u':
                             accessedSectionKey = DOTS_SECTION
                             break
                         case 'l':
@@ -164,7 +164,7 @@ export default {
 
         // Access on if section accessed from universal key.
         if (accessOn) {
-            handleAccessOn(1)
+            handleAccessOn(1, accessedSectionIndex)
         }
 
         return accessedSectionIndex
@@ -174,10 +174,17 @@ export default {
         keyName,
         songsLength,
         accessedSongIndex,
-        selectSong
+        selectSong,
+        bookStartingIndices,
+        showSingleBookColumn,
+        selectedBookColumnIndex,
+        selectBookColumn
     }) {
 
-        const index = this.getIntegerForCharKey(keyName)
+        const index = this.getIntegerForCharKey(keyName),
+            toggleButtonAccessed = (accessedIndex) => {
+                return showSingleBookColumn && ((selectedBookColumnIndex === 1 && accessedIndex === bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedIndex === bookStartingIndices[1] - 1))
+            }
 
         // Go straight to index if chosen.
         if (index >= 0 && index < songsLength) {
@@ -185,6 +192,7 @@ export default {
             accessedSongIndex = index
 
         } else {
+            // Skip appropriate songs if showing single book column.
             switch (keyName) {
                 case ARROW_LEFT:
                     accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
@@ -193,7 +201,16 @@ export default {
                     accessedSongIndex = (accessedSongIndex + 1) % songsLength
                     break
                 case ENTER:
-                    selectSong(true, accessedSongIndex)
+
+                    // Toggle button was actually accessed.
+                    if (toggleButtonAccessed(accessedSongIndex)) {
+                        selectBookColumn()
+
+                    // Select accessed song.
+                    } else {
+                        selectSong(true, accessedSongIndex)
+                    }
+
                     break
             }
         }

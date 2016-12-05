@@ -16,10 +16,9 @@
 * Selected book column index changes back to default:
     * Upon new song selected.
     * Upon nav section collapse.
+    * Upon nav section accessed.
 
 # Todo
-* Flag to show one book column or another, based on selected song index
-* Toggle button in place of one book
 * Animate toggling of one book to another
 * Accessibility should be able to toggle as well.
 
