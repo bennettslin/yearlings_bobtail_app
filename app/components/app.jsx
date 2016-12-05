@@ -44,7 +44,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable, getSelectedBookColumnIndex, getShowSingleBookColumn } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getShowSingleLyricColumn, getIsLyricExpandable, getSelectedBookColumnIndex } from 'helpers/album-view-helper'
 import { resizeWindow } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -783,7 +783,6 @@ class App extends Component {
                             songsLength: this.props.songs.length,
                             accessedSongIndex: this.state.accessedSongIndex,
                             selectSong: this.selectSong,
-                            showSingleBookColumn: getShowSingleBookColumn(this.state),
                             selectedBookColumnIndex: this.state.selectedBookColumnIndex,
                             bookStartingIndices: this.props.bookStartingIndices,
                             selectBookColumn: this.selectBookColumn

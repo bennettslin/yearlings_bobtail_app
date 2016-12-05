@@ -176,7 +176,6 @@ export default {
         accessedSongIndex,
         selectSong,
         bookStartingIndices,
-        showSingleBookColumn,
         selectedBookColumnIndex,
         selectBookColumn
     }) {
@@ -204,7 +203,7 @@ export default {
         }
 
         // Select the book column that contains the accessed song index.
-        if (showSingleBookColumn && ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1]))) {
+        if ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
             selectBookColumn()
         }
 
