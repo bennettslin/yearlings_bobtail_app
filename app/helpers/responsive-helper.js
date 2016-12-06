@@ -13,7 +13,8 @@ export const resizeWindow = (target = window, presentWidth) => {
 
     let deviceWidth,
         innerWidth = target.innerWidth,
-        index = 0
+        index = 0,
+        manualWidth
 
     if (!presentWidth) {
         while (index < DEVICE_WIDTH_OBJECTS.length - 1 && innerWidth > DEVICE_WIDTH_OBJECTS[index].maxWidth) {
@@ -21,6 +22,7 @@ export const resizeWindow = (target = window, presentWidth) => {
         }
 
         deviceWidth = DEVICE_WIDTH_OBJECTS[index].className
+        manualWidth = false
 
     // Called from admin toggle.
     } else {
@@ -44,10 +46,13 @@ export const resizeWindow = (target = window, presentWidth) => {
                 index++
             }
         }
+
+        manualWidth = true
     }
 
     newState.deviceWidth = deviceWidth
     newState.windowWidth = innerWidth
+    newState.manualWidth = manualWidth
 
     return newState
 }

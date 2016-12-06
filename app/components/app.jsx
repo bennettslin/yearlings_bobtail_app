@@ -132,7 +132,8 @@ class App extends Component {
             accessedDotIndex: 0,
             showSingleLyricColumnInAdmin: false,
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
-            isLyricExpanded: false
+            isLyricExpanded: false,
+            manualWidth: false
         }
     }
 
