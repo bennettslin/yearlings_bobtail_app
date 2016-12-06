@@ -19,8 +19,15 @@
     * Upon nav section accessed.
 
 # Todo
+* Make toggle button "become" logue button.
+
+* Scrollbar in tablet single column?!
+* Accommodate row reverse in component.
+
 * Animate toggling of one book to another
 * Collapsing nav should know dynamic widths. (Do this after figuring out how to animate toggling of one book to another.)
 
-* Nav field should hide all contents.
+* Nav field should hide all contents for lyric expand.
 * annotation and wiki rules
+
+* Allow different manual screen sizes?

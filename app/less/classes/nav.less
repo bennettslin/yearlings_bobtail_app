@@ -170,23 +170,55 @@
     }
 }
 
+// Static margins after icons begin shrinking.
+.shrink-icon {
+    .book-column-block {
+        &:first-child {
+            margin-right: 3px;
+        }
+    }
+
+    .column-shown {
+        &.column-1 {
+            .nav-button {
+                &:not(:last-child) {
+                    margin-right: 1px;
+                }
+            }
+        }
+
+        &.column-2 {
+            .nav-button {
+                &:not(:last-child) {
+                    margin-left: 1px;
+                }
+            }
+        }
+    }
+
+    .nav-toggle {
+        margin-right: 3px;
+    }
+
+}
+
 // TODO: Begin animations.
-// Make "50px" placeholders dynamic.
-// Accommodate column 2 row reverse.
 // Make toggle button disappearing action better.
 
 .toggle-column {
-    .transition(transform 0.9s ease);
+    .transition(transform 0.2s ease);
 }
 
 .column-1 {
     .book-column {
-        .transition(left 0.9s ease);
+        .transition(left 0.2s ease);
     }
 
-    .nav-book.songs {
-        left: 50px;
-        .transition(left 0.9s ease);
+    .nav-book {
+        &.songs {
+            left: 50px;
+            .transition(left 0.2s ease);
+        }
     }
 }
 
@@ -195,25 +227,27 @@
 
     .book-column {
         right: 0;
-        .transition(right 0.9s ease);
+        .transition(right 0.2s ease);
     }
 
-    .nav-book.logue {
-        right: 0;
-    }
-
-    .nav-book.songs {
-        right: 50px;
-        .transition(right 0.9s ease);
-        flex-direction: row-reverse;
-
-        .nav-icon-block {
+    .nav-book {
+        &.logue {
             right: 0;
         }
-    }
 
-    .nav-book.toggle {
-        right: 0;
+        &.songs {
+            right: 50px;
+            .transition(right 0.2s ease);
+            flex-direction: row-reverse;
+
+            .nav-icon-block {
+                right: 0;
+            }
+        }
+
+        &.toggle {
+            right: 0;
+        }
     }
 
     .toggle-column {
@@ -223,7 +257,7 @@
 
 .single-book-column {
     .nav-button {
-        .transition(width 0.5s ease);
+        .transition(width 0.2s ease);
     }
 
     .column-hidden {
@@ -262,34 +296,3 @@
 }
 
 // End animations.
-
-// Static margins after icons begin shrinking.
-.shrink-icon {
-    .book-column-block {
-        &:first-child {
-            margin-right: 3px;
-        }
-    }
-
-    .column-1 {
-        .logue {
-            margin-right: 2px;
-        }
-    }
-
-    .column-2 {
-        .logue {
-            margin-left: 2px;
-        }
-    }
-
-    .nav-toggle {
-        margin-right: 3px;
-    }
-
-    .nav-button {
-        &:not(:last-child) {
-            margin-right: 1px;
-        }
-    }
-}
