@@ -108,6 +108,8 @@
 }
 
 .nav-button {
+    position: relative;
+
     .nav-icon-block {
         position: absolute;
     }
@@ -135,12 +137,12 @@
 }
 
 .nav-title-block {
-    position: relative;
+    position: absolute;
     left: 25%;
-    top: -40%;
 
     // FIXME: Make transform vendor friendly.
     transform: rotate(315deg);
+    transform-origin: left top;
 }
 
 .tablet-width, .mini-width {
@@ -154,7 +156,8 @@
 
     .nav-title-block {
         transform: rotate(45deg);
-        top: 90%;
+        transform-origin: left bottom;
+        top: 50%;
     }
 }
 
