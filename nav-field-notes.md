@@ -19,9 +19,6 @@
     * Upon nav section accessed.
 
 # Todo
-* Breakpoints should be in constants.js file.
-* Move appropriate methods to responsive helper file.
-
 * Animate toggling of one book to another
 * Collapsing nav should know dynamic widths. (Do this after figuring out how to animate toggling of one book to another.)
 

@@ -1,5 +1,6 @@
 @nav-border-radius: @nav-width / 2;
 
+// These values *must* be the same in constants.js.
 @nav-icon-diameter: 44px;
 @nav-book-padding: 4px;
 @nav-last-title-margin: 50px; // Margin to accommodate last title.
@@ -23,7 +24,7 @@
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
- * Monitor 1765px
+ * 745px + 21 * 44px + 10 * 4px + 50px + 26px = 1785px
  *
  * Each unit is a pixel. There are 26 units, so 26 pixels.
  * To be divided amongst 21 icons.
@@ -32,7 +33,7 @@
 
 /**
  * Breakpoint to switch to single column is when icon width is 36px.
- * Monitor 1597px
+ * 745px + 21 * 36px + 10 * 4px + 50px + 26px = 1617px
  *
  * Total width of single column desktop nav field is:
  * 12 * @nav-icon-diameter +
@@ -52,7 +53,7 @@
 
 /**
  * Monitor does not need to shrink icon for single column before screen width
- * switches to laptop.
+ * switches to laptop at 1400px.
  *
  * Laptop width is too narrow for double column, so begin with single column.
  * Laptop follows same equation, with different lyric column width.
@@ -63,28 +64,30 @@
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
- * Laptop 1176px
+ * 570px + 12 * 44px + 8 * 4px + 50px + 16px = 1196px
  *
  * In single column, there are 16 units, so 16 pixels.
  * To be divided amongst 12 icons.
  */
 @laptop-single-shrink-icon: ~"calc((100vw - @{uncanny-valley-width} - 8 * @{nav-book-padding} - @{nav-last-title-margin} - 16px) / 12)";
 
-
-// Tablet/mini follows the same equation, without a lyric column width.
+/**
+ * Tablet/mini follows the same equations, without a lyric column width. Switch
+ * at 1100px.
+ */
 @tablet-small-unit: ~"calc((100vw - 21 * @{nav-icon-diameter} - 10 * @{nav-book-padding} - @{nav-last-title-margin}) / 26)";
 @tablet-medium-unit: ~"calc((100vw - 21 * @{nav-icon-diameter} - 10 * @{nav-book-padding} - @{nav-last-title-margin}) / 26 * 2)";
 @tablet-large-unit: ~"calc((100vw - 21 * @{nav-icon-diameter} - 10 * @{nav-book-padding} - @{nav-last-title-margin}) / 26 * 3)";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
- * Tablet 1020px
+ * 21 * 44px + 10 * 4px + 50px + 26px = 1040px
  */
 @tablet-shrink-icon: ~"calc((100vw - 10 * @{nav-book-padding} - @{nav-last-title-margin} - 26px) / 21)";
 
 /**
  * Breakpoint to switch to single column is when icon width is 36px.
- * Tablet 852px
+ * 21 * 36px + 10 * 4px + 50px + 26px = 872px
  */
 @tablet-single-small: ~"calc((100vw - 12 * @{nav-icon-diameter} - 8 * @{nav-book-padding} - @{nav-last-title-margin}) / 16)";
 @tablet-single-medium: ~"calc((100vw - 12 * @{nav-icon-diameter} - 8 * @{nav-book-padding} - @{nav-last-title-margin}) / 16 * 2)";
@@ -92,7 +95,7 @@
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
- * Mini 606px
+ * 12 * 44px + 8 * 4px + 50px + 16px = 626px
  */
 @mini-shrink-icon: ~"calc((100vw - 8 * @{nav-book-padding} - @{nav-last-title-margin} - 16px) / 12)";
 

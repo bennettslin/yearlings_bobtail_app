@@ -36,13 +36,56 @@ const LYRIC = 'lyric',
     HIDDEN = 'hidden',
     DISABLED = 'disabled',
 
+    // These values *must* be the same in nav.less.
+    NAV_ICON_DIAMETER = 44,
+    NAV_BOOK_PADDING = 4,
+    NAV_LAST_TITLE_MARGIN = 50,
+
+    // These values *must* be the same in live.less.
+    GOLDEN_CORD_WIDTH = 745,
+    UNCANNY_VALLEY_WIDTH = 570,
+
+    // Less files do not know these values.
+    SHRINK_ICON_DIAMETER = 36,
+    DOUBLE_COLUMN_UNITS = 26,
+    SINGLE_COLUMN_UNITS = 16,
+
+    DOUBLE_COLUMN_STATIC_BREAKPOINT = 21 * NAV_ICON_DIAMETER + 10 * NAV_BOOK_PADDING + NAV_LAST_TITLE_MARGIN + DOUBLE_COLUMN_UNITS,
+    DOUBLE_COLUMN_SHRINK_BREAKPOINT = 21 * SHRINK_ICON_DIAMETER + 10 * NAV_BOOK_PADDING + NAV_LAST_TITLE_MARGIN + DOUBLE_COLUMN_UNITS,
+    SINGLE_COLUMN_STATIC_BREAKPOINT = 12 * NAV_ICON_DIAMETER + 8 * NAV_BOOK_PADDING + NAV_LAST_TITLE_MARGIN + SINGLE_COLUMN_UNITS,
+
     // Device widths.
     // TODO: Make sure these maxWidths are right.
-    PHONE_WIDTH_OBJECT = {className: 'phone-width', maxWidth: 475},
-    MINI_WIDTH_OBJECT = {className: 'mini-width', maxWidth: 720},
-    TABLET_WIDTH_OBJECT = {className: 'tablet-width', maxWidth: 1100},
-    LAPTOP_WIDTH_OBJECT = {className: 'laptop-width', maxWidth: 1400},
-    MONITOR_WIDTH_OBJECT = {className: 'monitor-width'}
+
+    // maxWidth values should be the same in live.less. (Only used by admin.)
+    PHONE_WIDTH_OBJECT = {
+        className: 'phone-width',
+        maxWidth: 475
+    },
+    MINI_WIDTH_OBJECT = {
+        className: 'mini-width',
+        maxWidth: 720
+    },
+    TABLET_WIDTH_OBJECT = {
+        className: 'tablet-width',
+        maxWidth: 1100,
+        doubleColumnStaticBreakpoint: DOUBLE_COLUMN_STATIC_BREAKPOINT,
+        doubleColumnShrinkBreakpoint: DOUBLE_COLUMN_SHRINK_BREAKPOINT,
+        singleColumnStaticBreakpoint: SINGLE_COLUMN_STATIC_BREAKPOINT
+    },
+    LAPTOP_WIDTH_OBJECT = {
+        className: 'laptop-width',
+        maxWidth: 1400,
+        doubleColumnStaticBreakpoint: DOUBLE_COLUMN_STATIC_BREAKPOINT + UNCANNY_VALLEY_WIDTH,
+        doubleColumnShrinkBreakpoint: DOUBLE_COLUMN_SHRINK_BREAKPOINT + UNCANNY_VALLEY_WIDTH,
+        singleColumnStaticBreakpoint: SINGLE_COLUMN_STATIC_BREAKPOINT + UNCANNY_VALLEY_WIDTH
+    },
+    MONITOR_WIDTH_OBJECT = {
+        className: 'monitor-width',
+        doubleColumnStaticBreakpoint: DOUBLE_COLUMN_STATIC_BREAKPOINT + GOLDEN_CORD_WIDTH,
+        doubleColumnShrinkBreakpoint: DOUBLE_COLUMN_SHRINK_BREAKPOINT + GOLDEN_CORD_WIDTH,
+        singleColumnStaticBreakpoint: SINGLE_COLUMN_STATIC_BREAKPOINT + GOLDEN_CORD_WIDTH
+    }
 
 module.exports = {
 

@@ -10,7 +10,8 @@ import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
 import LyricColumn from './lyric-column'
-import { getSong, getAnnotation, getWikiUrl, getShowSingleBookColumn, getShrinkNavIcon } from 'helpers/album-view-helper'
+import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
+import { getShowSingleBookColumn, getShrinkNavIcon } from 'helpers/responsive-helper'
 import { PHONE_WIDTH_OBJECT, LAPTOP_WIDTH_OBJECT, MONITOR_WIDTH_OBJECT, SHOWN } from 'helpers/constants'
 
 /*************

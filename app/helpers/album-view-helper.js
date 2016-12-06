@@ -1,13 +1,7 @@
 // Parse album data for presentation.
 import { ALBUM_BUILD_KEYS,
          LEFT,
-         RIGHT,
-
-         PHONE_WIDTH_OBJECT,
-         MINI_WIDTH_OBJECT,
-         TABLET_WIDTH_OBJECT,
-         LAPTOP_WIDTH_OBJECT,
-         MONITOR_WIDTH_OBJECT } from './constants'
+         RIGHT } from './constants'
 
 import { intersects } from 'helpers/dot-helper'
 
@@ -52,45 +46,6 @@ export const getLyricsStartAtZero = (props, selectedSongIndex) => {
     return selectedSong.times ? selectedSong.times[1] === 0 : true
 }
 
-export const getIsLyricExpandable = ({ isAdmin, deviceWidth }) => {
-    return !isAdmin && (deviceWidth === PHONE_WIDTH_OBJECT.className || deviceWidth === MINI_WIDTH_OBJECT.className || deviceWidth === TABLET_WIDTH_OBJECT.className)
-}
-
-export const getShowSingleLyricColumn = (props, state) => {
-    // if is admin, return showSingleLyricColumn
-    if (state.isAdmin) {
-        return state.showSingleLyricColumnInAdmin
-
-    } else {
-        const selectedSong = getSong(props),
-            { hasSideStanzas,
-              isDoublespeaker,
-              forceSingleColumn } = selectedSong,
-            { deviceWidth } = state
-
-        let showSingleLyricColumn = false
-
-        // Applies to Vegan Proclamation.
-        if (forceSingleColumn) {
-            showSingleLyricColumn = true
-
-        // Applies to Uncanny Valley Boy.
-        } else if (hasSideStanzas && !isDoublespeaker) {
-            return deviceWidth === PHONE_WIDTH_OBJECT.className
-
-        // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
-        } else if (isDoublespeaker) {
-            /**
-             * In tablet width, lyrics section takes up full width of bottom,
-             * while in monitor width, the screen is wide enough as well.
-             */
-            return deviceWidth !== MONITOR_WIDTH_OBJECT.className && deviceWidth !== TABLET_WIDTH_OBJECT.className
-        }
-
-        return showSingleLyricColumn
-    }
-}
-
 export const getSelectedBookColumnIndex = (props, selectedSongIndex) => {
     const { songs,
             bookStartingIndices } = props,
@@ -98,38 +53,6 @@ export const getSelectedBookColumnIndex = (props, selectedSongIndex) => {
 
     // Assumes two book starting indices.
     return songIndex < bookStartingIndices[1] ? 1 : 2
-}
-
-export const getShowSingleBookColumn = (state) => {
-    const { deviceWidth,
-            windowWidth } = state
-
-    // FIXME: Revisit these numbers.
-    if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
-        return windowWidth < 1597
-
-    } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
-        return true
-
-    } else {
-        return windowWidth < 852
-    }
-}
-
-export const getShrinkNavIcon = (state) => {
-    const { deviceWidth,
-            windowWidth } = state
-
-    // FIXME: Revisit these numbers.
-    if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
-        return windowWidth >= 1597 && windowWidth < 1765
-
-    } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
-        return windowWidth < 1176
-
-    } else {
-        return windowWidth < 606 || (windowWidth >= 852 && windowWidth < 1020)
-    }
 }
 
 export const getSongTimes = (props) => {
