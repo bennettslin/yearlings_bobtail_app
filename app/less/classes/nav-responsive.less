@@ -6,6 +6,7 @@
 @nav-icon-diameter: 44px;
 @nav-book-padding: 4px; // Left and right padding for each book.
 @nav-last-title-margin: 50px; // Margin to accommodate last title.
+@nav-toggle-width: @nav-icon-diameter + @nav-book-padding * 2;
 
 @double-icons: 21;
 @single-icons: 12;
@@ -132,9 +133,19 @@
 
 @mini-shrink-songs-book-offset: ~"calc(@{full-vw} - (@{single-icons} - 1) * (@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons}) - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * 1px)";
 
+.nav-toggle-container {
+    width: @nav-toggle-width;
+}
+
+.lyric-expanded.is-song {
+    .nav-toggle {
+        left: -@nav-toggle-width;
+    }
+}
+
 .double-book-column {
     &.static-icon {
-        .nav-toggle {
+        .nav-toggle-container {
             margin-right: @monitor-large-unit;
         }
 
@@ -196,7 +207,7 @@
 
 .single-book-column {
     &.static-icon {
-        .nav-toggle {
+        .nav-toggle-container {
             margin-right: @monitor-single-large;
         }
 
@@ -231,7 +242,7 @@
 .laptop-width {
     .single-book-column {
         &.static-icon {
-            .nav-toggle {
+            .nav-toggle-container {
                 margin-right: @laptop-single-large;
             }
             .column-shown {
@@ -298,7 +309,7 @@
 .tablet-width, .mini-width {
     .double-book-column {
         &.static-icon {
-            .nav-toggle {
+            .nav-toggle-container {
                 margin-right: @tablet-large-unit;
             }
 
@@ -361,7 +372,7 @@
 
     .single-book-column {
         &.static-icon {
-            .nav-toggle {
+            .nav-toggle-container {
                 margin-right: @tablet-single-large;
             }
 

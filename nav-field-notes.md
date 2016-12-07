@@ -19,10 +19,16 @@
     * Upon nav section accessed.
 
 # Todo
+
+* Dynamically set nav toggle width and position.
+
+* Unit gaps seem wrong now.
+
+* shrink values seem more wrong as shrinking increases.
+
 * annotation and wiki rules
 * rules to disable toggling when toggle button is hidden
 
-* mini single shrink becomes more wrong as more shrunk.
 * Prevent titles from being clickable when nav collapsed.
 
 * Allow different manual screen sizes?

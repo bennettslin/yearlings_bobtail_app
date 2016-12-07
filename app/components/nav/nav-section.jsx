@@ -101,11 +101,13 @@ const NavSectionView = ({
                 </div> :
                 <div className="live-nav-block">
                     {/* nav toggle */}
-                    <NavBook {...navItemProps}
-                        isNavToggle={true}
-                        buttonText={selectedNavIndex + ''}
-                        onButtonClick={onNavExpandClick}
-                    />
+                    <div className="nav-toggle-container">
+                        <NavBook {...navItemProps}
+                            isNavToggle={true}
+                            buttonText={selectedNavIndex + ''}
+                            onButtonClick={onNavExpandClick}
+                        />
+                    </div>
                     <div className="books-block">
                         <div className={`book-column-block column-1${!showSingleBookColumn || selectedBookColumnIndex === 1 ? ' column-shown' : ' column-hidden'}`}>
                             <div className={`book-column`}>

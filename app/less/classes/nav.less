@@ -51,51 +51,13 @@
     overflow: hidden;
 }
 
-.book-column-block, .book-column, .nav-book:not(.nav-toggle) {
+.book-column-block, .book-column, .nav-book {
     position: absolute;
     height: 100%;
 }
 
 .book-column-block {
     height: @nav-height;
-}
-
-
-.monitor-width, .laptop-width {
-    .books-block {
-        bottom: @nav-height * 2;
-    }
-
-    .book-column-block {
-        .transition(bottom 0.2s ease);
-        bottom: -@nav-height;
-    }
-
-    .nav-expanded {
-        .book-column-block {
-            bottom: 0;
-        }
-    }
-}
-
-.tablet-width, .mini-width {
-
-    .books-block {
-        top: 0;
-    }
-
-    .book-column-block {
-        .transition(top 0.2s ease);
-        top: -@nav-height;
-    }
-
-    .nav-expanded {
-        &.lyric-collapsed, &.lyric-expanded.is-logue {
-            .book-column-block {
-                top: 0;
-            }
-        }
-    }
 }
 
 .column-2 {
@@ -119,6 +81,9 @@
 
     // FIXME: Consolidate all z-indices under single chain of constants.
     z-index: 1;
+
+    .transition(left 0.2s ease);
+    left: 0;
 
     background-color: purple;
 }
@@ -162,7 +127,22 @@
 }
 
 .monitor-width, .laptop-width {
+
+    .books-block {
+        bottom: @nav-height * 2;
+    }
+
+    .book-column-block {
+        .transition(bottom 0.2s ease);
+        bottom: -@nav-height;
+    }
+
     .nav-expanded {
+
+        .book-column-block {
+            bottom: 0;
+        }
+
         .column-shown {
             // Show title if shown in desktop.
             .nav-title {
@@ -173,6 +153,16 @@
 }
 
 .tablet-width, .mini-width {
+
+    .books-block {
+        top: 0;
+    }
+
+    .book-column-block {
+        .transition(top 0.2s ease);
+        top: -@nav-height;
+    }
+
     .nav-book {
         border-radius: 0 0 @nav-border-radius @nav-border-radius;
     }
@@ -187,28 +177,13 @@
         top: 50%;
     }
 
-    .nav-expanded.lyric-collapsed {
-        .column-shown {
-            /**
-             * Show title if shown, and also if lyric is not expanded, in
-             * mobile.
-             */
-            .nav-title {
-                transform: scale(1);
+    .nav-expanded {
+        &.lyric-collapsed, &.lyric-expanded.is-logue {
+            .book-column-block {
+                top: 0;
             }
         }
     }
-
-    // Hide nav bar when lyric column is expanded.
-    // .lyric-expanded:not(.is-logue) {
-        // .nav-field {
-        //     height: 0;
-        // }
-
-        // .books-block {
-        //     top: 100%;
-        // }
-    // }
 }
 
 .nav-title {
@@ -252,7 +227,7 @@
         }
     }
 
-    .nav-toggle {
+    .nav-toggle-container {
         margin-right: 3px;
     }
 
