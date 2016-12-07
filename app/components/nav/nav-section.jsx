@@ -109,55 +109,51 @@ const NavSectionView = ({
                     <div className="books-block">
                         <div className={`book-column-block column-1${!showSingleBookColumn || selectedBookColumnIndex === 1 ? ' column-shown' : ' column-hidden'}`}>
                             <div className={`book-column`}>
-                                {/* prologue */}
-                                <NavBook {...navItemProps}
-                                    isLogue={true}
-                                    song={songs[0]}
-                                    index={0}
-                                />
                                 {/* songs 1 - 9 */}
                                 <NavBook {...navItemProps}
                                     songs={songs}
                                     beginArrayIndex={bookStartingIndices[0]}
                                     endArrayIndex={bookStartingIndices[1]}
                                 />
-                            </div>
-                            {/* column 1 toggle */}
-                            {showSingleBookColumn ?
-                                <div className="toggle-column">
+                                {/* prologue or toggle */}
+                                {showSingleBookColumn && selectedBookColumnIndex === 2 ?
                                     <NavBook {...navItemProps}
                                         isToggle={true}
                                         buttonText={'k'}
                                         onButtonClick={onBookColumnClick}
+                                    /> :
+                                    <NavBook {...navItemProps}
+                                        isLogue={true}
+                                        song={songs[0]}
+                                        index={0}
                                     />
-                                </div> : null
-                            }
+                                }
+                            </div>
                         </div>
                         <div className={`book-column-block column-2${!showSingleBookColumn || selectedBookColumnIndex === 2 ? ' column-shown' : ' column-hidden'}`}>
                             <div className={`book-column`}>
                                 {/* songs 10 - 18 */}
                                 <NavBook {...navItemProps}
                                     songs={songs}
+                                    rowReverse={true}
                                     beginArrayIndex={bookStartingIndices[1]}
                                     endArrayIndex={songsLength - 1}
                                 />
-                                {/* epilogue */}
-                                <NavBook {...navItemProps}
-                                    isLogue={true}
-                                    song={songs[songsLength - 1]}
-                                    index={songsLength - 1}
-                                />
-                            </div>
-                            {/* column 2 toggle */}
-                            {showSingleBookColumn ?
-                                <div className="toggle-column">
+                                {/* epilogue or toggle */}
+                                {showSingleBookColumn && selectedBookColumnIndex === 1 ?
                                     <NavBook {...navItemProps}
                                         isToggle={true}
                                         buttonText={'k'}
                                         onButtonClick={onBookColumnClick}
+                                    /> :
+                                    <NavBook {...navItemProps}
+                                        isLogue={true}
+                                        song={songs[songsLength - 1]}
+                                        index={songsLength - 1}
                                     />
-                                </div> : null
-                            }
+                                }
+                            </div>
+                            {/* column 2 toggle */}
                         </div>
                     </div>
                 </div>

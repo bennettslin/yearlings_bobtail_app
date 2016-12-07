@@ -249,7 +249,7 @@ const LiveView = ({
         }
 
     return (
-        <div className={`live-window${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ''}${selectedNavIndex ? '' : ' nav-expanded'}${isOverviewShown ? ' overview-shown' : ''}${manualWidth ? ' manual-width' : ''}`}>
+        <div className={`live-window${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}${selectedNavIndex ? '' : ' nav-expanded'}${isOverviewShown ? ' overview-shown' : ''}${manualWidth ? ' manual-width' : ''}`}>
             {false ?
                 <TipsSection {...tipsSectionProps} /> : null
             }

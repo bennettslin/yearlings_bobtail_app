@@ -57,6 +57,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Nav less files should compile as many constants as possible, good plane flight task`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
             taskName: `animate toggling of book columns`,
             workedHours: 0,
             neededHours: 5

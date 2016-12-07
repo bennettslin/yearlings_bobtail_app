@@ -36,7 +36,7 @@
 }
 
 // All containers.
-.live-nav-block, .toggle-column, .nav-book {
+.live-nav-block, .nav-book {
     display: flex;
 }
 
@@ -46,31 +46,60 @@
 
 .books-block {
     position: relative;
-
-    // Total width of nav, minus toggle button block.
-    // FIXME: This value is now wrong.
-    // left: ~"calc(-8 * @{nav-book-padding} - 7 * @{nav-book-margin} - @{nav-book-extra-margin} - 20 * @{nav-icon-diameter})";
-    width: 0;
-
-    .transition(left 0.4s ease, width 0.5s ease);
+    width: 100%;
+    height: @nav-height * 3;
+    overflow: hidden;
 }
 
-.nav-expanded {
-    .books-block {
-        left: 0;
-        width: 100%;
-    }
-}
-
-.book-column-block, .book-column, .toggle-column, .nav-book:not(.nav-toggle) {
+.book-column-block, .book-column, .nav-book:not(.nav-toggle) {
     position: absolute;
     height: 100%;
 }
 
 .book-column-block {
-    &:last-child {
-        margin-right: @nav-last-title-margin;
+    height: @nav-height;
+}
+
+
+.monitor-width, .laptop-width {
+    .books-block {
+        bottom: @nav-height * 2;
     }
+
+    .book-column-block {
+        .transition(bottom 0.2s ease);
+        bottom: -@nav-height;
+    }
+
+    .nav-expanded {
+        .book-column-block {
+            bottom: 0;
+        }
+    }
+}
+
+.tablet-width, .mini-width {
+
+    .books-block {
+        top: 0;
+    }
+
+    .book-column-block {
+        .transition(top 0.2s ease);
+        top: -@nav-height;
+    }
+
+    .nav-expanded {
+        &.lyric-collapsed, &.lyric-expanded.is-logue {
+            .book-column-block {
+                top: 0;
+            }
+        }
+    }
+}
+
+.column-2 {
+    margin-right: @nav-last-title-margin;
 }
 
 .static-icon {
@@ -132,6 +161,17 @@
     transform-origin: left top;
 }
 
+.monitor-width, .laptop-width {
+    .nav-expanded {
+        .column-shown {
+            // Show title if shown in desktop.
+            .nav-title {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
 .tablet-width, .mini-width {
     .nav-book {
         border-radius: 0 0 @nav-border-radius @nav-border-radius;
@@ -146,6 +186,29 @@
         transform-origin: left bottom;
         top: 50%;
     }
+
+    .nav-expanded.lyric-collapsed {
+        .column-shown {
+            /**
+             * Show title if shown, and also if lyric is not expanded, in
+             * mobile.
+             */
+            .nav-title {
+                transform: scale(1);
+            }
+        }
+    }
+
+    // Hide nav bar when lyric column is expanded.
+    // .lyric-expanded:not(.is-logue) {
+        // .nav-field {
+        //     height: 0;
+        // }
+
+        // .books-block {
+        //     top: 100%;
+        // }
+    // }
 }
 
 .nav-title {
@@ -155,18 +218,11 @@
     transform: scale(0);
 }
 
-.nav-expanded:not(.lyric-expanded) {
+.nav-expanded.lyric-collapsed {
     .column-shown {
         .nav-title {
             transform: scale(1);
         }
-    }
-}
-
-// Hide nav bar when lyric column is expanded.
-.lyric-expanded:not(.is-logue) {
-    .nav-field {
-        height: 0;
     }
 }
 
@@ -203,12 +259,6 @@
 }
 
 // TODO: Begin animations.
-// Make toggle button disappearing action better.
-
-.toggle-column {
-    .transition(transform 0.2s ease);
-}
-
 .column-1 {
     .book-column {
         .transition(left 0.2s ease);
@@ -249,49 +299,34 @@
             right: 0;
         }
     }
-
-    .toggle-column {
-        right: 0;
-    }
 }
 
 .single-book-column {
     .nav-button {
         .transition(width 0.2s ease);
     }
+}
 
-    .column-hidden {
-        &.column-1 {
-            .nav-book.songs {
-                left: 0;
-            }
-        }
+.column-hidden {
 
-        &.column-2 {
-            .nav-book.logue {
-                right: 0;
-            }
-
-            .nav-book.songs {
-                right: 0;
-            }
-
-        }
-
-        .nav-button {
-            width: 0;
-        }
-
-        .toggle-column {
-            transform: scale(1);
+    &.column-1 {
+        .nav-book.songs {
+            left: 0;
         }
     }
 
-    .column-shown {
-
-        .toggle-column {
-            transform: scale(0);
+    &.column-2 {
+        .nav-book.logue {
+            right: 0;
         }
+
+        .nav-book.songs {
+            right: 0;
+        }
+    }
+
+    .nav-button {
+        width: 0;
     }
 }
 
