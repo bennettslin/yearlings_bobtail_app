@@ -49,7 +49,9 @@
  */
 @monitor-shrink-icon: ~"calc((@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
 
-@monitor-shrink-songs-book-offset: ~"calc(@{full-vw} - @{golden-cord-width} - (@{double-icons} - 1) * ((@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-icon-width}) / @{double-icons}) - 8 * @{nav-book-padding} - @{nav-last-title-margin} - (@{double-units} - @{medium-unit}) * 1px)";
+@monitor-shrink-songs-book-offset: ~"calc(@{medium-unit} * 1px + @{nav-book-padding} * 2 + (@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
+
+@monitor-shrink-toggle-width: ~"calc(@{nav-book-padding} * 2 + (@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
 
 /**
  * Breakpoint to switch to single column is when icon width is 36px.
@@ -95,7 +97,9 @@
  */
 @laptop-single-shrink-icon: ~"calc((@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
 
-@laptop-single-shrink-songs-book-offset: ~"calc(@{full-vw} - @{uncanny-valley-width} - (@{single-icons} - 1) * ((@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-icon-width}) / @{single-icons}) - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * 1px)";
+@laptop-single-shrink-songs-book-offset: ~"calc(@{medium-unit} * 1px + @{nav-book-padding} * 2 + (@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
+
+@laptop-single-shrink-toggle-width: ~"calc(@{nav-book-padding} * 2 + (@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
 
 /**
  * Tablet/mini follows the same equations, without a lyric column width. Switch
@@ -113,7 +117,9 @@
  */
 @tablet-shrink-icon: ~"calc((@{full-vw} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
 
-@tablet-shrink-songs-book-offset: ~"calc(@{full-vw} - (@{double-icons} - 1) * ((@{full-vw} - @{double-column-nav-minus-icon-width}) / @{double-icons}) - 8 * @{nav-book-padding} - @{nav-last-title-margin} - (@{double-units} - @{medium-unit}) * 1px)";
+@tablet-shrink-songs-book-offset: ~"calc(@{medium-unit} * 1px + @{nav-book-padding} * 2 + (@{full-vw} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
+
+@tablet-shrink-toggle-width: ~"calc(@{nav-book-padding} * 2 + (@{full-vw} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
 
 /**
  * Breakpoint to switch to single column is when icon width is 36px.
@@ -131,15 +137,17 @@
  */
 @mini-shrink-icon: ~"calc((@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
 
-@mini-shrink-songs-book-offset: ~"calc(@{full-vw} - (@{single-icons} - 1) * (@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons}) - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * 1px)";
+@mini-shrink-songs-book-offset: ~"calc(@{medium-unit} * 1px + @{nav-book-padding} * 2 + (@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
+
+@mini-shrink-toggle-width: ~"calc(@{nav-book-padding} * 2 + (@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
 
 .nav-toggle-container {
-    width: @nav-toggle-width;
+    min-width: @nav-toggle-width;
 }
 
 .lyric-expanded.is-song {
     .nav-toggle {
-        left: -@nav-toggle-width;
+        right: @nav-toggle-width;
     }
 }
 
@@ -192,6 +200,16 @@
                 &.songs {
                     right: @monitor-shrink-songs-book-offset;
                 }
+            }
+        }
+
+        .nav-toggle-container {
+            min-width: @monitor-shrink-toggle-width;
+        }
+
+        .lyric-expanded.is-song {
+            .nav-toggle {
+                right: @monitor-shrink-toggle-width;
             }
         }
 
@@ -288,13 +306,23 @@
                 &.column-2 {
                     .nav-book {
                         &.songs {
-                            right: @laptop-single-shrink-songs-book-offset;
+                            right: laptop-single-shrink-songs-book-offset;
                         }
                     }
                 }
 
                 .nav-button {
                     width: @laptop-single-shrink-icon;
+                }
+            }
+
+            .nav-toggle-container {
+                min-width: @laptop-single-shrink-toggle-width;
+            }
+
+            .lyric-expanded.is-song {
+                .nav-toggle {
+                    right: @laptop-single-shrink-toggle-width;
                 }
             }
 
@@ -356,6 +384,16 @@
                     &.songs {
                         right: @tablet-shrink-songs-book-offset;
                     }
+                }
+            }
+
+            .nav-toggle-container {
+                min-width: @tablet-shrink-toggle-width;
+            }
+
+            .lyric-expanded.is-song {
+                .nav-toggle {
+                    right: @tablet-shrink-toggle-width;
                 }
             }
 
@@ -426,6 +464,16 @@
 
                 .nav-button {
                     width: @mini-shrink-icon;
+                }
+            }
+
+            .nav-toggle-container {
+                min-width: @mini-shrink-toggle-width;
+            }
+
+            .lyric-expanded.is-song {
+                .nav-toggle {
+                    right: @mini-shrink-toggle-width;
                 }
             }
 
