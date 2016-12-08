@@ -58,7 +58,7 @@ module.exports = {
     tasks: [
         {
             taskName: `Nav less files should compile as many constants as possible, good plane flight task`,
-            workedHours: 3,
+            workedHours: 0,
             neededHours: 3
         },
         {

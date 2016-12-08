@@ -356,6 +356,15 @@ class App extends Component {
 
     selectNavExpand(e, selectedNavIndex) {
         this._stopPropagation(e)
+
+        /**
+         * User cannot change nav option if lyric is expanded in an
+         * expanded width.
+         */
+        if (getIsLyricExpandable(this.state) && this.state.isLyricExpanded) {
+            return
+        }
+
         if (typeof selectedNavIndex === 'undefined') {
             selectedNavIndex = (this.props.selectedNavIndex + 1) % 2
         }
@@ -647,6 +656,8 @@ class App extends Component {
 
     selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2) {
 
+        // TODO: Shouldn't be able to select lyric column if not in song that has double columns.
+
         const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
         let newState = {}
 
@@ -679,6 +690,8 @@ class App extends Component {
 
     selectBookColumn(e, reset, selectedSongIndex = this.props.selectedSongIndex) {
         // Either reset or else toggle.
+
+        // TODO: Shouldn't be able to select book column if it's not a single column, or if lyric is expanded.
 
         const selectedBookColumnIndex = reset ? getSelectedBookColumnIndex(this.props, selectedSongIndex) : this.state.selectedBookColumnIndex % 2 + 1
 
