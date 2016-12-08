@@ -62,11 +62,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `animate toggling of book columns`,
-            workedHours: 0,
-            neededHours: 5
-        },
-        {
             taskName: `deal with low screen heights`,
             workedHours: 0,
             neededHours: 2
@@ -797,6 +792,11 @@ module.exports = {
             taskName: `Make responsive nav values dynamics`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `animate toggling of book columns`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
