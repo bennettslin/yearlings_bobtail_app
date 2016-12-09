@@ -7,12 +7,9 @@
 
 @nav-book-padding: 4px; // Left and right padding for each book.
 @nav-last-title-margin: 50px; // Margin to accommodate last title.
-@nav-toggle-width: @nav-icon-diameter + @nav-book-padding * 2;
 
 @double-icons: 21;
-@double-icons-minus-one: @double-icons - 1;
 @single-icons: 12;
-@single-icons-minus-one: @single-icons - 1;
 
 @double-units: 26;
 @single-units: 16;
@@ -20,20 +17,11 @@
 @medium-unit: 2;
 @large-unit: 3;
 
-@medium-double-units: @double-units / @medium-unit;
-@large-double-units: @double-units / @large-unit;
+@medium-double-units: @medium-unit / @double-units;
+@large-double-units: @large-unit / @double-units;
 
-@medium-single-units: @single-units / @medium-unit;
-@large-single-units: @single-units / @large-unit;
-
-@double-column-nav-minus-unit-width: @double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
-@double-column-nav-golden-cord-minus-unit-width: @golden-cord-width + @double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
-@double-column-nav-minus-icon-width: 10 * @nav-book-padding + @nav-last-title-margin + @double-units * 1px;
-
-@single-column-nav-minus-unit-width: @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
-@single-column-nav-golden-cord-minus-unit-width: @golden-cord-width + @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
-@single-column-nav-uncanny-valley-minus-unit-width: @uncanny-valley-width + @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
-@single-column-nav-minus-icon-width: 8 * @nav-book-padding + @nav-last-title-margin + @single-units * 1px;
+@medium-single-units: @medium-unit / @single-units;
+@large-single-units: @large-unit / @single-units;
 
 /**
  * Total width of wide desktop nav field is:
@@ -48,11 +36,15 @@
  * between buttons: 16 * 1 unit
  * Total units: 26 units
  */
-@monitor-small-unit: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-unit-width}) / @{double-units})";
-@monitor-medium-unit: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-unit-width}) / @{medium-double-units})";
-@monitor-large-unit: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-unit-width}) / @{large-double-units})";
 
-@monitor-songs-book-offset: ~"calc(@{full-vw} - @{golden-cord-width} - (@{double-icons-minus-one}) * @{nav-icon-diameter} - 8 * @{nav-book-padding} - @{nav-last-title-margin} - (@{double-units} - @{medium-unit}) * ((@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-unit-width}) / @{double-units}))";
+@double-column-nav-golden-cord-minus-unit-width: @golden-cord-width + @double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
+
+@monitor-small-unit: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-unit-width}) / @{double-units})";
+@monitor-large-unit: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-unit-width}) * @{large-double-units})";
+
+@monitor-songs-book-offset-constant: -@medium-double-units * (@golden-cord-width + @double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @nav-icon-diameter + 2 * @nav-book-padding;
+
+@monitor-songs-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{monitor-songs-book-offset-constant})";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
@@ -61,6 +53,9 @@
  * Each unit is a pixel. There are 26 units, so 26 pixels.
  * To be divided amongst 21 icons.
  */
+
+@double-column-nav-minus-icon-width: 10 * @nav-book-padding + @nav-last-title-margin + @double-units * 1px;
+
 @monitor-shrink-icon: ~"calc((@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
 
 @monitor-shrink-songs-book-offset: ~"calc(@{medium-unit} * 1px + @{nav-book-padding} * 2 + (@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
@@ -83,11 +78,15 @@
  * between buttons: 8 * 1 unit
  * Total units: 16 units
  */
-@monitor-single-small: ~"calc((@{full-vw} - @{single-column-nav-golden-cord-minus-unit-width}) / @{single-units})";
-@monitor-single-medium: ~"calc((@{full-vw} - @{single-column-nav-golden-cord-minus-unit-width}) / @{medium-single-units})";
-@monitor-single-large: ~"calc((@{full-vw} - @{single-column-nav-golden-cord-minus-unit-width}) / @{large-single-units})";
 
-@monitor-single-songs-book-offset: ~"calc(@{full-vw} - @{golden-cord-width} - (@{single-icons-minus-one}) * @{nav-icon-diameter} - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * ((@{full-vw} - @{golden-cord-width} - @{single-column-nav-minus-unit-width}) / @{single-units}))";
+@single-column-nav-golden-cord-minus-unit-width: @golden-cord-width + @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+
+@monitor-single-small: ~"calc((@{full-vw} - @{single-column-nav-golden-cord-minus-unit-width}) / @{single-units})";
+@monitor-single-large: ~"calc((@{full-vw} - @{single-column-nav-golden-cord-minus-unit-width}) * @{large-single-units})";
+
+@monitor-single-songs-book-offset-constant: -@medium-single-units * (@golden-cord-width + @single-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @nav-icon-diameter + 2 * @nav-book-padding;
+
+@monitor-single-songs-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{monitor-single-songs-book-offset-constant})";
 
 /**
  * Monitor does not need to shrink icon for single column before screen width
@@ -96,11 +95,15 @@
  * Laptop width is too narrow for double column, so begin with single column.
  * Laptop follows same equation, with different lyric column width.
  */
-@laptop-single-small: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-unit-width}) / @{single-units})";
-@laptop-single-medium: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-unit-width}) / @{medium-single-units})";
-@laptop-single-large: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-unit-width}) / @{large-single-units})";
 
-@laptop-single-songs-book-offset: ~"calc(@{full-vw} - @{uncanny-valley-width} - (@{single-icons-minus-one}) * @{nav-icon-diameter} - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * ((@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-unit-width}) / @{single-units}))";
+@single-column-nav-uncanny-valley-minus-unit-width: @uncanny-valley-width + @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+
+@laptop-single-small: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-unit-width}) / @{single-units})";
+@laptop-single-large: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-unit-width}) * @{large-single-units})";
+
+@laptop-single-songs-book-offset-constant: -@medium-single-units * (@uncanny-valley-width + @single-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @nav-icon-diameter + 2 * @nav-book-padding;
+
+@laptop-single-songs-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{laptop-single-songs-book-offset-constant})";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
@@ -119,13 +122,15 @@
  * Tablet/mini follows the same equations, without a lyric column width. Switch
  * at 1100px.
  */
+
+@double-column-nav-minus-unit-width: @double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
+
 @tablet-small-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{double-units})";
-@tablet-medium-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{medium-double-units})";
-@tablet-large-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{large-double-units})";
+@tablet-large-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) * @{large-double-units})";
 
-// double icons minus one might not be needed afterwards.
+@tablet-songs-book-offset-constant: -@medium-double-units * (@double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @nav-icon-diameter + 2 * @nav-book-padding;
 
-@tablet-songs-book-offset: ~"calc(@{full-vw} - (@{double-icons-minus-one}) * @{nav-icon-diameter} - 8 * @{nav-book-padding} - @{nav-last-title-margin} - (@{double-units} - @{medium-unit}) * ((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{double-units}))";
+@tablet-songs-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{tablet-songs-book-offset-constant})";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
@@ -141,21 +146,34 @@
  * Breakpoint to switch to single column is when icon width is 36px.
  * 21 * 36px + 10 * 4px + 50px + 26px = 872px
  */
-@tablet-single-small: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{single-units})";
-@tablet-single-medium: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{medium-single-units})";
-@tablet-single-large: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{large-single-units})";
 
-@tablet-single-songs-book-offset: ~"calc(@{full-vw} - (@{single-icons-minus-one}) * @{nav-icon-diameter} - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * ((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{single-units}))";
+@single-column-nav-minus-unit-width: @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+
+@tablet-single-small: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{single-units})";
+@tablet-single-large: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) * @{large-single-units})";
+
+@tablet-single-songs-book-offset-constant: -@medium-single-units * (@single-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @nav-icon-diameter + 2 * @nav-book-padding;
+
+@tablet-single-songs-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{tablet-single-songs-book-offset-constant})";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
  * 12 * 44px + 8 * 4px + 50px + 16px = 626px
  */
+
+@single-column-nav-minus-icon-width: 8 * @nav-book-padding + @nav-last-title-margin + @single-units * 1px;
+
 @mini-shrink-icon: ~"calc((@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
 
 @mini-shrink-songs-book-offset: ~"calc(@{medium-unit} * 1px + @{nav-book-padding} * 2 + (@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
 
 @mini-shrink-toggle-width: ~"calc(@{nav-book-padding} * 2 + (@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
+
+/**
+ * Begin styles.
+ */
+
+@nav-toggle-width: @nav-icon-diameter + @nav-book-padding * 2;
 
 .nav-toggle-container {
     min-width: @nav-toggle-width;
