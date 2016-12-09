@@ -10,7 +10,7 @@ import WikiPopup from './wiki/wiki-popup'
 import DotsSection from './dots/dots-section'
 import LyricColumn from './lyric-column'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getShowSingleBookColumn, getShrinkNavIcon } from 'helpers/responsive-helper'
+import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn } from 'helpers/responsive-helper'
 import { PHONE_WIDTH_OBJECT, LAPTOP_WIDTH_OBJECT, MONITOR_WIDTH_OBJECT, SHOWN } from 'helpers/constants'
 
 /*************
@@ -26,6 +26,7 @@ const Live = (props) => {
         isPhone = deviceWidth === PHONE_WIDTH_OBJECT.className,
         isDesktop = deviceWidth === LAPTOP_WIDTH_OBJECT.className || deviceWidth === MONITOR_WIDTH_OBJECT.className,
 
+        isHeightlessLyricColumn = getIsHeightlessLyricColumn(props),
         showSingleBookColumn = getShowSingleBookColumn(props),
         shrinkNavIcon = getShrinkNavIcon(props)
 
@@ -41,6 +42,7 @@ const Live = (props) => {
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
+            isHeightlessLyricColumn={isHeightlessLyricColumn}
             showSingleBookColumn={showSingleBookColumn}
             shrinkNavIcon={shrinkNavIcon}
         />
@@ -126,16 +128,13 @@ const LiveView = ({
     presentDotKeys,
     selectedSongLyrics,
     hasDoubleColumns,
+    isHeightlessLyricColumn,
     showSingleBookColumn,
     shrinkNavIcon,
 
 ...other }) => {
 
     const isLogue = isPrologue || isEpilogue,
-        tipsSectionProps = {
-            selectedTipsIndex,
-            onTipsClick
-        },
         annotationPopupProps = {
             songs,
             annotation,
@@ -182,6 +181,7 @@ const LiveView = ({
             isLastVerse,
             selectedSongTitle,
             selectedSongIndex,
+            selectedTipsIndex,
             isPlaying,
             selectedTimePlayed,
             selectedAudioOptionIndex,
@@ -191,7 +191,8 @@ const LiveView = ({
             onPlayClick,
             onSongClick,
             onVerseClick,
-            onAudioOptionClick
+            onAudioOptionClick,
+            onTipsClick
         },
         overviewToggleSectionProps = {
             selectedOverviewIndex,
@@ -246,7 +247,7 @@ const LiveView = ({
         }
 
     return (
-        <div className={`live-window${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}${selectedNavIndex ? '' : ' nav-expanded'}${isOverviewShown ? ' overview-shown' : ''}${manualWidth ? ' manual-width' : ''}`}>
+        <div className={`live-window${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}${isHeightlessLyricColumn ? ' heightless-lyric' : ''}${selectedNavIndex ? '' : ' nav-expanded'}${isOverviewShown ? ' overview-shown' : ''}${manualWidth ? ' manual-width' : ''}`}>
             {false ?
                 <TipsSection {...tipsSectionProps} /> : null
             }
@@ -281,6 +282,9 @@ const LiveView = ({
                         <div className="subfield wiki-subfield">
                             <WikiPopup {...wikiPopupProps} />
                         </div>
+                        <div className="subfield dots-subfield">
+
+                        </div>
                     </div>
                     <div className="subfield overview-subfield">
                         <OverviewToggleSection {...overviewToggleSectionProps} />
@@ -290,6 +294,18 @@ const LiveView = ({
                                 />
                         </div>
                     </div>
+                    {isHeightlessLyricColumn ?
+                        <div className="lyric-button-block expand-button-block">
+                            <a
+                                className="lyric-button enabled"
+                                onClick={onLyricExpandClick}
+                            >
+                                <div className="button-icon lyric-icon">
+                                    {isLyricExpanded ? '-' : '+'}
+                                </div>
+                            </a>
+                        </div> : null
+                    }
                 </div>
                 {isDesktop ?
                     <div className="field nav-field placeholder"></div> : null

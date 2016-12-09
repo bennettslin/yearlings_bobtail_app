@@ -23,27 +23,29 @@
     .transition(height 0.2s ease);
 
     .lyric-button-block {
-        position: absolute;
         top: 0;
         z-index: @text-z-index + 1;
+    }
 
-        padding: 10px;
-        background-color: gray;
+    .expand-button-block {
+        // Needed to expand properly in Chrome.
+        right: 17px;
     }
 }
 
-.lyric-icon {
-    background-color: orange;
-}
-
-.expand-button-block {
-    // Needed to expand properly in Chrome.
-    left: 0;
+.lyric-button-block {
+    position: absolute;
+    padding: 10px;
+    background-color: gray;
 }
 
 .ear-button-block {
     // Accommodate scrollbar.
-    right: 17px;
+    left: 0;
+}
+
+.lyric-icon {
+    background-color: orange;
 }
 
 .monitor-width, .laptop-width {
@@ -81,6 +83,12 @@
             .lyric-column {
                 height: ~"calc(100% - @{menu-height-mini-tablet})";
             }
+        }
+    }
+
+    .heightless-lyric {
+        .lyric-column {
+            height: 0;
         }
     }
 

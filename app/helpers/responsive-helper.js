@@ -3,7 +3,8 @@ import { PHONE_WIDTH_OBJECT,
          TABLET_WIDTH_OBJECT,
          LAPTOP_WIDTH_OBJECT,
          MONITOR_WIDTH_OBJECT,
-         DEVICE_WIDTH_OBJECTS } from 'helpers/constants'
+         DEVICE_WIDTH_OBJECTS,
+         HEIGHTLESS_LYRIC_MAX } from 'helpers/constants'
 import { getSong } from 'helpers/album-view-helper'
 
 export const resizeWindow = (target = window, presentWidth) => {
@@ -131,4 +132,8 @@ export const getShowSingleLyricColumn = (props, state) => {
 
         return showSingleLyricColumn
     }
+}
+
+export const getIsHeightlessLyricColumn = (state) => {
+    return getIsLyricExpandable(state) && state.windowHeight < HEIGHTLESS_LYRIC_MAX
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import TitleSection from './title/title-section'
 import AudioSection from './audio/audio-section'
+import { TIPS_OPTIONS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -32,6 +33,7 @@ const MenuFieldView = ({
     isPlaying,
     selectedTimePlayed,
     selectedAudioOptionIndex,
+    selectedTipsIndex,
     accessedSongIndex,
     accessedOn,
     accessedSectionKey,
@@ -39,7 +41,8 @@ const MenuFieldView = ({
     onPlayClick,
     onSongClick,
     onVerseClick,
-    onAudioOptionClick
+    onAudioOptionClick,
+    onTipsClick
 
 }) => {
 
@@ -70,6 +73,10 @@ const MenuFieldView = ({
             onAudioSongClick: onSongClick,
             onAudioTimeClick: onVerseClick,
             onAudioOptionClick
+        },
+        tipsSectionProps = {
+            selectedTipsIndex,
+            onTipsClick
         }
 
     return (
@@ -100,9 +107,10 @@ const MenuFieldView = ({
                         </a>
                         <a
                             className="dots-tips-button tips-button enabled"
+                            onClick={onTipsClick}
                         >
                             <div className="button-icon tips-icon">
-                                tips
+                                {TIPS_OPTIONS[selectedTipsIndex]}
                             </div>
                         </a>
                     </div>

@@ -656,6 +656,8 @@ class App extends Component {
 
     selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2) {
 
+        this._stopPropagation(e)
+
         /**
          * User shouldn't be able to select lyric column if not in a song that
          * has double columns.

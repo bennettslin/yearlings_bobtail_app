@@ -106,6 +106,8 @@ module.exports = {
         MONITOR_WIDTH_OBJECT,
     ],
 
+    HEIGHTLESS_LYRIC_MAX: 450,
+
     LYRIC_VERSE_ELEMENT: 'verse_element',
     LYRIC_ANNOTATION_ELEMENT: 'annotation_element',
 

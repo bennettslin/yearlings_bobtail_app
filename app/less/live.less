@@ -201,6 +201,12 @@
         height: 100% - @collapsed-lyric-section-height;
     }
 
+    .heightless-lyric {
+        .main-column {
+            height: 100%;
+        }
+    }
+
     .is-logue {
         .main-column {
             height: 100%;
@@ -226,6 +232,11 @@
 
     .main-field {
         order: 3;
+
+        .expand-button-block {
+            bottom: 0;
+            right: 0;
+        }
     }
 
     // For admin device width toggle. Should be the same as in constants.js.
