@@ -56,11 +56,17 @@
 
 @double-column-nav-minus-icon-width: 10 * @nav-book-padding + @nav-last-title-margin + @double-units * 1px;
 
-@monitor-shrink-icon: ~"calc((@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
+@double-column-nav-golden-cord-minus-icon-width: @golden-cord-width + @double-column-nav-minus-icon-width;
 
-@monitor-shrink-songs-book-offset: ~"calc(@{medium-unit} * 1px + @{nav-book-padding} * 2 + (@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
+@monitor-shrink-icon: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-icon-width}) / @{double-icons})";
 
-@monitor-shrink-toggle-width: ~"calc(@{nav-book-padding} * 2 + (@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
+@monitor-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (@golden-cord-width + 10 * @nav-book-padding + @nav-last-title-margin + @double-units) / @double-icons;
+
+@monitor-shrink-songs-book-offset: ~"calc(@{full-vw} / @{double-icons} + @{monitor-shrink-songs-book-offset-constant})";
+
+@monitor-shrink-toggle-width-constant: @nav-book-padding * 2 - (@golden-cord-width + 10 * @nav-book-padding + @nav-last-title-margin + @double-units * 1px) / @double-icons;
+
+@monitor-shrink-toggle-width: ~"calc(@{full-vw} / @{double-icons} + @{monitor-shrink-toggle-width-constant})";
 
 /**
  * Breakpoint to switch to single column is when icon width is 36px.
@@ -112,11 +118,20 @@
  * In single column, there are 16 units, so 16 pixels.
  * To be divided amongst 12 icons.
  */
-@laptop-single-shrink-icon: ~"calc((@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
 
-@laptop-single-shrink-songs-book-offset: ~"calc(@{medium-unit} * 1px + @{nav-book-padding} * 2 + (@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
+@single-column-nav-minus-icon-width: 8 * @nav-book-padding + @nav-last-title-margin + @single-units * 1px;
 
-@laptop-single-shrink-toggle-width: ~"calc(@{nav-book-padding} * 2 + (@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
+@single-column-nav-uncanny-valley-minus-icon-width: @uncanny-valley-width + @single-column-nav-minus-icon-width;
+
+@laptop-single-shrink-icon: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-icon-width}) / @{single-icons})";
+
+@laptop-single-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (@uncanny-valley-width + 8 * @nav-book-padding + @nav-last-title-margin + @single-units) / @single-icons;
+
+@laptop-single-shrink-songs-book-offset: ~"calc(@{full-vw} / @{single-icons} + @{laptop-single-shrink-songs-book-offset-constant})";
+
+@laptop-single-shrink-toggle-width-constant: @nav-book-padding * 2 - (@uncanny-valley-width + 8 * @nav-book-padding + @nav-last-title-margin + @single-units * 1px) / @single-icons;
+
+@laptop-single-shrink-toggle-width: ~"calc(@{full-vw} / @{single-icons} + @{laptop-single-shrink-toggle-width-constant})";
 
 /**
  * Tablet/mini follows the same equations, without a lyric column width. Switch
@@ -138,9 +153,13 @@
  */
 @tablet-shrink-icon: ~"calc((@{full-vw} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
 
-@tablet-shrink-songs-book-offset: ~"calc(@{medium-unit} * 1px + @{nav-book-padding} * 2 + (@{full-vw} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
+@tablet-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (10 * @nav-book-padding + @nav-last-title-margin + @double-units) / @double-icons;
 
-@tablet-shrink-toggle-width: ~"calc(@{nav-book-padding} * 2 + (@{full-vw} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
+@tablet-shrink-songs-book-offset: ~"calc(@{full-vw} / @{double-icons} + @{tablet-shrink-songs-book-offset-constant})";
+
+@tablet-shrink-toggle-width-constant: @nav-book-padding * 2 - (10 * @nav-book-padding + @nav-last-title-margin + @double-units * 1px) / @double-icons;
+
+@tablet-shrink-toggle-width: ~"calc(@{full-vw} / @{double-icons} + @{tablet-shrink-toggle-width-constant})";
 
 /**
  * Breakpoint to switch to single column is when icon width is 36px.
@@ -160,14 +179,15 @@
  * Breakpoint to start shrinking icon is when unit width is 1px.
  * 12 * 44px + 8 * 4px + 50px + 16px = 626px
  */
-
-@single-column-nav-minus-icon-width: 8 * @nav-book-padding + @nav-last-title-margin + @single-units * 1px;
-
 @mini-shrink-icon: ~"calc((@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
 
-@mini-shrink-songs-book-offset: ~"calc(@{medium-unit} * 1px + @{nav-book-padding} * 2 + (@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
+@mini-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (8 * @nav-book-padding + @nav-last-title-margin + @single-units) / @single-icons;
 
-@mini-shrink-toggle-width: ~"calc(@{nav-book-padding} * 2 + (@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
+@mini-shrink-songs-book-offset: ~"calc(@{full-vw} / @{single-icons} + @{mini-shrink-songs-book-offset-constant})";
+
+@mini-shrink-toggle-width-constant: @nav-book-padding * 2 - (8 * @nav-book-padding + @nav-last-title-margin + @single-units * 1px) / @single-icons;
+
+@mini-shrink-toggle-width: ~"calc(@{full-vw} / @{single-icons} + @{mini-shrink-toggle-width-constant})";
 
 /**
  * Begin styles.
