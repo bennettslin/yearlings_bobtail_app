@@ -51,7 +51,7 @@ const NavButtonView = ({
         onClick={onClick}
     >
         <div className="nav-icon-block">
-            <div className="nav-icon">
+            <div className="button-icon nav-icon">
                 {iconText}
             </div>
         </div>

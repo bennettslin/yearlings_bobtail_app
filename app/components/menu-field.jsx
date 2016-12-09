@@ -91,7 +91,20 @@ const MenuFieldView = ({
             {!isPlaceholder && !isPhone ?
                 <div className="subfield dots-tips-subfield">
                     <div className="dots-tips-block">
-
+                        <a
+                            className="dots-tips-button dots-button enabled"
+                        >
+                            <div className="button-icon dots-icon">
+                                dots
+                            </div>
+                        </a>
+                        <a
+                            className="dots-tips-button tips-button enabled"
+                        >
+                            <div className="button-icon tips-icon">
+                                tips
+                            </div>
+                        </a>
                     </div>
                 </div> : null
             }

@@ -79,7 +79,7 @@ const AudioSectionView = ({
                     className={`audio-button${isPrologue ? '' : ' enabled'}`}
                     onClick={onPreviousSongClick}
                 >
-                    <div className="audio-icon">
+                    <div className="button-icon audio-icon">
                         {isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
                     </div>
                 </a>
@@ -87,10 +87,10 @@ const AudioSectionView = ({
 
             <div className="audio-button-block">
                 <a
-                    className={isPrologue || isEpilogue || isFirstVerse ? '' : 'enabled'}
+                    className={`audio-button${isPrologue || isEpilogue || isFirstVerse ? '' : ' enabled'}`}
                     onClick={onRewindClick}
                 >
-                    <div className="audio-icon">
+                    <div className="button-icon audio-icon">
                         {'\u23EA'}
                     </div>
                 </a>
@@ -98,10 +98,10 @@ const AudioSectionView = ({
 
             <div className="audio-button-block">
                 <a
-                    className="enabled"
+                    className="audio-button enabled"
                     onClick={onPlayClick}
                 >
-                    <div className="audio-icon">
+                    <div className="button-icon audio-icon">
                         {isPlaying ? '\u23F8' : '\u25BA' }
                     </div>
                 </a>
@@ -109,10 +109,10 @@ const AudioSectionView = ({
 
             <div className="audio-button-block">
                 <a
-                    className={isPrologue || isEpilogue || isLastVerse ? '' : 'enabled'}
+                    className={`audio-button${isPrologue || isEpilogue || isLastVerse ? '' : ' enabled'}`}
                     onClick={onFastForwardClick}
                 >
-                    <div className="audio-icon">
+                    <div className="button-icon audio-icon">
                         {'\u23E9'}
                     </div>
                 </a>
@@ -120,10 +120,10 @@ const AudioSectionView = ({
 
             <div className="audio-button-block">
                 <a
-                    className={isEpilogue ? '' : 'enabled'}
+                    className={`audio-button${isEpilogue ? '' : ' enabled'}`}
                     onClick={onNextSongClick}
                 >
-                    <div className="audio-icon">
+                    <div className="button-icon audio-icon">
                         {isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
                     </div>
                 </a>
@@ -131,10 +131,10 @@ const AudioSectionView = ({
 
             <div className="audio-button-block">
                 <a
-                    className="enabled"
+                    className="audio-button enabled"
                     onClick={onAudioOptionClick}
                 >
-                    <div className="audio-icon">
+                    <div className="button-icon audio-icon">
                         Option: {AUDIO_OPTIONS[selectedAudioOptionIndex]}
                     </div>
                 </a>

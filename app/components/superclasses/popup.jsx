@@ -36,7 +36,7 @@ const PopupButton = ({
 
     return (
         <a
-            className={`button ${buttonName}-button enabled`}
+            className={`popup-button ${buttonName}-button enabled`}
             onClick={onClick}
         >
             {tempUnicodeSymbol}
