@@ -1,3 +1,5 @@
+@lyric-button-padding: 10px;
+
 .live {
 
     .lyrics-section {
@@ -26,21 +28,36 @@
         top: 0;
         z-index: @text-z-index + 1;
     }
-
-    .expand-button-block {
-        // Needed to expand properly in Chrome.
-        right: 17px;
-    }
 }
 
+// Includes expand button block in main field.
 .lyric-button-block {
     position: absolute;
-    padding: 10px;
+    padding: @lyric-button-padding;
     background-color: gray;
 }
 
-.ear-button-block {
+.expand-button-block.in-main {
+    .transition(right 0.2s ease);
+    bottom: 0;
+    right: 0;
+}
+
+.is-logue {
+    .expand-button-block.in-main {
+        .transition(right 0.2s ease);
+        bottom: 0;
+        right: -@app-icon-diameter - @lyric-button-padding * 2;
+    }
+}
+
+.expand-button-block:not(.in-main) {
     // Accommodate scrollbar.
+    right: 17px;
+}
+
+.ear-button-block {
+    // Needed to expand properly in Chrome.
     left: 0;
 }
 

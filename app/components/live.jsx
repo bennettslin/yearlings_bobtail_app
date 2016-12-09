@@ -295,7 +295,7 @@ const LiveView = ({
                         </div>
                     </div>
                     {isHeightlessLyricColumn ?
-                        <div className="lyric-button-block expand-button-block">
+                        <div className="lyric-button-block expand-button-block in-main">
                             <a
                                 className="lyric-button enabled"
                                 onClick={onLyricExpandClick}
