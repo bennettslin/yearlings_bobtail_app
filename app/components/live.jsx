@@ -1,6 +1,5 @@
 import React from 'react'
-import TitleSection from './title/title-section'
-import AudioSection from './audio/audio-section'
+import MenuField from './menu-field'
 import NavSection from './nav/nav-section'
 import TipsSection from './tips/tips-section'
 import OverviewToggleSection from './overview/overview-toggle-section'
@@ -168,15 +167,13 @@ const LiveView = ({
             accessedDotIndex,
             onDotClick
         },
-        titleSectionProps = {
+        menuFieldProps = {
+            isPhone,
             title,
             accessedOn,
             accessedSectionKey,
             nextSectionKey,
             accessedSongIndex,
-            onTitleClick: onSongClick
-        },
-        audioSectionProps = {
             isPrologue,
             isFirstSong,
             isLastSong,
@@ -192,8 +189,8 @@ const LiveView = ({
             accessedSectionKey,
             nextSectionKey,
             onPlayClick,
-            onAudioSongClick: onSongClick,
-            onAudioTimeClick: onVerseClick,
+            onSongClick,
+            onVerseClick,
             onAudioOptionClick
         },
         overviewToggleSectionProps = {
@@ -263,22 +260,16 @@ const LiveView = ({
                     />
             </div>
             {isDesktop ?
-                <div className="field menu-field outside-main">
-                    {!isPhone ?
-                        <TitleSection {...titleSectionProps} /> : null
-                    }
-                    <AudioSection {...audioSectionProps} />
-                </div> : null
+                <MenuField {...menuFieldProps}
+                    isOutsideMain={true}
+                /> : null
             }
             <div className="main-column">
                 {!isDesktop ?
-                    <div className="field menu-field">
-                        {!isPhone ?
-                            <TitleSection {...titleSectionProps} /> : null
-                        }
-                        <AudioSection {...audioSectionProps} />
-                    </div> :
-                    <div className="field menu-field placeholder"></div>
+                    <MenuField {...menuFieldProps} /> :
+                    <MenuField {...menuFieldProps}
+                        isPlaceholder={true}
+                    />
                 }
                 <div className="field main-field">
                     <StageSection

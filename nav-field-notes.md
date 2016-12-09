@@ -19,7 +19,5 @@
     * Upon nav section accessed.
 
 # Todo
-* annotation and wiki rules
-* rules to disable toggling when toggle button is hidden
-
+* hide titles strategically when annotation or wiki are shown
 * Allow different manual screen sizes?
