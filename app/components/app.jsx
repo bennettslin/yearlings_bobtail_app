@@ -45,7 +45,7 @@ import { NAV_SECTION,
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex } from 'helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable } from 'helpers/responsive-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -361,7 +361,7 @@ class App extends Component {
          * User cannot change nav option if lyric is expanded in an
          * expanded width.
          */
-        if (getIsLyricExpandable(this.state) && this.state.isLyricExpanded) {
+        if (e && getIsLyricExpandable(this.state) && this.state.isLyricExpanded) {
             return
         }
 
@@ -656,7 +656,13 @@ class App extends Component {
 
     selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2) {
 
-        // TODO: Shouldn't be able to select lyric column if not in song that has double columns.
+        /**
+         * User shouldn't be able to select lyric column if not in a song that
+         * has double columns.
+         */
+        if (!getShowSingleLyricColumn(this.props, this.state)) {
+            return
+        }
 
         const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
         let newState = {}
@@ -691,7 +697,15 @@ class App extends Component {
     selectBookColumn(e, reset, selectedSongIndex = this.props.selectedSongIndex) {
         // Either reset or else toggle.
 
-        // TODO: Shouldn't be able to select book column if it's not a single column, or if lyric is expanded.
+        /**
+         * User shouldn't be able to select book column if it's not a single
+         * column, if nav is collapsed, or if lyric is expanded.
+         */
+        if (e) {
+            if (!getShowSingleBookColumn(this.state) || this.props.selectedNavIndex || (getIsLyricExpandable(this.state) && this.state.isLyricExpanded)) {
+                return
+            }
+        }
 
         const selectedBookColumnIndex = reset ? getSelectedBookColumnIndex(this.props, selectedSongIndex) : this.state.selectedBookColumnIndex % 2 + 1
 

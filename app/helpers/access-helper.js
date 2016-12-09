@@ -55,7 +55,7 @@ export default {
                 break
             // Toggle nav expand.
             case 'v':
-                selectNavExpand()
+                selectNavExpand(true)
                 break
             // Toggle dots expand.
             case 'y':
@@ -67,7 +67,7 @@ export default {
                 break
             // Toggle book column.
             case 'k':
-                selectBookColumn()
+                selectBookColumn(true)
                 break
             // Toggle selected overview index.
             case 'z':

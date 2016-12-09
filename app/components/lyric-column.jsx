@@ -47,22 +47,26 @@ const LyricColumnView = ({
 ...other }) => (
     <div className="lyric-column">
         {isLyricExpandable ?
-            <div className="button-block expand-button-block">
+            <div className="lyric-button-block expand-button-block">
                 <a
-                    className="enabled"
+                    className="lyric-button enabled"
                     onClick={onLyricExpandClick}
                 >
-                    {isLyricExpanded ? '-' : '+'}
+                    <div className="lyric-icon-block">
+                        {isLyricExpanded ? '-' : '+'}
+                    </div>
                 </a>
             </div> : null
         }
         {showEarButton ?
-            <div className="button-block ear-button-block">
+            <div className="lyric-button-block ear-button-block">
                 <a
-                    className="enabled"
+                    className="lyric-button enabled"
                     onClick={onLyricColumnClick}
                 >
-                    {earButtonText}
+                    <div className="lyric-icon-block">
+                        {earButtonText}
+                    </div>
                 </a>
             </div> : null
         }

@@ -3,7 +3,8 @@
 @full-vw: 100vw;
 
 // These values *must* be the same in constants.js.
-@nav-icon-diameter: 44px;
+@nav-icon-diameter: @app-icon-diameter;
+
 @nav-book-padding: 4px; // Left and right padding for each book.
 @nav-last-title-margin: 50px; // Margin to accommodate last title.
 @nav-toggle-width: @nav-icon-diameter + @nav-book-padding * 2;
@@ -146,12 +147,6 @@
     min-width: @nav-toggle-width;
 }
 
-.lyric-expanded.is-song {
-    .nav-toggle {
-        right: @nav-toggle-width;
-    }
-}
-
 .double-book-column {
     &.static-icon {
         .nav-toggle-container {
@@ -206,12 +201,6 @@
 
         .nav-toggle-container {
             min-width: @monitor-shrink-toggle-width;
-        }
-
-        .lyric-expanded.is-song {
-            .nav-toggle {
-                right: @monitor-shrink-toggle-width;
-            }
         }
 
         .nav-button {
@@ -321,12 +310,6 @@
                 min-width: @laptop-single-shrink-toggle-width;
             }
 
-            .lyric-expanded.is-song {
-                .nav-toggle {
-                    right: @laptop-single-shrink-toggle-width;
-                }
-            }
-
             .nav-icon {
                 width: @laptop-single-shrink-icon;
                 height: @laptop-single-shrink-icon;
@@ -336,6 +319,13 @@
 }
 
 .tablet-width, .mini-width {
+
+    .lyric-expanded.is-song {
+        .nav-toggle {
+            right: @nav-toggle-width;
+        }
+    }
+
     .double-book-column {
         &.static-icon {
             .nav-toggle-container {

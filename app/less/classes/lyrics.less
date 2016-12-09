@@ -22,15 +22,26 @@
 
     .transition(height 0.2s ease);
 
-    .button-block {
+    .lyric-button-block {
         position: absolute;
         top: 0;
         z-index: @text-z-index + 1;
 
         padding: 10px;
-        font-size: 3em;
         background-color: gray;
     }
+}
+
+.lyric-icon-block {
+    width: @app-icon-diameter;
+    height: @app-icon-diameter;
+    border-radius: @app-icon-diameter / 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: orange;
 }
 
 .expand-button-block {
