@@ -19,9 +19,14 @@
 @uncanny-valley-width: 570px;
 
 @collapsed-lyric-section-height: 32%;
+
 @menu-height-laptop-monitor: 72px;
 @menu-height-mini-tablet: 60px;
 @menu-height-phone: 50px;
+
+@audio-width-monitor: 50%;
+@side-menu-width-monitor: (100% - @audio-width-monitor) / 2;
+@audio-min-width-monitor: 400px;
 
 @nav-height: 50px;
 @nav-width: @nav-height * 2 / 3;
@@ -85,12 +90,48 @@
 .menu-field, .nav-field {
     // Ensure that this isn't some grossly huge value.
     max-width: @laptop-max-width;
+
+    &.menu-field {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 2px dotted violet;
+
+        .subfield {
+            height: 100%;
+        }
+    }
 }
 
-.menu-field {
-    display: flex;
+.title-subfield, .dots-tips-subfield {
+    position: relative;
+}
 
-    border: 2px dotted violet;
+.title-subfield {
+    width: @side-menu-width-monitor;
+    background-color: #d88;
+}
+
+.audio-subfield {
+    width: @audio-width-monitor;
+    background-color: #8d8;
+}
+
+.audio-subfield {
+    min-width: @audio-min-width-monitor;
+}
+
+.dots-tips-subfield {
+    width: @side-menu-width-monitor;
+    background-color: #88d;
+}
+
+.title-block, .dots-tips-block {
+    position: absolute;
+    min-width: 20px;
+    background-color: #d84;
+    height: 100%;
 }
 
 .main-field {
@@ -207,7 +248,7 @@
             height: @menu-height-phone;
         }
 
-        .audio-section {
+        .audio-subfield {
             width: 100%;
         }
     }

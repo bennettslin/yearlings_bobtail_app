@@ -42,6 +42,7 @@ const MenuFieldView = ({
     onAudioOptionClick
 
 }) => {
+
     const titleSectionProps = {
             title,
             accessedOn,
@@ -73,11 +74,26 @@ const MenuFieldView = ({
 
     return (
         <div className={`field menu-field${isOutsideMain ? ' outside-main' : ''}${isPlaceholder ? ' placeholder' : ''}`}>
+
+
             {!isPlaceholder && !isPhone ?
-                <TitleSection {...titleSectionProps} /> : null
+                <div className="subfield title-subfield">
+                    <div className="title-block">
+                        <TitleSection {...titleSectionProps} />
+                    </div>
+                </div> : null
             }
             {!isPlaceholder ?
-                <AudioSection {...audioSectionProps} /> : null
+                <div className="subfield audio-subfield">
+                    <AudioSection {...audioSectionProps} />
+                </div> : null
+            }
+            {!isPlaceholder && !isPhone ?
+                <div className="subfield dots-tips-subfield">
+                    <div className="dots-tips-block">
+
+                    </div>
+                </div> : null
             }
         </div>
     )

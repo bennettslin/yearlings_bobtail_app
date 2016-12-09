@@ -73,43 +73,72 @@ const AudioSectionView = ({
         <div className="audio-banner-block">
             {selectedSongTitle}{!isPrologue && !isEpilogue ? ': ' + getFormattedTime(selectedTimePlayed) : ''}
         </div>
-        <div className="audio-button-block">
-            <a
-                className={isPrologue ? '' : 'enabled'}
-                onClick={onPreviousSongClick}
-            >
-                {isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
-            </a>
-            <a
-                className={isPrologue || isEpilogue || isFirstVerse ? '' : 'enabled'}
-                onClick={onRewindClick}
-            >
-                {'\u23EA'}
-            </a>
-            <a
-                className="enabled"
-                onClick={onPlayClick}
-            >
-                {isPlaying ? '\u23F8' : '\u25BA' }
-            </a>
-            <a
-                className={isPrologue || isEpilogue || isLastVerse ? '' : 'enabled'}
-                onClick={onFastForwardClick}
-            >
-                {'\u23E9'}
-            </a>
-            <a
-                className={isEpilogue ? '' : 'enabled'}
-                onClick={onNextSongClick}
-            >
-                {isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
-            </a>
-            <a
-                className="enabled"
-                onClick={onAudioOptionClick}
-            >
-                Option: {AUDIO_OPTIONS[selectedAudioOptionIndex]}
-            </a>
+        <div className="audio-buttons-block">
+            <div className="audio-button-block">
+                <a
+                    className={`audio-button${isPrologue ? '' : ' enabled'}`}
+                    onClick={onPreviousSongClick}
+                >
+                    <div className="audio-icon">
+                        {isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
+                    </div>
+                </a>
+            </div>
+
+            <div className="audio-button-block">
+                <a
+                    className={isPrologue || isEpilogue || isFirstVerse ? '' : 'enabled'}
+                    onClick={onRewindClick}
+                >
+                    <div className="audio-icon">
+                        {'\u23EA'}
+                    </div>
+                </a>
+            </div>
+
+            <div className="audio-button-block">
+                <a
+                    className="enabled"
+                    onClick={onPlayClick}
+                >
+                    <div className="audio-icon">
+                        {isPlaying ? '\u23F8' : '\u25BA' }
+                    </div>
+                </a>
+            </div>
+
+            <div className="audio-button-block">
+                <a
+                    className={isPrologue || isEpilogue || isLastVerse ? '' : 'enabled'}
+                    onClick={onFastForwardClick}
+                >
+                    <div className="audio-icon">
+                        {'\u23E9'}
+                    </div>
+                </a>
+            </div>
+
+            <div className="audio-button-block">
+                <a
+                    className={isEpilogue ? '' : 'enabled'}
+                    onClick={onNextSongClick}
+                >
+                    <div className="audio-icon">
+                        {isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
+                    </div>
+                </a>
+            </div>
+
+            <div className="audio-button-block">
+                <a
+                    className="enabled"
+                    onClick={onAudioOptionClick}
+                >
+                    <div className="audio-icon">
+                        Option: {AUDIO_OPTIONS[selectedAudioOptionIndex]}
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 )
