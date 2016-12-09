@@ -10,7 +10,9 @@
 @nav-toggle-width: @nav-icon-diameter + @nav-book-padding * 2;
 
 @double-icons: 21;
+@double-icons-minus-one: @double-icons - 1;
 @single-icons: 12;
+@single-icons-minus-one: @single-icons - 1;
 
 @double-units: 26;
 @single-units: 16;
@@ -18,9 +20,19 @@
 @medium-unit: 2;
 @large-unit: 3;
 
+@medium-double-units: @double-units / @medium-unit;
+@large-double-units: @double-units / @large-unit;
+
+@medium-single-units: @single-units / @medium-unit;
+@large-single-units: @single-units / @large-unit;
+
 @double-column-nav-minus-unit-width: @double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
+@double-column-nav-golden-cord-minus-unit-width: @golden-cord-width + @double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
 @double-column-nav-minus-icon-width: 10 * @nav-book-padding + @nav-last-title-margin + @double-units * 1px;
+
 @single-column-nav-minus-unit-width: @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+@single-column-nav-golden-cord-minus-unit-width: @golden-cord-width + @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+@single-column-nav-uncanny-valley-minus-unit-width: @uncanny-valley-width + @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
 @single-column-nav-minus-icon-width: 8 * @nav-book-padding + @nav-last-title-margin + @single-units * 1px;
 
 /**
@@ -36,11 +48,11 @@
  * between buttons: 16 * 1 unit
  * Total units: 26 units
  */
-@monitor-small-unit: ~"calc((@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-unit-width}) / @{double-units})";
-@monitor-medium-unit: ~"calc((@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-unit-width}) / @{double-units} * @{medium-unit})";
-@monitor-large-unit: ~"calc((@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-unit-width}) / @{double-units} * @{large-unit})";
+@monitor-small-unit: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-unit-width}) / @{double-units})";
+@monitor-medium-unit: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-unit-width}) / @{medium-double-units})";
+@monitor-large-unit: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-unit-width}) / @{large-double-units})";
 
-@monitor-songs-book-offset: ~"calc(@{full-vw} - @{golden-cord-width} - (@{double-icons} - 1) * @{nav-icon-diameter} - 8 * @{nav-book-padding} - @{nav-last-title-margin} - (@{double-units} - @{medium-unit}) * ((@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-unit-width}) / @{double-units}))";
+@monitor-songs-book-offset: ~"calc(@{full-vw} - @{golden-cord-width} - (@{double-icons-minus-one}) * @{nav-icon-diameter} - 8 * @{nav-book-padding} - @{nav-last-title-margin} - (@{double-units} - @{medium-unit}) * ((@{full-vw} - @{golden-cord-width} - @{double-column-nav-minus-unit-width}) / @{double-units}))";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
@@ -71,11 +83,11 @@
  * between buttons: 8 * 1 unit
  * Total units: 16 units
  */
-@monitor-single-small: ~"calc((@{full-vw} - @{golden-cord-width} - @{single-column-nav-minus-unit-width}) / @{single-units})";
-@monitor-single-medium: ~"calc((@{full-vw} - @{golden-cord-width} - @{single-column-nav-minus-unit-width}) / @{single-units} * @{medium-unit})";
-@monitor-single-large: ~"calc((@{full-vw} - @{golden-cord-width} - @{single-column-nav-minus-unit-width}) / @{single-units} * @{large-unit})";
+@monitor-single-small: ~"calc((@{full-vw} - @{single-column-nav-golden-cord-minus-unit-width}) / @{single-units})";
+@monitor-single-medium: ~"calc((@{full-vw} - @{single-column-nav-golden-cord-minus-unit-width}) / @{medium-single-units})";
+@monitor-single-large: ~"calc((@{full-vw} - @{single-column-nav-golden-cord-minus-unit-width}) / @{large-single-units})";
 
-@monitor-single-songs-book-offset: ~"calc(@{full-vw} - @{golden-cord-width} - (@{single-icons} - 1) * @{nav-icon-diameter} - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * ((@{full-vw} - @{golden-cord-width} - @{single-column-nav-minus-unit-width}) / @{single-units}))";
+@monitor-single-songs-book-offset: ~"calc(@{full-vw} - @{golden-cord-width} - (@{single-icons-minus-one}) * @{nav-icon-diameter} - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * ((@{full-vw} - @{golden-cord-width} - @{single-column-nav-minus-unit-width}) / @{single-units}))";
 
 /**
  * Monitor does not need to shrink icon for single column before screen width
@@ -84,11 +96,11 @@
  * Laptop width is too narrow for double column, so begin with single column.
  * Laptop follows same equation, with different lyric column width.
  */
-@laptop-single-small: ~"calc((@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-unit-width}) / @{single-units})";
-@laptop-single-medium: ~"calc((@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-unit-width}) / @{single-units} * @{medium-unit})";
-@laptop-single-large: ~"calc((@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-unit-width}) / @{single-units} * @{large-unit})";
+@laptop-single-small: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-unit-width}) / @{single-units})";
+@laptop-single-medium: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-unit-width}) / @{medium-single-units})";
+@laptop-single-large: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-unit-width}) / @{large-single-units})";
 
-@laptop-single-songs-book-offset: ~"calc(@{full-vw} - @{uncanny-valley-width} - (@{single-icons} - 1) * @{nav-icon-diameter} - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * ((@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-unit-width}) / @{single-units}))";
+@laptop-single-songs-book-offset: ~"calc(@{full-vw} - @{uncanny-valley-width} - (@{single-icons-minus-one}) * @{nav-icon-diameter} - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * ((@{full-vw} - @{uncanny-valley-width} - @{single-column-nav-minus-unit-width}) / @{single-units}))";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
@@ -108,10 +120,12 @@
  * at 1100px.
  */
 @tablet-small-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{double-units})";
-@tablet-medium-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{double-units} * @{medium-unit})";
-@tablet-large-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{double-units} * @{large-unit})";
+@tablet-medium-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{medium-double-units})";
+@tablet-large-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{large-double-units})";
 
-@tablet-songs-book-offset: ~"calc(@{full-vw} - (@{double-icons} - 1) * @{nav-icon-diameter} - 8 * @{nav-book-padding} - @{nav-last-title-margin} - (@{double-units} - @{medium-unit}) * ((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{double-units}))";
+// double icons minus one might not be needed afterwards.
+
+@tablet-songs-book-offset: ~"calc(@{full-vw} - (@{double-icons-minus-one}) * @{nav-icon-diameter} - 8 * @{nav-book-padding} - @{nav-last-title-margin} - (@{double-units} - @{medium-unit}) * ((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{double-units}))";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
@@ -128,10 +142,10 @@
  * 21 * 36px + 10 * 4px + 50px + 26px = 872px
  */
 @tablet-single-small: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{single-units})";
-@tablet-single-medium: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{single-units} * @{medium-unit})";
-@tablet-single-large: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{single-units} * @{large-unit})";
+@tablet-single-medium: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{medium-single-units})";
+@tablet-single-large: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{large-single-units})";
 
-@tablet-single-songs-book-offset: ~"calc(@{full-vw} - (@{single-icons} - 1) * @{nav-icon-diameter} - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * ((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{single-units}))";
+@tablet-single-songs-book-offset: ~"calc(@{full-vw} - (@{single-icons-minus-one}) * @{nav-icon-diameter} - 6 * @{nav-book-padding} - @{nav-last-title-margin} - (@{single-units} - @{medium-unit}) * ((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{single-units}))";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
