@@ -160,6 +160,8 @@ const MainColumnView = ({
             selectedOverviewIndex,
             onOverviewClick
         },
+
+        // FIXME: Duplicated in live component.
         overviewPopupProps = {
             deviceWidth,
             isLogue,

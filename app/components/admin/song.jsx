@@ -104,29 +104,27 @@ const SongView = ({
                 accessedDotIndex={accessedDotIndex}
                 onDotClick={onDotClick}
             />
-            {selectedSongIndex && selectedSongIndex < songs.length - 1 ?
-                <LyricsSection
-                    isAdmin={true}
-                    showSingleLyricColumn={showSingleLyricColumn}
-                    lyricsStartAtZero={lyricsStartAtZero}
-                    accessedOn={accessedOn}
-                    accessedSectionKey={accessedSectionKey}
-                    nextSectionKey={nextSectionKey}
-                    accessedLyricElement={accessedLyricElement}
-                    accessedAnnotationIndex={accessedAnnotationIndex}
-                    accessedVerseIndex={accessedVerseIndex}
-                    selectedSongIndex={selectedSongIndex}
-                    selectedAnnotationIndex={selectedAnnotationIndex}
-                    selectedLyricColumnIndex={selectedLyricColumnIndex}
-                    hasDoubleColumns={hasDoubleColumns}
-                    songLyrics={selectedSongLyrics}
-                    selectedDotKeys={selectedDotKeys}
-                    selectedVerseIndex={selectedVerseIndex}
-                    onVerseClick={onVerseClick}
-                    onAnnotationClick={onAnnotationClick}
-                    onLyricColumnClick={onLyricColumnClick}
-                /> : null
-            }
+            <LyricsSection
+                isAdmin={true}
+                showSingleLyricColumn={showSingleLyricColumn}
+                lyricsStartAtZero={lyricsStartAtZero}
+                accessedOn={accessedOn}
+                accessedSectionKey={accessedSectionKey}
+                nextSectionKey={nextSectionKey}
+                accessedLyricElement={accessedLyricElement}
+                accessedAnnotationIndex={accessedAnnotationIndex}
+                accessedVerseIndex={accessedVerseIndex}
+                selectedSongIndex={selectedSongIndex}
+                selectedAnnotationIndex={selectedAnnotationIndex}
+                selectedLyricColumnIndex={selectedLyricColumnIndex}
+                hasDoubleColumns={hasDoubleColumns}
+                songLyrics={selectedSongLyrics}
+                selectedDotKeys={selectedDotKeys}
+                selectedVerseIndex={selectedVerseIndex}
+                onVerseClick={onVerseClick}
+                onAnnotationClick={onAnnotationClick}
+                onLyricColumnClick={onLyricColumnClick}
+            />
         </div>
     </div>
 )

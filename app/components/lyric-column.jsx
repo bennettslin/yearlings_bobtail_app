@@ -46,31 +46,33 @@ const LyricColumnView = ({
 
 ...other }) => (
     <div className="column lyric-column">
-        {showEarButton ?
-            <div className="lyric-button-block ear-button-block">
-                <a
-                    className="lyric-button enabled"
-                    onClick={onLyricColumnClick}
-                >
-                    <div className="button-icon lyric-icon">
-                        {earButtonText}
-                    </div>
-                </a>
-            </div> : null
-        }
-        {isLyricExpandable ?
-            <div className="lyric-button-block expand-button-block">
-                <a
-                    className="lyric-button enabled"
-                    onClick={onLyricExpandClick}
-                >
-                    <div className="button-icon lyric-icon">
-                        {isLyricExpanded ? '-' : '+'}
-                    </div>
-                </a>
-            </div> : null
-        }
-        <LyricsSection {...other} />
+        <div className="lyric-column-animatable">
+            {showEarButton ?
+                <div className="lyric-button-block ear-button-block">
+                    <a
+                        className="lyric-button enabled"
+                        onClick={onLyricColumnClick}
+                    >
+                        <div className="button-icon lyric-icon">
+                            {earButtonText}
+                        </div>
+                    </a>
+                </div> : null
+            }
+            {isLyricExpandable ?
+                <div className="lyric-button-block expand-button-block">
+                    <a
+                        className="lyric-button enabled"
+                        onClick={onLyricExpandClick}
+                    >
+                        <div className="button-icon lyric-icon">
+                            {isLyricExpanded ? '-' : '+'}
+                        </div>
+                    </a>
+                </div> : null
+            }
+            <LyricsSection {...other} />
+        </div>
     </div>
 )
 

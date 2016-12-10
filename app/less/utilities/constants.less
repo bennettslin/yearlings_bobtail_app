@@ -106,18 +106,33 @@
      }
  }
 
- @keyframes tooltipGrow {
+ @keyframes lyricGoToSong {
      0% {
-         transform: scale(0.6);
+         transform: scale(1.5);
          opacity: 0;
      }
-     40% {
-         transform: scale(1.1);
+     100% {
+         transform: scale(1);
+     }
+ }
+
+ @keyframes lyricGoToLogue {
+     0% {
+         transform: scale(1);
          opacity: 1;
      }
-     72% {
-         transform: scale(0.95);
+     100% {
+         transform: scale(1.5);
+         opacity: 0;
      }
+ }
+
+ @keyframes tooltipGrow {
+     0% {
+         transform: scale(0);
+         opacity: 0;
+     }
+
      100% {
          transform: scale(1);
      }

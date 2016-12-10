@@ -1,7 +1,6 @@
 @lyric-button-padding: 10px;
 
 .live {
-
     .lyrics-section {
         width: 100%;
         overflow-y: scroll;
@@ -10,16 +9,23 @@
 }
 
 .lyric-column {
-    display: flex;
-    justify-content: center;
-
     // This fixes the issue of being unable to scroll between stanzas.
     z-index: @lyric-column-z-index;
 
-    background-color: #88d;
 
     // TODO: This hides the accessed section highlighting, which is fine, since it's temporary anyway.
     overflow: hidden;
+}
+
+.lyric-column-animatable {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #88d;
 }
 
 .lyric-column {
@@ -64,35 +70,28 @@
     background-color: orange;
 }
 
-.monitor-width, .laptop-width {
+.lyric-column-animatable {
+    animation: lyricGoToSong 0.2s;
+    opacity: 1;
+    transform: scale(1);
+}
 
-    // TODO: Needs animation for hiding lyric column in logue for monitor and laptop widths.
-
-    // TODO: Making lyric column widths constant. Do I like this better?
-
-    .lyric-column {
-        // .transition(right 0.2s ease);
-        right: 0;
-
-        height: 100%;
-        width: @golden-cord-width;
+.is-logue {
+    .lyric-column-animatable {
+        animation: lyricGoToLogue 0.2s;
+        opacity: 0;
+        transform: scale(1.5);
     }
+}
 
-    .is-logue {
-        .lyric-column {
-            right: -@golden-cord-width;
-        }
+.monitor-width, .laptop-width {
+    .lyric-column {
+        width: @golden-cord-width;
     }
 
     &.laptop-width {
         .lyric-column {
             width: @uncanny-valley-width;
-        }
-
-        .is-logue {
-            .lyric-column {
-                right: -@uncanny-valley-width;
-            }
         }
     }
 }
@@ -129,11 +128,5 @@
                 }
             }
         }
-    }
-}
-
-.is-logue {
-    .lyric-column {
-        height: 0;
     }
 }
