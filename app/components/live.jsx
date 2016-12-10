@@ -256,9 +256,6 @@ const LiveView = ({
             {false ?
                 <TipsSection {...tipsSectionProps} /> : null
             }
-            {false ?
-                <DotsSection {...dotsSectionProps} /> : null
-            }
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="subfield overview-logue-subfield">
                     <OverviewPopup {...overviewPopupProps}

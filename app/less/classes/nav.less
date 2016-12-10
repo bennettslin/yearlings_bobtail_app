@@ -82,9 +82,7 @@
 
 .nav-toggle {
     border-radius: 0 @nav-border-radius 0 0;
-
-    // FIXME: Consolidate all z-indices under single chain of constants.
-    z-index: 1;
+    z-index: @nav-toggle-z-index;
 
     .transition(right 0.2s ease);
     right: 0;

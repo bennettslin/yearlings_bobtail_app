@@ -15,7 +15,7 @@
     justify-content: center;
 
     // This fixes the issue of being unable to scroll between stanzas.
-    z-index: 0;
+    z-index: @lyric-column-z-index;
 
     background-color: #88d;
 
@@ -24,7 +24,7 @@
 
     .lyric-button-block {
         top: 0;
-        z-index: @text-z-index + 1;
+        z-index: @lyric-column-button-z-index;
     }
 }
 

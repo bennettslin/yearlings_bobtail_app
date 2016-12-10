@@ -23,7 +23,7 @@
     position: absolute;
 
     // Ensure overview is below lyrics.
-    z-index: 0;
+    z-index: @overview-subfield-z-index;
 
     // This is necessary to avoid right scrollbar in phone width.
     width: ~"calc(100% - @{overview-subfield-margin} * 2)";
@@ -66,8 +66,7 @@
     width: @overview-toggle-width;
 
     // Ensure toggle button is above its popup container.
-    // FIXME: Consolidate all z-indices under single chain of constants.
-    z-index: 1;
+    z-index: @overview-toggle-z-index;
 }
 
 // Animated container for toggle button.

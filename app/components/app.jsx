@@ -730,6 +730,7 @@ class App extends Component {
         this._handleAccessOn(0)
         this.selectAnnotation()
         this.selectWiki()
+        this.selectDotsExpand(undefined, 0)
 
         // Hide overview if shown.
         if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {

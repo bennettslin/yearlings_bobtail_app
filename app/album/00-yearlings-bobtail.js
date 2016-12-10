@@ -57,11 +57,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `deal with low screen heights`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `toggle min and max device widths`,
             workedHours: 0,
             neededHours: 1
@@ -795,6 +790,11 @@ module.exports = {
         },
         {
             taskName: `Nav less files should compile as many constants as possible`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `deal with low screen heights`,
             workedHours: 2,
             neededHours: 2
         }

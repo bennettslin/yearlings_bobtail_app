@@ -23,7 +23,7 @@
 
     .popup-transition-group {
         position: fixed;
-        z-index: 1;
+        z-index: @popup-container-z-index;
     }
 }
 
@@ -49,19 +49,22 @@
     .dots-subfield {
         position: absolute;
         top: 0;
-        z-index: 1;
+        left: 0;
 
         height: 100%;
         width: 100%;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
     }
 
     .popup-transition-group {
         position: absolute;
         border: 2px solid red;
+        top: 0;
+        left: 0;
+
         width: 100%;
         height: 100%;
 
