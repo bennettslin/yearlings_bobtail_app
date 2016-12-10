@@ -58,6 +58,10 @@ export const resizeWindow = (target = window, presentWidth) => {
     return newState
 }
 
+export const getIsPhone = ({ deviceWidth }) => {
+    return deviceWidth === PHONE_WIDTH_OBJECT.className
+}
+
 export const getShowSingleBookColumn = (state) => {
     const { deviceWidth,
             windowWidth } = state

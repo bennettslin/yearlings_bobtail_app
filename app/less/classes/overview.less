@@ -33,8 +33,7 @@
     display: flex;
 }
 
-.overview-logue-subfield {
-    position: absolute;
+.overview-logue-column {
 
     .overview {
         &.popup-transition-group {
@@ -121,7 +120,7 @@
 // Responsive rules.
 .monitor-width, .laptop-width {
 
-    .overview-logue-subfield {
+    .overview-logue-column {
         right: 0;
         width: 50%;
         height: 100%;
@@ -153,7 +152,9 @@
         }
     }
 
-    .overview-logue-subfield {
+    .overview-logue-column {
+        position: absolute;
+
         width: 100%;
         height: 50%;
         bottom: 0;
