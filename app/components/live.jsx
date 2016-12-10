@@ -265,47 +265,47 @@ const LiveView = ({
             <div className="column main-column">
                 <MenuField {...menuFieldProps} />
                 <div className="field centre-field">
-                {!isPhone ?
-                    <div className="field nav-subfield">
-                        <NavSection {...navSectionProps} />
-                    </div> : null
-                }
 
-                    {false ? <div>
-                        <StageSection
-                        />
-                        <div className="field popup-field">
+                    <div className="field popup-field">
                         <div className="subfield annotation-subfield">
-                        <AnnotationPopup {...annotationPopupProps} />
+                            <AnnotationPopup {...annotationPopupProps} />
                         </div>
                         <div className="subfield wiki-subfield">
-                        <WikiPopup {...wikiPopupProps} />
+                            <WikiPopup {...wikiPopupProps} />
                         </div>
                         <div className="subfield dots-subfield">
-                        <DotsPopup {...dotsPopupProps} />
+                            <DotsPopup {...dotsPopupProps} />
                         </div>
-                        </div>
-                        <div className="subfield overview-subfield">
+                    </div>
+
+                    <div className="subfield overview-subfield">
                         <OverviewToggleSection {...overviewToggleSectionProps} />
                         <div className="overview-popup-container">
-                        <OverviewPopup {...overviewPopupProps} {...overviewToggleSectionProps}
+                            <OverviewPopup {...overviewPopupProps} {...overviewToggleSectionProps}
                         inOverviewSubfield={true}
                         />
                         </div>
-                        </div>
-                        {isHeightlessLyricColumn ?
-                            <div className="lyric-button-block expand-button-block in-main">
+                    </div>
+
+                    {!isPhone ?
+                        <div className="field nav-subfield">
+                            <NavSection {...navSectionProps} />
+                        </div> : null
+                    }
+
+                    {isHeightlessLyricColumn ?
+                        <div className="lyric-button-block expand-button-block in-main">
                             <a
-                            className="lyric-button enabled"
-                            onClick={onLyricExpandClick}
+                                className="lyric-button enabled"
+                                onClick={onLyricExpandClick}
                             >
-                            <div className="button-icon lyric-icon">
-                            {isLyricExpanded ? '-' : '+'}
-                            </div>
+                                <div className="button-icon lyric-icon">
+                                    {isLyricExpanded ? '-' : '+'}
+                                </div>
                             </a>
-                            </div> : null
-                        }
-                    </div> : null}
+                        </div> : null
+                    }
+
                 </div>
             </div>
             <LyricColumn {...lyricColumnProps} />

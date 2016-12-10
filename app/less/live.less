@@ -69,8 +69,6 @@
 .centre-field {
     position: relative;
     flex-grow: 1;
-
-    border: 1px dotted cyan;
 }
 
 .subfield {
@@ -107,6 +105,7 @@
 .nav-subfield {
     position: absolute;
     height: @nav-height;
+    z-index: @nav-subfield-z-index;
 
     background-color: #4d4;
 }

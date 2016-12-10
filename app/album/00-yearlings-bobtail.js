@@ -57,6 +57,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `nav widths use % instead of vw`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `toggle min and max device widths`,
             workedHours: 0,
             neededHours: 1
@@ -795,6 +800,11 @@ module.exports = {
         },
         {
             taskName: `deal with low screen heights`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `improve layout of columns`,
             workedHours: 2,
             neededHours: 2
         }
