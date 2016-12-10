@@ -45,7 +45,7 @@ const LyricColumnView = ({
     earButtonText,
 
 ...other }) => (
-    <div className="lyric-column">
+    <div className="column lyric-column">
         {showEarButton ?
             <div className="lyric-button-block ear-button-block">
                 <a

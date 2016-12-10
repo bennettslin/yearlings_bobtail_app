@@ -19,8 +19,6 @@ const MenuFieldView = ({
 
     // From props.
     isPhone,
-    isOutsideMain,
-    isPlaceholder,
     title,
     isPrologue,
     isFirstSong,
@@ -78,21 +76,19 @@ const MenuFieldView = ({
         }
 
     return (
-        <div className={`field menu-field${isOutsideMain ? ' outside-main' : ''}${isPlaceholder ? ' placeholder' : ''}`}>
+        <div className="field menu-field">
 
-            {!isPlaceholder && !isPhone ?
+            {!isPhone ?
                 <div className="subfield title-subfield">
                     <div className="title-block">
                         <TitleSection {...titleSectionProps} />
                     </div>
                 </div> : null
             }
-            {!isPlaceholder ?
-                <div className="subfield audio-subfield">
-                    <AudioSection {...audioSectionProps} />
-                </div> : null
-            }
-            {!isPlaceholder && !isPhone ?
+            <div className="subfield audio-subfield">
+                <AudioSection {...audioSectionProps} />
+            </div>
+            {!isPhone ?
                 <div className="subfield dots-tips-subfield">
                     <div className="dots-tips-block">
                         <a

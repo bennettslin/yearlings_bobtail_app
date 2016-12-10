@@ -10,7 +10,6 @@
 }
 
 .lyric-column {
-    bottom: 0;
     display: flex;
     justify-content: center;
 
@@ -21,7 +20,9 @@
 
     // TODO: This hides the accessed section highlighting, which is fine, since it's temporary anyway.
     overflow: hidden;
+}
 
+.lyric-column {
     .lyric-button-block {
         top: 0;
         z-index: @lyric-column-button-z-index;
@@ -75,7 +76,6 @@
     // TODO: Making lyric column widths constant. Do I like this better?
 
     .lyric-column {
-        position: relative;
         .transition(right 0.2s ease);
         right: 0;
 
@@ -105,15 +105,15 @@
 .tablet-width, .mini-width, .phone-width {
 
     .lyric-column {
-        position: absolute;
         height: @collapsed-lyric-section-height;
         width: 100%;
+        bottom: 0;
 
         .transition(height 0.2s ease);
     }
 
     .lyric-expanded {
-        &:not(.is-logue) {
+        &.is-song {
             .lyric-column {
                 height: ~"calc(100% - @{menu-height-mini-tablet})";
             }
@@ -128,7 +128,7 @@
 
     &.phone-width {
         .lyric-expanded {
-            &:not(.is-logue) {
+            &.is-song {
                 .lyric-column {
                     height: ~"calc(100% - @{menu-height-phone})";
                 }

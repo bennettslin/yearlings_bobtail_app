@@ -38,7 +38,7 @@
     background-color: black;
 }
 
-.live-window {
+.live-app {
     position: relative;
     width: 100%;
 
@@ -52,56 +52,30 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    .transition(height 0.2s ease);
 }
 
 .field {
-    // border: 2px dotted green;
+    width: 100%;
+}
 
-    /**
-     * Desktop menu and nav will calculate widths based on screen width, so
-     * they are placed outside the main column. Use this "desktop" class name
-     * because they each have a placeholder that is still in the main column.
-     */
-    &.outside-main {
-        position: absolute;
-        left: 0;
+.menu-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        &.menu-field {
-            top: 0;
-        }
+    border: 2px dotted violet;
+}
 
-        &.nav-field {
-            bottom: 0;
-        }
-    }
+.centre-field {
+    position: relative;
+    flex-grow: 1;
 
-    // Keep the placeholder hidden;
-    &.placeholder {
-        visibility: hidden;
-    }
+    border: 1px dotted cyan;
 }
 
 .subfield {
-    // border: 2px dotted orange;
-}
-
-.menu-field, .nav-field {
-    // Ensure that this isn't some grossly huge value.
-    max-width: @laptop-max-width;
-
-    &.menu-field {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        border: 2px dotted violet;
-
-        .subfield {
-            height: 100%;
-        }
-    }
+    height: 100%;
+    overflow: hidden;
 }
 
 .title-subfield, .dots-tips-subfield {
@@ -114,12 +88,9 @@
 }
 
 .audio-subfield {
+    min-width: @audio-min-width-monitor;
     width: @audio-width-monitor;
     background-color: #8d8;
-}
-
-.audio-subfield {
-    min-width: @audio-min-width-monitor;
 }
 
 .dots-tips-subfield {
@@ -133,14 +104,8 @@
     height: 100%;
 }
 
-.main-field {
-    position: relative;
-    flex-grow: 1;
-}
-
-.nav-field {
-    position: relative;
-    .transition(height 0.2s ease);
+.nav-subfield {
+    position: absolute;
     height: @nav-height;
 
     background-color: #4d4;
@@ -156,35 +121,35 @@
 
 .monitor-width, .laptop-width {
 
-    .live-window {
-        display: flex;
-        justify-content: space-between;
+    .column {
+        position: absolute;
     }
 
     .main-column {
-        flex-grow: 1;
+        width: ~"calc(100% - @{golden-cord-width})";
+        height: 100%;
+    }
+
+    .lyric-column {
+        right: 0;
     }
 
     .menu-field {
         height: @menu-height-laptop-monitor;
     }
 
-    .field {
-        &.outside-main {
-            width: ~"calc(100% - @{golden-cord-width})";
-        }
+    .nav-subfield {
+        bottom: 0;
     }
 
     // For admin device width toggle. Should be the same as in constants.js.
     &.laptop-width {
-        .live-window {
+        .live-app {
             max-width: @laptop-max-width;
         }
 
-        .field {
-            &.outside-main {
-                width: ~"calc(100% - @{uncanny-valley-width})";
-            }
+        .main-column {
+            width: ~"calc(100% - @{uncanny-valley-width})";
         }
     }
 }
@@ -192,13 +157,17 @@
 .tablet-width, .mini-width, .phone-width {
 
     // For admin device width toggle. Should be the same as in constants.js.
-    .live-window {
+    .live-app {
         max-width: @tablet-max-width;
     }
 
     .main-column {
         width: 100%;
         height: 100% - @collapsed-lyric-section-height;
+    }
+
+    .lyric-column {
+        position: absolute;
     }
 
     .heightless-lyric {
@@ -213,31 +182,17 @@
         }
     }
 
-    .field {
-        width: 100%;
-    }
-
     .menu-field {
         height: @menu-height-mini-tablet;
-        order: 1;
     }
 
-    .nav-field {
-        order: 2;
-
-        &.outside-main {
-            top: @menu-height-mini-tablet;
-        }
-    }
-
-    .main-field {
-        overflow: hidden;
-        order: 3;
+    .nav-subfield {
+        top: 0;
     }
 
     // For admin device width toggle. Should be the same as in constants.js.
     &.mini-width {
-        .live-window {
+        .live-app {
             max-width: @mini-max-width;
         }
     }
@@ -246,7 +201,7 @@
         // Phone has no nav field.
 
         // For admin device width toggle. Should be the same as in constants.js.
-        .live-window {
+        .live-app {
             max-width: @phone-max-width;
         }
 

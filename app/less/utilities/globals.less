@@ -1,0 +1,38 @@
+/**************
+ * BOX-SIZING *
+ **************/
+
+.field, .section, .popup-content-wrapper {
+    box-sizing: border-box;
+}
+
+/***************
+ * FLEX CENTER *
+ ***************/
+
+.button-icon, .dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***********
+ * BUTTONS *
+ ***********/
+
+.button-icon {
+    width: @app-icon-diameter;
+    height: @app-icon-diameter;
+    border-radius: @app-icon-diameter / 2;
+}
+
+
+.enabled {
+    cursor: pointer;
+}
+
+.disabled {
+    a {
+        color: @disabled-link-colour;
+    }
+}

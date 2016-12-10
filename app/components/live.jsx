@@ -252,7 +252,7 @@ const LiveView = ({
         }
 
     return (
-        <div className={`live-window${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}${isHeightlessLyricColumn ? ' heightless-lyric' : ''}${selectedNavIndex ? '' : ' nav-expanded'}${isOverviewShown ? ' overview-shown' : ''}${manualWidth ? ' manual-width' : ''}`}>
+        <div className={`live-app${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}${isHeightlessLyricColumn ? ' heightless-lyric' : ''}${selectedNavIndex ? '' : ' nav-expanded'}${isOverviewShown ? ' overview-shown' : ''}${manualWidth ? ' manual-width' : ''}`}>
             {false ?
                 <TipsSection {...tipsSectionProps} /> : null
             }
@@ -262,62 +262,52 @@ const LiveView = ({
                         inOverviewSubfield={false}
                     />
             </div>
-            {isDesktop ?
-                <MenuField {...menuFieldProps}
-                    isOutsideMain={true}
-                /> : null
-            }
-            <div className="main-column">
-                {!isDesktop ?
-                    <MenuField {...menuFieldProps} /> :
-                    <MenuField {...menuFieldProps}
-                        isPlaceholder={true}
-                    />
+            <div className="column main-column">
+                <MenuField {...menuFieldProps} />
+                <div className="field centre-field">
+                {!isPhone ?
+                    <div className="field nav-subfield">
+                        <NavSection {...navSectionProps} />
+                    </div> : null
                 }
-                <div className="field main-field">
-                    <StageSection
-                    />
-                    <div className="field popup-field">
+
+                    {false ? <div>
+                        <StageSection
+                        />
+                        <div className="field popup-field">
                         <div className="subfield annotation-subfield">
-                            <AnnotationPopup {...annotationPopupProps} />
+                        <AnnotationPopup {...annotationPopupProps} />
                         </div>
                         <div className="subfield wiki-subfield">
-                            <WikiPopup {...wikiPopupProps} />
+                        <WikiPopup {...wikiPopupProps} />
                         </div>
                         <div className="subfield dots-subfield">
-                            <DotsPopup {...dotsPopupProps} />
+                        <DotsPopup {...dotsPopupProps} />
                         </div>
-                    </div>
-                    <div className="subfield overview-subfield">
+                        </div>
+                        <div className="subfield overview-subfield">
                         <OverviewToggleSection {...overviewToggleSectionProps} />
                         <div className="overview-popup-container">
-                                <OverviewPopup {...overviewPopupProps} {...overviewToggleSectionProps}
-                                    inOverviewSubfield={true}
-                                />
+                        <OverviewPopup {...overviewPopupProps} {...overviewToggleSectionProps}
+                        inOverviewSubfield={true}
+                        />
                         </div>
-                    </div>
-                    {isHeightlessLyricColumn ?
-                        <div className="lyric-button-block expand-button-block in-main">
+                        </div>
+                        {isHeightlessLyricColumn ?
+                            <div className="lyric-button-block expand-button-block in-main">
                             <a
-                                className="lyric-button enabled"
-                                onClick={onLyricExpandClick}
+                            className="lyric-button enabled"
+                            onClick={onLyricExpandClick}
                             >
-                                <div className="button-icon lyric-icon">
-                                    {isLyricExpanded ? '-' : '+'}
-                                </div>
+                            <div className="button-icon lyric-icon">
+                            {isLyricExpanded ? '-' : '+'}
+                            </div>
                             </a>
-                        </div> : null
-                    }
+                            </div> : null
+                        }
+                    </div> : null}
                 </div>
-                {isDesktop ?
-                    <div className="field nav-field placeholder"></div> : null
-                }
             </div>
-            {!isPhone ?
-                <div className="field nav-field outside-main">
-                    <NavSection {...navSectionProps} />
-                </div> : null
-            }
             <LyricColumn {...lyricColumnProps} />
         </div>
     )

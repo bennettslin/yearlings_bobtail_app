@@ -1,5 +1,6 @@
 @import "./utilities/vendor-prefixes";
 @import "./utilities/constants";
+@import "./utilities/globals";
 @import "./utilities/mixins";
 @import "./utilities/tags";
 @import "./utilities/popups";
@@ -10,7 +11,6 @@
 @import "./admin/tasks";
 @import "./live";
 
-@import "./classes/buttons";
 @import "./classes/access";
 @import "./classes/audio";
 @import "./classes/dots-tips";
@@ -37,22 +37,4 @@ body {
     min-height: 100vh;
     font-family: PTSansNarrow;
     font-size: 1.1em;
-}
-
-.field, .section, .popup-content-wrapper {
-    box-sizing: border-box;
-}
-
-/***********
- * BUTTONS *
- ***********/
-
-.enabled {
-    cursor: pointer;
-}
-
-.disabled {
-    a {
-        color: @disabled-link-colour;
-    }
 }
