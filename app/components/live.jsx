@@ -7,7 +7,7 @@ import OverviewPopup from './overview/overview-popup'
 import StageSection from './stage/stage-section'
 import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
-import DotsSection from './dots/dots-section'
+import DotsPopup from './dots/dots-popup'
 import LyricColumn from './lyric-column'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
 import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn } from 'helpers/responsive-helper'
@@ -159,8 +159,9 @@ const LiveView = ({
             nextSectionKey,
             onPopupButtonClick: onWikiUrlClick
         },
-        dotsSectionProps = {
+        dotsPopupProps = {
             selectedDotKeys,
+            selectedDotsIndex,
             presentDotKeys,
             accessedOn,
             accessedSectionKey,
@@ -287,7 +288,7 @@ const LiveView = ({
                             <WikiPopup {...wikiPopupProps} />
                         </div>
                         <div className="subfield dots-subfield">
-
+                            <DotsPopup {...dotsPopupProps} />
                         </div>
                     </div>
                     <div className="subfield overview-subfield">
