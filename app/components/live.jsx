@@ -75,6 +75,7 @@ const LiveView = ({
     selectedTimePlayed,
     selectedLyricColumnIndex,
     selectedOverviewIndex,
+    selectedDotsIndex,
     selectedNavIndex,
     selectedBookColumnIndex,
     accessedOn,
@@ -113,6 +114,7 @@ const LiveView = ({
     onAnnotationClick,
     onLyricColumnClick,
     onAnnotationSectionClick,
+    onDotsExpandClick,
     onLyricExpandClick,
     onNavExpandClick,
     onBookColumnClick,
@@ -182,6 +184,7 @@ const LiveView = ({
             selectedSongTitle,
             selectedSongIndex,
             selectedTipsIndex,
+            selectedDotsIndex,
             isPlaying,
             selectedTimePlayed,
             selectedAudioOptionIndex,
@@ -192,7 +195,8 @@ const LiveView = ({
             onSongClick,
             onVerseClick,
             onAudioOptionClick,
-            onTipsClick
+            onTipsClick,
+            onDotsExpandClick
         },
         overviewToggleSectionProps = {
             selectedOverviewIndex,

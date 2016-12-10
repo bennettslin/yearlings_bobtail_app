@@ -34,6 +34,7 @@ const MenuFieldView = ({
     selectedTimePlayed,
     selectedAudioOptionIndex,
     selectedTipsIndex,
+    selectedDotsIndex,
     accessedSongIndex,
     accessedOn,
     accessedSectionKey,
@@ -42,7 +43,8 @@ const MenuFieldView = ({
     onSongClick,
     onVerseClick,
     onAudioOptionClick,
-    onTipsClick
+    onTipsClick,
+    onDotsExpandClick
 
 }) => {
 
@@ -73,15 +75,10 @@ const MenuFieldView = ({
             onAudioSongClick: onSongClick,
             onAudioTimeClick: onVerseClick,
             onAudioOptionClick
-        },
-        tipsSectionProps = {
-            selectedTipsIndex,
-            onTipsClick
         }
 
     return (
         <div className={`field menu-field${isOutsideMain ? ' outside-main' : ''}${isPlaceholder ? ' placeholder' : ''}`}>
-
 
             {!isPlaceholder && !isPhone ?
                 <div className="subfield title-subfield">
@@ -100,9 +97,10 @@ const MenuFieldView = ({
                     <div className="dots-tips-block">
                         <a
                             className="dots-tips-button dots-button enabled"
+                            onClick={onDotsExpandClick}
                         >
                             <div className="button-icon dots-icon">
-                                dots
+                                {selectedDotsIndex}
                             </div>
                         </a>
                         <a
