@@ -57,9 +57,9 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `make nav toggle larger icon, and adjust responsiveness accordingly.`,
+            taskName: `different large icon sizes`,
             workedHours: 0,
-            neededHours: 2
+            neededHours: 1
         },
         {
             taskName: `nav toggle in tablet is on right, without last title margin`,
@@ -832,6 +832,11 @@ module.exports = {
             taskName: `animate lyric column in and out of logue`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `make nav toggle larger icon, and adjust responsiveness accordingly.`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
