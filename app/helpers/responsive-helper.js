@@ -84,6 +84,12 @@ const _getShrinkNavIconForDeviceWidthObject = (windowWidth, deviceWidthObject) =
     return windowWidth < singleColumnStaticBreakpoint || (windowWidth >= doubleColumnShrinkBreakpoint && windowWidth < doubleColumnStaticBreakpoint)
 }
 
+const _getDotsTipsInMainForDeviceWidthObject = (windowWidth, deviceWidthObject) => {
+    const { dotsTipsInMainBreakpoint } = deviceWidthObject
+    return windowWidth < dotsTipsInMainBreakpoint
+}
+
+
 export const getShrinkNavIcon = (state) => {
     const { deviceWidth,
             windowWidth } = state
@@ -143,7 +149,19 @@ export const getIsHeightlessLyricColumn = (state) => {
 }
 
 export const getDotsTipsInMain = (state) => {
+    const { deviceWidth,
+            windowWidth } = state
 
-    // This also checks for phone
-    return true
+    if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
+        return _getDotsTipsInMainForDeviceWidthObject(windowWidth, MONITOR_WIDTH_OBJECT)
+
+    } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
+        return _getDotsTipsInMainForDeviceWidthObject(windowWidth, LAPTOP_WIDTH_OBJECT)
+
+    } else if (deviceWidth === PHONE_WIDTH_OBJECT.className) {
+        return true
+
+    } else {
+        return _getDotsTipsInMainForDeviceWidthObject(windowWidth, TABLET_WIDTH_OBJECT)
+    }
 }

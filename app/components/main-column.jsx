@@ -99,7 +99,6 @@ const MainColumnView = ({
     dotsTipsInMain
 
 }) => {
-
     const annotationPopupProps = {
             songs,
             annotation,
@@ -189,7 +188,7 @@ const MainColumnView = ({
         }
 
     return (
-        <div className="column main-column">
+        <div className={`column main-column${dotsTipsInMain ? ' dots-tips-in-main' : ''}`}>
             <MenuField {...menuFieldProps} />
             <div className="field centre-field">
 

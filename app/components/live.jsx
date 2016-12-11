@@ -139,6 +139,7 @@ const LiveView = ({
             overviewPopupProps,
 
             deviceWidth,
+            windowWidth,
             isHeightlessLyricColumn,
 
             isLogue,
