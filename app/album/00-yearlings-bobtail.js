@@ -57,7 +57,12 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `nav toggle in tablet is on right, without last title margin`,
+            taskName: `adjust books block animation height for tablet and mini`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `last nav titles are being obscured by books-block overview hidden`,
             workedHours: 0,
             neededHours: 2
         },
@@ -847,6 +852,11 @@ module.exports = {
             taskName: `make sure large icons are accommodated correctly`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `nav toggle in tablet is on right, without last title margin`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

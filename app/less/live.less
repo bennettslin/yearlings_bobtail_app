@@ -33,9 +33,9 @@
 
 @nav-height-padding: 6px;
 @nav-height: @app-large-icon-diameter + @nav-height-padding;
+@nav-tablet-height: @app-tablet-large-icon-diameter + @nav-height-padding;
+@nav-mini-height: @app-mini-large-icon-diameter + @nav-height-padding;
 @book-height: @app-icon-diameter + @nav-height-padding;
-
-@nav-width: @nav-height * 2 / 3;
 
 @overview-toggle-width: 100px;
 @overview-toggle-height: 150px;
@@ -47,9 +47,8 @@
 .live-app {
     position: relative;
     width: 100%;
-
-    // Needed by Safari.
     height: 100%;
+    overflow: hidden;
 
     background-color: #ddd;
 }
@@ -68,8 +67,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    border: 2px dotted violet;
 }
 
 .centre-field {
@@ -128,6 +125,18 @@
     z-index: @nav-custom-subfield-z-index;
 
     background-color: #4d4;
+}
+
+.tablet-width {
+    .nav-custom-subfield {
+        height: @nav-tablet-height;
+    }
+}
+
+.mini-width {
+    .nav-custom-subfield {
+        height: @nav-mini-height;
+    }
 }
 
 .live {

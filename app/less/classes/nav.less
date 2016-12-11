@@ -1,4 +1,4 @@
-@nav-border-radius: @nav-width / 2;
+@nav-border-radius: @nav-height / 3;
 
 .admin {
     .nav-section {
@@ -47,7 +47,11 @@
 .books-block {
     position: relative;
     width: 100%;
-    height: @nav-height * 3;
+
+    // TODO: Consider adjusting this animatable height for tablet and mini?
+    height: @nav-height * 3; // Just an arbitrary value that's large enough.
+
+    // TODO: This prevents last titles from being seen in tablet and mini.
     overflow: hidden;
 }
 
@@ -97,6 +101,7 @@
 
 .nav-toggle-block {
     position: relative;
+    overflow: hidden;
 }
 
 .nav-button {
