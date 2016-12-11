@@ -24,11 +24,18 @@
 @medium-single-units: @medium-unit / @single-units;
 @large-single-units: @large-unit / @single-units;
 
+/************************************************
+ * MONITOR WIDTH: double, double shrink, single *
+ ************************************************/
+
 /**
  * Total width of wide desktop nav field is:
- * 21 * @app-icon-diameter +
+ * 20 * @app-icon-diameter +
+ * 1 * @app-large-icon-diameter
  * 10 * @nav-book-padding +
  * 1 * @nav-last-title-margin
+ *
+ * Monitor adds Golden Cord lyric column width.
  *
  * Margins are as follows:
  * nav toggle right margin: 1 * 3 units
@@ -49,10 +56,9 @@
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
- * 745px + 21 * 44px + 10 * 4px + 50px + 26px = 1785px
  *
  * Each unit is a pixel. There are 26 units, so 26 pixels.
- * To be divided amongst 21 icons.
+ * To be divided amongst 20 icons.
  */
 
 @double-column-nav-minus-icon-width: 10 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units * 1px;
@@ -71,10 +77,10 @@
 
 /**
  * Breakpoint to switch to single column is when icon width is 36px.
- * 745px + 21 * 36px + 10 * 4px + 50px + 26px = 1617px
  *
  * Total width of single column desktop nav field is:
- * 12 * @app-icon-diameter +
+ * 11 * @app-icon-diameter +
+ * 1 * @app-large-icon-diameter
  * 8 * @nav-book-padding +
  * 1 * @nav-last-title-margin
  *
@@ -95,12 +101,16 @@
 
 @monitor-single-songs-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{monitor-single-songs-book-offset-constant})";
 
+/***************************************
+ * LAPTOP WIDTH: single, single shrink *
+ ***************************************/
+
 /**
  * Monitor does not need to shrink icon for single column before screen width
  * switches to laptop at 1400px.
  *
- * Laptop width is too narrow for double column, so begin with single column.
- * Laptop follows same equation, with different lyric column width.
+ * Laptop width is too narrow for double column, so begins with single column.
+ * Laptop follows same equations, with Uncanny Valley lyric column width.
  */
 
 @single-column-nav-uncanny-valley-minus-unit-width: @uncanny-valley-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
@@ -114,10 +124,9 @@
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
- * 570px + 12 * 44px + 8 * 4px + 50px + 16px = 1196px
  *
  * In single column, there are 16 units, so 16 pixels.
- * To be divided amongst 12 icons.
+ * To be divided amongst 11 icons.
  */
 
 @single-column-nav-minus-icon-width: 8 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units * 1px;
@@ -133,6 +142,10 @@
 @laptop-single-shrink-toggle-width-constant: @nav-book-padding * 2 - (@uncanny-valley-width + 8 * @nav-book-padding + @nav-last-title-margin + @single-units * 1px) / @single-icons;
 
 @laptop-single-shrink-toggle-width: ~"calc(@{full-vw} / @{single-icons} + @{laptop-single-shrink-toggle-width-constant})";
+
+/***********************************************
+ * TABLET WIDTH: double, double shrink, single *
+ ***********************************************/
 
 /**
  * Tablet/mini follows the same equations, without a lyric column width. Switch
@@ -150,7 +163,6 @@
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
- * 21 * 44px + 10 * 4px + 50px + 26px = 1040px
  */
 
 @tablet-double-column-nav-minus-icon-width: 10 * @nav-book-padding + @app-tablet-large-icon-diameter + @nav-last-title-margin + @double-units * 1px;
@@ -167,7 +179,6 @@
 
 /**
  * Breakpoint to switch to single column is when icon width is 36px.
- * 21 * 36px + 10 * 4px + 50px + 26px = 872px
  */
 
 @single-column-nav-minus-unit-width: @single-icons * @app-icon-diameter + @app-tablet-large-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
@@ -179,12 +190,23 @@
 
 @tablet-single-songs-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{tablet-single-songs-book-offset-constant})";
 
+/*************************************
+ * MINI WIDTH: single, single shrink *
+ *************************************/
+
+@single-column-nav-minus-unit-width: @single-icons * @app-icon-diameter + @app-mini-large-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+
+@mini-single-small: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{single-units})";
+@mini-single-large: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) * @{large-single-units})";
+
+@mini-single-songs-book-offset-constant: -@medium-single-units * (@single-icons * @app-icon-diameter + @app-mini-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @nav-book-padding;
+
+@mini-single-songs-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{mini-single-songs-book-offset-constant})";
+
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
- * 12 * 44px + 8 * 4px + 50px + 16px = 626px
  */
 
-// TODO: shrink breakpoint now happens at mini.
 @mini-single-column-nav-minus-icon-width: 8 * @nav-book-padding + @app-mini-large-icon-diameter + @nav-last-title-margin + @single-units * 1px;
 
 @mini-shrink-icon: ~"calc((@{full-vw} - @{mini-single-column-nav-minus-icon-width}) / @{single-icons})";
@@ -197,16 +219,24 @@
 
 @mini-shrink-toggle-width: ~"calc(@{full-vw} / @{single-icons} + @{mini-shrink-toggle-width-constant})";
 
-/**
- * Begin styles.
- */
-
 @nav-toggle-width: @app-large-icon-diameter + @nav-book-padding * 2;
 @tablet-nav-toggle-width: @app-tablet-large-icon-diameter + @nav-book-padding * 2;
 @mini-nav-toggle-width: @app-mini-large-icon-diameter + @nav-book-padding * 2;
 
+/******************
+ * MONITOR STYLES *
+ ******************/
+
 .nav-toggle-container {
     min-width: @nav-toggle-width;
+}
+
+.nav-toggle-book {
+    min-width: @app-large-icon-diameter;
+}
+
+.nav-toggle-button {
+    width: @app-large-icon-diameter;
 }
 
 .double-book-column {
@@ -305,7 +335,12 @@
     }
 }
 
+/*****************
+ * LAPTOP STYLES *
+ *****************/
+
 .laptop-width {
+
     .single-book-column {
         &.static-icon {
             .nav-toggle-container {
@@ -372,29 +407,28 @@
     }
 }
 
-.tablet-width, .mini-width {
+/*****************
+ * TABLET STYLES *
+ *****************/
+
+.tablet-width {
 
     .nav-toggle-container {
         min-width: @tablet-nav-toggle-width;
     }
 
-    // TODO: Move these into nav.less. No longer dependent on dynamic width.
     .lyric-expanded.is-song {
         .nav-toggle-book {
             right: @tablet-nav-toggle-width;
         }
     }
 
-    .mini-width {
-        .nav-toggle-container {
-            min-width: @mini-nav-toggle-width;
-        }
+    .nav-toggle-book {
+        min-width: @app-tablet-large-icon-diameter;
+    }
 
-        .lyric-expanded.is-song {
-            .nav-toggle-book {
-                right: @tablet-nav-toggle-width;
-            }
-        }
+    .nav-toggle-button {
+        width: @app-tablet-large-icon-diameter;
     }
 
     .double-book-column {
@@ -494,6 +528,65 @@
 
                     .nav-button:not(:last-child) {
                         margin-left: @tablet-single-small;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/***************
+ * MINI STYLES *
+ ***************/
+
+.mini-width {
+
+    .nav-toggle-container {
+        min-width: @mini-nav-toggle-width;
+    }
+
+    .lyric-expanded.is-song {
+        .nav-toggle-book {
+            right: @mini-nav-toggle-width;
+        }
+    }
+
+    .nav-toggle-book {
+        min-width: @app-mini-large-icon-diameter;
+    }
+
+    .nav-toggle-button {
+        width: @app-mini-large-icon-diameter;
+    }
+
+    .single-book-column {
+        &.static-icon {
+            .nav-toggle-container {
+                margin-right: @mini-single-large;
+            }
+
+            .column-shown {
+                &.column-1 {
+                    .nav-book {
+                        &.songs {
+                            left: @mini-single-songs-book-offset;
+                        }
+                    }
+
+                    .nav-button:not(:last-child) {
+                        margin-right: @mini-single-small;
+                    }
+                }
+
+                &.column-2 {
+                    .nav-book {
+                        &.songs {
+                            right: @mini-single-songs-book-offset;
+                        }
+                    }
+
+                    .nav-button:not(:last-child) {
+                        margin-left: @mini-single-small;
                     }
                 }
             }
