@@ -29,7 +29,7 @@ const DotsTipsSectionView = ({
                 className="dots-tips-button dots-button enabled"
                 onClick={onDotsExpandClick}
             >
-                <div className="button-icon dots-icon">
+                <div className="large button-icon dots-icon">
                     {selectedDotsIndex}
                 </div>
             </a>
@@ -37,7 +37,7 @@ const DotsTipsSectionView = ({
                 className="dots-tips-button tips-button enabled"
                 onClick={onTipsClick}
             >
-                <div className="button-icon tips-icon">
+                <div className="large button-icon tips-icon">
                     {TIPS_OPTIONS[selectedTipsIndex]}
                 </div>
             </a>

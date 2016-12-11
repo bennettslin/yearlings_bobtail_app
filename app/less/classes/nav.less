@@ -36,7 +36,7 @@
 }
 
 // All containers.
-.live-nav-block, .nav-book {
+.live-nav-block, .nav-book, .nav-toggle-book {
     display: flex;
 }
 
@@ -51,13 +51,13 @@
     overflow: hidden;
 }
 
-.book-column-block, .book-column, .nav-book {
+.book-column-block, .book-column, .nav-book, .nav-toggle-book {
     position: absolute;
     height: 100%;
 }
 
 .book-column-block {
-    height: @nav-height;
+    height: @book-height;
 }
 
 .column-2 {
@@ -65,28 +65,33 @@
 }
 
 .static-icon {
-    .nav-button { width: @nav-icon-diameter; }
-    .nav-icon { width: @nav-icon-diameter; height: @nav-icon-diameter; }
+    .nav-button {
+        width: @app-icon-diameter;
+    }
 }
 
-.nav-book {
-    min-width: @nav-icon-diameter;
+.nav-book, .nav-toggle-book {
     padding: 0 @nav-book-padding;
-    background-color: #48d;
-    border-radius: @nav-border-radius @nav-border-radius 0 0;
+
+    &.nav-book {
+        min-width: @app-icon-diameter;
+        border-radius: @nav-border-radius @nav-border-radius 0 0;
+        background-color: #48d;
+    }
+
+    &.nav-toggle-book {
+        min-width: @app-large-icon-diameter;
+        border-radius: 0 @nav-border-radius 0 0;
+
+        .transition(right 0.2s ease);
+        right: 0;
+
+        background-color: purple;
+    }
 }
 
 .nav-toggle-container {
     position: relative;
-}
-
-.nav-toggle {
-    border-radius: 0 @nav-border-radius 0 0;
-
-    .transition(right 0.2s ease);
-    right: 0;
-
-    background-color: purple;
 }
 
 .nav-button {
@@ -103,7 +108,10 @@
 
 .nav-icon {
     background-color: yellow;
-    border-radius: 50%;
+}
+
+.nav-toggle-icon {
+    background-color: #dd4;
 }
 
 .selected {
@@ -163,7 +171,7 @@
         border-radius: 0 0 @nav-border-radius @nav-border-radius;
     }
 
-    .nav-toggle {
+    .nav-toggle-book {
         border-radius: 0 0 @nav-border-radius 0;
     }
 

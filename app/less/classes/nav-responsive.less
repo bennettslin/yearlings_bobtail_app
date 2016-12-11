@@ -1,13 +1,11 @@
 @full-vw: 100vw;
 
 // These values *must* be the same in constants.js.
-@nav-icon-diameter: @app-icon-diameter;
-
 @nav-book-padding: 4px; // Left and right padding for each book.
 @nav-last-title-margin: 50px; // Margin to accommodate last title.
 
-@double-icons: 21;
-@single-icons: 12;
+@double-icons: 20;
+@single-icons: 11;
 
 @double-units: 26;
 @single-units: 16;
@@ -23,7 +21,7 @@
 
 /**
  * Total width of wide desktop nav field is:
- * 21 * @nav-icon-diameter +
+ * 21 * @app-icon-diameter +
  * 10 * @nav-book-padding +
  * 1 * @nav-last-title-margin
  *
@@ -35,12 +33,12 @@
  * Total units: 26 units
  */
 
-@double-column-nav-golden-cord-minus-unit-width: @golden-cord-width + @double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
+@double-column-nav-golden-cord-minus-unit-width: @golden-cord-width + @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
 
 @monitor-small-unit: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-unit-width}) / @{double-units})";
 @monitor-large-unit: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-unit-width}) * @{large-double-units})";
 
-@monitor-songs-book-offset-constant: -@medium-double-units * (@golden-cord-width + @double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @nav-icon-diameter + 2 * @nav-book-padding;
+@monitor-songs-book-offset-constant: -@medium-double-units * (@golden-cord-width + @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @nav-book-padding;
 
 @monitor-songs-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{monitor-songs-book-offset-constant})";
 
@@ -71,7 +69,7 @@
  * 745px + 21 * 36px + 10 * 4px + 50px + 26px = 1617px
  *
  * Total width of single column desktop nav field is:
- * 12 * @nav-icon-diameter +
+ * 12 * @app-icon-diameter +
  * 8 * @nav-book-padding +
  * 1 * @nav-last-title-margin
  *
@@ -83,12 +81,12 @@
  * Total units: 16 units
  */
 
-@single-column-nav-golden-cord-minus-unit-width: @golden-cord-width + @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+@single-column-nav-golden-cord-minus-unit-width: @golden-cord-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
 
 @monitor-single-small: ~"calc((@{full-vw} - @{single-column-nav-golden-cord-minus-unit-width}) / @{single-units})";
 @monitor-single-large: ~"calc((@{full-vw} - @{single-column-nav-golden-cord-minus-unit-width}) * @{large-single-units})";
 
-@monitor-single-songs-book-offset-constant: -@medium-single-units * (@golden-cord-width + @single-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @nav-icon-diameter + 2 * @nav-book-padding;
+@monitor-single-songs-book-offset-constant: -@medium-single-units * (@golden-cord-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @nav-book-padding;
 
 @monitor-single-songs-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{monitor-single-songs-book-offset-constant})";
 
@@ -100,12 +98,12 @@
  * Laptop follows same equation, with different lyric column width.
  */
 
-@single-column-nav-uncanny-valley-minus-unit-width: @uncanny-valley-width + @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+@single-column-nav-uncanny-valley-minus-unit-width: @uncanny-valley-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
 
 @laptop-single-small: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-unit-width}) / @{single-units})";
 @laptop-single-large: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-unit-width}) * @{large-single-units})";
 
-@laptop-single-songs-book-offset-constant: -@medium-single-units * (@uncanny-valley-width + @single-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @nav-icon-diameter + 2 * @nav-book-padding;
+@laptop-single-songs-book-offset-constant: -@medium-single-units * (@uncanny-valley-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @nav-book-padding;
 
 @laptop-single-songs-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{laptop-single-songs-book-offset-constant})";
 
@@ -136,12 +134,12 @@
  * at 1100px.
  */
 
-@double-column-nav-minus-unit-width: @double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
+@double-column-nav-minus-unit-width: @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
 
 @tablet-small-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) / @{double-units})";
 @tablet-large-unit: ~"calc((@{full-vw} - @{double-column-nav-minus-unit-width}) * @{large-double-units})";
 
-@tablet-songs-book-offset-constant: -@medium-double-units * (@double-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @nav-icon-diameter + 2 * @nav-book-padding;
+@tablet-songs-book-offset-constant: -@medium-double-units * (@double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @nav-book-padding;
 
 @tablet-songs-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{tablet-songs-book-offset-constant})";
 
@@ -164,12 +162,12 @@
  * 21 * 36px + 10 * 4px + 50px + 26px = 872px
  */
 
-@single-column-nav-minus-unit-width: @single-icons * @nav-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+@single-column-nav-minus-unit-width: @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
 
 @tablet-single-small: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) / @{single-units})";
 @tablet-single-large: ~"calc((@{full-vw} - @{single-column-nav-minus-unit-width}) * @{large-single-units})";
 
-@tablet-single-songs-book-offset-constant: -@medium-single-units * (@single-icons * @nav-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @nav-icon-diameter + 2 * @nav-book-padding;
+@tablet-single-songs-book-offset-constant: -@medium-single-units * (@single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @nav-book-padding;
 
 @tablet-single-songs-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{tablet-single-songs-book-offset-constant})";
 
@@ -191,7 +189,7 @@
  * Begin styles.
  */
 
-@nav-toggle-width: @nav-icon-diameter + @nav-book-padding * 2;
+@nav-toggle-width: @app-large-icon-diameter + @nav-book-padding * 2;
 
 .nav-toggle-container {
     min-width: @nav-toggle-width;
@@ -249,9 +247,9 @@
             }
         }
 
-        .nav-toggle-container {
-            min-width: @monitor-shrink-toggle-width;
-        }
+        // .nav-toggle-container {
+        //     min-width: @monitor-shrink-toggle-width;
+        // }
 
         .nav-button {
             width: @monitor-shrink-icon;
@@ -356,9 +354,9 @@
                 }
             }
 
-            .nav-toggle-container {
-                min-width: @laptop-single-shrink-toggle-width;
-            }
+            // .nav-toggle-container {
+            //     min-width: @laptop-single-shrink-toggle-width;
+            // }
 
             .nav-icon {
                 width: @laptop-single-shrink-icon;
@@ -370,8 +368,9 @@
 
 .tablet-width, .mini-width {
 
+    // TODO: Move these into nav.less. No longer dependent on dynamic width.
     .lyric-expanded.is-song {
-        .nav-toggle {
+        .nav-toggle-book {
             right: @nav-toggle-width;
         }
     }
@@ -428,12 +427,12 @@
                 }
             }
 
-            .nav-toggle-container {
-                min-width: @tablet-shrink-toggle-width;
-            }
+            // .nav-toggle-container {
+            //     min-width: @tablet-shrink-toggle-width;
+            // }
 
             .lyric-expanded.is-song {
-                .nav-toggle {
+                .nav-toggle-book {
                     right: @tablet-shrink-toggle-width;
                 }
             }
@@ -508,12 +507,12 @@
                 }
             }
 
-            .nav-toggle-container {
-                min-width: @mini-shrink-toggle-width;
-            }
+            // .nav-toggle-container {
+            //     min-width: @mini-shrink-toggle-width;
+            // }
 
             .lyric-expanded.is-song {
-                .nav-toggle {
+                .nav-toggle-book {
                     right: @mini-shrink-toggle-width;
                 }
             }

@@ -101,7 +101,7 @@ const AudioSectionView = ({
                     className="audio-button enabled"
                     onClick={onPlayClick}
                 >
-                    <div className="button-icon audio-icon">
+                    <div className="large button-icon audio-icon">
                         {isPlaying ? '\u23F8' : '\u25BA' }
                     </div>
                 </a>

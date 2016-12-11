@@ -28,7 +28,7 @@ const NavBookView = ({
     endArrayIndex,
 
 ...other }) => (
-    <div className={`nav-book${isNavToggle ? ' nav-toggle' : ''}${isToggle ? ' toggle' : ''}${isLogue ? ' logue' : ''}${songs ? ' songs' : ''}`}>
+    <div className={`${isNavToggle ? 'nav-toggle-book' : 'nav-book'}${isToggle ? ' toggle' : ''}${isLogue ? ' logue' : ''}${songs ? ' songs' : ''}`}>
         {songs ?
             Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
                 const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
@@ -40,7 +40,9 @@ const NavBookView = ({
                         />
                     )
             }) :
-            <NavItem {...other} />
+            <NavItem {...other}
+                isNavToggle={isNavToggle}
+            />
         }
     </div>
 )

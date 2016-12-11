@@ -23,9 +23,13 @@
 .button-icon {
     width: @app-icon-diameter;
     height: @app-icon-diameter;
-    border-radius: @app-icon-diameter / 2;
-}
+    border-radius: 50%;
 
+    &.large {
+        width: @app-large-icon-diameter;
+        height: @app-large-icon-diameter;
+    }
+}
 
 .enabled {
     cursor: pointer;

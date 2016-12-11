@@ -57,6 +57,21 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `make nav toggle larger icon, and adjust responsiveness accordingly.`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: `nav toggle in tablet is on right, without last title margin`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: `dots tips buttons become smaller at some point`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `do z-indices`,
             workedHours: 0,
             neededHours: 1

@@ -37,6 +37,7 @@ const NavButton = ({
 const NavButtonView = ({
 
     // From props.
+    isNavToggle,
     isSelected,
     accessHighlighted,
 
@@ -47,11 +48,11 @@ const NavButtonView = ({
 
 }) => (
     <a
-        className={`enabled nav-button${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
+        className={`${isNavToggle ? ' nav-toggle-button' : ' nav-button'} enabled${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
         onClick={onClick}
     >
         <div className="nav-icon-block">
-            <div className="button-icon nav-icon">
+            <div className={`button-icon ${isNavToggle ? 'large nav-toggle-icon' : 'nav-icon'}`}>
                 {iconText}
             </div>
         </div>
