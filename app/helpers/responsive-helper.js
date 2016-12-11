@@ -118,7 +118,6 @@ export const getIsLyricExpandable = ({ isAdmin, deviceWidth }) => {
 }
 
 export const getShowSingleLyricColumn = (props, state) => {
-    // if is admin, return showSingleLyricColumn
     if (state.isAdmin) {
         return state.showSingleLyricColumnInAdmin
 

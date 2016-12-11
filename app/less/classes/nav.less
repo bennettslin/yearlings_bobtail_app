@@ -64,6 +64,12 @@
     margin-right: @nav-last-title-margin;
 }
 
+.tablet-width, .mini-width {
+    .column-2 {
+        margin-right: 0;
+    }
+}
+
 .static-icon {
     .nav-button {
         width: @app-icon-diameter;
@@ -82,14 +88,14 @@
     &.nav-toggle-book {
         border-radius: 0 @nav-border-radius 0 0;
 
-        .transition(right 0.2s ease);
-        right: 0;
+        .transition(left 0.2s ease);
+        left: 0;
 
         background-color: purple;
     }
 }
 
-.nav-toggle-container {
+.nav-toggle-block {
     position: relative;
 }
 
@@ -157,8 +163,21 @@
 
 .tablet-width, .mini-width {
 
+    .live-nav-block {
+        flex-direction: row-reverse;
+        // max-width: 100%;
+        // overflow: hidden;
+    }
+
+    .nav-toggle-block {
+        // order: 2;
+        // flex-shrink: 1;
+    }
+
     .books-block {
         top: 0;
+        // order: 1;
+        // flex-shrink: 1;
     }
 
     .book-column-block {
@@ -171,7 +190,7 @@
     }
 
     .nav-toggle-book {
-        border-radius: 0 0 @nav-border-radius 0;
+        border-radius: 0 0 0 @nav-border-radius;
     }
 
     .nav-title-block {
@@ -206,12 +225,6 @@
 
 // Static margins after icons begin shrinking.
 .shrink-icon {
-    .book-column-block {
-        &:first-child {
-            margin-right: 3px;
-        }
-    }
-
     .column-shown {
         &.column-1 {
             .nav-button {
@@ -230,10 +243,18 @@
         }
     }
 
-    .nav-toggle-container {
+    .nav-toggle-block {
         margin-right: 3px;
     }
+}
 
+.tablet-width, .mini-width {
+    .shrink-icon {
+        .nav-toggle-block {
+            margin-left: 3px;
+            margin-right: 0;
+        }
+    }
 }
 
 // TODO: Begin animations.

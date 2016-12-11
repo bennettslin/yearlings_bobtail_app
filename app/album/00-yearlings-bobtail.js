@@ -57,17 +57,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `make sure large icons are accommodated correctly, get rid of unneeded breakpoints`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `nav toggle in tablet is on right, without last title margin`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `dots tips buttons become smaller at some point`,
             workedHours: 0,
             neededHours: 2
         },
@@ -155,6 +145,16 @@ module.exports = {
             taskName: `progressive tips`,
             workedHours: 0,
             neededHours: 8
+        },
+        {
+            taskName: `get rid of unneeded device width breakpoints`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `state stores device width index, not device width string`,
+            workedHours: 0,
+            neededHours: 2
         },
         // {
         //     taskName: `Safari...`,
@@ -840,6 +840,11 @@ module.exports = {
         },
         {
             taskName: `have different large icon sizes`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `make sure large icons are accommodated correctly`,
             workedHours: 1,
             neededHours: 1
         }

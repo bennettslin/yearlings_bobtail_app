@@ -101,7 +101,7 @@ const NavSectionView = ({
                 </div> :
                 <div className="live-nav-block">
                     {/* nav toggle */}
-                    <div className="nav-toggle-container">
+                    <div className="nav-toggle-block">
                         <NavBook {...navItemProps}
                             isNavToggle={true}
                             buttonText={selectedNavIndex + ''}
