@@ -1,3 +1,8 @@
+/**
+ * NOTE: The comments were written before nav toggle was changed to larger icon
+ * sizes. The values are all updated and correct, however.
+ */
+
 @full-vw: 100vw;
 
 // These values *must* be the same in constants.js.
@@ -50,13 +55,13 @@
  * To be divided amongst 21 icons.
  */
 
-@double-column-nav-minus-icon-width: 10 * @nav-book-padding + @nav-last-title-margin + @double-units * 1px;
+@double-column-nav-minus-icon-width: 10 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units * 1px;
 
 @double-column-nav-golden-cord-minus-icon-width: @golden-cord-width + @double-column-nav-minus-icon-width;
 
 @monitor-shrink-icon: ~"calc((@{full-vw} - @{double-column-nav-golden-cord-minus-icon-width}) / @{double-icons})";
 
-@monitor-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (@golden-cord-width + 10 * @nav-book-padding + @nav-last-title-margin + @double-units) / @double-icons;
+@monitor-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (@golden-cord-width + 10 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units) / @double-icons;
 
 @monitor-shrink-songs-book-offset: ~"calc(@{full-vw} / @{double-icons} + @{monitor-shrink-songs-book-offset-constant})";
 
@@ -115,13 +120,13 @@
  * To be divided amongst 12 icons.
  */
 
-@single-column-nav-minus-icon-width: 8 * @nav-book-padding + @nav-last-title-margin + @single-units * 1px;
+@single-column-nav-minus-icon-width: 8 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units * 1px;
 
 @single-column-nav-uncanny-valley-minus-icon-width: @uncanny-valley-width + @single-column-nav-minus-icon-width;
 
 @laptop-single-shrink-icon: ~"calc((@{full-vw} - @{single-column-nav-uncanny-valley-minus-icon-width}) / @{single-icons})";
 
-@laptop-single-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (@uncanny-valley-width + 8 * @nav-book-padding + @nav-last-title-margin + @single-units) / @single-icons;
+@laptop-single-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (@uncanny-valley-width + 8 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units) / @single-icons;
 
 @laptop-single-shrink-songs-book-offset: ~"calc(@{full-vw} / @{single-icons} + @{laptop-single-shrink-songs-book-offset-constant})";
 
@@ -149,7 +154,7 @@
  */
 @tablet-shrink-icon: ~"calc((@{full-vw} - @{double-column-nav-minus-icon-width}) / @{double-icons})";
 
-@tablet-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (10 * @nav-book-padding + @nav-last-title-margin + @double-units) / @double-icons;
+@tablet-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (10 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units) / @double-icons;
 
 @tablet-shrink-songs-book-offset: ~"calc(@{full-vw} / @{double-icons} + @{tablet-shrink-songs-book-offset-constant})";
 
@@ -177,7 +182,7 @@
  */
 @mini-shrink-icon: ~"calc((@{full-vw} - @{single-column-nav-minus-icon-width}) / @{single-icons})";
 
-@mini-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (8 * @nav-book-padding + @nav-last-title-margin + @single-units) / @single-icons;
+@mini-shrink-songs-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (8 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units) / @single-icons;
 
 @mini-shrink-songs-book-offset: ~"calc(@{full-vw} / @{single-icons} + @{mini-shrink-songs-book-offset-constant})";
 
@@ -246,10 +251,6 @@
                 }
             }
         }
-
-        // .nav-toggle-container {
-        //     min-width: @monitor-shrink-toggle-width;
-        // }
 
         .nav-button {
             width: @monitor-shrink-icon;
@@ -354,10 +355,6 @@
                 }
             }
 
-            // .nav-toggle-container {
-            //     min-width: @laptop-single-shrink-toggle-width;
-            // }
-
             .nav-icon {
                 width: @laptop-single-shrink-icon;
                 height: @laptop-single-shrink-icon;
@@ -426,10 +423,6 @@
                     }
                 }
             }
-
-            // .nav-toggle-container {
-            //     min-width: @tablet-shrink-toggle-width;
-            // }
 
             .lyric-expanded.is-song {
                 .nav-toggle-book {
@@ -506,10 +499,6 @@
                     width: @mini-shrink-icon;
                 }
             }
-
-            // .nav-toggle-container {
-            //     min-width: @mini-shrink-toggle-width;
-            // }
 
             .lyric-expanded.is-song {
                 .nav-toggle-book {
