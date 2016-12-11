@@ -2,6 +2,9 @@
 @dots-tips-margin: 5px;
 
 @dots-tips-width: 2 * @app-large-icon-diameter + 2 * @dots-tips-padding + @dots-tips-margin;
+@dots-tips-tablet-width: 2 * @app-tablet-large-icon-diameter + 2 * @dots-tips-padding + @dots-tips-margin;
+@dots-tips-mini-width: 2 * @app-mini-large-icon-diameter + 2 * @dots-tips-padding + @dots-tips-margin;
+@dots-tips-phone-width: 2 * @app-icon-diameter + 2 * @dots-tips-padding + @dots-tips-margin;
 
 .dots-tips-custom-subfield {
     height: @menu-height-laptop-monitor;
@@ -9,6 +12,24 @@
     z-index: @dots-tips-z-index;
     position: absolute;
     right: 0;
+}
+
+.tablet-width {
+    .dots-tips-custom-subfield {
+        width: @dots-tips-tablet-width;
+    }
+}
+
+.mini-width {
+    .dots-tips-custom-subfield {
+        width: @dots-tips-mini-width;
+    }
+}
+
+.phone-width {
+    .dots-tips-custom-subfield {
+        width: @dots-tips-phone-width;
+    }
 }
 
 .dots-tips-section {

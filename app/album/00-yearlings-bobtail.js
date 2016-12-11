@@ -57,7 +57,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `different large icon sizes`,
+            taskName: `make sure large icons are accommodated correctly, get rid of unneeded breakpoints`,
             workedHours: 0,
             neededHours: 1
         },
@@ -837,6 +837,11 @@ module.exports = {
             taskName: `make nav toggle larger icon, and adjust responsiveness accordingly.`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `have different large icon sizes`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

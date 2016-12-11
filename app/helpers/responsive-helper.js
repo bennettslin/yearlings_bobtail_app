@@ -66,14 +66,18 @@ export const getShowSingleBookColumn = (state) => {
     const { deviceWidth,
             windowWidth } = state
 
+    // FIXME: Make this simpler, and get rid of unneeded breakpoints.
     if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
         return windowWidth < MONITOR_WIDTH_OBJECT.doubleColumnShrinkBreakpoint
 
     } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
         return windowWidth < LAPTOP_WIDTH_OBJECT.doubleColumnShrinkBreakpoint
 
-    } else {
+    } else if (deviceWidth === TABLET_WIDTH_OBJECT.className) {
         return windowWidth < TABLET_WIDTH_OBJECT.doubleColumnShrinkBreakpoint
+
+    } else {
+        return windowWidth < MINI_WIDTH_OBJECT.doubleColumnShrinkBreakpoint
     }
 }
 
@@ -94,14 +98,18 @@ export const getShrinkNavIcon = (state) => {
     const { deviceWidth,
             windowWidth } = state
 
+    // FIXME: Make this simpler, and get rid of unneeded breakpoints.
     if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
         return _getShrinkNavIconForDeviceWidthObject(windowWidth, MONITOR_WIDTH_OBJECT)
 
     } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
         return _getShrinkNavIconForDeviceWidthObject(windowWidth, LAPTOP_WIDTH_OBJECT)
 
-    } else {
+    } else if (deviceWidth === TABLET_WIDTH_OBJECT.className)  {
         return _getShrinkNavIconForDeviceWidthObject(windowWidth, TABLET_WIDTH_OBJECT)
+
+    } else {
+        return _getShrinkNavIconForDeviceWidthObject(windowWidth, MINI_WIDTH_OBJECT)
     }
 }
 
@@ -152,16 +160,20 @@ export const getDotsTipsInMain = (state) => {
     const { deviceWidth,
             windowWidth } = state
 
+    // FIXME: Make this simpler, and get rid of unneeded breakpoints.
     if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
         return _getDotsTipsInMainForDeviceWidthObject(windowWidth, MONITOR_WIDTH_OBJECT)
 
     } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
         return _getDotsTipsInMainForDeviceWidthObject(windowWidth, LAPTOP_WIDTH_OBJECT)
 
+    } else if (deviceWidth === TABLET_WIDTH_OBJECT.className) {
+        return _getDotsTipsInMainForDeviceWidthObject(windowWidth, TABLET_WIDTH_OBJECT)
+
+    } else if (deviceWidth === MINI_WIDTH_OBJECT.className) {
+        return _getDotsTipsInMainForDeviceWidthObject(windowWidth, MINI_WIDTH_OBJECT)
+
     } else if (deviceWidth === PHONE_WIDTH_OBJECT.className) {
         return true
-
-    } else {
-        return _getDotsTipsInMainForDeviceWidthObject(windowWidth, TABLET_WIDTH_OBJECT)
     }
 }
