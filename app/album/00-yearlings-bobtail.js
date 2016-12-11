@@ -62,11 +62,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `last nav titles are being obscured by books-block overview hidden`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `do z-indices`,
             workedHours: 0,
             neededHours: 1
@@ -857,6 +852,11 @@ module.exports = {
             taskName: `nav toggle in tablet is on right, without last title margin`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `last nav titles are being obscured by books-block overview hidden`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

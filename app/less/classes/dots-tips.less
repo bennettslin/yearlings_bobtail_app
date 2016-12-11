@@ -16,9 +16,16 @@
     right: 0;
 }
 
-.overview-shown {
+.monitor-width, .laptop-width {
     .dots-tips-custom-subfield {
-        right: -@dots-tips-width;
+        .transition(top 0.2s ease);
+        top: 0;
+    }
+
+    .overview-shown {
+        .dots-tips-custom-subfield {
+            top: -@menu-height-laptop-monitor;
+        }
     }
 }
 
