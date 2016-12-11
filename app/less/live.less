@@ -71,41 +71,45 @@
     flex-grow: 1;
 }
 
-.subfield {
+.subfield, .menu-subfield {
     height: 100%;
-    overflow: hidden;
+
+    &.subfield {
+        overflow: hidden;
+    }
 }
 
-.title-subfield, .dots-tips-subfield {
+.title-menu-subfield, .dots-tips-menu-subfield {
     position: relative;
 }
 
-.title-subfield {
+.title-menu-subfield {
     width: @side-menu-width-monitor;
     background-color: #d88;
 }
 
-.audio-subfield {
+.audio-menu-subfield {
     min-width: @audio-min-width-monitor;
     width: @audio-width-monitor;
     background-color: #8d8;
 }
 
-.dots-tips-subfield {
+.dots-tips-menu-subfield {
     width: @side-menu-width-monitor;
-    background-color: #88d;
+    background-color: #8dd;
 }
 
-.title-block, .dots-tips-block {
+.title-block, .dots-tips-section {
     position: absolute;
     background-color: #d84;
     height: 100%;
 }
 
-.nav-subfield {
+.nav-custom-subfield {
     position: absolute;
+    width: 100%;
     height: @nav-height;
-    z-index: @nav-subfield-z-index;
+    z-index: @nav-custom-subfield-z-index;
 
     background-color: #4d4;
 }
@@ -137,7 +141,7 @@
         height: @menu-height-laptop-monitor;
     }
 
-    .nav-subfield {
+    .nav-custom-subfield {
         bottom: 0;
     }
 
@@ -165,6 +169,10 @@
         height: 100% - @collapsed-lyric-section-height;
     }
 
+    .dots-tips-custom-subfield {
+        bottom: 0;
+    }
+
     .lyric-column {
         position: absolute;
     }
@@ -179,7 +187,7 @@
         height: @menu-height-mini-tablet;
     }
 
-    .nav-subfield {
+    .nav-custom-subfield {
         top: 0;
     }
 
@@ -202,7 +210,7 @@
             height: @menu-height-phone;
         }
 
-        .audio-subfield {
+        .audio-menu-subfield {
             width: 100%;
         }
     }

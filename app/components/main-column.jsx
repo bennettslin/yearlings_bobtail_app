@@ -1,12 +1,13 @@
 import React from 'react'
 import MenuField from './menu-field'
 import NavSection from './nav/nav-section'
+import DotsTipsSection from './dots-tips-section'
 import OverviewToggleSection from './overview/overview-toggle-section'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsPopup from './dots/dots-popup'
-import { getIsPhone } from 'helpers/responsive-helper'
+import { getIsPhone, getDotsTipsInMain } from 'helpers/responsive-helper'
 
 
 /*************
@@ -15,11 +16,13 @@ import { getIsPhone } from 'helpers/responsive-helper'
 
 const MainColumn = (props) => {
 
-    const isPhone = getIsPhone(props)
+    const isPhone = getIsPhone(props),
+        dotsTipsInMain = getDotsTipsInMain(props)
 
     return (
         <MainColumnView {...props}
             isPhone={isPhone}
+            dotsTipsInMain={dotsTipsInMain}
         />
     )
 }
@@ -31,6 +34,8 @@ const MainColumn = (props) => {
 const MainColumnView = ({
 
     // From props.
+    overviewPopupProps,
+
     deviceWidth,
     isHeightlessLyricColumn,
 
@@ -90,7 +95,8 @@ const MainColumnView = ({
     onLyricExpandClick,
 
     // From controller.
-    isPhone
+    isPhone,
+    dotsTipsInMain
 
 }) => {
 
@@ -126,7 +132,16 @@ const MainColumnView = ({
             accessedDotIndex,
             onDotClick
         },
+        dotsTipsSectionProps = {
+            selectedTipsIndex,
+            selectedDotsIndex,
+            onTipsClick,
+            onDotsExpandClick
+        },
         menuFieldProps = {
+            dotsTipsSectionProps,
+            dotsTipsInMain,
+
             isPhone,
             title,
             accessedOn,
@@ -141,8 +156,6 @@ const MainColumnView = ({
             isLastVerse,
             selectedSongTitle,
             selectedSongIndex,
-            selectedTipsIndex,
-            selectedDotsIndex,
             isPlaying,
             selectedTimePlayed,
             selectedAudioOptionIndex,
@@ -152,23 +165,11 @@ const MainColumnView = ({
             onPlayClick,
             onSongClick,
             onVerseClick,
-            onAudioOptionClick,
-            onTipsClick,
-            onDotsExpandClick
+            onAudioOptionClick
         },
         overviewToggleSectionProps = {
             selectedOverviewIndex,
             onOverviewClick
-        },
-
-        // FIXME: Duplicated in live component.
-        overviewPopupProps = {
-            deviceWidth,
-            isLogue,
-            hideClose: true,
-            selectedOverviewIndex,
-            overviewText,
-            onPopupButtonClick: onOverviewClick
         },
         navSectionProps = {
             songs,
@@ -208,14 +209,20 @@ const MainColumnView = ({
                     <OverviewToggleSection {...overviewToggleSectionProps} />
                     <div className="overview-popup-container">
                         <OverviewPopup {...overviewPopupProps} {...overviewToggleSectionProps}
-                    inOverviewSubfield={true}
+                            inOverviewSubfield={true}
                     />
                     </div>
                 </div>
 
                 {!isPhone ?
-                    <div className="field nav-subfield">
+                    <div className="nav-custom-subfield">
                         <NavSection {...navSectionProps} />
+                    </div> : null
+                }
+
+                {dotsTipsInMain ?
+                    <div className="dots-tips-custom-subfield">
+                        <DotsTipsSection {...dotsTipsSectionProps} />
                     </div> : null
                 }
 
@@ -231,7 +238,6 @@ const MainColumnView = ({
                         </a>
                     </div> : null
                 }
-
             </div>
         </div>
     )

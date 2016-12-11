@@ -1,7 +1,7 @@
 import React from 'react'
 import TitleSection from './title/title-section'
 import AudioSection from './audio/audio-section'
-import { TIPS_OPTIONS } from 'helpers/constants'
+import DotsTipsSection from './dots-tips-section'
 
 /*************
  * CONTAINER *
@@ -18,6 +18,9 @@ const MenuField = (props) => (
 const MenuFieldView = ({
 
     // From props.
+    dotsTipsSectionProps,
+    dotsTipsInMain,
+
     isPhone,
     title,
     isPrologue,
@@ -31,8 +34,6 @@ const MenuFieldView = ({
     isPlaying,
     selectedTimePlayed,
     selectedAudioOptionIndex,
-    selectedTipsIndex,
-    selectedDotsIndex,
     accessedSongIndex,
     accessedOn,
     accessedSectionKey,
@@ -40,9 +41,7 @@ const MenuFieldView = ({
     onPlayClick,
     onSongClick,
     onVerseClick,
-    onAudioOptionClick,
-    onTipsClick,
-    onDotsExpandClick
+    onAudioOptionClick
 
 }) => {
 
@@ -79,35 +78,18 @@ const MenuFieldView = ({
         <div className="field menu-field">
 
             {!isPhone ?
-                <div className="subfield title-subfield">
+                <div className="menu-subfield title-menu-subfield">
                     <div className="title-block">
                         <TitleSection {...titleSectionProps} />
                     </div>
                 </div> : null
             }
-            <div className="subfield audio-subfield">
+            <div className="menu-subfield audio-menu-subfield">
                 <AudioSection {...audioSectionProps} />
             </div>
-            {!isPhone ?
-                <div className="subfield dots-tips-subfield">
-                    <div className="dots-tips-block">
-                        <a
-                            className="dots-tips-button dots-button enabled"
-                            onClick={onDotsExpandClick}
-                        >
-                            <div className="button-icon dots-icon">
-                                {selectedDotsIndex}
-                            </div>
-                        </a>
-                        <a
-                            className="dots-tips-button tips-button enabled"
-                            onClick={onTipsClick}
-                        >
-                            <div className="button-icon tips-icon">
-                                {TIPS_OPTIONS[selectedTipsIndex]}
-                            </div>
-                        </a>
-                    </div>
+            {!dotsTipsInMain ?
+                <div className="menu-subfield dots-tips-menu-subfield">
+                    <DotsTipsSection {...dotsTipsSectionProps} />
                 </div> : null
             }
         </div>

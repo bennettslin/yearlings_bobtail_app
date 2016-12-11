@@ -11,9 +11,6 @@
 .lyric-column {
     // This fixes the issue of being unable to scroll between stanzas.
     z-index: @lyric-column-z-index;
-
-
-    // TODO: This hides the accessed section highlighting, which is fine, since it's temporary anyway.
     overflow: hidden;
 }
 
@@ -45,7 +42,8 @@
 .expand-button-block.in-main {
     .transition(right 0.2s ease);
     bottom: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .is-logue {
@@ -70,10 +68,12 @@
     background-color: orange;
 }
 
-.lyric-column-animatable {
-    animation: lyricGoToSong 0.2s;
-    opacity: 1;
-    transform: scale(1);
+.is-song {
+    .lyric-column-animatable {
+        animation: lyricGoToSong 0.2s;
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .is-logue {

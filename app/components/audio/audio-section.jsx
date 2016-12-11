@@ -135,7 +135,7 @@ const AudioSectionView = ({
                     onClick={onAudioOptionClick}
                 >
                     <div className="button-icon audio-icon">
-                        Option: {AUDIO_OPTIONS[selectedAudioOptionIndex]}
+                        {AUDIO_OPTIONS[selectedAudioOptionIndex]}
                     </div>
                 </a>
             </div>

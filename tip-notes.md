@@ -1,5 +1,5 @@
 * Tips
-    * Player
+    * Audio player
     * Annotations
     * Nav section
     * Dots
@@ -8,6 +8,8 @@
     * Doublespeaker
     * Wiki
     * Accessibility
+    * Select time in lyrics
+    * Visit website
 
 0. prologue
 

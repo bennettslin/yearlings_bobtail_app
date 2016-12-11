@@ -136,6 +136,8 @@ const LiveView = ({
             onPopupButtonClick: onOverviewClick
         },
         mainColumnProps = {
+            overviewPopupProps,
+
             deviceWidth,
             isHeightlessLyricColumn,
 

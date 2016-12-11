@@ -1,16 +1,27 @@
-// TODO: Make general icon class.
+@dots-tips-padding: 10px;
+@dots-tips-margin: 5px;
 
-.dots-tips-block {
+@dots-tips-width: 2 * @app-icon-diameter + 2 * @dots-tips-padding + @dots-tips-margin;
+
+.dots-tips-custom-subfield {
+    height: @menu-height-laptop-monitor;
+    width: @dots-tips-width;
+    z-index: @dots-tips-z-index;
+    position: absolute;
+    right: 0;
+}
+
+.dots-tips-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 10px;
+    padding: 0 @dots-tips-padding;
 
     background-color: #efd;
 
     .dots-tips-button:first-child {
-        margin-right: 5px;
+        margin-right: @dots-tips-margin;
     }
 }
 

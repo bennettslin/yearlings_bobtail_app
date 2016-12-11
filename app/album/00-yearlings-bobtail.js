@@ -57,6 +57,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `do z-indices`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `nav widths use % instead of vw`,
             workedHours: 0,
             neededHours: 3
@@ -807,6 +812,11 @@ module.exports = {
             taskName: `improve layout of columns`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `animate lyric column in and out of logue`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

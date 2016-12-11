@@ -141,3 +141,9 @@ export const getShowSingleLyricColumn = (props, state) => {
 export const getIsHeightlessLyricColumn = (state) => {
     return getIsLyricExpandable(state) && state.windowHeight < HEIGHTLESS_LYRIC_MAX
 }
+
+export const getDotsTipsInMain = (state) => {
+
+    // This also checks for phone
+    return true
+}
