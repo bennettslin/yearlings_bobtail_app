@@ -11,12 +11,26 @@
     width: @dots-tips-width;
     z-index: @dots-tips-z-index;
     position: absolute;
+
+    .transition(right 0.2s ease);
     right: 0;
+}
+
+.overview-shown {
+    .dots-tips-custom-subfield {
+        right: -@dots-tips-width;
+    }
 }
 
 .tablet-width {
     .dots-tips-custom-subfield {
         width: @dots-tips-tablet-width;
+    }
+
+    .lyric-expanded, .overview-shown {
+        .dots-tips-custom-subfield {
+            right: -@dots-tips-tablet-width;
+        }
     }
 }
 
@@ -24,11 +38,23 @@
     .dots-tips-custom-subfield {
         width: @dots-tips-mini-width;
     }
+
+    .lyric-expanded, .overview-shown {
+        .dots-tips-custom-subfield {
+            right: -@dots-tips-mini-width;
+        }
+    }
 }
 
 .phone-width {
     .dots-tips-custom-subfield {
         width: @dots-tips-phone-width;
+    }
+
+    .lyric-expanded, .overview-shown {
+        .dots-tips-custom-subfield {
+            right: -@dots-tips-phone-width;
+        }
     }
 }
 
