@@ -118,9 +118,12 @@ const NavSectionView = ({
                                     endArrayIndex={bookStartingIndices[1]}
                                 />
                                 {/* prologue or toggle */}
+                                {/* TODO: Make this a single component, not a ternary. */}
                                 {showSingleBookColumn && selectedBookColumnIndex === 2 ?
                                     <NavBook {...navItemProps}
                                         isToggle={true}
+                                        hasSelectedSong={selectedSongIndex
+                                             < bookStartingIndices[1]}
                                         buttonText={'k'}
                                         onButtonClick={onBookColumnClick}
                                     /> :
@@ -145,6 +148,8 @@ const NavSectionView = ({
                                 {showSingleBookColumn && selectedBookColumnIndex === 1 ?
                                     <NavBook {...navItemProps}
                                         isToggle={true}
+                                        hasSelectedSong={selectedSongIndex
+                                             >= bookStartingIndices[1]}
                                         buttonText={'k'}
                                         onButtonClick={onBookColumnClick}
                                     /> :

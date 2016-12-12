@@ -42,6 +42,7 @@ const NavBookView = ({
             }) :
             <NavItem {...other}
                 isNavToggle={isNavToggle}
+                isToggle={isToggle}
             />
         }
     </div>

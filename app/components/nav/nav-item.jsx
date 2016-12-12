@@ -10,13 +10,16 @@ const NavItem = ({
 
     index,
     isAdmin,
+    isToggle,
+    hasSelectedSong,
+    bookTwoStartingIndex,
     selectedSongIndex,
     accessedSongIndex,
     sectionAccessHighlighted,
 
 ...other }) => {
 
-    const isSelected = selectedSongIndex === index,
+    const isSelected = isToggle ? hasSelectedSong : selectedSongIndex === index,
         accessHighlighted = sectionAccessHighlighted && accessedSongIndex === index,
         navItemProps = {
             songIndex: index,
