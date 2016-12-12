@@ -1,17 +1,37 @@
+.audio-section, .audio-block {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.audio-block {
+    flex-grow: 1;
+}
+
 .audio-banner-block {
-    background-color: #fed;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #dfe;
     line-height: 1em;
 }
 
+.audio-display-block {
+
+}
+
+.audio-slider-block {
+    width: 100%;
+    height: @app-icon-diameter;
+    background-color: #def;
+}
+
 .audio-buttons-block {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
 
     max-width: 300px;
 
-    background-color: #efd;
+    background-color: #fed;
 }
 
 .audio-icon {

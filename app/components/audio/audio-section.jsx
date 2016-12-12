@@ -70,10 +70,15 @@ const AudioSectionView = ({
         className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
         {isAdmin ? <h2>audio</h2> : null}
-        <div className="audio-banner-block">
-            {selectedSongTitle}{!isPrologue && !isEpilogue ? ': ' + getFormattedTime(selectedTimePlayed) : ''}
+        <div className="audio-block audio-banner-block">
+            <div className="audio-display-block">
+                {selectedSongTitle}{!isPrologue && !isEpilogue ? ': ' + getFormattedTime(selectedTimePlayed) : ''}
+            </div>
+            <div className="audio-slider-block">
+                
+            </div>
         </div>
-        <div className="audio-buttons-block">
+        <div className="audio-block audio-buttons-block">
             <div className="audio-button-block">
                 <a
                     className={`audio-button${isPrologue ? '' : ' enabled'}`}
@@ -85,16 +90,18 @@ const AudioSectionView = ({
                 </a>
             </div>
 
-            <div className="audio-button-block">
-                <a
-                    className={`audio-button${isPrologue || isEpilogue || isFirstVerse ? '' : ' enabled'}`}
-                    onClick={onRewindClick}
-                >
-                    <div className="button-icon audio-icon">
-                        {'\u23EA'}
-                    </div>
-                </a>
-            </div>
+            {false ?
+                <div className="audio-button-block">
+                    <a
+                        className={`audio-button${isPrologue || isEpilogue || isFirstVerse ? '' : ' enabled'}`}
+                        onClick={onRewindClick}
+                    >
+                        <div className="button-icon audio-icon">
+                            {'\u23EA'}
+                        </div>
+                    </a>
+                </div> : null
+            }
 
             <div className="audio-button-block">
                 <a
@@ -107,16 +114,18 @@ const AudioSectionView = ({
                 </a>
             </div>
 
-            <div className="audio-button-block">
-                <a
-                    className={`audio-button${isPrologue || isEpilogue || isLastVerse ? '' : ' enabled'}`}
-                    onClick={onFastForwardClick}
-                >
-                    <div className="button-icon audio-icon">
-                        {'\u23E9'}
-                    </div>
-                </a>
-            </div>
+            {false ?
+                <div className="audio-button-block">
+                    <a
+                        className={`audio-button${isPrologue || isEpilogue || isLastVerse ? '' : ' enabled'}`}
+                        onClick={onFastForwardClick}
+                    >
+                        <div className="button-icon audio-icon">
+                            {'\u23E9'}
+                        </div>
+                    </a>
+                </div> : null
+            }
 
             <div className="audio-button-block">
                 <a

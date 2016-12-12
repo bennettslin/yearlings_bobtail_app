@@ -57,6 +57,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `animate swapping of left and right lyric stanzas.`,
+            workedHours: 0,
+            neededHours: 5
+        },
+        {
+            taskName: `show ear and expand buttons in collapsed lyric column only upon scroll down.`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `adjust books block animation height for tablet and mini`,
             workedHours: 0,
             neededHours: 1
@@ -79,7 +89,7 @@ module.exports = {
         {
             taskName: `setDOMWidth method doesn't work on reload and device width change`,
             workedHours: 0,
-            neededHours: 1
+            neededHours: 3
         },
         {
             taskName: `Make dot tooltip touch focused`,
