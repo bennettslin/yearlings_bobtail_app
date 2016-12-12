@@ -67,6 +67,7 @@
     .stanza-block {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
 
         /**
@@ -95,25 +96,6 @@
             }
         }
 
-        &.dot {
-            &.shared {
-                @shared-dot-diameter: 1.5em;
-                .dot-diameter-mixin(@shared-dot-diameter);
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            }
-
-            &.only {
-                @only-dot-diameter: 2em;
-                .dot-diameter-mixin(@only-dot-diameter);
-            }
-
-            .stanza {
-                border-radius: 50%;
-            }
-        }
-
         .sub-block {
             margin-top: -2.5px;
             display: flex;
@@ -121,6 +103,7 @@
     }
 
     .stanza {
+
         // TODO: Better styling, of course.
         &.title { border: 2px solid brown; }
         &.refrain { border: 2px solid tomato; }

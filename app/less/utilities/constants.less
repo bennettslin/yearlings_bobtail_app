@@ -50,15 +50,23 @@
 @overview-subfield-z-index: 1;
 @overview-toggle-z-index: 1;
 @dot-tooltip-z-index: 1;
-@lyric-column-z-index: 1;
-@lyric-column-button-z-index: 1;
-@lyric-play-button-z-index: 1;
 @popup-container-z-index: 0;
 @text-span-z-index: 1;
-@admin-toggle-z-index: 1;
+
 @dots-tips-z-index: 1;
 @nav-custom-subfield-z-index: 1;
-@menu-subfield-z-index: 2; // Must be higher than nav and dots tips.
+
+// Lyrics should be higher than centre field.
+@lyric-column-z-index: 2;
+@lyric-column-button-z-index: @lyric-column-z-index + 1;
+@lyric-play-button-z-index: @lyric-column-button-z-index + 1;
+
+// Menu should be higher than centre field and lyrics.
+@menu-subfield-z-index: @lyric-play-button-z-index + 1;
+
+// Admin toggle should be highest.
+@admin-toggle-z-index: @menu-subfield-z-index + 1;
+
 // Need for dots popup?
 // Need for nav titles?
 // Overview bubble over overview toggle.

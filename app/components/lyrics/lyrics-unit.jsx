@@ -34,7 +34,7 @@ const LyricsUnit = ({
         topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
         isDotOnly = dotStanza && stanzaArray.length === 1,
         hasSide = topSideStanza || bottomSideStanza,
-        showMain = !isDotOnly && !hasSide || hiddenLyricColumnKey !== LEFT,
+        showMain = !isDotOnly && (!hasSide || hiddenLyricColumnKey !== LEFT),
         showSide = hasSide && hiddenLyricColumnKey !== RIGHT,
         shouldShowDotStanza = dotStanza ? intersects(dotStanza.dotKeys, selectedDotKeys) : false
 
@@ -140,8 +140,9 @@ const LyricsUnitView = ({
                     {getStanza({ stanzaArray: topSideSubStanza, addSub: true })}
                 </div> : null
             }
+            {/* At present, dot-only and dot-shared classes aren't used. */}
             {shouldShowDotStanza ?
-                <div className={`stanza-block dot ${isDotOnly ? 'only' : 'shared'}`}>
+                <div className={`stanza-block dot-${isDotOnly ? 'only' : 'shared'}`}>
                     <DotStanza {...other}
                         dotStanzaObject={dotStanza}
                         selectedDotKeys={selectedDotKeys}

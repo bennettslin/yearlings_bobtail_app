@@ -53,7 +53,13 @@
     }
 }
 
+.dots-subfield {
+    .dot-diameter-mixin(@app-large-icon-diameter);
+}
+
 .dot {
+    border-radius: 50%;
+
     .transition(background-color 0.15s ease);
 
     // TODO: Key styling.
