@@ -1,23 +1,78 @@
-.audio-section, .audio-block {
+// TODO: Add these values to constants
+@audio-block-padding: 15px;
+@audio-subblock-margin: 5px;
+
+@audio-button-margin: 3px;
+@audio-option-button-margin: 10px;
+
+// 232 px.
+@audio-buttons-min-width: 2 * @audio-block-padding + 3 * @app-icon-diameter + @app-large-icon-diameter + 2 * @audio-button-margin + @audio-option-button-margin;
+
+@audio-banner-min-width: 250px;
+
+.audio-menu-subfield {
+    min-width: @audio-banner-min-width + @audio-buttons-min-width;
+    max-width: 720px; // Arbitrary.
+}
+
+.audio-section, .audio-block, .audio-subblock {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
+.audio-section {
+    width: 100%;
+}
+
 .audio-block {
+    box-sizing: border-box;
+    padding: 0 @audio-block-padding;
     flex-grow: 1;
 }
 
+.audio-buttons-block {
+    justify-content: space-between;
+    min-width: @audio-buttons-min-width;
+    max-width: 280px; // Arbitrary.
+
+    background-color: #fed;
+}
+
+.player-subblock {
+    justify-content: space-between;
+    margin-right: @audio-option-button-margin;
+    flex-grow: 4;
+}
+
+.option-subblock {
+    justify-content: flex-end;
+    flex-grow: 3;
+}
+
+.audio-button:not(:last-child) {
+    margin-right: @audio-button-margin;
+}
+
+
 .audio-banner-block {
     flex-direction: column;
-    justify-content: space-between;
 
-    background-color: #dfe;
+    min-width: @audio-banner-min-width;
+
+    background-color: #8dd;
     line-height: 1em;
+
+    .audio-display-block {
+        height: 40px;
+    }
+
+    .audio-banner {
+        flex-grow: 1;
+    }
 }
 
 .audio-display-block {
-
 }
 
 .audio-slider-block {
@@ -26,14 +81,27 @@
     background-color: #def;
 }
 
-.audio-buttons-block {
-    justify-content: space-between;
-
-    max-width: 300px;
-
-    background-color: #fed;
-}
+// .audio-button-block {
+//     flex-grow: 1;
+//
+//     &.audio-previous, &.audio-play {
+//         padding-right: @audio-button-min-padding;
+//     }
+//
+//     &.audio-next {
+//         padding-right: @audio-option-button-min-padding;
+//     }
+//
+//     &.audio-option {
+//         padding-left: @audio-option-button-min-padding;
+//     }
+// }
+//
+// .audio-option {
+//     justify-content: flex-end;
+//     border-left: 1px solid black;
+// }
 
 .audio-icon {
-    background-color: green;
+    background-color: #8d4;
 }

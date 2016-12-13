@@ -159,6 +159,8 @@ export const getDotsTipsInMain = (state) => {
     const { deviceWidth,
             windowWidth } = state
 
+    return false;
+
     // FIXME: Make this simpler, and get rid of unneeded breakpoints.
     if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
         return _getDotsTipsInMainForDeviceWidthObject(windowWidth, MONITOR_WIDTH_OBJECT)
