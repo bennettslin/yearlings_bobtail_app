@@ -1,4 +1,6 @@
 import React from 'react'
+import AudioBanner from './audio-banner'
+import AudioButtons from './audio-buttons'
 import { getFormattedTime } from 'helpers/format-helper'
 import { AUDIO_OPTIONS,
          AUDIO_SECTION } from 'helpers/constants'
@@ -12,26 +14,16 @@ const AudioSection = ({
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
-    onAudioSongClick,
-    onAudioTimeClick,
 
 ...other }) => {
 
     const sectionAccessHighlighted = accessedOn && accessedSectionKey === AUDIO_SECTION,
-        sectionNextHighlighted = accessedOn && nextSectionKey === AUDIO_SECTION,
-        onPreviousSongClick = e => onAudioSongClick(e, undefined, -1),
-        onRewindClick = e => onAudioTimeClick(e, undefined, -1),
-        onFastForwardClick = e => onAudioTimeClick(e, undefined, 1),
-        onNextSongClick = e => onAudioSongClick(e, undefined, 1)
+        sectionNextHighlighted = accessedOn && nextSectionKey === AUDIO_SECTION
 
     return (
         <AudioSectionView {...other}
             sectionAccessHighlighted={sectionAccessHighlighted}
             sectionNextHighlighted={sectionNextHighlighted}
-            onPreviousSongClick={onPreviousSongClick}
-            onRewindClick={onRewindClick}
-            onFastForwardClick={onFastForwardClick}
-            onNextSongClick={onNextSongClick}
         />
     )
 }
@@ -56,97 +48,45 @@ const AudioSectionView = ({
     selectedSongTitle,
     onPlayClick,
     onAudioOptionClick,
+    onAudioSongClick,
+    onAudioTimeClick,
 
     // From controller.
     sectionAccessHighlighted,
     sectionNextHighlighted,
-    onPreviousSongClick,
-    onRewindClick,
-    onFastForwardClick,
-    onNextSongClick
 
-}) => (
-    <div
-        className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
-    >
-        {isAdmin ? <h2>audio</h2> : null}
-        <div className="audio-block audio-banner-block">
-            <div className="audio-banner audio-display-block">
-                {selectedSongTitle}{!isPrologue && !isEpilogue ? ': ' + getFormattedTime(selectedTimePlayed) : ''}
-            </div>
-            <div className="audio-banner audio-slider-block">
+}) => {
 
-            </div>
+    const audioBannerProps = {
+            selectedTimePlayed,
+            isPrologue,
+            isEpilogue,
+            selectedSongTitle
+        },
+        audioButtonsProps = {
+            isPlaying,
+            selectedAudioOptionIndex,
+            isPrologue,
+            isFirstSong,
+            isLastSong,
+            isEpilogue,
+            isFirstVerse,
+            isLastVerse,
+            onPlayClick,
+            onAudioOptionClick,
+            onAudioSongClick,
+            onAudioTimeClick
+        }
+
+    return (
+        <div
+            className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
+        >
+            {isAdmin ? <h2>audio</h2> : null}
+            <AudioBanner {...audioBannerProps} />
+            <AudioButtons {...audioButtonsProps} />
         </div>
-        <div className="audio-block audio-buttons-block">
-
-            <div className="audio-subblock player-subblock">
-                <a
-                    className={`audio-button${isPrologue ? '' : ' enabled'}`}
-                    onClick={onPreviousSongClick}
-                >
-                    <div className="button-icon audio-icon">
-                        {isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
-                    </div>
-                </a>
-
-                {false ?
-                    <div className="audio-button-block">
-                        <a
-                            className={`audio-button${isPrologue || isEpilogue || isFirstVerse ? '' : ' enabled'}`}
-                            onClick={onRewindClick}
-                        >
-                            <div className="button-icon audio-icon">
-                                {'\u23EA'}
-                            </div>
-                        </a>
-                    </div> : null
-                }
-
-                <a
-                    className="audio-button enabled"
-                    onClick={onPlayClick}
-                >
-                    <div className="large button-icon audio-icon">
-                        {isPlaying ? '\u23F8' : '\u25BA' }
-                    </div>
-                </a>
-
-                {false ?
-                    <div className="audio-button-block">
-                        <a
-                            className={`audio-button${isPrologue || isEpilogue || isLastVerse ? '' : ' enabled'}`}
-                            onClick={onFastForwardClick}
-                        >
-                            <div className="button-icon audio-icon">
-                                {'\u23E9'}
-                            </div>
-                        </a>
-                    </div> : null
-                }
-
-                <a
-                    className={`audio-button${isEpilogue ? '' : ' enabled'}`}
-                    onClick={onNextSongClick}
-                >
-                    <div className="button-icon audio-icon">
-                        {isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
-                    </div>
-                </a>
-            </div>
-
-            <div className="audio-subblock option-subblock">
-                <a
-                    className="audio-button enabled"
-                    onClick={onAudioOptionClick}
-                >
-                    <div className="button-icon audio-icon">
-                        {AUDIO_OPTIONS[selectedAudioOptionIndex]}
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-)
+    )
+}
 
 export default AudioSection
