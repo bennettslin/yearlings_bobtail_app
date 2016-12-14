@@ -45,7 +45,7 @@ import { NAV_SECTION,
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex } from 'helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from 'helpers/responsive-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -967,6 +967,7 @@ class App extends Component {
               windowHeight } = state,
 
             songTimes = getSongTimes(props),
+            isDesktop = getIsDesktop(deviceWidth),
             showSingleLyricColumn = getShowSingleLyricColumn(props, state),
             isLyricExpandable = getIsLyricExpandable(state),
             isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
@@ -985,7 +986,7 @@ class App extends Component {
         return (
             <div
                 ref="app"
-                className={`app ${isAdmin ? 'admin' : 'live' + ' ' + deviceWidth}`}
+                className={`app ${isAdmin ? 'admin' : 'live' + ' ' + deviceWidth} ${isDesktop ? 'is-desktop' : 'is-mobile'}`}
                 onClick={this._onBodyClick}
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"

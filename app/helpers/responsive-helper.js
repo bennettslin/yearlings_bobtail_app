@@ -62,6 +62,10 @@ export const getIsPhone = ({ deviceWidth }) => {
     return deviceWidth === PHONE_WIDTH_OBJECT.className
 }
 
+export const getIsDesktop = (deviceWidth) => {
+    return deviceWidth === MONITOR_WIDTH_OBJECT.className || deviceWidth === LAPTOP_WIDTH_OBJECT.className
+}
+
 export const getShowSingleBookColumn = (state) => {
     const { deviceWidth,
             windowWidth } = state
