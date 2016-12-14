@@ -1,5 +1,5 @@
 @menu-height: 72px;
-@menu-height-phone: 50px;
+@menu-phone-height: @app-icon-diameter + 2 * @menu-subfield-narrow-margin;
 
 @menu-subfield-margin: 10px;
 @menu-subfield-narrow-margin: 3px;
@@ -72,13 +72,9 @@
         }
     }
 
-    // &.phone-width {
-    //     .menu-field {
-    //         height: @menu-height-phone;
-    //     }
-    //
-    //     .audio-menu-subfield {
-    //         width: 100%;
-    //     }
-    // }
+    &.phone-width {
+        .menu-field {
+            height: @menu-phone-height;
+        }
+    }
 }

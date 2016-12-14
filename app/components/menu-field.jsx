@@ -63,6 +63,7 @@ const MenuFieldView = ({
             onTitleClick: onSongClick
         },
         audioSectionProps = {
+            isPhone,
             titleInAudio,
             titleSectionProps,
 
@@ -89,7 +90,7 @@ const MenuFieldView = ({
     return (
         <div className={`field menu-field${titleInAudio ? ' title-in-audio' : ''}`}>
 
-            {!isPhone && !titleInAudio ?
+            {!titleInAudio ?
                 <div className="menu-subfield title-menu-subfield">
                     <div className="title-block">
                         <TitleSection {...titleSectionProps} />

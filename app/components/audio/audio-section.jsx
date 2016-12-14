@@ -35,6 +35,7 @@ const AudioSection = ({
 const AudioSectionView = ({
 
     // From props.
+    isPhone,
     isAdmin,
     isPlaying,
     selectedTimePlayed,
@@ -83,7 +84,7 @@ const AudioSectionView = ({
             className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
         >
             {isAdmin ? <h2>audio</h2> : null}
-            <AudioBanner {...audioBannerProps} />
+            {!isPhone ? <AudioBanner {...audioBannerProps} /> : null}
             <AudioButtons {...audioButtonsProps} />
         </div>
     )

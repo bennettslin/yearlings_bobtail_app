@@ -1,4 +1,4 @@
-@dots-tips-padding: 4px;
+@dots-tips-padding: @app-thin-margin;
 @dots-tips-margin: 10px;
 
 @dots-tips-width: 2 * @app-large-icon-diameter + 2 * @dots-tips-padding + @dots-tips-margin;
@@ -28,6 +28,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: @dots-tips-padding;
+
     background-color: #efd;
 }
 
@@ -35,8 +37,6 @@
 
 .dots-tips-menu-subfield {
     .dots-tips-section {
-        padding: 0 @dots-tips-padding;
-
         .dots-tips-button:first-child {
             margin-right: @dots-tips-margin;
         }
@@ -49,9 +49,10 @@
     bottom: @nav-height;
     height: @dots-tips-width;
 
+    margin-bottom: @app-thin-margin;
+
     .dots-tips-section {
         flex-direction: column;
-        padding: @dots-tips-padding @nav-book-padding;
 
         .dots-tips-button:first-child {
             margin-bottom: @dots-tips-margin;
