@@ -57,6 +57,26 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `fix audio section on admin page.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `put audio banner in main column for phone.`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: `put title in audio for mini.`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: `animate dots tips section in main for logue.`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `animate swapping of left and right lyric stanzas.`,
             workedHours: 0,
             neededHours: 5

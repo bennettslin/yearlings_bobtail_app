@@ -1,6 +1,7 @@
 import React from 'react'
 import MenuField from './menu-field'
 import NavSection from './nav/nav-section'
+import AudioBanner from './audio/audio-banner'
 import DotsTipsSection from './dots-tips-section'
 import OverviewToggleSection from './overview/overview-toggle-section'
 import OverviewPopup from './overview/overview-popup'
