@@ -1,10 +1,10 @@
-@menu-height-laptop-monitor: 72px;
-@menu-height-mini-tablet: 60px;
+@menu-height: 72px;
 @menu-height-phone: 50px;
 
 @menu-subfield-margin: 10px;
+@menu-subfield-narrow-margin: 3px;
 
-@title-subfield-min-width: 100px;
+@title-subfield-min-width: 72px;
 
 .menu-field, .menu-subfield {
     display: flex;
@@ -12,8 +12,11 @@
     align-items: center;
 }
 
+.menu-field {
+    height: @menu-height;
+}
+
 .menu-subfield {
-    border: 1px solid gray;
     border-radius: 15px;
     overflow: hidden;
 
@@ -46,24 +49,36 @@
 
 .monitor-width, .laptop-width {
 
-    .menu-field {
-        height: @menu-height-laptop-monitor;
+    &.laptop-width {
+        .menu-subfield {
+            &:not(:last-child) {
+                margin-right: @menu-subfield-narrow-margin;
+            }
+        }
     }
 }
 
-// .tablet-width, .mini-width, .phone-width {
-//
-//     .menu-field {
-//         height: @menu-height-mini-tablet;
-//     }
-//
-//     &.phone-width {
-//         .menu-field {
-//             height: @menu-height-phone;
-//         }
-//
-//         .audio-menu-subfield {
-//             width: 100%;
-//         }
-//     }
-// }
+.tablet-width, .mini-width, .phone-width {
+
+    .dots-tips-menu-subfield {
+        justify-content: flex-end;
+    }
+
+    &.mini-width {
+        .menu-subfield {
+            &:not(:last-child) {
+                margin-right: @menu-subfield-narrow-margin;
+            }
+        }
+    }
+
+    // &.phone-width {
+    //     .menu-field {
+    //         height: @menu-height-phone;
+    //     }
+    //
+    //     .audio-menu-subfield {
+    //         width: 100%;
+    //     }
+    // }
+}

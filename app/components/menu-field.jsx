@@ -2,15 +2,21 @@ import React from 'react'
 import TitleSection from './title/title-section'
 import AudioSection from './audio/audio-section'
 import DotsTipsSection from './dots-tips-section'
+import { getTitleInAudio } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const MenuField = (props) => (
-    <MenuFieldView {...props} />
-)
+const MenuField = (props) => {
+    const titleInAudio = getTitleInAudio(props)
 
+    return (
+        <MenuFieldView {...props}
+            titleInAudio={titleInAudio}
+        />
+    )
+}
 /****************
  * PRESENTATION *
  ****************/
@@ -41,7 +47,10 @@ const MenuFieldView = ({
     onPlayClick,
     onSongClick,
     onVerseClick,
-    onAudioOptionClick
+    onAudioOptionClick,
+
+    // From controller.
+    titleInAudio
 
 }) => {
 
@@ -54,6 +63,9 @@ const MenuFieldView = ({
             onTitleClick: onSongClick
         },
         audioSectionProps = {
+            titleInAudio,
+            titleSectionProps,
+
             isPrologue,
             isFirstSong,
             isLastSong,
@@ -75,9 +87,9 @@ const MenuFieldView = ({
         }
 
     return (
-        <div className="field menu-field">
+        <div className={`field menu-field${titleInAudio ? ' title-in-audio' : ''}`}>
 
-            {!isPhone ?
+            {!isPhone && !titleInAudio ?
                 <div className="menu-subfield title-menu-subfield">
                     <div className="title-block">
                         <TitleSection {...titleSectionProps} />

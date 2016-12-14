@@ -37,6 +37,7 @@ const MainColumnView = ({
     overviewPopupProps,
 
     deviceWidth,
+    windowWidth,
     isHeightlessLyricColumn,
 
     isLogue,
@@ -138,6 +139,8 @@ const MainColumnView = ({
             onDotsExpandClick
         },
         menuFieldProps = {
+            deviceWidth,
+            windowWidth,
             dotsTipsSectionProps,
             dotsTipsInMain,
 

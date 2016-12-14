@@ -159,8 +159,6 @@ export const getDotsTipsInMain = (state) => {
     const { deviceWidth,
             windowWidth } = state
 
-    return false;
-
     // FIXME: Make this simpler, and get rid of unneeded breakpoints.
     if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
         return _getDotsTipsInMainForDeviceWidthObject(windowWidth, MONITOR_WIDTH_OBJECT)
@@ -177,4 +175,12 @@ export const getDotsTipsInMain = (state) => {
     } else if (deviceWidth === PHONE_WIDTH_OBJECT.className) {
         return true
     }
+}
+
+export const getTitleInAudio = (state) => {
+    const { deviceWidth,
+            windowWidth } = state
+
+    // FIXME: Make this simpler.
+    return deviceWidth === MINI_WIDTH_OBJECT.className && windowWidth < MINI_WIDTH_OBJECT.titleInAudioBreakpoint
 }

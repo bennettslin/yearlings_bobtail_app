@@ -1,21 +1,30 @@
-// TODO: Add these values to constants
 @audio-block-padding: 15px;
-@audio-subblock-margin: 5px;
-
 @audio-button-margin: 3px;
-@audio-option-button-margin: 10px;
+@audio-option-button-margin: 8px;
 
 // 232 px.
-@audio-buttons-min-width: 2 * @audio-block-padding + 3 * @app-icon-diameter + @app-large-icon-diameter + 2 * @audio-button-margin + @audio-option-button-margin;
+@audio-buttons-constant: 2 * @audio-block-padding + 3 * @app-icon-diameter + 2 * @audio-button-margin + @audio-option-button-margin;
 
-@audio-banner-min-width: 250px;
+@audio-banner-min-width: 225px;
 
 .audio-menu-subfield {
-    min-width: @audio-banner-min-width + @audio-buttons-min-width;
+    min-width: @audio-banner-min-width + @audio-buttons-constant + @app-large-icon-diameter;
     max-width: 720px; // Arbitrary.
 }
 
-.audio-section, .audio-block, .audio-subblock {
+.tablet-width {
+    .audio-menu-subfield {
+        min-width: @audio-banner-min-width + @audio-buttons-constant + @app-tablet-large-icon-diameter;
+    }
+}
+
+.mini-width {
+    .audio-menu-subfield {
+        min-width: @audio-banner-min-width + @audio-buttons-constant + @app-mini-large-icon-diameter;
+    }
+}
+
+.audio-section, .audio-block, .audio-subblock, .audio-display-block {
     display: flex;
     align-items: center;
     height: 100%;
@@ -27,13 +36,12 @@
 
 .audio-block {
     box-sizing: border-box;
-    padding: 0 @audio-block-padding;
+    padding: 4px @audio-block-padding;
     flex-grow: 1;
 }
 
 .audio-buttons-block {
     justify-content: space-between;
-    min-width: @audio-buttons-min-width;
     max-width: 280px; // Arbitrary.
 
     background-color: #fed;
@@ -73,6 +81,9 @@
 }
 
 .audio-display-block {
+    justify-content: space-between;
+
+    width: 100%;
 }
 
 .audio-slider-block {
