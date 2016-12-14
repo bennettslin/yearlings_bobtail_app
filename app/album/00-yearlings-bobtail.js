@@ -57,6 +57,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `allow annotation to remain selected when song advances to next song.`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `fix audio section on admin page.`,
             workedHours: 0,
             neededHours: 1
@@ -162,11 +167,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `"problem with indie" in footer`,
-            workedHours: 0,
-            neededHours: 8
-        },
-        {
             taskName: `create stage section`,
             workedHours: 0,
             neededHours: 3
@@ -225,6 +225,11 @@ module.exports = {
         //     taskName: `Wiki popups are broken in Chrome. (But only in Canary, it seems.)`,
         //     workedHours: 0,
         //     neededHours: 1
+        // },
+        // {
+        //     taskName: `"problem with indie" in footer`,
+        //     workedHours: 0,
+        //     neededHours: 8
         // },
         {
             taskName: `refactor to get album objects`,

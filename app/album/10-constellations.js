@@ -621,6 +621,7 @@ module.exports = {
                         anchor: `Ourevian battles spent,`,
                         properNoun: true,
                         annotation: {
+                            // TODO: Mention Mongol battles against Arabs.
                             description: [
                                 `"Arabian battles." As the`,
                                 {
@@ -639,6 +640,7 @@ module.exports = {
                     {
                         anchor: `a'duct Uighuress.`,
                         annotation: {
+                            // TODO: Mention Mongol reputation for spoils.
                             description: [
                                 `"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the`,
                                 {
@@ -1001,6 +1003,7 @@ module.exports = {
                 time: 139,
                 lyric: [
                     {
+                        // TODO: Change spelling?
                         anchor: `Noworse and Nunavutter`,
                         properNoun: true,
                         annotation: {
@@ -1199,6 +1202,7 @@ module.exports = {
                     {
                         anchor: `black Letter-Day Sensed ahead…`,
                         annotation: {
+                            // TODO: Say the Mormons finally allowed.
                             description: `Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." The Mormons did not allow its black members to attain priesthood until 1978.`
                         }
                     },
