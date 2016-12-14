@@ -7,6 +7,22 @@
 
 @audio-banner-min-width: 225px;
 
+.admin {
+    .audio-section {
+        flex-direction: column;
+    }
+
+    .audio-block {
+        width: 100%;
+    }
+}
+
+.live {
+    .audio-section {
+        height: 100%;
+    }
+}
+
 .audio-menu-subfield {
     min-width: @audio-banner-min-width + @audio-buttons-constant + @app-large-icon-diameter;
     max-width: 720px; // Arbitrary.
@@ -37,7 +53,6 @@
 .audio-section, .audio-block, .audio-subblock, .audio-display-block {
     display: flex;
     align-items: center;
-    height: 100%;
 }
 
 .audio-section {
@@ -101,27 +116,6 @@
     height: @app-icon-diameter;
     background-color: #def;
 }
-
-// .audio-button-block {
-//     flex-grow: 1;
-//
-//     &.audio-previous, &.audio-play {
-//         padding-right: @audio-button-min-padding;
-//     }
-//
-//     &.audio-next {
-//         padding-right: @audio-option-button-min-padding;
-//     }
-//
-//     &.audio-option {
-//         padding-left: @audio-option-button-min-padding;
-//     }
-// }
-//
-// .audio-option {
-//     justify-content: flex-end;
-//     border-left: 1px solid black;
-// }
 
 .audio-icon {
     background-color: #8d4;

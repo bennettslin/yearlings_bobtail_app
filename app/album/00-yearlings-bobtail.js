@@ -62,11 +62,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `fix audio section on admin page.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `put audio banner in main column for phone.`,
             workedHours: 0,
             neededHours: 2
@@ -890,6 +885,11 @@ module.exports = {
         },
         {
             taskName: `last nav titles are being obscured by books-block overview hidden`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `fix audio section on admin page.`,
             workedHours: 1,
             neededHours: 1
         }
