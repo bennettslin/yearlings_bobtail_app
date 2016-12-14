@@ -92,9 +92,7 @@ const MenuFieldView = ({
 
             {!titleInAudio ?
                 <div className="menu-subfield title-menu-subfield">
-                    <div className="title-block">
-                        <TitleSection {...titleSectionProps} />
-                    </div>
+                    <TitleSection {...titleSectionProps} />
                 </div> : null
             }
             <div className="menu-subfield audio-menu-subfield">

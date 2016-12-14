@@ -57,6 +57,21 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `layout, position, and style dots section.`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `layout, position, and style annotation section.`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `layout, position, and style wiki section.`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `allow annotation to remain selected when song advances to next song.`,
             workedHours: 0,
             neededHours: 3

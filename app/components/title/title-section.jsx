@@ -45,11 +45,14 @@ const TitleSectionView = ({
 
 }) => (
     <div className={`section title-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}>
-        <div className={titleAccessHighlighted ? 'access-highlighted' : ''}>
-            <a className="enabled" onClick={onClick}>
+        <a
+            className={`title-button enabled ${titleAccessHighlighted ? 'access-highlighted' : ''}`}
+            onClick={onClick}
+        >
+            <div className="title-image">
                 {title}
-            </a>
-        </div>
+            </div>
+        </a>
     </div>
 )
 
