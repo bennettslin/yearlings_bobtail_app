@@ -51,7 +51,6 @@
 // TODO: Make sure that these are necessary.
 @overview-subfield-z-index: 1;
 @overview-toggle-z-index: 1;
-@dot-tooltip-z-index: 1;
 @popup-container-z-index: 0;
 @text-span-z-index: 1;
 
@@ -66,8 +65,14 @@
 // Menu should be higher than centre field and lyrics.
 @menu-subfield-z-index: @lyric-play-button-z-index + 1;
 
+@popup-content-z-index: @menu-subfield-z-index + 1;
+
+// Dot interactable should be above dot tooltip.
+@dot-tooltip-z-index: @popup-content-z-index + 1;
+@dot-interactable-z-index: @dot-tooltip-z-index + 1;
+
 // Admin toggle should be highest.
-@admin-toggle-z-index: @menu-subfield-z-index + 1;
+@admin-toggle-z-index: @dot-interactable-z-index + 1;
 
 // Need for dots popup?
 // Need for nav titles?

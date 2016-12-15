@@ -1,15 +1,15 @@
-.dot-diameter-mixin(@dot-diameter: @default-dot-diameter) {
+.dot-diameter-mixin(@dot-diameter: @default-dot-diameter, @dot-margin: @dot-diameter * 0.1) {
 
     .dot-container {
         &:not(:last-child) {
-            margin-right: @dot-diameter * 0.1;
+            margin-right: @dot-margin;
         }
     }
 
     .dot {
         width: @dot-diameter;
         height: @dot-diameter;
-        border: (@dot-diameter * 0.1) solid #aaa;
+        border: @dot-margin solid #aaa;
     }
 }
 

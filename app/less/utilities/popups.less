@@ -1,10 +1,6 @@
 // TODO: Make popup mixin.
 @overflow-margin-width: 5px;
 
-.popup-transition-group {
-    box-sizing: border-box;
-}
-
 .admin {
     .popup-content-wrapper {
         left: -@overflow-margin-width - @field-width - @field-padding;
@@ -24,6 +20,12 @@
     .popup-transition-group {
         position: fixed;
         z-index: @popup-container-z-index;
+    }
+}
+
+.live {
+    .popup-content-wrapper {
+        padding: 30px 20px 20px;
     }
 }
 
@@ -53,10 +55,6 @@
 
         height: 100%;
         width: 100%;
-
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
     }
 
     .popup-transition-group {
@@ -74,7 +72,12 @@
     }
 }
 
+.popup-transition-group {
+    box-sizing: border-box;
+}
+
 .popup-content-wrapper {
+    z-index: @popup-content-z-index;
 
     /**
      * If changing these duration values, don't forget to also change

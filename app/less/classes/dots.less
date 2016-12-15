@@ -1,3 +1,12 @@
+@dot-interactable-diameter: 64px;
+@dot-container-padding: @dot-interactable-diameter / 6;
+
+@dot-interactable-mini-diameter: @app-large-icon-diameter;
+@dot-container-mini-padding: @dot-interactable-mini-diameter / 6;
+
+@dot-interactable-phone-diameter: @app-tablet-large-icon-diameter;
+@dot-container-phone-padding: @dot-interactable-phone-diameter / 7;
+
 .dots-block {
     .dot-diameter-mixin;
     display: flex;
@@ -12,11 +21,6 @@
             &.dot-enabled {
 
                 &.interacted {
-
-                    .tooltip-container {
-                        z-index: @dot-tooltip-z-index;
-                    }
-
                     .tooltip {
                         animation: tooltipGrow 0.25s;
                         opacity: 1;
@@ -54,12 +58,94 @@
 }
 
 .dots-subfield {
-    .dot-diameter-mixin(@app-large-icon-diameter);
+    border: 1px solid red;
+    .dot-diameter-mixin(@dot-interactable-diameter, 0);
+
+    .dots-block {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 5 * (@dot-interactable-diameter + 2 * @dot-container-padding);
+    }
+}
+
+.dot-container {
+    padding: @dot-container-padding;
+    box-sizing: border-box;
+}
+
+.dot-interactable {
+    z-index: @dot-interactable-z-index;
+    position: absolute;
+    width: @dot-interactable-diameter;
+    height: @dot-interactable-diameter;
+    top: @dot-container-padding;
+
+    border-radius: 50%;
+
+    // FIXME: Not great.
+    &:active { background-color: red; opacity: 0.2; }
+}
+
+.tooltip-container {
+    z-index: @dot-tooltip-z-index;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 95%;
+
+    .tooltip {
+        // FIXME: Improve styling, of course.
+        text-align: center;
+        padding: 5px 15px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px 2px lightGray;
+    }
+}
+
+.mini-width {
+    .dots-subfield {
+        .dot-diameter-mixin(@dot-interactable-mini-diameter, 0);
+
+        .dots-block {
+            width: 5 * (@dot-interactable-mini-diameter + 2 * @dot-container-mini-padding);
+        }
+    }
+
+    .dot-container {
+        padding: @dot-container-mini-padding;
+    }
+
+    .dot-interactable {
+        width: @dot-interactable-mini-diameter;
+        height: @dot-interactable-mini-diameter;
+        top: @dot-container-mini-padding;
+    }
+}
+
+.phone-width {
+    .dots-subfield {
+        .dot-diameter-mixin(@dot-interactable-phone-diameter, 0);
+
+        .dots-block {
+            width: 3 * (@dot-interactable-phone-diameter + 2 * @dot-container-phone-padding);
+        }
+    }
+
+    .dot-container {
+        padding: @dot-container-phone-padding;
+    }
+
+    .dot-interactable {
+        width: @dot-interactable-phone-diameter;
+        height: @dot-interactable-phone-diameter;
+        top: @dot-container-phone-padding;
+    }
 }
 
 .dot {
     border-radius: 50%;
-
     .transition(background-color 0.15s ease);
 
     // TODO: Key styling.
@@ -72,38 +158,9 @@
     &.wiki { background-color: @wiki-dot-colour; }
     &.portal { background-color: @portal-dot-colour; }
     &.title { background-color: white; }
-    &.afterword { background-color: white; }
+    &.afterword { background-color: #8d8; }
 
     .dot-text {
         font-size: .6em;
-    }
-}
-
-.dot-interactable {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-
-    // FIXME: Not great.
-    border-radius: 50%;
-    &:active { background-color: red; opacity: 0.2; }
-}
-
-.tooltip-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-
-    // TODO: This accommodates dot borders, but borders are temporary.
-    bottom: @default-dot-diameter + 15px;
-
-    .tooltip {
-        // FIXME: Improve styling, of course.
-        text-align: center;
-        padding: 5px 15px;
-        background-color: white;
-        border-radius: 5px;
-        box-shadow: 0 1px 2px 2px lightGray;
     }
 }
