@@ -57,11 +57,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `layout, position, and style dots section.`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `layout, position, and style annotation section.`,
             workedHours: 0,
             neededHours: 3
@@ -907,6 +902,11 @@ module.exports = {
             taskName: `fix audio section on admin page.`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `layout, position, and style dots section.`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
