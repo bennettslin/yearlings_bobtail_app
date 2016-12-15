@@ -17,8 +17,8 @@ const TitleSection = ({
 
     const sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION,
         sectionNextHighlighted = accessedOn && nextSectionKey === NAV_SECTION,
-        onClick = e => onTitleClick(e, 0),
-        titleAccessHighlighted = sectionAccessHighlighted && accessedSongIndex === 0
+        titleAccessHighlighted = sectionAccessHighlighted && accessedSongIndex === 0,
+        onClick = e => onTitleClick(e, 0)
 
     return (
         <TitleSectionView {...other}

@@ -63,10 +63,8 @@ const MenuFieldView = ({
             onTitleClick: onSongClick
         },
         audioSectionProps = {
-            isPhone,
             titleInAudio,
-            titleSectionProps,
-
+            isPhone,
             isPrologue,
             isFirstSong,
             isLastSong,
@@ -76,6 +74,7 @@ const MenuFieldView = ({
             selectedSongTitle,
             selectedSongIndex,
             isPlaying,
+            title,
             selectedTimePlayed,
             selectedAudioOptionIndex,
             accessedOn,
@@ -84,6 +83,7 @@ const MenuFieldView = ({
             onPlayClick,
             onAudioSongClick: onSongClick,
             onAudioTimeClick: onVerseClick,
+            onTitleClick: onSongClick,
             onAudioOptionClick
         }
 

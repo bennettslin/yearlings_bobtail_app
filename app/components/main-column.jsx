@@ -175,6 +175,10 @@ const MainColumnView = ({
             selectedOverviewIndex,
             onOverviewClick
         },
+        audioBannerProps = {
+            selectedSongTitle,
+            selectedTimePlayed
+        },
         navSectionProps = {
             songs,
             bookStartingIndices,
@@ -218,10 +222,13 @@ const MainColumnView = ({
                     </div>
                 </div>
 
-                {!isPhone ?
+                {isPhone ?
+                    <div className="audio-banner-custom-subfield">
+                        <AudioBanner {...audioBannerProps} />
+                    </div> :
                     <div className="nav-custom-subfield">
                         <NavSection {...navSectionProps} />
-                    </div> : null
+                    </div>
                 }
 
                 {dotsTipsInMain ?

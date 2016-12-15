@@ -1,6 +1,7 @@
 import React from 'react'
 import AudioBanner from './audio-banner'
 import AudioButtons from './audio-buttons'
+import TitleSection from '../title/title-section'
 import { getFormattedTime } from 'helpers/format-helper'
 import { AUDIO_OPTIONS,
          AUDIO_SECTION } from 'helpers/constants'
@@ -35,9 +36,12 @@ const AudioSection = ({
 const AudioSectionView = ({
 
     // From props.
+    titleInAudio,
     isPhone,
     isAdmin,
     isPlaying,
+    title,
+    selectedSongTitle,
     selectedTimePlayed,
     selectedAudioOptionIndex,
     isPrologue,
@@ -46,11 +50,11 @@ const AudioSectionView = ({
     isEpilogue,
     isFirstVerse,
     isLastVerse,
-    selectedSongTitle,
     onPlayClick,
     onAudioOptionClick,
     onAudioSongClick,
     onAudioTimeClick,
+    onTitleClick,
 
     // From controller.
     sectionAccessHighlighted,
@@ -77,6 +81,10 @@ const AudioSectionView = ({
             onAudioOptionClick,
             onAudioSongClick,
             onAudioTimeClick
+        },
+        titleProps = {
+            title,
+            onTitleClick
         }
 
     return (
@@ -84,6 +92,7 @@ const AudioSectionView = ({
             className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
         >
             {isAdmin ? <h2>audio</h2> : null}
+            {titleInAudio ? <TitleSection {...titleProps} /> : null}
             {!isPhone ? <AudioBanner {...audioBannerProps} /> : null}
             <AudioButtons {...audioButtonsProps} />
         </div>
