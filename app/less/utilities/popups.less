@@ -1,5 +1,6 @@
 // TODO: Make popup mixin.
 @overflow-margin-width: 5px;
+@popup-button-length: 32px;
 
 .admin {
     .popup-content-wrapper {
@@ -107,7 +108,14 @@
 
     .popup-button {
         position: absolute;
-        padding: 10px;
+        height: @popup-button-length;
+        width: @popup-button-length;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid red;
 
         &.close-button {
             top: 0;

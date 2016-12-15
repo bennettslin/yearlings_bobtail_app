@@ -131,7 +131,8 @@ const MainColumnView = ({
             accessedSectionKey,
             nextSectionKey,
             accessedDotIndex,
-            onDotClick
+            onDotClick,
+            onPopupButtonClick: onDotsExpandClick
         },
         dotsTipsSectionProps = {
             selectedTipsIndex,

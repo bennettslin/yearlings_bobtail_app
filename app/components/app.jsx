@@ -217,6 +217,8 @@ class App extends Component {
             this.selectOverview(undefined, undefined, HIDDEN)
         }
 
+        this.selectDotsExpand(undefined, 0)
+
         // If there is a popup, close it.
         if (selectedAnnotationIndex) {
             if (selectedWikiIndex) {

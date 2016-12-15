@@ -67,19 +67,30 @@
         flex-wrap: wrap;
         width: 5 * (@dot-interactable-diameter + 2 * @dot-container-padding);
     }
+
+    .dot-container {
+        padding: @dot-container-padding;
+        box-sizing: border-box;
+    }
+
+    .dot-interactable {
+        width: @dot-interactable-diameter;
+        height: @dot-interactable-diameter;
+        top: @dot-container-padding;
+    }
 }
 
-.dot-container {
-    padding: @dot-container-padding;
-    box-sizing: border-box;
+.lyrics-section {
+    .dot-interactable {
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
 }
 
 .dot-interactable {
     z-index: @dot-interactable-z-index;
     position: absolute;
-    width: @dot-interactable-diameter;
-    height: @dot-interactable-diameter;
-    top: @dot-container-padding;
 
     border-radius: 50%;
 
@@ -111,16 +122,16 @@
         .dots-block {
             width: 5 * (@dot-interactable-mini-diameter + 2 * @dot-container-mini-padding);
         }
+
+        .dot-interactable {
+            width: @dot-interactable-mini-diameter;
+            height: @dot-interactable-mini-diameter;
+            top: @dot-container-mini-padding;
+        }
     }
 
     .dot-container {
         padding: @dot-container-mini-padding;
-    }
-
-    .dot-interactable {
-        width: @dot-interactable-mini-diameter;
-        height: @dot-interactable-mini-diameter;
-        top: @dot-container-mini-padding;
     }
 }
 
@@ -131,16 +142,16 @@
         .dots-block {
             width: 3 * (@dot-interactable-phone-diameter + 2 * @dot-container-phone-padding);
         }
+
+        .dot-interactable {
+            width: @dot-interactable-phone-diameter;
+            height: @dot-interactable-phone-diameter;
+            top: @dot-container-phone-padding;
+        }
     }
 
     .dot-container {
         padding: @dot-container-phone-padding;
-    }
-
-    .dot-interactable {
-        width: @dot-interactable-phone-diameter;
-        height: @dot-interactable-phone-diameter;
-        top: @dot-container-phone-padding;
     }
 }
 
