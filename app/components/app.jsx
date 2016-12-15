@@ -347,9 +347,14 @@ class App extends Component {
                 isLyricExpanded
             })
 
-            // Hide overview if shown.
-            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                this.selectOverview(undefined, undefined, HIDDEN)
+            if (e) {
+                // Hide overview if shown.
+                if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+                    this.selectOverview(undefined, undefined, HIDDEN)
+                }
+
+                // Hide dots section if shown.
+                this.selectDotsExpand(undefined, 0)
             }
         }
     }
@@ -384,6 +389,13 @@ class App extends Component {
         }
 
         this.props.selectDotsIndex(selectedDotsIndex)
+
+        if (e && selectedDotsIndex) {
+
+            // Hide overview and collapse lyrics if shown.
+            this.selectOverview(undefined, undefined, HIDDEN)
+            this.selectLyricExpand(undefined, false)
+        }
     }
 
     selectOverview(e, selectedOverviewIndex, selectedOverviewKey) {
@@ -428,6 +440,9 @@ class App extends Component {
 
             // Collapse lyric section.
             this.selectLyricExpand(undefined, false)
+
+            // Hide dots section.
+            this.selectDotsExpand(undefined, 0)
         }
     }
 

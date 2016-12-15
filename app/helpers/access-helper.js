@@ -59,11 +59,11 @@ export default {
                 break
             // Toggle dots expand.
             case 'y':
-                selectDotsExpand()
+                selectDotsExpand(true)
                 break
             // Toggle lyric expand.
             case 'x':
-                selectLyricExpand()
+                selectLyricExpand(true)
                 break
             // Toggle book column.
             case 'k':

@@ -154,10 +154,12 @@
             bottom: 0;
         }
 
-        .column-shown {
-            // Show title if shown in desktop.
-            .nav-title {
-                transform: scale(1);
+        &:not(.dots-shown) {            
+            .column-shown {
+                // Show title if shown in desktop.
+                .nav-title {
+                    transform: scale(1);
+                }
             }
         }
     }
@@ -167,19 +169,10 @@
 
     .live-nav-block {
         flex-direction: row-reverse;
-        // max-width: 100%;
-        // overflow: hidden;
-    }
-
-    .nav-toggle-block {
-        // order: 2;
-        // flex-shrink: 1;
     }
 
     .books-block {
         top: 0;
-        // order: 1;
-        // flex-shrink: 1;
     }
 
     .book-column-block {
@@ -217,7 +210,7 @@
     transform: scale(0);
 }
 
-.nav-expanded.lyric-collapsed {
+.nav-expanded.lyric-collapsed:not(.dots-shown) {
     .column-shown {
         .nav-title {
             transform: scale(1);

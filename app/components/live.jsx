@@ -13,7 +13,8 @@ const Live = (props) => {
 
     const { deviceWidth,
             isPrologue,
-            isEpilogue } = props,
+            isEpilogue,
+            selectedDotsIndex } = props,
         selectedSong = getSong(props),
         annotation = getAnnotation(props),
         selectedWikiUrl = getWikiUrl(props),
@@ -21,7 +22,8 @@ const Live = (props) => {
 
         isHeightlessLyricColumn = getIsHeightlessLyricColumn(props),
         showSingleBookColumn = getShowSingleBookColumn(props),
-        shrinkNavIcon = getShrinkNavIcon(props)
+        shrinkNavIcon = getShrinkNavIcon(props),
+        isDotsShown = selectedDotsIndex === 1
 
     return (
         <LiveView {...props}
@@ -37,6 +39,7 @@ const Live = (props) => {
             isHeightlessLyricColumn={isHeightlessLyricColumn}
             showSingleBookColumn={showSingleBookColumn}
             shrinkNavIcon={shrinkNavIcon}
+            isDotsShown={isDotsShown}
         />
     )
 }
@@ -123,7 +126,8 @@ const LiveView = ({
     hasDoubleColumns,
     isHeightlessLyricColumn,
     showSingleBookColumn,
-    shrinkNavIcon
+    shrinkNavIcon,
+    isDotsShown
 
 }) => {
 
@@ -223,7 +227,7 @@ const LiveView = ({
         }
 
     return (
-        <div className={`live-app${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}${isHeightlessLyricColumn ? ' heightless-lyric' : ''}${selectedNavIndex ? '' : ' nav-expanded'}${isOverviewShown ? ' overview-shown' : ''}${manualWidth ? ' manual-width' : ''}`}>
+        <div className={`live-app${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}${isHeightlessLyricColumn ? ' heightless-lyric' : ''}${selectedNavIndex ? '' : ' nav-expanded'}${isDotsShown ? ' dots-shown' : ''}${isOverviewShown ? ' overview-shown' : ''}${manualWidth ? ' manual-width' : ''}`}>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">
                     <OverviewPopup {...overviewPopupProps}
