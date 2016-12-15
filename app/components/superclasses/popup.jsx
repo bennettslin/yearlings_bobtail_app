@@ -35,12 +35,16 @@ const PopupButton = ({
     }
 
     return (
-        <a
-            className={`popup-button ${buttonName}-button enabled`}
-            onClick={onClick}
-        >
-            {tempUnicodeSymbol}
-        </a>
+        <div className={`popup-button ${buttonName}-button`}>
+            <a
+                className={`popup-button-interactable enabled`}
+                onClick={onClick}
+            >
+            </a>
+            <div className="popup-button-icon">
+                {tempUnicodeSymbol}
+            </div>
+        </div>
     )
 }
 
