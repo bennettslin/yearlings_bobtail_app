@@ -897,6 +897,11 @@ module.exports = {
             taskName: `adjust books block animation height for tablet and mini`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `Change device width to device index`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

@@ -133,7 +133,7 @@ export default {
     },
 
     handleSectionAccess({
-        deviceWidth,
+        deviceIndex,
         selectedSongIndex,
         currentAccessedSectionIndex,
         accessedSectionKey,
@@ -157,7 +157,7 @@ export default {
              * Always skip annotation and wiki sections. Skip nav section if
              * it's a phone.
              */
-            while (SECTION_KEYS[accessedSectionIndex] === ANNOTATION_SECTION || SECTION_KEYS[accessedSectionIndex] === WIKI_SECTION || (SECTION_KEYS[accessedSectionIndex] === NAV_SECTION && getIsPhone({ deviceWidth }))) {
+            while (SECTION_KEYS[accessedSectionIndex] === ANNOTATION_SECTION || SECTION_KEYS[accessedSectionIndex] === WIKI_SECTION || (SECTION_KEYS[accessedSectionIndex] === NAV_SECTION && getIsPhone({ deviceIndex }))) {
                 accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
             }
 
@@ -466,12 +466,13 @@ export default {
         }
     },
 
-    getNextSectionKey(props) {
+    getNextSectionKey(props, deviceIndex) {
         /**
          * If there's a popup, return lyrics section. Otherwise, return the
          * next section.
          */
         return props.selectedAnnotationIndex || props.selectedWikiIndex ? LYRICS_SECTION : SECTION_KEYS[this.handleSectionAccess({
+            deviceIndex,
             selectedSongIndex: props.selectedSongIndex,
             currentAccessedSectionIndex: (props.accessedSectionIndex) % SECTION_KEYS.length
         })]

@@ -3,7 +3,7 @@ import MainColumn from './main-column'
 import LyricColumn from './lyric-column'
 import OverviewPopup from './overview/overview-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn } from 'helpers/responsive-helper'
+import { getIsPhone, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -11,8 +11,7 @@ import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn }
 
 const Live = (props) => {
 
-    const { deviceWidth,
-            isPrologue,
+    const { isPrologue,
             isEpilogue,
             selectedDotsIndex } = props,
         selectedSong = getSong(props),
@@ -20,6 +19,7 @@ const Live = (props) => {
         selectedWikiUrl = getWikiUrl(props),
         isLogue = isPrologue || isEpilogue,
 
+        isPhone = getIsPhone(props),
         isHeightlessLyricColumn = getIsHeightlessLyricColumn(props),
         showSingleBookColumn = getShowSingleBookColumn(props),
         shrinkNavIcon = getShrinkNavIcon(props),
@@ -36,6 +36,7 @@ const Live = (props) => {
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
+            isPhone={isPhone}
             isHeightlessLyricColumn={isHeightlessLyricColumn}
             showSingleBookColumn={showSingleBookColumn}
             shrinkNavIcon={shrinkNavIcon}
@@ -51,7 +52,8 @@ const Live = (props) => {
 const LiveView = ({
 
     // From props.
-    deviceWidth,
+    deviceIndex,
+    isPhone,
     windowWidth,
     windowHeight,
     manualWidth,
@@ -132,7 +134,7 @@ const LiveView = ({
 }) => {
 
     const overviewPopupProps = {
-            deviceWidth,
+            isPhone,
             isLogue,
             hideClose: true,
             selectedOverviewIndex,
@@ -142,7 +144,8 @@ const LiveView = ({
         mainColumnProps = {
             overviewPopupProps,
 
-            deviceWidth,
+            isPhone,
+            deviceIndex,
             windowWidth,
             isHeightlessLyricColumn,
 

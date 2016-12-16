@@ -1,4 +1,5 @@
 import React from 'react'
+import { DEVICE_OBJECTS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -20,7 +21,7 @@ const AdminToggleView = ({
     // From props.
     isAdmin,
     isLyricExpanded,
-    deviceWidth,
+    deviceIndex,
     windowWidth,
     windowHeight,
     onClick
@@ -37,7 +38,7 @@ const AdminToggleView = ({
             {isLyricExpanded ? 'expanded' : 'collapsed'}
         </div>
         <div>
-            {deviceWidth}
+            {DEVICE_OBJECTS[deviceIndex].className}
         </div>
         <div>
             {windowWidth} x {windowHeight}

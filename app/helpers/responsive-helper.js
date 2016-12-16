@@ -1,126 +1,108 @@
-import { PHONE_WIDTH_OBJECT,
-         MINI_WIDTH_OBJECT,
-         TABLET_WIDTH_OBJECT,
-         LAPTOP_WIDTH_OBJECT,
-         MONITOR_WIDTH_OBJECT,
-         DEVICE_WIDTH_OBJECTS,
+import { PHONE_WIDTH,
+         MINI_WIDTH,
+         TABLET_WIDTH,
+         LAPTOP_WIDTH,
+         MONITOR_WIDTH,
+
+         PHONE_OBJECT,
+         MINI_OBJECT,
+         TABLET_OBJECT,
+         LAPTOP_OBJECT,
+         MONITOR_OBJECT,
+
+         DEVICE_OBJECTS,
+
          HEIGHTLESS_LYRIC_MAX } from 'helpers/constants'
 import { getSong } from 'helpers/album-view-helper'
 
-export const resizeWindow = (target = window, presentWidth) => {
+export const resizeWindow = (target = window, presentIndex) => {
 
     const newState = {
             windowHeight: target.innerHeight        }
 
-    let deviceWidth,
-        innerWidth = target.innerWidth,
+    let innerWidth = target.innerWidth,
         index = 0,
         manualWidth
 
-    if (!presentWidth) {
-        while (index < DEVICE_WIDTH_OBJECTS.length - 1 && innerWidth > DEVICE_WIDTH_OBJECTS[index].maxWidth) {
+    if (typeof presentIndex === 'undefined') {
+        while (index < DEVICE_OBJECTS.length - 1 && innerWidth > DEVICE_OBJECTS[index].maxWidth) {
             index++
         }
 
-        deviceWidth = DEVICE_WIDTH_OBJECTS[index].className
         manualWidth = false
 
     // Called from admin toggle.
     } else {
-        let nextDeviceObject
+        index = (presentIndex + 1) % DEVICE_OBJECTS.length
 
-        while (index < DEVICE_WIDTH_OBJECTS.length && !deviceWidth) {
-            if (presentWidth === DEVICE_WIDTH_OBJECTS[index].className) {
-                index = index
-
-                nextDeviceObject = DEVICE_WIDTH_OBJECTS[(index + 1) % DEVICE_WIDTH_OBJECTS.length]
-
-                deviceWidth = nextDeviceObject.className
-
-                /**
-                 * Show max width as inner width, arbitrary big number for monitor
-                 * width.
-                 */
-                innerWidth = nextDeviceObject.maxWidth || 5000
-
-            } else {
-                index++
-            }
-        }
-
+        /**
+         * Show max width as inner width, arbitrary big number for monitor
+         * width.
+         */
+        innerWidth = DEVICE_OBJECTS[index].maxWidth || 5000
         manualWidth = true
     }
 
     // TODO: Nav section cannot be accessed if new device width is phone?
 
-    newState.deviceWidth = deviceWidth
+    newState.deviceIndex = index
     newState.windowWidth = innerWidth
     newState.manualWidth = manualWidth
 
     return newState
 }
 
-export const getIsPhone = ({ deviceWidth }) => {
-    return deviceWidth === PHONE_WIDTH_OBJECT.className
+export const getIsPhone = ({ deviceIndex }) => {
+    return DEVICE_OBJECTS[deviceIndex].className === PHONE_WIDTH
 }
 
-export const getIsDesktop = (deviceWidth) => {
-    return deviceWidth === MONITOR_WIDTH_OBJECT.className || deviceWidth === LAPTOP_WIDTH_OBJECT.className
+export const getIsDesktop = (deviceIndex) => {
+    const deviceClassName = DEVICE_OBJECTS[deviceIndex].className
+
+    return deviceClassName === LAPTOP_WIDTH || deviceClassName === MONITOR_WIDTH
 }
 
 export const getShowSingleBookColumn = (state) => {
-    const { deviceWidth,
-            windowWidth } = state
+    const { deviceIndex,
+            windowWidth } = state,
+        deviceObject = DEVICE_OBJECTS[deviceIndex],
+        deviceClassName = deviceObject.className
 
-    // FIXME: Make this simpler, and get rid of unneeded breakpoints.
-    if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
-        return windowWidth < MONITOR_WIDTH_OBJECT.doubleColumnShrinkBreakpoint
-
-    } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
-        return windowWidth < LAPTOP_WIDTH_OBJECT.doubleColumnShrinkBreakpoint
-
-    } else if (deviceWidth === TABLET_WIDTH_OBJECT.className) {
-        return windowWidth < TABLET_WIDTH_OBJECT.doubleColumnShrinkBreakpoint
-
+    if (deviceClassName === PHONE_WIDTH || deviceClassName === MINI_WIDTH) {
+        return windowWidth < MINI_OBJECT.doubleColumnShrinkBreakpoint
     } else {
-        return windowWidth < MINI_WIDTH_OBJECT.doubleColumnShrinkBreakpoint
+        return windowWidth < deviceObject.doubleColumnShrinkBreakpoint
     }
 }
 
-const _getShrinkNavIconForDeviceWidthObject = (windowWidth, deviceWidthObject) => {
+const _getShrinkNavIconForDeviceObject = (windowWidth, deviceObject) => {
     const { doubleColumnStaticBreakpoint,
             doubleColumnShrinkBreakpoint,
-            singleColumnStaticBreakpoint } = deviceWidthObject
+            singleColumnStaticBreakpoint } = deviceObject
     return windowWidth < singleColumnStaticBreakpoint || (windowWidth >= doubleColumnShrinkBreakpoint && windowWidth < doubleColumnStaticBreakpoint)
 }
 
-const _getDotsTipsInMainForDeviceWidthObject = (windowWidth, deviceWidthObject) => {
-    const { dotsTipsInMainBreakpoint } = deviceWidthObject
+const _getDotsTipsInMainForDeviceObject = (windowWidth, deviceObject) => {
+    const { dotsTipsInMainBreakpoint } = deviceObject
     return windowWidth < dotsTipsInMainBreakpoint
 }
 
 
 export const getShrinkNavIcon = (state) => {
-    const { deviceWidth,
-            windowWidth } = state
+    const { deviceIndex,
+            windowWidth } = state,
+        deviceObject = DEVICE_OBJECTS[deviceIndex],
+        deviceClassName = deviceObject.className
 
-    // FIXME: Make this simpler, and get rid of unneeded breakpoints.
-    if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
-        return _getShrinkNavIconForDeviceWidthObject(windowWidth, MONITOR_WIDTH_OBJECT)
-
-    } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
-        return _getShrinkNavIconForDeviceWidthObject(windowWidth, LAPTOP_WIDTH_OBJECT)
-
-    } else if (deviceWidth === TABLET_WIDTH_OBJECT.className)  {
-        return _getShrinkNavIconForDeviceWidthObject(windowWidth, TABLET_WIDTH_OBJECT)
-
+    if (deviceClassName === PHONE_WIDTH || deviceClassName === MINI_WIDTH) {
+        return _getShrinkNavIconForDeviceObject(windowWidth, MINI_OBJECT)
     } else {
-        return _getShrinkNavIconForDeviceWidthObject(windowWidth, MINI_WIDTH_OBJECT)
+        return _getShrinkNavIconForDeviceObject(windowWidth, deviceObject)
     }
 }
 
-export const getIsLyricExpandable = ({ isAdmin, deviceWidth }) => {
-    return !isAdmin && (deviceWidth === PHONE_WIDTH_OBJECT.className || deviceWidth === MINI_WIDTH_OBJECT.className || deviceWidth === TABLET_WIDTH_OBJECT.className)
+export const getIsLyricExpandable = ({ isAdmin, deviceIndex }) => {
+    return !isAdmin && !getIsDesktop(deviceIndex)
 }
 
 export const getShowSingleLyricColumn = (props, state) => {
@@ -132,7 +114,8 @@ export const getShowSingleLyricColumn = (props, state) => {
             { hasSideStanzas,
               isDoublespeaker,
               forceSingleColumn } = selectedSong,
-            { deviceWidth } = state
+            { deviceIndex } = state,
+            deviceClassName = DEVICE_OBJECTS[deviceIndex].className
 
         let showSingleLyricColumn = false
 
@@ -142,7 +125,7 @@ export const getShowSingleLyricColumn = (props, state) => {
 
         // Applies to Uncanny Valley Boy.
         } else if (hasSideStanzas && !isDoublespeaker) {
-            return deviceWidth === PHONE_WIDTH_OBJECT.className
+            return deviceClassName === PHONE_WIDTH
 
         // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
         } else if (isDoublespeaker) {
@@ -150,7 +133,7 @@ export const getShowSingleLyricColumn = (props, state) => {
              * In tablet width, lyrics section takes up full width of bottom,
              * while in monitor width, the screen is wide enough as well.
              */
-            return deviceWidth !== MONITOR_WIDTH_OBJECT.className && deviceWidth !== TABLET_WIDTH_OBJECT.className
+            return deviceClassName !== MONITOR_WIDTH && deviceClassName !== TABLET_WIDTH
         }
 
         return showSingleLyricColumn
@@ -162,31 +145,21 @@ export const getIsHeightlessLyricColumn = (state) => {
 }
 
 export const getDotsTipsInMain = (state) => {
-    const { deviceWidth,
-            windowWidth } = state
+    const { deviceIndex,
+            windowWidth } = state,
+        deviceObject = DEVICE_OBJECTS[deviceIndex]
 
-    // FIXME: Make this simpler, and get rid of unneeded breakpoints.
-    if (deviceWidth === MONITOR_WIDTH_OBJECT.className) {
-        return _getDotsTipsInMainForDeviceWidthObject(windowWidth, MONITOR_WIDTH_OBJECT)
-
-    } else if (deviceWidth === LAPTOP_WIDTH_OBJECT.className) {
-        return _getDotsTipsInMainForDeviceWidthObject(windowWidth, LAPTOP_WIDTH_OBJECT)
-
-    } else if (deviceWidth === TABLET_WIDTH_OBJECT.className) {
-        return _getDotsTipsInMainForDeviceWidthObject(windowWidth, TABLET_WIDTH_OBJECT)
-
-    } else if (deviceWidth === MINI_WIDTH_OBJECT.className) {
-        return _getDotsTipsInMainForDeviceWidthObject(windowWidth, MINI_WIDTH_OBJECT)
-
-    } else if (deviceWidth === PHONE_WIDTH_OBJECT.className) {
+    if (deviceObject.className === PHONE_WIDTH) {
         return true
+    } else {
+        return _getDotsTipsInMainForDeviceObject(windowWidth, deviceObject)
     }
 }
 
 export const getTitleInAudio = (state) => {
-    const { deviceWidth,
-            windowWidth } = state
+    const { deviceIndex,
+            windowWidth } = state,
+        deviceClassName = DEVICE_OBJECTS[deviceIndex].className
 
-    // FIXME: Make this simpler.
-    return deviceWidth === MINI_WIDTH_OBJECT.className && windowWidth < MINI_WIDTH_OBJECT.titleInAudioBreakpoint
+    return deviceClassName === MINI_WIDTH && windowWidth < MINI_OBJECT.titleInAudioBreakpoint
 }

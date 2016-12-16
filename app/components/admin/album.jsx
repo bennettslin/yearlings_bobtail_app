@@ -35,7 +35,7 @@ const Album = ({
 const AlbumView = ({
 
     // From props.
-    deviceWidth,
+    deviceIndex,
     windowWidth,
     windowHeight,
     songs,
@@ -108,7 +108,7 @@ const AlbumView = ({
                 onTipsClick={onTipsClick}
             />
             <DevSection
-                deviceWidth={deviceWidth}
+                deviceIndex={deviceIndex}
                 windowWidth={windowWidth}
                 windowHeight={windowHeight}
                 selectedSongIndex={selectedSongIndex}

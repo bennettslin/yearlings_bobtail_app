@@ -1,4 +1,5 @@
 import React from 'react'
+import { DEVICE_OBJECTS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -15,7 +16,7 @@ const DevSection = (props) => (
 const DevSectionView = ({
 
     // From props.
-    deviceWidth,
+    deviceIndex,
     windowWidth,
     windowHeight,
     selectedSongIndex,
@@ -44,7 +45,7 @@ const DevSectionView = ({
             window size: {windowWidth} x {windowHeight}
         </div>
         <div className="row">
-            device width : {deviceWidth}
+            device width: {DEVICE_OBJECTS[deviceIndex].className}
         </div>
         <a
             className="enabled"

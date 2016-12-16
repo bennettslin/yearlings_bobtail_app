@@ -8,8 +8,7 @@ import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsPopup from './dots/dots-popup'
-import { getIsPhone, getDotsTipsInMain } from 'helpers/responsive-helper'
-
+import { getDotsTipsInMain } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -17,12 +16,10 @@ import { getIsPhone, getDotsTipsInMain } from 'helpers/responsive-helper'
 
 const MainColumn = (props) => {
 
-    const isPhone = getIsPhone(props),
-        dotsTipsInMain = getDotsTipsInMain(props)
+    const dotsTipsInMain = getDotsTipsInMain(props)
 
     return (
         <MainColumnView {...props}
-            isPhone={isPhone}
             dotsTipsInMain={dotsTipsInMain}
         />
     )
@@ -37,7 +34,8 @@ const MainColumnView = ({
     // From props.
     overviewPopupProps,
 
-    deviceWidth,
+    isPhone,
+    deviceIndex,
     windowWidth,
     isHeightlessLyricColumn,
 
@@ -97,7 +95,6 @@ const MainColumnView = ({
     onLyricExpandClick,
 
     // From controller.
-    isPhone,
     dotsTipsInMain
 
 }) => {
@@ -141,7 +138,7 @@ const MainColumnView = ({
             onDotsExpandClick
         },
         menuFieldProps = {
-            deviceWidth,
+            deviceIndex,
             windowWidth,
             dotsTipsSectionProps,
             dotsTipsInMain,

@@ -1,7 +1,6 @@
 import React from 'react'
 import TextBlock from '../text/text-block'
 import OverviewToggleSection from './overview-toggle-section'
-import { PHONE_WIDTH_OBJECT } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -20,8 +19,8 @@ const OverviewSection = (props) => {
 const OverviewSectionView = ({
 
     // From props.
+    isPhone,
     isAdmin,
-    deviceWidth,
     inPopup,
     isLogue,
     overviewText,
@@ -32,7 +31,7 @@ const OverviewSectionView = ({
     >
         {isAdmin ? <h2>overview</h2> : null}
         <div className="overview-text">
-        {!isLogue && !isAdmin && deviceWidth === PHONE_WIDTH_OBJECT.className ?
+        {!isLogue && !isAdmin && isPhone ?
             <OverviewToggleSection {...other}
             inPopup={true}
             /> : null

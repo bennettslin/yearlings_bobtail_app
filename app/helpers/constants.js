@@ -93,12 +93,19 @@ const LYRIC = 'lyric',
     // Final TODO: Get rid of unused breakpoints.
 
     // maxWidth values should be the same in live.less. (Only used by admin.)
-    PHONE_WIDTH_OBJECT = {
-        className: 'phone-width',
+
+    PHONE_WIDTH = 'phone-width',
+    MINI_WIDTH = 'mini-width',
+    TABLET_WIDTH = 'tablet-width',
+    LAPTOP_WIDTH = 'laptop-width',
+    MONITOR_WIDTH = 'monitor-width',
+
+    PHONE_OBJECT = {
+        className: PHONE_WIDTH,
         maxWidth: 475
     },
-    MINI_WIDTH_OBJECT = {
-        className: 'mini-width',
+    MINI_OBJECT = {
+        className: MINI_WIDTH,
         maxWidth: 720,
         doubleColumnStaticBreakpoint: DOUBLE_COLUMN_STATIC_BREAKPOINT + APP_MINI_LARGE_ICON_DIAMETER,
         doubleColumnShrinkBreakpoint: DOUBLE_COLUMN_SHRINK_BREAKPOINT + APP_MINI_LARGE_ICON_DIAMETER,
@@ -106,24 +113,24 @@ const LYRIC = 'lyric',
         dotsTipsInMainBreakpoint: DOTS_TIPS_IN_MAIN_CONSTANT + 2 * MENU_SUBFIELD_NARROW_MARGIN + 3 * APP_MINI_LARGE_ICON_DIAMETER,
         titleInAudioBreakpoint: TITLE_IN_AUDIO_BREAKPOINT
     },
-    TABLET_WIDTH_OBJECT = {
-        className: 'tablet-width',
+    TABLET_OBJECT = {
+        className: TABLET_WIDTH,
         maxWidth: 1100,
         doubleColumnStaticBreakpoint: DOUBLE_COLUMN_STATIC_BREAKPOINT + APP_TABLET_LARGE_ICON_DIAMETER,
         doubleColumnShrinkBreakpoint: DOUBLE_COLUMN_SHRINK_BREAKPOINT + APP_TABLET_LARGE_ICON_DIAMETER,
         singleColumnStaticBreakpoint: SINGLE_COLUMN_STATIC_BREAKPOINT + APP_TABLET_LARGE_ICON_DIAMETER,
         dotsTipsInMainBreakpoint: DOTS_TIPS_IN_MAIN_CONSTANT + 2 * MENU_SUBFIELD_MARGIN + 3 * APP_TABLET_LARGE_ICON_DIAMETER
     },
-    LAPTOP_WIDTH_OBJECT = {
-        className: 'laptop-width',
+    LAPTOP_OBJECT = {
+        className: LAPTOP_WIDTH,
         maxWidth: 1400,
         doubleColumnStaticBreakpoint: DOUBLE_COLUMN_STATIC_BREAKPOINT + NAV_LAST_TITLE_MARGIN + UNCANNY_VALLEY_WIDTH + APP_LARGE_ICON_DIAMETER,
         doubleColumnShrinkBreakpoint: DOUBLE_COLUMN_SHRINK_BREAKPOINT + NAV_LAST_TITLE_MARGIN + UNCANNY_VALLEY_WIDTH + APP_LARGE_ICON_DIAMETER,
         singleColumnStaticBreakpoint: SINGLE_COLUMN_STATIC_BREAKPOINT + NAV_LAST_TITLE_MARGIN + UNCANNY_VALLEY_WIDTH + APP_LARGE_ICON_DIAMETER,
         dotsTipsInMainBreakpoint: DOTS_TIPS_IN_MAIN_CONSTANT + 2 * MENU_SUBFIELD_NARROW_MARGIN + UNCANNY_VALLEY_WIDTH + 3 * APP_LARGE_ICON_DIAMETER
     },
-    MONITOR_WIDTH_OBJECT = {
-        className: 'monitor-width',
+    MONITOR_OBJECT = {
+        className: MONITOR_WIDTH,
         doubleColumnStaticBreakpoint: DOUBLE_COLUMN_STATIC_BREAKPOINT + NAV_LAST_TITLE_MARGIN + GOLDEN_CORD_WIDTH + APP_LARGE_ICON_DIAMETER,
         doubleColumnShrinkBreakpoint: DOUBLE_COLUMN_SHRINK_BREAKPOINT + NAV_LAST_TITLE_MARGIN + GOLDEN_CORD_WIDTH + APP_LARGE_ICON_DIAMETER,
         singleColumnStaticBreakpoint: SINGLE_COLUMN_STATIC_BREAKPOINT + NAV_LAST_TITLE_MARGIN + GOLDEN_CORD_WIDTH + APP_LARGE_ICON_DIAMETER,
@@ -134,19 +141,25 @@ module.exports = {
 
     WINDOW_STORAGE: window.localStorage,
 
-    PHONE_WIDTH_OBJECT,
-    MINI_WIDTH_OBJECT,
-    TABLET_WIDTH_OBJECT,
-    LAPTOP_WIDTH_OBJECT,
-    MONITOR_WIDTH_OBJECT,
+    PHONE_WIDTH,
+    MINI_WIDTH,
+    TABLET_WIDTH,
+    LAPTOP_WIDTH,
+    MONITOR_WIDTH,
+
+    PHONE_OBJECT,
+    MINI_OBJECT,
+    TABLET_OBJECT,
+    LAPTOP_OBJECT,
+    MONITOR_OBJECT,
 
     // Used for admin purposes.
-    DEVICE_WIDTH_OBJECTS: [
-        PHONE_WIDTH_OBJECT,
-        MINI_WIDTH_OBJECT,
-        TABLET_WIDTH_OBJECT,
-        LAPTOP_WIDTH_OBJECT,
-        MONITOR_WIDTH_OBJECT,
+    DEVICE_OBJECTS: [
+        PHONE_OBJECT,
+        MINI_OBJECT,
+        TABLET_OBJECT,
+        LAPTOP_OBJECT,
+        MONITOR_OBJECT,
     ],
 
     HEIGHTLESS_LYRIC_MAX: 450,

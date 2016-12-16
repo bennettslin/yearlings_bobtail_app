@@ -37,6 +37,8 @@ import { NAV_SECTION,
          LYRIC_ANNOTATION_ELEMENT,
          LYRIC_COLUMN_KEYS,
 
+         DEVICE_OBJECTS,
+
          WIKI,
 
          LEFT,
@@ -153,7 +155,7 @@ class App extends Component {
      ***********/
 
     windowResize(e, adminToggle) {
-        const resizedWindowObject = resizeWindow(e ? e.target : undefined, adminToggle ? this.state.deviceWidth : undefined)
+        const resizedWindowObject = resizeWindow(e ? e.target : undefined, adminToggle ? this.state.deviceIndex : undefined)
 
         this.setState(resizedWindowObject)
     }
@@ -958,7 +960,7 @@ class App extends Component {
         }
 
         const accessedSectionIndex = AccessHelper.handleSectionAccess({
-            deviceWidth: this.state.deviceWidth,
+            deviceIndex: this.state.deviceIndex,
             selectedSongIndex,
             currentAccessedSectionIndex: this.props.accessedSectionIndex,
             accessedSectionKey,
@@ -974,18 +976,19 @@ class App extends Component {
     render() {
         const { props, state } = this,
             accessedSectionKey = SECTION_KEYS[props.accessedSectionIndex],
-            nextSectionKey = AccessHelper.getNextSectionKey(props),
+            nextSectionKey = AccessHelper.getNextSectionKey(props, this.state.deviceIndex),
             { songs,
               selectedSongIndex,
               selectedVerseIndex,
               selectedOverviewIndex } = props,
             { isAdmin,
-              deviceWidth,
+              deviceIndex,
               windowWidth,
               windowHeight } = state,
 
             songTimes = getSongTimes(props),
-            isDesktop = getIsDesktop(deviceWidth),
+            isDesktop = getIsDesktop(deviceIndex),
+            deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             showSingleLyricColumn = getShowSingleLyricColumn(props, state),
             isLyricExpandable = getIsLyricExpandable(state),
             isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
@@ -1004,7 +1007,7 @@ class App extends Component {
         return (
             <div
                 ref="app"
-                className={`app ${isAdmin ? 'admin' : 'live' + ' ' + deviceWidth} ${isDesktop ? 'is-desktop' : 'is-mobile'}`}
+                className={`app ${isAdmin ? 'admin' : 'live' + ' ' + deviceClassName} ${isDesktop ? 'is-desktop' : 'is-mobile'}`}
                 onClick={this._onBodyClick}
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"
@@ -1012,7 +1015,7 @@ class App extends Component {
                 <AdminToggle
                     isAdmin={isAdmin}
                     isLyricExpanded={this.state.isLyricExpanded}
-                    deviceWidth={deviceWidth}
+                    deviceIndex={deviceIndex}
                     windowWidth={windowWidth}
                     windowHeight={windowHeight}
                     onClick={this.toggleAdmin}
