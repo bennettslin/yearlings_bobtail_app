@@ -37,6 +37,7 @@ const TitleSection = ({
 const TitleSectionView = ({
 
     // From props.
+    titleInAudio,
     title,
     sectionAccessHighlighted,
     sectionNextHighlighted,
@@ -46,12 +47,17 @@ const TitleSectionView = ({
 }) => (
     <div className={`section title-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}>
         <a
-            className={`title-button enabled ${titleAccessHighlighted ? 'access-highlighted' : ''}`}
+            className={`title-button enabled${titleAccessHighlighted ? ' access-highlighted' : ''}`}
             onClick={onClick}
         >
-            <div className="title-image">
-                {title}
-            </div>
+            {titleInAudio ?
+                <div className="title-icon button-icon large">
+                    {title}
+                </div> :
+                <div className="title-image">
+                    {title}
+                </div>
+            }
         </a>
     </div>
 )

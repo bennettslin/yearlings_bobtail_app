@@ -69,6 +69,7 @@ const AudioSectionView = ({
             selectedSongTitle
         },
         audioButtonsProps = {
+            titleInAudio,
             isPlaying,
             selectedAudioOptionIndex,
             isPrologue,
@@ -83,6 +84,7 @@ const AudioSectionView = ({
             onAudioTimeClick
         },
         titleProps = {
+            titleInAudio,
             title,
             onTitleClick
         }

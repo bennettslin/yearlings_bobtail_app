@@ -35,6 +35,7 @@ const AudioButtons = ({
 const AudioButtonsView = ({
 
     // From props.
+    titleInAudio,
     isPlaying,
     selectedAudioOptionIndex,
     isPrologue,
@@ -80,7 +81,7 @@ const AudioButtonsView = ({
                 className="audio-button enabled"
                 onClick={onPlayClick}
             >
-                <div className="large button-icon audio-icon">
+                <div className={`button-icon audio-icon${titleInAudio ? '' : ' large'}`}>
                     {isPlaying ? '\u23F8' : '\u25BA' }
                 </div>
             </a>
