@@ -958,6 +958,7 @@ class App extends Component {
         }
 
         const accessedSectionIndex = AccessHelper.handleSectionAccess({
+            deviceWidth: this.state.deviceWidth,
             selectedSongIndex,
             currentAccessedSectionIndex: this.props.accessedSectionIndex,
             accessedSectionKey,

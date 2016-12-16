@@ -51,6 +51,8 @@ export const resizeWindow = (target = window, presentWidth) => {
         manualWidth = true
     }
 
+    // TODO: Nav section cannot be accessed if new device width is phone?
+
     newState.deviceWidth = deviceWidth
     newState.windowWidth = innerWidth
     newState.manualWidth = manualWidth

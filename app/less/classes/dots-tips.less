@@ -81,25 +81,31 @@
     }
 
     &.tablet-width {
-        .lyric-expanded.is-song, .overview-shown.is-song {
-            .dots-tips-section {
-                right: -@dots-tips-tablet-width;
+        .is-song {
+            &.lyric-expanded, &.overview-shown {
+                .dots-tips-section {
+                    right: -@dots-tips-tablet-width;
+                }
             }
         }
     }
 
     &.mini-width {
-        .lyric-expanded.is-song, .overview-shown.is-song {
-            .dots-tips-section {
-                right: -@dots-tips-mini-width;
+        .is-song {
+            &.lyric-expanded, &.overview-shown {
+                .dots-tips-section {
+                    right: -@dots-tips-mini-width;
+                }
             }
         }
     }
 
     &.phone-width {
-        .lyric-expanded.is-song, .overview-shown.is-song {
-            .dots-tips-section {
-                right: -@dots-tips-phone-width;
+        .is-song {
+            &.lyric-expanded, &.overview-shown {
+                .dots-tips-section {
+                    right: -@dots-tips-phone-width;
+                }
             }
         }
     }

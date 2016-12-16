@@ -4,6 +4,8 @@ import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
 
+import { getIsPhone } from 'helpers/responsive-helper'
+
 import { NAV_SECTION,
          AUDIO_SECTION,
          LYRICS_SECTION,
@@ -131,6 +133,7 @@ export default {
     },
 
     handleSectionAccess({
+        deviceWidth,
         selectedSongIndex,
         currentAccessedSectionIndex,
         accessedSectionKey,
@@ -150,8 +153,11 @@ export default {
                 }
             }
 
-            // Always skip annotation and wiki sections.
-            while (SECTION_KEYS[accessedSectionIndex] === ANNOTATION_SECTION || SECTION_KEYS[accessedSectionIndex] === WIKI_SECTION) {
+            /**
+             * Always skip annotation and wiki sections. Skip nav section if
+             * it's a phone.
+             */
+            while (SECTION_KEYS[accessedSectionIndex] === ANNOTATION_SECTION || SECTION_KEYS[accessedSectionIndex] === WIKI_SECTION || (SECTION_KEYS[accessedSectionIndex] === NAV_SECTION && getIsPhone({ deviceWidth }))) {
                 accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
             }
 
