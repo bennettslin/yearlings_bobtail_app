@@ -87,11 +87,6 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `adjust books block animation height for tablet and mini`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `do z-indices`,
             workedHours: 0,
             neededHours: 1
@@ -182,11 +177,6 @@ module.exports = {
             neededHours: 2
         },
         // {
-        //     taskName: `Safari...`,
-        //     workedHours: 0,
-        //     neededHours: 2
-        // },
-        // {
         //     taskName: `delay in annotation popup after scroll and then link clicked? only in firefox, it seems`,
         //     workedHours: 0,
         //     neededHours: 1
@@ -220,11 +210,6 @@ module.exports = {
         //     taskName: `Wiki popups are broken in Chrome. (But only in Canary, it seems.)`,
         //     workedHours: 0,
         //     neededHours: 1
-        // },
-        // {
-        //     taskName: `"problem with indie" in footer`,
-        //     workedHours: 0,
-        //     neededHours: 8
         // },
         {
             taskName: `refactor to get album objects`,
@@ -907,6 +892,11 @@ module.exports = {
             taskName: `put title in audio for mini.`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `adjust books block animation height for tablet and mini`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
