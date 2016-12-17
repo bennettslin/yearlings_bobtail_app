@@ -234,13 +234,14 @@ const MainColumnView = ({
                     </div> : null
                 }
 
-                {isHeightlessLyricColumn ?
+                {/* FIXME: Get rid of this, and its props. */}
+                {false ?
                     <div className="lyric-button-block expand-button-block in-main">
                         <a
                             className="lyric-button enabled"
                             onClick={onLyricExpandClick}
                         >
-                            <div className="button-icon lyric-icon">
+                            <div className="large button-icon lyric-icon">
                                 {isLyricExpanded ? '-' : '+'}
                             </div>
                         </a>

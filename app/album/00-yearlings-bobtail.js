@@ -57,17 +57,27 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `allow annotation to remain selected when song advances to next song.`,
+            workedHours: 0,
+            neededHours: 5
+        },
+        {
+            taskName: `Change containers so that scrollbar starts below button`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: `Put expand button on top of lyric column always`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `layout, position, and style annotation section.`,
             workedHours: 0,
             neededHours: 3
         },
         {
             taskName: `layout, position, and style wiki section.`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `allow annotation to remain selected when song advances to next song.`,
             workedHours: 0,
             neededHours: 3
         },
@@ -89,7 +99,7 @@ module.exports = {
         {
             taskName: `do z-indices`,
             workedHours: 0,
-            neededHours: 1
+            neededHours: 18
         },
         {
             taskName: `nav widths use % instead of vw`,
@@ -137,11 +147,6 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `refactor app handlers`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `colour verse based on odd or even`,
             workedHours: 0,
             neededHours: 2
@@ -170,11 +175,6 @@ module.exports = {
             taskName: `get rid of unneeded device width breakpoints`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `state stores device width index, not device width string`,
-            workedHours: 0,
-            neededHours: 2
         },
         // {
         //     taskName: `delay in annotation popup after scroll and then link clicked? only in firefox, it seems`,

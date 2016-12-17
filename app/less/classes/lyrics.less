@@ -9,7 +9,7 @@
 .lyric-column {
     // This fixes the issue of being unable to scroll between stanzas.
     z-index: @lyric-column-z-index;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .lyric-column-animatable {
@@ -25,34 +25,29 @@
 
 .lyric-column {
     .lyric-button-block {
-        top: 0;
+        position: absolute;
+        padding: @app-thin-margin;
         z-index: @lyric-column-button-z-index;
+
+        background-color: gray;
     }
 }
 
-// Includes expand button block in main field.
-.lyric-button-block {
-    position: absolute;
-    padding: @app-thin-margin;
-    background-color: gray;
-}
-
-.expand-button-block.in-main {
-    .transition(bottom 0.2s ease);
-    bottom: 0;
+.expand-button-block {
     left: 50%;
+
+    .transition(top 0.2s ease);
+
+    // FIXME: Don't hard code.
+    top: -54px;
+
     transform: translateX(-50%);
 }
 
 .is-logue, .lyric-expanded, .overview-shown {
-    .expand-button-block.in-main {
-        bottom: -@app-icon-diameter - @app-thin-margin * 2;
+    .expand-button-block {
+        top: 0;
     }
-}
-
-.expand-button-block:not(.in-main) {
-    // Accommodate scrollbar.
-    right: 17px;
 }
 
 .ear-button-block {
