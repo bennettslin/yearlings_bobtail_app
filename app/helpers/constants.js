@@ -288,12 +288,20 @@ module.exports = {
         RIGHT
     ],
 
+    PUN,
+    BACKSTORY,
+    NARRATIVE,
+    FORESHADOW,
+    MUSIC,
+    PULPIT,
     WIKI,
+    PORTAL,
+    AFTERWORD,
 
     ALL_DOT_KEYS: [
-        PUN,
-        BACKSTORY, // My perspective while making the album.
         NARRATIVE, // My perspective in the story.
+        BACKSTORY, // My perspective while making the album.
+        PUN,
         FORESHADOW,
         MUSIC,
         PULPIT,
@@ -303,15 +311,15 @@ module.exports = {
     ],
 
     DOT_DESCRIPTIONS: {
-        [PUN]: 'pun',
+        [NARRATIVE]: 'the story', // My perspective in the story.
         [BACKSTORY]: 'backstory description', // My perspective while making the album.
-        [NARRATIVE]: 'narrative really description', // My perspective in the story.
+        [PUN]: 'literary pun',
         [FORESHADOW]: 'foreshadow description',
         [MUSIC]: 'music description',
         [PULPIT]: 'pulpit description',
         [WIKI]: 'wiki description',
         [PORTAL]: 'portal description',
-        [AFTERWORD]: 'afterword description'
+        [AFTERWORD]: 'after the album'
     },
 
     ARROW_LEFT: 'ArrowLeft',

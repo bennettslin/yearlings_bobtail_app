@@ -1,4 +1,13 @@
-import { VERSES, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
+import { VERSES,
+         PRECHORUS,
+         CHORUS,
+         BRIDGE,
+
+         NARRATIVE,
+         BACKSTORY,
+         PUN,
+         MUSIC,
+         AFTERWORD } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -10,7 +19,10 @@ module.exports = {
                     wiki: `Ash_Wednesday`
                 },
                 `is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
-            ]
+            ],
+            dotKeys: {
+
+            }
         }
     },
     scenes: [
@@ -31,7 +43,7 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 163,
-    overview: `In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I probably have Catherine to thank for that.`,
+    overview: `In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
     lyrics: [
         [
             {
@@ -53,7 +65,7 @@ module.exports = {
                             `The quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter step flat. The shrieking whistles, which remind me of trains braking in a subway tunnel, were made by overblowing into recorders.`
                         ],
                         dotKeys: {
-                            music: true
+                            [MUSIC]: true
                         }
                     }
                 }
@@ -76,9 +88,7 @@ module.exports = {
                                 `after hearing of Abraham Lincoln's assassination. I don't remember why I chose to reference it. I was probably whimpering "Oh Catherine" under my breath a lot right after the breakup.`
                             ],
                             dotKeys: {
-                                pun: true,
-                                backstory: true,
-                                narrative: true,
+                                [PUN]: true
                             },
                         }
                     },
@@ -95,14 +105,7 @@ module.exports = {
                             {
                                 description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I said, only partly in jest.`,
                                 dotKeys: {
-                                    foreshadow: true,
-                                    music: true
-                                }
-                            },
-                            {
-                                description: `testing testing testing`,
-                                dotKeys: {
-                                    pulpit: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         ]
@@ -127,7 +130,11 @@ module.exports = {
                                     italic: `Ulysses,`
                                 },
                                 `which Catherine was reading at the time. In hindsight, that night was probably the beginning of the end, as Catherine surmised that a boyfriend who doesn't read would be the death of her.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `surely buried she'd be!`
@@ -163,6 +170,9 @@ module.exports = {
                                 },
                                 `who suffer from uncontrollable tics, we said and did things on impulse during the breakup. Also, Jesus was "laid to rest" on the first day…`
                             ],
+                            dotKeys: {
+                                [PUN]: true
+                            },
                             portal: `laid_tourettes`
                         }
                     },
@@ -183,7 +193,10 @@ module.exports = {
                     {
                         anchor: `sole assent…`,
                         annotation: {
-                            description: `Catherine wanted to break up; I didn't. But hers was also to be the "sole ascent."`
+                            description: `Catherine wanted to break up; I didn't. But hers was also to be the "sole ascent."`,
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -218,7 +231,10 @@ module.exports = {
                                     wiki: `Dirge`
                                 },
                                 `is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music any differently. But Catherine appreciated music for its lyrics, and as such, she wasn't impressed by my songwriting skills.`
-                            ]
+                            ],
+                            dotKeys: {
+
+                            }
                         }
                     }
                 ]
@@ -244,7 +260,10 @@ module.exports = {
                     {
                         anchor: `pressed for an opinion,`,
                         annotation: {
-                            description: `After committing to become a better lyricist, I would ask Catherine for her honest critique. In this imagined scenario that's perfectly telling of our actual relationship, she puts down the James Joyce novel that she's reading to compliment my attempt at writing a clever verse.`
+                            description: `After committing to become a better lyricist, I would ask Catherine for her honest critique. In this imagined scenario that's perfectly telling of our actual relationship, she puts down the James Joyce novel that she's reading to compliment my attempt at writing a clever verse.`,
+                            dotKeys: {
+
+                            }
                         }
                     },
                     `sighed,`
@@ -260,7 +279,10 @@ module.exports = {
                     {
                         anchor: `with "Joyce" oblivious`,
                         annotation: {
-                            description: `Her compliment is insincere, however, as she secretly amuses herself by drolly observing, "My, Walt Whitman." After all, referencing a poet typically studied by middle schoolers is hardly a signifier of expressive ability. And so she's also figuratively putting me down, for my naive hope of becoming the James Joyce of lyricists.`
+                            description: `Her compliment is insincere, however, as she secretly amuses herself by drolly observing, "My, Walt Whitman." After all, referencing a poet typically studied by middle schoolers is hardly a signifier of expressive ability. And so she's also figuratively putting me down, for my naive hope of becoming the James Joyce of lyricists.`,
+                            dotKeys: {
+
+                            }
                         }
                     },
                     `to the trump she just played.`
@@ -287,7 +309,10 @@ module.exports = {
                     {
                         anchor: `poised with brains?`,
                         annotation: {
-                            description: `Catherine didn't value the artistic strengths that I had always counted on to cover up my other weaknesses. Which made me realise that if I wanted to keep dating those so very unlike me, then I couldn't have any real weaknesses.`
+                            description: `Catherine didn't value the artistic strengths that I had always counted on to cover up my other weaknesses. Which made me realise that if I wanted to keep dating those so very unlike me, then I couldn't have any real weaknesses.`,
+                            dotKeys: {
+
+                            }
                         }
                     }
                 ]
@@ -318,7 +343,10 @@ module.exports = {
                                     wiki: `Shelta`
                                 },
                                 `that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."`
-                            ]
+                            ],
+                            dotKeys: {
+
+                            }
                         }
                     }
                 ]
@@ -337,13 +365,19 @@ module.exports = {
                                     wiki: `Famous_Blue_Raincoat`
                                 },
                                 `that finally helped me to understand the heights that great lyrics can reach.`
-                            ]
+                            ],
+                            dotKeys: {
+
+                            }
                         }
                     },
                     {
                         anchor: `unknown to roam,`,
                         annotation: {
-                            description: `As an itinerant community, the Irish Travellers are certainly known to roam. Also, raincoats are a slang term for condoms, which are infamously "unknown to Rome" due to the Catholic Church's opposition to birth control. Catherine had vowed not to engage in premarital sex; otherwise, I would have eagerly gone all the way.`
+                            description: `As an itinerant community, the Irish Travellers are certainly known to roam. Also, raincoats are a slang term for condoms, which are infamously "unknown to Rome" due to the Catholic Church's opposition to birth control. We never did go all the way because Catherine had vowed not to engage in premarital sex.`,
+                            dotKeys: {
+
+                            }
                         }
                     }
                 ]
@@ -362,7 +396,10 @@ module.exports = {
                                     wiki: `Dorothy_Parker`
                                 },
                                 `whose wit Catherine admired, famously quipped that "men seldom make passes at girls who wear glasses."`
-                            ]
+                            ],
+                            dotKeys: {
+
+                            }
                         }
                     },
                     {
@@ -374,7 +411,10 @@ module.exports = {
                                     italic: `Beautiful Losers,`
                                 },
                                 `particularly in its line, "Did you ever go clear?"`
-                            ]
+                            ],
+                            dotKeys: {
+
+                            }
                         }
                     },
                     {
@@ -391,7 +431,10 @@ module.exports = {
                                     italic: `Beautiful Losers.`
                                 },
                                 `I always assumed that "going clear" was a reference to the legend that her smallpox scars miraculously vanished upon her death. Tekakwitha was baptised as Saint Catherine.`
-                            ]
+                            ],
+                            dotKeys: {
+
+                            }
                         }
                     }
 
@@ -411,7 +454,10 @@ module.exports = {
                                     wiki: `Algonquin_Round_Table`
                                 },
                                 `a social circle of New York City writers known for their clever wordplay and wit.`
-                            ]
+                            ],
+                            dotKeys: {
+
+                            }
                         }
                     }
                 ]
@@ -429,7 +475,10 @@ module.exports = {
                     {
                         anchor: `faked this "X,"`,
                         annotation: {
-                            description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X. Also, since Catherine insisted on going no further than kissing and petting, I would "fake the sex" for myself by masturbating afterwards.`
+                            description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X. Also, since Catherine insisted on going no further than kissing and petting, I would "fake the sex" for myself by masturbating afterwards.`,
+                            dotKeys: {
+
+                            }
                         }
                     },
                     `I should confess,`
@@ -442,7 +491,10 @@ module.exports = {
                     {
                         anchor: `used cigarette.`,
                         annotation: {
-                            description: `I got the ash from an outdoor ashtray.`
+                            description: `I got the ash from an outdoor ashtray.`,
+                            dotKeys: {
+
+                            }
                         }
                     }
                 ]
@@ -464,7 +516,10 @@ module.exports = {
                                     anchor: `Palm Sunday.`,
                                     wiki: `Palm_Sunday`
                                 }
-                            ]
+                            ],
+                            dotKeys: {
+
+                            }
                         }
                     }
                 ]
@@ -489,7 +544,10 @@ module.exports = {
                                             wiki: `Henry_IV_of_France`
                                         },
                                         `was born a Protestant but converted to Catholicism to gain the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that could get Catherine to stay.`
-                                    ]
+                                    ],
+                                    dotKeys: {
+
+                                    }
                                 }
                             }
                         ],
@@ -513,7 +571,10 @@ module.exports = {
                     {
                         anchor: `cursed to be born,`,
                         annotation: {
-                            description: `One admittedly juvenile argument against the Catholic Church's pro-life stance is that it makes no sense for unbelievers to be born at all, since it means trading the certainty of going to heaven for the likelihood of going to hell.`
+                            description: `One admittedly juvenile argument against the Catholic Church's pro-life stance is that it makes no sense for unbelievers to be born at all, since it means trading the certainty of going to heaven for the likelihood of going to hell.`,
+                            dotKeys: {
+
+                            }
                         }
                     }
                 ]
@@ -542,7 +603,10 @@ module.exports = {
                     {
                         anchor: `tragic mask.`,
                         annotation: {
-                            description: `At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. So I always preferred a negative outcome to no outcome, which then made it hard to deny that everything I did was just a stage act.`
+                            description: `At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. So I always preferred a negative outcome to no outcome, which then made it hard to deny that everything I did was just a stage act.`,
+                            dotKeys: {
+
+                            }
                         }
                     }
                 ]
@@ -564,7 +628,10 @@ module.exports = {
                     {
                         anchor: `spreading mole`,
                         annotation: {
-                            description: `By day's end, the ash was pretty smudged. Also, a spreading mole is a sign of cancer, which is fitting since I wasn't sure how sick it is to fake being Catholic.`
+                            description: `By day's end, the ash was pretty smudged. Also, a spreading mole is a sign of cancer, which is fitting since I wasn't sure how sick it is to fake being Catholic.`,
+                            dotKeys: {
+
+                            }
                         }
                     },
                     `my sickness borne`
@@ -596,7 +663,7 @@ module.exports = {
                     annotation: {
                         description: ``,
                         dotKeys: {
-                            music: true
+                            [AFTERWORD]: true
                         }
                     }
                 }

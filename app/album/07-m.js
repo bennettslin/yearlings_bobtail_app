@@ -58,7 +58,10 @@ module.exports = {
                                 wiki: `Mara_(demon)`
                             },
                             `the demon who personifies fear and death in Buddhism. Similarly, getting through band practise required me to summon otherworldly reserves of self-denial after Jacob and Mara started dating.`
-                        ]
+                        ],
+                        dotKeys: {
+
+                        }
                     }
                 }
             },
@@ -75,7 +78,10 @@ module.exports = {
                     {
                         anchor: `learning the talents`,
                         annotation: {
-                            description: `The breakup with Catherine was uneventful, since I'd done nothing wrong, per se. I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up tons of attractive traits from scratch, with everything that Catherine found lacking in me to serve as my template.`
+                            description: `The breakup with Catherine was uneventful, since I'd done nothing wrong, per se. I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up tons of attractive traits from scratch, with everything that Catherine found lacking in me to serve as my template.`,
+                            dotKeys: {
+
+                            }
                         }
                     }
                 ]
@@ -106,7 +112,10 @@ module.exports = {
                                     wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`
                                 },
                                 `of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to recover, in hindsight perhaps it was naive to think that my own five-year plan for rapid intellectual growth could be free of unintended negative effects.`
-                            ]
+                            ],
+                            dotKeys: {
+
+                            }
                         }
                     },
                     `I'd be one to keep.`

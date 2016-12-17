@@ -10,6 +10,7 @@
     * Accessibility
     * Select time in lyrics
     * Visit website
+    * Portals
 
 0. prologue
 
@@ -20,6 +21,7 @@
 3. Dear Saskia
 
 4. Odin
+    * Doublespeaker
 
 5. Pchelka's Starry Journey
 
@@ -30,6 +32,7 @@
 8. Good Night, Sita
 
 9. Grasshoppers Lie Heavy
+    * Portals
 
 10. Constellations!
 

@@ -1,4 +1,15 @@
-import { RIGHT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RESPONSE } from 'helpers/constants'
+import { RIGHT,
+         OVERLAP,
+         VERSES,
+         PRECHORUS,
+         CHORUS,
+         BRIDGE,
+         RESPONSE,
+
+         NARRATIVE,
+         BACKSTORY,
+         PUN,
+         MUSIC } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -15,7 +26,10 @@ module.exports = {
                     wiki: `Taiwan`
                 },
                 `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.`
-            ]
+            ],
+            dotKeys: {
+                [BACKSTORY]: true
+            }
         }
     },
     scenes: [
@@ -61,7 +75,7 @@ module.exports = {
                             }
                         ],
                         dotKeys: {
-                            music: true
+                            [MUSIC]: true
                         }
                     }
                 }
@@ -99,7 +113,7 @@ module.exports = {
                         annotation: {
                             description: `My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I remember the panic I felt when this happened.`,
                             dotKeys: {
-                                afterword: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -129,7 +143,7 @@ module.exports = {
                                 `means "big sister" in Chinese.`
                             ],
                             dotKeys: {
-                                afterword: true
+                                // TODO: Needs a dot! General wiki?
                             }
                         }
                     },
@@ -162,17 +176,28 @@ module.exports = {
                     {
                         anchor: `Safeway paper bag,`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `Since my pants were soiled, the nurse gave me a shopping bag to carry them in.`,
-                                {
-                                    anchor: `Safeway`,
-                                    wiki: `Safeway_Inc.`
+                        annotation: [
+                            {
+                                description: [
+                                    `Since my pants were soiled, the nurse gave me a shopping bag to carry them in.`,
+                                    {
+                                        anchor: `Safeway`,
+                                        wiki: `Safeway_Inc.`
+                                    },
+                                    `is a supermarket chain located in the western and central United States.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
+                                dotKeys: {
+                                    [PUN]: true
                                 },
-                                `is a supermarket chain located in the western and central United States.`
-                            ],
-                            portal: `safeway_paper_bag`
-                        }
+                                // TODO: Need portal description.
+                                portal: `safeway_paper_bag`
+                            }
+                        ]
                     }
                 ]
             },
@@ -227,7 +252,8 @@ module.exports = {
                         annotation: {
                             description: `After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what the label entailed. My mother's tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.`,
                             dotKeys: {
-                                afterword: true
+                                // TODO: General wiki?
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -250,9 +276,10 @@ module.exports = {
                     {
                         anchor: `girls' mirrors.`,
                         annotation: {
+                            // TODO: Additional detail about how I wanted this.
                             description: `My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
                             dotKeys: {
-                                afterword: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -269,6 +296,7 @@ module.exports = {
                     {
                         anchor: `finally become someone?`,
                         annotation: {
+                            // TODO: Need portal description.
                             portal: `finally_become_someone`
                         }
                     }
