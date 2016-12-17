@@ -71,7 +71,7 @@ const _prepareAllSongs = (album) => {
 
         if (!song.logue) {
             // Song indices start at 1.
-            _tempStore._songIndex = songIndex + 1
+            _tempStore._songIndex = songIndex
             _tempStore._annotations = []
             _tempStore._verseIndexCounter = -1
             _tempStore._songDotKeys = {}
@@ -406,7 +406,7 @@ const _injectPortalLinks = (album) => {
         const links = _tempStore._portalLinks[linkKey]
 
         links.forEach((link, index) => {
-            const song = album.songs[link.songIndex - 1],
+            const song = album.songs[link.songIndex],
                 annotation = song.annotations[link.annotationIndex - 1],
                 card = Array.isArray(annotation.cards) ?
                     annotation.cards[link.cardIndex] : annotation.cards,
