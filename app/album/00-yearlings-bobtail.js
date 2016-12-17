@@ -57,11 +57,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `add title to dot in dots section.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `layout, position, and style annotation section.`,
             workedHours: 0,
             neededHours: 3
@@ -910,6 +905,11 @@ module.exports = {
         },
         {
             taskName: `fix portals bug.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `add title to dot in dots section.`,
             workedHours: 1,
             neededHours: 1
         }
