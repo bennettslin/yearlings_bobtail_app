@@ -106,6 +106,13 @@ class DotButtonView extends Component {
                     onClick={onClick}
                 >
                 </a>
+                {inDotsSection ?
+                    <div className="dot-text-container">
+                        <div className="dot-text">
+                            {dotKey}
+                        </div>
+                    </div> : null
+                }
             </div>
         )
     }
