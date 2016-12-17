@@ -57,6 +57,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `add title to dot in dots section.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `layout, position, and style annotation section.`,
             workedHours: 0,
             neededHours: 3
@@ -900,6 +905,11 @@ module.exports = {
         },
         {
             taskName: `Change device width to device index`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `fix portals bug.`,
             workedHours: 1,
             neededHours: 1
         }
