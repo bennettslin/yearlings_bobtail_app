@@ -23,19 +23,12 @@
     background-color: rgba(150, 150, 250, 0.4);
 }
 
-.lyric-column {
-    .lyric-button-block {
-        position: absolute;
-        padding: @app-thin-margin;
-        z-index: @lyric-column-button-z-index;
+.lyric-button-block {
+    position: absolute;
+    padding: @app-thin-margin;
+    z-index: @lyric-column-button-z-index;
 
-        background-color: gray;
-    }
-}
-
-.ear-button-block {
-    // Needed to expand properly in Chrome.
-    left: 0;
+    background-color: gray;
 }
 
 .lyric-icon {
@@ -70,21 +63,59 @@
     }
 }
 
-.tablet-width, .mini-width, .phone-width {
+.is-desktop {
+    .ear-button-block {
+        // Needed to expand properly in Chrome.
+        left: 0;
+        top: 0;
+    }
+}
+
+.is-mobile {
 
     .lyric-column {
+        .transition(height 0.2s ease);
         height: @collapsed-lyric-section-height;
         width: 100%;
         bottom: 0;
-
-        .transition(height 0.2s ease);
     }
 
-    .expand-button-block {
+    .expand-button-block.in-lyric {
+        top: 0;
+        left: 0;
+    }
+
+    .expand-button-block.in-main {
+        .transition(bottom 0.2s ease);
+        bottom: 0;
         left: 50%;
-        .transition(top 0.2s ease);
-        top: -@app-tablet-large-icon-diameter - 2 * @app-thin-margin;
         transform: translateX(-50%);
+    }
+
+    .ear-button-block {
+        left: 0;
+        bottom: 0;
+        .transition(bottom 0.2s ease);
+    }
+
+    .heightless-lyric {
+        .lyric-collapsed {
+            .ear-button-block {
+                bottom: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
+            }
+        }
+    }
+
+    .is-logue, .lyric-expanded, .overview-shown {
+        .expand-button-block.in-main {
+            bottom: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
+        }
+    }
+
+    .heightless-lyric.lyric-collapsed {
+        .ear-button-block {
+            bottom: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
+        }
     }
 
     .lyric-expanded {
@@ -102,14 +133,31 @@
     }
 
     &.mini-width {
-        .expand-button-block {
-            top: -@app-mini-large-icon-diameter - 2 * @app-thin-margin;
+        .is-logue, .lyric-expanded, .overview-shown {
+            .expand-button-block.in-main {
+                bottom: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
+            }
+        }
+
+        .heightless-lyric.lyric-collapsed {
+            .ear-button-block {
+                bottom: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
+            }
         }
     }
 
     &.phone-width {
-        .expand-button-block {
-            top: -@app-icon-diameter - 2 * @app-thin-margin;
+
+        .is-logue, .lyric-expanded, .overview-shown {
+            .expand-button-block.in-main {
+                bottom: -@app-icon-diameter - @app-thin-margin * 2;
+            }
+        }
+
+        .heightless-lyric.lyric-collapsed {
+            .ear-button-block {
+                bottom: -@app-icon-diameter - @app-thin-margin * 2;
+            }
         }
 
         .lyric-expanded {
@@ -118,12 +166,6 @@
                     height: ~"calc(100% - @{menu-phone-height})";
                 }
             }
-        }
-    }
-
-    .is-logue, .lyric-expanded, .overview-shown {
-        .expand-button-block {
-            top: 0;
         }
     }
 }

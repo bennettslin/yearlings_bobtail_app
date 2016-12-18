@@ -60,7 +60,7 @@ const LyricColumnView = ({
                 </div> : null
             }
             {isLyricExpandable ?
-                <div className="lyric-button-block expand-button-block">
+                <div className="lyric-button-block expand-button-block in-lyric">
                     <a
                         className="lyric-button enabled"
                         onClick={onLyricExpandClick}

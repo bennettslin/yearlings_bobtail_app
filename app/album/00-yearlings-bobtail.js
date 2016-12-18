@@ -62,16 +62,6 @@ module.exports = {
             neededHours: 5
         },
         {
-            taskName: `Change containers so that scrollbar starts below button`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
-            taskName: `Put expand button on top of lyric column always`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `layout, position, and style annotation section.`,
             workedHours: 0,
             neededHours: 3
@@ -910,6 +900,11 @@ module.exports = {
         },
         {
             taskName: `add title to dot in dots section.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `settle lyric expand button issue once and for all`,
             workedHours: 1,
             neededHours: 1
         }
