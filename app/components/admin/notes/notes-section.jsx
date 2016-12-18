@@ -27,6 +27,7 @@ const NotesSectionView = () => (
             <li>http://stackoverflow.com/questions/6372444/how-to-draw-an-irregular-hand-drawn-line-using-svg-canvas</li>
             <li>http://codepen.io/tmrDevelops/pen/NPXodB</li>
             <li>http://stackoverflow.com/questions/8866736/css-speech-bubble-with-box-shadow</li>
+            <li>https://css-tricks.com/snippets/jquery/animate-heightwidth-to-auto/#comment-283996</li>
         </ul>
     </div>
 )

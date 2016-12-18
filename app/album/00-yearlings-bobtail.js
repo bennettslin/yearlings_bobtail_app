@@ -57,6 +57,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `show bare-bones portal in popup`,
+            workedHours: 0,
+            neededHours: 7
+        },
+        {
             taskName: `allow annotation to remain selected when song advances to next song.`,
             workedHours: 0,
             neededHours: 5
@@ -145,11 +150,6 @@ module.exports = {
             taskName: `write album overview`,
             workedHours: 0,
             neededHours: 6
-        },
-        {
-            taskName: `figure out best way to do portals`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `create stage section`,
@@ -907,6 +907,11 @@ module.exports = {
             taskName: `settle lyric expand button issue once and for all`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `figure out best way to do portals`,
+            workedHours: 8,
+            neededHours: 8
         }
     ]
 }
