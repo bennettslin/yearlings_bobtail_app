@@ -15,6 +15,7 @@ const _tempStore = {
     _popupAnchors: [],
     _wikiIndex: 1,
     _portalLinks: {},
+    _portalsIndices: [],
     _songTimes: [],
     _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
@@ -34,6 +35,11 @@ export const prepareAlbumData = (album = {}) => {
      * collecting portal links from the entire album.
      */
     _addWikiAndPortalIndices(album)
+
+    /**
+     * Add list of portals.
+     */
+    album.portalsIndices = _tempStore._portalsIndices
 }
 
 const _addWikiAndPortalIndices = (album) => {
@@ -348,6 +354,8 @@ const _parseWiki = (key, object, finalPassThrough) => {
             const hasWiki = !!object[key]
 
             if (finalPassThrough && !object.wikiIndex && typeof object[key] === 'string') {
+
+                // Popup anchor index is either for portal or wiki.
                 object.wikiIndex = _tempStore._popupAnchorIndex
                 _tempStore._popupAnchorIndex++
                 _tempStore._popupAnchors.push(object[key])
@@ -385,6 +393,10 @@ const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0) => {
             _tempStore._portalLinks[portal] = []
         }
 
+        // Add portals index to be looked up by app.
+        portalLink.portalsIndex = _tempStore._portalsIndices.length
+        _tempStore._portalsIndices.push(Object.assign({}, portalLink))
+
         // Add portal link to portal links array.
         _tempStore._portalLinks[portal].push(portalLink)
 
@@ -413,6 +425,7 @@ const _injectPortalLinks = (album) => {
                 portalLinks = links.filter((link, thisIndex) => {
                     return index !== thisIndex
                 }).map(link => {
+
                     // Return a *copy* of the link object.
                     return Object.assign({}, link)
                 })

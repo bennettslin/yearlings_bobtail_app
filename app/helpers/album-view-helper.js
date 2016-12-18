@@ -351,14 +351,16 @@ export const getPortalLinks = (card, songs) => {
         return portalLinks ? portalLinks.map((portalLink) => {
             const { songIndex,
                     annotationIndex,
-                    portalIndex } = portalLink,
+                    portalIndex,
+                    portalsIndex } = portalLink,
                 song = songs[songIndex],
                 annotation = song.annotations[annotationIndex - 1]
 
             return {
-                songIndex,
-                annotationIndex,
+                // songIndex,
+                // annotationIndex,
                 portalIndex,
+                portalsIndex,
                 songTitle: song.title,
                 annotationTitle: annotation.title
             }

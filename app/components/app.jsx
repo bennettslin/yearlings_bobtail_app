@@ -190,6 +190,7 @@ class App extends Component {
 
     _assignLogFunctions() {
         window.t = LogHelper.logStorage.bind(LogHelper)
+        window.p = LogHelper.logPortalIndices.bind(LogHelper, this)
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
@@ -561,11 +562,13 @@ class App extends Component {
         }
     }
 
-    selectPortal(e,  selectedSongIndex, selectedAnnotationIndex) {
+    selectPortal(e, portalsIndex) {
         this._stopPropagation(e)
 
-        this.selectSong(undefined, selectedSongIndex)
-        this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
+        console.error('this.props.portalsIndices[portalsIndex]', this.props.portalsIndices[portalsIndex]);
+
+        // this.selectSong(undefined, selectedSongIndex)
+        // this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
     }
 
     selectWikiOrPortal() {
@@ -576,7 +579,7 @@ class App extends Component {
             if (typeof popupAnchorObject === 'string') {
                 this.selectWiki(true, this.state.accessedPopupAnchorIndex)
             } else {
-                this.selectPortal(undefined, popupAnchorObject.songIndex, popupAnchorObject.annotationIndex)
+                this.selectPortal(undefined, popupAnchorObject.portalsIndex)
             }
         }
     }
