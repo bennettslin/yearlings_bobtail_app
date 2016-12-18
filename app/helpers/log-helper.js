@@ -9,7 +9,7 @@ export default {
         return this._logObject('window storage', WINDOW_STORAGE)
     },
 
-    logPortalIndices({ props }) {
+    logPortalsIndices({ props }) {
         return this._logObject('portals', props.portalsIndices)
     },
 

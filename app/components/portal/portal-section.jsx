@@ -20,7 +20,8 @@ const PortalSectionView = ({
 
     // From props.
     songIndex,
-    annotationIndex
+    annotationIndex,
+    selectedPortalsIndex
 
     // From controller.
 
@@ -32,6 +33,7 @@ const PortalSectionView = ({
         <div>
             {songIndex}
             {annotationIndex}
+            {selectedPortalsIndex}
         </div>
     </div>
 )

@@ -10,6 +10,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_WIKI_INDEX,
          SELECTED_NAV_INDEX,
          SELECTED_DOTS_INDEX,
+         SELECTED_PORTALS_INDEX,
          ACCESSED_ON,
          ACCESSED_SECTION_INDEX } from '../../helpers/constants'
  import SessionHelper from '../../helpers/session-helper'
@@ -111,6 +112,14 @@ export const selectDotsIndex = (selectedDotsIndex = 0) => {
     return {
         type: SELECTED_DOTS_INDEX,
         payload: selectedDotsIndex
+    }
+}
+
+export const selectPortalsIndex = (selectedPortalsIndex = 0) => {
+    setInSession(SELECTED_PORTALS_INDEX, selectedPortalsIndex)
+    return {
+        type: SELECTED_PORTALS_INDEX,
+        payload: selectedPortalsIndex
     }
 }
 

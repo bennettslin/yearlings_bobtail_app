@@ -14,6 +14,7 @@ import { selectSongIndex,
          selectWikiIndex,
          selectNavIndex,
          selectDotsIndex,
+         selectPortalsIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
 import AdminToggle from './admin/admin-toggle'
@@ -70,6 +71,7 @@ const passReduxStateToProps = ({
     selectedWikiIndex,
     selectedNavIndex,
     selectedDotsIndex,
+    selectedPortalsIndex,
     accessedOn,
     accessedSectionIndex
 }) => ({
@@ -86,6 +88,7 @@ const passReduxStateToProps = ({
     selectedWikiIndex,
     selectedNavIndex,
     selectedDotsIndex,
+    selectedPortalsIndex,
     accessedOn,
     accessedSectionIndex
 })
@@ -105,6 +108,7 @@ const bindDispatchToProps = (dispatch) => (
         selectWikiIndex,
         selectNavIndex,
         selectDotsIndex,
+        selectPortalsIndex,
         accessOn,
         accessSectionIndex
     }, dispatch)
@@ -190,7 +194,7 @@ class App extends Component {
 
     _assignLogFunctions() {
         window.t = LogHelper.logStorage.bind(LogHelper)
-        window.p = LogHelper.logPortalIndices.bind(LogHelper, this)
+        window.p = LogHelper.logPortalsIndices.bind(LogHelper, this)
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
@@ -565,10 +569,13 @@ class App extends Component {
     selectPortal(e, portalsIndex) {
         this._stopPropagation(e)
 
+        // FIXME: Clean this up, of course.
         console.error('this.props.portalsIndices[portalsIndex]', this.props.portalsIndices[portalsIndex]);
 
         // this.selectSong(undefined, selectedSongIndex)
         // this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
+
+        this.props.selectPortalsIndex(portalsIndex)
     }
 
     selectWikiOrPortal() {

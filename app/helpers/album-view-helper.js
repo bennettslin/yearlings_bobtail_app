@@ -357,8 +357,6 @@ export const getPortalLinks = (card, songs) => {
                 annotation = song.annotations[annotationIndex - 1]
 
             return {
-                // songIndex,
-                // annotationIndex,
                 portalIndex,
                 portalsIndex,
                 songTitle: song.title,
