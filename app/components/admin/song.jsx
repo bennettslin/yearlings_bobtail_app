@@ -37,6 +37,7 @@ const SongView = ({
 
     // From props.
     songs,
+    portalsIndices,
     selectedAnnotationIndex,
     selectedWikiIndex,
     selectedDotKeys,
@@ -63,6 +64,7 @@ const SongView = ({
     onVerseClick,
     onLyricColumnClick,
     onAnnotationSectionClick,
+    onSongFromPortalClick,
 
     // From controller.
     annotation,
@@ -97,7 +99,10 @@ const SongView = ({
                 onPopupButtonClick={onWikiUrlClick}
             />
             <PortalSection
+                songs={songs}
+                portalsIndices={portalsIndices}
                 selectedPortalsIndex={selectedPortalsIndex}
+                onSongFromPortalClick={onSongFromPortalClick}
             />
             <DotsSection
                 isAdmin={true}

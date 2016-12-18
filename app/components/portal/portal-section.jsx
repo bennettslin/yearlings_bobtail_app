@@ -1,13 +1,28 @@
 import React from 'react'
+import { getPortalFromIndex } from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const PortalSection = (props) => {
+const PortalSection = ({
+
+    onSongFromPortalClick,
+
+...other }) => {
+
+    const { songIndex,
+            annotationIndex,
+            songTitle,
+            annotationTitle } = getPortalFromIndex(other),
+
+        onClick = e => onSongFromPortalClick(e, songIndex, annotationIndex)
 
     return (
-        <PortalSectionView {...props}
+        <PortalSectionView
+            songTitle={songTitle}
+            annotationTitle={annotationTitle}
+            onClick={onClick}
         />
     )
 }
@@ -19,22 +34,23 @@ const PortalSection = (props) => {
 const PortalSectionView = ({
 
     // From props.
-    songIndex,
-    annotationIndex,
-    selectedPortalsIndex
 
     // From controller.
+    songTitle,
+    annotationTitle,
+    onClick
 
 }) => (
     <div
         className="section portal-section"
     >
         <h2>portal</h2>
-        <div>
-            {songIndex}
-            {annotationIndex}
-            {selectedPortalsIndex}
-        </div>
+        <a
+            className="enabled"
+            onClick={onClick}
+        >
+            {songTitle}, {annotationTitle}
+        </a>
     </div>
 )
 

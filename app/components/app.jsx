@@ -47,7 +47,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex, getPortalFromIndex } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -175,6 +175,7 @@ class App extends Component {
         this.selectTime = this.selectTime.bind(this)
         this.selectDot = this.selectDot.bind(this)
         this.selectPortal = this.selectPortal.bind(this)
+        this.selectSongFromPortal = this.selectSongFromPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
         this.selectLyricColumnWidth = this.selectLyricColumnWidth.bind(this)
@@ -569,13 +570,15 @@ class App extends Component {
     selectPortal(e, portalsIndex) {
         this._stopPropagation(e)
 
-        // FIXME: Clean this up, of course.
-        console.error('this.props.portalsIndices[portalsIndex]', this.props.portalsIndices[portalsIndex]);
-
-        // this.selectSong(undefined, selectedSongIndex)
-        // this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
-
         this.props.selectPortalsIndex(portalsIndex)
+    }
+
+    selectSongFromPortal(e, selectedSongIndex, selectedAnnotationIndex) {
+        this._stopPropagation(e)
+
+        // TODO: Don't reset time if it's the same song.
+        this.selectSong(undefined, selectedSongIndex)
+        this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
     }
 
     selectWikiOrPortal() {
@@ -1046,6 +1049,7 @@ class App extends Component {
                     isOverviewShown={isOverviewShown}
                     onSongClick={this.selectSong}
                     onPortalClick={this.selectPortal}
+                    onSongFromPortalClick={this.selectSongFromPortal}
                     onWikiUrlClick={this.selectWiki}
                     onAnnotationClick={this.selectAnnotation}
                     onOverviewClick={this.selectOverview}

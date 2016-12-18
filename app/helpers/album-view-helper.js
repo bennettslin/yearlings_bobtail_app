@@ -368,6 +368,23 @@ export const getPortalLinks = (card, songs) => {
     }
 }
 
+export const getPortalFromIndex = ({ selectedPortalsIndex,
+                                     portalsIndices,
+                                     songs }) => {
+
+    const { songIndex,
+            annotationIndex } = portalsIndices[selectedPortalsIndex],
+        song = songs[songIndex],
+        annotation = song.annotations[annotationIndex - 1]
+
+    return {
+        songIndex,
+        annotationIndex,
+        songTitle: song.title,
+        annotationTitle: annotation.title
+    }
+}
+
 export const getWikiUrl = (props) => {
     const { selectedWikiIndex } = props
     if (selectedWikiIndex) {
