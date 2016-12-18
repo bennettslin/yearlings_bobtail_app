@@ -127,7 +127,7 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            isAdmin: true,
+            isAdmin: false,
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
@@ -519,6 +519,7 @@ class App extends Component {
         }
 
         this.props.selectAnnotationIndex(selectedAnnotationIndex)
+        this.selectPortal()
         this.selectWiki()
 
         // Keep accessed index, even if annotation is deselected.
@@ -567,7 +568,7 @@ class App extends Component {
         }
     }
 
-    selectPortal(e, portalsIndex) {
+    selectPortal(e, portalsIndex = 0) {
         this._stopPropagation(e)
 
         this.props.selectPortalsIndex(portalsIndex)
@@ -575,6 +576,7 @@ class App extends Component {
 
     selectSongFromPortal(e, selectedSongIndex, selectedAnnotationIndex) {
         this._stopPropagation(e)
+        this.selectPortal()
 
         // TODO: Don't reset time if it's the same song.
         this.selectSong(undefined, selectedSongIndex)
@@ -749,10 +751,19 @@ class App extends Component {
     }
 
     handleAnnotationSectionClick(e) {
+        /**
+         * Clicking inside the annotation popup itself should keep it open, but
+         * close any other popups.
+         */
+
         this._handleAccessOn(0)
 
         if (this.props.selectedWikiIndex) {
             this.selectWiki()
+        }
+
+        if (this.props.selectedPortalsIndex) {
+            this.selectPortal()
         }
 
         this._focusApp()
@@ -761,6 +772,7 @@ class App extends Component {
     _onBodyClick(e) {
         this._handleAccessOn(0)
         this.selectAnnotation()
+        this.selectPortal()
         this.selectWiki()
         this.selectDotsExpand(undefined, 0)
 

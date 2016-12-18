@@ -1,7 +1,7 @@
 import React from 'react'
 import AnnotationPopup from '../annotation/annotation-popup'
 import WikiPopup from '../wiki/wiki-popup'
-import PortalSection from '../portal/portal-section'
+import PortalPopup from '../portal/portal-popup'
 import DotsSection from '../dots/dots-section'
 import LyricsSection from '../lyrics/lyrics-section'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
@@ -98,11 +98,12 @@ const SongView = ({
                 nextSectionKey={nextSectionKey}
                 onPopupButtonClick={onWikiUrlClick}
             />
-            <PortalSection
+            <PortalPopup
                 songs={songs}
                 portalsIndices={portalsIndices}
                 selectedPortalsIndex={selectedPortalsIndex}
                 onSongFromPortalClick={onSongFromPortalClick}
+                onPopupButtonClick={onPortalClick}
             />
             <DotsSection
                 isAdmin={true}

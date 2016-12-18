@@ -19,7 +19,7 @@ const PortalSection = ({
         onClick = e => onSongFromPortalClick(e, songIndex, annotationIndex)
 
     return (
-        <PortalSectionView
+        <PortalSectionView {...other}
             songTitle={songTitle}
             annotationTitle={annotationTitle}
             onClick={onClick}
@@ -34,6 +34,7 @@ const PortalSection = ({
 const PortalSectionView = ({
 
     // From props.
+    inPopup,
 
     // From controller.
     songTitle,
@@ -42,7 +43,7 @@ const PortalSectionView = ({
 
 }) => (
     <div
-        className="section portal-section"
+        className={`section portal-section${inPopup ? ' in-popup' : ''}`}
     >
         <h2>portal</h2>
         <a

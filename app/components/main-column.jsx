@@ -6,6 +6,7 @@ import DotsTipsSection from './dots-tips-section'
 import OverviewToggleSection from './overview/overview-toggle-section'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
+import PortalPopup from './portal/portal-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsPopup from './dots/dots-popup'
 import { getDotsTipsInMain } from 'helpers/responsive-helper'
@@ -52,6 +53,7 @@ const MainColumnView = ({
     title,
     annotation,
     overviewText,
+    portalsIndices,
     bookStartingIndices,
     showSingleBookColumn,
     shrinkNavIcon,
@@ -61,6 +63,7 @@ const MainColumnView = ({
     selectedBookColumnIndex,
     selectedDotKeys,
     selectedDotsIndex,
+    selectedPortalsIndex,
     presentDotKeys,
     selectedWikiUrl,
     selectedWikiIndex,
@@ -87,6 +90,7 @@ const MainColumnView = ({
     onWikiUrlClick,
     onOverviewClick,
     onPortalClick,
+    onSongFromPortalClick,
     onAnnotationClick,
     onAnnotationSectionClick,
     onDotsExpandClick,
@@ -112,6 +116,13 @@ const MainColumnView = ({
             onWikiUrlClick,
             onPopupButtonClick: onAnnotationClick,
             onSectionClick: onAnnotationSectionClick
+        },
+        portalPopupProps = {
+            songs,
+            portalsIndices,
+            selectedPortalsIndex,
+            onSongFromPortalClick,
+            onPopupButtonClick: onPortalClick
         },
         wikiPopupProps = {
             selectedWikiUrl,
@@ -201,6 +212,9 @@ const MainColumnView = ({
                 <div className="field popup-field">
                     <div className="subfield annotation-subfield">
                         <AnnotationPopup {...annotationPopupProps} />
+                    </div>
+                    <div className="subfield portal-subfield">
+                        <PortalPopup {...portalPopupProps} />
                     </div>
                     <div className="subfield wiki-subfield">
                         <WikiPopup {...wikiPopupProps} />
