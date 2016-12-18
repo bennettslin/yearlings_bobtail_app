@@ -33,23 +33,6 @@
     }
 }
 
-.expand-button-block {
-    left: 50%;
-
-    .transition(top 0.2s ease);
-
-    // FIXME: Don't hard code.
-    top: -54px;
-
-    transform: translateX(-50%);
-}
-
-.is-logue, .lyric-expanded, .overview-shown {
-    .expand-button-block {
-        top: 0;
-    }
-}
-
 .ear-button-block {
     // Needed to expand properly in Chrome.
     left: 0;
@@ -97,6 +80,13 @@
         .transition(height 0.2s ease);
     }
 
+    .expand-button-block {
+        left: 50%;
+        .transition(top 0.2s ease);
+        top: -@app-tablet-large-icon-diameter - 2 * @app-thin-margin;
+        transform: translateX(-50%);
+    }
+
     .lyric-expanded {
         &.is-song {
             .lyric-column {
@@ -111,13 +101,29 @@
         }
     }
 
+    &.mini-width {
+        .expand-button-block {
+            top: -@app-mini-large-icon-diameter - 2 * @app-thin-margin;
+        }
+    }
+
     &.phone-width {
+        .expand-button-block {
+            top: -@app-icon-diameter - 2 * @app-thin-margin;
+        }
+
         .lyric-expanded {
             &.is-song {
                 .lyric-column {
                     height: ~"calc(100% - @{menu-phone-height})";
                 }
             }
+        }
+    }
+
+    .is-logue, .lyric-expanded, .overview-shown {
+        .expand-button-block {
+            top: 0;
         }
     }
 }

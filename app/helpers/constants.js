@@ -302,7 +302,7 @@ module.exports = {
         NARRATIVE, // My perspective in the story.
         BACKSTORY, // My perspective while making the album.
         PUN,
-        FORESHADOW,
+        // FORESHADOW,
         MUSIC,
         PULPIT,
         WIKI,
@@ -314,7 +314,7 @@ module.exports = {
         [NARRATIVE]: 'the story', // My perspective in the story.
         [BACKSTORY]: 'backstory description', // My perspective while making the album.
         [PUN]: 'literary pun',
-        [FORESHADOW]: 'foreshadow description',
+        // [FORESHADOW]: 'foreshadow description',
         [MUSIC]: 'music description',
         [PULPIT]: 'pulpit description',
         [WIKI]: 'wiki description',

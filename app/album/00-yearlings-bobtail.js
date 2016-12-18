@@ -99,7 +99,7 @@ module.exports = {
         {
             taskName: `do z-indices`,
             workedHours: 0,
-            neededHours: 18
+            neededHours: 1
         },
         {
             taskName: `nav widths use % instead of vw`,
