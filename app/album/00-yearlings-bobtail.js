@@ -57,9 +57,14 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Show portal in annotation, and remove portals indices code`,
+            taskName: `Show portal in annotation`,
             workedHours: 0,
-            neededHours: 7
+            neededHours: 6
+        },
+        {
+            taskName: `Remove portals indices code`,
+            workedHours: 0,
+            neededHours: 1
         },
         {
             taskName: `allow annotation to remain selected when song advances to next song.`,
@@ -70,16 +75,6 @@ module.exports = {
             taskName: `layout, position, and style annotation section.`,
             workedHours: 0,
             neededHours: 3
-        },
-        {
-            taskName: `layout, position, and style wiki section.`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `animate swapping of left and right lyric stanzas.`,
-            workedHours: 0,
-            neededHours: 5
         },
         {
             taskName: `show ear and expand buttons in collapsed lyric column only upon scroll down.`,
@@ -190,6 +185,16 @@ module.exports = {
         //     taskName: `Wiki popups are broken in Chrome. (But only in Canary, it seems.)`,
         //     workedHours: 0,
         //     neededHours: 1
+        // },
+        // {
+        //     taskName: `animate swapping of left and right lyric stanzas.`,
+        //     workedHours: 0,
+        //     neededHours: 5
+        // },
+        // {
+        //     taskName: `layout, position, and style wiki section.`,
+        //     workedHours: 0,
+        //     neededHours: 3
         // },
         {
             taskName: `refactor to get album objects`,
