@@ -57,7 +57,7 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `show bare-bones portal in popup`,
+            taskName: `Show portal in annotation, and remove portals indices code`,
             workedHours: 0,
             neededHours: 7
         },
@@ -105,11 +105,6 @@ module.exports = {
             taskName: `toggle min and max device widths`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `setDOMWidth method doesn't work on reload and device width change`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `Make dot tooltip touch focused`,
@@ -912,6 +907,11 @@ module.exports = {
             taskName: `figure out best way to do portals`,
             workedHours: 8,
             neededHours: 8
+        },
+        {
+            taskName: `setDOMWidth method doesn't work on reload and device width change`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

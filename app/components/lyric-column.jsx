@@ -7,7 +7,6 @@ import LyricsSection from './lyrics/lyrics-section'
 
 const LyricColumn = ({
 
-    selectedSongIndex,
     hasDoubleColumns,
 
 ...other }) => {

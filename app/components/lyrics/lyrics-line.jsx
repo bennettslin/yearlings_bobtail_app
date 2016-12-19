@@ -12,16 +12,10 @@ class LyricsLine extends Component {
 
     /**
      * Ugly workaround to adjust line width to fit child text when text wraps
-     * onto a new line, but it works. (Well, fingers crossed.)
+     * onto a new line, but it works. (Well, fingers crossed.) Update: Seems
+     * this only needs to be done when component is updated, not when it is
+     * first mounted?
      */
-    componentWillMount() {
-        // FIXME: Don't bother to call here, because refs aren't established at this point.
-        // this.setDOMWidth(true)
-    }
-    componentDidMount() {
-        this.setDOMWidth()
-    }
-
     componentWillUpdate(nextProps, nextState) {
         if (this._shouldResetWidthBasedOnProps(this.props, nextProps)) {
             this.setDOMWidth(true)
