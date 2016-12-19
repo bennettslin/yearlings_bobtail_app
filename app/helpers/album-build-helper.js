@@ -15,7 +15,6 @@ const _tempStore = {
     _popupAnchors: [],
     _wikiIndex: 1,
     _portalLinks: {},
-    _portalsIndices: [],
     _songTimes: [],
     _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
@@ -35,11 +34,6 @@ export const prepareAlbumData = (album = {}) => {
      * collecting portal links from the entire album.
      */
     _addWikiAndPortalIndices(album)
-
-    /**
-     * Add list of portals.
-     */
-    album.portalsIndices = _tempStore._portalsIndices
 }
 
 const _addWikiAndPortalIndices = (album) => {
@@ -393,10 +387,6 @@ const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0, verseInde
         if (!_tempStore._portalLinks[portal]) {
             _tempStore._portalLinks[portal] = []
         }
-
-        // Add portals index to be looked up by app.
-        portalLink.portalsIndex = _tempStore._portalsIndices.length
-        _tempStore._portalsIndices.push(Object.assign({}, portalLink))
 
         // Add portal link to portal links array.
         _tempStore._portalLinks[portal].push(portalLink)

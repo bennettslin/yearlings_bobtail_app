@@ -24,7 +24,8 @@ const AnnotationPortalsBlockView = ({
     <div className="portals-block">
         {portalLinks.map((portalObject, index) => {
             const { portalIndex,
-                    portalsIndex,
+                    songIndex,
+                    annotationIndex,
                     songTitle,
                     annotationTitle } = portalObject,
 
@@ -33,7 +34,7 @@ const AnnotationPortalsBlockView = ({
             return (
                 <a key={index}
                     className={`portal-button enabled${portalIndex ? ' portal-' + portalIndex : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
-                    onClick={e => onPortalClick(e, portalsIndex)}>
+                    onClick={e => onPortalClick(e, songIndex, annotationIndex)}>
                     <div className="song-title">{songTitle}</div>
                     <div className="annotation-title">{annotationTitle}</div>
                 </a>

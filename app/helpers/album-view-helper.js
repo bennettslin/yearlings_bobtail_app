@@ -352,40 +352,21 @@ export const getPortalLinks = (card, songs) => {
             const { songIndex,
                     annotationIndex,
                     verseIndex,
-                    portalIndex,
-                    portalsIndex } = portalLink,
+                    portalIndex } = portalLink,
                 song = songs[songIndex],
                 annotation = song.annotations[annotationIndex - 1]
 
             return {
                 verseIndex,
                 portalIndex,
-                portalsIndex,
+                songIndex,
+                annotationIndex,
                 songTitle: song.title,
                 annotationTitle: annotation.title
             }
         }) : null
     } else {
         return null
-    }
-}
-
-export const getPortalFromIndex = ({ selectedPortalsIndex,
-                                     portalsIndices,
-                                     songs }) => {
-
-    const { songIndex,
-            annotationIndex,
-            verseIndex } = portalsIndices[selectedPortalsIndex],
-        song = songs[songIndex],
-        annotation = song.annotations[annotationIndex - 1]
-
-    return {
-        songIndex,
-        annotationIndex,
-        verseIndex,
-        songTitle: song.title,
-        annotationTitle: annotation.title
     }
 }
 

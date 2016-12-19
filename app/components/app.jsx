@@ -14,7 +14,6 @@ import { selectSongIndex,
          selectWikiIndex,
          selectNavIndex,
          selectDotsIndex,
-         selectPortalsIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
 import AdminToggle from './admin/admin-toggle'
@@ -47,7 +46,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex, getPortalFromIndex } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -71,7 +70,6 @@ const passReduxStateToProps = ({
     selectedWikiIndex,
     selectedNavIndex,
     selectedDotsIndex,
-    selectedPortalsIndex,
     accessedOn,
     accessedSectionIndex
 }) => ({
@@ -88,7 +86,6 @@ const passReduxStateToProps = ({
     selectedWikiIndex,
     selectedNavIndex,
     selectedDotsIndex,
-    selectedPortalsIndex,
     accessedOn,
     accessedSectionIndex
 })
@@ -108,7 +105,6 @@ const bindDispatchToProps = (dispatch) => (
         selectWikiIndex,
         selectNavIndex,
         selectDotsIndex,
-        selectPortalsIndex,
         accessOn,
         accessSectionIndex
     }, dispatch)
@@ -174,7 +170,6 @@ class App extends Component {
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
         this.selectDot = this.selectDot.bind(this)
-        this.selectPortal = this.selectPortal.bind(this)
         this.selectSongFromPortal = this.selectSongFromPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
@@ -195,7 +190,6 @@ class App extends Component {
 
     _assignLogFunctions() {
         window.t = LogHelper.logStorage.bind(LogHelper)
-        window.p = LogHelper.logPortalsIndices.bind(LogHelper, this)
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
@@ -522,7 +516,6 @@ class App extends Component {
         }
 
         this.props.selectAnnotationIndex(selectedAnnotationIndex)
-        this.selectPortal()
         this.selectWiki()
 
         // Keep accessed index, even if annotation is deselected.
@@ -571,15 +564,8 @@ class App extends Component {
         }
     }
 
-    selectPortal(e, portalsIndex = 0) {
-        this._stopPropagation(e)
-
-        this.props.selectPortalsIndex(portalsIndex)
-    }
-
     selectSongFromPortal(e, selectedSongIndex, selectedAnnotationIndex) {
         this._stopPropagation(e)
-        this.selectPortal()
 
         // TODO: Don't reset time if it's the same song.
         this.selectSong(undefined, selectedSongIndex)
@@ -594,7 +580,7 @@ class App extends Component {
             if (typeof popupAnchorObject === 'string') {
                 this.selectWiki(true, this.state.accessedPopupAnchorIndex)
             } else {
-                this.selectPortal(undefined, popupAnchorObject.portalsIndex)
+                this.selectSongFromPortal(undefined, popupAnchorObject.songIndex, popupAnchorObject.annotationIndex)
             }
         }
     }
@@ -765,17 +751,12 @@ class App extends Component {
             this.selectWiki()
         }
 
-        if (this.props.selectedPortalsIndex) {
-            this.selectPortal()
-        }
-
         this._focusApp()
     }
 
     _onBodyClick(e) {
         this._handleAccessOn(0)
         this.selectAnnotation()
-        this.selectPortal()
         this.selectWiki()
         this.selectDotsExpand(undefined, 0)
 
@@ -1063,7 +1044,6 @@ class App extends Component {
                     isLyricExpandable={isLyricExpandable}
                     isOverviewShown={isOverviewShown}
                     onSongClick={this.selectSong}
-                    onPortalClick={this.selectPortal}
                     onSongFromPortalClick={this.selectSongFromPortal}
                     onWikiUrlClick={this.selectWiki}
                     onAnnotationClick={this.selectAnnotation}

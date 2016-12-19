@@ -62,11 +62,6 @@ module.exports = {
             neededHours: 6
         },
         {
-            taskName: `Remove portals indices code`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `allow annotation to remain selected when song advances to next song.`,
             workedHours: 0,
             neededHours: 5
@@ -917,6 +912,11 @@ module.exports = {
             taskName: `animate dots tips section in main for logue.`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `Remove portals indices code`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

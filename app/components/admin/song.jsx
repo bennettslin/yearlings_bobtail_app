@@ -1,7 +1,6 @@
 import React from 'react'
 import AnnotationPopup from '../annotation/annotation-popup'
 import WikiPopup from '../wiki/wiki-popup'
-import PortalPopup from '../portal/portal-popup'
 import DotsSection from '../dots/dots-section'
 import LyricsSection from '../lyrics/lyrics-section'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
@@ -37,7 +36,6 @@ const SongView = ({
 
     // From props.
     songs,
-    portalsIndices,
     selectedAnnotationIndex,
     selectedWikiIndex,
     selectedDotKeys,
@@ -46,7 +44,6 @@ const SongView = ({
     showSingleLyricColumn,
     selectedLyricColumnIndex,
     selectedSongIndex,
-    selectedPortalsIndex,
     lyricsStartAtZero,
     accessedOn,
     accessedSectionKey,
@@ -58,7 +55,6 @@ const SongView = ({
     accessedDotIndex,
 
     onDotClick,
-    onPortalClick,
     onWikiUrlClick,
     onAnnotationClick,
     onVerseClick,
@@ -86,7 +82,7 @@ const SongView = ({
                 accessedSectionKey={accessedSectionKey}
                 nextSectionKey={nextSectionKey}
                 showArrows={true}
-                onPortalClick={onPortalClick}
+                onPortalClick={onSongFromPortalClick}
                 onWikiUrlClick={onWikiUrlClick}
                 onPopupButtonClick={onAnnotationClick}
                 onSectionClick={onAnnotationSectionClick}
@@ -97,13 +93,6 @@ const SongView = ({
                 accessedSectionKey={accessedSectionKey}
                 nextSectionKey={nextSectionKey}
                 onPopupButtonClick={onWikiUrlClick}
-            />
-            <PortalPopup
-                songs={songs}
-                portalsIndices={portalsIndices}
-                selectedPortalsIndex={selectedPortalsIndex}
-                onSongFromPortalClick={onSongFromPortalClick}
-                onPopupButtonClick={onPortalClick}
             />
             <DotsSection
                 isAdmin={true}

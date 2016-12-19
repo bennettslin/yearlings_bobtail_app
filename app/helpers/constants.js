@@ -220,7 +220,6 @@ module.exports = {
     SELECTED_TIPS_INDEX: 'selectedTipsIndex',
     SELECTED_NAV_INDEX: 'selectedNavIndex',
     SELECTED_DOTS_INDEX: 'selectedDotsIndex',
-    SELECTED_PORTALS_INDEX: 'selectedPortalsIndex',
     ACCESSED_ON: 'accessedOn',
     ACCESSED_SECTION_INDEX: 'accessedSectionIndex',
 
