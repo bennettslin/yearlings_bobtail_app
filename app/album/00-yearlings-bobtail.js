@@ -77,11 +77,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `animate dots tips section in main for logue.`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `animate swapping of left and right lyric stanzas.`,
             workedHours: 0,
             neededHours: 5
@@ -910,6 +905,11 @@ module.exports = {
         },
         {
             taskName: `setDOMWidth method doesn't work on reload and device width change`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `animate dots tips section in main for logue.`,
             workedHours: 2,
             neededHours: 2
         }

@@ -9,20 +9,14 @@ import AnnotationPopup from './annotation/annotation-popup'
 import PortalPopup from './portal/portal-popup'
 import WikiPopup from './wiki/wiki-popup'
 import DotsPopup from './dots/dots-popup'
-import { getDotsTipsInMain } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
  *************/
 
 const MainColumn = (props) => {
-
-    const dotsTipsInMain = getDotsTipsInMain(props)
-
     return (
-        <MainColumnView {...props}
-            dotsTipsInMain={dotsTipsInMain}
-        />
+        <MainColumnView {...props} />
     )
 }
 
@@ -35,6 +29,7 @@ const MainColumnView = ({
     // From props.
     overviewPopupProps,
 
+    dotsTipsOutsideMenu,
     isPhone,
     deviceIndex,
     windowWidth,
@@ -98,9 +93,6 @@ const MainColumnView = ({
     onBookColumnClick,
     onLyricExpandClick,
 
-    // From controller.
-    dotsTipsInMain
-
 }) => {
     const annotationPopupProps = {
             songs,
@@ -152,7 +144,7 @@ const MainColumnView = ({
             deviceIndex,
             windowWidth,
             dotsTipsSectionProps,
-            dotsTipsInMain,
+            dotsTipsOutsideMenu,
 
             isPhone,
             title,
@@ -205,7 +197,7 @@ const MainColumnView = ({
         }
 
     return (
-        <div className={`column main-column${dotsTipsInMain ? ' dots-tips-in-main' : ''}`}>
+        <div className="column main-column">
             <MenuField {...menuFieldProps} />
             <div className="field centre-field">
 
@@ -242,13 +234,6 @@ const MainColumnView = ({
                     </div>
                 }
 
-                {dotsTipsInMain ?
-                    <div className="dots-tips-custom-subfield">
-                        <DotsTipsSection {...dotsTipsSectionProps} />
-                    </div> : null
-                }
-
-                {/* FIXME: Get rid of this, and its props. */}
                 {isHeightlessLyricColumn ?
                     <div className="lyric-button-block expand-button-block in-main">
                         <a

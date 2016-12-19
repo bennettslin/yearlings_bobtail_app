@@ -63,7 +63,7 @@
     .dots-tips-custom-subfield {
         right: 0;
         .transition(bottom 0.2s ease);
-        bottom: 0;
+        bottom: @collapsed-lyric-section-height;
 
         .dots-tips-section {
             position: absolute;
@@ -73,10 +73,9 @@
         }
     }
 
-    .is-logue {
+    .is-logue, .heightless-lyric {
         .dots-tips-custom-subfield {
-            // FIXME: This isn't right, obviously.
-            bottom: -200px;
+            bottom: 0;
         }
     }
 

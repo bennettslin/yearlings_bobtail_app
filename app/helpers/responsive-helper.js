@@ -82,9 +82,9 @@ const _getShrinkNavIconForDeviceObject = (windowWidth, deviceObject) => {
     return windowWidth < singleColumnStaticBreakpoint || (windowWidth >= doubleColumnShrinkBreakpoint && windowWidth < doubleColumnStaticBreakpoint)
 }
 
-const _getDotsTipsInMainForDeviceObject = (windowWidth, deviceObject) => {
-    const { dotsTipsInMainBreakpoint } = deviceObject
-    return windowWidth < dotsTipsInMainBreakpoint
+const _getdotsTipsOutsideMenuForDeviceObject = (windowWidth, deviceObject) => {
+    const { dotsTipsOutsideMenuBreakpoint } = deviceObject
+    return windowWidth < dotsTipsOutsideMenuBreakpoint
 }
 
 
@@ -144,7 +144,7 @@ export const getIsHeightlessLyricColumn = (state) => {
     return getIsLyricExpandable(state) && state.windowHeight < HEIGHTLESS_LYRIC_MAX
 }
 
-export const getDotsTipsInMain = (state) => {
+export const getdotsTipsOutsideMenu = (state) => {
     const { deviceIndex,
             windowWidth } = state,
         deviceObject = DEVICE_OBJECTS[deviceIndex]
@@ -152,7 +152,7 @@ export const getDotsTipsInMain = (state) => {
     if (deviceObject.className === PHONE_WIDTH) {
         return true
     } else {
-        return _getDotsTipsInMainForDeviceObject(windowWidth, deviceObject)
+        return _getdotsTipsOutsideMenuForDeviceObject(windowWidth, deviceObject)
     }
 }
 

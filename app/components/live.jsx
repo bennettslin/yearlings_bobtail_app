@@ -1,9 +1,10 @@
 import React from 'react'
 import MainColumn from './main-column'
 import LyricColumn from './lyric-column'
+import DotsTipsSection from './dots-tips-section'
 import OverviewPopup from './overview/overview-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getIsPhone, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn } from 'helpers/responsive-helper'
+import { getIsPhone, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getdotsTipsOutsideMenu } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -23,7 +24,8 @@ const Live = (props) => {
         isHeightlessLyricColumn = getIsHeightlessLyricColumn(props),
         showSingleBookColumn = getShowSingleBookColumn(props),
         shrinkNavIcon = getShrinkNavIcon(props),
-        isDotsShown = selectedDotsIndex === 1
+        isDotsShown = selectedDotsIndex === 1,
+        dotsTipsOutsideMenu = getdotsTipsOutsideMenu(props)
 
     return (
         <LiveView {...props}
@@ -41,6 +43,7 @@ const Live = (props) => {
             showSingleBookColumn={showSingleBookColumn}
             shrinkNavIcon={shrinkNavIcon}
             isDotsShown={isDotsShown}
+            dotsTipsOutsideMenu={dotsTipsOutsideMenu}
         />
     )
 }
@@ -132,7 +135,8 @@ const LiveView = ({
     isHeightlessLyricColumn,
     showSingleBookColumn,
     shrinkNavIcon,
-    isDotsShown
+    isDotsShown,
+    dotsTipsOutsideMenu
 
 }) => {
 
@@ -147,6 +151,7 @@ const LiveView = ({
         mainColumnProps = {
             overviewPopupProps,
 
+            dotsTipsOutsideMenu,
             isPhone,
             deviceIndex,
             windowWidth,
@@ -233,6 +238,12 @@ const LiveView = ({
             onAnnotationClick,
             onLyricExpandClick,
             onLyricColumnClick
+        },
+        dotsTipsSectionProps = {
+            selectedTipsIndex,
+            selectedDotsIndex,
+            onTipsClick,
+            onDotsExpandClick
         }
 
     return (
@@ -245,6 +256,12 @@ const LiveView = ({
             </div>
             <MainColumn {...mainColumnProps} />
             <LyricColumn {...lyricColumnProps} />
+
+            {dotsTipsOutsideMenu ?
+                <div className="dots-tips-custom-subfield">
+                    <DotsTipsSection {...dotsTipsSectionProps} />
+                </div> : null
+            }
         </div>
     )
 }

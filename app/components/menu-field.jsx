@@ -25,7 +25,7 @@ const MenuFieldView = ({
 
     // From props.
     dotsTipsSectionProps,
-    dotsTipsInMain,
+    dotsTipsOutsideMenu,
 
     isPhone,
     title,
@@ -98,7 +98,7 @@ const MenuFieldView = ({
             <div className="menu-subfield audio-menu-subfield">
                 <AudioSection {...audioSectionProps} />
             </div>
-            {!dotsTipsInMain ?
+            {!dotsTipsOutsideMenu ?
                 <div className="menu-subfield dots-tips-menu-subfield">
                     <DotsTipsSection {...dotsTipsSectionProps} />
                 </div> : null
