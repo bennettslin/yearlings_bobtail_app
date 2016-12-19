@@ -10,6 +10,14 @@ class LyricsLine extends Component {
         super(props)
     }
 
+    componentWillMount() {
+
+    }
+
+    componentDidMount() {
+        this.setDOMWidth(false, true)
+    }
+
     /**
      * Ugly workaround to adjust line width to fit child text when text wraps
      * onto a new line, but it works. (Well, fingers crossed.) Update: Seems
@@ -29,13 +37,19 @@ class LyricsLine extends Component {
     }
 
     _shouldResetWidthBasedOnProps(oldProps, newProps) {
-        return oldProps.selectedSongIndex !== newProps.selectedSongIndex ||
+        const shouldResetWidthBasedOnProps =
+            oldProps.selectedSongIndex !== newProps.selectedSongIndex ||
             oldProps.showSingleLyricColumn !== newProps.showSingleLyricColumn ||
             oldProps.selectedLyricColumnIndex !== newProps.selectedLyricColumnIndex
 
+        if (this.props.verseIndexForDebugging === 1) {
+            console.error('shouldResetWidthBasedOnProps', shouldResetWidthBasedOnProps);
+        }
+
+        return shouldResetWidthBasedOnProps
     }
 
-    setDOMWidth(unset) {
+    setDOMWidth(unset, debugLogOnly) {
         /**
          * TODO: I'm not sure why this method is buggy with centre columns. So
          * I'm excluding it for now, since the only songs that have them, the
@@ -54,8 +68,14 @@ class LyricsLine extends Component {
                     const child = ReactDOM.findDOMNode(this.myChild),
                         offsetWidth = child.offsetWidth
 
-                    // Allow for 10px padding on each side.
-                    parent.style.maxWidth = offsetWidth - 20 + 'px'
+                    if (this.props.verseIndexForDebugging === 1) {
+                        console.error('offsetWidth', offsetWidth);
+                    }
+
+                    if (!debugLogOnly) {
+                        // Allow for 10px padding on each side.
+                        parent.style.maxWidth = offsetWidth - 20 + 'px'
+                    }
                 }
             }
         }
