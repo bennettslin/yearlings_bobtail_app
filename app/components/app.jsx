@@ -285,7 +285,7 @@ class App extends Component {
         })
     }
 
-    selectSong(e, selectedSongIndex = 0, direction) {
+    selectSong(e, selectedSongIndex = 0, direction, fromPortal) {
         this._stopPropagation(e)
 
         // Called from audio section's previous or next buttons.
@@ -297,8 +297,8 @@ class App extends Component {
             }
         }
 
-        // Show overview if it's not disabled.
-        if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED) {
+        // Show overview if it's not disabled, and if not selected from portal.
+        if (!fromPortal && OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED) {
             this.selectOverview(undefined, undefined, SHOWN)
         }
 
@@ -568,7 +568,7 @@ class App extends Component {
         this._stopPropagation(e)
 
         // TODO: Don't reset time if it's the same song.
-        this.selectSong(undefined, selectedSongIndex)
+        this.selectSong(undefined, selectedSongIndex, undefined, true)
         this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
     }
 
