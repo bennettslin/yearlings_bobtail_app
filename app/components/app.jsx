@@ -403,7 +403,10 @@ class App extends Component {
         if (e && selectedDotsIndex) {
 
             // Hide overview and collapse lyrics if shown.
-            this.selectOverview(undefined, undefined, HIDDEN)
+            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+                this.selectOverview(undefined, undefined, HIDDEN)
+            }
+
             this.selectLyricExpand(undefined, false)
         }
     }
