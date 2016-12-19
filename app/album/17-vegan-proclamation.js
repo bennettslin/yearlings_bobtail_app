@@ -368,7 +368,7 @@ module.exports = {
                                     anchor: `swastika`,
                                     wiki: `Swastika`
                                 },
-                                `is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid any association with violence and hatred, modern-day Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
+                                `is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid association with violence and hatred, today's Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
                             ],
                             portal: `swastikas`
                         }

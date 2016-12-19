@@ -1,5 +1,7 @@
 import React from 'react'
-import { getPortalFromIndex } from 'helpers/album-view-helper'
+import AnnotationCard from '../annotation/annotation-card'
+import LyricsVerse from '../lyrics/lyrics-verse'
+import { getPortalFromIndex, getVerse } from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *
@@ -13,15 +15,25 @@ const PortalSection = ({
 
     const { songIndex,
             annotationIndex,
+            verseIndex,
             songTitle,
             annotationTitle } = getPortalFromIndex(other),
 
+        verse = getVerse({
+            selectedSongIndex: songIndex,
+            songs: other.songs
+        }, verseIndex),
+
         onClick = e => onSongFromPortalClick(e, songIndex, annotationIndex)
+
+
+    console.error('verse', verse);
 
     return (
         <PortalSectionView {...other}
             songTitle={songTitle}
             annotationTitle={annotationTitle}
+            verse={verse}
             onClick={onClick}
         />
     )
@@ -39,6 +51,8 @@ const PortalSectionView = ({
     // From controller.
     songTitle,
     annotationTitle,
+
+    verse,
     onClick
 
 }) => (
@@ -52,6 +66,11 @@ const PortalSectionView = ({
         >
             {songTitle}, {annotationTitle}
         </a>
+        {/* <AnnotationCard /> */}
+        <LyricsVerse
+            inPortal={true}
+            verseObject={verse}
+        />
     </div>
 )
 

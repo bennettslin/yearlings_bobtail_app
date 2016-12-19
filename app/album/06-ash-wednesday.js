@@ -101,14 +101,12 @@ module.exports = {
                     `where it commenced: in my`,
                     {
                         anchor: `bookless room,`,
-                        annotation: [
-                            {
-                                description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I said, only partly in jest.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true
-                                }
+                        annotation: {
+                            description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I said, only partly in jest.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
                             }
-                        ]
+                        }
                     }
                 ]
             },
