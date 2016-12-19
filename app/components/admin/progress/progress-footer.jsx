@@ -7,16 +7,20 @@ import ProgressHelper from 'helpers/progress-helper'
 
 const ProgressFooter = ({ sumTask }) => {
 
-    const workedHours = sumTask.workedHours,
-        neededHours = sumTask.neededHours,
+    const neededHours = sumTask.neededHours,
+        workedHours = sumTask.workedHours,
         remainingHours = neededHours - workedHours,
+        neededTime = ProgressHelper.getRemainingTimeStringFromHours(neededHours),
+        workedTime = ProgressHelper.getRemainingTimeStringFromHours(workedHours),
         remainingTime = ProgressHelper.getRemainingTimeStringFromHours(remainingHours)
 
     return (
         <ProgressFooterView
-            workedHours={workedHours}
             neededHours={neededHours}
+            workedHours={workedHours}
             remainingHours={remainingHours}
+            neededTime={neededTime}
+            workedTime={workedTime}
             remainingTime={remainingTime}
         />
     )
@@ -29,9 +33,11 @@ const ProgressFooter = ({ sumTask }) => {
 const ProgressFooterView = ({
 
     // From controller.
-    workedHours,
     neededHours,
+    workedHours,
     remainingHours,
+    neededTime,
+    workedTime,
     remainingTime
 
 }) => (
@@ -39,7 +45,9 @@ const ProgressFooterView = ({
         {neededHours ?
             <div className={'text-cell footer'}>
                 <div>{neededHours} - {workedHours} = {remainingHours}h</div>
-                <div>{remainingTime}</div>
+                <div>needed time: {neededTime}</div>
+                <div>worked time: {workedTime}</div>
+                <div>remaining time: {remainingTime}</div>
             </div> : null
         }
     </div>
