@@ -57,9 +57,19 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Show portal in annotation`,
+            taskName: `Make portals fit well in admin`,
             workedHours: 0,
-            neededHours: 6
+            neededHours: 1
+        },
+        {
+            taskName: `Figure out when portal has no description`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Format portal song title and verse text`,
+            workedHours: 0,
+            neededHours: 1
         },
         {
             taskName: `allow annotation to remain selected when song advances to next song.`,
@@ -917,6 +927,11 @@ module.exports = {
             taskName: `Remove portals indices code`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `Show portal in annotation`,
+            workedHours: 4,
+            neededHours: 4
         }
     ]
 }

@@ -787,6 +787,8 @@ module.exports = {
                                 anchor: `shivah`,
                                 wiki: `Shiva_(Judaism)`
                             },
+
+                            // TODO: Make clear lifetime means marriage to death.
                             `is a week-long mourning period in Judaism after a close relative has passed away. Here again, I lament that not being born Jewish has lost my chance for a lifetime with Sasha.`
                         ],
                         portal: `chivalry`

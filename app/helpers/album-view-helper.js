@@ -84,7 +84,7 @@ export const getVerse = ({ selectedVerseIndex, ...other }, verseIndex) => {
     return _parseLyrics(lyrics, verseIndex || selectedVerseIndex)
 }
 
-export const getCardFromIndex = ({ annotation, cardIndex }) => {
+const _getCardFromIndex = ({ annotation, cardIndex }) => {
     const { cards } = annotation
 
     if (Array.isArray(cards)) {
@@ -368,7 +368,7 @@ export const getPortalLinks = (card, songs) => {
                     portalIndex } = portalLink,
                 song = songs[songIndex],
                 annotation = song.annotations[annotationIndex - 1],
-                cardObject = getCardFromIndex({
+                cardObject = _getCardFromIndex({
                     annotation,
                     cardIndex
                 }),
