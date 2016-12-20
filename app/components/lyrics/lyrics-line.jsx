@@ -10,12 +10,14 @@ class LyricsLine extends Component {
         super(props)
     }
 
-    componentWillMount() {
-
-    }
-
     componentDidMount() {
-        this.setDOMWidth(false, true)
+        /**
+         * FIXME: Setting timeout of zero seems to work! Keep debugging code in
+         * place for now. Rip it out once confident that this is indeed the
+         * final fix for this issue.
+         */
+        // this.setDOMWidth(false, true) // Debug statement
+        window.setTimeout(this.setDOMWidth.bind(this), 0)
     }
 
     /**
@@ -42,9 +44,9 @@ class LyricsLine extends Component {
             oldProps.showSingleLyricColumn !== newProps.showSingleLyricColumn ||
             oldProps.selectedLyricColumnIndex !== newProps.selectedLyricColumnIndex
 
-        if (this.props.verseIndexForDebugging === 1) {
-            console.error('shouldResetWidthBasedOnProps', shouldResetWidthBasedOnProps);
-        }
+        // if (this.props.verseIndexForDebugging === 1) {
+        //     console.error('shouldResetWidthBasedOnProps', shouldResetWidthBasedOnProps);
+        // }
 
         return shouldResetWidthBasedOnProps
     }
@@ -55,6 +57,11 @@ class LyricsLine extends Component {
          * I'm excluding it for now, since the only songs that have them, the
          * doublespeaker ones, don't need them for wide layout, and of course
          * centre columns become left columns in narrow layout.
+         */
+
+        /**
+         * TODO: Now that the issue seems resolved, can we not exclude centre
+         * columns?
          */
         if (this.props.columnKey !== TITLE && this.props.columnKey !== CENTRE) {
             const parent = ReactDOM.findDOMNode(this.myParent)
@@ -68,9 +75,9 @@ class LyricsLine extends Component {
                     const child = ReactDOM.findDOMNode(this.myChild),
                         offsetWidth = child.offsetWidth
 
-                    if (this.props.verseIndexForDebugging === 1) {
-                        console.error('offsetWidth', offsetWidth);
-                    }
+                    // if (this.props.verseIndexForDebugging === 1) {
+                    //     console.error('offsetWidth', offsetWidth);
+                    // }
 
                     if (!debugLogOnly) {
                         // Allow for 10px padding on each side.
