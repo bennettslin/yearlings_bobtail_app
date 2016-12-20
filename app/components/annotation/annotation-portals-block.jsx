@@ -48,6 +48,8 @@ const AnnotationPortalsBlockView = ({
                         <TextBlock
                             inPortal={true}
                             text={column ? verseObject[column] : verseObject.lyric}
+                            selectedDotKeys={selectedDotKeys}
+                            portalAnnotationIndex={annotationIndex}
                         />
                     </div>
 

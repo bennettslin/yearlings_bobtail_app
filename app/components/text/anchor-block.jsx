@@ -10,6 +10,7 @@ import { LYRIC_ANNOTATION_ELEMENT } from 'helpers/constants'
 
 const AnchorBlock = ({
 
+    portalAnnotationIndex,
     text,
     selectedAnnotationIndex,
     selectedWikiIndex,
@@ -30,6 +31,7 @@ const AnchorBlock = ({
             portalIndex } = text,
 
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
+        isPortalAnchor = portalAnnotationIndex === annotationIndex,
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
         accessHighlighted = sectionAccessHighlighted && ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex && accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) || (accessedPopupAnchorIndex && accessedPopupAnchorIndex === wikiIndex)),
 
@@ -39,12 +41,13 @@ const AnchorBlock = ({
          * reference, and the argument is a url string.
          */
         clickHandlerArgument = annotationIndex || wikiIndex,
-        onClick = !isSelected ? e => onAnchorClick(e, clickHandlerArgument) : null
+        onClick = !isSelected && !other.inPortal ? e => onAnchorClick(e, clickHandlerArgument) : null
 
     return (
         <AnchorBlockView {...other}
             hasTodo={todo}
             isSelected={isSelected}
+            isPortalAnchor={isPortalAnchor}
             annotationIndex={annotationIndex}
             accessHighlighted={accessHighlighted}
             wikiIndex={wikiIndex}
@@ -62,6 +65,7 @@ const AnchorBlock = ({
 const AnchorBlockView = ({
 
     // From props.
+    inPortal,
     isLyric,
     beginsNewLine,
     accessHighlighted,
@@ -69,6 +73,7 @@ const AnchorBlockView = ({
     // From controller.
     hasTodo,
     isSelected,
+    isPortalAnchor,
     annotationIndex,
     wikiIndex,
     dotKeys,
@@ -81,14 +86,14 @@ const AnchorBlockView = ({
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
         { !beginsNewLine ? ' ' : null }
         <a
-            className={`anchor-block${accessHighlighted ? ' access-highlighted' : ''}${annotationIndex ? ' annotation-' + annotationIndex : ''}${wikiIndex ? ' wiki-' + wikiIndex : ''}${isSelected ? '' : ' enabled'}${hasTodo ? ' todo' : ''}`}
+            className={`anchor-block${accessHighlighted ? ' access-highlighted' : ''}${annotationIndex ? ' annotation-' + annotationIndex : ''}${wikiIndex ? ' wiki-' + wikiIndex : ''}${isSelected || inPortal ? '' : ' enabled'}${isPortalAnchor ? ' portal-anchor' : ''}${hasTodo ? ' todo' : ''}`}
             onClick={onClick}
         >
-            {isLyric ?
+            {isLyric || isPortalAnchor ?
                 <span className="underline-bar">
                 </span> : null
             }
-            {dotKeys && !wikiIndex ?
+            {(dotKeys && !wikiIndex && !inPortal) || isPortalAnchor ?
                 <DotsBlock
                     inBackground={isSelected}
                     presentDotKeys={dotKeys}

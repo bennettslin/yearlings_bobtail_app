@@ -1,12 +1,13 @@
 .annotation-section {
 
-    .annotation-card, {
+    .annotation-card {
         min-height: 1.8em;
         margin: 5px 0;
         padding: 5px;
         box-shadow: 0 1px 1px 1px @box-shadow-colour;
 
-        .dots-block {
+        // Select for annotation card dots, not portal dots.
+        > .dots-block {
             @dot-diameter: 1.8em;
             .dot-diameter-mixin(@dot-diameter);
             position: absolute;

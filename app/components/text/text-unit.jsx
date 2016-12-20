@@ -11,6 +11,7 @@ import { intersects } from 'helpers/dot-helper'
 const TextUnit = ({
 
     inPortal,
+    inPortalCard,
     text,
     selectedDotKeys,
     showWikis,
@@ -49,13 +50,15 @@ const TextUnit = ({
             const showAsAnchor = intersects(text.dotKeys, selectedDotKeys),
                 showIfWiki = showWikis !== false
 
-            return (showAsAnchor && showIfWiki && !inPortal ?
+            return (showAsAnchor && showIfWiki && !(inPortal && inPortalCard) ?
                 <AnchorBlock {...other}
+                    inPortal={inPortal}
                     text={text}
                     selectedDotKeys={selectedDotKeys}
                 /> :
                 <TextBlock {...other}
                     isPortalAnchor={inPortal}
+                    inPortalCard={inPortalCard}
                     text={text.anchor}
                 />
             )
