@@ -32,8 +32,10 @@ const AnnotationCard = ({
 
     return (shouldShow ?
         <AnnotationCardView {...other}
+            songs={songs}
             text={description}
             dotKeys={intersectedDotKeys}
+            selectedDotKeys={selectedDotKeys}
             portalLinks={portalLinks}
             showWikis={showWikis}
             showPortals={showPortals}
@@ -48,6 +50,10 @@ const AnnotationCard = ({
 const AnnotationCardView = ({
 
     // From props.
+    inPortal,
+    inPortalCard,
+    songs,
+    selectedDotKeys,
     onWikiUrlClick,
     onPortalClick,
     selectedWikiIndex,
@@ -68,6 +74,8 @@ const AnnotationCardView = ({
             presentDotKeys={dotKeys}
         />
         <TextBlock
+            inPortal={inPortal}
+            inPortalCard={inPortalCard}
             isLyric={false}
             text={text}
             showWikis={showWikis}
@@ -76,8 +84,10 @@ const AnnotationCardView = ({
             accessedPopupAnchorIndex={accessedPopupAnchorIndex}
             onAnchorClick={onWikiUrlClick}
         />
-        {portalLinks && showPortals ?
+        {!inPortal && portalLinks && showPortals ?
             <AnnotationPortalsBlock
+                songs={songs}
+                selectedDotKeys={selectedDotKeys}
                 portalLinks={portalLinks}
                 sectionAccessHighlighted={sectionAccessHighlighted}
                 accessedPopupAnchorIndex={accessedPopupAnchorIndex}

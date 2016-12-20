@@ -84,6 +84,17 @@ export const getVerse = ({ selectedVerseIndex, ...other }, verseIndex) => {
     return _parseLyrics(lyrics, verseIndex || selectedVerseIndex)
 }
 
+export const getCardFromIndex = ({ annotation, cardIndex }) => {
+    const { cards } = annotation
+
+    if (Array.isArray(cards)) {
+        return cards[cardIndex]
+
+    } else {
+        return cards
+    }
+}
+
 const _shouldShowAnnotationForColumn = (annotation, lyricColumnShown) => {
     if (!lyricColumnShown || !annotation.column) {
         return true
@@ -351,18 +362,30 @@ export const getPortalLinks = (card, songs) => {
         return portalLinks ? portalLinks.map((portalLink) => {
             const { songIndex,
                     annotationIndex,
+                    cardIndex,
                     verseIndex,
+                    column,
                     portalIndex } = portalLink,
                 song = songs[songIndex],
-                annotation = song.annotations[annotationIndex - 1]
+                annotation = song.annotations[annotationIndex - 1],
+                cardObject = getCardFromIndex({
+                    annotation,
+                    cardIndex
+                }),
+                verseObject = getVerse({
+                    songs,
+                    selectedSongIndex: songIndex,
+                    selectedVerseIndex: verseIndex
+                })
 
             return {
-                verseIndex,
                 portalIndex,
                 songIndex,
                 annotationIndex,
                 songTitle: song.title,
-                annotationTitle: annotation.title
+                column,
+                verseObject,
+                cardObject
             }
         }) : null
     } else {

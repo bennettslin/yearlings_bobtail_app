@@ -8,9 +8,9 @@ const TextSpan = ({
 
     isLyric,
     foregoSpace,
-    text
+    text,
 
-}) => {
+...other }) => {
     /**
      * Subsequent spans of text on a line will begin with a space, unless
      * it's in an anchor, or it begins with "'s."
@@ -27,7 +27,7 @@ const TextSpan = ({
     }
 
     return (
-        <TextSpanView
+        <TextSpanView {...other}
             text={spacedText}
             hasFirstSpace={hasFirstSpace}
         />
@@ -40,13 +40,17 @@ const TextSpan = ({
 
 const TextSpanView = ({
 
+    // From props.
+    isPortalAnchor,
+    inPortalCard,
+
     // From controller.
     text,
     hasFirstSpace
 
 }) => (
     <span
-        className="text-span">
+        className={`text-span${isPortalAnchor && !inPortalCard ? ' portal-anchor-text' : ''}`}>
         {(hasFirstSpace ? ' ' : '') + text}
     </span>
 )

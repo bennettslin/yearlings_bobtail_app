@@ -272,12 +272,12 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
             cards.forEach((card, cardIndex) => {
                 _prepareCard(card, dotKeys)
                 _addDotKeys(card, dotKeys)
-                _addPortalLink(card, dotKeys, annotationIndex, cardIndex, annotation.verseIndex)
+                _addPortalLink(card, dotKeys, annotationIndex, cardIndex, annotation.verseIndex, annotation.column)
             })
         } else {
             _prepareCard(cards, dotKeys)
             _addDotKeys(cards, dotKeys)
-            _addPortalLink(cards, dotKeys, annotationIndex, undefined, annotation.verseIndex)
+            _addPortalLink(cards, dotKeys, annotationIndex, undefined, annotation.verseIndex, annotation.column)
         }
 
         annotation.cards = cards
@@ -315,7 +315,7 @@ const _prepareCard = (card, dotKeys, finalPassThrough) => {
 
     if (portalLinks && finalPassThrough) {
         portalLinks.forEach(link => {
-            delete link.cardIndex
+            // delete link.cardIndex
             _tempStore._popupAnchors.push(Object.assign({}, link))
             link.portalIndex = _tempStore._popupAnchorIndex
             _tempStore._popupAnchorIndex++
@@ -371,7 +371,7 @@ const _addDotKeys = (card, dotKeys) => {
     }
 }
 
-const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0, verseIndex) => {
+const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0, verseIndex, column) => {
     // Add portal link to annotation card..
     const { portal } = card
     if (portal) {
@@ -380,7 +380,8 @@ const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0, verseInde
                 songIndex: _tempStore._songIndex,
                 annotationIndex,
                 cardIndex,
-                verseIndex
+                verseIndex,
+                column
             }
 
         // If first portal link, initialise array.

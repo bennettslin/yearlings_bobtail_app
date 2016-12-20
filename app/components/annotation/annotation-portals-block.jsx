@@ -1,4 +1,6 @@
 import React from 'react'
+import AnnotationCard from './annotation-card'
+import TextBlock from '../text/text-block'
 
 /*************
  * CONTAINER *
@@ -15,6 +17,8 @@ const AnnotationPortalsBlock = (props) => (
 const AnnotationPortalsBlockView = ({
 
     // From props.
+    songs,
+    selectedDotKeys,
     portalLinks,
     onPortalClick,
     sectionAccessHighlighted,
@@ -27,17 +31,41 @@ const AnnotationPortalsBlockView = ({
                     songIndex,
                     annotationIndex,
                     songTitle,
-                    annotationTitle } = portalObject,
+                    column,
+                    verseObject,
+                    cardObject } = portalObject,
 
             accessHighlighted = sectionAccessHighlighted && accessedPopupAnchorIndex === portalIndex
 
             return (
-                <a key={index}
-                    className={`portal-button enabled${portalIndex ? ' portal-' + portalIndex : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
-                    onClick={e => onPortalClick(e, songIndex, annotationIndex)}>
+                <div
+                    key={index}
+                    className="portal-block"
+                >
                     <div className="song-title">{songTitle}</div>
-                    <div className="annotation-title">{annotationTitle}</div>
-                </a>
+
+                    <div className="verse-text">
+                        <TextBlock
+                            inPortal={true}
+                            text={column ? verseObject[column] : verseObject.lyric}
+                        />
+                    </div>
+
+                    <div className="portal-card-block">
+                        <a
+                            className={`portal-card-button enabled${portalIndex ? ' portal-' + portalIndex : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
+                            onClick={e => onPortalClick(e, songIndex, annotationIndex)}
+                        >
+                            <AnnotationCard
+                                inPortal={true}
+                                inPortalCard={true}
+                                songs={songs}
+                                selectedDotKeys={selectedDotKeys}
+                                card={cardObject}
+                            />
+                        </a>
+                    </div>
+                </div>
             )
         })}
     </div>
