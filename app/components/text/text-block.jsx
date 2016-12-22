@@ -34,6 +34,7 @@ const TextBlockView = ({
     // From props.
     text,
     foregoSpace,
+    forceForegoSpace,
 
 ...other }) => (
     <span>
@@ -41,7 +42,7 @@ const TextBlockView = ({
                 <TextBlock {...other}
                     key={index}
                     text={textElement}
-                    foregoSpace={foregoSpace && index === 0}
+                    foregoSpace={(foregoSpace && index === 0) || forceForegoSpace}
                 />
             )
         )}

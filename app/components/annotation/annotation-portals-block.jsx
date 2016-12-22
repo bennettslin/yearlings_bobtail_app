@@ -46,12 +46,15 @@ const AnnotationPortalsBlockView = ({
                     <div className="song-title">{songTitle}</div>
 
                     <div className="verse-text">
+                        <span className="text-span">"</span>
                         <TextBlock
                             inPortal={true}
+                            forceForegoSpace={true}
                             text={column ? verseObject[column] : verseObject.lyric}
                             selectedDotKeys={selectedDotKeys}
                             portalAnnotationIndex={annotationIndex}
                         />
+                        <span className="text-span">"</span>
                     </div>
 
                     <div className="portal-card-block">

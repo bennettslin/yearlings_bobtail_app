@@ -65,6 +65,7 @@ const AnchorBlock = ({
 const AnchorBlockView = ({
 
     // From props.
+    forceForegoSpace,
     inPortal,
     isLyric,
     beginsNewLine,
@@ -84,7 +85,7 @@ const AnchorBlockView = ({
 
     <span>
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
-        { !beginsNewLine ? ' ' : null }
+        { !beginsNewLine && !forceForegoSpace ? ' ' : null }
         <a
             className={`anchor-block${accessHighlighted ? ' access-highlighted' : ''}${annotationIndex ? ' annotation-' + annotationIndex : ''}${wikiIndex ? ' wiki-' + wikiIndex : ''}${isSelected || inPortal ? '' : ' enabled'}${isPortalAnchor ? ' portal-anchor' : ''}${hasTodo ? ' todo' : ''}`}
             onClick={onClick}
