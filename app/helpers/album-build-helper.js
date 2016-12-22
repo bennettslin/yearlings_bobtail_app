@@ -138,7 +138,9 @@ const _addTitleToLyrics = (title, lyrics) => {
 /**
  * Recurse until object with anchor key is found.
  */
-const _parseLyrics = (lyric, finalPassThrough, textKey) => {
+const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
+
+    lyricInTime = !isNaN(lyric.time) || lyricInTime
 
     // In other words, if lyric.time is a valid number.
     if (!finalPassThrough && !isNaN(lyric.time)) {
@@ -157,7 +159,7 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
 
     if (Array.isArray(lyric)) {
         lyric.forEach(childLyricValue => {
-            _parseLyrics(childLyricValue, finalPassThrough, textKey)
+            _parseLyrics(childLyricValue, finalPassThrough, textKey, lyricInTime)
         })
 
     } else if (typeof lyric === 'object') {
@@ -185,9 +187,9 @@ const _parseLyrics = (lyric, finalPassThrough, textKey) => {
                      * Any annotation in this lyric should know whether it is
                      * in a verse with a time.
                      */
-                    _tempStore._lyricInTime = !!lyric.time
+                    _tempStore._lyricInTime = lyricInTime
 
-                    _parseLyrics(lyric[childTextKey], finalPassThrough, (textKey || sideStanzaTextKey || childTextKey))
+                    _parseLyrics(lyric[childTextKey], finalPassThrough, (textKey || sideStanzaTextKey || childTextKey), lyricInTime)
                 }
             })
         }
