@@ -266,8 +266,13 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
         // Let annotation know if it's in a doublespeaker column.
         if (textKey === LEFT || textKey === 'leftColumn') {
             annotation.column = LEFT
+
+            // Easier just to hard-code this.
+            annotation.columnIndex = 0
+
         } else if (textKey === RIGHT || textKey === 'rightColumn') {
             annotation.column = RIGHT
+            annotation.columnIndex = 1
         }
 
         lyric.annotationIndex = annotationIndex
@@ -285,12 +290,12 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
             cards.forEach((card, cardIndex) => {
                 _prepareCard(card, dotKeys)
                 _addDotKeys(card, dotKeys)
-                _addPortalLink(card, dotKeys, annotationIndex, cardIndex, annotation.verseIndex, annotation.column)
+                _addPortalLink(card, dotKeys, annotationIndex, cardIndex, annotation.verseIndex, annotation.column, annotation.columnIndex)
             })
         } else {
             _prepareCard(cards, dotKeys)
             _addDotKeys(cards, dotKeys)
-            _addPortalLink(cards, dotKeys, annotationIndex, undefined, annotation.verseIndex, annotation.column)
+            _addPortalLink(cards, dotKeys, annotationIndex, undefined, annotation.verseIndex, annotation.column, annotation.columnIndex)
         }
 
         annotation.cards = cards
@@ -384,7 +389,7 @@ const _addDotKeys = (card, dotKeys) => {
     }
 }
 
-const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0, verseIndex, column) => {
+const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0, verseIndex, column, columnIndex) => {
     // Add portal link to annotation card..
     const { portal } = card
     if (portal) {
@@ -394,7 +399,8 @@ const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0, verseInde
                 annotationIndex,
                 cardIndex,
                 verseIndex,
-                column
+                column,
+                columnIndex
             }
 
         // If first portal link, initialise array.

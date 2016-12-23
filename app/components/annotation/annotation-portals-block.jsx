@@ -34,6 +34,7 @@ const AnnotationPortalsBlockView = ({
                     verseIndex,
                     songTitle,
                     column,
+                    columnIndex,
                     verseObject,
                     cardObject } = portalObject,
 
@@ -61,7 +62,7 @@ const AnnotationPortalsBlockView = ({
                     <div className="portal-card-block">
                         <a
                             className={`portal-card-button enabled${portalIndex ? ' portal-' + portalIndex : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
-                            onClick={e => onPortalClick(e, songIndex, annotationIndex, verseIndex)}
+                            onClick={e => onPortalClick(e, songIndex, annotationIndex, verseIndex, columnIndex)}
                         >
                             <AnnotationCard
                                 inPortal={true}

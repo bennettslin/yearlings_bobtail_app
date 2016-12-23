@@ -105,12 +105,12 @@ export const getIsLyricExpandable = ({ isAdmin, deviceIndex }) => {
     return !isAdmin && !getIsDesktop(deviceIndex)
 }
 
-export const getShowSingleLyricColumn = (props, state) => {
+export const getShowSingleLyricColumn = (props, state, selectedSongIndex) => {
     if (state.isAdmin) {
         return state.showSingleLyricColumnInAdmin
 
     } else {
-        const selectedSong = getSong(props),
+        const selectedSong = getSong(props, selectedSongIndex),
             { hasSideStanzas,
               isDoublespeaker,
               forceSingleColumn } = selectedSong,

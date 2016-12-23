@@ -564,13 +564,16 @@ class App extends Component {
         }
     }
 
-    selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex) {
+    selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, columnIndex) {
         this._stopPropagation(e)
 
         // TODO: Don't reset time if it's the same song.
         this.selectSong(undefined, selectedSongIndex, undefined, true)
         this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
         this.selectVerse(undefined, selectedVerseIndex)
+        if (!isNaN(columnIndex)) {
+            this.selectLyricColumn(undefined, columnIndex, selectedSongIndex)
+        }
     }
 
     selectWikiOrPortal() {
@@ -678,7 +681,7 @@ class App extends Component {
         })
     }
 
-    selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2) {
+    selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2, selectedSongIndex) {
 
         this._stopPropagation(e)
 
@@ -686,7 +689,7 @@ class App extends Component {
          * User shouldn't be able to select lyric column if not in a song that
          * has double columns.
          */
-        if (!getShowSingleLyricColumn(this.props, this.state)) {
+        if (!getShowSingleLyricColumn(this.props, this.state, selectedSongIndex)) {
             return
         }
 

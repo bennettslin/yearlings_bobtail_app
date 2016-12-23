@@ -22,8 +22,8 @@ const _parseLyrics = (lyric, selectedVerseIndex) => {
     }
 }
 
-export const getSong = ({ selectedSongIndex, songs }) => {
-    return songs[selectedSongIndex]
+export const getSong = ({ selectedSongIndex, songs }, nextSongIndex) => {
+    return songs[isNaN(nextSongIndex) ? selectedSongIndex : nextSongIndex]
 }
 
 export const getIsLogue = ({ selectedSongIndex, songs }) => {
@@ -366,6 +366,7 @@ export const getPortalLinks = (card, songs) => {
                     cardIndex,
                     verseIndex,
                     column,
+                    columnIndex,
                     portalIndex } = portalLink,
                 song = songs[songIndex],
                 annotation = song.annotations[annotationIndex - 1],
@@ -386,6 +387,7 @@ export const getPortalLinks = (card, songs) => {
                 verseIndex,
                 songTitle: song.title,
                 column,
+                columnIndex,
                 verseObject,
                 cardObject
             }
