@@ -383,6 +383,7 @@ export const getPortalLinks = (card, songs) => {
                 portalIndex,
                 songIndex,
                 annotationIndex,
+                verseIndex,
                 songTitle: song.title,
                 column,
                 verseObject,

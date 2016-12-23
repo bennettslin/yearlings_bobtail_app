@@ -170,7 +170,7 @@ class App extends Component {
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
         this.selectDot = this.selectDot.bind(this)
-        this.selectSongFromPortal = this.selectSongFromPortal.bind(this)
+        this.selectFromPortal = this.selectFromPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
         this.selectLyricColumnWidth = this.selectLyricColumnWidth.bind(this)
@@ -564,12 +564,13 @@ class App extends Component {
         }
     }
 
-    selectSongFromPortal(e, selectedSongIndex, selectedAnnotationIndex) {
+    selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex) {
         this._stopPropagation(e)
 
         // TODO: Don't reset time if it's the same song.
         this.selectSong(undefined, selectedSongIndex, undefined, true)
         this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
+        this.selectVerse(undefined, selectedVerseIndex)
     }
 
     selectWikiOrPortal() {
@@ -580,7 +581,7 @@ class App extends Component {
             if (typeof popupAnchorObject === 'string') {
                 this.selectWiki(true, this.state.accessedPopupAnchorIndex)
             } else {
-                this.selectSongFromPortal(undefined, popupAnchorObject.songIndex, popupAnchorObject.annotationIndex)
+                this.selectFromPortal(undefined, popupAnchorObject.songIndex, popupAnchorObject.annotationIndex)
             }
         }
     }
@@ -1044,7 +1045,7 @@ class App extends Component {
                     isLyricExpandable={isLyricExpandable}
                     isOverviewShown={isOverviewShown}
                     onSongClick={this.selectSong}
-                    onSongFromPortalClick={this.selectSongFromPortal}
+                    onSongFromPortalClick={this.selectFromPortal}
                     onWikiUrlClick={this.selectWiki}
                     onAnnotationClick={this.selectAnnotation}
                     onOverviewClick={this.selectOverview}
