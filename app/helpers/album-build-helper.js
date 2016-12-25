@@ -136,7 +136,7 @@ const _addTitleToLyrics = (title, lyrics) => {
     }
 }
 
-const _registerVerseObjectForPortal = (lyricObject, verseObjectKey) => {
+const _addVerseObjectKeyToLyric = (lyricObject, verseObjectKey) => {
 
     if (typeof lyricObject === 'object') {
         lyricObject[verseObjectKey] = true
@@ -150,6 +150,25 @@ const _registerVerseObjectForPortal = (lyricObject, verseObjectKey) => {
     }
 }
 
+// TODO: Rename this method.
+const _registerAfterTime = (lyric) => {
+    if (Array.isArray(lyric)) {
+
+        if (lyric[0].italic) {
+            _registerAfterTime(lyric[0])
+
+        } else {
+            lyric[0] = _addVerseObjectKeyToLyric(lyric[0], 'firstVerseObject')
+            lyric[lyric.length - 1] = _addVerseObjectKeyToLyric(lyric[lyric.length - 1], 'lastVerseObject')
+        }
+
+
+    } else if (typeof lyric === 'object') {
+        _registerAfterTime(lyric.italic)
+        _registerAfterTime(lyric.emphasis)
+    }
+}
+
 const _registerFirstAndLastVerseObjects = (lyric) => {
 
     if (Array.isArray(lyric)) {
@@ -159,26 +178,37 @@ const _registerFirstAndLastVerseObjects = (lyric) => {
 
     } else if (typeof lyric === 'object') {
         if (typeof lyric.time !== 'undefined') {
-            _registerAfterTime(lyric.lyric || lyric.left || lyric.right || lyric.centre, lyric.anchor)
+
+            _registerAfterTime(lyric.lyric)
+            _registerAfterTime(lyric.left)
+            _registerAfterTime(lyric.centre)
+            _registerAfterTime(lyric.right)
 
             if (typeof lyric.lyric === 'string') {
-                lyric.lyric = _registerVerseObjectForPortal(lyric.lyric, 'firstVerseObject')
-                lyric.lyric = _registerVerseObjectForPortal(lyric.lyric, 'lastVerseObject')
+                lyric.lyric = _addVerseObjectKeyToLyric(lyric.lyric, 'firstVerseObject')
+                lyric.lyric = _addVerseObjectKeyToLyric(lyric.lyric, 'lastVerseObject')
+            }
+
+            if (typeof lyric.left === 'string') {
+                lyric.left = _addVerseObjectKeyToLyric(lyric.left, 'firstVerseObject')
+                lyric.left = _addVerseObjectKeyToLyric(lyric.left, 'lastVerseObject')
+            }
+
+            if (typeof lyric.right === 'string') {
+                lyric.right = _addVerseObjectKeyToLyric(lyric.right, 'firstVerseObject')
+                lyric.right = _addVerseObjectKeyToLyric(lyric.right, 'lastVerseObject')
+            }
+
+            if (typeof lyric.centre === 'string') {
+                lyric.centre = _addVerseObjectKeyToLyric(lyric.centre, 'firstVerseObject')
+                lyric.centre = _addVerseObjectKeyToLyric(lyric.centre, 'lastVerseObject')
             }
         }
-    }
-}
 
-// TODO: Rename this method.
-const _registerAfterTime = (lyric) => {
-    if (Array.isArray(lyric)) {
-        lyric[0] = _registerVerseObjectForPortal(lyric[0], 'firstVerseObject')
-        lyric[lyric.length - 1] = _registerVerseObjectForPortal(lyric[lyric.length - 1], 'lastVerseObject')
-
-    } else if (typeof lyric === 'object') {
-
-        // TODO: Consider italic, emphasis, etc.
-
+        if (typeof lyric.unitMap !== 'undefined') {
+            _registerFirstAndLastVerseObjects(lyric.subStanza)
+            _registerFirstAndLastVerseObjects(lyric.topSideStanza)
+        }
     }
 }
 
