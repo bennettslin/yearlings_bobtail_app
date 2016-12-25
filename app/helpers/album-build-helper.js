@@ -177,6 +177,10 @@ const _registerAfterTimeKeyFound = (lyric) => {
 }
 
 const _registerFirstAndLastVerseObjects = (lyric) => {
+    /**
+     * Let verses with portals know their first and last objects, which are
+     * formatted differently in the portal.
+     */
 
     if (Array.isArray(lyric)) {
         lyric.forEach((childLyric, index) => {
