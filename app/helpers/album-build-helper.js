@@ -93,6 +93,7 @@ const _prepareAllSongs = (album) => {
             song.hasSideStanzas = _tempStore._hasSideStanzas
 
             _parseLyrics(song.lyrics)
+
             song.isDoublespeaker = _tempStore._isDoublespeaker
 
             // Add annotations to song object.
@@ -162,10 +163,13 @@ const _registerAfterTime = (lyric) => {
             lyric[lyric.length - 1] = _addVerseObjectKeyToLyric(lyric[lyric.length - 1], 'lastVerseObject')
         }
 
-
     } else if (typeof lyric === 'object') {
         _registerAfterTime(lyric.italic)
-        _registerAfterTime(lyric.emphasis)
+
+        if (typeof lyric.anchor === 'string') {
+            lyric.anchor = _addVerseObjectKeyToLyric(lyric.anchor, 'firstVerseObject')
+            lyric.anchor = _addVerseObjectKeyToLyric(lyric.anchor, 'lastVerseObject')
+        }
     }
 }
 
@@ -207,7 +211,6 @@ const _registerFirstAndLastVerseObjects = (lyric) => {
 
         if (typeof lyric.unitMap !== 'undefined') {
             _registerFirstAndLastVerseObjects(lyric.subStanza)
-            _registerFirstAndLastVerseObjects(lyric.topSideStanza)
         }
     }
 }
