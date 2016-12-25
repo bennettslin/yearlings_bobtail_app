@@ -24,7 +24,21 @@ const TextUnit = ({
         )
 
     } else if (typeof text === 'object') {
-        if (text.italic) {
+
+        // Needed for first and last verse object in portal.
+        if (text.lyric) {
+            return (
+                <span>
+                    <TextBlock {...other}
+                        text={text.lyric}
+                        firstVerseObject={text.firstVerseObject}
+                        lastVerseObject={text.lastVerseObject}
+                        selectedDotKeys={selectedDotKeys}
+                    />
+                </span>
+            )
+
+        } else if (text.italic) {
             return (
                 <i>
                     <TextBlock {...other}
@@ -51,6 +65,8 @@ const TextUnit = ({
             return (showAsAnchor && showIfWiki && !(other.inPortal && other.inPortalCard) ?
                 <AnchorBlock {...other}
                     text={text}
+                    firstVerseObject={text.firstVerseObject}
+                    lastVerseObject={text.lastVerseObject}
                     selectedDotKeys={selectedDotKeys}
                 /> :
                 <TextBlock {...other}

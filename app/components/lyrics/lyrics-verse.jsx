@@ -89,6 +89,8 @@ const LyricsVerseView = ({
                             key={index}
                             verseIndexForDebugging={verseObject.verseIndex}
                             text={verseObject[key]}
+                            firstVerseObject={verseObject.firstVerseObject}
+                            lastVerseObject={verseObject.lastVerseObject}
                             columnKey={key}
                         />
                     )
@@ -97,6 +99,8 @@ const LyricsVerseView = ({
             ) : (
                 <LyricsLine {...other}
                     text={verseObject.lyric}
+                    firstVerseObject={verseObject.firstVerseObject}
+                    lastVerseObject={verseObject.lastVerseObject}
                     verseIndexForDebugging={verseObject.verseIndex}
                     columnKey={isTitle ? TITLE : LEFT}
                 />

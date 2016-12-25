@@ -43,6 +43,8 @@ const TextSpanView = ({
     // From props.
     isPortalAnchor,
     inPortalCard,
+    firstVerseObject,
+    lastVerseObject,
 
     // From controller.
     text,
@@ -50,7 +52,7 @@ const TextSpanView = ({
 
 }) => (
     <span
-        className={`text-span${isPortalAnchor && !inPortalCard ? ' portal-anchor-text' : ''}`}>
+        className={`text-span${isPortalAnchor && !inPortalCard ? ' portal-anchor-text' : ''}${firstVerseObject ? ' first-verse-object' : ''}${lastVerseObject ? ' last-verse-object' : ''}`}>
         {(hasFirstSpace ? ' ' : '') + text}
     </span>
 )

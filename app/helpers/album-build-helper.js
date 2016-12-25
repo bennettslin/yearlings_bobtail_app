@@ -43,6 +43,7 @@ const _addWikiAndPortalIndices = (album) => {
             _tempStore._finalAnnotationIndex = 0
 
             _parseLyrics(song.lyrics, true)
+            _registerFirstAndLastVerseObjects(song.lyrics)
         }
     })
 }
@@ -135,12 +136,56 @@ const _addTitleToLyrics = (title, lyrics) => {
     }
 }
 
+const _registerVerseObjectForPortal = (lyricObject, verseObjectKey) => {
+
+    if (typeof lyricObject === 'object') {
+        lyricObject[verseObjectKey] = true
+        return lyricObject
+
+    } else {
+        return {
+            lyric: lyricObject,
+            [verseObjectKey]: true
+        }
+    }
+}
+
+const _registerFirstAndLastVerseObjects = (lyric) => {
+
+    if (Array.isArray(lyric)) {
+        lyric.forEach((childLyric, index) => {
+            _registerFirstAndLastVerseObjects(childLyric)
+        })
+
+    } else if (typeof lyric === 'object') {
+        if (typeof lyric.time !== 'undefined') {
+            _registerAfterTime(lyric.lyric || lyric.left || lyric.right || lyric.centre, lyric.anchor)
+
+            if (typeof lyric.lyric === 'string') {
+                lyric.lyric = _registerVerseObjectForPortal(lyric.lyric, 'firstVerseObject')
+                lyric.lyric = _registerVerseObjectForPortal(lyric.lyric, 'lastVerseObject')
+            }
+        }
+    }
+}
+
+// TODO: Rename this method.
+const _registerAfterTime = (lyric) => {
+    if (Array.isArray(lyric)) {
+        lyric[0] = _registerVerseObjectForPortal(lyric[0], 'firstVerseObject')
+        lyric[lyric.length - 1] = _registerVerseObjectForPortal(lyric[lyric.length - 1], 'lastVerseObject')
+
+    } else if (typeof lyric === 'object') {
+
+        // TODO: Consider italic, emphasis, etc.
+
+    }
+}
+
 /**
  * Recurse until object with anchor key is found.
  */
-
-// TODO: Do we still need isLastLyricObject?
-const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime, isLastLyricObject) => {
+const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
 
     lyricInTime = !isNaN(lyric.time) || lyricInTime
 
@@ -162,17 +207,10 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime, isLastLyric
     if (Array.isArray(lyric)) {
 
         lyric.forEach((childLyricValue, index) => {
-            _parseLyrics(childLyricValue, finalPassThrough, textKey, lyricInTime, index === lyric.length - 1)
+            _parseLyrics(childLyricValue, finalPassThrough, textKey, lyricInTime)
         })
 
     } else if (typeof lyric === 'object') {
-
-        // For portal purposes, let last text span of lyric know it is the last.
-        // if (isLastLyricObject) {
-        //     lyric.isLastLyricObject = true
-        // }
-
-        // TODO: If lyric is string, then change it to an object so it can have the last lyric object. Also, do it in the final pass through, don't do it here, so that only verses with portals get it.
 
         if (lyric.anchor) {
             _prepareAnnotation(lyric, finalPassThrough, textKey)

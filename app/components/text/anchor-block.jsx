@@ -67,6 +67,8 @@ const AnchorBlockView = ({
     // From props.
     forceForegoSpace,
     inPortal,
+    firstVerseObject,
+    lastVerseObject,
     isLyric,
     beginsNewLine,
     accessHighlighted,
@@ -104,6 +106,8 @@ const AnchorBlockView = ({
             <TextBlock
                 isLyric={isLyric}
                 text={anchorText}
+                firstVerseObject={firstVerseObject}
+                lastVerseObject={lastVerseObject}
                 foregoSpace={true}
             />
         </a>
