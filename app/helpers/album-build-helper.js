@@ -151,12 +151,15 @@ const _addVerseObjectKeyToLyric = (lyricObject, verseObjectKey) => {
     }
 }
 
-// TODO: Rename this method.
-const _registerAfterTime = (lyric) => {
+const _registerAfterTimeKeyFound = (lyric) => {
+    /**
+     * Helper method to register first and last verse objects, after time key
+     * has been found.
+     */
     if (Array.isArray(lyric)) {
 
         if (lyric[0].italic) {
-            _registerAfterTime(lyric[0])
+            _registerAfterTimeKeyFound(lyric[0])
 
         } else {
             lyric[0] = _addVerseObjectKeyToLyric(lyric[0], 'firstVerseObject')
@@ -164,7 +167,7 @@ const _registerAfterTime = (lyric) => {
         }
 
     } else if (typeof lyric === 'object') {
-        _registerAfterTime(lyric.italic)
+        _registerAfterTimeKeyFound(lyric.italic)
 
         if (typeof lyric.anchor === 'string') {
             lyric.anchor = _addVerseObjectKeyToLyric(lyric.anchor, 'firstVerseObject')
@@ -181,32 +184,18 @@ const _registerFirstAndLastVerseObjects = (lyric) => {
         })
 
     } else if (typeof lyric === 'object') {
-        if (typeof lyric.time !== 'undefined') {
 
-            _registerAfterTime(lyric.lyric)
-            _registerAfterTime(lyric.left)
-            _registerAfterTime(lyric.centre)
-            _registerAfterTime(lyric.right)
+        // Only register verses that have a portal.
+        if (typeof lyric.time !== 'undefined' && lyric.verseHasPortal) {
 
-            if (typeof lyric.lyric === 'string') {
-                lyric.lyric = _addVerseObjectKeyToLyric(lyric.lyric, 'firstVerseObject')
-                lyric.lyric = _addVerseObjectKeyToLyric(lyric.lyric, 'lastVerseObject')
-            }
+            [LYRIC, LEFT, RIGHT, CENTRE].forEach(lyricKey => {
+                _registerAfterTimeKeyFound(lyric[lyricKey])
 
-            if (typeof lyric.left === 'string') {
-                lyric.left = _addVerseObjectKeyToLyric(lyric.left, 'firstVerseObject')
-                lyric.left = _addVerseObjectKeyToLyric(lyric.left, 'lastVerseObject')
-            }
-
-            if (typeof lyric.right === 'string') {
-                lyric.right = _addVerseObjectKeyToLyric(lyric.right, 'firstVerseObject')
-                lyric.right = _addVerseObjectKeyToLyric(lyric.right, 'lastVerseObject')
-            }
-
-            if (typeof lyric.centre === 'string') {
-                lyric.centre = _addVerseObjectKeyToLyric(lyric.centre, 'firstVerseObject')
-                lyric.centre = _addVerseObjectKeyToLyric(lyric.centre, 'lastVerseObject')
-            }
+                if (typeof lyric[lyricKey] === 'string') {
+                    lyric[lyricKey] = _addVerseObjectKeyToLyric(lyric[lyricKey], 'firstVerseObject')
+                    lyric[lyricKey] = _addVerseObjectKeyToLyric(lyric[lyricKey], 'lastVerseObject')
+                }
+            })
         }
 
         if (typeof lyric.unitMap !== 'undefined') {
@@ -229,6 +218,7 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
 
         // Add verse index to lyric object.
         lyric.verseIndex = _tempStore._verseIndexCounter
+        _tempStore._lastLyricWithVerseIndex = lyric
 
         // Add last annotation index.
         lyric.lastAnnotationIndex = _tempStore._annotations.length
@@ -361,12 +351,16 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
             cards.forEach((card, cardIndex) => {
                 _prepareCard(card, dotKeys)
                 _addDotKeys(card, dotKeys)
-                _addPortalLink(card, dotKeys, annotationIndex, cardIndex, annotation.verseIndex, annotation.column, annotation.columnIndex)
+                if (_addPortalLink(card, dotKeys, annotationIndex, cardIndex, annotation.verseIndex, annotation.column, annotation.columnIndex)) {
+                    _tempStore._lastLyricWithVerseIndex.verseHasPortal = true
+                }
             })
         } else {
             _prepareCard(cards, dotKeys)
             _addDotKeys(cards, dotKeys)
-            _addPortalLink(cards, dotKeys, annotationIndex, undefined, annotation.verseIndex, annotation.column, annotation.columnIndex)
+            if (_addPortalLink(cards, dotKeys, annotationIndex, undefined, annotation.verseIndex, annotation.column, annotation.columnIndex)) {
+                _tempStore._lastLyricWithVerseIndex.verseHasPortal = true
+            }
         }
 
         annotation.cards = cards
@@ -488,6 +482,11 @@ const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0, verseInde
 
         // Clean up card unit.
         delete card.portal
+
+        return true
+
+    } else {
+        return false
     }
 }
 

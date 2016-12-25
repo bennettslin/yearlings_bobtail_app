@@ -52,7 +52,7 @@ const AnnotationPortalsBlockView = ({
                         <TextBlock
                             inPortal={true}
                             forceForegoSpace={true}
-                            text={column ? verseObject[column] : verseObject.lyric}
+                            text={column && !verseObject.lyric ? verseObject[column] : verseObject.lyric}
                             selectedDotKeys={selectedDotKeys}
                             portalAnnotationIndex={annotationIndex}
                         />
