@@ -170,8 +170,8 @@ const _registerAfterTimeKeyFound = (lyric) => {
         _registerAfterTimeKeyFound(lyric.italic)
 
         if (typeof lyric.anchor === 'string') {
-            lyric.anchor = _addVerseObjectKeyToLyric(lyric.anchor, 'firstVerseObject')
-            lyric.anchor = _addVerseObjectKeyToLyric(lyric.anchor, 'lastVerseObject')
+            lyric = _addVerseObjectKeyToLyric(lyric, 'firstVerseObject')
+            lyric = _addVerseObjectKeyToLyric(lyric, 'lastVerseObject')
         }
     }
 }

@@ -61,6 +61,7 @@ const TextSpan = ({
 const TextSpanView = ({
 
     // From props.
+    // TODO: This won't always need first and last verse objects.
     firstVerseObject,
     lastVerseObject,
 
