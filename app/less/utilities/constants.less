@@ -48,23 +48,29 @@
  * Z-INDICES *
  *************/
 
-// TODO: Make sure that these are necessary.
-@overview-subfield-z-index: 1;
-@overview-toggle-z-index: 1;
-@lyric-expand-z-index: 1;
+// This should be the lowest one.
 @popup-container-z-index: 0;
-@text-span-z-index: 1;
 
-@dots-tips-z-index: 1;
-@nav-custom-subfield-z-index: 1;
+@overview-toggle-z-index: @popup-container-z-index + 1;
+
+// This should be over overview toggle button for animation purposes.
+@overview-subfield-z-index: @overview-toggle-z-index + 1;
+
+@dots-tips-z-index: @overview-subfield-z-index + 1;
+@nav-custom-subfield-z-index: @dots-tips-z-index + 1;
 
 // Lyrics should be higher than centre field.
-@lyric-column-z-index: 2;
-@lyric-column-button-z-index: @lyric-column-z-index + 1;
-@lyric-play-button-z-index: @lyric-column-button-z-index + 1;
+@lyric-column-z-index: @nav-custom-subfield-z-index + 1;
+@lyric-play-button-z-index: @lyric-column-z-index + 1;
+
+// This is in lyrics and annotation.
+@text-span-z-index: @lyric-play-button-z-index + 1;
+
+// Lyric buttons should be higher than everything else in lyric column, including text span.
+@lyric-column-button-z-index: @text-span-z-index + 1;
 
 // Menu should be higher than centre field and lyrics.
-@menu-subfield-z-index: @lyric-play-button-z-index + 1;
+@menu-subfield-z-index: @lyric-column-button-z-index + 1;
 
 @popup-content-z-index: @menu-subfield-z-index + 1;
 
@@ -80,8 +86,6 @@
 
 // Need for dots popup?
 // Need for nav titles?
-// Overview bubble over overview toggle.
-// lyric-expand button in centre field.
 
 /**************
  * ANIMATIONS *

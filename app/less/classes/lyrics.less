@@ -6,10 +6,14 @@
     }
 }
 
-.lyric-column {
-    // This fixes the issue of being unable to scroll between stanzas.
-    z-index: @lyric-column-z-index;
-    // overflow: hidden;
+.is-song {
+    .lyric-column {
+        /**
+         * This fixes the issue of being unable to scroll between stanzas. But
+         * set only in song, otherwise lyric column in logue will cover nav.
+         */
+        z-index: @lyric-column-z-index;
+    }
 }
 
 .lyric-column-animatable {

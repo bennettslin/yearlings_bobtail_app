@@ -92,11 +92,6 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `do z-indices`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `nav widths use % instead of vw`,
             workedHours: 0,
             neededHours: 3
@@ -942,6 +937,11 @@ module.exports = {
             taskName: `Format portal song title and verse text`,
             workedHours: 6,
             neededHours: 6
+        },
+        {
+            taskName: `do z-indices`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
