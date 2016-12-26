@@ -574,6 +574,9 @@ class App extends Component {
         if (!isNaN(columnIndex)) {
             this.selectLyricColumn(undefined, columnIndex, selectedSongIndex)
         }
+
+        // FIXME: This animation is jumpy.
+        this.scrollElementIntoView('verse', selectedVerseIndex, 250)
     }
 
     selectWikiOrPortal() {
