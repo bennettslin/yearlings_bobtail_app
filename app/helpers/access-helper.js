@@ -59,10 +59,6 @@ export default {
             case 'v':
                 selectNavExpand(true)
                 break
-            // Toggle dots expand.
-            case 'y':
-                selectDotsExpand(true)
-                break
             // Toggle lyric expand.
             case 'x':
                 selectLyricExpand(true)

@@ -81,6 +81,20 @@
         * If there is an accessed verse, select it.
         * Annotation section becomes accessed section and is highlighted.
 
+* When dots section is accessed:
+    * Left and right keys and "Enter" are shown.
+    * "Esc" key is shown on close button.
+    * "Space" key is shown on nav section.
+
+    * When left and right arrows are pressed:
+        * Select previous or next dot.
+
+    * When "Enter" is pressed:
+        * Selected dot is toggled on or off.
+
+    * When "Space" is pressed:
+        * Dots section is closed, and nav section becomes accessed section.
+
 * When annotation section is accessed:
     * Arrow keys and "Enter" are shown.
     * "Esc" key is shown on close button.

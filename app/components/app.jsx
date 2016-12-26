@@ -216,6 +216,7 @@ class App extends Component {
 
         // Hide overview.
         if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
+            console.error('were here');
             this.selectOverview(undefined, undefined, HIDDEN)
         }
 
