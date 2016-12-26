@@ -51,7 +51,6 @@ const AnnotationPortalsBlockView = ({
                         <span className="text-span">"</span>
                         <TextBlock
                             inPortal={true}
-                            forceForegoSpace={true}
                             text={verseObject.lyric || verseObject.centre || verseObject[column]}
                             selectedDotKeys={selectedDotKeys}
                             portalAnnotationIndex={annotationIndex}
