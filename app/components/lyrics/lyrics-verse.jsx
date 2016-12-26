@@ -1,8 +1,7 @@
 import React from 'react'
 import LyricsPlayButton from './lyrics-play-button'
 import LyricsLine from './lyrics-line'
-import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from 'helpers/constants'
-import { LYRIC_VERSE_ELEMENT } from 'helpers/constants'
+import { DOUBLESPEAKER_KEYS, TITLE, LEFT, LYRIC_VERSE_ELEMENT } from 'helpers/constants'
 
 /*************
  * CONTAINER *

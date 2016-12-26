@@ -32,7 +32,7 @@ const AudioBannerView = ({
                 {selectedSongTitle}
             </div>
             <div className="audio-banner-time">
-                {getFormattedTime(selectedTimePlayed)}
+                {isPrologue || isEpilogue ? '' : getFormattedTime(selectedTimePlayed)}
             </div>
         </div>
         <div className="audio-banner audio-slider-block">

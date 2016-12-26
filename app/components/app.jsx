@@ -388,6 +388,7 @@ class App extends Component {
 
     selectDotsExpand(e, selectedDotsIndex) {
         this._stopPropagation(e)
+
         if (typeof selectedDotsIndex === 'undefined') {
             selectedDotsIndex = (this.props.selectedDotsIndex + 1) % 2
         }
@@ -395,18 +396,21 @@ class App extends Component {
         this.props.selectDotsIndex(selectedDotsIndex)
 
         if (e && selectedDotsIndex) {
-
             // Hide overview and collapse lyrics if shown.
             if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
                 this.selectOverview(undefined, undefined, HIDDEN)
             }
 
             this.selectLyricExpand(undefined, false)
+            this.selectAnnotation()
+
+            this._handleSectionAccess({
+                accessedSectionKey: DOTS_SECTION
+            })
         }
     }
 
     selectOverview(e, selectedOverviewIndex, selectedOverviewKey) {
-
         this._stopPropagation(e)
 
         /**
@@ -489,13 +493,15 @@ class App extends Component {
             annotationDeselected = true
         }
 
-        if (e) { this._handleSectionAccess({
-            accessedSectionKey: DOTS_SECTION,
+        if (e) {
+            this._handleSectionAccess({
+                accessedSectionKey: DOTS_SECTION,
 
-            // App does not yet know that popups have been deselected.
-            selectedAnnotationIndex: annotationDeselected ? 0 : undefined,
-            selectedWikiIndex: annotationDeselected ? 0 : undefined
-        }) }
+                // App does not yet know that popups have been deselected.
+                selectedAnnotationIndex: annotationDeselected ? 0 : undefined,
+                selectedWikiIndex: annotationDeselected ? 0 : undefined
+            })
+        }
     }
 
     /**
@@ -540,6 +546,8 @@ class App extends Component {
         }
 
         if (e) {
+            this.selectDotsExpand(undefined, 0)
+
             this._handleSectionAccess({
                 accessedSectionKey: selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION,
                 selectedAnnotationIndex
@@ -970,7 +978,8 @@ class App extends Component {
 
         // Accessed section can only be the top popup section.
         if (accessedSectionKey) {
-            if ((selectedWikiIndex && accessedSectionKey !== WIKI_SECTION) || (selectedAnnotationIndex && accessedSectionKey !== ANNOTATION_SECTION && accessedSectionKey !== WIKI_SECTION)) {
+            if ((selectedWikiIndex && accessedSectionKey !== WIKI_SECTION) ||
+                (selectedAnnotationIndex && accessedSectionKey !== ANNOTATION_SECTION && accessedSectionKey !== WIKI_SECTION)) {
                 return
             }
         }
@@ -983,6 +992,15 @@ class App extends Component {
             accessOn,
             handleAccessOn: this._handleAccessOn
         })
+
+        if (SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
+            this.selectDotsExpand(undefined, 1)
+
+            // Hide overview.
+            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+                this.selectOverview(undefined, undefined, HIDDEN)
+            }
+        }
 
         this._selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex)
         this.props.accessSectionIndex(accessedSectionIndex)
