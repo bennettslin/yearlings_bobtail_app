@@ -105,6 +105,7 @@ const AnchorBlockView = ({
             <TextBlock
                 isLyric={isLyric}
                 text={anchorText}
+                inPortal={inPortal}
                 firstVerseObject={firstVerseObject}
                 lastVerseObject={lastVerseObject}
                 foregoSpace={true}
