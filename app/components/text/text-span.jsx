@@ -13,9 +13,10 @@ const TextSpan = ({
 ...other }) => {
     /**
      * Subsequent spans of text on a line will begin with a space, unless
-     * it's in an anchor, or it begins with "'s."
+     * it's in an anchor, it begins with "'s," or it's the first verse object
+     * in a portal.
      */
-    const hasFirstSpace = !foregoSpace && (text.indexOf('\'s') !== 0)
+    const hasFirstSpace = !other.firstVerseObject && !foregoSpace && (text.indexOf('\'s') !== 0)
 
     // Add nonbreaking space between last two words if it's a lyric.
     let spacedText = text
