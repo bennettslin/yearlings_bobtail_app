@@ -51,7 +51,9 @@
 // This should be the lowest one.
 @popup-container-z-index: 0;
 
-@overview-toggle-z-index: @popup-container-z-index + 1;
+@admin-toggle-z-index: @popup-container-z-index + 1;
+
+@overview-toggle-z-index: @admin-toggle-z-index + 1;
 
 // This should be over overview toggle button for animation purposes.
 @overview-subfield-z-index: @overview-toggle-z-index + 1;
@@ -80,9 +82,6 @@
 
 // Popup button should be above dot.
 @popup-interactable-z-index: @dot-interactable-z-index + 1;
-
-// Admin toggle should be highest.
-@admin-toggle-z-index: @popup-interactable-z-index + 1;
 
 // Need for dots popup?
 // Need for nav titles?

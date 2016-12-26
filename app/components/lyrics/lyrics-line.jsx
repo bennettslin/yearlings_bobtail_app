@@ -16,9 +16,11 @@ class LyricsLine extends Component {
          * place for now. Rip it out once confident that this is indeed the
          * final fix for this issue.
          */
+
         // this.setDOMWidth(false, true) // Debug statement
-        this.setDOMWidth(true)
-        window.setTimeout(this.setDOMWidth.bind(this), 0)
+
+        window.setTimeout(this.setDOMWidth.bind(this, true), 0)
+        window.setTimeout(this.setDOMWidth.bind(this), 1)
     }
 
     /**
