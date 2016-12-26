@@ -17,6 +17,7 @@ class LyricsLine extends Component {
          * final fix for this issue.
          */
         // this.setDOMWidth(false, true) // Debug statement
+        this.setDOMWidth(true)
         window.setTimeout(this.setDOMWidth.bind(this), 0)
     }
 
@@ -67,7 +68,10 @@ class LyricsLine extends Component {
             const parent = ReactDOM.findDOMNode(this.myParent)
             if (parent) {
                 if (unset) {
-                    parent.removeAttribute('style')
+                    // parent.removeAttribute('style')
+
+                    // Just an arbitrarily large number.
+                    parent.style.maxWidth = '5000px'
 
                 } else {
                     // FIXME: The issue seems to be that the offsetWidth is wrong when this method gets called in componentDidMount.
