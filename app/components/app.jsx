@@ -217,7 +217,10 @@ class App extends Component {
 
         let popupWasOpen = false
 
-        // TODO: Collapse lyrics.
+        if (exemptSection !== LYRICS_SECTION && this.state.isLyricExpanded) {
+            this.selectLyricExpand(undefined, false)
+            popupWasOpen = true
+        }
 
         // Hide overview.
         if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
@@ -369,13 +372,10 @@ class App extends Component {
             })
 
             if (e) {
-                // Hide overview if shown.
-                if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                    this.selectOverview(undefined, undefined, HIDDEN)
-                }
-
-                // Hide dots section if shown.
-                this.selectDotsExpand(undefined, 0)
+                this._handleSectionAccess({
+                    accessedSectionKey: LYRICS_SECTION,
+                    overrideClosePopupsDefaultWithSection: LYRICS_SECTION
+                })
             }
         }
     }
