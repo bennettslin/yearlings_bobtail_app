@@ -203,51 +203,67 @@ class App extends Component {
     }
 
     _stopPropagation(e) {
-        if (typeof e === 'object') {
+        if (e && e.stopPropagation) {
             e.stopPropagation()
             this._handleAccessOn(0)
         }
     }
 
-    _closePopupIfOpen(accessOff) {
+    _closePopupIfOpen(accessOff, exemptSection) {
         const { selectedAnnotationIndex,
                 selectedWikiIndex,
+                selectedDotsIndex,
                 selectedOverviewIndex } = this.props
+
+        let popupWasOpen = false
+
+        // Collapse lyrics.
 
         // Hide overview.
         if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
-            console.error('were here');
             this.selectOverview(undefined, undefined, HIDDEN)
+            popupWasOpen = true
         }
 
-        this.selectDotsExpand(undefined, 0)
+        // Hide dots.
+        if (exemptSection !== DOTS_SECTION && selectedDotsIndex === 1) {
+            this.selectDotsExpand(undefined, 0)
+            popupWasOpen = true
+        }
 
-        // If there is a popup, close it.
+        // Hide wiki or annotation.
         if (selectedAnnotationIndex) {
             if (selectedWikiIndex) {
-                this.selectWiki(true)
+                if (exemptSection !== WIKI_SECTION) {
+                    this.selectWiki({ popupsClosed: true })
+                }
             } else {
-                this.selectAnnotation(true)
+                if (exemptSection !== ANNOTATION_SECTION) {
+                    this.selectAnnotation({ popupsClosed: true })
+                    /**
+                    * If closing annotation, set lyric element to annotation, and
+                    * set accessed annotation index to closed annotation.
+                    */
 
-                /**
-                 * If closing annotation, set lyric element to annotation, and
-                 * set accessed annotation index to closed annotation.
-                 */
-                this.setState({
-                    accessedLyricElement: LYRIC_ANNOTATION_ELEMENT,
-                    accessedAnnotationIndex: selectedAnnotationIndex,
-                    accessedVerseIndex: getVerseIndexForAnnotationIndex({
-                        props: this.props,
-                        index: selectedAnnotationIndex
+                    this.setState({
+                        accessedLyricElement: LYRIC_ANNOTATION_ELEMENT,
+                        accessedAnnotationIndex: selectedAnnotationIndex,
+                        accessedVerseIndex: getVerseIndexForAnnotationIndex({
+                            props: this.props,
+                            index: selectedAnnotationIndex
+                        })
                     })
-                })
+                }
             }
 
-            if (accessOff) { this._handleAccessOn(0) }
-            return true
+            if (accessOff) {
+                this._handleAccessOn(0)
+            }
+
+            popupWasOpen = true
         }
 
-        return false
+        return popupWasOpen
     }
 
     /**
@@ -551,7 +567,8 @@ class App extends Component {
 
             this._handleSectionAccess({
                 accessedSectionKey: selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION,
-                selectedAnnotationIndex
+                selectedAnnotationIndex,
+                popupsClosed: e.popupsClosed
             })
         }
     }
@@ -568,7 +585,8 @@ class App extends Component {
         if (e) {
             this._handleSectionAccess({
                 accessedSectionKey: selectedWikiIndex ? WIKI_SECTION : ANNOTATION_SECTION,
-                selectedWikiIndex
+                selectedWikiIndex,
+                popupsClosed: e.popupsClosed
             })
         }
     }
@@ -809,7 +827,6 @@ class App extends Component {
         // If universal key, handle and return.
         if (AccessHelper.handleKeyIfUniversal({
             keyName,
-            canAccessSections: !this.props.selectedWikiIndex && !this.props.selectedAnnotationIndex,
             handleSectionAccess: this._handleSectionAccess,
             selectOverview: this.selectOverview,
             selectAudioOption: this.selectAudioOption,
@@ -965,6 +982,16 @@ class App extends Component {
         this._focusApp()
         if (accessedOn) {
             this._selectDefaultSectionElementIndex(accessedSectionIndex)
+
+            // If accessed section is dots section, expand the popup...
+            if (SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
+                this.selectDotsExpand(undefined, 1)
+
+                // And hide overview if shown.
+                if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+                    this.selectOverview(undefined, undefined, HIDDEN)
+                }
+            }
         }
 
         // Stored as integer. 0 is false, 1 is true.
@@ -975,36 +1002,30 @@ class App extends Component {
                            accessOn,
                            selectedSongIndex = this.props.selectedSongIndex,
                            selectedWikiIndex = this.props.selectedWikiIndex,
-                           selectedAnnotationIndex = this.props.selectedAnnotationIndex }) {
-
-        // Accessed section can only be the top popup section.
-        if (accessedSectionKey) {
-            if ((selectedWikiIndex && accessedSectionKey !== WIKI_SECTION) ||
-                (selectedAnnotationIndex && accessedSectionKey !== ANNOTATION_SECTION && accessedSectionKey !== WIKI_SECTION)) {
-                return
-            }
-        }
+                           selectedAnnotationIndex = this.props.selectedAnnotationIndex,
+                           popupsClosed }) {
 
         const accessedSectionIndex = AccessHelper.handleSectionAccess({
-            deviceIndex: this.state.deviceIndex,
-            selectedSongIndex,
-            currentAccessedSectionIndex: this.props.accessedSectionIndex,
-            accessedSectionKey,
-            accessOn,
-            handleAccessOn: this._handleAccessOn
-        })
+                deviceIndex: this.state.deviceIndex,
+                selectedSongIndex,
+                currentAccessedSectionIndex: this.props.accessedSectionIndex,
+                accessedSectionKey,
+                accessOn,
+                handleAccessOn: this._handleAccessOn
+            }),
+            sectionKey = accessedSectionKey || SECTION_KEYS[accessedSectionIndex]
 
-        if (SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
+        // If accessed section is dots section, expand the popup...
+        if (sectionKey === DOTS_SECTION) {
             this.selectDotsExpand(undefined, 1)
-
-            // Hide overview.
-            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                this.selectOverview(undefined, undefined, HIDDEN)
-            }
         }
 
         this._selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex)
         this.props.accessSectionIndex(accessedSectionIndex)
+
+        if (!popupsClosed) {
+            this._closePopupIfOpen(undefined, sectionKey)
+        }
         this._focusApp()
     }
 

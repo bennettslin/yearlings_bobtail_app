@@ -29,7 +29,6 @@ export default {
 
     handleKeyIfUniversal({
         keyName,
-        canAccessSections,
         handleSectionAccess,
         selectOverview,
         selectAudioOption,
@@ -94,35 +93,31 @@ export default {
             default:
                 /**
                  * Directly access sections. These keys fire only if no
-                 * selected annotation or wiki.
+                 * selected annotation or wiki, and dots section is not open.
                  */
-                if (canAccessSections) {
-                    let accessedSectionKey
+            let accessedSectionKey
 
-                    switch (keyName) {
-                        case 'w':
-                            accessedSectionKey = AUDIO_SECTION
-                            break
-                        case 'u':
-                            accessedSectionKey = DOTS_SECTION
-                            break
-                        case 'l':
-                            accessedSectionKey = LYRICS_SECTION
-                            break
-                        case 's':
-                            accessedSectionKey = NAV_SECTION
-                            break
-                        default:
-                        return false
-                    }
+            switch (keyName) {
+                case 'w':
+                    accessedSectionKey = AUDIO_SECTION
+                    break
+                case 'u':
+                    accessedSectionKey = DOTS_SECTION
+                    break
+                case 'l':
+                    accessedSectionKey = LYRICS_SECTION
+                    break
+                case 's':
+                    accessedSectionKey = NAV_SECTION
+                    break
+                default:
+                return false
+            }
 
-                    handleSectionAccess({
-                        accessedSectionKey,
-                        accessOn: true
-                    })
-                } else {
-                    return false
-                }
+            handleSectionAccess({
+                accessedSectionKey,
+                accessOn: true
+            })
         }
 
         return true
