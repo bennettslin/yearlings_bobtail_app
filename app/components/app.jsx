@@ -480,6 +480,9 @@ class App extends Component {
 
             // Hide dots section.
             this.selectDotsExpand(undefined, 0)
+
+            // Turn access off.
+            this._handleAccessOn(0)
         }
     }
 
