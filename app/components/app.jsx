@@ -238,7 +238,7 @@ class App extends Component {
                     this.selectWiki({ popupsAlreadyClosed: true, overrideClosePopupsDefaultWithSection })
                 }
             } else {
-                if (exemptSection !== ANNOTATION_SECTION) {
+                if (exemptSection !== ANNOTATION_SECTION && exemptSection !== WIKI_SECTION) {
                     this.selectAnnotation({ popupsAlreadyClosed: true, overrideClosePopupsDefaultWithSection })
                     /**
                     * If closing annotation, set lyric element to annotation, and
