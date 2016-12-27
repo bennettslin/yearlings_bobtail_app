@@ -209,7 +209,7 @@ class App extends Component {
         }
     }
 
-    _closePopupIfOpen(accessOff, exemptSection, overrideClosePopupsDefaultWithSection) {
+    _closePopupIfOpen(accessOff, exemptSection, overrideClosePopupsDefaultWithSection, overrideClosePopupsDefaultWithOverviewOption) {
         const { selectedAnnotationIndex,
                 selectedWikiIndex,
                 selectedDotsIndex,
@@ -224,8 +224,7 @@ class App extends Component {
 
         // Hide overview.
         if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
-            this.selectOverview(undefined, undefined, HIDDEN)
-            // popupWasOpen = true
+            this.selectOverview(undefined, undefined, overrideClosePopupsDefaultWithOverviewOption || HIDDEN)
         }
 
         // Hide dots.
@@ -317,8 +316,11 @@ class App extends Component {
             }
         }
 
+        let overrideClosePopupsDefaultWithOverviewOption
+
         // Show overview if it's not disabled, and if not selected from portal.
         if (!fromPortal && OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED) {
+            overrideClosePopupsDefaultWithOverviewOption = SHOWN
             this.selectOverview(undefined, undefined, SHOWN)
         }
 
@@ -345,7 +347,8 @@ class App extends Component {
 
             this._handleSectionAccess({
                 accessedSectionKey: direction ? AUDIO_SECTION : NAV_SECTION,
-                selectedSongIndex
+                selectedSongIndex,
+                overrideClosePopupsDefaultWithOverviewOption
             })
             this.selectAnnotation()
             this.selectVerse(undefined, selectedVerseIndex)
@@ -1023,7 +1026,8 @@ class App extends Component {
                            selectedWikiIndex = this.props.selectedWikiIndex,
                            selectedAnnotationIndex = this.props.selectedAnnotationIndex,
                            popupsAlreadyClosed,
-                           overrideClosePopupsDefaultWithSection }) {
+                           overrideClosePopupsDefaultWithSection,
+                           overrideClosePopupsDefaultWithOverviewOption }) {
 
         const accessedSectionIndex = AccessHelper.handleSectionAccess({
                 deviceIndex: this.state.deviceIndex,
@@ -1044,7 +1048,7 @@ class App extends Component {
         this.props.accessSectionIndex(accessedSectionIndex)
 
         if (!popupsAlreadyClosed) {
-            this._closePopupIfOpen(undefined, sectionKey, overrideClosePopupsDefaultWithSection)
+            this._closePopupIfOpen(undefined, sectionKey, overrideClosePopupsDefaultWithSection, overrideClosePopupsDefaultWithOverviewOption)
         }
         this._focusApp()
     }
