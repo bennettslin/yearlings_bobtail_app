@@ -59,7 +59,7 @@ const SongView = ({
     onAnnotationClick,
     onVerseClick,
     onLyricColumnClick,
-    onAnnotationSectionClick,
+    onPopupContainerClick,
     onSongFromPortalClick,
 
     // From controller.
@@ -85,7 +85,7 @@ const SongView = ({
                 onPortalClick={onSongFromPortalClick}
                 onWikiUrlClick={onWikiUrlClick}
                 onPopupButtonClick={onAnnotationClick}
-                onSectionClick={onAnnotationSectionClick}
+                onPopupContainerClick={onPopupContainerClick}
             />
             <WikiPopup
                 selectedWikiUrl={selectedWikiUrl}
@@ -93,6 +93,7 @@ const SongView = ({
                 accessedSectionKey={accessedSectionKey}
                 nextSectionKey={nextSectionKey}
                 onPopupButtonClick={onWikiUrlClick}
+                onPopupContainerClick={onPopupContainerClick}
             />
             <DotsSection
                 isAdmin={true}

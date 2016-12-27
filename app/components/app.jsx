@@ -184,7 +184,7 @@ class App extends Component {
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
         this.handleKeyDown = this.handleKeyDown.bind(this)
-        this.handleAnnotationSectionClick = this.handleAnnotationSectionClick.bind(this)
+        this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
         this.windowResize = this.windowResize.bind(this)
     }
 
@@ -791,16 +791,16 @@ class App extends Component {
         })
     }
 
-    handleAnnotationSectionClick(e) {
-        /**
-         * Clicking inside the annotation popup itself should keep it open, but
-         * close any other popups.
-         */
-
+    handlePopupContainerClick(e, className) {
+        this._stopPropagation(e)
         this._handleAccessOn(0)
 
-        if (this.props.selectedWikiIndex) {
-            this.selectWiki()
+        /**
+         * Clicking inside the annotation popup itself should keep it open, but
+         * close the wiki popup.
+         */
+        if (className === 'annotation' && this.props.selectedWikiIndex) {
+            this.selectWiki(true)
         }
 
         this._focusApp()
@@ -1121,7 +1121,7 @@ class App extends Component {
                     onDotClick={this.selectDot}
                     onScreenWidthClick={this.selectLyricColumnWidth}
                     onLyricColumnClick={this.selectLyricColumn}
-                    onAnnotationSectionClick={this.handleAnnotationSectionClick}
+                    onPopupContainerClick={this.handlePopupContainerClick}
                     onLyricExpandClick={this.selectLyricExpand}
                     onNavExpandClick={this.selectNavExpand}
                     onBookColumnClick={this.selectBookColumn}

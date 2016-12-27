@@ -83,7 +83,7 @@ const MainColumnView = ({
     onOverviewClick,
     onSongFromPortalClick,
     onAnnotationClick,
-    onAnnotationSectionClick,
+    onPopupContainerClick,
     onDotsExpandClick,
     onNavExpandClick,
     onBookColumnClick,
@@ -103,14 +103,15 @@ const MainColumnView = ({
             onPortalClick: onSongFromPortalClick,
             onWikiUrlClick,
             onPopupButtonClick: onAnnotationClick,
-            onSectionClick: onAnnotationSectionClick
+            onPopupContainerClick
         },
         wikiPopupProps = {
             selectedWikiUrl,
             accessedOn,
             accessedSectionKey,
             nextSectionKey,
-            onPopupButtonClick: onWikiUrlClick
+            onPopupButtonClick: onWikiUrlClick,
+            onPopupContainerClick
         },
         dotsPopupProps = {
             selectedDotKeys,
@@ -121,7 +122,8 @@ const MainColumnView = ({
             nextSectionKey,
             accessedDotIndex,
             onDotClick,
-            onPopupButtonClick: onDotsExpandClick
+            onPopupButtonClick: onDotsExpandClick,
+            onPopupContainerClick
         },
         dotsTipsSectionProps = {
             selectedTipsIndex,

@@ -31,12 +31,10 @@ const AnnotationSectionView = ({
 
     // From controller.
     title,
-    onSectionClick,
 
 ...other }) => (
     <div
         className={`section annotation-section${inPopup ? ' in-popup' : ''}`}
-        onClick={onSectionClick}
     >
         <h2>{title}</h2>
         <div className="cards-block">
