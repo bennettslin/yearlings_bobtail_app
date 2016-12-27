@@ -225,7 +225,7 @@ class App extends Component {
         // Hide overview.
         if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
             this.selectOverview(undefined, undefined, HIDDEN)
-            popupWasOpen = true
+            // popupWasOpen = true
         }
 
         // Hide dots.
@@ -998,17 +998,18 @@ class App extends Component {
 
     _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2, accessedSectionIndex = this.props.accessedSectionIndex) {
         this._focusApp()
+
         if (accessedOn) {
             this._selectDefaultSectionElementIndex(accessedSectionIndex)
 
-            // If accessed section is dots section, expand the popup...
+            // If accessed section is dots section, expand the popup.
             if (SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
                 this.selectDotsExpand(undefined, 1)
+            }
 
-                // And hide overview if shown.
-                if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                    this.selectOverview(undefined, undefined, HIDDEN)
-                }
+            // Hide overview if shown.
+            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+                this.selectOverview(undefined, undefined, HIDDEN)
             }
         }
 
