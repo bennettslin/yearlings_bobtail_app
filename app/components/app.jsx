@@ -209,9 +209,9 @@ class App extends Component {
         }
     }
 
-    _closePopupIfOpen(accessOff, exemptSection, overrideClosePopupsDefaultWithSection, overrideClosePopupsDefaultWithOverviewOption) {
-        const { selectedAnnotationIndex,
-                selectedWikiIndex,
+    _closePopupIfOpen(accessOff, exemptSection, overrideClosePopupsDefaultWithSection, overrideClosePopupsDefaultWithOverviewOption, selectedAnnotationIndex = this.props.selectedAnnotationIndex) {
+
+        const { selectedWikiIndex,
                 selectedDotsIndex,
                 selectedOverviewIndex } = this.props
 
@@ -427,7 +427,8 @@ class App extends Component {
                 this.selectAnnotation()
 
                 this._handleSectionAccess({
-                    accessedSectionKey: DOTS_SECTION
+                    accessedSectionKey: DOTS_SECTION,
+                    selectedAnnotationIndex: 0
                 })
 
             } else {
@@ -1048,7 +1049,7 @@ class App extends Component {
         this.props.accessSectionIndex(accessedSectionIndex)
 
         if (!popupsAlreadyClosed) {
-            this._closePopupIfOpen(undefined, sectionKey, overrideClosePopupsDefaultWithSection, overrideClosePopupsDefaultWithOverviewOption)
+            this._closePopupIfOpen(undefined, sectionKey, overrideClosePopupsDefaultWithSection, overrideClosePopupsDefaultWithOverviewOption, selectedAnnotationIndex)
         }
         this._focusApp()
     }
