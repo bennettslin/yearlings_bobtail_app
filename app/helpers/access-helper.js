@@ -116,7 +116,8 @@ export default {
 
             handleSectionAccess({
                 accessedSectionKey,
-                accessOn: true
+                accessOn: true,
+                overrideClosePopupsDefaultWithSection: accessedSectionKey
             })
         }
 

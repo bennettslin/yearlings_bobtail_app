@@ -209,7 +209,7 @@ class App extends Component {
         }
     }
 
-    _closePopupIfOpen(accessOff, exemptSection) {
+    _closePopupIfOpen(accessOff, exemptSection, overrideClosePopupsDefaultWithSection) {
         const { selectedAnnotationIndex,
                 selectedWikiIndex,
                 selectedDotsIndex,
@@ -217,7 +217,7 @@ class App extends Component {
 
         let popupWasOpen = false
 
-        // Collapse lyrics.
+        // TODO: Collapse lyrics.
 
         // Hide overview.
         if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
@@ -227,7 +227,7 @@ class App extends Component {
 
         // Hide dots.
         if (exemptSection !== DOTS_SECTION && selectedDotsIndex === 1) {
-            this.selectDotsExpand(undefined, 0)
+            this.selectDotsExpand({ popupsAlreadyClosed: true, overrideClosePopupsDefaultWithSection }, 0)
             popupWasOpen = true
         }
 
@@ -235,11 +235,11 @@ class App extends Component {
         if (selectedAnnotationIndex) {
             if (selectedWikiIndex) {
                 if (exemptSection !== WIKI_SECTION) {
-                    this.selectWiki({ popupsClosed: true })
+                    this.selectWiki({ popupsAlreadyClosed: true, overrideClosePopupsDefaultWithSection })
                 }
             } else {
                 if (exemptSection !== ANNOTATION_SECTION) {
-                    this.selectAnnotation({ popupsClosed: true })
+                    this.selectAnnotation({ popupsAlreadyClosed: true, overrideClosePopupsDefaultWithSection })
                     /**
                     * If closing annotation, set lyric element to annotation, and
                     * set accessed annotation index to closed annotation.
@@ -412,18 +412,27 @@ class App extends Component {
 
         this.props.selectDotsIndex(selectedDotsIndex)
 
-        if (e && selectedDotsIndex) {
-            // Hide overview and collapse lyrics if shown.
-            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                this.selectOverview(undefined, undefined, HIDDEN)
+        if (e) {
+
+            if (selectedDotsIndex) {
+                // Hide overview and collapse lyrics if shown.
+                if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+                    this.selectOverview(undefined, undefined, HIDDEN)
+                }
+
+                this.selectLyricExpand(undefined, false)
+                this.selectAnnotation()
+
+                this._handleSectionAccess({
+                    accessedSectionKey: DOTS_SECTION
+                })
+
+            } else {
+                this._handleSectionAccess({
+                    accessedSectionKey: e.overrideClosePopupsDefaultWithSection || NAV_SECTION,
+                    popupsAlreadyClosed: e.popupsAlreadyClosed
+                })
             }
-
-            this.selectLyricExpand(undefined, false)
-            this.selectAnnotation()
-
-            this._handleSectionAccess({
-                accessedSectionKey: DOTS_SECTION
-            })
         }
     }
 
@@ -563,12 +572,15 @@ class App extends Component {
         }
 
         if (e) {
+            const accessedSectionKey = e.overrideClosePopupsDefaultWithSection ||
+                (selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION)
+
             this.selectDotsExpand(undefined, 0)
 
             this._handleSectionAccess({
-                accessedSectionKey: selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION,
+                accessedSectionKey,
                 selectedAnnotationIndex,
-                popupsClosed: e.popupsClosed
+                popupsAlreadyClosed: e.popupsAlreadyClosed
             })
         }
     }
@@ -583,10 +595,13 @@ class App extends Component {
         }
 
         if (e) {
+            const accessedSectionKey = e.overrideClosePopupsDefaultWithSection ||
+                (selectedWikiIndex ? WIKI_SECTION : ANNOTATION_SECTION)
+
             this._handleSectionAccess({
-                accessedSectionKey: selectedWikiIndex ? WIKI_SECTION : ANNOTATION_SECTION,
+                accessedSectionKey,
                 selectedWikiIndex,
-                popupsClosed: e.popupsClosed
+                popupsAlreadyClosed: e.popupsAlreadyClosed
             })
         }
     }
@@ -1003,7 +1018,8 @@ class App extends Component {
                            selectedSongIndex = this.props.selectedSongIndex,
                            selectedWikiIndex = this.props.selectedWikiIndex,
                            selectedAnnotationIndex = this.props.selectedAnnotationIndex,
-                           popupsClosed }) {
+                           popupsAlreadyClosed,
+                           overrideClosePopupsDefaultWithSection }) {
 
         const accessedSectionIndex = AccessHelper.handleSectionAccess({
                 deviceIndex: this.state.deviceIndex,
@@ -1023,8 +1039,8 @@ class App extends Component {
         this._selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex)
         this.props.accessSectionIndex(accessedSectionIndex)
 
-        if (!popupsClosed) {
-            this._closePopupIfOpen(undefined, sectionKey)
+        if (!popupsAlreadyClosed) {
+            this._closePopupIfOpen(undefined, sectionKey, overrideClosePopupsDefaultWithSection)
         }
         this._focusApp()
     }
