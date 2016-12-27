@@ -209,8 +209,13 @@ class App extends Component {
         }
     }
 
-    _closePopupIfOpen(accessOff, exemptSection, overrideClosePopupsDefaultWithSection, overrideClosePopupsDefaultWithOverviewOption, selectedAnnotationIndex = this.props.selectedAnnotationIndex) {
-
+    _closePopupIfOpen({
+        accessOff,
+        exemptSection,
+        overrideClosePopupsDefaultWithSection,
+        overrideClosePopupsDefaultWithOverviewOption,
+        selectedAnnotationIndex = this.props.selectedAnnotationIndex
+    }) {
         const { selectedWikiIndex,
                 selectedDotsIndex,
                 selectedOverviewIndex } = this.props
@@ -511,7 +516,7 @@ class App extends Component {
 
         // Close wiki popup if deselected.
         if (!isSelected && selectedDotKey === WIKI && this.props.selectedWikiIndex) {
-            this._closePopupIfOpen()
+            this._closePopupIfOpen({})
         }
 
         // Advance to the next accesible annotation and popup anchor, if needed.
@@ -865,7 +870,7 @@ class App extends Component {
         })) { return }
 
         // If Escape to close popup, close it and return.
-        if (keyName === ESCAPE && this._closePopupIfOpen(true)) { return }
+        if (keyName === ESCAPE && this._closePopupIfOpen({ accessOff: true })) { return }
 
         // If access is off, any key besides Escape turns it on.
         if (!this.props.accessedOn) {
@@ -881,7 +886,7 @@ class App extends Component {
 
             // Space closes popup if open, otherwise accesses next section.
             } else if (keyName === SPACE) {
-                if (!this._closePopupIfOpen()) {
+                if (!this._closePopupIfOpen({})) {
                     this._handleSectionAccess({})
                 }
 
@@ -1049,7 +1054,12 @@ class App extends Component {
         this.props.accessSectionIndex(accessedSectionIndex)
 
         if (!popupsAlreadyClosed) {
-            this._closePopupIfOpen(undefined, sectionKey, overrideClosePopupsDefaultWithSection, overrideClosePopupsDefaultWithOverviewOption, selectedAnnotationIndex)
+            this._closePopupIfOpen({
+                exemptSection: sectionKey,
+                overrideClosePopupsDefaultWithSection,
+                overrideClosePopupsDefaultWithOverviewOption,
+                selectedAnnotationIndex
+            })
         }
         this._focusApp()
     }
