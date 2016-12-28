@@ -584,9 +584,6 @@ class App extends Component {
         }
 
         if (e) {
-            console.error('e', e);
-            console.error('e.overrideClosePopupsDefaultWithSection', e.overrideClosePopupsDefaultWithSection);
-
             const accessedSectionKey = e.overrideClosePopupsDefaultWithSection ||
                 (selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION)
 
@@ -595,7 +592,8 @@ class App extends Component {
             this._handleSectionAccess({
                 accessedSectionKey,
                 selectedAnnotationIndex,
-                popupsAlreadyClosed: e.popupsAlreadyClosed
+                popupsAlreadyClosed: e.popupsAlreadyClosed,
+                overrideClosePopupsDefaultWithSection: accessedSectionKey
             })
         }
     }
@@ -1043,9 +1041,6 @@ class App extends Component {
             }),
             sectionKey = accessedSectionKey || SECTION_KEYS[accessedSectionIndex]
 
-        console.error('accessedSectionIndex', accessedSectionIndex);
-
-        console.error('handle section access', accessedSectionKey);
         // If accessed section is dots section, expand the popup...
         if (sectionKey === DOTS_SECTION) {
             this.selectDotsExpand(undefined, 1)
