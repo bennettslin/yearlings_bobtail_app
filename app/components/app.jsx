@@ -584,6 +584,9 @@ class App extends Component {
         }
 
         if (e) {
+            console.error('e', e);
+            console.error('e.overrideClosePopupsDefaultWithSection', e.overrideClosePopupsDefaultWithSection);
+
             const accessedSectionKey = e.overrideClosePopupsDefaultWithSection ||
                 (selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION)
 
@@ -817,14 +820,16 @@ class App extends Component {
 
     _onBodyClick(e) {
         this._handleAccessOn(0)
-        this.selectAnnotation()
-        this.selectWiki()
-        this.selectDotsExpand(undefined, 0)
+        this._closePopupIfOpen({})
 
-        // Hide overview if shown.
-        if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-            this.selectOverview(undefined, undefined, HIDDEN)
-        }
+        // this.selectAnnotation()
+        // this.selectWiki()
+        // this.selectDotsExpand(undefined, 0)
+        //
+        // // Hide overview if shown.
+        // if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+        //     this.selectOverview(undefined, undefined, HIDDEN)
+        // }
     }
 
     handleKeyDown(e) {
@@ -1045,6 +1050,9 @@ class App extends Component {
             }),
             sectionKey = accessedSectionKey || SECTION_KEYS[accessedSectionIndex]
 
+        console.error('accessedSectionIndex', accessedSectionIndex);
+
+        console.error('handle section access', accessedSectionKey);
         // If accessed section is dots section, expand the popup...
         if (sectionKey === DOTS_SECTION) {
             this.selectDotsExpand(undefined, 1)

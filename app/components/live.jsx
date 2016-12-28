@@ -144,7 +144,8 @@ const LiveView = ({
             hideClose: true,
             selectedOverviewIndex,
             overviewText,
-            onPopupButtonClick: onOverviewClick
+            onPopupButtonClick: onOverviewClick,
+            onPopupContainerClick
         },
         mainColumnProps = {
             overviewPopupProps,

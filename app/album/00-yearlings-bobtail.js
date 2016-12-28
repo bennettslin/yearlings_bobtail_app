@@ -57,6 +57,21 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: 'clicking hidden dot tooltips prevents popup from closing',
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: 'brief flash of dot tooltips when loading',
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Figure out when portal has no description`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: 'final check on all portals',
             workedHours: 0,
             neededHours: 1
@@ -68,11 +83,6 @@ module.exports = {
         },
         {
             taskName: `Make portals fit well in admin`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `Figure out when portal has no description`,
             workedHours: 0,
             neededHours: 1
         },
