@@ -22,6 +22,10 @@
 
                 &.interacted {
 
+                    .tooltip-container {
+                        visibility: visible;
+                    }
+
                     .tooltip {
                         animation: tooltipGrow 0.25s;
                         opacity: 1;
@@ -37,8 +41,9 @@
                 &.uninteracted {
 
                     .tooltip-container {
-                        .transition(bottom 0s ease 0.25s);
+                        .transition(~"bottom 0s ease 0.25s, visibility 0s ease 0.25s");
                         bottom: 0;
+                        visibility: hidden;
                     }
 
                     .tooltip {

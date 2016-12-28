@@ -57,16 +57,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: 'clicking hidden dot tooltips prevents popup from closing',
-            workedHours: 1,
-            neededHours: 1
-        },
-        {
-            taskName: 'brief flash of dot tooltips when loading',
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `Figure out when portal has no description`,
             workedHours: 0,
             neededHours: 1
@@ -950,6 +940,16 @@ module.exports = {
         },
         {
             taskName: `do z-indices`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: 'clicking hidden dot tooltips prevents popup from closing',
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: 'brief flash of dot tooltips when loading',
             workedHours: 1,
             neededHours: 1
         }
