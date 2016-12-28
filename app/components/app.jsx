@@ -820,16 +820,9 @@ class App extends Component {
 
     _onBodyClick(e) {
         this._handleAccessOn(0)
-        this._closePopupIfOpen({})
 
-        // this.selectAnnotation()
-        // this.selectWiki()
-        // this.selectDotsExpand(undefined, 0)
-        //
-        // // Hide overview if shown.
-        // if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-        //     this.selectOverview(undefined, undefined, HIDDEN)
-        // }
+        // Hide popups, but don't collapse lyrics column.
+        this._closePopupIfOpen({ exemptSection: LYRICS_SECTION })
     }
 
     handleKeyDown(e) {
