@@ -21,6 +21,7 @@
             &.dot-enabled {
 
                 &.interacted {
+
                     .tooltip {
                         animation: tooltipGrow 0.25s;
                         opacity: 1;
@@ -34,6 +35,11 @@
                 }
 
                 &.uninteracted {
+
+                    .tooltip-container {
+                        .transition(bottom 0s ease 0.25s);
+                        bottom: 0;
+                    }
 
                     .tooltip {
                         animation: tooltipShrink 0.1s;

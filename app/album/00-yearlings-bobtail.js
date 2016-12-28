@@ -58,7 +58,7 @@ module.exports = {
     tasks: [
         {
             taskName: 'clicking hidden dot tooltips prevents popup from closing',
-            workedHours: 0,
+            workedHours: 1,
             neededHours: 1
         },
         {
