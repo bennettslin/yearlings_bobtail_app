@@ -4,7 +4,8 @@ import AudioButtons from './audio-buttons'
 import TitleSection from '../title/title-section'
 import { getFormattedTime } from 'helpers/format-helper'
 import { AUDIO_OPTIONS,
-         AUDIO_SECTION } from 'helpers/constants'
+         AUDIO_SECTION,
+         SONG_FILES } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -97,6 +98,9 @@ const AudioSectionView = ({
             {titleInAudio ? <TitleSection {...titleProps} /> : null}
             {!isPhone ? <AudioBanner {...audioBannerProps} /> : null}
             <AudioButtons {...audioButtonsProps} />
+            <audio controls>
+
+            </audio>
         </div>
     )
 }
