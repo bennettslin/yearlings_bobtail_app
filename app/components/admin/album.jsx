@@ -38,6 +38,7 @@ const AlbumView = ({
     deviceIndex,
     windowWidth,
     windowHeight,
+    mp3s,
     songs,
     title,
     isPlaying,
@@ -79,6 +80,7 @@ const AlbumView = ({
             />
             <AudioSection
                 isAdmin={true}
+                mp3s={mp3s}
                 isFirstVerse={isFirstVerse}
                 isLastVerse={isLastVerse}
                 selectedSongTitle={selectedSongTitle}

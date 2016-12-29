@@ -39,6 +39,7 @@ const MainColumnView = ({
     isLastVerse,
     isPlaying,
 
+    mp3s,
     songs,
     title,
     annotation,
@@ -139,6 +140,7 @@ const MainColumnView = ({
             accessedSectionKey,
             nextSectionKey,
             accessedSongIndex,
+            mp3s,
             isFirstVerse,
             isLastVerse,
             selectedSongTitle,

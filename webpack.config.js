@@ -21,7 +21,7 @@ module.exports = {
             path.resolve(__dirname, './app')
         ],
         // import from files without specifying extensions.
-        extensions: ['', '.js', '.jsx', '.less']
+        extensions: ['', '.js', '.jsx', '.less', '.mp3']
     },
 
     /**
@@ -69,7 +69,7 @@ module.exports = {
          * localhost.
          */
         host: process.env.HOST,
-        port: 8001 || process.env.PORT
+        port: 1337 || process.env.PORT
     },
 
     plugins: process.env.NODE_ENV !== 'production' ? [
@@ -83,7 +83,7 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+                test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|mp3)$/,
                 loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
             },
             {

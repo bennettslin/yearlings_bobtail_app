@@ -57,6 +57,7 @@ const LiveView = ({
     windowHeight,
     manualWidth,
     bookStartingIndices,
+    mp3s,
     songs,
     title,
     isPlaying,
@@ -153,6 +154,7 @@ const LiveView = ({
             isLastVerse,
             isPlaying,
 
+            mp3s,
             songs,
             title,
             annotation,

@@ -56,6 +56,7 @@ const AudioSectionView = ({
     selectedSongTitle,
     selectedTimePlayed,
     selectedAudioOptionIndex,
+    mp3s,
     isFirstVerse,
     isLastVerse,
     onPlayClick,
@@ -109,9 +110,11 @@ const AudioSectionView = ({
             {titleInAudio ? <TitleSection {...titleProps} /> : null}
             {!isPhone ? <AudioBanner {...audioBannerProps} /> : null}
             <AudioButtons {...audioButtonsProps} />
-            <audio controls>
-
-            </audio>
+            {!isPrologue || isEpilogue ?
+                <audio controls>
+                    <source src={`${mp3s[selectedSongIndex - 1]}`} type="audio/mpeg" />
+                </audio> : null
+            }
             selectedSongIndex: {selectedSongIndex}
         </div>
     )
