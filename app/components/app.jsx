@@ -52,6 +52,7 @@ import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
+import SCHelper from 'helpers/soundcloud-helper'
 
 /*********
  * STORE *
@@ -148,6 +149,11 @@ class App extends Component {
     componentDidMount() {
         // Allows app to begin listening for keyboard events.
         this._focusApp()
+
+        /**
+         * Experiment with SoundCloud API.
+         */
+        SCHelper.initialise()
     }
 
     /***********
@@ -307,6 +313,11 @@ class App extends Component {
         this.setState({
             isPlaying: !this.state.isPlaying
         })
+
+        /**
+         * Experiment with SoundCloud API.
+         */
+        SCHelper.doThing()
     }
 
     selectSong(e, selectedSongIndex = 0, direction, fromPortal) {

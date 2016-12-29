@@ -4,10 +4,11 @@ import { Route, IndexRoute } from 'react-router'
 import './less/main.less'
 import App from './components/app'
 import AlbumData from './album/00-yearlings-bobtail'
-import { prepareAlbumData } from './helpers/album-build-helper'
+import { prepareAlbumData, addSoundCloudIdToAlbumData } from './helpers/album-build-helper'
 
 // Restructure raw data to be usable by app.
 prepareAlbumData(AlbumData)
+addSoundCloudIdToAlbumData(AlbumData, process.env.SOUNDCLOUD_CLIENT_ID)
 
 class Root extends Component {
     render() {

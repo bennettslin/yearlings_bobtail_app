@@ -25,6 +25,10 @@ const _tempStore = {
     _lyricInTime: false
 }
 
+export const addSoundCloudIdToAlbumData = (albumData, soundCloudId) => {
+    albumData.soundCloudId = soundCloudId
+}
+
 export const prepareAlbumData = (album = {}) => {
     _prepareAllSongs(album)
     _injectPortalLinks(album)
