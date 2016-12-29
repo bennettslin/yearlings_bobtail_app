@@ -29,10 +29,6 @@ const MenuFieldView = ({
 
     isPhone,
     title,
-    isPrologue,
-    isFirstSong,
-    isLastSong,
-    isEpilogue,
     isFirstVerse,
     isLastVerse,
     selectedSongTitle,
@@ -65,10 +61,6 @@ const MenuFieldView = ({
         audioSectionProps = {
             titleInAudio,
             isPhone,
-            isPrologue,
-            isFirstSong,
-            isLastSong,
-            isEpilogue,
             isFirstVerse,
             isLastVerse,
             selectedSongTitle,

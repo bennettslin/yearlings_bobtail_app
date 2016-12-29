@@ -1080,12 +1080,8 @@ class App extends Component {
             isLyricExpandable = getIsLyricExpandable(state),
             isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
 
-            isPrologue = selectedSongIndex === 0,
-            isFirstSong = selectedSongIndex === 1,
-            isLastSong = selectedSongIndex === songs.length - 2,
-            isEpilogue = selectedSongIndex === songs.length - 1,
-
-            selectedSongTitle = getSongTitle(props, isPrologue || isEpilogue),
+            isLogue = getIsLogue(props),
+            selectedSongTitle = getSongTitle(props, isLogue),
 
             lyricsStartAtZero = getLyricsStartAtZero(props),
             isFirstVerse = selectedVerseIndex === (lyricsStartAtZero ? 1 : 0),
@@ -1108,10 +1104,6 @@ class App extends Component {
                     onClick={this.toggleAdmin}
                 />
                 <Switch {...this.props} {...this.state}
-                    isPrologue={isPrologue}
-                    isFirstSong={isFirstSong}
-                    isLastSong={isLastSong}
-                    isEpilogue={isEpilogue}
                     lyricsStartAtZero={lyricsStartAtZero}
                     isFirstVerse={isFirstVerse}
                     isLastVerse={isLastVerse}
@@ -1119,6 +1111,7 @@ class App extends Component {
                     accessedSectionKey={accessedSectionKey}
                     nextSectionKey={nextSectionKey}
                     showSingleLyricColumn={showSingleLyricColumn}
+                    isLogue={isLogue}
                     isLyricExpandable={isLyricExpandable}
                     isOverviewShown={isOverviewShown}
                     onSongClick={this.selectSong}

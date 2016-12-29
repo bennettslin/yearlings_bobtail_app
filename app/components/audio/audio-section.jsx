@@ -16,14 +16,24 @@ const AudioSection = ({
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
+    selectedSongIndex,
 
 ...other }) => {
 
     const sectionAccessHighlighted = accessedOn && accessedSectionKey === AUDIO_SECTION,
-        sectionNextHighlighted = accessedOn && nextSectionKey === AUDIO_SECTION
+        sectionNextHighlighted = accessedOn && nextSectionKey === AUDIO_SECTION,
+        isPrologue = selectedSongIndex === 0,
+        isFirstSong = selectedSongIndex === 1,
+        isLastSong = selectedSongIndex === SONG_FILES.length,
+        isEpilogue = selectedSongIndex === SONG_FILES.length + 1
 
     return (
         <AudioSectionView {...other}
+            selectedSongIndex={selectedSongIndex}
+            isPrologue={isPrologue}
+            isFirstSong={isFirstSong}
+            isLastSong={isLastSong}
+            isEpilogue={isEpilogue}
             sectionAccessHighlighted={sectionAccessHighlighted}
             sectionNextHighlighted={sectionNextHighlighted}
         />
@@ -42,13 +52,10 @@ const AudioSectionView = ({
     isAdmin,
     isPlaying,
     title,
+    selectedSongIndex,
     selectedSongTitle,
     selectedTimePlayed,
     selectedAudioOptionIndex,
-    isPrologue,
-    isFirstSong,
-    isLastSong,
-    isEpilogue,
     isFirstVerse,
     isLastVerse,
     onPlayClick,
@@ -58,6 +65,10 @@ const AudioSectionView = ({
     onTitleClick,
 
     // From controller.
+    isPrologue,
+    isFirstSong,
+    isLastSong,
+    isEpilogue,
     sectionAccessHighlighted,
     sectionNextHighlighted,
 
@@ -101,6 +112,7 @@ const AudioSectionView = ({
             <audio controls>
 
             </audio>
+            selectedSongIndex: {selectedSongIndex}
         </div>
     )
 }

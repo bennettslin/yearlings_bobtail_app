@@ -49,10 +49,6 @@ const AlbumView = ({
     selectedNavIndex,
     selectedDotsIndex,
     showSingleLyricColumn,
-    isPrologue,
-    isFirstSong,
-    isLastSong,
-    isEpilogue,
     isFirstVerse,
     isLastVerse,
     selectedSongTitle,
@@ -83,10 +79,6 @@ const AlbumView = ({
             />
             <AudioSection
                 isAdmin={true}
-                isPrologue={isPrologue}
-                isFirstSong={isFirstSong}
-                isLastSong={isLastSong}
-                isEpilogue={isEpilogue}
                 isFirstVerse={isFirstVerse}
                 isLastVerse={isLastVerse}
                 selectedSongTitle={selectedSongTitle}

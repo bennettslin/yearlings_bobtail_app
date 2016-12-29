@@ -12,13 +12,10 @@ import { getIsPhone, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessL
 
 const Live = (props) => {
 
-    const { isPrologue,
-            isEpilogue,
-            selectedDotsIndex } = props,
+    const { selectedDotsIndex } = props,
         selectedSong = getSong(props),
         annotation = getAnnotation(props),
         selectedWikiUrl = getWikiUrl(props),
-        isLogue = isPrologue || isEpilogue,
 
         isPhone = getIsPhone(props),
         isHeightlessLyricColumn = getIsHeightlessLyricColumn(props),
@@ -29,7 +26,6 @@ const Live = (props) => {
 
     return (
         <LiveView {...props}
-            isLogue={isLogue}
             lyrics={selectedSong.lyrics}
             overviewText={selectedSong.overview}
             annotation={annotation}
@@ -64,6 +60,7 @@ const LiveView = ({
     songs,
     title,
     isPlaying,
+    isLogue,
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedDotKeys,
@@ -95,10 +92,6 @@ const LiveView = ({
     isLyricExpandable,
     isOverviewShown,
 
-    isPrologue,
-    isFirstSong,
-    isLastSong,
-    isEpilogue,
     isFirstVerse,
     isLastVerse,
     selectedSongTitle,
@@ -121,7 +114,6 @@ const LiveView = ({
     onBookColumnClick,
 
     // From controller.
-    isLogue,
     overviewText,
     tasks,
     lyrics,
@@ -157,10 +149,6 @@ const LiveView = ({
             isHeightlessLyricColumn,
 
             isLogue,
-            isPrologue,
-            isFirstSong,
-            isLastSong,
-            isEpilogue,
             isFirstVerse,
             isLastVerse,
             isPlaying,
