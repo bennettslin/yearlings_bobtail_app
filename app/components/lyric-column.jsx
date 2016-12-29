@@ -50,7 +50,7 @@ const LyricColumnView = ({
                 <div className="lyric-button-block ear-button-block">
                     <a
                         className="lyric-button enabled"
-                        onClick={onLyricColumnClick}
+                        onClick={e => onLyricColumnClick(e)}
                     >
                         <div className="large button-icon lyric-icon">
                             {earButtonText}
@@ -62,7 +62,7 @@ const LyricColumnView = ({
                 <div className="lyric-button-block expand-button-block in-lyric">
                     <a
                         className="lyric-button enabled"
-                        onClick={onLyricExpandClick}
+                        onClick={e => onLyricExpandClick(e)}
                     >
                         <div className="large button-icon lyric-icon">
                             {isLyricExpanded ? '-' : '+'}

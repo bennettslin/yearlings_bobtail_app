@@ -69,7 +69,7 @@ module.exports = {
          * localhost.
          */
         host: process.env.HOST,
-        port: 1337 || process.env.PORT
+        port: 8001 || process.env.PORT
     },
 
     plugins: process.env.NODE_ENV !== 'production' ? [

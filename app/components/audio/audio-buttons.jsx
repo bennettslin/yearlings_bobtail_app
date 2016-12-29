@@ -110,7 +110,7 @@ const AudioButtonsView = ({
         <div className="audio-subblock option-subblock">
             <a
                 className="audio-button enabled"
-                onClick={onAudioOptionClick}
+                onClick={e => onAudioOptionClick(e)}
             >
                 <div className="button-icon audio-icon">
                     {AUDIO_OPTIONS[selectedAudioOptionIndex]}

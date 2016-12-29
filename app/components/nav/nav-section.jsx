@@ -105,7 +105,7 @@ const NavSectionView = ({
                         <NavBook {...navItemProps}
                             isNavToggle={true}
                             buttonText={selectedNavIndex + ''}
-                            onButtonClick={onNavExpandClick}
+                            onButtonClick={e => onNavExpandClick(e)}
                         />
                     </div>
                     <div className="books-block">
@@ -125,7 +125,7 @@ const NavSectionView = ({
                                         hasSelectedSong={selectedSongIndex
                                              < bookStartingIndices[1]}
                                         buttonText={'k'}
-                                        onButtonClick={onBookColumnClick}
+                                        onButtonClick={e => onBookColumnClick(e)}
                                     /> :
                                     <NavBook {...navItemProps}
                                         isLogue={true}
@@ -151,7 +151,7 @@ const NavSectionView = ({
                                         hasSelectedSong={selectedSongIndex
                                              >= bookStartingIndices[1]}
                                         buttonText={'k'}
-                                        onButtonClick={onBookColumnClick}
+                                        onButtonClick={e => onBookColumnClick(e)}
                                     /> :
                                     <NavBook {...navItemProps}
                                         isLogue={true}

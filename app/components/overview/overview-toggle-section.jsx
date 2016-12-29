@@ -30,8 +30,15 @@ const OverviewToggleSectionView = ({
     <div
         className="section overview-toggle-section"
     >
-        <div className={`overview-toggle-button-container${inPopup ? ' in-popup' : ''}`}>
-            <a className="overview-toggle-button enabled" onClick={onOverviewClick}>{OVERVIEW_OPTIONS[selectedOverviewIndex]}</a>
+        <div
+            className={`overview-toggle-button-container${inPopup ? ' in-popup' : ''}`}
+        >
+            <a
+                className="overview-toggle-button enabled"
+                onClick={e => onOverviewClick(e)}
+            >
+                {OVERVIEW_OPTIONS[selectedOverviewIndex]}
+            </a>
         </div>
     </div>
 )
