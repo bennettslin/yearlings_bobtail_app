@@ -77,6 +77,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Make mp3 player component`,
+            workedHours: 0,
+            neededHours: 5
+        },
+        {
             taskName: `Figure out when portal has no description`,
             workedHours: 0,
             neededHours: 1

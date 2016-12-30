@@ -1,6 +1,7 @@
 import React from 'react'
 import AudioBanner from './audio-banner'
 import AudioButtons from './audio-buttons'
+import AudioPlayersSection from './audio-players-section'
 import TitleSection from '../title/title-section'
 import { getFormattedTime } from 'helpers/format-helper'
 import { AUDIO_OPTIONS,
@@ -110,11 +111,9 @@ const AudioSectionView = ({
             {titleInAudio ? <TitleSection {...titleProps} /> : null}
             {!isPhone ? <AudioBanner {...audioBannerProps} /> : null}
             <AudioButtons {...audioButtonsProps} />
-            {!isPrologue || isEpilogue ?
-                <audio controls>
-                    <source src={`${mp3s[selectedSongIndex - 1]}`} type="audio/mpeg" />
-                </audio> : null
-            }
+            <AudioPlayersSection
+                mp3s={mp3s}
+            />
             selectedSongIndex: {selectedSongIndex}
         </div>
     )
