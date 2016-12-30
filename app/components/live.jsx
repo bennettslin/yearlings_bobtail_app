@@ -113,6 +113,7 @@ const LiveView = ({
     onLyricExpandClick,
     onNavExpandClick,
     onBookColumnClick,
+    onTimeChange,
 
     // From controller.
     overviewText,
@@ -201,7 +202,8 @@ const LiveView = ({
             onDotsExpandClick,
             onNavExpandClick,
             onBookColumnClick,
-            onLyricExpandClick
+            onLyricExpandClick,
+            onTimeChange
         },
         lyricColumnProps = {
             showSingleLyricColumn,

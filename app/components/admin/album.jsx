@@ -59,6 +59,7 @@ const AlbumView = ({
     onAudioOptionClick,
     onScreenWidthClick,
     onTipsClick,
+    onTimeChange,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
@@ -78,6 +79,17 @@ const AlbumView = ({
                 accessedSongIndex={accessedSongIndex}
                 onTitleClick={onSongClick}
             />
+            <DevSection
+                deviceIndex={deviceIndex}
+                windowWidth={windowWidth}
+                windowHeight={windowHeight}
+                selectedSongIndex={selectedSongIndex}
+                selectedVerseIndex={selectedVerseIndex}
+                selectedNavIndex={selectedNavIndex}
+                selectedDotsIndex={selectedDotsIndex}
+                showSingleLyricColumn={showSingleLyricColumn}
+                onScreenWidthClick={onScreenWidthClick}
+            />
             <AudioSection
                 isAdmin={true}
                 mp3s={mp3s}
@@ -95,22 +107,7 @@ const AlbumView = ({
                 onAudioSongClick={onSongClick}
                 onAudioTimeClick={onVerseClick}
                 onAudioOptionClick={onAudioOptionClick}
-            />
-            <TipsSection
-                isAdmin={true}
-                selectedTipsIndex={selectedTipsIndex}
-                onTipsClick={onTipsClick}
-            />
-            <DevSection
-                deviceIndex={deviceIndex}
-                windowWidth={windowWidth}
-                windowHeight={windowHeight}
-                selectedSongIndex={selectedSongIndex}
-                selectedVerseIndex={selectedVerseIndex}
-                selectedNavIndex={selectedNavIndex}
-                selectedDotsIndex={selectedDotsIndex}
-                showSingleLyricColumn={showSingleLyricColumn}
-                onScreenWidthClick={onScreenWidthClick}
+                onTimeChange={onTimeChange}
             />
             <NavSection
                 isAdmin={true}
@@ -122,6 +119,11 @@ const AlbumView = ({
                 nextSectionKey={nextSectionKey}
                 accessedSongIndex={accessedSongIndex}
                 onSongClick={onSongClick}
+            />
+            <TipsSection
+                isAdmin={true}
+                selectedTipsIndex={selectedTipsIndex}
+                onTipsClick={onTipsClick}
             />
         </div>
         <Shared {...other}

@@ -22,20 +22,16 @@ const AudioPlayersSectionView = ({
     // From props.
     mp3s,
 
-    // From controller.
-    selectedSongIndex
-
-}) => {
+...other }) => {
 
     return (
         <div className="audio-players-section">
             {mp3s.map((mp3, index) => {
                 return (
-                    <AudioPlayer
+                    <AudioPlayer {...other}
                         key={index}
                         mp3={mp3}
                         playerIndex={index + 1}
-                        selectedSongIndex={selectedSongIndex}
                     />
                 )
             })}

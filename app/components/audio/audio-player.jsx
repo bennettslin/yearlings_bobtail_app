@@ -2,29 +2,32 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import ReactAudioPlayer from 'react-audio-player'
 
+// https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
+// https://www.npmjs.com/package/react-audio-player
+
 class AudioPlayer extends Component {
 
     constructor(props) {
         super(props)
+
+        this._handleListen = this._handleListen.bind(this)
     }
 
     componentDidMount() {
         this.myPlayer = ReactDOM.findDOMNode(this.myReactPlayer)
+
+        this._handlePlay()
     }
 
     componentWillUpdate(nextProps, nextState) {
         if (this._getShouldUpdate(this.props, nextProps)) {
-            if (this.getIsSelected(nextProps)) {
-                console.error('this.myPlayer', this.myPlayer);
-            }
+            this._handlePlay(nextProps)
         }
     }
 
     componentDidUpdate(prevProps, prevState) {
         if (this._getShouldUpdate(prevProps, this.props)) {
-            if (this.getIsSelected(this.props)) {
-                console.error('this.myPlayer', this.myPlayer);
-            }
+            
         }
     }
 
@@ -36,11 +39,24 @@ class AudioPlayer extends Component {
     }
 
     _getShouldUpdate(oldProps, newProps) {
-        return oldProps.selectedSongIndex !== newProps.selectedSongIndex
+        return (oldProps.selectedSongIndex !== newProps.selectedSongIndex) ||
+            (oldProps.isPlaying !== newProps.isPlaying)
     }
 
-    handleListen(currentTime) {
-        console.error('currentTime', currentTime);
+    _handleListen(currentTime) {
+        if (this.getIsSelected()) {
+            this.props.onTimeChange(true, currentTime)
+        }
+    }
+
+    _handlePlay(props = this.props) {
+        if (this.getIsSelected()) {
+            if (props.isPlaying && this.myPlayer.paused) {
+                this.myPlayer.play()
+            } else if (!props.isPlaying && !this.myPlayer.paused) {
+                this.myPlayer.pause()
+            }
+        }
     }
 
     render() {
@@ -54,7 +70,7 @@ class AudioPlayer extends Component {
                     src={mp3}
                     ref={(ref) => this.myReactPlayer = ref}
                     listenInterval={100}
-                    onListen={this.handleListen}
+                    onListen={this._handleListen}
                 />
             </div>
         )

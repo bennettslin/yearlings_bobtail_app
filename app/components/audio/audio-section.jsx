@@ -3,7 +3,6 @@ import AudioBanner from './audio-banner'
 import AudioButtons from './audio-buttons'
 import AudioPlayersSection from './audio-players-section'
 import TitleSection from '../title/title-section'
-import { getFormattedTime } from 'helpers/format-helper'
 import { AUDIO_OPTIONS,
          AUDIO_SECTION,
          SONG_FILES } from 'helpers/constants'
@@ -65,6 +64,7 @@ const AudioSectionView = ({
     onAudioSongClick,
     onAudioTimeClick,
     onTitleClick,
+    onTimeChange,
 
     // From controller.
     isPrologue,
@@ -101,6 +101,12 @@ const AudioSectionView = ({
             titleInAudio,
             title,
             onTitleClick
+        },
+        audioPlayersProps = {
+            mp3s,
+            isPlaying,
+            selectedSongIndex,
+            onTimeChange
         }
 
     return (
@@ -111,11 +117,7 @@ const AudioSectionView = ({
             {titleInAudio ? <TitleSection {...titleProps} /> : null}
             {!isPhone ? <AudioBanner {...audioBannerProps} /> : null}
             <AudioButtons {...audioButtonsProps} />
-            <AudioPlayersSection
-                mp3s={mp3s}
-                selectedSongIndex={selectedSongIndex}
-            />
-            selectedSongIndex: {selectedSongIndex}
+            <AudioPlayersSection {...audioPlayersProps} />
         </div>
     )
 }

@@ -1131,6 +1131,7 @@ class App extends Component {
                     onBookColumnClick={this.selectBookColumn}
                     onDotsExpandClick={this.selectDotsExpand}
                     onTipsClick={this.selectTips}
+                    onTimeChange={this.selectTime}
                 />
             </div>
         )

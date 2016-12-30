@@ -8,9 +8,10 @@ export const getFormattedTime = (time) => {
     }
     const minutes = Math.floor(time / 60),
         seconds = Math.floor(time % 60),
-        zeroTen = seconds < 10 ? '0' : ''
+        secondsZeroTen = seconds < 10 ? '0' : '',
+        jiffy = Math.floor((time * 10) % 6)
 
-    return `${minutes}:${zeroTen}${seconds}`
+    return `${minutes}:${secondsZeroTen}${seconds}.${jiffy}`
 }
 
 // Parses text in anchor tag into annotation header.

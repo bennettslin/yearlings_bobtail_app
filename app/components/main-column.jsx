@@ -85,6 +85,7 @@ const MainColumnView = ({
     onNavExpandClick,
     onBookColumnClick,
     onLyricExpandClick,
+    onTimeChange
 
 }) => {
     const annotationPopupProps = {
@@ -154,7 +155,8 @@ const MainColumnView = ({
             onPlayClick,
             onSongClick,
             onVerseClick,
-            onAudioOptionClick
+            onAudioOptionClick,
+            onTimeChange
         },
         overviewToggleSectionProps = {
             selectedOverviewIndex,

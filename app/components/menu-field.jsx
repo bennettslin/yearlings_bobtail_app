@@ -45,6 +45,7 @@ const MenuFieldView = ({
     onSongClick,
     onVerseClick,
     onAudioOptionClick,
+    onTimeChange,
 
     // From controller.
     titleInAudio
@@ -78,7 +79,8 @@ const MenuFieldView = ({
             onAudioSongClick: onSongClick,
             onAudioTimeClick: onVerseClick,
             onTitleClick: onSongClick,
-            onAudioOptionClick
+            onAudioOptionClick,
+            onTimeChange
         }
 
     return (

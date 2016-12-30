@@ -30,28 +30,28 @@ const DevSectionView = ({
     <div className="section dev-section">
         <h2>dev</h2>
         <div className="row">
-            selected song index: {selectedSongIndex}
+            {/* selected song index: {selectedSongIndex} */}
         </div>
         <div className="row">
             selected verse index: {selectedVerseIndex}
         </div>
         <div className="row">
-            selected nav index: {selectedNavIndex}
+            {/* selected nav index: {selectedNavIndex} */}
         </div>
         <div className="row">
-            selected dots index: {selectedDotsIndex}
+            {/* selected dots index: {selectedDotsIndex} */}
         </div>
         <div className="row">
-            window size: {windowWidth} x {windowHeight}
+            {/* window size: {windowWidth} x {windowHeight} */}
         </div>
         <div className="row">
-            device width: {DEVICE_OBJECTS[deviceIndex].className}
+            {/* device width: {DEVICE_OBJECTS[deviceIndex].className} */}
         </div>
         <a
             className="enabled"
             onClick={onScreenWidthClick}
         >
-            Shown columns: {showSingleLyricColumn ? 'one' : 'two'}
+            {/* Shown columns: {showSingleLyricColumn ? 'one' : 'two'} */}
         </a>
     </div>
 )
