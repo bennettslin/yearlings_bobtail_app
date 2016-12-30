@@ -1,5 +1,5 @@
 import React from 'react'
-import AudioPlayer from './audio-player'
+import ReactAudioPlayer from 'react-audio-player'
 import { SONG_FILES } from 'helpers/constants'
 
 /*************
@@ -28,10 +28,9 @@ const AudioPlayersSectionView = ({
         <div className="audio-players-section">
             {mp3s.map((mp3, index) => {
                 return (
-                    <AudioPlayer
-                        ref={mp3}
+                    <ReactAudioPlayer
                         key={index}
-                        mp3={mp3}
+                        src={mp3}
                     />
                 )
             })}
