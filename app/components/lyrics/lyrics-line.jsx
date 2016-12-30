@@ -11,6 +11,9 @@ class LyricsLine extends Component {
     }
 
     componentDidMount() {
+        this.myParent = ReactDOM.findDOMNode(this.myReactParent)
+        this.myChild = ReactDOM.findDOMNode(this.myReactChild)
+
         /**
          * FIXME: Setting timeout of zero seems to work! Keep debugging code in
          * place for now. Rip it out once confident that this is indeed the
@@ -67,7 +70,7 @@ class LyricsLine extends Component {
          * columns?
          */
         if (this.props.columnKey !== TITLE && this.props.columnKey !== CENTRE) {
-            const parent = ReactDOM.findDOMNode(this.myParent)
+            const parent = this.myParent
             if (parent) {
                 if (unset) {
                     // parent.removeAttribute('style')
@@ -78,7 +81,7 @@ class LyricsLine extends Component {
                 } else {
                     // FIXME: The issue seems to be that the offsetWidth is wrong when this method gets called in componentDidMount.
 
-                    const child = ReactDOM.findDOMNode(this.myChild),
+                    const child = this.myChild,
                         offsetWidth = child.offsetWidth
 
                     // if (this.props.verseIndexForDebugging === 1) {
@@ -100,11 +103,11 @@ class LyricsLine extends Component {
 
         return (
             <div
-                ref={(ref) => this.myParent = ref}
+                ref={(ref) => this.myReactParent = ref}
                 className={`line ${columnKey}`}
             >
                 <TextBlock {...other}
-                    ref={(ref) => this.myChild = ref}
+                    ref={(ref) => this.myReactChild = ref}
                     isLyric={true}
                 />
             </div>

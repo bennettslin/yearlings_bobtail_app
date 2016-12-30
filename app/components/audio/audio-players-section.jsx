@@ -34,7 +34,7 @@ const AudioPlayersSectionView = ({
                     <AudioPlayer
                         key={index}
                         mp3={mp3}
-                        playerIndex={index}
+                        playerIndex={index + 1}
                         selectedSongIndex={selectedSongIndex}
                     />
                 )
