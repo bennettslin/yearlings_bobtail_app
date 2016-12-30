@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactAudioPlayer from 'react-audio-player'
+import AudioPlayer from './audio-player'
 import { SONG_FILES } from 'helpers/constants'
 
 /*************
@@ -20,7 +20,10 @@ const AudioPlayersSection = (props) => {
 const AudioPlayersSectionView = ({
 
     // From props.
-    mp3s
+    mp3s,
+
+    // From controller.
+    selectedSongIndex
 
 }) => {
 
@@ -28,9 +31,11 @@ const AudioPlayersSectionView = ({
         <div className="audio-players-section">
             {mp3s.map((mp3, index) => {
                 return (
-                    <ReactAudioPlayer
+                    <AudioPlayer
                         key={index}
-                        src={mp3}
+                        mp3={mp3}
+                        playerIndex={index}
+                        selectedSongIndex={selectedSongIndex}
                     />
                 )
             })}

@@ -113,6 +113,7 @@ const AudioSectionView = ({
             <AudioButtons {...audioButtonsProps} />
             <AudioPlayersSection
                 mp3s={mp3s}
+                selectedSongIndex={selectedSongIndex}
             />
             selectedSongIndex: {selectedSongIndex}
         </div>
