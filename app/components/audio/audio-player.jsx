@@ -27,7 +27,7 @@ class AudioPlayer extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         if (this._getShouldUpdate(prevProps, this.props)) {
-            
+
         }
     }
 
@@ -50,12 +50,12 @@ class AudioPlayer extends Component {
     }
 
     _handlePlay(props = this.props) {
-        if (this.getIsSelected()) {
-            if (props.isPlaying && this.myPlayer.paused) {
-                this.myPlayer.play()
-            } else if (!props.isPlaying && !this.myPlayer.paused) {
-                this.myPlayer.pause()
-            }
+        const isSelected = this.getIsSelected(props)
+
+        if (isSelected && props.isPlaying && this.myPlayer.paused) {
+            this.myPlayer.play()
+        } else if ((!isSelected || !props.isPlaying) && !this.myPlayer.paused) {
+            this.myPlayer.pause()
         }
     }
 
