@@ -264,8 +264,7 @@ module.exports = {
                         anchor: `see your kid with whiskers,`,
                         annotation: {
 
-                            // TODO: Make this simpler. Willy literally...
-                            description: `Willy jokingly remarks that given my brother's distaste for haircuts, he will likely sport an unshaven look as an adult. But in many legends, the changeling is not a child of any sort, but in fact a fully grown troll who is perhaps centuries old. So Willy might also be implying that he is immune to the enchantment that disguises my brother's true form in a childlike appearance.`
+                            description: `Willy jokingly predicts that my brother will sport an unshaven look as an adult, given his present distaste for haircuts. But Willy might also be hinting that he literally sees my brother with a beard here and now, in accordance with some legends in which the changeling is not a child at all, but rather a fully grown troll who is perhaps centuries old.`
                         }
                     }
                 ]
@@ -277,7 +276,7 @@ module.exports = {
                     {
                         anchor: `creepers on his cheek,`,
                         annotation: {
-                            description: `After all, Willy is quite possibly a changeling himself, as evinced by his own unkempt facial hair.`
+                            description: `If Willy is immune to the enchantment that disguises my brother's true form, then perhaps it's no surprise. After all, Willy is quite possibly a changeling himself, as evinced by his own unkempt facial hair.`
                         }
                     }
                 ]
@@ -289,7 +288,7 @@ module.exports = {
                     {
                         anchor: `longest cowlick`,
                         annotation: {
-                            description: `Being acquainted with my family over the years, Willy understands why my mother allows my brother's hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicable lack of development in older children gave rise to a belief in changelings.`
+                            description: `Being acquainted with my family over the years, Willy understands that my brother's outbursts are the reason my mother allows his hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicable lack of development in older children gave rise to a belief in changelings.`
                         }
                     },
                     `yet I've seen!`
