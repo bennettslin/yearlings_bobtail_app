@@ -55,7 +55,7 @@ const AudioSectionView = ({
     selectedSongIndex,
     selectedSongTitle,
     selectedTimePlayed,
-    userSelectedTimePlayed,
+    updatedTimePlayed,
     selectedAudioOptionIndex,
     mp3s,
     isFirstVerse,
@@ -108,7 +108,7 @@ const AudioSectionView = ({
             mp3s,
             isPlaying,
             selectedSongIndex,
-            userSelectedTimePlayed,
+            updatedTimePlayed,
             onTimeChange,
             onTimeUpdated
         }

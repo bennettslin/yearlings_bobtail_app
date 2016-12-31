@@ -60,7 +60,7 @@ const MainColumnView = ({
     selectedSongIndex,
     selectedTipsIndex,
     selectedTimePlayed,
-    userSelectedTimePlayed,
+    updatedTimePlayed,
     selectedAudioOptionIndex,
     selectedOverviewIndex,
 
@@ -150,7 +150,7 @@ const MainColumnView = ({
             selectedSongIndex,
             isPlaying,
             selectedTimePlayed,
-            userSelectedTimePlayed,
+            updatedTimePlayed,
             selectedAudioOptionIndex,
             accessedOn,
             accessedSectionKey,

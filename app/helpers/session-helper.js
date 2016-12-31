@@ -1,6 +1,7 @@
 // Store data in browser's local storage.
 
 import { SELECTED_DOT_KEYS,
+         SELECTED_TIME_PLAYED,
          ALL_DOT_KEYS,
          WINDOW_STORAGE } from './constants'
 
@@ -45,9 +46,9 @@ export default {
         } else if (key) {
             // Session only ever stores numerical indices. Default is 0.
             const value = WINDOW_STORAGE[key] || 0,
-                intValue = parseInt(value)
+                finalValue = (key === SELECTED_TIME_PLAYED) ? parseFloat(value) : parseInt(value)
 
-            return isNaN(intValue) ? 0 : intValue
+            return isNaN(finalValue) ? 0 : finalValue
 
         } else {
             return 0

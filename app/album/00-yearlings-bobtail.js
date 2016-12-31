@@ -77,7 +77,17 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Selecting time in lyrics selects time in player`,
+            taskName: `Fix weird glitch two seconds into new song after load.`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `Obey song options rules.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `When song finishes playing, proceed to next.`,
             workedHours: 0,
             neededHours: 1
         },
@@ -990,6 +1000,16 @@ module.exports = {
         },
         {
             taskName: `Play button in logue goes to first song.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Selecting time in lyrics selects time in player`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `Player starts at persisted time.`,
             workedHours: 1,
             neededHours: 1
         }

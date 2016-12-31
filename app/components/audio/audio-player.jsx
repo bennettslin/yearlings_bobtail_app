@@ -16,7 +16,8 @@ class AudioPlayer extends Component {
     componentDidMount() {
         this.myPlayer = ReactDOM.findDOMNode(this.myReactPlayer)
 
-        this._handlePlay()
+        this._handleTimeChange()
+        this._handleIsPlayingChange()
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -24,14 +25,14 @@ class AudioPlayer extends Component {
             isPlayingChanged = this._getIsPlayingChanged(this.props, nextProps)
 
         if (songChanged || isPlayingChanged) {
-            this._handlePlay(nextProps)
+            this._handleIsPlayingChange(nextProps)
         }
 
         if (songChanged) {
             this._handleSongChange(this.props)
         }
 
-        if (nextProps.userSelectedTimePlayed !== null) {
+        if (nextProps.updatedTimePlayed !== null) {
             this._handleTimeChange(nextProps)
         }
     }
@@ -52,7 +53,7 @@ class AudioPlayer extends Component {
     }
 
     _getTimeChanged(oldProps, newProps) {
-        return oldProps.userSelectedTimePlayed !== newProps.userSelectedTimePlayed
+        return oldProps.updatedTimePlayed !== newProps.updatedTimePlayed
     }
 
     _handleListen(currentTime) {
@@ -61,7 +62,7 @@ class AudioPlayer extends Component {
         }
     }
 
-    _handlePlay(props = this.props) {
+    _handleIsPlayingChange(props = this.props) {
         const isSelected = this._getIsSelected(props)
 
         // Play only if selected and is playing.
@@ -82,14 +83,11 @@ class AudioPlayer extends Component {
         }
     }
 
-    _handleTimeChange(newProps) {
-        if (this._getIsSelected(newProps)) {
+    _handleTimeChange(props = this.props) {
+        if (this._getIsSelected(props)) {
 
             // FIXME: Something should happen here to keep the player calling the onListen handler.
-            this.myPlayer.pause()
-            this.myPlayer.currentTime = newProps.userSelectedTimePlayed
-            this.myPlayer.play()
-
+            this.myPlayer.currentTime = props.updatedTimePlayed
             this.props.onTimeUpdated()
         }
     }

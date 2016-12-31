@@ -47,7 +47,7 @@ const AlbumView = ({
     selectedAudioOptionIndex,
     selectedTipsIndex,
     selectedTimePlayed,
-    userSelectedTimePlayed,
+    updatedTimePlayed,
     selectedNavIndex,
     selectedDotsIndex,
     showSingleLyricColumn,
@@ -101,7 +101,7 @@ const AlbumView = ({
                 selectedSongIndex={selectedSongIndex}
                 isPlaying={isPlaying}
                 selectedTimePlayed={selectedTimePlayed}
-                userSelectedTimePlayed={userSelectedTimePlayed}
+                updatedTimePlayed={updatedTimePlayed}
                 selectedAudioOptionIndex={selectedAudioOptionIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}

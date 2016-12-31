@@ -96,7 +96,7 @@ const LiveView = ({
     isFirstVerse,
     isLastVerse,
     selectedSongTitle,
-    userSelectedTimePlayed,
+    updatedTimePlayed,
     onSongClick,
     onVerseClick,
     onPlayClick,
@@ -178,7 +178,7 @@ const LiveView = ({
             selectedSongIndex,
             selectedTipsIndex,
             selectedTimePlayed,
-            userSelectedTimePlayed,
+            updatedTimePlayed,
             selectedAudioOptionIndex,
             selectedOverviewIndex,
 

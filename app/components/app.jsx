@@ -136,7 +136,9 @@ class App extends Component {
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false,
             manualWidth: false,
-            userSelectedTimePlayed: null
+
+            // Start at persisted time.
+            updatedTimePlayed: props.selectedTimePlayed
         }
     }
 
@@ -170,7 +172,7 @@ class App extends Component {
         this.selectAnnotation = this.selectAnnotation.bind(this)
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
-        this.resetUserSelectedTimePlayed = this.resetUserSelectedTimePlayed.bind(this)
+        this.resetupdatedTimePlayed = this.resetupdatedTimePlayed.bind(this)
         this.selectDot = this.selectDot.bind(this)
         this.selectFromPortal = this.selectFromPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
@@ -689,9 +691,9 @@ class App extends Component {
         }
     }
 
-    resetUserSelectedTimePlayed() {
+    resetupdatedTimePlayed() {
         this.setState({
-            userSelectedTimePlayed: null
+            updatedTimePlayed: null
         })
     }
 
@@ -747,7 +749,7 @@ class App extends Component {
          * Don't let player change time before it has been updated to reflect
          * the new time selected by user.
          */
-        if (this.state.userSelectedTimePlayed !== null) {
+        if (this.state.updatedTimePlayed !== null) {
             return
         }
 
@@ -765,7 +767,7 @@ class App extends Component {
         }
 
         if (e) {
-            newState.userSelectedTimePlayed = selectedTimePlayed
+            newState.updatedTimePlayed = selectedTimePlayed
         }
 
         this.setState(newState)
@@ -1179,7 +1181,7 @@ class App extends Component {
                     onDotsExpandClick={this.selectDotsExpand}
                     onTipsClick={this.selectTips}
                     onTimeChange={this.selectTime}
-                    onTimeUpdated={this.resetUserSelectedTimePlayed}
+                    onTimeUpdated={this.resetupdatedTimePlayed}
                 />
             </div>
         )
