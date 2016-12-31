@@ -57,7 +57,6 @@ class AudioPlayer extends Component {
 
     _handleListen(currentTime) {
         if (this._getIsSelected()) {
-            console.error('handle listen');
             this.props.onTimeChange(false, currentTime)
         }
     }
@@ -84,8 +83,13 @@ class AudioPlayer extends Component {
     }
 
     _handleTimeChange(newProps) {
-        if (this._getIsSelected(this.props)) {
+        if (this._getIsSelected(newProps)) {
+
+            // FIXME: Something should happen here to keep the player calling the onListen handler.
+            this.myPlayer.pause()
             this.myPlayer.currentTime = newProps.userSelectedTimePlayed
+            this.myPlayer.play()
+
             this.props.onTimeUpdated()
         }
     }
