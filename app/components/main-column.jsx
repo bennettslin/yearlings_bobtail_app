@@ -87,6 +87,7 @@ const MainColumnView = ({
     onBookColumnClick,
     onLyricExpandClick,
     onTimeChange,
+    onPlayerEnd,
     onTimeUpdated
 
 }) => {
@@ -160,6 +161,7 @@ const MainColumnView = ({
             onVerseClick,
             onAudioOptionClick,
             onTimeChange,
+            onPlayerEnd,
             onTimeUpdated
         },
         overviewToggleSectionProps = {

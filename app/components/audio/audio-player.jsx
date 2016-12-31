@@ -11,6 +11,7 @@ class AudioPlayer extends Component {
         super(props)
 
         this._handleListen = this._handleListen.bind(this)
+        this._handleEnded = this._handleEnded.bind(this)
     }
 
     componentDidMount() {
@@ -62,6 +63,13 @@ class AudioPlayer extends Component {
         }
     }
 
+    _handleEnded() {
+        // FIXME: Waiting for the player to send onEnded event takes too long. Have this be based on the song's own time.
+        if (this._getIsSelected()) {
+            this.props.onPlayerEnd()
+        }
+    }
+
     _handleIsPlayingChange(props = this.props) {
         const isSelected = this._getIsSelected(props)
 
@@ -104,6 +112,7 @@ class AudioPlayer extends Component {
                     ref={(ref) => this.myReactPlayer = ref}
                     listenInterval={100}
                     onListen={this._handleListen}
+                    onEnded={this._handleEnded}
                 />
             </div>
         )

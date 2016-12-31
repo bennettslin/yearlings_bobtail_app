@@ -184,6 +184,7 @@ class App extends Component {
         this.selectBookColumn = this.selectBookColumn.bind(this)
         this.selectDotsExpand = this.selectDotsExpand.bind(this)
         this.selectTips = this.selectTips.bind(this)
+        this.selectNextSong = this.selectNextSong.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
@@ -284,6 +285,7 @@ class App extends Component {
      * https://www.npmjs.com/package/scroll-into-view-if-needed
      */
     scrollElementIntoView(className, index, duration = 75) {
+
         const selector = `${className}-${index}`,
             element = document.getElementsByClassName(selector)[0]
 
@@ -380,6 +382,10 @@ class App extends Component {
             // Scroll to top of lyrics.
             this.scrollElementIntoView('lyrics-scroll', 'home')
         }
+    }
+
+    selectNextSong(e) {
+        this.selectSong(undefined, this.props.selectedSongIndex + 1)
     }
 
     selectAudioOption(e, direction = 1) {
@@ -762,7 +768,7 @@ class App extends Component {
         * audio will only scroll the lyrics if the previous verse is visible
         * and the selected verse is not.
         */
-        if (scroll) {
+        if (scroll && selectedVerseIndex !== this.props.selectedVerseIndex) {
             this.scrollElementIntoView('verse', selectedVerseIndex)
         }
 
@@ -1181,6 +1187,7 @@ class App extends Component {
                     onDotsExpandClick={this.selectDotsExpand}
                     onTipsClick={this.selectTips}
                     onTimeChange={this.selectTime}
+                    onPlayerEnd={this.selectNextSong}
                     onTimeUpdated={this.resetupdatedTimePlayed}
                 />
             </div>

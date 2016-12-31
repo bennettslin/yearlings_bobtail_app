@@ -115,6 +115,7 @@ const LiveView = ({
     onNavExpandClick,
     onBookColumnClick,
     onTimeChange,
+    onPlayerEnd,
     onTimeUpdated,
 
     // From controller.
@@ -207,6 +208,7 @@ const LiveView = ({
             onBookColumnClick,
             onLyricExpandClick,
             onTimeChange,
+            onPlayerEnd,
             onTimeUpdated
         },
         lyricColumnProps = {

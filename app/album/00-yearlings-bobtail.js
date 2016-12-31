@@ -77,6 +77,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Select time for player from portal`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `Fix weird glitch two seconds into new song after load.`,
             workedHours: 0,
             neededHours: 3
@@ -87,7 +92,7 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `When song finishes playing, proceed to next.`,
+            taskName: `When song finishes playing, proceed to next more smoothly.`,
             workedHours: 0,
             neededHours: 1
         },

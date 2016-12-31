@@ -66,6 +66,7 @@ const AudioSectionView = ({
     onAudioTimeClick,
     onTitleClick,
     onTimeChange,
+    onPlayerEnd,
     onTimeUpdated,
 
     // From controller.
@@ -110,6 +111,7 @@ const AudioSectionView = ({
             selectedSongIndex,
             updatedTimePlayed,
             onTimeChange,
+            onPlayerEnd,
             onTimeUpdated
         }
 

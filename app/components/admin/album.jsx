@@ -61,6 +61,7 @@ const AlbumView = ({
     onScreenWidthClick,
     onTipsClick,
     onTimeChange,
+    onPlayerEnd,
     onTimeUpdated,
     accessedOn,
     accessedSectionKey,
@@ -111,6 +112,7 @@ const AlbumView = ({
                 onAudioTimeClick={onVerseClick}
                 onAudioOptionClick={onAudioOptionClick}
                 onTimeChange={onTimeChange}
+                onPlayerEnd={onPlayerEnd}
                 onTimeUpdated={onTimeUpdated}
             />
             <NavSection
