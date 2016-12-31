@@ -83,16 +83,6 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|mp3)$/,
-                loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
-            },
-            {
-                // http://survivejs.com/webpack/loading-assets/loading-styles/
-                test: /\.less$/,
-                loader: 'style!css!less',
-                include: PATHS.less
-            },
-            {
                 // Set up jsx. This accepts js too, thanks to RegExp.
                 test: /\.jsx?$/,
                 loader: 'babel-loader?presets[]=es2015&presets[]=react',
@@ -101,6 +91,17 @@ module.exports = {
                  * entire project, which in addition to being slow, will most
                  * likely result in an error.
                  */
+                include: PATHS.app
+            },
+            {
+                // http://survivejs.com/webpack/loading-assets/loading-styles/
+                test: /\.less$/,
+                loader: 'style!css!less',
+                include: PATHS.less
+            },
+            {
+                test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|mp3)$/,
+                loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]',
                 include: PATHS.app
             }
         ]
