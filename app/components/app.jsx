@@ -263,11 +263,11 @@ class App extends Component {
                 }
             }
 
-            if (accessOff) {
-                this._handleAccessOn(0)
-            }
-
             popupWasOpen = true
+        }
+
+        if (accessOff) {
+            this._handleAccessOn(0)
         }
 
         return popupWasOpen
@@ -866,7 +866,13 @@ class App extends Component {
         })) { return }
 
         // If Escape to close popup, close it and return.
-        if (keyName === ESCAPE && this._closePopupIfOpen({ accessOff: true })) { return }
+        if (keyName === ESCAPE) {
+            const popupWasOpen = this._closePopupIfOpen({ accessOff: true })
+
+            if (popupWasOpen) {
+                return
+            }
+        }
 
         // If access is off, any key besides Escape turns it on.
         if (!this.props.accessedOn) {
