@@ -304,8 +304,15 @@ class App extends Component {
         this._stopPropagation(e)
         if (e) { this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION }) }
 
+        const isPlaying = !this.state.isPlaying
+
+        // Select first song if play button in logue is toggled on.
+        if (getIsLogue(this.props) && isPlaying) {
+            this.selectSong(undefined, 1)
+        }
+
         this.setState({
-            isPlaying: !this.state.isPlaying
+            isPlaying
         })
     }
 
@@ -332,16 +339,24 @@ class App extends Component {
         this.selectBookColumn(e, true, selectedSongIndex)
         this.props.selectSongIndex(selectedSongIndex)
 
-        this.setState({
-            accessedSongIndex: selectedSongIndex,
+        const isLogue = getIsLogue({ selectedSongIndex,
+                                     songs: this.props.songs }),
+            newState = {
+                accessedSongIndex: selectedSongIndex,
 
-            // App does not know new index, so pass it directly.
-            accessedAnnotationIndex: getAnnotationIndexForDirection({
-                songs: this.props.songs,
-                selectedDotKeys: this.props.selectedDotKeys,
-                selectedSongIndex
-            }, 1)
-        })
+                // App does not know new index, so pass it directly.
+                accessedAnnotationIndex: getAnnotationIndexForDirection({
+                    songs: this.props.songs,
+                    selectedDotKeys: this.props.selectedDotKeys,
+                    selectedSongIndex
+                }, 1)
+            }
+
+        if (isLogue) {
+            newState.isPlaying = false
+        }
+
+        this.setState(newState)
 
         /**
          * Reset the stored annotation, time, and overview, unless selected

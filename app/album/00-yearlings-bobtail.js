@@ -77,9 +77,9 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Make mp3 player component`,
+            taskName: `Play button in logue goes to first song.`,
             workedHours: 0,
-            neededHours: 5
+            neededHours: 1
         },
         {
             taskName: `Figure out when portal has no description`,
@@ -977,6 +977,11 @@ module.exports = {
             taskName: 'brief flash of dot tooltips when loading',
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `Make mp3 player component`,
+            workedHours: 5,
+            neededHours: 5
         }
     ]
 }
