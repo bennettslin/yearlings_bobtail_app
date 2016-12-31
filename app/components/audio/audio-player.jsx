@@ -20,37 +20,41 @@ class AudioPlayer extends Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this._getShouldUpdate(this.props, nextProps)) {
+        const songChanged = this._getSongChanged(this.props, nextProps),
+            isPlayingChanged = this._getIsPlayingChanged(this.props, nextProps)
+
+        if (songChanged || isPlayingChanged) {
             this._handlePlay(nextProps)
         }
-    }
 
-    componentDidUpdate(prevProps, prevState) {
-        if (this._getShouldUpdate(prevProps, this.props)) {
-
+        if (songChanged) {
+            this._handleSongChange(this.props)
         }
     }
 
-    getIsSelected(props = this.props) {
+    _getIsSelected(props = this.props) {
         const { playerIndex,
                 selectedSongIndex } = props
 
         return playerIndex === selectedSongIndex
     }
 
-    _getShouldUpdate(oldProps, newProps) {
-        return (oldProps.selectedSongIndex !== newProps.selectedSongIndex) ||
-            (oldProps.isPlaying !== newProps.isPlaying)
+    _getIsPlayingChanged(oldProps, newProps) {
+        return oldProps.isPlaying !== newProps.isPlaying
+    }
+
+    _getSongChanged(oldProps, newProps) {
+        return oldProps.selectedSongIndex !== newProps.selectedSongIndex
     }
 
     _handleListen(currentTime) {
-        if (this.getIsSelected()) {
+        if (this._getIsSelected()) {
             this.props.onTimeChange(true, currentTime)
         }
     }
 
     _handlePlay(props = this.props) {
-        const isSelected = this.getIsSelected(props)
+        const isSelected = this._getIsSelected(props)
 
         // Play only if selected and is playing.
         if (isSelected && props.isPlaying && this.myPlayer.paused) {
@@ -59,17 +63,21 @@ class AudioPlayer extends Component {
         // Otherwise pause.
         } else if (!this.myPlayer.paused) {
             this.myPlayer.pause()
+        }
+    }
 
-            if (!isSelected) {
-                this.myPlayer.currentTime = 0
-            }
+    _handleSongChange(oldProps) {
+        const wasSelected = this._getIsSelected(oldProps)
+
+        if (wasSelected) {
+            this.myPlayer.currentTime = 0
         }
     }
 
     render() {
 
         const { mp3 } = this.props,
-            isSelected = this.getIsSelected()
+            isSelected = this._getIsSelected()
 
         return (
             <div className={`audio-player${isSelected ? ' selected' : ''}`}>
