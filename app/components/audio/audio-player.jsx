@@ -52,10 +52,14 @@ class AudioPlayer extends Component {
     _handlePlay(props = this.props) {
         const isSelected = this.getIsSelected(props)
 
+        // Play only if selected and is playing.
         if (isSelected && props.isPlaying && this.myPlayer.paused) {
             this.myPlayer.play()
-        } else if ((!isSelected || !props.isPlaying) && !this.myPlayer.paused) {
+
+        // Otherwise pause.
+        } else if (!this.myPlayer.paused) {
             this.myPlayer.pause()
+            this.myPlayer.currentTime = 0
         }
     }
 

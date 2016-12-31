@@ -126,7 +126,7 @@ export default {
 
     handleSectionAccess({
         deviceIndex,
-        selectedSongIndex,
+        isLogue,
         currentAccessedSectionIndex,
         accessedSectionKey,
         accessOn,
@@ -138,8 +138,8 @@ export default {
         if (!accessedSectionKey) {
             accessedSectionIndex = (currentAccessedSectionIndex + 1) % SECTION_KEYS.length
 
-            // Skip lyrics and dots sections if no selected song.
-            if (selectedSongIndex === 0) {
+            // Skip lyrics and dots sections if it's a logue.
+            if (isLogue) {
                 while (SECTION_KEYS[accessedSectionIndex] === LYRICS_SECTION || SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
                     accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
                 }

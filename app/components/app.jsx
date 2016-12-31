@@ -123,7 +123,7 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            isAdmin: true,
+            isAdmin: false,
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
@@ -1033,10 +1033,10 @@ class App extends Component {
 
         const accessedSectionIndex = AccessHelper.handleSectionAccess({
                 deviceIndex: this.state.deviceIndex,
-                selectedSongIndex,
-                currentAccessedSectionIndex: this.props.accessedSectionIndex,
-                accessedSectionKey,
+                isLogue: getIsLogue({ selectedSongIndex, songs: this.props.songs }),
                 accessOn,
+                accessedSectionKey,
+                currentAccessedSectionIndex: this.props.accessedSectionIndex,
                 handleAccessOn: this._handleAccessOn
             }),
             sectionKey = accessedSectionKey || SECTION_KEYS[accessedSectionIndex]
