@@ -55,6 +55,7 @@ const AudioSectionView = ({
     selectedSongIndex,
     selectedSongTitle,
     selectedTimePlayed,
+    userSelectedTimePlayed,
     selectedAudioOptionIndex,
     mp3s,
     isFirstVerse,
@@ -65,6 +66,7 @@ const AudioSectionView = ({
     onAudioTimeClick,
     onTitleClick,
     onTimeChange,
+    onTimeUpdated,
 
     // From controller.
     isPrologue,
@@ -106,7 +108,9 @@ const AudioSectionView = ({
             mp3s,
             isPlaying,
             selectedSongIndex,
-            onTimeChange
+            userSelectedTimePlayed,
+            onTimeChange,
+            onTimeUpdated
         }
 
     return (

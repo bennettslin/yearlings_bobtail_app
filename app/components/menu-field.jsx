@@ -36,6 +36,7 @@ const MenuFieldView = ({
     selectedSongIndex,
     isPlaying,
     selectedTimePlayed,
+    userSelectedTimePlayed,
     selectedAudioOptionIndex,
     accessedSongIndex,
     accessedOn,
@@ -46,6 +47,7 @@ const MenuFieldView = ({
     onVerseClick,
     onAudioOptionClick,
     onTimeChange,
+    onTimeUpdated,
 
     // From controller.
     titleInAudio
@@ -71,6 +73,7 @@ const MenuFieldView = ({
             isPlaying,
             title,
             selectedTimePlayed,
+            userSelectedTimePlayed,
             selectedAudioOptionIndex,
             accessedOn,
             accessedSectionKey,
@@ -80,7 +83,8 @@ const MenuFieldView = ({
             onAudioTimeClick: onVerseClick,
             onTitleClick: onSongClick,
             onAudioOptionClick,
-            onTimeChange
+            onTimeChange,
+            onTimeUpdated
         }
 
     return (

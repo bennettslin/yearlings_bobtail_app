@@ -77,9 +77,14 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Play button in logue goes to first song.`,
+            taskName: `Selecting time in lyrics selects time in player`,
             workedHours: 0,
             neededHours: 1
+        },
+        {
+            taskName: `Figure out scrolling rules`,
+            workedHours: 0,
+            neededHours: 3
         },
         {
             taskName: `Figure out when portal has no description`,
@@ -982,6 +987,11 @@ module.exports = {
             taskName: `Make mp3 player component`,
             workedHours: 5,
             neededHours: 5
+        },
+        {
+            taskName: `Play button in logue goes to first song.`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

@@ -30,6 +30,10 @@ class AudioPlayer extends Component {
         if (songChanged) {
             this._handleSongChange(this.props)
         }
+
+        if (nextProps.userSelectedTimePlayed !== null) {
+            this._handleTimeChange(nextProps)
+        }
     }
 
     _getIsSelected(props = this.props) {
@@ -47,9 +51,14 @@ class AudioPlayer extends Component {
         return oldProps.selectedSongIndex !== newProps.selectedSongIndex
     }
 
+    _getTimeChanged(oldProps, newProps) {
+        return oldProps.userSelectedTimePlayed !== newProps.userSelectedTimePlayed
+    }
+
     _handleListen(currentTime) {
         if (this._getIsSelected()) {
-            this.props.onTimeChange(true, currentTime)
+            console.error('handle listen');
+            this.props.onTimeChange(false, currentTime)
         }
     }
 
@@ -71,6 +80,13 @@ class AudioPlayer extends Component {
 
         if (wasSelected) {
             this.myPlayer.currentTime = 0
+        }
+    }
+
+    _handleTimeChange(newProps) {
+        if (this._getIsSelected(this.props)) {
+            this.myPlayer.currentTime = newProps.userSelectedTimePlayed
+            this.props.onTimeUpdated()
         }
     }
 

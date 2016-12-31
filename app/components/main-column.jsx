@@ -60,6 +60,7 @@ const MainColumnView = ({
     selectedSongIndex,
     selectedTipsIndex,
     selectedTimePlayed,
+    userSelectedTimePlayed,
     selectedAudioOptionIndex,
     selectedOverviewIndex,
 
@@ -85,7 +86,8 @@ const MainColumnView = ({
     onNavExpandClick,
     onBookColumnClick,
     onLyricExpandClick,
-    onTimeChange
+    onTimeChange,
+    onTimeUpdated
 
 }) => {
     const annotationPopupProps = {
@@ -148,6 +150,7 @@ const MainColumnView = ({
             selectedSongIndex,
             isPlaying,
             selectedTimePlayed,
+            userSelectedTimePlayed,
             selectedAudioOptionIndex,
             accessedOn,
             accessedSectionKey,
@@ -156,7 +159,8 @@ const MainColumnView = ({
             onSongClick,
             onVerseClick,
             onAudioOptionClick,
-            onTimeChange
+            onTimeChange,
+            onTimeUpdated
         },
         overviewToggleSectionProps = {
             selectedOverviewIndex,

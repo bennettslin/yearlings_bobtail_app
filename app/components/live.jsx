@@ -96,6 +96,7 @@ const LiveView = ({
     isFirstVerse,
     isLastVerse,
     selectedSongTitle,
+    userSelectedTimePlayed,
     onSongClick,
     onVerseClick,
     onPlayClick,
@@ -114,6 +115,7 @@ const LiveView = ({
     onNavExpandClick,
     onBookColumnClick,
     onTimeChange,
+    onTimeUpdated,
 
     // From controller.
     overviewText,
@@ -176,6 +178,7 @@ const LiveView = ({
             selectedSongIndex,
             selectedTipsIndex,
             selectedTimePlayed,
+            userSelectedTimePlayed,
             selectedAudioOptionIndex,
             selectedOverviewIndex,
 
@@ -203,7 +206,8 @@ const LiveView = ({
             onNavExpandClick,
             onBookColumnClick,
             onLyricExpandClick,
-            onTimeChange
+            onTimeChange,
+            onTimeUpdated
         },
         lyricColumnProps = {
             showSingleLyricColumn,

@@ -88,7 +88,7 @@ module.exports = {
                                         wiki: `The_Basketball_Diaries`
                                     }
                                 },
-                                `earlier that summer. So the others follow my lead in treating it as a mystical journey, and we tread with reverence through the UCLA campus.`
+                                `earlier that summer. So the others follow my lead in treating it as a mystical journey, and we tread with "reverence" through the UCLA campus.`
                             ]
                         }
                     },

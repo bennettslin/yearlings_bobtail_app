@@ -47,6 +47,7 @@ const AlbumView = ({
     selectedAudioOptionIndex,
     selectedTipsIndex,
     selectedTimePlayed,
+    userSelectedTimePlayed,
     selectedNavIndex,
     selectedDotsIndex,
     showSingleLyricColumn,
@@ -60,6 +61,7 @@ const AlbumView = ({
     onScreenWidthClick,
     onTipsClick,
     onTimeChange,
+    onTimeUpdated,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
@@ -99,6 +101,7 @@ const AlbumView = ({
                 selectedSongIndex={selectedSongIndex}
                 isPlaying={isPlaying}
                 selectedTimePlayed={selectedTimePlayed}
+                userSelectedTimePlayed={userSelectedTimePlayed}
                 selectedAudioOptionIndex={selectedAudioOptionIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
@@ -108,6 +111,7 @@ const AlbumView = ({
                 onAudioTimeClick={onVerseClick}
                 onAudioOptionClick={onAudioOptionClick}
                 onTimeChange={onTimeChange}
+                onTimeUpdated={onTimeUpdated}
             />
             <NavSection
                 isAdmin={true}

@@ -135,7 +135,8 @@ class App extends Component {
             showSingleLyricColumnInAdmin: false,
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false,
-            manualWidth: false
+            manualWidth: false,
+            userSelectedTimePlayed: null
         }
     }
 
@@ -169,6 +170,7 @@ class App extends Component {
         this.selectAnnotation = this.selectAnnotation.bind(this)
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
+        this.resetUserSelectedTimePlayed = this.resetUserSelectedTimePlayed.bind(this)
         this.selectDot = this.selectDot.bind(this)
         this.selectFromPortal = this.selectFromPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
@@ -683,8 +685,14 @@ class App extends Component {
                 }
             }
 
-            this._storeTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll: true })
+            this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll: true })
         }
+    }
+
+    resetUserSelectedTimePlayed() {
+        this.setState({
+            userSelectedTimePlayed: null
+        })
     }
 
     selectVerse(e, selectedVerseIndex = 0, direction) {
@@ -726,14 +734,26 @@ class App extends Component {
             scroll = false
         }
 
-        this._storeTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll })
+        this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll })
     }
 
-    _storeTimeAndVerse({ selectedTimePlayed, selectedVerseIndex, scroll }) {
+    _storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll }) {
         /**
          * Since time and verse are in sync, this helper method can be called
          * by either one.
          */
+
+        /**
+         * Don't let player change time before it has been updated to reflect
+         * the new time selected by user.
+         */
+        if (this.state.userSelectedTimePlayed !== null) {
+            return
+        }
+
+        const newState = {
+            accessedVerseIndex: selectedVerseIndex
+        }
 
         /**
         * TODO: Make this more robust, so that a verse change prompted by the
@@ -744,9 +764,11 @@ class App extends Component {
             this.scrollElementIntoView('verse', selectedVerseIndex)
         }
 
-        this.setState({
-            accessedVerseIndex: selectedVerseIndex
-        })
+        if (e) {
+            newState.userSelectedTimePlayed = selectedTimePlayed
+        }
+
+        this.setState(newState)
 
         this.props.selectVerseIndex(selectedVerseIndex)
         this.props.selectTimePlayed(selectedTimePlayed)
@@ -1157,6 +1179,7 @@ class App extends Component {
                     onDotsExpandClick={this.selectDotsExpand}
                     onTipsClick={this.selectTips}
                     onTimeChange={this.selectTime}
+                    onTimeUpdated={this.resetUserSelectedTimePlayed}
                 />
             </div>
         )
