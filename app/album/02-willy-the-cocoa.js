@@ -263,6 +263,8 @@ module.exports = {
                     {
                         anchor: `see your kid with whiskers,`,
                         annotation: {
+
+                            // TODO: Make this simpler. Willy literally...
                             description: `Willy jokingly remarks that given my brother's distaste for haircuts, he will likely sport an unshaven look as an adult. But in many legends, the changeling is not a child of any sort, but in fact a fully grown troll who is perhaps centuries old. So Willy might also be implying that he is immune to the enchantment that disguises my brother's true form in a childlike appearance.`
                         }
                     }
