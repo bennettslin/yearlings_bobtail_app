@@ -418,10 +418,14 @@ class App extends Component {
             selectedDotsIndex = (this.props.selectedDotsIndex + 1) % 2
         }
 
+        // Dots section cannot be expanded in logue.
+        if (getIsLogue(this.props) && selectedDotsIndex) {
+            return
+        }
+
         this.props.selectDotsIndex(selectedDotsIndex)
 
         if (e) {
-
             if (selectedDotsIndex) {
                 // Hide overview and collapse lyrics if shown.
                 if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {

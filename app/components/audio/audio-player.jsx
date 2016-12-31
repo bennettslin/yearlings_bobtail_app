@@ -59,7 +59,10 @@ class AudioPlayer extends Component {
         // Otherwise pause.
         } else if (!this.myPlayer.paused) {
             this.myPlayer.pause()
-            this.myPlayer.currentTime = 0
+
+            if (!isSelected) {
+                this.myPlayer.currentTime = 0
+            }
         }
     }
 
