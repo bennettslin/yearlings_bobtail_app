@@ -32,7 +32,7 @@ const AnnotationCard = ({
         showWikis = selectedDotKeys.wiki,
         showPortals = selectedDotKeys.portal
 
-    return (shouldShow ?
+    return (shouldShow &&
         <AnnotationCardView {...other}
             songs={songs}
             text={description}
@@ -41,7 +41,7 @@ const AnnotationCard = ({
             portalLinks={portalLinks}
             showWikis={showWikis}
             showPortals={showPortals}
-        /> : null
+        />
     )
 }
 
@@ -86,7 +86,7 @@ const AnnotationCardView = ({
             accessedPopupAnchorIndex={accessedPopupAnchorIndex}
             onAnchorClick={onWikiUrlClick}
         />
-        {!inPortal && portalLinks && showPortals ?
+        {!inPortal && portalLinks && showPortals &&
             <AnnotationPortalsBlock
                 songs={songs}
                 selectedDotKeys={selectedDotKeys}
@@ -94,7 +94,7 @@ const AnnotationCardView = ({
                 sectionAccessHighlighted={sectionAccessHighlighted}
                 accessedPopupAnchorIndex={accessedPopupAnchorIndex}
                 onPortalClick={onPortalClick}
-            /> : null
+            />
         }
     </div>
 )

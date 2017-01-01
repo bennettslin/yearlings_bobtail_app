@@ -42,13 +42,13 @@ const ProgressFooterView = ({
 
 }) => (
     <div className="text-cell-wrapper">
-        {neededHours ?
-            <div className={'text-cell footer'}>
+        {neededHours &&
+            <div className="text-cell footer">
                 <div>{neededHours} - {workedHours} = {remainingHours}h</div>
                 <div>needed time: {neededTime}</div>
                 <div>worked time: {workedTime}</div>
                 <div>remaining time: {remainingTime}</div>
-            </div> : null
+            </div>
         }
     </div>
 )

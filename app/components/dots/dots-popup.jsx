@@ -13,10 +13,11 @@ class DotsPopup extends Popup {
     }
 
     getContentElement() {
-        return this.props.selectedDotsIndex ?
+        return this.props.selectedDotsIndex && (
             <DotsSection {...this.props}
                 inPopup={true}
-            /> : null
+            />
+        )
     }
 }
 

@@ -61,34 +61,32 @@ class PopupTransitionGroup extends Component {
                 onPopupButtonClick,
                 onPopupContainerClick } = this.props
 
-        return element ? (
+        return element && (
             <div
                 className={`popup-content-wrapper ${className}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
                 onClick={e => onPopupContainerClick(e, className)}
             >
-                {!hideClose ?
+                {!hideClose &&
                     <PopupButton
                         onPopupButtonClick={onPopupButtonClick}
                         buttonName={CLOSE}
-                    /> : null
+                    />
                 }
                 {element}
-                {showArrows ? (
-                        <PopupButton
-                            onPopupButtonClick={onPopupButtonClick}
-                            buttonName={PREVIOUS}
-                        />
-                    ) : null
+                {showArrows &&
+                    <PopupButton
+                        onPopupButtonClick={onPopupButtonClick}
+                        buttonName={PREVIOUS}
+                    />
                 }
-                {showArrows ? (
-                        <PopupButton
-                            onPopupButtonClick={onPopupButtonClick}
-                            buttonName={NEXT}
-                        />
-                    ) : null
+                {showArrows &&
+                    <PopupButton
+                        onPopupButtonClick={onPopupButtonClick}
+                        buttonName={NEXT}
+                    />
                 }
             </div>
-        ) : null
+        )
     }
 
     render() {

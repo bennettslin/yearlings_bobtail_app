@@ -70,11 +70,11 @@ const LyricsVerseView = ({
 
     <div className={`verse verse-${verseObject.verseIndex}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
     >
-        {isInteractable ?
+        {isInteractable &&
             <LyricsPlayButton
                 isSelected={isSelected}
                 onClick={onPlayClick}
-            /> : null
+            />
         }
         {isDoubleSpeaker ? (
             <div className={`double-lines-block${hiddenLyricColumnKey ? ' hidden-' + hiddenLyricColumnKey : ''}`}>

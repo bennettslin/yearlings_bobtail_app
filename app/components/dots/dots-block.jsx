@@ -74,7 +74,7 @@ const DotsBlockView = ({
                         firstDotKeyShown = true
                     }
 
-                    return (toRender ?
+                    return (toRender &&
                         <DotButton {...other}
                             inDotsSection={inDotsSection}
                             key={index}
@@ -82,16 +82,16 @@ const DotsBlockView = ({
                             accessHighlighted={accessHighlighted}
                             isPresent={isPresent}
                             isSelected={isSelected}
-                        /> : null
+                        />
                     )
 
                 } else {
                     // It's in anchor block or annotation card.
-                    return (isPresent ?
+                    return (isPresent &&
                         <div
                             key={index}
                             className={`dot ${dotKey}${inBackground ? ' background' : ''}`}
-                        ></div> : null
+                        />
                     )
                 }
             })}

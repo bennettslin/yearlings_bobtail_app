@@ -31,10 +31,10 @@ const TaskRowView = ({
             <span className="text-cell text">
                 {task.taskName}
             </span>
-            {task.neededHours ?
+            {task.neededHours &&
                 <span className="text-cell figure">
                     {task.workedHours}/{task.neededHours}h
-                </span> : null
+                </span>
             }
         </div>
     </div>

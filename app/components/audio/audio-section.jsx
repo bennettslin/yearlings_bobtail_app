@@ -118,9 +118,15 @@ const AudioSectionView = ({
         <div
             className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
         >
-            {isAdmin ? <h2>audio</h2> : null}
-            {titleInAudio ? <TitleSection {...titleProps} /> : null}
-            {!isPhone ? <AudioBanner {...audioBannerProps} /> : null}
+            {isAdmin &&
+                <h2>audio</h2>
+            }
+            {titleInAudio &&
+                <TitleSection {...titleProps} />
+            }
+            {!isPhone &&
+                <AudioBanner {...audioBannerProps} />
+            }
             <AudioButtons {...audioButtonsProps} />
             <AudioPlayersSection {...audioPlayersProps} />
         </div>

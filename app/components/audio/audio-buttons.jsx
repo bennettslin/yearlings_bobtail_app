@@ -65,7 +65,7 @@ const AudioButtonsView = ({
                 </div>
             </a>
 
-            {false ?
+            {false &&
                 <a
                     className={`audio-button${isPrologue || isEpilogue || isFirstVerse ? '' : ' enabled'}`}
                     onClick={onRewindClick}
@@ -73,7 +73,7 @@ const AudioButtonsView = ({
                     <div className="button-icon audio-icon">
                         {'\u23EA'}
                     </div>
-                </a> : null
+                </a>
             }
 
             <a
@@ -85,7 +85,7 @@ const AudioButtonsView = ({
                 </div>
             </a>
 
-            {false ?
+            {false &&
                 <a
                     className={`audio-button${isPrologue || isEpilogue || isLastVerse ? '' : ' enabled'}`}
                     onClick={onFastForwardClick}
@@ -93,7 +93,7 @@ const AudioButtonsView = ({
                     <div className="button-icon audio-icon">
                         {'\u23E9'}
                     </div>
-                </a> : null
+                </a>
             }
 
             <a

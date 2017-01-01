@@ -127,27 +127,27 @@ const LyricsUnitView = ({
 
     return (
         <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}${unitClass ? ` custom ${unitClass}` : ''}`}>
-            {showMain ?
+            {showMain &&
                 <div className={`stanza-block ${subsequent ? ' subsequent' : ''}`}>
                     {getStanza({ stanzaArray, inMain: true })}
                     {getStanza({ stanzaArray: subStanza, inMain: true, addSub: true })}
-                </div> : null
+                </div>
             }
-            {showSide ?
+            {showSide &&
                 <div className={`stanza-block side${isBottomOnly ? ' bottom-only' : ''}`}>
                     {getStanza({ stanzaArray: topSideStanza })}
                     {getStanza({ stanzaArray: bottomSideStanza })}
                     {getStanza({ stanzaArray: topSideSubStanza, addSub: true })}
-                </div> : null
+                </div>
             }
             {/* At present, dot-only and dot-shared classes aren't used. */}
-            {shouldShowDotStanza ?
+            {shouldShowDotStanza &&
                 <div className={`stanza-block dot-${isDotOnly ? 'only' : 'shared'}`}>
                     <DotStanza {...other}
                         dotStanzaObject={dotStanza}
                         selectedDotKeys={selectedDotKeys}
                     />
-                </div> : null
+                </div>
             }
         </div>
     )

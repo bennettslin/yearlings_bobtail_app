@@ -46,7 +46,7 @@ const LyricColumnView = ({
 ...other }) => (
     <div className="column lyric-column">
         <div className="lyric-column-animatable">
-            {showEarButton ?
+            {showEarButton &&
                 <div className="lyric-button-block ear-button-block">
                     <a
                         className="lyric-button enabled"
@@ -56,9 +56,9 @@ const LyricColumnView = ({
                             {earButtonText}
                         </div>
                     </a>
-                </div> : null
+                </div>
             }
-            {isLyricExpandable ?
+            {isLyricExpandable &&
                 <div className="lyric-button-block expand-button-block in-lyric">
                     <a
                         className="lyric-button enabled"
@@ -68,7 +68,7 @@ const LyricColumnView = ({
                             {isLyricExpanded ? '-' : '+'}
                         </div>
                     </a>
-                </div> : null
+                </div>
             }
             <LyricsSection {...other} />
         </div>

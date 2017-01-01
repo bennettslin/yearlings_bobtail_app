@@ -92,18 +92,18 @@ const MenuFieldView = ({
     return (
         <div className={`field menu-field${titleInAudio ? ' title-in-audio' : ''}`}>
 
-            {!titleInAudio ?
+            {!titleInAudio &&
                 <div className="menu-subfield title-menu-subfield">
                     <TitleSection {...titleSectionProps} />
-                </div> : null
+                </div>
             }
             <div className="menu-subfield audio-menu-subfield">
                 <AudioSection {...audioSectionProps} />
             </div>
-            {!dotsTipsOutsideMenu ?
+            {!dotsTipsOutsideMenu &&
                 <div className="menu-subfield dots-tips-menu-subfield">
                     <DotsTipsSection {...dotsTipsSectionProps} />
-                </div> : null
+                </div>
             }
         </div>
     )

@@ -13,10 +13,10 @@ const LyricsPlayButton = ({
 
 }) => (
     <div className="play-button-block">
-        {!isSelected ?
+        {!isSelected &&
             <a className="play-child small-play-button enabled">
                 <div>{`\u2022`}</div>
-            </a> : null
+            </a>
         }
         {!isSelected ?
             <a className={`play-child play-button${isSelected ? '' : ' enabled'}`}

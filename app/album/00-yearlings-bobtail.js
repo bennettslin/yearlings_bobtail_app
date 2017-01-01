@@ -77,6 +77,26 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Figure out composition vs. inheritance, i.e. this.props.children`,
+            workedHours: 0,
+            neededHours: 5
+        },
+        {
+            taskName: `Layout wiki popup`,
+            workedHours: 0,
+            neededHours: 5
+        },
+        {
+            taskName: `Sticky selected verse`,
+            workedHours: 0,
+            neededHours: 8
+        },
+        {
+            taskName: `Replace ternary statements with variable && string`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `Select time for player from portal`,
             workedHours: 0,
             neededHours: 3

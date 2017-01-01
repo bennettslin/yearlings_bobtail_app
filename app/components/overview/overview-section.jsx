@@ -29,13 +29,15 @@ const OverviewSectionView = ({
     <div
         className={`section overview-section${inPopup ? ' in-popup' : ''}`}
     >
-        {isAdmin ? <h2>overview</h2> : null}
-        <div className="overview-text">
-        {!isLogue && !isAdmin && isPhone ?
-            <OverviewToggleSection {...other}
-            inPopup={true}
-            /> : null
+        {isAdmin &&
+            <h2>overview</h2>
         }
+        <div className="overview-text">
+            {!isLogue && !isAdmin && isPhone &&
+                <OverviewToggleSection {...other}
+                inPopup={true}
+                />
+            }
             <TextBlock
                 isLyric={false}
                 text={overviewText}

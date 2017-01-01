@@ -22,7 +22,9 @@ const TipsSectionView = ({
 
 }) => (
     <div className={`section tips-section`}>
-        {isAdmin ? <h2>tips</h2> : null}
+        {isAdmin &&
+            <h2>tips</h2>
+        }
         <button onClick={onTipsClick}>tips: {TIPS_OPTIONS[selectedTipsIndex]}</button>
     </div>
 )

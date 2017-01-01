@@ -218,7 +218,7 @@ const MainColumnView = ({
                     </div>
                 }
 
-                {isHeightlessLyricColumn ?
+                {isHeightlessLyricColumn &&
                     <div className="lyric-button-block expand-button-block in-main">
                         <a
                             className="lyric-button enabled"
@@ -228,7 +228,7 @@ const MainColumnView = ({
                                 {isLyricExpanded ? '-' : '+'}
                             </div>
                         </a>
-                    </div> : null
+                    </div>
                 }
             </div>
         </div>

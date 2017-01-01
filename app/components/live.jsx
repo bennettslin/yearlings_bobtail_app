@@ -246,10 +246,10 @@ const LiveView = ({
             <MainColumn {...mainColumnProps} />
             <LyricColumn {...lyricColumnProps} />
 
-            {dotsTipsOutsideMenu ?
+            {dotsTipsOutsideMenu &&
                 <div className="dots-tips-custom-subfield">
                     <DotsTipsSection {...dotsTipsSectionProps} />
-                </div> : null
+                </div>
             }
         </div>
     )

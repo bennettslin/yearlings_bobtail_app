@@ -22,11 +22,11 @@ const LyricsStanzaView = ({
 ...other }) => (
     <div className={`stanza${sectionClass ? ` ${sectionClass}` : ''}`}>
         {stanzaArray.map((verseObject, verseIndex) => {
-            return !verseObject.stanzaMap && !verseObject.unitMap ?
+            return !verseObject.stanzaMap && !verseObject.unitMap &&
                 <LyricsVerse {...other}
                     key={verseIndex}
                     verseObject={verseObject}
-                /> : null
+                />
             }
         )}
     </div>

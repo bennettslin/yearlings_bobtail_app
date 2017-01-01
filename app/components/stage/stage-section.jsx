@@ -19,7 +19,9 @@ const StageSectionView = ({
 
 }) => (
     <div className={`section stage-section`}>
-        {isAdmin ? <h2>stage</h2> : null}
+        {isAdmin &&
+            <h2>stage</h2>
+        }
     </div>
 )
 

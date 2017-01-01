@@ -29,14 +29,14 @@ const DotStanza = ({
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
         onDotClick = e => onAnnotationClick(e, annotationIndex)
 
-    return (intersectedDotKeys ?
+    return (intersectedDotKeys &&
         <DotStanzaView {...other}
             annotationIndex={annotationIndex}
             isSelected={isSelected}
             dotKeys={intersectedDotKeys}
             onDotClick={onDotClick}
             accessHighlighted={accessHighlighted}
-        /> : null
+        />
     )
 }
 

@@ -36,12 +36,12 @@ const TasksBlockView = ({
                         isSubtask={isSubtask}
                         maxTotalNeededHours={maxTotalNeededHours}
                     />
-                    {task.subtasks ?
+                    {task.subtasks &&
                         <TasksBlock
                             tasks={task.subtasks}
                             isSubtask={true}
                             maxTotalNeededHours={maxTotalNeededHours}
-                        /> : null
+                        />
                     }
                 </div>
             )

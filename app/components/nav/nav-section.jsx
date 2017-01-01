@@ -79,13 +79,13 @@ const NavSectionView = ({
         <div
             className={`section nav-section${shrinkNavIcon ? ' shrink-icon' : ' static-icon'}${showSingleBookColumn ? ' single-book-column' : ' double-book-column'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
         >
-            {isAdmin ?
+            {isAdmin &&
                 <div className="row">
                     <div className="text-cell-wrapper">
                         <h3 className="text-cell text">song</h3>
                         <h3 className="text-cell figure">progress</h3>
                     </div>
-                </div> : null
+                </div>
             }
             {isAdmin ?
                 <div className="admin-block">
@@ -163,12 +163,12 @@ const NavSectionView = ({
                     </div>
                 </div>
             }
-            {isAdmin ?
+            {isAdmin &&
                 <div className="row">
                     <ProgressFooter
                         sumTask={sumAllTasks}
                     />
-                </div> : null
+                </div>
             }
         </div>
     )

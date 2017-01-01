@@ -42,7 +42,9 @@ const DotsSectionView = ({
     <div
         className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
-        {isAdmin ? <h2>dots</h2> : null}
+        {isAdmin &&
+            <h2>dots</h2>
+        }
         <DotsBlock {...other}
             inDotsSection={true}
             sectionAccessHighlighted={sectionAccessHighlighted}

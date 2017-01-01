@@ -64,13 +64,13 @@ class WikiSectionView extends Component {
             <div
                 className={`section wiki-section${inPopup ? ' in-popup' : ''}`}
             >
-                {webviewLoading ?
+                {webviewLoading &&
                     <div className="spinner-container">
                         <img
                             className="spinner"
                             src={spinnerSvg}
                         />
-                    </div> : null
+                    </div>
                 }
                 <iframe
                     ref="webview"
