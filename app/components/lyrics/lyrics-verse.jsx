@@ -66,44 +66,60 @@ const LyricsVerseView = ({
     isTitle,
     onPlayClick,
 
-...other }) => (
+...other }) => {
 
-    <div className={`verse verse-${verseObject.verseIndex}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
-    >
-        {isInteractable &&
-            <LyricsPlayButton
-                isSelected={isSelected}
-                onClick={onPlayClick}
-            />
+    const getLyricsLine = ({
+
+        key,
+        index,
+        columnKey
+
+    }) => {
+
+        const lyricsLineProps = {
+                text: key ? verseObject[key] : verseObject.lyric,
+                firstVerseObject: verseObject.firstVerseObject,
+                lastVerseObject: verseObject.lastVerseObject,
+                verseIndexForDebugging: verseObject.verseIndex,
+                columnKey
+            }
+
+        if (typeof index !== 'undefined') {
+            lyricsLineProps.key = index
         }
-        {isDoubleSpeaker ? (
-            <div className={`double-lines-block${hiddenLyricColumnKey ? ' hidden-' + hiddenLyricColumnKey : ''}`}>
-                {DOUBLESPEAKER_KEYS.filter(key => {
-                    return key === hiddenLyricColumnKey && other.showSingleLyricColumn ? false : verseObject[key]
-                }).map((key, index) => {
-                    return (
-                        <LyricsLine {...other}
-                            key={index}
-                            verseIndexForDebugging={verseObject.verseIndex}
-                            text={verseObject[key]}
-                            firstVerseObject={verseObject.firstVerseObject}
-                            lastVerseObject={verseObject.lastVerseObject}
-                            columnKey={key}
-                        />
-                    )
-                })}
-            </div>
-            ) : (
-                <LyricsLine {...other}
-                    text={verseObject.lyric}
-                    firstVerseObject={verseObject.firstVerseObject}
-                    lastVerseObject={verseObject.lastVerseObject}
-                    verseIndexForDebugging={verseObject.verseIndex}
-                    columnKey={isTitle ? TITLE : LEFT}
+
+        return <LyricsLine {...other} {...lyricsLineProps} />
+    }
+
+    return (
+        <div
+            className={`verse verse-${verseObject.verseIndex}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
+        >
+            {isInteractable &&
+                <LyricsPlayButton
+                    isSelected={isSelected}
+                    onClick={onPlayClick}
                 />
-            )
-        }
-    </div>
-)
+            }
+            {isDoubleSpeaker ? (
+                <div className={`double-lines-block${hiddenLyricColumnKey ? ' hidden-' + hiddenLyricColumnKey : ''}`}>
+                    {DOUBLESPEAKER_KEYS.filter(key => {
+                        return key === hiddenLyricColumnKey && other.showSingleLyricColumn ? false : verseObject[key]
+                    }).map((key, index) => {
+                        return getLyricsLine({
+                            key,
+                            index,
+                            columnKey: key
+                        })
+                    })}
+                </div>
+            ) : (
+                getLyricsLine({
+                    columnKey: isTitle ? TITLE : LEFT
+                })
+            )}
+        </div>
+    )
+}
 
 export default LyricsVerse

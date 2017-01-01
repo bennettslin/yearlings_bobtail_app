@@ -77,6 +77,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Interactive audio bar`,
+            workedHours: 0,
+            neededHours: 8
+        },
+        {
             taskName: `Layout wiki popup`,
             workedHours: 0,
             neededHours: 5
