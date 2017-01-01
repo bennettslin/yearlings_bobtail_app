@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import ReactAudioPlayer from 'react-audio-player'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
@@ -15,7 +14,7 @@ class AudioPlayer extends Component {
     }
 
     componentDidMount() {
-        this.myPlayer = ReactDOM.findDOMNode(this.myReactPlayer)
+        this.myPlayer = this.myReactPlayer.audioEl
 
         this._handleTimeChange()
         this._handleIsPlayingChange()

@@ -77,11 +77,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Figure out composition vs. inheritance, i.e. this.props.children`,
-            workedHours: 0,
-            neededHours: 5
-        },
-        {
             taskName: `Layout wiki popup`,
             workedHours: 0,
             neededHours: 5
