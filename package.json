@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "test": "mocha --compilers js:babel-core/register --require ./test/helpers/test-helper.js --recursive ./test",
+    "test:lint": "eslint . --ext .js --ext .jsx --cache",
     "test:watch": "npm run test -- --watch"
   },
   "repository": {
@@ -37,6 +38,8 @@
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "enzyme": "^2.4.1",
+    "eslint": "^3.12.2",
+    "eslint-plugin-react": "^6.8.0",
     "file-loader": "^0.9.0",
     "jsdom": "^9.4.1",
     "less": "^2.7.1",

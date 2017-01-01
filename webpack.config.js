@@ -1,8 +1,16 @@
+/* global __dirname, process */
+
 /**
  * TODO: Production build and server-side rendering.
  * See tutorials:
  * http://survivejs.com/webpack/building-with-webpack/
  * https://github.com/reactjs/react-router-tutorial (lessons 11 and 13)
+ */
+
+/**
+ * Linting:
+ * http://devnull.guru/adding-eslint-to-your-project-is-easier-than-ever/
+ * http://survivejs.com/webpack/advanced-techniques/linting/
  */
 
 const webpack = require('webpack'),
