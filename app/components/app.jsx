@@ -566,8 +566,7 @@ class App extends Component {
                 accessedSectionKey: DOTS_SECTION,
 
                 // App does not yet know that popups have been deselected.
-                selectedAnnotationIndex: annotationDeselected ? 0 : undefined,
-                selectedWikiIndex: annotationDeselected ? 0 : undefined
+                selectedAnnotationIndex: annotationDeselected ? 0 : undefined
             })
         }
     }

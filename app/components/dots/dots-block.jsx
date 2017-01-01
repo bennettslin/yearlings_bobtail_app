@@ -79,7 +79,6 @@ const DotsBlockView = ({
                             inDotsSection={inDotsSection}
                             key={index}
                             dotKey={dotKey}
-                            dotIndex={index + 1}
                             accessHighlighted={accessHighlighted}
                             isPresent={isPresent}
                             isSelected={isSelected}
