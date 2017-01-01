@@ -38,6 +38,11 @@ class LyricsLine extends Component {
         if (this._shouldResetWidthBasedOnProps(prevProps, this.props)) {
             this.setDOMWidth()
         }
+
+        if (this.props.verseSelected) {
+            console.error('this.myParent.getBoundingClientRect()', this.myParent.getBoundingClientRect());
+            console.error('this.myChild.getBoundingClientRect()', this.myChild.getBoundingClientRect());
+        }
     }
 
     _shouldResetWidthBasedOnProps(oldProps, newProps) {
@@ -46,7 +51,7 @@ class LyricsLine extends Component {
             oldProps.showSingleLyricColumn !== newProps.showSingleLyricColumn ||
             oldProps.selectedLyricColumnIndex !== newProps.selectedLyricColumnIndex
 
-        // if (this.props.verseIndexForDebugging === 1) {
+        // if (this.props.verseSelected) {
         //     console.error('shouldResetWidthBasedOnProps', shouldResetWidthBasedOnProps);
         // }
 
@@ -80,7 +85,7 @@ class LyricsLine extends Component {
                     const child = this.myChild,
                         offsetWidth = child.offsetWidth
 
-                    // if (this.props.verseIndexForDebugging === 1) {
+                    // if (this.props.verseSelected) {
                     //     console.error('offsetWidth', offsetWidth);
                     // }
 

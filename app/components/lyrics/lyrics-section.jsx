@@ -44,6 +44,7 @@ const LyricsSectionView = ({
 ...other }) => (
     <div
         className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${showSingleLyricColumn ? ' single-column' : ''}`}
+        onScroll={() => console.error('scrolling')}
     >
         {/* Upon song change, scroll to element with this class name. */}
         <div className="lyrics-scroll-home"></div>

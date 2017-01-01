@@ -77,10 +77,10 @@ const LyricsVerseView = ({
     }) => {
 
         const lyricsLineProps = {
+                verseSelected: isSelected,
                 text: key ? verseObject[key] : verseObject.lyric,
                 firstVerseObject: verseObject.firstVerseObject,
                 lastVerseObject: verseObject.lastVerseObject,
-                verseIndexForDebugging: verseObject.verseIndex,
                 columnKey
             }
 
