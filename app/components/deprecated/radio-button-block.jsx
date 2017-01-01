@@ -1,6 +1,5 @@
 import React from 'react'
 import RadioButton from './radio-button'
-import TextBlock from '../text/text-block'
 
 /*************
  * CONTAINER *

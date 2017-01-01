@@ -1,7 +1,6 @@
 import React from 'react'
 import AnnotationCard from './annotation-card'
 import TextBlock from '../text/text-block'
-import TextUnit from '../text/text-unit'
 
 /*************
  * CONTAINER *

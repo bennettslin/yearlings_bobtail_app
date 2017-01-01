@@ -297,7 +297,7 @@ class App extends Component {
      * EVENT LISTENERS *
      *******************/
 
-    toggleAdmin(e) {
+    toggleAdmin() {
         this.setState({
             isAdmin: !this.state.isAdmin
         })
@@ -305,7 +305,9 @@ class App extends Component {
 
     togglePlay(e) {
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION }) }
+        if (e) {
+            this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION })
+        }
 
         const isPlaying = !this.state.isPlaying
 
@@ -381,7 +383,7 @@ class App extends Component {
         }
     }
 
-    selectNextSong(e) {
+    selectNextSong() {
         this.selectSong(undefined, this.props.selectedSongIndex + 1)
     }
 
@@ -389,7 +391,9 @@ class App extends Component {
         const optionsLength = AUDIO_OPTIONS.length
 
         this._stopPropagation(e)
-        if (e) { this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION }) }
+        if (e) {
+            this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION })
+        }
 
         this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
     }
@@ -701,8 +705,7 @@ class App extends Component {
     }
 
     selectVerse(e, selectedVerseIndex = 0, direction) {
-        const songTimes = getSongTimes(this.props),
-            currentSongTime = songTimes[this.props.selectedVerseIndex]
+        const songTimes = getSongTimes(this.props)
 
         this._stopPropagation(e)
 
@@ -779,7 +782,7 @@ class App extends Component {
         this.props.selectTimePlayed(selectedTimePlayed)
     }
 
-    selectLyricColumnWidth(e) {
+    selectLyricColumnWidth() {
         this.setState({
             showSingleLyricColumnInAdmin: !this.state.showSingleLyricColumnInAdmin
         })
@@ -862,7 +865,7 @@ class App extends Component {
         this._focusApp()
     }
 
-    _onBodyClick(e) {
+    _onBodyClick() {
         this._handleAccessOn(0)
 
         // Hide popups, but don't collapse lyrics column.
@@ -871,8 +874,7 @@ class App extends Component {
 
     handleKeyDown(e) {
         let { key: keyName,
-              keyCode,
-              charCode } = e
+              keyCode } = e
 
         // Workaround for Safari, which doesn't recognise key on event.
         if (keyName === 'Unidentified') {
@@ -909,7 +911,9 @@ class App extends Component {
             selectDotsExpand: this.selectDotsExpand,
             selectBookColumn: this.selectBookColumn,
             selectTime: this.selectTime
-        })) { return }
+        })) {
+            return
+        }
 
         // If Escape to close popup, close it and return.
         if (keyName === ESCAPE) {
@@ -1020,7 +1024,9 @@ class App extends Component {
                         break
                 }
 
-                if (newState) { this.setState(newState) }
+                if (newState) {
+                    this.setState(newState)
+                }
             }
         }
     }
@@ -1077,7 +1083,6 @@ class App extends Component {
     _handleSectionAccess({ accessedSectionKey,
                            accessOn,
                            selectedSongIndex = this.props.selectedSongIndex,
-                           selectedWikiIndex = this.props.selectedWikiIndex,
                            selectedAnnotationIndex = this.props.selectedAnnotationIndex,
                            popupsAlreadyClosed,
                            overrideClosePopupsDefaultWithSection,
@@ -1116,9 +1121,7 @@ class App extends Component {
         const { props, state } = this,
             accessedSectionKey = SECTION_KEYS[props.accessedSectionIndex],
             nextSectionKey = AccessHelper.getNextSectionKey(props, this.state.deviceIndex),
-            { songs,
-              selectedSongIndex,
-              selectedVerseIndex,
+            { selectedVerseIndex,
               selectedOverviewIndex } = props,
             { isAdmin,
               deviceIndex,
@@ -1142,7 +1145,7 @@ class App extends Component {
         return (
             <div
                 ref="app"
-                className={`app ${isAdmin ? 'admin' : 'live' + ' ' + deviceClassName} ${isDesktop ? 'is-desktop' : 'is-mobile'}`}
+                className={`app ${isAdmin ? 'admin' : 'live ' + deviceClassName} ${isDesktop ? 'is-desktop' : 'is-mobile'}`}
                 onClick={this._onBodyClick}
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"

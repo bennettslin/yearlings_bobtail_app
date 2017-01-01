@@ -1,6 +1,5 @@
 import React from 'react'
 import AudioPlayer from './audio-player'
-import { SONG_FILES } from 'helpers/constants'
 
 /*************
  * CONTAINER *

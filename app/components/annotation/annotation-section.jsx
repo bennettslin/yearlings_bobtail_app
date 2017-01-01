@@ -1,6 +1,5 @@
 import React from 'react'
 import AnnotationUnit from './annotation-unit'
-import { ANNOTATION_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *

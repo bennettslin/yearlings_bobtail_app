@@ -30,7 +30,6 @@ const Live = (props) => {
             overviewText={selectedSong.overview}
             annotation={annotation}
             selectedWikiUrl={selectedWikiUrl}
-            annotations={selectedSong.annotations}
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
@@ -54,7 +53,6 @@ const LiveView = ({
     deviceIndex,
     isPhone,
     windowWidth,
-    windowHeight,
     manualWidth,
     bookStartingIndices,
     mp3s,
@@ -120,9 +118,6 @@ const LiveView = ({
 
     // From controller.
     overviewText,
-    tasks,
-    lyrics,
-    annotations,
     annotation,
     presentDotKeys,
     selectedSongLyrics,

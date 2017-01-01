@@ -1,5 +1,4 @@
 import React from 'react'
-import TitleSection from '../title/title-section'
 import { getFormattedTime } from 'helpers/format-helper'
 
 /*************
@@ -21,9 +20,6 @@ const AudioBannerView = ({
     isPrologue,
     isEpilogue,
     selectedSongTitle,
-
-    titleInAudio,
-    titleSectionProps
 
 }) => (
     <div className="audio-block audio-banner-block">

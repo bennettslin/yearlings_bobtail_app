@@ -3,8 +3,7 @@ import Popup from '../superclasses/popup'
 import DotsSection from './dots-section'
 
 const defaultProps = {
-    selectedDotsIndex: 0,
-    onCloseClick() {}
+    selectedDotsIndex: 0
 }
 
 class DotsPopup extends Popup {

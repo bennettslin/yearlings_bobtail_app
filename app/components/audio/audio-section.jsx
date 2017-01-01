@@ -3,8 +3,7 @@ import AudioBanner from './audio-banner'
 import AudioButtons from './audio-buttons'
 import AudioPlayersSection from './audio-players-section'
 import TitleSection from '../title/title-section'
-import { AUDIO_OPTIONS,
-         AUDIO_SECTION,
+import { AUDIO_SECTION,
          SONG_FILES } from 'helpers/constants'
 
 /*************

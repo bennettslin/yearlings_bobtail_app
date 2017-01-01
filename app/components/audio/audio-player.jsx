@@ -21,7 +21,7 @@ class AudioPlayer extends Component {
         this._handleIsPlayingChange()
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    componentWillUpdate(nextProps) {
         const songChanged = this._getSongChanged(this.props, nextProps),
             isPlayingChanged = this._getIsPlayingChanged(this.props, nextProps)
 

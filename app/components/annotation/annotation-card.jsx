@@ -23,7 +23,9 @@ const AnnotationCard = ({
         portalLinks = getPortalLinks(card, songs)
 
     // Add portal key to dot keys.
-    if (portalLinks) { dotKeys.portal = true }
+    if (portalLinks) {
+        dotKeys.portal = true
+    }
 
     const shouldShow = intersects(dotKeys, selectedDotKeys),
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),

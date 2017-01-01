@@ -8,7 +8,6 @@ import { DOT_DESCRIPTIONS } from 'helpers/constants'
 const DotButton = ({
 
     dotKey,
-    dotIndex,
     isSelected,
     canDeselect,
     onDotClick,
