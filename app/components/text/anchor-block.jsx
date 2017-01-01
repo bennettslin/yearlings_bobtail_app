@@ -27,8 +27,7 @@ const AnchorBlock = ({
             anchor,
             todo,
             dotKeys,
-            wikiIndex,
-            portalIndex } = text,
+            wikiIndex } = text,
 
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
         isPortalAnchor = portalAnnotationIndex === annotationIndex,

@@ -1,6 +1,6 @@
 import React from 'react'
 import LyricsUnit from './lyrics-unit'
-import { LYRIC_COLUMN_KEYS, LYRICS_SECTION } from 'helpers/constants'
+import { LYRICS_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *

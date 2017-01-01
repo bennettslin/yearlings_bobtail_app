@@ -6,10 +6,6 @@ import { TITLE, CENTRE } from 'helpers/constants'
 // Making this a React component to attach ref for line width resizing.
 class LyricsLine extends Component {
 
-    constructor(props) {
-        super(props)
-    }
-
     componentDidMount() {
         this.myParent = ReactDOM.findDOMNode(this.myReactParent)
         this.myChild = ReactDOM.findDOMNode(this.myReactChild)
@@ -32,13 +28,13 @@ class LyricsLine extends Component {
      * this only needs to be done when component is updated, not when it is
      * first mounted?
      */
-    componentWillUpdate(nextProps, nextState) {
+    componentWillUpdate(nextProps) {
         if (this._shouldResetWidthBasedOnProps(this.props, nextProps)) {
             this.setDOMWidth(true)
         }
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps) {
         if (this._shouldResetWidthBasedOnProps(prevProps, this.props)) {
             this.setDOMWidth()
         }

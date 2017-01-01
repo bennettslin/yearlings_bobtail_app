@@ -65,8 +65,6 @@ const LyricsVerseView = ({
     isDoubleSpeaker,
     isTitle,
     onPlayClick,
-    onMouseEnter,
-    onMouseLeave,
 
 ...other }) => (
 

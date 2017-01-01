@@ -23,7 +23,6 @@ const NavRow = ({
 
     return (
         <NavRowView {...other}
-            songIndex={songIndex}
             isSelected={isSelected}
             songTitle={songTitle}
             sumTask={sumTask}
@@ -39,7 +38,6 @@ const NavRow = ({
 const NavRowView = ({
 
     // From props.
-    songIndex,
     isSelected,
     accessHighlighted,
     maxTotalNeededHours,

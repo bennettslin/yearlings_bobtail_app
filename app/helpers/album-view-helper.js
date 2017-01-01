@@ -1,7 +1,5 @@
 // Parse album data for presentation.
-import { ALBUM_BUILD_KEYS,
-         LEFT,
-         RIGHT } from './constants'
+import { LEFT } from './constants'
 
 import { intersects } from 'helpers/dot-helper'
 
@@ -47,8 +45,7 @@ export const getLyricsStartAtZero = (props, selectedSongIndex) => {
 }
 
 export const getSelectedBookColumnIndex = (props, selectedSongIndex) => {
-    const { songs,
-            bookStartingIndices } = props,
+    const { bookStartingIndices } = props,
         songIndex = typeof selectedSongIndex !== 'undefined' ? selectedSongIndex : props.selectedSongIndex
 
     // Assumes two book starting indices.

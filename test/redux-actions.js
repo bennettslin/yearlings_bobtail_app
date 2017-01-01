@@ -2,7 +2,6 @@ import { expect } from 'chai'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
          SELECTED_DOT_KEYS,
-         ALL_DOT_KEYS,
          SELECTED_OVERVIEW_INDEX } from '../app/helpers/constants'
 import { selectSongIndex,
          selectAnnotationIndex,

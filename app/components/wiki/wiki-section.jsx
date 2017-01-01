@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { WIKI_SECTION } from 'helpers/constants'
 import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 
 /*************
@@ -41,7 +40,7 @@ class WikiSectionView extends Component {
         }
     }
 
-    onWebviewLoad(e) {
+    onWebviewLoad() {
         /**
          * Pausing this for now, as I've run into cross-origin issues.
          */

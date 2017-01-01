@@ -195,7 +195,6 @@ const LiveView = ({
             onOverviewClick,
             onPortalClick,
             onSongFromPortalClick,
-            onWikiUrlClick,
             onAnnotationClick,
             onPopupContainerClick,
             onDotsExpandClick,

@@ -908,7 +908,6 @@ class App extends Component {
             selectedTimePlayed: this.props.selectedTimePlayed,
             selectLyricExpand: this.selectLyricExpand,
             selectNavExpand: this.selectNavExpand,
-            selectDotsExpand: this.selectDotsExpand,
             selectBookColumn: this.selectBookColumn,
             selectTime: this.selectTime
         })) {
@@ -962,7 +961,6 @@ class App extends Component {
                     case AUDIO_SECTION:
                         AccessHelper.handleAudioAccess({
                             keyName,
-                            togglePlay: this.togglePlay,
                             selectAudioOption: this.selectAudioOption,
                             selectVerse: this.selectVerse,
                             selectSong: this.selectSong

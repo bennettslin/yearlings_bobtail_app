@@ -12,7 +12,6 @@ const TextSpan = ({
     text,
     inPortal,
     inPortalCard,
-    isPortalAnchor,
     firstVerseObject,
     lastVerseObject,
 
@@ -65,8 +64,7 @@ const TextSpanView = ({
 
     // From controller.
     text,
-    hasFirstSpace,
-    isPortalAnchorText
+    hasFirstSpace
 
 }) => (
     <span

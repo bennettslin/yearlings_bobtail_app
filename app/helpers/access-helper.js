@@ -22,8 +22,7 @@ import { NAV_SECTION,
          ARROW_RIGHT,
          ARROW_UP,
          ARROW_DOWN,
-         ENTER,
-         ESCAPE } from 'helpers/constants'
+         ENTER } from 'helpers/constants'
 
 export default {
 
@@ -40,7 +39,6 @@ export default {
         selectLyricExpand,
         selectBookColumn,
         selectNavExpand,
-        selectDotsExpand,
         selectedTimePlayed
     }) {
         // These keys will always fire, even if access is off.
@@ -242,7 +240,6 @@ export default {
                 break
             default:
                 return false
-                break
         }
 
         if (direction) {
@@ -323,7 +320,6 @@ export default {
                 break
             default:
                 return false
-                break
         }
 
         if (direction) {
@@ -384,10 +380,8 @@ export default {
             case ENTER:
                 selectWikiOrPortal()
                 return false
-                break
             default:
                 return false
-                break
         }
 
         accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, direction)
@@ -397,7 +391,6 @@ export default {
 
     handleAudioAccess({
         keyName,
-        togglePlay,
         selectAudioOption,
         selectSong,
         selectVerse

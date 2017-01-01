@@ -8,10 +8,6 @@ import TextUnit from './text-unit'
  // Making this a React component to attach ref for line width resizing.
 class TextBlock extends Component {
 
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         const { text } = this.props,
 

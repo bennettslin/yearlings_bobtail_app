@@ -37,7 +37,7 @@ export const prepareAlbumData = (album = {}) => {
 }
 
 const _addWikiAndPortalIndices = (album) => {
-    album.songs.forEach((song, songIndex) => {
+    album.songs.forEach(song => {
         if (!song.logue) {
             _tempStore._annotations = song.annotations
             _tempStore._finalAnnotationIndex = 0
@@ -183,7 +183,7 @@ const _registerFirstAndLastVerseObjects = (lyric) => {
      */
 
     if (Array.isArray(lyric)) {
-        lyric.forEach((childLyric, index) => {
+        lyric.forEach(childLyric => {
             _registerFirstAndLastVerseObjects(childLyric)
         })
 
@@ -233,7 +233,7 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
 
     if (Array.isArray(lyric)) {
 
-        lyric.forEach((childLyricValue, index) => {
+        lyric.forEach(childLyricValue => {
             _parseLyrics(childLyricValue, finalPassThrough, textKey, lyricInTime)
         })
 
@@ -295,7 +295,7 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
         _tempStore._popupAnchorIndex = 1
 
         if (Array.isArray(cards)) {
-            cards.forEach((card, cardIndex) => {
+            cards.forEach(card => {
                 _prepareCard(card, undefined, true)
             })
         } else {

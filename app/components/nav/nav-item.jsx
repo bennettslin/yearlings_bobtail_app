@@ -12,7 +12,6 @@ const NavItem = ({
     isAdmin,
     isToggle,
     hasSelectedSong,
-    bookTwoStartingIndex,
     selectedSongIndex,
     accessedSongIndex,
     sectionAccessHighlighted,
