@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { selectSongIndex,
@@ -200,8 +199,8 @@ class App extends Component {
     }
 
     // Focus for accessibility.
-    _focusApp(element = this.refs.app) {
-        ReactDOM.findDOMNode(element).focus()
+    _focusApp(element = this.myApp) {
+        element.focus()
     }
 
     _stopPropagation(e) {
@@ -1141,7 +1140,7 @@ class App extends Component {
 
         return (
             <div
-                ref="app"
+                ref={(node) => (this.myApp = node)}
                 className={`app ${isAdmin ? 'admin' : 'live ' + deviceClassName} ${isDesktop ? 'is-desktop' : 'is-mobile'}`}
                 onClick={this._onBodyClick}
                 onKeyDown={this.handleKeyDown}
