@@ -38,7 +38,7 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 180,
-    overview: `One night, I went along with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got them all to pretend we were Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
+    overview: `One night, I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Mongols and Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
     lyrics: [
         [
             {
@@ -621,33 +621,31 @@ module.exports = {
                         anchor: `Ourevian battles spent,`,
                         properNoun: true,
                         annotation: {
-                            // TODO: Mention Mongol battles against Arabs.
                             description: [
-                                `"Arabian battles." As the`,
+                                `"Arabian battles." Centuries after the`,
                                 {
                                     anchor: `Arabs`,
                                     wiki: `Arabs`
                                 },
-                                `begin their rapid conquest of the Middle East in the name of Islam, the Iranians face a new enemy at their doorstep. Also, Robitussin requires you to stay constantly hydrated, and "our`,
+                                `rapidly conquered Persia and the Middle East, the Mongols were the new enemy at the doorstep. Also, Robitussin requires you to stay constantly hydrated, and "our`,
                                 {
                                     anchor: `Evian`,
                                     wiki: `Evian`
                                 },
-                                `bottles" that we brought into the steam tunnels are now empty.`
+                                `bottles" that we brought with us into the steam tunnels are now empty.`
                             ]
                         }
                     },
                     {
                         anchor: `a'duct Uighuress.`,
                         annotation: {
-                            // TODO: Mention Mongol reputation for spoils.
                             description: [
-                                `"Abduct Uighuress." The early Muslim campaigns brought the Arabs into central Asia, where they encountered the`,
+                                `"Abduct Uighuress." The Mongols would slaughter the men and marry the women of the populations they conquered, a fate no doubt met by the`,
                                 {
                                     anchor: `Uighurs,`,
                                     wiki: `Uyghurs`
                                 },
-                                `a Turkic people. Also, through "a duct, we egress," or exit, the steam tunnels.`
+                                `a Turkic people, whom the Mongols encountered in their early campaigns. Also, through "a duct, we egress," or exit, the steam tunnels.`
                             ]
                         }
                     }
