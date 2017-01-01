@@ -92,11 +92,6 @@ module.exports = {
             neededHours: 8
         },
         {
-            taskName: `Replace ternary statements with variable && string`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `Select time for player from portal`,
             workedHours: 0,
             neededHours: 3
@@ -1042,6 +1037,11 @@ module.exports = {
             taskName: `Add linter!`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `Replace ternary statements with conditional && expression`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
