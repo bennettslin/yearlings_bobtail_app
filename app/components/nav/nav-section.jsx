@@ -122,8 +122,7 @@ const NavSectionView = ({
                                 {showSingleBookColumn && selectedBookColumnIndex === 2 ?
                                     <NavBook {...navItemProps}
                                         isToggle={true}
-                                        hasSelectedSong={selectedSongIndex
-                                             < bookStartingIndices[1]}
+                                        hasSelectedSong={selectedSongIndex < bookStartingIndices[1]}
                                         buttonText={'k'}
                                         onButtonClick={e => onBookColumnClick(e)}
                                     /> :
@@ -148,8 +147,7 @@ const NavSectionView = ({
                                 {showSingleBookColumn && selectedBookColumnIndex === 1 ?
                                     <NavBook {...navItemProps}
                                         isToggle={true}
-                                        hasSelectedSong={selectedSongIndex
-                                             >= bookStartingIndices[1]}
+                                        hasSelectedSong={selectedSongIndex >= bookStartingIndices[1]}
                                         buttonText={'k'}
                                         onButtonClick={e => onBookColumnClick(e)}
                                     /> :

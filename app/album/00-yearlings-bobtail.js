@@ -1017,6 +1017,11 @@ module.exports = {
             taskName: `Player starts at persisted time.`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `Add linter!`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }

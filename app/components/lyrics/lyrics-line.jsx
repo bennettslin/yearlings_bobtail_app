@@ -99,11 +99,11 @@ class LyricsLine extends Component {
 
         return (
             <div
-                ref={(ref) => this.myReactParent = ref}
+                ref={(ref) => (this.myReactParent = ref)}
                 className={`line ${columnKey}`}
             >
                 <TextBlock {...other}
-                    ref={(ref) => this.myReactChild = ref}
+                    ref={(ref) => (this.myReactChild = ref)}
                     isLyric={true}
                 />
             </div>

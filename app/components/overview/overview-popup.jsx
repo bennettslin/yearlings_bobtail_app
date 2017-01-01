@@ -3,8 +3,7 @@ import Popup from '../superclasses/popup'
 import OverviewSection from './overview-section'
 
 const defaultProps = {
-    selectedOverviewIndex: 0,
-    onCloseClick() {}
+    selectedOverviewIndex: 0
 }
 
 class OverviewPopup extends Popup {

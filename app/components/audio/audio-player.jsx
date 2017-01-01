@@ -109,7 +109,7 @@ class AudioPlayer extends Component {
             <div className={`audio-player${isSelected ? ' selected' : ''}`}>
                 <ReactAudioPlayer
                     src={mp3}
-                    ref={(ref) => this.myReactPlayer = ref}
+                    ref={(ref) => (this.myReactPlayer = ref)}
                     listenInterval={100}
                     onListen={this._handleListen}
                     onEnded={this._handleEnded}
