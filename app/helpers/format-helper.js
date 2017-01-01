@@ -51,7 +51,7 @@ const _getStringFromObject = (text) => {
          * Check "Bobtail's words" in M and "surrendered for Bobtail's sake" in
          * Uncanny Valley.
          */
-        return text.reduce((textString, textObject, index) => {
+        return text.reduce((textString, textObject) => {
             const objectString = _getStringFromObject(textObject),
                 whiteSpace = objectString.indexOf('\'s') === 0 ? '' : ' '
 

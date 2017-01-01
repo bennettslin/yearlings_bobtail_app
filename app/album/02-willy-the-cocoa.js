@@ -1,4 +1,4 @@
-import { LEFT, RIGHT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME } from 'helpers/constants'
+import { LEFT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME } from 'helpers/constants'
 
 module.exports = {
     title: {

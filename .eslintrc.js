@@ -245,6 +245,7 @@ module.exports = {
             "error",
             "as-needed"
         ],
+        "react/prop-types": "off",
         "require-await": "error",
         "require-jsdoc": "error",
         "rest-spread-spacing": [

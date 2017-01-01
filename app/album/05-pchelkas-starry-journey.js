@@ -1,4 +1,4 @@
-import { RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, RESPONSE } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, RESPONSE } from 'helpers/constants'
 
 /**
  * Ash Wednesday and Pchelka`s Starry Journey have been switched from the song

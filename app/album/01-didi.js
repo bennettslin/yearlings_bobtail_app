@@ -1,6 +1,4 @@
-import { RIGHT,
-         OVERLAP,
-         VERSES,
+import { VERSES,
          PRECHORUS,
          CHORUS,
          BRIDGE,

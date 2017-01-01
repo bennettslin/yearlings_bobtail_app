@@ -4,12 +4,7 @@ import { PHONE_WIDTH,
          LAPTOP_WIDTH,
          MONITOR_WIDTH,
 
-         PHONE_OBJECT,
          MINI_OBJECT,
-         TABLET_OBJECT,
-         LAPTOP_OBJECT,
-         MONITOR_OBJECT,
-
          DEVICE_OBJECTS,
 
          HEIGHTLESS_LYRIC_MAX } from 'helpers/constants'

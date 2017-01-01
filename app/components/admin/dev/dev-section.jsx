@@ -1,5 +1,5 @@
 import React from 'react'
-import { DEVICE_OBJECTS } from 'helpers/constants'
+// import { DEVICE_OBJECTS } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -16,14 +16,14 @@ const DevSection = (props) => (
 const DevSectionView = ({
 
     // From props.
-    deviceIndex,
-    windowWidth,
-    windowHeight,
-    selectedSongIndex,
+    // deviceIndex,
+    // windowWidth,
+    // windowHeight,
+    // selectedSongIndex,
     selectedVerseIndex,
-    selectedNavIndex,
-    selectedDotsIndex,
-    showSingleLyricColumn,
+    // selectedNavIndex,
+    // selectedDotsIndex,
+    // showSingleLyricColumn,
     onScreenWidthClick
 
 }) => (

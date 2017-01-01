@@ -4,7 +4,6 @@ import { VERSES,
          BRIDGE,
 
          NARRATIVE,
-         BACKSTORY,
          PUN,
          MUSIC,
          AFTERWORD } from 'helpers/constants'

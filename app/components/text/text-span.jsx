@@ -22,9 +22,7 @@ const TextSpan = ({
      * it's in an anchor, it begins with "'s," or it's the first verse object
      * in a portal.
      */
-    const hasFirstSpace = !firstVerseObject && !foregoSpace && (text.indexOf('\'s') !== 0),
-        isPortalAnchorText = isPortalAnchor && !inPortalCard
-
+    const hasFirstSpace = !firstVerseObject && !foregoSpace && (text.indexOf('\'s') !== 0)
     // Add nonbreaking space between last two words if it's a lyric.
     let formattedText = text
     if (isLyric) {
@@ -72,7 +70,7 @@ const TextSpanView = ({
 
 }) => (
     <span
-        className={`text-span${isPortalAnchorText ? ' portal-anchor-text' : ''}${firstVerseObject ? ' first-verse-object' : ''}${lastVerseObject ? ' last-verse-object' : ''}`}>
+        className={`text-span${firstVerseObject ? ' first-verse-object' : ''}${lastVerseObject ? ' last-verse-object' : ''}`}>
         {(hasFirstSpace ? ' ' : '') + text}
     </span>
 )

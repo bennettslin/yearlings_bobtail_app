@@ -3,7 +3,7 @@
  * not being clear and being too obvious.
  */
 
- import { RIGHT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RESPONSE } from 'helpers/constants'
+ import { OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RESPONSE } from 'helpers/constants'
 
 module.exports = {
     title: {

@@ -41,9 +41,6 @@ import { NAV_SECTION,
 
          WIKI,
 
-         LEFT,
-         RIGHT,
-
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex } from 'helpers/album-view-helper'
