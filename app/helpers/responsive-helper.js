@@ -7,7 +7,10 @@ import { PHONE_WIDTH,
          MINI_OBJECT,
          DEVICE_OBJECTS,
 
-         HEIGHTLESS_LYRIC_MAX } from 'helpers/constants'
+         HEIGHTLESS_LYRIC_MAX,
+         MENU_HEIGHT,
+         MENU_PHONE_HEIGHT,
+         COLLAPSED_LYRIC_SECTION_HEIGHT } from 'helpers/constants'
 import { getSong } from 'helpers/album-view-helper'
 
 export const resizeWindow = (target = window, presentIndex) => {
@@ -160,8 +163,10 @@ export const getTitleInAudio = (state) => {
 
 export const getLyricSectionRect = (state) => {
     const { deviceIndex,
-            windowHeight } = state,
-        deviceClassName = DEVICE_OBJECTS[deviceIndex].className
+            windowHeight,
+            isLyricExpanded } = state,
+        deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
+        bottom = windowHeight
 
     if (deviceClassName === MONITOR_WIDTH || deviceClassName === LAPTOP_WIDTH) {
         /**
@@ -170,23 +175,18 @@ export const getLyricSectionRect = (state) => {
          */
         return {
             top: 0,
-            bottom: windowHeight
+            bottom
         }
 
     } else {
+        const isPhone = deviceClassName === PHONE_WIDTH,
+            menuHeight = isPhone ? MENU_PHONE_HEIGHT : MENU_HEIGHT,
+            top = isLyricExpanded ? menuHeight : windowHeight * (1 - COLLAPSED_LYRIC_SECTION_HEIGHT)
 
-        // Subtract nav height.
-
-        // Measure lyric column height.
-
-        // Consider lyric expand.
-
-        // Consider lyric hidden.
-
-    }
-
-    return {
-        top: 0,
-        bottom: 300
+        // TODO: Consider lyric hidden?
+        return {
+            top,
+            bottom
+        }
     }
 }

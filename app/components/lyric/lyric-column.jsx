@@ -1,5 +1,6 @@
 import React from 'react'
-import LyricsSection from './lyrics/lyrics-section'
+import LyricsSection from '../lyrics/lyrics-section'
+import LyricVerseBar from './lyric-verse-bar'
 
 /*************
  * CONTAINER *
@@ -36,6 +37,8 @@ const LyricColumnView = ({
     // From props.
     isLyricExpandable,
     isLyricExpanded,
+    isSelectedVerseAbove,
+    isSelectedVerseBelow,
     onLyricExpandClick,
     onLyricColumnClick,
 
@@ -46,6 +49,16 @@ const LyricColumnView = ({
 ...other }) => (
     <div className="column lyric-column">
         <div className="lyric-column-animatable">
+            {isSelectedVerseAbove &&
+                <LyricVerseBar
+                    isAbove={true}
+                />
+            }
+            {isSelectedVerseBelow &&
+                <LyricVerseBar
+                    isAbove={false}
+                />
+            }
             {showEarButton &&
                 <div className="lyric-button-block ear-button-block">
                     <a
@@ -70,7 +83,9 @@ const LyricColumnView = ({
                     </a>
                 </div>
             }
-            <LyricsSection {...other} />
+            <LyricsSection {...other}
+                isLyricExpanded={isLyricExpanded}
+            />
         </div>
     </div>
 )

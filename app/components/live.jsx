@@ -1,6 +1,6 @@
 import React from 'react'
 import MainColumn from './main-column'
-import LyricColumn from './lyric-column'
+import LyricColumn from './lyric/lyric-column'
 import DotsTipsSection from './dots-tips-section'
 import OverviewPopup from './overview/overview-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
@@ -90,6 +90,8 @@ const LiveView = ({
     isLyricExpanded,
     isLyricExpandable,
     isOverviewShown,
+    isSelectedVerseAbove,
+    isSelectedVerseBelow,
 
     isFirstVerse,
     isLastVerse,
@@ -211,6 +213,8 @@ const LiveView = ({
             hasDoubleColumns,
             isLyricExpanded,
             isLyricExpandable,
+            isSelectedVerseAbove,
+            isSelectedVerseBelow,
             lyricsStartAtZero,
             accessedOn,
             accessedSectionKey,
@@ -238,7 +242,18 @@ const LiveView = ({
         }
 
     return (
-        <div className={`live-app${isLogue ? ' is-logue' : ' is-song'}${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}${isHeightlessLyricColumn ? ' heightless-lyric' : ''}${selectedNavIndex ? '' : ' nav-expanded'}${isDotsShown ? ' dots-shown' : ''}${isOverviewShown ? ' overview-shown' : ''}${manualWidth ? ' manual-width' : ''}`}>
+        <div className={
+            `live-app
+            ${isLogue ? ' is-logue' : ' is-song'}
+            ${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}
+            ${isHeightlessLyricColumn ? ' heightless-lyric' : ''}
+            ${selectedNavIndex ? '' : ' nav-expanded'}
+            ${isDotsShown ? ' dots-shown' : ''}
+            ${isOverviewShown ? ' overview-shown' : ''}
+            ${isSelectedVerseAbove ? ' verse-above' : ''}
+            ${isSelectedVerseBelow ? ' verse-below' : ''}
+            ${manualWidth ? ' manual-width' : ''}`
+        }>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">
                     <OverviewPopup {...overviewPopupProps}

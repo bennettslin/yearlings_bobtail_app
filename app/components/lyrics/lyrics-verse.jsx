@@ -66,7 +66,7 @@ class LyricsVerseView extends Component {
     }
 
     _lyricsDidScroll(oldProps, newProps) {
-        return oldProps.lyricsScrollTop !== newProps.lyricsScrollTop
+        return oldProps.lyricsScrollTop !== newProps.lyricsScrollTop || oldProps.isLyricExpanded !== newProps.isLyricExpanded
     }
 
     getLyricsLine({ key, index, columnKey, other }) {

@@ -134,7 +134,10 @@ class App extends Component {
             manualWidth: false,
 
             // Start at persisted time.
-            updatedTimePlayed: props.selectedTimePlayed
+            updatedTimePlayed: props.selectedTimePlayed,
+
+            isSelectedVerseAbove: false,
+            isSelectedVerseBelow: false
         }
     }
 
@@ -850,10 +853,15 @@ class App extends Component {
     }
 
     updateSelectedVerseScroll(selectedVerseRect) {
-        const lyricSectionRect = getLyricSectionRect(this.state)
 
-        console.error('selectedVerseRect', selectedVerseRect);
-        console.error('lyricSectionRect', lyricSectionRect);
+        const lyricSectionRect = getLyricSectionRect(this.state),
+            isSelectedVerseAbove = selectedVerseRect.top < lyricSectionRect.top,
+            isSelectedVerseBelow = selectedVerseRect.bottom > lyricSectionRect.bottom
+
+        this.setState({
+            isSelectedVerseAbove,
+            isSelectedVerseBelow
+        })
     }
 
     handlePopupContainerClick(e, className) {
