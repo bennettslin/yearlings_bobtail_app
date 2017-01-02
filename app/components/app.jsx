@@ -181,6 +181,7 @@ class App extends Component {
         this.selectDotsExpand = this.selectDotsExpand.bind(this)
         this.selectTips = this.selectTips.bind(this)
         this.selectNextSong = this.selectNextSong.bind(this)
+        this.updateSelectedVerseScroll = this.updateSelectedVerseScroll.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
@@ -848,6 +849,10 @@ class App extends Component {
         })
     }
 
+    updateSelectedVerseScroll(selectedVerseRect) {
+        console.error('selectedVerseRect', selectedVerseRect);
+    }
+
     handlePopupContainerClick(e, className) {
         this._stopPropagation(e)
         this._handleAccessOn(0)
@@ -1185,6 +1190,7 @@ class App extends Component {
                     onTimeChange={this.selectTime}
                     onPlayerEnd={this.selectNextSong}
                     onTimeUpdated={this.resetupdatedTimePlayed}
+                    onSelectedVerseScroll={this.updateSelectedVerseScroll}
                 />
             </div>
         )

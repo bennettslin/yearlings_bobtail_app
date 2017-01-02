@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import LyricsUnit from './lyrics-unit'
 import { LYRICS_SECTION } from 'helpers/constants'
 
@@ -29,42 +29,70 @@ const LyricsSection = ({
  * PRESENTATION *
  ****************/
 
-const LyricsSectionView = ({
+class LyricsSectionView extends Component {
 
-    // From props.
-    isAdmin,
-    songLyrics = [],
-    showSingleLyricColumn,
-    selectedLyricColumnIndex,
+    constructor(props) {
+        super(props)
 
-    // From controller.
-    sectionAccessHighlighted,
-    sectionNextHighlighted,
+        this._handleScroll = this._handleScroll.bind(this)
 
-...other }) => (
-    <div
-        className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${showSingleLyricColumn ? ' single-column' : ''}`}
-        onScroll={() => console.error('scrolling')}
-    >
-        {/* Upon song change, scroll to element with this class name. */}
-        <div className="lyrics-scroll-home"></div>
-        {isAdmin &&
-            <h2>lyrics</h2>
+        this.state = {
+            lyricsScrollTop: 0
         }
-        <div className="lyrics-block">
-            {songLyrics.map((stanzaArray, stanzaIndex) => (
-                    <LyricsUnit {...other}
-                        key={stanzaIndex}
-                        showSingleLyricColumn={showSingleLyricColumn}
-                        isTitleUnit={stanzaIndex === 0}
-                        stanzaArray={stanzaArray}
-                        selectedLyricColumnIndex={selectedLyricColumnIndex}
-                        sectionAccessHighlighted={sectionAccessHighlighted}
-                    />
-                )
-            )}
-        </div>
-    </div>
-)
+    }
+
+    _handleScroll() {
+        const lyricsScrollTop = this.mySection.scrollTop
+
+        this.setState({
+            lyricsScrollTop
+        })
+    }
+
+    render() {
+
+                // From props.
+        const { isAdmin,
+                songLyrics = [],
+                showSingleLyricColumn,
+                selectedLyricColumnIndex,
+
+                // From controller.
+                sectionAccessHighlighted,
+                sectionNextHighlighted,
+
+            ...other } = this.props,
+
+            { lyricsScrollTop } = this.state
+
+        return (
+            <div
+                ref={(node) => (this.mySection = node)}
+                className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${showSingleLyricColumn ? ' single-column' : ''}`}
+                onScroll={this._handleScroll}
+            >
+                {/* Upon song change, scroll to element with this class name. */}
+                <div className="lyrics-scroll-home"></div>
+                {isAdmin &&
+                    <h2>lyrics</h2>
+                }
+                <div className="lyrics-block">
+                    {songLyrics.map((stanzaArray, stanzaIndex) => (
+                            <LyricsUnit {...other}
+                                key={stanzaIndex}
+                                showSingleLyricColumn={showSingleLyricColumn}
+                                isTitleUnit={stanzaIndex === 0}
+                                stanzaArray={stanzaArray}
+                                selectedLyricColumnIndex={selectedLyricColumnIndex}
+                                sectionAccessHighlighted={sectionAccessHighlighted}
+                                lyricsScrollTop={lyricsScrollTop}
+                            />
+                        )
+                    )}
+                </div>
+            </div>
+        )
+    }
+}
 
 export default LyricsSection

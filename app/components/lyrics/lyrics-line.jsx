@@ -32,17 +32,21 @@ class LyricsLine extends Component {
         if (this._shouldResetWidthBasedOnProps(this.props, nextProps)) {
             this.setDOMWidth(true)
         }
+
+        if (this.props.verseSelected &&
+            this._lyricsDidScroll(this.props, nextProps)) {
+            this.props.onSelectedVerseScroll(this.myChild.getBoundingClientRect())
+        }
     }
 
     componentDidUpdate(prevProps) {
         if (this._shouldResetWidthBasedOnProps(prevProps, this.props)) {
             this.setDOMWidth()
         }
+    }
 
-        if (this.props.verseSelected) {
-            console.error('this.myParent.getBoundingClientRect()', this.myParent.getBoundingClientRect());
-            console.error('this.myChild.getBoundingClientRect()', this.myChild.getBoundingClientRect());
-        }
+    _lyricsDidScroll(oldProps, newProps) {
+        return oldProps.lyricsScrollTop !== newProps.lyricsScrollTop
     }
 
     _shouldResetWidthBasedOnProps(oldProps, newProps) {
