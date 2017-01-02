@@ -77,6 +77,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Routing and copy link button`,
+            workedHours: 0,
+            neededHours: 8
+        },
+        {
             taskName: `Interactive audio bar`,
             workedHours: 0,
             neededHours: 8

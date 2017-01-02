@@ -12,8 +12,7 @@ import { getSong } from 'helpers/album-view-helper'
 
 export const resizeWindow = (target = window, presentIndex) => {
 
-    const newState = {
-            windowHeight: target.innerHeight        }
+    const newState = { windowHeight: target.innerHeight }
 
     let innerWidth = target.innerWidth,
         index = 0,
@@ -157,4 +156,37 @@ export const getTitleInAudio = (state) => {
         deviceClassName = DEVICE_OBJECTS[deviceIndex].className
 
     return deviceClassName === MINI_WIDTH && windowWidth < MINI_OBJECT.titleInAudioBreakpoint
+}
+
+export const getLyricSectionRect = (state) => {
+    const { deviceIndex,
+            windowHeight } = state,
+        deviceClassName = DEVICE_OBJECTS[deviceIndex].className
+
+    if (deviceClassName === MONITOR_WIDTH || deviceClassName === LAPTOP_WIDTH) {
+        /**
+         * If monitor or laptop width, then lyric section rect is simply the
+         * entire window height.
+         */
+        return {
+            top: 0,
+            bottom: windowHeight
+        }
+
+    } else {
+
+        // Subtract nav height.
+
+        // Measure lyric column height.
+
+        // Consider lyric expand.
+
+        // Consider lyric hidden.
+
+    }
+
+    return {
+        top: 0,
+        bottom: 300
+    }
 }

@@ -43,7 +43,7 @@ import { NAV_SECTION,
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex } from 'helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop } from 'helpers/responsive-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getLyricSectionRect } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -850,7 +850,10 @@ class App extends Component {
     }
 
     updateSelectedVerseScroll(selectedVerseRect) {
+        const lyricSectionRect = getLyricSectionRect(this.state)
+
         console.error('selectedVerseRect', selectedVerseRect);
+        console.error('lyricSectionRect', lyricSectionRect);
     }
 
     handlePopupContainerClick(e, className) {
