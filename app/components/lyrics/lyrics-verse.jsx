@@ -1,6 +1,6 @@
-import React from 'react'
-import LyricsPlayButton from './lyrics-play-button'
+import React, { Component } from 'react'
 import LyricsLine from './lyrics-line'
+import LyricsPlayButton from './lyrics-play-button'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT, LYRIC_VERSE_ELEMENT } from 'helpers/constants'
 
 /*************
@@ -52,31 +52,30 @@ const LyricsVerse = ({
  * PRESENTATION *
  ****************/
 
-const LyricsVerseView = ({
+class LyricsVerseView extends Component {
 
-    // From props.
-    verseObject,
-    hiddenLyricColumnKey,
+    constructor(props) {
+        super(props)
+    }
 
-    // From controller.
-    accessHighlighted,
-    isInteractable,
-    isSelected,
-    isDoubleSpeaker,
-    isTitle,
-    onPlayClick,
+    componentWillUpdate(nextProps) {
+        if (this.props.isSelected &&
+            this._lyricsDidScroll(this.props, nextProps)) {
+            this.props.onSelectedVerseScroll(this.myVerse.getBoundingClientRect())
+        }
+    }
 
-...other }) => {
+    _lyricsDidScroll(oldProps, newProps) {
+        return oldProps.lyricsScrollTop !== newProps.lyricsScrollTop
+    }
 
-    const getLyricsLine = ({
+    getLyricsLine({ key, index, columnKey, other }) {
 
-        key,
-        index,
-        columnKey
+        const { isSelected,
+                verseObject,
+                } = this.props,
 
-    }) => {
-
-        const lyricsLineProps = {
+            lyricsLineProps = {
                 verseSelected: isSelected,
                 text: key ? verseObject[key] : verseObject.lyric,
                 firstVerseObject: verseObject.firstVerseObject,
@@ -91,35 +90,55 @@ const LyricsVerseView = ({
         return <LyricsLine {...other} {...lyricsLineProps} />
     }
 
-    return (
-        <div
-            className={`verse verse-${verseObject.verseIndex}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
-        >
-            {isInteractable &&
-                <LyricsPlayButton
-                    isSelected={isSelected}
-                    onClick={onPlayClick}
-                />
-            }
-            {isDoubleSpeaker ? (
-                <div className={`double-lines-block${hiddenLyricColumnKey ? ' hidden-' + hiddenLyricColumnKey : ''}`}>
-                    {DOUBLESPEAKER_KEYS.filter(key => {
-                        return key === hiddenLyricColumnKey && other.showSingleLyricColumn ? false : verseObject[key]
-                    }).map((key, index) => {
-                        return getLyricsLine({
-                            key,
-                            index,
-                            columnKey: key
-                        })
-                    })}
-                </div>
-            ) : (
-                getLyricsLine({
-                    columnKey: isTitle ? TITLE : LEFT
-                })
-            )}
-        </div>
-    )
+    render() {
+
+                // From props.
+        const { verseObject,
+                hiddenLyricColumnKey,
+
+                // From controller.
+                accessHighlighted,
+                isInteractable,
+                isSelected,
+                isDoubleSpeaker,
+                isTitle,
+                onPlayClick,
+
+            ...other } = this.props
+
+        return (
+            <div
+                ref={(node) => (this.myVerse = node)}
+                className={`verse verse-${verseObject.verseIndex}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
+            >
+                {isInteractable &&
+                    <LyricsPlayButton
+                        isSelected={isSelected}
+                        onClick={onPlayClick}
+                    />
+                }
+                {isDoubleSpeaker ? (
+                    <div className={`double-lines-block${hiddenLyricColumnKey ? ' hidden-' + hiddenLyricColumnKey : ''}`}>
+                        {DOUBLESPEAKER_KEYS.filter(key => {
+                            return key === hiddenLyricColumnKey && other.showSingleLyricColumn ? false : verseObject[key]
+                        }).map((key, index) => {
+                            return this.getLyricsLine({
+                                key,
+                                index,
+                                columnKey: key,
+                                other
+                            })
+                        })}
+                    </div>
+                ) : (
+                    this.getLyricsLine({
+                        columnKey: isTitle ? TITLE : LEFT,
+                        other
+                    })
+                )}
+            </div>
+        )
+    }
 }
 
 export default LyricsVerse
