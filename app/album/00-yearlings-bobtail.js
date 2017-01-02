@@ -102,6 +102,11 @@ module.exports = {
             neededHours: 3
         },
         {
+            taskName: `Weird bug where player stops sending listen events after having currentTime changed.`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `Fix weird glitch two seconds into new song after load.`,
             workedHours: 0,
             neededHours: 3
