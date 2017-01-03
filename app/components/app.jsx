@@ -228,7 +228,8 @@ class App extends Component {
 
         let popupWasOpen = false
 
-        if (exemptSection !== LYRICS_SECTION && this.state.isLyricExpanded) {
+        // If audio section is accessed, it's fine to keep lyric expanded.
+        if (exemptSection !== AUDIO_SECTION && exemptSection !== LYRICS_SECTION && this.state.isLyricExpanded) {
             this.selectLyricExpand(undefined, false)
             popupWasOpen = true
         }
