@@ -92,6 +92,7 @@ const LiveView = ({
     isOverviewShown,
     isSelectedVerseAbove,
     isSelectedVerseBelow,
+    selectedVerse,
 
     isFirstVerse,
     isLastVerse,
@@ -215,6 +216,7 @@ const LiveView = ({
             isLyricExpandable,
             isSelectedVerseAbove,
             isSelectedVerseBelow,
+            selectedVerse,
             lyricsStartAtZero,
             accessedOn,
             accessedSectionKey,

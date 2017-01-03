@@ -29,22 +29,26 @@
 
 .verse-above {
     .lyric-column-animatable {
-        background-color: rgba(250, 150, 150, 0.4);
+        // background-color: rgba(250, 150, 150, 0.4);
     }
 }
 
 .verse-below {
     .lyric-column-animatable {
-        background-color: rgba(150, 250, 150, 0.4);
+        // background-color: rgba(150, 250, 150, 0.4);
     }
 }
 
 .selected-verse-bar {
     position: absolute;
     width: 100%;
-    height: 44px;
-    background-color: green;
+    height: 40px;
+    background-color: #bfb;
     z-index: @selected-verse-bar-z-index;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &.above {
         top: 0;

@@ -95,6 +95,7 @@ class LyricsVerseView extends Component {
                 // From props.
         const { verseObject,
                 hiddenLyricColumnKey,
+                inVerseBar,
 
                 // From controller.
                 accessHighlighted,
@@ -111,7 +112,7 @@ class LyricsVerseView extends Component {
                 ref={(node) => (this.myVerse = node)}
                 className={`verse verse-${verseObject.verseIndex}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
             >
-                {isInteractable &&
+                {isInteractable && !inVerseBar &&
                     <LyricsPlayButton
                         isSelected={isSelected}
                         onClick={onPlayClick}

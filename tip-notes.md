@@ -6,11 +6,15 @@
     * Overview
     * Tips
     * Doublespeaker
+        * Odin
     * Wiki
     * Accessibility
     * Select time in lyrics
     * Visit website
     * Portals
+        * Grasshoppers Lie Heavy
+    * Hover or tap verse
+    * Copy link to URL
 
 0. prologue
 

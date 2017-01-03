@@ -16,11 +16,13 @@ const LyricVerseBar = (props) => (
 const LyricVerseBarView = ({
 
     // From props.
-    isAbove
+    isAbove,
 
-}) => (
+...other }) => (
     <div className={`selected-verse-bar ${isAbove ? 'above' : 'below'}`}>
-        <LyricsVerse />
+        <LyricsVerse {...other}
+            inVerseBar={true}
+        />
     </div>
 )
 

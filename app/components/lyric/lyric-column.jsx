@@ -39,6 +39,7 @@ const LyricColumnView = ({
     isLyricExpanded,
     isSelectedVerseAbove,
     isSelectedVerseBelow,
+    selectedVerse,
     onLyricExpandClick,
     onLyricColumnClick,
 
@@ -46,48 +47,54 @@ const LyricColumnView = ({
     showEarButton,
     earButtonText,
 
-...other }) => (
-    <div className="column lyric-column">
-        <div className="lyric-column-animatable">
-            {isSelectedVerseAbove &&
-                <LyricVerseBar
-                    isAbove={true}
+...other }) => {
+
+    const verseBarProps = {
+        verseObject: selectedVerse,
+        onAnnotationClick: other.onAnnotationClick
+    }
+
+    return (
+        <div className="column lyric-column">
+            <div className="lyric-column-animatable">
+                {isSelectedVerseAbove &&
+                    <LyricVerseBar {...verseBarProps}
+                        isAbove={true}
+                    />
+                }
+                {isSelectedVerseBelow &&
+                    <LyricVerseBar {...verseBarProps} />
+                }
+                {showEarButton &&
+                    <div className="lyric-button-block ear-button-block">
+                        <a
+                            className="lyric-button enabled"
+                            onClick={e => onLyricColumnClick(e)}
+                        >
+                            <div className="large button-icon lyric-icon">
+                                {earButtonText}
+                            </div>
+                        </a>
+                    </div>
+                }
+                {isLyricExpandable &&
+                    <div className="lyric-button-block expand-button-block in-lyric">
+                        <a
+                            className="lyric-button enabled"
+                            onClick={e => onLyricExpandClick(e)}
+                        >
+                            <div className="large button-icon lyric-icon">
+                                {isLyricExpanded ? '-' : '+'}
+                            </div>
+                        </a>
+                    </div>
+                }
+                <LyricsSection {...other}
+                    isLyricExpanded={isLyricExpanded}
                 />
-            }
-            {isSelectedVerseBelow &&
-                <LyricVerseBar
-                    isAbove={false}
-                />
-            }
-            {showEarButton &&
-                <div className="lyric-button-block ear-button-block">
-                    <a
-                        className="lyric-button enabled"
-                        onClick={e => onLyricColumnClick(e)}
-                    >
-                        <div className="large button-icon lyric-icon">
-                            {earButtonText}
-                        </div>
-                    </a>
-                </div>
-            }
-            {isLyricExpandable &&
-                <div className="lyric-button-block expand-button-block in-lyric">
-                    <a
-                        className="lyric-button enabled"
-                        onClick={e => onLyricExpandClick(e)}
-                    >
-                        <div className="large button-icon lyric-icon">
-                            {isLyricExpanded ? '-' : '+'}
-                        </div>
-                    </a>
-                </div>
-            }
-            <LyricsSection {...other}
-                isLyricExpanded={isLyricExpanded}
-            />
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 export default LyricColumn

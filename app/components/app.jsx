@@ -43,6 +43,7 @@ import { NAV_SECTION,
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex } from 'helpers/album-view-helper'
+import { getVerse } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getLyricSectionRect } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -1152,7 +1153,8 @@ class App extends Component {
 
             lyricsStartAtZero = getLyricsStartAtZero(props),
             isFirstVerse = selectedVerseIndex === (lyricsStartAtZero ? 1 : 0),
-            isLastVerse = selectedVerseIndex === songTimes.length - 1
+            isLastVerse = selectedVerseIndex === songTimes.length - 1,
+            selectedVerse = getVerse(props)
 
         return (
             <div
@@ -1175,6 +1177,7 @@ class App extends Component {
                     isFirstVerse={isFirstVerse}
                     isLastVerse={isLastVerse}
                     selectedSongTitle={selectedSongTitle}
+                    selectedVerse={selectedVerse}
                     accessedSectionKey={accessedSectionKey}
                     nextSectionKey={nextSectionKey}
                     showSingleLyricColumn={showSingleLyricColumn}
