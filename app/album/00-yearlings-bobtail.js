@@ -77,6 +77,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Scrolling lyric column should unhover hovered verse.`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `Bug where coordinates are wrong for sticky selected verse during lyric expanded`,
             workedHours: 0,
             neededHours: 3

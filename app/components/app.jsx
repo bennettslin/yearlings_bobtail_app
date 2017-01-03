@@ -698,7 +698,8 @@ class App extends Component {
                 }
             }
 
-            this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll: true })
+            // FIXME: Don't scroll for now. Figure out later.
+            this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll: false })
         }
     }
 

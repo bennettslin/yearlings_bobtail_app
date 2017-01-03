@@ -26,6 +26,7 @@ const LyricsVerse = ({
             verseIndex } = verseObject,
 
         isSelected = verseIndex === selectedVerseIndex,
+        isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
         isDoubleSpeaker = !lyric,
         isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero),
@@ -40,6 +41,7 @@ const LyricsVerse = ({
             accessedLyricElement={accessedLyricElement}
             isTitle={isTitle}
             isSelected={isSelected}
+            isAfterSelected={isAfterSelected}
             isInteractable={isInteractable}
             isDoubleSpeaker={isDoubleSpeaker}
             onPlayClick={onPlayClick}
@@ -101,6 +103,8 @@ class LyricsVerseView extends Component {
                 accessHighlighted,
                 isInteractable,
                 isSelected,
+                isPlaying,
+                isAfterSelected,
                 isDoubleSpeaker,
                 isTitle,
                 onPlayClick,
@@ -115,6 +119,8 @@ class LyricsVerseView extends Component {
                 {isInteractable && !inVerseBar &&
                     <LyricsPlayButton
                         isSelected={isSelected}
+                        isPlaying={isPlaying}
+                        isAfterSelected={isAfterSelected}
                         onClick={onPlayClick}
                     />
                 }

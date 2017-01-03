@@ -8,7 +8,9 @@ import React from 'react'
 
 const LyricsPlayButton = ({
 
+    isPlaying,
     isSelected,
+    isAfterSelected,
     onClick
 
 }) => (
@@ -19,13 +21,13 @@ const LyricsPlayButton = ({
             </a>
         }
         {!isSelected ?
-            <a className={`play-child play-button${isSelected ? '' : ' enabled'}`}
+            <a className="play-child play-button enabled"
                 onClick={onClick}
             >
-                {`\u25B6`}
+                {isAfterSelected ? `\u23E9` : `\u23EA`}
             </a> :
             <div className="play-child play-icon">
-                {`\u25B6`}
+                {isPlaying ? `\u25BA` : `\u23F8`}
             </div>
         }
     </div>

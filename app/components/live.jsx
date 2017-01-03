@@ -212,6 +212,7 @@ const LiveView = ({
         lyricColumnProps = {
             showSingleLyricColumn,
             hasDoubleColumns,
+            isPlaying,
             isLyricExpanded,
             isLyricExpandable,
             isSelectedVerseAbove,
