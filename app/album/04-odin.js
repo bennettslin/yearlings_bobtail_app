@@ -755,6 +755,7 @@ module.exports = {
                     },
                     `through sea serpents,`
                 ],
+                // TODO: Mention chance.
                 right: `Coin toss to be hers from`
             },
             {
@@ -787,9 +788,7 @@ module.exports = {
                                 anchor: `shivah`,
                                 wiki: `Shiva_(Judaism)`
                             },
-
-                            // TODO: Make clear lifetime means marriage to death.
-                            `is a week-long mourning period in Judaism after a close relative has passed away. Here again, I lament that not being born Jewish has lost my chance for a lifetime with Sasha.`
+                            `is a week-long mourning period in Judaism after a close relative has passed away. In other words, not being born Jewish has lost me the chance to spend a lifetime with Sasha in marriage until death.`
                         ],
                         portal: `chivalry`
                     }
