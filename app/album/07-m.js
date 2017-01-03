@@ -228,6 +228,7 @@ module.exports = {
                 lyric: [
                     `Hopes wrapped in`,
                     {
+                        // TODO: Wedding candy?
                         anchor: `marinaded confections,`,
                         annotation: {
                             description: `Or else, "Mara-needed confessions."`
