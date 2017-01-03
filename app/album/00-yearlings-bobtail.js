@@ -1062,6 +1062,11 @@ module.exports = {
             taskName: `Replace ternary statements with conditional && expression`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `Make play button icons rewind and fast forward instead.`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

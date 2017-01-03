@@ -18,7 +18,18 @@ class AudioPlayer extends Component {
 
         this._handleTimeChange()
         this._handleIsPlayingChange()
+
+        // this.myPlayer.addEventListener('timeupdate', e => {
+        //     console.error('this.myPlayer.currentTime', this.myPlayer.currentTime);
+        // })
     }
+
+    // shouldComponentUpdate(nextProps) {
+    //     const songChanged = this._getSongChanged(this.props, nextProps),
+    //         isPlayingChanged = this._getIsPlayingChanged(this.props, nextProps)
+    //
+    //     return songChanged || isPlayingChanged || nextProps.updatedTimePlayed !== null
+    // }
 
     componentWillUpdate(nextProps) {
         const songChanged = this._getSongChanged(this.props, nextProps),
@@ -58,6 +69,7 @@ class AudioPlayer extends Component {
 
     _handleListen(currentTime) {
         if (this._getIsSelected()) {
+            // console.error('listen', currentTime);
             this.props.onTimeChange(false, currentTime)
         }
     }
@@ -104,6 +116,10 @@ class AudioPlayer extends Component {
         const { mp3 } = this.props,
             isSelected = this._getIsSelected()
 
+        // if (isSelected) {
+        //     console.error('render again');
+        // }
+
         return (
             <div className={`audio-player${isSelected ? ' selected' : ''}`}>
                 <ReactAudioPlayer
@@ -112,6 +128,8 @@ class AudioPlayer extends Component {
                     listenInterval={100}
                     onListen={this._handleListen}
                     onEnded={this._handleEnded}
+                    onAbort={e => console.error('abort', e)}
+                    onError={e => console.error('error', e)}
                 />
             </div>
         )
