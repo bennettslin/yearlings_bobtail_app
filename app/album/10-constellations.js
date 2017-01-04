@@ -640,7 +640,7 @@ module.exports = {
                         anchor: `a'duct Uighuress.`,
                         annotation: {
                             description: [
-                                `"Abduct Uighuress." The Mongols would slaughter the men and marry the women of the populations they conquered, a fate no doubt met by the`,
+                                `"Abduct Uighuress." The Mongols would slaughter the men and seize the women of the populations they conquered. This fate was no doubt met by the`,
                                 {
                                     anchor: `Uighurs,`,
                                     wiki: `Uyghurs`

@@ -756,7 +756,16 @@ module.exports = {
                     `through sea serpents,`
                 ],
                 // TODO: Mention chance.
-                right: `Coin toss to be hers from`
+                right: [
+                    {
+                        anchor: `Coin toss`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `to be hers from`
+                ]
             },
             {
                 time: 107,
@@ -788,7 +797,7 @@ module.exports = {
                                 anchor: `shivah`,
                                 wiki: `Shiva_(Judaism)`
                             },
-                            `is a week-long mourning period in Judaism after a close relative has passed away. In other words, not being born Jewish has lost me the chance to spend a lifetime with Sasha in marriage until death.`
+                            `is a week-long mourning period in Judaism after a close relative has passed away. In other words, not being born Jewish has lost me any hope of spending a lifetime with Sasha in marriage until death.`
                         ],
                         portal: `chivalry`
                     }

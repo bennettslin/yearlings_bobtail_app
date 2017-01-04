@@ -6,6 +6,11 @@ import { intersects } from 'helpers/dot-helper'
 const _parseLyrics = (lyric, selectedVerseIndex) => {
     // Recurse until object with verse index is found.
 
+    // TODO: This broke upon loading a logue. Not sure if this is the best solution.
+    if (!lyric) {
+        return
+    }
+
     if (lyric.verseIndex === selectedVerseIndex) {
         return lyric
 
