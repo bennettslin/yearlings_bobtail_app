@@ -1,7 +1,7 @@
 import React from 'react'
 import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
-import { TITLE, LEFT, RIGHT, LYRIC_COLUMN_KEYS } from 'helpers/constants'
+import { TITLE, LEFT, RIGHT } from 'helpers/constants'
 import { intersects } from 'helpers/dot-helper'
 
 /*************
@@ -14,7 +14,7 @@ const LyricsUnit = ({
     isTitleUnit,
     selectedLyricColumnIndex,
     selectedDotKeys,
-    showSingleLyricColumn,
+    hiddenLyricColumnKey,
 
 ...other }) => {
 
@@ -58,7 +58,7 @@ const LyricsUnit = ({
             showMain={showMain}
             showSide={showSide}
             topSideSubStanza={topSideSubStanza}
-            showSingleLyricColumn={showSingleLyricColumn}
+            hiddenLyricColumnKey={hiddenLyricColumnKey}
             selectedLyricColumnIndex={selectedLyricColumnIndex}
         />
     )

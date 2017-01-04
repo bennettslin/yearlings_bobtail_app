@@ -56,10 +56,6 @@ const LyricsVerse = ({
 
 class LyricsVerseView extends Component {
 
-    constructor(props) {
-        super(props)
-    }
-
     componentWillUpdate(nextProps) {
         if (this.props.isSelected &&
             this._lyricsDidScroll(this.props, nextProps)) {

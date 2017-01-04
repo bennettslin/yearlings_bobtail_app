@@ -17,7 +17,7 @@ class AnnotationPopup extends Popup {
             <AnnotationSection {...this.props}
                 inPopup={true}
                 sectionAccessHighlighted={sectionAccessHighlighted}
-            />    
+            />
         )
     }
 }
