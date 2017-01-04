@@ -68,11 +68,14 @@
 // This is in lyrics and annotation.
 @text-span-z-index: @lyric-play-button-z-index + 1;
 
-// Selected verse should be above text span.
+// Selected verse should be above normal text span.
 @selected-verse-bar-z-index: @text-span-z-index + 1;
 
+// Verse bar text should be even more above.
+@verse-bar-text-z-index: @selected-verse-bar-z-index + 1;
+
 // Lyric buttons should be higher than everything else in lyric column, including text span.
-@lyric-column-button-z-index: @selected-verse-bar-z-index + 1;
+@lyric-column-button-z-index: @verse-bar-text-z-index + 1;
 
 // Menu should be higher than centre field and lyrics.
 @menu-subfield-z-index: @lyric-column-button-z-index + 1;

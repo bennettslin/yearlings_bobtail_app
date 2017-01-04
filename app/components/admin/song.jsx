@@ -42,6 +42,7 @@ const SongView = ({
     selectedWikiUrl,
     selectedVerseIndex,
     showSingleLyricColumn,
+    hiddenLyricColumnKey,
     selectedLyricColumnIndex,
     selectedSongIndex,
     lyricsStartAtZero,
@@ -108,6 +109,7 @@ const SongView = ({
             <LyricsSection
                 isAdmin={true}
                 showSingleLyricColumn={showSingleLyricColumn}
+                hiddenLyricColumnKey={hiddenLyricColumnKey}
                 lyricsStartAtZero={lyricsStartAtZero}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}

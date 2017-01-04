@@ -51,6 +51,9 @@ const LyricColumnView = ({
 
     const verseBarProps = {
         verseObject: selectedVerse,
+        showSingleLyricColumn: other.showSingleLyricColumn,
+        hiddenLyricColumnKey: other.hiddenLyricColumnKey,
+        selectedDotKeys: other.selectedDotKeys,
         onAnnotationClick: other.onAnnotationClick
     }
 

@@ -44,11 +44,20 @@
     }
 }
 
+.text-span {
+    position: relative;
+}
+
 .annotation-section, .lyrics-section {
 
     // Text span and portals block should be in front of dots block.
     .text-span, .portals-block {
-        position: relative;
         z-index: @text-span-z-index;
+    }
+}
+
+.selected-verse-bar {
+    .text-span {
+        z-index: @verse-bar-text-z-index;
     }
 }

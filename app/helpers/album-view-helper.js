@@ -1,5 +1,5 @@
 // Parse album data for presentation.
-import { LEFT } from './constants'
+import { LEFT, LYRIC_COLUMN_KEYS } from './constants'
 
 import { intersects } from 'helpers/dot-helper'
 
@@ -408,4 +408,11 @@ export const getWikiUrl = (props) => {
     } else {
         return null
     }
+}
+
+export const getHiddenLyricColumnKey = ({
+    showSingleLyricColumn,
+    selectedLyricColumnIndex
+}) => {
+    return showSingleLyricColumn && selectedLyricColumnIndex >= 0 ? LYRIC_COLUMN_KEYS[(selectedLyricColumnIndex + 1) % 2] : null
 }

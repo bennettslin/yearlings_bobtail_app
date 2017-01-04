@@ -85,6 +85,7 @@ const LiveView = ({
     accessedDotIndex,
 
     lyricsStartAtZero,
+    hiddenLyricColumnKey,
 
     showSingleLyricColumn,
     isLyricExpanded,
@@ -211,6 +212,7 @@ const LiveView = ({
         },
         lyricColumnProps = {
             showSingleLyricColumn,
+            hiddenLyricColumnKey,
             hasDoubleColumns,
             isPlaying,
             isLyricExpanded,
