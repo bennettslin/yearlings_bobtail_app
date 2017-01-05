@@ -41,6 +41,20 @@ class LyricsSectionView extends Component {
         }
     }
 
+    shouldComponentUpdate(nextProps) {
+
+        // console.error('this.props.isSelectedVerseAbove', this.props.isSelectedVerseAbove);
+        console.error('nextProps.isSelectedVerseAbove', nextProps.isSelectedVerseAbove);
+        // console.error('this.props.isSelectedVerseBelow', this.props.isSelectedVerseBelow);
+        // console.error('nextProps.isSelectedVerseBelow', nextProps.isSelectedVerseBelow);
+
+        const shouldUpdate = this.props.isSelectedVerseAbove !== nextProps.isSelectedVerseAbove || this.props.isSelectedVerseBelow !== nextProps.isSelectedVerseBelow
+
+        console.error('shouldUpdate section', shouldUpdate);
+
+        return shouldUpdate
+    }
+
     _handleScroll() {
         const lyricsScrollTop = this.mySection.scrollTop
 
@@ -64,6 +78,8 @@ class LyricsSectionView extends Component {
             ...other } = this.props,
 
             { lyricsScrollTop } = this.state
+
+        console.error('render section');
 
         return (
             <div

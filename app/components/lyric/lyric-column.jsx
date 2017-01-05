@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import LyricsSection from '../lyrics/lyrics-section'
 import LyricVerseBar from './lyric-verse-bar'
 
@@ -32,71 +32,92 @@ const LyricColumn = ({
  * PRESENTATION *
  ****************/
 
-const LyricColumnView = ({
+class LyricColumnView extends Component {
 
-    // From props.
-    isLyricExpandable,
-    isLyricExpanded,
-    isSelectedVerseAbove,
-    isSelectedVerseBelow,
-    selectedVerse,
-    onLyricExpandClick,
-    onLyricColumnClick,
+    shouldComponentUpdate(nextProps) {
 
-    // From controller.
-    showEarButton,
-    earButtonText,
+        // console.error('this.props.isSelectedVerseAbove', this.props.isSelectedVerseAbove);
+        console.error('nextProps.isSelectedVerseAbove', nextProps.isSelectedVerseAbove);
+        // console.error('this.props.isSelectedVerseBelow', this.props.isSelectedVerseBelow);
+        // console.error('nextProps.isSelectedVerseBelow', nextProps.isSelectedVerseBelow);
 
-...other }) => {
+        const shouldUpdate = this.props.isSelectedVerseAbove !== nextProps.isSelectedVerseAbove || this.props.isSelectedVerseBelow !== nextProps.isSelectedVerseBelow
 
-    const verseBarProps = {
-        verseObject: selectedVerse,
-        showSingleLyricColumn: other.showSingleLyricColumn,
-        hiddenLyricColumnKey: other.hiddenLyricColumnKey,
-        selectedDotKeys: other.selectedDotKeys,
-        onAnnotationClick: other.onAnnotationClick
+        console.error('shouldUpdate column', shouldUpdate);
+
+        return shouldUpdate
     }
 
-    return (
-        <div className="column lyric-column">
-            <div className="lyric-column-animatable">
-                <LyricVerseBar {...verseBarProps}
-                    isShown={isSelectedVerseAbove}
-                    isAbove={true}
-                />
-                <LyricVerseBar {...verseBarProps}
-                    isShown={isSelectedVerseBelow}
-                />
-                {showEarButton &&
-                    <div className="lyric-button-block ear-button-block">
-                        <a
-                            className="lyric-button enabled"
-                            onClick={e => onLyricColumnClick(e)}
-                        >
-                            <div className="large button-icon lyric-icon">
-                                {earButtonText}
-                            </div>
-                        </a>
-                    </div>
-                }
-                {isLyricExpandable &&
-                    <div className="lyric-button-block expand-button-block in-lyric">
-                        <a
-                            className="lyric-button enabled"
-                            onClick={e => onLyricExpandClick(e)}
-                        >
-                            <div className="large button-icon lyric-icon">
-                                {isLyricExpanded ? '-' : '+'}
-                            </div>
-                        </a>
-                    </div>
-                }
-                <LyricsSection {...other}
-                    isLyricExpanded={isLyricExpanded}
-                />
+    render() {
+
+                // From props.
+        const { isLyricExpandable,
+                isLyricExpanded,
+                isSelectedVerseAbove,
+                isSelectedVerseBelow,
+                selectedVerse,
+                onLyricExpandClick,
+                onLyricColumnClick,
+
+                // From controller.
+                showEarButton,
+                earButtonText,
+
+                ...other } = this.props,
+
+            verseBarProps = {
+                verseObject: selectedVerse,
+                showSingleLyricColumn: other.showSingleLyricColumn,
+                hiddenLyricColumnKey: other.hiddenLyricColumnKey,
+                selectedDotKeys: other.selectedDotKeys,
+                onAnnotationClick: other.onAnnotationClick
+            }
+
+        console.error('render column');
+
+        return (
+            <div className="column lyric-column">
+                <div className="lyric-column-animatable">
+                    <LyricVerseBar {...verseBarProps}
+                        isShown={isSelectedVerseAbove}
+                        isAbove={true}
+                    />
+                    <LyricVerseBar {...verseBarProps}
+                        isShown={isSelectedVerseBelow}
+                    />
+                    {showEarButton &&
+                        <div className="lyric-button-block ear-button-block">
+                            <a
+                                className="lyric-button enabled"
+                                onClick={e => onLyricColumnClick(e)}
+                            >
+                                <div className="large button-icon lyric-icon">
+                                    {earButtonText}
+                                </div>
+                            </a>
+                        </div>
+                    }
+                    {isLyricExpandable &&
+                        <div className="lyric-button-block expand-button-block in-lyric">
+                            <a
+                                className="lyric-button enabled"
+                                onClick={e => onLyricExpandClick(e)}
+                            >
+                                <div className="large button-icon lyric-icon">
+                                    {isLyricExpanded ? '-' : '+'}
+                                </div>
+                            </a>
+                        </div>
+                    }
+                    <LyricsSection {...other}
+                        isLyricExpanded={isLyricExpanded}
+                        isSelectedVerseAbove={isSelectedVerseAbove}
+                        isSelectedVerseBelow={isSelectedVerseBelow}
+                    />
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default LyricColumn
