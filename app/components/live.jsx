@@ -244,7 +244,8 @@ const LiveView = ({
             selectedDotsIndex,
             onTipsClick,
             onDotsExpandClick
-        }
+        },
+        verseBarShown = isSelectedVerseAbove || isSelectedVerseBelow
 
     return (
         <div className={
@@ -257,6 +258,7 @@ const LiveView = ({
             ${isOverviewShown ? ' overview-shown' : ''}
             ${isSelectedVerseAbove ? ' verse-above' : ''}
             ${isSelectedVerseBelow ? ' verse-below' : ''}
+            ${verseBarShown ? '' : ' verse-bar-hidden'}
             ${manualWidth ? ' manual-width' : ''}`
         }>
             {/* Ideal for song and logue to not be in separate overview subfields. */}

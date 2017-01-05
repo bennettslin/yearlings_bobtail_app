@@ -124,11 +124,6 @@
         &.interactable {
             position: relative;
 
-            &.selected {
-                color: blue;
-                background-color: #bfb;
-            }
-
             // Play button hover styling.
             &:not(.selected) {
                 &:hover {
@@ -201,6 +196,17 @@
         &.overlap {
             margin-top: -@overlap-margin;
         }
+    }
+}
+
+/**
+ * Styling for selected verse is only applicable when the verse bar is hidden.
+ * TODO: Make styling better, and animate.
+ */
+.verse-bar-hidden {
+    .verse.interactable.selected {
+        color: blue;
+        background-color: #bfb;
     }
 }
 

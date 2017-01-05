@@ -60,14 +60,13 @@ const LyricColumnView = ({
     return (
         <div className="column lyric-column">
             <div className="lyric-column-animatable">
-                {isSelectedVerseAbove &&
-                    <LyricVerseBar {...verseBarProps}
-                        isAbove={true}
-                    />
-                }
-                {isSelectedVerseBelow &&
-                    <LyricVerseBar {...verseBarProps} />
-                }
+                <LyricVerseBar {...verseBarProps}
+                    isShown={isSelectedVerseAbove}
+                    isAbove={true}
+                />
+                <LyricVerseBar {...verseBarProps}
+                    isShown={isSelectedVerseBelow}
+                />
                 {showEarButton &&
                     <div className="lyric-button-block ear-button-block">
                         <a

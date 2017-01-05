@@ -20,6 +20,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    // overflow-y: hidden;
 
     display: flex;
     justify-content: center;
@@ -39,9 +40,11 @@
     }
 }
 
+// TODO: Make this styling better, of course.
 .selected-verse-bar {
     position: absolute;
-    width: 100%;
+    padding: 2px 10px;
+    border-radius: 10px;
     height: 40px;
     background-color: #bfb;
     z-index: @selected-verse-bar-z-index;
@@ -52,10 +55,20 @@
 
     &.above {
         top: 0;
+
+        &.hidden {
+            top: -50px;
+            transform: scale(0);
+        }
     }
 
     &.below {
         bottom: 0;
+
+        &.hidden {
+            bottom: -50px;
+            transform: scale(0);
+        }
     }
 }
 
