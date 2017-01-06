@@ -64,6 +64,9 @@ class LyricsVerseView extends Component {
     }
 
     _lyricsDidScroll(oldProps, newProps) {
+        if (newProps.isSelected) {
+            console.error('lyrics did scroll');
+        }
         return oldProps.lyricsScrollTop !== newProps.lyricsScrollTop || oldProps.isLyricExpanded !== newProps.isLyricExpanded
     }
 

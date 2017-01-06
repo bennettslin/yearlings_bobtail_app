@@ -37,7 +37,7 @@ class LyricColumnView extends Component {
     shouldComponentUpdate(nextProps) {
 
         // console.error('this.props.isSelectedVerseAbove', this.props.isSelectedVerseAbove);
-        console.error('nextProps.isSelectedVerseAbove', nextProps.isSelectedVerseAbove);
+        // console.error('nextProps.isSelectedVerseAbove', nextProps.isSelectedVerseAbove);
         // console.error('this.props.isSelectedVerseBelow', this.props.isSelectedVerseBelow);
         // console.error('nextProps.isSelectedVerseBelow', nextProps.isSelectedVerseBelow);
 
@@ -51,7 +51,8 @@ class LyricColumnView extends Component {
     render() {
 
                 // From props.
-        const { isLyricExpandable,
+        const { isLogue,
+                isLyricExpandable,
                 isLyricExpanded,
                 isSelectedVerseAbove,
                 isSelectedVerseBelow,
@@ -78,13 +79,17 @@ class LyricColumnView extends Component {
         return (
             <div className="column lyric-column">
                 <div className="lyric-column-animatable">
-                    <LyricVerseBar {...verseBarProps}
-                        isShown={isSelectedVerseAbove}
-                        isAbove={true}
-                    />
-                    <LyricVerseBar {...verseBarProps}
-                        isShown={isSelectedVerseBelow}
-                    />
+                    {!isLogue &&
+                        <LyricVerseBar {...verseBarProps}
+                            isShown={isSelectedVerseAbove}
+                            isAbove={true}
+                        />
+                    }
+                    {!isLogue &&
+                        <LyricVerseBar {...verseBarProps}
+                            isShown={isSelectedVerseBelow}
+                        />
+                    }
                     {showEarButton &&
                         <div className="lyric-button-block ear-button-block">
                             <a

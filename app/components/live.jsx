@@ -211,6 +211,7 @@ const LiveView = ({
             onTimeUpdated
         },
         lyricColumnProps = {
+            isLogue,
             showSingleLyricColumn,
             hiddenLyricColumnKey,
             hasDoubleColumns,

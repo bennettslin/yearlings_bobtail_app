@@ -44,7 +44,7 @@ class LyricsSectionView extends Component {
     shouldComponentUpdate(nextProps) {
 
         // console.error('this.props.isSelectedVerseAbove', this.props.isSelectedVerseAbove);
-        console.error('nextProps.isSelectedVerseAbove', nextProps.isSelectedVerseAbove);
+        // console.error('nextProps.isSelectedVerseAbove', nextProps.isSelectedVerseAbove);
         // console.error('this.props.isSelectedVerseBelow', this.props.isSelectedVerseBelow);
         // console.error('nextProps.isSelectedVerseBelow', nextProps.isSelectedVerseBelow);
 
