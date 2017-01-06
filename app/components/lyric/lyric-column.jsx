@@ -41,6 +41,8 @@ class LyricColumnView extends Component {
         // console.error('this.props.isSelectedVerseBelow', this.props.isSelectedVerseBelow);
         // console.error('nextProps.isSelectedVerseBelow', nextProps.isSelectedVerseBelow);
 
+        return false
+
         const shouldUpdate = this.props.isSelectedVerseAbove !== nextProps.isSelectedVerseAbove || this.props.isSelectedVerseBelow !== nextProps.isSelectedVerseBelow
 
         console.error('shouldUpdate column', shouldUpdate);

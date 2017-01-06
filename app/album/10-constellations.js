@@ -1200,8 +1200,7 @@ module.exports = {
                     {
                         anchor: `black Letter-Day Sensed ahead…`,
                         annotation: {
-                            // TODO: Say the Mormons finally allowed.
-                            description: `Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." The Mormons did not allow its black members to attain priesthood until 1978.`
+                            description: `Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." While the Mormons originally did not allow their black members to attain priesthood, they reversed this policy in 1978.`
                         }
                     },
                     {
