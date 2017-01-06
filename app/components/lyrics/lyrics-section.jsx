@@ -35,32 +35,20 @@ class LyricsSectionView extends Component {
         super(props)
 
         this._handleScroll = this._handleScroll.bind(this)
-
-        this.state = {
-            lyricsScrollTop: 0
-        }
     }
 
     shouldComponentUpdate(nextProps) {
-
-        // console.error('this.props.isSelectedVerseAbove', this.props.isSelectedVerseAbove);
-        // console.error('nextProps.isSelectedVerseAbove', nextProps.isSelectedVerseAbove);
-        // console.error('this.props.isSelectedVerseBelow', this.props.isSelectedVerseBelow);
-        // console.error('nextProps.isSelectedVerseBelow', nextProps.isSelectedVerseBelow);
-
+        // FIXME: This isn't exactly right either.
         const shouldUpdate = this.props.isSelectedVerseAbove !== nextProps.isSelectedVerseAbove || this.props.isSelectedVerseBelow !== nextProps.isSelectedVerseBelow
-
-        console.error('shouldUpdate section', shouldUpdate);
 
         return shouldUpdate
     }
 
     _handleScroll() {
-        const lyricsScrollTop = this.mySection.scrollTop
+        // scrollTop needed for debugging only.
+        // const lyricsScrollTop = this.mySection.scrollTop
 
-        this.setState({
-            lyricsScrollTop
-        })
+        this.props.onLyricSectionScroll()
     }
 
     render() {
@@ -75,9 +63,7 @@ class LyricsSectionView extends Component {
                 sectionAccessHighlighted,
                 sectionNextHighlighted,
 
-            ...other } = this.props,
-
-            { lyricsScrollTop } = this.state
+            ...other } = this.props
 
         console.error('render section');
 
@@ -101,7 +87,6 @@ class LyricsSectionView extends Component {
                                 stanzaArray={stanzaArray}
                                 selectedLyricColumnIndex={selectedLyricColumnIndex}
                                 sectionAccessHighlighted={sectionAccessHighlighted}
-                                lyricsScrollTop={lyricsScrollTop}
                             />
                         )
                     )}

@@ -119,7 +119,8 @@ const LiveView = ({
     onTimeChange,
     onPlayerEnd,
     onTimeUpdated,
-    onSelectedVerseScroll,
+    onSelectVerseElement,
+    onLyricSectionScroll,
 
     // From controller.
     overviewText,
@@ -238,7 +239,8 @@ const LiveView = ({
             onAnnotationClick,
             onLyricExpandClick,
             onLyricColumnClick,
-            onSelectedVerseScroll
+            onSelectVerseElement,
+            onLyricSectionScroll
         },
         dotsTipsSectionProps = {
             selectedTipsIndex,

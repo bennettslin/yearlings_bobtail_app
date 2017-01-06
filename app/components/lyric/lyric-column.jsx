@@ -34,22 +34,6 @@ const LyricColumn = ({
 
 class LyricColumnView extends Component {
 
-    shouldComponentUpdate(nextProps) {
-
-        // console.error('this.props.isSelectedVerseAbove', this.props.isSelectedVerseAbove);
-        // console.error('nextProps.isSelectedVerseAbove', nextProps.isSelectedVerseAbove);
-        // console.error('this.props.isSelectedVerseBelow', this.props.isSelectedVerseBelow);
-        // console.error('nextProps.isSelectedVerseBelow', nextProps.isSelectedVerseBelow);
-
-        return false
-
-        const shouldUpdate = this.props.isSelectedVerseAbove !== nextProps.isSelectedVerseAbove || this.props.isSelectedVerseBelow !== nextProps.isSelectedVerseBelow
-
-        console.error('shouldUpdate column', shouldUpdate);
-
-        return shouldUpdate
-    }
-
     render() {
 
                 // From props.
@@ -75,8 +59,6 @@ class LyricColumnView extends Component {
                 selectedDotKeys: other.selectedDotKeys,
                 onAnnotationClick: other.onAnnotationClick
             }
-
-        console.error('render column');
 
         return (
             <div className="column lyric-column">

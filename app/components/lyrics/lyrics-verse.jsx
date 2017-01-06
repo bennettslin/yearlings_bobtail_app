@@ -56,18 +56,31 @@ const LyricsVerse = ({
 
 class LyricsVerseView extends Component {
 
-    componentWillUpdate(nextProps) {
-        if (this.props.isSelected &&
-            this._lyricsDidScroll(this.props, nextProps)) {
-            this.props.onSelectedVerseScroll(this.myVerse.getBoundingClientRect())
-        }
+    constructor(props) {
+        super(props)
+
+        this._checkIsSelectedVerse = this._checkIsSelectedVerse.bind(this)
     }
 
-    _lyricsDidScroll(oldProps, newProps) {
-        if (newProps.isSelected) {
-            console.error('lyrics did scroll');
+    componentDidMount() {
+        // Ref is only available after mounting.
+        this._checkIsSelectedVerse(this.props)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        // FIXME: This isn't exactly right.
+        return this.props.isSelected !== nextProps.isSelected
+    }
+
+    componentWillUpdate(nextProps) {
+        this._checkIsSelectedVerse(nextProps)
+    }
+
+    _checkIsSelectedVerse(props) {
+        if (props.isSelected) {
+            console.error('New selected verse!');
+            props.onSelectVerseElement(this.myVerse)
         }
-        return oldProps.lyricsScrollTop !== newProps.lyricsScrollTop || oldProps.isLyricExpanded !== newProps.isLyricExpanded
     }
 
     getLyricsLine({ key, index, columnKey, other }) {
@@ -109,6 +122,10 @@ class LyricsVerseView extends Component {
                 onPlayClick,
 
             ...other } = this.props
+
+        if (isSelected) {
+            console.error('render verse');
+        }
 
         return (
             <div
