@@ -82,7 +82,7 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `Bug where coordinates are wrong for sticky selected verse during lyric expanded`,
+            taskName: `Bug where coordinates are wrong for sticky selected verse when lyric expanded`,
             workedHours: 0,
             neededHours: 3
         },
@@ -100,11 +100,6 @@ module.exports = {
             taskName: `Layout wiki popup`,
             workedHours: 0,
             neededHours: 5
-        },
-        {
-            taskName: `Sticky selected verse`,
-            workedHours: 0,
-            neededHours: 8
         },
         {
             taskName: `Select time for player from portal`,
@@ -1065,6 +1060,16 @@ module.exports = {
         },
         {
             taskName: `Make play button icons rewind and fast forward instead.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Sticky selected verse`,
+            workedHours: 8,
+            neededHours: 8
+        },
+        {
+            taskName: `setDomWidth doesn't really work with verse bar.`,
             workedHours: 1,
             neededHours: 1
         }

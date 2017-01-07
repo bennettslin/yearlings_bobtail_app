@@ -85,10 +85,11 @@ class LyricsVerseView extends Component {
     getLyricsLine({ key, index, columnKey, other }) {
 
         const { isSelected,
-                verseObject,
-                } = this.props,
+                inVerseBar,
+                verseObject } = this.props,
 
             lyricsLineProps = {
+                inVerseBar,
                 verseSelected: isSelected,
                 text: key ? verseObject[key] : verseObject.lyric,
                 firstVerseObject: verseObject.firstVerseObject,

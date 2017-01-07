@@ -390,6 +390,7 @@ class App extends Component {
     }
 
     selectNextSong() {
+        // There should be a way to select song with everything in e conditional except accessing section.
         this.selectSong(undefined, this.props.selectedSongIndex + 1)
     }
 
@@ -407,6 +408,7 @@ class App extends Component {
     selectLyricExpand(e, isLyricExpanded = !this.state.isLyricExpanded) {
         // Don't bother if lyric is not expandable, or if it's a logue.
         if (getIsLyricExpandable(this.state) && !getIsLogue(this.props)) {
+
             this.setState({
                 isLyricExpanded
             })
@@ -858,15 +860,20 @@ class App extends Component {
 
     updateSelectedVerseElement(selectedVerseElement) {
 
-        // App has a reference to the selected verse.
-        this.setState({
-            selectedVerseElement
-        })
+        if (selectedVerseElement !== this.state.selectedVerseElement) {
+
+            // Determine if new selected verse element shows or hides verse bar.
+            this.handleLyricSectionScroll(selectedVerseElement)
+
+            // App has a reference to the selected verse.
+            this.setState({
+                selectedVerseElement
+            })
+        }
     }
 
-    handleLyricSectionScroll() {
+    handleLyricSectionScroll(selectedVerseElement = this.state.selectedVerseElement) {
         const lyricSectionRect = getLyricSectionRect(this.state),
-            { selectedVerseElement } = this.state,
             selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
             isSelectedVerseAbove = selectedVerseRect.top < lyricSectionRect.top,
             isSelectedVerseBelow = selectedVerseRect.bottom > lyricSectionRect.bottom

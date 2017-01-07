@@ -44,9 +44,14 @@ class LyricsLine extends Component {
         const shouldResetWidthBasedOnProps =
             oldProps.selectedSongIndex !== newProps.selectedSongIndex ||
             oldProps.showSingleLyricColumn !== newProps.showSingleLyricColumn ||
-            oldProps.selectedLyricColumnIndex !== newProps.selectedLyricColumnIndex
+            oldProps.selectedLyricColumnIndex !== newProps.selectedLyricColumnIndex ||
+            (!!oldProps.inVerseBar && oldProps.text !== newProps.text)
 
         // if (this.props.verseSelected) {
+        //     console.error('shouldResetWidthBasedOnProps', shouldResetWidthBasedOnProps);
+        // }
+
+        // if (oldProps.inVerseBar) {
         //     console.error('shouldResetWidthBasedOnProps', shouldResetWidthBasedOnProps);
         // }
 
