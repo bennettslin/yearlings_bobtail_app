@@ -34,6 +34,9 @@ export const prepareAlbumData = (album = {}) => {
      * collecting portal links from the entire album.
      */
     _addWikiAndPortalIndices(album)
+
+    // FIXME: Temporarily add portal links to album for debugging purposes.
+    album.portalLinks = _tempStore._portalLinks
 }
 
 const _addWikiAndPortalIndices = (album) => {

@@ -9,6 +9,10 @@ export default {
         return this._logObject('window storage', WINDOW_STORAGE)
     },
 
+    logPortalLinks({ portalLinks }) {
+        return portalLinks
+    },
+
     logSong({ props }) {
         const selectedSong = getSong(props),
             copiedSong = Object.assign({}, selectedSong)

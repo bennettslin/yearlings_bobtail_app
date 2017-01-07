@@ -213,6 +213,7 @@ class App extends Component {
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
         window.n = LogHelper.logAnnotationsDotKeys.bind(LogHelper, this)
         window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
+        window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
     }
 
     // Focus for accessibility.
