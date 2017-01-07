@@ -126,7 +126,7 @@ const LyricsUnitView = ({
     return (
         <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}${unitClass ? ` custom ${unitClass}` : ''}`}>
             {showMain &&
-                <div className={`stanza-block ${subsequent ? ' subsequent' : ''}`}>
+                <div className={`stanza-block${subsequent ? ' subsequent' : ''}`}>
                     {getStanza({ stanzaArray, inMain: true })}
                     {getStanza({ stanzaArray: subStanza, inMain: true, addSub: true })}
                 </div>

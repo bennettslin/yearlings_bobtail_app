@@ -1,4 +1,4 @@
-import { REFRAIN, VERSES, CHORUS, BRIDGE } from 'helpers/constants'
+import { INSTRUMENTAL, REFRAIN, VERSES, CHORUS, BRIDGE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -56,6 +56,18 @@ module.exports = {
                         }
                     }
                 }
+            }
+        ],
+        [
+            {
+                time: 0,
+                centre: {
+                    italic: `(intro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [

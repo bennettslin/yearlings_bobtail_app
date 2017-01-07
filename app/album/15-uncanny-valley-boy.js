@@ -1,4 +1,4 @@
-import { VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO, RHYME, RESPONSE, BACKING } from 'helpers/constants'
+import { INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO, RHYME, RESPONSE, BACKING } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -56,6 +56,18 @@ module.exports = {
                         }
                     }
                 }
+            }
+        ],
+        [
+            {
+                time: 0,
+                centre: {
+                    italic: `(intro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [

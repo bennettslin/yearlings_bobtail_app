@@ -245,6 +245,7 @@ module.exports = {
     OVERLAP: 'overlap',
 
     TITLE: 'title',
+    INSTRUMENTAL: 'instrumental',
     REFRAIN: 'refrain',
     VERSES: 'verses',
     PRECHORUS: 'prechorus',

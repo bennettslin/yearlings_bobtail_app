@@ -42,7 +42,7 @@ class LyricsSectionView extends Component {
         const shouldUpdate = this.props.isSelectedVerseAbove !== nextProps.isSelectedVerseAbove || this.props.isSelectedVerseBelow !== nextProps.isSelectedVerseBelow
 
         return shouldUpdate
-    }
+        }
 
     _handleScroll() {
         // scrollTop needed for debugging only.

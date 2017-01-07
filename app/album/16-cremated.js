@@ -1,4 +1,4 @@
-import { REFRAIN, VERSES, BRIDGE } from 'helpers/constants'
+import { INSTRUMENTAL, REFRAIN, VERSES, BRIDGE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -51,7 +51,7 @@ module.exports = {
         ],
         [
             {
-                time: 1,
+                time: 0,
                 centre: {
                     anchor: `Or another…`,
                     annotation: {
@@ -62,6 +62,18 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: REFRAIN
+            }
+        ],
+        [
+            {
+                time: 2,
+                centre: {
+                    italic: `(intro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [

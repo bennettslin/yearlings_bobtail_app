@@ -1,4 +1,4 @@
-import { LEFT, OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME } from 'helpers/constants'
+import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -51,6 +51,18 @@ module.exports = {
                         }
                     }
                 }
+            }
+        ],
+        [
+            {
+                time: 0,
+                centre: {
+                    italic: `(intro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [

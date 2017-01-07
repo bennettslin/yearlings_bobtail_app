@@ -1,4 +1,5 @@
-import { VERSES,
+import { INSTRUMENTAL,
+         VERSES,
          PRECHORUS,
          CHORUS,
          BRIDGE,
@@ -77,6 +78,18 @@ module.exports = {
                         }
                     }
                 }
+            }
+        ],
+        [
+            {
+                time: 0,
+                centre: {
+                    italic: `(intro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [
