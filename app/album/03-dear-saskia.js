@@ -51,7 +51,7 @@ module.exports = {
         [
             {
                 time: 5,
-                lyric: `Dearest Sasha,`
+                centre: `Dearest Sasha,`
             },
             {
                 unitMap: true,

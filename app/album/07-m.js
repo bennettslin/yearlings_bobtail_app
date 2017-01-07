@@ -56,7 +56,7 @@ module.exports = {
         [
             {
                 time: 33,
-                lyric: {
+                centre: {
                     anchor: `Maravijaya…`,
                     properNoun: true,
                     annotation: {

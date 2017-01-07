@@ -45,6 +45,7 @@ class LyricColumnView extends Component {
                 selectedVerse,
                 onLyricExpandClick,
                 onLyricColumnClick,
+                onVerseBarClick,
 
                 // From controller.
                 showEarButton,
@@ -56,8 +57,9 @@ class LyricColumnView extends Component {
                 verseObject: selectedVerse,
                 showSingleLyricColumn: other.showSingleLyricColumn,
                 hiddenLyricColumnKey: other.hiddenLyricColumnKey,
-                selectedDotKeys: other.selectedDotKeys,
-                onAnnotationClick: other.onAnnotationClick
+                onVerseBarClick
+                // selectedDotKeys: other.selectedDotKeys,
+                // onAnnotationClick: other.onAnnotationClick
             }
 
         return (

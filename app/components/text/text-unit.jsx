@@ -13,6 +13,7 @@ const TextUnit = ({
     text,
     selectedDotKeys,
     showWikis,
+    inVerseBar,
 
 ...other }) => {
 
@@ -62,7 +63,7 @@ const TextUnit = ({
             const showAsAnchor = intersects(text.dotKeys, selectedDotKeys),
                 showIfWiki = showWikis !== false
 
-            return (showAsAnchor && showIfWiki && !(other.inPortal && other.inPortalCard) ?
+            return (showAsAnchor && showIfWiki && !inVerseBar && !(other.inPortal && other.inPortalCard) ?
                 <AnchorBlock {...other}
                     text={text}
                     firstVerseObject={text.firstVerseObject}

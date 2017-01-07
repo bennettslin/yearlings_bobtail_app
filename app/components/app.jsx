@@ -145,6 +145,7 @@ class App extends Component {
 
     componentWillMount() {
         this._assignLogFunctions()
+
         this.windowResize()
         window.onresize = this.windowResize
     }
@@ -152,6 +153,9 @@ class App extends Component {
     componentDidMount() {
         // Allows app to begin listening for keyboard events.
         this._focusApp()
+
+        // FIXME: Scrolling to selected verse here, but animation is janky.
+        // setTimeout(this.scrollElementIntoView.bind(this, 'verse', this.props.selectedVerseIndex), 250)
 
         // Selected verse bounding rect is meaningless until app is mounted.
         this.setState({
@@ -193,6 +197,7 @@ class App extends Component {
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
         this.updateSelectedVerseElement = this.updateSelectedVerseElement.bind(this)
         this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
+        this.handleVerseBarClick = this.handleVerseBarClick.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
@@ -894,13 +899,18 @@ class App extends Component {
 
         const lyricSectionRect = getLyricSectionRect(this.state),
             selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
-            isSelectedVerseAbove = selectedVerseRect.top < lyricSectionRect.top,
-            isSelectedVerseBelow = selectedVerseRect.bottom > lyricSectionRect.bottom
+            selectedVerseMidHeight = (selectedVerseRect.top + selectedVerseRect.bottom) / 2,
+            isSelectedVerseAbove = selectedVerseMidHeight < lyricSectionRect.top,
+            isSelectedVerseBelow = selectedVerseMidHeight > lyricSectionRect.bottom
 
         this.setState({
             isSelectedVerseAbove,
             isSelectedVerseBelow
         })
+    }
+
+    handleVerseBarClick() {
+        this.scrollElementIntoView('verse', this.props.selectedVerseIndex)
     }
 
     handlePopupContainerClick(e, className) {
@@ -1249,6 +1259,7 @@ class App extends Component {
                     onTimeUpdated={this.resetupdatedTimePlayed}
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onLyricSectionScroll={this.handleLyricSectionScroll}
+                    onVerseBarClick={this.handleVerseBarClick}
                 />
             </div>
         )
