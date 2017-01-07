@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import LyricsUnit from './lyrics-unit'
 import { LYRICS_SECTION } from 'helpers/constants'
+import { getPropsAreSame } from 'helpers/general-helper'
 
 /*************
  * CONTAINER *
@@ -38,16 +39,10 @@ class LyricsSectionView extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        // FIXME: This isn't exactly right either.
-        const shouldUpdate = this.props.isSelectedVerseAbove !== nextProps.isSelectedVerseAbove || this.props.isSelectedVerseBelow !== nextProps.isSelectedVerseBelow
-
-        return shouldUpdate
-        }
+        return !getPropsAreSame(this.props, nextProps)
+    }
 
     _handleScroll() {
-        // scrollTop needed for debugging only.
-        // const lyricsScrollTop = this.mySection.scrollTop
-
         this.props.onLyricSectionScroll()
     }
 
@@ -64,8 +59,6 @@ class LyricsSectionView extends Component {
                 sectionNextHighlighted,
 
             ...other } = this.props
-
-        console.error('render section');
 
         return (
             <div

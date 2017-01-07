@@ -100,8 +100,6 @@ class LyricColumnView extends Component {
                     }
                     <LyricsSection {...other}
                         isLyricExpanded={isLyricExpanded}
-                        isSelectedVerseAbove={isSelectedVerseAbove}
-                        isSelectedVerseBelow={isSelectedVerseBelow}
                     />
                 </div>
             </div>

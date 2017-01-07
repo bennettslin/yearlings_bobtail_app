@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import LyricsLine from './lyrics-line'
 import LyricsPlayButton from './lyrics-play-button'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT, LYRIC_VERSE_ELEMENT } from 'helpers/constants'
+import { getPropsAreSame } from 'helpers/general-helper'
 
 /*************
  * CONTAINER *
@@ -68,8 +69,7 @@ class LyricsVerseView extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        // FIXME: This isn't exactly right.
-        return this.props.isSelected !== nextProps.isSelected
+        return !getPropsAreSame(this.props, nextProps)
     }
 
     componentWillUpdate(nextProps) {
@@ -78,7 +78,6 @@ class LyricsVerseView extends Component {
 
     _checkIsSelectedVerse(props) {
         if (props.isSelected) {
-            console.error('New selected verse!');
             props.onSelectVerseElement(this.myVerse)
         }
     }
@@ -122,10 +121,6 @@ class LyricsVerseView extends Component {
                 onPlayClick,
 
             ...other } = this.props
-
-        if (isSelected) {
-            console.error('render verse');
-        }
 
         return (
             <div
