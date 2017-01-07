@@ -66,7 +66,7 @@ module.exports = {
         ],
         [
             {
-                time: 2,
+                time: 4,
                 centre: {
                     italic: `(intro)`
                 }

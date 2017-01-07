@@ -184,7 +184,7 @@ class App extends Component {
         this.selectBookColumn = this.selectBookColumn.bind(this)
         this.selectDotsExpand = this.selectDotsExpand.bind(this)
         this.selectTips = this.selectTips.bind(this)
-        this.selectNextSong = this.selectNextSong.bind(this)
+        this.advanceToNextSong = this.advanceToNextSong.bind(this)
         this.updateSelectedVerseElement = this.updateSelectedVerseElement.bind(this)
         this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
@@ -347,9 +347,6 @@ class App extends Component {
             this.selectOverview(undefined, undefined, SHOWN)
         }
 
-        this.selectBookColumn(e, true, selectedSongIndex)
-        this.props.selectSongIndex(selectedSongIndex)
-
         const isLogue = getIsLogue({ selectedSongIndex,
                                      songs: this.props.songs }),
             newState = {
@@ -367,8 +364,6 @@ class App extends Component {
             newState.isPlaying = false
         }
 
-        this.setState(newState)
-
         /**
          * Reset the stored annotation, time, and overview, unless selected
          * from portal.
@@ -376,22 +371,34 @@ class App extends Component {
         if (e) {
             const selectedVerseIndex = getLyricsStartAtZero(this.props, selectedSongIndex) ? 1 : 0
 
-            this._handleSectionAccess({
-                accessedSectionKey: direction ? AUDIO_SECTION : NAV_SECTION,
-                selectedSongIndex,
-                overrideClosePopupsDefaultWithOverviewOption
-            })
-            this.selectAnnotation()
             this.selectVerse(undefined, selectedVerseIndex)
+            this.selectAnnotation()
 
             // Scroll to top of lyrics.
             this.scrollElementIntoView('lyrics-scroll', 'home')
+
+            if (!e.skipHandleSectionAccess) {
+                this._handleSectionAccess({
+                    accessedSectionKey: direction ? AUDIO_SECTION : NAV_SECTION,
+                    selectedSongIndex,
+                    overrideClosePopupsDefaultWithOverviewOption
+                })
+            }
         }
+
+        this.selectBookColumn(e, true, selectedSongIndex)
+        this.props.selectSongIndex(selectedSongIndex)
+        this.setState(newState)
     }
 
-    selectNextSong() {
-        // There should be a way to select song with everything in e conditional except accessing section.
-        this.selectSong(undefined, this.props.selectedSongIndex + 1)
+    advanceToNextSong() {
+        /**
+         * When selecting next song through audio player, reset annotation and
+         * verse, and scroll element into view, but do not access nav section.
+         */
+
+        const newSelectedSongIndex = this.props.selectedSongIndex + 1
+        this.selectSong({ skipHandleSectionAccess: true }, newSelectedSongIndex)
     }
 
     selectAudioOption(e, direction = 1) {
@@ -1226,7 +1233,7 @@ class App extends Component {
                     onDotsExpandClick={this.selectDotsExpand}
                     onTipsClick={this.selectTips}
                     onTimeChange={this.selectTime}
-                    onPlayerEnd={this.selectNextSong}
+                    onPlayerEnd={this.advanceToNextSong}
                     onTimeUpdated={this.resetupdatedTimePlayed}
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onLyricSectionScroll={this.handleLyricSectionScroll}
