@@ -138,7 +138,8 @@ class App extends Component {
 
             isSelectedVerseAbove: false,
             isSelectedVerseBelow: false,
-            selectedVerseElement: null
+            selectedVerseElement: null,
+            appMounted: false
         }
     }
 
@@ -151,6 +152,11 @@ class App extends Component {
     componentDidMount() {
         // Allows app to begin listening for keyboard events.
         this._focusApp()
+
+        // Selected verse bounding rect is meaningless until app is mounted.
+        this.setState({
+            appMounted: true
+        })
     }
 
     /***********
@@ -880,6 +886,12 @@ class App extends Component {
     }
 
     handleLyricSectionScroll(selectedVerseElement = this.state.selectedVerseElement) {
+
+        // App needs to be mounted.
+        if (!this.state.appMounted) {
+            return
+        }
+
         const lyricSectionRect = getLyricSectionRect(this.state),
             selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
             isSelectedVerseAbove = selectedVerseRect.top < lyricSectionRect.top,
