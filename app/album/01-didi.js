@@ -10,6 +10,7 @@ import { INSTRUMENTAL,
          PUN,
          MUSIC } from 'helpers/constants'
 
+// TODO: Music annotations: Pet Sounds, toy instruments, Joyce's Portrait, and muted guitar.
 module.exports = {
     title: {
         anchor: 'Didi (弟弟)',
