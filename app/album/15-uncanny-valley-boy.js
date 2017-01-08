@@ -1,4 +1,4 @@
-import { INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO, RHYME, RESPONSE, BACKING } from 'helpers/constants'
+import { INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, RHYME, RESPONSE, BACKING } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -289,7 +289,7 @@ module.exports = {
                 lyric: `Mowed down by the tides,`
             },
             {
-                time: '?',
+                time: 63,
                 lyric: `and inundated under in unfair fights,`
             },
             {
@@ -323,7 +323,7 @@ module.exports = {
                 ],
                 subStanza: [
                     {
-                        time: '?',
+                        time: 70,
                         lyric: {
                             italic: `to seal out their floods.`
                         }
@@ -357,7 +357,7 @@ module.exports = {
                 ]
             },
             {
-                time: '?',
+                time: 76,
                 lyric: [
                     `safe on your`,
                     {
@@ -412,7 +412,7 @@ module.exports = {
                 ],
                 subStanza: [
                     {
-                        time: '?',
+                        time: 82,
                         lyric: {
                             italic: `and healed round your grudge…`
                         }
@@ -736,7 +736,7 @@ module.exports = {
                 lyric: `Oh child of mine,`
             },
             {
-                time: '?',
+                time: 162,
                 lyric: [
                     `what's left of what these`,
                     {
@@ -794,7 +794,7 @@ module.exports = {
                 ],
                 subStanza: [
                     {
-                        time: '?',
+                        time: 168,
                         lyric: {
                             italic: `to find a cleared path`
                         }
@@ -811,7 +811,7 @@ module.exports = {
                 lyric: `in life's unbearable maze?`
             },
             {
-                time: '?',
+                time: 174,
                 lyric: `Then once for all to render it all fail-safe,`
             },
             {
@@ -850,7 +850,7 @@ module.exports = {
                 ],
                 subStanza: [
                     {
-                        time: '?',
+                        time: 181,
                         lyric: {
                             italic: `to five-year plans.`
                         }
@@ -950,7 +950,7 @@ module.exports = {
                         ]
                     }
                 ],
-                sectionClass: OUTRO,
+                sectionClass: CODA,
                 sideSectionClass: BACKING,
                 sideSubsectionClass: RESPONSE
             }

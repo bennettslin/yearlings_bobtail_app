@@ -438,7 +438,7 @@ module.exports = {
                 ]
             },
             {
-                time: '?',
+                time: 88,
                 lyric: [
                     `for I lack the wit to spare a`,
                     {

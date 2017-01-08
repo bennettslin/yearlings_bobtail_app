@@ -1077,6 +1077,11 @@ module.exports = {
             taskName: `Layout wiki popup`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `Show instrumentals in lyrics`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

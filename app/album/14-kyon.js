@@ -1,5 +1,5 @@
 // Be more specific that this began an on again off again relationship
-import { VERSES, PRECHORUS, CHORUS, BRIDGE, REFRAIN } from 'helpers/constants'
+import { VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, REFRAIN, INSTRUMENTAL } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -51,6 +51,18 @@ module.exports = {
                         }
                     }
                 }
+            }
+        ],
+        [
+            {
+                time: 0,
+                centre: {
+                    italic: `(refrain)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
             }
         ],
         [
@@ -433,6 +445,18 @@ module.exports = {
         ],
         [
             {
+                time: 150,
+                centre: {
+                    italic: `(refrain)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: REFRAIN
+            }
+        ],
+        [
+            {
                 // TODO: Peacocks sound like they're saying Kyon?
                 time: 174,
                 lyric: `You say you woke one crystal morning, to find all those thoughts had gone away:`
@@ -514,9 +538,21 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: REFRAIN
+                sectionClass: CODA
             }
-        ]
+        ],
+        [
+            {
+                time: 197,
+                centre: {
+                    italic: `(outro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
+        ],
     ],
     tasks: [
         {

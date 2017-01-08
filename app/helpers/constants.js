@@ -258,7 +258,7 @@ module.exports = {
     CHORUS: 'chorus',
     POSTCHORUS: 'postchorus',
     BRIDGE: 'bridge',
-    OUTRO: 'outro',
+    CODA: 'coda',
     RHYME: 'rhyme',
     RESPONSE: 'response',
     BACKING: 'backing',

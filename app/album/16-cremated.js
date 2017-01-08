@@ -710,6 +710,18 @@ module.exports = {
                 sectionClass: VERSES,
                 subsequent: true
             }
+        ],
+        [
+            {
+                time: 135,
+                centre: {
+                    italic: `(outro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
         ]
     ],
     tasks: [

@@ -1,4 +1,4 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, OUTRO } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, INSTRUMENTAL } from 'helpers/constants'
 
 // TODO: Missing portal for Look Back in Anger. Is it "bell"?
 
@@ -819,7 +819,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: OUTRO
+                sectionClass: CODA
             }
         ],
         [
@@ -879,7 +879,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: OUTRO,
+                sectionClass: CODA,
                 subsequent: true
             }
         ],
@@ -912,10 +912,22 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: OUTRO,
+                sectionClass: CODA,
                 subsequent: true
             }
-        ]
+        ],
+        [
+            {
+                time: 236,
+                centre: {
+                    italic: `(outro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
+        ],
     ],
     tasks: [
         {

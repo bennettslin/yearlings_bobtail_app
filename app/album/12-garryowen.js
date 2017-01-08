@@ -337,6 +337,18 @@ module.exports = {
         ],
         [
             {
+                time: 84,
+                centre: {
+                    italic: `(solo)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
+        ],
+        [
+            {
                 time: 93,
                 lyric: `Your rabid wit unleashed, Garryowen, to no end,`
             },

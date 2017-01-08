@@ -72,7 +72,7 @@ module.exports = {
         ],
         [
             {
-                time: 4,
+                time: 0,
                 lyric: [
                     {
                         anchor: `reverends,`,

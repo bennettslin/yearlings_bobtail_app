@@ -99,14 +99,20 @@ module.exports = {
                     {
                         anchor: `Hydrants burst`,
                         annotation: {
-                            description: `The sight of kids splashing around a burst fire hydrant wasn't really a Los Angeles thing, but it happened once or twice in my neighbourhood.`
+                            description: `The sight of kids splashing around a burst fire hydrant wasn't really a Los Angeles thing, but it happened once or twice in my neighbourhood.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `as early worms work this`,
                     {
                         anchor: `dying coyote's jaw.`,
                         annotation: {
-                            description: `Occasionally, a coyote would wander down from the surrounding hillsides and get hit by traffic. Of course, the Valley is also like one big lower jaw, with all its inhabitants helping it to decompose.`
+                            description: `Occasionally, a coyote would wander down from the surrounding hillsides and get hit by traffic. Of course, the Valley is also like one big lower jaw, with all its inhabitants helping it to decompose.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -401,6 +407,18 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: BRIDGE
+            }
+        ],
+        [
+            {
+                time: 96,
+                centre: {
+                    italic: `(solo)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [

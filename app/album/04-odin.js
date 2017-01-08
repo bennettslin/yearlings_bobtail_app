@@ -1,7 +1,7 @@
 // TODO: Past vs. present tense?
 // Be more open about Buddhist upbringing.
 
-import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE } from 'helpers/constants'
+import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -946,6 +946,18 @@ module.exports = {
                 unitMap: true,
                 unitClass: OVERLAP,
                 sectionClass: BRIDGE
+            }
+        ],
+        [
+            {
+                time: 153,
+                centre: {
+                    italic: `(solo)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [

@@ -1,5 +1,5 @@
 // FIXME: Change pronouns from I and me to drunken me and sober me.
-import { VERSES, CHORUS, BRIDGE, BACKING } from 'helpers/constants'
+import { VERSES, CHORUS, BRIDGE, BACKING, INSTRUMENTAL } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -70,7 +70,7 @@ module.exports = {
         [
             {
                 // TODO: Mention white throated sparrow.
-                time: 5,
+                time: 0,
                 centre: `On a golden cord,`
             },
             {
@@ -792,6 +792,18 @@ module.exports = {
                 unitMap: true,
                 sectionClass: CHORUS,
                 subsequent: true
+            }
+        ],
+        [
+            {
+                time: 177,
+                centre: {
+                    italic: `(outro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ]
     ],

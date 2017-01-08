@@ -183,8 +183,7 @@ module.exports = {
                 unitMap: true,
                 subStanza: [
                     {
-                        // TODO: Figure out time for this.
-                        time: '?',
+                        time: 34,
                         lyric: {
                             emphasis: {
                                 anchor: `Poor Sam Peabody!`,
@@ -568,7 +567,16 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: BRIDGE
+                subStanza: [
+                    {
+                        time: 128,
+                        lyric: {
+                            emphasis: `Poor Sam Peabody!`
+                        }
+                    }
+                ],
+                sectionClass: BRIDGE,
+                subsectionClass: RESPONSE
             }
         ],
         [

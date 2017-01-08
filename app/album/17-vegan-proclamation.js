@@ -1,4 +1,4 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, INSTRUMENTAL } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -430,6 +430,18 @@ module.exports = {
         ],
         [
             {
+                time: 123,
+                centre: {
+                    italic: `(solo)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
+        ],
+        [
+            {
                 time: 138,
                 lyric: [
                     `"So all your`,
@@ -481,6 +493,18 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: CHORUS
+            }
+        ],
+        [
+            {
+                time: 4,
+                centre: {
+                    italic: `(solo)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [
@@ -551,8 +575,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: CHORUS,
-                subsequent: true
+                sectionClass: CHORUS
             }
             // Talk about flirting with conservative politics. These days, I'd say I'm vegan maybe 90% of the time, the naysaying judgment of hardcore vegans notwithstanding.
         ]

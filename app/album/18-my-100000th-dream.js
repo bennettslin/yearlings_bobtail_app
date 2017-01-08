@@ -220,6 +220,18 @@ module.exports = {
         ],
         [
             {
+                time: 135,
+                centre: {
+                    italic: `(solo)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
+        ],
+        [
+            {
                 time: 163,
                 lyric: [
                     `My hundred thousandth dream, on the`,
@@ -309,7 +321,19 @@ module.exports = {
                 unitMap: true,
                 sectionClass: CHORUS
             }
-        ]
+        ],
+        [
+            {
+                time: 223,
+                centre: {
+                    italic: `(outro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
+        ],
     ],
     tasks: [
         {

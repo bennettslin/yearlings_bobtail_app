@@ -50,7 +50,7 @@ module.exports = {
         ],
         [
             {
-                time: 5,
+                time: 0,
                 centre: `Dearest Sasha,`
             },
             {
