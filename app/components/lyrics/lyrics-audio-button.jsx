@@ -4,9 +4,9 @@ import React from 'react'
  * CONTAINER *
  *************/
 
-// TODO: Make play button take up width of line.
+// TODO: Make audio button take up width of line.
 
-const LyricsPlayButton = ({
+const LyricsAudioButton = ({
 
     isPlaying,
     isSelected,
@@ -14,13 +14,13 @@ const LyricsPlayButton = ({
     onClick
 
 }) => (
-    <div className="play-button-block">
+    <div className="lyrics-audio-button-block">
         {!isSelected &&
-            <a className="play-child small-play-button enabled">
+            <a className="lyrics-audio-button-child small-lyrics-audio-button enabled">
                 <div>{`\u2022`}</div>
             </a>
         }
-        <a className="play-child play-button enabled"
+        <a className="lyrics-audio-button-child lyrics-audio-button enabled"
             onClick={onClick}
         >
             {isSelected ?
@@ -31,4 +31,4 @@ const LyricsPlayButton = ({
     </div>
 )
 
-export default LyricsPlayButton
+export default LyricsAudioButton

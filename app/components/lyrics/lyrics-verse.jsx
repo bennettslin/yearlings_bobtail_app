@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import LyricsLine from './lyrics-line'
-import LyricsPlayButton from './lyrics-play-button'
+import LyricsAudioButton from './lyrics-audio-button'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT, LYRIC_VERSE_ELEMENT } from 'helpers/constants'
 import { getPropsAreSame } from 'helpers/general-helper'
 
@@ -143,7 +143,7 @@ class LyricsVerseView extends Component {
                 className={`verse ${inVerseBar ? 'bar-' : ''}verse-${verseObject.verseIndex}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
             >
                 {isInteractable && !inVerseBar &&
-                    <LyricsPlayButton
+                    <LyricsAudioButton
                         isSelected={isSelected}
                         isPlaying={isPlaying}
                         isAfterSelected={isAfterSelected}
