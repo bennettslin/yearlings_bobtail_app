@@ -117,11 +117,6 @@ module.exports = {
             neededHours: 8
         },
         {
-            taskName: `Layout wiki popup`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `Select time for player from portal`,
             workedHours: 0,
             neededHours: 3
@@ -1077,6 +1072,11 @@ module.exports = {
             taskName: `Verse bar has no anchor. Selecting it scrolls to verse.`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `Layout wiki popup`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
