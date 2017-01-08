@@ -79,7 +79,7 @@ module.exports = {
         [
             {
                 time: 24,
-                left: [
+                right: [
                     {
                         anchor: `Atavist`,
                         annotation: {
@@ -88,7 +88,7 @@ module.exports = {
                                     anchor: `Atavism`,
                                     wiki: `Atavism`
                                 },
-                                `occurs when genetic traits reappear after having disappeared generations ago. Given my brother's autism and my father's likely Asperger syndrome, my mother always advised me not to have children, as the genes I carried for autism would be passed on to them. As a result, I had to wonder if those I dated ever thought the same.`
+                                `occurs when genetic traits reappear after having disappeared generations ago. Given my brother's autism and my father's likely Asperger syndrome, my mother always advised me not to have children, as the genes I carried for autism would pass onto them. As a result, I had to wonder if those I dated ever thought the same, in judging my viability as a partner for the long haul.`
                             ]
                         }
                     },
@@ -106,7 +106,7 @@ module.exports = {
                         }
                     }
                 ],
-                right: [
+                left: [
                     {
                         anchor: `At a vista,`,
                         annotation: {
@@ -124,7 +124,7 @@ module.exports = {
             },
             {
                 time: 27,
-                left: [
+                right: [
                     `subversive`,
                     {
                         anchor: `inner lotus eater,`,
@@ -135,12 +135,12 @@ module.exports = {
                                     anchor: `lotus-eaters`,
                                     wiki: `Lotus-eaters`
                                 },
-                                `were islanders observed by Odysseus to while away their days eating the narcotic fruit of the lotus. Similarly, Miriam would comment on how much I drank, but make no judgments. In hindsight, it was because she, like Odysseus, was keeping her distance.`
+                                `were islanders observed by Odysseus to while away their days eating the narcotic fruit of the lotus. Similarly, Miriam would comment on how much I drank, but made no judgments. In hindsight, it was because she, like Odysseus, was keeping her distance.`
                             ]
                         }
                     }
                 ],
-                right: [
+                left: [
                     `to`,
                     {
                         anchor: `first switch`,
@@ -153,12 +153,12 @@ module.exports = {
             },
             {
                 time: 30,
-                left: `an everlasting doublespeaker,`,
-                right: `and deaf from blasting frontal speakers,`
+                right: `an everlasting doublespeaker,`,
+                left: `and deaf from blasting frontal speakers,`
             },
             {
                 time: 34,
-                left: [
+                right: [
                     `his`,
                     {
                         anchor: `beaten wit and id`,
@@ -175,7 +175,7 @@ module.exports = {
                     },
                     `she's deemed her`
                 ],
-                right: [
+                left: [
                     `this`,
                     {
                         anchor: `phoenix risen limp`,
@@ -195,7 +195,7 @@ module.exports = {
             },
             {
                 time: 37,
-                left: [
+                right: [
                     `sinking ship, maybe`,
                     {
                         anchor: `good for anecdotes.`,
@@ -204,7 +204,7 @@ module.exports = {
                         }
                     }
                 ],
-                right: [
+                left: [
                     {
                         anchor: `pinkish slip,`,
                         annotation: {
@@ -222,8 +222,8 @@ module.exports = {
         [
             {
                 time: 39,
-                left: `As comedy teams work, a hoot the times`,
-                right: [
+                right: `As comedy teams work, a hoot the times`,
+                left: [
                     {
                         anchor: `His god humming "Freebird,"`,
                         annotation: {
@@ -248,7 +248,7 @@ module.exports = {
             },
             {
                 time: 42,
-                left: [
+                right: [
                     `not`,
                     {
                         anchor: `at each other's throats.`,
@@ -269,7 +269,7 @@ module.exports = {
                         }
                     }
                 ],
-                right: [
+                left: [
                     `nods as`,
                     {
                         anchor: `she drums her toes.`,
@@ -294,7 +294,7 @@ module.exports = {
         [
             {
                 time: 46,
-                left: [
+                right: [
                     `Trophy`,
                     {
                         anchor: `bronzed from a Trojan`,
@@ -303,11 +303,11 @@ module.exports = {
                         }
                     }
                 ],
-                right: `Though, she ponders the children`
+                left: `Though, she ponders the children`
             },
             {
                 time: 49,
-                left: [
+                right: [
                     `for some`,
                     {
                         anchor: `unforeskinned`,
@@ -322,7 +322,7 @@ module.exports = {
                         }
                     }
                 ],
-                right: [
+                left: [
                     `born from a`,
                     {
                         anchor: `forced conversion`,
@@ -341,8 +341,8 @@ module.exports = {
             },
             {
                 time: 52,
-                left: `on the shelf, serves his declared assertion:`,
-                right: [
+                right: `on the shelf, serves his declared assertion:`,
+                left: [
                     `on a`,
                     {
                         anchor: `self-servicing cleric surgeon`,
@@ -354,7 +354,7 @@ module.exports = {
             },
             {
                 time: 56,
-                left: [
+                right: [
                     `to remain`,
                     {
                         anchor: `inherently perfect,`,
@@ -363,11 +363,11 @@ module.exports = {
                         }
                     }
                 ],
-                right: `duly may inherit his burdens.`
+                left: `duly may inherit his burdens.`
             },
             {
                 time: 59,
-                left: [
+                right: [
                     `as`,
                     {
                         anchor: `worn puppet`,
@@ -383,7 +383,7 @@ module.exports = {
                         }
                     }
                 ],
-                right: [
+                left: [
                     `This`,
                     {
                         anchor: `swarm pumped and kissed off,`,
@@ -408,12 +408,12 @@ module.exports = {
         [
             {
                 time: 61,
-                left: `His silent dramedy works better;`,
-                right: `Despite once promising forever,`
+                right: `His silent dramedy works better;`,
+                left: `Despite once promising forever,`
             },
             {
                 time: 64,
-                left: [
+                right: [
                     {
                         anchor: `twitching sword`,
                         annotation: {
@@ -423,13 +423,13 @@ module.exports = {
                                     anchor: `conferring knighthood.`,
                                     wiki: `Accolade`
                                 },
-                                `Here, I imagine my drunken personality erratically trying to tap a perilously sharp sword on the sober me's shoulder.`
+                                `Here, I imagine my drunken personality erratically trying to tap a perilously sharp sword on my sober self's shoulder.`
                             ]
                         }
                     },
                     `in care, he's anyone.`
                 ],
-                right: [
+                left: [
                     `which she swore when scarcely`,
                     {
                         anchor: `twenty-one.`,
@@ -526,7 +526,7 @@ module.exports = {
                                         wiki: `The_Selfish_Gene`
                                     }
                                 },
-                                `Richard Dawkins explains natural selection from the vantage point of genes themselves, rather than the organisms that carry them. Here, I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, leading her to block me from ever again getting underneath her cutoffs.`
+                                `Richard Dawkins explains natural selection from the vantage point of genes themselves, rather than the individuals that carry them. Here, I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, leading her to block me from ever again getting underneath her cutoffs.`
                             ]
                         }
                     }
@@ -565,7 +565,6 @@ module.exports = {
         ],
         [
             {
-                // NOTE: I switched the next three three lines, left for right.
                 time: 112,
                 left: [
                     `The`,
@@ -624,7 +623,7 @@ module.exports = {
             },
             {
                 time: 121,
-                left: [
+                right: [
                     {
                         anchor: `Redressed,`,
                         annotation: {
@@ -633,7 +632,7 @@ module.exports = {
                     },
                     `he gets his notice, short an`
                 ],
-                right: [
+                left: [
                     `He's`,
                     {
                         anchor: `vegging with his boner shortened;`,
@@ -646,8 +645,8 @@ module.exports = {
             },
             {
                 time: 124,
-                left: `apology, bold and blunt.`,
-                right: [
+                right: `apology, bold and blunt.`,
+                left: [
                     `a pop, and she`,
                     {
                         anchor: `pulls the plug.`,
@@ -665,7 +664,7 @@ module.exports = {
         [
             {
                 time: 127,
-                left: [
+                right: [
                     `Life's a dumb`,
                     {
                         anchor: `ex-dromedary,`,
@@ -681,11 +680,11 @@ module.exports = {
                         }
                     }
                 ],
-                right: `Lights one up then draws a daring`
+                left: `Lights one up then draws a daring`
             },
             {
                 time: 130,
-                left: [
+                right: [
                     `hungry carrying this groovy`,
                     {
                         anchor: `second hump.`,
@@ -694,12 +693,12 @@ module.exports = {
                         }
                     }
                 ],
-                right: [
+                left: [
                     `puff,`,
                     {
                         anchor: `preparing the scoop,`,
                         annotation: {
-                            description: `Miriam braces to deliver the bad news that we're breaking up. Metaphorically, she waits with "scoop" in hand for her cat to take its "dump," eager as she is to keep her house fresh and clean.`
+                            description: `Miriam braces to deliver the bad news that we're breaking up. Metaphorically, she waits with "scoop" in hand while her pet takes its "dump," eager as she is to keep her house fresh and clean.`
                         }
                     },
                     `he's getting dumped.`

@@ -77,8 +77,10 @@
 // Lyric buttons should be higher than everything else in lyric column, including text span.
 @lyric-column-button-z-index: @verse-bar-text-z-index + 1;
 
+@menu-field-z-index: @lyric-column-button-z-index + 1;
+
 // Menu should be higher than centre field and lyrics.
-@menu-subfield-z-index: @lyric-column-button-z-index + 1;
+@menu-subfield-z-index: @menu-field-z-index + 1;
 
 @popup-content-z-index: @menu-subfield-z-index + 1;
 

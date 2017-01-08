@@ -1,4 +1,4 @@
-import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, BACKSTORY } from 'helpers/constants'
+import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, BACKSTORY, NARRATIVE, PUN } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -130,7 +130,10 @@ module.exports = {
                     {
                         anchor: `wayside bottle,`,
                         annotation: {
-                            description: `Willy begins his daily rounds by filling up a shopping cart with recyclables found in garbage bins and littered along the sidewalks.`
+                            description: `Willy begins his daily rounds by filling up a shopping cart with recyclables found in garbage bins and littered along the sidewalks.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -141,16 +144,27 @@ module.exports = {
                     `his`,
                     {
                         anchor: `pinhead in its shadow`,
-                        annotation: {
-                            description: [
-                                `Willy has`,
-                                {
-                                    anchor: `microcephaly,`,
-                                    wiki: `Microcephaly`
-                                },
-                                `a medical condition in which the brain fails to develop properly, resulting in a head that is abnormally small in size. He peers through an empty soda bottle, the top of which is tapered like the outline of his skull.`
-                            ]
-                        }
+                        annotation: [
+                            {
+                                description: [
+                                    `Willy had`,
+                                    {
+                                        anchor: `microcephaly,`,
+                                        wiki: `Microcephaly`
+                                    },
+                                    `a medical condition in which the brain fails to develop properly, resulting in a head that was abnormally small in size.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                description: `He peers through an empty soda bottle, the top of which is tapered like the outline of his skull.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        ]
                     },
                     `eclipsed in full.`
                 ]
@@ -169,7 +183,10 @@ module.exports = {
                                     {
                                         anchor: `Chilled cola's free`,
                                         annotation: {
-                                            description: `At the recycling center where Willy drops off his recyclables, a complimentary soft drink is part of his reimbursement.`
+                                            description: `Willy eagerly awaits the complimentary soft drink that is part of his reimbursement at the recycling center.`,
+                                            dotKeys: {
+                                                [NARRATIVE]: true
+                                            }
                                         }
                                     },
                                     `with salvage sold…`
@@ -188,7 +205,11 @@ module.exports = {
                     {
                         anchor: `he ends his stroll.`,
                         annotation: {
-                            description: `Or else, "he ends as troll." In most legends, changelings wittingly participate in the deceit, and take pains to hide their true form when around others.`
+                            description: `In most legends, changelings wittingly participate in the deceit and take pains to hide their true form. And so, preparing to rejoin the company of others when he drops off his recyclables, Willy "ends as troll."`,
+                            // TODO: This also needs a dot category that is about wiki without actually having a wiki.
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     }
                 ]

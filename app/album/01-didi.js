@@ -190,17 +190,19 @@ module.exports = {
                         properNoun: true,
                         annotation: [
                             {
+                                description: `Since my pants were soiled, the nurse gave me a shopping bag to carry them in.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
                                 description: [
-                                    `Since my pants were soiled, the nurse gave me a shopping bag to carry them in.`,
                                     {
                                         anchor: `Safeway`,
                                         wiki: `Safeway_Inc.`
                                     },
                                     `is a supermarket chain located in the western and central United States.`
-                                ],
-                                dotKeys: {
-                                    [NARRATIVE]: true
-                                }
+                                ]
                             },
                             {
                                 dotKeys: {
@@ -229,6 +231,7 @@ module.exports = {
                 lyric: `Didi, you've been in the bath all this time.`
             },
             {
+                // TODO: Soak or sulk?
                 time: 91,
                 lyric: `Didi, come out, you can't soak there all night.`
             },
