@@ -205,7 +205,7 @@ module.exports = {
                     {
                         anchor: `he ends his stroll.`,
                         annotation: {
-                            description: `In most legends, changelings wittingly participate in the deceit and take pains to hide their true form. And so, preparing to rejoin the company of others when he drops off his recyclables, Willy "ends as troll."`,
+                            description: `In most legends, changelings wittingly participate in the deceit and take pains to hide their true form. And so, preparing to drop off his recyclables where he'll rejoin the company of others, Willy "ends as troll."`,
                             // TODO: This also needs a dot category that is about wiki without actually having a wiki.
                             dotKeys: {
                                 [PUN]: true
