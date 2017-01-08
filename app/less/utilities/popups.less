@@ -4,6 +4,7 @@
 
 @popup-content-side-padding: 20px;
 @wiki-subfield-padding: 50px;
+@mini-wiki-subfield-padding: 10px;
 
 .admin {
     .popup-content-wrapper {
@@ -160,6 +161,19 @@
         &.next-button {
             right: 0;
             bottom: 0;
+        }
+    }
+}
+
+.mini-width, .phone-width {
+    .wiki-subfield {
+        padding: @mini-wiki-subfield-padding;
+    }
+
+    .popup-content-wrapper {
+        &.wiki {
+            width: ~"calc(100% - @{mini-wiki-subfield-padding} * 2)";
+            height: ~"calc(100% - @{mini-wiki-subfield-padding} * 2)";
         }
     }
 }

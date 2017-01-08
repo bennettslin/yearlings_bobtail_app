@@ -194,10 +194,19 @@ export const getLyricSectionRect = (state) => {
 }
 
 export const getIsMobileWiki = (state) => {
-    const { windowWidth } = state,
+    const { deviceIndex } = state,
+        deviceClassName = DEVICE_OBJECTS[deviceIndex].className
+
+    // If phone or mini, show mobile wiki.
+    if (deviceClassName === MINI_WIDTH || deviceClassName === PHONE_WIDTH) {
+        return true
+
+    } else {
+        const { windowWidth } = state,
 
         // Wikipedia in mobile seems to max out at 892px.
         isMobileWiki = windowWidth - WIKI_SIDE_PADDING_TOTAL < 892
 
-    return isMobileWiki
+        return isMobileWiki
+    }
 }

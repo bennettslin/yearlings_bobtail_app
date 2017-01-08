@@ -119,7 +119,7 @@ module.exports = {
         {
             taskName: `Layout wiki popup`,
             workedHours: 0,
-            neededHours: 5
+            neededHours: 3
         },
         {
             taskName: `Select time for player from portal`,
