@@ -241,6 +241,7 @@ const LiveView = ({
             onAnnotationClick,
             onLyricExpandClick,
             onLyricColumnClick,
+            onPlayClick,
             onSelectVerseElement,
             onLyricSectionScroll,
             onVerseBarClick

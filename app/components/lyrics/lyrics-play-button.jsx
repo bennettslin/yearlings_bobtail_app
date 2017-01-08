@@ -20,16 +20,14 @@ const LyricsPlayButton = ({
                 <div>{`\u2022`}</div>
             </a>
         }
-        {!isSelected ?
-            <a className="play-child play-button enabled"
-                onClick={onClick}
-            >
-                {isAfterSelected ? `\u23E9` : `\u23EA`}
-            </a> :
-            <div className="play-child play-icon">
-                {isPlaying ? `\u25BA` : `\u23F8`}
-            </div>
-        }
+        <a className="play-child play-button enabled"
+            onClick={onClick}
+        >
+            {isSelected ?
+                (isPlaying ? `\u23F8` : `\u25BA`) :
+                (isAfterSelected ? `\u23E9` : `\u23EA`)
+            }
+        </a>
     </div>
 )
 

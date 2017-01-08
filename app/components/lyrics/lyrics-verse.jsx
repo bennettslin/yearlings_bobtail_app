@@ -18,6 +18,7 @@ const LyricsVerse = ({
     lyricsStartAtZero,
     onAnnotationClick,
     onVerseClick,
+    onPlayClick,
 
 ...other }) => {
 
@@ -31,8 +32,21 @@ const LyricsVerse = ({
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
         isDoubleSpeaker = !lyric,
         isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero),
-        onPlayClick = isInteractable && !isSelected ? e => onVerseClick(e, verseIndex) : null,
         onAnchorClick = onAnnotationClick
+
+    let onLyricPlayClick = null
+
+    if (isInteractable) {
+
+        // If verse is selected, play button will toggle play.
+        if (isSelected) {
+            onLyricPlayClick = onPlayClick
+
+        // Otherwise, play button will select verse.
+        } else {
+            onLyricPlayClick = e => onVerseClick(e, verseIndex)
+        }
+    }
 
     return (
         <LyricsVerseView {...other}
@@ -45,7 +59,7 @@ const LyricsVerse = ({
             isAfterSelected={isAfterSelected}
             isInteractable={isInteractable}
             isDoubleSpeaker={isDoubleSpeaker}
-            onPlayClick={onPlayClick}
+            onLyricPlayClick={onLyricPlayClick}
             onAnchorClick={onAnchorClick}
         />
     )
@@ -119,7 +133,7 @@ class LyricsVerseView extends Component {
                 isAfterSelected,
                 isDoubleSpeaker,
                 isTitle,
-                onPlayClick,
+                onLyricPlayClick,
 
             ...other } = this.props
 
@@ -133,7 +147,7 @@ class LyricsVerseView extends Component {
                         isSelected={isSelected}
                         isPlaying={isPlaying}
                         isAfterSelected={isAfterSelected}
-                        onClick={onPlayClick}
+                        onClick={onLyricPlayClick}
                     />
                 }
                 {isDoubleSpeaker ? (
