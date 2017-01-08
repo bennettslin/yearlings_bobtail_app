@@ -2,6 +2,7 @@
 import { LEFT, LYRIC_COLUMN_KEYS } from './constants'
 
 import { intersects } from 'helpers/dot-helper'
+import { getIsMobileWiki } from 'helpers/responsive-helper'
 
 const _parseLyrics = (lyric, selectedVerseIndex) => {
     // Recurse until object with verse index is found.
@@ -403,8 +404,11 @@ export const getWikiUrl = (props) => {
     const { selectedWikiIndex } = props
     if (selectedWikiIndex) {
         const annotation = getAnnotation(props),
-            wikiPath = annotation.popupAnchors[selectedWikiIndex - 1]
-        return `https://en.m.wikipedia.org/wiki/${wikiPath}`
+            wikiPath = annotation.popupAnchors[selectedWikiIndex - 1],
+            isMobileWiki = getIsMobileWiki(props),
+            domainPath = isMobileWiki ? 'https://en.m.wikipedia.org/wiki/' : 'https://www.wikipedia.org/wiki/'
+
+        return `${domainPath}${wikiPath}`
     } else {
         return null
     }

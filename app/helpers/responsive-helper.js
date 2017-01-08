@@ -10,7 +10,9 @@ import { PHONE_WIDTH,
          HEIGHTLESS_LYRIC_MAX,
          MENU_HEIGHT,
          MENU_PHONE_HEIGHT,
-         COLLAPSED_LYRIC_SECTION_HEIGHT } from 'helpers/constants'
+         COLLAPSED_LYRIC_SECTION_HEIGHT,
+         WIKI_SIDE_PADDING_TOTAL } from 'helpers/constants'
+
 import { getSong } from 'helpers/album-view-helper'
 
 export const resizeWindow = (target = window, presentIndex) => {
@@ -189,4 +191,13 @@ export const getLyricSectionRect = (state) => {
             bottom
         }
     }
+}
+
+export const getIsMobileWiki = (state) => {
+    const { windowWidth } = state,
+
+        // Wikipedia in mobile seems to max out at 892px.
+        isMobileWiki = windowWidth - WIKI_SIDE_PADDING_TOTAL < 892
+
+    return isMobileWiki
 }

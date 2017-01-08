@@ -89,6 +89,11 @@ const LYRIC = 'lyric',
 
     COLLAPSED_LYRIC_SECTION_HEIGHT = 0.32,
 
+    POPUP_CONTENT_SIDE_PADDING = 20,
+    WIKI_SUBFIELD_PADDING = 50,
+
+    WIKI_SIDE_PADDING_TOTAL = POPUP_CONTENT_SIDE_PADDING * 2 + WIKI_SUBFIELD_PADDING * 2,
+
     /************************
      * DEVICE WIDTH OBJECTS *
      ************************/
@@ -171,6 +176,7 @@ module.exports = {
     MENU_HEIGHT,
     MENU_PHONE_HEIGHT,
     COLLAPSED_LYRIC_SECTION_HEIGHT,
+    WIKI_SIDE_PADDING_TOTAL,
 
     LYRIC_VERSE_ELEMENT: 'verse_element',
     LYRIC_ANNOTATION_ELEMENT: 'annotation_element',
