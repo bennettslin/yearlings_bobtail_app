@@ -1184,7 +1184,8 @@ class App extends Component {
             accessedSectionKey = SECTION_KEYS[props.accessedSectionIndex],
             nextSectionKey = AccessHelper.getNextSectionKey(props, this.state.deviceIndex),
             { selectedVerseIndex,
-              selectedOverviewIndex } = props,
+              selectedOverviewIndex,
+              selectedWikiIndex } = props,
             { isAdmin,
               deviceIndex,
               windowWidth,
@@ -1217,6 +1218,9 @@ class App extends Component {
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"
             >
+                <div className={`wiki-overlay${selectedWikiIndex ? '' : ' hidden'}`}>
+
+                </div>
                 <AdminToggle
                     isAdmin={isAdmin}
                     isLyricExpanded={this.state.isLyricExpanded}

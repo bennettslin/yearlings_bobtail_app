@@ -5,7 +5,6 @@ import AudioBanner from './audio/audio-banner'
 import OverviewToggleSection from './overview/overview-toggle-section'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
-import WikiPopup from './wiki/wiki-popup'
 import DotsPopup from './dots/dots-popup'
 
 /*************
@@ -51,7 +50,6 @@ const MainColumnView = ({
     selectedDotKeys,
     selectedDotsIndex,
     presentDotKeys,
-    selectedWikiUrl,
     selectedWikiIndex,
     selectedSongTitle,
     selectedSongIndex,
@@ -101,14 +99,6 @@ const MainColumnView = ({
             onPortalClick: onSongFromPortalClick,
             onWikiUrlClick,
             onPopupButtonClick: onAnnotationClick,
-            onPopupContainerClick
-        },
-        wikiPopupProps = {
-            selectedWikiUrl,
-            accessedOn,
-            accessedSectionKey,
-            nextSectionKey,
-            onPopupButtonClick: onWikiUrlClick,
             onPopupContainerClick
         },
         dotsPopupProps = {
@@ -191,9 +181,6 @@ const MainColumnView = ({
                 <div className="field popup-field">
                     <div className="subfield annotation-subfield">
                         <AnnotationPopup {...annotationPopupProps} />
-                    </div>
-                    <div className="subfield wiki-subfield">
-                        <WikiPopup {...wikiPopupProps} />
                     </div>
                     <div className="subfield dots-subfield">
                         <DotsPopup {...dotsPopupProps} />

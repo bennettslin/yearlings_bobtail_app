@@ -3,6 +3,7 @@ import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
 import DotsTipsSection from './dots-tips-section'
 import OverviewPopup from './overview/overview-popup'
+import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
 import { getIsPhone, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getdotsTipsOutsideMenu } from 'helpers/responsive-helper'
 
@@ -250,6 +251,14 @@ const LiveView = ({
             onTipsClick,
             onDotsExpandClick
         },
+        wikiPopupProps = {
+            selectedWikiUrl,
+            accessedOn,
+            accessedSectionKey,
+            nextSectionKey,
+            onPopupButtonClick: onWikiUrlClick,
+            onPopupContainerClick
+        },
         verseBarShown = isSelectedVerseAbove || isSelectedVerseBelow
 
     return (
@@ -280,6 +289,9 @@ const LiveView = ({
                     <DotsTipsSection {...dotsTipsSectionProps} />
                 </div>
             }
+            <div className="subfield wiki-subfield">
+                <WikiPopup {...wikiPopupProps} />
+            </div>
         </div>
     )
 }

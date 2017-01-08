@@ -2,6 +2,8 @@
 @overflow-margin-width: 5px;
 @popup-button-length: 32px;
 
+@wiki-subfield-padding: 50px;
+
 .admin {
     .popup-content-wrapper {
         left: -@overflow-margin-width - @field-width - @field-padding;
@@ -47,11 +49,7 @@
 
     // Experimental values for now.
     .annotation-subfield {
-        height: 67%;
-    }
-
-    .wiki-subfield {
-        height: 33%;
+        height: 100%;
     }
 
     .dots-subfield {
@@ -78,12 +76,31 @@
     }
 }
 
+.wiki-subfield {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    padding: @wiki-subfield-padding;
+}
+
 .popup-transition-group {
     box-sizing: border-box;
 }
 
 .popup-content-wrapper {
     z-index: @popup-content-z-index;
+
+    &.wiki {
+        background-color: #efe;
+        box-sizing: border-box;
+        z-index: @wiki-popup-content-z-index;
+
+        width: ~"calc(100% - @{wiki-subfield-padding} * 2)";
+        height: ~"calc(100% - @{wiki-subfield-padding} * 2)";
+    }
 
     /**
      * If changing these duration values, don't forget to also change
