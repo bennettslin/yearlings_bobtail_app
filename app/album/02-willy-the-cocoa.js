@@ -1,4 +1,4 @@
-import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME } from 'helpers/constants'
+import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, BACKSTORY } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -83,8 +83,11 @@ module.exports = {
                                     anchor: `San Fernando Valley`,
                                     wiki: `San_Fernando_Valley`
                                 },
-                                `of Southern California, where wide boulevards stretch endlessly along a grid plan, and jagged mountains block the horizon on all sides. In the mirages caused by the year-round sweltering heat, the reflections of these mountains naturally point inwards.`
-                            ]
+                                `of Southern California, where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides. In the mirages created by the summer heat, the reflections of these mountains naturally point inwards, as if their jagged peaks had caused the cracks in the asphalt.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `in tarred pavement mirage.`,
