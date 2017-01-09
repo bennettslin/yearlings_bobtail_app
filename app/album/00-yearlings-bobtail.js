@@ -77,6 +77,16 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Safari styling wonkiness.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Strip out song component in admin.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `Figure out when portal has no description`,
             workedHours: 0,
             neededHours: 1
@@ -1080,6 +1090,11 @@ module.exports = {
         },
         {
             taskName: `Show instrumentals in lyrics`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Lyrics audio button in selected verse toggles playing.`,
             workedHours: 1,
             neededHours: 1
         }

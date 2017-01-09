@@ -3,8 +3,8 @@ import CSSTransitionGroup from 'react-addons-css-transition-group'
 
 // TODO: Separate into container and presentation components?
 const CLOSE = 'close',
-    PREVIOUS = 'previous',
-    NEXT = 'next'
+    PREVIOUS = 'side-button previous',
+    NEXT = 'side-button next'
 
 const PopupButton = ({
 

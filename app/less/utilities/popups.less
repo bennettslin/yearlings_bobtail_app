@@ -1,9 +1,9 @@
 // TODO: Make popup mixin.
 @overflow-margin-width: 5px;
-@popup-button-length: 32px;
+@popup-button-length: 50px;
 
 @popup-content-side-padding: 20px;
-@wiki-subfield-padding: 50px;
+@wiki-subfield-padding: @app-large-icon-diameter;
 @mini-wiki-subfield-padding: 10px;
 
 .admin {
@@ -35,7 +35,15 @@
 
 .live {
     .popup-content-wrapper {
-        padding: 30px @popup-content-side-padding 20px;
+
+        &.dots {
+            padding: 35px @popup-content-side-padding 20px;
+        }
+
+        &.annotation {
+            padding: 20px @popup-content-side-padding;
+        }
+
     }
 }
 
@@ -45,37 +53,29 @@
     width: 100%;
     height: 100%;
 
+    // TODO: May need styling here for Safari.
     .subfield {
-        position: relative;
     }
 
-    // Experimental values for now.
     .annotation-subfield {
-        height: 100%;
     }
 
     .dots-subfield {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        height: 100%;
-        width: 100%;
     }
+}
 
-    .popup-transition-group {
-        position: absolute;
-        // border: 2px solid red;
-        top: 0;
-        left: 0;
+.popup-transition-group {
+    position: absolute;
+    // border: 2px solid red;
+    top: 0;
+    left: 0;
 
-        width: 100%;
-        height: 100%;
+    width: 100%;
+    height: 100%;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wiki-subfield {
@@ -85,7 +85,7 @@
     height: 100%;
 
     box-sizing: border-box;
-    padding: @wiki-subfield-padding;
+    padding: @wiki-subfield-padding * 1.25 @wiki-subfield-padding @wiki-subfield-padding;
 }
 
 .popup-transition-group {
@@ -94,15 +94,6 @@
 
 .popup-content-wrapper {
     z-index: @popup-content-z-index;
-
-    &.wiki {
-        background-color: #efe;
-        box-sizing: border-box;
-        z-index: @wiki-popup-content-z-index;
-
-        width: ~"calc(100% - @{wiki-subfield-padding} * 2)";
-        height: ~"calc(100% - @{wiki-subfield-padding} * 2)";
-    }
 
     /**
      * If changing these duration values, don't forget to also change
@@ -130,16 +121,30 @@
     background-color: white;
     box-shadow: -2px 2px 8px 8px @box-shadow-colour;
 
+    &.annotation {
+        max-width: 400px;
+    }
+
+    &.wiki {
+        background-color: #efe;
+        box-sizing: border-box;
+        box-shadow: -2px 2px 8px 8px @dark-box-shadow-colour;
+        z-index: @wiki-popup-content-z-index;
+
+        width: ~"calc(100% - @{wiki-subfield-padding} * 2)";
+        max-width: @laptop-max-width;
+
+        height: ~"calc(100% - @{wiki-subfield-padding} * 2.5)";
+    }
+
     .popup-button {
         position: absolute;
-        height: @popup-button-length;
-        width: @popup-button-length;
+        height: @app-large-icon-diameter;
+        width: @app-large-icon-diameter;
 
         display: flex;
         justify-content: center;
         align-items: center;
-
-        background-color: #fdd;
 
         .popup-button-interactable {
             position: absolute;
@@ -153,14 +158,37 @@
             right: 0;
         }
 
+        &.side-button {
+            top: 50%;
+            transform: translateY(-50%);
+
+            border-radius: 50%;
+            box-shadow: -1px 1px 2px 2px @box-shadow-colour;
+            background-color: #dfd;
+        }
+
         &.previous-button {
-            left: 0;
-            bottom: 0;
+            left: -@app-large-icon-diameter * 0.85;
         }
 
         &.next-button {
-            right: 0;
-            bottom: 0;
+            right: -@app-large-icon-diameter * 0.85;
+        }
+    }
+}
+
+.monitor-width, .laptop-width, .tablet-width {
+    .popup-content-wrapper.wiki {
+        .popup-button.close-button {
+            top: -@app-large-icon-diameter;
+
+            // Duplicates annotation side button styles.
+            border-radius: 50%;
+            box-shadow: -1px 1px 2px 2px @box-shadow-colour;
+            background-color: #fdd;
+
+            top: -@app-large-icon-diameter * 0.7;
+            right: -@app-large-icon-diameter * 0.7;
         }
     }
 }
@@ -173,7 +201,41 @@
     .popup-content-wrapper {
         &.wiki {
             width: ~"calc(100% - @{mini-wiki-subfield-padding} * 2)";
-            height: ~"calc(100% - @{mini-wiki-subfield-padding} * 2)";
+            height: ~"calc(100% - @{wiki-subfield-padding} * 2)";
+
+            .popup-button {
+
+                &.close-button {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.phone-width {
+        .popup-content-wrapper {
+            &.wiki {
+                // Make side margin in phone just that much thinner.
+                width: ~"calc(100% - @{mini-wiki-subfield-padding})";
+            }
+        }
+
+        .heightless-lyric {
+            .popup-content-wrapper {
+                &.wiki {
+                    height: ~"calc(100% - @{mini-wiki-subfield-padding})";
+                }
+            }
+        }
+    }
+
+    // Reverse width and height when not enough height.
+    .heightless-lyric {
+        .popup-content-wrapper {
+            &.wiki {
+                height: ~"calc(100% - @{mini-wiki-subfield-padding} * 2)";
+                width: ~"calc(100% - @{wiki-subfield-padding} * 2)";
+            }
         }
     }
 }
