@@ -4,8 +4,8 @@
 @dot-interactable-mini-diameter: @app-large-icon-diameter;
 @dot-container-mini-padding: @dot-interactable-mini-diameter / 6;
 
-@dot-interactable-phone-diameter: @app-tablet-large-icon-diameter;
-@dot-container-phone-padding: @dot-interactable-phone-diameter / 7;
+@dot-interactable-phone-diameter: @app-large-icon-diameter;
+@dot-container-phone-padding: @dot-interactable-mini-diameter / 7;
 
 .dots-block {
     .dot-diameter-mixin;
@@ -131,21 +131,10 @@
 
 .mini-width {
     .dots-subfield {
-        .dot-diameter-mixin(@dot-interactable-mini-diameter, 0);
 
         .dots-block {
-            // Mini will have five dots per row.
-            width: 5 * (@dot-interactable-mini-diameter + 2 * @dot-container-mini-padding);
-        }
-
-        .dot-container {
-            padding: @dot-container-mini-padding;
-        }
-
-        .dot-interactable {
-            width: @dot-interactable-mini-diameter;
-            height: @dot-interactable-mini-diameter;
-            top: @dot-container-mini-padding;
+            // Mini will have three dots per row.
+            width: 3 * (@dot-interactable-diameter + 2 * @dot-container-padding);
         }
     }
 }

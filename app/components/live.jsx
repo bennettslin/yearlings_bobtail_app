@@ -3,9 +3,11 @@ import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
 import DotsTipsSection from './dots-tips-section'
 import OverviewPopup from './overview/overview-popup'
+import AnnotationPopup from './annotation/annotation-popup'
+import DotsPopup from './dots/dots-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getIsPhone, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getdotsTipsOutsideMenu } from 'helpers/responsive-helper'
+import { getIsPhone, getIsMini, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getdotsTipsOutsideMenu } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -138,7 +140,8 @@ const LiveView = ({
 
 }) => {
 
-    const overviewPopupProps = {
+    const showFullPopup = getIsPhone({ deviceIndex }) || getIsMini({ deviceIndex }),
+        overviewPopupProps = {
             isPhone,
             isLogue,
             hideClose: true,
@@ -148,6 +151,7 @@ const LiveView = ({
             onPopupContainerClick
         },
         mainColumnProps = {
+            showFullPopup,
             overviewPopupProps,
 
             dotsTipsOutsideMenu,
@@ -252,6 +256,33 @@ const LiveView = ({
             onTipsClick,
             onDotsExpandClick
         },
+        annotationPopupProps = {
+            songs,
+            annotation,
+            accessedPopupAnchorIndex,
+            selectedDotKeys,
+            selectedWikiIndex,
+            accessedOn,
+            accessedSectionKey,
+            nextSectionKey,
+            showArrows: true,
+            onPortalClick: onSongFromPortalClick,
+            onWikiUrlClick,
+            onPopupButtonClick: onAnnotationClick,
+            onPopupContainerClick
+        },
+        dotsPopupProps = {
+            selectedDotKeys,
+            selectedDotsIndex,
+            presentDotKeys,
+            accessedOn,
+            accessedSectionKey,
+            nextSectionKey,
+            accessedDotIndex,
+            onDotClick,
+            onPopupButtonClick: onDotsExpandClick,
+            onPopupContainerClick
+        },
         wikiPopupProps = {
             selectedWikiUrl,
             accessedOn,
@@ -291,9 +322,21 @@ const LiveView = ({
                     <DotsTipsSection {...dotsTipsSectionProps} />
                 </div>
             }
-            <div className="subfield wiki-subfield">
+            <div className="full-popup-subfield">
                 <WikiPopup {...wikiPopupProps} />
             </div>
+
+            {showFullPopup &&
+                <div className="full-popup-subfield annotation-subfield">
+                    <AnnotationPopup {...annotationPopupProps} />
+                </div>
+            }
+
+            {showFullPopup &&
+                <div className="full-popup-subfield dots-subfield">
+                    <DotsPopup {...dotsPopupProps} />
+                </div>
+            }
         </div>
     )
 }

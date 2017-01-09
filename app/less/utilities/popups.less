@@ -3,8 +3,8 @@
 @popup-button-length: 50px;
 
 @popup-content-side-padding: 20px;
-@wiki-subfield-padding: @app-large-icon-diameter;
-@mini-wiki-subfield-padding: 10px;
+@full-subfield: @app-large-icon-diameter;
+@mini-full-subfield: 10px;
 
 .admin {
     .popup-content-wrapper {
@@ -64,7 +64,7 @@
     }
 }
 
-.popup-transition-group {
+.popup-transition-group:not(.overview) {
     position: absolute;
     // border: 2px solid red;
     top: 0;
@@ -76,16 +76,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.wiki-subfield {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
-    box-sizing: border-box;
-    padding: @wiki-subfield-padding * 1.25 @wiki-subfield-padding @wiki-subfield-padding;
 }
 
 .popup-transition-group {
@@ -126,15 +116,10 @@
     }
 
     &.wiki {
-        background-color: #efe;
-        box-sizing: border-box;
-        box-shadow: -2px 2px 8px 8px @dark-box-shadow-colour;
-        z-index: @wiki-popup-content-z-index;
-
-        width: ~"calc(100% - @{wiki-subfield-padding} * 2)";
+        width: ~"calc(100% - @{full-subfield} * 2.5)";
         max-width: @laptop-max-width;
 
-        height: ~"calc(100% - @{wiki-subfield-padding} * 2.5)";
+        height: ~"calc(100% - @{full-subfield} * 2)";
     }
 
     .popup-button {
@@ -177,6 +162,14 @@
     }
 }
 
+.full-popup-subfield {
+    .popup-content-wrapper {
+        box-sizing: border-box;
+        box-shadow: -2px 2px 8px 8px @dark-box-shadow-colour;
+        z-index: @wiki-popup-content-z-index;
+    }
+}
+
 .monitor-width, .laptop-width, .tablet-width {
     .popup-content-wrapper.wiki {
         .popup-button.close-button {
@@ -194,20 +187,22 @@
 }
 
 .mini-width, .phone-width {
-    .wiki-subfield {
-        padding: @mini-wiki-subfield-padding;
-    }
 
     .popup-content-wrapper {
         &.wiki {
-            width: ~"calc(100% - @{mini-wiki-subfield-padding} * 2)";
-            height: ~"calc(100% - @{wiki-subfield-padding} * 2)";
+            width: ~"calc(100% - @{mini-full-subfield} * 2)";
+            height: ~"calc(100% - @{app-icon-diameter} * 2)";
 
-            .popup-button {
+        }
 
-                &.close-button {
-                    display: none;
-                }
+        &.dots {
+            padding: 20px @popup-content-side-padding;
+        }
+
+        .popup-button {
+
+            &.close-button {
+                display: none;
             }
         }
     }
@@ -216,14 +211,14 @@
         .popup-content-wrapper {
             &.wiki {
                 // Make side margin in phone just that much thinner.
-                width: ~"calc(100% - @{mini-wiki-subfield-padding})";
+                width: ~"calc(100% - @{mini-full-subfield})";
             }
         }
 
         .heightless-lyric {
             .popup-content-wrapper {
                 &.wiki {
-                    height: ~"calc(100% - @{mini-wiki-subfield-padding})";
+                    height: ~"calc(100% - @{mini-full-subfield})";
                 }
             }
         }
@@ -233,8 +228,8 @@
     .heightless-lyric {
         .popup-content-wrapper {
             &.wiki {
-                height: ~"calc(100% - @{mini-wiki-subfield-padding} * 2)";
-                width: ~"calc(100% - @{wiki-subfield-padding} * 2)";
+                height: ~"calc(100% - @{mini-full-subfield} * 2)";
+                width: ~"calc(100% - @{app-icon-diameter} * 2)";
             }
         }
     }

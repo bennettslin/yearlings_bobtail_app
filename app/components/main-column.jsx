@@ -24,6 +24,7 @@ const MainColumn = (props) => {
 const MainColumnView = ({
 
     // From props.
+    showFullPopup,
     overviewPopupProps,
 
     dotsTipsOutsideMenu,
@@ -178,14 +179,16 @@ const MainColumnView = ({
             <MenuField {...menuFieldProps} />
             <div className="field centre-field">
 
-                <div className="field popup-field">
-                    <div className="subfield annotation-subfield">
-                        <AnnotationPopup {...annotationPopupProps} />
+                {!showFullPopup &&
+                    <div className="field popup-field">
+                        <div className="subfield annotation-subfield">
+                            <AnnotationPopup {...annotationPopupProps} />
+                        </div>
+                        <div className="subfield dots-subfield">
+                            <DotsPopup {...dotsPopupProps} />
+                        </div>
                     </div>
-                    <div className="subfield dots-subfield">
-                        <DotsPopup {...dotsPopupProps} />
-                    </div>
-                </div>
+                }
 
                 <div className="subfield overview-subfield">
                     <OverviewToggleSection {...overviewToggleSectionProps} />

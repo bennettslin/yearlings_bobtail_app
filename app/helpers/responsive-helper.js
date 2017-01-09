@@ -55,6 +55,10 @@ export const getIsPhone = ({ deviceIndex }) => {
     return DEVICE_OBJECTS[deviceIndex].className === PHONE_WIDTH
 }
 
+export const getIsMini = ({ deviceIndex }) => {
+    return DEVICE_OBJECTS[deviceIndex].className === MINI_WIDTH
+}
+
 export const getIsDesktop = (deviceIndex) => {
     const deviceClassName = DEVICE_OBJECTS[deviceIndex].className
 
@@ -194,11 +198,9 @@ export const getLyricSectionRect = (state) => {
 }
 
 export const getIsMobileWiki = (state) => {
-    const { deviceIndex } = state,
-        deviceClassName = DEVICE_OBJECTS[deviceIndex].className
 
     // If phone or mini, show mobile wiki.
-    if (deviceClassName === MINI_WIDTH || deviceClassName === PHONE_WIDTH) {
+    if (getIsPhone(state) || getIsMini(state)) {
         return true
 
     } else {

@@ -77,6 +77,31 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Use composition to get rid of duplicate annotation and dots popup code in live and main column.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Activity indicator z index should be below close button.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Clicking on lyrics audio buttons shouldn’t dismiss annotation popup`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
+            taskName: `Weird bug where clicking side button in annotation scrolls entire screen up?!`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
+            taskName: `Allow box shadow for popup buttons that hang over edge.`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `Safari styling wonkiness.`,
             workedHours: 0,
             neededHours: 1
@@ -160,11 +185,6 @@ module.exports = {
             taskName: `allow annotation to remain selected when song advances to next song.`,
             workedHours: 0,
             neededHours: 5
-        },
-        {
-            taskName: `layout, position, and style annotation section.`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `show ear and expand buttons in collapsed lyric column only upon scroll down.`,
@@ -1097,6 +1117,11 @@ module.exports = {
             taskName: `Lyrics audio button in selected verse toggles playing.`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `layout, position, and style annotation section.`,
+            workedHours: 5,
+            neededHours: 5
         }
     ]
 }

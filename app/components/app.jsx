@@ -43,7 +43,7 @@ import { NAV_SECTION,
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey } from 'helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getLyricSectionRect } from 'helpers/responsive-helper'
+import { resizeWindow, getIsPhone, getIsMini, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getLyricSectionRect } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -1185,7 +1185,9 @@ class App extends Component {
             nextSectionKey = AccessHelper.getNextSectionKey(props, this.state.deviceIndex),
             { selectedVerseIndex,
               selectedOverviewIndex,
-              selectedWikiIndex } = props,
+              selectedWikiIndex,
+              selectedAnnotationIndex,
+              selectedDotsIndex } = props,
             { isAdmin,
               deviceIndex,
               windowWidth,
@@ -1208,7 +1210,8 @@ class App extends Component {
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
                 showSingleLyricColumn,
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
-            })
+            }),
+            showOverlay = selectedWikiIndex || (getIsPhone(state) || getIsMini(state)) && (selectedAnnotationIndex || selectedDotsIndex)
 
         return (
             <div
@@ -1218,8 +1221,9 @@ class App extends Component {
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"
             >
-                <div className={`wiki-overlay${selectedWikiIndex ? '' : ' hidden'}`}>
-
+                <div
+                    className={`popup-overlay${showOverlay ? '' : ' hidden'}`}
+                >
                 </div>
                 <AdminToggle
                     isAdmin={isAdmin}
