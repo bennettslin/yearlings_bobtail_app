@@ -65,12 +65,12 @@ const SharedView = ({
             />
             <NotesSection />
         </div>
-        <Song {...other}
+        {/* <Song {...other}
             selectedSongIndex={selectedSongIndex}
             accessedOn={accessedOn}
             accessedSectionKey={accessedSectionKey}
             nextSectionKey={nextSectionKey}
-        />
+        /> */}
     </div>
 )
 
