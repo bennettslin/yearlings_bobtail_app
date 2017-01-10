@@ -87,9 +87,9 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `Clicking on lyrics audio buttons shouldn’t dismiss annotation popup`,
+            taskName: `Clicking on audio buttons (in player or lyrics) shouldn’t dismiss annotation or dots popups`,
             workedHours: 0,
-            neededHours: 1
+            neededHours: 2
         },
         {
             taskName: `Weird bug where clicking side button in annotation scrolls entire screen up?!`,
