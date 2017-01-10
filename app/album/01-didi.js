@@ -34,16 +34,20 @@ module.exports = {
     },
     scenes: [
         {
-            time: 0,
-            description: 'placeholder description'
+            verseIndex: 0,
+            description: `It's a schoolday morning. Young Anita walks out of the house, eyes rolling, as young Bennett rushes after her, his jacket half on and in a panic.`
         },
         {
-            time: 0,
-            description: 'placeholder description'
+            verseIndex: 10,
+            description: `Bennett is blushing, with dried tears, wearing oversized overalls, seated on a bench by the school gates. Beside him is a sealed grocery bag.`
         },
         {
-            time: 0,
-            description: 'placeholder description'
+            verseIndex: 14,
+            description: `Bennett is soaking in a bathtub at home.`
+        },
+        {
+            verseIndex: 24,
+            description: 'Bennett is still in the bathtub, this time playing a toy glockenspiel. Anita is now seated next to him, cheering him up with music playing on a phonograph.'
         }
     ],
     tip: {
