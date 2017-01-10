@@ -241,8 +241,12 @@ class App extends Component {
 
         let popupWasOpen = false
 
-        // If audio section is accessed, it's fine to keep lyric expanded.
-        if (exemptSection !== AUDIO_SECTION && exemptSection !== LYRICS_SECTION && this.state.isLyricExpanded) {
+        /**
+         * If audio section is accessed, it's fine to keep lyric expanded. Also,
+         * annotation and dots popups will no longer collapse the lyric column
+         * if expanded.
+         */
+        if (this.state.isLyricExpanded && exemptSection !== AUDIO_SECTION && exemptSection !== LYRICS_SECTION && exemptSection !== ANNOTATION_SECTION && exemptSection !== DOTS_SECTION) {
             this.selectLyricExpand(undefined, false)
             popupWasOpen = true
         }
@@ -485,7 +489,6 @@ class App extends Component {
                     this.selectOverview(undefined, undefined, HIDDEN)
                 }
 
-                this.selectLyricExpand(undefined, false)
                 this.selectAnnotation()
 
                 this._handleSectionAccess({
