@@ -43,7 +43,7 @@ import { NAV_SECTION,
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey } from 'helpers/album-view-helper'
-import { resizeWindow, getIsPhone, getIsMini, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getLyricSectionRect } from 'helpers/responsive-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getLyricSectionRect } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -1211,7 +1211,8 @@ class App extends Component {
                 showSingleLyricColumn,
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
             }),
-            showOverlay = selectedWikiIndex || (getIsPhone(state) || getIsMini(state)) && (selectedAnnotationIndex || selectedDotsIndex)
+            showOverlay = selectedWikiIndex ||
+                (!getIsDesktop(deviceIndex)) && (selectedAnnotationIndex || selectedDotsIndex)
 
         return (
             <div

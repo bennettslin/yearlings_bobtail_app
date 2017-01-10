@@ -7,7 +7,7 @@ import AnnotationPopup from './annotation/annotation-popup'
 import DotsPopup from './dots/dots-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getIsPhone, getIsMini, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getdotsTipsOutsideMenu } from 'helpers/responsive-helper'
+import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getdotsTipsOutsideMenu } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -140,7 +140,7 @@ const LiveView = ({
 
 }) => {
 
-    const showFullPopup = getIsPhone({ deviceIndex }) || getIsMini({ deviceIndex }),
+    const showFullPopup = !getIsDesktop(deviceIndex),
         overviewPopupProps = {
             isPhone,
             isLogue,
