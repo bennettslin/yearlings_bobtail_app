@@ -546,14 +546,23 @@ module.exports = {
                     {
                         anchor: `worrisome`,
                         annotation: {
-                            description: `I genuinely wished Miriam the best and continued to care about her well-being. This surprised me, given the contrast of how selfishly I behaved each time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even for a little while. So as far as I was concerned, it was a pretty sweet deal.`
+                            description: `I genuinely wished Miriam the best and continued to care about her well-being. This surprised me, given the contrast of how selfishly I behaved each time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even for a little while. As far as I was concerned, then, I landed a pretty sweet deal.`
                         }
                     },
                     {
-                        // TODO: There is a mention of my Buddhism here.
+                        // TODO: Mention my family's Buddhism in Odin.
                         anchor: `"Bless her, Godspeed…"`,
                         annotation: {
-                            description: `In her gene pool, "here's not where some lesser gods peed." When I was a child, the idea of being watched over by inferior gods seemed a fitting rationale for my family's defective genes. After all, I felt insecure enough as it was about belonging to a different faith, one associated primarily with a race deemed inferior by society.`
+                            description: [
+                                `In her gene pool, "here's not where some lesser gods peed." Mark Medoff's play`,
+                                {
+                                    italic: {
+                                        anchor: `Children of a Lesser God`,
+                                        wiki: `Children_of_a_Lesser_God_(play)`
+                                    }
+                                },
+                                `centres on a deaf woman, and thus its title seems to suggest that the disabled are divinely ordained to be inferior. But beyond feeling insecure about the autism running in my family, I was also keenly aware as a child that my family didn't worship the right gods according to society. And since race often correlates with religion, this suggested to me that some races are also inferior by divine will.`
+                            ]
                         }
                     }
                 ]
