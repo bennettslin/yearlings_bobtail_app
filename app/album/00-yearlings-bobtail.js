@@ -1122,6 +1122,11 @@ module.exports = {
             taskName: `layout, position, and style annotation section.`,
             workedHours: 5,
             neededHours: 5
+        },
+        {
+            taskName: `Closing annotation or dots popups, by clicking or access, does not collapse lyrics.`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

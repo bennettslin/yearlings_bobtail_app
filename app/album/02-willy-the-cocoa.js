@@ -9,16 +9,28 @@ module.exports = {
     },
     scenes: [
         {
-            time: 0,
-            description: 'placeholder description'
+            verseIndex: 0,
+            description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`
         },
         {
-            time: 0,
-            description: 'placeholder description'
+            verseIndex: 9,
+            description: `Outside next to the porch, Bennett's mother had been cutting Christopher's hair a moment ago. Christopher has just leapt out of his chair in panic. The cloth that had been draped around him has been tossed in the air. Looking exasperated, Bennett tries to catch him. Having just arrived, Willy is ducked behind the porch, a kind chuckle on his face.`
         },
         {
-            time: 0,
-            description: 'placeholder description'
+            verseIndex: 19,
+            description: `Inside the house, holding the shredded remains of a comic book, Bennett is kicking Christopher, who rolls on the ground, in tears and clenching his stomach. Bennett's father is rushing in, angry and determined to stop the fight.`
+        },
+        {
+            verseIndex: 27,
+            description: `Willy is in a fight with two hooligans. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`
+        },
+        {
+            verseIndex: 38,
+            description: `Inside the house, Bennett is in bed, with his mother beside him giving comfort.`
+        },
+        {
+            verseIndex: 44,
+            description: `Bennett is now dreaming. It's night, and he and Willy are holding Christopher's hand, one on each side. Christopher gazes up at Bennett with a knowing, comforting smile. Willy's and Christopher's shadows both reveal them to be trolls. Together, they are leading Bennett to a circle of trolls.`
         }
     ],
     tip: {
