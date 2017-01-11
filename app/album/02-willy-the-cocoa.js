@@ -1,4 +1,4 @@
-import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, BACKSTORY, NARRATIVE, PUN } from 'helpers/constants'
+import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, MUSIC, BACKSTORY, NARRATIVE, PUN } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -47,7 +47,7 @@ module.exports = {
                             `with muted mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`
                         ],
                         dotKeys: {
-                            music: true
+                            [MUSIC]: true
                         }
                     }
                 }
@@ -208,6 +208,7 @@ module.exports = {
                             description: `In most legends, changelings wittingly participate in the deceit and take pains to hide their true form. And so, preparing to drop off his recyclables where he'll rejoin the company of others, Willy "ends as troll."`,
                             // TODO: This also needs a dot category that is about wiki without actually having a wiki.
                             dotKeys: {
+                                [NARRATIVE]: true,
                                 [PUN]: true
                             }
                         }
@@ -232,7 +233,10 @@ module.exports = {
                     {
                         anchor: `our tins and our jars`,
                         annotation: {
-                            description: `Some families help Willy by leaving out their discarded recyclables for him to gather in bulk.`
+                            description: `Some families help Willy by leaving out their discarded recyclables for him to gather in bulk.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `this week?`
@@ -245,7 +249,11 @@ module.exports = {
                     {
                         anchor: `haircutting to the sun`,
                         annotation: {
-                            description: `My mother is cutting my brother's hair on the front lawn, since the cleanup afterwards will be easier.`
+                            description: `Or else, to the "son." My mother is cutting my younger brother's hair on the front lawn, since the cleanup afterwards will be easier.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -257,7 +265,11 @@ module.exports = {
                     {
                         anchor: `suddenly baby shrieks…`,
                         annotation: {
-                            description: `As a child, my younger brother was typically calm and quiet in demeanour. However, when made to do things he didn't enjoy or didn't understand, such as sitting through a haircut, he was prone to frenzied outbursts, which were sometimes scary given how likely he was to injure himself.`
+                            description: `My brother was typically calm and quiet in demeanour as a child. However, when made to do things he didn't enjoy or understand, such as sitting through the haircut currently taking place, he was prone to frenzied outbursts.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -274,9 +286,20 @@ module.exports = {
                     `As`,
                     {
                         anchor: `gap-toothed coma`,
-                        annotation: {
-                            description: `Also, "gap-toothed comb."`
-                        }
+                        annotation: [
+                            {
+                                description: `While my brother often wore a blank expression, it would instantly disappear once he felt provoked.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                }
+                            },
+                            {
+                                description: `My mother is using a "gap-toothed comb."`,
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            }
+                        ],
                     },
                     `parts his forehead,`
                 ]
@@ -288,7 +311,10 @@ module.exports = {
                     {
                         anchor: `pair of seizures`,
                         annotation: {
-                            description: `Also, "pair of scissors."`
+                            description: `My mother is also wielding a pair of "scissors."`,
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     },
                     `to the patch.`
@@ -305,8 +331,11 @@ module.exports = {
                     {
                         anchor: `see your kid with whiskers,`,
                         annotation: {
-
-                            description: `Willy jokingly predicts that my brother will sport an unshaven look as an adult, given his present distaste for haircuts. But Willy might also be hinting that he literally sees my brother with a beard here and now, in accordance with some legends in which the changeling is not a child at all, but rather a fully grown troll who is perhaps centuries old.`
+                            // TODO: Include the non-wiki wiki reference here.
+                            description: `Willy jokingly predicts that my brother will sport an unshaven look as an adult, given his present distaste for haircuts. But Willy might also be hinting that he literally sees my brother with a beard, here and now, in accordance with some legends in which the changeling is not a child at all, but rather a fully grown troll who is perhaps centuries old.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -330,7 +359,11 @@ module.exports = {
                     {
                         anchor: `longest cowlick`,
                         annotation: {
-                            description: `Being acquainted with my family over the years, Willy understands that my brother's outbursts are the reason my mother allows his hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicable lack of development in older children gave rise to a belief in changelings.`
+                            // TODO: Non-wiki reference here.
+                            description: `Being acquainted with my family over the years, Willy understands that my brother's outbursts are the reason my mother allows his hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicable lack of development in older children gave rise to a belief in changelings.`,
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     },
                     `yet I've seen!`

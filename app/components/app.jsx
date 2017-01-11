@@ -38,7 +38,7 @@ import { NAV_SECTION,
 
          DEVICE_OBJECTS,
 
-         WIKI,
+         REFERENCE,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
@@ -575,7 +575,7 @@ class App extends Component {
         let annotationDeselected
 
         // Close wiki popup if deselected.
-        if (!isSelected && selectedDotKey === WIKI && this.props.selectedWikiIndex) {
+        if (!isSelected && selectedDotKey === REFERENCE && this.props.selectedWikiIndex) {
             this._closePopupIfOpen({})
         }
 

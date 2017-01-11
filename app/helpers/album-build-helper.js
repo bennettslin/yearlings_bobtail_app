@@ -4,7 +4,8 @@ import { ALBUM_BUILD_KEYS,
          LYRIC,
          LEFT,
          RIGHT,
-         CENTRE } from './constants'
+         CENTRE,
+         REFERENCE } from './constants'
 import { getFormattedAnnotationTitle } from './format-helper'
 import { getAnnotationsDotKeys } from 'helpers/album-view-helper'
 
@@ -388,7 +389,6 @@ const _prepareCard = (card, dotKeys, finalPassThrough) => {
     const { description,
             portalLinks } = card
 
-    // If card has a wiki link, add wiki key to dot keys.
     if (description) {
         const hasWiki = _parseWiki('wiki', description, finalPassThrough)
 
@@ -397,9 +397,11 @@ const _prepareCard = (card, dotKeys, finalPassThrough) => {
             if (!card.dotKeys) {
                 card.dotKeys = {}
             }
-            card.dotKeys.wiki = true
-            dotKeys.wiki = true
-            _tempStore._songDotKeys.wiki = true
+
+            // If card has a wiki link, add 'reference' key to dot keys.
+            card.dotKeys[REFERENCE] = true
+            dotKeys[REFERENCE] = true
+            _tempStore._songDotKeys[REFERENCE] = true
         }
     }
 
