@@ -231,6 +231,7 @@ class App extends Component {
     _closePopupIfOpen({
         accessOff,
         exemptSection,
+        closedFromSpace,
         overrideClosePopupsDefaultWithSection,
         overrideClosePopupsDefaultWithOverviewOption,
         selectedAnnotationIndex = this.props.selectedAnnotationIndex
@@ -239,17 +240,8 @@ class App extends Component {
                 selectedDotsIndex,
                 selectedOverviewIndex } = this.props
 
-        let popupWasOpen = false
-
-        /**
-         * If audio section is accessed, it's fine to keep lyric expanded. Also,
-         * annotation and dots popups will no longer collapse the lyric column
-         * if expanded.
-         */
-        if (this.state.isLyricExpanded && exemptSection !== AUDIO_SECTION && exemptSection !== LYRICS_SECTION && exemptSection !== ANNOTATION_SECTION && exemptSection !== DOTS_SECTION) {
-            this.selectLyricExpand(undefined, false)
-            popupWasOpen = true
-        }
+        let popupWasOpen = false,
+            collapseLyric = true
 
         // Hide overview.
         if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
@@ -259,6 +251,15 @@ class App extends Component {
         // Hide dots.
         if (exemptSection !== DOTS_SECTION && selectedDotsIndex === 1) {
             this.selectDotsExpand({ popupsAlreadyClosed: true, overrideClosePopupsDefaultWithSection }, 0)
+
+            /**
+             * If dots popup was closed from space bar, leave lyric column
+             * expanded.
+             */
+            if (closedFromSpace) {
+                collapseLyric = false
+            }
+
             popupWasOpen = true
         }
 
@@ -287,6 +288,24 @@ class App extends Component {
                 }
             }
 
+            /**
+             * If annotation popup was closed from space bar, leave lyric
+             * column expanded.
+             */
+            if (closedFromSpace) {
+                collapseLyric = false
+            }
+
+            popupWasOpen = true
+        }
+
+        /**
+         * If audio section is accessed, it's fine to keep lyric expanded. Also,
+         * annotation and dots popups will no longer collapse the lyric column
+         * if expanded.
+         */
+        if (collapseLyric && this.state.isLyricExpanded && exemptSection !== AUDIO_SECTION && exemptSection !== LYRICS_SECTION && exemptSection !== ANNOTATION_SECTION && exemptSection !== DOTS_SECTION) {
+            this.selectLyricExpand(undefined, false)
             popupWasOpen = true
         }
 
@@ -498,7 +517,7 @@ class App extends Component {
 
             } else {
                 this._handleSectionAccess({
-                    accessedSectionKey: e.overrideClosePopupsDefaultWithSection || NAV_SECTION,
+                    accessedSectionKey: e.overrideClosePopupsDefaultWithSection || AUDIO_SECTION,
                     popupsAlreadyClosed: e.popupsAlreadyClosed
                 })
             }
@@ -1004,7 +1023,7 @@ class App extends Component {
 
             // Space closes popup if open, otherwise accesses next section.
             } else if (keyName === SPACE) {
-                if (!this._closePopupIfOpen({})) {
+                if (!this._closePopupIfOpen({ closedFromSpace: true })) {
                     this._handleSectionAccess({})
                 }
 

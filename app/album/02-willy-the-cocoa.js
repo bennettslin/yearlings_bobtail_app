@@ -1,4 +1,4 @@
-import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, MUSIC, BACKSTORY, NARRATIVE, PUN } from 'helpers/constants'
+import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, MUSIC, BACKSTORY, NARRATIVE, PUN, REFERENCE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -206,10 +206,10 @@ module.exports = {
                         anchor: `he ends his stroll.`,
                         annotation: {
                             description: `In most legends, changelings wittingly participate in the deceit and take pains to hide their true form. And so, preparing to drop off his recyclables where he'll rejoin the company of others, Willy "ends as troll."`,
-                            // TODO: This also needs a dot category that is about wiki without actually having a wiki.
                             dotKeys: {
                                 [NARRATIVE]: true,
-                                [PUN]: true
+                                [PUN]: true,
+                                [REFERENCE]: true
                             }
                         }
                     }
@@ -331,10 +331,10 @@ module.exports = {
                     {
                         anchor: `see your kid with whiskers,`,
                         annotation: {
-                            // TODO: Include the non-wiki wiki reference here.
                             description: `Willy jokingly predicts that my brother will sport an unshaven look as an adult, given his present distaste for haircuts. But Willy might also be hinting that he literally sees my brother with a beard, here and now, in accordance with some legends in which the changeling is not a child at all, but rather a fully grown troll who is perhaps centuries old.`,
                             dotKeys: {
-                                [NARRATIVE]: true
+                                [NARRATIVE]: true,
+                                [REFERENCE]: true
                             }
                         }
                     }

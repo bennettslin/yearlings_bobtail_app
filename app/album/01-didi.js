@@ -8,6 +8,7 @@ import { INSTRUMENTAL,
          NARRATIVE,
          BACKSTORY,
          PUN,
+         REFERENCE,
          MUSIC } from 'helpers/constants'
 
 // TODO: Music annotations: Pet Sounds, toy instruments, Joyce's Portrait, and muted guitar.
@@ -159,7 +160,7 @@ module.exports = {
                                 `means "big sister" in Chinese.`
                             ],
                             dotKeys: {
-                                // TODO: Needs a dot! General wiki?
+                                [REFERENCE]: true
                             }
                         }
                     },
@@ -271,8 +272,8 @@ module.exports = {
                         annotation: {
                             description: `After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what the label entailed. My mother's tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.`,
                             dotKeys: {
-                                // TODO: General wiki?
-                                [BACKSTORY]: true
+                                [BACKSTORY]: true,
+                                [REFERENCE]: true
                             }
                         }
                     }

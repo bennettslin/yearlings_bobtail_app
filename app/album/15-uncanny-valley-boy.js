@@ -670,7 +670,7 @@ module.exports = {
                 subStanza: [
                     {
                         // TODO: Figure out times for these.
-                        time: '?',
+                        time: 150,
                         lyric: {
                             italic: `Your dulling gold now gone…`
                         }
@@ -712,7 +712,7 @@ module.exports = {
                 unitMap: true,
                 subStanza: [
                     {
-                        time: '?',
+                        time: 157,
                         lyric: {
                             italic: [
                                 `…traded in for the`,

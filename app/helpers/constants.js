@@ -214,8 +214,8 @@ module.exports = {
     ANNOTATION_SECTION,
     WIKI_SECTION,
     SECTION_KEYS: [
-        NAV_SECTION,
         AUDIO_SECTION,
+        NAV_SECTION,
         LYRICS_SECTION,
         DOTS_SECTION,
         ANNOTATION_SECTION,

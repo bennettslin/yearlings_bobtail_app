@@ -1019,7 +1019,7 @@ module.exports = {
                 ]
             },
             {
-                time: '?',
+                time: 142,
                 lyric: {
                     italic: [
                         {
