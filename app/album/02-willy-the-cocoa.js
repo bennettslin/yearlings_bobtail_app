@@ -10,34 +10,62 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`
+            description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`,
+            characters: {
+                willy: true
+            }
         },
         {
             verseIndex: 9,
-            description: `Outside next to the porch, Bennett's mother had been cutting Christopher's hair a moment ago. Christopher has just leapt out of his chair in panic. The cloth that had been draped around him has been tossed in the air. Looking exasperated, Bennett tries to catch him. Having just arrived, Willy is ducked behind the porch, a kind chuckle on his face.`
+            description: `Outside next to the porch, Bennett's mother had been cutting Christopher's hair a moment ago. Christopher has just leapt out of his chair in panic. The cloth that had been draped around him has been tossed in the air. Looking exasperated, Bennett tries to catch him. Having just arrived, Willy is ducked behind the porch, a kind chuckle on his face.`,
+            characters: {
+                willy: true,
+                mother: true,
+                christopher: true,
+                preteenBennett: true
+            }
         },
         {
             verseIndex: 19,
-            description: `Inside the house, holding the shredded remains of a comic book, Bennett is kicking Christopher, who rolls on the ground, in tears and clenching his stomach. Bennett's father is rushing in, angry and determined to stop the fight.`
+            description: `Inside the house, holding the shredded remains of a comic book, Bennett is kicking Christopher, who rolls on the ground, in tears and clenching his stomach. Bennett's father is rushing in, angry and determined to stop the fight.`,
+            characters: {
+                father: true,
+                christopher: true,
+                preteenBennett: true
+            }
         },
         {
             verseIndex: 27,
-            description: `Willy is in a fight with two hooligans. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`
+            description: `Willy is in a fight with two hooligans. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`,
+            characters: {
+                willy: true,
+                hooligans: true
+            }
         },
         {
             verseIndex: 38,
-            description: `Inside the house, Bennett is in bed, with his mother beside him giving comfort.`
+            description: `Inside the house, Bennett is in bed, with his mother beside him giving comfort.`,
+            characters: {
+                mother: true,
+                preteenBennett: true
+            }
         },
         {
             verseIndex: 44,
-            description: `Bennett is now dreaming. It's night, and he and Willy are holding Christopher's hand, one on each side. Christopher gazes up at Bennett with a knowing, comforting smile. Willy's and Christopher's shadows both reveal them to be trolls. Together, they are leading Bennett to a circle of trolls.`
+            description: `Bennett is now dreaming. It's night, and he and Willy are holding Christopher's hand, one on each side. Christopher gazes up at Bennett with a knowing, comforting smile. Willy's and Christopher's shadows both reveal them to be trolls. Together, they are leading Bennett to a circle of trolls.`,
+            characters: {
+                willy: true,
+                christopher: true,
+                preteenBennett: true,
+                trolls: true
+            }
         }
     ],
     tip: {
         description: 'placeholder tip'
     },
     totalTime: 207,
-    overview: `Willy was an autistic man who wandered our neighbourhood collecting recyclables for a living. One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
+    overview: `Willy was a mentally disabled man who wandered our neighbourhood collecting recyclables for a living. One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
     lyrics: [
         [
             {
@@ -171,7 +199,7 @@ module.exports = {
                                 }
                             },
                             {
-                                description: `He peers through an empty soda bottle, the top of which is tapered like the outline of his skull.`,
+                                description: `Willy peers through an empty soda bottle, the top of which is tapered like the outline of his skull.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -300,7 +328,7 @@ module.exports = {
                         anchor: `gap-toothed coma`,
                         annotation: [
                             {
-                                description: `While my brother often wore a blank expression, it would instantly disappear once he felt provoked.`,
+                                description: `While my brother often wore a blank expression on his face, it would instantly disappear once he felt provoked.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 }
@@ -343,7 +371,7 @@ module.exports = {
                     {
                         anchor: `see your kid with whiskers,`,
                         annotation: {
-                            description: `Willy jokingly predicts that my brother will sport an unshaven look as an adult, given his present distaste for haircuts. But Willy might also be hinting that he literally sees my brother with a beard, here and now, in accordance with some legends in which the changeling is not a child at all, but rather a fully grown troll who is perhaps centuries old.`,
+                            description: `Willy jokingly predicts that my brother will sport an unshaven look as an adult, given his present distaste for haircuts. But Willy might also be hinting that he literally sees my brother with a beard, here and now. After all, in many legends the changeling is not a child at all, but rather a fully grown troll who is perhaps centuries old.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [REFERENCE]: true
@@ -359,7 +387,10 @@ module.exports = {
                     {
                         anchor: `creepers on his cheek,`,
                         annotation: {
-                            description: `If Willy is immune to the enchantment that disguises my brother's true form, then perhaps it's no surprise. After all, Willy is quite possibly a changeling himself, as evinced by his own unkempt facial hair.`
+                            description: `Of course, it should not be surprising if Willy is immune to the enchantment that disguises my brother's true form, since Willy is quite possibly a changeling himself, as evinced by his own unkempt facial hair.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -371,10 +402,11 @@ module.exports = {
                     {
                         anchor: `longest cowlick`,
                         annotation: {
-                            // TODO: Non-wiki reference here.
                             description: `Being acquainted with my family over the years, Willy understands that my brother's outbursts are the reason my mother allows his hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicable lack of development in older children gave rise to a belief in changelings.`,
                             dotKeys: {
-                                [PUN]: true
+                                [NARRATIVE]: true,
+                                [PUN]: true,
+                                [REFERENCE]: true
                             }
                         }
                     },
@@ -396,20 +428,28 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                `Back then, the back pages of a comic book were usually filled with ads for novelty items. As a kid, I once sent away for a pair of`,
+                                `Back then, the back pages of a comic book were filled with ads for novelty items such as`,
                                 {
                                     anchor: `X-Ray Specs,`,
                                     wiki: `X-Ray_Specs_(novelty)`
                                 },
-                                `glasses that purportedly allow one to see through objects. They didn't work.`
-                            ]
+                                `a pair of special glasses that purportedly allow one to see through objects. Having sent away for them a while ago, I'm now trying them on. (As it turns out, they didn't actually work.)`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `enraged at`,
                     {
                         anchor: `pages clawed,`,
                         annotation: {
-                            description: `My brother used to cut letters of the alphabet out of paper, an activity that my parents encouraged since it was creative and kept him occupied. Unfortunately, my comic books sometimes made their way by accident into his scrap pile of old magazines.`
+                            description: `My brother used to cut letters of the alphabet out of paper, an activity that my parents encouraged since it was creative and kept him occupied. Unfortunately, my comic book seems to have accidentally made its way into his scrap pile of old magazines.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -428,7 +468,7 @@ module.exports = {
                     {
                         anchor: `bearded baby`,
                         annotation: {
-                            description: `A changeling out of disguise might literally have a beard. Of course, I was also frustrated with always having to engage my brother at a level far below his actual age.`
+                            description: `It would have been the height of irony if my brother were actually centuries old, as it frustrated me that I always had to engage with him at a level far below his actual age.`
                         }
                     },
                     `to the ground`

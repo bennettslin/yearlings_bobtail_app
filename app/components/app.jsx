@@ -244,7 +244,7 @@ class App extends Component {
             collapseLyric = true
 
         // Hide overview.
-        if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
+        if (exemptSection !== AUDIO_SECTION && OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
             this.selectOverview(undefined, undefined, overrideClosePopupsDefaultWithOverviewOption || HIDDEN)
         }
 
