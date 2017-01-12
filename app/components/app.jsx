@@ -762,9 +762,6 @@ class App extends Component {
     selectVerse(e, selectedVerseIndex = 0, direction) {
         const songTimes = getSongTimes(this.props)
 
-        console.error('selectedVerseIndex', selectedVerseIndex);
-        console.error('direction', direction);
-
         this._stopPropagation(e)
 
         /**
