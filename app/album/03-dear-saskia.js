@@ -10,23 +10,48 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
             characters: {
-
+                puppetFamily: true
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 5,
+            description: `In Bennett's thought bubble, there is a drawing of him and Sasha on his sketchpad, together exploring the mountains of Taiwan.`,
             characters: {
-
+                puppetFamily: true,
+                bennettDrawing: true,
+                sashaDrawing: true
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 12,
+            description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated across from her who is wearing a yarmulke.`,
             characters: {
-
+                puppetFamily: true,
+                preteenBennett: true,
+                Sasha: true,
+                jewishBoy: true
+            }
+        },
+        {
+            verseIndex: 20,
+            description: `In Bennett's thought bubble, he is being bullied by an older boy. Sasha is lecturing the bully, telling him to leave Bennett alone.`,
+            characters: {
+                puppetFamily: true,
+                Sasha: true,
+                preteenBennett: true,
+                bully: true
+            }
+        },
+        {
+            verseIndex: 30,
+            description: `In Bennett's thought bubble, there is a drawing of Bennett by himself on one continent, and Sasha and a Jewish boy on another, with an ocean separating them.`,
+            characters: {
+                puppetFamily: true,
+                bennettDrawing: true,
+                sashaDrawing: true,
+                jewishBoyDrawing: true
             }
         }
     ],
