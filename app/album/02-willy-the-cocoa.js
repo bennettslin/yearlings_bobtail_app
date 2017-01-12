@@ -470,6 +470,7 @@ module.exports = {
                         annotation: {
                             description: `It would have been the height of irony if my brother were actually centuries old, as it frustrated me that I always had to engage with him at a level far below his actual age.`,
                             dotKeys: {
+                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -503,7 +504,11 @@ module.exports = {
                     {
                         anchor: `smarts he could've took`,
                         annotation: {
-                            description: `I spent a long time wondering why my brother was autistic and I was not, when our circumstances weren't really any different. It didn't seem far-fetched to suppose that cognitive abilities are a fixed supply in a mother's womb, and I had selfishly taken my brother's share.`
+                            description: `I spent a long time wondering why my brother was autistic and I was not, when our circumstances weren't really any different. It didn't seem far-fetched to suppose that cognitive abilities are a fixed supply in a mother's womb, and I had selfishly taken my brother's share.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -541,8 +546,11 @@ module.exports = {
                         anchor: `Killcrop`,
                         annotation: {
                             description: [
-                                `In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is plain and simple— one who "kills crops"— and reflects the primary concerns of past times, when children unable to work for their keep could lead to a family's ruin.`
-                            ]
+                                `In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects the primary concerns of past times, when children unable to work for their keep could lead to a family's ruin.`
+                            ],
+                            dotKeys: {
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `dashing kicks up puddle,`
@@ -554,7 +562,11 @@ module.exports = {
                     {
                         anchor: `soused loafers`,
                         annotation: {
-                            description: `In his zeal to grab at a littered beer bottle, Willy steps into a puddle and splashes sewage water onto a pair of gangbangers standing nearby. "Soused loafers" can refer to drenched shoes, as well as to drunken delinquents.`
+                            description: `In his zeal to reach a discarded beer bottle on the ground, Willy steps into a puddle and splashes sewage water onto a pair of gangbangers standing nearby. "Soused loafers" can refer to drenched shoes, as well as to drunken delinquents.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `shouting 'tard payment is due.`
@@ -566,7 +578,11 @@ module.exports = {
                     {
                         anchor: `Hit this witch with switch,`,
                         annotation: {
+                            // TODO: Mention that gangbanger is hitting him.
                             description: `It was widely believed that tricking a changeling into revealing its true nature would force it to return the stolen child. The methods for doing so included hitting it with a switch, a flexible rod designed to inflict punishment.`,
+                            dotKeys: {
+                                [REFERENCE]: true
+                            },
                             portal: `hit_the_switch`
                         }
                     },
@@ -590,14 +606,21 @@ module.exports = {
                     {
                         anchor: `sack-spilled glass swung`,
                         annotation: {
-                            description: `Eager for a fight, the gangbangers start pushing Willy around. Amidst the commotion, his shopping cart gets turned over, spilling a garbage bag full of empty glass bottles onto the ground. One of the gangbangers grabs a bottle and smashes it against Willy's face.`
+                            description: `Eager for a fight, the gangbangers start pushing Willy around. Amidst the commotion, his shopping cart gets turned over, spilling a garbage bag full of empty glass bottles onto the ground. One of the gangbangers grabs a bottle and smashes it against Willy's face.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `sounds the`,
                     {
                         anchor: `past-noon toll.`,
                         annotation: {
-                            description: `Immediately past noon, the ring of a town bell is heard exactly once.`
+                            // TODO: Mention sound of glass cracking Willy's head.
+                            description: `Immediately past noon, the ring of a town bell is heard exactly once.`,
+                            dotKeys: {
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -618,6 +641,10 @@ module.exports = {
                                         anchor: `unsalvaged soul…`,
                                         annotation: {
                                             description: `Given that abuse of an underdeveloped child often led to its death, religious doctrine in the past typically gave assurance that such children were devoid of souls. But I came to a different conclusion. If my brother and I were so alike in physical makeup, despite being so different in mental presence, then it made more sense to believe that no one has a soul.`,
+                                            dotKeys: {
+                                                [BACKSTORY]: true,
+                                                [REFERENCE]: true
+                                            },
                                             portal: `unsalvaged_sows`
                                         }
                                     }
