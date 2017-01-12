@@ -10,15 +10,24 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``
+            description: ``,
+            characters: {
+
+            }
         },
         {
             verseIndex: 0,
-            description: ``
+            description: ``,
+            characters: {
+
+            }
         },
         {
             verseIndex: 0,
-            description: ``
+            description: ``,
+            characters: {
+
+            }
         }
     ],
     tip: {

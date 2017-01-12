@@ -484,7 +484,10 @@ module.exports = {
                     {
                         anchor: `baffled sobs.`,
                         annotation: {
-                            description: `The hardest thing about having hurt my brother is that I could never really apologise, since he could never truly comprehend that I was sorry. I suppose that for him, it just became another part of what life was.`
+                            description: `The hardest thing about having hurt my brother is that I could never really apologise, since he could never truly comprehend that I was sorry. I suppose that for him, it was just another part of what life was.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -500,7 +503,7 @@ module.exports = {
                     {
                         anchor: `smarts he could've took`,
                         annotation: {
-                            description: `I spent a long time wondering why my brother was born with autism and I was not, when our circumstances weren't much different. It didn't seem far-fetched to suppose that cognitive abilities are a fixed supply in the womb, and that I had selfishly taken my brother's share.`
+                            description: `I spent a long time wondering why my brother was autistic and I was not, when our circumstances weren't really any different. It didn't seem far-fetched to suppose that cognitive abilities are a fixed supply in a mother's womb, and I had selfishly taken my brother's share.`
                         }
                     }
                 ]
