@@ -126,7 +126,13 @@ class App extends Component {
             // If no annotation selected, default to 1.
             accessedAnnotationIndex: getAnnotationIndexForDirection(props, props.selectedAnnotationIndex || 1),
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
-            accessedLyricElement: LYRIC_VERSE_ELEMENT,
+
+            /**
+             * If there is an annotation popup open, accessed element is
+             * annotation.
+             */
+            accessedLyricElement: props.selectedAnnotationIndex ?
+                LYRIC_ANNOTATION_ELEMENT : LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
             showSingleLyricColumnInAdmin: false,
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
@@ -755,6 +761,9 @@ class App extends Component {
 
     selectVerse(e, selectedVerseIndex = 0, direction) {
         const songTimes = getSongTimes(this.props)
+
+        console.error('selectedVerseIndex', selectedVerseIndex);
+        console.error('direction', direction);
 
         this._stopPropagation(e)
 
