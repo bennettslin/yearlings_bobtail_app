@@ -9,16 +9,16 @@ module.exports = {
     },
     scenes: [
         {
-            time: 0,
-            description: 'placeholder description'
+            verseIndex: 0,
+            description: ``
         },
         {
-            time: 0,
-            description: 'placeholder description'
+            verseIndex: 0,
+            description: ``
         },
         {
-            time: 0,
-            description: 'placeholder description'
+            verseIndex: 0,
+            description: ``
         }
     ],
     tip: {

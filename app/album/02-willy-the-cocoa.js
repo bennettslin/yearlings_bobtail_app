@@ -1,4 +1,4 @@
-import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, MUSIC, BACKSTORY, NARRATIVE, PUN, REFERENCE } from 'helpers/constants'
+import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, MUSIC, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -468,7 +468,10 @@ module.exports = {
                     {
                         anchor: `bearded baby`,
                         annotation: {
-                            description: `It would have been the height of irony if my brother were actually centuries old, as it frustrated me that I always had to engage with him at a level far below his actual age.`
+                            description: `It would have been the height of irony if my brother were actually centuries old, as it frustrated me that I always had to engage with him at a level far below his actual age.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `to the ground`

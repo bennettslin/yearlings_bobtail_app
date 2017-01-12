@@ -250,7 +250,7 @@ class App extends Component {
 
         // Hide dots.
         if (exemptSection !== DOTS_SECTION && selectedDotsIndex === 1) {
-            this.selectDotsExpand({ popupsAlreadyClosed: true, overrideClosePopupsDefaultWithSection }, 0)
+            this.selectDotsExpand({ bypassClosingPopups: true, overrideClosePopupsDefaultWithSection }, 0)
 
             /**
              * If dots popup was closed from space bar, leave lyric column
@@ -267,11 +267,11 @@ class App extends Component {
         if (selectedAnnotationIndex) {
             if (selectedWikiIndex) {
                 if (exemptSection !== WIKI_SECTION) {
-                    this.selectWiki({ popupsAlreadyClosed: true, overrideClosePopupsDefaultWithSection })
+                    this.selectWiki({ bypassClosingPopups: true, overrideClosePopupsDefaultWithSection })
                 }
             } else {
                 if (exemptSection !== ANNOTATION_SECTION && exemptSection !== WIKI_SECTION) {
-                    this.selectAnnotation({ popupsAlreadyClosed: true, overrideClosePopupsDefaultWithSection })
+                    this.selectAnnotation({ bypassClosingPopups: true, overrideClosePopupsDefaultWithSection })
                     /**
                     * If closing annotation, set lyric element to annotation, and
                     * set accessed annotation index to closed annotation.
@@ -518,7 +518,7 @@ class App extends Component {
             } else {
                 this._handleSectionAccess({
                     accessedSectionKey: e.overrideClosePopupsDefaultWithSection || AUDIO_SECTION,
-                    popupsAlreadyClosed: e.popupsAlreadyClosed
+                    bypassClosingPopups: e.bypassClosingPopups
                 })
             }
         }
@@ -670,7 +670,7 @@ class App extends Component {
             this._handleSectionAccess({
                 accessedSectionKey,
                 selectedAnnotationIndex,
-                popupsAlreadyClosed: e.popupsAlreadyClosed,
+                bypassClosingPopups: e.bypassClosingPopups,
                 overrideClosePopupsDefaultWithSection: accessedSectionKey
             })
         }
@@ -692,7 +692,7 @@ class App extends Component {
             this._handleSectionAccess({
                 accessedSectionKey,
                 selectedWikiIndex,
-                popupsAlreadyClosed: e.popupsAlreadyClosed
+                bypassClosingPopups: e.bypassClosingPopups
             })
         }
     }
@@ -783,7 +783,12 @@ class App extends Component {
             // Select corresponding time.
             selectedTimePlayed = songTimes[selectedVerseIndex]
             scroll = true
-            this._handleSectionAccess({ accessedSectionKey: direction ? AUDIO_SECTION : LYRICS_SECTION })
+            this._handleSectionAccess({
+                accessedSectionKey: direction ? AUDIO_SECTION : LYRICS_SECTION,
+
+                // Selecting verse and time should have no effect on popups.
+                bypassClosingPopups: true
+            })
 
         // A new song has been selected.
         } else {
@@ -1168,7 +1173,7 @@ class App extends Component {
                            accessOn,
                            selectedSongIndex = this.props.selectedSongIndex,
                            selectedAnnotationIndex = this.props.selectedAnnotationIndex,
-                           popupsAlreadyClosed,
+                           bypassClosingPopups,
                            overrideClosePopupsDefaultWithSection,
                            overrideClosePopupsDefaultWithOverviewOption }) {
 
@@ -1190,7 +1195,7 @@ class App extends Component {
         this._selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex)
         this.props.accessSectionIndex(accessedSectionIndex)
 
-        if (!popupsAlreadyClosed) {
+        if (!bypassClosingPopups) {
             this._closePopupIfOpen({
                 exemptSection: sectionKey,
                 overrideClosePopupsDefaultWithSection,

@@ -17,6 +17,7 @@ const LYRIC = 'lyric',
     REFERENCE = 'reference',
     PORTAL = 'portal',
     AFTERWORD = 'afterword',
+    OBSERVATION = 'observation',
 
     // These are class names.
     AUDIO_SECTION = 'audio-section',
@@ -312,6 +313,7 @@ module.exports = {
     REFERENCE,
     PORTAL,
     AFTERWORD,
+    OBSERVATION,
 
     ALL_DOT_KEYS: [
         NARRATIVE, // My perspective in the story.
@@ -322,7 +324,8 @@ module.exports = {
         PULPIT,
         REFERENCE,
         PORTAL,
-        AFTERWORD // My perspective while making this website.
+        AFTERWORD, // My perspective while making this website.
+        OBSERVATION
     ],
 
     DOT_DESCRIPTIONS: {
@@ -334,7 +337,8 @@ module.exports = {
         [PULPIT]: 'pulpit description',
         [REFERENCE]: 'wiki description',
         [PORTAL]: 'portal description',
-        [AFTERWORD]: 'after the album'
+        [AFTERWORD]: 'after the album',
+        [OBSERVATION]: 'my two cents'
     },
 
     ARROW_LEFT: 'ArrowLeft',
