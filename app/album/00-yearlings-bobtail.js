@@ -82,11 +82,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `Activity indicator z index should be below close button.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `Clicking on audio buttons (in player or lyrics) shouldn’t dismiss annotation or dots popups`,
             workedHours: 0,
             neededHours: 2
@@ -1125,6 +1120,11 @@ module.exports = {
         },
         {
             taskName: `Strip out song component in admin.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Activity indicator z index should be below close button.`,
             workedHours: 1,
             neededHours: 1
         }

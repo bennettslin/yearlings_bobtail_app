@@ -7,6 +7,7 @@ module.exports = {
             description: `Kids in the neighbourhood called Willy "The Cocoa," referring both to his Coke bottles and to his seeming a bit "cuckoo." `
         }
     },
+    // Scene with garden?
     scenes: [
         {
             verseIndex: 0,

@@ -49,8 +49,7 @@ class LyricsSectionView extends Component {
     render() {
 
                 // From props.
-        const { isAdmin,
-                songLyrics = [],
+        const { songLyrics = [],
                 showSingleLyricColumn,
                 selectedLyricColumnIndex,
 
@@ -68,9 +67,6 @@ class LyricsSectionView extends Component {
             >
                 {/* Upon song change, scroll to element with this class name. */}
                 <div className="lyrics-scroll-home"></div>
-                {isAdmin &&
-                    <h2>lyrics</h2>
-                }
                 <div className="lyrics-block">
                     {songLyrics.map((stanzaArray, stanzaIndex) => (
                             <LyricsUnit {...other}

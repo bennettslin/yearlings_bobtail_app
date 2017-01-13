@@ -27,23 +27,36 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett is walking alone through campus, holding a textbook under his arm. On a sketchpad in his thought bubble, he and Catherine are each playing an instrument. On his side are quartertones, on her side are contrupuntal harmonies.`,
             characters: {
-
+                bennett: true,
+                bennettDrawing: true,
+                catherineDrawing: true
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 11,
+            description: `In Bennett's thoughts, he and Catherine are together in bed. She is putting down the book she is reading, while he is playing the guitar, a pencil and notepad in hand, implying that he is writing a song, looking at her inquisitively.`,
             characters: {
-
+                bennett: true,
+                catherine: true
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 21,
+            description: `Bennett is staring at an outdoor ashtray. Someone with a cross on their forehead is walking behind him in the other direction, while someone who has just put out a cigarette in the ashtray is walking in front of him, exhaling the smoke. Bennett looks back at the person behind him.`,
             characters: {
-
+                bennett: true,
+                catholic: true,
+                smoker: true
+            }
+        },
+        {
+            verseIndex: 27,
+            description: `Bennett now has an ashed cross on his forehead, eyes closed and head held high, looking both pious and pompous. Catherine walks towards him from the other side of the stage.`,
+            characters: {
+                bennett: true,
+                catherine: true
             }
         }
     ],

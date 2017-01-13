@@ -20,7 +20,7 @@ module.exports = {
             description: `In Bennett's thought bubble, there is a drawing of him and Sasha on his sketchpad, together exploring the mountains of Taiwan.`,
             characters: {
                 puppetFamily: true,
-                bennettDrawing: true,
+                preteenBennettDrawing: true,
                 sashaDrawing: true
             }
         },
@@ -49,7 +49,7 @@ module.exports = {
             description: `In Bennett's thought bubble, there is a drawing of Bennett by himself on one continent, and Sasha and a Jewish boy on another, with an ocean separating them.`,
             characters: {
                 puppetFamily: true,
-                bennettDrawing: true,
+                preteenBennettDrawing: true,
                 sashaDrawing: true,
                 jewishBoyDrawing: true
             }
