@@ -82,11 +82,6 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `Clicking on audio buttons (in player or lyrics) shouldn’t dismiss annotation or dots popups`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `Weird bug where clicking side button in annotation scrolls entire screen up?!`,
             workedHours: 0,
             neededHours: 2
@@ -150,11 +145,6 @@ module.exports = {
             taskName: `Fix weird glitch two seconds into new song after load.`,
             workedHours: 0,
             neededHours: 3
-        },
-        {
-            taskName: `Obey song options rules.`,
-            workedHours: 0,
-            neededHours: 1
         },
         {
             taskName: `When song finishes playing, proceed to next more smoothly.`,
@@ -1125,6 +1115,16 @@ module.exports = {
         },
         {
             taskName: `Safari styling wonkiness.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Clicking on audio buttons (in player or lyrics) shouldn’t dismiss annotation or dots popups`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Obey song options rules.`,
             workedHours: 1,
             neededHours: 1
         }

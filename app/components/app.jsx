@@ -32,6 +32,9 @@ import { NAV_SECTION,
          TIPS_OPTIONS,
          AUDIO_OPTIONS,
 
+         CONTINUE,
+         PAUSE_AT_END,
+
          LYRIC_VERSE_ELEMENT,
          LYRIC_ANNOTATION_ELEMENT,
          LYRIC_COLUMN_KEYS,
@@ -353,7 +356,10 @@ class App extends Component {
     togglePlay(e) {
         this._stopPropagation(e)
         if (e) {
-            this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION })
+            this._handleSectionAccess({
+                accessedSectionKey: AUDIO_SECTION,
+                bypassClosingPopups: true
+            })
         }
 
         const isPlaying = !this.state.isPlaying
@@ -437,9 +443,22 @@ class App extends Component {
          * When selecting next song through audio player, reset annotation and
          * verse, and scroll element into view, but do not access nav section.
          */
+        const { selectedSongIndex } = this.props,
+            selectedAudioOption = AUDIO_OPTIONS[this.props.selectedAudioOptionIndex],
+            willAdvance = selectedAudioOption === CONTINUE
 
-        const newSelectedSongIndex = this.props.selectedSongIndex + 1
-        this.selectSong({ skipHandleSectionAccess: true }, newSelectedSongIndex)
+        // If option is to pause at end, stop play as well.
+        if (selectedAudioOption === PAUSE_AT_END) {
+            this.togglePlay()
+        }
+
+        // FIXME: This currently doesn't work, because audio player stops playing when currentTime is changed.
+
+        /**
+         * If option is to continue, advance to next song. Otherwise, stay
+         * on same song, and start at beginning. (True evaluates to 1, false 0.)
+         */
+        this.selectSong({ skipHandleSectionAccess: true }, selectedSongIndex + willAdvance)
     }
 
     selectAudioOption(e, direction = 1) {
@@ -447,7 +466,10 @@ class App extends Component {
 
         this._stopPropagation(e)
         if (e) {
-            this._handleSectionAccess({ accessedSectionKey: AUDIO_SECTION })
+            this._handleSectionAccess({
+                accessedSectionKey: AUDIO_SECTION,
+                bypassClosingPopups: true
+            })
         }
 
         this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
