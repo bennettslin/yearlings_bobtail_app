@@ -1,5 +1,4 @@
 import React from 'react'
-import Song from './song'
 import NotesSection from './notes/notes-section'
 import OverviewSection from '../overview/overview-section'
 import StatsSection from './stats/stats-section'
@@ -33,10 +32,6 @@ const Shared = (props) => {
 const SharedView = ({
 
     // From props.
-    selectedSongIndex,
-    accessedOn,
-    accessedSectionKey,
-    nextSectionKey,
     onOverviewClick,
 
     // From controller.
@@ -65,12 +60,6 @@ const SharedView = ({
             />
             <NotesSection />
         </div>
-        {/* <Song {...other}
-            selectedSongIndex={selectedSongIndex}
-            accessedOn={accessedOn}
-            accessedSectionKey={accessedSectionKey}
-            nextSectionKey={nextSectionKey}
-        /> */}
     </div>
 )
 

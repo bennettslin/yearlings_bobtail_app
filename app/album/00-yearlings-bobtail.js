@@ -107,11 +107,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `Strip out song component in admin.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `Figure out when portal has no description`,
             workedHours: 0,
             neededHours: 1
@@ -1125,6 +1120,11 @@ module.exports = {
         },
         {
             taskName: `Closing annotation or dots popups, by clicking or access, does not collapse lyrics.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Strip out song component in admin.`,
             workedHours: 1,
             neededHours: 1
         }
