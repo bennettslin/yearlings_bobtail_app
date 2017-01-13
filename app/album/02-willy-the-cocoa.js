@@ -664,7 +664,11 @@ module.exports = {
                         anchor: `Willy's stalkless bulb.`,
                         properNoun: true,
                         annotation: {
-                            description: `This incident happened to Willy, of course, but the lyrics haven't mentioned his name until now, since it easily could have been my brother. A "stalkless bulb" can refer to a brain severed from its spine, as well as to a dormant plant ready to be set in the ground.`
+                            description: `The "stalkless bulb" here is Willy's brain, which has just been severed from its spine. But it can also refer to a dormant plant ready to be set in the ground.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -683,7 +687,12 @@ module.exports = {
                     {
                         anchor: `sawdust month`,
                         annotation: {
-                            description: `My father liked to build furniture in the garage, and I would help my mother spread the leftover sawdust in our backyard garden. Also, it was the "saddest month" when Willy was killed.`
+                            description: `My father often built furniture in the garage. I'm now helping my mother spread the leftover sawdust in our backyard garden, during this "saddest" month that Willy was killed.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -702,7 +711,11 @@ module.exports = {
                                     wiki: `Asphodelus`
                                 },
                                 `is a popular garden plant, as well as an immortal flower of the underworld in Greek mythology. Since we are made of the same physical matter as the mulch we use to soften the soil, I remark that Willy's body must have also "softened the asphalt" beneath which it lay.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -720,7 +733,11 @@ module.exports = {
                                     wiki: 'Bluebonnet_(plant)'
                                 },
                                 `is another garden flower, and a bonnet is what my mother tucks my brother's head in to protect him from the sun. But in light of Willy's murder, I wonder how well-protected his head is against other things.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
 
                     },
@@ -734,7 +751,10 @@ module.exports = {
                     {
                         anchor: `forgotten amongst the mail.`,
                         annotation: {
-                            description: `Having recently kicked my brother in anger over a shredded comic book, I'm now indifferent to the latest release from my monthly subscription.`
+                            description: `Having recently kicked my brother in anger over a shredded comic book, I'm now indifferent to the latest release from my monthly subscription.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -752,7 +772,11 @@ module.exports = {
                     {
                         anchor: `how marbleless,`,
                         annotation: {
-                            description: `Or, "how marvellous." Sometimes friends of my parents, in a poor attempt to empathise, would marvel at how blissful it must be for my brother to go through life with a permanent lack of understanding.`
+                            description: `Or, "how marvellous." Sometimes friends of my parents, in a poor attempt to empathise, would marvel at how blissful it must be for my brother to go through life without all of his marbles, so to speak.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `some reckoned,`
@@ -772,7 +796,11 @@ module.exports = {
                                     wiki: `Imprinting_(psychology)`
                                 },
                                 `is a period during which a child acquires certain behaviour, such as emotional attachment. Each time my mother learned a new concept related to child development, she would blame herself for not having known it soon enough to help my brother. An "imp-runt" is also literally the weakest child in a litter of goblins, and thus a prime choice to be replaced with a human.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -784,7 +812,12 @@ module.exports = {
                     {
                         anchor: `I am seven,`,
                         annotation: {
-                            description: `My brother learned to answer the question "how old are you?" when he was six. But even after turning seven, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer, but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. Here, I imagine him as a grownup, testily correcting a stranger who has the nerve to ask if he is "six."`
+                            description: `My brother learned to answer the question "how old are you?" when he was six. But even after turning seven, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer, but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. Here, I imagine him as a grownup, testily correcting a stranger who has the nerve to ask if he is "six."`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `he'd reply…`
