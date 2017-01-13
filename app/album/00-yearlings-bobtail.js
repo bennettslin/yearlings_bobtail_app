@@ -79,7 +79,7 @@ module.exports = {
         {
             taskName: `Use composition to get rid of duplicate annotation and dots popup code in live and main column.`,
             workedHours: 0,
-            neededHours: 1
+            neededHours: 2
         },
         {
             taskName: `Clicking on audio buttons (in player or lyrics) shouldn’t dismiss annotation or dots popups`,
@@ -93,11 +93,6 @@ module.exports = {
         },
         {
             taskName: `Allow box shadow for popup buttons that hang over edge.`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `Safari styling wonkiness.`,
             workedHours: 0,
             neededHours: 1
         },
@@ -1125,6 +1120,11 @@ module.exports = {
         },
         {
             taskName: `Activity indicator z index should be below close button.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Safari styling wonkiness.`,
             workedHours: 1,
             neededHours: 1
         }
