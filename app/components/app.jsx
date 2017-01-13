@@ -332,7 +332,7 @@ class App extends Component {
      * https://www.npmjs.com/package/scroll-into-view-if-needed
      */
     scrollElementIntoView(className, index, duration = 75) {
-
+        console.error('scroll element', className, index);
         const selector = `${className}-${index}`,
             element = document.getElementsByClassName(selector)[0]
 

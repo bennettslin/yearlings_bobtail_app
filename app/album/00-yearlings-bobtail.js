@@ -82,11 +82,6 @@ module.exports = {
             neededHours: 2
         },
         {
-            taskName: `Weird bug where clicking side button in annotation scrolls entire screen up?!`,
-            workedHours: 0,
-            neededHours: 2
-        },
-        {
             taskName: `Allow box shadow for popup buttons that hang over edge.`,
             workedHours: 0,
             neededHours: 1
@@ -1125,6 +1120,11 @@ module.exports = {
         },
         {
             taskName: `Obey song options rules.`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `Weird bug where clicking side button in annotation scrolls entire screen up?!`,
             workedHours: 1,
             neededHours: 1
         }
