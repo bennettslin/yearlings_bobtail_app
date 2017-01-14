@@ -77,9 +77,24 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Use composition to get rid of duplicate annotation and dots popup code in live and main column.`,
+            taskName: `When song finishes playing, proceed to next more smoothly.`,
             workedHours: 0,
-            neededHours: 2
+            neededHours: 1
+        },
+        {
+            taskName: `Weird bug where player stops sending listen events after having currentTime changed.`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `Fix weird glitch two seconds into new song after load.`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `Use composition to pass audio banner to audio section, with prologue and epilogue props.`,
+            workedHours: 0,
+            neededHours: 1
         },
         {
             taskName: `Allow box shadow for popup buttons that hang over edge.`,
@@ -130,21 +145,6 @@ module.exports = {
             taskName: `Select time for player from portal`,
             workedHours: 0,
             neededHours: 3
-        },
-        {
-            taskName: `Weird bug where player stops sending listen events after having currentTime changed.`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `Fix weird glitch two seconds into new song after load.`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `When song finishes playing, proceed to next more smoothly.`,
-            workedHours: 0,
-            neededHours: 1
         },
         {
             taskName: `Figure out scrolling rules`,
@@ -1127,6 +1127,11 @@ module.exports = {
             taskName: `Weird bug where clicking side button in annotation scrolls entire screen up?!`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `Use composition to get rid of duplicate annotation and dots popup code in live and main column.`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
