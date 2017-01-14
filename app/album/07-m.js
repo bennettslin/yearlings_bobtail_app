@@ -10,23 +10,36 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett is in his room, frantically doing many things, such that there are many copies of him. One is playing a keyboard and writing stuff down on a notepad, another is reading a textbook, while a third is trying to figure out a Rubik's Cube.`,
             characters: {
-
+                bennett: 3
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 13,
+            description: `It's after a show, and the Yearlings are breaking down their set. While Bennett is chatting with a bunch of male hipsters who are asking him about his gear, Jacob is chatting with Mara.`,
             characters: {
-
+                bennett: 1,
+                jacob: 1,
+                mara: 1,
+                hipsters: 2
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 21,
+            description: `Bennett is walking along outside. He sees Mara's face everywhere he looks: in clouds, on the sides of buildings, and so forth.`,
             characters: {
-
+                bennett: 1,
+                maraDrawing: 5
+            }
+        },
+        {
+            verseIndex: 39,
+            description: `Bennett suddenly has an epiphany. In sketches in his head, he imagines himself playing all the instruments in a band, writing all the songs, and recording all the parts. Finally, he imagines Mara finding his album in a record store.`,
+            characters: {
+                bennett: 1,
+                bennettDrawing: 5,
+                maraDrawing: 1
             }
         }
     ],
@@ -739,6 +752,11 @@ module.exports = {
             taskName: `include wiki urls`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }

@@ -12,46 +12,46 @@ module.exports = {
             verseIndex: 0,
             description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
             characters: {
-                puppetFamily: true
+                puppetFamily: 5
             }
         },
         {
             verseIndex: 5,
             description: `In Bennett's thought bubble, there is a drawing of him and Sasha on his sketchpad, together exploring the mountains of Taiwan.`,
             characters: {
-                puppetFamily: true,
-                preteenBennettDrawing: true,
-                sashaDrawing: true
+                puppetFamily: 5,
+                preteenBennettDrawing: 1,
+                sashaDrawing: 1
             }
         },
         {
             verseIndex: 12,
             description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated across from her who is wearing a yarmulke.`,
             characters: {
-                puppetFamily: true,
-                preteenBennett: true,
-                Sasha: true,
-                jewishBoy: true
+                puppetFamily: 5,
+                preteenBennett: 1,
+                Sasha: 1,
+                jewishBoy: 1
             }
         },
         {
             verseIndex: 20,
             description: `In Bennett's thought bubble, he is being bullied by an older boy. Sasha is lecturing the bully, telling him to leave Bennett alone.`,
             characters: {
-                puppetFamily: true,
-                Sasha: true,
-                preteenBennett: true,
-                bully: true
+                puppetFamily: 5,
+                Sasha: 1,
+                preteenBennett: 1,
+                bully: 1
             }
         },
         {
             verseIndex: 30,
             description: `In Bennett's thought bubble, there is a drawing of Bennett by himself on one continent, and Sasha and a Jewish boy on another, with an ocean separating them.`,
             characters: {
-                puppetFamily: true,
-                preteenBennettDrawing: true,
-                sashaDrawing: true,
-                jewishBoyDrawing: true
+                puppetFamily: 5,
+                preteenBennettDrawing: 1,
+                sashaDrawing: 1,
+                jewishBoyDrawing: 1
             }
         }
     ],

@@ -1,7 +1,7 @@
 import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, RESPONSE } from 'helpers/constants'
 
 /**
- * Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
+ * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
  * list order on the album.
  */
 module.exports = {
