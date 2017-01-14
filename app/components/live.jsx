@@ -314,7 +314,16 @@ const LiveView = ({
                         inOverviewSubfield={false}
                     />
             </div>
-            <MainColumn {...mainColumnProps} />
+            <MainColumn {...mainColumnProps}
+                annotationPopupChild={ <AnnotationPopup {...annotationPopupProps} /> }
+                dotsPopupChild={ <DotsPopup {...dotsPopupProps} /> }
+                overviewPopupChild={
+                    <OverviewPopup {...overviewPopupProps}
+                        inOverviewSubfield={true}
+                    />
+                }
+                dotsTipsSectionChild={ <DotsTipsSection {...dotsTipsSectionProps} /> }
+            />
             <LyricColumn {...lyricColumnProps} />
 
             {dotsTipsOutsideMenu &&

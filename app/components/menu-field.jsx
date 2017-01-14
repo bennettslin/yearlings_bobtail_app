@@ -1,7 +1,6 @@
 import React from 'react'
 import TitleSection from './title/title-section'
 import AudioSection from './audio/audio-section'
-import DotsTipsSection from './dots-tips-section'
 import { getTitleInAudio } from 'helpers/responsive-helper'
 
 /*************
@@ -24,7 +23,6 @@ const MenuField = (props) => {
 const MenuFieldView = ({
 
     // From props.
-    dotsTipsSectionProps,
     dotsTipsOutsideMenu,
 
     isPhone,
@@ -49,6 +47,8 @@ const MenuFieldView = ({
     onTimeChange,
     onPlayerEnd,
     onTimeUpdated,
+
+    dotsTipsSectionChild,
 
     // From controller.
     titleInAudio
@@ -102,7 +102,7 @@ const MenuFieldView = ({
             </div>
             {!dotsTipsOutsideMenu &&
                 <div className="menu-subfield dots-tips-menu-subfield">
-                    <DotsTipsSection {...dotsTipsSectionProps} />
+                    {dotsTipsSectionChild}
                 </div>
             }
         </div>
