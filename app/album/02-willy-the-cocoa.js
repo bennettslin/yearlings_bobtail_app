@@ -849,7 +849,11 @@ module.exports = {
                     {
                         anchor: `heavy fears,`,
                         annotation: {
-                            description: `One night when I woke up screaming in fear of my mortality, my mother rushed to my bedside to comfort me.`
+                            description: `One night when I woke up screaming in fear of my mortality, my mother rushed to my bedside to comfort me.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `Mummy laughs,`
@@ -869,7 +873,10 @@ module.exports = {
                                     wiki: `Cub_Scouting_(Boy_Scouts_of_America)`
                                 },
                                 `in a pack, those in the fourth or fifth grade, belong to the Webelos den. We were taught that it stands for "We'll Be Loyal Scouts," but it was originally "Wolf, Bear, Lion, Scout." My mother might also be saying that I am not yet "way below."`
-                            ]
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -881,7 +888,11 @@ module.exports = {
                     {
                         anchor: `seventy years`,
                         annotation: {
-                            description: `My mother told me not to worry, since I wasn't going to die for quite a while. She then assured me that when my time does come, I will have long made sense of death, and be at peace with it.`
+                            description: `My mother told me not to worry, since I wasn't going to die for quite a while. She then assured me that when my time finally did come in another seventy years or so, I would have long made sense of death, and be at peace with it.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `and you'll be glad`
@@ -900,6 +911,7 @@ module.exports = {
                 lyric: [
                     `In time with`,
                     {
+                        // TODO: Specify needle for sewing.
                         anchor: `needle done,`,
                         annotation: {
                             portal: `needle_done`
@@ -915,7 +927,11 @@ module.exports = {
                                     italic: `Bobtail`
                                 },
                                 `was the catch-all title for my epic masterpiece that I would one day create, whatever it was. At the time, we assumed it would be a comic book of sorts.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -973,11 +989,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `separate annotations into dot categories`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -997,6 +1008,11 @@ module.exports = {
         },
         {
             taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `separate annotations into dot categories`,
             workedHours: 3,
             neededHours: 3
         }
