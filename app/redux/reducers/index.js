@@ -9,6 +9,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_LYRIC_COLUMN_INDEX,
          SELECTED_TIPS_INDEX,
          SELECTED_WIKI_INDEX,
+         SELECTED_SCORE_INDEX,
          SELECTED_NAV_INDEX,
          SELECTED_DOTS_INDEX,
          ACCESSED_ON,
@@ -26,6 +27,7 @@ const { getFromSession } = SessionHelper,
     storedLyricColumnIndex = getFromSession(SELECTED_LYRIC_COLUMN_INDEX),
     storedTipsIndex = getFromSession(SELECTED_TIPS_INDEX),
     storedWikiIndex = getFromSession(SELECTED_WIKI_INDEX),
+    storedScoreIndex = getFromSession(SELECTED_SCORE_INDEX),
     storedNavIndex = getFromSession(SELECTED_NAV_INDEX),
     storedDotsIndex = getFromSession(SELECTED_DOTS_INDEX),
     storedAccessedOn = getFromSession(ACCESSED_ON),
@@ -61,6 +63,15 @@ export const VerseIndexReducer = (state = storedVerseIndex, action) => {
 export const WikiIndexReducer = (state = storedWikiIndex, action) => {
     switch (action.type) {
         case SELECTED_WIKI_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const ScoreIndexReducer = (state = storedScoreIndex, action) => {
+    switch (action.type) {
+        case SELECTED_SCORE_INDEX:
             return action.payload
         default:
             return state
@@ -174,6 +185,7 @@ const rootReducer = combineReducers({
     selectedLyricColumnIndex: LyricColumnIndexReducer,
     selectedTipsIndex: TipsIndexReducer,
     selectedWikiIndex: WikiIndexReducer,
+    selectedScoreIndex: ScoreIndexReducer,
     selectedNavIndex: NavIndexReducer,
     selectedDotsIndex: DotsIndexReducer,
     accessedOn: AccessedOnReducer,

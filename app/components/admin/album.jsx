@@ -42,6 +42,7 @@ const AlbumView = ({
     songs,
     title,
     isPlaying,
+    selectedScoreIndex,
     selectedSongIndex,
     selectedVerseIndex,
     selectedAudioOptionIndex,
@@ -54,6 +55,7 @@ const AlbumView = ({
     isFirstVerse,
     isLastVerse,
     selectedSongTitle,
+    onScoreClick,
     onSongClick,
     onVerseClick,
     onPlayClick,
@@ -86,12 +88,14 @@ const AlbumView = ({
                 deviceIndex={deviceIndex}
                 windowWidth={windowWidth}
                 windowHeight={windowHeight}
+                selectedScoreIndex={selectedScoreIndex}
                 selectedSongIndex={selectedSongIndex}
                 selectedVerseIndex={selectedVerseIndex}
                 selectedNavIndex={selectedNavIndex}
                 selectedDotsIndex={selectedDotsIndex}
                 showSingleLyricColumn={showSingleLyricColumn}
                 onScreenWidthClick={onScreenWidthClick}
+                onScoreClick={onScoreClick}
             />
             <AudioSection
                 isAdmin={true}

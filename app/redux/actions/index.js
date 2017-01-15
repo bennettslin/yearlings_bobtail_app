@@ -8,6 +8,7 @@ import { SELECTED_SONG_INDEX,
          SELECTED_LYRIC_COLUMN_INDEX,
          SELECTED_TIPS_INDEX,
          SELECTED_WIKI_INDEX,
+         SELECTED_SCORE_INDEX,
          SELECTED_NAV_INDEX,
          SELECTED_DOTS_INDEX,
          ACCESSED_ON,
@@ -45,6 +46,14 @@ export const selectWikiIndex = (selectedWikiIndex = '') => {
     return {
         type: SELECTED_WIKI_INDEX,
         payload: selectedWikiIndex
+    }
+}
+
+export const selectScoreIndex = (selectedScoreIndex = '') => {
+    setInSession(SELECTED_SCORE_INDEX, selectedScoreIndex)
+    return {
+        type: SELECTED_SCORE_INDEX,
+        payload: selectedScoreIndex
     }
 }
 

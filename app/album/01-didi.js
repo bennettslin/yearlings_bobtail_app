@@ -205,7 +205,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `The nonstop modulation between the keys of A, C, and E\u2011flat captures the flurry of activity and transience of emotion experienced by a child from one day to the next.`
+                            `The nonstop modulation between the distantly related keys of A, C, and E\u2011flat is meant to evoke the flurry of activity and transience of emotion experienced by a child from one day to the next.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true

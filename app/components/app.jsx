@@ -11,6 +11,7 @@ import { selectSongIndex,
          selectLyricColumnIndex,
          selectTipsIndex,
          selectWikiIndex,
+         selectScoreIndex,
          selectNavIndex,
          selectDotsIndex,
          accessOn,
@@ -67,6 +68,7 @@ const passReduxStateToProps = ({
     selectedLyricColumnIndex,
     selectedTipsIndex,
     selectedWikiIndex,
+    selectedScoreIndex,
     selectedNavIndex,
     selectedDotsIndex,
     accessedOn,
@@ -83,6 +85,7 @@ const passReduxStateToProps = ({
     selectedLyricColumnIndex,
     selectedTipsIndex,
     selectedWikiIndex,
+    selectedScoreIndex,
     selectedNavIndex,
     selectedDotsIndex,
     accessedOn,
@@ -102,6 +105,7 @@ const bindDispatchToProps = (dispatch) => (
         selectLyricColumnIndex,
         selectTipsIndex,
         selectWikiIndex,
+        selectScoreIndex,
         selectNavIndex,
         selectDotsIndex,
         accessOn,
@@ -195,6 +199,7 @@ class App extends Component {
         this.selectDot = this.selectDot.bind(this)
         this.selectFromPortal = this.selectFromPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
+        this.selectScore = this.selectScore.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
         this.selectLyricColumnWidth = this.selectLyricColumnWidth.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
@@ -722,6 +727,11 @@ class App extends Component {
                 bypassClosingPopups: e.bypassClosingPopups
             })
         }
+    }
+
+    selectScore(e, selectedScoreIndex = 0) {
+        this._stopPropagation(e)
+        this.props.selectScoreIndex((this.props.selectedScoreIndex + 1) % 2)
     }
 
     selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, columnIndex) {
@@ -1304,6 +1314,7 @@ class App extends Component {
                     onSongClick={this.selectSong}
                     onSongFromPortalClick={this.selectFromPortal}
                     onWikiUrlClick={this.selectWiki}
+                    onScoreClick={this.selectScore}
                     onAnnotationClick={this.selectAnnotation}
                     onOverviewClick={this.selectOverview}
                     onAudioOptionClick={this.selectAudioOption}
