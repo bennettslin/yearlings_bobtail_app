@@ -148,7 +148,10 @@ const LiveView = ({
             selectedOverviewIndex,
             overviewText,
             onPopupButtonClick: onOverviewClick,
-            onPopupContainerClick
+            onPopupContainerClick,
+
+            // For toggle in popup in phone.
+            onOverviewClick
         },
         mainColumnProps = {
             showFullPopup,

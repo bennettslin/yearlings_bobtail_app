@@ -77,8 +77,13 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Overview in mobile phone bug`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `Move dots above overview, scores into dots tips section, rename`,
-            workedHours: 5,
+            workedHours: 0,
             neededHours: 5
         },
         {
