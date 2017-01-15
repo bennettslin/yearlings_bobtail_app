@@ -1,5 +1,6 @@
 import { VERSES, PRECHORUS, CHORUS } from 'helpers/constants'
 
+// TODO: Music annotations: Beatles, passive-aggressiveness, instruments
 module.exports = {
     title: {
         anchor: `Dear Saskia`,

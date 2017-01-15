@@ -12,7 +12,7 @@ const LYRIC = 'lyric',
     BACKSTORY = 'backstory',
     NARRATIVE = 'narrative',
     FORESHADOW = 'foreshadow',
-    MUSIC = 'music',
+    SONGWRITING = 'songwriting',
     PULPIT = 'pulpit',
     REFERENCE = 'reference',
     PORTAL = 'portal',
@@ -308,7 +308,7 @@ module.exports = {
     BACKSTORY,
     NARRATIVE,
     FORESHADOW,
-    MUSIC,
+    SONGWRITING,
     PULPIT,
     REFERENCE,
     PORTAL,
@@ -316,16 +316,16 @@ module.exports = {
     OBSERVATION,
 
     ALL_DOT_KEYS: [
+        SONGWRITING,
         NARRATIVE, // My perspective in the story.
-        BACKSTORY, // My perspective while making the album.
         PUN,
-        // FORESHADOW,
-        MUSIC,
-        PULPIT,
         REFERENCE,
+        BACKSTORY, // My perspective while making the album.
+        OBSERVATION,
         PORTAL,
+        // FORESHADOW,
         AFTERWORD, // My perspective while making this website.
-        OBSERVATION
+        PULPIT
     ],
 
     DOT_DESCRIPTIONS: {
@@ -333,7 +333,7 @@ module.exports = {
         [BACKSTORY]: 'backstory description', // My perspective while making the album.
         [PUN]: 'Of both the "literary" and "bad" variety.',
         // [FORESHADOW]: 'foreshadow description',
-        [MUSIC]: 'music description',
+        [SONGWRITING]: 'music description',
         [PULPIT]: 'pulpit description',
         [REFERENCE]: 'wiki description',
         [PORTAL]: 'portal description',

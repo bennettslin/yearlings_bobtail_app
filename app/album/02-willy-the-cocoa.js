@@ -1,5 +1,6 @@
-import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, MUSIC, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION } from 'helpers/constants'
+import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, SONGWRITING, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION } from 'helpers/constants'
 
+// TODO: Music annotations: Changelings, muted mandolins, melodicas, CCR swamp rock, misheard lyrics
 module.exports = {
     title: {
         anchor: 'Willy the Cocoa',
@@ -7,7 +8,7 @@ module.exports = {
             description: `Kids in the neighbourhood called Willy "The Cocoa," referring both to his Coke bottles and to his seeming a bit "cuckoo." `
         }
     },
-    // Scene with garden?
+    // TODO: Add scene with garden?
     scenes: [
         {
             verseIndex: 0,
@@ -88,7 +89,7 @@ module.exports = {
                             `with muted mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`
                         ],
                         dotKeys: {
-                            [MUSIC]: true
+                            [SONGWRITING]: true
                         }
                     }
                 }
@@ -434,7 +435,7 @@ module.exports = {
                                     anchor: `X-Ray Specs,`,
                                     wiki: `X-Ray_Specs_(novelty)`
                                 },
-                                `a pair of special glasses that purportedly allow one to see through objects. Having sent away for them a while ago, I'm now trying them on. (As it turns out, they didn't actually work.)`
+                                `a pair of special glasses that purportedly allow one to see through objects. Having sent away for them a while ago, I'm now trying them on. (They didn't actually work.)`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -462,7 +463,11 @@ module.exports = {
                     {
                         anchor: `kick slams`,
                         annotation: {
-                            description: `There were times I was so angry at my brother that I laid down some serious hurt. He never fought back.`
+                            description: `There were times I was so angry at my brother that I laid down some serious hurt. He never fought back.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `the`,

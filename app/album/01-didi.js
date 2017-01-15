@@ -9,9 +9,11 @@ import { INSTRUMENTAL,
          BACKSTORY,
          PUN,
          REFERENCE,
-         MUSIC } from 'helpers/constants'
+         SONGWRITING,
+         AFTERWORD,
+         PULPIT } from 'helpers/constants'
 
-// TODO: Music annotations: Pet Sounds, toy instruments, Joyce's Portrait, and muted guitar.
+// TODO: Music annotations: muted guitars.
 module.exports = {
     title: {
         anchor: 'Didi (弟弟)',
@@ -80,14 +82,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `James Joyce's novel`,
-                            {
-                                italic: {
-                                    anchor: `A Portrait of the Artist as a Young Man`,
-                                    wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
-                                }
-                            },
-                            `begins in the simple prose of a child, so I did the same for this first song of the album, which is sung from my sister's perspective. Toy instruments abound, including an autoharp and glockenspiel that evoke the intro to The Beach Boys'`,
+                            `In this song sung from my sister's perspective when we were children, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
                             {
                                 italic: {
                                     anchor: `Pet Sounds.`,
@@ -96,7 +91,7 @@ module.exports = {
                             }
                         ],
                         dotKeys: {
-                            [MUSIC]: true
+                            [SONGWRITING]: true
                         }
                     }
                 }
@@ -133,6 +128,23 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            {
+                                italic: {
+                                    anchor: `A Portrait of the Artist as a Young Man,`,
+                                    wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
+                                }
+                            },
+                            `James Joyce's semi-autobiographical novel, begins in the simple prose of a child, so I did the same for this first song of the album.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -189,6 +201,17 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `The nonstop modulation between the keys of A, C, and E\u2011flat captures the flurry of activity and transience of emotion experienced by a child from one day to the next.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
@@ -264,6 +287,7 @@ module.exports = {
                     {
                         time: 97,
                         lyric: {
+                            // TODO: Talk about what happens to your fingers.
                             italic: `Don't little raisin fingers need to dry?`
                         }
                     }
@@ -340,6 +364,17 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `I dampened the lead guitar strings by wrapping tissue around them near the bridge.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: BRIDGE,
                 subsequent: true
             }
@@ -398,14 +433,20 @@ module.exports = {
                             {
                                 italic: `Pet Sounds`
                             },
-                            `was also meant as a gentle reminder that Brian Wilson's masterpiece was never performed live in its own time, precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops most lists of rock's greatest albums. But`,
+                            `was also meant as a gentle reminder that`,
+                            {
+                                anchor: `Brian Wilson's`,
+                                wiki: `Brian_Wilson`
+                            },
+                            `masterpiece was never performed live in its own time, precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops most lists of rock's greatest albums. But`,
                             {
                                 italic: `Yearling's Bobtail`
                             },
                             `was dead upon arrival, proving my fears well-founded. So this Didi did have to know some things after all…`
                         ],
                         dotKeys: {
-                            afterword: true
+                            [AFTERWORD]: true,
+                            [PULPIT]: true
                         }
                     }
                 }
@@ -413,11 +454,6 @@ module.exports = {
         ]
     ],
     tasks: [
-        {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
         {
             taskName: `illustrations`,
             workedHours: 0,
@@ -453,6 +489,11 @@ module.exports = {
         },
         {
             taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
         }

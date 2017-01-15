@@ -77,6 +77,21 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `Move dots above overview, scores into dots tips section, rename`,
+            workedHours: 5,
+            neededHours: 5
+        },
+        {
+            taskName: `Score popup and stored index`,
+            workedHours: 0,
+            neededHours: 8
+        },
+        {
+            taskName: `Allow dot stanzas to have a preferred dot category`,
+            workedHours: 0,
+            neededHours: 2
+        },
+        {
             taskName: `When song finishes playing, proceed to next more smoothly.`,
             workedHours: 0,
             neededHours: 1

@@ -5,7 +5,7 @@ import { VERSES,
 
          NARRATIVE,
          PUN,
-         MUSIC,
+         SONGWRITING,
          AFTERWORD } from 'helpers/constants'
 
 module.exports = {
@@ -86,7 +86,7 @@ module.exports = {
                             `The quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter step flat. The shrieking whistles, which remind me of trains braking in a subway tunnel, were made by overblowing into recorders.`
                         ],
                         dotKeys: {
-                            [MUSIC]: true
+                            [SONGWRITING]: true
                         }
                     }
                 }

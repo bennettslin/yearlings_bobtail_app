@@ -15,6 +15,8 @@
         * Grasshoppers Lie Heavy
     * Hover or tap verse
     * Copy link to URL
+    * Scores
+        * Garryowen
 
 0. prologue
 
@@ -43,6 +45,7 @@
 11. Look Back in Anger
 
 12. Garryowen
+    * Scores
 
 13. On a Golden Cord
 
