@@ -192,21 +192,31 @@
         }
 
         .overview-subfield {
-            flex-direction: column-reverse;
+
+            // Override flexbox styling in phone.
+            display: block;
 
             .overview-popup-container {
                 position: absolute;
                 width: 100%;
                 height: 100%;
+                top: 0;
+                left: 0;
             }
         }
 
-        // Inside overview bubble.
         .overview-toggle-section {
             width: @overview-toggle-phone-width;
-            height: @overview-toggle-phone-height;
-            float: left;
-            margin-right: 10px;
+            height: 100%;
+        }
+
+        // Inside overview bubble.
+        .in-popup {
+            .overview-toggle-section {
+                height: @overview-toggle-phone-height;
+                margin-right: 10px;
+                float: left;
+            }
         }
 
         .overview-toggle-button-container {

@@ -77,11 +77,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `Overview in mobile phone bug`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `Move dots above overview, scores into dots tips section, rename`,
             workedHours: 0,
             neededHours: 5
@@ -1152,6 +1147,11 @@ module.exports = {
             taskName: `Use composition to get rid of duplicate annotation and dots popup code in live and main column.`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `Overview in mobile phone bug`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
