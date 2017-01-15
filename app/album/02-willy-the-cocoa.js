@@ -1,4 +1,4 @@
-import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, SONGWRITING, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION } from 'helpers/constants'
+import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION } from 'helpers/constants'
 
 // TODO: Music annotations: Changelings, muted mandolins, melodicas, CCR swamp rock, misheard lyrics
 module.exports = {
@@ -975,14 +975,23 @@ module.exports = {
                 sectionClass: BRIDGE,
                 subsequent: true
             }
+        ],
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `I recently asked my brother how old he was. He answered seventeen, which is only a decade behind. So I guess he's making progress.`,
+                        dotKeys: {
+                            [AFTERWORD]: true
+                        }
+                    }
+                }
+            }
         ]
     ],
     tasks: [
-        {
-            taskName: `afterword annotations`,
-            workedHours: 0,
-            neededHours: 1
-        },
         {
             taskName: `music annotations`,
             workedHours: 0,
@@ -1020,6 +1029,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `afterword annotations`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }

@@ -1,4 +1,4 @@
-import { VERSES, PRECHORUS, CHORUS } from 'helpers/constants'
+import { VERSES, PRECHORUS, CHORUS, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
 
 // TODO: Music annotations: Beatles, passive-aggressiveness, instruments
 module.exports = {
@@ -101,7 +101,10 @@ module.exports = {
                     {
                         anchor: `record highs.`,
                         annotation: {
-                            description: `It's always hard to begin writing a letter. But one can always talk about the weather.`
+                            description: `It's hard to begin writing a letter. But one can always talk about the weather.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -117,7 +120,11 @@ module.exports = {
                     {
                         anchor: `first semester`,
                         annotation: {
-                            description: `My family spent the entire summer in Taiwan. By the time we were to get back to the States, Sasha would have already moved to Boston and begun the new school year.`
+                            description: `My family spent the entire summer in Taiwan. By the time we were to get back to the States, Sasha would have already moved to Boston and begun the new school year.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `fine while I'm out of town…`
@@ -136,7 +143,11 @@ module.exports = {
                     {
                         anchor: `You'd love Taiwan,`,
                         annotation: {
-                            description: `As we toured the countryside with our Taiwanese cousins, I would add to my mental list of all the things I could share with Sasha one day. I think this might get at why I've never felt strongly about being Taiwanese. Until one's culture can be shared with someone else, there doesn't seem to be any real point.`
+                            description: `As we toured the countryside with our Taiwanese cousins, I would add to my mental list of all the things I could share with Sasha one day. I think this might get at why I've never felt strongly about being Taiwanese. Until one's culture can be shared with someone else, there doesn't seem to be any real point.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `surrounded by walls of mountains,`
@@ -157,7 +168,10 @@ module.exports = {
                     {
                         anchor: `giant's house.`,
                         annotation: {
-                            description: `My most vivid memory is of standing in the middle of a lush valley. The ground was completely level, the surrounding mountains were almost vertical, and a translucent blanket of clouds covered the sky, dipping below the mountain peaks. I felt like a tiny guest in a giant's house.`
+                            description: `My most vivid memory is of standing in the middle of a lush valley. The ground was completely level, the surrounding mountains were almost vertical, and a translucent blanket of clouds covered the sky, dipping below the mountain peaks. I felt like a tiny guest in a giant's house.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -180,7 +194,11 @@ module.exports = {
                     {
                         anchor: `keep your kid name,`,
                         annotation: {
-                            description: `Sasha decided that, once in Boston, she would start to go by her given name of Saskia. I asked her if I should start calling her Saskia as well. She said no, that it would be nice to always be reminded of which friends knew her first.`
+                            description: `Sasha decided that, once in Boston, she would start to go by her given name of Saskia. I asked her if I should start calling her Saskia as well. She said no, that it would be nice to always be reminded of which friends knew her first.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `with everything it meant.`
@@ -193,7 +211,13 @@ module.exports = {
                     {
                         anchor: `prepped to shed…`,
                         annotation: {
-                            description: `Of course, it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. Hugging Sasha for the last time felt like clinging onto the outer shell of someone ready to moult and fly away. She was also literally prepping, in that she was to begin enrollment at a preparatory school in Boston.`
+                            description: `Of course, it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. Hugging Sasha for the last time felt like clinging onto the outer shell of someone ready to moult and fly away. She was also literally "prepped," in that she was to begin enrollment at a preparatory school in Boston.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -224,7 +248,10 @@ module.exports = {
                                     wiki: `Amber`
                                 },
                                 `is fossilised tree resin that sometimes preserves the remains of trapped insects from epochs past.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -235,7 +262,11 @@ module.exports = {
                     {
                         anchor: `your pupil's pupal fly,`,
                         annotation: {
-                            description: `While I reflect on my feelings for Sasha, petrified at the thought of losing her, I'm also literally reflected in her eyes, seeing myself as a petrified larva that never had a chance to moult.`
+                            description: `While I reflect on my feelings for Sasha, petrified at the thought of losing her, I was also literally reflected in her eyes, seeing myself as a petrified larva that never had a chance to moult.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `a pet petrified—`
@@ -248,7 +279,12 @@ module.exports = {
                     {
                         anchor: `he's getting you`,
                         annotation: {
-                            description: `Everyone I had known Sasha to crush on was Jewish, and these crushes in turn motivated her to be a better Jew. I was frustrated that anyone who could be part of this positive feedback loop instantly had the winning advantage in "getting her."`
+                            description: `Everyone I had known Sasha to crush on was Jewish, and these crushes in turn motivated her to be a better Jew. I was frustrated that anyone who could be part of this positive feedback loop instantly had the winning advantage in "getting her."`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -260,7 +296,10 @@ module.exports = {
                     {
                         anchor: `I would have too…`,
                         annotation: {
-                            description: `It seemed obvious to me that if Sasha were to want me, then I would certainly convert to Judaism.`
+                            description: `But it seemed obvious to me that if Sasha were to want me, then I would certainly convert to Judaism.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -278,7 +317,11 @@ module.exports = {
                     {
                         anchor: `skipped a grade.`,
                         annotation: {
-                            description: `I panicked when Sasha was allowed to skip the third grade, as this opened new vistas for her that necessarily excluded me. With middle school now underway, I was reminded of this panic as Sasha navigated with seeming ease the same social landscape that I found so treacherous.`
+                            description: `I panicked when Sasha was allowed to skip the third grade, as this opened new vistas for her that necessarily excluded me. With middle school now underway, I was reminded of this panic as Sasha navigated with seeming ease the same social landscape that I found so treacherous.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -295,13 +338,17 @@ module.exports = {
                         anchor: `wet-cheeked papoose`,
                         annotation: {
                             description: [
-                                `Over time, Sasha and I sat together less and less frequently on the schoolbus. One afternoon, as her hair blew in my face from the seat ahead of mine, I realised that we were no longer peers. I felt like a`,
+                                `Over time, Sasha and I sat together less frequently on the schoolbus. One afternoon, as her hair blew in my face from the seat ahead of mine, I realised that we were no longer peers, roughly equal in maturity. I felt like a`,
                                 {
                                     anchor: `papoose,`,
                                     wiki: `Papoose`
                                 },
                                 `or a Native American child, strapped to a basket on his mother's back, in anguish over having to start walking on his own.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -331,7 +378,13 @@ module.exports = {
                     {
                         anchor: `"tetherboy,"`,
                         annotation: {
-                            description: `In one incident, a bully intentionally punched the tetherball while I hadn't yet cleared the court, getting me tangled in its rope and knocking my head against the pole. It is also assumed by some that children kept on a tether by overprotective parents will later fail to fend for themselves.`
+                            description: `In one incident, a bully intentionally punched the "tetherball" while I hadn't yet cleared the court, getting me tangled in its rope and knocking my head against the pole. It's also assumed by some that children kept on a tether by overprotective parents will later fail to fend for themselves.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `soothing in your lecture voice.`
@@ -350,7 +403,11 @@ module.exports = {
                     {
                         anchor: `anarchy reigns,`,
                         annotation: {
-                            description: `It was weird to be taught in history class that anarchy devolves into tyranny, and then to walk onto the quad and witness this very principle in action.`
+                            description: `It was weird to be taught in history class that anarchy devolves into tyranny, and then to walk onto the quad and witness this very principle in action.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -363,15 +420,30 @@ module.exports = {
                         anchor: `narcing to the aides,`,
                         annotation: {
                             description: [
-                                `To narc is to be a snitch, much like the narcotics officers who gather intelligence on drug dealers by going undercover as high school students. It caught me off guard that the school aides typically declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.`
-                            ]
+                                `To narc is to be a snitch, much like the narcotics officers who gather intelligence on drug dealers by going undercover as high school students.`
+                            ],
+                            dotKeys: {
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
             },
             {
                 time: 110,
-                lyric: `who shrug when thus annoyed, yawning, "Boys will beat boys…"`
+                lyric: [
+                    `who shrug when thus annoyed, yawning,`,
+                    {
+                        anchor: `"Boys will beat boys…"`,
+                        annotation: {
+                            description: `No less than boys will "be" boys. It caught me off guard that the school aides typically declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [PUN]: true
+                            }
+                        }
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -391,7 +463,11 @@ module.exports = {
                     {
                         anchor: `jaw was stuck,`,
                         annotation: {
-                            description: `In another incident, a bully snuck up from behind and put me in a chokehold while I was waiting for the schoolbus. This left me with a dislocated jaw that still troubles me from time to time.`
+                            description: `In another incident, a bully snuck up from behind and put me in a chokehold while I was waiting for the schoolbus. This left me with a dislocated jaw that still troubles me from time to time.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `so now I`,
@@ -409,7 +485,10 @@ module.exports = {
                                     anchor: `Canadian accent.`,
                                     wiki: `Canadian_raising`
                                 }
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -425,7 +504,12 @@ module.exports = {
                     {
                         anchor: `hugging hurts…`,
                         annotation: {
-                            description: `In both a literal and figurative sense, of course.`
+                            description: `While the incident certainly caused a few bruises, hugging Sasha hurt in more than just a literal sense.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -454,7 +538,10 @@ module.exports = {
                                     wiki: `Apparent_death`
                                 },
                                 `Similarly, I didn't see any way out of the next few years except to periodically exit my body at will and hope for the best.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -492,7 +579,11 @@ module.exports = {
                     {
                         anchor: `rat turds choked.`,
                         annotation: {
-                            description: `I wasn't sure how to end a song about a painful stage of my life that seems comical in retrospect. I decided I was happier to err on the side of humour.`
+                            description: `I wasn't sure how to end a song about a painful stage of my life that seems comical in retrospect. I decided I was happier to err on the side of humour.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [SONGWRITING]: true
+                            }
                         }
                     }
                 ]
@@ -521,11 +612,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `separate annotations into dot categories`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -547,6 +633,11 @@ module.exports = {
             taskName: `rough illustration synopses`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `separate annotations into dot categories`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
