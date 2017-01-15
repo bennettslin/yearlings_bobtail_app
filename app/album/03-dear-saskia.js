@@ -1,4 +1,4 @@
-import { VERSES, PRECHORUS, CHORUS, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
+import { VERSES, PRECHORUS, CHORUS, AFTERWORD, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
 
 // TODO: Music annotations: Beatles, passive-aggressiveness, instruments
 module.exports = {
@@ -593,14 +593,23 @@ module.exports = {
                 sectionClass: CHORUS,
                 subsequent: true
             }
+        ],
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `I never lost touch with Sasha. After I finished this album and moved to New York, we reconnected and dated for a while.`,
+                        dotKeys: {
+                            [AFTERWORD]: true
+                        }
+                    }
+                }
+            }
         ]
     ],
     tasks: [
-        {
-            taskName: `afterword annotations`,
-            workedHours: 0,
-            neededHours: 1
-        },
         {
             taskName: `music annotations`,
             workedHours: 0,
@@ -638,6 +647,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `afterword annotations`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
