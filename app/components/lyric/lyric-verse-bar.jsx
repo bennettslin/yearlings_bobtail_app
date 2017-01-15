@@ -22,12 +22,15 @@ const LyricVerseBarView = ({
 
 ...other }) => (
     <div
-        className={`selected-verse-bar${isShown ? ' shown' : ' hidden'} ${isAbove ? 'above' : 'below'}`}
-        onClick={onVerseBarClick}
+        className={`verse-bar-block${isShown ? ' shown' : ' hidden'} ${isAbove ? 'above' : 'below'}`}
     >
-        <LyricsVerse {...other}
-            inVerseBar={true}
-        />
+        <div className="verse-bar"
+            onClick={onVerseBarClick}
+        >
+            <LyricsVerse {...other}
+                inVerseBar={true}
+            />
+        </div>
     </div>
 )
 
