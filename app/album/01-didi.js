@@ -204,7 +204,7 @@ module.exports = {
                                 anchor: `distantly related`,
                                 wiki: `Closely_related_key`
                             },
-                            `major keys of A, C, and E\u2011flat are meant to evoke the flurry of activity and transience of emotion experienced by a child from one day to the next.`
+                            `major keys of A, C, and E\u2011flat evoke the flurry of activity and transience of emotion experienced by a child from one day to the next.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
