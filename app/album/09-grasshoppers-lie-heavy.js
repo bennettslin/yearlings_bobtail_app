@@ -1,4 +1,4 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, INSTRUMENTAL } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, INSTRUMENTAL, BACKSTORY, NARRATIVE, PUN, OBSERVATION, SONGWRITING, REFERENCE } from 'helpers/constants'
 
 // TODO: Missing portal for Look Back in Anger. Is it "bell"?
 
@@ -23,8 +23,12 @@ module.exports = {
                 {
                     italic: `The Grasshopper Lies Heavy,`
                 },
-                `in which the Allies had won. Beyond the Philip Dick reference, I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, with neither wishing to be the first to reveal itself.`
-            ]
+                `in which the Allies had won. Beyond just making a Philip Dick reference, I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, with neither wishing to be the first to reveal itself.`
+            ],
+            dotKeys: {
+                [BACKSTORY]: true,
+                [OBSERVATION]: true
+            }
         }
     },
     scenes: [
@@ -76,7 +80,7 @@ module.exports = {
                             `in both form and harmony.`
                         ],
                         dotKeys: {
-                            music: true
+                            [SONGWRITING]: true
                         }
                     }
                 }
@@ -92,12 +96,19 @@ module.exports = {
                             properNoun: true,
                             annotation: {
                                 description: `After high school, I hightailed it out of Los Angeles to attend college in the Bay Area.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             }
                         },
                         {
                             anchor: `pompous autumn waits.`,
                             annotation: {
                                 description: `In high school, I soldiered on with the same gutless personality to which I had tied myself in middle school. It just didn't seem possible to become a completely different person while surrounded by all the same classmates. But in my head I was crafting a brand new persona, typified by pompous pretense, that was raring to go at the first opportunity.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true
+                                },
                                 portal: `pampas`
                             }
                         }
@@ -130,8 +141,11 @@ module.exports = {
                                     anchor: `Gun molls`,
                                     wiki: `Gun_moll`
                                 },
-                                `were the female companions of American gangsters in the early 1900s. In the same way that society viewed their exploits, I simultaneously desired and feared the girls who dated the boys who bullied me. Their contempt was certainly tougher to stomach.`
-                            ]
+                                `were the female companions of American gangsters in the early 1900s. In the same way that society viewed their exploits, I both desired and feared the girls who went out with the boys who bullied me. Their contempt was certainly tougher to stomach.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -171,7 +185,11 @@ module.exports = {
                     {
                         anchor: `dull dishroom days`,
                         annotation: {
-                            description: `I got a job washing dishes at a university cafeteria. The pay was decent, but the work was uneventful. I would sit and read while the dishes piled up, then clean them all at once. When it got really busy, I would switch to writing song lyrics in my head.`
+                            description: `I got a job washing dishes at a university cafeteria. The pay was decent, but the work was uneventful. I would sit and read while the dishes piled up, then clean them all at once. When it got really busy, I would switch to writing song lyrics in my head.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -183,7 +201,11 @@ module.exports = {
                     {
                         anchor: `keys left on dumbwaiter trays.`,
                         annotation: {
-                            description: `The university students bussed their trays on a vertical conveyor belt, which then transported the dirty dishes to the dishroom one floor below. Occasionally someone would leave a personal item on the tray by accident, and would then come downstairs to retrieve it. The crew always got a kick when that happened, as it broke up the monotony.`
+                            description: `The university students bussed their trays on a vertical conveyor belt, which then transported the dirty dishes to the dishroom one floor below. Occasionally someone would leave a personal item on the tray by accident, and then come downstairs to retrieve it. The crew always got a kick when that happened, as it broke up the monotony.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -215,7 +237,11 @@ module.exports = {
                                     wiki: `Blood_lancet`
                                 },
                                 `That day, she forgot to take it with her after bussing her tray, and came down to the dishroom to retrieve it.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -227,7 +253,11 @@ module.exports = {
                     {
                         anchor: `reflex you asked.`,
                         annotation: {
-                            description: `After handing Sita her lancing device, I made small talk before asking for her phone number. By then, I was mostly on autopilot when it came to hitting on random women in random situations.`
+                            description: `After handing Sita her lancing device, I made small talk before asking for her phone number. By then, I was mostly on autopilot when it came to hitting on random women in random situations.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -240,6 +270,10 @@ module.exports = {
                         anchor: `laying qualms to rest:`,
                         annotation: {
                             description: `It was well known to the students that the cafeteria hired most of its workers through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and seeming familiarity with underground culture ultimately won her over.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            },
                             portal: `laid_tourettes`
                         }
                     }
@@ -259,6 +293,9 @@ module.exports = {
                                 },
                                 `is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on print media everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.`
                             ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            },
                             portal: `swastikas`
                         }
                     },
@@ -266,7 +303,11 @@ module.exports = {
                     {
                         anchor: `sci-fi paperback.`,
                         annotation: {
-                            description: `At the time, I was obsessed with Philip K. Dick's stories of altered states and dystopian worlds, and never left home without one of his novels under my arm. Sita would soon hear all about it on our first date.`,
+                            description: `At the time, I was obsessed with Philip K. Dick's stories of altered states and dystopian worlds, and never left home without one of his novels under my arm. Sita was soon to hear all about it.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            },
                             portal: `safeway_paper_bag`
                         }
                     }
@@ -286,6 +327,9 @@ module.exports = {
                         anchor: `nosebleed`,
                         annotation: {
                             description: `After getting a nosebleed on the first date, I recounted past fights that ended with me getting a bloody nose.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            },
                             portal: `know_is_bleat`
                         }
                     },
@@ -294,6 +338,10 @@ module.exports = {
                         anchor: `bare-knuckle defeats…`,
                         annotation: {
                             description: `Sita seemed intrigued by my rough-and-tumble past, even as I was honest that these were literal beatdowns in which I never threw a single punch.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            },
                             portal: `barnacle`
                         }
                     }
@@ -321,7 +369,11 @@ module.exports = {
                     {
                         anchor: `show played in mimes,`,
                         annotation: {
-                            description: `The world of dating was awash in hidden cues and gestures that no one could be expected to recognise or understand, as far as I knew. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.`
+                            description: `The world of dating was awash in hidden cues and gestures that no one could be expected to recognise or understand, as far as I knew. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `but you pleaded to hear.`
@@ -344,7 +396,11 @@ module.exports = {
                     {
                         anchor: `stagefright ignites.`,
                         annotation: {
-                            description: `Shortly after Sita and I stopped talking, I began to play open mic nights. The first few times were a disaster, but I eventually learned to conquer my stagefright with just the right amount of alcohol.`
+                            description: `Shortly after Sita and I stopped talking, I began to play open mic nights. The first few times were a disaster, but I eventually learned to conquer my stagefright with just the right amount of alcohol.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ],
@@ -357,7 +413,11 @@ module.exports = {
                     {
                         anchor: `no convert's missed,`,
                         annotation: {
-                            description: `After I grew disillusioned with the mail-order cult, I never heard from them again. Clearly, they had learned to ask for the largest payments upfront in response to this recurring scenario. My failure to win over Sita left me with a similar feeling. Now that I had fulfilled my purpose and was no longer of use, my absence would not be noticed.`
+                            description: `After I grew disillusioned with the mail-order cult, I never heard from them again. Clearly, they had learned to ask for the largest payments upfront in response to this recurring scenario. My failure to win over Sita left me with a similar feeling. Now that I had fulfilled my purpose and was no longer of use, my absence would not be noticed.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `once assured his tithe.`
@@ -400,7 +460,11 @@ module.exports = {
                     {
                         anchor: `sour grapes, bitter sweets`,
                         annotation: {
-                            description: `At the end of each shift, I would scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, I would head to the dining area to pick through the dried-out scraps that no one else wanted.`
+                            description: `At the end of each shift, I would head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, all that was left were the dried-out scraps that no one else wanted.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -445,7 +509,11 @@ module.exports = {
                                     wiki: `Phantom_limb`
                                 },
                                 `is the sensation that a missing limb is still attached and responsive. After several weeks of giddy hope, the thought of spending my weekends alone again, with no other prospects on the horizon, felt like an amputation.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `trip left and right`
@@ -464,8 +532,11 @@ module.exports = {
                                     anchor: `runner's high`,
                                     wiki: `Neurobiological_effects_of_physical_exercise`
                                 },
-                                `is a feeling of euphoria experienced through exercise. I often needed a beer or two to muster the energy to walk home after a gruelling shift, so it was hard to feel gracious towards anyone out for an evening jog.`
-                            ]
+                                `is a feeling of euphoria experienced through exercise. After a gruelling shift, I often needed a beer or two to muster the energy to slog back home, so it was hard to feel gracious towards anyone out for an evening jog.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -484,7 +555,10 @@ module.exports = {
                                     wiki: `Walkman`
                                 },
                                 `is a portable cassette player. I would listen to mixtapes on the walk home, seemingly absorbed in my music even as I wished pratfalls upon others, much as a child might duck beneath a window after pulling a prank.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `you hide.`
@@ -504,7 +578,11 @@ module.exports = {
                     {
                         anchor: `looming shadow nears,`,
                         annotation: {
-                            description: `I lived along the path between the campus and Sita's boarding house. By chance, she had been walking half a block behind that evening, debating whether to flag me down. After I turned to open the gate and noticed her presence, there was an awkward few seconds where neither of us was sure what to do next.`
+                            description: `I lived along the path between the campus and Sita's boarding house. By chance, she had been walking half a block behind me that evening, debating whether to flag me down. After I turned to open the gate and noticed her presence, there was an awkward few seconds where neither of us was sure what to do next.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -533,7 +611,10 @@ module.exports = {
                     {
                         anchor: `you're my password?"`,
                         annotation: {
-                            description: `Watching as I enter the passcode to unlock my front gate, Sita breaks the ice by mentioning that a topic we had once discussed is now part of a password that she recently created.`
+                            description: `Watching as I enter the passcode to unlock my front gate, Sita breaks the ice by mentioning that a topic we had once discussed is now part of a password that she recently created.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -555,7 +636,10 @@ module.exports = {
                     {
                         anchor: `locks your arm.`,
                         annotation: {
-                            description: `Shivering from the winter chill, Sita tucks her hand underneath my arm as she invites herself into my apartment. And just like that, I am once again on guard, second-guessing everything I say and do.`
+                            description: `Shivering from the winter chill, Sita tucks her hand underneath my arm as she invites herself into my apartment. And just like that, I am once again on guard, second-guessing everything I say and do.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     {
@@ -567,7 +651,10 @@ module.exports = {
                     {
                         anchor: `returned to your guard…`,
                         annotation: {
-                            description: `I was like an escaped convict who had just been handcuffed and sent back to the penitentiary, where a prison guard now directs me into a holding cell.`
+                            description: `I was like an escaped convict who had just been handcuffed and sent back to the penitentiary, where a prison guard now directs me into a holding cell.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -586,7 +673,10 @@ module.exports = {
                     {
                         anchor: `gingerbread prison,`,
                         annotation: {
-                            description: `Even if not totally filling, it's sweet to taste, readily escapable, and ultimately of one's own making.`
+                            description: `Even if not totally filling, it's sweet to taste, readily escapable, and ultimately of one's own making.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `here now you submit.`
@@ -599,7 +689,11 @@ module.exports = {
                     {
                         anchor: `never full, you're fed;`,
                         annotation: {
-                            description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I conceded that platonic friendship was better than the cold, bleak alternative.`
+                            description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I conceded that platonic friendship was better than the cold, bleak alternative.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `so you`,
@@ -619,6 +713,10 @@ module.exports = {
                         anchor: `lidless Vaseline sits.`,
                         annotation: {
                             description: `I kept a jar of Vaseline by my bedside, which made masturbation quick and easy. Its last usage was obviously quite recent.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            },
                             portal: `lidless_vaseline_sits`
                         }
                     }
@@ -631,7 +729,11 @@ module.exports = {
                     {
                         anchor: `"here to Philip Dick?"`,
                         annotation: {
-                            description: `Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my carefully crafted bookish persona, while subtly conveying her acceptance of the flawed, vulnerable person underneath.`
+                            description: `Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my carefully crafted bookish persona, while subtly conveying her acceptance of the flawed, vulnerable person underneath.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -649,7 +751,13 @@ module.exports = {
                     {
                         anchor: `waiting room:`,
                         annotation: {
-                            description: `One night, Sita had a severe hypoglycemic episode. I drove her to the hospital and sat in the waiting room while she was being examined. Also, "wedding room." In traditional weddings, the groom's entrance begins the ceremony. He then stands and waits for the bride to close the procession.`
+                            description: `One night, Sita had a severe hypoglycemic episode. I drove her to the hospital and sat in the waiting room while she was being examined. Also, "wedding room." In traditional weddings, the groom's entrance begins the ceremony. He then stands and waits for the bride to close the procession.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -661,7 +769,11 @@ module.exports = {
                     {
                         anchor: `bright to your gloom`,
                         annotation: {
-                            description: `Or else, "play bride to your groom." While I relied on humour and wit to mask my cynicism, Sita's positive outlook was genuinely heartfelt. What I stood to gain from her was obvious; less so was what she stood to gain from me.`
+                            description: `Or else, "play bride to your groom." While I relied on humour and wit to mask my cynicism, Sita's positive outlook was genuinely heartfelt. What I stood to gain from her was obvious; less so was what she stood to gain from me.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -683,7 +795,11 @@ module.exports = {
                     {
                         anchor: `malady`,
                         annotation: {
-                            description: `Or else, on a "melody," as the wedding procession is typically accompanied by music.`
+                            description: `Or else, on a "melody," as the wedding procession is typically accompanied by music.`,
+                            dotKeys: {
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `your thoughts are stuck,`
@@ -696,7 +812,11 @@ module.exports = {
                     {
                         anchor: `organ on which it struck,`,
                         annotation: {
-                            description: `In a chapel, processional music may be performed on an organ. Also, organ failure is one of the dangers of hypoglycemia.`
+                            description: `In a chapel, processional music may be performed on an organ. Also, "organ" failure is one of the dangers of hypoglycemia.`,
+                            dotKeys: {
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -729,6 +849,11 @@ module.exports = {
                         anchor: `bell with a ring.`,
                         annotation: {
                             description: `At the hospital, a bell is rung to indicate that a patient has been released from care and is returning to the waiting room. Also, "belle with a ring." The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            },
                             portal: `withering`
                         }
                     }
@@ -741,7 +866,10 @@ module.exports = {
                     {
                         anchor: `white gown,`,
                         annotation: {
-                            description: `White gowns are common attire in both wedding ceremonies and hospitals.`
+                            description: `White gowns are common attire in both wedding ceremonies and hospitals.`,
+                            dotKeys: {
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `crept up she beams;`
@@ -754,7 +882,12 @@ module.exports = {
                     {
                         anchor: `cheek unveiled.`,
                         annotation: {
-                            description: `It takes some cheek to sneak up on someone who's dozing off. Also, in a traditional wedding, the father of the bride lifts her veil to kiss her on the cheek.`
+                            description: `It takes some "cheek" to sneak up on someone who's dozing off. Also, in a traditional wedding, the father of the bride lifts her "veil" to kiss her on the cheek.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -771,7 +904,10 @@ module.exports = {
                 lyric: {
                     anchor: `She loves you…`,
                     annotation: {
-                        description: `It took a long while for Sita and I to grow fully comfortable around each other. During the first year or so of our friendship, we mainly just studied together. Then at some point, those study sessions progressed into cuddling, followed by necking. It all happened so fast towards the end that I was still processing what exactly triggered it.`
+                        description: `It took a long, long while for Sita and I to become fully comfortable around each other. During the first year or so of our friendship, we mainly just studied together. Then at some point, those study sessions progressed into cuddling, quickly followed by necking. It all happened so fast towards the end that I was still processing what exactly triggered it.`,
+                        dotKeys: {
+                            [BACKSTORY]: true
+                        }
                     }
                 }
             },
@@ -792,6 +928,10 @@ module.exports = {
                         annotation: {
                             // todo: foreshadow
                             description: `The night that we decided to have sex, I was suddenly overcome with a weary unease. As Sita lay naked under the covers, I stood forlornly by the bedside for what seemed like several minutes.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            },
                             portal: `stand_onshore`
                         }
                     },
@@ -809,7 +949,11 @@ module.exports = {
                     {
                         anchor: `hard-on in a sleeve."`,
                         annotation: {
-                            description: `Seeing my penis tucked in a condom, Sita lightens the mood by feigning to agree with a past self-assessment of mine. I had once judged myself to be too upfront about my feelings, or as I had put it, to "wear my heart on my sleeve."`
+                            description: `Seeing my penis tucked in a condom, Sita lightens the mood by feigning to agree with a past self-assessment of mine. I had once judged myself to be too upfront about my feelings, or as I had put it, to wear my "heart on my sleeve."`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -821,7 +965,11 @@ module.exports = {
                     {
                         anchor: `how's that compromise?`,
                         annotation: {
-                            description: `I had spent so long constructing a facade behind which to tuck away my emotions, that I was now hesitant to compromise the safety of this position. I just didn't want to be vulnerable again, and I had so little faith that my desires wouldn't be used against me, were I to reveal them to Sita as I had once before.`
+                            description: `I had spent so long constructing a facade behind which to tuck away my emotions, that I was now hesitant to compromise the safety of this position. I just didn't want to be vulnerable again, and I had so little faith that my desires wouldn't be used against me, were I to reveal them to Sita as I had once before.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -855,6 +1003,10 @@ module.exports = {
                                 },
                                 `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26. And, of course, Sita was my "grace darling," having rescued me from a sea of loneliness.`
                             ],
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            },
                             portal: `grey_starling`
                         }
                     },
@@ -881,7 +1033,10 @@ module.exports = {
                     {
                         anchor: `pure lose to pure…`,
                         annotation: {
-                            description: `Sita and I were both virgins, which ultimately made it easier to lower my defences, as it was a reminder that neither of us really knew what we were doing.`
+                            description: `Sita and I were both virgins, which ultimately made it easier to lower my defences, as it was a reminder that neither of us really knew what we were doing.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -900,7 +1055,11 @@ module.exports = {
                     {
                         anchor: `stroke her temples.`,
                         annotation: {
-                            description: `Referring to her literal temples, and possibly to her figurative ones as well.`
+                            description: `Referring to her literal temples, and possibly to some figurative ones as well.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `She gushes as she guides,`
@@ -914,7 +1073,10 @@ module.exports = {
                     {
                         anchor: `inside her thighs.`,
                         annotation: {
-                            description: `That night, we had sex for the first time.`
+                            description: `That night, we had sex for the first time.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
