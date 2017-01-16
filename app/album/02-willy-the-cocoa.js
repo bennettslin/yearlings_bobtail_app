@@ -1002,7 +1002,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `I recently asked my brother how old he was. He answered seventeen, which is only a decade behind. So I guess he's making progress.`,
+                        description: `I recently asked my brother how old he was. He answered seventeen, which is only a decade behind. So I guess we're making progress.`,
                         dotKeys: {
                             [AFTERWORD]: true
                         }
