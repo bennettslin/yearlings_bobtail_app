@@ -1,7 +1,7 @@
 // TODO: Past vs. present tense?
 // Be more open about Buddhist upbringing.
 
-import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL } from 'helpers/constants'
+import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, SONGWRITING } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -55,7 +55,7 @@ module.exports = {
                     annotation: {
                         description: `This song uses a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one to each audio speaker, creating the musical version of a cinematic split screen. Here, I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, the two voices proceed independently, each unaware of the ideas and images subtly planted along its path by the other.`,
                         dotKeys: {
-                            music: true
+                            [SONGWRITING]: true
                         }
                     }
                 }

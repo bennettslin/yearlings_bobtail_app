@@ -1,11 +1,15 @@
 import { VERSES, PRECHORUS, CHORUS, AFTERWORD, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
 
 // TODO: Music annotations: Beatles, passive-aggressiveness, instruments
+// TODO: Mention mother pulling strings to get us to go to a rich school
 module.exports = {
     title: {
         anchor: `Dear Saskia`,
         annotation: {
-            description: `Sasha's given name was actually Saskia, but because this was difficult for children to pronounce, she had gone by the nickname of Sasha her entire life.`
+            description: `Sasha's given name was actually Saskia, but because this was difficult for children to pronounce, she had gone by the nickname of Sasha her entire life.`,
+            dotKeys: {
+                [BACKSTORY]: true
+            }
         }
     },
     scenes: [
@@ -77,7 +81,7 @@ module.exports = {
                             `for weaving melodies and chords so seamlessly. This song began life as an overzealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for, and trotted it back out. The passive-aggressive lyrics are matched in texture by screeching woodwinds and scratch tones on violins.`
                         ],
                         dotKeys: {
-                            music: true
+                            [SONGWRITING]: true
                         }
                     }
                 }

@@ -1,9 +1,11 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, RESPONSE } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, RESPONSE, SONGWRITING, OBSERVATION, BACKSTORY, NARRATIVE, REFERENCE, PUN } from 'helpers/constants'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
  * list order on the album.
  */
+
+// TODO: Music annotation: mention space oddity
 module.exports = {
     title: {
         anchor: `Pchelka's Starry Journey`,
@@ -14,7 +16,10 @@ module.exports = {
                     wiki: `Soviet_space_dogs`
                 },
                 `were dogs sent into orbit under the Soviet space program. In this allegorical retelling, I imagine myself as Pchelka, and my brother as Mushka.`
-            ]
+            ],
+            dotKeys: {
+                [OBSERVATION]: true
+            }
         }
     },
     scenes: [
@@ -61,7 +66,7 @@ module.exports = {
                             `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
                         ],
                         dotKeys: {
-                            music: true
+                            [SONGWRITING]: true
                         }
                     }
                 }
@@ -90,7 +95,10 @@ module.exports = {
                                         }
                                     },
                                     `the character F. tires of getting bullied at the beach. He signs up for the Charles Axis bodybuilding course advertised in a comic book, only to discover that Charles Axis is the one who bullies him.`
-                                ]
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
                     ]
@@ -117,7 +125,11 @@ module.exports = {
                     {
                         anchor: `hit your baby brother,`,
                         annotation: {
-                            description: `The times that I hit my brother were actually rare. They just stick out in my memory.`
+                            description: `The times that I hit my brother were actually rare. They just stick out in my memory.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -143,7 +155,12 @@ module.exports = {
                     {
                         anchor: `buy a fortress`,
                         annotation: {
-                            description: `Our cousin was well off and would receive new toys on a regular basis, one of which was a lifesize wooden castle. Since my birthday is in November, I always had the option of asking for a more expensive toy, which would then serve as my Christmas gift as well. So I was dismayed to learn that some toys were too expensive to count even for two gifts.`
+                            description: `Our well-to-do cousin would receive new toys on a regular basis, one of which was a lifesize wooden castle. Since my birthday is in November, I always had the option of asking for a more expensive toy, which would then serve as my Christmas gift as well. So I was dismayed to learn that some toys were too expensive to count even for two gifts.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -170,7 +187,11 @@ module.exports = {
                     {
                         anchor: `beneath your captain bed.`,
                         annotation: {
-                            description: `I slept in a captain bed that rested atop a dresser on one side, with the other side placed flush against the wall. By removing the bottom drawer, I could crawl into the space underneath with my brother and stay hidden.`
+                            description: `I slept in a captain bed that rested atop a dresser on one side, with the other side placed flush against the wall. By removing the bottom drawer, I could crawl into the space underneath with my brother and stay hidden.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -182,7 +203,11 @@ module.exports = {
                     {
                         anchor: `didn't hear a peep`,
                         annotation: {
-                            description: `My brother would play alongside me for hours without once speaking or interacting. It was a strange closeness we shared.`
+                            description: `My brother would play alongside me for hours without once speaking or interacting. It was a strange closeness we shared.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `throughout the entire weekend!"`
@@ -203,8 +228,11 @@ module.exports = {
                                             anchor: `white-throated sparrow`,
                                             wiki: `White-throated_sparrow`
                                         },
-                                        `was in breeding season, and we heard its song everywhere. I found the sound haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.`
-                                    ]
+                                        `was in breeding season, and we heard its song everywhere. I found the sound so haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.`
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
                                 }
                             }
                         }
@@ -222,6 +250,12 @@ module.exports = {
                     {
                         anchor: `know is bleat,`,
                         annotation: {
+                            description: `To bleat is to cry like a calf. My instinctive response to getting bullied was to rationally argue against its injustice. Only later did I learn that this is the least effective approach imaginable.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [REFERENCE]: true
+                            },
                             portal: `know_is_bleat`
                         }
                     }
@@ -234,7 +268,10 @@ module.exports = {
                     {
                         anchor: `your cape`,
                         annotation: {
-                            description: `I was well-liked in elementary school for being physically small and ever eager to draw cartoon figures for anyone who asked. But these very traits that had once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.`
+                            description: `I was well-liked in elementary school for being physically small and ever eager to draw cartoon figures for anyone who asked. But these very traits that had once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `and beat you,`
@@ -251,7 +288,11 @@ module.exports = {
                     {
                         anchor: `learn to kick it back.`,
                         annotation: {
-                            description: `In middle school, the most well-liked kids were the ones who were least concerned about being liked. This ran counter to my instinct for throwing myself whole-heartedly into anything worth doing.`
+                            description: `In middle school, the most well-liked kids were the ones who were least concerned about being liked. This ran counter to my instinct for caring deeply and throwing myself whole-heartedly into anything worth pursuing. I never did adjust.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -268,7 +309,11 @@ module.exports = {
                     {
                         anchor: `Feigning sick,`,
                         annotation: {
-                            description: `As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press too deeply on it.`
+                            description: `As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press too deeply on it.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `I chanced to read`
@@ -315,7 +360,11 @@ module.exports = {
                     {
                         anchor: `send-away offers`,
                         annotation: {
-                            description: `Since I had few friends, I would amuse myself by sending away for free samples and making small purchases through mail order. As a result, I got flooded with junk mail advertising even more such offers. It was during this time that I received the letter from RI Research, Special Human Being Laboratory.`
+                            description: `Since I had few friends, I would amuse myself by sending away for free samples and making small purchases through mail order. As a result, I got flooded with junk mail advertising even more such offers. It was during this time that I received the letter from RI Research, Special Human Being Laboratory.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `were piling up high,`
@@ -338,7 +387,11 @@ module.exports = {
                                     wiki: `Red_envelope`
                                 },
                                 `My parents insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `for years, at once counted and sent,`
@@ -360,7 +413,10 @@ module.exports = {
                     {
                         anchor: `"Are you a Beyonder`,
                         annotation: {
-                            description: `According to RI Research, Beyonders are an ancient race of beings born from the stars, who were scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet are beset by a nagging disquiet that they do not truly belong.`
+                            description: `According to RI Research, Beyonders are an ancient race of beings born from the stars, who were scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet are beset by a nagging disquiet that they do not truly belong.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `sent down to be Earth-fostered?`
@@ -373,7 +429,11 @@ module.exports = {
                     {
                         anchor: `wanderer lost?"`,
                         annotation: {
-                            description: `Hitting all the right nerves, the letter from RI Research addressed my yearning to belong, and spoke to my frustration that these desired ends should so elude me. It then shared its hopeful news: They believed that I might be a Beyonder, and after searching for so long, they had found me.`
+                            description: `Hitting all the right nerves, the letter from RI Research addressed my yearning to belong, and spoke to my frustration that these desired ends should so elude me. It then shared its hopeful news: They believed that I might be a Beyonder, and after searching for so long, they had found me.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -398,7 +458,10 @@ module.exports = {
                                     }
                                 },
                                 `is a play by Samuel Beckett that explores existential themes.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `our two impatient paupers,`
@@ -424,8 +487,11 @@ module.exports = {
                                 {
                                     emphasis: `my`
                                 },
-                                `little brother. Didi and Gogo are also the respective pet names of Vladimir and Estragon, the two characters who are still waiting for Godot by the end of Beckett's play.`,
-                            ]
+                                `little brother. Coincidentally, Didi and Gogo are also the respective pet names of Vladimir and Estragon, the two characters who are still waiting for Godot by the end of Beckett's play.`,
+                            ],
+                            dotKeys: {
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `sauntered off…`
@@ -438,7 +504,11 @@ module.exports = {
                     {
                         anchor: `in hunger they were led`,
                         annotation: {
-                            description: `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes Laika, the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I liked the analogy of being thrust helplessly from one desperate circumstance to another.`
+                            description: `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes Laika, the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I liked the analogy of being thrust helplessly from one desperate circumstance to another.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `into`,
@@ -467,13 +537,16 @@ module.exports = {
                         anchor: `hunter's belt`,
                         annotation: {
                             description: [
-                                `The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow the constellation Orion, named after the`,
+                                `The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow that of Orion, named after the`,
                                 {
                                     anchor: `hunter in Greek mythology.`,
                                     wiki: `Orion_(mythology)`
                                 },
                                 `Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward animals.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `and launched!`
@@ -503,7 +576,10 @@ module.exports = {
                                     wiki: `Star_people_(New_Age_belief)`
                                 },
                                 `was a New Age belief popular in the 1970s. Like Beyonders, star people arrived on Earth with no recollection of their true origin. Undoubtedly, the letters from RI Research drew much of their material from this body of thought.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -529,7 +605,10 @@ module.exports = {
                     {
                         anchor: `too much at once?`,
                         annotation: {
-                            description: `I sobbed when I got the letter confirming that I was a Beyonder. While I was relieved to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`
+                            description: `I sobbed when I got the letter confirming that I was a Beyonder. While I was relieved to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `We're trusting mum's to be the word.`
@@ -553,7 +632,10 @@ module.exports = {
                     {
                         anchor: `mothership.`,
                         annotation: {
-                            description: `To present the appearance of a legitimate institute, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included a spacecraft that would allow us to make contact with our extraplanetary kin.`
+                            description: `To present the appearance of a legitimate institute, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included a spacecraft that would allow us to make contact with our extraplanetary kin.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -569,7 +651,10 @@ module.exports = {
                     {
                         anchor: `how you're to live…"`,
                         annotation: {
-                            description: `The letters cautioned me to keep myself separate from society. I realised that my brother had been doing this all along, and thus modelled my own behaviour after his.`
+                            description: `The letters cautioned me to keep myself separate from society. I realised that my brother had been doing this all along, and thus modelled my own behaviour after his.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -596,7 +681,10 @@ module.exports = {
                     {
                         anchor: `act the dunce`,
                         annotation: {
-                            description: `By adopting my brother's composure in refusing to acknowledge or respond to other students, I came across as dimwitted.`
+                            description: `By adopting my brother's composure in refusing to acknowledge or respond to other students, I came across as dimwitted.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -615,11 +703,16 @@ module.exports = {
                             description: [
                                 `In Greek mythology,`,
                                 {
-                                    anchor: `Castor and Pollux`,
+                                    anchor: `"Castor and Pollux"`,
                                     wiki: `Castor_and_Pollux`
                                 },
                                 `were twin brothers fathered by Zeus. Castor was mortal, however, so Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with all its spiritual answers.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -645,7 +738,10 @@ module.exports = {
                     {
                         anchor: `murdered for their virtue.`,
                         annotation: {
-                            description: `Like all ordeals, mine became more bearable once I could tie it to a greater purpose.`
+                            description: `Like all ordeals, mine became more bearable once I could tie it to a greater purpose.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -666,8 +762,11 @@ module.exports = {
                                     anchor: `Omerta`,
                                     wiki: `Omertà`
                                 },
-                                `is the Mafia's code of honour that praises silence and refusal to cooperate with authorities. Of course, I wasn't the first kid ever to observe similarities between school life and prison culture.`
-                            ]
+                                `is the Mafia's code of honour that praises silence and refusal to cooperate with authorities. Of course, I wasn't the first kid ever to observe similarities between school life and the criminal world.`
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `turned their backs.`
@@ -687,7 +786,12 @@ module.exports = {
                     {
                         anchor: `muted youths lapsed.`,
                         annotation: {
-                            description: `While I only spent a year actively feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It's not that I lacked the will to correct their perceptions. I was as baffled as anyone about what had just happened, and there were no guide books for how to proceed from there.`
+                            description: `While I only spent a year actively feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It's not that I lacked the will to correct their perceptions. I was as baffled as anyone about what had just happened, and there were no guide books for how to proceed from there.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -706,7 +810,10 @@ module.exports = {
                                     wiki: `Cryptogram`
                                 },
                                 `gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer openings others were given to get under my skin.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `are the toughest ones to crack.`
@@ -726,7 +833,10 @@ module.exports = {
                                     wiki: `Achilles`
                                 },
                                 `was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved acceptance from others.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `we'd realise, blind before the squad.`
@@ -739,7 +849,13 @@ module.exports = {
                     {
                         anchor: `unearth their own plots!`,
                         annotation: {
-                            description: `Figuratively, to reveal one's secret plans, but also literally, to dig one's own grave. A spy succeeds by staying hidden; recognition and appreciation can only come after facing the firing squad. Similarly, at some point I tried to open up, thus sabotaging my past efforts to be unresponsive, but this only exposed me to greater scrutiny, as I was now forced to explain myself.`
+                            description: `Figuratively, to reveal one's secret plans, but also literally, to dig one's own grave. A spy succeeds by staying hidden; recognition and appreciation can only come after facing the firing squad. Similarly, at some point I tried to open up, thus sabotaging my past efforts to be unresponsive, but this only exposed me to greater scrutiny, as I was now forced to explain myself.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -773,7 +889,11 @@ module.exports = {
                         anchor: `Mushka's`,
                         properNoun: true,
                         annotation: {
-                            description: `While Pchelka and Mushka successfully spent a day in orbit aboard Sputnik 6, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all aboard. In my own analogy, I as Pchelka managed to avoid the sad fate that my brother as Mushka could not.`
+                            description: `While Pchelka and Mushka successfully spent a day in orbit aboard Sputnik 6, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all aboard. In my own analogy, I as Pchelka managed to avoid the sad fate that my brother as Mushka could not.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `dragged by collar`
@@ -786,14 +906,20 @@ module.exports = {
                     {
                         anchor: `his slaughter`,
                         annotation: {
-                            description: `I wrote this song during the peak of my activism within the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`
+                            description: `I wrote this song during the peak of my activism within the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `under`,
                     {
                         anchor: `undying dawn.`,
                         annotation: {
-                            description: `During summer in the Arctic, the sun remains visible for the full 24 hours of each day.`
+                            description: `During summer in the Arctic, the sun remains visible for the full 24 hours of each day.`,
+                            dotKeys: {
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -805,7 +931,10 @@ module.exports = {
                     {
                         anchor: `no one heard his hollers,`,
                         annotation: {
-                            description: `I often wondered whether my brother was screaming on the inside, as I was during this time. If so, then he certainly wasn't being heard.`
+                            description: `I often wondered whether my brother was screaming on the inside, as I was during this time. If so, then he certainly wasn't being heard.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -820,11 +949,14 @@ module.exports = {
                             description: [
                                 `The`,
                                 {
-                                    anchor: `Iditarod`,
+                                    anchor: `"Iditarod"`,
                                     wiki: `Iditarod_Trail_Sled_Dog_Race`
                                 },
                                 `is an annual sled dog race held in Alaska. The rod refers to the whip used by some mushers to keep the pack disciplined.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -842,7 +974,7 @@ module.exports = {
                                     anchor: `pentobarbitone`,
                                     wiki: `Pentobarbital`
                                 },
-                                `injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected in advance.`
+                                `injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected from the start.`
                             ]
                         }
                     }
@@ -865,14 +997,22 @@ module.exports = {
                     {
                         anchor: `sorry I bailed,`,
                         annotation: {
-                            description: `By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn't a tourist in the land of autism. He wasn't free to come and go as he pleased.`
+                            description: `By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn't a tourist in the land of autism. He wasn't free to come and go as he pleased.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     {
                         anchor: `Xiao Xiang,`,
                         properNoun: true,
                         annotation: {
-                            description: `Mushka means "little fly" in Russian. By coincidence, my brother's Chinese name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`
+                            description: `Mushka means "little fly" in Russian. By coincidence, my brother's Chinese name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`,
+                            dotKeys: {
+                                [REFERENCE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `mush on…`
@@ -887,7 +1027,11 @@ module.exports = {
                         annotation: {
                             description: [
                                 `A group of whales is called a pod. Because I wanted to belong to a social group, I couldn't "ditch my whales," and thus I sought out a metaphorical escape pod.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -906,7 +1050,11 @@ module.exports = {
                     {
                         anchor: `hopped on drugs,`,
                         annotation: {
-                            description: `Eventually a classmate suspected me of being on drugs, and I was sent to the principal's office. When my mother came to pick me up, she proceeded to chew out the principal for even suspecting that I was capable of such a thing. Since I was generally more responsive around authority figures, he had to agree that the charge didn't make sense, and dropped it.`
+                            description: `Eventually a classmate suspected me of being on drugs, and I was sent to the principal's office. When my mother came to pick me up, she proceeded to chew out the principal for even suspecting that I was capable of such a thing. Since I was generally more responsive around authority figures, he had to agree that the charge didn't make sense, and dropped it.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `son, with Mum we'll need a word."`
@@ -919,7 +1067,11 @@ module.exports = {
                     {
                         anchor: `can't ever return.`,
                         annotation: {
-                            description: `I'd grown disillusioned with RI Research at this point anyway, as the letters inexplicably began to take on Christian overtones. It's not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.`
+                            description: `I'd grown disillusioned with RI Research at this point anyway, as the letters inexplicably began to take on Christian overtones. It's not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -948,11 +1100,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `separate annotations into dot categories`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -969,6 +1116,11 @@ module.exports = {
             taskName: `include wiki urls`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `separate annotations into dot categories`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

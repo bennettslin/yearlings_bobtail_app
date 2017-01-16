@@ -5,7 +5,10 @@ module.exports = {
     title: {
         anchor: 'Willy the Cocoa',
         annotation: {
-            description: `Kids in the neighbourhood called Willy "The Cocoa," referring both to his Coke bottles and to his seeming a bit "cuckoo." `
+            description: `Kids in the neighbourhood called Willy "The Cocoa," referring both to his Coke bottles and to his seeming a bit "cuckoo." `,
+            dotKeys: {
+                [BACKSTORY]: true
+            }
         }
     },
     // TODO: Add scene with garden?
