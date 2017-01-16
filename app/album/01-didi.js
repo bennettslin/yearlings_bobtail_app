@@ -13,7 +13,6 @@ import { INSTRUMENTAL,
          AFTERWORD,
          PULPIT } from 'helpers/constants'
 
-// TODO: Music annotations: muted guitars.
 module.exports = {
     title: {
         anchor: 'Didi (弟弟)',
@@ -77,12 +76,18 @@ module.exports = {
     lyrics: [
         [
             {
+                time: 0,
+                centre: {
+                    italic: `(intro)`
+                }
+            },
+            {
                 unitMap: true,
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `In this song sung from my sister's perspective when we were children, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
+                            `Toy instruments abound in this song sung from my sister's perspective when we were children, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
                             {
                                 italic: {
                                     anchor: `Pet Sounds.`,
@@ -94,18 +99,7 @@ module.exports = {
                             [SONGWRITING]: true
                         }
                     }
-                }
-            }
-        ],
-        [
-            {
-                time: 0,
-                centre: {
-                    italic: `(intro)`
-                }
-            },
-            {
-                unitMap: true,
+                },
                 sectionClass: INSTRUMENTAL
             }
         ],
@@ -205,7 +199,12 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `The nonstop modulation between the distantly related keys of A, C, and E\u2011flat is meant to evoke the flurry of activity and transience of emotion experienced by a child from one day to the next.`
+                            `The nonstop modulations between the`,
+                            {
+                                anchor: `distantly related`,
+                                wiki: `Closely_related_key`
+                            },
+                            `major keys of A, C, and E\u2011flat are meant to evoke the flurry of activity and transience of emotion experienced by a child from one day to the next.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -367,9 +366,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: [
-                            `I dampened the lead guitar strings by wrapping tissue around them near the bridge.`
-                        ],
+                        description: `I dampened the lead guitar strings by wrapping tissue around them near the bridge.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -418,6 +415,22 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `The song ends in G\u2011flat major, the remaining major triad belonging to the`,
+                            {
+                                anchor: `octatonic collection`,
+                                wiki: `Octatonic_scale`
+                            },
+                            `shared by the major triads of A, C, and E\u2011flat, to suggest the excitement of undiscovered vistas ahead.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS,
                 subsequent: true
             }

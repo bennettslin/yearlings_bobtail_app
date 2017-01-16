@@ -1,6 +1,6 @@
 import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION } from 'helpers/constants'
 
-// TODO: Music annotations: Changelings, muted mandolins, melodicas, CCR swamp rock, misheard lyrics
+// TODO: Music annotations: muted mandolins: new instrument, melodicas
 module.exports = {
     title: {
         anchor: 'Willy the Cocoa',
@@ -74,32 +74,6 @@ module.exports = {
     lyrics: [
         [
             {
-                unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: [
-                            `In folklore of the past,`,
-                            {
-                                anchor: `changelings`,
-                                wiki: `Changeling`
-                            },
-                            `were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, I wanted to mimic a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of`,
-                            {
-                                anchor: `Creedence Clearwater Revival,`,
-                                wiki: `Creedence_Clearwater_Revival`
-                            },
-                            `with muted mandolins and Cajun accordions thrown in. Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                }
-            }
-        ],
-        [
-            {
                 time: 0,
                 centre: {
                     italic: `(intro)`
@@ -107,6 +81,18 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            // TODO: Be more articulate.
+                            `The chord progression here follows a repeating staircase pattern of a minor third down, followed by a whole step up. A similar contour recurs in the melodic cadence played by the melodicas at the end of each verse line.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: INSTRUMENTAL
             }
         ],
@@ -164,6 +150,28 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `In folklore of the past,`,
+                            {
+                                anchor: `changelings`,
+                                wiki: `Changeling`
+                            },
+                            `were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, then, I wanted to mimic a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of`,
+                            {
+                                anchor: `Creedence Clearwater Revival,`,
+                                wiki: `Creedence_Clearwater_Revival`
+                            },
+                            `with melodicas thrown in to evoke the sound of Cajun accordions.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true,
+                            [REFERENCE]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -216,6 +224,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES,
                 subsectionClass: RHYME,
                 subsequent: true,
