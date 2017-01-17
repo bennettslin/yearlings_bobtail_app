@@ -81,7 +81,7 @@ module.exports = {
                     {
                         anchor: `hiding place of retreat`,
                         annotation: {
-                            description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins abruptly, as I come out from the crawl space beneath my bed to which I regularly snuck away as a child. Of course, I may have just come out from somewhere else…`,
+                            description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins abruptly, as I come out from the dusty crawl space beneath my bed to which I regularly snuck away as a child.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -1247,6 +1247,11 @@ module.exports = {
         },
         {
             taskName: `sort out past and present tense`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
+            taskName: `rough illustration synopses`,
             workedHours: 0,
             neededHours: 3
         },

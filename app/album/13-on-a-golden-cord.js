@@ -843,6 +843,11 @@ module.exports = {
             neededHours: 1
         },
         {
+            taskName: `rough illustration synopses`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             // Drunken me holds gold bracelet over kid's head in the morning.
             taskName: `illustrations`,
             workedHours: 0,

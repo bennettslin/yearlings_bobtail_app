@@ -992,6 +992,11 @@ module.exports = {
             neededHours: 1
         },
         {
+            taskName: `rough illustration synopses`,
+            workedHours: 0,
+            neededHours: 3
+        },
+        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
