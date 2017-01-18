@@ -87,7 +87,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `Toy instruments abound in this song sung from my sister's perspective when we were children, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
+                            `In this song sung from my sister's perspective when we were children, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
                             {
                                 italic: {
                                     anchor: `Pet Sounds.`,

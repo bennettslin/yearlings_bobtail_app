@@ -4,8 +4,6 @@ import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, RESPONSE, SONGW
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
  * list order on the album.
  */
-
-// TODO: Music annotation: mention space oddity
 module.exports = {
     title: {
         anchor: `Pchelka's Starry Journey`,
@@ -53,27 +51,6 @@ module.exports = {
     lyrics: [
         [
             {
-                unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: [
-                            `In keeping with the Russian theme, the spirit of the balalaika is evoked by frenetically plucked mandolins. Since Tuva is a Russian republic, I also threw in`,
-                            {
-                                anchor: `Tuvan throat singing,`,
-                                wiki: `Tuvan_throat_singing`
-                            },
-                            `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                }
-            }
-        ],
-        [
-            {
                 time: 0,
                 lyric: {
                     emphasis: [
@@ -106,6 +83,22 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `In keeping with the Russian theme of Soviet space dogs, frenetically plucked mandolins evoke the spirit of the balalaika. Since Tuva is a Russian republic, I also threw in some`,
+                            {
+                                anchor: `Tuvan throat singing,`,
+                                wiki: `Tuvan_throat_singing`
+                            },
+                            `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: REFRAIN
             }
         ],
@@ -594,6 +587,17 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `The sound of space transmissions in the background was made by bending the whammy bar of an electric guitar while banging its body against the wall. It took almost fifty tries, and I had to retune each time.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: POSTCHORUS
             }
         ],
@@ -661,6 +665,25 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `I learned about Tuvan throat singing after Catherine took me to see a documentary called`,
+                            {
+                                italic: {
+                                    anchor: `Genghis Blues`,
+                                    wiki: `Genghis_Blues`
+                                }
+                            },
+                            `on one of our first dates. Within a week, I was able to sound out the main partials, which impressed her greatly. I've been trying to recapture that moment ever since.`
+                        ],
+                        dotKeys: {
+                            [BACKSTORY]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 subStanza: [
                     {
                         time: 128,
@@ -1078,6 +1101,17 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `I made the sound of failing circuits by scraping the strings of an electric guitar against the pickup, while bouncing a metal rod on a single string near the bridge.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: POSTCHORUS,
                 subsequent: true
             }
@@ -1088,11 +1122,6 @@ module.exports = {
             taskName: `afterword annotations`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `sort out past and present tense`,
@@ -1124,6 +1153,11 @@ module.exports = {
         },
         {
             taskName: `separate annotations into dot categories`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `music annotations`,
             workedHours: 2,
             neededHours: 2
         }
