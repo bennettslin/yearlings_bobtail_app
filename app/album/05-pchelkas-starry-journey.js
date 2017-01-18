@@ -23,23 +23,64 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett and Christopher are fighting. Mother is barging into the room, angry and breaking up the fight.`,
             characters: {
-
+                preteenBennett: 1,
+                christopher: 1,
+                mother: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 13,
+            description: `Bennett is getting harassed by two bullies.`,
             characters: {
-
+                preteenBennett: 1,
+                bullies: 2
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 21,
+            description: `Bennett is at home, slipping money into an envelope, while Christopher is plays on the floor. In the background is a Soviet recruitment poster, showing dogs enlisting to become space explorers.`,
             characters: {
-
+                preteenBennett: 1,
+                sovietPoster: 1
+            }
+        },
+        {
+            verseIndex: 31,
+            description: `Bennett is on the floor alongside Christopher. He is reading a letter and crying. In his thoughts are a sequence of a baby in space born away from Earth, and Bennett on Earth, looking up into space.`,
+            characters: {
+                preteenBennett: 1,
+                christopher: 1,
+                thoughtBubbles: 3
+            }
+        },
+        {
+            verseIndex: 41,
+            description: `Bennett is stoically marching past two bullies.`,
+            characters: {
+                preteenBennett: 1,
+                bullies: 2
+            }
+        },
+        {
+            verseIndex: 49,
+            description: `Bennett is eating lunch by himself, sadly watching the other kids hanging out and having fun. In the background is propaganda news footage of the spacecraft exploding.`,
+            characters: {
+                preteenBennett: 1,
+                otherKids: 3,
+                sovietPoster: 1
+            }
+        },
+        {
+            verseIndex: 59,
+            description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is clearly chewing out the principal. On the wall is a propaganda poster showing two space dogs as martyrs.`,
+            characters: {
+                preteenBennett: 1,
+                christopher: 1,
+                mother: 1,
+                principal: 1,
+                sovietPoster: 1
             }
         }
     ],
@@ -1129,11 +1170,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -1160,6 +1196,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
