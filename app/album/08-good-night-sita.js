@@ -1,19 +1,13 @@
 import { VERSES, CHORUS, POSTCHORUS, SONGWRITING, NARRATIVE, BACKSTORY, OBSERVATION, PUN, REFERENCE } from 'helpers/constants'
 
+// TODO: Music annotation: Children's shows. New Mickey Mouse Club.
 module.exports = {
     title: {
         anchor: `Good Night, Sita`,
         annotation: {
-            description: [
-                `In`,
-                {
-                    anchor: `"An Occurrence at Owl Creek Bridge"`,
-                    wiki: `An_Occurrence_at_Owl_Creek_Bridge`
-                },
-                `by satirist Ambrose Bierce, a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, in which I recollect every date with Sita thus far, turns out to be sandwiched between a brief exchange of farewells.`
-            ],
+            description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
             dotKeys: {
-                [SONGWRITING]: true
+                [NARRATIVE]: true
             }
         }
     },
@@ -48,6 +42,10 @@ module.exports = {
     lyrics: [
         [
             {
+                time: 0,
+                lyric: `"Good night," she says`
+            },
+            {
                 unitMap: true,
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
@@ -57,30 +55,14 @@ module.exports = {
                             {
                                 italic: `Ulysses,`
                             },
-                            `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as I drop Sita off after a date. Meanwhile, the restless thumping of a Motown disco beat insistently prods me to pour forth everything that I long to express. But flustered panic takes over, and once again it all goes unmentioned.`
+                            `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`
                         ],
                         dotKeys: {
+                            [REFERENCE]: true,
                             [SONGWRITING]: true
                         }
                     }
-                }
-            }
-        ],
-        [
-            {
-                time: 0,
-                lyric: {
-                    anchor: `"Good night," she says`,
-                    annotation: {
-                        description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as she stands before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
-                        dotKeys: {
-                            [NARRATIVE]: true
-                        }
-                    }
-                }
-            },
-            {
-                unitMap: true,
+                },
                 sectionClass: VERSES
             }
         ],
@@ -127,6 +109,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES,
                 subsequent: true
             }
@@ -399,17 +390,20 @@ module.exports = {
                                     anchor: `Ambrosia`,
                                     wiki: `Ambrosia`
                                 },
-                                `was the food of the Greek gods, just as beer made me feel omnipotent. Ambrose Bierce also wrote`,
+                                `was the food of the Greek gods, just as beer made me feel omnipotent. The writer`,
                                 {
-                                    italic: {
-                                        anchor: `The Devil's Dictionary,`,
-                                        wiki: `The_Devil%27s_Dictionary`
-                                    }
+                                    anchor: `"Ambrose Bierce"`,
+                                    wiki: `Ambrose_Bierce`
                                 },
-                                `a collection of satirical definitions for common words, whose wit I sought to emulate.`
+                                `wrote a collection of satirical definitions called`,
+                                {
+                                    italic: `The Devil's Dictionary.`
+                                },
+                                `His brand of cynical wit aptly reflected my sense of humour during this time.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true
+                                [BACKSTORY]: true,
+                                [PUN]: true
                             }
                         }
                     }
@@ -597,7 +591,7 @@ module.exports = {
                     {
                         anchor: `breeze through our parts`,
                         annotation: {
-                            description: `I would recycle my wittiest remarks on future dates, which felt like reprising a role an actor. In turn, the notion that this was all just an act helped lessen the sting of rejection.`,
+                            description: `With every witty remark I made that got a good response, I would be sure to use it again on the next woman I dated, much like an actor reprising a role. In turn, the notion that this was all just an act helped lessen the sting of rejection.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -608,6 +602,27 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `The band`,
+                            {
+                                anchor: `Television`,
+                                wiki: `Television_(band)`
+                            },
+                            `are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound with this song, I put`,
+                            {
+                                anchor: `Marquee Moon`,
+                                wiki: `Marquee_Moon`
+                            },
+                            `on repeat to gather ideas. The "descending triplets" lick here was stolen note for note from the song "Friction."`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: POSTCHORUS
             }
         ],
@@ -837,7 +852,7 @@ module.exports = {
                 lyric: {
                     anchor: `I sigh, "Good night."`,
                     annotation: {
-                        description: `I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
+                        description: `Flustered panic takes over, and once again it all goes unmentioned. I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [NARRATIVE]: true
@@ -847,6 +862,22 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `Ambrose Bierce also wrote the short story`,
+                            {
+                                anchor: `"An Occurrence at Owl Creek Bridge,"`,
+                                wiki: `An_Occurrence_at_Owl_Creek_Bridge`
+                            },
+                            `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, which saw me recollect every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS,
                 subsequent: true
             }
@@ -860,7 +891,7 @@ module.exports = {
         },
         {
             taskName: `music annotations`,
-            workedHours: 0,
+            workedHours: 2,
             neededHours: 3
         },
         {
