@@ -14,23 +14,44 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett and Sita are standing outside her gate at night. In a thought bubble, he is reaching out to Sita, who is reaching back.`,
             characters: {
-
+                bennett: 1,
+                sita: 1
             }
         },
         {
             verseIndex: 0,
-            description: ``,
+            description: `In a thought bubble, Bennett and Sita are at a museum, looking at the Piltdown Man.`,
             characters: {
-
+                bennett: 1,
+                sita: 1,
+                skeleton: 1
             }
         },
         {
             verseIndex: 0,
-            description: ``,
+            description: `In a thought bubble, Bennett and Sita are backstage after a play. While Sita and her friend are chatting away, Bennett looks away and is visibly uncomfortable.`,
             characters: {
-
+                bennett: 1,
+                sita: 1,
+                actors: 3
+            }
+        },
+        {
+            verseIndex: 0,
+            description: `In a thought bubble, Bennett and Sita are at a motorsports course, riding in separate go-karts.`,
+            characters: {
+                bennett: 1,
+                sita: 1
+            }
+        },
+        {
+            verseIndex: 0,
+            description: `Bennett and Sita are still standing outside her gate, having just parted ways. In his thought bubble, he is an actor onstage, speaking to a skull.`,
+            characters: {
+                bennett: 1,
+                sita: 1
             }
         }
     ],
@@ -360,7 +381,7 @@ module.exports = {
                     {
                         anchor: `exhibit halls`,
                         annotation: {
-                            description: `On my first date with Sita at a natural history museum, we started in the hall of marine life, then eventually made our way to a gallery of Native American cultures.`,
+                            description: `On my first date with Sita at a natural history museum, we started in the hall of marine life, then made our way to a gallery of Native American cultures.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -852,7 +873,7 @@ module.exports = {
                 lyric: {
                     anchor: `I sigh, "Good night."`,
                     annotation: {
-                        description: `Flustered panic takes over, and once again it all goes unmentioned. I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
+                        description: `Flustered panic takes over, and once again all my feelings go unmentioned. I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [NARRATIVE]: true
@@ -871,7 +892,7 @@ module.exports = {
                                 anchor: `"An Occurrence at Owl Creek Bridge,"`,
                                 wiki: `An_Occurrence_at_Owl_Creek_Bridge`
                             },
-                            `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, which saw me recollect every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`
+                            `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -900,11 +921,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -926,6 +942,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
