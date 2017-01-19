@@ -1075,5 +1075,10 @@ module.exports = [
         taskName: `Overview in mobile phone bug`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Fix centering of dot stanzas when stanza is subsequent.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

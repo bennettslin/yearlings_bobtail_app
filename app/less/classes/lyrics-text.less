@@ -1,3 +1,5 @@
+@stanza-block-margin: 10px;
+
 .lyrics-block {
     padding: 20px 0;
 
@@ -12,6 +14,10 @@
     .lyrics-unit {
         display: flex;
         justify-content: center;
+
+        &.subsequent {
+            margin-top: -@stanza-block-margin * 1.5;
+        }
 
         &.title-unit {
 
@@ -48,13 +54,8 @@
          */
         max-width: 720px;
 
-        @stanza-block-margin: 10px;
         &:not(:first-child) {
             margin-left: @stanza-block-margin;
-        }
-
-        &.subsequent {
-            margin-top: -@stanza-block-margin * 1.5;
         }
 
         &.side {
