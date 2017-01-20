@@ -10,8 +10,8 @@ import { LYRIC_ANNOTATION_ELEMENT } from 'helpers/constants'
 
 const AnchorBlock = ({
 
-    portalAnnotationIndex,
     text,
+    portalAnnotationIndex,
     selectedAnnotationIndex,
     selectedWikiIndex,
     selectedDotKeys,
@@ -30,7 +30,7 @@ const AnchorBlock = ({
             wikiIndex } = text,
 
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
-        isPortalAnchor = portalAnnotationIndex === annotationIndex,
+        isPortalAnchor = typeof portalAnnotationIndex !== 'undefined' && portalAnnotationIndex === annotationIndex,
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
         accessHighlighted = sectionAccessHighlighted && ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex && accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) || (accessedPopupAnchorIndex && accessedPopupAnchorIndex === wikiIndex)),
 
