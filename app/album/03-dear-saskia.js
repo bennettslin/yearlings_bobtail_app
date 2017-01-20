@@ -604,7 +604,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `I never lost touch with Sasha. After I finished this album and moved to New York, we reconnected and dated for a while.`,
+                        description: `Sasha and I stayed in touch over the years. After the release of this album went nowhere, I moved to New York City to regain my bearings. There we reconnected, and ended up dating for a while.`,
                         dotKeys: {
                             [AFTERWORD]: true
                         }

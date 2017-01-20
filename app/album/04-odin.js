@@ -1,6 +1,6 @@
 // Be more open about Buddhist upbringing.
 
-import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE } from 'helpers/constants'
+import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -1231,6 +1231,20 @@ module.exports = {
             {
                 unitMap: true,
                 sectionClass: CHORUS
+            }
+        ],
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: ``,
+                        dotKeys: {
+                            [AFTERWORD]: true
+                        }
+                    }
+                }
             }
         ]
     ],
