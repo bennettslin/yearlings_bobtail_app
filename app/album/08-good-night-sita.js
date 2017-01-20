@@ -21,7 +21,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 0,
+            verseIndex: 16,
             description: `In a thought bubble, Bennett and Sita are at a museum, looking at the Piltdown Man.`,
             characters: {
                 bennett: 1,
@@ -30,7 +30,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 0,
+            verseIndex: 28,
             description: `In a thought bubble, Bennett and Sita are backstage after a play. While Sita and her friend are chatting away, Bennett looks away and is visibly uncomfortable.`,
             characters: {
                 bennett: 1,
@@ -39,7 +39,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 0,
+            verseIndex: 42,
             description: `In a thought bubble, Bennett and Sita are at a motorsports course, riding in separate go-karts.`,
             characters: {
                 bennett: 1,
@@ -47,7 +47,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 0,
+            verseIndex: 56,
             description: `Bennett and Sita are still standing outside her gate, having just parted ways. In his thought bubble, he is an actor onstage, speaking to a skull.`,
             characters: {
                 bennett: 1,
@@ -632,7 +632,7 @@ module.exports = {
                                 anchor: `Television`,
                                 wiki: `Television_(band)`
                             },
-                            `are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound with this song, I put`,
+                            `are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound with this song, I listened to`,
                             {
                                 anchor: `Marquee Moon`,
                                 wiki: `Marquee_Moon`
