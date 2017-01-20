@@ -1085,5 +1085,10 @@ module.exports = [
         taskName: `Fix centering of dot stanzas when stanza is subsequent.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Anchors in annotations should allow breaking spaces.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
