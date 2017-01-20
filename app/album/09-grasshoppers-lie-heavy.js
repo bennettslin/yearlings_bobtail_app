@@ -34,23 +34,88 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett is in a cafeteria dishroom, reading a novel. He eyes a lancing device on a tray.`,
             characters: {
-
+                bennett: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 9,
+            description: `Sita is asking for the lancing device. Bennett hands it to her, but simultaneously is asking her out on a date.`,
             characters: {
-
+                bennett: 1,
+                sita: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 14,
+            description: `Back to the date night scene from Good Night, Sita. Bennett is walking away, looking dejected. Sita has stepped in through the gate, and watches him leave, with a look of genuine concern`,
             characters: {
-
+                bennett: 1,
+                sita: 1
+            }
+        },
+        {
+            verseIndex: 20,
+            description: `Bennett is walking home from work, his work apron draped over his shoulder, and soaked.`,
+            characters: {
+                bennett: 1
+            }
+        },
+        {
+            verseIndex: 27,
+            description: `At his front gate, he turns to see that Sita had been following him. Both of them stand in awkward silence.`,
+            characters: {
+                bennett: 1,
+                sita: 1
+            }
+        },
+        {
+            verseIndex: 33,
+            description: `He and Sita walk together into his apartment. On his bed is a jar of Vaseline, along with sketches to which he has clearly been masturbating.`,
+            characters: {
+                bennett: 1,
+                sita: 1
+            }
+        },
+        {
+            verseIndex: 37,
+            description: `In an emergency room, Sita follows a nurse into the emergency room while Bennett sits in the waiting room.`,
+            characters: {
+                bennett: 1,
+                sita: 1,
+                nurse: 1
+            }
+        },
+        {
+            verseIndex: 40,
+            description: `Bennett is asleep in the waiting room.`,
+            characters: {
+                bennett: 1
+            }
+        },
+        {
+            verseIndex: 43,
+            description: `Sita is waking Bennett up.`,
+            characters: {
+                bennett: 1,
+                sita: 1
+            }
+        },
+        {
+            verseIndex: 46,
+            description: `Bennett and Sita are both naked in bed. Sita is lying down, while Bennett hovers over her, a look of uncertainty on his face.`,
+            characters: {
+                bennett: 1,
+                sita: 1
+            }
+        },
+        {
+            verseIndex: 57,
+            description: `Bennett and Sita are together in bed, having just had sex.`,
+            characters: {
+                bennett: 1,
+                sita: 1
             }
         }
     ],
@@ -61,31 +126,6 @@ module.exports = {
     totalTime: 272,
     overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating, and through my rough start in performing live, Sita lent her moral support, though a part of me always wanted more. At some point, she started to like me back. I'm still not sure how.`,
     lyrics: [
-        [
-            {
-                unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: [
-                            `Just as`,
-                            {
-                                italic: `The Grasshopper Lies Heavy`
-                            },
-                            `is an alternate history novel that offers its readers a vastly different reality, this song in isolation offers a vastly different ending from the album as a whole. Like Dick, I also wanted to suggest meta-awareness of being a story within a story, and did so by including lyrical references to all the other songs on the album. Musically, I tried to channel`,
-                            {
-                                anchor: `Simon and Garfunkel`,
-                                wiki: `Simon_%26_Garfunkel`
-                            },
-                            `in both form and harmony.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                }
-            }
-        ],
         [
             {
                 time: 0,
@@ -117,6 +157,21 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `Just as`,
+                            {
+                                italic: `The Grasshopper Lies Heavy`
+                            },
+                            `offers its fictional readers a reality that's vastly different from their own, this song is a story in miniature with a vastly different ending from the album as a whole. Like Dick, I wanted to explore possibilities for meta-reference, and did so by hiding lyrical portals to all the other songs on the album.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: REFRAIN
             }
         ],
@@ -170,6 +225,23 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        // TODO: Simon and Garfunkel.
+                        description: [
+                            `Musically, I tried to channel`,
+                            {
+                                anchor: `Simon and Garfunkel`,
+                                wiki: `Simon_%26_Garfunkel`
+                            },
+                            `in both form and harmony.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -868,6 +940,7 @@ module.exports = {
                         annotation: {
                             description: `White gowns are common attire in both wedding ceremonies and hospitals.`,
                             dotKeys: {
+                                [PUN]: true,
                                 [REFERENCE]: true
                             }
                         }
@@ -976,6 +1049,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        // TODO: Ascending motif.
+                        description: ``,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CODA
             }
         ],
@@ -1083,6 +1166,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        // TODO: Odin theme.
+                        description: ``,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CODA,
                 subsequent: true
             }
@@ -1122,11 +1215,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -1148,6 +1236,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }

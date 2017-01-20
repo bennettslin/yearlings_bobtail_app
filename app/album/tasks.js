@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Method to calculate characters left to illustrate.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Move dots above overview, scores into dots tips section, rename`,
         workedHours: 0,
         neededHours: 5
