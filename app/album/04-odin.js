@@ -1239,7 +1239,14 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: ``,
+                        description: [
+                            `After Sasha and I got together in New York, I undertook the year of study required for conversion to Judaism. We didn't last long enough for me to stand before the`,
+                            {
+                                anchor: `beit din,`,
+                                wiki: `Beth_din`
+                            },
+                            `or rabbinical court, which is the last step.`
+                        ],
                         dotKeys: {
                             [AFTERWORD]: true
                         }
@@ -1249,11 +1256,6 @@ module.exports = {
         ]
     ],
     tasks: [
-        {
-            taskName: `afterword annotations`,
-            workedHours: 0,
-            neededHours: 1
-        },
         {
             taskName: `music annotations`,
             workedHours: 0,
@@ -1291,6 +1293,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `afterword annotations`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
