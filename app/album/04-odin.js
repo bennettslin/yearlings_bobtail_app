@@ -51,25 +51,20 @@ module.exports = {
     lyrics: [
         [
             {
-                unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: `This song uses a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one to each audio speaker, creating the musical version of a cinematic split screen. Here, I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, the two voices proceed independently, each unaware of the ideas and images subtly planted along its path by the other.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                }
-            }
-        ],
-        [
-            {
                 time: 0,
                 centre: `Mr. Odin died today.`
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker, to create the musical version of a cinematic split screen. Here, the two voices proceed independently, each unaware of the ideas and images subtly planted along its path by the other.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: REFRAIN
             }
         ],
@@ -535,6 +530,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `The drums were the one instrument for which I was scoring parts far more advanced than my actual abilities. So when it came time to record, I had to try a variety of workarounds. For this song, I recorded the kick, snare, and toms separately from the cymbals.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: PRECHORUS
             }
         ],
@@ -1240,12 +1244,12 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `After Sasha and I got together in New York, I undertook the year of study required for conversion to Judaism. We didn't last long enough for me to stand before the`,
+                            `After Sasha and I got together in New York, I undertook a yearlong course of study required for conversion to Judaism. However, we didn't last long enough for me to stand before the`,
                             {
                                 anchor: `beit din,`,
                                 wiki: `Beth_din`
                             },
-                            `or rabbinical court, which is the last step.`
+                            `or rabbinical court, which is the final step. Were I to try again, I'd probably have to start from the beginning.`
                         ],
                         dotKeys: {
                             [AFTERWORD]: true
@@ -1256,11 +1260,6 @@ module.exports = {
         ]
     ],
     tasks: [
-        {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
         {
             taskName: `sort out past and present tense`,
             workedHours: 0,
@@ -1298,6 +1297,11 @@ module.exports = {
             taskName: `afterword annotations`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
