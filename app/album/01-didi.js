@@ -110,7 +110,18 @@ module.exports = {
             },
             {
                 time: 22,
-                lyric: `wondering to himself, who would tie his shoes?`
+                lyric: [
+                    `wondering to himself, who would`,
+                    {
+                        anchor: `tie his shoes?`,
+                        annotation: {
+                            description: `I could never grasp the manner of tying shoelaces where one bunny goes around the tree, possibly because I'm left-handed. I finally worked out a version that looked like the real thing, but easily came undone.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        }
+                    }
+                ]
             },
             {
                 time: 28,
