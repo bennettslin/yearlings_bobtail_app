@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Separate logues into own files.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Method to calculate characters left to illustrate.`,
         workedHours: 0,
         neededHours: 2
