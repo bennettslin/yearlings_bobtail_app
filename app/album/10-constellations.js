@@ -3,7 +3,7 @@
  * not being clear and being too obvious.
  */
 
- import { OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RESPONSE, BACKSTORY, NARRATIVE, OBSERVATION, PUN } from 'helpers/constants'
+ import { OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RESPONSE, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -17,7 +17,10 @@ module.exports = {
                     wiki: `Closed-eye_hallucination`
                 },
                 `which are vivid images that seem to be projected onto the backdrop of one's eyelids. If they ever get intense enough to become frightening, one simply opens one's eyes, and they instantly go away. At the time, I called them "constellations."`
-            ]
+            ],
+            dotKeys: {
+                [OBSERVATION]: true
+            }
         }
     },
     scenes: [
@@ -51,36 +54,6 @@ module.exports = {
     lyrics: [
         [
             {
-                unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: [
-                            `While reading`,
-                            {
-                                italic: {
-                                    anchor: `Finnegans Wake,`,
-                                    wiki: `Finnegans_Wake`
-                                }
-                            },
-                            `I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police's`,
-                            {
-                                italic: {
-                                    anchor: `Ghost in the Machine`,
-                                    wiki: `Ghost_in_the_Machine_(album)`
-                                }
-                            },
-                            `was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere.`
-                        ],
-                        dotKeys: {
-                            music: true
-                        }
-                    }
-                }
-            }
-        ],
-        [
-            {
                 time: 0,
                 lyric: [
                     {
@@ -98,13 +71,23 @@ module.exports = {
                                     }
                                 },
                                 `earlier that summer. So the others follow my lead in treating it as a mystical journey, and we tread with "reverence" through the UCLA campus.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
                         anchor: `paused stiff in tandem.`,
                         annotation: {
-                            description: `Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.`
+                            description: `Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -115,14 +98,19 @@ module.exports = {
                     {
                         anchor: `Heavin' some, Ana`,
                         annotation: {
-                            description: `"Heaving some, Ana whispers a low sigh." When you first down a whole bottle of Robitussin, you may feel like retching. Within a moment, though, it feels like your lungs have shrivelled away, and you're peacefully breathing through gills underwater.`
+                            description: `"Heaving some, Ana whispers a low sigh." When you first down a whole bottle of Robitussin, you may feel like retching. Within a moment, though, it feels like your lungs have shrivelled away, and you're peacefully breathing through gills underwater.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
                         anchor: `whispures a low sigh, bein'…`,
                         annotation: {
                             description: [
-                                `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the role played by psychedelic drugs throughout history that had never been taught to me in school. One theory is that`,
+                                `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the role played by psychedelic drugs that history textbooks understandably failed to mention. One theory is that`,
                                 {
                                     anchor: `manna`,
                                     wiki: `Manna`
@@ -132,7 +120,11 @@ module.exports = {
                                     anchor: `psilocybin mushroom.`,
                                     wiki: `Psilocybin_mushroom`
                                 }
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -156,7 +148,11 @@ module.exports = {
                                     wiki: `Dextromethorphan`
                                 },
                                 `the cough suppressant found in Robitussin.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -169,7 +165,10 @@ module.exports = {
                                     wiki: `Book_of_Exodus`
                                 },
                                 `recounts how the Israelites discovered manna during their trek out of Egypt.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     },
                     `the`,
@@ -189,13 +188,42 @@ module.exports = {
                                     wiki: `Hydrocodone/paracetamol`
                                 },
                                 `The night will prove them wrong.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `While reading`,
+                            {
+                                italic: {
+                                    anchor: `Finnegans Wake,`,
+                                    wiki: `Finnegans_Wake`
+                                }
+                            },
+                            `I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police's`,
+                            {
+                                italic: {
+                                    anchor: `Ghost in the Machine`,
+                                    wiki: `Ghost_in_the_Machine_(album)`
+                                }
+                            },
+                            `was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -207,7 +235,6 @@ module.exports = {
                         anchor: `Walkyriens:`,
                         properNoun: true,
                         annotation: {
-
                             description: [
                                 `Backtrack to earlier that night. We buy the Robitussin from a`,
                                 {
@@ -220,7 +247,11 @@ module.exports = {
                                     wiki: `Valkyrie`
                                 },
                                 `in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `to`,
@@ -236,7 +267,11 @@ module.exports = {
                                     wiki: `Valhalla`
                                 },
                                 `a majestic hall ruled by the god Odin. Also, the Walgreens aisles are "Wal-halls," as they are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… and so forth.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -248,7 +283,11 @@ module.exports = {
                                     wiki: `Mead`
                                 },
                                 `was the drink of the Norse gods, and we look for Wal-Tussin as our "medicine" of choice.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -259,7 +298,12 @@ module.exports = {
                     {
                         anchor: `Quouffs uppraissed,`,
                         annotation: {
-                            description: `We "upraise" our "quaffs" to "appraise" them for the medicinal property that keeps "coughs suppressed."`
+                            description: `Not all bottles of Robitussin will get you high. The ones to avoid are those that only contain guaifenesin, which reduces congestion. So we "upraise" our "quaffs" to "appraise" them for the medicinal property that keeps "coughs suppressed."`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `this`,
@@ -277,7 +321,12 @@ module.exports = {
                                     emphasis: `the`
                                 },
                                 `"Cali valley." The days before I could leave were painfully endless. On this summer break back home, however, my newfound independence, combined with the magic of Robitussin, renders escape instantaneous.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -301,7 +350,12 @@ module.exports = {
                                     anchor: `"fenugreek."`,
                                     wiki: `Fenugreek`
                                 }
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -315,7 +369,12 @@ module.exports = {
                                     wiki: `Sami_people`
                                 },
                                 `are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally "high men," as the Robitussin "laps our hymen," since the others are doing it for the first time.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -341,7 +400,11 @@ module.exports = {
                                     wiki: `Hungarians`
                                 },
                                 `are a Finno-Ugric people who "migrated" from the Ural Mountains and established the state of Hungary.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `from`,
@@ -355,7 +418,10 @@ module.exports = {
                                     wiki: `Mongols`
                                 },
                                 `an East Asian nomadic people.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -368,7 +434,10 @@ module.exports = {
                                     wiki: `Pseudoephedrine`
                                 },
                                 `a decongestant. Because of its use in the illicit manufacture of methamphetamine, however, this is no longer the case. Also, the entrance to the steam tunnels is hidden "among old, sealed-off drains."`
-                            ]
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -394,6 +463,10 @@ module.exports = {
                                 },
                                 `to begin their conquests.`
                             ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            },
                             portal: `down_the_steppes`
                         }
                     },
@@ -413,7 +486,10 @@ module.exports = {
                                     wiki: `Genghis_Khan`
                                 },
                                 `who was born "Temujin," founded the Mongol Empire.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     },
                     `has`,
@@ -427,7 +503,11 @@ module.exports = {
                                     wiki: `Tatars`
                                 },
                                 `a rival tribe. Like a "teeter-totter," I was wavering back and forth on whether to take Robitussin that night, since I'd just taken it a few days prior, and Robitussin really destroys you both mentally and physically. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in and kills off any lingering protests from my inner "teetotaler."`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -446,7 +526,11 @@ module.exports = {
                                     wiki: `Timur`
                                 },
                                 `a descendant of Genghis Khan, continued the Turko-Mongol expansion into Central Asia. Also, as Tomer jokingly drops crumbs as if to leave a trail, I observe that it's like he's planting seeds that will sprout into nations.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -465,7 +549,11 @@ module.exports = {
                                     wiki: `Avatar`
                                 },
                                 `is a deity's earthbound incarnation, and some avatars are speculated to be historical figures whose exploits predate written tradition.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -490,7 +578,11 @@ module.exports = {
                                     wiki: `Indo-Aryan_migration_theory`
                                 },
                                 `theory. Proposed by 19th-century Western scholars, the theory holds that civilisation in the Indus Valley was brought by invaders from the north, who were the "Indus trail source."`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -503,7 +595,11 @@ module.exports = {
                                     wiki: `Indus_Valley_Civilisation`
                                 },
                                 `named after the excavations in Harappa that led to its modern discovery.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -546,7 +642,10 @@ module.exports = {
                                     wiki: `Avesta`
                                 },
                                 `it's likely that the apostates left the Indian subcontinent and moved westward to the Iranian basin, rather than the reverse.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     },
                     `or`,
@@ -570,7 +669,11 @@ module.exports = {
                                     }
                                 },
                                 `in the Avesta refers to a demon. Thus, whether one "foresees a hero" or "senses great devastation" as the "deva's day shone" depends on which side of the rift one is aligned with.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -589,11 +692,14 @@ module.exports = {
                                         wiki: `Botanical_identity_of_soma%E2%80%93haoma`
                                     }
                                 },
-                                `is a ritual drink prepared from an unidentified botanical substance believed by some scholars to have held psychedelic properties. In the Avesta, it is referred to as`,
+                                `is a ritual drink prepared from an unidentified botanical substance believed by scholars to have held psychedelic properties. In the Avesta, it is referred to as`,
                                 {
                                     italic: `haoma.`
                                 }
-                            ]
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -602,17 +708,25 @@ module.exports = {
                             description: [
                                 `Although the`,
                                 {
-                                    anchor: `Aryans`,
+                                    anchor: `"Aryans"`,
                                     wiki: `Aryan`
                                 },
-                                `spoken of in the Vedas and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," this "unsolved query" must be put to rest, before the others lose their minds.`
-                            ]
+                                `spoken of "in the Vedas" and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
                         anchor: `unsolft quarry rest…`,
                         annotation: {
-                            description: `"Our young invaders on soft quarry rest." We come to a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches.`
+                            description: `"Our young invaders on soft quarry rest." We come to a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -642,7 +756,11 @@ module.exports = {
                                     wiki: `Evian`
                                 },
                                 `bottles" that we brought with us into the steam tunnels are now empty.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -655,7 +773,11 @@ module.exports = {
                                     wiki: `Uyghurs`
                                 },
                                 `a Turkic people, whom the Mongols encountered in their early campaigns. Also, through "a duct, we egress," or exit, the steam tunnels.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -680,13 +802,21 @@ module.exports = {
                                     }
                                 },
                                 `or "dawn horse." This "dusk horse," then, would be one encountered at the end of history, the brink of which so many throughout history had believed to have been reached.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
                         anchor: `the dusc-horse yet…?`,
                         annotation: {
-                            description: `"Our melee tapers the discourse." Wielding scavenged materials as if they are swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.`
+                            description: `"Our melee tapers the discourse." Wielding scavenged materials as if they are swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                 ]
@@ -710,7 +840,11 @@ module.exports = {
                                     wiki: `Khmer_Empire`
                                 },
                                 `in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie's dad had bought in bulk.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `to war:`,
@@ -718,13 +852,17 @@ module.exports = {
                         anchor: `scimitary of'fence!`,
                         annotation: {
                             description: [
-                                `The next plan of attack is to visit the grave of our friend Adam. And so, rested and reenergised, we renew our`,
+                                `The next plan of attack is to visit the grave of their friend Adam. And so, rested and energised, we renew our`,
                                 {
                                     anchor: `"scimitar`,
                                     wiki: `Scimitar`
                                 },
                                 `offence" and drive through the "cemetery fence."`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -741,7 +879,11 @@ module.exports = {
                     {
                         anchor: `Pour sod, fourfeit tundr's`,
                         annotation: {
-                            description: `We bemoan the "poor sod" who had sod poured on him from "four feet under."`
+                            description: `We bemoan the "poor sod" who had sod poured on him from "four feet under."`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -755,7 +897,10 @@ module.exports = {
                                     wiki: `Siberia`
                                 },
                                 `plains," which otherwise would have served as their "burial" grounds.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -766,7 +911,11 @@ module.exports = {
                     {
                         anchor: `Upridge o' lawn`,
                         annotation: {
-                            description: `We park the car and head up "a ridge of lawn."`
+                            description: `We park the car and head up "a ridge of lawn."`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `trod on by`,
@@ -785,7 +934,10 @@ module.exports = {
                                     wiki: `Beringia`
                                 },
                                 `they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -803,7 +955,11 @@ module.exports = {
                                     anchor: `Bering Strait."`,
                                     wiki: `Bering_Strait`
                                 }
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -817,16 +973,21 @@ module.exports = {
                             description: [
                                 `Other indigenous populations, such as the`,
                                 {
-                                    anchor: `Inuit`,
+                                    anchor: `Inuits`,
                                     wiki: `Inuit`
                                 },
-                                `inhabitants of the Arctic regions, may have undertaken their migrations by boat. These seafarers, of course, would have rowed with the`,
+                                `of the Arctic regions, may have undertaken their migrations by boat. Such a seafaring ancestor, of course, would have "rowed" with the "auroras," or`,
                                 {
-                                    anchor: `aurora borealis`,
+                                    anchor: `aurora borealis,`,
                                     wiki: `Aurora`
                                 },
-                                `to their left. Also, wishing to be respectful, we've left our "hero's auras" behind in the car.`
-                            ]
+                                `to his "left." Also, wishing to be respectful, we've "left" our "hero's auras" behind in the car.`
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `to`,
@@ -834,7 +995,12 @@ module.exports = {
                         anchor: `Audamn's grave.`,
                         properNoun: true,
                         annotation: {
-                            description: `We reach Adam's grave, just as the indigenous Americans, having discovered more bountiful lands, perish their fears of an encroaching autumn.`
+                            description: `We reach "Adam's" grave, just as the indigenous Americans, having discovered more bountiful lands, perished their fears of an encroaching "autumn."`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -866,7 +1032,10 @@ module.exports = {
                                     italic: `Bobtail`
                                 },
                                 `guided solely by my artistic instincts.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `there is only me and my northern star!`
@@ -885,7 +1054,11 @@ module.exports = {
                     {
                         anchor: `mistodawn,`,
                         annotation: {
-                            description: `The "mist of dawn" breaks, and we head back to the car. On our way now to Howie's place, my newfound clarity proves short-lived, as I lean back and settle in for some closed-eye hallucinations.`
+                            description: `The "mist of dawn" breaks, and we head back to the car. On our way now to Howie's place, my newfound clarity proves short-lived, as I lean back and settle in for some closed-eye hallucinations.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -903,7 +1076,11 @@ module.exports = {
                                     wiki: `Smilodon`
                                 },
                                 `I am subconsciously "haunted by the sober truth" that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `cries…`
@@ -925,6 +1102,10 @@ module.exports = {
                                         },
                                         `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit" is where my mastodon "lies," just as I have "sunk in torpid lies."`
                                     ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true
+                                    },
                                     portal: `sunken_tirpitz`
                                 }
                             }
@@ -951,7 +1132,11 @@ module.exports = {
                                     wiki: `Holocene`
                                 },
                                 `is the current geological epoch that began with the first human settlements. Also, as Robitussin is a dissociative drug, I gradually start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -964,7 +1149,11 @@ module.exports = {
                                     wiki: `Totem`
                                 },
                                 `and rites" to our new homelands. Having now achieved a full out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -994,7 +1183,10 @@ module.exports = {
                                                 wiki: `Freyja`
                                             },
                                             `The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
-                                        ]
+                                        ],
+                                        dotKeys: {
+                                            [PUN]: true
+                                        }
                                     }
                                 }
                             ]
@@ -1010,8 +1202,8 @@ module.exports = {
                 time: 139,
                 lyric: [
                     {
-                        // TODO: Change spelling?
-                        anchor: `Noworse and Nunavutter`,
+                        // NOTE: I changed from "Nunavutter."
+                        anchor: `Noworse and Nunavetter`,
                         properNoun: true,
                         annotation: {
                             description: [
@@ -1021,7 +1213,12 @@ module.exports = {
                                     wiki: `Nunavut`
                                 },
                                 `the northernmost territory of Canada inhabited primarily by the Inuit. And yet, with the reappearance of the Norse, we realise that our bounds are not so limitless, as even our imaginations have started to repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so we end the night as we had begun it, "no worse and none the better."`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `collide…`,
@@ -1047,7 +1244,11 @@ module.exports = {
                                         wiki: `Erik_the_Red`
                                     },
                                     `who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."`
-                                ]
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
                             }
                         },
                         `arrives!`
@@ -1073,7 +1274,12 @@ module.exports = {
                                     wiki: `Mummy`
                                 },
                                 `is a preserved corpse. All of time has collapsed into a singularity, as my memories blur into those of the world history that I keenly dig through. Everyone is at once dead and not dead, as am I. Or is this all a staged performance that I've chosen to act in?`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `I have left to mine?`
@@ -1098,7 +1304,11 @@ module.exports = {
                                     wiki: `Geomagnetic_reversal`
                                 },
                                 `occurs when the Earth's magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses. Also, crashed on a couch in Howie's attic, I turn on an old black-and-white television by "pulling the switch."`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
@@ -1116,7 +1326,11 @@ module.exports = {
                                     wiki: `Insomnia`
                                 },
                                 `I "skim through channels" that are "snow-blitzed" due to the television's poor reception.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `snow blitz'd…`
@@ -1141,7 +1355,11 @@ module.exports = {
                                     wiki: `Cardiac_arrhythmia`
                                 },
                                 `or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -1160,7 +1378,11 @@ module.exports = {
                                     wiki: `English_people`
                                 },
                                 `have now arrived to despoil the New World, with the white ruffs around their necks resembling those of "buzzards."`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `come unsated find`,
@@ -1179,7 +1401,11 @@ module.exports = {
                                     wiki: `Amish`
                                 },
                                 `are allowed to openly rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. It means "running around" in Pennsylvania Dutch, but I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `is parched.`
@@ -1203,13 +1429,21 @@ module.exports = {
                                     wiki: `Mormons`
                                 },
                                 `also known as Latter-Day Saints.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
                         anchor: `black Letter-Day Sensed ahead…`,
                         annotation: {
-                            description: `Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." While the Mormons originally did not allow their black members to attain priesthood, they reversed this policy in 1978.`
+                            description: `Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." While the Mormons originally did not allow their black members to attain priesthood, they reversed this policy in 1978.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     {
@@ -1221,7 +1455,12 @@ module.exports = {
                                     italic: `Finnegans Wake`
                                 },
                                 `to wrap back onto the first, so I indulged in the same conceit. As I'm stuck watching public access televangelists, I observe that every religion's early spirit eventually degrades into orthodoxy and routine, much as it does for us as individuals. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -1249,11 +1488,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `separate annotations into dot categories`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `rough illustration synopses`,
             workedHours: 0,
             neededHours: 3
@@ -1275,6 +1509,11 @@ module.exports = {
             taskName: `include wiki urls`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `separate annotations into dot categories`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
