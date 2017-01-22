@@ -1,17 +1,21 @@
 // FIXME: Change pronouns from I and me to drunken me and sober me.
-import { VERSES, CHORUS, BRIDGE, BACKING, INSTRUMENTAL } from 'helpers/constants'
+import { VERSES, CHORUS, BRIDGE, BACKING, INSTRUMENTAL, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
 
 module.exports = {
     title: {
         anchor: `On a Golden Cord`,
         annotation: {
             description: [
-                `I was trying to follow in the footsteps of other poetic ruminations on still-life objects, such as John Keats's`,
+                `I was trying to follow in the footsteps of other poetic ruminations on still-life objects, like John Keats's`,
                 {
                     anchor: `"Ode on a Grecian Urn."`,
                     wiki: `Ode_on_a_Grecian_Urn`
-                }
-            ]
+                },
+                `I'm pretentious like that.`
+            ],
+            dotKeys: {
+                [OBSERVATION]: true
+            }
         }
     },
     scenes: [
@@ -46,38 +50,6 @@ module.exports = {
     lyrics: [
         [
             {
-                unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: [
-                            `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
-                            {
-                                italic: {
-                                    anchor: `Nineteen Eighty-Four.`,
-                                    wiki: `Nineteen_Eighty-Four`
-                                }
-                            },
-                            `So I used doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the internal conflict between my sober self and my drunken alter ego. Since the breakup allowed me to regress in emotional age, I evoked the musical style of my childhood hero`,
-                            {
-                                anchor: `Johnny Horton,`,
-                                wiki: `Johnny_Horton`
-                            },
-                            `a country star who sang about the`,
-                            {
-                                anchor: `Klondike Gold Rush.`,
-                                wiki: `Klondike_Gold_Rush`
-                            }
-                        ],
-                        dotKeys: {
-                            music: true
-                        }
-                    }
-                }
-            }
-        ],
-        [
-            {
                 // TODO: Mention white throated sparrow.
                 time: 0,
                 centre: `On a golden cord,`
@@ -93,7 +65,11 @@ module.exports = {
                     {
                         anchor: `bread and pocket lint.`,
                         annotation: {
-                            description: `After Sita returned the bracelet, I put it in the front pocket of my jacket, which is where I often stashed bread rolls from the cafeteria to munch on later. With my hands tucked in as well to keep warm, I stroked the bracelet over and over that night, just as I turned over the thoughts in my head.`
+                            description: `After Sita returned the bracelet, I put it in the front pocket of my jacket, which is where I often stashed bread rolls from the cafeteria to munch on later. With my hands tucked in as well to keep warm, I stroked the bracelet over and over that night, just as I turned over the thoughts in my head.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -109,7 +85,11 @@ module.exports = {
                     {
                         anchor: `broken`,
                         annotation: {
-                            description: `When I walked into the living room to find Sita seated on the couch, the bracelet lay in a mangled heap on the coffee table. I wondered if she had damaged it on purpose, but it turns out that I had only ever seen it snugly wrapped around her wrist, where its dozens of tiny links were kept intricately locked in place.`
+                            description: `When I walked into the living room to find Sita seated on the couch, the bracelet lay in a mangled heap on the coffee table. I wondered if she had damaged it on purpose, but it turns out that I had only ever seen it snugly wrapped around her wrist, where its dozens of tiny links were kept intricately locked in place.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `for what its promise meant.`,
@@ -121,6 +101,38 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
+                            {
+                                italic: {
+                                    anchor: `Nineteen Eighty-Four.`,
+                                    wiki: `Nineteen_Eighty-Four`
+                                }
+                            },
+                            `So I used doublespeaker rhyme— which I named partly for its`,
+                            {
+                                anchor: `Orwellian undertone—`,
+                                wiki: `Doublethink`
+                            },
+                            `to depict the internal conflict between my sober self and my drunken alter ego. Since the breakup allowed me to regress in emotional age, I evoked the musical style of my childhood hero`,
+                            {
+                                anchor: `Johnny Horton,`,
+                                wiki: `Johnny_Horton`
+                            },
+                            `a country star who sang about the`,
+                            {
+                                anchor: `Klondike Gold Rush.`,
+                                wiki: `Klondike_Gold_Rush`
+                            }
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -136,7 +148,11 @@ module.exports = {
                     {
                         anchor: `polite, yet resigned,`,
                         annotation: {
-                            description: `Sita had spent the day bottling up her emotions, braced for that night's confrontation. Meanwhile, I had wandered in just minutes prior, ready to pass out. So while she was now exploding in hysterics, I was still struggling to process the situation in my drunken state. As such, all my responses were calm but curt, which only added to her fluster.`
+                            description: `Sita had spent the day bottling up her emotions, braced for that night's confrontation. Meanwhile, I had wandered in just minutes prior, ready to pass out. So while she was now exploding in hysterics, I was still struggling to process the situation in my drunken state. As such, all my responses were calm but curt, which only added to her fluster.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -164,7 +180,11 @@ module.exports = {
                         {
                             anchor: `went through your mail`,
                             annotation: {
-                                description: `Confused about why I had grown unusually distant, Sita finally caved in that day and decided to snoop around on my computer, which I kept at her place because it was a desktop. She thus discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving assurances that I would soon be single again.`
+                                description: `Confused about why I had grown unusually distant, Sita finally caved in that day and decided to snoop around on my computer, which I kept at her place because it was a desktop. She thus discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving assurances that I would soon be single again.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true
+                                }
                             }
                         },
                         `today…"`
@@ -183,7 +203,10 @@ module.exports = {
                     {
                         anchor: `Immerse the moulted form`,
                         annotation: {
-                            description: `With our relationship now in irreversible decline, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a scheme to end his relationship.`
+                            description: `With our relationship now in irreversible decline, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a scheme to end his relationship.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `in holy foggy night,`
@@ -193,7 +216,10 @@ module.exports = {
                     {
                         anchor: `sole belonging signed.`,
                         annotation: {
-                            description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice in the doublespeaker set can only recollect his past crimes. As such, he believes himself to be newly released from prison, having just now retrieved from property storage the gold bracelet in his hand.`
+                            description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice in the doublespeaker set can only recollect his past crimes. As such, he believes himself to be newly released from prison, having just now retrieved from property storage the gold bracelet in his hand.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -212,7 +238,11 @@ module.exports = {
                                     anchor: `paupers' grave.`,
                                     wiki: `Potter%27s_field`
                                 }
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `from dreams.`
@@ -237,7 +267,10 @@ module.exports = {
                                     wiki: `Sati_(practice)`
                                 },
                                 `is an outlawed Hindu custom in which a widow must commit suicide by throwing herself on her husband's funeral pyre. Similarly, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, until no trace remained of whom she once knew.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ],
@@ -246,7 +279,10 @@ module.exports = {
                     {
                         anchor: `well-behaved on the wing.`,
                         annotation: {
-                            description: `Feeling no malice, drunken me can only surmise that he served out his sentence without complaint, and was granted an early release for good behaviour.`
+                            description: `Feeling no malice, drunken me can only surmise that he served out his sentence without complaint, and was granted an early release for good behaviour.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -265,7 +301,12 @@ module.exports = {
                     {
                         anchor: `wanted ads—`,
                         annotation: {
-                            description: `As drunken me wanders the Oakland streets, he pauses to read flyers seeking bandmates that are posted on utility poles, much like a vigilante of the Old West might take interest in a wanted poster.`
+                            description: `As drunken me wanders the Oakland streets, he pauses to read flyers seeking bandmates that are posted on utility poles, much like a vigilante of the Old West might take interest in a "wanted" poster.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -282,17 +323,23 @@ module.exports = {
                     {
                         anchor: `spectre taunting twin streetlamps;`,
                         annotation: {
-                            description: `Sober me observes as his drunken half lashes out in defiance at twin streetlamps, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed the act.`
+                            description: `Sober me observes as his drunken half lashes out in defiance at twin streetlamps, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed his crime.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ],
                 right: [
                     `still hardened against her`,
                     {
-                        // REFERENCE: Link to streetlamps in left column?
+                        // TODO: Portal: Link to streetlamps in left column?
                         anchor: `fawning, misty glance,`,
                         annotation: {
-                            description: `Sensing that Sita gazes downward upon him from the night sky, drunken me realises that remnants of his past bitterness still remain deep within.`
+                            description: `Sensing that Sita gazes downward upon him from the night sky, drunken me realises that remnants of his past bitterness still remain deep within.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -303,9 +350,11 @@ module.exports = {
                     {
                         anchor: `hatchet man`,
                         annotation: {
-                            description: [
-                                `A hatchet man is an underling who carries out the most disagreeable tasks of an operation. Sober me recognises the trauma that must certainly linger, and so forgives his drunken half's lack of sympathy for his victim.`
-                            ]
+                            description: `A hatchet man is an underling who carries out the most disagreeable tasks of an operation. Sober me recognises the trauma that must certainly linger, and so forgives his drunken half's lack of sympathy for his victim.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `who's burnt enough.`
@@ -322,7 +371,11 @@ module.exports = {
                                     wiki: `Möbius_strip`
                                 },
                                 `is a surface with only one side, and can be created by joining the ends of a half-twisted paper strip. As drunken me ambles down twisting sidewalks, mentally digging through the dense layers of half-truths that helped justify his act, it occurs to him that perhaps there really aren't two sides to this story. Or two sides to this mind…`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -351,7 +404,10 @@ module.exports = {
                     {
                         anchor: `life were real,`,
                         annotation: {
-                            description: `Sita's friends weren't wrong when they described me as fake and pretentious. My emotions just didn't feel legitimate, and so I acted upon them the way an actor takes cues to ad lib an improv scene. At the time, I blamed the lingering effect of Robitussin.`
+                            description: `Sita's friends weren't wrong when they described me as fake and pretentious. My emotions just didn't feel legitimate, and so I acted upon them the way an actor takes cues to ad lib an improv scene. At the time, I blamed the lingering effect of Robitussin.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `not just drunken play…`
@@ -368,7 +424,10 @@ module.exports = {
                                     wiki: `Colorforms`
                                 },
                                 `being peeled away to reveal the next.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `off the front of day…`
@@ -392,7 +451,11 @@ module.exports = {
                     {
                         anchor: `pups with their hateful fangs`,
                         annotation: {
-                            description: `Given how much more vicious the bullies could have been, I realised that they actively held back their blows, believing their cruelty to be in good fun. Similarly, baby predators instinctively understand their claws and fangs to be weapons, and will thus contain themselves during rough play.`
+                            description: `Given how much more vicious the bullies could have been, I realised that they actively held back their blows, believing their cruelty to be in good fun. Similarly, baby predators instinctively understand their claws and fangs to be weapons, and will thus contain themselves during rough play.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -408,7 +471,11 @@ module.exports = {
                     {
                         anchor: `dove chafing in his cage,`,
                         annotation: {
-                            description: `A dove, on the other hand, can peck its cagemate to death, unaware of the deadly nature of its beak. Similarly, seeing myself only as the perennial victim, I had caused Sita far greater emotional trauma than I had ever received at the hands of the bullies.`
+                            description: `A dove, on the other hand, can peck its cagemate to death, unaware of the deadly nature of its beak. Similarly, seeing myself only as the perennial victim, I had caused Sita far greater emotional trauma than I myself had ever received at the hands of the bullies.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -425,7 +492,11 @@ module.exports = {
                             italic: {
                                 anchor: `Odelay!`,
                                 annotation: {
-                                    description: `With an hour or two left before daybreak, I began to feel the mild euphoria of dehydration, and decided to practise my yodelling.`
+                                    description: `With an hour or two left before daybreak, I began to feel the mild euphoria of dehydration, and decided to practise my yodelling.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [NARRATIVE]: true
+                                    }
                                 }
                             }
                         }
@@ -455,7 +526,11 @@ module.exports = {
                     {
                         anchor: `gesture then`,
                         annotation: {
-                            description: `I had bought Sita the gold bracelet from a jewelry store at the local mall. It was a bit expensive relative to my wage, which made its underlying meaning seem all the more potent at the time.`
+                            description: `I had bought Sita the gold bracelet from a jewelry store at the local mall. It was quite expensive relative to my wage at the time, which made its underlying meaning seem all the more potent.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `was just a little more worth working for?…`
@@ -481,7 +556,11 @@ module.exports = {
                                             wiki: `North_to_Alaska_(song)`
                                         },
                                         `and my sister would back me up by heaving "Mush! Mush!"`
-                                    ]
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [NARRATIVE]: true
+                                    }
                                 }
                             }
                         }
@@ -507,7 +586,10 @@ module.exports = {
                                     wiki: `Street_sweeper`
                                 },
                                 `came out in full force, beeping and purring as they went.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -517,7 +599,6 @@ module.exports = {
                 centre: `Thoughts spawned then dropped,`
             },
             {
-                // Sooty dust.
                 time: 121,
                 centre: [
                     `of gathering up the`,
@@ -525,6 +606,9 @@ module.exports = {
                         anchor: `suttee dust.`,
                         annotation: {
                             description: `I imagined Sita by now to be fully immolated on the burnt rubble of our ruined relationship.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            },
                             portal: `suttee_dust`
                         }
                     }
@@ -601,7 +685,11 @@ module.exports = {
                                     }
                                 },
                                 `or "overhuman", as an ideal of perfection towards which each person may strive, which I understood to be a precondition for creating great works. But since the underlying motive for bettering myself had always been a desire to attract women, my lifelong ambition to be a great artist meant that I would always have a cheating heart.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `reavowed he'd come to snip.`
@@ -610,7 +698,11 @@ module.exports = {
                     {
                         anchor: `digging through her innie`,
                         annotation: {
-                            description: `Some babies have belly buttons that go in, others have ones that stick out. During sex, Sita and I would sometimes engage in baby talk and refer to our respective parts as her "innie" and my "outie."`
+                            description: `Some babies have belly buttons that go in, others have ones that stick out. During sex, Sita and I would sometimes engage in baby talk and refer to our respective parts as her "innie" and my "outie."`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `the outie snug-to-fit.`
@@ -623,21 +715,34 @@ module.exports = {
                     `Then the`,
                     {
                         anchor: `guardian knot`,
-                        annotation: {
-                            description: [
-                                `In antiquity, the`,
-                                {
-                                    anchor: `Gordian Knot`,
-                                    wiki: `Gordian_Knot`
-                                },
-                                `was a rope so tightly entangled that whosoever could unravel it would rule all of Asia.`,
-                                {
-                                    anchor: `Alexander the Great`,
-                                    wiki: `Alexander_the_Great`
-                                },
-                                `simply cut it in half with his sword. While the umbilical cord passes sustenance to the fetus, outside the mother's womb it shrivels to a navel. So Sita became my guardian, and I hers, as we sustained each other through our locked navels. But like Alexander, I severed this "guardian knot," in my bid for artistic greatness.`
-                            ]
-                        }
+                        annotation: [
+                            {
+                                description: `While the umbilical cord passes sustenance to the fetus, outside the mother's womb it shrivels to a navel. So Sita became my guardian, and I hers, as we sustained each other through locked navels.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [REFERENCE]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `In antiquity, the`,
+                                    {
+                                        anchor: `"Gordian Knot"`,
+                                        wiki: `Gordian_Knot`
+                                    },
+                                    `was a rope so tightly entangled that whosoever could unravel it would rule all of Asia.`,
+                                    {
+                                        anchor: `Alexander the Great`,
+                                        wiki: `Alexander_the_Great`
+                                    },
+                                    `simply cut it in half with his sword. Like Alexander, I severed this guardian knot, in my bid for artistic greatness.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
+                            }
+                        ]
                     },
                     `of this frayed cord detached,`
                 ]
@@ -649,7 +754,11 @@ module.exports = {
                     {
                         anchor: `attack with the proper fist.`,
                         annotation: {
-                            description: `The right hemisphere of the brain controls the left side of the body, and the left hemisphere, the right. So when I started punching myself in the head, in frustration over conflicting desires, it was as if each hemisphere was attacking the other using the one fist under its command.`
+                            description: `The right hemisphere of the brain controls the left side of the body, and the left hemisphere, the right. So when I started punching myself in the head, in frustration over conflicting desires, it was as if each hemisphere was attacking the other using the one fist under its command.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ],
@@ -657,7 +766,11 @@ module.exports = {
                     {
                         anchor: `leaked the bandage`,
                         annotation: {
-                            description: `With our emotional bond now severed, Sita began to bleed both metaphorically and literally, as she experimented with cutting to ease her depression.`
+                            description: `With our emotional bond now severed, Sita was bleeding both metaphorically and literally, as she began to experiment with cutting to ease her depression.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `upon her wrist.`
@@ -681,7 +794,12 @@ module.exports = {
                     {
                         anchor: `alias drunk, in panic`,
                         annotation: {
-                            description: `Once drunk, I always stayed drunk until I crashed. As such, while the sober me was adept at morphing into his drunken half, the reverse was not true. So as I got progressively more sober that night, panicked doubt crept up beside the brashness that usually governed my drunken thought. I questioned if dating more women would fulfill me, and whether my newfound ability to attract them wasn't a fluke.`
+                            description: `Once drunk, I always stayed drunk until I crashed. As such, while the sober me was adept at morphing into his drunken half, the reverse was not true. So as I got progressively more sober that night, panicked doubt crept up beside the brashness that usually governed my drunken thought. I questioned if dating more women would fulfill me, and whether my newfound ability to attract them wasn't a fluke.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `and starved for leads.`
@@ -691,7 +809,12 @@ module.exports = {
                     {
                         anchor: `trail of crumbs,`,
                         annotation: {
-                            description: `Suddenly fearing the emotional upheaval ahead, I wondered aloud whether it was too late to walk back the damage I had done. But even if I wanted to, I couldn't find my way back. All night I had been nibbling on the bread in my pocket rather than pinching off crumbs for a trail, trading long-term security to satisfy my short-term hunger.`
+                            description: `Suddenly fearing the emotional upheaval ahead, I wondered aloud whether it was too late to walk back the damage I had done. But even if I wanted to, I couldn't find my way back. All night I had been nibbling on the bread in my pocket rather than pinching off crumbs for a trail, trading long-term security to satisfy my short-term hunger.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `which vanished as bartered feed.`
@@ -710,7 +833,12 @@ module.exports = {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
                             annotation: {
-                                description: `All my promises to Sita had proven to be lies, but of course I didn't intend them to be. Circumstances just forced my hand. Still, while I strongly wished to argue my case, I realised that the breakup would be done with sooner if I just accepted myself as the villain. And so the sober me, called up to testify for his drunken half, stayed silent.`
+                                description: `All my promises to Sita had proven to be lies, but of course I didn't intend them to be. Circumstances just forced my hand. Still, while I strongly wished to argue my case, I realised that the breakup would be done with sooner if I just accepted my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         },
                         `relieved?`
@@ -732,7 +860,12 @@ module.exports = {
                     {
                         anchor: `master mind`,
                         annotation: {
-                            description: `In college, I learned that being drunk made it easy to single-mindedly perform unpleasant tasks such as writing papers, and humoured myself by comparing my drunken half to a slave taking orders from his master, my sober half. I realised that I was now pursuing this very strategy to break up with Sita.`
+                            description: `In college, I learned that being drunk made it easy to single-mindedly perform unpleasant tasks such as writing papers, and humoured myself by comparing my drunken half to a slave taking orders from his master, my sober half. I was now pursuing this very strategy to break up with Sita.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `reminds us, straight ahead`
@@ -745,7 +878,19 @@ module.exports = {
                     {
                         anchor: `holy war.`,
                         annotation: {
-                            description: `Most of the 9/11 hijackers were unaware that it was a suicide mission, having prepared instead to make public statements on their religious motivation. Similarly, in orchestrating my plot to be rid of Sita, I had sold my drunken half on the artistic benefits of breaking up, while neglecting to mention the huge emotional sacrifice it would entail.`
+                            description: [
+                                `Most of the`,
+                                {
+                                    anchor: `9/11 hijackers`,
+                                    wiki: `September_11_attacks`
+                                },
+                                `were unaware that it was a suicide mission, having prepared instead to make public statements on their religious motivations. Similarly, in orchestrating my plot to be rid of Sita, I had sold my drunken half on the artistic benefits of breaking up, while neglecting to mention the huge emotional sacrifice it would entail.`
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ],
@@ -782,7 +927,10 @@ module.exports = {
                                     wiki: `Houri`
                                 },
                                 `are maidens who await the faithful in paradise. This concept gained notoriety in the West when it was reported that suicide bombers were being lured with the promise of 72 virgins in heaven. But given my quest to date more women, at great cost to myself and greater suffering to others, perhaps all that distinguished me from these disaffected young men was my nation of birth.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `as reward.`
@@ -791,7 +939,11 @@ module.exports = {
                     {
                         anchor: `forego like jewelry`,
                         annotation: {
-                            description: `As these things often go, Sita and I had a turbulent on-again, off again relationship for a while longer. During one stretch when things were looking rosier than ever, she asked to have the bracelet back to wear again, which I happily obliged. Somehow I had dented it in my pocket that night, however, creating a permanent reminder that certain things can never be undone, only amended.`
+                            description: `As these things go, Sita and I had a turbulent on-again, off-again relationship for a while longer. During one stretch when things were looking rosier than ever, she asked to have the bracelet back to wear again, which I happily obliged. Somehow I had dented it in my pocket that night, however, creating a permanent reminder that certain things can never be undone, only amended.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `that she wore.`
@@ -833,11 +985,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `separate annotations into dot categories`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `restructure lyrics`,
             workedHours: 1,
             neededHours: 1
@@ -865,6 +1012,11 @@ module.exports = {
             taskName: `include wiki urls`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `separate annotations into dot categories`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }

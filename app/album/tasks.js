@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Correct order of dots in right columns.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Separate logues into own files.`,
         workedHours: 0,
         neededHours: 1

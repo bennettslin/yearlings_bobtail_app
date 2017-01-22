@@ -9,7 +9,7 @@ module.exports = {
                 {
                     italic: `Ulysses,`
                 },
-                `Garryowen is a menacing dog owned by an anti-Semitic Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
+                `Garryowen is a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
             ]
         }
     },
