@@ -1,4 +1,4 @@
-import { INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, RHYME, RESPONSE, BACKING } from 'helpers/constants'
+import { INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, RHYME, RESPONSE, BACKING, SONGWRITING, NARRATIVE, OBSERVATION, BACKSTORY, PUN, REFERENCE } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -10,8 +10,12 @@ module.exports = {
                     anchor: `uncanny valley`,
                     wiki: `Uncanny_valley`
                 },
-                `is a theory that human replicas become more repulsive to us as they grow further lifelike while remaining less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando Valley boy now elicited a similar revulsion.`
-            ]
+                `is a theory that human replicas become more repulsive to us as they grow further lifelike while remaining less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this "Valley boy" from the San Fernando Valley now elicited a similar revulsion.`
+            ],
+            dotKeys: {
+                [OBSERVATION]: true,
+                [PUN]: true
+            }
         }
     },
     scenes: [
@@ -46,29 +50,6 @@ module.exports = {
     lyrics: [
         [
             {
-                unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: [
-                            `I originally began writing this song to describe a nightmare I had, but abandoned it after I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents. This also begins a three-song medley à la`,
-                            {
-                                italic: {
-                                    anchor: `Abbey Road`,
-                                    wiki: `Abbey_Road`
-                                }
-                            },
-                            `by the Beatles, which provides a nice push towards the album's finish.`
-                        ],
-                        dotKeys: {
-                            music: true
-                        }
-                    }
-                }
-            }
-        ],
-        [
-            {
                 time: 0,
                 centre: {
                     italic: `(intro)`
@@ -93,14 +74,22 @@ module.exports = {
                                     italic: `beta`
                                 },
                                 `means "son." My parents had taken Sita's side so unequivocally that I now imagine them addressing me as an Indian parent would.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `come`,
                     {
                         anchor: `wax prophetic`,
                         annotation: {
-                            description: `The common expression is to "wax poetic," of course. Here, like ghosts of days yet to come, my parents invite me on a night journey to witness all that my naked ambitions will soon have wrought.`
+                            description: `The common expression is to "wax poetic," of course. Here, like ghosts of days yet to come, my parents invite me on a night journey to witness all that my naked ambitions will have wrought.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `with me.`
@@ -122,7 +111,10 @@ module.exports = {
                                     }
                                 },
                                 `is a children's book about a tree's nurturing love for a boy, and the increasingly self-sacrificing nature of her gifts as the boy grows into a man. Many read it as an allegory for unhealthy parent-child relationships.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -133,7 +125,12 @@ module.exports = {
                     {
                         anchor: `Stumped,`,
                         annotation: {
-                            description: `The tree finally sacrifices herself, allowing the boy to chop down her trunk to build a boat. When the boy returns as an old man, the tree is now just a stump and can only offer a place to sit and rest. But in their claim to be stumped, my parents are also feigning to be oblivious to the outcome of my story.`
+                            description: `The tree finally sacrifices herself, allowing the boy to chop down her trunk to build a boat. When the boy returns as an old man, the tree is now just a stump and can only offer a place to sit and rest. But in their claim to be "stumped," my parents are also feigning to be oblivious to the outcome of my story.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `I ponder the`,
@@ -156,18 +153,41 @@ module.exports = {
                         anchor: `book of yours…`,
                         annotation: {
                             description: [
-                                `Like Grover, I was also a character trapped within a self-referential work, hoping to shape the outcome towards which I was being relentlessly thrust. Unlike Grover, however, I had a funny inkling of who the monster at the end of`,
+                                `Like Grover, I was trapped within a self-referential work, hoping to shape the outcome towards which I was being relentlessly thrust. Unlike Grover, however, I already had an inkling of who the monster at the end of`,
                                 {
                                     italic: `Bobtail`
                                 },
                                 `might prove to be.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `I originally began writing this song to describe a nightmare I had, but abandoned it after I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents. This also begins a three-song medley à la`,
+                            {
+                                italic: {
+                                    anchor: `Abbey Road`,
+                                    wiki: `Abbey_Road`
+                                }
+                            },
+                            `by the Beatles, which provides a nice push towards the album's finish.`
+                        ],
+                        dotKeys: {
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -179,7 +199,11 @@ module.exports = {
                     {
                         anchor: `sold your whole fortune`,
                         annotation: {
-                            description: `Also, a future "soldier of fortune," or mercenary. My parents lament that the opportunism born from my ego has led me to squander all I had that was good with Sita, in favour of more unsavoury and foolhardy pursuits.`
+                            description: `Also, a future "soldier of fortune," or mercenary. My parents lament that the opportunism born from my ego has led me to squander all I had that was good with Sita, in favour of more unsavoury and foolhardy pursuits.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -191,7 +215,11 @@ module.exports = {
                     {
                         anchor: `and orphaned.`,
                         annotation: {
-                            description: `Or else, blissfully "endorphined." Being perpetually inebriated allowed me to ignore my reality of having parents whose high expectations I failed to meet.`
+                            description: `Or else, blissfully "endorphined." Being perpetually inebriated allowed me to ignore my reality of having parents whose high expectations I failed to meet.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -202,13 +230,23 @@ module.exports = {
                     {
                         anchor: `Upon purchase of a queen's ship,`,
                         annotation: {
-                            description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship was built. Patiently waiting for corrective justice thus became my strategy in life. Also, "a pawn perches over queenship." In the game of chess, the lowly pawn can become a mighty queen by steadily clambering towards the other side of the board.`
+                            description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship was built. Patiently waiting for corrective justice thus became my strategy in life. Also, "a pawn perches over queenship." In the game of chess, the lowly pawn can become a mighty queen by steadily clambering towards the other side of the board.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     {
                         anchor: `earth right now your tourist store…`,
                         annotation: {
-                            description: `The mail-order cult warned me not to grow attached to earthly concerns, for I was just visiting here. Or else, "birthright now you're to restore." Having had my head filled with visions of greatness as a child, I always assumed that my rightful place was to be recognised for it. My belief in myself as a Beyonder didn't exactly temper this expectation.`
+                            description: `The mail-order cult warned me not to grow attached to earthly concerns, for I was just visiting here. Or else, "birthright now you're to restore." Having had my head filled with visions of greatness as a child, I always assumed that my rightful place was to be recognised for it. My belief in myself as a Beyonder didn't exactly temper this expectation.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -242,7 +280,10 @@ module.exports = {
                                     wiki: `Inhalant`
                                 },
                                 `was the supposed youth trend du jour of my middle school years. And I suppose I fit the profile of someone who had just sniffed glue, which is how I got called into the principal's office.`
-                        ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -254,7 +295,10 @@ module.exports = {
                     {
                         anchor: `stuffing twenties`,
                         annotation: {
-                            description: `I had pen pals as a child, so my parents didn't find it odd when I mailed cash to the mail-order cult in colourful stationery. Only after speaking to my principal did they become suspicious and finally open one of them.`
+                            description: `I had pen pals as a child, so my parents didn't find it odd when I mailed cash to the mail-order cult in colourful stationery. Only after speaking to my principal did they become suspicious and finally open one of them.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `in an envelope…`
@@ -280,7 +324,12 @@ module.exports = {
                                     wiki: `Hamartia`
                                 },
                                 `is the character flaw that leads to a protagonist's downfall. (I've since learned that the accent is on the third syllable. However, my English teacher pronounced it as I have, so I plead miseducation.) A famous example is Oedipus, whose arrogance leads him to believe that prophecy can be escaped. Here, my parents ask whether I've learned the lesson of Oedipus, while mocking my past belief of being born from the stars, or in their words, "a Martian."`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `now?`
@@ -308,7 +357,11 @@ module.exports = {
                     {
                         anchor: `bunker that shuts airtight`,
                         annotation: {
-                            description: `I learned early on to deal with problems by shutting myself away. Then, once safely ensconced, I was at liberty to examine my situation.`
+                            description: `I learned early on to deal with problems by shutting myself away. Then, once safely ensconced, I was at liberty to examine my situation with perfect reason.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -372,7 +425,11 @@ module.exports = {
                     {
                         anchor: `tiny planet`,
                         annotation: {
-                            description: `Like the prince, I was also a visitor from beyond the stars, seeing the world at large through guileless eyes.`
+                            description: `Like the prince, I was also a visitor from beyond the stars, seeing the world at large through guileless eyes.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `where none else fit,`
@@ -392,7 +449,10 @@ module.exports = {
                                     wiki: `Shell_game`
                                 },
                                 `is a classic swindle in which a small ball is placed under three shells, which are then shuffled in plain view. Typically, sleight of hand is used to misplace the ball. Having now recognised life to be a shell game, I was eager to begin my studies of how to guard against it, or perhaps even to employ it as a grifter myself.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -411,7 +471,10 @@ module.exports = {
                                         wiki: `Jack_and_the_Beanstalk`
                                     },
                                     `although I'm not sure why.`
-                                ]
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
                         }
                     },
@@ -440,7 +503,10 @@ module.exports = {
                     {
                         anchor: `drowned your stutter,`,
                         annotation: {
-                            description: `Sometime in middle school, I developed a stammer. In college, I found that drinking made it disappear.`
+                            description: `Sometime in middle school, I developed a stammer. In college, I found that drinking made it disappear.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -452,7 +518,11 @@ module.exports = {
                     {
                         anchor: `haze the new latecomers.`,
                         annotation: {
-                            description: `Some secret societies are infamous for their abusive hazing rituals. Having once endured such abuse as my dues for joining society, I was now ready to dole it out to others.`
+                            description: `Some secret societies are infamous for their abusive hazing rituals. Having once endured such abuse as my dues for joining society, I was now ready to dole it out to others.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -488,14 +558,22 @@ module.exports = {
                                     }
                                 },
                                 `an ancient Indian epic poem. The tale recounts Rama's marriage to Sita, daughter of Mother Earth, and his battle to rescue her after she is kidnapped by the demon king Ravana. My parents are also snidely calling me a "drama king," given that everything I do is an act.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `the`,
                     {
                         anchor: `testifiers' lore?`,
                         annotation: {
-                            description: `Or else, "test of fire." After Rama defeats Ravana, he forces Sita to walk through sacrificial fire to prove that she had remained chaste throughout her abduction. She does, and escapes unharmed.`
+                            description: `Or else, "test of fire." After Rama defeats Ravana, he forces Sita to walk through sacrificial fire to prove that she had remained chaste throughout her abduction. She does, and escapes unharmed.`,
+                            dotKeys: {
+                                [PUN]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -513,14 +591,21 @@ module.exports = {
                                     italic: `Ramayana`
                                 },
                                 `began broadcasting throughout India. Traffic and train stations would come to a standstill each week as the country sat glued to their television screens.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `to watch you`,
                     {
                         anchor: `fail your Sita`,
                         annotation: {
-                            description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. This self-centred chauvinism is also what prompted my desire to be the more sexually experienced partner, leading me to stray from Sita and seek out other women.`
+                            description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. This brand of self-centred chauvinism is also what prompted my need to be the more sexually experienced partner, leading me to stray from Sita and seek other women.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `on repeat for evermore!`
@@ -543,7 +628,11 @@ module.exports = {
                     {
                         anchor: `two were tied?`,
                         annotation: {
-                            description: `Tied in both the matrimonial and the competitive sense. At some point, I began to see the relationship as a zero-sum game that only one of us could win.`
+                            description: `Tied in both the matrimonial and the competitive sense. At some point, I began to see the relationship as a zero-sum game that only one of us could win.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -563,7 +652,11 @@ module.exports = {
                         // NOTE: I changed "duel" to "dual" here.
                         anchor: `dual match,`,
                         annotation: {
-                            description: `A dual match implying a harmonious union between Sita and me, which is what everyone saw, as well as a "duel match" implying the opposite, which is what I felt.`
+                            description: `A dual match implying a harmonious union between Sita and me, which is what everyone saw, as well as a "duel match" implying the opposite, which is what I felt.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -575,7 +668,10 @@ module.exports = {
                     {
                         anchor: `chalked the sidewalks`,
                         annotation: {
-                            description: `One night, my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk. Since I didn't want my artwork to crowd anyone else's, I ran ahead of the group.`
+                            description: `One night, my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk. Since I didn't want my artwork to crowd anyone else's, I ran ahead of the group.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `slurring`,
@@ -615,8 +711,13 @@ module.exports = {
                                     anchor: `Sirens`,
                                     wiki: `Siren_(mythology)`
                                 },
-                                `were beautiful women who lured sailors to the rocks with their enchanted singing. My ambitions taught me to resist Sita's love as if it were a siren song.`
-                            ]
+                                `were beautiful women who lured sailors to the rocks with their enchanted singing. My ambitions taught me to resist Sita's love as if it were a "siren" song.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `you found spelled out in`,
@@ -629,13 +730,20 @@ module.exports = {
                                     italic: `valmika`
                                 },
                                 `means "anthill" in Sanskrit. Meanwhile, my sidewalk art had killed off some ants, whose dead bodies outlined what I had drunkenly scrawled in chalk.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     {
-                        anchor: `____…`,
+                        anchor: `_____…`,
                         annotation: {
-                            description: `I had written Mara's name. No real cliffhanger here. "M" just set a precedent for me to be gun-shy about mentioning her anywhere in my lyrics.`
+                            description: `I had written Mara's name. No real cliffhanger here. "M" just set a precedent for me to be gun-shy about mentioning her anywhere in my lyrics.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -660,7 +768,12 @@ module.exports = {
                                     wiki: `Sari`
                                 },
                                 `It always looked really good on her. But also, "well-worn sorry." Sita's apologies for not being better eventually grew tiresome, precisely because she shouldn't have had to make them in the first place.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `could sway you from a`,
@@ -668,8 +781,13 @@ module.exports = {
                         anchor: `fairer marathon!`,
                         annotation: {
                             description: [
-                                `The constant one-upmanship between Sita and me wasn't just petty. It was exhausting to keep an inner tally of every time I felt slighted. I wanted life to be more like a marathon that rewards persistence and resolve. Since I possessed those traits in spades, that seemed most fair to me. Also, "marathon" sounds like Mara's full name spoken with her lisp. After all this time, I was still chasing after someone like her.`
-                            ]
+                                `The constant one-upmanship between Sita and me wasn't just petty. It was exhausting to keep an inner tally of every time I felt slighted. I wanted life to be more like a marathon that rewards persistence and resolve. Since I possessed those traits in spades, that seemed most fair to me. Also, "marathon" sounds like Mara's full name spoken with her lisp. After all this time, I was still chasing after someone like Mara.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -678,7 +796,6 @@ module.exports = {
                 unitMap: true,
                 subStanza: [
                     {
-                        // TODO: Figure out times for these.
                         time: 150,
                         lyric: {
                             italic: `Your dulling gold now gone…`
@@ -712,7 +829,10 @@ module.exports = {
                     {
                         anchor: `to be one!`,
                         annotation: {
-                            description: `Or else, to be "won."`
+                            description: `Or else, to be "won."`,
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -728,7 +848,12 @@ module.exports = {
                                 {
                                     anchor: `trophy blondes.`,
                                     annotation: {
-                                        description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly. In my defence, it wasn't by design, but seeing her loss as my gain, I let her believe the worst. But also, trophy "bronze." My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or people, and most were arguably worse.`
+                                        description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly. In my defence, it wasn't by design, but seeing her loss as my gain, I let her believe the worst. But also, trophy "bronze." My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or as people, and most were arguably worse.`,
+                                        dotKeys: {
+                                            [BACKSTORY]: true,
+                                            [OBSERVATION]: true,
+                                            [PUN]: true
+                                        }
                                     }
                                 }
                             ]
@@ -751,7 +876,10 @@ module.exports = {
                     {
                         anchor: `faces you flip override,`,
                         annotation: {
-                            description: `At some point, I noticed that I wore drastically different faces for different people and different situations. This wasn't the case when I was a child, which could only mean that there was once a true me, and now there wasn't.`
+                            description: `At some point, I noticed that I wore drastically different faces for different people and different situations. This wasn't the case when I was a child, which could only mean that there was once a true me, and now there wasn't.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -763,7 +891,11 @@ module.exports = {
                     {
                         anchor: `pages you've ripped`,
                         annotation: {
-                            description: `My parents lament my fervent readiness to devalue past sentiments for the sake of present ambitions, as if I were tearing out old pages from a scrapbook to free up space for new inserts.`
+                            description: `My parents lament my fervent readiness to devalue past sentiments for the sake of present ambitions, as if I were tearing out old pages from a scrapbook to free up space for new inserts.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `from your spine`
@@ -781,7 +913,12 @@ module.exports = {
                             {
                                 anchor: `sun tinkles light`,
                                 annotation: {
-                                    description: `Or else, their "son." In the nightmare, I was now ruler of the neighbourhood, showering my subjects in my urine, their sole means of subsistence. In hindsight, my brain was probably telling me to get up and use the bathroom.`
+                                    description: `Or else, their "son." In the nightmare, I was now ruler of the neighbourhood, showering my subjects in my urine, their sole means of subsistence. In hindsight, my brain was probably telling me to get up and use the bathroom.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [OBSERVATION]: true,
+                                        [PUN]: true
+                                    }
                                 }
                             }
                         ]
@@ -795,7 +932,10 @@ module.exports = {
                             {
                                 anchor: `weave through the vines,`,
                                 annotation: {
-                                    description: `The magic beans had sprouted into thick, twisted vines, blocking out the sky as far and wide as my helpless subjects could see.`
+                                    description: `The magic beans had sprouted into thick, twisted vines, blocking out the sky as far and wide as my helpless subjects could see.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
                                 }
                             }
                         ]
@@ -836,7 +976,11 @@ module.exports = {
                             `'s sake,`
                         ],
                         annotation: {
-                            description: `My latest five-year plan, like the one before, was meant to yield dramatic improvements in my life through a major overhaul of the underlying system. As such, it made no sense to question it while the work was still being done.`
+                            description: `My latest five-year plan, like the one before, was meant to yield dramatic improvements in my life through a major overhaul of the underlying system. As such, it made no sense to question it while the work was still being done.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -852,7 +996,11 @@ module.exports = {
                             anchor: `old and subservient.`,
                             annotation: {
                                 // TODO: guilt, Asian immigrants
-                                description: `Amongst those I ruled over were my parents, now feeble and senile after a lifetime of following my bidding.`
+                                description: `Amongst those I ruled over were my parents, now feeble and senile after a lifetime of following my bidding.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
                     }
@@ -900,7 +1048,10 @@ module.exports = {
                                     italic: `Bobtail`
                                 },
                                 `was to push the boundaries of this genre into the musical realm.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -919,6 +1070,10 @@ module.exports = {
                                 },
                                 `is the protagonist's moral and psychological growth from youth to adulthood. Without this crucial development in character, there is no story to be told, a point to which my parents slyly allude here.`
                             ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            },
                             portal: `finally_become_someone`
                         }
                     }
@@ -932,7 +1087,11 @@ module.exports = {
                             anchor: `Rama, Rama…`,
                             properNoun: true,
                             annotation: {
-                                description: `Like Valmiki as he chanted Rama's name, I desperately wanted to be good again.`
+                                description: `Like Valmiki as he chanted Rama's name, I desperately wanted to be good again.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [REFERENCE]: true
+                                }
                             }
                         }
                     },
@@ -952,7 +1111,11 @@ module.exports = {
                                                 }
                                             },
                                             `is Aramaic for "our Lord has come."`
-                                        ]
+                                        ],
+                                        dotKeys: {
+                                            [NARRATIVE]: true,
+                                            [OBSERVATION]: true
+                                        }
                                     }
                                 }
                             }
@@ -978,11 +1141,6 @@ module.exports = {
         },
         {
             taskName: `sort out past and present tense`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `separate annotations into dot categories`,
             workedHours: 0,
             neededHours: 3
         },
@@ -1018,6 +1176,11 @@ module.exports = {
             taskName: `include wiki urls`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `separate annotations into dot categories`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
