@@ -21,10 +21,7 @@ module.exports = {
                     wiki: `Ash_Wednesday`
                 },
                 `is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
-            ],
-            dotKeys: {
-
-            }
+            ]
         }
     },
     scenes: [
@@ -69,32 +66,6 @@ module.exports = {
     totalTime: 163,
     overview: `In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
     lyrics: [
-        [
-            {
-                unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: [
-                            `For a song about two people who couldn't be more different, I juxtaposed`,
-                            {
-                                anchor: `Arabic maqam`,
-                                wiki: `Arabic_maqam`
-                            },
-                            `and`,
-                            {
-                                anchor: `Renaissance polyphony.`,
-                                wiki: `Polyphony`
-                            },
-                            `The quartertones were recorded by playing each instrument in two takes, the second time tuned a quarter step flat. The shrieking whistles, which remind me of trains braking in a subway tunnel, were made by overblowing into recorders.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                }
-            }
-        ],
         [
             {
                 time: 0,
@@ -168,9 +139,21 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: ``,
+                        description: [
+                            `For a song about two people who couldn't be any more different, I juxtaposed`,
+                            {
+                                anchor: `Arabic maqam`,
+                                wiki: `Arabic_maqam`
+                            },
+                            `in the first half with`,
+                            {
+                                anchor: `Renaissance polyphony`,
+                                wiki: `Polyphony`
+                            },
+                            `in the second.`
+                        ],
                         dotKeys: {
-                            music: true
+                            [SONGWRITING]: true
                         }
                     }
                 },
@@ -235,6 +218,22 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `The shrieking whistles, which remind me of`,
+                            {
+                                anchor: `BART`,
+                                wiki: `Bay_Area_Rapid_Transit`
+                            },
+                            `trains braking in a subway tunnel underneath the sidewalk, were made by overblowing into recorders, one soprano and one tenor.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES,
                 subsequent: true
             }
@@ -331,6 +330,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `For the parts with quartertones, I recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the Dobro.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -601,6 +609,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        // TODO: Mention drum heads.
+                        description: ``,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: BRIDGE
             }
         ],
@@ -698,6 +716,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        // TODO: Mention being a novice with counterpoint. Pitch shifting instruments an octave up.
+                        description: ``,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS,
                 subsequent: true
             }
