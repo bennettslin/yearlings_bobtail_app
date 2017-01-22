@@ -985,11 +985,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `restructure lyrics`,
-            workedHours: 1,
-            neededHours: 1
-        },
-        {
             taskName: `rough illustration synopses`,
             workedHours: 0,
             neededHours: 3
@@ -1017,6 +1012,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `restructure lyrics`,
+            workedHours: 1,
+            neededHours: 1
         }
     ]
 }
