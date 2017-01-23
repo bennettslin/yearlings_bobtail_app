@@ -64,7 +64,7 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 163,
-    overview: `In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
+    overview: `In college in the San Francisco Bay Area, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
     lyrics: [
         [
             {
@@ -333,7 +333,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `For the parts with quartertones, I recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the Dobro.`,
+                        description: `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the Dobro.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -612,8 +612,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // TODO: Mention drum heads.
-                        description: ``,
+                        description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps in the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -719,8 +718,14 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // TODO: Mention being a novice with counterpoint. Pitch shifting instruments an octave up.
-                        description: ``,
+                        description: [
+                            `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
+                            {
+                                anchor: `Oakland`,
+                                wiki: `Oakland,_California`
+                            },
+                            `night.`
+                        ],
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -751,11 +756,6 @@ module.exports = {
             taskName: `afterword annotations`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `sort out past and present tense`,
@@ -789,6 +789,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
