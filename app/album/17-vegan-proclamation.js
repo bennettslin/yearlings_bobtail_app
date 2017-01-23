@@ -1,4 +1,4 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, INSTRUMENTAL } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, INSTRUMENTAL, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -11,7 +11,11 @@ module.exports = {
                     wiki: `Veganism`
                 },
                 `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step towards liking myself again.`
-            ]
+            ],
+            dotKeys: {
+                [BACKSTORY]: true,
+                [OBSERVATION]: true
+            }
         }
     },
     scenes: [
@@ -46,20 +50,6 @@ module.exports = {
     lyrics: [
         [
             {
-                unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast left an impact on me, and I thought it would work well here. Especially since the previous song ended with me listening to my records as I faded away.`,
-                        dotKeys: {
-                            music: true
-                        }
-                    }
-                }
-            }
-        ],
-        [
-            {
                 time: 0,
                 lyric: [
                     {
@@ -68,7 +58,11 @@ module.exports = {
                             {
                                 anchor: `can't have both.`,
                                 annotation: {
-                                    description: `A friend offered this advice when he gave me his turntable, and as it turns out, what can be said for vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my most thoughtful deeds would always be tainted by my most hurtful ones. I couldn't keep two separate selves, with one being praised for my kindness, and the other taking the blame for my selfish desires. I couldn't be both.`
+                                    description: `A friend offered this advice when he gave me his turntable, and as it turns out, what can be said for vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my most thoughtful deeds would always be tainted by my most hurtful ones. I couldn't keep two separate selves, with one being praised for my kindness, and the other taking the blame for my selfish desires. I couldn't be both kinds of people.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [OBSERVATION]: true
+                                    }
                                 }
                             },
                             `Because a scratched record will chip a good needle… and a chipped needle will scratch a good record…"`
@@ -90,7 +84,11 @@ module.exports = {
                         anchor: `Odin,`,
                         properNoun: true,
                         annotation: {
-                            description: `As a child, I never gave much thought to our house cat Odin. He just seemed like another household furnishing. So after Sita and I adopted a cat who became our pride and joy, I would marvel at why my nurturing instinct, which came so effortlessly now, was so hard to come by then. Years later, as my failure to nurture my relationship with Sita led to its deterioration, I thought back to Odin often.`
+                            description: `As a child, I never gave much thought to our house cat Odin. He just seemed like another household furnishing. So after Sita and I adopted a cat who became our pride and joy, I would marvel at why my nurturing instinct, which came so effortlessly now, was so hard to come by then. Years later, as my failure to nurture my relationship with Sita led to its deterioration, I thought of Odin often.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `lightly tread`
@@ -103,7 +101,11 @@ module.exports = {
                     {
                         anchor: `rape racks`,
                         annotation: {
-                            description: `Dairy cows are impregnated every year to keep them at peak lactation. This is done by restraining them in an apparatus commonly referred to as a "rape rack," where they are then forcibly inseminated.`
+                            description: `Dairy cows are impregnated every year to keep them at peak lactation. This is done by restraining them in an apparatus commonly referred to as a "rape rack," where they are then forcibly inseminated.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `where our`,
@@ -117,7 +119,10 @@ module.exports = {
                                     wiki: `Führer`
                                 },
                                 `a German title of leadership mainly associated with Adolf Hitler. Amongst animal rights proponents, comparisons between factory farming and the Holocaust are obvious, however impolitic.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `led,`
@@ -132,7 +137,10 @@ module.exports = {
                         annotation: {
                             description: [
                                 `The lower five rib pairs are known as false ribs, as they do not attach directly to the sternum.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     {
@@ -144,14 +152,29 @@ module.exports = {
                                     anchor: `Eve`,
                                     wiki: `Eve`
                                 },
-                                `by taking one of Adam's ribs. My own promises to sacrifice for Sita proved to be lies, however, trapping her in a helpless state where she could never feel truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
-                            ]
+                                `by taking one of Adam's ribs. By contrast, my own promise to sacrifice a part of myself for Sita proved to be a "false rib," trapping her in a helpless state where she could never feel truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast left an impact on me, and I thought it would work well here. Especially since the previous song ended with me listening to my records as I faded away.`,
+                        dotKeys: {
+                            [BACKSTORY]: true,
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -167,7 +190,11 @@ module.exports = {
                     {
                         anchor: `horse to chair,`,
                         annotation: {
-                            description: `That is to say, from rocking horse to rocking chair.`
+                            description: `That is to say, from rocking horse to rocking chair.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     }
                 ]
@@ -190,7 +217,11 @@ module.exports = {
                     {
                         anchor: `first pets`,
                         annotation: {
-                            description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, realised that her kitten thought it was dying. She lived with that guilt ever afterwards.`
+                            description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, realised that her kitten thought it was dying. She lived with that guilt ever afterwards.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     },
                     `always bear the worst,`
@@ -207,7 +238,11 @@ module.exports = {
                     {
                         anchor: `battered kitten purrs…`,
                         annotation: {
-                            description: `Of course, Sita, in turn, was my first pet. In hindsight, the reason I could live with myself, while hurting her for as long as I did, was because I accepted at face value the facade of sanity that she constructed as a coping mechanism. I allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`
+                            description: `Of course, Sita, in turn, was my first pet. In hindsight, the reason I could live with myself while hurting her for as long as I did, was because I accepted at face value the facade of sanity that she constructed as a coping mechanism. I allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -235,7 +270,10 @@ module.exports = {
                                             wiki: `Big_Crunch`
                                         },
                                         `is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another Big Bang. I found the thought comforting as it jibes with the Hindu belief that the universe is a living force, helplessly bound like us to an eternal cycle of death and rebirth.`
-                                    ]
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true
+                                    }
                                 }
                             },
                             `And meanwhile, the universe is a`,
@@ -262,7 +300,10 @@ module.exports = {
                                             wiki: `Deism`
                                         },
                                         `is the belief that God, having created the universe, no longer intervenes in its progress. I liked the idea that if something greater than ourselves cannot observe us, then much like Schrödinger's battered cat, some part of us may always live on.`
-                                    ]
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true
+                                    }
                                 }
                             },
                             `we just might always be alive… to God…"`
@@ -284,6 +325,10 @@ module.exports = {
                         anchor: `unsalvaged sows have chewed,`,
                         annotation: {
                             description: `On factory farms, breeding sows are strapped inside metal cages so small that they cannot move. In response to high stress, they develop repetitive, self-destructive movements such as chewing on cage bars. The sole purpose of their suffering is to produce piglets for slaughter, and once they grow too sickly or weak, they too are slaughtered.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            },
                             portal: `unsalvaged_sows`
                         }
                     }
@@ -296,7 +341,11 @@ module.exports = {
                     {
                         anchor: `bloody broom,`,
                         annotation: {
-                            description: `Understandably, factory farm workers become inured to the daily violence, which casts a pall over even mundane tasks like sweeping the floor.`
+                            description: `Understandably, factory farm workers become inured to the daily violence, which casts a pall over even mundane tasks like sweeping the floor.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
                         }
                     }
                 ]
@@ -318,7 +367,11 @@ module.exports = {
                     {
                         anchor: `burger shrouds,`,
                         annotation: {
-                            description: `As a vegan, I became sensitive to anything even remotely suggestive of meat or animal byproducts, such as a hamburger wrapper, and realised that I too had been inured, living in a society built on the commoditisation of animal suffering.`
+                            description: `As a vegan, I became sensitive to anything even remotely suggestive of meat or animal byproducts, such as a hamburger wrapper, and realised that I too had been inured, living in a society built on the commoditisation of animal suffering.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -331,13 +384,17 @@ module.exports = {
                         anchor: `lone rallied youth`,
                         annotation: {
                             description: [
-                                `Having spent the past several years both playing and attending shows, I saw firsthand how easy it was for an audience to get whipped up while being of one mind. And now, as that world drifted away and I was all alone, I wondered what exactly drew me to those crowds, and why I so longed to be adored by them. I questioned everything I valued up to that day, like a reformed`,
+                                `Having spent the past several years both playing and attending shows, I saw firsthand how easily an audience can get whipped up while being of one mind. And now, as that world drifted away and I was all alone, I wondered what exactly drew me to those crowds, and why I so longed to be adored by them. I questioned everything I valued up to that day, like a reformed`,
                                 {
                                     anchor: `Hitler Youth`,
                                     wiki: `Hitler_Youth`
                                 },
                                 `aghast at all the things he cheered for at the Nuremberg Rallies.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     {
@@ -352,8 +409,11 @@ module.exports = {
                                     }
                                 },
                                 `the paramilitary group that carried out the Holocaust, consists of two thunderbolts side by side. Wishing no more to strike down anyone with my thunderbolts, I struck myself down, leaving behind my former convictions in the process.`
-
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -364,7 +424,11 @@ module.exports = {
                     {
                         anchor: `reversing his stomach`,
                         annotation: {
-                            description: `It seemed so vulgar that anything should have to suffer or die just to satisfy my hunger. And once I came to that conclusion, I literally could no longer stomach the taste of meat.`
+                            description: `It seemed so vulgar that anything should have to suffer and die just to satisfy my hunger. And once I came to that conclusion, I literally could no longer stomach the taste of meat.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `and his`,
@@ -403,7 +467,10 @@ module.exports = {
                     {
                         anchor: `none by us now,`,
                         annotation: {
-                            description: `And so, wishing no more to be the cause of hurt to anyone or anything, I decided to become a vegan.`
+                            description: `And so, wishing no more to be the cause of hurt to anyone or anything, I decided to become a vegan.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `to any flesh!`
@@ -427,7 +494,10 @@ module.exports = {
                                     wiki: `People_for_the_Ethical_Treatment_of_Animals`
                                 },
                                 `and for several years, I took part in their demonstrations for animal rights.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -457,7 +527,11 @@ module.exports = {
                     {
                         anchor: `leads have left`,
                         annotation: {
-                            description: `For the past several years, my modus operandi was simple. I would stay with Sita up until I had another option to pursue. Then, when that prospect failed, as it always did, I would come crawling back, because Sita always let me. But our circumstances were now reversed. There were no more options coming down the pike for me, while Sita had met someone with whom she fully intended to stay.`
+                            description: `For the past several years, my modus operandi was simple. I would stay with Sita up until I had another option to pursue. Then, when that prospect failed, as it always did, I would come crawling back, because Sita always let me. But our circumstances were now reversed. There were no more options coming down the pike for me, while Sita had met someone with whom she fully intended to stay.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `and now you're sad, too?`
@@ -470,7 +544,10 @@ module.exports = {
                     {
                         anchor: `you have to…`,
                         annotation: {
-                            description: `Overcome with jealousy and heartbreak, I had no excuse to complain, as I had caused Sita this exact same torment countless times. So in our last phone conversation, I just asked her meekly how she had managed it. She replied that she didn't know. There were days when she just didn't want to live. And yet, each day would pass just the same, pushing her into the next, as days added up to weeks, and weeks turned into months, until the excruciating pain quietly dulled into an aching sadness.`
+                            description: `Overcome with jealousy and heartbreak, I had no excuse to complain, as I had caused Sita this exact same torment countless times. So in our last phone conversation, I just asked her meekly how she had managed it. She replied that she didn't know. There were days when she just didn't want to live. And yet, each day would pass just the same, pushing her into the next, as days added up to weeks, and weeks turned into months, until the excruciating pain quietly dulled into an aching sadness.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -493,7 +570,11 @@ module.exports = {
                                     wiki: `Sappy`
                                 },
                                 `Kurt Cobain compares the victim of an emotionally abusive relationship to a small creature kept in a jar with breathing holes punched in its lid. I liked the imagery, so I borrowed it shamelessly here.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [SONGWRITING]: true
+                            }
                         }
                     },
                     `dear; and now, good night."`
@@ -551,7 +632,11 @@ module.exports = {
                                     wiki: `White_dwarf`
                                 },
                                 `is the dense remnant of an aged star. As I began to take an unflinching look at all the hurt I'd caused, I was comforted to know that those who came before me had learned from their mistakes. And yet, it felt just as dispiriting to know that those coming after had yet to make theirs. The universe never truly learns, and I was part of the reason why. I had this same thought about my brother many years ago, which made me realise that all I could do was love him for who he was.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `gurgling, curls up for his sleep…`
@@ -577,6 +662,10 @@ module.exports = {
                                 },
                                 `as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
                             ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            },
                             portal: `chivalry`
                         }
                     }
@@ -602,11 +691,6 @@ module.exports = {
         },
         {
             taskName: `sort out past and present tense`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `separate annotations into dot categories`,
             workedHours: 0,
             neededHours: 3
         },
@@ -637,6 +721,11 @@ module.exports = {
         },
         {
             taskName: `include wiki urls`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `separate annotations into dot categories`,
             workedHours: 1,
             neededHours: 1
         }
