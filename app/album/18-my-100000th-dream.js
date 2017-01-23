@@ -1,10 +1,13 @@
-import { INSTRUMENTAL, VERSES, CHORUS } from 'helpers/constants'
+import { INSTRUMENTAL, VERSES, CHORUS, SONGWRITING, NARRATIVE, BACKSTORY, OBSERVATION } from 'helpers/constants'
 
 module.exports = {
     title: {
         anchor: `My 100,000th Dream`,
         annotation: {
-            description: `I once read that we typically dream four times per night. Over a lifetime, that's about 100,000 dreams. This song, then, is about the very last dream I'll ever dream.`
+            description: `I once read that we typically dream four times per night. Over a lifetime, that's about 100,000 dreams. This song, then, is about the very last dream I'll ever dream.`,
+            dotKeys: {
+                [OBSERVATION]: true
+            }
         }
     },
     scenes: [
@@ -38,6 +41,12 @@ module.exports = {
     lyrics: [
         [
             {
+                time: 0,
+                centre: {
+                    italic: `(intro)`
+                }
+            },
+            {
                 unitMap: true,
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
@@ -49,21 +58,12 @@ module.exports = {
                             }
                         ],
                         dotKeys: {
-                            music: true
+                            [BACKSTORY]: true,
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
                         }
                     }
-                }
-            }
-        ],
-        [
-            {
-                time: 0,
-                centre: {
-                    italic: `(intro)`
-                }
-            },
-            {
-                unitMap: true,
+                },
                 sectionClass: INSTRUMENTAL
             }
         ],
@@ -95,7 +95,11 @@ module.exports = {
                                     wiki: `El_Torito`
                                 },
                                 `a Mexican chain restaurant. I would often pick her up when her shift was over, as I seem to be doing now in my dream.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ]
@@ -121,7 +125,11 @@ module.exports = {
                     {
                         anchor: `ever live another life?`,
                         annotation: {
-                            description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. As far as I know, Sita and I have always been together. Of course, according to Sita's Hindu faith, I might also have lived another life quite literally, in a past incarnation.`
+                            description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. As far as I know, Sita and I have always been together. Of course, according to Sita's Hindu faith, I might also have lived another life quite literally, in a past incarnation.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -164,6 +172,9 @@ module.exports = {
                                 },
                                 `the grassy lowlands spanning the southeastern end of South America.`
                             ],
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            },
                             portal: `pampas`
                         }
                     },
@@ -178,7 +189,11 @@ module.exports = {
                                     wiki: `Gopi`
                                 },
                                 `are cow herdesses who are devotees of the god Krishna. I watched a lot of Bollywood movies with Sita, and now my dream is slowly turning into one, as the gopis sing and dance in the background.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `played,`
@@ -254,7 +269,10 @@ module.exports = {
                                     wiki: `El_Cerrito,_California`
                                 },
                                 `has a sprawling hillside area with hiking trails, secluded groves, and a great view of the San Francisco Bay. In our happier days, it was one of Sita's habitual choices for a weekend outing.`
-                            ]
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -274,7 +292,10 @@ module.exports = {
                     {
                         anchor: `last thought`,
                         annotation: {
-                            description: `As Sita's ominous tone wrenches me from my bliss, I suddenly realise that I'm in a dream, and moreover, that it may be my last.`
+                            description: `As Sita's ominous tone wrenches me from my bliss, I suddenly realise that I'm in a dream, and moreover, that it may be my last.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                     `in this world belong to Sita?`
@@ -297,7 +318,11 @@ module.exports = {
                     {
                         anchor: `come to take me,`,
                         annotation: {
-                            description: `I now understand that Sita, being my most cherished memory, was always going to be the one to ease my fears and accompany me as I exited from this world.`
+                            description: `I now understand that Sita, being my most cherished memory, was always going to be the one to ease my fears and accompany me as I exited from this world.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     },
                     `Sita! Sita!`
@@ -321,7 +346,11 @@ module.exports = {
                     {
                         anchor: `When you'll be mine?`,
                         annotation: {
-                            description: `If this is only a dream, then the person I'm holding onto is not really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. As I exit this world, then, I hold onto the possibility that I may find her again in the next.`
+                            description: `If this is only a dream, then the person I'm holding onto is not really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. As I exit this world, then, I hold onto the possibility that I may find her again in the next.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -361,11 +390,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `separate annotations into dot categories`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `rough illustration synopses`,
             workedHours: 0,
             neededHours: 3
@@ -385,6 +409,11 @@ module.exports = {
         },
         {
             taskName: `include wiki urls`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `separate annotations into dot categories`,
             workedHours: 1,
             neededHours: 1
         }

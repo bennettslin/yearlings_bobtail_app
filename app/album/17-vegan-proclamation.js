@@ -675,7 +675,7 @@ module.exports = {
                 unitMap: true,
                 sectionClass: CHORUS
             }
-            // Talk about flirting with conservative politics. These days, I'd say I'm vegan maybe 90% of the time, the naysaying judgment of hardcore vegans notwithstanding.
+            // Afterword: These days, I'd say I'm vegan maybe 90% of the time, the naysaying judgment of hardcore vegans notwithstanding.
         ]
     ],
     tasks: [
