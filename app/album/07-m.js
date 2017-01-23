@@ -54,21 +54,6 @@ module.exports = {
     lyrics: [
         [
             {
-                unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: `This song is a carryover from back when my band was The Yearlings. I kept its meaning a secret by disguising Mara's name in various puns, although my enunciation in this recording now makes them obvious. Since I'm nowhere near as skilled on bass and drums as my old bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.`,
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                }
-            }
-        ],
-        [
-            {
                 time: 0,
                 centre: {
                     italic: `(intro)`
@@ -105,6 +90,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `This song is a carryover from back when my band was The Yearlings. I kept its meaning a secret by disguising Mara's name in various puns, although my enunciation in this recording now makes them obvious. Since I'm nowhere near as skilled on bass and drums as my old bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.`,
+                        dotKeys: {
+                            [BACKSTORY]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: REFRAIN
             }
         ],

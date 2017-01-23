@@ -127,16 +127,8 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: [
-                            `In keeping with the Russian theme of Soviet space dogs, frenetically plucked mandolins evoke the spirit of the balalaika. Since Tuva is a Russian republic, I also threw in some`,
-                            {
-                                anchor: `Tuvan throat singing,`,
-                                wiki: `Tuvan_throat_singing`
-                            },
-                            `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
-                        ],
+                        description: `I needed a kid's voice for this quote, but no one I knew was popping them out quite yet. So I just had my sister do it.`,
                         dotKeys: {
-                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -175,6 +167,23 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `In keeping with the Russian theme of Soviet space dogs, frenetically plucked mandolins evoke the spirit of the balalaika. Since Tuva is a Russian republic, I also threw in some`,
+                            {
+                                anchor: `Tuvan throat singing,`,
+                                wiki: `Tuvan_throat_singing`
+                            },
+                            `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
+                        ],
+                        dotKeys: {
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -633,7 +642,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `The sound of space transmissions in the background was made by bending the whammy bar of an electric guitar while banging its body against the wall. It took almost fifty tries, and I had to retune each time.`
+                            `The sound of space transmissions in the background was made by bending the whammy bar of an electric guitar while banging it on the carpet floor. It took almost fifty tries, and I had to retune each time.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true

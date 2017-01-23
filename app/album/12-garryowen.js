@@ -10,7 +10,11 @@ module.exports = {
                     italic: `Ulysses,`
                 },
                 `Garryowen is a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
-            ]
+            ],
+            dotKeys: {
+                [OBSERVATION]: true,
+                [REFERENCE]: true
+            }
         }
     },
     scenes: [
@@ -44,6 +48,12 @@ module.exports = {
     lyrics: [
         [
             {
+                time: 0,
+                centre: {
+                    italic: `(intro)`
+                }
+            },
+            {
                 unitMap: true,
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
@@ -64,18 +74,7 @@ module.exports = {
                             [SONGWRITING]: true
                         }
                     }
-                }
-            }
-        ],
-        [
-            {
-                time: 0,
-                centre: {
-                    italic: `(intro)`
-                }
-            },
-            {
-                unitMap: true,
+                },
                 sectionClass: INSTRUMENTAL
             }
         ],

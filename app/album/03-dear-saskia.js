@@ -68,6 +68,10 @@ module.exports = {
     lyrics: [
         [
             {
+                time: 0,
+                centre: `Dearest Sasha,`
+            },
+            {
                 unitMap: true,
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
@@ -84,16 +88,7 @@ module.exports = {
                             [SONGWRITING]: true
                         }
                     }
-                }
-            }
-        ],
-        [
-            {
-                time: 0,
-                centre: `Dearest Sasha,`
-            },
-            {
-                unitMap: true,
+                },
                 sectionClass: VERSES
             }
         ],
