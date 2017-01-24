@@ -1,10 +1,8 @@
 import React from 'react'
 import Shared from './shared'
-import TitleSection from '../title/title-section'
 import AudioSection from '../audio/audio-section'
 import DevSection from './dev/dev-section'
 import NavSection from '../nav/nav-section'
-import TipsSection from '../tips/tips-section'
 import ProgressHelper from 'helpers/progress-helper'
 
 /*************
@@ -46,7 +44,6 @@ const AlbumView = ({
     selectedSongIndex,
     selectedVerseIndex,
     selectedAudioOptionIndex,
-    selectedTipsIndex,
     selectedTimePlayed,
     updatedTimePlayed,
     selectedNavIndex,
@@ -61,7 +58,6 @@ const AlbumView = ({
     onPlayClick,
     onAudioOptionClick,
     onScreenWidthClick,
-    onTipsClick,
     onTimeChange,
     onPlayerEnd,
     onTimeUpdated,
@@ -74,29 +70,8 @@ const AlbumView = ({
     allTasks,
 
 ...other }) => (
-    <div className="admin-column album-admin-column">
+    <div className="admin-column">
         <div className="admin-field album-admin-field">
-            <TitleSection
-                title={title}
-                accessedOn={accessedOn}
-                accessedSectionKey={accessedSectionKey}
-                nextSectionKey={nextSectionKey}
-                accessedSongIndex={accessedSongIndex}
-                onTitleClick={onSongClick}
-            />
-            <DevSection
-                deviceIndex={deviceIndex}
-                windowWidth={windowWidth}
-                windowHeight={windowHeight}
-                selectedScoreIndex={selectedScoreIndex}
-                selectedSongIndex={selectedSongIndex}
-                selectedVerseIndex={selectedVerseIndex}
-                selectedNavIndex={selectedNavIndex}
-                selectedDotsIndex={selectedDotsIndex}
-                showSingleLyricColumn={showSingleLyricColumn}
-                onScreenWidthClick={onScreenWidthClick}
-                onScoreClick={onScoreClick}
-            />
             <AudioSection
                 isAdmin={true}
                 mp3s={mp3s}
@@ -119,6 +94,19 @@ const AlbumView = ({
                 onPlayerEnd={onPlayerEnd}
                 onTimeUpdated={onTimeUpdated}
             />
+            <DevSection
+                deviceIndex={deviceIndex}
+                windowWidth={windowWidth}
+                windowHeight={windowHeight}
+                selectedScoreIndex={selectedScoreIndex}
+                selectedSongIndex={selectedSongIndex}
+                selectedVerseIndex={selectedVerseIndex}
+                selectedNavIndex={selectedNavIndex}
+                selectedDotsIndex={selectedDotsIndex}
+                showSingleLyricColumn={showSingleLyricColumn}
+                onScreenWidthClick={onScreenWidthClick}
+                onScoreClick={onScoreClick}
+            />
             <NavSection
                 isAdmin={true}
                 songs={songs}
@@ -129,11 +117,6 @@ const AlbumView = ({
                 nextSectionKey={nextSectionKey}
                 accessedSongIndex={accessedSongIndex}
                 onSongClick={onSongClick}
-            />
-            <TipsSection
-                isAdmin={true}
-                selectedTipsIndex={selectedTipsIndex}
-                onTipsClick={onTipsClick}
             />
         </div>
         <Shared {...other}

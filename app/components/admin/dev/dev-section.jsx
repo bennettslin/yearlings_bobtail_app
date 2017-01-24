@@ -16,7 +16,7 @@ const DevSection = (props) => (
 const DevSectionView = ({
 
     // From props.
-    
+
     // deviceIndex,
     // windowWidth,
     // windowHeight,

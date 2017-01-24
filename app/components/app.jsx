@@ -126,7 +126,7 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            isAdmin: false,
+            isAdmin: true,
             isPlaying: false,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
@@ -729,7 +729,7 @@ class App extends Component {
         }
     }
 
-    selectScore(e, selectedScoreIndex = 0) {
+    selectScore(e) {
         this._stopPropagation(e)
         this.props.selectScoreIndex((this.props.selectedScoreIndex + 1) % 2)
     }

@@ -1,15 +1,5 @@
 module.exports = [
     {
-        taskName: `Correct order of dots in right columns.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Separate logues into own files.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Method to calculate characters left to illustrate.`,
         workedHours: 0,
         neededHours: 2
@@ -1098,6 +1088,16 @@ module.exports = [
     },
     {
         taskName: `Allow dot stanzas to have a preferred dot category`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Correct order of dots in right columns.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Separate logues into own files.`,
         workedHours: 1,
         neededHours: 1
     }

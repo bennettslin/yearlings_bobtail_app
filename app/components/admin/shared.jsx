@@ -1,8 +1,7 @@
 import React from 'react'
+import Drawing from './Drawing'
 import NotesSection from './notes/notes-section'
-import OverviewSection from '../overview/overview-section'
 import StatsSection from './stats/stats-section'
-import StageSection from '../stage/stage-section'
 import TasksSection from './tasks/tasks-section'
 import { getSong, getTasks } from 'helpers/album-view-helper'
 
@@ -20,7 +19,6 @@ const Shared = (props) => {
             tasks={tasks}
             lyrics={selectedSong.lyrics}
             annotations={selectedSong.annotations}
-            overviewText={selectedSong.overview}
         />
     )
 }
@@ -32,22 +30,15 @@ const Shared = (props) => {
 const SharedView = ({
 
     // From props.
-    onOverviewClick,
 
     // From controller.
-    overviewText,
     tasks,
     lyrics,
     annotations,
 
 ...other }) => (
-    <div className="admin-column shared-admin-column">
+    <div className="admin-column">
         <div className="admin-field shared-admin-field">
-            <OverviewSection {...other}
-                isAdmin={true}
-                overviewText={overviewText}
-                onOverviewClick={onOverviewClick}
-            />
             <StatsSection
                 lyrics={lyrics}
                 annotations={annotations}
@@ -55,11 +46,10 @@ const SharedView = ({
             <TasksSection
                 tasks={tasks}
             />
-            <StageSection
-                isAdmin={true}
-            />
             <NotesSection />
         </div>
+        <Drawing {...other}
+        />
     </div>
 )
 
