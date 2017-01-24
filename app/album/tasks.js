@@ -25,11 +25,6 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Allow dot stanzas to have a preferred dot category`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `When song finishes playing, proceed to next more smoothly.`,
         workedHours: 0,
         neededHours: 1
@@ -1101,4 +1096,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Allow dot stanzas to have a preferred dot category`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

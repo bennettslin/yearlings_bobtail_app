@@ -329,6 +329,19 @@ module.exports = {
         PULPIT
     ],
 
+    // In dot stanzas, at least songwriting and afterword are always first.
+    ALL_DOT_KEYS_DOT_STANZA_ORDER: [
+        SONGWRITING,
+        AFTERWORD,
+        NARRATIVE,
+        PUN,
+        REFERENCE,
+        BACKSTORY,
+        OBSERVATION,
+        PORTAL,
+        PULPIT
+    ],
+
     DOT_DESCRIPTIONS: {
         [NARRATIVE]: 'the story', // My perspective in the story.
         [BACKSTORY]: 'backstory description', // My perspective while making the album.

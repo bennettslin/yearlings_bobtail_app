@@ -54,6 +54,7 @@ const DotStanzaView = ({
             onlyShowFirstDotKey={true}
             selectedDotKeys={isSelected ? dotKeys : {}}
             presentDotKeys={dotKeys}
+            inDotStanza={true}
         />
     </div>
 )

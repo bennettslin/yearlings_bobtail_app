@@ -1,6 +1,6 @@
 import React from 'react'
 import DotButton from './dot-button'
-import { ALL_DOT_KEYS } from 'helpers/constants'
+import { ALL_DOT_KEYS, ALL_DOT_KEYS_DOT_STANZA_ORDER } from 'helpers/constants'
 
 const defaultProps = {
     selectedDotKeys: {},
@@ -13,8 +13,11 @@ const defaultProps = {
 
 const DotsBlock = (props) => {
 
-    const { inDotsSection,
+    const { inDotStanza,
+            inDotsSection,
             onDotClick } = props,
+
+        allDotKeys = inDotStanza ? ALL_DOT_KEYS_DOT_STANZA_ORDER : ALL_DOT_KEYS,
 
         isInteractable = !!onDotClick,
 
@@ -28,6 +31,7 @@ const DotsBlock = (props) => {
         <DotsBlockView {...props}
             isInteractable={isInteractable}
             canDeselect={canDeselect}
+            allDotKeys={allDotKeys}
         />
     )
 }
@@ -50,13 +54,14 @@ const DotsBlockView = ({
 
     // From controller.
     isInteractable,
+    allDotKeys,
 
 ...other }) => {
     let firstDotKeyShown = false
 
     return (
         <span className={`dots-block${annotationIndex ? ' annotation-' + annotationIndex : ''}${isInteractable ? ' interactable' : ''}`}>
-            {ALL_DOT_KEYS.map((dotKey, index) => {
+            {allDotKeys.map((dotKey, index) => {
                 const isSelected = selectedDotKeys[dotKey],
                     isPresent = presentDotKeys[dotKey]
 

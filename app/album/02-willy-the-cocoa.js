@@ -163,7 +163,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `The chord progression here alternates between a minor third down, followed by a whole step up. In mimicry, the melodicas play a sped-up and warped version of this descending zigzag at the cadence of each line.`
+                            `The chord progression here zigzags between a minor third down, followed by a whole step up. In mimicry, the melodicas play a sped-up and warped version of this descending pattern at the cadence of each line.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true,
