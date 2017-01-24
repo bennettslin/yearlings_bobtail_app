@@ -20,23 +20,47 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett is leaving Sita's house at night, in a scene very similar to the one from Didi. It is now Bennett eager to leave, and Sita begging him to stay. A bunch of crust punks stand there.`,
             characters: {
-
+                bennett: 1,
+                sita: 1,
+                tristan: 1,
+                crustPunks: 2
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 8,
+            description: `Tristan and the other crust punks are smashing a car window, while Bennett is sorting through the meat packages in his jacket.`,
             characters: {
-
+                bennett: 1,
+                tristan: 1,
+                crustPunks: 2
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 18,
+            description: `Bennett and Sita are on the couch. Bennett is drunk, with a guitar in his lap, writing a song. Sita is taking his right hand and placing it on her breast, but he is unresponsive`,
             characters: {
-
+                bennett: 1,
+                sita: 1
+            }
+        },
+        {
+            verseIndex: 25,
+            description: `Bennett has just finished playing a show. Tristan introduces his kid sister Miriam, who is dressed more preppie. (Maybe Tristan is half giving her a noogie, to indicate familial rapport since they belong to two completely different subcultures.)`,
+            characters: {
+                bennett: 1,
+                miriam: 1,
+                tristan: 1,
+                hipsters: 2
+            }
+        },
+        {
+            verseIndex: 35,
+            description: `Bennett is leaving Sita. She is crumbled on the floor.`,
+            characters: {
+                bennett: 1,
+                sita: 1
             }
         }
     ],
@@ -634,11 +658,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -660,6 +679,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
