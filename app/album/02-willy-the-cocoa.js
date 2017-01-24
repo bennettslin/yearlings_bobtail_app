@@ -85,8 +85,17 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            // TODO: Be more articulate.
-                            `The chord progression here follows a repeating staircase pattern of a minor third down, followed by a whole step up. A similar contour recurs in the melodic cadence played by the melodicas at the end of each verse line.`
+                            `In folklore of the past,`,
+                            {
+                                anchor: `changelings`,
+                                wiki: `Changeling`
+                            },
+                            `were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, then, I wanted to mimic a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of`,
+                            {
+                                anchor: `Creedence Clearwater Revival,`,
+                                wiki: `Creedence_Clearwater_Revival`
+                            },
+                            `with melodicas thrown in to evoke the sound of Cajun accordions.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -154,17 +163,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `In folklore of the past,`,
-                            {
-                                anchor: `changelings`,
-                                wiki: `Changeling`
-                            },
-                            `were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, then, I wanted to mimic a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of`,
-                            {
-                                anchor: `Creedence Clearwater Revival,`,
-                                wiki: `Creedence_Clearwater_Revival`
-                            },
-                            `with melodicas thrown in to evoke the sound of Cajun accordions.`
+                            `The chord progression here alternates between a minor third down, followed by a whole step up. In mimicry, the melodicas play a sped-up and warped version of this descending zigzag at the cadence of each line.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true,

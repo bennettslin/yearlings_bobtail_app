@@ -533,7 +533,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `The drums were the one instrument for which I was scoring parts far more advanced than my actual abilities. So when it came time to record, I had to try a variety of workarounds. For this song, I recorded the kick, snare, and toms separately from the cymbals.`,
+                        description: `The drums were the one instrument for which I had to score parts far more advanced than my actual abilities. So when it came time to record, I tried many workarounds. For this song, I recorded the kick, snare, and toms separately from the cymbals, and at a lower tape speed.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
