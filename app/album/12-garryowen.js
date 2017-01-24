@@ -86,15 +86,15 @@ module.exports = {
             {
                 time: 20,
                 lyric: [
-                    `with your crew of`,
+                    `with your`,
                     {
-                        // TODO: Portal: crooked thieves in Didi?
-                        anchor: `chefs and thieves.`,
+                        anchor: `crew of chefs and thieves.`,
                         annotation: {
                             description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share. I was always in the thieving half.`,
                             dotKeys: {
                                 [BACKSTORY]: true
-                            }
+                            },
+                            portal: `crooked_thieves`
                         }
                     }
                 ]

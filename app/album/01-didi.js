@@ -316,7 +316,14 @@ module.exports = {
             {
                 time: 106,
                 lyric: [
-                    `crooked thieves with your`,
+                    {
+                        anchor: `crooked thieves`,
+                        annotation: {
+                            description: ``,
+                            portal: `crooked_thieves`
+                        }
+                    },
+                    `with your`,
                     {
                         anchor: `sheriff's badge and gun…`,
                         annotation: {

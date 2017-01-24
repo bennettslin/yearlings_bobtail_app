@@ -48,7 +48,8 @@ module.exports = {
         require('./15-uncanny-valley-boy'),
         require('./16-cremated'),
         require('./17-vegan-proclamation'),
-        require('./18-my-100000th-dream')
+        require('./18-my-100000th-dream'),
+        require('./19-epilogue')
     ],
     tasks: require('./tasks')
 }
