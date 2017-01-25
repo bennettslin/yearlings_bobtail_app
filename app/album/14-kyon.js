@@ -18,20 +18,7 @@ module.exports = {
         }
     },
     scenes: [
-        {
-            verseIndex: 0,
-            description: ``,
-            characters: {
 
-            }
-        },
-        {
-            verseIndex: 0,
-            description: ``,
-            characters: {
-
-            }
-        },
         {
             verseIndex: 0,
             description: ``,
@@ -59,6 +46,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
+                            // TODO Come up with better word than docile.
                             `Though I tried to write this song from Sita's perspective, it's possible that I unfairly caricatured her as a docile woman. But it's also possible that we both really`,
                             {
                                 emphasis: `were`

@@ -1,4 +1,5 @@
 import React from 'react'
+import DrawingsSection from './drawings/drawings-section'
 
 /*************
  * CONTAINER *
@@ -27,7 +28,7 @@ const DrawingView = ({
 }) => (
     <div className="admin-column">
         <div className="admin-field drawing-admin-field">
-
+            <DrawingsSection />
         </div>
     </div>
 )
