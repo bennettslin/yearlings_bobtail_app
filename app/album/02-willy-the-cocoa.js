@@ -166,8 +166,7 @@ module.exports = {
                             `The chord progression here zigzags between a minor third down, followed by a whole step up. In mimicry, the melodicas play a sped-up and warped version of this descending pattern at the cadence of each line.`
                         ],
                         dotKeys: {
-                            [SONGWRITING]: true,
-                            [REFERENCE]: true
+                            [SONGWRITING]: true
                         }
                     }
                 },
@@ -333,6 +332,7 @@ module.exports = {
                     annotation: {
                         description: `I figured that trolls would have all the same instruments but play them in some weird way, so I muted the lead guitar and mandolin and threw in a whole lot of legato slides.`,
                         dotKeys: {
+                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -441,6 +441,7 @@ module.exports = {
                     annotation: {
                         description: `Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`,
                         dotKeys: {
+                            [BACKSTORY]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -795,6 +796,17 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `I also pictured trolls doing bizarre things like playing a slide guitar with the whammy bar.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: PRECHORUS
             }
         ],
@@ -846,7 +858,7 @@ module.exports = {
                     {
                         anchor: `I am seven,`,
                         annotation: {
-                            description: `My brother learned to answer the question "how old are you?" when he was six. But even after turning seven, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer, but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. Here, I imagine him as a grownup, testily correcting a stranger who has the nerve to ask if he is "six."`,
+                            description: `My brother learned to answer the question "how old are you?" when he was six. But even after turning seven, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer, but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been saying "seven" ever since. Here, I imagine him as a grownup, testily correcting a stranger who has the nerve to ask if he is "six."`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true,
@@ -1021,11 +1033,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -1062,6 +1069,11 @@ module.exports = {
             taskName: `afterword annotations`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
