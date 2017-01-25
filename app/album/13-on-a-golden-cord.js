@@ -21,23 +21,37 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett and Sita are at her apartment, breaking up. Sita is a wreck, turning away from Bennett as she returns the gold bracelet to him. He is trying to console her, but in a mechanical way.`,
             characters: {
-
+                bennett: 1,
+                sita: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 14,
+            description: `Bennett and Garry are walking along down the street. Garry is shaking his fist at the twin streetlights. Bennett turns around to face the audience, a look of uncertainty on his face. He is caressing the gold bracelet in his hand.`,
             characters: {
-
+                bennett: 1,
+                garryowen: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 26,
+            description: `Bennett and Garry are yucking it up, in a panicked and delirious kind of way. Bennett is yodelling, Garry is playing the banjo, saluting a female cop on a horse. The cop waves back.`,
             characters: {
-
+                bennett: 1,
+                garryowen: 1,
+                cop: 1
+            }
+        },
+        {
+            verseIndex: 42,
+            description: `Garry is now facing the audience, his hand over his face, crying, and holding the gold bracelet over a group of kids crossing the street with a crossing guard. Bennett is trying to console him, as he faces forward.`,
+            characters: {
+                bennett: 1,
+                garryowen: 1,
+                kids: 4,
+                crossingGuard: 1
             }
         }
     ],
@@ -985,12 +999,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            // Drunken me holds gold bracelet over kid's head in the morning.
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -1015,6 +1023,11 @@ module.exports = {
         },
         {
             taskName: `restructure lyrics`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
+            taskName: `rough illustration synopses`,
             workedHours: 1,
             neededHours: 1
         }
