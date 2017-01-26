@@ -134,7 +134,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `TODO: Mention being sick and recording.`,
+                        description: `I wanted the vocals to sound sickly here, which worked out really well, since I was guaranteed to catch an awful cold at some point during the five years that I worked on this album.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -533,6 +533,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `TODO: Talk about melody and harmony`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
@@ -618,7 +627,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         // TODO: Make this about Bobtail, and move this part to Odin.
-                        description: `Sasha and I stayed in touch over the years. After the release of this album went nowhere, I moved to New York City to regain my bearings. There we reconnected, and ended up dating for a while.`,
+                        description: ``,
                         dotKeys: {
                             [AFTERWORD]: true
                         }
@@ -668,7 +677,7 @@ module.exports = {
         },
         {
             taskName: `afterword annotations`,
-            workedHours: 1,
+            workedHours: 0,
             neededHours: 1
         }
     ]

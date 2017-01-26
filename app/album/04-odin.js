@@ -1244,12 +1244,12 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `After Sasha and I got together in New York, I undertook a yearlong course of study required for conversion to Judaism. However, we didn't last long enough for me to stand before the`,
+                            `After the release of this album went nowhere, I moved to New York City to regain my bearings, and reconnected with Sasha there. Once it slowly became clear that we were dating, I undertook a yearlong course of study required for conversion to Judaism. However, we didn't last long enough for me to stand before the`,
                             {
                                 anchor: `beit din,`,
                                 wiki: `Beth_din`
                             },
-                            `or rabbinical court, which is the final step. Were I to try again, I'd probably have to start from the beginning.`
+                            `or rabbinical court, which is the final step. Were I ever to try again, I'd probably have to start from the beginning.`
                         ],
                         dotKeys: {
                             [AFTERWORD]: true
