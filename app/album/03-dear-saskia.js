@@ -1,6 +1,6 @@
 import { VERSES, PRECHORUS, CHORUS, AFTERWORD, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
 
-// TODO: Music annotations: Beatles, passive-aggressiveness, instruments
+// TODO: One more explaining how I noticed other kids writing songs.
 // TODO: Mention mother pulling strings to get us to go to a rich school
 module.exports = {
     title: {
@@ -77,12 +77,12 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `As a kid, I marvelled at`,
+                            `As a teenager, I tried to figure out how`,
                             {
                                 anchor: `The Beatles`,
                                 wiki: `The_Beatles`
                             },
-                            `for weaving melodies and chords so seamlessly. This song began life as an overzealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for, and trotted it back out. The passive-aggressive lyrics are matched in texture by screeching woodwinds and scratch tones on violins.`
+                            `weaved melodies and chords progressions so seamlessly. The music here began life as a zealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for, and trotted it back out.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -131,6 +131,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `TODO: Mention being sick and recording.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES,
                 subsequent: true
             }
@@ -305,6 +314,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `The passive-aggressive lyrics are matched in texture by screeching woodwinds and scratch tones on violins.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
@@ -599,6 +617,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
+                        // TODO: Make this about Bobtail, and move this part to Odin.
                         description: `Sasha and I stayed in touch over the years. After the release of this album went nowhere, I moved to New York City to regain my bearings. There we reconnected, and ended up dating for a while.`,
                         dotKeys: {
                             [AFTERWORD]: true
