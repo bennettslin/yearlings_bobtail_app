@@ -520,7 +520,7 @@ module.exports = {
                     {
                         anchor: `hugging hurts…`,
                         annotation: {
-                            description: `While the incident certainly caused a few bruises, hugging Sasha hurt in more than just a literal sense.`,
+                            description: `While the incident certainly left a few bruises, hugging Sasha hurt in more than just a literal sense.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true,
@@ -535,7 +535,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `Every aspiring songwriter I met would write the chords first, then come up with a feasible melody to go on top. But my theory was that the Beatles wrote the melody and chords together, giving both an equal role in dictating how the music unfolds. That approach is evident here, and it's been my ideal ever since.`,
+                        description: `Every aspiring songwriter I met would write their chords first, then come up with a feasible melody to go on top. But my theory was that the Beatles wrote the melody and chords together, allowing the music to unfold organically. I was always trying to write the next "Martha My Dear," which may be evident here.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -625,16 +625,16 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // TODO: Proofread before calling done.
                         description: [
-                            `Confused by the lack of interest in the album's release, I distilled all my thoughts on writing songs into a lesson plan called`,
+                            `Confused by the lack of interest in the album's release, I distilled my approach to writing songs into a lesson plan called`,
                             {
                                 italic: `Bobtail Method.`
                             },
-                            `Unfortunately, this generated even less interest, and probably only cemented my status as a hobbyist rather than a serious musician.`
+                            `Unfortunately, this generated even less interest, and probably only cemented my status as a hobbyist rather than a serious, career-oriented musician.`
                         ],
                         dotKeys: {
-                            [AFTERWORD]: true
+                            [AFTERWORD]: true,
+                            [SONGWRITING]: true
                         }
                     }
                 }
@@ -642,11 +642,6 @@ module.exports = {
         ]
     ],
     tasks: [
-        {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
         {
             taskName: `sort out past and present tense`,
             workedHours: 0,
@@ -682,8 +677,13 @@ module.exports = {
         },
         {
             taskName: `afterword annotations`,
-            workedHours: 0,
+            workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
