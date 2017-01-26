@@ -26,23 +26,59 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `The gang is at Walgreens, picking out cough syrup.`,
             characters: {
-
+                bennett: 1,
+                ana: 1,
+                howie: 1,
+                tomer: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 7,
+            description: `The gang is about to go into the steam tunnel through a hidden grate.`,
             characters: {
-
+                bennett: 1,
+                ana: 1,
+                howie: 1,
+                tomer: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 11,
+            description: `The gang is wandering through the steam tunnels. Bennett is blathering.`,
             characters: {
-
+                bennett: 1,
+                ana: 1,
+                howie: 1,
+                tomer: 1
+            }
+        },
+        {
+            verseIndex: 17,
+            description: `The gang is at the cemetery, standing over Adam's grave.`,
+            characters: {
+                bennett: 1,
+                ana: 1,
+                howie: 1,
+                tomer: 1
+            }
+        },
+        {
+            verseIndex: 24,
+            description: `The gang is driving in a car. Bennett is sitting in the back with his eyes closed. He pictures a sabre-tooth tiger and mastodon, and his brother and sister as Loki and Freyja.`,
+            characters: {
+                bennett: 1,
+                ana: 1,
+                howie: 1,
+                tomer: 1
+            }
+        },
+        {
+            verseIndex: 31,
+            description: `Bennett is huddled under a blanket on a couch, lit up by an old television facing away from the audience.`,
+            characters: {
+                bennett: 1
             }
         }
     ],
@@ -1488,11 +1524,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -1512,6 +1543,11 @@ module.exports = {
         },
         {
             taskName: `separate annotations into dot categories`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `rough illustration synopses`,
             workedHours: 2,
             neededHours: 2
         }
