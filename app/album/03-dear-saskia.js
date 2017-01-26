@@ -1,6 +1,5 @@
 import { VERSES, PRECHORUS, CHORUS, AFTERWORD, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
 
-// TODO: One more explaining how I noticed other kids writing songs.
 // TODO: Mention mother pulling strings to get us to go to a rich school
 module.exports = {
     title: {
@@ -536,7 +535,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `TODO: Talk about melody and harmony`,
+                        description: `Every aspiring songwriter I met would write the chords first, then come up with a feasible melody to go on top. But my theory was that the Beatles wrote the melody and chords together, giving both an equal role in dictating how the music unfolds. That approach is evident here, and it's been my ideal ever since.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -626,8 +625,14 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // TODO: Make this about Bobtail, and move this part to Odin.
-                        description: ``,
+                        // TODO: Proofread before calling done.
+                        description: [
+                            `Confused by the lack of interest in the album's release, I distilled all my thoughts on writing songs into a lesson plan called`,
+                            {
+                                italic: `Bobtail Method.`
+                            },
+                            `Unfortunately, this generated even less interest, and probably only cemented my status as a hobbyist rather than a serious musician.`
+                        ],
                         dotKeys: {
                             [AFTERWORD]: true
                         }
