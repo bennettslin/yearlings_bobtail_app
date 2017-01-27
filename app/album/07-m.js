@@ -50,7 +50,7 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 215,
-    overview: `After a string of dating flops that culminated in the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.`,
     lyrics: [
         [
             {
@@ -93,7 +93,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `This song is a carryover from back when my band was The Yearlings. I kept its meaning a secret by disguising Mara's name in various puns, although my enunciation in this recording now makes them obvious. Since I'm nowhere near as skilled on bass and drums as my old bandmates, I also recorded at a lower speed to maintain the original tempo of our performances.`,
+                        description: `This song is a carryover from back when our band was called The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [SONGWRITING]: true
@@ -111,7 +111,7 @@ module.exports = {
                     {
                         anchor: `learning the talents`,
                         annotation: {
-                            description: `The breakup with Catherine was uneventful, since I'd done nothing wrong, per se. I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up tons of attractive traits from scratch, with everything that Catherine found lacking in me to serve as my guide.`,
+                            description: `The uneventful breakup with Catherine proved to me that I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits, starting with the ones that Catherine valued most.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true,
@@ -540,7 +540,7 @@ module.exports = {
                     {
                         anchor: `my life in marriage`,
                         annotation: {
-                            description: `Or else, "my life in Mara." I thought I had chosen to forego this one in the recording, but the Mara-fied pronunciation is distinctly there, so… yeah.`,
+                            description: `Or else, "my life in Mara." I thought I had chosen to forego this one in the recording, but the exaggerated pronunciation is distinctly there, so… yeah.`,
                             dotKeys: {
                                 [SONGWRITING]: true,
                                 [PUN]: true
