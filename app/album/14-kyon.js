@@ -18,12 +18,46 @@ module.exports = {
         }
     },
     scenes: [
-
         {
             verseIndex: 0,
-            description: ``,
+            description: `Sita is sitting on the couch in her living room, petting a cat.`,
             characters: {
-
+                sita: 1
+            }
+        },
+        {
+            verseIndex: 9,
+            description: `Sita is imagining how she met Bennett in three thought bubbles. In the first, she is breaking up with her ex. In the second, in tears over the incident, she busses her tray, leaving her lancing device behind. In the third, Bennett is hitting on her in the cafeteria, while she looks uncertain.`,
+            characters: {
+                sita: 1,
+                thoughtBubbles: 3
+            }
+        },
+        {
+            verseIndex: 17,
+            description: `Sita is still thinking. In the first, she is talking to her friend. Bennett is clearly jealous, but Sita is holding him close. In the second, Bennett is talking to a a fan. Sita is clearly jealous and trying to pull him away, but he ignores her. Sita's friend has opened the door, bringing food.`,
+            characters: {
+                sita: 1,
+                friend: 1,
+                thoughtBubbles: 2
+            }
+        },
+        {
+            verseIndex: 22,
+            description: `Sita is talking to her friend. In his speech bubbles, he sees Bennett leaving her, and Sita heartbroken. In her speech bubbles, she sees Bennett coming back penitent, and then being very affectionate.`,
+            characters: {
+                sita: 1,
+                friend: 1,
+                thoughtBubbles: 4
+            }
+        },
+        {
+            verseIndex: 29,
+            description: `Sita is explaining to her friend Bennett's new ambition to record Bobtail. In her speech bubble, she is affectionately hugging him as he records his instrument. In her thought bubble, she is closing the door on him, as he is recording his guitar, eyes closed.`,
+            characters: {
+                sita: 1,
+                friend: 1,
+                thoughtBubbles: 2
             }
         }
     ],
@@ -387,7 +421,7 @@ module.exports = {
                     {
                         anchor: `shank's dustless silhouette`,
                         annotation: {
-                            description: `A shank is a prison inmate's makeshift blade, also called a shiv. During our breakup years, I would habitually return to Sita promising to mend my ways. Things would be peachy again for a few months, after which I would run off once more with another woman. I was like a reformed convict who leaves his shank to collect dust on the windowsill, then relapses without warning, taking it with him.`,
+                            description: `A shank is a prison inmate's makeshift blade, also called a shiv. During our on-and-off years, I would habitually return to Sita promising to mend my ways. Things would be peachy again for a few months, after which I would run off once more with another woman. I was like a reformed convict who leaves his shank to collect dust on the windowsill, then relapses without warning, taking it with him.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true,
@@ -660,11 +694,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -686,6 +715,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
