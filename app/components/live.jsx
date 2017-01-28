@@ -2,6 +2,7 @@ import React from 'react'
 import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
 import ScoresTipsSection from './scores-tips-section'
+import OverviewButton from './overview/overview-button'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
 import DotsPopup from './dots/dots-popup'
@@ -186,7 +187,6 @@ const LiveView = ({
             selectedTimePlayed,
             updatedTimePlayed,
             selectedAudioOptionIndex,
-            selectedOverviewIndex,
 
             accessedOn,
             accessedSectionKey,
@@ -198,7 +198,6 @@ const LiveView = ({
             onVerseClick,
             onAudioOptionClick,
             onTipsClick,
-            onOverviewClick,
             onPortalClick,
             onDotsExpandClick,
             onNavExpandClick,
@@ -282,6 +281,10 @@ const LiveView = ({
             onPopupButtonClick: onWikiUrlClick,
             onPopupContainerClick
         },
+        overviewButtonProps = {
+            selectedOverviewIndex,
+            onOverviewClick
+        },
         verseBarShown = isSelectedVerseAbove || isSelectedVerseBelow
 
     return (
@@ -311,8 +314,10 @@ const LiveView = ({
                 overviewPopupChild={
                     <OverviewPopup {...overviewPopupProps}
                         inOverviewSubfield={true}
+                        overviewButtonChild={ <OverviewButton {...overviewButtonProps} /> }
                     />
                 }
+                overviewButtonChild={ <OverviewButton {...overviewButtonProps} /> }
                 scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
             />
             <LyricColumn {...lyricColumnProps} />

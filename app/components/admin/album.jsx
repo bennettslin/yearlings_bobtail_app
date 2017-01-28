@@ -38,7 +38,6 @@ const AlbumView = ({
     windowHeight,
     mp3s,
     songs,
-    title,
     isPlaying,
     selectedScoreIndex,
     selectedSongIndex,

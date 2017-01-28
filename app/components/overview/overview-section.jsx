@@ -1,12 +1,12 @@
 import React from 'react'
 import TextBlock from '../text/text-block'
-import OverviewToggleSection from './overview-toggle-section'
 
 /*************
  * CONTAINER *
  *************/
 
 const OverviewSection = (props) => {
+
     return (
         <OverviewSectionView {...props} />
     )
@@ -20,23 +20,17 @@ const OverviewSectionView = ({
 
     // From props.
     isPhone,
-    isAdmin,
-    inPopup,
     isLogue,
     overviewText,
+    overviewButtonChild
 
-...other }) => (
-    <div
-        className={`section overview-section${inPopup ? ' in-popup' : ''}`}
-    >
-        {isAdmin &&
-            <h2>overview</h2>
-        }
+}) => (
+    <div className="section overview-section">
         <div className="overview-text">
-            {!isLogue && !isAdmin && isPhone &&
-                <OverviewToggleSection {...other}
-                inPopup={true}
-                />
+            {!isLogue && isPhone &&
+                <div className="overview-toggle-section">
+                    {overviewButtonChild}
+                </div>
             }
             <TextBlock
                 isLyric={false}

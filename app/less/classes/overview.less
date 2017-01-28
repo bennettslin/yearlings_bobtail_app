@@ -1,7 +1,7 @@
 @overview-toggle-width: 100px;
 @overview-toggle-height: 150px;
 
-@overview-subfield-margin: @app-thin-margin;
+@dots-overview-subfield-margin: @app-thin-margin;
 @overview-popup-content-wrapper-padding: 15px;
 
 @overview-toggle-laptop-width: @overview-toggle-width / 1.5;
@@ -19,17 +19,17 @@
 @toggle-animation-duration: 0.2s;
 
 // In main field.
-.overview-subfield {
+.dots-overview-subfield {
     position: absolute;
 
     // Ensure overview is below lyrics.
-    z-index: @overview-subfield-z-index;
+    z-index: @dots-overview-subfield-z-index;
 
     // This is necessary to avoid right scrollbar in phone width.
-    width: ~"calc(100% - @{overview-subfield-margin} * 2)";
-    height: ~"calc(100% - @{overview-subfield-margin} * 2)";
+    width: ~"calc(100% - @{dots-overview-subfield-margin} * 2)";
+    height: ~"calc(100% - @{dots-overview-subfield-margin} * 2)";
 
-    margin: @overview-subfield-margin;
+    margin: @dots-overview-subfield-margin;
     display: flex;
 }
 
@@ -40,7 +40,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: @overview-subfield-margin;
+            padding: @dots-overview-subfield-margin;
         }
 
         &.popup-content-wrapper {
@@ -59,7 +59,7 @@
 }
 
 // Toggle container.
-.overview-toggle-section {
+.dots-overview-toggle-section {
     position: relative;
     height: 100%;
     width: @overview-toggle-width;
@@ -88,8 +88,10 @@
 
 // Hidden to left when is logue.
 .is-logue, .annotation-shown {
-    .overview-toggle-button-container:not(.in-popup) {
-        margin-left: ~"calc(-100% - @{overview-subfield-margin})"
+    .dots-overview-toggle-section {
+        .overview-toggle-button-container {
+            margin-left: ~"calc(-100% - @{dots-overview-subfield-margin})"
+        }
     }
 }
 
@@ -133,7 +135,7 @@
 
     &.laptop-width {
 
-        .overview-toggle-section {
+        .dots-overview-toggle-section {
             width: @overview-toggle-laptop-width;
         }
 
@@ -147,8 +149,10 @@
 
     // Hidden to left when lyric expanded.
     .lyric-expanded {
-        .overview-toggle-button-container:not(.in-popup) {
-            margin-left: ~"calc(-100% - @{overview-subfield-margin})"
+        .dots-overview-toggle-section {
+            .overview-toggle-button-container {
+                margin-left: ~"calc(-100% - @{dots-overview-subfield-margin})"
+            }
         }
     }
 
@@ -165,7 +169,7 @@
         bottom: 0;
     }
 
-    .overview-toggle-section {
+    .dots-overview-toggle-section {
         width: @overview-toggle-tablet-width;
     }
 
@@ -174,7 +178,7 @@
     }
 
     &.mini-width {
-        .overview-toggle-section {
+        .dots-overview-toggle-section {
             width: @overview-toggle-mini-width;
         }
 
@@ -186,12 +190,14 @@
     &.phone-width {
         // Hidden to left when overview is shown.
         .overview-shown {
-            .overview-toggle-button-container:not(.in-popup) {
-                margin-left: ~"calc(-100% - @{overview-subfield-margin})"
+            .dots-overview-toggle-section {                
+                .overview-toggle-button-container {
+                    margin-left: ~"calc(-100% - @{dots-overview-subfield-margin})"
+                }
             }
         }
 
-        .overview-subfield {
+        .dots-overview-subfield {
 
             // Override flexbox styling in phone.
             display: block;
@@ -205,18 +211,18 @@
             }
         }
 
-        .overview-toggle-section {
+        .dots-overview-toggle-section {
             width: @overview-toggle-phone-width;
             height: 100%;
         }
 
         // Inside overview bubble.
-        .in-popup {
-            .overview-toggle-section {
+        .overview-toggle-section {
+                position: relative;
+                width: @overview-toggle-phone-width;
                 height: @overview-toggle-phone-height;
                 margin-right: 10px;
                 float: left;
-            }
         }
 
         .overview-toggle-button-container {

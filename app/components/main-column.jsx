@@ -2,7 +2,7 @@ import React from 'react'
 import MenuField from './menu-field'
 import NavSection from './nav/nav-section'
 import AudioBanner from './audio/audio-banner'
-import OverviewToggleSection from './overview/overview-toggle-section'
+import DotsOverviewToggleSection from './dots-overview-toggle-section'
 
 /*************
  * CONTAINER *
@@ -50,7 +50,6 @@ const MainColumnView = ({
     selectedTimePlayed,
     updatedTimePlayed,
     selectedAudioOptionIndex,
-    selectedOverviewIndex,
 
     accessedOn,
     accessedSectionKey,
@@ -62,7 +61,6 @@ const MainColumnView = ({
     onVerseClick,
     onAudioOptionClick,
     onTipsClick,
-    onOverviewClick,
     onDotsExpandClick,
     onNavExpandClick,
     onBookColumnClick,
@@ -74,6 +72,7 @@ const MainColumnView = ({
     annotationPopupChild,
     dotsPopupChild,
     overviewPopupChild,
+    overviewButtonChild,
     scoresTipsSectionChild
 
 }) => {
@@ -114,9 +113,8 @@ const MainColumnView = ({
 
             scoresTipsSectionChild
         },
-        overviewToggleSectionProps = {
-            selectedOverviewIndex,
-            onOverviewClick
+        dotsOverviewToggleSectionProps = {
+            overviewButtonChild
         },
         audioBannerProps = {
             selectedSongTitle,
@@ -155,8 +153,8 @@ const MainColumnView = ({
                     </div>
                 }
 
-                <div className="subfield overview-subfield">
-                    <OverviewToggleSection {...overviewToggleSectionProps} />
+                <div className="subfield dots-overview-subfield">
+                    <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps} />
                     <div className="overview-popup-container">
                         {overviewPopupChild}
                     </div>

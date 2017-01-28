@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Move dots above overview, scores into dots tips section, rename`,
+        taskName: `Move dots above overview, scores into scores tips section`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 4
     },
     {
         taskName: `Score popup and stored index`,
@@ -1100,5 +1100,10 @@ module.exports = [
         taskName: `Separate logues into own files.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Rename dots tips section to scores tips section.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
