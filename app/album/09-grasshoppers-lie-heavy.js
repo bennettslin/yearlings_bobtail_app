@@ -160,13 +160,17 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // TODO: Be more articulate?
                         description: [
                             `Just as`,
                             {
                                 italic: `The Grasshopper Lies Heavy`
                             },
-                            `offers its fictional readers a vastly different reality from their own, this song is a story in miniature that offers a vastly different ending from the album as a whole. Like Dick, I wanted to explore possibilities for meta-reference, and did so by hiding lyrical portals to all the other songs on the album.`
+                            `offers its fictional readers a reality that's vastly different from their own, this song is a self-contained narrative that offers a vastly different ending from the album as a whole. Like Dick, I wanted to explore the possibilities for`,
+                            {
+                                anchor: `meta-reference`,
+                                wiki: `Meta-reference`
+                            },
+                            `in a story within a story, and did so by hiding lyrical portals to all the other songs on the album.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -229,14 +233,13 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // TODO: Be more articulate.
                         description: [
-                            `I wanted the music to sound sentimental with some frayed edges, so channelling`,
+                            `I wanted the music to sound sentimental with a few rough patches, so channelling`,
                             {
                                 anchor: `Simon and Garfunkel`,
                                 wiki: `Simon_%26_Garfunkel`
                             },
-                            `seemed to fit the bill.`
+                            `seemed like a wise choice.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -1071,8 +1074,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // TODO: Ascending motif.
-                        description: ``,
+                        description: `The ascending chord progression here symbolises falling in love, and eventually, sexual climax. Simple enough.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -1200,10 +1202,16 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // TODO: Odin theme.
-                        // TODO: The little death. (orgasm) The Odin theme.
-
-                        description: ``,
+                        description: [
+                            `The French expression`,
+                            {
+                                italic: {
+                                    anchor: `la petite mort,`,
+                                    wiki: `La_petite_mort`
+                                }
+                            },
+                            `which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. As such, even as the chords continue to rise, the lead guitar plays a descending riff, and the entire song cuts away to Odin's theme, a reminder of the house cat who died in my youth.`
+                        ],
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -1223,11 +1231,6 @@ module.exports = {
             taskName: `afterword annotations`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `sort out past and present tense`,
@@ -1259,6 +1262,11 @@ module.exports = {
         },
         {
             taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
         }
