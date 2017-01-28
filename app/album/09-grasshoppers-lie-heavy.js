@@ -160,12 +160,13 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
+                        // TODO: Be more articulate?
                         description: [
                             `Just as`,
                             {
                                 italic: `The Grasshopper Lies Heavy`
                             },
-                            `offers its fictional readers a reality that's vastly different from their own, this song is a story in miniature with a vastly different ending from the album as a whole. Like Dick, I wanted to explore possibilities for meta-reference, and did so by hiding lyrical portals to all the other songs on the album.`
+                            `offers its fictional readers a vastly different reality from their own, this song is a story in miniature that offers a vastly different ending from the album as a whole. Like Dick, I wanted to explore possibilities for meta-reference, and did so by hiding lyrical portals to all the other songs on the album.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -230,12 +231,12 @@ module.exports = {
                     annotation: {
                         // TODO: Simon and Garfunkel.
                         description: [
-                            `Musically, I tried to channel`,
+                            `I wanted the music to sound sentimental with some frayed edges, so channelling`,
                             {
                                 anchor: `Simon and Garfunkel`,
                                 wiki: `Simon_%26_Garfunkel`
                             },
-                            `in both form and harmony.`
+                            `seemed to fit the bill.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -784,7 +785,7 @@ module.exports = {
                     {
                         anchor: `lidless Vaseline sits.`,
                         annotation: {
-                            description: `I kept a jar of Vaseline by my bedside, which made masturbation quick and easy. Its last usage was obviously quite recent.`,
+                            description: `I kept a jar of Vaseline by my bedside, which I would use to masturbate. Its last usage was obviously quite recent.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
@@ -812,6 +813,24 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `The highlight of Nirvana's`,
+                            {
+                                italic: {
+                                    anchor: `Nevermind`,
+                                    wiki: `Nevermind`
+                                }
+                            },
+                            `for me is when Kurt Cobain jumps up an octave in the third verse of "Lounge Act." I always had an urge to recreate this effect, but it was at odds with my tendency to write melodies that span my whole vocal range. When I realised that the chorus melody here stays within a single register, I transposed the song accordingly to make it work.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
@@ -1150,7 +1169,6 @@ module.exports = {
             },
             {
                 time: 233,
-                // TODO: The little death. (orgasm) The Odin theme.
                 lyric: [
                     `and pulls you up`,
                     {
@@ -1166,16 +1184,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        // TODO: Odin theme.
-                        description: ``,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 sectionClass: CODA,
                 subsequent: true
             }
@@ -1189,6 +1197,18 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        // TODO: Odin theme.
+                        // TODO: The little death. (orgasm) The Odin theme.
+
+                        description: ``,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: INSTRUMENTAL
             }
         ],

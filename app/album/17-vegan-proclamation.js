@@ -564,12 +564,12 @@ module.exports = {
                         anchor: `airholes,`,
                         annotation: {
                             description: [
-                                `In Nirvana's`,
+                                `In Nirvana's "Sappy,"`,
                                 {
-                                    anchor: `"Sappy,"`,
-                                    wiki: `Sappy`
+                                    anchor: `Kurt Cobain`,
+                                    wiki: `Kurt_Cobain`
                                 },
-                                `Kurt Cobain compares the victim of an emotionally abusive relationship to a small creature kept in a jar with breathing holes punched in its lid. I liked the imagery, so I borrowed it shamelessly here.`
+                                `compares the victim of an emotionally abusive relationship to a small creature kept in a jar with breathing holes punched in its lid. I liked the imagery, so I borrowed it shamelessly here.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true,
