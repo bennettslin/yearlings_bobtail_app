@@ -14,23 +14,36 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett and Miriam are having sex in a car overlooking a cliff. Miriam is on top.`,
             characters: {
-
+                bennett: 1,
+                miriam: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 10,
+            description: `Miriam is now giving Bennett a blowjob. Meanwhile, she is thinking a thought bubble in which they are now married. He is drunk, and their children are autistic.`,
             characters: {
-
+                bennett: 1,
+                miriam: 1,
+                drawings: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 17,
+            description: `Meanwhile, Bennett imagines himself dying in bed next to a record player, with Miriam in the doorway, holding a crate of vinyl. In his next thought bubble, she is lounging by a poolside between two good-looking guys.`,
             characters: {
-
+                bennett: 1,
+                miriam: 1,
+                drawings: 2
+            }
+        },
+        {
+            verseIndex: 22,
+            description: `They drive away. Bennett, with his seat back, hesitantly drops the used condom on the ground, looking at it wistfully. Miriam is looking away, backing up the car.`,
+            characters: {
+                bennett: 1,
+                miriam: 1
             }
         }
     ],
@@ -950,11 +963,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -979,6 +987,11 @@ module.exports = {
         },
         {
             taskName: `separate annotations into dot categories`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `rough illustration synopses`,
             workedHours: 2,
             neededHours: 2
         }
