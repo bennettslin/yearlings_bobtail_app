@@ -60,15 +60,16 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `A`,
+                            `This also begins a three-song medley à la`,
                             {
-                                anchor: `Shepard tone`,
-                                wiki: `Shepard_tone`
+                                italic: {
+                                    anchor: `Abbey Road`,
+                                    wiki: `Abbey_Road`
+                                }
                             },
-                            `is an auditory illusion in which a single tone descends continuously in pitch while staying within a fixed register. It seemed an apt metaphor for my breakup with Miriam, which left me utterly deflated as I was forced to confront my genetic inferiority complex. This song also uses doublespeaker rhyme, though I've since forgetten which voice represents whose perspective. I suppose that's the point: we both knew equally well that the relationship was doomed.`
+                            `by the Beatles, which provides a nice push towards the album's finish.`
                         ],
                         dotKeys: {
-                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -85,6 +86,23 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `A`,
+                            {
+                                anchor: `Shepard tone`,
+                                wiki: `Shepard_tone`
+                            },
+                            `is an auditory illusion in which a single tone descends continuously in pitch while staying within a fixed register. It seemed an apt metaphor for my breakup with Miriam, which left me utterly deflated as I was forced to confront my genetic inferiority complex.`
+                        ],
+                        dotKeys: {
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: INSTRUMENTAL
             }
         ],
@@ -260,6 +278,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `This song also uses doublespeaker rhyme, though I've since forgetten which voice represents whose perspective. I suppose that's the point: we both knew equally well that the relationship was doomed.`,
+                        dotKeys: {
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],

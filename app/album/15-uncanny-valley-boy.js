@@ -172,16 +172,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: [
-                            `I originally began writing this song to describe a nightmare I had, but abandoned it after I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents. This also begins a three-song medley à la`,
-                            {
-                                italic: {
-                                    anchor: `Abbey Road`,
-                                    wiki: `Abbey_Road`
-                                }
-                            },
-                            `by the Beatles, which provides a nice push towards the album's finish.`
-                        ],
+                        description: `I originally began writing this music to describe a nightmare I had, but abandoned it after I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                             [SONGWRITING]: true
@@ -1081,6 +1072,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `TODO: Talk about recording Rama to Mara.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 topSideStanza: [
                     {
                         lyric: {

@@ -229,7 +229,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        // TODO: Simon and Garfunkel.
+                        // TODO: Be more articulate.
                         description: [
                             `I wanted the music to sound sentimental with some frayed edges, so channelling`,
                             {
