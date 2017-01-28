@@ -1210,7 +1210,7 @@ module.exports = {
                                     wiki: `La_petite_mort`
                                 }
                             },
-                            `which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. As such, even as the chords continue to rise, the lead guitar plays a descending riff, and the entire song cuts away to Odin's theme, a reminder of the house cat who died in my youth.`
+                            `which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. As such, even as the chords continue to rise, the lead guitar plays a descending riff, before everything cuts away to Odin's theme, a reminder of the house cat who died in my youth.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
