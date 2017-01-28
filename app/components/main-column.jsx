@@ -23,7 +23,7 @@ const MainColumnView = ({
     // From props.
     showFullPopup,
 
-    dotsTipsOutsideMenu,
+    scoresTipsOutsideMenu,
     isPhone,
     deviceIndex,
     windowWidth,
@@ -74,10 +74,10 @@ const MainColumnView = ({
     annotationPopupChild,
     dotsPopupChild,
     overviewPopupChild,
-    dotsTipsSectionChild
+    scoresTipsSectionChild
 
 }) => {
-    const dotsTipsSectionProps = {
+    const scoresTipsSectionProps = {
             selectedTipsIndex,
             selectedDotsIndex,
             onTipsClick,
@@ -86,8 +86,8 @@ const MainColumnView = ({
         menuFieldProps = {
             deviceIndex,
             windowWidth,
-            dotsTipsSectionProps,
-            dotsTipsOutsideMenu,
+            scoresTipsSectionProps,
+            scoresTipsOutsideMenu,
 
             isPhone,
             title,
@@ -112,7 +112,7 @@ const MainColumnView = ({
             onPlayerEnd,
             onTimeUpdated,
 
-            dotsTipsSectionChild
+            scoresTipsSectionChild
         },
         overviewToggleSectionProps = {
             selectedOverviewIndex,

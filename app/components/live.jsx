@@ -1,13 +1,13 @@
 import React from 'react'
 import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
-import DotsTipsSection from './dots-tips-section'
+import ScoresTipsSection from './scores-tips-section'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
 import DotsPopup from './dots/dots-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getdotsTipsOutsideMenu } from 'helpers/responsive-helper'
+import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getScoresTipsOutsideMenu } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -25,7 +25,7 @@ const Live = (props) => {
         showSingleBookColumn = getShowSingleBookColumn(props),
         shrinkNavIcon = getShrinkNavIcon(props),
         isDotsShown = selectedDotsIndex === 1,
-        dotsTipsOutsideMenu = getdotsTipsOutsideMenu(props)
+        scoresTipsOutsideMenu = getScoresTipsOutsideMenu(props)
 
     return (
         <LiveView {...props}
@@ -41,7 +41,7 @@ const Live = (props) => {
             showSingleBookColumn={showSingleBookColumn}
             shrinkNavIcon={shrinkNavIcon}
             isDotsShown={isDotsShown}
-            dotsTipsOutsideMenu={dotsTipsOutsideMenu}
+            scoresTipsOutsideMenu={scoresTipsOutsideMenu}
         />
     )
 }
@@ -136,7 +136,7 @@ const LiveView = ({
     showSingleBookColumn,
     shrinkNavIcon,
     isDotsShown,
-    dotsTipsOutsideMenu
+    scoresTipsOutsideMenu
 
 }) => {
 
@@ -156,7 +156,7 @@ const LiveView = ({
         mainColumnProps = {
             showFullPopup,
 
-            dotsTipsOutsideMenu,
+            scoresTipsOutsideMenu,
             isPhone,
             deviceIndex,
             windowWidth,
@@ -241,7 +241,7 @@ const LiveView = ({
             onLyricSectionScroll,
             onVerseBarClick
         },
-        dotsTipsSectionProps = {
+        scoresTipsSectionProps = {
             selectedTipsIndex,
             selectedDotsIndex,
             onTipsClick,
@@ -313,13 +313,13 @@ const LiveView = ({
                         inOverviewSubfield={true}
                     />
                 }
-                dotsTipsSectionChild={ <DotsTipsSection {...dotsTipsSectionProps} /> }
+                scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
             />
             <LyricColumn {...lyricColumnProps} />
 
-            {dotsTipsOutsideMenu &&
-                <div className="dots-tips-custom-subfield">
-                    <DotsTipsSection {...dotsTipsSectionProps} />
+            {scoresTipsOutsideMenu &&
+                <div className="scores-tips-custom-subfield">
+                    <ScoresTipsSection {...scoresTipsSectionProps} />
                 </div>
             }
             <div className="full-popup-subfield">

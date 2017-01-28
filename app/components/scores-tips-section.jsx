@@ -5,15 +5,15 @@ import { TIPS_OPTIONS } from 'helpers/constants'
  * CONTAINER *
  *************/
 
-const DotsTipsSection = (props) => (
-    <DotsTipsSectionView {...props} />
+const ScoresTipsSection = (props) => (
+    <ScoresTipsSectionView {...props} />
 )
 
 /****************
  * PRESENTATION *
  ****************/
 
-const DotsTipsSectionView = ({
+const ScoresTipsSectionView = ({
 
     // From props.
     selectedTipsIndex,
@@ -24,9 +24,9 @@ const DotsTipsSectionView = ({
 }) => {
 
     return (
-        <div className="section dots-tips-section">
+        <div className="section scores-tips-section">
             <a
-                className="dots-tips-button dots-button enabled"
+                className="scores-tips-button dots-button enabled"
                 onClick={e => onDotsExpandClick(e)}
             >
                 <div className="large button-icon dots-icon">
@@ -34,7 +34,7 @@ const DotsTipsSectionView = ({
                 </div>
             </a>
             <a
-                className="dots-tips-button tips-button enabled"
+                className="scores-tips-button tips-button enabled"
                 onClick={e => onTipsClick(e)}
             >
                 <div className="large button-icon tips-icon">
@@ -45,4 +45,4 @@ const DotsTipsSectionView = ({
     )
 }
 
-export default DotsTipsSection
+export default ScoresTipsSection

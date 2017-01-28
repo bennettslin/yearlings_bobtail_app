@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Method to calculate characters left to illustrate.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Move dots above overview, scores into dots tips section, rename`,
         workedHours: 0,
         neededHours: 5
@@ -13,6 +8,11 @@ module.exports = [
         taskName: `Score popup and stored index`,
         workedHours: 0,
         neededHours: 8
+    },
+    {
+        taskName: `Method to calculate characters left to illustrate.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `When song finishes playing, proceed to next more smoothly.`,

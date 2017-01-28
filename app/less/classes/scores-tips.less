@@ -1,0 +1,129 @@
+@scores-tips-padding: @app-thin-margin;
+@scores-tips-margin: 10px;
+
+@scores-tips-width: 2 * @app-large-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
+@scores-tips-tablet-width: 2 * @app-tablet-large-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
+@scores-tips-mini-width: 2 * @app-mini-large-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
+@scores-tips-phone-width: 2 * @app-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
+
+.scores-tips-menu-subfield {
+    min-width: @scores-tips-width;
+}
+
+.tablet-width {
+    .scores-tips-menu-subfield {
+        min-width: @scores-tips-tablet-width;
+    }
+}
+
+.mini-width {
+    .scores-tips-menu-subfield {
+        min-width: @scores-tips-mini-width;
+    }
+}
+
+/****/
+
+.scores-tips-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: @scores-tips-padding;
+
+    background-color: #efd;
+}
+
+/****/
+
+.scores-tips-menu-subfield {
+    .scores-tips-section {
+        .scores-tips-button:first-child {
+            margin-right: @scores-tips-margin;
+        }
+    }
+}
+
+.scores-tips-custom-subfield {
+    z-index: @scores-tips-z-index;
+    position: absolute;
+    bottom: @nav-height;
+    height: @scores-tips-width;
+
+    .scores-tips-section {
+        flex-direction: column;
+
+        .scores-tips-button:first-child {
+            margin-bottom: @scores-tips-margin;
+        }
+    }
+}
+
+.is-mobile {
+
+    .scores-tips-custom-subfield {
+        right: 0;
+        .transition(bottom 0.2s ease);
+        bottom: @collapsed-lyric-section-height;
+
+        .scores-tips-section {
+            position: absolute;
+            .transition(right 0.2s ease);
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    .is-logue, .heightless-lyric {
+        .scores-tips-custom-subfield {
+            bottom: 0;
+        }
+    }
+
+    &.tablet-width {
+        .is-song {
+            &.lyric-expanded, &.overview-shown, &.annotation-shown {
+                .scores-tips-section {
+                    right: -@scores-tips-tablet-width;
+                }
+            }
+        }
+    }
+
+    &.mini-width {
+        .is-song {
+            &.lyric-expanded, &.overview-shown, &.annotation-shown {
+                .scores-tips-section {
+                    right: -@scores-tips-mini-width;
+                }
+            }
+        }
+    }
+
+    &.phone-width {
+        .is-song {
+            &.lyric-expanded, &.overview-shown, &.annotation-shown {
+                .scores-tips-section {
+                    right: -@scores-tips-phone-width;
+                }
+            }
+        }
+    }
+}
+
+.is-logue {
+    .dots-button {
+        animation: tooltipShrink 0.2s;
+        transform: scale(0);
+    }
+}
+
+.is-song {
+    .dots-button {
+        animation: tooltipGrow 0.2s;
+        transform: scale(1);
+    }
+}
+
+.dots-icon, .tips-icon {
+    background-color: #dbb;
+}

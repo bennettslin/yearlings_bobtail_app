@@ -23,7 +23,7 @@ const MenuField = (props) => {
 const MenuFieldView = ({
 
     // From props.
-    dotsTipsOutsideMenu,
+    scoresTipsOutsideMenu,
 
     isPhone,
     title,
@@ -48,7 +48,7 @@ const MenuFieldView = ({
     onPlayerEnd,
     onTimeUpdated,
 
-    dotsTipsSectionChild,
+    scoresTipsSectionChild,
 
     // From controller.
     titleInAudio
@@ -100,9 +100,9 @@ const MenuFieldView = ({
             <div className="menu-subfield audio-menu-subfield">
                 <AudioSection {...audioSectionProps} />
             </div>
-            {!dotsTipsOutsideMenu &&
-                <div className="menu-subfield dots-tips-menu-subfield">
-                    {dotsTipsSectionChild}
+            {!scoresTipsOutsideMenu &&
+                <div className="menu-subfield scores-tips-menu-subfield">
+                    {scoresTipsSectionChild}
                 </div>
             }
         </div>
