@@ -489,7 +489,7 @@ module.exports = {
                                     wiki: `Ghost_in_the_Machine_(album)`
                                 }
                             },
-                            `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums here are an amateurish imitation of Stewart Copeland's performance in "Secret Journey," in particular the silent kick on the downbeat. Such a simple idea, but it does wonders for letting the music breathe before submerging again in the chorus.`
+                            `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums here are an amateurish imitation of Stewart Copeland's performance in "Secret Journey," in particular the silent kick on the downbeat. Such a simple idea, but it does wonders for letting the music breathe before being submerged again in the chorus.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
@@ -1447,7 +1447,7 @@ module.exports = {
                                     wiki: `Tomorrow_Never_Knows`
                                 }
                             },
-                            `includes a tape loop that imitates a seagull's cry. I tried to recreate this sound by pinching off the air stream coming through a recorder's window, but it wasn't exactly what I was going for. Kept in the background, however, it contributes nicely to the overall atmosphere.`
+                            `includes a tape loop that imitates a seagull's cry. I tried to recreate this sound by pinching off the air stream coming through a recorder's window, but the result wasn't exactly what I wanted. Kept in the background, however, it contributes nicely to the overall atmosphere.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
