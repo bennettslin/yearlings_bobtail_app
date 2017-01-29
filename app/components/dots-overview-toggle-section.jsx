@@ -1,4 +1,5 @@
 import React from 'react'
+import DotsRow from './dots/dots-row'
 
 /*************
  * CONTAINER *
@@ -25,6 +26,7 @@ const DotsOverviewToggleSectionView = ({
 }) => (
     <div className="section dots-overview-toggle-section">
         {overviewButtonChild}
+        <DotsRow />
     </div>
 )
 
