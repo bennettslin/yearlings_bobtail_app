@@ -97,9 +97,12 @@ module.exports = {
                         annotation: {
                             description: [
                                 {
-                                    italic: `Finnegans Wake`
+                                    italic: {
+                                        anchor: `Finnegans Wake,`,
+                                        wiki: `Finnegans_Wake`
+                                    }
                                 },
-                                `opens with the line "riverrun, past Eve and Adam's," so I figured I would start there as well. I was the experienced Robitussin user of the group, having read of its narcotic effects in Jim Carroll's`,
+                                `James Joyce's ambitious final novel, opens with the line "riverrun, past Eve and Adam's," so I figured I would start there as well. I was the experienced Robitussin user of the group, having read of its narcotic effects in Jim Carroll's`,
                                 {
                                     italic: {
                                         anchor: `The Basketball Diaries`,
@@ -239,23 +242,18 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `While reading`,
+                            `Though I never got past the first fifty pages of`,
                             {
                                 italic: {
                                     anchor: `Finnegans Wake,`,
                                     wiki: `Finnegans_Wake`
                                 }
                             },
-                            `I was impressed by how Joyce uses literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal. The Police's`,
-                            {
-                                italic: {
-                                    anchor: `Ghost in the Machine`,
-                                    wiki: `Ghost_in_the_Machine_(album)`
-                                }
-                            },
-                            `was also my soundtrack of choice on Robitussin, so I borrowed a bit of its style and atmosphere.`
+                            `I was impressed by Joyce's use of literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal.`
                         ],
                         dotKeys: {
+                            [BACKSTORY]: true,
+                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -480,6 +478,26 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `The Police's`,
+                            {
+                                italic: {
+                                    anchor: `Ghost in the Machine`,
+                                    wiki: `Ghost_in_the_Machine_(album)`
+                                }
+                            },
+                            `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums here are an amateurish imitation of Stewart Copeland's performance in "Secret Journey," in particular the silent kick on the downbeat. Such a simple idea, but it does wonders for letting the music breathe before submerging again in the chorus.`
+                        ],
+                        dotKeys: {
+                            [BACKSTORY]: true,
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: PRECHORUS
             }
         ],
@@ -769,6 +787,30 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `Sita introduced me to`,
+                            {
+                                anchor: `Bollywood`,
+                                wiki: `Bollywood`
+                            },
+                            `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of the one that was our favourite,`,
+                            {
+                                italic: {
+                                    anchor: `Hum Aapke Hain Koun…!`,
+                                    wiki: `Hum_Aapke_Hain_Koun..!`
+                                }
+                            }
+                        ],
+                        dotKeys: {
+                            [BACKSTORY]: true,
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -1043,6 +1085,26 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `While I treated every past Robitussin trip as a mystical experience, I would also while away the hours by playing video games on my`,
+                            {
+                                anchor: `NES console.`,
+                                wiki: `Nintendo_Entertainment_System`
+                            },
+                            `8-bit sounds thus took on a spiritual significance for me that others might find in, let's say, a Tibetan`,
+                            {
+                                anchor: `singing bowl.`,
+                                wiki: `Singing_bowl`
+                            }
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: PRECHORUS,
                 subsequent: true
             }
@@ -1374,6 +1436,24 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `For a song about recreational drug use, I naturally turned to the Beatles, whose`,
+                            {
+                                italic: {
+                                    anchor: `"Tomorrow Never Knows"`,
+                                    wiki: `Tomorrow_Never_Knows`
+                                }
+                            },
+                            `includes a tape loop that imitates a seagull's cry. I tried to recreate this sound by pinching off the air stream coming through a recorder's window, but it wasn't exactly what I was going for. Kept in the background, however, it contributes nicely to the overall atmosphere.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: PRECHORUS
             }
         ],
@@ -1514,11 +1594,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -1550,6 +1625,11 @@ module.exports = {
             taskName: `rough illustration synopses`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }

@@ -227,7 +227,7 @@ module.exports = {
                                 anchor: `BART`,
                                 wiki: `Bay_Area_Rapid_Transit`
                             },
-                            `trains braking in a subway tunnel underneath the sidewalk, were made by overblowing into recorders, one soprano and one tenor.`
+                            `trains braking in a subway tunnel underneath the sidewalk, were made by squeaking recorders, one soprano and one tenor.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
