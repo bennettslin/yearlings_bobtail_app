@@ -36,12 +36,14 @@
     // Ensure toggle button is above its popup container.
     z-index: @overview-toggle-z-index;
 
+    display: flex;
+    flex-direction: column;
+
     background-color: rgba(190, 210, 225, 0.5);
 }
 
 // Animated container for toggle button.
 .overview-toggle-button-container {
-    position: absolute;
     width: 100%;
     height: @overview-toggle-height;
 
@@ -64,6 +66,10 @@
             margin-left: ~"calc(-100% - @{dots-overview-subfield-margin})"
         }
     }
+}
+
+.dots-row {
+    flex-grow: 1;
 }
 
 // Responsive rules.
@@ -104,6 +110,7 @@
 
     .dots-overview-toggle-section {
         width: @overview-toggle-tablet-width;
+        flex-direction: column-reverse;
     }
 
     .overview-toggle-button-container {

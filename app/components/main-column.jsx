@@ -3,7 +3,7 @@ import MenuField from './menu-field'
 import NavSection from './nav/nav-section'
 import AudioBanner from './audio/audio-banner'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
-import { getScoresTipsOutsideMenu } from 'helpers/responsive-helper'
+import { getIsDesktop, getScoresTipsOutsideMenu } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -11,10 +11,12 @@ import { getScoresTipsOutsideMenu } from 'helpers/responsive-helper'
 
 const MainColumn = (props) => {
 
-    const scoresTipsOutsideMenu = getScoresTipsOutsideMenu(props)
+    const scoresTipsOutsideMenu = getScoresTipsOutsideMenu(props),
+        isDesktop = getIsDesktop(props.deviceIndex)
 
     return (
         <MainColumnView {...props}
+            isDesktop={isDesktop}
             scoresTipsOutsideMenu={scoresTipsOutsideMenu}
         />
     )
@@ -77,6 +79,7 @@ const MainColumnView = ({
     scoresTipsSectionChild,
 
     // From controller.
+    isDesktop,
     scoresTipsOutsideMenu
 
 }) => {
@@ -151,7 +154,12 @@ const MainColumnView = ({
                 }
 
                 <div className="subfield dots-overview-subfield">
-                    <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps} />
+                    <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
+                        scoresTipsSectionChild={
+                            isDesktop && scoresTipsOutsideMenu &&
+                                scoresTipsSectionChild
+                        }
+                    />
                     <div className="overview-popup-container">
                         {overviewPopupChild}
                     </div>
@@ -166,11 +174,7 @@ const MainColumnView = ({
                     </div>
                 }
 
-                {scoresTipsOutsideMenu &&
-                    <div className="scores-tips-custom-subfield">
-                        {scoresTipsSectionChild}
-                    </div>
-                }
+                {!isDesktop && scoresTipsOutsideMenu && scoresTipsSectionChild}
 
                 {isHeightlessLyricColumn &&
                     <div className="lyric-button-block expand-button-block in-main">

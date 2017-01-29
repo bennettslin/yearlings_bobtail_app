@@ -19,7 +19,8 @@ const DotsOverviewToggleSection = (props) => {
 const DotsOverviewToggleSectionView = ({
 
     // From props.
-    overviewButtonChild
+    overviewButtonChild,
+    scoresTipsSectionChild
 
     // From controller.
 
@@ -27,6 +28,7 @@ const DotsOverviewToggleSectionView = ({
     <div className="section dots-overview-toggle-section">
         {overviewButtonChild}
         <DotsRow />
+        {scoresTipsSectionChild}
     </div>
 )
 
