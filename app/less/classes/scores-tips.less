@@ -54,7 +54,7 @@
     }
 
     &.tablet-width {
-        .lyric-expanded, .overview-shown, .annotation-shown, .is-logue {
+        .lyric-expanded, .overview-shown, .annotation-shown {
             .scores-tips-section {
                 right: -@scores-tips-tablet-width;
             }
@@ -66,7 +66,7 @@
     }
 
     &.mini-width {
-        .lyric-expanded, .overview-shown, .annotation-shown, .is-logue {
+        .lyric-expanded, .overview-shown, .annotation-shown {
             .scores-tips-section {
                 right: -@scores-tips-mini-width;
             }
@@ -78,7 +78,7 @@
     }
 
     &.phone-width {
-        .lyric-expanded, .overview-shown, .annotation-shown, .is-logue {
+        .lyric-expanded, .overview-shown, .annotation-shown {
             .scores-tips-section {
                 right: -@scores-tips-phone-width;
             }
@@ -86,6 +86,20 @@
     }
 }
 
-.dots-icon, .tips-icon {
+.is-logue {
+    .scores-tips-button {
+        animation: tooltipShrink 0.2s;
+        transform: scale(0);
+    }
+}
+
+.is-song {
+    .scores-tips-button {
+        animation: tooltipGrow 0.2s;
+        transform: scale(1);
+    }
+}
+
+.scores-icon, .tips-icon {
     background-color: #dbb;
 }

@@ -234,7 +234,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `I wanted the music to sound sentimental with a few rough patches, so channelling`,
+                            `I wanted the music to sound sentimental with a few rough edges, so channelling`,
                             {
                                 anchor: `Simon and Garfunkel`,
                                 wiki: `Simon_%26_Garfunkel`
@@ -827,7 +827,7 @@ module.exports = {
                                     wiki: `Nevermind`
                                 }
                             },
-                            `for me is when Kurt Cobain jumps up an octave in the third verse of "Lounge Act." I always had an urge to recreate this effect, but it was at odds with my tendency to write melodies that span my whole vocal range. When I realised that the chorus melody here stays within a single register, I transposed the song accordingly to make it work.`
+                            `for me is when Kurt Cobain jumps an octave in the third verse of "Lounge Act." I had an urge to recreate this effect, but it was always at odds with my tendency to write melodies that span my whole vocal range. When I realised that the chorus melody here stays within a single register, I transposed the song accordingly to make it work.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true

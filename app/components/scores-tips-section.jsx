@@ -17,20 +17,18 @@ const ScoresTipsSectionView = ({
 
     // From props.
     selectedTipsIndex,
-    selectedDotsIndex,
-    onTipsClick,
-    onDotsExpandClick
+    onTipsClick
 
 }) => {
 
     return (
         <div className="section scores-tips-section">
             <a
-                className="scores-tips-button dots-button enabled"
-                onClick={e => onDotsExpandClick(e)}
+                className="scores-tips-button scores-button enabled"
+                onClick={e => console.error(e)}
             >
-                <div className="large button-icon dots-icon">
-                    {selectedDotsIndex}
+                <div className="large button-icon scores-icon">
+                    {'hi'}
                 </div>
             </a>
             <a

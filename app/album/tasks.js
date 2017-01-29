@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Dynamic sizing of scores tips section`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Move dots into dots overview toggle section`,
         workedHours: 0,
         neededHours: 3

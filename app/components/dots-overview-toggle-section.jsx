@@ -20,14 +20,14 @@ const DotsOverviewToggleSectionView = ({
 
     // From props.
     overviewButtonChild,
-    scoresTipsSectionChild
+    scoresTipsSectionChild,
 
     // From controller.
 
-}) => (
+...other }) => (
     <div className="section dots-overview-toggle-section">
         {overviewButtonChild}
-        <DotsRow />
+        <DotsRow {...other} />
         {scoresTipsSectionChild}
     </div>
 )

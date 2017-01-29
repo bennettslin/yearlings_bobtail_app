@@ -18,17 +18,20 @@ const DotsToggle = (props) => {
 const DotsToggleView = ({
 
     // From props.
+    selectedDotsIndex,
     onDotsExpandClick
 
     // From controller.
 
 }) => (
-    <div className="dots-toggle-button-container">
+    <div className="dots-toggle-button-block">
         <a
             className="dots-toggle-button enabled"
             onClick={e => onDotsExpandClick(e)}
         >
-            {'hi'}
+            <div className="large button-icon dots-toggle-icon">
+                {selectedDotsIndex}
+            </div>
         </a>
     </div>
 )

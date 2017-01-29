@@ -630,7 +630,7 @@ module.exports = {
                             {
                                 italic: `Bobtail Method.`
                             },
-                            `Unfortunately, this generated even less interest, and probably only cemented my status as a hobbyist rather than a serious, career-oriented musician.`
+                            `Unfortunately, this generated even less interest, and probably only cemented my status as a hobbyist rather than the kind of serious, career-oriented musician sought after by the indie labels.`
                         ],
                         dotKeys: {
                             [AFTERWORD]: true,

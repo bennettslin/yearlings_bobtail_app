@@ -48,6 +48,7 @@ const MainColumnView = ({
     shrinkNavIcon,
     isLyricExpanded,
 
+    selectedDotsIndex,
     selectedNavIndex,
     selectedBookColumnIndex,
     selectedSongTitle,
@@ -68,6 +69,7 @@ const MainColumnView = ({
     onNavExpandClick,
     onBookColumnClick,
     onLyricExpandClick,
+    onDotsExpandClick,
     onTimeChange,
     onPlayerEnd,
     onTimeUpdated,
@@ -114,6 +116,8 @@ const MainColumnView = ({
             scoresTipsSectionChild
         },
         dotsOverviewToggleSectionProps = {
+            selectedDotsIndex,
+            onDotsExpandClick,
             overviewButtonChild
         },
         audioBannerProps = {

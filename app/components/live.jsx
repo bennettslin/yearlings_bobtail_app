@@ -238,9 +238,7 @@ const LiveView = ({
         },
         scoresTipsSectionProps = {
             selectedTipsIndex,
-            selectedDotsIndex,
-            onTipsClick,
-            onDotsExpandClick
+            onTipsClick
         },
         annotationPopupProps = {
             songs,
