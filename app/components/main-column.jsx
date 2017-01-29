@@ -3,14 +3,20 @@ import MenuField from './menu-field'
 import NavSection from './nav/nav-section'
 import AudioBanner from './audio/audio-banner'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
+import { getScoresTipsOutsideMenu } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
  *************/
 
 const MainColumn = (props) => {
+
+    const scoresTipsOutsideMenu = getScoresTipsOutsideMenu(props)
+
     return (
-        <MainColumnView {...props} />
+        <MainColumnView {...props}
+            scoresTipsOutsideMenu={scoresTipsOutsideMenu}
+        />
     )
 }
 
@@ -23,7 +29,6 @@ const MainColumnView = ({
     // From props.
     showFullPopup,
 
-    scoresTipsOutsideMenu,
     isPhone,
     deviceIndex,
     windowWidth,
@@ -43,10 +48,8 @@ const MainColumnView = ({
 
     selectedNavIndex,
     selectedBookColumnIndex,
-    selectedDotsIndex,
     selectedSongTitle,
     selectedSongIndex,
-    selectedTipsIndex,
     selectedTimePlayed,
     updatedTimePlayed,
     selectedAudioOptionIndex,
@@ -60,8 +63,6 @@ const MainColumnView = ({
     onSongClick,
     onVerseClick,
     onAudioOptionClick,
-    onTipsClick,
-    onDotsExpandClick,
     onNavExpandClick,
     onBookColumnClick,
     onLyricExpandClick,
@@ -73,19 +74,15 @@ const MainColumnView = ({
     dotsPopupChild,
     overviewPopupChild,
     overviewButtonChild,
-    scoresTipsSectionChild
+    scoresTipsSectionChild,
+
+    // From controller.
+    scoresTipsOutsideMenu
 
 }) => {
-    const scoresTipsSectionProps = {
-            selectedTipsIndex,
-            selectedDotsIndex,
-            onTipsClick,
-            onDotsExpandClick
-        },
-        menuFieldProps = {
+    const menuFieldProps = {
             deviceIndex,
             windowWidth,
-            scoresTipsSectionProps,
             scoresTipsOutsideMenu,
 
             isPhone,
@@ -166,6 +163,12 @@ const MainColumnView = ({
                     </div> :
                     <div className="nav-custom-subfield">
                         <NavSection {...navSectionProps} />
+                    </div>
+                }
+
+                {scoresTipsOutsideMenu &&
+                    <div className="scores-tips-custom-subfield">
+                        {scoresTipsSectionChild}
                     </div>
                 }
 

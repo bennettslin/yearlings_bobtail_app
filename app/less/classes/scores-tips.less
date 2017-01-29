@@ -46,7 +46,8 @@
 .scores-tips-custom-subfield {
     z-index: @scores-tips-z-index;
     position: absolute;
-    bottom: @nav-height;
+    // bottom: @nav-height;
+    bottom: 0;
     height: @scores-tips-width;
 
     .scores-tips-section {
@@ -63,7 +64,7 @@
     .scores-tips-custom-subfield {
         right: 0;
         .transition(bottom 0.2s ease);
-        bottom: @collapsed-lyric-section-height;
+        // bottom: @collapsed-lyric-section-height;
 
         .scores-tips-section {
             position: absolute;
@@ -73,56 +74,51 @@
         }
     }
 
-    .is-logue, .heightless-lyric {
-        .scores-tips-custom-subfield {
-            bottom: 0;
-        }
-    }
+    // .is-logue, .heightless-lyric {
+    //     .scores-tips-custom-subfield {
+    //         bottom: -@collapsed-lyric-section-height;
+    //     }
+    // }
 
     &.tablet-width {
-        .is-song {
-            &.lyric-expanded, &.overview-shown, &.annotation-shown {
+
+            .lyric-expanded, .overview-shown, .annotation-shown, .is-logue {
                 .scores-tips-section {
                     right: -@scores-tips-tablet-width;
                 }
             }
-        }
     }
 
     &.mini-width {
-        .is-song {
-            &.lyric-expanded, &.overview-shown, &.annotation-shown {
+            .lyric-expanded, .overview-shown, .annotation-shown, .is-logue {
                 .scores-tips-section {
                     right: -@scores-tips-mini-width;
                 }
             }
-        }
     }
 
     &.phone-width {
-        .is-song {
-            &.lyric-expanded, &.overview-shown, &.annotation-shown {
+            .lyric-expanded, .overview-shown, .annotation-shown, .is-logue {
                 .scores-tips-section {
                     right: -@scores-tips-phone-width;
                 }
             }
-        }
     }
 }
 
-.is-logue {
-    .dots-button {
-        animation: tooltipShrink 0.2s;
-        transform: scale(0);
-    }
-}
-
-.is-song {
-    .dots-button {
-        animation: tooltipGrow 0.2s;
-        transform: scale(1);
-    }
-}
+// .is-logue {
+//     .dots-button {
+//         animation: tooltipShrink 0.2s;
+//         transform: scale(0);
+//     }
+// }
+//
+// .is-song {
+//     .dots-button {
+//         animation: tooltipGrow 0.2s;
+//         transform: scale(1);
+//     }
+// }
 
 .dots-icon, .tips-icon {
     background-color: #dbb;

@@ -8,7 +8,7 @@ import AnnotationPopup from './annotation/annotation-popup'
 import DotsPopup from './dots/dots-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getScoresTipsOutsideMenu } from 'helpers/responsive-helper'
+import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -25,8 +25,7 @@ const Live = (props) => {
         isHeightlessLyricColumn = getIsHeightlessLyricColumn(props),
         showSingleBookColumn = getShowSingleBookColumn(props),
         shrinkNavIcon = getShrinkNavIcon(props),
-        isDotsShown = selectedDotsIndex === 1,
-        scoresTipsOutsideMenu = getScoresTipsOutsideMenu(props)
+        isDotsShown = selectedDotsIndex === 1
 
     return (
         <LiveView {...props}
@@ -42,7 +41,6 @@ const Live = (props) => {
             showSingleBookColumn={showSingleBookColumn}
             shrinkNavIcon={shrinkNavIcon}
             isDotsShown={isDotsShown}
-            scoresTipsOutsideMenu={scoresTipsOutsideMenu}
         />
     )
 }
@@ -136,8 +134,7 @@ const LiveView = ({
     isHeightlessLyricColumn,
     showSingleBookColumn,
     shrinkNavIcon,
-    isDotsShown,
-    scoresTipsOutsideMenu
+    isDotsShown
 
 }) => {
 
@@ -157,7 +154,6 @@ const LiveView = ({
         mainColumnProps = {
             showFullPopup,
 
-            scoresTipsOutsideMenu,
             isPhone,
             deviceIndex,
             windowWidth,
@@ -322,11 +318,6 @@ const LiveView = ({
             />
             <LyricColumn {...lyricColumnProps} />
 
-            {scoresTipsOutsideMenu &&
-                <div className="scores-tips-custom-subfield">
-                    <ScoresTipsSection {...scoresTipsSectionProps} />
-                </div>
-            }
             <div className="full-popup-subfield">
                 <WikiPopup {...wikiPopupProps} />
             </div>
