@@ -1,5 +1,5 @@
 import React from 'react'
-import DotsBlock from './dots-block'
+import DotBlock from '../dot/dot-block'
 import { DOTS_SECTION } from 'helpers/constants'
 
 /*************
@@ -39,7 +39,7 @@ const DotsSectionView = ({
     <div
         className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
     >
-        <DotsBlock {...other}
+        <DotBlock {...other}
             inDotsSection={true}
             sectionAccessHighlighted={sectionAccessHighlighted}
         />

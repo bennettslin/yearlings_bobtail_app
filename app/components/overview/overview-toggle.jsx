@@ -5,10 +5,10 @@ import { OVERVIEW_OPTIONS } from 'helpers/constants'
  * CONTAINER *
  *************/
 
-const OverviewButton = (props) => {
+const OverviewToggle = (props) => {
 
     return (
-        <OverviewButtonView {...props} />
+        <OverviewToggleView {...props} />
     )
 }
 
@@ -16,7 +16,7 @@ const OverviewButton = (props) => {
  * PRESENTATION *
  ****************/
 
-const OverviewButtonView = ({
+const OverviewToggleView = ({
 
     // From props.
     selectedOverviewIndex,
@@ -35,4 +35,4 @@ const OverviewButtonView = ({
     </div>
 )
 
-export default OverviewButton
+export default OverviewToggle

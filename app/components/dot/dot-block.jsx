@@ -11,7 +11,7 @@ const defaultProps = {
  * CONTAINER *
  *************/
 
-const DotsBlock = (props) => {
+const DotBlock = (props) => {
 
     const { inDotStanza,
             inDotsSection,
@@ -28,7 +28,7 @@ const DotsBlock = (props) => {
         canDeselect = inDotsSection
 
     return (
-        <DotsBlockView {...props}
+        <DotBlockView {...props}
             isInteractable={isInteractable}
             canDeselect={canDeselect}
             allDotKeys={allDotKeys}
@@ -40,7 +40,7 @@ const DotsBlock = (props) => {
  * PRESENTATION *
  ****************/
 
-const DotsBlockView = ({
+const DotBlockView = ({
 
     // From props.
     onlyShowFirstDotKey,
@@ -60,7 +60,7 @@ const DotsBlockView = ({
     let firstDotKeyShown = false
 
     return (
-        <span className={`dots-block${annotationIndex ? ' annotation-' + annotationIndex : ''}${isInteractable ? ' interactable' : ''}`}>
+        <span className={`dot-block${annotationIndex ? ' annotation-' + annotationIndex : ''}${isInteractable ? ' interactable' : ''}`}>
             {allDotKeys.map((dotKey, index) => {
                 const isSelected = selectedDotKeys[dotKey],
                     isPresent = presentDotKeys[dotKey]
@@ -104,5 +104,5 @@ const DotsBlockView = ({
     )
 }
 
-DotsBlock.defaultProps = defaultProps
-export default DotsBlock
+DotBlock.defaultProps = defaultProps
+export default DotBlock

@@ -1,6 +1,6 @@
 import React from 'react'
 import TextBlock from './text-block'
-import DotsBlock from '../dots/dots-block'
+import DotBlock from '../dot/dot-block'
 import { getIntersection } from 'helpers/dot-helper'
 import { LYRIC_ANNOTATION_ELEMENT } from 'helpers/constants'
 
@@ -97,7 +97,7 @@ const AnchorBlockView = ({
                 </span>
             }
             {((dotKeys && !wikiIndex && !inPortal) || isPortalAnchor) &&
-                <DotsBlock
+                <DotBlock
                     inBackground={isSelected}
                     presentDotKeys={dotKeys}
                 />

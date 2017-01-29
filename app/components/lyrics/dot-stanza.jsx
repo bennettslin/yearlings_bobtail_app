@@ -1,5 +1,5 @@
 import React from 'react'
-import DotsBlock from '../dots/dots-block'
+import DotBlock from '../dot/dot-block'
 import { getIntersection } from 'helpers/dot-helper'
 import { LYRIC_ANNOTATION_ELEMENT } from 'helpers/constants'
 
@@ -50,7 +50,7 @@ const DotStanzaView = ({
 ...other }) => (
 
     <div className={`stanza${accessHighlighted ? ' access-highlighted' : ''}`}>
-        <DotsBlock {...other}
+        <DotBlock {...other}
             onlyShowFirstDotKey={true}
             selectedDotKeys={isSelected ? dotKeys : {}}
             presentDotKeys={dotKeys}

@@ -1,5 +1,5 @@
 import React from 'react'
-import DotsBlock from '../dots/dots-block'
+import DotBlock from '../dot/dot-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
 import { getPortalLinks } from 'helpers/album-view-helper'
@@ -71,7 +71,7 @@ const AnnotationCardView = ({
 
 }) => (
     <div className="annotation-card">
-        <DotsBlock
+        <DotBlock
             inBackground={true}
             presentDotKeys={dotKeys}
         />

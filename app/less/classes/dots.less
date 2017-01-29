@@ -7,7 +7,7 @@
 @dot-interactable-phone-diameter: @app-large-icon-diameter;
 @dot-container-phone-padding: @dot-interactable-mini-diameter / 7;
 
-.dots-block {
+.dot-block {
     .dot-diameter-mixin;
     display: flex;
     width: auto;
@@ -70,7 +70,7 @@
 
 // Undo reverse dot order caused by right column's rtl direction.
 .right {
-    .dots-block {
+    .dot-block {
         flex-direction: row-reverse;
     }
 }
@@ -92,7 +92,7 @@
 .dots-subfield {
     .dot-diameter-mixin(@dot-interactable-diameter, 0);
 
-    .dots-block {
+    .dot-block {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -138,7 +138,7 @@
 .mini-width {
     .dots-subfield {
 
-        .dots-block {
+        .dot-block {
             // Mini will have three dots per row.
             width: 3 * (@dot-interactable-diameter + 2 * @dot-container-padding);
         }
@@ -149,7 +149,7 @@
     .dots-subfield {
         .dot-diameter-mixin(@dot-interactable-phone-diameter, 0);
 
-        .dots-block {
+        .dot-block {
             // Phone will have three dots per row.
             width: 3 * (@dot-interactable-phone-diameter + 2 * @dot-container-phone-padding);
         }
