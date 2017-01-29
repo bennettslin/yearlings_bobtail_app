@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Move dots above overview, scores into scores tips section`,
+        taskName: `Move dots into dots overview toggle section`,
         workedHours: 0,
-        neededHours: 4
+        neededHours: 3
     },
     {
         taskName: `Score popup and stored index`,
@@ -1105,5 +1105,10 @@ module.exports = [
         taskName: `Rename dots tips section to scores tips section.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Place and animate scores tips section.`,
+        workedHours: 5,
+        neededHours: 5
     },
 ]
