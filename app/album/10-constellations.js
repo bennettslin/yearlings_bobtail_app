@@ -642,6 +642,7 @@ module.exports = {
                     {
                         anchor: `questurns Indo Hairapins:`,
                         annotation: {
+                            // TODO: Talk about Indo-European language.
                             description: [
                                 `Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about questions surrounding the`,
                                 {
@@ -1440,7 +1441,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `For a song about recreational drug use, I naturally turned to the Beatles, whose`,
+                            `For a song about recreational drug use, I naturally sought wisdom from the Beatles, whose`,
                             {
                                 italic: {
                                     anchor: `"Tomorrow Never Knows"`,
