@@ -35,11 +35,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Use composition to pass audio banner to audio section, with prologue and epilogue props.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Allow box shadow for popup buttons that hang over edge.`,
         workedHours: 0,
         neededHours: 1
@@ -1116,4 +1111,9 @@ module.exports = [
         workedHours: 5,
         neededHours: 5
     },
+    {
+        taskName: `Use composition to pass audio banner to audio section, with prologue and epilogue props.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

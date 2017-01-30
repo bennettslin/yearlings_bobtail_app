@@ -32,6 +32,7 @@ const MainColumnView = ({
     showFullPopup,
 
     isPhone,
+    isLogue,
     deviceIndex,
     windowWidth,
     isHeightlessLyricColumn,
@@ -121,6 +122,7 @@ const MainColumnView = ({
             overviewButtonChild
         },
         audioBannerProps = {
+            isLogue,
             selectedSongTitle,
             selectedTimePlayed
         },
@@ -143,7 +145,9 @@ const MainColumnView = ({
 
     return (
         <div className="column main-column">
-            <MenuField {...menuFieldProps} />
+            <MenuField {...menuFieldProps}
+                audioBannerChild={ <AudioBanner {...audioBannerProps} /> }
+            />
             <div className="field centre-field">
 
                 {!showFullPopup &&

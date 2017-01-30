@@ -16,9 +16,8 @@ const AudioBanner = (props) => (
 const AudioBannerView = ({
 
     // From props.
+    isLogue,
     selectedTimePlayed,
-    isPrologue,
-    isEpilogue,
     selectedSongTitle,
 
 }) => (
@@ -28,7 +27,7 @@ const AudioBannerView = ({
                 {selectedSongTitle}
             </div>
             <div className="audio-banner-time">
-                {isPrologue || isEpilogue ? '' : getFormattedTime(selectedTimePlayed)}
+                {isLogue ? '' : getFormattedTime(selectedTimePlayed)}
             </div>
         </div>
         <div className="audio-banner audio-slider-block">

@@ -52,8 +52,6 @@ const AudioSectionView = ({
     isPlaying,
     title,
     selectedSongIndex,
-    selectedSongTitle,
-    selectedTimePlayed,
     updatedTimePlayed,
     selectedAudioOptionIndex,
     mp3s,
@@ -68,6 +66,8 @@ const AudioSectionView = ({
     onPlayerEnd,
     onTimeUpdated,
 
+    audioBannerChild,
+
     // From controller.
     isPrologue,
     isFirstSong,
@@ -78,13 +78,7 @@ const AudioSectionView = ({
 
 }) => {
 
-    const audioBannerProps = {
-            selectedTimePlayed,
-            isPrologue,
-            isEpilogue,
-            selectedSongTitle
-        },
-        audioButtonsProps = {
+    const audioButtonsProps = {
             titleInAudio,
             isPlaying,
             selectedAudioOptionIndex,
@@ -124,9 +118,7 @@ const AudioSectionView = ({
             {titleInAudio &&
                 <TitleSection {...titleProps} />
             }
-            {!isPhone &&
-                <AudioBanner {...audioBannerProps} />
-            }
+            {!isPhone && audioBannerChild}
             <AudioButtons {...audioButtonsProps} />
             <AudioPlayersSection {...audioPlayersProps} />
         </div>

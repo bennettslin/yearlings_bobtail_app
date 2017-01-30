@@ -30,10 +30,8 @@ const MenuFieldView = ({
     mp3s,
     isFirstVerse,
     isLastVerse,
-    selectedSongTitle,
     selectedSongIndex,
     isPlaying,
-    selectedTimePlayed,
     updatedTimePlayed,
     selectedAudioOptionIndex,
     accessedSongIndex,
@@ -48,6 +46,7 @@ const MenuFieldView = ({
     onPlayerEnd,
     onTimeUpdated,
 
+    audioBannerChild,
     scoresTipsSectionChild,
 
     // From controller.
@@ -69,11 +68,9 @@ const MenuFieldView = ({
             mp3s,
             isFirstVerse,
             isLastVerse,
-            selectedSongTitle,
             selectedSongIndex,
             isPlaying,
             title,
-            selectedTimePlayed,
             updatedTimePlayed,
             selectedAudioOptionIndex,
             accessedOn,
@@ -86,7 +83,9 @@ const MenuFieldView = ({
             onAudioOptionClick,
             onTimeChange,
             onPlayerEnd,
-            onTimeUpdated
+            onTimeUpdated,
+
+            audioBannerChild
         }
 
     return (
