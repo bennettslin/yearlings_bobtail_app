@@ -26,15 +26,12 @@ const AnnotationSection = ({
 const AnnotationSectionView = ({
 
     // From props.
-    inPopup,
 
     // From controller.
     title,
 
 ...other }) => (
-    <div
-        className={`section annotation-section${inPopup ? ' in-popup' : ''}`}
-    >
+    <div className="section annotation-section">
         <h2>{title}</h2>
         <div className="cards-block">
             <AnnotationUnit {...other}

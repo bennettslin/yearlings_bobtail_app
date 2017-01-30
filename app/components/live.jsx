@@ -6,6 +6,7 @@ import OverviewButton from './overview/overview-toggle'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
 import DotsPopup from './dots/dots-popup'
+import ScorePopup from './score/score-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
 import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn } from 'helpers/responsive-helper'
@@ -271,6 +272,10 @@ const LiveView = ({
             onPopupButtonClick: onDotsExpandClick,
             onPopupContainerClick
         },
+        scorePopupProps = {
+            selectedScoreIndex,
+            onPopupButtonClick: onScoreClick
+        },
         wikiPopupProps = {
             selectedWikiUrl,
             accessedOn,
@@ -321,6 +326,7 @@ const LiveView = ({
             <LyricColumn {...lyricColumnProps} />
 
             <div className="full-popup-subfield">
+                <ScorePopup {...scorePopupProps} />
                 <WikiPopup {...wikiPopupProps} />
             </div>
 

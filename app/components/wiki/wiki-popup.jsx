@@ -14,9 +14,7 @@ class WikiPopup extends Popup {
 
     getContentElement() {
         return this.props.selectedWikiUrl &&
-            <WikiSection {...this.props}
-                inPopup={true}
-            />
+            <WikiSection {...this.props} />
     }
 }
 

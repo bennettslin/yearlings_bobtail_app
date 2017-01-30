@@ -79,7 +79,7 @@
         padding: 20px @popup-content-side-padding;
     }
 
-    &.wiki {
+    &.wiki, &.score {
         width: ~"calc(100% - @{full-subfield} * 2.5)";
         max-width: @laptop-max-width;
 
@@ -137,24 +137,26 @@
 }
 
 .monitor-width, .laptop-width, .tablet-width {
-    .popup-content-wrapper.wiki {
-        .popup-button.close-button {
-            top: -@app-large-icon-diameter;
+    .popup-content-wrapper {
+        &.wiki, &.score {
+            .popup-button.close-button {
+                top: -@app-large-icon-diameter;
 
-            // Duplicates annotation side button styles.
-            border-radius: 50%;
-            box-shadow: -1px 1px 2px 2px @box-shadow-colour;
-            background-color: #fdd;
+                // Duplicates annotation side button styles.
+                border-radius: 50%;
+                box-shadow: -1px 1px 2px 2px @box-shadow-colour;
+                background-color: #fdd;
 
-            top: -@app-large-icon-diameter * 0.7;
-            right: -@app-large-icon-diameter * 0.7;
+                top: -@app-large-icon-diameter * 0.7;
+                right: -@app-large-icon-diameter * 0.7;
+            }
         }
     }
 }
 
 .mini-width, .phone-width {
     .popup-content-wrapper {
-        &.wiki {
+        &.wiki, &.score {
             width: ~"calc(100% - @{mini-full-subfield} * 2)";
             height: ~"calc(100% - @{app-icon-diameter} * 2)";
 
@@ -174,7 +176,7 @@
 
     &.phone-width {
         .popup-content-wrapper {
-            &.wiki {
+            &.wiki, &.score {
                 // Make side margin in phone just that much thinner.
                 width: ~"calc(100% - @{mini-full-subfield})";
             }
@@ -182,7 +184,7 @@
 
         .heightless-lyric {
             .popup-content-wrapper {
-                &.wiki {
+                &.wiki, &.score {
                     height: ~"calc(100% - @{mini-full-subfield})";
                 }
             }
@@ -192,7 +194,7 @@
     // Reverse width and height when not enough height.
     .heightless-lyric {
         .popup-content-wrapper {
-            &.wiki {
+            &.wiki, &.score {
                 height: ~"calc(100% - @{mini-full-subfield} * 2)";
                 width: ~"calc(100% - @{app-icon-diameter} * 2)";
             }

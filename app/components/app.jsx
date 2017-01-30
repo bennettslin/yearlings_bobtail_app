@@ -251,6 +251,7 @@ class App extends Component {
         selectedAnnotationIndex = this.props.selectedAnnotationIndex
     }) {
         const { selectedWikiIndex,
+                selectedScoreIndex,
                 selectedDotsIndex,
                 selectedOverviewIndex } = this.props
 
@@ -275,6 +276,10 @@ class App extends Component {
             }
 
             popupWasOpen = true
+        }
+
+        if (selectedScoreIndex) {
+            this.selectScore(undefined, 0)
         }
 
         // Hide wiki or annotation.
@@ -729,9 +734,14 @@ class App extends Component {
         }
     }
 
-    selectScore(e) {
+    selectScore(e, selectedScoreIndex) {
         this._stopPropagation(e)
-        this.props.selectScoreIndex((this.props.selectedScoreIndex + 1) % 2)
+
+        if (isNaN(selectedScoreIndex)) {
+            selectedScoreIndex = (this.props.selectedScoreIndex + 1) % 2
+        }
+
+        this.props.selectScoreIndex(selectedScoreIndex)
     }
 
     selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, columnIndex) {
@@ -1250,6 +1260,7 @@ class App extends Component {
             { selectedVerseIndex,
               selectedOverviewIndex,
               selectedWikiIndex,
+              selectedScoreIndex,
               selectedAnnotationIndex,
               selectedDotsIndex } = props,
             { isAdmin,
@@ -1275,7 +1286,7 @@ class App extends Component {
                 showSingleLyricColumn,
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
             }),
-            showOverlay = selectedWikiIndex ||
+            showOverlay = selectedScoreIndex || selectedWikiIndex ||
                 (!getIsDesktop(deviceIndex)) && (selectedAnnotationIndex || selectedDotsIndex)
 
         return (
