@@ -20,7 +20,7 @@ const Drawing = (props) => {
 const DrawingView = ({
 
     // From props.
-
+    drawingCharacters
 
     // From controller.
 
@@ -28,7 +28,9 @@ const DrawingView = ({
 }) => (
     <div className="admin-column">
         <div className="admin-field drawing-admin-field">
-            <DrawingsSection />
+            <DrawingsSection
+                drawingCharacters={drawingCharacters}
+            />
         </div>
     </div>
 )

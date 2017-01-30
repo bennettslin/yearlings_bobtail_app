@@ -15,11 +15,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Method to calculate characters left to illustrate.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `When song finishes playing, proceed to next more smoothly.`,
         workedHours: 0,
         neededHours: 1
@@ -1121,4 +1116,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Method to calculate characters left to illustrate.`,
+        workedHours: 2,
+        neededHours: 2
+    }
 ]

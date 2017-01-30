@@ -19,6 +19,7 @@ const _tempStore = {
     _songTimes: [],
     _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
+    _drawingCharacters: {},
     _firstRightAnnotationIndexOfVerse: 0,
     _finalAnnotationIndex: 0,
     _hasSideStanzas: false,
@@ -35,6 +36,9 @@ export const prepareAlbumData = (album = {}) => {
      * collecting portal links from the entire album.
      */
     _addWikiAndPortalIndices(album)
+
+    // Add drawing characters for admin purposes.
+    album.drawingCharacters = parseDrawings(_tempStore._drawingCharacters)
 
     // FIXME: Temporarily add portal links to album for debugging purposes.
     album.portalLinks = _tempStore._portalLinks
@@ -98,6 +102,8 @@ const _prepareAllSongs = (album) => {
 
             _parseLyrics(song.lyrics)
 
+            _gatherDrawings(song.scenes)
+
             song.isDoublespeaker = _tempStore._isDoublespeaker
 
             // Add annotations to song object.
@@ -111,6 +117,40 @@ const _prepareAllSongs = (album) => {
             song.times = _tempStore._songTimes
         }
     })
+}
+
+const _gatherDrawings = (scenes) => {
+    scenes.forEach(scene => {
+        for (const key in scene.characters) {
+            if (_tempStore._drawingCharacters[key]) {
+                _tempStore._drawingCharacters[key] += scene.characters[key]
+            } else {
+                _tempStore._drawingCharacters[key] = scene.characters[key]
+            }
+        }
+    })
+}
+
+const parseDrawings = (drawingCharacters) => {
+    const drawingCharacterObjects = []
+
+    let characterCount = 0
+
+    for (const character in drawingCharacters) {
+        const quantity = drawingCharacters[character]
+
+        drawingCharacterObjects.push({
+            character,
+            quantity
+        })
+
+        characterCount += quantity
+    }
+
+    // Last item in array is the character count.
+    drawingCharacterObjects.push(characterCount)
+
+    return drawingCharacterObjects
 }
 
 const _addTitleToLyrics = (title, lyrics) => {
