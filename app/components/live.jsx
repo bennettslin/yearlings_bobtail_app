@@ -67,6 +67,7 @@ const LiveView = ({
     selectedDotKeys,
     selectedWikiIndex,
     selectedWikiUrl,
+    selectedScoreIndex,
     selectedVerseIndex,
     selectedAudioOptionIndex,
     selectedTipsIndex,
@@ -111,6 +112,7 @@ const LiveView = ({
     onPortalClick,
     onSongFromPortalClick,
     onWikiUrlClick,
+    onScoreClick,
     onAnnotationClick,
     onLyricColumnClick,
     onPopupContainerClick,
@@ -237,7 +239,9 @@ const LiveView = ({
             onVerseBarClick
         },
         scoresTipsSectionProps = {
+            selectedScoreIndex,
             selectedTipsIndex,
+            onScoreClick,
             onTipsClick
         },
         annotationPopupProps = {

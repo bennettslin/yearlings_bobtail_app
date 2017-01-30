@@ -16,7 +16,9 @@ const ScoresTipsSection = (props) => (
 const ScoresTipsSectionView = ({
 
     // From props.
+    selectedScoreIndex,
     selectedTipsIndex,
+    onScoreClick,
     onTipsClick
 
 }) => {
@@ -25,10 +27,10 @@ const ScoresTipsSectionView = ({
         <div className="section scores-tips-section">
             <a
                 className="scores-tips-button scores-button enabled"
-                onClick={e => console.error(e)}
+                onClick={e => onScoreClick(e)}
             >
                 <div className="large button-icon scores-icon">
-                    {'hi'}
+                    {selectedScoreIndex}
                 </div>
             </a>
             <a
