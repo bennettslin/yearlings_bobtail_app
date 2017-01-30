@@ -10,9 +10,9 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Score popup and stored index`,
+        taskName: `Score popups.`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 5
     },
     {
         taskName: `Method to calculate characters left to illustrate.`,
@@ -1115,5 +1115,10 @@ module.exports = [
         taskName: `Use composition to pass audio banner to audio section, with prologue and epilogue props.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Basic score popup functionality`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
