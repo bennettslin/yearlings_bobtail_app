@@ -642,14 +642,18 @@ module.exports = {
                     {
                         anchor: `questurns Indo Hairapins:`,
                         annotation: {
-                            // TODO: Talk about Indo-European language.
                             description: [
-                                `Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about questions surrounding the`,
+                                `Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about "questions" surrounding the`,
                                 {
                                     anchor: `"Indo-Harappan" Civilisation,`,
                                     wiki: `Indus_Valley_Civilisation`
                                 },
-                                `named after the excavations in Harappa that led to its modern discovery.`
+                                `named after the excavations in Harappa that led to its modern discovery, that may be answered by examining the evolution of the`,
+                                {
+                                    anchor: `"Indo-European"`,
+                                    wiki: `Indo-European_languages`
+                                },
+                                `language family.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -931,7 +935,7 @@ module.exports = {
                         anchor: `scimitary of'fence!`,
                         annotation: {
                             description: [
-                                `The next plan of attack is to visit the grave of their friend Adam. And so, rested and energised, we renew our`,
+                                `The next plan of attack is to visit the grave of Howie and Tomer's high school buddy Adam. And so, rested and energised, we renew our`,
                                 {
                                     anchor: `"scimitar`,
                                     wiki: `Scimitar`
@@ -1004,10 +1008,10 @@ module.exports = {
                             description: [
                                 `"A bridge of land trod on by First Nations sank." Indigenous Americans, known in Canada as the`,
                                 {
-                                    anchor: `First Nations,`,
+                                    anchor: `"First Nations,"`,
                                     wiki: `First_Nations`
                                 },
-                                `were forced to leave their Asian homelands due to growing scarcity of resources. According to the`,
+                                `were "forced" to leave their Asian homelands due to growing scarcity of resources. According to the`,
                                 {
                                     anchor: `Beringia theory,`,
                                     wiki: `Beringia`
