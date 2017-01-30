@@ -21,6 +21,9 @@ module.exports = {
         require('assets/mp3s/17-vegan-proclamation.mp3'),
         require('assets/mp3s/18-my-100000th-dream.mp3')
     ],
+    scores: [
+        require('assets/scores/yearlings_bobtail.pdf')
+    ],
 
     // Hi, I'm Bennett. end of my relationship,
     // Narrowed down to five things that changed my life.

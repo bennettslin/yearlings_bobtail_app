@@ -59,6 +59,7 @@ const LiveView = ({
     manualWidth,
     bookStartingIndices,
     mp3s,
+    scores,
     songs,
     title,
     isPlaying,
@@ -168,6 +169,7 @@ const LiveView = ({
             isPlaying,
 
             mp3s,
+            scores,
             songs,
             title,
             overviewText,
@@ -273,8 +275,10 @@ const LiveView = ({
             onPopupContainerClick
         },
         scorePopupProps = {
+            scores,
             selectedScoreIndex,
-            onPopupButtonClick: onScoreClick
+            onPopupButtonClick: onScoreClick,
+            onPopupContainerClick
         },
         wikiPopupProps = {
             selectedWikiUrl,

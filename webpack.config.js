@@ -29,7 +29,7 @@ module.exports = {
             path.resolve(__dirname, './app')
         ],
         // import from files without specifying extensions.
-        extensions: ['', '.js', '.jsx', '.less', '.mp3']
+        extensions: ['', '.js', '.jsx', '.less', '.mp3', '.pdf']
     },
 
     /**
@@ -108,7 +108,7 @@ module.exports = {
                 include: PATHS.less
             },
             {
-                test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|mp3)$/,
+                test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|mp3|pdf)$/,
                 loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]',
                 include: PATHS.app
             }
