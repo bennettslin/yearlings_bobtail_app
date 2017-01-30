@@ -489,7 +489,7 @@ module.exports = {
                                     wiki: `Ghost_in_the_Machine_(album)`
                                 }
                             },
-                            `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums here are an amateurish imitation of Stewart Copeland's performance in "Secret Journey," in particular the silent kick on the downbeat. Such a simple idea, but it does wonders for letting the music breathe before being submerged again in the chorus.`
+                            `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums here are my amateurish imitation of Stewart Copeland's performance in "Secret Journey," in particular the silent kick on the downbeat. Such a simple idea, but it does wonders for letting the music breathe before being submerged again in the chorus.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
@@ -1441,7 +1441,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `For a song about recreational drug use, I naturally sought wisdom from the Beatles, whose`,
+                            `For a song about recreational drug use, I naturally sought counsel from the Beatles, whose`,
                             {
                                 italic: {
                                     anchor: `"Tomorrow Never Knows"`,
