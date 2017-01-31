@@ -3,6 +3,7 @@
 @audio-block-padding-y: 4px;
 
 @audio-banner-height: (@menu-height - (2 * @audio-block-padding-y)) / 2;
+@audio-slider-height: @audio-banner-height;
 
 @audio-button-margin: 3px;
 @audio-option-button-margin: 8px;
@@ -118,7 +119,7 @@
 
 .audio-slider-block {
     width: 100%;
-    height: @audio-banner-height;
+    height: @audio-slider-height;
     background-color: #def;
 }
 
@@ -127,15 +128,19 @@
 }
 
 .audio-banner-custom-subfield {
-    position: absolute;
-    width: 100%;
+    height: @audio-banner-height + @audio-slider-height + @audio-block-padding-y * 2;
 
-    .transition(top 0.2s ease);
-    top: 0;
+    .audio-banner-block {
+        position: absolute;
+        width: 100%;
+
+        .transition( 0.2s ease);
+        top: 0;
+    }
 }
 
 .lyric-expanded.is-song {
-    .audio-banner-custom-subfield {
+    .audio-banner-block {
         top: -@menu-height;
     }
 }
