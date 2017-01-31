@@ -35,7 +35,7 @@ module.exports = {
         },
         {
             verseIndex: 17,
-            description: `Sita is still thinking. In the first, she is talking to her friend. Bennett is clearly jealous, but Sita is holding him close. In the second, Bennett is talking to a a fan. Sita is clearly jealous and trying to pull him away, but he ignores her. Sita's friend has opened the door, bringing food.`,
+            description: `Sita is still thinking. In the first, she is talking to her friend. Bennett is clearly jealous, but Sita is holding him close. In the second, Bennett is talking to a a fan. Sita is clearly jealous and trying to pull him away, but he ignores her. Sita's friend has opened the door.`,
             characters: {
                 sita: 1,
                 friend: 1,

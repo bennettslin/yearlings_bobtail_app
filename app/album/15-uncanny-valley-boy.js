@@ -10,7 +10,7 @@ module.exports = {
                     anchor: `uncanny valley`,
                     wiki: `Uncanny_valley`
                 },
-                `is a theory that human replicas become more repulsive to us as they grow further lifelike while remaining less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this "Valley boy" from the San Fernando Valley now elicited a similar revulsion.`
+                `is a theory that human replicas become more repulsive to us as they grow further lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining unconvincing as a grownup, I had to wonder if this "Valley boy" from the San Fernando Valley now elicited a similar revulsion.`
             ],
             dotKeys: {
                 [OBSERVATION]: true,
@@ -21,23 +21,61 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. His father is stern and disapproving, while his mother consoles a weeping Sita.`,
             characters: {
-
+                bennett: 1,
+                miriam: 1,
+                motherGhost: 1,
+                fatherGhost: 1,
+                sitaGhost: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 8,
+            description: `They take him to visit his childhood past. They watch as young Bennett gets bullied. Bennett winces.`,
             characters: {
-
+                bennett: 1,
+                motherGhost: 1,
+                fatherGhost: 1,
+                youngBennett: 1,
+                bully: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 21,
+            description: `Next, they take him to visit the present. Sita is at home crying, while Bennett is playing guitar in his apartment, with Miriam behind him, necking, and smoking pot.`,
             characters: {
-
+                bennett: 1,
+                motherGhost: 1,
+                fatherGhost: 1,
+                bennett: 1,
+                sita: 1,
+                hipster: 1
+            }
+        },
+        {
+            verseIndex: 28,
+            description: `Finally, they take him to visit the future. Miriam is walking arm in arm with her new boyfriend. Unknowingly, they cross paths with Sita who is laughing with her friend in a park. Meanwhile, Bennett is at home alone, recording and depressed.`,
+            characters: {
+                bennett: 1,
+                motherGhost: 1,
+                fatherGhost: 1,
+                bennett: 1,
+                miriam: 1,
+                boyfriend: 1,
+                sita: 1,
+                friend: 1
+            }
+        },
+        {
+            verseIndex: 35,
+            description: `Bringing him back, Bennett unrepentantly crawls into Miriam's arms, who is glaring at his parents. His mother wails, while his father shields Sita from the view.`,
+            characters: {
+                bennett: 1,
+                miriam: 1,
+                motherGhost: 1,
+                fatherGhost: 1,
+                sitaGhost: 1
             }
         }
     ],
@@ -1150,11 +1188,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -1181,6 +1214,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
