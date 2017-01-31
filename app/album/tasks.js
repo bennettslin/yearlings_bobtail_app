@@ -1120,5 +1120,10 @@ module.exports = [
         taskName: `Dynamic sizing of dots toggle and scores tips section`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Overview, dots, and scores and tips on top in phone.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

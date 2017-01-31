@@ -17,6 +17,7 @@
 
 // In main field.
 .dots-overview-subfield {
+    position: relative;
     width: 100%;
 
     // Override subfield height. Let flex-grow take care of height.
@@ -118,7 +119,7 @@
         }
     }
 
-    // Overview is at the bottom in mobile.
+    // Overview is at the bottom in tablet and mini.
     .overview.popup-content-wrapper {
         bottom: 0;
     }
@@ -127,7 +128,7 @@
         width: @overview-toggle-tablet-width;
     }
 
-    .dots-row, .dots-overview-toggle-section {
+    .dots-overview-toggle-section, .dots-row {
         flex-direction: column-reverse;
     }
 
@@ -151,6 +152,15 @@
             .dots-overview-toggle-section {
                 margin-left: -@overview-toggle-phone-width;
             }
+        }
+
+        // In phone, overview and dots toggle are once again on top.
+        .dots-overview-toggle-section, .dots-row {
+            flex-direction: column;
+        }
+
+        .overview.popup-content-wrapper {
+            bottom: auto;
         }
 
         .dots-overview-toggle-section {

@@ -171,6 +171,7 @@ const MainColumnView = ({
                     <div className="overview-popup-container">
                         {overviewPopupChild}
                     </div>
+                    {!isDesktop && scoresTipsOutsideMenu && scoresTipsSectionChild}
                 </div>
 
                 {isPhone ?
@@ -182,7 +183,6 @@ const MainColumnView = ({
                     </div>
                 }
 
-                {!isDesktop && scoresTipsOutsideMenu && scoresTipsSectionChild}
 
                 {isHeightlessLyricColumn &&
                     <div className="lyric-button-block expand-button-block in-main">
