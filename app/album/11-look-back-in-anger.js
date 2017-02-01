@@ -111,6 +111,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
+                        dotKeys: {
+                            [BACKSTORY]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: INSTRUMENTAL
             }
         ],
@@ -206,7 +216,14 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would sing in hushed tones so as not to wake his neighbours, and then overdub several takes. He would also tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to channel Owen here, minus the impromptu part, of course.`,
+                        description: [
+                            // TODO: Unfinished.
+                            `Owen would sing in muffled tones so as not to wake his neighbours, then overdub several takes. Presumably that's how late-night recording on a four-track shapes your vocal style, since Elliott Smith did the same on his first few albums.`,
+                            {
+                                italic: `Either/Or,`,
+                                wiki: `Either/Or_(album)`
+                            }
+                        ],
                         dotKeys: {
                             [BACKSTORY]: true,
                             [SONGWRITING]: true
