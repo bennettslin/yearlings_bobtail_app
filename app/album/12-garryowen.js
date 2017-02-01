@@ -434,6 +434,22 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `Since I don't own any bagpipes, let alone`,
+                            {
+                                anchor: `Irish bagpipes,`,
+                                wiki: `Uilleann_pipes`
+                            },
+                            `I mimicked the sound by overdubbing melodica tracks, with one set acting as the chanter, and another as the drone.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: INSTRUMENTAL
             }
         ],
