@@ -16,6 +16,8 @@ const ScoreSection = (props) => (
 // TODO: Have score and wiki inherit from parent component?
 // TODO: Look into https://pdfobject.com/ https://pdfobject.com/static.html
 
+// TODO: Look into http://stackoverflow.com/questions/19654577/html-embedded-pdf-iframe
+
 class ScoreSectionView extends Component {
 
     constructor(props) {

@@ -39,6 +39,13 @@ module.exports = {
             characters: {
 
             }
+        },
+        {
+            verseIndex: 0,
+            description: ``,
+            characters: {
+
+            }
         }
     ],
     tip: {
@@ -75,7 +82,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `Sasha recited these quotes for me over the phone. We had to record multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't write them with that concern in mind.`,
+                        description: `Sasha recited these quotes for me over the phone. We recorded multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't write them with that concern in mind.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
