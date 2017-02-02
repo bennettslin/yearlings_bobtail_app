@@ -1253,7 +1253,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with Sasha there. As it gradually became clear that we were dating, I undertook a yearlong course of study required for conversion to Judaism. However, we didn't last long enough for me to stand before the`,
+                            `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I undertook a yearlong course of study required for conversion to Judaism. However, we didn't last long enough for me to stand before the`,
                             {
                                 anchor: `beit din,`,
                                 wiki: `Beth_din`
