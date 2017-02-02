@@ -62,9 +62,9 @@ module.exports = {
                 fatherGhost: 1,
                 bennett: 1,
                 miriam: 1,
-                boyfriend: 1,
+                miriamBoyfriend: 1,
                 sita: 1,
-                friend: 1
+                sitaFriend: 1
             }
         },
         {

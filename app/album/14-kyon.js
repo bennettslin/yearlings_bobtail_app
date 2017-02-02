@@ -38,7 +38,7 @@ module.exports = {
             description: `Sita is still thinking. In the first, she is talking to her friend. Bennett is clearly jealous, but Sita is holding him close. In the second, Bennett is talking to a a fan. Sita is clearly jealous and trying to pull him away, but he ignores her. Sita's friend has opened the door.`,
             characters: {
                 sita: 1,
-                friend: 1,
+                sitaFriend: 1,
                 thoughtBubbles: 2
             }
         },
@@ -47,7 +47,7 @@ module.exports = {
             description: `Sita is talking to her friend. In his speech bubbles, he sees Bennett leaving her, and Sita heartbroken. In her speech bubbles, she sees Bennett coming back penitent, and then being very affectionate.`,
             characters: {
                 sita: 1,
-                friend: 1,
+                sitaFriend: 1,
                 thoughtBubbles: 4
             }
         },
@@ -56,7 +56,7 @@ module.exports = {
             description: `Sita is explaining to her friend Bennett's new ambition to record Bobtail. In her speech bubble, she is affectionately hugging him as he records his instrument. In her thought bubble, she is closing the door on him, as he is recording his guitar, eyes closed.`,
             characters: {
                 sita: 1,
-                friend: 1,
+                sitaFriend: 1,
                 thoughtBubbles: 2
             }
         }

@@ -35,7 +35,8 @@ module.exports = {
             characters: {
                 bennett: 1,
                 sita: 1,
-                actors: 3
+                sitaFriend: 1,
+                actors: 2
             }
         },
         {

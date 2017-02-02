@@ -21,30 +21,42 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett is walking with the ghost of Odin in a park. He passes Sita, who is holding hands with her friend. Bennett looks down, her friend looks up, while Sita looks concerned.`,
             characters: {
-
+                bennett: 1,
+                odin: 1,
+                sita: 1,
+                sitaFriend: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 11,
+            description: `Bennett is alone with Odin at a show, getting bored. Miriam is on the other side of the crowd, being introduced by Tristan to her future boyfriend.`,
             characters: {
-
+                bennett: 1,
+                odin: 1,
+                miriam: 1,
+                tristan: 1,
+                miriamBoyfriend: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 22,
+            description: `Bennett is in his apartment, in tears on the phone with Sita, who is in bed with her friend.`,
             characters: {
-
+                bennett: 1,
+                odin: 1,
+                sita: 1,
+                sitaFriend: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 27,
+            description: `Bennett is with Odin, and happens upon a Peta demonstration. One of the demonstrators is petting Odin.`,
             characters: {
-
+                bennett: 1,
+                odin: 1,
+                demonstrators: 4
             }
         }
     ],
@@ -603,7 +615,7 @@ module.exports = {
         ],
         [
             {
-                time: 4,
+                time: 170,
                 centre: {
                     italic: `(solo)`
                 }
@@ -723,11 +735,6 @@ module.exports = {
             ]
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -744,6 +751,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `rough illustration synopses`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
