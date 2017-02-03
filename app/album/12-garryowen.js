@@ -92,7 +92,7 @@ module.exports = {
                                 anchor: `Irish reel`,
                                 wiki: `Reel_(dance)`
                             },
-                            `here, departing from tradition with the inclusion of contrapuntal melodies. To capture the liveliness of a fiddle, I held my violin at chest level, which took some practise. The melodicas sounding in unison at the bridge were meant to evoke bagpipes at a funeral procession.`
+                            `here. Of course, I departed from tradition by scoring contrapuntal melodies.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -307,6 +307,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `To capture the liveliness of a fiddle, I held the violin at chest level. I'd never tried this before, so a bit of practise was needed.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: REFRAIN
             }
         ],
@@ -421,6 +430,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `In traditional counterpoint, the chords and harmonic rhythm are byproducts of melodic interaction. The chord progressions for this song were already set, however. So I was left to figure out on my own how counterpoint might be scored in this scenario, since I didn't know of any working examples.`,
+                        dotKeys: {
+                            [REFERENCE]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS,
                 subsequent: true
             }
@@ -434,22 +453,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: `***CHANGE_ME***`,
-                    annotation: {
-                        description: [
-                            `Since I don't own any bagpipes, let alone`,
-                            {
-                                anchor: `Irish bagpipes,`,
-                                wiki: `Uilleann_pipes`
-                            },
-                            `I mimicked the sound by overdubbing melodica tracks, with one set acting as the chanter, and another as the drone.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 sectionClass: INSTRUMENTAL
             }
         ],
@@ -501,6 +504,22 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `The bagpipes here evoke a funeral procession. Since I don't own any bagpipes, let alone`,
+                            {
+                                anchor: `Irish ones,`,
+                                wiki: `Uilleann_pipes`
+                            },
+                            `I mimicked the sound by overdubbing melodica tracks, with one set acting as the chanter, and another as the drone.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: BRIDGE
             }
         ],
@@ -557,6 +576,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `After some trial and error, I decided that the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease them apart based on their respective timbres.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
@@ -664,11 +692,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -698,6 +721,11 @@ module.exports = {
         },
         {
             taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
         }
