@@ -310,7 +310,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `To capture the liveliness of a fiddle, I held the violin at chest level. I'd never tried this before, so a bit of practise was needed.`,
+                        description: `To capture the liveliness of a fiddle, I held the violin at chest level. I'd never tried this before, so a bit of practise was needed. As well as a lot of spliced tracks.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }

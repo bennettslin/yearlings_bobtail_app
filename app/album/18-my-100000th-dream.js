@@ -13,23 +13,46 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett runs into Sita, who just so happens to be standing outside an El Torito.`,
             characters: {
-
+                bennett: 1,
+                sita: 1
             }
         },
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett and Sita are dancing on the pampas with some gopis.`,
             characters: {
-
+                bennett: 1,
+                sita: 1,
+                gopis: 3
             }
         },
         {
             verseIndex: 0,
-            description: ``,
+            description: `In the background is an Indian wedding. Bennett is confused, because the bride appears to be Sita. But his Sita keeps dragging him forward, insistently.`,
             characters: {
-
+                bennett: 1,
+                sita: 2,
+                sitaFriend: 1,
+                crowd: 1
+            }
+        },
+        {
+            verseIndex: 22,
+            description: `Sita and Bennett are at the edge of a cliff. Bennett is frightened. Sita is gesturing towards the edge.`,
+            characters: {
+                bennett: 1,
+                sita: 1
+            }
+        },
+        {
+            verseIndex: 28,
+            description: `The whole thing turns out to have been a dream. Bennett is in bed, old and decrepit. A thought bubble shows the previous scene, with Bennett now accepting his fate, and Sita comforting him.`,
+            characters: {
+                bennett: 1,
+                bennettDrawing: 1,
+                sitaDrawing: 1
             }
         }
     ],
@@ -390,11 +413,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -416,6 +434,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `rough illustration synopses`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
