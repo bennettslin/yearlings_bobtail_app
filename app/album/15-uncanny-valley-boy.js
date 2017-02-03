@@ -1113,7 +1113,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `TODO: Talk about recording Rama to Mara.`,
+                        description: `To record the gradual shift from "Rama" to "Mara," I made a click track that summed up to one less eighth note than the regular tempo after seven measures. Since I had to breathe somewhere in between, I overdubbed multiple tracks in which I quietly did so at various points.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
