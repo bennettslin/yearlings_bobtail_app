@@ -9,6 +9,7 @@ import { PHONE_WIDTH,
 
          HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
+         HIDDEN_NAV_MIN,
          MENU_HEIGHT,
          MENU_PHONE_HEIGHT,
          COLLAPSED_LYRIC_SECTION_HEIGHT,
@@ -142,6 +143,13 @@ export const getShowSingleLyricColumn = (props, state, selectedSongIndex) => {
 
         return showSingleLyricColumn
     }
+}
+
+export const getIsHiddenNav = (state) => {
+    const { windowHeight } = state
+
+    //
+    return getIsPhone(state) || windowHeight < HIDDEN_NAV_MIN
 }
 
 export const getIsHeightlessLyricColumn = (state) => {

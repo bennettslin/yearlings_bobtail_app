@@ -34,7 +34,7 @@ const MainColumnView = ({
     isPhone,
     isLogue,
     deviceIndex,
-    windowWidth,
+    isHiddenNav,
     isHeightlessLyricColumn,
 
     isFirstVerse,
@@ -88,7 +88,6 @@ const MainColumnView = ({
 }) => {
     const menuFieldProps = {
             deviceIndex,
-            windowWidth,
             scoresTipsOutsideMenu,
 
             isPhone,
@@ -174,15 +173,17 @@ const MainColumnView = ({
                     {!isDesktop && scoresTipsOutsideMenu && scoresTipsSectionChild}
                 </div>
 
-                {isPhone ?
+                {isPhone &&
                     <div className="audio-banner-custom-subfield">
                         <AudioBanner {...audioBannerProps} />
-                    </div> :
+                    </div>
+                }
+
+                {!isHiddenNav &&
                     <div className="nav-custom-subfield">
                         <NavSection {...navSectionProps} />
                     </div>
                 }
-
 
                 {isHeightlessLyricColumn &&
                     <div className="lyric-button-block expand-button-block in-main">
