@@ -7,6 +7,7 @@ import { PHONE_WIDTH,
          MINI_OBJECT,
          DEVICE_OBJECTS,
 
+         HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
          MENU_HEIGHT,
          MENU_PHONE_HEIGHT,
@@ -144,7 +145,19 @@ export const getShowSingleLyricColumn = (props, state, selectedSongIndex) => {
 }
 
 export const getIsHeightlessLyricColumn = (state) => {
-    return getIsLyricExpandable(state) && state.windowHeight < HEIGHTLESS_LYRIC_MAX
+    const { windowWidth,
+            windowHeight } = state
+
+    return getIsLyricExpandable(state) &&
+
+        // It is never heightless when above the max...
+        windowHeight < HEIGHTLESS_LYRIC_MAX &&
+
+        // It is always heightless when below the min...
+        (windowHeight < HEIGHTLESS_LYRIC_MIN ||
+
+        // Otherwise, it is heightless when width exceeds height.
+        windowWidth > windowHeight)
 }
 
 export const getScoresTipsOutsideMenu = (state) => {
