@@ -73,14 +73,14 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `This also begins a three-song medley à la`,
+                            `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
                             {
                                 italic: {
                                     anchor: `Abbey Road`,
                                     wiki: `Abbey_Road`
                                 }
                             },
-                            `by the Beatles, which provides a nice push towards the album's finish.`
+                            `by the Beatles. The resulting sense of urgency provides a nice push towards the album's finish.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -108,7 +108,7 @@ module.exports = {
                                 anchor: `Shepard tone`,
                                 wiki: `Shepard_tone`
                             },
-                            `is an auditory illusion in which a single tone moves continuously downward in pitch while staying within a fixed register. It seemed an apt metaphor for my utterly deflated state after the breakup with Miriam, and so there are two in this song. One is a bass tone that descends in discrete half steps, while the other is a treble tone that descends in a perpetual glissando. Since I didn't know how to code at the time, I made them by splicing together a whole slew of pure tones produced on an analogue synthesiser.`
+                            `is an auditory illusion in which a single tone continuously descends in pitch yet remains fixed within the same register. It seemed an apt metaphor for my utterly deflated state after the breakup with Miriam, so I included two here. One is a bass tone that moves downward in discrete half steps, while the other is a treble tone that does so in a perpetual glissando. Since I didn't code at the time, I made them by splicing together pure tones produced on an analogue synthesiser.`
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
