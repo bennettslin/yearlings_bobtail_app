@@ -676,6 +676,22 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
+                            {
+                                anchor: `Oakland`,
+                                wiki: `Oakland,_California`
+                            },
+                            `night.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
@@ -718,14 +734,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: [
-                            `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
-                            {
-                                anchor: `Oakland`,
-                                wiki: `Oakland,_California`
-                            },
-                            `night.`
-                        ],
+                        description: `While fleshing out the lyrics for this chorus, I noticed that the two stanzas shared common syllables in certain places, and so I made a game of trying to match them as closely as possible. This ultimately gave me the idea for doublespeaker rhyme.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
