@@ -2,6 +2,8 @@
 
 import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE } from 'helpers/constants'
 
+
+// TODO: Mention sleeping on floor.
 module.exports = {
     title: {
         anchor: 'Odin',
@@ -22,23 +24,31 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: ``,
+            description: `Bennett is lying on a mat on the floor. In the distance, he sees himself creeping out of the house in pitch darkness. Papers are strewn where he walked.`,
             characters: {
-
+                bennett: 2
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 13,
+            description: `Bennett is closing the gate. He sees himself in a rickshaw, driving away. The rickshaw leaves a trail.`,
             characters: {
-
+                bennett: 2,
+                rickshawDriver: 1
             }
         },
         {
-            verseIndex: 0,
-            description: ``,
+            verseIndex: 22,
+            description: `Bennett is standing on the shore. He sees himself in the water, on a buoy. Footprints lead into the water.`,
             characters: {
-
+                bennett: 2
+            }
+        },
+        {
+            verseIndex: 38,
+            description: `Bennett emerges from the ocean. He looks back towards the ocean. Further ahead, another Bennett is making his bed in a little cove. Footprints lead up to him.`,
+            characters: {
+                bennett: 2
             }
         }
     ],
@@ -1275,11 +1285,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `rough illustration synopses`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `illustrations`,
             workedHours: 0,
             neededHours: 0,
@@ -1311,6 +1316,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
