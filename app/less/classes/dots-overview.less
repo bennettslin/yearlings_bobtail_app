@@ -64,7 +64,7 @@
     height: 100%;
 }
 
-// Hidden to left when is logue.
+// Hidden to left when is logue, or annotation shown.
 .is-logue, .annotation-shown {
     .dots-overview-toggle-section {
         margin-left: -@overview-toggle-width;
@@ -81,13 +81,35 @@
 .dots-toggle-button-block {
     width: 100%;
     display: flex;
+    margin-left: 0;
 
     padding-left: @app-thin-margin;
     align-items: center;
+
+    .transition(margin 0.2s ease);
+}
+
+.dots-shown {
+    .dots-toggle-button-block {
+        margin-left: -@overview-toggle-width;
+    }
 }
 
 .dots-toggle-icon {
     background-color: purple;
+}
+
+.dots-subfield {
+    position: absolute;
+    border: 2px dotted orange;
+    .transition(transform 0.2s ease);
+    transform: translateX(-100%);
+}
+
+.dots-shown {
+    .dots-subfield {
+        transform: translateX(0);
+    }
 }
 
 // Responsive rules.

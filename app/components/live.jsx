@@ -6,6 +6,7 @@ import OverviewButton from './overview/overview-toggle'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
 import DotsPopup from './dots/dots-popup'
+import DotsSection from './dots/dots-section'
 import ScorePopup from './score/score-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
@@ -26,8 +27,7 @@ const Live = (props) => {
         isHiddenNav = getIsHiddenNav(props),
         isHeightlessLyricColumn = getIsHeightlessLyricColumn(props),
         showSingleBookColumn = getShowSingleBookColumn(props),
-        shrinkNavIcon = getShrinkNavIcon(props),
-        isDotsShown = selectedDotsIndex === 1
+        shrinkNavIcon = getShrinkNavIcon(props)
 
     return (
         <LiveView {...props}
@@ -43,7 +43,6 @@ const Live = (props) => {
             isHeightlessLyricColumn={isHeightlessLyricColumn}
             showSingleBookColumn={showSingleBookColumn}
             shrinkNavIcon={shrinkNavIcon}
-            isDotsShown={isDotsShown}
         />
     )
 }
@@ -139,8 +138,7 @@ const LiveView = ({
     isHiddenNav,
     isHeightlessLyricColumn,
     showSingleBookColumn,
-    shrinkNavIcon,
-    isDotsShown
+    shrinkNavIcon
 
 }) => {
 
@@ -264,7 +262,7 @@ const LiveView = ({
             onPopupButtonClick: onAnnotationClick,
             onPopupContainerClick
         },
-        dotsPopupProps = {
+        dotsSectionProps = {
             selectedDotKeys,
             selectedDotsIndex,
             presentDotKeys,
@@ -303,8 +301,8 @@ const LiveView = ({
             ${isLogue ? ' is-logue' : ' is-song'}
             ${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}
             ${isHeightlessLyricColumn ? ' heightless-lyric' : ''}
-            ${selectedNavIndex ? '' : ' nav-expanded'}
-            ${isDotsShown ? ' dots-shown' : ''}
+            ${selectedNavIndex ? ' nav-expanded' : ''}
+            ${selectedDotsIndex ? ' dots-shown' : ''}
             ${isOverviewShown ? ' overview-shown' : ''}
             ${isSelectedVerseAbove ? ' verse-above' : ''}
             ${isSelectedVerseBelow ? ' verse-below' : ''}
@@ -319,7 +317,8 @@ const LiveView = ({
             </div>
             <MainColumn {...mainColumnProps}
                 annotationPopupChild={ <AnnotationPopup {...annotationPopupProps} /> }
-                dotsPopupChild={ <DotsPopup {...dotsPopupProps} /> }
+                dotsPopupChild={ <DotsPopup {...dotsSectionProps} /> }
+                dotsSectionChild={ <DotsSection {...dotsSectionProps} /> }
                 overviewPopupChild={
                     <OverviewPopup {...overviewPopupProps}
                         inOverviewSubfield={true}
@@ -342,9 +341,9 @@ const LiveView = ({
                 </div>
             }
 
-            {showFullPopup &&
+            {false && showFullPopup &&
                 <div className="full-popup-subfield dots-subfield">
-                    <DotsPopup {...dotsPopupProps} />
+                    <DotsPopup {...dotsSectionProps} />
                 </div>
             }
         </div>

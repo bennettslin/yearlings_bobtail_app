@@ -1038,6 +1038,7 @@ class App extends Component {
             keyName,
             handleSectionAccess: this._handleSectionAccess,
             selectOverview: this.selectOverview,
+            selectDotsExpand: this.selectDotsExpand,
             selectAudioOption: this.selectAudioOption,
             selectTips: this.selectTips,
             togglePlay: this.togglePlay,
@@ -1287,7 +1288,7 @@ class App extends Component {
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
             }),
             showOverlay = selectedScoreIndex || selectedWikiIndex ||
-                (!getIsDesktop(deviceIndex)) && (selectedAnnotationIndex || selectedDotsIndex)
+                (!getIsDesktop(deviceIndex)) && selectedAnnotationIndex
 
         return (
             <div

@@ -19,12 +19,16 @@ const DotsRow = (props) => {
 const DotsRowView = ({
 
     // From props.
+    dotsSectionChild,
 
     // From controller.
 
 ...other }) => (
     <div className="dots-row">
         <DotsToggle {...other} />
+        <div className="dots-subfield">
+            {dotsSectionChild}
+        </div>
     </div>
 )
 

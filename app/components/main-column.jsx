@@ -77,6 +77,7 @@ const MainColumnView = ({
 
     annotationPopupChild,
     dotsPopupChild,
+    dotsSectionChild,
     overviewPopupChild,
     overviewButtonChild,
     scoresTipsSectionChild,
@@ -118,7 +119,8 @@ const MainColumnView = ({
         dotsOverviewToggleSectionProps = {
             selectedDotsIndex,
             onDotsExpandClick,
-            overviewButtonChild
+            overviewButtonChild,
+            dotsSectionChild
         },
         audioBannerProps = {
             isLogue,
@@ -155,7 +157,7 @@ const MainColumnView = ({
                             {annotationPopupChild}
                         </div>
                         <div className="subfield dots-subfield">
-                            {dotsPopupChild}
+                            {false && dotsPopupChild}
                         </div>
                     </div>
                 }

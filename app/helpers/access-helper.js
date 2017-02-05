@@ -30,6 +30,7 @@ export default {
         keyName,
         handleSectionAccess,
         selectOverview,
+        selectDotsExpand,
         selectAudioOption,
         selectTips,
         togglePlay,
@@ -68,6 +69,10 @@ export default {
             case 'z':
                 selectOverview(true)
                 break
+            // Toggle selected dots index.
+            case 'u':
+                selectDotsExpand(true)
+                break
             // Toggle admin.
             case 'm':
                 toggleAdmin()
@@ -99,9 +104,9 @@ export default {
                 case 'w':
                     accessedSectionKey = AUDIO_SECTION
                     break
-                case 'u':
-                    accessedSectionKey = DOTS_SECTION
-                    break
+                // case 'u':
+                //     accessedSectionKey = DOTS_SECTION
+                //     break
                 case 'l':
                     accessedSectionKey = LYRICS_SECTION
                     break
