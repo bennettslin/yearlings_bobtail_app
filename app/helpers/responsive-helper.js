@@ -148,7 +148,6 @@ export const getShowSingleLyricColumn = (props, state, selectedSongIndex) => {
 export const getIsHiddenNav = (state) => {
     const { windowHeight } = state
 
-    //
     return getIsPhone(state) || windowHeight < HIDDEN_NAV_MIN
 }
 

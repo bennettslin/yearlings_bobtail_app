@@ -10,7 +10,7 @@ import DotsSection from './dots/dots-section'
 import ScorePopup from './score/score-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav } from 'helpers/responsive-helper'
+import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -26,6 +26,7 @@ const Live = (props) => {
         isPhone = getIsPhone(props),
         isHiddenNav = getIsHiddenNav(props),
         isHeightlessLyricColumn = getIsHeightlessLyricColumn(props),
+        scoresTipsOutsideMenu = getScoresTipsOutsideMenu(props),
         showSingleBookColumn = getShowSingleBookColumn(props),
         shrinkNavIcon = getShrinkNavIcon(props)
 
@@ -41,6 +42,7 @@ const Live = (props) => {
             isPhone={isPhone}
             isHiddenNav={isHiddenNav}
             isHeightlessLyricColumn={isHeightlessLyricColumn}
+            scoresTipsOutsideMenu={scoresTipsOutsideMenu}
             showSingleBookColumn={showSingleBookColumn}
             shrinkNavIcon={shrinkNavIcon}
         />
@@ -137,6 +139,7 @@ const LiveView = ({
     hasDoubleColumns,
     isHiddenNav,
     isHeightlessLyricColumn,
+    scoresTipsOutsideMenu,
     showSingleBookColumn,
     shrinkNavIcon
 
@@ -162,6 +165,7 @@ const LiveView = ({
             deviceIndex,
             isHiddenNav,
             isHeightlessLyricColumn,
+            scoresTipsOutsideMenu,
 
             isLogue,
             isFirstVerse,

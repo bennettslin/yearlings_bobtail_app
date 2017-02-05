@@ -3,7 +3,7 @@ import MenuField from './menu-field'
 import NavSection from './nav/nav-section'
 import AudioBanner from './audio/audio-banner'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
-import { getIsDesktop, getScoresTipsOutsideMenu } from 'helpers/responsive-helper'
+import { getIsDesktop } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -11,13 +11,11 @@ import { getIsDesktop, getScoresTipsOutsideMenu } from 'helpers/responsive-helpe
 
 const MainColumn = (props) => {
 
-    const scoresTipsOutsideMenu = getScoresTipsOutsideMenu(props),
-        isDesktop = getIsDesktop(props.deviceIndex)
+    const isDesktop = getIsDesktop(props.deviceIndex)
 
     return (
         <MainColumnView {...props}
             isDesktop={isDesktop}
-            scoresTipsOutsideMenu={scoresTipsOutsideMenu}
         />
     )
 }
@@ -36,6 +34,7 @@ const MainColumnView = ({
     deviceIndex,
     isHiddenNav,
     isHeightlessLyricColumn,
+    scoresTipsOutsideMenu,
 
     isFirstVerse,
     isLastVerse,
@@ -83,8 +82,7 @@ const MainColumnView = ({
     scoresTipsSectionChild,
 
     // From controller.
-    isDesktop,
-    scoresTipsOutsideMenu
+    isDesktop
 
 }) => {
     const menuFieldProps = {
