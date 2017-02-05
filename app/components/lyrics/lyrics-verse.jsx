@@ -135,12 +135,21 @@ class LyricsVerseView extends Component {
                 isTitle,
                 onLyricPlayClick,
 
-            ...other } = this.props
+            ...other } = this.props,
+
+            { verseIndex } = verseObject,
+
+            hasVerseIndex = !isNaN(verseIndex),
+
+            // If no verse index, we'll count it as odd.
+            isEven = hasVerseIndex && verseIndex % 2 === 0,
+
+            verseIndexClass = ` ${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
 
         return (
             <div
                 ref={(node) => (this.myVerse = node)}
-                className={`verse ${inVerseBar ? 'bar-' : ''}verse-${verseObject.verseIndex}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
+                className={`verse ${isEven ? 'even' : 'odd'}${verseIndexClass}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
             >
                 {isInteractable && !inVerseBar &&
                     <LyricsAudioButton

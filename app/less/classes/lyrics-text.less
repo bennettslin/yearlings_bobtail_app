@@ -1,4 +1,8 @@
 @stanza-block-margin: 10px;
+@odd-verse-colour: #fefefa;
+@even-verse-colour: #fcfce9;
+@selected-verse-colour: #dfd;
+
 
 .lyrics-block {
     padding: 20px 0;
@@ -114,11 +118,11 @@
             }
         }
 
-        &:nth-child(odd) {
-            background-color: #fefefa;
+        &.odd {
+            background-color: @odd-verse-colour;
         }
-        &:nth-child(even) {
-            background-color: #fcfce9;
+        &.even {
+            background-color: @even-verse-colour;
         }
 
         .transition(color 0.1s ease);
@@ -218,7 +222,7 @@
 .verse-bar-hidden {
     .verse.interactable.selected {
         color: blue;
-        background-color: #bfb;
+        background-color: @selected-verse-colour;
     }
 }
 
@@ -278,16 +282,12 @@
 .verse .anchor-block, .portal-anchor {
 
     white-space: nowrap;
-    color: #666;
 
-    @offset: 0.75px;
-    @blur: 0px;
-    @colour: @drawing-field-colour;
     text-shadow:
-    -@offset -@offset @blur @colour,
-    @offset -@offset @blur @colour,
-    -@offset @offset @blur @colour,
-    @offset @offset @blur @colour;
+    -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
+    @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
+    -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour,
+    @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour;
 
     // Underline anchor tag.
     .underline-bar {
@@ -304,4 +304,20 @@
             background-color: mix(@lyric-link-colour, white, 25%);
         }
     }
+}
+
+.verse.even .anchor-block {
+    text-shadow:
+    -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-verse-colour,
+    @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-verse-colour,
+    -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-verse-colour,
+    @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-verse-colour;
+}
+
+.verse.selected .anchor-block {
+    text-shadow:
+    -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @selected-verse-colour,
+    @text-shadow-offset -@text-shadow-offset @text-shadow-blur @selected-verse-colour,
+    -@text-shadow-offset @text-shadow-offset @text-shadow-blur @selected-verse-colour,
+    @text-shadow-offset @text-shadow-offset @text-shadow-blur @selected-verse-colour;
 }

@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `accessibility refactor.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
         taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
         workedHours: 0,
         neededHours: 5

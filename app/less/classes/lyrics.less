@@ -26,16 +26,17 @@
     background-color: rgba(150, 150, 250, 0.4);
 }
 
-.verse-above {
-    .lyric-column-animatable {
-        // background-color: rgba(250, 150, 150, 0.4);
-    }
-}
+.verse-bar {
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: @selected-verse-colour;
+    cursor: pointer;
 
-.verse-below {
-    .lyric-column-animatable {
-        // background-color: rgba(150, 250, 150, 0.4);
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 3px 12px 5px @darker-box-shadow-colour;
 }
 
 // TODO: Make this styling better, of course.
@@ -48,7 +49,11 @@
     justify-content: center;
     align-items: center;
 
+    @verse-bar-margin: 8px;
+
     &.above {
+        margin-top: @verse-bar-margin;
+
         .transition(~"top 0.2s ease, transform 0.2s ease");
 
         &.shown {
@@ -61,6 +66,8 @@
     }
 
     &.below {
+        margin-bottom: @verse-bar-margin;
+
         .transition(~"bottom 0.2s ease, transform 0.2s ease");
 
         &.shown {
@@ -70,6 +77,10 @@
         &.hidden {
             bottom: -50px;
         }
+
+        .verse-bar {
+            box-shadow: 0 0 12px 5px @darker-box-shadow-colour;
+        }
     }
 
     &.shown {
@@ -78,23 +89,6 @@
 
     &.hidden {
         transform: scale(0);
-    }
-}
-
-.verse-bar {
-    padding: 5px 15px;
-    border-radius: 10px;
-    background-color: #bfb;
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.verse-above.verse-below {
-    .lyric-column-animatable {
-        background-color: rgba(250, 250, 150, 0.4);
     }
 }
 

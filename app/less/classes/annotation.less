@@ -1,8 +1,4 @@
-.annotation-cards-block {
-    // display: flex;
-    // justify-content: center;
-    // align-items: flex-start;
-}
+@annotation-text-colour: #f4f4ff;
 
 .annotation-section {
 
@@ -10,7 +6,7 @@
         min-height: 1.8em;
         margin: 5px 0;
         padding: 5px;
-        background-color: #f4f4ff;
+        background-color: @annotation-text-colour;
         box-shadow: 0 1px 1px 1px @box-shadow-colour;
 
         // Select for annotation card dots, not portal dots.
@@ -21,15 +17,13 @@
             height: @dot-diameter;
         }
 
+        // TODO: Portals block needs its own text shadow?
         .text-span, .portals-block {
-            @colour: white;
-            @offset: 0.75px;
-            @blur: 0;
             text-shadow:
-                -@offset -@offset @blur @colour,
-                @offset -@offset @blur @colour,
-                -@offset @offset @blur @colour,
-                @offset @offset @blur @colour;
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @annotation-text-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @annotation-text-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @annotation-text-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @annotation-text-colour;
         }
     }
 }
