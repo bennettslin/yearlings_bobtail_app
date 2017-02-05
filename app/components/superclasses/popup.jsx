@@ -62,29 +62,34 @@ class PopupTransitionGroup extends Component {
                 onPopupContainerClick } = this.props
 
         return element && (
-            <div
-                className={`popup-content-wrapper ${className}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
-                onClick={e => onPopupContainerClick(e, className)}
-            >
-                {element}
+            <div className="popup-wrapper">
                 {!hideClose &&
-                    <PopupButton
-                        onPopupButtonClick={onPopupButtonClick}
-                        buttonName={CLOSE}
-                    />
+                    <div className="close-button-shadow"></div>
                 }
-                {showArrows &&
-                    <PopupButton
-                        onPopupButtonClick={onPopupButtonClick}
-                        buttonName={PREVIOUS}
-                    />
-                }
-                {showArrows &&
-                    <PopupButton
-                        onPopupButtonClick={onPopupButtonClick}
-                        buttonName={NEXT}
-                    />
-                }
+                <div
+                    className={`popup-content-wrapper ${className}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
+                    onClick={e => onPopupContainerClick(e, className)}
+                >
+                    {element}
+                    {!hideClose &&
+                        <PopupButton
+                            onPopupButtonClick={onPopupButtonClick}
+                            buttonName={CLOSE}
+                        />
+                    }
+                    {showArrows &&
+                        <PopupButton
+                            onPopupButtonClick={onPopupButtonClick}
+                            buttonName={PREVIOUS}
+                        />
+                    }
+                    {showArrows &&
+                        <PopupButton
+                            onPopupButtonClick={onPopupButtonClick}
+                            buttonName={NEXT}
+                        />
+                    }
+                </div>
             </div>
         )
     }
