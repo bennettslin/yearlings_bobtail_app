@@ -128,6 +128,11 @@ class App extends Component {
         this.state = {
             isAdmin: false,
             isPlaying: false,
+
+            popupSongIndex: props.selectedSongIndex,
+            popupAnnotationIndex: props.selectedAnnotationIndex,
+            popupWikiIndex: props.selectedWikiIndex,
+
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
             // If no annotation selected, default to 1.
@@ -384,6 +389,9 @@ class App extends Component {
     }
 
     selectSong(e, selectedSongIndex = 0, direction, fromPortal) {
+
+        const { preservePreviousPopupIndex } = e
+
         this._stopPropagation(e)
 
         // Called from audio section's previous or next buttons.
@@ -443,6 +451,11 @@ class App extends Component {
         }
 
         this.selectBookColumn(e, true, selectedSongIndex)
+
+        if (!preservePreviousPopupIndex) {
+            newState.popupSongIndex = selectedSongIndex
+        }
+
         this.props.selectSongIndex(selectedSongIndex)
         this.setState(newState)
     }
@@ -467,7 +480,12 @@ class App extends Component {
          * If option is to continue, advance to next song. Otherwise, stay
          * on same song, and start at beginning. (True evaluates to 1, false 0.)
          */
-        this.selectSong({ skipHandleSectionAccess: true }, selectedSongIndex + willAdvance)
+        this.selectSong({
+            skipHandleSectionAccess: true,
+
+            // FIXME: This should be set based on whether an annotation, score, or wiki popup is currently shown.
+            preservePreviousPopupIndex: true
+        }, selectedSongIndex + willAdvance)
     }
 
     selectAudioOption(e, direction = 1) {
