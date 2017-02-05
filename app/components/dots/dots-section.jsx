@@ -34,10 +34,12 @@ const DotsSectionView = ({
     // From controller.
     sectionAccessHighlighted,
     sectionNextHighlighted,
+    onPopupContainerClick,
 
 ...other }) => (
     <div
         className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
+        onClick={e => onPopupContainerClick(e)}
     >
         <DotBlock {...other}
             inDotsSection={true}

@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Allow dots section to fit in narrow heights.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `accessibility refactor.`,
         workedHours: 0,
         neededHours: 8
@@ -16,11 +21,6 @@ module.exports = [
     },
     {
         taskName: `Show pdfs properly in all browsers.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Allow dots section to fit in narrow heights.`,
         workedHours: 0,
         neededHours: 2
     },

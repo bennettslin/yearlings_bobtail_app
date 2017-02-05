@@ -274,7 +274,8 @@ const LiveView = ({
             accessedSectionKey,
             nextSectionKey,
             accessedDotIndex,
-            onDotClick
+            onDotClick,
+            onPopupContainerClick
         },
         scorePopupProps = {
             scores,
