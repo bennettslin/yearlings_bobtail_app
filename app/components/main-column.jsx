@@ -167,6 +167,9 @@ const MainColumnView = ({
                     <div className="overview-popup-container">
                         {overviewPopupChild}
                     </div>
+                    <div className="dots-subfield">
+                        {dotsSectionChild}
+                    </div>
                     {!isDesktop && scoresTipsOutsideMenu && scoresTipsSectionChild}
                 </div>
 
