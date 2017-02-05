@@ -13,6 +13,8 @@
 @overview-toggle-phone-width: @app-icon-diameter + @app-thin-margin * 2;
 @overview-toggle-phone-height: @overview-toggle-phone-width * 1.5;
 
+@dots-subfield-margin: 16px;
+
 @toggle-animation-duration: 0.2s;
 
 // In main field.
@@ -72,6 +74,8 @@
 }
 
 .dots-row {
+    position: relative;
+
     border: 1px dotted green;
     flex-grow: 1;
 
@@ -101,13 +105,20 @@
 
 .dots-subfield {
     position: absolute;
-    border: 2px dotted orange;
-    .transition(transform 0.2s ease);
+    margin-left: -@dots-subfield-margin;
+    margin-top: @dots-subfield-margin / 2;
+    padding: 10px;
+
+    .transition(~"margin-left 0.2s ease, transform 0.2s ease");
     transform: translateX(-100%);
+
+    box-shadow: -2px 2px 8px 8px @box-shadow-colour;
+    background-color: white;
 }
 
 .dots-shown {
     .dots-subfield {
+        margin-left: @dots-subfield-margin;
         transform: translateX(0);
     }
 }
@@ -141,21 +152,32 @@
         }
     }
 
-    // Overview is at the bottom in tablet and mini.
-    .overview.popup-content-wrapper {
-        bottom: 0;
-    }
-
     .dots-overview-toggle-section {
         width: @overview-toggle-tablet-width;
     }
 
-    .dots-overview-toggle-section, .dots-row {
-        flex-direction: column-reverse;
-    }
-
     .overview-toggle-button-container {
         height: @overview-toggle-tablet-height;
+    }
+
+    // Overview and dots toggle are at the bottom in tablet and mini.
+    &.tablet-width, &.mini-width {
+
+        .overview.popup-content-wrapper {
+            bottom: 0;
+        }
+
+        .dots-overview-toggle-section, .dots-row {
+            flex-direction: column-reverse;
+        }
+
+        .dots-subfield {
+            top: auto;
+            bottom: 0;
+
+            margin-top: 0;
+            margin-bottom: @dots-subfield-margin / 2;
+        }
     }
 
     &.mini-width {
@@ -174,15 +196,6 @@
             .dots-overview-toggle-section {
                 margin-left: -@overview-toggle-phone-width;
             }
-        }
-
-        // In phone, overview and dots toggle are once again on top.
-        .dots-overview-toggle-section, .dots-row {
-            flex-direction: column;
-        }
-
-        .overview.popup-content-wrapper {
-            bottom: auto;
         }
 
         .dots-overview-toggle-section {

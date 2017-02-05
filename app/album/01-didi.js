@@ -11,7 +11,7 @@ import { INSTRUMENTAL,
          REFERENCE,
          SONGWRITING,
          AFTERWORD,
-         PULPIT } from 'helpers/constants'
+         OBSERVATION } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -477,7 +477,7 @@ module.exports = {
                         ],
                         dotKeys: {
                             [AFTERWORD]: true,
-                            [PULPIT]: true
+                            [OBSERVATION]: true
                         }
                     }
                 }

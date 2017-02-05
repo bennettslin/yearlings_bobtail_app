@@ -1,13 +1,23 @@
 module.exports = [
     {
-        taskName: `Move dots into dots overview toggle section`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Score popups.`,
+        taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Individual score pdfs.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Show pdfs properly in all browsers.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Allow dots section to fit in narrow heights.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `When song finishes playing, proceed to next more smoothly.`,
@@ -45,11 +55,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Make portals fit well in admin`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Scrolling lyric column should unhover hovered verse.`,
         workedHours: 0,
         neededHours: 3
@@ -78,11 +83,6 @@ module.exports = [
         taskName: `Figure out scrolling rules`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `allow annotation to remain selected when song advances to next song.`,
-        workedHours: 0,
-        neededHours: 5
     },
     {
         taskName: `show ear and expand buttons in collapsed lyric column only upon scroll down.`,
@@ -1126,4 +1126,14 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Move dots into dots overview toggle section`,
+        workedHours: 4,
+        neededHours: 4
+    },
+    {
+        taskName: `Score popups.`,
+        workedHours: 3,
+        neededHours: 3
+    }
 ]

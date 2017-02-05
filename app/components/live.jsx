@@ -274,9 +274,7 @@ const LiveView = ({
             accessedSectionKey,
             nextSectionKey,
             accessedDotIndex,
-            onDotClick,
-            onPopupButtonClick: onDotsExpandClick,
-            onPopupContainerClick
+            onDotClick
         },
         scorePopupProps = {
             scores,
@@ -345,11 +343,6 @@ const LiveView = ({
                 </div>
             }
 
-            {false && showFullPopup &&
-                <div className="full-popup-subfield dots-subfield">
-                    <DotsPopup {...dotsSectionProps} />
-                </div>
-            }
         </div>
     )
 }

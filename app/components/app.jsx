@@ -939,7 +939,7 @@ class App extends Component {
          * column, if nav is collapsed, or if lyric is expanded.
          */
         if (e) {
-            if (!getShowSingleBookColumn(this.state) || this.props.selectedNavIndex || (getIsLyricExpandable(this.state) && this.state.isLyricExpanded)) {
+            if (!getShowSingleBookColumn(this.state) || !this.props.selectedNavIndex || (getIsLyricExpandable(this.state) && this.state.isLyricExpanded)) {
                 return
             }
         }

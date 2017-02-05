@@ -154,9 +154,6 @@ const MainColumnView = ({
                         <div className="subfield annotation-subfield">
                             {annotationPopupChild}
                         </div>
-                        <div className="subfield dots-subfield">
-                            {false && dotsPopupChild}
-                        </div>
                     </div>
                 }
 

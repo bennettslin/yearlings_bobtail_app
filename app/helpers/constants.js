@@ -13,7 +13,6 @@ const LYRIC = 'lyric',
     NARRATIVE = 'narrative',
     FORESHADOW = 'foreshadow',
     SONGWRITING = 'songwriting',
-    PULPIT = 'pulpit',
     REFERENCE = 'reference',
     PORTAL = 'portal',
     AFTERWORD = 'afterword',
@@ -312,7 +311,6 @@ module.exports = {
     NARRATIVE,
     FORESHADOW,
     SONGWRITING,
-    PULPIT,
     REFERENCE,
     PORTAL,
     AFTERWORD,
@@ -327,8 +325,7 @@ module.exports = {
         OBSERVATION,
         PORTAL,
         // FORESHADOW,
-        AFTERWORD, // My perspective while making this website.
-        PULPIT
+        AFTERWORD // My perspective while making this website.
     ],
 
     // In dot stanzas, at least songwriting and afterword are always first.
@@ -340,8 +337,7 @@ module.exports = {
         REFERENCE,
         BACKSTORY,
         OBSERVATION,
-        PORTAL,
-        PULPIT
+        PORTAL
     ],
 
     DOT_DESCRIPTIONS: {
@@ -350,7 +346,6 @@ module.exports = {
         [PUN]: 'Of both the "literary" and "bad" variety.',
         // [FORESHADOW]: 'foreshadow description',
         [SONGWRITING]: 'music description',
-        [PULPIT]: 'pulpit description',
         [REFERENCE]: 'wiki description',
         [PORTAL]: 'portal description',
         [AFTERWORD]: 'after the album',
