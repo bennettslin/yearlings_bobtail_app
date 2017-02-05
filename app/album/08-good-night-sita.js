@@ -633,12 +633,12 @@ module.exports = {
                                 anchor: `Television`,
                                 wiki: `Television_(band)`
                             },
-                            `are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound with this song, I listened to`,
+                            `are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to`,
                             {
                                 anchor: `Marquee Moon`,
                                 wiki: `Marquee_Moon`
                             },
-                            `on repeat to gather ideas. The "descending triplets" lick here was stolen note for note from the song "Friction."`
+                            `on repeat to gather ideas. The "tumbling triplets" lick here was stolen note for note from the song "Friction."`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true

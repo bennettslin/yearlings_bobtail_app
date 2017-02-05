@@ -135,11 +135,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `colour verse based on odd or even`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `write album overview`,
         workedHours: 0,
         neededHours: 6
@@ -1140,5 +1135,10 @@ module.exports = [
         taskName: `Score popups.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `colour verse based on odd or even`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
