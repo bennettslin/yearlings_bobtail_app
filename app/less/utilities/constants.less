@@ -1,7 +1,6 @@
 // Section colours.
 @section-colour: rgba(255, 255, 255, 0.5);
 @box-shadow-colour: rgba(100, 100, 120, 0.2);
-@dark-box-shadow-colour: rgba(50, 50, 75, 0.3);
 @darker-box-shadow-colour: rgba(25, 25, 50, 0.4);
 
 // Rows.
@@ -86,15 +85,14 @@
 // Menu should be higher than centre field and lyrics.
 @menu-subfield-z-index: @menu-field-z-index + 1;
 
-@popup-content-z-index: @menu-subfield-z-index + 1;
-
 // Dot interactable should be above dot tooltip.
-@dot-tooltip-z-index: @popup-content-z-index + 1;
+@dot-tooltip-z-index: @menu-subfield-z-index + 1;
 @dot-interactable-z-index: @dot-tooltip-z-index + 1;
 
 @popup-overlay-z-index: @dot-interactable-z-index + 1;
+@popup-content-z-index: @popup-overlay-z-index + 1;
 
-@wiki-popup-content-z-index: @popup-overlay-z-index + 1;
+@wiki-popup-content-z-index: @popup-content-z-index + 1;
 
 // Popup button should be above dot.
 @popup-interactable-z-index: @wiki-popup-content-z-index + 1;

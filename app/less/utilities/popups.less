@@ -2,15 +2,14 @@
 @full-subfield: @app-large-icon-diameter;
 @mini-full-subfield: 10px;
 
-.popup-field {
+.popup-field, .popup-field .subfield, .popup-transition-group {
     position: absolute;
     width: 100%;
     height: 100%;
+}
 
+.popup-field {
     .subfield {
-        position: absolute;
-        width: 100%;
-        height: 100%;
         top: 0;
         left: 0;
     }
@@ -20,12 +19,8 @@
     box-sizing: border-box;
 
     &:not(.overview) {
-        position: absolute;
         top: 0;
         left: 0;
-
-        width: 100%;
-        height: 100%;
 
         display: flex;
         justify-content: center;
@@ -34,22 +29,8 @@
 }
 
 .popup-wrapper {
-    
-}
-
-.popup-content-wrapper {
-
-    // Needed for positioning in Safari.
     position: relative;
-
-    &.overview {
-        position: absolute;
-    }
-
     z-index: @popup-content-z-index;
-
-    box-shadow: -2px 2px 8px 8px @box-shadow-colour;
-    background-color: white;
 
     /**
      * If changing these duration values, don't forget to also change
@@ -73,16 +54,6 @@
         }
     }
 
-    &.dots {
-        padding: 35px @popup-content-side-padding 20px;
-    }
-
-    &.annotation {
-        width: 400px;
-        max-width: 400px;
-        padding: 20px @popup-content-side-padding;
-    }
-
     &.wiki, &.score {
         width: ~"calc(100% - @{full-subfield} * 2.5)";
         max-width: @laptop-max-width;
@@ -90,96 +61,109 @@
         height: ~"calc(100% - @{full-subfield} * 2)";
     }
 
-    .popup-button {
+    &.annotation {
+        width: 400px;
+        max-width: 400px;
+    }
+}
+
+.popup-content-wrapper {
+    box-shadow: -2px 2px 8px 8px @box-shadow-colour;
+    background-color: white;
+    position: relative;
+
+    &:not(.overview) {
+        width: 100%;
+        height: 100%;
+    }
+
+    &.annotation {
+        padding: 20px @popup-content-side-padding;
+    }
+}
+
+.popup-button {
+    position: absolute;
+    height: @app-large-icon-diameter;
+    width: @app-large-icon-diameter;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popup-button-interactable {
         position: absolute;
-        height: @app-large-icon-diameter;
-        width: @app-large-icon-diameter;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: @popup-interactable-z-index;
+    }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &.close-button {
+        top: 0;
+        right: 0;
 
-        .popup-button-interactable {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: @popup-interactable-z-index;
-        }
-
-        &.close-button {
-            top: 0;
-            right: 0;
-        }
-
-        &.side-button {
-            top: 50%;
-            transform: translateY(-50%);
-
-            border-radius: 50%;
-            box-shadow: -1px 1px 2px 2px @box-shadow-colour;
-            background-color: #dfd;
-        }
-
-        &.previous-button {
-            left: -@app-large-icon-diameter * 0.85;
-        }
-
-        &.next-button {
-            right: -@app-large-icon-diameter * 0.85;
+        &.shadow {
+            display: none;
         }
     }
 
-    // .close-button-shadow {
-    //     position: absolute;
-    //     height: @app-large-icon-diameter;
-    //     width: @app-large-icon-diameter;
-    //     box-shadow: -2px 2px 8px 8px @dark-box-shadow-colour;
-    //     z-index: -1;
-    // }
+    &.side-button {
+        top: 50%;
+        transform: translateY(-50%);
+
+        border-radius: 50%;
+        box-shadow: -1px 1px 2px 2px @box-shadow-colour;
+        background-color: #dfd;
+    }
+
+    &.previous-button {
+        left: -@app-large-icon-diameter * 0.85;
+    }
+
+    &.next-button {
+        right: -@app-large-icon-diameter * 0.85;
+    }
 }
 
 .full-popup-subfield {
     .popup-content-wrapper {
         box-sizing: border-box;
-        box-shadow: -2px 2px 8px 8px @dark-box-shadow-colour;
-        z-index: @wiki-popup-content-z-index;
+        box-shadow: -2px 2px 8px 8px @darker-box-shadow-colour;
     }
 }
 
-.monitor-width, .laptop-width, .tablet-width {
-    .popup-content-wrapper {
+.is-desktop, .tablet-width {
+    .popup-wrapper {
         &.wiki, &.score {
-            .popup-button.close-button {
-                top: -@app-large-icon-diameter;
+            .close-button {
+                top: -@app-large-icon-diameter * 0.7;
+                right: -@app-large-icon-diameter * 0.7;
+                border-radius: 50%;
 
                 // Duplicates annotation side button styles.
-                border-radius: 50%;
                 box-shadow: -1px 1px 2px 2px @box-shadow-colour;
                 background-color: #fdd;
 
-                top: -@app-large-icon-diameter * 0.7;
-                right: -@app-large-icon-diameter * 0.7;
+                &.shadow {
+                    display: block;
+                    box-shadow: -2px 2px 8px 8px @darker-box-shadow-colour;
+                    overflow: hidden;
+                }
             }
         }
     }
 }
 
-.mini-width, .phone-width {
-    .popup-content-wrapper {
+.is-mobile:not(.tablet-width) {
+    .popup-wrapper {
         &.wiki, &.score {
             width: ~"calc(100% - @{mini-full-subfield} * 2)";
             height: ~"calc(100% - @{app-icon-diameter} * 2)";
-
-        }
-
-        &.dots {
-            padding: 20px @popup-content-side-padding;
         }
 
         .popup-button {
-
             &.close-button {
                 display: none;
             }
@@ -187,7 +171,7 @@
     }
 
     &.phone-width {
-        .popup-content-wrapper {
+        .popup-wrapper {
             &.wiki, &.score {
                 // Make side margin in phone just that much thinner.
                 width: ~"calc(100% - @{mini-full-subfield})";
@@ -195,7 +179,7 @@
         }
 
         .heightless-lyric {
-            .popup-content-wrapper {
+            .popup-wrapper {
                 &.wiki, &.score {
                     height: ~"calc(100% - @{mini-full-subfield})";
                 }
@@ -203,12 +187,12 @@
         }
     }
 
-    // Reverse width and height when not enough height.
+    // Reverse width and height when width is greater than height.
     .heightless-lyric {
-        .popup-content-wrapper {
+        .popup-wrapper {
             &.wiki, &.score {
-                height: ~"calc(100% - @{mini-full-subfield} * 2)";
                 width: ~"calc(100% - @{app-icon-diameter} * 2)";
+                height: ~"calc(100% - @{mini-full-subfield} * 2)";
             }
         }
     }

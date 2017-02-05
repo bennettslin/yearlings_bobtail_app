@@ -352,7 +352,7 @@ module.exports = {
                                     anchor: `hamartia`,
                                     wiki: `Hamartia`
                                 },
-                                `is the character flaw that leads to a protagonist's downfall. (I've since learned that the accent is on the third syllable. However, my English teacher pronounced it as I have, so I plead miseducation.) A famous example is Oedipus, whose arrogance leads him to believe that prophecy can be escaped. Here, my parents ask whether I've learned the lesson of Oedipus, while mocking my past belief of being born from the stars, or in their words, "a Martian."`
+                                `is the character flaw that leads to a protagonist's downfall. (I've since learned that the accent is on the third syllable. But my English teacher pronounced it as I have here, so I plead miseducation.) A famous example is Oedipus, whose arrogance leads him to believe that prophecy can be escaped. Here, my parents ask whether I've learned the lesson of Oedipus, while mocking my past belief of being born from the stars, or in their words, "a Martian."`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,

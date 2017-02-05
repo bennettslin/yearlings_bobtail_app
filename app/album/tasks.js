@@ -40,11 +40,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Allow box shadow for popup buttons that hang over edge.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Figure out when portal has no description`,
         workedHours: 0,
         neededHours: 1
@@ -1138,6 +1133,11 @@ module.exports = [
     },
     {
         taskName: `colour verse based on odd or even`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Allow box shadow for popup buttons that hang over edge.`,
         workedHours: 2,
         neededHours: 2
     }

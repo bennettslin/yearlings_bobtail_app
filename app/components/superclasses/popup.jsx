@@ -62,9 +62,9 @@ class PopupTransitionGroup extends Component {
                 onPopupContainerClick } = this.props
 
         return element && (
-            <div className="popup-wrapper">
+            <div className={`popup-wrapper ${className}`}>
                 {!hideClose &&
-                    <div className="close-button-shadow"></div>
+                    <div className="popup-button close-button shadow"></div>
                 }
                 <div
                     className={`popup-content-wrapper ${className}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}

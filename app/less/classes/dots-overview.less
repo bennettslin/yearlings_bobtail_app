@@ -159,9 +159,9 @@
     }
 
     // Overview and dots toggle are at the bottom in tablet and mini.
-    &.tablet-width, &.mini-width {
+    &:not(.phone-width) {
 
-        .overview.popup-content-wrapper {
+        .overview.popup-wrapper {
             bottom: 0;
         }
 
@@ -213,7 +213,7 @@
             height: @overview-toggle-phone-height;
         }
 
-        .overview-toggle-button-container, .overview.popup-content-wrapper {
+        .overview-toggle-button-container, .overview.popup-wrapper {
             min-width: 100%;
         }
     }
