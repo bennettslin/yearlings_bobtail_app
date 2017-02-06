@@ -73,8 +73,9 @@ export const getShowSingleBookColumn = (state) => {
         deviceObject = DEVICE_OBJECTS[deviceIndex],
         deviceClassName = deviceObject.className
 
-    if (deviceClassName === PHONE_WIDTH || deviceClassName === MINI_WIDTH) {
-        return windowWidth < MINI_OBJECT.doubleColumnShrinkBreakpoint
+    if (deviceClassName === LAPTOP_WIDTH || deviceClassName === MINI_WIDTH || deviceClassName === PHONE_WIDTH) {
+        // Value for phone doesn't matter. Just keeps it from breaking.
+        return true
     } else {
         return windowWidth < deviceObject.doubleColumnShrinkBreakpoint
     }
@@ -84,7 +85,9 @@ const _getShrinkNavIconForDeviceObject = (windowWidth, deviceObject) => {
     const { doubleColumnStaticBreakpoint,
             doubleColumnShrinkBreakpoint,
             singleColumnStaticBreakpoint } = deviceObject
-    return windowWidth < singleColumnStaticBreakpoint || (windowWidth >= doubleColumnShrinkBreakpoint && windowWidth < doubleColumnStaticBreakpoint)
+    return windowWidth < singleColumnStaticBreakpoint ||
+        ((doubleColumnShrinkBreakpoint && windowWidth >= doubleColumnShrinkBreakpoint) &&
+        (doubleColumnStaticBreakpoint && windowWidth < doubleColumnStaticBreakpoint))
 }
 
 const _getScoresTipsOutsideMenuForDeviceObject = (windowWidth, deviceObject) => {
@@ -174,6 +177,8 @@ export const getScoresTipsOutsideMenu = (state) => {
 
     if (deviceObject.className === PHONE_WIDTH) {
         return true
+    } else if (deviceObject.className === TABLET_WIDTH) {
+        return false
     } else {
         return _getScoresTipsOutsideMenuForDeviceObject(windowWidth, deviceObject)
     }

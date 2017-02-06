@@ -52,18 +52,13 @@
     }
 
     &.tablet-width {
-        .lyric-expanded, .overview-shown, .annotation-shown, .dots-shown {
-            .scores-tips-section {
-                right: -@scores-tips-tablet-width;
-            }
-        }
-
         .scores-tips-menu-subfield {
             min-width: @scores-tips-tablet-width;
         }
     }
 
     &.mini-width {
+        // Affects section in centre field only.
         .lyric-expanded, .overview-shown, .annotation-shown, .dots-shown {
             .scores-tips-section {
                 right: -@scores-tips-mini-width;
@@ -82,10 +77,9 @@
             }
         }
 
-        .centre-field {
-            .scores-tips-section {
-                bottom: auto;
-            }
+        // In phone, section is always in centre field.
+        .scores-tips-section {
+            bottom: auto;
         }
     }
 }

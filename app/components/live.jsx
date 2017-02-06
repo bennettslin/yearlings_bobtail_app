@@ -10,7 +10,7 @@ import DotsSection from './dots/dots-section'
 import ScorePopup from './score/score-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu } from 'helpers/responsive-helper'
+import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu, getTitleInAudio } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -24,6 +24,7 @@ const Live = (props) => {
         selectedWikiUrl = getWikiUrl(props),
 
         isPhone = getIsPhone(props),
+        titleInAudio = getTitleInAudio(props),
         isHiddenNav = getIsHiddenNav(props),
         isHeightlessLyricColumn = getIsHeightlessLyricColumn(props),
         scoresTipsOutsideMenu = getScoresTipsOutsideMenu(props),
@@ -40,6 +41,7 @@ const Live = (props) => {
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
             isPhone={isPhone}
+            titleInAudio={titleInAudio}
             isHiddenNav={isHiddenNav}
             isHeightlessLyricColumn={isHeightlessLyricColumn}
             scoresTipsOutsideMenu={scoresTipsOutsideMenu}
@@ -137,6 +139,7 @@ const LiveView = ({
     presentDotKeys,
     selectedSongLyrics,
     hasDoubleColumns,
+    titleInAudio,
     isHiddenNav,
     isHeightlessLyricColumn,
     scoresTipsOutsideMenu,
@@ -163,6 +166,7 @@ const LiveView = ({
 
             isPhone,
             deviceIndex,
+            titleInAudio,
             isHiddenNav,
             isHeightlessLyricColumn,
             scoresTipsOutsideMenu,
@@ -312,6 +316,7 @@ const LiveView = ({
             ${selectedAnnotationIndex ? ' annotation-shown' : ''}
             ${isLogue ? ' is-logue' : ' is-song'}
             ${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}
+            ${titleInAudio ? ' title-in-audio' : ''}
             ${isHeightlessLyricColumn ? ' heightless-lyric' : ''}
             ${selectedNavIndex ? ' nav-expanded' : ''}
             ${selectedDotsIndex ? ' dots-shown' : ''}

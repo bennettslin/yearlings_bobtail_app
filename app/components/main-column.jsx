@@ -32,6 +32,7 @@ const MainColumnView = ({
     isPhone,
     isLogue,
     deviceIndex,
+    titleInAudio,
     isHiddenNav,
     isHeightlessLyricColumn,
     scoresTipsOutsideMenu,
@@ -85,7 +86,7 @@ const MainColumnView = ({
 
 }) => {
     const menuFieldProps = {
-            deviceIndex,
+            titleInAudio,
             scoresTipsOutsideMenu,
 
             isPhone,
@@ -169,7 +170,7 @@ const MainColumnView = ({
                     </div>
 
                     {lyricExpandButtonChild}
-                    
+
                     <div className="dots-subfield">
                         {dotsSectionChild}
                     </div>

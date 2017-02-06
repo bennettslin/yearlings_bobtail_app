@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `get rid of unneeded device width breakpoints`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `show ear and expand buttons in collapsed lyric column only upon scroll down.`,
         workedHours: 0,
         neededHours: 2
@@ -1180,6 +1175,11 @@ module.exports = [
     },
     {
         taskName: `Bug with nav z-index wrong when lyric expanded`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `get rid of unneeded device width breakpoints`,
         workedHours: 1,
         neededHours: 1
     }
