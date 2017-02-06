@@ -14,6 +14,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
+    {
+        taskName: `Bug with nav z-index wrong when lyric expanded`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     // Weekend 1.
     {
@@ -33,6 +38,11 @@ module.exports = [
     },
 
     // Weekend 2.
+    {
+        taskName: `Scroll into view if needed now works with React elements.`,
+        workedHours: 0,
+        neededHours: 3
+    },
 
     // Weekend 3.
     {
@@ -54,6 +64,11 @@ module.exports = [
         taskName: `Select time for player from portal`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Figure out annotations without headers`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     // Weekend 4.
@@ -81,6 +96,11 @@ module.exports = [
         taskName: `scroll to annotation after portal`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Allow scrolling over verse bar.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     // Hack Week.
