@@ -981,12 +981,9 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `illustrations`,
+            taskName: `review synopses and rough illustrations`,
             workedHours: 0,
-            neededHours: 0,
-            subtasks: [
-
-            ]
+            neededHours: 3,
         },
         {
             taskName: `annotations`,
