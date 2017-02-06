@@ -79,14 +79,9 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: [
-                            // TODO Come up with better word than docile.
-                            `Though I tried to write this song from Sita's perspective, it's possible that I unfairly caricatured her as a docile woman. But it's also possible that we both really`,
-                            {
-                                emphasis: `were`
-                            },
-                            `caricatures in our respective gender roles, given our youthful naivety. We had settled into an unhealthy power dynamic early on, then failed to grow as individuals. In hindsight, Sita was desperately waiting for me to grow up, because she couldn't do it without me. So that's what the music evokes: waiting… desperately.`
-                        ],
+
+                        // TODO: Resilient humming.
+                        description: `Sita and I had settled into an unhealthy power dynamic early on, then failed to grow as individuals. In hindsight, Sita was desperately waiting for me to grow up, because she couldn't do it without me. So that's what the music here evokes: waiting… desperately.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [OBSERVATION]: true,
@@ -146,6 +141,22 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            // TODO Come up with better word than docile.
+                            `Though I tried to write this song from Sita's perspective, it's possible that I unfairly caricatured her as a docile woman. But it's also possible that we both really`,
+                            {
+                                emphasis: `were`
+                            },
+                            `caricatures in our respective gender roles, given our youthful naivety. We had settled into an unhealthy power dynamic early on, then failed to grow as individuals.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],

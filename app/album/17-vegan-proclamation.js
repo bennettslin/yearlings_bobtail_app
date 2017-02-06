@@ -94,7 +94,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `As the previous song ends with me fading away while listening to my favourite records, the crackle of a needle on vinyl fittingly marks the transition to the third and final song of the medley.`,
+                        description: `As the previous song ends with me fading away while listening to my favourite records, the crackle of a needle on vinyl introduces the third and final song of the medley.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -195,7 +195,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast left an impact on me, so I tried to capture it here.`,
+                        description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. I thought this ironic contrast would work just as well here.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [OBSERVATION]: true,
