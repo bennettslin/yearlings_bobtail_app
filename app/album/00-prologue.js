@@ -3,12 +3,18 @@ module.exports = {
     title: 'prologue',
     scenes: [
         {
-            time: 0,
-            description: 'prologue description'
+            verseIndex: 0,
+            description: `Old Bennett is standing onstage, addressing the audience.`,
+            characters: {
+                oldBennett: 1
+            }
         }
     ],
     tip: {
         description: 'prologue tip'
     },
     overview: 'prologue text',
+    tasks: [
+
+    ]
 }

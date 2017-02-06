@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Expand button z-index is funky.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `get rid of unneeded device width breakpoints`,
         workedHours: 0,
         neededHours: 1
@@ -18,11 +13,6 @@ module.exports = [
         taskName: `Allow dots section to fit in narrow heights.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Bug with nav z-index wrong when lyric expanded`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     // Weekend 1.
@@ -45,6 +35,11 @@ module.exports = [
     // Weekend 2.
     {
         taskName: `Scroll into view if needed now works with React elements.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Get unit tests working again.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -1177,5 +1172,15 @@ module.exports = [
         taskName: `Allow box shadow for popup buttons that hang over edge.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Expand button z-index is funky.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Bug with nav z-index wrong when lyric expanded`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

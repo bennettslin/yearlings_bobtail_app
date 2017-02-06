@@ -156,7 +156,6 @@ const MainColumnView = ({
                     </div>
                 }
 
-                {lyricExpandButtonChild}
 
                 <div className="subfield dots-overview-subfield">
                     <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
@@ -168,6 +167,9 @@ const MainColumnView = ({
                     <div className="overview-popup-container">
                         {overviewPopupChild}
                     </div>
+
+                    {lyricExpandButtonChild}
+                    
                     <div className="dots-subfield">
                         {dotsSectionChild}
                     </div>

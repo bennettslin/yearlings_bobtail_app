@@ -95,9 +95,14 @@
 .lyric-button-block {
     position: absolute;
     padding: @app-thin-margin;
-    z-index: @lyric-column-button-z-index;
 
     background-color: gray;
+}
+
+.lyric-column {
+    .lyric-button-block {
+        z-index: @lyric-column-button-z-index;
+    }
 }
 
 .lyric-icon {

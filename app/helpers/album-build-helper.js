@@ -102,7 +102,6 @@ const _prepareAllSongs = (album) => {
 
             _parseLyrics(song.lyrics)
 
-            _gatherDrawings(song.scenes)
 
             song.isDoublespeaker = _tempStore._isDoublespeaker
 
@@ -116,6 +115,8 @@ const _prepareAllSongs = (album) => {
             // Add times for all verses to song object.
             song.times = _tempStore._songTimes
         }
+
+        _gatherDrawings(song.scenes)
     })
 }
 

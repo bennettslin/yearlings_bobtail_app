@@ -37,7 +37,7 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: `It's a schoolday morning. Young Anita walks out of the house, eyes rolling, as young Bennett rushes after her, his jacket half on and in a panic.`,
+            description: `It's a schoolday morning. Young Anita walks determinedly out of the house, eyes rolling, as young Bennett rushes after her, his jacket half on and in a panic.`,
             characters: {
                 youngAnita: 1,
                 youngBennett: 1
@@ -61,7 +61,7 @@ module.exports = {
         },
         {
             verseIndex: 24,
-            description: `Bennett is still in the bathtub, this time playing a toy glockenspiel. Anita is now seated next to him, cheering him up with music playing on a phonograph.`,
+            description: `Anita is now crouched beside the bathtub. She has brought a phonograph. Bennett is singing along.`,
             characters: {
                 youngAnita: 1,
                 youngBennett: 1

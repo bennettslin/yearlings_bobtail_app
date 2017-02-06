@@ -3,12 +3,19 @@ module.exports = {
     title: 'epilogue',
     scenes: [
         {
-            time: 0,
+            verseIndex: 0,
             description: 'epilogue description'
         }
     ],
     tip: {
         description: 'epilogue tip'
     },
-    overview: 'epilogue text'
+    overview: 'epilogue text',
+    tasks: [
+        {
+            taskName: `rough illustration synopsis`,
+            workedHours: 0,
+            neededHours: 1
+        },
+    ]
 }
