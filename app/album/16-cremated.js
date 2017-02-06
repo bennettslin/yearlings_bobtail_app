@@ -761,7 +761,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         // TODO: Change in recording? Connect to Uncanny Valley?
-                        description: `My original idea for the bouncing ping pong ball was to evoke a wind-up toy sitting on my bedside nightstand, which prompts me in my infirm state to imagine Miriam in a leisurely tennis match with her new beau. I forgot about this during the mixing session, though.`,
+                        description: `My original idea for the bouncing ping pong ball was to evoke a wind-up toy on my nightstand, which prompts me in my infirm state to imagine Miriam in a leisurely tennis match with her new beau. I forgot about this during the mixing session, though.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }

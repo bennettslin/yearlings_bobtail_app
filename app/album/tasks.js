@@ -1,29 +1,21 @@
 module.exports = [
     {
+        taskName: `get rid of unneeded device width breakpoints`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `show ear and expand buttons in collapsed lyric column only upon scroll down.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Allow dots section to fit in narrow heights.`,
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `accessibility refactor.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Individual score pdfs.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Show pdfs properly in all browsers.`,
-        workedHours: 0,
-        neededHours: 2
-    },
+
+    // Weekend 1.
     {
         taskName: `When song finishes playing, proceed to next more smoothly.`,
         workedHours: 0,
@@ -39,6 +31,10 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+
+    // Weekend 2.
+
+    // Weekend 3.
     {
         taskName: `Figure out when portal has no description`,
         workedHours: 0,
@@ -55,6 +51,23 @@ module.exports = [
         neededHours: 1
     },
     {
+        taskName: `Select time for player from portal`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    // Weekend 4.
+    {
+        taskName: `Figure out scrolling rules`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Scroll to accessed verse when switching columns?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Scrolling lyric column should unhover hovered verse.`,
         workedHours: 0,
         neededHours: 3
@@ -63,6 +76,39 @@ module.exports = [
         taskName: `Bug where coordinates are wrong for sticky selected verse when lyric expanded`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `scroll to annotation after portal`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    // Hack Week.
+    {
+        taskName: `begin list of persistence checks`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `accessibility refactor.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
+        taskName: `Individual score pdfs.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Show pdfs properly in all browsers.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Routing and copy link button`,
@@ -75,21 +121,6 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Select time for player from portal`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Figure out scrolling rules`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `show ear and expand buttons in collapsed lyric column only upon scroll down.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Make dot tooltip touch focused`,
         workedHours: 0,
         neededHours: 1
@@ -100,24 +131,9 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Scroll to accessed verse when switching columns?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `make visual keyboard keys`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `begin list of persistence checks`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `scroll to annotation after portal`,
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: `write album overview`,
@@ -134,11 +150,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 8
     },
-    {
-        taskName: `get rid of unneeded device width breakpoints`,
-        workedHours: 0,
-        neededHours: 1
-    },
+
     // {
     //     taskName: `delay in annotation popup after scroll and then link clicked? only in firefox, it seems`,
     //     workedHours: 0,
