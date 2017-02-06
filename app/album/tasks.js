@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Expand button z-index is funky.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `get rid of unneeded device width breakpoints`,
         workedHours: 0,
         neededHours: 1

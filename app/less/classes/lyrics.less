@@ -149,18 +149,6 @@
         bottom: 0;
     }
 
-    .expand-button-block.in-lyric {
-        top: 0;
-        left: 0;
-    }
-
-    .expand-button-block.in-main {
-        .transition(bottom 0.2s ease);
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
     .ear-button-block {
         left: 0;
         bottom: 0;
@@ -175,9 +163,39 @@
         }
     }
 
+    .expand-button-block {
+        .transition(transform 0.2s ease);
+    }
+
+    .lyric-column {
+        .expand-button-block {
+            top: 0;
+            left: 0;
+            .transform(scale(1));
+        }
+    }
+
+    .centre-field {
+        .expand-button-block {
+            bottom: 0;
+            left: 50%;
+            .transform2(translateX(-50%), scale(1));
+        }
+    }
+
+    .lyric-collapsed {
+        .lyric-column {
+            .expand-button-block {
+                .transform(scale(0));
+            }
+        }
+    }
+
     .is-logue, .lyric-expanded, .overview-shown, .dots-shown {
-        .expand-button-block.in-main {
-            bottom: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
+        .centre-field {
+            .expand-button-block {
+                .transform2(translateX(-50%), scale(0));
+            }
         }
     }
 
@@ -202,12 +220,6 @@
     }
 
     &.mini-width {
-        .is-logue, .lyric-expanded, .overview-shown, .dots-shown {
-            .expand-button-block.in-main {
-                bottom: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
-            }
-        }
-
         .heightless-lyric.lyric-collapsed {
             .ear-button-block {
                 bottom: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
@@ -216,13 +228,6 @@
     }
 
     &.phone-width {
-
-        .is-logue, .lyric-expanded, .overview-shown, .dots-shown {
-            .expand-button-block.in-main {
-                bottom: -@app-icon-diameter - @app-thin-margin * 2;
-            }
-        }
-
         .heightless-lyric.lyric-collapsed {
             .ear-button-block {
                 bottom: -@app-icon-diameter - @app-thin-margin * 2;

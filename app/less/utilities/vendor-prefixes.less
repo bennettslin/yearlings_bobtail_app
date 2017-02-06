@@ -6,6 +6,15 @@
     transform: @value;
 }
 
+// Hackish way to pass in two arguments, for now.
+.transform2(@value1, @value2) {
+    -webkit-transform: @arguments;
+    -moz-transform: @arguments;
+    -ms-transform: @arguments;
+    -o-transform: @arguments;
+    transform: @arguments;
+}
+
 .transform-origin(@value) {
     -webkit-transform-origin: @value;
     -ms-transform-origin: @value;

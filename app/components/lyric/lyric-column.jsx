@@ -38,14 +38,13 @@ class LyricColumnView extends Component {
 
                 // From props.
         const { isLogue,
-                isLyricExpandable,
-                isLyricExpanded,
                 isSelectedVerseAbove,
                 isSelectedVerseBelow,
                 selectedVerse,
-                onLyricExpandClick,
                 onLyricColumnClick,
                 onVerseBarClick,
+
+                lyricExpandButtonChild,
 
                 // From controller.
                 showEarButton,
@@ -88,21 +87,8 @@ class LyricColumnView extends Component {
                             </a>
                         </div>
                     }
-                    {isLyricExpandable &&
-                        <div className="lyric-button-block expand-button-block in-lyric">
-                            <a
-                                className="lyric-button enabled"
-                                onClick={e => onLyricExpandClick(e)}
-                            >
-                                <div className="large button-icon lyric-icon">
-                                    {isLyricExpanded ? '-' : '+'}
-                                </div>
-                            </a>
-                        </div>
-                    }
-                    <LyricsSection {...other}
-                        isLyricExpanded={isLyricExpanded}
-                    />
+                    {lyricExpandButtonChild}
+                    <LyricsSection {...other} />
                 </div>
             </div>
         )

@@ -46,7 +46,6 @@ const MainColumnView = ({
     bookStartingIndices,
     showSingleBookColumn,
     shrinkNavIcon,
-    isLyricExpanded,
 
     selectedDotsIndex,
     selectedNavIndex,
@@ -68,7 +67,6 @@ const MainColumnView = ({
     onAudioOptionClick,
     onNavExpandClick,
     onBookColumnClick,
-    onLyricExpandClick,
     onDotsExpandClick,
     onTimeChange,
     onPlayerEnd,
@@ -79,6 +77,7 @@ const MainColumnView = ({
     dotsSectionChild,
     overviewPopupChild,
     overviewButtonChild,
+    lyricExpandButtonChild,
     scoresTipsSectionChild,
 
     // From controller.
@@ -157,6 +156,8 @@ const MainColumnView = ({
                     </div>
                 }
 
+                {lyricExpandButtonChild}
+
                 <div className="subfield dots-overview-subfield">
                     <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
                         scoresTipsSectionChild={
@@ -182,19 +183,6 @@ const MainColumnView = ({
                 {!isHiddenNav &&
                     <div className="nav-custom-subfield">
                         <NavSection {...navSectionProps} />
-                    </div>
-                }
-
-                {isHeightlessLyricColumn &&
-                    <div className="lyric-button-block expand-button-block in-main">
-                        <a
-                            className="lyric-button enabled"
-                            onClick={onLyricExpandClick}
-                        >
-                            <div className="large button-icon lyric-icon">
-                                {isLyricExpanded ? '-' : '+'}
-                            </div>
-                        </a>
                     </div>
                 }
             </div>

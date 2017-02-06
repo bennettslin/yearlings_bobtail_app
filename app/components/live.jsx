@@ -180,7 +180,6 @@ const LiveView = ({
             bookStartingIndices,
             showSingleBookColumn,
             shrinkNavIcon,
-            isLyricExpanded,
 
             selectedNavIndex,
             selectedBookColumnIndex,
@@ -207,7 +206,6 @@ const LiveView = ({
             onDotsExpandClick,
             onNavExpandClick,
             onBookColumnClick,
-            onLyricExpandClick,
             onTimeChange,
             onPlayerEnd,
             onTimeUpdated
@@ -218,8 +216,6 @@ const LiveView = ({
             hiddenLyricColumnKey,
             hasDoubleColumns,
             isPlaying,
-            isLyricExpanded,
-            isLyricExpandable,
             isSelectedVerseAbove,
             isSelectedVerseBelow,
             selectedVerse,
@@ -238,7 +234,6 @@ const LiveView = ({
             selectedVerseIndex,
             onVerseClick,
             onAnnotationClick,
-            onLyricExpandClick,
             onLyricColumnClick,
             onPlayClick,
             onSelectVerseElement,
@@ -295,7 +290,21 @@ const LiveView = ({
             selectedOverviewIndex,
             onOverviewClick
         },
-        verseBarShown = isSelectedVerseAbove || isSelectedVerseBelow
+
+        verseBarShown = isSelectedVerseAbove || isSelectedVerseBelow,
+
+        lyricExpandButtonChild = isLyricExpandable && (
+            <div className="lyric-button-block expand-button-block">
+                <a
+                    className="lyric-button enabled"
+                    onClick={e => onLyricExpandClick(e)}
+                >
+                    <div className="large button-icon lyric-icon">
+                        {isLyricExpanded ? '-' : '+'}
+                    </div>
+                </a>
+            </div>
+        )
 
     return (
         <div className={
@@ -329,9 +338,12 @@ const LiveView = ({
                     />
                 }
                 overviewButtonChild={ <OverviewButton {...overviewButtonProps} /> }
+                lyricExpandButtonChild={lyricExpandButtonChild}
                 scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
             />
-            <LyricColumn {...lyricColumnProps} />
+            <LyricColumn {...lyricColumnProps}
+                lyricExpandButtonChild={lyricExpandButtonChild}
+            />
 
             <div className="full-popup-subfield">
                 <ScorePopup {...scorePopupProps} />
