@@ -85,8 +85,10 @@
 // Menu should be higher than centre field and lyrics.
 @menu-subfield-z-index: @menu-field-z-index + 1;
 
+@centre-field-z-index: @menu-subfield-z-index + 1;
+
 // Dot interactable should be above dot tooltip.
-@dot-tooltip-z-index: @menu-subfield-z-index + 1;
+@dot-tooltip-z-index: @centre-field-z-index + 1;
 @dot-interactable-z-index: @dot-tooltip-z-index + 1;
 
 @popup-overlay-z-index: @dot-interactable-z-index + 1;

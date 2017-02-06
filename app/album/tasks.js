@@ -90,16 +90,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `nav widths use % instead of vw`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `toggle min and max device widths`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Make dot tooltip touch focused`,
         workedHours: 0,
         neededHours: 1
@@ -193,6 +183,16 @@ module.exports = [
     //     taskName: `layout, position, and style wiki section.`,
     //     workedHours: 0,
     //     neededHours: 3
+    // },
+    // {
+    //     taskName: `nav widths use % instead of vw`,
+    //     workedHours: 0,
+    //     neededHours: 3
+    // },
+    // {
+    //     taskName: `toggle min and max device widths`,
+    //     workedHours: 0,
+    //     neededHours: 1
     // },
     {
         taskName: `refactor to get album objects`,

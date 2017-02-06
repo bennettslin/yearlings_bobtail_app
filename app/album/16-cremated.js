@@ -294,7 +294,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `This song also uses doublespeaker rhyme, though I've since forgetten which voice represents whose perspective. I suppose that's the point: we both knew equally well that the relationship was doomed.`,
+                        description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realise that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                             [SONGWRITING]: true
@@ -589,6 +589,18 @@ module.exports = {
         ],
         [
             {
+                time: 70,
+                centre: {
+                    italic: `(solo)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
+        ],
+        [
+            {
                 time: 90,
                 centre: [
                     {
@@ -721,17 +733,18 @@ module.exports = {
                     },
                     {
                         // TODO: Mention my family's Buddhism in Odin.
+                        // TODO: gods questionable to society.
                         anchor: `"Bless her, Godspeed…"`,
                         annotation: {
                             description: [
-                                `In her gene pool, "here's not where some lesser gods peed." Mark Medoff's play`,
+                                `In her gene pool, "here's not where some lesser god has peed." Mark Medoff's play`,
                                 {
                                     italic: {
                                         anchor: `Children of a Lesser God`,
                                         wiki: `Children_of_a_Lesser_God_(play)`
                                     }
                                 },
-                                `centres on a deaf woman, and thus its title seems to suggest that the disabled are divinely ordained to be inferior. Beyond feeling insecure about the autism running in my family, I was also keenly aware as a child that my family didn't worship the right gods according to society. And since race often correlates with religion, this suggested to me that some races are also inferior by divine will.`
+                                `centres on a deaf woman, and thus its title seems to suggest that the disabled are divinely ordained to be inferior. Beyond just feeling insecure about the autism running in my family, I was keenly aware as a child that my family didn't worship the same gods according to society. And since race often correlates with religion, this suggested to me that some races are also inferior by divine will.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -744,6 +757,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        // TODO: Change in recording? Connect to Uncanny Valley?
+                        description: `My original idea for the bouncing ping pong ball was to evoke a wind-up toy sitting on my bedside nightstand, which prompts me in my infirm state to imagine Miriam in a leisurely tennis match with her new beau. I forgot about this during the mixing session, though.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: BRIDGE
             }
         ],
@@ -953,11 +976,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -994,6 +1012,11 @@ module.exports = {
             taskName: `rough illustration synopses`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
