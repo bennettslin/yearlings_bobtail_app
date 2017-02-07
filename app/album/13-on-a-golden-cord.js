@@ -119,19 +119,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
-                            {
-                                italic: {
-                                    anchor: `Nineteen Eighty-Four.`,
-                                    wiki: `Nineteen_Eighty-Four`
-                                }
-                            },
-                            `So I used doublespeaker rhyme— which I named partly for its`,
-                            {
-                                anchor: `Orwellian undertone—`,
-                                wiki: `Doublethink`
-                            },
-                            `to depict the internal conflict between my sober self and my drunken alter ego. Since the breakup allowed me to regress in emotional age, I evoked the musical style of my childhood hero`,
+                            `Since the breakup allowed me to regress in emotional age, I evoked the musical style of my childhood hero`,
                             {
                                 anchor: `Johnny Horton,`,
                                 wiki: `Johnny_Horton`
@@ -206,6 +194,29 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
+                            {
+                                italic: {
+                                    anchor: `Nineteen Eighty-Four.`,
+                                    wiki: `Nineteen_Eighty-Four`
+                                }
+                            },
+                            `So I used doublespeaker rhyme— which I named partly for its`,
+                            {
+                                anchor: `Orwellian undertone—`,
+                                wiki: `Doublethink`
+                            },
+                            `to depict the internal conflict between my sober self and my drunken alter ego.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES,
                 subsequent: true
             }

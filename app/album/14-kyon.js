@@ -684,6 +684,26 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: [
+                            `I always thought that the cry of a peafowl sounds like they're pleading`,
+                            {
+                                italic: `"kyon?"`
+                            },
+                            `So I included a sample here, kindly provided to me by`,
+                            {
+                                anchor: 'Vijay Cavale.',
+                                wiki: `www.indiabirds.com`
+                            }
+                        ],
+                        dotKeys: {
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: INSTRUMENTAL
             }
         ],
