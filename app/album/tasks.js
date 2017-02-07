@@ -5,6 +5,12 @@ module.exports = [
         neededHours: 2
     },
 
+    {
+        taskName: `Get unit tests working again.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     // Weekend 1.
     {
         taskName: `When song finishes playing, proceed to next more smoothly.`,
@@ -24,12 +30,37 @@ module.exports = [
 
     // Weekend 2.
     {
-        taskName: `Scroll into view if needed now works with React elements.`,
+        taskName: `Figure out scrolling rules`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Get unit tests working again.`,
+        taskName: `Scroll to accessed verse when switching columns?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Scrolling lyric column should unhover hovered verse.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Bug where coordinates are wrong for sticky selected verse when lyric expanded`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `scroll to annotation after portal`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Allow scrolling over verse bar.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Scroll into view if needed now works with React elements.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -62,36 +93,6 @@ module.exports = [
     },
 
     // Weekend 4.
-    {
-        taskName: `Figure out scrolling rules`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Scroll to accessed verse when switching columns?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Scrolling lyric column should unhover hovered verse.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Bug where coordinates are wrong for sticky selected verse when lyric expanded`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `scroll to annotation after portal`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Allow scrolling over verse bar.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     // Hack Week.
     {
