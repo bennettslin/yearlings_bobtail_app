@@ -114,38 +114,33 @@ export const getIsLyricExpandable = ({ isAdmin, deviceIndex }) => {
 }
 
 export const getShowSingleLyricColumn = (props, state, selectedSongIndex) => {
-    if (state.isAdmin) {
-        return state.showSingleLyricColumnInAdmin
+    const selectedSong = getSong(props, selectedSongIndex),
+        { hasSideStanzas,
+          isDoublespeaker,
+          forceSingleColumn } = selectedSong,
+        { deviceIndex } = state,
+        deviceClassName = DEVICE_OBJECTS[deviceIndex].className
 
-    } else {
-        const selectedSong = getSong(props, selectedSongIndex),
-            { hasSideStanzas,
-              isDoublespeaker,
-              forceSingleColumn } = selectedSong,
-            { deviceIndex } = state,
-            deviceClassName = DEVICE_OBJECTS[deviceIndex].className
+    let showSingleLyricColumn = false
 
-        let showSingleLyricColumn = false
+    // Applies to Vegan Proclamation.
+    if (forceSingleColumn) {
+        showSingleLyricColumn = true
 
-        // Applies to Vegan Proclamation.
-        if (forceSingleColumn) {
-            showSingleLyricColumn = true
+    // Applies to Uncanny Valley Boy.
+    } else if (hasSideStanzas && !isDoublespeaker) {
+        return deviceClassName === PHONE_WIDTH
 
-        // Applies to Uncanny Valley Boy.
-        } else if (hasSideStanzas && !isDoublespeaker) {
-            return deviceClassName === PHONE_WIDTH
-
-        // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
-        } else if (isDoublespeaker) {
-            /**
-             * In tablet width, lyrics section takes up full width of bottom,
-             * while in monitor width, the screen is wide enough as well.
-             */
-            return deviceClassName !== MONITOR_WIDTH && deviceClassName !== TABLET_WIDTH
-        }
-
-        return showSingleLyricColumn
+    // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
+    } else if (isDoublespeaker) {
+        /**
+         * In tablet width, lyrics section takes up full width of bottom,
+         * while in monitor width, the screen is wide enough as well.
+         */
+        return deviceClassName !== MONITOR_WIDTH && deviceClassName !== TABLET_WIDTH
     }
+
+    return showSingleLyricColumn
 }
 
 export const getIsHiddenNav = (state) => {

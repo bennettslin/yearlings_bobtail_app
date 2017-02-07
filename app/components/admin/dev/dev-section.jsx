@@ -26,7 +26,6 @@ const DevSectionView = ({
     // selectedDotsIndex,
     // showSingleLyricColumn,
     selectedScoreIndex,
-    onScreenWidthClick,
     onScoreClick
 
 }) => (
@@ -55,12 +54,6 @@ const DevSectionView = ({
             onClick={onScoreClick}
         >
             score: {selectedScoreIndex}
-        </a>
-        <a
-            className="enabled"
-            onClick={onScreenWidthClick}
-        >
-            {/* Shown columns: {showSingleLyricColumn ? 'one' : 'two'} */}
         </a>
     </div>
 )

@@ -57,7 +57,6 @@ const AlbumView = ({
     onVerseClick,
     onPlayClick,
     onAudioOptionClick,
-    onScreenWidthClick,
     onTimeChange,
     onPlayerEnd,
     onTimeUpdated,
@@ -113,7 +112,6 @@ const AlbumView = ({
                     selectedNavIndex={selectedNavIndex}
                     selectedDotsIndex={selectedDotsIndex}
                     showSingleLyricColumn={showSingleLyricColumn}
-                    onScreenWidthClick={onScreenWidthClick}
                     onScoreClick={onScoreClick}
                 />
                 <NavSection

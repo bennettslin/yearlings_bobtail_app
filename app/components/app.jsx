@@ -146,7 +146,6 @@ class App extends Component {
             accessedLyricElement: props.selectedAnnotationIndex ?
                 LYRIC_ANNOTATION_ELEMENT : LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
-            showSingleLyricColumnInAdmin: false,
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false,
             manualWidth: false,
@@ -206,7 +205,6 @@ class App extends Component {
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
-        this.selectLyricColumnWidth = this.selectLyricColumnWidth.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
         this.selectNavExpand = this.selectNavExpand.bind(this)
@@ -901,12 +899,6 @@ class App extends Component {
         this.props.selectTimePlayed(selectedTimePlayed)
     }
 
-    selectLyricColumnWidth() {
-        this.setState({
-            showSingleLyricColumnInAdmin: !this.state.showSingleLyricColumnInAdmin
-        })
-    }
-
     selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2, selectedSongIndex) {
 
         this._stopPropagation(e)
@@ -1351,7 +1343,6 @@ class App extends Component {
                     onPlayClick={this.togglePlay}
                     onVerseClick={this.selectVerse}
                     onDotClick={this.selectDot}
-                    onScreenWidthClick={this.selectLyricColumnWidth}
                     onLyricColumnClick={this.selectLyricColumn}
                     onPopupContainerClick={this.handlePopupContainerClick}
                     onLyricExpandClick={this.selectLyricExpand}
