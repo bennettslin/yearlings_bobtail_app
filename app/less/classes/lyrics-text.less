@@ -3,12 +3,17 @@
 @even-verse-colour: #fcfce9;
 @selected-verse-colour: #dfd;
 
+@lyric-verse-size: 1em;
+@lyric-title-size: 1.5em;
+
+@mini-verse-size: 0.95em;
+@mini-title-size: 1.2em;
+
+@phone-verse-size: 0.9em;
+@phone-title-size: 1em;
 
 .lyrics-block {
     padding: 20px 0;
-
-    @lyric-verse-size: 1em;
-    font-size: @lyric-verse-size;
     line-height: 150%;
 
     a {
@@ -18,30 +23,31 @@
     .lyrics-unit {
         display: flex;
         justify-content: center;
+        font-size: @lyric-verse-size;
 
         &.subsequent {
             margin-top: -@stanza-block-margin * 1.5;
         }
 
-        &.title-unit {
-
-            .stanza {
-                font-size: 1.5em;
-
-                @title-verse-padding: 15px;
-
-                .verse {
-                    padding: @title-verse-padding;
-
-                    .lyrics-audio-button-block {
-                        margin-top: -@title-verse-padding;
-                    }
-                }
-            }
-        }
-
         &:not(:last-child) {
             margin-bottom: @lyric-verse-size;
+        }
+    }
+
+    .title-unit {
+        font-size: @lyric-title-size;
+
+        .stanza {
+
+            @title-verse-padding: 15px;
+
+            .verse {
+                padding: @title-verse-padding;
+
+                .lyrics-audio-button-block {
+                    margin-top: -@title-verse-padding;
+                }
+            }
         }
     }
 
@@ -212,6 +218,26 @@
         &.overlap {
             margin-top: -@overlap-margin;
         }
+    }
+}
+
+.mini-width {
+    .lyrics-unit, .verse-bar-block {
+        font-size: @mini-verse-size;
+    }
+
+    .title-unit {
+        font-size: @mini-title-size;
+    }
+}
+
+.phone-width {
+    .lyrics-unit, .verse-bar-block {
+        font-size: @phone-verse-size;
+    }
+
+    .title-unit {
+        font-size: @phone-title-size;
     }
 }
 
