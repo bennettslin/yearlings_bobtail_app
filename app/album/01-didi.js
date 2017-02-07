@@ -37,31 +37,36 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: `It's a schoolday morning. Young Anita walks determinedly out of the house, eyes rolling, as young Bennett rushes after her, his jacket half on and in a panic.`,
+            scene: 1,
+            description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
             characters: {
                 youngAnita: 1,
                 youngBennett: 1
             }
         },
         {
-            verseIndex: 10,
-            description: `Bennett is blushing, with dried tears, wearing oversized overalls, seated on a bench by the school gates. Beside him is a sealed grocery bag.`,
+            verseIndex: 8,
+            scene: 2,
+            description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells her friends about this. Anita overhears and looks upset.`,
             characters: {
                 youngAnita: 1,
                 youngBennett: 1,
-                youngsters: 3
+                youngGirl: 1,
+                youngBoy: 1
             }
         },
         {
             verseIndex: 14,
-            description: `Bennett is soaking in a bathtub at home.`,
+            scene: 3,
+            description: `Bennett is soaking in a bathtub at home, looking downcast. A window shows that it is midday outside.`,
             characters: {
                 youngBennett: 1
             }
         },
         {
             verseIndex: 24,
-            description: `Anita is now crouched beside the bathtub. She has brought a phonograph. Bennett is singing along.`,
+            scene: 4,
+            description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
             characters: {
                 youngAnita: 1,
                 youngBennett: 1
@@ -486,11 +491,6 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 40,
             neededHours: 40
@@ -524,6 +524,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 2,
+            neededHours: 2,
         }
     ]
 }
