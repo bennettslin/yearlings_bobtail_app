@@ -43,7 +43,7 @@ class LyricsSectionView extends Component {
     }
 
     _handleScroll() {
-        this.props.onLyricSectionScroll()
+        this.props.onLyricSectionScroll(this.mySection)
     }
 
     render() {

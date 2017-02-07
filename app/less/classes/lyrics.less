@@ -131,14 +131,54 @@
     }
 }
 
-.ear-button-block {
-    // Needed to expand properly in Chrome.
-    right: 50px;
-    top: 50px;
+@lyric-button-side-padding: 17px;
+@lyric-button-top-padding: 52px;
+
+.lyric-column {
+    .ear-button-block {
+        // Needed to expand properly in Chrome.
+        right: @lyric-button-side-padding;
+        top: @lyric-button-top-padding;
+    }
+
+    .expand-button-block {
+        left: @lyric-button-side-padding;
+        top: @lyric-button-top-padding;
+    }
 }
 
 .ear-button-block, .expand-button-block {
     .transition(transform 0.2s ease);
+}
+
+.centre-field {
+    .expand-button-block {
+        bottom: 0;
+        left: 50%;
+        .transform2(translateX(-50%), scale(1));
+    }
+}
+
+.is-logue, .lyric-expanded, .overview-shown, .dots-shown {
+    .centre-field {
+        .expand-button-block {
+            .transform2(translateX(-50%), scale(0));
+        }
+    }
+}
+
+.hide-lyric-buttons {
+    .ear-button-block {
+        .transform(scale(0));
+    }
+}
+
+.lyric-collapsed, .hide-lyric-buttons {
+    .lyric-column {
+        .expand-button-block {
+            .transform(scale(0));
+        }
+    }
 }
 
 .is-mobile {
@@ -148,36 +188,6 @@
         height: @collapsed-lyric-section-height;
         width: 100%;
         bottom: 0;
-
-        .expand-button-block {
-            top: 0;
-            left: 0;
-            .transform(scale(1));
-        }
-    }
-
-    .centre-field {
-        .expand-button-block {
-            bottom: 0;
-            left: 50%;
-            .transform2(translateX(-50%), scale(1));
-        }
-    }
-
-    .lyric-collapsed {
-        .lyric-column {
-            .expand-button-block {
-                .transform(scale(0));
-            }
-        }
-    }
-
-    .is-logue, .lyric-expanded, .overview-shown, .dots-shown {
-        .centre-field {
-            .expand-button-block {
-                .transform2(translateX(-50%), scale(0));
-            }
-        }
     }
 
     .lyric-expanded {

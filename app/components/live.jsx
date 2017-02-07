@@ -96,6 +96,7 @@ const LiveView = ({
     lyricsStartAtZero,
     hiddenLyricColumnKey,
 
+    showLyricButtons,
     showSingleLyricColumn,
     isLyricExpanded,
     isLyricExpandable,
@@ -315,6 +316,7 @@ const LiveView = ({
             `live-app
             ${selectedAnnotationIndex ? ' annotation-shown' : ''}
             ${isLogue ? ' is-logue' : ' is-song'}
+            ${showLyricButtons ? '' : ' hide-lyric-buttons'}
             ${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}
             ${titleInAudio ? ' title-in-audio' : ''}
             ${isHeightlessLyricColumn ? ' heightless-lyric' : ''}

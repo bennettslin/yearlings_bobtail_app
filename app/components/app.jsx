@@ -148,6 +148,10 @@ class App extends Component {
             accessedDotIndex: 0,
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false,
+
+            lyricSectionTop: 0,
+            showLyricButtons: true,
+
             manualWidth: false,
 
             // Start at persisted time.
@@ -505,7 +509,10 @@ class App extends Component {
         if (getIsLyricExpandable(this.state) && !getIsLogue(this.props)) {
 
             this.setState({
-                isLyricExpanded
+                isLyricExpanded,
+
+                // Start with lyric buttons shown when lyric column is expanded.
+                showLyricButtons: true
             })
 
             if (e) {
@@ -966,7 +973,7 @@ class App extends Component {
         if (selectedVerseElement !== this.state.selectedVerseElement) {
 
             // Determine if new selected verse element shows or hides verse bar.
-            this.handleLyricSectionScroll(selectedVerseElement)
+            this.handleLyricSectionScroll(undefined, selectedVerseElement)
 
             // App has a reference to the selected verse.
             this.setState({
@@ -975,7 +982,7 @@ class App extends Component {
         }
     }
 
-    handleLyricSectionScroll(selectedVerseElement = this.state.selectedVerseElement) {
+    handleLyricSectionScroll(sectionElement, selectedVerseElement = this.state.selectedVerseElement) {
 
         // App needs to be mounted.
         if (!this.state.appMounted) {
@@ -986,12 +993,23 @@ class App extends Component {
             selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
             selectedVerseMidHeight = (selectedVerseRect.top + selectedVerseRect.bottom) / 2,
             isSelectedVerseAbove = selectedVerseMidHeight < lyricSectionRect.top,
-            isSelectedVerseBelow = selectedVerseMidHeight > lyricSectionRect.bottom
+            isSelectedVerseBelow = selectedVerseMidHeight > lyricSectionRect.bottom,
+            newState = {
+                isSelectedVerseAbove,
+                isSelectedVerseBelow
+            }
 
-        this.setState({
-            isSelectedVerseAbove,
-            isSelectedVerseBelow
-        })
+        if (sectionElement) {
+            // Decide whether to show ear and expand buttons.
+            const lyricSectionTop =  sectionElement.scrollTop
+
+            newState.lyricSectionTop = lyricSectionTop
+
+            // FIXME: Currently, the buttons fade in and out simply based on whether scroll was up or down. Make this more user-friendly?
+            newState.showLyricButtons = lyricSectionTop < this.state.lyricSectionTop
+        }
+
+        this.setState(newState)
     }
 
     handleVerseBarClick() {

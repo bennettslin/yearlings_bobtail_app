@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `show ear and expand buttons in collapsed lyric column only upon scroll down.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Allow dots section to fit in narrow heights.`,
         workedHours: 0,
         neededHours: 2
@@ -1182,5 +1177,10 @@ module.exports = [
         taskName: `get rid of unneeded device width breakpoints`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `show ear and expand buttons in collapsed lyric column only upon scroll down.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
