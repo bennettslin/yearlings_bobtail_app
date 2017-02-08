@@ -1,6 +1,6 @@
 import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION } from 'helpers/constants'
 
-// TODO: Music annotations: muted mandolins: new instrument, melodicas
+// TODO: Say that gardening was later that summer, while nighttime scare moment was closer to Willy's death.
 module.exports = {
     title: {
         anchor: 'Willy the Cocoa',
@@ -11,7 +11,6 @@ module.exports = {
             }
         }
     },
-    // TODO: Add scene with garden?
     scenes: [
         {
             verseIndex: 0,
@@ -32,7 +31,7 @@ module.exports = {
         },
         {
             verseIndex: 19,
-            description: `Inside the house, holding the shredded remains of a comic book, Bennett is kicking Christopher, who rolls on the ground, in tears and clenching his stomach. Bennett's father is rushing in, angry and determined to stop the fight.`,
+            description: `Inside the house, holding his X-ray specs, Bennett is kicking Christopher, who rolls on the ground, in tears and clenching his stomach. Tattered comics and cut-out letters are on the ground. Bennett's father is rushing in, angry and determined to stop the fight.`,
             characters: {
                 father: 1,
                 christopher: 1,
@@ -41,15 +40,15 @@ module.exports = {
         },
         {
             verseIndex: 27,
-            description: `Willy is in a fight with two hooligans. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`,
+            description: `Willy is in a fight with two gangbangers. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`,
             characters: {
                 willy: 1,
-                hooligans: 2
+                gangbangers: 2
             }
         },
         {
-            verseIndex: 38,
-            description: `Inside the house, Bennett is in bed, with his mother beside him giving comfort.`,
+            verseIndex: 34,
+            description: `Inside the house, Bennett is in bed, with his mother beside him giving comfort. Outside, the window shows a scene with police hovering over a dead body. Mother is getting up to close the window.`,
             characters: {
                 mother: 1,
                 preteenBennett: 1
@@ -1038,11 +1037,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 40,
             neededHours: 40
@@ -1071,6 +1065,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 3,
+            neededHours: 3,
         }
     ]
 }
