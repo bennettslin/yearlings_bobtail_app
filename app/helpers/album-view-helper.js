@@ -404,11 +404,24 @@ export const getWikiUrl = (props) => {
     const { selectedWikiIndex } = props
     if (selectedWikiIndex) {
         const annotation = getAnnotation(props),
-            wikiPath = annotation.popupAnchors[selectedWikiIndex - 1],
-            isMobileWiki = getIsMobileWiki(props),
-            domainPath = isMobileWiki ? 'https://en.m.wikipedia.org/wiki/' : 'https://www.wikipedia.org/wiki/'
+            partialPath = annotation.popupAnchors[selectedWikiIndex - 1]
 
-        return `${domainPath}${wikiPath}`
+        let fullPath
+
+        // It's a Wikipedia page.
+        if (partialPath.indexOf('http') === -1) {
+            const isMobileWiki = getIsMobileWiki(props),
+                domainPath = isMobileWiki ? 'https://en.m.wikipedia.org/wiki/' : 'https://www.wikipedia.org/wiki/'
+
+            fullPath = `${domainPath}${partialPath}`
+
+        // It's its own URL.
+        } else {
+            fullPath = partialPath
+        }
+
+        return fullPath
+
     } else {
         return null
     }

@@ -1183,5 +1183,10 @@ module.exports = [
         taskName: `show ear and expand buttons in collapsed lyric column only upon scroll down.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Allow anchor to non-wiki page`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

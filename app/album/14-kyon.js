@@ -695,7 +695,7 @@ module.exports = {
                             `So I included a sample here, kindly provided to me by`,
                             {
                                 anchor: 'Vijay Cavale.',
-                                wiki: `www.indiabirds.com`
+                                wiki: `http://www.indiabirds.com/`
                             }
                         ],
                         dotKeys: {
