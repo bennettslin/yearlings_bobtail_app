@@ -16,23 +16,18 @@ module.exports = {
             verseIndex: 0,
             description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
             characters: {
-                puppetFamily: 5
+
             }
         },
         {
             verseIndex: 5,
-            description: `In Bennett's thought bubble, there is a drawing of him and Sasha on his sketchpad, together exploring the mountains of Taiwan.`,
-            characters: {
-                puppetFamily: 5,
-                preteenBennettDrawing: 1,
-                sashaDrawing: 1
-            }
+            description: `On a page from a Chinese language workbook, Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
+            characters: {}
         },
         {
             verseIndex: 12,
-            description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated across from her who is wearing a yarmulke.`,
+            description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated next to her who is wearing a yarmulke.`,
             characters: {
-                puppetFamily: 5,
                 preteenBennett: 1,
                 Sasha: 1,
                 jewishBoy: 1
@@ -40,23 +35,17 @@ module.exports = {
         },
         {
             verseIndex: 20,
-            description: `In Bennett's thought bubble, he is being bullied by an older boy. Sasha is lecturing the bully, telling him to leave Bennett alone.`,
+            description: `In Bennett's thought bubble, he is being tied to a tetherball pole by two bullies. Sasha is yelling at them, telling them to untie Bennett and to leave him alone. Bennett looks physically roughed up, and emotionally mortified.`,
             characters: {
-                puppetFamily: 5,
-                Sasha: 1,
                 preteenBennett: 1,
-                bully: 1
+                Sasha: 1,
+                bullies: 2
             }
         },
         {
             verseIndex: 30,
-            description: `In Bennett's thought bubble, there is a drawing of Bennett by himself on one continent, and Sasha and a Jewish boy on another, with an ocean separating them.`,
-            characters: {
-                puppetFamily: 5,
-                preteenBennettDrawing: 1,
-                sashaDrawing: 1,
-                jewishBoyDrawing: 1
-            }
+            description: `In Bennett's thought bubble, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
+            characters: {}
         }
     ],
     tip: {
@@ -648,11 +637,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 24,
             neededHours: 24
@@ -681,6 +665,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 3,
+            neededHours: 3,
         }
     ]
 }
