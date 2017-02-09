@@ -6,6 +6,12 @@ module.exports = [
     },
 
     {
+        taskName: `Make annotation a sliding section like dots, not a popup.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
         taskName: `Get unit tests working again.`,
         workedHours: 0,
         neededHours: 3
