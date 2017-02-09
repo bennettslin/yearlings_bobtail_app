@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Album from '../app/components/album.jsx'
+import Album from '../app/components/admin/album.jsx'
 
 describe('Album', () => {
     let album
