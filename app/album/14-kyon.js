@@ -80,7 +80,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `Sita and I had settled into an unhealthy power dynamic early on, then failed to grow as individuals. In hindsight, she was desperately waiting for me to grow up, because she couldn't do it without me. And so the humming here evokes her resilient waiting, born of desperation.`,
+                        description: `Sita and I had settled into an unhealthy power dynamic early on, then failed to grow as individuals. In hindsight, she was desperately waiting for me to grow up, because she couldn't do it without me. And so the humming here evokes her silent waiting, born of desperation.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [OBSERVATION]: true,
@@ -116,7 +116,7 @@ module.exports = {
                     {
                         anchor: `never grown your horns.`,
                         annotation: {
-                            description: `Of course, my desire to leave was also driven by shame. Any kindness I showed Sita could now only be viewed as atonement for past crimes. My role in this relationship was to be forever penitent, whereas I could just start over with someone new, untainted by sin.`,
+                            description: `Of course, my desire to leave Sita was also driven by shame. Any kindness I showed her now could only be viewed as atonement for past crimes. My role in this relationship was to be forever penitent, whereas I could just start over with someone new, untainted by sin.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -144,11 +144,8 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `I tried to write this song from Sita's perspective. It's possible that I characterised her unfairly as a weak and passive woman. But it's also possible that we both really`,
-                            {
-                                emphasis: `were`
-                            },
-                            `caricatures in our respective gender roles, given our youthful naivety.`
+                            // TODO: Change "in hindsight" in either this one or the previous dot stanza.
+                            `I tried to write this song from Sita's perspective. My portrayal is rather one-dimensional in hindsight, and unfairly characterises her as a helpless woman. In truth, she was far more resilient than I've let on here. But I was self-absorbed in my guilt at the time, and my primary purpose was to beat myself up over what my stupidity had cost me.`
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -201,6 +198,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `TODO: Extremes of chords, rhythm`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES,
                 subsequent: true
             }
@@ -235,6 +241,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `TODO: Calliope`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: BRIDGE
             }
         ],
@@ -483,6 +498,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: `***CHANGE_ME***`,
+                    annotation: {
+                        description: `TODO: Normalisation of dysfunction.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],

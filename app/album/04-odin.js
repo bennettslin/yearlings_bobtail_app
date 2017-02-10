@@ -26,14 +26,14 @@ module.exports = {
             verseIndex: 0,
             description: `Bennett is lying on a mat on the floor. In the distance, he sees himself creeping out of the house in pitch darkness. Papers are strewn where he walked.`,
             characters: {
-                bennett: 2
+                bennett: 1
             }
         },
         {
             verseIndex: 13,
-            description: `Bennett is closing the gate. He sees himself in a rickshaw, driving away. The rickshaw leaves a trail.`,
+            description: `Bennett is stepping through the front gate. He sees himself in a rickshaw, driving away. The rickshaw leaves a trail.`,
             characters: {
-                bennett: 2,
+                bennett: 1,
                 rickshawDriver: 1
             }
         },
@@ -41,14 +41,14 @@ module.exports = {
             verseIndex: 22,
             description: `Bennett is standing on the shore. He sees himself in the water, on a buoy. Footprints lead into the water.`,
             characters: {
-                bennett: 2
+                bennett: 1
             }
         },
         {
             verseIndex: 38,
-            description: `Bennett emerges from the ocean. He looks back towards the ocean. Further ahead, another Bennett is making his bed in a little cove. Footprints lead up to him.`,
+            description: `Bennett sits on the shore gazing at the Odin. Further ahead, another Bennett is making his bed on the beach. Footprints lead up to him.`,
             characters: {
-                bennett: 2
+                bennett: 1
             }
         }
     ],
@@ -1285,11 +1285,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 55,
             neededHours: 55
@@ -1318,6 +1313,11 @@ module.exports = {
             taskName: `rough illustration synopses`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 3,
+            neededHours: 3,
         }
     ]
 }
