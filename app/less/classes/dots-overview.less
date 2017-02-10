@@ -14,6 +14,7 @@
 @overview-toggle-phone-height: @overview-toggle-phone-width * 1.5;
 
 @dots-subfield-margin: 16px;
+@dots-subfield-phone-margin: 8px;
 
 @toggle-animation-duration: 0.2s;
 
@@ -189,6 +190,13 @@
     }
 
     &.phone-width {
+
+        .dots-shown {
+            .dots-subfield {
+                margin-left: @dots-subfield-phone-margin;
+            }
+        }
+
         // In phone, also hidden to left when overview is shown.
         .overview-shown {
             .dots-overview-toggle-section {

@@ -1,16 +1,9 @@
 module.exports = [
     {
-        taskName: `Allow dots section to fit in narrow heights.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Make annotation a sliding section like dots, not a popup.`,
         workedHours: 0,
         neededHours: 8
     },
-
     {
         taskName: `Get unit tests working again.`,
         workedHours: 0,
@@ -66,7 +59,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Scroll into view if needed now works with React elements.`,
+        taskName: `Scroll into view if needed now returns cancel function.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -99,8 +92,6 @@ module.exports = [
     },
 
     // Weekend 4.
-
-    // Hack Week.
     {
         taskName: `begin list of persistence checks`,
         workedHours: 0,
@@ -116,6 +107,8 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
+
+    // Hack Week.
 
     {
         taskName: `Individual score pdfs.`,
@@ -1194,5 +1187,10 @@ module.exports = [
         taskName: `Allow anchor to non-wiki page`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Allow dots section to fit in narrow heights.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

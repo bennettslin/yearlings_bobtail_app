@@ -139,9 +139,11 @@
     .dots-subfield {
         .dot-diameter-mixin(@dot-interactable-phone-diameter, 0);
 
+        box-shadow: -1px 1px 4px 4px @box-shadow-colour;
+
         .dot-block {
-            // Phone will have three dots per row.
-            width: 3 * (@dot-interactable-phone-diameter + 2 * @dot-container-phone-padding);
+            // Phone will have four dots per row.
+            width: 4 * (@dot-interactable-phone-diameter + 2 * @dot-container-phone-padding);
         }
 
         .dot-container {
