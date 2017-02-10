@@ -80,7 +80,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `Sita and I had settled into an unhealthy power dynamic early on, then failed to grow as individuals. In hindsight, she was desperately waiting for me to grow up, because she couldn't do it without me. And so the humming here evokes her silent waiting, born of desperation.`,
+                        description: `Sita and I had settled into an unhealthy power dynamic early on, then failed to grow as individuals. I see now that she was desperately waiting for me to grow up, because she couldn't do it without me. And so the humming here evokes her silent waiting, born of desperation.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [OBSERVATION]: true,
@@ -144,8 +144,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            // TODO: Change "in hindsight" in either this one or the previous dot stanza.
-                            `I tried to write this song from Sita's perspective. My portrayal is rather one-dimensional in hindsight, and unfairly characterises her as a helpless woman. In truth, she was far more resilient than I've let on here. But I was self-absorbed in my guilt at the time, and my primary purpose was to beat myself up over what my stupidity had cost me.`
+                            `I tried to write this song from Sita's perspective. My portrayal is rather one-dimensional in hindsight, and unfairly characterises her as a helpless woman. In truth, she was far more resilient than I've let on here. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -244,8 +243,16 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `TODO: Calliope`,
+                        description: [
+                            `Every time we got back together, Sita would reassert herself as my girlfriend by insisting that I bring her along to see my friends. I can imagine how humiliating it must have felt to face the very people who had encouraged me to leave her. So the melodicas here mimic the sound of a circus`,
+                            {
+                                anchor: `calliope,`,
+                                wiki: `Calliope_(music)`
+                            },
+                            `to evoke the idea of having to parade around like a sad clown.`
+                        ],
                         dotKeys: {
+                            [BACKSTORY]: true,
                             [SONGWRITING]: true
                         }
                     }
