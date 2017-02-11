@@ -80,7 +80,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `Sita and I had settled into an unhealthy power dynamic early on, then failed to grow as individuals. I see now that she was desperately waiting for me to grow up, because she couldn't do it without me. And so the humming here evokes her silent waiting, born of desperation.`,
+                        description: `Sita and I had settled into an unhealthy power dynamic early on, then failed to grow as individuals. I can see now that she was desperately waiting for me to grow up, because she couldn't do it without me. So the humming here evokes her silent waiting, born of desperation.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [OBSERVATION]: true,
@@ -200,8 +200,16 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `TODO: Extremes of chords, rhythm`,
+                        description: [
+                            `Our relationship was like a ship swaying perilously in tumultuous waters, a notion captured by the compound meter alternating back and forth between distantly related chords separated by a`,
+                            {
+                                anchor: `tritone.`,
+                                wiki: `Tritone`
+                            },
+                            `The meandering tuplets, which I created by splicing single notes played on a mandolin, represent our inability to find common ground. One carries eight notes per beat, the other nine.`
+                        ],
                         dotKeys: {
+                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -508,7 +516,7 @@ module.exports = {
                 dotStanza: {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
-                        description: `TODO: Normalisation of dysfunction.`,
+                        description: `The meter switches to common time here, even as the underlying chords remain unchanged, to represent the normalisation of our dysfunctional relationship. The tuplet strands are also more in sync, as one plays two notes for every three played by the other.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -718,7 +726,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `I always thought that the cry of a peafowl sounds like they're pleading`,
+                            `The cry of a peafowl always sounded to me like they're pleading`,
                             {
                                 italic: `"kyon?"`
                             },
@@ -743,11 +751,6 @@ module.exports = {
             taskName: `afterword annotations`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `sort out past and present tense`,
@@ -776,6 +779,11 @@ module.exports = {
         },
         {
             taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
         }
