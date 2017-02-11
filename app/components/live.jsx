@@ -153,7 +153,6 @@ const LiveView = ({
         overviewPopupProps = {
             isPhone,
             isLogue,
-            hideClose: true,
             selectedOverviewIndex,
             overviewText,
             onPopupButtonClick: onOverviewClick,
@@ -280,6 +279,7 @@ const LiveView = ({
         scorePopupProps = {
             scores,
             selectedScoreIndex,
+            showClose: true,
             onPopupButtonClick: onScoreClick,
             onPopupContainerClick
         },
@@ -288,6 +288,7 @@ const LiveView = ({
             accessedOn,
             accessedSectionKey,
             nextSectionKey,
+            showClose: true,
             onPopupButtonClick: onWikiUrlClick,
             onPopupContainerClick
         },

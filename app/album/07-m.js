@@ -239,7 +239,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE ME***`,
+                    anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
                             `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this fashion would be.`

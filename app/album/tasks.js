@@ -5,6 +5,12 @@ module.exports = [
         neededHours: 3
     },
 
+    {
+        taskName: `Show audio player with score.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     // Weekend 1.
     {
         taskName: `Make annotation a sliding section like dots, not a popup.`,

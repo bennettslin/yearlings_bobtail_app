@@ -54,7 +54,7 @@ class PopupTransitionGroup extends Component {
 
     _getContainerElement(element) {
         const { className,
-                hideClose,
+                showClose,
                 showArrows,
                 sectionAccessHighlighted,
                 sectionNextHighlighted,
@@ -63,7 +63,7 @@ class PopupTransitionGroup extends Component {
 
         return element && (
             <div className={`popup-wrapper ${className}`}>
-                {!hideClose &&
+                {showClose &&
                     <div className="popup-button close-button shadow"></div>
                 }
                 <div
@@ -71,7 +71,7 @@ class PopupTransitionGroup extends Component {
                     onClick={e => onPopupContainerClick(e, className)}
                 >
                     {element}
-                    {!hideClose &&
+                    {showClose &&
                         <PopupButton
                             onPopupButtonClick={onPopupButtonClick}
                             buttonName={CLOSE}
@@ -127,7 +127,7 @@ class Popup extends Component {
             { accessedOn,
               accessedSectionKey,
               nextSectionKey,
-              hideClose,
+              showClose,
               showArrows,
               onPopupContainerClick } = this.props,
              sectionClassName = `${className}-section`,
@@ -142,7 +142,7 @@ class Popup extends Component {
                 transitionName={`${className}-animation`}
                 sectionAccessHighlighted={sectionAccessHighlighted}
                 sectionNextHighlighted={sectionNextHighlighted}
-                hideClose={hideClose}
+                showClose={showClose}
                 showArrows={showArrows}
                 onPopupButtonClick={this.onPopupButtonClick}
                 onPopupContainerClick={onPopupContainerClick}
