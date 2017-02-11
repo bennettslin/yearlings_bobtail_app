@@ -244,7 +244,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends, despite the humiliation of having to face the very same group that had emboldened me to leave her. And so the circus`,
+                            `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends, despite the humiliation of having to face the very gang that had emboldened me to leave her. And so the circus`,
                             {
                                 anchor: `calliope`,
                                 wiki: `Calliope_(music)`

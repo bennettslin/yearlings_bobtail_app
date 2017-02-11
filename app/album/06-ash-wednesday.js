@@ -27,23 +27,30 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: `Bennett is walking alone through campus, holding a textbook under his arm. On a sketchpad in his thought bubble, he and Catherine are each playing an instrument. On his side are quartertones, on her side are contrupuntal harmonies.`,
+            description: `Bennett is standing outside his doorway at night, drenched in rain. Catherine is getting into a taxicab.`,
             characters: {
                 bennett: 1,
-                bennettDrawing: 1,
-                catherineDrawing: 1
+                catherine: 1,
+                cabDriver: 1
             }
         },
         {
             verseIndex: 11,
-            description: `In Bennett's thoughts, he and Catherine are together in bed. She is putting down the book she is reading, while he is playing the guitar, a pencil and notepad in hand, implying that he is writing a song, looking at her inquisitively.`,
+            description: `In Bennett's thoughts, he and Catherine are together on the couch. She is putting down the book she is reading, while he is playing the guitar, a pencil and notepad in hand, implying that he is writing a song, looking at her inquisitively.`,
             characters: {
                 bennett: 1,
                 catherine: 1
             }
         },
         {
-            verseIndex: 21,
+            verseIndex: 17,
+            description: `Bennett is standing in the rain at night, staring at a Catholic church across the street.`,
+            characters: {
+                bennett: 1
+            }
+        },
+        {
+            verseIndex: 27,
             description: `Bennett is staring at an outdoor ashtray. Someone with a cross on their forehead is walking behind him in the other direction, while someone who has just put out a cigarette in the ashtray is walking in front of him, exhaling the smoke. Bennett looks back at the person behind him.`,
             characters: {
                 bennett: 1,
@@ -52,7 +59,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 27,
+            verseIndex: 32,
             description: `Bennett now has an ashed cross on his forehead, eyes closed and head held high, looking both pious and pompous. Catherine walks towards him from the other side of the stage.`,
             characters: {
                 bennett: 1,
@@ -168,6 +175,7 @@ module.exports = {
                     {
                         anchor: `laid Tourette's,`,
                         annotation: {
+                            // TODO: say it wasn't really that bad.
                             description: [
                                 `Like those with`,
                                 {
@@ -564,6 +572,7 @@ module.exports = {
                 lyric: [
                     `Well no, I know it's wrong, but I did`,
                     {
+                        // TODO: explain pun further?
                         anchor: `burn my palms,`,
                         annotation: {
                             description: [
@@ -772,11 +781,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 40,
             neededHours: 40
@@ -800,6 +804,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 3,
+            neededHours: 3,
         }
     ]
 }
