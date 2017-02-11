@@ -144,7 +144,7 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `I tried to write this song from Sita's perspective. My portrayal is rather one-dimensional in hindsight, and unfairly characterises her as a helpless woman. In truth, she was far more resilient than I've let on here. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`
+                            `I tried to write this song from Sita's perspective. In retrospect, my portrayal is rather one-dimensional, and unfairly characterises her as a helpless woman. Truth be told, she was far more resilient than I've let on here. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -244,12 +244,12 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `Every time we got back together, Sita would reassert herself as my girlfriend by insisting that I bring her along to see my friends. I can imagine how humiliating it must have felt to face the very people who had encouraged me to leave her. So the melodicas here mimic the sound of a circus`,
+                            `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends, despite the humiliation of having to face the very same group that had emboldened me to leave her. And so the circus`,
                             {
-                                anchor: `calliope,`,
+                                anchor: `calliope`,
                                 wiki: `Calliope_(music)`
                             },
-                            `to evoke the idea of having to parade around like a sad clown.`
+                            `heard here, which I created from a tape-saturated melodica track, captures the feeling of parading around like a sad clown once more.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,

@@ -89,7 +89,7 @@ module.exports = {
                                 anchor: `changelings`,
                                 wiki: `Changeling`
                             },
-                            `were trolls left in place of stolen human children, and served to explain the developmentally disabled. Sonically, then, I wanted to mimic a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of`,
+                            `were trolls left in place of stolen human children, and served to explain the developmentally disabled. So I wanted this song to sound like a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of`,
                             {
                                 anchor: `Creedence Clearwater Revival,`,
                                 wiki: `Creedence_Clearwater_Revival`
