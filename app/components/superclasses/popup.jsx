@@ -66,6 +66,12 @@ class PopupTransitionGroup extends Component {
                 {showClose &&
                     <div className="popup-button close-button shadow"></div>
                 }
+                {showArrows &&
+                    <div className="popup-button side-button previous-button shadow"></div>
+                }
+                {showArrows &&
+                    <div className="popup-button side-button next-button shadow"></div>
+                }
                 <div
                     className={`popup-content-wrapper ${className}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
                     onClick={e => onPopupContainerClick(e, className)}

@@ -47,14 +47,14 @@ const AnnotationPortalsBlockView = ({
                     <div className="song-title">{songTitle}</div>
 
                     <div className="verse-text">
-                        <span className="text-span">"</span>
+                        <span className="text-span">{'\u201c'}</span>
                         <TextBlock
                             inPortal={true}
                             text={verseObject.lyric || verseObject.centre || verseObject[column]}
                             selectedDotKeys={selectedDotKeys}
                             portalAnnotationIndex={annotationIndex}
                         />
-                        <span className="text-span">"</span>
+                        <span className="text-span">{'\u201d'}</span>
                     </div>
 
                     <div className="portal-card-block">

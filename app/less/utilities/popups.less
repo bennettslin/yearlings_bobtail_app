@@ -101,29 +101,43 @@
     }
 
     &.close-button {
-        top: 0;
-        right: 0;
+        top: -@app-large-icon-diameter * 0.7;
+        left: -@app-large-icon-diameter * 0.7;
+        border-radius: 50%;
 
-        &.shadow {
-            display: none;
-        }
+        // Duplicates annotation side button styles.
+        box-shadow: -1px 1px 2px 2px @box-shadow-colour;
+        background-color: #fdd;
     }
 
     &.side-button {
-        top: 50%;
-        transform: translateY(-50%);
+        // top: 50%;
+        // transform: translateY(-50%);
+        top: @app-large-icon-diameter / 2;
 
         border-radius: 50%;
         box-shadow: -1px 1px 2px 2px @box-shadow-colour;
         background-color: #dfd;
     }
 
+    @side-button-multiplier: 0.72;
+
     &.previous-button {
-        left: -@app-large-icon-diameter * 0.85;
+        left: -@app-large-icon-diameter * @side-button-multiplier;
     }
 
     &.next-button {
-        right: -@app-large-icon-diameter * 0.85;
+        right: -@app-large-icon-diameter * @side-button-multiplier;
+    }
+
+    &.shadow {
+        display: block;
+        overflow: hidden;
+        box-shadow: -2px 2px 8px 8px @box-shadow-colour;
+
+        &.close-button {
+            box-shadow: -2px 2px 8px 8px @darker-box-shadow-colour;
+        }
     }
 }
 
@@ -131,28 +145,6 @@
     .popup-content-wrapper {
         box-sizing: border-box;
         box-shadow: -2px 2px 8px 8px @darker-box-shadow-colour;
-    }
-}
-
-.is-desktop, .tablet-width {
-    .popup-wrapper {
-        &.wiki, &.score {
-            .close-button {
-                top: -@app-large-icon-diameter * 0.7;
-                left: -@app-large-icon-diameter * 0.7;
-                border-radius: 50%;
-
-                // Duplicates annotation side button styles.
-                box-shadow: -1px 1px 2px 2px @box-shadow-colour;
-                background-color: #fdd;
-
-                &.shadow {
-                    display: block;
-                    box-shadow: -2px 2px 8px 8px @darker-box-shadow-colour;
-                    overflow: hidden;
-                }
-            }
-        }
     }
 }
 

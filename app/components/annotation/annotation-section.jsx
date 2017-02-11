@@ -32,7 +32,7 @@ const AnnotationSectionView = ({
 
 ...other }) => (
     <div className="section annotation-section">
-        <h2>{title}</h2>
+        {title && <h2 className="annotation-title">{'\u201c'}{title}{'\u201d'}</h2>}
         <div className="cards-block">
             <AnnotationUnit {...other}
             />
