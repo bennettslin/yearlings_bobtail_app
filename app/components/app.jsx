@@ -129,7 +129,6 @@ class App extends Component {
             isAdmin: false,
             isPlaying: false,
 
-            popupSongIndex: props.selectedSongIndex,
             popupAnnotationIndex: props.selectedAnnotationIndex,
             popupWikiIndex: props.selectedWikiIndex,
 
@@ -391,9 +390,6 @@ class App extends Component {
     }
 
     selectSong(e, selectedSongIndex = 0, direction, fromPortal) {
-
-        const { preservePreviousPopupIndex } = e
-
         this._stopPropagation(e)
 
         // Called from audio section's previous or next buttons.
@@ -453,10 +449,6 @@ class App extends Component {
         }
 
         this.selectBookColumn(e, true, selectedSongIndex)
-
-        if (!preservePreviousPopupIndex) {
-            newState.popupSongIndex = selectedSongIndex
-        }
 
         this.props.selectSongIndex(selectedSongIndex)
         this.setState(newState)

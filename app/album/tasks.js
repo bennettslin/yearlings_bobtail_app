@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Make annotation a sliding section like dots, not a popup.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: `Get unit tests working again.`,
         workedHours: 0,
         neededHours: 3
@@ -12,22 +7,34 @@ module.exports = [
 
     // Weekend 1.
     {
-        taskName: `When song finishes playing, proceed to next more smoothly.`,
+        taskName: `Make annotation a sliding section like dots, not a popup.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Figure out annotations without headers`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Weird bug where player stops sending listen events after having currentTime changed.`,
+        taskName: `Figure out when portal has no description`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 1
     },
     {
-        taskName: `Fix weird glitch two seconds into new song after load.`,
+        taskName: 'final check on all portals',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Select time for player from portal`,
         workedHours: 0,
         neededHours: 3
     },
 
     // Weekend 2.
+
+    // Weekend 3.
     {
         taskName: `Figure out scrolling rules`,
         workedHours: 0,
@@ -63,30 +70,8 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-
-    // Weekend 3.
-    {
-        taskName: `Figure out when portal has no description`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'final check on all portals',
-        workedHours: 0,
-        neededHours: 1
-    },
     {
         taskName: 'scroll to selected verse from portal',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Select time for player from portal`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Figure out annotations without headers`,
         workedHours: 0,
         neededHours: 1
     },
@@ -109,6 +94,21 @@ module.exports = [
     },
 
     // Hack Week.
+    {
+        taskName: `When song finishes playing, proceed to next more smoothly.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Weird bug where player stops sending listen events after having currentTime changed.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Fix weird glitch two seconds into new song after load.`,
+        workedHours: 0,
+        neededHours: 3
+    },
 
     {
         taskName: `Individual score pdfs.`,
