@@ -1,4 +1,4 @@
-import { VERSES, CHORUS, POSTCHORUS, SONGWRITING, NARRATIVE, BACKSTORY, OBSERVATION, PUN, REFERENCE } from 'helpers/constants'
+import { VERSES, CHORUS, POSTCHORUS, SONGWRITING, NARRATIVE, BACKSTORY, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 // TODO: Music annotation: Children's shows. New Mickey Mouse Club.
 module.exports = {
@@ -70,7 +70,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `In the final chapter of James Joyce's`,
@@ -132,7 +132,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
                         dotKeys: {
@@ -625,7 +625,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `The band`,
@@ -885,7 +885,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `Ambrose Bierce also wrote the short story`,

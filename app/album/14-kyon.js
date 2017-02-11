@@ -1,5 +1,5 @@
 // Be more specific that this began an on again off again relationship
-import { VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, REFRAIN, INSTRUMENTAL, SONGWRITING, BACKSTORY, OBSERVATION, NARRATIVE, PUN, REFERENCE } from 'helpers/constants'
+import { VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, REFRAIN, INSTRUMENTAL, SONGWRITING, BACKSTORY, OBSERVATION, NARRATIVE, PUN, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 // TODO: Mention Sita's depression, and contrast it with mine.
 module.exports = {
@@ -78,7 +78,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `Sita and I had settled into an unhealthy power dynamic early on, then failed to grow as individuals. I can see now that she was desperately waiting for me to grow up, because she couldn't do it without me. So the humming here evokes her silent waiting, born of desperation.`,
                         dotKeys: {
@@ -141,7 +141,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `I tried to write this song from Sita's perspective. In retrospect, my portrayal is rather one-dimensional, and unfairly characterises her as a helpless woman. Truth be told, she was far more resilient than I've let on here. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`
@@ -198,7 +198,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `Our relationship was like a ship swaying perilously in tumultuous waters, a notion captured by the compound meter alternating back and forth between unrelated chords separated by a`,
@@ -249,7 +249,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends, despite the humiliation of having to face the very gang that had emboldened me to leave her. And so the circus`,
@@ -514,7 +514,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `The meter switches to common time here, even as the underlying chords remain unchanged, to represent the normalisation of our dysfunctional relationship. The tuplet strands are also more in sync, as one plays two notes for every three played by the other.`,
                         dotKeys: {
@@ -723,7 +723,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `The cry of a peafowl always sounded to me like they're pleading`,

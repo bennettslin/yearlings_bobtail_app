@@ -1,4 +1,4 @@
-import { VERSES, PRECHORUS, CHORUS, AFTERWORD, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
+import { VERSES, PRECHORUS, CHORUS, AFTERWORD, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 // TODO: Mention mother pulling strings to get us to go to a rich school
 module.exports = {
@@ -62,7 +62,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `As a teenager, I tried to figure out how`,
@@ -120,7 +120,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `I wanted the vocals to sound sickly here, which worked out really well, since I was guaranteed to catch an awful cold at some point during the five years that I worked on this album.`,
                         dotKeys: {
@@ -303,7 +303,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `The passive-aggressive lyrics are matched in texture by screeching woodwinds and scratch tones on violins.`,
                         dotKeys: {
@@ -522,7 +522,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `Every aspiring songwriter I met would write their chords first, then come up with a feasible melody to go on top. But my theory was that the Beatles wrote the melody and chords together, allowing the music to unfold organically. I was always trying to write the next "Martha My Dear," which may be evident here.`,
                         dotKeys: {
@@ -612,7 +612,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `Confused by the lack of interest in the album's release, I distilled my approach to writing songs into a lesson plan called`,

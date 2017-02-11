@@ -1,4 +1,4 @@
-import { INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, RHYME, RESPONSE, BACKING, SONGWRITING, NARRATIVE, OBSERVATION, BACKSTORY, PUN, REFERENCE } from 'helpers/constants'
+import { INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, RHYME, RESPONSE, BACKING, SONGWRITING, NARRATIVE, OBSERVATION, BACKSTORY, PUN, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -208,7 +208,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `I originally began writing this music to describe a nightmare I had, but abandoned it after I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
                         dotKeys: {
@@ -1111,7 +1111,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `To record the subtle shift from "Rama" to "Mara," I made a click track whose tempo sums up to one fewer eighth note after seven measures. I then overlaid multiple tracks in which I quietly took a breath at different points.`,
                         dotKeys: {

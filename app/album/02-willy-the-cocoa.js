@@ -1,4 +1,4 @@
-import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION } from 'helpers/constants'
+import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 // TODO: Say that gardening was later that summer, while nighttime scare moment was closer to Willy's death.
 module.exports = {
@@ -81,7 +81,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `In folklore of the past,`,
@@ -159,7 +159,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `The chord progression here zigzags between a minor third down, followed by a whole step up. In mimicry, the melodicas play a sped-up and warped version of this descending pattern at the cadence of each line.`
@@ -327,7 +327,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `I figured that trolls would have all the same instruments but play them in some weird way, so I muted the lead guitar and mandolin and threw in a whole lot of legato slides.`,
                         dotKeys: {
@@ -436,7 +436,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`,
                         dotKeys: {
@@ -796,7 +796,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `I also pictured trolls doing bizarre things like playing a slide guitar with the whammy bar.`
@@ -1019,7 +1019,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `I recently asked my brother how old he was. He answered seventeen, which is only a decade behind. So I guess we're making progress.`,
                         dotKeys: {

@@ -9,7 +9,8 @@ import { VERSES,
          PUN,
          REFERENCE,
          SONGWRITING,
-         AFTERWORD } from 'helpers/constants'
+         AFTERWORD,
+         DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -144,7 +145,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `For a song about two people who couldn't be any more different, I juxtaposed`,
@@ -227,7 +228,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `The shrieking whistles, which remind me of`,
@@ -339,7 +340,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the Dobro.`,
                         dotKeys: {
@@ -619,7 +620,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps in the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
                         dotKeys: {
@@ -686,7 +687,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
@@ -741,7 +742,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `While fleshing out the lyrics for this chorus, I noticed that the two stanzas shared common syllables in certain places, and so I made a game of trying to match them as closely as possible. This ultimately gave me the idea for doublespeaker rhyme.`,
                         dotKeys: {
@@ -757,7 +758,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: ``,
                         dotKeys: {

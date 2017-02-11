@@ -1,4 +1,4 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, INSTRUMENTAL, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, INSTRUMENTAL, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -92,7 +92,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `As the previous song ends with me fading away while listening to my favourite records, the crackle of a needle on vinyl introduces the third and final song of the medley.`,
                         dotKeys: {
@@ -193,7 +193,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. I thought this ironic contrast would work just as well here.`,
                         dotKeys: {
@@ -342,7 +342,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `Sasha recited these quotes for me over the phone. We recorded multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't think to write them with that concern in mind. I was so pretentious at the time, I forgot that normal people don't pepper their conversations with pseudo-intellectual drivel.`,
                         dotKeys: {

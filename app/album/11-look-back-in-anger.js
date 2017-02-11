@@ -1,4 +1,4 @@
-import { INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, BACKSTORY, SONGWRITING, NARRATIVE, OBSERVATION, PUN, REFERENCE } from 'helpers/constants'
+import { INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, BACKSTORY, SONGWRITING, NARRATIVE, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -112,7 +112,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
                         dotKeys: {
@@ -214,7 +214,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             // TODO: Unfinished.

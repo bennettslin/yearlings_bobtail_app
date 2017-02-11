@@ -146,6 +146,8 @@ module.exports = {
 
     WINDOW_STORAGE: window.localStorage,
 
+    DOT_STANZA_CONSTANT: '***DOT_STANZA***',
+
     PHONE_WIDTH,
     MINI_WIDTH,
     TABLET_WIDTH,

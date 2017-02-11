@@ -1,6 +1,6 @@
 // Be more open about Buddhist upbringing.
 
-import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE } from 'helpers/constants'
+import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 
 // TODO: Mention sleeping on floor.
@@ -67,7 +67,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker, to create the musical version of a cinematic split screen. Here, the two voices proceed independently, each unaware of the ideas and images subtly planted along its path by the other.`,
                         dotKeys: {
@@ -541,7 +541,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `The drums were the one instrument for which I had scored parts that were far more advanced than my actual abilities. So when it came time to record, I had to try many workarounds. On this song, I recorded the kick, snare, and toms separately from the cymbals.`,
                         dotKeys: {
@@ -983,7 +983,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `TODO: Talk about guitar effects?`,
                         dotKeys: {
@@ -1260,7 +1260,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I undertook a yearlong course of study required for conversion to Judaism. However, we didn't last long enough for me to stand before the`,

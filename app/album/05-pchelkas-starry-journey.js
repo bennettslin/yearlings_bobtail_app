@@ -1,4 +1,4 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, RESPONSE, SONGWRITING, OBSERVATION, BACKSTORY, NARRATIVE, REFERENCE, PUN } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, RESPONSE, SONGWRITING, OBSERVATION, BACKSTORY, NARRATIVE, REFERENCE, PUN, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
@@ -125,7 +125,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `I needed a kid's voice for this quote, but no one I knew was popping them out quite yet. So I just had my sister do it.`,
                         dotKeys: {
@@ -168,7 +168,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `In keeping with the Russian theme of Soviet space dogs, frenetically plucked mandolins evoke the spirit of the balalaika. Since Tuva is a Russian republic, I also threw in some`,
@@ -639,7 +639,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `The sound of space transmissions in the background was made by bending the whammy bar of an electric guitar while banging it on the carpet floor. It took almost fifty tries, and I had to retune each time.`
@@ -717,7 +717,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `I learned about Tuvan throat singing after Catherine took me to see a documentary called`,
@@ -1153,7 +1153,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `I made the sound of failing circuits by scraping the strings of an electric guitar against the pickup, while bouncing a metal rod on a single string near the bridge.`

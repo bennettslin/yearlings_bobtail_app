@@ -1,4 +1,4 @@
-import { INSTRUMENTAL, REFRAIN, VERSES, CHORUS, BRIDGE, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
+import { INSTRUMENTAL, REFRAIN, VERSES, CHORUS, BRIDGE, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -80,7 +80,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `Since I took the name of my drunken personality from James Joyce's`,
@@ -308,7 +308,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `To capture the liveliness of a fiddle, I held the violin at chest level. I'd never tried this before, so a bit of practise was needed. As well as a lot of spliced tracks.`,
                         dotKeys: {
@@ -431,7 +431,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `In traditional counterpoint, the chords and harmonic rhythm are byproducts of melodic interaction. The chord progressions for this song were already set, however. So I was left to figure out on my own how counterpoint might be scored in this scenario, since I didn't know of any working examples.`,
                         dotKeys: {
@@ -505,7 +505,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `The bagpipes here evoke a funeral procession. Since I don't own any bagpipes, let alone`,
@@ -577,7 +577,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `After some trial and error, I decided that the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease them apart based on their respective timbres.`,
                         dotKeys: {

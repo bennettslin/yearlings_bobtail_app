@@ -1,4 +1,4 @@
-import { INSTRUMENTAL, VERSES, CHORUS, SONGWRITING, NARRATIVE, BACKSTORY, OBSERVATION } from 'helpers/constants'
+import { INSTRUMENTAL, VERSES, CHORUS, SONGWRITING, NARRATIVE, BACKSTORY, OBSERVATION, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -72,7 +72,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `This song is another carryover from the days of The Yearlings, and was the favourite amongst my friends. I suppose it's telling that even when we were still together, my romantic song that I wrote for Sita was all about the regret I would feel as an old man at having lost her. During the years when I was trying hard to be good again, I kept digging further back into my past to figure out where things went wrong. And so this last song of the album revisits the sonic textures of all the others in reverse, ending with the autoharp and glockenspiel from the intro to`,

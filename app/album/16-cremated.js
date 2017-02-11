@@ -1,4 +1,4 @@
-import { INSTRUMENTAL, REFRAIN, VERSES, BRIDGE, SONGWRITING, BACKSTORY, NARRATIVE, PUN, OBSERVATION, REFERENCE } from 'helpers/constants'
+import { INSTRUMENTAL, REFRAIN, VERSES, BRIDGE, SONGWRITING, BACKSTORY, NARRATIVE, PUN, OBSERVATION, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -70,7 +70,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
@@ -100,7 +100,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `A`,
@@ -292,7 +292,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realise that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
                         dotKeys: {
@@ -758,7 +758,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         // TODO: Change in recording? Connect to Uncanny Valley?
                         description: `My original idea for the bouncing ping pong ball was to evoke a wind-up toy on my nightstand, which prompts me in my infirm state to imagine Miriam in a leisurely tennis match with her new beau. I forgot about this during the mixing session, though.`,

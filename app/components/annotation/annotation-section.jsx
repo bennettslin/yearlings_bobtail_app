@@ -1,19 +1,17 @@
 import React from 'react'
 import AnnotationUnit from './annotation-unit'
+import { DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 /*************
  * CONTAINER *
  *************/
 
-const AnnotationSection = ({
+const AnnotationSection = (props) => {
 
-    annotation,
-
-...other }) => {
+    const { annotation } = props
 
     return (
-        <AnnotationSectionView {...other}
-            annotation={annotation}
+        <AnnotationSectionView {...props}
             title={annotation.title}
         />
     )
@@ -32,7 +30,11 @@ const AnnotationSectionView = ({
 
 ...other }) => (
     <div className="section annotation-section">
-        {title && <h2 className="annotation-title">{'\u201c'}{title}{'\u201d'}</h2>}
+        {title !== DOT_STANZA_CONSTANT && (
+            <h2 className="annotation-title">
+                {'\u201c'}{title}{'\u201d'}
+            </h2>
+        )}
         <div className="cards-block">
             <AnnotationUnit {...other}
             />

@@ -3,7 +3,7 @@
  * not being clear and being too obvious.
  */
 
- import { OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RESPONSE, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING } from 'helpers/constants'
+ import { OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RESPONSE, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -239,7 +239,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `Though I never got past the first fifty pages of`,
@@ -479,7 +479,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `The Police's`,
@@ -793,7 +793,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `Sita introduced me to`,
@@ -1091,7 +1091,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `While I treated every past Robitussin trip as a mystical experience, I would also while away the hours by playing video games on my`,
@@ -1442,7 +1442,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `For a song about recreational drug use, I naturally sought counsel from the Beatles, whose`,

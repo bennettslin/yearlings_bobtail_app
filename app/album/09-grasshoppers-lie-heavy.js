@@ -1,4 +1,4 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, INSTRUMENTAL, BACKSTORY, NARRATIVE, PUN, OBSERVATION, SONGWRITING, REFERENCE } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, INSTRUMENTAL, BACKSTORY, NARRATIVE, PUN, OBSERVATION, SONGWRITING, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 // TODO: Missing portal for Look Back in Anger. Is it "bell"?
 
@@ -158,7 +158,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `Just as`,
@@ -231,7 +231,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `I wanted the music to sound sentimental with a few rough edges, so channelling`,
@@ -817,7 +817,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `The highlight of Nirvana's`,
@@ -1072,7 +1072,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `The ascending chord progression here symbolises falling in love, and eventually, sexual climax. Simple enough.`,
                         dotKeys: {
@@ -1200,7 +1200,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `The French expression`,

@@ -1,4 +1,4 @@
-import { INSTRUMENTAL, REFRAIN, VERSES, CHORUS, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN } from 'helpers/constants'
+import { INSTRUMENTAL, REFRAIN, VERSES, CHORUS, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 module.exports = {
     title: {
@@ -91,7 +91,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `This song is a carryover from back when our band was called The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
                         dotKeys: {
@@ -239,7 +239,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
                             `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this fashion would be.`
@@ -345,7 +345,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `Obviously, Jacob was a far better drummer. To match his tempo, I had to record at a lower tape speed.`,
                         dotKeys: {
@@ -530,7 +530,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: `***CHANGE_ME***`,
+                    anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: `TODO: Mention granular synthesis? Manual.`,
                         dotKeys: {
