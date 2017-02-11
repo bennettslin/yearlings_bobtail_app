@@ -252,12 +252,12 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends, despite the humiliation of having to face the very gang that had emboldened me to leave her. And so the circus`,
+                            `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends, despite the humiliation of facing the very gang that had emboldened me to leave her. The circus`,
                             {
                                 anchor: `calliope`,
                                 wiki: `Calliope_(music)`
                             },
-                            `heard here, which I created from a tape-saturated melodica track, captures the feeling of parading around like a sad clown once more.`
+                            `heard here, which is actually a tape-saturated melodica track, thus captures the feeling of having to parade around like a sad clown once more.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
