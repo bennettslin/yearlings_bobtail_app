@@ -201,12 +201,12 @@ module.exports = {
                     anchor: `***CHANGE_ME***`,
                     annotation: {
                         description: [
-                            `Our relationship was like a ship swaying perilously in tumultuous waters, a notion captured by the compound meter alternating back and forth between distantly related chords separated by a`,
+                            `Our relationship was like a ship swaying perilously in tumultuous waters, a notion captured by the compound meter alternating back and forth between unrelated chords separated by a`,
                             {
                                 anchor: `tritone.`,
                                 wiki: `Tritone`
                             },
-                            `The meandering tuplets, which I created by splicing single notes played on a mandolin, represent our inability to find common ground. One carries eight notes per beat, the other nine.`
+                            `The meandering tuplets, which I created by splicing single notes played on a mandolin, represent our inability to find common ground, as one carries eight notes per beat, the other nine.`
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
