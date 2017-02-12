@@ -6,6 +6,8 @@
 @popup-darker-box-shadow: -2px 2px 8px 8px @darker-box-shadow-colour;
 @popup-button-box-shadow: -1px 1px 2px 2px @box-shadow-colour;
 
+@popup-button-multiplier: 0.72;
+
 .popup-field, .popup-field .subfield, .popup-transition-group {
     position: absolute;
     width: 100%;
@@ -106,12 +108,8 @@
     }
 }
 
-@popup-button-multiplier: 0.72;
-
 .popup-button {
     position: absolute;
-    height: @app-large-icon-diameter;
-    width: @app-large-icon-diameter;
 
     display: flex;
     justify-content: center;
@@ -211,15 +209,16 @@
         .popup-button {
             &.side-button {
                 top: auto;
-                bottom: -@app-large-icon-diameter * @popup-button-multiplier;
+                bottom: -@app-icon-diameter * @popup-button-multiplier;
+                transform: none;
             }
 
             &.previous-button {
-                left: @app-large-icon-diameter * 0.2;
+                left: @app-icon-diameter * 0.2;
             }
 
             &.next-button {
-                right: @app-large-icon-diameter * 0.2;
+                right: @app-icon-diameter * 0.2;
             }
         }
     }
@@ -240,7 +239,7 @@
 
         &.phone-width {
             .popup-wrapper {
-                &.wiki, &.score {
+                &.wiki, &.score, &.annotation {
                     // Make side margin in phone just that much thinner.
                     width: ~"calc(100% - @{mini-full-subfield})";
                 }
