@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Method to count music annotations.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Get unit tests working again.`,
         workedHours: 0,
         neededHours: 3
