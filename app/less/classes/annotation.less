@@ -1,5 +1,30 @@
 @annotation-text-colour: #f4f4ff;
 
+.side-annotation {
+    .annotation {
+        &.popup-wrapper {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    }
+}
+.is-mobile {
+    .side-annotation {
+        .annotation {
+            &.popup-wrapper {
+                top: auto;
+                bottom: 0;
+                margin-top: auto;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
 .annotation-section {
 
     .annotation-title {

@@ -324,7 +324,7 @@ const LiveView = ({
             ${selectedNavIndex ? ' nav-expanded' : ''}
             ${selectedDotsIndex ? ' dots-shown' : ''}
             ${isOverviewShown ? ' overview-shown' : ''}
-            ${isCentreAnnotation ? ' centre-annotation' : ''}
+            ${isCentreAnnotation ? ' centre-annotation' : 'side-annotation'}
             ${isSelectedVerseAbove ? ' verse-above' : ''}
             ${isSelectedVerseBelow ? ' verse-below' : ''}
             ${verseBarShown ? '' : ' verse-bar-hidden'}
