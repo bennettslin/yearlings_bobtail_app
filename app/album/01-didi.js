@@ -121,7 +121,7 @@ module.exports = {
                     {
                         anchor: `tie his shoes?`,
                         annotation: {
-                            description: `I could never grasp the manner of tying shoelaces where one bunny goes around the tree, possibly because I'm left-handed. I finally worked out a version that looked like the real thing, but easily came undone.`,
+                            description: `I struggled to learn the manner of tying shoelaces where one bunny goes around the tree, possibly because I'm left-handed. I finally worked out a version that looked like the real thing, but always came undone.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }

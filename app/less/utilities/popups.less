@@ -71,6 +71,26 @@
     }
 }
 
+// Multiplier is .95, just like for lyric text in mini.
+.mini-width {
+    .popup-wrapper {
+        &.annotation {
+            width: 380px;
+            max-width: 380px;
+        }
+    }
+}
+
+// Multiplier is .9, just like for lyric text in phone.
+.phone-width {
+    .popup-wrapper {
+        &.annotation {
+            width: 360px;
+            max-width: 360px;
+        }
+    }
+}
+
 .popup-content-wrapper {
     box-shadow: @popup-box-shadow;
     background-color: white;
@@ -184,43 +204,64 @@
     }
 }
 
-.is-mobile:not(.tablet-width) {
-    .popup-wrapper {
-        &.wiki, &.score {
-            width: ~"calc(100% - @{mini-full-subfield} * 2)";
-            height: ~"calc(100% - @{app-icon-diameter} * 2)";
-        }
+.is-mobile {
+
+    &.phone-width, .side-annotation {
 
         .popup-button {
-            &.close-button {
-                display: none;
+            &.side-button {
+                top: auto;
+                bottom: -@app-large-icon-diameter * @popup-button-multiplier;
+            }
+
+            &.previous-button {
+                left: @app-large-icon-diameter * 0.2;
+            }
+
+            &.next-button {
+                right: @app-large-icon-diameter * 0.2;
             }
         }
     }
 
-    &.phone-width {
+    &:not(.tablet-width) {
         .popup-wrapper {
             &.wiki, &.score {
-                // Make side margin in phone just that much thinner.
-                width: ~"calc(100% - @{mini-full-subfield})";
+                width: ~"calc(100% - @{mini-full-subfield} * 2)";
+                height: ~"calc(100% - @{app-icon-diameter} * 2)";
             }
-        }
 
-        .heightless-lyric {
-            .popup-wrapper {
-                &.wiki, &.score {
-                    height: ~"calc(100% - @{mini-full-subfield})";
+            .popup-button {
+                &.close-button {
+                    display: none;
                 }
             }
         }
-    }
 
-    // Reverse width and height when width is greater than height.
-    .heightless-lyric {
-        .popup-wrapper {
-            &.wiki, &.score {
-                width: ~"calc(100% - @{app-icon-diameter} * 2)";
-                height: ~"calc(100% - @{mini-full-subfield} * 2)";
+        &.phone-width {
+            .popup-wrapper {
+                &.wiki, &.score {
+                    // Make side margin in phone just that much thinner.
+                    width: ~"calc(100% - @{mini-full-subfield})";
+                }
+            }
+
+            .heightless-lyric {
+                .popup-wrapper {
+                    &.wiki, &.score {
+                        height: ~"calc(100% - @{mini-full-subfield})";
+                    }
+                }
+            }
+        }
+
+        // Reverse width and height when width is greater than height.
+        .heightless-lyric {
+            .popup-wrapper {
+                &.wiki, &.score {
+                    width: ~"calc(100% - @{app-icon-diameter} * 2)";
+                    height: ~"calc(100% - @{mini-full-subfield} * 2)";
+                }
             }
         }
     }
