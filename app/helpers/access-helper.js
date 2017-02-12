@@ -93,35 +93,36 @@ export default {
             case 't':
                 selectTips()
                 break
-            default:
+            default: {
                 /**
-                 * Directly access sections. These keys fire only if no
-                 * selected annotation or wiki, and dots section is not open.
-                 */
-            let accessedSectionKey
+                * Directly access sections. These keys fire only if no
+                * selected annotation or wiki, and dots section is not open.
+                */
+                let accessedSectionKey
 
-            switch (keyName) {
-                case 'w':
+                switch (keyName) {
+                    case 'w':
                     accessedSectionKey = AUDIO_SECTION
                     break
-                // case 'u':
-                //     accessedSectionKey = DOTS_SECTION
-                //     break
-                case 'l':
+                    // case 'u':
+                    //     accessedSectionKey = DOTS_SECTION
+                    //     break
+                    case 'l':
                     accessedSectionKey = LYRICS_SECTION
                     break
-                case 's':
+                    case 's':
                     accessedSectionKey = NAV_SECTION
                     break
-                default:
-                return false
-            }
+                    default:
+                    return false
+                }
 
-            handleSectionAccess({
-                accessedSectionKey,
-                accessOn: true,
-                overrideClosePopupsDefaultWithSection: accessedSectionKey
-            })
+                handleSectionAccess({
+                    accessedSectionKey,
+                    accessOn: true,
+                    overrideClosePopupsDefaultWithSection: accessedSectionKey
+                })
+            }
         }
 
         return true

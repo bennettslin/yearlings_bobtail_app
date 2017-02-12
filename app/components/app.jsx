@@ -1126,7 +1126,7 @@ class App extends Component {
                         })
                         break
                     case ANNOTATION_SECTION:
-                    case LYRICS_SECTION:
+                    case LYRICS_SECTION: {
                         const fromAnnotationSection = accessedSectionKey === ANNOTATION_SECTION,
                             lyricColumnShown = getShowSingleLyricColumn(this.props, this.state) ? (LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]) : undefined
 
@@ -1172,6 +1172,7 @@ class App extends Component {
                             }
                         }
                         break
+                    }
                     case DOTS_SECTION:
                         newState = AccessHelper.handleDotAccess({
                             keyName,

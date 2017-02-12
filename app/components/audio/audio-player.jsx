@@ -128,8 +128,6 @@ class AudioPlayer extends Component {
                     listenInterval={100}
                     onListen={this._handleListen}
                     onEnded={this._handleEnded}
-                    onAbort={e => console.error('abort', e)}
-                    onError={e => console.error('error', e)}
                 />
             </div>
         )

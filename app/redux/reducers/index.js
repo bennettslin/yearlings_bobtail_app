@@ -80,13 +80,14 @@ export const ScoreIndexReducer = (state = storedScoreIndex, action) => {
 
 export const DotKeysReducer = (state = storedDotKeys, action) => {
     switch (action.type) {
-        case SELECTED_DOT_KEYS:
+        case SELECTED_DOT_KEYS: {
             const { selectedDotKey,
                     isSelected } = action.payload,
                 // Copy state object.
                 newState = Object.assign({}, state)
             newState[selectedDotKey] = isSelected
             return newState
+        }
         default:
             return state
     }
