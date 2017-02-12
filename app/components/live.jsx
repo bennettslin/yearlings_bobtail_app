@@ -168,7 +168,6 @@ const LiveView = ({
             <AudioBanner {...audioBannerProps} />
         ),
         audioSectionProps = {
-            titleInAudio,
             isPhone,
             mp3s,
             isFirstVerse,
@@ -193,7 +192,9 @@ const LiveView = ({
             audioBannerChild
         },
         audioSectionChild = (
-            <AudioSection {...audioSectionProps} />
+            <AudioSection {...audioSectionProps}
+                titleInAudio={titleInAudio}
+            />
         ),
         mainColumnProps = {
             isOverlaidAnnotation,
@@ -378,7 +379,11 @@ const LiveView = ({
             <div className="overlay-popup-subfield">
                 {showOverlay && (
                     <div className="audio-subfield">
-                        {audioSectionChild}
+                        {
+                            <AudioSection {...audioSectionProps}
+                                titleInAudio={false}
+                            />
+                        }
                     </div>
                 )}
                 <div className="overlay-popup-block">
