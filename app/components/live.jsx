@@ -375,7 +375,7 @@ const LiveView = ({
             />
 
             <div className="overlay-popup-subfield">
-                {!isPhone && selectedScoreIndex && (
+                {!!selectedScoreIndex && !isPhone && (
                     <div className="audio-subfield">
                         {audioSectionChild}
                     </div>
