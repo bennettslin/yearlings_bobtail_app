@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Method to count music annotations.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Get unit tests working again.`,
         workedHours: 0,
         neededHours: 3
@@ -1205,6 +1200,11 @@ module.exports = [
     },
     {
         taskName: `Figure out annotations without headers`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Method to count dot stanzas per song.`,
         workedHours: 1,
         neededHours: 1
     }

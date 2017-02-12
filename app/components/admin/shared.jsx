@@ -17,6 +17,7 @@ const Shared = (props) => {
     return (
         <SharedView {...props}
             tasks={tasks}
+            dotStanzas={selectedSong.dotStanzas}
             lyrics={selectedSong.lyrics}
             annotations={selectedSong.annotations}
         />
@@ -33,6 +34,7 @@ const SharedView = ({
 
     // From controller.
     tasks,
+    dotStanzas,
     lyrics,
     annotations,
 
@@ -40,6 +42,7 @@ const SharedView = ({
     <div className="admin-column">
         <div className="admin-field shared-admin-field">
             <StatsSection
+                dotStanzas={dotStanzas}
                 lyrics={lyrics}
                 annotations={annotations}
             />

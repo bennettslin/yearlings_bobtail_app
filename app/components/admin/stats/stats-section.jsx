@@ -1,5 +1,6 @@
 import React from 'react'
-import { LyricsWordCountRow,
+import { DotStanzasRow,
+         LyricsWordCountRow,
          AnnotationsCountRow,
          WordsPerAnnotationRow } from './stat-row'
 
@@ -18,6 +19,7 @@ const StatsSection = (props) => (
 const StatsSectionView = ({
 
     // From props.
+    dotStanzas,
     lyrics,
     annotations
 
@@ -25,6 +27,7 @@ const StatsSectionView = ({
     <div className="section stats-section">
         <h2>stats</h2>
         <div className="row">
+            <DotStanzasRow dotStanzas={dotStanzas} />
             <LyricsWordCountRow lyrics={lyrics} />
             <AnnotationsCountRow annotations={annotations} />
             <WordsPerAnnotationRow annotations={annotations} />

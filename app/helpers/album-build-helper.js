@@ -24,7 +24,8 @@ const _tempStore = {
     _finalAnnotationIndex: 0,
     _hasSideStanzas: false,
     _isDoublespeaker: false,
-    _lyricInTime: false
+    _lyricInTime: false,
+    _dotStanzaCounter: 0,
 }
 
 export const prepareAlbumData = (album = {}) => {
@@ -89,6 +90,7 @@ const _prepareAllSongs = (album) => {
             _tempStore._firstRightAnnotationIndexOfVerse = 0
             _tempStore._hasSideStanzas = false
             _tempStore._isDoublespeaker = false
+            _tempStore._dotStanzaCounter = 0
 
             _addTitleToLyrics(song.title, song.lyrics)
             // Do not confuse anchor key with string prototype anchor method.
@@ -102,7 +104,6 @@ const _prepareAllSongs = (album) => {
 
             _parseLyrics(song.lyrics)
 
-
             song.isDoublespeaker = _tempStore._isDoublespeaker
 
             // Add annotations to song object.
@@ -114,6 +115,9 @@ const _prepareAllSongs = (album) => {
 
             // Add times for all verses to song object.
             song.times = _tempStore._songTimes
+
+            // And dot stanza count for dev purposes.
+            song.dotStanzas = _tempStore._dotStanzaCounter
         }
 
         _gatherDrawings(song.scenes)
@@ -318,6 +322,11 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
 
     // Doublespeaker lyrics have separate keys for each column.
     if (lyric[LYRIC] || lyric[LEFT] || lyric[RIGHT] || lyric[CENTRE] || lyric.dotStanza) {
+
+        if (lyric.dotStanza && !finalPassThrough) {
+            _tempStore._dotStanzaCounter++
+        }
+
         // Add first annotation index of verse, if any.
         if (_tempStore._currentAnnotationIndices.length) {
             // Last annotation index is no longer needed.

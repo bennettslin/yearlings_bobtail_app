@@ -6,6 +6,15 @@ import { LYRIC_TEXT_KEYS } from 'helpers/constants'
  * CONTAINER *
  *************/
 
+const DotStanzasRow = ({ dotStanzas }) => {
+     return (
+         <StatRowView
+             typeName="dot stanzas count"
+             typeCount={dotStanzas}
+         />
+     )
+ }
+
 const LyricsWordCountRow = ({ lyrics }) => {
     const lyricsWordCount = StatsHelper.getTotalWords(lyrics, LYRIC_TEXT_KEYS)
 
@@ -69,6 +78,7 @@ const StatRowView = ({
 )
 
 export {
+    DotStanzasRow,
     LyricsWordCountRow,
     AnnotationsCountRow,
     WordsPerAnnotationRow
