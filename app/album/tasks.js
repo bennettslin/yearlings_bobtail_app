@@ -4,13 +4,13 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+
+    // Weekend 1.
     {
         taskName: `Show audio player with all overlaid popups.`,
         workedHours: 0,
         neededHours: 3
     },
-
-    // Weekend 1.
     {
         taskName: `Figure out when portal has no description`,
         workedHours: 0,

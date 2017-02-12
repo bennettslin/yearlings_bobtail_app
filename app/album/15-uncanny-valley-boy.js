@@ -48,7 +48,6 @@ module.exports = {
                 bennett: 1,
                 motherGhost: 1,
                 fatherGhost: 1,
-                bennett: 1,
                 sita: 1,
                 hipster: 1
             }
@@ -60,7 +59,6 @@ module.exports = {
                 bennett: 1,
                 motherGhost: 1,
                 fatherGhost: 1,
-                bennett: 1,
                 miriam: 1,
                 miriamBoyfriend: 1,
                 sita: 1,

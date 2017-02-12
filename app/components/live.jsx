@@ -7,7 +7,6 @@ import ScoresTipsSection from './scores-tips-section'
 import OverviewButton from './overview/overview-toggle'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
-import DotsPopup from './dots/dots-popup'
 import DotsSection from './dots/dots-section'
 import ScorePopup from './score/score-popup'
 import WikiPopup from './wiki/wiki-popup'
@@ -20,8 +19,7 @@ import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, 
 
 const Live = (props) => {
 
-    const { selectedDotsIndex } = props,
-        selectedSong = getSong(props),
+    const selectedSong = getSong(props),
         annotation = getAnnotation(props),
         selectedWikiUrl = getWikiUrl(props),
         titleInAudio = getTitleInAudio(props),
@@ -193,7 +191,7 @@ const LiveView = ({
 
             audioBannerChild
         },
-        audioSectionChild =(
+        audioSectionChild = (
             <AudioSection {...audioSectionProps} />
         ),
         mainColumnProps = {

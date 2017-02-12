@@ -1,5 +1,4 @@
 import React from 'react'
-import AudioBanner from './audio-banner'
 import AudioButtons from './audio-buttons'
 import AudioPlayersSection from './audio-players-section'
 import TitleSection from '../title/title-section'

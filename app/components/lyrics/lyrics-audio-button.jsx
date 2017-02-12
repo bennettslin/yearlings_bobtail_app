@@ -13,22 +13,30 @@ const LyricsAudioButton = ({
     isAfterSelected,
     onClick
 
-}) => (
-    <div className="lyrics-audio-button-block">
-        {!isSelected &&
-            <a className="lyrics-audio-button-child small-lyrics-audio-button enabled">
-                <div>{`\u2022`}</div>
-            </a>
-        }
-        <a className="lyrics-audio-button-child lyrics-audio-button enabled"
-            onClick={onClick}
-        >
-            {isSelected ?
-                (isPlaying ? `\u23F8` : `\u25BA`) :
-                (isAfterSelected ? `\u23E9` : `\u23EA`)
+}) => {
+
+    let buttonIcon
+
+    if (isSelected) {
+        buttonIcon = isPlaying ? `\u23F8` : `\u25BA`
+    } else {
+        buttonIcon = isAfterSelected ? `\u23E9` : `\u23EA`
+    }
+
+    return (
+        <div className="lyrics-audio-button-block">
+            {!isSelected &&
+                <a className="lyrics-audio-button-child small-lyrics-audio-button enabled">
+                    <div>{`\u2022`}</div>
+                </a>
             }
-        </a>
-    </div>
-)
+            <a className="lyrics-audio-button-child lyrics-audio-button enabled"
+                onClick={onClick}
+            >
+                {buttonIcon}
+            </a>
+        </div>
+    )
+}
 
 export default LyricsAudioButton

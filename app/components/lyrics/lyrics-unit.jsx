@@ -105,11 +105,14 @@ const LyricsUnitView = ({
                     </div>
                 )
             } else {
-                const className = inMain ?
-                    (isSub ? subsectionClass :
-                        sectionClass) :
-                    (isSub ? sideSubsectionClass :
-                        sideSectionClass)
+                let className
+
+                if (inMain) {
+                    className = isSub ? subsectionClass : sectionClass
+                } else {
+                    className = isSub ? sideSubsectionClass : sideSectionClass
+                }
+
                 return (
                     <LyricsStanza {...other}
                         stanzaArray={stanzaArray}
