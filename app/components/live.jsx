@@ -97,6 +97,7 @@ const LiveView = ({
     showSingleLyricColumn,
     isLyricExpanded,
     isLyricExpandable,
+    showOverlay,
     isOverviewShown,
     isOverlaidAnnotation,
     isSelectedVerseAbove,
@@ -375,16 +376,18 @@ const LiveView = ({
             />
 
             <div className="overlay-popup-subfield">
-                {!!selectedScoreIndex && !isPhone && (
+                {showOverlay && (
                     <div className="audio-subfield">
                         {audioSectionChild}
                     </div>
                 )}
-                <ScorePopup {...scorePopupProps} />
-                <WikiPopup {...wikiPopupProps} />
-                {isOverlaidAnnotation &&
-                    <AnnotationPopup {...annotationPopupProps} />
-                }
+                <div className="overlay-popup-block">
+                    <ScorePopup {...scorePopupProps} />
+                    <WikiPopup {...wikiPopupProps} />
+                    {isOverlaidAnnotation &&
+                        <AnnotationPopup {...annotationPopupProps} />
+                    }
+                </div>
             </div>
 
 

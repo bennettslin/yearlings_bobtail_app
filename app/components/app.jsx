@@ -1348,6 +1348,7 @@ class App extends Component {
                     showSingleLyricColumn={showSingleLyricColumn}
                     isLogue={isLogue}
                     isLyricExpandable={isLyricExpandable}
+                    showOverlay={showOverlay}
                     isOverviewShown={isOverviewShown}
                     isOverlaidAnnotation={isOverlaidAnnotation}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
