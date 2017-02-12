@@ -13,7 +13,7 @@ class AnnotationPopup extends Popup {
     }
 
     getContentElement(sectionAccessHighlighted) {
-        return this.props.annotation && !this.props.selectedWikiIndex && (
+        return this.props.annotation && !this.props.selectedScoreIndex && !this.props.selectedWikiIndex && (
             <AnnotationSection {...this.props}
                 sectionAccessHighlighted={sectionAccessHighlighted}
             />

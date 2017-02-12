@@ -277,6 +277,7 @@ const LiveView = ({
             annotation,
             accessedPopupAnchorIndex,
             selectedDotKeys,
+            selectedScoreIndex,
             selectedWikiIndex,
             accessedOn,
             accessedSectionKey,
@@ -347,7 +348,8 @@ const LiveView = ({
             ${selectedNavIndex ? ' nav-expanded' : ''}
             ${selectedDotsIndex ? ' dots-shown' : ''}
             ${isOverviewShown ? ' overview-shown' : ''}
-            ${isOverlaidAnnotation ? ' overlaid-annotation' : 'side-annotation'}
+            ${showOverlay ? ' overlay-shown' : ''}
+            ${isOverlaidAnnotation ? ' overlaid-annotation' : ' side-annotation'}
             ${isSelectedVerseAbove ? ' verse-above' : ''}
             ${isSelectedVerseBelow ? ' verse-below' : ''}
             ${verseBarShown ? '' : ' verse-bar-hidden'}

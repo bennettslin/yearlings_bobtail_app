@@ -1312,8 +1312,8 @@ class App extends Component {
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
             }),
             isOverlaidAnnotation = !getIsDesktop(deviceIndex) && (isLyricExpanded || isPhone),
-            showOverlay = (!isPhone && selectedScoreIndex) || selectedWikiIndex ||
-                (selectedAnnotationIndex && isOverlaidAnnotation)
+            showOverlay = (!isPhone && !!selectedScoreIndex) || !!selectedWikiIndex ||
+                (!!selectedAnnotationIndex && isOverlaidAnnotation)
 
         return (
             <div
