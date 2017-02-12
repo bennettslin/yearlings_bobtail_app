@@ -27,7 +27,7 @@ const MainColumn = (props) => {
 const MainColumnView = ({
 
     // From props.
-    showFullPopup,
+    isCentreAnnotation,
 
     isPhone,
     isLogue,
@@ -149,7 +149,7 @@ const MainColumnView = ({
             />
             <div className="field centre-field">
 
-                {!showFullPopup &&
+                {!isCentreAnnotation &&
                     <div className="field popup-field">
                         <div className="subfield annotation-subfield">
                             {annotationPopupChild}

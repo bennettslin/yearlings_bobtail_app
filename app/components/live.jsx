@@ -150,8 +150,7 @@ const LiveView = ({
 
 }) => {
 
-    const showFullPopup = !getIsDesktop(deviceIndex),
-        overviewPopupProps = {
+    const overviewPopupProps = {
             isPhone,
             isLogue,
             selectedOverviewIndex,
@@ -163,7 +162,7 @@ const LiveView = ({
             onOverviewClick
         },
         mainColumnProps = {
-            showFullPopup,
+            isCentreAnnotation,
 
             isPhone,
             deviceIndex,
@@ -360,7 +359,7 @@ const LiveView = ({
                 <WikiPopup {...wikiPopupProps} />
             </div>
 
-            {showFullPopup &&
+            {isCentreAnnotation &&
                 <div className="full-popup-subfield annotation-subfield">
                     <AnnotationPopup {...annotationPopupProps} />
                 </div>
