@@ -1,6 +1,5 @@
 import React from 'react'
 import TitleSection from './title/title-section'
-import AudioSection from './audio/audio-section'
 
 /*************
  * CONTAINER *
@@ -23,31 +22,15 @@ const MenuFieldView = ({
     titleInAudio,
     scoresTipsOutsideMenu,
 
-    isPhone,
     title,
-    mp3s,
-    isFirstVerse,
-    isLastVerse,
-    selectedSongIndex,
-    isPlaying,
-    updatedTimePlayed,
-    selectedAudioOptionIndex,
     accessedSongIndex,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
-    onPlayClick,
     onSongClick,
-    onVerseClick,
-    onAudioOptionClick,
-    onTimeChange,
-    onPlayerEnd,
-    onTimeUpdated,
 
-    audioBannerChild,
+    audioSectionChild,
     scoresTipsSectionChild
-
-    // From controller.
 
 }) => {
 
@@ -58,31 +41,6 @@ const MenuFieldView = ({
             nextSectionKey,
             accessedSongIndex,
             onTitleClick: onSongClick
-        },
-        audioSectionProps = {
-            titleInAudio,
-            isPhone,
-            mp3s,
-            isFirstVerse,
-            isLastVerse,
-            selectedSongIndex,
-            isPlaying,
-            title,
-            updatedTimePlayed,
-            selectedAudioOptionIndex,
-            accessedOn,
-            accessedSectionKey,
-            nextSectionKey,
-            onPlayClick,
-            onAudioSongClick: onSongClick,
-            onAudioTimeClick: onVerseClick,
-            onTitleClick: onSongClick,
-            onAudioOptionClick,
-            onTimeChange,
-            onPlayerEnd,
-            onTimeUpdated,
-
-            audioBannerChild
         }
 
     return (
@@ -93,8 +51,8 @@ const MenuFieldView = ({
                     <TitleSection {...titleSectionProps} />
                 </div>
             }
-            <div className="menu-subfield audio-menu-subfield">
-                <AudioSection {...audioSectionProps} />
+            <div className="menu-subfield audio-subfield">
+                {audioSectionChild}
             </div>
             {!scoresTipsOutsideMenu &&
                 <div className="menu-subfield scores-tips-menu-subfield">

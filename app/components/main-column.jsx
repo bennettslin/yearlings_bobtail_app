@@ -1,9 +1,7 @@
 import React from 'react'
 import MenuField from './menu-field'
 import NavSection from './nav/nav-section'
-import AudioBanner from './audio/audio-banner'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
-import { getIsDesktop } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -11,12 +9,8 @@ import { getIsDesktop } from 'helpers/responsive-helper'
 
 const MainColumn = (props) => {
 
-    const isDesktop = getIsDesktop(props.deviceIndex)
-
     return (
-        <MainColumnView {...props}
-            isDesktop={isDesktop}
-        />
+        <MainColumnView {...props} />
     )
 }
 
@@ -30,18 +24,11 @@ const MainColumnView = ({
     isCentreAnnotation,
 
     isPhone,
-    isLogue,
-    deviceIndex,
+    isDesktop,
     titleInAudio,
     isHiddenNav,
-    isHeightlessLyricColumn,
     scoresTipsOutsideMenu,
 
-    isFirstVerse,
-    isLastVerse,
-    isPlaying,
-
-    mp3s,
     songs,
     title,
     bookStartingIndices,
@@ -51,67 +38,40 @@ const MainColumnView = ({
     selectedDotsIndex,
     selectedNavIndex,
     selectedBookColumnIndex,
-    selectedSongTitle,
     selectedSongIndex,
-    selectedTimePlayed,
-    updatedTimePlayed,
-    selectedAudioOptionIndex,
 
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
     accessedSongIndex,
 
-    onPlayClick,
     onSongClick,
-    onVerseClick,
-    onAudioOptionClick,
     onNavExpandClick,
     onBookColumnClick,
     onDotsExpandClick,
-    onTimeChange,
-    onPlayerEnd,
-    onTimeUpdated,
 
     annotationPopupChild,
-    dotsPopupChild,
     dotsSectionChild,
     overviewPopupChild,
     overviewButtonChild,
     lyricExpandButtonChild,
     scoresTipsSectionChild,
-
-    // From controller.
-    isDesktop
+    audioBannerChild,
+    audioSectionChild
 
 }) => {
     const menuFieldProps = {
             titleInAudio,
             scoresTipsOutsideMenu,
 
-            isPhone,
             title,
             accessedSongIndex,
-            mp3s,
-            isFirstVerse,
-            isLastVerse,
-            selectedSongTitle,
-            selectedSongIndex,
-            isPlaying,
-            selectedTimePlayed,
-            updatedTimePlayed,
-            selectedAudioOptionIndex,
             accessedOn,
             accessedSectionKey,
             nextSectionKey,
-            onPlayClick,
             onSongClick,
-            onVerseClick,
-            onAudioOptionClick,
-            onTimeChange,
-            onPlayerEnd,
-            onTimeUpdated,
 
+            audioSectionChild,
             scoresTipsSectionChild
         },
         dotsOverviewToggleSectionProps = {
@@ -119,11 +79,6 @@ const MainColumnView = ({
             onDotsExpandClick,
             overviewButtonChild,
             dotsSectionChild
-        },
-        audioBannerProps = {
-            isLogue,
-            selectedSongTitle,
-            selectedTimePlayed
         },
         navSectionProps = {
             songs,
@@ -144,9 +99,7 @@ const MainColumnView = ({
 
     return (
         <div className="column main-column">
-            <MenuField {...menuFieldProps}
-                audioBannerChild={ <AudioBanner {...audioBannerProps} /> }
-            />
+            <MenuField {...menuFieldProps} />
             <div className="field centre-field">
 
                 {!isCentreAnnotation &&
@@ -156,7 +109,6 @@ const MainColumnView = ({
                         </div>
                     </div>
                 }
-
 
                 <div className="subfield dots-overview-subfield">
                     <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
@@ -179,7 +131,7 @@ const MainColumnView = ({
 
                 {isPhone &&
                     <div className="audio-banner-custom-subfield">
-                        <AudioBanner {...audioBannerProps} />
+                        {audioBannerChild}
                     </div>
                 }
 

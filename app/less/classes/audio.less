@@ -29,25 +29,34 @@
     }
 }
 
-.audio-menu-subfield {
+.audio-subfield {
     min-width: @audio-banner-min-width + @audio-buttons-constant + @app-large-icon-diameter;
     max-width: 720px; // Arbitrary.
 }
 
+.full-popup-subfield {
+
+
+    .audio-subfield {
+        position: absolute;
+        z-index: @audio-in-overlay-z-index;
+    }
+}
+
 .tablet-width {
-    .audio-menu-subfield {
+    .audio-subfield {
         min-width: @audio-banner-min-width + @audio-buttons-constant + @app-tablet-large-icon-diameter;
     }
 }
 
 .mini-width {
-    .audio-menu-subfield {
+    .audio-subfield {
         min-width: @audio-banner-min-width + @audio-buttons-constant + @app-mini-large-icon-diameter;
     }
 }
 
 .phone-width {
-    .audio-menu-subfield {
+    .audio-subfield {
         min-width: @audio-buttons-constant + @app-icon-diameter;
     }
 

@@ -5,17 +5,12 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Show audio player with score.`,
+        taskName: `Show audio player with all overlaid popups.`,
         workedHours: 0,
         neededHours: 3
     },
 
     // Weekend 1.
-    {
-        taskName: `Figure out annotations without headers`,
-        workedHours: 0,
-        neededHours: 1
-    },
     {
         taskName: `Figure out when portal has no description`,
         workedHours: 0,
@@ -1200,6 +1195,11 @@ module.exports = [
     },
     {
         taskName: `No score in phone`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Figure out annotations without headers`,
         workedHours: 1,
         neededHours: 1
     }

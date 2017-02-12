@@ -1293,7 +1293,7 @@ class App extends Component {
               nextSectionKey = AccessHelper.getNextSectionKey(props, deviceIndex),
 
             songTimes = getSongTimes(props),
-            isPhone = getIsPhone({deviceIndex}),
+            isPhone = getIsPhone({ deviceIndex }),
             isDesktop = getIsDesktop(deviceIndex),
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             showSingleLyricColumn = getShowSingleLyricColumn(props, state),
@@ -1336,6 +1336,8 @@ class App extends Component {
                     onClick={this.toggleAdmin}
                 />
                 <Switch {...this.props} {...this.state}
+                    isPhone={isPhone}
+                    isDesktop={isDesktop}
                     lyricsStartAtZero={lyricsStartAtZero}
                     isFirstVerse={isFirstVerse}
                     isLastVerse={isLastVerse}

@@ -1,6 +1,8 @@
 import React from 'react'
 import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
+import AudioBanner from './audio/audio-banner'
+import AudioSection from './audio/audio-section'
 import ScoresTipsSection from './scores-tips-section'
 import OverviewButton from './overview/overview-toggle'
 import OverviewPopup from './overview/overview-popup'
@@ -10,7 +12,7 @@ import DotsSection from './dots/dots-section'
 import ScorePopup from './score/score-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getIsPhone, getIsDesktop, getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu, getTitleInAudio } from 'helpers/responsive-helper'
+import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu, getTitleInAudio } from 'helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -22,8 +24,6 @@ const Live = (props) => {
         selectedSong = getSong(props),
         annotation = getAnnotation(props),
         selectedWikiUrl = getWikiUrl(props),
-
-        isPhone = getIsPhone(props),
         titleInAudio = getTitleInAudio(props),
         isHiddenNav = getIsHiddenNav(props),
         isHeightlessLyricColumn = getIsHeightlessLyricColumn(props),
@@ -40,7 +40,6 @@ const Live = (props) => {
             presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
-            isPhone={isPhone}
             titleInAudio={titleInAudio}
             isHiddenNav={isHiddenNav}
             isHeightlessLyricColumn={isHeightlessLyricColumn}
@@ -58,8 +57,8 @@ const Live = (props) => {
 const LiveView = ({
 
     // From props.
-    deviceIndex,
     isPhone,
+    isDesktop,
     manualWidth,
     bookStartingIndices,
     mp3s,
@@ -161,22 +160,51 @@ const LiveView = ({
             // For toggle in popup in phone.
             onOverviewClick
         },
+        audioBannerProps = {
+            isLogue,
+            selectedSongTitle,
+            selectedTimePlayed
+        },
+        audioBannerChild = (
+            <AudioBanner {...audioBannerProps} />
+        ),
+        audioSectionProps = {
+            titleInAudio,
+            isPhone,
+            mp3s,
+            isFirstVerse,
+            isLastVerse,
+            selectedSongIndex,
+            isPlaying,
+            title,
+            updatedTimePlayed,
+            selectedAudioOptionIndex,
+            accessedOn,
+            accessedSectionKey,
+            nextSectionKey,
+            onPlayClick,
+            onAudioSongClick: onSongClick,
+            onAudioTimeClick: onVerseClick,
+            onTitleClick: onSongClick,
+            onAudioOptionClick,
+            onTimeChange,
+            onPlayerEnd,
+            onTimeUpdated,
+
+            audioBannerChild
+        },
+        audioSectionChild =(
+            <AudioSection {...audioSectionProps} />
+        ),
         mainColumnProps = {
             isCentreAnnotation,
 
             isPhone,
-            deviceIndex,
+            isDesktop,
             titleInAudio,
             isHiddenNav,
-            isHeightlessLyricColumn,
             scoresTipsOutsideMenu,
 
-            isLogue,
-            isFirstVerse,
-            isLastVerse,
-            isPlaying,
-
-            mp3s,
             scores,
             songs,
             title,
@@ -189,30 +217,23 @@ const LiveView = ({
             selectedBookColumnIndex,
             selectedDotsIndex,
             selectedWikiUrl,
-            selectedSongTitle,
             selectedSongIndex,
             selectedTipsIndex,
-            selectedTimePlayed,
-            updatedTimePlayed,
-            selectedAudioOptionIndex,
 
             accessedOn,
             accessedSectionKey,
             nextSectionKey,
             accessedSongIndex,
 
-            onPlayClick,
             onSongClick,
-            onVerseClick,
-            onAudioOptionClick,
             onTipsClick,
             onPortalClick,
             onDotsExpandClick,
             onNavExpandClick,
             onBookColumnClick,
-            onTimeChange,
-            onPlayerEnd,
-            onTimeUpdated
+
+            audioBannerChild,
+            audioSectionChild
         },
         lyricColumnProps = {
             isLogue,
@@ -340,7 +361,6 @@ const LiveView = ({
             </div>
             <MainColumn {...mainColumnProps}
                 annotationPopupChild={ <AnnotationPopup {...annotationPopupProps} /> }
-                dotsPopupChild={ <DotsPopup {...dotsSectionProps} /> }
                 dotsSectionChild={ <DotsSection {...dotsSectionProps} /> }
                 overviewPopupChild={
                     <OverviewPopup {...overviewPopupProps}
@@ -357,6 +377,11 @@ const LiveView = ({
             />
 
             <div className="full-popup-subfield score-wiki-subfield">
+                {!isPhone && selectedScoreIndex && (
+                    <div className="audio-subfield">
+                        {audioSectionChild}
+                    </div>
+                )}
                 <ScorePopup {...scorePopupProps} />
                 <WikiPopup {...wikiPopupProps} />
             </div>

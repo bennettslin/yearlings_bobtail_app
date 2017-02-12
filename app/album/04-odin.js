@@ -33,8 +33,7 @@ module.exports = {
             verseIndex: 13,
             description: `Bennett is stepping through the front gate. He sees himself in a rickshaw, driving away. The rickshaw leaves a trail.`,
             characters: {
-                bennett: 1,
-                rickshawDriver: 1
+                bennett: 1
             }
         },
         {
