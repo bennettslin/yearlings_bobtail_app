@@ -98,7 +98,7 @@ const LiveView = ({
     isLyricExpanded,
     isLyricExpandable,
     isOverviewShown,
-    isCentreAnnotation,
+    isOverlaidAnnotation,
     isSelectedVerseAbove,
     isSelectedVerseBelow,
     selectedVerse,
@@ -195,7 +195,7 @@ const LiveView = ({
             <AudioSection {...audioSectionProps} />
         ),
         mainColumnProps = {
-            isCentreAnnotation,
+            isOverlaidAnnotation,
 
             isPhone,
             isDesktop,
@@ -345,7 +345,7 @@ const LiveView = ({
             ${selectedNavIndex ? ' nav-expanded' : ''}
             ${selectedDotsIndex ? ' dots-shown' : ''}
             ${isOverviewShown ? ' overview-shown' : ''}
-            ${isCentreAnnotation ? ' centre-annotation' : 'side-annotation'}
+            ${isOverlaidAnnotation ? ' overlaid-annotation' : 'side-annotation'}
             ${isSelectedVerseAbove ? ' verse-above' : ''}
             ${isSelectedVerseBelow ? ' verse-below' : ''}
             ${verseBarShown ? '' : ' verse-bar-hidden'}
@@ -374,7 +374,7 @@ const LiveView = ({
                 lyricExpandButtonChild={lyricExpandButtonChild}
             />
 
-            <div className="full-popup-subfield score-wiki-subfield">
+            <div className="overlay-popup-subfield">
                 {!isPhone && selectedScoreIndex && (
                     <div className="audio-subfield">
                         {audioSectionChild}
@@ -382,13 +382,11 @@ const LiveView = ({
                 )}
                 <ScorePopup {...scorePopupProps} />
                 <WikiPopup {...wikiPopupProps} />
+                {isOverlaidAnnotation &&
+                    <AnnotationPopup {...annotationPopupProps} />
+                }
             </div>
 
-            {isCentreAnnotation &&
-                <div className="full-popup-subfield annotation-subfield">
-                    <AnnotationPopup {...annotationPopupProps} />
-                </div>
-            }
 
         </div>
     )

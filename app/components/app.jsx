@@ -1311,9 +1311,9 @@ class App extends Component {
                 showSingleLyricColumn,
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
             }),
-            isCentreAnnotation = !getIsDesktop(deviceIndex) && (isLyricExpanded || isPhone),
+            isOverlaidAnnotation = !getIsDesktop(deviceIndex) && (isLyricExpanded || isPhone),
             showOverlay = (!isPhone && selectedScoreIndex) || selectedWikiIndex ||
-                (selectedAnnotationIndex && isCentreAnnotation)
+                (selectedAnnotationIndex && isOverlaidAnnotation)
 
         return (
             <div
@@ -1349,7 +1349,7 @@ class App extends Component {
                     isLogue={isLogue}
                     isLyricExpandable={isLyricExpandable}
                     isOverviewShown={isOverviewShown}
-                    isCentreAnnotation={isCentreAnnotation}
+                    isOverlaidAnnotation={isOverlaidAnnotation}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
                     onSongClick={this.selectSong}
                     onSongFromPortalClick={this.selectFromPortal}

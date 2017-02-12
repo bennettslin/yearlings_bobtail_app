@@ -161,29 +161,27 @@
     }
 }
 
-.full-popup-subfield {
+.overlay-popup-subfield {
+
     .popup-content-wrapper {
         box-sizing: border-box;
-    }
 
-    &.score-wiki-subfield {
-        .popup-content-wrapper {
-            box-shadow: @popup-darker-box-shadow;
-        }
-    }
-
-    &.annotation-subfield {
-        .popup-content-wrapper {
+        &.annotation {
             box-shadow: @popup-box-shadow;
+        }
+
+        &.score, &.wiki {
+            box-shadow: @popup-darker-box-shadow;
         }
     }
 }
 
-.centre-annotation {
+.overlaid-annotation {
 
-    .full-popup-subfield {
-        &.annotation-subfield {
-            .popup-content-wrapper {
+    .overlay-popup-subfield {
+
+        .popup-content-wrapper {
+            &.annotation {
                 box-shadow: @popup-darker-box-shadow;
             }
         }

@@ -21,7 +21,7 @@ const MainColumn = (props) => {
 const MainColumnView = ({
 
     // From props.
-    isCentreAnnotation,
+    isOverlaidAnnotation,
 
     isPhone,
     isDesktop,
@@ -102,7 +102,7 @@ const MainColumnView = ({
             <MenuField {...menuFieldProps} />
             <div className="field centre-field">
 
-                {!isCentreAnnotation &&
+                {!isOverlaidAnnotation &&
                     <div className="field popup-field">
                         <div className="subfield annotation-subfield">
                             {annotationPopupChild}
