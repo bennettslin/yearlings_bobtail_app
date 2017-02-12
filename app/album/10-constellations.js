@@ -801,7 +801,7 @@ module.exports = {
                                 anchor: `Bollywood`,
                                 wiki: `Bollywood`
                             },
-                            `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of the one that was our favourite,`,
+                            `movies, which are a another gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of our favourite,`,
                             {
                                 italic: {
                                     anchor: `Hum Aapke Hain Koun…!`,

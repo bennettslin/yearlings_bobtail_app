@@ -1,6 +1,5 @@
 import { VERSES, CHORUS, POSTCHORUS, SONGWRITING, NARRATIVE, BACKSTORY, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
-// TODO: Music annotation: Children's shows. New Mickey Mouse Club.
 module.exports = {
     title: {
         anchor: `Good Night, Sita`,
@@ -822,6 +821,23 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: [
+                            `Children's albums from the 70s are a treasure trove of musical wisdom, including the soundtrack for`,
+                            {
+                                anchor: `The New Mickey Mouse Club,`,
+                                wiki: `The_Mickey_Mouse_Club`
+                            },
+                            `a disco-inflected revival of the original 50s show. The Yearlings covered the song "Let's Go Day," from which I stole the idea of a synth playing portamento quarter notes.`
+                        ],
+                        dotKeys: {
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
@@ -912,11 +928,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `music annotations`,
-            workedHours: 2,
-            neededHours: 3
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -943,6 +954,11 @@ module.exports = {
         },
         {
             taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
         }
