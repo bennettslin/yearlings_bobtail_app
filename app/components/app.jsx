@@ -47,7 +47,7 @@ import { NAV_SECTION,
          ESCAPE,
          SPACE } from 'helpers/constants'
 import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey } from 'helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getLyricSectionRect } from 'helpers/responsive-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getIsPhone, getLyricSectionRect } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -1287,7 +1287,8 @@ class App extends Component {
             { isAdmin,
               deviceIndex,
               windowWidth,
-              windowHeight } = state,
+              windowHeight,
+              isLyricExpanded } = state,
 
             songTimes = getSongTimes(props),
             isDesktop = getIsDesktop(deviceIndex),
@@ -1307,8 +1308,9 @@ class App extends Component {
                 showSingleLyricColumn,
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
             }),
+            isCentreAnnotation = !getIsDesktop(deviceIndex) && (isLyricExpanded || getIsPhone({ deviceIndex })),
             showOverlay = selectedScoreIndex || selectedWikiIndex ||
-                (!getIsDesktop(deviceIndex)) && selectedAnnotationIndex
+                (selectedAnnotationIndex && isCentreAnnotation)
 
         return (
             <div
@@ -1324,7 +1326,7 @@ class App extends Component {
                 </div>
                 <AdminToggle
                     isAdmin={isAdmin}
-                    isLyricExpanded={this.state.isLyricExpanded}
+                    isLyricExpanded={isLyricExpanded}
                     deviceIndex={deviceIndex}
                     windowWidth={windowWidth}
                     windowHeight={windowHeight}
@@ -1342,6 +1344,7 @@ class App extends Component {
                     isLogue={isLogue}
                     isLyricExpandable={isLyricExpandable}
                     isOverviewShown={isOverviewShown}
+                    isCentreAnnotation={isCentreAnnotation}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
                     onSongClick={this.selectSong}
                     onSongFromPortalClick={this.selectFromPortal}

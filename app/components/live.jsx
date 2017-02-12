@@ -101,6 +101,7 @@ const LiveView = ({
     isLyricExpanded,
     isLyricExpandable,
     isOverviewShown,
+    isCentreAnnotation,
     isSelectedVerseAbove,
     isSelectedVerseBelow,
     selectedVerse,
@@ -324,6 +325,7 @@ const LiveView = ({
             ${selectedNavIndex ? ' nav-expanded' : ''}
             ${selectedDotsIndex ? ' dots-shown' : ''}
             ${isOverviewShown ? ' overview-shown' : ''}
+            ${isCentreAnnotation ? ' centre-annotation' : ''}
             ${isSelectedVerseAbove ? ' verse-above' : ''}
             ${isSelectedVerseBelow ? ' verse-below' : ''}
             ${verseBarShown ? '' : ' verse-bar-hidden'}
@@ -353,7 +355,7 @@ const LiveView = ({
                 lyricExpandButtonChild={lyricExpandButtonChild}
             />
 
-            <div className="full-popup-subfield">
+            <div className="full-popup-subfield score-wiki-subfield">
                 <ScorePopup {...scorePopupProps} />
                 <WikiPopup {...wikiPopupProps} />
             </div>

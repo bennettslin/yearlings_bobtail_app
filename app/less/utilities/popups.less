@@ -2,6 +2,10 @@
 @full-subfield: @app-large-icon-diameter;
 @mini-full-subfield: 10px;
 
+@popup-box-shadow: -2px 2px 8px 8px @box-shadow-colour;
+@popup-darker-box-shadow: -2px 2px 8px 8px @darker-box-shadow-colour;
+@popup-button-box-shadow: -1px 1px 2px 2px @box-shadow-colour;
+
 .popup-field, .popup-field .subfield, .popup-transition-group {
     position: absolute;
     width: 100%;
@@ -68,7 +72,7 @@
 }
 
 .popup-content-wrapper {
-    box-shadow: -2px 2px 8px 8px @box-shadow-colour;
+    box-shadow: @popup-box-shadow;
     background-color: white;
     position: relative;
 
@@ -81,6 +85,8 @@
         padding: 20px @popup-content-side-padding;
     }
 }
+
+@popup-button-multiplier: 0.72;
 
 .popup-button {
     position: absolute;
@@ -101,42 +107,38 @@
     }
 
     &.close-button {
-        top: -@app-large-icon-diameter * 0.7;
-        left: -@app-large-icon-diameter * 0.7;
+        top: -@app-large-icon-diameter * @popup-button-multiplier;
+        left: -@app-large-icon-diameter * @popup-button-multiplier;
         border-radius: 50%;
 
         // Duplicates annotation side button styles.
-        box-shadow: -1px 1px 2px 2px @box-shadow-colour;
+        box-shadow: @popup-button-box-shadow;
         background-color: #fdd;
     }
 
     &.side-button {
-        // top: 50%;
-        // transform: translateY(-50%);
-        top: @app-large-icon-diameter / 2;
+        top: @app-large-icon-diameter * 0.2;
 
         border-radius: 50%;
-        box-shadow: -1px 1px 2px 2px @box-shadow-colour;
+        box-shadow: @popup-button-box-shadow;
         background-color: #dfd;
     }
 
-    @side-button-multiplier: 0.72;
-
     &.previous-button {
-        left: -@app-large-icon-diameter * @side-button-multiplier;
+        left: -@app-large-icon-diameter * @popup-button-multiplier;
     }
 
     &.next-button {
-        right: -@app-large-icon-diameter * @side-button-multiplier;
+        right: -@app-large-icon-diameter * @popup-button-multiplier;
     }
 
     &.shadow {
         display: block;
         overflow: hidden;
-        box-shadow: -2px 2px 8px 8px @box-shadow-colour;
+        box-shadow: @popup-box-shadow;
 
         &.close-button {
-            box-shadow: -2px 2px 8px 8px @darker-box-shadow-colour;
+            box-shadow: @popup-darker-box-shadow;
         }
     }
 }
@@ -144,7 +146,41 @@
 .full-popup-subfield {
     .popup-content-wrapper {
         box-sizing: border-box;
-        box-shadow: -2px 2px 8px 8px @darker-box-shadow-colour;
+    }
+
+    &.score-wiki-subfield {
+        .popup-content-wrapper {
+            box-shadow: @popup-darker-box-shadow;
+        }
+    }
+
+    &.annotation-subfield {
+        .popup-content-wrapper {
+            box-shadow: @popup-box-shadow;
+        }
+    }
+}
+
+.centre-annotation {
+
+    .full-popup-subfield {
+        &.annotation-subfield {
+            .popup-content-wrapper {
+                box-shadow: @popup-darker-box-shadow;
+            }
+        }
+    }
+
+    .popup-button {
+
+        &.side-button {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &.shadow {
+            box-shadow: @popup-darker-box-shadow;
+        }
     }
 }
 
