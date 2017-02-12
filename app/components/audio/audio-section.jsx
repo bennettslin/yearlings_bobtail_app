@@ -1,6 +1,5 @@
 import React from 'react'
 import AudioButtons from './audio-buttons'
-import AudioPlayersSection from './audio-players-section'
 import TitleSection from '../title/title-section'
 import { AUDIO_SECTION,
          SONG_FILES } from 'helpers/constants'
@@ -27,7 +26,6 @@ const AudioSection = ({
 
     return (
         <AudioSectionView {...other}
-            selectedSongIndex={selectedSongIndex}
             isPrologue={isPrologue}
             isFirstSong={isFirstSong}
             isLastSong={isLastSong}
@@ -50,10 +48,7 @@ const AudioSectionView = ({
     isAdmin,
     isPlaying,
     title,
-    selectedSongIndex,
-    updatedTimePlayed,
     selectedAudioOptionIndex,
-    mp3s,
     isFirstVerse,
     isLastVerse,
     onPlayClick,
@@ -61,9 +56,6 @@ const AudioSectionView = ({
     onAudioSongClick,
     onAudioTimeClick,
     onTitleClick,
-    onTimeChange,
-    onPlayerEnd,
-    onTimeUpdated,
 
     audioBannerChild,
 
@@ -96,15 +88,6 @@ const AudioSectionView = ({
             titleInAudio,
             title,
             onTitleClick
-        },
-        audioPlayersProps = {
-            mp3s,
-            isPlaying,
-            selectedSongIndex,
-            updatedTimePlayed,
-            onTimeChange,
-            onPlayerEnd,
-            onTimeUpdated
         }
 
     return (
@@ -119,7 +102,6 @@ const AudioSectionView = ({
             }
             {!isPhone && audioBannerChild}
             <AudioButtons {...audioButtonsProps} />
-            <AudioPlayersSection {...audioPlayersProps} />
         </div>
     )
 }

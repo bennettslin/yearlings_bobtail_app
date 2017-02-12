@@ -17,6 +17,7 @@ import { selectSongIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
 import AdminToggle from './admin/admin-toggle'
+import AudioPlayersSection from './audio/audio-players-section'
 import Switch from './switch'
 import { NAV_SECTION,
          AUDIO_SECTION,
@@ -202,7 +203,7 @@ class App extends Component {
         this.selectAnnotation = this.selectAnnotation.bind(this)
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
-        this.resetupdatedTimePlayed = this.resetupdatedTimePlayed.bind(this)
+        this.resetUpdatedTimePlayed = this.resetUpdatedTimePlayed.bind(this)
         this.selectDot = this.selectDot.bind(this)
         this.selectFromPortal = this.selectFromPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
@@ -809,7 +810,7 @@ class App extends Component {
         }
     }
 
-    resetupdatedTimePlayed() {
+    resetUpdatedTimePlayed() {
         this.setState({
             updatedTimePlayed: null
         })
@@ -1277,17 +1278,23 @@ class App extends Component {
 
     render() {
         const { props, state } = this,
-            { accessedSectionIndex,
+            { mp3s,
+              accessedSectionIndex,
+              selectedSongIndex,
               selectedVerseIndex,
               selectedOverviewIndex,
               selectedWikiIndex,
               selectedScoreIndex,
               selectedAnnotationIndex } = props,
+
             { isAdmin,
               deviceIndex,
               windowWidth,
               windowHeight,
-              isLyricExpanded } = state,
+              isLyricExpanded,
+
+              isPlaying,
+              updatedTimePlayed } = state,
 
               accessedSectionKey = SECTION_KEYS[accessedSectionIndex],
               nextSectionKey = AccessHelper.getNextSectionKey(props, deviceIndex),
@@ -1313,7 +1320,17 @@ class App extends Component {
             }),
             isOverlaidAnnotation = !getIsDesktop(deviceIndex) && (isLyricExpanded || isPhone),
             showOverlay = (!isPhone && !!selectedScoreIndex) || !!selectedWikiIndex ||
-                (!!selectedAnnotationIndex && isOverlaidAnnotation)
+                (!!selectedAnnotationIndex && isOverlaidAnnotation),
+
+            audioPlayersProps = {
+                mp3s,
+                isPlaying,
+                selectedSongIndex,
+                updatedTimePlayed,
+                onTimeChange: this.selectTime,
+                onPlayerEnd: this.advanceToNextSong,
+                onTimeUpdated: this.resetUpdatedTimePlayed
+            }
 
         return (
             <div
@@ -1327,6 +1344,7 @@ class App extends Component {
                     className={`popup-overlay${showOverlay ? '' : ' hidden'}`}
                 >
                 </div>
+                <AudioPlayersSection {...audioPlayersProps} />
                 <AdminToggle
                     isAdmin={isAdmin}
                     isLyricExpanded={isLyricExpanded}
@@ -1369,9 +1387,6 @@ class App extends Component {
                     onBookColumnClick={this.selectBookColumn}
                     onDotsExpandClick={this.selectDotsExpand}
                     onTipsClick={this.selectTips}
-                    onTimeChange={this.selectTime}
-                    onPlayerEnd={this.advanceToNextSong}
-                    onTimeUpdated={this.resetupdatedTimePlayed}
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onLyricSectionScroll={this.handleLyricSectionScroll}
                     onVerseBarClick={this.handleVerseBarClick}

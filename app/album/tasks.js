@@ -7,11 +7,6 @@ module.exports = [
 
     // Weekend 1.
     {
-        taskName: `Show audio player with all overlaid popups.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Figure out when portal has no description`,
         workedHours: 0,
         neededHours: 1
@@ -1205,6 +1200,16 @@ module.exports = [
     },
     {
         taskName: `Method to count dot stanzas per song.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Show audio player with all overlaid popups.`,
+        workedHours: 3,
+        neededHours: 3
+    },
+    {
+        taskName: `audio player should not belong to audio section.`,
         workedHours: 1,
         neededHours: 1
     }
