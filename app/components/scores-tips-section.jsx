@@ -16,6 +16,7 @@ const ScoresTipsSection = (props) => (
 const ScoresTipsSectionView = ({
 
     // From props.
+    isPhone,
     selectedScoreIndex,
     selectedTipsIndex,
     onScoreClick,
@@ -25,14 +26,16 @@ const ScoresTipsSectionView = ({
 
     return (
         <div className="section scores-tips-section">
-            <a
-                className="scores-tips-button scores-button enabled"
-                onClick={e => onScoreClick(e)}
-            >
-                <div className="large button-icon scores-icon">
-                    {selectedScoreIndex}
-                </div>
-            </a>
+            {!isPhone &&
+                <a
+                    className="scores-tips-button scores-button enabled"
+                    onClick={e => onScoreClick(e)}
+                >
+                    <div className="large button-icon scores-icon">
+                        {selectedScoreIndex}
+                    </div>
+                </a>
+            }
             <a
                 className="scores-tips-button tips-button enabled"
                 onClick={e => onTipsClick(e)}

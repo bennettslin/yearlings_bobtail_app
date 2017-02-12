@@ -1276,9 +1276,8 @@ class App extends Component {
 
     render() {
         const { props, state } = this,
-            accessedSectionKey = SECTION_KEYS[props.accessedSectionIndex],
-            nextSectionKey = AccessHelper.getNextSectionKey(props, this.state.deviceIndex),
-            { selectedVerseIndex,
+            { accessedSectionIndex,
+              selectedVerseIndex,
               selectedOverviewIndex,
               selectedWikiIndex,
               selectedScoreIndex,
@@ -1290,7 +1289,11 @@ class App extends Component {
               windowHeight,
               isLyricExpanded } = state,
 
+              accessedSectionKey = SECTION_KEYS[accessedSectionIndex],
+              nextSectionKey = AccessHelper.getNextSectionKey(props, deviceIndex),
+
             songTimes = getSongTimes(props),
+            isPhone = getIsPhone({deviceIndex}),
             isDesktop = getIsDesktop(deviceIndex),
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             showSingleLyricColumn = getShowSingleLyricColumn(props, state),
@@ -1308,8 +1311,8 @@ class App extends Component {
                 showSingleLyricColumn,
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
             }),
-            isCentreAnnotation = !getIsDesktop(deviceIndex) && (isLyricExpanded || getIsPhone({ deviceIndex })),
-            showOverlay = selectedScoreIndex || selectedWikiIndex ||
+            isCentreAnnotation = !getIsDesktop(deviceIndex) && (isLyricExpanded || isPhone),
+            showOverlay = (!isPhone && selectedScoreIndex) || selectedWikiIndex ||
                 (selectedAnnotationIndex && isCentreAnnotation)
 
         return (

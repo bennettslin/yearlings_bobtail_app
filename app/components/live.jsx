@@ -245,6 +245,7 @@ const LiveView = ({
             onVerseBarClick
         },
         scoresTipsSectionProps = {
+            isPhone,
             selectedScoreIndex,
             selectedTipsIndex,
             onScoreClick,
@@ -277,6 +278,7 @@ const LiveView = ({
             onPopupContainerClick
         },
         scorePopupProps = {
+            isPhone,
             scores,
             selectedScoreIndex,
             showClose: true,

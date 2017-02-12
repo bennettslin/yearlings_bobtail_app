@@ -4,7 +4,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-
     {
         taskName: `Show audio player with score.`,
         workedHours: 0,
@@ -12,11 +11,6 @@ module.exports = [
     },
 
     // Weekend 1.
-    {
-        taskName: `Make annotation a sliding section like dots, not a popup.`,
-        workedHours: 0,
-        neededHours: 8
-    },
     {
         taskName: `Figure out annotations without headers`,
         workedHours: 0,
@@ -1198,5 +1192,15 @@ module.exports = [
         taskName: `Allow dots section to fit in narrow heights.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Put annnotations off to the side.`,
+        workedHours: 8,
+        neededHours: 8
+    },
+    {
+        taskName: `No score in phone`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
