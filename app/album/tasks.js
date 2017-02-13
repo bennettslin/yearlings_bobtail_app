@@ -1,5 +1,11 @@
 module.exports = [
     {
+        taskName: `Interactive audio bar`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
         taskName: `Do not scroll after portal select until lyrics have been rendered.`,
         workedHours: 0,
         neededHours: 3
@@ -127,11 +133,6 @@ module.exports = [
     },
     {
         taskName: `Routing and copy link button`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `Interactive audio bar`,
         workedHours: 0,
         neededHours: 8
     },
