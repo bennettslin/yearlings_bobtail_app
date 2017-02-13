@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Do not scroll after portal select until lyrics have been rendered.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Audio section in overlay should fade, not unmount.`,
         workedHours: 0,
         neededHours: 1
@@ -25,11 +30,6 @@ module.exports = [
         taskName: 'final check on all portals',
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Select time for player from portal`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     // Weekend 2.
@@ -1225,6 +1225,11 @@ module.exports = [
     },
     {
         taskName: `audio player should not belong to audio section.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Select time for player from portal`,
         workedHours: 1,
         neededHours: 1
     }

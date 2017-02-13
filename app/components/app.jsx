@@ -353,6 +353,7 @@ class App extends Component {
             element = document.getElementsByClassName(selector)[0]
 
         if (element) {
+            console.warn(`Scrolling ${selector} into view.`);
             scrollIntoViewIfNeeded(element, false, {
                 duration
             })
@@ -766,13 +767,14 @@ class App extends Component {
         // TODO: Don't reset time if it's the same song.
         this.selectSong(undefined, selectedSongIndex, undefined, true)
         this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
-        this.selectVerse(undefined, selectedVerseIndex)
+
+        // This also selects time.
+        // FIXME: This should animate to verse, but doesn't always. (For example, "stand unsure.") This may be because "stand unsure" is verse 49, which doesn't exist yet until the song has been changed.
+        this.selectVerse(true, selectedVerseIndex, undefined, selectedSongIndex)
+
         if (!isNaN(columnIndex)) {
             this.selectLyricColumn(undefined, columnIndex, selectedSongIndex)
         }
-
-        // FIXME: This animation is jumpy.
-        this.scrollElementIntoView('verse', selectedVerseIndex, 250)
     }
 
     selectWikiOrPortal() {
@@ -816,8 +818,8 @@ class App extends Component {
         })
     }
 
-    selectVerse(e, selectedVerseIndex = 0, direction) {
-        const songTimes = getSongTimes(this.props)
+    selectVerse(e, selectedVerseIndex = 0, direction, selectedSongIndex) {
+        const songTimes = getSongTimes(this.props, selectedSongIndex)
 
         this._stopPropagation(e)
 

@@ -40,7 +40,7 @@ const AnnotationPortalsBlockView = ({
             accessHighlighted = sectionAccessHighlighted && accessedPopupAnchorIndex === portalIndex
 
             return (
-                <a
+                <div
                     key={index}
                     className="portal-block enabled"
                     onClick={e => onPortalClick(e, songIndex, annotationIndex, verseIndex, columnIndex)}
@@ -74,7 +74,7 @@ const AnnotationPortalsBlockView = ({
                             />
                         </a>
                     </div> */}
-                </a>
+                </div>
             )
         })}
     </div>

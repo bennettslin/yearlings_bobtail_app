@@ -58,8 +58,8 @@ export const getSelectedBookColumnIndex = (props, selectedSongIndex) => {
     return songIndex < bookStartingIndices[1] ? 1 : 2
 }
 
-export const getSongTimes = (props) => {
-    const selectedSong = getSong(props)
+export const getSongTimes = (props, nextSongIndex) => {
+    const selectedSong = getSong(props, nextSongIndex)
     return selectedSong.times || []
 }
 
