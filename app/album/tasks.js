@@ -1,8 +1,18 @@
 module.exports = [
     {
-        taskName: `Get unit tests working again.`,
+        taskName: `Audio section in overlay should fade, not unmount.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 1
+    },
+    {
+        taskName: `Close button and body click in score should have same effect on annotation`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Annotation underneath score should animate away more smoothly.`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     // Weekend 1.
@@ -23,8 +33,13 @@ module.exports = [
     },
 
     // Weekend 2.
-
     // Weekend 3.
+    {
+        taskName: `Get unit tests working again.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     {
         taskName: `Figure out scrolling rules`,
         workedHours: 0,

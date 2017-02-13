@@ -57,13 +57,14 @@
             height: @dot-diameter;
         }
 
+        text-shadow:
+            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @annotation-text-colour,
+            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @annotation-text-colour,
+            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @annotation-text-colour,
+            @text-shadow-offset @text-shadow-offset @text-shadow-blur @annotation-text-colour;
+
         // TODO: Portals block needs its own text shadow?
-        .text-span, .portals-block {
-            text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @annotation-text-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @annotation-text-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @annotation-text-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @annotation-text-colour;
+        .text-span {
         }
     }
 }

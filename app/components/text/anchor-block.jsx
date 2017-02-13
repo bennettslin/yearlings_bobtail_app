@@ -96,7 +96,9 @@ const AnchorBlockView = ({
                 <span className="underline-bar">
                 </span>
             }
-            {((dotKeys && !wikiIndex && !inPortal) || isPortalAnchor) &&
+            {/* Don't show any dots in portal block. */}
+            {/* {((dotKeys && !wikiIndex && !inPortal) || isPortalAnchor) && */}
+            {dotKeys && !wikiIndex && !inPortal &&
                 <DotBlock
                     inBackground={isSelected}
                     presentDotKeys={dotKeys}

@@ -310,12 +310,6 @@
 
     white-space: nowrap;
 
-    text-shadow:
-    -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
-    @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
-    -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour,
-    @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour;
-
     // Underline anchor tag.
     .underline-bar {
         position: absolute;
@@ -323,12 +317,29 @@
         height: 35%;
         bottom: 0;
         left: 0;
-        background-color: mix(gray, white, 15%);
     }
 
-    &.enabled {
+    &:not(.portal-anchor) {
+        text-shadow:
+            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
+            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
+            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour,
+            @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour;
+
         .underline-bar {
-            background-color: mix(@lyric-link-colour, white, 25%);
+            background-color: mix(gray, white, 15%);
+        }
+
+        &.enabled {
+            .underline-bar {
+                background-color: mix(@lyric-link-colour, white, 25%);
+            }
+        }
+    }
+
+    &.portal-anchor {
+        .underline-bar {
+            background-color: @portal-text-colour;
         }
     }
 }

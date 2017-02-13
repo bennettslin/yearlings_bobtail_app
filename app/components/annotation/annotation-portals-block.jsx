@@ -40,11 +40,14 @@ const AnnotationPortalsBlockView = ({
             accessHighlighted = sectionAccessHighlighted && accessedPopupAnchorIndex === portalIndex
 
             return (
-                <div
+                <a
                     key={index}
-                    className="portal-block"
+                    className="portal-block enabled"
+                    onClick={e => onPortalClick(e, songIndex, annotationIndex, verseIndex, columnIndex)}
                 >
-                    <div className="song-title">{songTitle}</div>
+                    <div className="song-title">
+                        portal to <strong>{songTitle}</strong>
+                    </div>
 
                     <div className="verse-text">
                         <span className="text-span">{'\u201c'}</span>
@@ -57,10 +60,10 @@ const AnnotationPortalsBlockView = ({
                         <span className="text-span">{'\u201d'}</span>
                     </div>
 
-                    <div className="portal-card-block">
+                    {/* <div className="portal-card-block">
                         <a
                             className={`portal-card-button enabled${portalIndex ? ' portal-' + portalIndex : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
-                            onClick={e => onPortalClick(e, songIndex, annotationIndex, verseIndex, columnIndex)}
+
                         >
                             <AnnotationCard
                                 inPortal={true}
@@ -70,8 +73,8 @@ const AnnotationPortalsBlockView = ({
                                 card={cardObject}
                             />
                         </a>
-                    </div>
-                </div>
+                    </div> */}
+                </a>
             )
         })}
     </div>
