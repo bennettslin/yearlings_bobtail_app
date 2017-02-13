@@ -1117,7 +1117,6 @@ module.exports = {
         ],
         [
             {
-                // TODO: Music mention David Bowie's space oddity.
                 time: 193,
                 lyric: [
                     `"Kids say you're`,
@@ -1155,6 +1154,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
+                        // TODO: Music mention David Bowie's space oddity.
                         description: [
                             `I made the sound of failing circuits by scraping the strings of an electric guitar against the pickup, while bouncing a metal rod on a single string near the bridge.`
                         ],
