@@ -1,6 +1,17 @@
 module.exports = [
+
     {
-        taskName: `Interactive audio bar`,
+        taskName: `Hover over stanza shows stanza type`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Audio slider shows stanza colours`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Interactive audio slider`,
         workedHours: 0,
         neededHours: 8
     },
