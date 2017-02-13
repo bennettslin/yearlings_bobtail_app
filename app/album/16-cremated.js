@@ -732,8 +732,6 @@ module.exports = {
                         }
                     },
                     {
-                        // TODO: Mention my family's Buddhism in Odin.
-                        // TODO: gods questionable to society.
                         anchor: `"Bless her, Godspeed…"`,
                         annotation: {
                             description: [
@@ -744,7 +742,7 @@ module.exports = {
                                         wiki: `Children_of_a_Lesser_God_(play)`
                                     }
                                 },
-                                `centres on a deaf woman, and thus its title seems to suggest that the disabled are divinely ordained to be inferior. Beyond just feeling insecure about the autism running in my family, I was keenly aware as a child that my family didn't worship the same gods according to society. And since race often correlates with religion, this suggested to me that some races are also inferior by divine will.`
+                                `centres on a deaf woman, and thus its title seems to suggest that the disabled are divinely ordained to be inferior. Beyond just feeling insecure about the autism running in my family, I was keenly aware as a child that we worshipped gods deemed questionable by society. And since our race correlated with our religion, this suggested to me that some races can also be inferior by divine will.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,

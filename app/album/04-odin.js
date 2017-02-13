@@ -1,9 +1,5 @@
-// Be more open about Buddhist upbringing.
-
 import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
-
-// TODO: Mention sleeping on floor.
 module.exports = {
     title: {
         anchor: 'Odin',
@@ -148,13 +144,20 @@ module.exports = {
                     {
                         anchor: `Indifferent galaxies`,
                         annotation: {
-                            description: `Without the spiritual community that a lifetime with Sasha could offer, I was left with my conception of the universe as just light years of empty space. And while the possibilities suggested by this vast expanse were countless, being with Sasha was not one of them.`,
+                            description: `While my mother tried to raise us Buddhist, its core tenets never made much sense to me, partly because it clashed with the beliefs of my classmates. At the same time, it didn't make any more sense for them to be right and my mother wrong. So I was left with my conception of the universe as just light years of empty space.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
                         }
                     },
-                    `instead stay unmoved;`
+                    `instead`,
+                    {
+                        anchor: `stay unmoved;`,
+                        annotation: {
+                            description: `While the possibilities suggested by this vast expanse of the universe were countless, being with Sasha was not one of them.`
+                        },
+                        todo: true
+                    }
                 ]
             },
             {
@@ -195,7 +198,7 @@ module.exports = {
                     {
                         anchor: `ruminate on these riddles…`,
                         annotation: {
-                            description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie in bed, brooding over my ruined chance with Sasha, disheartened by the endless array of paths left to choose, and fearful over the certainty of forever, whether that forever is to be spent in life or in death.`,
+                            description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, brooding over my ruined chance with Sasha, disheartened by the endless array of paths left to choose, and fearful over the certainty of forever, whether that forever is to be spent in life or in death.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -217,7 +220,7 @@ module.exports = {
                     {
                         anchor: `house settled in sheets,`,
                         annotation: {
-                            description: `The rest of the house is asleep, snug in their blankets. Of course, sheets are also pulled over bodies of the deceased.`,
+                            description: `The rest of the house is asleep, snug under blankets. Of course, sheets are also pulled over bodies of the deceased.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -1020,7 +1023,7 @@ module.exports = {
                     {
                         anchor: `soulless solace`,
                         annotation: {
-                            description: `It seemed both bizarre and cruel to me that I wasn't allowed to profess ignorance on the nature of my soul, and that my fate for all eternity rested on beliefs formed under duress and based on incomplete information.`,
+                            description: `It seemed cruel to me, the notion that I wouldn't be allowed to profess ignorance on the nature of my soul, and that my fate for all eternity should rest on beliefs formed under duress.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -1262,12 +1265,12 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I undertook a yearlong course of study required for conversion to Judaism. However, we didn't last long enough for me to stand before the`,
+                            `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I undertook a yearlong course of study required for conversion to Judaism. We didn't last long enough for me to stand before the`,
                             {
                                 anchor: `beit din,`,
                                 wiki: `Beth_din`
                             },
-                            `or rabbinical court, which is the final step. So, I'm still not Jewish.`
+                            `or rabbinical court, however, which is the final step. So, I'm still not Jewish.`
                         ],
                         dotKeys: {
                             [AFTERWORD]: true

@@ -176,14 +176,13 @@ module.exports = {
                     {
                         anchor: `laid Tourette's,`,
                         annotation: {
-                            // TODO: say it wasn't really that bad.
                             description: [
                                 `Like those with`,
                                 {
                                     anchor: `Tourette syndrome`,
                                     wiki: `Tourette_syndrome`
                                 },
-                                `who suffer from uncontrollable tics, we said and did things on impulse during the breakup. Also, Jesus was "laid to rest" on the first day…`
+                                `who suffer from uncontrollable tics, we said some things on impulse during the breakup. Also, Jesus was "laid to rest" on the first day…`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -573,7 +572,6 @@ module.exports = {
                 lyric: [
                     `Well no, I know it's wrong, but I did`,
                     {
-                        // TODO: explain pun further?
                         anchor: `burn my palms,`,
                         annotation: {
                             description: [
@@ -581,8 +579,12 @@ module.exports = {
                                 {
                                     anchor: `Palm Sunday.`,
                                     wiki: `Palm_Sunday`
-                                }
-                            ]
+                                },
+                                `In my case, of course, the palms I burned were my hands.`
+                            ],
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     }
                 ]

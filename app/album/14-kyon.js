@@ -611,7 +611,6 @@ module.exports = {
         ],
         [
             {
-                // TODO: Peacocks sound like they're saying Kyon?
                 time: 174,
                 lyric: `You say you woke one crystal morning, to find all those thoughts had gone away:`
             },

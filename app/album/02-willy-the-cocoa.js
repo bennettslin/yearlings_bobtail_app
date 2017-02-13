@@ -610,17 +610,17 @@ module.exports = {
                 time: 113,
                 lyric: [
                     {
-                        anchor: `Hit this witch with switch,`,
+                        anchor: `Hit this witch`,
                         annotation: {
-                            // TODO: Mention that gangbanger is hitting him.
-                            description: `It was widely believed that tricking a changeling into revealing its true nature would force it to return the stolen child. The methods for doing so included hitting it with a switch, a flexible rod designed to inflict punishment.`,
+                            description: `It was believed that tricking a changeling into revealing its true nature would force it to return the stolen child. The methods for doing so included hitting it with a switch, a flexible rod designed to inflict punishment. So it seems predestined that Willy would meet a violent end.`,
                             dotKeys: {
+                                [OBSERVATION]: true,
                                 [REFERENCE]: true
                             },
                             portal: `hit_the_switch`
                         }
                     },
-                    `whispers wind, to fix his switcheroo…`
+                    `with switch, whispers wind, to fix his switcheroo…`
                 ]
             },
             {
@@ -638,22 +638,22 @@ module.exports = {
                 lyric: [
                     `a`,
                     {
-                        anchor: `sack-spilled glass swung`,
+                        anchor: `sack-spilled glass`,
                         annotation: {
-                            description: `Eager for a fight, the gangbangers start pushing Willy around. Amidst the commotion, his shopping cart gets turned over, spilling a garbage bag full of empty glass bottles onto the ground. One of the gangbangers grabs a bottle and smashes it against Willy's face.`,
+                            description: `Eager for a fight, the gangbangers start pushing Willy around. Amidst the commotion, his shopping cart is upturned, spilling a garbage bag full of empty bottles onto the ground. `,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
                         }
                     },
-                    `sounds the`,
+                    `swung sounds the`,
                     {
                         anchor: `past-noon toll.`,
                         annotation: {
-                            // TODO: Mention sound of glass cracking Willy's head.
-                            description: `Immediately past noon, the ring of a town bell is heard exactly once.`,
+                            description: `One of the gangbangers grabs a bottle and smashes it against Willy's face. The sound reverberates throughout the neighbourhood, like the ring of a town bell.`,
                             dotKeys: {
-                                [REFERENCE]: true
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
                             }
                         }
                     }
