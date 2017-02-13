@@ -8,15 +8,14 @@ const LYRIC = 'lyric',
     EMPHASIS = 'emphasis',
     ANCHOR = 'anchor',
 
-    PUN = 'pun',
-    BACKSTORY = 'backstory',
-    NARRATIVE = 'narrative',
-    FORESHADOW = 'foreshadow',
     SONGWRITING = 'songwriting',
+    NARRATIVE = 'narrative',
+    PUN = 'pun',
     REFERENCE = 'reference',
+    BACKSTORY = 'backstory',
+    OBSERVATION = 'observation',
     PORTAL = 'portal',
     AFTERWORD = 'afterword',
-    OBSERVATION = 'observation',
 
     // These are class names.
     AUDIO_SECTION = 'audio-section',
@@ -306,7 +305,6 @@ module.exports = {
     PUN,
     BACKSTORY,
     NARRATIVE,
-    FORESHADOW,
     SONGWRITING,
     REFERENCE,
     PORTAL,
@@ -321,7 +319,6 @@ module.exports = {
         BACKSTORY, // My perspective while making the album.
         OBSERVATION,
         PORTAL,
-        // FORESHADOW,
         AFTERWORD // My perspective while making this website.
     ],
 
@@ -341,7 +338,6 @@ module.exports = {
         [NARRATIVE]: 'the story', // My perspective in the story.
         [BACKSTORY]: 'backstory description', // My perspective while making the album.
         [PUN]: 'Of both the "literary" and "bad" variety.',
-        // [FORESHADOW]: 'foreshadow description',
         [SONGWRITING]: 'music description',
         [REFERENCE]: 'wiki description',
         [PORTAL]: 'portal description',
