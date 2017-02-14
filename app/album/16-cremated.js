@@ -157,8 +157,9 @@ module.exports = {
                             }
                         }
                     },
+                    `stuck`,
                     {
-                        anchor: `stuck feet first,`,
+                        anchor: `feet first,`,
                         annotation: {
                             description: [
                                 `My brother was a`,
@@ -623,27 +624,15 @@ module.exports = {
                 centre: [
                     `it hums a`,
                     {
-                        anchor: `typo`,
+                        anchor: `typo fragile ex`,
                         annotation: {
                             description: [
-                                `I was a typo in the sense of being Miriam's mistake. But also a`,
+                                `I was a typo in the sense of being an easily corrected mistake, but so fragile as to faint at the news of being made an ex-boyfriend. I was also a`,
                                 {
                                     anchor: `"Type O,"`,
                                     wiki: `Blood_type`
                                 },
-                                `the universal blood donor, given that I kept wanting to offer more of myself while having little chance of being saved in return.`
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true,
-                                [PUN]: true
-                            }
-                        }
-                    },
-                    {
-                        anchor: `fragile ex`,
-                        annotation: {
-                            description: [
-                                `Different boyfriends react to breakups in different ways, and I was the frail kind. But also`,
+                                `the universal blood donor, who could provide a boost to others yet had little chance of being saved in return. And a`,
                                 {
                                     anchor: `"fragile X,"`,
                                     wiki: `Fragile_X_syndrome`
