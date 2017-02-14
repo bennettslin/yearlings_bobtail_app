@@ -1104,7 +1104,8 @@ module.exports = {
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
-                                [PUN]: true
+                                [PUN]: true,
+                                [REFERENCE]: true
                             }
                         }
                     }
@@ -1112,6 +1113,22 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: [
+                            `Taking a cue from David Bowie's`,
+                            {
+                                anchor: `"Space Oddity"`,
+                                wiki: `Space_Oddity`
+                            },
+                            `at its close, I made the sound of failing circuits by scraping the strings of an electric guitar against the pickup, while bouncing a metal rod on a single string near the bridge.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: POSTCHORUS
             }
         ],
@@ -1151,18 +1168,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        // TODO: Music mention David Bowie's space oddity.
-                        description: [
-                            `I made the sound of failing circuits by scraping the strings of an electric guitar against the pickup, while bouncing a metal rod on a single string near the bridge.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 sectionClass: POSTCHORUS,
                 subsequent: true
             }
