@@ -369,15 +369,11 @@ const LiveView = ({
             />
 
             <div className="overlay-popup-subfield">
-                {showOverlay && (
-                    <div className="audio-subfield">
-                        {
-                            <AudioSection {...audioSectionProps}
-                                titleInAudio={false}
-                            />
-                        }
-                    </div>
-                )}
+                <div className="audio-subfield">
+                    <AudioSection {...audioSectionProps}
+                        titleInAudio={false}
+                    />
+                </div>
                 <div className="overlay-popup-block">
                     <ScorePopup {...scorePopupProps} />
                     <WikiPopup {...wikiPopupProps} />

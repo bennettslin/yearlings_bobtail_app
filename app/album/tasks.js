@@ -1,5 +1,9 @@
 module.exports = [
-
+    {
+        taskName: `Make audio section in overlay a popup.`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Hover over stanza shows stanza type`,
         workedHours: 0,
@@ -20,11 +24,6 @@ module.exports = [
         taskName: `Do not scroll after portal select until lyrics have been rendered.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Audio section in overlay should fade, not unmount.`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Close button and body click in score should have same effect on annotation`,
