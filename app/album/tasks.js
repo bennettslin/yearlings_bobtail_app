@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Make nav hidden the default.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Consolidate animation of overlays.`,
         workedHours: 0,
         neededHours: 1
