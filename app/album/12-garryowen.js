@@ -307,15 +307,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: `To capture the liveliness of a fiddle, I held the violin at chest level. I'd never tried this before, so a bit of practise was needed. As well as a lot of spliced tracks.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 sectionClass: REFRAIN
             }
         ],
@@ -377,6 +368,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `In traditional counterpoint, the chords and harmonic rhythm are byproducts of the melodic contour. The chord progressions for this song were already set, however. So I was left to figure out on my own how counterpoint might be scored in this scenario, since I didn't know of any working examples.`,
+                        dotKeys: {
+                            [REFERENCE]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
@@ -433,9 +434,8 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `In traditional counterpoint, the chords and harmonic rhythm are byproducts of melodic interaction. The chord progressions for this song were already set, however. So I was left to figure out on my own how counterpoint might be scored in this scenario, since I didn't know of any working examples.`,
+                        description: `To capture the liveliness of a fiddle, as well as to pull off all the glissandos I had scored, I held the violin at chest level. I'd never tried this before, so a bit of practise was needed. As well as a lot of spliced tracks.`,
                         dotKeys: {
-                            [REFERENCE]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -513,7 +513,7 @@ module.exports = {
                                 anchor: `Irish ones,`,
                                 wiki: `Uilleann_pipes`
                             },
-                            `I mimicked the sound by overdubbing melodica tracks, with one set acting as the chanter, and another as the drone.`
+                            `I mimicked the sound by overdubbing multiple melodica tracks, with one set acting as the chanter, and another as the drone.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -576,15 +576,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: `After some trial and error, I decided that the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease them apart based on their respective timbres.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 sectionClass: CHORUS
             }
         ],
@@ -632,6 +623,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `After some trial and error, I decided that the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease them apart based on their respective timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS,
                 subsequent: true
             }
