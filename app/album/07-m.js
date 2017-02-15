@@ -13,36 +13,46 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: `Bennett is in his room, frantically doing many things, such that there are many copies of him. One is playing a keyboard and writing stuff down on a notepad, another is reading a textbook, while a third is trying to figure out a Rubik's Cube.`,
+            description: `Bennett is in his room, doing many things, such that there are many copies of him. One is playing a guitar and writing stuff down on a notepad, another is reading a book, while a third is trying to figure out a Rubik's Cube.`,
             characters: {
                 bennett: 3
             }
         },
         {
             verseIndex: 13,
-            description: `It's after a show, and the Yearlings are breaking down their set. While Bennett is chatting with a bunch of male hipsters who are asking him about his gear, Jacob is chatting with Mara.`,
+            description: `It's after a show, and the Yearlings are breaking down their set. Jacob is flirting with Mara. Bennett is selling a CD to a hipster, but is distracted by the sight of Mara.`,
             characters: {
                 bennett: 1,
                 jacob: 1,
                 mara: 1,
-                hipsters: 2
+                ana:1,
+                hipster: 1
             }
         },
         {
             verseIndex: 21,
-            description: `Bennett is walking along outside. He sees Mara's face everywhere he looks: in clouds, on the sides of buildings, and so forth.`,
+            description: `The Yearlings are taking a break from band practise, eating burgers around a table. Mara is with them, cuddling with Jacob. Bennett is visibly agitated.`,
             characters: {
                 bennett: 1,
-                maraDrawing: 5
+                jacob: 1,
+                mara: 1,
+                ana: 1
             }
         },
         {
-            verseIndex: 39,
-            description: `Bennett suddenly has an epiphany. In sketches in his head, he imagines himself playing all the instruments in a band, writing all the songs, and recording all the parts. Finally, he imagines Mara finding his album in a record store.`,
+            verseIndex: 31,
+            description: `Bennett is walking along outside. He sees Mara's face everywhere he looks: in clouds, on the sides of buildings, and so forth.`,
             characters: {
                 bennett: 1,
-                bennettDrawing: 5,
-                maraDrawing: 1
+                maskedWoman: 1,
+                maskedMan: 1
+            }
+        },
+        {
+            verseIndex: 47,
+            description: `Bennett suddenly has an epiphany. In sketches in his head, he imagines himself recording all the instruments in a band. Finally, he imagines Mara finding his album in a record store.`,
+            characters: {
+                bennett: 1
             }
         }
     ],
@@ -50,7 +60,7 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 215,
-    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made things in the band awkward.`,
+    overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practise awkward.`,
     lyrics: [
         [
             {
@@ -93,7 +103,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `This song is a carryover from back when the band was still just The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
+                        description: `This song is a carryover from back when the band was called The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [SONGWRITING]: true
@@ -852,11 +862,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `work out narrative order`,
             workedHours: 2,
             neededHours: 2,
@@ -880,6 +885,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }

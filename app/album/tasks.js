@@ -1,6 +1,11 @@
 module.exports = [
     {
-        taskName: `Make audio section in overlay a popup.`,
+        taskName: `Consolidate animation of overlays.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Put time in audio in phone.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -1241,6 +1246,11 @@ module.exports = [
     },
     {
         taskName: `Select time for player from portal`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Make audio section in overlay a popup.`,
         workedHours: 1,
         neededHours: 1
     }

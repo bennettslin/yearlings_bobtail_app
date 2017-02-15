@@ -2,6 +2,7 @@ import React from 'react'
 import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
+import AudioPopup from './audio/audio-popup'
 import AudioSection from './audio/audio-section'
 import ScoresTipsSection from './scores-tips-section'
 import OverviewButton from './overview/overview-toggle'
@@ -370,8 +371,9 @@ const LiveView = ({
 
             <div className="overlay-popup-subfield">
                 <div className="audio-subfield">
-                    <AudioSection {...audioSectionProps}
+                    <AudioPopup {...audioSectionProps}
                         titleInAudio={false}
+                        showOverlay={showOverlay}
                     />
                 </div>
                 <div className="overlay-popup-block">

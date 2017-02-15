@@ -24,13 +24,17 @@
 .popup-transition-group {
     box-sizing: border-box;
 
-    &:not(.overview) {
+    &:not(.overview):not(.audio) {
         top: 0;
         left: 0;
 
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    &.audio {
+        position: relative;
     }
 }
 
