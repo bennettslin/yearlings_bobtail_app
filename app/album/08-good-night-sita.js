@@ -47,7 +47,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 56,m
+            verseIndex: 56,
             description: `Having bid each other good night, Bennett is walking away, looking dejected. Sita is closing the gate from the inside, looking towards him with concern. In his thought bubble, she is inviting him in.`,
             characters: {
                 bennett: 1,
