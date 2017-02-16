@@ -64,8 +64,30 @@ module.exports = {
     lyrics: [
         [
             {
-                // TODO: Mention white throated sparrow.
                 time: 0,
+                centre: {
+                    italic: `(intro)`
+                }
+            },
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: [
+                            `TODO: The white-throated sparrow`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
+                sectionClass: INSTRUMENTAL
+            }
+        ],
+        [
+            {
+                time: 4,
                 centre: `On a golden cord,`
             },
             {
