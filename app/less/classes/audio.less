@@ -101,13 +101,15 @@
     margin-right: @audio-button-margin;
 }
 
+.audio-banner-block, .timer-in-audio .audio-timer-block {
+    background-color: #8dd;
+}
 
 .audio-banner-block {
     flex-direction: column;
 
     min-width: @audio-banner-min-width;
 
-    background-color: #8dd;
     line-height: 1em;
 
     .audio-display-block {
@@ -116,6 +118,17 @@
 
     .audio-banner {
         flex-grow: 1;
+    }
+}
+
+.timer-in-audio {
+    .audio-timer-block {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 1.5em;
     }
 }
 

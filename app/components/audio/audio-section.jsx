@@ -99,7 +99,11 @@ const AudioSectionView = ({
             {isAdmin &&
                 <h2>audio</h2>
             }
-            {timerInAudio && audioTimerChild}
+            {timerInAudio && (
+                <div className="audio-timer-block">
+                    {audioTimerChild}
+                </div>
+            )}
             {titleInAudio &&
                 <TitleSection {...titleProps} />
             }

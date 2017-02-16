@@ -333,7 +333,9 @@ const LiveView = ({
                     </div>
                 </a>
             </div>
-        )
+        ),
+
+        timerInAudio = showOverlay && isPhone
 
     return (
         <div className={
@@ -342,6 +344,7 @@ const LiveView = ({
             ${isLogue ? ' is-logue' : ' is-song'}
             ${showLyricButtons ? '' : ' hide-lyric-buttons'}
             ${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}
+            ${timerInAudio ? ' timer-in-audio' : ''}
             ${titleInAudio ? ' title-in-audio' : ''}
             ${isHeightlessLyricColumn ? ' heightless-lyric' : ''}
             ${selectedNavIndex ? ' nav-expanded' : ''}
@@ -380,7 +383,7 @@ const LiveView = ({
             <div className="overlay-popup-subfield">
                 <div className="audio-subfield">
                     <AudioPopup {...audioSectionProps}
-                        timerInAudio={isPhone}
+                        timerInAudio={timerInAudio}
                         titleInAudio={false}
                         showOverlay={showOverlay}
                     />
