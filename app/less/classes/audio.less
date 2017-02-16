@@ -121,14 +121,32 @@
     }
 }
 
-.timer-in-audio {
-    .audio-timer-block {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.is-desktop, .tablet-width {
 
-        font-size: 1.5em;
+    /**
+     * In desktop and tablet, width of audio subfield in overlay is less than
+     * width of screen.
+     */
+    .overlay-popup-subfield .audio-subfield {
+        overflow: hidden;
+        border-radius: 15px;
+    }
+}
+
+.timer-in-audio {
+    .overlay-popup-subfield {
+        .audio-buttons-block {
+            max-width: 300px; // Also arbitrary.
+        }
+
+        .audio-timer-block {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 1.75em;
+        }
     }
 }
 
