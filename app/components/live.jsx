@@ -187,6 +187,7 @@ const LiveView = ({
             onTitleClick: onSongClick,
             onAudioOptionClick,
 
+            audioTimerChild,
             audioBannerChild
         },
         audioSectionChild = (
@@ -379,6 +380,7 @@ const LiveView = ({
             <div className="overlay-popup-subfield">
                 <div className="audio-subfield">
                     <AudioPopup {...audioSectionProps}
+                        timerInAudio={isPhone}
                         titleInAudio={false}
                         showOverlay={showOverlay}
                     />

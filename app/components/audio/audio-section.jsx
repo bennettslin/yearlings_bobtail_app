@@ -43,6 +43,7 @@ const AudioSection = ({
 const AudioSectionView = ({
 
     // From props.
+    timerInAudio,
     titleInAudio,
     isPhone,
     isAdmin,
@@ -57,6 +58,7 @@ const AudioSectionView = ({
     onAudioTimeClick,
     onTitleClick,
 
+    audioTimerChild,
     audioBannerChild,
 
     // From controller.
@@ -97,6 +99,7 @@ const AudioSectionView = ({
             {isAdmin &&
                 <h2>audio</h2>
             }
+            {timerInAudio && audioTimerChild}
             {titleInAudio &&
                 <TitleSection {...titleProps} />
             }
