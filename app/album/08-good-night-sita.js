@@ -21,7 +21,7 @@ module.exports = {
         },
         {
             verseIndex: 16,
-            description: `In a thought bubble, Bennett and Sita are at a museum, looking at the Piltdown Man.`,
+            description: `In a thought bubble, Bennett and Sita are at a museum, looking at the skeleton of an early human. Bennett is standing behind the display case, leaning in towards Sita.`,
             characters: {
                 bennett: 1,
                 sita: 1,
@@ -35,7 +35,7 @@ module.exports = {
                 bennett: 1,
                 sita: 1,
                 sitaFriend: 1,
-                actors: 2
+                actor: 1
             }
         },
         {
@@ -47,8 +47,8 @@ module.exports = {
             }
         },
         {
-            verseIndex: 56,
-            description: `Bennett and Sita are still standing outside her gate, having just parted ways. In his thought bubble, he is an actor onstage, speaking to a skull.`,
+            verseIndex: 56,m
+            description: `Having bid each other good night, Bennett is walking away, looking dejected. Sita is closing the gate from the inside, looking towards him with concern. In his thought bubble, she is inviting him in.`,
             characters: {
                 bennett: 1,
                 sita: 1
@@ -933,11 +933,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 27,
             neededHours: 27
@@ -961,6 +956,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 3,
+            neededHours: 3,
         }
     ]
 }
