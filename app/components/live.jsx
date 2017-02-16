@@ -2,6 +2,7 @@ import React from 'react'
 import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
+import AudioTimer from './audio/audio-timer'
 import AudioPopup from './audio/audio-popup'
 import AudioSection from './audio/audio-section'
 import ScoresTipsSection from './scores-tips-section'
@@ -155,10 +156,16 @@ const LiveView = ({
             // For toggle in popup in phone.
             onOverviewClick
         },
-        audioBannerProps = {
+        audioTimerProps = {
             isLogue,
-            selectedSongTitle,
             selectedTimePlayed
+        },
+        audioTimerChild = (
+            <AudioTimer {...audioTimerProps} />
+        ),
+        audioBannerProps = {
+            selectedSongTitle,
+            audioTimerChild
         },
         audioBannerChild = (
             <AudioBanner {...audioBannerProps} />
