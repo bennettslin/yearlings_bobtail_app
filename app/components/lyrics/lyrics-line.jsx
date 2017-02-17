@@ -7,7 +7,6 @@ import { TITLE, CENTRE } from 'helpers/constants'
 class LyricsLine extends Component {
 
     componentDidMount() {
-        this.myParent = ReactDOM.findDOMNode(this.myReactParent)
         this.myChild = ReactDOM.findDOMNode(this.myReactChild)
 
         /**
@@ -42,12 +41,27 @@ class LyricsLine extends Component {
 
     _shouldResetWidthBasedOnProps(oldProps, newProps) {
         const shouldResetWidthBasedOnProps =
+            /**
+             * If performance were not an issue, we would reset based on any
+             * screen width change. Since it is, we will do so strategically.
+             * We will reset for large width changes such as between device
+             * types, or when switching from portait to landscape.
+             */
+            oldProps.deviceIndex !== newProps.deviceIndex ||
+            oldProps.isPortrait !== newProps.isPortrait ||
+
+            /**
+             * Resetting is mandatory when selecting a new song or column, or
+             * when switching number of columns.
+             */
             oldProps.selectedSongIndex !== newProps.selectedSongIndex ||
             oldProps.showSingleLyricColumn !== newProps.showSingleLyricColumn ||
             oldProps.selectedLyricColumnIndex !== newProps.selectedLyricColumnIndex ||
+
+            // In verse bar.
             (!!oldProps.inVerseBar && oldProps.text !== newProps.text)
 
-        // if (this.props.verseSelected) {
+        // if (this.props.verseSelected && shouldResetWidthBasedOnProps) {
         //     console.error('shouldResetWidthBasedOnProps', shouldResetWidthBasedOnProps);
         // }
 
@@ -104,11 +118,12 @@ class LyricsLine extends Component {
 
         return (
             <div
-                ref={(ref) => (this.myReactParent = ref)}
+                ref={(node) => (this.myParent = node)}
                 className={`line ${columnKey}`}
             >
+                {/* How to have a child pass its ref: https://github.com/yannickcr/eslint-plugin-react/issues/678 */}
                 <TextBlock {...other}
-                    ref={(ref) => (this.myReactChild = ref)}
+                    ref={(node) => (this.myReactChild = node)}
                     isLyric={true}
                 />
             </div>

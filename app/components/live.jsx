@@ -57,6 +57,10 @@ const Live = (props) => {
 const LiveView = ({
 
     // From props.
+    deviceIndex,
+    windowHeight,
+    windowWidth,
+
     isPhone,
     isDesktop,
     manualWidth,
@@ -235,6 +239,11 @@ const LiveView = ({
             audioSectionChild
         },
         lyricColumnProps = {
+            deviceIndex,
+
+            // For lyrics line width reset.
+            isPortrait: windowHeight > windowWidth,
+
             isLogue,
             showSingleLyricColumn,
             hiddenLyricColumnKey,

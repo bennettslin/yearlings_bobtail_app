@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Reset line width based on screen width change.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Make nav hidden the default.`,
         workedHours: 0,
         neededHours: 1
@@ -1261,6 +1256,11 @@ module.exports = [
     },
     {
         taskName: `Put time in audio in phone.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Reset line width based on screen width change.`,
         workedHours: 1,
         neededHours: 1
     }
