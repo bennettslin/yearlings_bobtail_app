@@ -56,14 +56,6 @@ module.exports = {
             }
         },
         {
-            verseIndex: 41,
-            description: `Bennett is stoically marching past two bullies.`,
-            characters: {
-                preteenBennett: 1,
-                bullies: 2
-            }
-        },
-        {
             verseIndex: 49,
             description: `Bennett is eating lunch by himself, sadly watching the other kids hanging out and having fun. In the background is propaganda news footage of the spacecraft exploding.`,
             characters: {
