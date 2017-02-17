@@ -217,8 +217,7 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            // TODO: Unfinished.
-                            `Owen would sing in muffled tones so as not to wake his neighbours, then overdub several takes. Presumably that's how late-night recording on a four-track shapes your vocal style, since Elliott Smith did the same on his first few albums.`,
+                            `So as not to wake his neighbours, Owen would sing in muffled tones, then double track his vocals. Not surprisingly, he saw a kindred spirit in Elliott Smith, who did the same on his first few albums.`,
                             {
                                 italic: `Either/Or,`,
                                 wiki: `Either/Or_(album)`
