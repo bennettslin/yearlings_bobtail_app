@@ -22,14 +22,8 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: `Bennett is recording in his room, a speech bubble showing scenes of him getting bullied.`,
-            characters: {
-                bennett: 1
-            }
-        },
-        {
-            verseIndex: 8,
-            description: `Bennett is onstage performing with his band, a speech bubble showing the scene of Sita rejecting him. A redheaded woman is arriving late, and trying to make her way into the crowd.`,
+            // TODO: Consider whether I want that speech bubble there.
+            description: `Bennett is onstage performing with his band, a speech bubble showing the scene of Sita rejecting him. A redheaded woman is arriving late, and making her way through the crowd.`,
             characters: {
                 bennett: 1,
                 ana: 1,
@@ -39,44 +33,15 @@ module.exports = {
             }
         },
         {
-            verseIndex: 16,
-            description: `After the show, Bennett is breaking down the set. The next band is setting up, and they seem friendly. The redhead has her chin propped onstage, and she is talking to Bennett.`,
+            verseIndex: 12,
+            description: `After the show, Bennett is breaking down the set. Another band is setting up. The redhead has introduced herself to Bennett, and is flirting with him.`,
             characters: {
                 bennett: 1,
-                otherBand: 1,
-                redhead: 1,
-                redheadFriends: 2
-            }
-        },
-        {
-            verseIndex: 20,
-            description: `Bennett is near the back watching the next band perform, standing next to the redheaded woman. The band's onstage antics are similar to those of the bullies who once taunted him.`,
-            characters: {
-                bennett: 1,
-                otherBand: 1,
                 redhead: 1
             }
         },
         {
             verseIndex: 23,
-            description: `In the same scene, the redhead is whispering into Bennett's ear, as if suggesting to hang out later.`,
-            characters: {
-                bennett: 1,
-                otherBand: 1,
-                redhead: 1
-            }
-        },
-        {
-            verseIndex: 26,
-            description: `In the same scene, Bennett looks at her, but doesn't respond.`,
-            characters: {
-                bennett: 1,
-                otherBand: 1,
-                redhead: 1
-            }
-        },
-        {
-            verseIndex: 30,
             description: `At the end of the show, Bennett and his bandmates are loading their equipment into their van. The redhead and her friends are looking in his direction, but Bennett walks by them.`,
             characters: {
                 bennett: 1,
@@ -86,12 +51,11 @@ module.exports = {
             }
         },
         {
-            verseIndex: 38,
-            description: `Bennett is back home, sitting on the edge of Sita's bed. In his thought bubble is a sketch of the redhead woman, naked in bed and reaching for him. He reaches for her enthusiastically. She is half asleep, looking peaceful, and is reaching towards him. He does not respond.`,
+            verseIndex: 34,
+            description: `Bennett is back home, sitting on the edge of Sita's bed. Sita is half asleep, looking peaceful, and is reaching towards him. He does not respond. In his thought bubble, he is reaching for the redhead, who is in bed in place of Sita.`,
             characters: {
                 bennett: 1,
-                sita: 1,
-                sketch: 1
+                sita: 1
             }
         }
     ],

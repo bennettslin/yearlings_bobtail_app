@@ -35,18 +35,8 @@ module.exports = {
             }
         },
         {
-            verseIndex: 7,
-            description: `The gang is about to go into the steam tunnel through a hidden grate.`,
-            characters: {
-                bennett: 1,
-                ana: 1,
-                howie: 1,
-                tomer: 1
-            }
-        },
-        {
-            verseIndex: 11,
-            description: `The gang is wandering through the steam tunnels. Bennett is blathering.`,
+            verseIndex: 8,
+            description: `The gang is wandering through the steam tunnels. Bennett is blathering, Tomer is play fighting with him. Howie and Ana are behind, flirting.`,
             characters: {
                 bennett: 1,
                 ana: 1,
@@ -66,7 +56,7 @@ module.exports = {
         },
         {
             verseIndex: 24,
-            description: `The gang is driving in a car. Bennett is sitting in the back with his eyes closed. He pictures a sabre-tooth tiger and mastodon, and his brother and sister as Loki and Freyja.`,
+            description: `The gang is driving in a car. Bennett is sitting in the back with his eyes closed. He pictures himself and Sita as a mastodon and a sabre-tooth tiger, and his brother and sister as Loki and Freyja.`,
             characters: {
                 bennett: 1,
                 ana: 1,
