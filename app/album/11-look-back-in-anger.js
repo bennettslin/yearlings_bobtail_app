@@ -181,11 +181,12 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `So as not to wake his neighbours, Owen would sing in muffled tones, then double track his vocals. Not surprisingly, he saw a kindred spirit in Elliott Smith, who did the same on his first few albums.`,
+                            `So as not to wake his neighbours, Owen would sing in muffled tones and then double track his vocals, much like`,
                             {
-                                italic: `Either/Or,`,
-                                wiki: `Either/Or_(album)`
-                            }
+                                anchor: `Elliott Smith`,
+                                wiki: `Elliott_Smith`
+                            },
+                            `did on his first few albums. So I guess this is a go-to approach for late-night recording.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
