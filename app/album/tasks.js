@@ -1,16 +1,16 @@
 module.exports = [
     {
+        taskName: `Reset line width based on screen width change.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Make nav hidden the default.`,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: `Consolidate animation of overlays.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Put time in audio in phone.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -1256,6 +1256,11 @@ module.exports = [
     },
     {
         taskName: `Make audio section in overlay a popup.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Put time in audio in phone.`,
         workedHours: 1,
         neededHours: 1
     }

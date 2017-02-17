@@ -539,15 +539,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: `TODO: Mention granular synthesis? Manual.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 sectionClass: VERSES,
                 subsequent: true
             }
@@ -852,11 +843,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -888,6 +874,11 @@ module.exports = {
         },
         {
             taskName: `review synopses and rough illustrations`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
         }
