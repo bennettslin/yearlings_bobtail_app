@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Consolidate animation of overlays.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Hover over stanza shows stanza type`,
         workedHours: 0,
         neededHours: 3
@@ -1261,6 +1256,11 @@ module.exports = [
     },
     {
         taskName: `Reset line width based on screen width change.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Consolidate animation of overlays.`,
         workedHours: 1,
         neededHours: 1
     }
