@@ -22,14 +22,12 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            // TODO: Consider whether I want that speech bubble there.
             description: `Bennett is onstage performing with his band, a speech bubble showing the scene of Sita rejecting him. A redheaded woman is arriving late, and making her way through the crowd.`,
             characters: {
                 bennett: 1,
-                ana: 1,
-                jacob: 1,
-                crowd: 1,
-                redhead: 1
+                audienceMembers: 3,
+                redhead: 1,
+                redheadFriend: 1
             }
         },
         {
@@ -37,7 +35,9 @@ module.exports = {
             description: `After the show, Bennett is breaking down the set. Another band is setting up. The redhead has introduced herself to Bennett, and is flirting with him.`,
             characters: {
                 bennett: 1,
-                redhead: 1
+                redhead: 1,
+                jacob: 1,
+                mara: 1
             }
         },
         {
@@ -45,7 +45,8 @@ module.exports = {
             description: `At the end of the show, Bennett and his bandmates are loading their equipment into their van. The redhead and her friends are looking in his direction, but Bennett walks by them.`,
             characters: {
                 bennett: 1,
-                jacob: 1,
+                ana: 1,
+                mara: 1,
                 redhead: 1,
                 redheadFriends: 2
             }
@@ -325,7 +326,8 @@ module.exports = {
                     {
                         anchor: `filled first from sides.`,
                         annotation: {
-                            description: `At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls. A few songs into my band's set, I watch from onstage as an attractive latecomer makes her way through an unusually packed room.`,
+                            // TODO: Reword
+                            description: `At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls. A few songs into my band's set, I watch from onstage as an attractive latecomer and her friends make their way through an unusually packed room.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -744,11 +746,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 35,
             neededHours: 35
@@ -772,6 +769,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
