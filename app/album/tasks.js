@@ -1,5 +1,20 @@
 module.exports = [
     {
+        taskName: `Fix dot bubbles being hidden by menu.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Make dot tooltip touch focused`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Make play button touch focused`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Make nav hidden the default.`,
         workedHours: 0,
         neededHours: 1
@@ -145,16 +160,6 @@ module.exports = [
         taskName: `Routing and copy link button`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `Make dot tooltip touch focused`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Make play button touch focused`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `make visual keyboard keys`,
