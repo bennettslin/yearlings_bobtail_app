@@ -181,12 +181,12 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `So as not to wake his neighbours, Owen would sing in muffled tones and then double track his vocals, much like`,
+                            `So as not to wake his neighbours, Owen would sing in muffled tones and then double track his vocals. I didn't have a cassette player handy to play his demos, so I took notes from`,
                             {
-                                anchor: `Elliott Smith`,
+                                anchor: `Elliott Smith,`,
                                 wiki: `Elliott_Smith`
                             },
-                            `did on his first few albums. So I guess this is a go-to approach for late-night recording.`
+                            `who did the same on his first few albums. I guess it's the go-to approach for late-night recording.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
@@ -419,6 +419,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `I recorded the cymbals here at an extremely low tape speed, which turned them into pitched percussion upon normal playback.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
@@ -730,11 +739,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -763,6 +767,11 @@ module.exports = {
             taskName: `separate annotations into dot categories`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
