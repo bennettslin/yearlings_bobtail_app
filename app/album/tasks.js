@@ -5,24 +5,25 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Make dot tooltip touch focused`,
+        taskName: `Make dot tooltip touch accessible`,
         workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Make play button touch focused`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Make nav hidden the default.`,
-        workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
     {
         taskName: `Hover over stanza shows stanza type`,
         workedHours: 0,
         neededHours: 3
+    },
+
+    {
+        taskName: `Make lyric line touch accessible`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Make nav hidden the default.`,
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: `Audio slider shows stanza colours`,
