@@ -36,7 +36,7 @@ module.exports = {
         },
         {
             verseIndex: 8,
-            description: `The gang is wandering through the steam tunnels. Bennett is blathering, Tomer is play fighting with him. Howie and Ana are behind, flirting.`,
+            description: `The gang is wandering through the steam tunnels. Bennett is blathering, Howie is half paying attention. Tomer and Ana are play fighting.`,
             characters: {
                 bennett: 1,
                 ana: 1,
@@ -46,7 +46,7 @@ module.exports = {
         },
         {
             verseIndex: 17,
-            description: `The gang is at the cemetery, standing over Adam's grave.`,
+            description: `The gang is at the cemetery, standing over Adam's grave. Tomer is kneeling and pouring a bottle of water over the gravestone. Bennett is. Howie and Ana `,
             characters: {
                 bennett: 1,
                 ana: 1,
@@ -66,9 +66,10 @@ module.exports = {
         },
         {
             verseIndex: 31,
-            description: `Bennett is huddled under a blanket on a couch, lit up by an old television facing away from the audience.`,
+            description: `Bennett is in the attic, huddled under a blanket on a couch, lit up by an old television facing away from the audience. Howie is downstairs, in anguish, clutching at his head.`,
             characters: {
-                bennett: 1
+                bennett: 1,
+                howie: 1
             }
         }
     ],
@@ -1594,11 +1595,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 40,
             neededHours: 40
@@ -1622,6 +1618,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 3,
+            neededHours: 3,
         }
     ]
 }
