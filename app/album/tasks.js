@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `Close button and body click in score should have same effect on annotation`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Selecting new song from audio overlay shouldn't dismiss overlay`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Fix dot bubbles being hidden by menu.`,
         workedHours: 0,
         neededHours: 1
@@ -10,26 +20,11 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Hover over stanza shows stanza type`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: `Make lyric line touch accessible`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Make nav hidden the default.`,
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Audio slider shows stanza colours`,
-        workedHours: 0,
-        neededHours: 5
-    },
+
     {
         taskName: `Interactive audio slider`,
         workedHours: 0,
@@ -40,11 +35,6 @@ module.exports = [
         taskName: `Do not scroll after portal select until lyrics have been rendered.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Close button and body click in score should have same effect on annotation`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Annotation underneath score should animate away more smoothly.`,
@@ -237,6 +227,16 @@ module.exports = [
     //     taskName: `toggle min and max device widths`,
     //     workedHours: 0,
     //     neededHours: 1
+    // },
+    // {
+    //     taskName: `Hover over stanza shows stanza type`,
+    //     workedHours: 0,
+    //     neededHours: 4
+    // },
+    // {
+    //     taskName: `Audio slider shows stanza colours`,
+    //     workedHours: 0,
+    //     neededHours: 5
     // },
     {
         taskName: `refactor to get album objects`,
@@ -1269,5 +1269,10 @@ module.exports = [
         taskName: `Consolidate animation of overlays.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Make lyric line touch accessible`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]
