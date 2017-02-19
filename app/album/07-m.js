@@ -184,7 +184,7 @@ module.exports = {
                     {
                         anchor: `mystery mensch.`,
                         annotation: {
-                            description: `The few women I'd attracted up to that point had initially credited me with possessing greater mystery and substance than the truth eventually revealed. It made perfect sense, then, to start by actually becoming what they already assumed me to be.`,
+                            description: `The smattering of women I'd attracted up to that point had initially credited me with possessing greater mystery and substance than the truth eventually revealed. It made perfect sense, then, to start by legitimately becoming what they mistakenly assumed me to be.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true

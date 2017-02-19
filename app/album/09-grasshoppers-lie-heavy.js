@@ -805,6 +805,7 @@ module.exports = {
                     {
                         anchor: `"here to Philip Dick?"`,
                         annotation: {
+                            // TODO: Be clear about masturbation.
                             description: `Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my carefully crafted bookish persona, while subtly conveying her acceptance of the flawed, vulnerable person underneath.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
