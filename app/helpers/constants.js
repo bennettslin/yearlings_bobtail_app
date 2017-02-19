@@ -249,18 +249,19 @@ module.exports = {
     RIGHT,
     OVERLAP: 'overlap',
 
-    TITLE: 'title',
-    INSTRUMENTAL: 'instrumental',
-    REFRAIN: 'refrain',
-    VERSES: 'verses',
-    PRECHORUS: 'prechorus',
-    CHORUS: 'chorus',
-    POSTCHORUS: 'postchorus',
-    BRIDGE: 'bridge',
-    CODA: 'coda',
-    RHYME: 'rhyme',
-    RESPONSE: 'response',
-    BACKING: 'backing',
+    TITLE: 'song-section-title',
+    REFRAIN: 'song-section-refrain',
+    VERSES: 'song-section-verse',
+    PRECHORUS: 'song-section-prechorus',
+    CHORUS: 'song-section-chorus',
+    POSTCHORUS: 'song-section-postchorus',
+    BRIDGE: 'song-section-bridge',
+
+    INSTRUMENTAL: 'song-section-instrumental',
+    CODA: 'song-section-coda',
+    RHYME: 'song-section-rhyme',
+    RESPONSE: 'song-section-response',
+    BACKING: 'song-section-backing',
 
     // Temporary.
     ALBUM_BUILD_KEYS: [

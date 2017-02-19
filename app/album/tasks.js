@@ -1,19 +1,35 @@
 module.exports = [
     {
-        taskName: `Make nav hidden the default.`,
+        taskName: `Clicking on verse when verse bar is shown does not hide verse bar`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Close button and body click in score should have same effect on annotation`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Hover over stanza shows stanza type`,
+        taskName: `Selecting new song from audio overlay shouldn't dismiss overlay`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Fix dot bubbles being hidden by menu.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Make dot tooltip touch accessible`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Audio slider shows stanza colours`,
+        taskName: `Make nav hidden the default.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 1
     },
+
     {
         taskName: `Interactive audio slider`,
         workedHours: 0,
@@ -24,11 +40,6 @@ module.exports = [
         taskName: `Do not scroll after portal select until lyrics have been rendered.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Close button and body click in score should have same effect on annotation`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Annotation underneath score should animate away more smoothly.`,
@@ -147,16 +158,6 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Make dot tooltip touch focused`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Make play button touch focused`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `make visual keyboard keys`,
         workedHours: 0,
         neededHours: 3
@@ -231,6 +232,16 @@ module.exports = [
     //     taskName: `toggle min and max device widths`,
     //     workedHours: 0,
     //     neededHours: 1
+    // },
+    // {
+    //     taskName: `Hover over stanza shows stanza type`,
+    //     workedHours: 0,
+    //     neededHours: 4
+    // },
+    // {
+    //     taskName: `Audio slider shows stanza colours`,
+    //     workedHours: 0,
+    //     neededHours: 5
     // },
     {
         taskName: `refactor to get album objects`,
@@ -1263,5 +1274,10 @@ module.exports = [
         taskName: `Consolidate animation of overlays.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Make lyric line touch accessible`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

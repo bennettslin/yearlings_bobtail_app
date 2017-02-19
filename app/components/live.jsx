@@ -85,6 +85,7 @@ const LiveView = ({
     selectedDotsIndex,
     selectedNavIndex,
     selectedBookColumnIndex,
+    interactivatedVerseIndex,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
@@ -133,6 +134,7 @@ const LiveView = ({
     onSelectVerseElement,
     onLyricSectionScroll,
     onVerseBarClick,
+    onInteractivatedVerseClick,
 
     // From controller.
     overviewText,
@@ -262,6 +264,7 @@ const LiveView = ({
             selectedSongIndex,
             selectedAnnotationIndex,
             selectedLyricColumnIndex,
+            interactivatedVerseIndex,
             songLyrics: selectedSongLyrics,
             selectedDotKeys,
             selectedVerseIndex,
@@ -271,7 +274,8 @@ const LiveView = ({
             onPlayClick,
             onSelectVerseElement,
             onLyricSectionScroll,
-            onVerseBarClick
+            onVerseBarClick,
+            onInteractivatedVerseClick
         },
         scoresTipsSectionProps = {
             isPhone,
@@ -329,8 +333,6 @@ const LiveView = ({
             onOverviewClick
         },
 
-        verseBarShown = isSelectedVerseAbove || isSelectedVerseBelow,
-
         lyricExpandButtonChild = isLyricExpandable && (
             <div className="lyric-button-block expand-button-block">
                 <a
@@ -363,7 +365,6 @@ const LiveView = ({
             ${isOverlaidAnnotation ? ' overlaid-annotation' : ' side-annotation'}
             ${isSelectedVerseAbove ? ' verse-above' : ''}
             ${isSelectedVerseBelow ? ' verse-below' : ''}
-            ${verseBarShown ? '' : ' verse-bar-hidden'}
             ${manualWidth ? ' manual-width' : ''}`
         }>
             {/* Ideal for song and logue to not be in separate overview subfields. */}

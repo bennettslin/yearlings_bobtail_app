@@ -10,31 +10,53 @@ import { getPropsAreSame } from 'helpers/general-helper'
 
 const LyricsVerse = ({
 
-    verseObject,
-    sectionAccessHighlighted,
-    accessedLyricElement,
+    verseBarShown,
     accessedVerseIndex,
     selectedVerseIndex,
+    interactivatedVerseIndex,
     lyricsStartAtZero,
     onAnnotationClick,
     onVerseClick,
     onPlayClick,
+    onInteractivatedVerseClick,
 
 ...other }) => {
 
-    const { lyric,
-            isTitle,
-            time,
-            verseIndex } = verseObject,
+    const { inVerseBar,
+            verseObject,
+            sectionAccessHighlighted,
+            accessedLyricElement } = other,
+        { lyric,
+          isTitle,
+          time,
+          verseIndex } = verseObject,
 
-        isSelected = verseIndex === selectedVerseIndex,
+        isTechnicallySelected = verseIndex === selectedVerseIndex,
+
+        // FIXME: Not sure why this doesn't work:
+        // isSelected = isTechnicallySelected && !(verseBarShown && !inVerseBar),
+        isSelected = isTechnicallySelected,
+
+        /**
+         * Not interactable if technically selected, but currently not selected
+         * due to verse bar shown.
+         */
+        isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero) && !(isTechnicallySelected && !isSelected),
+
+        isInteractivated = !isTechnicallySelected && interactivatedVerseIndex === verseIndex,
+        isHoverable = !isTechnicallySelected && !isInteractivated && interactivatedVerseIndex === -1,
+
         isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
         isDoubleSpeaker = !lyric,
-        isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero),
-        onAnchorClick = onAnnotationClick
+        onAnchorClick = onAnnotationClick,
+
+        // Allows clicks on selected or interactivated verse to deinteractivate it.
+        onInteractivatableClick = !isTechnicallySelected && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null
 
     let onLyricPlayClick = null
+
+    // console.error('verseBarShown', verseBarShown);
 
     if (isInteractable) {
 
@@ -50,17 +72,17 @@ const LyricsVerse = ({
 
     return (
         <LyricsVerseView {...other}
-            verseObject={verseObject}
             accessHighlighted={accessHighlighted}
-            sectionAccessHighlighted={sectionAccessHighlighted}
-            accessedLyricElement={accessedLyricElement}
             isTitle={isTitle}
             isSelected={isSelected}
             isAfterSelected={isAfterSelected}
             isInteractable={isInteractable}
+            isInteractivated={isInteractivated}
+            isHoverable={isHoverable}
             isDoubleSpeaker={isDoubleSpeaker}
             onLyricPlayClick={onLyricPlayClick}
             onAnchorClick={onAnchorClick}
+            onInteractivatableClick={onInteractivatableClick}
         />
     )
 }
@@ -128,12 +150,15 @@ class LyricsVerseView extends Component {
                 // From controller.
                 accessHighlighted,
                 isInteractable,
+                isInteractivated,
+                isHoverable,
                 isSelected,
                 isPlaying,
                 isAfterSelected,
                 isDoubleSpeaker,
                 isTitle,
                 onLyricPlayClick,
+                onInteractivatableClick,
 
             ...other } = this.props,
 
@@ -149,7 +174,17 @@ class LyricsVerseView extends Component {
         return (
             <div
                 ref={(node) => (this.myVerse = node)}
-                className={`verse ${isEven ? 'even' : 'odd'}${verseIndexClass}${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}${isInteractable ? ' interactable' : ''}`}
+                className={
+                    `verse
+                    ${verseIndexClass}
+                    ${isEven ? 'even' : 'odd'}
+                    ${isSelected ? ' selected' : ''}
+                    ${accessHighlighted ? ' access-highlighted' : ''}
+                    ${isInteractable ? ' interactable' : ''}
+                    ${isInteractivated ? ' interactivated' : ''}
+                    ${isHoverable ? ' hoverable' : ''}`
+                }
+                onClick={onInteractivatableClick}
             >
                 {isInteractable && !inVerseBar &&
                     <LyricsAudioButton

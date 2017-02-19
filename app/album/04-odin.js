@@ -1,5 +1,6 @@
 import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
+// One more music annotation, explaining difficulty of recording doublespeaker rhyme.
 module.exports = {
     title: {
         anchor: 'Odin',
@@ -61,34 +62,13 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker, to create the musical version of a cinematic split screen. Here, the two voices proceed independently, each unaware of the ideas and images subtly planted along its path by the other.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 sectionClass: REFRAIN
             }
         ],
         [
             {
                 time: 8,
-                left: [
-                    `Lights off, from your`,
-                    {
-                        anchor: `hiding place of retreat`,
-                        annotation: {
-                            description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins abruptly, as I come out from the dusty crawl space beneath my bed to which I regularly snuck away as a child.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        },
-                    },
-                    `emerged.`
-                ],
+                left: `Lights off, from your`,
                 right: [
                     {
                         anchor: `By lot,`,
@@ -106,7 +86,25 @@ module.exports = {
                             }
                         }
                     },
-                    `once more trifling`,
+                    `once more`,
+                ]
+            },
+            {
+                time: 10,
+                left: [
+                    {
+                        anchor: `hiding place of retreat`,
+                        annotation: {
+                            description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins abruptly, as I come out from the dusty crawl space beneath my bed to which I regularly snuck away as a child.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
+                        },
+                    },
+                    `emerged.`
+                ],
+                right: [
+                    `trifling`,
                     {
                         anchor: `tref must reseed the earth.`,
                         annotation: {
@@ -167,6 +165,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. And so I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's essentially the musical version of a cinematic split screen.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES
             }
         ],
@@ -226,11 +233,15 @@ module.exports = {
                                 [OBSERVATION]: true
                             }
                         }
-                    },
-                    `you swing the iron screen.`
+                    }
                 ],
+                right: `But how dreadful indeed,`
+            },
+            {
+                time: 28,
+                left: `you swing the iron screen.`,
                 right: [
-                    `But how dreadful indeed, do`,
+                    `do`,
                     {
                         anchor: `sweet dream's ichors`,
                         annotation: {
@@ -502,6 +513,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        // TODO: Examples?
+                        description: `While the two voices proceed independently, I wanted each to plant subtle ideas and images along the path of the other.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES,
                 subsequent: true
             }
@@ -542,15 +563,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: `The drums were the one instrument for which I had scored parts that were far more advanced than my actual abilities. So when it came time to record, I had to try many workarounds. On this song, I recorded the kick, snare, and toms separately from the cymbals.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 sectionClass: PRECHORUS
             }
         ],
@@ -584,24 +596,24 @@ module.exports = {
                 right: `weren't just myths between friends,`
             },
             {
-                time: 67,
-                left: [
-                    `could some`,
-                    // TODO: Portal: Reference to insect in jar in Vegan Proclamation?
-                    `bottled butterfly`,
-                    {
-                        anchor: `dream your whims instead?`,
-                        annotation: {
-                            description: [
-                                {
-                                    anchor: `Zhuangzi`,
-                                    wiki: `Zhuang_Zhou`
-                                },
-                                `was a 4th-century BCE Chinese philosopher. In his most famous musing, he recounts a dream in which he was a butterfly. When he awoke, however, he could not be sure whether he was then a man who dreamt he was a butterfly, or now a butterfly dreaming he is a man.`
-                            ]
+                unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `The drums were the one instrument for which I had scored parts that were far more advanced than my actual abilities. So when it came time to record, I had to try many workarounds. On this song, I recorded the kick, snare, and toms separately from the cymbals.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
                         }
                     }
-                ],
+                },
+                sectionClass: CHORUS
+            }
+        ],
+        [
+            {
+                time: 67,
+                // TODO: Portal: Reference to insect in jar in Vegan Proclamation?
+                left: `could some bottled butterfly`,
                 right: [
                     `would the`,
                     {
@@ -619,7 +631,24 @@ module.exports = {
                                 [OBSERVATION]: true
                             }
                         }
+                    }
+                ]
+            },
+            {
+                time: 70,
+                left: {
+                        anchor: `dream your whims instead?`,
+                        annotation: {
+                            description: [
+                                {
+                                    anchor: `Zhuangzi`,
+                                    wiki: `Zhuang_Zhou`
+                                },
+                                `was a 4th-century BCE Chinese philosopher. In his most famous musing, he recounts a dream in which he was a butterfly. When he awoke, however, he could not be sure whether he was then a man who dreamt he was a butterfly, or now a butterfly dreaming he is a man.`
+                            ]
+                        }
                     },
+                right: [
                     `be`,
                     {
                         anchor: `stored in this neck?`,
@@ -645,8 +674,15 @@ module.exports = {
                 ]
             },
             {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequent: true
+            }
+        ],
+        [
+            {
                 time: 73,
-                left: `What's more, if all you live for still die at the end—`,
+                left: `What's more, if all you live for`,
                 right: [
                     `But`,
                     {
@@ -660,10 +696,21 @@ module.exports = {
                                 `was the Greek goddess of discord. As revenge for being denied invitation to a feast, she tossed a golden apple labelled "for the fairest" in their midst. When Paris was asked to judge its rightful owner, he chose Aphrodite, who rewarded him with the hand of Helen.`
                             ]
                         }
-                    },
-                    `till lives acquiesce,`
+                    }
                 ]
             },
+            {
+                time: 76,
+                left: `still die at the end—`,
+                right: `till lives acquiesce,`
+            },
+            {
+                unitMap: true,
+                sectionClass: CHORUS,
+                subsequent: true
+            }
+        ],
+        [
             {
                 time: 79,
                 left: [
@@ -742,7 +789,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: CHORUS
+                sectionClass: CHORUS,
+                subsequent: true
             }
         ],
         [
@@ -851,10 +899,17 @@ module.exports = {
                             portal: `stand_onshore`
                         }
                     },
-                    `keen to drift if shark swarms withheld.`
+                    `keen to drift`
+                ],
+                right: `who cannot warm he who didn't`
+            },
+            {
+                time: 102,
+                left: [
+                    `if shark swarms withheld.`
                 ],
                 // TODO: portal: Reference to passage in M?
-                right: `who cannot warm he who didn't impart warmth himself.`
+                right: `impart warmth himself.`
             },
             {
                 unitMap: true,
@@ -984,15 +1039,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: `TODO: Talk about guitar effects?`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 sectionClass: PRECHORUS
             }
         ],
@@ -1021,6 +1067,7 @@ module.exports = {
                 lyric: [
                     `pray for`,
                     {
+                        // TODO: Reword again...
                         anchor: `soulless solace`,
                         annotation: {
                             description: `It seemed cruel to me, the notion that I wouldn't be allowed to profess ignorance on the nature of my soul, and that my fate for all eternity should rest on beliefs formed under duress.`,
@@ -1151,6 +1198,12 @@ module.exports = {
                 right: `can reach urchins smashed from undertows…`
             },
             {
+                unitMap: true,
+                sectionClass: CHORUS
+            }
+        ],
+        [
+            {
                 time: 173,
                 left: [
                     `The sudsy ocean shapes its`,
@@ -1255,7 +1308,8 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: CHORUS
+                sectionClass: CHORUS,
+                subsequent: true
             }
         ],
         [
@@ -1309,7 +1363,7 @@ module.exports = {
         {
             taskName: `music annotations`,
             workedHours: 2,
-            neededHours: 2
+            neededHours: 3
         },
         {
             taskName: `rough illustration synopses`,

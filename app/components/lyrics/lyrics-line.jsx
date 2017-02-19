@@ -119,7 +119,7 @@ class LyricsLine extends Component {
         return (
             <div
                 ref={(node) => (this.myParent = node)}
-                className={`line ${columnKey}`}
+                className={`line ${columnKey !== TITLE ? columnKey : ''}`}
             >
                 {/* How to have a child pass its ref: https://github.com/yannickcr/eslint-plugin-react/issues/678 */}
                 <TextBlock {...other}
