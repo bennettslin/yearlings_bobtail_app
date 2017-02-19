@@ -333,7 +333,17 @@ module.exports = {
             },
             {
                 time: 77,
-                lyric: `One bus seat up you moved, letting rippled braids`
+                lyric: [
+                    `One`,
+                    {
+                        anchor: `bus seat`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    },
+                    `up you moved, letting rippled braids`
+                ]
             },
             {
                 time: 80,
