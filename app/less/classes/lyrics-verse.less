@@ -36,20 +36,23 @@
         &.interactable {
             position: relative;
 
+            &.interactivated, &.hoverable:hover {
+                color: blue;
+
+                .lyrics-audio-button {
+                    opacity: 1;
+                    font-size: 1em;
+                    animation: fontSnapback 0.16s ease;
+                }
+
+                .small-lyrics-audio-button {
+                    opacity: 0;
+                }
+            }
+
             // Play button hover styling.
             &:not(.selected) {
                 &:hover {
-                    color: blue;
-
-                    .lyrics-audio-button {
-                        opacity: 1;
-                        font-size: 1em;
-                        animation: fontSnapback 0.16s ease;
-                    }
-
-                    .small-lyrics-audio-button {
-                        opacity: 0;
-                    }
                 }
             }
 

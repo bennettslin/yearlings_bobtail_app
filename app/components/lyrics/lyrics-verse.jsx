@@ -13,10 +13,12 @@ const LyricsVerse = ({
     verseBarShown,
     accessedVerseIndex,
     selectedVerseIndex,
+    interactivatedVerseIndex,
     lyricsStartAtZero,
     onAnnotationClick,
     onVerseClick,
     onPlayClick,
+    onInteractivatedVerseClick,
 
 ...other }) => {
 
@@ -33,12 +35,25 @@ const LyricsVerse = ({
          * Only verse in lyrics knows about verseBarShown. Verse in verse bar
          * itself does not need to know, so it doesn't.
          */
-        isSelected = verseIndex === selectedVerseIndex && !verseBarShown,
+        isTechnicallySelected = verseIndex === selectedVerseIndex,
+        isSelected = isTechnicallySelected && !verseBarShown,
+
+        /**
+         * Not interactable if technically selected, but currently not selected
+         * due to verse bar shown.
+         */
+        isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero) && !(isTechnicallySelected && !isSelected),
+
+        isInteractivated = !isTechnicallySelected && interactivatedVerseIndex === verseIndex,
+        isHoverable = !isTechnicallySelected && !isInteractivated && interactivatedVerseIndex === -1,
+
         isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
         isDoubleSpeaker = !lyric,
-        isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero),
-        onAnchorClick = onAnnotationClick
+        onAnchorClick = onAnnotationClick,
+
+        // Allows clicks on selected or interactivated verse to deinteractivate it.
+        onInteractivatableClick = !isTechnicallySelected && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null
 
     let onLyricPlayClick = null
 
@@ -61,9 +76,12 @@ const LyricsVerse = ({
             isSelected={isSelected}
             isAfterSelected={isAfterSelected}
             isInteractable={isInteractable}
+            isInteractivated={isInteractivated}
+            isHoverable={isHoverable}
             isDoubleSpeaker={isDoubleSpeaker}
             onLyricPlayClick={onLyricPlayClick}
             onAnchorClick={onAnchorClick}
+            onInteractivatableClick={onInteractivatableClick}
         />
     )
 }
@@ -131,12 +149,15 @@ class LyricsVerseView extends Component {
                 // From controller.
                 accessHighlighted,
                 isInteractable,
+                isInteractivated,
+                isHoverable,
                 isSelected,
                 isPlaying,
                 isAfterSelected,
                 isDoubleSpeaker,
                 isTitle,
                 onLyricPlayClick,
+                onInteractivatableClick,
 
             ...other } = this.props,
 
@@ -158,8 +179,12 @@ class LyricsVerseView extends Component {
                     ${isEven ? 'even' : 'odd'}
                     ${isSelected ? ' selected' : ''}
                     ${accessHighlighted ? ' access-highlighted' : ''}
-                    ${isInteractable ? ' interactable' : ''}`
-            }>
+                    ${isInteractable ? ' interactable' : ''}
+                    ${isInteractivated ? ' interactivated' : ''}
+                    ${isHoverable ? ' hoverable' : ''}`
+                }
+                onClick={onInteractivatableClick}
+            >
                 {isInteractable && !inVerseBar &&
                     <LyricsAudioButton
                         isSelected={isSelected}

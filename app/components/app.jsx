@@ -147,6 +147,7 @@ class App extends Component {
                 LYRIC_ANNOTATION_ELEMENT : LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
+            interactivatedVerseIndex: -1,
             isLyricExpanded: false,
 
             lyricSectionTop: 0,
@@ -209,6 +210,7 @@ class App extends Component {
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
+        this.interactivateVerse = this.interactivateVerse.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
         this.selectNavExpand = this.selectNavExpand.bind(this)
@@ -451,6 +453,7 @@ class App extends Component {
         }
 
         this.selectBookColumn(e, true, selectedSongIndex)
+        this.interactivateVerse()
 
         this.props.selectSongIndex(selectedSongIndex)
         this.setState(newState)
@@ -496,6 +499,14 @@ class App extends Component {
         }
 
         this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
+    }
+
+    interactivateVerse(e, interactivatedVerseIndex = -1) {
+        this._stopPropagation(e)
+
+        this.setState({
+            interactivatedVerseIndex
+        })
     }
 
     selectLyricExpand(e, isLyricExpanded = !this.state.isLyricExpanded) {
@@ -1031,6 +1042,8 @@ class App extends Component {
 
         // Hide popups, but don't collapse lyrics column.
         this._closePopupIfOpen({ exemptSection: LYRICS_SECTION })
+
+        this.interactivateVerse()
     }
 
     handleKeyDown(e) {
@@ -1381,6 +1394,7 @@ class App extends Component {
                     onAudioOptionClick={this.selectAudioOption}
                     onPlayClick={this.togglePlay}
                     onVerseClick={this.selectVerse}
+                    onInteractivatedVerseClick={this.interactivateVerse}
                     onDotClick={this.selectDot}
                     onLyricColumnClick={this.selectLyricColumn}
                     onPopupContainerClick={this.handlePopupContainerClick}
