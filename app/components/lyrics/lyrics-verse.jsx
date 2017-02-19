@@ -31,12 +31,11 @@ const LyricsVerse = ({
           time,
           verseIndex } = verseObject,
 
-        /**
-         * Only verse in lyrics knows about verseBarShown. Verse in verse bar
-         * itself does not need to know, so it doesn't.
-         */
         isTechnicallySelected = verseIndex === selectedVerseIndex,
-        isSelected = isTechnicallySelected && !verseBarShown,
+
+        // FIXME: Not sure why this doesn't work:
+        // isSelected = isTechnicallySelected && !(verseBarShown && !inVerseBar),
+        isSelected = isTechnicallySelected,
 
         /**
          * Not interactable if technically selected, but currently not selected
@@ -56,6 +55,8 @@ const LyricsVerse = ({
         onInteractivatableClick = !isTechnicallySelected && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null
 
     let onLyricPlayClick = null
+
+    // console.error('verseBarShown', verseBarShown);
 
     if (isInteractable) {
 

@@ -52,7 +52,10 @@ class LyricColumnView extends Component {
 
                 ...other } = this.props,
 
+            verseBarShown = isSelectedVerseAbove || isSelectedVerseBelow,
+
             verseBarProps = {
+                verseBarShown,
                 verseObject: selectedVerse,
                 showSingleLyricColumn: other.showSingleLyricColumn,
                 hiddenLyricColumnKey: other.hiddenLyricColumnKey,
@@ -88,7 +91,9 @@ class LyricColumnView extends Component {
                         </div>
                     }
                     {lyricExpandButtonChild}
-                    <LyricsSection {...other} />
+                    <LyricsSection {...other}
+                        verseBarShown={verseBarShown}
+                    />
                 </div>
             </div>
         )

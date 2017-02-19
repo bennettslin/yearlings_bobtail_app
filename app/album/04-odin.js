@@ -1,5 +1,6 @@
 import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
+// One more music annotation, explaining difficulty of recording doublespeaker rhyme.
 module.exports = {
     title: {
         anchor: 'Odin',
@@ -167,7 +168,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. As such, I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker, to create the musical version of a cinematic split screen. Here, the two voices proceed independently, each unaware of the ideas and images subtly planted along its path by the other.`,
+                        description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. And so I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's essentially the musical version of a cinematic split screen.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -512,6 +513,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        // TODO: Examples?
+                        description: `While the two voices proceed independently, I wanted each to plant subtle ideas and images along the path of the other.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: VERSES,
                 subsequent: true
             }
@@ -1352,7 +1363,7 @@ module.exports = {
         {
             taskName: `music annotations`,
             workedHours: 2,
-            neededHours: 2
+            neededHours: 3
         },
         {
             taskName: `rough illustration synopses`,

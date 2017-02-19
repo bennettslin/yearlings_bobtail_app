@@ -246,7 +246,6 @@ const LiveView = ({
             // For lyrics line width reset.
             isPortrait: windowHeight > windowWidth,
 
-            verseBarShown: isSelectedVerseAbove || isSelectedVerseBelow,
             isLogue,
             showSingleLyricColumn,
             hiddenLyricColumnKey,
