@@ -834,6 +834,18 @@ module.exports = {
                 sectionClass: CHORUS,
                 subsequent: true
             }
+        ],
+        [
+            {
+                time: 192,
+                centre: {
+                    italic: `(outro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
         ]
     ],
     tasks: [

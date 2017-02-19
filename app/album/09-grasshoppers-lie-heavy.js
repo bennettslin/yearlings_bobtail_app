@@ -1219,7 +1219,7 @@ module.exports = {
                 },
                 sectionClass: INSTRUMENTAL
             }
-        ],
+        ]
     ],
     tasks: [
         {

@@ -917,12 +917,12 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `Recording vocals in doublespeaker rhyme turned out to be trickier than I had assumed. The lines rarely lined up naturally because even when speaking in rhythm, we tend to shorten or lengthen our syllables based on the relative strength of consonants, the spaces between words, and so on. I had to improvise a system of`,
+                            `Recording vocals in doublespeaker rhyme turned out to be trickier than I had assumed. The lines rarely lined up naturally because even when speaking in rhythm, we tend to shorten or lengthen our syllables based on the relative strength of consonants, the spaces between words, and so on. I ended up improvising a system of`,
                             {
                                 anchor: `ligature`,
                                 wiki: `Ligature_(music)`
                             },
-                            `to keep my syllabic durations and offsets in sync.`
+                            `to keep syllabic durations and offsets in sync.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
