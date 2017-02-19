@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Clicking on verse when verse bar is shown does not hide verse bar`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Close button and body click in score should have same effect on annotation`,
         workedHours: 0,
         neededHours: 1
