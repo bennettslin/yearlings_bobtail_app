@@ -10,9 +10,7 @@ import { getPropsAreSame } from 'helpers/general-helper'
 
 const LyricsVerse = ({
 
-    verseObject,
-    sectionAccessHighlighted,
-    accessedLyricElement,
+    verseBarShown,
     accessedVerseIndex,
     selectedVerseIndex,
     lyricsStartAtZero,
@@ -22,12 +20,20 @@ const LyricsVerse = ({
 
 ...other }) => {
 
-    const { lyric,
-            isTitle,
-            time,
-            verseIndex } = verseObject,
+    const { inVerseBar,
+            verseObject,
+            sectionAccessHighlighted,
+            accessedLyricElement } = other,
+        { lyric,
+          isTitle,
+          time,
+          verseIndex } = verseObject,
 
-        isSelected = verseIndex === selectedVerseIndex,
+        /**
+         * Only verse in lyrics knows about verseBarShown. Verse in verse bar
+         * itself does not need to know, so it doesn't.
+         */
+        isSelected = verseIndex === selectedVerseIndex && !verseBarShown,
         isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
         isDoubleSpeaker = !lyric,
@@ -50,10 +56,7 @@ const LyricsVerse = ({
 
     return (
         <LyricsVerseView {...other}
-            verseObject={verseObject}
             accessHighlighted={accessHighlighted}
-            sectionAccessHighlighted={sectionAccessHighlighted}
-            accessedLyricElement={accessedLyricElement}
             isTitle={isTitle}
             isSelected={isSelected}
             isAfterSelected={isAfterSelected}

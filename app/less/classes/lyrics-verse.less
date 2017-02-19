@@ -1,0 +1,167 @@
+/* Styling for lyrics line, verse, and verse bar. */
+
+.lyrics-block {
+    .verse {
+        @verse-padding: 10px;
+        padding-left: @verse-padding;
+        padding-right: @verse-padding;
+
+        &:first-child {
+            padding-top: @verse-padding;
+            .lyrics-audio-button-block {
+                margin-top: -@verse-padding;
+                .lyrics-audio-button-child {
+                    padding-top: @verse-padding;
+                }
+            }
+        }
+        &:last-child {
+            padding-bottom: @verse-padding;
+            .lyrics-audio-button-block {
+                .lyrics-audio-button-child {
+                    padding-bottom: @verse-padding;
+                }
+            }
+        }
+
+        &.odd {
+            background-color: @odd-verse-colour;
+        }
+        &.even {
+            background-color: @even-verse-colour;
+        }
+
+        .transition(color 0.1s ease);
+
+        &.interactable {
+            position: relative;
+
+            // Play button hover styling.
+            &:not(.selected) {
+                &:hover {
+                    color: green;
+
+                    .lyrics-audio-button {
+                        opacity: 1;
+                        font-size: 1em;
+                        animation: fontSnapback 0.16s ease;
+                    }
+
+                    .small-lyrics-audio-button {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            &.selected {
+                color: blue;
+                background-color: @selected-verse-colour;
+
+                .lyrics-audio-button {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    @lyrics-audio-button-block-width: 1.5em;
+
+    .lyrics-audio-button-block {
+        position: absolute;
+        height: 100%;
+        width: @lyrics-audio-button-block-width;
+        left: -@lyrics-audio-button-block-width / 2;
+
+        // Either button or icon.
+        .lyrics-audio-button-child {
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            font-size: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .transition(opacity 0.5s ease);
+            .transition(font 0.1s ease);
+        }
+
+        .small-lyrics-audio-button {
+            position: absolute;
+        }
+
+        .lyrics-audio-button {
+            position: relative;
+            font-size: 0.1em;
+            opacity: 0;
+            z-index: @lyrics-audio-button-z-index;
+        }
+    }
+
+    .verse.selected {
+        .lyrics-audio-button {
+            opacity: 1;
+        }
+    }
+}
+
+// TODO: Make this styling better, of course.
+.verse-bar-block {
+    position: absolute;
+    width: 100%;
+    z-index: @selected-verse-bar-z-index;
+
+    @verse-bar-margin: 8px;
+
+    &.above {
+        margin-top: @verse-bar-margin;
+
+        .transition(~"top 0.2s ease, transform 0.2s ease");
+
+        &.shown {
+            top: 0;
+        }
+
+        &.hidden {
+            top: -50px;
+        }
+    }
+
+    &.below {
+        margin-bottom: @verse-bar-margin;
+
+        .transition(~"bottom 0.2s ease, transform 0.2s ease");
+
+        &.shown {
+            bottom: 0;
+        }
+
+        &.hidden {
+            bottom: -50px;
+        }
+
+        .verse-bar {
+            box-shadow: 0 0 12px 5px @darker-box-shadow-colour;
+        }
+    }
+
+    &.shown {
+        transform: scale(1);
+    }
+
+    &.hidden {
+        transform: scale(0);
+    }
+}
+
+.verse-bar {
+    max-width: 100%;
+
+    margin: 0 5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: @selected-verse-colour;
+    cursor: pointer;
+
+    box-shadow: 0 3px 12px 5px @darker-box-shadow-colour;
+}
