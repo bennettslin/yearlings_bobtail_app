@@ -31,17 +31,20 @@ module.exports = {
             }
         }
     },
+    /**
+     * All of these scenes repeat twice.
+     */
     scenes: [
         {
             verseIndex: 0,
-            description: `Bennett is in a cafeteria dishroom, reading a novel. He eyes a lancing device on a tray.`,
+            description: `Bennett is in a cafeteria dishroom, reading a novel while dishes gradually pile up. He eyes a lancing device on a tray.`,
             characters: {
                 bennett: 1
             }
         },
         {
             verseIndex: 9,
-            description: `Sita is asking for the lancing device. Bennett hands it to her, but simultaneously is asking her out on a date.`,
+            description: `Same scene. Sita is asking for the lancing device. Bennett hands it to her, but simultaneously is asking her out on a date.`,
             characters: {
                 bennett: 1,
                 sita: 1
@@ -49,22 +52,23 @@ module.exports = {
         },
         {
             verseIndex: 14,
-            description: `Back to the date night scene from Good Night, Sita. Bennett is walking away, looking dejected. Sita has stepped in through the gate, and watches him leave, with a look of genuine concern`,
+            description: `Bennett is walking home from work, looking dejected. In his thought bubble, he is remembering the night that he walked home from the date with Sita. A jogger passes by.`,
+            characters: {
+                bennett: 1,
+                jogger: 1
+            }
+        },
+        {
+            verseIndex: 20,
+            description: `Same scene. As he begins to enter the front gate, he notices that Sita is standing several feet behind him.`,
             characters: {
                 bennett: 1,
                 sita: 1
             }
         },
         {
-            verseIndex: 20,
-            description: `Bennett is walking home from work, his work apron draped over his shoulder, and soaked.`,
-            characters: {
-                bennett: 1
-            }
-        },
-        {
             verseIndex: 27,
-            description: `At his front gate, he turns to see that Sita had been following him. Both of them stand in awkward silence.`,
+            description: `Bennett's apartment is dark inside. Through a window, we see him opening the gate for Sita to pass through. She takes his arm.`,
             characters: {
                 bennett: 1,
                 sita: 1
@@ -72,7 +76,7 @@ module.exports = {
         },
         {
             verseIndex: 33,
-            description: `He and Sita walk together into his apartment. On his bed is a jar of Vaseline, along with sketches to which he has clearly been masturbating.`,
+            description: `Same scene. Bennett and Sita have now entered the apartment. Bennett has turned on a light switch. On his bed is a jar of Vaseline, along with sketches to which he has clearly been masturbating.`,
             characters: {
                 bennett: 1,
                 sita: 1
@@ -80,23 +84,14 @@ module.exports = {
         },
         {
             verseIndex: 37,
-            description: `In an emergency room, Sita follows a nurse into the emergency room while Bennett sits in the waiting room.`,
-            characters: {
-                bennett: 1,
-                sita: 1,
-                nurse: 1
-            }
-        },
-        {
-            verseIndex: 40,
-            description: `Bennett is asleep in the waiting room.`,
+            description: `In an emergency room, Bennett is sitting in an armchair with his arm around Sita's purse. In his thought bubbles, he imagines the scenes of his burgeoning friendship with Sita.`,
             characters: {
                 bennett: 1
             }
         },
         {
             verseIndex: 43,
-            description: `Sita is waking Bennett up.`,
+            description: `Same scene. Sita has come to get her purse, and is waking Bennett up.`,
             characters: {
                 bennett: 1,
                 sita: 1
@@ -111,8 +106,16 @@ module.exports = {
             }
         },
         {
-            verseIndex: 57,
-            description: `Bennett and Sita are together in bed, having just had sex.`,
+            verseIndex: 53,
+            description: `Same scene. `,
+            characters: {
+                bennett: 1,
+                sita: 1
+            }
+        },
+        {
+            verseIndex: 59,
+            description: `Same scene. Bennett and Sita are together in bed, having just had sex, a look that is a mixture of serenity and uncertainty on both their faces.`,
             characters: {
                 bennett: 1,
                 sita: 1
@@ -774,6 +777,7 @@ module.exports = {
                     },
                     `so you`,
                     {
+                        // TODO: Light switch.
                         anchor: `hit the switch.`,
                         annotation: {
                             portal: `hit_the_switch`
@@ -1045,6 +1049,7 @@ module.exports = {
                     {
                         anchor: `hard-on in a sleeve."`,
                         annotation: {
+                            // TODO: Specify that hard on means erection.
                             description: `Seeing my penis tucked in a condom, Sita lightens the mood by feigning to agree with a past self-assessment of mine. I had once judged myself to be too upfront about my feelings, or as I had put it, to wear my "heart on my sleeve."`,
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1193,7 +1198,7 @@ module.exports = {
         ],
         [
             {
-                time: 236,
+                time: 245,
                 centre: {
                     italic: `(outro)`
                 }
@@ -1239,11 +1244,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 41,
             neededHours: 41
@@ -1267,6 +1267,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 3,
+            neededHours: 3,
         }
     ]
 }
