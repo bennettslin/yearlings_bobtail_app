@@ -516,8 +516,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        // TODO: Examples?
-                        description: `While the two voices proceed independently, I wanted each to plant subtle ideas and images along the path of the other.`,
+                        description: `While the two voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams, and vice versa. Here, for example, the mention of a staircase in the left voice precipitates the feeling of plummeting mentioned by the right voice.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
