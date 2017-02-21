@@ -28,28 +28,25 @@ module.exports = {
             }
         },
         {
-            verseIndex: 14,
-            description: `Bennett and Garry are walking along down the street. Garry is shaking his fist at the twin streetlights. Bennett turns around to face the audience, a look of uncertainty on his face. He is caressing the gold bracelet in his hand.`,
+            verseIndex: 15,
+            description: `Bennett and Garry are walking along down the street. (Garry is the one wearing the jacket.) Garry is shaking his fist at the twin streetlights. Bennett turns around to face the audience, a look of uncertainty on his face. He is caressing the gold bracelet in his hand.`,
             characters: {
-                bennett: 1,
-                garryowen: 1
+                bennett: 2
             }
         },
         {
-            verseIndex: 26,
+            verseIndex: 27,
             description: `Bennett and Garry are yucking it up, in a panicked and delirious kind of way. Bennett is yodelling, Garry is playing the banjo, saluting a female cop on a horse. The cop waves back.`,
             characters: {
-                bennett: 1,
-                garryowen: 1,
-                cop: 1
+                bennett: 2,
+                officer: 1
             }
         },
         {
-            verseIndex: 42,
+            verseIndex: 43,
             description: `Garry is now facing the audience, his hand over his face, crying, and holding the gold bracelet over a group of kids crossing the street with a crossing guard. Bennett is trying to console him, as he faces forward.`,
             characters: {
-                bennett: 1,
-                garryowen: 1,
+                bennett: 2,
                 kids: 4,
                 crossingGuard: 1
             }
@@ -75,7 +72,11 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age.`
+                            `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age. This sample is courtesy of the`,
+                            {
+                                anchor: `Cornell Lab of Ornithology.`,
+                                wiki: `http://www.birds.cornell.edu/`
+                            }
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -1032,11 +1033,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 68,
             neededHours: 68
@@ -1060,6 +1056,11 @@ module.exports = {
             taskName: `rough illustration synopses`,
             workedHours: 1,
             neededHours: 1
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
