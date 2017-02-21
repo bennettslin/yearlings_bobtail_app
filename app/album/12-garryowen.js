@@ -20,26 +20,25 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: `Bennett is leaving Sita's house at night, in a scene very similar to the one from Didi. It is now Bennett eager to leave, and Sita begging him to stay. A bunch of crust punks stand there.`,
+            description: `Bennett is putting on his jacket to leave Sita's house. Sita is in her nightgown, begging him to stay.`,
             characters: {
                 bennett: 1,
-                sita: 1,
-                tristan: 1,
-                crustPunks: 2
+                sita: 1
             }
         },
         {
             verseIndex: 8,
-            description: `Tristan and the other crust punks are smashing a car window, while Bennett is sorting through the meat packages in his jacket.`,
+            description: `Tristan and another crust punk are smashing a car window. Ana is laughing at them. Bennett is sorting through the meat packages in his jacket.`,
             characters: {
                 bennett: 1,
                 tristan: 1,
-                crustPunks: 2
+                ana: 1,
+                crustPunk: 1
             }
         },
         {
             verseIndex: 18,
-            description: `Bennett and Sita are on the couch. Bennett is drunk, with a guitar in his lap, writing a song. Sita is taking his right hand and placing it on her breast, but he is unresponsive`,
+            description: `Bennett and Sita are on the couch. Bennett is drunk, with a guitar in his lap, writing a song. Sita is naked and has taken his right hand and placed it on her breast, but he is unresponsive`,
             characters: {
                 bennett: 1,
                 sita: 1
@@ -47,17 +46,17 @@ module.exports = {
         },
         {
             verseIndex: 25,
-            description: `Bennett has just finished playing a show. Tristan introduces his kid sister Miriam, who is dressed more preppie. (Maybe Tristan is half giving her a noogie, to indicate familial rapport since they belong to two completely different subcultures.)`,
+            description: `Bennett has just finished playing a show. Tristan introduces his kid sister Miriam, who is dressed more preppie, while giving her a noogie. Ana is removing her bass, rolling her eyes, as Bennett is clearly smitten.`,
             characters: {
                 bennett: 1,
                 miriam: 1,
                 tristan: 1,
-                hipsters: 2
+                ana: 1
             }
         },
         {
             verseIndex: 35,
-            description: `Bennett is leaving Sita. She is crumbled on the floor.`,
+            description: `Bennett is leaving Sita. She is crumbled on the floor, desperately begging him to stayc.`,
             characters: {
                 bennett: 1,
                 sita: 1
@@ -697,11 +696,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 30,
             neededHours: 30
@@ -725,6 +719,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 2,
+            neededHours: 2,
         }
     ]
 }

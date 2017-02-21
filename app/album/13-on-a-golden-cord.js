@@ -75,7 +75,7 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `TODO: The white-throated sparrow`
+                            `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -216,29 +216,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: [
-                            `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
-                            {
-                                italic: {
-                                    anchor: `Nineteen Eighty-Four.`,
-                                    wiki: `Nineteen_Eighty-Four`
-                                }
-                            },
-                            `So I used doublespeaker rhyme— which I named partly for its`,
-                            {
-                                anchor: `Orwellian undertone—`,
-                                wiki: `Doublethink`
-                            },
-                            `to depict the internal conflict between my sober self and my drunken alter ego.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 sectionClass: VERSES,
                 subsequent: true
             }
@@ -336,6 +313,29 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: [
+                            `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
+                            {
+                                italic: {
+                                    anchor: `Nineteen Eighty-Four.`,
+                                    wiki: `Nineteen_Eighty-Four`
+                                }
+                            },
+                            `So I used doublespeaker rhyme— which I named partly for its`,
+                            {
+                                anchor: `Orwellian undertone—`,
+                                wiki: `Doublethink`
+                            },
+                            `to depict the internal conflict between my sober self and my drunken alter ego.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
