@@ -72,13 +72,14 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age. This sample is courtesy of the`,
+                            `The song of the white-throated sparrow heard here harks back to my childhood, as the breakup causes me to regress in emotional age. This sample is courtesy of the`,
                             {
                                 anchor: `Cornell Lab of Ornithology.`,
                                 wiki: `http://www.birds.cornell.edu/`
                             }
                         ],
                         dotKeys: {
+                            [BACKSTORY]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -142,18 +143,15 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `Since the breakup allowed me to regress in emotional age, I evoked the musical style of my childhood hero`,
+                            `This song evokes the country style of my childhood hero`,
                             {
                                 anchor: `Johnny Horton,`,
                                 wiki: `Johnny_Horton`
                             },
-                            `a country star who sang about the`,
-                            {
-                                anchor: `Klondike Gold Rush.`,
-                                wiki: `Klondike_Gold_Rush`
-                            }
+                            `whose albums were the first ones I owned because my mother loved him in her teenybopper years. None of my other friends knew who he was, until one day I met a Taiwanese-American girl whose mother had the same obsession. So I guess Horton was big in Taiwan, although he probably never knew that, having died in 1960 at age 35.`
                         ],
                         dotKeys: {
+                            [BACKSTORY]: true,
                             [SONGWRITING]: true
                         }
                     }
