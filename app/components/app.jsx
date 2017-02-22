@@ -297,6 +297,8 @@ class App extends Component {
                 if (exemptSection !== WIKI_SECTION) {
                     this.selectWiki({ bypassClosingPopups: true, overrideClosePopupsDefaultWithSection })
                 }
+            } else if (selectedScoreIndex) {
+                this.selectScore()
             } else {
                 if (exemptSection !== ANNOTATION_SECTION && exemptSection !== WIKI_SECTION) {
                     this.selectAnnotation({ bypassClosingPopups: true, overrideClosePopupsDefaultWithSection })
