@@ -22,24 +22,23 @@ module.exports = {
         },
         {
             verseIndex: 10,
-            description: `Miriam is now giving Bennett a blowjob. Meanwhile, she is thinking a thought bubble in which they are now married. He is drunk, and their children are autistic.`,
+            description: `Miriam is now giving Bennett a blowjob. Meanwhile, they are both thinking a thought bubble in which they are now married. He is drunk, and their child is autistic.`,
             characters: {
                 bennett: 1,
-                miriam: 1,
-                drawings: 1
+                miriam: 1
             }
         },
         {
             verseIndex: 17,
-            description: `Meanwhile, Bennett imagines himself dying in bed next to a record player, with Miriam in the doorway, holding a crate of vinyl. In his next thought bubble, she is lounging by a poolside between two good-looking guys.`,
+            description: `In a thought bubble, Bennett is dying in a hospital bed next to a record player. In another thought bubble, Miriam is playing tennis with her new boyfriend.`,
             characters: {
                 bennett: 1,
                 miriam: 1,
-                drawings: 2
+                miriamBoyfriend: 1
             }
         },
         {
-            verseIndex: 22,
+            verseIndex: 23,
             description: `They drive away. Bennett, with his seat back, hesitantly drops the used condom on the ground, looking at it wistfully. Miriam is looking away, backing up the car.`,
             characters: {
                 bennett: 1,
@@ -968,11 +967,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 47,
             neededHours: 47
@@ -1001,6 +995,11 @@ module.exports = {
             taskName: `music annotations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
+            workedHours: 2,
+            neededHours: 2
         }
     ]
 }
