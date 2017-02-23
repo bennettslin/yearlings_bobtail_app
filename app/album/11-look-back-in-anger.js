@@ -732,6 +732,18 @@ module.exports = {
                 unitMap: true,
                 sectionClass: CHORUS
             }
+        ],
+        [
+            {
+                time: 161,
+                centre: {
+                    italic: `(outro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
         ]
     ],
     tasks: [
