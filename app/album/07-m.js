@@ -296,6 +296,22 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: [
+                            `I learned to play banjo by listening to Flatt and Scruggs and reading`,
+                            {
+                                anchor: `Earl Scruggs's`,
+                                wiki: `Earl_Scruggs`
+                            },
+                            `instruction book. His uptempo bluegrass licks weren't easy to tailor to a slower rock beat, so I never made that leap with the banjo. But his three-finger roll became a staple guitar technique of mine, which I use here.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 sectionClass: CHORUS
             }
         ],
