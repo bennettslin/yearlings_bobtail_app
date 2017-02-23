@@ -66,7 +66,7 @@ module.exports = {
             {
                 time: 0,
                 centre: {
-                    italic: `(intro)`
+                    italic: `(prelude)`
                 }
             },
             {

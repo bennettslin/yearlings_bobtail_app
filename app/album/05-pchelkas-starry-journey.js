@@ -1,4 +1,4 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, RESPONSE, SONGWRITING, OBSERVATION, BACKSTORY, NARRATIVE, REFERENCE, PUN, DOT_STANZA_CONSTANT } from 'helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, INSTRUMENTAL, RESPONSE, SONGWRITING, OBSERVATION, BACKSTORY, NARRATIVE, REFERENCE, PUN, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
@@ -31,7 +31,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 13,
+            verseIndex: 14,
             description: `Bennett is getting harassed by two bullies.`,
             characters: {
                 preteenBennett: 1,
@@ -39,7 +39,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 21,
+            verseIndex: 22,
             description: `Bennett is at home, slipping money into an envelope, while Christopher is plays on the floor. In the background is a Soviet recruitment poster, showing dogs enlisting to become space explorers.`,
             characters: {
                 preteenBennett: 1,
@@ -47,7 +47,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 31,
+            verseIndex: 32,
             description: `Bennett is on the floor alongside Christopher. He is reading a letter and crying. In his thoughts are a sequence of a baby in space born away from Earth, and Bennett on Earth, looking up into space.`,
             characters: {
                 preteenBennett: 1,
@@ -56,7 +56,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 49,
+            verseIndex: 50,
             description: `Bennett is eating lunch by himself, sadly watching the other kids hanging out and having fun. In the background is propaganda news footage of the spacecraft exploding.`,
             characters: {
                 preteenBennett: 1,
@@ -65,7 +65,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 59,
+            verseIndex: 60,
             description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is clearly chewing out the principal. On the wall is a propaganda poster showing two space dogs as martyrs.`,
             characters: {
                 preteenBennett: 1,
@@ -126,6 +126,18 @@ module.exports = {
                     }
                 },
                 sectionClass: REFRAIN
+            }
+        ],
+        [
+            {
+                time: 5,
+                centre: {
+                    italic: `(refrain)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [
@@ -727,16 +739,19 @@ module.exports = {
                         }
                     }
                 },
-                subStanza: [
-                    {
-                        time: 128,
-                        lyric: {
-                            emphasis: `Poor Sam Peabody!`
-                        }
-                    }
-                ],
-                sectionClass: BRIDGE,
-                subsectionClass: RESPONSE
+                sectionClass: BRIDGE
+            }
+        ],
+        [
+            {
+                time: 128,
+                centre: {
+                    italic: `(refrain)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [
