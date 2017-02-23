@@ -1,4 +1,4 @@
-import { VERSES, PRECHORUS, CHORUS, AFTERWORD, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING, DOT_STANZA_CONSTANT } from 'helpers/constants'
+import { VERSES, PRECHORUS, CHORUS, AFTERWORD, BACKSTORY, INSTRUMENTAL, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 // TODO: Mention mother pulling strings to get us to go to a rich school
 module.exports = {
@@ -20,12 +20,12 @@ module.exports = {
             }
         },
         {
-            verseIndex: 5,
+            verseIndex: 6,
             description: `On a page from a Chinese language workbook, Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
             characters: {}
         },
         {
-            verseIndex: 12,
+            verseIndex: 13,
             description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated next to her who is wearing a yarmulke.`,
             characters: {
                 preteenBennett: 1,
@@ -34,7 +34,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 20,
+            verseIndex: 22,
             description: `In Bennett's thought bubble, he is being tied to a tetherball pole by two bullies. Sasha is yelling at them, telling them to untie Bennett and to leave him alone. Bennett looks physically roughed up, and emotionally mortified.`,
             characters: {
                 preteenBennett: 1,
@@ -43,7 +43,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 30,
+            verseIndex: 33,
             description: `In Bennett's thought bubble, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
             characters: {}
         }
@@ -57,7 +57,9 @@ module.exports = {
         [
             {
                 time: 0,
-                centre: `Dearest Sasha,`
+                centre: {
+                    italic: `(refrain)`
+                }
             },
             {
                 unitMap: true,
@@ -77,6 +79,16 @@ module.exports = {
                         }
                     }
                 },
+                sectionClass: INSTRUMENTAL
+            }
+        ],
+        [
+            {
+                time: 5,
+                centre: `Dearest Sasha,`
+            },
+            {
+                unitMap: true,
                 sectionClass: VERSES
             }
         ],
@@ -316,7 +328,19 @@ module.exports = {
         ],
         [
             {
-                time: 73,
+                time: 71,
+                centre: {
+                    italic: `(refrain)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
+        ],
+        [
+            {
+                time: 74,
                 lyric: [
                     `And I sniffled daily when you`,
                     {
@@ -545,6 +569,18 @@ module.exports = {
         ],
         [
             {
+                time: 138,
+                centre: {
+                    italic: `(refrain)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
+        ],
+        [
+            {
                 time: 143,
                 lyric: `And Sasha, I know you'll have them all,`
             },
@@ -614,8 +650,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: CHORUS,
-                subsequent: true
+                sectionClass: CHORUS
             }
         ],
         [
