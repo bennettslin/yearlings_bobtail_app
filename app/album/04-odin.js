@@ -1329,6 +1329,18 @@ module.exports = {
         ],
         [
             {
+                time: 186,
+                centre: {
+                    italic: `(outro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
+        ],
+        [
+            {
                 unitMap: true,
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
