@@ -682,6 +682,18 @@ module.exports = {
                 sectionClass: REFRAIN,
                 subsequent: true
             }
+        ],
+        [
+            {
+                time: 162,
+                centre: {
+                    italic: `(outro)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
+            }
         ]
     ],
     tasks: [
