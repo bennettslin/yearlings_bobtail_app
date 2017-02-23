@@ -28,37 +28,40 @@ module.exports = {
         },
         {
             verseIndex: 9,
-            description: `Sita is imagining how she met Bennett in three thought bubbles. In the first, she is breaking up with her ex. In the second, in tears over the incident, she busses her tray, leaving her lancing device behind. In the third, Bennett is hitting on her in the cafeteria, while she looks uncertain.`,
+            description: `Sita is imagining how she met Bennett in three thought bubbles. In the first, she is breaking up with her ex over a cafeteria dinner. In the second, in tears over the incident, she busses her tray, leaving her lancing device behind. In the third, Bennett is hitting on her in the cafeteria, while she looks uncertain.`,
             characters: {
-                sita: 1,
-                thoughtBubbles: 3
+                sita: 1
             }
         },
         {
-            verseIndex: 17,
-            description: `Sita is still thinking. In the first, she is talking to her friend. Bennett is clearly jealous, but Sita is holding him close. In the second, Bennett is talking to a a fan. Sita is clearly jealous and trying to pull him away, but he ignores her. Sita's friend has opened the door.`,
+            verseIndex: 20,
+            description: `Sita is still thinking. In the last thought bubble, Bennett is walking away, rejected by Sita. Sita has gotten up and opened the door. Sita's friend is in the doorway, having arrived with Chinese takeout.`,
             characters: {
                 sita: 1,
-                sitaFriend: 1,
-                thoughtBubbles: 2
+                sitaFriend: 1
             }
         },
         {
-            verseIndex: 22,
-            description: `Sita is talking to her friend. In his speech bubbles, he sees Bennett leaving her, and Sita heartbroken. In her speech bubbles, she sees Bennett coming back penitent, and then being very affectionate.`,
+            verseIndex: 25,
+            description: `Sita and her friend are eating the food. In his speech bubble, Bennett is flirting with a fan, while Sita looks on jealous. In her speech bubble, she is going home with Bennett, triumphant.`,
             characters: {
                 sita: 1,
-                sitaFriend: 1,
-                thoughtBubbles: 4
+                sitaFriend: 1
             }
         },
         {
-            verseIndex: 29,
-            description: `Sita is explaining to her friend Bennett's new ambition to record Bobtail. In her speech bubble, she is affectionately hugging him as he records his instrument. In her thought bubble, she is closing the door on him, as he is recording his guitar, eyes closed.`,
+            verseIndex: 30,
+            description: `Sita's friend has left, looking back at her through the window. She is absorbed in her thoughts. In her thought bubble, she and Bennett have gotten back together, both in tears.`,
             characters: {
                 sita: 1,
-                sitaFriend: 1,
-                thoughtBubbles: 2
+                sitaFriend: 1
+            }
+        },
+        {
+            verseIndex: 34,
+            description: `Same scene. No thought bubble. The room is now completely dark.`,
+            characters: {
+                sita: 1
             }
         }
     ],
@@ -757,11 +760,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 30,
             neededHours: 30
@@ -783,6 +781,11 @@ module.exports = {
         },
         {
             taskName: `music annotations`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
             workedHours: 3,
             neededHours: 3
         }
