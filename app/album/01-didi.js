@@ -46,7 +46,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 8,
+            verseIndex: 9,
             scene: 2,
             description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells her friends about this. Anita overhears and looks upset.`,
             characters: {
@@ -57,7 +57,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 14,
+            verseIndex: 15,
             scene: 3,
             description: `Bennett is soaking in a bathtub at home, looking downcast. A window shows that it is midday outside.`,
             characters: {
@@ -65,7 +65,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 24,
+            verseIndex: 25,
             scene: 4,
             description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
             characters: {
@@ -106,6 +106,18 @@ module.exports = {
                         }
                     }
                 },
+                sectionClass: INSTRUMENTAL
+            }
+        ],
+        [
+            {
+                time: 11,
+                centre: {
+                    italic: `(refrain)`
+                }
+            },
+            {
+                unitMap: true,
                 sectionClass: INSTRUMENTAL
             }
         ],
@@ -398,6 +410,18 @@ module.exports = {
                 },
                 sectionClass: BRIDGE,
                 subsequent: true
+            }
+        ],
+        [
+            {
+                time: 123,
+                centre: {
+                    italic: `(refrain)`
+                }
+            },
+            {
+                unitMap: true,
+                sectionClass: INSTRUMENTAL
             }
         ],
         [
