@@ -715,24 +715,30 @@ module.exports = {
                     {
                         anchor: `locks your arm.`,
                         annotation: {
-                            description: `Shivering from the winter chill, Sita tucks her hand underneath my arm as she invites herself into my apartment. And just like that, I am once again on guard, second-guessing everything I say and do.`,
+                            description: `Shivering from the winter chill, Sita tucks her hand underneath my arm as I invite her into my apartment.`,
                             dotKeys: {
-                                [NARRATIVE]: true
+                                [NARRATIVE]: true,
+                                [PUN]: true
                             }
                         }
                     },
                     {
                         anchor: `Key turned,`,
                         annotation: {
+                            description: `As we catch up on recent happenings, I unlock the door to my apartment.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            },
                             portal: `key_turned`
                         }
                     },
                     {
                         anchor: `returned to your guard…`,
                         annotation: {
-                            description: `I was like an escaped convict who had just been handcuffed and sent back to the penitentiary, where a prison guard now directs me into a holding cell.`,
+                            description: `And just like that, I am once again on guard, second-guessing everything I say and do. It's like I'm an escaped convict who has just been handcuffed and sent back to the penitentiary, where a literal prison guard now directs me into a holding cell.`,
                             dotKeys: {
-                                [OBSERVATION]: true
+                                [OBSERVATION]: true,
+                                [PUN]: true
                             }
                         }
                     }
@@ -752,7 +758,7 @@ module.exports = {
                     {
                         anchor: `gingerbread prison,`,
                         annotation: {
-                            description: `Even if not totally filling, it's sweet to taste, readily escapable, and ultimately of one's own making.`,
+                            description: `But even if not totally filling, the prison to which I return is sweet to taste, readily escapable, and ultimately of my own making.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -768,7 +774,7 @@ module.exports = {
                     {
                         anchor: `never full, you're fed;`,
                         annotation: {
-                            description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I conceded that platonic friendship was better than the cold, bleak alternative.`,
+                            description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I concede that platonic friendship is better than the cold, bleak alternative.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -777,9 +783,12 @@ module.exports = {
                     },
                     `so you`,
                     {
-                        // TODO: Light switch.
                         anchor: `hit the switch.`,
                         annotation: {
+                            description: `As all these thoughts swirl in my head, I turn on the light switch.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            },
                             portal: `hit_the_switch`
                         }
                     }
@@ -792,9 +801,8 @@ module.exports = {
                     {
                         anchor: `lidless Vaseline sits.`,
                         annotation: {
-                            description: `I kept a jar of Vaseline by my bedside, to aid in masturbation.`,
+                            description: `Sitting on my bed is an open jar of Vaseline. I clearly used it recently to masturbate.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true
                             },
                             portal: `lidless_vaseline_sits`
@@ -809,8 +817,7 @@ module.exports = {
                     {
                         anchor: `"here to Philip Dick?"`,
                         annotation: {
-                            // TODO: Be clear about masturbation.
-                            description: `Or else, "Shall I leave you here to feel up dick?" Sita takes a gentle jab at my carefully crafted bookish persona, while subtly conveying her acceptance of the flawed, vulnerable person underneath.`,
+                            description: `Or else, "Shall I leave you here to feel up dick?" Sita lightens the awkwardness by taking a gentle jab at the bookish exterior that I've carefully crafted.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
