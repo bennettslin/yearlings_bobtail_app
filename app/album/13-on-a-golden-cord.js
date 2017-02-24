@@ -203,7 +203,7 @@ module.exports = {
                         {
                             anchor: `went through your mail`,
                             annotation: {
-                                description: `Confused about why I had grown unusually distant, Sita finally caved in that day and decided to snoop around on my computer, which I kept at her place because it was a desktop. She thus discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving assurances that I would soon be single again.`,
+                                description: `Confused about why I had grown unusually distant, Sita finally caved in that day and snooped around on my computer, which I kept at her place because it was a desktop. She thus discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving assurances that I would soon be single again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true

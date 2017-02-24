@@ -23,7 +23,7 @@ module.exports = {
                 {
                     italic: `The Grasshopper Lies Heavy,`
                 },
-                `in which the Allies had won. Beyond just making a Philip Dick reference, I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, with neither wishing to be the first to reveal itself.`
+                `in which the Allies had won. Beyond just making a Philip Dick reference, I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, and neither wishing to be the first to reveal itself.`
             ],
             dotKeys: {
                 [BACKSTORY]: true,
@@ -280,7 +280,7 @@ module.exports = {
                     {
                         anchor: `keys left on dumbwaiter trays.`,
                         annotation: {
-                            description: `The university students bussed their trays on a vertical conveyor belt, which then transported the dirty dishes to the dishroom one floor below. Occasionally someone would leave a personal item on the tray by accident, and then come downstairs to retrieve it. The crew always got a kick when that happened, as it broke up the monotony.`,
+                            description: `The students would bus their trays, which were then transported by conveyor belt to the dishroom. Every so often, someone would leave a personal item on the tray by accident. The crew always got a kick when that happened, as it broke up the monotony.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
@@ -302,6 +302,10 @@ module.exports = {
                     {
                         anchor: `Down the steps`,
                         annotation: {
+                            description: `The dishroom was one floor below the dining area.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            },
                             portal: `down_the_steppes`
                         }
                     },
@@ -332,7 +336,7 @@ module.exports = {
                     {
                         anchor: `reflex you asked.`,
                         annotation: {
-                            description: `After handing Sita her lancing device, I made small talk before asking for her phone number. By then, I was mostly on autopilot when it came to hitting on random women in random situations.`,
+                            description: `Blown away by her beauty, I hand Sita back her lancing device and immediately try to make small talk. By then, I was mostly on autopilot when it came to hitting on random women in random situations.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
