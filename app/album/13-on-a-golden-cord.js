@@ -219,12 +219,12 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `I used a tuning for the lead guitar that allowed me to pluck each note as a`,
+                            `I tuned the lead guitar in a way that allowed each note to be plucked as a`,
                             {
                                 anchor: `natural harmonic.`,
                                 wiki: `Guitar_harmonics`
                             },
-                            `I didn't account for the need to move quickly enough from one to the next, though, so I still ended up splicing multiple takes.`
+                            `I hadn't accounted for the need to move quickly enough from one to the next, however, so I still ended up splicing multiple takes.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true

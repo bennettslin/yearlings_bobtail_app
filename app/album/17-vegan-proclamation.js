@@ -24,17 +24,15 @@ module.exports = {
             description: `Bennett is walking with the ghost of Odin in a park. He passes Sita, who is holding hands with her friend. Bennett looks down, her friend looks up, while Sita looks concerned.`,
             characters: {
                 bennett: 1,
-                odin: 1,
                 sita: 1,
                 sitaFriend: 1
             }
         },
         {
             verseIndex: 11,
-            description: `Bennett is alone with Odin at a show, getting bored. Miriam is on the other side of the crowd, being introduced by Tristan to her future boyfriend.`,
+            description: `Bennett is by himself with Odin at a show, looking agitated and bored. Miriam is on the other side of the crowd, being introduced by Tristan to her future boyfriend.`,
             characters: {
                 bennett: 1,
-                odin: 1,
                 miriam: 1,
                 tristan: 1,
                 miriamBoyfriend: 1
@@ -42,10 +40,9 @@ module.exports = {
         },
         {
             verseIndex: 22,
-            description: `Bennett is in his apartment, in tears on the phone with Sita, who is in bed with her friend.`,
+            description: `Bennett is in his apartment, in tears on the phone with Sita, who is in bed snuggling with her friend.`,
             characters: {
                 bennett: 1,
-                odin: 1,
                 sita: 1,
                 sitaFriend: 1
             }
@@ -55,7 +52,6 @@ module.exports = {
             description: `Bennett is with Odin, and happens upon a Peta demonstration. One of the demonstrators is petting Odin.`,
             characters: {
                 bennett: 1,
-                odin: 1,
                 demonstrators: 4
             }
         }
@@ -744,11 +740,6 @@ module.exports = {
             ]
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `include wiki urls`,
             workedHours: 1,
             neededHours: 1
@@ -760,6 +751,11 @@ module.exports = {
         },
         {
             taskName: `rough illustration synopses`,
+            workedHours: 2,
+            neededHours: 2
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
             workedHours: 2,
             neededHours: 2
         }
