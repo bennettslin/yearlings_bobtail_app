@@ -148,7 +148,7 @@ module.exports = {
                                 anchor: `Johnny Horton,`,
                                 wiki: `Johnny_Horton`
                             },
-                            `whose albums were the first ones I owned because my mother loved him in her teenybopper years. None of my other friends knew who he was, until one day I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in 1960 from a car accident.`
+                            `whose albums were the first ones I owned because my mother loved him in her teenybopper years. None of my other friends knew who he was, until one day I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died from a car accident in 1960.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
@@ -218,7 +218,14 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `TODO: Harmonics`,
+                        description: [
+                            `I used a tuning for the lead guitar that allowed me to pluck each note as a`,
+                            {
+                                anchor: `natural harmonic.`,
+                                wiki: `Guitar_harmonics`
+                            },
+                            `I didn't account for the need to move quickly enough from one to the next, though, so I still ended up splicing multiple takes.`
+                        ],
                         dotKeys: {
                             [SONGWRITING]: true
                         }
