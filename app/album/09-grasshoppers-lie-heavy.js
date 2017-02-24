@@ -792,7 +792,7 @@ module.exports = {
                     {
                         anchor: `lidless Vaseline sits.`,
                         annotation: {
-                            description: `I kept a jar of Vaseline by my bedside, which I would use to masturbate. Its last usage was obviously quite recent.`,
+                            description: `I kept a jar of Vaseline by my bedside, to aid in masturbation.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true

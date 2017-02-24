@@ -1082,10 +1082,9 @@ module.exports = {
                 lyric: [
                     `pray for`,
                     {
-                        // TODO: Reword again...
                         anchor: `soulless solace`,
                         annotation: {
-                            description: `It seemed cruel to me, the notion that I wouldn't be allowed to profess ignorance on the nature of my soul, and that my fate for all eternity should rest on beliefs formed under duress.`,
+                            description: `I found the notion cruel that I wasn't allowed to profess ignorance on the nature of my soul, and that my fate for all eternity should rest on beliefs formed under duress.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
