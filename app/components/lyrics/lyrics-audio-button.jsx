@@ -25,11 +25,6 @@ const LyricsAudioButton = ({
 
     return (
         <div className="lyrics-audio-button-block">
-            {!isSelected && false &&
-                <a className="lyrics-audio-button-child small-lyrics-audio-button enabled">
-                    <div>{`\u2022`}</div>
-                </a>
-            }
             <a className="lyrics-audio-button-child lyrics-audio-button enabled"
                 onClick={onClick}
             >

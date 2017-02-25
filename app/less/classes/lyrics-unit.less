@@ -4,7 +4,7 @@
     font-size: @lyric-verse-size;
 
     &.subsequent {
-        margin-top: -@stanza-type-tab-height;
+        margin-top: -@stanza-type-tab-height - 2.5px;
     }
 
     &:not(:last-child) {
@@ -101,6 +101,7 @@
     height: @stanza-type-tab-height;
     top: -@stanza-type-tab-height;
     left: 0;
+    border-radius: 7.5px 7.5px 0 0;
 
     padding: 0 5px;
     color: white;

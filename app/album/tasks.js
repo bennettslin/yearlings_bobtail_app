@@ -1,5 +1,20 @@
 module.exports = [
     {
+        taskName: `Play and stop and neutral show different colours`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Stanza type shouldn't have number if it's the only one in its song.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Audio slider shows stanza colours`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Clicking on verse when verse bar is shown does not hide verse bar`,
         workedHours: 0,
         neededHours: 2
@@ -232,16 +247,6 @@ module.exports = [
     //     taskName: `toggle min and max device widths`,
     //     workedHours: 0,
     //     neededHours: 1
-    // },
-    // {
-    //     taskName: `Hover over stanza shows stanza type`,
-    //     workedHours: 0,
-    //     neededHours: 4
-    // },
-    // {
-    //     taskName: `Audio slider shows stanza colours`,
-    //     workedHours: 0,
-    //     neededHours: 5
     // },
     {
         taskName: `refactor to get album objects`,
@@ -1278,6 +1283,11 @@ module.exports = [
     {
         taskName: `Make lyric line touch accessible`,
         workedHours: 4,
+        neededHours: 4
+    },
+    {
+        taskName: `Stanza shows stanza type`,
+        workedHours: 0,
         neededHours: 4
     }
 ]
