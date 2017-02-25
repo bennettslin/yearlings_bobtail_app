@@ -1,0 +1,85 @@
+.shop_armor_armoire_ironBlueArcherArmor, .shop_shield_armoire_perchingFalcon {
+	border-radius: 50%;
+    border: 2px solid red;
+}
+
+.shop_shield_armoire_dragonTamerShield, .shop_armor_rogue_5, .shop_head_rogue_5 {
+	border-radius: 50%;
+    border: 2px solid blue;
+}
+
+.shop_weapon_special_2 {
+	border-radius: 50%;
+    border: 2px solid purple;
+}
+
+.shop_head_special_2 {
+	border-radius: 50%;
+    border: 2px solid orange;
+}
+
+.col-md-6.border-right button:not(.shop_armor_armoire_ironBlueArcherArmor):not(.shop_shield_armoire_perchingFalcon):not(.shop_shield_armoire_dragonTamerShield):not(.shop_armor_rogue_5):not(.shop_head_rogue_5):not(.shop_weapon_special_2):not(.shop_head_special_2) {
+    display: none;
+}
+
+ul.dailys {
+	display: flex;
+    flex-direction: column;
+}
+
+.task.daily.completed {
+	order: 100;
+    background-color: #eee;
+}
+
+.completed .action-yesno label {
+    background-color: #ddd;
+}
+
+.action-yesno label:after {
+    color: #999;
+}
+
+.completed .task-text {
+    color: #999 !important;
+}
+
+.difficulty-trivial {
+    background-color: #eee !important;
+}
+
+.difficulty-trivial label {
+    visibility: hidden;
+}
+
+.difficulty-easy {
+    border-right: 5px solid #fdf !important;
+}
+
+.difficulty-medium {
+    border-right: 5px solid #b9b !important;
+}
+
+.difficulty-hard {
+    border-right: 5px solid #727 !important;
+}
+
+ul.task-filter {
+	height: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.help-block {
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.tabbable {
+    margin-bottom: -30px;
+}
+
+.reward-item.list-group-item:nth-child(2), .reward-item.list-group-item:nth-child(3) {
+	visibility: hidden;
+}
