@@ -91,7 +91,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: REFRAIN
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -155,7 +155,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: VERSES
+                stanzaType: VERSES
             }
         ],
         [
@@ -217,7 +217,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: VERSES,
+                stanzaType: VERSES,
                 subsequent: true
             }
         ],
@@ -268,7 +268,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: BRIDGE
+                stanzaType: BRIDGE
             }
         ],
         [
@@ -326,7 +326,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: BRIDGE,
+                stanzaType: BRIDGE,
                 subsequent: true
             }
         ],
@@ -426,7 +426,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: PRECHORUS
+                stanzaType: PRECHORUS
             }
         ],
         [
@@ -453,7 +453,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: CHORUS
+                stanzaType: CHORUS
             }
         ],
         [
@@ -525,7 +525,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: VERSES
+                stanzaType: VERSES
             }
         ],
         [
@@ -596,7 +596,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSES,
+                stanzaType: VERSES,
                 subsequent: true
             }
         ],
@@ -609,7 +609,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: REFRAIN
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -712,7 +712,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: CODA
+                stanzaType: CODA
             }
         ],
         [
@@ -744,7 +744,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: INSTRUMENTAL
+                stanzaType: INSTRUMENTAL
             }
         ],
     ],

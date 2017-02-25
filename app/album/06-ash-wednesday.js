@@ -165,7 +165,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: VERSES
+                stanzaType: VERSES
             }
         ],
         [
@@ -242,7 +242,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: VERSES,
+                stanzaType: VERSES,
                 subsequent: true
             }
         ],
@@ -285,7 +285,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: PRECHORUS
+                stanzaType: PRECHORUS
             }
         ],
         [
@@ -347,7 +347,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: VERSES
+                stanzaType: VERSES
             }
         ],
         [
@@ -377,7 +377,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSES,
+                stanzaType: VERSES,
                 subsequent: true
             }
         ],
@@ -525,7 +525,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: PRECHORUS
+                stanzaType: PRECHORUS
             }
         ],
         [
@@ -630,7 +630,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: BRIDGE
+                stanzaType: BRIDGE
             }
         ],
         [
@@ -704,7 +704,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: CHORUS
+                stanzaType: CHORUS
             }
         ],
         [
@@ -752,7 +752,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: CHORUS,
+                stanzaType: CHORUS,
                 subsequent: true
             }
         ],

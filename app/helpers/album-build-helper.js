@@ -17,6 +17,8 @@ const _tempStore = {
     _wikiIndex: 1,
     _portalLinks: {},
     _songTimes: [],
+    _currentSongStanzaTypeCounter: {},
+    _currentStanzaType: null,
     _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
     _drawingCharacters: {},
@@ -263,6 +265,14 @@ const _registerFirstAndLastVerseObjects = (lyric) => {
 const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
 
     lyricInTime = !isNaN(lyric.time) || lyricInTime
+
+    if (lyric.unitMap) {
+
+        if (lyric.stanzaType) {
+
+        }
+
+    }
 
     // In other words, if lyric.time is a valid number.
     if (!finalPassThrough && !isNaN(lyric.time)) {

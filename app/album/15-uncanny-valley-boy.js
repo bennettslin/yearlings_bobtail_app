@@ -93,7 +93,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: INSTRUMENTAL
+                stanzaType: INSTRUMENTAL
             }
         ],
         [
@@ -215,7 +215,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: VERSES
+                stanzaType: VERSES
             }
         ],
         [
@@ -280,7 +280,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSES,
+                stanzaType: VERSES,
                 subsequent: true
             }
         ],
@@ -333,7 +333,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: PRECHORUS
+                stanzaType: PRECHORUS
             }
         ],
         [
@@ -364,7 +364,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: PRECHORUS,
+                stanzaType: PRECHORUS,
                 subsequent: true
             }
         ],
@@ -418,9 +418,9 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: CHORUS,
-                subsectionClass: RHYME,
-                sideSectionClass: BACKING
+                stanzaType: CHORUS,
+                substanzaType: RHYME,
+                sideStanzaType: BACKING
             }
         ],
         [
@@ -517,9 +517,9 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: CHORUS,
-                subsectionClass: RHYME,
-                sideSectionClass: BACKING
+                stanzaType: CHORUS,
+                substanzaType: RHYME,
+                sideStanzaType: BACKING
             }
         ],
         [
@@ -560,7 +560,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSES
+                stanzaType: VERSES
             }
         ],
         [
@@ -640,7 +640,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: PRECHORUS
+                stanzaType: PRECHORUS
             }
         ],
         [
@@ -666,7 +666,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: PRECHORUS,
+                stanzaType: PRECHORUS,
                 subsequent: true
             }
         ],
@@ -777,7 +777,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: BRIDGE
+                stanzaType: BRIDGE
             }
         ],
         [
@@ -829,8 +829,8 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: PRECHORUS,
-                subsectionClass: RESPONSE
+                stanzaType: PRECHORUS,
+                substanzaType: RESPONSE
             }
         ],
         [
@@ -887,8 +887,8 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: PRECHORUS,
-                subsectionClass: RESPONSE
+                stanzaType: PRECHORUS,
+                substanzaType: RESPONSE
             }
         ],
         [
@@ -976,9 +976,9 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: CHORUS,
-                subsectionClass: RHYME,
-                sideSectionClass: BACKING
+                stanzaType: CHORUS,
+                substanzaType: RHYME,
+                sideStanzaType: BACKING
             }
         ],
         [
@@ -1040,9 +1040,9 @@ module.exports = {
                         }
                     }
                 ],
-                sectionClass: CHORUS,
-                subsectionClass: RHYME,
-                sideSectionClass: BACKING
+                stanzaType: CHORUS,
+                substanzaType: RHYME,
+                sideStanzaType: BACKING
             }
         ],
         [
@@ -1158,9 +1158,9 @@ module.exports = {
                         ]
                     }
                 ],
-                sectionClass: CODA,
-                sideSectionClass: BACKING,
-                sideSubsectionClass: RESPONSE
+                stanzaType: CODA,
+                sideStanzaType: BACKING,
+                sideSubstanzaType: RESPONSE
             }
         ]
     ],

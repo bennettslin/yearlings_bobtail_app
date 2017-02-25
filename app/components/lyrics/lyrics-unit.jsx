@@ -19,10 +19,10 @@ const LyricsUnit = ({
 ...other }) => {
 
     const { unitClass,
-            sectionClass,
-            subsectionClass,
-            sideSectionClass,
-            sideSubsectionClass,
+            stanzaType,
+            substanzaType,
+            sideStanzaType,
+            sideSubstanzaType,
             subsequent,
             dotStanza,
             subStanza,
@@ -42,10 +42,10 @@ const LyricsUnit = ({
             stanzaArray={stanzaArray}
             isTitleUnit={isTitleUnit}
             unitClass={unitClass}
-            sectionClass={isTitleUnit ? TITLE : sectionClass}
-            subsectionClass={subsectionClass}
-            sideSectionClass={sideSectionClass}
-            sideSubsectionClass={sideSubsectionClass}
+            stanzaType={isTitleUnit ? TITLE : stanzaType}
+            substanzaType={substanzaType}
+            sideStanzaType={sideStanzaType}
+            sideSubstanzaType={sideSubstanzaType}
             subsequent={subsequent}
             shouldShowDotStanza={shouldShowDotStanza}
             selectedDotKeys={selectedDotKeys}
@@ -76,11 +76,11 @@ const LyricsUnitView = ({
 
     // From controller.
     unitClass,
-    sectionClass,
-    subsectionClass,
+    stanzaType,
+    substanzaType,
     subsequent,
-    sideSectionClass,
-    sideSubsectionClass,
+    sideStanzaType,
+    sideSubstanzaType,
     shouldShowDotStanza,
     selectedDotKeys,
     dotStanza,
@@ -108,15 +108,15 @@ const LyricsUnitView = ({
                 let className
 
                 if (inMain) {
-                    className = isSub ? subsectionClass : sectionClass
+                    className = isSub ? substanzaType : stanzaType
                 } else {
-                    className = isSub ? sideSubsectionClass : sideSectionClass
+                    className = isSub ? sideSubstanzaType : sideStanzaType
                 }
 
                 return (
                     <LyricsStanza {...other}
                         stanzaArray={stanzaArray}
-                        sectionClass={className}
+                        stanzaType={className}
                         selectedDotKeys={selectedDotKeys}
                     />
                 )

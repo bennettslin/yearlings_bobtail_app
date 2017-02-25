@@ -86,7 +86,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: INSTRUMENTAL
+                stanzaType: INSTRUMENTAL
             }
         ],
         [
@@ -195,7 +195,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: VERSES
+                stanzaType: VERSES
             }
         ],
         [
@@ -267,7 +267,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSES,
+                stanzaType: VERSES,
                 subsequent: true
             }
         ],
@@ -315,7 +315,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: PRECHORUS
+                stanzaType: PRECHORUS
             }
         ],
         [
@@ -386,7 +386,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: PRECHORUS,
+                stanzaType: PRECHORUS,
                 subsequent: true
             }
         ],
@@ -430,7 +430,7 @@ module.exports = {
                         }
                     }
                 },
-                sectionClass: CHORUS
+                stanzaType: CHORUS
             }
         ],
         [
@@ -473,7 +473,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSES
+                stanzaType: VERSES
             }
         ],
         [
@@ -509,7 +509,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: VERSES,
+                stanzaType: VERSES,
                 subsequent: true
             }
         ],
@@ -564,7 +564,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: PRECHORUS
+                stanzaType: PRECHORUS
             }
         ],
         [
@@ -627,7 +627,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: BRIDGE
+                stanzaType: BRIDGE
             }
         ],
         [
@@ -685,7 +685,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: BRIDGE,
+                stanzaType: BRIDGE,
                 subsequent: true
             }
         ],
@@ -730,7 +730,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: CHORUS
+                stanzaType: CHORUS
             }
         ],
         [
@@ -742,7 +742,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                sectionClass: INSTRUMENTAL
+                stanzaType: INSTRUMENTAL
             }
         ]
     ],
