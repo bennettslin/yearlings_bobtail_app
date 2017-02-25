@@ -519,7 +519,8 @@ module.exports = {
                 ],
                 stanzaType: CHORUS,
                 substanzaType: RHYME,
-                sideStanzaType: BACKING
+                sideStanzaType: BACKING,
+                subsequent: true
             }
         ],
         [
@@ -1042,7 +1043,8 @@ module.exports = {
                 ],
                 stanzaType: CHORUS,
                 substanzaType: RHYME,
-                sideStanzaType: BACKING
+                sideStanzaType: BACKING,
+                subsequent: true
             }
         ],
         [
@@ -1161,6 +1163,18 @@ module.exports = {
                 stanzaType: CODA,
                 sideStanzaType: BACKING,
                 sideSubstanzaType: RESPONSE
+            }
+        ],
+        [
+            {
+                time: 199,
+                centre: {
+                    italic: `(outro)`
+                }
+            },
+            {
+                unitMap: true,
+                stanzaType: INSTRUMENTAL
             }
         ]
     ],

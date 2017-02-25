@@ -1,0 +1,124 @@
+.lyrics-unit {
+    display: flex;
+    justify-content: center;
+    font-size: @lyric-verse-size;
+
+    &.subsequent {
+        margin-top: -@stanza-type-tab-height;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: @lyrics-unit-margin;
+    }
+}
+
+.title-unit {
+    font-size: @lyric-title-size;
+
+    .stanza {
+
+        @title-verse-padding: 15px;
+
+        .verse {
+            padding: @title-verse-padding;
+
+            .lyrics-audio-button-block {
+                margin-top: -@title-verse-padding;
+            }
+        }
+    }
+}
+
+.stanza-container {
+    position: relative;
+}
+
+.stanza-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /**
+     * Limit width of stanzas when lyric column is full width of screen.
+     * This is necessary for Vegan Proclamation. This value doesn't affect
+     * the layout anywhere else.
+     */
+    max-width: 720px;
+
+    &:not(:first-child) {
+        margin-left: @stanza-block-margin;
+    }
+
+    &.side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &.bottom-only {
+            justify-content: flex-end;
+        }
+    }
+
+    .sub-block {
+        margin-top: -6px;
+        display: flex;
+    }
+}
+
+.custom-sub-block {
+    @side-padding: 15%;
+    @overlap-margin: 20px;
+
+    &.left {
+        padding-right: @side-padding;
+    }
+    &.right {
+        padding-left: @side-padding;
+    }
+    &.overlap {
+        margin-top: -@overlap-margin;
+    }
+}
+
+.stanza {
+    &.stanza-type-title { border: 2px solid @stanza-title-colour; }
+    &.stanza-type-refrain { border: 2px solid @stanza-refrain-colour; }
+    &.stanza-type-verse { border: 2px solid @stanza-verse-colour; }
+    &.stanza-type-prechorus { border: 2px solid @stanza-prechorus-colour; }
+    &.stanza-type-chorus { border: 2px solid @stanza-chorus-colour; }
+    &.stanza-type-postchorus { border: 2px solid @stanza-postchorus-colour; }
+    &.stanza-type-bridge { border: 2px solid @stanza-bridge-colour; }
+    &.stanza-type-coda { border: 2px solid @stanza-coda-colour; }
+    &.stanza-type-instrumental { border: 2px solid @stanza-instrumental-colour; }
+    &.stanza-type-rhyme { border: 2px solid @stanza-rhyme-colour; }
+    &.stanza-type-backing { border: 2px solid @stanza-backing-colour; }
+    &.stanza-type-response { border: 2px solid @stanza-response-colour; }
+}
+
+.stanza-tab {
+    position: absolute;
+    height: @stanza-type-tab-height;
+    top: -@stanza-type-tab-height;
+    left: 0;
+
+    padding: 0 5px;
+    color: white;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 0.6em;
+
+    &.stanza-type-title { background-color: @stanza-title-colour; }
+    &.stanza-type-refrain { background-color: @stanza-refrain-colour; }
+    &.stanza-type-verse { background-color: @stanza-verse-colour; }
+    &.stanza-type-prechorus { background-color: @stanza-prechorus-colour; }
+    &.stanza-type-chorus { background-color: @stanza-chorus-colour; }
+    &.stanza-type-postchorus { background-color: @stanza-postchorus-colour; }
+    &.stanza-type-bridge { background-color: @stanza-bridge-colour; }
+    &.stanza-type-coda { background-color: @stanza-coda-colour; }
+    &.stanza-type-instrumental { background-color: @stanza-instrumental-colour; }
+    &.stanza-type-rhyme { background-color: @stanza-rhyme-colour; }
+    &.stanza-type-backing { background-color: @stanza-backing-colour; }
+    &.stanza-type-response { background-color: @stanza-response-colour; }
+}

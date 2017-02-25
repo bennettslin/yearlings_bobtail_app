@@ -249,26 +249,26 @@ module.exports = {
     RIGHT,
     OVERLAP: 'overlap',
 
-    TITLE: 'stanza-type-title',
-    REFRAIN: 'stanza-type-refrain',
-    VERSES: 'stanza-type-verse',
-    PRECHORUS: 'stanza-type-prechorus',
-    CHORUS: 'stanza-type-chorus',
-    POSTCHORUS: 'stanza-type-postchorus',
-    BRIDGE: 'stanza-type-bridge',
+    TITLE: 'title',
+    REFRAIN: 'refrain',
+    VERSES: 'verse',
+    PRECHORUS: 'prechorus',
+    CHORUS: 'chorus',
+    POSTCHORUS: 'postchorus',
+    BRIDGE: 'bridge',
 
-    CODA: 'stanza-type-coda',
-    
-    INSTRUMENTAL: 'stanza-type-instrumental',
+    CODA: 'coda',
+
+    INSTRUMENTAL: 'instrumental',
 
     // substanza type only
-    RHYME: 'stanza-type-rhyme',
+    RHYME: 'rhyme',
 
     // sideStanza type only
-    BACKING: 'stanza-type-backing',
+    BACKING: 'backing',
 
     // substanza or sideSubstanza type
-    RESPONSE: 'stanza-type-response',
+    RESPONSE: 'response',
 
     // Temporary.
     ALBUM_BUILD_KEYS: [

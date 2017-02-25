@@ -723,8 +723,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: CHORUS,
-                subsequent: true
+                stanzaType: CHORUS
             }
         ],
         [
@@ -800,8 +799,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: CHORUS,
-                subsequent: true
+                stanzaType: CHORUS
             }
         ],
         [

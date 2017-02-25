@@ -95,11 +95,14 @@ const LyricsUnitView = ({
         if (stanzaArray) {
             if (addSub) {
                 return (
-                    <div className="sub-block custom right">
-                    {getStanza({ stanzaArray, inMain, isSub: true })}
+                    <div className="sub-block custom-sub-block right">
+                        {getStanza({ stanzaArray, inMain, isSub: true })}
                     </div>
                 )
             } else {
+                const shownStanzaIndex = inMain && !isSub && stanzaIndex,
+                    showStanzaTypeAndIndex = !subsequent && !!shownStanzaIndex
+
                 let itsStanzaType
 
                 if (inMain) {
@@ -111,7 +114,8 @@ const LyricsUnitView = ({
                 return (
                     <LyricsStanza {...other}
                         stanzaArray={stanzaArray}
-                        stanzaIndex={inMain && !isSub && stanzaIndex}
+                        showStanzaTypeAndIndex={showStanzaTypeAndIndex}
+                        stanzaIndex={shownStanzaIndex}
                         stanzaType={itsStanzaType}
                         selectedDotKeys={selectedDotKeys}
                     />
