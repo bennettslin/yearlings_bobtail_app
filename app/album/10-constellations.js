@@ -1290,7 +1290,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: OVERLAP,
+                unitClassName: OVERLAP,
                 subStanza: [
                     {
                         time: 135,
@@ -1417,7 +1417,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: OVERLAP,
+                unitClassName: OVERLAP,
                 stanzaType: BRIDGE
             }
         ],

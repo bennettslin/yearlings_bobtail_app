@@ -8,27 +8,24 @@ import { intersects } from 'helpers/dot-helper'
  * CONTAINER *
  *************/
 
-const LyricsUnit = ({
+const LyricsUnit = (props) => {
 
-    stanzaArray,
-    isTitleUnit,
-    selectedLyricColumnIndex,
-    selectedDotKeys,
-    hiddenLyricColumnKey,
+    const { stanzaArray,
+            isTitleUnit,
+            selectedDotKeys,
+            hiddenLyricColumnKey } = props,
 
-...other }) => {
-
-    const { unitClass,
-            stanzaIndex,
-            stanzaType,
-            substanzaType,
-            sideStanzaType,
-            sideSubstanzaType,
-            subsequent,
-            dotStanza,
-            subStanza,
-            topSideStanza,
-            bottomSideStanza } = stanzaArray[stanzaArray.length - 1],
+        { unitClassName,
+          stanzaIndex,
+          stanzaType,
+          substanzaType,
+          sideStanzaType,
+          sideSubstanzaType,
+          subsequent,
+          dotStanza,
+          subStanza,
+          topSideStanza,
+          bottomSideStanza } = stanzaArray[stanzaArray.length - 1],
 
         isBottomOnly = !topSideStanza && bottomSideStanza,
         topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
@@ -39,10 +36,8 @@ const LyricsUnit = ({
         shouldShowDotStanza = dotStanza ? intersects(dotStanza.dotKeys, selectedDotKeys) : false
 
     return (
-        <LyricsUnitView {...other}
-            stanzaArray={stanzaArray}
-            isTitleUnit={isTitleUnit}
-            unitClass={unitClass}
+        <LyricsUnitView {...props}
+            unitClassName={unitClassName}
             stanzaIndex={stanzaIndex}
             stanzaType={isTitleUnit ? TITLE : stanzaType}
             substanzaType={substanzaType}
@@ -50,7 +45,6 @@ const LyricsUnit = ({
             sideSubstanzaType={sideSubstanzaType}
             subsequent={subsequent}
             shouldShowDotStanza={shouldShowDotStanza}
-            selectedDotKeys={selectedDotKeys}
             dotStanza={dotStanza}
             subStanza={subStanza}
             topSideStanza={topSideStanza}
@@ -60,8 +54,6 @@ const LyricsUnit = ({
             showMain={showMain}
             showSide={showSide}
             topSideSubStanza={topSideSubStanza}
-            hiddenLyricColumnKey={hiddenLyricColumnKey}
-            selectedLyricColumnIndex={selectedLyricColumnIndex}
         />
     )
 }
@@ -77,7 +69,8 @@ const LyricsUnitView = ({
     stanzaArray,
 
     // From controller.
-    unitClass,
+    unitClassName,
+    stanzaIndex,
     stanzaType,
     substanzaType,
     subsequent,
@@ -107,18 +100,19 @@ const LyricsUnitView = ({
                     </div>
                 )
             } else {
-                let className
+                let itsStanzaType
 
                 if (inMain) {
-                    className = isSub ? substanzaType : stanzaType
+                    itsStanzaType = isSub ? substanzaType : stanzaType
                 } else {
-                    className = isSub ? sideSubstanzaType : sideStanzaType
+                    itsStanzaType = isSub ? sideSubstanzaType : sideStanzaType
                 }
 
                 return (
                     <LyricsStanza {...other}
                         stanzaArray={stanzaArray}
-                        stanzaType={className}
+                        stanzaIndex={inMain && !isSub && stanzaIndex}
+                        stanzaType={itsStanzaType}
                         selectedDotKeys={selectedDotKeys}
                     />
                 )
@@ -129,7 +123,14 @@ const LyricsUnitView = ({
     }
 
     return (
-        <div className={`lyrics-unit${isTitleUnit ? ' title-unit' : ''}${unitClass ? ` custom ${unitClass}` : ''}${subsequent ? ' subsequent' : ''}`}>
+        <div
+            className={`
+                lyrics-unit
+                ${isTitleUnit ? 'title-unit' : ''}
+                ${unitClassName ? `custom ${unitClassName}` : ''}
+                ${subsequent ? 'subsequent' : ''}
+            `}
+        >
             {showMain &&
                 <div className="stanza-block">
                     {getStanza({ stanzaArray, inMain: true })}

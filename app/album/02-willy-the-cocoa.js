@@ -267,7 +267,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: `${LEFT} ${OVERLAP}`,
+                unitClassName: `${LEFT} ${OVERLAP}`,
                 stanzaType: VERSES
             },
         ],
@@ -709,7 +709,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: `${LEFT} ${OVERLAP}`,
+                unitClassName: `${LEFT} ${OVERLAP}`,
                 stanzaType: VERSES
             }
         ],

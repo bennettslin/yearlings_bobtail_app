@@ -1068,7 +1068,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: LEFT,
+                unitClassName: LEFT,
                 stanzaType: BRIDGE
             },
         ],
@@ -1095,7 +1095,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: `${RIGHT} ${OVERLAP}`,
+                unitClassName: `${RIGHT} ${OVERLAP}`,
                 stanzaType: BRIDGE
             }
         ],
@@ -1110,7 +1110,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: LEFT,
+                unitClassName: LEFT,
                 stanzaType: BRIDGE
             }
         ],
@@ -1160,7 +1160,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClass: OVERLAP,
+                unitClassName: OVERLAP,
                 stanzaType: BRIDGE
             }
         ],

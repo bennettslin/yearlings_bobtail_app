@@ -174,16 +174,16 @@ class LyricsVerseView extends Component {
         return (
             <div
                 ref={(node) => (this.myVerse = node)}
-                className={
-                    `verse
+                className={`
+                    verse
                     ${verseIndexClass}
                     ${isEven ? 'even' : 'odd'}
-                    ${isSelected ? ' selected' : ''}
-                    ${accessHighlighted ? ' access-highlighted' : ''}
-                    ${isInteractable ? ' interactable' : ''}
-                    ${isInteractivated ? ' interactivated' : ''}
-                    ${isHoverable ? ' hoverable' : ''}`
-                }
+                    ${isSelected ? 'selected' : ''}
+                    ${accessHighlighted ? 'access-highlighted' : ''}
+                    ${isInteractable ? 'interactable' : ''}
+                    ${isInteractivated ? 'interactivated' : ''}
+                    ${isHoverable ? 'hoverable' : ''}
+                `}
                 onClick={onInteractivatableClick}
             >
                 {isInteractable && !inVerseBar &&

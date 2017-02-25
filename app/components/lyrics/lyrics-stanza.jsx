@@ -17,16 +17,23 @@ const LyricsStanzaView = ({
 
     // From props.
     stanzaArray,
-    stanzaType,
     stanzaIndex,
+    stanzaType,
 
 ...other }) => (
 
-    <div className={`stanza${stanzaType ? ` ${stanzaType}` : ''} stanza-index-${stanzaIndex}`}>
+    <div
+        className={`
+            stanza
+            ${stanzaIndex ? `stanza-index-${stanzaIndex}` : ''}
+            ${stanzaType ? stanzaType : ''}
+        `}
+    >
         {stanzaArray.map((verseObject, verseIndex) => {
             return !verseObject.stanzaMap && !verseObject.unitMap &&
                 <LyricsVerse {...other}
                     key={verseIndex}
+                    stanzaIndex={stanzaIndex}
                     verseObject={verseObject}
                 />
             }
