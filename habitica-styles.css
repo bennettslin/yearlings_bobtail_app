@@ -8,6 +8,11 @@
     border: 2px solid blue;
 }
 
+.shop_shield_special_diamondStave {
+    border-radius: 50%;
+    border: 2px solid yellow;
+}
+
 .shop_armor_special_2 {
 	border-radius: 50%;
     border: 2px solid green;
@@ -23,7 +28,7 @@
     border: 2px solid orange;
 }
 
-.col-md-6.border-right button:not(.shop_armor_armoire_ironBlueArcherArmor):not(.shop_shield_armoire_perchingFalcon):not(.shop_shield_armoire_dragonTamerShield):not(.shop_armor_rogue_5):not(.shop_head_rogue_5):not(.shop_weapon_special_2):not(.shop_head_special_2):not(.shop_armor_special_2) {
+.col-md-6.border-right button:not(.shop_armor_armoire_ironBlueArcherArmor):not(.shop_shield_armoire_perchingFalcon):not(.shop_shield_armoire_dragonTamerShield):not(.shop_armor_rogue_5):not(.shop_head_rogue_5):not(.shop_weapon_special_2):not(.shop_head_special_2):not(.shop_armor_special_2):not(.shop_shield_special_diamondStave) {
     display: none;
 }
 

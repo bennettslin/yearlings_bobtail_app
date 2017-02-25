@@ -56,29 +56,38 @@ const AudioButtonsView = ({
     <div className="audio-block audio-buttons-block">
 
         <div className="audio-subblock player-subblock">
+
+            {/* Previous button. */}
             <a
                 className={`audio-button${isPrologue ? '' : ' enabled'}`}
                 onClick={onPreviousSongClick}
             >
-                <div className="button-icon audio-icon">
+                <div className="button-icon audio-neutral">
                     {isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
                 </div>
             </a>
 
+            {/* Play button. */}
             <a
                 className="audio-button enabled"
                 onClick={onPlayClick}
             >
-                <div className={`button-icon audio-icon${titleInAudio ? '' : ' large'}`}>
+                <div className={`
+                        button-icon
+                        audio-colour
+                        ${titleInAudio ? '' : 'large'}
+                    `}
+                >
                     {isPlaying ? '\u23F8' : '\u25BA' }
                 </div>
             </a>
 
+            {/* Next button. */}
             <a
                 className={`audio-button${isEpilogue ? '' : ' enabled'}`}
                 onClick={onNextSongClick}
             >
-                <div className="button-icon audio-icon">
+                <div className="button-icon audio-neutral">
                     {isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
                 </div>
             </a>
@@ -89,7 +98,7 @@ const AudioButtonsView = ({
                 className="audio-button enabled"
                 onClick={e => onAudioOptionClick(e)}
             >
-                <div className="button-icon audio-icon">
+                <div className="button-icon audio-neutral">
                     {AUDIO_OPTIONS[selectedAudioOptionIndex]}
                 </div>
             </a>

@@ -49,10 +49,6 @@
                     font-size: 1em;
                     animation: fontSnapback 0.16s ease;
                 }
-
-                // .small-lyrics-audio-button {
-                //     opacity: 0;
-                // }
             }
 
             // Play button hover styling.
@@ -62,9 +58,6 @@
             }
 
             &.selected {
-                color: green;
-                background-color: @selected-verse-colour;
-
                 .lyrics-audio-button {
                     font-size: 1em;
                 }
@@ -78,7 +71,7 @@
         position: absolute;
         height: 100%;
         width: @lyrics-audio-button-block-width;
-        left: -@lyrics-audio-button-block-width / 2;
+        left: -@lyrics-audio-button-block-width * 0.8;
 
         // Either button or icon.
         .lyrics-audio-button-child {
@@ -99,6 +92,11 @@
             font-size: 0.1em;
             opacity: 0;
             z-index: @lyrics-audio-button-z-index;
+
+            .lyrics-audio-icon {
+                width: @lyrics-audio-button-block-width;
+                height: @lyrics-audio-button-block-width;
+            }
         }
     }
 
@@ -164,8 +162,19 @@
     margin: 0 5px;
     padding: 10px 15px;
     border-radius: 10px;
-    background-color: @selected-verse-colour;
     cursor: pointer;
 
     box-shadow: 0 3px 12px 5px @darker-box-shadow-colour;
+}
+
+.is-playing {
+    .verse.selected, .verse-bar {
+        background-color: @audio-play-colour;
+    }
+}
+
+.is-paused {
+    .verse.selected, .verse-bar {
+        background-color: @audio-pause-colour;
+    }
 }

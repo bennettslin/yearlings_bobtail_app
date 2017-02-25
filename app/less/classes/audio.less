@@ -162,8 +162,20 @@
     background-color: #def;
 }
 
-.audio-icon {
-    background-color: #8d4;
+.audio-neutral {
+    background-color: @audio-neutral-colour;
+}
+
+.is-playing {
+    .audio-colour {
+        background-color: @audio-pause-colour;
+    }
+}
+
+.is-paused {
+    .audio-colour {
+        background-color: @audio-play-colour;
+    }
 }
 
 .audio-banner-custom-subfield {

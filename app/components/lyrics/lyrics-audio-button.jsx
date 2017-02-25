@@ -15,7 +15,8 @@ const LyricsAudioButton = ({
 
 }) => {
 
-    let buttonIcon
+    let buttonIcon,
+        audioStatusClassName = isSelected ? 'audio-colour' : 'audio-neutral'
 
     if (isSelected) {
         buttonIcon = isPlaying ? `\u23F8` : `\u25BA`
@@ -28,7 +29,14 @@ const LyricsAudioButton = ({
             <a className="lyrics-audio-button-child lyrics-audio-button enabled"
                 onClick={onClick}
             >
-                {buttonIcon}
+                <div className={`
+                        button-icon
+                        lyrics-audio-icon
+                        ${audioStatusClassName}
+                    `}
+                >
+                    {buttonIcon}
+                </div>
             </a>
         </div>
     )

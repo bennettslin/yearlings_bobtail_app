@@ -169,7 +169,9 @@ class LyricsVerseView extends Component {
             // If no verse index, we'll count it as odd.
             isEven = hasVerseIndex && verseIndex % 2 === 0,
 
-            verseIndexClass = ` ${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
+            verseIndexClass = ` ${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`,
+
+            audioStatusClassName = isSelected ? 'audio-colour' : ''
 
         return (
             <div
@@ -179,6 +181,7 @@ class LyricsVerseView extends Component {
                     ${verseIndexClass}
                     ${isEven ? 'even' : 'odd'}
                     ${isSelected ? 'selected' : ''}
+                    ${audioStatusClassName}
                     ${accessHighlighted ? 'access-highlighted' : ''}
                     ${isInteractable ? 'interactable' : ''}
                     ${isInteractivated ? 'interactivated' : ''}
