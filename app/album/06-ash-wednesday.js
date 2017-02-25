@@ -400,7 +400,7 @@ module.exports = {
                                     anchor: `Shelta`,
                                     wiki: `Shelta`
                                 },
-                                `that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, though not a Traveller. Either way, I was stuck "outside her shelter."`
+                                `that is intended to exclude outsiders from comprehension. Catherine was of Irish descent, but not a Traveller. Either way, I was stuck "outside her shelter."`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -434,7 +434,7 @@ module.exports = {
                     {
                         anchor: `unknown to roam,`,
                         annotation: {
-                            description: `As an itinerant community, the Irish Travellers are certainly known to roam. Also, raincoats are a slang term for condoms, which are famously "unknown to Rome" due to the Catholic Church's opposition to birth control. Catherine and I never did go all the way, supposedly because of her vow not to engage in premarital sex.`,
+                            description: `If Catherine is a figurative Traveller, then I am unwelcome to follow her itinerant community that is well-known to roam. Also, "raincoat" is a euphemism for condoms, which are famously "unknown to Rome" due to the Catholic Church's opposition to birth control. Catherine and I never went all the way due to her vow not to engage in premarital sex, though I always held out the hope.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [PUN]: true,

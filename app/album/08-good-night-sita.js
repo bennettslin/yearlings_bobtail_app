@@ -786,7 +786,6 @@ module.exports = {
                 ]
             },
             {
-                // TODO: Time might be wrong after moving "short end"
                 time: 103,
                 lyric: `in these clutching fingers of steel`
             },

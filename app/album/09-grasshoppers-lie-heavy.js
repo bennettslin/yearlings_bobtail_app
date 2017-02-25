@@ -1060,11 +1060,11 @@ module.exports = {
                     {
                         anchor: `hard-on in a sleeve."`,
                         annotation: {
-                            // TODO: Specify that hard on means erection.
-                            description: `Seeing my penis tucked in a condom, Sita lightens the mood by feigning to agree with a past self-assessment of mine. I had once judged myself to be too upfront about my feelings, or as I had put it, to wear my "heart on my sleeve."`,
+                            description: `"Hard-on" is slang for an erection. Pointing to my penis tucked in a condom, Sita lightens the mood by feigning to agree with a past self-assessment of mine. I had once judged myself to be too upfront about my feelings, or as I had put it, to wear my "heart on my sleeve."`,
                             dotKeys: {
                                 [NARRATIVE]: true,
-                                [PUN]: true
+                                [PUN]: true,
+                                [REFERENCE]: true
                             }
                         }
                     }
