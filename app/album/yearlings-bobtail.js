@@ -24,14 +24,6 @@ module.exports = {
     scores: [
         require('assets/scores/yearlings_bobtail.pdf')
     ],
-
-    // Hi, I'm Bennett. end of my relationship,
-    // Narrowed down to five things that changed my life.
-    // Spent the next five years
-    // Ulysses of rock albums.
-    // Wrote and recorded all the parts myself.
-    // Released in 2006.
-
     songs: [
         require('./00-prologue'),
         require('./01-didi'),

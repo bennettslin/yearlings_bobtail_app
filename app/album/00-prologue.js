@@ -13,6 +13,13 @@ module.exports = {
     tip: {
         description: 'prologue tip'
     },
+
+    // Hi, I'm Bennett. end of my relationship,
+    // Narrowed down to five things that changed my life.
+    // Spent the next five years
+    // Ulysses of rock albums.
+    // Wrote and recorded all the parts myself.
+    // Released in 2006.
     overview: 'prologue text',
     tasks: [
 
