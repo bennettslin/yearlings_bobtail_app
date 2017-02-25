@@ -18,7 +18,6 @@ const _tempStore = {
     _portalLinks: {},
     _songTimes: [],
     _currentSongStanzaTypeCounter: {},
-    _currentStanzaType: null,
     _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
     _drawingCharacters: {},
@@ -93,6 +92,7 @@ const _prepareAllSongs = (album) => {
             _tempStore._hasSideStanzas = false
             _tempStore._isDoublespeaker = false
             _tempStore._dotStanzaCounter = 0
+            _tempStore._currentSongStanzaTypeCounter = {}
 
             _addTitleToLyrics(song.title, song.lyrics)
             // Do not confuse anchor key with string prototype anchor method.
@@ -266,12 +266,20 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
 
     lyricInTime = !isNaN(lyric.time) || lyricInTime
 
-    if (lyric.unitMap) {
+    if (!finalPassThrough && lyric.unitMap) {
+        const { _currentSongStanzaTypeCounter } = _tempStore
 
+        // It's a new stanza.
         if (lyric.stanzaType) {
+            const { stanzaType } = lyric
 
+            // If it's not a subsequent stanza, establish new index.
+            if (!lyric.subsequent) {
+                _currentSongStanzaTypeCounter[stanzaType] = (_currentSongStanzaTypeCounter[stanzaType] || 0) + 1
+            }
+
+            lyric.stanzaIndex = _currentSongStanzaTypeCounter[stanzaType]
         }
-
     }
 
     // In other words, if lyric.time is a valid number.

@@ -19,6 +19,7 @@ const LyricsUnit = ({
 ...other }) => {
 
     const { unitClass,
+            stanzaIndex,
             stanzaType,
             substanzaType,
             sideStanzaType,
@@ -42,6 +43,7 @@ const LyricsUnit = ({
             stanzaArray={stanzaArray}
             isTitleUnit={isTitleUnit}
             unitClass={unitClass}
+            stanzaIndex={stanzaIndex}
             stanzaType={isTitleUnit ? TITLE : stanzaType}
             substanzaType={substanzaType}
             sideStanzaType={sideStanzaType}
