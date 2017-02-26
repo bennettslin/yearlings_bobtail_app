@@ -1352,7 +1352,12 @@ class App extends Component {
         return (
             <div
                 ref={(node) => (this.myApp = node)}
-                className={`app ${isAdmin ? 'admin' : 'live ' + deviceClassName} ${isDesktop ? 'is-desktop' : 'is-mobile'}`}
+                className={`
+                    app
+                    ${isAdmin ? 'admin' : `live ${deviceClassName}`}
+                    ${isDesktop ? 'is-desktop' : 'is-mobile'}
+                    ${isPlaying ? ' is-playing' : ' is-paused'}
+                `}
                 onClick={this._onBodyClick}
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"

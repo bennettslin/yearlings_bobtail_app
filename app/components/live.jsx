@@ -353,7 +353,6 @@ const LiveView = ({
             `live-app
             ${selectedAnnotationIndex ? ' annotation-shown' : ''}
             ${isLogue ? ' is-logue' : ' is-song'}
-            ${isPlaying ? ' is-playing' : ' is-paused'}
             ${showLyricButtons ? '' : ' hide-lyric-buttons'}
             ${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}
             ${timerInAudio ? ' timer-in-audio' : ''}
