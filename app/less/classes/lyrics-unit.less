@@ -61,14 +61,13 @@
     }
 
     .sub-block {
-        margin-top: -6px;
+        margin-top: -@stanza-overlap-margin;
         display: flex;
     }
 }
 
 .custom-sub-block {
     @side-padding: 15%;
-    @overlap-margin: @stanza-type-tab-height * 1.5;
 
     &.left {
         padding-right: @side-padding;
@@ -77,7 +76,7 @@
         padding-left: @side-padding;
     }
     &.overlap {
-        margin-top: -@overlap-margin;
+        margin-top: -@lyrics-unit-margin - @stanza-overlap-margin;
     }
 }
 
