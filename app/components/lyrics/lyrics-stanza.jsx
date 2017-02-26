@@ -22,7 +22,7 @@ const LyricsStanzaView = ({
     stanzaType,
 
 ...other }) => {
-    const indexClassName = stanzaIndex ? `stanza-index-${stanzaIndex}` : '',
+    const indexClassName = !isNaN(stanzaIndex) ? `stanza-index-${stanzaIndex}` : '',
         typeClassName = stanzaType ? `stanza-type-${stanzaType}` : ''
 
     return (
@@ -34,7 +34,7 @@ const LyricsStanzaView = ({
                         ${typeClassName}
                     `}
                 >
-                    {stanzaType} {stanzaIndex}
+                    {stanzaType}{stanzaIndex !== -1 ? ` ${stanzaIndex}` : ''}
                 </div>
             }
 

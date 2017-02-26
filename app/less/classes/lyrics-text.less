@@ -132,10 +132,22 @@
     @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-verse-colour;
 }
 
-.verse.selected .anchor-block {
-    text-shadow:
-    -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @selected-verse-colour,
-    @text-shadow-offset -@text-shadow-offset @text-shadow-blur @selected-verse-colour,
-    -@text-shadow-offset @text-shadow-offset @text-shadow-blur @selected-verse-colour,
-    @text-shadow-offset @text-shadow-offset @text-shadow-blur @selected-verse-colour;
+.is-playing {
+    .verse.audio-colour .anchor-block {
+        text-shadow:
+        -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-play-colour,
+        @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-play-colour,
+        -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-play-colour,
+        @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-play-colour;
+    }
+}
+
+.is-paused {
+    .verse.audio-colour .anchor-block {
+        text-shadow:
+        -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-pause-colour,
+        @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-pause-colour,
+        -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-pause-colour,
+        @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-pause-colour;
+    }
 }

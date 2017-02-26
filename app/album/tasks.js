@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Stanza type shouldn't have number if it's the only one in its song.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Audio slider shows stanza colours`,
         workedHours: 0,
         neededHours: 5
@@ -1289,5 +1284,10 @@ module.exports = [
         taskName: `Play and stop and neutral show different colours`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Stanza type shouldn't have number if it's the only one in its song.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

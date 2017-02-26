@@ -6,6 +6,8 @@
         padding-left: @verse-padding;
         padding-right: @verse-padding;
 
+        .transition(~"color 0.15s ease, background-color 0.15s ease");
+
         &:first-child {
             padding-top: @verse-padding;
             .lyrics-audio-button-block {
@@ -31,14 +33,13 @@
             background-color: @even-verse-colour;
         }
 
-        .transition(color 0.1s ease);
-
         &.interactable {
             position: relative;
 
             // Make all this styling better, obviously.
             &.interactivated, &.hoverable:hover {
-                color: blue;
+                color: #448;
+                background-color: @audio-neutral-colour;
 
                 &.interactivated {
                     box-shadow: inset 0 2px 2px @box-shadow-colour;

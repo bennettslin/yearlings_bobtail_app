@@ -30,32 +30,17 @@ const _tempStore = {
 }
 
 export const prepareAlbumData = (album = {}) => {
-    _prepareAllSongs(album)
+    _initialPrepareAllSongs(album)
+
     _injectPortalLinks(album)
 
-    /**
-     * Add wiki and portal indices. These can only be determined after
-     * collecting portal links from the entire album.
-     */
-    _addWikiAndPortalIndices(album)
+    _finalPrepareAllSongs(album)
 
     // Add drawing characters for admin purposes.
     album.drawingCharacters = parseDrawings(_tempStore._drawingCharacters)
 
     // FIXME: Temporarily add portal links to album for debugging purposes.
     album.portalLinks = _tempStore._portalLinks
-}
-
-const _addWikiAndPortalIndices = (album) => {
-    album.songs.forEach(song => {
-        if (!song.logue) {
-            _tempStore._annotations = song.annotations
-            _tempStore._finalAnnotationIndex = 0
-
-            _parseLyrics(song.lyrics, true)
-            _registerFirstAndLastVerseObjects(song.lyrics)
-        }
-    })
 }
 
 const _markSideStanzas = (lyrics) => {
@@ -77,7 +62,7 @@ const _markSideStanzas = (lyrics) => {
     })
 }
 
-const _prepareAllSongs = (album) => {
+const _initialPrepareAllSongs = (album) => {
     album.songs.forEach((song, songIndex) => {
 
         if (!song.logue) {
@@ -106,6 +91,7 @@ const _prepareAllSongs = (album) => {
 
             _parseLyrics(song.lyrics)
 
+            song.stanzaTypeCounters = _tempStore._currentSongStanzaTypeCounters
             song.isDoublespeaker = _tempStore._isDoublespeaker
 
             // Add annotations to song object.
@@ -123,6 +109,25 @@ const _prepareAllSongs = (album) => {
         }
 
         _gatherDrawings(song.scenes)
+    })
+}
+
+/**
+ * Add wiki and portal indices. These can only be determined after collecting
+ * portal links from the entire album.
+ */
+const _finalPrepareAllSongs = (album) => {
+    album.songs.forEach(song => {
+        if (!song.logue) {
+            _tempStore._annotations = song.annotations
+            _tempStore._finalAnnotationIndex = 0
+            _tempStore._currentSongStanzaTypeCounters = song.stanzaTypeCounters
+
+            _parseLyrics(song.lyrics, true)
+            _registerFirstAndLastVerseObjects(song.lyrics)
+
+            delete song.stanzaTypeCounters
+        }
     })
 }
 
@@ -266,15 +271,19 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
 
     lyricInTime = !isNaN(lyric.time) || lyricInTime
 
-    if (!finalPassThrough && lyric.unitMap) {
+    if (lyric.unitMap && lyric.stanzaType) {
+        const { _currentSongStanzaTypeCounters: counters } = _tempStore,
+            { stanzaType } = lyric
 
-        // It's a new stanza.
-        if (lyric.stanzaType) {
-            const { _currentSongStanzaTypeCounters: counters } = _tempStore,
-                { stanzaType } = lyric
+        if (finalPassThrough) {
+            // Don't show stanzaIndex if it's the only one of its kind.
+            if (counters[stanzaType] === 1) {
+                lyric.stanzaIndex = -1
+            }
 
+        } else {
             // If it's not a subsequent stanza, establish new index.
-            if (!lyric.subsequent) {
+            if (!lyric.subsequent && !lyric.unitClassName) {
                 counters[stanzaType] = (counters[stanzaType] || 0) + 1
             }
 
