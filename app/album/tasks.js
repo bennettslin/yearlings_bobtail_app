@@ -10,11 +10,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Audio slider shows stanza colours`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Clicking on verse when verse bar is shown does not hide verse bar`,
         workedHours: 0,
         neededHours: 2
@@ -1299,5 +1294,10 @@ module.exports = [
         taskName: `Stanza type shouldn't have number if it's the only one in its song.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Audio slider shows stanza colours`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

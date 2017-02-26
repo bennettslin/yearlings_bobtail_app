@@ -297,8 +297,8 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
                     _tempStore._currentStanzaType = stanzaType
 
                     _tempStore._currentSongStanzaTimes.push({
-                        stanzaTime: _tempStore._currentStanzaTime,
-                        stanzaType
+                        time: _tempStore._currentStanzaTime,
+                        type: stanzaType
                     })
                 }
 

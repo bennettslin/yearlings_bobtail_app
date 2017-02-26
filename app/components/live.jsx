@@ -34,6 +34,8 @@ const Live = (props) => {
     return (
         <LiveView {...props}
             lyrics={selectedSong.lyrics}
+            totalTime={selectedSong.totalTime}
+            stanzaTimes={selectedSong.stanzaTimes}
             overviewText={selectedSong.overview}
             annotation={annotation}
             selectedWikiUrl={selectedWikiUrl}
@@ -139,6 +141,8 @@ const LiveView = ({
     // From controller.
     overviewText,
     annotation,
+    totalTime,
+    stanzaTimes,
     presentDotKeys,
     selectedSongLyrics,
     hasDoubleColumns,
@@ -171,6 +175,9 @@ const LiveView = ({
         ),
         audioBannerProps = {
             selectedSongTitle,
+            selectedTimePlayed,
+            totalTime,
+            stanzaTimes,
             audioTimerChild
         },
         audioBannerChild = (

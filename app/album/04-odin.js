@@ -1059,7 +1059,7 @@ module.exports = {
         ],
         [
             {
-                time: 129,
+                time: 123,
                 lyric: `Should you hide, or could you fight,`
             },
             {

@@ -7,22 +7,20 @@ import { getIsMobileWiki } from 'helpers/responsive-helper'
 const _parseLyrics = (lyric, selectedVerseIndex) => {
     // Recurse until object with verse index is found.
 
-    // TODO: This broke upon loading a logue. Not sure if this is the best solution.
-    if (!lyric) {
-        return
-    }
+    // Method does not apply to logues.
+    if (lyric) {
+        if (lyric.verseIndex === selectedVerseIndex) {
+            return lyric
 
-    if (lyric.verseIndex === selectedVerseIndex) {
-        return lyric
+        } else if (Array.isArray(lyric)) {
+            return lyric.reduce((childSelectedLyric, childLyric) => {
+                return childSelectedLyric || _parseLyrics(childLyric, selectedVerseIndex)
+            }, null)
 
-    } else if (Array.isArray(lyric)) {
-        return lyric.reduce((childSelectedLyric, childLyric) => {
-            return childSelectedLyric || _parseLyrics(childLyric, selectedVerseIndex)
-        }, null)
-
-    // Object with verseIndex key not found, so dig into subStanza.
-    } else if (lyric.subStanza) {
-        return _parseLyrics(lyric.subStanza, selectedVerseIndex)
+            // Object with verseIndex key not found, so dig into subStanza.
+        } else if (lyric.subStanza) {
+            return _parseLyrics(lyric.subStanza, selectedVerseIndex)
+        }
     }
 }
 
