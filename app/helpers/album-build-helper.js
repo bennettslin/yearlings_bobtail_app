@@ -17,8 +17,9 @@ const _tempStore = {
     _wikiIndex: 1,
     _portalLinks: {},
     _songTimes: [],
-    // _currentStanzaType: null,
-    // // _currentSongStanzaTimes: [],
+    _currentStanzaTime: 0,
+    _currentStanzaType: null,
+    _currentSongStanzaTimes: [],
     _currentSongStanzaTypeCounters: {},
     _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
@@ -79,8 +80,9 @@ const _initialPrepareAllSongs = (album) => {
             _tempStore._hasSideStanzas = false
             _tempStore._isDoublespeaker = false
             _tempStore._dotStanzaCounter = 0
-            // _tempStore._currentStanzaType = null
-            // _tempStore._currentSongStanzaTimes = []
+            _tempStore._currentStanzaTime = 0
+            _tempStore._currentStanzaType = null
+            _tempStore._currentSongStanzaTimes = []
             _tempStore._currentSongStanzaTypeCounters = {}
 
             _addTitleToLyrics(song.title, song.lyrics)
@@ -95,7 +97,9 @@ const _initialPrepareAllSongs = (album) => {
 
             _parseLyrics(song.lyrics)
 
+            song.stanzaTimes = _tempStore._currentSongStanzaTimes
             song.stanzaTypeCounters = _tempStore._currentSongStanzaTypeCounters
+
             song.isDoublespeaker = _tempStore._isDoublespeaker
 
             // Add annotations to song object.
@@ -130,6 +134,7 @@ const _finalPrepareAllSongs = (album) => {
             _parseLyrics(song.lyrics, true)
             _registerFirstAndLastVerseObjects(song.lyrics)
 
+            // Not needed after stanza is told its index.
             delete song.stanzaTypeCounters
         }
     })
@@ -288,6 +293,15 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
         } else {
             // If it's not a subsequent stanza, establish new index.
             if (!lyric.subsequent) {
+                if (_tempStore._currentStanzaType !== stanzaType) {
+                    _tempStore._currentStanzaType = stanzaType
+
+                    _tempStore._currentSongStanzaTimes.push({
+                        stanzaTime: _tempStore._currentStanzaTime,
+                        stanzaType
+                    })
+                }
+
                 counters[stanzaType] = (counters[stanzaType] || 0) + 1
             }
 
@@ -312,6 +326,11 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
     }
 
     if (Array.isArray(lyric)) {
+
+        // If first object has a time, then it's the current stanza's time.
+        if (!isNaN(lyric[0].time)) {
+            _tempStore._currentStanzaTime = lyric[0].time
+        }
 
         lyric.forEach(childLyricValue => {
             _parseLyrics(childLyricValue, finalPassThrough, textKey, lyricInTime)
