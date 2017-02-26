@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Score should just hide, not reload upon each popup opened.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Audio slider shows stanza colours`,
         workedHours: 0,
         neededHours: 5
