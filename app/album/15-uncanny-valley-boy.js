@@ -21,35 +21,34 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. His father is stern and disapproving, while his mother consoles a weeping Sita.`,
+            description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. They are dressed in traditional Indian garb. His father is stern and disapproving, while his mother consoles a weeping Sita, who is wearing traditional Chinese garb.`,
             characters: {
                 bennett: 1,
                 miriam: 1,
-                motherGhost: 1,
-                fatherGhost: 1,
-                sitaGhost: 1
+                mother: 1,
+                father: 1,
+                sita: 1
             }
         },
         {
             verseIndex: 8,
-            description: `They take him to visit his childhood past. They watch as young Bennett gets bullied. Bennett winces.`,
+            description: `Bennett's father takes him to visit his childhood past. They watch as young Bennett, having just been bullied, lashes out in anger, to no one in particular. Sasha is with him, and is understanding but clearly keeping her distance. Bennett winces.`,
             characters: {
                 bennett: 1,
-                motherGhost: 1,
-                fatherGhost: 1,
+                father: 1,
                 youngBennett: 1,
-                bully: 1
+                Sasha: 1
             }
         },
         {
             verseIndex: 21,
-            description: `Next, they take him to visit the present. Sita is at home crying, while Bennett is playing guitar in his apartment, with Miriam behind him, necking, and smoking pot.`,
+            description: `Bennett's mother is back. They next take him to visit the present. Sita is at home crying, while Bennett is playing guitar next to Miriam on her bed.`,
             characters: {
                 bennett: 1,
-                motherGhost: 1,
-                fatherGhost: 1,
+                mother: 1,
+                father: 1,
                 sita: 1,
-                hipster: 1
+                miriam: 1
             }
         },
         {
@@ -57,8 +56,8 @@ module.exports = {
             description: `Finally, they take him to visit the future. Miriam is walking arm in arm with her new boyfriend. Unknowingly, they cross paths with Sita who is laughing with her friend in a park. Meanwhile, Bennett is at home alone, recording and depressed.`,
             characters: {
                 bennett: 1,
-                motherGhost: 1,
-                fatherGhost: 1,
+                mother: 1,
+                father: 1,
                 miriam: 1,
                 miriamBoyfriend: 1,
                 sita: 1,
@@ -67,13 +66,13 @@ module.exports = {
         },
         {
             verseIndex: 35,
-            description: `Bringing him back, Bennett unrepentantly crawls into Miriam's arms, who is glaring at his parents. His mother wails, while his father shields Sita from the view.`,
+            description: `Bringing him back, Bennett unrepentantly crawls into Miriam's arms, who is casting an imaginary spell to release him from their grasp. His father flinches, while his mother shields Sita from the view.`,
             characters: {
                 bennett: 1,
                 miriam: 1,
-                motherGhost: 1,
-                fatherGhost: 1,
-                sitaGhost: 1
+                mother: 1,
+                father: 1,
+                sita: 1
             }
         }
     ],
@@ -1200,11 +1199,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 38,
             neededHours: 38
@@ -1226,6 +1220,11 @@ module.exports = {
         },
         {
             taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
             workedHours: 3,
             neededHours: 3
         }
