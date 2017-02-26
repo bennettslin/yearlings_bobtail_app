@@ -17,7 +17,9 @@ const _tempStore = {
     _wikiIndex: 1,
     _portalLinks: {},
     _songTimes: [],
-    _currentSongStanzaTypeCounters: {},
+    _currentStanzaType: null,
+    // _currentSongStanzaTimes: [],
+    // _currentSongStanzaTypeCounters: {},
     _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
     _drawingCharacters: {},
@@ -77,7 +79,9 @@ const _initialPrepareAllSongs = (album) => {
             _tempStore._hasSideStanzas = false
             _tempStore._isDoublespeaker = false
             _tempStore._dotStanzaCounter = 0
-            _tempStore._currentSongStanzaTypeCounters = {}
+            _tempStore._currentStanzaType = null
+            // _tempStore._currentSongStanzaTimes = []
+            // _tempStore._currentSongStanzaTypeCounters = {}
 
             _addTitleToLyrics(song.title, song.lyrics)
             // Do not confuse anchor key with string prototype anchor method.
