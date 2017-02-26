@@ -16,7 +16,7 @@ const LyricsAudioButton = ({
 }) => {
 
     let buttonIcon,
-        audioStatusClassName = isSelected ? 'audio-colour' : 'audio-neutral'
+        audioStatusClassName = isSelected ? 'audio-colour' : 'audio-nav'
 
     if (isSelected) {
         buttonIcon = isPlaying ? `\u23F8` : `\u25BA`

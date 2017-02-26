@@ -62,7 +62,7 @@ const AudioButtonsView = ({
                 className={`audio-button${isPrologue ? '' : ' enabled'}`}
                 onClick={onPreviousSongClick}
             >
-                <div className="button-icon audio-neutral">
+                <div className="button-icon audio-nav">
                     {isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
                 </div>
             </a>
@@ -87,7 +87,7 @@ const AudioButtonsView = ({
                 className={`audio-button${isEpilogue ? '' : ' enabled'}`}
                 onClick={onNextSongClick}
             >
-                <div className="button-icon audio-neutral">
+                <div className="button-icon audio-nav">
                     {isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
                 </div>
             </a>
