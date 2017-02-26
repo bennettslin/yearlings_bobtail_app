@@ -21,6 +21,7 @@ const _tempStore = {
     _currentStanzaType: null,
     _currentSongStanzaTimes: [],
     _currentSongStanzaTypeCounters: {},
+    _largestStanzaTimesLength: 0,
     _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
     _drawingCharacters: {},
@@ -98,6 +99,10 @@ const _initialPrepareAllSongs = (album) => {
             _parseLyrics(song.lyrics)
 
             song.stanzaTimes = _tempStore._currentSongStanzaTimes
+            if (song.stanzaTimes.length > _tempStore._largestStanzaTimesLength) {
+                _tempStore._largestStanzaTimesLength = song.stanzaTimes.length
+            }
+
             song.stanzaTypeCounters = _tempStore._currentSongStanzaTypeCounters
 
             song.isDoublespeaker = _tempStore._isDoublespeaker
@@ -134,10 +139,32 @@ const _finalPrepareAllSongs = (album) => {
             _parseLyrics(song.lyrics, true)
             _registerFirstAndLastVerseObjects(song.lyrics)
 
+
             // Not needed after stanza is told its index.
             delete song.stanzaTypeCounters
         }
+
+        _expandStanzaTimes(song)
     })
+}
+
+const _expandStanzaTimes = (song) => {
+
+    // Include logues.
+    if (!song.stanzaTimes) {
+        song.stanzaTimes = []
+    }
+
+    /**
+     * We want the stanza time bars to animate nicely. As such, the number of
+     * stanza times for each song will be the same.
+     */
+    while (song.stanzaTimes.length < _tempStore._largestStanzaTimesLength) {
+        song.stanzaTimes.push({
+            type: 'placeholder',
+            time: song.totalTime
+        })
+    }
 }
 
 const _gatherDrawings = (scenes) => {

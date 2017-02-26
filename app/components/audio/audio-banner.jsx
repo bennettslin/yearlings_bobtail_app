@@ -41,14 +41,14 @@ const AudioBannerView = ({
                         return (
                             <div
                                 key={index}
-                                className={`stanza-time-bar stanza-type-${stanzaTime.type}`}
+                                className={`stanza-time-bar animated-time-bar stanza-type-${stanzaTime.type}`}
                                 style={stanzaStyle}
                             >
                             </div>
                         )
                     })}
                     <div
-                        className="audio-time-bar"
+                        className="audio-time-bar animated-time-bar"
                         style={playedStyle}
                     >
 
