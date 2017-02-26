@@ -1,4 +1,4 @@
-import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, BRIDGE, RHYME, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION, DOT_STANZA_CONSTANT } from 'helpers/constants'
+import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, RHYME, POSTCHORUS, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION, DOT_STANZA_CONSTANT } from 'helpers/constants'
 
 // TODO: Say that gardening was later that summer, while nighttime scare moment was closer to Willy's death.
 module.exports = {
@@ -268,7 +268,8 @@ module.exports = {
             {
                 unitMap: true,
                 unitClassName: `${LEFT} ${OVERLAP}`,
-                stanzaType: VERSES
+                stanzaType: VERSES,
+                subsequent: true
             },
         ],
         [
@@ -557,7 +558,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: BRIDGE
+                stanzaType: POSTCHORUS
             }
         ],
         [
@@ -710,7 +711,8 @@ module.exports = {
             {
                 unitMap: true,
                 unitClassName: `${LEFT} ${OVERLAP}`,
-                stanzaType: VERSES
+                stanzaType: VERSES,
+                subsequent: true
             }
         ],
         [
@@ -986,7 +988,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: BRIDGE
+                stanzaType: POSTCHORUS
             }
         ],
         [
@@ -1011,7 +1013,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: BRIDGE,
+                stanzaType: POSTCHORUS,
                 subsequent: true
             }
         ],

@@ -283,7 +283,7 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
 
         } else {
             // If it's not a subsequent stanza, establish new index.
-            if (!lyric.subsequent && !lyric.unitClassName) {
+            if (!lyric.subsequent) {
                 counters[stanzaType] = (counters[stanzaType] || 0) + 1
             }
 

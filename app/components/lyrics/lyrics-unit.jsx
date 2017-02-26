@@ -131,7 +131,7 @@ const LyricsUnitView = ({
             className={`
                 lyrics-unit
                 ${isTitleUnit ? 'title-unit' : ''}
-                ${unitClassName ? `custom ${unitClassName}` : ''}
+                ${unitClassName ? `custom-sub-block ${unitClassName}` : ''}
                 ${subsequent ? 'subsequent' : ''}
             `}
         >
