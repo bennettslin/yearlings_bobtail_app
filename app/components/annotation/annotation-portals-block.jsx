@@ -1,5 +1,5 @@
 import React from 'react'
-import AnnotationCard from './annotation-card'
+// import AnnotationCard from './annotation-card'
 import TextBlock from '../text/text-block'
 
 /*************
@@ -17,7 +17,7 @@ const AnnotationPortalsBlock = (props) => (
 const AnnotationPortalsBlockView = ({
 
     // From props.
-    songs,
+    // songs,
     selectedDotKeys,
     portalLinks,
     onPortalClick,
@@ -34,10 +34,10 @@ const AnnotationPortalsBlockView = ({
                     songTitle,
                     column,
                     columnIndex,
-                    verseObject,
-                    cardObject } = portalObject,
+                    // cardObject,
+                    verseObject } = portalObject
 
-            accessHighlighted = sectionAccessHighlighted && accessedPopupAnchorIndex === portalIndex
+            // accessHighlighted = sectionAccessHighlighted && accessedPopupAnchorIndex === portalIndex
 
             return (
                 <div

@@ -36,8 +36,6 @@ const AudioButtonsView = ({
     isFirstSong,
     isLastSong,
     isEpilogue,
-    isFirstVerse,
-    isLastVerse,
     onPlayClick,
     onAudioOptionClick,
 

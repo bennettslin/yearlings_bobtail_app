@@ -7,7 +7,7 @@ module.exports = [
     {
         taskName: `Fix admin breakage.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: `Make interactive audio slider region better, and add times.`,

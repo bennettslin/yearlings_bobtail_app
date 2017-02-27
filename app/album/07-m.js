@@ -25,7 +25,7 @@ module.exports = {
                 bennett: 1,
                 jacob: 1,
                 mara: 1,
-                ana:1,
+                ana: 1,
                 hipster: 1
             }
         },

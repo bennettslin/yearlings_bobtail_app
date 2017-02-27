@@ -10,7 +10,7 @@ import { getPropsAreSame } from 'helpers/general-helper'
 
 const LyricsVerse = ({
 
-    verseBarShown,
+    // verseBarShown,
     accessedVerseIndex,
     selectedVerseIndex,
     interactivatedVerseIndex,
