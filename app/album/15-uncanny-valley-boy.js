@@ -1203,7 +1203,7 @@ module.exports = {
         },
         {
             taskName: `music annotations`,
-            workedHours: 0,
+            workedHours: 2,
             neededHours: 3
         },
         {

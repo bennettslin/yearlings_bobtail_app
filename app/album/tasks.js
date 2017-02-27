@@ -37,7 +37,7 @@ module.exports = [
 
     {
         taskName: `Interactive audio slider`,
-        workedHours: 0,
+        workedHours: 3,
         neededHours: 8
     },
 

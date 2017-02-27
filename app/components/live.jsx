@@ -118,6 +118,7 @@ const LiveView = ({
     onSongClick,
     onVerseClick,
     onPlayClick,
+    onTimeChange,
     onAudioOptionClick,
     onTipsClick,
     onOverviewClick,
@@ -178,6 +179,8 @@ const LiveView = ({
             selectedTimePlayed,
             totalTime,
             stanzaTimes,
+            onTimeChange,
+
             audioTimerChild
         },
         audioBannerChild = (
@@ -196,7 +199,6 @@ const LiveView = ({
             nextSectionKey,
             onPlayClick,
             onAudioSongClick: onSongClick,
-            onAudioTimeClick: onVerseClick,
             onTitleClick: onSongClick,
             onAudioOptionClick,
 

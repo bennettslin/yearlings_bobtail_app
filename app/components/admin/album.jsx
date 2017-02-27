@@ -56,8 +56,8 @@ const AlbumView = ({
     onSongClick,
     onVerseClick,
     onPlayClick,
-    onAudioOptionClick,
     onTimeChange,
+    onAudioOptionClick,
     onPlayerEnd,
     onTimeUpdated,
     accessedOn,
@@ -73,7 +73,9 @@ const AlbumView = ({
     const audioBannerProps = {
         // Also takes in isLogue, but not so important for admin.
         selectedSongTitle,
-        selectedTimePlayed
+        selectedTimePlayed,
+
+        onTimeChange
     }
 
     return (
@@ -93,9 +95,7 @@ const AlbumView = ({
                     nextSectionKey={nextSectionKey}
                     onPlayClick={onPlayClick}
                     onAudioSongClick={onSongClick}
-                    onAudioTimeClick={onVerseClick}
                     onAudioOptionClick={onAudioOptionClick}
-                    onTimeChange={onTimeChange}
                     onPlayerEnd={onPlayerEnd}
                     onTimeUpdated={onTimeUpdated}
                     audioBannerChild={

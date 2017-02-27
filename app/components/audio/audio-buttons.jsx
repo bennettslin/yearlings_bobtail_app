@@ -8,20 +8,15 @@ import { AUDIO_OPTIONS } from 'helpers/constants'
 const AudioButtons = ({
 
     onAudioSongClick,
-    onAudioTimeClick,
 
 ...other }) => {
 
     const onPreviousSongClick = e => onAudioSongClick(e, undefined, -1),
-        onRewindClick = e => onAudioTimeClick(e, undefined, -1),
-        onFastForwardClick = e => onAudioTimeClick(e, undefined, 1),
         onNextSongClick = e => onAudioSongClick(e, undefined, 1)
 
     return (
         <AudioButtonsView {...other}
             onPreviousSongClick={onPreviousSongClick}
-            onRewindClick={onRewindClick}
-            onFastForwardClick={onFastForwardClick}
             onNextSongClick={onNextSongClick}
         />
     )
@@ -48,8 +43,6 @@ const AudioButtonsView = ({
 
     // From controller.
     onPreviousSongClick,
-    onRewindClick,
-    onFastForwardClick,
     onNextSongClick
 
 }) => (

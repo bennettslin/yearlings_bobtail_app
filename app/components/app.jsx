@@ -1398,6 +1398,7 @@ class App extends Component {
                     onScoreClick={this.selectScore}
                     onAnnotationClick={this.selectAnnotation}
                     onOverviewClick={this.selectOverview}
+                    onTimeChange={this.selectTime}
                     onAudioOptionClick={this.selectAudioOption}
                     onPlayClick={this.togglePlay}
                     onVerseClick={this.selectVerse}
