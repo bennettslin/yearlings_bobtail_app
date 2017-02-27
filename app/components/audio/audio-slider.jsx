@@ -43,7 +43,7 @@ class AudioSliderView extends Component {
 
     handleMouseOrTouchUp(e) {
         if (this.state.isMousedOrTouched) {
-            // FIXME: Still very wonky. mouseLeave and mouseUp might need separate handlers.
+            // FIXME: Still very wonky. mouseLeave and mouseUp might need separate handlers. Does not detect mouse or touch up outside of element, so probably should have a handler on body as well.
 
             const selectedTime = this.state.mousedOrTouchedRatio * this.props.totalTime
             this.props.onTimeChange(e, selectedTime)

@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `Fix admin breakage.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Interactive audio slider`,
+        workedHours: 3,
+        neededHours: 8
+    },
+    {
         taskName: `Score should just hide, not reload upon each popup opened.`,
         workedHours: 0,
         neededHours: 2
@@ -34,13 +44,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-
-    {
-        taskName: `Interactive audio slider`,
-        workedHours: 3,
-        neededHours: 8
-    },
-
     {
         taskName: `Do not scroll after portal select until lyrics have been rendered.`,
         workedHours: 0,
