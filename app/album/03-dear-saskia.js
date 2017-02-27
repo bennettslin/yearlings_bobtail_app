@@ -72,7 +72,7 @@ module.exports = {
                                 anchor: `The Beatles`,
                                 wiki: `The_Beatles`
                             },
-                            `weaved melodies and chords progressions so seamlessly. The music here began life as a zealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for, and trotted it back out.`
+                            `weaved melodies and chords progressions so seamlessly. The music for this song began as a zealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for, and trotted it back out.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true

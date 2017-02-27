@@ -92,6 +92,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `I originally wrote this music after waking up from a horrid nightmare, but quickly abandoned it after all my attempts to describe the nightmare only elicited laughter. I revived it for this song, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
+                        dotKeys: {
+                            [OBSERVATION]: true,
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: INSTRUMENTAL
             }
         ],
@@ -204,16 +214,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: `I originally began writing this music to describe a nightmare I had, but abandoned it after I forgot what made the nightmare scary. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 stanzaType: VERSES
             }
         ],
@@ -394,6 +394,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `As silly as the original lyrics to the chorus were, I liked them enough to keep them, so I made the old lead melody the new counter melody, and vice versa. The old counter melody was meant to be played on guitar, so to make it breathable for vocals as the new lead melody, I broke it up into parts.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 topSideStanza: [
                     {
                         // TODO: In music commentary, say that counter melody was originally lead melody.
@@ -560,6 +569,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `TODO: Airbag.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: VERSES
             }
         ],

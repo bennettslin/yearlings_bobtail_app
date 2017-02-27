@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `When playing, selected verse deselects maybe half a second before next verse.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Score should just hide, not reload upon each popup opened.`,
         workedHours: 0,
         neededHours: 2
