@@ -1,13 +1,28 @@
 module.exports = [
     {
-        taskName: `Strategically use no-select`,
+        taskName: `Fix jolted movement when scrolling lyrics and verse bar shown or hidden.`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Fix admin breakage.`,
+        taskName: `Hide elements when overlay shown.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
+    },
+    {
+        taskName: `Show audio banner in overlay on phone.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Fix selecting time in audio banner dismissing overlay and breaking.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Strategically use no-select`,
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: `Make interactive audio slider region better, and add times.`,
@@ -1302,5 +1317,10 @@ module.exports = [
         taskName: `Audio slider shows stanza colours`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Fix admin breakage.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
