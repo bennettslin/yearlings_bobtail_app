@@ -1033,6 +1033,7 @@ class App extends Component {
             newState.showLyricButtons = lyricSectionTop < this.state.lyricSectionTop
         }
 
+        // FIXME: Setting isSelectedVerseAbove && isSelectedVerseBelow by itself causes the jolt. Even when no UI is changed as a result.
         this.setState(newState)
     }
 
