@@ -161,7 +161,9 @@ class App extends Component {
             isSelectedVerseAbove: false,
             isSelectedVerseBelow: false,
             selectedVerseElement: null,
-            appMounted: false
+            appMounted: false,
+
+            sliderMousedOrTouched: false
         }
     }
 
@@ -227,6 +229,8 @@ class App extends Component {
         this.handleKeyDown = this.handleKeyDown.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
         this.windowResize = this.windowResize.bind(this)
+        this._handleMouseOrTouchUpOrLeave = this._handleMouseOrTouchUpOrLeave.bind(this)
+        this._handleSliderMouseOrTouch = this._handleSliderMouseOrTouch.bind(this)
     }
 
     _assignLogFunctions() {
@@ -367,6 +371,18 @@ class App extends Component {
     /*******************
      * EVENT LISTENERS *
      *******************/
+
+    _handleMouseOrTouchUpOrLeave() {
+        this.setState({
+            sliderMousedOrTouched: false
+        })
+    }
+
+    _handleSliderMouseOrTouch() {
+        this.setState({
+            sliderMousedOrTouched: true
+        })
+    }
 
     toggleAdmin() {
         this.setState({
@@ -1359,6 +1375,8 @@ class App extends Component {
                     ${isPlaying ? ' is-playing' : ' is-paused'}
                 `}
                 onClick={this._onBodyClick}
+                onMouseUp={this._handleMouseOrTouchUpOrLeave}
+                onMouseLeave={this._handleMouseOrTouchUpOrLeave}
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"
             >
@@ -1414,6 +1432,7 @@ class App extends Component {
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onLyricSectionScroll={this.handleLyricSectionScroll}
                     onVerseBarClick={this.handleVerseBarClick}
+                    onSliderMouseOrTouch={this._handleSliderMouseOrTouch}
                 />
             </div>
         )

@@ -1,12 +1,17 @@
 module.exports = [
     {
+        taskName: `Strategically use no-select`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Fix admin breakage.`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Interactive audio slider`,
-        workedHours: 3,
+        taskName: `Make interactive audio slider region better, and add times.`,
+        workedHours: 4,
         neededHours: 8
     },
     {

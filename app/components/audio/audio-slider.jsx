@@ -18,39 +18,37 @@ class AudioSliderView extends Component {
 
         this.handleMouseOrTouchDown = this.handleMouseOrTouchDown.bind(this)
         this.handleMouseOrTouchMove = this.handleMouseOrTouchMove.bind(this)
-        this.handleMouseOrTouchUp = this.handleMouseOrTouchUp.bind(this)
 
         this.state = {
-            isMousedOrTouched: false,
             mousedOrTouchedRatio: null
         }
     }
 
+    componentWillUpdate(nextProps) {
+        if (nextProps.isMousedOrTouched === false &&
+            this.props.isMousedOrTouched === true) {
+
+            const selectedTime = this.state.mousedOrTouchedRatio * this.props.totalTime
+            this.props.onTimeChange(true, selectedTime)
+
+            this.setState({
+                mousedOrTouchedRatio: null
+            })
+        }
+    }
+
     handleMouseOrTouchDown(e) {
+        this.props.onMouseOrTouch()
+
         this.setState({
-            isMousedOrTouched: true,
             mousedOrTouchedRatio: this.getSelectedRatio(e)
         })
     }
 
     handleMouseOrTouchMove(e) {
-        if (this.state.isMousedOrTouched) {
+        if (this.props.isMousedOrTouched) {
             this.setState({
                 mousedOrTouchedRatio: this.getSelectedRatio(e)
-            })
-        }
-    }
-
-    handleMouseOrTouchUp(e) {
-        if (this.state.isMousedOrTouched) {
-            // FIXME: Still very wonky. mouseLeave and mouseUp might need separate handlers. Does not detect mouse or touch up outside of element, so probably should have a handler on body as well.
-
-            const selectedTime = this.state.mousedOrTouchedRatio * this.props.totalTime
-            this.props.onTimeChange(e, selectedTime)
-
-            this.setState({
-                isMousedOrTouched: false,
-                mousedOrTouchedRatio: null
             })
         }
     }
@@ -64,12 +62,12 @@ class AudioSliderView extends Component {
     }
 
     render() {
-        const { selectedTimePlayed,
+        const { isMousedOrTouched,
+                selectedTimePlayed,
                 stanzaTimes,
                 totalTime } = this.props,
 
-            { isMousedOrTouched,
-              mousedOrTouchedRatio } = this.state,
+            { mousedOrTouchedRatio } = this.state,
 
             playedWidth = (mousedOrTouchedRatio === null ? (selectedTimePlayed / totalTime) : mousedOrTouchedRatio) * 100,
 
@@ -105,8 +103,7 @@ class AudioSliderView extends Component {
                     className="time-bar audio-touch-bar"
                     onMouseDown={e => this.handleMouseOrTouchDown(e)}
                     onMouseMove={e => this.handleMouseOrTouchMove(e)}
-                    onMouseLeave={e => this.handleMouseOrTouchUp(e)}
-                    onMouseUp={e => this.handleMouseOrTouchUp(e)}
+
                     // onTouchCancel={e => this.logEvent(e, 'touchCancel')}
                     // onTouchEnd={e => this.logEvent(e, 'touchEnd')}
                     // onTouchMove={e => this.logEvent(e, 'touchMove')}

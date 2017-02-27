@@ -16,10 +16,12 @@ const AudioBanner = (props) => (
 const AudioBannerView = ({
 
     // From props.
+    sliderMousedOrTouched,
     selectedSongTitle,
     selectedTimePlayed,
     totalTime,
     stanzaTimes,
+    onSliderMouseOrTouch,
     onTimeChange,
 
     audioTimerChild
@@ -27,9 +29,11 @@ const AudioBannerView = ({
 }) => (
     <div className="audio-block audio-banner-block">
         <AudioSlider
+            isMousedOrTouched={sliderMousedOrTouched}
             selectedTimePlayed={selectedTimePlayed}
             totalTime={totalTime}
             stanzaTimes={stanzaTimes}
+            onMouseOrTouch={onSliderMouseOrTouch}
             onTimeChange={onTimeChange}
         />
         <div className="audio-banner audio-display-block">

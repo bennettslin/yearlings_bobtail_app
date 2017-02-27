@@ -101,6 +101,7 @@ const LiveView = ({
     lyricsStartAtZero,
     hiddenLyricColumnKey,
 
+    sliderMousedOrTouched,
     showLyricButtons,
     showSingleLyricColumn,
     isLyricExpanded,
@@ -138,6 +139,7 @@ const LiveView = ({
     onLyricSectionScroll,
     onVerseBarClick,
     onInteractivatedVerseClick,
+    onSliderMouseOrTouch,
 
     // From controller.
     overviewText,
@@ -175,10 +177,12 @@ const LiveView = ({
             <AudioTimer {...audioTimerProps} />
         ),
         audioBannerProps = {
+            sliderMousedOrTouched,
             selectedSongTitle,
             selectedTimePlayed,
             totalTime,
             stanzaTimes,
+            onSliderMouseOrTouch,
             onTimeChange,
 
             audioTimerChild
