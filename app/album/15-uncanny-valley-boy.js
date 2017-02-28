@@ -95,7 +95,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `I originally wrote this music after waking up from a horrid nightmare, but quickly abandoned it after all my attempts to describe the nightmare only elicited laughter. I revived it for this song, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
+                        description: `I originally began writing this song after waking from a horrid nightmare, but abandoned it after all my attempts to describe the nightmare only elicited laughter. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                             [SONGWRITING]: true
@@ -397,8 +397,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        // TODO: Articulate better.
-                        description: `As silly as the original lyrics to the chorus were, I liked them enough to keep them, so I made the old lead melody the new counter melody, and vice versa. The old counter melody was meant to be played on guitar, so to make it breathable for vocals as the new lead melody, I broke it up into parts.`,
+                        description: `As silly as the original lyrics to the chorus were, I liked them enough to keep them, so I simply made the former lead melody the new counter melody, and vice versa. The new lead melody was originally written for guitar, which may be evident as it's a bit strenuous for vocals.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -406,7 +405,6 @@ module.exports = {
                 },
                 topSideStanza: [
                     {
-                        // TODO: In music commentary, say that counter melody was originally lead melody.
                         lyric: `Oh, bastard ingrate!`
                     },
                     {
@@ -1139,7 +1137,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `To record the subtle shift from "Rama" to "Mara," I made a click track whose tempo sums up to one fewer eighth note after seven measures. I then overlaid multiple tracks in which I quietly took a breath at different points.`,
+                        description: `To record the gradual shift from "Rama" to "Mara," I made a click track whose tempo sums up to one fewer eighth note after seven measures. I then overlaid multiple tracks in which I quietly took a breath at different points.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -1211,11 +1209,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `music annotations`,
-            workedHours: 3,
-            neededHours: 4
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -1254,6 +1247,11 @@ module.exports = {
             taskName: `review synopses and rough illustrations`,
             workedHours: 3,
             neededHours: 3
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 4,
+            neededHours: 4
         }
     ]
 }
