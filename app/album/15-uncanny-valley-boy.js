@@ -397,6 +397,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
+                        // TODO: Articulate better.
                         description: `As silly as the original lyrics to the chorus were, I liked them enough to keep them, so I made the old lead melody the new counter melody, and vice versa. The old counter melody was meant to be played on guitar, so to make it breathable for vocals as the new lead melody, I broke it up into parts.`,
                         dotKeys: {
                             [SONGWRITING]: true
@@ -572,7 +573,14 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `TODO: Airbag.`,
+                        description: [
+                            `I wanted to recreate the tremolo effect used by guitarist Jonny Greenwood on the song "Airbag" from Radiohead's`,
+                            {
+                                anchor: `OK Computer.`,
+                                wiki: `OK_Computer`
+                            },
+                            `So I recorded several takes of steady eighth notes on the banjo, with each take offset just a little further, to create the impression of tremolo picking on a single instrument. Only in the last few measures do they separate in the balance, like a rope fraying at its end.`
+                        ],
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -906,7 +914,8 @@ module.exports = {
                     }
                 ],
                 stanzaType: PRECHORUS,
-                substanzaType: RESPONSE
+                substanzaType: RESPONSE,
+                subsequent: true
             }
         ],
         [
@@ -1203,8 +1212,8 @@ module.exports = {
         },
         {
             taskName: `music annotations`,
-            workedHours: 2,
-            neededHours: 3
+            workedHours: 3,
+            neededHours: 4
         },
         {
             taskName: `sort out past and present tense`,

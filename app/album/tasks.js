@@ -25,7 +25,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Make interactive audio slider region better, and add times.`,
+        taskName: `Make interactive audio slider region better, and add times, and fix wonkiness.`,
         workedHours: 4,
         neededHours: 8
     },
