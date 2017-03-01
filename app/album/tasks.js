@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Method to assemble characters by actors, backdrops, stageProps.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Fix jolted movement when scrolling lyrics and verse bar shown or hidden.`,
         workedHours: 0,
         neededHours: 1
