@@ -23,56 +23,42 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: `Bennett and Christopher are fighting. Mother is barging into the room, angry and breaking up the fight.`,
+            description: `Bennett and Christopher are under his bunk bed. Christopher is injured, but and happily playing. Bennett looks guilty.`,
             characters: {
                 preteenBennett: 1,
-                christopher: 1,
-                mother: 1
+                christopher: 1
             }
         },
         {
             verseIndex: 14,
-            description: `Bennett is getting harassed by two bullies.`,
+            description: `Bennett is at home in bed, pretending to be sick. He is stuffing money from red pouches into a postage envelope. In the window, the schoolbus is driving off, leaving him behind. The bullies are visible through the schoolbus windows, laughing at him.`,
+            characters: {
+                preteenBennett: 1
+            }
+        },
+        {
+            verseIndex: 32,
+            description: `Bennett is at his desk, reading a letter and crying. In his thought bubble, he is standing alone on Earth, looking up into space.`,
+            characters: {
+                preteenBennett: 1
+            }
+        },
+        {
+            verseIndex: 41,
+            description: `Bennett is sitting on the grass by himself, away from the lunch crowd. The two bullies have been throwing rocks at him, trying to rile him up, but to no avail. One looks confused, the other is suggesting that they should leave.`,
             characters: {
                 preteenBennett: 1,
                 bullies: 2
             }
         },
         {
-            verseIndex: 22,
-            description: `Bennett is at home, slipping money into an envelope, while Christopher is plays on the floor. In the background is a Soviet recruitment poster, showing dogs enlisting to become space explorers.`,
+            verseIndex: 54,
+            description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is chewing out the principal..`,
             characters: {
-                preteenBennett: 1,
-                sovietPoster: 1
-            }
-        },
-        {
-            verseIndex: 32,
-            description: `Bennett is on the floor alongside Christopher. He is reading a letter and crying. In his thoughts are a sequence of a baby in space born away from Earth, and Bennett on Earth, looking up into space.`,
-            characters: {
-                preteenBennett: 1,
-                christopher: 1,
-                thoughtBubbles: 3
-            }
-        },
-        {
-            verseIndex: 50,
-            description: `Bennett is eating lunch by himself, sadly watching the other kids hanging out and having fun. In the background is propaganda news footage of the spacecraft exploding.`,
-            characters: {
-                preteenBennett: 1,
-                otherKids: 3,
-                sovietPoster: 1
-            }
-        },
-        {
-            verseIndex: 60,
-            description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is clearly chewing out the principal. On the wall is a propaganda poster showing two space dogs as martyrs.`,
-            characters: {
-                preteenBennett: 1,
+                pretenBennett: 1,
                 christopher: 1,
                 mother: 1,
-                principal: 1,
-                sovietPoster: 1
+                principal: 1
             }
         }
     ],
@@ -1192,11 +1178,6 @@ module.exports = {
             neededHours: 3
         },
         {
-            taskName: `review synopses and rough illustrations`,
-            workedHours: 0,
-            neededHours: 3,
-        },
-        {
             taskName: `annotations`,
             workedHours: 40,
             neededHours: 40
@@ -1218,6 +1199,11 @@ module.exports = {
         },
         {
             taskName: `rough illustration synopses`,
+            workedHours: 3,
+            neededHours: 3
+        },
+        {
+            taskName: `review synopses and rough illustrations`,
             workedHours: 3,
             neededHours: 3
         }

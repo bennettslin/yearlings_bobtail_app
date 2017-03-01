@@ -960,6 +960,7 @@ module.exports = {
                         // TODO: Specify needle for sewing.
                         anchor: `needle done,`,
                         annotation: {
+                            description: ``,
                             portal: `needle_done`
                         }
                     },
