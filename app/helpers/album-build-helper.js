@@ -24,7 +24,7 @@ const _tempStore = {
     _largestStanzaTimesLength: 0,
     _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
-    _drawingCharacters: {},
+    _drawings: {},
     _firstRightAnnotationIndexOfVerse: 0,
     _finalAnnotationIndex: 0,
     _hasSideStanzas: false,
@@ -40,8 +40,8 @@ export const prepareAlbumData = (album = {}) => {
 
     _finalPrepareAllSongs(album)
 
-    // Add drawing characters for admin purposes.
-    album.drawingCharacters = parseDrawings(_tempStore._drawingCharacters)
+    // Add drawings for admin purposes.
+    album.drawings = finaliseDrawings(_tempStore._drawings)
 
     // FIXME: Temporarily add portal links to album for debugging purposes.
     album.portalLinks = _tempStore._portalLinks
@@ -121,7 +121,7 @@ const _initialPrepareAllSongs = (album) => {
             song.dotStanzas = _tempStore._dotStanzaCounter
         }
 
-        _gatherDrawings(song.scenes)
+        _gatherDrawings(song.scenes, songIndex)
     })
 }
 
@@ -138,7 +138,6 @@ const _finalPrepareAllSongs = (album) => {
 
             _parseLyrics(song.lyrics, true)
             _registerFirstAndLastVerseObjects(song.lyrics)
-
 
             // Not needed after stanza is told its index.
             delete song.stanzaTypeCounters
@@ -167,38 +166,92 @@ const _expandStanzaTimes = (song) => {
     }
 }
 
-const _gatherDrawings = (scenes) => {
-    scenes.forEach(scene => {
-        for (const key in scene.characters) {
-            if (_tempStore._drawingCharacters[key]) {
-                _tempStore._drawingCharacters[key] += scene.characters[key]
-            } else {
-                _tempStore._drawingCharacters[key] = scene.characters[key]
+const _gatherDrawings = (scenes, songIndex) => {
+    const drawingTypes = ['actors', 'backdrops', 'stageProps']
+
+    scenes.forEach((scene, sceneIndex) => {
+        drawingTypes.forEach(drawingType => {
+
+            // Initialise object for actors, backdrops, stageProps.
+            if (!_tempStore._drawings[drawingType]) {
+                _tempStore._drawings[drawingType] = {}
             }
-        }
+
+            for (const key in scene[drawingType]) {
+
+                const keyObject = {
+                    songIndex,
+                    sceneIndex: sceneIndex + 1
+                }
+
+                // Initialise array for each actor, backdrop, stageProp.
+                if (!_tempStore._drawings[drawingType][key]) {
+                    _tempStore._drawings[drawingType][key] = []
+                }
+
+                if (drawingType === 'actors') {
+
+                    // There will always be only one key per actor.
+                    const character = Object.keys(scene[drawingType][key])[0],
+                    description = scene[drawingType][key][character]
+
+                    keyObject.character = character
+                    keyObject.description = description
+
+                } else {
+                    keyObject.description = scene[drawingType][key]
+                }
+
+                _tempStore._drawings[drawingType][key].push(keyObject)
+            }
+        })
+
     })
 }
 
-const parseDrawings = (drawingCharacters) => {
-    const drawingCharacterObjects = []
+const finaliseDrawings = (drawings) => {
 
-    let characterCount = 0
+    // Turn actors object into array for easier frontend parsing.
+    const actors = []
+    let actorsCount = 0
 
-    for (const character in drawingCharacters) {
-        const quantity = drawingCharacters[character]
+    Object.keys(drawings.actors).forEach(actor => {
+        const roles = drawings.actors[actor],
+            roleCount = roles.length
 
-        drawingCharacterObjects.push({
-            character,
-            quantity
+        actorsCount += roleCount
+
+        actors.push({
+            actor,
+            roles,
+            roleCount
         })
+    })
 
-        characterCount += quantity
-    }
+    drawings.actors = actors
+    drawings.actorsCount = actorsCount
 
-    // Last item in array is the character count.
-    drawingCharacterObjects.push(characterCount)
+    return drawings
 
-    return drawingCharacterObjects
+    // const drawingCharacterObjects = []
+    //
+    // let characterCount = 0
+    //
+    // for (const character in drawings) {
+    //     const quantity = drawings[character]
+    //
+    //     drawingCharacterObjects.push({
+    //         character,
+    //         quantity
+    //     })
+    //
+    //     characterCount += quantity
+    // }
+    //
+    // // Last item in array is the character count.
+    // drawingCharacterObjects.push(characterCount)
+    //
+    // return drawingCharacterObjects
 }
 
 const _addTitleToLyrics = (title, lyrics) => {

@@ -17,6 +17,18 @@ module.exports = {
             description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`,
             characters: {
                 willy: 1
+            },
+            actors: {
+                bennett: {
+                    bennett: 'doing his thing test'
+                }
+            },
+            backdrops: {
+                foreground: 'front description',
+                background: 'back description 1'
+            },
+            stageProps: {
+                couch: 1
             }
         },
         {

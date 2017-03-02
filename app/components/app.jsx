@@ -127,7 +127,7 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            isAdmin: false,
+            isAdmin: true,
             isPlaying: false,
 
             popupAnnotationIndex: props.selectedAnnotationIndex,
@@ -234,6 +234,7 @@ class App extends Component {
     }
 
     _assignLogFunctions() {
+        window.d = LogHelper.logDrawings.bind(LogHelper, this)
         window.t = LogHelper.logStorage.bind(LogHelper)
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)

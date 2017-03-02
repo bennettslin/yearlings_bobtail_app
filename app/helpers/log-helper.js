@@ -28,6 +28,10 @@ export default {
         return this._logObject('selected song', copiedSong)
     },
 
+    logDrawings({ props }) {
+        return this._logObject('drawings', props.drawings)
+    },
+
     logAnnotationsDotKeys({ props }) {
         const annotationsDotKeys = getAnnotationsDotKeys(props)
         return this._logObject('annotations', annotationsDotKeys)

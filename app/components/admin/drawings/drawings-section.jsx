@@ -15,15 +15,15 @@ const DrawingsSection = (props) => (
 const DrawingsSectionView = ({
 
     // From props.
-    drawingCharacters
+    drawings
 
 }) => (
     <div className="section drawings-section">
         <h2>drawings</h2>
-        {drawingCharacters.map((drawing, index) => {
+        {false && drawings.map((drawing, index) => {
 
             // Last item in array is the character count.
-            const isLastItem = index === drawingCharacters.length - 1,
+            const isLastItem = index === drawings.length - 1,
                 text = isLastItem ? drawing : `${drawing.character}: ${drawing.quantity}`
 
             return (
@@ -35,6 +35,29 @@ const DrawingsSectionView = ({
                 </div>
             )
         })}
+        <h3>actors</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>actor</th>
+                    <th>song</th>
+                    <th>scene</th>
+                    <th>description</th>
+                </tr>
+            </thead>
+            <tbody>
+            {/* {
+                drawings.actors.map((actor, index) => {
+                    return (
+                        <tr key={index}>
+                            <td>{actor}</td>
+                        </tr>
+                    )
+                })
+            } */}
+            </tbody>
+
+        </table>
     </div>
 )
 

@@ -22,7 +22,20 @@ module.exports = {
         {
             verseIndex: 6,
             description: `On a page from a Chinese language workbook, Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
-            characters: {}
+            characters: {},
+
+            actors: {
+                bennett: {
+                    bennett: 'doing his thing test'
+                }
+            },
+            backdrops: {
+                foreground: 'front description',
+                background: 'back description 2'
+            },
+            stageProps: {
+                thing: 1
+            }
         },
         {
             verseIndex: 13,
