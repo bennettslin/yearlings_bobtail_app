@@ -4,9 +4,20 @@ import React from 'react'
  * CONTAINER *
  *************/
 
-const DrawingsSection = (props) => (
-    <DrawingsSectionView {...props} />
-)
+const DrawingsSection = ({
+
+    drawings
+
+}) => {
+
+    const { actors } = drawings
+
+    return (
+        <DrawingsSectionView
+            actors={actors}
+        />
+    )
+}
 
 /****************
  * PRESENTATION *
@@ -14,8 +25,8 @@ const DrawingsSection = (props) => (
 
 const DrawingsSectionView = ({
 
-    // From props.
-    drawings
+    // From controller.
+    actors
 
 }) => (
     <div className="section drawings-section">
@@ -36,28 +47,51 @@ const DrawingsSectionView = ({
             )
         })}
         <h3>actors</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>actor</th>
-                    <th>song</th>
-                    <th>scene</th>
-                    <th>description</th>
-                </tr>
-            </thead>
-            <tbody>
-            {/* {
-                drawings.actors.map((actor, index) => {
-                    return (
-                        <tr key={index}>
-                            <td>{actor}</td>
-                        </tr>
-                    )
-                })
-            } */}
-            </tbody>
+        <div className="actors-table">
+            <div className="actors-header-row header-row flex-row">
+                <div className="actors-header character-column">role</div>
+                <div className="actors-header song-index-column">song</div>
+                <div className="actors-header scene-index-column">scene</div>
+                <div className="actors-header description-index-column">description</div>
+            </div>
+            <div className="actors-row">
+                {actors.map((actorObject, actorIndex) => {
+                    const { actor,
+                            roles } = actorObject
 
-        </table>
+                    return (
+                        <div
+                            key={actorIndex}
+                            className="actor-row"
+                        >
+                            <div className="actor-header-row header-row">
+                                {actor}
+                            </div>
+                            <div className="actor-info-row">
+                                {roles.map((roleObject, roleIndex) => {
+                                    const { character,
+                                            songIndex,
+                                            sceneIndex,
+                                            description } = roleObject
+
+                                    return (
+                                        <div
+                                            key={roleIndex}
+                                            className="role-info-row flex-row"
+                                        >
+                                            <div className="role-info character-column">{character}</div>
+                                            <div className="role-info song-index-column">{songIndex}</div>
+                                            <div className="role-info scene-index-column">{sceneIndex}</div>
+                                            <div className="role-info description-index-column">{description}</div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
     </div>
 )
 
