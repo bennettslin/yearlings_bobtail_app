@@ -10,14 +10,8 @@ const DrawingsSection = ({
 
 }) => {
 
-    const { actors,
-            actorsCount } = drawings
-
     return (
-        <DrawingsSectionView
-            actors={actors}
-            actorsCount={actorsCount}
-        />
+        <DrawingsSectionView {...drawings} />
     )
 }
 
@@ -29,7 +23,8 @@ const DrawingsSectionView = ({
 
     // From controller.
     actors,
-    actorsCount
+    actorsTodoCount,
+    actorsTotalCount
 
 }) => (
     <div className="section drawings-section">
@@ -40,7 +35,8 @@ const DrawingsSectionView = ({
                 {actors.map((actorObject, actorIndex) => {
                     const { actor,
                             characters,
-                            rolesCount } = actorObject
+                            rolesTodoCount,
+                            rolesTotalCount } = actorObject
 
                     return (
                         <div
@@ -64,12 +60,13 @@ const DrawingsSectionView = ({
                                                 {characters[characterName].map((character, index) => {
                                                     const { songIndex,
                                                         sceneIndex,
-                                                        description } = character
+                                                        description,
+                                                        todo } = character
 
                                                     return (
                                                         <div
                                                             key={index}
-                                                            className="role-row flex-row"
+                                                            className={`role-row flex-row ${todo ? 'todo' : 'done'}`}
                                                         >
                                                             <div className="role-info song-index-column">{songIndex}</div>
                                                             <div className="role-info scene-index-column">{sceneIndex}</div>
@@ -83,13 +80,13 @@ const DrawingsSectionView = ({
                                 })}
                             </div>
                             <div className="roles-count-row count-row">
-                                total roles: {rolesCount}
+                                roles: {rolesTotalCount - rolesTodoCount} / {rolesTotalCount}
                             </div>
                         </div>
                     )
                 })}
                 <div className="actors-count-row count-row">
-                    total roles for all actors: {actorsCount}
+                    actors: {actorsTotalCount - actorsTodoCount} / {actorsTotalCount}
                 </div>
             </div>
         </div>

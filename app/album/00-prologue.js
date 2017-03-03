@@ -6,7 +6,10 @@ module.exports = {
             verseIndex: 0,
             description: `Old Bennett is standing onstage, addressing the audience.`,
             actors: {
-                oldBennett: 1
+                oldBennett: {
+                    todo: true,
+                    description: 'standing, facing forward, welcoming'
+                }
             }
         }
     ],

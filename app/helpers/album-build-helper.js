@@ -196,15 +196,15 @@ const _gatherDrawings = (scenes, songIndex) => {
                      * string. If not, the entry will be an object.
                      */
                     const characterEntry = scene[drawingType][key],
-                        entryIsObject = typeof characterEntry === 'object',
+                        entryIsObject = typeof characterEntry === 'object' && !characterEntry.description,
                         character = entryIsObject ? Object.keys(characterEntry)[0] : key,
-                        description = entryIsObject ? characterEntry[character] : characterEntry
+                        descriptionObject = entryIsObject ? characterEntry[character].description : characterEntry
 
                     keyObject.character = character
-                    keyObject.description = description
+                    keyObject.descriptionObject = descriptionObject
 
                 } else {
-                    keyObject.description = scene[drawingType][key]
+                    keyObject.descriptionObject = scene[drawingType][key]
                 }
 
                 _tempStore._drawings[drawingType][key].push(keyObject)
@@ -218,42 +218,56 @@ const finaliseDrawings = (drawings) => {
 
     // Turn actors object into array for easier frontend parsing.
     const actors = []
-    let actorsCount = 0
+    let actorsTotalCount = 0,
+        actorsTodoCount = 0
 
     Object.keys(drawings.actors).forEach(actor => {
         const roles = drawings.actors[actor],
-            rolesCount = roles.length,
+            rolesTotalCount = roles.length,
             characters = {}
+
+        let rolesTodoCount = 0
 
         roles.forEach(role => {
 
             const { songIndex,
                     sceneIndex,
-                    description } = role
+                    descriptionObject } = role,
+                roleObject = { songIndex,
+                               sceneIndex }
+
+            // This will eventually always be an object.
+            if (typeof descriptionObject === 'object') {
+                roleObject.todo = descriptionObject.todo
+                roleObject.description = descriptionObject.description
+
+                if (roleObject.todo) {
+                    rolesTodoCount++
+                }
+            }
 
             // Initialise array for each character.
             if (!characters[role.character]) {
                 characters[role.character] = []
             }
 
-            characters[role.character].push({
-                songIndex,
-                sceneIndex,
-                description
-            })
+            characters[role.character].push(roleObject)
         })
 
-        actorsCount += rolesCount
+        actorsTodoCount += rolesTodoCount
+        actorsTotalCount += rolesTotalCount
 
         actors.push({
             actor,
             characters,
-            rolesCount
+            rolesTodoCount,
+            rolesTotalCount
         })
     })
 
     drawings.actors = actors
-    drawings.actorsCount = actorsCount
+    drawings.actorsTodoCount = actorsTodoCount
+    drawings.actorsTotalCount = actorsTotalCount
 
     return drawings
 }
