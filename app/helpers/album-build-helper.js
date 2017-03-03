@@ -191,7 +191,6 @@ const _gatherDrawings = (scenes, songIndex) => {
 
                 if (drawingType === 'actors') {
 
-                    // There will always be only one key per actor.
                     const character = Object.keys(scene[drawingType][key])[0],
                     description = scene[drawingType][key][character]
 
@@ -217,14 +216,33 @@ const finaliseDrawings = (drawings) => {
 
     Object.keys(drawings.actors).forEach(actor => {
         const roles = drawings.actors[actor],
-            roleCount = roles.length
+            rolesCount = roles.length,
+            characters = {}
 
-        actorsCount += roleCount
+        roles.forEach(role => {
+
+            const { songIndex,
+                    sceneIndex,
+                    description } = role
+
+            // Initialise array for each character.
+            if (!characters[role.character]) {
+                characters[role.character] = []
+            }
+
+            characters[role.character].push({
+                songIndex,
+                sceneIndex,
+                description
+            })
+        })
+
+        actorsCount += rolesCount
 
         actors.push({
             actor,
-            roles,
-            roleCount
+            characters,
+            rolesCount
         })
     })
 
@@ -232,26 +250,6 @@ const finaliseDrawings = (drawings) => {
     drawings.actorsCount = actorsCount
 
     return drawings
-
-    // const drawingCharacterObjects = []
-    //
-    // let characterCount = 0
-    //
-    // for (const character in drawings) {
-    //     const quantity = drawings[character]
-    //
-    //     drawingCharacterObjects.push({
-    //         character,
-    //         quantity
-    //     })
-    //
-    //     characterCount += quantity
-    // }
-    //
-    // // Last item in array is the character count.
-    // drawingCharacterObjects.push(characterCount)
-    //
-    // return drawingCharacterObjects
 }
 
 const _addTitleToLyrics = (title, lyrics) => {
