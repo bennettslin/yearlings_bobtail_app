@@ -5,7 +5,7 @@ module.exports = {
         {
             verseIndex: 0,
             description: `Old Bennett is standing onstage, addressing the audience.`,
-            characters: {
+            actors: {
                 oldBennett: 1
             }
         }

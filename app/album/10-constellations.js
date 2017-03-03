@@ -27,7 +27,7 @@ module.exports = {
         {
             verseIndex: 0,
             description: `The gang is at Walgreens, picking out cough syrup.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 ana: 1,
                 howie: 1,
@@ -37,7 +37,7 @@ module.exports = {
         {
             verseIndex: 9,
             description: `The gang is wandering through the steam tunnels. Bennett is blathering, Howie is half paying attention. Tomer and Ana are play fighting.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 ana: 1,
                 howie: 1,
@@ -47,7 +47,7 @@ module.exports = {
         {
             verseIndex: 19,
             description: `The gang is at the cemetery, standing over Adam's grave. Tomer is kneeling and pouring a bottle of water over the gravestone. Bennett is. Howie and Ana `,
-            characters: {
+            actors: {
                 bennett: 1,
                 ana: 1,
                 howie: 1,
@@ -57,7 +57,7 @@ module.exports = {
         {
             verseIndex: 26,
             description: `The gang is driving in a car. Bennett is sitting in the back with his eyes closed. He pictures himself and Sita as a mastodon and a sabre-tooth tiger, and his brother and sister as Loki and Freyja.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 ana: 1,
                 howie: 1,
@@ -67,7 +67,7 @@ module.exports = {
         {
             verseIndex: 34,
             description: `Bennett is in the attic, huddled under a blanket on a couch, lit up by an old television facing away from the audience. Howie is downstairs, in anguish, clutching at his head.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 howie: 1
             }

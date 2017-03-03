@@ -38,14 +38,14 @@ module.exports = {
         {
             verseIndex: 0,
             description: `Bennett is in a cafeteria dishroom, reading a novel while dishes gradually pile up. He eyes a lancing device on a tray.`,
-            characters: {
+            actors: {
                 bennett: 1
             }
         },
         {
             verseIndex: 9,
             description: `Same scene. Sita is asking for the lancing device. Bennett hands it to her, but simultaneously is asking her out on a date.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -53,7 +53,7 @@ module.exports = {
         {
             verseIndex: 14,
             description: `Bennett is walking home from work, looking dejected. In his thought bubble, he is remembering the night that he walked home from the date with Sita. A jogger passes by.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 jogger: 1
             }
@@ -61,7 +61,7 @@ module.exports = {
         {
             verseIndex: 20,
             description: `Same scene. As he begins to enter the front gate, he notices that Sita is standing several feet behind him.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -69,7 +69,7 @@ module.exports = {
         {
             verseIndex: 27,
             description: `Bennett's apartment is dark inside. Through a window, we see him opening the gate for Sita to pass through. She takes his arm.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -77,7 +77,7 @@ module.exports = {
         {
             verseIndex: 33,
             description: `Same scene. Bennett and Sita have now entered the apartment. Bennett has turned on a light switch. On his bed is a jar of Vaseline, along with sketches to which he has clearly been masturbating.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -85,14 +85,14 @@ module.exports = {
         {
             verseIndex: 37,
             description: `In an emergency room, Bennett is sitting in an armchair with his arm around Sita's purse. In his thought bubbles, he imagines the scenes of his burgeoning friendship with Sita.`,
-            characters: {
+            actors: {
                 bennett: 1
             }
         },
         {
             verseIndex: 43,
             description: `Same scene. Sita has come to get her purse, and is waking Bennett up.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -100,7 +100,7 @@ module.exports = {
         {
             verseIndex: 46,
             description: `Bennett and Sita are both naked in bed. Sita is lying down, while Bennett hovers over her, a look of uncertainty on his face.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -108,7 +108,7 @@ module.exports = {
         {
             verseIndex: 53,
             description: `Same scene. `,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -116,7 +116,7 @@ module.exports = {
         {
             verseIndex: 59,
             description: `Same scene. Bennett and Sita are together in bed, having just had sex, a look that is a mixture of serenity and uncertainty on both their faces.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }

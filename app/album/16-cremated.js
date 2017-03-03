@@ -15,7 +15,7 @@ module.exports = {
         {
             verseIndex: 0,
             description: `Bennett and Miriam are having sex in a car overlooking a cliff. Miriam is on top.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 miriam: 1
             }
@@ -23,7 +23,7 @@ module.exports = {
         {
             verseIndex: 10,
             description: `Miriam is now giving Bennett a blowjob. Meanwhile, they are both thinking a thought bubble in which they are now married. He is drunk, and their child is autistic.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 miriam: 1
             }
@@ -31,7 +31,7 @@ module.exports = {
         {
             verseIndex: 17,
             description: `In a thought bubble, Bennett is dying in a hospital bed next to a record player. In another thought bubble, Miriam is playing tennis with her new boyfriend.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 miriam: 1,
                 miriamBoyfriend: 1
@@ -40,7 +40,7 @@ module.exports = {
         {
             verseIndex: 23,
             description: `They drive away. Bennett, with his seat back, hesitantly drops the used condom on the ground, looking at it wistfully. Miriam is looking away, backing up the car.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 miriam: 1
             }

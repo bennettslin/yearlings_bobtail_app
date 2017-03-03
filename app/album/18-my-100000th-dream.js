@@ -14,7 +14,7 @@ module.exports = {
         {
             verseIndex: 0,
             description: `Bennett runs into Sita, who happens to be walking out of an El Torito restaurant, having finished her shift.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -22,7 +22,7 @@ module.exports = {
         {
             verseIndex: 7,
             description: `Bennett and Sita are dancing on the pampas with some gopis.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1,
                 gopis: 3
@@ -31,7 +31,7 @@ module.exports = {
         {
             verseIndex: 17,
             description: `In the background is an Indian wedding. Bennett is confused, because the bride appears to be Sita. But his Sita keeps dragging him forward, insistently.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -39,7 +39,7 @@ module.exports = {
         {
             verseIndex: 23,
             description: `Sita and Bennett are at the edge of a cliff. Bennett is frightened. Sita is gesturing towards the edge.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -47,7 +47,7 @@ module.exports = {
         {
             verseIndex: 28,
             description: `The whole thing turns out to have been a dream. Bennett is in bed, old and decrepit. A thought bubble shows the previous scene, with Bennett now accepting his fate, and Sita comforting him.`,
-            characters: {
+            actors: {
                 bennett: 1
             }
         }

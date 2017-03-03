@@ -40,7 +40,7 @@ module.exports = {
             verseIndex: 0,
             scene: 1,
             description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
-            characters: {
+            actors: {
                 youngAnita: 1,
                 youngBennett: 1
             }
@@ -49,7 +49,7 @@ module.exports = {
             verseIndex: 9,
             scene: 2,
             description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells her friends about this. Anita overhears and looks upset.`,
-            characters: {
+            actors: {
                 youngAnita: 1,
                 youngBennett: 1,
                 youngGirl: 1,
@@ -60,7 +60,7 @@ module.exports = {
             verseIndex: 15,
             scene: 3,
             description: `Bennett is soaking in a bathtub at home, looking downcast. A window shows that it is midday outside.`,
-            characters: {
+            actors: {
                 youngBennett: 1
             }
         },
@@ -68,7 +68,7 @@ module.exports = {
             verseIndex: 25,
             scene: 4,
             description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
-            characters: {
+            actors: {
                 youngAnita: 1,
                 youngBennett: 1
             }

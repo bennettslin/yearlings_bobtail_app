@@ -22,28 +22,28 @@ module.exports = {
         {
             verseIndex: 0,
             description: `Bennett is lying on a mat on the floor. In the distance, he sees himself creeping out of the house in pitch darkness. Papers are strewn where he walked.`,
-            characters: {
+            actors: {
                 bennett: 1
             }
         },
         {
             verseIndex: 13,
             description: `Bennett is stepping through the front gate. He sees himself in a rickshaw, driving away. The rickshaw leaves a trail.`,
-            characters: {
+            actors: {
                 bennett: 1
             }
         },
         {
             verseIndex: 22,
             description: `Bennett is standing on the shore. He sees himself in the water, on a buoy. Footprints lead into the water.`,
-            characters: {
+            actors: {
                 bennett: 1
             }
         },
         {
             verseIndex: 38,
             description: `Bennett sits on the shore gazing at the Odin. Further ahead, another Bennett is making his bed on the beach. Footprints lead up to him.`,
-            characters: {
+            actors: {
                 bennett: 1
             }
         }

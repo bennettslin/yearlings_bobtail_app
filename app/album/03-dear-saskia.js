@@ -15,14 +15,14 @@ module.exports = {
         {
             verseIndex: 0,
             description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
-            characters: {
+            actors: {
 
             }
         },
         {
             verseIndex: 6,
             description: `On a page from a Chinese language workbook, Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
-            characters: {},
+            actors: {},
 
             actors: {
                 bennett: {
@@ -40,7 +40,7 @@ module.exports = {
         {
             verseIndex: 13,
             description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated next to her who is wearing a yarmulke.`,
-            characters: {
+            actors: {
                 preteenBennett: 1,
                 sasha: 1,
                 jewishBoy: 1
@@ -49,7 +49,7 @@ module.exports = {
         {
             verseIndex: 22,
             description: `In Bennett's thought bubble, he is being tied to a tetherball pole by two bullies. Sasha is yelling at them, telling them to untie Bennett and to leave him alone. Bennett looks physically roughed up, and emotionally mortified.`,
-            characters: {
+            actors: {
                 preteenBennett: 1,
                 sasha: 1,
                 bullies: 2
@@ -58,7 +58,7 @@ module.exports = {
         {
             verseIndex: 33,
             description: `In Bennett's thought bubble, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
-            characters: {}
+            actors: {}
         }
     ],
     tip: {

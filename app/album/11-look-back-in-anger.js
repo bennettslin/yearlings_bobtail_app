@@ -23,7 +23,7 @@ module.exports = {
         {
             verseIndex: 0,
             description: `Bennett is onstage performing with his band, a speech bubble showing the scene of Sita rejecting him. A redheaded woman is arriving late, and making her way through the crowd.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 audienceMembers: 3,
                 redhead: 1,
@@ -33,7 +33,7 @@ module.exports = {
         {
             verseIndex: 12,
             description: `After the show, Bennett is breaking down the set. Another band is setting up. The redhead has introduced herself to Bennett, and is flirting with him.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 redhead: 1,
                 jacob: 1,
@@ -43,7 +43,7 @@ module.exports = {
         {
             verseIndex: 23,
             description: `At the end of the show, Bennett and his bandmates are loading their equipment into their van. The redhead and her friends are looking in his direction, but Bennett walks by them.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 ana: 1,
                 mara: 1,
@@ -54,7 +54,7 @@ module.exports = {
         {
             verseIndex: 34,
             description: `Bennett is back home, sitting on the edge of Sita's bed. Sita is half asleep, looking peaceful, and is reaching towards him. He does not respond. In his thought bubble, he is reaching for the redhead, who is in bed in place of Sita.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }

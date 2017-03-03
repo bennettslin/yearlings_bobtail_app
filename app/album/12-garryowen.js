@@ -21,7 +21,7 @@ module.exports = {
         {
             verseIndex: 0,
             description: `Bennett is putting on his jacket to leave Sita's house. Sita is in her nightgown, begging him to stay.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -29,7 +29,7 @@ module.exports = {
         {
             verseIndex: 8,
             description: `Tristan and another crust punk are smashing a car window. Ana is laughing at them. Bennett is sorting through the meat packages in his jacket.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 tristan: 1,
                 ana: 1,
@@ -39,7 +39,7 @@ module.exports = {
         {
             verseIndex: 18,
             description: `Bennett and Sita are on the couch. Bennett is drunk, with a guitar in his lap, writing a song. Sita is naked and has taken his right hand and placed it on her breast, but he is unresponsive`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -47,7 +47,7 @@ module.exports = {
         {
             verseIndex: 25,
             description: `Bennett has just finished playing a show. Tristan introduces his kid sister Miriam, who is dressed more preppie, while giving her a noogie. Ana is removing her bass, rolling her eyes, as Bennett is clearly smitten.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 miriam: 1,
                 tristan: 1,
@@ -57,7 +57,7 @@ module.exports = {
         {
             verseIndex: 35,
             description: `Bennett is leaving Sita. She is crumbled on the floor, desperately begging him to stayc.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }

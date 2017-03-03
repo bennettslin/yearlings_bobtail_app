@@ -14,7 +14,7 @@ module.exports = {
         {
             verseIndex: 0,
             description: `Bennett and Sita are standing outside her gate at night. In a thought bubble, he is reaching out to Sita, who is reaching back.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -22,7 +22,7 @@ module.exports = {
         {
             verseIndex: 16,
             description: `In a thought bubble, Bennett and Sita are at a museum, looking at the skeleton of an early human. Bennett is standing behind the display case, leaning in towards Sita.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1,
                 skeleton: 1
@@ -31,7 +31,7 @@ module.exports = {
         {
             verseIndex: 28,
             description: `In a thought bubble, Bennett and Sita are backstage after a play. While Sita and her friend are chatting away, Bennett looks away and is visibly uncomfortable.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1,
                 sitaFriend: 1,
@@ -41,7 +41,7 @@ module.exports = {
         {
             verseIndex: 42,
             description: `In a thought bubble, Bennett and Sita are at a motorsports course, riding in separate go-karts.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }
@@ -49,7 +49,7 @@ module.exports = {
         {
             verseIndex: 56,
             description: `Having bid each other good night, Bennett is walking away, looking dejected. Sita is closing the gate from the inside, looking towards him with concern. In his thought bubble, she is inviting him in.`,
-            characters: {
+            actors: {
                 bennett: 1,
                 sita: 1
             }

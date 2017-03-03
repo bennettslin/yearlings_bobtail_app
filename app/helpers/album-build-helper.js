@@ -191,8 +191,14 @@ const _gatherDrawings = (scenes, songIndex) => {
 
                 if (drawingType === 'actors') {
 
-                    const character = Object.keys(scene[drawingType][key])[0],
-                    description = scene[drawingType][key][character]
+                    /**
+                     * If actor and character are the same, the entry will be a
+                     * string. If not, the entry will be an object.
+                     */
+                    const characterEntry = scene[drawingType][key],
+                        entryIsObject = typeof characterEntry === 'object',
+                        character = entryIsObject ? Object.keys(characterEntry)[0] : key,
+                        description = entryIsObject ? characterEntry[character] : characterEntry
 
                     keyObject.character = character
                     keyObject.description = description
