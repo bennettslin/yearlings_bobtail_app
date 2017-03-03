@@ -22,8 +22,6 @@ module.exports = {
         {
             verseIndex: 6,
             description: `On a page from a Chinese language workbook, Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
-            actors: {},
-
             actors: {
                 bennett: {
                     bennett: 'doing his thing test'

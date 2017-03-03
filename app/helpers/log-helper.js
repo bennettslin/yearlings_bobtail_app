@@ -19,11 +19,15 @@ export default {
         const selectedSong = getSong(props),
             copiedSong = Object.assign({}, selectedSong)
 
-        copiedSong.lyrics = `lyrics: ${copiedSong.lyrics.length}`
-        copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
-        copiedSong.annotationsDotKeys = `annotationsDotKeys: ${copiedSong.annotationsDotKeys.length}`
+        if (!copiedSong.logue) {
+            copiedSong.lyrics = `lyrics: ${copiedSong.lyrics.length}`
+            copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
+            copiedSong.annotationsDotKeys = `annotationsDotKeys: ${copiedSong.annotationsDotKeys.length}`
+            copiedSong.times = `times: ${copiedSong.times.length}`
+        }
+
+        copiedSong.stanzaTimes = `stanzaTimes: ${copiedSong.stanzaTimes.length}`
         copiedSong.tasks = `tasks: ${copiedSong.tasks.length}`
-        copiedSong.times = `times: ${copiedSong.times.length}`
 
         return this._logObject('selected song', copiedSong)
     },

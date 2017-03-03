@@ -38,10 +38,10 @@ export const prepareAlbumData = (album = {}) => {
 
     _injectPortalLinks(album)
 
-    _finalPrepareAllSongs(album)
-
     // Add drawings for admin purposes.
-    album.drawings = finaliseDrawings(_tempStore._drawings)
+    album.drawings = _finaliseDrawings(album, _tempStore._drawings)
+
+    _finalPrepareAllSongs(album)
 
     // FIXME: Temporarily add portal links to album for debugging purposes.
     album.portalLinks = _tempStore._portalLinks
@@ -139,10 +139,12 @@ const _finalPrepareAllSongs = (album) => {
             _parseLyrics(song.lyrics, true)
             _registerFirstAndLastVerseObjects(song.lyrics)
 
+
             // Not needed after stanza is told its index.
             delete song.stanzaTypeCounters
         }
 
+        _finaliseDrawingTasks(song)
         _expandStanzaTimes(song)
     })
 }
@@ -214,7 +216,7 @@ const _gatherDrawings = (scenes, songIndex) => {
     })
 }
 
-const finaliseDrawings = (drawings) => {
+const _finaliseDrawings = (album, drawings) => {
 
     // Turn actors object into array for easier frontend parsing.
     const actors = []
@@ -252,6 +254,17 @@ const finaliseDrawings = (drawings) => {
             }
 
             characters[role.character].push(roleObject)
+
+            // Let song know its individual todos.
+            if (isNaN(album.songs[songIndex].actorsTodoCount)) {
+                album.songs[songIndex].actorsTodoCount = 0
+                album.songs[songIndex].actorsTotalCount = 0
+            }
+            if (roleObject.todo) {
+                album.songs[songIndex].actorsTodoCount++
+            }
+            album.songs[songIndex].actorsTotalCount++
+
         })
 
         actorsTodoCount += rolesTodoCount
@@ -270,6 +283,26 @@ const finaliseDrawings = (drawings) => {
     drawings.actorsTotalCount = actorsTotalCount
 
     return drawings
+}
+
+const _finaliseDrawingTasks = (song) => {
+
+    // Assume two hours per rough drawing.
+    const drawingActorsHoursWorked = (song.actorsTotalCount - song.actorsTodoCount) * 3,
+        drawingActorsHoursTotal = song.actorsTotalCount * 3
+
+    if (!song.tasks) {
+        song.tasks = []
+    }
+
+    delete song.actorsTodoCount
+    delete song.actorsTotalCount
+
+    song.tasks.push({
+        taskName: 'rough drawings of actors',
+        workedHours: drawingActorsHoursWorked,
+        neededHours: drawingActorsHoursTotal
+    })
 }
 
 const _addTitleToLyrics = (title, lyrics) => {

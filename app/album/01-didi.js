@@ -42,7 +42,10 @@ module.exports = {
             description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
             actors: {
                 youngAnita: 1,
-                youngBennett: 1
+                youngBennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
@@ -553,7 +556,7 @@ module.exports = {
         {
             taskName: `review synopses and rough illustrations`,
             workedHours: 2,
-            neededHours: 2,
+            neededHours: 2
         }
     ]
 }

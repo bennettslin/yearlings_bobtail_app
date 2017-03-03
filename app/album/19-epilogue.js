@@ -4,7 +4,13 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: 'epilogue description'
+            description: 'epilogue description',
+            actors: {
+                oldBennett: {
+                    todo: true,
+                    description: 'todo'
+                }
+            }
         }
     ],
     tip: {
