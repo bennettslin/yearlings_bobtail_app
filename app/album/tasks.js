@@ -1,8 +1,13 @@
 module.exports = [
     {
-        taskName: `Method to assemble characters by actors, backdrops, stageProps.`,
+        taskName: `method to assemble backdrops and stageProps drawings.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `figure out actor roles`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Fix jolted movement when scrolling lyrics and verse bar shown or hidden.`,
@@ -1327,5 +1332,10 @@ module.exports = [
         taskName: `Fix admin breakage.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Method to assemble drawings by characters.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
