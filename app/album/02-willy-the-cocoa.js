@@ -16,7 +16,10 @@ module.exports = {
             verseIndex: 0,
             description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`,
             actors: {
-                willy: 1
+                willy: {
+                    todo: true,
+                    description: 'todo'
+                }
             },
             backdrops: {
                 foreground: 'front description',
@@ -30,26 +33,50 @@ module.exports = {
             verseIndex: 9,
             description: `Outside next to the porch, Bennett's mother had been cutting Christopher's hair a moment ago. Christopher has just leapt out of his chair in panic. The cloth that had been draped around him has been tossed in the air. Looking exasperated, Bennett tries to catch him. Having just arrived, Willy is ducked behind the porch, a kind chuckle on his face.`,
             actors: {
-                willy: 1,
-                mother: 1,
-                christopher: 1,
-                preteenBennett: 1
+                willy: {
+                    todo: true,
+                    description: 'todo'
+                },
+                mother: {
+                    todo: true,
+                    description: 'todo'
+                },
+                christopher: {
+                    todo: true,
+                    description: 'todo'
+                },
+                preteenBennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 19,
             description: `Inside the house, holding his X-ray specs, Bennett is kicking Christopher, who rolls on the ground, in tears and clenching his stomach. Tattered comics and cut-out letters are on the ground. Bennett's father is rushing in, angry and determined to stop the fight.`,
             actors: {
-                father: 1,
-                christopher: 1,
-                preteenBennett: 1
+                father: {
+                    todo: true,
+                    description: 'todo'
+                },
+                christopher: {
+                    todo: true,
+                    description: 'todo'
+                },
+                preteenBennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 27,
             description: `Willy is in a fight with two gangbangers. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`,
             actors: {
-                willy: 1,
+                willy: {
+                    todo: true,
+                    description: 'todo'
+                },
                 gangbangers: 2
             }
         },
@@ -57,17 +84,32 @@ module.exports = {
             verseIndex: 34,
             description: `Inside the house, Bennett is in bed, with his mother beside him giving comfort. Outside, the window shows a scene with police hovering over a dead body. Mother is getting up to close the window.`,
             actors: {
-                mother: 1,
-                preteenBennett: 1
+                mother: {
+                    todo: true,
+                    description: 'todo'
+                },
+                preteenBennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 44,
             description: `Bennett is now dreaming. It's night, and he and Willy are holding Christopher's hand, one on each side. Christopher gazes up at Bennett with a knowing, comforting smile. Willy's and Christopher's shadows both reveal them to be trolls. Together, they are leading Bennett to a circle of trolls.`,
             actors: {
-                willy: 1,
-                christopher: 1,
-                preteenBennett: 1,
+                willy: {
+                    todo: true,
+                    description: 'todo'
+                },
+                christopher: {
+                    todo: true,
+                    description: 'todo'
+                },
+                preteenBennett: {
+                    todo: true,
+                    description: 'todo'
+                },
                 trolls: 3
             }
         }

@@ -30,41 +30,74 @@ module.exports = {
             verseIndex: 0,
             description: `Bennett is standing outside his doorway at night, drenched in rain. Catherine is getting into a taxicab.`,
             actors: {
-                bennett: 1,
-                catherine: 1,
-                cabDriver: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                catherine: {
+                    todo: true,
+                    description: 'todo'
+                },
+                cabDriver: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 11,
             description: `In Bennett's thoughts, he and Catherine are together on the couch. She is putting down the book she is reading, while he is playing the guitar, a pencil and notepad in hand, implying that he is writing a song, looking at her inquisitively.`,
             actors: {
-                bennett: 1,
-                catherine: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                catherine: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 17,
             description: `Bennett is standing in the rain at night, staring at a Catholic church across the street.`,
             actors: {
-                bennett: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 27,
             description: `Bennett is staring at an outdoor ashtray. Someone with a cross on their forehead is walking behind him in the other direction, while someone who has just put out a cigarette in the ashtray is walking in front of him, exhaling the smoke. Bennett looks back at the person behind him.`,
             actors: {
-                bennett: 1,
-                catholic: 1,
-                smoker: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                catholic: {
+                    todo: true,
+                    description: 'todo'
+                },
+                smoker: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 32,
             description: `Bennett now has an ashed cross on his forehead, eyes closed and head held high, looking both pious and pompous. Catherine walks towards him from the other side of the stage.`,
             actors: {
-                bennett: 1,
-                catherine: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                catherine: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         }
     ],

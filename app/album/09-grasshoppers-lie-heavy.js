@@ -39,86 +39,146 @@ module.exports = {
             verseIndex: 0,
             description: `Bennett is in a cafeteria dishroom, reading a novel while dishes gradually pile up. He eyes a lancing device on a tray.`,
             actors: {
-                bennett: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 9,
             description: `Same scene. Sita is asking for the lancing device. Bennett hands it to her, but simultaneously is asking her out on a date.`,
             actors: {
-                bennett: 1,
-                sita: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 14,
             description: `Bennett is walking home from work, looking dejected. In his thought bubble, he is remembering the night that he walked home from the date with Sita. A jogger passes by.`,
             actors: {
-                bennett: 1,
-                jogger: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                jogger: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 20,
             description: `Same scene. As he begins to enter the front gate, he notices that Sita is standing several feet behind him.`,
             actors: {
-                bennett: 1,
-                sita: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 27,
             description: `Bennett's apartment is dark inside. Through a window, we see him opening the gate for Sita to pass through. She takes his arm.`,
             actors: {
-                bennett: 1,
-                sita: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 33,
             description: `Same scene. Bennett and Sita have now entered the apartment. Bennett has turned on a light switch. On his bed is a jar of Vaseline, along with sketches to which he has clearly been masturbating.`,
             actors: {
-                bennett: 1,
-                sita: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 37,
             description: `In an emergency room, Bennett is sitting in an armchair with his arm around Sita's purse. In his thought bubbles, he imagines the scenes of his burgeoning friendship with Sita.`,
             actors: {
-                bennett: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 43,
             description: `Same scene. Sita has come to get her purse, and is waking Bennett up.`,
             actors: {
-                bennett: 1,
-                sita: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 46,
             description: `Bennett and Sita are both naked in bed. Sita is lying down, while Bennett hovers over her, a look of uncertainty on his face.`,
             actors: {
-                bennett: 1,
-                sita: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 53,
             description: `Same scene. `,
             actors: {
-                bennett: 1,
-                sita: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 59,
             description: `Same scene. Bennett and Sita are together in bed, having just had sex, a look that is a mixture of serenity and uncertainty on both their faces.`,
             actors: {
-                bennett: 1,
-                sita: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         }
     ],

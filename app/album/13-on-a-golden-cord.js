@@ -23,8 +23,14 @@ module.exports = {
             verseIndex: 0,
             description: `Bennett and Sita are at her apartment, breaking up. Sita is a wreck, turning away from Bennett as she returns the gold bracelet to him. He is trying to console her, but in a mechanical way.`,
             actors: {
-                bennett: 1,
-                sita: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
@@ -39,7 +45,10 @@ module.exports = {
             description: `Bennett and Garry are yucking it up, in a panicked and delirious kind of way. Bennett is yodelling, Garry is playing the banjo, saluting a female cop on a horse. The cop waves back.`,
             actors: {
                 bennett: 2,
-                officer: 1
+                officer: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
@@ -48,7 +57,10 @@ module.exports = {
             actors: {
                 bennett: 2,
                 kids: 4,
-                crossingGuard: 1
+                crossingGuard: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         }
     ],

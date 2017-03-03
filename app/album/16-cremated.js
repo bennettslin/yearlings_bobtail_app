@@ -16,33 +16,60 @@ module.exports = {
             verseIndex: 0,
             description: `Bennett and Miriam are having sex in a car overlooking a cliff. Miriam is on top.`,
             actors: {
-                bennett: 1,
-                miriam: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                miriam: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 10,
             description: `Miriam is now giving Bennett a blowjob. Meanwhile, they are both thinking a thought bubble in which they are now married. He is drunk, and their child is autistic.`,
             actors: {
-                bennett: 1,
-                miriam: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                miriam: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 17,
             description: `In a thought bubble, Bennett is dying in a hospital bed next to a record player. In another thought bubble, Miriam is playing tennis with her new boyfriend.`,
             actors: {
-                bennett: 1,
-                miriam: 1,
-                miriamBoyfriend: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                miriam: {
+                    todo: true,
+                    description: 'todo'
+                },
+                miriamBoyfriend: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 23,
             description: `They drive away. Bennett, with his seat back, hesitantly drops the used condom on the ground, looking at it wistfully. Miriam is looking away, backing up the car.`,
             actors: {
-                bennett: 1,
-                miriam: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                miriam: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         }
     ],

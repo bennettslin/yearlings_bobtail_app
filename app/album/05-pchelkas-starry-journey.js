@@ -25,29 +25,44 @@ module.exports = {
             verseIndex: 0,
             description: `Bennett and Christopher are under his bunk bed. Christopher is injured, but and happily playing. Bennett looks guilty.`,
             actors: {
-                preteenBennett: 1,
-                christopher: 1
+                preteenBennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                christopher: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 14,
             description: `Bennett is at home in bed, pretending to be sick. He is stuffing money from red pouches into a postage envelope. In the window, the schoolbus is driving off, leaving him behind. The bullies are visible through the schoolbus windows, laughing at him.`,
             actors: {
-                preteenBennett: 1
+                preteenBennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 32,
             description: `Bennett is at his desk, reading a letter and crying. In his thought bubble, he is standing alone on Earth, looking up into space.`,
             actors: {
-                preteenBennett: 1
+                preteenBennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 41,
             description: `Bennett is sitting on the grass by himself, away from the lunch crowd. The two bullies have been throwing rocks at him, trying to rile him up, but to no avail. One looks confused, the other is suggesting that they should leave.`,
             actors: {
-                preteenBennett: 1,
+                preteenBennett: {
+                    todo: true,
+                    description: 'todo'
+                },
                 bullies: 2
             }
         },
@@ -55,10 +70,22 @@ module.exports = {
             verseIndex: 54,
             description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is chewing out the principal..`,
             actors: {
-                pretenBennett: 1,
-                christopher: 1,
-                mother: 1,
-                principal: 1
+                pretenBennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                christopher: {
+                    todo: true,
+                    description: 'todo'
+                },
+                mother: {
+                    todo: true,
+                    description: 'todo'
+                },
+                principal: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         }
     ],

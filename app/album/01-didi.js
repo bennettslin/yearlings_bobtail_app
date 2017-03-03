@@ -41,7 +41,10 @@ module.exports = {
             scene: 1,
             description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
             actors: {
-                youngAnita: 1,
+                youngAnita: {
+                    todo: true,
+                    description: 'todo'
+                },
                 youngBennett: {
                     todo: true,
                     description: 'todo'
@@ -53,10 +56,22 @@ module.exports = {
             scene: 2,
             description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells her friends about this. Anita overhears and looks upset.`,
             actors: {
-                youngAnita: 1,
-                youngBennett: 1,
-                youngGirl: 1,
-                youngBoy: 1
+                youngAnita: {
+                    todo: true,
+                    description: 'todo'
+                },
+                youngBennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                youngGirl: {
+                    todo: true,
+                    description: 'todo'
+                },
+                youngBoy: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
@@ -64,7 +79,10 @@ module.exports = {
             scene: 3,
             description: `Bennett is soaking in a bathtub at home, looking downcast. A window shows that it is midday outside.`,
             actors: {
-                youngBennett: 1
+                youngBennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
@@ -72,8 +90,14 @@ module.exports = {
             scene: 4,
             description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
             actors: {
-                youngAnita: 1,
-                youngBennett: 1
+                youngAnita: {
+                    todo: true,
+                    description: 'todo'
+                },
+                youngBennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         }
     ],

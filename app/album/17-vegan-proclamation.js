@@ -23,35 +23,68 @@ module.exports = {
             verseIndex: 0,
             description: `Bennett is walking with the ghost of Odin in a park. He passes Sita, who is holding hands with her friend. Bennett looks down, her friend looks up, while Sita looks concerned.`,
             actors: {
-                bennett: 1,
-                sita: 1,
-                sitaFriend: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sitaFriend: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 11,
             description: `Bennett is by himself with Odin at a show, looking agitated and bored. Miriam is on the other side of the crowd, being introduced by Tristan to her future boyfriend.`,
             actors: {
-                bennett: 1,
-                miriam: 1,
-                tristan: 1,
-                miriamBoyfriend: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                miriam: {
+                    todo: true,
+                    description: 'todo'
+                },
+                tristan: {
+                    todo: true,
+                    description: 'todo'
+                },
+                miriamBoyfriend: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 22,
             description: `Bennett is in his apartment, in tears on the phone with Sita, who is in bed snuggling with her friend.`,
             actors: {
-                bennett: 1,
-                sita: 1,
-                sitaFriend: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sita: {
+                    todo: true,
+                    description: 'todo'
+                },
+                sitaFriend: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 27,
             description: `Bennett is with Odin, and happens upon a Peta demonstration. One of the demonstrators is petting Odin.`,
             actors: {
-                bennett: 1,
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
                 demonstrators: 4
             }
         }
@@ -549,6 +582,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `When Sita and I first met, she asked to hear some of my songs. I had just bought a new multi-effects processor and played around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: INSTRUMENTAL
             }
         ],
@@ -718,11 +760,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -758,6 +795,11 @@ module.exports = {
             taskName: `review synopses and rough illustrations`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 4,
+            neededHours: 4
         }
     ]
 }

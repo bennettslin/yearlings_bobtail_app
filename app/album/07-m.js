@@ -22,37 +22,76 @@ module.exports = {
             verseIndex: 13,
             description: `It's after a show, and the Yearlings are breaking down their set. Jacob is flirting with Mara. Bennett is selling a CD to a hipster, but is distracted by the sight of Mara.`,
             actors: {
-                bennett: 1,
-                jacob: 1,
-                mara: 1,
-                ana: 1,
-                hipster: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                jacob: {
+                    todo: true,
+                    description: 'todo'
+                },
+                mara: {
+                    todo: true,
+                    description: 'todo'
+                },
+                ana: {
+                    todo: true,
+                    description: 'todo'
+                },
+                hipster: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 21,
             description: `The Yearlings are taking a break from band practise, eating burgers around a table. Mara is with them, cuddling with Jacob. Bennett is visibly agitated.`,
             actors: {
-                bennett: 1,
-                jacob: 1,
-                mara: 1,
-                ana: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                jacob: {
+                    todo: true,
+                    description: 'todo'
+                },
+                mara: {
+                    todo: true,
+                    description: 'todo'
+                },
+                ana: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 31,
             description: `Bennett is walking along outside. He sees Mara's face everywhere he looks: in clouds, on the sides of buildings, and so forth.`,
             actors: {
-                bennett: 1,
-                maskedWoman: 1,
-                maskedMan: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                maskedWoman: {
+                    todo: true,
+                    description: 'todo'
+                },
+                maskedMan: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         },
         {
             verseIndex: 47,
             description: `Bennett suddenly has an epiphany. In sketches in his head, he imagines himself recording all the instruments in a band. Finally, he imagines Mara finding his album in a record store.`,
             actors: {
-                bennett: 1
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                }
             }
         }
     ],
