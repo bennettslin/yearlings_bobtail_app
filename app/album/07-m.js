@@ -15,7 +15,22 @@ module.exports = {
             verseIndex: 0,
             description: `Bennett is in his room, doing many things, such that there are many copies of him. One is playing a guitar and writing stuff down on a notepad, another is reading a book, while a third is trying to figure out a Rubik's Cube.`,
             actors: {
-                bennett: 3
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                stephanie: {
+                    bennett: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                bennett2: {
+                    bennett: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                }
             }
         },
         {

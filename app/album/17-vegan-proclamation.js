@@ -31,7 +31,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                sitaFriend: {
+                khari: {
                     todo: true,
                     description: 'todo'
                 }
@@ -53,7 +53,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                miriamBoyfriend: {
+                eduardo: {
                     todo: true,
                     description: 'todo'
                 }
@@ -71,7 +71,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                sitaFriend: {
+                khari: {
                     todo: true,
                     description: 'todo'
                 }
@@ -85,7 +85,24 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                demonstrators: 4
+                amy: {
+                    demonstrator: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                stephanie: {
+                    demonstrator: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                wade: {
+                    demonstrator: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                }
             }
         }
     ],

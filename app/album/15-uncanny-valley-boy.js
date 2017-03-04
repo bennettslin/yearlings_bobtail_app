@@ -61,7 +61,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                Sasha: {
+                sasha: {
                     todo: true,
                     description: 'todo'
                 }
@@ -113,7 +113,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                miriamBoyfriend: {
+                eduardo: {
                     todo: true,
                     description: 'todo'
                 },
@@ -121,7 +121,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                sitaFriend: {
+                khari: {
                     todo: true,
                     description: 'todo'
                 }

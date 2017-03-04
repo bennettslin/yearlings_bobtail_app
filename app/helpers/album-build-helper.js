@@ -200,7 +200,7 @@ const _gatherDrawings = (scenes, songIndex) => {
                     const characterEntry = scene[drawingType][key],
                         entryIsObject = typeof characterEntry === 'object' && !characterEntry.description,
                         character = entryIsObject ? Object.keys(characterEntry)[0] : key,
-                        descriptionObject = entryIsObject ? characterEntry[character].description : characterEntry
+                        descriptionObject = entryIsObject ? scene[drawingType][key][character] : characterEntry
 
                     keyObject.character = character
                     keyObject.descriptionObject = descriptionObject

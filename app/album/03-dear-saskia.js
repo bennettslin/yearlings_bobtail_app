@@ -55,7 +55,18 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                bullies: 2
+                bully1: {
+                    bully: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                bully2: {
+                    bully: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                }
             }
         },
         {

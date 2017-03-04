@@ -48,7 +48,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                crustPunk: {
+                eduardo: {
                     todo: true,
                     description: 'todo'
                 }

@@ -28,14 +28,33 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                audienceMembers: 3,
-                redhead: {
+                audienceMember: {
                     todo: true,
                     description: 'todo'
                 },
-                redheadFriend: {
-                    todo: true,
-                    description: 'todo'
+                audienceMember1: {
+                    audienceMember: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                audienceMember2: {
+                    audienceMember: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                amy: {
+                    redhead: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                stephanie: {
+                    redheadFriend: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 }
             }
         },
@@ -47,9 +66,11 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                redhead: {
-                    todo: true,
-                    description: 'todo'
+                amy: {
+                    redhead: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 },
                 jacob: {
                     todo: true,
@@ -77,11 +98,24 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                redhead: {
-                    todo: true,
-                    description: 'todo'
+                amy: {
+                    redhead: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 },
-                redheadFriends: 2
+                stephanie: {
+                    redheadFriend: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                wade: {
+                    redheadFriend: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                }
             }
         },
         {

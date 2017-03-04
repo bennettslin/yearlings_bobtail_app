@@ -52,7 +52,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                miriamBoyfriend: {
+                eduardo: {
                     todo: true,
                     description: 'todo'
                 }

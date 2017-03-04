@@ -37,7 +37,24 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                gopis: 3
+                catherine: {
+                    gopi: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                mara: {
+                    gopi: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                miriam: {
+                    gopi: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
             }
         },
         {

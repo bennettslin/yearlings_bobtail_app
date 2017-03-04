@@ -77,7 +77,18 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                gangbangers: 2
+                howie: {
+                    gangbanger: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                tomer: {
+                    gangbanger: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                }
             }
         },
         {
@@ -109,8 +120,7 @@ module.exports = {
                 preteenBennett: {
                     todo: true,
                     description: 'todo'
-                },
-                trolls: 3
+                }
             }
         }
     ],

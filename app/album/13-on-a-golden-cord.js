@@ -37,17 +37,37 @@ module.exports = {
             verseIndex: 15,
             description: `Bennett and Garry are walking along down the street. (Garry is the one wearing the jacket.) Garry is shaking his fist at the twin streetlights. Bennett turns around to face the audience, a look of uncertainty on his face. He is caressing the gold bracelet in his hand.`,
             actors: {
-                bennett: 2
+                bennett: {
+                    todo: true,
+                    description: 'todo'
+                },
+                stephanie: {
+                    bennett: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
             }
         },
         {
             verseIndex: 27,
             description: `Bennett and Garry are yucking it up, in a panicked and delirious kind of way. Bennett is yodelling, Garry is playing the banjo, saluting a female cop on a horse. The cop waves back.`,
             actors: {
-                bennett: 2,
-                officer: {
+                bennett: {
                     todo: true,
                     description: 'todo'
+                },
+                stephanie: {
+                    bennett: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                catherine: {
+                    officer: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 }
             }
         },
@@ -55,11 +75,41 @@ module.exports = {
             verseIndex: 43,
             description: `Garry is now facing the audience, his hand over his face, crying, and holding the gold bracelet over a group of kids crossing the street with a crossing guard. Bennett is trying to console him, as he faces forward.`,
             actors: {
-                bennett: 2,
-                kids: 4,
-                crossingGuard: {
+                bennett: {
                     todo: true,
                     description: 'todo'
+                },
+                stephanie: {
+                    bennett: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                youngGirl: {
+                    todo: true,
+                    description: 'todo'
+                },
+                youngBoy: {
+                    todo: true,
+                    description: 'todo'
+                },
+                youngAnita: {
+                    youngGirl: {
+                        todo: true,
+                        description: 'todo'
+                    },
+                },
+                youngBennett: {
+                    youngBoy: {
+                        todo: true,
+                        description: 'todo'
+                    },
+                },
+                willy: {
+                    crossingGuard: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 }
             }
         }

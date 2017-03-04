@@ -47,7 +47,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                sitaFriend: {
+                khari: {
                     todo: true,
                     description: 'todo'
                 }
@@ -61,7 +61,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                sitaFriend: {
+                khari: {
                     todo: true,
                     description: 'todo'
                 }
@@ -75,7 +75,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                sitaFriend: {
+                khari: {
                     todo: true,
                     description: 'todo'
                 }

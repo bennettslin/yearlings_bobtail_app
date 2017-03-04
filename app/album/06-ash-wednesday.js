@@ -37,10 +37,6 @@ module.exports = {
                 catherine: {
                     todo: true,
                     description: 'todo'
-                },
-                cabDriver: {
-                    todo: true,
-                    description: 'todo'
                 }
             }
         },
@@ -76,13 +72,17 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                catholic: {
-                    todo: true,
-                    description: 'todo'
+                wade: {
+                    catholic: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 },
-                smoker: {
-                    todo: true,
-                    description: 'todo'
+                amy: {
+                    smoker: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 }
             }
         },

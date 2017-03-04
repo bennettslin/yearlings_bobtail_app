@@ -63,7 +63,18 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                bullies: 2
+                bully1: {
+                    bully: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                },
+                bully2: {
+                    bully: {
+                        todo: true,
+                        description: 'todo'
+                    }
+                }
             }
         },
         {
@@ -82,9 +93,11 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                principal: {
-                    todo: true,
-                    description: 'todo'
+                khari: {
+                    principal: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 }
             }
         }
