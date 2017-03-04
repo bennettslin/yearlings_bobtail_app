@@ -24,12 +24,6 @@ module.exports = {
                         todo: true,
                         description: 'todo'
                     }
-                },
-                bennett2: {
-                    bennett: {
-                        todo: true,
-                        description: 'todo'
-                    }
                 }
             }
         },

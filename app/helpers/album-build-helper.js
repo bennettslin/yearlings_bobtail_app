@@ -287,9 +287,9 @@ const _finaliseDrawings = (album, drawings) => {
 
 const _finaliseDrawingTasks = (song) => {
 
-    // Assume two hours per rough drawing.
-    const drawingActorsHoursWorked = (song.actorsTotalCount - song.actorsTodoCount) * 3,
-        drawingActorsHoursTotal = song.actorsTotalCount * 3
+    // Assume one hour per rough drawing.
+    const drawingActorsHoursWorked = (song.actorsTotalCount - song.actorsTodoCount) * 1,
+        drawingActorsHoursTotal = song.actorsTotalCount * 1
 
     if (!song.tasks) {
         song.tasks = []

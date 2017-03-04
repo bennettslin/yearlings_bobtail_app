@@ -63,13 +63,13 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                bully1: {
+                brad: {
                     bully: {
                         todo: true,
                         description: 'todo'
                     }
                 },
-                bully2: {
+                andrew: {
                     bully: {
                         todo: true,
                         description: 'todo'
@@ -81,7 +81,7 @@ module.exports = {
             verseIndex: 54,
             description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is chewing out the principal..`,
             actors: {
-                pretenBennett: {
+                preteenBennett: {
                     todo: true,
                     description: 'todo'
                 },
