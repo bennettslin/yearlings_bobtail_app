@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `figure out actor roles`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Fix jolted movement when scrolling lyrics and verse bar shown or hidden.`,
         workedHours: 0,
         neededHours: 1
@@ -1337,5 +1332,10 @@ module.exports = [
         taskName: `Method to assemble drawings by characters.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `figure out actor roles`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

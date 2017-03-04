@@ -12,7 +12,7 @@ module.exports = {
                         wiki: `Look_Back_in_Anger`
                     }
                 },
-                `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. It hit a little close to home when I read it.`
+                `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. At the time that I read it, it hit a little too close to home.`
             ],
             dotKeys: {
                 [BACKSTORY]: true
@@ -323,7 +323,7 @@ module.exports = {
                                     anchor: `"The Charge of the Light Brigade,"`,
                                     wiki: `Charge_of_the_Light_Brigade`
                                 },
-                                `I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own years in the Valley of death. In turn, this casual view of hardship enabled me to justify the pain that I knew my ambitions would eventually bring upon Sita.`
+                                `I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own years in the Valley of death.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -331,7 +331,17 @@ module.exports = {
                             }
                         }
                     },
-                    `you rode, so on spite you thrive.`
+                    `you rode, so on`,
+                    {
+                        anchor: `spite you thrive.`,
+                        annotation: {
+                            description: `In turn, this casual view of hardship enabled me to justify the pain that I knew my ambitions would eventually bring upon Sita.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
+                        }
+                    }
                 ]
             },
             {
@@ -339,8 +349,14 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        // todo: nas
-                        description: `TODO: hip hop lyrics`,
+                        description: [
+                            `When I asked Owen to recommend some great lyricists, he named just one: Nas. I hadn't given serious thought to hip hop at the time, believing it far too different from my own songwriting process to offer much useful wisdom. I've since corrected this oversight, but in the meantime,`,
+                            {
+                                anchor: `Illmatic`,
+                                wiki: `Illmatic`
+                            },
+                            `offered some great pointers on the flexibility of internal rhyme, which I use in these verses.`
+                        ],
                         dotKeys: {
                             [SONGWRITING]: true
                         }
