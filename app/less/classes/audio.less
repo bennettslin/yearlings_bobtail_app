@@ -129,6 +129,18 @@
 
 .timer-in-audio {
     .overlay-popup-subfield {
+
+        @banner-margin: 5px;
+
+        .audio-section {
+            align-items: flex-start;
+            height: @app-icon-diameter * 2 + @banner-margin;
+        }
+
+        .audio-buttons-block, .audio-timer-block, .audio-banner-block {
+            height: @app-icon-diameter;
+        }
+
         .audio-buttons-block {
             max-width: 300px; // Also arbitrary.
         }
@@ -141,6 +153,16 @@
             margin-right: @audio-block-padding;
 
             font-size: 1.75em;
+        }
+
+        .audio-banner-block {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .audio-display-block {
+            display: none;
         }
     }
 }
@@ -231,6 +253,7 @@
 .audio-banner-custom-subfield {
     position: relative;
     height: @audio-banner-height * 2;
+    z-index: @custom-audio-banner-z-index;
 
     // Arbitrary values;
     padding: 4px 8px;

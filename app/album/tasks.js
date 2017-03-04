@@ -15,11 +15,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Show audio banner in overlay on phone.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Fix selecting time in audio banner dismissing overlay and breaking.`,
         workedHours: 0,
         neededHours: 1
@@ -1337,5 +1332,10 @@ module.exports = [
         taskName: `figure out actor roles`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Show audio banner in overlay on phone.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

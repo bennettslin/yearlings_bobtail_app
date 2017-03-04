@@ -105,7 +105,7 @@ const AudioSectionView = ({
             {titleInAudio &&
                 <TitleSection {...titleProps} />
             }
-            {!isPhone && audioBannerChild}
+            {(!isPhone || timerInAudio) && audioBannerChild}
             <AudioButtons {...audioButtonsProps} />
         </div>
     )
