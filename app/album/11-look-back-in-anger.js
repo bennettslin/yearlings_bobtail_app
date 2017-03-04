@@ -336,6 +336,16 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        // todo: nas
+                        description: `TODO: hip hop lyrics`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -562,7 +572,7 @@ module.exports = {
                                     anchor: `French Revolution,`,
                                     wiki: `French_Revolution`
                                 },
-                                `who were so downtrodden that each attempt by the government to appease them would backfire horribly. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`
+                                `who were so downtrodden that every attempt made by the ruling elite to appease them only backfired horribly. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true
