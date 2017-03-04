@@ -23,12 +23,31 @@ const DrawingsSectionView = ({
 
     // From controller.
     actors,
+    // backdrops,
     actorsTodoCount,
-    actorsTotalCount
+    actorsTotalCount,
+    // backdropsTodoCount,
+    // backdropsTotalCount
 
 }) => (
     <div className="section drawings-section">
         <h2>drawings</h2>
+
+        {/* <h3>backdrops</h3>
+        <div className="backdrops-table">
+            <div className="backdrops-row">
+                {backdrops.map((backdrop, backdropIndex) => {
+                    return (
+                        <div
+                            key={backdropIndex}
+                            className="backdrop-block"
+                        >
+
+                        </div>
+                    )
+                })}
+            </div>
+        </div> */}
         <h3>actors</h3>
         <div className="actors-table">
             <div className="actors-row">

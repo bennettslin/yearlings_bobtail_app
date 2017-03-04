@@ -23,7 +23,8 @@ module.exports = {
             },
             backdrops: {
                 foreground: 'front description',
-                background: 'back description 1'
+                background: 'back description 1',
+                floor: 'floor description 1'
             },
             stageProps: {
                 couch: 1

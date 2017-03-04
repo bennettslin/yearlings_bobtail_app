@@ -220,8 +220,15 @@ const _finaliseDrawings = (album, drawings) => {
 
     // Turn actors object into array for easier frontend parsing.
     const actors = []
+        // backdrops = []
     let actorsTotalCount = 0,
         actorsTodoCount = 0
+    //     backdropsTotalCount = 0,
+    //     backdropsTodoCount = 0
+    // //
+    // Object.keys(drawings.backdrops).forEach(backdrop => {
+    //
+    // })
 
     Object.keys(drawings.actors).forEach(actor => {
         const roles = drawings.actors[actor],

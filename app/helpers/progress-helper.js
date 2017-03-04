@@ -104,11 +104,15 @@ export default {
               weeks,
               days } = remainingTimeObject
 
-        return (months ? months + 'm' : '') +
-               (months && weeks ? ', ' : '') +
-               (weeks ? weeks + 'w' : '') +
-               ((months || weeks) && days ? ', ' : '') +
-               (days ? days + 'd' : '')
+        if (!months && !weeks && !days) {
+            return '0d'
+        } else {
+            return (months ? months + 'm' : '') +
+                (months && weeks ? ', ' : '') +
+                (weeks ? weeks + 'w' : '') +
+                ((months || weeks) && days ? ', ' : '') +
+                (days ? days + 'd' : '')
+        }
     },
 
     areObjectsEqual(objects1 = {}, objects2 = {}) {
