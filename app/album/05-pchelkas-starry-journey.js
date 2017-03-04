@@ -93,7 +93,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                khari: {
+                tristan: {
                     principal: {
                         todo: true,
                         description: 'todo'

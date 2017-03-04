@@ -28,17 +28,13 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                audienceMember: {
-                    todo: true,
-                    description: 'todo'
-                },
-                audienceMember1: {
-                    audienceMember: {
+                tomer: {
+                    hipster: {
                         todo: true,
                         description: 'todo'
                     }
                 },
-                audienceMember2: {
+                khari: {
                     audienceMember: {
                         todo: true,
                         description: 'todo'

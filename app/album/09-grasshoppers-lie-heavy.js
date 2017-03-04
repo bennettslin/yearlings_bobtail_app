@@ -67,9 +67,11 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                jogger: {
-                    todo: true,
-                    description: 'todo'
+                eduardo: {
+                    jogger: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 }
             }
         },

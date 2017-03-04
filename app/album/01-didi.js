@@ -54,7 +54,7 @@ module.exports = {
         {
             verseIndex: 9,
             scene: 2,
-            description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells her friends about this. Anita overhears and looks upset.`,
+            description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells the playground about this. Anita overhears and looks upset.`,
             actors: {
                 youngAnita: {
                     todo: true,
@@ -65,10 +65,6 @@ module.exports = {
                     description: 'todo'
                 },
                 youngGirl: {
-                    todo: true,
-                    description: 'todo'
-                },
-                youngBoy: {
                     todo: true,
                     description: 'todo'
                 }

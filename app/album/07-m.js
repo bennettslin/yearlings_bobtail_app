@@ -53,9 +53,11 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                hipster: {
-                    todo: true,
-                    description: 'todo'
+                tomer: {
+                    hipster: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 }
             }
         },
@@ -89,13 +91,17 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                maskedWoman: {
-                    todo: true,
-                    description: 'todo'
+                miriam: {
+                    maskedWoman: {
+                        todo: true,
+                        description: 'todo'
+                    },
                 },
-                maskedMan: {
-                    todo: true,
-                    description: 'todo'
+                howie: {
+                    maskedMan: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 }
             }
         },

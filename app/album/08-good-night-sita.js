@@ -55,9 +55,11 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                actor: {
-                    todo: true,
-                    description: 'todo'
+                stephanie: {
+                    actor: {
+                        todo: true,
+                        description: 'todo'
+                    }
                 }
             }
         },

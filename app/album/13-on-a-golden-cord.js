@@ -63,7 +63,7 @@ module.exports = {
                         description: 'todo'
                     }
                 },
-                catherine: {
+                amy: {
                     officer: {
                         todo: true,
                         description: 'todo'
@@ -86,10 +86,6 @@ module.exports = {
                     }
                 },
                 youngGirl: {
-                    todo: true,
-                    description: 'todo'
-                },
-                youngBoy: {
                     todo: true,
                     description: 'todo'
                 },
