@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `audio slider should be touch accessible.`,
+        taskName: `audio banner only registers touch begin, app registers move and end, and is touch accessible.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 8
     },
     {
         taskName: `Fix dot bubbles being hidden by menu.`,
