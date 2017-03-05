@@ -714,9 +714,10 @@ class App extends Component {
 
         // Called from arrow buttons in popup.
         if (typeof selectedAnnotationIndex === 'object') {
-            const { direction } = selectedAnnotationIndex
+            const { direction } = selectedAnnotationIndex,
+                lyricColumnShown = LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]
 
-            selectedAnnotationIndex = getAnnotationIndexForDirection(this.props, this.props.selectedAnnotationIndex, direction)
+            selectedAnnotationIndex = getAnnotationIndexForDirection(this.props, this.props.selectedAnnotationIndex, direction, undefined, lyricColumnShown)
 
             this.scrollElementIntoView('annotation', selectedAnnotationIndex)
         }

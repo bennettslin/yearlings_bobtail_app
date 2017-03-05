@@ -1,6 +1,6 @@
 module.exports = [
     {
-        taskName: `Clicking lower verse bar makes screen jump again...`,
+        taskName: `Clicking lower verse bar makes screen jump in Safari`,
         workedHours: 0,
         neededHours: 1
     },
@@ -1099,7 +1099,8 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Weird bug where clicking side button in annotation scrolls entire screen up?!`,
+        taskName: `Weird bug where clicking side button in annotation scrolls entire screen up?! `,
+        commit: `https://github.com/bennettslin/yearlings_bobtail_app/commit/b6a2c191edfa30cc61ec7139e65fbc42d65082dc`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1337,5 +1338,10 @@ module.exports = [
         taskName: `Clicking on verse when verse bar is shown does not hide verse bar`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Manually clicking annotation nav buttons doesn't skip hidden column (and makes screen jump.)`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
