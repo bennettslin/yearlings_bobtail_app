@@ -52,7 +52,7 @@ const LyricsVerse = ({
         onAnchorClick = onAnnotationClick,
 
         // Allows clicks on selected or interactivated verse to deinteractivate it.
-        onInteractivatableClick = !isTechnicallySelected && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null
+        onInteractivatableClick = !inVerseBar && !isTechnicallySelected && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null
 
     let onLyricPlayClick = null
 

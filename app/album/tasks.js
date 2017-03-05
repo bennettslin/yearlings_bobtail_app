@@ -20,11 +20,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Strategically use no-select`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Make interactive audio slider region better, and add times, and fix wonkiness.`,
         workedHours: 4,
         neededHours: 8
@@ -1335,6 +1330,11 @@ module.exports = [
     },
     {
         taskName: `Show audio banner in overlay on phone.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Strategically use no-select`,
         workedHours: 1,
         neededHours: 1
     }
