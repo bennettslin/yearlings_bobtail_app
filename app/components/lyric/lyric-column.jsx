@@ -34,6 +34,31 @@ const LyricColumn = ({
 
 class LyricColumnView extends Component {
 
+    constructor(props) {
+        super(props)
+
+        this._handleTransition = this._handleTransition.bind(this)
+        this.completeHeightTransition = this.completeHeightTransition.bind(this)
+
+        this.state = {
+            handlingHeightTransition: false
+        }
+    }
+
+    _handleTransition(e) {
+        if (e.propertyName === 'height') {
+            this.setState({
+                handlingHeightTransition: true
+            })
+        }
+    }
+
+    completeHeightTransition(e) {
+        this.setState({
+            handlingHeightTransition: false
+        })
+    }
+
     render() {
 
                 // From props.
@@ -60,7 +85,11 @@ class LyricColumnView extends Component {
             }
 
         return (
-            <div className="column lyric-column">
+            <div
+                className="column lyric-column"
+                ref={(node) => (this.myLyricColumn = node)}
+                onTransitionEnd={this._handleTransition}
+            >
                 <div className="lyric-column-animatable">
                     {!isLogue &&
                         <LyricVerseBar {...verseBarProps}
@@ -84,7 +113,10 @@ class LyricColumnView extends Component {
                         </div>
                     }
                     {lyricExpandButtonChild}
-                    <LyricsSection {...other} />
+                    <LyricsSection {...other}
+                        handlingHeightTransition={this.state.handlingHeightTransition}
+                        completeHeightTransition={this.completeHeightTransition}
+                    />
                 </div>
             </div>
         )

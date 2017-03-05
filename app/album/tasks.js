@@ -91,11 +91,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Bug where coordinates are wrong for sticky selected verse when lyric expanded`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `scroll to annotation after portal`,
         workedHours: 0,
         neededHours: 2
@@ -1343,5 +1338,10 @@ module.exports = [
         taskName: `Manually clicking annotation nav buttons doesn't skip hidden column (and makes screen jump.)`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Bug where coordinates are wrong for sticky selected verse when lyric expanded`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

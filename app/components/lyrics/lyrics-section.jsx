@@ -46,6 +46,13 @@ class LyricsSectionView extends Component {
         return !getPropsAreSame(this.props, nextProps)
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.handlingHeightTransition && !this.props.handlingHeightTransition) {
+            this._handleScroll()
+            this.props.completeHeightTransition()
+        }
+    }
+
     componentDidMount(prevProps) {
         this.setState({
             mounted: true

@@ -255,19 +255,23 @@
     height: @audio-banner-height * 2;
     z-index: @custom-audio-banner-z-index;
 
+
     // Arbitrary values;
     padding: 4px 8px;
 
     background-color: #ddb;
 
     .audio-banner-block {
+        .transition(top 0.2s ease);
         width: 100%;
     }
 }
 
 .lyric-expanded.is-song {
-    .audio-banner-block {
-        top: -@menu-height;
+    .audio-banner-custom-subfield {
+        .audio-banner-block {
+            top: -@menu-height;
+        }
     }
 }
 
