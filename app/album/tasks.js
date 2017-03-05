@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Clicking lower verse bar makes screen jump in Safari`,
+        taskName: `Clicking lower verse bar makes screen jump in Safari. Also just going from one annotation to the next.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: `method to assemble backdrops and stageProps drawings.`,
