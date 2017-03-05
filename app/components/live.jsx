@@ -10,7 +10,7 @@ import OverviewButton from './overview/overview-toggle'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
 import DotsSection from './dots/dots-section'
-import ScoreManager from './score/score-manager'
+import ScorePopup from './score/score-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
 import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu, getTitleInAudio } from 'helpers/responsive-helper'
@@ -325,6 +325,7 @@ const LiveView = ({
             onPopupContainerClick
         },
         scorePopupProps = {
+            justHide: true,
             isPhone,
             scores,
             selectedScoreIndex,
@@ -412,7 +413,7 @@ const LiveView = ({
                     />
                 </div>
                 <div className="overlay-popup-block">
-                    <ScoreManager {...scorePopupProps} />
+                    <ScorePopup {...scorePopupProps} />
                     <WikiPopup {...wikiPopupProps} />
                     {isOverlaidAnnotation &&
                         <AnnotationPopup {...annotationPopupProps} />
