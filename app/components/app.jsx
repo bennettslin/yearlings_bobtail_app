@@ -161,8 +161,6 @@ class App extends Component {
             isSelectedVerseAbove: false,
             isSelectedVerseBelow: false,
             selectedVerseElement: null,
-            appMounted: false,
-
             sliderMousedOrTouched: false
         }
     }
@@ -180,11 +178,6 @@ class App extends Component {
 
         // FIXME: Scrolling to selected verse here, but animation is janky.
         // setTimeout(this.scrollElementIntoView.bind(this, 'verse', this.props.selectedVerseIndex), 250)
-
-        // Selected verse bounding rect is meaningless until app is mounted.
-        this.setState({
-            appMounted: true
-        })
     }
 
     /***********
@@ -1010,11 +1003,6 @@ class App extends Component {
 
     handleLyricSectionScroll(sectionElement, selectedVerseElement = this.state.selectedVerseElement) {
 
-        // App needs to be mounted.
-        if (!this.state.appMounted) {
-            return
-        }
-
         const lyricSectionRect = getLyricSectionRect(this.state),
             selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
             selectedVerseMidHeight = (selectedVerseRect.top + selectedVerseRect.bottom) / 2,
@@ -1035,7 +1023,6 @@ class App extends Component {
             newState.showLyricButtons = lyricSectionTop < this.state.lyricSectionTop
         }
 
-        // FIXME: Setting isSelectedVerseAbove && isSelectedVerseBelow by itself causes the jolt. Even when no UI is changed as a result.
         this.setState(newState)
     }
 

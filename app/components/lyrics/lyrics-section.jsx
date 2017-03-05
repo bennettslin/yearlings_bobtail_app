@@ -36,14 +36,28 @@ class LyricsSectionView extends Component {
         super(props)
 
         this._handleScroll = this._handleScroll.bind(this)
+
+        this.state = {
+            mounted: false
+        }
     }
 
     shouldComponentUpdate(nextProps) {
         return !getPropsAreSame(this.props, nextProps)
     }
 
+    componentDidMount(prevProps) {
+        this.setState({
+            mounted: true
+        })
+
+        this._handleScroll()
+    }
+
     _handleScroll() {
-        this.props.onLyricSectionScroll(this.mySection)
+        if (this.state.mounted) {
+            this.props.onLyricSectionScroll(this.mySection)
+        }
     }
 
     render() {
