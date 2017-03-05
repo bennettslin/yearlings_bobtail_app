@@ -48,7 +48,7 @@ class LyricsSectionView extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.handlingHeightTransition && !this.props.handlingHeightTransition) {
-            this._handleScroll()
+            this._handleScroll(true)
             this.props.completeHeightTransition()
         }
     }
@@ -61,9 +61,11 @@ class LyricsSectionView extends Component {
         this._handleScroll()
     }
 
-    _handleScroll() {
+    _handleScroll(fromHeightTransition) {
         if (this.state.mounted) {
-            this.props.onLyricSectionScroll(this.mySection)
+            const lyricColumnJustExpanded = fromHeightTransition === true
+
+            this.props.onLyricSectionScroll(this.mySection, undefined, lyricColumnJustExpanded)
         }
     }
 

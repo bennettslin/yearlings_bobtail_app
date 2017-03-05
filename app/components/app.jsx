@@ -1001,7 +1001,7 @@ class App extends Component {
         }
     }
 
-    handleLyricSectionScroll(sectionElement, selectedVerseElement = this.state.selectedVerseElement) {
+    handleLyricSectionScroll(sectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustExpanded) {
 
         const lyricSectionRect = getLyricSectionRect(this.state),
             selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
@@ -1013,7 +1013,11 @@ class App extends Component {
                 isSelectedVerseBelow
             }
 
-        if (sectionElement) {
+        // Always show buttons if this is from a height transition
+        if (lyricColumnJustExpanded) {
+            newState.showLyricButtons = true
+
+        } else if (sectionElement) {
             // Decide whether to show ear and expand buttons.
             const lyricSectionTop =  sectionElement.scrollTop
 
