@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { getFormattedTime } from 'helpers/format-helper'
 
 /*************
  * CONTAINER *
@@ -74,10 +75,20 @@ class AudioSliderView extends Component {
 
             { mousedOrTouchedRatio } = this.state,
 
-            playedWidth = (mousedOrTouchedRatio === null ? (selectedTimePlayed / totalTime) : mousedOrTouchedRatio) * 100,
+            workingRatio = (mousedOrTouchedRatio === null ? (selectedTimePlayed / totalTime) : mousedOrTouchedRatio),
 
+            displayedPlayTime = isMousedOrTouched ? getFormattedTime(workingRatio * totalTime) : null,
+
+            playedWidth = workingRatio * 100,
             playedStyle = {
                 width: `${playedWidth}%`
+            },
+
+            displayedRemainTime = isMousedOrTouched ? getFormattedTime((1 - workingRatio) * totalTime) + '-' : null,
+
+            remainWidth = 100 - playedWidth,
+            remainStyle = {
+                width: `${remainWidth}%`
             }
 
         return (
@@ -99,10 +110,19 @@ class AudioSliderView extends Component {
                         </div>
                     )
                 })}
+                    <div className="below played time-play-display">{displayedPlayTime}</div>
                 <div
                     className={`time-bar audio-time-bar ${isMousedOrTouched ? 'touched' : 'not-moused-or-touched'}`}
                     style={playedStyle}
                 >
+                    <div className="above played time-play-display">{displayedPlayTime}</div>
+                </div>
+                <div className="below remain time-play-display">{displayedRemainTime}</div>
+                <div
+                    className="above remain time-play-display"
+                    style={remainStyle}
+                >
+                    {displayedRemainTime}
                 </div>
                 <div
                     className="time-bar audio-touch-bar"

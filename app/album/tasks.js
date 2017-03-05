@@ -1,8 +1,18 @@
 module.exports = [
     {
-        taskName: `Make interactive audio slider region better, and add times, and fix wonkiness.`,
-        workedHours: 6,
-        neededHours: 8
+        taskName: `audio slider should be touch accessible.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Fix dot bubbles being hidden by menu.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Make dot tooltip touch accessible`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `Clicking lower verse bar makes screen jump in Safari. Also just going from one annotation to the next.`,
@@ -33,16 +43,6 @@ module.exports = [
         taskName: `Selecting new song from audio overlay shouldn't dismiss overlay`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Fix dot bubbles being hidden by menu.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Make dot tooltip touch accessible`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Make nav hidden the default.`,
@@ -1343,5 +1343,15 @@ module.exports = [
         taskName: `Bug where coordinates are wrong for sticky selected verse when lyric expanded`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Make interactive audio slider region better, and fix wonkiness.`,
+        workedHours: 6,
+        neededHours: 6
+    },
+    {
+        taskName: `audio slider should show times`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
