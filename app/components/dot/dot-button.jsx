@@ -92,10 +92,9 @@ class DotButtonView extends Component {
                     </div>
                 }
                 <div className={`dot ${dotKey}${isPresent ? '' : ' background'}${isToggleDeselected ? ' deselected' : ''}${isEnabled ? '' : ' disabled'}${accessHighlighted ? ' access-highlighted' : ''}`}>
-                    {/* FIXME: Dot text will be outside button. */}
-                    <div className="dot-text">
+                    {/* <div className="dot-text">
                         {dotKey}
-                    </div>
+                    </div> */}
                 </div>
                 <a className={`dot-interactable${isEnabled ? ' enabled' : ''}`}
                     onMouseEnter={this.onMouse}
@@ -106,11 +105,11 @@ class DotButtonView extends Component {
                 >
                 </a>
                 {inDotsSection &&
-                    <div className="dot-text-container">
+                    <a className="dot-text-container enabled">
                         <div className="dot-text">
                             {dotKey}
                         </div>
-                    </div>
+                    </a>
                 }
             </div>
         )

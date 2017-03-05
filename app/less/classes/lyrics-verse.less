@@ -52,17 +52,7 @@
                 }
             }
 
-            // Play button hover styling.
-            &:not(.selected) {
-                &:hover {
-                }
-            }
 
-            &.selected {
-                .lyrics-audio-button {
-                    font-size: 1em;
-                }
-            }
         }
     }
 
@@ -84,8 +74,7 @@
             justify-content: center;
             align-items: center;
 
-            .transition(opacity 0.5s ease);
-            .transition(font 0.1s ease);
+            .transition(~"opacity 0.15s ease, font 0.15s ease");
         }
 
         .lyrics-audio-button {
@@ -100,10 +89,13 @@
             }
         }
     }
+}
 
+.verse-bar-hidden {
     .verse.selected {
         .lyrics-audio-button {
             opacity: 1;
+            font-size: 1em;
         }
     }
 }
@@ -117,19 +109,15 @@
     @verse-bar-margin: 8px;
 
     &.above {
-        margin-top: @verse-bar-margin;
-
-        .transition(~"top 0.2s ease, transform 0.2s ease");
-
         top: -50px;
+        margin-top: @verse-bar-margin;
+        .transition(~"top 0.15s ease, transform 0.15s ease");
     }
 
     &.below {
-        margin-bottom: @verse-bar-margin;
-
-        .transition(~"bottom 0.2s ease, transform 0.2s ease");
-
         bottom: -50px;
+        margin-bottom: @verse-bar-margin;
+        .transition(~"bottom 0.15s ease, transform 0.15s ease");
 
         .verse-bar {
             box-shadow: 0 0 12px 5px @darker-box-shadow-colour;
@@ -169,13 +157,13 @@
 }
 
 .is-playing {
-    .verse.selected, .verse-bar {
+    .verse-bar-hidden .verse.selected, .verse-bar {
         background-color: @audio-play-colour;
     }
 }
 
 .is-paused {
-    .verse.selected, .verse-bar {
+    .verse-bar-hidden .verse.selected, .verse-bar {
         background-color: @audio-pause-colour;
     }
 }

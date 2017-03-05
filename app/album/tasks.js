@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Clicking lower verse bar makes screen jump again...`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `method to assemble backdrops and stageProps drawings.`,
         workedHours: 0,
         neededHours: 3
@@ -18,16 +23,6 @@ module.exports = [
         taskName: `Make interactive audio slider region better, and add times, and fix wonkiness.`,
         workedHours: 4,
         neededHours: 8
-    },
-    {
-        taskName: `Score and wiki should just hide, not reload upon each popup opened.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Clicking on verse when verse bar is shown does not hide verse bar`,
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: `Close button and body click in score should have same effect on annotation`,
@@ -245,6 +240,11 @@ module.exports = [
     //     taskName: `toggle min and max device widths`,
     //     workedHours: 0,
     //     neededHours: 1
+    // },
+    // {
+    //     taskName: `Score and wiki should just hide, not reload upon each popup opened.`,
+    //     workedHours: 0,
+    //     neededHours: 5
     // },
     {
         taskName: `refactor to get album objects`,
@@ -1330,6 +1330,11 @@ module.exports = [
     },
     {
         taskName: `Fix jolted movement when scrolling lyrics and verse bar shown or hidden.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Clicking on verse when verse bar is shown does not hide verse bar`,
         workedHours: 1,
         neededHours: 1
     }

@@ -31,20 +31,16 @@ const LyricsVerse = ({
           time,
           verseIndex } = verseObject,
 
-        isTechnicallySelected = verseIndex === selectedVerseIndex,
-
-        // FIXME: Not sure why this doesn't work:
-        // isSelected = isTechnicallySelected && !(verseBarShown && !inVerseBar),
-        isSelected = isTechnicallySelected,
+        isSelected = verseIndex === selectedVerseIndex,
 
         /**
          * Not interactable if technically selected, but currently not selected
          * due to verse bar shown.
          */
-        isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero) && !(isTechnicallySelected && !isSelected),
+        isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero) && !(isSelected && !isSelected),
 
-        isInteractivated = !isTechnicallySelected && interactivatedVerseIndex === verseIndex,
-        isHoverable = !isTechnicallySelected && !isInteractivated && interactivatedVerseIndex === -1,
+        isInteractivated = !isSelected && interactivatedVerseIndex === verseIndex,
+        isHoverable = !isSelected && !isInteractivated && interactivatedVerseIndex === -1,
 
         isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
@@ -52,11 +48,9 @@ const LyricsVerse = ({
         onAnchorClick = onAnnotationClick,
 
         // Allows clicks on selected or interactivated verse to deinteractivate it.
-        onInteractivatableClick = !inVerseBar && !isTechnicallySelected && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null
+        onInteractivatableClick = !inVerseBar && !isSelected && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null
 
     let onLyricPlayClick = null
-
-    // console.error('verseBarShown', verseBarShown);
 
     if (isInteractable) {
 

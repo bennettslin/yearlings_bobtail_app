@@ -375,8 +375,9 @@ const LiveView = ({
             ${isOverviewShown ? ' overview-shown' : ''}
             ${showOverlay ? ' overlay-shown' : ''}
             ${isOverlaidAnnotation ? ' overlaid-annotation' : ' side-annotation'}
-            ${isSelectedVerseAbove ? ' verse-above' : ''}
-            ${isSelectedVerseBelow ? ' verse-below' : ''}
+            ${isSelectedVerseAbove ? 'verse-above' : ''}
+            ${isSelectedVerseBelow ? 'verse-below' : ''}
+            ${!isSelectedVerseAbove && !isSelectedVerseBelow ? 'verse-bar-hidden' : ''}
             ${manualWidth ? ' manual-width' : ''}`
         }>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
