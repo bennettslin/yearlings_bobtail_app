@@ -17,7 +17,7 @@ class AudioSliderView extends Component {
         super(props)
 
         this.handleMouseOrTouchDown = this.handleMouseOrTouchDown.bind(this)
-        this.handleMouseOrTouchMove = this.handleMouseOrTouchMove.bind(this)
+        this.handleMouseOrTouchMoveOrLeave = this.handleMouseOrTouchMoveOrLeave.bind(this)
 
         this.state = {
             mousedOrTouchedRatio: null
@@ -27,7 +27,6 @@ class AudioSliderView extends Component {
     componentWillUpdate(nextProps) {
         if (nextProps.isMousedOrTouched === false &&
             this.props.isMousedOrTouched === true) {
-
             const selectedTime = this.state.mousedOrTouchedRatio * this.props.totalTime
             this.props.onTimeChange(true, selectedTime)
 
@@ -45,7 +44,7 @@ class AudioSliderView extends Component {
         })
     }
 
-    handleMouseOrTouchMove(e) {
+    handleMouseOrTouchMoveOrLeave(e) {
         if (this.props.isMousedOrTouched) {
             this.setState({
                 mousedOrTouchedRatio: this.getSelectedRatio(e)
@@ -58,7 +57,13 @@ class AudioSliderView extends Component {
             rectWidth = parseInt(rect.width),
             ratio = e.nativeEvent.offsetX / rectWidth
 
-        return ratio
+        if (ratio < 0) {
+            return 0
+        } else if (ratio > 1) {
+            return 1
+        } else {
+            return ratio
+        }
     }
 
     render() {
@@ -102,7 +107,8 @@ class AudioSliderView extends Component {
                 <div
                     className="time-bar audio-touch-bar"
                     onMouseDown={e => this.handleMouseOrTouchDown(e)}
-                    onMouseMove={e => this.handleMouseOrTouchMove(e)}
+                    onMouseMove={e => this.handleMouseOrTouchMoveOrLeave(e)}
+                    onMouseLeave={e => this.handleMouseOrTouchMoveOrLeave(e)}
 
                     // onTouchCancel={e => this.logEvent(e, 'touchCancel')}
                     // onTouchEnd={e => this.logEvent(e, 'touchEnd')}

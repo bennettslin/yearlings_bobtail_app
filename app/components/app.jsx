@@ -824,7 +824,7 @@ class App extends Component {
     selectTime(e, selectedTimePlayed = 0) {
         const selectedSong = getSong(this.props)
 
-        if (selectedTimePlayed >= 0 && selectedTimePlayed < selectedSong.totalTime) {
+        if (selectedTimePlayed >= 0 && selectedTimePlayed <= selectedSong.totalTime) {
             let selectedVerseIndex = 0
 
             // Title verse is selectable only if lyrics start after time 0.

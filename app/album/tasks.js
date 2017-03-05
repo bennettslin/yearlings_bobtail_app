@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Make interactive audio slider region better, and add times, and fix wonkiness.`,
+        workedHours: 6,
+        neededHours: 8
+    },
+    {
         taskName: `Clicking lower verse bar makes screen jump in Safari. Also just going from one annotation to the next.`,
         workedHours: 0,
         neededHours: 2
@@ -18,11 +23,6 @@ module.exports = [
         taskName: `Fix selecting time in audio banner dismissing overlay and breaking.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Make interactive audio slider region better, and add times, and fix wonkiness.`,
-        workedHours: 4,
-        neededHours: 8
     },
     {
         taskName: `Close button and body click in score should have same effect on annotation`,
