@@ -121,13 +121,7 @@
 
         .transition(~"top 0.2s ease, transform 0.2s ease");
 
-        &.shown {
-            top: 0;
-        }
-
-        &.hidden {
-            top: -50px;
-        }
+        top: -50px;
     }
 
     &.below {
@@ -135,25 +129,31 @@
 
         .transition(~"bottom 0.2s ease, transform 0.2s ease");
 
-        &.shown {
-            bottom: 0;
-        }
-
-        &.hidden {
-            bottom: -50px;
-        }
+        bottom: -50px;
 
         .verse-bar {
             box-shadow: 0 0 12px 5px @darker-box-shadow-colour;
         }
     }
 
-    &.shown {
-        transform: scale(1);
-    }
+    transform: scale(0);
+}
 
-    &.hidden {
-        transform: scale(0);
+.verse-above {
+    .verse-bar-block {
+        &.above {
+            top: 0;
+            transform: scale(1);
+        }
+    }
+}
+
+.verse-below {
+    .verse-bar-block {
+        &.below {
+            bottom: 0;
+            transform: scale(1);
+        }
     }
 }
 

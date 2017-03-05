@@ -35,55 +35,6 @@
     background-color: rgba(200, 200, 250, 0.4);
 }
 
-// TODO: Make this styling better, of course.
-.verse-bar-block {
-    position: absolute;
-    width: 100%;
-    z-index: @selected-verse-bar-z-index;
-
-    @verse-bar-margin: 8px;
-
-    &.above {
-        margin-top: @verse-bar-margin;
-
-        .transition(~"top 0.2s ease, transform 0.2s ease");
-
-        &.shown {
-            top: 0;
-        }
-
-        &.hidden {
-            top: -50px;
-        }
-    }
-
-    &.below {
-        margin-bottom: @verse-bar-margin;
-
-        .transition(~"bottom 0.2s ease, transform 0.2s ease");
-
-        &.shown {
-            bottom: 0;
-        }
-
-        &.hidden {
-            bottom: -50px;
-        }
-
-        .verse-bar {
-            box-shadow: 0 0 12px 5px @darker-box-shadow-colour;
-        }
-    }
-
-    &.shown {
-        transform: scale(1);
-    }
-
-    &.hidden {
-        transform: scale(0);
-    }
-}
-
 .lyric-button-block {
     position: absolute;
     padding: @app-thin-margin;

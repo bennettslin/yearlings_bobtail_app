@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Fix jolted movement when scrolling lyrics and verse bar shown or hidden.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Hide elements when overlay shown.`,
         workedHours: 0,
         neededHours: 1
@@ -25,9 +20,9 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Score should just hide, not reload upon each popup opened.`,
+        taskName: `Score and wiki should just hide, not reload upon each popup opened.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 5
     },
     {
         taskName: `Clicking on verse when verse bar is shown does not hide verse bar`,
@@ -1330,6 +1325,11 @@ module.exports = [
     },
     {
         taskName: `Strategically use no-select`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Fix jolted movement when scrolling lyrics and verse bar shown or hidden.`,
         workedHours: 1,
         neededHours: 1
     }

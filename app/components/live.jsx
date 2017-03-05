@@ -264,8 +264,6 @@ const LiveView = ({
             hiddenLyricColumnKey,
             hasDoubleColumns,
             isPlaying,
-            isSelectedVerseAbove,
-            isSelectedVerseBelow,
             selectedVerse,
             lyricsStartAtZero,
             accessedOn,

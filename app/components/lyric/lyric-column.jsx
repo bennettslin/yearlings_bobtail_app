@@ -38,8 +38,6 @@ class LyricColumnView extends Component {
 
                 // From props.
         const { isLogue,
-                isSelectedVerseAbove,
-                isSelectedVerseBelow,
                 selectedVerse,
                 onLyricColumnClick,
                 onVerseBarClick,
@@ -52,10 +50,7 @@ class LyricColumnView extends Component {
 
                 ...other } = this.props,
 
-            verseBarShown = isSelectedVerseAbove || isSelectedVerseBelow,
-
             verseBarProps = {
-                verseBarShown,
                 verseObject: selectedVerse,
                 showSingleLyricColumn: other.showSingleLyricColumn,
                 hiddenLyricColumnKey: other.hiddenLyricColumnKey,
@@ -69,13 +64,11 @@ class LyricColumnView extends Component {
                 <div className="lyric-column-animatable">
                     {!isLogue &&
                         <LyricVerseBar {...verseBarProps}
-                            isShown={isSelectedVerseAbove}
                             isAbove={true}
                         />
                     }
                     {!isLogue &&
                         <LyricVerseBar {...verseBarProps}
-                            isShown={isSelectedVerseBelow}
                         />
                     }
                     {showEarButton &&
@@ -91,9 +84,7 @@ class LyricColumnView extends Component {
                         </div>
                     }
                     {lyricExpandButtonChild}
-                    <LyricsSection {...other}
-                        verseBarShown={verseBarShown}
-                    />
+                    <LyricsSection {...other} />
                 </div>
             </div>
         )
