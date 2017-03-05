@@ -153,11 +153,13 @@
         }
     }
 
+    @phone-lyric-column-subtraction: @menu-phone-height + @audio-banner-custom-subfield-height + @audio-banner-custom-subfield-padding * 2;
+
     &.phone-width {
         .lyric-expanded {
             &.is-song {
                 .lyric-column {
-                    height: ~"calc(100% - @{menu-phone-height})";
+                    height: ~"calc(100% - @{phone-lyric-column-subtraction})";
                 }
             }
         }
