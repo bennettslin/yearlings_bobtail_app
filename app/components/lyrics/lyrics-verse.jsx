@@ -98,6 +98,8 @@ class LyricsVerseView extends Component {
         super(props)
 
         this._checkIsSelectedVerse = this._checkIsSelectedVerse.bind(this)
+        this._handleMouseOver = this._handleMouseOver.bind(this)
+        this._handleMouseLeave = this._handleMouseLeave.bind(this)
     }
 
     componentDidMount() {
@@ -111,6 +113,18 @@ class LyricsVerseView extends Component {
 
     componentWillUpdate(nextProps) {
         this._checkIsSelectedVerse(nextProps)
+    }
+
+    _handleMouseOver(e) {
+        if (this.props.isHoverable) {
+            this.props.onVerseHover(e, this.props.verseObject.verseIndex)
+        }
+    }
+
+    _handleMouseLeave(e) {
+        if (this.props.isHoverable) {
+            this.props.onVerseHover(e)
+        }
     }
 
     _checkIsSelectedVerse(props) {
@@ -190,6 +204,8 @@ class LyricsVerseView extends Component {
                     ${isHoverable ? 'hoverable' : ''}
                 `}
                 onClick={onInteractivatableClick}
+                onMouseOver={this._handleMouseOver}
+                onMouseLeave={this._handleMouseLeave}
             >
                 {isInteractable && !inVerseBar &&
                     <LyricsAudioButton

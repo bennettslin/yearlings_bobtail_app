@@ -100,6 +100,8 @@ const LiveView = ({
 
     lyricsStartAtZero,
     hiddenLyricColumnKey,
+    hoveredVerseTimeBegin,
+    hoveredVerseTimeEnd,
 
     sliderMousedOrTouched,
     showLyricButtons,
@@ -139,6 +141,7 @@ const LiveView = ({
     onLyricSectionScroll,
     onVerseBarClick,
     onInteractivatedVerseClick,
+    onVerseHover,
     onSliderMouseOrTouch,
 
     // From controller.
@@ -177,6 +180,8 @@ const LiveView = ({
             <AudioTimer {...audioTimerProps} />
         ),
         audioBannerProps = {
+            hoveredVerseTimeBegin,
+            hoveredVerseTimeEnd,
             sliderMousedOrTouched,
             selectedSongTitle,
             selectedTimePlayed,
@@ -286,7 +291,8 @@ const LiveView = ({
             onSelectVerseElement,
             onLyricSectionScroll,
             onVerseBarClick,
-            onInteractivatedVerseClick
+            onInteractivatedVerseClick,
+            onVerseHover
         },
         scoresTipsSectionProps = {
             isPhone,
@@ -375,6 +381,7 @@ const LiveView = ({
             ${isOverviewShown ? ' overview-shown' : ''}
             ${showOverlay ? ' overlay-shown' : ''}
             ${isOverlaidAnnotation ? ' overlaid-annotation' : ' side-annotation'}
+            ${sliderMousedOrTouched ? 'slider-moused-or-touched' : 'slider-not-moused-or-touched'}
             ${isSelectedVerseAbove ? 'verse-above' : ''}
             ${isSelectedVerseBelow ? 'verse-below' : ''}
             ${!isSelectedVerseAbove && !isSelectedVerseBelow ? 'verse-bar-hidden' : ''}

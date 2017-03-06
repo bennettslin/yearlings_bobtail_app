@@ -46,7 +46,13 @@
 
 .text-span {
     position: relative;
-    .user-select;
+}
+
+// Allow text to be selected only when slider is not being used.
+.slider-not-moused-or-touched {
+    .text-span {
+        .user-select;
+    }
 }
 
 .annotation-section, .lyrics-section {

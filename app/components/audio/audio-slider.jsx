@@ -69,6 +69,8 @@ class AudioSliderView extends Component {
 
     render() {
         const { isMousedOrTouched,
+                hoveredVerseTimeBegin,
+                hoveredVerseTimeEnd,
                 selectedTimePlayed,
                 stanzaTimes,
                 totalTime } = this.props,
@@ -89,7 +91,15 @@ class AudioSliderView extends Component {
             remainWidth = 100 - playedWidth,
             remainStyle = {
                 width: `${remainWidth}%`
-            }
+            },
+
+            showHovered = hoveredVerseTimeBegin > -1 && hoveredVerseTimeEnd > -1,
+            hoveredPosition = showHovered ? (hoveredVerseTimeBegin / totalTime) * 100 : null,
+            hoveredWidth = showHovered ? ((hoveredVerseTimeEnd - hoveredVerseTimeBegin) / totalTime) * 100 : null,
+            hoveredStyle = showHovered ? {
+                left: `${hoveredPosition}%`,
+                width: `${hoveredWidth}%`
+            } : null
 
         return (
             <div
@@ -117,6 +127,10 @@ class AudioSliderView extends Component {
                 >
                     <div className="above played time-play-display">{displayedPlayTime}</div>
                 </div>
+                <div
+                    className={`hovered-cursor ${showHovered ? 'is-shown' : ''}`}
+                    style={hoveredStyle}
+                ></div>
                 <div className="below remain time-play-display">{displayedRemainTime}</div>
                 <div
                     className="above remain time-play-display"

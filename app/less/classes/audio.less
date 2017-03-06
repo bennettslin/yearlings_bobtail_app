@@ -212,20 +212,42 @@
     height: 100%;
 }
 
-.audio-time-bar {
-    overflow: hidden;
-
-    // Only animate when moved by audio player updates, not user.
-    &.not-moused-or-touched {
-        .transition(width 0.1s ease);
-    }
-    background-color: rgba(255, 255, 200, 0.8);
-}
-
 .stanza-time-bar {
     .transition(~"width 0.3s ease, background-color 0.3s ease");
     left: auto;
     right: 0;
+}
+
+.audio-time-bar {
+    overflow: hidden;
+
+    .transition(background-color 0.1s ease);
+
+    // Only animate when moved by audio player updates, not user.
+    &.not-moused-or-touched {
+        .transition(~"width 0.1s ease, background-color 0.1s ease");
+    }
+
+    background-color: rgba(225, 225, 200, 0.8);
+}
+
+.slider-moused-or-touched {
+    .audio-time-bar {
+        background-color: rgba(255, 255, 225, 0.8);
+    }
+}
+
+.hovered-cursor {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    background-color: @audio-highlight-colour;
+    opacity: 0;
+
+    &.is-shown {
+        opacity: 1;
+    }
 }
 
 .time-play-display {

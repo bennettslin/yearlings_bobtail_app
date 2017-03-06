@@ -23,7 +23,7 @@ export default {
             copiedSong.lyrics = `lyrics: ${copiedSong.lyrics.length}`
             copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
             copiedSong.annotationsDotKeys = `annotationsDotKeys: ${copiedSong.annotationsDotKeys.length}`
-            copiedSong.times = `times: ${copiedSong.times.length}`
+            // copiedSong.times = `times: ${copiedSong.times.length}`
         }
 
         copiedSong.stanzaTimes = `stanzaTimes: ${copiedSong.stanzaTimes.length}`

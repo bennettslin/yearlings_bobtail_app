@@ -205,6 +205,7 @@ class App extends Component {
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
+        this.hoverVerse = this.hoverVerse.bind(this)
         this.interactivateVerse = this.interactivateVerse.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
@@ -516,9 +517,46 @@ class App extends Component {
     interactivateVerse(e, interactivatedVerseIndex = -1) {
         this._stopPropagation(e)
 
+        this._isVerseHoveredOrInteractivated(interactivatedVerseIndex)
+
         this.setState({
             interactivatedVerseIndex
         })
+    }
+
+    hoverVerse(e, hoveredVerseIndex = -1) {
+        this._stopPropagation(e)
+
+        /**
+         * Verse does not need to know hovered verse index, as its hover is
+         * handled through CSS only. Only audio banner needs to know.
+         */
+        this._isVerseHoveredOrInteractivated(hoveredVerseIndex)
+    }
+
+    _isVerseHoveredOrInteractivated(verseIndex) {
+
+        // Hover or interactivation ended.
+        if (verseIndex === -1) {
+            this.setState({
+                hoveredVerseTimeBegin: -1,
+                hoveredVerseTimeEnd: -1
+            })
+
+        // Hover or interactivation began.
+        } else {
+            // Get times.
+            const selectedSong = getSong(this.props),
+                songTimes = selectedSong.times,
+
+                hoveredVerseTimeBegin = songTimes[verseIndex],
+                hoveredVerseTimeEnd = verseIndex < songTimes.length - 1 ? songTimes[verseIndex + 1] : selectedSong.totalTime
+
+            this.setState({
+                hoveredVerseTimeBegin,
+                hoveredVerseTimeEnd
+            })
+        }
     }
 
     selectLyricExpand(e, isLyricExpanded = !this.state.isLyricExpanded) {
@@ -1025,6 +1063,9 @@ class App extends Component {
 
             // FIXME: Currently, the buttons fade in and out simply based on whether scroll was up or down. Make this more user-friendly?
             newState.showLyricButtons = lyricSectionTop < this.state.lyricSectionTop
+
+            // When lyrics are scrolled, verse should no longer be interactivated.
+            this.interactivateVerse()
         }
 
         this.setState(newState)
@@ -1415,6 +1456,7 @@ class App extends Component {
                     onPlayClick={this.togglePlay}
                     onVerseClick={this.selectVerse}
                     onInteractivatedVerseClick={this.interactivateVerse}
+                    onVerseHover={this.hoverVerse}
                     onDotClick={this.selectDot}
                     onLyricColumnClick={this.selectLyricColumn}
                     onPopupContainerClick={this.handlePopupContainerClick}
