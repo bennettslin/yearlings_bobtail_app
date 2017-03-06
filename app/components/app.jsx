@@ -47,7 +47,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getIsPhone, getLyricSectionRect } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -853,21 +853,9 @@ class App extends Component {
     }
 
     selectTime(e, selectedTimePlayed = 0) {
-        const selectedSong = getSong(this.props)
+        const selectedVerseIndex = getVerseIndexForTime(this.props, selectedTimePlayed)
 
-        if (selectedTimePlayed >= 0 && selectedTimePlayed <= selectedSong.totalTime) {
-            let selectedVerseIndex = 0
-
-            // Title verse is selectable only if lyrics start after time 0.
-            if (selectedTimePlayed === 0) {
-                selectedVerseIndex = getLyricsStartAtZero(this.props) ? 1 : 0
-
-            // Select corresponding verse.
-            } else {
-                while (selectedVerseIndex < selectedSong.times.length - 1 && selectedTimePlayed >= selectedSong.times[selectedVerseIndex + 1]) {
-                    selectedVerseIndex++
-                }
-            }
+        if (selectedVerseIndex !== null) {
 
             // FIXME: Don't scroll for now. Figure out later.
             this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll: false })

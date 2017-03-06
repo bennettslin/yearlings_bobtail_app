@@ -311,6 +311,30 @@ export const getVerseIndexForAnnotationIndex = ({
     })
 }
 
+export const getVerseIndexForTime = (props, time) => {
+    const selectedSong = getSong(props)
+
+    if (time >= 0 && time <= selectedSong.totalTime) {
+        let selectedVerseIndex = 0
+
+        // Title verse is selectable only if lyrics start after time 0.
+        if (time === 0) {
+            selectedVerseIndex = getLyricsStartAtZero(props) ? 1 : 0
+
+        // Select corresponding verse.
+        } else {
+            while (selectedVerseIndex < selectedSong.times.length - 1 && time >= selectedSong.times[selectedVerseIndex + 1]) {
+                selectedVerseIndex++
+            }
+        }
+
+        return selectedVerseIndex
+
+    } else {
+        return null
+    }
+}
+
 export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, direction) => {
     const annotation = getAnnotation(props),
         selectedDotKeys = props.selectedDotKeys
