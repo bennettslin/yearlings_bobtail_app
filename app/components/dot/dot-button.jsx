@@ -92,9 +92,9 @@ class DotButtonView extends Component {
                     </div>
                 }
                 <div className={`dot ${dotKey}${isPresent ? '' : ' background'}${isToggleDeselected ? ' deselected' : ''}${isEnabled ? '' : ' disabled'}${accessHighlighted ? ' access-highlighted' : ''}`}>
-                    {/* <div className="dot-text">
+                    <div className="dot-text">
                         {dotKey}
-                    </div> */}
+                    </div>
                 </div>
                 <a className={`dot-interactable${isEnabled ? ' enabled' : ''}`}
                     onMouseEnter={this.onMouse}

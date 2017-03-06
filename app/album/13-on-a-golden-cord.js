@@ -606,25 +606,16 @@ module.exports = {
             },
             {
                 unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: `TODO: scruggs`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 topSideStanza: [
                     {
                         lyric: {
                             italic: {
                                 anchor: `Odelay!`,
                                 annotation: {
-                                    description: `With an hour or two left before daybreak, I began to feel the mild euphoria of dehydration, and decided to practise my yodelling.`,
+                                    description: `The yodelling reflects the mild euphoria of dehydration that I begin to feel just before daybreak.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [NARRATIVE]: true
+                                        [NARRATIVE]: true,
+                                        [SONGWRITING]: true
                                     }
                                 }
                             }
@@ -679,7 +670,7 @@ module.exports = {
                                 properNoun: true,
                                 annotation: {
                                     description: [
-                                        `Marching onward through the brisk twilight, I was reminded of simpler days as a child, when I would sing Johnny Horton's`,
+                                        `Marching onward through the brisk twilight, I think back to simpler days as a child, when I would sing Johnny Horton's`,
                                         {
                                             anchor: `"North to Alaska,"`,
                                             wiki: `North_to_Alaska_(song)`
