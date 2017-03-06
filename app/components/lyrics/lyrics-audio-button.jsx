@@ -8,12 +8,15 @@ import React from 'react'
 
 const LyricsAudioButton = ({
 
+    isAudioButtonEnabled,
     isPlaying,
     isSelected,
     isAfterSelected,
-    onClick
+    onAudioButtonClick
 
 }) => {
+
+    const onClick = isAudioButtonEnabled ? onAudioButtonClick : null
 
     let buttonIcon,
         audioStatusClassName = isSelected ? 'audio-colour' : 'audio-nav'
@@ -25,8 +28,8 @@ const LyricsAudioButton = ({
     }
 
     return (
-        <div className="lyrics-audio-button-block">
-            <a className="lyrics-audio-button-child lyrics-audio-button enabled"
+        <div className={`lyrics-audio-button-block ${isAudioButtonEnabled ? 'audio-button-enabled' : ''}`}>
+            <a className={`lyrics-audio-button-child lyrics-audio-button ${isAudioButtonEnabled ? 'enabled' : ''}`}
                 onClick={onClick}
             >
                 <div className={`

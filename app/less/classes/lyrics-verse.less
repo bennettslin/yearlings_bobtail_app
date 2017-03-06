@@ -1,5 +1,7 @@
 /* Styling for lyrics line, verse, and verse bar. */
 
+@lyrics-audio-button-block-width: 1.5em;
+
 .lyrics-block {
     .verse {
         @verse-padding: 10px;
@@ -38,11 +40,11 @@
 
             // Make all this styling better, obviously.
             &.interactivated, &.hoverable:hover {
-                color: #448;
-                background-color: @audio-neutral-colour;
 
-                &.interactivated {
-                    box-shadow: inset 0 0 5px @darker-box-shadow-colour;
+                .lyrics-audio-button-block {
+                    &.audio-button-enabled {
+                        left: -@lyrics-audio-button-block-width * 0.8;
+                    }
                 }
 
                 .lyrics-audio-button {
@@ -52,17 +54,25 @@
                 }
             }
 
+            &.interactivated {
+                box-shadow: inset 0 0 5px @darker-box-shadow-colour;
+            }
+
+            &.hoverable:hover {
+                color: #448;
+                background-color: @audio-neutral-colour;
+            }
 
         }
     }
 
-    @lyrics-audio-button-block-width: 1.5em;
-
     .lyrics-audio-button-block {
         position: absolute;
+        left: 0;
         height: 100%;
         width: @lyrics-audio-button-block-width;
-        left: -@lyrics-audio-button-block-width * 0.8;
+
+        .transition(left 0.1s ease);
 
         // Either button or icon.
         .lyrics-audio-button-child {
@@ -87,15 +97,6 @@
                 width: @lyrics-audio-button-block-width;
                 height: @lyrics-audio-button-block-width;
             }
-        }
-    }
-}
-
-.verse-bar-hidden {
-    .verse.selected {
-        .lyrics-audio-button {
-            opacity: 1;
-            font-size: 1em;
         }
     }
 }

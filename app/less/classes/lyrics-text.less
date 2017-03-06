@@ -132,16 +132,6 @@
     @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-verse-colour;
 }
 
-.interactivated, .hoverable:hover {
-    &.verse .anchor-block {
-        text-shadow:
-        -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-neutral-colour,
-        @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-neutral-colour,
-        -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-neutral-colour,
-        @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-neutral-colour;
-    }
-}
-
 .is-playing {
     .verse.audio-colour .anchor-block {
         text-shadow:
@@ -159,5 +149,15 @@
         @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-pause-colour,
         -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-pause-colour,
         @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-pause-colour;
+    }
+}
+
+.hoverable:hover {
+    &.verse .anchor-block {
+        text-shadow:
+        -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-neutral-colour,
+        @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-neutral-colour,
+        -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-neutral-colour,
+        @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-neutral-colour;
     }
 }

@@ -7,16 +7,14 @@
         * If line is interactivated by hover, it can be deinteractivated simply by removing hover
         * If line is interactivated by click, it can be deinteractivated by clicking elsewhere
 
-    * The selected line is not interactivatable
-        * But it still shows the lyric audio button
-        * It is scaled slightly larger
-        * Its background-colour is green
-        * It has padding on top and bottom
+    * The selected line
+        * Can also be interactivated
+        * Its background-colour is green when playing
+        * Its background-colour is red when paused
 
-    * But when there is a verse bar
-        * Selected line does not show lyric audio button
+    * When there is a verse bar
         * Selected line has no styling
 
     * When line is interactivated
         * Its lyric audio button is shown
-        * Its colour and background-colour are inverted
+        * It has an inset shadow

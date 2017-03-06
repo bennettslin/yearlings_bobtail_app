@@ -39,8 +39,8 @@ const LyricsVerse = ({
          */
         isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero) && !(isSelected && !isSelected),
 
-        isInteractivated = !isSelected && interactivatedVerseIndex === verseIndex,
-        isHoverable = !isSelected && !isInteractivated && interactivatedVerseIndex === -1,
+        isInteractivated = interactivatedVerseIndex === verseIndex,
+        isHoverable = !isInteractivated && interactivatedVerseIndex === -1,
 
         isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
@@ -48,7 +48,13 @@ const LyricsVerse = ({
         onAnchorClick = onAnnotationClick,
 
         // Allows clicks on selected or interactivated verse to deinteractivate it.
-        onInteractivatableClick = !inVerseBar && !isSelected && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null
+        onInteractivatableClick = !inVerseBar && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null,
+
+        /**
+         * Audio button is enabled when it's the interactivated verse, or when
+         * there is no interactivated verse
+         */
+        isAudioButtonEnabled = interactivatedVerseIndex === -1 || isInteractivated
 
     let onLyricPlayClick = null
 
@@ -67,6 +73,7 @@ const LyricsVerse = ({
     return (
         <LyricsVerseView {...other}
             accessHighlighted={accessHighlighted}
+            isAudioButtonEnabled={isAudioButtonEnabled}
             isTitle={isTitle}
             isSelected={isSelected}
             isAfterSelected={isAfterSelected}
@@ -143,6 +150,7 @@ class LyricsVerseView extends Component {
 
                 // From controller.
                 accessHighlighted,
+                isAudioButtonEnabled,
                 isInteractable,
                 isInteractivated,
                 isHoverable,
@@ -185,10 +193,11 @@ class LyricsVerseView extends Component {
             >
                 {isInteractable && !inVerseBar &&
                     <LyricsAudioButton
+                        isAudioButtonEnabled={isAudioButtonEnabled}
                         isSelected={isSelected}
                         isPlaying={isPlaying}
                         isAfterSelected={isAfterSelected}
-                        onClick={onLyricPlayClick}
+                        onAudioButtonClick={onLyricPlayClick}
                     />
                 }
                 {isDoubleSpeaker ? (
