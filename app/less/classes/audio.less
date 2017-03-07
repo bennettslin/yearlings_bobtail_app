@@ -245,6 +245,10 @@
     background-color: @audio-highlight-colour;
     opacity: 0;
 
+    .transition(~"background-color 0.2s ease, opacity 0.2s ease");
+
+    box-shadow: 0 0 1px 1px @audio-highlight-colour;
+
     &.is-shown {
         opacity: 1;
     }

@@ -104,6 +104,7 @@ const LiveView = ({
     hoveredVerseTimeEnd,
 
     sliderMousedOrTouched,
+    sliderRatio,
     showLyricButtons,
     showSingleLyricColumn,
     isLyricExpanded,
@@ -182,6 +183,7 @@ const LiveView = ({
         audioBannerProps = {
             hoveredVerseTimeBegin,
             hoveredVerseTimeEnd,
+            sliderRatio,
             sliderMousedOrTouched,
             selectedSongTitle,
             selectedTimePlayed,

@@ -47,7 +47,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey, getRatioForX } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getIsPhone, getLyricSectionRect } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -223,8 +223,9 @@ class App extends Component {
         this.handleKeyDown = this.handleKeyDown.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
         this.windowResize = this.windowResize.bind(this)
-        this._handleMouseOrTouchUpOrLeave = this._handleMouseOrTouchUpOrLeave.bind(this)
         this._handleSliderMouseOrTouch = this._handleSliderMouseOrTouch.bind(this)
+        this._handleAppMouseOrTouchMove = this._handleAppMouseOrTouchMove.bind(this)
+        this._handleAppMouseOrTouchUpOrLeave = this._handleAppMouseOrTouchUpOrLeave.bind(this)
     }
 
     _assignLogFunctions() {
@@ -367,16 +368,41 @@ class App extends Component {
      * EVENT LISTENERS *
      *******************/
 
-    _handleMouseOrTouchUpOrLeave() {
+    _handleSliderMouseOrTouch(e) {
+        const rect = e.target.getBoundingClientRect(),
+            sliderLeft = rect.left,
+            sliderWidth = rect.width,
+            sliderRatio = getRatioForX(e.nativeEvent.screenX, sliderLeft, sliderWidth)
+
         this.setState({
-            sliderMousedOrTouched: false
+            sliderLeft,
+            sliderWidth,
+            sliderRatio,
+            sliderMousedOrTouched: true
         })
     }
 
-    _handleSliderMouseOrTouch() {
-        this.setState({
-            sliderMousedOrTouched: true
-        })
+    _handleAppMouseOrTouchMove(e) {
+        if (this.state.sliderMousedOrTouched) {
+            const { sliderLeft,
+                    sliderWidth } = this.state,
+                sliderRatio = getRatioForX(e.nativeEvent.screenX, sliderLeft, sliderWidth)
+
+            this.setState({
+                sliderRatio
+            })
+        }
+    }
+
+    _handleAppMouseOrTouchUpOrLeave(e) {
+        if (this.state.sliderMousedOrTouched) {
+            const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime
+            this.selectTime(true, selectedTime)
+            
+            this.setState({
+                sliderMousedOrTouched: false
+            })
+        }
     }
 
     toggleAdmin() {
@@ -1398,8 +1424,9 @@ class App extends Component {
                     ${isPlaying ? ' is-playing' : ' is-paused'}
                 `}
                 onClick={this._onBodyClick}
-                onMouseUp={this._handleMouseOrTouchUpOrLeave}
-                onMouseLeave={this._handleMouseOrTouchUpOrLeave}
+                onMouseMove={this._handleAppMouseOrTouchMove}
+                onMouseUp={this._handleAppMouseOrTouchUpOrLeave}
+                onMouseLeave={this._handleAppMouseOrTouchUpOrLeave}
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"
             >

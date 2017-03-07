@@ -20,11 +20,11 @@ const AudioBannerView = ({
     hoveredVerseTimeEnd,
     sliderMousedOrTouched,
     selectedSongTitle,
+    sliderRatio,
     selectedTimePlayed,
     totalTime,
     stanzaTimes,
     onSliderMouseOrTouch,
-    onTimeChange,
 
     audioTimerChild
 
@@ -34,11 +34,11 @@ const AudioBannerView = ({
             isMousedOrTouched={sliderMousedOrTouched}
             hoveredVerseTimeBegin={hoveredVerseTimeBegin}
             hoveredVerseTimeEnd={hoveredVerseTimeEnd}
+            sliderRatio={sliderRatio}
             selectedTimePlayed={selectedTimePlayed}
             totalTime={totalTime}
             stanzaTimes={stanzaTimes}
             onMouseOrTouch={onSliderMouseOrTouch}
-            onTimeChange={onTimeChange}
         />
         <div className="audio-banner audio-display-block">
             <div className="audio-banner-title">

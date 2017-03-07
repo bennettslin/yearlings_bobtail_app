@@ -1,8 +1,18 @@
 module.exports = [
     {
-        taskName: `audio banner only registers touch begin, app registers move and end, and is touch accessible.`,
+        taskName: `Make audio slider not weird in logue.`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 1
+    },
+    {
+        taskName: `Hovered cursor in audio slider should not go to the left.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `audio banner is touch accessible.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Fix dot bubbles being hidden by menu.`,
@@ -1358,5 +1368,10 @@ module.exports = [
         taskName: `Hover verses.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `audio banner only registers touch begin, app registers move and end.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

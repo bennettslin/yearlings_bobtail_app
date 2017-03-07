@@ -311,6 +311,19 @@ export const getVerseIndexForAnnotationIndex = ({
     })
 }
 
+export const getRatioForX = (screenX, sliderLeft, sliderWidth) => {
+    const sliderX = screenX - sliderLeft,
+        ratio = sliderX / sliderWidth
+
+    if (ratio < 0) {
+        return 0
+    } else if (ratio > 1) {
+        return 1
+    } else {
+        return ratio
+    }
+}
+
 export const getVerseIndexForTime = (props, time) => {
     const selectedSong = getSong(props)
 
