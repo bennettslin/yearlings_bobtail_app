@@ -115,6 +115,7 @@ const LyricsUnitView = ({
                     <LyricsStanza {...other}
                         stanzaArray={stanzaArray}
                         showStanzaTypeAndIndex={showStanzaTypeAndIndex}
+                        inMain={inMain}
                         stanzaIndex={shownStanzaIndex}
                         stanzaType={itsStanzaType}
                         selectedDotKeys={selectedDotKeys}

@@ -11,6 +11,7 @@ import { getPropsAreSame } from 'helpers/general-helper'
 const LyricsVerse = ({
 
     // verseBarShown,
+    inMain,
     accessedVerseIndex,
     selectedVerseIndex,
     interactivatedVerseIndex,
@@ -42,7 +43,7 @@ const LyricsVerse = ({
         isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero) && !(isSelected && !isSelected),
 
         isInteractivated = interactivatedVerseIndex === verseIndex,
-        isHoverable = !isInteractivated && interactivatedVerseIndex === -1,
+        isHoverable = inMain && !isInteractivated && interactivatedVerseIndex === -1,
 
         isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
@@ -59,7 +60,24 @@ const LyricsVerse = ({
         isAudioButtonEnabled = interactivatedVerseIndex === -1 || isInteractivated,
 
         isBeforeSliderHighlighted = sliderMousedOrTouched && verseIndex < sliderVerseIndex,
-        isAfterSliderHighlighted = sliderMousedOrTouched && verseIndex > sliderVerseIndex
+        isAfterSliderHighlighted = sliderMousedOrTouched && verseIndex > sliderVerseIndex,
+
+        hasVerseIndex = !isNaN(verseIndex),
+
+        // If no verse index, we'll count it as odd.
+        isEven = hasVerseIndex && verseIndex % 2 === 0,
+
+        verseIndexClassName = ` ${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
+
+    let backgroundClassName = ''
+
+    if (!inVerseBar) {
+        if (inMain) {
+            backgroundClassName = isEven ? 'even' : 'odd'
+        } else {
+            backgroundClassName = 'in-side'
+        }
+    }
 
     let onLyricPlayClick = null
 
@@ -77,6 +95,8 @@ const LyricsVerse = ({
 
     return (
         <LyricsVerseView {...other}
+            verseIndexClassName={verseIndexClassName}
+            backgroundClassName={backgroundClassName}
             accessHighlighted={accessHighlighted}
             isAudioButtonEnabled={isAudioButtonEnabled}
             isTitle={isTitle}
@@ -168,8 +188,11 @@ class LyricsVerseView extends Component {
         const { verseObject,
                 hiddenLyricColumnKey,
                 inVerseBar,
+                inMain,
 
                 // From controller.
+                verseIndexClassName,
+                backgroundClassName,
                 accessHighlighted,
                 isAudioButtonEnabled,
                 isInteractable,
@@ -187,28 +210,15 @@ class LyricsVerseView extends Component {
 
             ...other } = this.props,
 
-            { verseIndex } = verseObject,
-
-            hasVerseIndex = !isNaN(verseIndex),
-
-            // If no verse index, we'll count it as odd.
-            isEven = hasVerseIndex && verseIndex % 2 === 0,
-
-            verseIndexClass = ` ${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
-
-        let oddOrEvenClassName = ''
-
-        if (!inVerseBar) {
-            oddOrEvenClassName = isEven ? 'even' : 'odd'
-        }
+            { verseIndex } = verseObject
 
         return (
             <div
                 ref={(node) => (this.myVerse = node)}
                 className={`
                     verse
-                    ${verseIndexClass}
-                    ${oddOrEvenClassName}
+                    ${verseIndexClassName}
+                    ${backgroundClassName}
                     ${isSelected ? 'selected' : ''}
                     ${accessHighlighted ? 'access-highlighted' : ''}
                     ${isInteractable ? 'interactable' : ''}

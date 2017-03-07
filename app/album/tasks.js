@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Slider in verse styling, fix side stanzas, determine slider selected verse, hijack verse bar`,
+        taskName: `Slider in verse styling, determine slider selected verse, hijack verse bar`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 4
     },
     {
         taskName: `Hovered cursor in audio slider should not go to the left.`,
@@ -1387,6 +1387,11 @@ module.exports = [
     {
         taskName: `Bug where verse bar shows when mounted`,
         workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Remove unneeded class names from side stanzas.`,
+        workedHours: 0,
         neededHours: 1
     }
 ]

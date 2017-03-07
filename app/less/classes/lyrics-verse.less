@@ -160,33 +160,37 @@
     }
 }
 
+.slider-not-moused-or-touched .verse {
+    &.odd, &.in-side {
+        background-color: @odd-verse-colour;
+
+        .anchor-block {
+            text-shadow:
+            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
+            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
+            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour,
+            @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour;
+        }
+    }
+}
+
+.slider-not-moused-or-touched .even, .slider-moused-or-touched .in-side {
+    &.verse {
+        background-color: @even-verse-colour;
+
+        .anchor-block {
+            text-shadow:
+            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-verse-colour,
+            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-verse-colour,
+            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-verse-colour,
+            @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-verse-colour;
+        }
+    }
+}
+
 .slider-not-moused-or-touched {
 
     .verse {
-        &.odd {
-            background-color: @odd-verse-colour;
-
-            .anchor-block {
-                text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour;
-            }
-        }
-
-        &.even {
-            background-color: @even-verse-colour;
-
-            .anchor-block {
-                text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-verse-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-verse-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-verse-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-verse-colour;
-            }
-        }
-
         &.hoverable:hover {
             background-color: @audio-highlight-colour;
 
@@ -203,30 +207,27 @@
 
 .slider-moused-or-touched {
 
-    @test-colour-before: violet;
-    @test-colour-after: purple;
-
     .verse.before-slider {
-        background-color: @test-colour-before;
+        background-color: @audio-spent-colour;
 
         .anchor-block {
             text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @test-colour-before,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @test-colour-before,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @test-colour-before,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @test-colour-before;
+            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-spent-colour,
+            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-spent-colour,
+            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-spent-colour,
+            @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-spent-colour;
         }
     }
 
     .verse.after-slider {
-        background-color: @test-colour-after;
+        background-color: @audio-remain-colour;
 
         .anchor-block {
             text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @test-colour-after,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @test-colour-after,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @test-colour-after,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @test-colour-after;
+            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-remain-colour,
+            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-remain-colour,
+            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-remain-colour,
+            @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-remain-colour;
         }
     }
 }
