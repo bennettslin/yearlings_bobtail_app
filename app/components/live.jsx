@@ -105,6 +105,7 @@ const LiveView = ({
 
     sliderMousedOrTouched,
     sliderRatio,
+    sliderVerseIndex,
     showLyricButtons,
     showSingleLyricColumn,
     isLyricExpanded,
@@ -181,6 +182,7 @@ const LiveView = ({
             <AudioTimer {...audioTimerProps} />
         ),
         audioBannerProps = {
+            isLogue,
             hoveredVerseTimeBegin,
             hoveredVerseTimeEnd,
             sliderRatio,
@@ -266,6 +268,8 @@ const LiveView = ({
             // For lyrics line width reset.
             isPortrait: windowHeight > windowWidth,
 
+            sliderMousedOrTouched,
+            sliderVerseIndex,
             isLogue,
             showSingleLyricColumn,
             hiddenLyricColumnKey,

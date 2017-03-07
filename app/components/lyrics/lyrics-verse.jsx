@@ -19,6 +19,8 @@ const LyricsVerse = ({
     onVerseClick,
     onPlayClick,
     onInteractivatedVerseClick,
+    sliderMousedOrTouched,
+    sliderVerseIndex,
 
 ...other }) => {
 
@@ -54,7 +56,10 @@ const LyricsVerse = ({
          * Audio button is enabled when it's the interactivated verse, or when
          * there is no interactivated verse
          */
-        isAudioButtonEnabled = interactivatedVerseIndex === -1 || isInteractivated
+        isAudioButtonEnabled = interactivatedVerseIndex === -1 || isInteractivated,
+
+        isBeforeSliderHighlighted = sliderMousedOrTouched && verseIndex < sliderVerseIndex,
+        isAfterSliderHighlighted = sliderMousedOrTouched && verseIndex > sliderVerseIndex
 
     let onLyricPlayClick = null
 
@@ -80,6 +85,8 @@ const LyricsVerse = ({
             isInteractable={isInteractable}
             isInteractivated={isInteractivated}
             isHoverable={isHoverable}
+            isBeforeSliderHighlighted={isBeforeSliderHighlighted}
+            isAfterSliderHighlighted={isAfterSliderHighlighted}
             isDoubleSpeaker={isDoubleSpeaker}
             onLyricPlayClick={onLyricPlayClick}
             onAnchorClick={onAnchorClick}
@@ -168,6 +175,8 @@ class LyricsVerseView extends Component {
                 isInteractable,
                 isInteractivated,
                 isHoverable,
+                isBeforeSliderHighlighted,
+                isAfterSliderHighlighted,
                 isSelected,
                 isPlaying,
                 isAfterSelected,
@@ -185,9 +194,13 @@ class LyricsVerseView extends Component {
             // If no verse index, we'll count it as odd.
             isEven = hasVerseIndex && verseIndex % 2 === 0,
 
-            verseIndexClass = ` ${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`,
+            verseIndexClass = ` ${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
 
-            audioStatusClassName = isSelected ? 'audio-colour' : ''
+        let oddOrEvenClassName = ''
+
+        if (!inVerseBar) {
+            oddOrEvenClassName = isEven ? 'even' : 'odd'
+        }
 
         return (
             <div
@@ -195,13 +208,14 @@ class LyricsVerseView extends Component {
                 className={`
                     verse
                     ${verseIndexClass}
-                    ${isEven ? 'even' : 'odd'}
+                    ${oddOrEvenClassName}
                     ${isSelected ? 'selected' : ''}
-                    ${audioStatusClassName}
                     ${accessHighlighted ? 'access-highlighted' : ''}
                     ${isInteractable ? 'interactable' : ''}
                     ${isInteractivated ? 'interactivated' : ''}
                     ${isHoverable ? 'hoverable' : ''}
+                    ${isBeforeSliderHighlighted ? 'before-slider' : ''}
+                    ${isAfterSliderHighlighted ? 'after-slider' : ''}
                 `}
                 onClick={onInteractivatableClick}
                 onMouseOver={this._handleMouseOver}

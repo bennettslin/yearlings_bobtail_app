@@ -1,8 +1,13 @@
 module.exports = [
     {
-        taskName: `Make audio slider not weird in logue.`,
+        taskName: `Bug where verse bar shows when mounted`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Slider in verse styling, fix side stanzas, determine slider selected verse, hijack verse bar`,
+        workedHours: 0,
+        neededHours: 5
     },
     {
         taskName: `Hovered cursor in audio slider should not go to the left.`,
@@ -1373,5 +1378,15 @@ module.exports = [
         taskName: `audio banner only registers touch begin, app registers move and end.`,
         workedHours: 2,
         neededHours: 2
-    }
+    },
+    {
+        taskName: `Make audio slider not weird in logue.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Slider touched changes verse styles.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

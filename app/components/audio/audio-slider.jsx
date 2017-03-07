@@ -25,7 +25,8 @@ class AudioSliderView extends Component {
     }
 
     render() {
-        const { isMousedOrTouched,
+        const { isLogue,
+                isMousedOrTouched,
                 hoveredVerseTimeBegin,
                 hoveredVerseTimeEnd,
                 sliderRatio,
@@ -35,19 +36,16 @@ class AudioSliderView extends Component {
 
             workingRatio = isMousedOrTouched ? sliderRatio : (selectedTimePlayed / totalTime),
 
-            displayedPlayTime = isMousedOrTouched ? getFormattedTime(workingRatio * totalTime) : null,
-
-            playedWidth = workingRatio * 100,
+            playedWidth = !isLogue ? workingRatio * 100 : 0,
             playedStyle = {
                 width: `${playedWidth}%`
             },
-
-            displayedRemainTime = isMousedOrTouched ? getFormattedTime((1 - workingRatio) * totalTime) + '-' : null,
-
             remainWidth = 100 - playedWidth,
             remainStyle = {
                 width: `${remainWidth}%`
             },
+            displayedPlayTime = getFormattedTime(workingRatio * totalTime),
+            displayedRemainTime = getFormattedTime((1 - workingRatio) * totalTime) + '-',
 
             showHovered = hoveredVerseTimeBegin > -1 && hoveredVerseTimeEnd > -1,
             hoveredPosition = showHovered ? (hoveredVerseTimeBegin / totalTime) * 100 : null,
@@ -78,7 +76,7 @@ class AudioSliderView extends Component {
                 })}
                     <div className="below played time-play-display">{displayedPlayTime}</div>
                 <div
-                    className={`time-bar audio-time-bar ${isMousedOrTouched ? 'touched' : 'not-moused-or-touched'}`}
+                    className="time-bar audio-time-bar"
                     style={playedStyle}
                 >
                     <div className="above played time-play-display">{displayedPlayTime}</div>
@@ -96,7 +94,7 @@ class AudioSliderView extends Component {
                 </div>
                 <div
                     className="time-bar audio-touch-bar"
-                    onMouseDown={e => this.handleMouseOrTouchDown(e)}
+                    onMouseDown={!isLogue ? e => this.handleMouseOrTouchDown(e) : null}
                     // onTouchStart={e => this.handleMouseOrTouchDown(e)}
                 >
                 </div>

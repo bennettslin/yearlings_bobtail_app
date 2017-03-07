@@ -371,14 +371,18 @@ class App extends Component {
     _handleSliderMouseOrTouch(e) {
         if (e.nativeEvent.screenX) {
             const rect = e.target.getBoundingClientRect(),
-            sliderLeft = rect.left,
-            sliderWidth = rect.width,
-            sliderRatio = getRatioForX(e.nativeEvent.screenX, sliderLeft, sliderWidth)
+                sliderLeft = rect.left,
+                sliderWidth = rect.width,
+                sliderRatio = getRatioForX(e.nativeEvent.screenX, sliderLeft, sliderWidth),
+
+                sliderTime = sliderRatio * getSong(this.props).totalTime,
+                sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
 
             this.setState({
                 sliderLeft,
                 sliderWidth,
                 sliderRatio,
+                sliderVerseIndex,
                 sliderMousedOrTouched: true
             })
         }
@@ -388,10 +392,14 @@ class App extends Component {
         if (this.state.sliderMousedOrTouched) {
             const { sliderLeft,
                     sliderWidth } = this.state,
-                sliderRatio = getRatioForX(e.nativeEvent.screenX, sliderLeft, sliderWidth)
+                sliderRatio = getRatioForX(e.nativeEvent.screenX, sliderLeft, sliderWidth),
+
+                sliderTime = sliderRatio * getSong(this.props).totalTime,
+                sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
 
             this.setState({
-                sliderRatio
+                sliderRatio,
+                sliderVerseIndex
             })
         }
     }
@@ -402,6 +410,10 @@ class App extends Component {
             this.selectTime(true, selectedTime)
 
             this.setState({
+                sliderLeft: 0,
+                sliderWidth: 0,
+                sliderRatio: 0,
+                sliderVerseIndex: -1,
                 sliderMousedOrTouched: false
             })
         }

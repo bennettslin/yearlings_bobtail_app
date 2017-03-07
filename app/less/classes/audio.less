@@ -221,13 +221,7 @@
 .audio-time-bar {
     overflow: hidden;
 
-    .transition(background-color 0.1s ease);
-
-    // Only animate when moved by audio player updates, not user.
-    &.not-moused-or-touched {
-        .transition(~"width 0.1s ease, background-color 0.1s ease");
-    }
-
+    .transition(~"width 0.05s ease, background-color 0.2s ease");
     background-color: rgba(225, 225, 200, 0.8);
 }
 
@@ -269,6 +263,10 @@
 
     font-size: 0.8em;
 
+    opacity: 0;
+
+    .transition(opacity 0.2s ease);
+
     &.played {
         left: 0;
         padding-left: @time-display-margin;
@@ -287,7 +285,6 @@
         padding-right: @time-display-margin;
 
         direction: rtl;
-        // text-align: right;
         overflow: hidden;
 
         &.above {
@@ -300,9 +297,20 @@
     }
 }
 
+.slider-moused-or-touched {
+    .time-play-display {
+        opacity: 1;
+    }
+}
+
 .audio-touch-bar {
     width: 100%;
-    cursor: pointer;
+}
+
+.is-song {
+    .audio-touch-bar {
+        cursor: pointer;
+    }
 }
 
 .audio-nav {
