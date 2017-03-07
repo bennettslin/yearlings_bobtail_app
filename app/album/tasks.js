@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Bug where verse bar shows when mounted`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Slider in verse styling, fix side stanzas, determine slider selected verse, hijack verse bar`,
         workedHours: 0,
         neededHours: 5
@@ -1389,4 +1384,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Bug where verse bar shows when mounted`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

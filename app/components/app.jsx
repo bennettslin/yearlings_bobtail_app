@@ -161,7 +161,10 @@ class App extends Component {
             isSelectedVerseAbove: false,
             isSelectedVerseBelow: false,
             selectedVerseElement: null,
-            sliderMousedOrTouched: false
+            sliderMousedOrTouched: false,
+
+            // Prevent verse bar from showing upon load.
+            appMounted: false
         }
     }
 
@@ -178,6 +181,10 @@ class App extends Component {
 
         // FIXME: Scrolling to selected verse here, but animation is janky.
         // setTimeout(this.scrollElementIntoView.bind(this, 'verse', this.props.selectedVerseIndex), 250)
+
+        this.setState({
+            appMounted: true
+        })
     }
 
     /***********
@@ -1068,6 +1075,11 @@ class App extends Component {
     }
 
     handleLyricSectionScroll(sectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustExpanded) {
+
+        // Prevent verse bar from showing upon initial load.
+        if (!this.state.appMounted) {
+            return
+        }
 
         const lyricSectionRect = getLyricSectionRect(this.state),
             selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
