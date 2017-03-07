@@ -1095,11 +1095,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
             taskName: `sort out past and present tense`,
             workedHours: 0,
             neededHours: 3
@@ -1133,6 +1128,11 @@ module.exports = {
             taskName: `review synopses and rough illustrations`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }
