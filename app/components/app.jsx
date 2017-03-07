@@ -398,7 +398,7 @@ class App extends Component {
              * If the move doesn't happen for a while, we recognise it anyway
              * is moving anyway for styling purposes.
              */
-            setTimeout(this._waitToSaySliderIsMoving, 100)
+            setTimeout(this._waitToSaySliderIsMoving, 125)
         }
     }
 

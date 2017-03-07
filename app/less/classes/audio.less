@@ -210,6 +210,7 @@
     top: 0;
     left: 0;
     height: 100%;
+    overflow: hidden;
 }
 
 .stanza-time-bar {
@@ -218,16 +219,32 @@
     right: 0;
 }
 
-.audio-time-bar {
-    overflow: hidden;
-
-    .transition(~"width 0.05s ease, background-color 0.2s ease");
+.time-spent-bar {
     background-color: rgba(225, 225, 200, 0.8);
 }
 
+.time-remain-bar {
+    width: 100%;
+}
+
 .slider-moving {
-    .audio-time-bar {
-        background-color: rgba(255, 255, 225, 0.8);
+    .play-time-bar {
+        .transition(background-color 0.2s ease);
+    }
+
+    .time-spent-bar {
+        background-color: yellow;
+    }
+
+    .time-remain-bar {
+        background-color: brown;
+    }
+}
+
+.slider-not-moving {
+    .play-time-bar {
+        // FIXME: Width animation is buggy of longer than 0.05s?
+        .transition(~"width 0.05s ease, background-color 0.2s ease");
     }
 }
 
@@ -248,7 +265,7 @@
     }
 }
 
-.time-play-display {
+.play-time-display {
     box-sizing: border-box;
 
     // FIXME: Make these colours better;
@@ -267,7 +284,7 @@
 
     .transition(opacity 0.2s ease);
 
-    &.played {
+    &.spent {
         left: 0;
         padding-left: @time-display-margin;
 
@@ -298,7 +315,7 @@
 }
 
 .slider-moving {
-    .time-play-display {
+    .play-time-display {
         opacity: 1;
     }
 }

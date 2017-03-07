@@ -36,15 +36,15 @@ class AudioSliderView extends Component {
 
             workingRatio = isMousedOrTouched ? sliderRatio : (selectedTimePlayed / totalTime),
 
-            playedWidth = !isLogue ? workingRatio * 100 : 0,
-            playedStyle = {
-                width: `${playedWidth}%`
+            spentWidth = !isLogue ? workingRatio * 100 : 0,
+            spentStyle = {
+                width: `${spentWidth}%`
             },
-            remainWidth = 100 - playedWidth,
+            remainWidth = 100 - spentWidth,
             remainStyle = {
                 width: `${remainWidth}%`
             },
-            displayedPlayTime = getFormattedTime(workingRatio * totalTime),
+            displayedSpentTime = getFormattedTime(workingRatio * totalTime),
             displayedRemainTime = getFormattedTime((1 - workingRatio) * totalTime) + '-',
 
             showHovered = hoveredVerseTimeBegin > -1 && hoveredVerseTimeEnd > -1,
@@ -74,20 +74,24 @@ class AudioSliderView extends Component {
                         </div>
                     )
                 })}
-                    <div className="below played time-play-display">{displayedPlayTime}</div>
                 <div
-                    className="time-bar audio-time-bar"
-                    style={playedStyle}
+                    className="time-bar play-time-bar time-remain-bar"
                 >
-                    <div className="above played time-play-display">{displayedPlayTime}</div>
                 </div>
+                <div className="below spent play-time-display">{displayedSpentTime}</div>
+                <div
+                    className="time-bar play-time-bar time-spent-bar"
+                    style={spentStyle}
+                >
+                    <div className="above spent play-time-display">{displayedSpentTime}</div>
+                </div>
+                <div className="below remain play-time-display">{displayedRemainTime}</div>
                 <div
                     className={`hovered-cursor ${showHovered ? 'is-shown' : ''}`}
                     style={hoveredStyle}
                 ></div>
-                <div className="below remain time-play-display">{displayedRemainTime}</div>
                 <div
-                    className="above remain time-play-display"
+                    className="above remain play-time-display"
                     style={remainStyle}
                 >
                     {displayedRemainTime}
