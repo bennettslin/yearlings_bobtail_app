@@ -1,6 +1,6 @@
 module.exports = [
     {
-        taskName: `Slider in verse styling, determine slider selected verse, hijack verse bar`,
+        taskName: `Slider in verse styling, determine slider selected verse, hijack verse bar.`,
         workedHours: 0,
         neededHours: 4
     },
@@ -1392,6 +1392,11 @@ module.exports = [
     {
         taskName: `Remove unneeded class names from side stanzas.`,
         workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Slider distinguishes between begin and move for styling purposes.`,
+        workedHours: 1,
         neededHours: 1
     }
 ]

@@ -406,7 +406,8 @@ class App extends Component {
 
             this.setState({
                 sliderRatio,
-                sliderVerseIndex
+                sliderVerseIndex,
+                sliderMoving: true
             })
         }
     }
@@ -421,7 +422,8 @@ class App extends Component {
                 sliderWidth: 0,
                 sliderRatio: 0,
                 sliderVerseIndex: -1,
-                sliderMousedOrTouched: false
+                sliderMousedOrTouched: false,
+                sliderMoving: false
             })
         }
     }

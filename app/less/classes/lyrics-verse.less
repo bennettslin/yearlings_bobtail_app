@@ -125,7 +125,7 @@
  */
 
 .is-playing {
-    .slider-not-moused-or-touched.verse-bar-hidden .verse.selected {
+    .slider-not-moving.verse-bar-hidden .verse.selected {
         background-color: @audio-play-colour;
 
         .anchor-block {
@@ -143,7 +143,7 @@
 }
 
 .is-paused {
-    .slider-not-moused-or-touched.verse-bar-hidden .verse.selected {
+    .slider-not-moving.verse-bar-hidden .verse.selected {
         background-color: @audio-pause-colour;
 
         .anchor-block {
@@ -160,7 +160,7 @@
     }
 }
 
-.slider-not-moused-or-touched .verse {
+.slider-not-moving .verse {
     &.odd, &.in-side {
         background-color: @odd-verse-colour;
 
@@ -174,7 +174,7 @@
     }
 }
 
-.slider-not-moused-or-touched .even, .slider-moused-or-touched .in-side {
+.slider-not-moving .even, .slider-moving .in-side {
     &.verse {
         background-color: @even-verse-colour;
 
@@ -188,7 +188,7 @@
     }
 }
 
-.slider-not-moused-or-touched {
+.slider-not-moving {
 
     .verse {
         &.hoverable:hover {
@@ -205,7 +205,7 @@
     }
 }
 
-.slider-moused-or-touched {
+.slider-moving {
 
     .verse.before-slider {
         background-color: @audio-spent-colour;

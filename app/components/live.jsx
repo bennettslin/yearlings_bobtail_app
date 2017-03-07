@@ -103,6 +103,7 @@ const LiveView = ({
     hoveredVerseTimeBegin,
     hoveredVerseTimeEnd,
 
+    sliderMoving,
     sliderMousedOrTouched,
     sliderRatio,
     sliderVerseIndex,
@@ -387,7 +388,7 @@ const LiveView = ({
             ${isOverviewShown ? ' overview-shown' : ''}
             ${showOverlay ? ' overlay-shown' : ''}
             ${isOverlaidAnnotation ? ' overlaid-annotation' : ' side-annotation'}
-            ${sliderMousedOrTouched ? 'slider-moused-or-touched' : 'slider-not-moused-or-touched'}
+            ${sliderMoving ? 'slider-moving' : 'slider-not-moving'}
             ${isSelectedVerseAbove ? 'verse-above' : ''}
             ${isSelectedVerseBelow ? 'verse-below' : ''}
             ${!isSelectedVerseAbove && !isSelectedVerseBelow ? 'verse-bar-hidden' : ''}
