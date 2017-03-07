@@ -1395,7 +1395,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Slider distinguishes between begin and move for styling purposes.`,
+        taskName: `Slider distinguishes between begin and move for styling purposes, and set timeout.`,
         workedHours: 1,
         neededHours: 1
     }

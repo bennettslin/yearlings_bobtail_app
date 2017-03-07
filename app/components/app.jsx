@@ -231,6 +231,7 @@ class App extends Component {
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
         this.windowResize = this.windowResize.bind(this)
         this._handleSliderMouseOrTouch = this._handleSliderMouseOrTouch.bind(this)
+        this._waitToSaySliderIsMoving = this._waitToSaySliderIsMoving.bind(this)
         this._handleAppMouseOrTouchMove = this._handleAppMouseOrTouchMove.bind(this)
         this._handleAppMouseOrTouchUpOrLeave = this._handleAppMouseOrTouchUpOrLeave.bind(this)
     }
@@ -391,6 +392,20 @@ class App extends Component {
                 sliderRatio,
                 sliderVerseIndex,
                 sliderMousedOrTouched: true
+            })
+
+            /**
+             * If the move doesn't happen for a while, we recognise it anyway
+             * is moving anyway for styling purposes.
+             */
+            setTimeout(this._waitToSaySliderIsMoving, 100)
+        }
+    }
+
+    _waitToSaySliderIsMoving() {
+        if (this.state.sliderMousedOrTouched && !this.state.sliderMoving) {
+            this.setState({
+                sliderMoving: true
             })
         }
     }
