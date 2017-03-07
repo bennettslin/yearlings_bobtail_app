@@ -97,11 +97,7 @@ class AudioSliderView extends Component {
                 <div
                     className="time-bar audio-touch-bar"
                     onMouseDown={e => this.handleMouseOrTouchDown(e)}
-
-                    // onTouchCancel={e => this.logEvent(e, 'touchCancel')}
-                    // onTouchEnd={e => this.logEvent(e, 'touchEnd')}
-                    // onTouchMove={e => this.logEvent(e, 'touchMove')}
-                    // onTouchStart={e => this.logEvent(e, 'touchStart')}
+                    // onTouchStart={e => this.handleMouseOrTouchDown(e)}
                 >
                 </div>
             </div>

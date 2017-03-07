@@ -369,17 +369,19 @@ class App extends Component {
      *******************/
 
     _handleSliderMouseOrTouch(e) {
-        const rect = e.target.getBoundingClientRect(),
+        if (e.nativeEvent.screenX) {
+            const rect = e.target.getBoundingClientRect(),
             sliderLeft = rect.left,
             sliderWidth = rect.width,
             sliderRatio = getRatioForX(e.nativeEvent.screenX, sliderLeft, sliderWidth)
 
-        this.setState({
-            sliderLeft,
-            sliderWidth,
-            sliderRatio,
-            sliderMousedOrTouched: true
-        })
+            this.setState({
+                sliderLeft,
+                sliderWidth,
+                sliderRatio,
+                sliderMousedOrTouched: true
+            })
+        }
     }
 
     _handleAppMouseOrTouchMove(e) {
@@ -398,7 +400,7 @@ class App extends Component {
         if (this.state.sliderMousedOrTouched) {
             const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime
             this.selectTime(true, selectedTime)
-            
+
             this.setState({
                 sliderMousedOrTouched: false
             })
@@ -1427,6 +1429,9 @@ class App extends Component {
                 onMouseMove={this._handleAppMouseOrTouchMove}
                 onMouseUp={this._handleAppMouseOrTouchUpOrLeave}
                 onMouseLeave={this._handleAppMouseOrTouchUpOrLeave}
+                // onTouchMove={this._handleAppMouseOrTouchMove}
+                // onTouchEnd={this._handleAppMouseOrTouchUpOrLeave}
+                // onTouchCancel={this._handleAppMouseOrTouchUpOrLeave}
                 onKeyDown={this.handleKeyDown}
                 tabIndex="0"
             >
