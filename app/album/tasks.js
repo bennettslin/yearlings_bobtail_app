@@ -1409,4 +1409,9 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Verse bar doesn't automatically show when app mounted.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

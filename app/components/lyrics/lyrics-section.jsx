@@ -36,10 +36,6 @@ class LyricsSectionView extends Component {
         super(props)
 
         this._handleScroll = this._handleScroll.bind(this)
-
-        this.state = {
-            mounted: false
-        }
     }
 
     // FIXME: Is this necessary?
@@ -52,26 +48,18 @@ class LyricsSectionView extends Component {
             this._handleScroll(true)
             this.props.completeHeightTransition()
         }
-
-        if (nextProps.appMounted && !this.props.appMounted) {
-            this.props.onLyricSectionUpdate(this.mySection)
-        }
     }
 
-    componentDidMount(prevProps) {
-        this.setState({
-            mounted: true
-        })
-
-        this._handleScroll()
+    componentDidUpdate(prevProps) {
+        if (!prevProps.appMounted && this.props.appMounted) {
+            this._handleScroll()
+        }
     }
 
     _handleScroll(fromHeightTransition) {
-        if (this.state.mounted) {
-            const lyricColumnJustExpanded = fromHeightTransition === true
+        const lyricColumnJustTransitioned = fromHeightTransition === true
 
-            this.props.onLyricSectionScroll(this.mySection, undefined, lyricColumnJustExpanded)
-        }
+        this.props.onLyricSectionScroll(this.mySection, undefined, lyricColumnJustTransitioned)
     }
 
     render() {

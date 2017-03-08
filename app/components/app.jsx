@@ -1109,13 +1109,12 @@ class App extends Component {
     }
 
     updateLyricSectionElement(lyricSectionElement) {
-        console.error('lyricSectionElement', lyricSectionElement);
         this.setState({
             lyricSectionElement
         })
     }
 
-    handleLyricSectionScroll(lyricSectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustExpanded) {
+    handleLyricSectionScroll(lyricSectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustTransitioned) {
 
         /**
          * Prevent verse bar from showing upon initial load.
@@ -1126,10 +1125,12 @@ class App extends Component {
 
         const newState = getVerseBarStatus(this.state, selectedVerseElement)
 
+        // Update the lyric section element.
+        // TODO: Can we be smarter about when to update the lyric section element?
         newState.lyricSectionElement = lyricSectionElement
 
         // Always show buttons if this is from a height transition
-        if (lyricColumnJustExpanded) {
+        if (lyricColumnJustTransitioned) {
             newState.showLyricButtons = true
 
         } else if (lyricSectionElement) {
