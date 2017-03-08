@@ -1398,5 +1398,10 @@ module.exports = [
         taskName: `Slider distinguishes between begin and move for styling purposes, and set timeout.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Animate dots in anchor block.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 ]

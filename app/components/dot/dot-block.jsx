@@ -51,10 +51,12 @@ const DotBlockView = ({
     sectionAccessHighlighted,
     accessedDotIndex,
     annotationIndex,
+    inAnchor,
 
     // From controller.
     isInteractable,
     allDotKeys,
+    allAnimatableDotKeys,
 
 ...other }) => {
     let firstDotKeyShown = false
@@ -63,7 +65,10 @@ const DotBlockView = ({
         <span className={`dot-block${annotationIndex ? ' annotation-' + annotationIndex : ''}${isInteractable ? ' interactable' : ''}`}>
             {allDotKeys.map((dotKey, index) => {
                 const isSelected = selectedDotKeys[dotKey],
-                    isPresent = presentDotKeys[dotKey]
+                    isPresent = presentDotKeys[dotKey],
+
+                    // Only anchor block has this array.
+                    isAnimatable = allAnimatableDotKeys ? allAnimatableDotKeys[dotKey] : false
 
                 if (isInteractable) {
                     /**
@@ -92,10 +97,20 @@ const DotBlockView = ({
 
                 } else {
                     // It's in anchor block or annotation card.
-                    return (isPresent &&
+                    /**
+                     * If it's in anchor block, it will animate, present or not.
+                     * If it's in annotation card, just render it or not.
+                     */
+                    return (((!inAnchor && isPresent) || inAnchor && isAnimatable) &&
                         <div
                             key={index}
-                            className={`dot ${dotKey}${inBackground ? ' background' : ''}`}
+                            className={`
+                                dot
+                                ${dotKey}
+                                ${inAnchor ? 'animatable' : ''}
+                                ${inBackground ? ' background' : ''}
+                                ${isPresent ? 'is-present' : 'is-absent'}
+                            `}
                         />
                     )
                 }

@@ -12,6 +12,21 @@
     width: auto;
     height: 100%;
 
+    .dot {
+        &.animatable {
+            .transition(~"width 0.15s ease, transform 0.15s ease");
+
+            &.is-present {
+                transform: scale(1);
+            }
+
+            &.is-absent {
+                transform: scale(0);
+                width: 0;
+            }
+        }
+    }
+
     &.interactable {
 
         .dot-container {
