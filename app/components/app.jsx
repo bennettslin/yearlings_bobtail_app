@@ -161,6 +161,7 @@ class App extends Component {
             isSelectedVerseAbove: false,
             isSelectedVerseBelow: false,
             selectedVerseElement: null,
+            selectedSliderVerseElement: null,
             sliderMousedOrTouched: false,
 
             // Prevent verse bar from showing upon load.
@@ -222,6 +223,7 @@ class App extends Component {
         this.selectTips = this.selectTips.bind(this)
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
         this.updateSelectedVerseElement = this.updateSelectedVerseElement.bind(this)
+        this.updateSliderSelectedVerseElement = this.updateSliderSelectedVerseElement.bind(this)
         this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
         this.handleVerseBarClick = this.handleVerseBarClick.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
@@ -436,9 +438,10 @@ class App extends Component {
                 sliderLeft: 0,
                 sliderWidth: 0,
                 sliderRatio: 0,
-                sliderVerseIndex: -1,
+                sliderVerseIndex: false,
                 sliderMousedOrTouched: false,
-                sliderMoving: false
+                sliderMoving: false,
+                selectedSliderVerseElement: null
             })
         }
     }
@@ -1091,13 +1094,29 @@ class App extends Component {
         }
     }
 
+    updateSliderSelectedVerseElement(selectedSliderVerseElement) {
+        if (selectedSliderVerseElement !== this.state.selectedSliderVerseElement) {
+
+            /**
+             * Selected slider verse element overrides selected verse element,
+             * as long as the slider is touched.
+             */
+            this.setState({
+                selectedSliderVerseElement
+            })
+        }
+    }
+
     handleLyricSectionScroll(sectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustExpanded) {
 
-        // Prevent verse bar from showing upon initial load.
+        /**
+         * Prevent verse bar from showing upon initial load.
+         */
         if (!this.state.appMounted) {
             return
         }
 
+        // TODO: Separate out this logic so that updateSliderSelect... can call it as well.
         const lyricSectionRect = getLyricSectionRect(this.state),
             selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
             selectedVerseMidHeight = (selectedVerseRect.top + selectedVerseRect.bottom) / 2,
@@ -1417,6 +1436,7 @@ class App extends Component {
               windowWidth,
               windowHeight,
               isLyricExpanded,
+              sliderVerseIndex,
 
               isPlaying,
               updatedTimePlayed } = state,
@@ -1438,7 +1458,9 @@ class App extends Component {
             lyricsStartAtZero = getLyricsStartAtZero(props),
             isFirstVerse = selectedVerseIndex === (lyricsStartAtZero ? 1 : 0),
             isLastVerse = selectedVerseIndex === songTimes.length - 1,
-            selectedVerse = getVerse(props),
+
+            // If slider is touched, it overrides the selected verse.
+            selectedVerse = getVerse(props, sliderVerseIndex),
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
                 showSingleLyricColumn,
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
@@ -1527,6 +1549,7 @@ class App extends Component {
                     onDotsExpandClick={this.selectDotsExpand}
                     onTipsClick={this.selectTips}
                     onSelectVerseElement={this.updateSelectedVerseElement}
+                    onSliderSelectVerseElement={this.updateSliderSelectedVerseElement}
                     onLyricSectionScroll={this.handleLyricSectionScroll}
                     onVerseBarClick={this.handleVerseBarClick}
                     onSliderMouseOrTouch={this._handleSliderMouseOrTouch}

@@ -83,7 +83,7 @@ const getAnnotationsLength = (props) => {
 export const getVerse = ({ selectedVerseIndex, ...other }, verseIndex) => {
     const { lyrics } = getSong(other)
 
-    return _parseLyrics(lyrics, isNaN(verseIndex) ? selectedVerseIndex : verseIndex)
+    return _parseLyrics(lyrics, (!isNaN(verseIndex) && verseIndex) ? verseIndex : selectedVerseIndex)
 }
 
 const _getCardFromIndex = ({ annotation, cardIndex }) => {

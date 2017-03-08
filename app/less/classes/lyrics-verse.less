@@ -129,38 +129,48 @@
  */
 
 .is-playing {
-    .slider-not-moving.verse-bar-hidden .verse.selected {
-        background-color: @audio-play-colour;
+    .slider-not-moving {
+        &.verse-bar-hidden .verse.selected {
+            background-color: @audio-play-colour;
 
-        .anchor-block {
-            text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-play-colour,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-play-colour,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-play-colour,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-play-colour;
+            .anchor-block {
+                text-shadow:
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-play-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-play-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-play-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-play-colour;
+            }
         }
-    }
 
-    .verse-bar {
-        background-color: @audio-play-colour;
+        .verse-bar {
+            background-color: @audio-play-colour;
+        }
     }
 }
 
 .is-paused {
-    .slider-not-moving.verse-bar-hidden .verse.selected {
-        background-color: @audio-pause-colour;
+    .slider-not-moving {
+        &.verse-bar-hidden .verse.selected {
+            background-color: @audio-pause-colour;
 
-        .anchor-block {
-            text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-pause-colour,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-pause-colour,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-pause-colour,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-pause-colour;
+            .anchor-block {
+                text-shadow:
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-pause-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-pause-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-pause-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-pause-colour;
+            }
+        }
+
+        .verse-bar {
+            background-color: @audio-pause-colour;
         }
     }
+}
 
+.slider-moving {
     .verse-bar {
-        background-color: @audio-pause-colour;
+        background-color: @audio-neutral-colour;
     }
 }
 

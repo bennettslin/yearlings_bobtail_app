@@ -35,6 +35,7 @@ const LyricsVerse = ({
           verseIndex } = verseObject,
 
         isSelected = verseIndex === selectedVerseIndex,
+        isSliderSelected = !isNaN(sliderVerseIndex) && verseIndex === sliderVerseIndex,
 
         /**
          * Not interactable if technically selected, but currently not selected
@@ -101,6 +102,7 @@ const LyricsVerse = ({
             isAudioButtonEnabled={isAudioButtonEnabled}
             isTitle={isTitle}
             isSelected={isSelected}
+            isSliderSelected={isSliderSelected}
             isAfterSelected={isAfterSelected}
             isInteractable={isInteractable}
             isInteractivated={isInteractivated}
@@ -125,6 +127,7 @@ class LyricsVerseView extends Component {
         super(props)
 
         this._checkIsSelectedVerse = this._checkIsSelectedVerse.bind(this)
+        this._checkIsSliderSelectedVerse = this._checkIsSliderSelectedVerse.bind(this)
         this._handleMouseOver = this._handleMouseOver.bind(this)
         this._handleMouseLeave = this._handleMouseLeave.bind(this)
     }
@@ -140,6 +143,10 @@ class LyricsVerseView extends Component {
 
     componentWillUpdate(nextProps) {
         this._checkIsSelectedVerse(nextProps)
+
+        if (nextProps.isSliderSelected && !this.props.isSliderSelected) {
+            this._checkIsSliderSelectedVerse()
+        }
     }
 
     _handleMouseOver(e) {
@@ -158,6 +165,10 @@ class LyricsVerseView extends Component {
         if (props.isSelected) {
             props.onSelectVerseElement(this.myVerse)
         }
+    }
+
+    _checkIsSliderSelectedVerse(props) {
+        this.props.onSliderSelectVerseElement(this.myVerse)
     }
 
     getLyricsLine({ key, index, columnKey, other }) {

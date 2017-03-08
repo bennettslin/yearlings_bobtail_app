@@ -1,8 +1,13 @@
 module.exports = [
     {
-        taskName: `Slider in verse styling, determine slider selected verse, hijack verse bar.`,
-        workedHours: 0,
+        taskName: `Slider hijacks verse bar, so app needs to know lyric section.`,
+        workedHours: 2,
         neededHours: 4
+    },
+    {
+        taskName: `Slider in verse styling, determine slider selected verse.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Hovered cursor in audio slider should not go to the left.`,
