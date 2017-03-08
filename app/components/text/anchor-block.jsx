@@ -29,6 +29,8 @@ const AnchorBlock = ({
             dotKeys,
             wikiIndex } = text,
 
+        { showAsAnchor } = other,
+
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
         isPortalAnchor = typeof portalAnnotationIndex !== 'undefined' && portalAnnotationIndex === annotationIndex,
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
@@ -40,7 +42,7 @@ const AnchorBlock = ({
          * reference, and the argument is a url string.
          */
         clickHandlerArgument = annotationIndex || wikiIndex,
-        onClick = !isSelected && !other.inPortal ? e => onAnchorClick(e, clickHandlerArgument) : null
+        onClick = showAsAnchor && !isSelected && !other.inPortal ? e => onAnchorClick(e, clickHandlerArgument) : null
 
     return (
         <AnchorBlockView {...other}
@@ -64,6 +66,7 @@ const AnchorBlock = ({
 const AnchorBlockView = ({
 
     // From props.
+    showAsAnchor,
     inPortal,
     firstVerseObject,
     lastVerseObject,
@@ -89,7 +92,7 @@ const AnchorBlockView = ({
             ' '
         }
         <a
-            className={`anchor-block${accessHighlighted ? ' access-highlighted' : ''}${annotationIndex ? ' annotation-' + annotationIndex : ''}${wikiIndex ? ' wiki-' + wikiIndex : ''}${isSelected || inPortal ? '' : ' enabled'}${isPortalAnchor ? ' portal-anchor' : ''}${hasTodo ? ' todo' : ''}`}
+            className={`anchor-block ${showAsAnchor ? 'show-as-anchor' : 'show-as-text'}${accessHighlighted ? ' access-highlighted' : ''}${annotationIndex ? ' annotation-' + annotationIndex : ''}${wikiIndex ? ' wiki-' + wikiIndex : ''}${!showAsAnchor || isSelected || inPortal ? '' : ' enabled'}${isPortalAnchor ? ' portal-anchor' : ''}${hasTodo ? ' todo' : ''}`}
             onClick={onClick}
         >
             {(isLyric || isPortalAnchor) &&
