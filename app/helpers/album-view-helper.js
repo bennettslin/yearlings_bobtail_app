@@ -2,7 +2,7 @@
 import { LEFT, LYRIC_COLUMN_KEYS } from './constants'
 
 import { intersects } from 'helpers/dot-helper'
-import { getIsMobileWiki } from 'helpers/responsive-helper'
+import { getIsMobileWiki, getLyricSectionRect } from 'helpers/responsive-helper'
 
 const _parseLyrics = (lyric, selectedVerseIndex) => {
     // Recurse until object with verse index is found.
@@ -311,7 +311,7 @@ export const getVerseIndexForAnnotationIndex = ({
     })
 }
 
-export const getRatioForX = (screenX, sliderLeft, sliderWidth) => {
+export const getSliderRatioForScreenX = (screenX, sliderLeft, sliderWidth) => {
     const sliderX = screenX - sliderLeft,
         ratio = sliderX / sliderWidth
 
@@ -322,6 +322,21 @@ export const getRatioForX = (screenX, sliderLeft, sliderWidth) => {
     } else {
         return ratio
     }
+}
+
+export const getVerseBarStatus = (props, selectedVerseElement) => {
+    const lyricSectionRect = getLyricSectionRect(props),
+        selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
+
+        selectedVerseMidHeight = (selectedVerseRect.top + selectedVerseRect.bottom) / 2,
+
+        isSelectedVerseAbove = selectedVerseMidHeight < lyricSectionRect.top,
+        isSelectedVerseBelow = selectedVerseMidHeight > lyricSectionRect.bottom
+
+        return {
+            isSelectedVerseAbove,
+            isSelectedVerseBelow
+        }
 }
 
 export const getVerseIndexForTime = (props, time) => {

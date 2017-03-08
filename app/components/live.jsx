@@ -62,6 +62,7 @@ const LiveView = ({
     deviceIndex,
     windowHeight,
     windowWidth,
+    appMounted,
 
     isPhone,
     isDesktop,
@@ -143,6 +144,7 @@ const LiveView = ({
     onSelectVerseElement,
     onSliderSelectVerseElement,
     onLyricSectionScroll,
+    onLyricSectionUpdate,
     onVerseBarClick,
     onInteractivatedVerseClick,
     onVerseHover,
@@ -266,6 +268,7 @@ const LiveView = ({
         },
         lyricColumnProps = {
             deviceIndex,
+            appMounted,
 
             // For lyrics line width reset.
             isPortrait: windowHeight > windowWidth,
@@ -299,6 +302,7 @@ const LiveView = ({
             onSelectVerseElement,
             onSliderSelectVerseElement,
             onLyricSectionScroll,
+            onLyricSectionUpdate,
             onVerseBarClick,
             onInteractivatedVerseClick,
             onVerseHover

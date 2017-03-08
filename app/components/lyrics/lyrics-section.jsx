@@ -42,6 +42,7 @@ class LyricsSectionView extends Component {
         }
     }
 
+    // FIXME: Is this necessary?
     shouldComponentUpdate(nextProps) {
         return !getPropsAreSame(this.props, nextProps)
     }
@@ -50,6 +51,10 @@ class LyricsSectionView extends Component {
         if (nextProps.handlingHeightTransition && !this.props.handlingHeightTransition) {
             this._handleScroll(true)
             this.props.completeHeightTransition()
+        }
+
+        if (nextProps.appMounted && !this.props.appMounted) {
+            this.props.onLyricSectionUpdate(this.mySection)
         }
     }
 

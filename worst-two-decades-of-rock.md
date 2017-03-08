@@ -10,6 +10,9 @@ Demo tape recordings transcend social boundaries (indie rock placed a bet that p
 
 Virality, stories of technology aiding the dissemination of art are massively uninteresting to us
 
-Underdog culture: 
+Underdog culture
+Altruistic audiences
 
 Contrived narratives
+
+Bob Dylan, as a Jew, many in the 70s might not have seen him as a card-carrying member of the shadowy ruling class, but he still wouldn't have been most people's choice of an outsider.

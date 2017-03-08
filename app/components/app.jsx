@@ -47,7 +47,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey, getRatioForX } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getIsPhone, getLyricSectionRect } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -225,6 +225,7 @@ class App extends Component {
         this.updateSelectedVerseElement = this.updateSelectedVerseElement.bind(this)
         this.updateSliderSelectedVerseElement = this.updateSliderSelectedVerseElement.bind(this)
         this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
+        this.updateLyricSectionElement = this.updateLyricSectionElement.bind(this)
         this.handleVerseBarClick = this.handleVerseBarClick.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
@@ -383,7 +384,7 @@ class App extends Component {
             const rect = e.target.getBoundingClientRect(),
                 sliderLeft = rect.left,
                 sliderWidth = rect.width,
-                sliderRatio = getRatioForX(e.nativeEvent.screenX, sliderLeft, sliderWidth),
+                sliderRatio = getSliderRatioForScreenX(e.nativeEvent.screenX, sliderLeft, sliderWidth),
 
                 sliderTime = sliderRatio * getSong(this.props).totalTime,
                 sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
@@ -416,7 +417,7 @@ class App extends Component {
         if (this.state.sliderMousedOrTouched) {
             const { sliderLeft,
                     sliderWidth } = this.state,
-                sliderRatio = getRatioForX(e.nativeEvent.screenX, sliderLeft, sliderWidth),
+                sliderRatio = getSliderRatioForScreenX(e.nativeEvent.screenX, sliderLeft, sliderWidth),
 
                 sliderTime = sliderRatio * getSong(this.props).totalTime,
                 sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
@@ -1107,7 +1108,14 @@ class App extends Component {
         }
     }
 
-    handleLyricSectionScroll(sectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustExpanded) {
+    updateLyricSectionElement(lyricSectionElement) {
+        console.error('lyricSectionElement', lyricSectionElement);
+        this.setState({
+            lyricSectionElement
+        })
+    }
+
+    handleLyricSectionScroll(lyricSectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustExpanded) {
 
         /**
          * Prevent verse bar from showing upon initial load.
@@ -1116,24 +1124,17 @@ class App extends Component {
             return
         }
 
-        // TODO: Separate out this logic so that updateSliderSelect... can call it as well.
-        const lyricSectionRect = getLyricSectionRect(this.state),
-            selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
-            selectedVerseMidHeight = (selectedVerseRect.top + selectedVerseRect.bottom) / 2,
-            isSelectedVerseAbove = selectedVerseMidHeight < lyricSectionRect.top,
-            isSelectedVerseBelow = selectedVerseMidHeight > lyricSectionRect.bottom,
-            newState = {
-                isSelectedVerseAbove,
-                isSelectedVerseBelow
-            }
+        const newState = getVerseBarStatus(this.state, selectedVerseElement)
+
+        newState.lyricSectionElement = lyricSectionElement
 
         // Always show buttons if this is from a height transition
         if (lyricColumnJustExpanded) {
             newState.showLyricButtons = true
 
-        } else if (sectionElement) {
+        } else if (lyricSectionElement) {
             // Decide whether to show ear and expand buttons.
-            const lyricSectionTop =  sectionElement.scrollTop
+            const lyricSectionTop =  lyricSectionElement.scrollTop
 
             newState.lyricSectionTop = lyricSectionTop
 
@@ -1550,6 +1551,7 @@ class App extends Component {
                     onTipsClick={this.selectTips}
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onSliderSelectVerseElement={this.updateSliderSelectedVerseElement}
+                    onLyricSectionUpdate={this.updateLyricSectionElement}
                     onLyricSectionScroll={this.handleLyricSectionScroll}
                     onVerseBarClick={this.handleVerseBarClick}
                     onSliderMouseOrTouch={this._handleSliderMouseOrTouch}

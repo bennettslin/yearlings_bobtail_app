@@ -54,6 +54,7 @@ class LyricColumnView extends Component {
     }
 
     completeHeightTransition(e) {
+        console.error('complete height transition');
         this.setState({
             handlingHeightTransition: false
         })
