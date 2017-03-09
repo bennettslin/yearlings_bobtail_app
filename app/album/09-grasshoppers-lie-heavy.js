@@ -1238,7 +1238,7 @@ module.exports = {
                     {
                         anchor: `stroke her temples.`,
                         annotation: {
-                            description: `Referring to her literal temples, and possibly to some figurative ones as well.`,
+                            description: `Referring to her literal temples, and possibly to her figurative ones as well.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true

@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Slider hijacks verse bar, so app needs to know lyric section.`,
-        workedHours: 2,
-        neededHours: 4
+        taskName: `Recalculate whether selected verse is shown when changing width or height.`,
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: `Slider in verse styling, determine slider selected verse.`,
@@ -1413,5 +1413,10 @@ module.exports = [
         taskName: `Verse bar doesn't automatically show when app mounted.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Slider hijacks verse bar, so app needs to know lyric section.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]
