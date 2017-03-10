@@ -114,7 +114,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `This song is another Yearlings carryover, and was the favourite amongst my friends. I suppose it's telling that when Sita and I were still together, the one song I wrote for her was about the regret I would feel as an old man at having lost her. During the years when I was trying hard to be good again, I kept digging further back into my past to figure out where things went wrong. And so this last song of the album revisits the sonic textures of all the others in reverse, starting with the piano from "Vegan Proclamation."`,
+                        description: `This song is another Yearlings carryover, and was the favourite amongst my friends. I suppose it's telling that when Sita and I were still together, the one song I wrote for her was about the regret I would feel as an old man at having lost her. During the years when I was trying hard to be good again, I kept digging further back into my past to figure out where things went wrong. And so this last song of the album revisits the sonic textures of all the others in reverse, starting here with the piano from "Vegan Proclamation."`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [OBSERVATION]: true,
@@ -168,6 +168,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `Next comes the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: VERSES
             }
         ],
@@ -206,6 +215,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `The pulsating organ and slide mandolin from "Kyon?" make a reappearance here, along with the tremolo banjo and rubato recorders from "Uncanny Valley Boy."`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: CHORUS
             }
         ],
@@ -271,6 +289,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `Here, we hear the plucked mandolin and tin whistle from "Garryowen," and the high-pitched synths and recorder from "Look Back in Anger."`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: VERSES
             }
         ],
@@ -297,6 +324,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `The second chorus brings back the electric sitar and 8-bit synth from "Constellations," along with the carillon and wah-wah pedal from "Good Night, Sita."`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: CHORUS
             }
         ],
@@ -309,6 +345,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `The chord progression here, which I call Sita's theme, first appeared during the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas evoking brass fanfare heard in "Pchelka's Starry Journey."`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: INSTRUMENTAL
             }
         ],
@@ -365,6 +410,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `The third verse revisits the bowed guitars ending on scratch tones first heard in "Dear Saskia," along with the four-note motif that I call Sasha's theme. These are then followed by the shrieking whistles and pitch-shifted instruments from "Ash Wednesday."`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: VERSES
             }
         ],
@@ -415,6 +469,15 @@ module.exports = {
             },
             {
                 unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `The electric mandolin and saturated tape effect from "Odin" return in the third and final chorus, as well as the legato slides on muted instruments from "Willy the Cocoa."`,
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: CHORUS
             }
         ],
@@ -430,7 +493,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `And so we end here, with the autoharp and glockenspiel heard in the intro to "Didi."`,
+                        description: `And so the final song of the album ends, with the same autoharp and glockenspiel that opened "Didi."`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -445,11 +508,6 @@ module.exports = {
             taskName: `afterword annotations`,
             workedHours: 0,
             neededHours: 1
-        },
-        {
-            taskName: `music annotations`,
-            workedHours: 0,
-            neededHours: 3
         },
         {
             taskName: `sort out past and present tense`,
@@ -480,6 +538,11 @@ module.exports = {
             taskName: `review synopses and rough illustrations`,
             workedHours: 2,
             neededHours: 2
+        },
+        {
+            taskName: `music annotations`,
+            workedHours: 3,
+            neededHours: 3
         }
     ]
 }

@@ -346,7 +346,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `The passive-aggressive lyrics are matched in texture by screeching woodwinds and scratch tones on violins.`,
+                        description: `The passive-aggressive lyrics are matched in texture by screeching woodwinds and scratch tones on bowed guitars.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
