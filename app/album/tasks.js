@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Bug is back where verse bar is automatically on when app loads or new song, or when switching between mobile and desktop. May be that lyric section will need to get latest verse element when updating app from a height transition.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Recalculate whether selected verse is shown when changing width or height.`,
         workedHours: 0,
         neededHours: 1
