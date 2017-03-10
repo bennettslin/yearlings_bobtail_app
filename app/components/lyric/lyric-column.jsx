@@ -90,7 +90,9 @@ class LyricColumnView extends Component {
                 ref={(node) => (this.myLyricColumn = node)}
                 onTransitionEnd={this._handleTransition}
             >
-                <div className="lyric-column-animatable">
+                <div className="lyric-column-animatable"
+                    // onTransitionEnd={this._handleTransition}
+                >
                     {!isLogue &&
                         <LyricVerseBar {...verseBarProps}
                             isAbove={true}
