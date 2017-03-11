@@ -1,11 +1,11 @@
 module.exports = [
     {
-        taskName: `Bug where verse bar is shown after changing between song and logue.`,
-        workedHours: 1,
-        neededHours: 1
+        taskName: `Line still not resetting width properly, going from Cremated to Uncanny in laptop width.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
-        taskName: `Recalculate whether selected verse is shown when changing width or height.`,
+        taskName: `Recalculate whether selected verse is shown when changing height.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -1432,6 +1432,11 @@ module.exports = [
     {
         taskName: `Bug where verse bar is shown going from mobile to desktop.`,
         workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Bug where verse bar is shown after changing between song and logue.`,
+        workedHours: 1,
         neededHours: 1
     },
 ]

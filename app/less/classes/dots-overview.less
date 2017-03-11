@@ -18,9 +18,12 @@
 
 @toggle-animation-duration: 0.2s;
 
+@dots-overview-padding: 8px;
+
 // In main field.
 .dots-overview-subfield {
     position: relative;
+    padding: @dots-overview-padding 0;
 
     // Override subfield height. Let flex-grow take care of height.
     height: 0;
@@ -77,7 +80,7 @@
     position: relative;
     flex-grow: 1;
 
-    padding: @app-thin-margin 0;
+    padding: @dots-overview-padding 0;
 }
 
 .dots-toggle-button-block {
