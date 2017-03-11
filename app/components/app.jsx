@@ -444,8 +444,15 @@ class App extends Component {
 
     _handleAppMouseOrTouchUpOrLeave(e) {
         if (this.state.sliderMousedOrTouched) {
-            const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime
-            this.selectTime(true, selectedTime)
+            const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime,
+                selectedVerseIndex = getVerseIndexForTime(this.props, selectedTime),
+                songTimes = getSongTimes(this.props),
+                verseTime = songTimes[selectedVerseIndex]
+
+            /**
+             * We will start at the beginning of the selected verse.
+             */
+            this.selectTime(true, verseTime)
 
             this.setState({
                 sliderLeft: 0,
@@ -959,19 +966,19 @@ class App extends Component {
          * This was called from audio rewind and forward buttons, which do not
          * have modulo selection.
          */
-        if (direction) {
-            selectedVerseIndex = getVerseIndexForDirection({
-                props: this.props,
-                index: this.props.selectedVerseIndex,
-                direction,
-                lyricColumnShown: LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex],
-                noModulo: true
-            })
-            if (selectedVerseIndex < 0 || selectedVerseIndex >= songTimes.length) {
-                return
-            }
-
-        }
+        // if (direction) {
+        //     selectedVerseIndex = getVerseIndexForDirection({
+        //         props: this.props,
+        //         index: this.props.selectedVerseIndex,
+        //         direction,
+        //         lyricColumnShown: LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex],
+        //         noModulo: true
+        //     })
+        //     if (selectedVerseIndex < 0 || selectedVerseIndex >= songTimes.length) {
+        //         return
+        //     }
+        //
+        // }
 
         let selectedTimePlayed,
             scroll
@@ -1157,7 +1164,7 @@ class App extends Component {
             newState.showLyricButtons = lyricSectionTop < this.state.lyricSectionTop
 
             // When lyrics are scrolled, verse should no longer be interactivated.
-            this.interactivateVerse()
+            // this.interactivateVerse()
         }
 
         this.setState(newState)

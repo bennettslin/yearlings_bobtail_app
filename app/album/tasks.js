@@ -5,11 +5,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Hovered cursor in audio slider should not go to the left.`,
-        workedHours: 3,
-        neededHours: 3
-    },
 
     // Touch accessibility.
     {
@@ -1444,5 +1439,10 @@ module.exports = [
         taskName: `Bug where verse bar is shown after changing between song and logue.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Hovered cursor in audio slider should not go to the left.`,
+        workedHours: 3,
+        neededHours: 3
     },
 ]

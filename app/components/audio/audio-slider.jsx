@@ -66,6 +66,10 @@ class AudioSliderView extends Component {
                         newState.hoveredPosition = hoveredPosition
                         newState.hoveredWidth = hoveredWidth
 
+                /**
+                 * This is supposed to make the hovered cursor animate its
+                 * position only after it is shown, but it doesn't work.
+                 */
                 } else if (this.state.hoveredClassName !== 'hovered continue-hovered') {
                     newState.hoveredClassName = 'hovered continue-hovered'
                 }
@@ -152,12 +156,7 @@ class AudioSliderView extends Component {
                 </div>
                 <div className="below remain play-time-display">{displayedRemainTime}</div>
 
-                <div
-                    className={`hovered-cursor ${hoveredClassName}`}
-                    style={hoveredStyle}
-                ></div>
-
-                {false && verseTimes.map((verseTime, index) => {
+                {verseTimes.map((verseTime, index) => {
 
                     // Don't show title verse.
                     if (verseTime < 0) {
@@ -184,6 +183,11 @@ class AudioSliderView extends Component {
                         </div>
                     )
                 })}
+
+                <div
+                    className={`hovered-cursor ${hoveredClassName}`}
+                    style={hoveredStyle}
+                ></div>
 
                 <div
                     className="above remain play-time-display"
