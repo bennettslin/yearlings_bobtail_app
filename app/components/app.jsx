@@ -165,7 +165,9 @@ class App extends Component {
             sliderMousedOrTouched: false,
 
             // Prevent verse bar from showing upon load.
-            appMounted: false
+            appMounted: false,
+
+            cancelScrollIntoView: null
         }
     }
 
@@ -362,14 +364,22 @@ class App extends Component {
      * is added later.
      * https://www.npmjs.com/package/scroll-into-view-if-needed
      */
-    scrollElementIntoView(className, index, duration = 75) {
+    scrollElementIntoView(className, index, duration = 125) {
         const selector = `${className}-${index}`,
             element = document.getElementsByClassName(selector)[0]
 
+        if (this.state.cancelScrollIntoView) {
+            this.state.cancelScrollIntoView()
+        }
+
         if (element) {
             console.warn(`Scrolling ${selector} into view.`);
-            scrollIntoViewIfNeeded(element, false, {
+            const cancelScrollIntoView = scrollIntoViewIfNeeded(element, false, {
                 duration
+            })
+
+            this.setState({
+                cancelScrollIntoView
             })
         }
     }
