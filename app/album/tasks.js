@@ -1,14 +1,5 @@
 module.exports = [
-    {
-        taskName: `Line still not resetting width properly, going from Cremated to Uncanny in laptop width.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Recalculate whether selected verse is shown when changing height.`,
-        workedHours: 0,
-        neededHours: 1
-    },
+    // Audio slider.
     {
         taskName: `Slider in verse styling, determine slider selected verse.`,
         workedHours: 0,
@@ -17,13 +8,10 @@ module.exports = [
     {
         taskName: `Hovered cursor in audio slider should not go to the left.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
-    {
-        taskName: `audio banner is touch accessible.`,
-        workedHours: 0,
-        neededHours: 2
-    },
+
+    // Touch accessibility.
     {
         taskName: `Fix dot bubbles being hidden by menu.`,
         workedHours: 0,
@@ -35,52 +23,46 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Clicking lower verse bar makes screen jump in Safari. Also just going from one annotation to the next.`,
+        taskName: `audio banner is touch accessible.`,
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `method to assemble backdrops and stageProps drawings.`,
-        workedHours: 0,
-        neededHours: 3
-    },
+
+    // Overlay.
     {
         taskName: `Hide elements when overlay shown.`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Fix selecting time in audio banner dismissing overlay and breaking.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Close button and body click in score should have same effect on annotation`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Selecting new song from audio overlay shouldn't dismiss overlay`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Make nav hidden the default.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Do not scroll after portal select until lyrics have been rendered.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Annotation underneath score should animate away more smoothly.`,
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Score and wiki should just hide, not reload upon each popup opened.`,
+        workedHours: 0,
+        neededHours: 5
+    },
 
-    // Weekend 1.
+    // Bugs.
+    {
+        taskName: `Line still not resetting width properly, going from Cremated to Uncanny in laptop width.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Recalculate whether selected verse is shown when changing height.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Clicking lower verse bar makes screen jump in Safari. Also just going from one annotation to the next.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    // Portals.
     {
         taskName: `Figure out when portal has no description`,
         workedHours: 0,
@@ -91,15 +73,13 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-
-    // Weekend 2.
-    // Weekend 3.
     {
-        taskName: `Get unit tests working again.`,
+        taskName: `Do not scroll after portal select until lyrics have been rendered, and do not get verse bar status either.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
     },
 
+    // Scrolling.
     {
         taskName: `Figure out scrolling rules`,
         workedHours: 0,
@@ -131,7 +111,12 @@ module.exports = [
         neededHours: 1
     },
 
-    // Weekend 4.
+    {
+        taskName: `Get unit tests working again.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     {
         taskName: `begin list of persistence checks`,
         workedHours: 0,
@@ -141,6 +126,16 @@ module.exports = [
         taskName: `accessibility refactor.`,
         workedHours: 0,
         neededHours: 8
+    },
+    {
+        taskName: `Close button and body click in score should have same effect on annotation`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Selecting new song from audio overlay shouldn't dismiss overlay`,
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
@@ -165,6 +160,16 @@ module.exports = [
         neededHours: 3
     },
 
+    {
+        taskName: `Make nav hidden the default.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Fix selecting time in audio banner dismissing overlay and breaking.`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Individual score pdfs.`,
         workedHours: 0,
@@ -199,6 +204,11 @@ module.exports = [
         taskName: `progressive tips`,
         workedHours: 0,
         neededHours: 8
+    },
+    {
+        taskName: `method to assemble backdrops and stageProps drawings.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     // {
@@ -256,11 +266,7 @@ module.exports = [
     //     workedHours: 0,
     //     neededHours: 1
     // },
-    // {
-    //     taskName: `Score and wiki should just hide, not reload upon each popup opened.`,
-    //     workedHours: 0,
-    //     neededHours: 5
-    // },
+
     {
         taskName: `refactor to get album objects`,
         workedHours: 3,

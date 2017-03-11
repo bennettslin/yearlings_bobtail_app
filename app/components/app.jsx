@@ -360,8 +360,7 @@ class App extends Component {
 
     /**
      * scrollIntoViewIfNeeded should return a cancel function. It presently
-     * does not. Keeping this in app component for now, in case this function
-     * is added later.
+     * does not, even though it says it does?
      * https://www.npmjs.com/package/scroll-into-view-if-needed
      */
     scrollElementIntoView(className, index, duration = 125) {
