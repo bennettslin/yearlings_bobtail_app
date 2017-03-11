@@ -38,6 +38,7 @@ class LyricColumnView extends Component {
         super(props)
 
         this._handleTransition = this._handleTransition.bind(this)
+        this._handleAnimatableTransition = this._handleAnimatableTransition.bind(this)
         this.completeHeightTransition = this.completeHeightTransition.bind(this)
 
         this.state = {
@@ -47,6 +48,14 @@ class LyricColumnView extends Component {
 
     _handleTransition(e) {
         if (e.propertyName === 'height') {
+            this.setState({
+                handlingHeightTransition: true
+            })
+        }
+    }
+
+    _handleAnimatableTransition(e) {
+        if (e.propertyName === 'opacity') {
             this.setState({
                 handlingHeightTransition: true
             })
@@ -80,8 +89,6 @@ class LyricColumnView extends Component {
                 showSingleLyricColumn: other.showSingleLyricColumn,
                 hiddenLyricColumnKey: other.hiddenLyricColumnKey,
                 onVerseBarClick
-                // selectedDotKeys: other.selectedDotKeys,
-                // onAnnotationClick: other.onAnnotationClick
             }
 
         return (
@@ -91,7 +98,7 @@ class LyricColumnView extends Component {
                 onTransitionEnd={this._handleTransition}
             >
                 <div className="lyric-column-animatable"
-                    // onTransitionEnd={this._handleTransition}
+                    onTransitionEnd={this._handleAnimatableTransition}
                 >
                     {!isLogue &&
                         <LyricVerseBar {...verseBarProps}

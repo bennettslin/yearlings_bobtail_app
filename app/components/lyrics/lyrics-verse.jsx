@@ -132,11 +132,6 @@ class LyricsVerseView extends Component {
         this._handleMouseLeave = this._handleMouseLeave.bind(this)
     }
 
-    componentDidMount() {
-        // Ref is only available after mounting.
-        this._checkIsSelectedVerse(this.props)
-    }
-
     shouldComponentUpdate(nextProps) {
         return !getPropsAreSame(this.props, nextProps)
     }

@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Bug where verse bar is shown after changing between song and logue, also mobile to desktop.`,
-        workedHours: 0,
-        neededHours: 2
+        taskName: `Bug where verse bar is shown after changing between song and logue.`,
+        workedHours: 1,
+        neededHours: 1
     },
     {
         taskName: `Recalculate whether selected verse is shown when changing width or height.`,
@@ -1428,5 +1428,10 @@ module.exports = [
         taskName: `Fix bug where verse bar is shown upon app load.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Bug where verse bar is shown going from mobile to desktop.`,
+        workedHours: 0,
+        neededHours: 1
     },
 ]

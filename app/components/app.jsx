@@ -225,7 +225,6 @@ class App extends Component {
         this.updateSelectedVerseElement = this.updateSelectedVerseElement.bind(this)
         this.updateSliderSelectedVerseElement = this.updateSliderSelectedVerseElement.bind(this)
         this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
-        // this.updateLyricSectionElement = this.updateLyricSectionElement.bind(this)
         this.handleVerseBarClick = this.handleVerseBarClick.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
@@ -1110,12 +1109,6 @@ class App extends Component {
         }
     }
 
-    // updateLyricSectionElement(lyricSectionElement) {
-    //     this.setState({
-    //         lyricSectionElement
-    //     })
-    // }
-
     handleLyricSectionScroll(lyricSectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustTransitioned) {
 
         /**
@@ -1126,6 +1119,10 @@ class App extends Component {
         }
 
         const newState = getVerseBarStatus(this.state, selectedVerseElement)
+
+        if (!newState) {
+            return
+        }
 
         // Update the lyric section element.
         // TODO: Can we be smarter about when to update the lyric section element?
@@ -1554,7 +1551,6 @@ class App extends Component {
                     onTipsClick={this.selectTips}
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onSliderSelectVerseElement={this.updateSliderSelectedVerseElement}
-                    // onLyricSectionUpdate={this.updateLyricSectionElement}
                     onLyricSectionScroll={this.handleLyricSectionScroll}
                     onVerseBarClick={this.handleVerseBarClick}
                     onSliderMouseOrTouch={this._handleSliderMouseOrTouch}
