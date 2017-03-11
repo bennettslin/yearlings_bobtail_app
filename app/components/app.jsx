@@ -164,6 +164,10 @@ class App extends Component {
             selectedSliderVerseElement: null,
             sliderMousedOrTouched: false,
 
+            hoveredVerseTimeBegin: -1,
+            hoveredVerseTimeEnd: -1,
+            hoveredVerseIndex: -1,
+
             // Prevent verse bar from showing upon load.
             appMounted: false,
 
@@ -610,13 +614,14 @@ class App extends Component {
         this._isVerseHoveredOrInteractivated(hoveredVerseIndex)
     }
 
-    _isVerseHoveredOrInteractivated(verseIndex) {
+    _isVerseHoveredOrInteractivated(hoveredVerseIndex) {
 
         // Hover or interactivation ended.
-        if (verseIndex === -1) {
+        if (hoveredVerseIndex === -1) {
             this.setState({
                 hoveredVerseTimeBegin: -1,
-                hoveredVerseTimeEnd: -1
+                hoveredVerseTimeEnd: -1,
+                hoveredVerseIndex
             })
 
         // Hover or interactivation began.
@@ -625,12 +630,13 @@ class App extends Component {
             const selectedSong = getSong(this.props),
                 songTimes = selectedSong.times,
 
-                hoveredVerseTimeBegin = songTimes[verseIndex],
-                hoveredVerseTimeEnd = verseIndex < songTimes.length - 1 ? songTimes[verseIndex + 1] : selectedSong.totalTime
+                hoveredVerseTimeBegin = songTimes[hoveredVerseIndex],
+                hoveredVerseTimeEnd = hoveredVerseIndex < songTimes.length - 1 ? songTimes[hoveredVerseIndex + 1] : selectedSong.totalTime
 
             this.setState({
                 hoveredVerseTimeBegin,
-                hoveredVerseTimeEnd
+                hoveredVerseTimeEnd,
+                hoveredVerseIndex
             })
         }
     }

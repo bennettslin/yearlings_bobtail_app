@@ -26,7 +26,7 @@ export default {
             // copiedSong.times = `times: ${copiedSong.times.length}`
         }
 
-        copiedSong.stanzaTimes = `stanzaTimes: ${copiedSong.stanzaTimes.length}`
+        // copiedSong.stanzaTimes = `stanzaTimes: ${copiedSong.stanzaTimes.length}`
         copiedSong.tasks = `tasks: ${copiedSong.tasks.length}`
 
         return this._logObject('selected song', copiedSong)

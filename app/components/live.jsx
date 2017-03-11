@@ -36,6 +36,7 @@ const Live = (props) => {
             lyrics={selectedSong.lyrics}
             totalTime={selectedSong.totalTime}
             stanzaTimes={selectedSong.stanzaTimes}
+            times={selectedSong.times}
             overviewText={selectedSong.overview}
             annotation={annotation}
             selectedWikiUrl={selectedWikiUrl}
@@ -103,6 +104,7 @@ const LiveView = ({
     hiddenLyricColumnKey,
     hoveredVerseTimeBegin,
     hoveredVerseTimeEnd,
+    hoveredVerseIndex,
 
     sliderMoving,
     sliderMousedOrTouched,
@@ -155,6 +157,7 @@ const LiveView = ({
     annotation,
     totalTime,
     stanzaTimes,
+    times,
     presentDotKeys,
     selectedSongLyrics,
     hasDoubleColumns,
@@ -189,12 +192,14 @@ const LiveView = ({
             isLogue,
             hoveredVerseTimeBegin,
             hoveredVerseTimeEnd,
+            hoveredVerseIndex,
             sliderRatio,
             sliderMousedOrTouched,
             selectedSongTitle,
             selectedTimePlayed,
             totalTime,
             stanzaTimes,
+            verseTimes: times,
             onSliderMouseOrTouch,
             onTimeChange,
 

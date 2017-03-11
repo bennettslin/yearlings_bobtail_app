@@ -7,7 +7,7 @@ module.exports = [
     },
     {
         taskName: `Hovered cursor in audio slider should not go to the left.`,
-        workedHours: 0,
+        workedHours: 3,
         neededHours: 3
     },
 
