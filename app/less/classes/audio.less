@@ -219,28 +219,79 @@
     right: 0;
 }
 
-.hovered-cursor {
+.audio-cursor, .on-cursor {
     position: absolute;
     top: 0;
     height: 100%;
 
+    .transition(~"left 0.2s ease, width 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease");
     // opacity: 0;
 
-    .transition(~"background-color 0.2s ease, box-shadow 0.2s ease");
+    // .transition(~"background-color 0.2s ease, box-shadow 0.2s ease");
+    //
+    // &.hovered {
+    //
+    //
+    //     /**
+    //      * This is supposed to make the hovered cursor animate its position only
+    //      * after it is shown, but it doesn't work.
+    //      */
+    //     &.continue-hovered {
+    //     }
+    //
+    //     // opacity: 1;
+    // }
 
     &.hovered {
+    }
+
+    &.slider-selected {
+    }
+}
+
+.is-selected-cursor {
+    .audio-cursor, .on-cursor {
+
+    }
+}
+
+.is-hovered-cursor {
+    .audio-cursor, .on-cursor {
         background-color: @audio-highlight-colour;
-        box-shadow: 0 0 1px 1px @audio-highlight-colour;
+        // box-shadow: 0 0 1px 1px @audio-highlight-colour;
+    }
+}
 
-        /**
-         * This is supposed to make the hovered cursor animate its position only
-         * after it is shown, but it doesn't work.
-         */
-        &.continue-hovered {
-            .transition(~"left 0.2s ease, width 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease");
+.is-slider-selected-cursor {
+    .audio-cursor, .on-cursor {
+        background-color: @audio-neutral-colour;
+        // box-shadow: 0 0 1px 1px @audio-neutral-colour;
+    }
+
+    .before-cursor {
+        background-color: yellow;
+    }
+
+    .after-cursor {
+        background-color: brown;
+    }
+}
+
+.is-playing {
+    .is-selected-cursor {
+        .audio-cursor, .on-cursor {
+            background-color: @audio-play-colour;
+            // box-shadow: 0 0 1px 1px @audio-play-colour;
         }
+    }
+}
 
-        // opacity: 1;
+.is-paused {
+    .is-selected-cursor {
+        .audio-cursor, .on-cursor {
+            background-color: @audio-pause-colour;
+            // box-shadow: 0 0 1px 1px @audio-pause-colour;
+        }
     }
 }
 
@@ -254,26 +305,26 @@
 //     }
 // }
 
-.time-spent-bar {
-    background-color: rgba(225, 225, 200, 0.8);
-}
-
-.time-remain-bar {
-    width: 100%;
-}
+// .time-spent-bar {
+//     background-color: rgba(225, 225, 200, 0.8);
+// }
+//
+// .time-remain-bar {
+//     width: 100%;
+// }
 
 .slider-moving {
     .play-time-bar {
         .transition(background-color 0.2s ease);
     }
 
-    .time-spent-bar {
-        background-color: yellow;
-    }
-
-    .time-remain-bar {
-        background-color: brown;
-    }
+    // .time-spent-bar {
+    //     background-color: yellow;
+    // }
+    //
+    // .time-remain-bar {
+    //     background-color: brown;
+    // }
 }
 
 .slider-not-moving {

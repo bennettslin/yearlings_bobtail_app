@@ -17,9 +17,11 @@ const AudioBannerView = ({
 
     // From props.
     isLogue,
-    hoveredVerseTimeBegin,
-    hoveredVerseTimeEnd,
+    songs,
+    selectedSongIndex,
     hoveredVerseIndex,
+    selectedVerseIndex,
+    sliderVerseIndex,
     sliderMousedOrTouched,
     selectedSongTitle,
     sliderRatio,
@@ -37,9 +39,11 @@ const AudioBannerView = ({
         <AudioSlider
             isLogue={isLogue}
             isMousedOrTouched={sliderMousedOrTouched}
-            hoveredVerseTimeBegin={hoveredVerseTimeBegin}
-            hoveredVerseTimeEnd={hoveredVerseTimeEnd}
+            songs={songs}
+            selectedSongIndex={selectedSongIndex}
             hoveredVerseIndex={hoveredVerseIndex}
+            selectedVerseIndex={selectedVerseIndex}
+            sliderVerseIndex={sliderVerseIndex}
             sliderRatio={sliderRatio}
             sliderTime={sliderTime}
             selectedTimePlayed={selectedTimePlayed}

@@ -83,7 +83,7 @@ const getAnnotationsLength = (props) => {
 export const getVerse = ({ selectedVerseIndex, ...other }, verseIndex) => {
     const { lyrics } = getSong(other)
 
-    return _parseLyrics(lyrics, (!isNaN(verseIndex) && verseIndex) ? verseIndex : selectedVerseIndex)
+    return _parseLyrics(lyrics, (!isNaN(verseIndex) && verseIndex > -1) ? verseIndex : selectedVerseIndex)
 }
 
 const _getCardFromIndex = ({ annotation, cardIndex }) => {
@@ -341,6 +341,19 @@ export const getVerseBarStatus = (props, selectedVerseElement) => {
             isSelectedVerseAbove,
             isSelectedVerseBelow
         }
+}
+
+export const getVerseBeginAndEndTimes = (props, verseIndex) => {
+    const selectedSong = getSong(props),
+        songTimes = selectedSong.times,
+
+        beginTime = songTimes[verseIndex],
+        endTime = verseIndex < songTimes.length - 1 ? songTimes[verseIndex + 1] : selectedSong.totalTime
+
+    return {
+        beginTime,
+        endTime
+    }
 }
 
 export const getVerseIndexForTime = (props, time) => {

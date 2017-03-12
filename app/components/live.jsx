@@ -102,8 +102,6 @@ const LiveView = ({
 
     lyricsStartAtZero,
     hiddenLyricColumnKey,
-    hoveredVerseTimeBegin,
-    hoveredVerseTimeEnd,
     hoveredVerseIndex,
 
     sliderMoving,
@@ -190,9 +188,11 @@ const LiveView = ({
         ),
         audioBannerProps = {
             isLogue,
-            hoveredVerseTimeBegin,
-            hoveredVerseTimeEnd,
+            songs,
+            selectedVerseIndex,
             hoveredVerseIndex,
+            selectedSongIndex,
+            sliderVerseIndex,
             sliderRatio,
             sliderMousedOrTouched,
             selectedSongTitle,

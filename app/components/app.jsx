@@ -47,7 +47,7 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey, getSliderRatioForScreenX, getVerseBarStatus, getVerseBeginAndEndTimes } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getIsPhone, getLyricSectionRect } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
@@ -160,12 +160,11 @@ class App extends Component {
 
             isSelectedVerseAbove: false,
             isSelectedVerseBelow: false,
+            sliderVerseIndex: -1,
             selectedVerseElement: null,
             selectedSliderVerseElement: null,
             sliderMousedOrTouched: false,
 
-            hoveredVerseTimeBegin: -1,
-            hoveredVerseTimeEnd: -1,
             hoveredVerseIndex: -1,
 
             // Prevent verse bar from showing upon load.
@@ -458,7 +457,7 @@ class App extends Component {
                 sliderLeft: 0,
                 sliderWidth: 0,
                 sliderRatio: 0,
-                sliderVerseIndex: false,
+                sliderVerseIndex: -1,
                 sliderMousedOrTouched: false,
                 sliderMoving: false,
                 selectedSliderVerseElement: null
@@ -626,8 +625,6 @@ class App extends Component {
         // Hover or interactivation ended.
         if (hoveredVerseIndex === -1) {
             this.setState({
-                hoveredVerseTimeBegin: -1,
-                hoveredVerseTimeEnd: -1,
                 hoveredVerseIndex
             })
 
@@ -635,14 +632,9 @@ class App extends Component {
         } else {
             // Get times.
             const selectedSong = getSong(this.props),
-                songTimes = selectedSong.times,
-
-                hoveredVerseTimeBegin = songTimes[hoveredVerseIndex],
-                hoveredVerseTimeEnd = hoveredVerseIndex < songTimes.length - 1 ? songTimes[hoveredVerseIndex + 1] : selectedSong.totalTime
+                songTimes = selectedSong.times
 
             this.setState({
-                hoveredVerseTimeBegin,
-                hoveredVerseTimeEnd,
                 hoveredVerseIndex
             })
         }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getFormattedTime } from 'helpers/format-helper'
+import { getVerseBeginAndEndTimes } from 'helpers/album-view-helper'
 
 /*************
  * CONTAINER *
@@ -18,67 +19,6 @@ class AudioSliderView extends Component {
         super(props)
 
         this.handleMouseOrTouchDown = this.handleMouseOrTouchDown.bind(this)
-
-        this.state = {
-            hoveredPosition: null,
-            hoveredWidth: null,
-            hoveredClassName: ''
-        }
-    }
-
-    componentWillUpdate(nextProps) {
-
-        /**
-         * Hover should animate position and width only when going from one
-         * verse to another.
-         */
-        const newState = {}
-
-        // We are ending hover.
-        if (nextProps.hoveredVerseIndex === -1 && this.props.hoveredVerseIndex > -1) {
-
-            // Do not reset position or width, only hover status.
-            newState.hoveredClassName = ''
-
-        } else {
-
-            // We are hovering.
-            if (nextProps.hoveredVerseIndex > -1) {
-
-                // Distinguish between beginning hover and continuing hover.
-                if (this.props.hoveredVerseIndex === -1) {
-                    newState.hoveredClassName = 'hovered'
-                }
-            }
-
-            if (nextProps.hoveredVerseTimeBegin !== -1 && nextProps.hoveredVerseTimeEnd !== -1) {
-                const hoveredVerseTimeBeginChanged = nextProps.hoveredVerseTimeBegin !== this.props.hoveredVerseTimeBegin,
-                hoveredVerseTimeEndChanged = nextProps.hoveredVerseTimeEnd !== this.props.hoveredVerseTimeEnd
-
-                if (hoveredVerseTimeBeginChanged || hoveredVerseTimeEndChanged) {
-                    const { hoveredVerseTimeBegin,
-                        hoveredVerseTimeEnd,
-                        totalTime } = nextProps,
-
-                        hoveredPosition = hoveredVerseTimeBegin / totalTime * 100,
-                        hoveredWidth = (hoveredVerseTimeEnd - hoveredVerseTimeBegin) / totalTime * 100
-
-                        newState.hoveredPosition = hoveredPosition
-                        newState.hoveredWidth = hoveredWidth
-
-                /**
-                 * This is supposed to make the hovered cursor animate its
-                 * position only after it is shown, but it doesn't work.
-                 */
-                } else if (this.state.hoveredClassName !== 'hovered continue-hovered') {
-                    newState.hoveredClassName = 'hovered continue-hovered'
-                }
-            }
-        }
-
-        if (Object.keys(newState).length > 0) {
-            this.setState(newState)
-        }
     }
 
     handleMouseOrTouchDown(e) {
@@ -88,18 +28,14 @@ class AudioSliderView extends Component {
     render() {
         const { isLogue,
                 isMousedOrTouched,
-                hoveredVerseTimeBegin,
-                hoveredVerseTimeEnd,
+                selectedVerseIndex,
                 hoveredVerseIndex,
+                sliderVerseIndex,
                 sliderRatio,
                 selectedTimePlayed,
                 stanzaTimes,
                 verseTimes,
                 totalTime } = this.props,
-
-            { hoveredPosition,
-              hoveredWidth,
-              hoveredClassName } = this.state,
 
             workingRatio = isMousedOrTouched ? sliderRatio : (selectedTimePlayed / totalTime),
 
@@ -112,19 +48,35 @@ class AudioSliderView extends Component {
                 width: `${remainWidth}%`
             },
             displayedSpentTime = getFormattedTime(workingRatio * totalTime),
-            displayedRemainTime = getFormattedTime((1 - workingRatio) * totalTime) + '-',
+            displayedRemainTime = getFormattedTime((1 - workingRatio) * totalTime) + '-'
 
-            // showHovered = hoveredVerseTimeBegin > -1 && hoveredVerseTimeEnd > -1,
-            // hoveredPosition = showHovered ? (hoveredVerseTimeBegin / totalTime) * 100 : null,
-            // hoveredWidth = showHovered ? ((hoveredVerseTimeEnd - hoveredVerseTimeBegin) / totalTime) * 100 : null,
-            hoveredStyle = {
-                left: `${hoveredPosition}%`,
-                width: `${hoveredWidth}%`
+            let cursorVerseIndex,
+                cursorClassName
+
+            if (sliderVerseIndex > -1) {
+                cursorVerseIndex = sliderVerseIndex
+                cursorClassName = 'slider-selected'
+            } else if (hoveredVerseIndex > -1) {
+                cursorVerseIndex = hoveredVerseIndex
+                cursorClassName = 'hovered'
+            } else {
+                cursorVerseIndex = selectedVerseIndex
+                cursorClassName = 'selected'
             }
+
+            const { beginTime,
+                    endTime } = getVerseBeginAndEndTimes(this.props, cursorVerseIndex),
+
+                cursorPosition = beginTime / totalTime * 100,
+                cursorWidth = (endTime - beginTime) / totalTime * 100,
+                cursorStyle = {
+                    left: `${cursorPosition}%`,
+                    width: `${cursorWidth}%`
+                }
 
         return (
             <div
-                className="audio-banner audio-slider-block"
+                className={`audio-banner audio-slider-block is-${cursorClassName}-cursor`}
             >
                 {stanzaTimes.map((stanzaTime, index) => {
                     const stanzaWidth = (totalTime - stanzaTime.time) / totalTime * 100,
@@ -147,15 +99,6 @@ class AudioSliderView extends Component {
                 >
                 </div>
 
-                <div className="below spent play-time-display">{displayedSpentTime}</div>
-                <div
-                    className="time-bar play-time-bar time-spent-bar"
-                    style={spentStyle}
-                >
-                    <div className="above spent play-time-display">{displayedSpentTime}</div>
-                </div>
-                <div className="below remain play-time-display">{displayedRemainTime}</div>
-
                 {verseTimes.map((verseTime, index) => {
 
                     // Don't show title verse.
@@ -171,13 +114,22 @@ class AudioSliderView extends Component {
                         verseStyle = {
                             left: `${versePosition}%`,
                             width: `${verseWidth}%`
-                        },
-                        hoveredClassName = hoveredVerseIndex === index ? 'hovered' : ''
+                        }
+
+                    let cursorPlacementClassName
+
+                    if (index === cursorVerseIndex) {
+                        cursorPlacementClassName = 'on-cursor'
+                    } else if (index < cursorVerseIndex) {
+                        cursorPlacementClassName = 'before-cursor'
+                    } else {
+                        cursorPlacementClassName = 'after-cursor'
+                    }
 
                     return (
                         <div
                             key={index}
-                            className={`time-bar verse-time-bar ${hoveredClassName}`}
+                            className={`time-bar verse-time-bar ${cursorPlacementClassName}`}
                             style={verseStyle}
                         >
                         </div>
@@ -185,9 +137,18 @@ class AudioSliderView extends Component {
                 })}
 
                 <div
-                    className={`hovered-cursor ${hoveredClassName}`}
-                    style={hoveredStyle}
+                    className="audio-cursor"
+                    style={cursorStyle}
                 ></div>
+
+                <div className="below spent play-time-display">{displayedSpentTime}</div>
+                <div
+                    className="time-bar play-time-bar time-spent-bar"
+                    style={spentStyle}
+                >
+                    <div className="above spent play-time-display">{displayedSpentTime}</div>
+                </div>
+                <div className="below remain play-time-display">{displayedRemainTime}</div>
 
                 <div
                     className="above remain play-time-display"
