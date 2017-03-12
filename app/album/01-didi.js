@@ -43,11 +43,11 @@ module.exports = {
             actors: {
                 youngAnita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, rushing, exasperated'
                 },
                 youngBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, running, panicked'
                 }
             }
         },
@@ -58,15 +58,15 @@ module.exports = {
             actors: {
                 youngAnita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, playing ball, offended'
                 },
                 youngBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting, flustered'
                 },
                 youngGirl: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, skipping, pointing back and laughing'
                 }
             }
         },
@@ -77,7 +77,7 @@ module.exports = {
             actors: {
                 youngBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, in bathtub, downcast'
                 }
             }
         },
@@ -88,11 +88,11 @@ module.exports = {
             actors: {
                 youngAnita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'back, squatting, smiling'
                 },
                 youngBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, facing front, singing, smiling'
                 }
             }
         }
