@@ -220,6 +220,10 @@ module.exports = {
         WIKI_SECTION
     ],
 
+    CLOSE_POPUP_BUTTON: 'close',
+    PREVIOUS_POPUP_BUTTON: 'side-button previous',
+    NEXT_POPUP_BUTTON: 'side-button next',
+
     SELECTED_SONG_INDEX: 'selectedSongIndex',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
