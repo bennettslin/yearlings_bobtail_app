@@ -218,7 +218,8 @@ class App extends Component {
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
-        this.hoverVerse = this.hoverVerse.bind(this)
+        // this.hoverVerse = this.hoverVerse.bind(this)
+        this.handleLyricAudioButtonClick = this.handleLyricAudioButtonClick.bind(this)
         this.interactivateVerse = this.interactivateVerse.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
@@ -610,16 +611,17 @@ class App extends Component {
         })
     }
 
-    hoverVerse(e, hoveredVerseIndex = -1) {
-        this._stopPropagation(e)
+    // hoverVerse(e, hoveredVerseIndex = -1) {
+    //     this._stopPropagation(e)
+    //
+    //     /**
+    //      * Verse does not need to know hovered verse index, as its hover is
+    //      * handled through CSS only. Only audio banner needs to know.
+    //      */
+    //     this._isVerseHoveredOrInteractivated(hoveredVerseIndex)
+    // }
 
-        /**
-         * Verse does not need to know hovered verse index, as its hover is
-         * handled through CSS only. Only audio banner needs to know.
-         */
-        this._isVerseHoveredOrInteractivated(hoveredVerseIndex)
-    }
-
+    // FIXME: I got rid of hover, so this can probably just be combined with interactivateVerse.
     _isVerseHoveredOrInteractivated(hoveredVerseIndex) {
 
         // Hover or interactivation ended.
@@ -1166,6 +1168,20 @@ class App extends Component {
         this.scrollElementIntoView('verse', this.props.selectedVerseIndex)
     }
 
+    handleLyricAudioButtonClick(e, verseIndex) {
+
+        // It's a play button.
+        if (isNaN(verseIndex)) {
+            this.togglePlay(e)
+
+        // It's a navigation button.
+        } else {
+            this.selectVerse(e, verseIndex)
+        }
+
+        this.interactivateVerse(e)
+    }
+
     handlePopupContainerClick(e, className) {
         this._stopPropagation(e)
         this._handleAccessOn(0)
@@ -1553,8 +1569,9 @@ class App extends Component {
                     onAudioOptionClick={this.selectAudioOption}
                     onPlayClick={this.togglePlay}
                     onVerseClick={this.selectVerse}
+                    onLyricAudioButtonClick={this.handleLyricAudioButtonClick}
                     onInteractivatedVerseClick={this.interactivateVerse}
-                    onVerseHover={this.hoverVerse}
+                    // onVerseHover={this.hoverVerse}
                     onDotClick={this.selectDot}
                     onLyricColumnClick={this.selectLyricColumn}
                     onPopupContainerClick={this.handlePopupContainerClick}

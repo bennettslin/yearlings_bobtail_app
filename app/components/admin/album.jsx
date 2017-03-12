@@ -44,7 +44,6 @@ const AlbumView = ({
     showSingleLyricColumn,
     onScoreClick,
     onSongClick,
-    onVerseClick,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
@@ -90,7 +89,6 @@ const AlbumView = ({
                 accessedSectionKey={accessedSectionKey}
                 nextSectionKey={nextSectionKey}
                 showSingleLyricColumn={showSingleLyricColumn}
-                onVerseClick={onVerseClick}
             />
         </div>
     )

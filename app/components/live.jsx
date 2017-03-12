@@ -123,7 +123,6 @@ const LiveView = ({
     isLastVerse,
     selectedSongTitle,
     onSongClick,
-    onVerseClick,
     onPlayClick,
     onTimeChange,
     onAudioOptionClick,
@@ -146,8 +145,9 @@ const LiveView = ({
     onLyricSectionScroll,
     onLyricSectionUpdate,
     onVerseBarClick,
+    onLyricAudioButtonClick,
     onInteractivatedVerseClick,
-    onVerseHover,
+    // onVerseHover,
     onSliderMouseOrTouch,
 
     // From controller.
@@ -300,17 +300,16 @@ const LiveView = ({
             songLyrics: selectedSongLyrics,
             selectedDotKeys,
             selectedVerseIndex,
-            onVerseClick,
             onAnnotationClick,
             onLyricColumnClick,
-            onPlayClick,
             onSelectVerseElement,
             onSliderSelectVerseElement,
             onLyricSectionScroll,
             onLyricSectionUpdate,
             onVerseBarClick,
-            onInteractivatedVerseClick,
-            onVerseHover
+            onLyricAudioButtonClick,
+            onInteractivatedVerseClick
+            // onVerseHover
         },
         scoresTipsSectionProps = {
             isPhone,
