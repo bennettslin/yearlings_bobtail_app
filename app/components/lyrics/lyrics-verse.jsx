@@ -58,9 +58,6 @@ const LyricsVerse = ({
          */
         isAudioButtonEnabled = isInteractivated,
 
-        isBeforeSliderHighlighted = sliderMousedOrTouched && verseIndex < sliderVerseIndex,
-        isAfterSliderHighlighted = sliderMousedOrTouched && verseIndex > sliderVerseIndex,
-
         hasVerseIndex = !isNaN(verseIndex),
 
         // If no verse index, we'll count it as odd.
@@ -68,7 +65,20 @@ const LyricsVerse = ({
 
         verseIndexClassName = ` ${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
 
-    let backgroundClassName = ''
+    let sliderPlacementClassName = ''
+
+    if (sliderMousedOrTouched) {
+        if (verseIndex < sliderVerseIndex) {
+            sliderPlacementClassName = 'before-slider'
+        } else if (verseIndex > sliderVerseIndex) {
+            sliderPlacementClassName = 'after-slider'
+        } else {
+            sliderPlacementClassName = 'on-slider'
+        }
+    }
+
+    let backgroundClassName = '',
+        interactivatedClassName = ''
 
     if (!inVerseBar) {
         if (inMain) {
@@ -76,6 +86,8 @@ const LyricsVerse = ({
         } else {
             backgroundClassName = 'in-side'
         }
+
+        interactivatedClassName = isInteractivated ? 'interactivated' : 'not-interactivated'
     }
 
     let onLyricAudioClick = null
@@ -103,10 +115,9 @@ const LyricsVerse = ({
             isSliderSelected={isSliderSelected}
             isAfterSelected={isAfterSelected}
             isInteractable={isInteractable}
-            isInteractivated={isInteractivated}
             isHoverable={isHoverable}
-            isBeforeSliderHighlighted={isBeforeSliderHighlighted}
-            isAfterSliderHighlighted={isAfterSliderHighlighted}
+            sliderPlacementClassName={sliderPlacementClassName}
+            interactivatedClassName={interactivatedClassName}
             isDoubleSpeaker={isDoubleSpeaker}
             onLyricAudioClick={onLyricAudioClick}
             onAnchorClick={onAnchorClick}
@@ -187,10 +198,9 @@ class LyricsVerseView extends Component {
                 accessHighlighted,
                 isAudioButtonEnabled,
                 isInteractable,
-                isInteractivated,
                 isHoverable,
-                isBeforeSliderHighlighted,
-                isAfterSliderHighlighted,
+                sliderPlacementClassName,
+                interactivatedClassName,
                 isSelected,
                 isPlaying,
                 isAfterSelected,
@@ -211,10 +221,9 @@ class LyricsVerseView extends Component {
                     ${isSelected ? 'selected' : ''}
                     ${accessHighlighted ? 'access-highlighted' : ''}
                     ${isInteractable ? 'interactable' : ''}
-                    ${isInteractivated ? 'interactivated' : ''}
+                    ${interactivatedClassName}
                     ${isHoverable ? 'hoverable' : ''}
-                    ${isBeforeSliderHighlighted ? 'before-slider' : ''}
-                    ${isAfterSliderHighlighted ? 'after-slider' : ''}
+                    ${sliderPlacementClassName}
                 `}
                 onClick={onInteractivatableClick}
                 // onMouseOver={this._handleMouseOver}

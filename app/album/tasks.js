@@ -1445,4 +1445,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Audio cursor.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

@@ -46,6 +46,56 @@
 
 .text-span {
     position: relative;
+    color: #444;
+}
+
+// Invert colours.
+
+// TODO: Make all these colours better.
+.after-slider, .is-verse-interactivated .not-interactivated:not(.selected) {
+    .text-span {
+        color: #bbb;
+    }
+
+    a.enabled {
+        .transition(~"color 0.2s ease, text-shadow 0.2s ease");
+
+        .text-span {
+            color: @lyric-link-colour;
+        }
+
+        &:hover {
+            .text-span {
+                color: @lyric-hover-colour;
+            }
+        }
+
+        &:active {
+            .text-span {
+                color: @lyric-active-colour;
+            }
+        }
+    }
+
+    .anchor-block {
+
+        &.show-as-anchor {
+
+            .underline-bar {
+                background-color: mix(gray, white, 15%);
+            }
+
+            &.enabled {
+                .underline-bar {
+                    background-color: mix(@lyric-link-colour, white, 25%);
+                }
+            }
+        }
+    }
+
+    .dot {
+        border: @dot-border solid #555;
+    }
 }
 
 // Allow text to be selected only when slider is not being used.

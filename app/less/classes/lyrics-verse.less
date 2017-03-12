@@ -221,27 +221,67 @@
 
 .slider-moving {
 
-    .verse.before-slider {
-        background-color: @audio-spent-colour;
+    .verse.on-slider {
+        background-color: @audio-neutral-colour;
 
         .anchor-block {
             text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-spent-colour,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-spent-colour,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-spent-colour,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-spent-colour;
+            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-neutral-colour,
+            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-neutral-colour,
+            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-neutral-colour,
+            @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-neutral-colour;
+        }
+    }
+
+    .verse.before-slider {
+        &.odd {
+            background-color: @odd-before-colour;
+
+            .anchor-block {
+                text-shadow:
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-before-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-before-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-before-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-before-colour;
+            }
+        }
+
+        &.even {
+            background-color: @even-before-colour;
+
+            .anchor-block {
+                text-shadow:
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-before-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-before-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-before-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-before-colour;
+            }
         }
     }
 
     .verse.after-slider {
-        background-color: @audio-remain-colour;
+        &.odd {
+            background-color: @odd-after-colour;
 
-        .anchor-block {
-            text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-remain-colour,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-remain-colour,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-remain-colour,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-remain-colour;
+            .anchor-block {
+                text-shadow:
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-after-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-after-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-after-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-after-colour;
+            }
+        }
+
+        &.even {
+            background-color: @even-after-colour;
+
+            .anchor-block {
+                text-shadow:
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-after-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-after-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-after-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-after-colour;
+            }
         }
     }
 }
