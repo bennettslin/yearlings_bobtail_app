@@ -132,7 +132,7 @@ module.exports = {
                     {
                         anchor: `should I should you`,
                         annotation: {
-                            description: `At this point, I can't even remember how to think, let alone how to talk.`,
+                            description: `At this point, I'm too flustered to form complete thoughts, let alone complete sentences.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }

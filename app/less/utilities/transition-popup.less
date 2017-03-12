@@ -1,0 +1,21 @@
+.transition-popup {
+
+    // FIXME: Get rid of these.
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    z-index: 5000;
+
+    opacity: 0;
+    display: none;
+    .transition(opacity 0.2s ease);
+
+    &.visible {
+        opacity: 1;
+    }
+
+    &.displayed {
+        display: block;
+    }
+}

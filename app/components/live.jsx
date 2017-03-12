@@ -11,6 +11,7 @@ import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
 import DotsSection from './dots/dots-section'
 import ScorePopup from './score/score-popup'
+import ScoreTransitionPopup from './score/score-transition-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
 import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu, getTitleInAudio } from 'helpers/responsive-helper'
@@ -436,6 +437,7 @@ const LiveView = ({
                     />
                 </div>
                 <div className="overlay-popup-block">
+                    <ScoreTransitionPopup {...scorePopupProps} />
                     <ScorePopup {...scorePopupProps} />
                     <WikiPopup {...wikiPopupProps} />
                     {isOverlaidAnnotation &&

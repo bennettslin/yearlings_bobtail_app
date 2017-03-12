@@ -16,7 +16,7 @@ class ScorePopup extends Popup {
         const { isPhone,
                 selectedScoreIndex } = this.props
 
-        return !isPhone && selectedScoreIndex &&
+        return false && !isPhone && selectedScoreIndex &&
             <ScoreSection {...this.props} />
     }
 }
