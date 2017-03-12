@@ -99,7 +99,7 @@ class AudioSliderView extends Component {
                 >
                 </div>
 
-                {verseTimes.map((verseTime, index) => {
+                {false && verseTimes.map((verseTime, index) => {
 
                     // Don't show title verse.
                     if (verseTime < 0) {
@@ -109,10 +109,8 @@ class AudioSliderView extends Component {
                     const nextVerseIndex = index + 1,
                         nextVerseTime = nextVerseIndex === (verseTimes.length) ? totalTime : verseTimes[nextVerseIndex],
 
-                        versePosition = verseTime / totalTime * 100,
-                        verseWidth = (nextVerseTime - verseTime) / totalTime * 100,
+                        verseWidth = (totalTime - verseTime) / totalTime * 100,
                         verseStyle = {
-                            left: `${versePosition}%`,
                             width: `${verseWidth}%`
                         }
 
