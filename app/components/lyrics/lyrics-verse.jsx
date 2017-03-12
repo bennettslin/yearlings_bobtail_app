@@ -138,7 +138,7 @@ class LyricsVerseView extends Component {
         this._checkIsSelectedVerse(nextProps)
 
         if (nextProps.isSliderSelected && !this.props.isSliderSelected) {
-            this._checkIsSliderSelectedVerse()
+            this._checkIsSliderSelectedVerse(nextProps)
         }
     }
 
@@ -163,7 +163,7 @@ class LyricsVerseView extends Component {
     }
 
     _checkIsSliderSelectedVerse(props) {
-        this.props.onSliderSelectVerseElement(this.myVerse)
+        props.onSliderSelectVerseElement(this.myVerse)
     }
 
     getLyricsLine({ key, index, columnKey, other }) {
@@ -194,7 +194,6 @@ class LyricsVerseView extends Component {
         const { verseObject,
                 hiddenLyricColumnKey,
                 inVerseBar,
-                inMain,
 
                 // From controller.
                 verseIndexClassName,
@@ -214,9 +213,7 @@ class LyricsVerseView extends Component {
                 onLyricAudioClick,
                 onInteractivatableClick,
 
-            ...other } = this.props,
-
-            { verseIndex } = verseObject
+            ...other } = this.props
 
         return (
             <div

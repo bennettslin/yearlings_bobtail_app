@@ -106,10 +106,7 @@ class AudioSliderView extends Component {
                         return null
                     }
 
-                    const nextVerseIndex = index + 1,
-                        nextVerseTime = nextVerseIndex === (verseTimes.length) ? totalTime : verseTimes[nextVerseIndex],
-
-                        verseWidth = (totalTime - verseTime) / totalTime * 100,
+                    const verseWidth = (totalTime - verseTime) / totalTime * 100,
                         verseStyle = {
                             width: `${verseWidth}%`
                         }

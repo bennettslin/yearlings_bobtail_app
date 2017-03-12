@@ -47,8 +47,8 @@ import { NAV_SECTION,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey, getSliderRatioForScreenX, getVerseBarStatus, getVerseBeginAndEndTimes } from 'helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getIsPhone, getLyricSectionRect } from 'helpers/responsive-helper'
+import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getIsPhone } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -442,7 +442,7 @@ class App extends Component {
         }
     }
 
-    _handleAppMouseOrTouchUpOrLeave(e) {
+    _handleAppMouseOrTouchUpOrLeave() {
         if (this.state.sliderMousedOrTouched) {
             const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime,
                 selectedVerseIndex = getVerseIndexForTime(this.props, selectedTime),
@@ -604,42 +604,10 @@ class App extends Component {
     interactivateVerse(e, interactivatedVerseIndex = -1) {
         this._stopPropagation(e)
 
-        this._isVerseHoveredOrInteractivated(interactivatedVerseIndex)
-
         this.setState({
-            interactivatedVerseIndex
+            interactivatedVerseIndex,
+            hoveredVerseIndex: interactivatedVerseIndex
         })
-    }
-
-    // hoverVerse(e, hoveredVerseIndex = -1) {
-    //     this._stopPropagation(e)
-    //
-    //     /**
-    //      * Verse does not need to know hovered verse index, as its hover is
-    //      * handled through CSS only. Only audio banner needs to know.
-    //      */
-    //     this._isVerseHoveredOrInteractivated(hoveredVerseIndex)
-    // }
-
-    // FIXME: I got rid of hover, so this can probably just be combined with interactivateVerse.
-    _isVerseHoveredOrInteractivated(hoveredVerseIndex) {
-
-        // Hover or interactivation ended.
-        if (hoveredVerseIndex === -1) {
-            this.setState({
-                hoveredVerseIndex
-            })
-
-        // Hover or interactivation began.
-        } else {
-            // Get times.
-            const selectedSong = getSong(this.props),
-                songTimes = selectedSong.times
-
-            this.setState({
-                hoveredVerseIndex
-            })
-        }
     }
 
     selectLyricExpand(e, isLyricExpanded = !this.state.isLyricExpanded) {
