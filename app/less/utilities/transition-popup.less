@@ -1,21 +1,19 @@
-.transition-popup {
+.popup-transition-group {
 
-    // FIXME: Get rid of these.
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    z-index: 5000;
+    // Apply to score and eventually wiki only for now. But hopefully apply it to all.
+    &.score {
+        // transform: scale(1.3);
+        opacity: 0;
+        display: none;
+        .transition(~"opacity 0.2s ease, transform 0.2s ease");
 
-    opacity: 0;
-    display: none;
-    .transition(opacity 0.2s ease);
+        &.visible {
+            // transform: scale(1);
+            opacity: 1;
+        }
 
-    &.visible {
-        opacity: 1;
-    }
-
-    &.displayed {
-        display: block;
+        &.displayed {
+            display: block;
+        }
     }
 }

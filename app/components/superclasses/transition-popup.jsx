@@ -1,4 +1,13 @@
 import React, { Component } from 'react'
+import TransitionPopupButton from './transition-popup-button'
+
+import { CLOSE_POPUP_BUTTON,
+         PREVIOUS_POPUP_BUTTON,
+         NEXT_POPUP_BUTTON } from 'helpers/constants'
+
+/*************
+ * CONTAINER *
+ *************/
 
 class TransitionPopup extends Component {
 
@@ -6,6 +15,7 @@ class TransitionPopup extends Component {
         super(props)
 
         this._handleTransitionEnd = this._handleTransitionEnd.bind(this)
+        this._onPopupButtonClick = this._onPopupButtonClick.bind(this)
 
         this.state = {
             isDisplayed: this.props.isVisible
@@ -24,6 +34,10 @@ class TransitionPopup extends Component {
         }
     }
 
+    _onPopupButtonClick(e, argument) {
+        this.props.onPopupButtonClick(e, argument)
+    }
+
     _handleTransitionEnd(e) {
         if (e.propertyName === 'opacity' && !this.state.isVisible) {
             this.setState({
@@ -35,22 +49,85 @@ class TransitionPopup extends Component {
     render() {
         const { popupClassName,
                 isVisible,
+                showClose,
+                showArrows,
+                onPopupContainerClick,
                 myChild } = this.props,
 
             { isDisplayed } = this.state,
-
             visibleClassName = isVisible ? 'visible' : '',
             displayClassName = isDisplayed ? 'displayed' : ''
 
         return (
             <div
-                className={`transition-popup ${popupClassName} ${visibleClassName} ${displayClassName}`}
+                className={`popup-transition-group ${popupClassName} ${visibleClassName} ${displayClassName}`}
                 onTransitionEnd={this._handleTransitionEnd}
             >
-                {myChild}
+                <TransitionPopupView
+                    popupClassName={popupClassName}
+                    showClose={showClose}
+                    showArrows={showArrows}
+                    onPopupButtonClick={this._onPopupButtonClick}
+                    onPopupContainerClick={onPopupContainerClick}
+                    myChild={myChild}
+                />
             </div>
         )
     }
+}
+
+
+/****************
+ * PRESENTATION *
+ ****************/
+
+const TransitionPopupView = ({
+
+    popupClassName,
+    showClose,
+    showArrows,
+    onPopupButtonClick,
+    onPopupContainerClick,
+    myChild
+
+}) => {
+    return (
+        <div className={`popup-wrapper ${popupClassName}`}>
+            {showClose &&
+                <div className="popup-button close-button shadow"></div>
+            }
+            {showArrows &&
+                <div className="popup-button side-button previous-button shadow"></div>
+            }
+            {showArrows &&
+                <div className="popup-button side-button next-button shadow"></div>
+            }
+            <div
+                className={`popup-content-wrapper ${popupClassName}`}
+                onClick={e => onPopupContainerClick(e, popupClassName)}
+            >
+                {myChild}
+                {showClose &&
+                    <TransitionPopupButton
+                        onPopupButtonClick={onPopupButtonClick}
+                        buttonName={CLOSE_POPUP_BUTTON}
+                    />
+                }
+                {showArrows &&
+                    <TransitionPopupButton
+                        onPopupButtonClick={onPopupButtonClick}
+                        buttonName={PREVIOUS_POPUP_BUTTON}
+                    />
+                }
+                {showArrows &&
+                    <TransitionPopupButton
+                        onPopupButtonClick={onPopupButtonClick}
+                        buttonName={NEXT_POPUP_BUTTON}
+                    />
+                }
+            </div>
+        </div>
+    )
 }
 
 export default TransitionPopup
