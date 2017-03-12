@@ -1,4 +1,21 @@
 module.exports = [
+    // Overlay.
+    {
+        taskName: `Hide elements when overlay shown.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Annotation underneath score should animate away more smoothly.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Score and wiki should just hide, not reload upon each popup opened.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
     // Audio slider.
     {
         taskName: `Slider in verse styling, determine slider selected verse.`,
@@ -21,23 +38,6 @@ module.exports = [
         taskName: `audio banner is touch accessible.`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    // Overlay.
-    {
-        taskName: `Hide elements when overlay shown.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Annotation underneath score should animate away more smoothly.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Score and wiki should just hide, not reload upon each popup opened.`,
-        workedHours: 0,
-        neededHours: 5
     },
 
     // Bugs.
