@@ -346,7 +346,6 @@ const LiveView = ({
             onPopupContainerClick
         },
         scorePopupProps = {
-            justHide: true,
             isPhone,
             scores,
             selectedScoreIndex,
