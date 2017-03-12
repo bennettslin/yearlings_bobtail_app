@@ -55,10 +55,9 @@ const LyricsVerse = ({
         onInteractivatableClick = !inVerseBar && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null,
 
         /**
-         * Audio button is enabled when it's the interactivated verse, or when
-         * there is no interactivated verse
+         * Audio button is enabled when it's the interactivated verse.
          */
-        isAudioButtonEnabled = interactivatedVerseIndex === -1 || isInteractivated,
+        isAudioButtonEnabled = isInteractivated,
 
         isBeforeSliderHighlighted = sliderMousedOrTouched && verseIndex < sliderVerseIndex,
         isAfterSliderHighlighted = sliderMousedOrTouched && verseIndex > sliderVerseIndex,
