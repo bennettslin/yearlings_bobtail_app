@@ -1,4 +1,10 @@
 module.exports = [
+    {
+        taskName: `Add character descriptions.`,
+        workedHours: 1,
+        neededHours: 6
+    },
+    
     // Overlay.
     {
         taskName: `Hide elements when overlay shown.`,

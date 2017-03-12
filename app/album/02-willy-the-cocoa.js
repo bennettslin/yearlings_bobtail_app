@@ -18,7 +18,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, holding up a bottle, squinting'
                 }
             },
             backdrops: {
@@ -36,19 +36,19 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, ducking behind a pole, laughing merrily'
                 },
                 mother: {
                     todo: true,
-                    description: 'todo'
+                    description: 'squatting, righting chair, exasperated, concerned'
                 },
                 christopher: {
                     todo: true,
-                    description: 'todo'
+                    description: 'off balance, having a tantrum'
                 },
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'stepping off porch, cautious, trying to calm Christopher'
                 }
             }
         },
@@ -58,15 +58,15 @@ module.exports = {
             actors: {
                 father: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, running, angry'
                 },
                 christopher: {
                     todo: true,
-                    description: 'todo'
+                    description: 'lying on side, in pain, clenching stomach'
                 },
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, aggressive stance, angry'
                 }
             }
         },
@@ -76,18 +76,18 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, defending himself, fearful'
                 },
                 howie: {
                     gangbanger: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side angle, pointing at shoe, pushing Willy'
                     }
                 },
                 tomer: {
                     gangbanger: {
                         todo: true,
-                        description: 'todo'
+                        description: 'pulling bottle from cart, about to strike, threatening'
                     }
                 }
             }
@@ -98,11 +98,11 @@ module.exports = {
             actors: {
                 mother: {
                     todo: true,
-                    description: 'todo'
+                    description: 'getting up to close curtain, trying to be reassuring'
                 },
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting up in bed, worried, scared'
                 }
             }
         },
@@ -112,15 +112,15 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, merrily greeting trolls'
                 },
                 christopher: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, looking up at Bennett, reassuring'
                 },
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, wide-eyed, needing reassurance'
                 }
             }
         }

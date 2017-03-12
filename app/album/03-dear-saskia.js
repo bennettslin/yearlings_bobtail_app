@@ -31,16 +31,16 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side seated, pretending to read, panicked'
                 },
                 sasha: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side seated, laughing, braids trailing'
                 },
                 brad: {
                     jewishBoy: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side seated, turned away, pointing to window'
                     }
                 }
             }
@@ -51,22 +51,22 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'tied up, greeting Sasha with nervous laughter'
                 },
                 sasha: {
                     todo: true,
-                    description: 'todo'
-                },
-                brad: {
-                    bully: {
-                        todo: true,
-                        description: 'todo'
-                    }
+                    description: 'indignant, yelling at bullies'
                 },
                 andrew: {
                     bully: {
                         todo: true,
-                        description: 'todo'
+                        description: 'laughing, feigning fear of Sasha'
+                    }
+                },
+                brad: {
+                    bully: {
+                        todo: true,
+                        description: 'laughing, tying up Bennett'
                     }
                 }
             }

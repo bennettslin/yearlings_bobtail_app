@@ -57,7 +57,7 @@ module.exports = {
                     todo: true,
                     description: 'todo'
                 },
-                youngBennett: {
+                preteenBennett: {
                     todo: true,
                     description: 'todo'
                 },
