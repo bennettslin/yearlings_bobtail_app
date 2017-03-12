@@ -142,20 +142,6 @@ class LyricsVerseView extends Component {
         }
     }
 
-    // TODO: Get rid of everything related to hover?
-
-    // _handleMouseOver(e) {
-    //     if (this.props.isHoverable) {
-    //         this.props.onVerseHover(e, this.props.verseObject.verseIndex)
-    //     }
-    // }
-    //
-    // _handleMouseLeave(e) {
-    //     if (this.props.isHoverable) {
-    //         this.props.onVerseHover(e)
-    //     }
-    // }
-
     _checkIsSelectedVerse(props) {
         if (props.isSelected) {
             props.onSelectVerseElement(this.myVerse)

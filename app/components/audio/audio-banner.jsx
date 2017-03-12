@@ -19,7 +19,7 @@ const AudioBannerView = ({
     isLogue,
     songs,
     selectedSongIndex,
-    hoveredVerseIndex,
+    interactivatedVerseIndex,
     selectedVerseIndex,
     sliderVerseIndex,
     sliderMousedOrTouched,
@@ -41,7 +41,7 @@ const AudioBannerView = ({
             isMousedOrTouched={sliderMousedOrTouched}
             songs={songs}
             selectedSongIndex={selectedSongIndex}
-            hoveredVerseIndex={hoveredVerseIndex}
+            interactivatedVerseIndex={interactivatedVerseIndex}
             selectedVerseIndex={selectedVerseIndex}
             sliderVerseIndex={sliderVerseIndex}
             sliderRatio={sliderRatio}

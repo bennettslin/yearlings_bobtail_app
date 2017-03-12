@@ -29,7 +29,7 @@ class AudioSliderView extends Component {
         const { isLogue,
                 isMousedOrTouched,
                 selectedVerseIndex,
-                hoveredVerseIndex,
+                interactivatedVerseIndex,
                 sliderVerseIndex,
                 sliderRatio,
                 selectedTimePlayed,
@@ -56,8 +56,8 @@ class AudioSliderView extends Component {
             if (sliderVerseIndex > -1) {
                 cursorVerseIndex = sliderVerseIndex
                 cursorClassName = 'slider-selected'
-            } else if (hoveredVerseIndex > -1) {
-                cursorVerseIndex = hoveredVerseIndex
+            } else if (interactivatedVerseIndex > -1) {
+                cursorVerseIndex = interactivatedVerseIndex
                 cursorClassName = 'hovered'
             } else {
                 cursorVerseIndex = selectedVerseIndex

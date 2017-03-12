@@ -89,7 +89,6 @@ const LiveView = ({
     selectedDotsIndex,
     selectedNavIndex,
     selectedBookColumnIndex,
-    interactivatedVerseIndex,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
@@ -102,7 +101,7 @@ const LiveView = ({
 
     lyricsStartAtZero,
     hiddenLyricColumnKey,
-    hoveredVerseIndex,
+    interactivatedVerseIndex,
 
     sliderMoving,
     sliderMousedOrTouched,
@@ -190,7 +189,7 @@ const LiveView = ({
             isLogue,
             songs,
             selectedVerseIndex,
-            hoveredVerseIndex,
+            interactivatedVerseIndex,
             selectedSongIndex,
             sliderVerseIndex,
             sliderRatio,

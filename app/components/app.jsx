@@ -147,7 +147,6 @@ class App extends Component {
                 LYRIC_ANNOTATION_ELEMENT : LYRIC_VERSE_ELEMENT,
             accessedDotIndex: 0,
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
-            interactivatedVerseIndex: -1,
             isLyricExpanded: false,
 
             lyricSectionTop: 0,
@@ -165,7 +164,7 @@ class App extends Component {
             selectedSliderVerseElement: null,
             sliderMousedOrTouched: false,
 
-            hoveredVerseIndex: -1,
+            interactivatedVerseIndex: -1,
 
             // Prevent verse bar from showing upon load.
             appMounted: false,
@@ -218,7 +217,6 @@ class App extends Component {
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
-        // this.hoverVerse = this.hoverVerse.bind(this)
         this.handleLyricAudioButtonClick = this.handleLyricAudioButtonClick.bind(this)
         this.interactivateVerse = this.interactivateVerse.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
@@ -605,8 +603,7 @@ class App extends Component {
         this._stopPropagation(e)
 
         this.setState({
-            interactivatedVerseIndex,
-            hoveredVerseIndex: interactivatedVerseIndex
+            interactivatedVerseIndex
         })
     }
 
@@ -1539,7 +1536,6 @@ class App extends Component {
                     onVerseClick={this.selectVerse}
                     onLyricAudioButtonClick={this.handleLyricAudioButtonClick}
                     onInteractivatedVerseClick={this.interactivateVerse}
-                    // onVerseHover={this.hoverVerse}
                     onDotClick={this.selectDot}
                     onLyricColumnClick={this.selectLyricColumn}
                     onPopupContainerClick={this.handlePopupContainerClick}
