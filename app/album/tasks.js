@@ -53,7 +53,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Clicking lower verse bar makes screen jump in Safari. Also just going from one annotation to the next.`,
+        taskName: `Clicking lower verse bar makes screen jump. Also just going from one annotation to the next. Doesn't just happen in Safari... Use Didi`,
         workedHours: 0,
         neededHours: 2
     },
