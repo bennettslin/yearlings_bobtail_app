@@ -4,7 +4,7 @@ module.exports = [
         workedHours: 1,
         neededHours: 6
     },
-    
+
     // Overlay.
     {
         taskName: `Hide elements when overlay shown.`,
@@ -12,14 +12,9 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Annotation underneath score should animate away more smoothly.`,
+        taskName: `Score animation is not ideal, should open in largest zoom, and preload if possible.`,
         workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Score and wiki should just hide, not reload upon each popup opened.`,
-        workedHours: 0,
-        neededHours: 5
+        neededHours: 2
     },
 
     // Audio slider.
@@ -1453,6 +1448,11 @@ module.exports = [
     },
     {
         taskName: `Audio cursor.`,
+        workedHours: 3,
+        neededHours: 3
+    },
+    {
+        taskName: `Score persists even when popup is dismissed.`,
         workedHours: 3,
         neededHours: 3
     },

@@ -39,7 +39,7 @@ class TransitionPopup extends Component {
     }
 
     _handleTransitionEnd(e) {
-        if (e.propertyName === 'opacity' && !this.state.isVisible) {
+        if (e.propertyName === 'opacity' && !this.props.isVisible) {
             this.setState({
                 isDisplayed: false
             })
@@ -56,10 +56,10 @@ class TransitionPopup extends Component {
 
             { isDisplayed } = this.state,
             visibleClassName = isVisible ? 'visible' : '',
-            displayClassName = isDisplayed ? 'displayed' : ''
+            displayClassName = isDisplayed ? '' : 'not-displayed'
 
         return (
-            <div
+            <span
                 className={`popup-transition-group ${popupClassName} ${visibleClassName} ${displayClassName}`}
                 onTransitionEnd={this._handleTransitionEnd}
             >
@@ -71,7 +71,7 @@ class TransitionPopup extends Component {
                     onPopupContainerClick={onPopupContainerClick}
                     myChild={myChild}
                 />
-            </div>
+            </span>
         )
     }
 }
