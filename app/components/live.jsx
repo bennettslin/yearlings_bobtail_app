@@ -349,6 +349,7 @@ const LiveView = ({
             isPhone,
             scores,
             selectedScoreIndex,
+            selectedSongIndex,
             showClose: true,
             onPopupButtonClick: onScoreClick,
             onPopupContainerClick
@@ -437,7 +438,7 @@ const LiveView = ({
                 </div>
                 <div className="overlay-popup-block">
                     <ScoreTransitionPopup {...scorePopupProps} />
-                    <ScorePopup {...scorePopupProps} />
+                    {/* <ScorePopup {...scorePopupProps} /> */}
                     <WikiPopup {...wikiPopupProps} />
                     {isOverlaidAnnotation &&
                         <AnnotationPopup {...annotationPopupProps} />

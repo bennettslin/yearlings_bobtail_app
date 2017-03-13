@@ -18,50 +18,59 @@ const ScoreSection = (props) => (
 
 // TODO: Look into http://stackoverflow.com/questions/19654577/html-embedded-pdf-iframe
 
+// http://stackoverflow.com/questions/20562543/zoom-to-fit-pdf-embeded-in-html
+
 class ScoreSectionView extends Component {
 
     constructor(props) {
         super(props)
-        this.onWebviewLoad = this.onWebviewLoad.bind(this)
+        // this.onWebviewLoad = this.onWebviewLoad.bind(this)
 
-        this.state = {
-            webviewLoading: true
-        }
+        // this.state = {
+        //     webviewLoading: true
+        // }
     }
 
-    componentWillReceiveProps({ scores }) {
-        this._onScoreReceived(scores)
+    shouldComponentUpdate(nextProps) {
+        return nextProps.selectedSongIndex !== this.props.selectedSongIndex
     }
 
-    _onScoreReceived(scores) {
-        if (scores && scores !== this.props.scores) {
-            this.setState({ webviewLoading: true })
-        }
-    }
+    // componentWillReceiveProps({ scores }) {
+        // this._onScoreReceived(scores)
+    // }
 
-    onWebviewLoad() {
-        this.setState({
-            webviewLoading: false
-        })
-    }
+    // _onScoreReceived(scores) {
+        // if (scores) {
+        //     this.setState({ webviewLoading: true })
+        // }
+    // }
+
+    // onWebviewLoad() {
+        // this.setState({
+        //     webviewLoading: false
+        // })
+    // }
 
     render() {
-        const { scores } = this.props,
-            { webviewLoading } = this.state
+        const { scores } = this.props
+            // { webviewLoading } = this.state
 
         return (
             <div className="section score-section">
-                {webviewLoading &&
+                {/* {webviewLoading &&
                     <div className="spinner-container">
                         <img
                             className="spinner"
                             src={spinnerSvg}
                         />
                     </div>
-                }
+                } */}
+
+                {/* Should show individual score from scores array. */}
+
                 <iframe
                     ref="webview"
-                    className={`webview${webviewLoading ? ' loading' : ''}`}
+                    className={`webview`}
                     src={scores[0]}
                     onLoad={this.onWebviewLoad}
                 />

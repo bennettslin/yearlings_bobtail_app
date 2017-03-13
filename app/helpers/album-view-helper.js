@@ -344,6 +344,14 @@ export const getVerseBarStatus = (props, selectedVerseElement) => {
 }
 
 export const getVerseBeginAndEndTimes = (props, verseIndex) => {
+
+    if (getIsLogue(props)) {
+        return {
+            beginTime: 0,
+            endTime: 0
+        }
+    }
+
     const selectedSong = getSong(props),
         songTimes = selectedSong.times,
 

@@ -1,3 +1,7 @@
+/**
+ * Deprecated.
+ */
+
 import React from 'react'
 import Popup from '../superclasses/popup'
 import ScoreSection from './score-section'

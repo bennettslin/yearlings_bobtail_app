@@ -12,8 +12,8 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Score animation is not ideal, should open in largest zoom, and preload if possible.`,
-        workedHours: 0,
+        taskName: `Score animation is still just a little wonky in Chrome.`,
+        workedHours: 1,
         neededHours: 2
     },
 
