@@ -19,7 +19,7 @@ const AdminToggle = (props) => {
 const AdminToggleView = ({
 
     // From props.
-    isAdmin,
+    selectedAdminIndex,
     isLyricExpanded,
     deviceIndex,
     windowWidth,
@@ -32,7 +32,7 @@ const AdminToggleView = ({
             className="enabled"
             onClick={onClick}
         >
-            {isAdmin ? 'Admin' : 'Live'}
+            {selectedAdminIndex ? 'Admin' : 'Live'}
         </a>
         <div>
             {isLyricExpanded ? 'expanded' : 'collapsed'}

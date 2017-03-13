@@ -70,7 +70,7 @@ const AlbumView = ({
                     onScoreClick={onScoreClick}
                 />
                 <NavSection
-                    isAdmin={true}
+                    selectedAdminIndex={true}
                     songs={songs}
                     allTasks={allTasks}
                     selectedSongIndex={selectedSongIndex}

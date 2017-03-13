@@ -8,11 +8,11 @@ import Live from './live'
 
 const Switch = ({
 
-    isAdmin,
+    selectedAdminIndex,
 
 ...other }) => {
 
-    return (isAdmin ?
+    return (selectedAdminIndex ?
         <Album {...other} /> :
         <Live {...other} />
     )

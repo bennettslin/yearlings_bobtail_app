@@ -224,6 +224,7 @@ module.exports = {
     PREVIOUS_POPUP_BUTTON: 'side-button previous',
     NEXT_POPUP_BUTTON: 'side-button next',
 
+    SELECTED_ADMIN_INDEX: 'selectedAdminIndex',
     SELECTED_SONG_INDEX: 'selectedSongIndex',
     SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',

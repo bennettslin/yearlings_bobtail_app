@@ -16,13 +16,13 @@ const TipsSection = (props) => (
 const TipsSectionView = ({
 
     // From props.
-    isAdmin,
+    selectedAdminIndex,
     selectedTipsIndex,
     onTipsClick
 
 }) => (
     <div className={`section tips-section`}>
-        {isAdmin &&
+        {selectedAdminIndex &&
             <h2>tips</h2>
         }
         <button onClick={onTipsClick}>tips: {TIPS_OPTIONS[selectedTipsIndex]}</button>

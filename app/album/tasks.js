@@ -1456,4 +1456,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Persist selectedAdminIndex.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

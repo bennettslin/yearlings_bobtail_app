@@ -9,7 +9,7 @@ import NavButton from './nav-button'
 const NavItem = ({
 
     index,
-    isAdmin,
+    selectedAdminIndex,
     isToggle,
     hasSelectedSong,
     selectedSongIndex,
@@ -26,7 +26,7 @@ const NavItem = ({
             accessHighlighted
         }
 
-    return isAdmin ?
+    return selectedAdminIndex ?
         <NavRow {...other} {...navItemProps} /> :
         <NavButton {...other} {...navItemProps} />
 }

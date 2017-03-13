@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
-import { SELECTED_SONG_INDEX,
+import { SELECTED_ADMIN_INDEX,
+         SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
          SELECTED_VERSE_INDEX,
          SELECTED_TIME_PLAYED,
@@ -17,6 +18,7 @@ import { SELECTED_SONG_INDEX,
 import SessionHelper from '../../helpers/session-helper'
 
 const { getFromSession } = SessionHelper,
+    storedAdminIndex = getFromSession(SELECTED_ADMIN_INDEX),
     storedSongIndex = getFromSession(SELECTED_SONG_INDEX),
     storedAnnotationIndex = getFromSession(SELECTED_ANNOTATION_INDEX),
     storedVerseIndex = getFromSession(SELECTED_VERSE_INDEX),
@@ -32,6 +34,15 @@ const { getFromSession } = SessionHelper,
     storedDotsIndex = getFromSession(SELECTED_DOTS_INDEX),
     storedAccessedOn = getFromSession(ACCESSED_ON),
     storedAccessedSectionIndex = getFromSession(ACCESSED_SECTION_INDEX)
+
+export const AdminIndexReducer = (state = storedAdminIndex, action) => {
+    switch (action.type) {
+        case SELECTED_ADMIN_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
 
 export const SongIndexReducer = (state = storedSongIndex, action) => {
     switch (action.type) {
@@ -176,6 +187,7 @@ export const AccessedSectionIndexReducer = (state = storedAccessedSectionIndex, 
 }
 
 const rootReducer = combineReducers({
+    selectedAdminIndex: AdminIndexReducer,
     selectedSongIndex: SongIndexReducer,
     selectedAnnotationIndex: AnnotationIndexReducer,
     selectedVerseIndex: VerseIndexReducer,

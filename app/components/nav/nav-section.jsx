@@ -12,7 +12,7 @@ import { NAV_SECTION } from 'helpers/constants'
 const NavSection = ({
 
     songs = [],
-    isAdmin,
+    selectedAdminIndex,
     allTasks,
     accessedOn,
     accessedSectionKey,
@@ -20,8 +20,8 @@ const NavSection = ({
 
 ...other }) => {
 
-    const maxTotalNeededHours = isAdmin ? ProgressHelper.getMaxTotalNeededHoursFromSongs(songs) : null,
-        sumAllTasks = allTasks && isAdmin ? ProgressHelper.calculateSumAllTasks(allTasks) : null,
+    const maxTotalNeededHours = selectedAdminIndex ? ProgressHelper.getMaxTotalNeededHoursFromSongs(songs) : null,
+        sumAllTasks = allTasks && selectedAdminIndex ? ProgressHelper.calculateSumAllTasks(allTasks) : null,
 
         sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION,
         sectionNextHighlighted = accessedOn && nextSectionKey === NAV_SECTION
@@ -29,7 +29,7 @@ const NavSection = ({
     return (
         <NavSectionView {...other}
             songs={songs}
-            isAdmin={isAdmin}
+            selectedAdminIndex={selectedAdminIndex}
             sumAllTasks={sumAllTasks}
             maxTotalNeededHours={maxTotalNeededHours}
             sectionAccessHighlighted={sectionAccessHighlighted}
@@ -45,7 +45,7 @@ const NavSection = ({
 const NavSectionView = ({
 
     // From props.
-    isAdmin,
+    selectedAdminIndex,
     songs,
     bookStartingIndices,
     selectedSongIndex,
@@ -66,7 +66,7 @@ const NavSectionView = ({
 
 }) => {
     const navItemProps = {
-        isAdmin,
+        selectedAdminIndex,
         selectedSongIndex,
         accessedSongIndex,
         maxTotalNeededHours,
@@ -79,7 +79,7 @@ const NavSectionView = ({
         <div
             className={`section nav-section${shrinkNavIcon ? ' shrink-icon' : ' static-icon'}${showSingleBookColumn ? ' single-book-column' : ' double-book-column'}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
         >
-            {isAdmin &&
+            {selectedAdminIndex &&
                 <div className="row">
                     <div className="text-cell-wrapper">
                         <h3 className="text-cell text">song</h3>
@@ -87,7 +87,7 @@ const NavSectionView = ({
                     </div>
                 </div>
             }
-            {isAdmin ?
+            {selectedAdminIndex ?
                 <div className="admin-block">
                     {songs.map((song, index) => {
                         return (
@@ -163,7 +163,7 @@ const NavSectionView = ({
                     </div>
                 </div>
             }
-            {isAdmin &&
+            {selectedAdminIndex &&
                 <div className="row">
                     <ProgressFooter
                         sumTask={sumAllTasks}

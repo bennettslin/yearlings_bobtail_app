@@ -15,11 +15,11 @@ const StageSection = (props) => (
 const StageSectionView = ({
 
     // From props.
-    isAdmin
+    selectedAdminIndex
 
 }) => (
     <div className={`section stage-section`}>
-        {isAdmin &&
+        {selectedAdminIndex &&
             <h2>stage</h2>
         }
     </div>

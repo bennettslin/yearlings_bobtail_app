@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { selectSongIndex,
+import { selectAdminIndex,
+         selectSongIndex,
          selectAnnotationIndex,
          selectVerseIndex,
          selectTimePlayed,
@@ -59,6 +60,7 @@ import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
  *********/
 
 const passReduxStateToProps = ({
+    selectedAdminIndex,
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedVerseIndex,
@@ -76,6 +78,7 @@ const passReduxStateToProps = ({
     accessedSectionIndex
 }) => ({
     // Pass Redux state into component props.
+    selectedAdminIndex,
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedVerseIndex,
@@ -96,6 +99,7 @@ const passReduxStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     // Bind Redux action creators to component props.
     bindActionCreators({
+        selectAdminIndex,
         selectSongIndex,
         selectAnnotationIndex,
         selectVerseIndex,
@@ -127,7 +131,6 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            isAdmin: false,
             isPlaying: false,
 
             popupAnnotationIndex: props.selectedAnnotationIndex,
@@ -465,9 +468,7 @@ class App extends Component {
     }
 
     toggleAdmin() {
-        this.setState({
-            isAdmin: !this.state.isAdmin
-        })
+        this.props.selectAdminIndex((this.props.selectedAdminIndex + 1) % 2)
     }
 
     togglePlay(e) {
@@ -1418,7 +1419,8 @@ class App extends Component {
 
     render() {
         const { props, state } = this,
-            { mp3s,
+            { selectedAdminIndex,
+              mp3s,
               accessedSectionIndex,
               selectedSongIndex,
               selectedVerseIndex,
@@ -1427,8 +1429,7 @@ class App extends Component {
               selectedScoreIndex,
               selectedAnnotationIndex } = props,
 
-            { isAdmin,
-              deviceIndex,
+            { deviceIndex,
               windowWidth,
               windowHeight,
               isLyricExpanded,
@@ -1480,7 +1481,7 @@ class App extends Component {
                 ref={(node) => (this.myApp = node)}
                 className={`
                     app
-                    ${isAdmin ? 'admin' : `live ${deviceClassName}`}
+                    ${selectedAdminIndex ? 'admin' : `live ${deviceClassName}`}
                     ${isDesktop ? 'is-desktop' : 'is-mobile'}
                     ${isPlaying ? ' is-playing' : ' is-paused'}
                 `}
@@ -1500,7 +1501,7 @@ class App extends Component {
                 </div>
                 <AudioPlayersSection {...audioPlayersProps} />
                 <AdminToggle
-                    isAdmin={isAdmin}
+                    selectedAdminIndex={selectedAdminIndex}
                     isLyricExpanded={isLyricExpanded}
                     deviceIndex={deviceIndex}
                     windowWidth={windowWidth}

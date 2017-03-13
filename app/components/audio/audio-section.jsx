@@ -46,7 +46,7 @@ const AudioSectionView = ({
     timerInAudio,
     titleInAudio,
     isPhone,
-    isAdmin,
+    selectedAdminIndex,
     isPlaying,
     title,
     selectedAudioOptionIndex,
@@ -94,7 +94,7 @@ const AudioSectionView = ({
         <div
             className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
         >
-            {isAdmin &&
+            {selectedAdminIndex &&
                 <h2>audio</h2>
             }
             {timerInAudio && (

@@ -109,8 +109,8 @@ export const getShrinkNavIcon = (state) => {
     }
 }
 
-export const getIsLyricExpandable = ({ isAdmin, deviceIndex }) => {
-    return !isAdmin && !getIsDesktop(deviceIndex)
+export const getIsLyricExpandable = ({ selectedAdminIndex, deviceIndex }) => {
+    return !selectedAdminIndex && !getIsDesktop(deviceIndex)
 }
 
 export const getShowSingleLyricColumn = (props, state, selectedSongIndex) => {

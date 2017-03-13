@@ -1,4 +1,5 @@
-import { SELECTED_SONG_INDEX,
+import { SELECTED_ADMIN_INDEX,
+         SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
          SELECTED_VERSE_INDEX,
          SELECTED_TIME_PLAYED,
@@ -16,6 +17,14 @@ import { SELECTED_SONG_INDEX,
  import SessionHelper from '../../helpers/session-helper'
 
  const { setInSession, setDotInSession } = SessionHelper
+
+ export const selectAdminIndex = (selectedAdminIndex = 0) => {
+     setInSession(SELECTED_ADMIN_INDEX, selectedAdminIndex)
+     return {
+         type: SELECTED_ADMIN_INDEX,
+         payload: selectedAdminIndex
+     }
+ }
 
 export const selectSongIndex = (selectedSongIndex = 0) => {
     setInSession(SELECTED_SONG_INDEX, selectedSongIndex)
