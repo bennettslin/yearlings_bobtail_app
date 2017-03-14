@@ -30,19 +30,19 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, holding body and gesturing its smallness'
                 },
                 ana: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, reading bottle intently'
                 },
                 howie: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, holding large bottle'
                 },
                 tomer: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, feigning superiority'
                 }
             }
         },
@@ -52,19 +52,19 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, blathering'
                 },
                 ana: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, play fighting'
                 },
                 howie: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, zoned out'
                 },
                 tomer: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, play fighting'
                 }
             }
         },
@@ -74,19 +74,19 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, looking upwards, inspired'
                 },
                 ana: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, shivering, feeling comforted'
                 },
                 howie: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, arm around Ana'
                 },
                 tomer: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, squatting, pouring water on grave'
                 }
             }
         },
@@ -96,19 +96,19 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, sleeping in car'
                 },
                 ana: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, sleeping in car'
                 },
                 howie: {
                     todo: true,
-                    description: 'todo'
+                    description: 'driving car, alert, wigging out'
                 },
                 tomer: {
                     todo: true,
-                    description: 'todo'
+                    description: 'back angle, sleeping in car'
                 }
             }
         },
@@ -118,11 +118,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'lying on couch, watching TV, alert'
                 },
                 howie: {
                     todo: true,
-                    description: 'todo'
+                    description: 'downstairs, in agony'
                 }
             }
         }

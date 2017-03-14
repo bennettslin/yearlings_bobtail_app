@@ -17,11 +17,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, awkward, wanting to make a move'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, friendly, guarded'
                 }
             }
         },
@@ -31,11 +31,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, leaning towards Sita'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, hands behind back, guarded'
                 }
             }
         },
@@ -45,20 +45,20 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, jealous'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, warm, guard down'
                 },
                 khari: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, friendly'
                 },
                 stephanie: {
                     actor: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side, rushing'
                     }
                 }
             }
@@ -69,11 +69,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, in go-kart, leaning forward'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, in go-kart, relaxed'
                 }
             }
         },
@@ -83,11 +83,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, walking away dejected, slumped over'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, closing gate, looking concerned'
                 }
             }
         }

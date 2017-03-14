@@ -26,30 +26,30 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, playing banjo, emotive'
                 },
                 tomer: {
                     hipster: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side angle, holding beer, turning to make room'
                     }
                 },
                 khari: {
                     audienceMember: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side, holding beer'
                     }
                 },
                 amy: {
                     redhead: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side, squeezing through, awkward'
                     }
                 },
                 stephanie: {
                     redheadFriend: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side, squeezing through, apologetic'
                     }
                 }
             }
@@ -60,21 +60,21 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, charmed'
                 },
                 amy: {
                     redhead: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side angle, same Mara pose'
                     }
                 },
                 jacob: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, walking, carrying drums, smiling at Mara'
                 },
                 mara: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, walking, carrying cymbal, talking'
                 }
             }
         },
@@ -84,32 +84,32 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, carrying gear, looking back, hesitant'
                 },
                 ana: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, leaning against wall, waiting for Jacob'
                 },
                 mara: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, looking at watch'
                 },
                 amy: {
                     redhead: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side, looking back, uncertain'
                     }
                 },
                 stephanie: {
                     redheadFriend: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side angle, looking at Bennett'
                     }
                 },
                 wade: {
                     redheadFriend: {
                         todo: true,
-                        description: 'todo'
+                        description: 'front, looking at Bennett'
                     }
                 }
             }
@@ -120,11 +120,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, sitting on edge of bed, discontented'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'lying, reaching forward to touch Bennett'
                 }
             }
         }
