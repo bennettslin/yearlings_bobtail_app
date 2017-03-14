@@ -32,7 +32,6 @@ const DotButton = ({
  * PRESENTATION *
  ****************/
 
-// Making this a React component to store hover state.
 class DotButtonView extends Component {
 
     constructor(props) {
