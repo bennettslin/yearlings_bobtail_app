@@ -10,7 +10,7 @@ Demo tape recordings transcend social boundaries (indie rock placed a bet that p
 
 Virality, stories of technology aiding the dissemination of art are massively uninteresting to us
 
-Underdog culture: Underdog culture is just like any other system that favours some over others. But it's the least likely to recognise the de facto underdogs of its time.
+Underdog culture: Underdog culture is just like any other system that favours some over others. But it's the least likely to recognise the de facto underdogs of its time. An underdog culture can never belatedly pivot to the de facto underdog.
 
 
 Altruistic audiences

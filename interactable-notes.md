@@ -1,4 +1,6 @@
-# Lyrics line notes
+# Interactable notes
+
+## Lyrics line
 
 * Line can be "interactivated"
     * Only one line at a time is interactivated
@@ -18,3 +20,8 @@
     * When line is interactivated
         * Its lyric audio button is shown
         * It has an inset shadow
+
+## Dots section dot
+
+* Dot can be "interactivated"
+    * Dot is interactivated by hover or click
