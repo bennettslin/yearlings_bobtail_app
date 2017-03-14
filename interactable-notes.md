@@ -25,3 +25,8 @@
 
 * Dot can be "interactivated"
     * Dot is interactivated by hover or click
+
+* Dot is deinteractivated
+    * On unhover or click
+    * On clicking any blank space in dots section
+    * On closing dots section

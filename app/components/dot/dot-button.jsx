@@ -40,10 +40,21 @@ class DotButtonView extends Component {
 
         this.onMouse = this.onMouse.bind(this)
         this.onTouch = this.onTouch.bind(this)
+        this._handleTextContainerClick = this._handleTextContainerClick.bind(this)
 
         this.state = {
             isMoused: false,
             isTouched: false,
+            isInteractivated: false
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (!nextProps.selectedDotsIndex ||
+            (!nextProps.hasInteractivatedDotText && this.props.hasInteractivatedDotText)) {
+            this.setState({
+                isInteractivated: false
+            })
         }
     }
 
@@ -62,6 +73,16 @@ class DotButtonView extends Component {
         })
     }
 
+    _handleTextContainerClick(e, isInteractivated = !this.state.isInteractivated) {
+        e.stopPropagation()
+
+        this.setState({
+            isInteractivated
+        })
+
+        this.props.setHasInteractivatedDotText(isInteractivated)
+    }
+
     render () {
         const {
 
@@ -78,22 +99,56 @@ class DotButtonView extends Component {
 
         } = this.props,
         { isMoused,
-          isTouched } = this.state
+          isTouched,
+          isInteractivated } = this.state
 
         return (
             <div
                 className={`dot-container${isEnabled ? ' dot-enabled' : ''}${isMoused || isTouched ? ' interacted' : ' uninteracted'}`}
             >
-                {inDotsSection &&
+                {false && inDotsSection &&
                     <div className="tooltip-container">
                         <div className="tooltip">
                             {DOT_DESCRIPTIONS[dotKey]}
                         </div>
                     </div>
                 }
-                <div className={`dot ${dotKey}${isPresent ? '' : ' background'}${isToggleDeselected ? ' deselected' : ''}${isEnabled ? '' : ' disabled'}${accessHighlighted ? ' access-highlighted' : ''}`}>
-                    <div className="dot-text">
-                        {dotKey}
+                {inDotsSection &&
+                    <a
+                        className="dot-text-container enabled"
+                        onClick={e => this._handleTextContainerClick(e)}
+                    >
+                        <div
+                            className={`
+                                dot-text
+                                dot-text-interactable
+                                ${isInteractivated ? 'interactivated' : ''}
+                            `}
+                        >
+                            {dotKey}
+                        </div>
+                    </a>
+                }
+                <div
+                    className={`
+                        dot
+                        ${dotKey}
+                        ${isPresent ? '' : ' background'}
+                        ${isToggleDeselected ? ' deselected' : ''}
+                        ${isEnabled ? '' : ' disabled'}
+                        ${accessHighlighted ? ' access-highlighted' : ''}
+                    `}
+                >
+                    <div
+                        className={`
+                            dot-description
+                            dot-text
+                            ${isInteractivated ? 'interactivated' : ''}
+                        `}
+                    >
+                        <span>
+                            {DOT_DESCRIPTIONS[dotKey]}
+                        </span>
                     </div>
                 </div>
                 <a className={`dot-interactable${isEnabled ? ' enabled' : ''}`}
@@ -104,13 +159,6 @@ class DotButtonView extends Component {
                     onClick={onClick}
                 >
                 </a>
-                {inDotsSection &&
-                    <a className="dot-text-container enabled">
-                        <div className="dot-text">
-                            {dotKey}
-                        </div>
-                    </a>
-                }
             </div>
         )
     }
