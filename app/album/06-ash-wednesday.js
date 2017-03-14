@@ -32,11 +32,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'standing forward, disappointed, defeated'
                 },
                 catherine: {
                     todo: true,
-                    description: 'todo'
+                    description: 'walking away, in a bad mood'
                 }
             }
         },
@@ -46,11 +46,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting slouched at angle, showing lyrics to Catherine'
                 },
                 catherine: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting upright, droll smile'
                 }
             }
         },
@@ -60,7 +60,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'standing, back forward, hands in pocket'
                 }
             }
         },
@@ -70,18 +70,18 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, noticing Catholic'
                 },
                 wade: {
                     catholic: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side angle, walking, looking pious'
                     }
                 },
                 amy: {
                     smoker: {
                         todo: true,
-                        description: 'todo'
+                        description: 'walking up stairs, back forward, exhaling smoke'
                     }
                 }
             }
@@ -92,11 +92,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, walking, looking pious'
                 },
                 catherine: {
                     todo: true,
-                    description: 'todo'
+                    description: 'walking forward, looking at Bennett, confused and curious'
                 }
             }
         }

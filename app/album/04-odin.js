@@ -25,7 +25,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, lying on floor, propped up'
                 }
             }
         },
@@ -35,7 +35,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, peeking out from gate'
                 }
             }
         },
@@ -45,7 +45,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side back, looking out to ocean'
                 }
             }
         },
@@ -55,7 +55,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, crouched in sand, looking back'
                 }
             }
         }

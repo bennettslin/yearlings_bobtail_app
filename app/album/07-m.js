@@ -17,12 +17,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting on couch, reading a book'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        description: 'todo'
+                        description: 'sitting on floor, back turned, holding guitar'
                     }
                 }
             }
@@ -33,24 +33,24 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'chatting with hipster, paying attention to Mara'
                 },
                 jacob: {
                     todo: true,
-                    description: 'todo'
+                    description: 'wiping sweat, chatting with Mara, laughing'
                 },
                 mara: {
                     todo: true,
-                    description: 'todo'
+                    description: 'flirting with Jacob'
                 },
                 ana: {
                     todo: true,
-                    description: 'todo'
+                    description: 'squatting, back turned, putting bass in guitar'
                 },
                 tomer: {
                     hipster: {
                         todo: true,
-                        description: 'todo'
+                        description: 'chatting with Bennett, gushing about music'
                     }
                 }
             }
@@ -61,19 +61,19 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting, silently eating burger, uncomfortable'
                 },
                 jacob: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting, eating burger, arm around Mara'
                 },
                 mara: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting, eating fries, chatting'
                 },
                 ana: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting, laughing'
                 }
             }
         },
@@ -83,18 +83,18 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, walking, sulking with head down'
                 },
                 miriam: {
                     maskedWoman: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side, walking dog, looking back at Bennett'
                     },
                 },
                 howie: {
                     maskedMan: {
                         todo: true,
-                        description: 'todo'
+                        description: 'resting against wall, checking time'
                     }
                 }
             }
@@ -105,7 +105,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, inspired by sudden thought'
                 }
             }
         }
