@@ -11,11 +11,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Score animation is still just a little wonky in Chrome.`,
-        workedHours: 1,
-        neededHours: 2
-    },
 
     // Audio slider.
     {
@@ -1458,6 +1453,11 @@ module.exports = [
     },
     {
         taskName: `Make dot tooltip touch accessible`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Score animation is still just a little wonky in Chrome. (Just got rid of transform.)`,
         workedHours: 2,
         neededHours: 2
     }

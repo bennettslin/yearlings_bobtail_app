@@ -37,13 +37,9 @@ class DotButtonView extends Component {
     constructor(props) {
         super(props)
 
-        this.onMouse = this.onMouse.bind(this)
-        this.onTouch = this.onTouch.bind(this)
         this._handleTextContainerClick = this._handleTextContainerClick.bind(this)
 
         this.state = {
-            isMoused: false,
-            isTouched: false,
             isInteractivated: false
         }
     }
@@ -55,21 +51,6 @@ class DotButtonView extends Component {
                 isInteractivated: false
             })
         }
-    }
-
-    onMouse(e) {
-        const { type } = e
-        this.setState({
-            isMoused: type === 'mouseenter'
-        })
-    }
-
-    // FIXME: Revisit to see if this works properly.
-    onTouch(e) {
-        const { type } = e
-        this.setState({
-            isTouched: type === 'touchstart'
-        })
     }
 
     _handleTextContainerClick(e, isInteractivated = !this.state.isInteractivated) {
@@ -97,21 +78,12 @@ class DotButtonView extends Component {
             onClick
 
         } = this.props,
-        { isMoused,
-          isTouched,
-          isInteractivated } = this.state
+        { isInteractivated } = this.state
 
         return (
             <div
-                className={`dot-container${isEnabled ? ' dot-enabled' : ''}${isMoused || isTouched ? ' interacted' : ' uninteracted'}`}
+                className={`dot-container${isEnabled ? ' dot-enabled' : ''}`}
             >
-                {false && inDotsSection &&
-                    <div className="tooltip-container">
-                        <div className="tooltip">
-                            {DOT_DESCRIPTIONS[dotKey]}
-                        </div>
-                    </div>
-                }
                 {inDotsSection &&
                     <a
                         className="dot-text-container enabled"
@@ -133,8 +105,8 @@ class DotButtonView extends Component {
                         dot
                         ${dotKey}
                         ${isPresent ? '' : ' background'}
-                        ${isToggleDeselected ? ' deselected' : ''}
                         ${isEnabled ? '' : ' disabled'}
+                        ${isToggleDeselected ? ' deselected' : ''}
                         ${accessHighlighted ? ' access-highlighted' : ''}
                     `}
                 >
@@ -151,10 +123,6 @@ class DotButtonView extends Component {
                     </div>
                 </div>
                 <a className={`dot-interactable${isEnabled ? ' enabled' : ''}`}
-                    onMouseEnter={this.onMouse}
-                    onMouseLeave={this.onMouse}
-                    onTouchStart={this.onTouch}
-                    onTouchEnd={this.onTouch}
                     onClick={onClick}
                 >
                 </a>

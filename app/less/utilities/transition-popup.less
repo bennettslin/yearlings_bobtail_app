@@ -1,16 +1,16 @@
-.popup-transition-group.score {
+.popup-transition-group {
 
     // Apply to score and eventually wiki only for now. But hopefully apply it to all.
     &.score {
         z-index: @popup-content-z-index;
-        transform: scale(1.3);
+        // transform: scale(1.3);
         opacity: 0;
-        .transition(~"opacity 0.15s ease, transform 0.15s ease");
+        .transition(~"opacity 0.15s ease");
 
         &.visible {
-            transform: scale(1);
+            // transform: scale(1);
             opacity: 1;
-            .transition(~"opacity 0.25s ease, transform 0.25s ease");
+            .transition(~"opacity 0.25s ease");
         }
 
         &.not-displayed {
