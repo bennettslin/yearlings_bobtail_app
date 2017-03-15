@@ -5,6 +5,18 @@ module.exports = [
         neededHours: 6
     },
 
+    // Song selection timeout.
+    {
+        taskName: `Line still not resetting width properly, going from Cremated to Uncanny in laptop width.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
     // Overlay.
     {
         taskName: `Hide elements when overlay shown.`,
@@ -32,11 +44,6 @@ module.exports = [
     },
 
     // Bugs.
-    {
-        taskName: `Line still not resetting width properly, going from Cremated to Uncanny in laptop width.`,
-        workedHours: 0,
-        neededHours: 2
-    },
     {
         taskName: `Recalculate whether selected verse is shown when changing height.`,
         workedHours: 0,
@@ -122,11 +129,6 @@ module.exports = [
         taskName: `Selecting new song from audio overlay shouldn't dismiss overlay`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
-        workedHours: 0,
-        neededHours: 5
     },
 
     // Hack Week.

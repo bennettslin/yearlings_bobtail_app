@@ -119,6 +119,7 @@ class LyricsSectionView extends Component {
                 `}
                 onScroll={this._handleScroll}
             >
+                {/* This lyrics subsection exists solely to animate lyrics to side when a new song is selected. */}
                 <div
                     ref={(node) => (this.mySubsection = node)}
                     className={`
