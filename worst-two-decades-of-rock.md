@@ -1,21 +1,27 @@
 The Worst Two Decades of Rock
 
-On some level this is a trivial argument, because what other two decades could it be?
+This might seem like a moot point, because what other two decades could it be? I might as well have said that this is the worst century of classical music.
+So let me proclaim my sincere belief that if we wanted to, we could beat the 70s. Stravinsky.
 
-Oceans overfished, fewer big fish. Criticising the last generation's lack of stewardship, not the present generation's lack of vision.
+Oceans overfished, fewer big fish, dwindling rain forest. No one says, "Damn Millennials." I'm not criticising the present generation's lack of vision. I'm criticising the present generation's lack of stewardship. That is, my generation, Generation X. And there is no greater reflection of Generation X's values than indie rock.
 
 Bizarro world argument: empowering middleman, bypass artist
 
+Asthmatic Kitty, demo tapes
+
 Demo tape recordings transcend social boundaries (indie rock placed a bet that performances, not recordings, are what defines music. world that's becoming increasingly comfortable with the fact that recordings, not performances)
 
-Virality, stories of technology aiding the dissemination of art are massively uninteresting to us
+The best albums lead the way for live performance. This isn't hypothetical, it's already reflected in our "best of" lists.
+
+Virality, stories of technology abetting the dissemination of art, rather than the creation of it, are massively uninteresting to us. Beethoven lithography, pianoforte
 
 Underdog culture: Underdog culture is just like any other system that favours some over others. But it's the least likely to recognise the de facto underdogs of its time. An underdog culture can never belatedly pivot to the de facto underdog.
 
+Altruistic audiences, Contrived narratives, alternate facts, Trump
 
-Altruistic audiences
+Startups, curators with their ears to the ground vs. Zappa's cigar chomping old guys
 
-Contrived narratives
+----
 
 Bob Dylan, as a Jew, many in the 70s might not have seen him as a card-carrying member of the shadowy ruling class, but he still wouldn't have been most people's choice of an outsider.
 

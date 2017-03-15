@@ -24,11 +24,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, putting on jacket, cold, distant'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, shivering, pleading'
                 }
             }
         },
@@ -38,19 +38,19 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, tripping as meats fall out of pockets'
                 },
                 tristan: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, eagerly aggressive, about to punch car'
                 },
                 ana: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, holding paper bottle, laughing'
                 },
                 eduardo: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, clutching at fist, laughing through pain'
                 }
             }
         },
@@ -60,11 +60,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'on couch, ignoring Sita, drunk'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, naked, making Bennett touch her breast'
                 }
             }
         },
@@ -74,33 +74,33 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, sweaty, giddy'
                 },
                 miriam: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, greeting Bennett'
                 },
                 tristan: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, playfully giving Miriam a noogie'
                 },
                 ana: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, removing bass, rolling eyes'
                 }
             }
         },
         {
             verseIndex: 35,
-            description: `Bennett is leaving Sita. She is crumbled on the floor, desperately begging him to stayc.`,
+            description: `Bennett is leaving Sita. She is crumbled on the floor, desperately begging him to stay.`,
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'standing, cold, looking away'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'crumbled on floor, begging, sobbing'
                 }
             }
         }

@@ -25,11 +25,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, disingenuously consoling'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, returning bracelet, fighting tears'
                 }
             }
         },
@@ -39,12 +39,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'back, cradling bracelet, blank'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        description: 'todo'
+                        description: 'back, shaking fist at sky'
                     }
                 },
             }
@@ -55,18 +55,18 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, playful, waving'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        description: 'todo'
+                        description: 'back, playful'
                     }
                 },
                 amy: {
                     officer: {
                         todo: true,
-                        description: 'todo'
+                        description: 'back, facing back, waving'
                     }
                 }
             }
@@ -77,34 +77,34 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'back, consoling'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        description: 'todo'
+                        description: 'back, head in hands, holding bracelet'
                     }
                 },
                 youngGirl: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, walking'
                 },
                 youngAnita: {
                     youngGirl: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side, walking'
                     },
                 },
                 youngBennett: {
                     youngBoy: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side, turned, looking at Bennetts'
                     },
                 },
                 willy: {
                     crossingGuard: {
                         todo: true,
-                        description: 'todo'
+                        description: 'front, holding up stop sign'
                     }
                 }
             }

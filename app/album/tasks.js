@@ -1,7 +1,7 @@
 module.exports = [
     {
         taskName: `Add character descriptions.`,
-        workedHours: 3,
+        workedHours: 4,
         neededHours: 6
     },
 
