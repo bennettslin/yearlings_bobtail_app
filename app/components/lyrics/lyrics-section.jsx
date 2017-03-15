@@ -36,11 +36,17 @@ class LyricsSectionView extends Component {
         super(props)
 
         this._handleScroll = this._handleScroll.bind(this)
+        // this._handleFadeout = this._handleFadeout.bind(this)
+
+        this.state = {
+            // fadingOut: false,
+            // fadeOutTimer: null
+        }
     }
 
-    // FIXME: Is this necessary?
-    shouldComponentUpdate(nextProps) {
+    shouldComponentUpdate(nextProps, nextState) {
         return !getPropsAreSame(this.props, nextProps)
+            // || (!nextState.fadingOut && this.state.fadingOut)
     }
 
     componentWillReceiveProps(nextProps) {
@@ -48,6 +54,20 @@ class LyricsSectionView extends Component {
             this._handleScroll(true)
             this.props.completeHeightTransition()
         }
+
+        // if (nextProps.selectedSongIndex !== this.props.selectedSongIndex) {
+        //
+        //     const fadeOutTimer = setTimeout(this._handleFadeout.bind(this, true), 150)
+        //
+        //     if (this.state.fadeOutTimer) {
+        //         clearTimeout(this.state.fadeOutTimer)
+        //     }
+        //
+        //     this.setState({
+        //         fadingOut: true,
+        //         fadeOutTimer
+        //     })
+        // }
     }
 
     componentDidUpdate(prevProps) {
@@ -62,6 +82,16 @@ class LyricsSectionView extends Component {
         this.props.onLyricSectionScroll(this.mySection, undefined, lyricColumnJustTransitioned)
     }
 
+    _handleFadeout(e) {
+
+        // if (e === true || e.propertyName === 'opacity' && e.target === this.mySubsection) {
+        //     this.setState({
+        //         fadingOut: false,
+        //         fadeOutTimer: null
+        //     })
+        // }
+    }
+
     render() {
 
                 // From props.
@@ -73,28 +103,45 @@ class LyricsSectionView extends Component {
                 sectionAccessHighlighted,
                 sectionNextHighlighted,
 
-            ...other } = this.props
+            ...other } = this.props,
+
+            { fadingOut } = this.state
 
         return (
             <div
                 ref={(node) => (this.mySection = node)}
-                className={`section lyrics-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}${showSingleLyricColumn ? ' single-column' : ''}`}
+                className={`
+                    section
+                    lyrics-section
+                    ${sectionAccessHighlighted ? ' access-highlighted' : ''}
+                    ${sectionNextHighlighted ? ' next-highlighted' : ''}
+                    ${showSingleLyricColumn ? ' single-column' : ''}
+                `}
                 onScroll={this._handleScroll}
             >
-                {/* Upon song change, scroll to element with this class name. */}
-                <div className="lyrics-scroll-home"></div>
-                <div className="lyrics-block">
-                    {songLyrics.map((stanzaArray, stanzaIndex) => (
-                            <LyricsUnit {...other}
-                                key={stanzaIndex}
-                                showSingleLyricColumn={showSingleLyricColumn}
-                                isTitleUnit={stanzaIndex === 0}
-                                stanzaArray={stanzaArray}
-                                selectedLyricColumnIndex={selectedLyricColumnIndex}
-                                sectionAccessHighlighted={sectionAccessHighlighted}
-                            />
-                        )
-                    )}
+                <div
+                    ref={(node) => (this.mySubsection = node)}
+                    className={`
+                        lyrics-song-subsection
+                        ${fadingOut ? 'fading-out' : ''}
+                    `}
+                    onTransitionEnd={e => this._handleFadeout(e)}
+                >
+                    {/* Upon song change, scroll to element with this class name. */}
+                    <div className="lyrics-scroll-home"></div>
+                    <div className="lyrics-block">
+                        {songLyrics.map((stanzaArray, stanzaIndex) => (
+                                <LyricsUnit {...other}
+                                    key={stanzaIndex}
+                                    showSingleLyricColumn={showSingleLyricColumn}
+                                    isTitleUnit={stanzaIndex === 0}
+                                    stanzaArray={stanzaArray}
+                                    selectedLyricColumnIndex={selectedLyricColumnIndex}
+                                    sectionAccessHighlighted={sectionAccessHighlighted}
+                                />
+                            )
+                        )}
+                    </div>
                 </div>
             </div>
         )

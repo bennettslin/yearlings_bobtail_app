@@ -21,9 +21,9 @@ module.exports = [
 
     // Touch accessibility.
     {
-        taskName: `Clean out dot button code, stylise better`,
+        taskName: `Stylise dots section better`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `audio banner is touch accessible.`,
@@ -1460,5 +1460,10 @@ module.exports = [
         taskName: `Score animation is still just a little wonky in Chrome. (Just got rid of transform.)`,
         workedHours: 2,
         neededHours: 2
-    }
+    },
+    {
+        taskName: `Clean out dot button code`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
