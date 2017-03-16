@@ -45,11 +45,10 @@ const MainColumnView = ({
     nextSectionKey,
     accessedSongIndex,
 
-    onSongClick,
-    onNavExpandClick,
-    onBookColumnClick,
-
     handleDotsSectionToggle,
+    handleNavExpand,
+    handleNavSongSelect,
+    handleNavBookSelect,
     handleTitleSelect,
 
     annotationPopupChild,
@@ -97,9 +96,10 @@ const MainColumnView = ({
             accessedSectionKey,
             nextSectionKey,
             accessedSongIndex,
-            onSongClick,
-            onNavExpandClick,
-            onBookColumnClick
+            
+            handleNavExpand,
+            handleNavSongSelect,
+            handleNavBookSelect
         }
 
     return (

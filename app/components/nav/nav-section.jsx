@@ -54,9 +54,10 @@ const NavSectionView = ({
     selectedBookColumnIndex,
     showSingleBookColumn,
     shrinkNavIcon,
-    onSongClick,
-    onNavExpandClick,
-    onBookColumnClick,
+
+    handleNavExpand,
+    handleNavSongSelect,
+    handleNavBookSelect,
 
     // From controller.
     sumAllTasks,
@@ -71,7 +72,7 @@ const NavSectionView = ({
         accessedSongIndex,
         maxTotalNeededHours,
         sectionAccessHighlighted,
-        onSongClick
+        handleNavSongSelect
     },
     songsLength = songs.length
 
@@ -105,7 +106,7 @@ const NavSectionView = ({
                         <NavBook {...navItemProps}
                             isNavToggle={true}
                             buttonText={selectedNavIndex + ''}
-                            onButtonClick={e => onNavExpandClick(e)}
+                            handleButtonClick={handleNavExpand}
                         />
                     </div>
                     <div className="books-block">
@@ -124,7 +125,7 @@ const NavSectionView = ({
                                         isToggle={true}
                                         hasSelectedSong={selectedSongIndex < bookStartingIndices[1]}
                                         buttonText={'k'}
-                                        onButtonClick={e => onBookColumnClick(e)}
+                                        handleButtonClick={handleNavBookSelect}
                                     /> :
                                     <NavBook {...navItemProps}
                                         isLogue={true}
@@ -149,7 +150,7 @@ const NavSectionView = ({
                                         isToggle={true}
                                         hasSelectedSong={selectedSongIndex >= bookStartingIndices[1]}
                                         buttonText={'k'}
-                                        onButtonClick={e => onBookColumnClick(e)}
+                                        handleButtonClick={handleNavBookSelect}
                                     /> :
                                     <NavBook {...navItemProps}
                                         isLogue={true}

@@ -128,8 +128,6 @@ const LiveView = ({
     onAnnotationClick,
     onLyricColumnClick,
     onPopupContainerClick,
-    onNavExpandClick,
-    onBookColumnClick,
     onSelectVerseElement,
     onSliderSelectVerseElement,
     onLyricSectionScroll,
@@ -147,6 +145,9 @@ const LiveView = ({
     handleAudioSliderMouseOrTouch,
     handleDotToggle,
     handleDotsSectionToggle,
+    handleNavExpand,
+    handleNavSongSelect,
+    handleNavBookSelect,
     handleLyricColumnExpand,
     handleOverviewToggle,
     handleScoreToggle,
@@ -224,7 +225,6 @@ const LiveView = ({
             accessedOn,
             accessedSectionKey,
             nextSectionKey,
-            onAudioSongClick: onSongClick,
 
             handleAudioPlay,
             handleAudioPreviousSong,
@@ -269,12 +269,12 @@ const LiveView = ({
             nextSectionKey,
             accessedSongIndex,
 
-            onSongClick,
             onPortalClick,
-            onNavExpandClick,
-            onBookColumnClick,
 
             handleDotsSectionToggle,
+            handleNavExpand,
+            handleNavSongSelect,
+            handleNavBookSelect,
             handleTipsToggle,
             handleTitleSelect,
 

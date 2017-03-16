@@ -10,22 +10,22 @@ const NavButton = ({
     songIndex,
     buttonText,
     isSelected,
-    onSongClick,
-    onButtonClick,
+    handleNavSongSelect,
+    handleButtonClick,
 
 ...other }) => {
 
     const isLogue = song ? song.logue : null,
         iconText = buttonText || (isLogue ? null : songIndex),
         songTitle = song ? song.title : null,
-        onClick = song ? e => onSongClick(e, songIndex) : onButtonClick
+        handleClick = song ? e => handleNavSongSelect(e, songIndex) : handleButtonClick
 
     return (
         <NavButtonView {...other}
             iconText={iconText}
             isSelected={isSelected}
             songTitle={songTitle}
-            onClick={onClick}
+            handleClick={handleClick}
         />
     )
 }
@@ -44,12 +44,12 @@ const NavButtonView = ({
     // From controller.
     iconText,
     songTitle,
-    onClick
+    handleClick
 
 }) => (
     <a
         className={`${isNavToggle ? ' nav-toggle-button' : ' nav-button'} enabled${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
-        onClick={onClick}
+        onClick={handleClick}
     >
         <div className="nav-icon-block">
             <div className={`button-icon ${isNavToggle ? 'large nav-toggle-icon' : 'nav-icon'}`}>

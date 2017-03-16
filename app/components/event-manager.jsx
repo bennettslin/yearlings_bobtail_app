@@ -15,6 +15,9 @@ class EventManager extends Component {
         this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
         this.handleLyricColumnExpand = this.handleLyricColumnExpand.bind(this)
+        this.handleNavExpand = this.handleNavExpand.bind(this)
+        this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
+        this.handleNavBookSelect = this.handleNavBookSelect.bind(this)
         this.handleOverviewToggle = this.handleOverviewToggle.bind(this)
         this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
@@ -123,16 +126,16 @@ class EventManager extends Component {
      * NAV *
      *******/
 
-    handleNavToggleButtonClick() {
-
+    handleNavExpand(e) {
+        this.props.selectNavExpand(e)
     }
 
-    handleNavSongButtonClick() {
-
+    handleNavSongSelect(e, songIndex) {
+        this.props.selectSong(e, songIndex)
     }
 
-    handleNavBookButtonClick() {
-
+    handleNavBookSelect(e) {
+        this.props.selectBookColumn(e)
     }
 
     /************
@@ -196,9 +199,9 @@ class EventManager extends Component {
                 handleLyricAnchorClick={null}
                 handleLyricLineClick={null}
                 handleLyricEarButtonClick={null}
-                handleNavToggleButtonClick={null}
-                handleNavSongButtonClick={null}
-                handleNavBookButtonClick={null}
+                handleNavExpand={this.handleNavExpand}
+                handleNavSongSelect={this.handleNavSongSelect}
+                handleNavBookSelect={this.handleNavBookSelect}
                 handleOverviewToggle={this.handleOverviewToggle}
                 handleScoreToggle={this.handleScoreToggle}
                 handleTipsToggle={this.handleTipsToggle}

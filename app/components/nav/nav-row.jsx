@@ -12,14 +12,14 @@ const NavRow = ({
     song,
     songIndex,
     isSelected,
-    onSongClick,
+    handleNavSongSelect,
 
 ...other }) => {
 
     const isLogue = song.logue,
         songTitle = getSongTitle({ song, songIndex }, isLogue),
         sumTask = ProgressHelper.calculateSumTask(song.tasks),
-        onClick = e => onSongClick(e, songIndex)
+        onClick = e => handleNavSongSelect(e, songIndex)
 
     return (
         <NavRowView {...other}
