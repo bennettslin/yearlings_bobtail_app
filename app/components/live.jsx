@@ -134,6 +134,8 @@ const LiveView = ({
     onLyricAudioButtonClick,
     onInteractivatedVerseClick,
 
+    handleAnnotationPrevious,
+    handleAnnotationNext,
     handleAnnotationWikiSelect,
     handleAudioPlay,
     handleAudioPreviousSong,
@@ -176,7 +178,6 @@ const LiveView = ({
             isLogue,
             selectedOverviewIndex,
             overviewText,
-            onPopupButtonClick: handleOverviewToggle,
             onPopupContainerClick,
 
             // For toggle in popup in phone.
@@ -338,7 +339,8 @@ const LiveView = ({
             nextSectionKey,
             showArrows: true,
             onPortalClick: onSongFromPortalClick,
-            onPopupButtonClick: onAnnotationClick,
+            onPopupButtonPreviousClick: handleAnnotationPrevious,
+            onPopupButtonNextClick: handleAnnotationNext,
             onPopupContainerClick,
 
             handleAnnotationWikiSelect
@@ -370,7 +372,7 @@ const LiveView = ({
             accessedSectionKey,
             nextSectionKey,
             showClose: true,
-            onPopupButtonClick: handleWikiToggle,
+            onPopupButtonCloseClick: handleWikiToggle,
             onPopupContainerClick
         },
         overviewButtonProps = {

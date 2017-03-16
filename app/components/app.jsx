@@ -1538,6 +1538,7 @@ class App extends Component {
                     onLyricSectionScroll={this.handleLyricSectionScroll}
 
                     mouseOrTouchSlider={this.mouseOrTouchSlider}
+                    selectAnnotation={this.selectAnnotation}
                     selectAudioOption={this.selectAudioOption}
                     selectBookColumn={this.selectBookColumn}
                     selectDot={this.selectDot}

@@ -6,6 +6,8 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
+        this.handleAnnotationPrevious = this.handleAnnotationPrevious.bind(this)
+        this.handleAnnotationNext = this.handleAnnotationNext.bind(this)
         this.handleAnnotationWikiSelect = this.handleAnnotationWikiSelect.bind(this)
         this.handleAudioPlay = this.handleAudioPlay.bind(this)
         this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
@@ -39,12 +41,13 @@ class EventManager extends Component {
 
     }
 
-    handleAnnotationPreviousButtonClick() {
-
+    // FIXME: Accessibility now broken.
+    handleAnnotationPrevious(e) {
+        this.props.selectAnnotation(e, { direction: -1 })
     }
 
-    handleAnnotationNextButtonClick() {
-
+    handleAnnotationNext(e) {
+        this.props.selectAnnotation(e, { direction: 1 })
     }
 
     /*********
@@ -185,8 +188,8 @@ class EventManager extends Component {
             <SwitchManager {...this.props}
                 handleAnnotationWikiSelect={this.handleAnnotationWikiSelect}
                 handleAnnotationPortalAnchorClick={null}
-                handleAnnotationPreviousButtonClick={null}
-                handleAnnotationNextButtonClick={null}
+                handleAnnotationPrevious={this.handleAnnotationPrevious}
+                handleAnnotationNext={this.handleAnnotationNext}
                 handleAudioPlay={this.handleAudioPlay}
                 handleAudioPreviousSong={this.handleAudioPreviousSong}
                 handleAudioNextSong={this.handleAudioNextSong}

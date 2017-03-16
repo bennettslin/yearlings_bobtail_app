@@ -13,8 +13,7 @@ const PopupButton = ({
 
 }) => {
     let tempUnicodeSymbol,
-        onClick,
-        direction
+        onClick
 
     switch (buttonName) {
         case CLOSE:
@@ -22,25 +21,17 @@ const PopupButton = ({
             break
         case PREVIOUS:
             tempUnicodeSymbol = '\u276e'
-            direction = -1
             break
         case NEXT:
             tempUnicodeSymbol = '\u276f'
-            direction = 1
             break
-    }
-
-    if (!isNaN(direction)) {
-        onClick = e => onPopupButtonClick(e, { direction })
-    } else {
-        onClick = e => onPopupButtonClick(e, 0)
     }
 
     return (
         <div className={`popup-button ${buttonName}-button`}>
             <a
                 className={`popup-button-interactable enabled`}
-                onClick={onClick}
+                onClick={onPopupButtonClick}
             >
             </a>
             <div className="popup-button-icon">
@@ -58,7 +49,9 @@ class PopupTransitionGroup extends Component {
                 showArrows,
                 sectionAccessHighlighted,
                 sectionNextHighlighted,
-                onPopupButtonClick,
+                onPopupButtonCloseClick,
+                onPopupButtonPreviousClick,
+                onPopupButtonNextClick,
                 onPopupContainerClick } = this.props
 
         return element && (
@@ -79,19 +72,19 @@ class PopupTransitionGroup extends Component {
                     {element}
                     {showClose &&
                         <PopupButton
-                            onPopupButtonClick={onPopupButtonClick}
+                            onPopupButtonClick={onPopupButtonCloseClick}
                             buttonName={CLOSE}
                         />
                     }
                     {showArrows &&
                         <PopupButton
-                            onPopupButtonClick={onPopupButtonClick}
+                            onPopupButtonClick={onPopupButtonPreviousClick}
                             buttonName={PREVIOUS}
                         />
                     }
                     {showArrows &&
                         <PopupButton
-                            onPopupButtonClick={onPopupButtonClick}
+                            onPopupButtonClick={onPopupButtonNextClick}
                             buttonName={NEXT}
                         />
                     }
@@ -121,11 +114,6 @@ class Popup extends Component {
 
     constructor(props) {
         super(props)
-        this.onPopupButtonClick = this.onPopupButtonClick.bind(this)
-    }
-
-    onPopupButtonClick(e, argument) {
-        this.props.onPopupButtonClick(e, argument)
     }
 
     render() {
@@ -135,6 +123,9 @@ class Popup extends Component {
               nextSectionKey,
               showClose,
               showArrows,
+              onPopupButtonCloseClick,
+              onPopupButtonPreviousClick,
+              onPopupButtonNextClick,
               onPopupContainerClick } = this.props,
              sectionClassName = `${className}-section`,
             sectionAccessHighlighted = accessedOn && accessedSectionKey === sectionClassName,
@@ -150,7 +141,9 @@ class Popup extends Component {
                 sectionNextHighlighted={sectionNextHighlighted}
                 showClose={showClose}
                 showArrows={showArrows}
-                onPopupButtonClick={this.onPopupButtonClick}
+                onPopupButtonCloseClick={onPopupButtonCloseClick}
+                onPopupButtonPreviousClick={onPopupButtonPreviousClick}
+                onPopupButtonNextClick={onPopupButtonNextClick}
                 onPopupContainerClick={onPopupContainerClick}
             />
         )
