@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import DomManager from './dom-manager'
+import AccessManager from './access-manager'
 
 class EventManager extends Component {
 
@@ -261,7 +261,7 @@ class EventManager extends Component {
                 domState } = this.props
 
         return (
-            <DomManager {...domProps} {...domState}
+            <AccessManager {...domProps} {...domState}
                 handleBodyClick={this.handleBodyClick}
                 handleBodyMouseOrTouchMove={this.handleBodyMouseOrTouchMove}
                 handleBodyMouseOrTouchEnd={this.handleBodyMouseOrTouchEnd}
