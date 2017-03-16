@@ -42,7 +42,6 @@ const AlbumView = ({
     selectedNavIndex,
     selectedDotsIndex,
     showSingleLyricColumn,
-    onScoreClick,
     onSongClick,
     accessedOn,
     accessedSectionKey,
@@ -67,7 +66,6 @@ const AlbumView = ({
                     selectedNavIndex={selectedNavIndex}
                     selectedDotsIndex={selectedDotsIndex}
                     showSingleLyricColumn={showSingleLyricColumn}
-                    onScoreClick={onScoreClick}
                 />
                 <NavSection
                     selectedAdminIndex={true}

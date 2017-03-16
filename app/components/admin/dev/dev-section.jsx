@@ -25,8 +25,7 @@ const DevSectionView = ({
     // selectedNavIndex,
     // selectedDotsIndex,
     // showSingleLyricColumn,
-    selectedScoreIndex,
-    onScoreClick
+    selectedScoreIndex
 
 }) => (
     <div className="section dev-section">
@@ -49,12 +48,6 @@ const DevSectionView = ({
         <div className="row">
             {/* device width: {DEVICE_OBJECTS[deviceIndex].className} */}
         </div>
-        <a
-            className="enabled"
-            onClick={onScoreClick}
-        >
-            score: {selectedScoreIndex}
-        </a>
     </div>
 )
 

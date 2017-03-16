@@ -131,7 +131,6 @@ const LiveView = ({
     onPortalClick,
     onSongFromPortalClick,
     onWikiUrlClick,
-    onScoreClick,
     onAnnotationClick,
     onLyricColumnClick,
     onPopupContainerClick,
@@ -151,6 +150,7 @@ const LiveView = ({
     handleAudioPreviousSong,
     handleAudioNextSong,
     handleLyricColumnExpand,
+    handleScoreToggle,
     handleTitleSelect,
 
     // From controller.
@@ -323,7 +323,7 @@ const LiveView = ({
             isPhone,
             selectedScoreIndex,
             selectedTipsIndex,
-            onScoreClick,
+            handleScoreToggle,
             onTipsClick
         },
         annotationPopupProps = {
@@ -359,7 +359,7 @@ const LiveView = ({
             selectedScoreIndex,
             selectedSongIndex,
             showClose: true,
-            onPopupButtonClick: onScoreClick,
+            handleScoreToggle,
             onPopupContainerClick
         },
         wikiPopupProps = {

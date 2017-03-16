@@ -15,7 +15,7 @@ class TransitionPopup extends Component {
         super(props)
 
         this._handleTransitionEnd = this._handleTransitionEnd.bind(this)
-        this._onPopupButtonClick = this._onPopupButtonClick.bind(this)
+        // this._onPopupButtonClick = this._onPopupButtonClick.bind(this)
 
         this.state = {
             isDisplayed: this.props.isVisible
@@ -34,9 +34,9 @@ class TransitionPopup extends Component {
         }
     }
 
-    _onPopupButtonClick(e, argument) {
-        this.props.onPopupButtonClick(e, argument)
-    }
+    // _onPopupButtonClick(e, argument) {
+    //     this.props.onPopupButtonClick(e, argument)
+    // }
 
     _handleTransitionEnd(e) {
         if (e.propertyName === 'opacity' && !this.props.isVisible) {
@@ -52,6 +52,7 @@ class TransitionPopup extends Component {
                 showClose,
                 showArrows,
                 onPopupContainerClick,
+                onCloseClick,
                 myChild } = this.props,
 
             { isDisplayed } = this.state,
@@ -67,7 +68,7 @@ class TransitionPopup extends Component {
                     popupClassName={popupClassName}
                     showClose={showClose}
                     showArrows={showArrows}
-                    onPopupButtonClick={this._onPopupButtonClick}
+                    onCloseClick={onCloseClick}
                     onPopupContainerClick={onPopupContainerClick}
                     myChild={myChild}
                 />
@@ -87,6 +88,7 @@ const TransitionPopupView = ({
     showClose,
     showArrows,
     onPopupButtonClick,
+    onCloseClick,
     onPopupContainerClick,
     myChild
 
@@ -109,7 +111,7 @@ const TransitionPopupView = ({
                 {myChild}
                 {showClose &&
                     <TransitionPopupButton
-                        onPopupButtonClick={onPopupButtonClick}
+                        onPopupButtonClick={onCloseClick}
                         buttonName={CLOSE_POPUP_BUTTON}
                     />
                 }

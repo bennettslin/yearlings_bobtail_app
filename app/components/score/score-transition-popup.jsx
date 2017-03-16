@@ -11,7 +11,7 @@ const ScoreTransitionPopup = ({
     isPhone,
     selectedScoreIndex,
     showClose,
-    onPopupButtonClick,
+    handleScoreToggle,
 
 ...other }) => {
 
@@ -25,7 +25,7 @@ const ScoreTransitionPopup = ({
             popupClassName="score"
             isVisible={isVisible}
             showClose={showClose}
-            onPopupButtonClick={onPopupButtonClick}
+            onCloseClick={handleScoreToggle}
             myChild={myChild}
         />
     )

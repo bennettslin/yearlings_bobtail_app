@@ -9,6 +9,7 @@ class EventManager extends Component {
         this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
         this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
         this.handleLyricColumnExpand = this.handleLyricColumnExpand.bind(this)
+        this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
     }
 
@@ -137,8 +138,8 @@ class EventManager extends Component {
      * SCORE *
      *********/
 
-    handleScoreToggleButtonClick() {
-
+    handleScoreToggle(e) {
+        this.props.selectScore(e)
     }
 
     /********
@@ -190,7 +191,7 @@ class EventManager extends Component {
                 handleNavSongButtonClick={null}
                 handleNavBookButtonClick={null}
                 handleOverviewToggleButtonClick={null}
-                handleScoreToggleButtonClick={null}
+                handleScoreToggle={this.handleScoreToggle}
                 handleTipsToggleButtonClick={null}
                 handleTitleSelect={this.handleTitleSelect}
                 handleWikiToggleButtonClick={null}
