@@ -17,7 +17,6 @@ import { selectAdminIndex,
          selectDotsIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
-import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './audio/audio-players-section'
 import EventManager from './event-manager'
 import { NAV_SECTION,
@@ -1475,13 +1474,6 @@ class App extends Component {
                 >
                 </div>
                 <AudioPlayersSection {...audioPlayersProps} />
-                <AdminToggle
-                    selectedAdminIndex={selectedAdminIndex}
-                    isLyricExpanded={isLyricExpanded}
-                    deviceIndex={deviceIndex}
-                    windowWidth={windowWidth}
-                    windowHeight={windowHeight}
-                />
                 <EventManager {...this.props} {...this.state}
                     isPhone={isPhone}
                     isDesktop={isDesktop}
