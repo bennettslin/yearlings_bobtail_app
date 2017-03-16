@@ -104,6 +104,7 @@ class EventManager extends Component {
      * AUDIO PLAYER *
      ****************/
 
+    // FIXME: This isn't actually getting called because audio players are in the app component.
     handleAudioTimeChange(e, time) {
         this.props.selectTime(e, time)
     }

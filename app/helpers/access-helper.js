@@ -4,6 +4,8 @@ import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
 
+import { getIntegerForCharKey } from 'helpers/general-helper'
+
 import { getIsPhone } from 'helpers/responsive-helper'
 
 import { NAV_SECTION,
@@ -182,7 +184,7 @@ export default {
         selectBookColumn
     }) {
 
-        const index = this.getIntegerForCharKey(keyName)
+        const index = getIntegerForCharKey(keyName)
 
         // Go straight to index if chosen.
         if (index >= 0 && index < songsLength) {
@@ -425,7 +427,7 @@ export default {
         accessedDotIndex,
         selectDot
     }) {
-        const index = this.getIntegerForCharKey(keyName) - 1
+        const index = getIntegerForCharKey(keyName) - 1
 
         // Go straight to index if chosen.
         if (index >= 0 && index < ALL_DOT_KEYS.length) {
@@ -467,25 +469,5 @@ export default {
             selectedSongIndex: props.selectedSongIndex,
             currentAccessedSectionIndex: (props.accessedSectionIndex) % SECTION_KEYS.length
         })]
-    },
-
-    getIntegerForCharKey(keyName) {
-        if (keyName.length > 1) {
-            return -1
-        }
-
-        const charCode = keyName.charCodeAt(0)
-
-        // Char codes for numbers are 48 to 57.
-        if (charCode >= 48 && charCode <= 57) {
-            return charCode - 48
-
-        // Char codes for lowercase are 97 to 122.
-        } else if (charCode >= 97 && charCode <= 122) {
-            return charCode - 87
-
-        } else {
-            return -1
-        }
     }
 }
