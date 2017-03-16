@@ -20,7 +20,7 @@ const AnnotationPortalsBlockView = ({
     // songs,
     selectedDotKeys,
     portalLinks,
-    onPortalClick,
+    handleAnnotationPortalSelect,
     sectionAccessHighlighted,
     accessedPopupAnchorIndex
 
@@ -35,7 +35,9 @@ const AnnotationPortalsBlockView = ({
                     column,
                     columnIndex,
                     // cardObject,
-                    verseObject } = portalObject
+                    verseObject } = portalObject,
+
+                handleClick = e => handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex)
 
             // accessHighlighted = sectionAccessHighlighted && accessedPopupAnchorIndex === portalIndex
 
@@ -43,7 +45,7 @@ const AnnotationPortalsBlockView = ({
                 <div
                     key={index}
                     className="portal-block enabled"
-                    onClick={e => onPortalClick(e, songIndex, annotationIndex, verseIndex, columnIndex)}
+                    onClick={handleClick}
                 >
                     <div className="song-title">
                         portal to <strong>{songTitle}</strong>

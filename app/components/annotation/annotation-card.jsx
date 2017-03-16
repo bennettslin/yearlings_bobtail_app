@@ -57,7 +57,7 @@ const AnnotationCardView = ({
     songs,
     selectedDotKeys,
     handleAnnotationWikiSelect,
-    onPortalClick,
+    handleAnnotationPortalSelect,
     selectedWikiIndex,
     sectionAccessHighlighted,
     accessedPopupAnchorIndex,
@@ -93,7 +93,7 @@ const AnnotationCardView = ({
                 portalLinks={portalLinks}
                 sectionAccessHighlighted={sectionAccessHighlighted}
                 accessedPopupAnchorIndex={accessedPopupAnchorIndex}
-                onPortalClick={onPortalClick}
+                handleAnnotationPortalSelect={handleAnnotationPortalSelect}
             />
         }
     </div>

@@ -9,6 +9,7 @@ class EventManager extends Component {
         this.handleAnnotationPrevious = this.handleAnnotationPrevious.bind(this)
         this.handleAnnotationNext = this.handleAnnotationNext.bind(this)
         this.handleAnnotationWikiSelect = this.handleAnnotationWikiSelect.bind(this)
+        this.handleAnnotationPortalSelect = this.handleAnnotationPortalSelect.bind(this)
         this.handleAudioPlay = this.handleAudioPlay.bind(this)
         this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
         this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
@@ -37,8 +38,8 @@ class EventManager extends Component {
         this.props.selectWiki(e, selectedWikiIndex)
     }
 
-    handleAnnotationPortalAnchorClick() {
-
+    handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex) {
+        this.props.selectFromPortal(e, songIndex, annotationIndex, verseIndex, columnIndex)
     }
 
     // FIXME: Accessibility now broken.
@@ -187,7 +188,7 @@ class EventManager extends Component {
         return (
             <SwitchManager {...this.props}
                 handleAnnotationWikiSelect={this.handleAnnotationWikiSelect}
-                handleAnnotationPortalAnchorClick={null}
+                handleAnnotationPortalSelect={this.handleAnnotationPortalSelect}
                 handleAnnotationPrevious={this.handleAnnotationPrevious}
                 handleAnnotationNext={this.handleAnnotationNext}
                 handleAudioPlay={this.handleAudioPlay}

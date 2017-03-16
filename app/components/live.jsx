@@ -122,10 +122,8 @@ const LiveView = ({
     isLastVerse,
     selectedSongTitle,
     onTimeChange,
-    onPortalClick,
-    onSongFromPortalClick,
+
     onAnnotationClick,
-    handleLyricColumnSelect,
     onPopupContainerClick,
     onSelectVerseElement,
     onSliderSelectVerseElement,
@@ -137,6 +135,7 @@ const LiveView = ({
     handleAnnotationPrevious,
     handleAnnotationNext,
     handleAnnotationWikiSelect,
+    handleAnnotationPortalSelect,
     handleAudioPlay,
     handleAudioPreviousSong,
     handleAudioNextSong,
@@ -147,6 +146,7 @@ const LiveView = ({
     handleNavExpand,
     handleNavSongSelect,
     handleNavBookSelect,
+    handleLyricColumnSelect,
     handleLyricSectionExpand,
     handleLyricVerseBarSelect,
     handleOverviewToggle,
@@ -268,8 +268,7 @@ const LiveView = ({
             nextSectionKey,
             accessedSongIndex,
 
-            onPortalClick,
-
+            handleAnnotationPortalSelect,
             handleDotsSectionToggle,
             handleNavExpand,
             handleNavSongSelect,
@@ -338,11 +337,11 @@ const LiveView = ({
             accessedSectionKey,
             nextSectionKey,
             showArrows: true,
-            onPortalClick: onSongFromPortalClick,
             onPopupButtonPreviousClick: handleAnnotationPrevious,
             onPopupButtonNextClick: handleAnnotationNext,
             onPopupContainerClick,
 
+            handleAnnotationPortalSelect,
             handleAnnotationWikiSelect
         },
         dotsSectionProps = {

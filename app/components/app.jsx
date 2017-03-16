@@ -1527,7 +1527,6 @@ class App extends Component {
                     isOverlaidAnnotation={isOverlaidAnnotation}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
 
-                    onSongFromPortalClick={this.selectFromPortal}
                     onAnnotationClick={this.selectAnnotation}
                     onTimeChange={this.selectTime}
                     onLyricAudioButtonClick={this.handleLyricAudioButtonClick}
@@ -1543,6 +1542,7 @@ class App extends Component {
                     selectBookColumn={this.selectBookColumn}
                     selectDot={this.selectDot}
                     selectDotsExpand={this.selectDotsExpand}
+                    selectFromPortal={this.selectFromPortal}
                     selectLyricColumn={this.selectLyricColumn}
                     selectLyricExpand={this.selectLyricExpand}
                     selectNavExpand={this.selectNavExpand}
