@@ -19,7 +19,8 @@ import { selectAdminIndex,
          accessSectionIndex } from 'redux/actions'
 import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './audio/audio-players-section'
-import Switch from './switch'
+import SwitchManager from './switch-manager'
+import EventManager from './event-manager'
 import { NAV_SECTION,
          AUDIO_SECTION,
          LYRICS_SECTION,
@@ -1508,7 +1509,7 @@ class App extends Component {
                     windowHeight={windowHeight}
                     onClick={this.toggleAdmin}
                 />
-                <Switch {...this.props} {...this.state}
+                <EventManager {...this.props} {...this.state}
                     isPhone={isPhone}
                     isDesktop={isDesktop}
                     lyricsStartAtZero={lyricsStartAtZero}

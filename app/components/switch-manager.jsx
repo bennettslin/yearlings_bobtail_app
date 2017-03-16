@@ -6,7 +6,7 @@ import Live from './live'
  * CONTAINER *
  *************/
 
-const Switch = ({
+const SwitchManager = ({
 
     selectedAdminIndex,
 
@@ -18,4 +18,4 @@ const Switch = ({
     )
 }
 
-export default Switch
+export default SwitchManager
