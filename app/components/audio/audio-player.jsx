@@ -69,7 +69,7 @@ class AudioPlayer extends Component {
 
     _handleListen(currentTime) {
         if (this._getIsSelected()) {
-            this.props.onTimeChange(false, currentTime)
+            this.props.handleAudioTimeChange(false, currentTime)
         }
     }
 

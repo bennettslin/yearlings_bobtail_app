@@ -7,6 +7,8 @@ class EventManager extends Component {
         super(props)
 
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
+        this.handleVerseElementSelect = this.handleVerseElementSelect.bind(this)
+        this.handleVerseElementSlide = this.handleVerseElementSlide.bind(this)
         this.handleAnnotationPrevious = this.handleAnnotationPrevious.bind(this)
         this.handleAnnotationNext = this.handleAnnotationNext.bind(this)
         this.handleAnnotationWikiSelect = this.handleAnnotationWikiSelect.bind(this)
@@ -16,6 +18,7 @@ class EventManager extends Component {
         this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
         this.handleAudioOptionsToggle = this.handleAudioOptionsToggle.bind(this)
         this.handleAudioSliderMouseOrTouch = this.handleAudioSliderMouseOrTouch.bind(this)
+        this.handleAudioTimeChange = this.handleAudioTimeChange.bind(this)
         this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
         this.handleLyricSectionExpand = this.handleLyricSectionExpand.bind(this)
@@ -35,12 +38,20 @@ class EventManager extends Component {
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
     }
 
-    /**************
+    /********
      * BODY *
-     **************/
+     ********/
 
     handlePopupContainerClick(e) {
         this.props.clickPopupContainer(e)
+    }
+
+    handleVerseElementSelect(verseElement) {
+        this.props.updateSelectedVerseElement(verseElement)
+    }
+
+    handleVerseElementSlide(verseElement) {
+        this.props.updateSliderVerseElement(verseElement)
     }
 
     /**************
@@ -86,6 +97,14 @@ class EventManager extends Component {
 
     handleAudioSliderMouseOrTouch(e) {
         this.props.mouseOrTouchSlider(e)
+    }
+
+    /****************
+     * AUDIO PLAYER *
+     ****************/
+
+    handleAudioTimeChange(e, time) {
+        this.props.selectTime(e, time)
     }
 
     /*******
@@ -201,6 +220,8 @@ class EventManager extends Component {
         return (
             <SwitchManager {...this.props}
                 handlePopupContainerClick={this.handlePopupContainerClick}
+                handleVerseElementSelect={this.handleVerseElementSelect}
+                handleVerseElementSlide={this.handleVerseElementSlide}
                 handleAnnotationWikiSelect={this.handleAnnotationWikiSelect}
                 handleAnnotationPortalSelect={this.handleAnnotationPortalSelect}
                 handleAnnotationPrevious={this.handleAnnotationPrevious}
@@ -210,6 +231,7 @@ class EventManager extends Component {
                 handleAudioNextSong={this.handleAudioNextSong}
                 handleAudioOptionsToggle={this.handleAudioOptionsToggle}
                 handleAudioSliderMouseOrTouch={this.handleAudioSliderMouseOrTouch}
+                handleAudioTimeChange={this.handleAudioTimeChange}
                 handleDotToggle={this.handleDotToggle}
                 handleDotsSectionToggle={this.handleDotsSectionToggle}
                 handleLyricSectionExpand={this.handleLyricSectionExpand}

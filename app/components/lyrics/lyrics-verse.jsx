@@ -155,12 +155,12 @@ class LyricsVerseView extends Component {
 
     _checkIsSelectedVerse(props) {
         if (props.isSelected) {
-            props.onSelectVerseElement(this.myVerse)
+            props.handleVerseElementSelect(this.myVerse)
         }
     }
 
     _checkIsSliderSelectedVerse(props) {
-        props.onSliderSelectVerseElement(this.myVerse)
+        props.handleVerseElementSlide(this.myVerse)
     }
 
     getLyricsLine({ key, index, columnKey, other }) {

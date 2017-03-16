@@ -164,7 +164,7 @@ class App extends Component {
             isSelectedVerseBelow: false,
             sliderVerseIndex: -1,
             selectedVerseElement: null,
-            selectedSliderVerseElement: null,
+            sliderVerseElement: null,
             sliderMousedOrTouched: false,
 
             interactivatedVerseIndex: -1,
@@ -230,7 +230,7 @@ class App extends Component {
         this.selectTips = this.selectTips.bind(this)
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
         this.updateSelectedVerseElement = this.updateSelectedVerseElement.bind(this)
-        this.updateSliderSelectedVerseElement = this.updateSliderSelectedVerseElement.bind(this)
+        this.updateSliderVerseElement = this.updateSliderVerseElement.bind(this)
         this.scrollLyricSection = this.scrollLyricSection.bind(this)
         this.selectVerseBar = this.selectVerseBar.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
@@ -462,7 +462,7 @@ class App extends Component {
                 sliderVerseIndex: -1,
                 sliderMousedOrTouched: false,
                 sliderMoving: false,
-                selectedSliderVerseElement: null
+                sliderVerseElement: null
             })
         }
     }
@@ -1076,16 +1076,16 @@ class App extends Component {
         }
     }
 
-    updateSliderSelectedVerseElement(selectedSliderVerseElement) {
+    updateSliderVerseElement(sliderVerseElement) {
 
-        if (selectedSliderVerseElement !== this.state.selectedSliderVerseElement) {
-            const newState = getVerseBarStatus(this.state, selectedSliderVerseElement)
+        if (sliderVerseElement !== this.state.sliderVerseElement) {
+            const newState = getVerseBarStatus(this.state, sliderVerseElement)
 
-            newState.selectedSliderVerseElement = selectedSliderVerseElement
+            newState.sliderVerseElement = sliderVerseElement
 
             /**
-             * Selected slider verse element overrides selected verse element,
-             * as long as the slider is touched.
+             * Slider verse element overrides selected verse element, as long
+             * as the slider is touched.
              */
             this.setState(newState)
         }
@@ -1462,7 +1462,7 @@ class App extends Component {
                 isPlaying,
                 selectedSongIndex,
                 updatedTimePlayed,
-                onTimeChange: this.selectTime,
+                handleAudioTimeChange: this.selectTime,
                 onPlayerEnd: this.advanceToNextSong,
                 onTimeUpdated: this.resetUpdatedTimePlayed
             }
@@ -1517,10 +1517,6 @@ class App extends Component {
                     isOverlaidAnnotation={isOverlaidAnnotation}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
 
-                    onTimeChange={this.selectTime}
-                    onSelectVerseElement={this.updateSelectedVerseElement}
-                    onSliderSelectVerseElement={this.updateSliderSelectedVerseElement}
-
                     clickPopupContainer={this.clickPopupContainer}
                     interactivateVerse={this.interactivateVerse}
                     mouseOrTouchSlider={this.mouseOrTouchSlider}
@@ -1538,10 +1534,13 @@ class App extends Component {
                     selectOverview={this.selectOverview}
                     selectScore={this.selectScore}
                     selectSong={this.selectSong}
+                    selectTime={this.selectTime}
                     selectTips={this.selectTips}
                     selectVerseBar={this.selectVerseBar}
                     selectWiki={this.selectWiki}
                     togglePlay={this.togglePlay}
+                    updateSelectedVerseElement={this.updateSelectedVerseElement}
+                    updateSliderVerseElement={this.updateSliderVerseElement}
                 />
             </div>
         )
