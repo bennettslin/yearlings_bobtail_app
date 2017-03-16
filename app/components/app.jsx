@@ -1533,7 +1533,6 @@ class App extends Component {
                     onAnnotationClick={this.selectAnnotation}
                     onOverviewClick={this.selectOverview}
                     onTimeChange={this.selectTime}
-                    onAudioOptionClick={this.selectAudioOption}
                     onVerseClick={this.selectVerse}
                     onLyricAudioButtonClick={this.handleLyricAudioButtonClick}
                     onInteractivatedVerseClick={this.interactivateVerse}
@@ -1549,6 +1548,7 @@ class App extends Component {
                     onVerseBarClick={this.handleVerseBarClick}
                     onSliderMouseOrTouch={this._handleSliderMouseOrTouch}
 
+                    selectAudioOption={this.selectAudioOption}
                     selectLyricExpand={this.selectLyricExpand}
                     selectScore={this.selectScore}
                     selectSong={this.selectSong}

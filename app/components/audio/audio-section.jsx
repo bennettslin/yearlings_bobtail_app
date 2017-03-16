@@ -52,13 +52,13 @@ const AudioSectionView = ({
     selectedAudioOptionIndex,
     isFirstVerse,
     isLastVerse,
-    onAudioOptionClick,
     onAudioSongClick,
 
     handleTitleSelect,
     handleAudioPlay,
     handleAudioPreviousSong,
     handleAudioNextSong,
+    handleAudioOptionsToggle,
 
     audioTimerChild,
     audioBannerChild,
@@ -84,11 +84,11 @@ const AudioSectionView = ({
             isFirstVerse,
             isLastVerse,
             handleAudioPlay,
-            onAudioOptionClick,
             onAudioSongClick,
 
             handleAudioPreviousSong,
-            handleAudioNextSong
+            handleAudioNextSong,
+            handleAudioOptionsToggle
         },
         titleProps = {
             titleInAudio,

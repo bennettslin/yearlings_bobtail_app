@@ -24,7 +24,7 @@ const AudioButtonsView = ({
     isLastSong,
     isEpilogue,
     handleAudioPlay,
-    onAudioOptionClick,
+    handleAudioOptionsToggle,
 
     handleAudioPreviousSong,
     handleAudioNextSong
@@ -73,7 +73,7 @@ const AudioButtonsView = ({
         <div className="audio-subblock option-subblock">
             <a
                 className="audio-button enabled"
-                onClick={e => onAudioOptionClick(e)}
+                onClick={handleAudioOptionsToggle}
             >
                 <div className="button-icon audio-neutral">
                     {AUDIO_OPTIONS[selectedAudioOptionIndex]}
