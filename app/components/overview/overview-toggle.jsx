@@ -20,15 +20,13 @@ const OverviewToggleView = ({
 
     // From props.
     selectedOverviewIndex,
-
-    // From controller.
-    onOverviewClick
+    handleOverviewToggle
 
 }) => (
     <div className="overview-toggle-button-container">
         <a
             className="overview-toggle-button enabled"
-            onClick={e => onOverviewClick(e)}
+            onClick={handleOverviewToggle}
         >
             {OVERVIEW_OPTIONS[selectedOverviewIndex]}
         </a>

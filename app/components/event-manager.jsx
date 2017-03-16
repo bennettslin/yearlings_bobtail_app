@@ -14,6 +14,7 @@ class EventManager extends Component {
         this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
         this.handleLyricColumnExpand = this.handleLyricColumnExpand.bind(this)
+        this.handleOverviewToggle = this.handleOverviewToggle.bind(this)
         this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
@@ -136,8 +137,8 @@ class EventManager extends Component {
      * OVERVIEW *
      ************/
 
-    handleOverviewToggleButtonClick() {
-
+    handleOverviewToggle(e) {
+        this.props.selectOverview(e)
     }
 
     /*********
@@ -196,7 +197,7 @@ class EventManager extends Component {
                 handleNavToggleButtonClick={null}
                 handleNavSongButtonClick={null}
                 handleNavBookButtonClick={null}
-                handleOverviewToggleButtonClick={null}
+                handleOverviewToggle={this.handleOverviewToggle}
                 handleScoreToggle={this.handleScoreToggle}
                 handleTipsToggle={this.handleTipsToggle}
                 handleTitleSelect={this.handleTitleSelect}

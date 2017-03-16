@@ -124,7 +124,7 @@ const LiveView = ({
     onSongClick,
     onTimeChange,
     handleTipsToggle,
-    onOverviewClick,
+    handleOverviewToggle,
     onPortalClick,
     onSongFromPortalClick,
     onWikiUrlClick,
@@ -176,11 +176,11 @@ const LiveView = ({
             isLogue,
             selectedOverviewIndex,
             overviewText,
-            onPopupButtonClick: onOverviewClick,
+            onPopupButtonClick: handleOverviewToggle,
             onPopupContainerClick,
 
             // For toggle in popup in phone.
-            onOverviewClick
+            handleOverviewToggle
         },
         audioTimerProps = {
             isLogue,
@@ -375,7 +375,7 @@ const LiveView = ({
         },
         overviewButtonProps = {
             selectedOverviewIndex,
-            onOverviewClick
+            handleOverviewToggle
         },
 
         lyricExpandButtonChild = isLyricExpandable && (

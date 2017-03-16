@@ -1531,7 +1531,6 @@ class App extends Component {
                     onSongFromPortalClick={this.selectFromPortal}
                     onWikiUrlClick={this.selectWiki}
                     onAnnotationClick={this.selectAnnotation}
-                    onOverviewClick={this.selectOverview}
                     onTimeChange={this.selectTime}
                     onVerseClick={this.selectVerse}
                     onLyricAudioButtonClick={this.handleLyricAudioButtonClick}
@@ -1550,6 +1549,7 @@ class App extends Component {
                     selectDot={this.selectDot}
                     selectDotsExpand={this.selectDotsExpand}
                     selectLyricExpand={this.selectLyricExpand}
+                    selectOverview={this.selectOverview}
                     selectScore={this.selectScore}
                     selectSong={this.selectSong}
                     selectTips={this.selectTips}
