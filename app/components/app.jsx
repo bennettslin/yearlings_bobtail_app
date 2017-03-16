@@ -1532,7 +1532,6 @@ class App extends Component {
                     onTimeChange={this.selectTime}
                     onLyricAudioButtonClick={this.handleLyricAudioButtonClick}
                     onInteractivatedVerseClick={this.interactivateVerse}
-                    onLyricColumnClick={this.selectLyricColumn}
                     onPopupContainerClick={this.handlePopupContainerClick}
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onSliderSelectVerseElement={this.updateSliderSelectedVerseElement}
@@ -1543,6 +1542,7 @@ class App extends Component {
                     selectBookColumn={this.selectBookColumn}
                     selectDot={this.selectDot}
                     selectDotsExpand={this.selectDotsExpand}
+                    selectLyricColumn={this.selectLyricColumn}
                     selectLyricExpand={this.selectLyricExpand}
                     selectNavExpand={this.selectNavExpand}
                     selectOverview={this.selectOverview}

@@ -73,7 +73,7 @@ class LyricColumnView extends Component {
                 // From props.
         const { isLogue,
                 selectedVerse,
-                onLyricColumnClick,
+                handleLyricColumnSelect,
                 handleLyricVerseBarSelect,
 
                 lyricExpandButtonChild,
@@ -113,7 +113,7 @@ class LyricColumnView extends Component {
                         <div className="lyric-button-block ear-button-block">
                             <a
                                 className="lyric-button enabled"
-                                onClick={e => onLyricColumnClick(e)}
+                                onClick={handleLyricColumnSelect}
                             >
                                 <div className="large button-icon lyric-icon">
                                     {earButtonText}

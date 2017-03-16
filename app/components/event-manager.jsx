@@ -14,7 +14,8 @@ class EventManager extends Component {
         this.handleAudioSliderMouseOrTouch = this.handleAudioSliderMouseOrTouch.bind(this)
         this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
-        this.handleLyricColumnExpand = this.handleLyricColumnExpand.bind(this)
+        this.handleLyricSectionExpand = this.handleLyricSectionExpand.bind(this)
+        this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
         this.handleLyricVerseBarSelect = this.handleLyricVerseBarSelect.bind(this)
         this.handleNavExpand = this.handleNavExpand.bind(this)
         this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
@@ -91,7 +92,7 @@ class EventManager extends Component {
      * LYRIC *
      *********/
 
-    handleLyricColumnExpand(e) {
+    handleLyricSectionExpand(e) {
         this.props.selectLyricExpand(e)
     }
 
@@ -119,8 +120,8 @@ class EventManager extends Component {
 
     }
 
-    handleLyricEarButtonClick() {
-
+    handleLyricColumnSelect(e) {
+        this.props.selectLyricColumn(e)
     }
 
     /*******
@@ -193,13 +194,13 @@ class EventManager extends Component {
                 handleAudioSliderMouseOrTouch={this.handleAudioSliderMouseOrTouch}
                 handleDotToggle={this.handleDotToggle}
                 handleDotsSectionToggle={this.handleDotsSectionToggle}
-                handleLyricColumnExpand={this.handleLyricColumnExpand}
+                handleLyricSectionExpand={this.handleLyricSectionExpand}
                 handleLyricVerseBarSelect={this.handleLyricVerseBarSelect}
                 handleLyricAudioButtonClick={null}
                 handleLyricNavigationButtonClick={null}
                 handleLyricAnchorClick={null}
                 handleLyricLineClick={null}
-                handleLyricEarButtonClick={null}
+                handleLyricColumnSelect={this.handleLyricColumnSelect}
                 handleNavExpand={this.handleNavExpand}
                 handleNavSongSelect={this.handleNavSongSelect}
                 handleNavBookSelect={this.handleNavBookSelect}

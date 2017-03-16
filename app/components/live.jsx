@@ -125,13 +125,12 @@ const LiveView = ({
     onPortalClick,
     onSongFromPortalClick,
     onAnnotationClick,
-    onLyricColumnClick,
+    handleLyricColumnSelect,
     onPopupContainerClick,
     onSelectVerseElement,
     onSliderSelectVerseElement,
     onLyricSectionScroll,
     onLyricSectionUpdate,
-    handleLyricVerseBarSelect,
     onLyricAudioButtonClick,
     onInteractivatedVerseClick,
 
@@ -146,7 +145,8 @@ const LiveView = ({
     handleNavExpand,
     handleNavSongSelect,
     handleNavBookSelect,
-    handleLyricColumnExpand,
+    handleLyricSectionExpand,
+    handleLyricVerseBarSelect,
     handleOverviewToggle,
     handleScoreToggle,
     handleTipsToggle,
@@ -309,7 +309,7 @@ const LiveView = ({
             selectedDotKeys,
             selectedVerseIndex,
             onAnnotationClick,
-            onLyricColumnClick,
+            handleLyricColumnSelect,
             onSelectVerseElement,
             onSliderSelectVerseElement,
             onLyricSectionScroll,
@@ -382,7 +382,7 @@ const LiveView = ({
             <div className="lyric-button-block expand-button-block">
                 <a
                     className="lyric-button enabled"
-                    onClick={handleLyricColumnExpand}
+                    onClick={handleLyricSectionExpand}
                 >
                     <div className="large button-icon lyric-icon">
                         {isLyricExpanded ? '-' : '+'}
