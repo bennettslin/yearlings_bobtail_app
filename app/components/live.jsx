@@ -131,7 +131,7 @@ const LiveView = ({
     onSliderSelectVerseElement,
     onLyricSectionScroll,
     onLyricSectionUpdate,
-    onVerseBarClick,
+    handleLyricVerseBarSelect,
     onLyricAudioButtonClick,
     onInteractivatedVerseClick,
 
@@ -314,7 +314,7 @@ const LiveView = ({
             onSliderSelectVerseElement,
             onLyricSectionScroll,
             onLyricSectionUpdate,
-            onVerseBarClick,
+            handleLyricVerseBarSelect,
             onLyricAudioButtonClick,
             onInteractivatedVerseClick
             // onVerseHover

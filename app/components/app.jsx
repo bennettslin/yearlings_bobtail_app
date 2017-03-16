@@ -233,14 +233,14 @@ class App extends Component {
         this.updateSelectedVerseElement = this.updateSelectedVerseElement.bind(this)
         this.updateSliderSelectedVerseElement = this.updateSliderSelectedVerseElement.bind(this)
         this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
-        this.handleVerseBarClick = this.handleVerseBarClick.bind(this)
+        this.selectVerseBar = this.selectVerseBar.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
         this.handleKeyDown = this.handleKeyDown.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
         this.windowResize = this.windowResize.bind(this)
-        this._handleSliderMouseOrTouch = this._handleSliderMouseOrTouch.bind(this)
+        this.mouseOrTouchSlider = this.mouseOrTouchSlider.bind(this)
         this._waitToSaySliderIsMoving = this._waitToSaySliderIsMoving.bind(this)
         this._handleAppMouseOrTouchMove = this._handleAppMouseOrTouchMove.bind(this)
         this._handleAppMouseOrTouchUpOrLeave = this._handleAppMouseOrTouchUpOrLeave.bind(this)
@@ -393,7 +393,7 @@ class App extends Component {
      * EVENT LISTENERS *
      *******************/
 
-    _handleSliderMouseOrTouch(e) {
+    mouseOrTouchSlider(e) {
         if (e.nativeEvent.screenX) {
             const rect = e.target.getBoundingClientRect(),
                 sliderLeft = rect.left,
@@ -1131,7 +1131,7 @@ class App extends Component {
         this.setState(newState)
     }
 
-    handleVerseBarClick() {
+    selectVerseBar() {
         this.scrollElementIntoView('verse', this.props.selectedVerseIndex)
     }
 
@@ -1537,9 +1537,8 @@ class App extends Component {
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onSliderSelectVerseElement={this.updateSliderSelectedVerseElement}
                     onLyricSectionScroll={this.handleLyricSectionScroll}
-                    onVerseBarClick={this.handleVerseBarClick}
 
-                    handleAudioSliderMouseOrTouch={this._handleSliderMouseOrTouch}
+                    mouseOrTouchSlider={this.mouseOrTouchSlider}
                     selectAudioOption={this.selectAudioOption}
                     selectBookColumn={this.selectBookColumn}
                     selectDot={this.selectDot}
@@ -1550,6 +1549,7 @@ class App extends Component {
                     selectScore={this.selectScore}
                     selectSong={this.selectSong}
                     selectTips={this.selectTips}
+                    selectVerseBar={this.selectVerseBar}
                     selectWiki={this.selectWiki}
                     togglePlay={this.togglePlay}
                 />

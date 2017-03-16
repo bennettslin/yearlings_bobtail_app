@@ -74,7 +74,7 @@ class LyricColumnView extends Component {
         const { isLogue,
                 selectedVerse,
                 onLyricColumnClick,
-                onVerseBarClick,
+                handleLyricVerseBarSelect,
 
                 lyricExpandButtonChild,
 
@@ -88,7 +88,7 @@ class LyricColumnView extends Component {
                 verseObject: selectedVerse,
                 showSingleLyricColumn: other.showSingleLyricColumn,
                 hiddenLyricColumnKey: other.hiddenLyricColumnKey,
-                onVerseBarClick
+                handleLyricVerseBarSelect
             }
 
         return (
