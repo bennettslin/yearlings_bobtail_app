@@ -9,19 +9,16 @@ const TitleSection = ({
 
     accessedOn,
     accessedSectionKey,
-    nextSectionKey,
     accessedSongIndex,
 
 ...other }) => {
 
     const sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION,
-        sectionNextHighlighted = accessedOn && nextSectionKey === NAV_SECTION,
         titleAccessHighlighted = sectionAccessHighlighted && accessedSongIndex === 0
 
     return (
         <TitleSectionView {...other}
             sectionAccessHighlighted={sectionAccessHighlighted}
-            sectionNextHighlighted={sectionNextHighlighted}
             titleAccessHighlighted={titleAccessHighlighted}
         />
     )
@@ -37,12 +34,11 @@ const TitleSectionView = ({
     titleInAudio,
     title,
     sectionAccessHighlighted,
-    sectionNextHighlighted,
     titleAccessHighlighted,
     handleTitleSelect
 
 }) => (
-    <div className={`section title-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}>
+    <div className={`section title-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}>
         <a
             className={`title-button enabled${titleAccessHighlighted ? ' access-highlighted' : ''}`}
             onClick={handleTitleSelect}

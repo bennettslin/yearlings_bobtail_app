@@ -10,17 +10,14 @@ import { DOTS_SECTION } from 'helpers/constants'
 
      accessedOn,
      accessedSectionKey,
-     nextSectionKey,
 
  ...other }) => {
 
-     const sectionAccessHighlighted = accessedOn && accessedSectionKey === DOTS_SECTION,
-         sectionNextHighlighted = accessedOn && nextSectionKey === DOTS_SECTION
+     const sectionAccessHighlighted = accessedOn && accessedSectionKey === DOTS_SECTION
 
      return (
          <DotsSectionView {...other}
              sectionAccessHighlighted={sectionAccessHighlighted}
-             sectionNextHighlighted={sectionNextHighlighted}
          />
      )
  }
@@ -61,14 +58,13 @@ class DotsSectionView extends Component {
 
     render() {
         const { sectionAccessHighlighted,
-                sectionNextHighlighted,
             ...other } = this.props,
 
             { hasInteractivatedDotText } = this.state
 
         return (
             <div
-                className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
+                className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
                 onClick={this._onContainerClick}
             >
                 <DotBlock {...other}

@@ -26,7 +26,6 @@ const MenuFieldView = ({
     accessedSongIndex,
     accessedOn,
     accessedSectionKey,
-    nextSectionKey,
 
     handleTitleSelect,
 
@@ -39,7 +38,6 @@ const MenuFieldView = ({
             title,
             accessedOn,
             accessedSectionKey,
-            nextSectionKey,
             accessedSongIndex,
             handleTitleSelect
         }

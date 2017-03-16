@@ -42,7 +42,6 @@ const MainColumnView = ({
 
     accessedOn,
     accessedSectionKey,
-    nextSectionKey,
     accessedSongIndex,
 
     handleDotsSectionToggle,
@@ -69,7 +68,6 @@ const MainColumnView = ({
             accessedSongIndex,
             accessedOn,
             accessedSectionKey,
-            nextSectionKey,
 
             handleTitleSelect,
 
@@ -94,7 +92,6 @@ const MainColumnView = ({
             selectedBookColumnIndex,
             accessedOn,
             accessedSectionKey,
-            nextSectionKey,
             accessedSongIndex,
 
             handleNavExpand,

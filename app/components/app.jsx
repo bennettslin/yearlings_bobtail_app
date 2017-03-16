@@ -1414,8 +1414,7 @@ class App extends Component {
               isPlaying,
               updatedTimePlayed } = state,
 
-              accessedSectionKey = SECTION_KEYS[accessedSectionIndex],
-              nextSectionKey = AccessHelper.getNextSectionKey(props, deviceIndex),
+            accessedSectionKey = SECTION_KEYS[accessedSectionIndex],
 
             songTimes = getSongTimes(props),
             isPhone = getIsPhone({ deviceIndex }),
@@ -1492,7 +1491,6 @@ class App extends Component {
                     selectedSongTitle={selectedSongTitle}
                     selectedVerse={selectedVerse}
                     accessedSectionKey={accessedSectionKey}
-                    nextSectionKey={nextSectionKey}
                     showSingleLyricColumn={showSingleLyricColumn}
                     isLogue={isLogue}
                     isLyricExpandable={isLyricExpandable}

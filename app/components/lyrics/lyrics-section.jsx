@@ -11,17 +11,14 @@ const LyricsSection = ({
 
     accessedOn,
     accessedSectionKey,
-    nextSectionKey,
 
 ...other }) => {
 
-    const sectionAccessHighlighted = accessedOn && accessedSectionKey === LYRICS_SECTION,
-        sectionNextHighlighted = accessedOn && nextSectionKey === LYRICS_SECTION
+    const sectionAccessHighlighted = accessedOn && accessedSectionKey === LYRICS_SECTION
 
     return (
         <LyricsSectionView {...other}
             sectionAccessHighlighted={sectionAccessHighlighted}
-            sectionNextHighlighted={sectionNextHighlighted}
         />
     )
 }
@@ -101,7 +98,6 @@ class LyricsSectionView extends Component {
 
                 // From controller.
                 sectionAccessHighlighted,
-                sectionNextHighlighted,
 
             ...other } = this.props,
 
@@ -114,7 +110,6 @@ class LyricsSectionView extends Component {
                     section
                     lyrics-section
                     ${sectionAccessHighlighted ? ' access-highlighted' : ''}
-                    ${sectionNextHighlighted ? ' next-highlighted' : ''}
                     ${showSingleLyricColumn ? ' single-column' : ''}
                 `}
                 onScroll={this._handleScroll}

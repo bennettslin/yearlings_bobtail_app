@@ -47,7 +47,6 @@ class PopupTransitionGroup extends Component {
                 showClose,
                 showArrows,
                 sectionAccessHighlighted,
-                sectionNextHighlighted,
                 onPopupButtonCloseClick,
                 onPopupButtonPreviousClick,
                 onPopupButtonNextClick,
@@ -65,7 +64,7 @@ class PopupTransitionGroup extends Component {
                     <div className="popup-button side-button next-button shadow"></div>
                 }
                 <div
-                    className={`popup-content-wrapper ${className}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
+                    className={`popup-content-wrapper ${className}${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
                     onClick={handlePopupContainerClick}
                 >
                     {element}
@@ -115,7 +114,6 @@ class Popup extends Component {
         const className = this.getClassName(),
             { accessedOn,
               accessedSectionKey,
-              nextSectionKey,
               showClose,
               showArrows,
               onPopupButtonCloseClick,
@@ -124,7 +122,6 @@ class Popup extends Component {
               handlePopupContainerClick } = this.props,
              sectionClassName = `${className}-section`,
             sectionAccessHighlighted = accessedOn && accessedSectionKey === sectionClassName,
-            sectionNextHighlighted = accessedOn && nextSectionKey === sectionClassName,
             element = this.getContentElement(sectionAccessHighlighted)
 
         return (
@@ -133,7 +130,6 @@ class Popup extends Component {
                 className={className}
                 transitionName={`${className}-animation`}
                 sectionAccessHighlighted={sectionAccessHighlighted}
-                sectionNextHighlighted={sectionNextHighlighted}
                 showClose={showClose}
                 showArrows={showArrows}
                 onPopupButtonCloseClick={onPopupButtonCloseClick}

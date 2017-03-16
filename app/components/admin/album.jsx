@@ -44,7 +44,6 @@ const AlbumView = ({
     showSingleLyricColumn,
     accessedOn,
     accessedSectionKey,
-    nextSectionKey,
     accessedSongIndex,
 
     handleNavSongSelect,
@@ -75,7 +74,6 @@ const AlbumView = ({
                     selectedSongIndex={selectedSongIndex}
                     accessedOn={accessedOn}
                     accessedSectionKey={accessedSectionKey}
-                    nextSectionKey={nextSectionKey}
                     accessedSongIndex={accessedSongIndex}
                     handleNavSongSelect={handleNavSongSelect}
                 />
@@ -86,7 +84,6 @@ const AlbumView = ({
                 selectedVerseIndex={selectedVerseIndex}
                 accessedOn={accessedOn}
                 accessedSectionKey={accessedSectionKey}
-                nextSectionKey={nextSectionKey}
                 showSingleLyricColumn={showSingleLyricColumn}
             />
         </div>
