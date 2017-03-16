@@ -6,6 +6,7 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
+        this.handleAudioPlay = this.handleAudioPlay.bind(this)
         this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
         this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
         this.handleLyricColumnExpand = this.handleLyricColumnExpand.bind(this)
@@ -38,8 +39,8 @@ class EventManager extends Component {
      * AUDIO *
      *********/
 
-    handleAudioPlayButtonClick() {
-
+    handleAudioPlay(e) {
+        this.props.togglePlay(e)
     }
 
     handleAudioOptionsButtonClick() {
@@ -174,7 +175,7 @@ class EventManager extends Component {
                 handleAnnotationPortalAnchorClick={null}
                 handleAnnotationPreviousButtonClick={null}
                 handleAnnotationNextButtonClick={null}
-                handleAudioPlayButtonClick={null}
+                handleAudioPlay={this.handleAudioPlay}
                 handleAudioOptionsButtonClick={null}
                 handleAudioPreviousSong={this.handleAudioPreviousSong}
                 handleAudioNextSong={this.handleAudioNextSong}

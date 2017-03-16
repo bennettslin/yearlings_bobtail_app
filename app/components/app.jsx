@@ -1534,7 +1534,6 @@ class App extends Component {
                     onOverviewClick={this.selectOverview}
                     onTimeChange={this.selectTime}
                     onAudioOptionClick={this.selectAudioOption}
-                    onPlayClick={this.togglePlay}
                     onVerseClick={this.selectVerse}
                     onLyricAudioButtonClick={this.handleLyricAudioButtonClick}
                     onInteractivatedVerseClick={this.interactivateVerse}
@@ -1554,6 +1553,7 @@ class App extends Component {
                     selectScore={this.selectScore}
                     selectSong={this.selectSong}
                     selectTips={this.selectTips}
+                    togglePlay={this.togglePlay}
                 />
             </div>
         )

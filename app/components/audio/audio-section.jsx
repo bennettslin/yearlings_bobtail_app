@@ -52,11 +52,11 @@ const AudioSectionView = ({
     selectedAudioOptionIndex,
     isFirstVerse,
     isLastVerse,
-    onPlayClick,
     onAudioOptionClick,
     onAudioSongClick,
 
     handleTitleSelect,
+    handleAudioPlay,
     handleAudioPreviousSong,
     handleAudioNextSong,
 
@@ -83,7 +83,7 @@ const AudioSectionView = ({
             isEpilogue,
             isFirstVerse,
             isLastVerse,
-            onPlayClick,
+            handleAudioPlay,
             onAudioOptionClick,
             onAudioSongClick,
 

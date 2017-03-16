@@ -122,7 +122,6 @@ const LiveView = ({
     isLastVerse,
     selectedSongTitle,
     onSongClick,
-    onPlayClick,
     onTimeChange,
     onAudioOptionClick,
     handleTipsToggle,
@@ -147,6 +146,7 @@ const LiveView = ({
     // onVerseHover,
     onSliderMouseOrTouch,
 
+    handleAudioPlay,
     handleAudioPreviousSong,
     handleAudioNextSong,
     handleLyricColumnExpand,
@@ -222,11 +222,11 @@ const LiveView = ({
             accessedOn,
             accessedSectionKey,
             nextSectionKey,
-            onPlayClick,
             onAudioSongClick: onSongClick,
             handleTitleSelect,
             onAudioOptionClick,
 
+            handleAudioPlay,
             handleAudioPreviousSong,
             handleAudioNextSong,
 

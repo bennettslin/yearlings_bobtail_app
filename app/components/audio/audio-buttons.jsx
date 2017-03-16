@@ -23,7 +23,7 @@ const AudioButtonsView = ({
     isFirstSong,
     isLastSong,
     isEpilogue,
-    onPlayClick,
+    handleAudioPlay,
     onAudioOptionClick,
 
     handleAudioPreviousSong,
@@ -47,7 +47,7 @@ const AudioButtonsView = ({
             {/* Play button. */}
             <a
                 className="audio-button enabled"
-                onClick={onPlayClick}
+                onClick={handleAudioPlay}
             >
                 <div className={`
                         button-icon
