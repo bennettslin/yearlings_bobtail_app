@@ -125,7 +125,7 @@ const LiveView = ({
     onPlayClick,
     onTimeChange,
     onAudioOptionClick,
-    onTipsClick,
+    handleTipsToggle,
     onOverviewClick,
     onDotClick,
     onPortalClick,
@@ -268,12 +268,12 @@ const LiveView = ({
             accessedSongIndex,
 
             onSongClick,
-            onTipsClick,
             onPortalClick,
             onDotsExpandClick,
             onNavExpandClick,
             onBookColumnClick,
 
+            handleTipsToggle,
             handleTitleSelect,
 
             audioBannerChild,
@@ -324,7 +324,7 @@ const LiveView = ({
             selectedScoreIndex,
             selectedTipsIndex,
             handleScoreToggle,
-            onTipsClick
+            handleTipsToggle
         },
         annotationPopupProps = {
             songs,

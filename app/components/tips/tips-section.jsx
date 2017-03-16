@@ -18,14 +18,14 @@ const TipsSectionView = ({
     // From props.
     selectedAdminIndex,
     selectedTipsIndex,
-    onTipsClick
+    handleTipsToggle
 
 }) => (
     <div className={`section tips-section`}>
         {selectedAdminIndex &&
             <h2>tips</h2>
         }
-        <button onClick={onTipsClick}>tips: {TIPS_OPTIONS[selectedTipsIndex]}</button>
+        <button onClick={handleTipsToggle}>tips: {TIPS_OPTIONS[selectedTipsIndex]}</button>
     </div>
 )
 

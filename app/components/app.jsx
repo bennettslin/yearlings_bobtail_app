@@ -1544,16 +1544,16 @@ class App extends Component {
                     onNavExpandClick={this.selectNavExpand}
                     onBookColumnClick={this.selectBookColumn}
                     onDotsExpandClick={this.selectDotsExpand}
-                    onTipsClick={this.selectTips}
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onSliderSelectVerseElement={this.updateSliderSelectedVerseElement}
                     onLyricSectionScroll={this.handleLyricSectionScroll}
                     onVerseBarClick={this.handleVerseBarClick}
                     onSliderMouseOrTouch={this._handleSliderMouseOrTouch}
 
-                    selectSong={this.selectSong}
                     selectLyricExpand={this.selectLyricExpand}
                     selectScore={this.selectScore}
+                    selectSong={this.selectSong}
+                    selectTips={this.selectTips}
                 />
             </div>
         )

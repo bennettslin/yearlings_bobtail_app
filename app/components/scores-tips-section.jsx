@@ -20,7 +20,7 @@ const ScoresTipsSectionView = ({
     selectedScoreIndex,
     selectedTipsIndex,
     handleScoreToggle,
-    onTipsClick
+    handleTipsToggle
 
 }) => {
 
@@ -38,7 +38,7 @@ const ScoresTipsSectionView = ({
             }
             <a
                 className="scores-tips-button tips-button enabled"
-                onClick={e => onTipsClick(e)}
+                onClick={handleTipsToggle}
             >
                 <div className="large button-icon tips-icon">
                     {TIPS_OPTIONS[selectedTipsIndex]}
