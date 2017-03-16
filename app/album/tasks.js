@@ -45,6 +45,11 @@ module.exports = [
 
     // Bugs.
     {
+        taskName: `Audio cursor doesn't reset in logue.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Recalculate whether selected verse is shown when changing height.`,
         workedHours: 0,
         neededHours: 1
