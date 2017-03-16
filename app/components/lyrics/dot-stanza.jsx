@@ -27,14 +27,14 @@ const DotStanza = ({
 
         // Hide dot keys that are not present.
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
-        onDotClick = e => onAnnotationClick(e, annotationIndex)
+        handleDotToggle = e => onAnnotationClick(e, annotationIndex)
 
     return (intersectedDotKeys &&
         <DotStanzaView {...other}
             annotationIndex={annotationIndex}
             isSelected={isSelected}
             dotKeys={intersectedDotKeys}
-            onDotClick={onDotClick}
+            handleDotToggle={handleDotToggle}
             accessHighlighted={accessHighlighted}
         />
     )

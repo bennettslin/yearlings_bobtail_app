@@ -125,7 +125,6 @@ const LiveView = ({
     onTimeChange,
     handleTipsToggle,
     onOverviewClick,
-    onDotClick,
     onPortalClick,
     onSongFromPortalClick,
     onWikiUrlClick,
@@ -143,12 +142,13 @@ const LiveView = ({
     onLyricAudioButtonClick,
     onInteractivatedVerseClick,
     // onVerseHover,
-    onSliderMouseOrTouch,
+    handleAudioSliderMouseOrTouch,
 
     handleAudioPlay,
     handleAudioPreviousSong,
     handleAudioNextSong,
     handleAudioOptionsToggle,
+    handleDotToggle,
     handleLyricColumnExpand,
     handleScoreToggle,
     handleTitleSelect,
@@ -203,7 +203,7 @@ const LiveView = ({
             totalTime,
             stanzaTimes,
             verseTimes: times,
-            onSliderMouseOrTouch,
+            handleAudioSliderMouseOrTouch,
             onTimeChange,
 
             audioTimerChild
@@ -350,8 +350,9 @@ const LiveView = ({
             accessedSectionKey,
             nextSectionKey,
             accessedDotIndex,
-            onDotClick,
-            onPopupContainerClick
+            onPopupContainerClick,
+
+            handleDotToggle
         },
         scorePopupProps = {
             isPhone,

@@ -10,6 +10,8 @@ class EventManager extends Component {
         this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
         this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
         this.handleAudioOptionsToggle = this.handleAudioOptionsToggle.bind(this)
+        this.handleAudioSliderMouseOrTouch = this.handleAudioSliderMouseOrTouch.bind(this)
+        this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handleLyricColumnExpand = this.handleLyricColumnExpand.bind(this)
         this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
@@ -56,16 +58,16 @@ class EventManager extends Component {
         this.props.selectAudioOption(e)
     }
 
-    handleAudioSliderMouseOrTouch() {
-
+    handleAudioSliderMouseOrTouch(e) {
+        this.props.handleAudioSliderMouseOrTouch(e)
     }
 
     /*******
      * DOT *
      *******/
 
-    handleDotButtonClick() {
-
+    handleDotToggle(e, dotKey) {
+        this.props.selectDot(e, dotKey)
     }
 
     /********
@@ -180,8 +182,8 @@ class EventManager extends Component {
                 handleAudioPreviousSong={this.handleAudioPreviousSong}
                 handleAudioNextSong={this.handleAudioNextSong}
                 handleAudioOptionsToggle={this.handleAudioOptionsToggle}
-                handleAudioSliderMouseOrTouch={null}
-                handleDotButtonClick={null}
+                handleAudioSliderMouseOrTouch={this.handleAudioSliderMouseOrTouch}
+                handleDotToggle={this.handleDotToggle}
                 handleDotsToggleButtonClick={null}
                 handleLyricColumnExpand={this.handleLyricColumnExpand}
                 handleLyricVerseBarClick={null}
