@@ -51,7 +51,7 @@ class PopupTransitionGroup extends Component {
                 onPopupButtonCloseClick,
                 onPopupButtonPreviousClick,
                 onPopupButtonNextClick,
-                onPopupContainerClick } = this.props
+                handlePopupContainerClick } = this.props
 
         return element && (
             <div className={`popup-wrapper ${className}`}>
@@ -66,7 +66,7 @@ class PopupTransitionGroup extends Component {
                 }
                 <div
                     className={`popup-content-wrapper ${className}${sectionAccessHighlighted ? ' access-highlighted' : ''}${sectionNextHighlighted ? ' next-highlighted' : ''}`}
-                    onClick={e => onPopupContainerClick(e, className)}
+                    onClick={handlePopupContainerClick}
                 >
                     {element}
                     {showClose &&
@@ -121,7 +121,7 @@ class Popup extends Component {
               onPopupButtonCloseClick,
               onPopupButtonPreviousClick,
               onPopupButtonNextClick,
-              onPopupContainerClick } = this.props,
+              handlePopupContainerClick } = this.props,
              sectionClassName = `${className}-section`,
             sectionAccessHighlighted = accessedOn && accessedSectionKey === sectionClassName,
             sectionNextHighlighted = accessedOn && nextSectionKey === sectionClassName,
@@ -139,7 +139,7 @@ class Popup extends Component {
                 onPopupButtonCloseClick={onPopupButtonCloseClick}
                 onPopupButtonPreviousClick={onPopupButtonPreviousClick}
                 onPopupButtonNextClick={onPopupButtonNextClick}
-                onPopupContainerClick={onPopupContainerClick}
+                handlePopupContainerClick={handlePopupContainerClick}
             />
         )
     }

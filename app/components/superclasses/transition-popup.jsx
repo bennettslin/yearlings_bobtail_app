@@ -51,7 +51,7 @@ class TransitionPopup extends Component {
                 isVisible,
                 showClose,
                 showArrows,
-                onPopupContainerClick,
+                handlePopupContainerClick,
                 onCloseClick,
                 myChild } = this.props,
 
@@ -69,7 +69,7 @@ class TransitionPopup extends Component {
                     showClose={showClose}
                     showArrows={showArrows}
                     onCloseClick={onCloseClick}
-                    onPopupContainerClick={onPopupContainerClick}
+                    handlePopupContainerClick={handlePopupContainerClick}
                     myChild={myChild}
                 />
             </span>
@@ -89,7 +89,7 @@ const TransitionPopupView = ({
     showArrows,
     onPopupButtonClick,
     onCloseClick,
-    onPopupContainerClick,
+    handlePopupContainerClick,
     myChild
 
 }) => {
@@ -106,7 +106,7 @@ const TransitionPopupView = ({
             }
             <div
                 className={`popup-content-wrapper ${popupClassName}`}
-                onClick={e => onPopupContainerClick(e, popupClassName)}
+                onClick={handlePopupContainerClick}
             >
                 {myChild}
                 {showClose &&

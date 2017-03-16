@@ -1518,10 +1518,10 @@ class App extends Component {
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
 
                     onTimeChange={this.selectTime}
-                    onPopupContainerClick={this.clickPopupContainer}
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onSliderSelectVerseElement={this.updateSliderSelectedVerseElement}
 
+                    clickPopupContainer={this.clickPopupContainer}
                     interactivateVerse={this.interactivateVerse}
                     mouseOrTouchSlider={this.mouseOrTouchSlider}
                     selectAnnotation={this.selectAnnotation}

@@ -43,7 +43,7 @@ class DotsSectionView extends Component {
     }
 
     _onContainerClick(e) {
-        this.props.onPopupContainerClick(e)
+        this.props.handlePopupContainerClick(e)
 
         this.setState({
             hasInteractivatedDotText: 0

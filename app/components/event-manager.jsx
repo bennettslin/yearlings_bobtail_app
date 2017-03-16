@@ -6,6 +6,7 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
+        this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
         this.handleAnnotationPrevious = this.handleAnnotationPrevious.bind(this)
         this.handleAnnotationNext = this.handleAnnotationNext.bind(this)
         this.handleAnnotationWikiSelect = this.handleAnnotationWikiSelect.bind(this)
@@ -32,6 +33,14 @@ class EventManager extends Component {
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
+    }
+
+    /**************
+     * BODY *
+     **************/
+
+    handlePopupContainerClick(e) {
+        this.props.clickPopupContainer(e)
     }
 
     /**************
@@ -191,6 +200,7 @@ class EventManager extends Component {
     render() {
         return (
             <SwitchManager {...this.props}
+                handlePopupContainerClick={this.handlePopupContainerClick}
                 handleAnnotationWikiSelect={this.handleAnnotationWikiSelect}
                 handleAnnotationPortalSelect={this.handleAnnotationPortalSelect}
                 handleAnnotationPrevious={this.handleAnnotationPrevious}
