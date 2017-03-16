@@ -16,9 +16,9 @@ const LyricsVerse = ({
     selectedVerseIndex,
     interactivatedVerseIndex,
     lyricsStartAtZero,
-    onAnnotationClick,
-    onLyricAudioButtonClick,
-    onInteractivatedVerseClick,
+    handleLyricAnnotationSelect,
+    handleLyricAudioSelect,
+    handleLyricVerseInteractivate,
     sliderMousedOrTouched,
     sliderVerseIndex,
 
@@ -48,10 +48,10 @@ const LyricsVerse = ({
         isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
         isDoubleSpeaker = !lyric,
-        onAnchorClick = onAnnotationClick,
+        onAnchorClick = handleLyricAnnotationSelect,
 
         // Allows clicks on selected or interactivated verse to deinteractivate it.
-        onInteractivatableClick = !inVerseBar && !isInteractivated ? e => onInteractivatedVerseClick(e, verseIndex) : null,
+        onInteractivatableClick = !inVerseBar && !isInteractivated ? e => handleLyricVerseInteractivate(e, verseIndex) : null,
 
         /**
          * Audio button is enabled when it's the interactivated verse.
@@ -96,11 +96,11 @@ const LyricsVerse = ({
 
         // If verse is selected, audio button will toggle play.
         if (isSelected) {
-            onLyricAudioClick = e => onLyricAudioButtonClick(e)
+            onLyricAudioClick = handleLyricAudioSelect
 
         // Otherwise, audio button will select verse.
         } else {
-            onLyricAudioClick = e => onLyricAudioButtonClick(e, verseIndex)
+            onLyricAudioClick = e => handleLyricAudioSelect(e, verseIndex)
         }
     }
 

@@ -20,6 +20,10 @@ class EventManager extends Component {
         this.handleLyricSectionExpand = this.handleLyricSectionExpand.bind(this)
         this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
         this.handleLyricVerseBarSelect = this.handleLyricVerseBarSelect.bind(this)
+        this.handleLyricAnnotationSelect = this.handleLyricAnnotationSelect.bind(this)
+        this.handleLyricVerseInteractivate = this.handleLyricVerseInteractivate.bind(this)
+        this.handleLyricAudioSelect = this.handleLyricAudioSelect.bind(this)
+        this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
         this.handleNavExpand = this.handleNavExpand.bind(this)
         this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
         this.handleNavBookSelect = this.handleNavBookSelect.bind(this)
@@ -34,8 +38,8 @@ class EventManager extends Component {
      * ANNOTATION *
      **************/
 
-    handleAnnotationWikiSelect(e, selectedWikiIndex) {
-        this.props.selectWiki(e, selectedWikiIndex)
+    handleAnnotationWikiSelect(e, wikiIndex) {
+        this.props.selectWiki(e, wikiIndex)
     }
 
     handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex) {
@@ -108,24 +112,24 @@ class EventManager extends Component {
      * LYRICS *
      **********/
 
-    handleLyricAudioButtonClick() {
-
+    handleLyricAudioSelect(e, verseIndex) {
+        this.props.selectLyricAudio(e, verseIndex)
     }
 
-    handleLyricNavigationButtonClick() {
-
+    handleLyricAnnotationSelect(e, annotationIndex) {
+        this.props.selectAnnotation(e, annotationIndex)
     }
 
-    handleLyricAnchorClick() {
-
-    }
-
-    handleLyricLineClick() {
-
+    handleLyricVerseInteractivate(e, verseIndex) {
+        this.props.interactivateVerse(e, verseIndex)
     }
 
     handleLyricColumnSelect(e) {
         this.props.selectLyricColumn(e)
+    }
+
+    handleLyricSectionScroll(lyricSectionElement, verseElement, lyricColumnJustTransitioned) {
+        this.props.scrollLyricSection(lyricSectionElement, verseElement, lyricColumnJustTransitioned)
     }
 
     /*******
@@ -200,11 +204,11 @@ class EventManager extends Component {
                 handleDotsSectionToggle={this.handleDotsSectionToggle}
                 handleLyricSectionExpand={this.handleLyricSectionExpand}
                 handleLyricVerseBarSelect={this.handleLyricVerseBarSelect}
-                handleLyricAudioButtonClick={null}
-                handleLyricNavigationButtonClick={null}
-                handleLyricAnchorClick={null}
-                handleLyricLineClick={null}
+                handleLyricAudioSelect={this.handleLyricAudioSelect}
+                handleLyricAnnotationSelect={this.handleLyricAnnotationSelect}
+                handleLyricVerseInteractivate={this.handleLyricVerseInteractivate}
                 handleLyricColumnSelect={this.handleLyricColumnSelect}
+                handleLyricSectionScroll={this.handleLyricSectionScroll}
                 handleNavExpand={this.handleNavExpand}
                 handleNavSongSelect={this.handleNavSongSelect}
                 handleNavBookSelect={this.handleNavBookSelect}

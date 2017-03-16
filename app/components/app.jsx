@@ -221,7 +221,7 @@ class App extends Component {
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
-        this.handleLyricAudioButtonClick = this.handleLyricAudioButtonClick.bind(this)
+        this.selectLyricAudio = this.selectLyricAudio.bind(this)
         this.interactivateVerse = this.interactivateVerse.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
@@ -232,13 +232,13 @@ class App extends Component {
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
         this.updateSelectedVerseElement = this.updateSelectedVerseElement.bind(this)
         this.updateSliderSelectedVerseElement = this.updateSliderSelectedVerseElement.bind(this)
-        this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
+        this.scrollLyricSection = this.scrollLyricSection.bind(this)
         this.selectVerseBar = this.selectVerseBar.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this._onBodyClick = this._onBodyClick.bind(this)
         this.handleKeyDown = this.handleKeyDown.bind(this)
-        this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
+        this.clickPopupContainer = this.clickPopupContainer.bind(this)
         this.windowResize = this.windowResize.bind(this)
         this.mouseOrTouchSlider = this.mouseOrTouchSlider.bind(this)
         this._waitToSaySliderIsMoving = this._waitToSaySliderIsMoving.bind(this)
@@ -1068,7 +1068,7 @@ class App extends Component {
         if (selectedVerseElement !== this.state.selectedVerseElement) {
 
             // Determine if new selected verse element shows or hides verse bar.
-            this.handleLyricSectionScroll(undefined, selectedVerseElement)
+            this.scrollLyricSection(undefined, selectedVerseElement)
 
             // App has a reference to the selected verse.
             this.setState({
@@ -1092,7 +1092,7 @@ class App extends Component {
         }
     }
 
-    handleLyricSectionScroll(lyricSectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustTransitioned) {
+    scrollLyricSection(lyricSectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustTransitioned) {
 
         /**
          * Prevent verse bar from showing upon initial load.
@@ -1135,7 +1135,7 @@ class App extends Component {
         this.scrollElementIntoView('verse', this.props.selectedVerseIndex)
     }
 
-    handleLyricAudioButtonClick(e, verseIndex) {
+    selectLyricAudio(e, verseIndex) {
 
         // It's a play button.
         if (isNaN(verseIndex)) {
@@ -1149,18 +1149,9 @@ class App extends Component {
         this.interactivateVerse(e)
     }
 
-    handlePopupContainerClick(e, className) {
+    clickPopupContainer(e, className) {
         this._stopPropagation(e)
         this._handleAccessOn(0)
-
-        /**
-         * Clicking inside the annotation popup itself should keep it open, but
-         * close the wiki popup.
-         */
-        if (className === 'annotation' && this.props.selectedWikiIndex) {
-            this.selectWiki(true)
-        }
-
         this._focusApp()
     }
 
@@ -1527,15 +1518,12 @@ class App extends Component {
                     isOverlaidAnnotation={isOverlaidAnnotation}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
 
-                    onAnnotationClick={this.selectAnnotation}
                     onTimeChange={this.selectTime}
-                    onLyricAudioButtonClick={this.handleLyricAudioButtonClick}
-                    onInteractivatedVerseClick={this.interactivateVerse}
-                    onPopupContainerClick={this.handlePopupContainerClick}
+                    onPopupContainerClick={this.clickPopupContainer}
                     onSelectVerseElement={this.updateSelectedVerseElement}
                     onSliderSelectVerseElement={this.updateSliderSelectedVerseElement}
-                    onLyricSectionScroll={this.handleLyricSectionScroll}
 
+                    interactivateVerse={this.interactivateVerse}
                     mouseOrTouchSlider={this.mouseOrTouchSlider}
                     selectAnnotation={this.selectAnnotation}
                     selectAudioOption={this.selectAudioOption}
@@ -1545,6 +1533,8 @@ class App extends Component {
                     selectFromPortal={this.selectFromPortal}
                     selectLyricColumn={this.selectLyricColumn}
                     selectLyricExpand={this.selectLyricExpand}
+                    scrollLyricSection={this.scrollLyricSection}
+                    selectLyricAudio={this.selectLyricAudio}
                     selectNavExpand={this.selectNavExpand}
                     selectOverview={this.selectOverview}
                     selectScore={this.selectScore}

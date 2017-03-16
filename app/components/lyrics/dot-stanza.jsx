@@ -9,7 +9,7 @@ import { LYRIC_ANNOTATION_ELEMENT } from 'helpers/constants'
 
 const DotStanza = ({
 
-    onAnnotationClick,
+    handleLyricAnnotationSelect,
     dotStanzaObject,
     selectedAnnotationIndex,
     selectedDotKeys,
@@ -27,7 +27,7 @@ const DotStanza = ({
 
         // Hide dot keys that are not present.
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
-        handleDotToggle = e => onAnnotationClick(e, annotationIndex)
+        handleDotToggle = e => handleLyricAnnotationSelect(e, annotationIndex)
 
     return (intersectedDotKeys &&
         <DotStanzaView {...other}

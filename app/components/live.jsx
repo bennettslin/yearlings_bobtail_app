@@ -123,14 +123,13 @@ const LiveView = ({
     selectedSongTitle,
     onTimeChange,
 
-    onAnnotationClick,
     onPopupContainerClick,
     onSelectVerseElement,
     onSliderSelectVerseElement,
-    onLyricSectionScroll,
+    handleLyricSectionScroll,
     onLyricSectionUpdate,
-    onLyricAudioButtonClick,
-    onInteractivatedVerseClick,
+    handleLyricAudioSelect,
+    handleLyricVerseInteractivate,
 
     handleAnnotationPrevious,
     handleAnnotationNext,
@@ -149,6 +148,7 @@ const LiveView = ({
     handleLyricColumnSelect,
     handleLyricSectionExpand,
     handleLyricVerseBarSelect,
+    handleLyricAnnotationSelect,
     handleOverviewToggle,
     handleScoreToggle,
     handleTipsToggle,
@@ -308,16 +308,16 @@ const LiveView = ({
             songLyrics: selectedSongLyrics,
             selectedDotKeys,
             selectedVerseIndex,
-            onAnnotationClick,
             handleLyricColumnSelect,
             onSelectVerseElement,
             onSliderSelectVerseElement,
-            onLyricSectionScroll,
+            handleLyricSectionScroll,
             onLyricSectionUpdate,
             handleLyricVerseBarSelect,
-            onLyricAudioButtonClick,
-            onInteractivatedVerseClick
-            // onVerseHover
+            handleLyricAudioSelect,
+            handleLyricVerseInteractivate,
+
+            handleLyricAnnotationSelect
         },
         scoresTipsSectionProps = {
             isPhone,

@@ -79,7 +79,7 @@ class LyricsSectionView extends Component {
     _handleScroll(fromHeightTransition) {
         const lyricColumnJustTransitioned = fromHeightTransition === true
 
-        this.props.onLyricSectionScroll(this.mySection, undefined, lyricColumnJustTransitioned)
+        this.props.handleLyricSectionScroll(this.mySection, undefined, lyricColumnJustTransitioned)
     }
 
     _handleFadeout(e) {
