@@ -17,7 +17,6 @@ import { selectAdminIndex,
          selectDotsIndex,
          accessOn,
          accessSectionIndex } from 'redux/actions'
-import AudioPlayersSection from './audio/audio-players-section'
 import EventManager from './event-manager'
 import { NAV_SECTION,
          AUDIO_SECTION,
@@ -41,14 +40,12 @@ import { NAV_SECTION,
          LYRIC_ANNOTATION_ELEMENT,
          LYRIC_COLUMN_KEYS,
 
-         DEVICE_OBJECTS,
-
          REFERENCE,
 
          ESCAPE,
          SPACE } from 'helpers/constants'
-import { getSong, getSongTitle, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerse, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getHiddenLyricColumnKey, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn, getIsDesktop, getIsPhone } from 'helpers/responsive-helper'
+import { getSong, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from 'helpers/responsive-helper'
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
@@ -184,7 +181,7 @@ class App extends Component {
 
     componentDidMount() {
         // Allows app to begin listening for keyboard events.
-        this._focusApp()
+        // this._focusApp()
 
         // FIXME: Scrolling to selected verse here, but animation is janky.
         // setTimeout(this.scrollElementIntoView.bind(this, 'verse', this.props.selectedVerseIndex), 250)
@@ -233,14 +230,14 @@ class App extends Component {
         this.selectVerseBar = this.selectVerseBar.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
-        this.handleBodyClick = this.handleBodyClick.bind(this)
-        this.handleKeyDown = this.handleKeyDown.bind(this)
+        this.clickBody = this.clickBody.bind(this)
+        this.pressDownKey = this.pressDownKey.bind(this)
         this.clickPopupContainer = this.clickPopupContainer.bind(this)
         this.windowResize = this.windowResize.bind(this)
-        this.mouseOrTouchSlider = this.mouseOrTouchSlider.bind(this)
+        this.mouseOrTouchSliderBegin = this.mouseOrTouchSliderBegin.bind(this)
         this._waitToSaySliderIsMoving = this._waitToSaySliderIsMoving.bind(this)
-        this._handleAppMouseOrTouchMove = this._handleAppMouseOrTouchMove.bind(this)
-        this._handleAppMouseOrTouchUpOrLeave = this._handleAppMouseOrTouchUpOrLeave.bind(this)
+        this.mouseOrTouchBodyMove = this.mouseOrTouchBodyMove.bind(this)
+        this.mouseOrTouchBodyEnd = this.mouseOrTouchBodyEnd.bind(this)
     }
 
     _assignLogFunctions() {
@@ -254,10 +251,10 @@ class App extends Component {
         window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
     }
 
-    // Focus for accessibility.
-    _focusApp(element = this.myApp) {
-        element.focus()
-    }
+    // // Focus for accessibility.
+    // _focusApp(element = this.myApp) {
+    //     element.focus()
+    // }
 
     _stopPropagation(e) {
         if (e && e.stopPropagation) {
@@ -390,7 +387,7 @@ class App extends Component {
      * EVENT LISTENERS *
      *******************/
 
-    mouseOrTouchSlider(e) {
+    mouseOrTouchSliderBegin(e) {
         if (e.nativeEvent.screenX) {
             const rect = e.target.getBoundingClientRect(),
                 sliderLeft = rect.left,
@@ -424,7 +421,7 @@ class App extends Component {
         }
     }
 
-    _handleAppMouseOrTouchMove(e) {
+    mouseOrTouchBodyMove(e) {
         if (this.state.sliderMousedOrTouched) {
             const { sliderLeft,
                     sliderWidth } = this.state,
@@ -441,7 +438,7 @@ class App extends Component {
         }
     }
 
-    _handleAppMouseOrTouchUpOrLeave() {
+    mouseOrTouchBodyEnd() {
         if (this.state.sliderMousedOrTouched) {
             const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime,
                 selectedVerseIndex = getVerseIndexForTime(this.props, selectedTime),
@@ -844,9 +841,9 @@ class App extends Component {
         this._stopPropagation(e)
 
         this.props.selectWikiIndex(selectedWikiIndex)
-        if (selectedWikiIndex) {
-            this._focusApp()
-        }
+        // if (selectedWikiIndex) {
+        //     this._focusApp()
+        // }
 
         if (e) {
             const accessedSectionKey = e.overrideClosePopupsDefaultWithSection ||
@@ -1135,10 +1132,10 @@ class App extends Component {
     clickPopupContainer(e) {
         this._stopPropagation(e)
         this._handleAccessOn(0)
-        this._focusApp()
+        // this._focusApp()
     }
 
-    handleBodyClick() {
+    clickBody() {
         this._handleAccessOn(0)
 
         // Hide popups, but don't collapse lyrics column.
@@ -1147,7 +1144,7 @@ class App extends Component {
         this.interactivateVerse()
     }
 
-    handleKeyDown(e) {
+    pressDownKey(e) {
         let { key: keyName,
               keyCode } = e
 
@@ -1161,7 +1158,7 @@ class App extends Component {
             return
         } else {
             // TODO: Focus strategically, based on accessed section.
-            this._focusApp()
+            // this._focusApp()
             e.preventDefault()
         }
 
@@ -1335,7 +1332,7 @@ class App extends Component {
     }
 
     _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2, accessedSectionIndex = this.props.accessedSectionIndex) {
-        this._focusApp()
+        // this._focusApp()
 
         if (accessedOn) {
             this._selectDefaultSectionElementIndex(accessedSectionIndex)
@@ -1389,134 +1386,48 @@ class App extends Component {
                 selectedAnnotationIndex
             })
         }
-        this._focusApp()
+        // this._focusApp()
     }
 
     render() {
-        const { props, state } = this,
-            { selectedAdminIndex,
-              mp3s,
-              accessedSectionIndex,
-              selectedSongIndex,
-              selectedVerseIndex,
-              selectedOverviewIndex,
-              selectedWikiIndex,
-              selectedScoreIndex,
-              selectedAnnotationIndex } = props,
-
-            { deviceIndex,
-              windowWidth,
-              windowHeight,
-              isLyricExpanded,
-              sliderVerseIndex,
-
-              isPlaying,
-              updatedTimePlayed } = state,
-
-            accessedSectionKey = SECTION_KEYS[accessedSectionIndex],
-
-            songTimes = getSongTimes(props),
-            isPhone = getIsPhone({ deviceIndex }),
-            isDesktop = getIsDesktop(deviceIndex),
-            deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
-            showSingleLyricColumn = getShowSingleLyricColumn(props, state),
-            isLyricExpandable = getIsLyricExpandable(state),
-            isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
-
-            isLogue = getIsLogue(props),
-            selectedSongTitle = getSongTitle(props, isLogue),
-
-            lyricsStartAtZero = getLyricsStartAtZero(props),
-            isFirstVerse = selectedVerseIndex === (lyricsStartAtZero ? 1 : 0),
-            isLastVerse = selectedVerseIndex === songTimes.length - 1,
-
-            // If slider is touched, it overrides the selected verse.
-            selectedVerse = getVerse(props, sliderVerseIndex),
-            hiddenLyricColumnKey = getHiddenLyricColumnKey({
-                showSingleLyricColumn,
-                selectedLyricColumnIndex: props.selectedLyricColumnIndex
-            }),
-            isOverlaidAnnotation = !getIsDesktop(deviceIndex) && (isLyricExpanded || isPhone),
-            showOverlay = (!isPhone && !!selectedScoreIndex) || !!selectedWikiIndex ||
-                (!!selectedAnnotationIndex && isOverlaidAnnotation),
-
-            audioPlayersProps = {
-                mp3s,
-                isPlaying,
-                selectedSongIndex,
-                updatedTimePlayed,
-                handleAudioTimeChange: this.selectTime,
-                onPlayerEnd: this.advanceToNextSong,
-                onTimeUpdated: this.resetUpdatedTimePlayed
-            }
-
         return (
-            <div
-                ref={(node) => (this.myApp = node)}
-                className={`
-                    app
-                    ${selectedAdminIndex ? 'admin' : `live ${deviceClassName}`}
-                    ${isDesktop ? 'is-desktop' : 'is-mobile'}
-                    ${isPlaying ? ' is-playing' : ' is-paused'}
-                `}
-                onClick={this.handleBodyClick}
-                onMouseMove={this._handleAppMouseOrTouchMove}
-                onMouseUp={this._handleAppMouseOrTouchUpOrLeave}
-                onMouseLeave={this._handleAppMouseOrTouchUpOrLeave}
-                // onTouchMove={this._handleAppMouseOrTouchMove}
-                // onTouchEnd={this._handleAppMouseOrTouchUpOrLeave}
-                // onTouchCancel={this._handleAppMouseOrTouchUpOrLeave}
-                onKeyDown={this.handleKeyDown}
-                tabIndex="0"
-            >
-                <div
-                    className={`popup-overlay${showOverlay ? '' : ' hidden'}`}
-                >
-                </div>
-                <AudioPlayersSection {...audioPlayersProps} />
-                <EventManager {...this.props} {...this.state}
-                    isPhone={isPhone}
-                    isDesktop={isDesktop}
-                    lyricsStartAtZero={lyricsStartAtZero}
-                    isFirstVerse={isFirstVerse}
-                    isLastVerse={isLastVerse}
-                    selectedSongTitle={selectedSongTitle}
-                    selectedVerse={selectedVerse}
-                    accessedSectionKey={accessedSectionKey}
-                    showSingleLyricColumn={showSingleLyricColumn}
-                    isLogue={isLogue}
-                    isLyricExpandable={isLyricExpandable}
-                    showOverlay={showOverlay}
-                    isOverviewShown={isOverviewShown}
-                    isOverlaidAnnotation={isOverlaidAnnotation}
-                    hiddenLyricColumnKey={hiddenLyricColumnKey}
+            <EventManager {...this.props} {...this.state}
 
-                    clickPopupContainer={this.clickPopupContainer}
-                    interactivateVerse={this.interactivateVerse}
-                    mouseOrTouchSlider={this.mouseOrTouchSlider}
-                    selectAnnotation={this.selectAnnotation}
-                    selectAudioOption={this.selectAudioOption}
-                    selectBookColumn={this.selectBookColumn}
-                    selectDot={this.selectDot}
-                    selectDotsExpand={this.selectDotsExpand}
-                    selectFromPortal={this.selectFromPortal}
-                    selectLyricColumn={this.selectLyricColumn}
-                    selectLyricExpand={this.selectLyricExpand}
-                    scrollLyricSection={this.scrollLyricSection}
-                    selectNavExpand={this.selectNavExpand}
-                    selectOverview={this.selectOverview}
-                    selectScore={this.selectScore}
-                    selectSong={this.selectSong}
-                    selectTime={this.selectTime}
-                    selectTips={this.selectTips}
-                    selectVerse={this.selectVerse}
-                    selectVerseBar={this.selectVerseBar}
-                    selectWiki={this.selectWiki}
-                    togglePlay={this.togglePlay}
-                    updateSelectedVerseElement={this.updateSelectedVerseElement}
-                    updateSliderVerseElement={this.updateSliderVerseElement}
-                />
-            </div>
+                // FIXME: Move these to event manager.
+                advanceToNextSong={this.advanceToNextSong}
+                resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
+
+                clickBody={this.clickBody}
+                clickPopupContainer={this.clickPopupContainer}
+                interactivateVerse={this.interactivateVerse}
+
+                mouseOrTouchSliderBegin={this.mouseOrTouchSliderBegin}
+                mouseOrTouchBodyMove={this.mouseOrTouchBodyMove}
+                mouseOrTouchBodyEnd={this.mouseOrTouchBodyEnd}
+
+                pressDownKey={this.pressDownKey}
+                selectAnnotation={this.selectAnnotation}
+                selectAudioOption={this.selectAudioOption}
+                selectBookColumn={this.selectBookColumn}
+                selectDot={this.selectDot}
+                selectDotsExpand={this.selectDotsExpand}
+                selectFromPortal={this.selectFromPortal}
+                selectLyricColumn={this.selectLyricColumn}
+                selectLyricExpand={this.selectLyricExpand}
+                scrollLyricSection={this.scrollLyricSection}
+                selectNavExpand={this.selectNavExpand}
+                selectOverview={this.selectOverview}
+                selectScore={this.selectScore}
+                selectSong={this.selectSong}
+                selectTime={this.selectTime}
+                selectTips={this.selectTips}
+                selectVerse={this.selectVerse}
+                selectVerseBar={this.selectVerseBar}
+                selectWiki={this.selectWiki}
+                togglePlay={this.togglePlay}
+                updateSelectedVerseElement={this.updateSelectedVerseElement}
+                updateSliderVerseElement={this.updateSliderVerseElement}
+            />
         )
     }
 }

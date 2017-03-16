@@ -30,7 +30,7 @@ const AudioBannerView = ({
     totalTime,
     stanzaTimes,
     verseTimes,
-    handleAudioSliderMouseOrTouch,
+    handleAudioSliderMouseOrTouchBegin,
 
     audioTimerChild
 
@@ -50,7 +50,7 @@ const AudioBannerView = ({
             totalTime={totalTime}
             stanzaTimes={stanzaTimes}
             verseTimes={verseTimes}
-            onMouseOrTouch={handleAudioSliderMouseOrTouch}
+            onMouseOrTouch={handleAudioSliderMouseOrTouchBegin}
         />
         <div className="audio-banner audio-display-block">
             <div className="audio-banner-title">

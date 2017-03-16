@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
+import AudioPlayersSection from './audio/audio-players-section'
+import { DEVICE_OBJECTS,
+         OVERVIEW_OPTIONS,
+         SHOWN,
+         SECTION_KEYS } from 'helpers/constants'
+import { getSongTitle, getSongTimes, getVerse, getIsLogue, getHiddenLyricColumnKey, getLyricsStartAtZero } from 'helpers/album-view-helper'
+import { getIsDesktop, getIsPhone, getIsLyricExpandable, getShowSingleLyricColumn } from 'helpers/responsive-helper'
 
 class DomManager extends Component {
 
@@ -8,16 +15,106 @@ class DomManager extends Component {
         super(props)
     }
 
+    componentDidMount() {
+        // Allows app to begin listening for keyboard events.
+        this.focusDomManager()
+    }
+
+    // Focus for accessibility.
+    focusDomManager(element = this.myDomManager) {
+        element.focus()
+    }
+
     render() {
 
-        const { selectedAdminIndex,
-                isLyricExpanded,
-                deviceIndex,
-                windowWidth,
-                windowHeight } = this.props
+        const { props } = this,
+            { isLyricExpanded,
+              deviceIndex,
+              windowWidth,
+              windowHeight,
+
+              selectedAdminIndex,
+              selectedSongIndex,
+              selectedOverviewIndex,
+              selectedScoreIndex,
+              selectedLyricColumnIndex,
+              selectedAnnotationIndex,
+              selectedVerseIndex,
+              selectedWikiIndex,
+              sliderVerseIndex,
+
+              accessedSectionIndex,
+
+              mp3s,
+              isPlaying,
+              updatedTimePlayed,
+
+            // FIXME: Change these.
+              advanceToNextSong,
+              resetUpdatedTimePlayed,
+
+              handleBodyClick,
+              handleBodyMouseOrTouchMove,
+              handleBodyMouseOrTouchEnd,
+              handleKeyDownPress,
+              handleAudioTimeChange } = props,
+
+            deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
+            isDesktop = getIsDesktop(deviceIndex),
+            isPhone = getIsPhone({ deviceIndex }),
+
+            accessedSectionKey = SECTION_KEYS[accessedSectionIndex],
+
+            isLogue = getIsLogue(props),
+            selectedSongTitle = getSongTitle(props, isLogue),
+            selectedVerse = getVerse(props, sliderVerseIndex),
+
+            songTimes = getSongTimes(props),
+            lyricsStartAtZero = getLyricsStartAtZero(props),
+            isFirstVerse = selectedVerseIndex === (lyricsStartAtZero ? 1 : 0),
+            isLastVerse = selectedVerseIndex === songTimes.length - 1,
+
+            showSingleLyricColumn = getShowSingleLyricColumn(props, props),
+
+            hiddenLyricColumnKey = getHiddenLyricColumnKey({
+                showSingleLyricColumn,
+                selectedLyricColumnIndex
+            }),
+
+            isLyricExpandable = getIsLyricExpandable(props),
+            isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
+
+            isOverlaidAnnotation = !isDesktop && (isLyricExpanded || isPhone),
+            showOverlay = (!isPhone && !!selectedScoreIndex) || !!selectedWikiIndex ||
+                (!!selectedAnnotationIndex && isOverlaidAnnotation),
+
+            audioPlayersProps = {
+                mp3s,
+                isPlaying,
+                selectedSongIndex,
+                updatedTimePlayed,
+                handleAudioTimeChange,
+                onPlayerEnd: advanceToNextSong,
+                onTimeUpdated: resetUpdatedTimePlayed
+            }
 
         return (
-            <div className="dom-manager">
+            <div
+                ref={(node) => (this.myDomManager = node)}
+                className={`
+                    dom-manager
+                    ${deviceClassName}
+                    ${selectedAdminIndex ? 'admin' : 'live'}
+                    ${isDesktop ? 'is-desktop' : 'is-mobile'}
+                    ${isPlaying ? ' is-playing' : ' is-paused'}
+                `}
+                tabIndex="0"
+                onClick={handleBodyClick}
+                onMouseMove={handleBodyMouseOrTouchMove}
+                onMouseUp={handleBodyMouseOrTouchEnd}
+                onMouseLeave={handleBodyMouseOrTouchEnd}
+                onKeyDown={handleKeyDownPress}
+            >
                 <AdminToggle
                     selectedAdminIndex={selectedAdminIndex}
                     isLyricExpanded={isLyricExpanded}
@@ -25,7 +122,32 @@ class DomManager extends Component {
                     windowWidth={windowWidth}
                     windowHeight={windowHeight}
                 />
-                <SwitchManager {...this.props} />
+                <AudioPlayersSection {...audioPlayersProps} />
+                <div
+                    className={`popup-overlay${showOverlay ? '' : ' hidden'}`}
+                >
+                </div>
+                <SwitchManager {...props}
+
+                    // For scores tips section.
+                    isDesktop={isDesktop}
+                    isPhone={isPhone}
+                    isLogue={isLogue}
+                    selectedSongTitle={selectedSongTitle}
+                    selectedVerse={selectedVerse}
+                    hiddenLyricColumnKey={hiddenLyricColumnKey}
+                    showSingleLyricColumn={showSingleLyricColumn}
+
+                    lyricsStartAtZero={lyricsStartAtZero}
+                    isFirstVerse={isFirstVerse}
+                    isLastVerse={isLastVerse}
+                    isLyricExpandable={isLyricExpandable}
+                    showOverlay={showOverlay}
+                    isOverviewShown={isOverviewShown}
+                    isOverlaidAnnotation={isOverlaidAnnotation}
+
+                    accessedSectionKey={accessedSectionKey}
+                />
             </div>
         )
     }

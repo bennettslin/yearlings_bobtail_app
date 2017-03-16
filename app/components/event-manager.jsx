@@ -6,9 +6,13 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
+        this.handleBodyClick = this.handleBodyClick.bind(this)
+        this.handleBodyMouseOrTouchMove = this.handleBodyMouseOrTouchMove.bind(this)
+        this.handleBodyMouseOrTouchEnd = this.handleBodyMouseOrTouchEnd.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
         this.handleVerseElementSelect = this.handleVerseElementSelect.bind(this)
         this.handleVerseElementSlide = this.handleVerseElementSlide.bind(this)
+        this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
         this.handleAnnotationPrevious = this.handleAnnotationPrevious.bind(this)
         this.handleAnnotationNext = this.handleAnnotationNext.bind(this)
         this.handleAnnotationWikiSelect = this.handleAnnotationWikiSelect.bind(this)
@@ -17,7 +21,7 @@ class EventManager extends Component {
         this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
         this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
         this.handleAudioOptionsToggle = this.handleAudioOptionsToggle.bind(this)
-        this.handleAudioSliderMouseOrTouch = this.handleAudioSliderMouseOrTouch.bind(this)
+        this.handleAudioSliderMouseOrTouchBegin = this.handleAudioSliderMouseOrTouchBegin.bind(this)
         this.handleAudioTimeChange = this.handleAudioTimeChange.bind(this)
         this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
@@ -43,6 +47,18 @@ class EventManager extends Component {
      * BODY *
      ********/
 
+    handleBodyClick(e) {
+        this.props.clickBody(e)
+    }
+
+    handleBodyMouseOrTouchMove(e) {
+        this.props.mouseOrTouchBodyMove(e)
+    }
+
+    handleBodyMouseOrTouchEnd(e) {
+        this.props.mouseOrTouchBodyEnd(e)
+    }
+
     handlePopupContainerClick(e) {
         this.props.clickPopupContainer(e)
     }
@@ -53,6 +69,10 @@ class EventManager extends Component {
 
     handleVerseElementSlide(verseElement) {
         this.props.updateSliderVerseElement(verseElement)
+    }
+
+    handleKeyDownPress(e) {
+        this.props.pressDownKey(e)
     }
 
     /**************
@@ -96,15 +116,14 @@ class EventManager extends Component {
         this.props.selectAudioOption(e)
     }
 
-    handleAudioSliderMouseOrTouch(e) {
-        this.props.mouseOrTouchSlider(e)
+    handleAudioSliderMouseOrTouchBegin(e) {
+        this.props.mouseOrTouchSliderBegin(e)
     }
 
     /****************
      * AUDIO PLAYER *
      ****************/
 
-    // FIXME: This isn't actually getting called because audio players are in the app component.
     handleAudioTimeChange(e, time) {
         this.props.selectTime(e, time)
     }
@@ -227,9 +246,13 @@ class EventManager extends Component {
     render() {
         return (
             <DomManager {...this.props}
+                handleBodyClick={this.handleBodyClick}
+                handleBodyMouseOrTouchMove={this.handleBodyMouseOrTouchMove}
+                handleBodyMouseOrTouchEnd={this.handleBodyMouseOrTouchEnd}
                 handlePopupContainerClick={this.handlePopupContainerClick}
                 handleVerseElementSelect={this.handleVerseElementSelect}
                 handleVerseElementSlide={this.handleVerseElementSlide}
+                handleKeyDownPress={this.handleKeyDownPress}
                 handleAnnotationWikiSelect={this.handleAnnotationWikiSelect}
                 handleAnnotationPortalSelect={this.handleAnnotationPortalSelect}
                 handleAnnotationPrevious={this.handleAnnotationPrevious}
@@ -238,7 +261,7 @@ class EventManager extends Component {
                 handleAudioPreviousSong={this.handleAudioPreviousSong}
                 handleAudioNextSong={this.handleAudioNextSong}
                 handleAudioOptionsToggle={this.handleAudioOptionsToggle}
-                handleAudioSliderMouseOrTouch={this.handleAudioSliderMouseOrTouch}
+                handleAudioSliderMouseOrTouchBegin={this.handleAudioSliderMouseOrTouchBegin}
                 handleAudioTimeChange={this.handleAudioTimeChange}
                 handleDotToggle={this.handleDotToggle}
                 handleDotsSectionToggle={this.handleDotsSectionToggle}

@@ -19,7 +19,6 @@ const AdminToggle = (props) => {
 const AdminToggleView = ({
 
     // From props.
-    selectedAdminIndex,
     isLyricExpanded,
     deviceIndex,
     windowWidth,
