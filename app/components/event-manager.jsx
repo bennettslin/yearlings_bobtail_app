@@ -22,7 +22,11 @@ class EventManager extends Component {
         this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
         this.handleAudioOptionsToggle = this.handleAudioOptionsToggle.bind(this)
         this.handleAudioSliderMouseOrTouchBegin = this.handleAudioSliderMouseOrTouchBegin.bind(this)
-        this.handleAudioTimeChange = this.handleAudioTimeChange.bind(this)
+
+        this.handlePlayerTimeChange = this.handlePlayerTimeChange.bind(this)
+        this.handlePlayerNextSong = this.handlePlayerNextSong.bind(this)
+        this.handlePlayerTimeReset = this.handlePlayerTimeReset.bind(this)
+
         this.handleDotToggle = this.handleDotToggle.bind(this)
         this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
         this.handleLyricSectionExpand = this.handleLyricSectionExpand.bind(this)
@@ -124,8 +128,16 @@ class EventManager extends Component {
      * AUDIO PLAYER *
      ****************/
 
-    handleAudioTimeChange(e, time) {
+    handlePlayerTimeChange(e, time) {
         this.props.selectTime(e, time)
+    }
+
+    handlePlayerNextSong(e) {
+        this.props.advanceToNextSong(e)
+    }
+
+    handlePlayerTimeReset(e) {
+        this.props.resetUpdatedTimePlayed(e)
     }
 
     /*******
@@ -244,8 +256,12 @@ class EventManager extends Component {
     }
 
     render() {
+
+        const { domProps,
+                domState } = this.props
+
         return (
-            <DomManager {...this.props}
+            <DomManager {...domProps} {...domState}
                 handleBodyClick={this.handleBodyClick}
                 handleBodyMouseOrTouchMove={this.handleBodyMouseOrTouchMove}
                 handleBodyMouseOrTouchEnd={this.handleBodyMouseOrTouchEnd}
@@ -262,7 +278,9 @@ class EventManager extends Component {
                 handleAudioNextSong={this.handleAudioNextSong}
                 handleAudioOptionsToggle={this.handleAudioOptionsToggle}
                 handleAudioSliderMouseOrTouchBegin={this.handleAudioSliderMouseOrTouchBegin}
-                handleAudioTimeChange={this.handleAudioTimeChange}
+                handlePlayerTimeChange={this.handlePlayerTimeChange}
+                handlePlayerNextSong={this.handlePlayerNextSong}
+                handlePlayerTimeReset={this.handlePlayerTimeReset}
                 handleDotToggle={this.handleDotToggle}
                 handleDotsSectionToggle={this.handleDotsSectionToggle}
                 handleLyricSectionExpand={this.handleLyricSectionExpand}

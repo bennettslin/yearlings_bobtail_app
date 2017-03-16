@@ -120,7 +120,7 @@ const LiveView = ({
     isFirstVerse,
     isLastVerse,
     selectedSongTitle,
-    handleAudioTimeChange,
+    handlePlayerTimeChange,
 
     handlePopupContainerClick,
     handleVerseElementSelect,
@@ -204,7 +204,7 @@ const LiveView = ({
             totalTime,
             stanzaTimes,
             verseTimes: times,
-            handleAudioTimeChange,
+            handlePlayerTimeChange,
 
             handleAudioSliderMouseOrTouchBegin,
 

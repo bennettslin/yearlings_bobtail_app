@@ -69,14 +69,14 @@ class AudioPlayer extends Component {
 
     _handleListen(currentTime) {
         if (this._getIsSelected()) {
-            this.props.handleAudioTimeChange(false, currentTime)
+            this.props.handlePlayerTimeChange(false, currentTime)
         }
     }
 
     _handleEnded() {
         // FIXME: Waiting for the player to send onEnded event takes too long. Have this be based on the song's own time.
         if (this._getIsSelected()) {
-            this.props.onPlayerEnd()
+            this.props.handlePlayerNextSong()
         }
     }
 
@@ -106,7 +106,7 @@ class AudioPlayer extends Component {
 
             // FIXME: Something should happen here to keep the player calling the onListen handler.
             this.myPlayer.currentTime = props.updatedTimePlayed
-            this.props.onTimeUpdated()
+            this.props.handlePlayerTimeReset()
         }
     }
 

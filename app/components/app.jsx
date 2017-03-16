@@ -1391,20 +1391,18 @@ class App extends Component {
 
     render() {
         return (
-            <EventManager {...this.props} {...this.state}
+            <EventManager
 
-                // FIXME: Move these to event manager.
-                advanceToNextSong={this.advanceToNextSong}
-                resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
+                // Dom manager props.
+                domProps={this.props}
+                domState={this.state}
 
+                // Event manager props.
                 clickBody={this.clickBody}
                 clickPopupContainer={this.clickPopupContainer}
-                interactivateVerse={this.interactivateVerse}
-
                 mouseOrTouchSliderBegin={this.mouseOrTouchSliderBegin}
                 mouseOrTouchBodyMove={this.mouseOrTouchBodyMove}
                 mouseOrTouchBodyEnd={this.mouseOrTouchBodyEnd}
-
                 pressDownKey={this.pressDownKey}
                 selectAnnotation={this.selectAnnotation}
                 selectAudioOption={this.selectAudioOption}
@@ -1422,11 +1420,15 @@ class App extends Component {
                 selectTime={this.selectTime}
                 selectTips={this.selectTips}
                 selectVerse={this.selectVerse}
+                interactivateVerse={this.interactivateVerse}
                 selectVerseBar={this.selectVerseBar}
                 selectWiki={this.selectWiki}
                 togglePlay={this.togglePlay}
                 updateSelectedVerseElement={this.updateSelectedVerseElement}
                 updateSliderVerseElement={this.updateSliderVerseElement}
+
+                advanceToNextSong={this.advanceToNextSong}
+                resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
             />
         )
     }

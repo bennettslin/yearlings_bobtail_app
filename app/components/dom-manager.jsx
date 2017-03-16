@@ -49,15 +49,13 @@ class DomManager extends Component {
               isPlaying,
               updatedTimePlayed,
 
-            // FIXME: Change these.
-              advanceToNextSong,
-              resetUpdatedTimePlayed,
-
               handleBodyClick,
               handleBodyMouseOrTouchMove,
               handleBodyMouseOrTouchEnd,
               handleKeyDownPress,
-              handleAudioTimeChange } = props,
+              handlePlayerTimeChange,
+              handlePlayerNextSong,
+              handlePlayerTimeReset } = props,
 
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             isDesktop = getIsDesktop(deviceIndex),
@@ -93,9 +91,9 @@ class DomManager extends Component {
                 isPlaying,
                 selectedSongIndex,
                 updatedTimePlayed,
-                handleAudioTimeChange,
-                onPlayerEnd: advanceToNextSong,
-                onTimeUpdated: resetUpdatedTimePlayed
+                handlePlayerTimeChange,
+                handlePlayerNextSong,
+                handlePlayerTimeReset
             }
 
         return (
