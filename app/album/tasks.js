@@ -1468,4 +1468,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Separate event manager.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]

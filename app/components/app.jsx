@@ -19,7 +19,6 @@ import { selectAdminIndex,
          accessSectionIndex } from 'redux/actions'
 import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './audio/audio-players-section'
-import SwitchManager from './switch-manager'
 import EventManager from './event-manager'
 import { NAV_SECTION,
          AUDIO_SECTION,
@@ -1149,7 +1148,7 @@ class App extends Component {
         this.interactivateVerse(e)
     }
 
-    clickPopupContainer(e, className) {
+    clickPopupContainer(e) {
         this._stopPropagation(e)
         this._handleAccessOn(0)
         this._focusApp()

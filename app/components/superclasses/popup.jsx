@@ -12,8 +12,7 @@ const PopupButton = ({
     buttonName
 
 }) => {
-    let tempUnicodeSymbol,
-        onClick
+    let tempUnicodeSymbol
 
     switch (buttonName) {
         case CLOSE:
@@ -111,10 +110,6 @@ class PopupTransitionGroup extends Component {
 }
 
 class Popup extends Component {
-
-    constructor(props) {
-        super(props)
-    }
 
     render() {
         const className = this.getClassName(),

@@ -25,7 +25,7 @@ const DevSectionView = ({
     // selectedNavIndex,
     // selectedDotsIndex,
     // showSingleLyricColumn,
-    selectedScoreIndex
+    // selectedScoreIndex
 
 }) => (
     <div className="section dev-section">

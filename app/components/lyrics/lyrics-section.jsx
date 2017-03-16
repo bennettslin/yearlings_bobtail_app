@@ -44,7 +44,7 @@ class LyricsSectionView extends Component {
         }
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextProps) {
         return !getPropsAreSame(this.props, nextProps)
             // || (!nextState.fadingOut && this.state.fadingOut)
     }
@@ -82,7 +82,7 @@ class LyricsSectionView extends Component {
         this.props.handleLyricSectionScroll(this.mySection, undefined, lyricColumnJustTransitioned)
     }
 
-    _handleFadeout(e) {
+    _handleFadeout() {
 
         // if (e === true || e.propertyName === 'opacity' && e.target === this.mySubsection) {
         //     this.setState({

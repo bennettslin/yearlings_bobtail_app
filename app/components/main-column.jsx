@@ -96,7 +96,7 @@ const MainColumnView = ({
             accessedSectionKey,
             nextSectionKey,
             accessedSongIndex,
-            
+
             handleNavExpand,
             handleNavSongSelect,
             handleNavBookSelect

@@ -21,14 +21,14 @@ const AnnotationPortalsBlockView = ({
     selectedDotKeys,
     portalLinks,
     handleAnnotationPortalSelect,
-    sectionAccessHighlighted,
-    accessedPopupAnchorIndex
+    // sectionAccessHighlighted,
+    // accessedPopupAnchorIndex
 
 }) => (
     <div className="portals-block">
         {portalLinks.map((portalObject, index) => {
-            const { portalIndex,
-                    songIndex,
+            const { songIndex,
+                    // portalIndex,
                     annotationIndex,
                     verseIndex,
                     songTitle,
