@@ -5,6 +5,8 @@ class EventManager extends Component {
 
     constructor(props) {
         super(props)
+
+        this.handleTitleClick = this.handleTitleClick.bind(this)
     }
 
     /**************
@@ -148,8 +150,8 @@ class EventManager extends Component {
      * TITLE *
      *********/
 
-    handleTitleClick() {
-
+    handleTitleClick(e) {
+        this.props.selectSong(e, 0)
     }
 
     /********
@@ -187,7 +189,7 @@ class EventManager extends Component {
                 handleOverviewToggleButtonClick={null}
                 handleScoreToggleButtonClick={null}
                 handleTipsToggleButtonClick={null}
-                handleTitleClick={null}
+                handleTitleClick={this.handleTitleClick}
                 handleWikiToggleButtonClick={null}
             />
         )

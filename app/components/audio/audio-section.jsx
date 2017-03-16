@@ -55,7 +55,7 @@ const AudioSectionView = ({
     onPlayClick,
     onAudioOptionClick,
     onAudioSongClick,
-    onTitleClick,
+    handleTitleClick,
 
     audioTimerChild,
     audioBannerChild,
@@ -87,7 +87,7 @@ const AudioSectionView = ({
         titleProps = {
             titleInAudio,
             title,
-            onTitleClick
+            handleTitleClick
         }
 
     return (

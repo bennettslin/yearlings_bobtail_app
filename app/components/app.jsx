@@ -1551,6 +1551,8 @@ class App extends Component {
                     onLyricSectionScroll={this.handleLyricSectionScroll}
                     onVerseBarClick={this.handleVerseBarClick}
                     onSliderMouseOrTouch={this._handleSliderMouseOrTouch}
+
+                    selectSong={this.selectSong}
                 />
             </div>
         )

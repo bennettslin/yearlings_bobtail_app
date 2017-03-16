@@ -150,6 +150,8 @@ const LiveView = ({
     // onVerseHover,
     onSliderMouseOrTouch,
 
+    handleTitleClick,
+
     // From controller.
     overviewText,
     annotation,
@@ -221,7 +223,7 @@ const LiveView = ({
             nextSectionKey,
             onPlayClick,
             onAudioSongClick: onSongClick,
-            onTitleClick: onSongClick,
+            handleTitleClick,
             onAudioOptionClick,
 
             audioTimerChild,
@@ -267,6 +269,8 @@ const LiveView = ({
             onDotsExpandClick,
             onNavExpandClick,
             onBookColumnClick,
+
+            handleTitleClick,
 
             audioBannerChild,
             audioSectionChild

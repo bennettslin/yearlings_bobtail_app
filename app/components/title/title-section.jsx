@@ -11,14 +11,14 @@ const TitleSection = ({
     accessedSectionKey,
     nextSectionKey,
     accessedSongIndex,
-    onTitleClick,
+    handleTitleClick,
 
 ...other }) => {
 
     const sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION,
         sectionNextHighlighted = accessedOn && nextSectionKey === NAV_SECTION,
         titleAccessHighlighted = sectionAccessHighlighted && accessedSongIndex === 0,
-        onClick = e => onTitleClick(e, 0)
+        onClick = e => handleTitleClick(e)
 
     return (
         <TitleSectionView {...other}

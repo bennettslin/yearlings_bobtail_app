@@ -50,6 +50,8 @@ const MainColumnView = ({
     onBookColumnClick,
     onDotsExpandClick,
 
+    handleTitleClick,
+
     annotationPopupChild,
     dotsSectionChild,
     overviewPopupChild,
@@ -69,7 +71,8 @@ const MainColumnView = ({
             accessedOn,
             accessedSectionKey,
             nextSectionKey,
-            onSongClick,
+
+            handleTitleClick,
 
             audioSectionChild,
             scoresTipsSectionChild
