@@ -123,11 +123,8 @@ const LiveView = ({
     selectedSongTitle,
     onSongClick,
     onTimeChange,
-    handleTipsToggle,
-    handleOverviewToggle,
     onPortalClick,
     onSongFromPortalClick,
-    onWikiUrlClick,
     onAnnotationClick,
     onLyricColumnClick,
     onPopupContainerClick,
@@ -142,6 +139,7 @@ const LiveView = ({
     onInteractivatedVerseClick,
     // onVerseHover,
 
+    handleAnnotationWikiSelect,
     handleAudioPlay,
     handleAudioPreviousSong,
     handleAudioNextSong,
@@ -150,8 +148,11 @@ const LiveView = ({
     handleDotToggle,
     handleDotsSectionToggle,
     handleLyricColumnExpand,
+    handleOverviewToggle,
     handleScoreToggle,
+    handleTipsToggle,
     handleTitleSelect,
+    handleWikiToggle,
 
     // From controller.
     overviewText,
@@ -224,12 +225,12 @@ const LiveView = ({
             accessedSectionKey,
             nextSectionKey,
             onAudioSongClick: onSongClick,
-            handleTitleSelect,
 
             handleAudioPlay,
             handleAudioPreviousSong,
             handleAudioNextSong,
             handleAudioOptionsToggle,
+            handleTitleSelect,
 
             audioTimerChild,
             audioBannerChild
@@ -339,9 +340,10 @@ const LiveView = ({
             nextSectionKey,
             showArrows: true,
             onPortalClick: onSongFromPortalClick,
-            onWikiUrlClick,
             onPopupButtonClick: onAnnotationClick,
-            onPopupContainerClick
+            onPopupContainerClick,
+
+            handleAnnotationWikiSelect
         },
         dotsSectionProps = {
             selectedDotKeys,
@@ -370,7 +372,7 @@ const LiveView = ({
             accessedSectionKey,
             nextSectionKey,
             showClose: true,
-            onPopupButtonClick: onWikiUrlClick,
+            onPopupButtonClick: handleWikiToggle,
             onPopupContainerClick
         },
         overviewButtonProps = {

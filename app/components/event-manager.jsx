@@ -6,6 +6,7 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
+        this.handleAnnotationWikiSelect = this.handleAnnotationWikiSelect.bind(this)
         this.handleAudioPlay = this.handleAudioPlay.bind(this)
         this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
         this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
@@ -18,14 +19,15 @@ class EventManager extends Component {
         this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
+        this.handleWikiToggle = this.handleWikiToggle.bind(this)
     }
 
     /**************
      * ANNOTATION *
      **************/
 
-    handleAnnotationWikiAnchorClick() {
-
+    handleAnnotationWikiSelect(e, selectedWikiIndex) {
+        this.props.selectWiki(e, selectedWikiIndex)
     }
 
     handleAnnotationPortalAnchorClick() {
@@ -169,14 +171,14 @@ class EventManager extends Component {
      * WIKI *
      ********/
 
-    handleWikiToggleButtonClick() {
-
+    handleWikiToggle(e) {
+        this.props.selectWiki(e)
     }
 
     render() {
         return (
             <SwitchManager {...this.props}
-                handleAnnotationWikiAnchorClick={null}
+                handleAnnotationWikiSelect={this.handleAnnotationWikiSelect}
                 handleAnnotationPortalAnchorClick={null}
                 handleAnnotationPreviousButtonClick={null}
                 handleAnnotationNextButtonClick={null}
@@ -201,7 +203,7 @@ class EventManager extends Component {
                 handleScoreToggle={this.handleScoreToggle}
                 handleTipsToggle={this.handleTipsToggle}
                 handleTitleSelect={this.handleTitleSelect}
-                handleWikiToggleButtonClick={null}
+                handleWikiToggle={this.handleWikiToggle}
             />
         )
     }

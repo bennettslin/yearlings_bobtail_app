@@ -1529,10 +1529,8 @@ class App extends Component {
 
                     onSongClick={this.selectSong}
                     onSongFromPortalClick={this.selectFromPortal}
-                    onWikiUrlClick={this.selectWiki}
                     onAnnotationClick={this.selectAnnotation}
                     onTimeChange={this.selectTime}
-                    onVerseClick={this.selectVerse}
                     onLyricAudioButtonClick={this.handleLyricAudioButtonClick}
                     onInteractivatedVerseClick={this.interactivateVerse}
                     onLyricColumnClick={this.selectLyricColumn}
@@ -1553,6 +1551,7 @@ class App extends Component {
                     selectScore={this.selectScore}
                     selectSong={this.selectSong}
                     selectTips={this.selectTips}
+                    selectWiki={this.selectWiki}
                     togglePlay={this.togglePlay}
                 />
             </div>

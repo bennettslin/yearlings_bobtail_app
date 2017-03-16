@@ -56,7 +56,7 @@ const AnnotationCardView = ({
     inPortalCard,
     songs,
     selectedDotKeys,
-    onWikiUrlClick,
+    handleAnnotationWikiSelect,
     onPortalClick,
     selectedWikiIndex,
     sectionAccessHighlighted,
@@ -84,7 +84,7 @@ const AnnotationCardView = ({
             selectedWikiIndex={selectedWikiIndex}
             sectionAccessHighlighted={sectionAccessHighlighted}
             accessedPopupAnchorIndex={accessedPopupAnchorIndex}
-            onAnchorClick={onWikiUrlClick}
+            onAnchorClick={handleAnnotationWikiSelect}
         />
         {!inPortal && portalLinks && showPortals &&
             <AnnotationPortalsBlock
