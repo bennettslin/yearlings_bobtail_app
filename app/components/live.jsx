@@ -131,7 +131,6 @@ const LiveView = ({
     onAnnotationClick,
     onLyricColumnClick,
     onPopupContainerClick,
-    onDotsExpandClick,
     onNavExpandClick,
     onBookColumnClick,
     onSelectVerseElement,
@@ -142,13 +141,14 @@ const LiveView = ({
     onLyricAudioButtonClick,
     onInteractivatedVerseClick,
     // onVerseHover,
-    handleAudioSliderMouseOrTouch,
 
     handleAudioPlay,
     handleAudioPreviousSong,
     handleAudioNextSong,
     handleAudioOptionsToggle,
+    handleAudioSliderMouseOrTouch,
     handleDotToggle,
+    handleDotsSectionToggle,
     handleLyricColumnExpand,
     handleScoreToggle,
     handleTitleSelect,
@@ -203,8 +203,9 @@ const LiveView = ({
             totalTime,
             stanzaTimes,
             verseTimes: times,
-            handleAudioSliderMouseOrTouch,
             onTimeChange,
+
+            handleAudioSliderMouseOrTouch,
 
             audioTimerChild
         },
@@ -224,11 +225,11 @@ const LiveView = ({
             nextSectionKey,
             onAudioSongClick: onSongClick,
             handleTitleSelect,
-            handleAudioOptionsToggle,
 
             handleAudioPlay,
             handleAudioPreviousSong,
             handleAudioNextSong,
+            handleAudioOptionsToggle,
 
             audioTimerChild,
             audioBannerChild
@@ -269,10 +270,10 @@ const LiveView = ({
 
             onSongClick,
             onPortalClick,
-            onDotsExpandClick,
             onNavExpandClick,
             onBookColumnClick,
 
+            handleDotsSectionToggle,
             handleTipsToggle,
             handleTitleSelect,
 

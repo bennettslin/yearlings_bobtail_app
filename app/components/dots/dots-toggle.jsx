@@ -19,7 +19,7 @@ const DotsToggleView = ({
 
     // From props.
     selectedDotsIndex,
-    onDotsExpandClick
+    handleDotsSectionToggle
 
     // From controller.
 
@@ -27,7 +27,7 @@ const DotsToggleView = ({
     <div className="dots-toggle-button-block">
         <a
             className="dots-toggle-button enabled"
-            onClick={e => onDotsExpandClick(e)}
+            onClick={handleDotsSectionToggle}
         >
             <div className="large button-icon dots-toggle-icon">
                 {selectedDotsIndex}

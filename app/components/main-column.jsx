@@ -48,8 +48,8 @@ const MainColumnView = ({
     onSongClick,
     onNavExpandClick,
     onBookColumnClick,
-    onDotsExpandClick,
 
+    handleDotsSectionToggle,
     handleTitleSelect,
 
     annotationPopupChild,
@@ -79,7 +79,9 @@ const MainColumnView = ({
         },
         dotsOverviewToggleSectionProps = {
             selectedDotsIndex,
-            onDotsExpandClick,
+
+            handleDotsSectionToggle,
+
             overviewButtonChild,
             dotsSectionChild
         },
