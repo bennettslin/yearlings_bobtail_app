@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SwitchManager from './switch-manager'
+import DomManager from './dom-manager'
 
 class EventManager extends Component {
 
@@ -226,7 +226,7 @@ class EventManager extends Component {
 
     render() {
         return (
-            <SwitchManager {...this.props}
+            <DomManager {...this.props}
                 handlePopupContainerClick={this.handlePopupContainerClick}
                 handleVerseElementSelect={this.handleVerseElementSelect}
                 handleVerseElementSlide={this.handleVerseElementSlide}
