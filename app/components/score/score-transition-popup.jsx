@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ScoreSection from './score-section'
 import TransitionPopup from '../superclasses/transition-popup'
 
@@ -30,7 +30,5 @@ const ScoreTransitionPopup = ({
         />
     )
 }
-
-
 
 export default ScoreTransitionPopup

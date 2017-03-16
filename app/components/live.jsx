@@ -10,7 +10,6 @@ import OverviewButton from './overview/overview-toggle'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
 import DotsSection from './dots/dots-section'
-import ScorePopup from './score/score-popup'
 import ScoreTransitionPopup from './score/score-transition-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
@@ -137,7 +136,6 @@ const LiveView = ({
     onLyricColumnClick,
     onPopupContainerClick,
     onDotsExpandClick,
-    handleLyricColumnExpand,
     onNavExpandClick,
     onBookColumnClick,
     onSelectVerseElement,
@@ -150,6 +148,9 @@ const LiveView = ({
     // onVerseHover,
     onSliderMouseOrTouch,
 
+    handleAudioPreviousSong,
+    handleAudioNextSong,
+    handleLyricColumnExpand,
     handleTitleSelect,
 
     // From controller.
@@ -225,6 +226,9 @@ const LiveView = ({
             onAudioSongClick: onSongClick,
             handleTitleSelect,
             onAudioOptionClick,
+
+            handleAudioPreviousSong,
+            handleAudioNextSong,
 
             audioTimerChild,
             audioBannerChild
@@ -442,7 +446,6 @@ const LiveView = ({
                 </div>
                 <div className="overlay-popup-block">
                     <ScoreTransitionPopup {...scorePopupProps} />
-                    {/* <ScorePopup {...scorePopupProps} /> */}
                     <WikiPopup {...wikiPopupProps} />
                     {isOverlaidAnnotation &&
                         <AnnotationPopup {...annotationPopupProps} />

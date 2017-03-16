@@ -1526,6 +1526,7 @@ class App extends Component {
                     isOverviewShown={isOverviewShown}
                     isOverlaidAnnotation={isOverlaidAnnotation}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
+
                     onSongClick={this.selectSong}
                     onSongFromPortalClick={this.selectFromPortal}
                     onWikiUrlClick={this.selectWiki}

@@ -5,22 +5,9 @@ import { AUDIO_OPTIONS } from 'helpers/constants'
  * CONTAINER *
  *************/
 
-const AudioButtons = ({
-
-    onAudioSongClick,
-
-...other }) => {
-
-    const onPreviousSongClick = e => onAudioSongClick(e, undefined, -1),
-        onNextSongClick = e => onAudioSongClick(e, undefined, 1)
-
-    return (
-        <AudioButtonsView {...other}
-            onPreviousSongClick={onPreviousSongClick}
-            onNextSongClick={onNextSongClick}
-        />
-    )
-}
+const AudioButtons = (props) =>  (
+    <AudioButtonsView {...props} />
+)
 
 /****************
  * PRESENTATION *
@@ -39,9 +26,8 @@ const AudioButtonsView = ({
     onPlayClick,
     onAudioOptionClick,
 
-    // From controller.
-    onPreviousSongClick,
-    onNextSongClick
+    handleAudioPreviousSong,
+    handleAudioNextSong
 
 }) => (
     <div className="audio-block audio-buttons-block">
@@ -51,7 +37,7 @@ const AudioButtonsView = ({
             {/* Previous button. */}
             <a
                 className={`audio-button${isPrologue ? '' : ' enabled'}`}
-                onClick={onPreviousSongClick}
+                onClick={handleAudioPreviousSong}
             >
                 <div className="button-icon audio-nav">
                     {isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
@@ -76,7 +62,7 @@ const AudioButtonsView = ({
             {/* Next button. */}
             <a
                 className={`audio-button${isEpilogue ? '' : ' enabled'}`}
-                onClick={onNextSongClick}
+                onClick={handleAudioNextSong}
             >
                 <div className="button-icon audio-nav">
                     {isEpilogue || isLastSong ? '\u2302' : '\u21E5'}

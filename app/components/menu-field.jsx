@@ -27,7 +27,6 @@ const MenuFieldView = ({
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
-    onSongClick,
 
     handleTitleSelect,
 

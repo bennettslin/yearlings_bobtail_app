@@ -6,6 +6,8 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
+        this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
+        this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
         this.handleLyricColumnExpand = this.handleLyricColumnExpand.bind(this)
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
     }
@@ -42,12 +44,12 @@ class EventManager extends Component {
 
     }
 
-    handleAudioPreviousSongButtonClick() {
-
+    handleAudioPreviousSong(e) {
+        this.props.selectSong(e, undefined, -1)
     }
 
-    handleAudioNextSongButtonClick() {
-
+    handleAudioNextSong(e) {
+        this.props.selectSong(e, undefined, 1)
     }
 
     handleAudioSliderMouseOrTouch() {
@@ -172,8 +174,8 @@ class EventManager extends Component {
                 handleAnnotationNextButtonClick={null}
                 handleAudioPlayButtonClick={null}
                 handleAudioOptionsButtonClick={null}
-                handleAudioPreviousSongButtonClick={null}
-                handleAudioNextSongButtonClick={null}
+                handleAudioPreviousSong={this.handleAudioPreviousSong}
+                handleAudioNextSong={this.handleAudioNextSong}
                 handleAudioSliderMouseOrTouch={null}
                 handleDotButtonClick={null}
                 handleDotsToggleButtonClick={null}
