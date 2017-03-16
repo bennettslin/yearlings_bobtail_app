@@ -1144,6 +1144,10 @@ class App extends Component {
         this.interactivateVerse()
     }
 
+    /*******************
+     * ACCESS HANDLERS *
+     *******************/
+
     pressDownKey(e) {
         let { key: keyName,
               keyCode } = e
@@ -1302,10 +1306,6 @@ class App extends Component {
             }
         }
     }
-
-    /*******************
-     * ACCESS HANDLERS *
-     *******************/
 
     _selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex) {
         const accessedSectionKey = SECTION_KEYS[accessedSectionIndex]

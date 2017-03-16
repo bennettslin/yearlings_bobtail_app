@@ -1478,4 +1478,9 @@ module.exports = [
         workedHours: 7,
         neededHours: 7
     },
+    {
+        taskName: `Separate dom manager.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
