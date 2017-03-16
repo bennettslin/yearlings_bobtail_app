@@ -42,11 +42,12 @@ const AlbumView = ({
     selectedNavIndex,
     selectedDotsIndex,
     showSingleLyricColumn,
-    onSongClick,
     accessedOn,
     accessedSectionKey,
     nextSectionKey,
     accessedSongIndex,
+
+    handleNavSongSelect,
 
     // From controller.
     allTasks,
@@ -76,7 +77,7 @@ const AlbumView = ({
                     accessedSectionKey={accessedSectionKey}
                     nextSectionKey={nextSectionKey}
                     accessedSongIndex={accessedSongIndex}
-                    onSongClick={onSongClick}
+                    handleNavSongSelect={handleNavSongSelect}
                 />
             </div>
             <Shared {...other}

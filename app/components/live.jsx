@@ -121,7 +121,6 @@ const LiveView = ({
     isFirstVerse,
     isLastVerse,
     selectedSongTitle,
-    onSongClick,
     onTimeChange,
     onPortalClick,
     onSongFromPortalClick,
@@ -135,7 +134,6 @@ const LiveView = ({
     onVerseBarClick,
     onLyricAudioButtonClick,
     onInteractivatedVerseClick,
-    // onVerseHover,
 
     handleAnnotationWikiSelect,
     handleAudioPlay,
