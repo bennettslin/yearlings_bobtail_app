@@ -23,17 +23,10 @@ const AdminToggleView = ({
     isLyricExpanded,
     deviceIndex,
     windowWidth,
-    windowHeight,
-    onClick
+    windowHeight
 
 }) => (
     <div className="admin-toggle">
-        <a
-            className="enabled"
-            onClick={onClick}
-        >
-            {selectedAdminIndex ? 'Admin' : 'Live'}
-        </a>
         <div>
             {isLyricExpanded ? 'expanded' : 'collapsed'}
         </div>

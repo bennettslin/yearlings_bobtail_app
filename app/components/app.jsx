@@ -1482,7 +1482,6 @@ class App extends Component {
                     deviceIndex={deviceIndex}
                     windowWidth={windowWidth}
                     windowHeight={windowHeight}
-                    onClick={this.toggleAdmin}
                 />
                 <EventManager {...this.props} {...this.state}
                     isPhone={isPhone}
