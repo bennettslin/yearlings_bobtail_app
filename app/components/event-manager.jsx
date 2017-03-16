@@ -6,7 +6,8 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
-        this.handleTitleClick = this.handleTitleClick.bind(this)
+        this.handleLyricColumnExpand = this.handleLyricColumnExpand.bind(this)
+        this.handleTitleSelect = this.handleTitleSelect.bind(this)
     }
 
     /**************
@@ -74,8 +75,8 @@ class EventManager extends Component {
      * LYRIC *
      *********/
 
-    handleLyricColumnExpandButtonClick() {
-
+    handleLyricColumnExpand(e) {
+        this.props.selectLyricExpand(e)
     }
 
     handleLyricVerseBarClick() {
@@ -150,7 +151,7 @@ class EventManager extends Component {
      * TITLE *
      *********/
 
-    handleTitleClick(e) {
+    handleTitleSelect(e) {
         this.props.selectSong(e, 0)
     }
 
@@ -176,7 +177,7 @@ class EventManager extends Component {
                 handleAudioSliderMouseOrTouch={null}
                 handleDotButtonClick={null}
                 handleDotsToggleButtonClick={null}
-                handleLyricColumnExpandButtonClick={null}
+                handleLyricColumnExpand={this.handleLyricColumnExpand}
                 handleLyricVerseBarClick={null}
                 handleLyricAudioButtonClick={null}
                 handleLyricNavigationButtonClick={null}
@@ -189,39 +190,11 @@ class EventManager extends Component {
                 handleOverviewToggleButtonClick={null}
                 handleScoreToggleButtonClick={null}
                 handleTipsToggleButtonClick={null}
-                handleTitleClick={this.handleTitleClick}
+                handleTitleSelect={this.handleTitleSelect}
                 handleWikiToggleButtonClick={null}
             />
         )
     }
 }
-
-/**
-    onSongClick={this.selectSong}
-    onSongFromPortalClick={this.selectFromPortal}
-    onWikiUrlClick={this.selectWiki}
-    onScoreClick={this.selectScore}
-    onAnnotationClick={this.selectAnnotation}
-    onOverviewClick={this.selectOverview}
-    onTimeChange={this.selectTime}
-    onAudioOptionClick={this.selectAudioOption}
-    onPlayClick={this.togglePlay}
-    onVerseClick={this.selectVerse}
-    onLyricAudioButtonClick={this.handleLyricAudioButtonClick}
-    onInteractivatedVerseClick={this.interactivateVerse}
-    onDotClick={this.selectDot}
-    onLyricColumnClick={this.selectLyricColumn}
-    onPopupContainerClick={this.handlePopupContainerClick}
-    onLyricExpandClick={this.selectLyricExpand}
-    onNavExpandClick={this.selectNavExpand}
-    onBookColumnClick={this.selectBookColumn}
-    onDotsExpandClick={this.selectDotsExpand}
-    onTipsClick={this.selectTips}
-    onSelectVerseElement={this.updateSelectedVerseElement}
-    onSliderSelectVerseElement={this.updateSliderSelectedVerseElement}
-    onLyricSectionScroll={this.handleLyricSectionScroll}
-    onVerseBarClick={this.handleVerseBarClick}
-    onSliderMouseOrTouch={this._handleSliderMouseOrTouch}
- */
 
 export default EventManager

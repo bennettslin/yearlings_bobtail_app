@@ -137,7 +137,7 @@ const LiveView = ({
     onLyricColumnClick,
     onPopupContainerClick,
     onDotsExpandClick,
-    onLyricExpandClick,
+    handleLyricColumnExpand,
     onNavExpandClick,
     onBookColumnClick,
     onSelectVerseElement,
@@ -150,7 +150,7 @@ const LiveView = ({
     // onVerseHover,
     onSliderMouseOrTouch,
 
-    handleTitleClick,
+    handleTitleSelect,
 
     // From controller.
     overviewText,
@@ -223,7 +223,7 @@ const LiveView = ({
             nextSectionKey,
             onPlayClick,
             onAudioSongClick: onSongClick,
-            handleTitleClick,
+            handleTitleSelect,
             onAudioOptionClick,
 
             audioTimerChild,
@@ -270,7 +270,7 @@ const LiveView = ({
             onNavExpandClick,
             onBookColumnClick,
 
-            handleTitleClick,
+            handleTitleSelect,
 
             audioBannerChild,
             audioSectionChild
@@ -376,7 +376,7 @@ const LiveView = ({
             <div className="lyric-button-block expand-button-block">
                 <a
                     className="lyric-button enabled"
-                    onClick={e => onLyricExpandClick(e)}
+                    onClick={handleLyricColumnExpand}
                 >
                     <div className="large button-icon lyric-icon">
                         {isLyricExpanded ? '-' : '+'}

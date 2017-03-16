@@ -1541,7 +1541,6 @@ class App extends Component {
                     onDotClick={this.selectDot}
                     onLyricColumnClick={this.selectLyricColumn}
                     onPopupContainerClick={this.handlePopupContainerClick}
-                    onLyricExpandClick={this.selectLyricExpand}
                     onNavExpandClick={this.selectNavExpand}
                     onBookColumnClick={this.selectBookColumn}
                     onDotsExpandClick={this.selectDotsExpand}
@@ -1553,6 +1552,7 @@ class App extends Component {
                     onSliderMouseOrTouch={this._handleSliderMouseOrTouch}
 
                     selectSong={this.selectSong}
+                    selectLyricExpand={this.selectLyricExpand}
                 />
             </div>
         )

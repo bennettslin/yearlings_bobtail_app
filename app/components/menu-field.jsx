@@ -29,7 +29,7 @@ const MenuFieldView = ({
     nextSectionKey,
     onSongClick,
 
-    handleTitleClick,
+    handleTitleSelect,
 
     audioSectionChild,
     scoresTipsSectionChild
@@ -42,7 +42,7 @@ const MenuFieldView = ({
             accessedSectionKey,
             nextSectionKey,
             accessedSongIndex,
-            handleTitleClick
+            handleTitleSelect
         }
 
     return (
