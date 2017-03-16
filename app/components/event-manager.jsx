@@ -25,8 +25,9 @@ class EventManager extends Component {
         this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
         this.handleLyricVerseBarSelect = this.handleLyricVerseBarSelect.bind(this)
         this.handleLyricAnnotationSelect = this.handleLyricAnnotationSelect.bind(this)
+        this.handleLyricPlay = this.handleLyricPlay.bind(this)
+        this.handleLyricVerseSelect = this.handleLyricVerseSelect.bind(this)
         this.handleLyricVerseInteractivate = this.handleLyricVerseInteractivate.bind(this)
-        this.handleLyricAudioSelect = this.handleLyricAudioSelect.bind(this)
         this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
         this.handleNavExpand = this.handleNavExpand.bind(this)
         this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
@@ -140,16 +141,22 @@ class EventManager extends Component {
      * LYRICS *
      **********/
 
-    handleLyricAudioSelect(e, verseIndex) {
-        this.props.selectLyricAudio(e, verseIndex)
+    handleLyricPlay(e) {
+        this.props.togglePlay(e)
+        this.props.interactivateVerse(e)
     }
 
-    handleLyricAnnotationSelect(e, annotationIndex) {
-        this.props.selectAnnotation(e, annotationIndex)
+    handleLyricVerseSelect(e, verseIndex) {
+        this.props.selectVerse(e, verseIndex)
+        this.props.interactivateVerse(e)
     }
 
     handleLyricVerseInteractivate(e, verseIndex) {
         this.props.interactivateVerse(e, verseIndex)
+    }
+
+    handleLyricAnnotationSelect(e, annotationIndex) {
+        this.props.selectAnnotation(e, annotationIndex)
     }
 
     handleLyricColumnSelect(e) {
@@ -236,9 +243,10 @@ class EventManager extends Component {
                 handleDotsSectionToggle={this.handleDotsSectionToggle}
                 handleLyricSectionExpand={this.handleLyricSectionExpand}
                 handleLyricVerseBarSelect={this.handleLyricVerseBarSelect}
-                handleLyricAudioSelect={this.handleLyricAudioSelect}
-                handleLyricAnnotationSelect={this.handleLyricAnnotationSelect}
+                handleLyricPlay={this.handleLyricPlay}
+                handleLyricVerseSelect={this.handleLyricVerseSelect}
                 handleLyricVerseInteractivate={this.handleLyricVerseInteractivate}
+                handleLyricAnnotationSelect={this.handleLyricAnnotationSelect}
                 handleLyricColumnSelect={this.handleLyricColumnSelect}
                 handleLyricSectionScroll={this.handleLyricSectionScroll}
                 handleNavExpand={this.handleNavExpand}

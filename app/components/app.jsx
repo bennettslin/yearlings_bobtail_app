@@ -220,7 +220,6 @@ class App extends Component {
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
-        this.selectLyricAudio = this.selectLyricAudio.bind(this)
         this.interactivateVerse = this.interactivateVerse.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
@@ -1134,20 +1133,6 @@ class App extends Component {
         this.scrollElementIntoView('verse', this.props.selectedVerseIndex)
     }
 
-    selectLyricAudio(e, verseIndex) {
-
-        // It's a play button.
-        if (isNaN(verseIndex)) {
-            this.togglePlay(e)
-
-        // It's a navigation button.
-        } else {
-            this.selectVerse(e, verseIndex)
-        }
-
-        this.interactivateVerse(e)
-    }
-
     clickPopupContainer(e) {
         this._stopPropagation(e)
         this._handleAccessOn(0)
@@ -1529,13 +1514,13 @@ class App extends Component {
                     selectLyricColumn={this.selectLyricColumn}
                     selectLyricExpand={this.selectLyricExpand}
                     scrollLyricSection={this.scrollLyricSection}
-                    selectLyricAudio={this.selectLyricAudio}
                     selectNavExpand={this.selectNavExpand}
                     selectOverview={this.selectOverview}
                     selectScore={this.selectScore}
                     selectSong={this.selectSong}
                     selectTime={this.selectTime}
                     selectTips={this.selectTips}
+                    selectVerse={this.selectVerse}
                     selectVerseBar={this.selectVerseBar}
                     selectWiki={this.selectWiki}
                     togglePlay={this.togglePlay}

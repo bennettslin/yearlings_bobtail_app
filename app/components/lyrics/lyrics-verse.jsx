@@ -17,7 +17,8 @@ const LyricsVerse = ({
     interactivatedVerseIndex,
     lyricsStartAtZero,
     handleLyricAnnotationSelect,
-    handleLyricAudioSelect,
+    handleLyricPlay,
+    handleLyricVerseSelect,
     handleLyricVerseInteractivate,
     sliderMousedOrTouched,
     sliderVerseIndex,
@@ -90,17 +91,17 @@ const LyricsVerse = ({
         interactivatedClassName = isInteractivated ? 'interactivated' : 'not-interactivated'
     }
 
-    let onLyricAudioClick = null
+    let handleLyricAudioButtonClick = null
 
     if (isInteractable) {
 
         // If verse is selected, audio button will toggle play.
         if (isSelected) {
-            onLyricAudioClick = handleLyricAudioSelect
+            handleLyricAudioButtonClick = handleLyricPlay
 
         // Otherwise, audio button will select verse.
         } else {
-            onLyricAudioClick = e => handleLyricAudioSelect(e, verseIndex)
+            handleLyricAudioButtonClick = e => handleLyricVerseSelect(e, verseIndex)
         }
     }
 
@@ -119,7 +120,7 @@ const LyricsVerse = ({
             sliderPlacementClassName={sliderPlacementClassName}
             interactivatedClassName={interactivatedClassName}
             isDoubleSpeaker={isDoubleSpeaker}
-            onLyricAudioClick={onLyricAudioClick}
+            handleLyricAudioButtonClick={handleLyricAudioButtonClick}
             onAnchorClick={onAnchorClick}
             onInteractivatableClick={onInteractivatableClick}
         />
@@ -206,7 +207,7 @@ class LyricsVerseView extends Component {
                 isAfterSelected,
                 isDoubleSpeaker,
                 isTitle,
-                onLyricAudioClick,
+                handleLyricAudioButtonClick,
                 onInteractivatableClick,
 
             ...other } = this.props
@@ -235,7 +236,7 @@ class LyricsVerseView extends Component {
                         isSelected={isSelected}
                         isPlaying={isPlaying}
                         isAfterSelected={isAfterSelected}
-                        onAudioButtonClick={onLyricAudioClick}
+                        onAudioButtonClick={handleLyricAudioButtonClick}
                     />
                 }
                 {isDoubleSpeaker ? (
