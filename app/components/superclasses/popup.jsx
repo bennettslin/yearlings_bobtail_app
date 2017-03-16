@@ -8,7 +8,7 @@ const CLOSE = 'close',
 
 const PopupButton = ({
 
-    onPopupButtonClick,
+    handlePopupButtonClick,
     buttonName
 
 }) => {
@@ -30,7 +30,7 @@ const PopupButton = ({
         <div className={`popup-button ${buttonName}-button`}>
             <a
                 className={`popup-button-interactable enabled`}
-                onClick={onPopupButtonClick}
+                onClick={handlePopupButtonClick}
             >
             </a>
             <div className="popup-button-icon">
@@ -71,19 +71,19 @@ class PopupTransitionGroup extends Component {
                     {element}
                     {showClose &&
                         <PopupButton
-                            onPopupButtonClick={onPopupButtonCloseClick}
+                            handlePopupButtonClick={onPopupButtonCloseClick}
                             buttonName={CLOSE}
                         />
                     }
                     {showArrows &&
                         <PopupButton
-                            onPopupButtonClick={onPopupButtonPreviousClick}
+                            handlePopupButtonClick={onPopupButtonPreviousClick}
                             buttonName={PREVIOUS}
                         />
                     }
                     {showArrows &&
                         <PopupButton
-                            onPopupButtonClick={onPopupButtonNextClick}
+                            handlePopupButtonClick={onPopupButtonNextClick}
                             buttonName={NEXT}
                         />
                     }

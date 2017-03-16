@@ -84,7 +84,7 @@ const AnnotationCardView = ({
             selectedWikiIndex={selectedWikiIndex}
             sectionAccessHighlighted={sectionAccessHighlighted}
             accessedPopupAnchorIndex={accessedPopupAnchorIndex}
-            onAnchorClick={handleAnnotationWikiSelect}
+            handleAnchorClick={handleAnnotationWikiSelect}
         />
         {!inPortal && portalLinks && showPortals &&
             <AnnotationPortalsBlock

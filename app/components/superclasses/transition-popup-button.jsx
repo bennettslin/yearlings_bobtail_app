@@ -6,12 +6,12 @@ import { CLOSE_POPUP_BUTTON,
 
 const TransitionPopupButton = ({
 
-    onPopupButtonClick,
+    handlePopupButtonClick,
     buttonName
 
 }) => {
     let tempUnicodeSymbol,
-        onClick,
+        handleClick,
         direction
 
     switch (buttonName) {
@@ -28,17 +28,17 @@ const TransitionPopupButton = ({
             break
     }
 
-    if (!isNaN(direction)) {
-        onClick = e => onPopupButtonClick(e, { direction })
+    if (direction) {
+        handleClick = e => handlePopupButtonClick(e, { direction })
     } else {
-        onClick = e => onPopupButtonClick(e, 0)
+        handleClick = e => handlePopupButtonClick(e)
     }
 
     return (
         <div className={`popup-button ${buttonName}-button`}>
             <a
                 className={`popup-button-interactable enabled`}
-                onClick={onClick}
+                onClick={handleClick}
             >
             </a>
             <div className="popup-button-icon">

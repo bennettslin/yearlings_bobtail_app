@@ -19,7 +19,7 @@ const AnchorBlock = ({
     accessedPopupAnchorIndex,
     accessedLyricElement,
     sectionAccessHighlighted,
-    onAnchorClick,
+    handleAnchorClick,
 
 ...other }) => {
 
@@ -41,8 +41,8 @@ const AnchorBlock = ({
          * click handler is the annotation index. Otherwise, it's a
          * reference, and the argument is a url string.
          */
-        clickHandlerArgument = annotationIndex || wikiIndex,
-        onClick = showAsAnchor && !isSelected && !other.inPortal ? e => onAnchorClick(e, clickHandlerArgument) : null
+        handleClick = showAsAnchor && !isSelected && !other.inPortal &&
+            (e => handleAnchorClick(e, annotationIndex || wikiIndex))
 
     return (
         <AnchorBlockView {...other}
@@ -55,7 +55,7 @@ const AnchorBlock = ({
             dotKeys={intersectedDotKeys}
             allAnimatableDotKeys={dotKeys}
             anchorText={anchor}
-            onClick={onClick}
+            handleClick={handleClick}
         />
     )
 }
@@ -84,7 +84,7 @@ const AnchorBlockView = ({
     dotKeys,
     allAnimatableDotKeys,
     anchorText,
-    onClick
+    handleClick
 
 }) => (
 
@@ -95,7 +95,7 @@ const AnchorBlockView = ({
         }
         <a
             className={`anchor-block ${showAsAnchor ? 'show-as-anchor' : 'show-as-text'}${accessHighlighted ? ' access-highlighted' : ''}${annotationIndex ? ' annotation-' + annotationIndex : ''}${wikiIndex ? ' wiki-' + wikiIndex : ''}${!showAsAnchor || isSelected || inPortal ? '' : ' enabled'}${isPortalAnchor ? ' portal-anchor' : ''}${hasTodo ? ' todo' : ''}`}
-            onClick={onClick}
+            onClick={handleClick}
         >
             {(isLyric || isPortalAnchor) &&
                 <span className="underline-bar">

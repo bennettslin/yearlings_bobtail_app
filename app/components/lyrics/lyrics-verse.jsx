@@ -49,10 +49,10 @@ const LyricsVerse = ({
         isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
         isDoubleSpeaker = !lyric,
-        onAnchorClick = handleLyricAnnotationSelect,
+        handleAnchorClick = handleLyricAnnotationSelect,
 
         // Allows clicks on selected or interactivated verse to deinteractivate it.
-        onInteractivatableClick = !inVerseBar && !isInteractivated ? e => handleLyricVerseInteractivate(e, verseIndex) : null,
+        handleInteractivatableClick = !inVerseBar && !isInteractivated ? e => handleLyricVerseInteractivate(e, verseIndex) : null,
 
         /**
          * Audio button is enabled when it's the interactivated verse.
@@ -121,8 +121,8 @@ const LyricsVerse = ({
             interactivatedClassName={interactivatedClassName}
             isDoubleSpeaker={isDoubleSpeaker}
             handleLyricAudioButtonClick={handleLyricAudioButtonClick}
-            onAnchorClick={onAnchorClick}
-            onInteractivatableClick={onInteractivatableClick}
+            handleAnchorClick={handleAnchorClick}
+            handleInteractivatableClick={handleInteractivatableClick}
         />
     )
 }
@@ -208,7 +208,7 @@ class LyricsVerseView extends Component {
                 isDoubleSpeaker,
                 isTitle,
                 handleLyricAudioButtonClick,
-                onInteractivatableClick,
+                handleInteractivatableClick,
 
             ...other } = this.props
 
@@ -226,7 +226,7 @@ class LyricsVerseView extends Component {
                     ${isHoverable ? 'hoverable' : ''}
                     ${sliderPlacementClassName}
                 `}
-                onClick={onInteractivatableClick}
+                onClick={handleInteractivatableClick}
                 // onMouseOver={this._handleMouseOver}
                 // onMouseLeave={this._handleMouseLeave}
             >
@@ -236,7 +236,7 @@ class LyricsVerseView extends Component {
                         isSelected={isSelected}
                         isPlaying={isPlaying}
                         isAfterSelected={isAfterSelected}
-                        onAudioButtonClick={handleLyricAudioButtonClick}
+                        handleAudioButtonClick={handleLyricAudioButtonClick}
                     />
                 }
                 {isDoubleSpeaker ? (

@@ -12,11 +12,11 @@ const LyricsAudioButton = ({
     isPlaying,
     isSelected,
     isAfterSelected,
-    onAudioButtonClick
+    handleAudioButtonClick
 
 }) => {
 
-    const onClick = isAudioButtonEnabled ? onAudioButtonClick : null
+    const onClick = isAudioButtonEnabled ? handleAudioButtonClick : null
 
     let buttonIcon,
         audioStatusClassName = isSelected ? 'audio-colour' : 'audio-nav'

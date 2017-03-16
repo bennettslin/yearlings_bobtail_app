@@ -234,7 +234,7 @@ class App extends Component {
         this.selectVerseBar = this.selectVerseBar.bind(this)
         this._handleAccessOn = this._handleAccessOn.bind(this)
         this._handleSectionAccess = this._handleSectionAccess.bind(this)
-        this._onBodyClick = this._onBodyClick.bind(this)
+        this.handleBodyClick = this.handleBodyClick.bind(this)
         this.handleKeyDown = this.handleKeyDown.bind(this)
         this.clickPopupContainer = this.clickPopupContainer.bind(this)
         this.windowResize = this.windowResize.bind(this)
@@ -1139,7 +1139,7 @@ class App extends Component {
         this._focusApp()
     }
 
-    _onBodyClick() {
+    handleBodyClick() {
         this._handleAccessOn(0)
 
         // Hide popups, but don't collapse lyrics column.
@@ -1461,7 +1461,7 @@ class App extends Component {
                     ${isDesktop ? 'is-desktop' : 'is-mobile'}
                     ${isPlaying ? ' is-playing' : ' is-paused'}
                 `}
-                onClick={this._onBodyClick}
+                onClick={this.handleBodyClick}
                 onMouseMove={this._handleAppMouseOrTouchMove}
                 onMouseUp={this._handleAppMouseOrTouchUpOrLeave}
                 onMouseLeave={this._handleAppMouseOrTouchUpOrLeave}
