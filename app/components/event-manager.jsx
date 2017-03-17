@@ -15,7 +15,7 @@ class EventManager extends Component {
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
         this.handleVerseElementSelect = this.handleVerseElementSelect.bind(this)
         this.handleVerseElementSlide = this.handleVerseElementSlide.bind(this)
-        this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
+        // this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
         this.handleAnnotationPrevious = this.handleAnnotationPrevious.bind(this)
         this.handleAnnotationNext = this.handleAnnotationNext.bind(this)
         this.handleAnnotationWikiSelect = this.handleAnnotationWikiSelect.bind(this)
@@ -90,9 +90,9 @@ class EventManager extends Component {
         this.props.updateSliderVerseElement(verseElement)
     }
 
-    handleKeyDownPress(e) {
+    // handleKeyDownPress(e) {
         // this.props.pressDownKey(e)
-    }
+    // }
 
     /**************
      * ANNOTATION *
@@ -286,7 +286,7 @@ class EventManager extends Component {
                 handlePopupContainerClick={this.handlePopupContainerClick}
                 handleVerseElementSelect={this.handleVerseElementSelect}
                 handleVerseElementSlide={this.handleVerseElementSlide}
-                handleKeyDownPress={this.handleKeyDownPress}
+                // handleKeyDownPress={this.handleKeyDownPress}
                 handleAnnotationWikiSelect={this.handleAnnotationWikiSelect}
                 handleAnnotationPortalSelect={this.handleAnnotationPortalSelect}
                 handleAnnotationPrevious={this.handleAnnotationPrevious}

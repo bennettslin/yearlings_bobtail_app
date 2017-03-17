@@ -284,6 +284,9 @@ class App extends Component {
         let popupWasOpen = false,
             collapseLyric = true
 
+
+        this.selectNavExpand(undefined, 0)
+
         // Hide overview.
         if (exemptSection !== AUDIO_SECTION && OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
             this.selectOverview(undefined, undefined, overrideClosePopupsDefaultWithOverviewOption || HIDDEN)

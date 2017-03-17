@@ -57,14 +57,18 @@ class AccessManager extends Component {
             keyName = keyName.toLowerCase()
         }
 
+        // Handle escape key.
         if (keyName === ESCAPE) {
             this.handleEscape(e)
 
         } else {
+
+            // Turn access on.
             this.props.handleAccessToggle(true)
 
             if (keyName.indexOf('Arrow') > -1) {
                 this.handleArrowKey(e, keyName)
+
             } else {
                 this.handleLetterKey(e, keyName)
             }

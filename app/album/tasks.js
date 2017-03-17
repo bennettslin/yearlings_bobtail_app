@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Clean up styling for nav showing and hiding.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `accessibility refactor.`,
         workedHours: 5,
         neededHours: 8
