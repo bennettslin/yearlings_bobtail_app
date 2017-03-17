@@ -11,10 +11,6 @@ import { getIsDesktop, getIsPhone, getIsLyricExpandable, getShowSingleLyricColum
 
 class DomManager extends Component {
 
-    constructor(props) {
-        super(props)
-    }
-
     componentDidMount() {
         // Allows app to begin listening for keyboard events.
         this.focusDomManager()
@@ -43,6 +39,7 @@ class DomManager extends Component {
               selectedWikiIndex,
               sliderVerseIndex,
 
+              accessedOn,
               accessedSectionIndex,
 
               mp3s,
@@ -61,7 +58,8 @@ class DomManager extends Component {
             isDesktop = getIsDesktop(deviceIndex),
             isPhone = getIsPhone({ deviceIndex }),
 
-            accessedSectionKey = SECTION_KEYS[accessedSectionIndex],
+            // Accessed section index is 1-based.
+            accessedSectionKey = accessedSectionIndex > 0 ? SECTION_KEYS[accessedSectionIndex - 1] : null,
 
             isLogue = getIsLogue(props),
             selectedSongTitle = getSongTitle(props, isLogue),
@@ -102,6 +100,8 @@ class DomManager extends Component {
                 className={`
                     dom-manager
                     ${deviceClassName}
+                    ${accessedOn ? 'accessed-on' : ''}
+                    ${accessedSectionKey ? `accessed-${accessedSectionKey}` : ''}
                     ${selectedAdminIndex ? 'admin' : 'live'}
                     ${isDesktop ? 'is-desktop' : 'is-mobile'}
                     ${isPlaying ? ' is-playing' : ' is-paused'}

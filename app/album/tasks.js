@@ -1,5 +1,11 @@
 module.exports = [
     {
+        taskName: `accessibility refactor.`,
+        workedHours: 5,
+        neededHours: 8
+    },
+    
+    {
         taskName: `Add character descriptions.`,
         workedHours: 4,
         neededHours: 6
@@ -120,11 +126,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `accessibility refactor.`,
-        workedHours: 0,
-        neededHours: 8
-    },
+
     {
         taskName: `Close button and body click in score should have same effect on annotation`,
         workedHours: 0,

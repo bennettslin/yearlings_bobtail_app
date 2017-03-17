@@ -1,3 +1,35 @@
+# Revised Accessibility
+
+* To turn on and off:
+    * Any key but "Space," "Tab," or "Esc" turns access on.
+    * "Esc" turns access off.
+    * Any click turns access off.
+
+* If key is associated with a button:
+    * Select that button as if it had been clicked.
+
+* If key is associated with a section:
+    * That section becomes the accessed section.
+
+* When access is turned on:
+    * All accessible UI is shown.
+
+* These are the keys:
+    * "a" to access audio section
+    * "d" to access dots section
+    * "n" to access nav section
+    * "l" to access lyrics section
+    * "r" to click rewind button
+    * "p" to toggle play button
+    * "f" to click forward button
+    * "o" to toggle audio options
+    * "s" to toggle score
+    * "t" to toggle tips
+    * "v" to toggle overview
+    * "x" to expand lyric section
+    * "z" to click title
+    * "m" to toggle admin field. This won't be possible live, of course.
+
 # Accessibility
 
 * To turn on and off:

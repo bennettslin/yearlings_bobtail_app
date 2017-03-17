@@ -212,12 +212,12 @@ module.exports = {
     ANNOTATION_SECTION,
     WIKI_SECTION,
     SECTION_KEYS: [
-        AUDIO_SECTION,
+        // AUDIO_SECTION,
         NAV_SECTION,
         LYRICS_SECTION,
-        DOTS_SECTION,
-        ANNOTATION_SECTION,
-        WIKI_SECTION
+        DOTS_SECTION
+        // ANNOTATION_SECTION,
+        // WIKI_SECTION
     ],
 
     CLOSE_POPUP_BUTTON: 'close',
@@ -362,9 +362,11 @@ module.exports = {
     ARROW_RIGHT: 'ArrowRight',
     ARROW_UP: 'ArrowUp',
     ARROW_DOWN: 'ArrowDown',
+    CAPS_LOCK: 'CapsLock',
     ENTER: 'Enter',
     ESCAPE: 'Escape',
     SPACE: ' ',
+    TAB: 'Tab',
 
     SONG_FILES: [
         '01-didi',

@@ -202,8 +202,10 @@ class App extends Component {
     }
 
     _bindEventHandlers() {
+        this.toggleAccess = this.toggleAccess.bind(this)
         this.toggleAdmin = this.toggleAdmin.bind(this)
         this.togglePlay = this.togglePlay.bind(this)
+        this.selectAccessedSection = this.selectAccessedSection.bind(this)
         this.selectSong = this.selectSong.bind(this)
         this.selectOverview = this.selectOverview.bind(this)
         this.selectAudioOption = this.selectAudioOption.bind(this)
@@ -1148,28 +1150,28 @@ class App extends Component {
      * ACCESS HANDLERS *
      *******************/
 
-    pressDownKey(e) {
-        let { key: keyName,
-              keyCode } = e
+    toggleAccess(e, accessedOn = (this.props.accessedOn + 1) % 2) {
+        this._stopPropagation(e)
+        this.props.accessOn(accessedOn)
+    }
 
-        // Workaround for Safari, which doesn't recognise key on event.
-        if (keyName === 'Unidentified') {
-            keyName = String.fromCharCode(keyCode)
+    selectAccessedSection(accessedSectionKey) {
+        let accessedSectionIndex = 0
+
+        // Loop through the section keys.
+        if (accessedSectionKey) {
+            while (SECTION_KEYS[accessedSectionIndex] !== accessedSectionKey && accessedSectionIndex < SECTION_KEYS.length) {
+                accessedSectionIndex++
+            }
+
+            // Accessed section index is 1-based.
+            accessedSectionIndex++
         }
 
-        // Do not handle if any modifier keys are present.
-        if (e && (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === 'Tab')) {
-            return
-        } else {
-            // TODO: Focus strategically, based on accessed section.
-            // this._focusApp()
-            e.preventDefault()
-        }
+        this.props.accessSectionIndex(accessedSectionIndex)
+    }
 
-        // Make all single characters lowercase.
-        if (keyName.length === 1) {
-            keyName = keyName.toLowerCase()
-        }
+    pressDownKey(keyName) {
 
         // If universal key, handle and return.
         if (AccessHelper.handleKeyIfUniversal({
@@ -1334,19 +1336,19 @@ class App extends Component {
     _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2, accessedSectionIndex = this.props.accessedSectionIndex) {
         // this._focusApp()
 
-        if (accessedOn) {
-            this._selectDefaultSectionElementIndex(accessedSectionIndex)
-
-            // If accessed section is dots section, expand the popup.
-            if (SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
-                this.selectDotsExpand(undefined, 1)
-            }
-
-            // Hide overview if shown.
-            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                this.selectOverview(undefined, undefined, HIDDEN)
-            }
-        }
+        // if (accessedOn) {
+        //     this._selectDefaultSectionElementIndex(accessedSectionIndex)
+        //
+        //     // If accessed section is dots section, expand the popup.
+        //     if (SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
+        //         this.selectDotsExpand(undefined, 1)
+        //     }
+        //
+        //     // Hide overview if shown.
+        //     if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+        //         this.selectOverview(undefined, undefined, HIDDEN)
+        //     }
+        // }
 
         // Stored as integer. 0 is false, 1 is true.
         this.props.accessOn(accessedOn)
@@ -1404,6 +1406,7 @@ class App extends Component {
                 mouseOrTouchBodyMove={this.mouseOrTouchBodyMove}
                 mouseOrTouchBodyEnd={this.mouseOrTouchBodyEnd}
                 pressDownKey={this.pressDownKey}
+                selectAccessedSection={this.selectAccessedSection}
                 selectAnnotation={this.selectAnnotation}
                 selectAudioOption={this.selectAudioOption}
                 selectBookColumn={this.selectBookColumn}
@@ -1423,6 +1426,8 @@ class App extends Component {
                 interactivateVerse={this.interactivateVerse}
                 selectVerseBar={this.selectVerseBar}
                 selectWiki={this.selectWiki}
+                toggleAccess={this.toggleAccess}
+                toggleAdmin={this.toggleAdmin}
                 togglePlay={this.togglePlay}
                 updateSelectedVerseElement={this.updateSelectedVerseElement}
                 updateSliderVerseElement={this.updateSliderVerseElement}
