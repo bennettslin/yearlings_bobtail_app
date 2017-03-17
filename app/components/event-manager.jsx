@@ -91,7 +91,7 @@ class EventManager extends Component {
     }
 
     handleKeyDownPress(e) {
-        this.props.pressDownKey(e)
+        // this.props.pressDownKey(e)
     }
 
     /**************
