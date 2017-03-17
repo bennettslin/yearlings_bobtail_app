@@ -18,11 +18,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front angle, impotent, apologetic'
                 },
                 miriam: {
                     todo: true,
-                    description: 'todo'
+                    description: 'back angle, eyes closed, trying to get off'
                 }
             }
         },
@@ -32,11 +32,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front angle, trying to get off'
                 },
                 miriam: {
                     todo: true,
-                    description: 'todo'
+                    description: 'back angle, giving blowjob'
                 }
             }
         },
@@ -46,15 +46,15 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front angle, dying, infirm'
                 },
                 miriam: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, playing tennis, vibrant, youthful'
                 },
                 eduardo: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, playing tennis, confident, manly'
                 }
             }
         },
@@ -64,11 +64,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'pensive, laying condom on ground'
                 },
                 miriam: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, looking back, reversing car'
                 }
             }
         }

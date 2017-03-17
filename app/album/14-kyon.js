@@ -25,7 +25,7 @@ module.exports = {
             actors: {
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, seated, petting cat, sad'
                 }
             }
         },
@@ -35,7 +35,7 @@ module.exports = {
             actors: {
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, seated, pensive'
                 }
             }
         },
@@ -45,11 +45,11 @@ module.exports = {
             actors: {
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, glumly welcoming'
                 },
                 khari: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, cheery in a low-key way'
                 }
             }
         },
@@ -59,11 +59,11 @@ module.exports = {
             actors: {
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, seated, defensive'
                 },
                 khari: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, seated, eating, judgmental'
                 }
             }
         },
@@ -73,11 +73,11 @@ module.exports = {
             actors: {
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, seated, exhausted'
                 },
                 khari: {
                     todo: true,
-                    description: 'todo'
+                    description: 'back angle, concerned'
                 }
             }
         },
@@ -87,7 +87,7 @@ module.exports = {
             actors: {
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, seated, asleep'
                 }
             }
         }

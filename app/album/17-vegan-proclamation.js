@@ -25,15 +25,15 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, slumped over, despondent'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, looking back, concerned'
                 },
                 khari: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, protective, judgmental'
                 }
             }
         },
@@ -43,19 +43,19 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'back, looking to side, annoyed'
                 },
                 miriam: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, flirting'
                 },
                 tristan: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, introducing miriam'
                 },
                 eduardo: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, eager'
                 }
             }
         },
@@ -65,15 +65,15 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, on phone, hunched over, sobbing'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting up in bed, on phone, concerned'
                 },
                 khari: {
                     todo: true,
-                    description: 'todo'
+                    description: 'lying in bed, caressing Sita'
                 }
             }
         },
@@ -83,24 +83,24 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, desperately hopeful'
                 },
                 amy: {
                     demonstrator: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side, kind'
                     }
                 },
                 stephanie: {
                     demonstrator: {
                         todo: true,
-                        description: 'todo'
+                        description: 'standing, demonstrating'
                     }
                 },
                 wade: {
                     demonstrator: {
                         todo: true,
-                        description: 'todo'
+                        description: 'standing, demonstrating'
                     }
                 }
             }

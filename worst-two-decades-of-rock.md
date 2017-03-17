@@ -19,7 +19,7 @@ Underdog culture: Underdog culture is just like any other system that favours so
 
 Altruistic audiences, Contrived narratives, alternate facts, Trump
 
-Startups, curators with their ears to the ground vs. Zappa's cigar chomping old guys
+Startups, knowledgeable curators with their ears to the ground vs. Zappa's cigar chomping old guys. At best, you understand trends, not innovations.
 
 ----
 
