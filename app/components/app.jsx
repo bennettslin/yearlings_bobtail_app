@@ -262,10 +262,10 @@ class App extends Component {
         if (e && e.stopPropagation) {
             e.stopPropagation()
             // this._handleAccessOn(0)
-        }
 
-        // Turn access off.
-        this.toggleAccess(false)
+            // Turn access off.
+            this.toggleAccess(false)
+        }
     }
 
     _closePopupIfOpen({
@@ -1145,7 +1145,7 @@ class App extends Component {
         // this._handleAccessOn(0)
 
         // Hide popups, but don't collapse lyrics column.
-        // this._closePopupIfOpen({ exemptSection: LYRICS_SECTION })
+        this._closePopupIfOpen({ exemptSection: LYRICS_SECTION })
         //
 
         // Deinteractivate verse.

@@ -2,7 +2,21 @@ import React, { Component } from 'react'
 import DomManager from './dom-manager'
 import { CAPS_LOCK,
          ESCAPE,
+         SPACE,
          TAB,
+         OVERVIEW_TOGGLE_KEY,
+         ADMIN_TOGGLE_KEY,
+         AUDIO_OPTIONS_TOGGLE_KEY,
+         AUDIO_PLAY_KEY,
+         AUDIO_PREVIOUS_SONG_KEY,
+         AUDIO_NEXT_SONG_KEY,
+         SCORE_TOGGLE_KEY,
+         TIPS_TOGGLE_KEY,
+         LYRIC_SECTION_EXPAND_KEY,
+         TITLE_SELECT_KEY,
+         DOTS_SECTION_ACCESS_KEY,
+         LYRIC_SECTION_ACCESS_KEY,
+         NAV_SECTION_ACCESS_KEY,
 
          SECTION_KEYS,
          NAV_SECTION,
@@ -31,7 +45,7 @@ class AccessManager extends Component {
         }
 
         // Do not handle if any modifier keys are present, or if it's an exempt key.
-        if (e && (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === TAB || keyName === CAPS_LOCK)) {
+        if (e && (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE)) {
             return
 
         } else {
@@ -111,47 +125,47 @@ class AccessManager extends Component {
         let newAccessedSectionKey
 
         switch (keyName) {
-            case 'b':
+            case OVERVIEW_TOGGLE_KEY:
                 // TODO: This should be smarter about toggling through all three.
-                this.props.handleOverviewToggle(e)
+                this.props.handleOverviewToggle()
                 break
-            case 'm':
-                this.props.handleAdminToggle(e)
+            case ADMIN_TOGGLE_KEY:
+                this.props.handleAdminToggle()
                 break
-            case 'o':
-                this.props.handleAudioOptionsToggle(e)
+            case AUDIO_OPTIONS_TOGGLE_KEY:
+                this.props.handleAudioOptionsToggle()
                 break
-            case 'p':
-                this.props.handleAudioPlay(e)
+            case AUDIO_PLAY_KEY:
+                this.props.handleAudioPlay()
                 break
-            case 'r':
-                this.props.handleAudioPreviousSong(e)
+            case AUDIO_PREVIOUS_SONG_KEY:
+                this.props.handleAudioPreviousSong()
                 break
-            case 'f':
-                this.props.handleAudioNextSong(e)
+            case AUDIO_NEXT_SONG_KEY:
+                this.props.handleAudioNextSong()
                 break
-            case 's':
-                this.props.handleScoreToggle(e)
+            case SCORE_TOGGLE_KEY:
+                this.props.handleScoreToggle()
                 break
-            case 't':
-                this.props.handleTipsToggle(e)
+            case TIPS_TOGGLE_KEY:
+                this.props.handleTipsToggle()
                 break
-            case 'x':
-                this.props.handleLyricSectionExpand(e)
+            case LYRIC_SECTION_EXPAND_KEY:
+                this.props.handleLyricSectionExpand()
                 break
-            case 'z':
-                this.props.handleTitleSelect(e)
+            case TITLE_SELECT_KEY:
+                this.props.handleTitleSelect()
                 break
-            case 'd':
+            case DOTS_SECTION_ACCESS_KEY:
                 // FIXME: Loop through dots options.
-                this.props.handleDotsSectionToggle(e)
+                this.props.handleDotsSectionToggle()
                 newAccessedSectionKey = DOTS_SECTION
                 break
-            case 'l':
+            case LYRIC_SECTION_ACCESS_KEY:
                 newAccessedSectionKey = LYRICS_SECTION
                 break
-            case 'n':
-                this.props.handleNavExpand(e)
+            case NAV_SECTION_ACCESS_KEY:
+                this.props.handleNavExpand()
                 newAccessedSectionKey = NAV_SECTION
                 break
             default:

@@ -368,6 +368,20 @@ module.exports = {
     SPACE: ' ',
     TAB: 'Tab',
 
+    OVERVIEW_TOGGLE_KEY: 'b',
+    ADMIN_TOGGLE_KEY: 'm',
+    AUDIO_OPTIONS_TOGGLE_KEY: 'o',
+    AUDIO_PLAY_KEY: 'p',
+    AUDIO_PREVIOUS_SONG_KEY: 'r',
+    AUDIO_NEXT_SONG_KEY: 'f',
+    SCORE_TOGGLE_KEY: 's',
+    TIPS_TOGGLE_KEY: 't',
+    LYRIC_SECTION_EXPAND_KEY: 'x',
+    TITLE_SELECT_KEY: 'z',
+    DOTS_SECTION_ACCESS_KEY: 'd',
+    LYRIC_SECTION_ACCESS_KEY: 'l',
+    NAV_SECTION_ACCESS_KEY: 'n',
+
     SONG_FILES: [
         '01-didi',
         '02-willy-the-cocoa',
