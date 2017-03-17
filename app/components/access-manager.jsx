@@ -62,15 +62,14 @@ class AccessManager extends Component {
             this.handleEscape(e)
 
         } else {
-
             // Turn access on.
             this.props.handleAccessToggle(true)
 
             if (keyName.indexOf('Arrow') > -1) {
-                this.handleArrowKey(e, keyName)
+                this.handleArrowKey(keyName)
 
             } else {
-                this.handleLetterKey(e, keyName)
+                this.handleLetterKey(keyName)
             }
         }
     }
@@ -105,7 +104,7 @@ class AccessManager extends Component {
         }
     }
 
-    handleArrowKey(e, arrowName) {
+    handleArrowKey(arrowName) {
         const { accessedSectionIndex } = this.props,
             accessedSectionKey = SECTION_KEYS[accessedSectionIndex - 1]
 
@@ -125,7 +124,7 @@ class AccessManager extends Component {
         }
     }
 
-    handleLetterKey(e, keyName) {
+    handleLetterKey(keyName) {
         let newAccessedSectionKey
 
         switch (keyName) {
