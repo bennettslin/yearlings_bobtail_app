@@ -14,6 +14,8 @@
 * When access is turned on:
     * All accessible UI is shown.
 
+* Default accessed section is lyrics-section.
+
 * These are the keys:
     * "a" to access audio section
     * "d" to access dots section

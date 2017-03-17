@@ -15,7 +15,9 @@ class AccessManager extends Component {
         super(props)
 
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
-        this.handleKeyName = this.handleKeyName.bind(this)
+        this.handleEscape = this.handleEscape.bind(this)
+        this.handleArrowKey = this.handleArrowKey.bind(this)
+        this.handleLetterKey = this.handleLetterKey.bind(this)
     }
 
     handleKeyDownPress(e) {
@@ -41,12 +43,71 @@ class AccessManager extends Component {
             keyName = keyName.toLowerCase()
         }
 
-        this.handleKeyName(e, keyName)
+        if (keyName === ESCAPE) {
+            this.handleEscape(e)
+
+        } else {
+            this.props.handleAccessToggle(true)
+
+            if (keyName.indexOf('Arrow') > -1) {
+                this.handleArrowKey(e, keyName)
+            } else {
+                this.handleLetterKey(e, keyName)
+            }
+        }
     }
 
-    handleKeyName(e, keyName) {
-        console.warn(`Handling key "${keyName}".`);
+    handleEscape(e) {
+        const { props } = this
 
+        // Close score popup.
+        if (props.selectedScoreIndex) {
+            this.props.handleScoreToggle(e)
+
+        // Close wiki popup.
+        } else if (props.selectedWikiIndex) {
+            this.props.handleWikiToggle(e)
+
+        // Close overview popup.
+        // FIXME: Overview is 0 by default.
+        } else if (props.selectedOverviewIndex === 0) {
+            this.props.handleOverviewToggle(e)
+
+        // Close dots popup.
+        } else if (props.selectedDotsIndex) {
+            this.props.handleDotsSectionToggle(e)
+
+        // Close annotation popup.
+        } else if (props.selectedAnnotationIndex) {
+            this.props.handleLyricAnnotationSelect(e)
+
+        // Turn access off.
+        } else {
+            this.props.handleAccessToggle(false)
+        }
+    }
+
+    handleArrowKey(e, arrowName) {
+        const { accessedSectionIndex } = this.props,
+            accessedSectionKey = SECTION_KEYS[accessedSectionIndex - 1]
+
+        switch (accessedSectionKey) {
+            case NAV_SECTION:
+
+                break
+            case LYRICS_SECTION:
+
+                break
+            case DOTS_SECTION:
+
+                break
+            default:
+
+                break
+        }
+    }
+
+    handleLetterKey(e, keyName) {
         let newAccessedSectionKey
 
         switch (keyName) {
@@ -82,6 +143,7 @@ class AccessManager extends Component {
                 this.props.handleTitleSelect(e)
                 break
             case 'd':
+                // FIXME: Loop through dots options.
                 this.props.handleDotsSectionToggle(e)
                 newAccessedSectionKey = DOTS_SECTION
                 break
@@ -100,20 +162,6 @@ class AccessManager extends Component {
         if (newAccessedSectionKey) {
             this.props.handleAccessedSectionSelect(newAccessedSectionKey)
         }
-
-        // TODO: If it's an arrow key.
-        const { accessedSectionIndex } = this.props,
-            accessedSectionKey = newAccessedSectionKey || (accessedSectionIndex > 0 ? SECTION_KEYS[accessedSectionIndex - 1] : null)
-
-        
-
-        // Handle escape key.
-        // Handle arrow keys based on which section is accessed.
-
-        // TODO: Have a way to cancel accessed section.
-
-        // TODO: Turn access on.
-        // this.props.handleKeyDownPress(keyName)
     }
 
     render() {

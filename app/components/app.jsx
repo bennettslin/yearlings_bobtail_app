@@ -258,11 +258,14 @@ class App extends Component {
     //     element.focus()
     // }
 
-    _stopPropagation(e) {
+    _stopPropagationOfClick(e) {
         if (e && e.stopPropagation) {
             e.stopPropagation()
             // this._handleAccessOn(0)
         }
+
+        // Turn access off.
+        this.toggleAccess(false)
     }
 
     _closePopupIfOpen({
@@ -469,7 +472,7 @@ class App extends Component {
     }
 
     togglePlay(e) {
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
         // if (e) {
         //     this._handleSectionAccess({
         //         accessedSectionKey: AUDIO_SECTION,
@@ -490,7 +493,7 @@ class App extends Component {
     }
 
     selectSong(e, selectedSongIndex = 0, direction, fromPortal) {
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         // Called from audio section's previous or next buttons.
         if (direction) {
@@ -586,7 +589,7 @@ class App extends Component {
     selectAudioOption(e, direction = 1) {
         const optionsLength = AUDIO_OPTIONS.length
 
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
         // if (e) {
         //     this._handleSectionAccess({
         //         accessedSectionKey: AUDIO_SECTION,
@@ -598,7 +601,7 @@ class App extends Component {
     }
 
     interactivateVerse(e, interactivatedVerseIndex = -1) {
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         this.setState({
             interactivatedVerseIndex
@@ -626,7 +629,7 @@ class App extends Component {
     }
 
     selectNavExpand(e, selectedNavIndex) {
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         /**
          * User cannot change nav option if lyric is expanded in an
@@ -649,7 +652,7 @@ class App extends Component {
     }
 
     selectDotsExpand(e, selectedDotsIndex) {
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         if (typeof selectedDotsIndex === 'undefined') {
             selectedDotsIndex = (this.props.selectedDotsIndex + 1) % 2
@@ -686,7 +689,7 @@ class App extends Component {
     }
 
     selectOverview(e, selectedOverviewIndex, selectedOverviewKey) {
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         /**
          * User cannot change overview option if lyric is expanded in an
@@ -738,7 +741,7 @@ class App extends Component {
     selectTips(e, selectedTipsIndex) {
         const tipsLength = TIPS_OPTIONS.length
 
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
         if (typeof selectedTipsIndex === 'undefined') {
             selectedTipsIndex = (this.props.selectedTipsIndex + 1) % tipsLength
         }
@@ -747,7 +750,7 @@ class App extends Component {
     }
 
     selectDot(e, selectedDotKey) {
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         const isSelected = !this.props.selectedDotKeys[selectedDotKey]
         this.props.selectDotKey(selectedDotKey, isSelected)
@@ -787,7 +790,7 @@ class App extends Component {
      */
     selectAnnotation(e, selectedAnnotationIndex = 0, selectedSongIndex) {
         // Note that e is set to true from closePopup method.
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         // Called from arrow buttons in popup.
         if (typeof selectedAnnotationIndex === 'object') {
@@ -824,10 +827,10 @@ class App extends Component {
         }
 
         if (e) {
-            const accessedSectionKey = e.overrideClosePopupsDefaultWithSection ||
-                (selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION)
-
-            this.selectDotsExpand(undefined, 0)
+            // const accessedSectionKey = e.overrideClosePopupsDefaultWithSection ||
+            //     (selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION)
+            //
+            // this.selectDotsExpand(undefined, 0)
 
             // this._handleSectionAccess({
             //     accessedSectionKey,
@@ -840,7 +843,7 @@ class App extends Component {
 
     selectWiki(e, selectedWikiIndex = 0) {
         // Note that e is set to true from closePopup method.
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         this.props.selectWikiIndex(selectedWikiIndex)
         // if (selectedWikiIndex) {
@@ -860,7 +863,7 @@ class App extends Component {
     }
 
     selectScore(e, selectedScoreIndex) {
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         if (isNaN(selectedScoreIndex)) {
             selectedScoreIndex = (this.props.selectedScoreIndex + 1) % 2
@@ -870,7 +873,7 @@ class App extends Component {
     }
 
     selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, columnIndex) {
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         // TODO: Don't reset time if it's the same song.
         this.selectSong(undefined, selectedSongIndex, undefined, true)
@@ -917,7 +920,7 @@ class App extends Component {
     selectVerse(e, selectedVerseIndex = 0, direction, selectedSongIndex) {
         const songTimes = getSongTimes(this.props, selectedSongIndex)
 
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         /**
          * This was called from audio rewind and forward buttons, which do not
@@ -999,7 +1002,7 @@ class App extends Component {
 
     selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2, selectedSongIndex) {
 
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
 
         /**
          * User shouldn't be able to select lyric column if not in a song that
@@ -1132,17 +1135,20 @@ class App extends Component {
     }
 
     clickPopupContainer(e) {
-        this._stopPropagation(e)
+        this._stopPropagationOfClick(e)
         // this._handleAccessOn(0)
         // this._focusApp()
     }
 
-    clickBody() {
+    clickBody(e) {
+        this._stopPropagationOfClick(e)
         // this._handleAccessOn(0)
 
         // Hide popups, but don't collapse lyrics column.
-        this._closePopupIfOpen({ exemptSection: LYRICS_SECTION })
+        // this._closePopupIfOpen({ exemptSection: LYRICS_SECTION })
+        //
 
+        // Deinteractivate verse.
         this.interactivateVerse()
     }
 
@@ -1150,8 +1156,11 @@ class App extends Component {
      * ACCESS HANDLERS *
      *******************/
 
-    toggleAccess(e, accessedOn = (this.props.accessedOn + 1) % 2) {
-        this._stopPropagation(e)
+    toggleAccess(accessedOn = (this.props.accessedOn + 1) % 2) {
+        if (typeof accessedOn === 'boolean') {
+            accessedOn = accessedOn ? 1 : 0
+        }
+
         this.props.accessOn(accessedOn)
     }
 

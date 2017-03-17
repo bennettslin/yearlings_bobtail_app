@@ -58,8 +58,8 @@ class EventManager extends Component {
         this.props.clickBody(e)
     }
 
-    handleAccessToggle(e) {
-        this.props.toggleAccess(e)
+    handleAccessToggle(accessedOn) {
+        this.props.toggleAccess(accessedOn)
     }
 
     handleAccessedSectionSelect(e) {
