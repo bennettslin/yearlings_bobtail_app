@@ -15,9 +15,23 @@
 
 .accessed-on {
 
+    // Lyrics section is accessed.
+    .annotation-hidden.dots-hidden.nav-collapsed {
+        .lyrics-section {
+            box-shadow: 0 2px 10px 10px chartreuse;
+        }
+    }
+
+    // Annotation section is accessed.
+    .annotation-shown {
+        .annotation-section {
+            box-shadow: 0 2px 10px 10px chartreuse;
+        }
+    }
+
     // Nav section is accessed.
-    .nav-expanded.dots-hidden {
-        .nav-custom-subfield {
+    .nav-expanded {
+        .nav-section {
             box-shadow: 0 2px 10px 10px chartreuse;
         }
     }
@@ -29,10 +43,4 @@
         }
     }
 
-    // Lyrics section is accessed.
-    .nav-collapsed.dots-hidden {
-        .lyrics-section {
-            box-shadow: 0 2px 10px 10px chartreuse;
-        }
-    }
 }

@@ -386,7 +386,7 @@ const LiveView = ({
     return (
         <div className={
             `live-app
-            ${selectedAnnotationIndex ? ' annotation-shown' : ''}
+            ${selectedAnnotationIndex ? ' annotation-shown' : 'annotation-hidden'}
             ${isLogue ? ' is-logue' : ' is-song'}
             ${showLyricButtons ? '' : ' hide-lyric-buttons'}
             ${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}
