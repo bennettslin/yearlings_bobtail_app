@@ -10,13 +10,13 @@ const DotButton = ({
     dotKey,
     isSelected,
     canDeselect,
-    handleDotToggle,
+    handleDotKeyToggle,
 
 ...other }) => {
 
     const isEnabled = !isSelected || canDeselect,
         isToggleDeselected = canDeselect && !isSelected,
-        onClick = isEnabled && handleDotToggle ? e => handleDotToggle(e, dotKey) : null
+        onClick = isEnabled && handleDotKeyToggle ? e => handleDotKeyToggle(e, dotKey) : null
 
     return (
         <DotButtonView {...other}

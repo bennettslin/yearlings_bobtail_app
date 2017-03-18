@@ -197,7 +197,7 @@ class App extends Component {
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
         this.resetUpdatedTimePlayed = this.resetUpdatedTimePlayed.bind(this)
-        this.selectDot = this.selectDot.bind(this)
+        this.toggleDotKey = this.toggleDotKey.bind(this)
         this.selectFromPortal = this.selectFromPortal.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
@@ -404,7 +404,7 @@ class App extends Component {
             this.selectAnnotation()
 
             // Scroll to top of lyrics.
-            this.scrollElementIntoView('lyrics-scroll', 'home')
+            // this.scrollElementIntoView('lyrics-scroll', 'home')
 
         }
 
@@ -555,32 +555,6 @@ class App extends Component {
         }
     }
 
-    selectDot(e, selectedDotKey) {
-        this._stopPropagationOfClick(e)
-
-        const isSelected = !this.props.selectedDotKeys[selectedDotKey]
-        this.props.selectDotKey(selectedDotKey, isSelected)
-
-        let annotationDeselected
-
-        // Close wiki popup if deselected.
-        if (!isSelected && selectedDotKey === REFERENCE && this.props.selectedWikiIndex) {
-            this._closePopupIfOpen({})
-        }
-
-        // Advance to the next accesible annotation and popup anchor, if needed.
-        this.setState({
-            accessedAnnotationIndex: getAnnotationIndexForDirection(this.props, this.state.accessedAnnotationIndex),
-            accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(this.props, this.state.accessedPopupAnchorIndex)
-        })
-
-        // If this is the last selected dot key, then close the annotation.
-        if (!isSelected && allDotsDeselected(this.props, selectedDotKey)) {
-            this.selectAnnotation()
-            annotationDeselected = true
-        }
-    }
-
     /**
      * When selecting a portal, selectedSongIndex argument is passed in because
      * props does not yet know new selected song. Ugly workaround, but it works.
@@ -596,7 +570,7 @@ class App extends Component {
 
             selectedAnnotationIndex = getAnnotationIndexForDirection(this.props, this.props.selectedAnnotationIndex, direction, undefined, lyricColumnShown)
 
-            this.scrollElementIntoView('annotation', selectedAnnotationIndex)
+            // this.scrollElementIntoView('annotation', selectedAnnotationIndex)
         }
 
         this.props.selectAnnotationIndex(selectedAnnotationIndex)
@@ -742,7 +716,7 @@ class App extends Component {
         * and the selected verse is not.
         */
         if (scroll && selectedVerseIndex !== this.props.selectedVerseIndex) {
-            this.scrollElementIntoView('verse', selectedVerseIndex)
+            // this.scrollElementIntoView('verse', selectedVerseIndex)
         }
 
         if (e) {
@@ -945,6 +919,15 @@ class App extends Component {
     }
 
     /*******
+     * DOT *
+     *******/
+
+    toggleDotKey(selectedDotKey) {
+        const isSelected = !this.props.selectedDotKeys[selectedDotKey]
+        this.props.selectDotKey(selectedDotKey, isSelected)
+    }
+
+    /*******
      * NAV *
      *******/
 
@@ -1031,6 +1014,7 @@ class App extends Component {
             /**
              * We will start at the beginning of the selected verse.
              */
+            // FIXME: handle this!
             this.selectTime(true, verseTime)
 
             this.setState({
@@ -1072,7 +1056,7 @@ class App extends Component {
                 selectAnnotation={this.selectAnnotation}
                 selectAudioOption={this.selectAudioOption}
                 selectBookColumn={this.selectBookColumn}
-                selectDot={this.selectDot}
+                toggleDotKey={this.toggleDotKey}
                 selectDotsExpand={this.selectDotsExpand}
                 selectFromPortal={this.selectFromPortal}
                 selectLyricColumn={this.selectLyricColumn}

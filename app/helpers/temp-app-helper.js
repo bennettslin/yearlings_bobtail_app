@@ -72,6 +72,28 @@ export default {
         if (newState) {
              this.setState(newState)
         }
+    },
+
+    selectDot(selectedDotKey) {
+
+        const isSelected = !this.props.selectedDotKeys[selectedDotKey]
+        this.props.selectDotKey(selectedDotKey, isSelected)
+
+        // Close wiki popup if deselected.
+        if (!isSelected && selectedDotKey === REFERENCE && this.props.selectedWikiIndex) {
+            this._closePopupIfOpen({})
+        }
+
+        // Advance to the next accessible annotation and popup anchor, if needed.
+        this.setState({
+            accessedAnnotationIndex: getAnnotationIndexForDirection(this.props, this.state.accessedAnnotationIndex),
+            accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(this.props, this.state.accessedPopupAnchorIndex)
+        })
+
+        // If this is the last selected dot key, then close the annotation.
+        if (!isSelected && allDotsDeselected(this.props, selectedDotKey)) {
+            this.selectAnnotation()
+        }
     }
 
 }

@@ -15,11 +15,11 @@ const DotBlock = (props) => {
 
     const { inDotStanza,
             inDotsSection,
-            handleDotToggle } = props,
+            handleDotKeyToggle } = props,
 
         allDotKeys = inDotStanza ? ALL_DOT_KEYS_DOT_STANZA_ORDER : ALL_DOT_KEYS,
 
-        isInteractable = !!handleDotToggle,
+        isInteractable = !!handleDotKeyToggle,
 
         /**
          * Dot in dots section can select and deselect, while dot in dot stanza

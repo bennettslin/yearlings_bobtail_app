@@ -138,7 +138,7 @@ const LiveView = ({
     handleAudioNextSong,
     handleAudioOptionsToggle,
     handleAudioSliderTouchBegin,
-    handleDotToggle,
+    handleDotKeyToggle,
     handleDotsSectionToggle,
     handleNavExpand,
     handleNavSongSelect,
@@ -344,7 +344,7 @@ const LiveView = ({
             accessedDotIndex,
             handlePopupContainerClick,
 
-            handleDotToggle
+            handleDotKeyToggle
         },
         scorePopupProps = {
             isPhone,

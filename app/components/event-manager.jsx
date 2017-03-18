@@ -29,7 +29,7 @@ class EventManager extends Component {
         this.handlePlayerNextSong = this.handlePlayerNextSong.bind(this)
         this.handlePlayerTimeReset = this.handlePlayerTimeReset.bind(this)
 
-        this.handleDotToggle = this.handleDotToggle.bind(this)
+        this.handleDotKeyToggle = this.handleDotKeyToggle.bind(this)
         this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
         this.handleLyricSectionExpand = this.handleLyricSectionExpand.bind(this)
         this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
@@ -148,8 +148,9 @@ class EventManager extends Component {
      * DOT *
      *******/
 
-    handleDotToggle(e, dotKey) {
-        this.props.selectDot(e, dotKey)
+    handleDotKeyToggle(e, dotKey) {
+        this._stopPropagation(e)
+        this.props.toggleDotKey(dotKey)
     }
 
     /********
@@ -381,7 +382,7 @@ class EventManager extends Component {
                 handlePlayerTimeChange={this.handlePlayerTimeChange}
                 handlePlayerNextSong={this.handlePlayerNextSong}
                 handlePlayerTimeReset={this.handlePlayerTimeReset}
-                handleDotToggle={this.handleDotToggle}
+                handleDotKeyToggle={this.handleDotKeyToggle}
                 handleDotsSectionToggle={this.handleDotsSectionToggle}
                 handleLyricSectionExpand={this.handleLyricSectionExpand}
                 handleLyricPlay={this.handleLyricPlay}
