@@ -791,37 +791,6 @@ class App extends Component {
         })
     }
 
-    selectVerseElement(selectedVerseElement) {
-
-        if (selectedVerseElement !== this.state.selectedVerseElement) {
-
-            // Determine if new selected verse element shows or hides verse bar.
-            this.scrollLyricSection({
-                verseElement: selectedVerseElement
-            })
-
-            // App has a reference to the selected verse.
-            this.setState({
-                selectedVerseElement
-            })
-        }
-    }
-
-    slideVerseElement(sliderVerseElement) {
-
-        if (sliderVerseElement && sliderVerseElement !== this.state.sliderVerseElement) {
-            const newState = getVerseBarStatus(this.state, sliderVerseElement)
-
-            newState.sliderVerseElement = sliderVerseElement
-
-            /**
-             * Slider verse element overrides selected verse element, as long
-             * as the slider is touched.
-             */
-            this.setState(newState)
-        }
-    }
-
     clickPopupContainer(e) {
         this._stopPropagationOfClick(e)
         // this._handleAccessOn(0)
@@ -1045,6 +1014,34 @@ class App extends Component {
         this.setState({
             interactivatedVerseIndex
         })
+    }
+
+    selectVerseElement(selectedVerseElement) {
+        if (selectedVerseElement !== this.state.selectedVerseElement) {
+
+            // Determine if new selected verse element shows or hides verse bar.
+            const newState = getVerseBarStatus(this.state, selectedVerseElement)
+
+            newState.selectedVerseElement = selectedVerseElement
+
+            // App has a reference to the selected verse.
+            this.setState(newState)
+        }
+    }
+
+    slideVerseElement(sliderVerseElement) {
+        if (sliderVerseElement !== this.state.sliderVerseElement) {
+
+            const newState = getVerseBarStatus(this.state, sliderVerseElement)
+
+            newState.sliderVerseElement = sliderVerseElement
+
+            /**
+             * Slider verse element overrides selected verse element, as long
+             * as the slider is touched.
+             */
+            this.setState(newState)
+        }
     }
 
     render() {

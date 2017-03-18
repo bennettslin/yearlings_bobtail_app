@@ -302,17 +302,17 @@ class EventManager extends Component {
         this.scrollElementIntoView('verse', selectedVerseIndex)
     }
 
+    handleVerseInteractivate(e, verseIndex) {
+        this._stopPropagation(e)
+        this.props.interactivateVerse(verseIndex)
+    }
+
     handleVerseElementSelect(verseElement) {
         this.props.selectVerseElement(verseElement)
     }
 
     handleVerseElementSlide(verseElement) {
         this.props.slideVerseElement(verseElement)
-    }
-
-    handleVerseInteractivate(e, verseIndex) {
-        this._stopPropagation(e)
-        this.props.interactivateVerse(verseIndex)
     }
 
     /********
