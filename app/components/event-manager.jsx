@@ -173,6 +173,18 @@ class EventManager extends Component {
         this.props.selectLyricExpand(e)
     }
 
+    handleLyricSectionScroll({
+        lyricSectionElement,
+        verseElement,
+        fromHeightTransition
+    }) {
+        this.props.scrollLyricSection({
+            lyricSectionElement,
+            verseElement,
+            fromHeightTransition
+        })
+    }
+
     /**********
      * LYRICS *
      **********/
@@ -193,10 +205,6 @@ class EventManager extends Component {
 
     handleLyricColumnSelect(e) {
         this.props.selectLyricColumn(e)
-    }
-
-    handleLyricSectionScroll(lyricSectionElement, verseElement, lyricColumnJustTransitioned) {
-        this.props.scrollLyricSection(lyricSectionElement, verseElement, lyricColumnJustTransitioned)
     }
 
     /*******
@@ -324,7 +332,7 @@ class EventManager extends Component {
             e.stopPropagation()
 
             // Turn access off if not from a keyboard event.
-            if (e.type !== 'keydown') {
+            if (e.type === 'click') {
                 this.props.toggleAccess(false)
             }
         }

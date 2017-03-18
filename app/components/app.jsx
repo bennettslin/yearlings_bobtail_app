@@ -796,7 +796,9 @@ class App extends Component {
         if (selectedVerseElement !== this.state.selectedVerseElement) {
 
             // Determine if new selected verse element shows or hides verse bar.
-            this.scrollLyricSection(undefined, selectedVerseElement)
+            this.scrollLyricSection({
+                verseElement: selectedVerseElement
+            })
 
             // App has a reference to the selected verse.
             this.setState({
@@ -807,7 +809,7 @@ class App extends Component {
 
     slideVerseElement(sliderVerseElement) {
 
-        if (sliderVerseElement !== this.state.sliderVerseElement) {
+        if (sliderVerseElement && sliderVerseElement !== this.state.sliderVerseElement) {
             const newState = getVerseBarStatus(this.state, sliderVerseElement)
 
             newState.sliderVerseElement = sliderVerseElement
@@ -818,45 +820,6 @@ class App extends Component {
              */
             this.setState(newState)
         }
-    }
-
-    scrollLyricSection(lyricSectionElement, selectedVerseElement = this.state.selectedVerseElement, lyricColumnJustTransitioned) {
-
-        /**
-         * Prevent verse bar from showing upon initial load.
-         */
-        if (!this.state.appMounted) {
-            return
-        }
-
-        const newState = getVerseBarStatus(this.state, selectedVerseElement)
-
-        if (!newState) {
-            return
-        }
-
-        // Update the lyric section element.
-        // TODO: Can we be smarter about when to update the lyric section element?
-        newState.lyricSectionElement = lyricSectionElement
-
-        // Always show buttons if this is from a height transition
-        if (lyricColumnJustTransitioned) {
-            newState.showLyricButtons = true
-
-        } else if (lyricSectionElement) {
-            // Decide whether to show ear and expand buttons.
-            const lyricSectionTop =  lyricSectionElement.scrollTop
-
-            newState.lyricSectionTop = lyricSectionTop
-
-            // FIXME: Currently, the buttons fade in and out simply based on whether scroll was up or down. Make this more user-friendly?
-            newState.showLyricButtons = lyricSectionTop < this.state.lyricSectionTop
-
-            // When lyrics are scrolled, verse should no longer be interactivated.
-            // this.interactivateVerse()
-        }
-
-        this.setState(newState)
     }
 
     clickPopupContainer(e) {
@@ -925,6 +888,51 @@ class App extends Component {
     toggleDotKey(selectedDotKey) {
         const isSelected = !this.props.selectedDotKeys[selectedDotKey]
         this.props.selectDotKey(selectedDotKey, isSelected)
+    }
+
+    /*********
+     * LYRIC *
+     *********/
+
+    scrollLyricSection({
+        lyricSectionElement,
+        verseElement = this.state.selectedVerseElement,
+        fromHeightTransition
+    }) {
+
+        /**
+         * Prevent verse bar from showing upon initial load.
+         */
+        if (!this.state.appMounted || !verseElement) {
+            return
+        }
+
+        // Get isSelectedVerseAbove and isSelectedVerseBelow.
+        const newState = getVerseBarStatus(this.state, verseElement)
+
+        // Show ear and expand buttons if this is from a height transition.
+        if (fromHeightTransition) {
+            newState.showLyricButtons = true
+
+        // Otherwise, show the buttons only when scrolling up.
+        } else if (lyricSectionElement) {
+            const lyricSectionTop = lyricSectionElement.scrollTop
+
+            newState.showLyricButtons = lyricSectionTop < this.state.lyricSectionTop
+
+            /**
+            * It isn't possible to get scroll direction from the scroll event.
+            * Otherwise, it would be preferable to do that rather than storing
+            * the scroll top value to compare with the next scroll.
+            */
+            newState.lyricSectionTop = lyricSectionTop
+
+            // Update the lyric section element.
+            newState.lyricSectionElement = lyricSectionElement
+        }
+
+        // FIXME: 99% of the time, we are only saving scroll top. Maybe persist this value in window instead, because setting state considerably slows down the scroll.
+        this.setState(newState)
     }
 
     /*******

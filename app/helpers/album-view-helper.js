@@ -325,10 +325,6 @@ export const getSliderRatioForScreenX = (screenX, sliderLeft, sliderWidth) => {
 }
 
 export const getVerseBarStatus = (props, selectedVerseElement) => {
-    if (!selectedVerseElement) {
-        return null
-    }
-
     const lyricSectionRect = getLyricSectionRect(props),
         selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
 
