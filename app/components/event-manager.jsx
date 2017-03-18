@@ -175,6 +175,9 @@ class EventManager extends Component {
 
     handleLyricSectionExpand(e) {
         this._stopPropagation(e)
+        this._closeSections({
+            exemptLyric: true
+        })
         this.props.selectLyricExpand()
     }
 
@@ -337,10 +340,15 @@ class EventManager extends Component {
 
     _closeSections({
         exemptDots,
+        exemptLyric,
         exemptNav
     }) {
         if (!exemptDots) {
             this.props.selectDotsExpand(false)
+        }
+
+        if (!exemptLyric) {
+            this.props.selectLyricExpand(false)
         }
 
         if (!exemptNav) {

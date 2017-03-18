@@ -678,8 +678,10 @@ class App extends Component {
      *********/
 
     selectLyricExpand(isLyricExpanded = !this.state.isLyricExpanded) {
-        // Don't bother if lyric is not expandable, or if it's a logue.
-        // FIXME: Examine this.
+        /**
+         * We should ignore this call if lyric is not expandable, or if it's a
+         * logue.
+         */
         if (!getIsLyricExpandable(this.state) || getIsLogue(this.props)) {
             return
         }
@@ -737,15 +739,6 @@ class App extends Component {
     selectNavExpand(selectedNavIndex = (this.props.selectedNavIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
-        /**
-         * User cannot change nav option if lyric is expanded in an
-         * expanded width.
-         */
-        // FIXME: Examine this.
-        if (getIsLyricExpandable(this.state) && this.state.isLyricExpanded) {
-            return
-        }
-
         if (typeof selectedNavIndex === 'boolean') {
             selectedNavIndex = selectedNavIndex ? 1 : 0
         }
@@ -770,10 +763,9 @@ class App extends Component {
         // Either toggle or reset. Book column index is 1-based.
 
         /**
-         * User shouldn't be able to select book column if it's not a single
+         * We shouldn't be able to select book column if it's not a single
          * column, or if nav is collapsed.
          */
-        // FIXME: Examine this.
         if (!getShowSingleBookColumn(this.state) || !selectedNavIndex) {
             return
         }

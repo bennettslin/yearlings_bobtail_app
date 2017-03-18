@@ -154,12 +154,10 @@
             bottom: 0;
         }
 
-        &:not(.dots-shown):not(.annotation-shown) {
-            .column-shown {
-                // Show title if shown in desktop.
-                .nav-title {
-                    transform: scale(1);
-                }
+        .column-shown {
+            // Show title if shown in desktop.
+            .nav-title {
+                transform: scale(1);
             }
         }
     }
@@ -195,10 +193,8 @@
     }
 
     .nav-expanded {
-        &.lyric-collapsed, &.lyric-expanded.is-logue {
-            .book-column-block {
-                top: 0;
-            }
+        .book-column-block {
+            top: 0;
         }
     }
 }
@@ -210,7 +206,7 @@
     transform: scale(0);
 }
 
-.nav-expanded.lyric-collapsed:not(.dots-shown):not(.annotation-shown) {
+.nav-expanded {
     .column-shown {
         .nav-title {
             transform: scale(1);
