@@ -710,16 +710,6 @@ class App extends Component {
         // }
     }
 
-    selectScore(e, selectedScoreIndex) {
-        this._stopPropagationOfClick(e)
-
-        if (isNaN(selectedScoreIndex)) {
-            selectedScoreIndex = (this.props.selectedScoreIndex + 1) % 2
-        }
-
-        this.props.selectScoreIndex(selectedScoreIndex)
-    }
-
     selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, columnIndex) {
         this._stopPropagationOfClick(e)
 
@@ -1029,6 +1019,17 @@ class App extends Component {
         // If no argument passed, then just toggle amongst audio options.
 
         this.props.selectAudioOptionIndex(selectedAudioOptionIndex)
+    }
+
+    /*********
+     * SCORE *
+     *********/
+
+    selectScore(selectedScoreIndex =
+        (this.props.selectedScoreIndex + 1) % 2) {
+        // If no argument passed, then just toggle between on and off.
+
+        this.props.selectScoreIndex(selectedScoreIndex)
     }
 
     /********

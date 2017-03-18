@@ -241,8 +241,9 @@ class EventManager extends Component {
      * SCORE *
      *********/
 
-    handleScoreToggle(e) {
-        this.props.selectScore(e)
+    handleScoreToggle(e, selectedScoreIndex) {
+        this._stopPropagation(e)
+        this.props.selectScore(selectedScoreIndex)
     }
 
     /********
@@ -267,6 +268,7 @@ class EventManager extends Component {
      *********/
 
     handleVerseBarSelect() {
+        // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props.domProps
         this.scrollElementIntoView('verse', selectedVerseIndex)
     }

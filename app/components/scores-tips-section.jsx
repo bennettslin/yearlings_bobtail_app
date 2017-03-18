@@ -29,7 +29,7 @@ const ScoresTipsSectionView = ({
             {!isPhone &&
                 <a
                     className="scores-tips-button scores-button enabled"
-                    onClick={handleScoreToggle}
+                    onClick={e => handleScoreToggle(e)}
                 >
                     <div className="large button-icon scores-icon">
                         {selectedScoreIndex}
