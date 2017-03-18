@@ -63,14 +63,6 @@ class EventManager extends Component {
         this.props.clickBody(e)
     }
 
-    handleBodyTouchMove(e) {
-        this.props.touchBodyMove(e)
-    }
-
-    handleBodyTouchEnd(e) {
-        this.props.touchBodyEnd(e)
-    }
-
     handlePopupContainerClick(e) {
         this.props.clickPopupContainer(e)
     }
@@ -134,10 +126,6 @@ class EventManager extends Component {
     handleAudioOptionsToggle(e, selectedAudioOptionIndex) {
         this._stopPropagation(e)
         this.props.selectAudioOption(selectedAudioOptionIndex)
-    }
-
-    handleAudioSliderTouchBegin(e) {
-        this.props.touchSliderBegin(e)
     }
 
     /****************
@@ -262,6 +250,38 @@ class EventManager extends Component {
     handleTitleSelect(e) {
         this.props.selectSong(e, 0)
     }
+
+    /*********
+     * TOUCH *
+     *********/
+
+    handleAudioSliderTouchBegin(e) {
+        const { nativeEvent,
+                target } = e,
+            { screenX } = nativeEvent,
+            clientRect = target.getBoundingClientRect()
+
+        if (!isNaN(screenX)) {
+            this._stopPropagation(e)
+            this.props.touchSliderBegin(clientRect, screenX)
+        }
+    }
+
+    handleBodyTouchMove(e) {
+        const { screenX } = e.nativeEvent
+
+        if (!isNaN(screenX)) {
+            this._stopPropagation(e)
+            this.props.touchBodyMove(screenX)
+        }
+
+    }
+
+    handleBodyTouchEnd(e) {
+        this._stopPropagation(e)
+        this.props.touchBodyEnd()
+    }
+
 
     /*********
      * VERSE *

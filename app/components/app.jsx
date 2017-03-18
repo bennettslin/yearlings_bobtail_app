@@ -217,7 +217,6 @@ class App extends Component {
         this.clickPopupContainer = this.clickPopupContainer.bind(this)
         this.windowResize = this.windowResize.bind(this)
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
-        this._waitToSaySliderIsMoving = this._waitToSaySliderIsMoving.bind(this)
         this.touchBodyMove = this.touchBodyMove.bind(this)
         this.touchBodyEnd = this.touchBodyEnd.bind(this)
     }
@@ -344,81 +343,6 @@ class App extends Component {
     /*******************
      * EVENT LISTENERS *
      *******************/
-
-    touchSliderBegin(e) {
-        if (e.nativeEvent.screenX) {
-            const rect = e.target.getBoundingClientRect(),
-                sliderLeft = rect.left,
-                sliderWidth = rect.width,
-                sliderRatio = getSliderRatioForScreenX(e.nativeEvent.screenX, sliderLeft, sliderWidth),
-
-                sliderTime = sliderRatio * getSong(this.props).totalTime,
-                sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
-
-            this.setState({
-                sliderLeft,
-                sliderWidth,
-                sliderRatio,
-                sliderVerseIndex,
-                sliderMousedOrTouched: true
-            })
-
-            /**
-             * If the move doesn't happen for a while, we recognise it anyway
-             * is moving anyway for styling purposes.
-             */
-            setTimeout(this._waitToSaySliderIsMoving, 125)
-        }
-    }
-
-    _waitToSaySliderIsMoving() {
-        if (this.state.sliderMousedOrTouched && !this.state.sliderMoving) {
-            this.setState({
-                sliderMoving: true
-            })
-        }
-    }
-
-    touchBodyMove(e) {
-        if (this.state.sliderMousedOrTouched) {
-            const { sliderLeft,
-                    sliderWidth } = this.state,
-                sliderRatio = getSliderRatioForScreenX(e.nativeEvent.screenX, sliderLeft, sliderWidth),
-
-                sliderTime = sliderRatio * getSong(this.props).totalTime,
-                sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
-
-            this.setState({
-                sliderRatio,
-                sliderVerseIndex,
-                sliderMoving: true
-            })
-        }
-    }
-
-    touchBodyEnd() {
-        if (this.state.sliderMousedOrTouched) {
-            const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime,
-                selectedVerseIndex = getVerseIndexForTime(this.props, selectedTime),
-                songTimes = getSongTimes(this.props),
-                verseTime = songTimes[selectedVerseIndex]
-
-            /**
-             * We will start at the beginning of the selected verse.
-             */
-            this.selectTime(true, verseTime)
-
-            this.setState({
-                sliderLeft: 0,
-                sliderWidth: 0,
-                sliderRatio: 0,
-                sliderVerseIndex: -1,
-                sliderMousedOrTouched: false,
-                sliderMoving: false,
-                sliderVerseElement: null
-            })
-        }
-    }
 
     togglePlay(isPlaying = !this.state.isPlaying) {
 
@@ -744,7 +668,6 @@ class App extends Component {
 
         if (selectedVerseIndex !== null) {
 
-            // FIXME: Don't scroll for now. Figure out later.
             this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll: false })
         }
     }
@@ -879,10 +802,10 @@ class App extends Component {
 
         /**
          * User shouldn't be able to select book column if it's not a single
-         * column, if nav is collapsed, or if lyric is expanded.
+         * column, or if nav is collapsed.
          */
         if (e) {
-            if (!getShowSingleBookColumn(this.state) || !this.props.selectedNavIndex || (getIsLyricExpandable(this.state) && this.state.isLyricExpanded)) {
+            if (!getShowSingleBookColumn(this.state) || !this.props.selectedNavIndex) {
                 return
             }
         }
@@ -1021,6 +944,11 @@ class App extends Component {
         this.props.selectAudioOptionIndex(selectedAudioOptionIndex)
     }
 
+    /*******
+     * NAV *
+     *******/
+
+
     /*********
      * SCORE *
      *********/
@@ -1041,6 +969,80 @@ class App extends Component {
         // If no argument passed, then just toggle amongst tips options.
 
         this.props.selectTipsIndex(selectedTipsIndex)
+    }
+
+    /*********
+     * TOUCH *
+     *********/
+
+    touchSliderBegin(clientRect, screenX) {
+        const sliderLeft = clientRect.left,
+            sliderWidth = clientRect.width,
+            sliderRatio = getSliderRatioForScreenX(screenX, sliderLeft, sliderWidth),
+
+            sliderTime = sliderRatio * getSong(this.props).totalTime,
+            sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
+
+        this.setState({
+            sliderLeft,
+            sliderWidth,
+            sliderRatio,
+            sliderVerseIndex,
+            sliderMousedOrTouched: true
+        })
+
+        /**
+         * If the move doesn't happen for a while, we recognise that it is
+         * moving anyway for styling purposes.
+         */
+        setTimeout(() => {
+            if (this.state.sliderMousedOrTouched && !this.state.sliderMoving) {
+                this.setState({
+                    sliderMoving: true
+                })
+            }
+        }, 125)
+    }
+
+    touchBodyMove(screenX) {
+        if (this.state.sliderMousedOrTouched) {
+            const { sliderLeft,
+                    sliderWidth } = this.state,
+                sliderRatio = getSliderRatioForScreenX(screenX, sliderLeft, sliderWidth),
+
+                sliderTime = sliderRatio * getSong(this.props).totalTime,
+                sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
+
+            this.setState({
+                sliderRatio,
+                sliderVerseIndex,
+                sliderMoving: true
+            })
+        }
+    }
+
+    touchBodyEnd() {
+        if (this.state.sliderMousedOrTouched) {
+            const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime,
+                selectedVerseIndex = getVerseIndexForTime(this.props, selectedTime),
+                songTimes = getSongTimes(this.props),
+                verseTime = songTimes[selectedVerseIndex]
+
+            /**
+             * We will start at the beginning of the selected verse.
+             */
+            this.selectTime(true, verseTime)
+
+            this.setState({
+                sliderLeft: 0,
+                sliderWidth: 0,
+                sliderRatio: 0,
+                sliderVerseIndex: -1,
+                sliderMousedOrTouched: false,
+                sliderMoving: false,
+                sliderVerseElement: null
+            })
+        }
     }
 
     /*********
