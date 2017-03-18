@@ -146,8 +146,6 @@ class App extends Component {
             lyricSectionTop: 0,
             showLyricButtons: true,
 
-            manualWidth: false,
-
             // Start at persisted time.
             updatedTimePlayed: props.selectedTimePlayed,
 
@@ -190,8 +188,8 @@ class App extends Component {
      * HELPERS *
      ***********/
 
-    windowResize(e, adminToggle) {
-        const resizedWindowObject = resizeWindow(e ? e.target : undefined, adminToggle ? this.state.deviceIndex : undefined)
+    windowResize(e) {
+        const resizedWindowObject = resizeWindow(e ? e.target : undefined)
 
         this.setState(resizedWindowObject)
     }

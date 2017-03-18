@@ -77,10 +77,6 @@ export default {
             case 'm':
                 toggleAdmin()
                 break
-            // Toggle window width.
-            case 'n':
-                windowResize(undefined, true)
-                break
             // Toggle audio option index.
             case 'o':
                 selectAudioOption()

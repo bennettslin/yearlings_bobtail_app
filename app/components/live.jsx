@@ -67,7 +67,6 @@ const LiveView = ({
 
     isPhone,
     isDesktop,
-    manualWidth,
     bookStartingIndices,
     scores,
     songs,
@@ -402,8 +401,7 @@ const LiveView = ({
             ${isSelectedVerseAbove ? 'verse-above' : ''}
             ${isSelectedVerseBelow ? 'verse-below' : ''}
             ${!isSelectedVerseAbove && !isSelectedVerseBelow ? 'verse-bar-hidden' : ''}
-            ${interactivatedVerseIndex === -1 ? 'is-not-verse-interactivated' : 'is-verse-interactivated'}
-            ${manualWidth ? ' manual-width' : ''}`
+            ${interactivatedVerseIndex === -1 ? 'is-not-verse-interactivated' : 'is-verse-interactivated'}`
         }>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">

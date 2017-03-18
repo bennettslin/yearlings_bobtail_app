@@ -17,38 +17,23 @@ import { PHONE_WIDTH,
 
 import { getSong } from 'helpers/album-view-helper'
 
-export const resizeWindow = (target = window, presentIndex) => {
+export const resizeWindow = (target = window) => {
 
     const newState = { windowHeight: target.innerHeight }
 
     let innerWidth = target.innerWidth,
-        index = 0,
-        manualWidth
+        index = 0
 
     if (typeof presentIndex === 'undefined') {
         while (index < DEVICE_OBJECTS.length - 1 && innerWidth > DEVICE_OBJECTS[index].maxWidth) {
             index++
         }
-
-        manualWidth = false
-
-    // Called from admin toggle.
-    } else {
-        index = (presentIndex + 1) % DEVICE_OBJECTS.length
-
-        /**
-         * Show max width as inner width, arbitrary big number for monitor
-         * width.
-         */
-        innerWidth = DEVICE_OBJECTS[index].maxWidth || 5000
-        manualWidth = true
     }
 
     // TODO: Nav section cannot be accessed if new device width is phone?
 
     newState.deviceIndex = index
     newState.windowWidth = innerWidth
-    newState.manualWidth = manualWidth
 
     return newState
 }
