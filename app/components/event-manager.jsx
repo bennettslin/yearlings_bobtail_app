@@ -7,7 +7,7 @@ class EventManager extends Component {
         super(props)
 
         this.handleAccessToggle = this.handleAccessToggle.bind(this)
-        this.handleAccessedSectionSelect = this.handleAccessedSectionSelect.bind(this)
+        // this.handleAccessedSectionSelect = this.handleAccessedSectionSelect.bind(this)
         this.handleAdminToggle = this.handleAdminToggle.bind(this)
         this.handleBodyClick = this.handleBodyClick.bind(this)
         this.handleBodyMouseOrTouchMove = this.handleBodyMouseOrTouchMove.bind(this)
@@ -62,9 +62,9 @@ class EventManager extends Component {
         this.props.toggleAccess(accessedOn)
     }
 
-    handleAccessedSectionSelect(e) {
-        this.props.selectAccessedSection(e)
-    }
+    // handleAccessedSectionSelect(e) {
+    //     this.props.selectAccessedSection(e)
+    // }
 
     handleAdminToggle(e) {
         this.props.toggleAdmin(e)
@@ -169,6 +169,9 @@ class EventManager extends Component {
 
     handleDotsSectionToggle(e) {
         this.props.selectDotsExpand(e)
+
+        // If showing the dots section, collapse the nav section.
+        this.props.selectNavExpand(undefined, 0)
     }
 
 
@@ -220,6 +223,9 @@ class EventManager extends Component {
 
     handleNavExpand(e) {
         this.props.selectNavExpand(e)
+
+        // If expanding the nav section, hide the dots section.
+        this.props.selectDotsExpand(undefined, 0)
     }
 
     handleNavSongSelect(e, songIndex) {
@@ -278,7 +284,7 @@ class EventManager extends Component {
         return (
             <AccessManager {...domProps} {...domState}
                 handleAccessToggle={this.handleAccessToggle}
-                handleAccessedSectionSelect={this.handleAccessedSectionSelect}
+                // handleAccessedSectionSelect={this.handleAccessedSectionSelect}
                 handleAdminToggle={this.handleAdminToggle}
                 handleBodyClick={this.handleBodyClick}
                 handleBodyMouseOrTouchMove={this.handleBodyMouseOrTouchMove}

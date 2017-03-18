@@ -13,7 +13,8 @@ import { SELECTED_ADMIN_INDEX,
          SELECTED_NAV_INDEX,
          SELECTED_DOTS_INDEX,
          ACCESSED_ON,
-         ACCESSED_SECTION_INDEX } from '../../helpers/constants'
+        //  ACCESSED_SECTION_INDEX
+     } from '../../helpers/constants'
  import SessionHelper from '../../helpers/session-helper'
 
  const { setInSession, setDotInSession } = SessionHelper
@@ -140,10 +141,10 @@ export const accessOn = (accessedOn = 0) => {
     }
 }
 
-export const accessSectionIndex = (accessedSectionIndex = 0) => {
-    setInSession(ACCESSED_SECTION_INDEX, accessedSectionIndex)
-    return {
-        type: ACCESSED_SECTION_INDEX,
-        payload: accessedSectionIndex
-    }
-}
+// export const accessSectionIndex = (accessedSectionIndex = 0) => {
+//     setInSession(ACCESSED_SECTION_INDEX, accessedSectionIndex)
+//     return {
+//         type: ACCESSED_SECTION_INDEX,
+//         payload: accessedSectionIndex
+//     }
+// }

@@ -16,7 +16,8 @@ import { selectAdminIndex,
          selectNavIndex,
          selectDotsIndex,
          accessOn,
-         accessSectionIndex } from 'redux/actions'
+        //  accessSectionIndex
+     } from 'redux/actions'
 import EventManager from './event-manager'
 import { NAV_SECTION,
          AUDIO_SECTION,
@@ -71,7 +72,7 @@ const passReduxStateToProps = ({
     selectedNavIndex,
     selectedDotsIndex,
     accessedOn,
-    accessedSectionIndex
+    // accessedSectionIndex
 }) => ({
     // Pass Redux state into component props.
     selectedAdminIndex,
@@ -89,7 +90,7 @@ const passReduxStateToProps = ({
     selectedNavIndex,
     selectedDotsIndex,
     accessedOn,
-    accessedSectionIndex
+    // accessedSectionIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
@@ -110,7 +111,7 @@ const bindDispatchToProps = (dispatch) => (
         selectNavIndex,
         selectDotsIndex,
         accessOn,
-        accessSectionIndex
+        // accessSectionIndex
     }, dispatch)
 )
 
@@ -205,7 +206,7 @@ class App extends Component {
         this.toggleAccess = this.toggleAccess.bind(this)
         this.toggleAdmin = this.toggleAdmin.bind(this)
         this.togglePlay = this.togglePlay.bind(this)
-        this.selectAccessedSection = this.selectAccessedSection.bind(this)
+        // this.selectAccessedSection = this.selectAccessedSection.bind(this)
         this.selectSong = this.selectSong.bind(this)
         this.selectOverview = this.selectOverview.bind(this)
         this.selectAudioOption = this.selectAudioOption.bind(this)
@@ -286,6 +287,7 @@ class App extends Component {
 
 
         this.selectNavExpand(undefined, 0)
+        this.selectDotsExpand(undefined, 0)
 
         // Hide overview.
         if (exemptSection !== AUDIO_SECTION && OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
@@ -1167,21 +1169,21 @@ class App extends Component {
         this.props.accessOn(accessedOn)
     }
 
-    selectAccessedSection(accessedSectionKey) {
-        let accessedSectionIndex = 0
-
-        // Loop through the section keys.
-        if (accessedSectionKey) {
-            while (SECTION_KEYS[accessedSectionIndex] !== accessedSectionKey && accessedSectionIndex < SECTION_KEYS.length) {
-                accessedSectionIndex++
-            }
-
-            // Accessed section index is 1-based.
-            accessedSectionIndex++
-        }
-
-        this.props.accessSectionIndex(accessedSectionIndex)
-    }
+    // selectAccessedSection(accessedSectionKey) {
+    //     let accessedSectionIndex = 0
+    //
+    //     // Loop through the section keys.
+    //     if (accessedSectionKey) {
+    //         while (SECTION_KEYS[accessedSectionIndex] !== accessedSectionKey && accessedSectionIndex < SECTION_KEYS.length) {
+    //             accessedSectionIndex++
+    //         }
+    //
+    //         // Accessed section index is 1-based.
+    //         accessedSectionIndex++
+    //     }
+    //
+    //     this.props.accessSectionIndex(accessedSectionIndex)
+    // }
 
     // pressDownKey(keyName) {
     //
@@ -1418,7 +1420,7 @@ class App extends Component {
                 mouseOrTouchBodyMove={this.mouseOrTouchBodyMove}
                 mouseOrTouchBodyEnd={this.mouseOrTouchBodyEnd}
                 // pressDownKey={this.pressDownKey}
-                selectAccessedSection={this.selectAccessedSection}
+                // selectAccessedSection={this.selectAccessedSection}
                 selectAnnotation={this.selectAnnotation}
                 selectAudioOption={this.selectAudioOption}
                 selectBookColumn={this.selectBookColumn}

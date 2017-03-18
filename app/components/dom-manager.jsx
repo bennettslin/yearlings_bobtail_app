@@ -5,7 +5,8 @@ import AudioPlayersSection from './audio/audio-players-section'
 import { DEVICE_OBJECTS,
          OVERVIEW_OPTIONS,
          SHOWN,
-         SECTION_KEYS } from 'helpers/constants'
+        //  SECTION_KEYS
+     } from 'helpers/constants'
 import { getSongTitle, getSongTimes, getVerse, getIsLogue, getHiddenLyricColumnKey, getLyricsStartAtZero } from 'helpers/album-view-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable, getShowSingleLyricColumn } from 'helpers/responsive-helper'
 
@@ -59,7 +60,7 @@ class DomManager extends Component {
             isPhone = getIsPhone({ deviceIndex }),
 
             // Accessed section index is 1-based.
-            accessedSectionKey = accessedSectionIndex > 0 ? SECTION_KEYS[accessedSectionIndex - 1] : null,
+            // accessedSectionKey = accessedSectionIndex > 0 ? SECTION_KEYS[accessedSectionIndex - 1] : null,
 
             isLogue = getIsLogue(props),
             selectedSongTitle = getSongTitle(props, isLogue),
@@ -101,7 +102,6 @@ class DomManager extends Component {
                     dom-manager
                     ${deviceClassName}
                     ${accessedOn ? 'accessed-on' : ''}
-                    ${accessedSectionKey ? `accessed-${accessedSectionKey}` : ''}
                     ${selectedAdminIndex ? 'admin' : 'live'}
                     ${isDesktop ? 'is-desktop' : 'is-mobile'}
                     ${isPlaying ? ' is-playing' : ' is-paused'}
@@ -144,7 +144,7 @@ class DomManager extends Component {
                     isOverviewShown={isOverviewShown}
                     isOverlaidAnnotation={isOverlaidAnnotation}
 
-                    accessedSectionKey={accessedSectionKey}
+                    // accessedSectionKey={accessedSectionKey}
                 />
             </div>
         )

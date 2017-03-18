@@ -14,7 +14,8 @@ import { SELECTED_ADMIN_INDEX,
          SELECTED_NAV_INDEX,
          SELECTED_DOTS_INDEX,
          ACCESSED_ON,
-         ACCESSED_SECTION_INDEX } from '../../helpers/constants'
+        //  ACCESSED_SECTION_INDEX
+     } from '../../helpers/constants'
 import SessionHelper from '../../helpers/session-helper'
 
 const { getFromSession } = SessionHelper,
@@ -32,8 +33,8 @@ const { getFromSession } = SessionHelper,
     storedScoreIndex = getFromSession(SELECTED_SCORE_INDEX),
     storedNavIndex = getFromSession(SELECTED_NAV_INDEX),
     storedDotsIndex = getFromSession(SELECTED_DOTS_INDEX),
-    storedAccessedOn = getFromSession(ACCESSED_ON),
-    storedAccessedSectionIndex = getFromSession(ACCESSED_SECTION_INDEX)
+    storedAccessedOn = getFromSession(ACCESSED_ON)
+    // storedAccessedSectionIndex = getFromSession(ACCESSED_SECTION_INDEX)
 
 export const AdminIndexReducer = (state = storedAdminIndex, action) => {
     switch (action.type) {
@@ -176,15 +177,15 @@ export const AccessedOnReducer = (state = storedAccessedOn, action) => {
             return state
     }
 }
-
-export const AccessedSectionIndexReducer = (state = storedAccessedSectionIndex, action) => {
-    switch (action.type) {
-        case ACCESSED_SECTION_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
+//
+// export const AccessedSectionIndexReducer = (state = storedAccessedSectionIndex, action) => {
+//     switch (action.type) {
+//         case ACCESSED_SECTION_INDEX:
+//             return action.payload
+//         default:
+//             return state
+//     }
+// }
 
 const rootReducer = combineReducers({
     selectedAdminIndex: AdminIndexReducer,
@@ -202,7 +203,7 @@ const rootReducer = combineReducers({
     selectedNavIndex: NavIndexReducer,
     selectedDotsIndex: DotsIndexReducer,
     accessedOn: AccessedOnReducer,
-    accessedSectionIndex: AccessedSectionIndexReducer
+    // accessedSectionIndex: AccessedSectionIndexReducer
 })
 
 export default rootReducer

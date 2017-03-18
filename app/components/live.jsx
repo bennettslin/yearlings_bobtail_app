@@ -400,8 +400,8 @@ const LiveView = ({
             ${timerInAudio ? ' timer-in-audio' : ''}
             ${titleInAudio ? ' title-in-audio' : ''}
             ${isHeightlessLyricColumn ? ' heightless-lyric' : ''}
-            ${selectedNavIndex ? ' nav-expanded' : ''}
-            ${selectedDotsIndex ? ' dots-shown' : ''}
+            ${selectedNavIndex ? ' nav-expanded' : 'nav-collapsed'}
+            ${selectedDotsIndex ? ' dots-shown' : 'dots-hidden'}
             ${isOverviewShown ? ' overview-shown' : ''}
             ${showOverlay ? ' overlay-shown' : ''}
             ${isOverlaidAnnotation ? ' overlaid-annotation' : ' side-annotation'}
