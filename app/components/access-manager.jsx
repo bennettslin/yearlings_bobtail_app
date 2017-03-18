@@ -102,7 +102,7 @@ class AccessManager extends Component {
         // Turn access off.
         } else {
             this.props.handleAccessToggle(false)
-            this.props.handleLyricVerseInteractivate()
+            this.props.handleVerseInteractivate()
         }
     }
 

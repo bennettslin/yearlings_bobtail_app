@@ -19,7 +19,7 @@ const LyricsVerse = ({
     handleLyricAnnotationSelect,
     handleLyricPlay,
     handleLyricVerseSelect,
-    handleLyricVerseInteractivate,
+    handleVerseInteractivate,
     sliderMousedOrTouched,
     sliderVerseIndex,
 
@@ -51,7 +51,7 @@ const LyricsVerse = ({
         handleAnchorClick = handleLyricAnnotationSelect,
 
         // Allows clicks on selected or interactivated verse to deinteractivate it.
-        handleInteractivatableClick = !inVerseBar && !isInteractivated ? e => handleLyricVerseInteractivate(e, verseIndex) : null,
+        handleInteractivatableClick = !inVerseBar && !isInteractivated ? e => handleVerseInteractivate(e, verseIndex) : null,
 
         /**
          * Audio button is enabled when it's the interactivated verse.

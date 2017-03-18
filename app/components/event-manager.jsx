@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import AccessManager from './access-manager'
+import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 
 class EventManager extends Component {
 
@@ -32,11 +33,9 @@ class EventManager extends Component {
         this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
         this.handleLyricSectionExpand = this.handleLyricSectionExpand.bind(this)
         this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
-        this.handleLyricVerseBarSelect = this.handleLyricVerseBarSelect.bind(this)
         this.handleLyricAnnotationSelect = this.handleLyricAnnotationSelect.bind(this)
         this.handleLyricPlay = this.handleLyricPlay.bind(this)
         this.handleLyricVerseSelect = this.handleLyricVerseSelect.bind(this)
-        this.handleLyricVerseInteractivate = this.handleLyricVerseInteractivate.bind(this)
         this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
         this.handleNavExpand = this.handleNavExpand.bind(this)
         this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
@@ -45,9 +44,15 @@ class EventManager extends Component {
         this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
+        this.handleVerseBarSelect = this.handleVerseBarSelect.bind(this)
+        this.handleVerseInteractivate = this.handleVerseInteractivate.bind(this)
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
 
         this._stopPropagation = this._stopPropagation.bind(this)
+
+        this.state = {
+            cancelScrollIntoView: null
+        }
     }
 
     /********
@@ -179,10 +184,6 @@ class EventManager extends Component {
         this.props.selectLyricExpand(e)
     }
 
-    handleLyricVerseBarSelect(e) {
-        this.props.selectVerseBar(e)
-    }
-
     /**********
      * LYRICS *
      **********/
@@ -195,10 +196,6 @@ class EventManager extends Component {
     handleLyricVerseSelect(e, verseIndex) {
         this.props.selectVerse(e, verseIndex)
         this.props.interactivateVerse(e)
-    }
-
-    handleLyricVerseInteractivate(e, verseIndex) {
-        this.props.interactivateVerse(e, verseIndex)
     }
 
     handleLyricAnnotationSelect(e, annotationIndex) {
@@ -269,12 +266,22 @@ class EventManager extends Component {
      * VERSE *
      *********/
 
+    handleVerseBarSelect() {
+        const { selectedVerseIndex } = this.props.domProps
+        this.scrollElementIntoView('verse', selectedVerseIndex)
+    }
+
     handleVerseElementSelect(verseElement) {
         this.props.selectVerseElement(verseElement)
     }
 
     handleVerseElementSlide(verseElement) {
         this.props.slideVerseElement(verseElement)
+    }
+
+    handleVerseInteractivate(e, verseIndex) {
+        this._stopPropagation(e)
+        this.props.interactivateVerse(verseIndex)
     }
 
     /********
@@ -297,6 +304,31 @@ class EventManager extends Component {
             if (e.type !== 'keydown') {
                 this.props.toggleAccess(false)
             }
+        }
+    }
+
+    /**
+     * scrollIntoViewIfNeeded should return a cancel function. It presently
+     * does not, even though it says it does?
+     * https://www.npmjs.com/package/scroll-into-view-if-needed
+     */
+    scrollElementIntoView(className, index, duration = 125) {
+        const selector = `${className}-${index}`,
+            element = document.getElementsByClassName(selector)[0]
+
+        if (this.state.cancelScrollIntoView) {
+            this.state.cancelScrollIntoView()
+        }
+
+        if (element) {
+            console.warn(`Scrolling ${selector} into view.`);
+            const cancelScrollIntoView = scrollIntoViewIfNeeded(element, false, {
+                duration
+            })
+
+            this.setState({
+                cancelScrollIntoView
+            })
         }
     }
 
@@ -330,10 +362,8 @@ class EventManager extends Component {
                 handleDotToggle={this.handleDotToggle}
                 handleDotsSectionToggle={this.handleDotsSectionToggle}
                 handleLyricSectionExpand={this.handleLyricSectionExpand}
-                handleLyricVerseBarSelect={this.handleLyricVerseBarSelect}
                 handleLyricPlay={this.handleLyricPlay}
                 handleLyricVerseSelect={this.handleLyricVerseSelect}
-                handleLyricVerseInteractivate={this.handleLyricVerseInteractivate}
                 handleLyricAnnotationSelect={this.handleLyricAnnotationSelect}
                 handleLyricColumnSelect={this.handleLyricColumnSelect}
                 handleLyricSectionScroll={this.handleLyricSectionScroll}
@@ -344,6 +374,8 @@ class EventManager extends Component {
                 handleScoreToggle={this.handleScoreToggle}
                 handleTipsToggle={this.handleTipsToggle}
                 handleTitleSelect={this.handleTitleSelect}
+                handleVerseBarSelect={this.handleVerseBarSelect}
+                handleVerseInteractivate={this.handleVerseInteractivate}
                 handleWikiToggle={this.handleWikiToggle}
             />
         )

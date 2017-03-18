@@ -17,14 +17,14 @@ const LyricVerseBarView = ({
 
     // From props.
     isAbove,
-    handleLyricVerseBarSelect,
+    handleVerseBarSelect,
 
 ...other }) => (
     <div
         className={`verse-bar-block ${isAbove ? 'above' : 'below'}`}
     >
         <div className="verse-bar"
-            onClick={handleLyricVerseBarSelect}
+            onClick={handleVerseBarSelect}
         >
             <LyricsVerse {...other}
                 inVerseBar={true}

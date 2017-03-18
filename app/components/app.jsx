@@ -48,7 +48,6 @@ import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
 import TempHelper from 'helpers/temp-app-helper'
-import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 
 /*********
  * STORE *
@@ -160,9 +159,7 @@ class App extends Component {
             interactivatedVerseIndex: -1,
 
             // Prevent verse bar from showing upon load.
-            appMounted: false,
-
-            cancelScrollIntoView: null
+            appMounted: false
         }
     }
 
@@ -216,7 +213,6 @@ class App extends Component {
         this.selectVerseElement = this.selectVerseElement.bind(this)
         this.slideVerseElement = this.slideVerseElement.bind(this)
         this.scrollLyricSection = this.scrollLyricSection.bind(this)
-        this.selectVerseBar = this.selectVerseBar.bind(this)
         this.clickBody = this.clickBody.bind(this)
         this.clickPopupContainer = this.clickPopupContainer.bind(this)
         this.windowResize = this.windowResize.bind(this)
@@ -343,31 +339,6 @@ class App extends Component {
         // }
 
         return popupWasOpen
-    }
-
-    /**
-     * scrollIntoViewIfNeeded should return a cancel function. It presently
-     * does not, even though it says it does?
-     * https://www.npmjs.com/package/scroll-into-view-if-needed
-     */
-    scrollElementIntoView(className, index, duration = 125) {
-        const selector = `${className}-${index}`,
-            element = document.getElementsByClassName(selector)[0]
-
-        if (this.state.cancelScrollIntoView) {
-            this.state.cancelScrollIntoView()
-        }
-
-        if (element) {
-            console.warn(`Scrolling ${selector} into view.`);
-            const cancelScrollIntoView = scrollIntoViewIfNeeded(element, false, {
-                duration
-            })
-
-            this.setState({
-                cancelScrollIntoView
-            })
-        }
     }
 
     /*******************
@@ -1001,10 +972,6 @@ class App extends Component {
         this.setState(newState)
     }
 
-    selectVerseBar() {
-        this.scrollElementIntoView('verse', this.props.selectedVerseIndex)
-    }
-
     clickPopupContainer(e) {
         this._stopPropagationOfClick(e)
         // this._handleAccessOn(0)
@@ -1079,9 +1046,7 @@ class App extends Component {
      * VERSE *
      *********/
 
-    interactivateVerse(e, interactivatedVerseIndex = -1) {
-        this._stopPropagationOfClick(e)
-
+    interactivateVerse(interactivatedVerseIndex = -1) {
         this.setState({
             interactivatedVerseIndex
         })
@@ -1118,7 +1083,6 @@ class App extends Component {
                 selectTips={this.selectTips}
                 selectVerse={this.selectVerse}
                 interactivateVerse={this.interactivateVerse}
-                selectVerseBar={this.selectVerseBar}
                 selectWiki={this.selectWiki}
                 toggleAccess={this.toggleAccess}
                 toggleAdmin={this.toggleAdmin}
