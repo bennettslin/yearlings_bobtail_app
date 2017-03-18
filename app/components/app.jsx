@@ -204,8 +204,7 @@ class App extends Component {
         this.selectVerseElement = this.selectVerseElement.bind(this)
         this.slideVerseElement = this.slideVerseElement.bind(this)
         this.scrollLyricSection = this.scrollLyricSection.bind(this)
-        this.clickBody = this.clickBody.bind(this)
-        this.clickPopupContainer = this.clickPopupContainer.bind(this)
+        // this.clickBody = this.clickBody.bind(this)
         this.windowResize = this.windowResize.bind(this)
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
         this.touchBodyMove = this.touchBodyMove.bind(this)
@@ -231,98 +230,6 @@ class App extends Component {
             // Turn access off.
             this.toggleAccess(false)
         }
-    }
-
-    _closePopupIfOpen({
-        exemptSection,
-        closedFromSpace,
-        overrideClosePopupsDefaultWithSection,
-        selectedAnnotationIndex = this.props.selectedAnnotationIndex
-    }) {
-        const { selectedWikiIndex,
-                selectedScoreIndex,
-                selectedDotsIndex,
-                selectedOverviewIndex } = this.props
-
-        let popupWasOpen = false,
-            collapseLyric = true
-
-
-        this.selectNavExpand(undefined, 0)
-        this.selectDotsExpand(undefined, 0)
-
-        if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
-            this.selectOverview(undefined, undefined, HIDDEN)
-        }
-
-        // Hide dots.
-        if (exemptSection !== DOTS_SECTION && selectedDotsIndex === 1) {
-            this.selectDotsExpand({ bypassClosingPopups: true, overrideClosePopupsDefaultWithSection }, 0)
-
-            /**
-             * If dots popup was closed from space bar, leave lyric column
-             * expanded.
-             */
-            if (closedFromSpace) {
-                collapseLyric = false
-            }
-
-            popupWasOpen = true
-        }
-
-        if (selectedScoreIndex) {
-            this.selectScore(undefined, 0)
-        }
-
-        // Hide wiki or annotation.
-        if (selectedAnnotationIndex) {
-            if (selectedWikiIndex) {
-                if (exemptSection !== WIKI_SECTION) {
-                    this.selectWiki({ bypassClosingPopups: true, overrideClosePopupsDefaultWithSection })
-                }
-            } else if (selectedScoreIndex) {
-                this.selectScore()
-            } else {
-                if (exemptSection !== ANNOTATION_SECTION && exemptSection !== WIKI_SECTION) {
-                    this.selectAnnotation({ bypassClosingPopups: true, overrideClosePopupsDefaultWithSection })
-                    /**
-                    * If closing annotation, set lyric element to annotation, and
-                    * set accessed annotation index to closed annotation.
-                    */
-
-                    this.setState({
-                        accessedLyricElement: LYRIC_ANNOTATION_ELEMENT,
-                        accessedAnnotationIndex: selectedAnnotationIndex,
-                        accessedVerseIndex: getVerseIndexForAnnotationIndex({
-                            props: this.props,
-                            index: selectedAnnotationIndex
-                        })
-                    })
-                }
-            }
-
-            /**
-             * If annotation popup was closed from space bar, leave lyric
-             * column expanded.
-             */
-            if (closedFromSpace) {
-                collapseLyric = false
-            }
-
-            popupWasOpen = true
-        }
-
-        /**
-         * If audio section is accessed, it's fine to keep lyric expanded. Also,
-         * annotation and dots popups will no longer collapse the lyric column
-         * if expanded.
-         */
-        if (collapseLyric && this.state.isLyricExpanded && exemptSection !== AUDIO_SECTION && exemptSection !== LYRICS_SECTION && exemptSection !== ANNOTATION_SECTION && exemptSection !== DOTS_SECTION) {
-            this.selectLyricExpand(undefined, false)
-            popupWasOpen = true
-        }
-
-        return popupWasOpen
     }
 
     /*******************
@@ -390,7 +297,11 @@ class App extends Component {
 
         }
 
-        this.selectBookColumn(e, true, selectedSongIndex)
+        this.selectBookColumn({
+            resetToDefault: true,
+            selectedSongIndex
+        })
+
         this.interactivateVerse()
 
         this.props.selectSongIndex(selectedSongIndex)
@@ -422,69 +333,6 @@ class App extends Component {
             // FIXME: This should be set based on whether an annotation, score, or wiki popup is currently shown.
             preservePreviousPopupIndex: true
         }, selectedSongIndex + willAdvance)
-    }
-
-    selectLyricExpand(e, isLyricExpanded = !this.state.isLyricExpanded) {
-        // Don't bother if lyric is not expandable, or if it's a logue.
-        if (getIsLyricExpandable(this.state) && !getIsLogue(this.props)) {
-
-            this.setState({
-                isLyricExpanded,
-
-                // Start with lyric buttons shown when lyric column is expanded.
-                showLyricButtons: true
-            })
-        }
-    }
-
-    selectNavExpand(e, selectedNavIndex) {
-        this._stopPropagationOfClick(e)
-
-        /**
-         * User cannot change nav option if lyric is expanded in an
-         * expanded width.
-         */
-        if (e && getIsLyricExpandable(this.state) && this.state.isLyricExpanded) {
-            return
-        }
-
-        if (typeof selectedNavIndex === 'undefined') {
-            selectedNavIndex = (this.props.selectedNavIndex + 1) % 2
-        }
-
-        // Reset book column upon nav expand.
-        if (selectedNavIndex === 0) {
-            this.selectBookColumn(undefined, true)
-        }
-
-        this.props.selectNavIndex(selectedNavIndex)
-    }
-
-    selectDotsExpand(e, selectedDotsIndex) {
-        this._stopPropagationOfClick(e)
-
-        if (typeof selectedDotsIndex === 'undefined') {
-            selectedDotsIndex = (this.props.selectedDotsIndex + 1) % 2
-        }
-
-        // Dots section cannot be expanded in logue.
-        if (getIsLogue(this.props) && selectedDotsIndex) {
-            return
-        }
-
-        this.props.selectDotsIndex(selectedDotsIndex)
-
-        if (e) {
-            if (selectedDotsIndex) {
-                // Hide overview and collapse lyrics if shown.
-                if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                    this.selectOverview(undefined, undefined, HIDDEN)
-                }
-
-                this.selectAnnotation()
-
-            }
-        }
     }
 
     selectOverview(e, selectedOverviewIndex, selectedOverviewKey) {
@@ -743,44 +591,18 @@ class App extends Component {
         this.setState(newState)
     }
 
-    selectBookColumn(e, reset, selectedSongIndex = this.props.selectedSongIndex) {
-        // Either reset or else toggle.
-
-        /**
-         * User shouldn't be able to select book column if it's not a single
-         * column, or if nav is collapsed.
-         */
-        if (e) {
-            if (!getShowSingleBookColumn(this.state) || !this.props.selectedNavIndex) {
-                return
-            }
-        }
-
-        const selectedBookColumnIndex = reset ? getSelectedBookColumnIndex(this.props, selectedSongIndex) : this.state.selectedBookColumnIndex % 2 + 1
-
-        this.setState({
-            selectedBookColumnIndex
-        })
-    }
-
-    clickPopupContainer(e) {
-        this._stopPropagationOfClick(e)
-        // this._handleAccessOn(0)
-        // this._focusApp()
-    }
-
-    clickBody(e) {
-        this._stopPropagationOfClick(e)
-        // this._handleAccessOn(0)
-
-        // Hide popups, but don't collapse lyrics column.
-        this._closePopupIfOpen({ exemptSection: LYRICS_SECTION })
-        //
-
-
-        // Deinteractivate verse.
-        this.interactivateVerse()
-    }
+    // clickBody(e) {
+    //     this._stopPropagationOfClick(e)
+    //     // this._handleAccessOn(0)
+    //
+    //     // Hide popups, but don't collapse lyrics column.
+    //     this._closePopupIfOpen({ exemptSection: LYRICS_SECTION })
+    //     //
+    //
+    //
+    //     // Deinteractivate verse.
+    //     this.interactivateVerse()
+    // }
 
 /******************************************************************************/
 /******************************************************************************/
@@ -831,9 +653,41 @@ class App extends Component {
         this.props.selectDotKey(selectedDotKey, isSelected)
     }
 
+    /********
+     * DOTS *
+     ********/
+
+    selectDotsExpand(selectedDotsIndex =
+        (this.props.selectedDotsIndex + 1) % 2) {
+        // If no argument passed, then just toggle between on and off.
+
+        if (typeof selectedDotsIndex === 'boolean') {
+            selectedDotsIndex = selectedDotsIndex ? 1 : 0
+        }
+
+        // Dots section cannot be expanded in logue.
+        if (getIsLogue(this.props) && selectedDotsIndex) {
+            return
+        }
+
+        this.props.selectDotsIndex(selectedDotsIndex)
+    }
+
     /*********
      * LYRIC *
      *********/
+
+    selectLyricExpand(isLyricExpanded = !this.state.isLyricExpanded) {
+        // Don't bother if lyric is not expandable, or if it's a logue.
+        // FIXME: Examine this.
+        if (!getIsLyricExpandable(this.state) || getIsLogue(this.props)) {
+            return
+        }
+
+        this.setState({
+            isLyricExpanded
+        })
+    }
 
     scrollLyricSection({
         lyricSectionElement,
@@ -879,6 +733,60 @@ class App extends Component {
     /*******
      * NAV *
      *******/
+
+    selectNavExpand(selectedNavIndex = (this.props.selectedNavIndex + 1) % 2) {
+        // If no argument passed, then just toggle between on and off.
+
+        /**
+         * User cannot change nav option if lyric is expanded in an
+         * expanded width.
+         */
+        // FIXME: Examine this.
+        if (getIsLyricExpandable(this.state) && this.state.isLyricExpanded) {
+            return
+        }
+
+        if (typeof selectedNavIndex === 'boolean') {
+            selectedNavIndex = selectedNavIndex ? 1 : 0
+        }
+
+        // Reset book column upon nav expand.
+        if (selectedNavIndex) {
+            this.selectBookColumn({
+                resetToDefault: true,
+                selectedNavIndex
+            })
+        }
+
+        this.props.selectNavIndex(selectedNavIndex)
+    }
+
+    selectBookColumn({
+        selectedBookColumnIndex = (this.state.selectedBookColumnIndex) % 2 + 1,
+        resetToDefault,
+        selectedNavIndex = this.props.selectedNavIndex,
+        selectedSongIndex = this.props.selectedSongIndex
+    }) {
+        // Either toggle or reset. Book column index is 1-based.
+
+        /**
+         * User shouldn't be able to select book column if it's not a single
+         * column, or if nav is collapsed.
+         */
+        // FIXME: Examine this.
+        if (!getShowSingleBookColumn(this.state) || !selectedNavIndex) {
+            return
+        }
+
+        // Reset to default upon song change or nav expand.
+        if (resetToDefault) {
+            selectedBookColumnIndex = getSelectedBookColumnIndex(this.props, selectedSongIndex)
+        }
+
+        this.setState({
+            selectedBookColumnIndex
+        })
+    }
 
 
     /*********
@@ -1033,8 +941,7 @@ class App extends Component {
                 domState={this.state}
 
                 // Event manager props.
-                clickBody={this.clickBody}
-                clickPopupContainer={this.clickPopupContainer}
+                // clickBody={this.clickBody}
                 touchSliderBegin={this.touchSliderBegin}
                 touchBodyMove={this.touchBodyMove}
                 touchBodyEnd={this.touchBodyEnd}

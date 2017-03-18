@@ -27,7 +27,7 @@ const DotsToggleView = ({
     <div className="dots-toggle-button-block">
         <a
             className="dots-toggle-button enabled"
-            onClick={handleDotsSectionToggle}
+            onClick={e => handleDotsSectionToggle(e)}
         >
             <div className="large button-icon dots-toggle-icon">
                 {selectedDotsIndex}

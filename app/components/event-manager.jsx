@@ -60,11 +60,15 @@ class EventManager extends Component {
      ********/
 
     handleBodyClick(e) {
-        this.props.clickBody(e)
+        this._stopPropagation(e)
+
+        this._closeSections({})
+
+        // this.props.clickBody(e)
     }
 
     handlePopupContainerClick(e) {
-        this.props.clickPopupContainer(e)
+        this._stopPropagation(e)
     }
 
     /**********
@@ -158,19 +162,20 @@ class EventManager extends Component {
      ********/
 
     handleDotsSectionToggle(e) {
-        this.props.selectDotsExpand(e)
-
-        // If showing the dots section, collapse the nav section.
-        this.props.selectNavExpand(undefined, 0)
+        this._stopPropagation(e)
+        this._closeSections({
+            exemptDots: true
+        })
+        this.props.selectDotsExpand()
     }
-
 
     /*********
      * LYRIC *
      *********/
 
     handleLyricSectionExpand(e) {
-        this.props.selectLyricExpand(e)
+        this._stopPropagation(e)
+        this.props.selectLyricExpand()
     }
 
     handleLyricSectionScroll({
@@ -212,10 +217,11 @@ class EventManager extends Component {
      *******/
 
     handleNavExpand(e) {
-        this.props.selectNavExpand(e)
-
-        // If expanding the nav section, hide the dots section.
-        this.props.selectDotsExpand(undefined, 0)
+        this._stopPropagation(e)
+        this._closeSections({
+            exemptNav: true
+        })
+        this.props.selectNavExpand()
     }
 
     handleNavSongSelect(e, songIndex) {
@@ -223,7 +229,8 @@ class EventManager extends Component {
     }
 
     handleNavBookSelect(e) {
-        this.props.selectBookColumn(e)
+        this._stopPropagation(e)
+        this.props.selectBookColumn({})
     }
 
     /************
@@ -299,7 +306,7 @@ class EventManager extends Component {
     handleVerseBarSelect() {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props.domProps
-        this.scrollElementIntoView('verse', selectedVerseIndex)
+        this._scrollElementIntoView('verse', selectedVerseIndex)
     }
 
     handleVerseInteractivate(e, verseIndex) {
@@ -328,6 +335,21 @@ class EventManager extends Component {
      * HELPERS *
      ***********/
 
+    _closeSections({
+        exemptDots,
+        exemptNav
+    }) {
+        if (!exemptDots) {
+            this.props.selectDotsExpand(false)
+        }
+
+        if (!exemptNav) {
+            this.props.selectNavExpand(false)
+        }
+
+        this.props.interactivateVerse()
+    }
+
     _stopPropagation(e) {
         if (e && e.stopPropagation) {
             e.stopPropagation()
@@ -344,7 +366,7 @@ class EventManager extends Component {
      * does not, even though it says it does?
      * https://www.npmjs.com/package/scroll-into-view-if-needed
      */
-    scrollElementIntoView(className, index, duration = 125) {
+    _scrollElementIntoView(className, index, duration = 125) {
         const selector = `${className}-${index}`,
             element = document.getElementsByClassName(selector)[0]
 
