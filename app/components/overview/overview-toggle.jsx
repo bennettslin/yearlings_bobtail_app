@@ -26,7 +26,7 @@ const OverviewToggleView = ({
     <div className="overview-toggle-button-container">
         <a
             className="overview-toggle-button enabled"
-            onClick={handleOverviewToggle}
+            onClick={e => handleOverviewToggle(e)}
         >
             {OVERVIEW_OPTIONS[selectedOverviewIndex]}
         </a>

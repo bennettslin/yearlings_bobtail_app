@@ -16,7 +16,13 @@ import { CAPS_LOCK,
          TITLE_SELECT_KEY,
          DOTS_SECTION_ACCESS_KEY,
          LYRIC_SECTION_ACCESS_KEY,
-         NAV_SECTION_ACCESS_KEY } from 'helpers/constants'
+         NAV_SECTION_ACCESS_KEY,
+
+         OVERVIEW_OPTIONS,
+         SHOWN,
+         HIDDEN,
+
+      } from 'helpers/constants'
 
 class AccessManager extends Component {
 
@@ -61,10 +67,10 @@ class AccessManager extends Component {
             this.props.handleAccessToggle(true)
 
             if (keyName.indexOf('Arrow') > -1) {
-                this.handleArrowKey(keyName)
+                this.handleArrowKey(e, keyName)
 
             } else {
-                this.handleLetterKey(keyName)
+                this.handleLetterKey(e, keyName)
             }
         }
     }
@@ -82,8 +88,8 @@ class AccessManager extends Component {
 
         // Close overview popup.
         // FIXME: Overview is 0 by default.
-        } else if (props.selectedOverviewIndex === 0) {
-            this.props.handleOverviewToggle(e)
+        } else if (OVERVIEW_OPTIONS[props.selectedOverviewIndex] === SHOWN) {
+            this.props.handleOverviewToggle(e, undefined, HIDDEN)
 
         // Close dots popup.
         } else if (props.selectedDotsIndex) {
@@ -96,55 +102,54 @@ class AccessManager extends Component {
         // Turn access off.
         } else {
             this.props.handleAccessToggle(false)
+            this.props.handleLyricVerseInteractivate()
         }
     }
 
-    handleArrowKey(arrowName) {
+    handleArrowKey(e, arrowName) {
 
     }
 
-    handleLetterKey(keyName) {
-
+    handleLetterKey(e, keyName) {
         switch (keyName) {
-            case OVERVIEW_TOGGLE_KEY:
-                // TODO: This should be smarter about toggling through all three.
-                this.props.handleOverviewToggle()
-                break
             case ADMIN_TOGGLE_KEY:
-                this.props.handleAdminToggle()
+                this.props.handleAdminToggle(e)
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
-                this.props.handleAudioOptionsToggle()
+                this.props.handleAudioOptionsToggle(e)
                 break
             case AUDIO_PLAY_KEY:
-                this.props.handleAudioPlay()
+                this.props.handleAudioPlay(e)
                 break
             case AUDIO_PREVIOUS_SONG_KEY:
-                this.props.handleAudioPreviousSong()
+                this.props.handleAudioPreviousSong(e)
                 break
             case AUDIO_NEXT_SONG_KEY:
-                this.props.handleAudioNextSong()
+                this.props.handleAudioNextSong(e)
+                break
+            case OVERVIEW_TOGGLE_KEY:
+                this.props.handleOverviewToggle(e)
                 break
             case SCORE_TOGGLE_KEY:
-                this.props.handleScoreToggle()
+                this.props.handleScoreToggle(e)
                 break
             case TIPS_TOGGLE_KEY:
-                this.props.handleTipsToggle()
+                this.props.handleTipsToggle(e)
                 break
             case LYRIC_SECTION_EXPAND_KEY:
-                this.props.handleLyricSectionExpand()
+                this.props.handleLyricSectionExpand(e)
                 break
             case TITLE_SELECT_KEY:
-                this.props.handleTitleSelect()
+                this.props.handleTitleSelect(e)
                 break
             case DOTS_SECTION_ACCESS_KEY:
                 // FIXME: Loop through dots options.
-                this.props.handleDotsSectionToggle()
+                this.props.handleDotsSectionToggle(e)
                 break
             case LYRIC_SECTION_ACCESS_KEY:
                 break
             case NAV_SECTION_ACCESS_KEY:
-                this.props.handleNavExpand()
+                this.props.handleNavExpand(e)
                 break
             default:
                 break

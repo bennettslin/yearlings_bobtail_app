@@ -235,8 +235,8 @@ class EventManager extends Component {
      * OVERVIEW *
      ************/
 
-    handleOverviewToggle(e) {
-        this.props.selectOverview(e)
+    handleOverviewToggle(e, selectedOverviewIndex, selectedOverviewKey) {
+        this.props.selectOverview(e, selectedOverviewIndex, selectedOverviewKey)
     }
 
     /*********

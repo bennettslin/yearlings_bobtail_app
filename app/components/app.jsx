@@ -279,9 +279,8 @@ class App extends Component {
         this.selectNavExpand(undefined, 0)
         this.selectDotsExpand(undefined, 0)
 
-        // Hide overview.
-        if (exemptSection !== AUDIO_SECTION && OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
-            this.selectOverview(undefined, undefined, overrideClosePopupsDefaultWithOverviewOption || HIDDEN)
+        if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
+            this.selectOverview(undefined, undefined, HIDDEN)
         }
 
         // Hide dots.
@@ -1065,6 +1064,7 @@ class App extends Component {
         // Hide popups, but don't collapse lyrics column.
         this._closePopupIfOpen({ exemptSection: LYRICS_SECTION })
         //
+
 
         // Deinteractivate verse.
         this.interactivateVerse()
