@@ -17,8 +17,7 @@ import { selectAdminIndex,
          selectDotsIndex,
          accessOn } from 'redux/actions'
 import EventManager from './event-manager'
-import { NAV_SECTION,
-         AUDIO_SECTION,
+import { AUDIO_SECTION,
          LYRICS_SECTION,
          DOTS_SECTION,
          ANNOTATION_SECTION,
@@ -36,18 +35,10 @@ import { NAV_SECTION,
 
          LYRIC_VERSE_ELEMENT,
          LYRIC_ANNOTATION_ELEMENT,
-         LYRIC_COLUMN_KEYS,
-
-         REFERENCE,
-
-         ESCAPE,
-         SPACE } from 'helpers/constants'
-import { getSong, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getAnnotationIndexForVerseIndex, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
+         LYRIC_COLUMN_KEYS } from 'helpers/constants'
+import { getSong, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getLyricsStartAtZero, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from 'helpers/responsive-helper'
-import AccessHelper from 'helpers/access-helper'
-import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
-import TempHelper from 'helpers/temp-app-helper'
 
 /*********
  * STORE *
@@ -243,11 +234,9 @@ class App extends Component {
     }
 
     _closePopupIfOpen({
-        accessOff,
         exemptSection,
         closedFromSpace,
         overrideClosePopupsDefaultWithSection,
-        overrideClosePopupsDefaultWithOverviewOption,
         selectedAnnotationIndex = this.props.selectedAnnotationIndex
     }) {
         const { selectedWikiIndex,
@@ -333,10 +322,6 @@ class App extends Component {
             popupWasOpen = true
         }
 
-        // if (accessOff) {
-        //     this._handleAccessOn(0)
-        // }
-
         return popupWasOpen
     }
 
@@ -368,11 +353,8 @@ class App extends Component {
             }
         }
 
-        let overrideClosePopupsDefaultWithOverviewOption
-
         // Show overview if it's not disabled, and if not selected from portal.
         if (!fromPortal && OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED) {
-            overrideClosePopupsDefaultWithOverviewOption = SHOWN
             this.selectOverview(undefined, undefined, SHOWN)
         }
 
@@ -596,16 +578,6 @@ class App extends Component {
                 }, 1)
             })
         }
-    }
-
-    selectWiki(e, selectedWikiIndex = 0) {
-        // Note that e is set to true from closePopup method.
-        this._stopPropagationOfClick(e)
-
-        this.props.selectWikiIndex(selectedWikiIndex)
-        // if (selectedWikiIndex) {
-        //     this._focusApp()
-        // }
     }
 
     selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, columnIndex) {
@@ -1042,6 +1014,14 @@ class App extends Component {
              */
             this.setState(newState)
         }
+    }
+
+    /********
+     * WIKI *
+     ********/
+
+    selectWiki(selectedWikiIndex = 0) {
+        this.props.selectWikiIndex(selectedWikiIndex)
     }
 
     render() {

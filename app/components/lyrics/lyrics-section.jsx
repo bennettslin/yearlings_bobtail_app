@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import LyricsUnit from './lyrics-unit'
-import { LYRICS_SECTION } from 'helpers/constants'
 import { getPropsAreSame } from 'helpers/general-helper'
 
 /*************

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import DotBlock from '../dot/dot-block'
-import { DOTS_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *

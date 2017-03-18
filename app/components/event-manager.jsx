@@ -72,7 +72,6 @@ class EventManager extends Component {
      **********/
 
     handleAccessToggle(accessedOn) {
-        // This method does not need to know the event.
         this.props.toggleAccess(accessedOn)
     }
 
@@ -80,17 +79,18 @@ class EventManager extends Component {
      * ADMIN *
      *********/
 
-    handleAdminToggle(e, selectedAdminIndex) {
+    handleAdminToggle(e) {
         this._stopPropagation(e)
-        this.props.toggleAdmin(selectedAdminIndex)
+        this.props.toggleAdmin()
     }
 
     /**************
      * ANNOTATION *
      **************/
 
-    handleAnnotationWikiSelect(e, wikiIndex) {
-        this.props.selectWiki(e, wikiIndex)
+    handleAnnotationWikiSelect(e, selectedWikiIndex) {
+        this._stopPropagation(e)
+        this.props.selectWiki(selectedWikiIndex)
     }
 
     handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex) {
@@ -123,9 +123,9 @@ class EventManager extends Component {
         this.props.selectSong(e, undefined, 1)
     }
 
-    handleAudioOptionsToggle(e, selectedAudioOptionIndex) {
+    handleAudioOptionsToggle(e) {
         this._stopPropagation(e)
-        this.props.selectAudioOption(selectedAudioOptionIndex)
+        this.props.selectAudioOption()
     }
 
     /****************
@@ -238,18 +238,18 @@ class EventManager extends Component {
      * SCORE *
      *********/
 
-    handleScoreToggle(e, selectedScoreIndex) {
+    handleScoreToggle(e) {
         this._stopPropagation(e)
-        this.props.selectScore(selectedScoreIndex)
+        this.props.selectScore()
     }
 
     /********
      * TIPS *
      ********/
 
-    handleTipsToggle(e, selectedTipsIndex) {
+    handleTipsToggle(e) {
         this._stopPropagation(e)
-        this.props.selectTips(selectedTipsIndex)
+        this.props.selectTips()
     }
 
     /*********
@@ -320,7 +320,8 @@ class EventManager extends Component {
      ********/
 
     handleWikiToggle(e) {
-        this.props.selectWiki(e)
+        this._stopPropagation(e)
+        this.props.selectWiki()
     }
 
     /***********

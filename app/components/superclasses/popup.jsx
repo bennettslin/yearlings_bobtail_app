@@ -111,14 +111,12 @@ class Popup extends Component {
 
     render() {
         const className = this.getClassName(),
-            { accessedOn,
-              showClose,
+            { showClose,
               showArrows,
               onPopupButtonCloseClick,
               onPopupButtonPreviousClick,
               onPopupButtonNextClick,
               handlePopupContainerClick } = this.props,
-             sectionClassName = `${className}-section`,
             element = this.getContentElement()
 
         return (

@@ -1,8 +1,7 @@
 import React from 'react'
 import AudioButtons from './audio-buttons'
 import TitleSection from '../title/title-section'
-import { AUDIO_SECTION,
-         SONG_FILES } from 'helpers/constants'
+import { SONG_FILES } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -10,7 +9,6 @@ import { AUDIO_SECTION,
 
 const AudioSection = ({
 
-    accessedOn,
     selectedSongIndex,
 
 ...other }) => {

@@ -3,7 +3,6 @@ import NavBook from './nav-book'
 import NavItem from './nav-item'
 import ProgressFooter from '../admin/progress/progress-footer'
 import ProgressHelper from 'helpers/progress-helper'
-import { NAV_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -14,7 +13,6 @@ const NavSection = ({
     songs = [],
     selectedAdminIndex,
     allTasks,
-    accessedOn,
 
 ...other }) => {
 

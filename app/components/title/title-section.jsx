@@ -1,5 +1,4 @@
 import React from 'react'
-import { NAV_SECTION } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -7,7 +6,6 @@ import { NAV_SECTION } from 'helpers/constants'
 
 const TitleSection = ({
 
-    accessedOn,
     accessedSongIndex,
 
 ...other }) => {

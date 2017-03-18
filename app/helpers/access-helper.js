@@ -6,16 +6,7 @@ import { getAnnotationIndexForDirection,
 
 import { getIntegerForCharKey } from 'helpers/general-helper'
 
-import { getIsPhone } from 'helpers/responsive-helper'
-
-import { NAV_SECTION,
-         AUDIO_SECTION,
-         LYRICS_SECTION,
-         DOTS_SECTION,
-         ANNOTATION_SECTION,
-         WIKI_SECTION,
-
-         LYRIC_VERSE_ELEMENT,
+import { LYRIC_VERSE_ELEMENT,
          LYRIC_ANNOTATION_ELEMENT,
 
          ALL_DOT_KEYS,
@@ -35,7 +26,6 @@ export default {
         selectTips,
         togglePlay,
         toggleAdmin,
-        windowResize,
         selectTime,
         selectLyricExpand,
         selectBookColumn,
