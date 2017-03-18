@@ -70,14 +70,6 @@ class EventManager extends Component {
         this.props.clickPopupContainer(e)
     }
 
-    handleVerseElementSelect(verseElement) {
-        this.props.selectVerseElement(verseElement)
-    }
-
-    handleVerseElementSlide(verseElement) {
-        this.props.slideVerseElement(verseElement)
-    }
-
     /**********
      * ACCESS *
      **********/
@@ -134,8 +126,9 @@ class EventManager extends Component {
         this.props.selectSong(e, undefined, 1)
     }
 
-    handleAudioOptionsToggle(e) {
-        this.props.selectAudioOption(e)
+    handleAudioOptionsToggle(e, selectedAudioOptionIndex) {
+        this._stopPropagation(e)
+        this.props.selectAudioOption(selectedAudioOptionIndex)
     }
 
     handleAudioSliderMouseOrTouchBegin(e) {
@@ -270,6 +263,18 @@ class EventManager extends Component {
 
     handleTitleSelect(e) {
         this.props.selectSong(e, 0)
+    }
+
+    /*********
+     * VERSE *
+     *********/
+
+    handleVerseElementSelect(verseElement) {
+        this.props.selectVerseElement(verseElement)
+    }
+
+    handleVerseElementSlide(verseElement) {
+        this.props.slideVerseElement(verseElement)
     }
 
     /********

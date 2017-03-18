@@ -547,22 +547,6 @@ class App extends Component {
         }, selectedSongIndex + willAdvance)
     }
 
-    selectAudioOption(e, direction = 1) {
-        const optionsLength = AUDIO_OPTIONS.length
-
-        this._stopPropagationOfClick(e)
-
-        this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
-    }
-
-    interactivateVerse(e, interactivatedVerseIndex = -1) {
-        this._stopPropagationOfClick(e)
-
-        this.setState({
-            interactivatedVerseIndex
-        })
-    }
-
     selectLyricExpand(e, isLyricExpanded = !this.state.isLyricExpanded) {
         // Don't bother if lyric is not expandable, or if it's a logue.
         if (getIsLyricExpandable(this.state) && !getIsLogue(this.props)) {
@@ -1040,6 +1024,11 @@ class App extends Component {
         this.interactivateVerse()
     }
 
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+
     /**********
      * ACCESS *
      **********/
@@ -1064,14 +1053,38 @@ class App extends Component {
         this.props.selectAdminIndex(selectedAdminIndex)
     }
 
+    /*********
+     * AUDIO *
+     *********/
+
+    selectAudioOption(selectedAudioOptionIndex =
+        (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length) {
+        // If no argument passed, then just toggle amongst audio options.
+
+        this.props.selectAudioOptionIndex(selectedAudioOptionIndex)
+    }
+
     /********
      * TIPS *
      ********/
 
-    selectTips(selectedTipsIndex = (this.props.selectedTipsIndex + 1) % TIPS_OPTIONS.length) {
+    selectTips(selectedTipsIndex =
+        (this.props.selectedTipsIndex + 1) % TIPS_OPTIONS.length) {
         // If no argument passed, then just toggle amongst tips options.
 
         this.props.selectTipsIndex(selectedTipsIndex)
+    }
+
+    /*********
+     * VERSE *
+     *********/
+
+    interactivateVerse(e, interactivatedVerseIndex = -1) {
+        this._stopPropagationOfClick(e)
+
+        this.setState({
+            interactivatedVerseIndex
+        })
     }
 
     render() {

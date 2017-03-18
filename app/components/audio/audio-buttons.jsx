@@ -73,7 +73,7 @@ const AudioButtonsView = ({
         <div className="audio-subblock option-subblock">
             <a
                 className="audio-button enabled"
-                onClick={handleAudioOptionsToggle}
+                onClick={e => handleAudioOptionsToggle(e)}
             >
                 <div className="button-icon audio-neutral">
                     {AUDIO_OPTIONS[selectedAudioOptionIndex]}
