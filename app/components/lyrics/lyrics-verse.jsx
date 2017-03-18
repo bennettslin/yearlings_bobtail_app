@@ -27,7 +27,6 @@ const LyricsVerse = ({
 
     const { inVerseBar,
             verseObject,
-            sectionAccessHighlighted,
             accessedLyricElement } = other,
         { lyric,
           isTitle,
@@ -47,7 +46,7 @@ const LyricsVerse = ({
         isHoverable = inMain && !isInteractivated && interactivatedVerseIndex === -1,
 
         isAfterSelected = verseIndex > selectedVerseIndex,
-        accessHighlighted = sectionAccessHighlighted && accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
+        accessHighlighted = accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
         isDoubleSpeaker = !lyric,
         handleAnchorClick = handleLyricAnnotationSelect,
 

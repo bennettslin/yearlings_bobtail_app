@@ -59,7 +59,6 @@ const AnnotationCardView = ({
     handleAnnotationWikiSelect,
     handleAnnotationPortalSelect,
     selectedWikiIndex,
-    sectionAccessHighlighted,
     accessedPopupAnchorIndex,
 
     // From controller.
@@ -82,7 +81,6 @@ const AnnotationCardView = ({
             text={text}
             showWikis={showWikis}
             selectedWikiIndex={selectedWikiIndex}
-            sectionAccessHighlighted={sectionAccessHighlighted}
             accessedPopupAnchorIndex={accessedPopupAnchorIndex}
             handleAnchorClick={handleAnnotationWikiSelect}
         />
@@ -91,7 +89,6 @@ const AnnotationCardView = ({
                 songs={songs}
                 selectedDotKeys={selectedDotKeys}
                 portalLinks={portalLinks}
-                sectionAccessHighlighted={sectionAccessHighlighted}
                 accessedPopupAnchorIndex={accessedPopupAnchorIndex}
                 handleAnnotationPortalSelect={handleAnnotationPortalSelect}
             />

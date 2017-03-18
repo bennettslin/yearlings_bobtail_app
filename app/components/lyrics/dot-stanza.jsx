@@ -13,7 +13,6 @@ const DotStanza = ({
     dotStanzaObject,
     selectedAnnotationIndex,
     selectedDotKeys,
-    sectionAccessHighlighted,
     accessedAnnotationIndex,
     accessedLyricElement,
 
@@ -23,7 +22,7 @@ const DotStanza = ({
             dotKeys } = dotStanzaObject,
 
         isSelected = annotationIndex === selectedAnnotationIndex,
-        accessHighlighted = sectionAccessHighlighted && accessedAnnotationIndex === annotationIndex && accessedLyricElement === LYRIC_ANNOTATION_ELEMENT,
+        accessHighlighted = accessedAnnotationIndex === annotationIndex && accessedLyricElement === LYRIC_ANNOTATION_ELEMENT,
 
         // Hide dot keys that are not present.
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),

@@ -16,13 +16,7 @@ import { CAPS_LOCK,
          TITLE_SELECT_KEY,
          DOTS_SECTION_ACCESS_KEY,
          LYRIC_SECTION_ACCESS_KEY,
-         NAV_SECTION_ACCESS_KEY
-
-        //  SECTION_KEYS,
-        //  NAV_SECTION,
-        //  LYRICS_SECTION,
-        //  DOTS_SECTION
-      } from 'helpers/constants'
+         NAV_SECTION_ACCESS_KEY } from 'helpers/constants'
 
 class AccessManager extends Component {
 
@@ -106,27 +100,10 @@ class AccessManager extends Component {
     }
 
     handleArrowKey(arrowName) {
-        // const { accessedSectionIndex } = this.props,
-        //     accessedSectionKey = SECTION_KEYS[accessedSectionIndex - 1]
-        //
-        // switch (accessedSectionKey) {
-        //     case NAV_SECTION:
-        //
-        //         break
-        //     case LYRICS_SECTION:
-        //
-        //         break
-        //     case DOTS_SECTION:
-        //
-        //         break
-        //     default:
-        //
-        //         break
-        // }
+
     }
 
     handleLetterKey(keyName) {
-        let newAccessedSectionKey
 
         switch (keyName) {
             case OVERVIEW_TOGGLE_KEY:
@@ -163,23 +140,15 @@ class AccessManager extends Component {
             case DOTS_SECTION_ACCESS_KEY:
                 // FIXME: Loop through dots options.
                 this.props.handleDotsSectionToggle()
-                // newAccessedSectionKey = DOTS_SECTION
                 break
             case LYRIC_SECTION_ACCESS_KEY:
-                // newAccessedSectionKey = LYRICS_SECTION
                 break
             case NAV_SECTION_ACCESS_KEY:
                 this.props.handleNavExpand()
-                // newAccessedSectionKey = NAV_SECTION
                 break
             default:
                 break
         }
-
-        // Persist new accessed section key.
-        // if (newAccessedSectionKey) {
-        //     this.props.handleAccessedSectionSelect(newAccessedSectionKey)
-        // }
     }
 
     render() {

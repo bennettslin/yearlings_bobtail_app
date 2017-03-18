@@ -15,9 +15,7 @@ import { selectAdminIndex,
          selectScoreIndex,
          selectNavIndex,
          selectDotsIndex,
-         accessOn,
-        //  accessSectionIndex
-     } from 'redux/actions'
+         accessOn } from 'redux/actions'
 import EventManager from './event-manager'
 import { NAV_SECTION,
          AUDIO_SECTION,
@@ -25,7 +23,6 @@ import { NAV_SECTION,
          DOTS_SECTION,
          ANNOTATION_SECTION,
          WIKI_SECTION,
-         SECTION_KEYS,
 
          SHOWN,
          HIDDEN,
@@ -71,8 +68,7 @@ const passReduxStateToProps = ({
     selectedScoreIndex,
     selectedNavIndex,
     selectedDotsIndex,
-    accessedOn,
-    // accessedSectionIndex
+    accessedOn
 }) => ({
     // Pass Redux state into component props.
     selectedAdminIndex,
@@ -89,8 +85,7 @@ const passReduxStateToProps = ({
     selectedScoreIndex,
     selectedNavIndex,
     selectedDotsIndex,
-    accessedOn,
-    // accessedSectionIndex
+    accessedOn
 })
 
 const bindDispatchToProps = (dispatch) => (
@@ -110,8 +105,7 @@ const bindDispatchToProps = (dispatch) => (
         selectScoreIndex,
         selectNavIndex,
         selectDotsIndex,
-        accessOn,
-        // accessSectionIndex
+        accessOn
     }, dispatch)
 )
 
@@ -206,7 +200,6 @@ class App extends Component {
         this.toggleAccess = this.toggleAccess.bind(this)
         this.toggleAdmin = this.toggleAdmin.bind(this)
         this.togglePlay = this.togglePlay.bind(this)
-        // this.selectAccessedSection = this.selectAccessedSection.bind(this)
         this.selectSong = this.selectSong.bind(this)
         this.selectOverview = this.selectOverview.bind(this)
         this.selectAudioOption = this.selectAudioOption.bind(this)
@@ -232,7 +225,6 @@ class App extends Component {
         this.scrollLyricSection = this.scrollLyricSection.bind(this)
         this.selectVerseBar = this.selectVerseBar.bind(this)
         // this._handleAccessOn = this._handleAccessOn.bind(this)
-        // this._handleSectionAccess = this._handleSectionAccess.bind(this)
         this.clickBody = this.clickBody.bind(this)
         // this.pressDownKey = this.pressDownKey.bind(this)
         this.clickPopupContainer = this.clickPopupContainer.bind(this)
@@ -478,12 +470,6 @@ class App extends Component {
 
     togglePlay(e) {
         this._stopPropagationOfClick(e)
-        // if (e) {
-        //     this._handleSectionAccess({
-        //         accessedSectionKey: AUDIO_SECTION,
-        //         bypassClosingPopups: true
-        //     })
-        // }
 
         const isPlaying = !this.state.isPlaying
 
@@ -547,13 +533,6 @@ class App extends Component {
             // Scroll to top of lyrics.
             this.scrollElementIntoView('lyrics-scroll', 'home')
 
-            // if (!e.skipHandleSectionAccess) {
-            //     this._handleSectionAccess({
-            //         accessedSectionKey: direction ? AUDIO_SECTION : NAV_SECTION,
-            //         selectedSongIndex,
-            //         overrideClosePopupsDefaultWithOverviewOption
-            //     })
-            // }
         }
 
         this.selectBookColumn(e, true, selectedSongIndex)
@@ -584,7 +563,6 @@ class App extends Component {
          * on same song, and start at beginning. (True evaluates to 1, false 0.)
          */
         this.selectSong({
-            skipHandleSectionAccess: true,
 
             // FIXME: This should be set based on whether an annotation, score, or wiki popup is currently shown.
             preservePreviousPopupIndex: true
@@ -595,12 +573,6 @@ class App extends Component {
         const optionsLength = AUDIO_OPTIONS.length
 
         this._stopPropagationOfClick(e)
-        // if (e) {
-        //     this._handleSectionAccess({
-        //         accessedSectionKey: AUDIO_SECTION,
-        //         bypassClosingPopups: true
-        //     })
-        // }
 
         this.props.selectAudioOptionIndex((this.props.selectedAudioOptionIndex + direction + optionsLength) % optionsLength)
     }
@@ -623,13 +595,6 @@ class App extends Component {
                 // Start with lyric buttons shown when lyric column is expanded.
                 showLyricButtons: true
             })
-
-            // if (e) {
-            //     this._handleSectionAccess({
-            //         accessedSectionKey: LYRICS_SECTION,
-            //         overrideClosePopupsDefaultWithSection: LYRICS_SECTION
-            //     })
-            // }
         }
     }
 
@@ -679,16 +644,6 @@ class App extends Component {
 
                 this.selectAnnotation()
 
-                // this._handleSectionAccess({
-                //     accessedSectionKey: DOTS_SECTION,
-                //     selectedAnnotationIndex: 0
-                // })
-
-            } else {
-                // this._handleSectionAccess({
-                //     accessedSectionKey: e.overrideClosePopupsDefaultWithSection || AUDIO_SECTION,
-                //     bypassClosingPopups: e.bypassClosingPopups
-                // })
             }
         }
     }
@@ -778,15 +733,6 @@ class App extends Component {
             this.selectAnnotation()
             annotationDeselected = true
         }
-
-        // if (e) {
-        //     this._handleSectionAccess({
-        //         accessedSectionKey: DOTS_SECTION,
-        //
-        //         // App does not yet know that popups have been deselected.
-        //         selectedAnnotationIndex: annotationDeselected ? 0 : undefined
-        //     })
-        // }
     }
 
     /**
@@ -830,20 +776,6 @@ class App extends Component {
                 }, 1)
             })
         }
-
-        if (e) {
-            // const accessedSectionKey = e.overrideClosePopupsDefaultWithSection ||
-            //     (selectedAnnotationIndex ? ANNOTATION_SECTION : LYRICS_SECTION)
-            //
-            // this.selectDotsExpand(undefined, 0)
-
-            // this._handleSectionAccess({
-            //     accessedSectionKey,
-            //     selectedAnnotationIndex,
-            //     bypassClosingPopups: e.bypassClosingPopups,
-            //     overrideClosePopupsDefaultWithSection: accessedSectionKey
-            // })
-        }
     }
 
     selectWiki(e, selectedWikiIndex = 0) {
@@ -854,17 +786,6 @@ class App extends Component {
         // if (selectedWikiIndex) {
         //     this._focusApp()
         // }
-
-        if (e) {
-            const accessedSectionKey = e.overrideClosePopupsDefaultWithSection ||
-                (selectedWikiIndex ? WIKI_SECTION : ANNOTATION_SECTION)
-
-            // this._handleSectionAccess({
-            //     accessedSectionKey,
-            //     selectedWikiIndex,
-            //     bypassClosingPopups: e.bypassClosingPopups
-            // })
-        }
     }
 
     selectScore(e, selectedScoreIndex) {
@@ -952,12 +873,6 @@ class App extends Component {
             // Select corresponding time.
             selectedTimePlayed = songTimes[selectedVerseIndex]
             scroll = true
-            // this._handleSectionAccess({
-            //     accessedSectionKey: direction ? AUDIO_SECTION : LYRICS_SECTION,
-            //
-            //     // Selecting verse and time should have no effect on popups.
-            //     bypassClosingPopups: true
-            // })
 
         // A new song has been selected.
         } else {
@@ -1169,28 +1084,11 @@ class App extends Component {
         this.props.accessOn(accessedOn)
     }
 
-    // selectAccessedSection(accessedSectionKey) {
-    //     let accessedSectionIndex = 0
-    //
-    //     // Loop through the section keys.
-    //     if (accessedSectionKey) {
-    //         while (SECTION_KEYS[accessedSectionIndex] !== accessedSectionKey && accessedSectionIndex < SECTION_KEYS.length) {
-    //             accessedSectionIndex++
-    //         }
-    //
-    //         // Accessed section index is 1-based.
-    //         accessedSectionIndex++
-    //     }
-    //
-    //     this.props.accessSectionIndex(accessedSectionIndex)
-    // }
-
     // pressDownKey(keyName) {
     //
     //     // If universal key, handle and return.
     //     if (AccessHelper.handleKeyIfUniversal({
     //         keyName,
-    //         handleSectionAccess: this._handleSectionAccess,
     //         selectOverview: this.selectOverview,
     //         selectDotsExpand: this.selectDotsExpand,
     //         selectAudioOption: this.selectAudioOption,
@@ -1227,182 +1125,37 @@ class App extends Component {
     //         // Escape turns off access.
     //         if (keyName === ESCAPE) {
     //             this._handleAccessOn()
-    //
-    //         // Space closes popup if open, otherwise accesses next section.
-    //         } else if (keyName === SPACE) {
-    //             if (!this._closePopupIfOpen({ closedFromSpace: true })) {
-    //                 this._handleSectionAccess({})
-    //             }
-    //
-    //         // Assign handler based on which section is accessed.
-    //         } else {
-    //             const accessedSectionKey = SECTION_KEYS[this.props.accessedSectionIndex]
-    //             let newState
-    //
-    //             switch (accessedSectionKey) {
-    //                 case NAV_SECTION:
-    //                     newState = AccessHelper.handleSongAccess({
-    //                         keyName,
-    //                         songsLength: this.props.songs.length,
-    //                         accessedSongIndex: this.state.accessedSongIndex,
-    //                         selectSong: this.selectSong,
-    //                         selectedBookColumnIndex: this.state.selectedBookColumnIndex,
-    //                         bookStartingIndices: this.props.bookStartingIndices,
-    //                         selectBookColumn: this.selectBookColumn
-    //                     })
-    //                     break
-    //                 case AUDIO_SECTION:
-    //                     AccessHelper.handleAudioAccess({
-    //                         keyName,
-    //                         selectAudioOption: this.selectAudioOption,
-    //                         selectVerse: this.selectVerse,
-    //                         selectSong: this.selectSong
-    //                     })
-    //                     break
-    //                 case ANNOTATION_SECTION:
-    //                 case LYRICS_SECTION: {
-    //                     const fromAnnotationSection = accessedSectionKey === ANNOTATION_SECTION,
-    //                         lyricColumnShown = getShowSingleLyricColumn(this.props, this.state) ? (LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]) : undefined
-    //
-    //                     newState = AccessHelper.handleLyricsAndAnnotationAccess({
-    //                         keyName,
-    //                         fromAnnotationSection,
-    //                         props: this.props,
-    //                         accessedAnnotationIndex: this.state.accessedAnnotationIndex,
-    //                         accessedVerseIndex: this.state.accessedVerseIndex,
-    //                         accessedLyricElement: this.state.accessedLyricElement,
-    //                         lyricColumnShown,
-    //                         selectAnnotation: this.selectAnnotation,
-    //                         scrollElementIntoView: this.scrollElementIntoView
-    //                     }) || {}
-    //
-    //                     if (accessedSectionKey === LYRICS_SECTION) {
-    //                         const newLyricState = AccessHelper.handleLyricsAccess({
-    //                             keyName,
-    //                             props: this.props,
-    //                             accessedAnnotationIndex: this.state.accessedAnnotationIndex,
-    //                             accessedVerseIndex: this.state.accessedVerseIndex,
-    //                             accessedLyricElement: this.state.accessedLyricElement,
-    //                             selectVerse: this.selectVerse,
-    //                             selectLyricColumn: this.selectLyricColumn,
-    //                             scrollElementIntoView: this.scrollElementIntoView,
-    //                             lyricColumnShown
-    //                         })
-    //
-    //                         if (newLyricState) {
-    //                             newState = Object.assign(newState, newLyricState)
-    //                         }
-    //
-    //                     } else if (accessedSectionKey === ANNOTATION_SECTION) {
-    //                         const accessedPopupAnchorIndex = AccessHelper.handleAnnotationAccess({
-    //                             keyName,
-    //                             props: this.props,
-    //                             accessedPopupAnchorIndex: this.state.accessedPopupAnchorIndex,
-    //                             selectWikiOrPortal: this.selectWikiOrPortal
-    //                         })
-    //
-    //                         if (accessedPopupAnchorIndex) {
-    //                             newState.accessedPopupAnchorIndex = accessedPopupAnchorIndex
-    //                         }
-    //                     }
-    //                     break
-    //                 }
-    //                 case DOTS_SECTION:
-    //                     newState = AccessHelper.handleDotAccess({
-    //                         keyName,
-    //                         accessedDotIndex: this.state.accessedDotIndex,
-    //                         selectDot: this.selectDot
-    //                     })
-    //                     break
-    //             }
-    //
-    //             if (newState) {
-    //                 this.setState(newState)
-    //             }
     //         }
     //     }
     // }
 
-    // _selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex) {
-    //     const accessedSectionKey = SECTION_KEYS[accessedSectionIndex]
-    //     let newState
-    //
-    //     switch (accessedSectionKey) {
-    //         case NAV_SECTION:
-    //             this.selectBookColumn(undefined, true, selectedSongIndex)
-    //             newState = { accessedSongIndex: this.props.selectedSongIndex }
-    //             break
-    //         case LYRICS_SECTION:
-    //             newState = {
-    //                 accessedVerseIndex: this.props.selectedVerseIndex,
-    //                 accessedAnnotationIndex: getAnnotationIndexForVerseIndex(this.props, this.props.selectedVerseIndex)
-    //              }
-    //             break
-    //         default:
-    //             break
-    //     }
-    //
-    //     if (newState) {
-    //          this.setState(newState)
-    //     }
-    // }
+    _selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex) {
+        const accessedSectionKey = SECTION_KEYS[accessedSectionIndex]
+        let newState
 
-    // _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2, accessedSectionIndex = this.props.accessedSectionIndex) {
-    //     // this._focusApp()
-    //
-    //     // if (accessedOn) {
-    //     //     this._selectDefaultSectionElementIndex(accessedSectionIndex)
-    //     //
-    //     //     // If accessed section is dots section, expand the popup.
-    //     //     if (SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
-    //     //         this.selectDotsExpand(undefined, 1)
-    //     //     }
-    //     //
-    //     //     // Hide overview if shown.
-    //     //     if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-    //     //         this.selectOverview(undefined, undefined, HIDDEN)
-    //     //     }
-    //     // }
-    //
+        switch (accessedSectionKey) {
+            case NAV_SECTION:
+                this.selectBookColumn(undefined, true, selectedSongIndex)
+                newState = { accessedSongIndex: this.props.selectedSongIndex }
+                break
+            case LYRICS_SECTION:
+                newState = {
+                    accessedVerseIndex: this.props.selectedVerseIndex,
+                    accessedAnnotationIndex: getAnnotationIndexForVerseIndex(this.props, this.props.selectedVerseIndex)
+                 }
+                break
+            default:
+                break
+        }
+
+        if (newState) {
+             this.setState(newState)
+        }
+    }
+
+    // _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
     //     // Stored as integer. 0 is false, 1 is true.
     //     this.props.accessOn(accessedOn)
-    // }
-
-    // _handleSectionAccess({ accessedSectionKey,
-    //                        accessOn,
-    //                        selectedSongIndex = this.props.selectedSongIndex,
-    //                        selectedAnnotationIndex = this.props.selectedAnnotationIndex,
-    //                        bypassClosingPopups,
-    //                        overrideClosePopupsDefaultWithSection,
-    //                        overrideClosePopupsDefaultWithOverviewOption }) {
-    //
-    //     const accessedSectionIndex = AccessHelper.handleSectionAccess({
-    //             deviceIndex: this.state.deviceIndex,
-    //             isLogue: getIsLogue({ selectedSongIndex, songs: this.props.songs }),
-    //             accessOn,
-    //             accessedSectionKey,
-    //             currentAccessedSectionIndex: this.props.accessedSectionIndex,
-    //             handleAccessOn: this._handleAccessOn
-    //         }),
-    //         sectionKey = accessedSectionKey || SECTION_KEYS[accessedSectionIndex]
-    //
-    //     // If accessed section is dots section, expand the popup...
-    //     if (sectionKey === DOTS_SECTION) {
-    //         this.selectDotsExpand(undefined, 1)
-    //     }
-    //
-    //     this._selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex)
-    //     this.props.accessSectionIndex(accessedSectionIndex)
-    //
-    //     if (!bypassClosingPopups) {
-    //         this._closePopupIfOpen({
-    //             exemptSection: sectionKey,
-    //             overrideClosePopupsDefaultWithSection,
-    //             overrideClosePopupsDefaultWithOverviewOption,
-    //             selectedAnnotationIndex
-    //         })
-    //     }
-    //     // this._focusApp()
     // }
 
     render() {
@@ -1420,7 +1173,6 @@ class App extends Component {
                 mouseOrTouchBodyMove={this.mouseOrTouchBodyMove}
                 mouseOrTouchBodyEnd={this.mouseOrTouchBodyEnd}
                 // pressDownKey={this.pressDownKey}
-                // selectAccessedSection={this.selectAccessedSection}
                 selectAnnotation={this.selectAnnotation}
                 selectAudioOption={this.selectAudioOption}
                 selectBookColumn={this.selectBookColumn}

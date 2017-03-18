@@ -7,7 +7,6 @@ class EventManager extends Component {
         super(props)
 
         this.handleAccessToggle = this.handleAccessToggle.bind(this)
-        // this.handleAccessedSectionSelect = this.handleAccessedSectionSelect.bind(this)
         this.handleAdminToggle = this.handleAdminToggle.bind(this)
         this.handleBodyClick = this.handleBodyClick.bind(this)
         this.handleBodyMouseOrTouchMove = this.handleBodyMouseOrTouchMove.bind(this)
@@ -61,10 +60,6 @@ class EventManager extends Component {
     handleAccessToggle(accessedOn) {
         this.props.toggleAccess(accessedOn)
     }
-
-    // handleAccessedSectionSelect(e) {
-    //     this.props.selectAccessedSection(e)
-    // }
 
     handleAdminToggle(e) {
         this.props.toggleAdmin(e)
@@ -284,7 +279,6 @@ class EventManager extends Component {
         return (
             <AccessManager {...domProps} {...domState}
                 handleAccessToggle={this.handleAccessToggle}
-                // handleAccessedSectionSelect={this.handleAccessedSectionSelect}
                 handleAdminToggle={this.handleAdminToggle}
                 handleBodyClick={this.handleBodyClick}
                 handleBodyMouseOrTouchMove={this.handleBodyMouseOrTouchMove}

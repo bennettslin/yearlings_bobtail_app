@@ -14,12 +14,11 @@ const NavItem = ({
     hasSelectedSong,
     selectedSongIndex,
     accessedSongIndex,
-    sectionAccessHighlighted,
 
 ...other }) => {
 
     const isSelected = isToggle ? hasSelectedSong : selectedSongIndex === index,
-        accessHighlighted = sectionAccessHighlighted && accessedSongIndex === index,
+        accessHighlighted = accessedSongIndex === index,
         navItemProps = {
             songIndex: index,
             isSelected,

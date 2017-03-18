@@ -4,9 +4,7 @@ import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './audio/audio-players-section'
 import { DEVICE_OBJECTS,
          OVERVIEW_OPTIONS,
-         SHOWN,
-        //  SECTION_KEYS
-     } from 'helpers/constants'
+         SHOWN } from 'helpers/constants'
 import { getSongTitle, getSongTimes, getVerse, getIsLogue, getHiddenLyricColumnKey, getLyricsStartAtZero } from 'helpers/album-view-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable, getShowSingleLyricColumn } from 'helpers/responsive-helper'
 
@@ -41,7 +39,6 @@ class DomManager extends Component {
               sliderVerseIndex,
 
               accessedOn,
-              accessedSectionIndex,
 
               mp3s,
               isPlaying,
@@ -58,9 +55,6 @@ class DomManager extends Component {
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             isDesktop = getIsDesktop(deviceIndex),
             isPhone = getIsPhone({ deviceIndex }),
-
-            // Accessed section index is 1-based.
-            // accessedSectionKey = accessedSectionIndex > 0 ? SECTION_KEYS[accessedSectionIndex - 1] : null,
 
             isLogue = getIsLogue(props),
             selectedSongTitle = getSongTitle(props, isLogue),
@@ -143,8 +137,6 @@ class DomManager extends Component {
                     showOverlay={showOverlay}
                     isOverviewShown={isOverviewShown}
                     isOverlaidAnnotation={isOverlaidAnnotation}
-
-                    // accessedSectionKey={accessedSectionKey}
                 />
             </div>
         )

@@ -8,17 +8,14 @@ import { NAV_SECTION } from 'helpers/constants'
 const TitleSection = ({
 
     accessedOn,
-    accessedSectionKey,
     accessedSongIndex,
 
 ...other }) => {
 
-    const sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION,
-        titleAccessHighlighted = sectionAccessHighlighted && accessedSongIndex === 0
+    const titleAccessHighlighted = accessedSongIndex === 0
 
     return (
         <TitleSectionView {...other}
-            sectionAccessHighlighted={sectionAccessHighlighted}
             titleAccessHighlighted={titleAccessHighlighted}
         />
     )
@@ -33,12 +30,11 @@ const TitleSectionView = ({
     // From props.
     titleInAudio,
     title,
-    sectionAccessHighlighted,
     titleAccessHighlighted,
     handleTitleSelect
 
 }) => (
-    <div className={`section title-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}>
+    <div className="section title-section">
         <a
             className={`title-button enabled${titleAccessHighlighted ? ' access-highlighted' : ''}`}
             onClick={handleTitleSelect}

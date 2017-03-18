@@ -17,14 +17,6 @@ const LYRIC = 'lyric',
     PORTAL = 'portal',
     AFTERWORD = 'afterword',
 
-    // These are class names.
-    // AUDIO_SECTION = 'audio-section',
-    // NAV_SECTION = 'nav-section',
-    // LYRICS_SECTION = 'lyrics-section',
-    // DOTS_SECTION = 'dots-section',
-    // ANNOTATION_SECTION = 'annotation-section',
-    // WIKI_SECTION = 'wiki-section',
-
     // Audio options.
     CONTINUE = 'continue',
     REPEAT = 'repeat',
@@ -205,21 +197,6 @@ module.exports = {
         HIDDEN
     ],
 
-    // NAV_SECTION,
-    // AUDIO_SECTION,
-    // LYRICS_SECTION,
-    // DOTS_SECTION,
-    // ANNOTATION_SECTION,
-    // WIKI_SECTION,
-    // SECTION_KEYS: [
-    //     AUDIO_SECTION,
-    //     NAV_SECTION,
-    //     LYRICS_SECTION,
-    //     DOTS_SECTION
-    //     ANNOTATION_SECTION,
-    //     WIKI_SECTION
-    // ],
-
     CLOSE_POPUP_BUTTON: 'close',
     PREVIOUS_POPUP_BUTTON: 'side-button previous',
     NEXT_POPUP_BUTTON: 'side-button next',
@@ -239,7 +216,6 @@ module.exports = {
     SELECTED_DOTS_INDEX: 'selectedDotsIndex',
     SELECTED_SCORE_INDEX: 'selectedScoreIndex',
     ACCESSED_ON: 'accessedOn',
-    // ACCESSED_SECTION_INDEX: 'accessedSectionIndex',
 
     // This is only used by the stats helper.
     STAT_TEXT_KEYS: [

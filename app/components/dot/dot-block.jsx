@@ -48,7 +48,6 @@ const DotBlockView = ({
     inBackground,
     selectedDotKeys,
     presentDotKeys,
-    sectionAccessHighlighted,
     accessedDotIndex,
     annotationIndex,
     inAnchor,
@@ -76,7 +75,7 @@ const DotBlockView = ({
                      * dotssection, while only first present dot is shown in dot stanza.
                      */
 
-                    const accessHighlighted = sectionAccessHighlighted && accessedDotIndex === index,
+                    const accessHighlighted = accessedDotIndex === index,
                         toRender = (isPresent || inDotsSection) && !firstDotKeyShown
 
                     // Only show first dot key.

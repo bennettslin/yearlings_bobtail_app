@@ -11,13 +11,11 @@ import { AUDIO_SECTION,
 const AudioSection = ({
 
     accessedOn,
-    accessedSectionKey,
     selectedSongIndex,
 
 ...other }) => {
 
-    const sectionAccessHighlighted = accessedOn && accessedSectionKey === AUDIO_SECTION,
-        isPrologue = selectedSongIndex === 0,
+    const isPrologue = selectedSongIndex === 0,
         isFirstSong = selectedSongIndex === 1,
         isLastSong = selectedSongIndex === SONG_FILES.length,
         isEpilogue = selectedSongIndex === SONG_FILES.length + 1
@@ -28,7 +26,6 @@ const AudioSection = ({
             isFirstSong={isFirstSong}
             isLastSong={isLastSong}
             isEpilogue={isEpilogue}
-            sectionAccessHighlighted={sectionAccessHighlighted}
         />
     )
 }
@@ -63,8 +60,7 @@ const AudioSectionView = ({
     isPrologue,
     isFirstSong,
     isLastSong,
-    isEpilogue,
-    sectionAccessHighlighted
+    isEpilogue
 
 }) => {
 
@@ -92,7 +88,7 @@ const AudioSectionView = ({
 
     return (
         <div
-            className={`section audio-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
+            className="section audio-section"
         >
             {selectedAdminIndex &&
                 <h2>audio</h2>

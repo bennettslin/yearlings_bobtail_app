@@ -15,14 +15,11 @@ const NavSection = ({
     selectedAdminIndex,
     allTasks,
     accessedOn,
-    accessedSectionKey,
 
 ...other }) => {
 
     const maxTotalNeededHours = selectedAdminIndex ? ProgressHelper.getMaxTotalNeededHoursFromSongs(songs) : null,
-        sumAllTasks = allTasks && selectedAdminIndex ? ProgressHelper.calculateSumAllTasks(allTasks) : null,
-
-        sectionAccessHighlighted = accessedOn && accessedSectionKey === NAV_SECTION
+        sumAllTasks = allTasks && selectedAdminIndex ? ProgressHelper.calculateSumAllTasks(allTasks) : null
 
     return (
         <NavSectionView {...other}
@@ -30,7 +27,6 @@ const NavSection = ({
             selectedAdminIndex={selectedAdminIndex}
             sumAllTasks={sumAllTasks}
             maxTotalNeededHours={maxTotalNeededHours}
-            sectionAccessHighlighted={sectionAccessHighlighted}
         />
     )
 }
@@ -58,8 +54,7 @@ const NavSectionView = ({
 
     // From controller.
     sumAllTasks,
-    maxTotalNeededHours,
-    sectionAccessHighlighted
+    maxTotalNeededHours
 
 }) => {
     const navItemProps = {
@@ -67,14 +62,13 @@ const NavSectionView = ({
         selectedSongIndex,
         accessedSongIndex,
         maxTotalNeededHours,
-        sectionAccessHighlighted,
         handleNavSongSelect
     },
     songsLength = songs.length
 
     return (
         <div
-            className={`section nav-section${shrinkNavIcon ? ' shrink-icon' : ' static-icon'}${showSingleBookColumn ? ' single-book-column' : ' double-book-column'}${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
+            className={`section nav-section${shrinkNavIcon ? ' shrink-icon' : ' static-icon'}${showSingleBookColumn ? ' single-book-column' : ' double-book-column'}`}
         >
             {selectedAdminIndex &&
                 <div className="row">

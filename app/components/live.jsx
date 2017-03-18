@@ -90,7 +90,6 @@ const LiveView = ({
     selectedNavIndex,
     selectedBookColumnIndex,
     accessedOn,
-    accessedSectionKey,
     accessedSongIndex,
     accessedAnnotationIndex,
     accessedVerseIndex,
@@ -222,7 +221,6 @@ const LiveView = ({
             title,
             selectedAudioOptionIndex,
             accessedOn,
-            accessedSectionKey,
 
             handleAudioPlay,
             handleAudioPreviousSong,
@@ -263,7 +261,6 @@ const LiveView = ({
             selectedTipsIndex,
 
             accessedOn,
-            accessedSectionKey,
             accessedSongIndex,
 
             handleAnnotationPortalSelect,
@@ -294,7 +291,6 @@ const LiveView = ({
             selectedVerse,
             lyricsStartAtZero,
             accessedOn,
-            accessedSectionKey,
             accessedLyricElement,
             accessedAnnotationIndex,
             accessedVerseIndex,
@@ -333,7 +329,6 @@ const LiveView = ({
             selectedScoreIndex,
             selectedWikiIndex,
             accessedOn,
-            accessedSectionKey,
             showArrows: true,
             onPopupButtonPreviousClick: handleAnnotationPrevious,
             onPopupButtonNextClick: handleAnnotationNext,
@@ -347,7 +342,6 @@ const LiveView = ({
             selectedDotsIndex,
             presentDotKeys,
             accessedOn,
-            accessedSectionKey,
             accessedDotIndex,
             handlePopupContainerClick,
 
@@ -365,7 +359,6 @@ const LiveView = ({
         wikiPopupProps = {
             selectedWikiUrl,
             accessedOn,
-            accessedSectionKey,
             showClose: true,
             onPopupButtonCloseClick: handleWikiToggle,
             handlePopupContainerClick

@@ -14,7 +14,6 @@ import { NAV_SECTION,
          DOTS_SECTION,
          ANNOTATION_SECTION,
          WIKI_SECTION,
-         SECTION_KEYS,
 
          LYRIC_VERSE_ELEMENT,
          LYRIC_ANNOTATION_ELEMENT,
@@ -30,7 +29,6 @@ export default {
 
     handleKeyIfUniversal({
         keyName,
-        handleSectionAccess,
         selectOverview,
         selectDotsExpand,
         selectAudioOption,
@@ -95,83 +93,9 @@ export default {
             case 't':
                 selectTips()
                 break
-            default: {
-                /**
-                * Directly access sections. These keys fire only if no
-                * selected annotation or wiki, and dots section is not open.
-                */
-                let accessedSectionKey
-
-                switch (keyName) {
-                    case 'w':
-                    accessedSectionKey = AUDIO_SECTION
-                    break
-                    // case 'u':
-                    //     accessedSectionKey = DOTS_SECTION
-                    //     break
-                    case 'l':
-                    accessedSectionKey = LYRICS_SECTION
-                    break
-                    case 's':
-                    accessedSectionKey = NAV_SECTION
-                    break
-                    default:
-                    return false
-                }
-
-                handleSectionAccess({
-                    accessedSectionKey,
-                    accessOn: true,
-                    overrideClosePopupsDefaultWithSection: accessedSectionKey
-                })
-            }
         }
 
         return true
-    },
-
-    handleSectionAccess({
-        deviceIndex,
-        isLogue,
-        currentAccessedSectionIndex,
-        accessedSectionKey,
-        accessOn,
-        handleAccessOn
-    }) {
-        let accessedSectionIndex = 0
-
-        // If no section key specified, rotate through sections.
-        if (!accessedSectionKey) {
-            accessedSectionIndex = (currentAccessedSectionIndex + 1) % SECTION_KEYS.length
-
-            // Skip lyrics and dots sections if it's a logue.
-            if (isLogue) {
-                while (SECTION_KEYS[accessedSectionIndex] === LYRICS_SECTION || SECTION_KEYS[accessedSectionIndex] === DOTS_SECTION) {
-                    accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
-                }
-            }
-
-            /**
-             * Always skip annotation and wiki sections. Skip nav section if
-             * it's a phone.
-             */
-            while (SECTION_KEYS[accessedSectionIndex] === ANNOTATION_SECTION || SECTION_KEYS[accessedSectionIndex] === WIKI_SECTION || (SECTION_KEYS[accessedSectionIndex] === NAV_SECTION && getIsPhone({ deviceIndex }))) {
-                accessedSectionIndex = (accessedSectionIndex + 1) % SECTION_KEYS.length
-            }
-
-        // Otherwise, find section index for section key.
-        } else {
-            while (SECTION_KEYS[accessedSectionIndex] !== accessedSectionKey && accessedSectionIndex < SECTION_KEYS.length) {
-                accessedSectionIndex++
-            }
-        }
-
-        // Access on if section accessed from universal key.
-        if (accessOn) {
-            handleAccessOn(1, accessedSectionIndex)
-        }
-
-        return accessedSectionIndex
     },
 
     handleSongAccess({

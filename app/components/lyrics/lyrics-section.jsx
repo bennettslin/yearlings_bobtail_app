@@ -7,19 +7,10 @@ import { getPropsAreSame } from 'helpers/general-helper'
  * CONTAINER *
  *************/
 
-const LyricsSection = ({
-
-    accessedOn,
-    accessedSectionKey,
-
-...other }) => {
-
-    const sectionAccessHighlighted = accessedOn && accessedSectionKey === LYRICS_SECTION
+const LyricsSection = (props) => {
 
     return (
-        <LyricsSectionView {...other}
-            sectionAccessHighlighted={sectionAccessHighlighted}
-        />
+        <LyricsSectionView {...props} />
     )
 }
 
@@ -96,9 +87,6 @@ class LyricsSectionView extends Component {
                 showSingleLyricColumn,
                 selectedLyricColumnIndex,
 
-                // From controller.
-                sectionAccessHighlighted,
-
             ...other } = this.props,
 
             { fadingOut } = this.state
@@ -109,7 +97,6 @@ class LyricsSectionView extends Component {
                 className={`
                     section
                     lyrics-section
-                    ${sectionAccessHighlighted ? ' access-highlighted' : ''}
                     ${showSingleLyricColumn ? ' single-column' : ''}
                 `}
                 onScroll={this._handleScroll}
@@ -133,7 +120,6 @@ class LyricsSectionView extends Component {
                                     isTitleUnit={stanzaIndex === 0}
                                     stanzaArray={stanzaArray}
                                     selectedLyricColumnIndex={selectedLyricColumnIndex}
-                                    sectionAccessHighlighted={sectionAccessHighlighted}
                                 />
                             )
                         )}

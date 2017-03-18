@@ -18,7 +18,6 @@ const AnchorBlock = ({
     accessedAnnotationIndex,
     accessedPopupAnchorIndex,
     accessedLyricElement,
-    sectionAccessHighlighted,
     handleAnchorClick,
 
 ...other }) => {
@@ -34,7 +33,7 @@ const AnchorBlock = ({
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
         isPortalAnchor = typeof portalAnnotationIndex !== 'undefined' && portalAnnotationIndex === annotationIndex,
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
-        accessHighlighted = sectionAccessHighlighted && ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex && accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) || (accessedPopupAnchorIndex && accessedPopupAnchorIndex === wikiIndex)),
+        accessHighlighted = ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex && accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) || (accessedPopupAnchorIndex && accessedPopupAnchorIndex === wikiIndex)),
 
         /**
          * If it's an annotation, then the argument passed to the

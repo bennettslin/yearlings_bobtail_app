@@ -21,7 +21,6 @@ const AnnotationPortalsBlockView = ({
     selectedDotKeys,
     portalLinks,
     handleAnnotationPortalSelect,
-    // sectionAccessHighlighted,
     // accessedPopupAnchorIndex
 
 }) => (
@@ -39,7 +38,7 @@ const AnnotationPortalsBlockView = ({
 
                 handleClick = e => handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex)
 
-            // accessHighlighted = sectionAccessHighlighted && accessedPopupAnchorIndex === portalIndex
+            // accessHighlighted = accessedPopupAnchorIndex === portalIndex
 
             return (
                 <div

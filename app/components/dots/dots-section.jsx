@@ -6,19 +6,10 @@ import { DOTS_SECTION } from 'helpers/constants'
  * CONTAINER *
  *************/
 
- const DotsSection = ({
-
-     accessedOn,
-     accessedSectionKey,
-
- ...other }) => {
-
-     const sectionAccessHighlighted = accessedOn && accessedSectionKey === DOTS_SECTION
+ const DotsSection = (props) => {
 
      return (
-         <DotsSectionView {...other}
-             sectionAccessHighlighted={sectionAccessHighlighted}
-         />
+         <DotsSectionView {...props} />
      )
  }
 
@@ -57,20 +48,16 @@ class DotsSectionView extends Component {
     }
 
     render() {
-        const { sectionAccessHighlighted,
-            ...other } = this.props,
-
-            { hasInteractivatedDotText } = this.state
+        const { hasInteractivatedDotText } = this.state
 
         return (
             <div
-                className={`section dots-section${sectionAccessHighlighted ? ' access-highlighted' : ''}`}
+                className="section dots-section"
                 onClick={this._onContainerClick}
             >
-                <DotBlock {...other}
+                <DotBlock {...this.props}
                     inDotsSection={true}
                     hasInteractivatedDotText={hasInteractivatedDotText}
-                    sectionAccessHighlighted={sectionAccessHighlighted}
                     setHasInteractivatedDotText={e => this._setHasInteractivatedDotText(e)}
                 />
             </div>
