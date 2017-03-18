@@ -6,8 +6,8 @@ module.exports = [
     },
     {
         taskName: `accessibility refactor.`,
-        workedHours: 5,
-        neededHours: 8
+        workedHours: 13,
+        neededHours: 13
     },
 
     {
