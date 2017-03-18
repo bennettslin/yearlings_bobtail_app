@@ -220,10 +220,10 @@ class App extends Component {
         this.clickBody = this.clickBody.bind(this)
         this.clickPopupContainer = this.clickPopupContainer.bind(this)
         this.windowResize = this.windowResize.bind(this)
-        this.mouseOrTouchSliderBegin = this.mouseOrTouchSliderBegin.bind(this)
+        this.touchSliderBegin = this.touchSliderBegin.bind(this)
         this._waitToSaySliderIsMoving = this._waitToSaySliderIsMoving.bind(this)
-        this.mouseOrTouchBodyMove = this.mouseOrTouchBodyMove.bind(this)
-        this.mouseOrTouchBodyEnd = this.mouseOrTouchBodyEnd.bind(this)
+        this.touchBodyMove = this.touchBodyMove.bind(this)
+        this.touchBodyEnd = this.touchBodyEnd.bind(this)
     }
 
     _assignLogFunctions() {
@@ -374,7 +374,7 @@ class App extends Component {
      * EVENT LISTENERS *
      *******************/
 
-    mouseOrTouchSliderBegin(e) {
+    touchSliderBegin(e) {
         if (e.nativeEvent.screenX) {
             const rect = e.target.getBoundingClientRect(),
                 sliderLeft = rect.left,
@@ -408,7 +408,7 @@ class App extends Component {
         }
     }
 
-    mouseOrTouchBodyMove(e) {
+    touchBodyMove(e) {
         if (this.state.sliderMousedOrTouched) {
             const { sliderLeft,
                     sliderWidth } = this.state,
@@ -425,7 +425,7 @@ class App extends Component {
         }
     }
 
-    mouseOrTouchBodyEnd() {
+    touchBodyEnd() {
         if (this.state.sliderMousedOrTouched) {
             const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime,
                 selectedVerseIndex = getVerseIndexForTime(this.props, selectedTime),
@@ -1098,9 +1098,9 @@ class App extends Component {
                 // Event manager props.
                 clickBody={this.clickBody}
                 clickPopupContainer={this.clickPopupContainer}
-                mouseOrTouchSliderBegin={this.mouseOrTouchSliderBegin}
-                mouseOrTouchBodyMove={this.mouseOrTouchBodyMove}
-                mouseOrTouchBodyEnd={this.mouseOrTouchBodyEnd}
+                touchSliderBegin={this.touchSliderBegin}
+                touchBodyMove={this.touchBodyMove}
+                touchBodyEnd={this.touchBodyEnd}
                 selectAnnotation={this.selectAnnotation}
                 selectAudioOption={this.selectAudioOption}
                 selectBookColumn={this.selectBookColumn}

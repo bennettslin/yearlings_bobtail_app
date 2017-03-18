@@ -45,8 +45,8 @@ class DomManager extends Component {
               updatedTimePlayed,
 
               handleBodyClick,
-              handleBodyMouseOrTouchMove,
-              handleBodyMouseOrTouchEnd,
+              handleBodyTouchMove,
+              handleBodyTouchEnd,
               handleKeyDownPress,
               handlePlayerTimeChange,
               handlePlayerNextSong,
@@ -102,9 +102,9 @@ class DomManager extends Component {
                 `}
                 tabIndex="0"
                 onClick={handleBodyClick}
-                onMouseMove={handleBodyMouseOrTouchMove}
-                onMouseUp={handleBodyMouseOrTouchEnd}
-                onMouseLeave={handleBodyMouseOrTouchEnd}
+                onMouseMove={handleBodyTouchMove}
+                onMouseUp={handleBodyTouchEnd}
+                onMouseLeave={handleBodyTouchEnd}
                 onKeyDown={handleKeyDownPress}
             >
                 <AdminToggle

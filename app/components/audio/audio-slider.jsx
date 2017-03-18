@@ -18,11 +18,11 @@ class AudioSliderView extends Component {
     constructor(props) {
         super(props)
 
-        this.handleMouseOrTouchDown = this.handleMouseOrTouchDown.bind(this)
+        this.handleTouchDown = this.handleTouchDown.bind(this)
     }
 
-    handleMouseOrTouchDown(e) {
-        this.props.onMouseOrTouch(e)
+    handleTouchDown(e) {
+        this.props.onTouch(e)
     }
 
     render() {
@@ -153,8 +153,8 @@ class AudioSliderView extends Component {
                 </div>
                 <div
                     className="time-bar audio-touch-bar"
-                    onMouseDown={!isLogue ? e => this.handleMouseOrTouchDown(e) : null}
-                    // onTouchStart={e => this.handleMouseOrTouchDown(e)}
+                    onMouseDown={!isLogue ? e => this.handleTouchDown(e) : null}
+                    // onTouchStart={e => this.handleTouchDown(e)}
                 >
                 </div>
             </div>

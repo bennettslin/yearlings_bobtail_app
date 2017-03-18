@@ -7,8 +7,8 @@ class EventManager extends Component {
         super(props)
 
         this.handleBodyClick = this.handleBodyClick.bind(this)
-        this.handleBodyMouseOrTouchMove = this.handleBodyMouseOrTouchMove.bind(this)
-        this.handleBodyMouseOrTouchEnd = this.handleBodyMouseOrTouchEnd.bind(this)
+        this.handleBodyTouchMove = this.handleBodyTouchMove.bind(this)
+        this.handleBodyTouchEnd = this.handleBodyTouchEnd.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
         this.handleVerseElementSelect = this.handleVerseElementSelect.bind(this)
         this.handleVerseElementSlide = this.handleVerseElementSlide.bind(this)
@@ -22,7 +22,7 @@ class EventManager extends Component {
         this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
         this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
         this.handleAudioOptionsToggle = this.handleAudioOptionsToggle.bind(this)
-        this.handleAudioSliderMouseOrTouchBegin = this.handleAudioSliderMouseOrTouchBegin.bind(this)
+        this.handleAudioSliderTouchBegin = this.handleAudioSliderTouchBegin.bind(this)
 
         this.handlePlayerTimeChange = this.handlePlayerTimeChange.bind(this)
         this.handlePlayerNextSong = this.handlePlayerNextSong.bind(this)
@@ -58,12 +58,12 @@ class EventManager extends Component {
         this.props.clickBody(e)
     }
 
-    handleBodyMouseOrTouchMove(e) {
-        this.props.mouseOrTouchBodyMove(e)
+    handleBodyTouchMove(e) {
+        this.props.touchBodyMove(e)
     }
 
-    handleBodyMouseOrTouchEnd(e) {
-        this.props.mouseOrTouchBodyEnd(e)
+    handleBodyTouchEnd(e) {
+        this.props.touchBodyEnd(e)
     }
 
     handlePopupContainerClick(e) {
@@ -131,8 +131,8 @@ class EventManager extends Component {
         this.props.selectAudioOption(selectedAudioOptionIndex)
     }
 
-    handleAudioSliderMouseOrTouchBegin(e) {
-        this.props.mouseOrTouchSliderBegin(e)
+    handleAudioSliderTouchBegin(e) {
+        this.props.touchSliderBegin(e)
     }
 
     /****************
@@ -308,8 +308,8 @@ class EventManager extends Component {
         return (
             <AccessManager {...domProps} {...domState}
                 handleBodyClick={this.handleBodyClick}
-                handleBodyMouseOrTouchMove={this.handleBodyMouseOrTouchMove}
-                handleBodyMouseOrTouchEnd={this.handleBodyMouseOrTouchEnd}
+                handleBodyTouchMove={this.handleBodyTouchMove}
+                handleBodyTouchEnd={this.handleBodyTouchEnd}
                 handlePopupContainerClick={this.handlePopupContainerClick}
                 handleVerseElementSelect={this.handleVerseElementSelect}
                 handleVerseElementSlide={this.handleVerseElementSlide}
@@ -323,7 +323,7 @@ class EventManager extends Component {
                 handleAudioPreviousSong={this.handleAudioPreviousSong}
                 handleAudioNextSong={this.handleAudioNextSong}
                 handleAudioOptionsToggle={this.handleAudioOptionsToggle}
-                handleAudioSliderMouseOrTouchBegin={this.handleAudioSliderMouseOrTouchBegin}
+                handleAudioSliderTouchBegin={this.handleAudioSliderTouchBegin}
                 handlePlayerTimeChange={this.handlePlayerTimeChange}
                 handlePlayerNextSong={this.handlePlayerNextSong}
                 handlePlayerTimeReset={this.handlePlayerTimeReset}

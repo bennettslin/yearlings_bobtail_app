@@ -137,7 +137,7 @@ const LiveView = ({
     handleAudioPreviousSong,
     handleAudioNextSong,
     handleAudioOptionsToggle,
-    handleAudioSliderMouseOrTouchBegin,
+    handleAudioSliderTouchBegin,
     handleDotToggle,
     handleDotsSectionToggle,
     handleNavExpand,
@@ -204,7 +204,7 @@ const LiveView = ({
             verseTimes: times,
             handlePlayerTimeChange,
 
-            handleAudioSliderMouseOrTouchBegin,
+            handleAudioSliderTouchBegin,
 
             audioTimerChild
         },
