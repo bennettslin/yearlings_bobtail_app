@@ -47,6 +47,7 @@ import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSi
 import AccessHelper from 'helpers/access-helper'
 import { allDotsDeselected } from 'helpers/dot-helper'
 import LogHelper from 'helpers/log-helper'
+import TempHelper from 'helpers/temp-app-helper'
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 
 /*********
@@ -173,12 +174,6 @@ class App extends Component {
     }
 
     componentDidMount() {
-        // Allows app to begin listening for keyboard events.
-        // this._focusApp()
-
-        // FIXME: Scrolling to selected verse here, but animation is janky.
-        // setTimeout(this.scrollElementIntoView.bind(this, 'verse', this.props.selectedVerseIndex), 250)
-
         this.setState({
             appMounted: true
         })
@@ -218,13 +213,11 @@ class App extends Component {
         this.selectDotsExpand = this.selectDotsExpand.bind(this)
         this.selectTips = this.selectTips.bind(this)
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
-        this.updateSelectedVerseElement = this.updateSelectedVerseElement.bind(this)
-        this.updateSliderVerseElement = this.updateSliderVerseElement.bind(this)
+        this.selectVerseElement = this.selectVerseElement.bind(this)
+        this.slideVerseElement = this.slideVerseElement.bind(this)
         this.scrollLyricSection = this.scrollLyricSection.bind(this)
         this.selectVerseBar = this.selectVerseBar.bind(this)
-        // this._handleAccessOn = this._handleAccessOn.bind(this)
         this.clickBody = this.clickBody.bind(this)
-        // this.pressDownKey = this.pressDownKey.bind(this)
         this.clickPopupContainer = this.clickPopupContainer.bind(this)
         this.windowResize = this.windowResize.bind(this)
         this.mouseOrTouchSliderBegin = this.mouseOrTouchSliderBegin.bind(this)
@@ -243,11 +236,6 @@ class App extends Component {
         window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
         window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
     }
-
-    // // Focus for accessibility.
-    // _focusApp(element = this.myApp) {
-    //     element.focus()
-    // }
 
     _stopPropagationOfClick(e) {
         if (e && e.stopPropagation) {
@@ -461,14 +449,7 @@ class App extends Component {
         }
     }
 
-    toggleAdmin() {
-        this.props.selectAdminIndex((this.props.selectedAdminIndex + 1) % 2)
-    }
-
-    togglePlay(e) {
-        this._stopPropagationOfClick(e)
-
-        const isPlaying = !this.state.isPlaying
+    togglePlay(isPlaying = !this.state.isPlaying) {
 
         // Select first song if play button in logue is toggled on.
         if (getIsLogue(this.props) && isPlaying) {
@@ -693,17 +674,6 @@ class App extends Component {
             // Turn access off.
             // this._handleAccessOn(0)
         }
-    }
-
-    selectTips(e, selectedTipsIndex) {
-        const tipsLength = TIPS_OPTIONS.length
-
-        this._stopPropagationOfClick(e)
-        if (typeof selectedTipsIndex === 'undefined') {
-            selectedTipsIndex = (this.props.selectedTipsIndex + 1) % tipsLength
-        }
-
-        this.props.selectTipsIndex(selectedTipsIndex)
     }
 
     selectDot(e, selectedDotKey) {
@@ -979,7 +949,7 @@ class App extends Component {
         })
     }
 
-    updateSelectedVerseElement(selectedVerseElement) {
+    selectVerseElement(selectedVerseElement) {
 
         if (selectedVerseElement !== this.state.selectedVerseElement) {
 
@@ -993,7 +963,7 @@ class App extends Component {
         }
     }
 
-    updateSliderVerseElement(sliderVerseElement) {
+    slideVerseElement(sliderVerseElement) {
 
         if (sliderVerseElement !== this.state.sliderVerseElement) {
             const newState = getVerseBarStatus(this.state, sliderVerseElement)
@@ -1070,11 +1040,13 @@ class App extends Component {
         this.interactivateVerse()
     }
 
-    /*******************
-     * ACCESS HANDLERS *
-     *******************/
+    /**********
+     * ACCESS *
+     **********/
 
     toggleAccess(accessedOn = (this.props.accessedOn + 1) % 2) {
+        // If no argument passed, then just toggle between on and off.
+
         if (typeof accessedOn === 'boolean') {
             accessedOn = accessedOn ? 1 : 0
         }
@@ -1082,79 +1054,25 @@ class App extends Component {
         this.props.accessOn(accessedOn)
     }
 
-    // pressDownKey(keyName) {
-    //
-    //     // If universal key, handle and return.
-    //     if (AccessHelper.handleKeyIfUniversal({
-    //         keyName,
-    //         selectOverview: this.selectOverview,
-    //         selectDotsExpand: this.selectDotsExpand,
-    //         selectAudioOption: this.selectAudioOption,
-    //         selectTips: this.selectTips,
-    //         togglePlay: this.togglePlay,
-    //         toggleAdmin: this.toggleAdmin,
-    //         windowResize: this.windowResize,
-    //         selectedTimePlayed: this.props.selectedTimePlayed,
-    //         selectLyricExpand: this.selectLyricExpand,
-    //         selectNavExpand: this.selectNavExpand,
-    //         selectBookColumn: this.selectBookColumn,
-    //         selectTime: this.selectTime
-    //     })) {
-    //         return
-    //     }
-    //
-    //     // If Escape to close popup, close it and return.
-    //     if (keyName === ESCAPE) {
-    //         const popupWasOpen = this._closePopupIfOpen({ accessOff: true })
-    //
-    //         if (popupWasOpen) {
-    //             return
-    //         }
-    //     }
-    //
-    //     // If access is off, any key besides Escape turns it on.
-    //     if (!this.props.accessedOn) {
-    //         if (keyName !== ESCAPE) {
-    //             this._handleAccessOn()
-    //         }
-    //
-    //     // If access is on...
-    //     } else {
-    //         // Escape turns off access.
-    //         if (keyName === ESCAPE) {
-    //             this._handleAccessOn()
-    //         }
-    //     }
-    // }
+    /*********
+     * ADMIN *
+     *********/
 
-    _selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex) {
-        const accessedSectionKey = SECTION_KEYS[accessedSectionIndex]
-        let newState
+    toggleAdmin(selectedAdminIndex = (this.props.selectedAdminIndex + 1) % 2) {
+        // If no argument passed, then just toggle between on and off.
 
-        switch (accessedSectionKey) {
-            case NAV_SECTION:
-                this.selectBookColumn(undefined, true, selectedSongIndex)
-                newState = { accessedSongIndex: this.props.selectedSongIndex }
-                break
-            case LYRICS_SECTION:
-                newState = {
-                    accessedVerseIndex: this.props.selectedVerseIndex,
-                    accessedAnnotationIndex: getAnnotationIndexForVerseIndex(this.props, this.props.selectedVerseIndex)
-                 }
-                break
-            default:
-                break
-        }
-
-        if (newState) {
-             this.setState(newState)
-        }
+        this.props.selectAdminIndex(selectedAdminIndex)
     }
 
-    // _handleAccessOn(accessedOn = (this.props.accessedOn + 1) % 2) {
-    //     // Stored as integer. 0 is false, 1 is true.
-    //     this.props.accessOn(accessedOn)
-    // }
+    /********
+     * TIPS *
+     ********/
+
+    selectTips(selectedTipsIndex = (this.props.selectedTipsIndex + 1) % TIPS_OPTIONS.length) {
+        // If no argument passed, then just toggle amongst tips options.
+
+        this.props.selectTipsIndex(selectedTipsIndex)
+    }
 
     render() {
         return (
@@ -1170,7 +1088,6 @@ class App extends Component {
                 mouseOrTouchSliderBegin={this.mouseOrTouchSliderBegin}
                 mouseOrTouchBodyMove={this.mouseOrTouchBodyMove}
                 mouseOrTouchBodyEnd={this.mouseOrTouchBodyEnd}
-                // pressDownKey={this.pressDownKey}
                 selectAnnotation={this.selectAnnotation}
                 selectAudioOption={this.selectAudioOption}
                 selectBookColumn={this.selectBookColumn}
@@ -1193,8 +1110,8 @@ class App extends Component {
                 toggleAccess={this.toggleAccess}
                 toggleAdmin={this.toggleAdmin}
                 togglePlay={this.togglePlay}
-                updateSelectedVerseElement={this.updateSelectedVerseElement}
-                updateSliderVerseElement={this.updateSliderVerseElement}
+                selectVerseElement={this.selectVerseElement}
+                slideVerseElement={this.slideVerseElement}
 
                 advanceToNextSong={this.advanceToNextSong}
                 resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}

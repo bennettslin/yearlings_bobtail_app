@@ -25,7 +25,11 @@ const TipsSectionView = ({
         {selectedAdminIndex &&
             <h2>tips</h2>
         }
-        <button onClick={handleTipsToggle}>tips: {TIPS_OPTIONS[selectedTipsIndex]}</button>
+        <button
+            onClick={e => handleTipsToggle(e)}
+        >
+            tips: {TIPS_OPTIONS[selectedTipsIndex]}
+        </button>
     </div>
 )
 

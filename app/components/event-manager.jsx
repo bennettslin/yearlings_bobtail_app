@@ -6,15 +6,14 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
-        this.handleAccessToggle = this.handleAccessToggle.bind(this)
-        this.handleAdminToggle = this.handleAdminToggle.bind(this)
         this.handleBodyClick = this.handleBodyClick.bind(this)
         this.handleBodyMouseOrTouchMove = this.handleBodyMouseOrTouchMove.bind(this)
         this.handleBodyMouseOrTouchEnd = this.handleBodyMouseOrTouchEnd.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
         this.handleVerseElementSelect = this.handleVerseElementSelect.bind(this)
         this.handleVerseElementSlide = this.handleVerseElementSlide.bind(this)
-        // this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
+        this.handleAccessToggle = this.handleAccessToggle.bind(this)
+        this.handleAdminToggle = this.handleAdminToggle.bind(this)
         this.handleAnnotationPrevious = this.handleAnnotationPrevious.bind(this)
         this.handleAnnotationNext = this.handleAnnotationNext.bind(this)
         this.handleAnnotationWikiSelect = this.handleAnnotationWikiSelect.bind(this)
@@ -47,6 +46,8 @@ class EventManager extends Component {
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
+
+        this._stopPropagation = this._stopPropagation.bind(this)
     }
 
     /********
@@ -55,14 +56,6 @@ class EventManager extends Component {
 
     handleBodyClick(e) {
         this.props.clickBody(e)
-    }
-
-    handleAccessToggle(accessedOn) {
-        this.props.toggleAccess(accessedOn)
-    }
-
-    handleAdminToggle(e) {
-        this.props.toggleAdmin(e)
     }
 
     handleBodyMouseOrTouchMove(e) {
@@ -78,16 +71,30 @@ class EventManager extends Component {
     }
 
     handleVerseElementSelect(verseElement) {
-        this.props.updateSelectedVerseElement(verseElement)
+        this.props.selectVerseElement(verseElement)
     }
 
     handleVerseElementSlide(verseElement) {
-        this.props.updateSliderVerseElement(verseElement)
+        this.props.slideVerseElement(verseElement)
     }
 
-    // handleKeyDownPress(e) {
-        // this.props.pressDownKey(e)
-    // }
+    /**********
+     * ACCESS *
+     **********/
+
+    handleAccessToggle(accessedOn) {
+        // This method does not need to know the event.
+        this.props.toggleAccess(accessedOn)
+    }
+
+    /*********
+     * ADMIN *
+     *********/
+
+    handleAdminToggle(e, selectedAdminIndex) {
+        this._stopPropagation(e)
+        this.props.toggleAdmin(selectedAdminIndex)
+    }
 
     /**************
      * ANNOTATION *
@@ -115,7 +122,8 @@ class EventManager extends Component {
      *********/
 
     handleAudioPlay(e) {
-        this.props.togglePlay(e)
+        this._stopPropagation(e)
+        this.props.togglePlay()
     }
 
     handleAudioPreviousSong(e) {
@@ -187,7 +195,7 @@ class EventManager extends Component {
      **********/
 
     handleLyricPlay(e) {
-        this.props.togglePlay(e)
+        this.props.togglePlay()
         this.props.interactivateVerse(e)
     }
 
@@ -251,8 +259,9 @@ class EventManager extends Component {
      * TIPS *
      ********/
 
-    handleTipsToggle(e) {
-        this.props.selectTips(e)
+    handleTipsToggle(e, selectedTipsIndex) {
+        this._stopPropagation(e)
+        this.props.selectTips(selectedTipsIndex)
     }
 
     /*********
@@ -271,6 +280,21 @@ class EventManager extends Component {
         this.props.selectWiki(e)
     }
 
+    /***********
+     * HELPERS *
+     ***********/
+
+    _stopPropagation(e) {
+        if (e && e.stopPropagation) {
+            e.stopPropagation()
+
+            // Turn access off if not from a keyboard event.
+            if (e.type !== 'keydown') {
+                this.props.toggleAccess(false)
+            }
+        }
+    }
+
     render() {
 
         const { domProps,
@@ -278,15 +302,14 @@ class EventManager extends Component {
 
         return (
             <AccessManager {...domProps} {...domState}
-                handleAccessToggle={this.handleAccessToggle}
-                handleAdminToggle={this.handleAdminToggle}
                 handleBodyClick={this.handleBodyClick}
                 handleBodyMouseOrTouchMove={this.handleBodyMouseOrTouchMove}
                 handleBodyMouseOrTouchEnd={this.handleBodyMouseOrTouchEnd}
                 handlePopupContainerClick={this.handlePopupContainerClick}
                 handleVerseElementSelect={this.handleVerseElementSelect}
                 handleVerseElementSlide={this.handleVerseElementSlide}
-                // handleKeyDownPress={this.handleKeyDownPress}
+                handleAccessToggle={this.handleAccessToggle}
+                handleAdminToggle={this.handleAdminToggle}
                 handleAnnotationWikiSelect={this.handleAnnotationWikiSelect}
                 handleAnnotationPortalSelect={this.handleAnnotationPortalSelect}
                 handleAnnotationPrevious={this.handleAnnotationPrevious}
