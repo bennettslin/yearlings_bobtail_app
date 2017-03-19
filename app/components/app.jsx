@@ -260,9 +260,11 @@ class App extends Component {
             }
         }
 
-        // Show overview if it's not disabled, and if not selected from portal.
-        if (!fromPortal && OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED) {
-            this.selectOverview(undefined, undefined, SHOWN)
+        // If not selected from portal, show overview if hidden.
+        if (!fromPortal) {
+            this.selectOverview({
+                justShowIfHidden: true
+            })
         }
 
         const isLogue = getIsLogue({ selectedSongIndex,
@@ -335,56 +337,6 @@ class App extends Component {
         }, selectedSongIndex + willAdvance)
     }
 
-    selectOverview(e, selectedOverviewIndex, selectedOverviewKey) {
-        this._stopPropagationOfClick(e)
-
-        /**
-         * User cannot change overview option if lyric is expanded in an
-         * expanded width, or if it's a logue.
-         */
-        if ((getIsLyricExpandable(this.state) && this.state.isLyricExpanded) || getIsLogue(this.props)) {
-            return
-        }
-
-        // If option is disabled, bypass hidden option and show overview.
-        if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === DISABLED) {
-            selectedOverviewKey = SHOWN
-        }
-
-        // If there is a key, choose index based on it.
-        if (selectedOverviewKey) {
-            let index = 0
-            while (index < OVERVIEW_OPTIONS.length && typeof selectedOverviewIndex === 'undefined') {
-                if (selectedOverviewKey === OVERVIEW_OPTIONS[index]) {
-                    selectedOverviewIndex = index
-                }
-                index++
-            }
-        }
-
-        if (typeof selectedOverviewIndex === 'undefined') {
-            selectedOverviewIndex = (this.props.selectedOverviewIndex + 1) % OVERVIEW_OPTIONS.length
-        }
-
-        // Stored as integer. 0 is to show overview, 1 is to hide it.
-        this.props.selectOverviewIndex(selectedOverviewIndex)
-
-        // If showing overview...
-        if (e && OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
-            // Close annotation and wiki sections.
-            this.selectAnnotation()
-
-            // Collapse lyric section.
-            this.selectLyricExpand(undefined, false)
-
-            // Hide dots section.
-            this.selectDotsExpand(undefined, 0)
-
-            // Turn access off.
-            // this._handleAccessOn(0)
-        }
-    }
-
     /**
      * When selecting a portal, selectedSongIndex argument is passed in because
      * props does not yet know new selected song. Ugly workaround, but it works.
@@ -409,10 +361,10 @@ class App extends Component {
         // Keep accessed index, even if annotation is deselected.
         if (selectedAnnotationIndex) {
 
-            // Hide overview if shown.
-            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-                this.selectOverview(undefined, undefined, HIDDEN)
-            }
+            // // Hide overview if shown.
+            // if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
+            //     this.selectOverview(undefined, undefined, HIDDEN)
+            // }
 
             this.setState({
                 accessedAnnotationIndex: selectedAnnotationIndex,
@@ -780,6 +732,49 @@ class App extends Component {
         })
     }
 
+    /************
+     * OVERVIEW *
+     ************/
+
+    selectOverview({
+        clickToggle,
+        justHideIfShown,
+        justShowIfHidden
+    }) {
+
+        // We shouldn't be able to change overview it's a logue.
+        if (getIsLogue(this.props)) {
+            return
+        }
+
+        let selectedOverviewIndex = this.props.selectedOverviewIndex
+
+        // If called from body click, hide if shown.
+        if (justHideIfShown) {
+            if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
+                selectedOverviewIndex = 2 // Hidden.
+            }
+
+        // If called from song select, show if hidden.
+        } else if (justShowIfHidden) {
+            if (OVERVIEW_OPTIONS[selectedOverviewIndex] === HIDDEN) {
+                selectedOverviewIndex = 0 // Shown.
+            }
+
+        } else {
+            do {
+                // If it's a keydown event, cycle through all three options.
+                selectedOverviewIndex = (selectedOverviewIndex + 1) % OVERVIEW_OPTIONS.length
+
+            // If it's a click event, skip hidden.
+            } while (clickToggle && OVERVIEW_OPTIONS[selectedOverviewIndex] === HIDDEN)
+        }
+
+        // Overview options are shown, disabled, hidden.
+        if (selectedOverviewIndex !== this.props.selectedOverviewIndex) {
+            this.props.selectOverviewIndex(selectedOverviewIndex)
+        }
+    }
 
     /*********
      * SCORE *

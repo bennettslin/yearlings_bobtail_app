@@ -240,8 +240,21 @@ class EventManager extends Component {
      * OVERVIEW *
      ************/
 
-    handleOverviewToggle(e, selectedOverviewIndex, selectedOverviewKey) {
-        this.props.selectOverview(e, selectedOverviewIndex, selectedOverviewKey)
+    handleOverviewToggle(e) {
+        this._stopPropagation(e)
+
+        /**
+         * If from click, alternate between shown and disabled. If from keydown,
+         * cycle through all three options.
+         */
+        const clickToggle = e.type === 'click'
+
+        this._closeSections({
+            exemptOverview: true
+        })
+        this.props.selectOverview({
+            clickToggle
+        })
     }
 
     /*********
@@ -341,7 +354,8 @@ class EventManager extends Component {
     _closeSections({
         exemptDots,
         exemptLyric,
-        exemptNav
+        exemptNav,
+        exemptOverview
     }) {
         if (!exemptDots) {
             this.props.selectDotsExpand(false)
@@ -353,6 +367,12 @@ class EventManager extends Component {
 
         if (!exemptNav) {
             this.props.selectNavExpand(false)
+        }
+
+        if (!exemptOverview) {
+            this.props.selectOverview({
+                justHideIfShown: true
+            })
         }
 
         this.props.interactivateVerse()
