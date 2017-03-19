@@ -160,121 +160,9 @@ class App extends Component {
         })
     }
 
-    _windowResize(e) {
-        const resizedWindowObject = resizeWindow(e ? e.target : undefined)
-        this.setState(resizedWindowObject)
-    }
-
-    _bindEventHandlers() {
-        this.toggleAccess = this.toggleAccess.bind(this)
-        this.toggleAdmin = this.toggleAdmin.bind(this)
-        this.togglePlay = this.togglePlay.bind(this)
-        this.selectSong = this.selectSong.bind(this)
-        this.selectOverview = this.selectOverview.bind(this)
-        this.selectAudioOption = this.selectAudioOption.bind(this)
-        this.selectAnnotation = this.selectAnnotation.bind(this)
-        this.selectVerse = this.selectVerse.bind(this)
-        this.selectTime = this.selectTime.bind(this)
-        this.resetUpdatedTimePlayed = this.resetUpdatedTimePlayed.bind(this)
-        this.toggleDotKey = this.toggleDotKey.bind(this)
-        this.selectFromPortal = this.selectFromPortal.bind(this)
-        this.selectWiki = this.selectWiki.bind(this)
-        this.selectScore = this.selectScore.bind(this)
-        this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
-        this.interactivateVerse = this.interactivateVerse.bind(this)
-        this.selectLyricColumn = this.selectLyricColumn.bind(this)
-        this.selectLyricExpand = this.selectLyricExpand.bind(this)
-        this.selectNavExpand = this.selectNavExpand.bind(this)
-        this.selectBookColumn = this.selectBookColumn.bind(this)
-        this.selectDotsExpand = this.selectDotsExpand.bind(this)
-        this.selectTips = this.selectTips.bind(this)
-        this.advanceToNextSong = this.advanceToNextSong.bind(this)
-        this.selectVerseElement = this.selectVerseElement.bind(this)
-        this.slideVerseElement = this.slideVerseElement.bind(this)
-        this.scrollLyricSection = this.scrollLyricSection.bind(this)
-        this._windowResize = this._windowResize.bind(this)
-        this.touchSliderBegin = this.touchSliderBegin.bind(this)
-        this.touchBodyMove = this.touchBodyMove.bind(this)
-        this.touchBodyEnd = this.touchBodyEnd.bind(this)
-    }
-
-    _assignLogFunctions() {
-        window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
-        window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
-        window.d = LogHelper.logDrawings.bind(LogHelper, this)
-        window.n = LogHelper.logAnnotationsDotKeys.bind(LogHelper, this)
-        window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
-        window.s = LogHelper.logSong.bind(LogHelper, this)
-        window.v = LogHelper.logVerse.bind(LogHelper, this)
-        window.t = LogHelper.logStorage.bind(LogHelper)
-    }
-
     /*******************
      * EVENT LISTENERS *
      *******************/
-
-    selectSong(e, selectedSongIndex = 0, direction, fromPortal) {
-
-        // Called from audio section's previous or next buttons.
-        if (direction) {
-            selectedSongIndex = this.props.selectedSongIndex + direction
-
-            if (selectedSongIndex < 0 || selectedSongIndex > this.props.songs.length - 1) {
-                return
-            }
-        }
-
-        // If not selected from portal, show overview if hidden.
-        if (!fromPortal) {
-            this.selectOverview({
-                justShowIfHidden: true
-            })
-        }
-
-        const isLogue = getIsLogue({ selectedSongIndex,
-                                     songs: this.props.songs }),
-            newState = {
-                accessedSongIndex: selectedSongIndex,
-
-                // App does not know new index, so pass it directly.
-                accessedAnnotationIndex: getAnnotationIndexForDirection({
-                    songs: this.props.songs,
-                    selectedDotKeys: this.props.selectedDotKeys,
-                    selectedSongIndex
-                }, 1)
-            }
-
-        if (isLogue) {
-            newState.isPlaying = false
-        }
-
-        /**
-         * Reset the stored annotation, time, and overview, unless selected
-         * from portal.
-         */
-        if (!fromPortal) {
-            const selectedVerseIndex = getLyricsStartAtZero(this.props, selectedSongIndex) ? 1 : 0
-
-            this.selectVerse({
-                selectedVerseIndex
-            })
-            this.selectAnnotation({})
-
-            // Scroll to top of lyrics.
-            // this.scrollElementIntoView('lyrics-scroll', 'home')
-
-        }
-
-        this.selectBookColumn({
-            resetToDefault: true,
-            selectedSongIndex
-        })
-
-        this.interactivateVerse()
-
-        this.props.selectSongIndex(selectedSongIndex)
-        this.setState(newState)
-    }
 
     advanceToNextSong() {
         /**
@@ -303,31 +191,7 @@ class App extends Component {
         }, selectedSongIndex + willAdvance)
     }
 
-    selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, selectedLyricColumnIndex) {
-
-        // TODO: Don't reset time if it's the same song.
-        this.selectSong(undefined, selectedSongIndex, undefined, true)
-        this.selectAnnotation({
-            selectedAnnotationIndex,
-            selectedSongIndex
-        })
-
-        // This also selects time.
-        // FIXME: This should animate to verse, but doesn't always. (For example, "stand unsure.") This may be because "stand unsure" is verse 49, which doesn't exist yet until the song has been changed.
-        this.selectVerse({
-            selectedVerseIndex,
-            selectedSongIndex
-        })
-
-        if (!isNaN(selectedLyricColumnIndex)) {
-
-            this.selectLyricColumn({
-                selectedLyricColumnIndex,
-                selectedSongIndex
-            })
-        }
-    }
-
+    // Put this in event handler.
     selectWikiOrPortal() {
         const annotation = getAnnotation(this.props)
         if (annotation.popupAnchors && annotation.popupAnchors.length) {
@@ -637,6 +501,62 @@ class App extends Component {
         })
     }
 
+    selectSong({
+        selectedSongIndex = 0,
+        direction,
+        selectedAnnotationIndex = 0,
+        selectedVerseIndex = 1
+    }) {
+
+        // Called from audio section's previous or next buttons.
+        if (direction) {
+            selectedSongIndex = this.props.selectedSongIndex + direction
+
+            if (selectedSongIndex < 0 || selectedSongIndex >= this.props.songs.length) {
+                return
+            }
+        }
+
+        const isLogue = getIsLogue({ selectedSongIndex,
+                                     songs: this.props.songs }),
+
+            // FIXME: What is accessedSongIndex?
+            newState = {
+                accessedSongIndex: selectedSongIndex
+            }
+
+        if (isLogue) {
+            newState.isPlaying = false
+        }
+
+        // If not selected from portal, show overview if hidden.
+        if (!selectedAnnotationIndex) {
+            this.selectOverview({
+                justShowIfHidden: true
+            })
+        }
+
+        this.selectAnnotation({
+            selectedAnnotationIndex,
+            selectedSongIndex
+        })
+
+        this.selectVerse({
+            selectedVerseIndex,
+            selectedSongIndex
+        })
+
+        this.selectBookColumn({
+            resetToDefault: true,
+            selectedSongIndex
+        })
+
+        this.interactivateVerse()
+
+        this.setState(newState)
+        this.props.selectSongIndex(selectedSongIndex)
+    }
+
     /************
      * OVERVIEW *
      ************/
@@ -869,6 +789,54 @@ class App extends Component {
         this.props.selectTimePlayed(selectedTimePlayed)
     }
 
+    _windowResize(e) {
+        const resizedWindowObject = resizeWindow(e ? e.target : undefined)
+        this.setState(resizedWindowObject)
+    }
+
+    _bindEventHandlers() {
+        this.toggleAccess = this.toggleAccess.bind(this)
+        this.toggleAdmin = this.toggleAdmin.bind(this)
+        this.togglePlay = this.togglePlay.bind(this)
+        this.selectSong = this.selectSong.bind(this)
+        this.selectOverview = this.selectOverview.bind(this)
+        this.selectAudioOption = this.selectAudioOption.bind(this)
+        this.selectAnnotation = this.selectAnnotation.bind(this)
+        this.selectVerse = this.selectVerse.bind(this)
+        this.selectTime = this.selectTime.bind(this)
+        this.resetUpdatedTimePlayed = this.resetUpdatedTimePlayed.bind(this)
+        this.toggleDotKey = this.toggleDotKey.bind(this)
+        this.selectWiki = this.selectWiki.bind(this)
+        this.selectScore = this.selectScore.bind(this)
+        this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
+        this.interactivateVerse = this.interactivateVerse.bind(this)
+        this.selectLyricColumn = this.selectLyricColumn.bind(this)
+        this.selectLyricExpand = this.selectLyricExpand.bind(this)
+        this.selectNavExpand = this.selectNavExpand.bind(this)
+        this.selectBookColumn = this.selectBookColumn.bind(this)
+        this.selectDotsExpand = this.selectDotsExpand.bind(this)
+        this.selectTips = this.selectTips.bind(this)
+        this.advanceToNextSong = this.advanceToNextSong.bind(this)
+        this.selectVerseElement = this.selectVerseElement.bind(this)
+        this.slideVerseElement = this.slideVerseElement.bind(this)
+        this.scrollLyricSection = this.scrollLyricSection.bind(this)
+        this._windowResize = this._windowResize.bind(this)
+        this.touchSliderBegin = this.touchSliderBegin.bind(this)
+        this.touchBodyMove = this.touchBodyMove.bind(this)
+        this.touchBodyEnd = this.touchBodyEnd.bind(this)
+    }
+
+    _assignLogFunctions() {
+        window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
+        window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
+        window.d = LogHelper.logDrawings.bind(LogHelper, this)
+        window.n = LogHelper.logAnnotationsDotKeys.bind(LogHelper, this)
+        window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
+        window.s = LogHelper.logSong.bind(LogHelper, this)
+        window.v = LogHelper.logVerse.bind(LogHelper, this)
+        window.t = LogHelper.logStorage.bind(LogHelper)
+    }
+
     render() {
         return (
             <EventManager
@@ -886,7 +854,6 @@ class App extends Component {
                 selectBookColumn={this.selectBookColumn}
                 toggleDotKey={this.toggleDotKey}
                 selectDotsExpand={this.selectDotsExpand}
-                selectFromPortal={this.selectFromPortal}
                 selectLyricColumn={this.selectLyricColumn}
                 selectLyricExpand={this.selectLyricExpand}
                 scrollLyricSection={this.scrollLyricSection}

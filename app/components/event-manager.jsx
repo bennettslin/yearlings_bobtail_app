@@ -97,8 +97,22 @@ class EventManager extends Component {
         this.props.selectWiki(selectedWikiIndex)
     }
 
-    handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex) {
-        this.props.selectFromPortal(e, songIndex, annotationIndex, verseIndex, columnIndex)
+    handleAnnotationPortalSelect(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, selectedLyricColumnIndex) {
+        this._stopPropagation(e)
+
+        this.props.selectSong({
+            selectedSongIndex,
+            selectedAnnotationIndex,
+            selectedVerseIndex
+        })
+
+        // TODO: Check that this works.
+        if (!isNaN(selectedLyricColumnIndex)) {
+            this.props.selectLyricColumn({
+                selectedLyricColumnIndex,
+                selectedSongIndex
+            })
+        }
     }
 
     // FIXME: Accessibility now broken.
@@ -127,12 +141,16 @@ class EventManager extends Component {
 
     handleAudioPreviousSong(e) {
         this._stopPropagation(e)
-        this.props.selectSong(e, undefined, -1)
+        this.props.selectSong({
+            direction: -1
+        })
     }
 
     handleAudioNextSong(e) {
         this._stopPropagation(e)
-        this.props.selectSong(e, undefined, 1)
+        this.props.selectSong({
+            direction: 1
+        })
     }
 
     handleAudioOptionsToggle(e) {
@@ -245,9 +263,11 @@ class EventManager extends Component {
         this.props.selectNavExpand()
     }
 
-    handleNavSongSelect(e, songIndex) {
+    handleNavSongSelect(e, selectedSongIndex) {
         this._stopPropagation(e)
-        this.props.selectSong(e, songIndex)
+        this.props.selectSong({
+            selectedSongIndex
+        })
     }
 
     handleNavBookSelect(e) {
@@ -300,7 +320,9 @@ class EventManager extends Component {
 
     handleTitleSelect(e) {
         this._stopPropagation(e)
-        this.props.selectSong(e, 0)
+        this.props.selectSong({
+            selectedSongIndex: 0
+        })
     }
 
     /*********
