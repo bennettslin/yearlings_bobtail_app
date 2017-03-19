@@ -39,6 +39,8 @@ export const getSongTitle = (props, isLogue) => {
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
 }
 
+
+// TODO: This might not be needed anymore.
 export const getLyricsStartAtZero = (props, selectedSongIndex) => {
     const selectedSong = getSong({
         selectedSongIndex: selectedSongIndex || props.selectedSongIndex,
