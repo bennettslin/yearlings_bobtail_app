@@ -103,11 +103,17 @@ class EventManager extends Component {
 
     // FIXME: Accessibility now broken.
     handleAnnotationPrevious(e) {
-        this.props.selectAnnotation(e, { direction: -1 })
+        this._stopPropagation(e)
+        this.props.selectAnnotation({
+            direction: -1
+        })
     }
 
     handleAnnotationNext(e) {
-        this.props.selectAnnotation(e, { direction: 1 })
+        this._stopPropagation(e)
+        this.props.selectAnnotation({
+            direction: 1
+        })
     }
 
     /*********
@@ -212,8 +218,14 @@ class EventManager extends Component {
         this.props.interactivateVerse(e)
     }
 
-    handleLyricAnnotationSelect(e, annotationIndex) {
-        this.props.selectAnnotation(e, annotationIndex)
+    handleLyricAnnotationSelect(e, selectedAnnotationIndex) {
+        this._stopPropagation(e)
+        this._closeSections({
+            exemptAnnotation: true
+        })
+        this.props.selectAnnotation({
+            selectedAnnotationIndex
+        })
     }
 
     /*******
@@ -353,6 +365,7 @@ class EventManager extends Component {
      ***********/
 
     _closeSections({
+        exemptAnnotation,
         exemptDots,
         exemptLyric,
         exemptNav,
@@ -362,6 +375,10 @@ class EventManager extends Component {
         // FIXME: Maybe click overlay instead for these? (And then also cancel annotation if it's in overlay.)
         this.props.selectScore(false)
         this.props.selectWiki()
+
+        if (!exemptAnnotation) {
+            this.props.selectAnnotation({})
+        }
 
         if (!exemptDots) {
             this.props.selectDotsExpand(false)

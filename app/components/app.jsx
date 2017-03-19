@@ -213,16 +213,6 @@ class App extends Component {
         window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
     }
 
-    _stopPropagationOfClick(e) {
-        if (e && e.stopPropagation) {
-            e.stopPropagation()
-            // this._handleAccessOn(0)
-
-            // Turn access off.
-            this.toggleAccess(false)
-        }
-    }
-
     /*******************
      * EVENT LISTENERS *
      *******************/
@@ -315,53 +305,14 @@ class App extends Component {
         }, selectedSongIndex + willAdvance)
     }
 
-    /**
-     * When selecting a portal, selectedSongIndex argument is passed in because
-     * props does not yet know new selected song. Ugly workaround, but it works.
-     */
-    selectAnnotation(e, selectedAnnotationIndex = 0, selectedSongIndex) {
-        // Note that e is set to true from closePopup method.
-
-        // Called from arrow buttons in popup.
-        if (typeof selectedAnnotationIndex === 'object') {
-            const { direction } = selectedAnnotationIndex,
-                lyricColumnShown = LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]
-
-            selectedAnnotationIndex = getAnnotationIndexForDirection(this.props, this.props.selectedAnnotationIndex, direction, undefined, lyricColumnShown)
-
-            // this.scrollElementIntoView('annotation', selectedAnnotationIndex)
-        }
-
-        this.props.selectAnnotationIndex(selectedAnnotationIndex)
-        this.selectWiki()
-
-        // Keep accessed index, even if annotation is deselected.
-        if (selectedAnnotationIndex) {
-
-            // // Hide overview if shown.
-            // if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] === SHOWN) {
-            //     this.selectOverview(undefined, undefined, HIDDEN)
-            // }
-
-            this.setState({
-                accessedAnnotationIndex: selectedAnnotationIndex,
-
-                // App does not know new index, so pass it directly.
-                accessedPopupAnchorIndex: getPopupAnchorIndexForDirection({
-                    selectedAnnotationIndex,
-                    songs: this.props.songs,
-                    selectedSongIndex: selectedSongIndex || this.props.selectedSongIndex,
-                    selectedDotKeys: this.props.selectedDotKeys
-                }, 1)
-            })
-        }
-    }
-
     selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, selectedLyricColumnIndex) {
 
         // TODO: Don't reset time if it's the same song.
         this.selectSong(undefined, selectedSongIndex, undefined, true)
-        this.selectAnnotation(undefined, selectedAnnotationIndex, selectedSongIndex)
+        this.selectAnnotation({
+            selectedAnnotationIndex,
+            selectedSongIndex
+        })
 
         // This also selects time.
         // FIXME: This should animate to verse, but doesn't always. (For example, "stand unsure.") This may be because "stand unsure" is verse 49, which doesn't exist yet until the song has been changed.
@@ -397,26 +348,6 @@ class App extends Component {
 
     selectVerse(e, selectedVerseIndex = 0, direction, selectedSongIndex) {
         const songTimes = getSongTimes(this.props, selectedSongIndex)
-
-        this._stopPropagationOfClick(e)
-
-        /**
-         * This was called from audio rewind and forward buttons, which do not
-         * have modulo selection.
-         */
-        // if (direction) {
-        //     selectedVerseIndex = getVerseIndexForDirection({
-        //         props: this.props,
-        //         index: this.props.selectedVerseIndex,
-        //         direction,
-        //         lyricColumnShown: LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex],
-        //         noModulo: true
-        //     })
-        //     if (selectedVerseIndex < 0 || selectedVerseIndex >= songTimes.length) {
-        //         return
-        //     }
-        //
-        // }
 
         let selectedTimePlayed,
             scroll
@@ -510,6 +441,45 @@ class App extends Component {
         this.props.selectAdminIndex(selectedAdminIndex)
     }
 
+    /**************
+     * ANNOTATION *
+     **************/
+
+    selectAnnotation({
+        selectedAnnotationIndex = 0,
+        direction,
+        selectedSongIndex = this.props.selectedSongIndex
+    }) {
+
+        // Called from arrow buttons in popup.
+        if (direction) {
+            const lyricColumnShown = LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]
+
+            selectedAnnotationIndex = getAnnotationIndexForDirection(this.props, this.props.selectedAnnotationIndex, direction, undefined, lyricColumnShown)
+        }
+
+        // Keep accessed index, even if annotation is deselected.
+        if (selectedAnnotationIndex) {
+            const { songs,
+                    selectedDotKeys } = this.props,
+                accessedPopupAnchorIndex = getPopupAnchorIndexForDirection({
+                    selectedSongIndex,
+                    selectedAnnotationIndex,
+                    songs,
+                    selectedDotKeys
+                }, 1)
+
+            this.setState({
+                accessedAnnotationIndex: selectedAnnotationIndex,
+
+                // App does not know new index, so pass it directly.
+                accessedPopupAnchorIndex
+            })
+        }
+
+        this.props.selectAnnotationIndex(selectedAnnotationIndex)
+    }
+
     /*********
      * AUDIO *
      *********/
@@ -558,7 +528,7 @@ class App extends Component {
 
         // Dots section cannot be expanded in logue.
         if (getIsLogue(this.props) && selectedDotsIndex) {
-            return
+            return false
         }
 
         this.props.selectDotsIndex(selectedDotsIndex)
@@ -574,7 +544,7 @@ class App extends Component {
          * logue.
          */
         if (!getIsLyricExpandable(this.state) || getIsLogue(this.props)) {
-            return
+            return false
         }
 
         this.setState({
@@ -592,7 +562,7 @@ class App extends Component {
          * Prevent verse bar from showing upon initial load.
          */
         if (!this.state.appMounted || !verseElement) {
-            return
+            return false
         }
 
         // Get isSelectedVerseAbove and isSelectedVerseBelow.
@@ -635,7 +605,7 @@ class App extends Component {
          * has double columns.
          */
         if (!getShowSingleLyricColumn(props, state, selectedSongIndex)) {
-            return
+            return false
         }
 
         const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex],
@@ -708,7 +678,7 @@ class App extends Component {
          * column, or if nav is collapsed.
          */
         if (!getShowSingleBookColumn(this.state) || !selectedNavIndex) {
-            return
+            return false
         }
 
         // Reset to default upon song change or nav expand.
@@ -733,7 +703,7 @@ class App extends Component {
 
         // We shouldn't be able to change overview it's a logue.
         if (getIsLogue(this.props)) {
-            return
+            return false
         }
 
         let selectedOverviewIndex = this.props.selectedOverviewIndex
