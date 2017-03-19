@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import DomManager from './dom-manager'
+import { getAnnotation,
+         getPopupAnchorIndexForDirection } from 'helpers/album-view-helper'
 import { CAPS_LOCK,
          ESCAPE,
          SPACE,
@@ -87,7 +89,9 @@ class AccessManager extends Component {
 
     _routeNavigation(e, keyName) {
         // We're in annotation.
-        if (this.props.selectedAnnotationIndex) {
+        if (this.props.selectedAnnotationIndex &&
+            keyName !== ARROW_LEFT &&
+            keyName !== ARROW_RIGHT) {
             this._handleAnnotationNavigation(e, keyName)
 
             // We're in dots section.
@@ -105,33 +109,10 @@ class AccessManager extends Component {
     }
 
     _handleAnnotationNavigation(e, keyName) {
-        // TODO: Is this the best way to navigate?
-        switch (keyName) {
-            case ARROW_LEFT:
-                accessedDotIndex = (accessedDotIndex + (dotKeysLength - 1)) % dotKeysLength
-                break
-            case ARROW_RIGHT:
-                accessedDotIndex = (accessedDotIndex + 1) % dotKeysLength
-                break
-            case ARROW_UP:
-            case ARROW_DOWN:
-                accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2)) % dotKeysLength
-                break
-            case ENTER:
-                this.props.handleDotKeyToggle(e, ALL_DOT_KEYS[accessedDotIndex])
-                return true
-            default:
-                return false
-        }
-    }
+        const { props } = this
 
-    handleAnnotationAccess({
-        keyName,
-        props,
-        accessedPopupAnchorIndex,
-        selectWikiOrPortal
-    }) {
-        let direction
+        let { accessedPopupAnchorIndex } = props,
+            direction
 
         switch (keyName) {
             case ARROW_UP:
@@ -141,16 +122,49 @@ class AccessManager extends Component {
                 direction = 1
                 break
             case ENTER:
-                selectWikiOrPortal()
-                return false
+                const annotation = getAnnotation(props)
+
+                if (annotation.popupAnchors && annotation.popupAnchors.length) {
+                    const popupAnchorObject = annotation.popupAnchors[accessedPopupAnchorIndex - 1]
+
+                    // It's a wiki anchor.
+                    if (typeof popupAnchorObject === 'string') {
+                        this.props.handleAnnotationWikiSelect(e, accessedPopupAnchorIndex)
+
+                    // It's a portal.
+                    } else {
+                        const { songIndex,
+                                annotationIndex,
+                                verseIndex,
+                                columnIndex } = popupAnchorObject
+
+                        this.props.handleAnnotationPortalSelect(
+                            e,
+                            songIndex,
+                            annotationIndex,
+                            verseIndex,
+                            columnIndex
+                        )
+                    }
+                    return true
+
+                } else {
+                    return false
+                }
+
             default:
                 return false
         }
 
-        accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, direction)
+        accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(
+            props,
+            accessedPopupAnchorIndex,
+            direction
+        )
 
-        return accessedPopupAnchorIndex
+        this.props.handlePopupAnchorAccess(accessedPopupAnchorIndex)
     }
+
 
     _handleDotsNavigation(e, keyName) {
         const dotKeysLength = ALL_DOT_KEYS.length
@@ -281,7 +295,7 @@ class AccessManager extends Component {
         // Turn access off.
         } else {
             props.handleAccessToggle(false)
-            props.handleVerseInteractivate()
+            props.handleVerseInteractivate(e)
         }
     }
 

@@ -8,6 +8,7 @@ class EventManager extends Component {
         super(props)
 
         this.handleDotAccess = this.handleDotAccess.bind(this)
+        this.handlePopupAnchorAccess = this.handlePopupAnchorAccess.bind(this)
         this.handleSongAccess = this.handleSongAccess.bind(this)
 
         this.handleBodyClick = this.handleBodyClick.bind(this)
@@ -82,6 +83,10 @@ class EventManager extends Component {
 
     handleDotAccess(accessedDotIndex) {
         this.props.accessDot(accessedDotIndex)
+    }
+
+    handlePopupAnchorAccess(accessedPopupAnchorIndex) {
+        this.props.accessPopupAnchor(accessedPopupAnchorIndex)
     }
 
     handleSongAccess(accessedSongIndex) {
@@ -395,9 +400,9 @@ class EventManager extends Component {
      * WIKI *
      ********/
 
-    handleWikiToggle(e) {
+    handleWikiToggle(e, selectedWikiIndex) {
         this._stopPropagation(e)
-        this.props.selectWiki()
+        this.props.selectWiki(selectedWikiIndex)
     }
 
     /***********
@@ -485,6 +490,7 @@ class EventManager extends Component {
         return (
             <AccessManager {...domProps} {...domState}
                 handleDotAccess={this.handleDotAccess}
+                handlePopupAnchorAccess={this.handlePopupAnchorAccess}
                 handleSongAccess={this.handleSongAccess}
                 handleBodyClick={this.handleBodyClick}
                 handleBodyTouchMove={this.handleBodyTouchMove}

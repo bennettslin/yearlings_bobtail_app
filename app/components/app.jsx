@@ -191,20 +191,6 @@ class App extends Component {
         }, selectedSongIndex + willAdvance)
     }
 
-    // Put this in event handler.
-    selectWikiOrPortal() {
-        const annotation = getAnnotation(this.props)
-        if (annotation.popupAnchors && annotation.popupAnchors.length) {
-            const popupAnchorObject = annotation.popupAnchors[this.state.accessedPopupAnchorIndex - 1]
-
-            if (typeof popupAnchorObject === 'string') {
-                this.selectWiki(true, this.state.accessedPopupAnchorIndex)
-            } else {
-                this.selectFromPortal(undefined, popupAnchorObject.songIndex, popupAnchorObject.annotationIndex)
-            }
-        }
-    }
-
     resetUpdatedTimePlayed() {
         this.setState({
             updatedTimePlayed: null
@@ -233,6 +219,12 @@ class App extends Component {
     accessDot(accessedDotIndex) {
         this.setState({
             accessedDotIndex
+        })
+    }
+
+    accessPopupAnchor(accessedPopupAnchorIndex) {
+        this.setState({
+            accessedPopupAnchorIndex
         })
     }
 
@@ -274,9 +266,9 @@ class App extends Component {
             const { songs,
                     selectedDotKeys } = this.props,
                 accessedPopupAnchorIndex = getPopupAnchorIndexForDirection({
+                    songs,
                     selectedSongIndex,
                     selectedAnnotationIndex,
-                    songs,
                     selectedDotKeys
                 }, 1)
 
@@ -807,6 +799,7 @@ class App extends Component {
 
     _bindEventHandlers() {
         this.accessDot = this.accessDot.bind(this)
+        this.accessPopupAnchor = this.accessPopupAnchor.bind(this)
         this.accessSong = this.accessSong.bind(this)
         this.toggleAccess = this.toggleAccess.bind(this)
         this.toggleAdmin = this.toggleAdmin.bind(this)
@@ -821,7 +814,6 @@ class App extends Component {
         this.toggleDotKey = this.toggleDotKey.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
-        this.selectWikiOrPortal = this.selectWikiOrPortal.bind(this)
         this.interactivateVerse = this.interactivateVerse.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
@@ -853,13 +845,13 @@ class App extends Component {
     render() {
         return (
             <EventManager
-
                 // Dom manager props.
                 domProps={this.props}
                 domState={this.state}
 
                 // Event manager props.
                 accessDot={this.accessDot}
+                accessPopupAnchor={this.accessPopupAnchor}
                 accessSong={this.accessSong}
                 touchSliderBegin={this.touchSliderBegin}
                 touchBodyMove={this.touchBodyMove}

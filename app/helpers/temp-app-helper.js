@@ -50,6 +50,22 @@ export default {
     //     }
     // }
 
+
+        // Put this in event handler.
+        selectWikiOrPortal() {
+            const annotation = getAnnotation(this.props)
+            if (annotation.popupAnchors && annotation.popupAnchors.length) {
+                const popupAnchorObject = annotation.popupAnchors[this.state.accessedPopupAnchorIndex - 1]
+
+                if (typeof popupAnchorObject === 'string') {
+                    this.selectWiki(true, this.state.accessedPopupAnchorIndex)
+                } else {
+                    this.selectFromPortal(undefined, popupAnchorObject.songIndex, popupAnchorObject.annotationIndex)
+                }
+            }
+        }
+
+
     _selectDefaultSectionElementIndex(accessedSectionIndex, selectedSongIndex) {
         const accessedSectionKey = SECTION_KEYS[accessedSectionIndex]
         let newState

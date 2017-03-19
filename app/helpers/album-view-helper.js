@@ -1,5 +1,9 @@
 // Parse album data for presentation.
-import { LEFT, LYRIC_COLUMN_KEYS } from './constants'
+import { LEFT,
+         LYRIC_COLUMN_KEYS,
+
+         PORTAL,
+         REFERENCE } from './constants'
 
 import { intersects } from 'helpers/dot-helper'
 import { getIsMobileWiki, getLyricSectionRect } from 'helpers/responsive-helper'
@@ -417,9 +421,14 @@ export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, directi
          * Skip wiki anchors if wiki dot not selected, and portal anchors if
          * portal dot not selected.
          */
-        } while (((typeof popupAnchors[returnIndex - 1] === 'string' && !selectedDotKeys.wiki) || (typeof popupAnchors[returnIndex - 1] === 'object' && !selectedDotKeys.portal)) && !(direction !== 0 && currentIndex === returnIndex))
+     } while ((
+            (typeof popupAnchors[returnIndex - 1] === 'string' && !selectedDotKeys[REFERENCE]) ||
+            (typeof popupAnchors[returnIndex - 1] === 'object' && !selectedDotKeys[PORTAL])
+        ) && (direction === 0 || currentIndex !== returnIndex))
+
         return returnIndex
     }
+
 
     return currentIndex
 }

@@ -17,7 +17,7 @@ Virality, stories of technology abetting the dissemination of art, rather than t
 
 Underdog culture: Underdog culture is just like any other system that favours some over others. But it's the least likely to recognise the de facto underdogs of its time. An underdog culture can never belatedly pivot to the de facto underdog.
 
-Altruistic audiences, Contrived narratives, alternate facts, Trump
+Altruistic audiences, Contrived narratives, alternate facts, Trump, assume that because you're willing to suspend your understanding of reality for the sake of the fun narrative, that everyone else is.
 
 Startups, knowledgeable curators with their ears to the ground vs. Zappa's cigar chomping old guys. At best, you understand trends, not innovations.
 
