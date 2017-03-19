@@ -226,6 +226,7 @@ const LiveView = ({
             handleAudioNextSong,
             handleAudioOptionsToggle,
             handleTitleSelect,
+            handlePopupContainerClick,
 
             audioTimerChild,
             audioBannerChild

@@ -61,10 +61,8 @@ class EventManager extends Component {
 
     handleBodyClick(e) {
         this._stopPropagation(e)
-
         this._closeSections({})
 
-        // this.props.clickBody(e)
     }
 
     handlePopupContainerClick(e) {
@@ -268,6 +266,7 @@ class EventManager extends Component {
         this.props.selectSong({
             selectedSongIndex
         })
+        this.props.selectNavExpand(false)
     }
 
     handleNavBookSelect(e) {
@@ -352,6 +351,7 @@ class EventManager extends Component {
     }
 
     handleBodyTouchEnd(e) {
+        e.preventDefault()
         this._stopPropagation(e)
         this.props.touchBodyEnd()
     }

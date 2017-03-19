@@ -43,7 +43,7 @@
     }
 
     .audio-section {
-        height: @menu-height - @audio-block-padding-y * 2;
+        height: @menu-height;
     }
 }
 
@@ -76,7 +76,10 @@
 
 .audio-subfield {
     box-sizing: border-box;
-    padding: @audio-block-padding-y @audio-block-padding;
+
+    .audio-section {
+        padding: @audio-block-padding-y @audio-block-padding;
+    }
 }
 
 .audio-section {
@@ -424,7 +427,10 @@
         }
 
         .audio-subfield {
-            padding: @audio-block-padding-y @title-in-audio-block-padding;
+
+            .audio-section {
+                padding: @audio-block-padding-y @title-in-audio-block-padding;
+            }
         }
 
         .audio-banner-block {

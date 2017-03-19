@@ -9,7 +9,6 @@ module.exports = [
         workedHours: 13,
         neededHours: 13
     },
-
     {
         taskName: `Add character descriptions.`,
         workedHours: 5,
@@ -1490,4 +1489,14 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `App event handler refactor.`,
+        workedHours: 8,
+        neededHours: 8
+    },
+    {
+        taskName: `Audio banner touch end does not dismiss overlay.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
