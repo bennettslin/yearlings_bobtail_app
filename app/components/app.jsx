@@ -166,7 +166,6 @@ class App extends Component {
 
     windowResize(e) {
         const resizedWindowObject = resizeWindow(e ? e.target : undefined)
-
         this.setState(resizedWindowObject)
     }
 
@@ -227,18 +226,6 @@ class App extends Component {
     /*******************
      * EVENT LISTENERS *
      *******************/
-
-    togglePlay(isPlaying = !this.state.isPlaying) {
-
-        // Select first song if play button in logue is toggled on.
-        if (getIsLogue(this.props) && isPlaying) {
-            this.selectSong(undefined, 1)
-        }
-
-        this.setState({
-            isPlaying
-        })
-    }
 
     selectSong(e, selectedSongIndex = 0, direction, fromPortal) {
 
@@ -402,15 +389,6 @@ class App extends Component {
         }
     }
 
-    selectTime(e, selectedTimePlayed = 0) {
-        const selectedVerseIndex = getVerseIndexForTime(this.props, selectedTimePlayed)
-
-        if (selectedVerseIndex !== null) {
-
-            this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll: false })
-        }
-    }
-
     resetUpdatedTimePlayed() {
         this.setState({
             updatedTimePlayed: null
@@ -455,6 +433,15 @@ class App extends Component {
         }
 
         this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll })
+    }
+
+    selectTime(e, selectedTimePlayed = 0) {
+        const selectedVerseIndex = getVerseIndexForTime(this.props, selectedTimePlayed)
+
+        if (selectedVerseIndex !== null) {
+
+            this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll: false })
+        }
     }
 
     _storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll }) {
@@ -526,6 +513,20 @@ class App extends Component {
     /*********
      * AUDIO *
      *********/
+
+     togglePlay(isPlaying = !this.state.isPlaying) {
+
+         // Select first song if play button in logue is toggled on.
+         if (getIsLogue(this.props) && isPlaying) {
+
+             // FIXME: Handle this!
+             this.selectSong(undefined, 1)
+         }
+
+         this.setState({
+             isPlaying
+         })
+     }
 
     selectAudioOption(selectedAudioOptionIndex =
         (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length) {
@@ -771,6 +772,10 @@ class App extends Component {
     selectScore(selectedScoreIndex =
         (this.props.selectedScoreIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
+
+        if (typeof selectedScoreIndex === 'boolean') {
+            selectedScoreIndex = selectedScoreIndex ? 1 : 0
+        }
 
         this.props.selectScoreIndex(selectedScoreIndex)
     }

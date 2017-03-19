@@ -358,6 +358,11 @@ class EventManager extends Component {
         exemptNav,
         exemptOverview
     }) {
+
+        // FIXME: Maybe click overlay instead for these? (And then also cancel annotation if it's in overlay.)
+        this.props.selectScore(false)
+        this.props.selectWiki()
+
         if (!exemptDots) {
             this.props.selectDotsExpand(false)
         }
