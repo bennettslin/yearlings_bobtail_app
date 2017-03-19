@@ -4,12 +4,9 @@ import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
 
-import { getIntegerForCharKey } from 'helpers/general-helper'
-
 import { LYRIC_VERSE_ELEMENT,
          LYRIC_ANNOTATION_ELEMENT,
 
-         ALL_DOT_KEYS,
          ARROW_LEFT,
          ARROW_RIGHT,
          ARROW_UP,

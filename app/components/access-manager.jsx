@@ -24,12 +24,10 @@ import { CAPS_LOCK,
          LYRIC_SECTION_EXPAND_KEY,
          TITLE_SELECT_KEY,
          DOTS_SECTION_ACCESS_KEY,
-         LYRIC_SECTION_ACCESS_KEY,
          NAV_SECTION_ACCESS_KEY,
 
          OVERVIEW_OPTIONS,
          SHOWN,
-         HIDDEN,
 
          ALL_DOT_KEYS } from 'helpers/constants'
 
@@ -43,6 +41,7 @@ class AccessManager extends Component {
         this._handleAnnotationNavigation = this._handleAnnotationNavigation.bind(this)
         this._handleDotsNavigation = this._handleDotsNavigation.bind(this)
         this._handleNavNavigation = this._handleNavNavigation.bind(this)
+        this._handleLyricNavigation = this._handleLyricNavigation.bind(this)
         this._handleLetterKey = this._handleLetterKey.bind(this)
         this._handleEscape = this._handleEscape.bind(this)
     }
@@ -104,7 +103,7 @@ class AccessManager extends Component {
 
         // We're in lyrics section.
         } else {
-
+            this._handleLyricNavigation(e, keyName)
         }
     }
 
@@ -121,7 +120,7 @@ class AccessManager extends Component {
             case ARROW_DOWN:
                 direction = 1
                 break
-            case ENTER:
+            case ENTER: {
                 const annotation = getAnnotation(props)
 
                 if (annotation.popupAnchors && annotation.popupAnchors.length) {
@@ -151,6 +150,7 @@ class AccessManager extends Component {
                 } else {
                     return false
                 }
+            }
 
             default:
                 return false
@@ -221,6 +221,19 @@ class AccessManager extends Component {
         }
 
         this.props.handleSongAccess(accessedSongIndex)
+    }
+
+    _handleLyricNavigation(e, keyName) {
+        switch (keyName) {
+            case ARROW_UP:
+                break
+            case ARROW_DOWN:
+                break
+            case ENTER:
+                return true
+            default:
+                return false
+        }
     }
 
     _handleLetterKey(e, keyName) {

@@ -29,22 +29,22 @@ export const getPropsAreSame = (smallerSet, largerSet) => {
     }, true)
 }
 
-export const getIntegerForCharKey = (keyName) => {
-    if (keyName.length > 1) {
-        return -1
-    }
-
-    const charCode = keyName.charCodeAt(0)
-
-    // Char codes for numbers are 48 to 57.
-    if (charCode >= 48 && charCode <= 57) {
-        return charCode - 48
-
-    // Char codes for lowercase are 97 to 122.
-    } else if (charCode >= 97 && charCode <= 122) {
-        return charCode - 87
-
-    } else {
-        return -1
-    }
-}
+// export const getIntegerForCharKey = (keyName) => {
+//     if (keyName.length > 1) {
+//         return -1
+//     }
+//
+//     const charCode = keyName.charCodeAt(0)
+//
+//     // Char codes for numbers are 48 to 57.
+//     if (charCode >= 48 && charCode <= 57) {
+//         return charCode - 48
+//
+//     // Char codes for lowercase are 97 to 122.
+//     } else if (charCode >= 97 && charCode <= 122) {
+//         return charCode - 87
+//
+//     } else {
+//         return -1
+//     }
+// }
