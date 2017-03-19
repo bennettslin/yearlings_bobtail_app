@@ -17,15 +17,8 @@ import { selectAdminIndex,
          selectDotsIndex,
          accessOn } from 'redux/actions'
 import EventManager from './event-manager'
-import { AUDIO_SECTION,
-         LYRICS_SECTION,
-         DOTS_SECTION,
-         ANNOTATION_SECTION,
-         WIKI_SECTION,
-
-         SHOWN,
+import { SHOWN,
          HIDDEN,
-         DISABLED,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS,
          AUDIO_OPTIONS,
@@ -204,7 +197,6 @@ class App extends Component {
         this.selectVerseElement = this.selectVerseElement.bind(this)
         this.slideVerseElement = this.slideVerseElement.bind(this)
         this.scrollLyricSection = this.scrollLyricSection.bind(this)
-        // this.clickBody = this.clickBody.bind(this)
         this.windowResize = this.windowResize.bind(this)
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
         this.touchBodyMove = this.touchBodyMove.bind(this)
@@ -249,7 +241,6 @@ class App extends Component {
     }
 
     selectSong(e, selectedSongIndex = 0, direction, fromPortal) {
-        this._stopPropagationOfClick(e)
 
         // Called from audio section's previous or next buttons.
         if (direction) {
@@ -343,7 +334,6 @@ class App extends Component {
      */
     selectAnnotation(e, selectedAnnotationIndex = 0, selectedSongIndex) {
         // Note that e is set to true from closePopup method.
-        this._stopPropagationOfClick(e)
 
         // Called from arrow buttons in popup.
         if (typeof selectedAnnotationIndex === 'object') {
@@ -380,8 +370,7 @@ class App extends Component {
         }
     }
 
-    selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, columnIndex) {
-        this._stopPropagationOfClick(e)
+    selectFromPortal(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, selectedLyricColumnIndex) {
 
         // TODO: Don't reset time if it's the same song.
         this.selectSong(undefined, selectedSongIndex, undefined, true)
@@ -391,8 +380,12 @@ class App extends Component {
         // FIXME: This should animate to verse, but doesn't always. (For example, "stand unsure.") This may be because "stand unsure" is verse 49, which doesn't exist yet until the song has been changed.
         this.selectVerse(true, selectedVerseIndex, undefined, selectedSongIndex)
 
-        if (!isNaN(columnIndex)) {
-            this.selectLyricColumn(undefined, columnIndex, selectedSongIndex)
+        if (!isNaN(selectedLyricColumnIndex)) {
+
+            this.selectLyricColumn({
+                selectedLyricColumnIndex,
+                selectedSongIndex
+            })
         }
     }
 
@@ -500,61 +493,6 @@ class App extends Component {
         this.props.selectVerseIndex(selectedVerseIndex)
         this.props.selectTimePlayed(selectedTimePlayed)
     }
-
-    selectLyricColumn(e, selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2, selectedSongIndex) {
-
-        this._stopPropagationOfClick(e)
-
-        /**
-         * User shouldn't be able to select lyric column if not in a song that
-         * has double columns.
-         */
-        if (!getShowSingleLyricColumn(this.props, this.state, selectedSongIndex)) {
-            return
-        }
-
-        const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
-        let newState = {}
-
-        /**
-         * If accessed lyric element is annotation that's in a column, select
-         * its verse.
-         */
-        if (this.state.accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
-            const annotation = getAnnotation(this.props, this.state.accessedAnnotationIndex)
-
-            if (annotation && annotation.column) {
-                newState.accessedLyricElement = LYRIC_VERSE_ELEMENT
-                newState.accessedVerseIndex = getVerseIndexForAnnotationIndex({
-                    props: this.props,
-                    index: this.state.accessedAnnotationIndex,
-                    lyricColumnShown
-                })
-            }
-        } else {
-            newState.accessedVerseIndex =  getVerseIndexForDirection({
-                props: this.props,
-                index: this.state.accessedVerseIndex,
-                lyricColumnShown
-            })
-        }
-
-        this.props.selectLyricColumnIndex(selectedLyricColumnIndex)
-        this.setState(newState)
-    }
-
-    // clickBody(e) {
-    //     this._stopPropagationOfClick(e)
-    //     // this._handleAccessOn(0)
-    //
-    //     // Hide popups, but don't collapse lyrics column.
-    //     this._closePopupIfOpen({ exemptSection: LYRICS_SECTION })
-    //     //
-    //
-    //
-    //     // Deinteractivate verse.
-    //     this.interactivateVerse()
-    // }
 
 /******************************************************************************/
 /******************************************************************************/
@@ -681,6 +619,56 @@ class App extends Component {
         }
 
         // FIXME: 99% of the time, we are only saving scroll top. Maybe persist this value in window instead, because setting state considerably slows down the scroll.
+        this.setState(newState)
+    }
+
+    selectLyricColumn({
+        selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2,
+        selectedSongIndex
+    }) {
+        const { props,
+                state } = this
+
+        /**
+         * We shouldn't be able to select lyric column if not in a song that
+         * has double columns.
+         */
+        if (!getShowSingleLyricColumn(props, state, selectedSongIndex)) {
+            return
+        }
+
+        const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex],
+            { accessedLyricElement,
+              accessedAnnotationIndex,
+              accessedVerseIndex } = state
+
+        let newState = {}
+
+        /**
+         * If accessed lyric element is annotation that's in a column, select
+         * its verse.
+         */
+        if (this.state.accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
+            const annotation = getAnnotation(props, accessedAnnotationIndex)
+
+            if (annotation && annotation.column) {
+                newState.accessedLyricElement = LYRIC_VERSE_ELEMENT
+                newState.accessedVerseIndex = getVerseIndexForAnnotationIndex({
+                    props,
+                    index: accessedAnnotationIndex,
+                    lyricColumnShown
+                })
+            }
+
+        } else {
+            newState.accessedVerseIndex =  getVerseIndexForDirection({
+                props,
+                index: accessedVerseIndex,
+                lyricColumnShown
+            })
+        }
+
+        this.props.selectLyricColumnIndex(selectedLyricColumnIndex)
         this.setState(newState)
     }
 
@@ -928,7 +916,6 @@ class App extends Component {
                 domState={this.state}
 
                 // Event manager props.
-                // clickBody={this.clickBody}
                 touchSliderBegin={this.touchSliderBegin}
                 touchBodyMove={this.touchBodyMove}
                 touchBodyEnd={this.touchBodyEnd}

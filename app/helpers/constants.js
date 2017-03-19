@@ -352,6 +352,7 @@ module.exports = {
     AUDIO_NEXT_SONG_KEY: 'f',
     SCORE_TOGGLE_KEY: 's',
     TIPS_TOGGLE_KEY: 't',
+    LYRIC_COLUMN_TOGGLE_KEY: 'e',
     LYRIC_SECTION_EXPAND_KEY: 'x',
     TITLE_SELECT_KEY: 'z',
     DOTS_SECTION_ACCESS_KEY: 'd',

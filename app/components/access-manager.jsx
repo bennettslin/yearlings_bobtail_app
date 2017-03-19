@@ -12,6 +12,7 @@ import { CAPS_LOCK,
          AUDIO_NEXT_SONG_KEY,
          SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY,
+         LYRIC_COLUMN_TOGGLE_KEY,
          LYRIC_SECTION_EXPAND_KEY,
          TITLE_SELECT_KEY,
          DOTS_SECTION_ACCESS_KEY,
@@ -135,6 +136,9 @@ class AccessManager extends Component {
                 break
             case TIPS_TOGGLE_KEY:
                 this.props.handleTipsToggle(e)
+                break
+            case LYRIC_COLUMN_TOGGLE_KEY:
+                this.props.handleLyricColumnSelect(e)
                 break
             case LYRIC_SECTION_EXPAND_KEY:
                 this.props.handleLyricSectionExpand(e)

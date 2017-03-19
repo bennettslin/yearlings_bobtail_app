@@ -193,6 +193,11 @@ class EventManager extends Component {
         })
     }
 
+    handleLyricColumnSelect(e) {
+        this._stopPropagation(e)
+        this.props.selectLyricColumn({})
+    }
+
     /**********
      * LYRICS *
      **********/
@@ -209,10 +214,6 @@ class EventManager extends Component {
 
     handleLyricAnnotationSelect(e, annotationIndex) {
         this.props.selectAnnotation(e, annotationIndex)
-    }
-
-    handleLyricColumnSelect(e) {
-        this.props.selectLyricColumn(e)
     }
 
     /*******
@@ -444,10 +445,10 @@ class EventManager extends Component {
                 handleDotKeyToggle={this.handleDotKeyToggle}
                 handleDotsSectionToggle={this.handleDotsSectionToggle}
                 handleLyricSectionExpand={this.handleLyricSectionExpand}
+                handleLyricColumnSelect={this.handleLyricColumnSelect}
                 handleLyricPlay={this.handleLyricPlay}
                 handleLyricVerseSelect={this.handleLyricVerseSelect}
                 handleLyricAnnotationSelect={this.handleLyricAnnotationSelect}
-                handleLyricColumnSelect={this.handleLyricColumnSelect}
                 handleLyricSectionScroll={this.handleLyricSectionScroll}
                 handleNavExpand={this.handleNavExpand}
                 handleNavSongSelect={this.handleNavSongSelect}
