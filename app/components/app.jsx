@@ -111,6 +111,7 @@ class App extends Component {
             popupAnnotationIndex: props.selectedAnnotationIndex,
             popupWikiIndex: props.selectedWikiIndex,
 
+            accessedDotIndex: 0,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
             // If no annotation selected, default to 1.
@@ -123,7 +124,6 @@ class App extends Component {
              */
             accessedLyricElement: props.selectedAnnotationIndex ?
                 LYRIC_ANNOTATION_ELEMENT : LYRIC_VERSE_ELEMENT,
-            accessedDotIndex: 0,
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false,
 
@@ -228,6 +228,12 @@ class App extends Component {
         }
 
         this.props.accessOn(accessedOn)
+    }
+
+    accessDot(accessedDotIndex) {
+        this.setState({
+            accessedDotIndex
+        })
     }
 
     accessSong(accessedSongIndex) {
@@ -800,6 +806,7 @@ class App extends Component {
     }
 
     _bindEventHandlers() {
+        this.accessDot = this.accessDot.bind(this)
         this.accessSong = this.accessSong.bind(this)
         this.toggleAccess = this.toggleAccess.bind(this)
         this.toggleAdmin = this.toggleAdmin.bind(this)
@@ -852,6 +859,7 @@ class App extends Component {
                 domState={this.state}
 
                 // Event manager props.
+                accessDot={this.accessDot}
                 accessSong={this.accessSong}
                 touchSliderBegin={this.touchSliderBegin}
                 touchBodyMove={this.touchBodyMove}

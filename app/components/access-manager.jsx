@@ -29,7 +29,7 @@ import { CAPS_LOCK,
          SHOWN,
          HIDDEN,
 
-      } from 'helpers/constants'
+         ALL_DOT_KEYS } from 'helpers/constants'
 
 class AccessManager extends Component {
 
@@ -38,6 +38,7 @@ class AccessManager extends Component {
 
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
         this._routeNavigation = this._routeNavigation.bind(this)
+        this._handleDotsNavigation = this._handleDotsNavigation.bind(this)
         this._handleNavNavigation = this._handleNavNavigation.bind(this)
         this._handleLetterKey = this._handleLetterKey.bind(this)
         this._handleEscape = this._handleEscape.bind(this)
@@ -83,16 +84,17 @@ class AccessManager extends Component {
         }
     }
 
-    _routeNavigation(e, arrowName) {
+    _routeNavigation(e, keyName) {
         // We're in annotation.
         if (this.props.selectedAnnotationIndex) {
 
             // We're in dots section.
         } else if (this.props.selectedDotsIndex) {
+            this._handleDotsNavigation(e, keyName)
 
             // We're in nav section.
         } else if (this.props.selectedNavIndex) {
-            this._handleNavNavigation(e, arrowName)
+            this._handleNavNavigation(e, keyName)
 
         // We're in lyrics section.
         } else {
@@ -100,7 +102,70 @@ class AccessManager extends Component {
         }
     }
 
-    _handleNavNavigation(e, arrowName) {
+    handleDotAccess({
+        keyName,
+        accessedDotIndex,
+        selectDot
+    }) {
+        const index = getIntegerForCharKey(keyName) - 1
+
+        // Go straight to index if chosen.
+        if (index >= 0 && index < ALL_DOT_KEYS.length) {
+            selectDot(undefined, ALL_DOT_KEYS[index])
+            accessedDotIndex = index
+
+        } else {
+            if (keyName === ENTER) {
+                selectDot(undefined, ALL_DOT_KEYS[accessedDotIndex])
+
+            } else if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
+                let direction
+
+                switch (keyName) {
+                    case ARROW_LEFT:
+                    direction = ALL_DOT_KEYS.length - 1
+                    break
+                    case ARROW_RIGHT:
+                    direction = 1
+                    break
+                }
+
+                accessedDotIndex = (accessedDotIndex + direction) % ALL_DOT_KEYS.length
+            }
+        }
+
+        return {
+            accessedDotIndex
+        }
+    }
+
+    _handleDotsNavigation(e, keyName) {
+        const dotKeysLength = ALL_DOT_KEYS.length
+        let { accessedDotIndex } = this.props
+
+        // TODO: Is this the best way to navigate?
+        switch (keyName) {
+            case ARROW_LEFT:
+                accessedDotIndex = (accessedDotIndex + (dotKeysLength - 1)) % dotKeysLength
+                break
+            case ARROW_RIGHT:
+                accessedDotIndex = (accessedDotIndex + 1) % dotKeysLength
+                break
+            case ARROW_UP:
+            case ARROW_DOWN:
+                accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2)) % dotKeysLength
+                break
+            case ENTER:
+                this.props.handleDotKeyToggle(e, ALL_DOT_KEYS[accessedDotIndex])
+                return true
+            default:
+                return false
+        }
+
+        this.props.handleDotAccess(accessedDotIndex)
+    }
+
+    _handleNavNavigation(e, keyName) {
         const { songs,
                 selectedBookColumnIndex,
                 bookStartingIndices } = this.props,
@@ -109,7 +174,7 @@ class AccessManager extends Component {
         let { accessedSongIndex } = this.props
 
         // Skip appropriate songs if showing single book column.
-        switch (arrowName) {
+        switch (keyName) {
             case ARROW_LEFT:
                 accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
                 break

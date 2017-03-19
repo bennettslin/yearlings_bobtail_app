@@ -307,65 +307,65 @@ export default {
         return accessedPopupAnchorIndex
     },
 
-    handleAudioAccess({
-        keyName,
-        selectAudioOption,
-        selectSong,
-        selectVerse
-    }) {
-        switch (keyName) {
-            case ENTER:
-                selectAudioOption()
-                break
-            case ARROW_LEFT:
-                selectSong(true, undefined, -1)
-                break
-            case ARROW_RIGHT:
-                selectSong(true, undefined, 1)
-                break
-            case ARROW_UP:
-                selectVerse(true, undefined, -1)
-                break
-            case ARROW_DOWN:
-                selectVerse(true, undefined, 1)
-                break
-        }
-    },
+    // handleAudioAccess({
+    //     keyName,
+    //     selectAudioOption,
+    //     selectSong,
+    //     selectVerse
+    // }) {
+    //     switch (keyName) {
+    //         case ENTER:
+    //             selectAudioOption()
+    //             break
+    //         case ARROW_LEFT:
+    //             selectSong(true, undefined, -1)
+    //             break
+    //         case ARROW_RIGHT:
+    //             selectSong(true, undefined, 1)
+    //             break
+    //         case ARROW_UP:
+    //             selectVerse(true, undefined, -1)
+    //             break
+    //         case ARROW_DOWN:
+    //             selectVerse(true, undefined, 1)
+    //             break
+    //     }
+    // },
 
-    handleDotAccess({
-        keyName,
-        accessedDotIndex,
-        selectDot
-    }) {
-        const index = getIntegerForCharKey(keyName) - 1
-
-        // Go straight to index if chosen.
-        if (index >= 0 && index < ALL_DOT_KEYS.length) {
-            selectDot(undefined, ALL_DOT_KEYS[index])
-            accessedDotIndex = index
-
-        } else {
-            if (keyName === ENTER) {
-                selectDot(undefined, ALL_DOT_KEYS[accessedDotIndex])
-
-            } else if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-                let direction
-
-                switch (keyName) {
-                    case ARROW_LEFT:
-                    direction = ALL_DOT_KEYS.length - 1
-                    break
-                    case ARROW_RIGHT:
-                    direction = 1
-                    break
-                }
-
-                accessedDotIndex = (accessedDotIndex + direction) % ALL_DOT_KEYS.length
-            }
-        }
-
-        return {
-            accessedDotIndex
-        }
-    }
+    // handleDotAccess({
+    //     keyName,
+    //     accessedDotIndex,
+    //     selectDot
+    // }) {
+    //     const index = getIntegerForCharKey(keyName) - 1
+    //
+    //     // Go straight to index if chosen.
+    //     if (index >= 0 && index < ALL_DOT_KEYS.length) {
+    //         selectDot(undefined, ALL_DOT_KEYS[index])
+    //         accessedDotIndex = index
+    //
+    //     } else {
+    //         if (keyName === ENTER) {
+    //             selectDot(undefined, ALL_DOT_KEYS[accessedDotIndex])
+    //
+    //         } else if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
+    //             let direction
+    //
+    //             switch (keyName) {
+    //                 case ARROW_LEFT:
+    //                 direction = ALL_DOT_KEYS.length - 1
+    //                 break
+    //                 case ARROW_RIGHT:
+    //                 direction = 1
+    //                 break
+    //             }
+    //
+    //             accessedDotIndex = (accessedDotIndex + direction) % ALL_DOT_KEYS.length
+    //         }
+    //     }
+    //
+    //     return {
+    //         accessedDotIndex
+    //     }
+    // }
 }

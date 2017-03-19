@@ -7,6 +7,7 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
+        this.handleDotAccess = this.handleDotAccess.bind(this)
         this.handleSongAccess = this.handleSongAccess.bind(this)
 
         this.handleBodyClick = this.handleBodyClick.bind(this)
@@ -77,6 +78,10 @@ class EventManager extends Component {
 
     handleAccessToggle(accessedOn) {
         this.props.toggleAccess(accessedOn)
+    }
+
+    handleDotAccess(accessedDotIndex) {
+        this.props.accessDot(accessedDotIndex)
     }
 
     handleSongAccess(accessedSongIndex) {
@@ -479,6 +484,7 @@ class EventManager extends Component {
 
         return (
             <AccessManager {...domProps} {...domState}
+                handleDotAccess={this.handleDotAccess}
                 handleSongAccess={this.handleSongAccess}
                 handleBodyClick={this.handleBodyClick}
                 handleBodyTouchMove={this.handleBodyTouchMove}
