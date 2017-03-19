@@ -150,8 +150,8 @@ class App extends Component {
     componentWillMount() {
         this._assignLogFunctions()
 
-        this.windowResize()
-        window.onresize = this.windowResize
+        this._windowResize()
+        window.onresize = this._windowResize
     }
 
     componentDidMount() {
@@ -160,11 +160,7 @@ class App extends Component {
         })
     }
 
-    /***********
-     * HELPERS *
-     ***********/
-
-    windowResize(e) {
+    _windowResize(e) {
         const resizedWindowObject = resizeWindow(e ? e.target : undefined)
         this.setState(resizedWindowObject)
     }
@@ -196,21 +192,21 @@ class App extends Component {
         this.selectVerseElement = this.selectVerseElement.bind(this)
         this.slideVerseElement = this.slideVerseElement.bind(this)
         this.scrollLyricSection = this.scrollLyricSection.bind(this)
-        this.windowResize = this.windowResize.bind(this)
+        this._windowResize = this._windowResize.bind(this)
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
         this.touchBodyMove = this.touchBodyMove.bind(this)
         this.touchBodyEnd = this.touchBodyEnd.bind(this)
     }
 
     _assignLogFunctions() {
+        window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
+        window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
         window.d = LogHelper.logDrawings.bind(LogHelper, this)
-        window.t = LogHelper.logStorage.bind(LogHelper)
+        window.n = LogHelper.logAnnotationsDotKeys.bind(LogHelper, this)
+        window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)
-        window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
-        window.n = LogHelper.logAnnotationsDotKeys.bind(LogHelper, this)
-        window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
-        window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
+        window.t = LogHelper.logStorage.bind(LogHelper)
     }
 
     /*******************
@@ -256,11 +252,13 @@ class App extends Component {
          * Reset the stored annotation, time, and overview, unless selected
          * from portal.
          */
-        if (e) {
+        if (!fromPortal) {
             const selectedVerseIndex = getLyricsStartAtZero(this.props, selectedSongIndex) ? 1 : 0
 
-            this.selectVerse(undefined, selectedVerseIndex)
-            this.selectAnnotation()
+            this.selectVerse({
+                selectedVerseIndex
+            })
+            this.selectAnnotation({})
 
             // Scroll to top of lyrics.
             // this.scrollElementIntoView('lyrics-scroll', 'home')
@@ -316,7 +314,10 @@ class App extends Component {
 
         // This also selects time.
         // FIXME: This should animate to verse, but doesn't always. (For example, "stand unsure.") This may be because "stand unsure" is verse 49, which doesn't exist yet until the song has been changed.
-        this.selectVerse(true, selectedVerseIndex, undefined, selectedSongIndex)
+        this.selectVerse({
+            selectedVerseIndex,
+            selectedSongIndex
+        })
 
         if (!isNaN(selectedLyricColumnIndex)) {
 
@@ -344,72 +345,6 @@ class App extends Component {
         this.setState({
             updatedTimePlayed: null
         })
-    }
-
-    selectVerse(e, selectedVerseIndex = 0, direction, selectedSongIndex) {
-        const songTimes = getSongTimes(this.props, selectedSongIndex)
-
-        let selectedTimePlayed,
-            scroll
-
-        if (e) {
-            // Select corresponding time.
-            selectedTimePlayed = songTimes[selectedVerseIndex]
-            scroll = true
-
-        // A new song has been selected.
-        } else {
-            selectedTimePlayed = 0
-            scroll = false
-        }
-
-        this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll })
-    }
-
-    selectTime(e, selectedTimePlayed = 0) {
-        const selectedVerseIndex = getVerseIndexForTime(this.props, selectedTimePlayed)
-
-        if (selectedVerseIndex !== null) {
-
-            this._storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll: false })
-        }
-    }
-
-    _storeTimeAndVerse({ e, selectedTimePlayed, selectedVerseIndex, scroll }) {
-        /**
-         * Since time and verse are in sync, this helper method can be called
-         * by either one.
-         */
-
-        /**
-         * Don't let player change time before it has been updated to reflect
-         * the new time selected by user.
-         */
-        if (this.state.updatedTimePlayed !== null) {
-            return
-        }
-
-        const newState = {
-            accessedVerseIndex: selectedVerseIndex
-        }
-
-        /**
-        * TODO: Make this more robust, so that a verse change prompted by the
-        * audio will only scroll the lyrics if the previous verse is visible
-        * and the selected verse is not.
-        */
-        if (scroll && selectedVerseIndex !== this.props.selectedVerseIndex) {
-            // this.scrollElementIntoView('verse', selectedVerseIndex)
-        }
-
-        if (e) {
-            newState.updatedTimePlayed = selectedTimePlayed
-        }
-
-        this.setState(newState)
-
-        this.props.selectVerseIndex(selectedVerseIndex)
-        this.props.selectTimePlayed(selectedTimePlayed)
     }
 
 /******************************************************************************/
@@ -503,6 +438,17 @@ class App extends Component {
         // If no argument passed, then just toggle amongst audio options.
 
         this.props.selectAudioOptionIndex(selectedAudioOptionIndex)
+    }
+
+    selectTime(selectedTimePlayed = 0) {
+        const selectedVerseIndex = getVerseIndexForTime(this.props, selectedTimePlayed)
+
+        if (selectedVerseIndex !== null) {
+            this._selectTimeAndVerse({
+                selectedTimePlayed,
+                selectedVerseIndex
+            })
+        }
     }
 
     /*******
@@ -619,7 +565,7 @@ class App extends Component {
          * If accessed lyric element is annotation that's in a column, select
          * its verse.
          */
-        if (this.state.accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
+        if (accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
             const annotation = getAnnotation(props, accessedAnnotationIndex)
 
             if (annotation && annotation.column) {
@@ -632,7 +578,7 @@ class App extends Component {
             }
 
         } else {
-            newState.accessedVerseIndex =  getVerseIndexForDirection({
+            newState.accessedVerseIndex = getVerseIndexForDirection({
                 props,
                 index: accessedVerseIndex,
                 lyricColumnShown
@@ -815,14 +761,12 @@ class App extends Component {
         if (this.state.sliderMousedOrTouched) {
             const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime,
                 selectedVerseIndex = getVerseIndexForTime(this.props, selectedTime),
-                songTimes = getSongTimes(this.props),
-                verseTime = songTimes[selectedVerseIndex]
 
-            /**
-             * We will start at the beginning of the selected verse.
-             */
-            // FIXME: handle this!
-            this.selectTime(true, verseTime)
+                // We will start at the beginning of the selected verse.
+                songTimes = getSongTimes(this.props),
+                selectedTimePlayed = songTimes[selectedVerseIndex]
+
+            this.selectTime(selectedTimePlayed)
 
             this.setState({
                 sliderLeft: 0,
@@ -874,12 +818,55 @@ class App extends Component {
         }
     }
 
+    selectVerse({
+        selectedVerseIndex = 0,
+        selectedSongIndex
+    }) {
+        const songTimes = getSongTimes(this.props, selectedSongIndex),
+            selectedTimePlayed = songTimes[selectedVerseIndex]
+
+        this._selectTimeAndVerse({
+            selectedTimePlayed,
+            selectedVerseIndex
+        })
+    }
+
     /********
      * WIKI *
      ********/
 
     selectWiki(selectedWikiIndex = 0) {
         this.props.selectWikiIndex(selectedWikiIndex)
+    }
+
+    /***********
+     * HELPERS *
+     ***********/
+
+    _selectTimeAndVerse({
+        selectedTimePlayed,
+        selectedVerseIndex
+    }) {
+        /**
+         * Since time and verse are in sync, this helper method can be called
+         * by either one.
+         */
+
+        /**
+         * Don't let player change time before it has been updated to reflect
+         * the new time selected by user.
+         */
+        // FIXME: This doesn't work anymore. Selecting verse or time when player is running is buggy.
+        if (this.state.updatedTimePlayed !== null) {
+            return false
+        }
+
+        this.setState({
+            accessedVerseIndex: selectedVerseIndex
+        })
+
+        this.props.selectVerseIndex(selectedVerseIndex)
+        this.props.selectTimePlayed(selectedTimePlayed)
     }
 
     render() {

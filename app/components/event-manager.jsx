@@ -126,10 +126,12 @@ class EventManager extends Component {
     }
 
     handleAudioPreviousSong(e) {
+        this._stopPropagation(e)
         this.props.selectSong(e, undefined, -1)
     }
 
     handleAudioNextSong(e) {
+        this._stopPropagation(e)
         this.props.selectSong(e, undefined, 1)
     }
 
@@ -142,8 +144,8 @@ class EventManager extends Component {
      * AUDIO PLAYER *
      ****************/
 
-    handlePlayerTimeChange(e, time) {
-        this.props.selectTime(e, time)
+    handlePlayerTimeChange(time) {
+        this.props.selectTime(time)
     }
 
     handlePlayerNextSong(e) {
@@ -213,9 +215,12 @@ class EventManager extends Component {
         this.props.interactivateVerse(e)
     }
 
-    handleLyricVerseSelect(e, verseIndex) {
-        this.props.selectVerse(e, verseIndex)
-        this.props.interactivateVerse(e)
+    handleLyricVerseSelect(e, selectedVerseIndex) {
+        this._stopPropagation(e)
+        this.props.selectVerse({
+            selectedVerseIndex
+        })
+        this.props.interactivateVerse()
     }
 
     handleLyricAnnotationSelect(e, selectedAnnotationIndex) {
@@ -241,6 +246,7 @@ class EventManager extends Component {
     }
 
     handleNavSongSelect(e, songIndex) {
+        this._stopPropagation(e)
         this.props.selectSong(e, songIndex)
     }
 
@@ -293,6 +299,7 @@ class EventManager extends Component {
      *********/
 
     handleTitleSelect(e) {
+        this._stopPropagation(e)
         this.props.selectSong(e, 0)
     }
 
