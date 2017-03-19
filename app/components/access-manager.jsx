@@ -4,6 +4,12 @@ import { CAPS_LOCK,
          ESCAPE,
          SPACE,
          TAB,
+         ARROW_LEFT,
+         ARROW_RIGHT,
+         ARROW_UP,
+         ARROW_DOWN,
+         ENTER,
+
          OVERVIEW_TOGGLE_KEY,
          ADMIN_TOGGLE_KEY,
          AUDIO_OPTIONS_TOGGLE_KEY,
@@ -31,9 +37,10 @@ class AccessManager extends Component {
         super(props)
 
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
-        this.handleEscape = this.handleEscape.bind(this)
-        this.handleArrowKey = this.handleArrowKey.bind(this)
-        this.handleLetterKey = this.handleLetterKey.bind(this)
+        this._routeNavigation = this._routeNavigation.bind(this)
+        this._handleNavNavigation = this._handleNavNavigation.bind(this)
+        this._handleLetterKey = this._handleLetterKey.bind(this)
+        this._handleEscape = this._handleEscape.bind(this)
     }
 
     handleKeyDownPress(e) {
@@ -61,57 +68,70 @@ class AccessManager extends Component {
 
         // Handle escape key.
         if (keyName === ESCAPE) {
-            this.handleEscape(e)
+            this._handleEscape(e)
 
         } else {
             // Turn access on.
             this.props.handleAccessToggle(true)
 
-            if (keyName.indexOf('Arrow') > -1) {
-                this.handleArrowKey(e, keyName)
+            if (keyName.indexOf('Arrow') > -1 || keyName === ENTER) {
+                this._routeNavigation(e, keyName)
 
             } else {
-                this.handleLetterKey(e, keyName)
+                this._handleLetterKey(e, keyName)
             }
         }
     }
 
-    handleEscape(e) {
-        const { props } = this
+    _routeNavigation(e, arrowName) {
+        // We're in annotation.
+        if (this.props.selectedAnnotationIndex) {
 
-        // Close score popup.
-        if (props.selectedScoreIndex) {
-            this.props.handleScoreToggle(e)
+            // We're in dots section.
+        } else if (this.props.selectedDotsIndex) {
 
-        // Close wiki popup.
-        } else if (props.selectedWikiIndex) {
-            this.props.handleWikiToggle(e)
+            // We're in nav section.
+        } else if (this.props.selectedNavIndex) {
+            this._handleNavNavigation(e, arrowName)
 
-        // Close overview popup.
-        // FIXME: Overview is 0 by default.
-        } else if (OVERVIEW_OPTIONS[props.selectedOverviewIndex] === SHOWN) {
-            this.props.handleOverviewToggle(e, undefined, HIDDEN)
-
-        // Close dots popup.
-        } else if (props.selectedDotsIndex) {
-            this.props.handleDotsSectionToggle(e)
-
-        // Close annotation popup.
-        } else if (props.selectedAnnotationIndex) {
-            this.props.handleLyricAnnotationSelect(e)
-
-        // Turn access off.
+        // We're in lyrics section.
         } else {
-            this.props.handleAccessToggle(false)
-            this.props.handleVerseInteractivate()
+
         }
     }
 
-    handleArrowKey(e, arrowName) {
+    _handleNavNavigation(e, arrowName) {
+        const { songs,
+                selectedBookColumnIndex,
+                bookStartingIndices } = this.props,
+            songsLength = songs.length
 
+        let { accessedSongIndex } = this.props
+
+        // Skip appropriate songs if showing single book column.
+        switch (arrowName) {
+            case ARROW_LEFT:
+                accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
+                break
+            case ARROW_RIGHT:
+                accessedSongIndex = (accessedSongIndex + 1) % songsLength
+                break
+            case ENTER:
+                this.props.handleNavSongSelect(e, accessedSongIndex)
+                return true
+            default:
+                return false
+        }
+
+        // Select the book column that contains the accessed song index.
+        if ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
+            this.props.handleNavBookSelect(e)
+        }
+
+        this.props.handleSongAccess(accessedSongIndex)
     }
 
-    handleLetterKey(e, keyName) {
+    _handleLetterKey(e, keyName) {
         switch (keyName) {
             case ADMIN_TOGGLE_KEY:
                 this.props.handleAdminToggle(e)
@@ -147,16 +167,43 @@ class AccessManager extends Component {
                 this.props.handleTitleSelect(e)
                 break
             case DOTS_SECTION_ACCESS_KEY:
-                // FIXME: Loop through dots options.
                 this.props.handleDotsSectionToggle(e)
-                break
-            case LYRIC_SECTION_ACCESS_KEY:
                 break
             case NAV_SECTION_ACCESS_KEY:
                 this.props.handleNavExpand(e)
                 break
             default:
                 break
+        }
+    }
+
+    _handleEscape(e) {
+        const { props } = this
+
+        // Close score popup.
+        if (props.selectedScoreIndex) {
+            props.handleScoreToggle(e)
+
+        // Close wiki popup.
+        } else if (props.selectedWikiIndex) {
+            props.handleWikiToggle(e)
+
+        // Close overview popup.
+        } else if (OVERVIEW_OPTIONS[props.selectedOverviewIndex] === SHOWN) {
+            props.handleOverviewToggle(e)
+
+        // Close dots popup.
+        } else if (props.selectedDotsIndex) {
+            props.handleDotsSectionToggle(e)
+
+        // Close annotation popup.
+        } else if (props.selectedAnnotationIndex) {
+            props.handleLyricAnnotationSelect(e)
+
+        // Turn access off.
+        } else {
+            props.handleAccessToggle(false)
+            props.handleVerseInteractivate()
         }
     }
 

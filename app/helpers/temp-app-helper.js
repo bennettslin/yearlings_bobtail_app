@@ -188,5 +188,23 @@ export default {
         return popupWasOpen
     }
 
+    case ARROW_UP:
+    case ARROW_DOWN:
+        const justSongsLength = songsLength - 2
 
+        // Up and down apply to songs only, not logues.
+        if (accessedSongIndex > 0 && accessedSongIndex <= justSongsLength) {
+            const bookLength = justSongsLength / 2
+
+            accessedSongIndex = (accessedSongIndex + bookLength)
+
+            if (accessedSongIndex > justSongsLength) {
+                accessedSongIndex = accessedSongIndex - justSongsLength
+            }
+
+        } else {
+            return false
+        }
+
+        break
 }

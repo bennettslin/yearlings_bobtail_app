@@ -230,6 +230,12 @@ class App extends Component {
         this.props.accessOn(accessedOn)
     }
 
+    accessSong(accessedSongIndex) {
+        this.setState({
+            accessedSongIndex
+        })
+    }
+
     /*********
      * ADMIN *
      *********/
@@ -464,8 +470,10 @@ class App extends Component {
             selectedNavIndex = selectedNavIndex ? 1 : 0
         }
 
-        // Reset book column upon nav expand.
+        // Reset accessed song index and book column upon nav expand.
         if (selectedNavIndex) {
+            this.accessSong(this.props.selectedSongIndex)
+
             this.selectBookColumn({
                 resetToDefault: true,
                 selectedNavIndex
@@ -518,16 +526,7 @@ class App extends Component {
         }
 
         const isLogue = getIsLogue({ selectedSongIndex,
-                                     songs: this.props.songs }),
-
-            // FIXME: What is accessedSongIndex?
-            newState = {
-                accessedSongIndex: selectedSongIndex
-            }
-
-        if (isLogue) {
-            newState.isPlaying = false
-        }
+                                     songs: this.props.songs })
 
         // If not selected from portal, show overview if hidden.
         if (!selectedAnnotationIndex) {
@@ -553,7 +552,13 @@ class App extends Component {
 
         this.interactivateVerse()
 
-        this.setState(newState)
+        if (isLogue) {
+            this.setState({
+                isPlaying: false
+            })
+        }
+
+        this.accessSong(selectedSongIndex)
         this.props.selectSongIndex(selectedSongIndex)
     }
 
@@ -795,6 +800,7 @@ class App extends Component {
     }
 
     _bindEventHandlers() {
+        this.accessSong = this.accessSong.bind(this)
         this.toggleAccess = this.toggleAccess.bind(this)
         this.toggleAdmin = this.toggleAdmin.bind(this)
         this.togglePlay = this.togglePlay.bind(this)
@@ -846,6 +852,7 @@ class App extends Component {
                 domState={this.state}
 
                 // Event manager props.
+                accessSong={this.accessSong}
                 touchSliderBegin={this.touchSliderBegin}
                 touchBodyMove={this.touchBodyMove}
                 touchBodyEnd={this.touchBodyEnd}
