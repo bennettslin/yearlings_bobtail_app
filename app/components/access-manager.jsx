@@ -38,6 +38,7 @@ class AccessManager extends Component {
 
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
         this._routeNavigation = this._routeNavigation.bind(this)
+        this._handleAnnotationNavigation = this._handleAnnotationNavigation.bind(this)
         this._handleDotsNavigation = this._handleDotsNavigation.bind(this)
         this._handleNavNavigation = this._handleNavNavigation.bind(this)
         this._handleLetterKey = this._handleLetterKey.bind(this)
@@ -87,6 +88,7 @@ class AccessManager extends Component {
     _routeNavigation(e, keyName) {
         // We're in annotation.
         if (this.props.selectedAnnotationIndex) {
+            this._handleAnnotationNavigation(e, keyName)
 
             // We're in dots section.
         } else if (this.props.selectedDotsIndex) {
@@ -102,41 +104,52 @@ class AccessManager extends Component {
         }
     }
 
-    handleDotAccess({
+    _handleAnnotationNavigation(e, keyName) {
+        // TODO: Is this the best way to navigate?
+        switch (keyName) {
+            case ARROW_LEFT:
+                accessedDotIndex = (accessedDotIndex + (dotKeysLength - 1)) % dotKeysLength
+                break
+            case ARROW_RIGHT:
+                accessedDotIndex = (accessedDotIndex + 1) % dotKeysLength
+                break
+            case ARROW_UP:
+            case ARROW_DOWN:
+                accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2)) % dotKeysLength
+                break
+            case ENTER:
+                this.props.handleDotKeyToggle(e, ALL_DOT_KEYS[accessedDotIndex])
+                return true
+            default:
+                return false
+        }
+    }
+
+    handleAnnotationAccess({
         keyName,
-        accessedDotIndex,
-        selectDot
+        props,
+        accessedPopupAnchorIndex,
+        selectWikiOrPortal
     }) {
-        const index = getIntegerForCharKey(keyName) - 1
+        let direction
 
-        // Go straight to index if chosen.
-        if (index >= 0 && index < ALL_DOT_KEYS.length) {
-            selectDot(undefined, ALL_DOT_KEYS[index])
-            accessedDotIndex = index
-
-        } else {
-            if (keyName === ENTER) {
-                selectDot(undefined, ALL_DOT_KEYS[accessedDotIndex])
-
-            } else if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-                let direction
-
-                switch (keyName) {
-                    case ARROW_LEFT:
-                    direction = ALL_DOT_KEYS.length - 1
-                    break
-                    case ARROW_RIGHT:
-                    direction = 1
-                    break
-                }
-
-                accessedDotIndex = (accessedDotIndex + direction) % ALL_DOT_KEYS.length
-            }
+        switch (keyName) {
+            case ARROW_UP:
+                direction = -1
+                break
+            case ARROW_DOWN:
+                direction = 1
+                break
+            case ENTER:
+                selectWikiOrPortal()
+                return false
+            default:
+                return false
         }
 
-        return {
-            accessedDotIndex
-        }
+        accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, direction)
+
+        return accessedPopupAnchorIndex
     }
 
     _handleDotsNavigation(e, keyName) {

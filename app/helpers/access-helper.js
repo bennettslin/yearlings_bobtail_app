@@ -84,47 +84,47 @@ export default {
         return true
     },
 
-    handleSongAccess({
-        keyName,
-        songsLength,
-        accessedSongIndex,
-        selectSong,
-        bookStartingIndices,
-        selectedBookColumnIndex,
-        selectBookColumn
-    }) {
-
-        const index = getIntegerForCharKey(keyName)
-
-        // Go straight to index if chosen.
-        if (index >= 0 && index < songsLength) {
-            selectSong(true, index)
-            accessedSongIndex = index
-
-        } else {
-            // Skip appropriate songs if showing single book column.
-            switch (keyName) {
-                case ARROW_LEFT:
-                    accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
-                    break
-                case ARROW_RIGHT:
-                    accessedSongIndex = (accessedSongIndex + 1) % songsLength
-                    break
-                case ENTER:
-                    selectSong(true, accessedSongIndex)
-                    break
-            }
-        }
-
-        // Select the book column that contains the accessed song index.
-        if ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
-            selectBookColumn()
-        }
-
-        return {
-            accessedSongIndex
-        }
-    },
+    // handleSongAccess({
+    //     keyName,
+    //     songsLength,
+    //     accessedSongIndex,
+    //     selectSong,
+    //     bookStartingIndices,
+    //     selectedBookColumnIndex,
+    //     selectBookColumn
+    // }) {
+    //
+    //     const index = getIntegerForCharKey(keyName)
+    //
+    //     // Go straight to index if chosen.
+    //     if (index >= 0 && index < songsLength) {
+    //         selectSong(true, index)
+    //         accessedSongIndex = index
+    //
+    //     } else {
+    //         // Skip appropriate songs if showing single book column.
+    //         switch (keyName) {
+    //             case ARROW_LEFT:
+    //                 accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
+    //                 break
+    //             case ARROW_RIGHT:
+    //                 accessedSongIndex = (accessedSongIndex + 1) % songsLength
+    //                 break
+    //             case ENTER:
+    //                 selectSong(true, accessedSongIndex)
+    //                 break
+    //         }
+    //     }
+    //
+    //     // Select the book column that contains the accessed song index.
+    //     if ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
+    //         selectBookColumn()
+    //     }
+    //
+    //     return {
+    //         accessedSongIndex
+    //     }
+    // },
 
     handleLyricsAndAnnotationAccess({
         keyName,
