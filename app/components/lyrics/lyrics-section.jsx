@@ -65,7 +65,7 @@ class LyricsSectionView extends Component {
 
     _handleScroll(fromHeightTransition) {
         this.props.handleLyricSectionScroll({
-            lyricSectionElement: this.mySection,
+            lyricSectionElement: this.props.lyricSectionRef,
             fromHeightTransition
         })
     }
@@ -93,12 +93,13 @@ class LyricsSectionView extends Component {
 
         return (
             <div
-                ref={(node) => (this.mySection = node)}
+                ref={this.props.lyricSectionRef}
                 className={`
                     section
                     lyrics-section
                     ${showSingleLyricColumn ? ' single-column' : ''}
                 `}
+                tabIndex="-1"
                 onScroll={() => this._handleScroll()}
             >
                 {/* This lyrics subsection exists solely to animate lyrics to side when a new song is selected. */}

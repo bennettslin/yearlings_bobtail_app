@@ -73,6 +73,9 @@ class EventManager extends Component {
             exemptLyric: true
         })
 
+        // Return focus to lyric section so it can have scroll access.
+        // FIXME: Blind users will use tab to change focus. Will they find this annoying?
+        this.myLyricSection.focus()
     }
 
     handlePopupContainerClick(e) {
@@ -512,6 +515,8 @@ class EventManager extends Component {
 
         return (
             <AccessManager {...domProps} {...domState}
+                lyricSectionRef={node => this.myLyricSection = node}
+
                 handleAnnotationAccess={this.handleAnnotationAccess}
                 handleDotAccess={this.handleDotAccess}
                 handlePopupAnchorAccess={this.handlePopupAnchorAccess}

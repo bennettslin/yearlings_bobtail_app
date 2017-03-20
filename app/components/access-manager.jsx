@@ -65,7 +65,8 @@ class AccessManager extends Component {
             return
 
         } else {
-            e.preventDefault()
+            // TODO: Be more strategic about where this is called, because right now it's preventing page scroll.
+            // e.preventDefault()
         }
 
         // Make all single characters lowercase.

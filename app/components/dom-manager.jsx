@@ -9,17 +9,6 @@ import { getSongTitle, getVerse, getIsLogue, getHiddenLyricColumnKey } from 'hel
 import { getIsDesktop, getIsPhone, getIsLyricExpandable, getShowSingleLyricColumn } from 'helpers/responsive-helper'
 
 class DomManager extends Component {
-
-    componentDidMount() {
-        // Allows app to begin listening for keyboard events.
-        this.focusDomManager()
-    }
-
-    // Focus for accessibility.
-    focusDomManager(element = this.myDomManager) {
-        element.focus()
-    }
-
     render() {
 
         const { props } = this,
@@ -86,7 +75,6 @@ class DomManager extends Component {
 
         return (
             <div
-                ref={(node) => (this.myDomManager = node)}
                 className={`
                     dom-manager
                     ${deviceClassName}
@@ -95,7 +83,6 @@ class DomManager extends Component {
                     ${isDesktop ? 'is-desktop' : 'is-mobile'}
                     ${isPlaying ? ' is-playing' : ' is-paused'}
                 `}
-                tabIndex="0"
                 onClick={handleBodyClick}
                 onMouseMove={handleBodyTouchMove}
                 onMouseUp={handleBodyTouchEnd}
@@ -115,7 +102,6 @@ class DomManager extends Component {
                 >
                 </div>
                 <SwitchManager {...props}
-
                     // For scores tips section.
                     isDesktop={isDesktop}
                     isPhone={isPhone}

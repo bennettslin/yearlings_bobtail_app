@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Accessed annotation index when dot keys are all hidden?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Selected verse should not be interactivatable or hoverable when verse bar is shown`,
         workedHours: 0,
         neededHours: 1
@@ -13,11 +18,6 @@ module.exports = [
         taskName: `Selecting time or verse while audio player is running is now buggy.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Arrow up and down and space scrolls lyrics.`,
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: `Ensure that navigation things are never together at same time, especially interactivated verse.`,
@@ -1545,6 +1545,11 @@ module.exports = [
     },
     {
         taskName: `Make stored dot keys an integer`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Arrow up and down and space scrolls lyrics.`,
         workedHours: 1,
         neededHours: 1
     }

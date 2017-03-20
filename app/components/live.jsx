@@ -113,6 +113,8 @@ const LiveView = ({
     isSelectedVerseBelow,
     selectedVerse,
 
+    lyricSectionRef,
+
     selectedSongTitle,
     handlePlayerTimeChange,
 
@@ -120,7 +122,6 @@ const LiveView = ({
     handleVerseElementSelect,
     handleVerseElementSlide,
     handleLyricSectionScroll,
-    onLyricSectionUpdate,
     handleLyricPlay,
     handleLyricVerseSelect,
     handleVerseInteractivate,
@@ -295,7 +296,8 @@ const LiveView = ({
             songLyrics: selectedSongLyrics,
             selectedDotKeys,
             selectedVerseIndex,
-            onLyricSectionUpdate,
+
+            lyricSectionRef,
 
             handleLyricAnnotationSelect,
             handleLyricColumnSelect,
