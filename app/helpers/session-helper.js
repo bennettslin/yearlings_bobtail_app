@@ -1,5 +1,5 @@
 // Store data in browser's local storage.
-
+import { convertBitNumberToTrueFalseKeys, convertTrueFalseKeysToBitNumber } from 'helpers/general-helper'
 import { SELECTED_DOT_KEYS,
          SELECTED_TIME_PLAYED,
          ALL_DOT_KEYS,

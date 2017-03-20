@@ -1,5 +1,40 @@
 module.exports = [
     {
+        taskName: `Key press should not register at all if returned false, for example when l is pressed when lyric is not expandable.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Selecting time or verse while audio player is running is now buggy.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Arrow up and down and space scrolls lyrics.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Don't include titles in times, title should not be interactivatable, see if getLyricsStartAtZero is needed.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Ensure that navigation things are never together at same time, especially interactivated verse.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `accessedOn should reset accessedAnnotationIndex to closest selected verse.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Make stored dot keys an integer`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Clean up styling for nav showing and hiding.`,
         workedHours: 0,
         neededHours: 1
@@ -1495,6 +1530,11 @@ module.exports = [
     },
     {
         taskName: `Make nav hidden the default.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Convert bit number to true false object helper methods.`,
         workedHours: 1,
         neededHours: 1
     }

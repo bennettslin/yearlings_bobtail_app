@@ -29,22 +29,42 @@ export const getPropsAreSame = (smallerSet, largerSet) => {
     }, true)
 }
 
-// export const getIntegerForCharKey = (keyName) => {
-//     if (keyName.length > 1) {
-//         return -1
-//     }
-//
-//     const charCode = keyName.charCodeAt(0)
-//
-//     // Char codes for numbers are 48 to 57.
-//     if (charCode >= 48 && charCode <= 57) {
-//         return charCode - 48
-//
-//     // Char codes for lowercase are 97 to 122.
-//     } else if (charCode >= 97 && charCode <= 122) {
-//         return charCode - 87
-//
-//     } else {
-//         return -1
-//     }
-// }
+const _getTwoToThePowerOfN = (exponent, number = 2) => {
+    if (exponent === 0) {
+        return 1
+
+    } else if (exponent === 1) {
+        return number
+    }
+
+    return _getTwoToThePowerOfN(exponent - 1, number * 2)
+}
+
+export const convertTrueFalseKeysToBitNumber = (keysArray, trueFalseObject) => {
+    // Allow session helper to store selectedDotKeys as a single number.
+
+    return keysArray.reduce((bitNumber, key, index) => {
+        if (trueFalseObject[key]) {
+            bitNumber += _getTwoToThePowerOfN(index)
+        }
+        return bitNumber
+    }, 0)
+}
+
+export const convertBitNumberToTrueFalseKeys = (keysArray, bitNumber) => {
+    let trueFalseObject = {}
+
+    for (let index = keysArray.length - 1; index >= 0; index--) {
+        // Start from end.
+        const key = keysArray[index],
+        powerNumber = _getTwoToThePowerOfN(index),
+        isTrue = bitNumber >= powerNumber
+
+        trueFalseObject[key] = isTrue
+
+        if (isTrue) {
+            bitNumber -= powerNumber
+        }
+    }
+    return trueFalseObject
+}
