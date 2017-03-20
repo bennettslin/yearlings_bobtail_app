@@ -15,71 +15,71 @@ import { LYRIC_VERSE_ELEMENT,
 
 export default {
 
-    handleKeyIfUniversal({
-        keyName,
-        selectOverview,
-        selectDotsExpand,
-        selectAudioOption,
-        selectTips,
-        togglePlay,
-        toggleAdmin,
-        selectTime,
-        selectLyricExpand,
-        selectBookColumn,
-        selectNavExpand,
-        selectedTimePlayed
-    }) {
-        // These keys will always fire, even if access is off.
-        switch (keyName) {
-            // FIXME: These are for dev purposes only.
-            case '¼': // For Safari.
-            case ',':
-                selectTime(true, selectedTimePlayed - 1)
-                break
-            case '¾': // For Safari.
-            case '.':
-                selectTime(true, selectedTimePlayed + 1)
-                break
-            // Toggle nav expand.
-            case 'v':
-                selectNavExpand(true)
-                break
-            // Toggle lyric expand.
-            case 'x':
-                selectLyricExpand(true)
-                break
-            // Toggle book column.
-            case 'k':
-                selectBookColumn(true)
-                break
-            // Toggle selected overview index.
-            case 'z':
-                selectOverview(true)
-                break
-            // Toggle selected dots index.
-            case 'u':
-                selectDotsExpand(true)
-                break
-            // Toggle admin.
-            case 'm':
-                toggleAdmin()
-                break
-            // Toggle audio option index.
-            case 'o':
-                selectAudioOption()
-                break
-            // Toggle isPlaying.
-            case 'p':
-                togglePlay()
-                break
-            // Select tips.
-            case 't':
-                selectTips()
-                break
-        }
-
-        return true
-    },
+    // handleKeyIfUniversal({
+    //     keyName,
+    //     selectOverview,
+    //     selectDotsExpand,
+    //     selectAudioOption,
+    //     selectTips,
+    //     togglePlay,
+    //     toggleAdmin,
+    //     selectTime,
+    //     selectLyricExpand,
+    //     selectBookColumn,
+    //     selectNavExpand,
+    //     selectedTimePlayed
+    // }) {
+    //     // These keys will always fire, even if access is off.
+    //     switch (keyName) {
+    //         // FIXME: These are for dev purposes only.
+    //         case '¼': // For Safari.
+    //         case ',':
+    //             selectTime(true, selectedTimePlayed - 1)
+    //             break
+    //         case '¾': // For Safari.
+    //         case '.':
+    //             selectTime(true, selectedTimePlayed + 1)
+    //             break
+    //         // Toggle nav expand.
+    //         case 'v':
+    //             selectNavExpand(true)
+    //             break
+    //         // Toggle lyric expand.
+    //         case 'x':
+    //             selectLyricExpand(true)
+    //             break
+    //         // Toggle book column.
+    //         case 'k':
+    //             selectBookColumn(true)
+    //             break
+    //         // Toggle selected overview index.
+    //         case 'z':
+    //             selectOverview(true)
+    //             break
+    //         // Toggle selected dots index.
+    //         case 'u':
+    //             selectDotsExpand(true)
+    //             break
+    //         // Toggle admin.
+    //         case 'm':
+    //             toggleAdmin()
+    //             break
+    //         // Toggle audio option index.
+    //         case 'o':
+    //             selectAudioOption()
+    //             break
+    //         // Toggle isPlaying.
+    //         case 'p':
+    //             togglePlay()
+    //             break
+    //         // Select tips.
+    //         case 't':
+    //             selectTips()
+    //             break
+    //     }
+    //
+    //     return true
+    // },
 
     // handleSongAccess({
     //     keyName,
@@ -276,33 +276,33 @@ export default {
 
         return newState || false
     },
-
-    handleAnnotationAccess({
-        keyName,
-        props,
-        accessedPopupAnchorIndex,
-        selectWikiOrPortal
-    }) {
-        let direction
-
-        switch (keyName) {
-            case ARROW_UP:
-                direction = -1
-                break
-            case ARROW_DOWN:
-                direction = 1
-                break
-            case ENTER:
-                selectWikiOrPortal()
-                return false
-            default:
-                return false
-        }
-
-        accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, direction)
-
-        return accessedPopupAnchorIndex
-    },
+    //
+    // handleAnnotationAccess({
+    //     keyName,
+    //     props,
+    //     accessedPopupAnchorIndex,
+    //     selectWikiOrPortal
+    // }) {
+    //     let direction
+    //
+    //     switch (keyName) {
+    //         case ARROW_UP:
+    //             direction = -1
+    //             break
+    //         case ARROW_DOWN:
+    //             direction = 1
+    //             break
+    //         case ENTER:
+    //             selectWikiOrPortal()
+    //             return false
+    //         default:
+    //             return false
+    //     }
+    //
+    //     accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(props, accessedPopupAnchorIndex, direction)
+    //
+    //     return accessedPopupAnchorIndex
+    // },
 
     // handleAudioAccess({
     //     keyName,

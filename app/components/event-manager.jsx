@@ -10,6 +10,7 @@ class EventManager extends Component {
         this.handleDotAccess = this.handleDotAccess.bind(this)
         this.handlePopupAnchorAccess = this.handlePopupAnchorAccess.bind(this)
         this.handleSongAccess = this.handleSongAccess.bind(this)
+        this.handleVerseDirectionAccess = this.handleVerseDirectionAccess.bind(this)
 
         this.handleBodyClick = this.handleBodyClick.bind(this)
         this.handleBodyTouchMove = this.handleBodyTouchMove.bind(this)
@@ -91,6 +92,11 @@ class EventManager extends Component {
 
     handleSongAccess(accessedSongIndex) {
         this.props.accessSong(accessedSongIndex)
+    }
+
+    handleVerseDirectionAccess(direction) {
+        // TODO: Scroll interactivated verse?
+        this.props.interactivateVerseDirection(direction)
     }
 
     /*********
@@ -244,7 +250,7 @@ class EventManager extends Component {
 
     handleLyricPlay(e) {
         this.props.togglePlay()
-        this.props.interactivateVerse(e)
+        this.props.interactivateVerse()
     }
 
     handleLyricVerseSelect(e, selectedVerseIndex) {
@@ -492,6 +498,7 @@ class EventManager extends Component {
                 handleDotAccess={this.handleDotAccess}
                 handlePopupAnchorAccess={this.handlePopupAnchorAccess}
                 handleSongAccess={this.handleSongAccess}
+                handleVerseDirectionAccess={this.handleVerseDirectionAccess}
                 handleBodyClick={this.handleBodyClick}
                 handleBodyTouchMove={this.handleBodyTouchMove}
                 handleBodyTouchEnd={this.handleBodyTouchEnd}

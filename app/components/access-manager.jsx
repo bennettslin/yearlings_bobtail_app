@@ -18,6 +18,8 @@ import { CAPS_LOCK,
          AUDIO_PLAY_KEY,
          AUDIO_PREVIOUS_SONG_KEY,
          AUDIO_NEXT_SONG_KEY,
+         AUDIO_REWIND_KEY,
+         AUDIO_FAST_FORWARD_KEY,
          SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY,
          LYRIC_COLUMN_TOGGLE_KEY,
@@ -87,8 +89,13 @@ class AccessManager extends Component {
     }
 
     _routeNavigation(e, keyName) {
+
+        // We're selecting the interactivated verse.
+        if (this.props.interactivatedVerseIndex > -1 && keyName === ENTER) {
+            this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
+
         // We're in annotation.
-        if (this.props.selectedAnnotationIndex &&
+        } else if (this.props.selectedAnnotationIndex &&
             keyName !== ARROW_LEFT &&
             keyName !== ARROW_RIGHT) {
             this._handleAnnotationNavigation(e, keyName)
@@ -252,6 +259,12 @@ class AccessManager extends Component {
                 break
             case AUDIO_NEXT_SONG_KEY:
                 this.props.handleAudioNextSong(e)
+                break
+            case AUDIO_REWIND_KEY:
+                this.props.handleVerseDirectionAccess(-1)
+                break
+            case AUDIO_FAST_FORWARD_KEY:
+                this.props.handleVerseDirectionAccess(1)
                 break
             case OVERVIEW_TOGGLE_KEY:
                 this.props.handleOverviewToggle(e)

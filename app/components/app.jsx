@@ -108,9 +108,6 @@ class App extends Component {
         this.state = {
             isPlaying: false,
 
-            popupAnnotationIndex: props.selectedAnnotationIndex,
-            popupWikiIndex: props.selectedWikiIndex,
-
             accessedDotIndex: 0,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
@@ -713,6 +710,30 @@ class App extends Component {
         })
     }
 
+    interactivateVerseDirection(direction) {
+        const songTimes = getSongTimes(this.props),
+            timesLength = songTimes.length
+
+        let { interactivatedVerseIndex } = this.state
+
+        if (direction === -1) {
+            direction = timesLength - 1
+        }
+
+        // A verse is not yet interactivated.
+        if (interactivatedVerseIndex === -1) {
+            interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % timesLength
+
+        // We already have an interactivated verse.
+        } else {
+            interactivatedVerseIndex = (interactivatedVerseIndex + direction) % timesLength
+        }
+
+        this.setState({
+            interactivatedVerseIndex
+        })
+    }
+
     selectVerseElement(selectedVerseElement) {
         if (selectedVerseElement !== this.state.selectedVerseElement) {
 
@@ -815,6 +836,7 @@ class App extends Component {
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.interactivateVerse = this.interactivateVerse.bind(this)
+        this.interactivateVerseDirection = this.interactivateVerseDirection.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
         this.selectNavExpand = this.selectNavExpand.bind(this)
@@ -872,6 +894,7 @@ class App extends Component {
                 selectTips={this.selectTips}
                 selectVerse={this.selectVerse}
                 interactivateVerse={this.interactivateVerse}
+                interactivateVerseDirection={this.interactivateVerseDirection}
                 selectWiki={this.selectWiki}
                 toggleAccess={this.toggleAccess}
                 toggleAdmin={this.toggleAdmin}
