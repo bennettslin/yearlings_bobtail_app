@@ -10,7 +10,6 @@ import { getPropsAreSame } from 'helpers/general-helper'
 
 const LyricsVerse = ({
 
-    // verseBarShown,
     inMain,
     accessedVerseIndex,
     selectedVerseIndex,
@@ -136,8 +135,6 @@ class LyricsVerseView extends Component {
 
         this._checkIsSelectedVerse = this._checkIsSelectedVerse.bind(this)
         this._checkIsSliderSelectedVerse = this._checkIsSliderSelectedVerse.bind(this)
-        // this._handleMouseOver = this._handleMouseOver.bind(this)
-        // this._handleMouseLeave = this._handleMouseLeave.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -225,8 +222,6 @@ class LyricsVerseView extends Component {
                     ${sliderPlacementClassName}
                 `}
                 onClick={handleInteractivatableClick}
-                // onMouseOver={this._handleMouseOver}
-                // onMouseLeave={this._handleMouseLeave}
             >
                 {isInteractable && !inVerseBar &&
                     <LyricsAudioButton

@@ -25,7 +25,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `accessedOn should reset accessedAnnotationIndex to closest selected verse.`,
+        taskName: `accessedOn should reset accessedAnnotationIndex to closest selected verse, also interactivated verse.`,
         workedHours: 0,
         neededHours: 2
     },
