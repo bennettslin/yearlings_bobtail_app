@@ -39,11 +39,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Add character descriptions.`,
-        workedHours: 5,
-        neededHours: 6
-    },
 
     // Song selection timeout.
     {
@@ -1537,5 +1532,10 @@ module.exports = [
         taskName: `Convert bit number to true false object helper methods.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Add character descriptions.`,
+        workedHours: 6,
+        neededHours: 6
     }
 ]

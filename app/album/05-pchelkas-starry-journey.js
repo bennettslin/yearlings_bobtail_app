@@ -27,11 +27,11 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting cross-legged, guilty'
                 },
                 christopher: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting, blissful'
                 }
             }
         },
@@ -41,7 +41,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, sitting up in bed, feigning sick'
                 }
             }
         },
@@ -51,7 +51,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, sitting, shaken, scared'
                 }
             }
         },
@@ -61,18 +61,18 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, stoic'
                 },
                 brad: {
                     bully: {
                         todo: true,
-                        description: 'todo'
+                        description: 'front angle, gesturing at friend to leave'
                     }
                 },
                 andrew: {
                     bully: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side angle, throwing rocks, angry'
                     }
                 }
             }
@@ -83,20 +83,20 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, sitting, sheepish'
                 },
                 christopher: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, sitting, staring'
                 },
                 mother: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, angry, accusatory'
                 },
                 tristan: {
                     principal: {
                         todo: true,
-                        description: 'todo'
+                        description: 'side, confused, defensive, apologetic'
                     }
                 }
             }

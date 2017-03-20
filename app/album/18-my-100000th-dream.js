@@ -17,11 +17,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, walking, pleasantly confused'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, opening a door, pleasantly surprised'
                 }
             }
         },
@@ -31,28 +31,28 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting cross-legged, playing recorder, content'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'resting on Bennett, content'
                 },
                 catherine: {
                     gopi: {
                         todo: true,
-                        description: 'todo'
+                        description: 'dancing'
                     }
                 },
                 mara: {
                     gopi: {
                         todo: true,
-                        description: 'todo'
+                        description: 'dancing'
                     }
                 },
                 miriam: {
                     gopi: {
                         todo: true,
-                        description: 'todo'
+                        description: 'dancing'
                     }
                 },
             }
@@ -63,11 +63,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'back angle, confusedly being rushed'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, urging'
                 }
             }
         },
@@ -77,11 +77,11 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front angle, reacting to threat'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front angle, gesturing to grave'
                 }
             }
         },
@@ -91,7 +91,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, old, lying, dying'
                 }
             }
         }

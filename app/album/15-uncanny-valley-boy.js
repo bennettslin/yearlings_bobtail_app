@@ -25,23 +25,23 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'lying sitting up, arm around Miriam, scared, guilty'
                 },
                 miriam: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, asleep'
                 },
                 mother: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, consoling Sita'
                 },
                 father: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, accusatory'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, sobbing'
                 }
             }
         },
@@ -51,19 +51,19 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front angle, wincing'
                 },
                 father: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, gesturing to scene below'
                 },
                 preteenBennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'sitting, hurt, lashing out in anger'
                 },
                 sasha: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, consoling, cautious'
                 }
             }
         },
@@ -73,23 +73,29 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front, dismissive, not feeling bad'
                 },
                 mother: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, gesturing with empathy'
                 },
                 father: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front angle, gesturing with blame'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'depressed'
                 },
                 miriam: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, making out with Bennett'
+                },
+                stephanie: {
+                    bennett: {
+                        todo: true,
+                        description: 'making out with Miriam'
+                    }
                 }
             }
         },
@@ -99,31 +105,31 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, squatting, recording, dejected'
                 },
                 mother: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front angle, wanting to console Bennett'
                 },
                 father: {
                     todo: true,
-                    description: 'todo'
+                    description: 'front angle, arms crossed, righteous'
                 },
                 miriam: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, vibrant'
                 },
                 eduardo: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, cocky, confident'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, amused by conversation'
                 },
                 khari: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, cheerful, making a point'
                 }
             }
         },
@@ -133,23 +139,23 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side, seeking protection'
                 },
                 miriam: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side sitting, vindictive, magical gesture'
                 },
                 mother: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, protecting Sita'
                 },
                 father: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, knocked over'
                 },
                 sita: {
                     todo: true,
-                    description: 'todo'
+                    description: 'side angle, sobbing uncontrollably'
                 }
             }
         }
