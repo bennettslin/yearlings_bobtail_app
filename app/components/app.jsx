@@ -29,6 +29,7 @@ import { SHOWN,
          LYRIC_COLUMN_KEYS } from 'helpers/constants'
 import { getSong, getIsLogue, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from 'helpers/responsive-helper'
+import { getPropsAreSame } from 'helpers/general-helper'
 import LogHelper from 'helpers/log-helper'
 
 /*********
@@ -90,6 +91,8 @@ const bindDispatchToProps = (dispatch) => (
         accessOn
     }, dispatch)
 )
+
+let _stateLyricSectionTop = 0
 
 /*************
  * CONTAINER *
@@ -381,21 +384,21 @@ class App extends Component {
         } else if (lyricSectionElement) {
             const lyricSectionTop = lyricSectionElement.scrollTop
 
-            newState.showLyricButtons = lyricSectionTop < this.state.lyricSectionTop
+            newState.showLyricButtons = lyricSectionTop < _stateLyricSectionTop
 
             /**
-            * It isn't possible to get scroll direction from the scroll event.
-            * Otherwise, it would be preferable to do that rather than storing
-            * the scroll top value to compare with the next scroll.
-            */
-            newState.lyricSectionTop = lyricSectionTop
+             * We'll store this in a variable rather than the component state
+             * in order to keep the lyric scroll smooth.
+             */
+            _stateLyricSectionTop = lyricSectionTop
 
             // Update the lyric section element.
             newState.lyricSectionElement = lyricSectionElement
         }
 
-        // FIXME: 99% of the time, we are only saving scroll top. Maybe persist this value in window instead, because setting state considerably slows down the scroll.
-        this.setState(newState)
+        if (!getPropsAreSame(newState, this.state)) {
+            this.setState(newState)
+        }
     }
 
     selectLyricColumn({
