@@ -1,3 +1,5 @@
+/* eslint no-console: 1 */
+
 import React, { Component } from 'react'
 import AccessManager from './access-manager'
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
@@ -253,7 +255,7 @@ class EventManager extends Component {
      * LYRICS *
      **********/
 
-    handleLyricPlay(e) {
+    handleLyricPlay() {
         this.props.togglePlay()
         this.props.interactivateVerse()
     }

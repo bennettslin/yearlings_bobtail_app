@@ -1,3 +1,5 @@
+/* eslint react/no-find-dom-node: 1 */
+
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import TextBlock from '../text/text-block'

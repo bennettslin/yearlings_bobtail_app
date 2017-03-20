@@ -27,7 +27,7 @@ import { SHOWN,
          PAUSE_AT_END,
 
          LYRIC_COLUMN_KEYS } from 'helpers/constants'
-import { getSong, getIsLogue, getAnnotation, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getVerseIndexForDirection, getVerseIndexForAnnotationIndex, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
+import { getSong, getIsLogue, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from 'helpers/responsive-helper'
 import LogHelper from 'helpers/log-helper'
 
@@ -412,10 +412,6 @@ class App extends Component {
         if (!getShowSingleLyricColumn(props, state, selectedSongIndex)) {
             return false
         }
-
-        const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex],
-            { accessedAnnotationIndex,
-              accessedVerseIndex } = state
 
         this.props.selectLyricColumnIndex(selectedLyricColumnIndex)
     }
