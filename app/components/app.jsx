@@ -111,6 +111,7 @@ class App extends Component {
             accessedDotIndex: 0,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
+
             // If no annotation selected, default to 1.
             accessedAnnotationIndex: getAnnotationIndexForDirection(props, props.selectedAnnotationIndex || 1),
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
@@ -119,8 +120,8 @@ class App extends Component {
              * If there is an annotation popup open, accessed element is
              * annotation.
              */
-            accessedLyricElement: props.selectedAnnotationIndex ?
-                LYRIC_ANNOTATION_ELEMENT : LYRIC_VERSE_ELEMENT,
+            // accessedLyricElement: props.selectedAnnotationIndex ?
+                // LYRIC_ANNOTATION_ELEMENT : LYRIC_VERSE_ELEMENT,
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false,
 
@@ -420,8 +421,8 @@ class App extends Component {
         }
 
         const lyricColumnShown = LYRIC_COLUMN_KEYS[selectedLyricColumnIndex],
-            { accessedLyricElement,
-              accessedAnnotationIndex,
+            { accessedAnnotationIndex,
+            //   accessedLyricElement,
               accessedVerseIndex } = state
 
         let newState = {}
@@ -430,25 +431,25 @@ class App extends Component {
          * If accessed lyric element is annotation that's in a column, select
          * its verse.
          */
-        if (accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
-            const annotation = getAnnotation(props, accessedAnnotationIndex)
+        // if (accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
+            // const annotation = getAnnotation(props, accessedAnnotationIndex)
+            //
+            // if (annotation && annotation.column) {
+            //     // newState.accessedLyricElement = LYRIC_VERSE_ELEMENT
+            //     newState.accessedVerseIndex = getVerseIndexForAnnotationIndex({
+            //         props,
+            //         index: accessedAnnotationIndex,
+            //         lyricColumnShown
+            //     })
+            // }
 
-            if (annotation && annotation.column) {
-                newState.accessedLyricElement = LYRIC_VERSE_ELEMENT
-                newState.accessedVerseIndex = getVerseIndexForAnnotationIndex({
-                    props,
-                    index: accessedAnnotationIndex,
-                    lyricColumnShown
-                })
-            }
-
-        } else {
-            newState.accessedVerseIndex = getVerseIndexForDirection({
-                props,
-                index: accessedVerseIndex,
-                lyricColumnShown
-            })
-        }
+        // } else {
+        //     newState.accessedVerseIndex = getVerseIndexForDirection({
+        //         props,
+        //         index: accessedVerseIndex,
+        //         lyricColumnShown
+        //     })
+        // }
 
         this.props.selectLyricColumnIndex(selectedLyricColumnIndex)
         this.setState(newState)

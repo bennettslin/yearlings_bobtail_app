@@ -177,7 +177,7 @@ class AccessManager extends Component {
         const dotKeysLength = ALL_DOT_KEYS.length
         let { accessedDotIndex } = this.props
 
-        // TODO: Is this the best way to navigate?
+        // TODO: Is this the best way to navigate? That is, should right from 4 to 5, or back to 1?
         switch (keyName) {
             case ARROW_LEFT:
                 accessedDotIndex = (accessedDotIndex + (dotKeysLength - 1)) % dotKeysLength
@@ -242,6 +242,87 @@ class AccessManager extends Component {
                 return false
         }
     }
+
+    
+
+    handleLyricsAndAnnotationAccess({
+        keyName,
+        props,
+        fromAnnotationSection,
+        accessedAnnotationIndex,
+        accessedLyricElement,
+        accessedVerseIndex,
+        lyricColumnShown,
+        selectAnnotation,
+        scrollElementIntoView
+    }) {
+        let newState,
+            toSelectAnnotation = false,
+            direction
+
+        // Both lyric and annotation sections can change accessed annotation.
+        switch (keyName) {
+            case ARROW_LEFT:
+            case ARROW_RIGHT:
+                direction = keyName === ARROW_LEFT ? -1 : 1
+                toSelectAnnotation = fromAnnotationSection
+                break
+            case ENTER:
+                // Only select annotation if annotation is accessed element.
+                if (accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
+                    toSelectAnnotation = !fromAnnotationSection
+                } else {
+                    return false
+                }
+                break
+            default:
+                return false
+        }
+
+        if (direction) {
+            // If accessed element is already annotation, proceed.
+            if (accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
+                accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, direction, undefined, lyricColumnShown)
+
+                if (!fromAnnotationSection) {
+                    newState = {
+                        accessedAnnotationIndex,
+                        accessedVerseIndex: getVerseIndexForAnnotationIndex({
+                            props,
+                            index: accessedAnnotationIndex
+                        })
+                    }
+                }
+
+            /**
+             * Otherwise, change the accessed element, and also choose the
+             * annotation index based on the current accessed verse index.
+             */
+            } else {
+                accessedAnnotationIndex = getAnnotationIndexForVerseIndex(props, accessedVerseIndex, direction, lyricColumnShown)
+
+                newState = {
+                    accessedLyricElement: LYRIC_ANNOTATION_ELEMENT,
+                    accessedAnnotationIndex
+                }
+            }
+
+            scrollElementIntoView('annotation', accessedAnnotationIndex)
+        }
+
+        /**
+         * Select with arrow key from annotation section, and with "Enter" key
+         * from lyric section. If from lyric section, also handle section
+         * access.
+         */
+        if (toSelectAnnotation) {
+            selectAnnotation (!fromAnnotationSection, accessedAnnotationIndex)
+        }
+
+        return newState || false
+    }
+
+
 
     _handleLetterKey(e, keyName) {
         switch (keyName) {
