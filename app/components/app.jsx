@@ -206,6 +206,12 @@ class App extends Component {
         this.props.accessOn(accessedOn)
     }
 
+    accessAnnotation(accessedAnnotationIndex) {
+        this.setState({
+            accessedAnnotationIndex
+        })
+    }
+
     accessDot(accessedDotIndex) {
         this.setState({
             accessedDotIndex
@@ -784,6 +790,7 @@ class App extends Component {
     }
 
     _bindEventHandlers() {
+        this.accessAnnotation = this.accessAnnotation.bind(this)
         this.accessDot = this.accessDot.bind(this)
         this.accessPopupAnchor = this.accessPopupAnchor.bind(this)
         this.accessSong = this.accessSong.bind(this)
@@ -837,6 +844,7 @@ class App extends Component {
                 domState={this.state}
 
                 // Event manager props.
+                accessAnnotation={this.accessAnnotation}
                 accessDot={this.accessDot}
                 accessPopupAnchor={this.accessPopupAnchor}
                 accessSong={this.accessSong}

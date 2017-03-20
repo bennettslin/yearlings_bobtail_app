@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import DomManager from './dom-manager'
 import { getAnnotation,
+         getAnnotationIndexForDirection,
          getPopupAnchorIndexForDirection } from 'helpers/album-view-helper'
 import { CAPS_LOCK,
          ESCAPE,
@@ -31,6 +32,7 @@ import { CAPS_LOCK,
          OVERVIEW_OPTIONS,
          SHOWN,
 
+         LYRIC_COLUMN_KEYS,
          ALL_DOT_KEYS } from 'helpers/constants'
 
 class AccessManager extends Component {
@@ -95,9 +97,7 @@ class AccessManager extends Component {
             this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
 
         // We're in annotation.
-        } else if (this.props.selectedAnnotationIndex &&
-            keyName !== ARROW_LEFT &&
-            keyName !== ARROW_RIGHT) {
+        } else if (this.props.selectedAnnotationIndex) {
             this._handleAnnotationNavigation(e, keyName)
 
             // We're in dots section.
@@ -121,6 +121,12 @@ class AccessManager extends Component {
             direction
 
         switch (keyName) {
+            case ARROW_LEFT:
+                this.props.handleAnnotationPrevious(e)
+                break
+            case ARROW_RIGHT:
+                this.props.handleAnnotationNext(e)
+                break
             case ARROW_UP:
                 direction = -1
                 break
@@ -231,98 +237,30 @@ class AccessManager extends Component {
     }
 
     _handleLyricNavigation(e, keyName) {
+
+        const lyricColumnShown = LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]
+
+        let { accessedAnnotationIndex } = this.props,
+            direction
+
         switch (keyName) {
-            case ARROW_UP:
+            case ARROW_LEFT:
+                direction = -1
                 break
-            case ARROW_DOWN:
+            case ARROW_RIGHT:
+                direction = 1
                 break
             case ENTER:
+                this.props.handleLyricAnnotationSelect(e, accessedAnnotationIndex)
                 return true
             default:
                 return false
         }
+
+        accessedAnnotationIndex = getAnnotationIndexForDirection(this.props, accessedAnnotationIndex, direction, undefined, lyricColumnShown)
+
+        this.props.handleAnnotationAccess(accessedAnnotationIndex)
     }
-
-
-
-    // handleLyricsAndAnnotationAccess({
-    //     keyName,
-    //     props,
-    //     fromAnnotationSection,
-    //     accessedAnnotationIndex,
-    //     accessedLyricElement,
-    //     accessedVerseIndex,
-    //     lyricColumnShown,
-    //     selectAnnotation,
-    //     scrollElementIntoView
-    // }) {
-    //     let newState,
-    //         toSelectAnnotation = false,
-    //         direction
-    //
-    //     // Both lyric and annotation sections can change accessed annotation.
-    //     switch (keyName) {
-    //         case ARROW_LEFT:
-    //         case ARROW_RIGHT:
-    //             direction = keyName === ARROW_LEFT ? -1 : 1
-    //             toSelectAnnotation = fromAnnotationSection
-    //             break
-    //         case ENTER:
-    //             // Only select annotation if annotation is accessed element.
-    //             if (accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
-    //                 toSelectAnnotation = !fromAnnotationSection
-    //             } else {
-    //                 return false
-    //             }
-    //             break
-    //         default:
-    //             return false
-    //     }
-    //
-    //     if (direction) {
-    //         // If accessed element is already annotation, proceed.
-    //         if (accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) {
-    //             accessedAnnotationIndex = getAnnotationIndexForDirection(props, accessedAnnotationIndex, direction, undefined, lyricColumnShown)
-    //
-    //             if (!fromAnnotationSection) {
-    //                 newState = {
-    //                     accessedAnnotationIndex,
-    //                     accessedVerseIndex: getVerseIndexForAnnotationIndex({
-    //                         props,
-    //                         index: accessedAnnotationIndex
-    //                     })
-    //                 }
-    //             }
-    //
-    //         /**
-    //          * Otherwise, change the accessed element, and also choose the
-    //          * annotation index based on the current accessed verse index.
-    //          */
-    //         } else {
-    //             accessedAnnotationIndex = getAnnotationIndexForVerseIndex(props, accessedVerseIndex, direction, lyricColumnShown)
-    //
-    //             newState = {
-    //                 accessedLyricElement: LYRIC_ANNOTATION_ELEMENT,
-    //                 accessedAnnotationIndex
-    //             }
-    //         }
-    //
-    //         scrollElementIntoView('annotation', accessedAnnotationIndex)
-    //     }
-    //
-    //     /**
-    //      * Select with arrow key from annotation section, and with "Enter" key
-    //      * from lyric section. If from lyric section, also handle section
-    //      * access.
-    //      */
-    //     if (toSelectAnnotation) {
-    //         selectAnnotation (!fromAnnotationSection, accessedAnnotationIndex)
-    //     }
-    //
-    //     return newState || false
-    // }
-
-
 
     _handleLetterKey(e, keyName) {
         switch (keyName) {
