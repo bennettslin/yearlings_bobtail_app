@@ -21,6 +21,9 @@ Altruistic audiences, Contrived narratives, alternate facts, Trump, assume that 
 
 Startups, knowledgeable curators with their ears to the ground vs. Zappa's cigar chomping old guys. At best, you understand trends, not innovations.
 
+Millennial whoops
+Not blaming Millennials for their lack of vision, I do blame them for their lack of spine. Pavement. Dweck. These are your values, Millennials, and you've been applying them in other industries, and other mediums, with amazing results. Why on earth haven't you applied them to your rock music?
+
 ----
 
 Bob Dylan, as a Jew, many in the 70s might not have seen him as a card-carrying member of the shadowy ruling class, but he still wouldn't have been most people's choice of an outsider.
