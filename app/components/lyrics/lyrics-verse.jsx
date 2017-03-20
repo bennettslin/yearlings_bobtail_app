@@ -11,6 +11,7 @@ import { getPropsAreSame } from 'helpers/general-helper'
 const LyricsVerse = ({
 
     inMain,
+    verseBarHidden,
     accessedVerseIndex,
     selectedVerseIndex,
     interactivatedVerseIndex,
@@ -37,7 +38,7 @@ const LyricsVerse = ({
          * Not interactable if technically selected, but currently not selected
          * due to verse bar shown.
          */
-        isInteractable = !isNaN(time) && !(isSelected && !isSelected),
+        isInteractable = !isNaN(time),
 
         isInteractivated = interactivatedVerseIndex === verseIndex,
         isHoverable = inMain && !isInteractivated && !isTitle && interactivatedVerseIndex === -1,

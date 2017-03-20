@@ -268,6 +268,7 @@ const LiveView = ({
             audioBannerChild,
             audioSectionChild
         },
+        verseBarHidden = !isSelectedVerseAbove && !isSelectedVerseBelow,
         lyricColumnProps = {
             deviceIndex,
             appMounted,
@@ -275,6 +276,7 @@ const LiveView = ({
             // For lyrics line width reset.
             isPortrait: windowHeight > windowWidth,
 
+            verseBarHidden,
             sliderMousedOrTouched,
             sliderVerseIndex,
             isLogue,
@@ -393,7 +395,7 @@ const LiveView = ({
             ${sliderMoving ? 'slider-moving' : 'slider-not-moving'}
             ${isSelectedVerseAbove ? 'verse-above' : ''}
             ${isSelectedVerseBelow ? 'verse-below' : ''}
-            ${!isSelectedVerseAbove && !isSelectedVerseBelow ? 'verse-bar-hidden' : ''}
+            ${verseBarHidden ? 'verse-bar-hidden' : ''}
             ${interactivatedVerseIndex === -1 ? 'is-not-verse-interactivated' : 'is-verse-interactivated'}`
         }>
             {/* Ideal for song and logue to not be in separate overview subfields. */}

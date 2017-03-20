@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Selected verse should not be interactivatable or hoverable when verse bar is shown`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Key press should not register at all if returned false, for example when l is pressed when lyric is not expandable.`,
         workedHours: 0,
         neededHours: 2
