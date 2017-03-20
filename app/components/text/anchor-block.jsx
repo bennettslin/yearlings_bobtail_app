@@ -2,7 +2,6 @@ import React from 'react'
 import TextBlock from './text-block'
 import DotBlock from '../dot/dot-block'
 import { getIntersection } from 'helpers/dot-helper'
-import { LYRIC_ANNOTATION_ELEMENT } from 'helpers/constants'
 
 /*************
  * CONTAINER *
@@ -17,7 +16,6 @@ const AnchorBlock = ({
     selectedDotKeys,
     accessedAnnotationIndex,
     accessedPopupAnchorIndex,
-    accessedLyricElement,
     handleAnchorClick,
 
 ...other }) => {
@@ -33,7 +31,7 @@ const AnchorBlock = ({
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
         isPortalAnchor = typeof portalAnnotationIndex !== 'undefined' && portalAnnotationIndex === annotationIndex,
         intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
-        accessHighlighted = ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex && accessedLyricElement === LYRIC_ANNOTATION_ELEMENT) || (accessedPopupAnchorIndex && accessedPopupAnchorIndex === wikiIndex)),
+        accessHighlighted = ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex) || (accessedPopupAnchorIndex && accessedPopupAnchorIndex === wikiIndex)),
 
         /**
          * If it's an annotation, then the argument passed to the

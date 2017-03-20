@@ -4,10 +4,7 @@ import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getVerseIndexForAnnotationIndex } from 'helpers/album-view-helper'
 
-import { LYRIC_VERSE_ELEMENT,
-         LYRIC_ANNOTATION_ELEMENT,
-
-         ARROW_LEFT,
+import { ARROW_LEFT,
          ARROW_RIGHT,
          ARROW_UP,
          ARROW_DOWN,

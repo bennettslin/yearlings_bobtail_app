@@ -92,7 +92,6 @@ const LiveView = ({
     accessedSongIndex,
     accessedAnnotationIndex,
     accessedVerseIndex,
-    accessedLyricElement,
     accessedPopupAnchorIndex,
     accessedDotIndex,
 
@@ -291,7 +290,6 @@ const LiveView = ({
             selectedVerse,
             lyricsStartAtZero,
             accessedOn,
-            accessedLyricElement,
             accessedAnnotationIndex,
             accessedVerseIndex,
             selectedSongIndex,

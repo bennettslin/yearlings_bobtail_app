@@ -168,9 +168,6 @@ module.exports = {
     COLLAPSED_LYRIC_SECTION_HEIGHT,
     WIKI_SIDE_PADDING_TOTAL,
 
-    LYRIC_VERSE_ELEMENT: 'verse_element',
-    LYRIC_ANNOTATION_ELEMENT: 'annotation_element',
-
     CONTINUE,
     REPEAT,
     PAUSE_AT_END,

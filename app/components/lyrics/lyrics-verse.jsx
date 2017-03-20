@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import LyricsLine from './lyrics-line'
 import LyricsAudioButton from './lyrics-audio-button'
-import { DOUBLESPEAKER_KEYS, TITLE, LEFT, LYRIC_VERSE_ELEMENT } from 'helpers/constants'
+import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from 'helpers/constants'
 import { getPropsAreSame } from 'helpers/general-helper'
 
 /*************
@@ -26,8 +26,7 @@ const LyricsVerse = ({
 ...other }) => {
 
     const { inVerseBar,
-            verseObject,
-            accessedLyricElement } = other,
+            verseObject } = other,
         { lyric,
           isTitle,
           time,
@@ -46,7 +45,7 @@ const LyricsVerse = ({
         isHoverable = inMain && !isInteractivated && interactivatedVerseIndex === -1,
 
         isAfterSelected = verseIndex > selectedVerseIndex,
-        accessHighlighted = accessedVerseIndex === verseIndex && accessedLyricElement === LYRIC_VERSE_ELEMENT,
+        accessHighlighted = accessedVerseIndex === verseIndex,
         isDoubleSpeaker = !lyric,
         handleAnchorClick = handleLyricAnnotationSelect,
 
