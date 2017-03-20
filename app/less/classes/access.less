@@ -1,45 +1,78 @@
-.section, .popup-content-wrapper {
-
-    &.access-highlighted {
-        box-shadow: 0 2px 10px 10px chartreuse;
-    }
-    &.next-highlighted {
-        box-shadow: 0 2px 7.5px 7.5px violet;
-    }
-
-    .access-highlighted {
-        box-shadow: 0 2px 7.5px 7.5px chartreuse;
-    }
-}
+// .section, .popup-content-wrapper {
+//
+//     &.access-highlighted {
+//         box-shadow: 0 2px 10px 10px chartreuse;
+//     }
+//     &.next-highlighted {
+//         box-shadow: 0 2px 7.5px 7.5px violet;
+//     }
+//
+//     .access-highlighted {
+//         box-shadow: 0 2px 7.5px 7.5px chartreuse;
+//     }
+// }
 
 
 .accessed-on {
 
-    // Lyrics section is accessed.
-    .annotation-hidden.dots-hidden.nav-collapsed {
+    // Lyrics annotation is accessed.
+    .annotation-hidden.dots-hidden.nav-collapsed.is-not-verse-interactivated {
         .lyrics-section {
-            box-shadow: 0 2px 10px 10px chartreuse;
+            background-color: #dfd;
+
+            .access-highlighted {
+                &.anchor-block, &.stanza {
+                    box-shadow: 0 2px 10px 10px chartreuse;
+                }
+            }
+        }
+    }
+
+    // Interactivated verse is accessed.
+    .is-verse-interactivated {
+        .lyrics-section {
+            .verse.interactivated {
+                box-shadow: 0 2px 10px 10px chartreuse;
+            }
         }
     }
 
     // Annotation section is accessed.
     .annotation-shown {
         .annotation-section {
-            box-shadow: 0 2px 10px 10px chartreuse;
+            background-color: #dfd;
+
+            .access-highlighted {
+                &.anchor-block {
+                    box-shadow: 0 2px 10px 10px chartreuse;
+                }
+            }
         }
     }
 
     // Nav section is accessed.
     .nav-expanded {
         .nav-section {
-            box-shadow: 0 2px 10px 10px chartreuse;
+            background-color: #dfd;
+
+            .access-highlighted {
+                &.nav-button {
+                    box-shadow: 0 2px 10px 10px chartreuse;
+                }
+            }
         }
     }
 
     // Dots section is accessed.
     .dots-shown.nav-collapsed {
         .dots-section {
-            box-shadow: 0 2px 10px 10px chartreuse;
+            background-color: #dfd;
+
+            .access-highlighted {
+                &.dot {
+                    box-shadow: 0 2px 10px 10px chartreuse;
+                }
+            }
         }
     }
 

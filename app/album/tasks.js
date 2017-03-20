@@ -1537,5 +1537,10 @@ module.exports = [
         taskName: `Add character descriptions.`,
         workedHours: 6,
         neededHours: 6
+    },
+    {
+        taskName: `Show access highlighting strategically`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
