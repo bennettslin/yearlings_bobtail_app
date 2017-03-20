@@ -473,7 +473,7 @@ class App extends Component {
         selectedSongIndex = 0,
         direction,
         selectedAnnotationIndex = 0,
-        selectedVerseIndex = 1
+        selectedVerseIndex = 0
     }) {
 
         // Called from audio section's previous or next buttons.

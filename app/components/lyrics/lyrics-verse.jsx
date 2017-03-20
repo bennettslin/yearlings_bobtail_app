@@ -41,7 +41,7 @@ const LyricsVerse = ({
         isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero) && !(isSelected && !isSelected),
 
         isInteractivated = interactivatedVerseIndex === verseIndex,
-        isHoverable = inMain && !isInteractivated && interactivatedVerseIndex === -1,
+        isHoverable = inMain && !isInteractivated && !isTitle && interactivatedVerseIndex === -1,
 
         isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = accessedVerseIndex === verseIndex,
@@ -61,7 +61,7 @@ const LyricsVerse = ({
         // If no verse index, we'll count it as odd.
         isEven = hasVerseIndex && verseIndex % 2 === 0,
 
-        verseIndexClassName = ` ${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
+        verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
 
     let sliderPlacementClassName = ''
 

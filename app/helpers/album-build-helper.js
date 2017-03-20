@@ -319,7 +319,6 @@ const _addTitleToLyrics = (title, lyrics) => {
         titleObject = {
 
             // Set title time to -1.
-            time: -1,
             lyric: title,
             isTitle: true
         }
