@@ -15,11 +15,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Don't include titles in times, title should not be interactivatable, see if getLyricsStartAtZero is needed.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Ensure that navigation things are never together at same time, especially interactivated verse.`,
         workedHours: 0,
         neededHours: 1
@@ -1540,6 +1535,11 @@ module.exports = [
     },
     {
         taskName: `Show access highlighting strategically`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Don't include titles in times, title should not be interactivatable, see if getLyricsStartAtZero is needed.`,
         workedHours: 1,
         neededHours: 1
     }

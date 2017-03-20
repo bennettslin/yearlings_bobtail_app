@@ -95,7 +95,6 @@ const LiveView = ({
     accessedPopupAnchorIndex,
     accessedDotIndex,
 
-    lyricsStartAtZero,
     hiddenLyricColumnKey,
     interactivatedVerseIndex,
 
@@ -114,8 +113,6 @@ const LiveView = ({
     isSelectedVerseBelow,
     selectedVerse,
 
-    isFirstVerse,
-    isLastVerse,
     selectedSongTitle,
     handlePlayerTimeChange,
 
@@ -212,8 +209,6 @@ const LiveView = ({
         ),
         audioSectionProps = {
             isPhone,
-            isFirstVerse,
-            isLastVerse,
             selectedSongIndex,
             isPlaying,
             title,
@@ -288,7 +283,6 @@ const LiveView = ({
             hasDoubleColumns,
             isPlaying,
             selectedVerse,
-            lyricsStartAtZero,
             accessedOn,
             accessedAnnotationIndex,
             accessedVerseIndex,

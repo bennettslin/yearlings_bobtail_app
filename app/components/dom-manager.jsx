@@ -5,7 +5,7 @@ import AudioPlayersSection from './audio/audio-players-section'
 import { DEVICE_OBJECTS,
          OVERVIEW_OPTIONS,
          SHOWN } from 'helpers/constants'
-import { getSongTitle, getSongTimes, getVerse, getIsLogue, getHiddenLyricColumnKey, getLyricsStartAtZero } from 'helpers/album-view-helper'
+import { getSongTitle, getVerse, getIsLogue, getHiddenLyricColumnKey } from 'helpers/album-view-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable, getShowSingleLyricColumn } from 'helpers/responsive-helper'
 
 class DomManager extends Component {
@@ -59,11 +59,6 @@ class DomManager extends Component {
             isLogue = getIsLogue(props),
             selectedSongTitle = getSongTitle(props, isLogue),
             selectedVerse = getVerse(props, sliderVerseIndex),
-
-            songTimes = getSongTimes(props),
-            lyricsStartAtZero = getLyricsStartAtZero(props),
-            isFirstVerse = selectedVerseIndex === (lyricsStartAtZero ? 1 : 0),
-            isLastVerse = selectedVerseIndex === songTimes.length - 1,
 
             showSingleLyricColumn = getShowSingleLyricColumn(props, props),
 
@@ -130,9 +125,6 @@ class DomManager extends Component {
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
                     showSingleLyricColumn={showSingleLyricColumn}
 
-                    lyricsStartAtZero={lyricsStartAtZero}
-                    isFirstVerse={isFirstVerse}
-                    isLastVerse={isLastVerse}
                     isLyricExpandable={isLyricExpandable}
                     showOverlay={showOverlay}
                     isOverviewShown={isOverviewShown}

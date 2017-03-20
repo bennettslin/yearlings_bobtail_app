@@ -14,7 +14,6 @@ const LyricsVerse = ({
     accessedVerseIndex,
     selectedVerseIndex,
     interactivatedVerseIndex,
-    lyricsStartAtZero,
     handleLyricAnnotationSelect,
     handleLyricPlay,
     handleLyricVerseSelect,
@@ -38,7 +37,7 @@ const LyricsVerse = ({
          * Not interactable if technically selected, but currently not selected
          * due to verse bar shown.
          */
-        isInteractable = !isNaN(time) && !(verseIndex === 0 && lyricsStartAtZero) && !(isSelected && !isSelected),
+        isInteractable = !isNaN(time) && !(isSelected && !isSelected),
 
         isInteractivated = interactivatedVerseIndex === verseIndex,
         isHoverable = inMain && !isInteractivated && !isTitle && interactivatedVerseIndex === -1,

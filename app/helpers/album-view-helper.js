@@ -43,17 +43,6 @@ export const getSongTitle = (props, isLogue) => {
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
 }
 
-
-// TODO: This might not be needed anymore.
-export const getLyricsStartAtZero = (props, selectedSongIndex) => {
-    const selectedSong = getSong({
-        selectedSongIndex: selectedSongIndex || props.selectedSongIndex,
-        songs: props.songs
-    })
-
-    return selectedSong.times ? selectedSong.times[1] === 0 : true
-}
-
 export const getSelectedBookColumnIndex = (props, selectedSongIndex) => {
     const { bookStartingIndices } = props,
         songIndex = typeof selectedSongIndex !== 'undefined' ? selectedSongIndex : props.selectedSongIndex
@@ -177,7 +166,6 @@ export const getVerseIndexForDirection = ({
     noModulo
 }) => {
     const selectedSong = getSong(props),
-        lyricsStartAtZero = getLyricsStartAtZero(props),
         specifiedDirection = direction
 
     if (selectedSong.times) {
@@ -230,10 +218,10 @@ export const getVerseIndexForDirection = ({
             returnIndex >= 0 && returnIndex < timesLength &&
 
             // Continue if this verse is in the hidden column.
-            (!_shouldShowVerseForColumn(getVerse(props, returnIndex), lyricColumnShown) ||
+            !_shouldShowVerseForColumn(getVerse(props, returnIndex), lyricColumnShown) &&
 
             // Or if index is zero when lyrics start at zero.
-            (returnIndex === 0 && lyricsStartAtZero)) &&
+            // (returnIndex === 0 && lyricsStartAtZero)) &&
 
             // And as long as we haven't exhausted all indices.
             !(direction !== 0 && index === returnIndex)
@@ -300,15 +288,9 @@ export const getVerseIndexForTime = (props, time) => {
     if (time >= 0 && time <= selectedSong.totalTime) {
         let selectedVerseIndex = 0
 
-        // Title verse is selectable only if lyrics start after time 0.
-        if (time === 0) {
-            selectedVerseIndex = getLyricsStartAtZero(props) ? 1 : 0
-
         // Select corresponding verse.
-        } else {
-            while (selectedVerseIndex < selectedSong.times.length - 1 && time >= selectedSong.times[selectedVerseIndex + 1]) {
-                selectedVerseIndex++
-            }
+        while (selectedVerseIndex < selectedSong.times.length - 1 && time >= selectedSong.times[selectedVerseIndex + 1]) {
+            selectedVerseIndex++
         }
 
         return selectedVerseIndex
