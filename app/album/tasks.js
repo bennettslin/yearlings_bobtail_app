@@ -30,11 +30,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Make stored dot keys an integer`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Clean up styling for nav showing and hiding.`,
         workedHours: 0,
         neededHours: 1
@@ -1545,6 +1540,11 @@ module.exports = [
     },
     {
         taskName: `Don't include titles in times, title should not be interactivatable, see if getLyricsStartAtZero is needed.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Make stored dot keys an integer`,
         workedHours: 1,
         neededHours: 1
     }

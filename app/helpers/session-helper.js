@@ -7,31 +7,18 @@ import { SELECTED_DOT_KEYS,
 
 // TODO: Add validation methods that return valid or default value for all, and test them! ʦ
 
-const _getValidDotKeys = (tryValue) => {
-    // Value is a valid object.
-    try {
-        const dotKeysObject = JSON.parse(tryValue)
-        return dotKeysObject
-
-    // Create dot keys object from scratch, with all values true.
-    } catch (e) {
-        const dotKeysObject = {}
-        ALL_DOT_KEYS.forEach(dotKey => {
-            dotKeysObject[dotKey] = true
-        })
-        return dotKeysObject
-    }
-}
-
 const setInSession = (key, value) => {
     WINDOW_STORAGE[key] = value
 }
 
 const setDotInSession = (dotKey, isActive) => {
-    const selectedDotKeys = _getValidDotKeys(WINDOW_STORAGE[SELECTED_DOT_KEYS])
-    selectedDotKeys[dotKey] = isActive
 
-    setInSession(SELECTED_DOT_KEYS, JSON.stringify(selectedDotKeys))
+    const bitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
+        trueFalseKeys = convertBitNumberToTrueFalseKeys(ALL_DOT_KEYS, bitNumber)
+
+    trueFalseKeys[dotKey] = isActive
+
+    setInSession(SELECTED_DOT_KEYS, convertTrueFalseKeysToBitNumber(ALL_DOT_KEYS, trueFalseKeys))
 }
 
 export default {
@@ -41,7 +28,10 @@ export default {
     // TODO: This currently does not allow for float times.
     getFromSession(key) {
         if (key === SELECTED_DOT_KEYS) {
-            return _getValidDotKeys(WINDOW_STORAGE[key])
+            const bitNumber = parseInt(WINDOW_STORAGE[key]),
+                trueFalseKeys = convertBitNumberToTrueFalseKeys(ALL_DOT_KEYS, bitNumber)
+
+            return trueFalseKeys
 
         } else if (key) {
             // Session only ever stores numerical indices. Default is 0.
