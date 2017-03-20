@@ -168,54 +168,6 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
     return currentIndex
 }
 
-export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction, lyricColumnShown) => {
-    const verse = getVerse({
-            selectedVerseIndex: verseIndex,
-            selectedSongIndex: props.selectedSongIndex,
-            songs: props.songs
-        }),
-        annotationsLength = getAnnotationsLength(props)
-
-    let returnIndex
-
-    // If the verse has its own annotation, pick it.
-    if (verse.currentAnnotationIndices) {
-        /**
-         * Rotate through all current indices, in case some are in the hidden
-         * column. Start from leftmost if initial direction is left, and
-         * rightmost if initial direction is right.
-         */
-        /**
-         * If prompted by left arrow, start left and search inward. If prompted
-         * by right arrow, start right.
-         */
-        let currentCounter = direction === -1 ? 0 : (verse.currentAnnotationIndices.length - 1)
-
-        do {
-            returnIndex = verse.currentAnnotationIndices[currentCounter]
-
-            // Move inward, which is the opposite direction.
-            currentCounter -= direction
-
-        } while (currentCounter >= 0 && currentCounter < verse.currentAnnotationIndices.length && !_shouldShowAnnotationForColumn(getAnnotation(props, returnIndex), lyricColumnShown))
-
-    // Otherwise, return either previous or next depending on direction.
-    } else if (direction) {
-        const annotationIndex = direction === -1 ? verse.lastAnnotationIndex : ((verse.lastAnnotationIndex + 1) % annotationsLength)
-
-        returnIndex = annotationIndex
-
-    } else {
-        returnIndex = verse.lastAnnotationIndex
-    }
-
-    /**
-     * Ensure that this annotation index is present. Otherwise, specify
-     * direction that we will search if this annotation index is not present.
-     */
-    return getAnnotationIndexForDirection(props, returnIndex, undefined, direction, lyricColumnShown)
-}
-
 export const getVerseIndexForDirection = ({
     props,
     index,
@@ -291,30 +243,6 @@ export const getVerseIndexForDirection = ({
     }
 
     return index
-}
-
-export const getVerseIndexForAnnotationIndex = ({
-    props,
-    index,
-    direction,
-    lyricColumnShown
-}) => {
-    const annotation = getAnnotation({
-        selectedSongIndex: props.selectedSongIndex,
-        songs: props.songs
-    }, index)
-
-    /**
-     * Ensure that this verse index is not hidden. Otherwise, search in the
-     * specified direction.
-     */
-    return getVerseIndexForDirection({
-        props,
-        index: annotation.verseIndex,
-        recentIndex: annotation.mostRecentVerseIndex || false,
-        direction,
-        lyricColumnShown
-    })
 }
 
 export const getSliderRatioForScreenX = (screenX, sliderLeft, sliderWidth) => {
