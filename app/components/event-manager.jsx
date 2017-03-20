@@ -430,9 +430,17 @@ class EventManager extends Component {
         exemptOverview
     }) {
 
-        // FIXME: Maybe click overlay instead for these? (And then also cancel annotation if it's in overlay.)
-        this.props.selectScore(false)
-        this.props.selectWiki()
+        const { domProps } = this.props
+
+        // If popup is overlaid, close it and do nothing else.
+        if (domProps.selectedWikiIndex) {
+            this.props.selectWiki()
+            return
+
+        } else if (domProps.selectedScoreIndex) {
+            this.props.selectScore(false)
+            return
+        }
 
         if (!exemptAnnotation) {
             this.props.selectAnnotation({})

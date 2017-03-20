@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `accessibility refactor.`,
-        workedHours: 13,
-        neededHours: 13
-    },
-    {
         taskName: `Add character descriptions.`,
         workedHours: 5,
         neededHours: 6
@@ -137,7 +132,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Selecting new song from audio overlay shouldn't dismiss overlay`,
+        taskName: `Selecting new song when wiki popup is open breaks it`,
         workedHours: 0,
         neededHours: 1
     },
@@ -157,12 +152,6 @@ module.exports = [
         taskName: `Fix weird glitch two seconds into new song after load.`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: `Make nav hidden the default.`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Fix selecting time in audio banner dismissing overlay and breaking.`,
@@ -1496,6 +1485,16 @@ module.exports = [
     },
     {
         taskName: `Audio banner touch end does not dismiss overlay.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `accessibility refactor.`,
+        workedHours: 20,
+        neededHours: 20
+    },
+    {
+        taskName: `Make nav hidden the default.`,
         workedHours: 1,
         neededHours: 1
     }
