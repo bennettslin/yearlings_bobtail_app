@@ -69,7 +69,9 @@ class EventManager extends Component {
 
     handleBodyClick(e) {
         this._stopPropagation(e)
-        this._closeSections({})
+        this._closeSections({
+            exemptLyric: true
+        })
 
     }
 
