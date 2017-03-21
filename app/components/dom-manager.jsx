@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './audio/audio-players-section'
@@ -71,18 +72,19 @@ class DomManager extends Component {
                 handlePlayerTimeChange,
                 handlePlayerNextSong,
                 handlePlayerTimeReset
-            }
+            },
+            domManagerClassNames = classnames(
+                'dom-manager',
+                deviceClassName,
+                selectedAdminIndex ? 'admin' : 'live',
+                isDesktop ? 'is-desktop' : 'is-mobile',
+                isPlaying ? 'is-playing' : 'is-paused',
+                { 'accessed-on': accessedOn }
+            )
 
         return (
             <div
-                className={`
-                    dom-manager
-                    ${deviceClassName}
-                    ${accessedOn ? 'accessed-on' : ''}
-                    ${selectedAdminIndex ? 'admin' : 'live'}
-                    ${isDesktop ? 'is-desktop' : 'is-mobile'}
-                    ${isPlaying ? ' is-playing' : ' is-paused'}
-                `}
+                className={domManagerClassNames}
                 onClick={handleBodyClick}
                 onMouseMove={handleBodyTouchMove}
                 onMouseUp={handleBodyTouchEnd}

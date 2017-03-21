@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `Focus breaks on admin.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Use classnames.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Pressing enter in annotation sometimes causes bugs.`,
         workedHours: 0,
         neededHours: 2

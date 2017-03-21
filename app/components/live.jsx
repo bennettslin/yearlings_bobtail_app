@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
@@ -377,29 +378,30 @@ const LiveView = ({
             </div>
         ),
 
-        timerInAudio = showOverlay && isPhone
+        timerInAudio = showOverlay && isPhone,
+        liveClassNames = classnames(
+            'live-app',
+            isLogue ? 'is-logue' : 'is-song',
+            isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
+            isOverlaidAnnotation ? 'overlaid-annotation' : 'side-annotation',
+            sliderMoving ? 'slider-moving' : 'slider-not-moving',
+            interactivatedVerseIndex === -1 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
+            selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
+            selectedDotsIndex ? 'dots-shown' : 'dots-hidden',
+            selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
+            { 'hide-lyric-buttons': !showLyricButtons,
+              'timer-in-audio': timerInAudio,
+              'title-in-audio': titleInAudio,
+              'heightless-lyric': isHeightlessLyricColumn,
+              'overview-shown': isOverviewShown,
+              'overlay-shown': showOverlay,
+              'verse-above': isSelectedVerseAbove,
+              'verse-below': isSelectedVerseBelow,
+              'verse-bar-hidden': verseBarHidden }
+        )
 
     return (
-        <div className={
-            `live-app
-            ${selectedAnnotationIndex ? ' annotation-shown' : 'annotation-hidden'}
-            ${isLogue ? ' is-logue' : ' is-song'}
-            ${showLyricButtons ? '' : ' hide-lyric-buttons'}
-            ${isLyricExpanded ? ' lyric-expanded' : ' lyric-collapsed'}
-            ${timerInAudio ? ' timer-in-audio' : ''}
-            ${titleInAudio ? ' title-in-audio' : ''}
-            ${isHeightlessLyricColumn ? ' heightless-lyric' : ''}
-            ${selectedNavIndex ? ' nav-expanded' : 'nav-collapsed'}
-            ${selectedDotsIndex ? ' dots-shown' : 'dots-hidden'}
-            ${isOverviewShown ? ' overview-shown' : ''}
-            ${showOverlay ? ' overlay-shown' : ''}
-            ${isOverlaidAnnotation ? ' overlaid-annotation' : ' side-annotation'}
-            ${sliderMoving ? 'slider-moving' : 'slider-not-moving'}
-            ${isSelectedVerseAbove ? 'verse-above' : ''}
-            ${isSelectedVerseBelow ? 'verse-below' : ''}
-            ${verseBarHidden ? 'verse-bar-hidden' : ''}
-            ${interactivatedVerseIndex === -1 ? 'is-not-verse-interactivated' : 'is-verse-interactivated'}`
-        }>
+        <div className={liveClassNames}>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">
                     <OverviewPopup {...overviewPopupProps}

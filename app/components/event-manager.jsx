@@ -1,5 +1,4 @@
 /* eslint no-console: 1 */
-
 import React, { Component } from 'react'
 import AccessManager from './access-manager'
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
@@ -75,7 +74,9 @@ class EventManager extends Component {
 
         // Return focus to lyric section so it can have scroll access.
         // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-        this.myLyricSection.focus()
+        if (this.myLyricSection) {
+            this.myLyricSection.focus()
+        }
     }
 
     handlePopupContainerClick(e) {
