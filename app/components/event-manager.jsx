@@ -108,6 +108,9 @@ class EventManager extends Component {
 
     handleVerseDirectionAccess(direction) {
         // TODO: Scroll interactivated verse?
+        this._closeSections({
+            exemptInteractivatedVerse: true
+        })
         this.props.interactivateVerseDirection(direction)
     }
 
@@ -403,6 +406,9 @@ class EventManager extends Component {
 
     handleVerseInteractivate(e, verseIndex) {
         this._stopPropagation(e)
+        this._closeSections({
+            exemptInteractivatedVerse: true
+        })
         this.props.interactivateVerse(verseIndex)
     }
 
@@ -432,12 +438,13 @@ class EventManager extends Component {
         exemptDots,
         exemptLyric,
         exemptNav,
-        exemptOverview
+        exemptOverview,
+        exemptInteractivatedVerse
     }) {
 
         const { domProps } = this.props
 
-        // If popup is overlaid, close it and do nothing else.
+        // If popup is open, close it and do nothing else.
         if (domProps.selectedWikiIndex) {
             this.props.selectWiki()
             return
@@ -469,7 +476,9 @@ class EventManager extends Component {
             })
         }
 
-        this.props.interactivateVerse()
+        if (!exemptInteractivatedVerse) {
+            this.props.interactivateVerse()
+        }
     }
 
     _stopPropagation(e) {
