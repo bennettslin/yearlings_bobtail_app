@@ -30,7 +30,7 @@ const PopupButton = ({
         <div className={`popup-button ${buttonName}-button`}>
             <a
                 className={`popup-button-interactable enabled`}
-                onClick={handlePopupButtonClick}
+                onClick={e => handlePopupButtonClick(e)}
             >
             </a>
             <div className="popup-button-icon">
