@@ -65,10 +65,6 @@ class AccessManager extends Component {
         // Do not handle if any modifier keys are present, or if it's an exempt key.
         if (e && (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE)) {
             return
-
-        } else {
-            // TODO: Be more strategic about where this is called, because right now it's preventing page scroll.
-            // e.preventDefault()
         }
 
         // Make all single characters lowercase.
@@ -77,7 +73,8 @@ class AccessManager extends Component {
         }
 
         // If turning on access, also access annotation index...
-        let doAccessAnnotationIndex = !this.props.accessedOn
+        let doAccessAnnotationIndex = !this.props.accessedOn,
+            handleRegisteredKey = true
 
         // Handle escape key.
         if (keyName === ESCAPE) {
@@ -85,17 +82,24 @@ class AccessManager extends Component {
 
         } else {
             if (keyName.indexOf('Arrow') > -1 || keyName === ENTER) {
-                const { annotationIndexWasAccessed } = this._routeNavigation(e, keyName)
+                const { annotationIndexWasAccessed,
+                        keyWasRegistered } = this._routeNavigation(e, keyName)
 
                 // But cancel annotation index access if we've just done so.
                 doAccessAnnotationIndex = doAccessAnnotationIndex && !annotationIndexWasAccessed
 
+                handleRegisteredKey = keyWasRegistered
+
             } else {
-                this._handleLetterKey(e, keyName)
+                handleRegisteredKey = this._handleLetterKey(e, keyName)
             }
 
             if (doAccessAnnotationIndex) {
                 this._accessAnnotationWithoutDirection(this.props.selectedVerseIndex)
+            }
+
+            if (handleRegisteredKey) {
+                e.preventDefault()
             }
 
             // Turn access on.
@@ -104,35 +108,39 @@ class AccessManager extends Component {
     }
 
     _routeNavigation(e, keyName) {
+        let annotationIndexWasAccessed = false,
+            keyWasRegistered = false
 
         // We're selecting the interactivated verse.
         if (this.props.interactivatedVerseIndex > -1 && keyName === ENTER) {
             this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
-
             this._accessAnnotationWithoutDirection(this.props.interactivatedVerseIndex)
+            keyWasRegistered = true
 
         // We're in annotation.
         } else if (this.props.selectedAnnotationIndex) {
-            this._handleAnnotationNavigation(e, keyName)
-
-            // No need to update accessed annotation index.
-            return { annotationIndexWasAccessed: false }
+            keyWasRegistered = this._handleAnnotationNavigation(e, keyName)
 
             // We're in dots section.
         } else if (this.props.selectedDotsIndex) {
-            this._handleDotsNavigation(e, keyName)
+            keyWasRegistered = this._handleDotsNavigation(e, keyName)
 
             // We're in nav section.
         } else if (this.props.selectedNavIndex) {
-            this._handleNavNavigation(e, keyName)
+            keyWasRegistered = this._handleNavNavigation(e, keyName)
 
         // We're in lyrics section.
         } else {
-            this._handleLyricNavigation(e, keyName)
+            keyWasRegistered = this._handleLyricNavigation(e, keyName)
+
+            // If key was registered, then annotation index was accessed.
+            annotationIndexWasAccessed = keyWasRegistered
         }
 
-        // Yes, update accessed annotation index.
-        return { annotationIndexWasAccessed: true }
+        return {
+            annotationIndexWasAccessed,
+            keyWasRegistered
+        }
     }
 
     _handleAnnotationNavigation(e, keyName) {
@@ -197,6 +205,7 @@ class AccessManager extends Component {
         )
 
         this.props.handlePopupAnchorAccess(accessedPopupAnchorIndex)
+        return true
     }
 
 
@@ -224,6 +233,7 @@ class AccessManager extends Component {
         }
 
         this.props.handleDotAccess(accessedDotIndex)
+        return true
     }
 
     _handleNavNavigation(e, keyName) {
@@ -255,6 +265,7 @@ class AccessManager extends Component {
         }
 
         this.props.handleSongAccess(accessedSongIndex)
+        return true
     }
 
     _handleLyricNavigation(e, keyName) {
@@ -290,6 +301,7 @@ class AccessManager extends Component {
         }
 
         this.props.handleAnnotationAccess(accessedAnnotationIndex)
+        return true
     }
 
     _handleLetterKey(e, keyName) {
@@ -340,8 +352,11 @@ class AccessManager extends Component {
                 this.props.handleNavExpand(e)
                 break
             default:
+                return false
                 break
         }
+
+        return true
     }
 
     _handleEscape(e) {

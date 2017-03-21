@@ -10,7 +10,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `lastAnnotationIndex does not accommodate hidden dotStanzas.`,
+        taskName: `lastAnnotationIndex does not accommodate hidden dotStanzas. Also if verse has multiple annotations, default to first, not last.`,
         workedHours: 0,
         neededHours: 2
     },

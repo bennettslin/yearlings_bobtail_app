@@ -353,7 +353,7 @@ module.exports = {
     TIPS_TOGGLE_KEY: 't',
     LYRIC_COLUMN_TOGGLE_KEY: 'e',
     LYRIC_SECTION_EXPAND_KEY: 'l',
-    TITLE_SELECT_KEY: 'z',
+    TITLE_SELECT_KEY: 'i',
     DOTS_SECTION_ACCESS_KEY: 'd',
     NAV_SECTION_ACCESS_KEY: 'n',
 
