@@ -1,5 +1,25 @@
 module.exports = [
     {
+        taskName: `Pressing enter in annotation sometimes causes bugs.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Refocus app strategically, maybe in stopPropagation.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `lastAnnotationIndex does not accommodate hidden dotStanzas.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Allow arrows for score and wiki, and still allow for handling keydown.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Accessed annotation index when dot keys are all hidden?`,
         workedHours: 0,
         neededHours: 1
@@ -23,11 +43,6 @@ module.exports = [
         taskName: `Ensure that navigation things are never together at same time, especially interactivated verse.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `accessedOn should reset accessedAnnotationIndex to closest selected verse, also interactivated verse.`,
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: `Clean up styling for nav showing and hiding.`,
@@ -1552,5 +1567,10 @@ module.exports = [
         taskName: `Arrow up and down and space scrolls lyrics.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `accessedOn should reset accessedAnnotationIndex to closest selected verse, also interactivated verse.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

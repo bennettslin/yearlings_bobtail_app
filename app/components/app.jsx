@@ -27,7 +27,7 @@ import { SHOWN,
          PAUSE_AT_END,
 
          LYRIC_COLUMN_KEYS } from 'helpers/constants'
-import { getSong, getIsLogue, getAnnotationIndexForDirection, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
+import { getSong, getIsLogue, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from 'helpers/responsive-helper'
 import { getPropsAreSame } from 'helpers/general-helper'
 import LogHelper from 'helpers/log-helper'

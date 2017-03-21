@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import DomManager from './dom-manager'
 import { getAnnotation,
          getAnnotationIndexForDirection,
+         getAnnotationIndexForVerseIndex,
          getPopupAnchorIndexForDirection } from 'helpers/album-view-helper'
 import { CAPS_LOCK,
          ESCAPE,
@@ -42,6 +43,7 @@ class AccessManager extends Component {
 
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
         this._routeNavigation = this._routeNavigation.bind(this)
+        this._accessAnnotationWithoutDirection = this._accessAnnotationWithoutDirection.bind(this)
         this._handleAnnotationNavigation = this._handleAnnotationNavigation.bind(this)
         this._handleDotsNavigation = this._handleDotsNavigation.bind(this)
         this._handleNavNavigation = this._handleNavNavigation.bind(this)
@@ -74,20 +76,30 @@ class AccessManager extends Component {
             keyName = keyName.toLowerCase()
         }
 
+        // If turning on access, also access annotation index...
+        let doAccessAnnotationIndex = !this.props.accessedOn
+
         // Handle escape key.
         if (keyName === ESCAPE) {
             this._handleEscape(e)
 
         } else {
-            // Turn access on.
-            this.props.handleAccessToggle(true)
-
             if (keyName.indexOf('Arrow') > -1 || keyName === ENTER) {
-                this._routeNavigation(e, keyName)
+                const { annotationIndexWasAccessed } = this._routeNavigation(e, keyName)
+
+                // But cancel annotation index access if we've just done so.
+                doAccessAnnotationIndex = doAccessAnnotationIndex && !annotationIndexWasAccessed
 
             } else {
                 this._handleLetterKey(e, keyName)
             }
+
+            if (doAccessAnnotationIndex) {
+                this._accessAnnotationWithoutDirection(this.props.selectedVerseIndex)
+            }
+
+            // Turn access on.
+            this.props.handleAccessToggle(true)
         }
     }
 
@@ -97,9 +109,14 @@ class AccessManager extends Component {
         if (this.props.interactivatedVerseIndex > -1 && keyName === ENTER) {
             this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
 
+            this._accessAnnotationWithoutDirection(this.props.interactivatedVerseIndex)
+
         // We're in annotation.
         } else if (this.props.selectedAnnotationIndex) {
             this._handleAnnotationNavigation(e, keyName)
+
+            // No need to update accessed annotation index.
+            return { annotationIndexWasAccessed: false }
 
             // We're in dots section.
         } else if (this.props.selectedDotsIndex) {
@@ -113,6 +130,9 @@ class AccessManager extends Component {
         } else {
             this._handleLyricNavigation(e, keyName)
         }
+
+        // Yes, update accessed annotation index.
+        return { annotationIndexWasAccessed: true }
     }
 
     _handleAnnotationNavigation(e, keyName) {
@@ -258,7 +278,16 @@ class AccessManager extends Component {
                 return false
         }
 
-        accessedAnnotationIndex = getAnnotationIndexForDirection(this.props, accessedAnnotationIndex, direction, undefined, lyricColumnShown)
+        /**
+         * If this key will turn on access, choose annotation based on selected
+         * verse.
+         */
+        if (!this.props.accessedOn) {
+            accessedAnnotationIndex = getAnnotationIndexForVerseIndex(this.props, this.props.selectedVerseIndex, direction, lyricColumnShown)
+
+        } else {
+            accessedAnnotationIndex = getAnnotationIndexForDirection(this.props, accessedAnnotationIndex, direction, undefined, lyricColumnShown)
+        }
 
         this.props.handleAnnotationAccess(accessedAnnotationIndex)
     }
@@ -343,6 +372,17 @@ class AccessManager extends Component {
             props.handleAccessToggle(false)
             props.handleVerseInteractivate(e)
         }
+    }
+
+    _accessAnnotationWithoutDirection(verseIndex) {
+        /**
+         * Helper method to be called when access is turned on, or when
+         * interactivated verse is selected.
+         */
+        const lyricColumnShown = LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex],
+            accessedAnnotationIndex = getAnnotationIndexForVerseIndex(this.props, verseIndex, undefined, lyricColumnShown)
+
+        this.props.handleAnnotationAccess(accessedAnnotationIndex)
     }
 
     render() {
