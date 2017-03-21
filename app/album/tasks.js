@@ -39,16 +39,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Ensure that navigation things are never together at same time, especially interactivated verse.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Clean up styling for nav showing and hiding.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Song selection timeout.
     {
@@ -1572,5 +1562,10 @@ module.exports = [
         taskName: `accessedOn should reset accessedAnnotationIndex to closest selected verse, also interactivated verse.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Ensure that navigation things are never together at same time, especially interactivated verse.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
