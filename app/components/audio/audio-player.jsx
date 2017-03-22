@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
 import ReactAudioPlayer from 'react-audio-player'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
@@ -115,18 +116,20 @@ class AudioPlayer extends Component {
         const { mp3,
                 playerIndex } = this.props,
 
-            isSelected = this._getIsSelected()
+            isSelected = this._getIsSelected(),
+
+            audioPlayerClassNames = classnames(
+                'audio-player',
+                `player-${playerIndex}`,
+                { 'selected': isSelected }
+            )
 
         // if (isSelected) {
         //     console.error('render again');
         // }
 
         return (
-            <div className={`
-                    audio-player
-                    player-${playerIndex}
-                    ${isSelected ? ' selected' : ''}
-                `}>
+            <div className={audioPlayerClassNames}>
                 <ReactAudioPlayer
                     src={mp3}
                     ref={(node) => (this.myReactPlayer = node)}
