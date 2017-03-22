@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Pressing enter in annotation sometimes causes bugs.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Refocus app strategically, maybe in stopPropagation.`,
         workedHours: 0,
         neededHours: 1
@@ -43,6 +38,11 @@ module.exports = [
         taskName: `Selecting time or verse while audio player is running is now buggy.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Pressing enter in annotation sometimes causes bugs?`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     // Song selection timeout.
