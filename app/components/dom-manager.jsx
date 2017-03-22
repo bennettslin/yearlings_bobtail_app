@@ -72,19 +72,18 @@ class DomManager extends Component {
                 handlePlayerTimeChange,
                 handlePlayerNextSong,
                 handlePlayerTimeReset
-            },
-            domManagerClassNames = classnames(
-                'dom-manager',
-                deviceClassName,
-                selectedAdminIndex ? 'admin' : 'live',
-                isDesktop ? 'is-desktop' : 'is-mobile',
-                isPlaying ? 'is-playing' : 'is-paused',
-                { 'accessed-on': accessedOn }
-            )
+            }
 
         return (
             <div
-                className={domManagerClassNames}
+                className={classnames(
+                    'dom-manager',
+                    deviceClassName,
+                    selectedAdminIndex ? 'admin' : 'live',
+                    isDesktop ? 'is-desktop' : 'is-mobile',
+                    isPlaying ? 'is-playing' : 'is-paused',
+                    { 'accessed-on': accessedOn }
+                )}
                 onClick={handleBodyClick}
                 onMouseMove={handleBodyTouchMove}
                 onMouseUp={handleBodyTouchEnd}

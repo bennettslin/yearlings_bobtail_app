@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
 import { DOT_DESCRIPTIONS } from 'helpers/constants'
 
 /*************
@@ -81,48 +82,46 @@ class DotButtonView extends Component {
         { isInteractivated } = this.state
 
         return (
-            <div
-                className={`dot-container${isEnabled ? ' dot-enabled' : ''}`}
-            >
+            <div className={classnames(
+                'dot-container',
+                { 'dot-enabled': isEnabled }
+            )}>
                 {inDotsSection &&
                     <a
                         className="dot-text-container enabled"
                         onClick={e => this._handleTextContainerClick(e)}
                     >
-                        <div
-                            className={`
-                                dot-text
-                                dot-text-interactable
-                                ${isInteractivated ? 'interactivated' : ''}
-                            `}
-                        >
+                        <div className={classnames(
+                            'dot-text-interactable',
+                            'dot-text',
+                            { 'interactivated': isInteractivated }
+                        )}>
                             {dotKey}
                         </div>
                     </a>
                 }
-                <div
-                    className={`
-                        dot
-                        ${dotKey}
-                        ${isPresent ? '' : ' background'}
-                        ${isEnabled ? '' : ' disabled'}
-                        ${isToggleDeselected ? ' deselected' : ''}
-                        ${accessHighlighted ? ' access-highlighted' : ''}
-                    `}
-                >
-                    <div
-                        className={`
-                            dot-description
-                            dot-text
-                            ${isInteractivated ? 'interactivated' : ''}
-                        `}
-                    >
+                <div className={classnames(
+                    'dot',
+                    dotKey,
+                    { 'background': !isPresent,
+                      'disabled': !isEnabled,
+                      'deselected': isToggleDeselected,
+                      'access-highlighted': accessHighlighted }
+                )}>
+                    <div className={classnames(
+                        'dot-description',
+                        'dot-text',
+                        { 'interactivated': isInteractivated }
+                    )}>
                         <span>
                             {DOT_DESCRIPTIONS[dotKey]}
                         </span>
                     </div>
                 </div>
-                <a className={`dot-interactable${isEnabled ? ' enabled' : ''}`}
+                <a className={classnames(
+                    'dot-interactable',
+                    { 'enabled': isEnabled }
+                )}
                     onClick={onClick}
                 >
                 </a>

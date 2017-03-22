@@ -378,14 +378,16 @@ const LiveView = ({
             </div>
         ),
 
-        timerInAudio = showOverlay && isPhone,
-        liveClassNames = classnames(
+        timerInAudio = showOverlay && isPhone
+
+    return (
+        <div className={classnames(
             'live-app',
             isLogue ? 'is-logue' : 'is-song',
             isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
             isOverlaidAnnotation ? 'overlaid-annotation' : 'side-annotation',
             sliderMoving ? 'slider-moving' : 'slider-not-moving',
-            interactivatedVerseIndex === -1 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
+            interactivatedVerseIndex < 0 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
             selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
             selectedDotsIndex ? 'dots-shown' : 'dots-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
@@ -398,10 +400,7 @@ const LiveView = ({
               'verse-above': isSelectedVerseAbove,
               'verse-below': isSelectedVerseBelow,
               'verse-bar-hidden': verseBarHidden }
-        )
-
-    return (
-        <div className={liveClassNames}>
+        )}>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">
                     <OverviewPopup {...overviewPopupProps}

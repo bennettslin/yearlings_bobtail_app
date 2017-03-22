@@ -51,20 +51,16 @@ class TransitionPopup extends Component {
                 onCloseClick,
                 myChild } = this.props,
 
-            { isDisplayed } = this.state,
-            visibleClassName = isVisible ? 'visible' : '',
-            displayClassName = isDisplayed ? '' : 'not-displayed',
-
-            popupTransitionGroupClassNames = classnames(
-                'popup-transition-group',
-                popupClassName,
-                visibleClassName,
-                displayClassName
-            )
+            { isDisplayed } = this.state
 
         return (
             <span
-                className={popupTransitionGroupClassNames}
+                className={classnames(
+                    'popup-transition-group',
+                    popupClassName,
+                    { 'visible': isVisible,
+                      'not-displayed': !isDisplayed }
+                )}
                 onTransitionEnd={this._handleTransitionEnd}
             >
                 <TransitionPopupView

@@ -28,34 +28,30 @@ const NavBookView = ({
     beginArrayIndex,
     endArrayIndex,
 
-...other }) => {
-    const navBookClassNames = classnames(
+...other }) => (
+    <div className={classnames(
         isNavToggle ? 'nav-toggle-book' : 'nav-book',
         { 'toggle': isToggle,
           'logue': isLogue,
           'songs': songs }
-    )
-
-    return (
-        <div className={navBookClassNames}>
-            {songs ?
-                Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
-                    const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
-                        return (
-                            <NavItem {...other}
-                                key={currentIndex}
-                                song={songs[songIndex]}
-                                index={songIndex}
-                            />
-                        )
-                }) :
-                <NavItem {...other}
-                    isNavToggle={isNavToggle}
-                    isToggle={isToggle}
-                />
-            }
-        </div>
-    )
-}
+    )}>
+        {songs ?
+            Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
+                const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
+                    return (
+                        <NavItem {...other}
+                            key={currentIndex}
+                            song={songs[songIndex]}
+                            index={songIndex}
+                        />
+                    )
+            }) :
+            <NavItem {...other}
+                isNavToggle={isNavToggle}
+                isToggle={isToggle}
+            />
+        }
+    </div>
+)
 
 export default NavBook

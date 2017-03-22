@@ -116,20 +116,18 @@ class AudioPlayer extends Component {
         const { mp3,
                 playerIndex } = this.props,
 
-            isSelected = this._getIsSelected(),
-
-            audioPlayerClassNames = classnames(
-                'audio-player',
-                `player-${playerIndex}`,
-                { 'selected': isSelected }
-            )
+            isSelected = this._getIsSelected()
 
         // if (isSelected) {
         //     console.error('render again');
         // }
 
         return (
-            <div className={audioPlayerClassNames}>
+            <div className={classnames(
+                'audio-player',
+                `player-${playerIndex}`,
+                { 'selected': isSelected }
+            )}>
                 <ReactAudioPlayer
                     src={mp3}
                     ref={(node) => (this.myReactPlayer = node)}

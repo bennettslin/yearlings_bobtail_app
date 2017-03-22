@@ -207,24 +207,22 @@ class LyricsVerseView extends Component {
                 handleLyricAudioButtonClick,
                 handleInteractivatableClick,
 
-            ...other } = this.props,
-
-            verseClassNames = classnames(
-                'verse',
-                verseIndexClassName,
-                backgroundClassName,
-                interactivatedClassName,
-                sliderPlacementClassName,
-                { 'selected': isSelected,
-                  'access-highlighted': accessHighlighted,
-                  'interactable': isInteractable,
-                  'hoverable': isHoverable }
-            )
+            ...other } = this.props
 
         return (
             <div
                 ref={(node) => (this.myVerse = node)}
-                className={verseClassNames}
+                className={classnames(
+                    'verse',
+                    verseIndexClassName,
+                    backgroundClassName,
+                    interactivatedClassName,
+                    sliderPlacementClassName,
+                    { 'selected': isSelected,
+                      'access-highlighted': accessHighlighted,
+                      'interactable': isInteractable,
+                      'hoverable': isHoverable }
+                )}
                 onClick={handleInteractivatableClick}
             >
                 {isInteractable && !inVerseBar &&
@@ -237,7 +235,10 @@ class LyricsVerseView extends Component {
                     />
                 }
                 {isDoubleSpeaker ? (
-                    <div className={`double-lines-block${hiddenLyricColumnKey ? ' hidden-' + hiddenLyricColumnKey : ''}`}>
+                    <div className={classnames(
+                        'double-lines-block',
+                        hiddenLyricColumnKey && `hidden-${hiddenLyricColumnKey}`
+                    )}>
                         {DOUBLESPEAKER_KEYS.filter(key => {
                             return key === hiddenLyricColumnKey && other.showSingleLyricColumn ? false : verseObject[key]
                         }).map((key, index) => {

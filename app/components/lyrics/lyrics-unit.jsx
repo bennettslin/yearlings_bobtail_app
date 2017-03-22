@@ -126,20 +126,18 @@ const LyricsUnitView = ({
             } else {
                 return null
             }
-        },
-
-        unitClassNames = classnames(
-            'lyrics-unit',
-            unitClassName,
-            { 'title-unit': isTitleUnit,
-              'custom-sub-block': unitClassName,
-              'subsequent': subsequent
-            }
-        )
+        }
 
     return (
         <div
-            className={unitClassNames}
+            className={classnames(
+                'lyrics-unit',
+                unitClassName,
+                { 'title-unit': isTitleUnit,
+                  'custom-sub-block': unitClassName,
+                  'subsequent': subsequent
+                }
+            )}
         >
             {showMain &&
                 <div className="stanza-block">

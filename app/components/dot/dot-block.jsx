@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import DotButton from './dot-button'
 import { ALL_DOT_KEYS, ALL_DOT_KEYS_DOT_STANZA_ORDER } from 'helpers/constants'
 
@@ -61,7 +62,11 @@ const DotBlockView = ({
     let firstDotKeyShown = false
 
     return (
-        <span className={`dot-block${annotationIndex ? ' annotation-' + annotationIndex : ''}${isInteractable ? ' interactable' : ''}`}>
+        <span className={classnames(
+            'dot-block',
+            annotationIndex && `annotation-${annotationIndex}`,
+            { 'interactable': isInteractable }
+        )}>
             {allDotKeys.map((dotKey, index) => {
                 const isSelected = selectedDotKeys[dotKey],
                     isPresent = presentDotKeys[dotKey],
@@ -103,13 +108,13 @@ const DotBlockView = ({
                     return (((!inAnchor && isPresent) || inAnchor && isAnimatable) &&
                         <div
                             key={index}
-                            className={`
-                                dot
-                                ${dotKey}
-                                ${inAnchor ? 'animatable' : ''}
-                                ${inBackground ? ' background' : ''}
-                                ${isPresent ? 'is-present' : 'is-absent'}
-                            `}
+                            className={classnames(
+                                'dot',
+                                dotKey,
+                                isPresent ? 'is-present' : 'is-absent',
+                                { 'animatable': inAnchor,
+                                  'background': inBackground }
+                            )}
                         />
                     )
                 }

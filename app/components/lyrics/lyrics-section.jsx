@@ -90,29 +90,26 @@ class LyricsSectionView extends Component {
 
             ...other } = this.props,
 
-            { fadingOut } = this.state,
-
-            lyricsSectionClassNames = classnames(
-                'section',
-                'lyrics-section',
-                { 'single-column': showSingleLyricColumn }
-            ),
-            lyricsSubsectionClassNames = classnames(
-                'lyrics-song-subsection',
-                { 'fading-out': fadingOut }
-            )
+            { fadingOut } = this.state
 
         return (
             <div
                 ref={this.props.lyricSectionRef}
-                className={lyricsSectionClassNames}
+                className={classnames(
+                    'section',
+                    'lyrics-section',
+                    { 'single-column': showSingleLyricColumn }
+                )}
                 tabIndex="-1"
                 onScroll={() => this._handleScroll()}
             >
                 {/* This lyrics subsection exists solely to animate lyrics to side when a new song is selected. */}
                 <div
                     ref={(node) => (this.mySubsection = node)}
-                    className={lyricsSubsectionClassNames}
+                    className={classnames(
+                        'lyrics-song-subsection',
+                        { 'fading-out': fadingOut }
+                    )}
                     onTransitionEnd={e => this._handleFadeout(e)}
                 >
                     {/* Upon song change, scroll to element with this class name. */}

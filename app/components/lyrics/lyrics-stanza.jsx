@@ -23,30 +23,26 @@ const LyricsStanzaView = ({
     stanzaType,
 
 ...other }) => {
-    const indexClassName = !isNaN(stanzaIndex) ? `stanza-index-${stanzaIndex}` : '',
-        typeClassName = stanzaType ? `stanza-type-${stanzaType}` : '',
-
-        stanzaClassNames = classnames(
-            'stanza',
-            indexClassName,
-            typeClassName
-        ),
-
-        stanzaTabClassNames = classnames(
-            'stanza-tab',
-            typeClassName
-        )
+    const indexClassName = !isNaN(stanzaIndex) && `stanza-index-${stanzaIndex}`,
+        typeClassName = stanzaType && `stanza-type-${stanzaType}`
 
     return (
 
         <div className="stanza-container">
             {showStanzaTypeAndIndex &&
-                <div className={stanzaTabClassNames}>
+                <div className={classnames(
+                    'stanza-tab',
+                    typeClassName
+                )}>
                     {stanzaType}{stanzaIndex !== -1 ? ` ${stanzaIndex}` : ''}
                 </div>
             }
 
-            <div className={stanzaClassNames}>
+            <div className={classnames(
+                'stanza',
+                indexClassName,
+                typeClassName
+            )}>
                 {stanzaArray.map((verseObject, verseIndex) => {
                     return !verseObject.stanzaMap && !verseObject.unitMap &&
                         <LyricsVerse {...other}

@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Use classnames.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Pressing enter in annotation sometimes causes bugs.`,
         workedHours: 0,
         neededHours: 2
@@ -1577,5 +1572,10 @@ module.exports = [
         taskName: `Ensure that navigation things are never together at same time, especially interactivated verse.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Use classnames.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
