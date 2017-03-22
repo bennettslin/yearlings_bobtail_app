@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import LyricsVerse from './lyrics-verse'
 
 /*************
@@ -23,28 +24,29 @@ const LyricsStanzaView = ({
 
 ...other }) => {
     const indexClassName = !isNaN(stanzaIndex) ? `stanza-index-${stanzaIndex}` : '',
-        typeClassName = stanzaType ? `stanza-type-${stanzaType}` : ''
+        typeClassName = stanzaType ? `stanza-type-${stanzaType}` : '',
+
+        stanzaClassNames = classnames(
+            'stanza',
+            indexClassName,
+            typeClassName
+        ),
+
+        stanzaTabClassNames = classnames(
+            'stanza-tab',
+            typeClassName
+        )
 
     return (
 
         <div className="stanza-container">
             {showStanzaTypeAndIndex &&
-                <div className={`
-                        stanza-tab
-                        ${typeClassName}
-                    `}
-                >
+                <div className={stanzaTabClassNames}>
                     {stanzaType}{stanzaIndex !== -1 ? ` ${stanzaIndex}` : ''}
                 </div>
             }
 
-            <div
-                className={`
-                    stanza
-                    ${indexClassName}
-                    ${typeClassName}
-                `}
-            >
+            <div className={stanzaClassNames}>
                 {stanzaArray.map((verseObject, verseIndex) => {
                     return !verseObject.stanzaMap && !verseObject.unitMap &&
                         <LyricsVerse {...other}

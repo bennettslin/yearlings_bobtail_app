@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
 import LyricsUnit from './lyrics-unit'
 import { getPropsAreSame } from 'helpers/general-helper'
 
@@ -89,26 +90,29 @@ class LyricsSectionView extends Component {
 
             ...other } = this.props,
 
-            { fadingOut } = this.state
+            { fadingOut } = this.state,
+
+            lyricsSectionClassNames = classnames(
+                'section',
+                'lyrics-section',
+                { 'single-column': showSingleLyricColumn }
+            ),
+            lyricsSubsectionClassNames = classnames(
+                'lyrics-song-subsection',
+                { 'fading-out': fadingOut }
+            )
 
         return (
             <div
                 ref={this.props.lyricSectionRef}
-                className={`
-                    section
-                    lyrics-section
-                    ${showSingleLyricColumn ? ' single-column' : ''}
-                `}
+                className={lyricsSectionClassNames}
                 tabIndex="-1"
                 onScroll={() => this._handleScroll()}
             >
                 {/* This lyrics subsection exists solely to animate lyrics to side when a new song is selected. */}
                 <div
                     ref={(node) => (this.mySubsection = node)}
-                    className={`
-                        lyrics-song-subsection
-                        ${fadingOut ? 'fading-out' : ''}
-                    `}
+                    className={lyricsSubsectionClassNames}
                     onTransitionEnd={e => this._handleFadeout(e)}
                 >
                     {/* Upon song change, scroll to element with this class name. */}

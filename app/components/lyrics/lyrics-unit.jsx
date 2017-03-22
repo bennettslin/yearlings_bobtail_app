@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
 import { TITLE, LEFT, RIGHT } from 'helpers/constants'
@@ -92,49 +93,53 @@ const LyricsUnitView = ({
 
     // TODO: Don't bother passing hidden lyric column key to verse if it's not necessary.
     const getStanza = ({ stanzaArray, inMain, addSub, isSub }) => {
-        if (stanzaArray) {
-            if (addSub) {
-                return (
-                    <div className="sub-block custom-sub-block right">
-                        {getStanza({ stanzaArray, inMain, isSub: true })}
-                    </div>
-                )
-            } else {
-                const shownStanzaIndex = inMain && !isSub && stanzaIndex,
-                    showStanzaTypeAndIndex = !subsequent && !!shownStanzaIndex
-
-                let itsStanzaType
-
-                if (inMain) {
-                    itsStanzaType = isSub ? substanzaType : stanzaType
+            if (stanzaArray) {
+                if (addSub) {
+                    return (
+                        <div className="sub-block custom-sub-block right">
+                            {getStanza({ stanzaArray, inMain, isSub: true })}
+                        </div>
+                    )
                 } else {
-                    itsStanzaType = isSub ? sideSubstanzaType : sideStanzaType
-                }
+                    const shownStanzaIndex = inMain && !isSub && stanzaIndex,
+                        showStanzaTypeAndIndex = !subsequent && !!shownStanzaIndex
 
-                return (
-                    <LyricsStanza {...other}
-                        stanzaArray={stanzaArray}
-                        showStanzaTypeAndIndex={showStanzaTypeAndIndex}
-                        inMain={inMain}
-                        stanzaIndex={shownStanzaIndex}
-                        stanzaType={itsStanzaType}
-                        selectedDotKeys={selectedDotKeys}
-                    />
-                )
+                    let itsStanzaType
+
+                    if (inMain) {
+                        itsStanzaType = isSub ? substanzaType : stanzaType
+                    } else {
+                        itsStanzaType = isSub ? sideSubstanzaType : sideStanzaType
+                    }
+
+                    return (
+                        <LyricsStanza {...other}
+                            stanzaArray={stanzaArray}
+                            showStanzaTypeAndIndex={showStanzaTypeAndIndex}
+                            inMain={inMain}
+                            stanzaIndex={shownStanzaIndex}
+                            stanzaType={itsStanzaType}
+                            selectedDotKeys={selectedDotKeys}
+                        />
+                    )
+                }
+            } else {
+                return null
             }
-        } else {
-            return null
-        }
-    }
+        },
+
+        unitClassNames = classnames(
+            'lyrics-unit',
+            unitClassName,
+            { 'title-unit': isTitleUnit,
+              'custom-sub-block': unitClassName,
+              'subsequent': subsequent
+            }
+        )
 
     return (
         <div
-            className={`
-                lyrics-unit
-                ${isTitleUnit ? 'title-unit' : ''}
-                ${unitClassName ? `custom-sub-block ${unitClassName}` : ''}
-                ${subsequent ? 'subsequent' : ''}
-            `}
+            className={unitClassNames}
         >
             {showMain &&
                 <div className="stanza-block">

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
 import TransitionPopupButton from './transition-popup-button'
 
 import { CLOSE_POPUP_BUTTON,
@@ -52,11 +53,18 @@ class TransitionPopup extends Component {
 
             { isDisplayed } = this.state,
             visibleClassName = isVisible ? 'visible' : '',
-            displayClassName = isDisplayed ? '' : 'not-displayed'
+            displayClassName = isDisplayed ? '' : 'not-displayed',
+
+            popupTransitionGroupClassNames = classnames(
+                'popup-transition-group',
+                popupClassName,
+                visibleClassName,
+                displayClassName
+            )
 
         return (
             <span
-                className={`popup-transition-group ${popupClassName} ${visibleClassName} ${displayClassName}`}
+                className={popupTransitionGroupClassNames}
                 onTransitionEnd={this._handleTransitionEnd}
             >
                 <TransitionPopupView

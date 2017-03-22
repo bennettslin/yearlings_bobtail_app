@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
+
 import LyricsLine from './lyrics-line'
 import LyricsAudioButton from './lyrics-audio-button'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from 'helpers/constants'
@@ -205,22 +207,24 @@ class LyricsVerseView extends Component {
                 handleLyricAudioButtonClick,
                 handleInteractivatableClick,
 
-            ...other } = this.props
+            ...other } = this.props,
+
+            verseClassNames = classnames(
+                'verse',
+                verseIndexClassName,
+                backgroundClassName,
+                interactivatedClassName,
+                sliderPlacementClassName,
+                { 'selected': isSelected,
+                  'access-highlighted': accessHighlighted,
+                  'interactable': isInteractable,
+                  'hoverable': isHoverable }
+            )
 
         return (
             <div
                 ref={(node) => (this.myVerse = node)}
-                className={`
-                    verse
-                    ${verseIndexClassName}
-                    ${backgroundClassName}
-                    ${isSelected ? 'selected' : ''}
-                    ${accessHighlighted ? 'access-highlighted' : ''}
-                    ${isInteractable ? 'interactable' : ''}
-                    ${interactivatedClassName}
-                    ${isHoverable ? 'hoverable' : ''}
-                    ${sliderPlacementClassName}
-                `}
+                className={verseClassNames}
                 onClick={handleInteractivatableClick}
             >
                 {isInteractable && !inVerseBar &&
