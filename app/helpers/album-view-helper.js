@@ -195,10 +195,14 @@ export const getAnnotationIndexForDirection = ({
     return currentAnnotationIndex
 }
 
+
+// TODO: Get lyricColumnShown from props?
 export const getAnnotationIndexForVerseIndex = ({
     props,
     verseIndex,
-    direction,
+
+    // Search backwards by default.
+    direction = -1,
     lyricColumnShown
 }) => {
     const verse = getVerse({
@@ -219,9 +223,9 @@ export const getAnnotationIndexForVerseIndex = ({
          */
         /**
          * If prompted by left arrow, start left and search inward. If prompted
-         * by right arrow, start right.
+         * by right arrow, start right. If no direction given, start left.
          */
-        let currentCounter = direction === -1 ? 0 : (verse.currentAnnotationIndices.length - 1)
+        let currentCounter = direction === 1 ? (verse.currentAnnotationIndices.length - 1) : 0
 
         do {
             returnIndex = verse.currentAnnotationIndices[currentCounter]
@@ -232,14 +236,10 @@ export const getAnnotationIndexForVerseIndex = ({
         } while (currentCounter >= 0 && currentCounter < verse.currentAnnotationIndices.length && !_shouldShowAnnotationForColumn(getAnnotation(props, returnIndex), lyricColumnShown))
 
     // Otherwise, return either previous or next depending on direction.
-    } else if (direction) {
-        const annotationIndex = direction === -1 ? verse.lastAnnotationIndex : ((verse.lastAnnotationIndex + 1) % annotationsLength)
-
-        returnIndex = annotationIndex
-
     } else {
-        returnIndex = verse.lastAnnotationIndex
-        direction = -1
+        returnIndex = direction === -1 ?
+            verse.lastAnnotationIndex :
+            (verse.lastAnnotationIndex + 1) % annotationsLength
     }
 
     /**
