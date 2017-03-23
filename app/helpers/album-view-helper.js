@@ -107,6 +107,8 @@ const _shouldShowVerseForColumn = (verse, lyricColumnShown) => {
     return lyricColumnShown === LEFT ? !verse.rightColumn : !verse.leftColumn
 }
 
+// TODO: Get lyricColumnShown from props.
+// TODO: Allow modulo direction.
 export const getAnnotationIndexForDirection = ({
     props,
     currentAnnotationIndex = 1,

@@ -15,6 +15,8 @@ The best albums lead the way for live performance. This isn't hypothetical, it's
 
 Virality, stories of technology abetting the dissemination of art, rather than the creation of it, are massively uninteresting to us. Beethoven lithography, pianoforte
 
+Comparison to hip hop. Hip hop doesn't question that competitive virtues are necessary, only how they can be manifested. Indie rock's whole conceit is to elevate non-competitive virtues above competitive ones.
+
 Underdog culture: Underdog culture is just like any other system that favours some over others. But it's the least likely to recognise the de facto underdogs of its time. An underdog culture can never belatedly pivot to the de facto underdog.
 
 Altruistic audiences, Contrived narratives, alternate facts, Trump, assume that because you're willing to suspend your understanding of reality for the sake of the fun narrative, that everyone else is.
