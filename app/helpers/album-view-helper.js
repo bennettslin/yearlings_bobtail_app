@@ -107,7 +107,13 @@ const _shouldShowVerseForColumn = (verse, lyricColumnShown) => {
     return lyricColumnShown === LEFT ? !verse.rightColumn : !verse.leftColumn
 }
 
-export const getAnnotationIndexForDirection = (props, currentIndex = 1, direction, unpresentDirection, lyricColumnShown) => {
+export const getAnnotationIndexForDirection = ({
+    props,
+    currentAnnotationIndex = 1,
+    direction,
+    unpresentDirection,
+    lyricColumnShown
+}) => {
     const selectedSong = getSong(props)
 
     if (selectedSong.annotations) {
@@ -115,7 +121,11 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
             selectedDotKeys = props.selectedDotKeys,
             annotationsDotKeys = selectedSong.annotationsDotKeys
 
-        let returnIndex = currentIndex
+        let returnIndex = currentAnnotationIndex,
+            directionSwitchCounter = 0,
+            returnToLoop
+
+        console.error('annotationsLength', annotationsLength);
 
         // Skip over deselected annotations.
         do {
@@ -134,30 +144,63 @@ export const getAnnotationIndexForDirection = (props, currentIndex = 1, directio
             }
 
             // Remember that annotations are 1-based.
-            returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
+            // returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
+
+            returnIndex = returnIndex + direction
+
+            // We've reached the end.
+            if (returnIndex < 1 && direction === -1 || returnIndex > annotationsLength && direction === 1) {
+
+                // Reset index and switch direction.
+                if (direction === -1) {
+                    returnIndex = 1
+                    direction = 1
+                } else {
+                    returnIndex = annotationsLength
+                    direction = -1
+                }
+
+                // Add to counter.
+                directionSwitchCounter++
+            }
+
+            returnToLoop =
+                // Continue if dots don't intersect...
+                (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) ||
+
+                // Or if this annotation isn't in the shown column...
+                !_shouldShowAnnotationForColumn(selectedSong.annotations[returnIndex - 1], lyricColumnShown)) &&
+
+                // // And as long as we haven't exhausted all indices.
+                // !(direction !== 0 && currentAnnotationIndex === returnIndex)
+
+                // We've switched directions less than twice.
+                directionSwitchCounter < 2
+
+            console.error('returnIndex', returnIndex);
+            console.error('direction', direction);
+            console.error('directionSwitchCounter', directionSwitchCounter);
+            console.error('returnToLoop', returnToLoop);
 
         /**
          * Prevent index from incrementing forever by stopping after return
          * index is once again current index, with direction set.
          */
-        } while (
-            // Continue if dots don't intersect...
-            (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) ||
+         } while (returnToLoop)
 
-            // Or if this annotation isn't in the shown column...
-            !_shouldShowAnnotationForColumn(selectedSong.annotations[returnIndex - 1], lyricColumnShown)) &&
-
-            // And as long as we haven't exhausted all indices.
-            !(direction !== 0 && currentIndex === returnIndex)
-        )
-
+        console.error('final returnIndex', returnIndex);
         return returnIndex
     }
 
-    return currentIndex
+    return currentAnnotationIndex
 }
 
-export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction, lyricColumnShown) => {
+export const getAnnotationIndexForVerseIndex = ({
+    props,
+    verseIndex,
+    direction,
+    lyricColumnShown
+}) => {
     const verse = getVerse({
             selectedVerseIndex: verseIndex,
             selectedSongIndex: props.selectedSongIndex,
@@ -196,13 +239,19 @@ export const getAnnotationIndexForVerseIndex = (props, verseIndex, direction, ly
 
     } else {
         returnIndex = verse.lastAnnotationIndex
+        direction = -1
     }
 
     /**
      * Ensure that this annotation index is present. Otherwise, specify
      * direction that we will search if this annotation index is not present.
      */
-    return getAnnotationIndexForDirection(props, returnIndex, undefined, direction, lyricColumnShown)
+    return getAnnotationIndexForDirection({
+        props,
+        currentAnnotationIndex: returnIndex,
+        unpresentDirection: direction,
+        lyricColumnShown
+    })
 }
 
 export const getVerseIndexForDirection = ({

@@ -113,8 +113,17 @@ class App extends Component {
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
 
-            // If no annotation selected, default to 1.
-            accessedAnnotationIndex: getAnnotationIndexForDirection(props, props.selectedAnnotationIndex || 1),
+            // Based on either selected annotation or selected verse.
+            accessedAnnotationIndex: props.selectedAnnotationIndex ?
+                getAnnotationIndexForDirection({
+                    props,
+                    currentAnnotationIndex: props.selectedAnnotationIndex
+                }) :
+                getAnnotationIndexForVerseIndex({
+                    props,
+                    verseIndex: props.selectedVerseIndex
+                }),
+
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
 
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
@@ -247,18 +256,24 @@ class App extends Component {
         direction,
         selectedSongIndex = this.props.selectedSongIndex
     }) {
+        const { props } = this
 
         // Called from arrow buttons in popup.
         if (direction) {
-            const lyricColumnShown = LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]
+            const lyricColumnShown = LYRIC_COLUMN_KEYS[props.selectedLyricColumnIndex]
 
-            selectedAnnotationIndex = getAnnotationIndexForDirection(this.props, this.props.selectedAnnotationIndex, direction, undefined, lyricColumnShown)
+            selectedAnnotationIndex = getAnnotationIndexForDirection({
+                props,
+                currentAnnotationIndex: props.selectedAnnotationIndex,
+                direction,
+                lyricColumnShown
+            })
         }
 
         // Keep accessed index, even if annotation is deselected.
         if (selectedAnnotationIndex) {
             const { songs,
-                    selectedDotKeys } = this.props,
+                    selectedDotKeys } = props,
                 accessedPopupAnchorIndex = getPopupAnchorIndexForDirection({
                     songs,
                     selectedSongIndex,
@@ -274,7 +289,7 @@ class App extends Component {
             })
         }
 
-        this.props.selectAnnotationIndex(selectedAnnotationIndex)
+        props.selectAnnotationIndex(selectedAnnotationIndex)
     }
 
     /*********

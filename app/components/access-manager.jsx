@@ -270,9 +270,10 @@ class AccessManager extends Component {
 
     _handleLyricNavigation(e, keyName) {
 
-        const lyricColumnShown = LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]
+        const { props } = this,
+            lyricColumnShown = LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]
 
-        let { accessedAnnotationIndex } = this.props,
+        let { accessedAnnotationIndex } = props,
             direction
 
         switch (keyName) {
@@ -283,7 +284,7 @@ class AccessManager extends Component {
                 direction = 1
                 break
             case ENTER:
-                this.props.handleLyricAnnotationSelect(e, accessedAnnotationIndex)
+                props.handleLyricAnnotationSelect(e, accessedAnnotationIndex)
                 return true
             default:
                 return false
@@ -293,14 +294,24 @@ class AccessManager extends Component {
          * If this key will turn on access, choose annotation based on selected
          * verse.
          */
-        if (!this.props.accessedOn) {
-            accessedAnnotationIndex = getAnnotationIndexForVerseIndex(this.props, this.props.selectedVerseIndex, direction, lyricColumnShown)
+        if (!props.accessedOn) {
+            accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
+                props,
+                verseIndex: props.selectedVerseIndex,
+                direction,
+                lyricColumnShown
+            })
 
         } else {
-            accessedAnnotationIndex = getAnnotationIndexForDirection(this.props, accessedAnnotationIndex, direction, undefined, lyricColumnShown)
+            accessedAnnotationIndex = getAnnotationIndexForDirection({
+                props,
+                currentAnnotationIndex: accessedAnnotationIndex,
+                direction,
+                lyricColumnShown
+            })
         }
 
-        this.props.handleAnnotationAccess(accessedAnnotationIndex)
+        props.handleAnnotationAccess(accessedAnnotationIndex)
         return true
     }
 
@@ -394,10 +405,15 @@ class AccessManager extends Component {
          * Helper method to be called when access is turned on, or when
          * interactivated verse is selected.
          */
-        const lyricColumnShown = LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex],
-            accessedAnnotationIndex = getAnnotationIndexForVerseIndex(this.props, verseIndex, undefined, lyricColumnShown)
+        const { props } = this,
+            lyricColumnShown = LYRIC_COLUMN_KEYS[props.selectedLyricColumnIndex],
+            accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
+                props,
+                verseIndex,
+                lyricColumnShown
+            })
 
-        this.props.handleAnnotationAccess(accessedAnnotationIndex)
+        props.handleAnnotationAccess(accessedAnnotationIndex)
     }
 
     render() {
