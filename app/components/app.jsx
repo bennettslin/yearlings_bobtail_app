@@ -429,6 +429,17 @@ class App extends Component {
         }
 
         this.props.selectLyricColumnIndex(selectedLyricColumnIndex)
+
+        // Switching lyric column might change accessed annotation index.
+        const accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
+            props,
+            verseIndex: props.selectedVerseIndex,
+            lyricColumnIndex: selectedLyricColumnIndex
+        })
+
+        this.setState({
+            accessedAnnotationIndex
+        })
     }
 
     /*******

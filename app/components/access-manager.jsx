@@ -91,7 +91,12 @@ class AccessManager extends Component {
                 handleRegisteredKey = keyWasRegistered
 
             } else {
-                handleRegisteredKey = this._handleLetterKey(e, keyName)
+                const { annotationIndexWasAccessed,
+                  keyWasRegistered } = this._handleLetterKey(e, keyName)
+
+                doAccessAnnotationIndex = doAccessAnnotationIndex && !annotationIndexWasAccessed
+
+                handleRegisteredKey = keyWasRegistered
             }
 
             if (doAccessAnnotationIndex) {
@@ -111,10 +116,17 @@ class AccessManager extends Component {
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
-        // We're selecting the interactivated verse.
         if (this.props.interactivatedVerseIndex > -1 && keyName === ENTER) {
-            this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
-            this._accessAnnotationWithoutDirection(this.props.interactivatedVerseIndex)
+
+            // Interactivated verse is already selected, so toggle play.
+            if (this.props.interactivatedVerseIndex === this.props.selectedVerseIndex) {
+                this.props.handleLyricPlay(e)
+
+            // We're selecting the interactivated verse.
+            } else {
+                this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
+                this._accessAnnotationWithoutDirection(this.props.interactivatedVerseIndex)
+            }
             keyWasRegistered = true
 
         // We're in annotation.
@@ -312,6 +324,11 @@ class AccessManager extends Component {
     }
 
     _handleLetterKey(e, keyName) {
+        let annotationIndexWasAccessed = false,
+
+            // TODO: Setting to true for now, but this should really be set by each case.
+            keyWasRegistered = true
+
         switch (keyName) {
             case ADMIN_TOGGLE_KEY:
                 this.props.handleAdminToggle(e)
@@ -345,6 +362,7 @@ class AccessManager extends Component {
                 break
             case LYRIC_COLUMN_TOGGLE_KEY:
                 this.props.handleLyricColumnSelect(e)
+                annotationIndexWasAccessed = true
                 break
             case LYRIC_SECTION_EXPAND_KEY:
                 this.props.handleLyricSectionExpand(e)
@@ -359,11 +377,14 @@ class AccessManager extends Component {
                 this.props.handleNavExpand(e)
                 break
             default:
-                return false
+                keyWasRegistered = false
                 break
         }
 
-        return true
+        return {
+            annotationIndexWasAccessed,
+            keyWasRegistered
+        }
     }
 
     _handleEscape(e) {

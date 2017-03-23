@@ -151,7 +151,6 @@ class EventManager extends Component {
         }
     }
 
-    // FIXME: Accessibility now broken.
     handleAnnotationPrevious(e) {
         this._stopPropagation(e)
         this.props.selectAnnotation({

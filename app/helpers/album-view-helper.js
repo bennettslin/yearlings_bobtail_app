@@ -96,15 +96,27 @@ const _shouldShowAnnotationForColumn = (annotation, lyricColumnIndex) => {
     return !annotation.column || annotation.column === LYRIC_COLUMN_KEYS[lyricColumnIndex]
 }
 
-// TODO: Allow modulo direction.
 export const getAnnotationIndexForDirection = ({
     props,
     currentAnnotationIndex = 1,
     direction,
-    unpresentDirection,
+
+    // Called from getAnnotationIndexForVerseIndex.
+    specifiedDirection,
     lyricColumnIndex = props.selectedLyricColumnIndex
 }) => {
-    const selectedSong = getSong(props)
+    /**
+     * Called:
+     * - upon app load, if annotation index is selected.
+     * - when arrow key in lyric is pressed and access is already on, has direction.
+     * - when annotation index is selected, has direction.
+     * - from getAnnotationIndexForVerseIndex.
+     */
+
+    const selectedSong = getSong(props),
+
+        // If a direction is given for this method, it has modulo.
+        useModulo = !!direction
 
     if (selectedSong.annotations) {
         const annotationsLength = selectedSong.annotations.length,
@@ -114,8 +126,6 @@ export const getAnnotationIndexForDirection = ({
         let returnIndex = currentAnnotationIndex,
             directionSwitchCounter = 0,
             returnToLoop
-
-        console.error('annotationsLength', annotationsLength);
 
         // Skip over deselected annotations.
         do {
@@ -129,30 +139,41 @@ export const getAnnotationIndexForDirection = ({
             // But if this is the second time around, then begin incrementing.
             } else if (direction === 0) {
 
-                // Unless specified, search forward.
-                direction = unpresentDirection || 1
+                /**
+                 * Unless specified, search backward. It will be specified when
+                 * called from getAnnotationIndexForVerseIndex, which already
+                 * knows the annotation index it wants, and should not iterate
+                 * unless that annotation index is unavailable.
+                 */
+                direction = specifiedDirection || -1
             }
 
-            // Remember that annotations are 1-based.
-            // returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
+            // Called from a user-inputted direction.
+            if (useModulo) {
+                // Remember that annotations are 1-based.
+                returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
 
-            returnIndex = returnIndex + direction
+            // Searching for the closest one, in the direction we prefer.
+            } else {
+                returnIndex = returnIndex + direction
 
-            // We've reached the end.
-            if (returnIndex < 1 && direction === -1 || returnIndex > annotationsLength && direction === 1) {
+                // We've reached the end.
+                if (returnIndex < 1 && direction === -1 || returnIndex > annotationsLength && direction === 1) {
 
-                // Reset index and switch direction.
-                if (direction === -1) {
-                    returnIndex = 1
-                    direction = 1
-                } else {
-                    returnIndex = annotationsLength
-                    direction = -1
+                    // Reset index and switch direction.
+                    if (direction === -1) {
+                        returnIndex = 1
+                        direction = 1
+                    } else {
+                        returnIndex = annotationsLength
+                        direction = -1
+                    }
+
+                    // Add to counter.
+                    directionSwitchCounter++
                 }
-
-                // Add to counter.
-                directionSwitchCounter++
             }
+
 
             returnToLoop =
                 // Continue if dots don't intersect...
@@ -161,16 +182,15 @@ export const getAnnotationIndexForDirection = ({
                 // Or if this annotation isn't in the shown column...
                 !_shouldShowAnnotationForColumn(selectedSong.annotations[returnIndex - 1], lyricColumnIndex)) &&
 
-                // // And as long as we haven't exhausted all indices.
-                // !(direction !== 0 && currentAnnotationIndex === returnIndex)
+                // And if modulo...
+                (useModulo ?
 
-                // We've switched directions less than twice.
-                directionSwitchCounter < 2
+                    // As long as we haven't exhausted all indices.
+                    !(direction !== 0 && currentAnnotationIndex === returnIndex) :
 
-            console.error('returnIndex', returnIndex);
-            console.error('direction', direction);
-            console.error('directionSwitchCounter', directionSwitchCounter);
-            console.error('returnToLoop', returnToLoop);
+                    // We've switched directions less than twice.
+                    directionSwitchCounter < 2
+                )
 
         /**
          * Prevent index from incrementing forever by stopping after return
@@ -178,7 +198,6 @@ export const getAnnotationIndexForDirection = ({
          */
          } while (returnToLoop)
 
-        console.error('final returnIndex', returnIndex);
         return returnIndex
     }
 
@@ -194,6 +213,14 @@ export const getAnnotationIndexForVerseIndex = ({
     direction = -1,
     lyricColumnIndex = props.selectedLyricColumnIndex
 }) => {
+    /**
+     * Called:
+     * - upon app load, if no annotation index is selected.
+     * - when arrow key in lyric is pressed and turns on access, has direction.
+     * - when any key is pressed and turns on access.
+     * - when lyric column is switched.
+     */
+
     const verse = getVerse({
             selectedVerseIndex: verseIndex,
             selectedSongIndex: props.selectedSongIndex,
@@ -201,28 +228,33 @@ export const getAnnotationIndexForVerseIndex = ({
         }),
         annotationsLength = getAnnotationsLength(props)
 
-    let returnIndex
+    let returnIndex,
+        returnToLoop
 
     // If the verse has its own annotation, pick it.
     if (verse.currentAnnotationIndices) {
-        /**
-         * Rotate through all current indices, in case some are in the hidden
-         * column. Start from leftmost if initial direction is left, and
-         * rightmost if initial direction is right.
-         */
         /**
          * If prompted by left arrow, start left and search inward. If prompted
          * by right arrow, start right. If no direction given, start left.
          */
         let currentCounter = direction === 1 ? (verse.currentAnnotationIndices.length - 1) : 0
 
+        /**
+         * Loop through all the annotations in the verse, in case some are
+         * hidden.
+         */
         do {
             returnIndex = verse.currentAnnotationIndices[currentCounter]
 
             // Move inward, which is the opposite direction.
             currentCounter -= direction
 
-        } while (currentCounter >= 0 && currentCounter < verse.currentAnnotationIndices.length && !_shouldShowAnnotationForColumn(getAnnotation(props, returnIndex), lyricColumnIndex))
+            returnToLoop =
+                currentCounter >= 0 &&
+                currentCounter < verse.currentAnnotationIndices.length &&
+                !_shouldShowAnnotationForColumn(getAnnotation(props, returnIndex), lyricColumnIndex)
+
+        } while (returnToLoop)
 
     // Otherwise, return either previous or next depending on direction.
     } else {
@@ -238,7 +270,7 @@ export const getAnnotationIndexForVerseIndex = ({
     return getAnnotationIndexForDirection({
         props,
         currentAnnotationIndex: returnIndex,
-        unpresentDirection: direction,
+        specifiedDirection: direction,
         lyricColumnIndex
     })
 }

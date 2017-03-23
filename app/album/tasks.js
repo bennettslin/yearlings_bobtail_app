@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `Pressing Enter from interactivated verse that toggles on should select correct annotation.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Main verse should still show in right column.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Focus breaks on admin.`,
         workedHours: 0,
         neededHours: 1
@@ -10,19 +20,9 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `lastAnnotationIndex does not accommodate hidden dotStanzas. Also if verse has multiple annotations, default to first, not last.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Allow arrows for score and wiki, and still allow for handling keydown.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Accessed annotation index when dot keys are all hidden?`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Selected verse should not be interactivatable or hoverable when verse bar is shown`,
@@ -1577,5 +1577,15 @@ module.exports = [
         taskName: `Use classnames.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Refactor methods to get annotation index.`,
+        workedHours: 5,
+        neededHours: 5
+    },
+    {
+        taskName: `Pressing Enter when selected verse is accessed toggles play.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
