@@ -92,29 +92,17 @@ const _getCardFromIndex = ({ annotation, cardIndex }) => {
     }
 }
 
-const _shouldShowAnnotationForColumn = (annotation, lyricColumnShown) => {
-    if (!lyricColumnShown || !annotation.column) {
-        return true
-    }
-    return annotation.column === lyricColumnShown
+const _shouldShowAnnotationForColumn = (annotation, lyricColumnIndex) => {
+    return !annotation.column || annotation.column === LYRIC_COLUMN_KEYS[lyricColumnIndex]
 }
 
-const _shouldShowVerseForColumn = (verse, lyricColumnShown) => {
-    if (!lyricColumnShown) {
-        return true
-    }
-
-    return lyricColumnShown === LEFT ? !verse.rightColumn : !verse.leftColumn
-}
-
-// TODO: Get lyricColumnShown from props.
 // TODO: Allow modulo direction.
 export const getAnnotationIndexForDirection = ({
     props,
     currentAnnotationIndex = 1,
     direction,
     unpresentDirection,
-    lyricColumnShown
+    lyricColumnIndex = props.selectedLyricColumnIndex
 }) => {
     const selectedSong = getSong(props)
 
@@ -171,7 +159,7 @@ export const getAnnotationIndexForDirection = ({
                 (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) ||
 
                 // Or if this annotation isn't in the shown column...
-                !_shouldShowAnnotationForColumn(selectedSong.annotations[returnIndex - 1], lyricColumnShown)) &&
+                !_shouldShowAnnotationForColumn(selectedSong.annotations[returnIndex - 1], lyricColumnIndex)) &&
 
                 // // And as long as we haven't exhausted all indices.
                 // !(direction !== 0 && currentAnnotationIndex === returnIndex)
@@ -198,14 +186,13 @@ export const getAnnotationIndexForDirection = ({
 }
 
 
-// TODO: Get lyricColumnShown from props?
 export const getAnnotationIndexForVerseIndex = ({
     props,
     verseIndex,
 
     // Search backwards by default.
     direction = -1,
-    lyricColumnShown
+    lyricColumnIndex = props.selectedLyricColumnIndex
 }) => {
     const verse = getVerse({
             selectedVerseIndex: verseIndex,
@@ -235,7 +222,7 @@ export const getAnnotationIndexForVerseIndex = ({
             // Move inward, which is the opposite direction.
             currentCounter -= direction
 
-        } while (currentCounter >= 0 && currentCounter < verse.currentAnnotationIndices.length && !_shouldShowAnnotationForColumn(getAnnotation(props, returnIndex), lyricColumnShown))
+        } while (currentCounter >= 0 && currentCounter < verse.currentAnnotationIndices.length && !_shouldShowAnnotationForColumn(getAnnotation(props, returnIndex), lyricColumnIndex))
 
     // Otherwise, return either previous or next depending on direction.
     } else {
@@ -252,84 +239,8 @@ export const getAnnotationIndexForVerseIndex = ({
         props,
         currentAnnotationIndex: returnIndex,
         unpresentDirection: direction,
-        lyricColumnShown
+        lyricColumnIndex
     })
-}
-
-export const getVerseIndexForDirection = ({
-    props,
-    index,
-    recentIndex,
-    direction,
-    lyricColumnShown,
-    noModulo
-}) => {
-    const selectedSong = getSong(props),
-        specifiedDirection = direction
-
-    if (selectedSong.times) {
-        const timesLength = selectedSong.times.length
-
-        let returnIndex
-
-        // We know which verse index we want.
-        if (!isNaN(index)) {
-            returnIndex = index
-
-            // We are coming from an annotation, so stay put the first time.
-            if (recentIndex === false) {
-                direction = undefined
-            }
-
-        // If no verse index, pick the closest index based on direction.
-        } else {
-            returnIndex = (!direction || direction === -1) ? recentIndex : (recentIndex + 1) % timesLength
-        }
-
-        do {
-            /**
-             * If no specified direction, or if we have just picked the closest
-             * index, then stay put the first time around.
-             */
-            if (typeof direction === 'undefined' || !isNaN(recentIndex)) {
-                // Reset recent index to prevent infinite loop.
-                recentIndex = undefined
-                direction = 0
-
-            /**
-             * If this is the second time around, begin incrementing in the
-             * direction of the originally specified direction, if any. Default
-             * is backwards.
-             */
-            } else if (direction === 0) {
-                direction = specifiedDirection || -1
-            }
-
-            // Verse indices are 0-based.
-            if (noModulo) {
-                returnIndex = returnIndex + direction
-            } else {
-                returnIndex = (returnIndex + timesLength + direction) % timesLength
-            }
-
-        } while (
-            // If no modulo, make sure return index is within range.
-            returnIndex >= 0 && returnIndex < timesLength &&
-
-            // Continue if this verse is in the hidden column.
-            !_shouldShowVerseForColumn(getVerse(props, returnIndex), lyricColumnShown) &&
-
-            // Or if index is zero when lyrics start at zero.
-            // (returnIndex === 0 && lyricsStartAtZero)) &&
-
-            // And as long as we haven't exhausted all indices.
-            !(direction !== 0 && index === returnIndex)
-        )
-
-        return returnIndex
-    }
-
-    return index
 }
 
 export const getSliderRatioForScreenX = (screenX, sliderLeft, sliderWidth) => {

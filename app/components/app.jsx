@@ -260,13 +260,10 @@ class App extends Component {
 
         // Called from arrow buttons in popup.
         if (direction) {
-            const lyricColumnShown = LYRIC_COLUMN_KEYS[props.selectedLyricColumnIndex]
-
             selectedAnnotationIndex = getAnnotationIndexForDirection({
                 props,
                 currentAnnotationIndex: props.selectedAnnotationIndex,
-                direction,
-                lyricColumnShown
+                direction
             })
         }
 

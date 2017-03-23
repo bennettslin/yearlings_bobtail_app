@@ -270,9 +270,7 @@ class AccessManager extends Component {
 
     _handleLyricNavigation(e, keyName) {
 
-        const { props } = this,
-            lyricColumnShown = LYRIC_COLUMN_KEYS[this.props.selectedLyricColumnIndex]
-
+        const { props } = this
         let { accessedAnnotationIndex } = props,
             direction
 
@@ -298,16 +296,14 @@ class AccessManager extends Component {
             accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
                 props,
                 verseIndex: props.selectedVerseIndex,
-                direction,
-                lyricColumnShown
+                direction
             })
 
         } else {
             accessedAnnotationIndex = getAnnotationIndexForDirection({
                 props,
                 currentAnnotationIndex: accessedAnnotationIndex,
-                direction,
-                lyricColumnShown
+                direction
             })
         }
 
@@ -406,11 +402,9 @@ class AccessManager extends Component {
          * interactivated verse is selected.
          */
         const { props } = this,
-            lyricColumnShown = LYRIC_COLUMN_KEYS[props.selectedLyricColumnIndex],
             accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
                 props,
-                verseIndex,
-                lyricColumnShown
+                verseIndex
             })
 
         props.handleAnnotationAccess(accessedAnnotationIndex)
