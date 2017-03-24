@@ -66,7 +66,6 @@ class LyricsSectionView extends Component {
 
     _handleScroll(fromHeightTransition) {
         this.props.handleLyricSectionScroll({
-            lyricSectionElement: this.props.lyricSectionRef,
             fromHeightTransition
         })
     }

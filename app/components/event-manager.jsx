@@ -243,12 +243,11 @@ class EventManager extends Component {
     }
 
     handleLyricSectionScroll({
-        lyricSectionElement,
         verseElement,
         fromHeightTransition
     }) {
         this.props.scrollLyricSection({
-            lyricSectionElement,
+            lyricSectionElement: this.myLyricSection,
             verseElement,
             fromHeightTransition
         })

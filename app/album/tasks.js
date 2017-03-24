@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Bug: lyric expand and ear button isn't showing when scrolling back up?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Focus breaks on admin.`,
         workedHours: 0,
         neededHours: 1
@@ -1590,6 +1585,11 @@ module.exports = [
     },
     {
         taskName: `Pressing Enter from interactivated verse that toggles on should select correct annotation.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Bug: lyric expand and ear button isn't showing when scrolling back up?`,
         workedHours: 1,
         neededHours: 1
     }
