@@ -6,7 +6,7 @@ import { LEFT,
          REFERENCE } from './constants'
 
 import { intersects } from 'helpers/dot-helper'
-import { getIsMobileWiki, getLyricSectionRect } from 'helpers/responsive-helper'
+import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from 'helpers/responsive-helper'
 
 const _parseLyrics = (lyric, selectedVerseIndex) => {
     // Recurse until object with verse index is found.
@@ -92,12 +92,17 @@ const _getCardFromIndex = ({ annotation, cardIndex }) => {
     }
 }
 
-const _shouldShowAnnotationForColumn = (annotation, lyricColumnIndex) => {
-    return !annotation.column || annotation.column === LYRIC_COLUMN_KEYS[lyricColumnIndex]
+const _shouldShowAnnotationForColumn = (props, state, annotation, lyricColumnIndex) => {
+    const showSingleLyricColumn = getShowSingleLyricColumn(props, state)
+
+    return !annotation.column ||
+        !showSingleLyricColumn ||
+        annotation.column === LYRIC_COLUMN_KEYS[lyricColumnIndex]
 }
 
 export const getAnnotationIndexForDirection = ({
     props,
+    state,
     currentAnnotationIndex = 1,
     direction,
 
@@ -180,7 +185,7 @@ export const getAnnotationIndexForDirection = ({
                 (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) ||
 
                 // Or if this annotation isn't in the shown column...
-                !_shouldShowAnnotationForColumn(selectedSong.annotations[returnIndex - 1], lyricColumnIndex)) &&
+                !_shouldShowAnnotationForColumn(props, state, selectedSong.annotations[returnIndex - 1], lyricColumnIndex)) &&
 
                 // And if modulo...
                 (useModulo ?
@@ -207,6 +212,12 @@ export const getAnnotationIndexForDirection = ({
 
 export const getAnnotationIndexForVerseIndex = ({
     props,
+
+    /**
+     * State is just needed for the deviceIndex, to determine whether one or
+     * two lyric columns are shown.
+     */
+    state,
     verseIndex,
 
     // Search backwards by default.
@@ -252,7 +263,7 @@ export const getAnnotationIndexForVerseIndex = ({
             returnToLoop =
                 currentCounter >= 0 &&
                 currentCounter < verse.currentAnnotationIndices.length &&
-                !_shouldShowAnnotationForColumn(getAnnotation(props, returnIndex), lyricColumnIndex)
+                !_shouldShowAnnotationForColumn(props, state, getAnnotation(props, returnIndex), lyricColumnIndex)
 
         } while (returnToLoop)
 
@@ -269,6 +280,7 @@ export const getAnnotationIndexForVerseIndex = ({
      */
     return getAnnotationIndexForDirection({
         props,
+        state,
         currentAnnotationIndex: returnIndex,
         specifiedDirection: direction,
         lyricColumnIndex

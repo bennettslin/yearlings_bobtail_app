@@ -112,18 +112,6 @@ class App extends Component {
             accessedDotIndex: 0,
             accessedSongIndex: props.selectedSongIndex,
             accessedVerseIndex: props.selectedVerseIndex,
-
-            // Based on either selected annotation or selected verse.
-            accessedAnnotationIndex: props.selectedAnnotationIndex ?
-                getAnnotationIndexForDirection({
-                    props,
-                    currentAnnotationIndex: props.selectedAnnotationIndex
-                }) :
-                getAnnotationIndexForVerseIndex({
-                    props,
-                    verseIndex: props.selectedVerseIndex
-                }),
-
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
 
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
@@ -157,8 +145,26 @@ class App extends Component {
     }
 
     componentDidMount() {
+        const { props } = this,
+            passedState = {
+                deviceIndex: this.state.deviceIndex
+            }
+
         this.setState({
-            appMounted: true
+            appMounted: true,
+
+            // Based on either selected annotation or selected verse.
+            accessedAnnotationIndex: props.selectedAnnotationIndex ?
+                getAnnotationIndexForDirection({
+                    props,
+                    state: passedState,
+                    currentAnnotationIndex: props.selectedAnnotationIndex
+                }) :
+                getAnnotationIndexForVerseIndex({
+                    props,
+                    state: passedState,
+                    verseIndex: props.selectedVerseIndex
+                }),
         })
     }
 
@@ -256,12 +262,14 @@ class App extends Component {
         direction,
         selectedSongIndex = this.props.selectedSongIndex
     }) {
-        const { props } = this
+        const { props,
+                state } = this
 
         // Called from arrow buttons in popup.
         if (direction) {
             selectedAnnotationIndex = getAnnotationIndexForDirection({
                 props,
+                state,
                 currentAnnotationIndex: props.selectedAnnotationIndex,
                 direction
             })
@@ -433,6 +441,7 @@ class App extends Component {
         // Switching lyric column might change accessed annotation index.
         const accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
             props,
+            state,
             verseIndex: props.selectedVerseIndex,
             lyricColumnIndex: selectedLyricColumnIndex
         })

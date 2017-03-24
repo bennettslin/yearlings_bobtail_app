@@ -1,13 +1,13 @@
 module.exports = [
     {
-        taskName: `Pressing Enter from interactivated verse that toggles on should select correct annotation.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Main verse should still show in right column.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Bug: lyric expand and ear button isn't showing when scrolling back up?`,
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: `Focus breaks on admin.`,
@@ -1585,6 +1585,11 @@ module.exports = [
     },
     {
         taskName: `Pressing Enter when selected verse is accessed toggles play.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Pressing Enter from interactivated verse that toggles on should select correct annotation.`,
         workedHours: 1,
         neededHours: 1
     }

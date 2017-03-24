@@ -126,7 +126,9 @@ class AccessManager extends Component {
             } else {
                 this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
                 this._accessAnnotationWithoutDirection(this.props.interactivatedVerseIndex)
+                annotationIndexWasAccessed = true
             }
+
             keyWasRegistered = true
 
         // We're in annotation.
@@ -307,6 +309,7 @@ class AccessManager extends Component {
         if (!props.accessedOn) {
             accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
                 props,
+                state: props,
                 verseIndex: props.selectedVerseIndex,
                 direction
             })
@@ -314,6 +317,7 @@ class AccessManager extends Component {
         } else {
             accessedAnnotationIndex = getAnnotationIndexForDirection({
                 props,
+                state: props,
                 currentAnnotationIndex: accessedAnnotationIndex,
                 direction
             })
@@ -425,6 +429,7 @@ class AccessManager extends Component {
         const { props } = this,
             accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
                 props,
+                state: props,
                 verseIndex
             })
 
