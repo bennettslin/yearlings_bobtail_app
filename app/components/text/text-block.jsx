@@ -9,11 +9,26 @@ import TextUnit from './text-unit'
 class TextBlock extends Component {
 
     render() {
-        const { text } = this.props,
+        const { text,
+                truncateMain } = this.props,
 
             isArray = Array.isArray(text)
 
-        return (typeof text === 'string' || !isArray) ? (
+        if (typeof text === 'string' || !isArray || truncateMain) {
+            if (truncateMain) {
+                return (
+                    <TextUnit {...this.props}
+                        text={'\u2026'}
+                    />
+                )
+            } else {
+                return <TextUnit {...this.props} />
+            }
+        } else {
+            return <TextBlockView {...this.props} />
+        }
+
+        return (typeof text === 'string' || !isArray || truncateMain) ? (
                 <TextUnit {...this.props} />
             ) : (
                 <TextBlockView {...this.props} />

@@ -32,7 +32,9 @@ const LyricsUnit = (props) => {
         topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
         isDotOnly = dotStanza && stanzaArray.length === 1,
         hasSide = topSideStanza || bottomSideStanza,
-        showMain = !isDotOnly && (!hasSide || hiddenLyricColumnKey !== LEFT),
+        truncateMain = hasSide && hiddenLyricColumnKey === LEFT,
+        showMain = !isDotOnly && ((!hasSide || hiddenLyricColumnKey !== LEFT) || truncateMain),
+
         showSide = hasSide && hiddenLyricColumnKey !== RIGHT,
         shouldShowDotStanza = dotStanza ? intersects(dotStanza.dotKeys, selectedDotKeys) : false
 
@@ -53,6 +55,7 @@ const LyricsUnit = (props) => {
             isBottomOnly={isBottomOnly}
             isDotOnly={isDotOnly}
             showMain={showMain}
+            truncateMain={truncateMain}
             showSide={showSide}
             topSideSubStanza={topSideSubStanza}
         />
@@ -87,17 +90,18 @@ const LyricsUnitView = ({
     isBottomOnly,
     isDotOnly,
     showMain,
+    truncateMain,
     showSide,
 
 ...other }) => {
 
     // TODO: Don't bother passing hidden lyric column key to verse if it's not necessary.
-    const getStanza = ({ stanzaArray, inMain, addSub, isSub }) => {
+    const getStanza = ({ stanzaArray, inMain, truncateMain, addSub, isSub }) => {
             if (stanzaArray) {
                 if (addSub) {
                     return (
                         <div className="sub-block custom-sub-block right">
-                            {getStanza({ stanzaArray, inMain, isSub: true })}
+                            {getStanza({ stanzaArray, inMain, truncateMain, isSub: true })}
                         </div>
                     )
                 } else {
@@ -117,6 +121,7 @@ const LyricsUnitView = ({
                             stanzaArray={stanzaArray}
                             showStanzaTypeAndIndex={showStanzaTypeAndIndex}
                             inMain={inMain}
+                            truncateMain={truncateMain}
                             stanzaIndex={shownStanzaIndex}
                             stanzaType={itsStanzaType}
                             selectedDotKeys={selectedDotKeys}
@@ -141,8 +146,8 @@ const LyricsUnitView = ({
         >
             {showMain &&
                 <div className="stanza-block">
-                    {getStanza({ stanzaArray, inMain: true })}
-                    {getStanza({ stanzaArray: subStanza, inMain: true, addSub: true })}
+                    {getStanza({ stanzaArray, inMain: true, truncateMain })}
+                    {getStanza({ stanzaArray: subStanza, inMain: true, truncateMain, addSub: true })}
                 </div>
             }
             {showSide &&

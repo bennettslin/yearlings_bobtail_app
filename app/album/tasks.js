@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Main verse should still show in right column.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Focus breaks on admin.`,
         workedHours: 0,
         neededHours: 1
@@ -1590,6 +1585,11 @@ module.exports = [
     },
     {
         taskName: `Bug: lyric expand and ear button isn't showing when scrolling back up?`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Main verse should still show in right column.`,
         workedHours: 1,
         neededHours: 1
     }
