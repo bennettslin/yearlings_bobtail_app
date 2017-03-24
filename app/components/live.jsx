@@ -115,6 +115,7 @@ const LiveView = ({
     selectedVerse,
 
     lyricSectionRef,
+    scoreSectionRef,
 
     selectedSongTitle,
     handlePlayerTimeChange,
@@ -146,6 +147,8 @@ const LiveView = ({
     handleVerseBarSelect,
     handleLyricAnnotationSelect,
     handleOverviewToggle,
+    handlePopupFocus,
+    handleScoreFocus,
     handleScoreToggle,
     handleTipsToggle,
     handleTitleSelect,
@@ -350,7 +353,10 @@ const LiveView = ({
             selectedScoreIndex,
             selectedSongIndex,
             showClose: true,
+            scoreSectionRef,
+            handleScoreFocus,
             handleScoreToggle,
+            handlePopupFocus,
             handlePopupContainerClick
         },
         wikiPopupProps = {

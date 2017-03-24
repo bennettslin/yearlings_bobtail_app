@@ -12,6 +12,7 @@ const ScoreTransitionPopup = ({
     selectedScoreIndex,
     showClose,
     handleScoreToggle,
+    handlePopupFocus,
 
 ...other }) => {
 
@@ -25,6 +26,7 @@ const ScoreTransitionPopup = ({
             popupClassName="score"
             isVisible={isVisible}
             showClose={showClose}
+            handlePopupFocus={handlePopupFocus}
             onCloseClick={handleScoreToggle}
             myChild={myChild}
         />

@@ -48,6 +48,7 @@ class EventManager extends Component {
         this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
         this.handleNavBookSelect = this.handleNavBookSelect.bind(this)
         this.handleOverviewToggle = this.handleOverviewToggle.bind(this)
+        this.handlePopupFocus = this.handlePopupFocus.bind(this)
         this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
@@ -74,21 +75,25 @@ class EventManager extends Component {
             exemptLyric: true
         })
 
+        // Return focus to lyric section so it can have scroll access.
         // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-        if (domProps.selectedScoreIndex) {
-            this.myScoreSection && this.myScoreSection.focus()
-
-        } else if (domProps.selectedWikiIndex) {
-            this.myWikiSection && this.myWikiSection.focus()
-
-        } else {
-            // Return focus to lyric section so it can have scroll access.
-            this.myLyricSection && this.myLyricSection.focus()
-        }
+        this.myLyricSection && this.myLyricSection.focus()
     }
 
     handlePopupContainerClick(e) {
         this._stopPropagation(e)
+    }
+
+    handlePopupFocus() {
+        const { selectedScoreIndex,
+                selectedWikiIndex } = this.props.domProps
+
+        if (selectedScoreIndex) {
+            this.myScoreSection && this.myScoreSection.focus()
+
+        } else if (selectedWikiIndex) {
+            this.myWikiSection && this.myWikiSection.focus()
+        }
     }
 
     /**********
@@ -540,6 +545,7 @@ class EventManager extends Component {
                 handlePopupAnchorAccess={this.handlePopupAnchorAccess}
                 handleSongAccess={this.handleSongAccess}
                 handleVerseDirectionAccess={this.handleVerseDirectionAccess}
+                handlePopupFocus={this.handlePopupFocus}
                 handleBodyClick={this.handleBodyClick}
                 handleBodyTouchMove={this.handleBodyTouchMove}
                 handleBodyTouchEnd={this.handleBodyTouchEnd}
