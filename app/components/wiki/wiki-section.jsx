@@ -70,7 +70,8 @@ class WikiSectionView extends Component {
                     </div>
                 }
                 <iframe
-                    ref="webview"
+                    // ref="webview"
+                    ref={this.props.wikiSectionRef}
                     className={`webview${webviewLoading ? ' loading' : ''}`}
                     src={selectedWikiUrl}
                     onLoad={this.onWebviewLoad}

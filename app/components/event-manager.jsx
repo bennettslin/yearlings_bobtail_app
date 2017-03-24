@@ -67,15 +67,23 @@ class EventManager extends Component {
      ********/
 
     handleBodyClick(e) {
+        const { domProps } = this.props
+
         this._stopPropagation(e)
         this._closeSections({
             exemptLyric: true
         })
 
-        // Return focus to lyric section so it can have scroll access.
         // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-        if (this.myLyricSection) {
-            this.myLyricSection.focus()
+        if (domProps.selectedScoreIndex) {
+            this.myScoreSection && this.myScoreSection.focus()
+
+        } else if (domProps.selectedWikiIndex) {
+            this.myWikiSection && this.myWikiSection.focus()
+
+        } else {
+            // Return focus to lyric section so it can have scroll access.
+            this.myLyricSection && this.myLyricSection.focus()
         }
     }
 
@@ -524,6 +532,8 @@ class EventManager extends Component {
         return (
             <AccessManager {...domProps} {...domState}
                 lyricSectionRef={node => this.myLyricSection = node}
+                scoreSectionRef={node => this.myScoreSection = node}
+                wikiSectionRef={node => this.myWikiSection = node}
 
                 handleAnnotationAccess={this.handleAnnotationAccess}
                 handleDotAccess={this.handleDotAccess}

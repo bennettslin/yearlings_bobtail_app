@@ -27,7 +27,8 @@ class ScoreSectionView extends Component {
         return (
             <div className="section score-section">
                 <iframe
-                    ref="webview"
+                    // ref="webview"
+                    ref={this.props.scoreSectionRef}
                     className={`webview`}
                     src={scores[0]}
                     onLoad={this.onWebviewLoad}
