@@ -42,8 +42,15 @@ const LyricsVerse = ({
          */
         isInteractable = !isNaN(time),
 
+        // If verse bar is shown, selected verse is not hoverable or interactivatable.
+        notVerseBarPrevented = verseBarHidden || !isSelected,
+
         isInteractivated = interactivatedVerseIndex === verseIndex,
-        isHoverable = inMain && !isInteractivated && !isTitle && interactivatedVerseIndex === -1,
+        isHoverable = inMain &&
+            !isInteractivated &&
+            !isTitle &&
+            interactivatedVerseIndex === -1 &&
+            notVerseBarPrevented,
 
         isAfterSelected = verseIndex > selectedVerseIndex,
         accessHighlighted = accessedVerseIndex === verseIndex,
@@ -51,7 +58,7 @@ const LyricsVerse = ({
         handleAnchorClick = handleLyricAnnotationSelect,
 
         // Allows clicks on selected or interactivated verse to deinteractivate it.
-        handleInteractivatableClick = !inVerseBar && !isInteractivated ? e => handleVerseInteractivate(e, verseIndex) : null,
+        handleInteractivatableClick = !inVerseBar && notVerseBarPrevented && !isInteractivated ? e => handleVerseInteractivate(e, verseIndex) : null,
 
         /**
          * Audio button is enabled when it's the interactivated verse.

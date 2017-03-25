@@ -27,23 +27,23 @@ class ScoreSectionView extends Component {
     hi(e) {
         // TODO: Keep focus on score section. Pass up and down and page up and down and space events to iframe.
 
-        console.error('hi');
+        // console.error('hi');
 
-        console.error('this.myWebview', this.myWebview);
+        // console.error('this.myWebview', this.myWebview);
 
-        console.error('e.nativeEvent', e.nativeEvent);
+        // console.error('e.nativeEvent', e.nativeEvent);
 
         const iframeEvent = new KeyboardEvent('keydown', {key: 'ArrowDown'})
 
-        console.error('iframeEvent', iframeEvent);
+        // console.error('iframeEvent', iframeEvent);
 
         this.myWebview.dispatchEvent(iframeEvent);
 
         // const myDocument = this.myWebview.contentWindow.document
 
-        this.myWebview.addEventListener('keydown', e => {
-            console.error('e', e);
-        })
+        // this.myWebview.addEventListener('keydown', e => {
+        //     console.error('e', e);
+        // })
     }
 
     render() {

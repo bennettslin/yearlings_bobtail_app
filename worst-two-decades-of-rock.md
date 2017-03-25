@@ -7,11 +7,11 @@ Oceans overfished, fewer big fish, dwindling rain forest. No one says, "Damn Mil
 
 Bizarro world argument: empowering middleman, bypass artist
 
-Asthmatic Kitty, demo tapes
-
-Demo tape recordings transcend social boundaries (indie rock placed a bet that performances, not recordings, are what defines music. world that's becoming increasingly comfortable with the fact that recordings, not performances)
+Asthmatic Kitty, demo tapes. There is no such thing as being overridingly good in your recorded output. What they are promising is that an inconsequential concern is superior to the most consequential.
 
 The best albums lead the way for live performance. This isn't hypothetical, it's already reflected in our "best of" lists.
+
+Demo tape recordings transcend social boundaries (indie rock placed a bet that performances, not recordings, are what defines music. world that's becoming increasingly comfortable with the fact that recordings, not performances)
 
 Virality, stories of technology abetting the dissemination of art, rather than the creation of it, are massively uninteresting to us. Beethoven lithography, pianoforte
 

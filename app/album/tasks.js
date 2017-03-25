@@ -15,11 +15,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Selected verse should not be interactivatable or hoverable when verse bar is shown`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Key press should not register at all if returned false, for example when l is pressed when lyric is not expandable.`,
         workedHours: 0,
         neededHours: 2
@@ -1590,6 +1585,11 @@ module.exports = [
     },
     {
         taskName: `Main verse should still show in right column.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Selected verse should not be interactivatable or hoverable when verse bar is shown`,
         workedHours: 1,
         neededHours: 1
     }
