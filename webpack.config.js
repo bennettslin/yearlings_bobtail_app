@@ -15,6 +15,8 @@
 
 const webpack = require('webpack'),
     path = require('path'),
+    merge = require('webpack-merge'),
+    parts = require('./webpack.parts'),
     PATHS = {
         app: path.resolve(__dirname, 'app'),
         build: path.resolve(__dirname, 'build'),
@@ -91,45 +93,24 @@ const commonConfig = {
     }
 }
 
-const productionConfig = () => commonConfig;
-const developmentConfig = () => {
-    const config = {
-        devServer: {
-            contentBase: PATHS.build,
+const productionConfig = merge([]);
+const developmentConfig = merge([
+    parts.devServer({
+        contentBase: PATHS.build,
 
-            /**
-             * Enable history API fallback so HTML5 History API based
-             * routing works. This is a good default that will come
-             * in handy in more complicated setups.
-             */
-            historyApiFallback: true,
-            hot: true,
-            inline: true,
-
-            // Capture errors in overlay.
-            overlay: {
-                errors: true,
-                warnings: true
-            },
-
-            progress: true,
-
-            // Display only errors to reduce the amount of output.
-            stats: 'errors-only',
-
-            /**
-             * Parse host and port from env so this is easy to customize.
-             * 0.0.0.0 is available to all network devices, unlike default
-             * localhost.
-             */
-            host: process.env.HOST,
-            port: 1337 || process.env.PORT
-        },
-    }
-
-    return Object.assign({}, commonConfig, config)
-}
+        /**
+         * Parse host and port from env so this is easy to customize.
+         * 0.0.0.0 is available to all network devices, unlike default
+         * localhost.
+         */
+        host: process.env.HOST,
+        port: 1337 || process.env.PORT
+    })
+])
 
 module.exports = (env) => {
-    return env === 'production' ? productionConfig() : developmentConfig();
+    return merge(
+        commonConfig,
+        env === 'production' ? productionConfig : developmentConfig
+    );
 }
