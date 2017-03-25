@@ -35,7 +35,6 @@ import { CAPS_LOCK,
          OVERVIEW_OPTIONS,
          SHOWN,
 
-         LYRIC_COLUMN_KEYS,
          ALL_DOT_KEYS } from 'helpers/constants'
 
 class AccessManager extends Component {
@@ -166,7 +165,7 @@ class AccessManager extends Component {
                 this.props.handleAnnotationNext(e)
                 break
             case ARROW_UP:
-            case ARROW_DOWN:
+            case ARROW_DOWN: {
                 const direction = keyName === ARROW_UP ? -1 : 1
                 accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(
                     props,
@@ -175,6 +174,7 @@ class AccessManager extends Component {
                 )
                 this.props.handlePopupAnchorAccess(accessedPopupAnchorIndex)
                 break
+            }
             case ENTER: {
                 const annotation = getAnnotation(props)
 

@@ -1,6 +1,5 @@
 // Parse album data for presentation.
-import { LEFT,
-         LYRIC_COLUMN_KEYS,
+import { LYRIC_COLUMN_KEYS,
 
          PORTAL,
          REFERENCE } from './constants'

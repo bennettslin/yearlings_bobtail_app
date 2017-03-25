@@ -24,7 +24,6 @@ class DomManager extends Component {
               selectedScoreIndex,
               selectedLyricColumnIndex,
               selectedAnnotationIndex,
-              selectedVerseIndex,
               selectedWikiIndex,
               sliderVerseIndex,
 

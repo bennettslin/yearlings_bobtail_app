@@ -33,7 +33,7 @@ const NavBookView = ({
         isNavToggle ? 'nav-toggle-book' : 'nav-book',
         { 'toggle': isToggle,
           'logue': isLogue,
-          'songs': songs }
+          songs }
     )}>
         {songs ?
             Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {

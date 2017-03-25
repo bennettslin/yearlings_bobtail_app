@@ -27,12 +27,6 @@ class TextBlock extends Component {
         } else {
             return <TextBlockView {...this.props} />
         }
-
-        return (typeof text === 'string' || !isArray || truncateMain) ? (
-                <TextUnit {...this.props} />
-            ) : (
-                <TextBlockView {...this.props} />
-            )
     }
 }
 

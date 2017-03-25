@@ -24,7 +24,7 @@ class ScoreSectionView extends Component {
     }
 
     // FIXME: How to do key press when iframe is activeElement?
-    hi(e) {
+    hi() {
         // TODO: Keep focus on score section. Pass up and down and page up and down and space events to iframe.
 
         // console.error('hi');
@@ -33,7 +33,7 @@ class ScoreSectionView extends Component {
 
         // console.error('e.nativeEvent', e.nativeEvent);
 
-        const iframeEvent = new KeyboardEvent('keydown', {key: 'ArrowDown'})
+        const iframeEvent = new KeyboardEvent('keydown', { key: 'ArrowDown' })
 
         // console.error('iframeEvent', iframeEvent);
 

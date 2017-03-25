@@ -33,7 +33,7 @@ const LyricsUnit = (props) => {
         isDotOnly = dotStanza && stanzaArray.length === 1,
         hasSide = topSideStanza || bottomSideStanza,
         truncateMain = hasSide && hiddenLyricColumnKey === LEFT,
-        showMain = !isDotOnly && ((!hasSide || hiddenLyricColumnKey !== LEFT) || truncateMain),
+        showMain = !isDotOnly && (!hasSide || hiddenLyricColumnKey !== LEFT || truncateMain),
 
         showSide = hasSide && hiddenLyricColumnKey !== RIGHT,
         shouldShowDotStanza = dotStanza ? intersects(dotStanza.dotKeys, selectedDotKeys) : false
@@ -140,7 +140,7 @@ const LyricsUnitView = ({
                 unitClassName,
                 { 'title-unit': isTitleUnit,
                   'custom-sub-block': unitClassName,
-                  'subsequent': subsequent
+                  subsequent
                 }
             )}
         >
