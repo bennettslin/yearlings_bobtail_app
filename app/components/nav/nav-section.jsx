@@ -2,7 +2,7 @@ import React from 'react'
 import NavBook from './nav-book'
 import NavItem from './nav-item'
 import ProgressFooter from '../admin/progress/progress-footer'
-import ProgressHelper from 'helpers/progress-helper'
+import ProgressHelper from '../../helpers/progress-helper'
 
 /*************
  * CONTAINER *

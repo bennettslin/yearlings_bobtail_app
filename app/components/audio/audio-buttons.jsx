@@ -1,5 +1,5 @@
 import React from 'react'
-import { AUDIO_OPTIONS } from 'helpers/constants'
+import { AUDIO_OPTIONS } from '../../helpers/constants'
 
 /*************
  * CONTAINER *

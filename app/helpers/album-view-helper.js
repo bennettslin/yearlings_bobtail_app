@@ -4,8 +4,8 @@ import { LYRIC_COLUMN_KEYS,
          PORTAL,
          REFERENCE } from './constants'
 
-import { intersects } from 'helpers/dot-helper'
-import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from 'helpers/responsive-helper'
+import { intersects } from './dot-helper'
+import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from './responsive-helper'
 
 const _parseLyrics = (lyric, selectedVerseIndex) => {
     // Recurse until object with verse index is found.

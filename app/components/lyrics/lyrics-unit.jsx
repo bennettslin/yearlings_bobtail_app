@@ -2,8 +2,8 @@ import React from 'react'
 import classnames from 'classnames'
 import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
-import { TITLE, LEFT, RIGHT } from 'helpers/constants'
-import { intersects } from 'helpers/dot-helper'
+import { TITLE, LEFT, RIGHT } from '../../helpers/constants'
+import { intersects } from '../../helpers/dot-helper'
 
 /*************
  * CONTAINER *

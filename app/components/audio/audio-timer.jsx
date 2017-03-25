@@ -1,5 +1,5 @@
 import React from 'react'
-import { getFormattedTime } from 'helpers/format-helper'
+import { getFormattedTime } from '../../helpers/format-helper'
 
 /*************
  * CONTAINER *

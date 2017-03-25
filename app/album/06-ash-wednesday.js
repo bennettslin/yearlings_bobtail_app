@@ -10,7 +10,7 @@ import { VERSES,
          REFERENCE,
          SONGWRITING,
          AFTERWORD,
-         DOT_STANZA_CONSTANT } from 'helpers/constants'
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
     title: {

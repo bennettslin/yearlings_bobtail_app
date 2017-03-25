@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
-import { DOT_DESCRIPTIONS } from 'helpers/constants'
+import { DOT_DESCRIPTIONS } from '../../helpers/constants'
 
 /*************
  * CONTAINER *

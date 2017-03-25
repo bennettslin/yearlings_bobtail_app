@@ -2,7 +2,7 @@ import React from 'react'
 import AnchorBlock from './anchor-block'
 import TextBlock from './text-block'
 import TextSpan from './text-span'
-import { intersects } from 'helpers/dot-helper'
+import { intersects } from '../../helpers/dot-helper'
 
 /*************
  * CONTAINER *

@@ -13,9 +13,9 @@ import { PHONE_WIDTH,
          MENU_HEIGHT,
          MENU_PHONE_HEIGHT,
          COLLAPSED_LYRIC_SECTION_HEIGHT,
-         WIKI_SIDE_PADDING_TOTAL } from 'helpers/constants'
+         WIKI_SIDE_PADDING_TOTAL } from './constants'
 
-import { getSong } from 'helpers/album-view-helper'
+import { getSong } from './album-view-helper'
 
 export const resizeWindow = (target = window) => {
 

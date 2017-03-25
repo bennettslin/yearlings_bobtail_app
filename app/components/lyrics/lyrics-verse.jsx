@@ -3,8 +3,8 @@ import classnames from 'classnames'
 
 import LyricsLine from './lyrics-line'
 import LyricsAudioButton from './lyrics-audio-button'
-import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from 'helpers/constants'
-import { getPropsAreSame } from 'helpers/general-helper'
+import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from '../../helpers/constants'
+import { getPropsAreSame } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *

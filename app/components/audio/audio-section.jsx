@@ -1,7 +1,7 @@
 import React from 'react'
 import AudioButtons from './audio-buttons'
 import TitleSection from '../title/title-section'
-import { SONG_FILES } from 'helpers/constants'
+import { SONG_FILES } from '../../helpers/constants'
 
 /*************
  * CONTAINER *

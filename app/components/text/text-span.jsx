@@ -1,5 +1,5 @@
 import React from 'react'
-import { getFormattedFirstVerseObjectText, getFormattedLastVerseObjectText } from 'helpers/format-helper'
+import { getFormattedFirstVerseObjectText, getFormattedLastVerseObjectText } from '../../helpers/format-helper'
 
 /*************
  * CONTAINER *

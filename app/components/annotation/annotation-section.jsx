@@ -1,6 +1,6 @@
 import React from 'react'
 import AnnotationUnit from './annotation-unit'
-import { DOT_STANZA_CONSTANT } from 'helpers/constants'
+import { DOT_STANZA_CONSTANT } from '../../helpers/constants'
 
 /*************
  * CONTAINER *

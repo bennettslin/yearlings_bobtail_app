@@ -4,7 +4,8 @@
   "description": "An interface for the Bobtail Yearling's album Yearling's Bobtail.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "build": "webpack --env production",
+    "start": "webpack-dev-server --env development",
     "test": "mocha --compilers js:babel-core/register --require ./test/helpers/test-helper.js --recursive ./test",
     "test:lint": "eslint . --ext .js --ext .jsx --cache",
     "test:watch": "npm run test -- --watch"
@@ -49,7 +50,7 @@
     "react-addons-test-utils": "^15.2.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.1",
+    "webpack": "^2.1.0-beta.21",
     "webpack-dev-server": "^1.14.1"
   }
 }

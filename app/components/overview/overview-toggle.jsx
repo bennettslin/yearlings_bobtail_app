@@ -1,5 +1,5 @@
 import React from 'react'
-import { OVERVIEW_OPTIONS } from 'helpers/constants'
+import { OVERVIEW_OPTIONS } from '../../helpers/constants'
 
 /*************
  * CONTAINER *

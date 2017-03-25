@@ -12,7 +12,7 @@ import { INSTRUMENTAL,
          SONGWRITING,
          AFTERWORD,
          OBSERVATION,
-         DOT_STANZA_CONSTANT } from 'helpers/constants'
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
     title: {

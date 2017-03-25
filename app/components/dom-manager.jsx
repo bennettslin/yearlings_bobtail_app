@@ -5,9 +5,9 @@ import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './audio/audio-players-section'
 import { DEVICE_OBJECTS,
          OVERVIEW_OPTIONS,
-         SHOWN } from 'helpers/constants'
-import { getSongTitle, getVerse, getIsLogue, getHiddenLyricColumnKey } from 'helpers/album-view-helper'
-import { getIsDesktop, getIsPhone, getIsLyricExpandable, getShowSingleLyricColumn } from 'helpers/responsive-helper'
+         SHOWN } from '../helpers/constants'
+import { getSongTitle, getVerse, getIsLogue, getHiddenLyricColumnKey } from '../helpers/album-view-helper'
+import { getIsDesktop, getIsPhone, getIsLyricExpandable, getShowSingleLyricColumn } from '../helpers/responsive-helper'
 
 class DomManager extends Component {
     render() {

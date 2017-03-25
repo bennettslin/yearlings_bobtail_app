@@ -13,8 +13,8 @@ import AnnotationPopup from './annotation/annotation-popup'
 import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
 import WikiPopup from './wiki/wiki-popup'
-import { getSong, getAnnotation, getWikiUrl } from 'helpers/album-view-helper'
-import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu, getTitleInAudio } from 'helpers/responsive-helper'
+import { getSong, getAnnotation, getWikiUrl } from '../helpers/album-view-helper'
+import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 
 /*************
  * CONTAINER *

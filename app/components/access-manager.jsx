@@ -3,7 +3,7 @@ import DomManager from './dom-manager'
 import { getAnnotation,
          getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
-         getPopupAnchorIndexForDirection } from 'helpers/album-view-helper'
+         getPopupAnchorIndexForDirection } from '../helpers/album-view-helper'
 import { CAPS_LOCK,
          ESCAPE,
          SPACE,
@@ -35,7 +35,7 @@ import { CAPS_LOCK,
          OVERVIEW_OPTIONS,
          SHOWN,
 
-         ALL_DOT_KEYS } from 'helpers/constants'
+         ALL_DOT_KEYS } from '../helpers/constants'
 
 class AccessManager extends Component {
 

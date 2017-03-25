@@ -2,7 +2,7 @@ import React from 'react'
 import Shared from './shared'
 import DevSection from './dev/dev-section'
 import NavSection from '../nav/nav-section'
-import ProgressHelper from 'helpers/progress-helper'
+import ProgressHelper from '../../helpers/progress-helper'
 
 /*************
  * CONTAINER *

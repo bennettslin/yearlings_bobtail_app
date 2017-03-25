@@ -7,7 +7,7 @@ import { ALBUM_BUILD_KEYS,
          CENTRE,
          REFERENCE } from './constants'
 import { getFormattedAnnotationTitle } from './format-helper'
-import { getAnnotationsDotKeys } from 'helpers/album-view-helper'
+import { getAnnotationsDotKeys } from './album-view-helper'
 
 const _tempStore = {
     _songIndex: 0,

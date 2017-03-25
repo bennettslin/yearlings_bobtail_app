@@ -1,6 +1,6 @@
 import React from 'react'
 import TaskRow from './task-row'
-import ProgressHelper from 'helpers/progress-helper'
+import ProgressHelper from '../../../helpers/progress-helper'
 
 /*************
  * CONTAINER *

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
 // For dev purposes. Log object info.
-import { getSong, getAnnotationsDotKeys, getAnnotation, getVerse } from 'helpers/album-view-helper'
+import { getSong, getAnnotationsDotKeys, getAnnotation, getVerse } from './album-view-helper'
 import { WINDOW_STORAGE, LYRIC_TEXT_KEYS } from './constants'
 
 export default {

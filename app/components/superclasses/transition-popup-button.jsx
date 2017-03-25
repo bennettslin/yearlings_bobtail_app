@@ -2,7 +2,7 @@ import React from 'react'
 
 import { CLOSE_POPUP_BUTTON,
          PREVIOUS_POPUP_BUTTON,
-         NEXT_POPUP_BUTTON } from 'helpers/constants'
+         NEXT_POPUP_BUTTON } from '../../helpers/constants'
 
 const TransitionPopupButton = ({
 

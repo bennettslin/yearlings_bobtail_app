@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
 import LyricsUnit from './lyrics-unit'
-import { getPropsAreSame } from 'helpers/general-helper'
+import { getPropsAreSame } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *

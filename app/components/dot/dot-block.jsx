@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import DotButton from './dot-button'
-import { ALL_DOT_KEYS, ALL_DOT_KEYS_DOT_STANZA_ORDER } from 'helpers/constants'
+import { ALL_DOT_KEYS, ALL_DOT_KEYS_DOT_STANZA_ORDER } from '../../helpers/constants'
 
 const defaultProps = {
     selectedDotKeys: {},

@@ -15,7 +15,7 @@ import { selectAdminIndex,
          selectScoreIndex,
          selectNavIndex,
          selectDotsIndex,
-         accessOn } from 'redux/actions'
+         accessOn } from '../redux/actions'
 import EventManager from './event-manager'
 import { SHOWN,
          HIDDEN,
@@ -24,11 +24,11 @@ import { SHOWN,
          AUDIO_OPTIONS,
 
          CONTINUE,
-         PAUSE_AT_END } from 'helpers/constants'
-import { getSong, getIsLogue, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from 'helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from 'helpers/responsive-helper'
-import { getPropsAreSame } from 'helpers/general-helper'
-import LogHelper from 'helpers/log-helper'
+         PAUSE_AT_END } from '../helpers/constants'
+import { getSong, getIsLogue, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from '../helpers/album-view-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
+import { getPropsAreSame } from '../helpers/general-helper'
+import LogHelper from '../helpers/log-helper'
 
 /*********
  * STORE *
