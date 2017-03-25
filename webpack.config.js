@@ -21,7 +21,7 @@ const webpack = require('webpack'),
         less: path.resolve(__dirname, 'app/less')
     };
 
-module.exports = {
+const commonConfig = {
 
     resolve: {
         // import from files without specifying extensions.
@@ -49,31 +49,6 @@ module.exports = {
         'react/addons': true,
         'react/lib/ExecutionEnvironment': true,
         'react/lib/ReactContext': true
-    },
-
-    devServer: {
-        contentBase: PATHS.build,
-
-        /**
-         * Enable history API fallback so HTML5 History API based
-         * routing works. This is a good default that will come
-         * in handy in more complicated setups.
-         */
-        historyApiFallback: true,
-        hot: true,
-        inline: true,
-        progress: true,
-
-        // Display only errors to reduce the amount of output.
-        stats: 'errors-only',
-
-        /**
-         * Parse host and port from env so this is easy to customize.
-         * 0.0.0.0 is available to all network devices, unlike default
-         * localhost.
-         */
-        host: process.env.HOST,
-        port: 1337 || process.env.PORT
     },
 
     plugins: process.env.NODE_ENV !== 'production' ? [
@@ -110,4 +85,40 @@ module.exports = {
             }
         ]
     }
+}
+
+const productionConfig = () => commonConfig;
+const developmentConfig = () => {
+    const config = {
+        devServer: {
+            contentBase: PATHS.build,
+
+            /**
+             * Enable history API fallback so HTML5 History API based
+             * routing works. This is a good default that will come
+             * in handy in more complicated setups.
+             */
+            historyApiFallback: true,
+            hot: true,
+            inline: true,
+            progress: true,
+
+            // Display only errors to reduce the amount of output.
+            stats: 'errors-only',
+
+            /**
+             * Parse host and port from env so this is easy to customize.
+             * 0.0.0.0 is available to all network devices, unlike default
+             * localhost.
+             */
+            host: process.env.HOST,
+            port: 1337 || process.env.PORT
+        },
+    }
+
+    return Object.assign({}, commonConfig, config)
+}
+
+module.exports = (env) => {
+    return env === 'production' ? productionConfig() : developmentConfig();
 }
