@@ -220,7 +220,8 @@ export const getAnnotationIndexForVerseIndex = ({
     state,
     verseIndex,
 
-    // Search backwards by default. direction = -1,
+    // Search backwards by default.
+    direction = -1,
     lyricColumnIndex = props.selectedLyricColumnIndex
 }) => {
     /**
