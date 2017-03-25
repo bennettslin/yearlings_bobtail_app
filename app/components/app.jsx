@@ -251,6 +251,7 @@ class App extends Component {
         // If no argument passed, then just toggle between on and off.
 
         this.props.selectAdminIndex(selectedAdminIndex)
+        return true
     }
 
     /**************
@@ -305,14 +306,15 @@ class App extends Component {
 
          // Select first song if play button in logue is toggled on.
          if (getIsLogue(this.props) && isPlaying) {
-
-             // FIXME: Handle this!
-             this.selectSong(undefined, 1)
+             this.selectSong({
+                 selectedSongIndex: 1
+             })
          }
 
          this.setState({
              isPlaying
          })
+         return true
      }
 
     selectAudioOption(selectedAudioOptionIndex =
@@ -320,6 +322,7 @@ class App extends Component {
         // If no argument passed, then just toggle amongst audio options.
 
         this.props.selectAudioOptionIndex(selectedAudioOptionIndex)
+        return true
     }
 
     selectTime(selectedTimePlayed = 0) {
@@ -360,6 +363,7 @@ class App extends Component {
         }
 
         this.props.selectDotsIndex(selectedDotsIndex)
+        return true
     }
 
     /*********
@@ -378,6 +382,7 @@ class App extends Component {
         this.setState({
             isLyricExpanded
         })
+        return true
     }
 
     scrollLyricSection({
@@ -449,6 +454,7 @@ class App extends Component {
         this.setState({
             accessedAnnotationIndex
         })
+        return true
     }
 
     /*******
@@ -473,6 +479,7 @@ class App extends Component {
         }
 
         this.props.selectNavIndex(selectedNavIndex)
+        return true
     }
 
     selectBookColumn({
@@ -513,7 +520,7 @@ class App extends Component {
             selectedSongIndex = this.props.selectedSongIndex + direction
 
             if (selectedSongIndex < 0 || selectedSongIndex >= this.props.songs.length) {
-                return
+                return false
             }
         }
 
@@ -552,6 +559,7 @@ class App extends Component {
 
         this.accessSong(selectedSongIndex)
         this.props.selectSongIndex(selectedSongIndex)
+        return true
     }
 
     /************
@@ -596,6 +604,7 @@ class App extends Component {
         if (selectedOverviewIndex !== this.props.selectedOverviewIndex) {
             this.props.selectOverviewIndex(selectedOverviewIndex)
         }
+        return true
     }
 
     /*********
@@ -611,6 +620,7 @@ class App extends Component {
         }
 
         this.props.selectScoreIndex(selectedScoreIndex)
+        return true
     }
 
     /********
@@ -622,6 +632,7 @@ class App extends Component {
         // If no argument passed, then just toggle amongst tips options.
 
         this.props.selectTipsIndex(selectedTipsIndex)
+        return true
     }
 
     /*********
@@ -713,6 +724,7 @@ class App extends Component {
 
         let { interactivatedVerseIndex } = this.state
 
+        // Ensure modulo.
         if (direction === -1) {
             direction = timesLength - 1
         }
@@ -729,6 +741,7 @@ class App extends Component {
         this.setState({
             interactivatedVerseIndex
         })
+        return true
     }
 
     selectVerseElement(selectedVerseElement) {

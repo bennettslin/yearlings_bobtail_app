@@ -121,11 +121,14 @@ class EventManager extends Component {
     }
 
     handleVerseDirectionAccess(direction) {
-        // TODO: Scroll interactivated verse?
-        this._closeSections({
-            exemptInteractivatedVerse: true
-        })
-        this.props.interactivateVerseDirection(direction)
+        const verseInteractivated = this.props.interactivateVerseDirection(direction)
+        if (verseInteractivated) {
+            // TODO: Scroll interactivated verse?
+            this._closeSections({
+                exemptInteractivatedVerse: true
+            })
+        }
+        return verseInteractivated
     }
 
     /*********
@@ -133,8 +136,11 @@ class EventManager extends Component {
      *********/
 
     handleAdminToggle(e) {
-        this._stopPropagation(e)
-        this.props.toggleAdmin()
+        const adminToggled = this.props.toggleAdmin()
+        if (adminToggled) {
+            this._stopPropagation(e)
+        }
+        return adminToggled
     }
 
     /**************
@@ -183,27 +189,39 @@ class EventManager extends Component {
      *********/
 
     handleAudioPlay(e) {
-        this._stopPropagation(e)
-        this.props.togglePlay()
+        const playToggled = this.props.togglePlay()
+        if (playToggled) {
+            this._stopPropagation(e)
+        }
+        return playToggled
     }
 
     handleAudioPreviousSong(e) {
-        this._stopPropagation(e)
-        this.props.selectSong({
+        const songSelected = this.props.selectSong({
             direction: -1
         })
+        if (songSelected) {
+            this._stopPropagation(e)
+        }
+        return songSelected
     }
 
     handleAudioNextSong(e) {
-        this._stopPropagation(e)
-        this.props.selectSong({
+        const songSelected = this.props.selectSong({
             direction: 1
         })
+        if (songSelected) {
+            this._stopPropagation(e)
+        }
+        return songSelected
     }
 
     handleAudioOptionsToggle(e) {
-        this._stopPropagation(e)
-        this.props.selectAudioOption()
+        const optionSelected = this.props.selectAudioOption()
+        if (optionSelected) {
+            this._stopPropagation(e)
+        }
+        return optionSelected
     }
 
     /****************
@@ -236,11 +254,14 @@ class EventManager extends Component {
      ********/
 
     handleDotsSectionToggle(e) {
-        this._stopPropagation(e)
-        this._closeSections({
-            exemptDots: true
-        })
-        this.props.selectDotsExpand()
+        const dotsToggled = this.props.selectDotsExpand()
+        if (dotsToggled) {
+            this._stopPropagation(e)
+            this._closeSections({
+                exemptDots: true
+            })
+        }
+        return dotsToggled
     }
 
     /*********
@@ -248,11 +269,14 @@ class EventManager extends Component {
      *********/
 
     handleLyricSectionExpand(e) {
-        this._stopPropagation(e)
-        this._closeSections({
-            exemptLyric: true
-        })
-        this.props.selectLyricExpand()
+        const lyricsToggled = this.props.selectLyricExpand()
+        if (lyricsToggled) {
+            this._stopPropagation(e)
+            this._closeSections({
+                exemptLyric: true
+            })
+        }
+        return lyricsToggled
     }
 
     handleLyricSectionScroll({
@@ -267,8 +291,11 @@ class EventManager extends Component {
     }
 
     handleLyricColumnSelect(e) {
-        this._stopPropagation(e)
-        this.props.selectLyricColumn({})
+        const columnSelected = this.props.selectLyricColumn({})
+        if (columnSelected) {
+            this._stopPropagation(e)
+        }
+        return columnSelected
     }
 
     /**********
@@ -303,11 +330,14 @@ class EventManager extends Component {
      *******/
 
     handleNavExpand(e) {
-        this._stopPropagation(e)
-        this._closeSections({
-            exemptNav: true
-        })
-        this.props.selectNavExpand()
+        const navExpanded = this.props.selectNavExpand()
+        if (navExpanded) {
+            this._stopPropagation(e)
+            this._closeSections({
+                exemptNav: true
+            })
+        }
+        return navExpanded
     }
 
     handleNavSongSelect(e, selectedSongIndex) {
@@ -328,20 +358,22 @@ class EventManager extends Component {
      ************/
 
     handleOverviewToggle(e) {
-        this._stopPropagation(e)
-
         /**
          * If from click, alternate between shown and disabled. If from keydown,
          * cycle through all three options.
          */
-        const clickToggle = e.type === 'click'
+        const clickToggle = e.type === 'click',
+            overviewToggled = this.props.selectOverview({
+                clickToggle
+            })
 
-        this._closeSections({
-            exemptOverview: true
-        })
-        this.props.selectOverview({
-            clickToggle
-        })
+        if (overviewToggled) {
+            this._stopPropagation(e)
+            this._closeSections({
+                exemptOverview: true
+            })
+        }
+        return overviewToggled
     }
 
     /*********
@@ -349,8 +381,11 @@ class EventManager extends Component {
      *********/
 
     handleScoreToggle(e) {
-        this._stopPropagation(e)
-        this.props.selectScore()
+        const scoreToggled = this.props.selectScore()
+        if (scoreToggled) {
+            this._stopPropagation(e)
+        }
+        return scoreToggled
     }
 
     /********
@@ -358,8 +393,11 @@ class EventManager extends Component {
      ********/
 
     handleTipsToggle(e) {
-        this._stopPropagation(e)
-        this.props.selectTips()
+        const tipsToggled = this.props.selectTips()
+        if (tipsToggled) {
+            this._stopPropagation(e)
+        }
+        return tipsToggled
     }
 
     /*********
@@ -367,10 +405,13 @@ class EventManager extends Component {
      *********/
 
     handleTitleSelect(e) {
-        this._stopPropagation(e)
-        this.props.selectSong({
+        const titleSelected = this.props.selectSong({
             selectedSongIndex: 0
         })
+        if (titleSelected) {
+            this._stopPropagation(e)
+        }
+        return titleSelected
     }
 
     /*********

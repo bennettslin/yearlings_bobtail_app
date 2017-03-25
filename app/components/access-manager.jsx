@@ -72,38 +72,27 @@ class AccessManager extends Component {
             keyName = keyName.toLowerCase()
         }
 
-        // If turning on access, also access annotation index...
-        let doAccessAnnotationIndex = !this.props.accessedOn,
-            handleRegisteredKey = true
-
         // Handle escape key.
         if (keyName === ESCAPE) {
             this._handleEscape(e)
 
         } else {
-            if (keyName.indexOf('Arrow') > -1 || keyName === ENTER) {
-                const { annotationIndexWasAccessed,
-                        keyWasRegistered } = this._routeNavigation(e, keyName)
+            const isNavKey = keyName.indexOf('Arrow') > -1 || keyName === ENTER,
+                { annotationIndexWasAccessed,
+                  keyWasRegistered } = isNavKey ?
+                    this._routeNavigation(e, keyName) :
+                    this._handleLetterKey(e, keyName)
 
-                // But cancel annotation index access if we've just done so.
-                doAccessAnnotationIndex = doAccessAnnotationIndex && !annotationIndexWasAccessed
-
-                handleRegisteredKey = keyWasRegistered
-
-            } else {
-                const { annotationIndexWasAccessed,
-                  keyWasRegistered } = this._handleLetterKey(e, keyName)
-
-                doAccessAnnotationIndex = doAccessAnnotationIndex && !annotationIndexWasAccessed
-
-                handleRegisteredKey = keyWasRegistered
-            }
-
-            if (doAccessAnnotationIndex) {
+            /**
+             * If just now turning on access, also access annotation index,
+             * unless we've already done so.
+             */
+            if (!this.props.accessedOn && !annotationIndexWasAccessed) {
                 this._accessAnnotationWithoutDirection(this.props.selectedVerseIndex)
             }
 
-            if (handleRegisteredKey) {
+            // Prevent default for registered key.
+            if (keyWasRegistered) {
                 e.preventDefault()
             }
 
@@ -329,56 +318,54 @@ class AccessManager extends Component {
 
     _handleLetterKey(e, keyName) {
         let annotationIndexWasAccessed = false,
-
-            // TODO: Setting to true for now, but this should really be set by each case.
-            keyWasRegistered = true
+            keyWasRegistered
 
         switch (keyName) {
             case ADMIN_TOGGLE_KEY:
-                this.props.handleAdminToggle(e)
+                keyWasRegistered = this.props.handleAdminToggle(e)
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
-                this.props.handleAudioOptionsToggle(e)
+                keyWasRegistered = this.props.handleAudioOptionsToggle(e)
                 break
             case AUDIO_PLAY_KEY:
-                this.props.handleAudioPlay(e)
+                keyWasRegistered = this.props.handleAudioPlay(e)
                 break
             case AUDIO_PREVIOUS_SONG_KEY:
-                this.props.handleAudioPreviousSong(e)
+                keyWasRegistered = this.props.handleAudioPreviousSong(e)
                 break
             case AUDIO_NEXT_SONG_KEY:
-                this.props.handleAudioNextSong(e)
+                keyWasRegistered = this.props.handleAudioNextSong(e)
                 break
             case AUDIO_REWIND_KEY:
-                this.props.handleVerseDirectionAccess(-1)
+                keyWasRegistered = this.props.handleVerseDirectionAccess(-1)
                 break
             case AUDIO_FAST_FORWARD_KEY:
-                this.props.handleVerseDirectionAccess(1)
+                keyWasRegistered = this.props.handleVerseDirectionAccess(1)
                 break
             case OVERVIEW_TOGGLE_KEY:
-                this.props.handleOverviewToggle(e)
+                keyWasRegistered = this.props.handleOverviewToggle(e)
                 break
             case SCORE_TOGGLE_KEY:
-                this.props.handleScoreToggle(e)
+                keyWasRegistered = this.props.handleScoreToggle(e)
                 break
             case TIPS_TOGGLE_KEY:
-                this.props.handleTipsToggle(e)
+                keyWasRegistered = this.props.handleTipsToggle(e)
                 break
             case LYRIC_COLUMN_TOGGLE_KEY:
-                this.props.handleLyricColumnSelect(e)
-                annotationIndexWasAccessed = true
+                keyWasRegistered = this.props.handleLyricColumnSelect(e)
+                annotationIndexWasAccessed = keyWasRegistered
                 break
             case LYRIC_SECTION_EXPAND_KEY:
-                this.props.handleLyricSectionExpand(e)
+                keyWasRegistered = this.props.handleLyricSectionExpand(e)
                 break
             case TITLE_SELECT_KEY:
-                this.props.handleTitleSelect(e)
+                keyWasRegistered = this.props.handleTitleSelect(e)
                 break
             case DOTS_SECTION_ACCESS_KEY:
-                this.props.handleDotsSectionToggle(e)
+                keyWasRegistered = this.props.handleDotsSectionToggle(e)
                 break
             case NAV_SECTION_ACCESS_KEY:
-                this.props.handleNavExpand(e)
+                keyWasRegistered = this.props.handleNavExpand(e)
                 break
             default:
                 keyWasRegistered = false

@@ -209,7 +209,6 @@ export const getAnnotationIndexForDirection = ({
     return currentAnnotationIndex
 }
 
-
 export const getAnnotationIndexForVerseIndex = ({
     props,
 
