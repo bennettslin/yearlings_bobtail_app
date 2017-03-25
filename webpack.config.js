@@ -64,7 +64,11 @@ const commonConfig = {
             {
                 // Set up jsx. This accepts js too, thanks to RegExp.
                 test: /\.jsx?$/,
-                loader: 'babel-loader?presets[]=es2015&presets[]=react',
+                enforce: 'pre',
+                loaders: [
+                    'babel-loader?presets[]=es2015&presets[]=react',
+                    'eslint-loader'
+                ],
                 /**
                  * Parse only app files! Without this it will go through the
                  * entire project, which in addition to being slow, will most
@@ -101,6 +105,13 @@ const developmentConfig = () => {
             historyApiFallback: true,
             hot: true,
             inline: true,
+
+            // Capture errors in overlay.
+            overlay: {
+                errors: true,
+                warnings: true
+            },
+
             progress: true,
 
             // Display only errors to reduce the amount of output.
