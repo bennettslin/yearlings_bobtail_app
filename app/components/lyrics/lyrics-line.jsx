@@ -1,7 +1,4 @@
-/* eslint react/no-find-dom-node: 1 */
-
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import TextBlock from '../text/text-block'
 import { TITLE, CENTRE } from '../../helpers/constants'
 
@@ -9,8 +6,6 @@ import { TITLE, CENTRE } from '../../helpers/constants'
 class LyricsLine extends Component {
 
     componentDidMount() {
-        this.myChild = ReactDOM.findDOMNode(this.myReactChild)
-
         /**
          * FIXME: Setting timeout of zero seems to work! Keep debugging code in
          * place for now. Rip it out once confident that this is indeed the
@@ -123,11 +118,12 @@ class LyricsLine extends Component {
                 ref={(node) => (this.myParent = node)}
                 className={`line ${columnKey !== TITLE ? columnKey : ''}`}
             >
-                {/* How to have a child pass its ref: https://github.com/yannickcr/eslint-plugin-react/issues/678 */}
-                <TextBlock {...other}
-                    ref={(node) => (this.myReactChild = node)}
-                    isLyric={true}
-                />
+                <span ref={(node) => (this.myChild = node)}>
+                    <TextBlock {...other}
+                        ref={(node) => (this.myReactChild = node)}
+                        isLyric={true}
+                    />
+                </span>
             </div>
         )
     }

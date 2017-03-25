@@ -1,4 +1,4 @@
-/* eslint no-console: 1 */
+/* eslint no-console: 0 */
 import React, { Component } from 'react'
 import AccessManager from './access-manager'
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
