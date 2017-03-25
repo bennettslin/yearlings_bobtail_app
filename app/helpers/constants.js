@@ -340,6 +340,8 @@ module.exports = {
     ESCAPE: 'Escape',
     SPACE: ' ',
     TAB: 'Tab',
+    PAGE_UP: 'PageUp',
+    PAGE_DOWN: 'PageDown',
 
     OVERVIEW_TOGGLE_KEY: 'b',
     ADMIN_TOGGLE_KEY: 'm',

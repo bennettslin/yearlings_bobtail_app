@@ -12,6 +12,8 @@ import { CAPS_LOCK,
          ARROW_RIGHT,
          ARROW_UP,
          ARROW_DOWN,
+         PAGE_UP,
+         PAGE_DOWN,
          ENTER,
 
          OVERVIEW_TOGGLE_KEY,
@@ -63,7 +65,7 @@ class AccessManager extends Component {
         }
 
         // Do not handle if any modifier keys are present, or if it's an exempt key.
-        if (e && (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE)) {
+        if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE || keyName === PAGE_UP || keyName === PAGE_DOWN) {
             return
         }
 
@@ -96,8 +98,13 @@ class AccessManager extends Component {
                 e.preventDefault()
             }
 
-            // Turn access on.
-            this.props.handleAccessToggle(true)
+            /**
+             * Turn access on if key was registered, or if unregistered key was
+             * not arrow up or down.
+             */
+            if (keyWasRegistered || (keyName !== ARROW_UP && keyName !== ARROW_DOWN)) {
+                this.props.handleAccessToggle(true)
+            }
         }
     }
 
@@ -149,8 +156,7 @@ class AccessManager extends Component {
     _handleAnnotationNavigation(e, keyName) {
         const { props } = this
 
-        let { accessedPopupAnchorIndex } = props,
-            direction
+        let { accessedPopupAnchorIndex } = props
 
         switch (keyName) {
             case ARROW_LEFT:
@@ -160,10 +166,14 @@ class AccessManager extends Component {
                 this.props.handleAnnotationNext(e)
                 break
             case ARROW_UP:
-                direction = -1
-                break
             case ARROW_DOWN:
-                direction = 1
+                const direction = keyName === ARROW_UP ? -1 : 1
+                accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(
+                    props,
+                    accessedPopupAnchorIndex,
+                    direction
+                )
+                this.props.handlePopupAnchorAccess(accessedPopupAnchorIndex)
                 break
             case ENTER: {
                 const annotation = getAnnotation(props)
@@ -201,13 +211,6 @@ class AccessManager extends Component {
                 return false
         }
 
-        accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(
-            props,
-            accessedPopupAnchorIndex,
-            direction
-        )
-
-        this.props.handlePopupAnchorAccess(accessedPopupAnchorIndex)
         return true
     }
 

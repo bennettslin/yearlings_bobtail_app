@@ -19,11 +19,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Pressing enter in annotation sometimes causes bugs?`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     // Song selection timeout.
     {
@@ -1590,6 +1585,11 @@ module.exports = [
     },
     {
         taskName: `Key press should not register at all if returned false, for example when l is pressed when lyric is not expandable.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Pressing enter in annotation sometimes causes bugs?`,
         workedHours: 2,
         neededHours: 2
     }

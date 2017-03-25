@@ -63,6 +63,11 @@ class EventManager extends Component {
         }
     }
 
+    componentDidMount() {
+        // Focus lyric section when app is mounted.
+        this.myLyricSection && this.myLyricSection.focus()
+    }
+
     /********
      * BODY *
      ********/

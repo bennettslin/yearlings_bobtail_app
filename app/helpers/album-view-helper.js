@@ -357,7 +357,11 @@ export const getVerseIndexForTime = (props, time) => {
     }
 }
 
-export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, direction) => {
+export const getPopupAnchorIndexForDirection = (
+    props,
+    initialPopupAnchorIndex = 1,
+    direction
+) => {
     const annotation = getAnnotation(props),
         selectedDotKeys = props.selectedDotKeys
 
@@ -370,7 +374,7 @@ export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, directi
             return popupAnchorsLength
         }
 
-        let returnIndex = currentIndex
+        let returnIndex = initialPopupAnchorIndex
 
         // Skip over deselected popup anchors.
         do {
@@ -391,13 +395,13 @@ export const getPopupAnchorIndexForDirection = (props, currentIndex = 1, directi
      } while ((
             (typeof popupAnchors[returnIndex - 1] === 'string' && !selectedDotKeys[REFERENCE]) ||
             (typeof popupAnchors[returnIndex - 1] === 'object' && !selectedDotKeys[PORTAL])
-        ) && (direction === 0 || currentIndex !== returnIndex))
+        ) && (direction === 0 || initialPopupAnchorIndex !== returnIndex))
 
         return returnIndex
     }
 
 
-    return currentIndex
+    return initialPopupAnchorIndex
 }
 
 export const getTasks = (selectedSong, tasks) => {
