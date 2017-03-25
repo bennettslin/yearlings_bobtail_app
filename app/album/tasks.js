@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Focus breaks on admin.`,
+        taskName: `Lyric ear and expand buttons should show strategically, so that we don't save state on each scroll.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: `Refocus app strategically, maybe in stopPropagation.`,
@@ -1592,5 +1592,10 @@ module.exports = [
         taskName: `Pressing enter in annotation sometimes causes bugs?`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Focus breaks on admin.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

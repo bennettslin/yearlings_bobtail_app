@@ -15,6 +15,7 @@ class EventManager extends Component {
         this.handleVerseDirectionAccess = this.handleVerseDirectionAccess.bind(this)
 
         this.handleBodyClick = this.handleBodyClick.bind(this)
+        this._handleBodyFocus = this._handleBodyFocus.bind(this)
         this.handleBodyTouchMove = this.handleBodyTouchMove.bind(this)
         this.handleBodyTouchEnd = this.handleBodyTouchEnd.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
@@ -65,7 +66,7 @@ class EventManager extends Component {
 
     componentDidMount() {
         // Focus lyric section when app is mounted.
-        this.myLyricSection && this.myLyricSection.focus()
+        this._handleBodyFocus()
     }
 
     /********
@@ -80,7 +81,7 @@ class EventManager extends Component {
 
         // Return focus to lyric section so it can have scroll access.
         // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-        this.myLyricSection && this.myLyricSection.focus()
+        this._handleBodyFocus()
     }
 
     handlePopupContainerClick(e) {
@@ -96,6 +97,14 @@ class EventManager extends Component {
 
         } else if (selectedWikiIndex) {
             this.myWikiSection && this.myWikiSection.focus()
+        }
+    }
+
+    _handleBodyFocus() {
+        if (this.props.domProps.selectedAdminIndex) {
+            this.myDomManager && this.myDomManager.focus()
+        } else {
+            this.myLyricSection && this.myLyricSection.focus()
         }
     }
 
@@ -580,6 +589,7 @@ class EventManager extends Component {
 
         return (
             <AccessManager {...domProps} {...domState}
+                domManagerRef={node => this.myDomManager = node}
                 lyricSectionRef={node => this.myLyricSection = node}
                 scoreSectionRef={node => this.myScoreSection = node}
                 wikiSectionRef={node => this.myWikiSection = node}

@@ -75,6 +75,7 @@ class DomManager extends Component {
 
         return (
             <div
+                ref={this.props.domManagerRef}
                 className={classnames(
                     'dom-manager',
                     deviceClassName,
@@ -88,6 +89,7 @@ class DomManager extends Component {
                 onMouseUp={handleBodyTouchEnd}
                 onMouseLeave={handleBodyTouchEnd}
                 onKeyDown={handleKeyDownPress}
+                tabIndex="-1"
             >
                 <AdminToggle
                     selectedAdminIndex={selectedAdminIndex}
