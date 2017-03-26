@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Remove vendor prefixes.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Lyric ear and expand buttons should show strategically, so that we don't save state on each scroll.`,
         workedHours: 0,
         neededHours: 2

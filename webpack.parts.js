@@ -77,6 +77,16 @@ exports.extractStyles = ({ include }) => {
                     use: plugin.extract({
                         use: [
                             'css-loader',
+
+                            // Add vendor prefixes after compiling from less.
+                            {
+                                loader: 'postcss-loader',
+                                options: {
+                                    plugins: () => ([
+                                        require('autoprefixer')
+                                    ])
+                                }
+                            },
                             'less-loader'
                         ],
                         fallback: 'style-loader'
@@ -88,14 +98,7 @@ exports.extractStyles = ({ include }) => {
     }
 }
 
-// exports.autoprefixStyles = () => {
-//     loader: 'postcss-loader',
-//     options: {
-//         plugins: () => ([
-//             require('autoprefixer')
-//         ])
-//     }
-// }
+// exports.autoprefixStyles = () => ()
 
 exports.loadUrls = ({ include }) => ({
     module: {
