@@ -27,7 +27,7 @@ exports.devServer = ({ host, port } = {}) => ({
 
 exports.loadJavaScript = ({ include }) => ({
     module: {
-        loaders: [
+        rules: [
             {
                 include,
 
@@ -45,30 +45,34 @@ exports.loadJavaScript = ({ include }) => ({
 
 exports.loadStyles = ({ include }) => ({
     module: {
-        loaders: [
+        rules: [
             {
                 include,
 
                 // http://survivejs.com/webpack/loading-assets/loading-styles/
                 test: /\.less$/,
-                loader: 'style!css!less'
+                loaders: [
+                    'style-loader',
+                    'css-loader',
+                    'less-loader'
+                ]
             }
         ]
     }
 })
 
-exports.autoprefixStyles = () => {
-    loader: 'postcss-loader',
-    options: {
-        plugins: () => ([
-            require('autoprefixer')
-        ])
-    }
-}
+// exports.autoprefixStyles = () => {
+//     loader: 'postcss-loader',
+//     options: {
+//         plugins: () => ([
+//             require('autoprefixer')
+//         ])
+//     }
+// }
 
 exports.loadUrls = ({ include }) => ({
     module: {
-        loaders: [
+        rules: [
             {
                 include,
                 test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|mp3|pdf)$/,

@@ -58,7 +58,7 @@ const commonConfig = merge([
 
         resolve: {
             // import from files without specifying extensions.
-            extensions: ['', '.js', '.jsx', '.less', '.mp3', '.pdf']
+            extensions: ['.js', '.jsx', '.less', '.mp3', '.pdf']
         }
     },
     parts.loadJavaScript({
