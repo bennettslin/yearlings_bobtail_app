@@ -4,25 +4,15 @@
     &.score {
         z-index: @popup-content-z-index;
         opacity: 0;
-        .transition(~"opacity 0.15s ease");
+        transition: opacity 0.15s;
 
         &.visible {
             opacity: 1;
-            .transition(~"opacity 0.25s ease");
+            transition: opacity 0.25s;
         }
 
         &.not-displayed {
             z-index: 0;
         }
     }
-
-    // &.wiki {
-    //     transform: scale(1.3);
-    //     .transition(~"opacity 0.15s ease, transform 0.15s ease");
-    //
-    //     &.visible {
-    //         transform: scale(1);
-    //         .transition(~"opacity 0.25s ease, transform 0.25s ease");
-    //     }
-    // }
 }

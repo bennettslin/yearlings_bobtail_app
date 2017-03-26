@@ -14,7 +14,7 @@
 
     .dot {
         &.animatable {
-            .transition(~"width 0.15s ease, transform 0.15s ease");
+            transition: width 0.15s, transform 0.15s;
 
             &.is-present {
                 transform: scale(1);
@@ -55,7 +55,7 @@
                 &.uninteracted {
 
                     .tooltip-container {
-                        .transition(~"bottom 0s ease 0.25s, visibility 0s ease 0.25s");
+                        transition: bottom 0s 0.25s, visibility 0s 0.25s;
                         bottom: 0;
                         visibility: hidden;
                     }
@@ -162,7 +162,7 @@
     text-align: center;
 
     opacity: 0;
-    .transition(opacity 0.2s ease);
+    transition: opacity 0.2s;
 }
 
 .dot-text-container:hover + .dot .dot-description, .dot-description.interactivated {
@@ -192,7 +192,7 @@
 }
 
 .dot-text-interactable {
-    .transition(box-shadow 0.2s ease);
+    transition: box-shadow 0.2s;
 
     &.interactivated {
         box-shadow: inset 0 0 5px @darker-box-shadow-colour;
@@ -229,7 +229,7 @@
 
 .dot {
     border-radius: 50%;
-    .transition(background-color 0.15s ease);
+    transition: background-color 0.15s;
 
     // TODO: Key styling.
     &.songwriting { background-color: @songwriting-dot-colour; }

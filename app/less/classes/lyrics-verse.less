@@ -8,7 +8,7 @@
         padding-left: @verse-padding;
         padding-right: @verse-padding;
 
-        .transition(~"color 0.15s ease, background-color 0.15s ease");
+        transition: color 0.15s, background-color 0.15s;
 
         &:first-child {
             padding-top: @verse-padding;
@@ -43,7 +43,7 @@
                 .lyrics-audio-button {
                     opacity: 1;
                     font-size: 1em;
-                    animation: fontSnapback 0.16s ease;
+                    animation: fontSnapback 0.16s;
                 }
             }
 
@@ -59,7 +59,7 @@
         height: 100%;
         width: @lyrics-audio-button-block-width;
 
-        .transition(left 0.15s ease);
+        transition: left 0.15s;
 
         // Either button or icon.
         .lyrics-audio-button-child {
@@ -71,7 +71,7 @@
             justify-content: center;
             align-items: center;
 
-            .transition(~"opacity 0.2s ease, font 0.2s ease");
+            transition: opacity 0.2s, font 0.2s;
         }
 
         .lyrics-audio-button {
@@ -94,7 +94,7 @@
 
     // Underline anchor tag.
     .underline-bar {
-        .transition(background-color 0.15s ease);
+        transition: background-color 0.15s;
 
         position: absolute;
         width: 100%;
@@ -297,13 +297,13 @@
     &.above {
         top: -50px;
         margin-top: @verse-bar-margin;
-        .transition(~"top 0.15s ease, transform 0.15s ease");
+        transition: top 0.15s, transform 0.15s;
     }
 
     &.below {
         bottom: -50px;
         margin-bottom: @verse-bar-margin;
-        .transition(~"bottom 0.15s ease, transform 0.15s ease");
+        transition: bottom 0.15s, transform 0.15s;
 
         .verse-bar {
             box-shadow: 0 0 12px 5px @darker-box-shadow-colour;
