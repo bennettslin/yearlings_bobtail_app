@@ -1,6 +1,8 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin'),
     CleanPlugin = require('clean-webpack-plugin'),
-    BabiliPlugin = require('babili-webpack-plugin')
+    BabiliPlugin = require('babili-webpack-plugin'),
+    OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
+    cssnano = require('cssnano')
 
 exports.devServer = ({ host, port } = {}) => ({
     devServer: {
@@ -105,6 +107,16 @@ exports.extractStyles = ({ include }) => {
         plugins: [ plugin ]
     }
 }
+
+exports.minifyStyles = ({ options }) => ({
+    plugins: [
+        new OptimizeCSSAssetsPlugin({
+            cssProcessor: cssnano,
+            cssProcessorOptions: options,
+            canPrint: false
+        })
+    ]
+})
 
 exports.generateSourceMaps = ({ type }) => ({
     devtool: type

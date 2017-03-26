@@ -83,7 +83,16 @@ const productionConfig = merge([
     //     }
     // },
     parts.clean(PATHS.build),
-    parts.minifyJavaScript(),
+    parts.minifyJavaScript({ useSourceMap: true }),
+    parts.minifyStyles({
+        options: {
+            discardComments: {
+                removeAll: true,
+            },
+            // Avoid potentially unsafe transformations.
+            safe: true
+        }
+    }),
     parts.generateSourceMaps({ type: 'source-map' }),
     parts.extractStyles({
         include: PATHS.less
