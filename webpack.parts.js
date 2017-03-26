@@ -1,4 +1,6 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    CleanPlugin = require('clean-webpack-plugin'),
+    BabiliPlugin = require('babili-webpack-plugin')
 
 exports.devServer = ({ host, port } = {}) => ({
     devServer: {
@@ -41,6 +43,12 @@ exports.loadJavaScript = ({ include }) => ({
             }
         ]
     }
+})
+
+exports.minifyJavaScript = () => ({
+    plugins: [
+        new BabiliPlugin()
+    ]
 })
 
 exports.loadStyles = ({ include }) => ({
@@ -112,4 +120,10 @@ exports.loadUrls = ({ include }) => ({
             }
         ]
     }
+})
+
+exports.clean = (path) => ({
+    plugins: [
+        new CleanPlugin([path])
+    ]
 })

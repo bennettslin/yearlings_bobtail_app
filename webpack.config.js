@@ -74,8 +74,17 @@ const commonConfig = merge([
 ])
 
 const productionConfig = merge([
+    // {
+    //     // Establish performance budget.
+    //     performance: {
+    //         hints: 'warning',
+    //         maxEntrypointSize: 100000,
+    //         maxAssetSize: 450000
+    //     }
+    // },
+    parts.clean(PATHS.build),
+    parts.minifyJavaScript(),
     parts.generateSourceMaps({ type: 'source-map' }),
-
     parts.extractStyles({
         include: PATHS.less
     })
