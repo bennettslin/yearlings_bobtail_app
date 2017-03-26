@@ -1,6 +1,5 @@
-exports.devServer = ({ contentBase, host, port } = {}) => ({
+exports.devServer = ({ host, port } = {}) => ({
     devServer: {
-        contentBase,
         host,
         port,
 

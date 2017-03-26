@@ -14,13 +14,15 @@
  */
 
 const webpack = require('webpack'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
     path = require('path'),
     merge = require('webpack-merge'),
     parts = require('./webpack.parts'),
     PATHS = {
         app: path.resolve(__dirname, 'app'),
         build: path.resolve(__dirname, 'build'),
-        less: path.resolve(__dirname, 'app/less')
+        less: path.resolve(__dirname, 'app/less'),
+        template: path.resolve(__dirname, 'app/index.html')
     };
 
 const commonConfig = merge([
@@ -39,7 +41,15 @@ const commonConfig = merge([
         },
 
         plugins: process.env.NODE_ENV !== 'production' ? [
-            new webpack.HotModuleReplacementPlugin()
+            new webpack.HotModuleReplacementPlugin(),
+
+            // https://www.codecademy.com/articles/react-setup-iv
+            new HtmlWebpackPlugin({
+                template: PATHS.template,
+                filename: 'index.html',
+                title: 'Yearling\'s Bobtail',
+                inject: 'body'
+            })
         ] : [
             new webpack.optimize.DedupePlugin(),
             new webpack.optimize.OccurrenceOrderPlugin(),
@@ -70,8 +80,6 @@ const commonConfig = merge([
 const productionConfig = merge([]);
 const developmentConfig = merge([
     parts.devServer({
-        contentBase: PATHS.build,
-
         /**
          * Parse host and port from env so this is easy to customize.
          * 0.0.0.0 is available to all network devices, unlike default
