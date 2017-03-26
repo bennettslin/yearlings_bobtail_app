@@ -18,8 +18,6 @@ exports.devServer = ({ host, port } = {}) => ({
             warnings: true
         },
 
-        progress: true,
-
         // Display only errors to reduce the amount of output.
         stats: 'errors-only'
     }
