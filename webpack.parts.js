@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 exports.devServer = ({ host, port } = {}) => ({
     devServer: {
         host,
@@ -58,6 +60,33 @@ exports.loadStyles = ({ include }) => ({
         ]
     }
 })
+
+exports.extractStyles = ({ include }) => {
+    const plugin = new ExtractTextPlugin({
+        filename: '[name].css'
+    })
+
+    return {
+        module: {
+            rules: [
+                {
+                    include,
+
+                    // http://survivejs.com/webpack/loading-assets/loading-styles/
+                    test: /\.less$/,
+                    use: plugin.extract({
+                        use: [
+                            'css-loader',
+                            'less-loader'
+                        ],
+                        fallback: 'style-loader'
+                    })
+                }
+            ]
+        },
+        plugins: [ plugin ]
+    }
+}
 
 // exports.autoprefixStyles = () => {
 //     loader: 'postcss-loader',

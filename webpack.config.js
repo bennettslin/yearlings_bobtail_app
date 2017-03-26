@@ -37,7 +37,7 @@ const commonConfig = merge([
 
         output: {
             path: PATHS.build,
-            filename: 'bundle.js'
+            filename: '[name].js'
         },
 
         plugins: process.env.NODE_ENV !== 'production' ? [
@@ -47,7 +47,6 @@ const commonConfig = merge([
             new HtmlWebpackPlugin({
                 template: PATHS.template,
                 filename: 'index.html',
-                title: 'Yearling\'s Bobtail',
                 inject: 'body'
             })
         ] : [
@@ -69,15 +68,17 @@ const commonConfig = merge([
          */
         include: PATHS.app
     }),
-    parts.loadStyles({
-        include: PATHS.less
-    }),
     parts.loadUrls({
         include: PATHS.app
     })
 ])
 
-const productionConfig = merge([]);
+const productionConfig = merge([
+    parts.extractStyles({
+        include: PATHS.less
+    })
+])
+
 const developmentConfig = merge([
     parts.devServer({
         /**
@@ -87,6 +88,9 @@ const developmentConfig = merge([
          */
         host: process.env.HOST,
         port: 1337 || process.env.PORT
+    }),
+    parts.loadStyles({
+        include: PATHS.less
     })
 ])
 
@@ -94,5 +98,5 @@ module.exports = (env) => {
     return merge(
         commonConfig,
         env === 'production' ? productionConfig : developmentConfig
-    );
+    )
 }
