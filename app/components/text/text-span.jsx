@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import { getFormattedFirstVerseObjectText, getFormattedLastVerseObjectText } from '../../helpers/format-helper'
 
 /*************
@@ -68,7 +69,11 @@ const TextSpanView = ({
 
 }) => (
     <span
-        className={`text-span${firstVerseObject ? ' first-verse-object' : ''}${lastVerseObject ? ' last-verse-object' : ''}`}>
+        className={classnames(
+            'text-span',
+            { 'first-verse-object': firstVerseObject,
+              'last-verse-object': lastVerseObject }
+        )}>
         {(hasFirstSpace ? ' ' : '') + text}
     </span>
 )
