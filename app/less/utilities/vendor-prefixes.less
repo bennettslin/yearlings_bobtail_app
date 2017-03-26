@@ -1,26 +1,3 @@
-.transform(@value) {
-    -webkit-transform: @value;
-    -moz-transform: @value;
-    -ms-transform: @value;
-    -o-transform: @value;
-    transform: @value;
-}
-
-// Hackish way to pass in two arguments, for now.
-.transform2(@value1, @value2) {
-    -webkit-transform: @arguments;
-    -moz-transform: @arguments;
-    -ms-transform: @arguments;
-    -o-transform: @arguments;
-    transform: @arguments;
-}
-
-.transform-origin(@value) {
-    -webkit-transform-origin: @value;
-    -ms-transform-origin: @value;
-    transform-origin: @value;
-}
-
 .transition(@value;...) {
     -webkit-transition: @value;
        -moz-transition: @value;
@@ -28,16 +5,3 @@
          -o-transition: @value;
             transition: @value;
 }
-
-// Not presently being used.
-// #gradient {
-//     .linear-gradient(@edgeColour: #555,
-//                      @middleColour: #333,
-//                      @fallbackColor: mix(@edgeColour, @middleColour, 60%),
-//                      @direction: bottom) {
-//         background-color: @fallbackColor;
-//         background: -ms-linear-gradient(@direction, @edgeColour, @middleColour, @edgeColour); /* IE10 */
-//         background: linear-gradient(to @direction, @edgeColour, @middleColour, @edgeColour);
-//         background-repeat: repeat-x;
-//     }
-// }

@@ -96,28 +96,28 @@
     .expand-button-block {
         bottom: 0;
         left: 50%;
-        .transform2(translateX(-50%), scale(1));
+        transform: translateX(-50%) scale(1);
     }
 }
 
 .is-logue, .lyric-expanded, .overview-shown, .dots-shown, .annotation-shown {
     .centre-field {
         .expand-button-block {
-            .transform2(translateX(-50%), scale(0));
+            transform: translateX(-50%) scale(0);
         }
     }
 }
 
 .hide-lyric-buttons {
     .ear-button-block {
-        .transform(scale(0));
+        transform: scale(0);
     }
 }
 
 .lyric-collapsed, .hide-lyric-buttons {
     .lyric-column {
         .expand-button-block {
-            .transform(scale(0));
+            transform: scale(0);
         }
     }
 }
