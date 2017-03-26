@@ -74,12 +74,20 @@ const commonConfig = merge([
 ])
 
 const productionConfig = merge([
+    parts.generateSourceMaps({ type: 'source-map' }),
+
     parts.extractStyles({
         include: PATHS.less
     })
 ])
 
 const developmentConfig = merge([
+    {
+        output: {
+            devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
+        }
+    },
+    parts.generateSourceMaps({ type: 'cheap-module-eval-source-map' }),
     parts.devServer({
         /**
          * Parse host and port from env so this is easy to customize.

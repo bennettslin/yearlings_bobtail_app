@@ -98,7 +98,9 @@ exports.extractStyles = ({ include }) => {
     }
 }
 
-// exports.autoprefixStyles = () => ()
+exports.generateSourceMaps = ({ type }) => ({
+    devtool: type
+})
 
 exports.loadUrls = ({ include }) => ({
     module: {
