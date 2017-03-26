@@ -1602,5 +1602,10 @@ module.exports = [
         taskName: `Focus breaks on admin.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Begin webpack modification, including minification.`,
+        workedHours: 0,
+        neededHours: 8
     }
 ]
