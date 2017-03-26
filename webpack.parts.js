@@ -57,6 +57,15 @@ exports.loadStyles = ({ include }) => ({
     }
 })
 
+exports.autoprefixStyles = () => {
+    loader: 'postcss-loader',
+    options: {
+        plugins: () => ([
+            require('autoprefixer')
+        ])
+    }
+}
+
 exports.loadUrls = ({ include }) => ({
     module: {
         loaders: [
