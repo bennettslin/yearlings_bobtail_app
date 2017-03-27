@@ -57,6 +57,7 @@ class EventManager extends Component {
         this.handleVerseBarSelect = this.handleVerseBarSelect.bind(this)
         this.handleVerseInteractivate = this.handleVerseInteractivate.bind(this)
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
+        this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
 
         this._stopPropagation = this._stopPropagation.bind(this)
 
@@ -170,21 +171,25 @@ class EventManager extends Component {
     }
 
     handleAnnotationPortalSelect(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, selectedLyricColumnIndex) {
-        this._stopPropagation(e)
 
-        this.props.selectSong({
+        const songSelected = this.props.selectSong({
             selectedSongIndex,
             selectedAnnotationIndex,
             selectedVerseIndex
         })
 
-        // TODO: Check that this works.
-        if (!isNaN(selectedLyricColumnIndex)) {
-            this.props.selectLyricColumn({
-                selectedLyricColumnIndex,
-                selectedSongIndex
-            })
+        if (songSelected) {
+            this._stopPropagation(e)
+
+            if (!isNaN(selectedLyricColumnIndex)) {
+                this.props.selectLyricColumn({
+                    selectedLyricColumnIndex,
+                    selectedSongIndex
+                })
+            }
         }
+
+        return songSelected
     }
 
     handleAnnotationPrevious(e) {
@@ -361,10 +366,10 @@ class EventManager extends Component {
 
     handleNavSongSelect(e, selectedSongIndex) {
         this._stopPropagation(e)
-        this.props.selectSong({
+        this.props.selectNavExpand(false)
+        return this.props.selectSong({
             selectedSongIndex
         })
-        this.props.selectNavExpand(false)
     }
 
     handleNavBookSelect(e) {
@@ -564,6 +569,19 @@ class EventManager extends Component {
         }
     }
 
+    handleScrollAfterLyricRerender() {
+        const annotationIndex = this.props.domProps.selectedAnnotationIndex
+
+        // If a portal was selected, there will be an annotation index.
+        if (annotationIndex) {
+            this._scrollElementIntoView('annotation', annotationIndex)
+
+        // Otherwise, scroll to top.
+        } else {
+            this._scrollElementIntoView('lyrics-scroll', 'home')
+        }
+    }
+
     /**
      * scrollIntoViewIfNeeded should return a cancel function. It presently
      * does not, even though it says it does?
@@ -645,6 +663,7 @@ class EventManager extends Component {
                 handleVerseBarSelect={this.handleVerseBarSelect}
                 handleVerseInteractivate={this.handleVerseInteractivate}
                 handleWikiToggle={this.handleWikiToggle}
+                handleScrollAfterLyricRerender={this.handleScrollAfterLyricRerender}
             />
         )
     }

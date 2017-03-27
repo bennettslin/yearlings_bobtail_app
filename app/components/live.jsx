@@ -127,6 +127,7 @@ const LiveView = ({
     handleLyricPlay,
     handleLyricVerseSelect,
     handleVerseInteractivate,
+    handleScrollAfterLyricRerender,
 
     handleAnnotationPrevious,
     handleAnnotationNext,
@@ -311,7 +312,8 @@ const LiveView = ({
             handleLyricVerseSelect,
             handleVerseInteractivate,
             handleVerseElementSelect,
-            handleVerseElementSlide
+            handleVerseElementSlide,
+            handleScrollAfterLyricRerender
         },
         scoresTipsSectionProps = {
             isPhone,

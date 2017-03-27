@@ -94,11 +94,6 @@ module.exports = [
 
     // Scrolling.
     {
-        taskName: `scroll to annotation after portal`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Allow scrolling over verse bar.`,
         workedHours: 0,
         neededHours: 3
@@ -1591,6 +1586,11 @@ module.exports = [
     {
         taskName: `Add scrolling to annotation and verse selection.`,
         workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `scroll to annotation after portal`,
+        workedHours: 2,
         neededHours: 2
     }
 ]

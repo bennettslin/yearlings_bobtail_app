@@ -128,14 +128,8 @@ class AccessManager extends Component {
 
         // We're in annotation.
         } else if (this.props.selectedAnnotationIndex) {
-            /**
-             * For some reason, webpack won't allow destructuring of declared
-             * variables here.
-             */
-            const returnObject = this._handleAnnotationNavigation(e, keyName)
-
-            annotationIndexWasAccessed = returnObject.annotationIndexWasAccessed
-            keyWasRegistered = returnObject.keyWasRegistered
+            ({ annotationIndexWasAccessed,
+               keyWasRegistered } = this._handleAnnotationNavigation(e, keyName))
 
             // We're in dots section.
         } else if (this.props.selectedDotsIndex) {
@@ -143,7 +137,8 @@ class AccessManager extends Component {
 
             // We're in nav section.
         } else if (this.props.selectedNavIndex) {
-            keyWasRegistered = this._handleNavNavigation(e, keyName)
+            ({ annotationIndexWasAccessed,
+               keyWasRegistered } = this._handleNavNavigation(e, keyName))
 
         // We're in lyrics section.
         } else {
@@ -201,15 +196,20 @@ class AccessManager extends Component {
                                 verseIndex,
                                 columnIndex } = popupAnchorObject
 
-                        this.props.handleAnnotationPortalSelect(
+                        keyWasRegistered = this.props.handleAnnotationPortalSelect(
                             e,
                             songIndex,
                             annotationIndex,
                             verseIndex,
                             columnIndex
                         )
+
+                        /**
+                         * If song was selected, then annotation index was
+                         * accessed.
+                         */
+                        annotationIndexWasAccessed = keyWasRegistered
                     }
-                    keyWasRegistered = true
 
                 } else {
                     keyWasRegistered = false
@@ -254,35 +254,49 @@ class AccessManager extends Component {
     }
 
     _handleNavNavigation(e, keyName) {
-        const { songs,
-                selectedBookColumnIndex,
-                bookStartingIndices } = this.props,
-            songsLength = songs.length
-
-        let { accessedSongIndex } = this.props
+        let { accessedSongIndex } = this.props,
+            direction,
+            annotationIndexWasAccessed = false,
+            keyWasRegistered = true
 
         // Skip appropriate songs if showing single book column.
         switch (keyName) {
             case ARROW_LEFT:
-                accessedSongIndex = (accessedSongIndex + (songsLength - 1)) % songsLength
+                direction = -1
                 break
             case ARROW_RIGHT:
-                accessedSongIndex = (accessedSongIndex + 1) % songsLength
+                direction = 1
                 break
             case ENTER:
-                this.props.handleNavSongSelect(e, accessedSongIndex)
-                return true
+                keyWasRegistered = this.props.handleNavSongSelect(e, accessedSongIndex)
+                /**
+                 * If song was successfully selected, then annotation index was
+                 * also accessed.
+                 */
+                annotationIndexWasAccessed = keyWasRegistered
+                break
             default:
-                return false
+                keyWasRegistered = false
         }
 
-        // Select the book column that contains the accessed song index.
-        if ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
-            this.props.handleNavBookSelect(e)
+        if (direction) {
+            const { songs,
+                    selectedBookColumnIndex,
+                    bookStartingIndices } = this.props,
+                songsLength = songs.length
+
+            accessedSongIndex = (accessedSongIndex + songsLength + direction) % songsLength
+
+            // Select the book column that contains the accessed song index.
+            if ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
+                this.props.handleNavBookSelect(e)
+            }
+
+            this.props.handleSongAccess(accessedSongIndex)
         }
 
-        this.props.handleSongAccess(accessedSongIndex)
-        return true
+        return { annotationIndexWasAccessed,
+                 keyWasRegistered }
     }
 
     _handleLyricNavigation(e, keyName) {
@@ -349,9 +363,11 @@ class AccessManager extends Component {
                 break
             case AUDIO_PREVIOUS_SONG_KEY:
                 keyWasRegistered = this.props.handleAudioPreviousSong(e)
+                annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_NEXT_SONG_KEY:
                 keyWasRegistered = this.props.handleAudioNextSong(e)
+                annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_REWIND_KEY:
                 keyWasRegistered = this.props.handleVerseDirectionAccess(-1)

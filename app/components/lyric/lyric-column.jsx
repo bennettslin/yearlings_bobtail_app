@@ -46,6 +46,12 @@ class LyricColumnView extends Component {
         }
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.selectedSongIndex !== this.props.selectedSongIndex) {
+            this.props.handleScrollAfterLyricRerender()
+        }
+    }
+
     _handleTransition(e) {
         if (e.propertyName === 'height') {
             this.setState({
