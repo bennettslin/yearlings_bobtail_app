@@ -117,7 +117,10 @@ class EventManager extends Component {
     }
 
     handleAnnotationAccess(accessedAnnotationIndex) {
-        this.props.accessAnnotation(accessedAnnotationIndex)
+        const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
+        if (annotationAccessed) {
+            this._scrollElementIntoView('annotation', accessedAnnotationIndex)
+        }
     }
 
     handleDotAccess(accessedDotIndex) {
@@ -133,14 +136,12 @@ class EventManager extends Component {
     }
 
     handleVerseDirectionAccess(direction) {
-        const verseInteractivated = this.props.interactivateVerseDirection(direction)
-        if (verseInteractivated) {
-            // TODO: Scroll interactivated verse?
-            this._closeSections({
-                exemptInteractivatedVerse: true
-            })
-        }
-        return verseInteractivated
+        const interactivatedVerseIndex = this.props.interactivateVerseDirection(direction)
+        this._closeSections({
+            exemptInteractivatedVerse: true
+        })
+        this._scrollElementIntoView('verse', interactivatedVerseIndex)
+        return true
     }
 
     /*********
@@ -184,16 +185,18 @@ class EventManager extends Component {
 
     handleAnnotationPrevious(e) {
         this._stopPropagation(e)
-        this.props.selectAnnotation({
+        const selectedAnnotationIndex = this.props.selectAnnotation({
             direction: -1
         })
+        this._scrollElementIntoView('annotation', selectedAnnotationIndex)
     }
 
     handleAnnotationNext(e) {
         this._stopPropagation(e)
-        this.props.selectAnnotation({
+        const selectedAnnotationIndex = this.props.selectAnnotation({
             direction: 1
         })
+        this._scrollElementIntoView('annotation', selectedAnnotationIndex)
     }
 
     /*********

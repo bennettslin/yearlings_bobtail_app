@@ -218,9 +218,16 @@ class App extends Component {
     }
 
     accessAnnotation(accessedAnnotationIndex) {
+        // Cannot access annotation if verse is interactivated.
+        if (this.state.interactivatedVerseIndex !== -1) {
+            return false
+        }
+
         this.setState({
             accessedAnnotationIndex
         })
+
+        return true
     }
 
     accessDot(accessedDotIndex) {
@@ -294,6 +301,7 @@ class App extends Component {
         }
 
         props.selectAnnotationIndex(selectedAnnotationIndex)
+        return selectedAnnotationIndex
     }
 
     /*********
@@ -739,7 +747,8 @@ class App extends Component {
         this.setState({
             interactivatedVerseIndex
         })
-        return true
+
+        return interactivatedVerseIndex
     }
 
     selectVerseElement(selectedVerseElement) {

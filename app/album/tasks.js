@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Remove vendor prefixes.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Lyric ear and expand buttons should show strategically, so that we don't save state on each scroll.`,
         workedHours: 0,
         neededHours: 2
@@ -1607,5 +1602,10 @@ module.exports = [
         taskName: `Begin webpack modification, including minification.`,
         workedHours: 0,
         neededHours: 8
+    },
+    {
+        taskName: `Remove vendor prefixes.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
