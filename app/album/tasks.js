@@ -86,11 +86,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Do not scroll after portal select until lyrics have been rendered, and do not get verse bar status either.`,
-        workedHours: 0,
-        neededHours: 5
-    },
 
     // Scrolling.
     {
@@ -1592,5 +1587,10 @@ module.exports = [
         taskName: `scroll to annotation after portal`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Scrolling after portal is buggy. Also, verse bar doesn't select when scrolling afterwards. (Schwa stickers).`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
