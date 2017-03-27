@@ -60,11 +60,6 @@ module.exports = [
 
     // Bugs.
     {
-        taskName: `Audio cursor doesn't reset in logue.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Recalculate whether selected verse is shown when changing height.`,
         workedHours: 0,
         neededHours: 1
@@ -1590,6 +1585,11 @@ module.exports = [
     },
     {
         taskName: `Scrolling after portal is buggy. Also, verse bar doesn't select when scrolling afterwards. (Schwa stickers).`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Audio cursor doesn't reset in logue.`,
         workedHours: 1,
         neededHours: 1
     }

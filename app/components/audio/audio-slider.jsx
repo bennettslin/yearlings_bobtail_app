@@ -68,7 +68,7 @@ class AudioSliderView extends Component {
                     endTime } = getVerseBeginAndEndTimes(this.props, cursorVerseIndex),
 
                 cursorPosition = beginTime / totalTime * 100,
-                cursorWidth = (endTime - beginTime) / totalTime * 100,
+                cursorWidth = !isLogue ? (endTime - beginTime) / totalTime * 100 : 0,
                 cursorStyle = {
                     left: `${cursorPosition}%`,
                     width: `${cursorWidth}%`
