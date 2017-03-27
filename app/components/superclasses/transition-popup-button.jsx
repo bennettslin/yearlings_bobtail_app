@@ -35,7 +35,7 @@ const TransitionPopupButton = ({
     }
 
     return (
-        <div className={`popup-button ${buttonName}-button`}>
+        <div className={`popup-button button-animatable ${buttonName}-button`}>
             <a
                 className={`popup-button-interactable enabled`}
                 onClick={handleClick}

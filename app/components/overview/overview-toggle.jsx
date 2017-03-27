@@ -23,7 +23,7 @@ const OverviewToggleView = ({
     handleOverviewToggle
 
 }) => (
-    <div className="overview-toggle-button-container">
+    <div className="overview-toggle-button-container button-animatable">
         <a
             className="overview-toggle-button enabled"
             onClick={e => handleOverviewToggle(e)}

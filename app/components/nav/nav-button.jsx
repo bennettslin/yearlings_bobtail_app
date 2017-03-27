@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 
 /*************
  * CONTAINER *
@@ -48,11 +49,20 @@ const NavButtonView = ({
 
 }) => (
     <a
-        className={`${isNavToggle ? ' nav-toggle-button' : ' nav-button'} enabled${isSelected ? ' selected' : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
+        className={classnames(
+            'enabled',
+            isNavToggle ? 'nav-toggle-button' : 'nav-button',
+            { 'selected': isSelected,
+              'access-highlighted': accessHighlighted }
+        )}
         onClick={handleClick}
     >
         <div className="nav-icon-block">
-            <div className={`button-icon ${isNavToggle ? 'large nav-toggle-icon' : 'nav-icon'}`}>
+            <div className={classnames(
+                'button-icon',
+                'button-animatable',
+                isNavToggle ? 'large nav-toggle-icon' : 'nav-icon'
+            )}>
                 {iconText}
             </div>
         </div>

@@ -36,7 +36,7 @@ const AudioButtonsView = ({
 
             {/* Previous button. */}
             <a
-                className={`audio-button${isPrologue ? '' : ' enabled'}`}
+                className={`audio-button button-animatable${isPrologue ? '' : ' enabled'}`}
                 onClick={handleAudioPreviousSong}
             >
                 <div className="button-icon audio-nav">
@@ -46,7 +46,7 @@ const AudioButtonsView = ({
 
             {/* Play button. */}
             <a
-                className="audio-button enabled"
+                className="audio-button button-animatable enabled"
                 onClick={handleAudioPlay}
             >
                 <div className={`
@@ -61,7 +61,7 @@ const AudioButtonsView = ({
 
             {/* Next button. */}
             <a
-                className={`audio-button${isEpilogue ? '' : ' enabled'}`}
+                className={`audio-button button-animatable${isEpilogue ? '' : ' enabled'}`}
                 onClick={handleAudioNextSong}
             >
                 <div className="button-icon audio-nav">
@@ -72,7 +72,7 @@ const AudioButtonsView = ({
 
         <div className="audio-subblock option-subblock">
             <a
-                className="audio-button enabled"
+                className="audio-button button-animatable enabled"
                 onClick={e => handleAudioOptionsToggle(e)}
             >
                 <div className="button-icon audio-neutral">

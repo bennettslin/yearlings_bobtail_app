@@ -28,7 +28,7 @@ const ScoresTipsSectionView = ({
         <div className="section scores-tips-section">
             {!isPhone &&
                 <a
-                    className="scores-tips-button scores-button enabled"
+                    className="scores-tips-button scores-button button-animatable enabled"
                     onClick={e => handleScoreToggle(e)}
                 >
                     <div className="large button-icon scores-icon">
@@ -37,7 +37,7 @@ const ScoresTipsSectionView = ({
                 </a>
             }
             <a
-                className="scores-tips-button tips-button enabled"
+                className="scores-tips-button tips-button button-animatable enabled"
                 onClick={e => handleTipsToggle(e)}
             >
                 <div className="large button-icon tips-icon">
