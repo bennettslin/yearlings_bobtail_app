@@ -36,33 +36,9 @@
 
                 &.interacted {
 
-                    .tooltip-container {
-                        visibility: visible;
-                    }
-
-                    .tooltip {
-                        animation: tooltipGrow 0.25s;
-                        opacity: 1;
-                        transform: scale(1);
-                    }
-
                     .dot {
                         animation: transformLightBounce 0.15s;
                         background-color: orange;
-                    }
-                }
-
-                &.uninteracted {
-
-                    .tooltip-container {
-                        transition: bottom 0s 0.25s, visibility 0s 0.25s;
-                        bottom: 0;
-                        visibility: hidden;
-                    }
-
-                    .tooltip {
-                        animation: tooltipShrink 0.1s;
-                        opacity: 0;
                     }
                 }
             }
@@ -71,7 +47,7 @@
         .dot {
             // TODO: Improve state styling.
             &.background { opacity: 0.35; }
-            &.disabled { background-color: lightGray; }
+            &.dot-stanza-disabled { background-color: lightGray; }
             &.deselected { background-color: lightGray; }
 
             // TODO: Obviously.
@@ -167,23 +143,6 @@
 
 .dot-text-container:hover + .dot .dot-description, .dot-description.interactivated {
     opacity: 1;
-}
-
-.tooltip-container {
-    z-index: @dot-tooltip-z-index;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 95%;
-
-    .tooltip {
-        // FIXME: Improve styling, of course.
-        text-align: center;
-        padding: 5px 15px;
-        background-color: white;
-        border-radius: 5px;
-        box-shadow: 0 1px 2px 2px lightGray;
-    }
 }
 
 .dot-text-container {

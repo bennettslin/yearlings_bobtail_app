@@ -10,13 +10,13 @@ const DotButton = ({
 
     dotKey,
     isSelected,
-    canDeselect,
+    inDotsSection,
     handleDotKeyToggle,
 
 ...other }) => {
 
-    const isEnabled = !isSelected || canDeselect,
-        isToggleDeselected = canDeselect && !isSelected,
+    const isEnabled = !isSelected || inDotsSection,
+        isToggleDeselected = inDotsSection && !isSelected,
         onClick = isEnabled && handleDotKeyToggle ? e => handleDotKeyToggle(e, dotKey) : null
 
     return (
@@ -104,7 +104,7 @@ class DotButtonView extends Component {
                     'dot',
                     dotKey,
                     { 'background': !isPresent,
-                      'disabled': !isEnabled,
+                      'dot-stanza-disabled': !isEnabled,
                       'deselected': isToggleDeselected,
                       'access-highlighted': accessHighlighted }
                 )}>

@@ -15,23 +15,15 @@ const defaultProps = {
 const DotBlock = (props) => {
 
     const { inDotStanza,
-            inDotsSection,
             handleDotKeyToggle } = props,
 
         allDotKeys = inDotStanza ? ALL_DOT_KEYS_DOT_STANZA_ORDER : ALL_DOT_KEYS,
 
-        isInteractable = !!handleDotKeyToggle,
-
-        /**
-         * Dot in dots section can select and deselect, while dot in dot stanza
-         * only selects.
-         */
-        canDeselect = inDotsSection
+        isInteractable = !!handleDotKeyToggle
 
     return (
         <DotBlockView {...props}
             isInteractable={isInteractable}
-            canDeselect={canDeselect}
             allDotKeys={allDotKeys}
         />
     )
