@@ -128,7 +128,14 @@ class AccessManager extends Component {
 
         // We're in annotation.
         } else if (this.props.selectedAnnotationIndex) {
-            keyWasRegistered = this._handleAnnotationNavigation(e, keyName)
+            /**
+             * For some reason, webpack won't allow destructuring of declared
+             * variables here.
+             */
+            const returnObject = this._handleAnnotationNavigation(e, keyName)
+
+            annotationIndexWasAccessed = returnObject.annotationIndexWasAccessed
+            keyWasRegistered = returnObject.keyWasRegistered
 
             // We're in dots section.
         } else if (this.props.selectedDotsIndex) {
@@ -146,22 +153,24 @@ class AccessManager extends Component {
             annotationIndexWasAccessed = keyWasRegistered
         }
 
-        return {
-            annotationIndexWasAccessed,
-            keyWasRegistered
-        }
+        return { annotationIndexWasAccessed,
+                 keyWasRegistered }
     }
 
     _handleAnnotationNavigation(e, keyName) {
         const { props } = this
 
-        let { accessedPopupAnchorIndex } = props
+        let { accessedPopupAnchorIndex } = props,
+            annotationIndexWasAccessed = false,
+            keyWasRegistered = true
 
         switch (keyName) {
             case ARROW_LEFT:
+                annotationIndexWasAccessed = true
                 this.props.handleAnnotationPrevious(e)
                 break
             case ARROW_RIGHT:
+                annotationIndexWasAccessed = true
                 this.props.handleAnnotationNext(e)
                 break
             case ARROW_UP:
@@ -200,18 +209,20 @@ class AccessManager extends Component {
                             columnIndex
                         )
                     }
-                    return true
+                    keyWasRegistered = true
 
                 } else {
-                    return false
+                    keyWasRegistered = false
                 }
+                break
             }
-
             default:
-                return false
+                keyWasRegistered = false
+                break
         }
 
-        return true
+        return { annotationIndexWasAccessed,
+                 keyWasRegistered }
     }
 
 
