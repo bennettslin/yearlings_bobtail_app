@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import AccessManager from './access-manager'
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
+import { getIsLogue } from '../helpers/album-view-helper'
 
 class EventManager extends Component {
 
@@ -103,8 +104,11 @@ class EventManager extends Component {
     }
 
     _handleBodyFocus() {
-        if (this.props.domProps.selectedAdminIndex) {
+        const { domProps } = this.props
+
+        if (domProps.selectedAdminIndex || getIsLogue(domProps)) {
             this.myDomManager && this.myDomManager.focus()
+
         } else {
             this.myLyricSection && this.myLyricSection.focus()
         }
@@ -570,15 +574,19 @@ class EventManager extends Component {
     }
 
     handleScrollAfterLyricRerender() {
-        const annotationIndex = this.props.domProps.selectedAnnotationIndex
+        const { domProps } = this.props
 
-        // If a portal was selected, there will be an annotation index.
-        if (annotationIndex) {
-            this._scrollElementIntoView('annotation', annotationIndex)
+        if (!getIsLogue(domProps)) {
+            const annotationIndex = this.props.domProps.selectedAnnotationIndex
 
-        // Otherwise, scroll to top.
-        } else {
-            this._scrollElementIntoView('lyrics-scroll', 'home')
+            // If a portal was selected, there will be an annotation index.
+            if (annotationIndex) {
+                this._scrollElementIntoView('annotation', annotationIndex)
+
+                // Otherwise, scroll to top.
+            } else {
+                this._scrollElementIntoView('lyrics-scroll', 'home')
+            }
         }
     }
 
