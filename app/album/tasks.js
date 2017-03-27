@@ -94,16 +94,6 @@ module.exports = [
 
     // Scrolling.
     {
-        taskName: `Figure out scrolling rules`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Scroll to accessed verse when switching columns?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `scroll to annotation after portal`,
         workedHours: 0,
         neededHours: 2
@@ -112,16 +102,6 @@ module.exports = [
         taskName: `Allow scrolling over verse bar.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Scroll into view if needed now returns cancel function.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: 'scroll to selected verse from portal',
-        workedHours: 0,
-        neededHours: 1
     },
 
     {
@@ -136,11 +116,6 @@ module.exports = [
         neededHours: 1
     },
 
-    {
-        taskName: `Close button and body click in score should have same effect on annotation`,
-        workedHours: 0,
-        neededHours: 1
-    },
     {
         taskName: `Selecting new song when wiki popup is open breaks it`,
         workedHours: 0,
@@ -263,6 +238,11 @@ module.exports = [
     //     taskName: `toggle min and max device widths`,
     //     workedHours: 0,
     //     neededHours: 1
+    // },
+    // {
+    //     taskName: `Scroll into view if needed now returns cancel function.`,
+    //     workedHours: 0,
+    //     neededHours: 3
     // },
 
     {
@@ -1607,5 +1587,10 @@ module.exports = [
         taskName: `Remove vendor prefixes.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Add scrolling to annotation and verse selection.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

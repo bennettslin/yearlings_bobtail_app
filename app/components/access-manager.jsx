@@ -326,7 +326,10 @@ class AccessManager extends Component {
             })
         }
 
-        props.handleAnnotationAccess(accessedAnnotationIndex)
+        props.handleAnnotationAccess({
+            accessedAnnotationIndex,
+            doScroll: true
+        })
         return true
     }
 
@@ -434,7 +437,10 @@ class AccessManager extends Component {
                 verseIndex
             })
 
-        props.handleAnnotationAccess(accessedAnnotationIndex)
+        props.handleAnnotationAccess({
+            accessedAnnotationIndex,
+            doScroll: false
+        })
     }
 
     render() {

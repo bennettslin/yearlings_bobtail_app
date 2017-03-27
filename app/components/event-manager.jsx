@@ -117,9 +117,12 @@ class EventManager extends Component {
         this.props.toggleAccess(accessedOn)
     }
 
-    handleAnnotationAccess(accessedAnnotationIndex) {
+    handleAnnotationAccess({
+        accessedAnnotationIndex,
+        doScroll
+    }) {
         const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
-        if (annotationAccessed) {
+        if (annotationAccessed && doScroll) {
             this._scrollElementIntoView('annotation', accessedAnnotationIndex)
         }
     }
