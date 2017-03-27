@@ -1,3 +1,13 @@
+h1 {
+    font-size: 1.6em;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
 /**************
  * BOX-SIZING *
  **************/
@@ -53,11 +63,24 @@
 }
 
 .enabled {
+    transition: color 0.2s, text-shadow 0.2s;
     cursor: pointer;
+
+    .text-span {
+        color: @lyric-link-colour;
+
+        &:hover {
+            color: @lyric-hover-colour;
+        }
+
+        &:active {
+            color: @lyric-active-colour;
+        }
+    }
 }
 
 .disabled {
-    a {
+    .text-span {
         color: @disabled-link-colour;
     }
 }
