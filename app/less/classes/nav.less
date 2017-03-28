@@ -50,6 +50,9 @@
 
     // TODO: Consider adjusting this animatable height for tablet and mini?
     height: @nav-height * 3; // Just an arbitrary value that's large enough.
+
+    // Prevent lyric scrolling from pushing app offscreen.
+    overflow: hidden;
 }
 
 .book-column-block, .book-column, .nav-book, .nav-toggle-book {

@@ -64,11 +64,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Clicking lower verse bar makes screen jump. Also just going from one annotation to the next. Doesn't just happen in Safari... Use Didi`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     // Portals.
     {
@@ -1590,6 +1585,11 @@ module.exports = [
     },
     {
         taskName: `Audio cursor doesn't reset in logue.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Clicking lower verse bar makes screen jump. Also just going from one annotation to the next.`,
         workedHours: 1,
         neededHours: 1
     }
