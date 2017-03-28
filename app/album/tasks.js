@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `In button animation, hover element is different from animated element.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Everything is broken in Safari...`,
         workedHours: 0,
         neededHours: 3
@@ -18,11 +23,6 @@ module.exports = [
         taskName: `Allow arrows for score and wiki, and still allow for handling keydown.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Selecting time or verse while audio player is running is now buggy.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     // Song selection timeout.
@@ -49,6 +49,16 @@ module.exports = [
         taskName: `Slider in verse styling, determine slider selected verse.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Slider isn't working?!`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Selecting time or verse while audio player is running is now buggy.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     // Touch accessibility.
@@ -98,7 +108,7 @@ module.exports = [
     {
         taskName: `begin list of persistence checks`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
 
     {
@@ -170,59 +180,9 @@ module.exports = [
     },
 
     // {
-    //     taskName: `delay in annotation popup after scroll and then link clicked? only in firefox, it seems`,
-    //     workedHours: 0,
-    //     neededHours: 1
-    // },
-    // {
-    //     taskName: `refactor to use dot index rather than key`,
-    //     workedHours: 0,
-    //     neededHours: 2
-    // },
-    // {
-    //     taskName: `show notated scores`,
-    //     workedHours: 0,
-    //     neededHours: 3
-    // },
-    // {
-    //     taskName: `change every "one" to "you"`,
-    //     workedHours: 0,
-    //     neededHours: 1
-    // },
-    // {
-    //     taskName: `focus sections, and have them route events to app`,
-    //     workedHours: 0,
-    //     neededHours: 3
-    // },
-    // {
-    //     taskName: `cancel scroll if new scroll or if manually scrolled`,
-    //     workedHours: 0,
-    //     neededHours: 2
-    // },
-    // {
-    //     taskName: `Wiki popups are broken in Chrome. (But only in Canary, it seems.)`,
-    //     workedHours: 0,
-    //     neededHours: 1
-    // },
-    // {
     //     taskName: `animate swapping of left and right lyric stanzas.`,
     //     workedHours: 0,
     //     neededHours: 5
-    // },
-    // {
-    //     taskName: `layout, position, and style wiki section.`,
-    //     workedHours: 0,
-    //     neededHours: 3
-    // },
-    // {
-    //     taskName: `nav widths use % instead of vw`,
-    //     workedHours: 0,
-    //     neededHours: 3
-    // },
-    // {
-    //     taskName: `toggle min and max device widths`,
-    //     workedHours: 0,
-    //     neededHours: 1
     // },
     // {
     //     taskName: `Scroll into view if needed now returns cancel function.`,

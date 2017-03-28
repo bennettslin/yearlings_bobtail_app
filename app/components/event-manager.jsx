@@ -103,10 +103,12 @@ class EventManager extends Component {
         }
     }
 
-    _handleBodyFocus() {
-        const { domProps } = this.props
+    _handleBodyFocus(newAdminIndex) {
+        const { domProps } = this.props,
+            doFocusAdmin = typeof newAdminIndex !== 'undefined' ?
+                newAdminIndex : domProps.selectedAdminIndex
 
-        if (domProps.selectedAdminIndex || getIsLogue(domProps)) {
+        if (doFocusAdmin || getIsLogue(domProps)) {
             this.myDomManager && this.myDomManager.focus()
 
         } else {
@@ -158,11 +160,12 @@ class EventManager extends Component {
      *********/
 
     handleAdminToggle(e) {
-        const adminToggled = this.props.toggleAdmin()
-        if (adminToggled) {
-            this._stopPropagation(e)
-        }
-        return adminToggled
+        const newAdminIndex = this.props.toggleAdmin()
+        this._stopPropagation(e)
+
+        // Change focus for keyboard events.
+        this._handleBodyFocus(newAdminIndex)
+        return true
     }
 
     /**************

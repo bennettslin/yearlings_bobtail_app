@@ -256,7 +256,7 @@ class App extends Component {
         // If no argument passed, then just toggle between on and off.
 
         this.props.selectAdminIndex(selectedAdminIndex)
-        return true
+        return selectedAdminIndex
     }
 
     /**************
