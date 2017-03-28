@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Everything is broken in Safari...`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Lyric ear and expand buttons should show strategically, so that we don't save state on each scroll.`,
         workedHours: 0,
         neededHours: 2
