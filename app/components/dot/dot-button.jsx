@@ -8,20 +8,19 @@ import { DOT_DESCRIPTIONS } from '../../helpers/constants'
 
 const DotButton = ({
 
-    dotKey,
     isSelected,
-    inDotsSection,
     handleDotKeyToggle,
 
 ...other }) => {
 
-    const isEnabled = !isSelected || inDotsSection,
+    const { dotKey,
+            inDotsSection } = other,
+        isEnabled = !isSelected || inDotsSection,
         isToggleDeselected = inDotsSection && !isSelected,
         onClick = isEnabled && handleDotKeyToggle ? e => handleDotKeyToggle(e, dotKey) : null
 
     return (
         <DotButtonView {...other}
-            dotKey={dotKey}
             isEnabled={isEnabled}
             isToggleDeselected={isToggleDeselected}
             onClick={onClick}
