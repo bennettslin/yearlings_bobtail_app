@@ -289,8 +289,8 @@ export const getAnnotationIndexForVerseIndex = ({
     })
 }
 
-export const getSliderRatioForScreenX = (screenX, sliderLeft, sliderWidth) => {
-    const sliderX = screenX - sliderLeft,
+export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
+    const sliderX = clientX - sliderLeft,
         ratio = sliderX / sliderWidth
 
     if (ratio < 0) {

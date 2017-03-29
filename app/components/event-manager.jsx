@@ -452,21 +452,21 @@ class EventManager extends Component {
     handleAudioSliderTouchBegin(e) {
         const { nativeEvent,
                 target } = e,
-            { screenX } = nativeEvent,
+            { clientX } = nativeEvent,
             clientRect = target.getBoundingClientRect()
 
-        if (!isNaN(screenX)) {
+        if (!isNaN(clientX)) {
             this._stopPropagation(e)
-            this.props.touchSliderBegin(clientRect, screenX)
+            this.props.touchSliderBegin(clientRect, clientX)
         }
     }
 
     handleBodyTouchMove(e) {
-        const { screenX } = e.nativeEvent
+        const { clientX } = e.nativeEvent
 
-        if (!isNaN(screenX)) {
+        if (!isNaN(clientX)) {
             this._stopPropagation(e)
-            this.props.touchBodyMove(screenX)
+            this.props.touchBodyMove(clientX)
         }
 
     }

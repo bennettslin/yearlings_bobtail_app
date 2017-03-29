@@ -51,11 +51,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Slider isn't working?!`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Selecting time or verse while audio player is running is now buggy.`,
         workedHours: 0,
         neededHours: 3
@@ -1555,6 +1550,11 @@ module.exports = [
     },
     {
         taskName: `Clicking lower verse bar makes screen jump. Also just going from one annotation to the next.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Slider isn't working?! Turns out that screenX is relative to main monitor. clientX is relative to browser.`,
         workedHours: 1,
         neededHours: 1
     }

@@ -25,7 +25,7 @@ import { SHOWN,
 
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
-import { getSong, getIsLogue, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForScreenX, getVerseBarStatus } from '../helpers/album-view-helper'
+import { getSong, getIsLogue, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
 import { getPropsAreSame } from '../helpers/general-helper'
 import LogHelper from '../helpers/log-helper'
@@ -645,10 +645,10 @@ class App extends Component {
      * TOUCH *
      *********/
 
-    touchSliderBegin(clientRect, screenX) {
+    touchSliderBegin(clientRect, clientX) {
         const sliderLeft = clientRect.left,
             sliderWidth = clientRect.width,
-            sliderRatio = getSliderRatioForScreenX(screenX, sliderLeft, sliderWidth),
+            sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
             sliderTime = sliderRatio * getSong(this.props).totalTime,
             sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
@@ -674,11 +674,11 @@ class App extends Component {
         }, 125)
     }
 
-    touchBodyMove(screenX) {
+    touchBodyMove(clientX) {
         if (this.state.sliderMousedOrTouched) {
             const { sliderLeft,
                     sliderWidth } = this.state,
-                sliderRatio = getSliderRatioForScreenX(screenX, sliderLeft, sliderWidth),
+                sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
                 sliderTime = sliderRatio * getSong(this.props).totalTime,
                 sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
