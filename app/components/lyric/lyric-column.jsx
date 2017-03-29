@@ -81,6 +81,7 @@ class LyricColumnView extends Component {
                 selectedVerse,
                 handleLyricColumnSelect,
                 handleVerseBarSelect,
+                handleVerseBarWheel,
 
                 lyricExpandButtonChild,
 
@@ -94,7 +95,8 @@ class LyricColumnView extends Component {
                 verseObject: selectedVerse,
                 showSingleLyricColumn: other.showSingleLyricColumn,
                 hiddenLyricColumnKey: other.hiddenLyricColumnKey,
-                handleVerseBarSelect
+                handleVerseBarSelect,
+                handleVerseBarWheel
             }
 
         return (

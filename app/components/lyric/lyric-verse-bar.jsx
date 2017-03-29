@@ -18,10 +18,12 @@ const LyricVerseBarView = ({
     // From props.
     isAbove,
     handleVerseBarSelect,
+    handleVerseBarWheel,
 
 ...other }) => (
     <div
         className={`verse-bar-block ${isAbove ? 'above' : 'below'}`}
+        onWheel={handleVerseBarWheel}
     >
         <div className="verse-bar"
             onClick={handleVerseBarSelect}

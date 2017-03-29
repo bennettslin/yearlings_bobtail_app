@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Everything is broken in Safari...`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Lyric ear and expand buttons should show strategically, so that we don't save state on each scroll. Use timeouts?`,
         workedHours: 0,
         neededHours: 2
@@ -88,11 +83,6 @@ module.exports = [
     },
 
     // Scrolling.
-    {
-        taskName: `Allow scrolling over verse bar.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     {
         taskName: `Get unit tests working again.`,
@@ -172,6 +162,12 @@ module.exports = [
         taskName: `method to assemble backdrops and stageProps drawings.`,
         workedHours: 0,
         neededHours: 3
+    },
+
+    {
+        taskName: `Safari doesn't recognise continuous scroll from trackpad?`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     // {
@@ -1557,5 +1553,10 @@ module.exports = [
         taskName: `Slider isn't working?! Turns out that screenX is relative to main monitor. clientX is relative to browser.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Allow scrolling over verse bar.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

@@ -56,6 +56,7 @@ class EventManager extends Component {
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
         this.handleVerseBarSelect = this.handleVerseBarSelect.bind(this)
+        this.handleVerseBarWheel = this.handleVerseBarWheel.bind(this)
         this.handleVerseInteractivate = this.handleVerseInteractivate.bind(this)
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
         this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
@@ -488,6 +489,13 @@ class EventManager extends Component {
         this._scrollElementIntoView('verse', selectedVerseIndex)
     }
 
+    handleVerseBarWheel(e) {
+        // FIXME: Safari doesn't recognise trackpad's continuous scroll?
+
+        const { deltaY } = e.nativeEvent
+        this.myLyricSection.scrollTop += deltaY
+    }
+
     handleVerseInteractivate(e, verseIndex) {
         this._stopPropagation(e)
         this._closeSections({
@@ -672,6 +680,7 @@ class EventManager extends Component {
                 handleTipsToggle={this.handleTipsToggle}
                 handleTitleSelect={this.handleTitleSelect}
                 handleVerseBarSelect={this.handleVerseBarSelect}
+                handleVerseBarWheel={this.handleVerseBarWheel}
                 handleVerseInteractivate={this.handleVerseInteractivate}
                 handleWikiToggle={this.handleWikiToggle}
                 handleScrollAfterLyricRerender={this.handleScrollAfterLyricRerender}
