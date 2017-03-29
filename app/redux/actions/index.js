@@ -49,7 +49,7 @@ export const selectVerseIndex = (selectedVerseIndex = 0) => {
     }
 }
 
-export const selectWikiIndex = (selectedWikiIndex = '') => {
+export const selectWikiIndex = (selectedWikiIndex = 0) => {
     setInSession(SELECTED_WIKI_INDEX, selectedWikiIndex)
     return {
         type: SELECTED_WIKI_INDEX,
@@ -57,7 +57,7 @@ export const selectWikiIndex = (selectedWikiIndex = '') => {
     }
 }
 
-export const selectScoreIndex = (selectedScoreIndex = '') => {
+export const selectScoreIndex = (selectedScoreIndex = 0) => {
     setInSession(SELECTED_SCORE_INDEX, selectedScoreIndex)
     return {
         type: SELECTED_SCORE_INDEX,

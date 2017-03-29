@@ -92,6 +92,12 @@ module.exports = [
 
     {
         taskName: `begin list of persistence checks`,
+        workedHours: 1,
+        neededHours: 3
+    },
+
+    {
+        taskName: `export song, don't need to send as props.`,
         workedHours: 0,
         neededHours: 3
     },
