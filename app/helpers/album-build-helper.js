@@ -45,6 +45,8 @@ export const prepareAlbumData = (album = {}) => {
 
     // FIXME: Temporarily add portal links to album for debugging purposes.
     album.portalLinks = _tempStore._portalLinks
+
+    return album
 }
 
 const _markSideStanzas = (lyrics) => {

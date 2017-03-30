@@ -1,5 +1,7 @@
 // Store data in browser's local storage.
-import { convertBitNumberToTrueFalseKeys, convertTrueFalseKeysToBitNumber } from './general-helper'
+import { getTwoToThePowerOfN, convertBitNumberToTrueFalseKeys, convertTrueFalseKeysToBitNumber } from './general-helper'
+import AlbumData from '../album-data'
+
 import { ACCESSED_ON,
          SELECTED_ADMIN_INDEX,
          SELECTED_DOTS_INDEX,
@@ -41,8 +43,12 @@ const setDotInSession = (dotKey, isActive) => {
     setInSession(SELECTED_DOT_KEYS, convertTrueFalseKeysToBitNumber(ALL_DOT_KEYS, trueFalseKeys))
 }
 
-const _validateValueForKey = (key) => {
+const _getValidatedStoredSong = () => {
+    const selectedSongIndex = _validateValueForKey(SELECTED_SONG_INDEX)
+    return AlbumData.songs[selectedSongIndex]
+}
 
+const _validateValueForKey = (key) => {
     const rawValue = WINDOW_STORAGE[key],
 
         // All values should be integers, except selected time played.
@@ -77,33 +83,84 @@ const _validateValueForKey = (key) => {
             isValid = isNumber && parsedValue < TIPS_OPTIONS.length
             break
 
-        // TODO: This must be 0 to 255.
-        case SELECTED_DOT_KEYS:
-            isValid = isNumber
-            break
+        /**
+         * This must be a bit number less than the exponent of the number
+         * of dot keys.
+         */
+        case SELECTED_DOT_KEYS: {
+            const maxBitNumber = getTwoToThePowerOfN(ALL_DOT_KEYS.length)
 
-        // TODO: These are dependent on the album object.
+            isValid = isNumber && parsedValue < maxBitNumber
+            break
+        }
+
+        // These are dependent on the album object.
         case SELECTED_SONG_INDEX:
-            isValid = isNumber
+            isValid = isNumber && parsedValue < AlbumData.songs.length
             break
-        case SELECTED_ANNOTATION_INDEX:
-            isValid = isNumber
+        case SELECTED_ANNOTATION_INDEX: {
+            const annotations = _getValidatedStoredSong().annotations
+
+            // Logues do not have annotations.
+            isValid = isNumber && annotations ?
+                parsedValue < annotations.length :
+                parsedValue === 0
             break
-        case SELECTED_VERSE_INDEX:
-            isValid = isNumber
+        }
+        case SELECTED_VERSE_INDEX: {
+            const times = _getValidatedStoredSong().times
+
+            // Logues do not have times.
+            isValid = isNumber && times ?
+                parsedValue < times.length :
+                parsedValue === 0
             break
-        case SELECTED_WIKI_INDEX:
-            isValid = isNumber
+        }
+        case SELECTED_WIKI_INDEX: {
+            const annotations = _getValidatedStoredSong().annotations
+
+            if (annotations) {
+                const selectedAnnotationIndex = _validateValueForKey(SELECTED_ANNOTATION_INDEX),
+                selectedAnnotation = selectedAnnotationIndex > 0 && annotations[selectedAnnotationIndex - 1],
+                popupAnchors = selectedAnnotation && selectedAnnotation.popupAnchors
+
+                // If it's a wiki, entry wil be string.
+                isValid = isNumber && popupAnchors && typeof popupAnchors[parsedValue] === 'string'
+
+            // Logues do not have annotations.
+            } else {
+                isValid = isNumber && parsedValue === 0
+            }
             break
-        case SELECTED_TIME_PLAYED:
-            isValid = isNumber
+        }
+        case SELECTED_TIME_PLAYED: {
+            const totalTime = _getValidatedStoredSong().totalTime
+
+            // Logues do not have total times.
+            isValid = isNumber && totalTime ?
+                parsedValue <= totalTime :
+                parsedValue === 0
             break
+        }
 
         default:
             isValid = isNumber
     }
 
-    return isNumber && isValid ? parsedValue : 0
+    /**
+     * If value is invalid, select and persist the default value of 0 for
+     * all other keys but selected dot keys.
+     */
+    // TODO: Decide default for selected dot keys.
+    if (!isNumber || !isValid) {
+        const defaultValue = key === SELECTED_DOT_KEYS ?
+            7 : 0
+        setInSession(key, defaultValue)
+        return defaultValue
+
+    } else {
+        return parsedValue
+    }
 }
 
 export default {

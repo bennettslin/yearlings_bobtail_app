@@ -29,7 +29,7 @@ export const getPropsAreSame = (smallerSet, largerSet) => {
     }, true)
 }
 
-const _getTwoToThePowerOfN = (exponent, number = 2) => {
+export const getTwoToThePowerOfN = (exponent, number = 2) => {
     if (exponent === 0) {
         return 1
 
@@ -37,7 +37,7 @@ const _getTwoToThePowerOfN = (exponent, number = 2) => {
         return number
     }
 
-    return _getTwoToThePowerOfN(exponent - 1, number * 2)
+    return getTwoToThePowerOfN(exponent - 1, number * 2)
 }
 
 export const convertTrueFalseKeysToBitNumber = (keysArray, trueFalseObject) => {
@@ -45,7 +45,7 @@ export const convertTrueFalseKeysToBitNumber = (keysArray, trueFalseObject) => {
 
     return keysArray.reduce((bitNumber, key, index) => {
         if (trueFalseObject[key]) {
-            bitNumber += _getTwoToThePowerOfN(index)
+            bitNumber += getTwoToThePowerOfN(index)
         }
         return bitNumber
     }, 0)
@@ -57,7 +57,7 @@ export const convertBitNumberToTrueFalseKeys = (keysArray, bitNumber) => {
     for (let index = keysArray.length - 1; index >= 0; index--) {
         // Start from end.
         const key = keysArray[index],
-        powerNumber = _getTwoToThePowerOfN(index),
+        powerNumber = getTwoToThePowerOfN(index),
         isTrue = bitNumber >= powerNumber
 
         trueFalseObject[key] = isTrue

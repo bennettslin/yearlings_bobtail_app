@@ -89,13 +89,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-
-    {
-        taskName: `begin list of persistence checks`,
-        workedHours: 1,
-        neededHours: 3
-    },
-
     {
         taskName: `export song, don't need to send as props.`,
         workedHours: 0,
@@ -1564,5 +1557,10 @@ module.exports = [
         taskName: `Allow scrolling over verse bar.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Persistence checks.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

@@ -3,11 +3,7 @@ import React, { Component } from 'react'
 
 import './less/main.less'
 import App from './components/app'
-import AlbumData from './album/yearlings-bobtail'
-import { prepareAlbumData } from './helpers/album-build-helper'
-
-// Restructure raw data to be usable by app.
-prepareAlbumData(AlbumData)
+import AlbumData from './album-data'
 
 // class Root extends Component {
 //     render() {
