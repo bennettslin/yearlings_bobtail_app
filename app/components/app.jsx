@@ -518,7 +518,8 @@ class App extends Component {
         selectedSongIndex = 0,
         direction,
         selectedAnnotationIndex = 0,
-        selectedVerseIndex = 0
+        selectedVerseIndex = 0,
+        selectedWikiIndex = 0
     }) {
 
         // Called from audio section's previous or next buttons.
@@ -549,6 +550,9 @@ class App extends Component {
             selectedVerseIndex,
             selectedSongIndex
         })
+
+        // TODO: This prevents app from breaking when wiki is selected and song is changed. But this might be handled more strategically.
+        this.selectWiki(selectedWikiIndex)
 
         this.selectBookColumn({
             resetToDefault: true,

@@ -95,12 +95,6 @@ module.exports = [
         neededHours: 3
     },
 
-    {
-        taskName: `Selecting new song when wiki popup is open breaks it`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Hack Week.
     {
         taskName: `When song finishes playing, proceed to next more smoothly.`,
@@ -1562,5 +1556,10 @@ module.exports = [
         taskName: `Persistence checks.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Selecting new song when wiki popup is open breaks it`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
