@@ -26,18 +26,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    // Overlay.
-    {
-        taskName: `Hide elements when overlay shown.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Audio slider.
     {
@@ -89,11 +77,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `export song, don't need to send as props.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     // Hack Week.
     {
@@ -111,11 +94,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Fix selecting time in audio banner dismissing overlay and breaking.`,
-        workedHours: 0,
-        neededHours: 1
-    },
+
     {
         taskName: `Individual score pdfs.`,
         workedHours: 0,
@@ -172,6 +151,11 @@ module.exports = [
     //     taskName: `Scroll into view if needed now returns cancel function.`,
     //     workedHours: 0,
     //     neededHours: 3
+    // },
+    // {
+    //     taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
+    //     workedHours: 0,
+    //     neededHours: 5
     // },
 
     {
@@ -1559,6 +1543,11 @@ module.exports = [
     },
     {
         taskName: `Selecting new song when wiki popup is open breaks it`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Hide elements when overlay shown.`,
         workedHours: 1,
         neededHours: 1
     }

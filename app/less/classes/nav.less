@@ -50,9 +50,6 @@
 
     // TODO: Consider adjusting this animatable height for tablet and mini?
     height: @nav-height * 3; // Just an arbitrary value that's large enough.
-
-    // Prevent lyric scrolling from pushing app offscreen.
-    overflow: hidden;
 }
 
 .book-column-block, .book-column, .nav-book, .nav-toggle-book {
@@ -144,6 +141,9 @@
 
     .books-block {
         bottom: @nav-height * 2;
+
+        // Prevent lyric scrolling from pushing app offscreen.
+        overflow: hidden;
     }
 
     .book-column-block {
@@ -155,13 +155,6 @@
 
         .book-column-block {
             bottom: 0;
-        }
-
-        .column-shown {
-            // Show title if shown in desktop.
-            .nav-title {
-                transform: scale(1);
-            }
         }
     }
 }
@@ -209,7 +202,7 @@
     transform: scale(0);
 }
 
-.nav-expanded {
+.nav-expanded.overlay-hidden {
     .column-shown {
         .nav-title {
             transform: scale(1);

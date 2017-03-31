@@ -13,8 +13,12 @@
 }
 
 .menu-field {
+    position: relative;
     height: @menu-height;
     background-color: #dfd;
+    top: 0;
+
+    transition: top 0.2s;
 
     // Needs to be above nav when nav buttons are hidden.
     z-index: @menu-field-z-index;
@@ -33,6 +37,12 @@
 
     &:not(:last-child) {
         margin-right: @menu-subfield-margin;
+    }
+}
+
+.overlay-shown {
+    .menu-field {
+        top: -@menu-height;
     }
 }
 

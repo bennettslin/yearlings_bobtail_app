@@ -401,12 +401,12 @@ const LiveView = ({
             selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
             selectedDotsIndex ? 'dots-shown' : 'dots-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
+            showOverlay ? 'overlay-shown' : 'overlay-hidden',
             { 'hide-lyric-buttons': !showLyricButtons,
               'timer-in-audio': timerInAudio,
               'title-in-audio': titleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,
               'overview-shown': isOverviewShown,
-              'overlay-shown': showOverlay,
               'verse-above': isSelectedVerseAbove,
               'verse-below': isSelectedVerseBelow,
               'verse-bar-hidden': verseBarHidden }
