@@ -90,7 +90,7 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-let _stateLyricSectionTop = 0
+// let _stateLyricSectionTop = 0
 
 /*************
  * CONTAINER *
@@ -116,7 +116,6 @@ class App extends Component {
             isLyricExpanded: false,
 
             lyricSectionTop: 0,
-            showLyricButtons: true,
 
             // Start at persisted time.
             updatedTimePlayed: props.selectedTimePlayed,
@@ -391,41 +390,15 @@ class App extends Component {
         return true
     }
 
-    scrollLyricSection({
-        lyricSectionElement,
-        verseElement = this.state.selectedVerseElement,
-        fromHeightTransition
-    }) {
+    scrollLyricSection(verseElement = this.state.selectedVerseElement) {
 
-        /**
-         * Prevent verse bar from showing upon initial load.
-         */
+        // Prevent verse bar from showing upon initial load.
         if (!this.state.appMounted || !verseElement) {
             return false
         }
 
         // Get isSelectedVerseAbove and isSelectedVerseBelow.
         const newState = getVerseBarStatus(this.state, verseElement)
-
-        // Show ear and expand buttons if this is from a height transition.
-        if (fromHeightTransition) {
-            newState.showLyricButtons = true
-
-        // Otherwise, show the buttons only when scrolling up.
-        } else if (lyricSectionElement) {
-            const lyricSectionTop = lyricSectionElement.scrollTop
-
-            newState.showLyricButtons = lyricSectionTop < _stateLyricSectionTop
-
-            /**
-             * We'll store this in a variable rather than the component state
-             * in order to keep the lyric scroll smooth.
-             */
-            _stateLyricSectionTop = lyricSectionTop
-
-            // Update the lyric section element.
-            newState.lyricSectionElement = lyricSectionElement
-        }
 
         if (!getPropsAreSame(newState, this.state)) {
             this.setState(newState)

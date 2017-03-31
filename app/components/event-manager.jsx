@@ -309,15 +309,8 @@ class EventManager extends Component {
         return lyricsToggled
     }
 
-    handleLyricSectionScroll({
-        verseElement,
-        fromHeightTransition
-    }) {
-        this.props.scrollLyricSection({
-            lyricSectionElement: this.myLyricSection,
-            verseElement,
-            fromHeightTransition
-        })
+    handleLyricSectionScroll() {
+        this.props.scrollLyricSection()
     }
 
     handleLyricColumnSelect(e) {

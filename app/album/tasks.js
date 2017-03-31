@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Lyric ear and expand buttons should show strategically, so that we don't save state on each scroll. Use timeouts?`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Refocus app strategically, maybe in stopPropagation.`,
         workedHours: 0,
         neededHours: 1
@@ -1550,5 +1545,10 @@ module.exports = [
         taskName: `Hide elements when overlay shown.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Lyric ear and expand buttons should show strategically, so that we don't save state on each scroll. Use timeouts?`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

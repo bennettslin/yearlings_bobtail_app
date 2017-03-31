@@ -73,23 +73,22 @@
 }
 
 @lyric-button-side-padding: 17px;
-@lyric-button-top-padding: 52px;
+@lyric-button-top-padding: 8.5px;
 
 .lyric-column {
+    .lyric-button-block {
+        transition: transform 0.2s;
+        top: @lyric-button-top-padding;
+    }
+
     .ear-button-block {
         // Needed to expand properly in Chrome.
         right: @lyric-button-side-padding;
-        top: @lyric-button-top-padding;
     }
 
     .expand-button-block {
         left: @lyric-button-side-padding;
-        top: @lyric-button-top-padding;
     }
-}
-
-.ear-button-block, .expand-button-block {
-    transition: transform 0.2s;
 }
 
 .centre-field {
@@ -108,13 +107,7 @@
     }
 }
 
-.hide-lyric-buttons {
-    .ear-button-block {
-        transform: scale(0);
-    }
-}
-
-.lyric-collapsed, .hide-lyric-buttons {
+.lyric-collapsed {
     .lyric-column {
         .expand-button-block {
             transform: scale(0);
