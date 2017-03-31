@@ -490,7 +490,8 @@ class EventManager extends Component {
     handleVerseInteractivate(e, verseIndex) {
         this._stopPropagation(e)
         this._closeSections({
-            exemptInteractivatedVerse: true
+            exemptInteractivatedVerse: true,
+            exemptLyric: true
         })
         this.props.interactivateVerse(verseIndex)
     }
