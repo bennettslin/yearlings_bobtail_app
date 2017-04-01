@@ -8,7 +8,6 @@ const Button = ({
     iconText,
     isEnabled = true,
     isSelected,
-    accessHighlighted,
     isLarge,
     titleChild,
     handleClick
@@ -20,8 +19,7 @@ const Button = ({
             buttonName && `${buttonName}-button`,
             'button-animatable',
             { 'enabled': isEnabled,
-              'selected': isSelected,
-              'access-highlighted': accessHighlighted }
+              'selected': isSelected }
         )}
         onClick={e => handleClick(e)}
     >
@@ -45,13 +43,15 @@ Button.propTypes = {
     ]),
     isEnabled: PropTypes.bool,
     isSelected: PropTypes.bool,
-    accessHighlighted: PropTypes.bool,
     isLarge: PropTypes.bool,
     titleChild: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.element
     ]),
-    handleClick: PropTypes.func.isRequired
+    handleClick: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.func
+    ])
 };
 
 export default Button

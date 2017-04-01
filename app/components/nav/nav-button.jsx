@@ -51,7 +51,8 @@ const NavButtonView = ({
 }) => (
     <div
         className={classnames(
-            isNavToggle ? 'nav-toggle-button-block' : 'nav-button-block'
+            isNavToggle ? 'nav-toggle-button-block' : 'nav-button-block',
+            { 'access-highlighted': accessHighlighted }
         )}
     >
         <Button
@@ -59,7 +60,6 @@ const NavButtonView = ({
             iconText={iconText}
             isLarge={isNavToggle}
             isSelected={isSelected}
-            accessHighlighted={accessHighlighted}
             handleClick={handleClick}
             titleChild={!isNavToggle &&
                 <div className="nav-title-block">

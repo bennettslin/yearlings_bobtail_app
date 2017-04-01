@@ -1,4 +1,6 @@
 import React from 'react'
+import classnames from 'classnames'
+import Button from '../button/button'
 
 /*************
  * CONTAINER *
@@ -15,11 +17,7 @@ const LyricsAudioButton = ({
     handleAudioButtonClick
 
 }) => {
-
-    const onClick = isAudioButtonEnabled ? handleAudioButtonClick : null
-
-    let buttonIcon,
-        audioStatusClassName = isSelected ? 'audio-colour' : 'audio-nav'
+    let buttonIcon
 
     if (isSelected) {
         buttonIcon = isPlaying ? `\u23F8` : `\u25BA`
@@ -28,19 +26,21 @@ const LyricsAudioButton = ({
     }
 
     return (
-        <div className={`lyrics-audio-button-block ${isAudioButtonEnabled ? 'audio-button-enabled' : ''}`}>
-            <a className={`lyrics-audio-button-child lyrics-audio-button ${isAudioButtonEnabled ? 'enabled' : ''}`}
-                onClick={onClick}
-            >
-                <div className={`
-                        button-icon
-                        lyrics-audio-icon
-                        ${audioStatusClassName}
-                    `}
-                >
-                    {buttonIcon}
-                </div>
-            </a>
+        <div
+            className={classnames(
+                'lyrics-audio-button-block',
+                { 'audio-button-enabled': isAudioButtonEnabled }
+            )}
+        >
+            <div className="lyrics-audio-button-child">
+                <Button
+                    buttonName="lyrics-audio"
+                    isEnabled={isAudioButtonEnabled}
+                    iconClass={isSelected ? 'audio-colour' : 'audio-nav'}
+                    iconText={buttonIcon}
+                    handleClick={isAudioButtonEnabled && handleAudioButtonClick}
+                />
+            </div>
         </div>
     )
 }
