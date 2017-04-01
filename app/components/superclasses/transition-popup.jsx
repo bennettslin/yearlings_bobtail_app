@@ -108,13 +108,13 @@ const TransitionPopupView = ({
     return (
         <div className={`popup-wrapper ${popupClassName}`}>
             {showClose &&
-                <div className="popup-button close-button shadow"></div>
+                <div className="popup-button-block close-position shadow"></div>
             }
             {showArrows &&
-                <div className="popup-button side-button previous-button shadow"></div>
+                <div className="popup-button-block side-position previous-position shadow"></div>
             }
             {showArrows &&
-                <div className="popup-button side-button next-button shadow"></div>
+                <div className="popup-button-block side-position next-position shadow"></div>
             }
             <div
                 className={`popup-content-wrapper ${popupClassName}`}

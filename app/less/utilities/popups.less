@@ -139,7 +139,7 @@
     }
 }
 
-.popup-button {
+.popup-button-block {
     position: absolute;
 
     display: flex;
@@ -155,7 +155,7 @@
         z-index: @popup-interactable-z-index;
     }
 
-    &.close-button {
+    &.close-position {
         top: -@app-large-icon-diameter * @popup-button-multiplier;
         left: -@app-large-icon-diameter * @popup-button-multiplier;
         border-radius: 50%;
@@ -165,7 +165,7 @@
         background-color: #fdd;
     }
 
-    &.side-button {
+    &.side-position {
         top: @app-large-icon-diameter * 0.2;
 
         border-radius: 50%;
@@ -173,11 +173,11 @@
         background-color: #dfd;
     }
 
-    &.previous-button {
+    &.previous-position {
         left: -@app-large-icon-diameter * @popup-button-multiplier;
     }
 
-    &.next-button {
+    &.next-position {
         right: -@app-large-icon-diameter * @popup-button-multiplier;
     }
 
@@ -186,7 +186,7 @@
         overflow: hidden;
         box-shadow: @popup-box-shadow;
 
-        &.close-button {
+        &.close-position {
             box-shadow: @popup-darker-box-shadow;
         }
     }
@@ -257,9 +257,9 @@
         }
     }
 
-    .popup-button {
+    .popup-button-block {
 
-        &.side-button {
+        &.side-position {
             top: 50%;
             transform: translateY(-50%);
         }
@@ -274,19 +274,19 @@
 
     &.phone-width, .side-annotation {
 
-        .popup-button {
-            &.side-button {
+        .popup-button-block {
+            &.side-position {
                 // Override default styling.
                 transform: none;
                 top: auto;
                 bottom: -@app-icon-diameter * @popup-button-multiplier;
             }
 
-            &.previous-button {
+            &.previous-position {
                 left: @app-icon-diameter * 0.2;
             }
 
-            &.next-button {
+            &.next-position {
                 right: @app-icon-diameter * 0.2;
             }
         }
@@ -299,8 +299,8 @@
                 height: ~"calc(100% - @{app-icon-diameter} * 2)";
             }
 
-            .popup-button {
-                &.close-button {
+            .popup-button-block {
+                &.close-position {
                     display: none;
                 }
             }

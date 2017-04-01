@@ -195,8 +195,8 @@ module.exports = {
     ],
 
     CLOSE_POPUP_BUTTON: 'close',
-    PREVIOUS_POPUP_BUTTON: 'side-button previous',
-    NEXT_POPUP_BUTTON: 'side-button next',
+    PREVIOUS_POPUP_BUTTON: 'side-position previous',
+    NEXT_POPUP_BUTTON: 'side-position next',
 
     SELECTED_ADMIN_INDEX: 'selectedAdminIndex',
     SELECTED_SONG_INDEX: 'selectedSongIndex',

@@ -1,4 +1,6 @@
 import React from 'react'
+import classnames from 'classnames'
+import Button from '../button/button'
 
 import { CLOSE_POPUP_BUTTON,
          PREVIOUS_POPUP_BUTTON,
@@ -35,15 +37,16 @@ const TransitionPopupButton = ({
     }
 
     return (
-        <div className={`popup-button button-animatable ${buttonName}-button`}>
-            <a
-                className={`popup-button-interactable enabled`}
-                onClick={handleClick}
-            >
-            </a>
-            <div className="popup-button-icon">
-                {tempUnicodeSymbol}
-            </div>
+        <div
+            className={classnames(
+                'popup-button-block',
+                `${buttonName}-position`
+            )}
+        >
+            <Button
+                iconText={tempUnicodeSymbol}
+                handleClick={handleClick}
+            />
         </div>
     )
 }

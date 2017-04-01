@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
 import CSSTransitionGroup from 'react-addons-css-transition-group'
+import Button from '../button/button'
 
 // TODO: Separate into container and presentation components?
 const CLOSE = 'close',
-    PREVIOUS = 'side-button previous',
-    NEXT = 'side-button next'
+    PREVIOUS = 'side-position previous',
+    NEXT = 'side-position next'
 
 const PopupButton = ({
 
@@ -27,15 +29,16 @@ const PopupButton = ({
     }
 
     return (
-        <div className={`popup-button button-animatable ${buttonName}-button`}>
-            <a
-                className={`popup-button-interactable enabled`}
-                onClick={e => handlePopupButtonClick(e)}
-            >
-            </a>
-            <div className="popup-button-icon">
-                {tempUnicodeSymbol}
-            </div>
+        <div
+            className={classnames(
+                'popup-button-block',
+                `${buttonName}-position`
+            )}
+        >
+            <Button
+                iconText={tempUnicodeSymbol}
+                handleClick={handlePopupButtonClick}
+            />
         </div>
     )
 }
@@ -54,13 +57,13 @@ class PopupTransitionGroup extends Component {
         return element && (
             <div className={`popup-wrapper ${className}`}>
                 {showClose &&
-                    <div className="popup-button close-button shadow"></div>
+                    <div className="popup-button-block close-position shadow"></div>
                 }
                 {showArrows &&
-                    <div className="popup-button side-button previous-button shadow"></div>
+                    <div className="popup-button-block side-position previous-position shadow"></div>
                 }
                 {showArrows &&
-                    <div className="popup-button side-button next-button shadow"></div>
+                    <div className="popup-button-block side-position next-position shadow"></div>
                 }
                 <div
                     className={`popup-content-wrapper ${className}`}
