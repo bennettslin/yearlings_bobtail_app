@@ -117,25 +117,31 @@
 }
 
 .dot {
-    &:not(:last-child) {
-        margin-right: 1px;
+    &:not(.button), & .button-icon {
+        border: @dot-border solid #aaa;
+
+        // TODO: Key styling.
+        &.songwriting { background-color: @songwriting-dot-colour; }
+        &.narrative { background-color: @narrative-dot-colour; }
+        &.pun { background-color: @pun-dot-colour; }
+        &.reference { background-color: @reference-dot-colour; }
+        &.backstory { background-color: @backstory-dot-colour; }
+        &.observation { background-color: @observation-dot-colour; }
+        &.portal { background-color: @portal-dot-colour; }
+        &.afterword { background-color: @afterword-dot-colour; }
+
+        &:not(.button) {
+            border-radius: 50%;
+
+            &:not(:last-child) {
+                margin-right: 1px;
+            }
+        }
+
+        &.button-icon {
+            transition: background-color 0.15s;
+        }
     }
-}
-
-.dot:not(.button), .dot .button-icon {
-    border: @dot-border solid #aaa;
-    border-radius: 50%;
-    transition: background-color 0.15s;
-
-    // TODO: Key styling.
-    &.songwriting { background-color: @songwriting-dot-colour; }
-    &.narrative { background-color: @narrative-dot-colour; }
-    &.pun { background-color: @pun-dot-colour; }
-    &.reference { background-color: @reference-dot-colour; }
-    &.backstory { background-color: @backstory-dot-colour; }
-    &.observation { background-color: @observation-dot-colour; }
-    &.portal { background-color: @portal-dot-colour; }
-    &.afterword { background-color: @afterword-dot-colour; }
 }
 
 .dots-section {

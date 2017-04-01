@@ -20,6 +20,7 @@ const Button = ({
             'button',
             buttonName && `${buttonName}-button`,
             buttonClasses,
+            { 'large': isLarge },
             { 'enabled': isEnabled,
               'selected': isSelected,
               'deselected': isDeselected }
@@ -28,8 +29,7 @@ const Button = ({
     >
         <div className={classnames(
             'button-icon',
-            iconClass,
-            { 'large': isLarge }
+            iconClass
         )}>
             {iconText}
         </div>

@@ -60,19 +60,17 @@
     width: 100%;
     height: @overview-toggle-height;
 
-    .button-icon {
+    // Override default size.
+    .button {
         width: 100%;
         height: 100%;
-        border-radius: 0;
+    }
 
+    // Override default border radius.
+    .button-icon {
+        border-radius: 0;
         background-color: #d84;
     }
-}
-
-.overview-toggle-button {
-    position: absolute;
-    width: 100%;
-    height: 100%;
 }
 
 // Hidden to left when is logue, or annotation shown.
