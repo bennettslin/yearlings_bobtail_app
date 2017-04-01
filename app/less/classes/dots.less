@@ -11,19 +11,19 @@
     display: flex;
     width: auto;
     height: 100%;
+}
 
+.anchor-block {
     .dot {
-        &.animatable {
-            transition: width 0.15s, transform 0.15s;
+        transition: width 0.15s, transform 0.15s;
 
-            &.is-present {
-                transform: scale(1);
-            }
+        &.is-present {
+            transform: scale(1);
+        }
 
-            &.is-absent {
-                transform: scale(0);
-                width: 0;
-            }
+        &.is-absent {
+            transform: scale(0);
+            width: 0;
         }
     }
 }
@@ -65,14 +65,8 @@
 
     .dot {
         // TODO: Improve state styling.
-        &.background { opacity: 0.35; }
         &.dot-stanza-disabled { background-color: lightGray; }
         &.deselected { background-color: lightGray; }
-
-        // TODO: Obviously.
-        &.access-outlined {
-            background-color: violet;
-        }
     }
 }
 

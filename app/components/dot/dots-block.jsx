@@ -38,7 +38,6 @@ const DotBlockView = ({
     // From props.
     onlyShowFirstDotKey,
     inDotsSection,
-    inBackground,
     selectedDotKeys,
     presentDotKeys,
     accessedDotIndex,
@@ -85,7 +84,6 @@ const DotBlockView = ({
                             key={index}
                             dotKey={dotKey}
                             accessHighlighted={accessHighlighted}
-                            isPresent={isPresent}
                             isSelected={isSelected}
                         />
                     )
@@ -101,9 +99,7 @@ const DotBlockView = ({
                             className={classnames(
                                 'dot',
                                 dotKey,
-                                isPresent ? 'is-present' : 'is-absent',
-                                { 'animatable': inAnchor,
-                                  'background': inBackground }
+                                isPresent ? 'is-present' : 'is-absent'
                             )}
                         />
                     )

@@ -103,7 +103,6 @@ const AnchorBlockView = ({
             {dotKeys && !wikiIndex && !inPortal &&
                 <DotBlock
                     inAnchor={true}
-                    inBackground={isSelected}
                     presentDotKeys={dotKeys}
                     allAnimatableDotKeys={allAnimatableDotKeys}
                 />

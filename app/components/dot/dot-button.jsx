@@ -68,7 +68,6 @@ class DotButtonView extends Component {
 
             // From props.
             dotKey,
-            isPresent,
             accessHighlighted,
             inDotsSection,
 
@@ -115,8 +114,7 @@ class DotButtonView extends Component {
                         'dot',
                         dotKey,
                         { 'enabled': isEnabled },
-                        { 'background': !isPresent,
-                          'dot-stanza-disabled': !isEnabled,
+                        { 'dot-stanza-disabled': !isEnabled,
                           'deselected': isToggleDeselected }
                     )}
                     onClick={onClick}
