@@ -7,7 +7,10 @@ const Button = ({
     iconClass,
     iconText,
     isEnabled = true,
+    isSelected,
+    accessHighlighted,
     isLarge,
+    titleChild,
     handleClick
 
 }) => (
@@ -16,7 +19,9 @@ const Button = ({
             'button',
             buttonName && `${buttonName}-button`,
             'button-animatable',
-            { 'enabled': isEnabled }
+            { 'enabled': isEnabled,
+              'selected': isSelected,
+              'access-highlighted': accessHighlighted }
         )}
         onClick={e => handleClick(e)}
     >
@@ -27,6 +32,7 @@ const Button = ({
         )}>
             {iconText}
         </div>
+        {titleChild}
     </a>
 )
 
@@ -38,7 +44,13 @@ Button.propTypes = {
         PropTypes.number
     ]),
     isEnabled: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    accessHighlighted: PropTypes.bool,
     isLarge: PropTypes.bool,
+    titleChild: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.element
+    ]),
     handleClick: PropTypes.func.isRequired
 };
 

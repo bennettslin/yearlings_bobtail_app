@@ -72,7 +72,7 @@
 }
 
 .static-icon {
-    .nav-button {
+    .nav-button-block {
         width: @app-icon-diameter;
     }
 }
@@ -99,36 +99,37 @@
 .nav-toggle-block {
     position: relative;
     overflow: hidden;
+
+    .button-icon {
+        background-color: #8dd;
+    }
+}
+
+.nav-button-block {
+    position: relative;
+
+    .button-icon {
+        background-color: #dd8;
+    }
 }
 
 .nav-button {
-    position: relative;
-}
-
-.nav-icon-block {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-}
 
-.nav-icon {
-    background-color: #dd8;
-}
-
-.nav-toggle-icon {
-    background-color: #8dd;
-}
-
-.selected {
-    .nav-icon {
-        background-color: orange;
+    &.selected {
+        .button-icon {
+            background-color: orange;
+        }
     }
 }
 
 .nav-title-block {
     position: absolute;
+    bottom: 50%;
     left: 25%;
     width: 0;
 
@@ -185,6 +186,7 @@
     .nav-title-block {
         transform: rotate(45deg);
         transform-origin: left bottom;
+        bottom: auto;
         top: 50%;
     }
 
@@ -214,7 +216,7 @@
 .shrink-icon {
     .column-shown {
         &.column-1 {
-            .nav-button {
+            .nav-button-block {
                 &:not(:last-child) {
                     margin-right: 1px;
                 }
@@ -222,7 +224,7 @@
         }
 
         &.column-2 {
-            .nav-button {
+            .nav-button-block {
                 &:not(:last-child) {
                     margin-left: 1px;
                 }
@@ -276,7 +278,7 @@
             transition: right 0.2s;
             flex-direction: row-reverse;
 
-            .nav-icon-block {
+            .nav-button {
                 right: 0;
             }
         }
@@ -288,7 +290,7 @@
 }
 
 .single-book-column {
-    .nav-button {
+    .nav-button-block {
         transition: width 0.2s;
     }
 }
@@ -311,7 +313,7 @@
         }
     }
 
-    .nav-button {
+    .nav-button-block {
         width: 0;
     }
 }

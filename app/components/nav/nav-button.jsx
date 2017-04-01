@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
+import Button from '../button/button'
 
 /*************
  * CONTAINER *
@@ -48,30 +49,27 @@ const NavButtonView = ({
     handleClick
 
 }) => (
-    <a
+    <div
         className={classnames(
-            'enabled',
-            isNavToggle ? 'nav-toggle-button' : 'nav-button',
-            { 'selected': isSelected,
-              'access-highlighted': accessHighlighted }
+            isNavToggle ? 'nav-toggle-button-block' : 'nav-button-block'
         )}
-        onClick={handleClick}
     >
-        <div className="nav-icon-block">
-            <div className={classnames(
-                'button-icon',
-                'button-animatable',
-                isNavToggle ? 'large nav-toggle-icon' : 'nav-icon'
-            )}>
-                {iconText}
-            </div>
-        </div>
-        <div className="nav-title-block">
-            <div className="nav-title">
-                {songTitle}
-            </div>
-        </div>
-    </a>
+        <Button
+            buttonName="nav"
+            iconText={iconText}
+            isLarge={isNavToggle}
+            isSelected={isSelected}
+            accessHighlighted={accessHighlighted}
+            handleClick={handleClick}
+            titleChild={!isNavToggle &&
+                <div className="nav-title-block">
+                    <div className="nav-title">
+                        {songTitle}
+                    </div>
+                </div>
+            }
+        />
+    </div>
 )
 
 export default NavButton
