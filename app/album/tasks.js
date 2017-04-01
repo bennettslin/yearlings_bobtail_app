@@ -1547,5 +1547,10 @@ module.exports = [
         taskName: `Lyric ear and expand buttons should show strategically, so that we don't save state on each scroll. Use timeouts?`,
         workedHours: 2,
         neededHours: 2
-    }
+    },
+    {
+        taskName: `Use button class.`,
+        workedHours: 0,
+        neededHours: 5
+    },
 ]

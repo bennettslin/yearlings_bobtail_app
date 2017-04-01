@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../button/button'
 import { OVERVIEW_OPTIONS } from '../../helpers/constants'
 
 /*************
@@ -23,13 +24,12 @@ const OverviewToggleView = ({
     handleOverviewToggle
 
 }) => (
-    <div className="overview-toggle-button-container button-animatable">
-        <a
-            className="overview-toggle-button enabled"
-            onClick={e => handleOverviewToggle(e)}
-        >
-            {OVERVIEW_OPTIONS[selectedOverviewIndex]}
-        </a>
+    <div className="overview-toggle-button-container">
+        <Button
+            buttonName="overview-toggle"
+            iconText={OVERVIEW_OPTIONS[selectedOverviewIndex]}
+            handleClick={handleOverviewToggle}
+        />
     </div>
 )
 
