@@ -3,6 +3,9 @@ import AccessManager from './access-manager'
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
 import { getIsLogue } from '../helpers/album-view-helper'
 
+import { OVERVIEW_OPTIONS,
+         DISABLED } from '../helpers/constants'
+
 class EventManager extends Component {
 
     constructor(props) {
@@ -15,7 +18,6 @@ class EventManager extends Component {
         this.handleVerseDirectionAccess = this.handleVerseDirectionAccess.bind(this)
 
         this.handleBodyClick = this.handleBodyClick.bind(this)
-        this._handleBodyFocus = this._handleBodyFocus.bind(this)
         this.handleBodyTouchMove = this.handleBodyTouchMove.bind(this)
         this.handleBodyTouchEnd = this.handleBodyTouchEnd.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
@@ -59,8 +61,6 @@ class EventManager extends Component {
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
         this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
 
-        this._stopPropagation = this._stopPropagation.bind(this)
-
         this.state = {
             cancelScrollIntoView: null
         }
@@ -68,7 +68,7 @@ class EventManager extends Component {
 
     componentDidMount() {
         // Focus lyric section when app is mounted.
-        this._handleBodyFocus()
+        this._focusBody()
     }
 
     /********
@@ -83,7 +83,7 @@ class EventManager extends Component {
 
         // Return focus to lyric section so it can have scroll access.
         // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-        this._handleBodyFocus()
+        this._focusBody()
     }
 
     handlePopupContainerClick(e) {
@@ -102,7 +102,7 @@ class EventManager extends Component {
         }
     }
 
-    _handleBodyFocus(newAdminIndex) {
+    _focusBody(newAdminIndex) {
         const { domProps } = this.props,
             doFocusAdmin = typeof newAdminIndex !== 'undefined' ?
                 newAdminIndex : domProps.selectedAdminIndex
@@ -163,7 +163,7 @@ class EventManager extends Component {
         this._stopPropagation(e)
 
         // Change focus for keyboard events.
-        this._handleBodyFocus(newAdminIndex)
+        this._focusBody(newAdminIndex)
         return true
     }
 
@@ -230,6 +230,7 @@ class EventManager extends Component {
         const songSelected = this.props.selectSong({
             direction: -1
         })
+        this._closeDotsIfOverviewWillShow()
         if (songSelected) {
             this._stopPropagation(e)
         }
@@ -240,6 +241,7 @@ class EventManager extends Component {
         const songSelected = this.props.selectSong({
             direction: 1
         })
+        this._closeDotsIfOverviewWillShow()
         if (songSelected) {
             this._stopPropagation(e)
         }
@@ -618,8 +620,24 @@ class EventManager extends Component {
         }
     }
 
-    render() {
+    _closeDotsIfOverviewWillShow() {
+        /**
+         * Helper method to close the dots section when selecting new song and
+         * overview is not disabled.
+         */
+        const { domProps } = this.props,
+            { selectedDotsIndex } = domProps
 
+        if (selectedDotsIndex) {
+            const selectedOverviewOption = OVERVIEW_OPTIONS[domProps.selectedOverviewIndex]
+
+            if (selectedOverviewOption !== DISABLED) {
+                this.props.selectDotsExpand()
+            }
+        }
+    }
+
+    render() {
         const { domProps,
                 domState } = this.props
 
