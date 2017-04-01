@@ -14,7 +14,7 @@ const Button = ({
     <a
         className={classnames(
             'button',
-            `${buttonName}-button`,
+            buttonName && `${buttonName}-button`,
             'button-animatable',
             { 'enabled': isEnabled }
         )}
