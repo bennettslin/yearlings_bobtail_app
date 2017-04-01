@@ -1,9 +1,17 @@
 module.exports = [
+
+    // Consolidate buttons.
     {
         taskName: `In button animation, hover element is different from animated element.`,
         workedHours: 0,
         neededHours: 2
     },
+    {
+        taskName: `make visual keyboard keys`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     {
         taskName: `Refocus app strategically, maybe in stopPropagation.`,
         workedHours: 0,
@@ -46,13 +54,6 @@ module.exports = [
         neededHours: 2
     },
 
-    // Bugs.
-    {
-        taskName: `Recalculate whether selected verse is shown when changing height.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Portals.
     {
         taskName: `Figure out when portal has no description`,
@@ -63,14 +64,6 @@ module.exports = [
         taskName: 'final check on all portals',
         workedHours: 0,
         neededHours: 1
-    },
-
-    // Scrolling.
-
-    {
-        taskName: `Get unit tests working again.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     // Hack Week.
@@ -104,11 +97,6 @@ module.exports = [
         taskName: `Routing and copy link button`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `make visual keyboard keys`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `write album overview`,
@@ -151,6 +139,16 @@ module.exports = [
     //     taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
     //     workedHours: 0,
     //     neededHours: 5
+    // },
+    // {
+    //     taskName: `Recalculate whether selected verse is shown when changing height.`,
+    //     workedHours: 0,
+    //     neededHours: 1
+    // },
+    // {
+    //     taskName: `Get unit tests working again.`,
+    //     workedHours: 0,
+    //     neededHours: 3
     // },
 
     {

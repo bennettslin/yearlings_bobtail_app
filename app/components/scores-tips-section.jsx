@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './button/button'
 import { TIPS_OPTIONS } from '../helpers/constants'
 
 /*************
@@ -27,23 +28,19 @@ const ScoresTipsSectionView = ({
     return (
         <div className="section scores-tips-section">
             {!isPhone &&
-                <a
-                    className="scores-tips-button scores-button button-animatable enabled"
-                    onClick={e => handleScoreToggle(e)}
-                >
-                    <div className="large button-icon scores-icon">
-                        {selectedScoreIndex}
-                    </div>
-                </a>
+                <Button
+                    buttonName={'scores'}
+                    iconText={selectedScoreIndex}
+                    isLarge={true}
+                    handleClick={handleScoreToggle}
+                />
             }
-            <a
-                className="scores-tips-button tips-button button-animatable enabled"
-                onClick={e => handleTipsToggle(e)}
-            >
-                <div className="large button-icon tips-icon">
-                    {TIPS_OPTIONS[selectedTipsIndex]}
-                </div>
-            </a>
+            <Button
+                buttonName={'tips'}
+                iconText={TIPS_OPTIONS[selectedTipsIndex]}
+                isLarge={true}
+                handleClick={handleTipsToggle}
+            />
         </div>
     )
 }

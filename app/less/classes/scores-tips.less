@@ -25,7 +25,7 @@
         flex-direction: column;
         align-items: flex-start;
 
-        .scores-tips-button:first-child {
+        .button:first-child {
             margin-bottom: @scores-tips-margin;
         }
     }
@@ -34,7 +34,7 @@
 .scores-tips-menu-subfield {
     min-width: @scores-tips-width;
     .scores-tips-section {
-        .scores-tips-button:first-child {
+        .button:first-child {
             margin-right: @scores-tips-margin;
         }
     }
@@ -80,39 +80,27 @@
         // In phone, section is always in centre field.
         .scores-tips-section {
             bottom: auto;
-            // flex-direction: column-reverse;
-            //
-            // // Override default styling.
-            // .scores-tips-button {
-            //     &:first-child {
-            //         margin-bottom: auto;
-            //     }
-            //
-            //     &:last-child {
-            //         margin-bottom: @scores-tips-margin;
-            //     }
-            // }
         }
     }
 }
 
-.scores-tips-button {
+.scores-tips-section .button {
     transition: transform 0.2s, opacity 0.2s;
+
+    .button-icon {
+        background-color: #dbb;
+    }
 }
 
 .is-logue {
-    .scores-tips-button {
+    .scores-tips-section .button {
         transform: scale(0);
         opacity: 0;
     }
 }
 
 .is-song {
-    .scores-tips-button {
+    .scores-tips-section .button {
         transform: scale(1);
     }
-}
-
-.scores-icon, .tips-icon {
-    background-color: #dbb;
 }
