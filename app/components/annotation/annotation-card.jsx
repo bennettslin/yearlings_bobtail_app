@@ -1,5 +1,5 @@
 import React from 'react'
-import DotBlock from '../dot/dot-block'
+import DotBlock from '../dot/dots-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
 import { getPortalLinks } from '../../helpers/album-view-helper'

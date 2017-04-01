@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import DotBlock from '../dot/dot-block'
+import DotBlock from '../dot/dots-block'
 
 /*************
  * CONTAINER *

@@ -25,13 +25,15 @@ const DotsToggleView = ({
     // From controller.
 
 }) => (
-    <div className="dots-toggle-button-block">
-        <Button
-            buttonName="dots-toggle"
-            iconText={selectedDotsIndex}
-            isLarge={true}
-            handleClick={handleDotsSectionToggle}
-        />
+    <div className="dots-toggle-button-container">
+        <div className="dots-toggle-button-block">
+            <Button
+                buttonName="dots-toggle"
+                iconText={selectedDotsIndex}
+                isLarge={true}
+                handleClick={handleDotsSectionToggle}
+            />
+        </div>
     </div>
 )
 

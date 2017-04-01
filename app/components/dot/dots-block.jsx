@@ -55,7 +55,7 @@ const DotBlockView = ({
 
     return (
         <span className={classnames(
-            'dot-block',
+            'dots-block',
             annotationIndex && `annotation-${annotationIndex}`,
             { 'interactable': isInteractable }
         )}>

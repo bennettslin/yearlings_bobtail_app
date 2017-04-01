@@ -1,6 +1,6 @@
 import React from 'react'
 import TextBlock from './text-block'
-import DotBlock from '../dot/dot-block'
+import DotBlock from '../dot/dots-block'
 import { getIntersection } from '../../helpers/dot-helper'
 
 /*************

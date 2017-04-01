@@ -7,9 +7,21 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Stylise dots section better`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `make visual keyboard keys`,
         workedHours: 0,
         neededHours: 3
+    },
+
+    // Audio slider.
+    {
+        taskName: `Slider in verse styling, determine slider selected verse.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     {
@@ -22,20 +34,12 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-
-    // Song selection timeout.
     {
         taskName: `Line still not resetting width properly, going from Cremated to Uncanny in laptop width.`,
         workedHours: 0,
         neededHours: 2
     },
 
-    // Audio slider.
-    {
-        taskName: `Slider in verse styling, determine slider selected verse.`,
-        workedHours: 0,
-        neededHours: 2
-    },
     {
         taskName: `Selecting time or verse while audio player is running is now buggy.`,
         workedHours: 0,
@@ -43,11 +47,6 @@ module.exports = [
     },
 
     // Touch accessibility.
-    {
-        taskName: `Stylise dots section better`,
-        workedHours: 0,
-        neededHours: 1
-    },
     {
         taskName: `audio banner is touch accessible.`,
         workedHours: 0,
