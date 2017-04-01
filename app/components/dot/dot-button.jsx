@@ -110,7 +110,8 @@ class DotButtonView extends Component {
                     </a>
                 }
                 <Button
-                    buttonClasses={['dot', dotKey]}
+                    buttonClasses={['dot']}
+                    iconClass={dotKey}
                     isEnabled={isEnabled}
                     isDeselected={inDotsSection ? !isSelected : undefined}
                     extraChild={dotDescription}

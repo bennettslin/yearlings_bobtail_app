@@ -1,5 +1,14 @@
 module.exports = [
-
+    {
+        taskName: `Arrow keys should not work when wiki popup is up.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Bug where selecting interactivated verse does not deselect verse bar.`,
+        workedHours: 0,
+        neededHours: 2
+    },
     // Consolidate buttons.
     {
         taskName: `In button animation, hover element is different from animated element.`,

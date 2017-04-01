@@ -117,13 +117,15 @@
 }
 
 .dot {
-    border: @dot-border solid #aaa;
-    border-radius: 50%;
-    transition: background-color 0.15s;
-
     &:not(:last-child) {
         margin-right: 1px;
     }
+}
+
+.dot:not(.button), .dot .button-icon {
+    border: @dot-border solid #aaa;
+    border-radius: 50%;
+    transition: background-color 0.15s;
 
     // TODO: Key styling.
     &.songwriting { background-color: @songwriting-dot-colour; }
@@ -137,14 +139,14 @@
 }
 
 .dots-section {
-    .dot {
-        &.deselected { background-color: lightGray; }
+    .dot.deselected {
+        .button-icon { background-color: lightGray; }
     }
 }
 
 .dots-stanza {
-    .dot {
-        &:not(.enabled) { background-color: lightGray; }
+    .dot:not(.enabled) {
+        .button-icon { background-color: lightGray; }
     }
 }
 

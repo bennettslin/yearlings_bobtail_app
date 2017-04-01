@@ -20,7 +20,6 @@ const Button = ({
             'button',
             buttonName && `${buttonName}-button`,
             buttonClasses,
-            'button-animatable',
             { 'enabled': isEnabled,
               'selected': isSelected,
               'deselected': isDeselected }

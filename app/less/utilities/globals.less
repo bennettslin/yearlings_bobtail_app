@@ -26,42 +26,6 @@ h1, h2, h3 {
     align-items: center;
 }
 
-/***********
- * BUTTONS *
- ***********/
-
-.button-icon {
-    width: @app-icon-diameter;
-    height: @app-icon-diameter;
-    border-radius: 50%;
-}
-
-.button-icon.large, .popup-button-block {
-    width: @app-large-icon-diameter;
-    height: @app-large-icon-diameter;
-}
-
-.tablet-width {
-    .button-icon.large, .popup-button-block {
-        width: @app-tablet-large-icon-diameter;
-        height: @app-tablet-large-icon-diameter;
-    }
-}
-
-.mini-width {
-    .button-icon.large, .popup-button-block {
-        width: @app-mini-large-icon-diameter;
-        height: @app-mini-large-icon-diameter;
-    }
-}
-
-.phone-width {
-    .button-icon.large, .popup-button-block {
-        width: @app-icon-diameter;
-        height: @app-icon-diameter;
-    }
-}
-
 .enabled {
     cursor: pointer;
 
@@ -77,11 +41,5 @@ h1, h2, h3 {
         &:active {
             color: @lyric-active-colour;
         }
-    }
-}
-
-.button-animatable {
-    &:hover {
-        animation: transformLightBounce 0.15s;
     }
 }
