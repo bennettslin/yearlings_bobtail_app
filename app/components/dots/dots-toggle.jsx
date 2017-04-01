@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../button/button'
 
 /*************
  * CONTAINER *
@@ -25,14 +26,12 @@ const DotsToggleView = ({
 
 }) => (
     <div className="dots-toggle-button-block">
-        <a
-            className="dots-toggle-button button-animatable enabled"
-            onClick={e => handleDotsSectionToggle(e)}
-        >
-            <div className="large button-icon dots-toggle-icon">
-                {selectedDotsIndex}
-            </div>
-        </a>
+        <Button
+            buttonName="dots-toggle"
+            iconText={selectedDotsIndex}
+            isLarge={true}
+            handleClick={handleDotsSectionToggle}
+        />
     </div>
 )
 
