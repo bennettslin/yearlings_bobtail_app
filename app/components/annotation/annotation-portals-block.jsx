@@ -43,7 +43,7 @@ const AnnotationPortalsBlockView = ({
             return (
                 <div
                     key={index}
-                    className="portal-block enabled"
+                    className="portal-block"
                     onClick={handleClick}
                 >
                     <div className="song-title">

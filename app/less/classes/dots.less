@@ -1,7 +1,7 @@
-@dot-interactable-diameter: 64px;
-@dot-container-padding: @dot-interactable-diameter / 6;
+@dot-container-diameter: 64px;
+@dot-container-padding: @dot-container-diameter / 6;
 
-@dot-interactable-phone-diameter: @app-large-icon-diameter * 0.95;
+@dot-container-phone-diameter: @app-large-icon-diameter * 0.95;
 @dot-container-phone-padding: @app-large-icon-diameter / 7;
 
 @dot-border: 1px;
@@ -26,44 +26,6 @@
             }
         }
     }
-
-    &.interactable {
-
-        .dot-container {
-            position: relative;
-            //
-            // &.dot-enabled {
-            //
-            //     &.interacted {
-            //
-            //         .dot {
-            //             animation: transformLightBounce 0.15s;
-            //             background-color: orange;
-            //         }
-            //     }
-            // }
-        }
-
-        .dot {
-            // TODO: Improve state styling.
-            &.background { opacity: 0.35; }
-            &.dot-stanza-disabled { background-color: lightGray; }
-            &.deselected { background-color: lightGray; }
-
-            // TODO: Obviously.
-            &.access-outlined {
-                background-color: violet;
-            }
-        }
-    }
-}
-
-.dot {
-    border: @dot-border solid #aaa;
-
-    &:not(:last-child) {
-        margin-right: 1px;
-    }
 }
 
 // Undo reverse dot order caused by right column's rtl direction.
@@ -73,24 +35,8 @@
     }
 }
 
-.dot-interactable {
-    // These are overridden by dots in subfield.
-    width: 100%;
-    height: 100%;
-    top: 0;
-
-    // TODO: Needs to be bigger because of dot border.
-
-    z-index: @dot-interactable-z-index;
-    position: absolute;
-    border-radius: 50%;
-
-    // FIXME: Not great.
-    &:active { background-color: red; opacity: 0.2; }
-}
-
 .dots-subfield {
-    .dot-diameter-mixin(@dot-interactable-diameter, 0);
+    .dot-diameter-mixin(@dot-container-diameter, 0);
 
     .dots-block {
         display: flex;
@@ -99,12 +45,7 @@
 
         // Monitor through mini will have four dots per row.
         // FIXME: Not sure why 3 is the minimum multiplier for border...?
-        width: 4 * (@dot-interactable-diameter + 2 * @dot-container-padding + 3 * @dot-border);
-    }
-
-    // FIXME: This should accommodate touch size.
-    .dot-text {
-        // padding-bottom: 5px;
+        width: 4 * (@dot-container-diameter + 2 * @dot-container-padding + 3 * @dot-border);
     }
 
     .dot-container {
@@ -113,23 +54,32 @@
         padding: @dot-container-padding;
         box-sizing: border-box;
     }
-
-    .dot-interactable {
-        width: @dot-interactable-diameter + @dot-border * 2;
-        height: @dot-interactable-diameter + @dot-border * 2;
-        // top: auto;
-        top: @dot-container-padding;
-    }
 }
 
 .dots-section {
     padding: 10px;
+
+    .dot-container {
+        position: relative;
+    }
+
+    .dot {
+        // TODO: Improve state styling.
+        &.background { opacity: 0.35; }
+        &.dot-stanza-disabled { background-color: lightGray; }
+        &.deselected { background-color: lightGray; }
+
+        // TODO: Obviously.
+        &.access-outlined {
+            background-color: violet;
+        }
+    }
 }
 
 .dot-description {
     background-color: rgba(255, 255, 255, 0.8);
-    width: @dot-interactable-diameter + @dot-border * 2;
-    height: @dot-interactable-diameter + @dot-border * 2;
+    width: @dot-container-diameter + @dot-border * 2;
+    height: @dot-container-diameter + @dot-border * 2;
 
     display: flex;
     justify-content: center;
@@ -141,54 +91,40 @@
     transition: opacity 0.2s;
 }
 
-.dot-text-container:hover + .dot .dot-description, .dot-description.interactivated {
-    opacity: 1;
-}
-
-.dot-text-container {
-    text-align: center;
-    font-size: 0.75em;
-}
-
-.dot-text-interactable {
-    transition: box-shadow 0.2s;
-
-    &.interactivated {
-        box-shadow: inset 0 0 5px @darker-box-shadow-colour;
+.dot-description {
+    &:hover, &.interactivated {
+        opacity: 1;
     }
 }
 
-.phone-width {
-    .dots-subfield {
-        .dot-diameter-mixin(@dot-interactable-phone-diameter, 0);
+.dot-key {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 0.75em;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
 
-        box-shadow: -1px 1px 4px 4px @box-shadow-colour;
+    .text-span {
+        user-select: none;
+    }
 
-        .dots-block {
-            // Phone will have four dots per row.
-            width: 4 * (@dot-interactable-phone-diameter + 2 * @dot-container-phone-padding + 3 * @dot-border);
-        }
-
-        .dot-container {
-            padding: @dot-container-phone-padding;
-        }
-
-        .dot-interactable {
-            width: @dot-interactable-phone-diameter + @dot-border * 2;
-            height: @dot-interactable-phone-diameter + @dot-border * 2;
-            top: @dot-container-phone-padding;
-        }
-
-        .dot-description {
-            width: @dot-interactable-phone-diameter + @dot-border * 2;
-            height: @dot-interactable-phone-diameter + @dot-border * 2;
-        }
+    .anchor-block {
+        text-shadow:
+        -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
+        @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
+        -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour,
+        @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour;
     }
 }
 
 .dot {
+    border: @dot-border solid #aaa;
     border-radius: 50%;
     transition: background-color 0.15s;
+
+    &:not(:last-child) {
+        margin-right: 1px;
+    }
 
     // TODO: Key styling.
     &.songwriting { background-color: @songwriting-dot-colour; }
@@ -200,7 +136,29 @@
     &.portal { background-color: @portal-dot-colour; }
     &.afterword { background-color: @afterword-dot-colour; }
 
-    .dot-text {
+    .dot-description {
         font-size: .6em;
+    }
+}
+
+.phone-width {
+    .dots-subfield {
+        .dot-diameter-mixin(@dot-container-phone-diameter, 0);
+
+        box-shadow: -1px 1px 4px 4px @box-shadow-colour;
+
+        .dots-block {
+            // Phone will have four dots per row.
+            width: 4 * (@dot-container-phone-diameter + 2 * @dot-container-phone-padding + 3 * @dot-border);
+        }
+
+        .dot-container {
+            padding: @dot-container-phone-padding;
+        }
+
+        .dot-description {
+            width: @dot-container-phone-diameter + @dot-border * 2;
+            height: @dot-container-phone-diameter + @dot-border * 2;
+        }
     }
 }

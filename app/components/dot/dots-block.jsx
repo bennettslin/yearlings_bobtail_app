@@ -56,8 +56,7 @@ const DotBlockView = ({
     return (
         <span className={classnames(
             'dots-block',
-            annotationIndex && `annotation-${annotationIndex}`,
-            { 'interactable': isInteractable }
+            annotationIndex && `annotation-${annotationIndex}`
         )}>
             {allDotKeys.map((dotKey, index) => {
                 const isSelected = selectedDotKeys[dotKey],
@@ -92,7 +91,6 @@ const DotBlockView = ({
                     )
 
                 } else {
-                    // It's in anchor block or annotation card.
                     /**
                      * If it's in anchor block, it will animate, present or not.
                      * If it's in annotation card, just render it or not.

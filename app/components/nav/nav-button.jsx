@@ -61,7 +61,7 @@ const NavButtonView = ({
             isLarge={isNavToggle}
             isSelected={isSelected}
             handleClick={handleClick}
-            titleChild={!isNavToggle &&
+            extraChild={!isNavToggle &&
                 <div className="nav-title-block">
                     <div className="nav-title">
                         {songTitle}

@@ -9,7 +9,7 @@ const Button = ({
     isEnabled = true,
     isSelected,
     isLarge,
-    titleChild,
+    extraChild,
     handleClick
 
 }) => (
@@ -30,7 +30,7 @@ const Button = ({
         )}>
             {iconText}
         </div>
-        {titleChild}
+        {extraChild}
     </a>
 )
 
@@ -44,7 +44,7 @@ Button.propTypes = {
     isEnabled: PropTypes.bool,
     isSelected: PropTypes.bool,
     isLarge: PropTypes.bool,
-    titleChild: PropTypes.oneOfType([
+    extraChild: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.element
     ]),
