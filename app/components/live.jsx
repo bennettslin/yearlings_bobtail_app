@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
+import Button from './button/button'
 import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
@@ -376,14 +377,11 @@ const LiveView = ({
 
         lyricExpandButtonChild = isLyricExpandable && (
             <div className="lyric-button-block expand-button-block">
-                <a
-                    className="lyric-button enabled"
-                    onClick={handleLyricSectionExpand}
-                >
-                    <div className="large button-icon lyric-icon">
-                        {isLyricExpanded ? '-' : '+'}
-                    </div>
-                </a>
+                <Button
+                    iconText={isLyricExpanded ? '-' : '+'}
+                    isLarge={true}
+                    handleClick={handleLyricSectionExpand}
+                />
             </div>
         ),
 

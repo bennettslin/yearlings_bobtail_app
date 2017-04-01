@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Button from '../button/button'
 import LyricsSection from '../lyrics/lyrics-section'
 import LyricVerseBar from './lyric-verse-bar'
 
@@ -119,14 +120,11 @@ class LyricColumnView extends Component {
                     }
                     {showEarButton &&
                         <div className="lyric-button-block ear-button-block">
-                            <a
-                                className="lyric-button enabled"
-                                onClick={handleLyricColumnSelect}
-                            >
-                                <div className="large button-icon lyric-icon">
-                                    {earButtonText}
-                                </div>
-                            </a>
+                            <Button
+                                iconText={earButtonText}
+                                isLarge={true}
+                                handleClick={handleLyricColumnSelect}
+                            />
                         </div>
                     }
                     {lyricExpandButtonChild}
