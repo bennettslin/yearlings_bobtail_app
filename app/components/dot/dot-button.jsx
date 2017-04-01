@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
+import Button from '../button/button'
 import { DOT_DESCRIPTIONS } from '../../helpers/constants'
 
 /*************
@@ -8,22 +9,21 @@ import { DOT_DESCRIPTIONS } from '../../helpers/constants'
 
 const DotButton = ({
 
-    isSelected,
     handleDotKeyToggle,
 
 ...other }) => {
 
     const { dotKey,
+            isSelected,
             inDotsSection } = other,
-        isEnabled = !isSelected || inDotsSection,
-        isToggleDeselected = inDotsSection && !isSelected,
-        onClick = isEnabled && handleDotKeyToggle ? e => handleDotKeyToggle(e, dotKey) : null
+        isEnabled = inDotsSection || !isSelected,
+        handleClick = isEnabled && handleDotKeyToggle &&
+            (e => handleDotKeyToggle(e, dotKey))
 
     return (
         <DotButtonView {...other}
             isEnabled={isEnabled}
-            isToggleDeselected={isToggleDeselected}
-            onClick={onClick}
+            handleClick={handleClick}
         />
     )
 }
@@ -70,11 +70,11 @@ class DotButtonView extends Component {
             dotKey,
             accessHighlighted,
             inDotsSection,
+            isSelected,
 
             // From controller.
             isEnabled,
-            isToggleDeselected,
-            onClick
+            handleClick
 
         } = this.props,
         { isInteractivated } = this.state,
@@ -109,18 +109,13 @@ class DotButtonView extends Component {
                         </span>
                     </a>
                 }
-                <a
-                    className={classnames(
-                        'dot',
-                        dotKey,
-                        { 'enabled': isEnabled },
-                        { 'dot-stanza-disabled': !isEnabled,
-                          'deselected': isToggleDeselected }
-                    )}
-                    onClick={onClick}
-                >
-                    {dotDescription}
-                </a>
+                <Button
+                    buttonClasses={['dot', dotKey]}
+                    isEnabled={isEnabled}
+                    isDeselected={inDotsSection ? !isSelected : undefined}
+                    extraChild={dotDescription}
+                    handleClick={handleClick}
+                />
             </div>
         )
     }

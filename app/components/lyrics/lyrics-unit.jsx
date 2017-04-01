@@ -53,7 +53,6 @@ const LyricsUnit = (props) => {
             topSideStanza={topSideStanza}
             bottomSideStanza={bottomSideStanza}
             isBottomOnly={isBottomOnly}
-            isDotOnly={isDotOnly}
             showMain={showMain}
             truncateMain={truncateMain}
             showSide={showSide}
@@ -88,7 +87,6 @@ const LyricsUnitView = ({
     bottomSideStanza,
     topSideSubStanza,
     isBottomOnly,
-    isDotOnly,
     showMain,
     truncateMain,
     showSide,
@@ -157,9 +155,8 @@ const LyricsUnitView = ({
                     {getStanza({ stanzaArray: topSideSubStanza, addSub: true })}
                 </div>
             }
-            {/* At present, dot-only and dot-shared classes aren't used. */}
             {shouldShowDotStanza &&
-                <div className={`stanza-block dot-${isDotOnly ? 'only' : 'shared'}`}>
+                <div className={`stanza-block dots-stanza`}>
                     <DotStanza {...other}
                         dotStanzaObject={dotStanza}
                         selectedDotKeys={selectedDotKeys}

@@ -4,10 +4,12 @@ import classnames from 'classnames'
 const Button = ({
 
     buttonName,
+    buttonClasses,
     iconClass,
     iconText,
-    isEnabled = true,
+    isEnabled,
     isSelected,
+    isDeselected,
     isLarge,
     extraChild,
     handleClick
@@ -17,11 +19,13 @@ const Button = ({
         className={classnames(
             'button',
             buttonName && `${buttonName}-button`,
+            buttonClasses,
             'button-animatable',
             { 'enabled': isEnabled,
-              'selected': isSelected }
+              'selected': isSelected,
+              'deselected': isDeselected }
         )}
-        onClick={e => handleClick(e)}
+        onClick={handleClick ? e => handleClick(e) : null}
     >
         <div className={classnames(
             'button-icon',
@@ -36,6 +40,7 @@ const Button = ({
 
 Button.propTypes = {
     buttonName: PropTypes.string,
+    buttonClasses: PropTypes.array,
     iconClass: PropTypes.string,
     iconText: PropTypes.oneOfType([
         PropTypes.string,
@@ -43,6 +48,7 @@ Button.propTypes = {
     ]),
     isEnabled: PropTypes.bool,
     isSelected: PropTypes.bool,
+    isDeselected: PropTypes.bool,
     isLarge: PropTypes.bool,
     extraChild: PropTypes.oneOfType([
         PropTypes.bool,
@@ -53,5 +59,9 @@ Button.propTypes = {
         PropTypes.func
     ])
 };
+
+Button.defaultProps = {
+    isEnabled: true
+}
 
 export default Button

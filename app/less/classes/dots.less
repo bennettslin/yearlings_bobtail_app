@@ -62,24 +62,22 @@
     .dot-container {
         position: relative;
     }
-
-    .dot {
-        // TODO: Improve state styling.
-        &.dot-stanza-disabled { background-color: lightGray; }
-        &.deselected { background-color: lightGray; }
-    }
 }
 
 .dot-description {
-    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+
+    // background-color: rgba(255, 255, 255, 0.8);
     width: @dot-container-diameter + @dot-border * 2;
     height: @dot-container-diameter + @dot-border * 2;
+    border-radius: 50%;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     text-align: center;
+    font-size: .6em;
 
     opacity: 0;
     transition: opacity 0.2s;
@@ -88,6 +86,13 @@
 .dot-description {
     &:hover, &.interactivated {
         opacity: 1;
+    }
+}
+.accessed-on {
+    .access-highlighted {
+        .dot-description {
+            opacity: 1;
+        }
     }
 }
 
@@ -129,9 +134,17 @@
     &.observation { background-color: @observation-dot-colour; }
     &.portal { background-color: @portal-dot-colour; }
     &.afterword { background-color: @afterword-dot-colour; }
+}
 
-    .dot-description {
-        font-size: .6em;
+.dots-section {
+    .dot {
+        &.deselected { background-color: lightGray; }
+    }
+}
+
+.dots-stanza {
+    .dot {
+        &:not(.enabled) { background-color: lightGray; }
     }
 }
 
