@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../button/button'
 import { AUDIO_OPTIONS } from '../../helpers/constants'
 
 /*************
@@ -31,54 +32,38 @@ const AudioButtonsView = ({
 
 }) => (
     <div className="audio-block audio-buttons-block">
-
         <div className="audio-subblock player-subblock">
-
             {/* Previous button. */}
-            <a
-                className={`audio-button button-animatable${isPrologue ? '' : ' enabled'}`}
-                onClick={handleAudioPreviousSong}
-            >
-                <div className="button-icon audio-nav">
-                    {isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
-                </div>
-            </a>
+            <Button
+                iconClass="audio-nav"
+                iconText={isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
+                isEnabled={!isPrologue}
+                handleClick={handleAudioPreviousSong}
+            />
 
             {/* Play button. */}
-            <a
-                className="audio-button button-animatable enabled"
-                onClick={handleAudioPlay}
-            >
-                <div className={`
-                        button-icon
-                        audio-colour
-                        ${titleInAudio ? '' : 'large'}
-                    `}
-                >
-                    {isPlaying ? '\u23F8' : '\u25BA' }
-                </div>
-            </a>
+            <Button
+                iconClass="audio-colour"
+                iconText={isPlaying ? '\u23F8' : '\u25BA'}
+                isLarge={!titleInAudio}
+                handleClick={handleAudioPlay}
+            />
 
             {/* Next button. */}
-            <a
-                className={`audio-button button-animatable${isEpilogue ? '' : ' enabled'}`}
-                onClick={handleAudioNextSong}
-            >
-                <div className="button-icon audio-nav">
-                    {isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
-                </div>
-            </a>
+            <Button
+                iconClass="audio-nav"
+                iconText={isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
+                isEnabled={!isEpilogue}
+                handleClick={handleAudioNextSong}
+            />
         </div>
 
         <div className="audio-subblock option-subblock">
-            <a
-                className="audio-button button-animatable enabled"
-                onClick={e => handleAudioOptionsToggle(e)}
-            >
-                <div className="button-icon audio-neutral">
-                    {AUDIO_OPTIONS[selectedAudioOptionIndex]}
-                </div>
-            </a>
+            <Button
+                iconClass="audio-neutral"
+                iconText={AUDIO_OPTIONS[selectedAudioOptionIndex]}
+                handleClick={handleAudioOptionsToggle}
+            />
         </div>
     </div>
 )

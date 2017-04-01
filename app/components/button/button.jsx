@@ -4,7 +4,9 @@ import classnames from 'classnames'
 const Button = ({
 
     buttonName,
+    iconClass,
     iconText,
+    isEnabled = true,
     isLarge,
     handleClick
 
@@ -14,12 +16,13 @@ const Button = ({
             'button',
             `${buttonName}-button`,
             'button-animatable',
-            'enabled'
+            { 'enabled': isEnabled }
         )}
         onClick={e => handleClick(e)}
     >
         <div className={classnames(
             'button-icon',
+            iconClass,
             { 'large': isLarge }
         )}>
             {iconText}
@@ -28,11 +31,13 @@ const Button = ({
 )
 
 Button.propTypes = {
-    buttonName: PropTypes.string.isRequired,
+    buttonName: PropTypes.string,
+    iconClass: PropTypes.string,
     iconText: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
     ]),
+    isEnabled: PropTypes.bool,
     isLarge: PropTypes.bool,
     handleClick: PropTypes.func.isRequired
 };
