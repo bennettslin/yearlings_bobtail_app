@@ -59,6 +59,8 @@
 .dots-section {
     padding: 10px;
 
+    .text-shadow-mixin(#def);
+
     .dot-container {
         position: relative;
     }
@@ -105,14 +107,6 @@
 
     .text-span {
         user-select: none;
-    }
-
-    .anchor-block {
-        text-shadow:
-        -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
-        @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
-        -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour,
-        @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour;
     }
 }
 

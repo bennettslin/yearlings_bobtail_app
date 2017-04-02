@@ -1,0 +1,87 @@
+.slider-moving {
+
+    .verse-bar {
+        background-color: @audio-neutral-colour;
+    }
+
+    .verse {
+        // Slider side verse.
+        &.in-side {
+            .text-shadow-mixin(@even-verse-colour);
+        }
+
+        // Slider selected verse.
+        &.on-slider {
+            .text-shadow-mixin(@audio-neutral-colour);
+        }
+
+        // Before slider.
+        &.before-slider {
+            &.odd {
+                .text-shadow-mixin(@odd-before-slider-colour);
+            }
+
+            &.even {
+                .text-shadow-mixin(@even-before-slider-colour);
+            }
+        }
+
+        // After slider.
+        &.after-slider {
+            &.odd {
+                .text-shadow-mixin(@odd-after-slider-colour);
+            }
+
+            &.even {
+                .text-shadow-mixin(@even-after-slider-colour);
+            }
+        }
+    }
+}
+
+// Text and anchor inverted colours.
+.after-slider, .is-verse-interactivated .not-interactivated:not(.selected) {
+
+    .dot:not(.button) {
+        border: @dot-border solid @dot-border-invert-colour;
+    }
+
+    .text-span {
+        color: @lyric-text-invert-colour;
+    }
+
+    .anchor-block {
+
+        &.enabled {
+
+            .text-span {
+                color: @lyric-link-invert-colour;
+            }
+
+            &:hover {
+                .text-span {
+                    color: @lyric-hover-invert-colour;
+                }
+            }
+
+            &:active {
+                .text-span {
+                    color: @lyric-active-invert-colour;
+                }
+            }
+        }
+
+        &.show-as-anchor {
+
+            .underline-bar {
+                background-color: @lyric-underline-disabled-invert-colour;
+            }
+
+            &.enabled {
+                .underline-bar {
+                    background-color: @lyric-underline-enabled-invert-colour;
+                }
+            }
+        }
+    }
+}

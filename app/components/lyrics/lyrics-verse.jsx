@@ -74,7 +74,7 @@ const LyricsVerse = ({
 
     let sliderPlacementClassName = ''
 
-    if (sliderMousedOrTouched) {
+    if (sliderMousedOrTouched && inMain && !isTitle) {
         if (verseIndex < sliderVerseIndex) {
             sliderPlacementClassName = 'before-slider'
         } else if (verseIndex > sliderVerseIndex) {

@@ -1,5 +1,3 @@
-/* Styling for lyrics line, verse, and verse bar. */
-
 @lyrics-audio-button-block-width: 1.5em;
 
 .lyrics-block {
@@ -92,18 +90,11 @@
  * Verse colours.
  */
 
+// Selected verse, playing.
 .is-playing {
     .slider-not-moving {
         &.verse-bar-hidden .verse.selected {
-            background-color: @audio-play-colour;
-
-            .anchor-block {
-                text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-play-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-play-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-play-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-play-colour;
-            }
+            .text-shadow-mixin(@audio-play-colour);
         }
 
         .verse-bar {
@@ -112,225 +103,40 @@
     }
 }
 
+// Selected verse, paused.
 .is-paused {
     .slider-not-moving {
         &.verse-bar-hidden .verse.selected {
-            background-color: @audio-pause-colour;
-
-            .anchor-block {
-                text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-pause-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-pause-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-pause-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-pause-colour;
-            }
+            .text-shadow-mixin(@audio-pause-colour);
         }
 
         .verse-bar {
             background-color: @audio-pause-colour;
-        }
-    }
-}
-
-.slider-moving {
-    .verse-bar {
-        background-color: @audio-neutral-colour;
-    }
-}
-
-.slider-not-moving .verse {
-    &.odd, &.in-side {
-        background-color: @odd-verse-colour;
-
-        .anchor-block {
-            text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-verse-colour,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-verse-colour;
-        }
-    }
-}
-
-.slider-not-moving .even, .slider-moving .in-side {
-    &.verse {
-        background-color: @even-verse-colour;
-
-        .anchor-block {
-            text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-verse-colour,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-verse-colour,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-verse-colour,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-verse-colour;
         }
     }
 }
 
 .slider-not-moving {
-
     .verse {
+
+        // Default odd verse.
+        &.odd {
+            .text-shadow-mixin(@odd-verse-colour);
+        }
+
+        // Default even verse.
+        &.even {
+            .text-shadow-mixin(@even-verse-colour);
+        }
+
+        // Default side verse.
+        &.in-side {
+            .text-shadow-mixin(@odd-verse-colour);
+        }
+
+        // Interactivated verse.
         &.interactivated, &.hoverable:hover {
-            background-color: @audio-highlight-colour;
-
-            .anchor-block {
-                text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-highlight-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-highlight-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-highlight-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-highlight-colour;
-            }
+            .text-shadow-mixin(@audio-highlight-colour);
         }
     }
-}
-
-.slider-moving {
-
-    .verse.on-slider {
-        background-color: @audio-neutral-colour;
-
-        .anchor-block {
-            text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-neutral-colour,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @audio-neutral-colour,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-neutral-colour,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @audio-neutral-colour;
-        }
-    }
-
-    .verse.before-slider {
-        &.odd {
-            background-color: @odd-before-slider-colour;
-
-            .anchor-block {
-                text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-before-slider-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-before-slider-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-before-slider-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-before-slider-colour;
-            }
-        }
-
-        &.even {
-            background-color: @even-before-slider-colour;
-
-            .anchor-block {
-                text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-before-slider-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-before-slider-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-before-slider-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-before-slider-colour;
-            }
-        }
-    }
-
-    .verse.after-slider {
-        &.odd {
-            background-color: @odd-after-slider-colour;
-
-            .anchor-block {
-                text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-after-slider-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-after-slider-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-after-slider-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-after-slider-colour;
-            }
-        }
-
-        &.even {
-            background-color: @even-after-slider-colour;
-
-            .anchor-block {
-                text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-after-slider-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-after-slider-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-after-slider-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-after-slider-colour;
-            }
-        }
-    }
-}
-
-@verse-bar-extra-margin: 16px;
-
-@verse-bar-desktop-margins: @lyric-button-side-padding * 2 + @app-large-icon-diameter * 2 + @verse-bar-extra-margin;
-
-@verse-bar-tablet-margins: @lyric-button-side-padding * 2 + @app-tablet-large-icon-diameter * 2 + @verse-bar-extra-margin;
-
-@verse-bar-mini-margins: @lyric-button-side-padding * 2 + @app-mini-large-icon-diameter * 2 + @verse-bar-extra-margin;
-
-@verse-bar-phone-margins: @lyric-button-side-padding * 2 + @app-icon-diameter * 2 + @verse-bar-extra-margin;
-
-// TODO: Make this styling better, of course.
-.verse-bar-block {
-    position: absolute;
-
-    width: ~"calc(100% - @{verse-bar-desktop-margins})";
-    z-index: @selected-verse-bar-z-index;
-
-    @verse-bar-margin: 8px;
-
-    &.above {
-        top: -50px;
-        margin-top: @verse-bar-margin;
-        transition: top 0.15s, transform 0.15s;
-    }
-
-    &.below {
-        bottom: -50px;
-        margin-bottom: @verse-bar-margin;
-        transition: bottom 0.15s, transform 0.15s;
-
-        .verse-bar {
-            box-shadow: 0 0 12px 5px @darker-box-shadow-colour;
-        }
-    }
-
-    transform: scale(0);
-}
-
-.tablet-width {
-    .verse-bar-block {
-        width: ~"calc(100% - @{verse-bar-tablet-margins})";
-    }
-}
-
-.mini-width {
-    .verse-bar-block {
-        width: ~"calc(100% - @{verse-bar-mini-margins})";
-    }
-}
-
-.phone-width {
-    .verse-bar-block {
-        width: ~"calc(100% - @{verse-bar-phone-margins})";
-    }
-}
-
-.verse-above {
-    .verse-bar-block {
-        &.above {
-            top: 0;
-            transform: scale(1);
-        }
-    }
-}
-
-.verse-below {
-    .verse-bar-block {
-        &.below {
-            bottom: 0;
-            transform: scale(1);
-        }
-    }
-}
-
-.verse-bar {
-    max-width: 100%;
-
-    margin: 0 5px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-
-    box-shadow: 0 3px 12px 5px @darker-box-shadow-colour;
 }

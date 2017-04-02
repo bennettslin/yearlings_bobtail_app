@@ -4,21 +4,19 @@
 }
 
 .portal-block {
-    background-color: @portal-block-colour;
     box-shadow: inset 0 2px 2px @box-shadow-colour;
     padding: 10px;
     margin: 5px;
     cursor: pointer;
-    // max-width: 50%;
 
     // Accommodate foreign characters in Didi and Kyon.
     .song-title {
         margin-bottom: 0.25em;
         font-size: 1em;
-        color: #888;
+        color: @lyric-text-invert-colour;
 
         strong {
-            color: black;
+            color: @lyric-text-colour;
         }
     }
 
@@ -26,6 +24,8 @@
         font-size: 0.9em;
         padding: 0 0.5em;
     }
+
+    .text-shadow-mixin(@portal-block-colour);
 
     // .portal-card-block {
     //     transform: scale(0.85);
@@ -36,15 +36,7 @@
     // }
 }
 
-.portal-block {
-    text-shadow:
-        -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @portal-block-colour,
-        @text-shadow-offset -@text-shadow-offset @text-shadow-blur @portal-block-colour,
-        -@text-shadow-offset @text-shadow-offset @text-shadow-blur @portal-block-colour,
-        @text-shadow-offset @text-shadow-offset @text-shadow-blur @portal-block-colour;
-}
-
-// Temporary styling for debugging. Final result doesn't need to be done through CSS.
+// These are only needed for debugging. Final result doesn't need to be done through CSS.
 .first-verse-object {
     // color: orange;
     // border: 2px dotted tomato;

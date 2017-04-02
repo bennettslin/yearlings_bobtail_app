@@ -1,4 +1,9 @@
 module.exports = [
+    {
+        taskName: `Scrolling pushes screen to left.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     // Touch accessibility.
     {

@@ -1,5 +1,3 @@
-@annotation-text-colour: #f4f4ff;
-
 .side-annotation {
     .annotation {
         &.popup-wrapper {
@@ -46,7 +44,6 @@
         min-height: 1.8em;
         margin: 5px 0;
         padding: 5px;
-        background-color: @annotation-text-colour;
         box-shadow: 0 1px 1px 1px @box-shadow-colour;
 
         // Select for annotation card dots, not portal dots.
@@ -57,11 +54,7 @@
             height: @dot-diameter;
         }
 
-        text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @annotation-text-colour,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @annotation-text-colour,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @annotation-text-colour,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @annotation-text-colour;
+        .text-shadow-mixin(@annotation-card-colour);
 
         // TODO: Portals block needs its own text shadow?
         .text-span {
