@@ -35,6 +35,7 @@ const LyricsAudioButton = ({
             <div className="lyrics-audio-button-child">
                 <Button
                     buttonName="lyrics-audio"
+                    isCustomSize={true}
                     isEnabled={isAudioButtonEnabled}
                     iconClass={isSelected ? 'audio-colour' : 'audio-nav'}
                     iconText={buttonIcon}

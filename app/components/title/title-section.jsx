@@ -25,7 +25,8 @@ const TitleSectionView = ({
 }) => (
     <div className="section title-section">
         <Button
-            isCustom={true}
+            isCustomShape={true}
+            isCustomSize={true}
             handleClick={handleTitleSelect}
             iconText={title}
         />

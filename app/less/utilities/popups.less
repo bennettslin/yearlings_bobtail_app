@@ -142,35 +142,26 @@
 .popup-button-block {
     position: absolute;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .popup-button-interactable {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: @popup-interactable-z-index;
+    .button-icon {
+        box-shadow: @popup-button-box-shadow;
     }
 
     &.close-position {
         top: -@app-large-icon-diameter * @popup-button-multiplier;
         left: -@app-large-icon-diameter * @popup-button-multiplier;
-        border-radius: 50%;
+        // border-radius: 50%;
 
-        // Duplicates annotation side button styles.
-        box-shadow: @popup-button-box-shadow;
-        background-color: #fdd;
+        .button-icon {
+            background-color: #fdd;
+        }
     }
 
     &.side-position {
         top: @app-large-icon-diameter * 0.2;
 
-        border-radius: 50%;
-        box-shadow: @popup-button-box-shadow;
-        background-color: #dfd;
+        .button-icon {
+            background-color: #dfd;
+        }
     }
 
     &.previous-position {
@@ -185,6 +176,7 @@
         display: block;
         overflow: hidden;
         box-shadow: @popup-box-shadow;
+        border-radius: 50%;
 
         &.close-position {
             box-shadow: @popup-darker-box-shadow;

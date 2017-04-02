@@ -16,11 +16,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Stylise dots section better`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `make visual keyboard keys`,
         workedHours: 0,
         neededHours: 3
@@ -1560,6 +1555,11 @@ module.exports = [
     {
         taskName: `Use button class.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 7
     },
+    {
+        taskName: `Stylise dots section better`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

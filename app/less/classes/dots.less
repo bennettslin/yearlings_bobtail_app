@@ -15,7 +15,7 @@
 
 .anchor-block {
     .dot {
-        transition: width 0.15s, transform 0.15s;
+        transition: width 0.15s, transform 0.15s, border 1.5s;
 
         &.is-present {
             transform: scale(1);
@@ -133,8 +133,12 @@
         &:not(.button) {
             border-radius: 50%;
 
-            &:not(:last-child) {
+            &:not(.is-absent):not(:last-child) {
                 margin-right: 1px;
+            }
+
+            &.is-absent {
+                border: 0;
             }
         }
 
