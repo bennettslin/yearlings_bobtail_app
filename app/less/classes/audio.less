@@ -251,20 +251,13 @@
 .play-time-display {
     box-sizing: border-box;
 
-    // FIXME: Make these colours better;
-    @time-display-dark-colour: black;
-    @time-display-light-colour: white;
-
     @time-display-margin: 5px;
 
     position: absolute;
     bottom: 25%;
-    transform: translateY(50%);
-
-    font-size: 0.8em;
-
     opacity: 0;
-
+    transform: translateY(50%);
+    font-size: 0.8em;
     transition: opacity 0.2s;
 
     &.spent {
