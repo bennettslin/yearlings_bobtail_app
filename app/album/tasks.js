@@ -11,11 +11,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Bug where selecting interactivated verse does not deselect verse bar.`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     {
         taskName: `make visual keyboard keys`,
@@ -1576,6 +1571,11 @@ module.exports = [
     },
     {
         taskName: `Arrow keys should not work when wiki popup is up.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Bug where selecting interactivated verse does not deselect verse bar.`,
         workedHours: 1,
         neededHours: 1
     }

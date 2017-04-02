@@ -154,11 +154,13 @@ class LyricsVerseView extends Component {
         return !getPropsAreSame(this.props, nextProps)
     }
 
-    componentDidUpdate(nextProps) {
-        this._checkIsSelectedVerse(nextProps)
+    componentDidUpdate(prevProps) {
+        const { props } = this
 
-        if (nextProps.isSliderSelected && !this.props.isSliderSelected) {
-            this._checkIsSliderSelectedVerse(nextProps)
+        this._checkIsSelectedVerse(props)
+
+        if (props.isSliderSelected && !prevProps.isSliderSelected) {
+            this._checkIsSliderSelectedVerse(props)
         }
     }
 
