@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../button/button'
+import { DOTS_SECTION_ACCESS_KEY } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -30,6 +31,7 @@ const DotsToggleView = ({
             <Button
                 buttonName="dots-toggle"
                 iconText={selectedDotsIndex}
+                accessKey={DOTS_SECTION_ACCESS_KEY}
                 isLarge={true}
                 handleClick={handleDotsSectionToggle}
             />

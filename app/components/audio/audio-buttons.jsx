@@ -1,6 +1,10 @@
 import React from 'react'
 import Button from '../button/button'
-import { AUDIO_OPTIONS } from '../../helpers/constants'
+import { AUDIO_OPTIONS,
+         AUDIO_OPTIONS_TOGGLE_KEY,
+         AUDIO_PLAY_KEY,
+         AUDIO_PREVIOUS_SONG_KEY,
+         AUDIO_NEXT_SONG_KEY } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -37,6 +41,7 @@ const AudioButtonsView = ({
             <Button
                 iconClass="audio-nav"
                 iconText={isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
+                accessKey={AUDIO_PREVIOUS_SONG_KEY}
                 isEnabled={!isPrologue}
                 handleClick={handleAudioPreviousSong}
             />
@@ -45,6 +50,7 @@ const AudioButtonsView = ({
             <Button
                 iconClass="audio-colour"
                 iconText={isPlaying ? '\u23F8' : '\u25BA'}
+                accessKey={AUDIO_PLAY_KEY}
                 isLarge={!titleInAudio}
                 handleClick={handleAudioPlay}
             />
@@ -53,6 +59,7 @@ const AudioButtonsView = ({
             <Button
                 iconClass="audio-nav"
                 iconText={isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
+                accessKey={AUDIO_NEXT_SONG_KEY}
                 isEnabled={!isEpilogue}
                 handleClick={handleAudioNextSong}
             />
@@ -62,6 +69,7 @@ const AudioButtonsView = ({
             <Button
                 iconClass="audio-neutral"
                 iconText={AUDIO_OPTIONS[selectedAudioOptionIndex]}
+                accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
                 handleClick={handleAudioOptionsToggle}
             />
         </div>

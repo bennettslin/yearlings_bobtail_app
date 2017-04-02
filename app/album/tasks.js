@@ -9,15 +9,9 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    // Consolidate buttons.
-    {
-        taskName: `In button animation, hover element is different from animated element.`,
-        workedHours: 0,
-        neededHours: 2
-    },
     {
         taskName: `make visual keyboard keys`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 3
     },
 
@@ -1554,12 +1548,17 @@ module.exports = [
     },
     {
         taskName: `Use button class.`,
-        workedHours: 0,
+        workedHours: 7,
         neededHours: 7
     },
     {
         taskName: `Stylise dots section better`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `In button animation, hover element is different from animated element.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

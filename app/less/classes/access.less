@@ -11,9 +11,33 @@
 //         box-shadow: 0 2px 7.5px 7.5px chartreuse;
 //     }
 // }
+.access-icon {
+    @access-icon-edge: 20px;
 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: @access-icon-edge;
+    height: @access-icon-edge;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid green;
+    border-radius: 3px;
+
+    background-color: #bfb;
+
+    visibility: hidden;
+}
 
 .accessed-on {
+
+    .access-icon {
+        visibility: visible;
+    }
 
     // Lyrics annotation is accessed.
     .annotation-hidden.dots-hidden.nav-collapsed.is-not-verse-interactivated {
