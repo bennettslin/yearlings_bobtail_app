@@ -2,11 +2,6 @@ module.exports = [
 
     // Bugs.
     {
-        taskName: `Lyric button lost animation.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Animate audio banner in phone upon overlay.`,
         workedHours: 0,
         neededHours: 1
@@ -15,11 +10,6 @@ module.exports = [
         taskName: `Annotation in overlay is gone.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Arrow keys should not work when wiki popup is up.`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Bug where selecting interactivated verse does not deselect verse bar.`,
@@ -1578,5 +1568,15 @@ module.exports = [
         taskName: `In button animation, hover element is different from animated element.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Lyric button lost animation.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Arrow keys should not work when wiki popup is up.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -108,44 +108,49 @@ class AccessManager extends Component {
     }
 
     _routeNavigation(e, keyName) {
+        const { selectedScoreIndex,
+                selectedWikiIndex } = this.props
+
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
-        if (this.props.interactivatedVerseIndex > -1 && keyName === ENTER) {
+        if (!selectedScoreIndex && !selectedWikiIndex) {
+            if (this.props.interactivatedVerseIndex > -1 && keyName === ENTER) {
 
-            // Interactivated verse is already selected, so toggle play.
-            if (this.props.interactivatedVerseIndex === this.props.selectedVerseIndex) {
-                this.props.handleLyricPlay(e)
+                // Interactivated verse is already selected, so toggle play.
+                if (this.props.interactivatedVerseIndex === this.props.selectedVerseIndex) {
+                    this.props.handleLyricPlay(e)
 
-            // We're selecting the interactivated verse.
+                    // We're selecting the interactivated verse.
+                } else {
+                    this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
+                    this._accessAnnotationWithoutDirection(this.props.interactivatedVerseIndex)
+                    annotationIndexWasAccessed = true
+                }
+
+                keyWasRegistered = true
+
+                // We're in annotation.
+            } else if (this.props.selectedAnnotationIndex) {
+                ({ annotationIndexWasAccessed,
+                    keyWasRegistered } = this._handleAnnotationNavigation(e, keyName))
+
+                // We're in dots section.
+            } else if (this.props.selectedDotsIndex) {
+                keyWasRegistered = this._handleDotsNavigation(e, keyName)
+
+                // We're in nav section.
+            } else if (this.props.selectedNavIndex) {
+                ({ annotationIndexWasAccessed,
+                    keyWasRegistered } = this._handleNavNavigation(e, keyName))
+
+                // We're in lyrics section.
             } else {
-                this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
-                this._accessAnnotationWithoutDirection(this.props.interactivatedVerseIndex)
-                annotationIndexWasAccessed = true
+                keyWasRegistered = this._handleLyricNavigation(e, keyName)
+
+                // If key was registered, then annotation index was accessed.
+                annotationIndexWasAccessed = keyWasRegistered
             }
-
-            keyWasRegistered = true
-
-        // We're in annotation.
-        } else if (this.props.selectedAnnotationIndex) {
-            ({ annotationIndexWasAccessed,
-               keyWasRegistered } = this._handleAnnotationNavigation(e, keyName))
-
-            // We're in dots section.
-        } else if (this.props.selectedDotsIndex) {
-            keyWasRegistered = this._handleDotsNavigation(e, keyName)
-
-            // We're in nav section.
-        } else if (this.props.selectedNavIndex) {
-            ({ annotationIndexWasAccessed,
-               keyWasRegistered } = this._handleNavNavigation(e, keyName))
-
-        // We're in lyrics section.
-        } else {
-            keyWasRegistered = this._handleLyricNavigation(e, keyName)
-
-            // If key was registered, then annotation index was accessed.
-            annotationIndexWasAccessed = keyWasRegistered
         }
 
         return { annotationIndexWasAccessed,
