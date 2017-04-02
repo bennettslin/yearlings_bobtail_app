@@ -1,5 +1,5 @@
 import React from 'react'
-import Popup from '../superclasses/popup'
+import Popup from '../popup/popup'
 import WikiSection from './wiki-section'
 
 const defaultProps = {

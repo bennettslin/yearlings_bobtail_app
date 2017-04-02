@@ -1,6 +1,6 @@
 import React from 'react'
 import ScoreSection from './score-section'
-import TransitionPopup from '../superclasses/transition-popup'
+import TransitionPopup from '../popup/transition-popup'
 
 /*************
  * CONTAINER *

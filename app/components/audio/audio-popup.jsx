@@ -1,5 +1,5 @@
 import React from 'react'
-import Popup from '../superclasses/popup'
+import Popup from '../popup/popup'
 import AudioSection from './audio-section'
 
 const defaultProps = {
