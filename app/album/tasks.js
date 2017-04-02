@@ -1,16 +1,22 @@
 module.exports = [
-    // Bugs.
-    {
-        taskName: `make visual keyboard keys`,
-        workedHours: 1,
-        neededHours: 3
-    },
 
+    // Touch accessibility.
+    {
+        taskName: `audio banner is touch accessible.`,
+        workedHours: 0,
+        neededHours: 2
+    },
     // Audio slider.
     {
         taskName: `Slider in verse styling, determine slider selected verse.`,
         workedHours: 0,
         neededHours: 2
+    },
+
+    {
+        taskName: `make visual keyboard keys`,
+        workedHours: 1,
+        neededHours: 3
     },
 
     {
@@ -33,13 +39,6 @@ module.exports = [
         taskName: `Selecting time or verse while audio player is running is now buggy.`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    // Touch accessibility.
-    {
-        taskName: `audio banner is touch accessible.`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     // Portals.
