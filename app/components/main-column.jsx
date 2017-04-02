@@ -60,12 +60,9 @@ const MainColumnView = ({
 
 }) => {
     const menuFieldProps = {
+            title,
             titleInAudio,
             scoresTipsOutsideMenu,
-
-            title,
-            accessedSongIndex,
-            accessedOn,
 
             handleTitleSelect,
 

@@ -1,21 +1,14 @@
 import React from 'react'
+import Button from '../button/button'
 
 /*************
  * CONTAINER *
  *************/
 
-const TitleSection = ({
-
-    accessedSongIndex,
-
-...other }) => {
-
-    const titleAccessHighlighted = accessedSongIndex === 0
+const TitleSection = (props) => {
 
     return (
-        <TitleSectionView {...other}
-            titleAccessHighlighted={titleAccessHighlighted}
-        />
+        <TitleSectionView {...props}/>
     )
 }
 
@@ -26,26 +19,16 @@ const TitleSection = ({
 const TitleSectionView = ({
 
     // From props.
-    titleInAudio,
     title,
-    titleAccessHighlighted,
     handleTitleSelect
 
 }) => (
     <div className="section title-section">
-        <a
-            className={`title-button enabled${titleAccessHighlighted ? ' access-highlighted' : ''}`}
-            onClick={handleTitleSelect}
-        >
-            {titleInAudio ?
-                <div className="title-icon button-icon large">
-                    {title}
-                </div> :
-                <div className="title-image">
-                    {title}
-                </div>
-            }
-        </a>
+        <Button
+            isCustom={true}
+            handleClick={handleTitleSelect}
+            iconText={title}
+        />
     </div>
 )
 

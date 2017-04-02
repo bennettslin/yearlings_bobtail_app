@@ -26,6 +26,7 @@ const OverviewToggleView = ({
 }) => (
     <div className="overview-toggle-button-container">
         <Button
+            isCustom={true}
             iconText={OVERVIEW_OPTIONS[selectedOverviewIndex]}
             handleClick={handleOverviewToggle}
         />

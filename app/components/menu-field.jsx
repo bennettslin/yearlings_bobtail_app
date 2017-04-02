@@ -23,8 +23,6 @@ const MenuFieldView = ({
     scoresTipsOutsideMenu,
 
     title,
-    accessedSongIndex,
-    accessedOn,
 
     handleTitleSelect,
 
@@ -35,8 +33,6 @@ const MenuFieldView = ({
 
     const titleSectionProps = {
             title,
-            accessedOn,
-            accessedSongIndex,
             handleTitleSelect
         }
 

@@ -7,6 +7,7 @@ const Button = ({
     buttonClasses,
     iconClass,
     iconText,
+    isCustom,
     isEnabled,
     isSelected,
     isDeselected,
@@ -21,7 +22,8 @@ const Button = ({
             buttonName && `${buttonName}-button`,
             buttonClasses,
             { 'large': isLarge },
-            { 'enabled': isEnabled,
+            { 'custom': isCustom,
+              'enabled': isEnabled,
               'selected': isSelected,
               'deselected': isDeselected }
         )}
@@ -45,6 +47,7 @@ Button.propTypes = {
         PropTypes.string,
         PropTypes.number
     ]),
+    isCustom: PropTypes.bool,
     isEnabled: PropTypes.bool,
     isSelected: PropTypes.bool,
     isDeselected: PropTypes.bool,
