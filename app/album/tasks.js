@@ -1,12 +1,6 @@
 module.exports = [
     // Bugs.
     {
-        taskName: `Nav button width is screwed up.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `make visual keyboard keys`,
         workedHours: 1,
         neededHours: 3
@@ -1580,6 +1574,11 @@ module.exports = [
     },
     {
         taskName: `Annotation in overlay is gone.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Nav button width is screwed up.`,
         workedHours: 1,
         neededHours: 1
     }

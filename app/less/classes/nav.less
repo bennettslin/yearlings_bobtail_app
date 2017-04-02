@@ -119,7 +119,12 @@
 }
 
 .nav-button {
-    position: absolute;
+
+    // Override button styling.
+    // TODO: Make sure this doesn't break access key.
+    &.button {
+        position: absolute;
+    }
 
     &.selected {
         .button-icon {
