@@ -1,32 +1,39 @@
-// Section colours.
-@section-colour: rgba(255, 255, 255, 0.5);
-@box-shadow-colour: rgba(100, 100, 120, 0.2);
-@darker-box-shadow-colour: rgba(25, 25, 50, 0.4);
+// Audio related colours.
+@audio-play-colour: #bfb;
+@audio-pause-colour: #fdd;
+@audio-nav-colour: #fdb;
+@audio-neutral-colour: #ddf;
+@audio-highlight-colour: #ffd;
 
-// Rows.
-@row-height-margin: 5px;
-@primary-row-font-size: 1.05em;
-@secondary-row-font-size: 0.9em;
-
-// TODO: Finalise colours.
+// Lyric verse colours.
 @odd-verse-colour: #fefefa;
 @even-verse-colour: #f4f4f0;
 
-@odd-before-colour: #fafefe;
-@even-before-colour: #f0f4f4;
+// Slider verse colours.
+@odd-before-slider-colour: #fafefe;
+@even-before-slider-colour: #f0f4f4;
+@odd-after-slider-colour: #fefafe;
+@even-after-slider-colour: #f4f0f4;
 
-@odd-after-colour: #fefafe;
-@even-after-colour: #f4f0f4;
+// Lyric text and anchor colours.
+@lyric-text-colour: #444;
+@lyric-link-colour: #844;
+@lyric-hover-colour: #b77;
+@lyric-active-colour: #eaa;
+@dot-border-colour: #aaa;
+@lyric-underline-disabled-colour: #aaa;
+@lyric-underline-enabled-colour: mix(@lyric-link-colour, white, 25%);
 
-@audio-play-colour: #bfb;
-@audio-pause-colour: #fdd;
-@audio-nav-colour: #feb;
-@audio-neutral-colour: #ddf;
+// Slider text and anchor colours.
+@lyric-text-invert-colour: #bbb;
+@lyric-link-invert-colour: @lyric-link-colour;
+@lyric-hover-invert-colour: @lyric-hover-colour;
+@lyric-active-invert-colour: @lyric-active-colour;
+@dot-border-invert-colour: #555;
+@lyric-underline-disabled-invert-colour: #555;
+@lyric-underline-enabled-invert-colour: mix(@lyric-link-invert-colour, white, 25%);
 
-@audio-highlight-colour: #ffd;
-@audio-spent-colour: #ffd;
-@audio-remain-colour: #448;
-
+// Dot colours.
 @songwriting-dot-colour: #afd;
 @narrative-dot-colour: #adf;
 @pun-dot-colour: #dfa;
@@ -36,15 +43,7 @@
 @portal-dot-colour: #fda;
 @afterword-dot-colour: #bfb;
 
-// TODO: Finalise lyric link colours.
-@lyric-link-colour: #844;
-@lyric-hover-colour: #b77;
-@lyric-active-colour: #eaa;
-@song-link-colour: #484;
-@song-hover-colour: #7b7;
-@song-active-colour: #aea;
-@disabled-link-colour: #aaa;
-
+// Song stanza colours.
 @stanza-title-colour: brown;
 @stanza-refrain-colour: tomato;
 @stanza-verse-colour: orange;
@@ -58,33 +57,25 @@
 @stanza-backing-colour: skyBlue;
 @stanza-response-colour: cadetBlue;
 
-@stanza-type-tab-height: 20px;
-@lyrics-unit-margin: @stanza-type-tab-height + 5px;
-@stanza-overlap-margin: 6.5px;
-
+// Portal colours.
 @portal-block-colour: #fff4f4;
 @portal-text-colour: #ccc;
 
+// Box shadow.
+@box-shadow-colour: rgba(100, 100, 120, 0.2);
+@darker-box-shadow-colour: rgba(25, 25, 50, 0.4);
+
+// Text shadow.
 @text-shadow-offset: 1px;
 @text-shadow-blur: 0.5px;
 
+// App icon.
 @app-icon-diameter: 44px;
 @app-large-icon-diameter: 54px;
 @app-tablet-large-icon-diameter: 50px;
 @app-mini-large-icon-diameter: 47px;
 @default-dot-diameter: @app-icon-diameter;
-
 @app-thin-margin: 4px;
-
-/********
- * TEXT *
- ********/
-
-@font-face {
-  font-family: PTSansNarrow;
-  src: url('../../assets/fonts/pt_sans/PTN57F.ttf') format('truetype'),
-       url('../../assets/fonts/pt_sans/PTN77F.ttf') format('truetype')
-}
 
 /*************
  * Z-INDICES *
@@ -117,7 +108,10 @@
 // Verse bar text should be even more above.
 @verse-bar-text-z-index: @selected-verse-bar-z-index + 1;
 
-// Lyric buttons should be higher than everything else in lyric column, including text span.
+/**
+ * Lyric buttons should be higher than everything else in lyric column,
+ * including text span.
+ */
 @lyric-column-button-z-index: @verse-bar-text-z-index + 1;
 
 @menu-field-z-index: @lyric-column-button-z-index + 1;
@@ -129,12 +123,3 @@
 @popup-content-z-index: @popup-overlay-z-index + 1;
 
 @audio-in-overlay-z-index: @popup-content-z-index + 1;
-
-@wiki-popup-content-z-index: @audio-in-overlay-z-index + 1;
-
-// Popup button should be above dot.
-@popup-interactable-z-index: @wiki-popup-content-z-index + 1;
-
-
-// Need for dots popup?
-// Need for nav titles?

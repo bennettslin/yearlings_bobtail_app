@@ -44,15 +44,51 @@
     position: relative;
     transition: color 0.2s;
 
-    color: #444;
+    color: @lyric-text-colour;
+}
+
+// Underline anchor tag.
+.underline-bar {
+    transition: background-color 0.15s;
+
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 0;
+    left: 0;
+}
+
+.anchor-block, .portal-anchor, .dot-key {
+    white-space: nowrap;
+
+    &.anchor-block:not(.show-as-text) {
+        .underline-bar {
+            background-color: @lyric-underline-disabled-colour;
+        }
+
+        &.enabled {
+            .underline-bar {
+                background-color: @lyric-underline-enabled-colour;
+            }
+        }
+    }
+
+    &.portal-anchor {
+        .underline-bar {
+            background-color: @portal-text-colour;
+        }
+    }
 }
 
 // Invert colours.
-
-// TODO: Make all these colours better.
 .after-slider, .is-verse-interactivated .not-interactivated:not(.selected) {
+
+    .dot:not(.button) {
+        border: @dot-border solid @dot-border-invert-colour;
+    }
+
     .text-span {
-        color: #bbb;
+        color: @lyric-text-invert-colour;
     }
 
     .anchor-block {
@@ -60,18 +96,18 @@
         &.enabled {
 
             .text-span {
-                color: @lyric-link-colour;
+                color: @lyric-link-invert-colour;
             }
 
             &:hover {
                 .text-span {
-                    color: @lyric-hover-colour;
+                    color: @lyric-hover-invert-colour;
                 }
             }
 
             &:active {
                 .text-span {
-                    color: @lyric-active-colour;
+                    color: @lyric-active-invert-colour;
                 }
             }
         }
@@ -79,19 +115,15 @@
         &.show-as-anchor {
 
             .underline-bar {
-                background-color: mix(gray, white, 15%);
+                background-color: @lyric-underline-disabled-invert-colour;
             }
 
             &.enabled {
                 .underline-bar {
-                    background-color: mix(@lyric-link-colour, white, 25%);
+                    background-color: @lyric-underline-enabled-invert-colour;
                 }
             }
         }
-    }
-
-    .dot {
-        border: @dot-border solid #555;
     }
 }
 

@@ -15,7 +15,7 @@
 
 .anchor-block {
     .dot {
-        transition: width 0.15s, transform 0.15s, border 1.5s;
+        transition: width 0.15s, transform 0.15s, border 0.15s;
 
         &.is-present {
             transform: scale(1);
@@ -118,7 +118,7 @@
 
 .dot {
     &:not(.button), & .button-icon {
-        border: @dot-border solid #aaa;
+        border: @dot-border solid @dot-border-colour;
 
         // TODO: Key styling.
         &.songwriting { background-color: @songwriting-dot-colour; }

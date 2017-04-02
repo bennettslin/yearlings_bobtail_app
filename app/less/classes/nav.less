@@ -1,32 +1,5 @@
 @nav-border-radius: @nav-height / 3;
 
-.admin {
-    .nav-section {
-
-        .progress-bar-mixin(@song-total-colour, @song-filled-colour);
-
-        .selected {
-            .progress-bar-mixin(@played-total-colour, @played-filled-colour);
-
-            a.text-cell {
-                color: @song-link-colour;
-
-                &:hover {
-                    color: @song-hover-colour;
-                }
-
-                &:active {
-                    color: @song-active-colour;
-                }
-            }
-        }
-
-        .primary-row {
-            line-height: 1em;
-        }
-    }
-}
-
 .live {
     .nav-section {
         position: absolute;

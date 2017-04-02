@@ -88,39 +88,6 @@
     }
 }
 
-// Underline anchor tag.
-.underline-bar {
-    transition: background-color 0.15s;
-
-    position: absolute;
-    width: 100%;
-    height: 35%;
-    bottom: 0;
-    left: 0;
-}
-
-.anchor-block, .portal-anchor, .dot-key {
-    white-space: nowrap;
-
-    &.anchor-block:not(.show-as-text) {
-        .underline-bar {
-            background-color: #aaa;
-        }
-
-        &.enabled {
-            .underline-bar {
-                background-color: mix(@lyric-link-colour, white, 25%);
-            }
-        }
-    }
-
-    &.portal-anchor {
-        .underline-bar {
-            background-color: @portal-text-colour;
-        }
-    }
-}
-
 /**
  * Verse colours.
  */
@@ -232,52 +199,52 @@
 
     .verse.before-slider {
         &.odd {
-            background-color: @odd-before-colour;
+            background-color: @odd-before-slider-colour;
 
             .anchor-block {
                 text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-before-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-before-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-before-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-before-colour;
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-before-slider-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-before-slider-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-before-slider-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-before-slider-colour;
             }
         }
 
         &.even {
-            background-color: @even-before-colour;
+            background-color: @even-before-slider-colour;
 
             .anchor-block {
                 text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-before-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-before-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-before-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-before-colour;
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-before-slider-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-before-slider-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-before-slider-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-before-slider-colour;
             }
         }
     }
 
     .verse.after-slider {
         &.odd {
-            background-color: @odd-after-colour;
+            background-color: @odd-after-slider-colour;
 
             .anchor-block {
                 text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-after-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-after-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-after-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-after-colour;
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-after-slider-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @odd-after-slider-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-after-slider-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @odd-after-slider-colour;
             }
         }
 
         &.even {
-            background-color: @even-after-colour;
+            background-color: @even-after-slider-colour;
 
             .anchor-block {
                 text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-after-colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-after-colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-after-colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-after-colour;
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-after-slider-colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @even-after-slider-colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @even-after-slider-colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @even-after-slider-colour;
             }
         }
     }

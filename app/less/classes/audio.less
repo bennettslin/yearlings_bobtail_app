@@ -15,17 +15,7 @@
 
 @audio-banner-min-width: 220px;
 
-.admin {
-    .audio-section-block {
-        flex-direction: column;
-    }
-
-    .audio-block {
-        width: 100%;
-    }
-}
-
-.live {
+.menu-field {
     .audio-section {
         height: 100%;
     }
@@ -34,17 +24,6 @@
 .audio-subfield {
     min-width: @audio-banner-min-width + @audio-buttons-constant + @app-large-icon-diameter + @audio-block-padding * 3;
     max-width: 720px; // Arbitrary.
-}
-
-.overlay-popup-subfield {
-    .audio-subfield {
-        z-index: @audio-in-overlay-z-index;
-        width: 100%;
-    }
-
-    .audio-section {
-        height: @menu-height;
-    }
 }
 
 .tablet-width {
@@ -119,58 +98,6 @@
 
 .audio-banner-block, .timer-in-audio .audio-timer-block {
     background-color: #8dd;
-}
-
-.is-desktop, .tablet-width {
-
-    /**
-     * In desktop and tablet, width of audio subfield in overlay is less than
-     * width of screen.
-     */
-    .overlay-popup-subfield .audio-subfield {
-        overflow: hidden;
-        border-radius: 15px;
-    }
-}
-
-.timer-in-audio {
-    .overlay-popup-subfield {
-
-        @banner-margin: 5px;
-
-        .audio-section {
-            align-items: flex-start;
-            height: @app-icon-diameter * 2 + @banner-margin;
-        }
-
-        .audio-buttons-block, .audio-timer-block, .audio-banner-block {
-            height: @app-icon-diameter;
-        }
-
-        .audio-buttons-block {
-            max-width: 300px; // Also arbitrary.
-        }
-
-        .audio-timer-block {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: @audio-block-padding;
-
-            font-size: 1.75em;
-        }
-
-        .audio-banner-block {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .audio-display-block {
-            display: none;
-        }
-    }
 }
 
 .audio-banner-block {
@@ -301,11 +228,11 @@
     }
 
     .time-spent-bar {
-        background-color: @even-before-colour;
+        background-color: @even-before-slider-colour;
     }
 
     .time-remain-bar {
-        background-color: @even-after-colour;
+        background-color: @even-after-slider-colour;
     }
 }
 
@@ -419,12 +346,6 @@
 
     .audio-banner-block {
         width: 100%;
-    }
-}
-
-.overlay-shown {
-    .audio-banner-custom-subfield {
-        top: -@menu-height - @audio-banner-custom-subfield-height - 2 * @audio-banner-custom-subfield-padding;
     }
 }
 

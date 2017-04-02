@@ -602,7 +602,8 @@ class EventManager extends Component {
             scrollIntoView(element, {
                 time,
                 align: {
-                    top: 0.15
+                    top: 0.15,
+                    left: 0
                 }
             }, this._scrollElementCallback)
         }
