@@ -118,11 +118,6 @@ module.exports = [
     //     neededHours: 5
     // },
     // {
-    //     taskName: `Scroll into view if needed now returns cancel function.`,
-    //     workedHours: 0,
-    //     neededHours: 3
-    // },
-    // {
     //     taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
     //     workedHours: 0,
     //     neededHours: 5
@@ -1580,5 +1575,10 @@ module.exports = [
         taskName: `Nav button width is screwed up.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Switch to scroll-into-view.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

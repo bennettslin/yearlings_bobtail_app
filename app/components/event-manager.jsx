@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AccessManager from './access-manager'
-import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed'
+import scrollIntoView from 'scroll-into-view'
 import { getIsLogue } from '../helpers/album-view-helper'
 
 import { OVERVIEW_OPTIONS,
@@ -60,10 +60,6 @@ class EventManager extends Component {
         this.handleVerseInteractivate = this.handleVerseInteractivate.bind(this)
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
         this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
-
-        this.state = {
-            cancelScrollIntoView: null
-        }
     }
 
     componentDidMount() {
@@ -596,29 +592,21 @@ class EventManager extends Component {
         }
     }
 
-    /**
-     * scrollIntoViewIfNeeded should return a cancel function. It presently
-     * does not, even though it says it does?
-     * https://www.npmjs.com/package/scroll-into-view-if-needed
-     */
-    _scrollElementIntoView(className, index, duration = 125) {
+    _scrollElementIntoView(className, index, time = 350) {
         const selector = `${className}-${index}`,
             element = document.getElementsByClassName(selector)[0]
 
-        if (this.state.cancelScrollIntoView) {
-            this.state.cancelScrollIntoView()
-        }
-
         if (element) {
             console.warn(`Scrolling ${selector} into view.`);
-            const cancelScrollIntoView = scrollIntoViewIfNeeded(element, false, {
-                duration
-            })
 
-            this.setState({
-                cancelScrollIntoView
-            })
+            scrollIntoView(element, {
+                time
+            }, this._scrollElementCallback)
         }
+    }
+
+    _scrollElementCallback(status) {
+        console.warn('scroll status:', status);
     }
 
     _closeDotsIfOverviewWillShow() {
