@@ -408,14 +408,23 @@
 
 .audio-banner-custom-subfield {
     position: relative;
+    top: 0;
     height: @audio-banner-custom-subfield-height;
     z-index: @custom-audio-banner-z-index;
+
+    transition: top 0.2s;
 
     // Arbitrary values;
     padding: @audio-banner-custom-subfield-padding 8px;
 
     .audio-banner-block {
         width: 100%;
+    }
+}
+
+.overlay-shown {
+    .audio-banner-custom-subfield {
+        top: -@menu-height - @audio-banner-custom-subfield-height - 2 * @audio-banner-custom-subfield-padding;
     }
 }
 

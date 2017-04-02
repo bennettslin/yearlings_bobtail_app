@@ -1,8 +1,7 @@
 module.exports = [
-
     // Bugs.
     {
-        taskName: `Animate audio banner in phone upon overlay.`,
+        taskName: `Nav button width is screwed up.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -1576,6 +1575,11 @@ module.exports = [
     },
     {
         taskName: `Bug where selecting interactivated verse does not deselect verse bar.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Animate audio banner in phone upon overlay.`,
         workedHours: 1,
         neededHours: 1
     }
