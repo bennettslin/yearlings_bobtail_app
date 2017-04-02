@@ -1,4 +1,21 @@
 module.exports = [
+
+    // Bugs.
+    {
+        taskName: `Lyric button lost animation.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Animate audio banner in phone upon overlay.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Annotation in overlay is gone.`,
+        workedHours: 0,
+        neededHours: 2
+    },
     {
         taskName: `Arrow keys should not work when wiki popup is up.`,
         workedHours: 0,
@@ -9,6 +26,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
+
     {
         taskName: `make visual keyboard keys`,
         workedHours: 1,
