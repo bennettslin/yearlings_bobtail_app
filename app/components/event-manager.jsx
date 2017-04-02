@@ -600,7 +600,10 @@ class EventManager extends Component {
             console.warn(`Scrolling ${selector} into view.`);
 
             scrollIntoView(element, {
-                time
+                time,
+                align: {
+                    top: 0.15
+                }
             }, this._scrollElementCallback)
         }
     }
