@@ -27,7 +27,6 @@ import { SHOWN,
          PAUSE_AT_END } from '../helpers/constants'
 import { getSong, getIsLogue, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
-import { getPropsAreSame } from '../helpers/general-helper'
 import LogHelper from '../helpers/log-helper'
 
 /*********
@@ -400,9 +399,7 @@ class App extends Component {
         // Get isSelectedVerseAbove and isSelectedVerseBelow.
         const newState = getVerseBarStatus(this.state, verseElement)
 
-        if (!getPropsAreSame(newState, this.state)) {
-            this.setState(newState)
-        }
+        this.setState(newState)
     }
 
     selectLyricColumn({
