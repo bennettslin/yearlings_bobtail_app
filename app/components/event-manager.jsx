@@ -343,7 +343,8 @@ class EventManager extends Component {
     handleLyricAnnotationSelect(e, selectedAnnotationIndex) {
         this._stopPropagation(e)
         this._closeSections({
-            exemptAnnotation: true
+            exemptAnnotation: true,
+            exemptLyric: true
         })
         this.props.selectAnnotation({
             selectedAnnotationIndex

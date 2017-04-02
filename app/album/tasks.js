@@ -5,11 +5,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Annotation in overlay is gone.`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     {
         taskName: `make visual keyboard keys`,
@@ -1580,6 +1575,11 @@ module.exports = [
     },
     {
         taskName: `Animate audio banner in phone upon overlay.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Annotation in overlay is gone.`,
         workedHours: 1,
         neededHours: 1
     }
