@@ -1,4 +1,10 @@
 module.exports = [
+    {
+        taskName: `Allow accessed verse to continue from accessed annotation, and vice versa.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     // Touch accessibility.
     {
         taskName: `audio banner is touch accessible.`,
@@ -17,6 +23,18 @@ module.exports = [
         taskName: `make visual keyboard keys`,
         workedHours: 1,
         neededHours: 3
+    },
+
+    {
+        taskName: `Allow buttons to use svgs.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `Allow borders to use svgs.`,
+        workedHours: 0,
+        neededHours: 8
     },
 
     {

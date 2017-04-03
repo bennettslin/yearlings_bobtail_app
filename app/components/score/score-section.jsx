@@ -58,13 +58,14 @@ class ScoreSectionView extends Component {
                 ref={this.props.scoreSectionRef}
                 className="section score-section"
                 onKeyDown={this.hi}
-                tabIndex="-1"
+                tabIndex="1"
             >
                 <iframe
                     ref={(node) => (this.myWebview = node)}
                     className={`webview`}
                     src={scores[0]}
                     onLoad={this.onWebviewLoad}
+                    tabIndex="2"
                 />
             </div>
         )
