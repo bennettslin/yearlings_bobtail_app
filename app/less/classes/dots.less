@@ -111,7 +111,7 @@
 }
 
 .dot {
-    &:not(.button), & .button-icon {
+    &:not(.button), & .button-background {
         border: @dot-border solid @dot-border-colour;
 
         // TODO: Key styling.
@@ -136,7 +136,7 @@
             }
         }
 
-        &.button-icon {
+        &.button-background {
             transition: background-color 0.15s;
         }
     }
@@ -147,7 +147,7 @@
     .stanza, .anchor-block {
         &.selected {
             .dot {
-                &:not(.button), & .button-icon {
+                &:not(.button), & .button-background {
                     border: @dot-border solid @selected-annotation-colour;
                     background-color: @deselected-dot-colour;
                 }
@@ -158,7 +158,7 @@
 
 .dots-section {
     .dot.deselected {
-        .button-icon {
+        .button-background {
             background-color: @deselected-dot-colour;
         }
     }
