@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import TextBlock from './text-block'
 import DotBlock from '../dot/dots-block'
 import { getIntersection } from '../../helpers/dot-helper'
@@ -91,12 +92,21 @@ const AnchorBlockView = ({
             ' '
         }
         <a
-            className={`anchor-block ${showAsAnchor ? 'show-as-anchor' : 'show-as-text'}${accessHighlighted ? ' access-highlighted' : ''}${annotationIndex ? ' annotation-' + annotationIndex : ''}${wikiIndex ? ' wiki-' + wikiIndex : ''}${!showAsAnchor || isSelected || inPortal ? '' : ' enabled'}${isPortalAnchor ? ' portal-anchor' : ''}${hasTodo ? ' todo' : ''}`}
+            className={classnames(
+                'anchor-block',
+                annotationIndex && `annotation-${annotationIndex}`,
+                wikiIndex && `wiki-${wikiIndex}`,
+                showAsAnchor ? 'show-as-anchor' : 'show-as-text',
+                { 'enabled': showAsAnchor && !isSelected && !inPortal,
+                  'selected': isSelected,
+                  'access-highlighted': accessHighlighted,
+                  'portal-anchor': isPortalAnchor,
+                  'todo': hasTodo }
+            )}
             onClick={handleClick}
         >
             {(isLyric || isPortalAnchor) &&
-                <span className="underline-bar">
-                </span>
+                <span className="underline-bar"></span>
             }
             {/* Don't show any dots in portal block. */}
             {/* {((dotKeys && !wikiIndex && !inPortal) || isPortalAnchor) && */}

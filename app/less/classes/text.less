@@ -66,6 +66,16 @@
             background-color: @lyric-underline-disabled-colour;
         }
 
+        &.selected {
+            .text-span {
+                color: @selected-annotation-text-colour;
+            }
+
+            .underline-bar {
+                background-color: @selected-annotation-colour;
+            }
+        }
+
         &.enabled {
             .underline-bar {
                 background-color: @lyric-underline-enabled-colour;

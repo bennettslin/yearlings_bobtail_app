@@ -1,5 +1,11 @@
 module.exports = [
     {
+        taskName: `Selecting wiki through access starts on first index.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Scrolling pushes screen to left.`,
         workedHours: 0,
         neededHours: 1
@@ -11,6 +17,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
+
     // Audio slider.
     {
         taskName: `Slider in verse styling, determine slider selected verse.`,

@@ -15,7 +15,7 @@
 
 .anchor-block {
     .dot {
-        transition: width 0.15s, transform 0.15s, border 0.15s;
+        transition: background-color 0.15s, width 0.15s, transform 0.15s, border 0.15s;
 
         &.is-present {
             transform: scale(1);
@@ -142,18 +142,29 @@
     }
 }
 
+.lyrics-section {
+    .stanza, .anchor-block {
+        &.selected {
+            .dot {
+                &:not(.button), & .button-icon {
+                    border: @dot-border solid @selected-annotation-colour;
+                    background-color: @deselected-dot-colour;
+                }
+            }
+        }
+    }
+}
+
 .dots-section {
     .dot.deselected {
-        .button-icon { background-color: lightGray; }
+        .button-icon {
+            background-color: @deselected-dot-colour;
+        }
     }
 }
 
 .dots-stanza {
     padding-bottom: 4px;
-
-    .dot:not(.enabled) {
-        .button-icon { background-color: lightGray; }
-    }
 }
 
 .phone-width {

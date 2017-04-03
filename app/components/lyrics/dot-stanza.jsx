@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import DotBlock from '../dot/dots-block'
 import { getIntersection } from '../../helpers/dot-helper'
 
@@ -46,7 +47,11 @@ const DotStanzaView = ({
 
 ...other }) => (
 
-    <div className={`stanza${accessHighlighted ? ' access-highlighted' : ''}`}>
+    <div className={classnames(
+        'stanza',
+        { 'selected': isSelected,
+          'access-highlighted': accessHighlighted }
+    )}>
         <DotBlock {...other}
             onlyShowFirstDotKey={true}
             selectedDotKeys={isSelected ? dotKeys : {}}
