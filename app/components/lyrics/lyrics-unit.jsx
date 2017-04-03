@@ -149,14 +149,22 @@ const LyricsUnitView = ({
                 </div>
             }
             {showSide &&
-                <div className={`stanza-block side${isBottomOnly ? ' bottom-only' : ''}`}>
+                <div className={classnames(
+                    'stanza-block',
+                    'side',
+                    { 'bottom-only': isBottomOnly }
+                )}>
                     {getStanza({ stanzaArray: topSideStanza })}
                     {getStanza({ stanzaArray: bottomSideStanza })}
                     {getStanza({ stanzaArray: topSideSubStanza, addSub: true })}
                 </div>
             }
-            {shouldShowDotStanza &&
-                <div className={`stanza-block dots-stanza`}>
+            {dotStanza &&
+                <div className={classnames(
+                    'stanza-block',
+                    'dots-stanza',
+                    { 'dots-stanza-shown': shouldShowDotStanza }
+                )}>
                     <DotStanza {...other}
                         dotStanzaObject={dotStanza}
                         selectedDotKeys={selectedDotKeys}

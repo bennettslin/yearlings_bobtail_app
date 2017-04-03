@@ -1,7 +1,8 @@
 import React from 'react'
 import classnames from 'classnames'
-import DotBlock from '../dot/dots-block'
+import DotButton from '../dot/dot-button'
 import { getIntersection } from '../../helpers/dot-helper'
+import { ALL_DOT_KEYS_DOT_STANZA_ORDER } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -44,21 +45,27 @@ const DotStanzaView = ({
     isSelected,
     dotKeys,
     accessHighlighted,
+    annotationIndex,
 
-...other }) => (
+...other }) => {
 
-    <div className={classnames(
-        'stanza',
-        { 'selected': isSelected,
-          'access-highlighted': accessHighlighted && !isSelected }
-    )}>
-        <DotBlock {...other}
-            onlyShowFirstDotKey={true}
-            selectedDotKeys={isSelected ? dotKeys : {}}
-            presentDotKeys={dotKeys}
-            inDotStanza={true}
-        />
-    </div>
-)
+    const firstPresentDotKey = ALL_DOT_KEYS_DOT_STANZA_ORDER.reduce((presentDotKey, dotKey) => {
+        return presentDotKey || (dotKeys[dotKey] && dotKey)
+    }, false)
+
+    return (
+        <div className={classnames(
+            'stanza',
+            annotationIndex && `annotation-${annotationIndex}`,
+            { 'selected': isSelected,
+              'access-highlighted': accessHighlighted && !isSelected }
+        )}>
+            <DotButton {...other}
+                dotKey={firstPresentDotKey}
+                isSelected={isSelected}
+            />
+        </div>
+    )
+}
 
 export default DotStanza
