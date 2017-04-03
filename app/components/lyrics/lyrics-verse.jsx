@@ -88,7 +88,9 @@ const LyricsVerse = ({
         interactivatedClassName = ''
 
     if (!inVerseBar) {
-        if (inMain) {
+        if (isTitle) {
+            backgroundClassName = 'title'
+        } else if (inMain) {
             backgroundClassName = isEven ? 'even' : 'odd'
         } else {
             backgroundClassName = 'in-side'
