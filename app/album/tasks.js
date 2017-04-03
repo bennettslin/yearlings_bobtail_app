@@ -1,4 +1,10 @@
 module.exports = [
+
+    {
+        taskName: `Dot stanza animates out when deselected.`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Allow accessed verse to continue from accessed annotation, and vice versa.`,
         workedHours: 0,
