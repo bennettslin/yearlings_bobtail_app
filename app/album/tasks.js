@@ -1,10 +1,4 @@
 module.exports = [
-    {
-        taskName: `Scrolling pushes screen to left.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Touch accessibility.
     {
         taskName: `audio banner is touch accessible.`,
@@ -1597,4 +1591,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Scrolling pushes screen to left in overlay.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

@@ -5,6 +5,9 @@
     width: 100%;
     height: 100%;
 
+    // Prevent lyric scrolling from pushing app offscreen.
+    overflow: hidden;
+
     // Centre the audio section.
     display: flex;
     flex-direction: column;
@@ -131,7 +134,7 @@
     .audio-banner-custom-subfield {
         top: -@menu-height - @audio-banner-custom-subfield-height - 2 * @audio-banner-custom-subfield-padding;
     }
-    
+
     .overlay-popup-subfield {
         .audio-subfield {
             animation: overlaidPopupIn 0.3s;
