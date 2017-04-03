@@ -1,11 +1,5 @@
 module.exports = [
     {
-        taskName: `Selecting wiki through access starts on first index.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Scrolling pushes screen to left.`,
         workedHours: 0,
         neededHours: 1
@@ -1597,5 +1591,10 @@ module.exports = [
         taskName: `Begin access styling.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Selecting wiki through access starts on first index.`,
+        workedHours: 1,
+        neededHours: 1
     },
 ]

@@ -232,72 +232,96 @@ class AccessManager extends Component {
 
 
     _handleDotsNavigation(e, keyName) {
-        const dotKeysLength = ALL_DOT_KEYS.length
-        let { accessedDotIndex } = this.props
+        const { accessedOn } = this.props
 
-        // TODO: Is this the best way to navigate? That is, should right from 4 to 5, or back to 1?
-        switch (keyName) {
-            case ARROW_LEFT:
-                accessedDotIndex = (accessedDotIndex + (dotKeysLength - 1)) % dotKeysLength
-                break
-            case ARROW_RIGHT:
-                accessedDotIndex = (accessedDotIndex + 1) % dotKeysLength
-                break
-            case ARROW_UP:
-            case ARROW_DOWN:
-                accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2)) % dotKeysLength
-                break
-            case ENTER:
-                this.props.handleDotKeyToggle(e, ALL_DOT_KEYS[accessedDotIndex])
-                return true
-            default:
-                return false
+        if (accessedOn) {
+            const dotKeysLength = ALL_DOT_KEYS.length
+            let { accessedDotIndex } = this.props
+
+            // TODO: Is this the best way to navigate? That is, should right from 4 to 5, or back to 1?
+            switch (keyName) {
+                case ARROW_LEFT:
+                    accessedDotIndex = (accessedDotIndex + (dotKeysLength - 1)) % dotKeysLength
+                    break
+                case ARROW_RIGHT:
+                    accessedDotIndex = (accessedDotIndex + 1) % dotKeysLength
+                    break
+                case ARROW_UP:
+                    if (accessedDotIndex >= dotKeysLength / 2) {
+                        accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2)) % dotKeysLength
+                    } else if (accessedDotIndex !== 0) {
+                        accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2) - 1) % dotKeysLength
+                    } else {
+                        accessedDotIndex = (accessedDotIndex + (dotKeysLength - 1)) % dotKeysLength
+                    }
+                    break
+                case ARROW_DOWN:
+                    if (accessedDotIndex < dotKeysLength / 2) {
+                        accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2)) % dotKeysLength
+                    } else if (accessedDotIndex !== dotKeysLength - 1) {
+                        accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2) + 1) % dotKeysLength
+                    } else {
+                        accessedDotIndex = (accessedDotIndex + 1) % dotKeysLength
+                    }
+                    break
+                case ENTER:
+                    this.props.handleDotKeyToggle(e, ALL_DOT_KEYS[accessedDotIndex])
+                    return true
+                default:
+                    return false
+            }
+
+            this.props.handleDotAccess(accessedDotIndex)
         }
 
-        this.props.handleDotAccess(accessedDotIndex)
         return true
     }
 
     _handleNavNavigation(e, keyName) {
-        let { accessedSongIndex } = this.props,
-            direction,
-            annotationIndexWasAccessed = false,
+        const { accessedOn } = this.props
+        let annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
-        // Skip appropriate songs if showing single book column.
-        switch (keyName) {
-            case ARROW_LEFT:
-                direction = -1
-                break
-            case ARROW_RIGHT:
-                direction = 1
-                break
-            case ENTER:
-                keyWasRegistered = this.props.handleNavSongSelect(e, accessedSongIndex)
-                /**
-                 * If song was successfully selected, then annotation index was
-                 * also accessed.
-                 */
-                annotationIndexWasAccessed = keyWasRegistered
-                break
-            default:
-                keyWasRegistered = false
-        }
+        // If access is off, just turn it on.
+        if (accessedOn) {
+            let { accessedSongIndex } = this.props,
+                direction
 
-        if (direction) {
-            const { songs,
-                    selectedBookColumnIndex,
-                    bookStartingIndices } = this.props,
-                songsLength = songs.length
-
-            accessedSongIndex = (accessedSongIndex + songsLength + direction) % songsLength
-
-            // Select the book column that contains the accessed song index.
-            if ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
-                this.props.handleNavBookSelect(e)
+            // Skip appropriate songs if showing single book column.
+            switch (keyName) {
+                case ARROW_LEFT:
+                    direction = -1
+                    break
+                case ARROW_RIGHT:
+                    direction = 1
+                    break
+                case ENTER:
+                    keyWasRegistered = this.props.handleNavSongSelect(e, accessedSongIndex)
+                    /**
+                     * If song was successfully selected, then annotation index was
+                     * also accessed.
+                     */
+                    annotationIndexWasAccessed = keyWasRegistered
+                    break
+                default:
+                    keyWasRegistered = false
             }
 
-            this.props.handleSongAccess(accessedSongIndex)
+            if (direction) {
+                const { songs,
+                        selectedBookColumnIndex,
+                        bookStartingIndices } = this.props,
+                    songsLength = songs.length
+
+                accessedSongIndex = (accessedSongIndex + songsLength + direction) % songsLength
+
+                // Select the book column that contains the accessed song index.
+                if ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
+                    this.props.handleNavBookSelect(e)
+                }
+
+                this.props.handleSongAccess(accessedSongIndex)
+            }
         }
 
         return { annotationIndexWasAccessed,
