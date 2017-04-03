@@ -50,7 +50,7 @@ const DotStanzaView = ({
     <div className={classnames(
         'stanza',
         { 'selected': isSelected,
-          'access-highlighted': accessHighlighted }
+          'access-highlighted': accessHighlighted && !isSelected }
     )}>
         <DotBlock {...other}
             onlyShowFirstDotKey={true}

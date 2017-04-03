@@ -232,7 +232,7 @@ class LyricsVerseView extends Component {
                     interactivatedClassName,
                     sliderPlacementClassName,
                     { 'selected': isSelected,
-                      'access-highlighted': accessHighlighted,
+                      'access-highlighted': accessHighlighted && !isSelected,
                       'interactable': isInteractable,
                       'hoverable': isHoverable }
                 )}

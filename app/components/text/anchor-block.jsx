@@ -99,7 +99,7 @@ const AnchorBlockView = ({
                 showAsAnchor ? 'show-as-anchor' : 'show-as-text',
                 { 'enabled': showAsAnchor && !isSelected && !inPortal,
                   'selected': isSelected,
-                  'access-highlighted': accessHighlighted,
+                  'access-highlighted': accessHighlighted && !isSelected,
                   'portal-anchor': isPortalAnchor,
                   'todo': hasTodo }
             )}

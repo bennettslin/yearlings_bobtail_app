@@ -11,6 +11,7 @@
 //         box-shadow: 0 2px 7.5px 7.5px chartreuse;
 //     }
 // }
+
 .access-icon {
     @access-icon-edge: 20px;
 
@@ -39,16 +40,71 @@
         visibility: visible;
     }
 
+    // Anchors and dot stanzas in lyrics section.
+    .dots-hidden.nav-collapsed {
+        .access-highlighted {
+            &.anchor-block:not(.show-as-text) {
+                .text-span {
+                    font-weight: bolder;
+                    color: @access-text-colour;
+                }
+
+                .underline-bar {
+                    background-color: @access-text-colour;
+                }
+            }
+
+            &.stanza, &.anchor-block {
+                .dot {
+                    &:not(.button), & .button-icon {
+                        border: @dot-border solid @access-text-colour;
+                    }
+                }
+            }
+        }
+    }
+
+    // Anchors and dots in dots section.
+    .dots-shown {
+        .dots-section {
+            .access-highlighted {
+                .anchor-block:not(.show-as-text) {
+                    .text-span {
+                        font-weight: bolder;
+                        color: @access-text-colour;
+                    }
+
+                    .underline-bar {
+                        background-color: @access-text-colour;
+                    }
+                }
+
+                &.dot-container {
+                    .dot {
+                        &:not(.button), & .button-icon {
+                            border: @dot-border solid @access-text-colour;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Nav buttons in nav section.
+    .nav-expanded {
+        .nav-section {
+            .access-highlighted {
+                .button-icon {
+                    box-shadow: 0 2px 10px 10px @access-text-colour;
+                }
+            }
+        }
+    }
+
     // Lyrics annotation is accessed.
     .annotation-hidden.dots-hidden.nav-collapsed.is-not-verse-interactivated {
         .lyrics-section {
             background-color: #dfd;
-
-            .access-highlighted {
-                &.anchor-block, &.stanza {
-                    box-shadow: 0 2px 10px 10px chartreuse;
-                }
-            }
         }
     }
 
@@ -65,12 +121,6 @@
     .annotation-shown {
         .annotation-section {
             background-color: #dfd;
-
-            .access-highlighted {
-                &.anchor-block {
-                    box-shadow: 0 2px 10px 10px chartreuse;
-                }
-            }
         }
     }
 
@@ -78,12 +128,6 @@
     .nav-expanded {
         .nav-section {
             background-color: #dfd;
-
-            .access-highlighted {
-                &.nav-button-block {
-                    box-shadow: 0 2px 10px 10px chartreuse;
-                }
-            }
         }
     }
 
@@ -91,13 +135,6 @@
     .dots-shown.nav-collapsed {
         .dots-section {
             background-color: #dfd;
-
-            .access-highlighted {
-                .dot {
-                    box-shadow: 0 2px 10px 10px chartreuse;
-                }
-            }
         }
     }
-
 }

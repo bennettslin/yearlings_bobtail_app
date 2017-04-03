@@ -1593,4 +1593,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Begin access styling.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]
