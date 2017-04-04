@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Access dot after selecting it.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Allow accessed verse to continue from accessed annotation, and vice versa.`,
         workedHours: 0,
         neededHours: 2

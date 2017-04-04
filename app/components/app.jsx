@@ -347,6 +347,10 @@ class App extends Component {
     toggleDotKey(selectedDotKey) {
         const isSelected = !this.props.selectedDotKeys[selectedDotKey]
         this.props.selectDotKey(selectedDotKey, isSelected)
+
+        // Make most recently toggled dot the accessed dot.
+        // TODO: Need to change key to index.
+        // this.accessDot(accessedDotIndex)
     }
 
     /********
