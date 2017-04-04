@@ -163,7 +163,7 @@ const LyricsUnitView = ({
                 <div className={classnames(
                     'stanza-block',
                     'dots-stanza',
-                    { 'dots-stanza-shown': shouldShowDotStanza }
+                    { 'dots-stanza-hidden': !shouldShowDotStanza }
                 )}>
                     <DotStanza {...other}
                         dotStanzaObject={dotStanza}

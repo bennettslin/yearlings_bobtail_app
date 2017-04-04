@@ -19,12 +19,20 @@
     justify-content: center;
     font-size: @lyric-verse-size;
 
-    &.subsequent {
-        margin-top: -@stanza-type-tab-height - 2.5px;
+    /**
+     * Apply margin top to stanza block rather than lyrics unit, so that
+     * bottom dot stanza can override it when faded out.
+     */
+    &:not(:first-child) {
+        .stanza-block:not(.dots-stanza-hidden) {
+            margin-top: @lyrics-unit-margin;
+        }
     }
 
-    &:not(:last-child) {
-        margin-bottom: @lyrics-unit-margin;
+    &.subsequent {
+        .stanza-block {
+            margin-top: @lyrics-unit-margin - @stanza-type-tab-height - 2.5px;
+        }
     }
 }
 

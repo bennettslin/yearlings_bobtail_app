@@ -13,7 +13,7 @@
     height: 100%;
 }
 
-.anchor-block {
+.anchor-block, .annotation-card {
     .dot {
         transition: background-color 0.15s, width 0.15s, transform 0.15s, border 0.15s;
 
@@ -25,6 +25,33 @@
             transform: scale(0);
             width: 0;
         }
+    }
+}
+
+.dots-stanza {
+    padding-bottom: 4px;
+
+    .button {
+        transition: width 0.2s, height 0.2s;
+    }
+    &.stanza-block {
+        transition: margin-top 0.2s, margin-left 0.2s;
+    }
+    .dot .button-background {
+        transition: background-color 0.15s, border 0.15s;
+    }
+}
+
+.dots-stanza-hidden {
+    .button {
+        width: 0;
+        height: 0;
+    }
+    &.stanza-block.dots-stanza {
+        margin-left: 0;
+    }
+    .dot .button-background {
+        border: 0;
     }
 }
 
@@ -64,6 +91,12 @@
     .dot-container {
         position: relative;
     }
+
+    .dot.deselected {
+        .button-background {
+            background-color: @deselected-dot-colour;
+        }
+    }
 }
 
 .dot-description {
@@ -83,18 +116,9 @@
 
     opacity: 0;
     transition: opacity 0.2s;
-}
 
-.dot-description {
     &:hover, &.interactivated {
         opacity: 1;
-    }
-}
-.accessed-on {
-    .access-highlighted {
-        .dot-description {
-            opacity: 1;
-        }
     }
 }
 
@@ -135,10 +159,10 @@
                 border: 0;
             }
         }
+    }
 
-        &.button-background {
-            transition: background-color 0.15s;
-        }
+    & .button-background {
+        transition: background-color 0.15s;
     }
 }
 
@@ -154,18 +178,6 @@
             }
         }
     }
-}
-
-.dots-section {
-    .dot.deselected {
-        .button-background {
-            background-color: @deselected-dot-colour;
-        }
-    }
-}
-
-.dots-stanza {
-    padding-bottom: 4px;
 }
 
 .phone-width {

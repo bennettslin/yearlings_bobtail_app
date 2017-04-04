@@ -1,7 +1,6 @@
 module.exports = [
-
     {
-        taskName: `Dot stanza animates out when deselected.`,
+        taskName: `Simplify dots block logic to not distinguish between annotation card and anchor block.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -1619,5 +1618,10 @@ module.exports = [
         taskName: `Scrolling pushes screen to left in overlay.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Dot stanza animates out when deselected.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

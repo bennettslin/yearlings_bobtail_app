@@ -51,8 +51,8 @@ const DotBlockView = ({
                 return (
                     <DotButton {...other}
                         key={index}
-                        inDotsSection={true}
                         dotKey={dotKey}
+                        inDotsSection={true}
                         isSelected={isSelected}
                         accessHighlighted={accessHighlighted}
                     />
