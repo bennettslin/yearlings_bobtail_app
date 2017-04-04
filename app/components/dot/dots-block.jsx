@@ -12,17 +12,9 @@ const defaultProps = {
  * CONTAINER *
  *************/
 
-const DotBlock = (props) => {
-
-    const { handleDotKeyToggle } = props,
-        inDotsSection = !!handleDotKeyToggle
-
-    return (
-        <DotBlockView {...props}
-            inDotsSection={inDotsSection}
-        />
-    )
-}
+const DotBlock = (props) => (
+    <DotBlockView {...props} />
+)
 
 /****************
  * PRESENTATION *
@@ -31,13 +23,11 @@ const DotBlock = (props) => {
 const DotBlockView = ({
 
     // From props.
+    inDotsSection,
     selectedDotKeys,
     shownDotKeys,
     annotationDotKeys,
     accessedDotIndex,
-
-    // From controller.
-    inDotsSection,
 
 ...other }) => (
     <span className="dots-block">
@@ -47,6 +37,7 @@ const DotBlockView = ({
                 return (
                     <DotButton {...other}
                         key={index}
+                        dotIndex={index}
                         dotKey={dotKey}
                         inDotsSection={true}
                         isSelected={selectedDotKeys[dotKey]}

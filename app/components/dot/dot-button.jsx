@@ -9,20 +9,26 @@ import { DOT_DESCRIPTIONS } from '../../helpers/constants'
 
 const DotButton = ({
 
-    handleDotKeyToggle,
+    dotIndex,
+    handleDotStanzaSelect,
+    handleDotToggle,
 
 ...other }) => {
 
     const { dotKey,
-            isSelected,
-            inDotsSection } = other,
-        isEnabled = inDotsSection || !isSelected,
-        handleClick = isEnabled && handleDotKeyToggle &&
-            (e => handleDotKeyToggle(e, dotKey))
+            isSelected } = other
+
+    let handleClick
+
+    if (handleDotStanzaSelect) {
+        handleClick = !isSelected && (e => handleDotStanzaSelect(e, dotKey))
+
+    } else if (handleDotToggle) {
+        handleClick = e => handleDotToggle(e, dotIndex)
+    }
 
     return (
         <DotButtonView {...other}
-            isEnabled={isEnabled}
             handleClick={handleClick}
         />
     )
@@ -63,7 +69,7 @@ class DotButtonView extends Component {
         this.props.setHasInteractivatedDotText(isInteractivated)
     }
 
-    render () {
+    render() {
         const {
 
             // From props.
@@ -73,7 +79,6 @@ class DotButtonView extends Component {
             isSelected,
 
             // From controller.
-            isEnabled,
             handleClick
 
         } = this.props,
@@ -110,9 +115,9 @@ class DotButtonView extends Component {
                     </a>
                 }
                 <Button
-                    buttonClasses={['dot']}
+                    buttonClass="dot"
                     iconClass={dotKey}
-                    isEnabled={isEnabled}
+                    isEnabled={inDotsSection || !isSelected}
                     isDeselected={inDotsSection ? !isSelected : undefined}
                     extraChild={dotDescription}
                     handleClick={handleClick}

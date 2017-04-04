@@ -23,6 +23,8 @@ import { SHOWN,
          TIPS_OPTIONS,
          AUDIO_OPTIONS,
 
+         ALL_DOT_KEYS,
+
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
 import { getSong, getIsLogue, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
@@ -344,13 +346,14 @@ class App extends Component {
      * DOT *
      *******/
 
-    toggleDotKey(selectedDotKey) {
-        const isSelected = !this.props.selectedDotKeys[selectedDotKey]
+    toggleDot(selectedDotIndex) {
+        const selectedDotKey = ALL_DOT_KEYS[selectedDotIndex],
+            isSelected = !this.props.selectedDotKeys[selectedDotKey]
+
         this.props.selectDotKey(selectedDotKey, isSelected)
 
         // Make most recently toggled dot the accessed dot.
-        // TODO: Need to change key to index.
-        // this.accessDot(accessedDotIndex)
+        this.accessDot(selectedDotIndex)
     }
 
     /********
@@ -828,7 +831,7 @@ class App extends Component {
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
         this.resetUpdatedTimePlayed = this.resetUpdatedTimePlayed.bind(this)
-        this.toggleDotKey = this.toggleDotKey.bind(this)
+        this.toggleDot = this.toggleDot.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.interactivateVerse = this.interactivateVerse.bind(this)
@@ -878,7 +881,7 @@ class App extends Component {
                 selectAnnotation={this.selectAnnotation}
                 selectAudioOption={this.selectAudioOption}
                 selectBookColumn={this.selectBookColumn}
-                toggleDotKey={this.toggleDotKey}
+                toggleDot={this.toggleDot}
                 selectDotsExpand={this.selectDotsExpand}
                 selectLyricColumn={this.selectLyricColumn}
                 selectLyricExpand={this.selectLyricExpand}

@@ -55,6 +55,7 @@ class DotsSectionView extends Component {
                 onClick={this._onContainerClick}
             >
                 <DotBlock {...this.props}
+                    inDotsSection={true}
                     hasInteractivatedDotText={hasInteractivatedDotText}
                     setHasInteractivatedDotText={e => this._setHasInteractivatedDotText(e)}
                 />

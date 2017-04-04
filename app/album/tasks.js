@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Access dot after selecting it.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Allow accessed verse to continue from accessed annotation, and vice versa.`,
         workedHours: 0,
         neededHours: 2
@@ -1628,5 +1623,10 @@ module.exports = [
         taskName: `Simplify dots block logic to not distinguish between annotation card and anchor block.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Access dot after selecting it.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

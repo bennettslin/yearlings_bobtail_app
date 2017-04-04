@@ -238,7 +238,6 @@ class AccessManager extends Component {
             const dotKeysLength = ALL_DOT_KEYS.length
             let { accessedDotIndex } = this.props
 
-            // TODO: Is this the best way to navigate? That is, should right from 4 to 5, or back to 1?
             switch (keyName) {
                 case ARROW_LEFT:
                     accessedDotIndex = (accessedDotIndex + (dotKeysLength - 1)) % dotKeysLength
@@ -265,7 +264,7 @@ class AccessManager extends Component {
                     }
                     break
                 case ENTER:
-                    this.props.handleDotKeyToggle(e, ALL_DOT_KEYS[accessedDotIndex])
+                    this.props.handleDotToggle(e, accessedDotIndex)
                     return true
                 default:
                     return false

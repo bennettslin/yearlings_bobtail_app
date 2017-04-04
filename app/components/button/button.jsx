@@ -4,7 +4,7 @@ import classnames from 'classnames'
 const Button = ({
 
     buttonName,
-    buttonClasses,
+    buttonClass,
     iconClass,
     iconText,
     accessKey,
@@ -22,7 +22,7 @@ const Button = ({
         className={classnames(
             'button',
             buttonName && `${buttonName}-button`,
-            buttonClasses,
+            buttonClass,
             { 'large': isLarge },
             { 'custom-shape': isCustomShape,
               'custom-size': isCustomSize,
@@ -49,7 +49,7 @@ const Button = ({
 
 Button.propTypes = {
     buttonName: PropTypes.string,
-    buttonClasses: PropTypes.array,
+    buttonClass: PropTypes.string,
     iconClass: PropTypes.string,
     iconText: PropTypes.oneOfType([
         PropTypes.string,

@@ -19,21 +19,21 @@ const DotStanza = ({
 ...other }) => {
 
     const { annotationIndex,
-            dotKeys } = dotStanzaObject,
+            dotKeys: annotationDotKeys } = dotStanzaObject,
 
         isSelected = annotationIndex === selectedAnnotationIndex,
         accessHighlighted = accessedAnnotationIndex === annotationIndex,
 
         // Hide dot keys that are not present.
-        intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
-        handleDotKeyToggle = e => handleLyricAnnotationSelect(e, annotationIndex)
+        shownDotKeys = getIntersection(annotationDotKeys, selectedDotKeys),
+        handleDotStanzaSelect = e => handleLyricAnnotationSelect(e, annotationIndex)
 
-    return (intersectedDotKeys &&
+    return (shownDotKeys &&
         <DotStanzaView {...other}
             annotationIndex={annotationIndex}
             isSelected={isSelected}
-            dotKeys={intersectedDotKeys}
-            handleDotKeyToggle={handleDotKeyToggle}
+            shownDotKeys={shownDotKeys}
+            handleDotStanzaSelect={handleDotStanzaSelect}
             accessHighlighted={accessHighlighted}
         />
     )
@@ -43,14 +43,14 @@ const DotStanzaView = ({
 
     // From controller.
     isSelected,
-    dotKeys,
+    shownDotKeys,
     accessHighlighted,
     annotationIndex,
 
 ...other }) => {
 
-    const firstPresentDotKey = ALL_DOT_KEYS_DOT_STANZA_ORDER.reduce((presentDotKey, dotKey) => {
-        return presentDotKey || (dotKeys[dotKey] && dotKey)
+    const firstShownDotKey = ALL_DOT_KEYS_DOT_STANZA_ORDER.reduce((shownDotKey, dotKey) => {
+        return shownDotKey || (shownDotKeys[dotKey] && dotKey)
     }, false)
 
     return (
@@ -61,7 +61,7 @@ const DotStanzaView = ({
               'access-highlighted': accessHighlighted && !isSelected }
         )}>
             <DotButton {...other}
-                dotKey={firstPresentDotKey}
+                dotKey={firstShownDotKey}
                 isSelected={isSelected}
             />
         </div>
