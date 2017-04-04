@@ -42,7 +42,6 @@ const Live = (props) => {
             overviewText={selectedSong.overview}
             annotation={annotation}
             selectedWikiUrl={selectedWikiUrl}
-            presentDotKeys={selectedSong.dotKeys}
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
             titleInAudio={titleInAudio}
@@ -162,7 +161,6 @@ const LiveView = ({
     totalTime,
     stanzaTimes,
     times,
-    presentDotKeys,
     selectedSongLyrics,
     hasDoubleColumns,
     titleInAudio,
@@ -344,7 +342,6 @@ const LiveView = ({
         dotsSectionProps = {
             selectedDotKeys,
             selectedDotsIndex,
-            presentDotKeys,
             accessedOn,
             accessedDotIndex,
             handlePopupContainerClick,

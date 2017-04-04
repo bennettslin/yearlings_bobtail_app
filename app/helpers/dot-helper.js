@@ -34,10 +34,10 @@ export const getIntersection = (presentKeys = {}, selectedKeys = {}) => {
 export const allDotsDeselected = (props, dotKey) => {
     const { selectedDotKeys } = props,
         annotation = getAnnotation(props),
-        presentDotKeys = annotation ? annotation.dotKeys : null,
+        shownDotKeys = annotation ? annotation.dotKeys : null,
 
         // The dotKey being deselected is still selected at this stage.
         postSelectedDotKeys = Object.assign(selectedDotKeys, { [dotKey]: false })
 
-    return annotation && !intersects(presentDotKeys, postSelectedDotKeys)
+    return annotation && !intersects(shownDotKeys, postSelectedDotKeys)
 }

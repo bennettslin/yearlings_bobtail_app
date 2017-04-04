@@ -114,7 +114,8 @@ const _initialPrepareAllSongs = (album) => {
             song.annotationsDotKeys = getAnnotationsDotKeys({ selectedSong: song })
 
             // Add available dots to song object.
-            song.dotKeys = _tempStore._songDotKeys
+            // UPDATE: App no longer uses this.
+            // song.dotKeys = _tempStore._songDotKeys
 
             // Add times for all verses to song object.
             song.times = _tempStore._songTimes

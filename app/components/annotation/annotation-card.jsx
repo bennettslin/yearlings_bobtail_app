@@ -28,16 +28,15 @@ const AnnotationCard = ({
     }
 
     const shouldShow = intersects(dotKeys, selectedDotKeys),
-        intersectedDotKeys = getIntersection(dotKeys, selectedDotKeys),
+        shownDotKeys = getIntersection(dotKeys, selectedDotKeys),
         showWikis = selectedDotKeys.wiki,
         showPortals = selectedDotKeys.portal
 
     return (shouldShow &&
         <AnnotationCardView {...other}
-            songs={songs}
             text={description}
-            dotKeys={intersectedDotKeys}
-            selectedDotKeys={selectedDotKeys}
+            shownDotKeys={shownDotKeys}
+            annotationDotKeys={dotKeys}
             portalLinks={portalLinks}
             showWikis={showWikis}
             showPortals={showPortals}
@@ -54,8 +53,8 @@ const AnnotationCardView = ({
     // From props.
     inPortal,
     inPortalCard,
-    songs,
-    selectedDotKeys,
+    // songs,
+    annotationDotKeys,
     handleAnnotationWikiSelect,
     handleAnnotationPortalSelect,
     selectedWikiIndex,
@@ -63,7 +62,7 @@ const AnnotationCardView = ({
 
     // From controller.
     text,
-    dotKeys,
+    shownDotKeys,
     portalLinks,
     showWikis,
     showPortals
@@ -71,7 +70,8 @@ const AnnotationCardView = ({
 }) => (
     <div className="annotation-card">
         <DotBlock
-            presentDotKeys={dotKeys}
+            shownDotKeys={shownDotKeys}
+            annotationDotKeys={annotationDotKeys}
         />
         <TextBlock
             inPortal={inPortal}
@@ -85,9 +85,8 @@ const AnnotationCardView = ({
         />
         {!inPortal && portalLinks && showPortals &&
             <AnnotationPortalsBlock
-                songs={songs}
-                selectedDotKeys={selectedDotKeys}
                 portalLinks={portalLinks}
+                annotationDotKeys={annotationDotKeys}
                 accessedPopupAnchorIndex={accessedPopupAnchorIndex}
                 handleAnnotationPortalSelect={handleAnnotationPortalSelect}
             />

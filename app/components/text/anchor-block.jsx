@@ -51,7 +51,7 @@ const AnchorBlock = ({
             accessHighlighted={accessHighlighted}
             wikiIndex={wikiIndex}
             dotKeys={intersectedDotKeys}
-            allAnimatableDotKeys={dotKeys}
+            annotationDotKeys={dotKeys}
             anchorText={anchor}
             handleClick={handleClick}
         />
@@ -80,7 +80,7 @@ const AnchorBlockView = ({
     annotationIndex,
     wikiIndex,
     dotKeys,
-    allAnimatableDotKeys,
+    annotationDotKeys,
     anchorText,
     handleClick
 
@@ -113,8 +113,8 @@ const AnchorBlockView = ({
             {dotKeys && !wikiIndex && !inPortal &&
                 <DotBlock
                     inAnchor={true}
-                    presentDotKeys={dotKeys}
-                    allAnimatableDotKeys={allAnimatableDotKeys}
+                    shownDotKeys={dotKeys}
+                    annotationDotKeys={annotationDotKeys}
                 />
             }
             {/* Only the first text span inside the anchor will forego space. */}

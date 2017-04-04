@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Simplify dots block logic to not distinguish between annotation card and anchor block.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Allow accessed verse to continue from accessed annotation, and vice versa.`,
         workedHours: 0,
         neededHours: 2
@@ -1621,6 +1616,11 @@ module.exports = [
     },
     {
         taskName: `Dot stanza animates out when deselected.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Simplify dots block logic to not distinguish between annotation card and anchor block.`,
         workedHours: 2,
         neededHours: 2
     }

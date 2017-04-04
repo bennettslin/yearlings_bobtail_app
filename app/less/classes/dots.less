@@ -13,18 +13,25 @@
     height: 100%;
 }
 
-.anchor-block, .annotation-card {
+.anchor-block {
     .dot {
         transition: background-color 0.15s, width 0.15s, transform 0.15s, border 0.15s;
 
-        &.is-present {
+        &.dot-shown {
             transform: scale(1);
         }
 
-        &.is-absent {
+        &.dot-hidden {
             transform: scale(0);
             width: 0;
         }
+    }
+}
+
+.annotation-card {
+    .dot-hidden {
+        height: 0;
+        width: 0;
     }
 }
 
@@ -56,7 +63,7 @@
 }
 
 // Undo reverse dot order caused by right column's rtl direction.
-.right {
+.line.right {
     .dots-block {
         flex-direction: row-reverse;
     }
@@ -151,11 +158,11 @@
         &:not(.button) {
             border-radius: 50%;
 
-            &:not(.is-absent):not(:last-child) {
+            &:not(.dot-hidden):not(:last-child) {
                 margin-right: 1px;
             }
 
-            &.is-absent {
+            &.dot-hidden {
                 border: 0;
             }
         }
@@ -171,7 +178,7 @@
     .stanza, .anchor-block {
         &.selected {
             .dot {
-                &:not(.button), & .button-background {
+                &:not(.button):not(.dot-hidden), & .button-background {
                     border: @dot-border solid @selected-annotation-colour;
                     background-color: @deselected-dot-colour;
                 }
