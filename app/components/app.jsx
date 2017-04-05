@@ -110,7 +110,6 @@ class App extends Component {
 
             accessedDotIndex: 0,
             accessedSongIndex: props.selectedSongIndex,
-            accessedVerseIndex: props.selectedVerseIndex,
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
 
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
@@ -797,10 +796,6 @@ class App extends Component {
         if (this.state.updatedTimePlayed !== null) {
             return false
         }
-
-        this.setState({
-            accessedVerseIndex: selectedVerseIndex
-        })
 
         this.props.selectVerseIndex(selectedVerseIndex)
         this.props.selectTimePlayed(selectedTimePlayed)

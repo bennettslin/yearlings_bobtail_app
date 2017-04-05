@@ -14,7 +14,6 @@ const LyricsVerse = ({
 
     inMain,
     verseBarHidden,
-    accessedVerseIndex,
     selectedVerseIndex,
     interactivatedVerseIndex,
     handleLyricAnnotationSelect,
@@ -53,7 +52,6 @@ const LyricsVerse = ({
             notVerseBarPrevented,
 
         isAfterSelected = verseIndex > selectedVerseIndex,
-        accessHighlighted = accessedVerseIndex === verseIndex,
         isDoubleSpeaker = !lyric,
         handleAnchorClick = handleLyricAnnotationSelect,
 
@@ -117,7 +115,6 @@ const LyricsVerse = ({
         <LyricsVerseView {...other}
             verseIndexClassName={verseIndexClassName}
             backgroundClassName={backgroundClassName}
-            accessHighlighted={accessHighlighted}
             isAudioButtonEnabled={isAudioButtonEnabled}
             isTitle={isTitle}
             isSelected={isSelected}
@@ -208,7 +205,6 @@ class LyricsVerseView extends Component {
                 // From controller.
                 verseIndexClassName,
                 backgroundClassName,
-                accessHighlighted,
                 isAudioButtonEnabled,
                 isInteractable,
                 isHoverable,
@@ -234,7 +230,6 @@ class LyricsVerseView extends Component {
                     interactivatedClassName,
                     sliderPlacementClassName,
                     { 'selected': isSelected,
-                      'access-highlighted': accessHighlighted && !isSelected,
                       'interactable': isInteractable,
                       'hoverable': isHoverable }
                 )}
