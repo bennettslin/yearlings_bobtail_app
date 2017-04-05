@@ -338,6 +338,14 @@ export const getVerseBeginAndEndTimes = (props, verseIndex) => {
     }
 }
 
+export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
+    const annotation = getAnnotation(props, annotationIndex),
+        { verseIndex,
+          mostRecentVerseIndex } = annotation
+
+    return !isNaN(verseIndex) ? verseIndex : mostRecentVerseIndex
+}
+
 export const getVerseIndexForTime = (props, time) => {
     const selectedSong = getSong(props)
 

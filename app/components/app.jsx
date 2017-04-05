@@ -27,7 +27,7 @@ import { SHOWN,
 
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
-import { getSong, getIsLogue, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
+import { getSong, getIsLogue, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
@@ -700,7 +700,8 @@ class App extends Component {
     }
 
     interactivateVerseDirection(direction) {
-        const songTimes = getSongTimes(this.props),
+        const { accessedOn } = this.props,
+            songTimes = getSongTimes(this.props),
             timesLength = songTimes.length
 
         let { interactivatedVerseIndex } = this.state
@@ -710,9 +711,19 @@ class App extends Component {
             direction = timesLength - 1
         }
 
-        // A verse is not yet interactivated.
+        // We are turning on interactivation.
         if (interactivatedVerseIndex === -1) {
-            interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % timesLength
+
+            // If accessed on, start from accessed annotation index.
+            if (accessedOn) {
+                const { accessedAnnotationIndex } = this.state
+
+                interactivatedVerseIndex = getVerseIndexForAnnotationIndex(this.props, accessedAnnotationIndex)
+
+            // If not, start from the selected verse.
+            } else {
+                interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % timesLength
+            }
 
         // We already have an interactivated verse.
         } else {
