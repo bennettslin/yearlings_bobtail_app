@@ -218,11 +218,6 @@ class App extends Component {
     }
 
     accessAnnotation(accessedAnnotationIndex) {
-        // Cannot access annotation if verse is interactivated.
-        if (this.state.interactivatedVerseIndex !== -1) {
-            return false
-        }
-
         this.setState({
             accessedAnnotationIndex
         })

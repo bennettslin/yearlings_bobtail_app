@@ -329,7 +329,10 @@ class AccessManager extends Component {
 
     _handleLyricNavigation(e, keyName) {
 
-        const { props } = this
+        const { props } = this,
+            { interactivatedVerseIndex } = props,
+            isVerseInteractivated = interactivatedVerseIndex > -1
+
         let { accessedAnnotationIndex } = props,
             direction
 
@@ -351,13 +354,20 @@ class AccessManager extends Component {
          * If this key will turn on access, choose annotation based on selected
          * verse.
          */
-        if (!props.accessedOn) {
+        if (!props.accessedOn || isVerseInteractivated) {
+            const verseIndex = isVerseInteractivated ?
+                interactivatedVerseIndex : props.selectedVerseIndex
+
             accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
                 props,
                 state: props,
-                verseIndex: props.selectedVerseIndex,
+                verseIndex,
                 direction
             })
+
+            if (isVerseInteractivated) {
+                props.handleVerseInteractivate()
+            }
 
         } else {
             accessedAnnotationIndex = getAnnotationIndexForDirection({
