@@ -870,6 +870,7 @@ class App extends Component {
                 // Dom manager props.
                 domProps={this.props}
                 domState={this.state}
+                isLogue={getIsLogue(this.props)}
 
                 // Event manager props.
                 accessAnnotation={this.accessAnnotation}

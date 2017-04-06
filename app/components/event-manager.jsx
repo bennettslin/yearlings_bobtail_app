@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import AccessManager from './access-manager'
 import scrollIntoView from 'scroll-into-view'
-import { getIsLogue } from '../helpers/album-view-helper'
 
 import { OVERVIEW_OPTIONS,
          DISABLED } from '../helpers/constants'
@@ -99,11 +98,12 @@ class EventManager extends Component {
     }
 
     _focusBody(newAdminIndex) {
-        const { domProps } = this.props,
+        const { domProps,
+                isLogue } = this.props,
             doFocusAdmin = typeof newAdminIndex !== 'undefined' ?
                 newAdminIndex : domProps.selectedAdminIndex
 
-        if (doFocusAdmin || getIsLogue(domProps)) {
+        if (doFocusAdmin || isLogue) {
             this.myDomManager && this.myDomManager.focus()
 
         } else {
@@ -130,7 +130,12 @@ class EventManager extends Component {
     }
 
     handleDotAccess(accessedDotIndex) {
+        if (this.props.isLogue) {
+            return false
+        }
+
         this.props.accessDot(accessedDotIndex)
+        return true
     }
 
     handlePopupAnchorAccess(accessedPopupAnchorIndex) {
@@ -142,6 +147,10 @@ class EventManager extends Component {
     }
 
     handleVerseDirectionAccess(direction) {
+        if (this.props.isLogue) {
+            return false
+        }
+
         const interactivatedVerseIndex = this.props.interactivateVerseDirection(direction)
         this._closeSections({
             exemptInteractivatedVerse: true
@@ -273,8 +282,13 @@ class EventManager extends Component {
      *******/
 
     handleDotToggle(e, dotIndex) {
+        if (this.props.isLogue) {
+            return false
+        }
+
         this._stopPropagation(e)
         this.props.toggleDot(dotIndex)
+        return true
     }
 
     /********
@@ -324,16 +338,26 @@ class EventManager extends Component {
      **********/
 
     handleLyricPlay() {
+        if (this.props.isLogue) {
+            return false
+        }
+
         this.props.togglePlay()
         this.props.interactivateVerse()
+        return true
     }
 
     handleLyricVerseSelect(e, selectedVerseIndex) {
+        if (this.props.isLogue) {
+            return false
+        }
+
         this._stopPropagation(e)
         this.props.selectVerse({
             selectedVerseIndex
         })
         this.props.interactivateVerse()
+        return true
     }
 
     handleLyricAnnotationSelect(e, selectedAnnotationIndex) {
@@ -576,9 +600,9 @@ class EventManager extends Component {
     }
 
     handleScrollAfterLyricRerender() {
-        const { domProps } = this.props
+        const { isLogue } = this.props
 
-        if (!getIsLogue(domProps)) {
+        if (!isLogue) {
             const annotationIndex = this.props.domProps.selectedAnnotationIndex
 
             // If a portal was selected, there will be an annotation index.
@@ -636,6 +660,8 @@ class EventManager extends Component {
 
         return (
             <AccessManager {...domProps} {...domState}
+                isLogue={this.props.isLogue}
+
                 domManagerRef={node => this.myDomManager = node}
                 lyricSectionRef={node => this.myLyricSection = node}
                 scoreSectionRef={node => this.myScoreSection = node}

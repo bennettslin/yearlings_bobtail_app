@@ -119,16 +119,14 @@ class AccessManager extends Component {
 
                 // Interactivated verse is already selected, so toggle play.
                 if (this.props.interactivatedVerseIndex === this.props.selectedVerseIndex) {
-                    this.props.handleLyricPlay(e)
+                    keyWasRegistered = this.props.handleLyricPlay(e)
 
                     // We're selecting the interactivated verse.
                 } else {
-                    this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
+                    keyWasRegistered = this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
                     this._accessAnnotationWithoutDirection(this.props.interactivatedVerseIndex)
                     annotationIndexWasAccessed = true
                 }
-
-                keyWasRegistered = true
 
                 // We're in annotation.
             } else if (this.props.selectedAnnotationIndex) {
@@ -187,7 +185,7 @@ class AccessManager extends Component {
             case ENTER: {
                 const annotation = getAnnotation(props)
 
-                if (annotation.popupAnchors && annotation.popupAnchors.length) {
+                if (annotation && annotation.popupAnchors && annotation.popupAnchors.length) {
                     const popupAnchorObject = annotation.popupAnchors[accessedPopupAnchorIndex - 1]
 
                     // It's a wiki anchor.
@@ -264,16 +262,15 @@ class AccessManager extends Component {
                     }
                     break
                 case ENTER:
-                    this.props.handleDotToggle(e, accessedDotIndex)
-                    return true
+                    return this.props.handleDotToggle(e, accessedDotIndex)
                 default:
                     return false
             }
 
-            this.props.handleDotAccess(accessedDotIndex)
+            return this.props.handleDotAccess(accessedDotIndex)
         }
 
-        return true
+        return false
     }
 
     _handleNavNavigation(e, keyName) {

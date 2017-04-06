@@ -1626,5 +1626,10 @@ module.exports = [
         taskName: `Line still not resetting width properly, going from Cremated to Uncanny in laptop width.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Prevent app from breaking in logue when keys are pressed.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
