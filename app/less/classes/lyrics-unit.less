@@ -90,17 +90,22 @@
     }
 }
 
-.custom-sub-block {
-    @side-padding: 15%;
+@custom-sub-block-side-padding: 15%;
 
+.custom-sub-block {
     &.left {
-        padding-right: @side-padding;
-    }
-    &.right {
-        padding-left: @side-padding;
+        padding-right: @custom-sub-block-side-padding;
     }
     &.overlap {
         margin-top: -@lyrics-unit-margin - @stanza-overlap-margin;
+    }
+}
+
+.stanza-block:not(.side) {
+    .custom-sub-block {
+        &.right {
+            padding-left: @custom-sub-block-side-padding;
+        }
     }
 }
 

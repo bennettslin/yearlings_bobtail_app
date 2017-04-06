@@ -40,11 +40,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Line still not resetting width properly, going from Cremated to Uncanny in laptop width.`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     {
         taskName: `Selecting time or verse while audio player is running is now buggy.`,
@@ -1626,5 +1621,10 @@ module.exports = [
         taskName: `Allow accessed verse to continue from accessed annotation, and vice versa.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Line still not resetting width properly, going from Cremated to Uncanny in laptop width.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
