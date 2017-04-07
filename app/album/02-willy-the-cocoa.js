@@ -144,17 +144,17 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `In folklore of the past,`,
+                            `In the past, the developmentally disabled were often thought to be`,
                             {
-                                anchor: `changelings`,
+                                anchor: `changelings,`,
                                 wiki: `Changeling`
                             },
-                            `were trolls left in place of stolen human children, and served to explain the developmentally disabled. So I wanted this song to sound like a band of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of`,
+                            `or disguised trolls left in place of stolen human children. So I wanted to capture the sound of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of`,
                             {
                                 anchor: `Creedence Clearwater Revival,`,
                                 wiki: `Creedence_Clearwater_Revival`
                             },
-                            `with melodicas thrown in to evoke the sound of Cajun accordions.`
+                            `with melodicas to evoke Cajun accordions.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -182,10 +182,11 @@ module.exports = {
                                     anchor: `San Fernando Valley`,
                                     wiki: `San_Fernando_Valley`
                                 },
-                                `of Southern California, where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides. In the mirages created by the summer heat, the reflections of these mountains naturally point inwards, as if their jagged peaks had caused the cracks in the asphalt.`
+                                `of Southern California, where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides. In the mirages created by the summer heat, reflections of these mountains naturally point inwards, as if their jagged peaks had caused the cracks in the asphalt.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
                             }
                         }
                     },
@@ -207,12 +208,20 @@ module.exports = {
                     `as early worms work this`,
                     {
                         anchor: `dying coyote's jaw.`,
-                        annotation: {
-                            description: `Occasionally, a coyote would wander down from the surrounding hillsides and get hit by traffic. Of course, the Valley is also like one big lower jaw, with all its inhabitants helping it to decompose.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: `Occasionally, a coyote would wander down from the surrounding hillsides and get hit by traffic.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                description: `The Valley is like one big lower jaw of a carcass, and all its residents like decomposers furthering its decay.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -240,7 +249,7 @@ module.exports = {
                     {
                         anchor: `wayside bottle,`,
                         annotation: {
-                            description: `Willy begins his daily rounds by filling up a shopping cart with recyclables found in garbage bins and littered along the sidewalks.`,
+                            description: `Willy begins his daily rounds by filling his shopping cart with recyclables found littered along the sidewalks.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -262,7 +271,7 @@ module.exports = {
                                         anchor: `microcephaly,`,
                                         wiki: `Microcephaly`
                                     },
-                                    `a medical condition in which the brain fails to develop properly, resulting in a head that was abnormally small in size.`
+                                    `a medical condition in which the brain fails to develop properly, resulting in a head that is abnormally small in size.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -344,9 +353,9 @@ module.exports = {
                     {
                         anchor: `our tins and our jars`,
                         annotation: {
-                            description: `Some families help Willy by leaving out their discarded recyclables for him to gather in bulk.`,
+                            description: `Some households would help Willy by leaving out their discarded recyclables for him to collect.`,
                             dotKeys: {
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
@@ -360,7 +369,7 @@ module.exports = {
                     {
                         anchor: `haircutting to the sun`,
                         annotation: {
-                            description: `Or else, to the "son." My mother is cutting my younger brother's hair on the front lawn, since the cleanup afterwards will be easier.`,
+                            description: `Or else, to the "son." My mother is cutting my brother's hair on the front lawn, since the cleanup afterwards will be easier.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -376,10 +385,9 @@ module.exports = {
                     {
                         anchor: `suddenly baby shrieks…`,
                         annotation: {
-                            description: `My brother was typically calm and quiet in demeanour as a child. However, when made to do things he didn't enjoy or understand, such as sitting through the haircut currently taking place, he was prone to frenzied outbursts.`,
+                            description: `My brother, the baby of our family, was typically calm and quiet in demeanour. However, when made to do things he didn't enjoy or understand, such as sitting through a haircut, he could erupt in a frenzied outburst.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -390,9 +398,10 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `I figured that trolls would have all the same instruments but play them in some weird way, so I muted the lead guitar and mandolin and threw in a whole lot of legato slides.`,
+                        description: `In some legends, trolls inadvertently reveal their true identity by using some tool in a wrong manner, so I figured they would also have their own peculiar way of playing instruments. As such, I muted the lead guitar and mandolin while throwing in a slew of legato slides.`,
                         dotKeys: {
                             [OBSERVATION]: true,
+                            [REFERENCE]: true,
                             [SONGWRITING]: true
                         }
                     }
