@@ -193,7 +193,7 @@ module.exports = {
                     {
                         anchor: `take in her breasts,`,
                         annotation: {
-                            description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love on some new and uncertain romantic venture, and that fear seemed to manifest in a hormonal desire to be nurtured more than pleasured. I was always struck by how motherly every woman's naked body initially seemed to me.`,
+                            description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love on some new and uncertain romantic venture. That fear would then manifest in a hormonal desire for nurture over pleasure, I suspect, because I was always struck by how motherly every woman's naked body initially seemed to me.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -396,7 +396,7 @@ module.exports = {
                         anchor: `keeper of his sheep herd.`,
                         annotation: {
                             description: [
-                                `A "keeper," in the sense of both being the one who tends to the herd, as well as being the only one to keep from`,
+                                `A "keeper," in both the sense of being the one who tends to the herd, as well as being the only one to keep from`,
                                 {
                                     emphasis: `amongst`
                                 },
@@ -582,7 +582,7 @@ module.exports = {
                     {
                         anchor: `bleeds just once,`,
                         annotation: {
-                            description: `Much like a vagina only bleeds the first time when the hymen is ruptured, every subsequent breakup felt more like an irritant on an already open wound.`,
+                            description: `Much like a vagina only bleeds the first time when the hymen is ruptured, every subsequent breakup felt less like a stabbing and more like an irritant on an open wound.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                                 [REFERENCE]: true
@@ -728,7 +728,7 @@ module.exports = {
                     {
                         anchor: `practise cuts…`,
                         annotation: {
-                            description: `Even in anguish, Sita never lost her sardonic sense of humour. When I expressed concern after she began cutting herself, Sita sweetly assured me that it was only for practise.`,
+                            description: `Even in anguish, Sita never lost her sardonic sense of humour. When I expressed concern about her cutting herself, she sweetly assured me that it was only for practise.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
