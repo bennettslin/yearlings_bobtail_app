@@ -2,15 +2,6 @@ import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, RHYME, POSTCHOR
 
 // TODO: Say that gardening was later that summer, while nighttime scare moment was closer to Willy's death.
 module.exports = {
-    title: {
-        anchor: 'Willy the Cocoa',
-        annotation: {
-            description: `Kids in the neighbourhood knew Willy as "The Cocoa," referring both to his Coke bottles and to his seeming a bit "cuckoo." I don't think there was an official way to spell it.`,
-            dotKeys: {
-                [BACKSTORY]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -130,6 +121,15 @@ module.exports = {
     },
     totalTime: 207,
     overview: `Willy was a mentally disabled man who wandered our Los Angeles neighbourhood collecting recyclables for a living. One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
+    title: {
+        anchor: 'Willy the Cocoa',
+        annotation: {
+            description: `Kids in the neighbourhood knew Willy as "The Cocoa," referring both to his Coke bottles and to his seeming a bit "cuckoo." I don't think there was an official way to spell it.`,
+            dotKeys: {
+                [BACKSTORY]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -641,7 +641,7 @@ module.exports = {
                         anchor: `Killcrop`,
                         annotation: {
                             description: [
-                                `In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects the primary concerns of past times, when children unable to work for their keep could lead to a family's ruin.`
+                                `In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a primary concern of past times, when children unable to work for their keep could lead to a family's ruin.`
                             ],
                             dotKeys: {
                                 [REFERENCE]: true
