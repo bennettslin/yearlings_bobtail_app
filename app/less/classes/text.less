@@ -58,35 +58,35 @@
     left: 0;
 }
 
-.anchor-block, .portal-anchor, .dot-key {
+.lyrics-section .anchor-block, .portal-anchor, .dot-key {
     white-space: nowrap;
+}
 
-    &.anchor-block:not(.show-as-text) {
+.anchor-block:not(.show-as-text) {
+    .underline-bar {
+        background-color: @lyric-underline-disabled-colour;
+    }
+
+    &.selected {
+        .text-span {
+            color: @selected-annotation-text-colour;
+        }
+
         .underline-bar {
-            background-color: @lyric-underline-disabled-colour;
-        }
-
-        &.selected {
-            .text-span {
-                color: @selected-annotation-text-colour;
-            }
-
-            .underline-bar {
-                background-color: @selected-annotation-colour;
-            }
-        }
-
-        &.enabled {
-            .underline-bar {
-                background-color: @lyric-underline-enabled-colour;
-            }
+            background-color: @selected-annotation-colour;
         }
     }
 
-    &.portal-anchor {
+    &.enabled {
         .underline-bar {
-            background-color: @portal-text-colour;
+            background-color: @lyric-underline-enabled-colour;
         }
+    }
+}
+
+.portal-anchor {
+    .underline-bar {
+        background-color: @portal-text-colour;
     }
 }
 
