@@ -7,7 +7,6 @@ import { INSTRUMENTAL,
 
          NARRATIVE,
          BACKSTORY,
-         PUN,
          REFERENCE,
          SONGWRITING,
          AFTERWORD,
@@ -15,26 +14,6 @@ import { INSTRUMENTAL,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: 'Didi (弟弟)',
-        annotation: {
-            description: [
-                `In Chinese,`,
-                {
-                    italic: `didi`
-                },
-                `means "little brother." While my family is from`,
-                {
-                    anchor: `Taiwan,`,
-                    wiki: `Taiwan`
-                },
-                `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.`
-            ],
-            dotKeys: {
-                [BACKSTORY]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -101,7 +80,27 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 177,
-    overview: `As a child, I depended on my older sister to do most everything for me, like zipping my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`,
+    overview: `As a child, I depended on my older sister to do most everything for me, like zipping up my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`,
+    title: {
+        anchor: 'Didi (弟弟)',
+        annotation: {
+            description: [
+                `In Chinese,`,
+                {
+                    italic: `didi`
+                },
+                `means "little brother." While my family is from`,
+                {
+                    anchor: `Taiwan,`,
+                    wiki: `Taiwan`
+                },
+                `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we spoke at home thus included a healthy sprinkle of Chinese words.`
+            ],
+            dotKeys: {
+                [BACKSTORY]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -156,7 +155,7 @@ module.exports = {
                     {
                         anchor: `tie his shoes?`,
                         annotation: {
-                            description: `I struggled to learn the manner of tying shoelaces where one bunny goes around the tree, possibly because I'm left-handed. I finally worked out a version that looked like the real thing, but always came undone.`,
+                            description: `Being left-handed as a child, I struggled to learn the manner of tying shoelaces where one bunny goes around the tree. So I came up with my own version that looked like the real thing, but was always coming undone.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -202,7 +201,7 @@ module.exports = {
                     {
                         anchor: `didn't want you here.`,
                         annotation: {
-                            description: `My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I remember the panic I felt when this happened.`,
+                            description: `My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I always panicked when this happened.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -268,9 +267,20 @@ module.exports = {
         ],
         [
             {
-                // TODO: Say more?
                 time: 63,
-                lyric: `Didi made an "accident" in class,`
+                lyric: [
+                    `Didi`,
+                    {
+                        anchor: `made an "accident"`,
+                        annotation: {
+                            description: `After I soil my pants, the nurse places them in a shopping bag for me to carry home, and fits me into an abandoned pair of overalls.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
+                        }
+                    },
+                    `in class,`
+                ]
             },
             {
                 time: 68,
@@ -285,12 +295,6 @@ module.exports = {
                         properNoun: true,
                         annotation: [
                             {
-                                description: `Since my pants were soiled, the nurse gave me a shopping bag to carry them in.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            },
-                            {
                                 description: [
                                     {
                                         anchor: `Safeway`,
@@ -300,10 +304,6 @@ module.exports = {
                                 ]
                             },
                             {
-                                dotKeys: {
-                                    [PUN]: true
-                                },
-                                // TODO: Need portal description.
                                 portal: `safeway_paper_bag`
                             }
                         ]
@@ -321,12 +321,22 @@ module.exports = {
         ],
         [
             {
-                // TODO: Say more?
                 time: 85,
-                lyric: `Didi, you've been in the bath all this time.`
+                lyric: [
+                    `Didi, you've`,
+                    {
+                        anchor: `been in the bath`,
+                        annotation: {
+                            description: `After coming home, I soak in the bathtub until well into the evening.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
+                        }
+                    },
+                    `all this time.`
+                ]
             },
             {
-                // TODO: Soak or sulk?
                 time: 91,
                 lyric: `Didi, come out, you can't soak there all night.`
             },
@@ -338,7 +348,6 @@ module.exports = {
                     {
                         time: 97,
                         lyric: {
-                            // TODO: Talk about what happens to your fingers.
                             italic: `Don't little raisin fingers need to dry?`
                         }
                     }
@@ -368,7 +377,7 @@ module.exports = {
                     {
                         anchor: `sheriff's badge and gun…`,
                         annotation: {
-                            description: `After China stripped Taiwan of international recognition in 1971, a bootleg industry emerged to serve a generation of teenagers like my mother who valued all things American, though few knew exactly what the label entailed. My mother's tastes were thus a random hodgepodge, which my sister and I absorbed as we grew up listening to her country records and watching old Westerns.`,
+                            description: `After China stripped Taiwan of international recognition, a bootleg industry emerged to serve a generation of Taiwanese teenagers like my mother who prized all things labelled American. My sister and I thus grew up listening to her country records and watching old Westerns.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [REFERENCE]: true
@@ -394,7 +403,6 @@ module.exports = {
                     {
                         anchor: `girls' mirrors.`,
                         annotation: {
-                            // TODO: Additional detail about how I wanted this.
                             description: `My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -414,7 +422,6 @@ module.exports = {
                     {
                         anchor: `finally become someone?`,
                         annotation: {
-                            // TODO: Need portal description.
                             portal: `finally_become_someone`
                         }
                     }
@@ -555,8 +562,8 @@ module.exports = {
         },
         {
             taskName: `sort out past and present tense`,
-            workedHours: 1,
-            neededHours: 1
+            workedHours: 3,
+            neededHours: 3
         },
         {
             taskName: `separate annotations into dot categories`,

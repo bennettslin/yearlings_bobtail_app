@@ -206,7 +206,7 @@ module.exports = {
                                 anchor: `Johnny Horton,`,
                                 wiki: `Johnny_Horton`
                             },
-                            `whose albums were the first ones I owned because my mother loved him in her teenybopper years. None of my other friends knew who he was, until one day I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died from a car accident in 1960.`
+                            `whose albums were the first ones I owned because my mother adored him in her teenybopper years. None of my other friends knew who he was, until one day I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died from a car accident in 1960.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
