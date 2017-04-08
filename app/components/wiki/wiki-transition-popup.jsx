@@ -9,7 +9,6 @@ import TransitionPopup from '../popup/transition-popup'
 const WikiTransitionPopup = ({
 
     selectedWikiIndex,
-    showClose,
     handleWikiToggle,
     handlePopupFocus,
 
@@ -24,9 +23,9 @@ const WikiTransitionPopup = ({
         <TransitionPopup
             popupClassName="wiki"
             isVisible={isVisible}
-            showClose={showClose}
+            showClose={true}
             handlePopupFocus={handlePopupFocus}
-            onCloseClick={handleWikiToggle}
+            handleCloseClick={handleWikiToggle}
             myChild={myChild}
         />
     )

@@ -10,7 +10,7 @@ import AudioSection from './audio/audio-section'
 import ScoresTipsSection from './scores-tips-section'
 import OverviewButton from './overview/overview-toggle'
 import OverviewPopup from './overview/overview-popup'
-import AnnotationPopup from './annotation/annotation-popup'
+import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
 import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
@@ -324,14 +324,14 @@ const LiveView = ({
         annotationPopupProps = {
             songs,
             annotation,
-            accessedPopupAnchorIndex,
-            selectedDotKeys,
+            selectedAnnotationIndex,
             selectedScoreIndex,
             selectedWikiIndex,
-            accessedOn,
-            showArrows: true,
-            onPopupButtonPreviousClick: handleAnnotationPrevious,
-            onPopupButtonNextClick: handleAnnotationNext,
+            accessedPopupAnchorIndex,
+            selectedDotKeys,
+            handleAnnotationPrevious,
+            handleAnnotationNext,
+            handlePopupFocus,
             handlePopupContainerClick,
 
             handleAnnotationPortalSelect,
@@ -350,7 +350,6 @@ const LiveView = ({
             scores,
             selectedScoreIndex,
             selectedSongIndex,
-            showClose: true,
             scoreSectionRef,
             handleScoreToggle,
             handlePopupFocus
@@ -358,7 +357,6 @@ const LiveView = ({
         wikiPopupProps = {
             selectedWikiIndex,
             selectedWikiUrl,
-            showClose: true,
             wikiSectionRef,
             handleWikiToggle,
             handlePopupFocus
@@ -407,7 +405,7 @@ const LiveView = ({
                     />
             </div>
             <MainColumn {...mainColumnProps}
-                annotationPopupChild={ <AnnotationPopup {...annotationPopupProps} /> }
+                annotationPopupChild={ <AnnotationTransitionPopup {...annotationPopupProps} /> }
                 dotsSectionChild={ <DotsSection {...dotsSectionProps} /> }
                 overviewPopupChild={
                     <OverviewPopup {...overviewPopupProps}
@@ -435,7 +433,7 @@ const LiveView = ({
                     <ScoreTransitionPopup {...scorePopupProps} />
                     <WikiTransitionPopup {...wikiPopupProps} />
                     {isOverlaidAnnotation &&
-                        <AnnotationPopup {...annotationPopupProps} />
+                        <AnnotationTransitionPopup {...annotationPopupProps} />
                     }
                 </div>
             </div>

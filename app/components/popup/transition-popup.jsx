@@ -62,8 +62,10 @@ class TransitionPopup extends Component {
                 isVisible,
                 showClose,
                 showArrows,
+                handleCloseClick,
+                handlePreviousClick,
+                handleNextClick,
                 handlePopupContainerClick,
-                onCloseClick,
                 myChild } = this.props,
 
             { isDisplayed } = this.state
@@ -82,7 +84,9 @@ class TransitionPopup extends Component {
                     popupClassName={popupClassName}
                     showClose={showClose}
                     showArrows={showArrows}
-                    onCloseClick={onCloseClick}
+                    handleCloseClick={handleCloseClick}
+                    handlePreviousClick={handlePreviousClick}
+                    handleNextClick={handleNextClick}
                     handlePopupContainerClick={handlePopupContainerClick}
                     myChild={myChild}
                 />
@@ -101,8 +105,9 @@ const TransitionPopupView = ({
     popupClassName,
     showClose,
     showArrows,
-    handlePopupButtonClick,
-    onCloseClick,
+    handleCloseClick,
+    handlePreviousClick,
+    handleNextClick,
     handlePopupContainerClick,
     myChild
 
@@ -125,19 +130,19 @@ const TransitionPopupView = ({
                 {myChild}
                 {showClose &&
                     <TransitionPopupButton
-                        handlePopupButtonClick={onCloseClick}
+                        handlePopupButtonClick={handleCloseClick}
                         buttonName={CLOSE_POPUP_BUTTON}
                     />
                 }
                 {showArrows &&
                     <TransitionPopupButton
-                        handlePopupButtonClick={handlePopupButtonClick}
+                        handlePopupButtonClick={handlePreviousClick}
                         buttonName={PREVIOUS_POPUP_BUTTON}
                     />
                 }
                 {showArrows &&
                     <TransitionPopupButton
-                        handlePopupButtonClick={handlePopupButtonClick}
+                        handlePopupButtonClick={handleNextClick}
                         buttonName={NEXT_POPUP_BUTTON}
                     />
                 }

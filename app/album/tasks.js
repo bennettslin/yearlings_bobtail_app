@@ -1,8 +1,8 @@
 module.exports = [
     {
         taskName: `Move out of transition group.`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 2,
+        neededHours: 5
     },
 
     // Touch accessibility.

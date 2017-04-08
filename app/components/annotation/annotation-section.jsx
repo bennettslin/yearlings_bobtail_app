@@ -10,11 +10,11 @@ const AnnotationSection = (props) => {
 
     const { annotation } = props
 
-    return (
+    return annotation ? (
         <AnnotationSectionView {...props}
             title={annotation.title}
         />
-    )
+    ) : null
 }
 
 /****************
