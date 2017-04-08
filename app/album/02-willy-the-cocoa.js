@@ -1,6 +1,5 @@
 import { LEFT, OVERLAP, INSTRUMENTAL, VERSES, PRECHORUS, CHORUS, RHYME, POSTCHORUS, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, PUN, REFERENCE, OBSERVATION, DOT_STANZA_CONSTANT } from '../helpers/constants'
 
-// TODO: Say that gardening was later that summer, while nighttime scare moment was closer to Willy's death.
 module.exports = {
     scenes: [
         {
@@ -398,7 +397,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `In some legends, trolls inadvertently reveal their true identity by using some tool in a wrong manner, so I figured they would also have their own peculiar way of playing instruments. As such, I muted the lead guitar and mandolin while throwing in a slew of legato slides.`,
+                        description: `In some legends, trolls inadvertently reveal their true identity by using some tool in a wrong manner, so I figured they would also have a peculiar way of playing instruments. As such, I muted the lead guitar and mandolin while throwing in a slew of legato slides.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                             [REFERENCE]: true,
@@ -418,14 +417,9 @@ module.exports = {
                         anchor: `gap-toothed coma`,
                         annotation: [
                             {
-                                description: `While my brother often wore a blank expression on his face, it would instantly disappear once he felt provoked.`,
+                                description: `My brother's facial expression is blank, right up until the moment he is ruffled by my mother's "gap-toothed comb."`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                }
-                            },
-                            {
-                                description: `My mother is using a "gap-toothed comb."`,
-                                dotKeys: {
+                                    [NARRATIVE]: true,
                                     [PUN]: true
                                 }
                             }
@@ -441,7 +435,7 @@ module.exports = {
                     {
                         anchor: `pair of seizures`,
                         annotation: {
-                            description: `My mother is also wielding a pair of "scissors."`,
+                            description: `My mother also wields a pair of "scissors."`,
                             dotKeys: {
                                 [PUN]: true
                             }
@@ -460,13 +454,21 @@ module.exports = {
                     `Oh ma'am, I`,
                     {
                         anchor: `see your kid with whiskers,`,
-                        annotation: {
-                            description: `Willy jokingly predicts that my brother will sport an unshaven look as an adult, given his present distaste for haircuts. But Willy might also be hinting that he literally sees my brother with a beard, here and now. After all, in many legends the changeling is not a child at all, but rather a fully grown troll who is perhaps centuries old.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `Given my brother's distaste for haircuts, Willy jokingly predicts that he will sport an unshaven look as an adult.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
+                                description: `Willy might be hinting that he literally sees my brother wearing a beard, here and now. After all, in many legends the changeling is not a child at all, but rather a fully grown troll who is perhaps centuries old.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [REFERENCE]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -477,9 +479,9 @@ module.exports = {
                     {
                         anchor: `creepers on his cheek,`,
                         annotation: {
-                            description: `Of course, it should not be surprising if Willy is immune to the enchantment that disguises my brother's true form, since Willy is quite possibly a changeling himself, as evinced by his own unkempt facial hair.`,
+                            description: `But it should come as no surprise if Willy is immune to whatever enchantment disguises my brother's true form, since Willy is possibly a changeling himself, as evinced by his own unkempt facial hair.`,
                             dotKeys: {
-                                [NARRATIVE]: true
+                                [OBSERVATION]: true
                             }
                         }
                     }
@@ -491,14 +493,21 @@ module.exports = {
                     `And three years howling is the`,
                     {
                         anchor: `longest cowlick`,
-                        annotation: {
-                            description: `Being acquainted with my family over the years, Willy understands that my brother's outbursts are the reason my mother allows his hair to reach unruly lengths. However, Willy is also observing that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicable lack of development in older children gave rise to a belief in changelings.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `Being acquainted with my family over the years, Willy understands that my brother's outbursts are the reason my mother allows his hair to reach unruly lengths.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
+                                description: `Willy observes that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicable lack of development gave rise to a belief in changelings.`,
+                                dotKeys: {
+                                    [PUN]: true,
+                                    [REFERENCE]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `yet I've seen!`
                 ]
@@ -528,15 +537,14 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                `Back then, the back pages of a comic book were filled with ads for novelty items such as`,
+                                `Back then, the back pages of comic books were filled with ads for novelty items such as`,
                                 {
                                     anchor: `X-Ray Specs,`,
                                     wiki: `X-Ray_Specs_(novelty)`
                                 },
-                                `a pair of special glasses that purportedly allow one to see through objects. Having sent away for them a while ago, I'm now trying them on. (They didn't actually work.)`
+                                `special glasses that purportedly allow one to see through objects. Having sent away for a pair some time ago, I am now trying them on.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true
                             }
                         }
@@ -545,7 +553,7 @@ module.exports = {
                     {
                         anchor: `pages clawed,`,
                         annotation: {
-                            description: `My brother used to cut letters of the alphabet out of paper, an activity that my parents encouraged since it was creative and kept him occupied. Unfortunately, my comic book seems to have accidentally made its way into his scrap pile of old magazines.`,
+                            description: `My brother used to cut letters of the alphabet out of paper, an activity encouraged my parents since it was creative and kept him occupied. Unfortunately, my comic books seem to have accidentally made their way into his scrap pile of old magazines.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
@@ -563,8 +571,7 @@ module.exports = {
                         annotation: {
                             description: `There were times I was so angry at my brother that I laid down some serious hurt. He never fought back.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
@@ -608,7 +615,7 @@ module.exports = {
                     {
                         anchor: `smarts he could've took`,
                         annotation: {
-                            description: `I spent a long time wondering why my brother was autistic and I was not, when our circumstances weren't really any different. It didn't seem far-fetched to suppose that cognitive abilities are a fixed supply in a mother's womb, and I had selfishly taken my brother's share.`,
+                            description: `I spent a long time wondering why my brother was autistic and I was not, when our circumstances weren't any different. It didn't seem far-fetched to suppose that cognitive skills are a fixed supply in a mother's womb, and that I had selfishly taken my brother's share.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -666,7 +673,7 @@ module.exports = {
                     {
                         anchor: `soused loafers`,
                         annotation: {
-                            description: `In his zeal to reach a discarded beer bottle on the ground, Willy steps into a puddle and splashes sewage water onto a pair of gangbangers standing nearby. "Soused loafers" can refer to drenched shoes, as well as to drunken delinquents.`,
+                            description: `In his zeal to reach a discarded beer bottle, Willy steps into a puddle and splashes standing water onto a pair of gangbangers idling nearby. "Soused loafers" here refers to these drunken layabouts, as well as to their drenched shoes.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -681,14 +688,18 @@ module.exports = {
                 lyric: [
                     {
                         anchor: `Hit this witch`,
-                        annotation: {
-                            description: `It was believed that tricking a changeling into revealing its true nature would force it to return the stolen child. The methods for doing so included hitting it with a switch, a flexible rod designed to inflict punishment. So it seems predestined that Willy would meet a violent end.`,
-                            dotKeys: {
-                                [OBSERVATION]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `A switch is a flexible rod used for punishment. It was believed that beating a changeling would provoke it to reveal its true nature and return the stolen child, and past cases of such abuse leading to death have been recorded. So if Willy is a changeling, then it seems predestined for him to meet a violent end.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [REFERENCE]: true
+                                }
                             },
-                            portal: `hit_the_switch`
-                        }
+                            {
+                                portal: `hit_the_switch`
+                            }
+                        ]
                     },
                     `with switch, whispers wind, to fix his switcheroo…`
                 ]
@@ -710,7 +721,7 @@ module.exports = {
                     {
                         anchor: `sack-spilled glass`,
                         annotation: {
-                            description: `Eager for a fight, the gangbangers start pushing Willy around. Amidst the commotion, his shopping cart is upturned, spilling a garbage bag full of empty bottles onto the ground. `,
+                            description: `Eager for a fight, the gangbangers start pushing Willy around. Amidst the commotion, his shopping cart is upturned, spilling empty beer bottles onto the ground.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -720,7 +731,7 @@ module.exports = {
                     {
                         anchor: `past-noon toll.`,
                         annotation: {
-                            description: `One of the gangbangers grabs a bottle and smashes it against Willy's face. The sound reverberates throughout the neighbourhood, like the ring of a town bell.`,
+                            description: `One gangbanger grabs a bottle and smashes it against Willy's face. The sound reverberates throughout the neighbourhood, like the ring of a town bell.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -743,14 +754,18 @@ module.exports = {
                                     `Shelled skull has freed`,
                                     {
                                         anchor: `unsalvaged soul…`,
-                                        annotation: {
-                                            description: `Given that abuse of an underdeveloped child often led to its death, religious doctrine in the past typically gave assurance that such children were devoid of souls. But I came to a different conclusion. If my brother and I were so alike in physical makeup, despite being so different in mental presence, then it made more sense to believe that no one has a soul.`,
-                                            dotKeys: {
-                                                [BACKSTORY]: true,
-                                                [REFERENCE]: true
+                                        annotation: [
+                                            {
+                                                description: `Religious doctrine in the past often sanctioned the abuse of disabled children by giving assurance that they were devoid of souls. But I came to a different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.`,
+                                                dotKeys: {
+                                                    [OBSERVATION]: true,
+                                                    [REFERENCE]: true
+                                                }
                                             },
-                                            portal: `unsalvaged_sows`
-                                        }
+                                            {
+                                                portal: `unsalvaged_sows`
+                                            }
+                                        ],
                                     }
                                 ]
                             }
@@ -768,7 +783,7 @@ module.exports = {
                         anchor: `Willy's stalkless bulb.`,
                         properNoun: true,
                         annotation: {
-                            description: `The "stalkless bulb" here is Willy's brain, which has just been severed from its spine. But it can also refer to a dormant plant ready to be set in the ground.`,
+                            description: `The "stalkless bulb" here refers to Willy's brain, which has just been severed from its spine, as well as to a dormant plant ready to be set in the ground.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -792,9 +807,8 @@ module.exports = {
                     {
                         anchor: `sawdust month`,
                         annotation: {
-                            description: `My father often built furniture in the garage. I'm now helping my mother spread the leftover sawdust in our backyard garden, during this "saddest" month that Willy was killed.`,
+                            description: `Later in this "saddest" month when Willy was killed, I am helping my mother in our backyard garden as we spread the leftover sawdust from my father's carpentry.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true,
                                 [PUN]: true
                             }
@@ -810,12 +824,12 @@ module.exports = {
                         anchor: `mulch soften asphodel.`,
                         annotation: {
                             description: [
-                                `The`,
+                                `We are planting`,
                                 {
-                                    anchor: `asphodel`,
+                                    anchor: `asphodels,`,
                                     wiki: `Asphodelus`
                                 },
-                                `is a popular garden plant, as well as an immortal flower of the underworld in Greek mythology. Since we are made of the same physical matter as the mulch we use to soften the soil, I remark that Willy's body must have also "softened the asphalt" beneath which it lay.`
+                                `a popular garden plant as well as the immortal flower of the underworld in Greek mythology. As we spread mulch to soften the soil, I remark that Willy's body must have also softened the "asphalt" beneath which it lay.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -837,7 +851,7 @@ module.exports = {
                                     anchor: `bluebonnet`,
                                     wiki: 'Bluebonnet_(plant)'
                                 },
-                                `is another garden flower, and a bonnet is what my mother tucks my brother's head in to protect him from the sun. But in light of Willy's murder, I wonder how well-protected his head is against other things.`
+                                `is another garden flower, and a bonnet is what my mother has tucked my brother's head in to protect him from the sun. But in light of Willy's murder, I wonder how protected his head is against other things.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -856,7 +870,7 @@ module.exports = {
                     {
                         anchor: `forgotten amongst the mail.`,
                         annotation: {
-                            description: `Having recently kicked my brother in anger over a shredded comic book, I'm now indifferent to the latest release from my monthly subscription.`,
+                            description: `Having recently assaulted my brother in anger over a shredded comic book, I am now indifferent to the latest release from my monthly subscription.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -870,9 +884,10 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `I also pictured trolls doing bizarre things like playing a slide guitar with the whammy bar.`
+                            `I played the electric guitar riff here with both a slide and the whammy bar, which is another nonsensical thing that I could picture trolls doing.`
                         ],
                         dotKeys: {
+                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -888,7 +903,7 @@ module.exports = {
                     {
                         anchor: `how marbleless,`,
                         annotation: {
-                            description: `Or, "how marvellous." Sometimes friends of my parents, in a poor attempt to empathise, would marvel at how blissful it must be for my brother to go through life without all of his marbles, so to speak.`,
+                            description: `Or, "how marvellous." Sometimes friends of my parents, in a poor attempt to empathise with my brother's autism, would remark on how blissful it must be to go through life without all of one's "marbles," so to speak.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [PUN]: true
@@ -904,20 +919,27 @@ module.exports = {
                     `being ever stuck in`,
                     {
                         anchor: `imp-runt age of mind!`,
-                        annotation: {
-                            description: [
-                                `Or "imprint."`,
-                                {
-                                    anchor: `Imprinting`,
-                                    wiki: `Imprinting_(psychology)`
-                                },
-                                `is a period during which a child acquires certain behaviour, such as emotional attachment. Each time my mother learned a new concept related to child development, she would blame herself for not having known it soon enough to help my brother. An "imp-runt" is also literally the weakest child in a litter of goblins, and thus a prime choice to be replaced with a human.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `"Imprinting"`,
+                                        wiki: `Imprinting_(psychology)`
+                                    },
+                                    `is a period during which a child acquires certain behaviour, such as emotional attachment. Each time my mother learned a new concept related to child development, she would blame herself for not having known it soon enough to help my brother.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: `An "imp-runt" literally refers to the weakest in a litter of goblins, and thus a prime choice for them to replace with a human.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -928,7 +950,7 @@ module.exports = {
                     {
                         anchor: `I am seven,`,
                         annotation: {
-                            description: `My brother learned to answer the question "how old are you?" when he was six. But even after turning seven, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer, but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been saying "seven" ever since. Here, I imagine him as a grownup, testily correcting a stranger who has the nerve to ask if he is "six."`,
+                            description: `My brother learned to answer the question of how old he was when he was six. But even after turning seven, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer, but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. And so here, I imagine him as a grownup testily correcting a stranger who has the nerve to ask if he is "six."`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true,
@@ -964,9 +986,8 @@ module.exports = {
                     {
                         anchor: `heavy fears,`,
                         annotation: {
-                            description: `One night when I woke up screaming in fear of my mortality, my mother rushed to my bedside to comfort me.`,
+                            description: `On the night of Willy's murder, I wake up screaming in fear of my mortality. My mother rushes to my bedside to comfort me.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true
                             }
                         }
@@ -980,19 +1001,27 @@ module.exports = {
                     `for a cub`,
                     {
                         anchor: `not yet Webelos!`,
-                        annotation: {
-                            description: [
-                                `The oldest`,
-                                {
-                                    anchor: `Cub Scouts`,
-                                    wiki: `Cub_Scouting_(Boy_Scouts_of_America)`
-                                },
-                                `in a pack, those in the fourth or fifth grade, belong to the Webelos den. We were taught that it stands for "We'll Be Loyal Scouts," but it was originally "Wolf, Bear, Lion, Scout." My mother might also be saying that I am not yet "way below."`
-                            ],
-                            dotKeys: {
-                                [PUN]: true
-                            }
-                        }
+                        annotation: [
+                            {
+                                description: [
+                                    `My mother was a`,
+                                    {
+                                        anchor: `Cub Scouts`,
+                                        wiki: `Cub_Scouting_(Boy_Scouts_of_America)`
+                                    },
+                                    `den mother. The oldest scouts in the pack, those in the fourth or fifth grade, belong to the Webelos rank, which stands for "We'll Be Loyal Scouts."`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                description: `My mother might also be saying that I am not yet "way below."`,
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                        ]
                     }
                 ]
             },
@@ -1003,9 +1032,8 @@ module.exports = {
                     {
                         anchor: `seventy years`,
                         annotation: {
-                            description: `My mother told me not to worry, since I wasn't going to die for quite a while. She then assured me that when my time finally did come in another seventy years or so, I would have long made sense of death, and be at peace with it.`,
+                            description: `In keeping with her Buddhist faith, my mother tells me not to worry, since I'm not going to die for a long while. She then assures me that when my time finally does come in another seventy years or so, I will have long made peace with death.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true
                             }
                         }
@@ -1024,31 +1052,44 @@ module.exports = {
             {
                 time: 183,
                 lyric: [
-                    `In time with`,
+                    `In time, with`,
                     {
-                        // TODO: Specify needle for sewing.
                         anchor: `needle done,`,
-                        annotation: {
-                            description: ``,
-                            portal: `needle_done`
-                        }
+                        annotation: [
+                            {
+                                description: `My mother suggests that my life will be a patchwork onto which I continually sew new experiences.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
+                                portal: `needle_done`
+                            }
+                        ]
                     },
                     `you'll write this`,
                     {
                         anchor: `book of yours.`,
-                        annotation: {
-                            description: [
-                                `My mother always insisted that I was destined to make great artistic works, even as I bounced from one interest to the next as a kid.`,
-                                {
-                                    italic: `Bobtail`
-                                },
-                                `was the catch-all title for my epic masterpiece that I would one day create, whatever it was. At the time, we assumed it would be a comic book of sorts.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `In turn, the insights I gain from these experiences will then inform and enrich my art.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `My mother always insisted that I was destined to become a great artist, and encouraged every impulse I had to explore a new medium.`,
+                                    {
+                                        italic: `Bobtail`
+                                    },
+                                    `was my catch-all title for the epic masterpiece I would one day create, whatever it was. At the time, we assumed it would be a comic book.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -1093,7 +1134,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `I recently asked my brother how old he was. He answered seventeen, which is only a decade behind. So I guess we're making progress.`,
+                        description: `We recently asked my brother how old he is. He answered "seventeen," which is only a decade behind. So I guess we're making progress.`,
                         dotKeys: {
                             [AFTERWORD]: true
                         }
@@ -1103,16 +1144,6 @@ module.exports = {
         ]
     ],
     tasks: [
-        {
-            taskName: `sort out past and present tense`,
-            workedHours: 0,
-            neededHours: 3
-        },
-        {
-            taskName: `annotations`,
-            workedHours: 40,
-            neededHours: 40
-        },
         {
             taskName: `include wiki urls`,
             workedHours: 1,
@@ -1142,6 +1173,16 @@ module.exports = {
             taskName: `review synopses and rough illustrations`,
             workedHours: 3,
             neededHours: 3,
+        },
+        {
+            taskName: `sort out past and present tense`,
+            workedHours: 4,
+            neededHours: 4
+        },
+        {
+            taskName: `annotations`,
+            workedHours: 40,
+            neededHours: 40
         }
     ]
 }
