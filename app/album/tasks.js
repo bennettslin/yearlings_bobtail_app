@@ -1,4 +1,10 @@
 module.exports = [
+    {
+        taskName: `Move out of transition group.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     // Touch accessibility.
     {
         taskName: `audio banner is touch accessible.`,

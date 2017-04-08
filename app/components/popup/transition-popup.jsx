@@ -36,7 +36,9 @@ class TransitionPopup extends Component {
 
     componentDidMount() {
         // Focus if popup is already open when app mounts.
-        this.props.handlePopupFocus()
+        if (this.props.isVisible) {
+            this.props.handlePopupFocus()
+        }
     }
 
     _handleTransitionEnd(e) {

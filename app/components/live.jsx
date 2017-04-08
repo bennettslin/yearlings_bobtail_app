@@ -13,7 +13,7 @@ import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
 import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
-import WikiPopup from './wiki/wiki-popup'
+import WikiTransitionPopup from './wiki/wiki-transition-popup'
 import { getSong, getAnnotation, getWikiUrl } from '../helpers/album-view-helper'
 import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 
@@ -114,6 +114,7 @@ const LiveView = ({
 
     lyricSectionRef,
     scoreSectionRef,
+    wikiSectionRef,
 
     selectedSongTitle,
     handlePlayerTimeChange,
@@ -143,7 +144,6 @@ const LiveView = ({
     handleLyricVerseSelect,
     handleOverviewToggle,
     handlePopupFocus,
-    handleScoreFocus,
     handleScoreToggle,
     handleTipsToggle,
     handleTitleSelect,
@@ -352,17 +352,16 @@ const LiveView = ({
             selectedSongIndex,
             showClose: true,
             scoreSectionRef,
-            handleScoreFocus,
             handleScoreToggle,
-            handlePopupFocus,
-            handlePopupContainerClick
+            handlePopupFocus
         },
         wikiPopupProps = {
+            selectedWikiIndex,
             selectedWikiUrl,
-            accessedOn,
             showClose: true,
-            onPopupButtonCloseClick: handleWikiToggle,
-            handlePopupContainerClick
+            wikiSectionRef,
+            handleWikiToggle,
+            handlePopupFocus
         },
         overviewButtonProps = {
             selectedOverviewIndex,
@@ -434,7 +433,7 @@ const LiveView = ({
                 </div>
                 <div className="overlay-popup-block">
                     <ScoreTransitionPopup {...scorePopupProps} />
-                    <WikiPopup {...wikiPopupProps} />
+                    <WikiTransitionPopup {...wikiPopupProps} />
                     {isOverlaidAnnotation &&
                         <AnnotationPopup {...annotationPopupProps} />
                     }
