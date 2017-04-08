@@ -14,7 +14,7 @@ import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
 import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
-import { getSong, getAnnotation, getWikiUrl } from '../helpers/album-view-helper'
+import { getSong, getWikiUrl } from '../helpers/album-view-helper'
 import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, getIsHiddenNav, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 
 /*************
@@ -24,7 +24,6 @@ import { getShowSingleBookColumn, getShrinkNavIcon, getIsHeightlessLyricColumn, 
 const Live = (props) => {
 
     const selectedSong = getSong(props),
-        annotation = getAnnotation(props),
         selectedWikiUrl = getWikiUrl(props),
         titleInAudio = getTitleInAudio(props),
         isHiddenNav = getIsHiddenNav(props),
@@ -40,7 +39,6 @@ const Live = (props) => {
             stanzaTimes={selectedSong.stanzaTimes}
             times={selectedSong.times}
             overviewText={selectedSong.overview}
-            annotation={annotation}
             selectedWikiUrl={selectedWikiUrl}
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
@@ -71,6 +69,7 @@ const LiveView = ({
     bookStartingIndices,
     scores,
     songs,
+    annotation,
     title,
     isPlaying,
     isLogue,
@@ -156,7 +155,6 @@ const LiveView = ({
 
     // From controller.
     overviewText,
-    annotation,
     totalTime,
     stanzaTimes,
     times,

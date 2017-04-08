@@ -27,7 +27,7 @@ import { SHOWN,
 
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
-import { getSong, getIsLogue, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
+import { getSong, getAnnotation, getIsLogue, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
@@ -111,6 +111,8 @@ class App extends Component {
             accessedDotIndex: 0,
             accessedSongIndex: props.selectedSongIndex,
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
+
+            annotation: getAnnotation(props),
 
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false,
@@ -295,6 +297,11 @@ class App extends Component {
         }
 
         props.selectAnnotationIndex(selectedAnnotationIndex)
+
+        this.setState({
+            annotation: getAnnotation(this.props, selectedAnnotationIndex)
+        })
+
         return selectedAnnotationIndex
     }
 
