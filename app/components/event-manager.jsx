@@ -315,6 +315,7 @@ class EventManager extends Component {
         if (lyricsToggled) {
             this._stopPropagation(e)
             this._closeSections({
+                exemptAnnotation: true,
                 exemptLyric: true
             })
         }

@@ -64,12 +64,10 @@
             box-sizing: border-box;
             height: 100%;
             width: 100%;
-            font-size: 1em;
+            // font-size: 1em;
             display: flex;
             justify-content: center;
             align-items: center;
-
-            transition: opacity 0.2s, font 0.2s;
         }
 
         .lyrics-audio-button {
@@ -77,6 +75,7 @@
             font-size: 0.1em;
             opacity: 0;
             z-index: @lyrics-audio-button-z-index;
+            transition: opacity 0.2s, font 0.2s;
 
             .button-background {
                 width: @lyrics-audio-button-block-width;

@@ -1,7 +1,7 @@
 module.exports = [
     {
         taskName: `Move out of transition group.`,
-        workedHours: 2,
+        workedHours: 3,
         neededHours: 5
     },
 
