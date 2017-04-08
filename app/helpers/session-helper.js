@@ -125,7 +125,7 @@ const _validateValueForKey = (key) => {
                 popupAnchors = selectedAnnotation && selectedAnnotation.popupAnchors
 
                 // If it's a wiki, entry wil be string.
-                isValid = isNumber && popupAnchors && typeof popupAnchors[parsedValue] === 'string'
+                isValid = isNumber && popupAnchors && typeof popupAnchors[parsedValue - 1] === 'string'
 
             // Logues do not have annotations.
             } else {
