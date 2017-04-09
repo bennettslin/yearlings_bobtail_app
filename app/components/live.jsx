@@ -10,7 +10,7 @@ import AudioPopup from './audio/audio-popup'
 import AudioSection from './audio/audio-section'
 import ScoresTipsSection from './scores-tips-section'
 import OverviewButton from './overview/overview-toggle'
-import OverviewPopup from './overview/overview-popup'
+import OverviewTransitionPopup from './overview/overview-transition-popup'
 import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
 import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
@@ -397,7 +397,7 @@ const LiveView = ({
         )}>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">
-                    <OverviewPopup {...overviewPopupProps}
+                    <OverviewTransitionPopup {...overviewPopupProps}
                         inOverviewSubfield={false}
                     />
             </div>
@@ -405,7 +405,7 @@ const LiveView = ({
                 annotationPopupChild={ <AnnotationTransitionPopup {...annotationPopupProps} /> }
                 dotsSectionChild={ <DotsSection {...dotsSectionProps} /> }
                 overviewPopupChild={
-                    <OverviewPopup {...overviewPopupProps}
+                    <OverviewTransitionPopup {...overviewPopupProps}
                         inOverviewSubfield={true}
                         overviewButtonChild={ <OverviewButton {...overviewButtonProps} /> }
                     />

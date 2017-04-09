@@ -3,7 +3,7 @@
 
 .popup-transition-group {
 
-    &.annotation {
+    &.annotation, &.overview {
         .popup-wrapper {
             animation: bounceOut @popup-transition-duration-out;
         }
@@ -27,7 +27,7 @@
         }
     }
 
-    &.annotation, &.score, &.wiki {
+    &.annotation, &.overview, &.score, &.wiki {
         transition: opacity @popup-transition-duration-out;
         z-index: @popup-content-z-index;
         opacity: 0;
