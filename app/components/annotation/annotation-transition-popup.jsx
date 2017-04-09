@@ -13,7 +13,6 @@ const AnnotationTransitionPopup = ({
     selectedWikiIndex,
     handleAnnotationPrevious,
     handleAnnotationNext,
-    handlePopupFocus,
     handlePopupContainerClick,
 
 ...other }) => {
@@ -32,7 +31,6 @@ const AnnotationTransitionPopup = ({
             showArrows={true}
             handlePreviousClick={handleAnnotationPrevious}
             handleNextClick={handleAnnotationNext}
-            handlePopupFocus={handlePopupFocus}
             handlePopupContainerClick={handlePopupContainerClick}
             myChild={myChild}
         />

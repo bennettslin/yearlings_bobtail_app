@@ -222,7 +222,6 @@ const LiveView = ({
             handleAudioNextSong,
             handleAudioOptionsToggle,
             handleTitleSelect,
-            handlePopupFocus, // TODO: Is necessary?
             handlePopupContainerClick,
 
             audioTimerChild,
@@ -330,7 +329,6 @@ const LiveView = ({
             selectedDotKeys,
             handleAnnotationPrevious,
             handleAnnotationNext,
-            handlePopupFocus, // TODO: Is necessary?
             handlePopupContainerClick,
 
             handleAnnotationPortalSelect,

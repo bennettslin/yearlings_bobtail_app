@@ -8,24 +8,20 @@ import TransitionPopup from '../popup/transition-popup'
 
 const AudioTransitionPopup = ({
 
-    handlePopupFocus,
+    showOverlay,
     handlePopupContainerClick,
 
 ...other }) => {
 
-    const { showOverlay } = other,
-        isVisible = showOverlay,
+    const isVisible = showOverlay,
         myChild = (
             <AudioSection {...other} />
         )
-
-        console.error('showOverlay', showOverlay);
 
     return (
         <TransitionPopup
             popupClassName="audio"
             isVisible={isVisible}
-            handlePopupFocus={handlePopupFocus}
             handlePopupContainerClick={handlePopupContainerClick}
             myChild={myChild}
         />
