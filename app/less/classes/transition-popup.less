@@ -27,7 +27,6 @@
         }
     }
 
-    // Apply to score and wiki only for now. But hopefully apply it to all.
     &.annotation, &.score, &.wiki {
         transition: opacity @popup-transition-duration-out;
         z-index: @popup-content-z-index;
@@ -40,17 +39,6 @@
 
         &.not-displayed {
             z-index: 0;
-        }
-    }
-}
-
-.overlay-shown {
-    .annotation-subfield {
-        .popup-transition-group {
-            &.annotation {
-                opacity: 0;
-                z-index: 0;
-            }
         }
     }
 }

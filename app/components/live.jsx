@@ -6,6 +6,7 @@ import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
 import AudioTimer from './audio/audio-timer'
 import AudioPopup from './audio/audio-popup'
+// import AudioTransitionPopup from './audio/audio-transition-popup'
 import AudioSection from './audio/audio-section'
 import ScoresTipsSection from './scores-tips-section'
 import OverviewButton from './overview/overview-toggle'
@@ -215,13 +216,13 @@ const LiveView = ({
             isPlaying,
             title,
             selectedAudioOptionIndex,
-            accessedOn,
 
             handleAudioPlay,
             handleAudioPreviousSong,
             handleAudioNextSong,
             handleAudioOptionsToggle,
             handleTitleSelect,
+            handlePopupFocus, // TODO: Is necessary?
             handlePopupContainerClick,
 
             audioTimerChild,
@@ -329,7 +330,7 @@ const LiveView = ({
             selectedDotKeys,
             handleAnnotationPrevious,
             handleAnnotationNext,
-            handlePopupFocus,
+            handlePopupFocus, // TODO: Is necessary?
             handlePopupContainerClick,
 
             handleAnnotationPortalSelect,
