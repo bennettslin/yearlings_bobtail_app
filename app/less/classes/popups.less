@@ -24,18 +24,21 @@
 .popup-transition-group {
     box-sizing: border-box;
 
-    &:not(.overview):not(.audio) {
+    // &:not(.overview):not(.audio) {
+    &:not(.overview) {
         top: 0;
         left: 0;
+    }
 
+    &:not(.overview):not(.audio) {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    &.audio {
-        position: relative;
-    }
+    // &.audio {
+    //     position: relative;
+    // }
 }
 
 .popup-wrapper {
@@ -47,25 +50,25 @@
      * transitionEnterTimeout and transitionLeaveTimeout in popup.jsx.
      */
 
-    &.overview {
-        &[class*="animation-enter"] {
-            transform: scale(0);
-
-            &[class*="animation-enter-active"] {
-                animation: bounceIn 0.25s;
-                transform: scale(1);
-            }
-        }
-
-        &[class*="animation-leave"] {
-            transform: scale(1);
-
-            &[class*="animation-leave-active"] {
-                animation: bounceOut 0.15s;
-                transform: scale(0);
-            }
-        }
-    }
+    // &.overview {
+    //     &[class*="animation-enter"] {
+    //         transform: scale(0);
+    //
+    //         &[class*="animation-enter-active"] {
+    //             animation: bounceIn 0.25s;
+    //             transform: scale(1);
+    //         }
+    //     }
+    //
+    //     &[class*="animation-leave"] {
+    //         transform: scale(1);
+    //
+    //         &[class*="animation-leave-active"] {
+    //             animation: bounceOut 0.15s;
+    //             transform: scale(0);
+    //         }
+    //     }
+    // }
 
     &.wiki, &.score {
         width: ~"calc(100% - @{full-subfield} * 2.5)";

@@ -15,7 +15,7 @@
         }
     }
 
-    &.wiki {
+    &.wiki, &.audio {
         .popup-wrapper {
             animation: shrinkOut @popup-transition-duration-out;
         }
@@ -27,7 +27,7 @@
         }
     }
 
-    &.annotation, &.overview, &.score, &.wiki {
+    // &.annotation, &.overview, &.score, &.wiki {
         transition: opacity @popup-transition-duration-out;
         z-index: @popup-content-z-index;
         opacity: 0;
@@ -40,5 +40,5 @@
         &.not-displayed {
             z-index: 0;
         }
-    }
+    // }
 }

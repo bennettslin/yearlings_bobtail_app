@@ -5,8 +5,8 @@ import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
 import AudioTimer from './audio/audio-timer'
-import AudioPopup from './audio/audio-popup'
-// import AudioTransitionPopup from './audio/audio-transition-popup'
+// import AudioPopup from './audio/audio-popup'
+import AudioTransitionPopup from './audio/audio-transition-popup'
 import AudioSection from './audio/audio-section'
 import ScoresTipsSection from './scores-tips-section'
 import OverviewButton from './overview/overview-toggle'
@@ -419,14 +419,16 @@ const LiveView = ({
             />
 
             <div className="overlay-popup-subfield">
-                <div className="audio-subfield">
-                    <AudioPopup {...audioSectionProps}
-                        timerInAudio={timerInAudio}
-                        titleInAudio={false}
-                        showOverlay={showOverlay}
-                    />
+                <div className="overlay-popup-block audio-popup-block audio-subfield">
+                    {/* <div className="audio-subfield"> */}
+                        <AudioTransitionPopup {...audioSectionProps}
+                            timerInAudio={timerInAudio}
+                            titleInAudio={false}
+                            showOverlay={showOverlay}
+                        />
+                    {/* </div> */}
                 </div>
-                <div className="overlay-popup-block">
+                <div className="overlay-popup-block main-popup-block">
                     <ScoreTransitionPopup {...scorePopupProps} />
                     <WikiTransitionPopup {...wikiPopupProps} />
                     {isOverlaidAnnotation &&
