@@ -4,11 +4,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 15
     },
-    {
-        taskName: `Move popups out of transition group.`,
-        workedHours: 4,
-        neededHours: 5
-    },
 
     // Touch accessibility.
     {
@@ -1652,5 +1647,10 @@ module.exports = [
         taskName: `Needle done portal is broken.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Move popups out of transition group.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

@@ -419,7 +419,7 @@ const LiveView = ({
             />
 
             <div className="overlay-popup-subfield">
-                <div className="overlay-popup-block audio-popup-block audio-subfield">
+                <div className="overlay-popup-block audio-popup-block">
                     {/* <div className="audio-subfield"> */}
                         <AudioTransitionPopup {...audioSectionProps}
                             timerInAudio={timerInAudio}
