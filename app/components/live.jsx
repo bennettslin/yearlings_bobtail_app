@@ -70,7 +70,7 @@ const LiveView = ({
     bookStartingIndices,
     scores,
     songs,
-    annotation,
+    popupAnnotation,
     title,
     isPlaying,
     isLogue,
@@ -321,7 +321,7 @@ const LiveView = ({
         },
         annotationPopupProps = {
             songs,
-            annotation,
+            popupAnnotation,
             selectedAnnotationIndex,
             selectedScoreIndex,
             selectedWikiIndex,

@@ -112,7 +112,7 @@ class App extends Component {
             accessedSongIndex: props.selectedSongIndex,
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
 
-            annotation: getAnnotation(props),
+            popupAnnotation: getAnnotation(props),
 
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false,
@@ -298,9 +298,18 @@ class App extends Component {
 
         props.selectAnnotationIndex(selectedAnnotationIndex)
 
-        this.setState({
-            annotation: getAnnotation(this.props, selectedAnnotationIndex)
-        })
+        /**
+         * There should always be a popup annotation, so that popup is not
+         * suddenly empty when popup fades out.
+         */
+        if (selectedAnnotationIndex) {
+            this.setState({
+                popupAnnotation: getAnnotation({
+                    selectedSongIndex,
+                    songs: props.songs
+                }, selectedAnnotationIndex)
+            })
+        }
 
         return selectedAnnotationIndex
     }

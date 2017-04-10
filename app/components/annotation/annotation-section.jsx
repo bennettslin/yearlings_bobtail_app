@@ -8,11 +8,11 @@ import { DOT_STANZA_CONSTANT } from '../../helpers/constants'
 
 const AnnotationSection = (props) => {
 
-    const { annotation } = props
+    const { popupAnnotation } = props
 
-    return annotation ? (
+    return popupAnnotation ? (
         <AnnotationSectionView {...props}
-            title={annotation.title}
+            title={popupAnnotation.title}
         />
     ) : null
 }

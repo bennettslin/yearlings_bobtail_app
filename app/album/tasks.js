@@ -1,20 +1,5 @@
 module.exports = [
     {
-        taskName: `Needle done portal is broken.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Make album object an import, not a prop`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `Persist lyric column expand.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Annotation slider.`,
         workedHours: 0,
         neededHours: 15
@@ -1660,6 +1645,11 @@ module.exports = [
     },
     {
         taskName: `Method to keep track of multiple cards in annotation`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Needle done portal is broken.`,
         workedHours: 1,
         neededHours: 1
     }

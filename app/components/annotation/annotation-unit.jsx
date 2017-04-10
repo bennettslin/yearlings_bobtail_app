@@ -7,14 +7,14 @@ import AnnotationCard from './annotation-card'
 
 const AnnotationUnit = (props) => {
 
-    const { annotation } = props
+    const { popupAnnotation } = props
 
-    if (Array.isArray(annotation.cards)) {
+    if (Array.isArray(popupAnnotation.cards)) {
         return <AnnotationUnitView {...props} />
     } else {
         return (
             <AnnotationCard {...props}
-                card={annotation.cards}
+                card={popupAnnotation.cards}
             />
         )
     }
@@ -27,11 +27,11 @@ const AnnotationUnit = (props) => {
 const AnnotationUnitView = ({
 
     // From props.
-    annotation,
+    popupAnnotation,
 
 ...other }) => (
     <div className="annotation-cards-block">
-        {annotation.cards.map((card, index) => (
+        {popupAnnotation.cards.map((card, index) => (
             <AnnotationCard {...other}
                 key={index}
                 card={card}

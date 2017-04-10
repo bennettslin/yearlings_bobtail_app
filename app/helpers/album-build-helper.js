@@ -710,6 +710,10 @@ const _addDotKeys = (card, dotKeys) => {
     }
 }
 
+/**********
+ * PORTAL *
+ **********/
+
 const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0, verseIndex, column, columnIndex) => {
     // Add portal link to annotation card..
     const { portal } = card
