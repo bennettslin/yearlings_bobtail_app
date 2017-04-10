@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `Needle done portal is broken.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Persist lyric column expand.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Annotation slider.`,
         workedHours: 0,
         neededHours: 15
