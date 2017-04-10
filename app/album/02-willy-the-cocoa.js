@@ -1079,7 +1079,7 @@ module.exports = {
                             },
                             {
                                 description: [
-                                    `My mother always insisted that I was destined to become a great artist, and encouraged every impulse I had to explore a new medium.`,
+                                    `My mother always insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums.`,
                                     {
                                         italic: `Bobtail`
                                     },
@@ -1175,7 +1175,7 @@ module.exports = {
             neededHours: 3,
         },
         {
-            taskName: `sort out past and present tense`,
+            taskName: `tenses and categorisation`,
             workedHours: 4,
             neededHours: 4
         },
