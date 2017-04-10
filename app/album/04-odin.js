@@ -1,23 +1,6 @@
 import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from '../helpers/constants'
 
-// One more music annotation, explaining difficulty of recording doublespeaker rhyme.
 module.exports = {
-    title: {
-        anchor: 'Odin',
-        annotation: {
-            description: [
-                `It's likely that Odin's original name meant something in Chinese, which my sister and I later anglicised into the name of the`,
-                {
-                    anchor: `Norse god`,
-                    wiki: `Odin`
-                },
-                `once we were older.`
-            ],
-            dotKeys: {
-                [BACKSTORY]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -66,6 +49,22 @@ module.exports = {
     doubleColumns: true,
     totalTime: 200,
     overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which terrified me more. Our house cat Odin died of old age later that summer, just as I was exploring the idea of having faith. And yet, the eternal life promised by faith seemed no less terrifying to me than the finality of death.`,
+    title: {
+        anchor: 'Odin',
+        annotation: {
+            description: [
+                `It's likely that Odin's original name meant something in Chinese, which my sister and I later anglicised into the name of the`,
+                {
+                    anchor: `Norse god`,
+                    wiki: `Odin`
+                },
+                `once we were older.`
+            ],
+            dotKeys: {
+                [BACKSTORY]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
