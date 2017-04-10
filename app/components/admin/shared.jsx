@@ -12,7 +12,8 @@ import { getSong, getTasks } from '../../helpers/album-view-helper'
 const Shared = (props) => {
 
     const selectedSong = getSong(props),
-        tasks = getTasks(selectedSong, props.albumTasks)
+        tasks = getTasks(selectedSong, props.albumTasks),
+        multipleCardAnnotationsCount = selectedSong.multipleCardAnnotationsCount
 
     return (
         <SharedView {...props}
@@ -20,6 +21,7 @@ const Shared = (props) => {
             dotStanzas={selectedSong.dotStanzas}
             lyrics={selectedSong.lyrics}
             annotations={selectedSong.annotations}
+            multipleCardAnnotationsCount={multipleCardAnnotationsCount}
         />
     )
 }
@@ -37,6 +39,7 @@ const SharedView = ({
     dotStanzas,
     lyrics,
     annotations,
+    multipleCardAnnotationsCount,
 
 ...other }) => (
     <div className="admin-column">
@@ -45,6 +48,7 @@ const SharedView = ({
                 dotStanzas={dotStanzas}
                 lyrics={lyrics}
                 annotations={annotations}
+                multipleCardAnnotationsCount={multipleCardAnnotationsCount}
             />
             <TasksSection
                 tasks={tasks}

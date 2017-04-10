@@ -21,6 +21,7 @@ const _tempStore = {
     _currentStanzaType: null,
     _currentSongStanzaTimes: [],
     _currentSongStanzaTypeCounters: {},
+    _currentSongMultipleCardAnnotationsCounter: 0,
     _largestStanzaTimesLength: 0,
     _verseIndexCounter: -1,
     _currentAnnotationIndices: [],
@@ -87,6 +88,7 @@ const _initialPrepareAllSongs = (album) => {
             _tempStore._currentStanzaType = null
             _tempStore._currentSongStanzaTimes = []
             _tempStore._currentSongStanzaTypeCounters = {}
+            _tempStore._currentSongMultipleCardAnnotationsCounter = 0
 
             _addTitleToLyrics(song.title, song.lyrics)
             // Do not confuse anchor key with string prototype anchor method.
@@ -122,6 +124,9 @@ const _initialPrepareAllSongs = (album) => {
 
             // And dot stanza count for dev purposes.
             song.dotStanzas = _tempStore._dotStanzaCounter
+
+            // Add count of annotations with multiple cards.
+            song.multipleCardAnnotationsCount = _tempStore._currentSongMultipleCardAnnotationsCounter
         }
 
         _gatherDrawings(song.scenes, songIndex)
@@ -597,6 +602,7 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
 
         // Cards may be single annotation card or array of cards.
         if (Array.isArray(cards)) {
+            _tempStore._currentSongMultipleCardAnnotationsCounter++
             cards.forEach((card, cardIndex) => {
                 _prepareCard(card, dotKeys)
                 _addDotKeys(card, dotKeys)

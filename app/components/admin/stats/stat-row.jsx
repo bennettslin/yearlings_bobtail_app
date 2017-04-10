@@ -81,5 +81,6 @@ export {
     DotStanzasRow,
     LyricsWordCountRow,
     AnnotationsCountRow,
-    WordsPerAnnotationRow
+    WordsPerAnnotationRow,
+    StatRowView
 }

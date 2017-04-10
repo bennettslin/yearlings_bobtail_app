@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Method to keep track of multiple cards in annotation`,
+        taskName: `Annotation slider.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 15
     },
     {
         taskName: `Move popups out of transition group.`,
@@ -1643,4 +1643,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Method to keep track of multiple cards in annotation`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

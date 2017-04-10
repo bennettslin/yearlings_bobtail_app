@@ -2,7 +2,8 @@ import React from 'react'
 import { DotStanzasRow,
          LyricsWordCountRow,
          AnnotationsCountRow,
-         WordsPerAnnotationRow } from './stat-row'
+         WordsPerAnnotationRow,
+         StatRowView } from './stat-row'
 
 /*************
  * CONTAINER *
@@ -21,7 +22,8 @@ const StatsSectionView = ({
     // From props.
     dotStanzas,
     lyrics,
-    annotations
+    annotations,
+    multipleCardAnnotationsCount
 
 }) => (
     <div className="section stats-section">
@@ -31,6 +33,10 @@ const StatsSectionView = ({
             <LyricsWordCountRow lyrics={lyrics} />
             <AnnotationsCountRow annotations={annotations} />
             <WordsPerAnnotationRow annotations={annotations} />
+            <StatRowView
+                typeName="multiple card annotations count"
+                typeCount={multipleCardAnnotationsCount}
+            />
         </div>
     </div>
 )
