@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import DomManager from './dom-manager'
-import { getAnnotation,
-         getAnnotationIndexForDirection,
+import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getPopupAnchorIndexForDirection } from '../helpers/album-view-helper'
 import { CAPS_LOCK,
@@ -183,7 +182,7 @@ class AccessManager extends Component {
                 break
             }
             case ENTER: {
-                const annotation = getAnnotation(props)
+                const { annotation } = props
 
                 if (annotation && annotation.popupAnchors && annotation.popupAnchors.length) {
                     const popupAnchorObject = annotation.popupAnchors[accessedPopupAnchorIndex - 1]

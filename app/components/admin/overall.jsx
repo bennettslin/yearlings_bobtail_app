@@ -8,7 +8,7 @@ import ProgressHelper from '../../helpers/progress-helper'
  * CONTAINER *
  *************/
 
-const Album = ({
+const Overall = ({
 
     songs,
     tasks: albumTasks,
@@ -17,7 +17,7 @@ const Album = ({
     const allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs)
 
     return (
-        <AlbumView {...other}
+        <OverallView {...other}
             songs={songs}
             albumTasks={albumTasks}
             allTasks={allTasks}
@@ -29,7 +29,7 @@ const Album = ({
  * PRESENTATION *
  ****************/
 
-const AlbumView = ({
+const OverallView = ({
 
     // From props.
     deviceIndex,
@@ -87,4 +87,4 @@ const AlbumView = ({
     )
 }
 
-export default Album
+export default Overall

@@ -1,5 +1,5 @@
 import React from 'react'
-import Album from './admin/album'
+import Overall from './admin/overall'
 import Live from './live'
 
 /*************
@@ -13,7 +13,7 @@ const SwitchManager = ({
 ...other }) => {
 
     return (selectedAdminIndex ?
-        <Album {...other} /> :
+        <Overall {...other} /> :
         <Live {...other} />
     )
 }

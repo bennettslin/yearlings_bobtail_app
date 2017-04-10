@@ -5,6 +5,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Make album object an import, not a prop`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
         taskName: `Persist lyric column expand.`,
         workedHours: 0,
         neededHours: 1
