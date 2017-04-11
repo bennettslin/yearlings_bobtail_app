@@ -397,9 +397,9 @@ const LiveView = ({
         )}>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">
-                    <OverviewTransitionPopup {...overviewPopupProps}
-                        inOverviewSubfield={false}
-                    />
+                <OverviewTransitionPopup {...overviewPopupProps}
+                    inOverviewSubfield={false}
+                />
             </div>
             <MainColumn {...mainColumnProps}
                 annotationPopupChild={ <AnnotationTransitionPopup {...annotationPopupProps} /> }
@@ -420,13 +420,11 @@ const LiveView = ({
 
             <div className="overlay-popup-subfield">
                 <div className="overlay-popup-block audio-popup-block">
-                    {/* <div className="audio-subfield"> */}
-                        <AudioTransitionPopup {...audioSectionProps}
-                            timerInAudio={timerInAudio}
-                            titleInAudio={false}
-                            showOverlay={showOverlay}
-                        />
-                    {/* </div> */}
+                    <AudioTransitionPopup {...audioSectionProps}
+                        timerInAudio={timerInAudio}
+                        titleInAudio={false}
+                        showOverlay={showOverlay}
+                    />
                 </div>
                 <div className="overlay-popup-block main-popup-block">
                     <ScoreTransitionPopup {...scorePopupProps} />

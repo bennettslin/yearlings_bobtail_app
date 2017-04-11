@@ -93,7 +93,8 @@ module.exports = {
                                 `was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Also, lots are drawn by chance to decide an outcome, and it was my lot to be born a non-Jew.`
                             ],
                             dotKeys: {
-                                [OBSERVATION]: true
+                                [OBSERVATION]: true,
+                                [PUN]: true
                             }
                         }
                     },
