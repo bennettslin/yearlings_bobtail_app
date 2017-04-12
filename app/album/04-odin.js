@@ -591,13 +591,12 @@ module.exports = {
                         anchor: `safe for a heathen…`,
                         annotation: {
                             description: [
-                                // TODO: Make more about wandering outside of Sasha's world
                                 `In the Book of Genesis, God promised to make`,
                                 {
                                     anchor: `Ishmael`,
                                     wiki: `Ishmael`
                                 },
-                                `a great nation, though he would not inherit Abraham's house. Not being of Abrahamic lineage myself, and thus unworthy of Sasha's affection, all I could hope for was a similar recompense.`
+                                `a great nation, though he would not inherit Abraham's house. Coming through less favoured lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -620,19 +619,24 @@ module.exports = {
                     `And if`,
                     {
                         anchor: `summer trips to Paris`,
-                        annotation: {
-                            description: [
-                                `In middle school, students who completed two years of French class were eligible to attend a summer program in France. This excited Sasha, and so it excited me as well. In Greek mythology,`,
-                                {
-                                    anchor: `Paris`,
-                                    wiki: `Paris_(mythology)`
-                                },
-                                `was also the prince of Troy, whose elopement with Helen of Sparta caused the Trojan War.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: `In middle school, students who completed two years of French class were eligible to attend a summer program in France. This excited Sasha, and so it excited me as well.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `In Greek mythology,`,
+                                    {
+                                        anchor: `Paris`,
+                                        wiki: `Paris_(mythology)`
+                                    },
+                                    `was the prince of Troy, whose elopement with Helen of Sparta caused the Trojan War.`
+                                ]
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -646,7 +650,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `The drums were the one instrument for which I had scored parts that were far more advanced than my actual abilities. So when it came time to record, I had to try many workarounds. On this song, I recorded the kick, snare, and toms separately from the cymbals.`,
+                        description: `The drums were the one instrument for which I had to score parts that were far more advanced than my own abilities. So when it came time to record, I tried many workarounds. On this song, I recorded the kick, snare, and toms separately from the cymbals.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
