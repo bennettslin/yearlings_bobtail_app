@@ -83,20 +83,27 @@ module.exports = {
                 right: [
                     {
                         anchor: `By lot,`,
-                        annotation: {
-                            description: [
-                                `In the Book of Genesis,`,
-                                {
-                                    anchor: `Lot's wife`,
-                                    wiki: `Lot%27s_wife`
-                                },
-                                `was turned into a pillar of salt when she looked back upon the city of Sodom. This is typically understood to suggest that the faithful cannot cohabit with the fallen. Also, lots are drawn by chance to decide an outcome, and it was my lot to be born a non-Jew.`
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: `Lots are drawn by chance to decide an outcome, and it was my lot to be born a non-Jew.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `In the Book of Genesis, "Lot" fled with his family from the wicked city of Sodom. When`,
+                                    {
+                                        anchor: `his wife`,
+                                        wiki: `Lot%27s_wife`
+                                    },
+                                    ` looked back, she was turned into a pillar of salt. This is understood by some to suggest that the fallen shall not cohabit with the faithful.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `once more`,
                 ]
@@ -107,7 +114,7 @@ module.exports = {
                     {
                         anchor: `hiding place of retreat`,
                         annotation: {
-                            description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins abruptly, as I come out from the dusty crawl space beneath my bed to which I regularly snuck away as a child.`,
+                            description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins abruptly, as I come out from the dusty crawl space beneath my bed to which I often snuck away as a child.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -122,13 +129,13 @@ module.exports = {
                         annotation: {
                             description: [
                                 {
-                                    anchor: `Tref`,
-                                    wiki: `Treif`
+                                    italic: `Tref`
                                 },
-                                `is the Yiddish word for food that is not kosher. Since it cannot be eaten, its only purpose is to break down into the soil. Similarly, as I was not a Jew, I could only ever be subsumed into the endless churn of surrounding peoples.`
+                                `is Yiddish for food that is not kosher. Since it cannot be eaten, its sole purpose is to fertilise other crops that can. Similarly, as I was not a Jew, I could only ever be subsumed into the endless churn of surrounding peoples.`
                             ],
                             dotKeys: {
-                                [OBSERVATION]: true
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
                             }
                         }
                     }
@@ -141,9 +148,8 @@ module.exports = {
                     {
                         anchor: `fridge's gallery in web's wake`,
                         annotation: {
-                            description: `My mother used to attach my drawings to our refrigerator. Here, they get snagged in the cobwebs trailing from my clothes, and scatter to the floor.`,
+                            description: `The cobwebs trailing from my clothes happen to snag some drawings of mine that my mother has attached to the refigerator, scattering them on the floor.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true
                             }
                         }
@@ -154,20 +160,14 @@ module.exports = {
                     {
                         anchor: `Indifferent galaxies`,
                         annotation: {
-                            description: `While my mother tried to raise us Buddhist, its core tenets never made much sense to me, partly because it clashed with the beliefs of my classmates. At the same time, it didn't make any more sense for them to be right and my mother wrong. So I was left with my conception of the universe as just light years of empty space.`,
+                            description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the beliefs of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So I was left with a conception of the universe as just light years of empty space.`,
                             dotKeys: {
+                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
                     },
-                    `instead`,
-                    {
-                        anchor: `stay unmoved;`,
-                        annotation: {
-                            description: `While the possibilities suggested by this vast expanse of the universe were countless, being with Sasha was not one of them.`
-                        },
-                        todo: true
-                    }
+                    `instead stay unmoved;`
                 ]
             },
             {
@@ -180,8 +180,9 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. And so I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's essentially the musical version of a cinematic split screen.`,
+                        description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. So I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's the musical version of a cinematic split screen.`,
                         dotKeys: {
+                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -196,20 +197,27 @@ module.exports = {
                     `This latest piece you drew with`,
                     {
                         anchor: `crayons least whittled…`,
-                        annotation: {
-                            description: [
-                                `When I first arrived in Taiwan, my aunt gave me a set of crayons as a gift. They were`,
-                                {
-                                    anchor: `soft pastels`,
-                                    wiki: `Pastel`
-                                },
-                                `and thus more powdery than waxy, which was the standard for children's crayons there. This meant that they ran out quickly, so by the end of our trip, I was left with the least used colours. Similarly, coming to Taiwan forced me to depend on previously neglected skills, like speaking Taiwanese.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `When we landed in Taiwan, my aunt gave me a set of crayons as a gift. They were`,
+                                    {
+                                        anchor: `soft pastels`,
+                                        wiki: `Pastel`
+                                    },
+                                    `and thus more powdery than waxy, which meant that they ran out quickly. By the end of our trip, I was left with the least used colours.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                description: `My sister and I spoke English at home. Being in Taiwan forced us to depend on our underused Taiwanese, much like being left with the last remaining crayons in a set.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ],
                 right: [
@@ -217,7 +225,7 @@ module.exports = {
                     {
                         anchor: `ruminate on these riddles…`,
                         annotation: {
-                            description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, brooding over my ruined chance with Sasha, disheartened by the endless array of paths left to choose, and fearful over the certainty of forever, whether that forever is to be spent in life or in death.`,
+                            description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. The vastness of the universe suggests unlimited possibilities, and yet being with Sasha is not one of them.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -239,7 +247,7 @@ module.exports = {
                     {
                         anchor: `house settled in sheets,`,
                         annotation: {
-                            description: `The rest of the house is asleep, snug under blankets. Of course, sheets are also pulled over bodies of the deceased.`,
+                            description: `The rest of the house is asleep, snug under their blankets. Of course, sheets are also pulled over the deceased.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -257,6 +265,7 @@ module.exports = {
                     {
                         anchor: `sweet dream's ichors`,
                         annotation: {
+                            // TODO
                             description: [
                                 `In Greek mythology,`,
                                 {
@@ -281,7 +290,7 @@ module.exports = {
                         anchor: `alabaster balustrade,`,
                         annotation: {
                             description: [
-                                `Buildings in Taiwan at the time made heavy use of iron grates and stone slabs, such that even ordinary living quarters had the feel of a mausoleum adorned with`,
+                                `At the time, buildings in Taiwan made heavy use of iron grates and stone slabs, such that even ordinary living quarters had the feel of a mausoleum adorned with`,
                                 {
                                     anchor: `alabaster`,
                                     wiki: `Alabaster`
@@ -300,12 +309,12 @@ module.exports = {
                         anchor: `salamander`,
                         annotation: {
                             description: [
-                                `Exploring alchemy in the 16th century, `,
+                                `Since writing doublespeaker rhyme could get daunting, I would challenge myself with fun exercises. One of them was to mention each of the four elementals of`,
                                 {
-                                    anchor: `Paracelsus`,
+                                    anchor: `Paracelsus,`,
                                     wiki: `Paracelsus`
                                 },
-                                `believed that nature is made up of four elements, each personified by a mythical creature. Since writing lyrics in doublespeaker rhyme was often daunting, I would keep myself going with fun little challenges. One of these was to mention each of the four elementals of Paracelsus. The`,
+                                `the 16th-century alchemist who believed that nature is made up of four elements, each personified by a mythical creature. The`,
                                 {
                                     anchor: `salamander`,
                                     wiki: `Salamanders_in_folklore_and_legend`
@@ -327,7 +336,7 @@ module.exports = {
                     {
                         anchor: `crevice rays.`,
                         annotation: {
-                            description: `I dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. Whenever I woke up to use the bathroom, I had to slowly tiptoe towards the door, guided only by a tiny sliver of moonlight peeking out from underneath.`,
+                            description: `I especially dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. Whenever I woke to use the bathroom, I had to tiptoe towards the door, guided only by a sliver of moonlight peeking in from underneath.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -339,11 +348,12 @@ module.exports = {
                         anchor: `trading breath's bliss`,
                         annotation: {
                             description: [
+                                `Like all amphibians,`,
                                 {
-                                    anchor: `Salamanders`,
+                                    anchor: `salamanders`,
                                     wiki: `Salamander`
                                 },
-                                `are amphibians that begin life living underwater, before exchanging gills for lungs through metamorphosis. So the same conditions needed for them to survive as larvae suddenly become deadly in the adult stage, and vice versa.`
+                                `begin life underwater, then lose their gills through metamorphosis. So the same conditions needed for them to survive as larvae suddenly become deadly in the adult stage, and vice versa.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -372,7 +382,7 @@ module.exports = {
                                     anchor: `Styx`,
                                     wiki: `Styx`
                                 },
-                                `separates the realm of the living from the underworld. At night in my grandmother's house, the stairs leading down to the kitchen area felt similarly foreboding.`
+                                `separates the realm of the living from the underworld. In my grandmother's house at night, the stairs leading down to the kitchen felt similarly foreboding.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -390,7 +400,7 @@ module.exports = {
                         anchor: `sickle-lit`,
                         annotation: {
                             description: [
-                                `The crescent moon has a shape similar to the blade of the scythe wielded by the`,
+                                `The crescent moon is shaped like the blade of the scythe wielded by the`,
                                 {
                                     anchor: `Grim Reaper.`,
                                     wiki: `Death_(personification)`
@@ -407,12 +417,13 @@ module.exports = {
                             description: [
                                 `The word`,
                                 {
-                                    anchor: `"oriental"`,
+                                    anchor: `"Oriental"`,
                                     wiki: `Orient`
                                 },
-                                `was made into a pejorative by academic circles, not through common usage. I learned of its incorrectness at around the same time that the gay community was reclaiming the word "queer." The latter tactic made more sense to me.`
+                                `wasn't a pejorative until determined to be such by academics. It's even printed on my birth certificate, after all. I learned of its incorrectness during the time when "queer" was being reclaimed by the gay community. The latter tactic made more sense to me.`
                             ],
                             dotKeys: {
+                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -459,7 +470,6 @@ module.exports = {
                 time: 44,
                 left: `Raccoons rummage round some rubbish bags,`,
                 right: [
-                    // TODO: Descending stairs.
                     `As you plummet down from`,
                     {
                         anchor: `couplets past;`,
@@ -485,20 +495,27 @@ module.exports = {
                     `till a`,
                     {
                         anchor: `rickshaw hiccoughs`,
-                        annotation: {
-                            description: [
-                                `A`,
-                                {
-                                    anchor: `rickshaw`,
-                                    wiki: `Rickshaw`
-                                },
-                                `is a pedal-driven passenger vehicle. They were no longer in service by the time I arrived in Taiwan, but their recent prevalence could be inferred from photographs and traffic signs. Here, the uneven surface of the road causes one to jounce abruptly.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `A`,
+                                    {
+                                        anchor: `rickshaw`,
+                                        wiki: `Rickshaw`
+                                    },
+                                    `is a pedal-driven passenger vehicle. Here, the uneven surface of the road causes one to jounce abruptly.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
+                                description: `While rickshaws were no longer in service by the time of our Taiwan trip, their recent prevalence could be inferred from photographs and traffic signs.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `from grating cracks.`
                 ],
@@ -508,12 +525,12 @@ module.exports = {
                         anchor: `missed bat mitzvahs`,
                         annotation: {
                             description: [
-                                `A`,
+                                `Being in Taiwan at the time, I was unable to attend Sasha's`,
                                 {
-                                    anchor: `bat mitzvah`,
+                                    anchor: `bat mitzvah,`,
                                     wiki: `Bar_and_Bat_Mitzvah`
                                 },
-                                `is a coming-of-age ritual undertaken by Jewish girls when they reach the age of twelve. Since I was in Taiwan at the time, I was unable to attend Sasha's bat mitzvah.`
+                                `a coming-of-age ritual undertaken by Jewish girls upon reaching the age of twelve.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -528,8 +545,9 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `While the two voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams, and vice versa. Here, for example, the mention of a staircase in the left voice precipitates the feeling of plummeting mentioned by the right voice.`,
+                        description: `While the two voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase in the "asleep" voice precipitates the feeling of plummeting suggested by the "awake" voice.`,
                         dotKeys: {
+                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
