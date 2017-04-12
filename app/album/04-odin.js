@@ -545,7 +545,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `While the two voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase in the "asleep" voice precipitates the feeling of plummeting suggested by the "awake" voice.`,
+                        description: `While the two voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                         dotKeys: {
                             [OBSERVATION]: true,
                             [SONGWRITING]: true
