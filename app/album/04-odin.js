@@ -530,7 +530,7 @@ module.exports = {
                                     anchor: `bat mitzvah,`,
                                     wiki: `Bar_and_Bat_Mitzvah`
                                 },
-                                `a coming-of-age ritual undertaken by Jewish girls upon reaching the age of twelve.`
+                                `a coming-of-age ritual undertaken by Jewish girls upon reaching twelve years of age.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -565,16 +565,14 @@ module.exports = {
                         anchor: `dunes once deemed a haven`,
                         annotation: {
                             description: [
-                                `In the Book of Genesis,`,
+                                `The narrator Ishmael in Herman Melville's`,
                                 {
-                                    anchor: `Ishmael`,
-                                    wiki: `Ishmael`
+                                    italic: {
+                                        anchor: `Moby-Dick`,
+                                        wiki: `Moby-Dick`
+                                    }
                                 },
-                                `was Abraham's first son. Though he would not inherit Abraham's house and was instead banished to the desert, God promised to make him a great nation. The narrator Ishmael in Herman Melville's`,
-                                {
-                                    italic: `Moby Dick`
-                                },
-                                `is an outcast like his namesake, although the wilderness he wanders is the ocean. It is to these metaphorical dunes of the ocean that I flee as well.`
+                                `is an outcast like his namesake, the first son of Abraham. While one was banished to the desert, the other wanders the wilderness of the ocean. It is to these metaphorical dunes of the ocean that I now flee as well.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true
@@ -587,7 +585,26 @@ module.exports = {
             },
             {
                 time: 53,
-                left: `that was safe for a heathen…`,
+                left: [
+                    `that was`,
+                    {
+                        anchor: `safe for a heathen…`,
+                        annotation: {
+                            description: [
+                                // TODO: Make more about wandering outside of Sasha's world
+                                `In the Book of Genesis, God promised to make`,
+                                {
+                                    anchor: `Ishmael`,
+                                    wiki: `Ishmael`
+                                },
+                                `a great nation, though he would not inherit Abraham's house. Not being of Abrahamic lineage myself, and thus unworthy of Sasha's affection, all I could hope for was a similar recompense.`
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
+                        }
+                    }
+                ],
                 right: `as a slave for the seasons?`
             },
             {
