@@ -980,7 +980,7 @@ module.exports = {
                         anchor: `impart warmth`,
                         // TODO: Foreshadow M?
                         annotation: {
-                            description: `Like gauze, cellophane is thin and see-through, and has the additional property of sealing in heat where heat is present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her most truly tender feelings were reserved for those who could show tenderness in return.`,
+                            description: `Cellophane is thin and see-through like gauze, but has the additional property of sealing in heat where heat is present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her tenderest feelings were strictly reserved for those who could show tenderness in return.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true,
@@ -1019,9 +1019,10 @@ module.exports = {
                     {
                         anchor: `Buoy bobs`,
                         annotation: {
-                            description: `But who's to say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
+                            description: `As buoys bob in the ocean, who's to say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
                             dotKeys: {
-                                [OBSERVATION]: true
+                                [OBSERVATION]: true,
+                                [PUN]: true
                             }
                         }
                     },
@@ -1031,7 +1032,7 @@ module.exports = {
                     {
                         anchor: `Coin toss`,
                         annotation: {
-                            description: `Again, it was purely by chance that I suffered the misfortune of not being born Jewish.`,
+                            description: `It was purely by chance that I suffered the misfortune of not being born Jewish.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -1044,21 +1045,25 @@ module.exports = {
                 time: 107,
                 left: {
                     anchor: `shivering for shivs unsheathed.`,
-                    // REFERENCE: Shanks in Kyon?
-                    annotation: {
-                        description: [
-                            `A`,
-                            {
-                                anchor: `shiv`,
-                                wiki: `Shiv_(weapon)`
-                            },
-                            `is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true
+                    // TODO: Portal Kyon?
+                    annotation: [
+                        {
+                            description: [
+                                `A`,
+                                {
+                                    anchor: `shiv`,
+                                    wiki: `Shiv_(weapon)`
+                                },
+                                `is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved, and the schoolyard often felt like a training ground for this eventuality.`
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         },
-                        portal: `chivalry`
-                    }
+                        {
+                            portal: `chivalry`
+                        }
+                    ]
                 },
                 right: {
                     anchor: `shivaree towards shivah seat`,
@@ -1068,12 +1073,12 @@ module.exports = {
                                 anchor: `Shivaree`,
                                 wiki: `Charivari`
                             },
-                            `is a French folk custom in which a crowd loudly performs a mock serenade outside the home of newlyweds. Sitting`,
+                            `is a folk custom in which a crowd loudly serenades a newlywed couple outside their home, while sitting`,
                             {
                                 anchor: `shivah`,
                                 wiki: `Shiva_(Judaism)`
                             },
-                            `is a week-long mourning period in Judaism after a close relative has passed away. In other words, not being born Jewish has lost me any hope of spending a lifetime with Sasha in marriage until death.`
+                            `is a period of mourning in Judaism after a family member passes away. In other words, not being born Jewish has lost me any hope of a lifetime with Sasha in marriage until death.`
                         ],
                         dotKeys: {
                             [OBSERVATION]: true
@@ -1090,10 +1095,9 @@ module.exports = {
                     {
                         anchor: `pulled your floater away`,
                         annotation: {
-                            description: `An off-centre floater on the surface of one's eye is impossible to look at directly, and any attempt will only end in frustrated tears. Pining after Sasha felt similarly futile, as she would always remain a fixed distance from me, regardless of all my frantic efforts.`,
+                            description: `An off-centre floater on the surface of one's eye is impossible to look at directly, and any attempt will only end in frustrated tears. Pining after Sasha felt similarly futile, as she would always remain a fixed distance away from me, regardless of all my frantic efforts.`,
                             dotKeys: {
-                                [OBSERVATION]: true,
-                                [REFERENCE]: true
+                                [OBSERVATION]: true
                             }
                         }
                     },
