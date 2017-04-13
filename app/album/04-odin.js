@@ -1,5 +1,6 @@
 import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from '../helpers/constants'
 
+// TODO: Make sure that I've adequately covered the frighteningness of the vastness of the universe.
 module.exports = {
     scenes: [
         {
@@ -675,7 +676,7 @@ module.exports = {
                                     anchor: `rondel`,
                                     wiki: `Rondel_(poem)`
                                 },
-                                `is a verse form that originated in French poetry. It can also refer to anything round, like a ball. The "apple of one's eye" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "ball of one's eye." My belief that I could be the object of Sasha's affection was based on a similar misreading.`
+                                `is a verse form that originated in French poetry. It can also refer to anything round, like a ball. The "apple of one's eye" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "ball of one's eye." My hope that I could be the object of Sasha's affection was based on a similar misreading.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -704,17 +705,17 @@ module.exports = {
                         anchor: `stored in this neck?`,
                         annotation: {
                             description: [
-                                `Due to a mistranslation, "man's swelling" in Hebrew entered the English lexicon as`,
+                                `Due to another mistranslation, "man's swelling" in Biblical Hebrew entered the English lexicon as`,
                                 {
                                     anchor: `"Adam's apple."`,
                                     wiki: `Adam%27s_apple`
                                 },
-                                `An apocryphal tale thus took shape that when`,
+                                `An apocryphal tale thus took shape that because`,
                                 {
                                     anchor: `Adam`,
                                     wiki: `Adam`
                                 },
-                                `ate the forbidden fruit to gain knowledge of good and evil, a piece had lodged in his throat, which now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me with a permanent lump in my throat.`
+                                `ate the forbidden fruit of knowledge, the piece that lodged in his throat now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me with a permanent lump in my throat.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -743,7 +744,7 @@ module.exports = {
                                     anchor: `Eris`,
                                     wiki: `Eris_(mythology)`
                                 },
-                                `was the Greek goddess of discord. As revenge for being denied invitation to a feast, she tossed a golden apple labelled "for the fairest" in their midst. When Paris was asked to judge its rightful owner, he chose Aphrodite, who rewarded him with the hand of Helen.`
+                                `was the Greek goddess of discord. As revenge for being denied invitation to a feast attended by the other gods, she tossed a golden apple labelled "for the fairest" into their midst. When Paris was asked to judge its rightful owner, he chose Aphrodite, who rewarded him with the hand of Helen.`
                             ]
                         }
                     }
@@ -769,13 +770,16 @@ module.exports = {
                         anchor: `the Society,`,
                         annotation: {
                             description: [
-                                `The`,
+                                `In my dream, I am making sense of the news that day that a family friend had taken Odin's remains to the`,
                                 {
-                                    anchor: `Humane Society`,
+                                    anchor: `Humane Society,`,
                                     wiki: `The_Humane_Society_of_the_United_States`
                                 },
-                                `offers pet cremation services.`
-                            ]
+                                `which offers pet cremation services.`
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     }
                 ],
@@ -828,11 +832,11 @@ module.exports = {
                         // TODO: portal: Hope chest in M?
                         anchor: `hopeless rests.`,
                         annotation: {
-                            description: `Hope was all that remained in the box opened by Pandora. By contrast, upon having all the hard truths of the world revealed to me by Sasha, all I had left was my own hopeless state.`
-                        },
-                        dotKeys: {
-                            [REFERENCE]: true,
-                            [OBSERVATION]: true
+                            description: `Hope was all that remained in the box opened by Pandora. By contrast, upon having all the hard truths of the world revealed to me by Sasha, all I had left was my own hopeless state.`,
+                            dotKeys: {
+                                [REFERENCE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -851,16 +855,24 @@ module.exports = {
                     `Your`,
                     {
                         anchor: `seizures of spleen,`,
-                        annotation: {
-                            description: [
-                                `In`,
-                                {
-                                    anchor: `Hippocratic medicine,`,
-                                    wiki: `Humorism`
-                                },
-                                `black bile is the humour secreted by the spleen to induce melancholy.`
-                            ]
-                        }
+                        annotation: [
+                            {
+                                description: [
+                                    `In`,
+                                    {
+                                        anchor: `Hippocratic medicine,`,
+                                        wiki: `Humorism`
+                                    },
+                                    `black bile is the humour secreted by the spleen to induce melancholy.`
+                                ]
+                            },
+                            {
+                                description: `After the bullying began, my temperament changed. I became more cynical and sullen, and would confide to Sasha my vindictive thoughts.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        ]
                     }
                 ]
             },
@@ -871,7 +883,7 @@ module.exports = {
                     {
                         anchor: `guard's whistle`,
                         annotation: {
-                            description: `That is, a steel whistle blown by a lifeguard as a warning, dropped by accident and now lost in the sand. Some dangers come with no warning, after all.`,
+                            description: `Standing on the ocean beach, I notice a steel whistle buried in the sand. Once blown by a lifeguard to give warning, it is now forever lost. Some dangers come with no warning, after all.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -930,7 +942,7 @@ module.exports = {
                                     anchor: `sylph`,
                                     wiki: `Sylph`
                                 },
-                                `is the elemental of air, and is typically described as a fairy with wings of gauze. Cellophane, of course, is thin and see-through like gauze, and is used to seal in heat.`
+                                `is the elemental of air, and is depicted as a fairy with wings of gauze.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -951,14 +963,27 @@ module.exports = {
                     },
                     `keen to drift`
                 ],
-                right: `who cannot warm he who didn't`
+                right: [
+                    `who`,
+                    {
+                        // TODO: Foreshadow M?
+                        anchor: `cannot warm`,
+                        annotation: {
+                            description: `Cellophane is thin and see-through like gauze, and has the additional property of sealing in heat where heat is already present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her most truly tender feelings were reserved for those who could show tenderness in return.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [REFERENCE]: true
+                            }
+                        }
+                    },
+                    `he who didn't`
+                ]
             },
             {
                 time: 102,
                 left: [
                     `if shark swarms withheld.`
                 ],
-                // TODO: portal: Reference to passage in M?
                 right: `impart warmth himself.`
             },
             {
@@ -967,7 +992,7 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `Recording vocals in doublespeaker rhyme turned out to be trickier than I had assumed. The lines rarely lined up naturally because even when speaking in rhythm, we tend to shorten or lengthen our syllables based on the relative strength of consonants, the spaces between words, and so on. I ended up improvising a system of`,
+                            `Recording vocals in doublespeaker rhyme turned out to be trickier than I had assumed. The lines rarely lined up naturally, because even when speaking in rhythm, we tend to shorten or lengthen our syllables based on the relative strength of consonants, the spaces between words, and so on. I ended up improvising a system of`,
                             {
                                 anchor: `ligature`,
                                 wiki: `Ligature_(music)`
