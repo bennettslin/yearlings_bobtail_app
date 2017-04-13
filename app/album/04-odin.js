@@ -265,20 +265,25 @@ module.exports = {
                     `do`,
                     {
                         anchor: `sweet dream's ichors`,
-                        annotation: {
-                            // TODO
-                            description: [
-                                `In Greek mythology,`,
-                                {
-                                    anchor: `ichor`,
-                                    wiki: `Ichor`
-                                },
-                                `is the golden blood of the gods. Going to sleep is like a nightly transfusion, insofar as the process of swapping out old blood for new always feels irksome, even when its restoring effect afterwards is guaranteed.`
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `In Greek mythology,`,
+                                    {
+                                        anchor: `ichor`,
+                                        wiki: `Ichor`
+                                    },
+                                    `is the golden blood of the gods.`
+                                ]
+                            },
+                            {
+                                description: `I dreaded sleep as a child. The nightly ordeal of swapping out my reasoned thoughts for irrational dreams felt as burdensome and frightening as a blood transfusion, even when its restorative effects always proved to be glorious.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `seem!`
                 ]
@@ -963,28 +968,28 @@ module.exports = {
                     },
                     `keen to drift`
                 ],
-                right: [
-                    `who`,
-                    {
-                        // TODO: Foreshadow M?
-                        anchor: `cannot warm`,
-                        annotation: {
-                            description: `Cellophane is thin and see-through like gauze, and has the additional property of sealing in heat where heat is already present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her most truly tender feelings were reserved for those who could show tenderness in return.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [REFERENCE]: true
-                            }
-                        }
-                    },
-                    `he who didn't`
-                ]
+                right: `who cannot warm he who didn't`
             },
             {
                 time: 102,
                 left: [
                     `if shark swarms withheld.`
                 ],
-                right: `impart warmth himself.`
+                right: [
+                    {
+                        anchor: `impart warmth`,
+                        // TODO: Foreshadow M?
+                        annotation: {
+                            description: `Like gauze, cellophane is thin and see-through, and has the additional property of sealing in heat where heat is present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her most truly tender feelings were reserved for those who could show tenderness in return.`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
+                        }
+                    },
+                    `himself.`
+                ]
             },
             {
                 unitMap: true,
