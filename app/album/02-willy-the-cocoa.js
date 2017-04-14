@@ -198,7 +198,7 @@ module.exports = {
                     {
                         anchor: `Hydrants burst`,
                         annotation: {
-                            description: `The sight of kids splashing around a burst fire hydrant wasn't really a Los Angeles thing, but it happened once or twice in my neighbourhood.`,
+                            description: `To keep cool during the summer, kids would sometimes crack open a fire hydrant, to the dismay of city officials. The water often failed to drain, forming stagnant pools and posing a health hazard.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }

@@ -1,6 +1,5 @@
 import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from '../helpers/constants'
 
-// TODO: Make sure that I've adequately covered the frighteningness of the vastness of the universe.
 module.exports = {
     scenes: [
         {
@@ -49,7 +48,7 @@ module.exports = {
     },
     doubleColumns: true,
     totalTime: 200,
-    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which terrified me more. Our house cat Odin died of old age later that summer, just as I was exploring the idea of having faith. And yet, the eternal life promised by faith seemed no less terrifying to me than the finality of death.`,
+    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which terrified me more. Our house cat Odin died of old age later that summer, just as I was working out my spiritual beliefs. And yet, the eternal life promised by faith seemed no less terrifying to me than the finality of death.`,
     title: {
         anchor: 'Odin',
         annotation: {
@@ -161,7 +160,7 @@ module.exports = {
                     {
                         anchor: `Indifferent galaxies`,
                         annotation: {
-                            description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the beliefs of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So I was left with a conception of the universe as just light years of empty space.`,
+                            description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as an endless stretch of cold, empty space. But this to me was the most disturbing prospect of all.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -226,7 +225,7 @@ module.exports = {
                     {
                         anchor: `ruminate on these riddles…`,
                         annotation: {
-                            description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. The vastness of the universe suggests unlimited possibilities, and yet being with Sasha is not one of them.`,
+                            description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. However terrifying, the vastness of the universe does suggest unlimited possibilities. Yet somehow, being with Sasha is not one of them.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -696,12 +695,16 @@ module.exports = {
                         anchor: `dream your whims instead?`,
                         annotation: {
                             description: [
+                                `Uncertain of whether I am asleep or awake, I recall the ancient Chinese philosopher`,
                                 {
-                                    anchor: `Zhuangzi`,
+                                    anchor: `Zhuangzi,`,
                                     wiki: `Zhuang_Zhou`
                                 },
-                                `was a 4th-century BCE Chinese philosopher. In his most famous musing, he recounts a dream in which he was a butterfly. When he awoke, however, he could not be sure whether he was then a man who dreamt he was a butterfly, or now a butterfly dreaming he is a man.`
-                            ]
+                                `who famously mused that he could not be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
                         }
                     },
                 right: [
@@ -1054,7 +1057,7 @@ module.exports = {
                                     anchor: `shiv`,
                                     wiki: `Shiv_(weapon)`
                                 },
-                                `is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved, and the schoolyard often felt like a training ground for this eventuality.`
+                                `is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved, and the schoolyard often felt like a training ground for a lifetime of vigilance.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -1107,12 +1110,13 @@ module.exports = {
             {
                 time: 114,
                 left: [
-                    `you frame silhouettes of`,
+                    `you frame`,
                     {
-                        anchor: `torn rides`,
+                        anchor: `silhouettes of torn rides`,
                         annotation: {
-                            description: `Roller coasters are raised up and torn down like ocean waves along the horizon, even if the process takes years, rather than seconds.`,
+                            description: `Watching the ocean waves rise and fall, I am reminded of roller coasters that shaped the skyline in my youth, which were erected and dismantled with a similar transience.`,
                             dotKeys: {
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -1169,7 +1173,7 @@ module.exports = {
                     {
                         anchor: `soulless solace`,
                         annotation: {
-                            description: `I found the notion cruel that I wasn't allowed to profess ignorance on the nature of my soul, and that my fate for all eternity should rest on beliefs formed under duress.`,
+                            description: `To my Buddhist-inflected worldview, the idea of having a soul that lives on forever seemed like a horrifying fate. But growing up , the idea of being released from a burdensome seemed equally frightening. It seemed odd to me that  I found the notion cruel that I wasn't allowed to profess ignorance on the nature of my soul, and that my fate for all eternity should rest on beliefs formed under duress.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -1450,9 +1454,9 @@ module.exports = {
     ],
     tasks: [
         {
-            taskName: `sort out past and present tense`,
-            workedHours: 0,
-            neededHours: 3
+            taskName: `tenses and categorisation`,
+            workedHours: 9,
+            neededHours: 12
         },
         {
             taskName: `annotations`,
