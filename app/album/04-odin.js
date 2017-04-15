@@ -245,6 +245,7 @@ module.exports = {
                 left: [
                     `The`,
                     {
+                        // TODO: Pun
                         anchor: `house settled in sheets,`,
                         annotation: {
                             description: `The rest of the house is asleep, snug under their blankets. Of course, sheets are also pulled over the deceased.`,
@@ -631,6 +632,7 @@ module.exports = {
                                     [BACKSTORY]: true
                                 }
                             },
+                            // TODO: Pun
                             {
                                 description: [
                                     `In Greek mythology,`,
@@ -1381,6 +1383,7 @@ module.exports = {
                     {
                         anchor: `his litter`,
                         annotation: {
+                            // TODO: Pun
                             description: `Referring to the disposal of Odin's cat litter, of course, but also to his lack of progeny. At this time, my own odds of leaving behind a litter don't seem any better.`,
                             dotKeys: {
                                 [NARRATIVE]: true,

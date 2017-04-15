@@ -1,25 +1,10 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, INSTRUMENTAL, RESPONSE, SONGWRITING, OBSERVATION, BACKSTORY, NARRATIVE, REFERENCE, PUN, DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, INSTRUMENTAL, RESPONSE, SONGWRITING, OBSERVATION, BACKSTORY, REFERENCE, PUN, DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
  * list order on the album.
  */
 module.exports = {
-    title: {
-        anchor: `Pchelka's Starry Journey`,
-        annotation: {
-            description: [
-                {
-                    anchor: `Pchelka and Mushka`,
-                    wiki: `Soviet_space_dogs`
-                },
-                `were dogs sent into orbit under the Soviet space program. In this allegorical retelling, I imagine myself as Pchelka, and my brother as Mushka.`
-            ],
-            dotKeys: {
-                [OBSERVATION]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -106,7 +91,22 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 211,
-    overview: `At the height of my years of getting bullied at school, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to a race of interstellar beings, with a mission to shut myself from the world. I did so by being unresponsive like my brother, and felt a psychic bond with him as a result, even as my sanity chipped away. In time, I came to see that I was in a mail-order cult. It took me a long while to recover.`,
+    overview: `At the height of my years of getting bullied, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to a race of interstellar beings, with a mission to shut myself from the world. I did so by being unresponsive like my brother, and felt a psychic bond with him as a result. But as my sanity chipped away, I came to see that I was in a mail-order cult.`,
+    title: {
+        anchor: `Pchelka's Starry Journey`,
+        annotation: {
+            description: [
+                {
+                    anchor: `Pchelka and Mushka`,
+                    wiki: `Soviet_space_dogs`
+                },
+                `were dogs sent into orbit under the Soviet space program. In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`
+            ],
+            dotKeys: {
+                [OBSERVATION]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -118,7 +118,7 @@ module.exports = {
                             anchor: `worst nuisance on the beach.`,
                             annotation: {
                                 description: [
-                                    `While being in a mail-order cult was a painful experience, there is a comic absurdity to it as well, which this line captures beautifully. In a humourous passage from`,
+                                    `While being in a mail-order cult was a painful experience, there is a comic absurdity to it as well, which this line from`,
                                     {
                                         anchor: `Leonard Cohen's`,
                                         wiki: `Leonard_Cohen`
@@ -126,13 +126,14 @@ module.exports = {
                                     `otherwise tragic`,
                                     {
                                         italic: {
-                                            anchor: `Beautiful Losers,`,
+                                            anchor: `Beautiful Losers`,
                                             wiki: `Beautiful_Losers`
                                         }
                                     },
-                                    `the character F. tires of getting bullied at the beach. He signs up for the Charles Axis bodybuilding course advertised in a comic book, only to discover that Charles Axis is the one who bullies him.`
+                                    `captures beautifully. In one scene, the character F. tires of getting bullied at the beach. He signs up for the Charles Axis bodybuilding course advertised in a comic book, only to discover that Charles Axis is the one who bullies him.`
                                 ],
                                 dotKeys: {
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -145,7 +146,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `I needed a kid's voice for this quote, but no one I knew was popping them out quite yet. So I just had my sister do it.`,
+                        description: `I needed a kid's voice to recite this quote, but no one I knew was popping them out just yet. So I had my sister do it.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -167,7 +168,12 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `In keeping with the Russian theme of Soviet space dogs, frenetically plucked mandolins evoke the spirit of the balalaika. Since Tuva is a Russian republic, I also threw in some`,
+                            `In keeping with the Russian theme of space dogs, I tried to evoke the sound of the`,
+                            {
+                                anchor: `balalaika`,
+                                wiki: `Balalaika`
+                            },
+                            `through frenetically plucked mandolins. Since Tuva is a Russian republic, I also added some`,
                             {
                                 anchor: `Tuvan throat singing,`,
                                 wiki: `Tuvan_throat_singing`
@@ -201,8 +207,7 @@ module.exports = {
                         annotation: {
                             description: `The times that I hit my brother were actually rare. They just stick out in my memory.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -229,10 +234,9 @@ module.exports = {
                     {
                         anchor: `buy a fortress`,
                         annotation: {
-                            description: `Our well-to-do cousin would receive new toys on a regular basis, one of which was a lifesize wooden castle. Since my birthday is in November, I always had the option of asking for a more expensive toy, which would then serve as my Christmas gift as well. So I was dismayed to learn that some toys were too expensive to count even for two gifts.`,
+                            description: `Once upon visiting our well-to-do cousin, we helped him try out his new lifesize wooden castle. It was so much fun that I asked my parents for one as a combined birthday and Christmas gift, which I always had as an option since my birthday is in November. Unfortunately, I learned that some toys are too expensive to count even for two gifts.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
-                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -261,10 +265,9 @@ module.exports = {
                     {
                         anchor: `beneath your captain bed.`,
                         annotation: {
-                            description: `I slept in a captain bed that rested atop a dresser on one side, with the other side placed flush against the wall. By removing the bottom drawer, I could crawl into the space underneath with my brother and stay hidden.`,
+                            description: `I slept in a captain bed that rested atop a dresser on one side, with the other side set flush against the wall. By removing the bottom drawer, I could crawl into the space underneath with my brother and stay hidden.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -280,7 +283,7 @@ module.exports = {
                             description: `My brother would play alongside me for hours without once speaking or interacting. It was a strange closeness we shared.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [OBSERVATION]: true
                             }
                         }
                     },
@@ -302,7 +305,7 @@ module.exports = {
                                             anchor: `white-throated sparrow`,
                                             wiki: `White-throated_sparrow`
                                         },
-                                        `was in breeding season, and we heard its song everywhere. I found the sound so haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic the song in cadence and pitch.`
+                                        `was in breeding season, and its song was heard everywhere. I found it haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic its cadence and pitch.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -323,15 +326,18 @@ module.exports = {
                     `Oh brother, when all you`,
                     {
                         anchor: `know is bleat,`,
-                        annotation: {
-                            description: `To bleat is to cry like a calf. My instinctive response to getting bullied was to rationally argue against its injustice. Only later did I learn that this is the least effective approach imaginable.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `My instinctive response to being bullied was to rationally protest against its injustice. This was as effective as the bleating of a calf being led to slaughter.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
                             },
-                            portal: `know_is_bleat`
-                        }
+                            {
+                                portal: `know_is_bleat`
+                            }
+                        ]
                     }
                 ]
             },
@@ -342,7 +348,7 @@ module.exports = {
                     {
                         anchor: `your cape`,
                         annotation: {
-                            description: `I was well-liked in elementary school for being physically small and ever eager to draw cartoon figures for anyone who asked. But these very traits that had once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.`,
+                            description: `I was well-liked in elementary school for being physically small and ever eager to draw cartoon figures for anyone who asked. But these very traits that once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -362,10 +368,9 @@ module.exports = {
                     {
                         anchor: `learn to kick it back.`,
                         annotation: {
-                            description: `In middle school, the most well-liked kids were the ones who were least concerned about being liked. This ran counter to my instinct for caring deeply and throwing myself whole-heartedly into anything worth pursuing. I never did adjust.`,
+                            description: `In middle school, the most well-liked kids were the ones least concerned about being liked. This ran counter to my tendency to throw myself whole-heartedly into anything worth pursuing. I never did adjust.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -385,8 +390,7 @@ module.exports = {
                         annotation: {
                             description: `As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press too deeply on it.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
@@ -434,10 +438,9 @@ module.exports = {
                     {
                         anchor: `send-away offers`,
                         annotation: {
-                            description: `Since I had few friends, I would amuse myself by sending away for free samples and making small purchases through mail order. As a result, I got flooded with junk mail advertising even more such offers. It was during this time that I received the letter from RI Research, Special Human Being Laboratory.`,
+                            description: `Since I had few friends, I would amuse myself by sending away for free samples and small mail order purchases. As a result, I got flooded with junk mail advertising even more such offers. It was during this time that I received a letter from RI Research, Special Human Being Laboratory.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
@@ -463,8 +466,7 @@ module.exports = {
                                 `My parents insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
@@ -503,10 +505,9 @@ module.exports = {
                     {
                         anchor: `wanderer lost?"`,
                         annotation: {
-                            description: `Hitting all the right nerves, the letter from RI Research addressed my yearning to belong, and spoke to my frustration that these desired ends should so elude me. It then shared its hopeful news: They believed that I might be a Beyonder, and after searching for so long, they had found me.`,
+                            description: `Hitting all the right nerves, the letter from RI Research addressed my yearning to belong while speaking to my frustration that this desired end should so elude me. It then shared its hopeful news: They believed that I might be a Beyonder, and after searching for so long, they had found me.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -518,25 +519,35 @@ module.exports = {
                     `But`,
                     {
                         anchor: `waiting for Goddard,`,
-                        annotation: {
-                            description: [
-                                {
-                                    anchor: `Robert Goddard`,
-                                    wiki: `Robert_H._Goddard`
-                                },
-                                `ushered in the Space Age by inventing the liquid-fueled rocket. Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then. Also,`,
-                                {
-                                    italic: {
-                                        anchor: `Waiting for Godot`,
-                                        wiki: `Waiting_for_Godot`
-                                    }
-                                },
-                                `is a play by Samuel Beckett that explores existential themes.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Robert Goddard`,
+                                        wiki: `Robert_H._Goddard`
+                                    },
+                                    `ushered in the Space Age by inventing the liquid-fueled rocket. Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `Or else for "Godot."`,
+                                    {
+                                        italic: {
+                                            anchor: `Waiting for Godot`,
+                                            wiki: `Waiting_for_Godot`
+                                        }
+                                    },
+                                    `is a play by Samuel Beckett that explores existential themes.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `our two impatient paupers,`
                 ]
@@ -547,26 +558,34 @@ module.exports = {
                     {
                         anchor: `Gogo and his Didi,`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `In Chinese,`,
-                                {
-                                    italic: `Gogo`
-                                },
-                                `means "big brother." And of course,`,
-                                {
-                                    italic: `Didi`
-                                },
-                                `this time refers to`,
-                                {
-                                    emphasis: `my`
-                                },
-                                `little brother. Coincidentally, Didi and Gogo are also the respective pet names of Vladimir and Estragon, the two characters who are still waiting for Godot by the end of Beckett's play.`,
-                            ],
-                            dotKeys: {
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `In Chinese,`,
+                                    {
+                                        italic: `Gogo`
+                                    },
+                                    `means "big brother." And of course,`,
+                                    {
+                                        italic: `Didi`
+                                    },
+                                    `in this case now refers to`,
+                                    {
+                                        emphasis: `my`
+                                    },
+                                    `little brother.`,
+                                ],
+                                dotKeys: {
+                                    [REFERENCE]: true
+                                }
+                            },
+                            {
+                                description: `Didi and Gogo are the respective pet names of Vladimir and Estragon, the two tramps who are still waiting for Godot by the end of Beckett's play.`,
+                                dotKeys: {
+                                    [REFERENCE]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `sauntered off…`
                 ]
@@ -609,19 +628,24 @@ module.exports = {
                     `dragged to sled by`,
                     {
                         anchor: `hunter's belt`,
-                        annotation: {
-                            description: [
-                                `The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow that of Orion, named after the`,
-                                {
-                                    anchor: `hunter in Greek mythology.`,
-                                    wiki: `Orion_(mythology)`
-                                },
-                                `Orion can be identified by three stars in a row that represent his belt. And sadly, a belt can be used to instill obedience in wayward animals.`
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow that of Orion, named after the`,
+                                    {
+                                        anchor: `hunter in Greek mythology,`,
+                                        wiki: `Orion_(mythology)`
+                                    },
+                                    `which can be identified by three stars in a row that represent his belt.`
+                                ]
+                            },
+                            {
+                                description: `Sadly, a belt can be used to instill obedience in wayward animals.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `and launched!`
                 ]
@@ -649,7 +673,7 @@ module.exports = {
                                     anchor: `"star people"`,
                                     wiki: `Star_people_(New_Age_belief)`
                                 },
-                                `was a New Age belief popular in the 1970s. Like Beyonders, star people arrived on Earth with no recollection of their true origin. Undoubtedly, the letters from RI Research drew much of their material from this body of thought.`
+                                `was a popular New Age belief in the 1970s. Like Beyonders, star people have no recollection of their stellar origins. The letters from RI Research undoubtedly drew their material from this body of thought.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -690,9 +714,9 @@ module.exports = {
                     {
                         anchor: `too much at once?`,
                         annotation: {
-                            description: `I sobbed when I got the letter confirming that I was a Beyonder. While I was relieved to finally have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
+                            description: `I sobbed when I got the letter confirming that I was a Beyonder. While I was relieved to have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
                             dotKeys: {
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
@@ -717,7 +741,7 @@ module.exports = {
                     {
                         anchor: `mothership.`,
                         annotation: {
-                            description: `To present the appearance of a legitimate institute, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included a spacecraft that would allow us to make contact with our extraplanetary kin.`,
+                            description: `To present the appearance of legitimacy, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included a spacecraft that would allow us to make contact with extraplanetary kin.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -736,9 +760,9 @@ module.exports = {
                     {
                         anchor: `how you're to live…"`,
                         annotation: {
-                            description: `The letters cautioned me to keep myself separate from society. I realised that my brother had been doing this all along, and thus modelled my own behaviour after his.`,
+                            description: `The letters cautioned me to keep myself separate from society. I realised that my brother had been doing this all along, and thus adopted a stoic composure based on his.`,
                             dotKeys: {
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -750,14 +774,14 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `I learned about Tuvan throat singing after Catherine took me to see a documentary called`,
+                            `I learned about Tuvan throat singing after a woman I dated took me to see a documentary called`,
                             {
                                 italic: {
-                                    anchor: `Genghis Blues`,
+                                    anchor: `Genghis Blues.`,
                                     wiki: `Genghis_Blues`
                                 }
                             },
-                            `on one of our first dates. Within a week, I was able to sound out the main partials, which impressed her greatly. I've been trying to recapture that moment ever since.`
+                            `Within a week, I was able to sound out the main partials, which impressed her greatly. I've been trying to recapture that moment ever since.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
@@ -788,9 +812,9 @@ module.exports = {
                     {
                         anchor: `act the dunce`,
                         annotation: {
-                            description: `By adopting my brother's composure in refusing to acknowledge or respond to other students, I came across as dimwitted.`,
+                            description: `By failing to acknowledge or respond to fellow students, I came across as dimwitted.`,
                             dotKeys: {
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -813,11 +837,11 @@ module.exports = {
                                     anchor: `"Castor and Pollux"`,
                                     wiki: `Castor_and_Pollux`
                                 },
-                                `were twin brothers fathered by Zeus. Castor was mortal, however, so Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with all its spiritual answers.`
+                                `were twin brothers fathered by Zeus. Castor was mortal, so after his death, Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with its spiritual answers.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
-                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
                                 [PUN]: true
                             }
                         }
@@ -847,7 +871,7 @@ module.exports = {
                         annotation: {
                             description: `Like all ordeals, mine became more bearable once I could tie it to a greater purpose.`,
                             dotKeys: {
-                                [BACKSTORY]: true
+                                [OBSERVATION]: true
                             }
                         }
                     }
@@ -869,7 +893,7 @@ module.exports = {
                                     anchor: `Omerta`,
                                     wiki: `Omertà`
                                 },
-                                `is the Mafia's code of honour that praises silence and refusal to cooperate with authorities. Of course, I wasn't the first kid ever to observe similarities between school life and the criminal world.`
+                                `is the Mafia's code of honour that praises silence and refusal to cooperate with authorities. I wasn't the first kid to notice parallels between school life and the criminal world, I'm sure.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -893,10 +917,9 @@ module.exports = {
                     {
                         anchor: `muted youths lapsed.`,
                         annotation: {
-                            description: `While I only spent a year actively feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It's not that I lacked the will to correct their perceptions. I was as baffled as anyone about what had just happened, and there were no guide books for how to proceed from there.`,
+                            description: `While I only spent a year feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It's not that I lacked the will to correct their perceptions. I was as baffled as anyone else about what had just happened, and there were no guide books for where to go from there.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
-                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -911,12 +934,12 @@ module.exports = {
                         anchor: `shortest cyphers`,
                         annotation: {
                             description: [
-                                `The lengthier a`,
+                                `The lengthier the`,
                                 {
-                                    anchor: `cryptogram`,
+                                    anchor: `cryptogram,`,
                                     wiki: `Cryptogram`
                                 },
-                                `gets, the more hints it necessarily drops, and thus the easier it becomes to solve. Conversely, the less I said, the fewer openings others were given to get under my skin.`
+                                `the more hints it drops, and thus the easier it gets to solve. Conversely, the less I said, the fewer openings I gave others to get under my skin.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -939,7 +962,7 @@ module.exports = {
                                     anchor: `Achilles`,
                                     wiki: `Achilles`
                                 },
-                                `was invulnerable everywhere on his body except for his heel. Meanwhile, my one weakness was that I genuinely craved acceptance from others.`
+                                `was invulnerable everywhere on his body except for his heel. Meanwhile, my weakness was that I genuinely craved acceptance from others.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -955,15 +978,21 @@ module.exports = {
                     `The only spies who get to feel love first`,
                     {
                         anchor: `unearth their own plots!`,
-                        annotation: {
-                            description: `Figuratively, to reveal one's secret plans, but also literally, to dig one's own grave. A spy succeeds by staying hidden; recognition and appreciation can only come after facing the firing squad. Similarly, at some point I tried to open up, thus sabotaging my past efforts to be unresponsive, but this only exposed me to greater scrutiny, as I was now forced to explain myself.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true,
-                                [PUN]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `Figuratively, to reveal one's secret plans, but also literally, to dig one's own grave.`,
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: `A spy succeeds by staying hidden. Any appreciation of their exploits will always be belated, after they've fallen before a firing squad. Similarly, at some point my desire for friendship caused me to open up and thus sabotage my past efforts to be unresponsive. But this only exposed me to greater scrutiny, as I was now forced to explain myself.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -996,7 +1025,7 @@ module.exports = {
                         anchor: `Mushka's`,
                         properNoun: true,
                         annotation: {
-                            description: `While Pchelka and Mushka successfully spent a day in orbit aboard Sputnik 6, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all aboard. In my own analogy, I as Pchelka managed to avoid the sad fate that my brother as Mushka could not.`,
+                            description: `While Pchelka and Mushka successfully spent a day in orbit aboard Sputnik 6, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all aboard. But in my own allegory, I as Pchelka managed to avoid the sad fate that my brother as Mushka could not.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                                 [REFERENCE]: true
@@ -1038,9 +1067,9 @@ module.exports = {
                     {
                         anchor: `no one heard his hollers,`,
                         annotation: {
-                            description: `I often wondered whether my brother was screaming on the inside, as I was during this time. If so, then he certainly wasn't being heard.`,
+                            description: `I had to wonder whether my brother was screaming on the inside, as I certainly was during this time.`,
                             dotKeys: {
-                                [OBSERVATION]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -1059,7 +1088,7 @@ module.exports = {
                                     anchor: `"Iditarod"`,
                                     wiki: `Iditarod_Trail_Sled_Dog_Race`
                                 },
-                                `is an annual sled dog race held in Alaska. The rod refers to the whip used by some mushers to keep the pack disciplined.`
+                                `is an annual sled dog race held in Alaska. Some mushers use a whip to keep the pack disciplined.`
                             ],
                             dotKeys: {
                                 [PUN]: true
@@ -1133,10 +1162,10 @@ module.exports = {
                         anchor: `needed the pod.`,
                         annotation: {
                             description: [
-                                `A group of whales is called a pod. Because I wanted to belong to a social group, I couldn't "ditch my whales," and thus I sought out a metaphorical escape pod.`
+                                `A group of whales is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and thus I sought out a metaphorical escape pod.`
                             ],
                             dotKeys: {
-                                [NARRATIVE]: true,
+                                [BACKSTORY]: true,
                                 [PUN]: true,
                                 [REFERENCE]: true
                             }
@@ -1175,8 +1204,7 @@ module.exports = {
                         annotation: {
                             description: `Eventually a classmate suspected me of being on drugs, and I was sent to the principal's office. When my mother came to pick me up, she proceeded to chew out the principal for even suspecting that I was capable of such a thing. Since I was generally more responsive around authority figures, he had to agree that the charge didn't make sense, and dropped it.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
@@ -1192,8 +1220,7 @@ module.exports = {
                         annotation: {
                             description: `I'd grown disillusioned with RI Research at this point anyway, as the letters inexplicably began to take on Christian overtones. It's not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -1213,9 +1240,9 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `sort out past and present tense`,
-            workedHours: 0,
-            neededHours: 3
+            taskName: `tenses and categorisation`,
+            workedHours: 5,
+            neededHours: 5
         },
         {
             taskName: `annotations`,
