@@ -48,7 +48,7 @@ module.exports = {
     },
     doubleColumns: true,
     totalTime: 200,
-    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which terrified me more. Our house cat Odin died of old age later that summer, just as I was working out my spiritual beliefs. And yet, the eternal life promised by faith seemed no less terrifying to me than the finality of death.`,
+    overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which terrified me more. Our house cat Odin died of old age later that summer, just as I was working out my spiritual beliefs. And yet, the eternal life promised by faith seemed no less dreadful to me than the finality of death.`,
     title: {
         anchor: 'Odin',
         annotation: {
@@ -160,7 +160,7 @@ module.exports = {
                     {
                         anchor: `Indifferent galaxies`,
                         annotation: {
-                            description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as an endless stretch of cold, empty space. But this to me was the most disturbing prospect of all.`,
+                            description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as an endless stretch of cold, empty space in which we live and die to no concern. But this to me was the most disturbing prospect of all.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -981,7 +981,7 @@ module.exports = {
                 right: [
                     {
                         anchor: `impart warmth`,
-                        // TODO: Foreshadow M?
+                        // TODO: Portal Foreshadow M?
                         annotation: {
                             description: `Cellophane is thin and see-through like gauze, but has the additional property of sealing in heat where heat is present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her tenderest feelings were strictly reserved for those who could show tenderness in return.`,
                             dotKeys: {
@@ -1070,24 +1070,28 @@ module.exports = {
                 },
                 right: {
                     anchor: `shivaree towards shivah seat`,
-                    annotation: {
-                        description: [
-                            {
-                                anchor: `Shivaree`,
-                                wiki: `Charivari`
-                            },
-                            `is a folk custom in which a crowd loudly serenades a newlywed couple outside their home, while sitting`,
-                            {
-                                anchor: `shivah`,
-                                wiki: `Shiva_(Judaism)`
-                            },
-                            `is a period of mourning in Judaism after a family member passes away. In other words, not being born Jewish has lost me any hope of a lifetime with Sasha in marriage until death.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true
+                    annotation: [
+                        {
+                            description: [
+                                {
+                                    anchor: `Shivaree`,
+                                    wiki: `Charivari`
+                                },
+                                `is a folk custom in which a crowd loudly serenades a newlywed couple outside their home, while sitting`,
+                                {
+                                    anchor: `shivah`,
+                                    wiki: `Shiva_(Judaism)`
+                                },
+                                `is a period of mourning in Judaism after a family member passes away. In other words, not being born Jewish has lost me any hope of a lifetime with Sasha in marriage until death.`
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         },
-                        portal: `chivalry`
-                    }
+                        {
+                            portal: `chivalry`
+                        }
+                    ]
                 }
             },
             {
@@ -1098,7 +1102,7 @@ module.exports = {
                     {
                         anchor: `pulled your floater away`,
                         annotation: {
-                            description: `An off-centre floater on the surface of one's eye is impossible to look at directly, and any attempt will only end in frustrated tears. Pining after Sasha felt similarly futile, as she would always remain a fixed distance away from me, regardless of all my frantic efforts.`,
+                            description: `An off-centre floater on the surface of one's eye is impossible to stare at directly, and any attempt to do so will only end in frustrated tears. Pining after Sasha felt similarly futile, as she would always remain a fixed distance apart from me, regardless of my frantic efforts.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -1153,7 +1157,19 @@ module.exports = {
             },
             {
                 time: 132,
-                lyric: `when your day to die has come?`
+                lyric: [
+                    `when your`,
+                    {
+                        anchor: `day to die`,
+                        annotation: {
+                            description: `As a child, I experienced night terrors related to my constant fear of death.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        }
+                    },
+                    `has come?`,
+                ]
             },
             {
                 unitMap: true,
@@ -1164,7 +1180,26 @@ module.exports = {
         [
             {
                 time: 135,
-                lyric: `Can a holed up hostage`
+                lyric: [
+                    `Can a`,
+                    {
+                        anchor: `holed up hostage`,
+                        annotation: {
+                            description: [
+                                `Whenever I woke up screaming, my mother would console me with the promise of reincarnation. This confused me since the end goal of Buddhism is`,
+                                {
+                                    anchor: `nirvana,`,
+                                    wiki: `Nirvana_(Buddhism)`
+                                },
+                                `a release from the cycle of rebirth through annihilation of the soul, which just seemed like death on a grander scale. And yet the thought of being stuck with a soul forever, a fate promised by the faiths of my classmates, seemed every bit as dreadful.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
+                        }
+                    }
+                ]
             },
             {
                 time: 137,
@@ -1173,8 +1208,9 @@ module.exports = {
                     {
                         anchor: `soulless solace`,
                         annotation: {
-                            description: `To my Buddhist-inflected worldview, the idea of having a soul that lives on forever seemed like a horrifying fate. But growing up , the idea of being released from a burdensome seemed equally frightening. It seemed odd to me that  I found the notion cruel that I wasn't allowed to profess ignorance on the nature of my soul, and that my fate for all eternity should rest on beliefs formed under duress.`,
+                            description: `It seemed bizarre to me that if a true spiritual path did indeed exist, then it wouldn't offer a reward so obviously desirable, for which I could mindlessly strive without being troubled by existential questions on the nature of souls.`,
                             dotKeys: {
+                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         },
@@ -1214,8 +1250,9 @@ module.exports = {
                     {
                         anchor: `foetus force-fed,`,
                         annotation: {
-                            description: `I found it weird that one is allowed no say in being brought into this world, given how quickly the exit will come, and how necessarily painful it must be.`,
+                            description: `Most maddening of all was that one has no say in being brought into this world, given how distressing the knowledge of one's mortality must always be.`,
                             dotKeys: {
+                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -1228,16 +1265,15 @@ module.exports = {
                         anchor: `defeat of tortoise,`,
                         annotation: {
                             description: [
-                                `While the tortoise defeats the hare in`,
+                                `The tortoise defeats the hare in`,
                                 {
-                                    anchor: `Aesop's fable,`,
+                                    anchor: `Aesop's fable`,
                                     wiki: `The_Tortoise_and_the_Hare`
                                 },
-                                `the decisive advantage still lies with the hare, who only needs to stay awake next time to clinch the victory. Similarly, while tortoises are known to live well over a century, any one of us can beat them soundly in the race for longevity. All one needs to do is awaken to the call of faith, and not lie there like a "frozen dustbunny."`
+                                `only because the hare falls asleep. Similarly, while tortoises are known to live over a century, I had them beat in longevity if I could just awaken to the virtues of faith. Given the bleak alternative, that was certainly my wish.`
                             ],
                             dotKeys: {
-                                [OBSERVATION]: true,
-                                [REFERENCE]: true
+                                [OBSERVATION]: true
                             }
                         }
                     },
@@ -1277,12 +1313,12 @@ module.exports = {
                         anchor: `no slave parts these seas,`,
                         annotation: {
                             description: [
-                                `In the Book of Exodus, Moses leads the Israelites out of bondage in Egypt. Under God's command, Moses`,
+                                `In the Book of Exodus, Moses led the Israelites out of slavery in Egypt by`,
                                 {
-                                    anchor: `parts the Red Sea,`,
+                                    anchor: `parting the Red Sea,`,
                                     wiki: `Crossing_the_Red_Sea`
                                 },
-                                `allowing them to safely cross. God then returns the water, drowning the Egyptian army in pursuit behind them.`
+                                `allowing them to safely cross.`
                             ]
                         }
                     }
@@ -1299,7 +1335,19 @@ module.exports = {
             },
             {
                 time: 168,
-                left: `then returns them as a buffer zone…`,
+                left: [
+                    `then returns them as a`,
+                    {
+                        anchor: `buffer zone…`,
+                        annotation: {
+                            description: `God then brought the waters together behind Moses and the Israelites, drowning the Egyptian army in pursuit. Unfortunately, the certainty of death following me at every turn would not be overcome so easily.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
+                        }
+                    }
+                ],
                 // TODO: Portal: Nora Barnacle in Good Night, Sita?
                 right: `can reach urchins smashed from undertows…`
             },
@@ -1316,7 +1364,7 @@ module.exports = {
                     {
                         anchor: `padded bed,`,
                         annotation: {
-                            description: `As I make peace with the inevitable, the ocean begins to feel more calm and inviting. But my dream is also ending, and I will soon awake in the comfort of a bed.`,
+                            description: `As I slowly make peace with the inevitable, the ocean begins to feel more calm and inviting. But my dream is also ending, and I will soon awake in the comfort of a bed.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -1333,24 +1381,14 @@ module.exports = {
                     {
                         anchor: `his litter`,
                         annotation: {
-                            description: `Referring to the disposal of Odin's cat litter, of course, but also to his lack of progeny, given that he was neutered. At the time, my own odds of leaving behind a litter seemed better by just a sliver.`,
+                            description: `Referring to the disposal of Odin's cat litter, of course, but also to his lack of progeny. At this time, my own odds of leaving behind a litter don't seem any better.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
                     },
-                    `to`,
-                    {
-                        anchor: `dust and earth`,
-                        annotation: {
-                            description: `As I fall asleep, my thoughts turn to the ground from which I will soon emerge in my dream.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        }
-                    },
-                    `was swept,`
+                    `to dust and earth was swept,`
                 ]
             },
             {
@@ -1366,9 +1404,10 @@ module.exports = {
                                     anchor: `"The Love Song of J. Alfred Prufrock"`,
                                     wiki: `The_Love_Song_of_J._Alfred_Prufrock`
                                 },
-                                `examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they do not sing for him. Similarly, while my resignation has turned the sea serpents into smiling mermaids, they do not smile for me.`
+                                `examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they do not sing for him. Similarly, while my resignation has turned the sea serpents into smiling mermaids, they still do not smile for me.`
                             ],
                             dotKeys: {
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -1376,19 +1415,25 @@ module.exports = {
                     `past a`,
                     {
                         anchor: `guileless garden gnome…`,
-                        annotation: {
-                            description: [
-                                `The`,
-                                {
-                                    anchor: `gnome,`,
-                                    wiki: `Gnome`
-                                },
-                                `a small humanoid who lives underground, is the elemental of earth in Paracelsus's writings. Garden gnomes are lawn ornaments, some of which stand motionless before the yawning infinite, like me, staring blankly with a nervous grin.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `gnome,`,
+                                        wiki: `Gnome`
+                                    },
+                                    `a small humanoid who lives underground, is the elemental of earth in Paracelsus's writings.`
+                                ]
+                            },
+                            {
+                                description: `Powerless to change my condition, I stand motionless like a lawn ornament before all that remains unknown, filled with faint hope for the future.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ],
                 right: [
@@ -1397,19 +1442,30 @@ module.exports = {
                         anchor: `Thursday's child`,
                         properNoun: true,
                         annotation: {
+                            description: `Wednesday is "Odin's day" in Old English, and I was born on a Thursday. So my day literally begins as Odin's day ends.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
+                        }
+                    },
+                    `has a`,
+                    {
+                        anchor: `mile less far to go…`,
+                        annotation: {
                             description: [
                                 {
                                     anchor: `"Monday's Child"`,
                                     wiki: `Monday%27s_Child`
                                 },
-                                `is a nursery rhyme that predicts a child's fortune based on day of birth. Wednesday is literally "Odin's day" in Old English, and I was born on a Thursday. The rhyme promises that "Thursday's child has far to go," and indeed, the distance I had left to cover felt dispiritingly vast. Still, I was now one day closer than when the day began…`
+                                `is a nursery rhyme that predicts a child's fortune based on weekday of birth. Thursday's child is promised to have "far to go," and indeed, the distance I have left to cover feels dispiritingly vast. Still, I am now one day closer than when the day began…`
                             ],
                             dotKeys: {
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
-                    },
-                    `has a mile less far to go…`
+                    }
                 ]
             },
             {
@@ -1437,12 +1493,7 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I undertook a yearlong course of study required for conversion to Judaism. We didn't last long enough for me to stand before the`,
-                            {
-                                anchor: `beit din,`,
-                                wiki: `Beth_din`
-                            },
-                            `or rabbinical court, however, which is the final step. So, I'm still not Jewish.`
+                            `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I studied Hebrew and undertook a yearlong course required for conversion to Judaism. We didn't last long enough for me to stand before the rabbinical court, however, which would have been the final step. So, I'm still not Jewish.`
                         ],
                         dotKeys: {
                             [AFTERWORD]: true
@@ -1455,7 +1506,7 @@ module.exports = {
     tasks: [
         {
             taskName: `tenses and categorisation`,
-            workedHours: 9,
+            workedHours: 12,
             neededHours: 12
         },
         {
