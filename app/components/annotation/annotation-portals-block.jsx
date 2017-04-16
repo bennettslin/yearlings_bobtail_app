@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames';
 import TextBlock from '../text/text-block'
 
 /*************
@@ -18,6 +19,7 @@ const AnnotationPortalsBlockView = ({
     // From props.
     annotationDotKeys,
     portalLinks,
+    accessedPopupAnchorIndex,
     handleAnnotationPortalSelect,
 
 }) => (
@@ -29,18 +31,24 @@ const AnnotationPortalsBlockView = ({
                     songTitle,
                     column,
                     columnIndex,
+                    portalIndex,
 
                     // Default if no portal prefix.
                     portalPrefix = 'portal to',
 
                     verseObject } = portalObject,
 
+                accessHighlighted = accessedPopupAnchorIndex === portalIndex,
+
                 handleClick = e => handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex)
 
             return (
                 <div
                     key={index}
-                    className="portal-block"
+                    className={classnames(
+                        'portal-block',
+                        { 'access-highlighted': accessHighlighted }
+                    )}
                     onClick={handleClick}
                 >
                     <div className="song-title">

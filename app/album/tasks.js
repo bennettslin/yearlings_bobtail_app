@@ -7,14 +7,14 @@ module.exports = [
 
     // Portals.
     {
-        taskName: `Portal logic.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Portal styling`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Finalise portals`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     {
@@ -1658,5 +1658,10 @@ module.exports = [
         taskName: `Move popups out of transition group.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Portal logic.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
