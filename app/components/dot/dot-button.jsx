@@ -12,6 +12,7 @@ const DotButton = ({
     dotIndex,
     handleDotStanzaSelect,
     handleDotToggle,
+    handlePortalDotSelect,
 
 ...other }) => {
 
@@ -25,6 +26,9 @@ const DotButton = ({
 
     } else if (handleDotToggle) {
         handleClick = e => handleDotToggle(e, dotIndex)
+
+    } else if (handlePortalDotSelect) {
+        handleClick = handlePortalDotSelect
     }
 
     return (

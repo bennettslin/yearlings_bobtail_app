@@ -23,7 +23,9 @@ const TextSpan = ({
      * in a portal.
      */
     const hasFirstSpace = !firstVerseObject && !foregoSpace && (text.indexOf('\'s') !== 0)
-    // Add nonbreaking space between last two words if it's a lyric.
+    /**
+     * Add nonbreaking space between last two words if it's a lyric.
+     */
     let formattedText = text
     if (isLyric) {
         const lastSpaceIndex = text.lastIndexOf(' ')

@@ -1,6 +1,8 @@
 import React from 'react'
 import classnames from 'classnames';
 import TextBlock from '../text/text-block'
+import DotButton from '../dot/dot-button'
+import { PORTAL } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -49,21 +51,28 @@ const AnnotationPortalsBlockView = ({
                         'portal-block',
                         { 'access-highlighted': accessHighlighted }
                     )}
-                    onClick={handleClick}
                 >
-                    <div className="song-title">
-                        {portalPrefix} <strong>{songTitle}</strong>
-                    </div>
-
-                    <div className="verse-text">
-                        <span className="text-span">{'\u201c'}</span>
-                        <TextBlock
-                            inPortal={true}
-                            text={verseObject.lyric || verseObject.centre || verseObject[column]}
-                            selectedDotKeys={annotationDotKeys}
-                            portalAnnotationIndex={annotationIndex}
+                    <div className="portal-column button-portal-column">
+                        <DotButton
+                            dotKey={PORTAL}
+                            handlePortalDotSelect={handleClick}
                         />
-                        <span className="text-span">{'\u201d'}</span>
+                    </div>
+                    <div className="portal-column text-portal-column">
+                        <div className="song-title">
+                            {portalPrefix} <strong>{songTitle}</strong>
+                        </div>
+
+                        <div className="verse-text">
+                            <span className="text-span">{'\u201c'}</span>
+                            <TextBlock
+                                inPortal={true}
+                                text={verseObject.lyric || verseObject.centre || verseObject[column]}
+                                selectedDotKeys={annotationDotKeys}
+                                portalAnnotationIndex={annotationIndex}
+                            />
+                            <span className="text-span">{'\u201d'}</span>
+                        </div>
                     </div>
                 </div>
             )

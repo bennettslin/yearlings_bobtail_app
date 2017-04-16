@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import DotButton from './dot-button'
-import { ALL_DOT_KEYS } from '../../helpers/constants'
+import { PORTAL, ALL_DOT_KEYS } from '../../helpers/constants'
 
 const defaultProps = {
     selectedDotKeys: {},
@@ -24,6 +24,7 @@ const DotBlockView = ({
 
     // From props.
     inDotsSection,
+    inAnnotationCard,
     selectedDotKeys,
     shownDotKeys,
     annotationDotKeys,
@@ -46,6 +47,12 @@ const DotBlockView = ({
                 )
 
             } else {
+
+                // Don't show portal dot here. Portal blocks will handle it.
+                if (inAnnotationCard && dotKey === PORTAL) {
+                    return null
+                }
+
                 // Go through all dot keys in array to ensure correct order.
                 return annotationDotKeys[dotKey] && (
                     <div

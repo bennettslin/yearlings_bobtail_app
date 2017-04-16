@@ -1,13 +1,18 @@
 .portals-block {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 .portal-block {
+    display: flex;
     box-shadow: inset 0 2px 2px @box-shadow-colour;
     padding: 10px;
     margin: 5px;
-    cursor: pointer;
+
+    .text-portal-column {
+        padding-left: 10px;
+    }
 
     // Accommodate foreign characters in Didi and Kyon.
     .song-title {
@@ -21,19 +26,25 @@
     }
 
     .verse-text {
+        text-indent: -@hanging-indent-width;
+        padding-left: @hanging-indent-width;
+
         font-size: 0.9em;
-        padding: 0 0.5em;
+
+        .text-span {
+            color: @lyric-text-invert-colour;
+        }
+
+        .portal-anchor {
+            .text-span {
+                color: @lyric-text-colour;
+            }
+        }
     }
 
-    .text-shadow-mixin(@portal-block-colour);
+    background-color: @portal-block-colour;
 
-    // .portal-card-block {
-    //     transform: scale(0.85);
-    //
-    //     .annotation-card {
-    //         background-color: #f4fff4;
-    //     }
-    // }
+    // .text-shadow-mixin(@portal-block-colour);
 }
 
 // These are only needed for debugging. Final result doesn't need to be done through CSS.

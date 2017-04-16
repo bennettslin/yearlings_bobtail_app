@@ -70,6 +70,7 @@ const AnnotationCardView = ({
 }) => (
     <div className="annotation-card">
         <DotBlock
+            inAnnotationCard={true}
             shownDotKeys={shownDotKeys}
             annotationDotKeys={annotationDotKeys}
         />

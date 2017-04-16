@@ -105,7 +105,7 @@ const AnchorBlockView = ({
             )}
             onClick={handleClick}
         >
-            {(isLyric || isPortalAnchor) &&
+            {isLyric &&
                 <span className="underline-bar"></span>
             }
             {/* Don't show any dots in portal block. */}
