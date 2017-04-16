@@ -9,22 +9,9 @@ import { VERSES,
          PUN,
          REFERENCE,
          SONGWRITING,
-         AFTERWORD,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: `Ash Wednesday`,
-        annotation: {
-            description: [
-                {
-                    anchor: `Ash Wednesday`,
-                    wiki: `Ash_Wednesday`
-                },
-                `is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
-            ]
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -105,7 +92,19 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 163,
-    overview: `In college in the San Francisco Bay Area, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
+    overview: `In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
+    title: {
+        anchor: `Ash Wednesday`,
+        annotation: {
+            description: [
+                {
+                    anchor: `Ash Wednesday`,
+                    wiki: `Ash_Wednesday`
+                },
+                `is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
+            ]
+        }
+    },
     lyrics: [
         [
             {
@@ -167,8 +166,8 @@ module.exports = {
                                 `which Catherine was reading at the time. In hindsight, that night was probably the beginning of the end, as Catherine surmised that a boyfriend who doesn't read would be the death of her.`
                             ],
                             dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
                             }
                         }
                     },
@@ -208,21 +207,25 @@ module.exports = {
                     `First we`,
                     {
                         anchor: `laid Tourette's,`,
-                        annotation: {
-                            description: [
-                                `Like those with`,
-                                {
-                                    anchor: `Tourette syndrome`,
-                                    wiki: `Tourette_syndrome`
-                                },
-                                `who suffer from uncontrollable tics, we said some things on impulse during the breakup. Also, Jesus was "laid to rest" on the first day…`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Like those with`,
+                                    {
+                                        anchor: `Tourette syndrome`,
+                                        wiki: `Tourette_syndrome`
+                                    },
+                                    `who suffer from uncontrollable tics, we said some things on impulse during the breakup. Also, Jesus was "laid to rest" on the day of his crucifixion.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [PUN]: true
+                                }
                             },
-                            portal: `laid_tourettes`
-                        }
+                            {
+                                portal: `laid_tourettes`
+                            }
+                        ]
                     },
                     `next regrets,`,
                 ]
@@ -234,7 +237,7 @@ module.exports = {
                     {
                         anchor: `last day she rose`,
                         annotation: {
-                            description: `… Jesus then rose on the third day.`,
+                            description: `Jesus rose as well on the third day.`,
                             dotKeys: {
                                 [REFERENCE]: true
                             }
@@ -244,9 +247,9 @@ module.exports = {
                     {
                         anchor: `sole assent…`,
                         annotation: {
-                            description: `Catherine wanted to break up; I didn't. But hers was also to be the "sole ascent."`,
+                            description: `Catherine wanted to break up; I didn't. And as the one believer between us, only she was to feel an "ascent."`,
                             dotKeys: {
-                                [NARRATIVE]: true,
+                                [BACKSTORY]: true,
                                 [PUN]: true
                             }
                         }
@@ -291,20 +294,24 @@ module.exports = {
                     `I purge, with a`,
                     {
                         anchor: `dirge she'd deride,`,
-                        annotation: {
-                            description: [
-                                `A`,
-                                {
-                                    anchor: `dirge`,
-                                    wiki: `Dirge`
-                                },
-                                `is a song of lament. Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music any differently. But Catherine appreciated music for its lyrics, and as such, she wasn't impressed by my songwriting skills.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `A`,
+                                    {
+                                        anchor: `dirge`,
+                                        wiki: `Dirge`
+                                    },
+                                    `is a song of lament.`
+                                ]
+                            },
+                            {
+                                description: `Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music any differently. But Catherine appreciated music for its lyrics, and as such, she wasn't impressed by my songwriting skills.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -329,7 +336,7 @@ module.exports = {
                     {
                         anchor: `pressed for an opinion,`,
                         annotation: {
-                            description: `After committing to become a better lyricist, I would ask Catherine for her honest critique. In this imagined scenario that's perfectly telling of our actual relationship, she puts down the James Joyce novel that she's reading to compliment my attempt at writing a clever verse.`,
+                            description: `After committing to be a better lyricist, I would often ask Catherine for an honest critique. In this imagined scenario that's perfectly telling of our relationship, she puts down the James Joyce novel that she's reading to compliment my attempt at writing a clever verse.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
@@ -355,7 +362,7 @@ module.exports = {
                     {
                         anchor: `putting down her Joyce,`,
                         annotation: {
-                            description: `After all, referencing a poet typically studied by middle schoolers is hardly an artistic feat. And so she's also figuratively "putting me down," for naively daring to become the James Joyce of lyricists.`,
+                            description: `After all, referencing a poet typically studied by middle schoolers is hardly an artistic feat. And so Catherine is also figuratively "putting me down," for naively daring to become the James Joyce of lyricists.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true,
@@ -367,14 +374,39 @@ module.exports = {
             },
             {
                 time: 54,
-                lyric: `with "Joyce" oblivious to the trump she just played.`
+                lyric: [
+                    `with`,
+                    {
+                        anchor: `"Joyce" oblivious`,
+                        annotation: {
+                            description: [
+                                `Of course, not knowing that I couldn't be the next Joyce is precisely why I dared to try. The idea began to congeal in my head that my epic masterpiece could do for rock music what`,
+                                {
+                                    italic: `Ulysses`
+                                },
+                                `did for English literature.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
+                        }
+                    },
+                    `to the trump she just played.`
+                ]
             },
             {
                 unitMap: true,
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the Dobro.`,
+                        description: [
+                            `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the`,
+                            {
+                                anchor: `Dobro.`,
+                                wiki: `Dobro`
+                            }
+                        ],
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -451,12 +483,12 @@ module.exports = {
                         anchor: `famous raincoat`,
                         annotation: {
                             description: [
-                                `Catherine introduced me to the music of Leonard Cohen. In fact, it was her impassioned reading of his song`,
+                                `Catherine introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
                                 {
                                     anchor: `"Famous Blue Raincoat"`,
                                     wiki: `Famous_Blue_Raincoat`
                                 },
-                                `that finally helped me to understand the heights that great lyrics can reach.`
+                                `that helped me to understand the heights that great lyrics can reach.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -466,14 +498,22 @@ module.exports = {
                     },
                     {
                         anchor: `unknown to roam,`,
-                        annotation: {
-                            description: `If Catherine is a figurative Traveller, then I am unwelcome to follow her itinerant community that is well-known to roam. Also, "raincoat" is a euphemism for condoms, which are famously "unknown to Rome" due to the Catholic Church's opposition to birth control. Catherine and I never went all the way due to her vow not to engage in premarital sex, though I always held out the hope.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [PUN]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `If Catherine is a figurative Traveller, then I am unwelcome to follow her itinerant community that is well-known to roam.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            },
+                            {
+                                description: `"Raincoat" is a euphemism for condoms, which are famously unknown to "Rome" due to the Catholic Church's stance against birth control. Catherine and I never went all the way due to her vow not to engage in premarital sex, though I always held out the hope.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [PUN]: true,
+                                    [REFERENCE]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -509,7 +549,6 @@ module.exports = {
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
-                                [NARRATIVE]: true,
                                 [REFERENCE]: true
                             }
                         }
@@ -568,33 +607,29 @@ module.exports = {
                     `Well yes, I`,
                     {
                         anchor: `faked this "X,"`,
-                        annotation: {
-                            description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X. Also, since Catherine insisted on going no further than kissing and petting, I would "fake the sex" for myself by masturbating afterwards.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true,
-                                [PUN]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [REFERENCE]: true
+                                }
+                            },
+                            {
+                                description: `Since Catherine insisted on going no further than heavy petting, I would "fake the sex" for myself by masturbating afterwards.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `I should confess,`
                 ]
             },
             {
                 time: 99,
-                lyric: [
-                    `using some old`,
-                    {
-                        anchor: `used cigarette.`,
-                        annotation: {
-                            description: `I got the ash from an outdoor ashtray.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        }
-                    }
-                ]
+                lyric: `using some old used cigarette.`
             },
             {
                 time: 104,
@@ -613,9 +648,10 @@ module.exports = {
                                     anchor: `Palm Sunday.`,
                                     wiki: `Palm_Sunday`
                                 },
-                                `In my case, of course, the palms I burned were my hands.`
+                                `Since I got the ash from an outdoor ashtray, the palms I burned were my hands.`
                             ],
                             dotKeys: {
+                                [BACKSTORY]: true,
                                 [PUN]: true
                             }
                         }
@@ -657,7 +693,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps in the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
+                        description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps between the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -678,9 +714,8 @@ module.exports = {
                     {
                         anchor: `cursed to be born,`,
                         annotation: {
-                            description: `I once posed the juvenile argument to Catherine that it makes no sense for unbelievers to be born at all, since it means trading their certainty of going to heaven for the likelihood of going to hell.`,
+                            description: `I found it weird that the faithful should want unbelievers to be born at all, since it means trading the unborn child's certainty of going to heaven for their likelihood of going to hell.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -711,8 +746,9 @@ module.exports = {
                     {
                         anchor: `tragic mask.`,
                         annotation: {
-                            description: `At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. So I always preferred a negative outcome to no outcome, which then made it hard to deny that everything I did was just a stage act.`,
+                            description: `At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. So I always preferred a negative outcome to no outcome at all, which then made it hard to deny that everything I did was just a stage act.`,
                             dotKeys: {
+                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -751,13 +787,21 @@ module.exports = {
                     `in`,
                     {
                         anchor: `spreading mole`,
-                        annotation: {
-                            description: `By day's end, the ash was pretty smudged. Also, a spreading mole is a sign of cancer, which is fitting since I wasn't sure how sick it is to fake being Catholic.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `By day's end, the ash was pretty smudged.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                description: `A spreading mole is a sign of cancer, which is fitting since I wasn't sure how sick it is to fake being Catholic.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [REFERENCE]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `my sickness borne`
                 ]
@@ -779,7 +823,13 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `While fleshing out the lyrics for this chorus, I noticed that the two stanzas shared common syllables in certain places, and so I made a game of trying to match them as closely as possible. This ultimately gave me the idea for doublespeaker rhyme.`,
+                        description: [
+                            `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza corresponded with their`,
+                            {
+                                anchor: `homophones`,
+                                wiki: `Homophone`
+                            },
+                            `in the second, so I made a game of matching the two stanzas as closely as possible. This later gave me the idea for doublespeaker rhyme.`],
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -788,32 +838,12 @@ module.exports = {
                 stanzaType: CHORUS,
                 subsequent: true
             }
-        ],
-        [
-            {
-                unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: ``,
-                        dotKeys: {
-                            [AFTERWORD]: true
-                        }
-                    }
-                }
-            }
         ]
-        // TODO: Afterword should mention that Catherine inspired me to create the Ulysses of rock albums. Consider moving it from overview.
     ],
     tasks: [
         {
-            taskName: `afterword annotations`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
-            taskName: `sort out past and present tense`,
-            workedHours: 0,
+            taskName: `categorisation`,
+            workedHours: 3,
             neededHours: 3
         },
         {
