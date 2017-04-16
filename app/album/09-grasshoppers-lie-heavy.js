@@ -3,34 +3,6 @@ import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, INSTRUMENTAL, BACKSTO
 // TODO: Missing portal for Look Back in Anger. Is it "bell"?
 
 module.exports = {
-    title: {
-        anchor: `Grasshoppers Lie Heavy`,
-        annotation: {
-            description: [
-                `I was reading a lot of`,
-                {
-                    anchor: `Philip Dick`,
-                    wiki: `Philip_K._Dick`
-                },
-                `novels during this time, including`,
-                {
-                    italic: {
-                        anchor: `The Man in the High Castle,`,
-                        wiki: `The_Man_in_the_High_Castle`
-                    }
-                },
-                `in which the Axis powers had won World War II. Curiously, the characters in this alternate history are engrossed in their own alternate history novel called`,
-                {
-                    italic: `The Grasshopper Lies Heavy,`
-                },
-                `in which the Allies had won. Beyond just making a Philip Dick reference, I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, and neither wishing to be the first to reveal itself.`
-            ],
-            dotKeys: {
-                [BACKSTORY]: true,
-                [OBSERVATION]: true
-            }
-        }
-    },
     /**
      * All of these scenes repeat twice.
      */
@@ -190,6 +162,34 @@ module.exports = {
     doubleColumns: true,
     totalTime: 272,
     overview: `I worked my way through college as a dishwasher in a cafeteria, which is how I met Sita. After I scared her off, we didn't speak for several months, but she eventually reached out again, and we became friends. As I continued to suck at dating, and through my rough start in performing live, Sita lent her moral support, though a part of me always wanted more. At some point, she started to like me back. I'm still not sure how.`,
+    title: {
+        anchor: `Grasshoppers Lie Heavy`,
+        annotation: {
+            description: [
+                `I was reading a lot of`,
+                {
+                    anchor: `Philip Dick`,
+                    wiki: `Philip_K._Dick`
+                },
+                `novels during this time, including`,
+                {
+                    italic: {
+                        anchor: `The Man in the High Castle,`,
+                        wiki: `The_Man_in_the_High_Castle`
+                    }
+                },
+                `in which the Axis powers had won World War II. Curiously, the characters in this alternate history are engrossed in their own alternate history novel called`,
+                {
+                    italic: `The Grasshopper Lies Heavy,`
+                },
+                `in which the Allies had won. Beyond just making a Philip Dick reference, I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, and neither wishing to be the first to reveal itself.`
+            ],
+            dotKeys: {
+                [BACKSTORY]: true,
+                [OBSERVATION]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -208,14 +208,18 @@ module.exports = {
                         },
                         {
                             anchor: `pompous autumn waits.`,
-                            annotation: {
-                                description: `In high school, I soldiered on with the same gutless personality to which I had tied myself in middle school. It just didn't seem possible to become a completely different person while surrounded by all the same classmates. But in my head I was crafting a brand new persona, typified by pompous pretense, that was raring to go at the first opportunity.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                            annotation: [
+                                {
+                                    description: `In high school, I soldiered on with the same gutless personality to which I had tied myself in middle school. It just didn't seem possible to become a completely different person while surrounded by all the same classmates. But in my head I was crafting a brand new persona, typified by pompous pretense, that was raring to go at the first opportunity.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [NARRATIVE]: true
+                                    }
                                 },
-                                portal: `pampas`
-                            }
+                                {
+                                    portal: `pampas`
+                                }
+                            ]
                         }
                     ]
                 }
@@ -363,13 +367,17 @@ module.exports = {
                 lyric: [
                     {
                         anchor: `Down the steps`,
-                        annotation: {
-                            description: `The dishroom was one floor below the dining area.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: `The dishroom was one floor below the dining area.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             },
-                            portal: `down_the_steppes`
-                        }
+                            {
+                                portal: `down_the_steppes`
+                            }
+                        ]
                     },
                     `to`,
                     {
@@ -413,14 +421,18 @@ module.exports = {
                     `At first she hedged, but then`,
                     {
                         anchor: `laying qualms to rest:`,
-                        annotation: {
-                            description: `It was well known to the students that the cafeteria hired most of its workers through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and familiarity with underground culture ultimately won her over.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `It was well known to the students that the cafeteria hired most of its workers through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and familiarity with underground culture ultimately won her over.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `laid_tourettes`
-                        }
+                            {
+                                portal: `laid_tourettes`
+                            }
+                        ]
                     }
                 ]
             },
@@ -430,31 +442,39 @@ module.exports = {
                     {
                         anchor: `Schwa stickers`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                {
-                                    anchor: `Schwa`,
-                                    wiki: `Schwa_(art)`
-                                },
-                                `is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on print media everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Schwa`,
+                                        wiki: `Schwa_(art)`
+                                    },
+                                    `is the underground artwork of William Barker. In the late 90s, his oblong alien heads popped up on print media everywhere. A friend who worked in a record store gave me a few stickers, though at the time I had no idea what they were.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             },
-                            portal: `swastikas`
-                        }
+                            {
+                                portal: `swastikas`
+                            }
+                        ]
                     },
                     `attached to your`,
                     {
                         anchor: `sci-fi paperback.`,
-                        annotation: {
-                            description: `At the time, I was obsessed with Philip K. Dick's stories of altered states and dystopian worlds, and never left home without one of his novels under my arm. Sita was soon to hear all about it.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `At the time, I was obsessed with Philip K. Dick's stories of altered states and dystopian worlds, and never left home without one of his novels under my arm. Sita was soon to hear all about it.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `safeway_paper_bag`
-                        }
+                            {
+                                portal: `safeway_paper_bag`
+                            }
+                        ]
                     }
                 ]
             },
@@ -470,25 +490,33 @@ module.exports = {
                     `First date`,
                     {
                         anchor: `nosebleed`,
-                        annotation: {
-                            description: `After getting a nosebleed on the first date, I recounted past fights that ended with me getting a bloody nose.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `After getting a nosebleed on the first date, I recounted past fights that ended with me getting a bloody nose.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `know_is_bleat`
-                        }
+                            {
+                                portal: `know_is_bleat`
+                            }
+                        ]
                     },
                     `spurs tales of`,
                     {
                         anchor: `bare-knuckle defeats…`,
-                        annotation: {
-                            description: `Sita seemed intrigued by my rough-and-tumble past, even as I was honest that these were literal beatdowns in which I never threw a single punch.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `Sita seemed intrigued by my rough-and-tumble past, even as I was honest that these were literal beatdowns in which I never threw a single punch.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `barnacle`
-                        }
+                            {
+                                portal: `barnacle`
+                            }
+                        ]
                     }
                 ]
             },
@@ -571,20 +599,24 @@ module.exports = {
                     `and so off her list,`,
                     {
                         anchor: `sunken Tirpitz lies.`,
-                        annotation: {
-                            description: [
-                                    `The Bismarck and the Tirpitz were`,
+                        annotation: [
+                            {
+                                description: [
+                                        `The Bismarck and the Tirpitz were`,
+                                        {
+                                            anchor: `sister battleships`,
+                                            wiki: `Bismarck-class_battleship`
+                                        },
+                                        `of the German navy in World War II. After all, the Axis were the heroes in`,
                                     {
-                                        anchor: `sister battleships`,
-                                        wiki: `Bismarck-class_battleship`
-                                    },
-                                    `of the German navy in World War II. After all, the Axis were the heroes in`,
-                                {
-                                    italic: `The Man in the High Castle.`
-                                }
-                            ],
-                            portal: `sunken_tirpitz`
-                        }
+                                        italic: `The Man in the High Castle.`
+                                    }
+                                ]
+                            },
+                            {
+                                portal: `sunken_tirpitz`
+                            }
+                        ]
                     }
                 ]
             },
@@ -790,13 +822,17 @@ module.exports = {
                     },
                     {
                         anchor: `Key turned,`,
-                        annotation: {
-                            description: `As we catch up on recent happenings, I unlock the door to my apartment.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `As we catch up on recent happenings, I unlock the door to my apartment.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `key_turned`
-                        }
+                            {
+                                portal: `key_turned`
+                            }
+                        ]
                     },
                     {
                         anchor: `returned to your guard…`,
@@ -850,13 +886,17 @@ module.exports = {
                     `so you`,
                     {
                         anchor: `hit the switch.`,
-                        annotation: {
-                            description: `As all these thoughts swirl in my head, I turn on the light switch.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `As all these thoughts swirl in my head, I turn on the light switch.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `hit_the_switch`
-                        }
+                            {
+                                portal: `hit_the_switch`
+                            }
+                        ]
                     }
                 ]
             },
@@ -866,13 +906,17 @@ module.exports = {
                     `On your bed's rumpled linens, a`,
                     {
                         anchor: `lidless Vaseline sits.`,
-                        annotation: {
-                            description: `Sitting on my bed is an open jar of Vaseline. I clearly used it recently to masturbate.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `Sitting on my bed is an open jar of Vaseline. I clearly used it recently to masturbate.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `lidless_vaseline_sits`
-                        }
+                            {
+                                portal: `lidless_vaseline_sits`
+                            }
+                        ]
                     }
                 ]
             },
@@ -1019,15 +1063,19 @@ module.exports = {
                     `Then you wake by a`,
                     {
                         anchor: `bell with a ring.`,
-                        annotation: {
-                            description: `At the hospital, a bell is rung to indicate that a patient has been released from care and is returning to the waiting room. Also, "belle with a ring." The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `At the hospital, a bell is rung to indicate that a patient has been released from care and is returning to the waiting room. Also, "belle with a ring." The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true,
+                                    [REFERENCE]: true
+                                }
                             },
-                            portal: `withering`
-                        }
+                            {
+                                portal: `withering`
+                            }
+                        ]
                     }
                 ]
             },
@@ -1098,15 +1146,18 @@ module.exports = {
                     `You`,
                     {
                         anchor: `stand unsure.`,
-                        annotation: {
-                            // todo: foreshadow
-                            description: `The night that we decided to have sex, I was suddenly overcome with a weary unease. As Sita lay naked under the covers, I stood forlornly by the bedside for what seemed like several minutes.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `The night that we decided to have sex, I was suddenly overcome with a weary unease. As Sita lay naked under the covers, I stood forlornly by the bedside for what seemed like several minutes.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `stand_onshore`
-                        }
+                            {
+                                portal: `stand_onshore`
+                            }
+                        ]
                     },
                     `She lures with a tease,`
                 ]
@@ -1178,20 +1229,24 @@ module.exports = {
                     {
                         anchor: `Grace Darling's beacon`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                {
-                                    anchor: `Grace Darling`,
-                                    wiki: `Grace_Darling`
-                                },
-                                `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26. And, of course, Sita was my "grace darling," having rescued me from a sea of loneliness.`
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Grace Darling`,
+                                        wiki: `Grace_Darling`
+                                    },
+                                    `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26. And, of course, Sita was my "grace darling," having rescued me from a sea of loneliness.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
                             },
-                            portal: `grey_starling`
-                        }
+                            {
+                                portal: `grey_starling`
+                            }
+                        ]
                     },
                     `light`,
                     {
