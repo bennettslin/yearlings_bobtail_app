@@ -1,5 +1,23 @@
 module.exports = [
     {
+        taskName: `Make first dot a float.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    // Portals.
+    {
+        taskName: `Portal logic.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Portal styling`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Annotation slider.`,
         workedHours: 0,
         neededHours: 15
@@ -51,18 +69,6 @@ module.exports = [
         taskName: `Selecting time or verse while audio player is running is now buggy.`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    // Portals.
-    {
-        taskName: `Figure out when portal has no description`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'final check on all portals',
-        workedHours: 0,
-        neededHours: 1
     },
 
     // Hack Week.
