@@ -1,4 +1,17 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, CODA, INSTRUMENTAL, BACKSTORY, NARRATIVE, PUN, OBSERVATION, SONGWRITING, REFERENCE, DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { REFRAIN,
+         VERSES,
+         PRECHORUS,
+         CHORUS,
+         BRIDGE,
+         CODA,
+         INSTRUMENTAL,
+         BACKSTORY,
+         NARRATIVE,
+         PUN,
+         OBSERVATION,
+         SONGWRITING,
+         REFERENCE,
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 // TODO: Missing portal for Look Back in Anger. Is it "bell"?
 

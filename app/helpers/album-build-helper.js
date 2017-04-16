@@ -606,14 +606,29 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
             cards.forEach((card, cardIndex) => {
                 _prepareCard(card, dotKeys)
                 _addDotKeys(card, dotKeys)
-                if (_addPortalLink(card, dotKeys, annotationIndex, cardIndex, annotation.verseIndex, annotation.column, annotation.columnIndex)) {
+                if (_addPortalLink({
+                    card,
+                    dotKeys,
+                    annotationIndex,
+                    cardIndex,
+                    verseIndex: annotation.verseIndex,
+                    column: annotation.column,
+                    columnIndex: annotation.columnIndex
+                })) {
                     _tempStore._lastLyricWithVerseIndex.verseHasPortal = true
                 }
             })
         } else {
             _prepareCard(cards, dotKeys)
             _addDotKeys(cards, dotKeys)
-            if (_addPortalLink(cards, dotKeys, annotationIndex, undefined, annotation.verseIndex, annotation.column, annotation.columnIndex)) {
+            if (_addPortalLink({
+                card: cards,
+                dotKeys,
+                annotationIndex,
+                verseIndex: annotation.verseIndex,
+                column: annotation.column,
+                columnIndex: annotation.columnIndex
+            })) {
                 _tempStore._lastLyricWithVerseIndex.verseHasPortal = true
             }
         }
@@ -714,27 +729,41 @@ const _addDotKeys = (card, dotKeys) => {
  * PORTAL *
  **********/
 
-const _addPortalLink = (card, dotKeys, annotationIndex, cardIndex = 0, verseIndex, column, columnIndex) => {
+const _addPortalLink = ({
+    card,
+    dotKeys,
+    annotationIndex,
+    cardIndex = 0,
+    verseIndex,
+    column,
+    columnIndex
+}) => {
     // Add portal link to annotation card..
     const { portal } = card
+
     if (portal) {
 
-        const portalLink = {
+        // Portal is either object or string.
+        const { portalKey,
+                portalPrefix } = portal,
+
+            portalLink = {
                 songIndex: _tempStore._songIndex,
                 annotationIndex,
                 cardIndex,
                 verseIndex,
                 column,
-                columnIndex
+                columnIndex,
+                portalPrefix
             }
 
         // If first portal link, initialise array.
-        if (!_tempStore._portalLinks[portal]) {
-            _tempStore._portalLinks[portal] = []
+        if (!_tempStore._portalLinks[portalKey || portal]) {
+            _tempStore._portalLinks[portalKey || portal] = []
         }
 
         // Add portal link to portal links array.
-        _tempStore._portalLinks[portal].push(portalLink)
+        _tempStore._portalLinks[portalKey || portal].push(portalLink)
 
         // Add portal key to dot keys.
         dotKeys.portal = true

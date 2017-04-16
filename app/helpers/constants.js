@@ -331,6 +331,9 @@ module.exports = {
         [OBSERVATION]: 'my two cents'
     },
 
+    FLASHBACK_TO_PORTAL_PREFIX: 'flashback to',
+    FORESHADOW_OF_PORTAL_PREFIX: 'foreshadow of',
+
     ARROW_LEFT: 'ArrowLeft',
     ARROW_RIGHT: 'ArrowRight',
     ARROW_UP: 'ArrowUp',

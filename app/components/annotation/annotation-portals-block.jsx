@@ -1,5 +1,4 @@
 import React from 'react'
-// import AnnotationCard from './annotation-card'
 import TextBlock from '../text/text-block'
 
 /*************
@@ -20,7 +19,6 @@ const AnnotationPortalsBlockView = ({
     annotationDotKeys,
     portalLinks,
     handleAnnotationPortalSelect,
-    // accessedPopupAnchorIndex
 
 }) => (
     <div className="portals-block">
@@ -31,12 +29,13 @@ const AnnotationPortalsBlockView = ({
                     songTitle,
                     column,
                     columnIndex,
-                    // cardObject,
+
+                    // Default if no portal prefix.
+                    portalPrefix = 'portal to',
+
                     verseObject } = portalObject,
 
                 handleClick = e => handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex)
-
-            // accessHighlighted = accessedPopupAnchorIndex === portalIndex
 
             return (
                 <div
@@ -45,7 +44,7 @@ const AnnotationPortalsBlockView = ({
                     onClick={handleClick}
                 >
                     <div className="song-title">
-                        portal to <strong>{songTitle}</strong>
+                        {portalPrefix} <strong>{songTitle}</strong>
                     </div>
 
                     <div className="verse-text">
@@ -58,21 +57,6 @@ const AnnotationPortalsBlockView = ({
                         />
                         <span className="text-span">{'\u201d'}</span>
                     </div>
-
-                    {/* <div className="portal-card-block">
-                        <a
-                            className={`portal-card-button enabled${portalIndex ? ' portal-' + portalIndex : ''}${accessHighlighted ? ' access-highlighted' : ''}`}
-
-                        >
-                            <AnnotationCard
-                                inPortal={true}
-                                inPortalCard={true}
-                                songs={songs}
-                                selectedDotKeys={selectedDotKeys}
-                                card={cardObject}
-                            />
-                        </a>
-                    </div> */}
                 </div>
             )
         })}

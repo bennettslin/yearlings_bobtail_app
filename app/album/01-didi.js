@@ -11,6 +11,7 @@ import { INSTRUMENTAL,
          SONGWRITING,
          AFTERWORD,
          OBSERVATION,
+
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
@@ -304,7 +305,10 @@ module.exports = {
                                 ]
                             },
                             {
-                                portal: `safeway_paper_bag`
+                                portal: {
+                                    portalKey: `safeway_paper_bag`,
+                                    portalPrefix: 'wheeee'
+                                }
                             }
                         ]
                     }
