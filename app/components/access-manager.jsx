@@ -172,13 +172,16 @@ class AccessManager extends Component {
                 break
             case ARROW_UP:
             case ARROW_DOWN: {
-                const direction = keyName === ARROW_UP ? -1 : 1
-                accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(
-                    props,
-                    accessedPopupAnchorIndex,
-                    direction
-                )
-                this.props.handlePopupAnchorAccess(accessedPopupAnchorIndex)
+                // If not accessed on, do nothing and just turn access on.
+                if (props.accessedOn) {
+                    const direction = keyName === ARROW_UP ? -1 : 1
+                    accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(
+                        props,
+                        accessedPopupAnchorIndex,
+                        direction
+                    )
+                    this.props.handlePopupAnchorAccess(accessedPopupAnchorIndex)
+                }
                 break
             }
             case ENTER: {
