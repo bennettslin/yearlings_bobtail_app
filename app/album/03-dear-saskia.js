@@ -731,6 +731,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `review tense and categorisation`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `Make just one bully`,
             workedHours: 1,
             neededHours: 1

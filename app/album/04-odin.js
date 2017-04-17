@@ -1508,6 +1508,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `review tense and categorisation`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `tenses and categorisation`,
             workedHours: 12,
             neededHours: 12

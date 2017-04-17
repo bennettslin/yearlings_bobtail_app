@@ -550,6 +550,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `review tense and categorisation`,
+            workedHours: 0,
+            neededHours: 1
+        },
+        {
             taskName: `annotations`,
             workedHours: 40,
             neededHours: 40
