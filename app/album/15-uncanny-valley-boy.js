@@ -1199,20 +1199,24 @@ module.exports = {
                     `shouldn't you first be sure you've`,
                     {
                         anchor: `finally become someone?`,
-                        annotation: {
-                            description: [
-                                `Of course, a key component of the`,
-                                {
-                                    italic: `Bildungsroman`
-                                },
-                                `is the protagonist's moral and psychological growth from youth to adulthood. Without this crucial development in character, there is no story to be told, a point to which my parents slyly allude here.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Of course, a key component of the`,
+                                    {
+                                        italic: `Bildungsroman`
+                                    },
+                                    `is the protagonist's moral and psychological growth from youth to adulthood. Without this crucial development in character, there is no story to be told, a point to which my parents slyly allude here.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             },
-                            portal: `finally_become_someone`
-                        }
+                            {
+                                portal: `finally_become_someone`
+                            }
+                        ]
                     }
                 ]
             },

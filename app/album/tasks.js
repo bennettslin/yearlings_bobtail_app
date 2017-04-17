@@ -1,16 +1,5 @@
 module.exports = [
-    {
-        taskName: `Make first dot a float.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     // Portals.
-    {
-        taskName: `Portal styling`,
-        workedHours: 0,
-        neededHours: 2
-    },
     {
         taskName: `Finalise portals`,
         workedHours: 0,
@@ -1661,6 +1650,11 @@ module.exports = [
     },
     {
         taskName: `Portal logic.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Basic portal styling.`,
         workedHours: 1,
         neededHours: 1
     }

@@ -298,14 +298,14 @@ module.exports = {
     OBSERVATION,
 
     ALL_DOT_KEYS: [
-        SONGWRITING,
-        NARRATIVE, // My perspective in the story.
+        NARRATIVE,
+        BACKSTORY,
         PUN,
         REFERENCE,
-        BACKSTORY, // My perspective while making the album.
         OBSERVATION,
+        SONGWRITING,
         PORTAL,
-        AFTERWORD // My perspective while making this website.
+        AFTERWORD
     ],
 
     // In dot stanzas, at least songwriting and afterword are always first.
@@ -321,8 +321,8 @@ module.exports = {
     ],
 
     DOT_DESCRIPTIONS: {
-        [NARRATIVE]: 'the story', // My perspective in the story.
-        [BACKSTORY]: 'backstory description', // My perspective while making the album.
+        [NARRATIVE]: 'the story',
+        [BACKSTORY]: 'backstory description',
         [PUN]: 'Of both the "literary" and "bad" variety.',
         [SONGWRITING]: 'music description',
         [REFERENCE]: 'wiki description',

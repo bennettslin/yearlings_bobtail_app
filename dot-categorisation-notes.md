@@ -3,10 +3,13 @@
 
 # NARRATIVE
 * Related to the general story of the song, whether past or present.
+* Good test is whether they will still get it with every other dot off.
+* Use general tense of each song, and then stick with it throughout.
 
 # PUN
 * Words that are unrelated and have different meaning.
 * Words that are pronounced the same but spelled differently.
+* Put quotes around figurative and literal differences.
 
 # REFERENCE
 * Anything that someone might want to look up.
@@ -16,9 +19,11 @@
 
 # BACKSTORY
 * Explanatory background information.
+* Not related to the general story.
 
 # OBSERVATION
-* My opinion.
+* My opinion, as spoken by me as the narrator.
+* Explanation of analogies, comparisons, imagery, and so forth.
 
 # PORTAL
 * Dot does not know portal subcategories.
@@ -27,3 +32,9 @@
 
 # AFTERWORD
 * Happened after the album.
+
+# Dot categorisation
+* The two descriptions talk about mostly different things.
+* One does not naturally lead to the other.
+* They aren't so short that separating them would just be awkward.
+* "Also" is a good indication to separate.

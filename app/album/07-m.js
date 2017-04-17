@@ -1,15 +1,6 @@
 import { INSTRUMENTAL, REFRAIN, VERSES, CHORUS, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: 'M',
-        annotation: {
-            description: `To avoid mentioning Mara by name, I entitled this song "M," which I planned to explain by packing the lyrics with words that start with the letter M. In hindsight, I probably wasn't fooling anyone.`,
-            dotKeys: {
-                [BACKSTORY]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -115,6 +106,15 @@ module.exports = {
     },
     totalTime: 215,
     overview: `After the breakup with Catherine, I vowed to spend the next five years shaping myself into the ideal romantic prospect. By the end, I was regularly attending local shows while cobbling together my own band. I kept running into a fellow scenester named Mara, and soon I grew infatuated. But Mara ended up going out with my drummer Jacob, which made band practise awkward.`,
+    title: {
+        anchor: 'M',
+        annotation: {
+            description: `To avoid mentioning Mara by name, I entitled this song "M," which I planned to explain by packing the lyrics with words that start with the letter M. Deep down, I probably knew that I wasn't fooling anyone.`,
+            dotKeys: {
+                [BACKSTORY]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -128,7 +128,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `This song is a carryover from back when the band was called The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
+                        description: `This song is a carryover from back when the band was still just The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [SONGWRITING]: true
@@ -154,10 +154,10 @@ module.exports = {
                                 anchor: `Mara,`,
                                 wiki: `Mara_(demon)`
                             },
-                            `the demon who personifies fear and death in Buddhism. Similarly, getting through band practise required me to summon otherworldly reserves of self-denial after Jacob and Mara started dating.`
+                            `the demon who personifies fear and death in Buddhism. In the same way, I had to summon otherworldly reserves of self-denial to get through band practise after Jacob and Mara started dating.`
                         ],
                         dotKeys: {
-                            [BACKSTORY]: true
+                            [OBSERVATION]: true
                         }
                     }
                 }
@@ -175,11 +175,9 @@ module.exports = {
                     {
                         anchor: `learning the talents`,
                         annotation: {
-                            description: `The uneventful breakup with Catherine proved to me that I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits, starting with the ones that Catherine valued most.`,
+                            description: `The breakup with Catherine was uneventful. I'd done nothing wrong, per se; I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits, starting with the ones that Catherine valued most.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                                [NARRATIVE]: true
                             }
                         }
                     }
@@ -210,10 +208,9 @@ module.exports = {
                                     anchor: `five-year plans`,
                                     wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`
                                 },
-                                `of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of forcing an agrarian society to industrialise led to widespread famine and death. Similarly, given how much lost ground I needed to recover, in hindsight perhaps it was naive to think that my own five-year plan for rapid intellectual growth could be free of unintended negative effects.`
+                                `of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of industrialising an agrarian society led to widespread famine and death. Similarly, given how much lost ground I needed to recover, in hindsight it may have been naive to think that my own five-year plan for rapid intellectual growth could be free of unintended negative effects.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -238,7 +235,7 @@ module.exports = {
                     {
                         anchor: `mystery mensch.`,
                         annotation: {
-                            description: `The smattering of women I'd attracted up to that point had initially credited me with possessing greater mystery and substance than the truth eventually revealed. It made perfect sense, then, to start by legitimately becoming what they mistakenly assumed me to be.`,
+                            description: `Up to this point, I'd managed to attract a smattering of women, all of whom were drawn to my brooding, cynical personality. And all of them were eventually turned off in the same way, upon concluding that nothing of greater substance lay beneath. It made perfect sense, then, to start by legitimately becoming what they mistakenly assumed me to be.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
@@ -255,8 +252,7 @@ module.exports = {
                         description: `Though my ultimate goal was to be versed in all general subjects, the most rewarding moments came when I could demonstrate some random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like memorising the periodic table.`,
                         dotKeys: {
                             [BACKSTORY]: true,
-                            [NARRATIVE]: true,
-                            [OBSERVATION]: true
+                            [NARRATIVE]: true
                         }
                     }
                 }
@@ -266,22 +262,38 @@ module.exports = {
                 lyric: [
                     {
                         anchor: `music cred`,
+                        annotation: [
+                            {
+                                description: `During this time, I consulted friends and record store clerks to expand my musical palette. Interestingly, while the offerings they suggested for classical and world music still enrich me to this day, those from the indie rock subgenre have paled into insignificance.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `Honestly, I wasted a`,
+                                    {
+                                        emphasis: `lot`
+                                    },
+                                    `of time on indie rock and its countercultural pretenses, and it remains one of my deepest regrets. But I won't be fooled again.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        ]
+                    },
+                    `with`,
+                    {
+                        anchor: `mindful manners`,
                         annotation: {
-                            description: [
-                                `During this time, I consulted friends and record store clerks to expand my musical palette. Interestingly, while the offerings they suggested for classical and world music still enrich me to this day, those from the indie rock subgenre have paled into insignificance. Honestly, I wasted a`,
-                                {
-                                    emphasis: `lot`
-                                },
-                                `of time on indie rock and its countercultural pretenses, and it remains one of my deepest regrets. But I won't be fooled again.`
-                            ],
+                            description: `I also quit cursing during this time. I figured it would be a turn-on for any woman who didn't curse, while those who did would still find its quaintness charming.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
-                    `with mindful manners merge.`
+                    `merge.`
                 ]
             },
             {
@@ -291,7 +303,7 @@ module.exports = {
                     {
                         anchor: `metamorphose, certain`,
                         annotation: {
-                            description: `Or else, "once I met a Mara, for certain I'd impress."`,
+                            description: `Or else, once I "met a Mara, for certain" I'd impress.`,
                             dotKeys: {
                                 [PUN]: true
                             }
@@ -309,7 +321,6 @@ module.exports = {
                             `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this fashion would be.`
                         ],
                         dotKeys: {
-                            [BACKSTORY]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -330,9 +341,8 @@ module.exports = {
                     {
                         anchor: `wishes on a friend,`,
                         annotation: {
-                            description: `As my five-year plan neared its end, I conducted a review of all that my diligent effort had brought me. Seeing how easily Jacob got together with Mara after one of our shows, while noting that such ease in my own pursuits felt no less elusive than ever— with my own inability to attract Mara as key evidence— I could only conclude that my plan was a total washout. I was like a genie freed from a lamp, with good fortunes to bestow on all others but myself.`,
+                            description: `As my five-year plan neared its end, I conducted a review of all that my diligent effort had brought me. Seeing how easily Jacob got together with Mara after one of our shows, while noting that such ease in my own pursuits felt no less elusive than ever, I could only conclude that my plan was a total washout. I was like a genie freed from a lamp, with good fortunes to bestow on all others but myself.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
@@ -354,7 +364,7 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `I learned to play banjo by listening to Flatt and Scruggs and reading`,
+                            `I learned to play banjo by reading`,
                             {
                                 anchor: `Earl Scruggs's`,
                                 wiki: `Earl_Scruggs`
@@ -362,6 +372,7 @@ module.exports = {
                             `instruction book. His uptempo bluegrass licks weren't easy to tailor to a slower rock beat, so I never made that leap with the banjo. But his three-finger roll became a staple guitar technique of mine, which I use here.`
                         ],
                         dotKeys: {
+                            [BACKSTORY]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -375,7 +386,6 @@ module.exports = {
                 lyric: [
                     `Hopes wrapped in`,
                     {
-                        // TODO: Wedding candy?
                         anchor: `marinaded confections,`,
                         annotation: {
                             description: `Or else, "Mara-needed confessions."`,
@@ -394,7 +404,7 @@ module.exports = {
                     {
                         anchor: `tomorrow never sent.`,
                         annotation: {
-                            description: `Or else, "before, to Mara, never sent."`,
+                            description: `Or else, "before, to Mara," never sent.`,
                             dotKeys: {
                                 [PUN]: true
                             }
@@ -408,10 +418,9 @@ module.exports = {
                     {
                         anchor: `Signed off "love me"`,
                         annotation: {
-                            description: `I used to close my personal letters with "Love Bennett," absent a comma out of laziness. A friend joked that it sounded like a command spoken in desperation.`,
+                            description: `Back when emails were treated more like personal letters, I used to end them with "Love Bennett," absent a comma out of laziness. A friend joked that it sounded like a command spoken in desperation.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [PUN]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
@@ -427,7 +436,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `Obviously, Jacob was a far better drummer. To match his tempo, I had to record at a lower tape speed.`,
+                        description: `Obviously, Jacob was a far better drummer than I am. To match his tempo, I had to record at a lower tape speed.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -451,11 +460,9 @@ module.exports = {
                     {
                         anchor: `die pushing forty,`,
                         annotation: {
-                            description: `The conclusion of my five-year plan was occasion to reflect on my impending mortality. Like the Soviet Union, I had banked on rapid growth, and I couldn't cut my losses now. I had nothing to my name other than what another five-year plan might gain for me, or failing that, another one. Yet five years is such a huge chunk of lifetime to mete out all at once, and I had only so much lifetime remaining.`,
+                            description: `The conclusion of my five-year plan was occasion to reflect on my mortality. I had banked on rapid growth, and I couldn't cut my losses now. I had nothing to my name other than what another five-year plan might gain for me, or failing that, another one. Yet five years is such a huge chunk of lifetime to mete out all at once, and I had only so much lifetime remaining.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                                [NARRATIVE]: true
                             }
                         }
                     },
@@ -469,9 +476,8 @@ module.exports = {
                     {
                         anchor: `sand castle built by low tide.`,
                         annotation: {
-                            description: `Not only did my first five-year plan fail to realise its objective, it was clear that I had missed out on some crucial emotional development in the interim. And there was no guarantee that the next one wouldn't blindside me in the exact same manner. I feared a future as an emotionally stunted man-child, forever pursuing ambitions at once both infantile and futile.`,
+                            description: `Not only did my five-year plan fail to realise its objective, it was clear that I had missed out on some crucial growth in the interim. And there was no guarantee that the next one wouldn't blindside me in the same manner. I feared a future as an emotionally stunted man-child, forever pursuing ambitions at once both infantile and futile.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
@@ -529,7 +535,7 @@ module.exports = {
                                     anchor: `Unification Church`,
                                     wiki: `Unification_Church`
                                 },
-                                `led by Sun Myung Moon is widely seen as a cult due to its aggressive proselytism. It is perhaps best known for its mass weddings in which thousands of congregants, often referred to as Moonies, are paired into couples and married en masse. That I could resort to such measures to avoid the long, hard slog of finding a mate was an enticing thought, even if facetious.`
+                                `led by Sun Myung Moon is widely seen as a cult due to its aggressive proselytism. It is perhaps best known for its mass weddings in which thousands of congregants, often referred to as Moonies, are paired into couples and married en masse. To avoid the long, hard slog of finding a mate, I humoured myself with the enticing thought of resorting to such measures.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -545,13 +551,20 @@ module.exports = {
                     {
                         anchor: `"Made in America" signs.`,
                         properNoun: true,
-                        annotation: {
-                            description: `The pairings in these mass weddings are often international by design. Were I to participate in one, I might very well be matched with a foreigner who was in it solely to gain a green card. Also, "expecting their maiden Mara cosigns."`,
-                            dotKeys: {
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: `The pairings in these mass weddings are often international by design. Were I to participate in one, I might very well be matched with a foreigner who was solely interested in getting a green card and raising a family in America.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            },
+                            {
+                                description: `Or else, fools expecting their "maiden Mara cosigns."`,
+                                dotKeys: {
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -568,10 +581,9 @@ module.exports = {
                                     anchor: `time capsule`,
                                     wiki: `Time_capsule`
                                 },
-                                `is a vessel of contemporary objects that will come to be seen as historical artifacts once rediscovered by a later age. In a way, it allows a past generation to communicate with the future. Similarly, in my dejected state, it was hard to envision my next five-year plan being anything more than a forum for me to air my present grievances to a captive future audience.`
+                                `is a vessel of contemporary objects that will become historical artifacts once rediscovered at a later age. In a way, it allows a past generation to communicate with the future. Similarly, in my dejected state, it was hard to envision my next five-year plan being anything more than a forum for me to air my present grievances to a captive future audience.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
@@ -596,7 +608,7 @@ module.exports = {
                                     anchor: `marionette`,
                                     wiki: `Marionette`
                                 },
-                                `that Mara would tire of controlling from above. Of course, it was my own fault for believing in such "lies that Mara you'll net."`
+                                `ensnared in his wires after Mara tired of controlling him from above. Of course, it was my own fault for believing in such "lies that Mara you'll net."`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true,
@@ -620,7 +632,18 @@ module.exports = {
             },
             {
                 time: 136,
-                lyric: `keeps me solely for a pet.`
+                lyric: [
+                    `keeps me`,
+                    {
+                        anchor: `solely for a pet.`,
+                        annotation: {
+                            description: `After Mara started dating Jacob, she continued to interact with me in the same flirtatious manner, which made me realise that I had misread her intentions all along.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
+                        }
+                    }
+                ]
             },
             {
                 time: 138,
@@ -629,7 +652,7 @@ module.exports = {
                     {
                         anchor: `my life in marriage`,
                         annotation: {
-                            description: `Or else, "my life in Mara." I thought I had chosen to forego this one in the recording, but the exaggerated pronunciation is distinctly there, so… yeah.`,
+                            description: `Or else, my life in "Mara." I thought I had chosen to forego this one, but the exaggerated pronunciation is distinctly there in the recording…`,
                             dotKeys: {
                                 [SONGWRITING]: true,
                                 [PUN]: true
@@ -651,8 +674,11 @@ module.exports = {
                                     anchor: `hope chest`,
                                     wiki: `Hope_chest`
                                 },
-                                `was a piece of furniture that contained the various linens stored by a young woman in preparation for married life.`
-                            ]
+                                `was a piece of furniture that contained the various linens stored by a young woman in preparation for married life. By keeping my feelings of hopelessness close to my literal chest, I was also sealing my figurative hope chest.`
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
                         }
                     }
                 ]
@@ -672,20 +698,24 @@ module.exports = {
                     `Her lispy kiss unlucky for this`,
                     {
                         anchor: `chimney sweep,`,
-                        annotation: {
-                            description: [
-                                `British tradition holds that a kiss from a`,
-                                {
-                                    anchor: `chimney sweep`,
-                                    wiki: `Chimney_sweep`
-                                },
-                                `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, for themselves only a lifetime of ill health awaited. Similarly, any kiss blown from Mara on her wedding day would only highlight my misfortune of not being with her.`
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `British tradition holds that a kiss from a`,
+                                    {
+                                        anchor: `chimney sweep`,
+                                        wiki: `Chimney_sweep`
+                                    },
+                                    `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, for themselves only a lifetime of ill health awaited. Similarly, any kiss blown from Mara on her wedding day would only highlight my misfortune of not being with her.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
                             },
-                            portal: `chimney_sweep`
-                        }
+                            {
+                                portal: `chimney_sweep`
+                            }
+                        ]
                     }
                 ]
             },
@@ -701,10 +731,10 @@ module.exports = {
                                     anchor: `indentured servants`,
                                     wiki: `Indentured_servant`
                                 },
-                                `at a young age. Similarly, given the years that must pass in servitude to my five-year plans before I can be my own person again, I am effectively "in dentures" already, and thus unable to speak.`
+                                `at a young age. Similarly, given the years that had to pass in servitude to my five-year plans before I could be my own person again, I was effectively "in dentures" already, and thus unable to speak.`
                             ],
                             dotKeys: {
-                                [NARRATIVE]: true,
+                                [OBSERVATION]: true,
                                 [PUN]: true
                             }
                         }
@@ -719,8 +749,9 @@ module.exports = {
                     {
                         anchor: `bade them to fare well,`,
                         annotation: {
-                            description: `Or else, I bade "them two" farewell.`,
+                            description: `Jacob was my friend, of course, and I was happy that he had found Mara. But I also wasn't happy about sticking around. So as they exchanged their vows, I silently offered one of my own, and bade them "two farewell."`,
                             dotKeys: {
+                                [NARRATIVE]: true,
                                 [PUN]: true
                             }
                         }
@@ -745,9 +776,8 @@ module.exports = {
                     {
                         anchor: `world's a naked baby,`,
                         annotation: {
-                            description: `At some point, I realised that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can largely be understood by stepping into people's shoes and recognising their desires and motives, no less than the history of the world can be known by reading books.`,
+                            description: `At some point, I realised that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can be understood by reading them closely, no differently than bodies of knowledge can be absorbed through study.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
@@ -768,7 +798,7 @@ module.exports = {
                 lyric: {
                     anchor: `to have a merry ol' laugh.`,
                     annotation: {
-                        description: `Or else, "to have a Mara you'll laugh."`,
+                        description: `Or else, to "have a Mara you'll laugh."`,
                         dotKeys: {
                             [PUN]: true
                         }
@@ -796,9 +826,9 @@ module.exports = {
                     {
                         anchor: `boy who's to love her baby`,
                         annotation: {
-                            description: `If the world is just as guileless and transparent as a newborn baby, then it makes no more sense to get mad at the world than to be upset with an infant. And if a woman's list of ideal traits in a mate includes what kind of father he'll be to her child, then it makes sense that she'll judge him by how he treats the world.`,
+                            description: `It then occurred to me that if the world is as guileless as a newborn baby, then it makes no more sense to get mad at the world than to be upset with an infant. And if a woman's list of ideal traits in a mate includes what kind of father he'll be to her child, then it makes sense that she'll judge him by how he treats the world.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -828,7 +858,26 @@ module.exports = {
                             }
                         }
                     },
-                    `it's up to me to be alert;`
+                    `it's up to me to`,
+                    {
+                        anchor: `be alert;`,
+                        annotation: {
+                            description: [
+                                `It was no mystery why the situation with Mara transpired as it had. It's never a mystery how`,
+                                {
+                                    emphasis: `anything`
+                                },
+                                `plays out the way it does. I found this thought empowering, because I didn't need to know every little thing all at once. I just needed to know that they're knowable when I`,
+                                {
+                                    emphasis: `do`
+                                },
+                                `want to know about them. And with that knowledge, I was now free to choose where to go next.`
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
+                        }
+                    }
                 ]
             },
             {
@@ -883,10 +932,13 @@ module.exports = {
                                 {
                                     italic: `Bobtail,`
                                 },
-                                `my ambitious magnum opus, now conceived as a double concept album.`
+                                `my ambitious magnum opus, now conceived as the`,
+                                {
+                                    italic: `Ulysses`
+                                },
+                                `of rock albums.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [NARRATIVE]: true
                             }
                         }
@@ -923,9 +975,9 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `sort out past and present tense`,
-            workedHours: 0,
-            neededHours: 3
+            taskName: `tenses and categorisation`,
+            workedHours: 5,
+            neededHours: 5
         },
         {
             taskName: `work out narrative order`,

@@ -380,7 +380,7 @@ module.exports = {
                         anchor: `"Joyce" oblivious`,
                         annotation: {
                             description: [
-                                `Of course, not knowing that I couldn't be the next Joyce is precisely why I dared to try. The idea began to congeal in my head that my epic masterpiece could do for rock music what`,
+                                `Of course, not knowing that I couldn't be the next Joyce is precisely why I dared to try. The idea began to congeal in my head that I could do for rock music what`,
                                 {
                                     italic: `Ulysses`
                                 },
