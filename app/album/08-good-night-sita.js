@@ -638,15 +638,15 @@ module.exports = {
                         anchor: `understudy sought`,
                         annotation: {
                             description: [
-                                `In theatre, an`,
+                                `Dating as a low-status male felt comparable to being an`,
                                 {
-                                    anchor: `understudy`,
+                                    anchor: `understudy,`,
                                     wiki: `Understudy`
                                 },
-                                `learns the lines of a regular performer in order to serve as a replacement on short notice. Dating as a low-status male felt comparable, as I undertook all of the same preparation yet was rewarded with almost none of the action. I finally accepted that I had to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`
+                                `a performer in theatre who serves as a replacement on short notice, as I undertook all of the same preparation yet was rewarded with almost none of the action. I finally accepted that I had to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -675,9 +675,9 @@ module.exports = {
                     {
                         anchor: `learn to shotgun`,
                         annotation: {
-                            description: `I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`,
+                            description: `I had come to adopt the shotgun approach to dating, which involves hitting on anyone at any moment, and works because math works. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -697,7 +697,7 @@ module.exports = {
                         annotation: {
                             description: `With every witty remark I made that got a good response, I would be sure to use it again on the next woman I dated, much like an actor reprising a role. In turn, the notion that this was all just an act helped lessen the sting of rejection.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -710,17 +710,12 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `The band`,
-                            {
-                                anchor: `Television`,
-                                wiki: `Television_(band)`
-                            },
-                            `are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to`,
+                            `The band Television are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to`,
                             {
                                 anchor: `Marquee Moon`,
                                 wiki: `Marquee_Moon`
                             },
-                            `on repeat to gather ideas. The "tumbling triplets" lick here was stolen note for note from the song "Friction."`
+                            `on repeat to gather ideas. The lick of tumbling triplets here was stolen note for note from the song "Friction."`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -733,6 +728,8 @@ module.exports = {
         [
             {
                 time: 79,
+
+                // TODO Something here
                 lyric: `though each kind new ultimatum`
             },
             {
@@ -762,14 +759,14 @@ module.exports = {
                         anchor: `died unfinished`,
                         annotation: {
                             description: [
-                                `I learned to accept rejection by treating it as subject matter for new songs. But it then logically follows that a life filled with rejection can`,
+                                `I learned to accept rejection by treating it as subject matter for new songs. But it then logically followed that a life filled with rejection can`,
                                 {
                                     emphasis: `itself`
                                 },
-                                `be a work of art, albeit one that might not be completed before its raw materials run out.`
+                                `be a work of art.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -794,7 +791,7 @@ module.exports = {
                         annotation: {
                             description: `I kept a pile of scented strips torn from cologne advertisements in old magazines, and would rub several on my wrists right before a date.`,
                             dotKeys: {
-                                [BACKSTORY]: true
+                                [NARRATIVE]: true
                             }
                         }
                     }
@@ -817,7 +814,7 @@ module.exports = {
                     {
                         anchor: `single go-karts`,
                         annotation: {
-                            description: `On my last date with Sita, we visited a go-kart raceway. There were twin go-karts available that were intended to seat a parent and child side by side. I asked Sita if she wanted to ride one together. She politely declined.`,
+                            description: `On this most recent date with Sita, we visited a go-kart raceway. They had twin go-karts available that were intended to seat a parent and child side by side. I asked Sita if she wanted to ride one together. She politely declined.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -832,9 +829,8 @@ module.exports = {
                     {
                         anchor: `endless flowchart`,
                         annotation: {
-                            description: `While I never actually drew out a flowchart for how to conduct oneself on a date, I liked to believe that it was possible, as it could then guarantee the best results for any given scenario. Of course, there is the danger of getting trapped in an infinite loop.`,
+                            description: `I never actually drew out a diagram that shows the best choice to make for any given scenario that might crop up on a date, but it was nice to believe that such a thing could exist. Of course, if there are no good choices, and all of them lead back to starting over from the beginning, then there is the danger of getting trapped in an infinite loop.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -858,13 +854,17 @@ module.exports = {
                     `and her`,
                     {
                         anchor: `veggie wishbone's short end`,
-                        annotation: {
-                            description: `Sita took me to a vegetarian restaurant where she ordered a dish resembling a portion of chicken, complete with sesame-stick wishbone. When we cracked it, Sita got the longer end. Needless to say, my wish was not granted.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `Afterwards, Sita took me to a vegetarian restaurant, where I ordered a dish that resembled a portion of chicken, down to its sesame-stick wishbone. When we cracked the wishbone, Sita got the longer end. Needless to say, my wish was not granted.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `veggie_wishbone`
-                        }
+                            {
+                                portal: `veggie_wishbone`
+                            }
+                        ]
                     }
                 ]
             },
@@ -883,11 +883,10 @@ module.exports = {
                     {
                         anchor: `dummy steering wheel`,
                         annotation: {
-                            description: `The steering wheel on the passenger side of a twin go-kart serves no purpose other than a child's imagination. Similarly, even as I knew that whatever semblance of control I could ever feel on a date was an illusion, there was too much at stake for me to let go and embrace spontaneity.`,
+                            description: `The twin go-karts had a second steering wheel on the passenger side, which served no purpose other than a child's imagination. Similarly, while I knew that whatever feeling of control I had on a date was an illusion, there was too much at stake for me to let go and embrace spontaneity.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true,
-                                [REFERENCE]: true
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
                             }
                         }
                     }
@@ -971,13 +970,20 @@ module.exports = {
                 time: 123,
                 lyric: {
                     anchor: `I sigh, "Good night."`,
-                    annotation: {
-                        description: `Flustered panic takes over, and once again all my feelings go unmentioned. I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [NARRATIVE]: true
+                    annotation: [
+                        {
+                            description: `Flustered panic takes over, and once again all my feelings go unmentioned.`,
+                            dotKeys: {
+                                [NARRATIVE]: true
+                            }
+                        },
+                        {
+                            description: `I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
-                    }
+                    ]
                 }
             },
             {
@@ -1011,8 +1017,8 @@ module.exports = {
         },
         {
             taskName: `tenses and categorisation`,
-            workedHours: 0,
-            neededHours: 3
+            workedHours: 4,
+            neededHours: 4
         },
         {
             taskName: `annotations`,
