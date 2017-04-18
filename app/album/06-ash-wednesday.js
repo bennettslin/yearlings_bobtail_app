@@ -11,6 +11,7 @@ import { VERSES,
          SONGWRITING,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
+// TODO Model Catherine more after Christina, mention how we started dating under it commenced, mention Oakland.
 module.exports = {
     scenes: [
         {

@@ -1,4 +1,13 @@
-import { INSTRUMENTAL, REFRAIN, VERSES, CHORUS, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { INSTRUMENTAL,
+         REFRAIN,
+         VERSES,
+         CHORUS,
+         SONGWRITING,
+         BACKSTORY,
+         NARRATIVE,
+         OBSERVATION,
+         PUN,
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
     scenes: [
@@ -867,11 +876,11 @@ module.exports = {
                                 {
                                     emphasis: `anything`
                                 },
-                                `plays out the way it does. I found this thought empowering, because I didn't need to know every little thing all at once. I just needed to know that they're knowable when I`,
+                                `plays out the way it does. I found this thought empowering, because I didn't need to know everything all at once. I just needed to know that things are knowable when I`,
                                 {
                                     emphasis: `do`
                                 },
-                                `want to know about them. And with that knowledge, I was now free to choose where to go next.`
+                                `want to know them. And with that knowledge, I was now free to choose where to go next.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true

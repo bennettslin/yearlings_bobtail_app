@@ -4,7 +4,7 @@
 # NARRATIVE
 * Related to the general story of the song, whether past or present.
 * Good test is whether they will still get it with every other dot off.
-* Use general tense of each song, and then stick with it throughout.
+* Use general tense of each song at that particular point.
 
 # PUN
 * Words that are unrelated and have different meaning.
@@ -36,5 +36,6 @@
 # Dot categorisation
 * The two descriptions talk about mostly different things.
 * One does not naturally lead to the other.
+* One is simply a definition or reference, so can be left out if references are hidden.
 * They aren't so short that separating them would just be awkward.
 * "Also" is a good indication to separate.

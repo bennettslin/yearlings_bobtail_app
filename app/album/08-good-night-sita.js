@@ -1,15 +1,15 @@
-import { VERSES, CHORUS, POSTCHORUS, SONGWRITING, NARRATIVE, BACKSTORY, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { VERSES,
+         CHORUS,
+         POSTCHORUS,
+         SONGWRITING,
+         NARRATIVE,
+         BACKSTORY,
+         OBSERVATION,
+         PUN,
+         REFERENCE,
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: `Good Night, Sita`,
-        annotation: {
-            description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
-            dotKeys: {
-                [NARRATIVE]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -97,6 +97,15 @@ module.exports = {
     },
     totalTime: 131,
     overview: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
+    title: {
+        anchor: `Good Night, Sita`,
+        annotation: {
+            description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
+            dotKeys: {
+                [NARRATIVE]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -156,9 +165,9 @@ module.exports = {
                     {
                         anchor: `without once knowing love`,
                         annotation: {
-                            description: `The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision. If everyone thought this way, then no one could ever be in a relationship, just like no one would ever find a job if every hiring manager insisted on previous work experience.`,
+                            description: `The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision to me. If everyone thought this way, then no one could ever be in a relationship, just like no one would ever find a job if every hiring manager insisted on seeing previous work experience.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -170,7 +179,6 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        // todo: michael jackson
                         description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
                         dotKeys: {
                             [SONGWRITING]: true
@@ -203,10 +211,9 @@ module.exports = {
                                     anchor: `secret decoder ring`,
                                     wiki: `Secret_decoder_ring`
                                 },
-                                `was a toy purchased through mail that allowed children to decipher encrypted messages. It seemed like a handy thing to have on a date, as I was constantly trying to tease out hidden meanings in even the most basic conversations.`
+                                `was a toy purchased through mail that allowed children to decipher encrypted messages. It would have been handy to have on a date, since I was constantly trying to tease out hidden meanings in the most basic exchanges.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -219,36 +226,46 @@ module.exports = {
                     {
                         anchor: `Dutch courage`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
-                                {
-                                    anchor: `Dutch courage`,
-                                    wiki: `Dutch_courage`
-                                },
-                                `refers to misplaced confidence gained from alcohol. Having an older friend who faithfully plied me with cheap twelve-packs, I would down a can or two before heading out on a date.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
+                                    {
+                                        anchor: `Dutch courage`,
+                                        wiki: `Dutch_courage`
+                                    },
+                                    `refers to misplaced confidence gained from alcohol.`
+                                ]
+                            },
+                            {
+                                description: `Having an older friend who faithfully plied me with cheap twelve-packs, I had earlier downed a couple of cans, as I was wont to do before every date.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `wimped out to`,
                     {
                         anchor: `going Dutch`,
-                        annotation: {
-                            description: [
-                                `To`,
-                                {
-                                    anchor: `go Dutch`,
-                                    wiki: `Going_Dutch`
-                                },
-                                `means to split the cost of a meal. Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This always made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `To`,
+                                    {
+                                        anchor: `go Dutch`,
+                                        wiki: `Going_Dutch`
+                                    },
+                                    `means to split the cost of a meal, since stinginess was another intrinsic failing ascribed to the Dutch.`
+                                ]
+                            },
+                            {
+                                description: `Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -268,23 +285,27 @@ module.exports = {
                 lyric: [
                     {
                         anchor: `nor a barnacle`,
-                        annotation: {
-                            description: [
-                                {
-                                    anchor: `"Nora Barnacle"`,
-                                    wiki: `Nora_Barnacle`
-                                },
-                                `was the wife of James Joyce and the inspiration for his character Molly Bloom, whose interior monologue in`,
-                                {
-                                    italic: `Ulysses`
-                                },
-                                `in turn served as my inspiration for this song.`
-                            ],
-                            dotKeys: {
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `"Nora Barnacle"`,
+                                        wiki: `Nora_Barnacle`
+                                    },
+                                    `was the wife of James Joyce and the inspiration for his character Molly Bloom, whose interior monologue in`,
+                                    {
+                                        italic: `Ulysses`
+                                    },
+                                    `in turn served as my inspiration for this song.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
                             },
-                            portal: `barnacle`
-                        }
+                            {
+                                portal: `barnacle`
+                            }
+                        ]
                     },
                     `minds`
                 ]
@@ -293,13 +314,21 @@ module.exports = {
                 time: 22,
                 lyric: {
                     anchor: `swept in unchartable tides`,
-                    annotation: {
-                        description: `Stencilled above many storm drains in the Bay Area is a sign that reads, "No Dumping, Drains to Ocean." The constant peril of being steered in directions for which I was unprepared has kept me on edge throughout this date, as usual. But a nearby storm drain reminds me that many things, including sponge and barnacle larvae, are regularly carried by the current to unknown regions, and they don't sweat it.`,
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [NARRATIVE]: true
+                    annotation: [
+                        {
+                            description: `Stencilled above many storm drains in the Bay Area is a sign that reads, "No Dumping, Drains to Ocean."`,
+                            dotKeys: {
+                                [REFERENCE]: true
+                            }
+                        },
+                        {
+                            description: `The constant peril of being steered in directions for which I'm ill-prepared has kept me on edge throughout this date, as usual. But a nearby storm drain reminds me that many things, including sponge and barnacle larvae, are regularly carried by the current to unknown regions, and they don't sweat it.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
                         }
-                    }
+                    ]
                 }
             },
             {
@@ -309,9 +338,10 @@ module.exports = {
                     {
                         anchor: `always know to pry`,
                         annotation: {
-                            description: `After all, none of my friends sweat the risk of being seen as "sponges" either. They just keep pushing forward, showing curiosity by pressing for details, the way a starfish pries open barnacles as it glides across the seafloor.`,
+                            description: `After all, none of my friends sweat the risk of being seen as a "sponge" either. Confident that they're just as much there to be won over, they show curiosity by pressing their date for details, the way a starfish will pry open an oyster resting on the seafloor.`,
                             dotKeys: {
-                                [BACKSTORY]: true
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
                             }
                         }
                     }
@@ -323,19 +353,27 @@ module.exports = {
                     `for the`,
                     {
                         anchor: `innermost matryoshka's`,
-                        annotation: {
-                            description: [
-                                {
-                                    anchor: `Matryoshkas`,
-                                    wiki: `Matryoshka_doll`
-                                },
-                                `are Russian nesting dolls placed one inside another in decreasing size. Lessons learned from mistakes made with one woman can be applied to the next, so each date felt like prying open one doll to get to another, with the hope of eventually reaching the last one that doesn't turn out hollow.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `On our first date, I took Sita to a natural history museum with many ethnological exhibits. We spent some time gawking at the wooden dolls from Russia known as`,
+                                    {
+                                        anchor: `matryoshkas,`,
+                                        wiki: `Matryoshka_doll`
+                                    },
+                                    `which nest one inside another.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
+                                description: `Mistakes made with one woman still offered lessons to apply towards the next, so each date felt like prying open one nesting doll to get to another, with the ultimate hope of reaching the last one that doesn't turn out hollow.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -356,7 +394,7 @@ module.exports = {
                     {
                         anchor: `crack up another doll`,
                         annotation: {
-                            description: `Also in the idiomatic sense of making someone laugh. A friend advised me that if I could keep this up for the entire date, then I would be golden. The problem is that much of my humour was deadpan.`,
+                            description: `A friend once advised me that if I can keep a woman "cracking up" at my jokes all night, then I'll always be golden. Not being very funny, I settled on some weird combination of clever quips and goofy postures.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [PUN]: true
@@ -371,20 +409,22 @@ module.exports = {
                     `to find the`,
                     {
                         anchor: `chrysalis unchristened`,
-                        annotation: {
-                            description: [
-                                `A`,
-                                {
-                                    anchor: `chrysalis`,
-                                    wiki: `Pupa`
-                                },
-                                `is a butterfly that has not yet matured into an adult. It seemed that the trick to dating was to look for that rare woman inexperienced enough not to be turned off by my own lack of experience. Of course, every other low-status male had the same idea.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `As we glided past a display on the lifecycle of butterflies, it occurred to me that what I sought was a`,
+                                    {
+                                        anchor: `chrysalis.`,
+                                        wiki: `Pupa`
+                                    },
+                                    `That is, a rare specimen of woman unworldly enough not to be turned off by my own lack of experience. Unfortunately, every other low-status male had the same idea.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `to all`
                 ]
@@ -397,14 +437,15 @@ module.exports = {
                         anchor: `aping jaw`,
                         annotation: {
                             description: [
+                                `We paused for a minute to learn about`,
                                 {
-                                    anchor: `Piltdown Man`,
+                                    anchor: `Piltdown Man,`,
                                     wiki: `Piltdown_Man`
                                 },
-                                `was a paleontological hoax in which the oversized jaw of an orangutan was attached to the cranium of a modern human. I felt like a comparable fraud, as the things that came out of my mouth exaggerated the volume of things in my head.`
+                                `a paleontological hoax in which the oversized jaw of an orangutan was attached to the cranium of a modern human. I was a comparable fraud, as the things that came out of my mouth were meant to inflate the perceived volume of my head.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -414,18 +455,7 @@ module.exports = {
             },
             {
                 time: 40,
-                lyric: [
-                    `swaggering down these barren`,
-                    {
-                        anchor: `exhibit halls`,
-                        annotation: {
-                            description: `On my first date with Sita at a natural history museum, we started in the hall of marine life, then made our way to a gallery of Native American cultures.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        }
-                    }
-                ]
+                lyric: `swaggering down these barren exhibit halls`
             },
             {
                 unitMap: true,
@@ -435,36 +465,47 @@ module.exports = {
         [
             {
                 time: 45,
+                // TODO Native American
                 lyric: `but totems so revered`
             },
             {
                 time: 47,
                 lyric: [
-                    `when defined by`,
+                    `when`,
                     {
-                        anchor: `ambrosia beers`,
-                        annotation: {
-                            description: [
-                                {
-                                    anchor: `Ambrosia`,
-                                    wiki: `Ambrosia`
-                                },
-                                `was the food of the Greek gods, just as beer made me feel omnipotent. The writer`,
-                                {
-                                    anchor: `"Ambrose Bierce"`,
-                                    wiki: `Ambrose_Bierce`
-                                },
-                                `wrote a collection of satirical definitions called`,
-                                {
-                                    italic: `The Devil's Dictionary.`
-                                },
-                                `His brand of cynical wit aptly reflected my sense of humour during this time.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [PUN]: true
+                        anchor: `defined by ambrosia beers`,
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Ambrosia`,
+                                        wiki: `Ambrosia`
+                                    },
+                                    `was the food of the Greek gods, just as beer made me feel omnipotent.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `American author`,
+                                    {
+                                        anchor: `"Ambrose Bierce"`,
+                                        wiki: `Ambrose_Bierce`
+                                    },
+                                    `wrote a collection of satirical definitions called`,
+                                    {
+                                        italic: `The Devil's Dictionary.`
+                                    },
+                                    `My sense of humour at the time was an approximation of his brand of cynical wit.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -477,7 +518,8 @@ module.exports = {
                         annotation: {
                             description: `A few hours into a date, my buzz would wear off, and I would realise that I'd just constructed an elaborate backstory that could only topple under scrutiny, like a totem pole carved from a stack of stumps rather than a single trunk.`,
                             dotKeys: {
-                                [BACKSTORY]: true
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
                             }
                         }
                     }
@@ -498,19 +540,22 @@ module.exports = {
                 lyric: [
                     {
                         anchor: `pidgin palaver`,
-                        annotation: {
-                            description: [
-                                `A`,
-                                {
-                                    anchor: `pidgin`,
-                                    wiki: `Pidgin`
-                                },
-                                `is an impromptu language intended solely to facilitate trade between colonists and natives. It's also a good analogy for my date conversations at the time.`
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Stopping to rest our feet in a gallery devoted to Native American history, we learned about the development of`,
+                                    {
+                                        anchor: `pidgins,`,
+                                        wiki: `Pidgin`
+                                    },
+                                    `or impromptu languages intended solely to facilitate trade between colonists and natives. Such exchanges were necessarily peppered with overt expressions of goodwill to make up for inevitable miscommunication, which also aptly describes my first date conversations with Sita.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `exchanged`
                 ]
@@ -526,10 +571,10 @@ module.exports = {
                     {
                         anchor: `disastrous play`,
                         annotation: {
-                            description: `On another one of our dates, Sita invited me to see her friend perform in a play. In hindsight, it probably wasn't bad. My impression of the night was just coloured by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
+                            description: `On our second date, Sita invited me to see her friend perform in a play, which I ended up hating. In retrospect, it probably wasn't bad. My impression of the night was just coloured by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
                             }
                         }
                     }
@@ -542,9 +587,9 @@ module.exports = {
                     {
                         anchor: `lone ringing phone`,
                         annotation: {
-                            description: `The play began with the theatre going pitch black. As the audience fell to a hush, a phone started ringing, and it wasn't immediately clear to me that the sound came from the stage.`,
+                            description: `The play began with the theatre going pitch black. As the audience fell to a hush, a phone started ringing, and it wasn't immediately clear that the sound came from the stage.`,
                             dotKeys: {
-                                [BACKSTORY]: true
+                                [NARRATIVE]: true
                             }
                         }
                     }
@@ -572,7 +617,7 @@ module.exports = {
                     {
                         anchor: `tactic is to stall`,
                         annotation: {
-                            description: `I was advised by friends to wait three days before calling back, and yet it was always agony when Sita did the same.`,
+                            description: `I was advised by friends to wait three days before calling a woman back, and yet it was always agony when she invariably did the same.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -965,7 +1010,7 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `sort out past and present tense`,
+            taskName: `tenses and categorisation`,
             workedHours: 0,
             neededHours: 3
         },
