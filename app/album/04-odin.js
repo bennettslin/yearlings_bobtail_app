@@ -632,7 +632,6 @@ module.exports = {
                                     [BACKSTORY]: true
                                 }
                             },
-                            // TODO: Pun
                             {
                                 description: [
                                     `In Greek mythology,`,
@@ -641,7 +640,10 @@ module.exports = {
                                         wiki: `Paris_(mythology)`
                                     },
                                     `was the prince of Troy, whose elopement with Helen of Sparta caused the Trojan War.`
-                                ]
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
                             }
                         ]
                     }

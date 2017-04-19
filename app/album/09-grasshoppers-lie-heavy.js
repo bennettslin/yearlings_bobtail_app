@@ -14,7 +14,6 @@ import { REFRAIN,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 // TODO: Missing portal for Look Back in Anger. Is it "bell"?
-
 module.exports = {
     /**
      * All of these scenes repeat twice.
@@ -551,8 +550,19 @@ module.exports = {
             },
             {
                 time: 63,
-                // TODO: Depression
-                lyric: `You cried for one to sit; it kissed your ear.`
+                lyric: [
+                    `You`,
+                    {
+                        anchor: `cried for one`,
+                        annotation: {
+                            description: `Despite the air of mystery and nonchalance that I tried to cultivate during those years, I really was just another lonely kid longing for closeness.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        }
+                    },
+                    `to sit; it kissed your ear.`
+                ]
             },
             {
                 time: 67,
@@ -561,7 +571,7 @@ module.exports = {
                     {
                         anchor: `show played in mimes,`,
                         annotation: {
-                            description: `The world of dating was awash in hidden cues and gestures that no one could be expected to recognise or understand, as far as I knew. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.`,
+                            description: `The world of dating was awash in hidden cues and gestures that, as far as I knew, no one could be expected to recognise or understand. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -573,8 +583,18 @@ module.exports = {
             },
             {
                 time: 72,
-                // TODO
-                lyric: `Then just like the drift, she disappeared…`
+                lyric: [
+                    `Then just like the drift,`,
+                    {
+                        anchor: `she disappeared…`,
+                        annotation: {
+                            description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wished to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But in truth, I was so dejected and embarrassed that I had no desire to see her again.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        }
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -1033,17 +1053,16 @@ module.exports = {
                 lyric: [
                     `Why does she play`,
                     {
-                        // TODO: Sita and my depression.
                         anchor: `bright to your gloom`,
                         annotation: [
                             {
-                                description: `While I relied on humour and wit to mask my cynicism, Sita's positive outlook was genuinely heartfelt. What I stood to gain from her was obvious; less so was what she stood to gain from me.`,
+                                description: `When we first met, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament and cynical outlook. But as our friendship grew, I came to learn that her cheery exterior masked a severe depression, which gave me an opening to win her over with simple, kind gestures.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
                             },
                             {
-                                description: `Or else, "play bride to your groom."`,
+                                description: `Or else, "bride to your groom."`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
@@ -1430,8 +1449,8 @@ module.exports = {
         },
         {
             taskName: `tenses and categorisation`,
-            workedHours: 4,
-            neededHours: 4
+            workedHours: 6,
+            neededHours: 6
         },
         {
             taskName: `annotations`,

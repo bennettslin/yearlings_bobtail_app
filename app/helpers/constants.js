@@ -300,9 +300,9 @@ module.exports = {
     ALL_DOT_KEYS: [
         NARRATIVE,
         BACKSTORY,
+        OBSERVATION,
         PUN,
         REFERENCE,
-        OBSERVATION,
         SONGWRITING,
         PORTAL,
         AFTERWORD
@@ -323,12 +323,12 @@ module.exports = {
     DOT_DESCRIPTIONS: {
         [NARRATIVE]: 'the story',
         [BACKSTORY]: 'backstory description',
+        [OBSERVATION]: 'my two cents',
         [PUN]: 'Of both the "literary" and "bad" variety.',
-        [SONGWRITING]: 'music description',
         [REFERENCE]: 'wiki description',
+        [SONGWRITING]: 'music description',
         [PORTAL]: 'portal description',
-        [AFTERWORD]: 'after the album',
-        [OBSERVATION]: 'my two cents'
+        [AFTERWORD]: 'after the album'
     },
 
     FLASHBACK_TO_PORTAL_PREFIX: 'flashback to',
