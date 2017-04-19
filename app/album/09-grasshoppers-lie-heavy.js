@@ -179,21 +179,15 @@ module.exports = {
         anchor: `Grasshoppers Lie Heavy`,
         annotation: [
             {
-                // TODO
                 description: [
-                    `I was reading a lot of`,
-                    {
-                        anchor: `Philip K. Dick`,
-                        wiki: `Philip_K._Dick`
-                    },
-                    `novels during this time, including`,
+                    `During this time, I was reading a lot of Philip K. Dick novels such as`,
                     {
                         italic: {
                             anchor: `The Man in the High Castle,`,
                             wiki: `The_Man_in_the_High_Castle`
                         }
                     },
-                    `in which the Axis powers had won World War II. Curiously, the characters in this alternate history are engrossed in their own alternate history novel called`,
+                    `which tells of an alternate history in which the Axis powers had won World War II. Curiously, the characters in this book are engrossed in their own alternate history novel called`,
                     {
                         italic: `The Grasshopper Lies Heavy,`
                     },
