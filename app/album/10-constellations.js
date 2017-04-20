@@ -163,33 +163,44 @@ module.exports = {
                 time: 4,
                 lyric: [
                     {
-                        anchor: `reverends,`,
-                        annotation: {
-                            description: [
-                                {
-                                    italic: {
-                                        anchor: `Finnegans Wake,`,
-                                        wiki: `Finnegans_Wake`
-                                    }
-                                },
-                                `James Joyce's ambitious final novel, opens with the line "riverrun, past Eve and Adam's," so I figured I would start there as well. I was the experienced Robitussin user of the group, having read of its narcotic effects in Jim Carroll's`,
-                                {
-                                    italic: {
-                                        anchor: `The Basketball Diaries`,
-                                        wiki: `The_Basketball_Diaries`
-                                    }
-                                },
-                                `earlier that summer. So the others follow my lead in treating it as a mystical journey, and we tread with "reverence" through the UCLA campus.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        anchor: `reverends, paused`,
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        italic: {
+                                            anchor: `Finnegans Wake,`,
+                                            wiki: `Finnegans_Wake`
+                                        }
+                                    },
+                                    `James Joyce's ambitious final novel, opens with the line "riverrun, past Eve and Adam's," so I figured I would start there as well.`
+                                ],
+                                dotKeys: {
+                                    [SONGWRITING]: true,
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `I was the experienced Robitussin user of the group, having read of its narcotic effects in Jim Carroll's`,
+                                    {
+                                        italic: {
+                                            anchor: `The Basketball Diaries`,
+                                            wiki: `The_Basketball_Diaries`
+                                        }
+                                    },
+                                    `earlier that summer. So the others follow my lead in treating it as a mystical journey, and we tread with "reverence" through the UCLA campus.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     {
-                        anchor: `paused stiff in tandem.`,
+                        anchor: `stiff in tandem.`,
                         annotation: {
                             description: `Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.`,
                             dotKeys: {
@@ -1291,20 +1302,24 @@ module.exports = {
                         lyric: {
                             italic: {
                                 anchor: `sunk in tarpid lies!`,
-                                annotation: {
-                                    description: [
-                                        {
-                                            anchor: `Tar pits`,
-                                            wiki: `Tar_pit`
-                                        },
-                                        `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit" is where my mastodon "lies," just as I have "sunk in torpid lies."`
-                                    ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [PUN]: true
+                                annotation: [
+                                    {
+                                        description: [
+                                            {
+                                                anchor: `Tar pits`,
+                                                wiki: `Tar_pit`
+                                            },
+                                            `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit" is where my mastodon "lies," just as I have "sunk in torpid lies."`
+                                        ],
+                                        dotKeys: {
+                                            [NARRATIVE]: true,
+                                            [PUN]: true
+                                        }
                                     },
-                                    portal: `sunken_tirpitz`
-                                }
+                                    {
+                                        portal: `sunken_tirpitz`
+                                    }
+                                ]
                             }
                         }
                     }
@@ -1665,11 +1680,11 @@ module.exports = {
                         anchor: `"Rejoyce!" bellow the`,
                         annotation: {
                             description: [
-                                `"'Rejoyce!' bellow the reverends." Joyce wrote the last line of`,
+                                `Or rather, "'Rejoice!' bellow the reverends." Joyce wrote the last line of`,
                                 {
                                     italic: `Finnegans Wake`
                                 },
-                                `to wrap back onto the first, so I indulged in the same conceit. As I'm stuck watching public access televangelists, I observe that every religion's early spirit eventually degrades into orthodoxy and routine, much as it does for us as individuals. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`
+                                `to wrap back onto the first, so I indulged in the same conceit. As I'm stuck watching early-morning televangelists, I observe that every religion's early spirit eventually degrades into orthodoxy and routine, much as it does for us as individuals. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
