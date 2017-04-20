@@ -3,26 +3,22 @@
  * not being clear and being too obvious.
  */
 
- import { OVERLAP, VERSES, PRECHORUS, CHORUS, BRIDGE, RESPONSE, BACKSTORY, INSTRUMENTAL, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING, DOT_STANZA_CONSTANT } from '../helpers/constants'
+ import { OVERLAP,
+          VERSES,
+          PRECHORUS,
+          CHORUS,
+          BRIDGE,
+          RESPONSE,
+          BACKSTORY,
+          INSTRUMENTAL,
+          NARRATIVE,
+          OBSERVATION,
+          PUN,
+          REFERENCE,
+          SONGWRITING,
+          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: `Constellations!`,
-        keepEndCharacter: true,
-        annotation: {
-            description: [
-                `The best part about Robitussin is the`,
-                {
-                    anchor: `closed-eye hallucinations,`,
-                    wiki: `Closed-eye_hallucination`
-                },
-                `which are vivid images that seem to be projected onto the backdrop of one's eyelids. If they ever get intense enough to become frightening, one simply opens one's eyes, and they instantly go away. At the time, I called them "constellations."`
-            ],
-            dotKeys: {
-                [OBSERVATION]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -132,6 +128,23 @@ module.exports = {
     },
     totalTime: 180,
     overview: `One night, I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Mongols and Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
+    title: {
+        anchor: `Constellations!`,
+        keepEndCharacter: true,
+        annotation: {
+            description: [
+                `The best part about Robitussin is the`,
+                {
+                    anchor: `closed-eye hallucinations,`,
+                    wiki: `Closed-eye_hallucination`
+                },
+                `which are vivid images that seem to be projected onto the backdrop of one's eyelids. If they ever get intense enough to become frightening, one simply opens one's eyes, and they instantly go away. At the time, I called them "constellations."`
+            ],
+            dotKeys: {
+                [OBSERVATION]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
