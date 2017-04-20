@@ -1,4 +1,14 @@
-import { INSTRUMENTAL, REFRAIN, VERSES, BRIDGE, SONGWRITING, BACKSTORY, NARRATIVE, PUN, OBSERVATION, REFERENCE, DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { INSTRUMENTAL,
+         REFRAIN,
+         VERSES,
+         BRIDGE,
+         SONGWRITING,
+         BACKSTORY,
+         NARRATIVE,
+         PUN,
+         OBSERVATION,
+         REFERENCE,
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
     title: {

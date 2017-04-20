@@ -1,4 +1,15 @@
-import { VERSES, PRECHORUS, CHORUS, AFTERWORD, BACKSTORY, INSTRUMENTAL, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING, DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { VERSES,
+         PRECHORUS,
+         CHORUS,
+         AFTERWORD,
+         BACKSTORY,
+         INSTRUMENTAL,
+         NARRATIVE,
+         OBSERVATION,
+         PUN,
+         REFERENCE,
+         SONGWRITING,
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
     scenes: [

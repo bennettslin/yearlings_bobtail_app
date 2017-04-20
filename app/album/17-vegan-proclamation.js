@@ -1,4 +1,15 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, INSTRUMENTAL, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, SONGWRITING, DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { REFRAIN,
+         VERSES,
+         PRECHORUS,
+         CHORUS,
+         INSTRUMENTAL,
+         BACKSTORY,
+         NARRATIVE,
+         OBSERVATION,
+         PUN,
+         REFERENCE,
+         SONGWRITING,
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
     title: {

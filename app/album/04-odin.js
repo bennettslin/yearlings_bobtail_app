@@ -1,4 +1,20 @@
-import { LEFT, RIGHT, OVERLAP, REFRAIN, VERSES, PRECHORUS, CHORUS, BRIDGE, INSTRUMENTAL, AFTERWORD, SONGWRITING, BACKSTORY, NARRATIVE, OBSERVATION, PUN, REFERENCE, DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { LEFT,
+         RIGHT,
+         OVERLAP,
+         REFRAIN,
+         VERSES,
+         PRECHORUS,
+         CHORUS,
+         BRIDGE,
+         INSTRUMENTAL,
+         AFTERWORD,
+         SONGWRITING,
+         BACKSTORY,
+         NARRATIVE,
+         OBSERVATION,
+         PUN,
+         REFERENCE,
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
     scenes: [

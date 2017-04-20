@@ -1,4 +1,11 @@
-import { INSTRUMENTAL, VERSES, CHORUS, SONGWRITING, NARRATIVE, BACKSTORY, OBSERVATION, DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { INSTRUMENTAL,
+         VERSES,
+         CHORUS,
+         SONGWRITING,
+         NARRATIVE,
+         BACKSTORY,
+         OBSERVATION,
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
     title: {

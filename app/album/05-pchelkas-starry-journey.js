@@ -1,4 +1,17 @@
-import { REFRAIN, VERSES, PRECHORUS, CHORUS, POSTCHORUS, BRIDGE, INSTRUMENTAL, RESPONSE, SONGWRITING, OBSERVATION, BACKSTORY, REFERENCE, PUN, DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { REFRAIN,
+         VERSES,
+         PRECHORUS,
+         CHORUS,
+         POSTCHORUS,
+         BRIDGE,
+         INSTRUMENTAL,
+         RESPONSE,
+         SONGWRITING,
+         OBSERVATION,
+         BACKSTORY,
+         REFERENCE,
+         PUN,
+         DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
