@@ -119,7 +119,7 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 207,
-    overview: `Willy was a mentally disabled man who wandered our Los Angeles neighbourhood collecting recyclables for a living. One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
+    overview: `Willy the Cocoa was a mentally disabled man who wandered our neighbourhood collecting recyclables for a living. One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
     title: {
         anchor: 'Willy the Cocoa',
         annotation: {
@@ -181,7 +181,7 @@ module.exports = {
                                     anchor: `San Fernando Valley`,
                                     wiki: `San_Fernando_Valley`
                                 },
-                                `of Southern California, where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides. In the mirages created by the summer heat, reflections of these mountains naturally point inwards, as if their jagged peaks had caused the cracks in the asphalt.`
+                                `area of Los Angeles, where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides. In the mirages created by the summer heat, reflections of these mountains naturally point inwards, as if their jagged peaks had caused the cracks in the asphalt.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,

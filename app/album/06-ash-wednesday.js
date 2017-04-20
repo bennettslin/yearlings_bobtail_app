@@ -11,7 +11,6 @@ import { VERSES,
          SONGWRITING,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
-// TODO Model Catherine more after Christina, mention how we started dating under it commenced, mention Oakland.
 module.exports = {
     scenes: [
         {
@@ -93,7 +92,7 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 163,
-    overview: `In college, I dated a nice Catholic girl named Catherine, who didn't think much of my lack of reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
+    overview: `In college, I met my first girlfriend. Catherine was a nice Catholic girl and former valedictorian, who didn't think much of my nonexistent reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
     title: {
         anchor: `Ash Wednesday`,
         annotation: {
@@ -121,21 +120,48 @@ module.exports = {
                                     anchor: `"O Captain! My Captain!"`,
                                     wiki: `O_Captain!_My_Captain!`
                                 },
-                                `after hearing of Abraham Lincoln's assassination. I don't remember why I chose to reference it. I was probably whimpering "Oh Catherine" under my breath a lot right after the breakup.`
+                                `upon hearing of Abraham Lincoln's assassination.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [PUN]: true
                             },
                         }
                     },
-                    `our futile trip is done`
+                    `our`,
+                    {
+                        anchor: `futile trip`,
+                        annotation: {
+                            description: [
+                                `I headed for college in the`,
+                                {
+                                    anchor: `San Francisco Bay Area,`,
+                                    wiki: `San_Francisco_Bay_Area`
+                                },
+                                `where I met Catherine in a class on Western folklore.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        },
+                        todo: true
+                    },
+                    `is done`
                 ]
             },
             {
                 time: 6,
                 lyric: [
-                    `where it commenced: in my`,
+                    {
+                        anchor: `where it commenced:`,
+                        annotation: {
+                            description: `My relationship with Catherine began much in the same way as my friendship with Sasha had a decade earlier. That is, I latched onto the first cute person to show me any small kindness in a new environment, then tried to make myself indispensable to their everyday routines.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        },
+                        todo: true
+                    },
+                    `in my`,
                     {
                         anchor: `bookless room,`,
                         annotation: {
@@ -849,8 +875,8 @@ module.exports = {
         },
         {
             taskName: `categorisation`,
-            workedHours: 3,
-            neededHours: 3
+            workedHours: 5,
+            neededHours: 5
         },
         {
             taskName: `annotations`,

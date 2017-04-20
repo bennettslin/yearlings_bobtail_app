@@ -210,21 +210,12 @@ module.exports = {
                 time: 0,
                 lyric: {
                     italic: [
-                        {
-                            anchor: `L.A. to the Bay,`,
-                            properNoun: true,
-                            annotation: {
-                                description: `After high school, I hightailed it out of Los Angeles to attend college in the San Francisco Bay Area.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
-                        },
+                        `L.A. to the Bay,`,
                         {
                             anchor: `pompous autumn waits.`,
                             annotation: [
                                 {
-                                    description: `In high school, I soldiered on with the same gutless reputation to which I had tied myself in middle school. It just wasn't possible to become a completely different person while surrounded by all the same classmates. But in my head I was crafting a brand new persona, defined by artistic pretense, that was raring to go at the first opportunity.`,
+                                    description: `In high school, I soldiered on with the same gutless reputation to which I had tied myself in middle school. It just didn't seem possible to remake myself into a whole new person while surrounded by all the same classmates. But in my head, I was busy crafting a future persona as an artist of superior ability and judgment, that was raring to go as soon as I could hightail it out of Los Angeles.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true
