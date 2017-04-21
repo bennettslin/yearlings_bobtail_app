@@ -14,8 +14,8 @@
 # REFERENCE
 * Anything that someone might want to look up.
 * Anything that 50% of people might not know about.
+* If most Western, English readers would know, just have link without my own description.
 * The work before the artist.
-
 
 # BACKSTORY
 * Explanatory background information.
@@ -39,3 +39,6 @@
 * One is simply a definition or reference, so can be left out if references are hidden.
 * They aren't so short that separating them would just be awkward.
 * "Also" is a good indication to separate.
+
+# One versus You
+* Always use "you."

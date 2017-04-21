@@ -127,20 +127,28 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 180,
-    overview: `One night, I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Mongols and Vikings and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
+    overview: `One night, I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
     title: {
         anchor: `Constellations!`,
         keepEndCharacter: true,
         annotation: {
             description: [
-                `The best part about Robitussin is the`,
+                `I tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
+                {
+                    italic: {
+                        anchor: `The Basketball Diaries,`,
+                        wiki: `The_Basketball_Diaries`
+                    }
+                },
+                `and was soon hooked. The best part about it is the`,
                 {
                     anchor: `closed-eye hallucinations,`,
                     wiki: `Closed-eye_hallucination`
                 },
-                `which are vivid images that seem to be projected onto the backdrop of one's eyelids. If they ever get intense enough to become frightening, one simply opens one's eyes, and they instantly go away. At the time, I called them "constellations."`
+                `which are vivid images that seem to be projected onto the backdrop of your eyelids. If they ever get too intense, you simply open your eyes, and they instantly vanish. At the time, I called them "constellations."`
             ],
             dotKeys: {
+                [BACKSTORY]: true,
                 [OBSERVATION]: true
             }
         }
@@ -182,19 +190,10 @@ module.exports = {
                             },
                             {
                                 description: [
-                                    `I was the experienced Robitussin user of the group, having read of its narcotic effects in Jim Carroll's`,
-                                    {
-                                        italic: {
-                                            anchor: `The Basketball Diaries`,
-                                            wiki: `The_Basketball_Diaries`
-                                        }
-                                    },
-                                    `earlier that summer. So the others follow my lead in treating it as a mystical journey, and we tread with "reverence" through the UCLA campus.`
+                                    `Since I am the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey, and we tread with "reverence" through the UCLA campus.`
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true,
-                                    [PUN]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         ]
@@ -205,8 +204,7 @@ module.exports = {
                             description: `Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                                [REFERENCE]: true
                             }
                         }
                     }
@@ -218,7 +216,7 @@ module.exports = {
                     {
                         anchor: `Heavin' some, Ana`,
                         annotation: {
-                            description: `"Heaving some, Ana whispers a low sigh." When you first down a whole bottle of Robitussin, you may feel like retching. Within a moment, though, it feels like your lungs have shrivelled away, and you're peacefully breathing through gills underwater.`,
+                            description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll probably want to retch. Within a moment, though, your lungs will shrivel away, and you'll be peacefully breathing through gills underwater.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true,
@@ -230,16 +228,17 @@ module.exports = {
                         anchor: `whispures a low sigh, bein'…`,
                         annotation: {
                             description: [
-                                `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the role played by psychedelic drugs that history textbooks understandably failed to mention. One theory is that`,
+                                `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the historical role played by psychedelic drugs that textbooks naturally failed to mention. One theory is that`,
                                 {
                                     anchor: `manna`,
                                     wiki: `Manna`
                                 },
-                                `from heaven, based on its description in the Bible, was a`,
+                                `from heaven was a`,
                                 {
-                                    anchor: `psilocybin mushroom.`,
+                                    anchor: `psilocybin mushroom,`,
                                     wiki: `Psilocybin_mushroom`
-                                }
+                                },
+                                `based on its description in the Bible.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -255,38 +254,48 @@ module.exports = {
                     `of`,
                     {
                         anchor: `de exempt,`,
-                        annotation: {
-                            description: [
-                                `The Israelites, "being of the exempt," were spared the`,
-                                {
-                                    anchor: `plagues`,
-                                    wiki: `Plagues_of_Egypt`
-                                },
-                                `that God visited upon Egypt, just as we are now immune to flu symptoms. "DXM" is the standard abbreviation for`,
-                                {
-                                    anchor: `dextromethorphan,`,
-                                    wiki: `Dextromethorphan`
-                                },
-                                `the cough suppressant found in Robitussin.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Dextromethorphan,`,
+                                        wiki: `Dextromethorphan`
+                                    },
+                                    `the cough suppressant found in Robitussin, is often abbreviated as "DXM."`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `The Israelites, being of "the exempt," were spared the`,
+                                    {
+                                        anchor: `plagues`,
+                                        wiki: `Plagues_of_Egypt`
+                                    },
+                                    `that God visited upon Egypt, just as we are now immune to flu symptoms.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     {
                         anchor: `exit us`,
                         annotation: {
                             description: [
-                                `The Book of`,
+                                `As the Book of`,
                                 {
                                     anchor: `"Exodus"`,
                                     wiki: `Book_of_Exodus`
                                 },
-                                `recounts how the Israelites discovered manna during their trek out of Egypt.`
+                                `recounts how the Israelites found manna during their trek out of Egypt, so too do we leave the drugstore with spiritual sustenance in hand.`
                             ],
                             dotKeys: {
+                                [NARRATIVE]: true,
                                 [PUN]: true
                             }
                         }
@@ -295,25 +304,35 @@ module.exports = {
                     {
                         anchor: `Viking den…`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `The`,
-                                {
-                                    anchor: `Vikings`,
-                                    wiki: `Vikings`
-                                },
-                                `were Norse seafarers who expanded outward from Scandinavia beginning in the 8th century. Also, Ana's friends Howie and Tomer, being seasoned drug users but never having taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as`,
-                                {
-                                    anchor: `"Vicodin."`,
-                                    wiki: `Hydrocodone/paracetamol`
-                                },
-                                `The night will prove them wrong.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Like the`,
+                                    {
+                                        anchor: `Vikings,`,
+                                        wiki: `Vikings`
+                                    },
+                                    `Norse seafarers who expanded outward from Scandinavia beginning in the 8th century, we have left the comfort of our dens to explore new vistas.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `Ana's friends Howie and Tomer, being seasoned drug users but having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers such as`,
+                                    {
+                                        anchor: `"Vicodin."`,
+                                        wiki: `Hydrocodone/paracetamol`
+                                    },
+                                    `The night will soon prove them wrong.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -323,14 +342,14 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `Though I never got past the first fifty pages of`,
+                            `I never got past the first fifty pages of`,
                             {
                                 italic: {
-                                    anchor: `Finnegans Wake,`,
+                                    anchor: `Finnegans Wake.`,
                                     wiki: `Finnegans_Wake`
                                 }
                             },
-                            `I was impressed by Joyce's use of literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal.`
+                            `Still, I was impressed by Joyce's use of literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
@@ -349,45 +368,64 @@ module.exports = {
                     {
                         anchor: `Walkyriens:`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `Backtrack to earlier that night. We buy the Robitussin from a`,
-                                {
-                                    anchor: `Walgreens`,
-                                    wiki: `Walgreens`
-                                },
-                                `pharmacy. Also, the`,
-                                {
-                                    anchor: `Valkyries`,
-                                    wiki: `Valkyrie`
-                                },
-                                `in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Backtrack to earlier that night. We have arrived at a`,
+                                    {
+                                        anchor: `Walgreens`,
+                                        wiki: `Walgreens`
+                                    },
+                                    `pharmacy to procure our Robitussin.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `Valkyries`,
+                                        wiki: `Valkyrie`
+                                    },
+                                    `in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `to`,
                     {
                         // NOTE: I changed from 'Walhall.'
                         anchor: `Wal-hall o'`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `The Valkyries would bring the dead heroes to`,
-                                {
-                                    anchor: `Valhalla,`,
-                                    wiki: `Valhalla`
-                                },
-                                `a majestic hall ruled by the god Odin. Also, the Walgreens aisles are "Wal-halls," as they are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… and so forth.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `The Valkyries would bring the dead heroes to`,
+                                    {
+                                        anchor: `"Valhalla,"`,
+                                        wiki: `Valhalla`
+                                    },
+                                    `a majestic hall ruled by the god Odin.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `The Walgreens aisles might be referred to as "Wal-halls," as they are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… and so forth.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     {
                         anchor: `mead-Tussin!`,
@@ -397,7 +435,7 @@ module.exports = {
                                     anchor: `Mead`,
                                     wiki: `Mead`
                                 },
-                                `was the drink of the Norse gods, and we look for Wal-Tussin as our "medicine" of choice.`
+                                `was the drink of the Norse gods, just as we look for Wal-Tussin as our "medicine" of choice.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -413,7 +451,7 @@ module.exports = {
                     {
                         anchor: `Quouffs uppraissed,`,
                         annotation: {
-                            description: `Not all bottles of Robitussin will get you high. The ones to avoid are those that only contain guaifenesin, which reduces congestion. So we "upraise" our "quaffs" to "appraise" them for the medicinal property that keeps "coughs suppressed."`,
+                            description: `Not all bottles of Robitussin will get you high. The ones to avoid are those that contain guaifenesin, which just reduces congestion. So we "upraise" our "quaffs" to "appraise" them specifically for the medicinal property that keeps "coughs suppressed."`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true,
@@ -424,25 +462,34 @@ module.exports = {
                     `this`,
                     {
                         anchor: `boundless Kalevalley ends.`,
-                        annotation: {
-                            description: [
-                                `The`,
-                                {
-                                    anchor: `Kalevala`,
-                                    wiki: `Kalevala`
-                                },
-                                `is the national epic poem of Finland. Also, the San Fernando Valley, which I hated as a teenager, is`,
-                                {
-                                    emphasis: `the`
-                                },
-                                `"Cali valley." The days before I could leave were painfully endless. On this summer break back home, however, my newfound independence, combined with the magic of Robitussin, renders escape instantaneous.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `Kalevala`,
+                                        wiki: `Kalevala`
+                                    },
+                                    `is the national epic poem of Finland.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `The San Fernando Valley, which I hated in my youth, is`,
+                                    {
+                                        emphasis: `the`
+                                    },
+                                    `"Cali valley." The days before I could leave were painfully endless. On this summer break back home, however, my newfound independence combines with the magic of Robitussin to render escape instantaneous.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -453,44 +500,57 @@ module.exports = {
                     {
                         anchor: `Finnugreec tongue`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `The Finnish language belongs in the`,
-                                {
-                                    anchor: `"Finno-Ugric"`,
-                                    wiki: `Finno-Ugric_languages`
-                                },
-                                `family. Also, the licorice taste of Robitussin, which lingers on our tongues, is reminiscent of the spice`,
-                                {
-                                    anchor: `"fenugreek."`,
-                                    wiki: `Fenugreek`
+                        annotation: [
+                            {
+                                description: [
+                                    `The Finnish language belongs in the`,
+                                    {
+                                        anchor: `"Finno-Ugric"`,
+                                        wiki: `Finno-Ugric_languages`
+                                    },
+                                    `family.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
                                 }
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                            },
+                            {
+                                description: [
+                                    `The licorice taste of Robitussin, which lingers on our tongues, is reminiscent of the spice`,
+                                    {
+                                        anchor: `"fenugreek."`,
+                                        wiki: `Fenugreek`
+                                    }
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     {
                         anchor: `Lapps are highmen.`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `The`,
-                                {
-                                    anchor: `Lapps`,
-                                    wiki: `Sami_people`
-                                },
-                                `are a Finno-Ugric people indigenous to the northern regions of Scandinavia. And of course, we are literally "high men," as the Robitussin "laps our hymen," since the others are doing it for the first time.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `Lapps`,
+                                        wiki: `Sami_people`
+                                    },
+                                    `are a Finno-Ugric people indigenous to the northern regions of Scandinavia.`
+                                ]
+                            },
+                            {
+                                description: `We are literally "high men," and since the others are trying it for the first time, the Robitussin also "laps our hymen."`,
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -507,20 +567,28 @@ module.exports = {
                     {
                         anchor: `Makeyars mygrate,`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `Cut back to the present scene. "Make yours my grate." Howie and Tomer are sharing their knowledge of the hidden grate that leads down to the steam tunnels. Also, the`,
-                                {
-                                    anchor: `"Magyars"`,
-                                    wiki: `Hungarians`
-                                },
-                                `are a Finno-Ugric people who "migrated" from the Ural Mountains and established the state of Hungary.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: `Cut back to the present scene. Howie and Tomer promise to "make yours my grate," as they share their knowledge of the hidden grate that leads down to the steam tunnels.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `"Magyars"`,
+                                        wiki: `Hungarians`
+                                    },
+                                    `are a Finno-Ugric people who "migrated" from the Ural Mountains and established the state of Hungary.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `from`,
                     {
@@ -541,19 +609,28 @@ module.exports = {
                     },
                     {
                         anchor: `psealed off drains.`,
-                        annotation: {
-                            description: [
-                                `Back in the day, the Robitussin we took contained`,
-                                {
-                                    anchor: `"pseudoephedrine,"`,
-                                    wiki: `Pseudoephedrine`
-                                },
-                                `a decongestant. Because of its use in the illicit manufacture of methamphetamine, however, this is no longer the case. Also, the entrance to the steam tunnels is hidden "among old, sealed-off drains."`
-                            ],
-                            dotKeys: {
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Back in the day, the Robitussin we took also contained`,
+                                    {
+                                        anchor: `"pseudoephedrine,"`,
+                                        wiki: `Pseudoephedrine`
+                                    },
+                                    `a decongestant. Because of its use in the illicit manufacture of methamphetamine, however, this is no longer the case.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: `The entrance to the steam tunnels is hidden "among old, sealed-off drains."`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -570,11 +647,10 @@ module.exports = {
                                     wiki: `Ghost_in_the_Machine_(album)`
                                 }
                             },
-                            `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums here are my amateurish imitation of Stewart Copeland's performance in "Secret Journey," in particular the silent kick on the downbeat. Such a simple idea, but it does wonders for letting the music breathe before being submerged again in the chorus.`
+                            `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums on this song are my amateurish imitation of Stewart Copeland's performance in "Secret Journey," in which the kick is left off the downbeat almost throughout. Such a simple idea, but it does wonders for letting the music here breathe before being submerged again in the chorus.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
-                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -589,21 +665,25 @@ module.exports = {
                     `Then`,
                     {
                         anchor: `down the steppes`,
-                        annotation: {
-                            description: [
-                                `As we rush down the earthen steps leading into the steam tunnels, I imagine us as 13th-century Mongol horsemen sweeping down from the Asian`,
-                                {
-                                    anchor: `steppes`,
-                                    wiki: `Steppe`
-                                },
-                                `to begin their conquests.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `As we rush down the earthen steps leading into the steam tunnels, I imagine us as 13th-century Mongol horsemen sweeping down from the Asian`,
+                                    {
+                                        anchor: `steppes`,
+                                        wiki: `Steppe`
+                                    },
+                                    `to begin their conquests.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
                             },
-                            portal: `down_the_steppes`
-                        }
+                            {
+                                portal: `down_the_steppes`
+                            }
+                        ]
                     },
                     `we charged,`
                 ]
@@ -620,7 +700,7 @@ module.exports = {
                                     anchor: `"Genghis Khan,"`,
                                     wiki: `Genghis_Khan`
                                 },
-                                `who was born "Temujin," founded the Mongol Empire.`
+                                `whose birth name was "Temujin," was the founder of the Mongol Empire.`
                             ],
                             dotKeys: {
                                 [PUN]: true
@@ -630,20 +710,27 @@ module.exports = {
                     `has`,
                     {
                         anchor: `slain the teeto-Tatars!`,
-                        annotation: {
-                            description: [
-                                `Genghis Khan was able to unite the Mongols by defeating the`,
-                                {
-                                    anchor: `"Tatars,"`,
-                                    wiki: `Tatars`
-                                },
-                                `a rival tribe. Like a "teeter-totter," I was wavering back and forth on whether to take Robitussin that night, since I'd just taken it a few days prior, and Robitussin really destroys you both mentally and physically. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in and kills off any lingering protests from my inner "teetotaler."`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Genghis Khan was able to unite the Mongols by defeating the`,
+                                    {
+                                        anchor: `"Tatars,"`,
+                                        wiki: `Tatars`
+                                    },
+                                    `a rival tribe.`
+                                ]
+                            },
+                            {
+                                description: [
+                                    `I'd just taken Robitussion a few days ago, so earlier tonight I was wavering back and forth like a playground "teeter-totter" on whether to take it again so soon, since each trip really destroys you for a good while. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in and kills off any lingering protest from my inner "teetotaler."`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -653,42 +740,66 @@ module.exports = {
                     {
                         anchor: `Tomer-layin' the seed,`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `"Tamerlane the seed."`,
-                                {
-                                    anchor: `Tamerlane,`,
-                                    wiki: `Timur`
-                                },
-                                `a descendant of Genghis Khan, continued the Turko-Mongol expansion into Central Asia. Also, as Tomer jokingly drops crumbs as if to leave a trail, I observe that it's like he's planting seeds that will sprout into nations.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Tamerlane,`,
+                                        wiki: `Timur`
+                                    },
+                                    `who descended from the seed of Genghis Khan, continued the Turko-Mongol expansion into Central Asia.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: `As Tomer jokingly drops crumbs of dirt as if to leave a trail, I observe that it's like he's "laying the seeds" that will sprout into nations.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     {
-                        anchor: `Howie led the feat of avatars…`,
+                        anchor: `Howie led the feat`,
                         properNoun: true,
+                        annotation: [
+                            {
+                                description: `Oblivious to the lingering stiffness of his limbs, Howie is walking as if his "feet" are made of "lead."`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `Mughals,`,
+                                        wiki: `Mughal_Empire`
+                                    },
+                                    `Muslim descendants of Tamerlane, surely regaled themselves with tales of "how he" led the feat that precipitated their conquest of South Asia and its Hindu populations.`,
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            }
+                        ]
+                    },
+                    `of`,
+                    {
+                        anchor: `avatars…`,
                         annotation: {
                             description: [
-                                `Howie is walking as if his feet are made of lead. Also, "how he led the feat of avatars." The`,
-                                {
-                                    anchor: `Mughals,`,
-                                    wiki: `Mughal_Empire`
-                                },
-                                `Muslim descendants of Tamerlane, conquered the Hindu populations of the Indian subcontinent. In Hinduism, an`,
+                                `In Hinduism, an`,
                                 {
                                     anchor: `avatar`,
                                     wiki: `Avatar`
                                 },
-                                `is a deity's earthbound incarnation, and some avatars are speculated to be historical figures whose exploits predate written tradition.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
-                            }
+                                `is the earthbound incarnation of a deity, and some avatars are speculated to be historical figures whose exploits predate written tradition.`
+                            ]
                         }
                     }
                 ]
@@ -736,12 +847,12 @@ module.exports = {
                         anchor: `questurns Indo Hairapins:`,
                         annotation: {
                             description: [
-                                `Our "quest turns into hairpins." As Howie and Tomer guide us through twisted, narrow corridors, I blather on about "questions" surrounding the`,
+                                `Our "quest turns into hairpins" as Howie and Tomer guide us around sharp turns down narrow corridors. All the while, I blather on about "questions" surrounding the`,
                                 {
-                                    anchor: `"Indo-Harappan" Civilisation,`,
+                                    anchor: `"Indo-Harappan" Civilisation`,
                                     wiki: `Indus_Valley_Civilisation`
                                 },
-                                `named after the excavations in Harappa that led to its modern discovery, that may be answered by examining the evolution of the`,
+                                `that may be answered by studying the evolution of the`,
                                 {
                                     anchor: `"Indo-European"`,
                                     wiki: `Indo-European_languages`
@@ -764,7 +875,7 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                `In the Iranian language of Farsi,`,
+                                `In the Iranian language of "Farsi,"`,
                                 {
                                     italic: {
                                         anchor: `ahura`,
@@ -793,7 +904,7 @@ module.exports = {
                                     anchor: `Avesta,`,
                                     wiki: `Avesta`
                                 },
-                                `it's likely that the apostates left the Indian subcontinent and moved westward to the Iranian basin, rather than the reverse.`
+                                `it's likely that the apostates left the Indian subcontinent and moved westward to the Iranian basin, rather than the other way around.`
                             ],
                             dotKeys: {
                                 [PUN]: true
@@ -806,7 +917,7 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                `Moreover, in Sanskrit, the ancient Indian language,`,
+                                `Moreover, in "Sanskrit," the ancient Indian language,`,
                                 {
                                     italic: {
                                         anchor: `deva`,
@@ -848,10 +959,7 @@ module.exports = {
                                 {
                                     italic: `haoma.`
                                 }
-                            ],
-                            dotKeys: {
-                                [PUN]: true
-                            }
+                            ]
                         }
                     },
                     {
@@ -863,7 +971,7 @@ module.exports = {
                                     anchor: `"Aryans"`,
                                     wiki: `Aryan`
                                 },
-                                `spoken of "in the Vedas" and the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`
+                                `spoken of "in the Vedas" and in the Avesta were a noble class based on religious distinction, some 19th-century Western scholars postulated that they were a blonde, light-skinned race who had conquered and civilised the local population. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -874,7 +982,7 @@ module.exports = {
                     {
                         anchor: `unsolft quarry rest…`,
                         annotation: {
-                            description: `"Our young invaders on soft quarry rest." We come to a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches.`,
+                            description: `"Our young invaders" have now arrived at a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches. Pausing for a breather, on this "soft quarry" they rest.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -894,7 +1002,7 @@ module.exports = {
                                 anchor: `Bollywood`,
                                 wiki: `Bollywood`
                             },
-                            `movies, which are a another gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of our favourite,`,
+                            `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of our favourite,`,
                             {
                                 italic: {
                                     anchor: `Hum Aapke Hain Koun…!`,
@@ -919,36 +1027,46 @@ module.exports = {
                     {
                         anchor: `Ourevian battles spent,`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `"Arabian battles." Centuries after the`,
-                                {
-                                    anchor: `Arabs`,
-                                    wiki: `Arabs`
-                                },
-                                `rapidly conquered Persia and the Middle East, the Mongols were the new enemy at the doorstep. Also, Robitussin requires you to stay constantly hydrated, and "our`,
-                                {
-                                    anchor: `Evian`,
-                                    wiki: `Evian`
-                                },
-                                `bottles" that we brought with us into the steam tunnels are now empty.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Spent from the "Arabian battles" that ended with their conquest by the`,
+                                    {
+                                        anchor: `Arabs,`,
+                                        wiki: `Arabs`
+                                    },
+                                    `the Persians were then subjugated by the Mongols, the latest enemy at their doorstep.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `Robitussin requires you to stay constantly hydrated, and "our`,
+                                    {
+                                        anchor: `Evian`,
+                                        wiki: `Evian`
+                                    },
+                                    `bottles" that we brought into the steam tunnels are now empty.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     {
                         anchor: `a'duct Uighuress.`,
                         annotation: {
                             description: [
-                                `"Abduct Uighuress." The Mongols would slaughter the men and seize the women of the populations they conquered. This fate was no doubt met by the`,
+                                `The Mongols would slaughter the men and seize the women of the populations they conquered. This fate was no doubt met by the`,
                                 {
                                     anchor: `Uighurs,`,
                                     wiki: `Uyghurs`
                                 },
-                                `a Turkic people, whom the Mongols encountered in their early campaigns. Also, through "a duct, we egress," or exit, the steam tunnels.`
+                                `a Turkic people, whom the Mongols encountered in their early campaigns. And so through "a duct, we egress," or exit, the steam tunnels, but not before I feign to "abduct a Uighuress."`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -988,7 +1106,7 @@ module.exports = {
                     {
                         anchor: `the dusc-horse yet…?`,
                         annotation: {
-                            description: `"Our melee tapers the discourse." Wielding scavenged materials as if they are swords and shields, the open air allows us to stop chattering and start play-fighting as we make our way back to the car.`,
+                            description: `"Our melee tapers the discourse." Wielding scavenged materials as if they are swords and shields, the open air allows us to we stop chattering and start play-fighting as we make our way back to the car.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -1720,9 +1838,9 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `sort out past and present tense`,
-            workedHours: 0,
-            neededHours: 3
+            taskName: `tenses and categorisation`,
+            workedHours: 5,
+            neededHours: 5
         },
         {
             taskName: `annotations`,
