@@ -465,7 +465,6 @@ module.exports = {
         [
             {
                 time: 45,
-                // TODO Native American
                 lyric: `but totems so revered`
             },
             {
@@ -728,9 +727,19 @@ module.exports = {
         [
             {
                 time: 79,
-
-                // TODO Something here
-                lyric: `though each kind new ultimatum`
+                lyric: [
+                    `though each`,
+                    {
+                        anchor: `kind new ultimatum`,
+                        annotation: {
+                            description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only an illusion of choice. She was going either way. I could either tag along or stay home alone.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
+                        }
+                    }
+                ]
             },
             {
                 time: 81,
@@ -742,7 +751,25 @@ module.exports = {
             },
             {
                 time: 84,
-                lyric: `brave rejection into art`
+                lyric: [
+                    `brave`,
+                    {
+                        anchor: `rejection into art`,
+                        annotation: {
+                            description: [
+                                `I learned to accept rejection by treating it as subject matter for new songs. But it then logically follows that a life filled with rejection can`,
+                                {
+                                    emphasis: `itself`
+                                },
+                                `be a work of art.`
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
+                        }
+                    }
+                ]
             },
             {
                 unitMap: true,
@@ -758,15 +785,8 @@ module.exports = {
                     {
                         anchor: `died unfinished`,
                         annotation: {
-                            description: [
-                                `I learned to accept rejection by treating it as subject matter for new songs. But it then logically followed that a life filled with rejection can`,
-                                {
-                                    emphasis: `itself`
-                                },
-                                `be a work of art.`
-                            ],
+                            description: `Of course, there is no guarantee that such a work can ever be seen to completion, since the ready procurement of its raw materials lies beyond the artist's control.`,
                             dotKeys: {
-                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
