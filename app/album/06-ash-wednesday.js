@@ -132,12 +132,12 @@ module.exports = {
                         anchor: `futile trip`,
                         annotation: {
                             description: [
-                                `I headed for college in the`,
+                                `I headed for the`,
                                 {
-                                    anchor: `San Francisco Bay Area,`,
+                                    anchor: `San Francisco Bay Area`,
                                     wiki: `San_Francisco_Bay_Area`
                                 },
-                                `where I met Catherine in a class on Western folklore.`
+                                `to attend college, where I met Catherine in a class on Western folklore.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -154,7 +154,7 @@ module.exports = {
                     {
                         anchor: `where it commenced:`,
                         annotation: {
-                            description: `My relationship with Catherine began much in the same way as my friendship with Sasha had a decade earlier. That is, I latched onto the first cute person to show me any small kindness in a new environment, then tried to make myself indispensable to their everyday routines.`,
+                            description: `My relationship with Catherine began much in the same way as my friendship with Sasha had a decade earlier. That is, I latched onto the first cute person to show me any small kindness in a new environment, then tried to make myself indispensable to her in small ways.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }

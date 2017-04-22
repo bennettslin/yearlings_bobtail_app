@@ -1037,8 +1037,8 @@ module.exports = {
         },
         {
             taskName: `tenses and categorisation`,
-            workedHours: 4,
-            neededHours: 4
+            workedHours: 5,
+            neededHours: 5
         },
         {
             taskName: `annotations`,

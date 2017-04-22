@@ -12,24 +12,6 @@ import { INSTRUMENTAL,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: `Look Back in Anger`,
-        annotation: {
-            description: [
-                `John Osborne's play`,
-                {
-                    italic: {
-                        anchor: `Look Back in Anger`,
-                        wiki: `Look_Back_in_Anger`
-                    }
-                },
-                `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. At the time that I read it, it hit a little too close to home.`
-            ],
-            dotKeys: {
-                [BACKSTORY]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -146,6 +128,24 @@ module.exports = {
     totalTime: 175,
     // TODO: Mention depression earlier as well?
     overview: `With The Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. And yet, my depression didn't abate, but instead simmered into a hard-boiled anger. I also began to regret my relationship with Sita, which now felt like a decision I was coerced to make, under deprived conditions from which I'd since been freed.`,
+    title: {
+        anchor: `Look Back in Anger`,
+        annotation: {
+            description: [
+                `John Osborne's play`,
+                {
+                    italic: {
+                        anchor: `Look Back in Anger`,
+                        wiki: `Look_Back_in_Anger`
+                    }
+                },
+                `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. It hit a little too close to home when I read it.`
+            ],
+            dotKeys: {
+                [BACKSTORY]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -183,7 +183,7 @@ module.exports = {
                                     anchor: `colorbearer`,
                                     wiki: `Standard-bearer`
                                 },
-                                `carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth seemed like the perfect metaphor for my high school experience.`
+                                `carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth is an apt metaphor for my high school experience.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -196,7 +196,7 @@ module.exports = {
                 time: 13,
                 lyric: [
                     {
-                        // Connection to Didi?
+                        // TODO: Flashback to Didi?
                         anchor: `dragging aglets held`,
                         annotation: {
                             description: [
@@ -296,9 +296,9 @@ module.exports = {
                     {
                         anchor: `past ring one,`,
                         annotation: {
-                            description: `A ring also symbolises long-term commitment in a relationship. And of course, after years of constant struggle to win someone over, I am now in my first real relationship.`,
+                            description: `A ring also symbolises long-term commitment in a relationship. And of course, after years of constant struggle to win someone over, I am now in my first serious relationship.`,
                             dotKeys: {
-                                [OBSERVATION]: true,
+                                [NARRATIVE]: true,
                                 [REFERENCE]: true
                             }
                         }
@@ -312,8 +312,9 @@ module.exports = {
                     {
                         anchor: `for more you'd vie.`,
                         annotation: {
-                            description: `But even if it was a struggle, I made it through, which means I can do it again. And why wouldn't I? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
+                            description: `But even if it was a struggle, I made it through, which means I can do it again. And why wouldn't I want to try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
                             dotKeys: {
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -334,7 +335,7 @@ module.exports = {
                                     anchor: `"The Charge of the Light Brigade,"`,
                                     wiki: `Charge_of_the_Light_Brigade`
                                 },
-                                `I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own years in the Valley of death.`
+                                `I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own wartime years in the Valley.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -361,12 +362,17 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `When I asked Owen to recommend some great lyricists, he named just one: Nas. I hadn't given serious thought to hip hop at the time, believing it far too different from my own songwriting process to offer much useful wisdom. I've since corrected this oversight, but in the meantime,`,
+                            `When I asked Owen to recommend some great lyricists, he named just one: Nas. I hadn't given serious thought to hip hop at the time, believing it too far removed from my own songwriting approach to offer much useful wisdom. I've since corrected this oversight, but even as my lone point of reference back then,`,
                             {
                                 anchor: `Illmatic`,
                                 wiki: `Illmatic`
                             },
-                            `offered some great pointers on the flexibility of internal rhyme, which I use in these verses.`
+                            `offered some great pointers on the flexibility of`,
+                            {
+                                anchor: `internal rhyme,`,
+                                wiki: `Internal_rhyme`
+                            },
+                            `which I use in these verses.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -384,7 +390,7 @@ module.exports = {
                     {
                         anchor: `Feeble feeder fish`,
                         annotation: {
-                            description: `Feeder fish are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit who will live longest. High school seemed to work the same way, as my devotion to my pet projects, which left me with no time to defend myself within the social hierarchy, was now keeping me from being eaten alive in the real world.`,
+                            description: `The feeder fish sold in pet stores are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit who will live longest. High school seemed to work the same way, as the artistic skills I had slowly cultivated through my pet projects, which left me with no time to defend myself within the social hierarchy, were now the thing keeping me from being eaten alive in the real world.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true,
@@ -431,14 +437,20 @@ module.exports = {
                     `She braves the crowd`,
                     {
                         anchor: `filled first from sides.`,
-                        annotation: {
-                            // TODO: Reword
-                            description: `At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls. A few songs into my band's set, I watch from onstage as an attractive latecomer and her friends make their way through an unusually packed room.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: `At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            },
+                            {
+                                description: `A few songs into my band's set, I watch from onstage as an attractive latecomer and her friends make their way through an unusually packed room.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             }
-                        },
+                        ]
                     }
                 ]
             },
@@ -449,7 +461,7 @@ module.exports = {
                     {
                         anchor: `jigsawed life.`,
                         annotation: {
-                            description: `One typically works on a jigsaw puzzle by first connecting the edge pieces, then expanding inwards. And as this latecomer squeezes her way into the middle, I wonder if she is the long-awaited final piece to the overwrought puzzle that is my life.`,
+                            description: `You typically work on a jigsaw puzzle by first connecting the edge pieces, then building inwards. And as this latecomer squeezes her way to the centre of the crowd, I wonder if she is the long-awaited final piece to the overwrought puzzle that is my life.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -465,7 +477,7 @@ module.exports = {
                     {
                         anchor: `maraschino red,`,
                         annotation: {
-                            description: `Having sworn long ago to be alert and ready when the next Mara shows up in my life, I notice that the latecomer's hair colour matches "Mara's sheen of red," which is the bright red of maraschino cherries.`,
+                            description: `Having sworn some time ago to be alert and ready when the next Mara shows up in my life, I notice that the latecomer's hair colour matches "Mara's sheen of red," which is the bright red of maraschino cherries.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -480,7 +492,7 @@ module.exports = {
                     {
                         anchor: `"Great show,"`,
                         annotation: {
-                            description: `The best time to chat with someone in the audience is always right after your set, since they've just spent the last half hour of their life making you the centre of their universe. And so, as expected, the red-haired woman is warm and receptive when I approach her.`,
+                            description: `The best time to hit on someone is always right after your set, since they've just spent the last half hour of their life making you the centre of their universe. And so, as expected, I find the red-haired woman to be warm and flirtatious when we finally chat.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -567,7 +579,7 @@ module.exports = {
                     {
                         anchor: `His obit not a bang,`,
                         annotation: {
-                            description: `But this appraisal was based on reason, not malice. After all, it made no sense for the one true God to entrust the spread of His message on earth to the very tormentors of those He hoped to reach.`,
+                            description: `But this appraisal was based on reason, not malice. After all, it made no sense for the one true God to entrust the dissemination of his message to the very tormentors of those he hoped to reach.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -594,7 +606,7 @@ module.exports = {
                         anchor: `peasant discontented`,
                         annotation: {
                             description: [
-                                `I felt like the peasants during the`,
+                                `The better life got, the more unsatisfied I became. I was like the peasants during the`,
                                 {
                                     anchor: `French Revolution,`,
                                     wiki: `French_Revolution`
@@ -631,7 +643,7 @@ module.exports = {
                     {
                         anchor: `must turn the cheek.`,
                         annotation: {
-                            description: `The letters from RI Research instructed me not to confront my tormentors. Instead, I was to turn the other cheek, as Jesus had done, and quietly take their abuse in stride, as my exalted place in the universe necessarily asked of me to always be the bigger person.`,
+                            description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and quietly take their abuse in stride, as my exalted place in the universe necessarily asked of me to always be the bigger person.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -649,9 +661,8 @@ module.exports = {
                     {
                         anchor: `only to crack,`,
                         annotation: {
-                            description: `Yet if reason discredited their beliefs, then it also had to discredit mine. After all, in a world abounding with rival claims to the truth, who would stay loyal to a belief that promises zero community and only endless grief?`,
+                            description: `Yet if reason discredited the beliefs of my tormentors, then it also had to discredit mine. After all, in a world abounding with rival claims to the truth, who would stay loyal to a belief that promises zero community and only endless grief?`,
                             dotKeys: {
-                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -659,7 +670,7 @@ module.exports = {
                     {
                         anchor: `sprawled where they stood…`,
                         annotation: {
-                            description: `While I foresaw a lifetime of humiliating setbacks for myself, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favours the bullies. And so I just had to accept it.`,
+                            description: `And while I could foresee only a lifetime of humiliating setbacks for myself, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favours its bullies. And so I just had to accept it.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -685,7 +696,7 @@ module.exports = {
                     {
                         anchor: `right to take what's theirs?`,
                         annotation: {
-                            description: `As opportunities for social advancement opened up for me, I began to understand why the bullies grabbed onto those given to them, and I could even sympathise. After all, in a world that naturally roots for the strong, it makes no sense to question whatever means you've been afforded to avoid being weak.`,
+                            description: `As opportunities for social advancement opened up for me, I began to understand why the bullies grabbed onto those given to them, and I could even sympathise. After all, in a world that simply roots for the strong, it makes no sense to question whatever means you've been afforded to avoid being weak.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -722,7 +733,7 @@ module.exports = {
                     {
                         anchor: `poor, poor bears.`,
                         annotation: {
-                            description: `His wife then sighs "poor, poor bears" in response, recognising that he, a bear in their mutual fantasy, is also a victim, helplessly complying within a power dynamic over which neither possesses much control.`,
+                            description: `His wife then sighs "poor, poor bears" in response, recognising that he, a bear in their mutual fantasy, is also a victim, complying helplessly within a power dynamic over which neither possesses much control.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                                 [REFERENCE]: true
@@ -744,7 +755,7 @@ module.exports = {
                         anchor: `Red and friends,`,
                         properNoun: true,
                         annotation: {
-                            description: `The red-haired woman and her friends stick around as we load our gear into the van. During my chat with her between sets, I had left open the possibility of us all hanging out after the show.`,
+                            description: `The red-haired woman and her friends stick around as my bandmates and I load our gear into the van. During our chat between sets, I had left open the possibility that all of us might hang out after the show.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -764,7 +775,7 @@ module.exports = {
                     {
                         anchor: `claim you've never loved,`,
                         annotation: {
-                            description: `My songs projected the image of an inexperienced kid who was forever unlucky in love. It's how I first learned to draw attention, and so I had refined it to perfection over the years. But as the disconnect grew between my past persona and my present fortunes, I needed greater amounts of alcohol to deceive myself into carrying about as I always had.`,
+                            description: `My songs projected the image of an inexperienced kid forever unlucky in love. It's how I first learned to draw attention, and so I had refined it to perfection over the years. But as the gap widened between my past mishaps and present fortunes, I needed greater quantities of alcohol to carry on with the lie that my circumstances hadn't substantially changed.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -780,7 +791,7 @@ module.exports = {
                     {
                         anchor: `unscrew a Bud…`,
                         annotation: {
-                            description: `I forego my chance to know the red-haired woman, as I would need another Budweiser to bring myself to the required level of self-deception, and it's after last call. But it's also too late for me to "unscrew a bud," and present myself as someone who isn't already sexually intimate with his longtime friend.`,
+                            description: `I forego my chance to get to know the red-haired woman, not just because it's past last call, and another Budweiser would be needed to bring myself to the required level of self-deception. It's also too late for me to present myself as someone who isn't in a sexually intimate relationship with his best friend. I can't just "unscrew a bud" at will.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -816,7 +827,7 @@ module.exports = {
                                 {
                                     emphasis: `at.`
                                 },
-                                `I could only blame myself for being late to the game. And this just made me angrier…`
+                                `I could only blame myself for being late to the game. But this just made me angrier…`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -859,9 +870,9 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `sort out past and present tense`,
-            workedHours: 0,
-            neededHours: 3
+            taskName: `tenses and categorisation`,
+            workedHours: 2,
+            neededHours: 2
         },
         {
             taskName: `annotations`,
