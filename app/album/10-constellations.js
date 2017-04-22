@@ -1330,17 +1330,12 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            // TODO
-                            `While I treated every Robitussin trip as a mystical experience, I would also while away the hours playing video games on my`,
+                            `On my solo Robitussin trips, I would mentally search for metaphysical truths while playing video games on my old`,
                             {
-                                anchor: `NES console.`,
-                                wiki: `Nintendo_Entertainment_System`
+                                anchor: `Super NES console.`,
+                                wiki: `Super_Nintendo_Entertainment_System`
                             },
-                            `8-bit sounds thus took on a spiritual significance for me that others might find in, let's say, a Tibetan`,
-                            {
-                                anchor: `singing bowl.`,
-                                wiki: `Singing_bowl`
-                            }
+                            `16-bit sounds thus came to take on a spiritual significance for me.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -1527,7 +1522,7 @@ module.exports = {
                         anchor: `toughtim rite…`,
                         annotation: {
                             description: [
-                                `Having now achieved a full out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
+                                `Having now achieved a full out-of-body experience, I gaze down upon my drugged-out self. This degrading sight, against the familiar backdrop of Los Angeles, reminds me that in having scuttled off to the Bay Area, I am shirking my responsibility to care for our autistic brother, unlike my sister, who still lives close to our parents. Guilt-ridden, I sarcastically note that "brother and sister taught him right."`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1550,19 +1545,18 @@ module.exports = {
                                     anchor: `Lowkey and Freyed!`,
                                     properNoun: true,
                                     annotation: {
-                                        // TODO
                                         description: [
-                                            `Gaxing siap"He sees low-key and fried," but also, in my brother and sister, I see`,
+                                            `As my better self observes me in my "low-key and fried" state, I see a constellation of my brother as`,
                                             {
-                                                anchor: `"Loki`,
+                                                anchor: `"Loki,"`,
                                                 wiki: `Loki`
                                             },
-                                            `and`,
+                                            `the Norse trickster god, next to one of my sister as`,
                                             {
-                                                anchor: `Freyja."`,
+                                                anchor: `"Freyja,"`,
                                                 wiki: `Freyja`
                                             },
-                                            `The former is a Norse trickster god, while the latter is a Norse goddess on equal footing with Odin.`
+                                            `the Norse goddess on equal footing with Odin.`
                                         ],
                                         dotKeys: {
                                             [PUN]: true
@@ -1628,7 +1622,7 @@ module.exports = {
                                     ]
                                 },
                                 {
-                                    description: `The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."`,
+                                    description: `The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun" arrives.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -1663,22 +1657,24 @@ module.exports = {
                                 ]
                             },
                             {
-                                description: `While my eyes remain closed, my thoughts grow further disjointed. Injecting myself into world history, I see all of time collapsing into a singularity, such that everyone who has ever lived is at once dead and not dead, including me. Or is this just one long, silent performance that we've all agreed to act in? A "mummery," if you will?`,
+                                description: `While my eyes remain closed, my thoughts grow further disjointed. Injecting myself into world history, I see all of time collapsing into a singularity, such that everyone who has ever lived is at once dead and not dead, including me. Or is this just an endless series of silent acts that we've all agreed to perform in? "Mummeries," if you will?`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
+                                    [PUN]: true
                                 }
                             }
                         ]
                     },
                     `I have`,
                     {
-                        // TODO: memories, mine, mine
                         anchor: `left to mine?`,
                         annotation: {
-                            description: ``
-                        },
-                        todo: true
+                            description: `At the peak of my dissociation, I "mine" through my "memories," unable to separate the collective memories of the world from those that are "mine" alone.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
+                        }
                     }
                 ]
             },
@@ -1708,7 +1704,7 @@ module.exports = {
                                 }
                             },
                             {
-                                description: `Crashed on a couch in Howie's attic, I "pull the switch" on an old black-and-white television to turn it on.`,
+                                description: `Back at Howie's place, I'm crashed on a couch in his attic. An old black-and-white television sits in front of me, and I "pull the switch" to turn it on.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -1720,12 +1716,12 @@ module.exports = {
                         anchor: `in-som'umiak`,
                         annotation: {
                             description: [
-                                `An`,
+                                `Sensing disaster afoot, our brave tribe flees to safety "in some`,
                                 {
-                                    anchor: `umiak`,
+                                    anchor: `umiak,"`,
                                     wiki: `Umiak`
                                 },
-                                `is an Inuit boat made from whalebone and sealskin. Sensing disaster afoot, our brave tribe flees to safety "in some umiak," skimming through icy channels wreaked by a snowy blitz.`
+                                `an Inuit boat made from whalebone and sealskin, as we skim through icy channels wreaked by a snowy blitz.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1816,7 +1812,7 @@ module.exports = {
                     {
                         anchor: `come unsated`,
                         annotation: {
-                            description: `Howie had opted for a large bottle of Robitussin, thinking the small one I had recommended wouldn't be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he keeps returning to the kitchen for more water to quench his parched innards.`,
+                            description: `Howie had opted for a large bottle of Robitussin, thinking the small one I had recommended wouldn't be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he guzzles cup after cup of water to quench his parched innards.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -1959,8 +1955,8 @@ module.exports = {
         },
         {
             taskName: `tenses and categorisation`,
-            workedHours: 9,
-            neededHours: 9
+            workedHours: 13,
+            neededHours: 13
         },
         {
             taskName: `annotations`,
