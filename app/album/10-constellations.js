@@ -847,7 +847,7 @@ module.exports = {
                         anchor: `questurns Indo Hairapins:`,
                         annotation: {
                             description: [
-                                `Our "quest turns into hairpins" as Howie and Tomer guide us around sharp turns down narrow corridors. All the while, I blather on about "questions" surrounding the`,
+                                `Our "quest turns into hairpins" as Howie and Tomer guide us around some rather sharp turns. All the while, I blather on about "questions" surrounding the`,
                                 {
                                     anchor: `"Indo-Harappan" Civilisation`,
                                     wiki: `Indus_Valley_Civilisation`
@@ -1035,7 +1035,7 @@ module.exports = {
                                         anchor: `Arabs,`,
                                         wiki: `Arabs`
                                     },
-                                    `the Persians were then subjugated by the Mongols, the latest enemy at their doorstep.`
+                                    `the Persians were then subjugated by the Mongols, the next enemy at their doorstep.`
                                 ],
                                 dotKeys: {
                                     [PUN]: true
@@ -1082,6 +1082,16 @@ module.exports = {
                     {
                         anchor: `Are Melee tapirs`,
                         annotation: {
+                            description: `"Our melee tapers the discourse." Scavenging materials to make swords and shields, we could only brandish them with playful menace within the narrow corridors of the steam tunnels. Now out in the open, we stop chattering and start battling as we make our way back to the car.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
+                        }
+                    },
+                    {
+                        anchor: `the dusc-horse yet…?`,
+                        annotation: {
                             description: [
                                 `"Are Malay tapirs the dusk horse yet?" Through conquests and migrations, exotic new species were discovered. Native to the Malay peninsula, the`,
                                 {
@@ -1102,17 +1112,7 @@ module.exports = {
                                 [PUN]: true
                             }
                         }
-                    },
-                    {
-                        anchor: `the dusc-horse yet…?`,
-                        annotation: {
-                            description: `"Our melee tapers the discourse." Wielding scavenged materials as if they are swords and shields, the open air allows us to we stop chattering and start play-fighting as we make our way back to the car.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
-                            }
-                        }
-                    },
+                    }
                 ]
             },
             {
@@ -1122,36 +1122,44 @@ module.exports = {
                     {
                         anchor: `Khlmair city Ingcar Wet,`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                {
-                                    anchor: `Angkor Wat,`,
-                                    wiki: `Angkor_Wat`
-                                },
-                                `or "Temple City," is a 12th-century Hindu temple built by the`,
-                                {
-                                    anchor: `Khmer Empire`,
-                                    wiki: `Khmer_Empire`
-                                },
-                                `in what is now present-day Cambodia. Also, taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie's dad had bought in bulk.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Angkor Wat,`,
+                                        wiki: `Angkor_Wat`
+                                    },
+                                    `or "Temple City," is a 12th-century Hindu temple built by the`,
+                                    {
+                                        anchor: `Khmer Empire`,
+                                        wiki: `Khmer_Empire`
+                                    },
+                                    `in what is now present-day Cambodia.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: `Taking in the "calm air," we are "sitting in car wet," as we guzzle the remaining Evian bottles that Howie's dad had bought in bulk and left in the trunk.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `to war:`,
                     {
                         anchor: `scimitary of'fence!`,
                         annotation: {
                             description: [
-                                `The next plan of attack is to visit the grave of Howie and Tomer's high school buddy Adam. And so, rested and energised, we renew our`,
+                                `Our next plan of attack is to visit the grave of Howie and Tomer's high school buddy Adam. And so, rested and energised, we renew our`,
                                 {
                                     anchor: `"scimitar`,
                                     wiki: `Scimitar`
                                 },
-                                `offence" and drive through the "cemetery fence."`
+                                `offence" with a plan to drive through the "cemetery fence."`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1173,7 +1181,7 @@ module.exports = {
                     {
                         anchor: `Pour sod, fourfeit tundr's`,
                         annotation: {
-                            description: `We bemoan the "poor sod" who had sod poured on him from "four feet under."`,
+                            description: `In the car, Howie and Tomer swap tales from their high school days, bemoaning the "poor sod" who had sod poured on him from "four feet under."`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -1204,36 +1212,46 @@ module.exports = {
                 lyric: [
                     {
                         anchor: `Upridge o' lawn`,
-                        annotation: {
-                            description: `We park the car and head up "a ridge of lawn."`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: `We park the car and head up "a ridge of lawn."`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `According to the`,
+                                    {
+                                        anchor: `Beringia theory,`,
+                                        wiki: `Beringia`
+                                    },
+                                    `the Americas were settled by populations from north Asia who crossed "a bridge of land" connecting the two continents. As glaciers melted, however, the sea level rose, effectively causing the bridge to sink.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `trod on by`,
                     {
-                        anchor: `forc'd nations sank…`,
+                        anchor: `forc'd nations`,
                         annotation: {
                             description: [
-                                `"A bridge of land trod on by First Nations sank." Indigenous Americans, known in Canada as the`,
+                                `"Forced" to leave their Asian homelands due to scarcity of resources, these groups are now known to Canada as the`,
                                 {
-                                    anchor: `"First Nations,"`,
+                                    anchor: `"First Nations."`,
                                     wiki: `First_Nations`
-                                },
-                                `were "forced" to leave their Asian homelands due to growing scarcity of resources. According to the`,
-                                {
-                                    anchor: `Beringia theory,`,
-                                    wiki: `Beringia`
-                                },
-                                `they did so by crossing a frozen land bridge connecting the two continents. In time, of course, this bridge melted away.`
+                                }
                             ],
                             dotKeys: {
                                 [PUN]: true
                             }
                         }
-                    }
+                    },
+                    `sank…`
                 ]
             },
             {
@@ -1244,7 +1262,7 @@ module.exports = {
                         anchor: `past a cross Bearing Straight,`,
                         annotation: {
                             description: [
-                                `We "passed a cross, bearing straight," just as those before us had "passed across the`,
+                                `We venture "past a cross, bearing straight," just as those before us had "passed across the`,
                                 {
                                     anchor: `Bering Strait."`,
                                     wiki: `Bering_Strait`
@@ -1263,37 +1281,44 @@ module.exports = {
                 lyric: [
                     {
                         anchor: `herows— ourauras left—`,
-                        annotation: {
-                            description: [
-                                `Other indigenous populations, such as the`,
-                                {
-                                    anchor: `Inuits`,
-                                    wiki: `Inuit`
-                                },
-                                `of the Arctic regions, may have undertaken their migrations by boat. Such a seafaring ancestor, of course, would have "rowed" with the "auroras," or`,
-                                {
-                                    anchor: `aurora borealis,`,
-                                    wiki: `Aurora`
-                                },
-                                `to his "left." Also, wishing to be respectful, we've "left" our "hero's auras" behind in the car.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Other indigenous peoples, such as the`,
+                                    {
+                                        anchor: `Inuits`,
+                                        wiki: `Inuit`
+                                    },
+                                    `of the Arctic regions, may have migrated to the Americas by boat. An Inuit storyteller might narrate the journey of one such seafaring ancestor by describing how "he rows" with the "auroras," or`,
+                                    {
+                                        anchor: `aurora borealis,`,
+                                        wiki: `Aurora`
+                                    },
+                                    `to his "left."`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: `Wishing to respect the dead, we've "left" "our auras" as history's "heroes" behind in the car.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `to`,
                     {
                         anchor: `Audamn's grave.`,
                         properNoun: true,
                         annotation: {
-                            description: `We reach "Adam's" grave, just as the indigenous Americans, having discovered more bountiful lands, perished their fears of an encroaching "autumn."`,
+                            description: `We sigh in relief to have quickly spotted "Adam's" grave from amongst a sea of identical headstones, just as the indigenous Americans, upon discovering a more bountiful land, perished their fears of an encroaching "autumn."`,
                             dotKeys: {
                                 [NARRATIVE]: true,
-                                [PUN]: true,
-                                [REFERENCE]: true
+                                [PUN]: true
                             }
                         }
                     }
@@ -1305,7 +1330,8 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         description: [
-                            `While I treated every past Robitussin trip as a mystical experience, I would also while away the hours by playing video games on my`,
+                            // TODO
+                            `While I treated every Robitussin trip as a mystical experience, I would also while away the hours playing video games on my`,
                             {
                                 anchor: `NES console.`,
                                 wiki: `Nintendo_Entertainment_System`
@@ -1341,7 +1367,7 @@ module.exports = {
                         anchor: `I'll sail this sea,`,
                         annotation: {
                             description: [
-                                `Standing next to Adam's headstone under the predawn sky, I'm overcome with a profound sense of clarity and purpose, and I renew my determination to finish`,
+                                `Standing in front of Adam's headstone under the predawn sky, I'm overcome with a profound sense of clarity and purpose, and I renew my determination to finish`,
                                 {
                                     italic: `Bobtail`
                                 },
@@ -1380,7 +1406,7 @@ module.exports = {
                     {
                         anchor: `mistodawn,`,
                         annotation: {
-                            description: `The "mist of dawn" breaks, and we head back to the car. On our way now to Howie's place, my newfound clarity proves short-lived, as I lean back and settle in for some closed-eye hallucinations.`,
+                            description: `The "mist of dawn" breaks, and we drive back to Howie's place. My newfound clarity proves short-lived as I lean back and shut my eyes to gaze at constellations.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -1391,14 +1417,14 @@ module.exports = {
                         anchor: `ha'nt'd by sobre-trooth tiedgirl`,
                         annotation: {
                             description: [
-                                `As I indulge in visions of a`,
+                                `Encountering the vision of a`,
                                 {
-                                    anchor: `"mastodon`,
+                                    anchor: `"mastodon"`,
                                     wiki: `Mastodon`
                                 },
-                                `hunted by`,
+                                `being "hunted by a`,
                                 {
-                                    anchor: `sabre-toothed tigers,"`,
+                                    anchor: `sabre-toothed tiger,"`,
                                     wiki: `Smilodon`
                                 },
                                 `I am subconsciously "haunted by the sober truth" that I continue to keep Sita captive in a codependent relationship of which I am beginning to tire.`
@@ -1427,8 +1453,11 @@ module.exports = {
                                                 anchor: `Tar pits`,
                                                 wiki: `Tar_pit`
                                             },
-                                            `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery. And now, "sunk in tar pit" is where my mastodon "lies," just as I have "sunk in torpid lies."`
-                                        ],
+                                            `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery.`
+                                        ]
+                                    },
+                                    {
+                                        description: `"Sunk in a tar pit" is where my mastodon lies, just as I have "sunk in torpid lies" with my endless excuses to Sita for why we can't spend more nights together.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [PUN]: true
@@ -1454,14 +1483,39 @@ module.exports = {
                     {
                         anchor: `Hollowscene`,
                         properNoun: true,
+                        annotation: [
+                            {
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `Holocene`,
+                                        wiki: `Holocene`
+                                    },
+                                    `is the current geological epoch, which began with the first human settlements.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: `As Robitussin is a dissociative drug, I start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        anchor: `broughtour ancister`,
                         annotation: {
                             description: [
-                                `The`,
+                                `In the epic vision playing out in my mind, the mastodon becomes a spirit animal of our Inuit tribe, as we have "brought our ancestral`,
                                 {
-                                    anchor: `Holocene`,
-                                    wiki: `Holocene`
+                                    anchor: `totems`,
+                                    wiki: `Totem`
                                 },
-                                `is the current geological epoch that began with the first human settlements. Also, as Robitussin is a dissociative drug, I gradually start to detach from myself. In doing so, I catch a glimpse of how superficial my aspirations are, and how "hollow" the local "scene" is in which I desire recognition.`
+                                `and rites" to our new homeland.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1470,15 +1524,10 @@ module.exports = {
                         }
                     },
                     {
-                        anchor: `broughtour ancister toughtim rite…`,
+                        anchor: `toughtim rite…`,
                         annotation: {
                             description: [
-                                `In the epic narrative playing out in my mind, the mastodon becomes a spirit animal, as we have "brought our ancestral`,
-                                {
-                                    anchor: `totems`,
-                                    wiki: `Totem`
-                                },
-                                `and rites" to our new homelands. Having now achieved a full out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
+                                `Having now achieved a full out-of-body experience, the degraded reality of my drugged-out self comes into view. Guilt-ridden by the high expectations placed on me and my sister to care for our autistic brother, I sarcastically note that "brother and sister taught him right."`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1501,8 +1550,9 @@ module.exports = {
                                     anchor: `Lowkey and Freyed!`,
                                     properNoun: true,
                                     annotation: {
+                                        // TODO
                                         description: [
-                                            `"He sees low-key and fried," but also, in my brother and sister, I see`,
+                                            `Gaxing siap"He sees low-key and fried," but also, in my brother and sister, I see`,
                                             {
                                                 anchor: `"Loki`,
                                                 wiki: `Loki`
@@ -1537,12 +1587,12 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                `"Norse and Nunavutter collide." We have now travelled as far as`,
+                                `My friends and I have now followed the Inuit all the way to`,
                                 {
                                     anchor: `Nunavut,`,
                                     wiki: `Nunavut`
                                 },
-                                `the northernmost territory of Canada inhabited primarily by the Inuit. And yet, with the reappearance of the Norse, we realise that our bounds are not so limitless, as even our imaginations have started to repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so we end the night as we had begun it, "no worse and none the better."`
+                                `the northernmost territory of Canada. Yet with the reappearance of the Norse in my thoughts, I realise that our bounds are not limitless, as even our imaginations must repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so, just as "Norse and Nunavutter" collide, we end the night as we had begun it, "no worse and none the better."`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1561,25 +1611,30 @@ module.exports = {
                         {
                             anchor: `Leif as the Red's son`,
                             properNoun: true,
-                            annotation: {
-                                description: [
-                                    `The Norse explorer`,
-                                    {
-                                        anchor: `Leif Erikson`,
-                                        wiki: `Leif_Erikson`
-                                    },
-                                    `was the son of`,
-                                    {
-                                        anchor: `Erik the Red,`,
-                                        wiki: `Erik_the_Red`
-                                    },
-                                    `who established Norse settlements in Greenland. The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."`
-                                ],
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [PUN]: true
+                            annotation: [
+                                {
+                                    description: [
+                                        `The Norse explorer`,
+                                        {
+                                            anchor: `Leif Erikson`,
+                                            wiki: `Leif_Erikson`
+                                        },
+                                        `was the son of`,
+                                        {
+                                            anchor: `Erik the Red,`,
+                                            wiki: `Erik_the_Red`
+                                        },
+                                        `who established Norse settlements in Greenland.`
+                                    ]
+                                },
+                                {
+                                    description: `The arrival of Europeans into the Americas, which precipitated their rise to global power, also brought disease and ruin to the indigenous populations. Similarly, while the day begins for many, it is over for us, and we "leave as the red sun arrives."`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true
+                                    }
                                 }
-                            }
+                            ]
                         },
                         `arrives!`
                     ]
@@ -1591,28 +1646,40 @@ module.exports = {
                     `How old are`,
                     {
                         anchor: `these mummeries`,
-                        annotation: {
-                            description: [
-                                `A`,
-                                {
-                                    anchor: `mummer`,
-                                    wiki: `Mummers_play`
-                                },
-                                `is a masked mime, while a`,
-                                {
-                                    anchor: `mummy`,
-                                    wiki: `Mummy`
-                                },
-                                `is a preserved corpse. All of time has collapsed into a singularity, as my memories blur into those of the world history that I keenly dig through. Everyone is at once dead and not dead, as am I. Or is this all a staged performance that I've chosen to act in?`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `A`,
+                                    {
+                                        anchor: `mummy`,
+                                        wiki: `Mummy`
+                                    },
+                                    `is a preserved corpse, while a`,
+                                    {
+                                        anchor: `mummer`,
+                                        wiki: `Mummers_play`
+                                    },
+                                    `is a masked mime.`,
+                                ]
+                            },
+                            {
+                                description: `While my eyes remain closed, my thoughts grow further disjointed. Injecting myself into world history, I see all of time collapsing into a singularity, such that everyone who has ever lived is at once dead and not dead, including me. Or is this just one long, silent performance that we've all agreed to act in? A "mummery," if you will?`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     },
-                    `I have left to mine?`
+                    `I have`,
+                    {
+                        // TODO: memories, mine, mine
+                        anchor: `left to mine?`,
+                        annotation: {
+                            description: ``
+                        },
+                        todo: true
+                    }
                 ]
             },
             {
@@ -1627,13 +1694,38 @@ module.exports = {
                 lyric: [
                     {
                         anchor: `Pullar switch,`,
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Geomagnetic reversal`,
+                                        wiki: `Geomagnetic_reversal`
+                                    },
+                                    `occurs when the Earth's magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: `Crashed on a couch in Howie's attic, I "pull the switch" on an old black-and-white television to turn it on.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        anchor: `in-som'umiak`,
                         annotation: {
                             description: [
+                                `An`,
                                 {
-                                    anchor: `Geomagnetic reversal`,
-                                    wiki: `Geomagnetic_reversal`
+                                    anchor: `umiak`,
+                                    wiki: `Umiak`
                                 },
-                                `occurs when the Earth's magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses. Also, crashed on a couch in Howie's attic, I turn on an old black-and-white television by "pulling the switch."`
+                                `is an Inuit boat made from whalebone and sealskin. Sensing disaster afoot, our brave tribe flees to safety "in some umiak," skimming through icy channels wreaked by a snowy blitz.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1642,21 +1734,9 @@ module.exports = {
                         }
                     },
                     {
-                        anchor: `in-som'umiak skims through channels`,
+                        anchor: `skims through channels`,
                         annotation: {
-                            description: [
-                                `An`,
-                                {
-                                    anchor: `umiak`,
-                                    wiki: `Umiak`
-                                },
-                                `is an Inuit boat traditionally made from whalebone and sealskin. Sensing disaster afoot, our brave tribe flees to safety "in some umiak," skimming through icy channels wreaked by a "snowy blitz." Meanwhile, being an`,
-                                {
-                                    anchor: `"insomniac,"`,
-                                    wiki: `Insomnia`
-                                },
-                                `I "skim through channels" that are "snow-blitzed" due to the television's poor reception.`
-                            ],
+                            description: `Being an "insomniac," I skim through channels that are "snow-blitzed" due to the television's poor reception.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -1720,7 +1800,7 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                `Howie had opted for the large bottle of Robitussin, thinking that the small one I had recommended wouldn't be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he keeps going back to the kitchen to get more water. Meanwhile, the`,
+                                `In the historical narrative still playing in my head, the`,
                                 {
                                     anchor: `"English"`,
                                     wiki: `English_people`
@@ -1733,7 +1813,17 @@ module.exports = {
                             }
                         }
                     },
-                    `come unsated find`,
+                    {
+                        anchor: `come unsated`,
+                        annotation: {
+                            description: `Howie had opted for a large bottle of Robitussin, thinking the small one I had recommended wouldn't be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he keeps returning to the kitchen for more water to quench his parched innards.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [PUN]: true
+                            }
+                        }
+                    },
+                    `find`,
                     {
                         anchor: `Rumspring`,
                         properNoun: true,
@@ -1748,7 +1838,7 @@ module.exports = {
                                     anchor: `Amish`,
                                     wiki: `Amish`
                                 },
-                                `are allowed to openly rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. It means "running around" in Pennsylvania Dutch, but I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
+                                `are permitted to rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. Though it means "running around" in Pennsylvania Dutch, I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true,
@@ -1766,7 +1856,6 @@ module.exports = {
                         anchor: `In mouth Deseret,`,
                         annotation: {
                             description: [
-                                `My mouth is dry like a "desert." Also,`,
                                 {
                                     anchor: `Deseret`,
                                     wiki: `Deseret_alphabet`
@@ -1776,7 +1865,7 @@ module.exports = {
                                     anchor: `Mormons,`,
                                     wiki: `Mormons`
                                 },
-                                `also known as Latter-Day Saints.`
+                                `also known as Latter-Day Saints. As it once filled their mouths, a "desert" now fills ours.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1785,31 +1874,62 @@ module.exports = {
                         }
                     },
                     {
-                        anchor: `black Letter-Day Sensed ahead…`,
-                        annotation: {
-                            description: `Holidays on a calendar are marked in red, so by contrast, the "black-letter day" I sense ahead is just an ordinary day. Also, "black Latter-Day Saints to head." While the Mormons originally did not allow their black members to attain priesthood, they reversed this policy in 1978.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [REFERENCE]: true
+                        anchor: `black Letter-Day`,
+                        annotation: [
+                            {
+                                description: `Holidays on a calendar are marked in red, so by contrast, the "black-letter day" that I sense ahead will be just another ordinary day.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true,
+                                    [REFERENCE]: true
+                                }
                             }
-                        }
+                        ]
+                    },
+                    {
+                        anchor: `Sensed ahead…`,
+                        annotation: [
+                            {
+                                description: [
+                                    `"Black Latter-Day Saints to head." While the Mormon Church originally did not allow its`,
+                                    {
+                                        anchor: `black members`,
+                                        wiki: `Black_people_and_Mormonism`
+                                    },
+                                    `to attain priesthood, this policy was reversed in 1978.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true,
+                                    [REFERENCE]: true
+                                }
+                            }
+                        ]
                     },
                     {
                         anchor: `"Rejoyce!" bellow the`,
-                        annotation: {
-                            description: [
-                                `Or rather, "'Rejoice!' bellow the reverends." Joyce wrote the last line of`,
-                                {
-                                    italic: `Finnegans Wake`
-                                },
-                                `to wrap back onto the first, so I indulged in the same conceit. As I'm stuck watching early-morning televangelists, I observe that every religion's early spirit eventually degrades into orthodoxy and routine, much as it does for us as individuals. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: `"'Rejoice!' bellow the reverends." Stuck with nothing to watch but early-morning televangelists, I observe that every religion's early spirit eventually degrades into orthodoxy and routine, just like each one of ours does over a lifetime. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `Joyce wrote the last line of`,
+                                    {
+                                        italic: `Finnegans Wake`
+                                    },
+                                    `to wrap back onto the first, so I "re-Joyced" by indulging in the same conceit.`
+                                ],
+                                dotKeys: {
+                                    [SONGWRITING]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -1839,8 +1959,8 @@ module.exports = {
         },
         {
             taskName: `tenses and categorisation`,
-            workedHours: 5,
-            neededHours: 5
+            workedHours: 9,
+            neededHours: 9
         },
         {
             taskName: `annotations`,
