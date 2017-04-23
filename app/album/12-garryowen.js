@@ -11,22 +11,6 @@ import { INSTRUMENTAL,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: `Garryowen`,
-        annotation: {
-            description: [
-                `In`,
-                {
-                    italic: `Ulysses,`
-                },
-                `Garryowen is a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
-            ],
-            dotKeys: {
-                [OBSERVATION]: true,
-                [REFERENCE]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -119,7 +103,23 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 187,
-    overview: `My mood changed when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I had soured on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I didn't like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
+    overview: `My mood changed when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I had soured on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I didn't like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. Without Sita.`,
+    title: {
+        anchor: `Garryowen`,
+        annotation: {
+            description: [
+                `In`,
+                {
+                    italic: `Ulysses,`
+                },
+                `Garryowen is the name of a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
+            ],
+            dotKeys: {
+                [OBSERVATION]: true,
+                [REFERENCE]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -164,13 +164,17 @@ module.exports = {
                     `with your`,
                     {
                         anchor: `crew of chefs and thieves.`,
-                        annotation: {
-                            description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, while the other half would then cook whatever was brought back into a meal for all to share. I was always in the thieving half.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, while the other half would then prepare whatever was brought back into a meal for all to share. I was always in the thieving half.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             },
-                            portal: `crooked_thieves`
-                        }
+                            {
+                                portal: `crooked_thieves`
+                            }
+                        ]
                     }
                 ]
             },
@@ -197,7 +201,7 @@ module.exports = {
                     {
                         anchor: `opt for bed not street.`,
                         annotation: {
-                            description: `To save money after my lease ended, I put my stuff in storage and alternated between sleeping with Sita and crashing at the punk house. This gave me the regular comfort of Sita's bed while ensuring that she never had too much leverage over me.`,
+                            description: `To save money after my lease ended, I put my stuff in storage and alternated between sleeping with Sita and crashing at the punk house. This gave me the regular comfort of Sita's bed while ensuring that she never held too much leverage over me.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -233,8 +237,9 @@ module.exports = {
                     {
                         anchor: `I can't speak`,
                         annotation: {
-                            description: `But this also absolved me of personal responsibility, which became problematic as my actions over time spilled into physical aggression and misdemeanours.`,
+                            description: `But this also absolved me of personal responsibility, which became problematic as my actions over time spilled into drunken aggression and misdemeanours.`,
                             dotKeys: {
+                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -255,7 +260,7 @@ module.exports = {
                     {
                         anchor: `bustin' cars with fists,`,
                         annotation: {
-                            description: `One kid named Tristan was particularly hotheaded. After we all got kicked out of a party one night for a fight that he incited, Tristan started punching car doors, challenging us to see who could make the biggest dent. I didn't win.`,
+                            description: `One kid named Tristan was particularly hotheaded. After we all got kicked out of a party one night for a fight that he incited, Tristan started punching car windows, then challenged us to see who could break the glass first. I didn't win.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -269,14 +274,18 @@ module.exports = {
                     `the`,
                     {
                         anchor: `littlest fuss will incite`,
-                        annotation: {
-                            description: `Tristan would lash out in a spastic fury while blacking out, yet be perfectly collected by next morning. I came to see that his chaotic outbursts were in fact meticulously controlled, giving him a strange inner peace, and so I sought to indulge my drunken temper in the same manner.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: `Tristan would lash out in a spastic fury while blacking out, yet be perfectly collected by next morning. I came to see that his chaotic outbursts were in fact meticulously controlled, giving him a strange inner peace, and so I sought to indulge my drunken temper in the same manner.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
                             },
-                            portal: `lidless_vaseline_sits`
-                        }
+                            {
+                                portal: `lidless_vaseline_sits`
+                            }
+                        ]
                     },
                     `your rage.`
                 ]
@@ -287,19 +296,23 @@ module.exports = {
                     `In you come, piss drunk, smug in`,
                     {
                         anchor: `smegma crust,`,
-                        annotation: {
-                            description: [
-                                {
-                                    anchor: `Smegma`,
-                                    wiki: `Smegma`
-                                },
-                                `is the smelly gunk that builds up on unwashed genitals. My personal hygiene would be put on hold for days while I crashed at the punk house. But once back at Sita's, I would still dawdle a bit before showering, since she was powerless to entice me with sex until I did.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Smegma`,
+                                        wiki: `Smegma`
+                                    },
+                                    `is the smelly gunk that builds up on unwashed genitals.`
+                                ]
+                            },
+                            {
+                                description: `My personal hygiene would be put on hold for days while I crashed at the punk house. But once back at Sita's, I would still dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -309,13 +322,20 @@ module.exports = {
                     `since`,
                     {
                         anchor: `hummers aren't love,`,
-                        annotation: {
-                            description: `A hummer is a blowjob. Once when Sita protested that we couldn't have sex until after I washed up, I snidely remarked that she could give me a blowjob, since blowjobs didn't count as real sex in her view.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `A hummer is a blowjob.`,
+                                dotKeys: {
+                                    [REFERENCE]: true
+                                }
+                            },
+                            {
+                                description: `Once when Sita protested that we couldn't have sex until after I washed up, I snidely remarked that she could give me a blowjob, since blowjobs didn't count as real sex in her view.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `or so`,
                     {
@@ -323,8 +343,7 @@ module.exports = {
                         annotation: {
                             description: `Throughout our budding friendship, Sita neglected to mention the extent of her past sexual intimacy with other men, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only added to my deepening resentment at the time.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -348,8 +367,7 @@ module.exports = {
                         annotation: {
                             description: `My worlds collided when a local kid who liked my band found out that I had vandalised his friend's bike in a fit of drunken rage. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
@@ -369,7 +387,7 @@ module.exports = {
                     {
                         anchor: `celibate you'll play,`,
                         annotation: {
-                            description: `Drinking to excess made me impotent and thus impervious to Sita's advances. But not having sex was also purifying in its own right, and lent the comfort of being my old self, so it was win-win all around.`,
+                            description: `I gladly drank to excess, as it made me impotent and thus impervious to Sita's advances. But not having sex was also purifying in its own right, as it lent the familiar comfort of being my old self again. So, win-win all around.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -388,7 +406,7 @@ module.exports = {
                     {
                         anchor: `Slammed in the well,`,
                         annotation: {
-                            description: `Of course, using alcohol as a spiritual cleanser isn't sustainable in the long term. Vomiting into a toilet and staring at my reflection in the water soon became a nightly occurrence.`,
+                            description: `Of course, using alcohol as a spiritual cleanser isn't sustainable in the long term. Vomiting into a toilet and staring at my reflection in the water soon became a regular occurrence.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -404,15 +422,21 @@ module.exports = {
                     `with`,
                     {
                         anchor: `choler turned up,`,
-                        annotation: {
-                            description: `In Hippocratic medicine, choler, or yellow bile, is the humour that induces aggression. Just like I wouldn't have recognised myself with an "upturned collar," the angry drunk returning my gaze didn't match my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true,
-                                [PUN]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `In Hippocratic medicine, choler, or yellow bile, is the humour that induces aggression.`,
+                                dotKeys: {
+                                    [REFERENCE]: true
+                                }
+                            },
+                            {
+                                description: `Just like I wouldn't have recognised myself with an "upturned collar," the angry drunk returning my gaze didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `cringing in shame.`
                 ]
@@ -463,10 +487,11 @@ module.exports = {
                                     anchor: `goat`,
                                     wiki: `Scapegoat`
                                 },
-                                `that was then banished into the desert. For me, leaving Sita for good would serve a similar purpose. As long as she was around to cast judgment on my hypocrisy, I would have to own up to my mistakes, and not run away from them.`
+                                `that was then banished into the desert. For me, banishing Sita from my life would serve a similar purpose. As long as she was around to cast judgment on my hypocrisy, I would have to own up to my mistakes, rather than run away from them.`
                             ],
                             dotKeys: {
-                                [OBSERVATION]: true
+                                [OBSERVATION]: true,
+                                [PUN]: true
                             }
                         }
                     }
@@ -541,7 +566,7 @@ module.exports = {
                     {
                         anchor: `have her for your pet.`,
                         annotation: {
-                            description: `Despite everything, I really did love Sita, and I never once doubted that the breakup would be wrenching for us both.`,
+                            description: `Despite everything, I really did love Sita, and I never once doubted that the breakup would be wrenching for us both. This is precisely why I kept putting it off, even as putting it off just made things worse.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -580,19 +605,27 @@ module.exports = {
                 lyric: [
                     {
                         anchor: `Final trip on a tanker,`,
-                        annotation: {
-                            description: `A tanker is a marine vessel that transports crude oil, but can also refer to a drinking spree. As part of my plan to start afresh, I made multiple attempts to stay sober. Since each time was to be my last, I would indulge myself and drink to oblivion, only to repeat the motions several nights later. But after finally mustering the courage to break up with Sita, I really did go for a long stretch without alcohol.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `A tanker is a marine vessel that transports crude oil, but also a drinking spree.`,
+                                dotKeys: {
+                                    [REFERENCE]: true
+                                }
+                            },
+                            {
+                                description: `As part of my plan to start afresh, I made many attempts to stay sober. Since each time was to be my last, I would indulge myself and drink to oblivion, only to repeat the motions several nights later. But after finally mustering the courage to break up with Sita, I really did go for a long stretch without alcohol. My new reality was jarring enough by itself, after all.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `you'll`,
                     {
                         anchor: `drop your anchor`,
                         annotation: {
-                            description: `Or else, "drop your anger." Having mentally attached Sita to every one of my grievances for so long, all I could feel after the breakup was an eerie serenity. I was no longer angry or resentful, and that was tantamount to feeling happy.`,
+                            description: `Having mentally attached Sita to every last one of my grievances for so long, all I could feel after the breakup was an eerie serenity, as I could finally drop my "anger." I was no longer resentful, and that was tantamount to feeling happy.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [PUN]: true
@@ -616,10 +649,9 @@ module.exports = {
                     {
                         anchor: `faltering dear?`,
                         annotation: {
-                            description: `Having wiped the slate clean, I took pains to affect an endearingly awkward persona, right down to the posture and stammer. I'd been switching social identities for so long that I knew the initial feeling of being a phony would be fleeting. There was an extra layer of hypocrisy this time around, however, which did bother me.`,
+                            description: `With my slate wiped clean, I took pains to affect an endearingly awkward persona, right down to the posture and stammer. I'd been switching social identities for so long that I knew the initial feeling of being a phony would be fleeting. There was an extra layer of hypocrisy this time around, however, which did bother me.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -637,13 +669,34 @@ module.exports = {
                     `They told her, "Never help a`,
                     {
                         anchor: `self-abuser`,
-                        annotation: {
-                            description: `I had an intermittent habit of cutting myself to cope with emotional stress. But while self-abuse can refer to self-harm, historically it was also a euphemism for masturbation. Towards the end, I masturbated frequently to lower my sex drive, hoping that this would strengthen my resolve to break up with Sita.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: `I had an intermittent habit of cutting myself to deal with emotional distress. When we were getting to know each other as friends, Sita noticed my scars and took a keen interest, which I interpreted as morbid fascination with my dark past. In time, I came to see that she was just empathising with a fellow depressive, whose coping mechanisms were curiously different from her own.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
-                        }
+                            /**
+                             * NOTE: This obscures the greater point of self-harm,
+                             * so I'm leaving it out for now.
+                             */
+                            /**
+                            {
+                                description: [
+                                    `While the term "self-abuse" can refer to literal`,
+                                    {
+                                        anchor: `self-harm,`,
+                                        wiki: `Self-harm`
+                                    },
+                                    `it's also used in religious circles to describe masturbation. Towards the end, I masturbated frequently to lower my sex drive, hoping that this would strengthen my resolve to break up with Sita.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [PUN]: true
+                                }
+                            }
+                            **/
+                        ]
                     }
                 ]
             },
@@ -655,7 +708,7 @@ module.exports = {
                         {
                             anchor: `as well in you."`,
                             annotation: {
-                                description: `But my capacity to injure myself also meant that I would have few compunctions about harming anyone willing to stand beside me, taking on my troubles as her own.`,
+                                description: `But my capacity to injure myself also meant that I would have few compunctions about harming anyone close to me. And harm Sita I did.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -677,7 +730,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `After some trial and error, I decided that the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease them apart based on their respective timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
+                        description: `After some trial and error, I decided that the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease them apart due to their different timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -694,7 +747,7 @@ module.exports = {
                     {
                         anchor: `Toora-loora-li.`,
                         annotation: {
-                            description: `Perhaps related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variations of it are prevalent in Irish drinking songs and lullabies.`,
+                            description: `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variations of it are prevalent in Irish drinking songs and lullabies.`,
                             dotKeys: {
                                 [REFERENCE]: true
                             }
@@ -756,7 +809,7 @@ module.exports = {
         },
         {
             taskName: `sort out past and present tense`,
-            workedHours: 0,
+            workedHours: 3,
             neededHours: 3
         },
         {
