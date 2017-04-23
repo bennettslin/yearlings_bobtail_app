@@ -735,13 +735,17 @@ module.exports = {
                     `of gathering up the`,
                     {
                         anchor: `suttee dust.`,
-                        annotation: {
-                            description: `I imagined Sita by now to be fully immolated on the burnt rubble of our ruined relationship.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `I imagined Sita by now to be fully immolated on the burnt rubble of our ruined relationship.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `suttee_dust`
-                        }
+                            {
+                                portal: `suttee_dust`
+                            }
+                        ]
                     }
                 ]
             },

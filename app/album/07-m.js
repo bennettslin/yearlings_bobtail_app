@@ -198,8 +198,15 @@ module.exports = {
             },
             {
                 time: 44,
-                // TODO: Sadness, work
-                lyric: `Bit my sadness with patience,`
+                lyric: [
+                    `Bit my`,
+                    {
+                        anchor: `sadness with patience,`,
+                        annotation: {
+                            description: `I had spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building yourself up into a desirable person, after all, is really just the ultimate art project.`
+                        }
+                    }
+                ]
             },
             {
                 time: 47,
@@ -987,8 +994,8 @@ module.exports = {
         },
         {
             taskName: `tenses and categorisation`,
-            workedHours: 5,
-            neededHours: 5
+            workedHours: 6,
+            neededHours: 6
         },
         {
             taskName: `work out narrative order`,

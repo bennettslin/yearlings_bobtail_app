@@ -671,7 +671,7 @@ module.exports = {
                         anchor: `self-abuser`,
                         annotation: [
                             {
-                                description: `I had an intermittent habit of cutting myself to deal with emotional distress. When we were getting to know each other as friends, Sita noticed my scars and took a keen interest, which I interpreted as morbid fascination with my dark past. In time, I came to see that she was just empathising with a fellow depressive, whose coping mechanisms were curiously different from her own.`,
+                                description: `I had an intermittent habit of cutting myself to deal with emotional distress. Early in our friendship, Sita took a keen interest in my scars, which I interpreted as morbid fascination with my troubled past. In time, I came to see that she was just empathising with a fellow depressive, whose coping mechanisms were curiously different from her own.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

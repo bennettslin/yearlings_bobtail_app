@@ -133,7 +133,7 @@ module.exports = {
         keepEndCharacter: true,
         annotation: {
             description: [
-                `I tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
+                `I first tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
                 {
                     italic: {
                         anchor: `The Basketball Diaries,`,
@@ -1452,7 +1452,7 @@ module.exports = {
                                         ]
                                     },
                                     {
-                                        description: `"Sunk in a tar pit" is where my mastodon lies, just as I have "sunk in torpid lies" with my endless excuses to Sita for why we can't spend more nights together.`,
+                                        description: `My mastodon lies "sunk in a tar pit," just as I have "sunk in torpid lies" with my endless excuses to Sita for why we can't spend more nights together when I'm ever eager to make time for my friends.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [PUN]: true
