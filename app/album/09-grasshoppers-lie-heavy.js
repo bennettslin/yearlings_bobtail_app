@@ -541,19 +541,7 @@ module.exports = {
             },
             {
                 time: 63,
-                lyric: [
-                    `You`,
-                    {
-                        anchor: `cried for one`,
-                        annotation: {
-                            description: `Despite the air of mystery and nonchalance that I tried to cultivate during those years, I really was just another lonely kid longing for closeness.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
-                    },
-                    `to sit; it kissed your ear.`
-                ]
+                lyric: `You cried for one to sit; it kissed your ear.`
             },
             {
                 time: 67,

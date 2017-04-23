@@ -198,6 +198,7 @@ module.exports = {
             },
             {
                 time: 44,
+                // TODO: Sadness, work
                 lyric: `Bit my sadness with patience,`
             },
             {
@@ -979,6 +980,7 @@ module.exports = {
     ],
     tasks: [
         {
+            // TODO
             taskName: `afterword annotations`,
             workedHours: 0,
             neededHours: 1

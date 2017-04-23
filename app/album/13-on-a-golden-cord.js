@@ -13,22 +13,6 @@ import { VERSES,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: `On a Golden Cord`,
-        annotation: {
-            description: [
-                `I was trying to follow in the footsteps of other poetic ruminations on still-life objects, like John Keats's`,
-                {
-                    anchor: `"Ode on a Grecian Urn."`,
-                    wiki: `Ode_on_a_Grecian_Urn`
-                },
-                `I'm pretentious like that.`
-            ],
-            dotKeys: {
-                [OBSERVATION]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -127,6 +111,22 @@ module.exports = {
     doubleColumns: true,
     totalTime: 201,
     overview: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I had given her at the start of our relationship, then kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,
+    title: {
+        anchor: `On a Golden Cord`,
+        annotation: {
+            description: [
+                `I was trying to follow in the footsteps of other poetic ruminations on still-life objects, like John Keats's`,
+                {
+                    anchor: `"Ode on a Grecian Urn."`,
+                    wiki: `Ode_on_a_Grecian_Urn`
+                },
+                `I'm pretentious like that.`
+            ],
+            dotKeys: {
+                [OBSERVATION]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
