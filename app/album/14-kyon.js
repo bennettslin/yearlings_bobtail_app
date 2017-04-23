@@ -1,4 +1,3 @@
-// TODO: Be more specific that this began an on again off again relationship
 import { VERSES,
          PRECHORUS,
          CHORUS,
