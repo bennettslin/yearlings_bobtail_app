@@ -12,23 +12,7 @@ import { VERSES,
          REFERENCE,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
-// TODO: Mention Sita's depression, and contrast it with mine.
 module.exports = {
-    title: {
-        anchor: `Kyon? (क्यों?)`,
-        annotation: {
-            description: [
-                {
-                    italic: `Kyon`
-                },
-                `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language.`
-            ],
-            dotKeys: {
-                [BACKSTORY]: true,
-                [REFERENCE]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -107,7 +91,22 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 225,
-    overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But even as I sifted through my guilt, I was baffled by why Sita so willingly endured my cruelty. I tried hard to understand her psyche, and eventually came to see how thoroughly she had tied her sense of worth to our relationship. I was fighting for myself. She was fighting for us.`,
+    overview: `The on-again, off-again years gave me enough distance from my misdeeds to see how emotionally abusive I had become. But sifting through my remorse, I was baffled by why Sita so willingly endured my cruelty. I tried hard to understand her psyche, and eventually came to see just how thoroughly she had tied her sense of worth to our relationship. I was fighting for me. She was fighting for us.`,
+    title: {
+        anchor: `Kyon? (क्यों?)`,
+        annotation: {
+            description: [
+                {
+                    italic: `Kyon`
+                },
+                `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language.`
+            ],
+            dotKeys: {
+                [BACKSTORY]: true,
+                [REFERENCE]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -124,7 +123,6 @@ module.exports = {
                         description: `Sita and I had settled into an unhealthy power dynamic early on, then failed to grow as individuals. I can see now that she was desperately waiting for me to grow up, because she couldn't do it without me. So the humming here evokes her silent waiting, born of desperation.`,
                         dotKeys: {
                             [BACKSTORY]: true,
-                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -143,7 +141,6 @@ module.exports = {
                             description: `In European folklore, the stork delivers babies to expecting parents. Each time I broke up with Sita to date another woman, I always reverted to the same naive, wide-eyed persona. I longed to relive the giddiness of puppy love, like an infant experiencing the world for the first time.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
-                                [OBSERVATION]: true,
                                 [REFERENCE]: true
                             }
                         }
@@ -188,7 +185,7 @@ module.exports = {
                             `I tried to write this song from Sita's perspective. In retrospect, my portrayal is rather one-dimensional, and unfairly characterises her as a helpless woman. Truth be told, she was far more resilient than I've let on here. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`
                         ],
                         dotKeys: {
-                            [OBSERVATION]: true,
+                            [BACKSTORY]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -316,10 +313,9 @@ module.exports = {
                     {
                         anchor: `all the points`,
                         annotation: {
-                            description: `After Sita rejected me, we spent a year getting to know each other as friends, during which time I still tried to impress her without appearing to do so. One day I solved her friend's Rubik's Cube, a skill I had picked up during my first five-year plan. While her friend raved, I humbly shrugged, as Sita just sat there and smiled. I had become a puzzle for her to figure out.`,
+                            description: `After Sita rejected me, we spent a year getting to know each other as friends, during which time I still tried to impress her without appearing to do so. One day, for example, I solved her friend's Rubik's Cube, a skill I had picked up during my first five-year plan. While her friend raved, I humbly shrugged, as Sita just sat there and smiled. I had become a puzzle for her to figure out.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                                [BACKSTORY]: true
                             }
                         }
                     },
@@ -332,7 +328,7 @@ module.exports = {
                     {
                         anchor: `plunders past`,
                         annotation: {
-                            description: `The pain of rejection was aggravated by the later revelation of Sita's sexual past, and all the more so because it was precisely the painful lessons learnt from these past encounters that had made her wary of my earlier advances. Of course, I missed the irony in being the one who would surely end up providing the most painful lesson by far.`,
+                            description: `The pain of initial rejection was aggravated by the later revelation of Sita's sexual past, and all the more so because it was precisely the painful lessons learnt from these past encounters that had made her wary of my earlier advances. Of course, I missed the irony in being the one who would surely end up providing the most painful lesson by far.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -427,38 +423,49 @@ module.exports = {
                     `And when sobered by the`,
                     {
                         anchor: `time-lapse`,
-                        annotation: {
-                            description: [
-                                `In`,
-                                {
-                                    anchor: `time-lapse photography,`,
-                                    wiki: `Time-lapse_photography`
-                                },
-                                `the frame rate at which images are captured is lower than upon playback, causing time to speed up. Sita anticipated that my years of infidelity would whiz by in a flash, as the pursuit of other women grew repetitive, imprinting few standout memories.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `In`,
+                                    {
+                                        anchor: `time-lapse photography,`,
+                                        wiki: `Time-lapse_photography`
+                                    },
+                                    `the frame rate at which images are captured is lower than upon playback, causing time to speed up.`
+                                ]
+                            },
+                            {
+                                description: `Sita anticipated that my years of infidelity would whiz by in a flash as the pursuit of other women grew repetitive, imprinting few standout memories.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `to`,
                     {
                         anchor: `spring forward on a fallback…`,
-                        annotation: {
-                            description: [
-                                `Sita hoped that the endless disappointments I was sure to face as an aging playboy would compel me to return to her, my fallback option, with relief rather than reluctance. The passage of time is invoked by the classic mnemonic for`,
-                                {
-                                    anchor: `daylight saving time,`,
-                                    wiki: `Daylight_saving_time`
-                                },
-                                `"spring forward, fall back," which teaches us to set our clocks one hour forward in the spring, and backward in the fall.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `The passage of time is invoked by the classic mnemonic for`,
+                                    {
+                                        anchor: `daylight saving time,`,
+                                        wiki: `Daylight_saving_time`
+                                    },
+                                    `"spring forward, fall back," which teaches us to set our clocks one hour forward in the spring, and backward in the fall.`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: `Sita also hoped that the endless disappointments I was sure to face as an aging playboy would compel me to return to her, my fallback option, with relief rather than reluctance.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -470,8 +477,17 @@ module.exports = {
         [
             {
                 time: 85,
-                // TODO: annotation
-                lyric: `my ticklish piglet, you'll bounce back to me, giggly, having fully gorged yourself.`
+                lyric: [
+                    `My`,
+                    {
+                        // NOTE: I made "My" capitalised.
+                        anchor: `ticklish piglet,`,
+                        annotation: {
+                            description: `Perversely, Sita and I were always at our best during the months immediately after getting back together. She got to bask in the knowledge of being the better woman, while I still enjoyed the afterglow of my latest romantic escapade.`
+                        }
+                    },
+                    `you'll bounce back to me, giggly, having fully gorged yourself.`
+                ]
             },
             {
                 time: 93,
@@ -480,7 +496,7 @@ module.exports = {
                     {
                         anchor: `extra holes`,
                         annotation: {
-                            description: `More holes in one's belt might be needed to support the wider girth that comes from being overfed. As notches, they can also tally one's sexual conquests.`,
+                            description: `More holes in one's belt might be needed to support the wider girth that comes from being overfed. As notches, they can also tally sexual conquests.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -501,14 +517,21 @@ module.exports = {
                     `A`,
                     {
                         anchor: `shank's dustless silhouette`,
-                        annotation: {
-                            description: `A shank is a prison inmate's makeshift blade, also called a shiv. During our on-and-off years, I would habitually return to Sita promising to mend my ways. Things would be peachy again for a few months, after which I would run off once more with another woman. I was like a reformed convict who leaves his shank to collect dust on the windowsill, then relapses without warning, taking it with him.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `A shank is a prison inmate's makeshift blade, also called a shiv.`,
+                                dotKeys: {
+                                    [REFERENCE]: true
+                                }
+                            },
+                            {
+                                description: `During our on-and-off years, I would habitually return to Sita promising to mend my ways. Things would be peachy again for a while, after which I would run off once more with another woman. I was like a reformed convict who leaves his shank to collect dust on the windowsill, then relapses without warning, taking it with him.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `bares the sill's sheen,`
                 ]
@@ -521,12 +544,11 @@ module.exports = {
                         anchor: `severed stinger`,
                         annotation: {
                             description: [
-                                `The`,
+                                `At the time, I failed to appreciate what it meant for Sita to have given her virginity to me. She had to make things work, because a part of me was now permanently lodged inside of her, like the barbed stinger of a`,
                                 {
-                                    anchor: `honeybee`,
+                                    anchor: `honeybee.`,
                                     wiki: `Honey_bee`
-                                },
-                                `has a barbed stinger that stays lodged in a person's skin. At the time, I failed to appreciate what it meant to Sita to have given her virginity to me. She had to make things work, because a part of me was now permanently lodged inside of her.`
+                                }
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -610,7 +632,7 @@ module.exports = {
                     {
                         anchor: `honeybee?`,
                         annotation: {
-                            description: `A honeybee will die after stinging someone, as its stinger is connected to vital organs. Having given my virginity to Sita in return, I realised too late that there was something inside me that could never be recovered apart from her as well.`,
+                            description: `A honeybee will die after stinging someone, as its stinger is connected to vital organs. Similarly, having given my virginity to Sita in return, I realised too late that there was a vital part of me that could never be recovered apart from her as well.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true,
@@ -622,10 +644,9 @@ module.exports = {
                     {
                         anchor: `thirty-three?`,
                         annotation: {
-                            description: `I hated the idea of getting older and often joked that I would kill myself at thirty-three, the age at which Jesus was crucified, since clearly that was all the time one needed to change the world. So when I suggested to Sita that I would come back for her at thirty-three, in accordance with our little pact, the subtext was understood.`,
+                            description: `I hated the idea of getting older and joked that I would kill myself at thirty-three, the age at which Jesus was crucified, since clearly that is all the time one needs to change the world. So when I suggested to Sita that I would come back for her at thirty-three, in accordance with our little pact, the subtext was understood.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
-                                [OBSERVATION]: true,
                                 [REFERENCE]: true
                             }
                         }
@@ -662,33 +683,42 @@ module.exports = {
                     {
                         anchor: `fear of death,`,
                         annotation: {
-                            description: `As a child, I found the thought of living forever to be no less frightening than having to die. After we began sleeping together, Sita grew accustomed to my night terrors and would soothe me when I woke up screaming from visions of my mortality. Or immortality. I could never really tell which.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
-                            }
-                        }
-                    },
-                    `your`,
-                    {
-                        anchor: `fear of never dying,`,
-                        annotation: {
-                            description: [
-                                `Sympathising with my hunger for spiritual wisdom, Sita often invited me to attend Hindu services with her, which I eagerly obliged. On the question of an afterlife, I found Hinduism's notion of`,
-                                {
-                                    italic: {
-                                        anchor: `moksha,`,
-                                        wiki: `Moksha`
-                                    }
-                                },
-                                `or transcendent release from the cycle of rebirth, to be a comforting answer.`
-                            ],
+                            description: `The night terrors that I experienced as a child continued into adulthood. After we began sleeping together, Sita would soothe me whenever I woke up screaming from visions of my mortality. Or immortality, whichever the case may have been.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
                         }
                     },
-                    `and sadness for what it was.`
+                    `your fear of never dying, and`,
+                    /**
+                     * NOTE: Not sure this needs to be said.
+                     */
+                    /**
+                    annotation: {
+                        description: [
+                            `Recognising my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. I felt comforted by Hinduism's notion of`,
+                            {
+                                italic: {
+                                    anchor: `moksha,`,
+                                    wiki: `Moksha`
+                                }
+                            },
+                            `or transcendent release from the cycle of rebirth.`
+                        ],
+                        dotKeys: {
+                            [BACKSTORY]: true
+                        }
+                    }
+                    **/
+                    {
+                        anchor: `sadness for what it was.`,
+                        annotation: {
+                            description: `As friends, Sita and I got along well because we were both very sad people. But in hindsight, my sadness was mostly a product of circumstance, whether from bullying in my youth, or from loneliness as I got older. Sita, on the other hand, suffered from clinical depression. And as it dawned on me that I could be proactive in dealing with it, I grew impatient with her that she was incapable of doing the same.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        }
+                    }
                 ]
             },
             {
@@ -709,7 +739,7 @@ module.exports = {
                                 {
                                     italic: `Bobtail,`
                                 },
-                                `my night terrors grew less frequent, and my depression subsided. Recognising this great boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more indifferent to Sita's needs.`
+                                `my night terrors grew less frequent, and my misery subsided. Recognising this boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more indifferent to Sita's needs.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -724,7 +754,7 @@ module.exports = {
                     {
                         anchor: `I'll gladly wait.`,
                         annotation: {
-                            description: `But Sita happily encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was largely uninterested in the local scene, she still enjoyed being seen with me after the show.`,
+                            description: `But Sita happily encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was largely uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -741,8 +771,7 @@ module.exports = {
                         annotation: {
                             description: `Even in anguish, Sita never lost her sardonic sense of humour. When I expressed concern about her cutting herself, she sweetly assured me that it was only for practise.`,
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -794,7 +823,7 @@ module.exports = {
         },
         {
             taskName: `sort out past and present tense`,
-            workedHours: 0,
+            workedHours: 3,
             neededHours: 3
         },
         {
