@@ -16,23 +16,6 @@ import { INSTRUMENTAL,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: `Uncanny Valley Boy`,
-        annotation: {
-            description: [
-                `The`,
-                {
-                    anchor: `uncanny valley`,
-                    wiki: `Uncanny_valley`
-                },
-                `is a theory that human replicas become more repulsive to us as they grow further lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining unconvincing as a grownup, I had to wonder if this "Valley boy" from the San Fernando Valley now elicited a similar revulsion.`
-            ],
-            dotKeys: {
-                [OBSERVATION]: true,
-                [PUN]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -181,6 +164,23 @@ module.exports = {
     doubleColumns: true,
     totalTime: 204,
     overview: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing as well. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I had a master plan to follow, and wasn't about to change my ways.`,
+    title: {
+        anchor: `Uncanny Valley Boy`,
+        annotation: {
+            description: [
+                `The`,
+                {
+                    anchor: `uncanny valley`,
+                    wiki: `Uncanny_valley`
+                },
+                `is a theory that human replicas become more repulsive to us as they grow further lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando "Valley boy" now elicited a similar revulsion.`
+            ],
+            dotKeys: {
+                [OBSERVATION]: true,
+                [PUN]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -196,7 +196,6 @@ module.exports = {
                     annotation: {
                         description: `I originally began writing this song after waking from a horrid nightmare, but abandoned it after all my attempts to describe the nightmare only elicited laughter. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
                         dotKeys: {
-                            [OBSERVATION]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -217,10 +216,10 @@ module.exports = {
                                     // बेटा
                                     italic: `beta`
                                 },
-                                `means "son." My parents had taken Sita's side so unequivocally that I now imagine them addressing me as an Indian parent would.`
+                                `means "son." My parents have taken Sita's side so unequivocally that I now imagine them addressing me as an Indian parent would.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
+                                [NARRATIVE]: true,
                                 [REFERENCE]: true
                             }
                         }
