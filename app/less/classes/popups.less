@@ -24,7 +24,6 @@
 .popup-transition-group {
     box-sizing: border-box;
 
-    // &:not(.overview):not(.audio) {
     &:not(.overview) {
         top: 0;
         left: 0;
@@ -35,40 +34,11 @@
         justify-content: center;
         align-items: center;
     }
-
-    // &.audio {
-    //     position: relative;
-    // }
 }
 
 .popup-wrapper {
     position: relative;
     z-index: @popup-content-z-index;
-
-    /**
-     * If changing these duration values, don't forget to also change
-     * transitionEnterTimeout and transitionLeaveTimeout in popup.jsx.
-     */
-
-    // &.overview {
-    //     &[class*="animation-enter"] {
-    //         transform: scale(0);
-    //
-    //         &[class*="animation-enter-active"] {
-    //             animation: bounceIn 0.25s;
-    //             transform: scale(1);
-    //         }
-    //     }
-    //
-    //     &[class*="animation-leave"] {
-    //         transform: scale(1);
-    //
-    //         &[class*="animation-leave-active"] {
-    //             animation: bounceOut 0.15s;
-    //             transform: scale(0);
-    //         }
-    //     }
-    // }
 
     &.wiki, &.score {
         width: ~"calc(100% - @{full-subfield} * 2.5)";
