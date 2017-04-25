@@ -227,14 +227,28 @@ module.exports = {
                     `come`,
                     {
                         anchor: `wax prophetic`,
-                        annotation: {
-                            // TODO: Mention Christmas story?
-                            description: `The common expression is to "wax poetic," of course. Here, like ghosts of days yet to come, my parents invite me on a night journey to witness all that my naked ambitions will have wrought.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `Of course, the common expression is to "wax poetic," meaning to become eloquent in speech. Since it's often used with a degree of pretension, my parents use it here in snide commentary on the artificial persona that I've created.`,
+                                dotKeys: {
+                                    [REFERENCE]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `Like the ghosts of Christmas in Charles Dickens's`,
+                                    {
+                                        anchor: `A Christmas Carol,`,
+                                        wiki: `A_Christmas_Carol`
+                                    },
+                                    `my parents invite me on a night journey to witness all that has led up to where I am now, how these events have shaped my ambitions, and what those ambitions will soon have wrought.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [REFERENCE]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `with me.`
                 ]
@@ -246,7 +260,6 @@ module.exports = {
                     {
                         anchor: `giving tree.`,
                         annotation: {
-                            // TODO
                             description: [
                                 `Shel Silverstein's`,
                                 {
@@ -255,7 +268,7 @@ module.exports = {
                                         wiki: `The_Giving_Tree`
                                     }
                                 },
-                                `is a children's book about a tree's nurturing love for a boy, and the increasingly self-sacrificing nature of her gifts as the boy grows into a man. Many read it as an allegory for unhealthy parent-child relationships.`
+                                `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, her gifts become increasingly self-sacrificing in nature. Many read it as an allegory for unhealthy codependency in children.`
                             ]
                         }
                     }
@@ -268,8 +281,7 @@ module.exports = {
                         anchor: `Stumped,`,
                         annotation: [
                             {
-                                // TODO
-                                description: `The tree finally sacrifices herself, allowing the boy to chop down her trunk to build a boat. When the boy returns as an old man, the tree is now just a stump and can only offer a place to sit and rest.`,
+                                description: `The tree finally sacrifices herself completely, allowing the boy to chop down her trunk to build a boat. When the boy returns as an old man, the tree is now just a stump, and can only offer a place to sit and rest.`,
                                 dotKeys: {
                                     [REFERENCE]: true
                                 }
@@ -361,7 +373,7 @@ module.exports = {
                     {
                         anchor: `Upon purchase of a queen's ship,`,
                         annotation: {
-                            description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship was acquired, with my efforts. Visualising the reward of corrective justice, then steadily and patiently working towards it, thus became my strategy in life. I was like "a pawn" that "perches over queenship" as it steadily clambers towards the other side of the chessboard.`,
+                            description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship was acquired through my efforts. My strategy in life thus became to visualise the reward of corrective justice, then steadily and patiently work towards it. I was like "a pawn" that "perches over queenship" as it steadily clambers towards the other side of the chessboard.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [PUN]: true,
@@ -514,7 +526,7 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         // TODO
-                        description: `As silly as the original lyrics to the chorus were, I liked them enough to keep them, so I just made the former lead melody the new counter melody, and vice versa. Since the former counter melody was written for guitar and thus provided no pauses for the new lead vocals, I had to overdub the last phrase of each line.`,
+                        description: `As silly as the original lyrics to the chorus were, I liked them enough to keep them, so I just made the former lead melody the new counter melody, and vice versa. The former counter melody was written for guitar, however, so  and thus provided no pauses for the new lead vocals, I had to overdub the last phrase of each line.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
