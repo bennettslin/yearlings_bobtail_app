@@ -11,16 +11,6 @@ import { INSTRUMENTAL,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: `Cremated`,
-        annotation: {
-            description: `A childhood playmate once asked me if I knew what cremation was. I didn't, and assumed it must be fun and tasty. That contrast between expectation and reality neatly sums up the seemingly innocent day trip that ended with Miriam breaking up with me.`,
-            dotKeys: {
-                [BACKSTORY]: true,
-                [OBSERVATION]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -88,7 +78,18 @@ module.exports = {
     },
     doubleColumns: true,
     totalTime: 164,
+    // TODO: This isn't consistent with illustration, since I'm saying that Tristan introduced us.
     overview: `While I can't deny that dating white women helped silence the nagging feeling I had of being genetically inferior, I really didn't seek them out. A case in point is Miriam, who approached me at a party, having seen my band perform a week earlier. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me with no effort on my part. We lasted a few months. In the end, I had to wonder if she was slumming it, and whether I was just one more checkbox to mark off.`,
+    title: {
+        anchor: `Cremated`,
+        annotation: {
+            description: `A childhood playmate once asked me if I knew what cremation was. I didn't, and assumed it must be fun and tasty. That contrast between expectation and reality neatly sums up the seemingly innocent day trip that ended with Miriam breaking up with me.`,
+            dotKeys: {
+                [BACKSTORY]: true,
+                [OBSERVATION]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -144,7 +145,7 @@ module.exports = {
                                 anchor: `Shepard tone`,
                                 wiki: `Shepard_tone`
                             },
-                            `is an auditory illusion in which a single tone continuously descends in pitch yet remains fixed within the same register. It seemed an apt metaphor for my utterly deflated state after the breakup with Miriam, so I included two here. One is a bass tone that moves downward in discrete half steps, while the other is a treble tone that does so in a perpetual glissando. Since I didn't code at the time, I made them by splicing together pure tones produced on an analogue synthesiser.`
+                            `is an auditory illusion in which a single tone continuously descends in pitch yet remains fixed within the same register. It seemed an apt metaphor for my utterly deflated state after the breakup with Miriam, so I included two in this song. One is a bass tone that moves downward in discrete half steps, while the other is a treble tone that does so in a perpetual glissando. Both were made by splicing together pure tones produced on an analogue synthesiser.`
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -169,7 +170,7 @@ module.exports = {
                         }
                     },
                     {
-                        // TODO: There are actually two 'key turned's in this song.
+                        // NOTE: There are actually two 'key turned's in this song?
                         anchor: `key turned`,
                         annotation: {
                             portal: `key_turned`
@@ -180,6 +181,7 @@ module.exports = {
                     {
                         anchor: `Atavist`,
                         annotation: {
+                            // TODO
                             description: [
                                 {
                                     anchor: `Atavism`,
@@ -198,6 +200,7 @@ module.exports = {
                         anchor: `feet first,`,
                         annotation: {
                             description: [
+                                // TODO
                                 `My brother was a`,
                                 {
                                     anchor: `breech baby,`,
@@ -219,7 +222,7 @@ module.exports = {
                     {
                         anchor: `first switch`,
                         annotation: {
-                            description: `After parking the car, Miriam turns on the stereo by flipping the ignition switch to the accessory position.`,
+                            description: `After parking the car, Miriam turns the stereo on by flipping the ignition switch to the accessory position.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -230,7 +233,8 @@ module.exports = {
                 right: [
                     `subversive`,
                     {
-                        anchor: `inner lotus eater,`,
+                        // NOTE: I added a hyphen in the lyrics as well.
+                        anchor: `inner lotus-eater,`,
                         annotation: {
                             description: [
                                 `In Greek mythology, the`,
@@ -266,10 +270,11 @@ module.exports = {
                                     anchor: `phoenix`,
                                     wiki: `Phoenix_(mythology)`
                                 },
-                                `is a bird that is reborn from its own ashes. Or else, "penis risen limp." Having broken up with Sita to date Miriam, I also await my triumphant rebirth. And yet, as Miriam climbs on top of me to make out, I'm overcome with self-doubt and thus struggle to maintain an erection.`
+                                `is a bird that is reborn from its own ashes. Having broken up with Sita to date Miriam, I also await my triumphant rebirth. And yet, as Miriam climbs on top of me to make out, I'm overcome with self-doubt, and my "penis" rises limply as I struggle to maintain an erection.`
                             ],
                             dotKeys: {
-                                [NARRATIVE]: true
+                                [NARRATIVE]: true,
+                                [PUN]: true
                             }
                         }
                     },
@@ -281,12 +286,13 @@ module.exports = {
                         anchor: `beaten wit and id`,
                         annotation: {
                             description: [
+                                // TODO: true
                                 `In Freudian psychology, the`,
                                 {
                                     anchor: `id`,
                                     wiki: `Id,_ego_and_super-ego`
                                 },
-                                `represents the primal impulses of the psyche. I told Miriam about my id, otherwise known as my drunken personality, and explained my belief that allowing it to win over my rational thoughts was the key to keeping my creative juices flowing.`
+                                `represents the primal impulses of the psyche. I told Miriam about my id, otherwise known as my drunken personality, and explained my belief that allowing it to triumph over my rational thoughts was the key to keeping my creative juices flowing.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -317,7 +323,7 @@ module.exports = {
                     {
                         anchor: `good for anecdotes.`,
                         annotation: {
-                            description: `Though Miriam was entertained by my character, it wasn't in the way one should hope, which blew apart my theory that interestingness at all costs is the key to dating. I was the oddball ex providing grist for a lifetime of amusing tales, not the life companion to whom she would one day tell them.`,
+                            description: `Though Miriam was entertained by my character, it wasn't in the way one should hope, which blew apart my theory that being interesting at all costs is the key to dating. I was to be the oddball ex providing grist for a lifetime of amusing tales, not the life companion to whom she would one day tell them.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -365,7 +371,7 @@ module.exports = {
                     {
                         anchor: `hula guy`,
                         annotation: {
-                            description: `Some may rightfully protest that these dashboard ornaments objectify certain ethnic groups. I wasn't thinking in those terms at the time, though. I was just so happy to be wanted.`,
+                            description: `Some may protest that these dashboard ornaments objectify certain ethnic groups. And rightfully so. But I wasn't thinking in those terms at the time. I was just so happy to be wanted.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -411,7 +417,7 @@ module.exports = {
                                     anchor: `Martin and Lewis,`,
                                     wiki: `Martin_and_Lewis`
                                 },
-                                `my two personalities would befuddle each other, much to Miriam's delight. But even so, she recognised the mental distress that fueled this spectacle, and wanted no lasting part in it.`
+                                `my two personalities would befuddle each other, much to Miriam's delight. But even so, she recognised the underlying mental dysfunction that surely fueled this spectacle, and wanted no lasting part in it.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -434,6 +440,7 @@ module.exports = {
                 right: [
                     `Trophy`,
                     {
+                        // TODO: Portal
                         anchor: `bronzed from a Trojan`,
                         annotation: {
                             description: `The first time I had sex with a woman other than Sita, I was so amazed that I left the used condom on the nightstand for days, much like proud parents who bronze their baby's outgrown shoes.`,
@@ -453,6 +460,7 @@ module.exports = {
                         anchor: `forced conversion`,
                         annotation: {
                             description: [
+                                // TODO
                                 `Historically, conquered peoples were`,
                                 {
                                     anchor: `forced to assimilate`,
@@ -472,6 +480,7 @@ module.exports = {
                     {
                         anchor: `unforeskinned`,
                         annotation: {
+                            // TODO
                             description: `Miriam wasn't sure that I'd be circumcised, since the other Asian fellow she dated hadn't been.`,
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -481,7 +490,8 @@ module.exports = {
                     {
                         anchor: `virgin,`,
                         annotation: {
-                            description: `I was always trying to recreate the nervous and heady feeling of doing it for the first time. Miriam would oblige, even as she found it unsettling.`,
+                            // TODO
+                            description: `I was always trying to recreate the nervous and heady feeling of doing it for the first time. Miriam would oblige, but I think she found it unsettling.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -497,6 +507,7 @@ module.exports = {
                     {
                         anchor: `self-servicing cleric surgeon`,
                         annotation: {
+                            // TODO
                             description: `Of course, it was my own conflicted mental state that drove me to seek assimilation in the first place. I was like someone who had forcibly converted himself, and then performed his own circumcision.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -515,7 +526,7 @@ module.exports = {
                     {
                         anchor: `inherently perfect,`,
                         annotation: {
-                            description: `I never told Miriam that the real purpose of my drunken personality was to blame it for all the selfish things that I desired but was too cowardly to own up to. Which makes sense, since the latest thing that I selfishly desired was her.`,
+                            description: `I never told Miriam that my real purpose in having a drunken personality was to blame it for all the selfish things that I desired but was too cowardly to own up to. Which makes sense, since the latest thing that I selfishly desired was her.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -554,7 +565,8 @@ module.exports = {
                     {
                         anchor: `worn puppet`,
                         annotation: {
-                            description: `Having a drunken personality was like being a ventriloquist whose specialty is the comedy roast. My dummy could then deliver the insults all day long, while I sat by as a harmless onlooker.`,
+                            // TODO
+                            description: `Having a drunken personality was like being a ventriloquist whose specialty is the comedy roast. My dummy could then dish out the insults all day long, while I sat by as a harmless onlooker.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -607,7 +619,7 @@ module.exports = {
                                     anchor: `conferring knighthood.`,
                                     wiki: `Accolade`
                                 },
-                                `It's as if my drunken personality, confused by the orders he was given, was now erratically tapping a perilously sharp sword on my sober self's shoulder.`
+                                `I imagine my drunken personality, confused by the orders he was given, erratically tapping a perilously sharp sword on my sober self's shoulder.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true,
@@ -642,15 +654,20 @@ module.exports = {
                 centre: [
                     {
                         anchor: `Needle done`,
-                        annotation: {
-                            description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected. Fast-forward in time. Having just been told by Miriam that she's breaking up with me, I remain silent and sedated. I imagine myself as a terminally ill patient being allowed to die, as my favourite records play in the background.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                // TODO
+                                description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected. Fast-forward in time. Having just been told by Miriam that she's breaking up with me, I remain silent and sedated. I imagine myself as a terminally ill patient being allowed to die, as my favourite records play in the background.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true,
+                                    [REFERENCE]: true
+                                }
                             },
-                            portal: 'needle_done'
-                        }
+                            {
+                                portal: 'needle_done'
+                            }
+                        ]
                     },
                     `will not retract,`
                 ]
@@ -661,25 +678,36 @@ module.exports = {
                     `it hums a`,
                     {
                         anchor: `typo fragile ex`,
-                        annotation: {
-                            description: [
-                                `I was a typo in the sense of being an easily corrected mistake, but so fragile as to faint at the news of being made an ex-boyfriend. I was also a`,
-                                {
-                                    anchor: `"Type O,"`,
-                                    wiki: `Blood_type`
-                                },
-                                `the universal blood donor, who could provide a boost to others yet had little chance of being saved in return. And a`,
-                                {
-                                    anchor: `"fragile X,"`,
-                                    wiki: `Fragile_X_syndrome`
-                                },
-                                `which is a genetic syndrome caused by a mutated X chromosome that results in mental disability.`
-                            ],
-                            dotKeys: {
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `I was a typo in the sense of being an easily corrected mistake, but so fragile as to faint at the news of being made an ex-boyfriend.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            },
+                            {
+                                // TODO
+                                description: [
+                                    `I was also a`,
+                                    {
+                                        anchor: `"Type O,"`,
+                                        wiki: `Blood_type`
+                                    },
+                                    `the universal blood donor, who could provide a boost to others yet had little chance of being saved in return. And a`,
+                                    {
+                                        anchor: `"fragile X,"`,
+                                        wiki: `Fragile_X_syndrome`
+                                    },
+                                    `which is a genetic syndrome caused by a mutated X chromosome that results in mental disability.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `passed through ash…`
                 ]
@@ -692,11 +720,12 @@ module.exports = {
                         anchor: `vinyl, exit`,
                         annotation: {
                             description: [
-                                `After Miriam helps me to end myself, I imagine her helping herself to my record collection, which she'll trade for cash at a music store. Also, "final exit" is a euphemism used by proponents of`,
+                                `"Final exit" is a euphemism used by proponents of`,
                                 {
                                     anchor: `assisted suicide.`,
                                     wiki: `Assisted_suicide`
-                                }
+                                },
+                                `And after Miriam helps me to end myself, I imagine her helping herself to my record collection, which she'll trade for cash at a music store.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -714,6 +743,7 @@ module.exports = {
                     {
                         anchor: `selfish cut-off jeans,`,
                         annotation: {
+                            // TODO
                             description: [
                                 `In`,
                                 {
@@ -722,7 +752,7 @@ module.exports = {
                                         wiki: `The_Selfish_Gene`
                                     }
                                 },
-                                `Richard Dawkins explains natural selection from the vantage point of genes themselves, rather than the individuals that carry them. Here, I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, leading her to block me from ever again getting underneath her cutoffs.`
+                                `Richard Dawkins explains natural selection from the vantage point of genes themselves, rather than the individuals who carry them. And so I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, by blocking me from ever again getting under her cutoffs.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -749,7 +779,7 @@ module.exports = {
                     {
                         anchor: `worrisome`,
                         annotation: {
-                            description: `I genuinely wished Miriam the best and continued to care about her well-being. This surprised me, given the contrast of how selfishly I behaved each time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even for a little while. As far as I was concerned, then, I landed a pretty sweet deal.`,
+                            description: `I genuinely wished Miriam the best and continued to care about her well-being after our breakup. This surprised me, given the contrast of how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even if just for a little while. As far as I was concerned, then, I got the better end of the deal.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -760,6 +790,7 @@ module.exports = {
                         anchor: `"Bless her, Godspeed…"`,
                         annotation: {
                             description: [
+                                // TODO
                                 `In her gene pool, "here's not where some lesser god has peed." Mark Medoff's play`,
                                 {
                                     italic: {
@@ -783,8 +814,9 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        // TODO: Change in recording? Connect to Uncanny Valley?
-                        description: `My original idea for the bouncing ping pong ball was to evoke a wind-up toy on my nightstand, which prompts me in my infirm state to imagine Miriam in a leisurely tennis match with her new beau. I forgot about this during the mixing session, though.`,
+                        // NOTE: Change in recording? Connect to Uncanny Valley?
+                        // TODO
+                        description: `The bouncing ping pong ball evokes a wind-up toy on my nightstand, which prompts me in my infirm state to imagine Miriam in a leisurely tennis match with her new beau.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -801,7 +833,7 @@ module.exports = {
                     {
                         anchor: `seat hurt`,
                         annotation: {
-                            description: `While reclining the seat with Miriam on top of me, I had managed to throw out my back. Now back in the present, the pain worsens during the car ride home, and I facetiously reason that it's because I'm getting on in my years.`,
+                            description: `I somehow threw out my back while reclining the seat with Miriam on top of me. The pain has now worsened, and I facetiously reason that it's because I'm getting on in my years.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -818,7 +850,7 @@ module.exports = {
                     {
                         anchor: `his soreness,`,
                         annotation: {
-                            description: `Miriam needed sex far more than Sita did, which ran me ragged as I was always still recovering from the last time. But here once again, I suppose that it's old age doing me in.`,
+                            description: `Miriam wanted sex far more than Sita did, which ran me ragged as I was always still recovering from the last time. But here once again, I suppose that it's old age doing me in.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
@@ -859,7 +891,7 @@ module.exports = {
                     {
                         anchor: `cleaved horizon`,
                         annotation: {
-                            description: `As we make our way downhill, I picture the horizon as a cleaver splitting the sky open. The road we drive on then becomes cement spilling down upon me from the rupture.`,
+                            description: `As we make our way downhill, I picture the horizon as a cleaver splitting the sky open. The road we drive on then becomes cement spilling down on me from the rupture.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -875,19 +907,24 @@ module.exports = {
                     `He's`,
                     {
                         anchor: `vegging with his boner shortened;`,
-                        annotation: {
-                            description: `Flaccid and basking in a post-coital glow, I'm about to be blindsided by Miriam's true intention for this day's outing.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: `Flaccid and basking in a post-coital glow, I'm about to be blindsided by Miriam's true intention for today's outing.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                },
                             },
-                            portal: `veggie_wishbone`
-                        }
+                            {
+                                portal: `veggie_wishbone`
+                            }
+                        ]
                     }
                 ],
                 right: [
                     {
                         anchor: `Redressed,`,
                         annotation: {
+                            // TODO
                             description: `The sex followed by a blowjob, as it turns out, was meant to serve as redress for the bad news that was forthcoming. Of course, having put my clothes back on, I am also literally "redressed."`,
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -905,7 +942,7 @@ module.exports = {
                     {
                         anchor: `pulls the plug.`,
                         annotation: {
-                            description: `Upon hearing the cigarette lighter pop out, Miriam pulls it from the socket to light her cigarette. But also, having satisfied me with an orgasmic "pop," Miriam now feels less troubled to "pull the plug" on our relationship.`,
+                            description: `Upon hearing the cigarette lighter pop out, Miriam pulls it from the socket to light her cigarette. Having satisfied me with an orgasmic "pop," she now feels less troubled to "pull the plug" on our relationship.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -929,6 +966,7 @@ module.exports = {
                     {
                         anchor: `ex-dromedary,`,
                         annotation: {
+                            // TODO: Mention dramedy?
                             description: [
                                 `The`,
                                 {
@@ -948,6 +986,7 @@ module.exports = {
                     {
                         anchor: `preparing the scoop,`,
                         annotation: {
+                            // TODO
                             description: `Miriam braces to deliver the bad news that we're breaking up. Metaphorically, she waits with "scoop" in hand while her pet takes its "dump," eager as she is to keep her house fresh and clean.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -963,7 +1002,7 @@ module.exports = {
                     {
                         anchor: `second hump.`,
                         annotation: {
-                            description: `A camel stores fat in its hump, allowing it to travel for days without eating.  By trading away Sita's love for the ego boost I gained from "humping" other women, I was like a starving camel who sacrifices his only meal for a flashy new adornment on his back.`,
+                            description: `A camel stores fat in its hump, allowing it to travel for days without eating. And in trading away Sita's love for the ego boost I gained from "humping" other women, I was like a starving camel who sacrifices his only meal just to wear a flashy new adornment on his back.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                                 [PUN]: true,
@@ -1000,8 +1039,8 @@ module.exports = {
         },
         {
             taskName: `sort out past and present tense`,
-            workedHours: 0,
-            neededHours: 3
+            workedHours: 3,
+            neededHours: 6
         },
         {
             taskName: `annotations`,

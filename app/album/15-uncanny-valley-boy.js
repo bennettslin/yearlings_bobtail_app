@@ -1061,6 +1061,7 @@ module.exports = {
                             italic: [
                                 `…traded in for the`,
                                 {
+                                    // TODO: Portal to Cremated
                                     anchor: `trophy blondes.`,
                                     annotation: [
                                         {
@@ -1386,8 +1387,8 @@ module.exports = {
         },
         {
             taskName: `tenses and categorisation`,
-            workedHours: 4,
-            neededHours: 6
+            workedHours: 6,
+            neededHours: 8
         },
         {
             taskName: `allow sub stanzas`,
